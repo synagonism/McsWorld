@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mws'index.name.ellBe</title>
+  <meta name="keywords" content="ModelInfoWorld, worldview, mws, hitp, Kaseluris.Nikos.1959, synagonism">
+  <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
+  <script>
+    oMwsIellBe = {
+      oXHR: new XMLHttpRequest(),
+      a: null
+    }
+    oMwsIellBe['oXHR'].open('GET', 'namidx.ellBe.json', true);
+    oMwsIellBe['oXHR'].send(null);
+    oMwsIellBe['oXHR'].onreadystatechange = function () {
+      if (oMwsIellBe['oXHR'].readyState === 4 && oMwsIellBe['oXHR'].status === 200) {
+        oMwsIellBe['a'] = JSON.parse(oMwsIellBe['oXHR'].responseText);
+      }
+    }
+  </script>
+</head>
+
+<body>
+<header id="idHeader">
+  <p></p>
+  <h1 id="idHeaderH1">index.name.ellBe
+    <br>of ModelWorldSynagonism (mws)
+    </h1>
+</header>
+
+<section id="idDescription">
+  <h1 id="idDescriptionH1">Description
+    <a class="clsHide" href="#idDescriptionH1"></a></h1>
+  <p id="idDescriptiondsn">Description::
+    <br>The-index is-computed dynamically from file 'namidx.ellBe.json'.
+    <br>(Chrome needs to clear cache, some times: best with "Clear Cache" extenstion)    <a class="clsHide" href="#idDescriptiondsn"></a></p>
+  <p id="idName">Name::
+    <br>* cpt.Index.name.ellBe-of-mws,
+    <br>* cpt.Mws'index.name.ellBe,
+    <a class="clsHide" href="#idName"></a></p>
+</section>
+
+<section id="idIdx">
+  <h1 id="idIdxH1">Index
+    <a class="clsHide" href="#idIdxH1"></a></h1>
+  <ol id="idOl">
+    <ol>
+</section>
+
+<script src="http://synagonism.github.io/hitp/hitp.js"></script>
+<script>
+  window.addEventListener('load', function () {
+    var
+      a = oMwsIellBe['a'], //existing name-url array
+      sLi;
+
+    sLi = '<li>index.name.' + a[0][0].substring(1)
+        + ', created: {' + a[0][1] + '}';
+    // Put names
+    for (var n = 1; n < a.length; n++) {
+      sLi = sLi +
+        '<li>' + a[n][0] +
+        ':: <a class="clsPreview" href="' + a[n][1] +
+        '">' +
+        a[n][1] +'</a>,';
+    }
+    document.getElementById('idOl').innerHTML = sLi;
+  });
+</script>
+</body>
+</html>
