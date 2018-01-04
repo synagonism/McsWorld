@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Browser-javascript-language (Ljb.5-0-0.2017-11-26)</title>
+  <title>Mcs.Browser-javascript-language (Ljb.5-1-0.2018-01-04)</title>
   <meta name="keywords" content="JavaScript, js, javascript-tutorial, browser-js, Node.js, ljs, ljb, ljn, title-content-tree, hitp-webpage">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -3822,6 +3822,22 @@ var oOut = (function () {
   </section>
 </section>
 
+<section id="idLjbspec">
+  <h1 id="idLjbspecH1">Specification-of-Ljb
+    <a class="clsHide" href="#idLjbspecH1"></a></h1>
+  <p id="idLjbspecdsn">Description::
+    <br>There is no single technical specification that defines JavaScript, but a whole bunch of specifications.
+    <br><a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">The ECMAScript specification</a> defines the core of the language: the basic language features, the syntax, the execution and the standard library. A new version of ECMAScript is published every year, and <a href="https://www.ecma-international.org/ecma-262/8.0/">ECMAScript 2017, Edition 8, also called ECMAScript 8</a>, is the latest at the time of writing.
+    <br>With ECMAScript alone, you cannot do anything useful. For example, there is no way to read or output any data. ECMAScript does not define the so-called host environment in which a program is executed. It allows several possible host environments. An HTML document in the browser is one possible host environment. Node.js is another popular one.
+    <br>The host environment we are interested in here is primarily defined in <a href="https://www.w3.org/TR/html5/">the HTML specification</a>. It not only defines HTML as a markup language, it also defines how JavaScript is executed in the context of an HTML document. It defines how JavaScript can access and alter the document. For this purpose, it relies on yet another specification: <a href="https://dom.spec.whatwg.org/">the Document Object Model (DOM)</a>.
+    <br>The HTML and DOM specifications define the main objects that client-side JavaScript is dealing with: nodes, elements and events. Fundamental objects include window, window.alert(), document, document.body, document.getElementById() and document.createElement().
+    <br>There are a lot of other specifications that add more APIs to the browser’s JavaScript environment. <a href="https://platform.html5.org/">The web platform: Browser technologies</a> gives an overview.
+    <a class="clsHide" href="#idLjbspecdsn"></a></p>
+  <p id="idLjbspecnam">Name::
+    <br>* cpt.Ljb'Specification,
+    <a class="clsHide" href="#idLjbspecnam"></a></p>
+</section>
+
 <section id="idLjbtol">
   <h1 id="idLjbtolH1">Tool-of-Ljb
     <a class="clsHide" href="#idLjbtolH1"></a></h1>
@@ -3875,12 +3891,16 @@ var oOut = (function () {
     <a class="clsHide" href="#idLjbbsregnJsH2"></a></h2>
   <p id="idLjbbsregnJsdsn">Description::
     <br>Ljb-engine is the-component of <a class="clsPreview" href="#idLjbbsr">the-browser-program</a> that reads and executes <a class="clsPreview" href="FilMcsLjs.Last.html#idLjscod">the-code</a>.
+    <br>===
+    <br>Writing client-side JavaScript for the web differs from programming for other platforms. There is not one well-defined runtime environment a developer may count on. There is not one hardware architecture or device type. There is not a single vendor that defines and builds the runtime, the compiler and the tools.
+    <br>The web is an open, vendor-independent, heterogenous publishing platform. It is held together by several technical standards of different quality. New standards appear frequently, old standards are amended or deprecated. Different standardization organizations follow different rules of procedure.
+    <br>[<a href="https://molily.de/robust-javascript/#the-browser-as-a-runtime-environment">https://molily.de/robust-javascript/#the-browser-as-a-runtime-environment</a>]
     <a class="clsHide" href="#idLjbbsregnJsdsn"></a></p>
   <p id="idLjbbsregnJsnam">Name::
     <br>* cpt.Ljb-engine,
     <br>* cpt.Ljb-implementation,
     <br>* cpt.Ljb-interpreter,
-    <br>* cpt.Ljb-runtime,
+    <br>* cpt.Ljb'Runtime,
     <a class="clsHide" href="#idLjbbsregnJsnam"></a></p>
   <p id="idLjbbsregnJsSpc">Specific::
     <br>* SpiderMondey (Firefox),
@@ -3938,8 +3958,20 @@ var oOut = (function () {
     <a class="clsHide" href="#idLjbtolTestrsc"></a></p>
 </section>
 
+<section id="idLjbrsc">
+  <h1 id="idLjbrscH1">Resource--of-Ljb
+    <a class="clsHide" href="#idLjbrscH1"></a></h1>
+  <p id="idLjbrscnam">Name::
+    <br>* cpt.Ljb'Resource,
+    <a class="clsHide" href="#idLjbrscnam"></a></p>
+  <p id="idLjbrscwpa">AddressWpg::
+    <br>=== Book:
+    <br>* Robust Client-Side JavaScript: A Developer’s Guide: <a href="https://molily.de/robust-javascript/">https://molily.de/robust-javascript/</a>,
+    <a class="clsHide" href="#idLjbrscwpa"></a></p>
+</section>
+
 <section id="idLjbgnc">
-  <h1 id="idLjbgncH1">Generic-chain--of-Ljb
+  <h1 id="idLjbgncH1">GENERIC--of-Ljb
     <a class="clsHide" href="#idLjbgncH1"></a></h1>
   <p id="idLjbgncP1">Generic-chain::
     <br>* <a class="clsPreview" href="FilMcsLjs.Last.html#idDescription">javascript-programing-language</a>,
