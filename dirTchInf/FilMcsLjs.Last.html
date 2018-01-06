@@ -176,8 +176,9 @@
     <br><a class="clsPreview" href="FilMcsLjb.Last.html#idDescription">Ljb</a> and <a class="clsPreview" href="FilMcsLjn.Last.html#idDescription">Ljn</a> use the same code-units.
     <a class="clsHide" href="FilMcsLjb.Last.html#idLjbuntdsn"></a></p>
   <p id="idLjsuntnam">Name::
+    <br>* cpt.javascript'Unit,
     <br>* cpt.Ljs-algo'unit,
-    <br>* cpt.Ljs'unit,
+    <br>* cpt.Ljs'Unit,
     <a class="clsHide" href="#idLjsuntnam"></a></p>
 
   <section id="idLjsuntcod">
@@ -216,17 +217,19 @@
     <br>Programing-languages use different semantic-units and combinations of semantic-units to create algorithms that map the same archetype.
     <a class="clsHide" href="#idLjssutdsn"></a></p>
   <p id="idLjssutnam">Name::
-    <br>* cpt.Data-type.ljs,
-    <br>* cpt.Data-structure.ljs,
-    <br>* cpt.Ljs'semantic-unit,
-    <br>* cpt.Ljs'data-type,
-    <br>* cpt.Ljs'data-structure,
+    <br>* cpt.data-type.ljs,
+    <br>* cpt.data-structure.ljs,
+    <br>* cpt.javascript'Semantic-unit,
+    <br>* cpt.Ljs'Data-type,
+    <br>* cpt.Ljs'Data-structure,
+    <br>* cpt.Ljs'Semantic-unit,
+    <br>* cpt.Ljs'Sut,
     <br>* cpt.Ljs-semantic-unit,
     <br>* cpt.Ljs-sut,
     <br>* cpt.Ljs-sunit,
     <br>* cpt.Ljs-untSmc,
     <br>* cpt.Ljs-unit.semantic,
-    <br>* cpt.Semantic-unit.javascript,
+    <br>* cpt.semantic-unit.javascript,
     <a class="clsHide" href="#idLjssutnam"></a></p>
   <p id="idLjssutwhl">Whole-chain::
     <br>=== (<a class="clsPreview" href="#idLjssxt">syntax--whole-part-tree</a>)
@@ -273,16 +276,48 @@
     <br>> c.name //gives 'sgm'</code>
     <a class="clsHide" href="#idLjssutnamecod"></a></p>
   <p id="idLjssutnamenam">Name::
-    <br>* cpt.Internal-name-of-semantic-unit-of-javascript,
+    <br>* cpt.javascript'Name-of--semantic-unit,
     <br>* cpt.Ljs-internal-name-of-semantic-unit,
     <br>* cpt.Ljs-name-of-semantic-unit,
     <br>* cpt.Ljs-reference-name-of-semantic-unit,
     <br>* cpt.Ljs-semantic-unit'internal-name,
     <br>* cpt.Ljs-semantic-unit'name,
     <br>* cpt.Ljs-semantic-unit'reference-name,
-    <br>* cpt.Name-of-semantic-unit-of-javascript,
-    <br>* cpt.Reference-name-of-semantic-unit-of-javascript,
+    <br>* cpt.name-of-semantic-unit-of-javascript,
     <a class="clsHide" href="#idLjssutnamenam"></a></p>
+
+  <section id="idLjssutnamExl">
+  <h3 id="idLjssutnamExlH3">sut-name.EXTERNAL
+    <a class="clsHide" href="#idLjssutnamExlH3"></a></h3>
+  <p id="idLjssutnamExldsn">Description::
+    <br>· we can-assign|bind a-name to <a class="clsPreview" href="#idLjssut">a-semantic-unit</a>.
+    <br>· this name it is-not a-member of the-semantic-unit.
+    <br>· I call it <span class="clsColorRed">EXTERNAL-NAME</span>.
+    <br>· a-semantic-unit can-have many external-names.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-01-06]
+    <a class="clsHide" href="#idLjssutnamExldsn"></a></p>
+  <p id="idLjssutnamExlnam">Name::
+    <br>* cpt.external-name--of--semantic-unit-in-javascript,
+    <br>* cpt.Ljs-semantic-unit-name.External,
+    <br>* cpt.reference-name--of--semantic-unit-in-javascript,
+    <a class="clsHide" href="#idLjssutnamExlnam"></a></p>
+  </section>
+
+  <section id="idLjssutnamInl">
+  <h3 id="idLjssutnamInlH3">sut-name.INTERNAL
+    <a class="clsHide" href="#idLjssutnamInlH3"></a></h3>
+  <p id="idLjssutnamInldsn">Description::
+    <br>· a-semantic-unit can-have a-name which is a-member of it.
+    <br>· I call it, <span class="clsColorRed">INTERNAL-NAME</span>.
+    <br><code>> function f(){} //function with internal-name
+    <br>> f.name // "f"</code>
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-01-06]
+    <a class="clsHide" href="#idLjssutnamInldsn"></a></p>
+  <p id="idLjssutnamInlnam">Name::
+    <br>* cpt.internal-name--of--semantic-unit--in-javascript,
+    <br>* cpt.Ljs-semantic-unit-name.Internal,
+    <a class="clsHide" href="#idLjssutnamInlnam"></a></p>
+  </section>
   </section>
 
   <section id="idLjssutscp">
@@ -298,6 +333,11 @@
     <br>* cpt.Ljs'Scope,
     <br>* cpt.scope-of--semantic-unit--of-javascript,
     <a class="clsHide" href="#idLjssutscpnam"></a></p>
+  <p id="idLjssutscpSpc">Specific::
+    <br>* block-scope,
+    <br>* function-scope,
+    <br>* object-scope,
+    <a class="clsHide" href="#idLjssutscpSpc"></a></p>
   </section>
 
   <section id="idLjssutSpc">
@@ -1468,6 +1508,14 @@
     <br>In all other <a class="clsPreview" href="#idLjsv">name-value-pairs</a> we consider <a class="clsPreview" href="#idLjsvidr">the-identifier</a> as 'name'.
     <br>So when we need to create recursive-functions (= functions which <a class="clsPreview" href="#idLjsfcll">call</a> themselves), we use the first definition where the-name and the-reference to the-function are the-same.
     <a class="clsHide" href="#idLjsfnamedsn"></a></p>
+  </section>
+
+  <section id="idLjsfscp">
+  <h3 id="idLjsfscpH3">Ljsf'Scope (<a class="clsPreview" href="#idLjselnConOsp">link</a>)
+    <a class="clsHide" href="#idLjsfscpH3"></a></h3>
+  <p id="idLjsfscpnam">Name::
+    <br>* cpt.Ljs-f'Scope,
+    <a class="clsHide" href="#idLjsfscpnam"></a></p>
   </section>
 
   <section id="idLjsafiao">
@@ -4015,8 +4063,8 @@
     <br>var f=function(){var n1=1; var n2=n1;} //no Error</code>
     <a class="clsHide" href="#idLjselnConOspdsn"></a></p>
   <p id="idLjselnConOspnam">Name::
+    <br>* cpt.Ljs-o'Scope,
     <br>* cpt.Ljs-o-scope,
-    <br>* cpt.Ljso-scope,
     <a class="clsHide" href="#idLjselnConOspnam"></a></p>
   </section>
   </section>
@@ -4126,11 +4174,38 @@
     <a class="clsHide" href="#idLjslrnP1"></a></p>
 </section>
 
-<section id="idLje">
-  <h1 id="idLjeH1">Specification-of-Ljs (Lje)
-    <a class="clsHide" href="#idLjeH1"></a></h1>
+<section id="idLjsspec">
+  <h1 id="idLjsspecH1">Specification-of-Ljs (Ljs-spec)
+    <a class="clsHide" href="#idLjsspecH1"></a></h1>
+  <p id="idLjsspecdsn">Description::
+    <br>· specification is a-text-document that describes|defines a-language.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-01-06]
+    <br>===
+    <br>There is no single technical specification that defines JavaScript, but a whole bunch of specifications.
+    <br>[<a href="https://molily.de/robust-javascript/#javascript-standards">https://molily.de/robust-javascript/#javascript-standards</a>]
+    <a class="clsHide" href="#idLjsspecdsn"></a></p>
+  <p id="idLjsspecnam">Name::
+    <br>* cpt.javascript'Specification-(Ljs-spec),
+    <br>* cpt.Ljs'Specification-(Ljs-spec),
+    <br>* cpt.Ljs-spec,
+    <br>* cpt.Ljs-specification-(Ljs-spec),
+    <br>* cpt.specification.Javascript-(Ljs-spec),
+    <a class="clsHide" href="#idLjsspecnam"></a></p>
+
+  <section id="idLjsspecSpc">
+  <h2 id="idLjsspecSpcH2">Ljs-spec.SPECIFIC
+    <a class="clsHide" href="#idLjsspecSpcH2"></a></h2>
+  <p id="idLjsspecSpcP1">Specific::
+    <br>* <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbspec">browser-javascript-specification</a>,
+    <br>===
+    <br>* <a class="clsPreview" href="#idLje">ECMA-specification</a>,
+    <a class="clsHide" href="#idLjsspecSpcP1"></a></p>
+  </section>
+
+  <section id="idLje">
+  <h2 id="idLjeH2">Ljs-spec.ECMA-International (Lje)
+    <a class="clsHide" href="#idLjeH2"></a></h2>
   <p id="idLjedsn">Description::
-    <br>Specification is a-text-document that describes|defines a-language.
     <br><a href="http://www.ecma-international.org/memento/index.html">ECMA-International</a> creates the-specs for <a class="clsPreview" href="#idDescription">Ljs</a>.
     <br>ECMA-International creates many standards.
     <br><a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMA-262</a> is the-standard that defines the-ECMAScript-language, as it calls the-ljs.
@@ -4139,9 +4214,8 @@
     <a class="clsHide" href="#idLjedsn"></a></p>
   <p id="idLjenam">Name::
     <br>* cpt.ECMAScript-(Lje),
-    <br>* cpt.Ljs-spec-(Lje),
-    <br>* cpt.Ljs-specification-(Lje),
     <br>* cpt.Lje-(ECMAScript),
+    <br>* cpt.Ljs-spec.ECMAScript-(Lje),
     <a class="clsHide" href="#idLjenam"></a></p>
   <p id="idLjewpa">AddressWpg::
     <br>* <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">http://www.ecma-international.org/publications/standards/Ecma-262.htm</a>,
@@ -4151,8 +4225,8 @@
     <a class="clsHide" href="#idLjewpa"></a></p>
 
   <section id="idLjeSpc">
-  <h2 id="idLjeSpcH2">Lje.SPECIFIC
-    <a class="clsHide" href="#idLjeSpcH2"></a></h2>
+  <h3 id="idLjeSpcH3">Lje.SPECIFIC
+    <a class="clsHide" href="#idLjeSpcH3"></a></h3>
   <p id="idLjeSpcP1">Specific (versions):
     <br>* <a class="clsPreview" href="#idLjeEs8">ECMAScript.8.2017</a> (ES8),
     <br>* <a class="clsPreview" href="#idLjeEs7">ECMAScript.7.2016</a> (ES7),
@@ -4167,8 +4241,8 @@
   </section>
 
   <section id="idLjeEs8">
-  <h2 id="idLjeEs8H2">Lje.ECMAScript.8.2017
-    <a class="clsHide" href="#idLjeEs8H2"></a></h2>
+  <h3 id="idLjeEs8H3">Lje.ECMAScript.8.2017
+    <a class="clsHide" href="#idLjeEs8H3"></a></h3>
   <p id="idLjeEs8dsn">Description::
     <br>ECMAScript-2017 (8th edition).
     <br><a href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262%206th%20edition%20June%202015.pdf">Pdf-version</a>.
@@ -4185,8 +4259,8 @@
   </section>
 
   <section id="idLjeEs7">
-  <h2 id="idLjeEs7H2">Lje.ECMAScript.7.2016
-    <a class="clsHide" href="#idLjeEs7H2"></a></h2>
+  <h3 id="idLjeEs7H3">Lje.ECMAScript.7.2016
+    <a class="clsHide" href="#idLjeEs7H3"></a></h3>
   <p id="idLjeEs7dsn">Description::
     <br>ECMAScript-2016 (7th edition).
     <br><a href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262%207th%20edition%20June%202016.pdf.pdf">Pdf-version</a>.
@@ -4203,8 +4277,8 @@
   </section>
 
   <section id="idLjeEs6">
-  <h2 id="idLjeEs6H2">Lje.ECMAScript.6.2015
-    <a class="clsHide" href="#idLjeEs6H2"></a></h2>
+  <h3 id="idLjeEs6H3">Lje.ECMAScript.6.2015
+    <a class="clsHide" href="#idLjeEs6H3"></a></h3>
   <p id="idLjeEs6dsn">Description::
     <br>ECMAScript-2015 (6th edition).
     <br><a href="http://www.ecma-international.org/ecma-262/6.0/ECMA-262.pdf">Pdf-version</a>.
@@ -4226,8 +4300,8 @@
   </section>
 
   <section id="idLjeEs51">
-  <h2 id="idLjeEs51H2">Lje.ECMAScript.5-1.2011
-    <a class="clsHide" href="#idLjeEs51H2"></a></h2>
+  <h3 id="idLjeEs51H3">Lje.ECMAScript.5-1.2011
+    <a class="clsHide" href="#idLjeEs51H3"></a></h3>
   <p id="idLjeEs51des">Description::
     <br>ECMAScript-5.1 is the-version previous to <a class="clsPreview" href="#idLjeEs51">ECMAScript.6.2015</a>, approved on {2011.June}.
     <br><a class="clsPreview" href="../../standard/techInfo/ecma.262.51.2011.html#idHeader">My html5.id.toc.preview-version</a>.
@@ -4242,6 +4316,7 @@
     <br>* cpt.Lje.5-1.2011,
     <br>* cpt.Standard.ECMA.262.51-edition,
     <a class="clsHide" href="#idLjeEs51"></a></p>
+  </section>
   </section>
 </section>
 
