@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Electron-desktop-javascript-language (Ljel.4-0-1.2018-01-09)</title>
+  <title>Mcs.Electron-desktop-javascript-language (Ljel.4-1-0.2018-01-11)</title>
   <meta name="keywords" content="Electron-Desktop-Javascript, ModelConceptStructured, Mcs, ModelInfoWorld, Worldview, Mws, Hitp, Kaseluris.Nikos.1959, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -112,6 +112,11 @@
     <br>A process is an instance of a computer program that is being executed. Electron apps that make use of the main and one or many renderer process are actually running several programs simultaneously.
     <br>In Node.js and Electron, each running process has a process object. This object is a global that provides information about, and control over, the current process. As a global, it is always available to applications without using require().
     <br>[<a href="https://github.com/electron/electron/blob/master/docs/glossary.md#process">https://github.com/electron/electron/blob/master/docs/glossary.md#process</a>]
+    <br>===
+    <br>First off, what do you mean “process”?
+    <br>I mean an operating system level process, or as Wikipedia puts it “an instance of a computer program that is being executed”. Crystal clear, right? For example, if I start an Electron application and then check the Activity Monitor in macOS, I can see how many processes are associated with that program.
+    <br>Each of these processes run concurrently to each other. The most important thing to remember here is that processes’ memory and resources are isolated from each other.
+    <br>[<a href="https://codeburst.io/deep-dive-into-electrons-main-and-renderer-processes-7a9599d5c9e2">https://codeburst.io/deep-dive-into-electrons-main-and-renderer-processes-7a9599d5c9e2</a>]
     <a class="clsHide" href="#idLjelprcdsn"></a></p>
   <p id="idLjelprcnam">Name::
     <br>* cpt.Ljel'process,
@@ -1156,6 +1161,31 @@
   <p id="idLjelpgmsrtrnam">Name::
     <br>* cpt.Ljel-pgm'structure,
     <a class="clsHide" href="#idLjelpgmsrtrnam"></a></p>
+  </section>
+
+  <section id="idLjelpgmistg">
+  <h2 id="idLjelpgmistgH2">Installing--Ljel-pgm
+    <a class="clsHide" href="#idLjelpgmistgH2"></a></h2>
+  <p id="idLjelpgmistgdsn">Description::
+    <a class="clsHide" href="#idLjelpgmistgdsn"></a></p>
+  <p id="idLjelpgmistgnam">Name::
+    <br>* cpt.Ljel'installing-app,
+    <br>* cpt.Ljel-pgm'installing,
+    <a class="clsHide" href="#idLjelpgmistgnam"></a></p>
+  </section>
+
+  <section id="idLjelpgmusg">
+  <h2 id="idLjelpgmusgH2">Using--Ljel-pgm
+    <a class="clsHide" href="#idLjelpgmusgH2"></a></h2>
+  <p id="idLjelpgmusgdsn">Description::
+    <br>* 1st case:
+    <br>· from program's directory, type: <code>electron .</code>
+    <a class="clsHide" href="#idLjelpgmusgdsn"></a></p>
+  <p id="idLjelpgmusgnam">Name::
+    <br>* cpt.Ljel'using-app,
+    <br>* cpt.Ljel-pgm'running,
+    <br>* cpt.Ljel-pgm'using,
+    <a class="clsHide" href="#idLjelpgmusgnam"></a></p>
   </section>
 
   <section id="idLjelpgmtstg">
