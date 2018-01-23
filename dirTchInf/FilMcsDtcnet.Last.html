@@ -49,6 +49,7 @@
     <br>* cpt.D-stroke-technology-(Đ-net),
     <br>* cpt.Dcc-network-(Đ-net), {time.2018-01-18}
     <br>* cpt.decentralized-chain--technology-(Đ-net), {time.2017-12-09}
+    <br>* cpt.decentralized-crypto--transaction-chain--network-(Đ-net), {time.2018-01-23}
     <br>* cpt.decentralized-crypto-chain--network-(Đ-net),
     <br>* cpt.decentralized-crypto-chain--technology-(Đ-net), {time.2018-01-14}
     <br>* cpt.decentralized-crypto-transactionchain--network-(Đ-net), {time.2017-12-09}
@@ -352,13 +353,14 @@
     <a class="clsHide" href="#idDtcchndsn"></a></p>
   <p id="idDtcchnnam">name::
     <br>* cpt.CDledger-file,
+    <br>* cpt.D-ledger,
     <br>* cpt.D-stroke-chain,
     <br>* cpt.D-stroke-chain-data,
     <br>* cpt.D-stroke-chain-ledger,
     <br>* cpt.D-stroke-chain-(decentralized-chain),
-    <br>* cpt.Dcc-network'Dledger,
     <br>* cpt.D-stroke-chain-(Đ-chain), {time.2017-12-20}
-    <br>* cpt.Dledger-file,
+    <br>* cpt.Dcc-network'Dledger,
+    <br>* cpt.Dledger-data,
     <br>* cpt.decentralized-transaction-chain--data-structure,
     <br>* cpt.decentralized-transaction-chain--file,
     <br>* cpt.distributed-cryptographic-ledger,
@@ -369,7 +371,7 @@
     <br>* cpt.transaction-ledger,
     <br>* cpt.transactionchain, {time.2017-10-17}
     <br>* cpt.transactionchain-data, {time.2017-10-03}
-    <br>* cpt.Txchain, {time.2017-10-17}
+    <br>* cpt.tx-chain, {time.2018-01-23}
     <br>* cpt.Đ-chain,
     <br>* cpt.Đ-network'dledger,
     <br>* cpt.Đ-network'ledger,
@@ -390,7 +392,7 @@
     <a class="clsHide" href="#idDtcchnnamEll"></a></p>
 
   <section id="idDtctxFNT">
-  <h2 id="idDtctxFNTH2">Đ-transaction-of-Đ-chain
+  <h2 id="idDtctxFNTH2">transaction of tx-chain
     <a class="clsHide" href="#idDtctxFNTH2"></a></h2>
   <p id="idDtctxFNTdsn">description::
     <br>· Đ-transaction is INFORMATION communicated in the-Đ-network which is-being-appended on <a class="clsPreview" href="#idDtcdatFNT">the-Đ-chain</a>.
@@ -466,7 +468,7 @@
   </section>
 
   <section id="idDtccsaFNT">
-  <h2 id="idDtccsaFNTH2">Đ-consensus-algorithm of Đ-chain (Dcccsa)
+  <h2 id="idDtccsaFNTH2">consensus-algorithm of tx-chain (Dcc-Csa)
     <a class="clsHide" href="#idDtccsaFNTH2"></a></h2>
   <p id="idDtccsadsn">description::
     <br>Consensus-algorithm is the-algorithm which automates the-appendability of the-transactionchain.
@@ -477,11 +479,11 @@
     <br>* cpt.chain-net'consensus-algorithm,
     <br>* cpt.D-stroke-chain--consensus-algorithm,
     <br>* cpt.Dcc-network'consensus-algorithm,
-    <br>* cpt.decentralized-chain--consensus-algorithm-(Dcccsa),
+    <br>* cpt.decentralized-chain--consensus-algorithm-(Dcc-Csa),
     <br>* cpt.Đ-network'consensus-algorithm,
     <br>* cpt.Đ-consensus-algorithm,
     <br>===
-    <br>* cpt.Dcccsa, {time.2018-01-16}
+    <br>* cpt.Dcc-Csa, {time.2018-01-16}
     <br>* cpt.Dtc-Csa,
     <br>* cpt.Dcc-net'Consensus-algorithm,
     <br>* cpt.Dcc-netApConsensus-algorithm,
@@ -496,7 +498,7 @@
     <a class="clsHide" href="#idDtccsaSpc"></a></p>
 
   <section id="idDtccsaPob">
-  <h3 id="idDtccsaPobH3">Dcccsa.PROOF-OF-BURN
+  <h3 id="idDtccsaPobH3">Dcc-Csa.PROOF-OF-BURN
     <a class="clsHide" href="#idDtccsaPobH3"></a></h3>
   <p id="idDtccsaPobdsn">description::
     <br>In proof-of-work, computing power and electricity is converted into tokens and in proof-of-burn the same resource is further converted into another token.
@@ -509,7 +511,7 @@
   </section>
 
   <section id="idDtccsaPod">
-  <h3 id="idDtccsaPodH3">Dcccsa.PROOF-OF-DEVOSION
+  <h3 id="idDtccsaPodH3">Dcc-Csa.PROOF-OF-DEVOSION
     <a class="clsHide" href="#idDtccsaPodH3"></a></h3>
   <p id="idDtccsaPoddsn">description::
     <br>The problem with PoW is a waste of computing power.
@@ -525,7 +527,7 @@
   </section>
 
   <section id="idDtccsaPospFNT">
-  <h3 id="idDtccsaPospFNTH3">Dcccsa.PROOF-OF-SPACE
+  <h3 id="idDtccsaPospFNTH3">Dcc-Csa.PROOF-OF-SPACE
     <a class="clsHide" href="#idDtccsaPospFNTH3"></a></h3>
   <p id="idDtccsaPospFNTnam">name::
     <br>* cpt.consensus-algorithm.Proof-of-space,
@@ -538,55 +540,8 @@
   </section>
 
   <section id="idDtcchnads">
-  <h2 id="idDtcchnadsH2">DAddress-of-Đ-chain
+  <h2 id="idDtcchnadsH2">account of tx-chain (<a class="clsPreview" href="#idDtcwltacnt">link</a>)
     <a class="clsHide" href="#idDtcchnadsH2"></a></h2>
-  <p id="idDtcchnadsdsn">description::
-    <br>· the-information on Đ-chain is encrypted in order to be-viewed and stored publicly but owned privately.
-    <br>· this way this information can-represent exchange-value.
-    <br>· the-cryptographic-system used is-called "<a href="https://en.wikipedia.org/wiki/Public-key_cryptography">public-key-cryptography</a>".
-    <br>· it uses a-public-address (public-key) to 'store' information (exchage-value) and a-private-address (private-key) to 'use|spend' this information (exchange-value).
-    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2017-12-16]
-    <a class="clsHide" href="#idDtcchnadsdsn"></a></p>
-  <p id="idDtcchnadsnam">name::
-    <br>* cpt.address-of--chain-network-(Dcads),
-    <br>* cpt.DAddress,
-    <br>* cpt.Dcc-network'Address-(Dcads),
-    <br>* cpt.D-stroke-chain-address-(Dcads),
-    <br>* cpt.decentralized-chain--address-(Dcads),
-    <br>* cpt.Dcads,
-    <br>* cpt.Dcc-net'Address,
-    <br>* cpt.Dtc-Ads,
-    <a class="clsHide" href="#idDtcchnadsnam"></a></p>
-
-  <section id="idDtcchnadsPblc">
-  <h3 id="idDtcchnadsPblcH3">DAddress.PUBLIC
-    <a class="clsHide" href="#idDtcchnadsPblcH3"></a></h3>
-  <p id="idDtcchnadsPblcdsn">description::
-    <br>· public-address is the-public known string of symbols that function as the-name of a-container of information (<a class="clsPreview" href="#idDtcevuFNT">đ-assets</a>) for the-user who has the corresponded <a class="clsPreview" href="#idDtcchnadsPrvt">private-key</a> to use|spend.
-    <br>· this way h|she can-spent <a class="clsPreview" href="#idDtcevuFNT">đ-assets</a>.
-    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2017-12-16]
-    <a class="clsHide" href="#idDtcchnadsPblcdsn"></a></p>
-  <p id="idDtcchnadsPblcnam">name::
-    <br>* cpt.DAddress.public,
-    <br>* cpt.public-address--of--chain-network,
-    <br>* cpt.public-key--of--chain-network,
-    <a class="clsHide" href="#idDtcchnadsPblcnam"></a></p>
-  </section>
-
-  <section id="idDtcchnadsPrvt">
-  <h3 id="idDtcchnadsPrvtH3">DAddress.PRIVATE
-    <a class="clsHide" href="#idDtcchnadsPrvtH3"></a></h3>
-  <p id="idDtcchnadsPrvtdsn">description::
-    <br>· private-address is the-secret string of symbols with which a-user have access (ownership) of <a class="clsPreview" href="#idDtcchnFNT">Đ-chain</a> information.
-    <br>· this way h|she can-spent <a class="clsPreview" href="#idDtcevuFNT">đ-assets</a>.
-    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2017-12-16]
-    <a class="clsHide" href="#idDtcchnadsPrvtdsn"></a></p>
-  <p id="idDtcchnadsPrvtnam">name::
-    <br>* cpt.DAddress.Private,
-    <br>* cpt.private-address--of--chain-network,
-    <br>* cpt.private-key--of--chain-network,
-    <a class="clsHide" href="#idDtcchnadsPrvtnam"></a></p>
-  </section>
   </section>
 
   <section id="idDtcchnsiz">
@@ -625,30 +580,32 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2017-09-08]
     <a class="clsHide" href="#idDtcevudsn"></a></p>
   <p id="idDtcevunam">name::
-    <br>* cpt.asset-of--chain-network-(Devu),
-    <br>* cpt.crypto-asset--of--chain-network-(Devu),
+    <br>* cpt.asset-of--chain-network-(đ-asset),
+    <br>* cpt.chain-asset,
+    <br>* cpt.crypto-asset--of--chain-network-(đ-asset),
     <br>* cpt.cryptoasset,
-    <br>* cpt.cryptoasset-(Devu),
+    <br>* cpt.cryptoasset-(đ-asset),
     <br>* cpt.cryptotoken,
-    <br>* cpt.cryptotoken-(Devu),
+    <br>* cpt.cryptotoken-(đ-asset),
     <br>* cpt.crypto-token--of--chain-network,
     <br>* cpt.d-stroke-small-asset-(đ-asset), {time.2017-12-20}
     <br>* cpt.d-stroke-small-asset-(decentralized-chain--asset),
-    <br>* cpt.d-stroke-small-asset-of--chain-network-(Devu), {time.2017-12-11}
-    <br>* cpt.Dledger--exchange-value-unit-(Devu),
-    <br>* cpt.Dledger-token-(Devu),
+    <br>* cpt.d-stroke-small-asset-of--chain-network-(đ-asset), {time.2017-12-11}
+    <br>* cpt.Dledger--exchange-value-unit-(đ-asset),
+    <br>* cpt.Dledger-token-(đ-asset),
     <br>* cpt.d-stroke-small-token,
-    <br>* cpt.exchange-value-unit--of--chain-network-(Devu),
-    <br>* cpt.token-of--Dledger-network-(Devu),
-    <br>* cpt.token-of--chain-network-(Devu),
+    <br>* cpt.exchange-value-unit--of--chain-network-(đ-asset),
+    <br>* cpt.token-of--Dledger-network-(đ-asset),
+    <br>* cpt.token-of--chain-network-(đ-asset),
     <br>* cpt.đ-asset, {time.2017-12-19}
     <br>* cpt.đ-token, {time.2017-12-19}
     <br>===
+    <br>* cpt.dcc-asset, {time.2018-01-23}
     <br>* cpt.Dcevu,
     <br>* cpt.Devu, {time.2017-12-14}
     <br>* cpt.Dtc-Evu,
     <br>* cpt.Dtc-Evu-(cryptoasset),
-    <br>* cpt.Evu-of--chain-network-(Devu),
+    <br>* cpt.Evu-of--chain-network-(đ-asset),
     <br>===
     <br>There is no standard terminology yet for this concept.
     <br><a href="https://coinmarketcap.com/">Coinmarketcap.com</a> just changed its terminology from "coin-asset" to "coin-token" on {time.2017.09}.
@@ -657,7 +614,7 @@
     <a class="clsHide" href="#idDtcevunam"></a></p>
 
   <section id="idDtcevubkn">
-  <h2 id="idDtcevubknH2">Backness-of-đ-asset
+  <h2 id="idDtcevubknH2">backness of đ-asset
     <a class="clsHide" href="#idDtcevubknH2"></a></h2>
   <p id="idDtcevubkndsn">description::
     <br>Commodity is an-entity with exchange-value (= people want to exchange it with other commodities).
@@ -678,7 +635,7 @@
   </section>
 
   <section id="idDtcevuadpn">
-  <h2 id="idDtcevuadpnH2">Adoption-of-đ-asset
+  <h2 id="idDtcevuadpnH2">adoption of đ-asset
     <a class="clsHide" href="#idDtcevuadpnH2"></a></h2>
   <p id="idDtcevuadpndsn">description::
     <br>The quantity of people use <a class="clsPreview" href="#idDtcevuFNT">the-đ-asset</a>.
@@ -692,7 +649,7 @@
   </section>
 
   <section id="idDtcevuoprcst">
-  <h2 id="idDtcevuoprcstH2">Cost-of-operation--of-đ-asset
+  <h2 id="idDtcevuoprcstH2">cost-of-operation- of đ-asset
     <a class="clsHide" href="#idDtcevuoprcstH2"></a></h2>
   <p id="idDtcevuoprcstnam">name::
     <br>* cpt.cost-of-operation--of-đ-asset,
@@ -703,7 +660,7 @@
   </section>
 
   <section id="idDtcevuexrate">
-  <h2 id="idDtcevuexrateH2">Exchange-rate--of-đ-asset
+  <h2 id="idDtcevuexrateH2">exchange-rate of đ-asset
     <a class="clsHide" href="#idDtcevuexrateH2"></a></h2>
   <p id="idDtcevuexratedsn">description::
     <br>· exchange-rate of a-đ-asset is its <a class="clsPreview" href="#idDtcevuprc">price</a> over time.
@@ -717,7 +674,7 @@
     <a class="clsHide" href="#idDtcevuexratenam"></a></p>
 
   <section id="idDtcevuprc">
-  <h3 id="idDtcevuprcH3">Price-of-đ-asset
+  <h3 id="idDtcevuprcH3">price of đ-asset
     <a class="clsHide" href="#idDtcevuprcH3"></a></h3>
   <p id="idDtcevuprcdsn">description::
     <br>· ratio is the-relation of 2 measures.
@@ -754,7 +711,7 @@
   </section>
 
   <section id="idDtcevumtcp">
-  <h3 id="idDtcevumtcpH3">Market-capitalization--of-đ-asset
+  <h3 id="idDtcevumtcpH3">market-capitalization of đ-asset
     <a class="clsHide" href="#idDtcevumtcpH3"></a></h3>
   <p id="idDtcevumtcpdsn">description::
     <br>Market-capitalization-of-đ-asset is its <a class="clsPreview" href="#idDtcevuprc">price</a> multiplied by the-circulating-đ-assets.
@@ -767,7 +724,7 @@
   </section>
 
   <section id="idDtcevubbl">
-  <h3 id="idDtcevubblH3">Bubble-of-đ-asset
+  <h3 id="idDtcevubblH3">bubble of đ-asset
     <a class="clsHide" href="#idDtcevubblH3"></a></h3>
   <p id="idDtcevubbldsn">description::
     <br>Will crypto markets crash in between?
@@ -785,7 +742,7 @@
   </section>
 
   <section id="idDtcevuvltlt">
-  <h3 id="idDtcevuvltltH3">Volatility-of-đ-asset
+  <h3 id="idDtcevuvltltH3">volatility of đ-asset
     <a class="clsHide" href="#idDtcevuvltltH3"></a></h3>
   <p id="idDtcevuvltltdsn">description::
     <br>· volatility-of-đ-asset is the-change of its <a class="clsPreview" href="#idDtcevuprc">price</a> over time and its quantity.
@@ -806,7 +763,7 @@
     <a class="clsHide" href="#idDtcevuvltltgncchn"></a></p>
 
   <section id="idDtcevuspcltn">
-  <h4 id="idDtcevuspcltnH4">Speculation-of-đ-asset
+  <h4 id="idDtcevuspcltnH4">speculation of đ-asset
     <a class="clsHide" href="#idDtcevuspcltnH4"></a></h4>
   <p id="idDtcevuspcltndsn">description::
     <br>· the main reason of price-volatility is speculation.
@@ -833,7 +790,7 @@
   </section>
 
   <section id="idDtcevuusblt">
-  <h2 id="idDtcevuusbltH2">Usability--of-đ-asset
+  <h2 id="idDtcevuusbltH2">usability of đ-asset
     <a class="clsHide" href="#idDtcevuusbltH2"></a></h2>
   <p id="idDtcevuusbltnam">name::
     <br>* cpt.ease-of-use--of-đ-asset,
@@ -846,7 +803,7 @@
   </section>
 
   <section id="idDtcevulaw">
-  <h2 id="idDtcevulawH2">Law-of-đ-asset
+  <h2 id="idDtcevulawH2">law of đ-asset
     <a class="clsHide" href="#idDtcevulawH2"></a></h2>
   <p id="idDtcevulawnam">name::
     <br>* cpt.d-stroke-small-asset'Law,
@@ -855,7 +812,7 @@
   </section>
 
   <section id="idDtcevuwlt">
-  <h2 id="idDtcevuwltH2">Wallet-of-đ-asset
+  <h2 id="idDtcevuwltH2">wallet of đ-asset
     <a class="clsHide" href="#idDtcevuwltH2"></a></h2>
   <p id="idDtcevuwltdsn">description::
     <br>· <a class="clsPreview" href="#idDtcwltFNT">the-wallet</a> used to have access to a-đ-asset.
@@ -868,7 +825,7 @@
   </section>
 
   <section id="idDtcevudvc">
-  <h2 id="idDtcevudvcH2">Device-of-đ-asset
+  <h2 id="idDtcevudvcH2">device of đ-asset
     <a class="clsHide" href="#idDtcevudvcH2"></a></h2>
   <p id="idDtcevudvcnam">name::
     <br>* cpt.device-of-đ-asset,
@@ -878,7 +835,7 @@
   </section>
 
   <section id="idDtcevuxogn">
-  <h2 id="idDtcevuxognH2">Exchange-organization--of-đ-asset
+  <h2 id="idDtcevuxognH2">exchange-organization of đ-asset
     <a class="clsHide" href="#idDtcevuxognH2"></a></h2>
   <p id="idDtcevuxognnam">name::
     <br>* cpt.exchange-organization--of-đ-asset,
@@ -888,7 +845,7 @@
   </section>
 
   <section id="idDtcevueval">
-  <h2 id="idDtcevuevalH2">Evaluation-of-đ-asset
+  <h2 id="idDtcevuevalH2">evaluation of đ-asset
     <a class="clsHide" href="#idDtcevuevalH2"></a></h2>
   <p id="idDtcevuevalnam">name::
     <br>* cpt.evaluation-of-đ-asset,
@@ -901,7 +858,7 @@
   </section>
 
   <section id="idDtcevudsbn">
-  <h2 id="idDtcevudsbnH2">Distribution-of-đ-asset
+  <h2 id="idDtcevudsbnH2">distribution of đ-asset
     <a class="clsHide" href="#idDtcevudsbnH2"></a></h2>
   <p id="idDtcevudsbnnam">name::
     <br>* cpt.allocation-of-đ-asset,
@@ -912,7 +869,7 @@
   </section>
 
   <section id="idDtcevursc">
-  <h2 id="idDtcevurscH2">Resource-of-đ-asset
+  <h2 id="idDtcevurscH2">resource of đ-asset
     <a class="clsHide" href="#idDtcevurscH2"></a></h2>
   <p id="idDtcevurscnam">name::
     <br>* cpt.d-stroke-small-asset'Resource,
@@ -929,7 +886,7 @@
   </section>
 
   <section id="idDtcevusvcg">
-  <h2 id="idDtcevusvcgH2">SERVICE-of-đ-asset
+  <h2 id="idDtcevusvcgH2">SERVICE of đ-asset
     <a class="clsHide" href="#idDtcevusvcgH2"></a></h2>
   <p id="idDtcevusvcgnam">name::
     <br>* cpt.function-of-đ-asset,
@@ -942,7 +899,7 @@
     <a class="clsHide" href="#idDtcevusvcgSpc"></a></p>
 
   <section id="idDtcevusovatt">
-  <h3 id="idDtcevusovattH3">Store-of-value-attribute--of-đ-asset
+  <h3 id="idDtcevusovattH3">store-of-value-attribute of đ-asset
     <a class="clsHide" href="#idDtcevusovattH3"></a></h3>
   <p id="idDtcevusovattdsn">description::
     <br>· the-attribute of retaining its <a class="clsPreview" href="#idDtcevuprc">price</a> in time.
@@ -971,19 +928,29 @@
   </section>
 
   <section id="idDtcevucrtg">
-  <h2 id="idDtcevucrtgH2">Creating-of-đ-asset
+  <h2 id="idDtcevucrtgH2">creating of đ-asset
     <a class="clsHide" href="#idDtcevucrtgH2"></a></h2>
   <p id="idDtcevucrtgnam">name::
+    <br>* cpt.chain-asset'creating,
     <br>* cpt.creating-of-đ-asset,
-    <br>* cpt.d-stroke-small-asset'Creating,
-    <br>* cpt.đ-asset'Creating,
+    <br>* cpt.d-stroke-small-asset'creating,
+    <br>* cpt.đ-asset'creating,
     <br>* cpt.d-stroke-small-asset'Issuance,
     <br>* cpt.đ-asset'Issuance,
     <a class="clsHide" href="#idDtcevucrtgnam"></a></p>
+
+  <section id="idDtcevuifnrt">
+  <h3 id="idDtcevuifnrtH3">inflation-rate of đ-asset
+    <a class="clsHide" href="#idDtcevuifnrtH3"></a></h3>
+  <p id="idDtcevuifnrtnam">Name::
+    <br>* cpt.chain-asset'inflation-rate,
+    <br>* cpt.inflation-rate-of--đ-asset,
+    <a class="clsHide" href="#idDtcevuifnrtnam"></a></p>
+  </section>
   </section>
 
   <section id="idDtcevubyg">
-  <h2 id="idDtcevubygH2">Buying-of-đ-asset
+  <h2 id="idDtcevubygH2">buying of đ-asset
     <a class="clsHide" href="#idDtcevubygH2"></a></h2>
   <p id="idDtcevubygnam">name::
     <br>* cpt.buying-of-đ-asset,
@@ -993,7 +960,7 @@
   </section>
 
   <section id="idDtcevuslg">
-  <h2 id="idDtcevuslgH2">Selling-of-đ-asset
+  <h2 id="idDtcevuslgH2">selling of đ-asset
     <a class="clsHide" href="#idDtcevuslgH2"></a></h2>
   <p id="idDtcevuslgnam">name::
     <br>* cpt.selling-of-đ-asset,
@@ -2484,7 +2451,7 @@
     <br>* cpt.creating-đ-currency,
     <br>* cpt.issuance-of-đ-currency,
     <br>* cpt.production-of-đ-currency,
-    <br>* cpt.đ-currency'Creating,
+    <br>* cpt.đ-currency'creating,
     <br>* cpt.đ-currency'Issuance,
     <a class="clsHide" href="#idDtcevuMoecrtgnam"></a></p>
   <p id="idDtcevuMoecrtgwpa">AddressWpg::
@@ -3063,21 +3030,76 @@
     <br>* cpt.Đ-wlt,
     <a class="clsHide" href="#idDtcwltnam"></a></p>
 
+  <section id="idDtcwltacnt">
+  <h2 id="idDtcwltacntH2">account of chain-wallet
+    <a class="clsHide" href="#idDtcwltacntH2"></a></h2>
+  <p id="idDtcwltacntdsn">Description::
+    <br>· chain-account is the public and private keys needed to manage the cryptographic information on <a class="clsPreview" href="#idDtcchnFNT">the-tx-chain</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-01-23]
+    <br>===
+    <br>· the-information on Đ-chain is encrypted in order to be-viewed and stored publicly but owned privately.
+    <br>· this way this information can-represent exchange-value.
+    <br>· the-cryptographic-system used is-called "<a href="https://en.wikipedia.org/wiki/Public-key_cryptography">public-key-cryptography</a>".
+    <br>· it uses a-public-address (public-key) to 'store' information (exchage-value) and a-private-address (private-key) to 'use|spend' this information (exchange-value).
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2017-12-16]
+    <a class="clsHide" href="#idDtcwltacntdsn"></a></p>
+  <p id="idDtcwltacntnam">Name::
+    <br>* cpt.account-of--chain-wallet,
+    <br>* cpt.chain-account,
+    <br>* cpt.chain-wallet'account,
+    <a class="clsHide" href="#idDtcwltacntnam"></a></p>
+
+  <section id="idDtcadrs">
+  <h3 id="idDtcadrsH3">public-address (address) of chain-account
+    <a class="clsHide" href="#idDtcadrsH3"></a></h3>
+  <p id="idDtcadrsdsn">description::
+    <br>· public-address is the-public known string of symbols that function as the-name of a-container of information (<a class="clsPreview" href="#idDtcevuFNT">đ-assets</a>) for the-user who has the corresponded <a class="clsPreview" href="#idDtcprtkey">private-key</a> to use|spend.
+    <br>· this way h|she can-spent <a class="clsPreview" href="#idDtcevuFNT">đ-assets</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2017-12-16]
+    <a class="clsHide" href="#idDtcadrsdsn"></a></p>
+  <p id="idDtcadrsnam">name::
+    <br>* cpt.address-of--chain-network,
+    <br>* cpt.chain-account'address,
+    <br>* cpt.chain-account'name,
+    <br>* cpt.D-stroke-chain-address,
+    <br>* cpt.Dcc-net'address,
+    <br>* cpt.decentralized-chain--address,
+    <br>* cpt.public-address--of--chain-network,
+    <br>* cpt.public-key--of--chain-network,
+    <br>* cpt.Đ-address,
+    <a class="clsHide" href="#idDtcadrsnam"></a></p>
+  </section>
+
+  <section id="idDtcprtkey">
+  <h3 id="idDtcprtkeyH3">private-key of chain-account
+    <a class="clsHide" href="#idDtcprtkeyH3"></a></h3>
+  <p id="idDtcprtkeydsn">description::
+    <br>· private-address is the-secret string of symbols with which a-user have access (ownership) of <a class="clsPreview" href="#idDtcchnFNT">Đ-chain</a> information.
+    <br>· this way h|she can-spent <a class="clsPreview" href="#idDtcevuFNT">đ-assets</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2017-12-16]
+    <a class="clsHide" href="#idDtcprtkeydsn"></a></p>
+  <p id="idDtcprtkeynam">name::
+    <br>* cpt.private-address--of--chain-network,
+    <br>* cpt.private-key--of--chain-network,
+    <a class="clsHide" href="#idDtcprtkeynam"></a></p>
+  </section>
+  </section>
+
   <section id="idDtcwltevu">
-  <h2 id="idDtcwltevuH2">đ-asset-of-Đ-wallet
+  <h2 id="idDtcwltevuH2">đ-asset of chain-wallet
     <a class="clsHide" href="#idDtcwltevuH2"></a></h2>
   <p id="idDtcwltevudsn">description::
     <br>· <a class="clsPreview" href="#idDtcevuFNT">the-đ-assets</a> the-wallet contains.
     <a class="clsHide" href="#idDtcwltevudsn"></a></p>
   <p id="idDtcwltevunam">name::
-    <br>* cpt.d-stroke-small-asset-of-Đ-wallet,
-    <br>* cpt.đ-asset-of-Đ-wallet,
-    <br>* cpt.D-stroke-wallet'đ-asset,
+    <br>* cpt.chain-wallet'đ-asset,
+    <br>* cpt.dcc-asset-of--chain-wallet,
+    <br>* cpt.đ-asset-of--chain-wallet,
     <a class="clsHide" href="#idDtcwltevunam"></a></p>
   </section>
 
   <section id="idDtcwltSpc">
-  <h2 id="idDtcwltSpcH2">Đ-wallet.SPECIFIC
+  <h2 id="idDtcwltSpcH2">chain-wallet.SPECIFIC
     <a class="clsHide" href="#idDtcwltSpcH2"></a></h2>
   <p id="idDtcwltSpcP1">Specific::
     <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDbcwltFT">blockchain-Đ-wallet</a>,
@@ -3933,10 +3955,10 @@
   <h2 id="idDtcdngCrgH2">Đ-doing.CREATING
     <a class="clsHide" href="#idDtcdngCrgH2"></a></h2>
   <p id="idDtcdngCrgnam">name::
-    <br>* cpt.Dcc-net'Creating,
+    <br>* cpt.Dcc-net'creating,
     <br>* cpt.Dcc-netAeCreating,
     <br>* cpt.chain-net'creating,
-    <br>* cpt.Dcc-network'Creating,
+    <br>* cpt.Dcc-network'creating,
     <br>* cpt.Đ-network'creating,
     <br>* cpt.Dcdng.creating,
     <br>* cpt.Dledger-creating,
@@ -6318,18 +6340,18 @@
 </section>
 
 <section id="idMeta">
-  <h1 id="idMetaH1">Meta-Info
+  <h1 id="idMetaH1">meta-info
     <a class="clsHide" href="#idMetaH1"></a></h1>
-  <p id="idMetaCounter" class="clsCenter">This page was-visited
+  <p id="idMetaCounter" class="clsCenter">this page was-visited
     <span class="clsColorRed">
     <script src="../../dirPgm/dirCntr/counter.php?page=Mws-dirTchInf.DLgrnet"></script>
     </span>
     times since {time.2017-07-02}</p>
   <!-- the content of page-path paragraph is displayed as it is on top of toc -->
-  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">Page-wholepath</span>:
+  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-wholepath</span>:
     <a class="clsPreview" href="../../index.html#idDescription">synagonism.net</a> /
     <a class="clsPreview" href="../FilMcsw.Last.html#idDescription">Mcs-worldview</a> /
-    <a class="clsPreview" href="FilMcsTchInf.Last.html#idDescription">DirTchInf</a> /
+    <a class="clsPreview" href="FilMcsTchInf.Last.html#idDescription">dirTchInf</a> /
     chain-network
     </p>
   <p id="idMetaP1">SEARCH::
