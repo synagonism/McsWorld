@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Steem-network (Đ-Steem.0-7-0.2018-01-29)</title>
+  <title>Mcs.Steem-network (Đ-Steem.0-8-0.2018-02-02)</title>
   <meta name="keywords" content="Đb-Steem, Steem-net, ModelConceptStructured, Mcs, structured-concept, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -352,12 +352,15 @@
     <br>===
     <br>STEEM Power (abbreviated SP) is a measurement of how much influence a user has in the Steem network. The more STEEM Power a user holds, the more they can influence the value of posts and comments. STEEM Power is less liquid. If a user wishes to “Power Down” SP, they will receive equal distributions of the STEEM weekly, over a 13 week period.
     <br>[<a href="https://steemit.com/faq.html#What_is_the_difference_between_STEEM__STEEM_Power__and_Steem_Dollars">https://steemit.com/faq.html#What_is_the_difference_between_STEEM__STEEM_Power__and_Steem_Dollars</a>]
+    <br>===
+    <br>The more STEEM Power you have, the more rewards you can earn and the more influence you have on the platform.
     <a class="clsHide" href="#idSteemsmpwrdsn"></a></p>
   <p id="idSteemsmpwrnam">name::
     <br>* cpt.SP-(STEEM-Power),
     <br>* cpt.Steem-asset.STEEM-Power,
     <br>* cpt.STEEM-Power-(SP),
     <br>* cpt.Steem-net'STEEM-Power,
+    <br>* cpt.Vested-STEEM,
     <a class="clsHide" href="#idSteemsmpwrnam"></a></p>
 
   <section id="idSteemsmpwrVst">
@@ -421,32 +424,131 @@
     <a class="clsHide" href="#idSteempgmSpcH2"></a></h2>
   <p id="idSteempgmSpcP1">specific::
     <br>* Steem-client,
-    <br>* Steem-application,
-    <br>* Steem-tool,
+    <br>* <a class="clsPreview" href="#idSteemdap">Steem-application</a>,
+    <br>* <a class="clsPreview" href="idSteempgmTul">Steem-tool</a>,
     <a class="clsHide" href="#idSteempgmSpcP1"></a></p>
+  </section>
+
+  <section id="idSteemdap">
+  <h2 id="idSteemdapH2">Steem-program.APPLICATION
+    <a class="clsHide" href="#idSteemdapH2"></a></h2>
+  <p id="idSteemdapnam">name::
+    <br>* cpt.dApp.Steem,
+    <br>* cpt.Steem-app,
+    <br>* cpt.Steem-net'application,
+    <br>* cpt.Steem-net'interface,
+    <br>* cpt.Steem-program.application,
+    <br>* cpt.Đ-Steem'application,
+    <a class="clsHide" href="#idSteemdapnam"></a></p>
+  <p id="idSteemdapwpa">addressWpg::
+    <br>* <a href="https://steemdb.com/apps">https://steemdb.com/apps</a>,
+    <a class="clsHide" href="#idSteemdapwpa"></a></p>
+  <p id="idSteemdapgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="#idSteempgm">Steem-net--program</a>,
+    <br>===
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDbcapp">block-chain--app</a>,
+    <a class="clsHide" href="#idSteemdapgncchn"></a></p>
+  <p id="idSteemdapSpc">Specific::
+    <br>* <a class="clsPreview" href="#idSteemit">steemit.com</a>,
+    <br>* <a href="https://busy.org/">busy.org</a>,
+    <br>* <a href="https://chainbb.com/">chainbb.com</a>,
+    <br>* <a href="https://dsound.audio">dsound.audio</a>,
+    <br>* <a href="https://d.tube/">dtube.video</a>,
+    <br>* <a href="http://join.utopian.io/">utopian.io</a>,
+    <a class="clsHide" href="#idSteemdapSpc"></a></p>
   </section>
 
   <section id="idSteempgmTul">
   <h2 id="idSteempgmTulH2">Steem-program.TOOL
     <a class="clsHide" href="#idSteempgmTulH2"></a></h2>
+  <p id="idSteempgmTuldsn">description::
+    <br>· there is no clear cut definition of tool.
+    <br>· tools tend to be smaller programs that are sharply focused on specific tasks.
+    <a class="clsHide" href="#idSteempgmTuldsn"></a></p>
   <p id="idSteempgmTulnam">name::
     <br>* cpt.Steem-program.tool,
     <br>* cpt.Steem-tool,
     <a class="clsHide" href="#idSteempgmTulnam"></a></p>
+  <p id="idSteempgmTulSpc">specific::
+    <br>* <a class="clsPreview" href="#idSteempgmTul">API-explorer</a>,
+    <a class="clsHide" href="#idSteempgmTulSpc"></a></p>
+  </section>
 
-  <section id="idSteempgmTul">
-  <h3 id="idSteempgmTulH3">Steem-tool.API-EXPLORER
-    <a class="clsHide" href="#idSteempgmTulH3"></a></h3>
-  <p id="idSteempgmTulnam">name::
+  <section id="idSteempgmApiexp">
+  <h2 id="idSteempgmApiexpH2">Steem-program.API-EXPLORER
+    <a class="clsHide" href="#idSteempgmApiexpH2"></a></h2>
+  <p id="idSteempgmApiexpnam">name::
     <br>* cpt.Steem-API-explorer,
+    <br>* cpt.Steem-program.API-explorer,
     <br>* cpt.Steem-tool.API-explorer,
-    <a class="clsHide" href="#idSteempgmTulnam"></a></p>
-  <p id="idSteempgmTulwpa">addressWpg::
+    <a class="clsHide" href="#idSteempgmApiexpnam"></a></p>
+  <p id="idSteempgmApiexpwpa">addressWpg::
     <br>* <a href="https://steemapi.com/">https://steemapi.com/</a>,
     <br>* <a href="https://steemit.com/steem/@lantto/steemapi-com-steem-api-explorer-relaunch">https://steemit.com/steem/@lantto/steemapi-com-steem-api-explorer-relaunch</a>,
     <br>* <a href="https://steemit.com/steem/@lantto/steem-api-explorer">https://steemit.com/steem/@lantto/steem-api-explorer</a>,
-    <a class="clsHide" href="#idSteempgmTulwpa"></a></p>
+    <a class="clsHide" href="#idSteempgmApiexpwpa"></a></p>
   </section>
+
+  <section id="idSteempgmEstm">
+  <h2 id="idSteempgmEstmH2">Steem-program.eSteem
+    <a class="clsHide" href="#idSteempgmEstmH2"></a></h2>
+  <p id="idSteempgmEstmdsn">description::
+    <br>Mobile app for iOS and Android by <a href="https://steemit.com/@good-karma">@good-karma</a>.
+    <a class="clsHide" href="#idSteempgmEstmdsn"></a></p>
+  <p id="idSteempgmEstmnam">name::
+    <br>* cpt.eSteem,
+    <br>* cpt.Steem-program.eSteem,
+    <a class="clsHide" href="#idSteempgmEstmnam"></a></p>
+  <p id="idSteempgmEstmwpa">addressWpg::
+    <br>* <a href="https://esteem.ws/">https://esteem.ws/</a>,
+    <a class="clsHide" href="#idSteempgmEstmwpa"></a></p>
+  </section>
+
+  <section id="idSteempgmStmsts">
+  <h2 id="idSteempgmStmstsH2">Steem-program.SteemStats
+    <a class="clsHide" href="#idSteempgmStmstsH2"></a></h2>
+  <p id="idSteempgmStmstsdsn">description::
+    <br>SteemStats is an application created to help you monitor your account activity on steemit.com, a social media platform based on the steem blockchain.
+    <br>[<a href="https://steemstats.com/#!/">https://steemstats.com/</a>]
+    <br>by <a href="http://steemit.com/@jesta">@jesta</a>
+    <a class="clsHide" href="#idSteempgmStmstsdsn"></a></p>
+  <p id="idSteempgmStmstsnam">name::
+    <br>* cpt.Steem-program.SteemStats,
+    <a class="clsHide" href="#idSteempgmStmstsnam"></a></p>
+  <p id="idSteempgmStmstswpa">addressWpg::
+    <br>* <a href="https://steemstats.com/#!/">https://steemstats.com/</a>,
+    <a class="clsHide" href="#idSteempgmStmstswpa"></a></p>
+  </section>
+
+  <section id="idSteempgmStmtls">
+  <h2 id="idSteempgmStmtlsH2">Steem-program.Steem-tools
+    <a class="clsHide" href="#idSteempgmStmtlsH2"></a></h2>
+  <p id="idSteempgmStmtlsdsn">description::
+    <br>· a (complete) list of available tools for Steem.
+    <br>· created by <a href="https://steemit.com/steem/@roelandp/steemtools-com-indexing-all-tools-and-services-for-steemit-users">@roelandp</a>, maintained by <a href="https://steemit.chat/direct/transisto">@transisto</a>.
+    <a class="clsHide" href="#idSteempgmStmtlsdsn"></a></p>
+  <p id="idSteempgmStmtlsnam">name::
+    <br>* cpt.Steem-program.Steem-tools,
+    <a class="clsHide" href="#idSteempgmStmtlsnam"></a></p>
+  <p id="idSteempgmStmtlswpa">addressWpg::
+    <br>* <a href="http://steemtools.com/">http://steemtools.com/</a>,
+    <a class="clsHide" href="#idSteempgmStmtlswpa"></a></p>
+  </section>
+
+  <section id="idSteempgmStmwls">
+  <h2 id="idSteempgmStmwlsH2">Steem-program.Steem-wales
+    <a class="clsHide" href="#idSteempgmStmwlsH2"></a></h2>
+  <p id="idSteempgmStmwlsdsn">description::
+    <br>This website tracks and collects information about the STEEM crypto-currency Network. Currently 239377 accounts are being monitored. We strive to provide useful data or features that are not available through a normal node connection.
+    <br>The website was created by <a href="https://steemit.com/@heimindanger">@heimindanger</a> on 20th June 2016.
+    <br>[<a href="https://steemwhales.com/about/">https://steemwhales.com/about/</a>]
+    <a class="clsHide" href="#idSteempgmStmwlsdsn"></a></p>
+  <p id="idSteempgmStmwlsnam">name::
+    <br>* cpt.,
+    <a class="clsHide" href="#idSteempgmStmwlsnam"></a></p>
+  <p id="idSteempgmStmwlswpa">addressWpg::
+    <br>* <a href="https://steemwhales.com/">https://steemwhales.com/</a>,
+    <a class="clsHide" href="#idSteempgmStmwlswpa"></a></p>
   </section>
 </section>
 
@@ -503,6 +605,12 @@
     <br>* cpt.Steem-account'username,
     <br>* cpt.Steem-net'username,
     <a class="clsHide" href="#idSteemacntpbcnam"></a></p>
+  <p id="idSteemacntpbcexpl">example::
+    <br>(without @)
+    <br>@synagonism
+    <br>@good-karma
+    <br>@mynameisbrian
+    <a class="clsHide" href="#idSteemacntpbcexpl"></a></p>
   <p id="idSteemacntpbcgncchn">Generic-chain::
     <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDbcads">address-of--blockchain-account</a>,
     <a class="clsHide" href="#idSteemacntpbcgncchn"></a></p>
@@ -685,10 +793,16 @@
     <a class="clsHide" href="#idSteemactflrdsn"></a></p>
   <p id="idSteemactflrnam">name::
     <br>* cpt.Steem-account'follower,
+    <br>* cpt.Steem-follower,
     <a class="clsHide" href="#idSteemactflrnam"></a></p>
   <p id="idSteemactflrwpa">addressWpg::
     <br>* https://steemit.com/@name/followers,
     <a class="clsHide" href="#idSteemactflrwpa"></a></p>
+  <p id="idSteemactflrtul">tool::
+    <br>* <a href="https://steem.makerwannabe.com/">https://steem.makerwannabe.com/</a>,
+    <br>* <a href="http://steemit.deadfollowers.info/">http://steemit.deadfollowers.info/</a>,
+    <br>* <a href="https://steemit.com/steemit/@mynameisbrian/dead-followers-how-many-steemit-followers-do-you-really-have">https://steemit.com/steemit/@mynameisbrian/dead-followers-how-many-steemit-followers-do-you-really-have</a>,
+    <a class="clsHide" href="#idSteemactflrtul"></a></p>
   </section>
 
   <section id="idSteemactflg">
@@ -919,34 +1033,6 @@
   <p id="idSteemcstnam">name::
     <br>* cpt.Steem-net'cost-of-blogging,
     <a class="clsHide" href="#idSteemcstnam"></a></p>
-</section>
-
-<section id="idSteemdap">
-  <h1 id="idSteemdapH1">application of Steem-net
-    <a class="clsHide" href="#idSteemdapH1"></a></h1>
-  <p id="idSteemdapnam">name::
-    <br>* cpt.dApp.Steem,
-    <br>* cpt.Steem-app,
-    <br>* cpt.Steem-net'application,
-    <br>* cpt.Steem-net'interface,
-    <br>* cpt.Đ-Steem'application,
-    <a class="clsHide" href="#idSteemdapnam"></a></p>
-  <p id="idSteemdapwpa">addressWpg::
-    <br>* <a href="https://steemdb.com/apps">https://steemdb.com/apps</a>,
-    <a class="clsHide" href="#idSteemdapwpa"></a></p>
-  <p id="idSteemdapgncchn">generic-chain::
-    <br>* <a class="clsPreview" href="#idSteempgm">Steem-net--program</a>,
-    <br>===
-    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDbcapp">block-chain--app</a>,
-    <a class="clsHide" href="#idSteemdapgncchn"></a></p>
-  <p id="idSteemdapSpc">Specific::
-    <br>* <a class="clsPreview" href="#idSteemit">steemit.com</a>,
-    <br>* <a href="https://busy.org/">busy.org</a>,
-    <br>* <a href="https://chainbb.com/">chainbb.com</a>,
-    <br>* <a href="https://dsound.audio">dsound.audio</a>,
-    <br>* <a href="https://d.tube/">dtube.video</a>,
-    <br>* <a href="http://join.utopian.io/">utopian.io</a>,
-    <a class="clsHide" href="#idSteemdapSpc"></a></p>
 </section>
 
 <section id="idSteemit">
