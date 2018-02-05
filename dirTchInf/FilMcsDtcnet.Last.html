@@ -508,16 +508,37 @@
     <br>* cpt.Dctc-netApConsensus-algorithm,
     <a class="clsHide" href="#idDtccsanam"></a></p>
   <p id="idDtccsaSpc">Specific::
-    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDbccsa">Blockchain--consensus-algorithm</a>,
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDbccsa">blockchain--consensus-algorithm</a>,
     <br>* Dagchain--consensus-algorithm,
     <br>===
-    <br>* <a class="clsPreview" href="#idDtccsaPob">Proof-of-burn</a>,
-    <br>* Proof-of-space,
-    <br>* <a href="https://tendermint.com/">Tendermint</a>,
+    <br>* proof-of-work,
+    <br>* proof-of-stake,
+    <br>* <a class="clsPreview" href="idDtccsaDpos">delegated-proof-of-stake</a>,
+    <br>* <a class="clsPreview" href="#idDtccsaPob">proof-of-burn</a>,
+    <br>* proof-of-space,
+    <br>* <a href="https://tendermint.com/">tendermint</a>,
     <a class="clsHide" href="#idDtccsaSpc"></a></p>
 
+  <section id="idDtccsaDpos">
+  <h3 id="idDtccsaDposH3">chain-Csa.DPOS
+    <a class="clsHide" href="#idDtccsaDposH3"></a></h3>
+  <p id="idDtccsaDposdsn">description::
+    <br>The DPOS algorithm is divided into two parts: electing a group of block producers and scheduling production. The election process makes sure that stakeholders are ultimately in control because stakeholders lose the most when the network does not operate smoothly. How people are elected has little impact on how consensus is achieved on a minute by minute basis.
+    <br>[<a href="https://steemit.com/dpos/@dantheman/dpos-consensus-algorithm-this-missing-white-paper">https://steemit.com/dpos/@dantheman/dpos-consensus-algorithm-this-missing-white-paper</a>]
+    <a class="clsHide" href="#idDtccsaDposdsn"></a></p>
+  <p id="idDtccsaDposnam">name::
+    <br>* cpt.chain-Csa.Dpos,
+    <br>* cpt.delegated-proof-of-stake--consensus-algorithm,
+    <br>* cpt.DPOS,
+    <a class="clsHide" href="#idDtccsaDposnam"></a></p>
+  <p id="idDtccsaDposwpa">addressWpg::
+    <br>* {2017-05-29} DPOS Consensus Algorithm - The Missing White Paper: <a href="https://steemit.com/dpos/@dantheman/dpos-consensus-algorithm-this-missing-white-paper">https://steemit.com/dpos/@dantheman/</a>,
+    <br>* <a href="https://bitshares.org/technology/delegated-proof-of-stake-consensus/">https://bitshares.org/technology/delegated-proof-of-stake-consensus/</a>,
+    <a class="clsHide" href="#idDtccsaDposwpa"></a></p>
+  </section>
+
   <section id="idDtccsaPob">
-  <h3 id="idDtccsaPobH3">Dcc-Csa.PROOF-OF-BURN
+  <h3 id="idDtccsaPobH3">chain-Csa.PROOF-OF-BURN
     <a class="clsHide" href="#idDtccsaPobH3"></a></h3>
   <p id="idDtccsaPobdsn">description::
     <br>In proof-of-work, computing power and electricity is converted into tokens and in proof-of-burn the same resource is further converted into another token.
@@ -530,7 +551,7 @@
   </section>
 
   <section id="idDtccsaPod">
-  <h3 id="idDtccsaPodH3">Dcc-Csa.PROOF-OF-DEVOSION
+  <h3 id="idDtccsaPodH3">chain-Csa.PROOF-OF-DEVOSION
     <a class="clsHide" href="#idDtccsaPodH3"></a></h3>
   <p id="idDtccsaPoddsn">description::
     <br>The problem with PoW is a waste of computing power.
@@ -546,7 +567,7 @@
   </section>
 
   <section id="idDtccsaPospFNT">
-  <h3 id="idDtccsaPospFNTH3">Dcc-Csa.PROOF-OF-SPACE
+  <h3 id="idDtccsaPospFNTH3">chain-Csa.PROOF-OF-SPACE
     <a class="clsHide" href="#idDtccsaPospFNTH3"></a></h3>
   <p id="idDtccsaPospFNTnam">name::
     <br>* cpt.consensus-algorithm.Proof-of-space,
@@ -3055,8 +3076,9 @@
     <br>* ĐDag-network--program,
     <br>===
     <br>* <a class="clsPreview" href="idDtcpgmSpc">Đ-client-program</a>,
-    <br>* <a class="clsPreview" href="#idDtcpgmDapp">Đ-app</a>,
     <br>* <a class="clsPreview" href="#idDtcpgmStct">Đ-smart-contract</a>,
+    <br>* chain-explorer,
+    <br>* <a class="clsPreview" href="#idDtcpgmDapp">Đ-app</a>,
     <br>* Đ-wallet-program,
     <a class="clsHide" href="#idDtcpgmSpcP1"></a></p>
   </section>
@@ -3481,6 +3503,7 @@
     <br>* cpt.human.Larimer.Daniel,
     <a class="clsHide" href="#idDtchmnLmrDnlnam"></a></p>
   <p id="idDtchmnLmrDnlwpa">addressWpg::
+    <br>* <a href="http://bytemaster.github.io/">http://bytemaster.github.io/</a>,
     <br>* <a href="https://steemit.com/@dan">https://steemit.com/@dan</a>,
     <br>* <a href="https://en.wikipedia.org/wiki/Daniel_Larimer">https://en.wikipedia.org/wiki/Daniel_Larimer</a>,
     <br>* <a href="https://www.steem.center/index.php?title=Dan_Larimer">https://www.steem.center/index.php?title=Dan_Larimer</a>,
@@ -6251,15 +6274,26 @@
   <h1 id="idDtcSpcFTH1">chain-net.SPECIFIC
     <a class="clsHide" href="#idDtcSpcFTH1"></a></h1>
   <p id="idDtcSpcnam">name::
+    <br>* cpt.chain-net.specific,
     <br>* cpt.Dctc-net.specific,
     <br>* cpt.Dctc-netAsSpecific,
-    <br>* cpt.chain-net.specific,
     <br>* cpt.D-stroke-net.specific,
     <br>* cpt.transactionchain-network.specific,
+    <br>* cpt.Đ-net.specific,
     <a class="clsHide" href="#idDtcSpcnam"></a></p>
   <p id="idDtcSpcP1">Specific::
     <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDescriptionFT">blockchain-network</a>,
     <br>* <a class="clsPreview" href="idDccd-net">Dagchain-network</a> (Directed-Acyclic-Graph--net),
+    <br>===
+    <br>* <a class="clsPreview" href="#idDcnetPblc">public--chain-net</a>,
+    <br>* <a class="clsPreview" href="#idDcnetPblcNo">publicNo--chain-net</a>,
+    <br>===
+    <br>* <a class="clsPreview" href="#idDcnetMoe">đ-currency--chain-net</a>,
+    <br>* <a class="clsPreview" href="#idDcnetMoeN">đ-currencyNo--chain-net</a>,
+    <br>=== on <a class="clsPreview" href="#idDtcpgmClnt">client</a>:
+    <br>* <a class="clsPreview" href="#idDtcGrfn">Graphene--chain-net</a>,
+    <br>===
+    <br>* <a class="clsPreview" href="#idDtcGen3">3rd-generation--chain-net</a>,
     <br>===
     <br>* <a href="http://aidoskuneen.com/">Aidos-Kuneen</a>,
     <br>* <a href="https://byteball.org/">Byteball-network</a>,
@@ -6485,6 +6519,22 @@
     <a class="clsHide" href="#idDtcGen3nam"></a></p>
 </section>
 
+<section id="idDtcGrfn">
+  <h1 id="idDtcGrfnH1">chain-net.Graphene
+    <a class="clsHide" href="#idDtcGrfnH1"></a></h1>
+  <p id="idDtcGrfndsn">description::
+    <br>Graphene™ is a software platform for deploying third generation cryptographically secure decentralized ledgers known as blockchains.
+    <br>You can see Graphene as a toolkit for real-time blockchains. Graphene based systems have orders of magnitude better performance than first-generation Bitcoin-derived systems or even the second generation “Bitcoin 2.0” systems that constitute its current closest competitors. Graphene based systems offer a broad range of financial services distinguished by their transparency and inherent incorruptibility.
+    <br>Graphene is the underlying technology that powers blockchains such as <a class="clsPreview" href="filMcsDbcnetSteem.last.html#idDescriptionFT">Steem</a>, <a class="clsPreview" href="FilMcsDbcnet.Last.html#idBtsnet">BitShares</a> and Peerplays.[1]
+    <br>Graphene technology was developed by Cryptonomex.
+    <br>[<a href="https://www.steem.center/index.php?title=Graphene">https://www.steem.center/index.php?title=Graphene</a>]
+    <a class="clsHide" href="#idDtcGrfndsn"></a></p>
+  <p id="idDtcGrfnnam">name::
+    <br>* cpt.chain-net.Graphene,
+    <br>* cpt.Graphene--chain-net,
+    <a class="clsHide" href="#idDtcGrfnnam"></a></p>
+</section>
+
 <section id="idDtcEvg">
   <h1 id="idDtcEvgH1">chain-net.EVOLUTING
     <a class="clsHide" href="#idDtcEvgH1"></a></h1>
@@ -6502,11 +6552,26 @@
   <p id="idDtcEvgP1">Specific::
     <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDbcEvg">blockchain-network--evoluting</a>,
     <a class="clsHide" href="#idDtcEvgP1"></a></p>
+
+  <section id="idDtcEvg2018">
+  <h2 id="idDtcEvg2018H2">chain-net.2018
+    <a class="clsHide" href="#idDtcEvg2018H2"></a></h2>
+  <p id="idDtcEvg2018ncn">{time.2018}::
+    <br>=== new chain-networks:
+    <a class="clsHide" href="#idDtcEvg2018ncn"></a></p>
   <p id="idDtcEvg20180122">{time.2018-01-22}::
     <br>=== lightning-network:
     <br>Lightning Network’s Pizza Day? First Ever Physical Purchase On Lightning Network
     <br>[<a href="https://cointelegraph.com/news/lightning-networks-pizza-day-first-ever-physical-purchase-on-lightning-network">https://cointelegraph.com/news/lightning-networks-pizza-day-first-ever-physical-purchase-on-lightning-network</a>]
     <a class="clsHide" href="#idDtcEvg20180122"></a></p>
+  </section>
+
+  <section id="idDtcEvg2017">
+  <h2 id="idDtcEvg2017H2">chain-net.2017
+    <a class="clsHide" href="#idDtcEvg2017H2"></a></h2>
+  <p id="idDtcEvg2017ncn">{time.2017}::
+    <br>=== new chain-networks:
+    <a class="clsHide" href="#idDtcEvg2017ncn"></a></p>
   <p id="idDtcEvg20171220">{time.2017-12-20}::
     <br>=== Notation:
     <br>I am-using "D-stroke = Đ" (unicode #272 character) to denote decentralized-crypto-technology.
@@ -6523,29 +6588,99 @@
     <br>"Decentralized-Transaction-Chain--network" from "Decentralized-Ledger--network".
     <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2017-09-26]
     <a class="clsHide" href="#idDtcEvg20170926"></a></p>
-  <p id="idDtcEvg2016">{time.2016}::
+  </section>
+
+  <section id="idDtcEvg2016">
+  <h2 id="idDtcEvg2016H2">chain-net.2016
+    <a class="clsHide" href="#idDtcEvg2016H2"></a></h2>
+  <p id="idDtcEvg2016ncn">{time.2016}::
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idZecnet">Zcash-network</a> {time.2016-10-28},
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idLsknet">Lisk-network</a> {time.2016-05-24},
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idWavesnet">Waves-network</a> {time.2016-04-15},
+    <br>* <a class="clsPreview" href="filMcsDbcnetSteem.last.html#idDescriptionFT">Steem-network</a> {time.2016-03-24},
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDcrnet">Decred-network</a> {time.2016-02-08},
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idPivxnet">PIVX-network</a> {time.2016-01-29},
     <br>=== Industry:
     <br>By the end of 2016, there are almost 500 blockchain startups globally that have attracted more than $1.8 billion in investment. In 2016, traditional investment volume in blockchain industry is $496 million
     <br>[<a href="https://nebulas.io/docs/NebulasWhitepaper.pdf">https://nebulas.io/docs/NebulasWhitepaper.pdf</a>]
-    <a class="clsHide" href="#idDtcEvg2016"></a></p>
+    <a class="clsHide" href="#idDtcEvg2016ncn"></a></p>
+  </section>
+
+  <section id="idDtcEvg2015">
+  <h2 id="idDtcEvg2015H2">chain-net.2015
+    <a class="clsHide" href="#idDtcEvg2015H2"></a></h2>
+  <p id="idDtcEvg2015ncn">{time.2015}::
+    <br>=== new chain-networks:
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idBtsnet">Bitshares2-network</a> {time.2015-10-13},
+    <br>* <a class="clsPreview" href="FilMcsDbcnetEth.Last.html#idDescription">Ethereum-network</a> {time.2015-07-30},
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idXemnet">NEM-network</a> {time.2015-03-29},
+    <a class="clsHide" href="#idDtcEvg2015ncn"></a></p>
+  </section>
+
+  <section id="idDtcEvg2014">
+  <h2 id="idDtcEvg2014H2">chain-net.2014
+    <a class="clsHide" href="#idDtcEvg2014H2"></a></h2>
+  <p id="idDtcEvg2014ncn">{time.2014}::
+    <br>=== new chain-networks:
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDashnet">Dash-network</a> {time.2014-01-19},
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idFairnet">FairCoop-network</a> {time.2014-01-07},
+    <a class="clsHide" href="#idDtcEvg2014ncn"></a></p>
   <p id="idDtcEvg20140723">{time.2014-07-23}::
     <br>=== Ethereum presale:
     <br>Ethereum Raises 3,700 BTC in First 12 Hours of Ether Presale:
     <br>"The presold ether will be created in the Genesis Block around that time; until then, the 7.4 million ETHs already sold are just claims on coins that have yet to be created. The site's wording is careful in saying that the presold ETH are neither a store of value nor shares in the company, wording that simply keeps the presale on the right side of the law."
     <br>[<a href="https://cointelegraph.com/news/ethereum-raises-3700-btc-in-first-12-hours-of-ether-presale">https://cointelegraph.com/</a>]
     <a class="clsHide" href="#idDtcEvg20140723"></a></p>
-  <p id="idDtcEvg2013">{time.2013}::
+  </section>
+
+  <section id="idDtcEvg2013">
+  <h2 id="idDtcEvg2013H2">chain-net.2013
+    <a class="clsHide" href="#idDtcEvg2013H2"></a></h2>
+  <p id="idDtcEvg2013ncn">{time.2013}::
+    <br>=== new chain-networks:
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idEmcnet">Emercoin-network</a> {time.2013-12-11},
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idNxtnet">Nxt-network</a> {time.2013-11-24},
     <br>=== Proof-of-Stake:
     <br>Sunny King created Peercoin (PPC) in 2013 to become the first cryptocurrency to implement Proof of Stake while still keeping Proof of Work (PoW).
     <br>[<a href="https://cointelegraph.com/news/the-history-and-evolution-of-proof-of-stake">https://cointelegraph.com/news/the-history-and-evolution-of-proof-of-stake</a>]
-    <a class="clsHide" href="#idDtcEvg2013"></a></p>
+    <a class="clsHide" href="#idDtcEvg2013ncn"></a></p>
+  </section>
+
+  <section id="idDtcEvg2012">
+  <h2 id="idDtcEvg2012H2">chain-net.2012
+    <a class="clsHide" href="#idDtcEvg2012H2"></a></h2>
+  <p id="idDtcEvg2012ncn">{time.2012}::
+    <br>=== new chain-networks:
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idPpcnet">Peercoin-network</a> {time.2012-08-19},
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idXrpnet">Ripple-network</a> {2012},
+    <a class="clsHide" href="#idDtcEvg2012ncn"></a></p>
+  </section>
+
+  <section id="idDtcEvg2011">
+  <h2 id="idDtcEvg2011H2">chain-net.2011
+    <a class="clsHide" href="#idDtcEvg2011H2"></a></h2>
+  <p id="idDtcEvg2011ncn">{time.2011}::
+    <br>=== new chain-networks:
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idLtcnet">Litecoin-network</a> {time.2011-10-07},
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idNmcnet">Namecoin-network</a> {time.2011-04-17},
+    <a class="clsHide" href="#idDtcEvg2011ncn"></a></p>
+  </section>
+
+  <section id="idDtcEvg2010">
+  <h2 id="idDtcEvg2010H2">chain-net.2010
+    <a class="clsHide" href="#idDtcEvg2010H2"></a></h2>
   <p id="idDtcEvg20100522">{time.2010-05-22}::
     <br>=== pizza-buying:
     <br>On May 22nd, 2010 someone bought a pizza for 10,000 bitcoins.
     <br>[<a href="https://cointelegraph.com/news/the-history-and-evolution-of-proof-of-stake">https://cointelegraph.com/news/the-history-and-evolution-of-proof-of-stake</a>]
     <a class="clsHide" href="#idDtcEvg20100522"></a></p>
+  </section>
+
+  <section id="idDtcEvg2009">
+  <h2 id="idDtcEvg2009H2">chain-net.2009
+    <a class="clsHide" href="#idDtcEvg2009H2"></a></h2>
   <p id="idDtcEvg20090103">{time.2009-01-03}::
-    <br>=== Bitcoin-network genesis:
+    <br>=== <a class="clsPreview" href="FilMcsDbcnetBtc.Last.html#idDescription">Bitcoin-network</a> genesis:
     <br>Block #0
     <br>[<a href="https://blockchain.info/en/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f">https://blockchain.info/en/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f</a>]
     <a class="clsHide" href="#idDtcEvg20090103"></a></p>
@@ -6554,6 +6689,7 @@
     <br>On 31st Oct 2008, Satoshi Nakamoto released a white paper titled: "<a href="FilMcsDbcnetBtc.Last.html#idBtcwpr">Bitcoin: A Peer-to-Peer Electronic Cash System</a>", which marked the birth of blockchain in our world.
     <br>[<a href="https://nebulas.io/docs/NebulasWhitepaper.pdf">https://nebulas.io/docs/NebulasWhitepaper.pdf</a>]
     <a class="clsHide" href="#idDtcEvg20081031"></a></p>
+  </section>
 </section>
 
 <section id="idMeta">
