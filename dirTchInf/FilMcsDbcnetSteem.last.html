@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Steem-network (Đ-Steem.0-11-0.2018-02-05)</title>
+  <title>Mcs.Steem-network (Đ-Steem.0-12-0.2018-02-08)</title>
   <meta name="keywords" content="Steem-net, Đ-Steem, ModelConceptStructured, Mcs, structured-concept, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
   <script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
@@ -542,10 +542,14 @@
   <section id="idSteempgmClnt">
   <h2 id="idSteempgmClntH2">Steem-program.CLIENT
     <a class="clsHide" href="#idSteempgmClntH2"></a></h2>
+  <p id="idSteempgmClntdsn">description::
+    <br>· steemd is <a class="clsPreview" href="FilMcsDtcnet.Last.html#idDtcpgmClnt">the-client (daemon)</a> that implements the-protocol of <a class="clsPreview" href="#idDescriptionFT">the-Steem-network</a>.
+    <a class="clsHide" href="#idSteempgmClntdsn"></a></p>
   <p id="idSteempgmClntnam">name::
     <br>* cpt.Steem-client-program,
     <br>* cpt.Steem-daemon-program,
     <br>* cpt.Steem-program.client,
+    <br>* cpt.Steem-server-program,
     <br>* cpt.Steem-software,
     <br>* cpt.Steem-steemd-program,
     <a class="clsHide" href="#idSteempgmClntnam"></a></p>
@@ -558,6 +562,784 @@
   <p id="idSteempgmClntgncchn">generic-chain::
     <br>* <a class="clsPreview" href="FilMcsDtcnet.Last.html#idDtcpgmClnt">client-program--of--chain-net</a>,
     <a class="clsHide" href="#idSteempgmClntgncchn"></a></p>
+
+  <section id="idSteempgmClntApi">
+  <h3 id="idSteempgmClntApiH3">API-call of Steem-client
+    <a class="clsHide" href="#idSteempgmClntApiH3"></a></h3>
+  <p id="idSteempgmClntApidsn">description::
+    <br>· libraries to communicate with <a class="clsPreview" href="#idSteempgmClnt">Steem-client</a>.
+    <a class="clsHide" href="#idSteempgmClntApidsn"></a></p>
+  <p id="idSteempgmClntApinam">name::
+    <br>* cpt.Steem-client'API-call,
+    <br>* cpt.Steem-client'API-library,
+    <a class="clsHide" href="#idSteempgmClntApinam"></a></p>
+  <p id="idSteempgmClntApiwpa">addressWpg::
+    <br>* <a href="https://www.steem.center/index.php?title=API_Libraries">https://www.steem.center/API_Libraries</a>,
+    <br>* <a class="clsPreview" href="#idSteempgmApiexp">Steem-API-explorer</a>,
+    <br>* {2016-09-18} <a href="https://steemit.com/steem/@klye/an-introduction-to-steemd-api-calls-functions-and-usage">https://steemit.com/steem/@klye/an-introduction-to-steemd-api-calls-functions-and-usage</a>,
+    <a class="clsHide" href="#idSteempgmClntApiwpa"></a></p>
+  </section>
+
+  <section id="idSteempgmClntjslib">
+  <h3 id="idSteempgmClntjslibH3">javascript-library of Steem-client
+    <a class="clsHide" href="#idSteempgmClntjslibH3"></a></h3>
+  <p id="idSteempgmClntjslibnam">name::
+    <br>* cpt.Steem-client'javascript-library,
+    <br>* cpt.Steem-javascript-library-to-communicate-with-client,
+    <a class="clsHide" href="#idSteempgmClntjslibnam"></a></p>
+  <p id="idSteempgmClntjslibSpc">specific::
+    <br>* <a href="https://github.com/steemit/steem-js">https://github.com/steemit/steem-js</a>: Steem.js the official JavaScript library for Steem blockchain https://www.npmjs.com/package/steem,
+    <br>* <a href="https://github.com/svk31/steemjs-lib">https://github.com/svk31/steemjs-lib</a>: Pure JavaScript Steem crypto library for node.js and browsers. Can be used to construct, sign and broadcast transactions in JavaScript,
+    <br>* <a href="https://github.com/pharesim/steemjs">https://github.com/pharesim/steemjs</a>: Lightweight JavaScript library to communicate with steemd,
+    <a class="clsHide" href="#idSteempgmClntjslibSpc"></a></p>
+  </section>
+
+  <section id="idSteemjsofllib">
+  <h3 id="idSteemjsofllibH3">steem-js official-library of Steem-client
+    <a class="clsHide" href="#idSteemjsofllibH3"></a></h3>
+  <p id="idSteemjsofllibdsn">description::
+    <br>· <code>steem-js</code> is the official javascript-library for <a class="clsPreview" href="#idDescriptionFT">the-Steem-network</a> (to communicate with <a class="clsPreview" href="#idSteempgmClnt">the-Steem-client</a>).
+    <br>· steem-js contains one object, <code>steem</code>, with members the-objects: <a class="clsPreview" href="#idSteemjsofllibapi">api</a>, <a class="clsPreview" href="#idSteemjsofllibath">auth</a>, <a class="clsPreview" href="#idSteemjsofllibbdct">broadcast</a>, <a class="clsPreview" href="#idSteemjsofllibcfg">config</a>, <a class="clsPreview" href="#idSteemjsofllibfmtr">formatter</a>, <a class="clsPreview" href="#idSteemjsofllibutl">utils</a>.
+    <a class="clsHide" href="#idSteemjsofllibdsn"></a></p>
+  <p id="idSteemjsofllibnam">name::
+    <br>* cpt.Steem-javascript-official-library,
+    <br>* cpt.steem-js,
+    <a class="clsHide" href="#idSteemjsofllibnam"></a></p>
+  <p id="idSteemjsofllibwpa">addressWpg::
+    <br>* <a href="https://github.com/steemit/steem-js">https://github.com/steemit/steem-js</a>,
+    <br>* <a href="https://www.npmjs.com/package/steem">https://www.npmjs.com/package/steem</a>,
+    <br>* <a href="https://github.com/steemit/steem-js/tree/master/doc">https://github.com/steemit/steem-js/tree/master/doc</a>,
+    <a class="clsHide" href="#idSteemjsofllibwpa"></a></p>
+  <p id="idSteemjsofllibmbr">member::
+    <br>* <a class="clsPreview" href="#idSteemjsofllibapi">steem.api</a>,
+    <br>* <a class="clsPreview" href="#idSteemjsofllibath">steem.auth</a>,
+    <br>* <a class="clsPreview" href="#idSteemjsofllibbdct">steem.broadcast</a>,
+    <br>* <a class="clsPreview" href="#idSteemjsofllibcfg">steem.config</a>,
+    <br>* <a class="clsPreview" href="#idSteemjsofllibfmtr">steem.formatter</a>,
+    <br>* <a class="clsPreview" href="#idSteemjsofllibutl">steem.utils</a>,
+    <a class="clsHide" href="#idSteemjsofllibmbr"></a></p>
+
+  <section id="idSteemjsofllibapi">
+  <h4 id="idSteemjsofllibapiH4">steem.api object
+    <a class="clsHide" href="#idSteemjsofllibapiH4"></a></h4>
+  <p id="idSteemjsofllibapinam">name::
+    <br>* cpt.steem-js.api,
+    <a class="clsHide" href="#idSteemjsofllibapinam"></a></p>
+  <p id="idSteemjsofllibapimbr">member::
+    <br>* oSteem.api.Steem: ƒ e()
+    <br>* oSteem.api.broadcastBlock: ƒ ()
+    <br>* oSteem.api.broadcastBlockAsync: ƒ u()
+    <br>* oSteem.api.broadcastBlockWith: ƒ (e,i)
+    <br>* oSteem.api.broadcastBlockWithAsync: ƒ u()
+    <br>* oSteem.api.broadcastTransaction: ƒ ()
+    <br>* oSteem.api.broadcastTransactionAsync: ƒ u()
+    <br>* oSteem.api.broadcastTransactionSynchronous: ƒ ()
+    <br>* oSteem.api.broadcastTransactionSynchronousAsync: ƒ u()
+    <br>* oSteem.api.broadcastTransactionSynchronousWith: ƒ (e,i)
+    <br>* oSteem.api.broadcastTransactionSynchronousWithAsync: ƒ u()
+    <br>* oSteem.api.broadcastTransactionWith: ƒ (e,i)
+    <br>* oSteem.api.broadcastTransactionWithAsync: ƒ u()
+    <br>* oSteem.api.broadcastTransactionWithCallback: ƒ ()
+    <br>* oSteem.api.broadcastTransactionWithCallbackAsync: ƒ u()
+    <br>* oSteem.api.broadcastTransactionWithCallbackWith: ƒ (e,i)
+    <br>* oSteem.api.broadcastTransactionWithCallbackWithAsync: ƒ u()
+    <br>* oSteem.api.callAsync: ƒ u()
+    <br>* oSteem.api.cancelAllSubscriptions: ƒ ()
+    <br>* oSteem.api.cancelAllSubscriptionsAsync: ƒ u()
+    <br>* oSteem.api.cancelAllSubscriptionsWith: ƒ (e,i)
+    <br>* oSteem.api.cancelAllSubscriptionsWithAsync: ƒ u()
+    <br>* oSteem.api.getAccountBandwidth: ƒ ()
+    <br>* oSteem.api.getAccountBandwidthAsync: ƒ u()
+    <br>* oSteem.api.getAccountBandwidthWith: ƒ (e,i)
+    <br>* oSteem.api.getAccountBandwidthWithAsync: ƒ u()
+    <br>* oSteem.api.getAccountCount: ƒ ()
+    <br>* oSteem.api.getAccountCountAsync: ƒ u()
+    <br>* oSteem.api.getAccountCountWith: ƒ (e,i)
+    <br>* oSteem.api.getAccountCountWithAsync: ƒ u()
+    <br>* oSteem.api.getAccountHistory: ƒ ()
+    <br>* oSteem.api.getAccountHistoryAsync: ƒ u()
+    <br>* oSteem.api.getAccountHistoryWith: ƒ (e,i)
+    <br>* oSteem.api.getAccountHistoryWithAsync: ƒ u()
+    <br>* oSteem.api.getAccountReferences: ƒ ()
+    <br>* oSteem.api.getAccountReferencesAsync: ƒ u()
+    <br>* oSteem.api.getAccountReferencesWith: ƒ (e,i)
+    <br>* oSteem.api.getAccountReferencesWithAsync: ƒ u()
+    <br>* oSteem.api.getAccountReputations: ƒ ()
+    <br>* oSteem.api.getAccountReputationsAsync: ƒ u()
+    <br>* oSteem.api.getAccountReputationsWith: ƒ (e,i)
+    <br>* oSteem.api.getAccountReputationsWithAsync: ƒ u()
+    <br>* oSteem.api.getAccountVotes: ƒ ()
+    <br>* oSteem.api.getAccountVotesAsync: ƒ u()
+    <br>* oSteem.api.getAccountVotesWith: ƒ (e,i)
+    <br>* oSteem.api.getAccountVotesWithAsync: ƒ u()
+    <br>* oSteem.api.getAccounts: ƒ ()
+    <br>* oSteem.api.getAccountsAsync: ƒ u()
+    <br>* oSteem.api.getAccountsWith: ƒ (e,i)
+    <br>* oSteem.api.getAccountsWithAsync: ƒ u()
+    <br>* oSteem.api.getActiveCategories: ƒ ()
+    <br>* oSteem.api.getActiveCategoriesAsync: ƒ u()
+    <br>* oSteem.api.getActiveCategoriesWith: ƒ (e,i)
+    <br>* oSteem.api.getActiveCategoriesWithAsync: ƒ u()
+    <br>* oSteem.api.getActiveVotes: ƒ ()
+    <br>* oSteem.api.getActiveVotesAsync: ƒ u()
+    <br>* oSteem.api.getActiveVotesWith: ƒ (e,i)
+    <br>* oSteem.api.getActiveVotesWithAsync: ƒ u()
+    <br>* oSteem.api.getActiveWitnesses: ƒ ()
+    <br>* oSteem.api.getActiveWitnessesAsync: ƒ u()
+    <br>* oSteem.api.getActiveWitnessesWith: ƒ (e,i)
+    <br>* oSteem.api.getActiveWitnessesWithAsync: ƒ u()
+    <br>* oSteem.api.getApiByName: ƒ ()
+    <br>* oSteem.api.getApiByNameAsync: ƒ u()
+    <br>* oSteem.api.getApiByNameWith: ƒ (e,i)
+    <br>* oSteem.api.getApiByNameWithAsync: ƒ u()
+    <br>* oSteem.api.getBestCategories: ƒ ()
+    <br>* oSteem.api.getBestCategoriesAsync: ƒ u()
+    <br>* oSteem.api.getBestCategoriesWith: ƒ (e,i)
+    <br>* oSteem.api.getBestCategoriesWithAsync: ƒ u()
+    <br>* oSteem.api.getBlock: ƒ ()
+    <br>* oSteem.api.getBlockAsync: ƒ u()
+    <br>* oSteem.api.getBlockHeader: ƒ ()
+    <br>* oSteem.api.getBlockHeaderAsync: ƒ u()
+    <br>* oSteem.api.getBlockHeaderWith: ƒ (e,i)
+    <br>* oSteem.api.getBlockHeaderWithAsync: ƒ u()
+    <br>* oSteem.api.getBlockWith: ƒ (e,i)
+    <br>* oSteem.api.getBlockWithAsync: ƒ u()
+    <br>* oSteem.api.getBlog: ƒ ()
+    <br>* oSteem.api.getBlogAsync: ƒ u()
+    <br>* oSteem.api.getBlogAuthors: ƒ ()
+    <br>* oSteem.api.getBlogAuthorsAsync: ƒ u()
+    <br>* oSteem.api.getBlogAuthorsWith: ƒ (e,i)
+    <br>* oSteem.api.getBlogAuthorsWithAsync: ƒ u()
+    <br>* oSteem.api.getBlogEntries: ƒ ()
+    <br>* oSteem.api.getBlogEntriesAsync: ƒ u()
+    <br>* oSteem.api.getBlogEntriesWith: ƒ (e,i)
+    <br>* oSteem.api.getBlogEntriesWithAsync: ƒ u()
+    <br>* oSteem.api.getBlogWith: ƒ (e,i)
+    <br>* oSteem.api.getBlogWithAsync: ƒ u()
+    <br>* oSteem.api.getChainProperties: ƒ ()
+    <br>* oSteem.api.getChainPropertiesAsync: ƒ u()
+    <br>* oSteem.api.getChainPropertiesWith: ƒ (e,i)
+    <br>* oSteem.api.getChainPropertiesWithAsync: ƒ u()
+    <br>* oSteem.api.getCommentDiscussionsByPayout: ƒ ()
+    <br>* oSteem.api.getCommentDiscussionsByPayoutAsync: ƒ u()
+    <br>* oSteem.api.getCommentDiscussionsByPayoutWith: ƒ (e,i)
+    <br>* oSteem.api.getCommentDiscussionsByPayoutWithAsync: ƒ u()
+    <br>* oSteem.api.getConfig: ƒ ()
+    <br>* oSteem.api.getConfigAsync: ƒ u()
+    <br>* oSteem.api.getConfigWith: ƒ (e,i)
+    <br>* oSteem.api.getConfigWithAsync: ƒ u()
+    <br>* oSteem.api.getContent: ƒ ()
+    <br>* oSteem.api.getContentAsync: ƒ u()
+    <br>* oSteem.api.getContentReplies: ƒ ()
+    <br>* oSteem.api.getContentRepliesAsync: ƒ u()
+    <br>* oSteem.api.getContentRepliesWith: ƒ (e,i)
+    <br>* oSteem.api.getContentRepliesWithAsync: ƒ u()
+    <br>* oSteem.api.getContentWith: ƒ (e,i)
+    <br>* oSteem.api.getContentWithAsync: ƒ u()
+    <br>* oSteem.api.getConversionRequests: ƒ ()
+    <br>* oSteem.api.getConversionRequestsAsync: ƒ u()
+    <br>* oSteem.api.getConversionRequestsWith: ƒ (e,i)
+    <br>* oSteem.api.getConversionRequestsWithAsync: ƒ u()
+    <br>* oSteem.api.getCurrentMedianHistoryPrice: ƒ ()
+    <br>* oSteem.api.getCurrentMedianHistoryPriceAsync: ƒ u()
+    <br>* oSteem.api.getCurrentMedianHistoryPriceWith: ƒ (e,i)
+    <br>* oSteem.api.getCurrentMedianHistoryPriceWithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByActive: ƒ ()
+    <br>* oSteem.api.getDiscussionsByActiveAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByActiveWith: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByActiveWithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByAuthorBeforeDate: ƒ ()
+    <br>* oSteem.api.getDiscussionsByAuthorBeforeDateAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByAuthorBeforeDateWith: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByAuthorBeforeDateWithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByBlog: ƒ ()
+    <br>* oSteem.api.getDiscussionsByBlogAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByBlogWith: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByBlogWithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByCashout: ƒ ()
+    <br>* oSteem.api.getDiscussionsByCashoutAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByCashoutWith: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByCashoutWithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByChildren: ƒ ()
+    <br>* oSteem.api.getDiscussionsByChildrenAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByChildrenWith: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByChildrenWithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByComments: ƒ ()
+    <br>* oSteem.api.getDiscussionsByCommentsAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByCommentsWith: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByCommentsWithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByCreated: ƒ ()
+    <br>* oSteem.api.getDiscussionsByCreatedAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByCreatedWith: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByCreatedWithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByFeed: ƒ ()
+    <br>* oSteem.api.getDiscussionsByFeedAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByFeedWith: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByFeedWithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByHot: ƒ ()
+    <br>* oSteem.api.getDiscussionsByHotAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByHotWith: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByHotWithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByPayout: ƒ ()
+    <br>* oSteem.api.getDiscussionsByPayoutAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByPayoutWith: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByPayoutWithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByPromoted: ƒ ()
+    <br>* oSteem.api.getDiscussionsByPromotedAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByPromotedWith: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByPromotedWithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByTrending: ƒ ()
+    <br>* oSteem.api.getDiscussionsByTrending30: ƒ ()
+    <br>* oSteem.api.getDiscussionsByTrending30Async: ƒ u()
+    <br>* oSteem.api.getDiscussionsByTrending30With: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByTrending30WithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByTrendingAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByTrendingWith: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByTrendingWithAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByVotes: ƒ ()
+    <br>* oSteem.api.getDiscussionsByVotesAsync: ƒ u()
+    <br>* oSteem.api.getDiscussionsByVotesWith: ƒ (e,i)
+    <br>* oSteem.api.getDiscussionsByVotesWithAsync: ƒ u()
+    <br>* oSteem.api.getDynamicGlobalProperties: ƒ ()
+    <br>* oSteem.api.getDynamicGlobalPropertiesAsync: ƒ u()
+    <br>* oSteem.api.getDynamicGlobalPropertiesWith: ƒ (e,i)
+    <br>* oSteem.api.getDynamicGlobalPropertiesWithAsync: ƒ u()
+    <br>* oSteem.api.getEscrow: ƒ ()
+    <br>* oSteem.api.getEscrowAsync: ƒ u()
+    <br>* oSteem.api.getEscrowWith: ƒ (e,i)
+    <br>* oSteem.api.getEscrowWithAsync: ƒ u()
+    <br>* oSteem.api.getFeed: ƒ ()
+    <br>* oSteem.api.getFeedAsync: ƒ u()
+    <br>* oSteem.api.getFeedEntries: ƒ ()
+    <br>* oSteem.api.getFeedEntriesAsync: ƒ u()
+    <br>* oSteem.api.getFeedEntriesWith: ƒ (e,i)
+    <br>* oSteem.api.getFeedEntriesWithAsync: ƒ u()
+    <br>* oSteem.api.getFeedHistory: ƒ ()
+    <br>* oSteem.api.getFeedHistoryAsync: ƒ u()
+    <br>* oSteem.api.getFeedHistoryWith: ƒ (e,i)
+    <br>* oSteem.api.getFeedHistoryWithAsync: ƒ u()
+    <br>* oSteem.api.getFeedWith: ƒ (e,i)
+    <br>* oSteem.api.getFeedWithAsync: ƒ u()
+    <br>* oSteem.api.getFollowCount: ƒ ()
+    <br>* oSteem.api.getFollowCountAsync: ƒ u()
+    <br>* oSteem.api.getFollowCountWith: ƒ (e,i)
+    <br>* oSteem.api.getFollowCountWithAsync: ƒ u()
+    <br>* oSteem.api.getFollowers: ƒ ()
+    <br>* oSteem.api.getFollowersAsync: ƒ u()
+    <br>* oSteem.api.getFollowersWith: ƒ (e,i)
+    <br>* oSteem.api.getFollowersWithAsync: ƒ u()
+    <br>* oSteem.api.getFollowing: ƒ ()
+    <br>* oSteem.api.getFollowingAsync: ƒ u()
+    <br>* oSteem.api.getFollowingWith: ƒ (e,i)
+    <br>* oSteem.api.getFollowingWithAsync: ƒ u()
+    <br>* oSteem.api.getHardforkVersion: ƒ ()
+    <br>* oSteem.api.getHardforkVersionAsync: ƒ u()
+    <br>* oSteem.api.getHardforkVersionWith: ƒ (e,i)
+    <br>* oSteem.api.getHardforkVersionWithAsync: ƒ u()
+    <br>* oSteem.api.getKeyReferences: ƒ ()
+    <br>* oSteem.api.getKeyReferencesAsync: ƒ u()
+    <br>* oSteem.api.getKeyReferencesWith: ƒ (e,i)
+    <br>* oSteem.api.getKeyReferencesWithAsync: ƒ u()
+    <br>* oSteem.api.getLiquidityQueue: ƒ ()
+    <br>* oSteem.api.getLiquidityQueueAsync: ƒ u()
+    <br>* oSteem.api.getLiquidityQueueWith: ƒ (e,i)
+    <br>* oSteem.api.getLiquidityQueueWithAsync: ƒ u()
+    <br>* oSteem.api.getMarketHistory: ƒ ()
+    <br>* oSteem.api.getMarketHistoryAsync: ƒ u()
+    <br>* oSteem.api.getMarketHistoryBuckets: ƒ ()
+    <br>* oSteem.api.getMarketHistoryBucketsAsync: ƒ u()
+    <br>* oSteem.api.getMarketHistoryBucketsWith: ƒ (e,i)
+    <br>* oSteem.api.getMarketHistoryBucketsWithAsync: ƒ u()
+    <br>* oSteem.api.getMarketHistoryWith: ƒ (e,i)
+    <br>* oSteem.api.getMarketHistoryWithAsync: ƒ u()
+    <br>* oSteem.api.getMarketOrderBook: ƒ ()
+    <br>* oSteem.api.getMarketOrderBookAsync: ƒ u()
+    <br>* oSteem.api.getMarketOrderBookWith: ƒ (e,i)
+    <br>* oSteem.api.getMarketOrderBookWithAsync: ƒ u()
+    <br>* oSteem.api.getMinerQueue: ƒ ()
+    <br>* oSteem.api.getMinerQueueAsync: ƒ u()
+    <br>* oSteem.api.getMinerQueueWith: ƒ (e,i)
+    <br>* oSteem.api.getMinerQueueWithAsync: ƒ u()
+    <br>* oSteem.api.getNextScheduledHardfork: ƒ ()
+    <br>* oSteem.api.getNextScheduledHardforkAsync: ƒ u()
+    <br>* oSteem.api.getNextScheduledHardforkWith: ƒ (e,i)
+    <br>* oSteem.api.getNextScheduledHardforkWithAsync: ƒ u()
+    <br>* oSteem.api.getOpenOrders: ƒ ()
+    <br>* oSteem.api.getOpenOrdersAsync: ƒ u()
+    <br>* oSteem.api.getOpenOrdersWith: ƒ (e,i)
+    <br>* oSteem.api.getOpenOrdersWithAsync: ƒ u()
+    <br>* oSteem.api.getOpsInBlock: ƒ ()
+    <br>* oSteem.api.getOpsInBlockAsync: ƒ u()
+    <br>* oSteem.api.getOpsInBlockWith: ƒ (e,i)
+    <br>* oSteem.api.getOpsInBlockWithAsync: ƒ u()
+    <br>* oSteem.api.getOrderBook: ƒ ()
+    <br>* oSteem.api.getOrderBookAsync: ƒ u()
+    <br>* oSteem.api.getOrderBookWith: ƒ (e,i)
+    <br>* oSteem.api.getOrderBookWithAsync: ƒ u()
+    <br>* oSteem.api.getOwnerHistory: ƒ ()
+    <br>* oSteem.api.getOwnerHistoryAsync: ƒ u()
+    <br>* oSteem.api.getOwnerHistoryWith: ƒ (e,i)
+    <br>* oSteem.api.getOwnerHistoryWithAsync: ƒ u()
+    <br>* oSteem.api.getPostDiscussionsByPayout: ƒ ()
+    <br>* oSteem.api.getPostDiscussionsByPayoutAsync: ƒ u()
+    <br>* oSteem.api.getPostDiscussionsByPayoutWith: ƒ (e,i)
+    <br>* oSteem.api.getPostDiscussionsByPayoutWithAsync: ƒ u()
+    <br>* oSteem.api.getPotentialSignatures: ƒ ()
+    <br>* oSteem.api.getPotentialSignaturesAsync: ƒ u()
+    <br>* oSteem.api.getPotentialSignaturesWith: ƒ (e,i)
+    <br>* oSteem.api.getPotentialSignaturesWithAsync: ƒ u()
+    <br>* oSteem.api.getRebloggedBy: ƒ ()
+    <br>* oSteem.api.getRebloggedByAsync: ƒ u()
+    <br>* oSteem.api.getRebloggedByWith: ƒ (e,i)
+    <br>* oSteem.api.getRebloggedByWithAsync: ƒ u()
+    <br>* oSteem.api.getRecentCategories: ƒ ()
+    <br>* oSteem.api.getRecentCategoriesAsync: ƒ u()
+    <br>* oSteem.api.getRecentCategoriesWith: ƒ (e,i)
+    <br>* oSteem.api.getRecentCategoriesWithAsync: ƒ u()
+    <br>* oSteem.api.getRecentTrades: ƒ ()
+    <br>* oSteem.api.getRecentTradesAsync: ƒ u()
+    <br>* oSteem.api.getRecentTradesWith: ƒ (e,i)
+    <br>* oSteem.api.getRecentTradesWithAsync: ƒ u()
+    <br>* oSteem.api.getRecoveryRequest: ƒ ()
+    <br>* oSteem.api.getRecoveryRequestAsync: ƒ u()
+    <br>* oSteem.api.getRecoveryRequestWith: ƒ (e,i)
+    <br>* oSteem.api.getRecoveryRequestWithAsync: ƒ u()
+    <br>* oSteem.api.getRepliesByLastUpdate: ƒ ()
+    <br>* oSteem.api.getRepliesByLastUpdateAsync: ƒ u()
+    <br>* oSteem.api.getRepliesByLastUpdateWith: ƒ (e,i)
+    <br>* oSteem.api.getRepliesByLastUpdateWithAsync: ƒ u()
+    <br>* oSteem.api.getRequiredSignatures: ƒ ()
+    <br>* oSteem.api.getRequiredSignaturesAsync: ƒ u()
+    <br>* oSteem.api.getRequiredSignaturesWith: ƒ (e,i)
+    <br>* oSteem.api.getRequiredSignaturesWithAsync: ƒ u()
+    <br>* oSteem.api.getRewardFund: ƒ ()
+    <br>* oSteem.api.getRewardFundAsync: ƒ u()
+    <br>* oSteem.api.getRewardFundWith: ƒ (e,i)
+    <br>* oSteem.api.getRewardFundWithAsync: ƒ u()
+    <br>* oSteem.api.getSavingsWithdrawFrom: ƒ ()
+    <br>* oSteem.api.getSavingsWithdrawFromAsync: ƒ u()
+    <br>* oSteem.api.getSavingsWithdrawFromWith: ƒ (e,i)
+    <br>* oSteem.api.getSavingsWithdrawFromWithAsync: ƒ u()
+    <br>* oSteem.api.getSavingsWithdrawTo: ƒ ()
+    <br>* oSteem.api.getSavingsWithdrawToAsync: ƒ u()
+    <br>* oSteem.api.getSavingsWithdrawToWith: ƒ (e,i)
+    <br>* oSteem.api.getSavingsWithdrawToWithAsync: ƒ u()
+    <br>* oSteem.api.getState: ƒ ()
+    <br>* oSteem.api.getStateAsync: ƒ u()
+    <br>* oSteem.api.getStateWith: ƒ (e,i)
+    <br>* oSteem.api.getStateWithAsync: ƒ u()
+    <br>* oSteem.api.getTagsUsedByAuthor: ƒ ()
+    <br>* oSteem.api.getTagsUsedByAuthorAsync: ƒ u()
+    <br>* oSteem.api.getTagsUsedByAuthorWith: ƒ (e,i)
+    <br>* oSteem.api.getTagsUsedByAuthorWithAsync: ƒ u()
+    <br>* oSteem.api.getTicker: ƒ ()
+    <br>* oSteem.api.getTickerAsync: ƒ u()
+    <br>* oSteem.api.getTickerWith: ƒ (e,i)
+    <br>* oSteem.api.getTickerWithAsync: ƒ u()
+    <br>* oSteem.api.getTradeHistory: ƒ ()
+    <br>* oSteem.api.getTradeHistoryAsync: ƒ u()
+    <br>* oSteem.api.getTradeHistoryWith: ƒ (e,i)
+    <br>* oSteem.api.getTradeHistoryWithAsync: ƒ u()
+    <br>* oSteem.api.getTransaction: ƒ ()
+    <br>* oSteem.api.getTransactionAsync: ƒ u()
+    <br>* oSteem.api.getTransactionHex: ƒ ()
+    <br>* oSteem.api.getTransactionHexAsync: ƒ u()
+    <br>* oSteem.api.getTransactionHexWith: ƒ (e,i)
+    <br>* oSteem.api.getTransactionHexWithAsync: ƒ u()
+    <br>* oSteem.api.getTransactionWith: ƒ (e,i)
+    <br>* oSteem.api.getTransactionWithAsync: ƒ u()
+    <br>* oSteem.api.getTrendingCategories: ƒ ()
+    <br>* oSteem.api.getTrendingCategoriesAsync: ƒ u()
+    <br>* oSteem.api.getTrendingCategoriesWith: ƒ (e,i)
+    <br>* oSteem.api.getTrendingCategoriesWithAsync: ƒ u()
+    <br>* oSteem.api.getTrendingTags: ƒ ()
+    <br>* oSteem.api.getTrendingTagsAsync: ƒ u()
+    <br>* oSteem.api.getTrendingTagsWith: ƒ (e,i)
+    <br>* oSteem.api.getTrendingTagsWithAsync: ƒ u()
+    <br>* oSteem.api.getVersion: ƒ ()
+    <br>* oSteem.api.getVersionAsync: ƒ u()
+    <br>* oSteem.api.getVersionWith: ƒ (e,i)
+    <br>* oSteem.api.getVersionWithAsync: ƒ u()
+    <br>* oSteem.api.getVestingDelegations: ƒ ()
+    <br>* oSteem.api.getVestingDelegationsAsync: ƒ u()
+    <br>* oSteem.api.getVestingDelegationsWith: ƒ (e,i)
+    <br>* oSteem.api.getVestingDelegationsWithAsync: ƒ u()
+    <br>* oSteem.api.getVolume: ƒ ()
+    <br>* oSteem.api.getVolumeAsync: ƒ u()
+    <br>* oSteem.api.getVolumeWith: ƒ (e,i)
+    <br>* oSteem.api.getVolumeWithAsync: ƒ u()
+    <br>* oSteem.api.getWithdrawRoutes: ƒ ()
+    <br>* oSteem.api.getWithdrawRoutesAsync: ƒ u()
+    <br>* oSteem.api.getWithdrawRoutesWith: ƒ (e,i)
+    <br>* oSteem.api.getWithdrawRoutesWithAsync: ƒ u()
+    <br>* oSteem.api.getWitnessByAccount: ƒ ()
+    <br>* oSteem.api.getWitnessByAccountAsync: ƒ u()
+    <br>* oSteem.api.getWitnessByAccountWith: ƒ (e,i)
+    <br>* oSteem.api.getWitnessByAccountWithAsync: ƒ u()
+    <br>* oSteem.api.getWitnessCount: ƒ ()
+    <br>* oSteem.api.getWitnessCountAsync: ƒ u()
+    <br>* oSteem.api.getWitnessCountWith: ƒ (e,i)
+    <br>* oSteem.api.getWitnessCountWithAsync: ƒ u()
+    <br>* oSteem.api.getWitnessSchedule: ƒ ()
+    <br>* oSteem.api.getWitnessScheduleAsync: ƒ u()
+    <br>* oSteem.api.getWitnessScheduleWith: ƒ (e,i)
+    <br>* oSteem.api.getWitnessScheduleWithAsync: ƒ u()
+    <br>* oSteem.api.getWitnesses: ƒ ()
+    <br>* oSteem.api.getWitnessesAsync: ƒ u()
+    <br>* oSteem.api.getWitnessesByVote: ƒ ()
+    <br>* oSteem.api.getWitnessesByVoteAsync: ƒ u()
+    <br>* oSteem.api.getWitnessesByVoteWith: ƒ (e,i)
+    <br>* oSteem.api.getWitnessesByVoteWithAsync: ƒ u()
+    <br>* oSteem.api.getWitnessesWith: ƒ (e,i)
+    <br>* oSteem.api.getWitnessesWithAsync: ƒ u()
+    <br>* oSteem.api.login: ƒ ()
+    <br>* oSteem.api.loginAsync: ƒ u()
+    <br>* oSteem.api.loginWith: ƒ (e,i)
+    <br>* oSteem.api.loginWithAsync: ƒ u()
+    <br>* oSteem.api.lookupAccountNames: ƒ ()
+    <br>* oSteem.api.lookupAccountNamesAsync: ƒ u()
+    <br>* oSteem.api.lookupAccountNamesWith: ƒ (e,i)
+    <br>* oSteem.api.lookupAccountNamesWithAsync: ƒ u()
+    <br>* oSteem.api.lookupAccounts: ƒ ()
+    <br>* oSteem.api.lookupAccountsAsync: ƒ u()
+    <br>* oSteem.api.lookupAccountsWith: ƒ (e,i)
+    <br>* oSteem.api.lookupAccountsWithAsync: ƒ u()
+    <br>* oSteem.api.lookupWitnessAccounts: ƒ ()
+    <br>* oSteem.api.lookupWitnessAccountsAsync: ƒ u()
+    <br>* oSteem.api.lookupWitnessAccountsWith: ƒ (e,i)
+    <br>* oSteem.api.lookupWitnessAccountsWithAsync: ƒ u()
+    <br>* oSteem.api.options: t {transport: "http", websocket: "wss://gtg.steem.house:8090", uri: "https://api.steemit.com", url: "", dev_uri: "https://api.steemitdev.com", …}
+    <br>* oSteem.api.seqNo: 0
+    <br>* oSteem.api.setBlockAppliedCallback: ƒ ()
+    <br>* oSteem.api.setBlockAppliedCallbackAsync: ƒ u()
+    <br>* oSteem.api.setBlockAppliedCallbackWith: ƒ (e,i)
+    <br>* oSteem.api.setBlockAppliedCallbackWithAsync: ƒ u()
+    <br>* oSteem.api.setMaxBlockAge: ƒ ()
+    <br>* oSteem.api.setMaxBlockAgeAsync: ƒ u()
+    <br>* oSteem.api.setMaxBlockAgeWith: ƒ (e,i)
+    <br>* oSteem.api.setMaxBlockAgeWithAsync: ƒ u()
+    <br>* oSteem.api.setPendingTransactionCallback: ƒ ()
+    <br>* oSteem.api.setPendingTransactionCallbackAsync: ƒ u()
+    <br>* oSteem.api.setPendingTransactionCallbackWith: ƒ (e,i)
+    <br>* oSteem.api.setPendingTransactionCallbackWithAsync: ƒ u()
+    <br>* oSteem.api.setSubscribeCallback: ƒ ()
+    <br>* oSteem.api.setSubscribeCallbackAsync: ƒ u()
+    <br>* oSteem.api.setSubscribeCallbackWith: ƒ (e,i)
+    <br>* oSteem.api.setSubscribeCallbackWithAsync: ƒ u()
+    <br>* oSteem.api.signedCallAsync: ƒ u()
+    <br>* oSteem.api.transport: e {_events: {…}, _maxListeners: undefined, options: t, id: 0}
+    <br>* oSteem.api.verifyAccountAuthority: ƒ ()
+    <br>* oSteem.api.verifyAccountAuthorityAsync: ƒ u()
+    <br>* oSteem.api.verifyAccountAuthorityWith: ƒ (e,i)
+    <br>* oSteem.api.verifyAccountAuthorityWithAsync: ƒ u()
+    <br>* oSteem.api.verifyAuthority: ƒ ()
+    <br>* oSteem.api.verifyAuthorityAsync: ƒ u()
+    <br>* oSteem.api.verifyAuthorityWith: ƒ (e,i)
+    <br>* oSteem.api.verifyAuthorityWithAsync: ƒ u()
+    <br>* oSteem.api._events: {}
+    <br>* oSteem.api._maxListeners: undefined
+    <br>* oSteem.api._transportType: "http"
+    <a class="clsHide" href="#idSteemjsofllibapimbr"></a></p>
+  </section>
+
+  <section id="idSteemjsofllibath">
+  <h4 id="idSteemjsofllibathH4">steem.auth object
+    <a class="clsHide" href="#idSteemjsofllibathH4"></a></h4>
+  <p id="idSteemjsofllibathnam">name::
+    <br>* cpt.steem-js.auth,
+    <a class="clsHide" href="#idSteemjsofllibathnam"></a></p>
+  <p id="idSteemjsofllibathmbr">member::
+    <br>* oSteem.auth.generateKeys: ƒ (t,r,o)
+    <br>* oSteem.auth.getPrivateKeys: ƒ (t,e)
+    <br>* oSteem.auth.isPubkey: ƒ (t,e)
+    <br>* oSteem.auth.isWif: ƒ (t)
+    <br>* oSteem.auth.signTransaction: ƒ (t,r)
+    <br>* oSteem.auth.toWif: ƒ (t,r,n)
+    <br>* oSteem.auth.verify: ƒ (t,e,r)
+    <br>* oSteem.auth.wifIsValid: ƒ (t,e)
+    <br>* oSteem.auth.wifToPublic: ƒ (t)
+    <a class="clsHide" href="#idSteemjsofllibathmbr"></a></p>
+  </section>
+
+  <section id="idSteemjsofllibbdct">
+  <h4 id="idSteemjsofllibbdctH4">steem.broadcast object
+    <a class="clsHide" href="#idSteemjsofllibbdctH4"></a></h4>
+  <p id="idSteemjsofllibbdctnam">name::
+    <br>* cpt.steem-js.broadcast,
+    <a class="clsHide" href="#idSteemjsofllibbdctnam"></a></p>
+  <p id="idSteemjsofllibbdctmbr">member::
+    <br>* oSteem.broadcast.accountCreate: ƒ (t)
+    <br>* oSteem.broadcast.accountCreateAsync: ƒ u()
+    <br>* oSteem.broadcast.accountCreateWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.accountCreateWithAsync: ƒ u()
+    <br>* oSteem.broadcast.accountCreateWithDelegation: ƒ (t)
+    <br>* oSteem.broadcast.accountCreateWithDelegationAsync: ƒ u()
+    <br>* oSteem.broadcast.accountCreateWithDelegationWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.accountCreateWithDelegationWithAsync: ƒ u()
+    <br>* oSteem.broadcast.accountUpdate: ƒ (t)
+    <br>* oSteem.broadcast.accountUpdateAsync: ƒ u()
+    <br>* oSteem.broadcast.accountUpdateWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.accountUpdateWithAsync: ƒ u()
+    <br>* oSteem.broadcast.accountWitnessProxy: ƒ (t)
+    <br>* oSteem.broadcast.accountWitnessProxyAsync: ƒ u()
+    <br>* oSteem.broadcast.accountWitnessProxyWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.accountWitnessProxyWithAsync: ƒ u()
+    <br>* oSteem.broadcast.accountWitnessVote: ƒ (t)
+    <br>* oSteem.broadcast.accountWitnessVoteAsync: ƒ u()
+    <br>* oSteem.broadcast.accountWitnessVoteWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.accountWitnessVoteWithAsync: ƒ u()
+    <br>* oSteem.broadcast.addAccountAuth: ƒ (e,r)
+    <br>* oSteem.broadcast.addAccountAuthAsync: ƒ u()
+    <br>* oSteem.broadcast.addKeyAuth: ƒ (e,r)
+    <br>* oSteem.broadcast.addKeyAuthAsync: ƒ u()
+    <br>* oSteem.broadcast.cancelTransferFromSavings: ƒ (t)
+    <br>* oSteem.broadcast.cancelTransferFromSavingsAsync: ƒ u()
+    <br>* oSteem.broadcast.cancelTransferFromSavingsWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.cancelTransferFromSavingsWithAsync: ƒ u()
+    <br>* oSteem.broadcast.challengeAuthority: ƒ (t)
+    <br>* oSteem.broadcast.challengeAuthorityAsync: ƒ u()
+    <br>* oSteem.broadcast.challengeAuthorityWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.challengeAuthorityWithAsync: ƒ u()
+    <br>* oSteem.broadcast.changeRecoveryAccount: ƒ (t)
+    <br>* oSteem.broadcast.changeRecoveryAccountAsync: ƒ u()
+    <br>* oSteem.broadcast.changeRecoveryAccountWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.changeRecoveryAccountWithAsync: ƒ u()
+    <br>* oSteem.broadcast.claimRewardBalance: ƒ (t)
+    <br>* oSteem.broadcast.claimRewardBalanceAsync: ƒ u()
+    <br>* oSteem.broadcast.claimRewardBalanceWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.claimRewardBalanceWithAsync: ƒ u()
+    <br>* oSteem.broadcast.comment: ƒ (t)
+    <br>* oSteem.broadcast.commentAsync: ƒ u()
+    <br>* oSteem.broadcast.commentOptions: ƒ (t)
+    <br>* oSteem.broadcast.commentOptionsAsync: ƒ u()
+    <br>* oSteem.broadcast.commentOptionsWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.commentOptionsWithAsync: ƒ u()
+    <br>* oSteem.broadcast.commentReward: ƒ (t)
+    <br>* oSteem.broadcast.commentRewardAsync: ƒ u()
+    <br>* oSteem.broadcast.commentRewardWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.commentRewardWithAsync: ƒ u()
+    <br>* oSteem.broadcast.commentWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.commentWithAsync: ƒ u()
+    <br>* oSteem.broadcast.convert: ƒ (t)
+    <br>* oSteem.broadcast.convertAsync: ƒ u()
+    <br>* oSteem.broadcast.convertWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.convertWithAsync: ƒ u()
+    <br>* oSteem.broadcast.custom: ƒ (t)
+    <br>* oSteem.broadcast.customAsync: ƒ u()
+    <br>* oSteem.broadcast.customBinary: ƒ (t)
+    <br>* oSteem.broadcast.customBinaryAsync: ƒ u()
+    <br>* oSteem.broadcast.customBinaryWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.customBinaryWithAsync: ƒ u()
+    <br>* oSteem.broadcast.customJson: ƒ (t)
+    <br>* oSteem.broadcast.customJsonAsync: ƒ u()
+    <br>* oSteem.broadcast.customJsonWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.customJsonWithAsync: ƒ u()
+    <br>* oSteem.broadcast.customWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.customWithAsync: ƒ u()
+    <br>* oSteem.broadcast.declineVotingRights: ƒ (t)
+    <br>* oSteem.broadcast.declineVotingRightsAsync: ƒ u()
+    <br>* oSteem.broadcast.declineVotingRightsWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.declineVotingRightsWithAsync: ƒ u()
+    <br>* oSteem.broadcast.delegateVestingShares: ƒ (t)
+    <br>* oSteem.broadcast.delegateVestingSharesAsync: ƒ u()
+    <br>* oSteem.broadcast.delegateVestingSharesWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.delegateVestingSharesWithAsync: ƒ u()
+    <br>* oSteem.broadcast.deleteComment: ƒ (t)
+    <br>* oSteem.broadcast.deleteCommentAsync: ƒ u()
+    <br>* oSteem.broadcast.deleteCommentWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.deleteCommentWithAsync: ƒ u()
+    <br>* oSteem.broadcast.escrowApprove: ƒ (t)
+    <br>* oSteem.broadcast.escrowApproveAsync: ƒ u()
+    <br>* oSteem.broadcast.escrowApproveWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.escrowApproveWithAsync: ƒ u()
+    <br>* oSteem.broadcast.escrowDispute: ƒ (t)
+    <br>* oSteem.broadcast.escrowDisputeAsync: ƒ u()
+    <br>* oSteem.broadcast.escrowDisputeWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.escrowDisputeWithAsync: ƒ u()
+    <br>* oSteem.broadcast.escrowRelease: ƒ (t)
+    <br>* oSteem.broadcast.escrowReleaseAsync: ƒ u()
+    <br>* oSteem.broadcast.escrowReleaseWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.escrowReleaseWithAsync: ƒ u()
+    <br>* oSteem.broadcast.escrowTransfer: ƒ (t)
+    <br>* oSteem.broadcast.escrowTransferAsync: ƒ u()
+    <br>* oSteem.broadcast.escrowTransferWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.escrowTransferWithAsync: ƒ u()
+    <br>* oSteem.broadcast.feedPublish: ƒ (t)
+    <br>* oSteem.broadcast.feedPublishAsync: ƒ u()
+    <br>* oSteem.broadcast.feedPublishWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.feedPublishWithAsync: ƒ u()
+    <br>* oSteem.broadcast.fillConvertRequest: ƒ (t)
+    <br>* oSteem.broadcast.fillConvertRequestAsync: ƒ u()
+    <br>* oSteem.broadcast.fillConvertRequestWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.fillConvertRequestWithAsync: ƒ u()
+    <br>* oSteem.broadcast.fillOrder: ƒ (t)
+    <br>* oSteem.broadcast.fillOrderAsync: ƒ u()
+    <br>* oSteem.broadcast.fillOrderWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.fillOrderWithAsync: ƒ u()
+    <br>* oSteem.broadcast.fillTransferFromSavings: ƒ (t)
+    <br>* oSteem.broadcast.fillTransferFromSavingsAsync: ƒ u()
+    <br>* oSteem.broadcast.fillTransferFromSavingsWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.fillTransferFromSavingsWithAsync: ƒ u()
+    <br>* oSteem.broadcast.fillVestingWithdraw: ƒ (t)
+    <br>* oSteem.broadcast.fillVestingWithdrawAsync: ƒ u()
+    <br>* oSteem.broadcast.fillVestingWithdrawWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.fillVestingWithdrawWithAsync: ƒ u()
+    <br>* oSteem.broadcast.interest: ƒ (t)
+    <br>* oSteem.broadcast.interestAsync: ƒ u()
+    <br>* oSteem.broadcast.interestWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.interestWithAsync: ƒ u()
+    <br>* oSteem.broadcast.limitOrderCancel: ƒ (t)
+    <br>* oSteem.broadcast.limitOrderCancelAsync: ƒ u()
+    <br>* oSteem.broadcast.limitOrderCancelWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.limitOrderCancelWithAsync: ƒ u()
+    <br>* oSteem.broadcast.limitOrderCreate: ƒ (t)
+    <br>* oSteem.broadcast.limitOrderCreate2: ƒ (t)
+    <br>* oSteem.broadcast.limitOrderCreate2Async: ƒ u()
+    <br>* oSteem.broadcast.limitOrderCreate2With: ƒ (r,i,o)
+    <br>* oSteem.broadcast.limitOrderCreate2WithAsync: ƒ u()
+    <br>* oSteem.broadcast.limitOrderCreateAsync: ƒ u()
+    <br>* oSteem.broadcast.limitOrderCreateWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.limitOrderCreateWithAsync: ƒ u()
+    <br>* oSteem.broadcast.liquidityReward: ƒ (t)
+    <br>* oSteem.broadcast.liquidityRewardAsync: ƒ u()
+    <br>* oSteem.broadcast.liquidityRewardWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.liquidityRewardWithAsync: ƒ u()
+    <br>* oSteem.broadcast.pow: ƒ (t)
+    <br>* oSteem.broadcast.pow2: ƒ (t)
+    <br>* oSteem.broadcast.pow2Async: ƒ u()
+    <br>* oSteem.broadcast.pow2With: ƒ (r,i,o)
+    <br>* oSteem.broadcast.pow2WithAsync: ƒ u()
+    <br>* oSteem.broadcast.powAsync: ƒ u()
+    <br>* oSteem.broadcast.powWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.powWithAsync: ƒ u()
+    <br>* oSteem.broadcast.price: ƒ (t)
+    <br>* oSteem.broadcast.priceAsync: ƒ u()
+    <br>* oSteem.broadcast.priceWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.priceWithAsync: ƒ u()
+    <br>* oSteem.broadcast.proveAuthority: ƒ (t)
+    <br>* oSteem.broadcast.proveAuthorityAsync: ƒ u()
+    <br>* oSteem.broadcast.proveAuthorityWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.proveAuthorityWithAsync: ƒ u()
+    <br>* oSteem.broadcast.recoverAccount: ƒ (t)
+    <br>* oSteem.broadcast.recoverAccountAsync: ƒ u()
+    <br>* oSteem.broadcast.recoverAccountWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.recoverAccountWithAsync: ƒ u()
+    <br>* oSteem.broadcast.removeAccountAuth: ƒ (e,r)
+    <br>* oSteem.broadcast.removeAccountAuthAsync: ƒ u()
+    <br>* oSteem.broadcast.removeKeyAuth: ƒ (e,r)
+    <br>* oSteem.broadcast.removeKeyAuthAsync: ƒ u()
+    <br>* oSteem.broadcast.requestAccountRecovery: ƒ (t)
+    <br>* oSteem.broadcast.requestAccountRecoveryAsync: ƒ u()
+    <br>* oSteem.broadcast.requestAccountRecoveryWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.requestAccountRecoveryWithAsync: ƒ u()
+    <br>* oSteem.broadcast.resetAccount: ƒ (t)
+    <br>* oSteem.broadcast.resetAccountAsync: ƒ u()
+    <br>* oSteem.broadcast.resetAccountWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.resetAccountWithAsync: ƒ u()
+    <br>* oSteem.broadcast.send: ƒ (t,e,r)
+    <br>* oSteem.broadcast.sendAsync: ƒ u()
+    <br>* oSteem.broadcast.setResetAccount: ƒ (t)
+    <br>* oSteem.broadcast.setResetAccountAsync: ƒ u()
+    <br>* oSteem.broadcast.setResetAccountWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.setResetAccountWithAsync: ƒ u()
+    <br>* oSteem.broadcast.setWithdrawVestingRoute: ƒ (t)
+    <br>* oSteem.broadcast.setWithdrawVestingRouteAsync: ƒ u()
+    <br>* oSteem.broadcast.setWithdrawVestingRouteWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.setWithdrawVestingRouteWithAsync: ƒ u()
+    <br>* oSteem.broadcast.transfer: ƒ (t)
+    <br>* oSteem.broadcast.transferAsync: ƒ u()
+    <br>* oSteem.broadcast.transferFromSavings: ƒ (t)
+    <br>* oSteem.broadcast.transferFromSavingsAsync: ƒ u()
+    <br>* oSteem.broadcast.transferFromSavingsWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.transferFromSavingsWithAsync: ƒ u()
+    <br>* oSteem.broadcast.transferToSavings: ƒ (t)
+    <br>* oSteem.broadcast.transferToSavingsAsync: ƒ u()
+    <br>* oSteem.broadcast.transferToSavingsWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.transferToSavingsWithAsync: ƒ u()
+    <br>* oSteem.broadcast.transferToVesting: ƒ (t)
+    <br>* oSteem.broadcast.transferToVestingAsync: ƒ u()
+    <br>* oSteem.broadcast.transferToVestingWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.transferToVestingWithAsync: ƒ u()
+    <br>* oSteem.broadcast.transferWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.transferWithAsync: ƒ u()
+    <br>* oSteem.broadcast.vote: ƒ (t)
+    <br>* oSteem.broadcast.voteAsync: ƒ u()
+    <br>* oSteem.broadcast.voteWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.voteWithAsync: ƒ u()
+    <br>* oSteem.broadcast.withdrawVesting: ƒ (t)
+    <br>* oSteem.broadcast.withdrawVestingAsync: ƒ u()
+    <br>* oSteem.broadcast.withdrawVestingWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.withdrawVestingWithAsync: ƒ u()
+    <br>* oSteem.broadcast.witnessUpdate: ƒ (t)
+    <br>* oSteem.broadcast.witnessUpdateAsync: ƒ u()
+    <br>* oSteem.broadcast.witnessUpdateWith: ƒ (r,i,o)
+    <br>* oSteem.broadcast.witnessUpdateWithAsync: ƒ u()
+    <br>* oSteem.broadcast._prepareTransaction: ƒ (t)
+    <a class="clsHide" href="#idSteemjsofllibbdctmbr"></a></p>
+  </section>
+
+  <section id="idSteemjsofllibcfg">
+  <h4 id="idSteemjsofllibcfgH4">steem.config object
+    <a class="clsHide" href="#idSteemjsofllibcfgH4"></a></h4>
+  <p id="idSteemjsofllibcfgnam">name::
+    <br>* cpt.steem-js.config,
+    <a class="clsHide" href="#idSteemjsofllibcfgnam"></a></p>
+  <p id="idSteemjsofllibcfgmbr">member::
+    <br>* oSteem.config.Config: ƒ t(e)
+    <br>* oSteem.config.address_prefix: "STM"
+    <br>* oSteem.config.chain_id: "0000000000000000000000000000000000000000000000000000000000000000"
+    <br>* oSteem.config.dev_uri: "https://api.steemitdev.com"
+    <br>* oSteem.config.stage_uri: "https://api.steemitstage.com"
+    <br>* oSteem.config.transport: "http"
+    <br>* oSteem.config.uri: "https://api.steemit.com"
+    <br>* oSteem.config.url: ""
+    <br>* oSteem.config.websocket: "wss://gtg.steem.house:8090"
+    <a class="clsHide" href="#idSteemjsofllibcfgmbr"></a></p>
+  </section>
+
+  <section id="idSteemjsofllibfmtr">
+  <h4 id="idSteemjsofllibfmtrH4">steem.formatter object
+    <a class="clsHide" href="#idSteemjsofllibfmtrH4"></a></h4>
+  <p id="idSteemjsofllibfmtrnam">name::
+    <br>* cpt.steem-js.formatter,
+    <a class="clsHide" href="#idSteemjsofllibfmtrnam"></a></p>
+  <p id="idSteemjsofllibfmtrmbr">member::
+    <br>* oSteem.formatter.amount: ƒ (t,e)
+    <br>* oSteem.formatter.commentPermlink: ƒ (t,e)
+    <br>* oSteem.formatter.createSuggestedPassword: ƒ f()
+    <br>* oSteem.formatter.estimateAccountValue: ƒ u(e)
+    <br>* oSteem.formatter.numberWithCommas: ƒ e(t)
+    <br>* oSteem.formatter.reputation: ƒ (t)
+    <br>* oSteem.formatter.vestToSteem: ƒ (t,e,r)
+    <br>* oSteem.formatter.vestingSteem: ƒ r(t,e)
+    <a class="clsHide" href="#idSteemjsofllibfmtrmbr"></a></p>
+  </section>
+
+  <section id="idSteemjsofllibutl">
+  <h4 id="idSteemjsofllibutlH4">steem.utils object
+    <a class="clsHide" href="#idSteemjsofllibutlH4"></a></h4>
+  <p id="idSteemjsofllibutlnam">name::
+    <br>* cpt.steem-js.utils,
+    <a class="clsHide" href="#idSteemjsofllibutlnam"></a></p>
+  <p id="idSteemjsofllibutlmbr">member::
+    <br>* oSteem.utils.camelCase: ƒ r(t)
+    <br>* oSteem.utils.validateAccountName: ƒ n(t)
+    <a class="clsHide" href="#idSteemjsofllibutlmbr"></a></p>
+  </section>
+  </section>
+
+  <section id="idSteempgmClntpylib">
+  <h3 id="idSteempgmClntpylibH3">python-library of Steem-client
+    <a class="clsHide" href="#idSteempgmClntpylibH3"></a></h3>
+  <p id="idSteempgmClntpylibnam">name::
+    <br>* cpt.Steem-client'python-library,
+    <br>* cpt.Steem-python-library-to-communicate-with-client,
+    <a class="clsHide" href="#idSteempgmClntpylibnam"></a></p>
+  <p id="idSteempgmClntpylibSpc">specific::
+    <br>* <a href="https://github.com/steemit/steem-python">https://github.com/steemit/steem-python</a>: The official Python (3) library for the Steem Blockchain. https://steem.io. It comes with a BIP38 encrypted wallet and a practical CLI utility called steempy,
+    <br>* <a href="https://github.com/xeroc/piston-cli">https://github.com/xeroc/piston-cli</a>: Command line tool to interact with the STEEM network. This library is unmaintained, do not build productive buisness with it! Please not the disclaimer in the license file!
+    <a class="clsHide" href="#idSteempgmClntpylibSpc"></a></p>
+  </section>
   </section>
 
   <section id="idSteemdap">
@@ -845,6 +1627,10 @@
     <br>@word1-word2
     <br>@word1.word2
     <a class="clsHide" href="#idSteemacntpbcexpl"></a></p>
+  <p id="idSteemacntpbcvldn">check if a-name is valid::
+    <br>· <span class="clsColorGreen">write a-name and press enter</span>: <input type="text" id="idUrnm" value="username">
+    <br>· <span class="clsColorGreen">output</span>: <span id="idUrnmout"></span>
+    <a class="clsHide" href="#idSteemacntpbcvldn"></a></p>
   <p id="idSteemacntpbcgncchn">generic-chain::
     <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDbcads">address-of--blockchain-account</a>,
     <a class="clsHide" href="#idSteemacntpbcgncchn"></a></p>
@@ -1778,5 +2564,22 @@
 </script>
 
 <script src="http://synagonism.github.io/hitp/hitp.js"></script>
+<script>
+  // validate account name
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('idUrnm').addEventListener('keydown',
+      function(e) {
+        if (e.keyCode === 13) {
+          var sVld = steem.utils.validateAccountName(document.getElementById('idUrnm').value);
+          if (sVld) {
+            document.getElementById('idUrnmout').innerHTML = sVld;
+          } else {
+            document.getElementById('idUrnmout').innerHTML = 'OK';
+          }
+        }
+      }
+    );
+  });
+</script>
 </body>
 </html>
