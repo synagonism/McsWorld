@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Steem-network (Đ-Steem.0-13-0.2018-02-09)</title>
+  <title>Mcs.Steem-network (Đ-Steem.0-14-0.2018-02-10)</title>
   <meta name="keywords" content="Steem-net, Đ-Steem, ModelConceptStructured, Mcs, structured-concept, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
   <script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
@@ -1850,6 +1850,23 @@
     <br>* cpt.Steem-account'reputation,
     <br>* cpt.Steem-reputation,
     <a class="clsHide" href="#idSteemactrptnnam"></a></p>
+  <p id="idSteemactrptnget">get reputation of account::
+    <br>· <span class="clsColorGreen">username</span>:
+    <input type="text" id="idIptRpnUrnm" value="synagonism">
+    <button type="button" id="idBtnRpn">GO</button>
+    <br>· unformated: <span id="idSpnRpnFmtNo" class="clsColorRed"></span>
+    <br>· formated: <span id="idSpnRpnFmt" class="clsColorRed"></span>
+    <br>* cpt.steem-js.formatter.reputation,
+    <br>· code:
+    <br><code>document.getElementById('idBtnRpn').addEventListener('click', function(e) {
+    <br> &nbsp;steem.api.getAccounts([document.getElementById('idIptRpnUrnm').value], function(err, response){
+    <br> &nbsp; &nbsp;document.getElementById('idSpnRpnFmtNo').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp;response[0].reputation;
+    <br> &nbsp; &nbsp;document.getElementById('idSpnRpnFmt').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp;steem.formatter.reputation(response[0].reputation);
+    <br> &nbsp;});
+    <br>});</code>
+    <a class="clsHide" href="#idSteemactrptnget"></a></p>
   </section>
 
   <section id="idSteemactblc">
@@ -2005,53 +2022,106 @@
   </section>
   </section>
 
-  <section id="idSteemactAgrt">
-  <h2 id="idSteemactAgrtH2">Steem-account.AGGREGATE
-    <a class="clsHide" href="#idSteemactAgrtH2"></a></h2>
-  <p id="idSteemactAgrtdsn">description::
+  <section id="idSteemactAgt">
+  <h2 id="idSteemactAgtH2">Steem-account.AGGREGATE
+    <a class="clsHide" href="#idSteemactAgtH2"></a></h2>
+  <p id="idSteemactAgtdsn">description::
     <br>· dynamic-computation:
-    <br><span id="idSpnAcntAgrt" class="clsColorRed"></span>
-    <br>(using steem-js.api.getAccountCount)
+    <br><span id="idSpnAcntAgt" class="clsColorRed"></span>
+    <br>* cpt.steem-js.api.getAccountCount,
+    <br><code><a class="clsPreview" href="#idSteemjsofllib">steem</a>.api.getAccountCount(function(err, result) {
+    <br> &nbsp;document.getElementById('idSpnAcntAgt').innerHTML = result;
+    <br>});</code>
     <br>===
     <br>{2018-01-31}
     <br>700,000 accounts.
     <br>[<a href="https://steemit.com/steemit/@penguinpablo/daily-steem-stats-report-wednesday-january-31-2018">https://steemit.com/steemit/@penguinpablo/daily-steem-stats-report-wednesday-january-31-2018</a>]
-    <a class="clsHide" href="#idSteemactAgrtdsn"></a></p>
-  <p id="idSteemactAgrtnam">name::
+    <a class="clsHide" href="#idSteemactAgtdsn"></a></p>
+  <p id="idSteemactAgtnam">name::
     <br>* cpt.Steem-account.aggregate,
-    <a class="clsHide" href="#idSteemactAgrtnam"></a></p>
+    <a class="clsHide" href="#idSteemactAgtnam"></a></p>
   </section>
 
-  <section id="idSteemactWtns">
-  <h2 id="idSteemactWtnsH2">Steem-account.WITNESS
-    <a class="clsHide" href="#idSteemactWtnsH2"></a></h2>
-  <p id="idSteemactWtnsdsn">description::
+  <section id="idSteemactWts">
+  <h2 id="idSteemactWtsH2">Steem-account.WITNESS
+    <a class="clsHide" href="#idSteemactWtsH2"></a></h2>
+  <p id="idSteemactWtsdsn">description::
     <br>· Steem-witness-account is <a class="clsPreview" href="#idSteemacnt">a-Steem-account</a> whose <a class="clsPreview" href="#idSteemacthmn">human</a> runs and maintains <a class="clsPreview" href="#idSteemnodWtns">a-witness-node</a>.
     <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-02-09]
     <br>===
     <br>Witnesses are elected by the community to witness the production of blocks on the Steem network. In other words, they run and maintain nodes (servers) that generate the blocks containing all transactions (i.e. posts, upvotes, comments, transfers, etc.), which are added to the blockchain. Without witness nodes, there is no Steem blockchain. This Delegated Proof Of Stake (DPOS) system is based on trust, where the most trusted witnesses are likely to serve the network reliably.
     <br>Also, another important task is to publish a STEEM/USD price feed to the network, which is how STEEM Dollars (SBD) are pegged to 1 US Dollar in STEEM (using the 3.5 day exchange).
     <br>[<a href="https://steemian.info/witness-faq">https://steemian.info/witness-faq</a>]
-    <a class="clsHide" href="#idSteemactWtnsdsn"></a></p>
-  <p id="idSteemactWtnsnam">name::
+    <a class="clsHide" href="#idSteemactWtsdsn"></a></p>
+  <p id="idSteemactWtsnam">name::
     <br>* cpt.Steem-account.witness,
     <br>* cpt.Steem-witness-account,
-    <a class="clsHide" href="#idSteemactWtnsnam"></a></p>
+    <a class="clsHide" href="#idSteemactWtsnam"></a></p>
 
-  <section id="idSteemactWtnsnod">
-  <h3 id="idSteemactWtnsnodH3">node of Steem-witness-account (<a class="clsPreview" href="#idSteemnodWtns">link</a>)
-    <a class="clsHide" href="#idSteemactWtnsnodH3"></a></h3>
+  <section id="idSteemactWtsnod">
+  <h3 id="idSteemactWtsnodH3">node of witness-account (<a class="clsPreview" href="#idSteemnodWtns">link</a>)
+    <a class="clsHide" href="#idSteemactWtsnodH3"></a></h3>
   </section>
 
-  <section id="idSteemactWtnsrsc">
-  <h3 id="idSteemactWtnsrscH3">resource of Steem-witness-account
-    <a class="clsHide" href="#idSteemactWtnsrscH3"></a></h3>
-  <p id="idSteemactWtnsrscwpa">addressWpg::
+  <section id="idSteemactWtsrsc">
+  <h3 id="idSteemactWtsrscH3">resource of witness-account
+    <a class="clsHide" href="#idSteemactWtsrscH3"></a></h3>
+  <p id="idSteemactWtsrscwpa">addressWpg::
     <br>* voting place: <a href="https://steemit.com/~witnesses">https://steemit.com/~witnesses</a>,
     <br>* voting guide: <a href="https://steemian.info/voting">https://steemian.info/voting</a>,
     <br>* witness-posting: <a href="https://steemit.com/created/witness-category">https://steemit.com/created/witness-category</a>,
     <br>* witness-list: <a href="https://steemian.info/witnesses">https://steemian.info/witnesses</a>,
-    <a class="clsHide" href="#idSteemactWtnsrscwpa"></a></p>
+    <a class="clsHide" href="#idSteemactWtsrscwpa"></a></p>
+  </section>
+
+  <section id="idSteemactWtsAgt">
+  <h3 id="idSteemactWtsAgtH3">witness-account.AGGREGATE
+    <a class="clsHide" href="#idSteemactWtsAgtH3"></a></h3>
+  <p id="idSteemactWtsAgtdsn">description::
+    <br>· dynamic-computation:
+    <br><span id="idSpnAcntWtsAgt" class="clsColorRed"></span>
+    <br>* cpt.steem-js.api.getWitnessCount,
+    <br><code><a class="clsPreview" href="#idSteemjsofllib">steem</a>.api.getWitnessCount(function(err, result) {
+    <br> &nbsp;console.log(err, result);
+    <br>});</code>
+    <a class="clsHide" href="#idSteemactWtsAgtdsn"></a></p>
+  <p id="idSteemactWtsAgtnam">name::
+    <br>* cpt.Steem-witness-account.aggregate,
+    <a class="clsHide" href="#idSteemactWtsAgtnam"></a></p>
+  </section>
+
+  <section id="idSteemactWtsAtv">
+  <h3 id="idSteemactWtsAtvH3">witness-account.ACTIVE
+    <a class="clsHide" href="#idSteemactWtsAtvH3"></a></h3>
+  <p id="idSteemactWtsAtvdsn">description::
+    <br>· dynamic-computation:
+    <br><textarea id="idTxtaAcntWtsAtv" rows="4" cols="59"></textarea>
+    <br>* cpt.steem-js.api.getActiveWitnesses,
+    <br><code><a class="clsPreview" href="#idSteemjsofllib">steem</a>.api.getActiveWitnesses(function(err, result) {
+    <br> &nbsp;document.getElementById('idTxtaAcntWtsAtv').innerHTML =
+    <br> &nbsp; &nbsp;result.sort().join(', ');
+    <br>});</code>
+    <a class="clsHide" href="#idSteemactWtsAtvdsn"></a></p>
+  <p id="idSteemactWtsAtvnam">name::
+    <br>* cpt.Steem-witness-account.active,
+    <a class="clsHide" href="#idSteemactWtsAtvnam"></a></p>
+  </section>
+
+  <section id="idSteemactWtsQue">
+  <h3 id="idSteemactWtsQueH3">witness-account.QUEUE
+    <a class="clsHide" href="#idSteemactWtsQueH3"></a></h3>
+  <p id="idSteemactWtsQuedsn">description::
+    <br>· dynamic-computation:
+    <br><textarea id="idTxtaAcntWtsQue" rows="4" cols="59"></textarea>
+    <br>* cpt.steem-js.api.getMinerQueue,
+    <br><code><a class="clsPreview" href="#idSteemjsofllib">steem</a>.api.getMinerQueue(function(err, result) {
+    <br> &nbsp;document.getElementById('idTxtaAcntWtsQue').innerHTML =
+    <br> &nbsp; &nbsp;result.join(', ');
+    <br>});</code>
+    <a class="clsHide" href="#idSteemactWtsQuedsn"></a></p>
+  <p id="idSteemactWtsQuenam">name::
+    <br>* cpt.Steem-witness-account.queue,
+    <a class="clsHide" href="#idSteemactWtsQuenam"></a></p>
   </section>
   </section>
 </section>
@@ -2096,7 +2166,14 @@
     <br>- curator_payout_value: "0.000 SBD"
     <br>- depth: 0
     <br>- id: 31270012
-    <br>- json_metadata: "{"tags":["steemit-chat","witness","steemit","steem","steemdev"],"users":["riverhead","followbtcnews","gtg","crimsonclad"],"image":["https://i.gyazo.com/cfe11bd6702270324c9916c3b8dfba39.png","https://i.gyazo.com/d68e81355c87e847e9f4c388c9f370a2.gif"],"links":["https://github.com/sciborg/Steemit-Chat","https://github.com/RocketChat/Rocket.Chat","http://www.steemistry.com","https://steemconnect.com/sign/account-witness-vote?witness=followbtcnews&amp;approve=1"],"app":"steemit/0.1","format":"markdown"}"
+    <br>- json_metadata: "{
+    <br>-- "tags":["steemit-chat","witness","steemit","steem","steemdev"],
+    <br>-- "users":["riverhead","followbtcnews","gtg","crimsonclad"],
+    <br>-- "image":["https://i.gyazo.com/cfe11bd6702270324c9916c3b8dfba39.png","https://i.gyazo.com/d68e81355c87e847e9f4c388c9f370a2.gif"],
+    <br>-- "links":["https://github.com/sciborg/Steemit-Chat","https://github.com/RocketChat/Rocket.Chat","http://www.steemistry.com","https://steemconnect.com/sign/account-witness-vote?witness=followbtcnews&amp;approve=1"],
+    <br>-- "app":"steemit/0.1",
+    <br>-- "format":"markdown"
+    <br>-- }"
     <br>- last_payout: "1970-01-01T00:00:00"
     <br>- last_update: "2018-02-08T16:05:12"
     <br>- max_accepted_payout: "1000000.000 SBD"
@@ -2123,6 +2200,82 @@
     <a class="clsHide" href="#idSteempstattexpl"></a></p>
   </section>
 
+  <section id="idSteempstid">
+  <h2 id="idSteempstidH2">id of post
+    <a class="clsHide" href="#idSteempstidH2"></a></h2>
+  <p id="idSteempstiddsn">description::
+    <br>· post-id is a-number, unique for every post.
+    <a class="clsHide" href="#idSteempstiddsn"></a></p>
+  <p id="idSteempstidnam">name::
+    <br>* cpt.Steem-post'id,
+    <a class="clsHide" href="#idSteempstidnam"></a></p>
+  </section>
+
+  <section id="idSteempstathr">
+  <h2 id="idSteempstathrH2">author of post
+    <a class="clsHide" href="#idSteempstathrH2"></a></h2>
+  <p id="idSteempstathrdsn">description::
+    <br>· author of post is <a class="clsPreview" href="#idSteemacnt">the-account</a> that created the-post.
+    <a class="clsHide" href="#idSteempstathrdsn"></a></p>
+  <p id="idSteempstathrnam">name::
+    <br>* cpt.Steem-post'author,
+    <a class="clsHide" href="#idSteempstathrnam"></a></p>
+  </section>
+
+  <section id="idSteempstattl">
+  <h2 id="idSteempstattlH2">title of post
+    <a class="clsHide" href="#idSteempstattlH2"></a></h2>
+  <p id="idSteempstattldsn">description::
+    <br>· title of post is a-string of characters, exactly what an-author chooses.
+    <a class="clsHide" href="#idSteempstattldsn"></a></p>
+  <p id="idSteempstattlnam">name::
+    <br>* cpt.Steem-post'title,
+    <a class="clsHide" href="#idSteempstattlnam"></a></p>
+  </section>
+
+  <section id="idSteempstbdy">
+  <h2 id="idSteempstbdyH2">body of post
+    <a class="clsHide" href="#idSteempstbdyH2"></a></h2>
+  <p id="idSteempstbdydsn">description::
+    <br>· body of post is the-text of the-post.
+    <a class="clsHide" href="#idSteempstbdydsn"></a></p>
+  <p id="idSteempstbdynam">name::
+    <br>* cpt.Steem-post'body,
+    <a class="clsHide" href="#idSteempstbdynam"></a></p>
+  </section>
+
+  <section id="idSteempstjsnmd">
+  <h2 id="idSteempstjsnmdH2">json_metadata of post
+    <a class="clsHide" href="#idSteempstjsnmdH2"></a></h2>
+  <p id="idSteempstjsnmddsn">description::
+    <br>· json_metadata of post are data related to post, such as:
+    <br>- <a class="clsPreview" href="#idSteempsttag">tags</a>,
+    <br>- users,
+    <br>- images,
+    <br>- links,
+    <br>- app,
+    <br>- format,
+    <a class="clsHide" href="#idSteempstjsnmddsn"></a></p>
+  <p id="idSteempstjsnmdnam">name::
+    <br>* cpt.Steem-post'json_metadata,
+    <a class="clsHide" href="#idSteempstjsnmdnam"></a></p>
+  </section>
+
+  <section id="idSteempstpmlk">
+  <h2 id="idSteempstpmlkH2">permlink of post
+    <a class="clsHide" href="#idSteempstpmlkH2"></a></h2>
+  <p id="idSteempstpmlkdsn">description::
+    <br>· permlink of post is a-string of characters derived from its title, by removing special-characters (, : ' ...), by converting spaces to (-) and making it lower-case.
+    <br>· it is the last part of the-address of a-post in steemit.com.
+    <br>· example:
+    <br>- title: Structured-concept (Mcs)
+    <br>- permlink: structured-concept-mcs
+    <a class="clsHide" href="#idSteempstpmlkdsn"></a></p>
+  <p id="idSteempstpmlknam">name::
+    <br>* cpt.Steem-post'permlink,
+    <a class="clsHide" href="#idSteempstpmlknam"></a></p>
+  </section>
+
   <section id="idSteempsttag">
   <h2 id="idSteempsttagH2">tag of post
     <a class="clsHide" href="#idSteempsttagH2"></a></h2>
@@ -2135,7 +2288,80 @@
   <p id="idSteempsttagnam">name::
     <br>* cpt.Steem-post'tag,
     <br>* cpt.Steem-net'tag-of-post,
+    <br>* cpt.Steem-tag,
     <a class="clsHide" href="#idSteempsttagnam"></a></p>
+  <p id="idSteempsttagatt">attribute::
+    <br>* comments: 22570
+    <br>* name: "steem"
+    <br>* net_votes: 342923
+    <br>* top_posts: 27617
+    <br>* total_payouts: "4010570.291 SBD"
+    <br>* trending: "158037273"
+    <a class="clsHide" href="#idSteempsttagatt"></a></p>
+  <p id="idSteempsttagntn">notation::
+    <br>* only lowercase letters,
+    <br>* only one dash,
+    <br>* no special characters,
+    <br>* only 5 tags,
+    <a class="clsHide" href="#idSteempsttagntn"></a></p>
+  <p id="idSteempsttagwhlchn">whole-chain::
+    <br>* <a class="clsPreview" href="#idSteempstjsnmd">json_metadata</a>,
+    <a class="clsHide" href="#idSteempsttagwhlchn"></a></p>
+
+  <section id="idSteempsttagCgr">
+  <h3 id="idSteempsttagCgrH3">tag.CATEGORY
+    <a class="clsHide" href="#idSteempsttagCgrH3"></a></h3>
+  <p id="idSteempsttagCgrdsn">description::
+    <br>· category of post is the first of its tags.
+    <a class="clsHide" href="#idSteempsttagCgrdsn"></a></p>
+  <p id="idSteempsttagCgrnam">name::
+    <br>* cpt.Steem-post'category,
+    <br>* cpt.Steem-tag.category,
+    <a class="clsHide" href="#idSteempsttagCgrnam"></a></p>
+  </section>
+
+  <section id="idSteempsttagTrd">
+  <h3 id="idSteempsttagTrdH3">tag.TRENDING
+    <a class="clsHide" href="#idSteempsttagTrdH3"></a></h3>
+  <p id="idSteempsttagTrdnam">name::
+    <br>* cpt.Steem-tag.trending,
+    <a class="clsHide" href="#idSteempsttagTrdnam"></a></p>
+  <p id="idSteempsttagTrdget">get trending tags::
+    <br>· <span class="clsColorGreen">name of first-tag or empty</span>:
+    <input type="text" id="idIptGttnam">
+    <br>· <span class="clsColorGreen">number of tags to show</span>: &nbsp; &nbsp;
+    <input type="text" id="idIptGttnbr">
+    <button type="button" id="idBtnGtt">GO</button>
+    <br><textarea id="idTxtaGtt" rows="6" cols="59"></textarea>
+    <br>* cpt.steem-js.api.getTrendingTags,
+    <br><code>document.getElementById('idBtnGtt').addEventListener('click', function(e) {
+    <br> &nbsp;steem.api.getTrendingTags(
+    <br> &nbsp; &nbsp;document.getElementById('idIptGttnam').value,
+    <br> &nbsp; &nbsp;document.getElementById('idIptGttnbr').value,
+    <br> &nbsp; &nbsp;function(err, result) {
+    <br> &nbsp; &nbsp; &nbsp;var s = '';
+    <br> &nbsp; &nbsp; &nbsp;for (var n in result) {s = s + result[n].name + ', '}
+    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idTxtaGtt').innerHTML = s;
+    <br> &nbsp; &nbsp;}
+    <br> &nbsp;);
+    <br>});</code>
+    <a class="clsHide" href="#idSteempsttagTrdget"></a></p>
+  </section>
+  </section>
+
+  <section id="idSteempsturl">
+  <h2 id="idSteempsturlH2">url of post
+    <a class="clsHide" href="#idSteempsturlH2"></a></h2>
+  <p id="idSteempsturldsn">description::
+    <br>· example: url: "/steemit-chat/@followbtcnews/don-t-panic-steemit-chat-is-up-and-running-here-are-all-the-official-details"
+    <br>· it is-composed of:
+    <br>- <a class="clsPreview" href="idSteempsttagCgr">category</a>,
+    <br>- <a class="clsPreview" href="#idSteempstathr">author</a>,
+    <br>- <a class="clsPreview" href="#idSteempstpmlk">permlink</a>,
+    <a class="clsHide" href="#idSteempsturldsn"></a></p>
+  <p id="idSteempsturlnam">name::
+    <br>* cpt.Steem-post'url,
+    <a class="clsHide" href="#idSteempsturlnam"></a></p>
   </section>
 
   <section id="idSteempstvot">
@@ -2151,8 +2377,11 @@
     <br>· <span class="clsColorGreen">permlink of post</span>:
     <input type="text" id="idIptGavPmlk" value="structured-concept-mcs">
     <button type="button" id="idBtnGav">GO</button>
-    <br><textarea id="idTxtaGav" rows="6" cols="50"></textarea>
-    <br>· using <a class="clsPreview" href="#idSteemjsofllib">steem-js</a>.api.getActiveVotes().
+    <br><textarea id="idTxtaGav" rows="6" cols="59"></textarea>
+    <br>* cpt.steem-js.api.getActiveVotes,
+    <br><code><a class="clsPreview" href="#idSteemjsofllib">steem</a>.api.getActiveVotes(author, permlink, function(err, result) {
+    <br>  console.log(err, result);
+    <br>});</code>
     <a class="clsHide" href="#idSteempstvotget"></a></p>
   </section>
 
@@ -2168,8 +2397,11 @@
     <br>· <span class="clsColorGreen">permlink of post</span>:
     <input type="text" id="idIptGcrPmlk" value="structured-concept-mcs">
     <button type="button" id="idBtnGcr">GO</button>
-    <br><textarea id="idTxtaGcr" rows="6" cols="50"></textarea>
-    <br>· using <a class="clsPreview" href="#idSteemjsofllib">steem-js</a>.api.getContentReplies().
+    <br><textarea id="idTxtaGcr" rows="6" cols="59"></textarea>
+    <br>* cpt.steem-js.api.getContentReplies,
+    <br><code><a class="clsPreview" href="#idSteemjsofllib">steem</a>.api.getContentReplies(author, permlink, function(err, result) {
+    <br> &nbsp;console.log(err, result);
+    <br>});</code>
     <a class="clsHide" href="#idSteempstcmntget"></a></p>
   </section>
 
@@ -2746,9 +2978,19 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
 
+    //get account'reputation
+    document.getElementById('idBtnRpn').addEventListener('click', function(e) {
+      steem.api.getAccounts([document.getElementById('idIptRpnUrnm').value], function(err, response){
+        document.getElementById('idSpnRpnFmtNo').innerHTML =
+          response[0].reputation;
+        document.getElementById('idSpnRpnFmt').innerHTML =
+          steem.formatter.reputation(response[0].reputation);
+      });
+    });
+
     // account aggregate
     steem.api.getAccountCount(function(err, result) {
-      document.getElementById('idSpnAcntAgrt').innerHTML = result;
+      document.getElementById('idSpnAcntAgt').innerHTML = result;
     });
 
     // validate account name
@@ -2764,6 +3006,23 @@
         }
       }
     );
+
+    // witness account aggregate
+    steem.api.getWitnessCount(function(err, result) {
+      document.getElementById('idSpnAcntWtsAgt').innerHTML = result;
+    });
+
+    // witness account active
+    steem.api.getActiveWitnesses(function(err, result) {
+      document.getElementById('idTxtaAcntWtsAtv').innerHTML =
+        result.sort().join(', ');
+    });
+
+    // witness account queue
+    steem.api.getMinerQueue(function(err, result) {
+      document.getElementById('idTxtaAcntWtsQue').innerHTML =
+        result.join(', ');
+    });
 
     //get votes of post
     document.getElementById('idBtnGav').addEventListener('click',
@@ -2790,6 +3049,19 @@
         );
       }
     );
+
+    //get trending tags
+    document.getElementById('idBtnGtt').addEventListener('click', function(e) {
+      steem.api.getTrendingTags(
+        document.getElementById('idIptGttnam').value,
+        document.getElementById('idIptGttnbr').value,
+        function(err, result) {
+          var s = '';
+          for (var n in result) {s = s + result[n].name + ', '}
+          document.getElementById('idTxtaGtt').innerHTML = s;
+        }
+      );
+    });
 
   });
 </script>
