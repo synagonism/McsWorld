@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Steem-network (Đ-Steem.0-15-0.2018-02-11)</title>
+  <title>Mcs.Steem-network (Đ-Steem.0-16-0.2018-02-12)</title>
   <meta name="keywords" content="Steem-net, Đ-Steem, ModelConceptStructured, Mcs, structured-concept, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
   <script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
@@ -130,6 +130,63 @@
     <br>* cpt.Steem-net'block,
     <br>* cpt.Đ-Steem'block,
     <a class="clsHide" href="#idSteemblknam"></a></p>
+  <p id="idSteemblkgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDbcblk">blockchain-block</a>,
+    <a class="clsHide" href="#idSteemblkgncchn"></a></p>
+
+  <section id="idSteemblkatt">
+  <h3 id="idSteemblkattH3">attribute of block
+    <a class="clsHide" href="#idSteemblkattH3"></a></h3>
+  <p id="idSteemblkattdsn">description::
+    <br>* block_id: "0121eac0926f234943b6dfecc118fb4dfd61682a"
+    <br>* extensions: []
+    <br>* previous: "0121eabf49232ce006d2b15f6677ac29f6846ec5"
+    <br>* signing_key: "STM8WtG3BskaEyfUjEmLpUWKZtDuy77FV28YG1r9DAWnJy9DFPWgw"
+    <br>* timestamp: "2018-01-15T13:08:09"
+    <br>* transaction_ids:(44) ["358e891b0744f1af9d7b6d0b29034bdf8c14bd43", ...]
+    <br>* transaction_merkle_root: "86a7111094e8c12f1a757ac71f6873d259c813a2"
+    <br>* transactions: (44) [{…}, ...]
+    <br>* witness: "thecryptodrive"
+    <br>* witness_signature:
+    <a class="clsHide" href="#idSteemblkattdsn"></a></p>
+  <p id="idSteemblkattnam">name::
+    <br>* cpt.Steem-block'attribute,
+    <a class="clsHide" href="#idSteemblkattnam"></a></p>
+  </section>
+
+  <section id="idSteemblkhdr">
+  <h3 id="idSteemblkhdrH3">header of block
+    <a class="clsHide" href="#idSteemblkhdrH3"></a></h3>
+  <p id="idSteemblkhdrdsn">description::
+    <br>· header of block is the-set of the following attributes:
+    <br>* extensions: []
+    <br>* previous: "0121eabf49232ce006d2b15f6677ac29f6846ec5"
+    <br>* timestamp: "2018-01-15T13:08:09"
+    <br>* transaction_merkle_root: "86a7111094e8c12f1a757ac71f6873d259c813a2"
+    <br>* witness: "thecryptodrive"
+    <a class="clsHide" href="#idSteemblkhdrdsn"></a></p>
+  <p id="idSteemblkhdrnam">name::
+    <br>* cpt.Steem-block'header,
+    <a class="clsHide" href="#idSteemblkhdrnam"></a></p>
+  </section>
+
+  <section id="idSteemblkLst">
+  <h3 id="idSteemblkLstH3">block.LAST
+    <a class="clsHide" href="#idSteemblkLstH3"></a></h3>
+  <p id="idSteemblkLstdsn">description::
+    <br>· 'head_block_number' is the-number of the latest block on the-chain.
+    <br>· dynamic computation:
+    <br><span id="idSpnBlkLst" class="clsColorRed"></span>
+    <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
+    <br><code>steem.api.getState('', function(err, result) {
+    <br> &nbsp;document.getElementById('idSpnBlkLst').innerHTML =
+    <br> &nbsp; &nbsp;result.props.head_block_number.toLocaleString();
+    <br>});</code>
+    <a class="clsHide" href="#idSteemblkLstdsn"></a></p>
+  <p id="idSteemblkLstnam">name::
+    <br>* cpt.Steem-block.last,
+    <a class="clsHide" href="#idSteemblkLstnam"></a></p>
+  </section>
   </section>
 
   <section id="idSteemblkexr">
@@ -239,6 +296,53 @@
     <br>* <a class="clsPreview" href="#idSteemsmt">Smart-Media-Token</a>,
     <a class="clsHide" href="#idSteemastSpc"></a></p>
 
+  <section id="idSteemastAgt">
+  <h2 id="idSteemastAgtH2">Steem-asset.AGGREGATE
+    <a class="clsHide" href="#idSteemastAgtH2"></a></h2>
+  <p id="idSteemastAgtnam">name::
+    <br>* cpt.Steem-asset.aggregate,
+    <br>* cpt.Steem-asset.supply,
+    <a class="clsHide" href="#idSteemastAgtnam"></a></p>
+
+  <section id="idSteemVlsy">
+  <h3 id="idSteemVlsyH3">Steem-asset.virtual-supply
+    <a class="clsHide" href="#idSteemVlsyH3"></a></h3>
+  <p id="idSteemVlsydsn">description::
+    <br>· virtual-supply of STEEM is the-supply of all STEEM + all SBD if all SBD would-be-converted to STEEM at the current price.
+    <br>· dynamic calculation:
+    <button type="button" id="idBtnStmVlsy">GO</button>
+    <br><span id="idSpnStmVlsy" class="clsColorRed"></span>
+    <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
+    <br><code>document.getElementById('idBtnStmVlsy').addEventListener('click', function(e) {
+    <br> &nbsp;steem.api.getState('', function(err, result) {
+    <br> &nbsp; &nbsp;const s = result.props.virtual_supply;
+    <br> &nbsp; &nbsp;const n = parseInt(s.substring(0, s.indexOf(' '))).toLocaleString();
+    <br> &nbsp; &nbsp;document.getElementById('idSpnStmVlsy').innerHTML = n + ' STEEM';
+    <br> &nbsp;});
+    <br>});</code>
+    <a class="clsHide" href="#idSteemVlsydsn"></a></p>
+  <p id="idSteemVlsynam">name::
+    <br>* cpt.STEEM.virtual-supply,
+    <a class="clsHide" href="#idSteemVlsynam"></a></p>
+  </section>
+
+  <section id="idSteemrwdpl">
+  <h3 id="idSteemrwdplH3">Steem-asset.reward-pool
+    <a class="clsHide" href="#idSteemrwdplH3"></a></h3>
+  <p id="idSteemrwdpldsn">description::
+    <br>What is the reward pool?
+    <br>Every day, a fixed amount of STEEM tokens are allocated to the network reward fund, commonly called the "reward pool."
+    <br>These get distributed to authors and curators for posting and voting on content.
+    <br>[<a href="https://steemit.com/faq.html#What_is_the_reward_pool">https://steemit.com/faq.html#What_is_the_reward_pool</a>]
+    <a class="clsHide" href="#idSteemrwdpldsn"></a></p>
+  <p id="idSteemrwdplnam">name::
+    <br>* cpt.reward-pool--of--Steem-net,
+    <br>* cpt.STEEM.reward-pool,
+    <br>* cpt.Steem-net'reward-pool,
+    <a class="clsHide" href="#idSteemrwdplnam"></a></p>
+  </section>
+  </section>
+
   <section id="idSteemtkn">
   <h2 id="idSteemtknH2">Steem-asset.STEEM
     <a class="clsHide" href="#idSteemtknH2"></a></h2>
@@ -293,6 +397,9 @@
     <br>* cpt.STEEM'minting,
     <br>* cpt.đ-STEEM'creating,
     <a class="clsHide" href="#idSteemtkncrtgnam"></a></p>
+  <p id="idSteemtkncrtgwpa">addressWpg::
+    <br>* TIL: How much STEEM is added to the reward pool per day? <a href="https://steemit.com/steem/@penguinpablo/til-how-much-steem-is-added-to-the-reward-pool-per-day">https://steemit.com/steem/@penguinpablo/</a>,
+    <a class="clsHide" href="#idSteemtkncrtgwpa"></a></p>
   </section>
 
   <section id="idSteemtkdbtg">
@@ -378,22 +485,6 @@
     <br>* cpt.Steem-powering-down,
     <a class="clsHide" href="#idSteemtsptostmnam"></a></p>
   </section>
-
-  <section id="idSteemrwdpl">
-  <h3 id="idSteemrwdplH3">STEEM.reward-pool
-    <a class="clsHide" href="#idSteemrwdplH3"></a></h3>
-  <p id="idSteemrwdpldsn">description::
-    <br>What is the reward pool?
-    <br>Every day, a fixed amount of STEEM tokens are allocated to the network reward fund, commonly called the "reward pool."
-    <br>These get distributed to authors and curators for posting and voting on content.
-    <br>[<a href="https://steemit.com/faq.html#What_is_the_reward_pool">https://steemit.com/faq.html#What_is_the_reward_pool</a>]
-    <a class="clsHide" href="#idSteemrwdpldsn"></a></p>
-  <p id="idSteemrwdplnam">name::
-    <br>* cpt.reward-pool--of--Steem-net,
-    <br>* cpt.STEEM.reward-pool,
-    <br>* cpt.Steem-net'reward-pool,
-    <a class="clsHide" href="#idSteemrwdplnam"></a></p>
-  </section>
   </section>
 
   <section id="idSteemsmpwr">
@@ -453,6 +544,9 @@
   <h2 id="idSteemSbdH2">Steem-asset.STEEM-Dollar
     <a class="clsHide" href="#idSteemSbdH2"></a></h2>
   <p id="idSteemSbddsn">description::
+    <br>SBD's are intended to be able to purchase 1 USD worth of STEEM. With STEEM being around $5 USD, 1 SBD should be 0.20 STEEM.
+    <br>[<a href="https://steemit.com/steem/@runicar/question-time-or-how-is-new-sbd-created-and-who-determines-how-much-will-be-made-or">https://steemit.com/steem/@runicar/question-time-or-how-is-new-sbd-created-and-who-determines-how-much-will-be-made-or</a> (fitzgibbon (59) answer)]
+    <br>===
     <br>Steem Dollars (commonly abbreviated SBD) are liquid stable-value currency tokens designed to be pegged to $1 USD. Steem Dollars can be traded with STEEM, and transferred to other accounts for commerce or exchange. Steem Dollars may also be converted into STEEM in a process that takes 3.5 days. Steem Dollars can be used to buy things in marketplaces, such as PeerHub.com.
     <br>[<a href="https://steemit.com/faq.html#What_is_the_difference_between_STEEM__STEEM_Power__and_Steem_Dollars">https://steemit.com/faq.html#What_is_the_difference_between_STEEM__STEEM_Power__and_Steem_Dollars</a>]
     <br>===
@@ -477,7 +571,42 @@
     <br>* <a href="https://coinmarketcap.com/currencies/steem-dollars/#markets">https://coinmarketcap.com/currencies/steem-dollars/#markets</a>,
     <a class="clsHide" href="#idSteemSbdcvtgwpa"></a></p>
   </section>
+
+  <section id="idSteemSbdcrtg">
+  <h3 id="idSteemSbdcrtgH3">creating STEEM-Dollar
+    <a class="clsHide" href="#idSteemSbdcrtgH3"></a></h3>
+  <p id="idSteemSbdcrtgdsn">description::
+    <br>HOW IS SBD CREATED?
+    <br>SBD is created out of inflation and then distributed to authors from the rewards pool. The inflation rate can be adjusted through hard forks as it has in the past. The inflation started off at 10% and will reduce by 0.5% each year. Which means the current inflation rate is 9.5%. Existing SBD is inflated to create fresh SBD which is distributed to authors and curators each day.
+    <br>[<a href="https://steemit.com/steemit/@motoengineer/steem-1013-is-there-a-shortage-or-surplus-of-sbd">https://steemit.com/steemit/@motoengineer/steem-1013-is-there-a-shortage-or-surplus-of-sbd</a>]
+    <a class="clsHide" href="#idSteemSbdcrtgdsn"></a></p>
+  <p id="idSteemSbdcrtgnam">name::
+    <br>* cpt.STEEM-Dollar'creating,
+    <a class="clsHide" href="#idSteemSbdcrtgnam"></a></p>
   </section>
+
+  <section id="idSteemSbddtrg">
+  <h3 id="idSteemSbddtrgH3">destroying STEEM-Dollar
+    <a class="clsHide" href="#idSteemSbddtrgH3"></a></h3>
+  <p id="idSteemSbddtrgdsn">description::
+    <br>HOW IS SBD DESTROYED?
+    <br>SBD is destroyed by converting SBD to STEEM. This conversion takes 3.5 days to complete and is purposely done so to prevent conversion abuse. This process will literally take SBD, pay you out with STEEM and then destroy the SBD, thereby removing it from the supply chain.
+    <br>[<a href="https://steemit.com/steemit/@motoengineer/steem-1013-is-there-a-shortage-or-surplus-of-sbd">https://steemit.com/steemit/@motoengineer/steem-1013-is-there-a-shortage-or-surplus-of-sbd</a>]
+  <p id="idSteemSbddtrgnam">name::
+    <br>* cpt.STEEM-Dollar'destroying,
+    <a class="clsHide" href="#idSteemSbddtrgnam"></a></p>
+    <a class="clsHide" href="#idSteemSbddtrgdsn"></a></p>
+  </section>
+
+  <section id="idSteemSbdrsc">
+  <h3 id="idSteemSbdrscH3">resource of STEEM-Dollar
+    <a class="clsHide" href="#idSteemSbdrscH3"></a></h3>
+  <p id="idSteemSbdrscwpa">addressWpg::
+    <br>* {time.2018-01-21} QUESTION TIME | How is new SBD created and who determines how much will be made? | <a href="https://steemit.com/steem/@runicar/question-time-or-how-is-new-sbd-created-and-who-determines-how-much-will-be-made-or">https://steemit.com/steem/@runicar/</a>,
+    <a class="clsHide" href="#idSteemSbdrscwpa"></a></p>
+  </section>
+  </section>
+
   <section id="idSteemsmt">
   <h2 id="idSteemsmtH2">Steem-asset.Smart-Media-Token
     <a class="clsHide" href="#idSteemsmtH2"></a></h2>
@@ -1633,7 +1762,7 @@
     <br><textarea id="idTxtaGacc" rows="16" cols="59"></textarea>
     <br>* cpt.steem-js.api.getAccounts,
     <br>* cpt.steem-js'getAccounts.api,
-    <br>· code:
+    <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
     <br><code>document.getElementById('idBtnGacc').addEventListener('click', function(e) {
     <br> &nbsp;steem.api.getAccounts(
     <br> &nbsp; &nbsp;[document.getElementById('idIptGaccnam').value],
@@ -1902,7 +2031,7 @@
     <br>· website: &nbsp; &nbsp; &nbsp; <span id="idSpnGapWbs" class="clsColorRed"></span>
     <br>· profile-image: <span id="idSpnGapImgPfl" class="clsColorRed"></span>
     <br>· cover-image: &nbsp; <span id="idSpnGapImgCvr" class="clsColorRed"></span>
-    <br>· code:
+    <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
     <br><code>document.getElementById('idBtnGap').addEventListener('click', function(e) {
     <br> &nbsp;steem.api.getAccounts(
     <br> &nbsp; &nbsp;[document.getElementById('idIptGapNam').value],
@@ -1948,7 +2077,7 @@
     <br>· formated: <span id="idSpnRpnFmt" class="clsColorRed"></span>
     <br>* cpt.steem-js'reputation.formatter,
     <br>* cpt.steem-js.formatter.reputation,
-    <br>· code:
+    <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
     <br><code>document.getElementById('idBtnRpn').addEventListener('click', function(e) {
     <br> &nbsp;steem.api.getAccounts([document.getElementById('idIptRpnUrnm').value], function(err, response){
     <br> &nbsp; &nbsp;document.getElementById('idSpnRpnFmtNo').innerHTML =
@@ -1973,7 +2102,7 @@
     <br>· <a class="clsPreview" href="#idSteemtkn">STEEM</a>: &nbsp; &nbsp; &nbsp; &nbsp;<span id="idSpnGabStm" class="clsColorRed"></span>
     <br>· <a class="clsPreview" href="#idSteemsmpwr">STEEM-Power</a>: &nbsp;<span id="idSpnGabStp" class="clsColorRed"></span>
     <br>· <a class="clsPreview" href="#idSteemSbd">STEEM-Dollar</a>: <span id="idSpnGabSbd" class="clsColorRed"></span>
-    <br>· code:
+    <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
     <br><code>document.getElementById('idBtnGab').addEventListener('click', function(e) {
     <br> &nbsp;steem.api.getAccounts(
     <br> &nbsp; &nbsp;[document.getElementById('idIptGabnam').value],
@@ -2143,7 +2272,8 @@
     <br><span id="idSpnAcntAgt" class="clsColorRed"></span>
     <br>* cpt.steem-js'getAccountCount.api,
     <br>* cpt.steem-js.api.getAccountCount,
-    <br><code><a class="clsPreview" href="#idSteemjsofllib">steem</a>.api.getAccountCount(function(err, result) {
+    <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
+    <br><code>steem.api.getAccountCount(function(err, result) {
     <br> &nbsp;document.getElementById('idSpnAcntAgt').innerHTML = result;
     <br>});</code>
     <br>===
@@ -2207,7 +2337,8 @@
     <br><span id="idSpnAcntWtsAgt" class="clsColorRed"></span>
     <br>* cpt.steem-js'getWitnessCount.api,
     <br>* cpt.steem-js.api.getWitnessCount,
-    <br><code><a class="clsPreview" href="#idSteemjsofllib">steem</a>.api.getWitnessCount(function(err, result) {
+    <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
+    <br><code>steem.api.getWitnessCount(function(err, result) {
     <br> &nbsp;console.log(err, result);
     <br>});</code>
     <a class="clsHide" href="#idSteemactWtsAgtdsn"></a></p>
@@ -2224,7 +2355,8 @@
     <br><textarea id="idTxtaAcntWtsAtv" rows="4" cols="59"></textarea>
     <br>* cpt.steem-js'getActiveWitnesses.api,
     <br>* cpt.steem-js.api.getActiveWitnesses,
-    <br><code><a class="clsPreview" href="#idSteemjsofllib">steem</a>.api.getActiveWitnesses(function(err, result) {
+    <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
+    <br><code>steem.api.getActiveWitnesses(function(err, result) {
     <br> &nbsp;document.getElementById('idTxtaAcntWtsAtv').innerHTML =
     <br> &nbsp; &nbsp;result.sort().join(', ');
     <br>});</code>
@@ -2242,7 +2374,8 @@
     <br><textarea id="idTxtaAcntWtsQue" rows="4" cols="59"></textarea>
     <br>* cpt.steem-js'getMinerQueue.api,
     <br>* cpt.steem-js.api.getMinerQueue,
-    <br><code><a class="clsPreview" href="#idSteemjsofllib">steem</a>.api.getMinerQueue(function(err, result) {
+    <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
+    <br><code>steem.api.getMinerQueue(function(err, result) {
     <br> &nbsp;document.getElementById('idTxtaAcntWtsQue').innerHTML =
     <br> &nbsp; &nbsp;result.join(', ');
     <br>});</code>
@@ -2474,6 +2607,7 @@
     <br><textarea id="idTxtaGtt" rows="6" cols="59"></textarea>
     <br>* cpt.steem-js'getTrendingTags.api,
     <br>* cpt.steem-js.api.getTrendingTags,
+    <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
     <br><code>document.getElementById('idBtnGtt').addEventListener('click', function(e) {
     <br> &nbsp;steem.api.getTrendingTags(
     <br> &nbsp; &nbsp;document.getElementById('idIptGttnam').value,
@@ -2520,7 +2654,8 @@
     <br><textarea id="idTxtaGav" rows="6" cols="59"></textarea>
     <br>* cpt.steem-js'getActiveVotes.api,
     <br>* cpt.steem-js.api.getActiveVotes,
-    <br><code><a class="clsPreview" href="#idSteemjsofllib">steem</a>.api.getActiveVotes(author, permlink, function(err, result) {
+    <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
+    <br><code>steem.api.getActiveVotes(author, permlink, function(err, result) {
     <br>  console.log(err, result);
     <br>});</code>
     <a class="clsHide" href="#idSteempstvotget"></a></p>
@@ -2541,7 +2676,8 @@
     <br><textarea id="idTxtaGcr" rows="6" cols="59"></textarea>
     <br>* cpt.steem-js'getContentReplies.api,
     <br>* cpt.steem-js.api.getContentReplies,
-    <br><code><a class="clsPreview" href="#idSteemjsofllib">steem</a>.api.getContentReplies(author, permlink, function(err, result) {
+    <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
+    <br><code>steem.api.getContentReplies(author, permlink, function(err, result) {
     <br> &nbsp;console.log(err, result);
     <br>});</code>
     <a class="clsHide" href="#idSteempstcmntget"></a></p>
@@ -2619,6 +2755,19 @@
 <section id="idSteemrwrd">
   <h1 id="idSteemrwrdH1">reward of blogging
     <a class="clsHide" href="#idSteemrwrdH1"></a></h1>
+  <p id="idSteemrwrddsn">description::
+    <br>Simple Explanation of how the reward system works:
+    <br>* Each day the Steem Blockchain creates new Steem
+    <br>* That Steem is distributed via our votes
+    <br>* The more stake you hold the more your votes are worth
+    <br>* When you <strong>post (or comment)</strong> the community has 3 options
+    <br>** upvote
+    <br>** downvote/flag
+    <br>** no action
+    <br>* A post is active for 7 days
+    <br>* When that week is over you get to claim whatever the balance is.
+    <br>[<a href="https://steemit.com/steemit/@whatsup/reward-pool-explanation">https://steemit.com/steemit/@whatsup/reward-pool-explanation</a>]
+    <a class="clsHide" href="#idSteemrwrddsn"></a></p>
   <p id="idSteemrwrdnam">name::
     <br>* cpt.Steem-net'reward-of-blogging,
     <br>* cpt.Steem-reward,
@@ -2837,10 +2986,15 @@
 <section id="idSteemhmn">
   <h1 id="idSteemhmnH1">human of Steem-net
     <a class="clsHide" href="#idSteemhmnH1"></a></h1>
+  <p id="idSteemhmndsn">description::
+    <br>· Steemian is a-human who has <a class="clsPreview" href="#idSteemacnt">a-Steem-account</a>.
+    <a class="clsHide" href="#idSteemhmndsn"></a></p>
   <p id="idSteemhmnnam">name::
     <br>* cpt.Steem-community,
     <br>* cpt.Steem-human,
     <br>* cpt.Steem-net'human,
+    <br>* cpt.Steemer,
+    <br>* cpt.Steemian,
     <br>* cpt.Đ-human.Steem,
     <br>* cpt.Đ-Steem'human,
     <a class="clsHide" href="#idSteemhmnnam"></a></p>
@@ -3121,6 +3275,7 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
 
+    // *** BLOCK *** //
     //get account'attribute
     document.getElementById('idBtnGacc').addEventListener('click', function(e) {
       steem.api.getAccounts(
@@ -3186,7 +3341,7 @@
       });
     });
 
-    // account aggregate
+    // account.aggregate
     steem.api.getAccountCount(function(err, result) {
       document.getElementById('idSpnAcntAgt').innerHTML = result;
     });
@@ -3222,6 +3377,14 @@
         result.join(', ');
     });
 
+    // *** BLOCK *** //
+    // block.last
+    steem.api.getState('', function(err, result) {
+      document.getElementById('idSpnBlkLst').innerHTML =
+        result.props.head_block_number.toLocaleString();
+    });
+
+    // *** POST *** //
     //get post'vote
     document.getElementById('idBtnGav').addEventListener('click',
       function(e) {
@@ -3248,7 +3411,7 @@
       }
     );
 
-    //get tag.trending
+    //get post'tag.trending
     document.getElementById('idBtnGtt').addEventListener('click', function(e) {
       steem.api.getTrendingTags(
         document.getElementById('idIptGttnam').value,
@@ -3259,6 +3422,16 @@
           document.getElementById('idTxtaGtt').innerHTML = s;
         }
       );
+    });
+
+    // *** STEEM *** //
+    // steem.virtual-supply
+    document.getElementById('idBtnStmVlsy').addEventListener('click', function(e) {
+      steem.api.getState('', function(err, result) {
+        const s = result.props.virtual_supply;
+        const n = parseInt(s.substring(0, s.indexOf(' '))).toLocaleString();
+        document.getElementById('idSpnStmVlsy').innerHTML = n + ' STEEM';
+      });
     });
 
   });
