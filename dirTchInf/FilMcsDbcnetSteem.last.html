@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Steem-network (Đ-Steem.0-17-0.2018-02-13)</title>
+  <title>Mcs.Steem-network (Đ-Steem.0-18-0.2018-02-14)</title>
   <meta name="keywords" content="Steem-net, Đ-Steem, ModelConceptStructured, Mcs, structured-concept, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
   <script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
@@ -173,6 +173,10 @@
   <p id="idSteemblkattnam">name::
     <br>* cpt.Steem-block'attribute,
     <a class="clsHide" href="#idSteemblkattnam"></a></p>
+  <p id="idSteemblkattwpa">addressWpg::
+    <br>* <a href="https://steemd.com/b/7000000">https://steemd.com/b/7000000</a>,
+    <br>* <a href="https://steemdb.com/block/7000000">https://steemdb.com/block/7000000</a>,
+    <a class="clsHide" href="#idSteemblkattwpa"></a></p>
   </section>
 
   <section id="idSteemblkhdr">
@@ -266,16 +270,22 @@
   <h3 id="idSteemtxattH3">attribute of Steem-transaction
     <a class="clsHide" href="#idSteemtxattH3"></a></h3>
   <p id="idSteemtxattdsn">description::
+    <br>* block_num: 10,000,000
     <br>* expiration: "2017-11-07T01:26:04"
     <br>* extensions: []
     <br>* operations: [Array(2)]
     <br>* ref_block_num: 26174
     <br>* ref_block_prefix: 1701153311
     <br>* signatures: ["2055ef348dbe4ac924b0db491...", ...]
+    <br>* transaction_id: e114ced368416efaf25c6c5f8a54c1c68256667d
+    <br>* transaction_num: 0
     <a class="clsHide" href="#idSteemtxattdsn"></a></p>
   <p id="idSteemtxattnam">name::
     <br>* cpt.Steem-transaction'attribute,
     <a class="clsHide" href="#idSteemtxattnam"></a></p>
+  <p id="idSteemtxattwpa">addressWpg::
+    <br>* <a href="https://steemd.com/tx/e114ced368416efaf25c6c5f8a54c1c68256667d">https://steemd.com/tx/e114ced368416efaf25c6c5f8a54c1c68256667d</a>,
+    <a class="clsHide" href="#idSteemtxattwpa"></a></p>
   </section>
 
   <section id="idSteemtxopn">
@@ -585,6 +595,8 @@
     <br>* cpt.Steem-asset.VESTS,
     <br>* cpt.Steem-net'VESTS,
     <br>* cpt.STEEM-Power.VESTS,
+    <br>* cpt.Steem-MVESTS,
+    <br>* cpt.Steem-VESTS,
     <br>* cpt.VESTS-of-Steem-net,
     <a class="clsHide" href="#idSteemsmpwrVstnam"></a></p>
   </section>
@@ -1686,6 +1698,7 @@
     <br>[<a href="https://steemit.com/steemhelp/@pfunk/a-learner-s-guide-to-using-steem-s-cliwallet-part-1">https://steemit.com/steemhelp/@pfunk/a-learner-s-guide-to-using-steem-s-cliwallet-part-1</a>]
     <a class="clsHide" href="#idSteempgmCliwltdsn"></a></p>
   <p id="idSteempgmCliwltnam">name::
+    <br>* cpt.cli_wallet-of--Steem-net,
     <br>* cpt.Steem-cli_wallet,
     <br>* cpt.Steem-program.cli_wallet,
     <a class="clsHide" href="#idSteempgmCliwltnam"></a></p>
@@ -2177,7 +2190,7 @@
     <input type="text" id="idIptRpnUrnm" value="synagonism">
     <button type="button" id="idBtnRpn">GO</button>
     <br>· unformated: <span id="idSpnRpnFmtNo" class="clsColorRed"></span>
-    <br>· formated: <span id="idSpnRpnFmt" class="clsColorRed"></span>
+    <br>· formated: &nbsp; <span id="idSpnRpnFmt" class="clsColorRed"></span>
     <br>* cpt.steem-js'reputation.formatter,
     <br>* cpt.steem-js.formatter.reputation,
     <br>· <a class="clsPreview" href="#idSteemjsofllib">steem-js</a> code:
@@ -2220,6 +2233,25 @@
     <br> &nbsp;);
     <br>});</code>
     <a class="clsHide" href="#idSteemactblcget"></a></p>
+  </section>
+
+  <section id="idSteemactbdwh">
+  <h2 id="idSteemactbdwhH2">bandwidth of Steem-account
+    <a class="clsHide" href="#idSteemactbdwhH2"></a></h2>
+  <p id="idSteemactbdwhdsn">description::
+    <br>Bandwidth Rate Limiting for Fee-less Operations
+    <br>Because the witnesses are paid entirely through the generation of new tokens, there is no need to charge users a fee for powering the blockchain. The only reason to charge a fee would be as a deterrent to prevent users from completing an unreasonable amount of transactions, which could potentially impact the performance of the blockchain.
+    <br>In order to place reasonable limits on the system use, each user is given a limited bandwidth. Whenever users perform blockchain operations such as token transfers, posting content, and voting, it uses up a portion of their bandwidth. If a user exceeds their bandwidth allowance, they must wait to perform additional actions until their bandwidth recharges.
+    <br>Bandwidth limits adjust based on network use, so users have a higher bandwidth allowance when the network usage is low. The amount of bandwidth that an account is allowed is directly proportional to the amount of Steem Power a user has, so users can always increase their bandwidth allowance by getting additional Steem Power.
+    <br>[<a href="https://steem.io/steem-bluepaper.pdf">https://steem.io/steem-bluepaper.pdf</a>]
+    <a class="clsHide" href="#idSteemactbdwhdsn"></a></p>
+  <p id="idSteemactbdwhnam">name::
+    <br>* cpt.Steem-account'bandwidth,
+    <a class="clsHide" href="#idSteemactbdwhnam"></a></p>
+  <p id="idSteemactbdwhwpa">addressWpg::
+    <br>* <a href="https://steemit.com/bandwidth/@timcliff/steem-bandwidth-user-experience-issue">https://steemit.com/bandwidth/@timcliff/steem-bandwidth-user-experience-issue</a>,
+    <br>* <a href="https://www.steem.center/index.php?title=Bandwidth">https://www.steem.center/Bandwidth</a>,
+    <a class="clsHide" href="#idSteemactbdwhwpa"></a></p>
   </section>
 
   <section id="idSteemactpst">
@@ -2498,6 +2530,86 @@
   <p id="idSteemactVstrnam">name::Steem-asset.STEEM
     <br>* cpt.Steem-account.vester,
     <a class="clsHide" href="#idSteemactVstrnam"></a></p>
+  </section>
+
+  <section id="idSteemactScdnSp">
+  <h2 id="idSteemactScdnSpH2">Steem-account.SPECIFIC-DIVISION.SP
+    <a class="clsHide" href="#idSteemactScdnSpH2"></a></h2>
+  <p id="idSteemactScdnSpnam">name::
+    <br>* cpt.Steem-account.specific-division-on-SP,
+    <a class="clsHide" href="#idSteemactScdnSpnam"></a></p>
+
+  <section id="idSteemactWhl">
+  <h3 id="idSteemactWhlH3">Steem-account.WHALE
+    <a class="clsHide" href="#idSteemactWhlH3"></a></h3>
+  <p id="idSteemactWhldsn">description::
+    <br>· Steem-whale is <a class="clsPreview" href="#idSteemacnt">a-Steem-account</a> with the largest amount of <a class="clsPreview" href="#idSteemsmpwr">SP (STEEM-Power)</a> and thus with most influence.
+    <a class="clsHide" href="#idSteemactWhldsn"></a></p>
+  <p id="idSteemactWhlnam">name::
+    <br>* cpt.Steem-account.whale,
+    <br>* cpt.Steem-whale,
+    <a class="clsHide" href="#idSteemactWhlnam"></a></p>
+  <p id="idSteemactWhlwpa">addressWpg::
+    <br>* {time.2017-03-14} Definition of a Whale and a whale-like group and the Math Behind: <a href="https://steemit.com/steem/@abit/definition-of-a-whale-and-a-whale-like-group-and-the-math-behind">https://steemit.com/steem/@abit/</a>,
+    <br>* <a href="https://www.steem.center/index.php?title=Whale">https://www.steem.center/Whale</a>,
+    <a class="clsHide" href="#idSteemactWhlwpa"></a></p>
+  </section>
+
+  <section id="idSteemactOrc">
+  <h3 id="idSteemactOrcH3">Steem-account.ORCA
+    <a class="clsHide" href="#idSteemactOrcH3"></a></h3>
+  <p id="idSteemactOrcdsn">description::
+    <br>· orca is the second-highest level of Steem-account after <a class="clsPreview" href="#idSteemactWhl">whale</a>.
+    <a class="clsHide" href="#idSteemactOrcdsn"></a></p>
+  <p id="idSteemactOrcnam">name::
+    <br>* cpt.Steem-account.orca,
+    <br>* cpt.Steem-orca,
+    <a class="clsHide" href="#idSteemactOrcnam"></a></p>
+  </section>
+
+  <section id="idSteemactDpn">
+  <h3 id="idSteemactDpnH3">Steem-account.DOLPHIN
+    <a class="clsHide" href="#idSteemactDpnH3"></a></h3>
+  <p id="idSteemactDpndsn">description::
+    <br>· dolphins are <a class="clsPreview" href="#idSteemacnt">accounts</a> with voting-power and payouts usually much higher than <a class="clsPreview" href="#idSteemactMnw">minnows</a>.
+    <a class="clsHide" href="#idSteemactDpndsn"></a></p>
+  <p id="idSteemactDpnnam">name::
+    <br>* cpt.Steem-account.dolphin,
+    <br>* cpt.Steem-dolphin,
+    <a class="clsHide" href="#idSteemactDpnnam"></a></p>
+  </section>
+
+  <section id="idSteemactMnw">
+  <h3 id="idSteemactMnwH3">Steem-account.MINNOW
+    <a class="clsHide" href="#idSteemactMnwH3"></a></h3>
+  <p id="idSteemactMnwdsn">description::
+    <br>· minnows are <a class="clsPreview" href="#idSteemacnt">accounts</a> with voting-power and payouts quite minimal.
+    <a class="clsHide" href="#idSteemactMnwdsn"></a></p>
+  <p id="idSteemactMnwnam">name::
+    <br>* cpt.Steem-account.minnow,
+    <br>* cpt.Steem-minnow,
+    <a class="clsHide" href="#idSteemactMnwnam"></a></p>
+  <p id="idSteemactMnwwpa">addressWpg::
+    <br>* <a href="http://minnowsupportproject.org/">http://minnowsupportproject.org/</a>,
+    <br>* <a href="https://steemit.com/@minnowsupport">https://steemit.com/@minnowsupport</a>,
+    <br>* <a href="https://www.steem.center/index.php?title=Minnow_Support_Project">https://www.steem.center/Minnow_Support_Project</a>,
+    <br>* <a href="https://www.steem.center/index.php?title=Minnow">https://www.steem.center/Minnow</a>,
+    <a class="clsHide" href="#idSteemactMnwwpa"></a></p>
+  </section>
+
+  <section id="idSteemactRdfh">
+  <h3 id="idSteemactRdfhH3">Steem-account.REDFISH
+    <a class="clsHide" href="#idSteemactRdfhH3"></a></h3>
+  <p id="idSteemactRdfhdsn">description::
+    <br>A redfish is the lowest level of Steemit user, below that of minnow. It means a user who has only less than 1 MVESTS generally. They are sometimes called plankton.
+    <br>[<a href="https://www.steem.center/index.php?title=Redfish">https://www.steem.center/index.php?title=Redfish</a>]
+    <a class="clsHide" href="#idSteemactRdfhdsn"></a></p>
+  <p id="idSteemactRdfhnam">name::
+    <br>* cpt.Steem-account.plankton,
+    <br>* cpt.Steem-account.redfish,
+    <br>* cpt.Steem-plankton,
+    <br>* cpt.Steem-redfish,
+    <a class="clsHide" href="#idSteemactRdfhnam"></a></p>
   </section>
 </section>
 
