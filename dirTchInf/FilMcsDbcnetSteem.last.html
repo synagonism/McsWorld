@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Steem-network (Đ-Steem.0-18-0.2018-02-14)</title>
+  <title>Mcs.Steem-network (Đ-Steem.0-20-0.2018-02-16)</title>
   <meta name="keywords" content="Steem-net, Đ-Steem, ModelConceptStructured, Mcs, structured-concept, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
   <script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
@@ -413,23 +413,65 @@
     <br>· it is-distributed among <a class="clsPreview" href="#idSteemactWts">witnesses</a>, <a class="clsPreview" href="#idSteemactBlgr">bloggers</a> and <a class="clsPreview" href="#idSteemactVstr">vesters</a>.
     <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-02-11]
     <a class="clsHide" href="#idSteemtkndsn"></a></p>
-  <p id="idSteemtknP1">get <a href="https://coinmarketcap.com/currencies/steem/">CoinMarketCap</a> info::
+  <div id="idSteemtknP1">
+    <p>get <a href="https://coinmarketcap.com/currencies/steem/">CoinMarketCap</a> info::
     <button type="button" id="idBtnCmc">GO</button>
     <br><img src="https://files.coinmarketcap.com/static/img/coins/64x64/steem.png">
-    <br>· price-USD: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span id="idSpnCmcusd" class="clsColorRed"></span>
-    <br>· price-BTC: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span id="idSpnCmcbtc" class="clsColorRed"></span>
-    <br>· rank: &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span id="idSpnCmcrnk" class="clsColorRed"></span>
-    <br>· market-cap: &nbsp; &nbsp; &nbsp; &nbsp; <span id="idSpnCmcmtcp" class="clsColorRed"></span>
-    <br>· supply.total: &nbsp; &nbsp; &nbsp; <span id="idSpnCmcsyTl" class="clsColorRed"></span>
-    <br>· supply.circulating: <span id="idSpnCmcsyCt" class="clsColorRed"></span>
-    <br>· supply.max: &nbsp; &nbsp; &nbsp; &nbsp; <span id="idSpnCmcsyMx" class="clsColorRed"></span>
-    <br>· volume-24h: &nbsp; &nbsp; &nbsp; &nbsp; <span id="idSpnCmcvm24" class="clsColorRed"></span>
-    <br>· change % 1h: &nbsp; &nbsp; &nbsp; &nbsp;<span id="idSpnCmccg1h" class="clsColorRed"></span>
-    <br>· change % 24h: &nbsp; &nbsp; &nbsp; <span id="idSpnCmccg24" class="clsColorRed"></span>
-    <br>· change % 7d: &nbsp; &nbsp; &nbsp; &nbsp;<span id="idSpnCmccg7d" class="clsColorRed"></span>
-    <br>· last-update: &nbsp; &nbsp; &nbsp; &nbsp;<span id="idSpnCmcltut" class="clsColorRed"></span>
-    <br>===
-    <br>{time.2017-04-16}
+    <table>
+      <tr>
+        <td>attribute
+        <td>STEEM
+        <td>STEEM-Dollar (SBD)
+      <tr>
+        <td>price-USD:
+        <td><span id="idSpnCmcusd" class="clsColorRed"></span>
+        <td><span id="idSpnCmcsbdusd" class="clsColorRed"></span>
+      <tr>
+        <td>price-BTC:
+        <td><span id="idSpnCmcbtc" class="clsColorRed"></span>
+        <td><span id="idSpnCmcsbdbtc" class="clsColorRed"></span>
+      <tr>
+        <td>rank:
+        <td><span id="idSpnCmcrnk" class="clsColorRed"></span>
+        <td><span id="idSpnCmcsbdrnk" class="clsColorRed"></span>
+      <tr>
+        <td>market-cap:
+        <td><span id="idSpnCmcmtcp" class="clsColorRed"></span>
+        <td><span id="idSpnCmcsbdmtcp" class="clsColorRed"></span>
+      <tr>
+        <td>supply.total:
+        <td><span id="idSpnCmcsyTl" class="clsColorRed"></span>
+        <td><span id="idSpnCmcsbdsyTl" class="clsColorRed"></span>
+      <tr>
+        <td>supply.circulating:
+        <td><span id="idSpnCmcsyCt" class="clsColorRed"></span>
+        <td><span id="idSpnCmcsbdsyCt" class="clsColorRed"></span>
+      <tr>
+        <td>supply.max:
+        <td><span id="idSpnCmcsyMx" class="clsColorRed"></span>
+        <td><span id="idSpnCmcsbdsyMx" class="clsColorRed"></span>
+      <tr>
+        <td>volume-24h:
+        <td><span id="idSpnCmcvm24" class="clsColorRed"></span>
+        <td><span id="idSpnCmcsbdvm24" class="clsColorRed"></span>
+      <tr>
+        <td>change % 1h:
+        <td><span id="idSpnCmccg1h" class="clsColorRed"></span>
+        <td><span id="idSpnCmcsbdcg1h" class="clsColorRed"></span>
+      <tr>
+        <td>change % 24h:
+        <td><span id="idSpnCmccg24" class="clsColorRed"></span>
+        <td><span id="idSpnCmcsbdcg24" class="clsColorRed"></span>
+      <tr>
+        <td>change % 7d:
+        <td><span id="idSpnCmccg7d" class="clsColorRed"></span>
+        <td><span id="idSpnCmcsbdcg7d" class="clsColorRed"></span>
+      <tr>
+        <td>last-update:
+        <td><span id="idSpnCmcltut" class="clsColorRed"></span>
+        <td><span id="idSpnCmcsbdltut" class="clsColorRed"></span>
+    </table>
+    <p>{time.2017-04-16}
     <br>$0.216145 (9.80%)
     <br>0.00018364 BTC (10.63%)
     <br>Rank 19
@@ -473,8 +515,41 @@
     <br> &nbsp; &nbsp; &nbsp; &nbsp;fDateYMD(parseInt(o.last_updated));
     <br> &nbsp; &nbsp;}
     <br> &nbsp;};
+    <br> &nbsp;const oXHR2 = new XMLHttpRequest();
+    <br> &nbsp;oXHR2.open('GET', 'https://api.coinmarketcap.com/v1/ticker/steem-dollars/', true);
+    <br> &nbsp;oXHR2.send(null);
+    <br> &nbsp;oXHR2.onreadystatechange = function () {
+    <br> &nbsp; &nbsp;if (oXHR2.readyState === 4 && oXHR2.status === 200) { //DONE, OK
+    <br> &nbsp; &nbsp; &nbsp;const o = JSON.parse(oXHR2.responseText)[0];
+    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdusd').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;o.price_usd + " USD";
+    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdbtc').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;o.price_btc + " BTC";
+    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdrnk').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;o.rank;
+    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdmtcp').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;parseInt(o.market_cap_usd).toLocaleString() + " USD";
+    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdsyTl').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;parseInt(o.total_supply).toLocaleString() + " SBD";
+    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdsyCt').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;parseInt(o.available_supply).toLocaleString() + " SBD";
+    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdsyMx').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;parseInt(o.max_supply).toLocaleString();
+    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdvm24').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;parseInt(o['24h_volume_usd']).toLocaleString() + " USD";
+    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdcg1h').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;o.percent_change_1h + " %";
+    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdcg24').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;o.percent_change_24h + " %";
+    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdcg7d').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;o.percent_change_7d + " %";
+    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdltut').innerHTML =
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;fDateYMD(parseInt(o.last_updated));
+    <br> &nbsp; &nbsp;}
+    <br> &nbsp;};
     <br>});</code>
-    <a class="clsHide" href="#idSteemtknP1"></a></p>
+    </p>
+    <a class="clsHide" href="#idSteemtknP1"></a></div>
   <p id="idSteemtknnam">Name::
     <br>* cpt.crypto-token.STEEM,
     <br>* cpt.STEEM,
@@ -662,6 +737,9 @@
     <br>The market value of a Steem Dollar is dictated by the supply and demand of the token. Therefore it is possible for 1 SBD to be worth more or less than 1 USD depending on market conditions. However, the network's SBD conversion feature serves as a mechanism to hold Steem Dollars within a small margin of the value of USD.
     <br>[<a href="https://steemit.com/faq.html#Will_1_Steem_Dollar_always_be_worth__1_00_USD">https://steemit.com/faq.html#Will_1_Steem_Dollar_always_be_worth__1_00_USD</a>]
     <a class="clsHide" href="#idSteemSbddsn"></a></p>
+  <p id="idSteemSbdP1">get <a href="https://coinmarketcap.com/currencies/steem-dollars/">CoinMarketCap</a> info::
+    (<a class="clsPreview" href="#idSteemtknP1">link</a>)
+    <a class="clsHide" href="#idSteemSbdP1"></a></p>
   <p id="idSteemSbdnam">name::
     <br>* cpt.SBD-(Steem-Blockchain-Dollar),
     <br>* cpt.Steem-asset.STEEM-Dollar,
@@ -670,57 +748,6 @@
     <br>* cpt.đ-STEEM-Dollar,
     <br>* cpt.đ-SBD,
     <a class="clsHide" href="#idSteemSbdnam"></a></p>
-  <p id="idSteemSbdP1">get <a href="https://coinmarketcap.com/currencies/steem-dollars/">CoinMarketCap</a> info::
-    <button type="button" id="idBtnCmcsbd">GO</button>
-    <br><img src="https://files.coinmarketcap.com/static/img/coins/64x64/steem-dollars.png">
-    <br>· price-USD: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span id="idSpnCmcsbdusd" class="clsColorRed"></span>
-    <br>· price-BTC: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span id="idSpnCmcsbdbtc" class="clsColorRed"></span>
-    <br>· rank: &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span id="idSpnCmcsbdrnk" class="clsColorRed"></span>
-    <br>· market-cap: &nbsp; &nbsp; &nbsp; &nbsp; <span id="idSpnCmcsbdmtcp" class="clsColorRed"></span>
-    <br>· supply.total: &nbsp; &nbsp; &nbsp; <span id="idSpnCmcsbdsyTl" class="clsColorRed"></span>
-    <br>· supply.circulating: <span id="idSpnCmcsbdsyCt" class="clsColorRed"></span>
-    <br>· supply.max: &nbsp; &nbsp; &nbsp; &nbsp; <span id="idSpnCmcsbdsyMx" class="clsColorRed"></span>
-    <br>· volume-24h: &nbsp; &nbsp; &nbsp; &nbsp; <span id="idSpnCmcsbdvm24" class="clsColorRed"></span>
-    <br>· change % 1h: &nbsp; &nbsp; &nbsp; &nbsp;<span id="idSpnCmcsbdcg1h" class="clsColorRed"></span>
-    <br>· change % 24h: &nbsp; &nbsp; &nbsp; <span id="idSpnCmcsbdcg24" class="clsColorRed"></span>
-    <br>· change % 7d: &nbsp; &nbsp; &nbsp; &nbsp;<span id="idSpnCmcsbdcg7d" class="clsColorRed"></span>
-    <br>· last-update: &nbsp; &nbsp; &nbsp; &nbsp;<span id="idSpnCmcsbdltut" class="clsColorRed"></span>
-    <br>===
-    <br><code>document.getElementById('idBtnCmcsbd').addEventListener('click', function(e) {
-    <br> &nbsp;const oXHR = new XMLHttpRequest();
-    <br> &nbsp;oXHR.open('GET', 'https://api.coinmarketcap.com/v1/ticker/steem-dollars/', true);
-    <br> &nbsp;oXHR.send(null);
-    <br> &nbsp;oXHR.onreadystatechange = function () {
-    <br> &nbsp; &nbsp;if (oXHR.readyState === 4 && oXHR.status === 200) { //DONE, OK
-    <br> &nbsp; &nbsp; &nbsp;const o = JSON.parse(oXHR.responseText)[0];
-    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdusd').innerHTML =
-    <br> &nbsp; &nbsp; &nbsp; &nbsp;o.price_usd + " USD";
-    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdbtc').innerHTML =
-    <br> &nbsp; &nbsp; &nbsp; &nbsp;o.price_btc + " BTC";
-    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdrnk').innerHTML =
-    <br> &nbsp; &nbsp; &nbsp; &nbsp;o.rank;
-    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdmtcp').innerHTML =
-    <br> &nbsp; &nbsp; &nbsp; &nbsp;parseInt(o.market_cap_usd).toLocaleString() + " USD";
-    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdsyTl').innerHTML =
-    <br> &nbsp; &nbsp; &nbsp; &nbsp;parseInt(o.total_supply).toLocaleString() + " STEEM";
-    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdsyCt').innerHTML =
-    <br> &nbsp; &nbsp; &nbsp; &nbsp;parseInt(o.available_supply).toLocaleString() + " STEEM";
-    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdsyMx').innerHTML =
-    <br> &nbsp; &nbsp; &nbsp; &nbsp;parseInt(o.max_supply).toLocaleString();
-    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdvm24').innerHTML =
-    <br> &nbsp; &nbsp; &nbsp; &nbsp;parseInt(o['24h_volume_usd']).toLocaleString() + " USD";
-    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdcg1h').innerHTML =
-    <br> &nbsp; &nbsp; &nbsp; &nbsp;o.percent_change_1h + " %";
-    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdcg24').innerHTML =
-    <br> &nbsp; &nbsp; &nbsp; &nbsp;o.percent_change_24h + " %";
-    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdcg7d').innerHTML =
-    <br> &nbsp; &nbsp; &nbsp; &nbsp;o.percent_change_7d + " %";
-    <br> &nbsp; &nbsp; &nbsp;document.getElementById('idSpnCmcsbdltut').innerHTML =
-    <br> &nbsp; &nbsp; &nbsp; &nbsp;fDateYMD(parseInt(o.last_updated));
-    <br> &nbsp; &nbsp;}
-    <br> &nbsp;};
-    <br>});</code>
-    <a class="clsHide" href="#idSteemSbdP1"></a></p>
 
   <section id="idSteemSbdcvtg">
   <h3 id="idSteemSbdcvtgH3">converting STEEM-Dollar
@@ -2720,6 +2747,8 @@
     <br>[<a href="https://steemit.com/faq.html#What_can_users_post_to_Steemit">https://steemit.com/faq.html#What_can_users_post_to_Steemit</a>]
     <a class="clsHide" href="#idSteempstdsn"></a></p>
   <p id="idSteempstnam">name::
+    <br>* cpt.Steem-article,
+    <br>* cpt.Steem-net'article,
     <br>* cpt.Steem-net'post,
     <br>* cpt.Steem-post,
     <a class="clsHide" href="#idSteempstnam"></a></p>
@@ -3818,16 +3847,12 @@
             fDateYMD(parseInt(o.last_updated));
         }
       };
-    });
-
-    // STEEM-Dollars
-    document.getElementById('idBtnCmcsbd').addEventListener('click', function(e) {
-      const oXHR = new XMLHttpRequest();
-      oXHR.open('GET', 'https://api.coinmarketcap.com/v1/ticker/steem-dollars/', true);
-      oXHR.send(null);
-      oXHR.onreadystatechange = function () {
-        if (oXHR.readyState === 4 && oXHR.status === 200) { //DONE, OK
-          const o = JSON.parse(oXHR.responseText)[0];
+      const oXHR2 = new XMLHttpRequest();
+      oXHR2.open('GET', 'https://api.coinmarketcap.com/v1/ticker/steem-dollars/', true);
+      oXHR2.send(null);
+      oXHR2.onreadystatechange = function () {
+        if (oXHR2.readyState === 4 && oXHR2.status === 200) { //DONE, OK
+          const o = JSON.parse(oXHR2.responseText)[0];
           document.getElementById('idSpnCmcsbdusd').innerHTML =
             o.price_usd + " USD";
           document.getElementById('idSpnCmcsbdbtc').innerHTML =
@@ -3837,9 +3862,9 @@
           document.getElementById('idSpnCmcsbdmtcp').innerHTML =
             parseInt(o.market_cap_usd).toLocaleString() + " USD";
           document.getElementById('idSpnCmcsbdsyTl').innerHTML =
-            parseInt(o.total_supply).toLocaleString() + " STEEM";
+            parseInt(o.total_supply).toLocaleString() + " SBD";
           document.getElementById('idSpnCmcsbdsyCt').innerHTML =
-            parseInt(o.available_supply).toLocaleString() + " STEEM";
+            parseInt(o.available_supply).toLocaleString() + " SBD";
           document.getElementById('idSpnCmcsbdsyMx').innerHTML =
             parseInt(o.max_supply).toLocaleString();
           document.getElementById('idSpnCmcsbdvm24').innerHTML =
