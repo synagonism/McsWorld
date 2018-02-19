@@ -42,6 +42,29 @@
 <section id="idEosprlFT">
   <h1 id="idEosprlFTH1">protocol of Eos-net
     <a class="clsHide" href="#idEosprlFTH1"></a></h1>
+  <p id="idEosprlnam">name::
+    <br>* cpt.Eos-protocol,
+    <a class="clsHide" href="#idEosprlnam"></a></p>
+
+  <section id="idEosprlstrg">
+  <h2 id="idEosprlstrgH2">EOS.IO-Storage of Eos-protocol
+    <a class="clsHide" href="#idEosprlstrgH2"></a></h2>
+  <p id="idEosprlstrgdsn">description::
+    <br>EOS.IO Storage is a proposed decentralized file system designed to give everyone the ability to permanently store and host files accessible by any web browser.
+    <br>Unlike some other proposed alternatives, there would be no upfront fee or ongoing charge for storage or bandwidth on EOS.IO Storage aside from a completely refundable deposit.
+    <br>Users must hold tokens while they need storage and bandwidth and may sell tokens when storage and bandwidth is no longer required.
+    <br>Built on the InterPlanetary File System (IPFS) and the EOS.IO software, EOS.IO Storage will be a service provided by block producers for those who hold tokens on a blockchain that adopts the EOS.IO software.
+    <br>The block producers would be incentivized to replicate and host these files, allowing anyone with an Internet browser to access them.
+    <br>[<a href="https://github.com/EOSIO/Documentation/blob/master/EOS.IO%20Storage.pdf">https://github.com/EOSIO/Documentation/blob/master/EOS.IO%20Storage.pdf</a>]
+    <a class="clsHide" href="#idEosprlstrgdsn"></a></p>
+  <p id="idEosprlstrgnam">name::
+    <br>* cpt.Eos-storage-protocol,
+    <br>* cpt.EOS.IO-Storage,
+    <a class="clsHide" href="#idEosprlstrgnam"></a></p>
+  <p id="idEosprlstrgwpa">addressWpg::
+    <br>* <a href="https://github.com/EOSIO/Documentation/blob/master/EOS.IO%20Storage.pdf">https://github.com/EOSIO/Documentation/blob/master/EOS.IO%20Storage.pdf</a>,
+    <a class="clsHide" href="#idEosprlstrgwpa"></a></p>
+  </section>
 </section>
 
 <section id="idEosnodFT">
@@ -52,11 +75,66 @@
 <section id="idEoschnFT">
   <h1 id="idEoschnFTH1">blockchain of Eos-net
     <a class="clsHide" href="#idEoschnFTH1"></a></h1>
+  <p id="idEoschnFTnam">name::
+    <br>* cpt.Eos-blockchain,
+    <br>* cpt.Eos-net'blockchain,
+    <a class="clsHide" href="#idEoschnFTnam"></a></p>
+
+  <section id="idEoscsa">
+  <h2 id="idEoscsaH2">consensus-algorithm of Eos-blockchain
+    <a class="clsHide" href="#idEoscsaH2"></a></h2>
+  <p id="idEoscsadsn">description::
+    <br>EOS.IO software utilizes the only decentralized consensus algorithm capable of meeting the performance requirements of applications on the blockchain, Delegated Proof of Stake (DPOS). Under this algorithm, those who hold tokens on a blockchain adopting the EOS.IO software may select block producers through a continuous approval voting system and anyone may choose to participate in block production and will be given an opportunity to produce blocks proportional to the total votes they have received relative to all other producers. For private blockchains the management could use the tokens to add and remove IT staff.
+    <br>The EOS.IO software enables blocks to be produced exactly every 3 seconds and exactly one producer is authorized to produce a block at any given point in time. If the block is not produced at the scheduled time then the block for that time slot is skipped. When one or more blocks are skipped, there is a 6 or more second gap in the blockchain.
+    <br>Using the EOS.IO software blocks are produced in rounds of 21. At the start of each round 21 unique block producers are chosen. The top 20 by total approval are automatically chosen every round and the last producer is chosen proportional to their number of votes relative to other producers. The selected producers are shuffled using a pseudorandom number derived from the block time. This shuffling is done to ensure that all producers maintain balanced connectivity to all other producers.
+    <br>If a producer misses a block and has not produced any block within the last 24 hours they are removed from consideration until they notify the blockchain of their intention to start producing blocks again. This ensures the network operates smoothly by minimizing the number of blocks missed by not scheduling those who are proven to be unreliable.
+    <br>Under normal conditions a DPOS blockchain does not experience any forks because the block producers cooperate to produce blocks rather than compete. In the event there is a fork, consensus will automatically switch to the longest chain. This metric works because the rate at which blocks are added to a blockchain chain fork is directly correlated to the percentage of block producers that share the same consensus. In other words, a blockchain fork with more producers on it will grow in length faster than one with fewer producers. Furthermore, no block producer should be producing blocks on two forks at the same time. If a block producer is caught doing this then such block producer will likely be voted out. Cryptographic evidence of such double-production may also be used to automatically remove abusers.
+    <br>[<a href="https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#consensus-algorithm-dpos">https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#consensus-algorithm-dpos</a>]
+    <a class="clsHide" href="#idEoscsadsn"></a></p>
+  <p id="idEoscsanam">name::
+    <br>* cpt.Eos-blockchain'consensus-algorithm,
+    <br>* cpt.Eos-consensus-algorithm,
+    <a class="clsHide" href="#idEoscsanam"></a></p>
+  </section>
+
+  <section id="idEostx">
+  <h2 id="idEostxH2">transaction of Eos-blockchain
+    <a class="clsHide" href="#idEostxH2"></a></h2>
+  <p id="idEostxnam">name::
+    <br>* cpt.Eos-blockchain'transaction,
+    <br>* cpt.Eos-net'transaction,
+    <br>* cpt.Eos-transaction,
+    <a class="clsHide" href="#idEostxnam"></a></p>
+
+  <section id="idEostxcfmn">
+  <h3 id="idEostxcfmnH3">confirmation of Eos-transaction
+    <a class="clsHide" href="#idEostxcfmnH3"></a></h3>
+  <p id="idEostxcfmndsn">description::
+    <br>Typical DPOS blockchains have 100% block producer participation. A transaction can be considered confirmed with 99.9% certainty after an average of 1.5 seconds from time of broadcast.
+    <br>There are some extraordinary cases where a software bug, Internet congestion, or a malicious block producer will create two or more forks. For absolute certainty that a transaction is irreversible, a node may choose to wait for confirmation by 15 out of the 21 block producers. Based on a typical configuration of the EOS.IO software, this will take an average of 45 seconds under normal circumstances. By default all nodes will consider a block confirmed by 15 of 21 producers irreversible and will not switch to a fork that excludes such a block regardless of length.
+    <br>It is possible for a node to warn users that there is a high probability that they are on a minority fork within 9 seconds of the start of a fork. After 2 consecutive missed blocks there is a 95% probability a node is on a minority fork. With 3 consecutive missed blocks there is a 99% certainty of being on a minority fork. It is possible to generate a robust predictive model that will utilize information about which nodes missed, recent participation rates, and other factors to quickly warn operators that something is wrong.
+    <br>The response to such a warning depends entirely upon the nature of the business transactions, but the simplest response is to wait for 15/21 confirmations until the warning stops.
+    <br>[<a href="https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#transaction-confirmation">https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#transaction-confirmation</a>]
+    <a class="clsHide" href="#idEostxcfmndsn"></a></p>
+  <p id="idEostxcfmnnam">name::
+    <br>* cpt.Eos-transaction'confirmation,
+    <a class="clsHide" href="#idEostxcfmnnam"></a></p>
+  </section>
+  </section>
 </section>
 
 <section id="idEosacnt">
   <h1 id="idEosacntH1">account of Eos-net
     <a class="clsHide" href="#idEosacntH1"></a></h1>
+  <p id="idEosacntdsn">description::
+    <br>The EOS.IO software permits all accounts to be referenced by a unique human readable name of 2 to 32 characters in length. The name is chosen by the creator of the account. All accounts must be funded with the minimal account balance at the time they are created to cover the cost of storing account data. Account names also support namespaces such that the owner of account @domain is the only one who can create the account @user.domain.
+    <br>In a decentralized context, application developers will pay the nominal cost of account creation to sign up a new user. Traditional businesses already spend significant sums of money per customer they acquire in the form of advertising, free services, etc. The cost of funding a new blockchain account should be insignificant in comparison. Fortunately, there is no need to create accounts for users already signed up by another application.
+    <br>[<a href="https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#accounts">https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#accounts</a>]
+    <a class="clsHide" href="#idEosacntdsn"></a></p>
+  <p id="idEosacntnam">name::
+    <br>* cpt.Eos-account,
+    <br>* cpt.Eos-net'account,
+    <a class="clsHide" href="#idEosacntnam"></a></p>
 </section>
 
 <section id="idEosevuFT">
@@ -67,11 +145,75 @@
 <section id="idEosgovFT">
   <h1 id="idEosgovFTH1">governance of Eos-net
     <a class="clsHide" href="#idEosgovFTH1"></a></h1>
+  <p id="idEosgovFTdsn">description::
+    <br>Governance is the process by which people reach consensus on subjective matters that cannot be captured entirely by software algorithms. An EOS.IO software-based blockchain implements a governance process that efficiently directs the existing influence of block producers. Absent a defined governance process, prior blockchains relied ad hoc, informal, and often controversial governance processes that result in unpredictable outcomes.
+    <br>A blockchain based on the EOS.IO software recognizes that power originates with the token holders who delegate that power to the block producers. The block producers are given limited and checked authority to freeze accounts, update defective applications, and propose hard forking changes to the underlying protocol.
+    <br>Embedded into the EOS.IO software is the election of block producers. Before any change can be made to the blockchain these block producers must approve it. If the block producers refuse to make changes desired by the token holders then they can be voted out. If the block producers make changes without permission of the token holders then all other non-producing full-node validators (exchanges, etc) will reject the change.
+    <br>[<a href="https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#governance">https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#governance</a>]
+    <a class="clsHide" href="#idEosgovFTdsn"></a></p>
+  <p id="idEosgovFTnam">name::
+    <br>* cpt.Eos-governance,
+    <br>* cpt.Eos-net'governance,
+    <a class="clsHide" href="#idEosgovFTnam"></a></p>
+
+  <section id="idEoscttn">
+  <h2 id="idEoscttnH2">constitution of Eos-net
+    <a class="clsHide" href="#idEoscttnH2"></a></h2>
+  <p id="idEoscttndsn">description::
+    <br>Constitution
+    <br>The EOS.IO software enables blockchains to establish a peer-to-peer terms of service agreement or a binding contract among those users who sign it, referred to as a "constitution". The content of this constitution defines obligations among the users which cannot be entirely enforced by code and facilitates dispute resolution by establishing jurisdiction and choice of law along with other mutually accepted rules. Every transaction broadcast on the network must incorporate the hash of the constitution as part of the signature and thereby explicitly binds the signer to the contract.
+    <br>The constitution also defines the human-readable intent of the source code protocol. This intent is used to identify the difference between a bug and a feature when errors occur and guides the community on what fixes are proper or improper.
+    <br>[<a href="https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#constitution">https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#constitution</a>]
+    <a class="clsHide" href="#idEoscttndsn"></a></p>
+  <p id="idEoscttnnam">name::
+    <br>* cpt.Eos-constitution,
+    <br>* cpt.Eos-net'constitution,
+    <a class="clsHide" href="#idEoscttnnam"></a></p>
+  </section>
 </section>
 
 <section id="idEospgmFT">
   <h1 id="idEospgmFTH1">program of Eos-net
     <a class="clsHide" href="#idEospgmFTH1"></a></h1>
+  <p id="idEospgmFTnam">name::
+    <br>* cpt.Eos-net'program,
+    <br>* cpt.Eos-program,
+    <a class="clsHide" href="#idEospgmFTnam"></a></p>
+
+  <section id="idEospgmSpc">
+  <h1 id="idEospgmSpcH1">Eos-program.SPECIFIC
+    <a class="clsHide" href="#idEospgmSpcH1"></a></h1>
+  <p id="idEospgmSpcP1">specific::
+    <br>* EOS.IO-software,
+    <br>* application-of--Eos-net,
+    <br>* smart-contract-of--Eos-net,
+    <a class="clsHide" href="#idEospgmSpcP1"></a></p>
+</section>
+
+<section id="idEospgmstct">
+  <h1 id="idEospgmstctH1">EOS.IO-software of Eos-net
+    <a class="clsHide" href="#idEospgmstctH1"></a></h1>
+</section>
+
+<section id="idEospgmstct">
+  <h1 id="idEospgmstctH1">smart-contract of Eos-net
+    <a class="clsHide" href="#idEospgmstctH1"></a></h1>
+  <p id="idEospgmstctdsn">description::
+    <br>Each account can send structured messages to other accounts and may define scripts to handle messages when they are received.
+    <br>The EOS.IO software gives each account its own private database which can only be accessed by its own message handlers.
+    <br>Message handling scripts can also send messages to other accounts.
+    <br>The combination of messages and automated message handlers is how EOS.IO defines smart contracts.
+    <br>[<a href="https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#messages--handlers">https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#messages--handlers</a>]
+    <a class="clsHide" href="#idEospgmstctdsn"></a></p>
+  <p id="idEospgmstctnam">name::
+    <br>* cpt.Eos-program.smart-program,
+    <br>* cpt.Eos-smart-program,
+    <a class="clsHide" href="#idEospgmstctnam"></a></p>
+</section>
+
+<section id="idEospgmapp">
+  <h1 id="idEospgmappH1">application of Eos-net
+    <a class="clsHide" href="#idEospgmappH1"></a></h1>
 </section>
 
 <section id="idEoswltFT">
@@ -153,6 +295,7 @@
     <br>* <a href="https://en.wikipedia.org/wiki/Daniel_Larimer">https://en.wikipedia.org/wiki/Daniel_Larimer</a>,
     <br>* <a href="https://www.steem.center/index.php?title=Dan_Larimer">https://www.steem.center/Dan_Larimer</a>,
     <br>===
+    <br>* {2017-09-04} Historical Facts about Daniel Larimer and his Contributions to the Blockchain Industry: <a href="https://steemit.com/eosio/@xeroc/historical-facts-about-daniel-larimer-and-his-contributions-to-the-blockchain-industry">https://steemit.com/eosio/@xeroc/</a>,
     <br>* {2017-06-11} Leah Stella Stephens, DAN LARIMER: Visionary Programmer of BitShares, Steem and EOS: <a href="https://hackernoon.com/dan-larimer-visionary-programmer-of-bitshares-steem-and-eos-7e6d94b241d7">https://hackernoon.com/</a>,
     <a class="clsHide" href="#idEoshmnLmrDnlwpa"></a></p>
   </section>
@@ -205,6 +348,11 @@
     <a class="clsHide" href="#idEosrscwpa"></a></p>
 </section>
 
+<section id="idEosdngFT">
+  <h1 id="idEosdngFTH1">DOING of Eos-net
+    <a class="clsHide" href="#idEosdngFTH1"></a></h1>
+</section>
+
 <section id="idEosgncFT">
   <h1 id="idEosgncFTH1">GENERIC of Eos-net
     <a class="clsHide" href="#idEosgncFTH1"></a></h1>
@@ -233,9 +381,11 @@
   <p id="idEosEvgnam">name::
     <br>* cpt.Eos-net.evoluting,
     <a class="clsHide" href="#idEosEvgnam"></a></p>
-  <p id="idEosEvg">{time.}::
-    <br>=== :
-    <a class="clsHide" href="#idEosEvg"></a></p>
+  <p id="idEosEvg20170626">{time.2017-06-26}::
+    <br>=== EOS-Ethereum-token:
+    <br>To date, block.one, the developer of the software that runs the EOS blockchain (short EOS), a new blockchain operating system designed to support commercial-scale decentralized applications, has successfully received multiple hundred millions worth of ETH in connection with its ongoing distribution of EOS ERC-20 compatible tokens on the Ethereum blockchain which began on June 26, 2017.
+    <br>[<a href="https://steemit.com/eosio/@xeroc/historical-facts-about-daniel-larimer-and-his-contributions-to-the-blockchain-industry">https://steemit.com/eosio/@xeroc/historical-facts-about-daniel-larimer-and-his-contributions-to-the-blockchain-industry</a>]
+    <a class="clsHide" href="#idEosEvg20170626"></a></p>
 </section>
 
 <section id="idMeta">
