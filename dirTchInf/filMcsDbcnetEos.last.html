@@ -56,6 +56,10 @@
     <br>Built on the InterPlanetary File System (IPFS) and the EOS.IO software, EOS.IO Storage will be a service provided by block producers for those who hold tokens on a blockchain that adopts the EOS.IO software.
     <br>The block producers would be incentivized to replicate and host these files, allowing anyone with an Internet browser to access them.
     <br>[<a href="https://github.com/EOSIO/Documentation/blob/master/EOS.IO%20Storage.pdf">https://github.com/EOSIO/Documentation/blob/master/EOS.IO%20Storage.pdf</a>]
+    <br>===
+    <br>EOS.IO Storage is a decentralized file system designed to give everyone in the world with Internet access the ability to permanently store and host legal files which are accessible by any browser. Unlike current alternatives, there are no fees for storage or bandwidth on EOS.IO Storage. Built on IPFS, EOS.IO Storage is a service provided by block producers for those who hold a blockchain’s native tokens. EOS.IO block producers will replicate and host token-holders’ files on the IPFS network as well as provide https endpoints allowing anyone with a browser to access the files.
+    <br>Collectively the producers will reach consensus on how much storage they are willing to provide in exchange for their compensation (block rewards). Block producers who offer more storage for the same reward are likely to earn more votes from token holders.
+    <br>[<a href="https://steemit.com/eos/@eosio/introducing-eos-io-application-stack">https://steemit.com/eos/@eosio/introducing-eos-io-application-stack</a>]
     <a class="clsHide" href="#idEosprlstrgdsn"></a></p>
   <p id="idEosprlstrgnam">name::
     <br>* cpt.Eos-storage-protocol,
@@ -190,9 +194,73 @@
     <a class="clsHide" href="#idEospgmSpcP1"></a></p>
 </section>
 
-<section id="idEospgmstct">
-  <h1 id="idEospgmstctH1">EOS.IO-software of Eos-net
-    <a class="clsHide" href="#idEospgmstctH1"></a></h1>
+<section id="idEospgmClnt">
+  <h1 id="idEospgmClntH1">EOS.IO-software of Eos-net
+    <a class="clsHide" href="#idEospgmClntH1"></a></h1>
+  <p id="idEospgmClntdsn">description::
+    <br>EOS.IO software enables developers to create and deploy high-performance, horizontally scalable, blockchain infrastructure upon which decentralized applications can be built.
+    <br>[<a href="https://github.com/eosio/eos">https://github.com/eosio/eos</a>]
+    <a class="clsHide" href="#idEospgmClntdsn"></a></p>
+  <p id="idEospgmClntnam">name::
+    <br>* cpt.EOS.IO-software,
+    <br>* cpt.Eos-client,
+    <a class="clsHide" href="#idEospgmClntnam"></a></p>
+
+  <section id="idEospgmClntitlg">
+  <h2 id="idEospgmClntitlgH2">installing Eos-client
+    <a class="clsHide" href="#idEospgmClntitlgH2"></a></h2>
+  <p id="idEospgmClntitlgwpa">addressWpg::
+    <br>* <a href="https://github.com/EOSIO/eos/wiki/Local-Environment">https://github.com/EOSIO/eos/wiki/Local-Environment</a>,
+    <a class="clsHide" href="#idEospgmClntitlgwpa"></a></p>
+  </section>
+
+  <section id="idEospgmClntd">
+  <h2 id="idEospgmClntdH2">eosd of Eos-client
+    <a class="clsHide" href="#idEospgmClntdH2"></a></h2>
+  <p id="idEospgmClntddsn">description::
+    <br>eosd
+    <br>The core EOS daemon that can be configured with plugins to run a node.
+    <br>Example uses are block production, dedicated API endpoints and local development.
+    <br>[<a href="https://github.com/EOSIO/eos/wiki/Programs-&-Tools#eosd">https://github.com/EOSIO/eos/wiki/Programs-&-Tools#eosd</a>]
+    <a class="clsHide" href="#idEospgmClntddsn"></a></p>
+  <p id="idEospgmClntdnam">name::
+    <br>* cpt.eosd,
+    <a class="clsHide" href="#idEospgmClntdnam"></a></p>
+  </section>
+
+  <section id="idEospgmClntc">
+  <h2 id="idEospgmClntcH2">eosc of Eos-client
+    <a class="clsHide" href="#idEospgmClntcH2"></a></h2>
+  <p id="idEospgmClntcdsn">description::
+    <br>eosc is a command line tool that interfaces with the REST api exposed by eosd.
+    <br>In order to use eosc you will need to have the end point (IP address and port number) to an eosd instance and also configure eosc to load the 'eosio::chain_api_plugin'.
+    <br>eosc contains documentation for all of its commands.
+    <br>[<a href="https://github.com/EOSIO/eos/wiki/Programs-&-Tools#eosc">https://github.com/EOSIO/eos/wiki/Programs-&-Tools#eosc</a>]
+    <a class="clsHide" href="#idEospgmClntcdsn"></a></p>
+  <p id="idEospgmClntcnam">name::
+    <br>* cpt.eosc,
+    <a class="clsHide" href="#idEospgmClntcnam"></a></p>
+  </section>
+
+  <section id="idEospgmClntrsc">
+  <h2 id="idEospgmClntrscH2">resource of Eos-client
+    <a class="clsHide" href="#idEospgmClntrscH2"></a></h2>
+  <p id="idEospgmClntrscnam">name::
+    <br>* cpt.Eos-client'resource,
+    <a class="clsHide" href="#idEospgmClntrscnam"></a></p>
+  <p id="idEospgmClntrscwpa">addressWpg::
+    <br>* repository: <a href="https://github.com/eosio/eos">https://github.com/eosio/eos</a>,
+    <br>* documentation: <a href="https://eosio.github.io/eos/">https://eosio.github.io/eos/</a>,
+    <a class="clsHide" href="#idEospgmClntrscwpa"></a></p>
+  </section>
+
+  <section id="idEospgmClntgnc">
+  <h2 id="idEospgmClntgncH2">GENERIC of Eos-client
+    <a class="clsHide" href="#idEospgmClntgncH2"></a></h2>
+  <p id="idEospgmClntgncgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDbcpgmClnt">blockchain-client</a>,
+    <a class="clsHide" href="#idEospgmClntgncgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idEospgmstct">
@@ -209,11 +277,21 @@
     <br>* cpt.Eos-program.smart-program,
     <br>* cpt.Eos-smart-program,
     <a class="clsHide" href="#idEospgmstctnam"></a></p>
+  <p id="idEospgmstctwpa">addressWpg::
+    <br>* wiki: <a href="https://github.com/EOSIO/eos/wiki/Smart%20Contract">https://github.com/EOSIO/eos/wiki/Smart%20Contract</a>,
+    <a class="clsHide" href="#idEospgmstctwpa"></a></p>
 </section>
 
 <section id="idEospgmapp">
   <h1 id="idEospgmappH1">application of Eos-net
     <a class="clsHide" href="#idEospgmappH1"></a></h1>
+  <p id="idEospgmappnam">name::
+    <br>* cpt.Eos-app,
+    <br>* cpt.Eos-program.application,
+    <a class="clsHide" href="#idEospgmappnam"></a></p>
+  <p id="idEospgmappwpa">addressWpg::
+    <br>* {2017-09-12}  <a href="https://steemit.com/eos/@eosio/introducing-eos-io-application-stack">https://steemit.com/eos/@eosio/introducing-eos-io-application-stack</a>,
+    <a class="clsHide" href="#idEospgmappwpa"></a></p>
 </section>
 
 <section id="idEoswltFT">
@@ -263,8 +341,14 @@
   <h2 id="idEoshmnBkprH2">Eos-human.BLOCK-PRODUCER
     <a class="clsHide" href="#idEoshmnBkprH2"></a></h2>
   <p id="idEoshmnBkprnam">name::
+    <br>* cpt.Eos-block-producer-human,
     <br>* cpt.Eos-human'block-producer,
     <a class="clsHide" href="#idEoshmnBkprnam"></a></p>
+  <p id="idEoshmnBkprdng">doing::
+    <br>=== provide infrastracture:
+    <br>With the EOS.IO software, we, at block.one, envision a world where block producers provide general purpose infrastructure that allows developers to build and deploy their applications without having to run any servers themselves. This includes applications as complex as steemit, DTube, and decentralized exchanges.
+    <br>[<a href="https://steemit.com/eos/@eosio/introducing-eos-io-application-stack">https://steemit.com/eos/@eosio/introducing-eos-io-application-stack</a>]
+    <a class="clsHide" href="#idEoshmnBkprdng"></a></p>
   </section>
 
   <section id="idEoshmnTnhr">
@@ -373,6 +457,25 @@
   <p id="idEosSpcP1">specific::
     <br>
     <a class="clsHide" href="#idEosSpcP1"></a></p>
+</section>
+
+<section id="idEosTtntPlc">
+  <h1 id="idEosTtntPlcH1">Eos-net.PUBLIC-TESTNET
+    <a class="clsHide" href="#idEosTtntPlcH1"></a></h1>
+  <p id="idEosTtntPlcdsn">description::
+    <br>Differences between Testnet and Mainnet
+    <br>There are several differences between the Public Testnet and the public Mainnet. As of this writing, they include:
+    <br>* <strong>Existence</strong>. The public mainnet doesn't exist yet, and the public testnet does.
+    <br>* <strong>Genesis block</strong>. The mainnet genesis block is different from the testnet genesis block. The Testnet genesis block includes a faucet account and several "initx" accounts (inita - initu) used by the core development team during testing. At least some of these initx accounts are also present in the provided genesis block of standalone private testnets.
+    <br>* <strong>Resets</strong>. The Testnet is subject to resets as needed to support testing.
+    <br>* <strong>Versions</strong>. The Testnet can actually include multiple testnets with different addresses and different reset cycles, depending on the needs and desires of the development community.
+    <br>* <strong>Hosting</strong>. The Testnet is currently configured such that block-producing nodes will only be run on hosts set up and operated by the core developers. The Mainnet's block producing nodes will run on hosts selected by a vote of the token holders.
+    <br>[<a href="https://github.com/EOSIO/eos/wiki/Testnet%3A%20Public#differences-between-testnet-and-mainnet">https://github.com/EOSIO/eos/wiki/Testnet%3A%20Public#differences-between-testnet-and-mainnet</a>]
+    <a class="clsHide" href="#idEosTtntPlcdsn"></a></p>
+  <p id="idEosTtntPlcnam">name::
+    <br>* cpt.Eos-net.public-testnet,
+    <br>* cpt.Eos-net.testnet.public,
+    <a class="clsHide" href="#idEosTtntPlcnam"></a></p>
 </section>
 
 <section id="idEosEvgFT">
