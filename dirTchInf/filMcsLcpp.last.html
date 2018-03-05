@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.C++-language (C++.0-4-0.2018-03-04)</title>
+  <title>Mcs.C++-language (C++.0-5-0.2018-03-05)</title>
   <meta name="keywords" content="C++, ModelConceptStructured, Mcs, ModelInfoWorld, Worldview, Mws, Hitp, Kaseluris.Nikos.1959, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -124,6 +124,9 @@
   <p id="idCppssuntdsn">description::
     <br>· source-semantic-unit is <a class="clsPreview" href="#idCppsunt">source-unit</a> constructs that DENOTE CONCEPTS in <a class="clsPreview" href="#idCpparc">C++-archetype</a>.
     <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-03]
+    <br>===
+    <br>· src-sem-units ARE-DEFINED differently on existing computer-machines (32bit, 64bit, OsWin, OsUnix-like).
+    <br>[<a href="http://en.cppreference.com/w/cpp/language/types">http://en.cppreference.com/w/cpp/language/types</a>]
     <a class="clsHide" href="#idCppssuntdsn"></a></p>
   <p id="idCppssuntnam">name::
     <br>* cpt.C++'src-sem-unit,
@@ -153,6 +156,49 @@
     <a class="clsHide" href="#idCppssuntSpcP1"></a></p>
   </section>
 
+  <section id="idCppssuntVoid">
+  <h2 id="idCppssuntVoidH2">src-sem-unit.VOID
+    <a class="clsHide" href="#idCppssuntVoidH2"></a></h2>
+  <p id="idCppssuntVoiddsn">description::
+    <br>· void is <a class="clsPreview" href="#idCppssunt">the-source-semantic-unit</a> that denotes NO information, much like the-zero number.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-05]
+    <a class="clsHide" href="#idCppssuntVoiddsn"></a></p>
+  <p id="idCppssuntVoidnam">name::
+    <br>* cpt.C++-src-sem-unit.void,
+    <br>* cpt.C++'void-src-sem-unit,
+    <a class="clsHide" href="#idCppssuntVoidnam"></a></p>
+  </section>
+
+  <section id="idCppssuntChrtr">
+  <h2 id="idCppssuntChrtrH2">src-sem-unit.CHARACTER (cr)
+    <a class="clsHide" href="#idCppssuntChrtrH2"></a></h2>
+  <p id="idCppssuntChrtrdsn">description::
+    <br>· source-character is <a class="clsPreview" href="#idCppssunt">a-src-sem-unit</a> that denotes any human-symbol in <a class="clsPreview" href="#idCpparc">C++-archetype</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-05]
+    <a class="clsHide" href="#idCppssuntChrtrdsn"></a></p>
+  <p id="idCppssuntChrtrnam">name::
+    <br>* cpt.C++-src-sem-unit.character,
+    <br>* cpt.C++-src-sem-unit.cr,
+    <a class="clsHide" href="#idCppssuntChrtrnam"></a></p>
+
+  <section id="idCppssuntChrtrChar">
+  <h3 id="idCppssuntChrtrCharH3">src-sem-unit.char
+    <a class="clsHide" href="#idCppssuntChrtrCharH3"></a></h3>
+  <p id="idCppssuntChrtrCharnam">name::
+    <br>* cpt.C++-src-sem-unit.char,
+    <a class="clsHide" href="#idCppssuntChrtrCharnam"></a></p>
+
+  <section id="idCppssuntChrtrChar">
+  <h4 id="idCppssuntChrtrCharH4">char-literal
+    <a class="clsHide" href="#idCppssuntChrtrCharH4"></a></h4>
+  <p id="idCppssuntChrtrCharexpl">example::
+    <br><code>char cr = 'a';
+    <br>char cr2 = 98; // same as letter b</code>
+    <a class="clsHide" href="#idCppssuntChrtrCharexpl"></a></p>
+  </section>
+  </section>
+  </section>
+
   <section id="idCppssuntBool">
   <h2 id="idCppssuntBoolH2">src-sem-unit.BOOLEAN (b)
     <a class="clsHide" href="#idCppssuntBoolH2"></a></h2>
@@ -160,8 +206,19 @@
     <br>* cpt.C++'boolean-src-sem-unit,
     <br>* cpt.C++-b,
     <br>* cpt.C++-bool,
+    <br>* cpt.C++-src-sem-unit.b,
     <br>* cpt.C++-src-sem-unit.boolean,
     <a class="clsHide" href="#idCppssuntBoolnam"></a></p>
+
+  <section id="idCppssuntBoolLrl">
+  <h2 id="idCppssuntBoolLrlH2">bool-literal
+    <a class="clsHide" href="#idCppssuntBoolLrlH2"></a></h2>
+  <p id="idCppssuntBoolLrlexpl">example::
+    <br><code>// there-are only 2 bool
+    <br>true
+    <br>false</code>
+    <a class="clsHide" href="#idCppssuntBoolLrlexpl"></a></p>
+  </section>
   </section>
 
   <section id="idCppssuntNbr">
@@ -171,14 +228,46 @@
     <br>* cpt.C++'number-source-sem-unit,
     <br>* cpt.C++-n,
     <br>* cpt.C++-src-number,
+    <br>* cpt.C++-src-sem-unit.n,
+    <br>* cpt.C++-src-sem-unit.number,
     <a class="clsHide" href="#idCppssuntNbrnam"></a></p>
 
   <section id="idCppssuntNbrIngr">
   <h3 id="idCppssuntNbrIngrH3">src-number.INTEGER
     <a class="clsHide" href="#idCppssuntNbrIngrH3"></a></h3>
+  <p id="idCppssuntNbrIngrnam">name::
+    <br>* cpt.C++-src-sem-unit.integer-number,
+    <br>* cpt.C++-src-sem-unit.number.integer,
+    <a class="clsHide" href="#idCppssuntNbrIngrnam"></a></p>
+  <p id="idCppssuntNbrIngrSpc">specific::
+    <br>* short,
+    <br>* unsigned-short,
+    <br>* int,
+    <br>* unsigned-int,
+    <br>* long,
+    <br>* unsigned-long,
+    <br>* long-long,
+    <br>* unsigned-long-long,
+    <a class="clsHide" href="#idCppssuntNbrIngrSpc"></a></p>
+
+  <section id="idCppssuntNbrShort">
+  <h4 id="idCppssuntNbrShortH4">src-number.short (ns)
+    <a class="clsHide" href="#idCppssuntNbrShortH4"></a></h4>
+  <p id="idCppssuntNbrShortdsn">description::
+    <br>· short is an-integer represented with 2 bytes (16 bits).
+    <br>· it is a signed number.
+    <br>· this means that 1 bit represent the-sign + of - of the-number and the-rest 15 bits can represent 2^15=32768 numbers, 65536 in sum (-32768, 0, +32767).
+    <a class="clsHide" href="#idCppssuntNbrShortdsn"></a></p>
+  <p id="idCppssuntNbrShortnam">name::
+    <br>* cpt.C++-src-number.short,
+    <br>* cpt.C++-src-number.short-int,
+    <br>* cpt.C++-src-number.signed-short,
+    <br>* cpt.C++-src-number.signed-short-int,
+    <a class="clsHide" href="#idCppssuntNbrShortnam"></a></p>
+  </section>
 
   <section id="idCppssuntNbrInt">
-  <h4 id="idCppssuntNbrIntH4">src-number.int
+  <h4 id="idCppssuntNbrIntH4">src-number.int (ni)
     <a class="clsHide" href="#idCppssuntNbrIntH4"></a></h4>
   <p id="idCppssuntNbrIntdsn">description::
     <br>· source-int-number are the-integer-numbers such as 123, -456.
@@ -186,7 +275,36 @@
   <p id="idCppssuntNbrIntnam">name::
     <br>* cpt.C++-ni,
     <br>* cpt.C++-src-number.int,
+    <br>* cpt.C++-src-sem-unit.int-number,
     <a class="clsHide" href="#idCppssuntNbrIntnam"></a></p>
+  <p id="idCppssuntNbrIntltrl">literal::
+    <br><code>int ni = 123;
+    <br>int ni2 = -123;
+    <br>int ni3 = 12345678912; // warning: overflow in implicit constant conversion [-Woverflow]
+    <br>int ni4 = 0123 //octal
+    <br>int ni5 = 0x1ab //hexadecimal
+    <br>int ni6 = 0b1010 //binary (may not work on some compilers)</code>
+    <a class="clsHide" href="#idCppssuntNbrIntltrl"></a></p>
+  </section>
+
+  <section id="idCppssuntNbrLng">
+  <h4 id="idCppssuntNbrLngH4">src-number.long (nl)
+    <a class="clsHide" href="#idCppssuntNbrLngH4"></a></h4>
+  <p id="idCppssuntNbrLngnam">name::
+    <br>* cpt.C++-nl,
+    <br>* cpt.C++-src-number.long,
+    <br>* cpt.C++-src-sem-unit.long-number,
+    <a class="clsHide" href="#idCppssuntNbrLngnam"></a></p>
+  </section>
+
+  <section id="idCppssuntNbrLng">
+  <h4 id="idCppssuntNbrLngH4">src-number.long-long (nll)
+    <a class="clsHide" href="#idCppssuntNbrLngH4"></a></h4>
+  <p id="idCppssuntNbrLngnam">name::
+    <br>* cpt.C++-nll,
+    <br>* cpt.C++-src-number.long-long,
+    <br>* cpt.C++-src-sem-unit.long-long-number,
+    <a class="clsHide" href="#idCppssuntNbrLngnam"></a></p>
   </section>
   </section>
 
@@ -205,18 +323,22 @@
   <p id="idCppssuntNbrRealnam">name::
     <br>* cpt.C++-src-number.floating-point,
     <br>* cpt.C++-src-number.real,
+    <br>* cpt.C++-src-sem-unit.number.real,
+    <br>* cpt.C++-src-sem-unit.real-number,
     <a class="clsHide" href="#idCppssuntNbrRealnam"></a></p>
 
   <section id="idCppssuntNbrFlt">
-  <h4 id="idCppssuntNbrFltH4">src-number.float
+  <h4 id="idCppssuntNbrFltH4">src-number.float (nf)
     <a class="clsHide" href="#idCppssuntNbrFltH4"></a></h4>
   <p id="idCppssuntNbrFltnam">name::
+    <br>* cpt.C++-nf,
     <br>* cpt.C++-src-number.float,
+    <br>* cpt.C++-src-sem-unit.float-number,
     <a class="clsHide" href="#idCppssuntNbrFltnam"></a></p>
   </section>
 
   <section id="idCppssuntNbrDbl">
-  <h4 id="idCppssuntNbrDblH4">src-number.double
+  <h4 id="idCppssuntNbrDblH4">src-number.double (nd)
     <a class="clsHide" href="#idCppssuntNbrDblH4"></a></h4>
   <p id="idCppssuntNbrDbldsn">description::
     <br>· source-double-numbers are the-real-numbers such as 3.4, -5.4.
@@ -225,16 +347,60 @@
   <p id="idCppssuntNbrDblnam">name::
     <br>* cpt.C++-nd,
     <br>* cpt.C++-src-number.double,
+    <br>* cpt.C++-src-sem-unit.double-number,
     <a class="clsHide" href="#idCppssuntNbrDblnam"></a></p>
+  </section>
+
+  <section id="idCppssuntNbrLngDbl">
+  <h4 id="idCppssuntNbrLngDblH4">src-number.long-double (nld)
+    <a class="clsHide" href="#idCppssuntNbrLngDblH4"></a></h4>
+  <p id="idCppssuntNbrLngDblnam">name::
+    <br>* cpt.C++-nld,
+    <br>* cpt.C++-src-number.long-double,
+    <br>* cpt.C++-src-sem-unit.long-double-number,
+    <a class="clsHide" href="#idCppssuntNbrLngDblnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCppssuntNbrSgnd">
+  <h3 id="idCppssuntNbrSgndH3">src-number.SIGNED
+    <a class="clsHide" href="#idCppssuntNbrSgndH3"></a></h3>
+  <p id="idCppssuntNbrSgnddsn">description::
+    <br>· unsigned-number is a-number with plus(+) or minus(-) signs in front.
+    <br>· the-plus(+)-sign could-be-ignored.
+    <a class="clsHide" href="#idCppssuntNbrSgnddsn"></a></p>
+  <p id="idCppssuntNbrSgndnam">name::
+    <br>* cpt.C++-src-sem-unit.number.signed,
+    <br>* cpt.C++-src-sem-unit.signed-number,
+    <a class="clsHide" href="#idCppssuntNbrSgndnam"></a></p>
+  </section>
+
+  <section id="idCppssuntNbrSgndN">
+  <h3 id="idCppssuntNbrSgndNH3">src-number.UNSIGNED
+    <a class="clsHide" href="#idCppssuntNbrSgndNH3"></a></h3>
+  <p id="idCppssuntNbrSgndNdsn">description::
+    <br>· unsigned-number is a-number without plus(+) or minus(-) signs in front.
+    <a class="clsHide" href="#idCppssuntNbrSgndNdsn"></a></p>
+  <p id="idCppssuntNbrSgndNnam">name::
+    <br>* cpt.C++-src-sem-unit.number.signedNo,
+    <br>* cpt.C++-src-sem-unit.number.unsigned,
+    <br>* cpt.C++-src-sem-unit.unsigned-number,
+    <a class="clsHide" href="#idCppssuntNbrSgndNnam"></a></p>
   </section>
   </section>
 
   <section id="idCppssuntStrg">
   <h2 id="idCppssuntStrgH2">src-sem-unit.STRING (s)
     <a class="clsHide" href="#idCppssuntStrgH2"></a></h2>
+  <p id="idCppssuntStrgdsn">description::
+    <br>· source-string is <a class="clsPreview" href="#idCppssunt">a-src-sem-unit</a> that denotes some human-text in <a class="clsPreview" href="#idCpparc">C++-archetype</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-05]
+    <a class="clsHide" href="#idCppssuntStrgdsn"></a></p>
   <p id="idCppssuntStrgnam">name::
     <br>* cpt.C++-s,
     <br>* cpt.C++-string,
+    <br>* cpt.C++-src-sem-unit.s,
+    <br>* cpt.C++-src-sem-unit.string,
     <a class="clsHide" href="#idCppssuntStrgnam"></a></p>
   </section>
 
@@ -245,6 +411,7 @@
     <br>* cpt.C++-f,
     <br>* cpt.C++-function,
     <br>* cpt.C++-src-function,
+    <br>* cpt.C++-src-sem-unit.f,
     <br>* cpt.C++-src-sem-unit.function,
     <a class="clsHide" href="#idCppssuntFcnnam"></a></p>
 
@@ -258,6 +425,7 @@
   <p id="idCppssuntFcnOprnam">name::
     <br>* cpt.C++'src-operator,
     <br>* cpt.C++-src-operator,
+    <br>* cpt.C++-src-sem-unit.operator,
     <a class="clsHide" href="#idCppssuntFcnOprnam"></a></p>
 
   <section id="idCppssuntFcnOpropd">
@@ -338,6 +506,7 @@
   <p id="idCppssuntNmdVarnam">name::
     <br>* cpt.C++'variable-of--src-doc,
     <br>* cpt.C++-src-variable,
+    <br>* cpt.C++-src-sem-unit.variable,
     <a class="clsHide" href="#idCppssuntNmdVarnam"></a></p>
   </section>
 
@@ -353,6 +522,7 @@
   <p id="idCppssuntNmdCnstnam">name::
     <br>* cpt.C++'constant-of--src-doc,
     <br>* cpt.C++-src-constant,
+    <br>* cpt.C++-src-sem-unit.constant,
     <a class="clsHide" href="#idCppssuntNmdCnstnam"></a></p>
   </section>
 
@@ -363,6 +533,7 @@
     <br>* cpt.C++-p,
     <br>* cpt.C++-pointer-of--src-doc,
     <br>* cpt.C++-src-pointer,
+    <br>* cpt.C++-src-sem-unit.pointer,
     <a class="clsHide" href="#idCppssuntNmdPntrnam"></a></p>
   </section>
   </section>
@@ -374,6 +545,32 @@
     <br>* cpt.C++'namedNo-src-sem-unit,
     <br>* cpt.C++-src-sem-unit.namedNo,
     <a class="clsHide" href="#idCppssuntNmdNnam"></a></p>
+  </section>
+
+  <section id="idCppssuntLtrl">
+  <h2 id="idCppssuntLtrlH2">src-sem-unit.INSTANCE (literal)
+    <a class="clsHide" href="#idCppssuntLtrlH2"></a></h2>
+  <p id="idCppssuntLtrldsn">description::
+    <br>· literal is an INSTANCE <a class="clsPreview" href="#idCppssunt">src-sem-unit</a>.
+    <a class="clsHide" href="#idCppssuntLtrldsn"></a></p>
+  <p id="idCppssuntLtrlnam">name::
+    <br>* cpt.C++'literal-src-sem-unit,
+    <br>* cpt.C++-src-sem-unit.instance,
+    <br>* cpt.C++-src-sem-unit.literal,
+    <a class="clsHide" href="#idCppssuntLtrlnam"></a></p>
+  </section>
+
+  <section id="idCppssuntType">
+  <h2 id="idCppssuntTypeH2">src-sem-unit.INSTANCE.NO (type)
+    <a class="clsHide" href="#idCppssuntTypeH2"></a></h2>
+  <p id="idCppssuntTypedsn">description::
+    <br>· type is a generic <a class="clsPreview" href="#idCppssunt">src-sem-unit</a>.
+    <a class="clsHide" href="#idCppssuntTypedsn"></a></p>
+  <p id="idCppssuntTypenam">name::
+    <br>* cpt.C++'type-src-sem-unit,
+    <br>* cpt.C++-src-sem-unit.instanceNo,
+    <br>* cpt.C++-src-sem-unit.type,
+    <a class="clsHide" href="#idCppssuntTypenam"></a></p>
   </section>
 </section>
 
@@ -463,8 +660,8 @@
     <a class="clsHide" href="#idCppsstcAsntnam"></a></p>
 
   <section id="idCppsstcAsntopr">
-  <h2 id="idCppsstcAsntoprH2">operator of src-assignment
-    <a class="clsHide" href="#idCppsstcAsntoprH2"></a></h2>
+  <h3 id="idCppsstcAsntoprH3">operator of src-assignment
+    <a class="clsHide" href="#idCppsstcAsntoprH3"></a></h3>
   <p id="idCppsstcAsntoprdsn">description::
     <br>· the-symbol "=" is-known as the-assignment-operator.
     <br>· the-meaning of "=" in programming is different from Mathematics.
@@ -494,6 +691,18 @@
     <br>* cpt.C++'preprocessor-directive,
     <a class="clsHide" href="#idCppsstcPpdvnam"></a></p>
   </section>
+
+  <section id="idCppsstcTypedef">
+  <h2 id="idCppsstcTypedefH2">src-sentence.typedef
+    <a class="clsHide" href="#idCppsstcTypedefH2"></a></h2>
+  <p id="idCppsstcTypedefdsn">description::
+    <br>· typedef sentence defines a new type.
+    <br>· example: <code>typedef unsigned int intu</code>
+    <a class="clsHide" href="#idCppsstcTypedefdsn"></a></p>
+  <p id="idCppsstcTypedefnam">name::
+    <br>* cpt.C++-src-sentence.typedef,
+    <a class="clsHide" href="#idCppsstcTypedefnam"></a></p>
+  </section>
 </section>
 
 <section id="idCppsdocscn">
@@ -505,7 +714,7 @@
     <br>* cpt.C++-src-section,
     <a class="clsHide" href="#idCppsdocscnnam"></a></p>
   <p id="idCppsdocscnSpc">specific::
-    <br>* comment,
+    <br>* <a class="clsPreview" href="#idCppsdocscn">comment</a>,
     <br>* block,
     <a class="clsHide" href="#idCppsdocscnSpc"></a></p>
 
@@ -831,6 +1040,18 @@
     <br>* Visual-Studio,
     <a class="clsHide" href="#idCpptoolIdeSpc"></a></p>
   </section>
+</section>
+
+<section id="idCppspec">
+  <h1 id="idCppspecH1">specification of C++
+    <a class="clsHide" href="#idCppspecH1"></a></h1>
+  <p id="idCppspecnam">name::
+    <br>* cpt.C++'specification,
+    <br>* cpt.C++'standard,
+    <a class="clsHide" href="#idCppspecnam"></a></p>
+  <p id="idCppspecwpa">addressWpg::
+    <br>* <a href="https://isocpp.org/">https://isocpp.org/</a>,
+    <a class="clsHide" href="#idCppspecwpa"></a></p>
 </section>
 
 <section id="idCpprscFT">
