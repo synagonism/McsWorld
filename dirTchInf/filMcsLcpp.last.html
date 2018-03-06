@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.C++-language (C++.0-5-0.2018-03-05)</title>
+  <title>Mcs.C++-language (C++.0-6-0.2018-03-06 pre-published)</title>
   <meta name="keywords" content="C++, ModelConceptStructured, Mcs, ModelInfoWorld, Worldview, Mws, Hitp, Kaseluris.Nikos.1959, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -51,15 +51,38 @@
   <h1 id="idCppalgH1">algorithm of C++
     <a class="clsHide" href="#idCppalgH1"></a></h1>
   <p id="idCppalgdsn">description::
-    <br>· C++-algorithm is <a class="clsPreview" href="#idCpparc">a-C++-archetype</a> done with a-machine with processor, RAM, output and storage, in any language.
+    <br>· C++-algorithm is <a class="clsPreview" href="#idCpparc">a-C++-archetype</a> done with a-machine with processor, RAM (memory), output and storage, in any language.
     <a class="clsHide" href="#idCppalgdsn"></a></p>
   <p id="idCppalgnam">name::
     <br>* cpt.C++'algorithm,
+    <br>* cpt.C++-algo,
     <a class="clsHide" href="#idCppalgnam"></a></p>
-  <p id="idCppalgSpc">specific::
+
+  <section id="idCppalgmem">
+  <h2 id="idCppalgmemH2">memory of algorithm
+    <a class="clsHide" href="#idCppalgmemH2"></a></h2>
+  <p id="idCppalgmemdsn">description::
+    <br>· the-computer-machine which understands a-C++-algorithm has a sequence of locations for holding information|data|values.
+    <br>· all these locations are-called memory.
+    <br>· each location has an-address.
+    <br>· a-32-bit-computer uses 32-bit (4 bytes) to give names|numbers to these addresses.
+    <br>· the-quantity of locations|addresses in a-32-bit-machine is 2^32 = 4,294,967,296.
+    <br>· also each location has 8 bits (1 byte) to store info|data|values.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-06]
+    <a class="clsHide" href="#idCppalgmemdsn"></a></p>
+  <p id="idCppalgmemnam">name::
+    <br>* cpt.C++-algo'memory,
+    <a class="clsHide" href="#idCppalgmemnam"></a></p>
+  </section>
+
+  <section id="idCppalgSpc">
+  <h2 id="idCppalgSpcH2">algorithm.SPECIFIC
+    <a class="clsHide" href="#idCppalgSpcH2"></a></h2>
+  <p id="idCppalgSpcP1">specific::
     <br>* <a class="clsPreview" href="#idCppsdoc">source-document</a>,
     <br>* <a class="clsPreview" href="#idCppbdoc">binary-document</a>,
-    <a class="clsHide" href="#idCppalgSpc"></a></p>
+    <a class="clsHide" href="#idCppalgSpcP1"></a></p>
+  </section>
 </section>
 
 <section id="idCppsdoc">
@@ -211,8 +234,8 @@
     <a class="clsHide" href="#idCppssuntBoolnam"></a></p>
 
   <section id="idCppssuntBoolLrl">
-  <h2 id="idCppssuntBoolLrlH2">bool-literal
-    <a class="clsHide" href="#idCppssuntBoolLrlH2"></a></h2>
+  <h3 id="idCppssuntBoolLrlH3">bool-literal
+    <a class="clsHide" href="#idCppssuntBoolLrlH3"></a></h3>
   <p id="idCppssuntBoolLrlexpl">example::
     <br><code>// there-are only 2 bool
     <br>true
@@ -407,13 +430,104 @@
   <section id="idCppssuntFcn">
   <h2 id="idCppssuntFcnH2">src-sem-unit.FUNCTION (f)
     <a class="clsHide" href="#idCppssuntFcnH2"></a></h2>
+  <p id="idCppssuntFcndsn">description::
+    <br>· source-function is a-src-sem-unit that PROCESS information with optional input and output information.
+    <br>· we use functions in order to write once a-task and use|call it many times.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-06]
+    <a class="clsHide" href="#idCppssuntFcndsn"></a></p>
   <p id="idCppssuntFcnnam">name::
+    <br>* cpt.C++'function,
+    <br>* cpt.C++'subroutine,
     <br>* cpt.C++-f,
     <br>* cpt.C++-function,
+    <br>* cpt.C++-src-f,
     <br>* cpt.C++-src-function,
     <br>* cpt.C++-src-sem-unit.f,
     <br>* cpt.C++-src-sem-unit.function,
     <a class="clsHide" href="#idCppssuntFcnnam"></a></p>
+
+  <section id="idCppssuntFcndfn">
+  <h3 id="idCppssuntFcndfnH3">definition src-f
+    <a class="clsHide" href="#idCppssuntFcndfnH3"></a></h3>
+  <p id="idCppssuntFcndfndsn">description::
+    <br>The syntax for function definition is as follows:
+    <br><code>
+    <br>returnValueType functionName ( parameterList ) {
+    <br> functionBody ;
+    <br>}</code>
+    <br>* The parameterList consists of comma-separated parameter-type and parameter-name, i.e., param-1-type param-1-name, param-2-type param-2-name,...
+    <br>* The returnValueType specifies the type of the return value, such as int or double. An special return type called void can be used to denote that the function returns no value. In C++, a function is allowed to return one value or no value (void). It cannot return multiple values. [C++ does not allow you to return an array!]
+    <br>[<a href="https://www.ntu.edu.sg/home/ehchua/programming/cpp/cp1_Basics.html#zz-10.2">https://www.ntu.edu.sg/home/ehchua/programming/cpp/cp1_Basics.html#zz-10.2</a>]
+    <a class="clsHide" href="#idCppssuntFcndfndsn"></a></p>
+  <p id="idCppssuntFcndfnnam">name::
+    <br>* cpt.C++-src-f'definition,
+    <a class="clsHide" href="#idCppssuntFcndfnnam"></a></p>
+
+  <section id="idCppssuntFcndlrn">
+  <h4 id="idCppssuntFcndlrnH4">declaration src-f
+    <a class="clsHide" href="#idCppssuntFcndlrnH4"></a></h4>
+  <p id="idCppssuntFcndlrndsn">description::
+    <br>· src-function-declaration is its <a class="clsPreview" href="#idCppssuntFcndfn">function-definition</a> without its body (implementation).
+    <br>· example:
+    <br><code>double fAreaGet(double radius);  // parameter ignored
+    <br>int fMax(int ni1, int ni2);</code>
+    <br>* C++ demands functions to be-defined or declared BEFORE they are-used.
+    <br>· function-declarations are usually grouped together and placed in <a class="clsPreview" href="#idCppsdocfileHdr">a-header-file</a>.
+    <br>· the-header-file can-be-included in many programs.
+    <a class="clsHide" href="#idCppssuntFcndlrndsn"></a></p>
+  <p id="idCppssuntFcndlrnnam">name::
+    <br>* cpt.C++-src-f'declaration,
+    <br>* cpt.C++-src-f'prototype,
+    <a class="clsHide" href="#idCppssuntFcndlrnnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCppssuntFcnspcnam">
+  <h3 id="idCppssuntFcnspcnamH3">name src-f
+    <a class="clsHide" href="#idCppssuntFcnspcnamH3"></a></h3>
+  </section>
+
+  <section id="idCppssuntFcnprlt">
+  <h3 id="idCppssuntFcnprltH3">parameter-list src-f
+    <a class="clsHide" href="#idCppssuntFcnprltH3"></a></h3>
+  <p id="idCppssuntFcnprltdsn">description::
+    <br>· parameter-list of <a class="clsPreview" href="#idCppssuntFcn">a-src-function</a> is a comma sepated list of <a class="clsPreview" href="#idCppssuntNmdVar">variable</a> type name used to hold the INPUT information of a-src-function.
+    <a class="clsHide" href="#idCppssuntFcnprltdsn"></a></p>
+  <p id="idCppssuntFcnprltnam">name::
+    <br>* cpt.C++-src-f'parameter-list,
+    <a class="clsHide" href="#idCppssuntFcnprltnam"></a></p>
+  </section>
+
+  <section id="idCppssuntFcnrvt">
+  <h3 id="idCppssuntFcnrvtH3">return-value-type src-f
+    <a class="clsHide" href="#idCppssuntFcnrvtH3"></a></h3>
+  <p id="idCppssuntFcnrvtdsn">description::
+    <br>· return-value-type is <a class="clsPreview" href="#idCppssuntType">the-type</a> of the OUTPUT information of <a class="clsPreview" href="#idCppssuntFcn">a-src-function</a>.
+    <br>· if there-is-no return info the-type is <a class="clsPreview" href="#idCppssuntVoid">void</a>.
+    <a class="clsHide" href="#idCppssuntFcnrvtdsn"></a></p>
+  <p id="idCppssuntFcnrvtnam">name::
+    <br>* cpt.C++-src-f'return-value-type,
+    <a class="clsHide" href="#idCppssuntFcnrvtnam"></a></p>
+  </section>
+
+  <section id="idCppssuntFcnbody">
+  <h3 id="idCppssuntFcnbodyH3">body src-f
+    <a class="clsHide" href="#idCppssuntFcnbodyH3"></a></h3>
+  <p id="idCppssuntFcnbodydsn">description::
+    <br>· body of <a class="clsPreview" href="#idCppssuntFcn">a-src-function</a> is the-source-code that describes the-task a-function performs and is-included between {...}.
+    <a class="clsHide" href="#idCppssuntFcnbodydsn"></a></p>
+  <p id="idCppssuntFcnbodynam">name::
+    <br>* cpt.C++-src-f'body,
+    <a class="clsHide" href="#idCppssuntFcnbodynam"></a></p>
+  </section>
+
+  <section id="idCppssuntFcnSpc">
+  <h3 id="idCppssuntFcnSpcH3">src-f.SPECIFIC
+    <a class="clsHide" href="#idCppssuntFcnSpcH3"></a></h3>
+  <p id="idCppssuntFcnSpcnam">name::
+    <br>* cpt.C++-src-f.specific,
+    <a class="clsHide" href="#idCppssuntFcnSpcnam"></a></p>
+  </section>
 
   <section id="idCppssuntFcnOpr">
   <h3 id="idCppssuntFcnOprH3">src-f.OPERATOR
@@ -424,6 +538,7 @@
     <a class="clsHide" href="#idCppssuntFcnOprdsn"></a></p>
   <p id="idCppssuntFcnOprnam">name::
     <br>* cpt.C++'src-operator,
+    <br>* cpt.C++-src-f.operator,
     <br>* cpt.C++-src-operator,
     <br>* cpt.C++-src-sem-unit.operator,
     <a class="clsHide" href="#idCppssuntFcnOprnam"></a></p>
@@ -503,11 +618,62 @@
   <section id="idCppssuntNmdVar">
   <h3 id="idCppssuntNmdVarH3">src-sem-unit.VARIABLE
     <a class="clsHide" href="#idCppssuntNmdVarH3"></a></h3>
+  <p id="idCppssuntNmdVardsn">description::
+    <br>· source-variable is a named <a class="clsPreview" href="#idCppssunt">src-sem-unit</a> of the same <a class="clsPreview" href="#idCppssuntType">type</a> which can-change instances.
+    <br>· it is-stored in <a class="clsPreview" href="#idCppalgmem">memory</a>, in consecutive locations depended on its type.
+    <br>· the-address of the first location, is the-address of the-variable.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-06]
+    <a class="clsHide" href="#idCppssuntNmdVardsn"></a></p>
   <p id="idCppssuntNmdVarnam">name::
     <br>* cpt.C++'variable-of--src-doc,
     <br>* cpt.C++-src-variable,
     <br>* cpt.C++-src-sem-unit.variable,
     <a class="clsHide" href="#idCppssuntNmdVarnam"></a></p>
+
+  <section id="idCppssuntNmdVarspcnam">
+  <h4 id="idCppssuntNmdVarspcnamH4">name of src-variable
+    <a class="clsHide" href="#idCppssuntNmdVarspcnamH4"></a></h4>
+  <p id="idCppssuntNmdVarspcnamdsn">description::
+    <br>· name of <a class="clsPreview" href="#idCppssuntNmdVar">a-src-variable</a> is its <a class="clsPreview" href="#idCppssuntNmdidfr">identifier</a>.
+    <br>· I suggest the-names to begin with one or more letters that denote its <a class="clsPreview" href="#idCppssuntNmdVartype">type</a>.
+    <a class="clsHide" href="#idCppssuntNmdVarspcnamdsn"></a></p>
+  <p id="idCppssuntNmdVarspcnamnam">name::
+    <br>* cpt.C++-src-variable'name,
+    <a class="clsHide" href="#idCppssuntNmdVarspcnamnam"></a></p>
+  </section>
+
+  <section id="idCppssuntNmdVarval">
+  <h4 id="idCppssuntNmdVarvalH4">value of src-variable
+    <a class="clsHide" href="#idCppssuntNmdVarvalH4"></a></h4>
+  <p id="idCppssuntNmdVarvaldsn">description::
+    <br>· value of <a class="clsPreview" href="#idCppssuntNmdVar">a-src-variable</a> is its specific <a class="clsPreview" href="#idCppssunt">src-sem-unit</a> which associated with the-name of this <a class="clsPreview" href="#idCppssuntNmdVar">variable</a>.
+    <a class="clsHide" href="#idCppssuntNmdVarvaldsn"></a></p>
+  <p id="idCppssuntNmdVarvalnam">name::
+    <br>* cpt.C++-src-variable'value,
+    <a class="clsHide" href="#idCppssuntNmdVarvalnam"></a></p>
+  </section>
+
+  <section id="idCppssuntNmdVartype">
+  <h4 id="idCppssuntNmdVartypeH4">type of src-variable
+    <a class="clsHide" href="#idCppssuntNmdVartypeH4"></a></h4>
+  <p id="idCppssuntNmdVartypedsn">description::
+    <br>· type of <a class="clsPreview" href="#idCppssuntNmdVar">a-src-variable</a> is type of <a class="clsPreview" href="#idCppssuntNmdVarval">the-values</a> of the-variable.
+    <a class="clsHide" href="#idCppssuntNmdVartypedsn"></a></p>
+  <p id="idCppssuntNmdVartypenam">name::
+    <br>* cpt.C++-src-variable'type,
+    <a class="clsHide" href="#idCppssuntNmdVartypenam"></a></p>
+  </section>
+
+  <section id="idCppssuntNmdVaradrs">
+  <h4 id="idCppssuntNmdVaradrsH4">address of src-variable
+    <a class="clsHide" href="#idCppssuntNmdVaradrsH4"></a></h4>
+  <p id="idCppssuntNmdVaradrsdsn">description::
+    <br>· address of <a class="clsPreview" href="#idCppssuntNmdVar">a-src-variable</a> is the-address of the first <a class="clsPreview" href="#idCppalgmem">memory</a> location that stores <a class="clsPreview" href="#idCppssuntNmdVarval">the-value</a> of the-variable.
+    <a class="clsHide" href="#idCppssuntNmdVaradrsdsn"></a></p>
+  <p id="idCppssuntNmdVaradrsnam">name::
+    <br>* cpt.C++-src-variable'address,
+    <a class="clsHide" href="#idCppssuntNmdVaradrsnam"></a></p>
+  </section>
   </section>
 
   <section id="idCppssuntNmdCnst">
