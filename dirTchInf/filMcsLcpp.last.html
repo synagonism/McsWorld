@@ -193,15 +193,16 @@
   </section>
 
   <section id="idCppssuntChrtr">
-  <h2 id="idCppssuntChrtrH2">src-sem-unit.CHARACTER (cr)
+  <h2 id="idCppssuntChrtrH2">src-sem-unit.CHARACTER (ch)
     <a class="clsHide" href="#idCppssuntChrtrH2"></a></h2>
   <p id="idCppssuntChrtrdsn">description::
     <br>· source-character is <a class="clsPreview" href="#idCppssunt">a-src-sem-unit</a> that denotes any human-symbol in <a class="clsPreview" href="#idCpparc">C++-archetype</a>.
     <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-05]
     <a class="clsHide" href="#idCppssuntChrtrdsn"></a></p>
   <p id="idCppssuntChrtrnam">name::
+    <br>* cpt.C++'character.source,
+    <br>* cpt.C++-src-sem-unit.ch,
     <br>* cpt.C++-src-sem-unit.character,
-    <br>* cpt.C++-src-sem-unit.cr,
     <a class="clsHide" href="#idCppssuntChrtrnam"></a></p>
 
   <section id="idCppssuntChrtrChar">
@@ -226,7 +227,7 @@
   <h2 id="idCppssuntBoolH2">src-sem-unit.BOOLEAN (b)
     <a class="clsHide" href="#idCppssuntBoolH2"></a></h2>
   <p id="idCppssuntBoolnam">name::
-    <br>* cpt.C++'boolean-src-sem-unit,
+    <br>* cpt.C++'boolean.source,
     <br>* cpt.C++-b,
     <br>* cpt.C++-bool,
     <br>* cpt.C++-src-sem-unit.b,
@@ -248,7 +249,7 @@
   <h2 id="idCppssuntNbrH2">src-sem-unit.NUMBER (n)
     <a class="clsHide" href="#idCppssuntNbrH2"></a></h2>
   <p id="idCppssuntNbrnam">name::
-    <br>* cpt.C++'number-source-sem-unit,
+    <br>* cpt.C++'number.source,
     <br>* cpt.C++-n,
     <br>* cpt.C++-src-number,
     <br>* cpt.C++-src-sem-unit.n,
@@ -420,6 +421,7 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-05]
     <a class="clsHide" href="#idCppssuntStrgdsn"></a></p>
   <p id="idCppssuntStrgnam">name::
+    <br>* cpt.C++'string.source,
     <br>* cpt.C++-s,
     <br>* cpt.C++-string,
     <br>* cpt.C++-src-sem-unit.s,
@@ -436,7 +438,7 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-06]
     <a class="clsHide" href="#idCppssuntFcndsn"></a></p>
   <p id="idCppssuntFcnnam">name::
-    <br>* cpt.C++'function,
+    <br>* cpt.C++'function.source,
     <br>* cpt.C++'subroutine,
     <br>* cpt.C++-f,
     <br>* cpt.C++-function,
@@ -488,7 +490,7 @@
   </section>
 
   <section id="idCppssuntFcnprlt">
-  <h3 id="idCppssuntFcnprltH3">parameter-list src-f
+  <h3 id="idCppssuntFcnprltH3">parameter-list of src-f
     <a class="clsHide" href="#idCppssuntFcnprltH3"></a></h3>
   <p id="idCppssuntFcnprltdsn">description::
     <br>· parameter-list of <a class="clsPreview" href="#idCppssuntFcn">a-src-function</a> is a comma sepated list of <a class="clsPreview" href="#idCppssuntNmdVar">variable</a> type name used to hold the INPUT information of a-src-function.
@@ -496,6 +498,18 @@
   <p id="idCppssuntFcnprltnam">name::
     <br>* cpt.C++-src-f'parameter-list,
     <a class="clsHide" href="#idCppssuntFcnprltnam"></a></p>
+
+  <section id="idCppssuntFcnargt">
+  <h3 id="idCppssuntFcnargtH3">argument of src-f
+    <a class="clsHide" href="#idCppssuntFcnargtH3"></a></h3>
+  <p id="idCppssuntFcnargtdsn">description::
+    <br>· argument of <a class="clsPreview" href="#idCppssuntFcn">a-src-function</a> is <a class="clsPreview" href="#idCppssuntNmdVarval">the-value</a> we give in <a class="clsPreview" href="#idCppssuntFcnprlt">a-parameter</a> of it.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-07]
+    <a class="clsHide" href="#idCppssuntFcnargtdsn"></a></p>
+  <p id="idCppssuntFcnargtnam">name::
+    <br>* cpt.C++-src-f'argument,
+    <a class="clsHide" href="#idCppssuntFcnargtnam"></a></p>
+  </section>
   </section>
 
   <section id="idCppssuntFcnrvt">
@@ -537,6 +551,7 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-04]
     <a class="clsHide" href="#idCppssuntFcnOprdsn"></a></p>
   <p id="idCppssuntFcnOprnam">name::
+    <br>* cpt.C++'operator.src,
     <br>* cpt.C++'src-operator,
     <br>* cpt.C++-src-f.operator,
     <br>* cpt.C++-src-operator,
@@ -579,6 +594,51 @@
     <a class="clsHide" href="#idCppssuntFcnOprTnrnam"></a></p>
   </section>
 
+  <section id="idCppssuntFcnOprArth">
+  <h4 id="idCppssuntFcnOprArthH4">src-operator.ARITHMETIC
+    <a class="clsHide" href="#idCppssuntFcnOprArthH4"></a></h4>
+  <p id="idCppssuntFcnOprArthnam">name::
+    <br>* cpt.C++-src-operator.arithmetic,
+    <a class="clsHide" href="#idCppssuntFcnOprArthnam"></a></p>
+  <p id="idCppssuntFcnOprArthSpc">specific::
+    <br> ** multiplication	expr1 * expr2,
+    <br> / division	expr1 / expr2,
+    <br> % remainder (Modulus)	expr1 % expr2,
+    <br> + addition	expr1 + expr2,
+    <br> - subtraction	expr1 - expr2,
+    <a class="clsHide" href="#idCppssuntFcnOprArthSpc"></a></p>
+  </section>
+
+  <section id="idCppssuntFcnOprLgc">
+  <h4 id="idCppssuntFcnOprLgcH4">src-operator.LOGICAL
+    <a class="clsHide" href="#idCppssuntFcnOprLgcH4"></a></h4>
+  <p id="idCppssuntFcnOprLgcnam">name::
+    <br>* cpt.C++-src-operator.logical,
+    <a class="clsHide" href="#idCppssuntFcnOprLgcnam"></a></p>
+  <p id="idCppssuntFcnOprLgcSpc">specific::
+    <br>* && logical-AND	expr1 && expr2
+    <br>* || logical-OR	expr1 || expr2
+    <br>* !	logical-NOT	!expr
+    <br>* ^	logical-XOR	expr1 ^ expr2
+    <a class="clsHide" href="#idCppssuntFcnOprLgcSpc"></a></p>
+  </section>
+
+  <section id="idCppssuntFcnOprRlt">
+  <h4 id="idCppssuntFcnOprRltH4">src-operator.RELATIONAL
+    <a class="clsHide" href="#idCppssuntFcnOprRltH4"></a></h4>
+  <p id="idCppssuntFcnOprRltnam">name::
+    <br>* cpt.C++-src-operator.relational,
+    <a class="clsHide" href="#idCppssuntFcnOprRltnam"></a></p>
+  <p id="idCppssuntFcnOprRltSpc">specific::
+    <br>* ==	equal-to	expr1 == expr2,
+    <br>* !=	not-equal-to	expr1 != expr2,
+    <br>* >	greater-than	expr1 > expr2,
+    <br>* >=	greater-than-or-equal-to	expr1 >= expr2,
+    <br>* &lt;	less-than	expr1 &lt; expr2,
+    <br>* &lt;=	less-than-or-equal-to	expr1 &lt;= expr2,
+    <a class="clsHide" href="#idCppssuntFcnOprRltSpc"></a></p>
+  </section>
+
   <section id="idCppssuntFcnOprSizeof">
   <h4 id="idCppssuntFcnOprSizeofH4">src-operator.sizeof
     <a class="clsHide" href="#idCppssuntFcnOprSizeofH4"></a></h4>
@@ -590,6 +650,91 @@
     <a class="clsHide" href="#idCppssuntFcnOprSizeofnam"></a></p>
   </section>
   </section>
+
+  <section id="idCppssuntFcnMath">
+  <h3 id="idCppssuntFcnMathH3">src-f.MATH
+    <a class="clsHide" href="#idCppssuntFcnMathH3"></a></h3>
+  <p id="idCppssuntFcnMathdsn">description::
+    <br>· &lt;cmath> library contains many common-used Mathematical functions.
+    <a class="clsHide" href="#idCppssuntFcnMathdsn"></a></p>
+  <p id="idCppssuntFcnMathnam">name::
+    <br>* cpt.C++-src-f.math,
+    <a class="clsHide" href="#idCppssuntFcnMathnam"></a></p>
+  </section>
+
+  <section id="idCppssuntFcnMain">
+  <h3 id="idCppssuntFcnMainH3">src-f.main
+    <a class="clsHide" href="#idCppssuntFcnMainH3"></a></h3>
+  <p id="idCppssuntFcnMainnam">name::
+    <br>* cpt.C++-src-f.main,
+    <a class="clsHide" href="#idCppssuntFcnMainnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCppssuntArr">
+  <h2 id="idCppssuntArrH2">src-sem-unit.ARRAY (a)
+    <a class="clsHide" href="#idCppssuntArrH2"></a></h2>
+  <p id="idCppssuntArrdsn">description::
+    <br>· source-array is an ordered list of <a class="clsPreview" href="#idCppssunt">src-sem-units</a> of the same <a class="clsPreview" href="#idCppssuntType">type</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-07]
+    <a class="clsHide" href="#idCppssuntArrdsn"></a></p>
+  <p id="idCppssuntArrnam">name::
+    <br>* cpt.C++'array.source,
+    <br>* cpt.C++-src-a,
+    <br>* cpt.C++-src-array,
+    <br>* cpt.C++-src-sem-unit.array,
+    <a class="clsHide" href="#idCppssuntArrnam"></a></p>
+
+  <section id="idCppssuntArrdfn">
+  <h3 id="idCppssuntArrdfnH3">definition of src-array
+    <a class="clsHide" href="#idCppssuntArrdfnH3"></a></h3>
+  <p id="idCppssuntArrdfndsn">description::
+    <br>· type arrayname[arraylength];
+    <a class="clsHide" href="#idCppssuntArrdfndsn"></a></p>
+  </section>
+  </section>
+
+  <section id="idCppssuntCls">
+  <h2 id="idCppssuntClsH2">src-sem-unit.CLASS (c)
+    <a class="clsHide" href="#idCppssuntClsH2"></a></h2>
+  <p id="idCppssuntClsdsn">description::
+    <br>·
+    <a class="clsHide" href="#idCppssuntClsdsn"></a></p>
+  <p id="idCppssuntClsnam">name::
+    <br>* cpt.C++'class.source,
+    <br>* cpt.C++-src-sem-unit.c,
+    <br>* cpt.C++-src-sem-unit.class,
+    <a class="clsHide" href="#idCppssuntClsnam"></a></p>
+  </section>
+
+  <section id="idCppssuntEnum">
+  <h2 id="idCppssuntEnumH2">src-sem-unit.ENUMERATION (e)
+    <a class="clsHide" href="#idCppssuntEnumH2"></a></h2>
+  <p id="idCppssuntEnumdsn">description::
+    <br>· source-enumeration is a-set of <a class="clsPreview" href="#idCppssuntNmdCnst">constants</a>.
+    <a class="clsHide" href="#idCppssuntEnumdsn"></a></p>
+  <p id="idCppssuntEnumnam">name::
+    <br>* cpt.C++'enumeration.source,
+    <br>* cpt.C++-src-sem-unit.e,
+    <br>* cpt.C++-src-sem-unit.enum,
+    <br>* cpt.C++-src-sem-unit.enumeration,
+    <a class="clsHide" href="#idCppssuntEnumnam"></a></p>
+  </section>
+
+  <section id="idCppssuntStrct">
+  <h2 id="idCppssuntStrctH2">src-sem-unit.STRUCTURE (sc)
+    <a class="clsHide" href="#idCppssuntStrctH2"></a></h2>
+  <p id="idCppssuntStrctdsn">description::
+    <br>· source-structure is a-set of non-functions <a class="clsPreview" href="#idCppssunt">src-sem-units</a>.
+    <br>· <a class="clsPreview" href="#idCppssuntCls">a-class</a> contains and <a class="clsPreview" href="#idCppssuntFcn">functions</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-07]
+    <a class="clsHide" href="#idCppssuntStrctdsn"></a></p>
+  <p id="idCppssuntStrctnam">name::
+    <br>* cpt.C++'structure.source,
+    <br>* cpt.C++-src-sem-unit.sc,
+    <br>* cpt.C++-src-sem-unit.struct,
+    <br>* cpt.C++-src-sem-unit.structure,
+    <a class="clsHide" href="#idCppssuntStrctnam"></a></p>
   </section>
 
   <section id="idCppssuntNmd">
@@ -646,9 +791,10 @@
   <h4 id="idCppssuntNmdVarvalH4">value of src-variable
     <a class="clsHide" href="#idCppssuntNmdVarvalH4"></a></h4>
   <p id="idCppssuntNmdVarvaldsn">description::
-    <br>· value of <a class="clsPreview" href="#idCppssuntNmdVar">a-src-variable</a> is its specific <a class="clsPreview" href="#idCppssunt">src-sem-unit</a> which associated with the-name of this <a class="clsPreview" href="#idCppssuntNmdVar">variable</a>.
+    <br>· value of <a class="clsPreview" href="#idCppssuntNmdVar">a-src-variable</a> is its specific <a class="clsPreview" href="#idCppssunt">src-sem-unit</a> which is-associated with the-name of this <a class="clsPreview" href="#idCppssuntNmdVar">variable</a>.
     <a class="clsHide" href="#idCppssuntNmdVarvaldsn"></a></p>
   <p id="idCppssuntNmdVarvalnam">name::
+    <br>* cpt.C++'value-of-src-variable,
     <br>* cpt.C++-src-variable'value,
     <a class="clsHide" href="#idCppssuntNmdVarvalnam"></a></p>
   </section>
@@ -660,6 +806,7 @@
     <br>· type of <a class="clsPreview" href="#idCppssuntNmdVar">a-src-variable</a> is type of <a class="clsPreview" href="#idCppssuntNmdVarval">the-values</a> of the-variable.
     <a class="clsHide" href="#idCppssuntNmdVartypedsn"></a></p>
   <p id="idCppssuntNmdVartypenam">name::
+    <br>* cpt.C++'type-of-src-variable,
     <br>* cpt.C++-src-variable'type,
     <a class="clsHide" href="#idCppssuntNmdVartypenam"></a></p>
   </section>
@@ -838,6 +985,33 @@
     <br>* cpt.C++-src-operator.assignment,
     <a class="clsHide" href="#idCppsstcAsntoprnam"></a></p>
   </section>
+  </section>
+
+  <section id="idCppsstcCdtn">
+  <h2 id="idCppsstcCdtnH2">src-sentence.CONDITIONAL
+    <a class="clsHide" href="#idCppsstcCdtnH2"></a></h2>
+  <p id="idCppsstcCdtnnam">name::
+    <br>* cpt.C++-src-sentence.conditional,
+    <br>* cpt.C++-src-sentence.decision,
+    <a class="clsHide" href="#idCppsstcCdtnnam"></a></p>
+  <p id="idCppsstcCdtnSpc">specific::
+    <br>* if,
+    <br>* switch,
+    <a class="clsHide" href="#idCppsstcCdtnSpc"></a></p>
+  </section>
+
+  <section id="idCppsstcLoop">
+  <h2 id="idCppsstcLoopH2">src-sentence.LOOP
+    <a class="clsHide" href="#idCppsstcLoopH2"></a></h2>
+  <p id="idCppsstcLoopnam">name::
+    <br>* cpt.C++-src-sentence.iteration,
+    <br>* cpt.C++-src-sentence.loop,
+    <a class="clsHide" href="#idCppsstcLoopnam"></a></p>
+  <p id="idCppsstcLoopSpc">specific::
+    <br>* for,
+    <br>* do,
+    <br>* while,
+    <a class="clsHide" href="#idCppsstcLoopSpc"></a></p>
   </section>
 
   <section id="idCppsstcPpdv">
@@ -1165,6 +1339,7 @@
   <p id="idCpptoolCplrGccwpa">addressWpg::
     <br>* <a href="https://gcc.gnu.org/">https://gcc.gnu.org/</a>,
     <br>* book: An Introduction to GCC: <a href="http://www.network-theory.co.uk/docs/gccintro/index.html">http://www.network-theory.co.uk/</a>,
+    <br>* <a href="https://www.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html">https://www.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html</a>,
     <a class="clsHide" href="#idCpptoolCplrGccwpa"></a></p>
   </section>
   </section>
