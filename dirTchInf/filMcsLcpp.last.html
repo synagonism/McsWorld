@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.C++-language (C++.0-6-0.2018-03-06 pre-published)</title>
-  <meta name="keywords" content="C++, ModelConceptStructured, Mcs, ModelInfoWorld, Worldview, Mws, Hitp, Kaseluris.Nikos.1959, Synagonism">
+  <title>Mcs.C++-language (C++.0-7-0.2018-03-08 pre-published)</title>
+  <meta name="keywords" content="C++, ModelConceptStructured, Mcs, Hitp, Kaseluris.Nikos.1959, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
 
@@ -67,11 +67,12 @@
     <br>· each location has an-address.
     <br>· a-32-bit-computer uses 32-bit (4 bytes) to give names|numbers to these addresses.
     <br>· the-quantity of locations|addresses in a-32-bit-machine is 2^32 = 4,294,967,296.
-    <br>· also each location has 8 bits (1 byte) to store info|data|values.
+    <br>· also each location has 8 bits (1 byte) to store info|data|values|content.
     <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-06]
     <a class="clsHide" href="#idCppalgmemdsn"></a></p>
   <p id="idCppalgmemnam">name::
     <br>* cpt.C++-algo'memory,
+    <br>* cpt.C++-memory-of-computer,
     <a class="clsHide" href="#idCppalgmemnam"></a></p>
   </section>
 
@@ -675,7 +676,7 @@
   <h2 id="idCppssuntArrH2">src-sem-unit.ARRAY (a)
     <a class="clsHide" href="#idCppssuntArrH2"></a></h2>
   <p id="idCppssuntArrdsn">description::
-    <br>· source-array is an ordered list of <a class="clsPreview" href="#idCppssunt">src-sem-units</a> of the same <a class="clsPreview" href="#idCppssuntType">type</a>.
+    <br>· source-array is an ordered set of <a class="clsPreview" href="#idCppssunt">src-sem-units</a> of the same <a class="clsPreview" href="#idCppssuntType">type</a>.
     <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-07]
     <a class="clsHide" href="#idCppssuntArrdsn"></a></p>
   <p id="idCppssuntArrnam">name::
@@ -698,13 +699,113 @@
   <h2 id="idCppssuntClsH2">src-sem-unit.CLASS (c)
     <a class="clsHide" href="#idCppssuntClsH2"></a></h2>
   <p id="idCppssuntClsdsn">description::
-    <br>·
+    <br>· source-class is a-set of <a class="clsPreview" href="#idCppssuntPrcs">process</a> and <a class="clsPreview" href="#idCppssuntPrcsN">non-process</a> <a class="clsPreview" href="#idCppssunt">src-sem-units</a>.
+    <br>· instances of class are-called objects.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-08]
     <a class="clsHide" href="#idCppssuntClsdsn"></a></p>
   <p id="idCppssuntClsnam">name::
     <br>* cpt.C++'class.source,
+    <br>* cpt.C++-class,
+    <br>* cpt.C++-src-class,
     <br>* cpt.C++-src-sem-unit.c,
     <br>* cpt.C++-src-sem-unit.class,
     <a class="clsHide" href="#idCppssuntClsnam"></a></p>
+
+  <section id="idCppssuntClsdfn">
+  <h3 id="idCppssuntClsdfnH3">definition of src-class
+    <a class="clsHide" href="#idCppssuntClsdfnH3"></a></h3>
+  <p id="idCppssuntClsdfndsn">description::
+    <br><code>class cCircle {
+    <br> &nbsp;private:
+    <br> &nbsp; &nbsp;double nRadius;
+    <br> &nbsp; &nbsp;string sColor;
+    <br> &nbsp;public:
+    <br> &nbsp; &nbsp;double fRadiusGet();
+    <br> &nbsp; &nbsp;double fAreaGet();
+    <br>};</code>
+    <a class="clsHide" href="#idCppssuntClsdfndsn"></a></p>
+  <p id="idCppssuntClsdfnnam">name::
+    <br>* cpt.C++-class'definition,
+    <a class="clsHide" href="#idCppssuntClsdfnnam"></a></p>
+  </section>
+
+  <section id="idCppssuntClsmbr">
+  <h3 id="idCppssuntClsmbrH3">member of src-class
+    <a class="clsHide" href="#idCppssuntClsmbrH3"></a></h3>
+  <p id="idCppssuntClsmbrdsn">description::
+    <br>· member of <a class="clsPreview" href="#idCppssuntCls">a-class</a>[a] is-called any element of the-set of src-sem-units that make it[a].
+    <a class="clsHide" href="#idCppssuntClsmbrdsn"></a></p>
+  <p id="idCppssuntClsmbrnam">name::
+    <br>* cpt.C++-class'member,
+    <a class="clsHide" href="#idCppssuntClsmbrnam"></a></p>
+
+  <section id="idCppssuntClsmbrFcn">
+  <h4 id="idCppssuntClsmbrFcnH4">class-member.FUNCTION
+    <a class="clsHide" href="#idCppssuntClsmbrFcnH4"></a></h4>
+  <p id="idCppssuntClsmbrFcnnam">name::
+    <br>* cpt.C++-class'member.function,
+    <br>* cpt.C++-class'method,
+    <br>* cpt.C++-class'function-member,
+    <a class="clsHide" href="#idCppssuntClsmbrFcnnam"></a></p>
+
+  <section id="idCppssuntClsmbrFcnCstr">
+  <h4 id="idCppssuntClsmbrFcnCstrH4">class-function.CONSTRUCTOR
+    <a class="clsHide" href="#idCppssuntClsmbrFcnCstrH4"></a></h4>
+  <p id="idCppssuntClsmbrFcnCstrdsn">description::
+    <br>· costructor is a special <a class="clsPreview" href="#idCppssuntClsmbrFcn">class-function</a> that has the same name as the-classname, and which is-called implicitly when <a class="clsPreview" href="#idCppssuntClsObjt">an-object</a> is-created and initializes <a class="clsPreview" href="#idCppssuntClsmbrFcnN">the-non-function-members</a>.
+    <a class="clsHide" href="#idCppssuntClsmbrFcnCstrdsn"></a></p>
+  <p id="idCppssuntClsmbrFcnCstrnam">name::
+    <br>* cpt.C++-class-function.constructor,
+    <a class="clsHide" href="#idCppssuntClsmbrFcnCstrnam"></a></p>
+  </section>
+
+  <section id="idCppssuntClsmbrFcnDstr">
+  <h4 id="idCppssuntClsmbrFcnDstrH4">class-function.DESTRUCTOR
+    <a class="clsHide" href="#idCppssuntClsmbrFcnDstrH4"></a></h4>
+  <p id="idCppssuntClsmbrFcnDstrdsn">description::
+    <br>· destructor is a special <a class="clsPreview" href="#idCppssuntClsmbrFcn">class-function</a> that has the same name as the-classname, with the prefix ~, and which is-called implicitly when <a class="clsPreview" href="#idCppssuntClsObjt">an-object</a> is-destroyed.
+    <a class="clsHide" href="#idCppssuntClsmbrFcnDstrdsn"></a></p>
+  <p id="idCppssuntClsmbrFcnDstrnam">name::
+    <br>* cpt.C++-class-function.constructor,
+    <a class="clsHide" href="#idCppssuntClsmbrFcnDstrnam"></a></p>
+  </section>
+
+  <section id="idCppssuntClsmbrFcnCnst">
+  <h4 id="idCppssuntClsmbrFcnCnstH4">class-function.const
+    <a class="clsHide" href="#idCppssuntClsmbrFcnCnstH4"></a></h4>
+  <p id="idCppssuntClsmbrFcnCnstdsn">description::
+    <br>· a-const-class-function, identified by a const keyword at the-end of the-function's declaration, cannot-modifies any data-member of the-class-objects.
+    <a class="clsHide" href="#idCppssuntClsmbrFcnCnstdsn"></a></p>
+  <p id="idCppssuntClsmbrFcnCnstnam">name::
+    <br>* cpt.C++-class-function.const,
+    <a class="clsHide" href="#idCppssuntClsmbrFcnCnstnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCppssuntClsmbrFcnN">
+  <h4 id="idCppssuntClsmbrFcnNH4">class-member.FUNCTION.NO
+    <a class="clsHide" href="#idCppssuntClsmbrFcnNH4"></a></h4>
+  <p id="idCppssuntClsmbrFcnNnam">name::
+    <br>* cpt.C++-class'data-member,
+    <br>* cpt.C++-class'field,
+    <br>* cpt.C++-class'functionNo-member,
+    <br>* cpt.C++-class'member.functionNo,
+    <a class="clsHide" href="#idCppssuntClsmbrFcnNnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCppssuntClsObjt">
+  <h3 id="idCppssuntClsObjtH3">src-class.OBJECT
+    <a class="clsHide" href="#idCppssuntClsObjtH3"></a></h3>
+  <p id="idCppssuntClsObjtdsn">description::
+    <br>· object is-called an-instance of <a class="clsPreview" href="#idCppssuntCls">a-class</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-08]
+    <a class="clsHide" href="#idCppssuntClsObjtdsn"></a></p>
+  <p id="idCppssuntClsObjtnam">name::
+    <br>* cpt.C++'object,
+    <br>* cpt.C++-class.object,
+    <a class="clsHide" href="#idCppssuntClsObjtnam"></a></p>
+  </section>
   </section>
 
   <section id="idCppssuntEnum">
@@ -840,8 +941,12 @@
   </section>
 
   <section id="idCppssuntNmdPntr">
-  <h3 id="idCppssuntNmdPntrH3">src-sem-unit.POINTER
+  <h3 id="idCppssuntNmdPntrH3">src-sem-unit.POINTER (p)
     <a class="clsHide" href="#idCppssuntNmdPntrH3"></a></h3>
+  <p id="idCppssuntNmdPntrdsn">description::
+    <br>· pointer is <a class="clsPreview" href="#idCppssuntNmd">a-named-src-sem-unit</a> that stores <a class="clsPreview" href="#idCppalgmem">a-memory-address</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-08]
+    <a class="clsHide" href="#idCppssuntNmdPntrdsn"></a></p>
   <p id="idCppssuntNmdPntrnam">name::
     <br>* cpt.C++-p,
     <br>* cpt.C++-pointer-of--src-doc,
@@ -884,6 +989,49 @@
     <br>* cpt.C++-src-sem-unit.instanceNo,
     <br>* cpt.C++-src-sem-unit.type,
     <a class="clsHide" href="#idCppssuntTypenam"></a></p>
+  </section>
+
+  <section id="idCppssuntPrcs">
+  <h2 id="idCppssuntPrcsH2">src-sem-unit.PROCESS
+    <a class="clsHide" href="#idCppssuntPrcsH2"></a></h2>
+  <p id="idCppssuntPrcsdsn">description::
+    <br>· source-process-sem-unit is <a class="clsPreview" href="#idCppssunt">a-src-sem-unit</a> that describes a-process of information management.
+    <a class="clsHide" href="#idCppssuntPrcsdsn"></a></p>
+  <p id="idCppssuntPrcsnam">name::
+    <br>* cpt.C++-src-sem-unit.process,
+    <a class="clsHide" href="#idCppssuntPrcsnam"></a></p>
+  <p id="idCppssuntPrcsSpc">specific::
+    <br>* <a class="clsPreview" href="#idCppssuntFcn">function</a>,
+    <a class="clsHide" href="#idCppssuntPrcsSpc"></a></p>
+  </section>
+
+  <section id="idCppssuntPrcsN">
+  <h2 id="idCppssuntPrcsNH2">src-sem-unit.PROCESS.NO
+    <a class="clsHide" href="#idCppssuntPrcsNH2"></a></h2>
+  <p id="idCppssuntPrcsNnam">name::
+    <br>* cpt.C++-src-sem-unit.processNo,
+    <a class="clsHide" href="#idCppssuntPrcsNnam"></a></p>
+  <p id="idCppssuntPrcsNSpc">specific::
+    <br>* <a class="clsPreview" href="#idCppssuntArr">array</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntBool">boolean</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntChrtr">character</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntEnum">enumeration</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntNbr">number</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntStrg">string</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntStrct">structure</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntVoid">void</a>,
+    <a class="clsHide" href="#idCppssuntPrcsNSpc"></a></p>
+  </section>
+
+  <section id="idCppssuntPrcsB">
+  <h2 id="idCppssuntPrcsBH2">src-sem-unit.PROCESS-AND-PROCESS.NO
+    <a class="clsHide" href="#idCppssuntPrcsBH2"></a></h2>
+  <p id="idCppssuntPrcsBnam">name::
+    <br>* cpt.C++-src-sem-unit.process-and-processNo,
+    <a class="clsHide" href="#idCppssuntPrcsBnam"></a></p>
+  <p id="idCppssuntPrcsBSpc">specific::
+    <br>* <a class="clsPreview" href="#idCppssuntCls">class</a>,
+    <a class="clsHide" href="#idCppssuntPrcsBSpc"></a></p>
   </section>
 </section>
 
