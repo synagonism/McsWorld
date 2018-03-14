@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.C++-language (C++.0-9-0.2018-03-13 pre-published)</title>
+  <title>Mcs.C++-language (C++.0-10-0.2018-03-14 pre-published)</title>
   <meta name="keywords" content="C++, ModelConceptStructured, Mcs, Hitp, Kaseluris.Nikos.1959, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -1071,6 +1071,9 @@
     <br>* cpt.C++'namedNo-src-sem-unit,
     <br>* cpt.C++-src-sem-unit.namedNo,
     <a class="clsHide" href="#idCppssuntNmdNnam"></a></p>
+  <p id="idCppssuntNmdNSpc">specific::
+    <br>* anonymous-class,
+    <a class="clsHide" href="#idCppssuntNmdNSpc"></a></p>
   </section>
 
   <section id="idCppssuntLtrl">
@@ -1343,6 +1346,28 @@
     <br>* cpt.C++-src-section.block,
     <a class="clsHide" href="#idCppsdocscnBlknam"></a></p>
   </section>
+
+  <section id="idCppsdocscnNmsc">
+  <h2 id="idCppsdocscnNmscH2">src-section.NAMESPACE (ns)
+    <a class="clsHide" href="#idCppsdocscnNmscH2"></a></h2>
+  <p id="idCppsdocscnNmscdsn">description::
+    <br>· namespace is a-section of <a class="clsPreview" href="#idCppsdoc">a-source-document</a> which groups <a class="clsPreview" href="#idCppssuntNmd">named-src-sem-units</a> to avoid name collision.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-14]
+    <a class="clsHide" href="#idCppsdocscnNmscdsn"></a></p>
+  <p id="idCppsdocscnNmscnam">name::
+    <br>* cpt.C++'namespace,
+    <br>* cpt.C++-src-namespace,
+    <a class="clsHide" href="#idCppsdocscnNmscnam"></a></p>
+  <p id="idCppsdocscnNmscdfn">definition::
+    <br><code>namespace nsName {
+    <br> &nbsp;int ni; //named-src-sem-units
+    <br>}</code>
+    <br>· we refer to an-entity of this namespace as: nsName::ni
+    <a class="clsHide" href="#idCppsdocscnNmscdfn"></a></p>
+  <p id="idCppsdocscnNmscSpc">specific::
+    <br>* <a class="clsPreview" href="#idCppsdocLbrStdnmsc">std-namespace</a>,
+    <a class="clsHide" href="#idCppsdocscnNmscSpc"></a></p>
+  </section>
 </section>
 
 <section id="idCppsdocfile">
@@ -1514,6 +1539,19 @@
     <br>* <a href="https://en.wikipedia.org/wiki/C++_Standard_Library">https://en.wikipedia.org/wiki/C++_Standard_Library</a>,
     <a class="clsHide" href="#idCppsdocLbrStdwpa"></a></p>
 
+  <section id="idCppsdocLbrStdnmsc">
+  <h3 id="idCppsdocLbrStdnmscH3">namespace of standard-library
+    <a class="clsHide" href="#idCppsdocLbrStdnmscH3"></a></h3>
+  <p id="idCppsdocLbrStdnmscdsn">description::
+    <br>· the entire standard-C++-library exists in <a class="clsPreview" href="#idCppsdocscnNmsc">a-namespace</a> called std.
+    <br>[<a href="http://www.cs.sjsu.edu/~pearce/modules/lectures/cpp/advanced/libcp.htm">http://www.cs.sjsu.edu/~pearce/modules/lectures/cpp/advanced/libcp.htm</a>]
+    <a class="clsHide" href="#idCppsdocLbrStdnmscdsn"></a></p>
+  <p id="idCppsdocLbrStdnmscnam">name::
+    <br>* cpt.C++'namespace.std,
+    <br>* cpt.C++'std-namespace,
+    <a class="clsHide" href="#idCppsdocLbrStdnmscnam"></a></p>
+  </section>
+
   <section id="idCppsdocLbrStdhdr">
   <h3 id="idCppsdocLbrStdhdrH3">header-file of standard-library
     <a class="clsHide" href="#idCppsdocLbrStdhdrH3"></a></h3>
@@ -1521,6 +1559,9 @@
     <br>* cpt.C++-header-file.standard-library,
     <a class="clsHide" href="#idCppsdocLbrStdhdrnam"></a></p>
   <p id="idCppsdocLbrStdhdrSpc">specific::
+    <br>· the-src-sem-units of standard-library are-distributed among some 51 header-files.
+    <br>[<a href="http://www.cs.sjsu.edu/~pearce/modules/lectures/cpp/advanced/libcp.htm">http://www.cs.sjsu.edu/~pearce/modules/lectures/cpp/advanced/libcp.htm</a>]
+    <br>===
     <br>* Algorithms
     <br>&lt;algorithm>
     <br>* C Library Wrappers
@@ -1697,6 +1738,7 @@
     <a class="clsHide" href="#idCpptoolCplrnam"></a></p>
   <p id="idCpptoolCplrSpc">specific::
     <br>* Popular C++ compilers are MinGW for Windows, XCode for macOS, and GCC on Linux.
+    <br>* <a href="http://cpp.sh/">cpp.sh-online-compiler</a>,
     <a class="clsHide" href="#idCpptoolCplrSpc"></a></p>
 
   <section id="idCpptoolCplrGcc">
@@ -1789,6 +1831,8 @@
     <br>* Chua-Hock-Chuan programing notes: <a href="https://www.ntu.edu.sg/home/ehchua/programming/index.html#Cpp">https://www.ntu.edu.sg/</a>,
     <br>* wikibooks.org: <a href="https://en.wikibooks.org/wiki/C%2B%2B_Programming">https://en.wikibooks.org/wiki/C++_Programming</a>,
     <br>* C++ Language Reference: <a href="https://msdn.microsoft.com/en-us/library/3bstk3k5.aspx">https://msdn.microsoft.com/</a>,
+    <br>* <a href="https://www.tutorialspoint.com/cplusplus/index.htm">tutorialspoint.com</a>,
+    <br>* <a href="https://www.geeksforgeeks.org/c-plus-plus/">geeksforgeeks.org</a>,
     <a class="clsHide" href="#idCpprscTtrlwpa"></a></p>
   </section>
 </section>
