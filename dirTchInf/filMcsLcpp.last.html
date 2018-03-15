@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.C++-language (C++.0-10-0.2018-03-14 pre-published)</title>
+  <title>Mcs.C++-language (C++.0-11-0.2018-03-15 pre-published)</title>
   <meta name="keywords" content="C++, ModelConceptStructured, Mcs, Hitp, Kaseluris.Nikos.1959, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -245,17 +245,32 @@
   <h3 id="idCppssuntChrtrCharH3">src-sem-unit.char
     <a class="clsHide" href="#idCppssuntChrtrCharH3"></a></h3>
   <p id="idCppssuntChrtrCharnam">name::
+    <br>* cpt.C++'narrow-character,
+    <br>* cpt.C++'ordinary-character,
     <br>* cpt.C++-src-sem-unit.char,
     <a class="clsHide" href="#idCppssuntChrtrCharnam"></a></p>
 
-  <section id="idCppssuntChrtrChar">
-  <h4 id="idCppssuntChrtrCharH4">char-literal
-    <a class="clsHide" href="#idCppssuntChrtrCharH4"></a></h4>
-  <p id="idCppssuntChrtrCharexpl">example::
-    <br><code>char cr = 'a';
-    <br>char cr2 = 98; // same as letter b</code>
-    <a class="clsHide" href="#idCppssuntChrtrCharexpl"></a></p>
+  <section id="idCppssuntChrtrCharltrl">
+  <h4 id="idCppssuntChrtrCharltrlH4">char-literal
+    <a class="clsHide" href="#idCppssuntChrtrCharltrlH4"></a></h4>
+  <p id="idCppssuntChrtrCharltrlexpl">example::
+    <br><code>char ch = 'a';
+    <br>char ch2 = 98; // same as letter b</code>
+    <a class="clsHide" href="#idCppssuntChrtrCharltrlexpl"></a></p>
   </section>
+  </section>
+
+  <section id="idCppssuntChrtrWchar">
+  <h3 id="idCppssuntChrtrWcharH3">src-sem-unit.wchar_t (chw)
+    <a class="clsHide" href="#idCppssuntChrtrWcharH3"></a></h3>
+  <p id="idCppssuntChrtrWchardsn">description::
+    <br>·
+    <a class="clsHide" href="#idCppssuntChrtrWchardsn"></a></p>
+  <p id="idCppssuntChrtrWcharnam">name::
+    <br>* cpt.C++'wchar_t,
+    <br>* cpt.C++'wide-character,
+    <br>* cpt.C++-src-sem-unit.wchar_t,
+    <a class="clsHide" href="#idCppssuntChrtrWcharnam"></a></p>
   </section>
   </section>
 
@@ -881,6 +896,18 @@
     <a class="clsHide" href="#idCppssuntStrctnam"></a></p>
   </section>
 
+  <section id="idCppssuntTlt">
+  <h2 id="idCppssuntTltH2">src-sem-unit.TEMPLATE (t)
+    <a class="clsHide" href="#idCppssuntTltH2"></a></h2>
+  <p id="idCppssuntTltSpc">specific::
+    <br>* source-template is a-function or class with one or more types not yet specified.
+    <a class="clsHide" href="#idCppssuntTltSpc"></a></p>
+  <p id="idCppssuntTltnam">name::
+    <br>* cpt.C++'template.source,
+    <br>* cpt.C++-src-sem-unit.template
+    <a class="clsHide" href="#idCppssuntTltnam"></a></p>
+  </section>
+
   <section id="idCppssuntNmd">
   <h2 id="idCppssuntNmdH2">src-sem-unit.NAMED
     <a class="clsHide" href="#idCppssuntNmdH2"></a></h2>
@@ -931,6 +958,26 @@
     <br>* cpt.C++'scope-of-named-src-sem-unit,
     <br>* cpt.C++-named-src-sem-unit'scope,
     <a class="clsHide" href="#idCppssuntNmdscpnam"></a></p>
+  </section>
+
+  <section id="idCppssuntNmdSpc">
+  <h3 id="idCppssuntNmdSpcH3">named-src-sem-unit.SPECIFIC
+    <a class="clsHide" href="#idCppssuntNmdSpcH3"></a></h3>
+  <p id="idCppssuntNmdSpcnam">name::
+    <br>* cpt.C++-named-src-sem-unit.specific,
+    <a class="clsHide" href="#idCppssuntNmdSpcnam"></a></p>
+  <p id="idCppssuntNmdSpcP1">specific::
+    <br>* <a class="clsPreview" href="#idCppssuntArr">array</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntCls">class</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntNmdCnst">constant</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntFcn">function</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntNmdPntr">pointer</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntNmdRfrc">reference</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntNmdVar">variable</a>,
+    <br>=== specific-division on value-modification
+    <br>* <a class="clsPreview" href="#idCppssuntNmdCnst">constant</a>,
+    <br>* <a class="clsPreview" href="#idCppssuntNmdVar">variable</a>,
+    <a class="clsHide" href="#idCppssuntNmdSpcP1"></a></p>
   </section>
 
   <section id="idCppssuntNmdVar">
@@ -1297,9 +1344,11 @@
     <a class="clsHide" href="#idCppsstcTypedefH2"></a></h2>
   <p id="idCppsstcTypedefdsn">description::
     <br>· typedef sentence defines a new type.
+    <br>· syntax: <code>typedef type newtype</code>
     <br>· example: <code>typedef unsigned int intu</code>
     <a class="clsHide" href="#idCppsstcTypedefdsn"></a></p>
   <p id="idCppsstcTypedefnam">name::
+    <br>* cpt.C++'typedef-sentence,
     <br>* cpt.C++-src-sentence.typedef,
     <a class="clsHide" href="#idCppsstcTypedefnam"></a></p>
   </section>
