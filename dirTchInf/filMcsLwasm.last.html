@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-3-0.2018-03-20 draft)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-4-0.2018-03-21 draft)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -94,6 +94,14 @@
     <br>* cpt.Wasm'value-stack,
     <a class="clsHide" href="#idWasmalgmchnstknam"></a></p>
   </section>
+
+  <section id="idWasmalgmchnmmr">
+  <h2 id="idWasmalgmchnmmrH2">memory of Wasm-machine
+    <a class="clsHide" href="#idWasmalgmchnmmrH2"></a></h2>
+  <p id="idWasmalgmchnmmrnam">name::
+    <br>* cpt.Wasm'memory,
+    <a class="clsHide" href="#idWasmalgmchnmmrnam"></a></p>
+  </section>
 </section>
 
 <section id="idWasmalgunt">
@@ -110,6 +118,79 @@
   <p id="idWasmalgsuntnam">name::
     <br>* cpt.Wasm'semantic-unit-of-algo,
     <a class="clsHide" href="#idWasmalgsuntnam"></a></p>
+
+  <section id="idWasmalgsuntI32">
+  <h2 id="idWasmalgsuntI32H2">algo-sem-unit.i32
+    <a class="clsHide" href="#idWasmalgsuntI32H2"></a></h2>
+  </section>
+
+  <section id="idWasmalgsuntI64">
+  <h2 id="idWasmalgsuntI64H2">algo-sem-unit.i64
+    <a class="clsHide" href="#idWasmalgsuntI64H2"></a></h2>
+  </section>
+
+  <section id="idWasmalgsuntF32">
+  <h2 id="idWasmalgsuntF32H2">algo-sem-unit.f32
+    <a class="clsHide" href="#idWasmalgsuntF32H2"></a></h2>
+  </section>
+
+  <section id="idWasmalgsuntF64">
+  <h2 id="idWasmalgsuntF64H2">algo-sem-unit.f64
+    <a class="clsHide" href="#idWasmalgsuntF64H2"></a></h2>
+  </section>
+
+  <section id="idWasmalgsuntFcn">
+  <h2 id="idWasmalgsuntFcnH2">algo-sem-unit.FUNCTION
+    <a class="clsHide" href="#idWasmalgsuntFcnH2"></a></h2>
+  <p id="idWasmalgsuntFcnnam">name::
+    <br>* cpt.Wasm'function,
+    <br>* cpt.Wasm-func,
+    <a class="clsHide" href="#idWasmalgsuntFcnnam"></a></p>
+
+  <section id="idWasmalgsuntFcnpmr">
+  <h3 id="idWasmalgsuntFcnpmrH3">parameter of algo-function
+    <a class="clsHide" href="#idWasmalgsuntFcnpmrH3"></a></h3>
+  <p id="idWasmalgsuntFcnpmrnam">name::
+    <br>* cpt.Wasm'param-of-function,
+    <a class="clsHide" href="#idWasmalgsuntFcnpmrnam"></a></p>
+  </section>
+
+  <section id="idWasmalgsuntFcnrnvl">
+  <h3 id="idWasmalgsuntFcnrnvlH3">return-value of algo-function
+    <a class="clsHide" href="#idWasmalgsuntFcnrnvlH3"></a></h3>
+  <p id="idWasmalgsuntFcnrnvlnam">name::
+    <br>* cpt.Wasm'result-of-function,
+    <a class="clsHide" href="#idWasmalgsuntFcnrnvlnam"></a></p>
+  </section>
+
+  <section id="idWasmalgsuntFcnbody">
+  <h3 id="idWasmalgsuntFcnbodyH3">body of algo-function
+    <a class="clsHide" href="#idWasmalgsuntFcnbodyH3"></a></h3>
+  </section>
+
+  <section id="idWasmalgsuntFcncall">
+  <h3 id="idWasmalgsuntFcncallH3">calling of algo-function
+    <a class="clsHide" href="#idWasmalgsuntFcncallH3"></a></h3>
+  <p id="idWasmalgsuntFcncalldsn">description::
+    <br>· when a-function is-called, it starts with an empty <a class="clsPreview" href="#idWasmalgmchnstk">stack</a> which is gradually filled-up and emptied as the body’s instructions are-executed.
+    <a class="clsHide" href="#idWasmalgsuntFcncalldsn"></a></p>
+  <p id="idWasmalgsuntFcncallnam">name::
+    <br>* cpt.Wasm-function'calling,
+    <a class="clsHide" href="#idWasmalgsuntFcncallnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idWasmalgsuntTbl">
+  <h2 id="idWasmalgsuntTblH2">algo-sem-unit.TABLE
+    <a class="clsHide" href="#idWasmalgsuntTblH2"></a></h2>
+  <p id="idWasmalgsuntTbldsn">description::
+    <br>· tables are basically resizable arrays of references that can-be-accessed by index from WebAssembly-code.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format">https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format</a>]
+    <a class="clsHide" href="#idWasmalgsuntTbldsn"></a></p>
+  <p id="idWasmalgsuntTblnam">name::
+    <br>* cpt.Wasm'table,
+    <a class="clsHide" href="#idWasmalgsuntTblnam"></a></p>
+  </section>
 </section>
 
 <section id="idWasmalgstc">
@@ -119,6 +200,7 @@
     <br>· an-instruction consists of an-opcode followed by its immediate operands.
     <a class="clsHide" href="#idWasmalgstcdsn"></a></p>
   <p id="idWasmalgstcnam">name::
+    <br>* cpt.Wasm'command,
     <br>* cpt.Wasm'instruction,
     <br>* cpt.Wasm'sentence,
     <a class="clsHide" href="#idWasmalgstcnam"></a></p>
@@ -521,6 +603,53 @@
   </section>
 </section>
 
+<section id="idWasmalgTxt">
+  <h1 id="idWasmalgTxtH1">algo.text-format of Wasm
+    <a class="clsHide" href="#idWasmalgTxtH1"></a></h1>
+  <p id="idWasmalgTxtdsn">description::
+    <br>· WebAssembly has an-S-expression-based textual representation, an intermediate form designed to be-exposed in text-editors, browser-developer-tools, etc.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Text_format_to_wasm">https://developer.mozilla.org/en-US/docs/WebAssembly/Text_format_to_wasm</a>]
+    <a class="clsHide" href="#idWasmalgTxtdsn"></a></p>
+  <p id="idWasmalgTxtnam">name::
+    <br>* cpt.Wasm'textual-format,
+    <br>* cpt.Wasm-txt-algo,
+    <a class="clsHide" href="#idWasmalgTxtnam"></a></p>
+
+  <section id="idWasmalgTxtfile">
+  <h2 id="idWasmalgTxtfileH2">S-expression of txt-algo
+    <a class="clsHide" href="#idWasmalgTxtfileH2"></a></h2>
+  <p id="idWasmalgTxtfiledsn">description::
+    <br>· S-expressions are a very old and very simple textual-format for representing trees of nodes.
+    <br>· each node in the-tree goes inside a-pair of parentheses — ( ... ).
+    <br>· the first label inside the-parenthesis tells you what type of node it is, and after that there-is a space-separated list of either attributes or child-nodes.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format">https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format</a>]
+    <a class="clsHide" href="#idWasmalgTxtfiledsn"></a></p>
+  <p id="idWasmalgTxtfilenam">name::
+    <br>* cpt.Wasm'S-expression,
+    <a class="clsHide" href="#idWasmalgTxtfilenam"></a></p>
+  </section>
+
+  <section id="idWasmalgTxtfile">
+  <h2 id="idWasmalgTxtfileH2">file of txt-algo
+    <a class="clsHide" href="#idWasmalgTxtfileH2"></a></h2>
+  <p id="idWasmalgTxtfiledsn">description::
+    <br>· the recommended file-extension for WebAssembly code in textual-format is <code>.wat</code>.
+    <a class="clsHide" href="#idWasmalgTxtfiledsn"></a></p>
+  </section>
+
+  <section id="idWasmalgTxttbf">
+  <h2 id="idWasmalgTxttbfH2">converting-to-binary-format of txt-algo
+    <a class="clsHide" href="#idWasmalgTxttbfH2"></a></h2>
+  <p id="idWasmalgTxttbfnam">name::
+    <br>* cpt.Wasm'converting-text-to-binary-format,
+    <br>* cpt.Wasm'translating-text-to-binary-format,
+    <a class="clsHide" href="#idWasmalgTxttbfnam"></a></p>
+  <p id="idWasmalgTxttbfwpa">addressWpg::
+    <br>* wat2wasm: <a href="https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wat2wasm/">https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wat2wasm/</a>,
+    <a class="clsHide" href="#idWasmalgTxttbfwpa"></a></p>
+  </section>
+</section>
+
 <section id="idWasmalgBnr">
   <h1 id="idWasmalgBnrH1">algo.binary-format of Wasm
     <a class="clsHide" href="#idWasmalgBnrH1"></a></h1>
@@ -535,23 +664,6 @@
   <p id="idWasmalgBnrfiledsn">description::
     <br>· the-extention of a-Wasm-binary-file is <code>.wasm</code>.
     <a class="clsHide" href="#idWasmalgBnrfiledsn"></a></p>
-  </section>
-</section>
-
-<section id="idWasmalgTxt">
-  <h1 id="idWasmalgTxtH1">algo.text-format of Wasm
-    <a class="clsHide" href="#idWasmalgTxtH1"></a></h1>
-  <p id="idWasmalgTxtnam">name::
-    <br>* cpt.Wasm'textual-format,
-    <br>* cpt.Wasm-txt-algo,
-    <a class="clsHide" href="#idWasmalgTxtnam"></a></p>
-
-  <section id="idWasmalgTxtfile">
-  <h2 id="idWasmalgTxtfileH2">txt-algo'file of Wasm
-    <a class="clsHide" href="#idWasmalgTxtfileH2"></a></h2>
-  <p id="idWasmalgTxtfiledsn">description::
-    <br>· the recommended file-extension for WebAssembly code in textual-format is <code>.wat</code>.
-    <a class="clsHide" href="#idWasmalgTxtfiledsn"></a></p>
   </section>
 </section>
 
@@ -627,6 +739,7 @@
     <a class="clsHide" href="#idWasmrscFTH1"></a></h1>
   <p id="idWasmrscnam">Name::
     <br>* cpt.WebAssembly'resource,
+    <br>* cpt.Wasm'resource,
     <br>* cpt.WasmAeResource,
     <a class="clsHide" href="#idWasmrscnam"></a></p>
   <p id="idWasmrscwpa">addressWpg::
