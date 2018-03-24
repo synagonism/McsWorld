@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-6-0.2018-03-23 draft)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-7-0.2018-03-24 draft)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -123,6 +123,14 @@
   <p id="idWasmalguntnam">name::
     <br>* cpt.Wasm'unit-of-algo,
     <a class="clsHide" href="#idWasmalguntnam"></a></p>
+
+  <section id="idWasmalguntByte">
+  <h2 id="idWasmalguntByteH2">algo-unit.BYTE
+    <a class="clsHide" href="#idWasmalguntByteH2"></a></h2>
+  <p id="idWasmalguntBytenam">name::
+    <br>* cpt.Wasm'byte,
+    <a class="clsHide" href="#idWasmalguntBytenam"></a></p>
+  </section>
 </section>
 
 <section id="idWasmalgsunt">
@@ -130,26 +138,12 @@
     <a class="clsHide" href="#idWasmalgsuntH1"></a></h1>
   <p id="idWasmalgsuntnam">name::
     <br>* cpt.Wasm'semantic-unit-of-algo,
+    <br>* cpt.Wasm-sem-unit,
     <a class="clsHide" href="#idWasmalgsuntnam"></a></p>
 
-  <section id="idWasmalgsuntI32">
-  <h2 id="idWasmalgsuntI32H2">algo-sem-unit.i32
-    <a class="clsHide" href="#idWasmalgsuntI32H2"></a></h2>
-  </section>
-
-  <section id="idWasmalgsuntI64">
-  <h2 id="idWasmalgsuntI64H2">algo-sem-unit.i64
-    <a class="clsHide" href="#idWasmalgsuntI64H2"></a></h2>
-  </section>
-
-  <section id="idWasmalgsuntF32">
-  <h2 id="idWasmalgsuntF32H2">algo-sem-unit.f32
-    <a class="clsHide" href="#idWasmalgsuntF32H2"></a></h2>
-  </section>
-
-  <section id="idWasmalgsuntF64">
-  <h2 id="idWasmalgsuntF64H2">algo-sem-unit.f64
-    <a class="clsHide" href="#idWasmalgsuntF64H2"></a></h2>
+  <section id="idWasmalgsuntSpc">
+  <h2 id="idWasmalgsuntSpcH2">algo-sem-unit.SPECIFIC
+    <a class="clsHide" href="#idWasmalgsuntSpcH2"></a></h2>
   </section>
 
   <section id="idWasmalgsuntFcn">
@@ -161,7 +155,7 @@
     <a class="clsHide" href="#idWasmalgsuntFcnnam"></a></p>
 
   <section id="idWasmalgsuntFcnpmr">
-  <h3 id="idWasmalgsuntFcnpmrH3">parameter of algo-function
+  <h3 id="idWasmalgsuntFcnpmrH3">parameter of function
     <a class="clsHide" href="#idWasmalgsuntFcnpmrH3"></a></h3>
   <p id="idWasmalgsuntFcnpmrnam">name::
     <br>* cpt.Wasm'param-of-function,
@@ -170,7 +164,7 @@
   </section>
 
   <section id="idWasmalgsuntFcnrnvl">
-  <h3 id="idWasmalgsuntFcnrnvlH3">return-value of algo-function
+  <h3 id="idWasmalgsuntFcnrnvlH3">return-value of function
     <a class="clsHide" href="#idWasmalgsuntFcnrnvlH3"></a></h3>
   <p id="idWasmalgsuntFcnrnvlnam">name::
     <br>* cpt.Wasm'result-of-function,
@@ -179,7 +173,7 @@
   </section>
 
   <section id="idWasmalgsuntFcnsgtr">
-  <h3 id="idWasmalgsuntFcnsgtrH3">signature of algo-function
+  <h3 id="idWasmalgsuntFcnsgtrH3">signature of function
     <a class="clsHide" href="#idWasmalgsuntFcnsgtrH3"></a></h3>
   <p id="idWasmalgsuntFcnsgtrdsn">description::
     <br>· (func params returns)
@@ -190,7 +184,7 @@
   </section>
 
   <section id="idWasmalgsuntFcnbody">
-  <h3 id="idWasmalgsuntFcnbodyH3">body of algo-function
+  <h3 id="idWasmalgsuntFcnbodyH3">body of function
     <a class="clsHide" href="#idWasmalgsuntFcnbodyH3"></a></h3>
   <p id="idWasmalgsuntFcnbodydsn">description::
     <br>· the-body-of-a-function is a-sequence of instructions that describe the-process of the-function:
@@ -206,7 +200,7 @@
   </section>
 
   <section id="idWasmalgsuntFcncall">
-  <h3 id="idWasmalgsuntFcncallH3">calling of algo-function
+  <h3 id="idWasmalgsuntFcncallH3">calling of function
     <a class="clsHide" href="#idWasmalgsuntFcncallH3"></a></h3>
   <p id="idWasmalgsuntFcncalldsn">description::
     <br>· when a-function is-called, it starts with an empty <a class="clsPreview" href="#idWasmalgmchnstk">stack</a> which is gradually filled-up and emptied as the body’s instructions are-executed.
@@ -217,75 +211,135 @@
   </section>
   </section>
 
-  <section id="idWasmalgsuntVar">
-  <h2 id="idWasmalgsuntVarH2">algo-sem-unit.VARIABLE
-    <a class="clsHide" href="#idWasmalgsuntVarH2"></a></h2>
-  <p id="idWasmalgsuntVarnam">name::
-    <br>* cpt.Wasm'variable,
-    <a class="clsHide" href="#idWasmalgsuntVarnam"></a></p>
+  <section id="idWasmalgsuntFcnN">
+  <h2 id="idWasmalgsuntFcnNH2">algo-sem-unit.FUNCTION.NO
+    <a class="clsHide" href="#idWasmalgsuntFcnNH2"></a></h2>
+  <p id="idWasmalgsuntFcnNdsn">description::
+    <br>'Machine Types
+    <br>WebAssembly has only four basic value types t, all of which are available in common hardware.
+    <br>These are integers and IEEE 754 floating point numbers, each in 32 and 64 bit width.
+    <br>32 bit integers can be used as addresses in the linear memory (Section 2.2), and indexes into function tables (Section 2.4).
+    <br>Most WebAssembly instructions simply execute operators on values of these basic data types.
+    <br>The grammar in Figure 1 conveniently distinguishes several categories, such as unary and binary operators, tests and comparisons.
+    <br>WebAssembly provides conversions between all four types, and the ability to reinterpret the bits of values across equally-sized types.
+    <br>Like common hardware, WebAssembly has no distinction between signed and unsigned integer types.
+    <br>Instead, when the signedness of values matters to an instruction, a sign extension suffix u or s selects either unsigned or 2's complement signed behavior.'
+    <br>[<a href="https://github.com/WebAssembly/spec/blob/master/papers/pldi2017.pdf">https://github.com/WebAssembly/spec/blob/master/papers/pldi2017.pdf</a>]
+    <a class="clsHide" href="#idWasmalgsuntFcnNdsn"></a></p>
+  <p id="idWasmalgsuntFcnNnam">name::
+    <br>* cpt.Wasm'basic-data-type,
+    <br>* cpt.Wasm'machine-type,
+    <br>* cpt.Wasm'value-type,
+    <br>* cpt.Wasm-sem-unit.functionNo,
+    <a class="clsHide" href="#idWasmalgsuntFcnNnam"></a></p>
 
-  <section id="idWasmalgsuntVarGlbl">
-  <h3 id="idWasmalgsuntVarGlblH3">variable.GLOBAL
-    <a class="clsHide" href="#idWasmalgsuntVarGlblH3"></a></h3>
-  <p id="idWasmalgsuntVarGlblnam">name::
+  <section id="idWasmalgsuntI32">
+  <h3 id="idWasmalgsuntI32H3">algo-sem-unit.i32
+    <a class="clsHide" href="#idWasmalgsuntI32H3"></a></h3>
+  <p id="idWasmalgsuntI32nam">name::
+    <br>* cpt.Wasm'i32-sem-unit,
+    <br>* cpt.Wasm-sem-unit.i32,
+    <a class="clsHide" href="#idWasmalgsuntI32nam"></a></p>
+  </section>
+
+  <section id="idWasmalgsuntI64">
+  <h3 id="idWasmalgsuntI64H3">algo-sem-unit.i64
+    <a class="clsHide" href="#idWasmalgsuntI64H3"></a></h3>
+  <p id="idWasmalgsuntI64nam">name::
+    <br>* cpt.Wasm'i64-sem-unit,
+    <br>* cpt.Wasm-sem-unit.i64,
+    <a class="clsHide" href="#idWasmalgsuntI64nam"></a></p>
+  </section>
+
+  <section id="idWasmalgsuntF32">
+  <h3 id="idWasmalgsuntF32H3">algo-sem-unit.f32
+    <a class="clsHide" href="#idWasmalgsuntF32H3"></a></h3>
+  <p id="idWasmalgsuntF32nam">name::
+    <br>* cpt.Wasm'f32-sem-unit,
+    <br>* cpt.Wasm-sem-unit.f32,
+    <a class="clsHide" href="#idWasmalgsuntF32nam"></a></p>
+  </section>
+
+  <section id="idWasmalgsuntF64">
+  <h3 id="idWasmalgsuntF64H3">algo-sem-unit.f64
+    <a class="clsHide" href="#idWasmalgsuntF64H3"></a></h3>
+  <p id="idWasmalgsuntF64nam">name::
+    <br>* cpt.Wasm'f64-sem-unit,
+    <br>* cpt.Wasm-sem-unit.f64,
+    <a class="clsHide" href="#idWasmalgsuntF64nam"></a></p>
+  </section>
+  </section>
+
+  <section id="idWasmalgsuntNmd">
+  <h2 id="idWasmalgsuntNmdH2">algo-sem-unit.NAMED
+    <a class="clsHide" href="#idWasmalgsuntNmdH2"></a></h2>
+  <p id="idWasmalgsuntNmdnam">name::
+    <br>* cpt.Wasm'variable,
+    <br>* cpt.Wasm-sem-unit.named,
+    <a class="clsHide" href="#idWasmalgsuntNmdnam"></a></p>
+
+  <section id="idWasmalgsuntNmdGlbl">
+  <h3 id="idWasmalgsuntNmdGlblH3">variable.GLOBAL
+    <a class="clsHide" href="#idWasmalgsuntNmdGlblH3"></a></h3>
+  <p id="idWasmalgsuntNmdGlblnam">name::
     <br>* cpt.Wasm'global-variable,
     <br>* cpt.Wasm-variable.global,
-    <a class="clsHide" href="#idWasmalgsuntVarGlblnam"></a></p>
+    <a class="clsHide" href="#idWasmalgsuntNmdGlblnam"></a></p>
 
-  <section id="idWasmalgsuntVarGlbldlrn">
-  <h4 id="idWasmalgsuntVarGlbldlrnH4">declaration of global-variable
-    <a class="clsHide" href="#idWasmalgsuntVarGlbldlrnH4"></a></h4>
-  <p id="idWasmalgsuntVarGlbldlrndsn">description::
+  <section id="idWasmalgsuntNmdGlbldlrn">
+  <h4 id="idWasmalgsuntNmdGlbldlrnH4">declaration of global-variable
+    <a class="clsHide" href="#idWasmalgsuntNmdGlbldlrnH4"></a></h4>
+  <p id="idWasmalgsuntNmdGlbldlrndsn">description::
     <br>· a-global-declaration consists of:
     <br>Field-Name | Type | Description
     <br>desc | global description | a description of the global variable
     <br>init | instantiation-time initializer | the initial value of the global variable
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-section</a>]
-    <a class="clsHide" href="#idWasmalgsuntVarGlbldlrndsn"></a></p>
+    <a class="clsHide" href="#idWasmalgsuntNmdGlbldlrndsn"></a></p>
   </section>
 
-  <section id="idWasmalgsuntVarGlbldrpn">
-  <h4 id="idWasmalgsuntVarGlbldrpnH4">description of global-variable
-    <a class="clsHide" href="#idWasmalgsuntVarGlbldrpnH4"></a></h4>
-  <p id="idWasmalgsuntVarGlbldrpndsn">description::
+  <section id="idWasmalgsuntNmdGlbldrpn">
+  <h4 id="idWasmalgsuntNmdGlbldrpnH4">description of global-variable
+    <a class="clsHide" href="#idWasmalgsuntNmdGlbldrpnH4"></a></h4>
+  <p id="idWasmalgsuntNmdGlbldrpndsn">description::
     <br>Field Name | Type | Description
     <br>type | value type | the type of the global variable
     <br>mutability | varuint1 | 0 if immutable, 1 if mutable
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-description">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-description</a>]
-    <a class="clsHide" href="#idWasmalgsuntVarGlbldrpndsn"></a></p>
-  <p id="idWasmalgsuntVarGlbldrpnnam">name::
+    <a class="clsHide" href="#idWasmalgsuntNmdGlbldrpndsn"></a></p>
+  <p id="idWasmalgsuntNmdGlbldrpnnam">name::
     <br>* cpt.Wasm-global-variable'description,
-    <a class="clsHide" href="#idWasmalgsuntVarGlbldrpnnam"></a></p>
+    <a class="clsHide" href="#idWasmalgsuntNmdGlbldrpnnam"></a></p>
   </section>
 
-  <section id="idWasmalgsuntVarGlblidx">
-  <h4 id="idWasmalgsuntVarGlblidxH4">index of global-variable
-    <a class="clsHide" href="#idWasmalgsuntVarGlblidxH4"></a></h4>
-  <p id="idWasmalgsuntVarGlblidxdsn">description::
+  <section id="idWasmalgsuntNmdGlblidx">
+  <h4 id="idWasmalgsuntNmdGlblidxH4">index of global-variable
+    <a class="clsHide" href="#idWasmalgsuntNmdGlblidxH4"></a></h4>
+  <p id="idWasmalgsuntNmdGlblidxdsn">description::
     <br>· the-global-index starts with any imported-globals and continues incrementing with any globals defined in <a class="clsPreview" href="#idWasmalgscnGlbl">the-global-section</a>.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
-    <a class="clsHide" href="#idWasmalgsuntVarGlblidxdsn"></a></p>
-  <p id="idWasmalgsuntVarGlblidxnam">name::
+    <a class="clsHide" href="#idWasmalgsuntNmdGlblidxdsn"></a></p>
+  <p id="idWasmalgsuntNmdGlblidxnam">name::
     <br>* cpt.Wasm-global-variable'index,
-    <a class="clsHide" href="#idWasmalgsuntVarGlblidxnam"></a></p>
+    <a class="clsHide" href="#idWasmalgsuntNmdGlblidxnam"></a></p>
   </section>
   </section>
 
-  <section id="idWasmalgsuntVarLcl">
-  <h3 id="idWasmalgsuntVarLclH3">variable.LOCAL
-    <a class="clsHide" href="#idWasmalgsuntVarLclH3"></a></h3>
-  <p id="idWasmalgsuntVarLcldsn">description::
+  <section id="idWasmalgsuntNmdLcl">
+  <h3 id="idWasmalgsuntNmdLclH3">variable.LOCAL
+    <a class="clsHide" href="#idWasmalgsuntNmdLclH3"></a></h3>
+  <p id="idWasmalgsuntNmdLcldsn">description::
     <br>· locals are like variables in many higher-level-programming-languages: we can-name them, store values to them and load values from them.
     <br>· locals are-named using function-local integer index.
     <br>· when defining a-function-body, we can-declare any number of locals for the function's code.
     <br>· parameters to a-function are also locals and the “name” index of locals start at 0 with the first function parameter and continue incrementing with each additional parameter and eventually with each listed local of the-function-body.
     <br>· locals are always initialized to zero (all their bits are 0.)
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
-    <a class="clsHide" href="#idWasmalgsuntVarLcldsn"></a></p>
-  <p id="idWasmalgsuntVarLclnam">name::
+    <a class="clsHide" href="#idWasmalgsuntNmdLcldsn"></a></p>
+  <p id="idWasmalgsuntNmdLclnam">name::
     <br>* cpt.Wasm'local-variable,
     <br>* cpt.Wasm-variable.local,
-    <a class="clsHide" href="#idWasmalgsuntVarLclnam"></a></p>
+    <a class="clsHide" href="#idWasmalgsuntNmdLclnam"></a></p>
   </section>
   </section>
 
@@ -321,12 +375,13 @@
 </section>
 
 <section id="idWasmalgstc">
-  <h1 id="idWasmalgstcH1">algo-sentence of Wasm
+  <h1 id="idWasmalgstcH1">algo-sentence (instruction) of Wasm
     <a class="clsHide" href="#idWasmalgstcH1"></a></h1>
   <p id="idWasmalgstcdsn">description::
     <br>· an-instruction consists of an-opcode followed by its immediate operands.
     <a class="clsHide" href="#idWasmalgstcdsn"></a></p>
   <p id="idWasmalgstcnam">name::
+    <br>* cpt.Wasm'bytecode,
     <br>* cpt.Wasm'command,
     <br>* cpt.Wasm'instruction,
     <br>* cpt.Wasm'sentence,
@@ -335,6 +390,12 @@
   <section id="idWasmalgstcopcd">
   <h2 id="idWasmalgstcopcdH2">opcode of sentence
     <a class="clsHide" href="#idWasmalgstcopcdH2"></a></h2>
+  <p id="idWasmalgstcopcddsn">description::
+    <br>'WebAssembly is not a large language.
+    <br>Its official specification defines 171 individual opcodes, but each of these can be viewed as different specialisations of the 28 abstract operations specified in the working group’s paper.
+    <br>All WebAssembly behaviour is specified at the level of abstract operations, not concrete opcodes.'
+    <br>[<a href="https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf">https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf</a>]
+    <a class="clsHide" href="#idWasmalgstcopcddsn"></a></p>
   <p id="idWasmalgstcopcdnam">name::
     <br>* cpt.Wasm'opcode-of-instruction,
     <br>* cpt.Wasm-sentence'opcode,
@@ -342,8 +403,158 @@
     <a class="clsHide" href="#idWasmalgstcopcdnam"></a></p>
 
   <section id="idWasmalgstcmnc">
-  <h3 id="idWasmalgstcmncH3">mnemonic of sentence
+  <h3 id="idWasmalgstcmncH3">mnemonic of opcode
     <a class="clsHide" href="#idWasmalgstcmncH3"></a></h3>
+  </section>
+
+  <section id="idWasmalgopcdSpc">
+  <h3 id="idWasmalgopcdSpcH3">opcode.SPECIFIC
+    <a class="clsHide" href="#idWasmalgopcdSpcH3"></a></h3>
+  <p id="idWasmalgopcdSpcSpc">specific::
+    <br>* opcode.block: the beginning of a block construct, a sequence of instructions with a label at the end
+    <br>* opcode.br: branch to a given label in an enclosing construct
+    <br>* opcode.br_if: conditionally branch to a given label in an enclosing construct
+    <br>* opcode.br_table: a jump table which jumps to a label in an enclosing construct
+    <br>* opcode.call: call function directly
+    <br>* opcode.call_indirect: call function indirectly
+    <br>* opcode.current_memory : return the current memory size in units of pages.
+    <br>* opcode.drop: a unary operator that discards the value of its operand.
+    <br>* opcode.else: marks the else block of an if
+    <br>* opcode.end: an instruction that marks the end of a block, loop, if, or function
+    <br>* opcode.f32.abs: absolute value
+    <br>* opcode.f32.add: addition
+    <br>* opcode.f32.ceil: ceiling operator
+    <br>* opcode.f32.const: produce the value of an f32 immediate
+    <br>* opcode.f32.convert_s/i32: convert a signed 32-bit integer to a 32-bit float
+    <br>* opcode.f32.convert_s/i64: convert a signed 64-bit integer to a 32-bit float
+    <br>* opcode.f32.convert_u/i32: convert an unsigned 32-bit integer to a 32-bit float
+    <br>* opcode.f32.convert_u/i64: convert an unsigned 64-bit integer to a 32-bit float
+    <br>* opcode.f32.copysign: copysign
+    <br>* opcode.f32.demote/f64: demote a 64-bit float to a 32-bit float
+    <br>* opcode.f32.div: division
+    <br>* opcode.f32.eq: compare ordered and equal
+    <br>* opcode.f32.floor: floor operator
+    <br>* opcode.f32.ge: compare ordered and greater than or equal
+    <br>* opcode.f32.gt: compare ordered and greater than
+    <br>* opcode.f32.le: compare ordered and less than or equal
+    <br>* opcode.f32.load: load 4 bytes as f32
+    <br>* opcode.f32.lt: compare ordered and less than
+    <br>* opcode.f32.max: maximum (binary operator); if either operand is NaN, returns NaN
+    <br>* opcode.f32.min: minimum (binary operator); if either operand is NaN, returns NaN
+    <br>* opcode.f32.mul: multiplication
+    <br>* opcode.f32.ne: compare unordered or unequal
+    <br>* opcode.f32.nearest: round to nearest integer, ties to even
+    <br>* opcode.f32.neg: negation
+    <br>* opcode.f32.reinterpret/i32: reinterpret the bits of a 32-bit integer as a 32-bit float
+    <br>* opcode.f32.sqrt: square root
+    <br>* opcode.f32.store: (no conversion) store 4 bytes
+    <br>* opcode.f32.sub: subtraction
+    <br>* opcode.f32.trunc: round to nearest integer towards zero
+    <br>* opcode.f64.abs: absolute value
+    <br>* opcode.f64.add: addition
+    <br>* opcode.f64.ceil: ceiling operator
+    <br>* opcode.f64.const: produce the value of an f64 immediate
+    <br>* opcode.f64.convert_s/i32: convert a signed 32-bit integer to a 64-bit float
+    <br>* opcode.f64.convert_s/i64: convert a signed 64-bit integer to a 64-bit float
+    <br>* opcode.f64.convert_u/i32: convert an unsigned 32-bit integer to a 64-bit float
+    <br>* opcode.f64.convert_u/i64: convert an unsigned 64-bit integer to a 64-bit float
+    <br>* opcode.f64.copysign: copysign
+    <br>* opcode.f64.div: division
+    <br>* opcode.f64.eq: compare ordered and equal
+    <br>* opcode.f64.floor: floor operator
+    <br>* opcode.f64.ge: compare ordered and greater than or equal
+    <br>* opcode.f64.gt: compare ordered and greater than
+    <br>* opcode.f64.le: compare ordered and less than or equal
+    <br>* opcode.f64.load: load 8 bytes as f64
+    <br>* opcode.f64.lt: compare ordered and less than
+    <br>* opcode.f64.max: maximum (binary operator); if either operand is NaN, returns NaN
+    <br>* opcode.f64.min: minimum (binary operator); if either operand is NaN, returns NaN
+    <br>* opcode.f64.mul: multiplication
+    <br>* opcode.f64.ne: compare unordered or unequal
+    <br>* opcode.f64.nearest: round to nearest integer, ties to even
+    <br>* opcode.f64.neg: negation
+    <br>* opcode.f64.promote/f32: promote a 32-bit float to a 64-bit float
+    <br>* opcode.f64.reinterpret/i64: reinterpret the bits of a 64-bit integer as a 64-bit float
+    <br>* opcode.f64.sqrt: square root
+    <br>* opcode.f64.store: (no conversion) store 8 bytes
+    <br>* opcode.f64.sub: subtraction
+    <br>* opcode.f64.trunc: round to nearest integer towards zero
+    <br>* opcode.get_global: get the current value of a global variable
+    <br>* opcode.get_local: read the current value of a local variable
+    <br>* opcode.grow_memory : grow linear memory by a given unsigned delta of pages. Return the previous memory size in units of pages or -1 on failure.
+    <br>* opcode.i32.add: sign-agnostic addition
+    <br>* opcode.i32.and: sign-agnostic bitwise and
+    <br>* opcode.i32.clz: sign-agnostic count leading zero bits (All zero bits are considered leading if the value is zero)
+    <br>* opcode.i32.const: produce the value of an i32 immediate
+    <br>* opcode.i32.ctz: sign-agnostic count trailing zero bits (All zero bits are considered trailing if the value is zero)
+    <br>* opcode.i32.div_s: signed division (result is truncated toward zero)
+    <br>* opcode.i32.div_u: unsigned division (result is floored)
+    <br>* opcode.i32.eq: sign-agnostic compare equal
+    <br>* opcode.i32.eqz: compare equal to zero (return 1 if operand is zero, 0 otherwise)
+    <br>* opcode.i32.ge_s: signed greater than or equal
+    <br>* opcode.i32.ge_u: unsigned greater than or equal
+    <br>* opcode.i32.gt_s: signed greater than
+    <br>* opcode.i32.gt_u: unsigned greater than
+    <br>* opcode.i32.le_s: signed less than or equal
+    <br>* opcode.i32.le_u: unsigned less than or equal
+    <br>* opcode.i32.load8_s: load 1 byte and sign-extend i8 to i32
+    <br>* opcode.i32.load8_u: load 1 byte and zero-extend i8 to i32
+    <br>* opcode.i32.load16_s: load 2 bytes and sign-extend i16 to i32
+    <br>* opcode.i32.load16_u: load 2 bytes and zero-extend i16 to i32
+    <br>* opcode.i32.load: load 4 bytes as i32
+    <br>* opcode.i32.lt_s: signed less than
+    <br>* opcode.i32.lt_u: unsigned less than
+    <br>* opcode.i32.mul: sign-agnostic multiplication (lower 32-bits)
+    <br>* opcode.i32.ne: sign-agnostic compare unequal
+    <br>* opcode.i32.or: sign-agnostic bitwise inclusive or
+    <br>* opcode.i32.popcnt: sign-agnostic count number of one bits
+    <br>* opcode.i32.reinterpret/f32: reinterpret the bits of a 32-bit float as a 32-bit integer
+    <br>* opcode.i32.rem_s: signed remainder (result has the sign of the dividend)
+    <br>* opcode.i32.rem_u: unsigned remainder
+    <br>* opcode.i32.rotl: sign-agnostic rotate left
+    <br>* opcode.i32.rotr: sign-agnostic rotate right
+    <br>* opcode.i32.shl: sign-agnostic shift left
+    <br>* opcode.i32.shr_s: sign-replicating (arithmetic) shift right
+    <br>* opcode.i32.shr_u: zero-replicating (logical) shift right
+    <br>* opcode.i32.store8: wrap i32 to i8 and store 1 byte
+    <br>* opcode.i32.store16: wrap i32 to i16 and store 2 bytes
+    <br>* opcode.i32.store: (no conversion) store 4 bytes
+    <br>* opcode.i32.sub: sign-agnostic subtraction
+    <br>* opcode.i32.trunc_s/f32: truncate a 32-bit float to a signed 32-bit integer
+    <br>* opcode.i32.trunc_s/f64: truncate a 64-bit float to a signed 32-bit integer
+    <br>* opcode.i32.trunc_u/f32: truncate a 32-bit float to an unsigned 32-bit integer
+    <br>* opcode.i32.trunc_u/f64: truncate a 64-bit float to an unsigned 32-bit integer
+    <br>* opcode.i32.wrap/i64: wrap a 64-bit integer to a 32-bit integer
+    <br>* opcode.i32.xor: sign-agnostic bitwise exclusive or
+    <br>* opcode.i64.const: produce the value of an i64 immediate
+    <br>* opcode.i64.extend_s/i32: extend a signed 32-bit integer to a 64-bit integer
+    <br>* opcode.i64.extend_u/i32: extend an unsigned 32-bit integer to a 64-bit integer
+    <br>* opcode.i64.load8_s: load 1 byte and sign-extend i8 to i64
+    <br>* opcode.i64.load8_u: load 1 byte and zero-extend i8 to i64
+    <br>* opcode.i64.load16_s: load 2 bytes and sign-extend i16 to i64
+    <br>* opcode.i64.load16_u: load 2 bytes and zero-extend i16 to i64
+    <br>* opcode.i64.load32_s: load 4 bytes and sign-extend i32 to i64
+    <br>* opcode.i64.load32_u: load 4 bytes and zero-extend i32 to i64
+    <br>* opcode.i64.load: load 8 bytes as i64
+    <br>* opcode.i64.reinterpret/f64: reinterpret the bits of a 64-bit float as a 64-bit integer
+    <br>* opcode.i64.store8: wrap i64 to i8 and store 1 byte
+    <br>* opcode.i64.store16: wrap i64 to i16 and store 2 bytes
+    <br>* opcode.i64.store32: wrap i64 to i32 and store 4 bytes
+    <br>* opcode.i64.store: (no conversion) store 8 bytes
+    <br>* opcode.i64.trunc_s/f32: truncate a 32-bit float to a signed 64-bit integer
+    <br>* opcode.i64.trunc_s/f64: truncate a 64-bit float to a signed 64-bit integer
+    <br>* opcode.i64.trunc_u/f32: truncate a 32-bit float to an unsigned 64-bit integer
+    <br>* opcode.i64.trunc_u/f64: truncate a 64-bit float to an unsigned 64-bit integer
+    <br>* opcode.if: the beginning of an if construct with an implicit then block
+    <br>* opcode.loop: a block with a label at the beginning which may be used to form loops
+    <br>* opcode.nop: no operation, no effect
+    <br>* opcode.return: return zero or more values from this function
+    <br>* opcode.select: a ternary operator with two operands, which have the same type as each other, plus a boolean (i32) condition. select returns the first operand if the condition operand is non-zero, or the second otherwise.
+    <br>* opcode.set_global: set the current value of a global variable
+    <br>* opcode.set_local: set the current value of a local variable
+    <br>* opcode.tee_local: like set_local, but also returns the set value
+    <br>* opcode.unreachable: An instruction which always traps. It is intended to be used for example after calls to functions which are known by the producer not to return. This trap is intended to be impossible for user code to catch or handle, even in the future when it may be possible to handle some other kinds of traps or exceptions.
+    <a class="clsHide" href="#idWasmalgopcdSpcSpc"></a></p>
   </section>
   </section>
 
@@ -884,7 +1095,30 @@
   <p id="idWasmspecwpa">addressWpg::
     <br>* <a href="https://webassembly.github.io/spec/core/_download/WebAssembly.pdf">https://webassembly.github.io/spec/core/_download/WebAssembly.pdf</a>,
     <br>* WebAssembly-Reference-Manual: a human-readable document written in Markdown, an alternative to the official WebAssembly specification: <a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md</a>,
+    <br>* Conrad-Watt, Mechanising and Verifying the WebAssembly Specification: <a href="https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf">https://www.cl.cam.ac.uk/~caw77/</a>,
+    <br>* Bringing the Web up to Speed with WebAssembly: <a href="https://github.com/WebAssembly/spec/blob/master/papers/pldi2017.pdf">https://github.com/WebAssembly/spec/blob/master/papers/pldi2017.pdf</a>,
     <a class="clsHide" href="#idWasmspecwpa"></a></p>
+
+  <section id="idWasmspecwawg">
+  <h2 id="idWasmspecwawgH2">WebAssembly-working-group
+    <a class="clsHide" href="#idWasmspecwawgH2"></a></h2>
+  <p id="idWasmspecwawgdsn">description::
+    <br>'WebAssembly is an open standard developed by a W3C Community Group that includes representatives of all major browser vendors.'
+    <br>[<a href="https://webassembly.github.io/spec/core/_download/WebAssembly.pdf">https://webassembly.github.io/spec/core/_download/WebAssembly.pdf</a>]
+    <br>===
+    <br>'The mission of the WebAssembly Working Group is to standardize a size- and load-time-efficient format and execution environment, allowing compilation to the web with consistent behavior across a variety of implementations.'
+    <br>[<a href="https://www.w3.org/wasm/">https://www.w3.org/wasm/</a>]
+    <a class="clsHide" href="#idWasmspecwawgdsn"></a></p>
+  <p id="idWasmspecwawgnam">name::
+    <br>* cpt.Wasm'W3C-community-group,
+    <br>* cpt.Wasm'working-group,
+    <br>* cpt.WebAssembly-working-group,
+    <a class="clsHide" href="#idWasmspecwawgnam"></a></p>
+  <p id="idWasmspecwawgwpa">addressWpg::
+    <br>* <a href="https://www.w3.org/wasm/">https://www.w3.org/wasm/</a>,
+    <br>* <a href="https://www.w3.org/community/webassembly/">https://www.w3.org/community/webassembly/</a>,
+    <a class="clsHide" href="#idWasmspecwawgwpa"></a></p>
+  </section>
 </section>
 
 <section id="idWasmtool">
@@ -904,7 +1138,10 @@
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#embedding-environment">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#embedding-environment</a>]
     <a class="clsHide" href="#idWasmtoolRtedsn"></a></p>
   <p id="idWasmtoolRtenam">name::
+    <br>* cpt.Wasm'embedder,
     <br>* cpt.Wasm'embedding-environment,
+    <br>* cpt.Wasm'host-environment,
+    <br>* cpt.Wasm'outside-environment,
     <br>* cpt.Wasm'runtime-environment,
     <a class="clsHide" href="#idWasmtoolRtenam"></a></p>
   </section>
@@ -970,7 +1207,7 @@
     <br>* cpt.WasmAsSpecific,
     <a class="clsHide" href="#idWasmSpcnam"></a></p>
   <p id="idWasmSpcP1">specific::
-    <br>
+    <br>* Ethereum flavored WebAssembly (ewasm): <a href="https://github.com/ewasm">https://github.com/ewasm</a>,
     <a class="clsHide" href="#idWasmSpcP1"></a></p>
 </section>
 
