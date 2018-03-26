@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-8-0.2018-03-26 draft)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-9-0.2018-03-26 draft)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -88,7 +88,7 @@
   <h2 id="idWasmalgmchnstkH2">stack of Wasm-machine
     <a class="clsHide" href="#idWasmalgmchnstkH2"></a></h2>
   <p id="idWasmalgmchnstkdsn">description::
-    <br>· <a class="clsPreview" href="#idWasmalgstc">instructions</a>  manipulate values on an-implicit-operand-stack, consuming (popping) argument-values and producing (pushing) result-values.
+    <br>· <a class="clsPreview" href="#idWasmstc">instructions</a>  manipulate values on an-implicit-operand-stack, consuming (popping) argument-values and producing (pushing) result-values.
     <br>[<a href="https://webassembly.github.io/spec/core/_download/WebAssembly.pdf">https://webassembly.github.io/spec/core/_download/WebAssembly.pdf</a>]
     <a class="clsHide" href="#idWasmalgmchnstkdsn"></a></p>
   <p id="idWasmalgmchnstknam">name::
@@ -157,21 +157,21 @@
     <br>* cpt.Wasm-value,
     <a class="clsHide" href="#idWasmalgsuntValnam"></a></p>
 
-  <section id="idWasmalgsuntVal">
-  <h3 id="idWasmalgsuntValH3">value.SPECIFIC
-    <a class="clsHide" href="#idWasmalgsuntValH3"></a></h3>
-  <p id="idWasmalgsuntValnam">name::
+  <section id="idWasmalgsuntValSpc">
+  <h3 id="idWasmalgsuntValSpcH3">value.SPECIFIC
+    <a class="clsHide" href="#idWasmalgsuntValSpcH3"></a></h3>
+  <p id="idWasmalgsuntValSpcnam">name::
     <br>* cpt.Wasm'basic-data-type,
     <br>* cpt.Wasm'machine-type,
     <br>* cpt.Wasm'value-type,
     <br>* cpt.Wasm-value.specific,
-    <a class="clsHide" href="#idWasmalgsuntValnam"></a></p>
-  <p id="idWasmalgsuntValP1">specific::
+    <a class="clsHide" href="#idWasmalgsuntValSpcnam"></a></p>
+  <p id="idWasmalgsuntValSpcP1">specific::
     <br>* i32,
     <br>* i64,
     <br>* f32,
     <br>* f64,
-    <a class="clsHide" href="#idWasmalgsuntValP1"></a></p>
+    <a class="clsHide" href="#idWasmalgsuntValSpcP1"></a></p>
   </section>
 
   <section id="idWasmalgsuntI32">
@@ -223,85 +223,98 @@
   </section>
   </section>
 
-  <section id="idWasmalgsuntFcn">
-  <h2 id="idWasmalgsuntFcnH2">algo-sem-unit.FUNCTION
-    <a class="clsHide" href="#idWasmalgsuntFcnH2"></a></h2>
-  <p id="idWasmalgsuntFcnnam">name::
+  <section id="idWasmfcn">
+  <h2 id="idWasmfcnH2">algo-sem-unit.FUNCTION
+    <a class="clsHide" href="#idWasmfcnH2"></a></h2>
+  <p id="idWasmfcnnam">name::
     <br>* cpt.Wasm'function,
     <br>* cpt.Wasm-func,
-    <a class="clsHide" href="#idWasmalgsuntFcnnam"></a></p>
+    <a class="clsHide" href="#idWasmfcnnam"></a></p>
 
-  <section id="idWasmalgsuntFcnpmr">
-  <h3 id="idWasmalgsuntFcnpmrH3">parameter of function
-    <a class="clsHide" href="#idWasmalgsuntFcnpmrH3"></a></h3>
-  <p id="idWasmalgsuntFcnpmrnam">name::
+  <section id="idWasmfcnpmr">
+  <h3 id="idWasmfcnpmrH3">parameter of function
+    <a class="clsHide" href="#idWasmfcnpmrH3"></a></h3>
+  <p id="idWasmfcnpmrnam">name::
     <br>* cpt.Wasm'param-of-function,
     <br>* cpt.Wasm-function'param,
-    <a class="clsHide" href="#idWasmalgsuntFcnpmrnam"></a></p>
+    <a class="clsHide" href="#idWasmfcnpmrnam"></a></p>
   </section>
 
-  <section id="idWasmalgsuntFcnrnvl">
-  <h3 id="idWasmalgsuntFcnrnvlH3">return-value of function
-    <a class="clsHide" href="#idWasmalgsuntFcnrnvlH3"></a></h3>
-  <p id="idWasmalgsuntFcnrnvlnam">name::
+  <section id="idWasmfcnrnvl">
+  <h3 id="idWasmfcnrnvlH3">return-value of function
+    <a class="clsHide" href="#idWasmfcnrnvlH3"></a></h3>
+  <p id="idWasmfcnrnvlnam">name::
     <br>* cpt.Wasm'result-of-function,
     <br>* cpt.Wasm-function'result,
-    <a class="clsHide" href="#idWasmalgsuntFcnrnvlnam"></a></p>
+    <a class="clsHide" href="#idWasmfcnrnvlnam"></a></p>
   </section>
 
-  <section id="idWasmalgsuntFcnsgtr">
-  <h3 id="idWasmalgsuntFcnsgtrH3">signature of function
-    <a class="clsHide" href="#idWasmalgsuntFcnsgtrH3"></a></h3>
-  <p id="idWasmalgsuntFcnsgtrdsn">description::
+  <section id="idWasmfcnsgtr">
+  <h3 id="idWasmfcnsgtrH3">signature of function
+    <a class="clsHide" href="#idWasmfcnsgtrH3"></a></h3>
+  <p id="idWasmfcnsgtrdsn">description::
     <br>· (func params returns)
     <br>===
     <br>· function-type is a generic signature that maps a-vector of parmeters to a-vector of results[a] which[a] in the current version is at most 1.
     <br>[<a href="https://webassembly.github.io/spec/core/syntax/types.html#syntax-functype">https://webassembly.github.io/spec/core/syntax/types.html#syntax-functype</a> {2018-03-22}]
-    <a class="clsHide" href="#idWasmalgsuntFcnsgtrdsn"></a></p>
-  <p id="idWasmalgsuntFcnsgtrnam">name::
+    <a class="clsHide" href="#idWasmfcnsgtrdsn"></a></p>
+  <p id="idWasmfcnsgtrnam">name::
     <br>* cpt.Wasm-function'signature,
     <br>* cpt.Wasm-function'type,
-    <a class="clsHide" href="#idWasmalgsuntFcnsgtrnam"></a></p>
+    <a class="clsHide" href="#idWasmfcnsgtrnam"></a></p>
   </section>
 
-  <section id="idWasmalgsuntFcnbody">
-  <h3 id="idWasmalgsuntFcnbodyH3">body of function
-    <a class="clsHide" href="#idWasmalgsuntFcnbodyH3"></a></h3>
-  <p id="idWasmalgsuntFcnbodydsn">description::
+  <section id="idWasmfcnbody">
+  <h3 id="idWasmfcnbodyH3">body of function
+    <a class="clsHide" href="#idWasmfcnbodyH3"></a></h3>
+  <p id="idWasmfcnbodydsn">description::
     <br>· the-body-of-a-function is a-sequence of instructions that describe the-process of the-function:
     <br><code>get_local 0  // push parameter #0 on stack (our dividend)
     <br>i64.const 2  // push constant int64 "2" on stack (our divisor)
     <br>i64.div_u    // unsigned division; pushes result onto stack
     <br>end // ends function, resulting in one i64 (top of stack)</code>
-    <a class="clsHide" href="#idWasmalgsuntFcnbodydsn"></a></p>
-  <p id="idWasmalgsuntFcnbodynam">name::
+    <a class="clsHide" href="#idWasmfcnbodydsn"></a></p>
+  <p id="idWasmfcnbodynam">name::
     <br>* cpt.Wasm-function'body,
     <br>* cpt.Wasm-function'code,
-    <a class="clsHide" href="#idWasmalgsuntFcnbodynam"></a></p>
+    <a class="clsHide" href="#idWasmfcnbodynam"></a></p>
   </section>
 
-  <section id="idWasmalgsuntFcncall">
-  <h3 id="idWasmalgsuntFcncallH3">calling of function
-    <a class="clsHide" href="#idWasmalgsuntFcncallH3"></a></h3>
-  <p id="idWasmalgsuntFcncalldsn">description::
+  <section id="idWasmfcnidxspc">
+  <h3 id="idWasmfcnidxspcH3">index-space of function
+    <a class="clsHide" href="#idWasmfcnidxspcH3"></a></h3>
+  <p id="idWasmfcnidxspcdsn">description::
+    <br>· the-index-space for functions, tables, memories and globals includes respective imports declared in the same module.
+    <br>· the-indices of these imports precede the-indices of other definitions in the same index-space.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {2018-03-22}]
+    <a class="clsHide" href="#idWasmfcnidxspcdsn"></a></p>
+  <p id="idWasmfcnidxspcnam">name::
+    <br>* cpt.Wasm-function'index-space,
+    <a class="clsHide" href="#idWasmfcnidxspcnam"></a></p>
+  </section>
+
+  <section id="idWasmfcncall">
+  <h3 id="idWasmfcncallH3">calling of function
+    <a class="clsHide" href="#idWasmfcncallH3"></a></h3>
+  <p id="idWasmfcncalldsn">description::
     <br>· when a-function is-called, it starts with an empty <a class="clsPreview" href="#idWasmalgmchnstk">stack</a> which is gradually filled-up and emptied as the body’s instructions are-executed.
-    <a class="clsHide" href="#idWasmalgsuntFcncalldsn"></a></p>
-  <p id="idWasmalgsuntFcncallnam">name::
+    <a class="clsHide" href="#idWasmfcncalldsn"></a></p>
+  <p id="idWasmfcncallnam">name::
     <br>* cpt.Wasm-function'calling,
-    <a class="clsHide" href="#idWasmalgsuntFcncallnam"></a></p>
+    <a class="clsHide" href="#idWasmfcncallnam"></a></p>
   </section>
 
-  <section id="idWasmalgsuntFcnStrt">
-  <h3 id="idWasmalgsuntFcnStrtH3">function.START
-    <a class="clsHide" href="#idWasmalgsuntFcnStrtH3"></a></h3>
-  <p id="idWasmalgsuntFcnStrtdsn">description::
+  <section id="idWasmfcnStrt">
+  <h3 id="idWasmfcnStrtH3">function.START
+    <a class="clsHide" href="#idWasmfcnStrtH3"></a></h3>
+  <p id="idWasmfcnStrtdsn">description::
     <br>· modules can-define a-start-function that is automatically executed.
     <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#concepts">https://webassembly.github.io/spec/core/intro/overview.html#concepts</a> {2018-03-22}]
-    <a class="clsHide" href="#idWasmalgsuntFcnStrtdsn"></a></p>
-  <p id="idWasmalgsuntFcnStrtnam">name::
+    <a class="clsHide" href="#idWasmfcnStrtdsn"></a></p>
+  <p id="idWasmfcnStrtnam">name::
     <br>* cpt.Wasm-function.start,
     <br>* cpt.Wasm'start-function,
-    <a class="clsHide" href="#idWasmalgsuntFcnStrtnam"></a></p>
+    <a class="clsHide" href="#idWasmfcnStrtnam"></a></p>
   </section>
   </section>
 
@@ -313,50 +326,53 @@
     <br>* cpt.Wasm-sem-unit.named-value,
     <a class="clsHide" href="#idWasmalgsuntNmdnam"></a></p>
 
-  <section id="idWasmalgsuntNmdGlbl">
-  <h3 id="idWasmalgsuntNmdGlblH3">variable.GLOBAL
-    <a class="clsHide" href="#idWasmalgsuntNmdGlblH3"></a></h3>
-  <p id="idWasmalgsuntNmdGlblnam">name::
+  <section id="idWasmglbl">
+  <h3 id="idWasmglblH3">variable.GLOBAL
+    <a class="clsHide" href="#idWasmglblH3"></a></h3>
+  <p id="idWasmglblnam">name::
     <br>* cpt.Wasm'global-variable,
+    <br>* cpt.Wasm-global,
     <br>* cpt.Wasm-variable.global,
-    <a class="clsHide" href="#idWasmalgsuntNmdGlblnam"></a></p>
+    <a class="clsHide" href="#idWasmglblnam"></a></p>
 
-  <section id="idWasmalgsuntNmdGlbldlrn">
-  <h4 id="idWasmalgsuntNmdGlbldlrnH4">declaration of global-variable
-    <a class="clsHide" href="#idWasmalgsuntNmdGlbldlrnH4"></a></h4>
-  <p id="idWasmalgsuntNmdGlbldlrndsn">description::
+  <section id="idWasmglbldlrn">
+  <h4 id="idWasmglbldlrnH4">declaration of global-variable
+    <a class="clsHide" href="#idWasmglbldlrnH4"></a></h4>
+  <p id="idWasmglbldlrndsn">description::
     <br>· a-global-declaration consists of:
     <br>Field-Name | Type | Description
     <br>desc | global description | a description of the global variable
     <br>init | instantiation-time initializer | the initial value of the global variable
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-section</a>]
-    <a class="clsHide" href="#idWasmalgsuntNmdGlbldlrndsn"></a></p>
+    <a class="clsHide" href="#idWasmglbldlrndsn"></a></p>
   </section>
 
-  <section id="idWasmalgsuntNmdGlbldrpn">
-  <h4 id="idWasmalgsuntNmdGlbldrpnH4">description of global-variable
-    <a class="clsHide" href="#idWasmalgsuntNmdGlbldrpnH4"></a></h4>
-  <p id="idWasmalgsuntNmdGlbldrpndsn">description::
+  <section id="idWasmglbldrpn">
+  <h4 id="idWasmglbldrpnH4">description of global-variable
+    <a class="clsHide" href="#idWasmglbldrpnH4"></a></h4>
+  <p id="idWasmglbldrpndsn">description::
     <br>Field Name | Type | Description
     <br>type | value type | the type of the global variable
     <br>mutability | varuint1 | 0 if immutable, 1 if mutable
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-description">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-description</a>]
-    <a class="clsHide" href="#idWasmalgsuntNmdGlbldrpndsn"></a></p>
-  <p id="idWasmalgsuntNmdGlbldrpnnam">name::
+    <a class="clsHide" href="#idWasmglbldrpndsn"></a></p>
+  <p id="idWasmglbldrpnnam">name::
+    <br>* cpt.Wasm-global'description,
     <br>* cpt.Wasm-global-variable'description,
-    <a class="clsHide" href="#idWasmalgsuntNmdGlbldrpnnam"></a></p>
+    <a class="clsHide" href="#idWasmglbldrpnnam"></a></p>
   </section>
 
-  <section id="idWasmalgsuntNmdGlblidx">
-  <h4 id="idWasmalgsuntNmdGlblidxH4">index of global-variable
-    <a class="clsHide" href="#idWasmalgsuntNmdGlblidxH4"></a></h4>
-  <p id="idWasmalgsuntNmdGlblidxdsn">description::
+  <section id="idWasmglblidxspc">
+  <h4 id="idWasmglblidxspcH4">index-space of global
+    <a class="clsHide" href="#idWasmglblidxspcH4"></a></h4>
+  <p id="idWasmglblidxspcdsn">description::
     <br>· the-global-index starts with any imported-globals and continues incrementing with any globals defined in <a class="clsPreview" href="#idWasmalgscnGlbl">the-global-section</a>.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
-    <a class="clsHide" href="#idWasmalgsuntNmdGlblidxdsn"></a></p>
-  <p id="idWasmalgsuntNmdGlblidxnam">name::
-    <br>* cpt.Wasm-global-variable'index,
-    <a class="clsHide" href="#idWasmalgsuntNmdGlblidxnam"></a></p>
+    <a class="clsHide" href="#idWasmglblidxspcdsn"></a></p>
+  <p id="idWasmglblidxspcnam">name::
+    <br>* cpt.Wasm-global'index-space,
+    <br>* cpt.Wasm-global-variable'index-space,
+    <a class="clsHide" href="#idWasmglblidxspcnam"></a></p>
   </section>
   </section>
 
@@ -373,8 +389,21 @@
     <a class="clsHide" href="#idWasmalgsuntNmdLcldsn"></a></p>
   <p id="idWasmalgsuntNmdLclnam">name::
     <br>* cpt.Wasm'local-variable,
+    <br>* cpt.Wasm-local,
     <br>* cpt.Wasm-variable.local,
     <a class="clsHide" href="#idWasmalgsuntNmdLclnam"></a></p>
+
+  <section id="idWasmalgsuntNmdLcl">
+  <h4 id="idWasmalgsuntNmdLclH4">index-space of local
+    <a class="clsHide" href="#idWasmalgsuntNmdLclH4"></a></h4>
+  <p id="idWasmalgsuntNmdLcldsn">description::
+    <br>· the-index-space for locals is only accessible inside a-function and includes the-parameters and local-variables of that function, which precede the other locals.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {2018-03-22}]
+    <a class="clsHide" href="#idWasmalgsuntNmdLcldsn"></a></p>
+  <p id="idWasmalgsuntNmdLclnam">name::
+    <br>* cpt.Wasm-local'index-space,
+    <a class="clsHide" href="#idWasmalgsuntNmdLclnam"></a></p>
+  </section>
   </section>
   </section>
 
@@ -406,6 +435,19 @@
     <br>* cpt.Wasm-table'description,
     <a class="clsHide" href="#idWasmalgsuntTbldlrnnam"></a></p>
   </section>
+
+  <section id="idWasmalgsuntTblidxspc">
+  <h3 id="idWasmalgsuntTblidxspcH3">index-space of table
+    <a class="clsHide" href="#idWasmalgsuntTblidxspcH3"></a></h3>
+  <p id="idWasmalgsuntTblidxspcdsn">description::
+    <br>· the-index-space for functions, tables, memories and globals includes respective imports declared in the same module.
+    <br>· the-indices of these imports precede the-indices of other definitions in the same index-space.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {2018-03-22}]
+    <a class="clsHide" href="#idWasmalgsuntTblidxspcdsn"></a></p>
+  <p id="idWasmalgsuntTblidxspcnam">name::
+    <br>* cpt.Wasm-table'index-space,
+    <a class="clsHide" href="#idWasmalgsuntTblidxspcnam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmalgsuntMmr">
@@ -422,7 +464,7 @@
     <a class="clsHide" href="#idWasmalgsuntMmrnam"></a></p>
 
   <section id="idWasmalgsuntMmrpage">
-  <h3 id="idWasmalgsuntMmrpageH3">page of Wasm-memory
+  <h3 id="idWasmalgsuntMmrpageH3">page of memory
     <a class="clsHide" href="#idWasmalgsuntMmrpageH3"></a></h3>
   <p id="idWasmalgsuntMmrpagedsn">description::
     <br>· pages in WebAssembly are 64-KiB, and are the-units used in linear-memory size-declarations and size-operations.
@@ -432,44 +474,63 @@
     <br>* cpt.Wasm-memory'page,
     <a class="clsHide" href="#idWasmalgsuntMmrpagenam"></a></p>
   </section>
+
+  <section id="idWasmalgsuntMmridxspc">
+  <h3 id="idWasmalgsuntMmridxspcH3">index-space of memory
+    <a class="clsHide" href="#idWasmalgsuntMmridxspcH3"></a></h3>
+  <p id="idWasmalgsuntMmridxspcdsn">description::
+    <br>· the-index-space for functions, tables, memories and globals includes respective imports declared in the same module.
+    <br>· the-indices of these imports precede the-indices of other definitions in the same index-space.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {2018-03-22}]
+    <a class="clsHide" href="#idWasmalgsuntMmridxspcdsn"></a></p>
+  <p id="idWasmalgsuntMmridxspcnam">name::
+    <br>* cpt.Wasm-memory'index-space,
+    <a class="clsHide" href="#idWasmalgsuntMmridxspcnam"></a></p>
+  </section>
+
+  <section id="idWasmalgsuntMmridxspc">
+  <h3 id="idWasmalgsuntMmridxspcH3">instruction of memory (<a class="clsPreview" href="#idWasmstcMmr">link</a>)
+    <a class="clsHide" href="#idWasmalgsuntMmridxspcH3"></a></h3>
+  </section>
   </section>
 </section>
 
-<section id="idWasmalgstc">
-  <h1 id="idWasmalgstcH1">algo-sentence (instruction) of Wasm
-    <a class="clsHide" href="#idWasmalgstcH1"></a></h1>
-  <p id="idWasmalgstcdsn">description::
+<section id="idWasmstc">
+  <h1 id="idWasmstcH1">algo-sentence (instruction) of Wasm
+    <a class="clsHide" href="#idWasmstcH1"></a></h1>
+  <p id="idWasmstcdsn">description::
     <br>· a-WebAssembly-document consist of a-sequence of instructions.
-    <br>· an-instruction consists of <a class="clsPreview" href="#idWasmalgstcopcd">an-opcode</a> followed by its immediate <a class="clsPreview" href="#idWasmalgstcoprd">operands</a>.
-    <a class="clsHide" href="#idWasmalgstcdsn"></a></p>
-  <p id="idWasmalgstcnam">name::
+    <br>· an-instruction consists of <a class="clsPreview" href="#idWasmstcopcd">an-opcode</a> followed by its immediate <a class="clsPreview" href="#idWasmstcoprd">operands</a>.
+    <a class="clsHide" href="#idWasmstcdsn"></a></p>
+  <p id="idWasmstcnam">name::
     <br>* cpt.Wasm'bytecode,
     <br>* cpt.Wasm'command,
     <br>* cpt.Wasm'instruction,
     <br>* cpt.Wasm'sentence,
-    <a class="clsHide" href="#idWasmalgstcnam"></a></p>
+    <br>* cpt.Wasm-instruction,
+    <a class="clsHide" href="#idWasmstcnam"></a></p>
 
-  <section id="idWasmalgstcopcd">
-  <h2 id="idWasmalgstcopcdH2">opcode of instruction
-    <a class="clsHide" href="#idWasmalgstcopcdH2"></a></h2>
-  <p id="idWasmalgstcopcddsn">description::
+  <section id="idWasmstcopcd">
+  <h2 id="idWasmstcopcdH2">opcode of instruction
+    <a class="clsHide" href="#idWasmstcopcdH2"></a></h2>
+  <p id="idWasmstcopcddsn">description::
     <br>'WebAssembly is not a large language.
     <br>Its official specification defines 171 individual opcodes, but each of these can be viewed as different specialisations of the 28 abstract operations specified in the working group’s paper.
     <br>All WebAssembly behaviour is specified at the level of abstract operations, not concrete opcodes.'
     <br>[<a href="https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf">https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf</a>]
-    <a class="clsHide" href="#idWasmalgstcopcddsn"></a></p>
-  <p id="idWasmalgstcopcdnam">name::
+    <a class="clsHide" href="#idWasmstcopcddsn"></a></p>
+  <p id="idWasmstcopcdnam">name::
     <br>* cpt.Wasm'opcode-of-instruction,
     <br>* cpt.Wasm-instruction'opcode,
     <br>* cpt.Wasm-instruction'operation,
-    <a class="clsHide" href="#idWasmalgstcopcdnam"></a></p>
+    <a class="clsHide" href="#idWasmstcopcdnam"></a></p>
 
-  <section id="idWasmalgstcmnc">
-  <h3 id="idWasmalgstcmncH3">mnemonic of opcode
-    <a class="clsHide" href="#idWasmalgstcmncH3"></a></h3>
-  <p id="idWasmalgstcmncnam">name::
+  <section id="idWasmstcmnc">
+  <h3 id="idWasmstcmncH3">mnemonic of opcode
+    <a class="clsHide" href="#idWasmstcmncH3"></a></h3>
+  <p id="idWasmstcmncnam">name::
     <br>* cpt.Wasm-instruction'mnemonic,
-    <a class="clsHide" href="#idWasmalgstcmncnam"></a></p>
+    <a class="clsHide" href="#idWasmstcmncnam"></a></p>
   </section>
 
   <section id="idWasmalgopcdSpc">
@@ -623,38 +684,46 @@
   </section>
   </section>
 
-  <section id="idWasmalgstcoprd">
-  <h2 id="idWasmalgstcoprdH2">operand of instruction
-    <a class="clsHide" href="#idWasmalgstcoprdH2"></a></h2>
-  <p id="idWasmalgstcoprdnam">name::
+  <section id="idWasmstcoprd">
+  <h2 id="idWasmstcoprdH2">operand of instruction
+    <a class="clsHide" href="#idWasmstcoprdH2"></a></h2>
+  <p id="idWasmstcoprdnam">name::
     <br>* cpt.Wasm'operand-of-sentence,
     <br>* cpt.Wasm-instruction'operand,
-    <a class="clsHide" href="#idWasmalgstcoprdnam"></a></p>
+    <a class="clsHide" href="#idWasmstcoprdnam"></a></p>
   </section>
 
-  <section id="idWasmalgstcstck">
-  <h2 id="idWasmalgstcstckH2">stack of instruction (<a class="clsPreview" href="#idWasmalgmchnstk">link</a>)
-    <a class="clsHide" href="#idWasmalgstcstckH2"></a></h2>
+  <section id="idWasmstcrslt">
+  <h2 id="idWasmstcrsltH2">result of instruction
+    <a class="clsHide" href="#idWasmstcrsltH2"></a></h2>
+  <p id="idWasmstcrsltnam">name::
+    <br>* cpt.Wasm-instruction'result,
+    <a class="clsHide" href="#idWasmstcrsltnam"></a></p>
   </section>
 
-  <section id="idWasmalgstctrap">
-  <h2 id="idWasmalgstctrapH2">trap of instruction
-    <a class="clsHide" href="#idWasmalgstctrapH2"></a></h2>
-  <p id="idWasmalgstctrapdsn">description::
+  <section id="idWasmstcstck">
+  <h2 id="idWasmstcstckH2">stack of instruction (<a class="clsPreview" href="#idWasmalgmchnstk">link</a>)
+    <a class="clsHide" href="#idWasmstcstckH2"></a></h2>
+  </section>
+
+  <section id="idWasmstctrap">
+  <h2 id="idWasmstctrapH2">trap of instruction
+    <a class="clsHide" href="#idWasmstctrapH2"></a></h2>
+  <p id="idWasmstctrapdsn">description::
     <br>· under some conditions, certain instructions may-produce a-trap, which immediately aborts execution.
     <br>· traps cannot-be-handled by WebAssembly-code, but are-reported to the-outside-environment, where they typically can-be-caught.
     <br>[<a href="https://webassembly.github.io/spec/core/_download/WebAssembly.pdf">https://webassembly.github.io/spec/core/_download/WebAssembly.pdf</a> {2018-03-22}]
-    <a class="clsHide" href="#idWasmalgstctrapdsn"></a></p>
-  <p id="idWasmalgstctrapnam">name::
+    <a class="clsHide" href="#idWasmstctrapdsn"></a></p>
+  <p id="idWasmstctrapnam">name::
     <br>* cpt.Wasm'trap-of-instruction,
     <br>* cpt.Wasm-instruction'trap,
-    <a class="clsHide" href="#idWasmalgstctrapnam"></a></p>
+    <a class="clsHide" href="#idWasmstctrapnam"></a></p>
   </section>
 
-  <section id="idWasmalgstcSpc">
-  <h2 id="idWasmalgstcSpcH2">instruction.SPECIFIC
-    <a class="clsHide" href="#idWasmalgstcSpcH2"></a></h2>
-  <p id="idWasmalgstcSpcP1">specific::
+  <section id="idWasmstcSpc">
+  <h2 id="idWasmstcSpcH2">instruction.SPECIFIC
+    <a class="clsHide" href="#idWasmstcSpcH2"></a></h2>
+  <p id="idWasmstcSpcP1">specific::
     <br>* additional-memory-related--instruction,
     <br>* basic-instruction,
     <br>* control-flow--instruction,
@@ -679,16 +748,16 @@
     <br>* T-shift--instruction-family,
     <br>* U-unsigned-integer--instruction-family,
     <br>* Z-linear-memory-size--instruction-family,
-    <a class="clsHide" href="#idWasmalgstcSpcP1"></a></p>
+    <a class="clsHide" href="#idWasmstcSpcP1"></a></p>
   </section>
 
-  <section id="idWasmalgstcBsc">
-  <h2 id="idWasmalgstcBscH2">instruction.BASIC
-    <a class="clsHide" href="#idWasmalgstcBscH2"></a></h2>
-  <p id="idWasmalgstcBscnam">name::
+  <section id="idWasmstcBsc">
+  <h2 id="idWasmstcBscH2">instruction.BASIC
+    <a class="clsHide" href="#idWasmstcBscH2"></a></h2>
+  <p id="idWasmstcBscnam">name::
     <br>* cpt.Wasm-instruction.basic,
-    <a class="clsHide" href="#idWasmalgstcBscnam"></a></p>
-  <p id="idWasmalgstcBscSpc">specific::
+    <a class="clsHide" href="#idWasmstcBscnam"></a></p>
+  <p id="idWasmstcBscSpc">specific::
     <br>* No-Op
     <br>* Drop
     <br>* Constant
@@ -700,16 +769,16 @@
     <br>* Select
     <br>* Call
     <br>* Indirect Call,
-    <a class="clsHide" href="#idWasmalgstcBscSpc"></a></p>
+    <a class="clsHide" href="#idWasmstcBscSpc"></a></p>
   </section>
 
-  <section id="idWasmalgstcClfw">
-  <h2 id="idWasmalgstcClfwH2">instruction.CONTROL-FLOW
-    <a class="clsHide" href="#idWasmalgstcClfwH2"></a></h2>
-  <p id="idWasmalgstcClfwnam">name::
+  <section id="idWasmstcClfw">
+  <h2 id="idWasmstcClfwH2">instruction.CONTROL-FLOW
+    <a class="clsHide" href="#idWasmstcClfwH2"></a></h2>
+  <p id="idWasmstcClfwnam">name::
     <br>* cpt.Wasm-instruction.control-flow,
-    <a class="clsHide" href="#idWasmalgstcClfwnam"></a></p>
-  <p id="idWasmalgstcClfwSpc">specific::
+    <a class="clsHide" href="#idWasmstcClfwnam"></a></p>
+  <p id="idWasmstcClfwSpc">specific::
     <br>* Block
     <br>* Loop
     <br>* Unconditional Branch
@@ -720,80 +789,292 @@
     <br>* End
     <br>* Return
     <br>* Unreachable,
-    <a class="clsHide" href="#idWasmalgstcClfwSpc"></a></p>
+    <a class="clsHide" href="#idWasmstcClfwSpc"></a></p>
+
+  <section id="idWasmstcClfwStrd">
+  <h3 id="idWasmstcClfwStrdH3">control-instruction.STRUCTURED
+    <a class="clsHide" href="#idWasmstcClfwStrdH3"></a></h3>
+  <p id="idWasmstcClfwStrddsn">description::
+    <br>· the block, loop and if instructions are structured-instructions.
+    <br>· they bracket nested sequences of instructions, called blocks, terminated with, or separated by, end or else pseudo-instructions.
+    <br>· as the-grammar prescribes, they must-be-well-nested.
+    <br>· a-structured-instruction can-produce a-value as described by the annotated result-type.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#control-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#control-instructions</a> {2018-03-22}]
+    <a class="clsHide" href="#idWasmstcClfwStrddsn"></a></p>
+  <p id="idWasmstcClfwStrdnam">name::
+    <br>* cpt.Wasm'structured-control-instruction,
+    <br>* cpt.Wasm-instruction.structured-control,
+    <a class="clsHide" href="#idWasmstcClfwStrdnam"></a></p>
+
+  <section id="idWasmstcClfwStrdlbl">
+  <h4 id="idWasmstcClfwStrdlblH4">label of structured-control-instruction
+    <a class="clsHide" href="#idWasmstcClfwStrdlblH4"></a></h4>
+  <p id="idWasmstcClfwStrdlbldsn">description::
+    <br>· each structured-control-instruction introduces an implicit label.
+    <br>· labels are targets for branch-instructions that reference them with label indices.
+    <br>· unlike with other index-spaces, indexing of labels is relative by nesting depth, that is, label 0 refers to the innermost structured-control-instruction enclosing the referring branch-instruction, while increasing indices refer to those farther out.
+    <br>· consequently, labels can only be-referenced from within the associated structured-control-instruction.
+    <br>· this also implies that branches can only be-directed outwards, “breaking” from the-block of the-control-construct they target.
+    <br>· the exact effect depends on that control-construct.
+    <br>· in case of block or if it is a forward jump, resuming execution after the matching end.
+    <br>· in case of loop it is a backward jump to the-beginning of the-loop.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#control-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#control-instructions</a> {2018-03-22}]
+    <a class="clsHide" href="#idWasmstcClfwStrdlbldsn"></a></p>
+  <p id="idWasmstcClfwStrdlblnam">name::
+    <br>* cpt.Wasm'label-of--structured-control-instruction,
+    <a class="clsHide" href="#idWasmstcClfwStrdlblnam"></a></p>
+  </section>
   </section>
 
-  <section id="idWasmalgstcClfwN">
-  <h2 id="idWasmalgstcClfwNH2">instruction.CONTROL-FLOW.NO
-    <a class="clsHide" href="#idWasmalgstcClfwNH2"></a></h2>
-  <p id="idWasmalgstcClfwNdsn">description::
+  <section id="idWasmstcClfwBlck">
+  <h3 id="idWasmstcClfwBlckH3">instruction.block
+    <a class="clsHide" href="#idWasmstcClfwBlckH3"></a></h3>
+  <p id="idWasmstcClfwBlckdsn">description::
+    <br>· block resulttype instr∗ end
+    <a class="clsHide" href="#idWasmstcClfwBlckdsn"></a></p>
+  <p id="idWasmstcClfwBlcknam">name::
+    <br>* cpt.Wasm'block-instruction,
+    <br>* cpt.Wasm-instruction.block,
+    <a class="clsHide" href="#idWasmstcClfwBlcknam"></a></p>
+  </section>
+
+  <section id="idWasmstcClfwIf">
+  <h3 id="idWasmstcClfwIfH3">instruction.if
+    <a class="clsHide" href="#idWasmstcClfwIfH3"></a></h3>
+  <p id="idWasmstcClfwIfdsn">description::
+    <br>· if resulttype instr∗ else instr∗ end
+    <a class="clsHide" href="#idWasmstcClfwIfdsn"></a></p>
+  <p id="idWasmstcClfwIfnam">name::
+    <br>* cpt.Wasm'if-instruction,
+    <br>* cpt.Wasm-instruction.if,
+    <a class="clsHide" href="#idWasmstcClfwIfnam"></a></p>
+  </section>
+
+  <section id="idWasmstcClfwLoop">
+  <h3 id="idWasmstcClfwLoopH3">instruction.loop
+    <a class="clsHide" href="#idWasmstcClfwLoopH3"></a></h3>
+  <p id="idWasmstcClfwLoopdsn">description::
+    <br>· loop resulttype instr∗ end
+    <a class="clsHide" href="#idWasmstcClfwLoopdsn"></a></p>
+  <p id="idWasmstcClfwLoopnam">name::
+    <br>* cpt.Wasm'loop-instruction,
+    <br>* cpt.Wasm-instruction.loop,
+    <a class="clsHide" href="#idWasmstcClfwLoopnam"></a></p>
+  </section>
+
+  <section id="idWasmstcClfwNop">
+  <h3 id="idWasmstcClfwNopH3">instruction.nop
+    <a class="clsHide" href="#idWasmstcClfwNopH3"></a></h3>
+  <p id="idWasmstcClfwNopdsn">description::
+    <br>· the-nop-instruction does nothing.
+    <a class="clsHide" href="#idWasmstcClfwNopdsn"></a></p>
+  <p id="idWasmstcClfwNopnam">name::
+    <br>* cpt.Wasm'nop-instruction,
+    <br>* cpt.Wasm-instruction.nop,
+    <a class="clsHide" href="#idWasmstcClfwNopnam"></a></p>
+  </section>
+
+  <section id="idWasmstcClfwUnrcbl">
+  <h3 id="idWasmstcClfwUnrcblH3">instruction.unreachable
+    <a class="clsHide" href="#idWasmstcClfwUnrcblH3"></a></h3>
+  <p id="idWasmstcClfwUnrcbldsn">description::
+    <br>· the-unreachable-instruction causes an unconditional <a class="clsPreview" href="#idWasmstctrap">trap</a>.
+    <a class="clsHide" href="#idWasmstcClfwUnrcbldsn"></a></p>
+  <p id="idWasmstcClfwUnrcblnam">name::
+    <br>* cpt.Wasm'unreachable-instruction,
+    <br>* cpt.Wasm-instruction.unreachable,
+    <a class="clsHide" href="#idWasmstcClfwUnrcblnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idWasmstcClfwN">
+  <h2 id="idWasmstcClfwNH2">instruction.CONTROL-FLOW.NO
+    <a class="clsHide" href="#idWasmstcClfwNH2"></a></h2>
+  <p id="idWasmstcClfwNdsn">description::
     <br>· instructions manipulate values on an implicit operand-stack and fall into two main categories.
     <br>· simple-instructions perform basic operations on data.  <br>· they pop arguments from the-operand-stack and push results back to it.
     <br>· control-instructions alter control-flow.
     <br>· control-flow is structured, meaning it is-expressed with well-nested constructs such as blocks, loops, and conditionals.
     <br>· branches can only target such constructs.
     <br>[<a href="https://webassembly.github.io/spec/core/_download/WebAssembly.pdf">https://webassembly.github.io/spec/core/_download/WebAssembly.pdf</a>]
-    <a class="clsHide" href="#idWasmalgstcClfwNdsn"></a></p>
-  <p id="idWasmalgstcClfwNnam">name::
+    <a class="clsHide" href="#idWasmstcClfwNdsn"></a></p>
+  <p id="idWasmstcClfwNnam">name::
     <br>* cpt.Wasm-instruction.control-flow.no,
-    <a class="clsHide" href="#idWasmalgstcClfwNnam"></a></p>
+    <a class="clsHide" href="#idWasmstcClfwNnam"></a></p>
   </section>
 
-  <section id="idWasmalgstcNmrc">
-  <h2 id="idWasmalgstcNmrcH2">instruction.NUMERIC
-    <a class="clsHide" href="#idWasmalgstcNmrcH2"></a></h2>
-  <p id="idWasmalgstcNmrcdsn">description::
+  <section id="idWasmstcNmrc">
+  <h2 id="idWasmstcNmrcH2">instruction.NUMERIC
+    <a class="clsHide" href="#idWasmstcNmrcH2"></a></h2>
+  <p id="idWasmstcNmrcdsn">description::
     <br>·
-    <a class="clsHide" href="#idWasmalgstcNmrcdsn"></a></p>
-  <p id="idWasmalgstcNmrcnam">name::
+    <a class="clsHide" href="#idWasmstcNmrcdsn"></a></p>
+  <p id="idWasmstcNmrcnam">name::
     <br>* cpt.Wasm-instruction.numeric,
-    <a class="clsHide" href="#idWasmalgstcNmrcnam"></a></p>
+    <a class="clsHide" href="#idWasmstcNmrcnam"></a></p>
   </section>
 
-  <section id="idWasmalgstcPrmc">
-  <h2 id="idWasmalgstcPrmcH2">instruction.PARAMETRIC
-    <a class="clsHide" href="#idWasmalgstcPrmcH2"></a></h2>
-  <p id="idWasmalgstcPrmcdsn">description::
+  <section id="idWasmstcPrmc">
+  <h2 id="idWasmstcPrmcH2">instruction.PARAMETRIC
+    <a class="clsHide" href="#idWasmstcPrmcH2"></a></h2>
+  <p id="idWasmstcPrmcdsn">description::
     <br>·
-    <a class="clsHide" href="#idWasmalgstcPrmcdsn"></a></p>
-  <p id="idWasmalgstcPrmcnam">name::
+    <a class="clsHide" href="#idWasmstcPrmcdsn"></a></p>
+  <p id="idWasmstcPrmcnam">name::
     <br>* cpt.Wasm-instruction.parametric,
-    <a class="clsHide" href="#idWasmalgstcPrmcnam"></a></p>
+    <a class="clsHide" href="#idWasmstcPrmcnam"></a></p>
   </section>
 
-  <section id="idWasmalgstcVrbl">
-  <h2 id="idWasmalgstcVrblH2">instruction.VARIABLE
-    <a class="clsHide" href="#idWasmalgstcVrblH2"></a></h2>
-  <p id="idWasmalgstcVrbldsn">description::
-    <br>·
-    <a class="clsHide" href="#idWasmalgstcVrbldsn"></a></p>
-  <p id="idWasmalgstcVrblnam">name::
+  <section id="idWasmstcVrbl">
+  <h2 id="idWasmstcVrblH2">instruction.VARIABLE
+    <a class="clsHide" href="#idWasmstcVrblH2"></a></h2>
+  <p id="idWasmstcVrbldsn">description::
+    <br>· variable-instructions are-concerned with the-access to local or global variables.
+    <br>· these instructions get or set the-values of variables, respectively.
+    <br>· the-tee_local-instruction is like set_local but also returns its argument.
+    <a class="clsHide" href="#idWasmstcVrbldsn"></a></p>
+  <p id="idWasmstcVrblnam">name::
+    <br>* cpt.Wasm'variable-instruction,
     <br>* cpt.Wasm-instruction.variable,
-    <a class="clsHide" href="#idWasmalgstcVrblnam"></a></p>
+    <a class="clsHide" href="#idWasmstcVrblnam"></a></p>
+
+  <section id="idWasmstcGtlcl">
+  <h3 id="idWasmstcGtlclH3">instruction.get_local
+    <a class="clsHide" href="#idWasmstcGtlclH3"></a></h3>
+  <p id="idWasmstcGtlclnam">name::
+    <br>* cpt.Wasm'get_local,
+    <br>* cpt.Wasm-instruction.get_local,
+    <a class="clsHide" href="#idWasmstcGtlclnam"></a></p>
   </section>
 
-  <section id="idWasmalgstcMmr">
-  <h2 id="idWasmalgstcMmrH2">instruction.MEMORY
-    <a class="clsHide" href="#idWasmalgstcMmrH2"></a></h2>
-  <p id="idWasmalgstcMmrdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWasmalgstcMmrdsn"></a></p>
-  <p id="idWasmalgstcMmrnam">name::
+  <section id="idWasmstcStlcl">
+  <h3 id="idWasmstcStlclH3">instruction.set_local
+    <a class="clsHide" href="#idWasmstcStlclH3"></a></h3>
+  <p id="idWasmstcStlclnam">name::
+    <br>* cpt.Wasm'set_local,
+    <br>* cpt.Wasm-instruction.set_local,
+    <a class="clsHide" href="#idWasmstcStlclnam"></a></p>
+  </section>
+
+  <section id="idWasmstcTelcl">
+  <h3 id="idWasmstcTelclH3">instruction.tee_local
+    <a class="clsHide" href="#idWasmstcTelclH3"></a></h3>
+  <p id="idWasmstcTelclnam">name::
+    <br>* cpt.Wasm'tee_local,
+    <br>* cpt.Wasm-instruction.tee_local,
+    <a class="clsHide" href="#idWasmstcTelclnam"></a></p>
+  </section>
+
+  <section id="idWasmstcGtgbl">
+  <h3 id="idWasmstcGtgblH3">instruction.get_global
+    <a class="clsHide" href="#idWasmstcGtgblH3"></a></h3>
+  <p id="idWasmstcGtgblnam">name::
+    <br>* cpt.Wasm'get_global,
+    <br>* cpt.Wasm-instruction.get_global,
+    <a class="clsHide" href="#idWasmstcGtgblnam"></a></p>
+  </section>
+
+  <section id="idWasmstcStgbl">
+  <h3 id="idWasmstcStgblH3">instruction.set_global
+    <a class="clsHide" href="#idWasmstcStgblH3"></a></h3>
+  <p id="idWasmstcStgblnam">name::
+    <br>* cpt.Wasm'set_global,
+    <br>* cpt.Wasm-instruction.set_global,
+    <a class="clsHide" href="#idWasmstcStgblnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idWasmstcMmr">
+  <h2 id="idWasmstcMmrH2">instruction.MEMORY
+    <a class="clsHide" href="#idWasmstcMmrH2"></a></h2>
+  <p id="idWasmstcMmrdsn">description::
+    <br>· instructions related to <a class="clsPreview" href="#idWasmalgsuntMmr">memory</a>.
+    <a class="clsHide" href="#idWasmstcMmrdsn"></a></p>
+  <p id="idWasmstcMmrnam">name::
+    <br>* cpt.Wasm'memory-instruction,
     <br>* cpt.Wasm-instruction.memory,
-    <a class="clsHide" href="#idWasmalgstcMmrnam"></a></p>
+    <a class="clsHide" href="#idWasmstcMmrnam"></a></p>
+
+  <section id="idWasmstcMmrarg">
+  <h3 id="idWasmstcMmrargH3">memarg of memory-instruction
+    <a class="clsHide" href="#idWasmstcMmrargH3"></a></h3>
+  <p id="idWasmstcMmrargdsn">description::
+    <br>· memarg ::= {offset u32, align u32}
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions</a> {2018-03-22}]
+    <a class="clsHide" href="#idWasmstcMmrargdsn"></a></p>
+  <p id="idWasmstcMmrargnam">name::
+    <br>* cpt.Wasm'memarg,
+    <br>* cpt.Wasm-memory-instruction'memarg,
+    <a class="clsHide" href="#idWasmstcMmrargnam"></a></p>
   </section>
 
-  <section id="idWasmalgstcExrn">
-  <h2 id="idWasmalgstcExrnH2">instruction.EXPRESSION
-    <a class="clsHide" href="#idWasmalgstcExrnH2"></a></h2>
-  <p id="idWasmalgstcExrndsn">description::
+  <section id="idWasmstcCrtmmr">
+  <h3 id="idWasmstcCrtmmrH3">instruction.current_memory
+    <a class="clsHide" href="#idWasmstcCrtmmrH3"></a></h3>
+  <p id="idWasmstcCrtmmrdsn">description::
+    <br>· the-current_memory instruction returns the current size of a-memory.
+    <a class="clsHide" href="#idWasmstcCrtmmrdsn"></a></p>
+  <p id="idWasmstcCrtmmrnam">name::
+    <br>* cpt.Wasm'current_memory,
+    <br>* cpt.Wasm-instruction.current_memory,
+    <a class="clsHide" href="#idWasmstcCrtmmrnam"></a></p>
+  </section>
+
+  <section id="idWasmstcGrwmmr">
+  <h3 id="idWasmstcGrwmmrH3">instruction.grow_memory
+    <a class="clsHide" href="#idWasmstcGrwmmrH3"></a></h3>
+  <p id="idWasmstcGrwmmrdsn">description::
+    <br>· the-grow_memory-instruction grows memory by a given delta and returns the previous size, or −1 if enough memory cannot-be-allocated.
+    <br>· operate in units of <a class="clsPreview" href="#idWasmalgsuntMmrpage">page</a> size.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions</a> {2018-03-22}]
+    <a class="clsHide" href="#idWasmstcGrwmmrdsn"></a></p>
+  <p id="idWasmstcGrwmmrnam">name::
+    <br>* cpt.Wasm'grow_memory,
+    <br>* cpt.Wasm-instruction.grow_memory,
+    <a class="clsHide" href="#idWasmstcGrwmmrnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h3 id="idWasmstcLoadH3">instruction.load
+    <a class="clsHide" href="#idWasmstcLoadH3"></a></h3>
+  <p id="idWasmstcLoaddsn">description::
+    <br>· memory is-accessed with load and store instructions for the different <a class="clsPreview" href="idWasmalgsuntValSpc">value-types</a>.
+    <br>· they all take <a class="clsPreview" href="idWasmstcMmrarg">a-memory-immediate-memarg</a> that contains an address-offset and an-alignment-hint (in base 2 logarithmic representation).
+    <br>· integer loads and stores can optionally specify a storage size that is smaller than the bit width of the respective value-type.
+    <br>· in the-case of loads, a-sign-extension-mode-sx-(u|s) is then required to select appropriate behavior.
+    <br>· the-static-address offset is added to the-dynamic-address operand, yielding a 33-bit effective-address that is the zero-based index at which the-memory is-accessed.
+    <br>· all values are read and written in little-endian-byte-order.
+    <br>· a-trap results if any of the accessed memory bytes lies outside the address range implied by the memory's current size.
+    <br>· note: future version of WebAssembly might-provide memory-instructions with 64-bit address ranges.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions</a> {2018-03-22}]
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'load-memory-instruction,
+    <br>* cpt.Wasm-instruction.load-memory,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcStore">
+  <h3 id="idWasmstcStoreH3">instruction.store
+    <a class="clsHide" href="#idWasmstcStoreH3"></a></h3>
+  <p id="idWasmstcStorenam">name::
+    <br>* cpt.Wasm'store-memory-instruction,
+    <br>* cpt.Wasm-instruction.store-memory,
+    <a class="clsHide" href="#idWasmstcStorenam"></a></p>
+  </section>
+  </section>
+
+  <section id="idWasmstcExrn">
+  <h2 id="idWasmstcExrnH2">instruction.EXPRESSION
+    <a class="clsHide" href="#idWasmstcExrnH2"></a></h2>
+  <p id="idWasmstcExrndsn">description::
     <br>· expression is a sequence of instructions terminated by an-end-marker.
     <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#expressions">https://webassembly.github.io/spec/core/syntax/instructions.html#expressions</a> {2018-03-22}]
-    <a class="clsHide" href="#idWasmalgstcExrndsn"></a></p>
-  <p id="idWasmalgstcExrnnam">name::
+    <a class="clsHide" href="#idWasmstcExrndsn"></a></p>
+  <p id="idWasmstcExrnnam">name::
     <br>* cpt.Wasm'expression-instruction,
     <br>* cpt.Wasm-instruction.expression,
-    <a class="clsHide" href="#idWasmalgstcExrnnam"></a></p>
+    <a class="clsHide" href="#idWasmstcExrnnam"></a></p>
   </section>
 </section>
 
@@ -896,7 +1177,7 @@
     <a class="clsHide" href="#idWasmalgscnTypeH2"></a></h2>
   <p id="idWasmalgscnTypedsn">description::
     <br>· opcode: 0x01.
-    <br>· it consists of a-list of type-signatures, today of <a class="clsPreview" href="#idWasmalgsuntFcnsgtr">function-signatures</a>.
+    <br>· it consists of a-list of type-signatures, today of <a class="clsPreview" href="#idWasmfcnsgtr">function-signatures</a>.
     <br>· it includes signatures of imported-functions.
     <br>· the-position in this list, define the unique index of the-type inside the-module.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
@@ -934,7 +1215,7 @@
   <p id="idWasmalgscnFctndsn">description::
     <br>· opcode: 0x03.
     <br>· it consists of an-array of function-declarations.
-    <br>· a-function-declaration consists of: an-index in <a class="clsPreview" href="#idWasmalgscnType">the-type-section</a> of <a class="clsPreview" href="#idWasmalgsuntFcnsgtr">the-signature-of-the-function</a>.
+    <br>· a-function-declaration consists of: an-index in <a class="clsPreview" href="#idWasmalgscnType">the-type-section</a> of <a class="clsPreview" href="#idWasmfcnsgtr">the-signature-of-the-function</a>.
     <br>· the-function-declarations directly correspond to elements in <a class="clsPreview" href="#idWasmalgscnCode">the-code-section</a> array.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#function-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#function-section</a>]
     <a class="clsHide" href="#idWasmalgscnFctndsn"></a></p>
@@ -1054,7 +1335,7 @@
     <a class="clsHide" href="#idWasmalgscnCodeH2"></a></h2>
   <p id="idWasmalgscnCodedsn">description::
     <br>· opcode: 0x0a.
-    <br>· it consists of an-array of <a class="clsPreview" href="#idWasmalgsuntFcnbody">function-bodies</a>.
+    <br>· it consists of an-array of <a class="clsPreview" href="#idWasmfcnbody">function-bodies</a>.
     <br>===
     <br>· the-code-section is probably the-bulk of most WebAssembly-modules as it defines all code for all functions in the-module.
     <br>· the-function-bodies are-defined in the same order as their respective function-indexes in <a class="clsPreview" href="#idWasmalgscnFctn">the-function-section</a>, not including imports of course.
