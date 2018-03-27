@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-9-0.2018-03-26 draft)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-10-0.2018-03-27 draft)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -84,6 +84,18 @@
     <br>* cpt.Wasm'virtual-machine,
     <a class="clsHide" href="#idWasmalgmchnnam"></a></p>
 
+  <section id="idWasmalgmchnstr">
+  <h2 id="idWasmalgmchnstrH2">store of Wasm-machine
+    <a class="clsHide" href="#idWasmalgmchnstrH2"></a></h2>
+  <p id="idWasmalgmchnstrdsn">description::
+    <br>· the-store contains the-state of a-Wasm-program.
+    <a class="clsHide" href="#idWasmalgmchnstrdsn"></a></p>
+  <p id="idWasmalgmchnstrnam">name::
+    <br>* cpt.Wasm'store-of-machine,
+    <br>* cpt.Wasm-machine'store,
+    <a class="clsHide" href="#idWasmalgmchnstrnam"></a></p>
+  </section>
+
   <section id="idWasmalgmchnstk">
   <h2 id="idWasmalgmchnstkH2">stack of Wasm-machine
     <a class="clsHide" href="#idWasmalgmchnstkH2"></a></h2>
@@ -126,19 +138,19 @@
     <a class="clsHide" href="#idWasmalgsuntnam"></a></p>
 
   <section id="idWasmalgsuntSpc">
-  <h2 id="idWasmalgsuntSpcH2">algo-sem-unit.SPECIFIC
+  <h2 id="idWasmalgsuntSpcH2">sem-unit.SPECIFIC
     <a class="clsHide" href="#idWasmalgsuntSpcH2"></a></h2>
   <p id="idWasmalgsuntSpcP1">specific::
-    <br>* value,
-    <br>* function,
-    <br>* variable,
-    <br>* table,
-    <br>* memory,
+    <br>* <a class="clsPreview" href="#idWasmalgsuntVal">value</a>,
+    <br>* <a class="clsPreview" href="#idWasmfcn">function</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgsuntNmd">variable</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgsuntTbl">table</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgsuntMmr">memory</a>,
     <a class="clsHide" href="#idWasmalgsuntSpcP1"></a></p>
   </section>
 
   <section id="idWasmalgsuntVal">
-  <h2 id="idWasmalgsuntValH2">algo-sem-unit.VALUE
+  <h2 id="idWasmalgsuntValH2">sem-unit.VALUE
     <a class="clsHide" href="#idWasmalgsuntValH2"></a></h2>
   <p id="idWasmalgsuntValdsn">description::
     <br>'Machine Types
@@ -179,7 +191,7 @@
     <a class="clsHide" href="#idWasmalgsuntI32H3"></a></h3>
   <p id="idWasmalgsuntI32dsn">description::
     <br>The types i32 and i64 classify 32 and 64 bit integers, respectively. Integers are not inherently signed or unsigned, their interpretation is determined by individual operations.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/types.html#value-types">https://webassembly.github.io/spec/core/syntax/types.html#value-types</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/types.html#value-types">https://webassembly.github.io/spec/core/syntax/types.html#value-types</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmalgsuntI32dsn"></a></p>
   <p id="idWasmalgsuntI32nam">name::
     <br>* cpt.Wasm'i32-sem-unit,
@@ -203,7 +215,7 @@
     <a class="clsHide" href="#idWasmalgsuntF32H3"></a></h3>
   <p id="idWasmalgsuntF32dsn">description::
     <br>The types f32 and f64 classify 32 and 64 bit floating-point data, respectively. They correspond to the respective binary floating-point representations, also known as single and double precision, as defined by the IEEE 754-2008 standard (Section 3.3).
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/types.html#value-types">https://webassembly.github.io/spec/core/syntax/types.html#value-types</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/types.html#value-types">https://webassembly.github.io/spec/core/syntax/types.html#value-types</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmalgsuntF32dsn"></a></p>
   <p id="idWasmalgsuntF32nam">name::
     <br>* cpt.Wasm'f32-sem-unit,
@@ -221,10 +233,24 @@
     <br>* cpt.Wasm-value.f64,
     <a class="clsHide" href="#idWasmalgsuntF64nam"></a></p>
   </section>
+
+  <section id="idWasmalgsuntRslt">
+  <h3 id="idWasmalgsuntRsltH3">value.RESULT
+    <a class="clsHide" href="#idWasmalgsuntRsltH3"></a></h3>
+  <p id="idWasmalgsuntRsltdsn">description::
+    <br>· result is a sequence of values which is the-output of executing instructions or blocks.
+    <br>· in current version, at most one value is-allowed.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/types.html#result-types">https://webassembly.github.io/spec/core/syntax/types.html#result-types</a> {1-0.2018-03-22}]
+    <a class="clsHide" href="#idWasmalgsuntRsltdsn"></a></p>
+  <p id="idWasmalgsuntRsltnam">name::
+    <br>* cpt.Wasm'result-type,
+    <br>* cpt.Wasm-value.result,
+    <a class="clsHide" href="#idWasmalgsuntRsltnam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmfcn">
-  <h2 id="idWasmfcnH2">algo-sem-unit.FUNCTION
+  <h2 id="idWasmfcnH2">sem-unit.FUNCTION
     <a class="clsHide" href="#idWasmfcnH2"></a></h2>
   <p id="idWasmfcnnam">name::
     <br>* cpt.Wasm'function,
@@ -256,7 +282,7 @@
     <br>· (func params returns)
     <br>===
     <br>· function-type is a generic signature that maps a-vector of parmeters to a-vector of results[a] which[a] in the current version is at most 1.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/types.html#syntax-functype">https://webassembly.github.io/spec/core/syntax/types.html#syntax-functype</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/types.html#syntax-functype">https://webassembly.github.io/spec/core/syntax/types.html#syntax-functype</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmfcnsgtrdsn"></a></p>
   <p id="idWasmfcnsgtrnam">name::
     <br>* cpt.Wasm-function'signature,
@@ -286,7 +312,7 @@
   <p id="idWasmfcnidxspcdsn">description::
     <br>· the-index-space for functions, tables, memories and globals includes respective imports declared in the same module.
     <br>· the-indices of these imports precede the-indices of other definitions in the same index-space.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmfcnidxspcdsn"></a></p>
   <p id="idWasmfcnidxspcnam">name::
     <br>* cpt.Wasm-function'index-space,
@@ -309,7 +335,7 @@
     <a class="clsHide" href="#idWasmfcnStrtH3"></a></h3>
   <p id="idWasmfcnStrtdsn">description::
     <br>· modules can-define a-start-function that is automatically executed.
-    <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#concepts">https://webassembly.github.io/spec/core/intro/overview.html#concepts</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#concepts">https://webassembly.github.io/spec/core/intro/overview.html#concepts</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmfcnStrtdsn"></a></p>
   <p id="idWasmfcnStrtnam">name::
     <br>* cpt.Wasm-function.start,
@@ -319,7 +345,7 @@
   </section>
 
   <section id="idWasmalgsuntNmd">
-  <h2 id="idWasmalgsuntNmdH2">algo-sem-unit.VARIABLE
+  <h2 id="idWasmalgsuntNmdH2">sem-unit.VARIABLE
     <a class="clsHide" href="#idWasmalgsuntNmdH2"></a></h2>
   <p id="idWasmalgsuntNmdnam">name::
     <br>* cpt.Wasm'variable,
@@ -398,7 +424,7 @@
     <a class="clsHide" href="#idWasmalgsuntNmdLclH4"></a></h4>
   <p id="idWasmalgsuntNmdLcldsn">description::
     <br>· the-index-space for locals is only accessible inside a-function and includes the-parameters and local-variables of that function, which precede the other locals.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmalgsuntNmdLcldsn"></a></p>
   <p id="idWasmalgsuntNmdLclnam">name::
     <br>* cpt.Wasm-local'index-space,
@@ -408,7 +434,7 @@
   </section>
 
   <section id="idWasmalgsuntTbl">
-  <h2 id="idWasmalgsuntTblH2">algo-sem-unit.TABLE
+  <h2 id="idWasmalgsuntTblH2">sem-unit.TABLE
     <a class="clsHide" href="#idWasmalgsuntTblH2"></a></h2>
   <p id="idWasmalgsuntTbldsn">description::
     <br>· tables are basically resizable arrays of references that can-be-accessed by index from WebAssembly-code.
@@ -442,7 +468,7 @@
   <p id="idWasmalgsuntTblidxspcdsn">description::
     <br>· the-index-space for functions, tables, memories and globals includes respective imports declared in the same module.
     <br>· the-indices of these imports precede the-indices of other definitions in the same index-space.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmalgsuntTblidxspcdsn"></a></p>
   <p id="idWasmalgsuntTblidxspcnam">name::
     <br>* cpt.Wasm-table'index-space,
@@ -451,11 +477,11 @@
   </section>
 
   <section id="idWasmalgsuntMmr">
-  <h2 id="idWasmalgsuntMmrH2">algo-sem-unit.MEMORY
+  <h2 id="idWasmalgsuntMmrH2">sem-unit.MEMORY
     <a class="clsHide" href="#idWasmalgsuntMmrH2"></a></h2>
   <p id="idWasmalgsuntMmrdsn">description::
     <br>· a-memory is a-vector of raw uninterpreted bytes.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#memories">https://webassembly.github.io/spec/core/syntax/modules.html#memories</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#memories">https://webassembly.github.io/spec/core/syntax/modules.html#memories</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmalgsuntMmrdsn"></a></p>
   <p id="idWasmalgsuntMmrnam">name::
     <br>* cpt.Wasm'memory,
@@ -481,7 +507,7 @@
   <p id="idWasmalgsuntMmridxspcdsn">description::
     <br>· the-index-space for functions, tables, memories and globals includes respective imports declared in the same module.
     <br>· the-indices of these imports precede the-indices of other definitions in the same index-space.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmalgsuntMmridxspcdsn"></a></p>
   <p id="idWasmalgsuntMmridxspcnam">name::
     <br>* cpt.Wasm-memory'index-space,
@@ -493,6 +519,32 @@
     <a class="clsHide" href="#idWasmalgsuntMmridxspcH3"></a></h3>
   </section>
   </section>
+
+  <section id="idWasmalgsuntLmt">
+  <h2 id="idWasmalgsuntLmtH2">sem-unit.LIMIT
+    <a class="clsHide" href="#idWasmalgsuntLmtH2"></a></h2>
+  <p id="idWasmalgsuntLmtdsn">description::
+    <br>· limit is the-size-range of resizeable storage associated with memory-types and table-types.
+    <br>· limits ::= {min u32, max u32?}
+    <br>· if no maximum is given, the respective storage can grow to any size.
+    <a class="clsHide" href="#idWasmalgsuntLmtdsn"></a></p>
+  <p id="idWasmalgsuntLmtnam">name::
+    <br>* cpt.Wasm'limit-type,
+    <br>* cpt.Wasm-sem-unit.limit,
+    <a class="clsHide" href="#idWasmalgsuntLmtnam"></a></p>
+  </section>
+
+  <section id="idWasmalgsuntExtl">
+  <h2 id="idWasmalgsuntExtlH2">sem-unit.EXTERNAL
+    <a class="clsHide" href="#idWasmalgsuntExtlH2"></a></h2>
+  <p id="idWasmalgsuntExtldsn">description::
+    <br>·
+    <a class="clsHide" href="#idWasmalgsuntExtldsn"></a></p>
+  <p id="idWasmalgsuntExtlnam">name::
+    <br>* cpt.Wasm'external-type,
+    <br>* cpt.Wasm-sem-unit.external,
+    <a class="clsHide" href="#idWasmalgsuntExtlnam"></a></p>
+  </section>
 </section>
 
 <section id="idWasmstc">
@@ -503,8 +555,8 @@
     <br>· an-instruction consists of <a class="clsPreview" href="#idWasmstcopcd">an-opcode</a> followed by its immediate <a class="clsPreview" href="#idWasmstcoprd">operands</a>.
     <a class="clsHide" href="#idWasmstcdsn"></a></p>
   <p id="idWasmstcnam">name::
-    <br>* cpt.Wasm'bytecode,
     <br>* cpt.Wasm'command,
+    <br>* cpt.Wasm'computation,
     <br>* cpt.Wasm'instruction,
     <br>* cpt.Wasm'sentence,
     <br>* cpt.Wasm-instruction,
@@ -712,7 +764,7 @@
   <p id="idWasmstctrapdsn">description::
     <br>· under some conditions, certain instructions may-produce a-trap, which immediately aborts execution.
     <br>· traps cannot-be-handled by WebAssembly-code, but are-reported to the-outside-environment, where they typically can-be-caught.
-    <br>[<a href="https://webassembly.github.io/spec/core/_download/WebAssembly.pdf">https://webassembly.github.io/spec/core/_download/WebAssembly.pdf</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/_download/WebAssembly.pdf">https://webassembly.github.io/spec/core/_download/WebAssembly.pdf</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmstctrapdsn"></a></p>
   <p id="idWasmstctrapnam">name::
     <br>* cpt.Wasm'trap-of-instruction,
@@ -799,7 +851,7 @@
     <br>· they bracket nested sequences of instructions, called blocks, terminated with, or separated by, end or else pseudo-instructions.
     <br>· as the-grammar prescribes, they must-be-well-nested.
     <br>· a-structured-instruction can-produce a-value as described by the annotated result-type.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#control-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#control-instructions</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#control-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#control-instructions</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmstcClfwStrddsn"></a></p>
   <p id="idWasmstcClfwStrdnam">name::
     <br>* cpt.Wasm'structured-control-instruction,
@@ -818,7 +870,7 @@
     <br>· the exact effect depends on that control-construct.
     <br>· in case of block or if it is a forward jump, resuming execution after the matching end.
     <br>· in case of loop it is a backward jump to the-beginning of the-loop.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#control-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#control-instructions</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#control-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#control-instructions</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmstcClfwStrdlbldsn"></a></p>
   <p id="idWasmstcClfwStrdlblnam">name::
     <br>* cpt.Wasm'label-of--structured-control-instruction,
@@ -918,11 +970,44 @@
   <h2 id="idWasmstcPrmcH2">instruction.PARAMETRIC
     <a class="clsHide" href="#idWasmstcPrmcH2"></a></h2>
   <p id="idWasmstcPrmcdsn">description::
-    <br>·
+    <br>· instructions in this group can-operate on operands of any value-type.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmstcPrmcdsn"></a></p>
   <p id="idWasmstcPrmcnam">name::
     <br>* cpt.Wasm-instruction.parametric,
     <a class="clsHide" href="#idWasmstcPrmcnam"></a></p>
+
+  <section id="idWasmstcPrmcDrp">
+  <h3 id="idWasmstcPrmcDrpH3">instruction.drop
+    <a class="clsHide" href="#idWasmstcPrmcDrpH3"></a></h3>
+  <p id="idWasmstcPrmcDrpdsn">description::
+    <br>· the-drop-operator simply throws away a single operand.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions</a> {1-0.2018-03-22}]
+    <br>===
+    <br>· binary-format: 0x1A
+    <a class="clsHide" href="#idWasmstcPrmcDrpdsn"></a></p>
+  <p id="idWasmstcPrmcDrpnam">name::
+    <br>* cpt.Wasm'drop-instruction,
+    <br>* cpt.Wasm-instruction.0x1A,
+    <br>* cpt.Wasm-instruction.drop,
+    <a class="clsHide" href="#idWasmstcPrmcDrpnam"></a></p>
+  </section>
+
+  <section id="idWasmstcPrmcSlct">
+  <h3 id="idWasmstcPrmcSlctH3">instruction.select
+    <a class="clsHide" href="#idWasmstcPrmcSlctH3"></a></h3>
+  <p id="idWasmstcPrmcSlctdsn">description::
+    <br>· the-select-operator selects one of its first two operands based on whether its third operand is zero or not.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions</a> {1-0.2018-03-22}]
+    <br>===
+    <br>· binary-format: 0x1B
+    <a class="clsHide" href="#idWasmstcPrmcSlctdsn"></a></p>
+  <p id="idWasmstcPrmcSlctnam">name::
+    <br>* cpt.Wasm'select-instruction,
+    <br>* cpt.Wasm-instruction.0x1B,
+    <br>* cpt.Wasm-instruction.select,
+    <a class="clsHide" href="#idWasmstcPrmcSlctnam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmstcVrbl">
@@ -1000,7 +1085,7 @@
     <a class="clsHide" href="#idWasmstcMmrargH3"></a></h3>
   <p id="idWasmstcMmrargdsn">description::
     <br>· memarg ::= {offset u32, align u32}
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmstcMmrargdsn"></a></p>
   <p id="idWasmstcMmrargnam">name::
     <br>* cpt.Wasm'memarg,
@@ -1026,7 +1111,7 @@
   <p id="idWasmstcGrwmmrdsn">description::
     <br>· the-grow_memory-instruction grows memory by a given delta and returns the previous size, or −1 if enough memory cannot-be-allocated.
     <br>· operate in units of <a class="clsPreview" href="#idWasmalgsuntMmrpage">page</a> size.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmstcGrwmmrdsn"></a></p>
   <p id="idWasmstcGrwmmrnam">name::
     <br>* cpt.Wasm'grow_memory,
@@ -1046,7 +1131,7 @@
     <br>· all values are read and written in little-endian-byte-order.
     <br>· a-trap results if any of the accessed memory bytes lies outside the address range implied by the memory's current size.
     <br>· note: future version of WebAssembly might-provide memory-instructions with 64-bit address ranges.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
   <p id="idWasmstcLoadnam">name::
     <br>* cpt.Wasm'load-memory-instruction,
@@ -1069,7 +1154,7 @@
     <a class="clsHide" href="#idWasmstcExrnH2"></a></h2>
   <p id="idWasmstcExrndsn">description::
     <br>· expression is a sequence of instructions terminated by an-end-marker.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#expressions">https://webassembly.github.io/spec/core/syntax/instructions.html#expressions</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#expressions">https://webassembly.github.io/spec/core/syntax/instructions.html#expressions</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmstcExrndsn"></a></p>
   <p id="idWasmstcExrnnam">name::
     <br>* cpt.Wasm'expression-instruction,
@@ -1099,20 +1184,39 @@
     <a class="clsHide" href="#idWasmalgscnopcddsn"></a></p>
   <p id="idWasmalgscnopcdnam">name::
     <br>* cpt.Wasm'opcode-of-section,
+    <br>* cpt.Wasm-section'id,
     <br>* cpt.Wasm-section'opcode,
     <a class="clsHide" href="#idWasmalgscnopcdnam"></a></p>
   </section>
 
-  <section id="idWasmalgscnpld">
-  <h2 id="idWasmalgscnpldH2">payload of section
-    <a class="clsHide" href="#idWasmalgscnpldH2"></a></h2>
-  <p id="idWasmalgscnplddsn">description::
-    <br>· <a class="clsPreview" href="#idWasmalgscn">a-section</a> consists of a varuint7 <a class="clsPreview" href="#idWasmalgscnopcd">opcode</a> followed by a byte-array payload.
-    <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#module-contents">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#module-contents</a>]
-    <a class="clsHide" href="#idWasmalgscnplddsn"></a></p>
-  <p id="idWasmalgscnpldnam">name::
+  <section id="idWasmalgscnsize">
+  <h2 id="idWasmalgscnsizeH2">size of section
+    <a class="clsHide" href="#idWasmalgscnsizeH2"></a></h2>
+  <p id="idWasmalgscnsizedsn">description::
+    <br>· each section consists of
+    <br>- a one-byte section-id,
+    <br>- the-u32-size of the-contents, in bytes,
+    <br>- the actual contents, whose structure is depended on the section-id.
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/modules.html#sections">https://webassembly.github.io/spec/core/binary/modules.html#sections</a> {1-0.2018-03-22}]
+    <a class="clsHide" href="#idWasmalgscnsizedsn"></a></p>
+  <p id="idWasmalgscnsizenam">name::
+    <br>* cpt.Wasm-section'size,
+    <a class="clsHide" href="#idWasmalgscnsizenam"></a></p>
+  </section>
+
+  <section id="idWasmalgscncnt">
+  <h2 id="idWasmalgscncntH2">content of section
+    <a class="clsHide" href="#idWasmalgscncntH2"></a></h2>
+  <p id="idWasmalgscncntdsn">description::
+    <br>· each section consists of
+    <br>- a one-byte section-id,
+    <br>- the-u32-size of the-contents, in bytes,
+    <br>- the actual contents, whose structure is depended on the section-id.
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/modules.html#sections">https://webassembly.github.io/spec/core/binary/modules.html#sections</a> {1-0.2018-03-22}]
+    <a class="clsHide" href="#idWasmalgscncntdsn"></a></p>
+  <p id="idWasmalgscncntnam">name::
     <br>* cpt.Wasm-section'payload,
-    <a class="clsHide" href="#idWasmalgscnpldnam"></a></p>
+    <a class="clsHide" href="#idWasmalgscncntnam"></a></p>
   </section>
 
   <section id="idWasmalgscnSpc">
@@ -1122,19 +1226,19 @@
     <br>* cpt.Wasm-section.specific,
     <a class="clsHide" href="#idWasmalgscnSpcnam"></a></p>
   <p id="idWasmalgscnSpcP1">specific::
-    <br>* code-section,
-    <br>* custom-section,
-    <br>* data-section,
-    <br>* element-section,
-    <br>* export-section,
-    <br>* function-section,
-    <br>* global-section,
-    <br>* import-section,
-    <br>* known-section,
-    <br>* linear-memory--section,
-    <br>* start-section,
-    <br>* table-section,
-    <br>* type-section,
+    <br>* <a class="clsPreview" href="#idWasmalgscnCode">code-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgscnCtm">custom-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgscnData">data-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgscnElmt">element-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgscnExpt">export-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgscnFctn">function-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgscnGlbl">global-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgscnImpt">import-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgscnKnn">known-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgscnLrmr">linear-memory--section</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgscnStrt">start-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgscnTabl">table-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgscnType">type-section</a>,
     <a class="clsHide" href="#idWasmalgscnSpcP1"></a></p>
   </section>
 
@@ -1537,6 +1641,15 @@
     <br>* Bringing the Web up to Speed with WebAssembly: <a href="https://github.com/WebAssembly/spec/blob/master/papers/pldi2017.pdf">https://github.com/WebAssembly/spec/blob/master/papers/pldi2017.pdf</a>,
     <a class="clsHide" href="#idWasmspecwpa"></a></p>
 
+  <section id="idWasmgmr">
+  <h2 id="idWasmgmrH2">grammar of specification
+    <a class="clsHide" href="#idWasmgmrH2"></a></h2>
+  <p id="idWasmgmrnam">name::
+    <br>* cpt.Wasm'grammar,
+    <br>* cpt.Wasm-spec'grammar,
+    <a class="clsHide" href="#idWasmgmrnam"></a></p>
+  </section>
+
   <section id="idWasmspecwawg">
   <h2 id="idWasmspecwawgH2">WebAssembly-working-group
     <a class="clsHide" href="#idWasmspecwawgH2"></a></h2>
@@ -1608,7 +1721,7 @@
   <p id="idWasmrtedcdgdsn">description::
     <br>'Decoding
     <br>WebAssembly modules are distributed in a binary format. Decoding processes that format and converts it into an internal representation of a module. In this specification, this representation is modelled by abstract syntax, but a real implementation could compile directly to machine code instead.'
-    <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases">https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases">https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmrtedcdgdsn"></a></p>
   <p id="idWasmrtedcdgnam">name::
     <br>* cpt.Wasm'decoding-of-binary-modules,
@@ -1621,7 +1734,7 @@
   <p id="idWasmrtevldgdsn">description::
     <br>'Validation
     <br>A decoded module has to be valid. Validation checks a number of well-formedness conditions to guarantee that the module is meaningful and safe. In particular, it performs type checking of functions and the instruction sequences in their bodies, ensuring for example that the operand stack is used consistently.'
-    <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases">https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases">https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmrtevldgdsn"></a></p>
   <p id="idWasmrtevldgnam">name::
     <br>* cpt.Wasm'validating,
@@ -1633,7 +1746,7 @@
     <a class="clsHide" href="#idWasmrteextgH2"></a></h2>
   <p id="idWasmrteextgdsn">description::
     <br>'Finally, a valid module can be executed. Execution can be further divided into two phases: instantiation, invocation.'
-    <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases">https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases">https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmrteextgdsn"></a></p>
   <p id="idWasmrteextgnam">name::
     <br>* cpt.Wasm'executing,
@@ -1645,7 +1758,7 @@
     <a class="clsHide" href="#idWasmrteinstgH2"></a></h2>
   <p id="idWasmrteinstgdsn">description::
     <br>Instantiation. A module instance is the dynamic representation of a module, complete with its own state and execution stack. Instantiation executes the module body itself, given definitions for all its imports. It initializes globals, memories and tables and invokes the module’s start function if defined. It returns the instances of the module’s exports.
-    <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases">https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases">https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmrteinstgdsn"></a></p>
   <p id="idWasmrteinstgnam">name::
     <br>* cpt.Wasm'instatiating,
@@ -1657,7 +1770,7 @@
     <a class="clsHide" href="#idWasmrteinvgH2"></a></h2>
   <p id="idWasmrteinvgdsn">description::
     <br>'Invocation. Once instantiated, further WebAssembly computations can be initiated by invoking an exported function on a module instance. Given the required arguments, that executes the respective function and returns its results.'
-    <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases">https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases</a> {2018-03-22}]
+    <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases">https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmrteinvgdsn"></a></p>
   <p id="idWasmrteinvgnam">name::
     <br>* cpt.Wasm'invocating,
