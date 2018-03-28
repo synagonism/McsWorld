@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-10-0.2018-03-27 draft)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-11-0.2018-03-28 draft)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -113,19 +113,83 @@
   </section>
 </section>
 
-<section id="idWasmalgunt">
-  <h1 id="idWasmalguntH1">algo-unit of Wasm
-    <a class="clsHide" href="#idWasmalguntH1"></a></h1>
-  <p id="idWasmalguntnam">name::
+<section id="idWasmunt">
+  <h1 id="idWasmuntH1">algo-unit of Wasm
+    <a class="clsHide" href="#idWasmuntH1"></a></h1>
+  <p id="idWasmuntdsn">description::
+    <br>· the-units of binary-algo are bits.
+    <br>· the-units of text-algo are unicode-characters.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-28]
+    <a class="clsHide" href="#idWasmuntdsn"></a></p>
+  <p id="idWasmuntnam">name::
     <br>* cpt.Wasm'unit-of-algo,
-    <a class="clsHide" href="#idWasmalguntnam"></a></p>
+    <a class="clsHide" href="#idWasmuntnam"></a></p>
 
-  <section id="idWasmalguntByte">
-  <h2 id="idWasmalguntByteH2">algo-unit.BYTE
-    <a class="clsHide" href="#idWasmalguntByteH2"></a></h2>
-  <p id="idWasmalguntBytenam">name::
-    <br>* cpt.Wasm'byte,
-    <a class="clsHide" href="#idWasmalguntBytenam"></a></p>
+  <section id="idWasmuntBnr">
+  <h2 id="idWasmuntBnrH2">unit.BINARY
+    <a class="clsHide" href="#idWasmuntBnrH2"></a></h2>
+  <p id="idWasmuntBnrdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWasmuntBnrdsn"></a></p>
+  <p id="idWasmuntBnrnam">name::
+    <br>* cpt.Wasm'binary-unit,
+    <br>* cpt.Wasm-unit.binary,
+    <a class="clsHide" href="#idWasmuntBnrnam"></a></p>
+  </section>
+
+  <section id="idWasmuntTxt">
+  <h2 id="idWasmuntTxtH2">unit.TEXT
+    <a class="clsHide" href="#idWasmuntTxtH2"></a></h2>
+  <p id="idWasmuntTxtdsn">description::
+    <br>· while source-text may-contain any Unicode-character in comments or string literals, the-rest of the-grammar is-formed exclusively from the-characters supported by the-7-bit-ASCII-subset-of-Unicode.
+    <br>[<a href="https://webassembly.github.io/spec/core/text/lexical.html#characters">https://webassembly.github.io/spec/core/text/lexical.html#characters</a> {1-0.2018-03-22}]
+    <a class="clsHide" href="#idWasmuntTxtdsn"></a></p>
+  <p id="idWasmuntTxtnam">name::
+    <br>* cpt.Wasm'text-unit,
+    <br>* cpt.Wasm-text-unit,
+    <br>* cpt.Wasm-unit.text,
+    <a class="clsHide" href="#idWasmuntTxtnam"></a></p>
+
+  <section id="idWasmuntTxtWtsc">
+  <h3 id="idWasmuntTxtWtscH3">text-unit.WHITE-SPACE
+    <a class="clsHide" href="#idWasmuntTxtWtscH3"></a></h3>
+  <p id="idWasmuntTxtWtscdsn">description::
+    <br>· white-space is any sequence of literal-space-characters, formatting-characters, or comments.
+    <br>· the allowed formatting-characters correspond to a subset of the-ASCII-format-effectors, namely, horizontal-tabulation-(U+09), line-feed-(U+0A), and carriage-return-(U+0D).
+    <br><code>space ::= (‘  ’ | format | comment)∗
+    <br> format ::= U+09 | U+0A | U+0D</code>
+    <br>· the only relevance of white-space is to separate tokens, it is-ignored otherwise.
+    <br>[]
+    <a class="clsHide" href="#idWasmuntTxtWtscdsn"></a></p>
+  <p id="idWasmuntTxtWtscnam">name::
+    <br>* cpt.Wasm'white-space,
+    <br>* cpt.Wasm-text-unit.white-space,
+    <a class="clsHide" href="#idWasmuntTxtWtscnam"></a></p>
+  </section>
+
+  <section id="idWasmuntTxtTkn">
+  <h3 id="idWasmuntTxtTknH3">text-unit.TOKEN
+    <a class="clsHide" href="#idWasmuntTxtTknH3"></a></h3>
+  <p id="idWasmuntTxtTkndsn">description::
+    <br>·
+    <a class="clsHide" href="#idWasmuntTxtTkndsn"></a></p>
+  <p id="idWasmuntTxtTknnam">name::
+    <br>* cpt.Wasm'token-of-text-algo,
+    <a class="clsHide" href="#idWasmuntTxtTknnam"></a></p>
+  </section>
+
+  <section id="idWasmuntTxtCmnt">
+  <h3 id="idWasmuntTxtCmntH3">text-unit.COMMENT
+    <a class="clsHide" href="#idWasmuntTxtCmntH3"></a></h3>
+  <p id="idWasmuntTxtCmntdsn">description::
+    <br>· a-comment can either be a-line-comment, started with a double semicolon ‘;;’ and extending to the-end of the-line, or a-block-comment, enclosed in delimiters ‘(;’…‘;)’.
+    <br>· block-comments can-be-nested.
+    <br>[<a href="https://webassembly.github.io/spec/core/text/lexical.html#comments">https://webassembly.github.io/spec/core/text/lexical.html#comments</a> {1-0.2018-03-22}]
+    <a class="clsHide" href="#idWasmuntTxtCmntdsn"></a></p>
+  <p id="idWasmuntTxtCmntnam">name::
+    <br>* cpt.Wasm'comment,
+    <a class="clsHide" href="#idWasmuntTxtCmntnam"></a></p>
+  </section>
   </section>
 </section>
 
@@ -169,26 +233,32 @@
     <br>* cpt.Wasm-value,
     <a class="clsHide" href="#idWasmalgsuntValnam"></a></p>
 
-  <section id="idWasmalgsuntValSpc">
-  <h3 id="idWasmalgsuntValSpcH3">value.SPECIFIC
-    <a class="clsHide" href="#idWasmalgsuntValSpcH3"></a></h3>
-  <p id="idWasmalgsuntValSpcnam">name::
+  <section id="idWasmsuntValType">
+  <h3 id="idWasmsuntValTypeH3">value.SPECIFIC
+    <a class="clsHide" href="#idWasmsuntValTypeH3"></a></h3>
+  <p id="idWasmsuntValTypenam">name::
+    <br>* cpt.Wasm-value.specific,
+    <a class="clsHide" href="#idWasmsuntValTypenam"></a></p>
+  </section>
+
+  <section id="idWasmsuntValType">
+  <h3 id="idWasmsuntValTypeH3">value.TYPE
+    <a class="clsHide" href="#idWasmsuntValTypeH3"></a></h3>
+  <p id="idWasmsuntValTypenam">name::
     <br>* cpt.Wasm'basic-data-type,
     <br>* cpt.Wasm'machine-type,
     <br>* cpt.Wasm'value-type,
-    <br>* cpt.Wasm-value.specific,
-    <a class="clsHide" href="#idWasmalgsuntValSpcnam"></a></p>
-  <p id="idWasmalgsuntValSpcP1">specific::
+    <a class="clsHide" href="#idWasmsuntValTypenam"></a></p>
+  <p id="idWasmsuntValTypeP1">specific::
     <br>* i32,
     <br>* i64,
     <br>* f32,
     <br>* f64,
-    <a class="clsHide" href="#idWasmalgsuntValSpcP1"></a></p>
-  </section>
+    <a class="clsHide" href="#idWasmsuntValTypeP1"></a></p>
 
   <section id="idWasmalgsuntI32">
-  <h3 id="idWasmalgsuntI32H3">value.i32
-    <a class="clsHide" href="#idWasmalgsuntI32H3"></a></h3>
+  <h4 id="idWasmalgsuntI32H4">value.i32
+    <a class="clsHide" href="#idWasmalgsuntI32H4"></a></h4>
   <p id="idWasmalgsuntI32dsn">description::
     <br>The types i32 and i64 classify 32 and 64 bit integers, respectively. Integers are not inherently signed or unsigned, their interpretation is determined by individual operations.
     <br>[<a href="https://webassembly.github.io/spec/core/syntax/types.html#value-types">https://webassembly.github.io/spec/core/syntax/types.html#value-types</a> {1-0.2018-03-22}]
@@ -201,8 +271,8 @@
   </section>
 
   <section id="idWasmalgsuntI64">
-  <h3 id="idWasmalgsuntI64H3">value.i64
-    <a class="clsHide" href="#idWasmalgsuntI64H3"></a></h3>
+  <h4 id="idWasmalgsuntI64H4">value.i64
+    <a class="clsHide" href="#idWasmalgsuntI64H4"></a></h4>
   <p id="idWasmalgsuntI64nam">name::
     <br>* cpt.Wasm'i64-sem-unit,
     <br>* cpt.Wasm-sem-unit.i64,
@@ -211,8 +281,8 @@
   </section>
 
   <section id="idWasmalgsuntF32">
-  <h3 id="idWasmalgsuntF32H3">value.f32
-    <a class="clsHide" href="#idWasmalgsuntF32H3"></a></h3>
+  <h4 id="idWasmalgsuntF32H4">value.f32
+    <a class="clsHide" href="#idWasmalgsuntF32H4"></a></h4>
   <p id="idWasmalgsuntF32dsn">description::
     <br>The types f32 and f64 classify 32 and 64 bit floating-point data, respectively. They correspond to the respective binary floating-point representations, also known as single and double precision, as defined by the IEEE 754-2008 standard (Section 3.3).
     <br>[<a href="https://webassembly.github.io/spec/core/syntax/types.html#value-types">https://webassembly.github.io/spec/core/syntax/types.html#value-types</a> {1-0.2018-03-22}]
@@ -225,13 +295,51 @@
   </section>
 
   <section id="idWasmalgsuntF64">
-  <h3 id="idWasmalgsuntF64H3">value.f64
-    <a class="clsHide" href="#idWasmalgsuntF64H3"></a></h3>
+  <h4 id="idWasmalgsuntF64H4">value.f64
+    <a class="clsHide" href="#idWasmalgsuntF64H4"></a></h4>
   <p id="idWasmalgsuntF64nam">name::
     <br>* cpt.Wasm'f64-sem-unit,
     <br>* cpt.Wasm-sem-unit.f64,
     <br>* cpt.Wasm-value.f64,
     <a class="clsHide" href="#idWasmalgsuntF64nam"></a></p>
+  </section>
+  </section>
+
+  <section id="idWasmsuntByte">
+  <h3 id="idWasmsuntByteH3">value.BYTE
+    <a class="clsHide" href="#idWasmsuntByteH3"></a></h3>
+  <p id="idWasmsuntBytenam">name::
+    <br>* cpt.Wasm'byte,
+    <br>* cpt.Wasm-value.byte,
+    <a class="clsHide" href="#idWasmsuntBytenam"></a></p>
+  </section>
+
+  <section id="idWasmsuntItgr">
+  <h3 id="idWasmsuntItgrH3">value.INTEGER
+    <a class="clsHide" href="#idWasmsuntItgrH3"></a></h3>
+  <p id="idWasmsuntItgrdsn">description::
+    <br>· different classes of integers with different value ranges are distinguished by their bit-width-N and by whether they are unsigned or signed.
+    <br>· the main integer types occurring in this specification are u32, u64, s32, s64, i8, i16, i32, i64. However, other sizes occur as auxiliary constructions, e.g., in the definition of floating-point numbers.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/values.html#integers">https://webassembly.github.io/spec/core/syntax/values.html#integers</a> {1-0.2018-03-22}]
+    <a class="clsHide" href="#idWasmsuntItgrdsn"></a></p>
+  <p id="idWasmsuntItgrnam">name::
+    <br>* cpt.Wasm'integer,
+    <br>* cpt.Wasm'number.integer,
+    <br>* cpt.Wasm-sem-unit.integer,
+    <a class="clsHide" href="#idWasmsuntItgrnam"></a></p>
+  </section>
+
+  <section id="idWasmsuntFgpt">
+  <h3 id="idWasmsuntFgptH3">value.FLOATING-POINT
+    <a class="clsHide" href="#idWasmsuntFgptH3"></a></h3>
+  <p id="idWasmsuntFgptdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWasmsuntFgptdsn"></a></p>
+  <p id="idWasmsuntFgptnam">name::
+    <br>* cpt.Wasm'floating-point,
+    <br>* cpt.Wasm'number.floating-point,
+    <br>* cpt.Wasm-sem-unit.floating-point,
+    <a class="clsHide" href="#idWasmsuntFgptnam"></a></p>
   </section>
 
   <section id="idWasmalgsuntRslt">
@@ -544,6 +652,51 @@
     <br>* cpt.Wasm'external-type,
     <br>* cpt.Wasm-sem-unit.external,
     <a class="clsHide" href="#idWasmalgsuntExtlnam"></a></p>
+  </section>
+
+  <section id="idWasmalgsuntNmd">
+  <h2 id="idWasmalgsuntNmdH2">sem-unit.NAMED
+    <a class="clsHide" href="#idWasmalgsuntNmdH2"></a></h2>
+  <p id="idWasmalgsuntNmddsn">description::
+    <br>· named-sem-unit is a-sem-unit with a-name.
+    <br>· the-name is an-index in the-sequence of the-definitions of sem-units or a-symbolic-name in the-text-algo.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-28]
+    <a class="clsHide" href="#idWasmalgsuntNmddsn"></a></p>
+  <p id="idWasmalgsuntNmdnam">name::
+    <br>* cpt.Wasm'named-sem-unit,
+    <br>* cpt.Wasm-sem-unit.named,
+    <a class="clsHide" href="#idWasmalgsuntNmdnam"></a></p>
+
+  <section id="idWasmalgsuntNmdidx">
+  <h2 id="idWasmalgsuntNmdidxH2">index of named-sem-unit
+    <a class="clsHide" href="#idWasmalgsuntNmdidxH2"></a></h2>
+  <p id="idWasmalgsuntNmdidxdsn">description::
+    <br>· definitions are-referenced with zero-based indices.
+    <br>· each class of definition has its own index-space, as distinguished by the following classes.
+    <br>- typeidx ::= u32
+    <br>- funcidx ::= u32
+    <br>- tableidx ::= u32
+    <br>- memidx ::= u32
+    <br>- globalidx ::= u32
+    <br>- localidx ::= u32
+    <br>- labelidx ::= u32
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#syntax-index">https://webassembly.github.io/spec/core/syntax/modules.html#syntax-index</a> {1-0.2018-03-22}]
+    <a class="clsHide" href="#idWasmalgsuntNmdidxdsn"></a></p>
+  <p id="idWasmalgsuntNmdidxnam">name::
+    <br>* cpt.Wasm'index-of-sem-unit,
+    <a class="clsHide" href="#idWasmalgsuntNmdidxnam"></a></p>
+  </section>
+
+  <section id="idWasmalgsuntNmdidfr">
+  <h2 id="idWasmalgsuntNmdidfrH2">identifier of named-sem-unit
+    <a class="clsHide" href="#idWasmalgsuntNmdidfrH2"></a></h2>
+  <p id="idWasmalgsuntNmdidfrdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWasmalgsuntNmdidfrdsn"></a></p>
+  <p id="idWasmalgsuntNmdidfrnam">name::
+    <br>* cpt.Wasm'identifier-of-sem-unit,
+    <a class="clsHide" href="#idWasmalgsuntNmdidfrnam"></a></p>
+  </section>
   </section>
 </section>
 
@@ -1123,7 +1276,7 @@
   <h3 id="idWasmstcLoadH3">instruction.load
     <a class="clsHide" href="#idWasmstcLoadH3"></a></h3>
   <p id="idWasmstcLoaddsn">description::
-    <br>· memory is-accessed with load and store instructions for the different <a class="clsPreview" href="idWasmalgsuntValSpc">value-types</a>.
+    <br>· memory is-accessed with load and store instructions for the different <a class="clsPreview" href="idWasmsuntValType">value-types</a>.
     <br>· they all take <a class="clsPreview" href="idWasmstcMmrarg">a-memory-immediate-memarg</a> that contains an address-offset and an-alignment-hint (in base 2 logarithmic representation).
     <br>· integer loads and stores can optionally specify a storage size that is smaller than the bit width of the respective value-type.
     <br>· in the-case of loads, a-sign-extension-mode-sx-(u|s) is then required to select appropriate behavior.
@@ -1472,7 +1625,7 @@
     <a class="clsHide" href="#idWasmalgmdlH1"></a></h1>
   <p id="idWasmalgmdldsn">description::
     <br>· module is the outermost construction.
-    <br>· a-module consists of a-header followed by a sequence of sections.
+    <br>· a-module consists of <a class="clsPreview" href="#idWasmalgmdlhdr">a-header</a> followed by a sequence of <a class="clsPreview" href="#idWasmalgscn">sections</a>.
     <a class="clsHide" href="#idWasmalgmdldsn"></a></p>
   <p id="idWasmalgmdlnam">name::
     <br>* cpt.Wasm'module,
@@ -1522,6 +1675,7 @@
     <br>[<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Text_format_to_wasm">https://developer.mozilla.org/en-US/docs/WebAssembly/Text_format_to_wasm</a>]
     <a class="clsHide" href="#idWasmalgTxtdsn"></a></p>
   <p id="idWasmalgTxtnam">name::
+    <br>* cpt.Wasm'source-format,
     <br>* cpt.Wasm'textual-format,
     <br>* cpt.Wasm-txt-algo,
     <a class="clsHide" href="#idWasmalgTxtnam"></a></p>
@@ -1881,6 +2035,7 @@
     <br> &nbsp;<img src="../../misc/img/mail.png" alt="imgMail">
     <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>
     <br>• steemit: <a href="https://steemit.com/synagonism">https://steemit.com/@synagonism</a>
+    <br>• github: <a href="https://github.com/synagonism/Mcsw/blob/master/dirTchInf/filMcsLwasm.last.html">https://github.com/synagonism/Mcsw/blob/master/dirTchInf/filMcsLwasm.last.html</a>,
     <a class="clsHide" href="#idFooterP1"></a></p>
   <!--                              -->
   <p id="idMetaVersion">webpage-versions::
