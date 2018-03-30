@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-12-0.2018-03-29 draft)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-13-0.2018-03-30 draft)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -311,8 +311,39 @@
     <br>* f64,
     <a class="clsHide" href="#idWasmsuntValTypeP1"></a></p>
 
+  <section id="idWasmsuntVltpBnr">
+  <h4 id="idWasmsuntVltpBnrH4">value-type.BINARY
+    <a class="clsHide" href="#idWasmsuntVltpBnrH4"></a></h4>
+  <p id="idWasmsuntVltpBnrdsn">description::
+    <br>· value-types are-encoded by a single byte.
+    <br>- valtype ::= 0x7F ⇒ i32
+    <br> | 0x7E ⇒ i64
+    <br> | 0x7D ⇒ f32
+    <br> | 0x7C ⇒ f64
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/types.html#binary-valtype">https://webassembly.github.io/spec/core/binary/types.html#binary-valtype</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmsuntVltpBnrdsn"></a></p>
+  <p id="idWasmsuntVltpBnrnam">name::
+    <br>* cpt.Wasm'value-type.binary,
+    <a class="clsHide" href="#idWasmsuntVltpBnrnam"></a></p>
+  </section>
+
+  <section id="idWasmsuntVltpTxt">
+  <h4 id="idWasmsuntVltpTxtH4">value-type.TEXT
+    <a class="clsHide" href="#idWasmsuntVltpTxtH4"></a></h4>
+  <p id="idWasmsuntVltpTxtdsn">description::
+    <br>· valtype ::= ‘i32’ ⇒ i32
+    <br> | ‘i64’ ⇒ i64
+    <br> | ‘f32’ ⇒ f32
+    <br> | ‘f64’ ⇒ f64
+    <br>[<a href="https://webassembly.github.io/spec/core/text/types.html#value-types">https://webassembly.github.io/spec/core/text/types.html#value-types</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmsuntVltpTxtdsn"></a></p>
+  <p id="idWasmsuntVltpTxtnam">name::
+    <br>* cpt.Wasm'value-type.text,
+    <a class="clsHide" href="#idWasmsuntVltpTxtnam"></a></p>
+  </section>
+
   <section id="idWasmsuntI32">
-  <h4 id="idWasmsuntI32H4">value.i32
+  <h4 id="idWasmsuntI32H4">value-type.i32
     <a class="clsHide" href="#idWasmsuntI32H4"></a></h4>
   <p id="idWasmsuntI32dsn">description::
     <br>The types i32 and i64 classify 32 and 64 bit integers, respectively. Integers are not inherently signed or unsigned, their interpretation is determined by individual operations.
@@ -448,9 +479,37 @@
     <br>[<a href="https://webassembly.github.io/spec/core/syntax/types.html#syntax-functype">https://webassembly.github.io/spec/core/syntax/types.html#syntax-functype</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmfcnsgtrdsn"></a></p>
   <p id="idWasmfcnsgtrnam">name::
+    <br>* cpt.Wasm'function-type,
     <br>* cpt.Wasm-function'signature,
     <br>* cpt.Wasm-function'type,
     <a class="clsHide" href="#idWasmfcnsgtrnam"></a></p>
+
+  <section id="idWasmfcnsgtrBnr">
+  <h3 id="idWasmfcnsgtrBnrH3">function-type.BINARY
+    <a class="clsHide" href="#idWasmfcnsgtrBnrH3"></a></h3>
+  <p id="idWasmfcnsgtrBnrdsn">description::
+    <br>· function-types are-encoded by the-byte 0x60 followed by the respective vectors of parameter and result-types.
+    <br>- functype ::= 0x60  t∗1:vec(valtype)  t∗2:vec(valtype)⇒[t∗1]→[t∗2]
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/types.html#function-types">https://webassembly.github.io/spec/core/binary/types.html#function-types</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmfcnsgtrBnrdsn"></a></p>
+  <p id="idWasmfcnsgtrBnrnam">name::
+    <br>* cpt.Wasm'function-type.binary,
+    <a class="clsHide" href="#idWasmfcnsgtrBnrnam"></a></p>
+  </section>
+
+  <section id="idWasmfcnsgtrTxt">
+  <h3 id="idWasmfcnsgtrTxtH3">function-type.TEXT
+    <a class="clsHide" href="#idWasmfcnsgtrTxtH3"></a></h3>
+  <p id="idWasmfcnsgtrTxtdsn">description::
+    <br>- functype ::=‘(’ ‘func’  t∗1:vec(param)  t∗2:vec(result) ‘)’ ⇒ [t∗1]→[t∗2]
+    <br>- param ::= ‘(’ ‘param’  id?  t:valtype ‘)’ ⇒ t
+    <br>- <span id="idWasmtxtresult">result ::= ‘(’ ‘result’  t:valtype ‘)’ ⇒ t</span>
+    <br>[<a href="https://webassembly.github.io/spec/core/text/types.html#function-types">https://webassembly.github.io/spec/core/text/types.html#function-types</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmfcnsgtrTxtdsn"></a></p>
+  <p id="idWasmfcnsgtrTxtnam">name::
+    <br>* cpt.Wasm'function-type.text,
+    <a class="clsHide" href="#idWasmfcnsgtrTxtnam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmfcnbody">
@@ -533,22 +592,46 @@
     <br>desc | global description | a description of the global variable
     <br>init | instantiation-time initializer | the initial value of the global variable
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-section</a>]
-    <a class="clsHide" href="#idWasmglbldlrndsn"></a></p>
-  </section>
-
-  <section id="idWasmglbldrpn">
-  <h4 id="idWasmglbldrpnH4">description of global-variable
-    <a class="clsHide" href="#idWasmglbldrpnH4"></a></h4>
-  <p id="idWasmglbldrpndsn">description::
+    <br>===
     <br>Field Name | Type | Description
     <br>type | value type | the type of the global variable
     <br>mutability | varuint1 | 0 if immutable, 1 if mutable
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-description">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-description</a>]
-    <a class="clsHide" href="#idWasmglbldrpndsn"></a></p>
-  <p id="idWasmglbldrpnnam">name::
+    <a class="clsHide" href="#idWasmglbldlrndsn"></a></p>
+  <p id="idWasmglbldlrnnam">name::
+    <br>* cpt.Wasm-global'declaration,
+    <br>* cpt.Wasm-global'definition,
     <br>* cpt.Wasm-global'description,
     <br>* cpt.Wasm-global-variable'description,
-    <a class="clsHide" href="#idWasmglbldrpnnam"></a></p>
+    <a class="clsHide" href="#idWasmglbldlrnnam"></a></p>
+
+  <section id="idWasmglbldlrnBnr">
+  <h4 id="idWasmglbldlrnBnrH4">global-declaration.BINARY
+    <a class="clsHide" href="#idWasmglbldlrnBnrH4"></a></h4>
+  <p id="idWasmglbldlrnBnrdsn">description::
+    <br>· Global types are encoded by their value type and a flag for their mutability.
+    <br>- globaltype ::= t:valtype  m:mut ⇒ m t
+    <br>- mut ::= 0x00 ⇒ const
+    <br> | 0x01 ⇒ var
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/types.html#global-types">https://webassembly.github.io/spec/core/binary/types.html#global-types</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmglbldlrnBnrdsn"></a></p>
+  <p id="idWasmglbldlrnBnrnam">name::
+    <br>* cpt.Wasm-global-dfn.binary,
+    <a class="clsHide" href="#idWasmglbldlrnBnrnam"></a></p>
+  </section>
+
+  <section id="idWasmglbldlrnTxt">
+  <h4 id="idWasmglbldlrnTxtH4">global-declaration.TEXT
+    <a class="clsHide" href="#idWasmglbldlrnTxtH4"></a></h4>
+  <p id="idWasmglbldlrnTxtdsn">description::
+    <br>- globaltype ::= t:valtype ⇒ const t
+    <br> | ‘(’ ‘mut’  t:valtype ‘)’ ⇒ var t
+    <br>[<a href="https://webassembly.github.io/spec/core/text/types.html#global-types">https://webassembly.github.io/spec/core/text/types.html#global-types</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmglbldlrnTxtdsn"></a></p>
+  <p id="idWasmglbldlrnTxtnam">name::
+    <br>* cpt.Wasm-global-dfn.text,
+    <a class="clsHide" href="#idWasmglbldlrnTxtnam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmglblidxspc">
@@ -623,6 +706,34 @@
     <br>* cpt.Wasm-table'declaration,
     <br>* cpt.Wasm-table'description,
     <a class="clsHide" href="#idWasmsuntTbldlrnnam"></a></p>
+
+  <section id="idWasmsuntTbldlrnBnr">
+  <h4 id="idWasmsuntTbldlrnBnrH4">table-declaration.BINARY
+    <a class="clsHide" href="#idWasmsuntTbldlrnBnrH4"></a></h4>
+  <p id="idWasmsuntTbldlrnBnrdsn">description::
+    <br>· Table types are encoded with their limits and a constant byte indicating their element type.
+    <br>- tabletype ::= et:elemtype  lim:limits ⇒ lim et
+    <br>- elemtype ::= 0x70 ⇒ anyfunc
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/types.html#table-types">https://webassembly.github.io/spec/core/binary/types.html#table-types</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmsuntTbldlrnBnrdsn"></a></p>
+  <p id="idWasmsuntTbldlrnBnrnam">name::
+    <br>* cpt.Wasm-table-dfn.binary,
+    <a class="clsHide" href="#idWasmsuntTbldlrnBnrnam"></a></p>
+  </section>
+
+  <section id="idWasmsuntTbldlrnTxt">
+  <h4 id="idWasmsuntTbldlrnTxtH4">table-declaration.TEXT
+    <a class="clsHide" href="#idWasmsuntTbldlrnTxtH4"></a></h4>
+  <p id="idWasmsuntTbldlrnTxtdsn">description::
+    <br>- tabletype ::=lim:limits  et:elemtype ⇒ lim et
+    <br>- elemtype ::= ‘anyfunc’ ⇒ anyfunc
+    <br>Note: additional element-types may-be-introduced in future versions of WebAssembly.
+    <br>[<a href="https://webassembly.github.io/spec/core/text/types.html#table-types">https://webassembly.github.io/spec/core/text/types.html#table-types</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmsuntTbldlrnTxtdsn"></a></p>
+  <p id="idWasmsuntTbldlrnTxtnam">name::
+    <br>* cpt.Wasm-table-dfn.text,
+    <a class="clsHide" href="#idWasmsuntTbldlrnTxtnam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmsuntTblidxspc">
@@ -652,6 +763,40 @@
     <br>* cpt.Wasm-sem-unit.memory,
     <a class="clsHide" href="#idWasmsuntMmrnam"></a></p>
 
+  <section id="idWasmsuntMmrdlrn">
+  <h3 id="idWasmsuntMmrdlrnH3">declaration of memory
+    <a class="clsHide" href="#idWasmsuntMmrdlrnH3"></a></h3>
+  <p id="idWasmsuntMmrdlrnnam">name::
+    <br>* cpt.Wasm-memory'declaration,
+    <br>* cpt.Wasm-memory'definition,
+    <a class="clsHide" href="#idWasmsuntMmrdlrnnam"></a></p>
+
+  <section id="idWasmsuntMmrBnr">
+  <h4 id="idWasmsuntMmrBnrH4">memory-declaration.BINARY
+    <a class="clsHide" href="#idWasmsuntMmrBnrH4"></a></h4>
+  <p id="idWasmsuntMmrBnrdsn">description::
+    <br>· Memory types are encoded with their limits.
+    <br>- memtype ::= lim:limits ⇒ lim
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/types.html#memory-types">https://webassembly.github.io/spec/core/binary/types.html#memory-types</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmsuntMmrBnrdsn"></a></p>
+  <p id="idWasmsuntMmrBnrnam">name::
+    <br>* cpt.Wasm-memory.binary,
+    <a class="clsHide" href="#idWasmsuntMmrBnrnam"></a></p>
+  </section>
+
+  <section id="idWasmsuntMmrTxt">
+  <h4 id="idWasmsuntMmrTxtH4">memory-declaration.TEXT
+    <a class="clsHide" href="#idWasmsuntMmrTxtH4"></a></h4>
+  <p id="idWasmsuntMmrTxtdsn">description::
+    <br>- memtype ::= lim:limits ⇒ lim
+    <br>[<a href="https://webassembly.github.io/spec/core/text/types.html#memory-types">https://webassembly.github.io/spec/core/text/types.html#memory-types</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmsuntMmrTxtdsn"></a></p>
+  <p id="idWasmsuntMmrTxtnam">name::
+    <br>* cpt.Wasm-memory.text,
+    <a class="clsHide" href="#idWasmsuntMmrTxtnam"></a></p>
+  </section>
+  </section>
+
   <section id="idWasmsuntMmrpage">
   <h3 id="idWasmsuntMmrpageH3">page of memory
     <a class="clsHide" href="#idWasmsuntMmrpageH3"></a></h3>
@@ -677,9 +822,9 @@
     <a class="clsHide" href="#idWasmsuntMmridxspcnam"></a></p>
   </section>
 
-  <section id="idWasmsuntMmridxspc">
-  <h3 id="idWasmsuntMmridxspcH3">instruction of memory (<a class="clsPreview" href="#idWasmstcMmr">link</a>)
-    <a class="clsHide" href="#idWasmsuntMmridxspcH3"></a></h3>
+  <section id="idWasmsuntMmrinrn">
+  <h3 id="idWasmsuntMmrinrnH3">instruction of memory (<a class="clsPreview" href="#idWasmstcMmr">link</a>)
+    <a class="clsHide" href="#idWasmsuntMmrinrnH3"></a></h3>
   </section>
   </section>
 
@@ -695,6 +840,33 @@
     <br>* cpt.Wasm'limit-type,
     <br>* cpt.Wasm-sem-unit.limit,
     <a class="clsHide" href="#idWasmsuntLmtnam"></a></p>
+
+  <section id="idWasmsuntLmtBnr">
+  <h3 id="idWasmsuntLmtBnrH3">limit.BINARY
+    <a class="clsHide" href="#idWasmsuntLmtBnrH3"></a></h3>
+  <p id="idWasmsuntLmtBnrdsn">description::
+    <br>· limits are-encoded with a preceding flag indicating whether a-maximum is present.
+    <br>limits ::= 0x00  n:u32 ⇒ {min n,max ϵ}
+    <br> | 0x01  n:u32  m:u32 ⇒ {min n,max m}
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/types.html#limits">https://webassembly.github.io/spec/core/binary/types.html#limits</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmsuntLmtBnrdsn"></a></p>
+  <p id="idWasmsuntLmtBnrnam">name::
+    <br>* cpt.Wasm-limit.binary,
+    <a class="clsHide" href="#idWasmsuntLmtBnrnam"></a></p>
+  </section>
+
+  <section id="idWasmsuntLmtTxt">
+  <h3 id="idWasmsuntLmtTxtH3">limit.TEXT
+    <a class="clsHide" href="#idWasmsuntLmtTxtH3"></a></h3>
+  <p id="idWasmsuntLmtTxtdsn">description::
+    <br>- limits ::= n:u32 ⇒{min n,max ϵ}
+    <br> | n:u32  m:u32 ⇒ {min n,max m}
+    <br>[<a href="https://webassembly.github.io/spec/core/text/types.html#limits">https://webassembly.github.io/spec/core/text/types.html#limits</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmsuntLmtTxtdsn"></a></p>
+  <p id="idWasmsuntLmtTxtnam">name::
+    <br>* cpt.Wasm-limit.text,
+    <a class="clsHide" href="#idWasmsuntLmtTxtnam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmsuntExtl">
