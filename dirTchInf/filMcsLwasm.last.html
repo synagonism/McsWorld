@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-13-0.2018-03-30 draft)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-14-0.2018-03-31 draft)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -1548,6 +1548,33 @@
     <br>* cpt.Wasm'expression-instruction,
     <br>* cpt.Wasm-instruction.expression,
     <a class="clsHide" href="#idWasmstcExrnnam"></a></p>
+
+  <section id="idWasmstcExrnBnr">
+  <h3 id="idWasmstcExrnBnrH3">expression.BINARY
+    <a class="clsHide" href="#idWasmstcExrnBnrH3"></a></h3>
+  <p id="idWasmstcExrnBnrdsn">description::
+    <br>· expressions are-encoded by their instruction sequence terminated with an explicit 0x0B opcode for end.
+    <br>- expr ::= (in:instr)∗  0x0B ⇒ in∗ end
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/instructions.html#expressions">https://webassembly.github.io/spec/core/binary/instructions.html#expressions</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmstcExrnBnrdsn"></a></p>
+  <p id="idWasmstcExrnBnrnam">name::
+    <br>* cpt.Wasm-expression.binary,
+    <a class="clsHide" href="#idWasmstcExrnBnrnam"></a></p>
+  </section>
+
+  <section id="idWasmstcExrnTxt">
+  <h3 id="idWasmstcExrnTxtH3">expression.TEXT
+    <a class="clsHide" href="#idWasmstcExrnTxtH3"></a></h3>
+  <p id="idWasmstcExrnTxtdsn">description::
+    <br>· expressions are-written as instruction sequences.
+    <br>· no explicit ‘end’ keyword is-included, since they only occur in bracketed positions.
+    <br>- expr ::= (in:instr)∗ ⇒ in∗ end
+    <br>{<a href="https://webassembly.github.io/spec/core/text/instructions.html#expressions">https://webassembly.github.io/spec/core/text/instructions.html#expressions</a> {1-0.2018-03-28}}
+    <a class="clsHide" href="#idWasmstcExrnTxtdsn"></a></p>
+  <p id="idWasmstcExrnTxtnam">name::
+    <br>* cpt.Wasm-expression.text,
+    <a class="clsHide" href="#idWasmstcExrnTxtnam"></a></p>
+  </section>
   </section>
 </section>
 
@@ -1555,7 +1582,7 @@
   <h1 id="idWasmalgscnH1">algo-section of Wasm
     <a class="clsHide" href="#idWasmalgscnH1"></a></h1>
   <p id="idWasmalgscndsn">description::
-    <br>· <a class="clsPreview" href="#idWasmalgmdl">a-module</a> consists of <a class="clsPreview" href="#idWasmalgmdlhdr">a-header</a> and a sequence of sections.
+    <br>· <a class="clsPreview" href="#idWasmmdl">a-module</a> consists of <a class="clsPreview" href="#idWasmmdlhdr">a-header</a> and a sequence of sections.
     <br>· a-section consists of a varuint7 opcode followed by a byte-array payload.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#module-contents">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#module-contents</a>]
     <a class="clsHide" href="#idWasmalgscndsn"></a></p>
@@ -1657,6 +1684,11 @@
     <a class="clsHide" href="#idWasmalgscnCtmH2"></a></h2>
   <p id="idWasmalgscnCtmdsn">description::
     <br>· opcode: 0x00.
+    <br>· this appendix defines dedicated custom-sections for WebAssembly’s binary format.
+    <br>· such sections do-not-contribute to, or otherwise affect, the WebAssembly semantics, and like any custom-section they may-be-ignored by an-implementation.
+    <br>· however, they provide useful meta data that implementations can-make-use of to improve user experience or take compilation hints.
+    <br>· currently, only one dedicated custom-section is-defined, the-name-section.
+    <br>[<a href="https://webassembly.github.io/spec/core/appendix/custom.html#custom-sections">https://webassembly.github.io/spec/core/appendix/custom.html#custom-sections</a> {1-0.2018-03-28}]
     <a class="clsHide" href="#idWasmalgscnCtmdsn"></a></p>
   <p id="idWasmalgscnCtmnam">name::
     <br>* cpt.Wasm'custom-section,
@@ -1855,50 +1887,66 @@
   </section>
 </section>
 
-<section id="idWasmalgmdl">
-  <h1 id="idWasmalgmdlH1">algo-module of Wasm
-    <a class="clsHide" href="#idWasmalgmdlH1"></a></h1>
-  <p id="idWasmalgmdldsn">description::
+<section id="idWasmmdl">
+  <h1 id="idWasmmdlH1">algo-module of Wasm
+    <a class="clsHide" href="#idWasmmdlH1"></a></h1>
+  <p id="idWasmmdldsn">description::
     <br>· module is the outermost construction.
-    <br>· a-module consists of <a class="clsPreview" href="#idWasmalgmdlhdr">a-header</a> followed by a sequence of <a class="clsPreview" href="#idWasmalgscn">sections</a>.
-    <a class="clsHide" href="#idWasmalgmdldsn"></a></p>
-  <p id="idWasmalgmdlnam">name::
+    <br>· a-module consists of <a class="clsPreview" href="#idWasmmdlhdr">a-header</a> followed by a sequence of <a class="clsPreview" href="#idWasmalgscn">sections</a>.
+    <a class="clsHide" href="#idWasmmdldsn"></a></p>
+  <p id="idWasmmdlnam">name::
     <br>* cpt.Wasm'module,
-    <a class="clsHide" href="#idWasmalgmdlnam"></a></p>
+    <a class="clsHide" href="#idWasmmdlnam"></a></p>
 
-  <section id="idWasmalgmdlhdr">
-  <h2 id="idWasmalgmdlhdrH2">header of algo-module
-    <a class="clsHide" href="#idWasmalgmdlhdrH2"></a></h2>
-  <p id="idWasmalgmdlhdrdsn">description::
-    <br>· the-header is the first part of <a class="clsPreview" href="#idWasmalgmdl">a-module</a>.
+  <section id="idWasmmdlhdr">
+  <h2 id="idWasmmdlhdrH2">header of module
+    <a class="clsHide" href="#idWasmmdlhdrH2"></a></h2>
+  <p id="idWasmmdlhdrdsn">description::
+    <br>· the-header is the first part of <a class="clsPreview" href="#idWasmmdl">a-module</a>.
     <br>· the-header consists of the-magic_cookie and the-version parts.
-    <a class="clsHide" href="#idWasmalgmdlhdrdsn"></a></p>
-  <p id="idWasmalgmdlhdrnam">name::
+    <a class="clsHide" href="#idWasmmdlhdrdsn"></a></p>
+  <p id="idWasmmdlhdrnam">name::
     <br>* cpt.Wasm'header-of-module,
-    <a class="clsHide" href="#idWasmalgmdlhdrnam"></a></p>
+    <a class="clsHide" href="#idWasmmdlhdrnam"></a></p>
 
-  <section id="idWasmalgmdlhdrmcck">
-  <h3 id="idWasmalgmdlhdrmcckH3">magic_cookie of header
-    <a class="clsHide" href="#idWasmalgmdlhdrmcckH3"></a></h3>
-  <p id="idWasmalgmdlhdrmcckdsn">description::
+  <section id="idWasmmdlhdrmcck">
+  <h3 id="idWasmmdlhdrmcckH3">magic_cookie of header
+    <a class="clsHide" href="#idWasmmdlhdrmcckH3"></a></h3>
+  <p id="idWasmmdlhdrmcckdsn">description::
     <br>· magic_cookie is-required to be 0x6d736100 (<a href="https://codebeautify.org/hex-string-converter">the-string "asm"</a>) which identifies a-file as a-WebAssembly-module.
     <br>· its size is 4-bytes.
-    <a class="clsHide" href="#idWasmalgmdlhdrmcckdsn"></a></p>
-  <p id="idWasmalgmdlhdrmccknam">name::
+    <a class="clsHide" href="#idWasmmdlhdrmcckdsn"></a></p>
+  <p id="idWasmmdlhdrmccknam">name::
     <br>* cpt.Wasm'magic_cookie-of-header,
-    <a class="clsHide" href="#idWasmalgmdlhdrmccknam"></a></p>
+    <a class="clsHide" href="#idWasmmdlhdrmccknam"></a></p>
   </section>
 
-  <section id="idWasmalgmdlhdrvsn">
-  <h3 id="idWasmalgmdlhdrvsnH3">version of header
-    <a class="clsHide" href="#idWasmalgmdlhdrvsnH3"></a></h3>
-  <p id="idWasmalgmdlhdrvsndsn">description::
+  <section id="idWasmmdlhdrvsn">
+  <h3 id="idWasmmdlhdrvsnH3">version of header
+    <a class="clsHide" href="#idWasmmdlhdrvsnH3"></a></h3>
+  <p id="idWasmmdlhdrvsndsn">description::
     <br>· version is a-32-bit-unsigned-integer which denotes the-WebAssembly-version.
-    <a class="clsHide" href="#idWasmalgmdlhdrvsndsn"></a></p>
-  <p id="idWasmalgmdlhdrvsnnam">name::
+    <a class="clsHide" href="#idWasmmdlhdrvsndsn"></a></p>
+  <p id="idWasmmdlhdrvsnnam">name::
     <br>* cpt.Wasm'version-of-header,
-    <a class="clsHide" href="#idWasmalgmdlhdrvsnnam"></a></p>
+    <a class="clsHide" href="#idWasmmdlhdrvsnnam"></a></p>
   </section>
+  </section>
+
+  <section id="idWasmmdlBnr">
+  <h2 id="idWasmmdlBnrH2">module.BINARY
+    <a class="clsHide" href="#idWasmmdlBnrH2"></a></h2>
+  <p id="idWasmmdlBnrdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWasmmdlBnrdsn"></a></p>
+  <p id="idWasmmdlBnrnam">name::
+    <br>* cpt.,
+    <a class="clsHide" href="#idWasmmdlBnrnam"></a></p>
+  </section>
+
+  <section id="idWasmmdlTxt">
+  <h2 id="idWasmmdlTxtH2">module.TEXT
+    <a class="clsHide" href="#idWasmmdlTxtH2"></a></h2>
   </section>
 </section>
 
@@ -2039,6 +2087,22 @@
     <br>* cpt.Wasm-spec'grammar,
     <a class="clsHide" href="#idWasmgmrnam"></a></p>
 
+  <section id="idWasmgmrGnc">
+  <h2 id="idWasmgmrGncH2">grammar.ABSTRACT
+    <a class="clsHide" href="#idWasmgmrGncH2"></a></h2>
+  <p id="idWasmgmrGncdsn">description::
+    <br>· abstract-grammar is the generic grammar for both formats, <a class="clsPreview" href="#idWasmBnr">binary</a> and <a class="clsPreview" href="#idWasmTxt">text</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-31]
+    <a class="clsHide" href="#idWasmgmrGncdsn"></a></p>
+  <p id="idWasmgmrGncnam">name::
+    <br>* cpt.Wasm'abstract-grammar,
+    <br>* cpt.Wasm-grammar.abstract,
+    <a class="clsHide" href="#idWasmgmrGncnam"></a></p>
+  <p id="idWasmgmrGncwpa">addressWpg::
+    <br>* <a href="https://webassembly.github.io/spec/core/syntax/conventions.html">https://webassembly.github.io/spec/core/syntax/conventions.html</a>,
+    <a class="clsHide" href="#idWasmgmrGncwpa"></a></p>
+  </section>
+
   <section id="idWasmgmrBnr">
   <h2 id="idWasmgmrBnrH2">grammar.BINARY
     <a class="clsHide" href="#idWasmgmrBnrH2"></a></h2>
@@ -2046,6 +2110,9 @@
     <br>* cpt.Wasm'binary-grammar,
     <br>* cpt.Wasm-grammar.binary,
     <a class="clsHide" href="#idWasmgmrBnrnam"></a></p>
+  <p id="idWasmgmrBnrwpa">addressWpg::
+    <br>* <a href="https://webassembly.github.io/spec/core/binary/conventions.html">https://webassembly.github.io/spec/core/binary/conventions.html</a>,
+    <a class="clsHide" href="#idWasmgmrBnrwpa"></a></p>
   </section>
 
   <section id="idWasmgmrTxt">
@@ -2060,6 +2127,9 @@
     <br>* cpt.Wasm'text-grammar,
     <br>* cpt.Wasm-grammar.text,
     <a class="clsHide" href="#idWasmgmrTxtnam"></a></p>
+  <p id="idWasmgmrTxtwpa">addressWpg::
+    <br>* <a href="https://webassembly.github.io/spec/core/text/conventions.html">https://webassembly.github.io/spec/core/text/conventions.html</a>,
+    <a class="clsHide" href="#idWasmgmrTxtwpa"></a></p>
   </section>
   </section>
 
@@ -2083,6 +2153,17 @@
     <br>* <a href="https://www.w3.org/community/webassembly/">https://www.w3.org/community/webassembly/</a>,
     <a class="clsHide" href="#idWasmspecwawgwpa"></a></p>
   </section>
+</section>
+
+<section id="idWasmlagtwa">
+  <h1 id="idWasmlagtwaH1">language compiled to Wasm
+    <a class="clsHide" href="#idWasmlagtwaH1"></a></h1>
+  <p id="idWasmlagtwanam">name::
+    <br>* cpt.Wasm'language-that-is-compiled-to-Wasm,
+    <a class="clsHide" href="#idWasmlagtwanam"></a></p>
+  <p id="idWasmlagtwawpa">addressWpg::
+    <br>* <a href="https://github.com/appcypher/awesome-wasm-langs">https://github.com/appcypher/awesome-wasm-langs</a>,
+    <a class="clsHide" href="#idWasmlagtwawpa"></a></p>
 </section>
 
 <section id="idWasmtool">
