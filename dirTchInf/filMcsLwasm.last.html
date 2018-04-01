@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-14-0.2018-03-31 draft)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-15-0.2018-04-01 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -11,7 +11,8 @@
 <body>
 <header id="idHeader">
   <p></p>
-  <h1 id="idHeaderH1">structured-concept: WebAssembly--programing-language (Wasm)
+  <h1 id="idHeaderH1">structured-concept:
+    <br>WebAssembly--programing-language (Wasm)
     </h1>
   <p id="idHeadercrd">concept-created: {2018-03-18}
     <a class="clsHide" href="#idHeadercrd"></a></p>
@@ -31,6 +32,7 @@
     <br>* cpt.language.WebAssembly,
     <br>* cpt.programing-language.WebAssembly,
     <br>* cpt.Wasm,
+    <br>* cpt.Wasm'(WebAssembly),
     <br>* cpt.Wasm-(WebAssembly),
     <br>* cpt.WebAssembly,
     <br>* cpt.WebAssembly-(Wasm),
@@ -546,9 +548,13 @@
     <a class="clsHide" href="#idWasmfcncallH3"></a></h3>
   <p id="idWasmfcncalldsn">description::
     <br>· when a-function is-called, it starts with an empty <a class="clsPreview" href="#idWasmalgmchnstk">stack</a> which is gradually filled-up and emptied as the body’s instructions are-executed.
+    <br>===
+    <br>· Invocation may fail with an error if the arguments do not fit the function type.
+    <br>[<a href="https://webassembly.github.io/spec/core/exec/modules.html#invocation">https://webassembly.github.io/spec/core/exec/modules.html#invocation</a>]
     <a class="clsHide" href="#idWasmfcncalldsn"></a></p>
   <p id="idWasmfcncallnam">name::
     <br>* cpt.Wasm-function'calling,
+    <br>* cpt.Wasm-function'invocating,
     <a class="clsHide" href="#idWasmfcncallnam"></a></p>
   </section>
 
@@ -558,11 +564,44 @@
   <p id="idWasmfcnStrtdsn">description::
     <br>· modules can-define a-start-function that is automatically executed.
     <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#concepts">https://webassembly.github.io/spec/core/intro/overview.html#concepts</a> {1-0.2018-03-22}]
+    <br>===
+    <br>· the-start-component of a-module optionally declares the-function-index of a-start-function that is automatically invoked when the-module is-instantiated, after tables and memories have-been-initialized.
+    <br>- start ::= {func funcidx}
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#start-function">https://webassembly.github.io/spec/core/syntax/modules.html#start-function</a> {1-0.2018-03-28}]
     <a class="clsHide" href="#idWasmfcnStrtdsn"></a></p>
   <p id="idWasmfcnStrtnam">name::
     <br>* cpt.Wasm-function.start,
     <br>* cpt.Wasm'start-function,
     <a class="clsHide" href="#idWasmfcnStrtnam"></a></p>
+
+  <section id="idWasmfcnStrtBnr">
+  <h4 id="idWasmfcnStrtBnrH4">start-function.BINARY
+    <a class="clsHide" href="#idWasmfcnStrtBnrH4"></a></h4>
+  <p id="idWasmfcnStrtBnrdsn">description::
+    <br>· the-start-section has the-id 8.
+    <br>· it decodes into an optional start-function that represents the-start-component of a-module.
+    <br>- startsec ::= st?:section8(start) ⇒st?
+    <br>- start ::= x:funcidx ⇒ {func x}
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/modules.html#start-section">https://webassembly.github.io/spec/core/binary/modules.html#start-section</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmfcnStrtBnrdsn"></a></p>
+  <p id="idWasmfcnStrtBnrnam">name::
+    <br>* cpt.Wasm-start-function.binary,
+    <a class="clsHide" href="#idWasmfcnStrtBnrnam"></a></p>
+  </section>
+
+  <section id="idWasmfcnStrtTxt">
+  <h4 id="idWasmfcnStrtTxtH4">start-function.TEXT
+    <a class="clsHide" href="#idWasmfcnStrtTxtH4"></a></h4>
+  <p id="idWasmfcnStrtTxtdsn">description::
+    <br>· a-start-function is-defined in terms of its index.
+    <br>- startI ::= ‘(’ ‘start’  x:funcidxI ‘)’ ⇒ {func x}
+    <br>· note: at most one start-function may-occur in a-module, which is-ensured by a suitable side condition on the-module-grammar.
+    <br>[<a href="https://webassembly.github.io/spec/core/text/modules.html#start-function">https://webassembly.github.io/spec/core/text/modules.html#start-function</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmfcnStrtTxtdsn"></a></p>
+  <p id="idWasmfcnStrtTxtnam">name::
+    <br>* cpt.Wasm-start-function.text,
+    <a class="clsHide" href="#idWasmfcnStrtTxtnam"></a></p>
+  </section>
   </section>
   </section>
 
@@ -879,6 +918,63 @@
     <br>* cpt.Wasm'external-type,
     <br>* cpt.Wasm-sem-unit.external,
     <a class="clsHide" href="#idWasmsuntExtlnam"></a></p>
+
+  <section id="idWasmsuntExpt">
+  <h3 id="idWasmsuntExptH3">sem-unit.EXPORT
+    <a class="clsHide" href="#idWasmsuntExptH3"></a></h3>
+  <p id="idWasmsuntExptdsn">description::
+    <br>· the-exports-component of a-module defines a-set of exports that become accessible to the-host-environment once the-module has-been-instantiated.
+    <br>- export ::= {name name,desc exportdesc}
+    <br>- exportdesc ::= func funcidx
+    <br> | table tableidx
+    <br> | mem memidx
+    <br> | global globalidx
+    <br>· each export is-labeled by a unique name.
+    <br>· exportable definitions are functions, tables, memories, and globals, which are-referenced through a respective descriptor.
+    <br>· note: in the current version of WebAssembly, only immutable globals may-be-exported.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#exports">https://webassembly.github.io/spec/core/syntax/modules.html#exports</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmsuntExptdsn"></a></p>
+  <p id="idWasmsuntExptnam">name::
+    <br>* cpt.Wasm'export-sem-unit,
+    <br>* cpt.Wasm-sem-unit.export,
+    <a class="clsHide" href="#idWasmsuntExptnam"></a></p>
+
+  <section id="idWasmsuntExptBnr">
+  <h4 id="idWasmsuntExptBnrH4">export.BINARY
+    <a class="clsHide" href="#idWasmsuntExptBnrH4"></a></h4>
+  <p id="idWasmsuntExptBnrdsn">description::
+    <br>· the-export-section has the-id 7.
+    <br>· it decodes into a-vector of exports that represent the-exports-component of a-module.
+    <br>- exportsec ::= ex∗:section7(vec(export)) ⇒ ex∗
+    <br>- export ::= nm:name  d:exportdesc ⇒ {name nm,desc d}
+    <br>- exportdesc ::= 0x00  x:funcidx ⇒ func x
+    <br> | 0x01  x:tableidx ⇒ table x
+    <br> | 0x02  x:memidx ⇒ mem x
+    <br> | 0x03  x:globalidx ⇒ global x
+    <a class="clsHide" href="#idWasmsuntExptBnrdsn"></a></p>
+  <p id="idWasmsuntExptBnrnam">name::
+    <br>* cpt.Wasm-export.binary,
+    <a class="clsHide" href="#idWasmsuntExptBnrnam"></a></p>
+  </section>
+
+  <section id="idWasmsuntExptTxt">
+  <h4 id="idWasmsuntExptTxtH4">export.TEXT
+    <a class="clsHide" href="#idWasmsuntExptTxtH4"></a></h4>
+  <p id="idWasmsuntExptTxtdsn">description::
+    <br>· the-syntax for exports mirrors their abstract-syntax directly.
+    <br>- exportI ::= ‘(’ ‘export’  nm:name  d:exportdescI ‘)’ ⇒ {name nm,desc d}
+    <br>- exportdescI ::= ‘(’ ‘func’  x:funcidxI ‘)’ ⇒ func x
+    <br> | ‘(’ ‘table’  x:tableidxI ‘)’ ⇒ table x
+    <br> | ‘(’ ‘memory’  x:memidxI ‘)’ ⇒mem x
+    <br> | ‘(’ ‘global’  x:globalidxI ‘)’ ⇒ global x
+    <br>· abbreviations: as an-abbreviation, exports may also be-specified inline with function, table, memory, or global definitions; see the respective sections.
+    <br>
+    <a class="clsHide" href="#idWasmsuntExptTxtdsn"></a></p>
+  <p id="idWasmsuntExptTxtnam">name::
+    <br>* cpt.Wasm-export.text,
+    <a class="clsHide" href="#idWasmsuntExptTxtnam"></a></p>
+  </section>
+  </section>
   </section>
 
   <section id="idWasmsuntNmd">
@@ -920,12 +1016,12 @@
   <p id="idWasmsuntNmdidfrdsn">description::
     <br>· indices can-be-given in both numeric and symbolic form.
     <br>· symbolic-identifiers that stand in-lieu-of indices start with ‘$’, followed by any sequence of printable-ASCII-characters that does-not-contain a-space, quotation-mark, comma, semicolon, or bracket.
-    <br>- id::= ‘$’ idchar+
+    <br>- <span id="idWasmtxtid">id ::= ‘$’ idchar+</span>
     <br>- <span id="idWasmtxtidchar">idchar ::= ‘0’  |  …  |  ‘9’
-    <br>-  | ‘A’  |  …  |  ‘Z’
-    <br>-  | ‘a’  |  …  |  ‘z’
-    <br>-  | ‘!’  |  ‘#’  |  ‘$’  |  ‘%’  |  ‘&’  |  ‘′’  |  ‘∗’  |  ‘+’  |  <br>-  | ‘−’  |  ‘.’  |  ‘/’
-    <br>-  | ‘:’  |  ‘&lt;’  |  ‘=’  |  ‘>’  |  ‘?’  |  ‘@’  |  ‘∖’  |  ‘  ^’  |  ‘_’  |  ‘`’  |  ‘|’  |  ‘~’</span>
+    <br> | ‘A’  |  …  |  ‘Z’
+    <br> | ‘a’  |  …  |  ‘z’
+    <br> | ‘!’  |  ‘#’  |  ‘$’  |  ‘%’  |  ‘&’  |  ‘′’  |  ‘∗’  |  ‘+’  |  <br> | ‘−’  |  ‘.’  |  ‘/’
+    <br> | ‘:’  |  ‘&lt;’  |  ‘=’  |  ‘>’  |  ‘?’  |  ‘@’  |  ‘∖’  |  ‘  ^’  |  ‘_’  |  ‘`’  |  ‘|’  |  ‘~’</span>
     <br>[<a href="https://webassembly.github.io/spec/core/text/values.html#text-idchar">https://webassembly.github.io/spec/core/text/values.html#text-idchar</a> {1-0.2018-03-28}]
     <a class="clsHide" href="#idWasmsuntNmdidfrdsn"></a></p>
   <p id="idWasmsuntNmdidfrnam">name::
@@ -1634,6 +1730,14 @@
     <a class="clsHide" href="#idWasmalgscncntnam"></a></p>
   </section>
 
+  <section id="idWasmalgscnwhl">
+  <h2 id="idWasmalgscnwhlH2">WHOLE of section
+    <a class="clsHide" href="#idWasmalgscnwhlH2"></a></h2>
+  <p id="idWasmalgscnwhlwhlchn">whole-chain::
+    <br>* <a class="clsPreview" href="#idWasmmdl">module</a>,
+    <a class="clsHide" href="#idWasmalgscnwhlwhlchn"></a></p>
+  </section>
+
   <section id="idWasmalgscnSpc">
   <h2 id="idWasmalgscnSpcH2">section.SPECIFIC
     <a class="clsHide" href="#idWasmalgscnSpcH2"></a></h2>
@@ -1680,7 +1784,7 @@
   </section>
 
   <section id="idWasmalgscnCtm">
-  <h2 id="idWasmalgscnCtmH2">section.CUSTOM
+  <h2 id="idWasmalgscnCtmH2">section.0-CUSTOM
     <a class="clsHide" href="#idWasmalgscnCtmH2"></a></h2>
   <p id="idWasmalgscnCtmdsn">description::
     <br>· opcode: 0x00.
@@ -1692,6 +1796,7 @@
     <a class="clsHide" href="#idWasmalgscnCtmdsn"></a></p>
   <p id="idWasmalgscnCtmnam">name::
     <br>* cpt.Wasm'custom-section,
+    <br>* cpt.Wasm-section.0-custom,
     <br>* cpt.Wasm-section.custom,
     <a class="clsHide" href="#idWasmalgscnCtmnam"></a></p>
   </section>
@@ -1815,6 +1920,7 @@
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
     <a class="clsHide" href="#idWasmalgscnExptdsn"></a></p>
   <p id="idWasmalgscnExptnam">name::
+    <br>* cpt.Wasm'export-section,
     <br>* cpt.Wasm-section.7-export,
     <br>* cpt.Wasm-section.export,
     <a class="clsHide" href="#idWasmalgscnExptnam"></a></p>
@@ -1828,6 +1934,12 @@
     <br>· it consists of a-varuint32-index into the-function-index-space. This is-used by Instance-Execution.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#start-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#start-section</a>]
     <br>===
+    <br>· the-start-section has the-id 8.
+    <br>· it decodes into an optional start-function that represents the-start-component of a-module.
+    <br>- startsec ::= st?:section8(start) ⇒st?
+    <br>- start ::= x:funcidx ⇒ {func x}
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/modules.html#start-section">https://webassembly.github.io/spec/core/binary/modules.html#start-section</a> {1-0.2018-03-28}]
+    <br>===
     <br>· the-start-section designates a-function-index for a-function to be-called when the-module is loading and is the-mechanism that can-be-used to make a-module an-executable-program, or used to dynamically initialize globals or memory of a-module.
     <br>[https://rsms.me/wasm-intro]
     <a class="clsHide" href="#idWasmalgscnStrtdsn"></a></p>
@@ -1835,6 +1947,11 @@
     <br>* cpt.Wasm-section.8-start,
     <br>* cpt.Wasm-section.start,
     <a class="clsHide" href="#idWasmalgscnStrtnam"></a></p>
+
+  <section id="idWasmalgscnStrtstfn">
+  <h3 id="idWasmalgscnStrtstfnH3">start-function of start-section (<a class="clsPreview" href="#idWasmfcnStrt">link</a>)
+    <a class="clsHide" href="#idWasmalgscnStrtstfnH3"></a></h3>
+  </section>
   </section>
 
   <section id="idWasmalgscnElmt">
@@ -1847,8 +1964,16 @@
     <br>===
     <br>· the-element-section allows a-module to initialize the-contents of a-table imported from the-outside or defined in the-table-section.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
+    <br>===
+    <br>· the initial contents of a-table is-uninitialized.
+    <br>· the-elem-component of a-module defines a-vector of element-segments that initialize a-subrange of a-table at a given offset from a static vector of elements.
+    <br>- elem::={table tableidx,offset expr,init vec(funcidx)}
+    <br>· the-offset is-given by a constant expression.
+    <br>· note: in the current version of WebAssembly, at most one table is-allowed in a-module. Consequently, the only valid tableidx is 0.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#syntax-elem">https://webassembly.github.io/spec/core/syntax/modules.html#syntax-elem</a> {1-0.2018-03-28}]
     <a class="clsHide" href="#idWasmalgscnElmtdsn"></a></p>
   <p id="idWasmalgscnElmtnam">name::
+    <br>* cpt.Wasm'element-section,
     <br>* cpt.Wasm-section.9-element,
     <br>* cpt.Wasm-section.element,
     <a class="clsHide" href="#idWasmalgscnElmtnam"></a></p>
