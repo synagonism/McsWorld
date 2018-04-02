@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-15-0.2018-04-01 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-16-0.2018-04-02 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -2004,8 +2004,16 @@
     <br>· opcode: 0x0b.
     <br>· it consists of an-array of data-initializers.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#data-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#data-section</a>]
+    <br>===
+    <br>· the initial contents of <a class="clsPreview" href="#idWasmsuntMmr">a-memory</a> are zero bytes.
+    <br>· the-data-component of a-module defines a-vector of data-segments that initialize a range of memory at a given offset with a static vector of bytes.
+    <br>- data ::= {data memidx,offset expr,init vec(byte)}
+    <br>· the-offset is-given by a constant expression.
+    <br>· note: in the current version of WebAssembly, at most one memory is-allowed in a-module. Consequently, the only valid memidx is 0.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#data-segments">https://webassembly.github.io/spec/core/syntax/modules.html#data-segments</a> {1-0.2018-03-28}]
     <a class="clsHide" href="#idWasmalgscnDatadsn"></a></p>
   <p id="idWasmalgscnDatanam">name::
+    <br>* cpt.Wasm'data-section,
     <br>* cpt.Wasm-section.11-data,
     <br>* cpt.Wasm-section.data,
     <a class="clsHide" href="#idWasmalgscnDatanam"></a></p>
@@ -2058,6 +2066,11 @@
   </section>
   </section>
 
+  <section id="idWasmmdlscn">
+  <h2 id="idWasmmdlscnH2">section of module (<a class="clsPreview" href="#idWasmalgscn">link</a>)
+    <a class="clsHide" href="#idWasmmdlscnH2"></a></h2>
+  </section>
+
   <section id="idWasmmdlBnr">
   <h2 id="idWasmmdlBnrH2">module.BINARY
     <a class="clsHide" href="#idWasmmdlBnrH2"></a></h2>
@@ -2065,13 +2078,19 @@
     <br>·
     <a class="clsHide" href="#idWasmmdlBnrdsn"></a></p>
   <p id="idWasmmdlBnrnam">name::
-    <br>* cpt.,
+    <br>* cpt.Wasm-module.binary,
     <a class="clsHide" href="#idWasmmdlBnrnam"></a></p>
   </section>
 
   <section id="idWasmmdlTxt">
   <h2 id="idWasmmdlTxtH2">module.TEXT
     <a class="clsHide" href="#idWasmmdlTxtH2"></a></h2>
+  <p id="idWasmmdlTxtdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWasmmdlTxtdsn"></a></p>
+  <p id="idWasmmdlTxtnam">name::
+    <br>* cpt.Wasm-module.text,
+    <a class="clsHide" href="#idWasmmdlTxtnam"></a></p>
   </section>
 </section>
 
@@ -2218,6 +2237,12 @@
   <p id="idWasmgmrGncdsn">description::
     <br>· abstract-grammar is the generic grammar for both formats, <a class="clsPreview" href="#idWasmBnr">binary</a> and <a class="clsPreview" href="#idWasmTxt">text</a>.
     <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-03-31]
+    <br>===
+    <br>· WebAssembly is a-programming-language that has multiple concrete representations (its binary-format and the-text-format).
+    <br>· both map to a common structure.
+    <br>· for conciseness, this structure is-described in the-form of <span class="clsColorRed">an-abstract-syntax</span>.
+    <br>· all parts of this specification are-defined in terms of this abstract-syntax.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/conventions.html#conventions">https://webassembly.github.io/spec/core/syntax/conventions.html#conventions</a> {1-0.2018-03-28}]
     <a class="clsHide" href="#idWasmgmrGncdsn"></a></p>
   <p id="idWasmgmrGncnam">name::
     <br>* cpt.Wasm'abstract-grammar,
@@ -2226,11 +2251,94 @@
   <p id="idWasmgmrGncwpa">addressWpg::
     <br>* <a href="https://webassembly.github.io/spec/core/syntax/conventions.html">https://webassembly.github.io/spec/core/syntax/conventions.html</a>,
     <a class="clsHide" href="#idWasmgmrGncwpa"></a></p>
+
+  <section id="idWasmgncprdn">
+  <h3 id="idWasmgncprdnH3">production of abstract-grammar
+    <a class="clsHide" href="#idWasmgncprdnH3"></a></h3>
+  <p id="idWasmgncprdndsn">description::
+    <br>· Terminal symbols (atoms) are written in sans-serif font: <span class="clsFontSansserif">i32, end</span>.
+    <br>· Nonterminal symbols are written in italic font: <span class="clsI">valtype, instr</span>.
+    <br>· Productions are written sym ::= A1 | … | An.
+    <br>· Some productions are augmented with side conditions in parentheses, “(if condition)”, that provide a shorthand for a combinatorial expansion of the production into many separate cases.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/conventions.html">https://webassembly.github.io/spec/core/syntax/conventions.html</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmgncprdndsn"></a></p>
+  <p id="idWasmgncprdnnam">name::
+    <br>* cpt.Wasm'production-of-abstract-syntax,
+    <br>* cpt.Wasm-abstract-syntax'production,
+    <a class="clsHide" href="#idWasmgncprdnnam"></a></p>
+  </section>
+
+  <section id="idWasmgncsqnc">
+  <h3 id="idWasmgncsqncH3">sequence of abstract-grammar
+    <a class="clsHide" href="#idWasmgncsqncH3"></a></h3>
+  <p id="idWasmgncsqncdsn">description::
+    <br>· A<sup>n</sup> is a sequence of n≥0 iterations of A.
+    <br>· A<sup>∗</sup> is a possibly empty sequence of iterations of A. (This is a shorthand for A<sup>n</sup> used where n is not relevant.)
+    <br>· A<sup>+</sup> is a non-empty sequence of iterations of A. (This is a shorthand for A<sup>n</sup> where n≥1.)
+    <br>· A<sup>?</sup> is an optional occurrence of A. (This is a shorthand for A<sup>n</sup> where n≤1.)
+    <br>· ϵ  denotes the empty sequence.
+    <br>· |s| denotes the length of a sequence s.
+    <br>· s[i] denotes the i-th element of a sequence s, starting from 0.
+    <br>· s[i:n] denotes the sub-sequence s[i] … s[i+n−1] of a sequence s.
+    <br>· swith[i]=A denotes the same sequence as s, except that the i-the element is replaced with A.
+    <br>· swith[i:n]=A<sup>n</sup> denotes the same sequence as s, except that the sub-sequence s[i:n] is replaced with A<sup>n</sup>.
+    <br>· concat(s∗) denotes the flat sequence formed by concatenating all sequences si in s∗.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/conventions.html">https://webassembly.github.io/spec/core/syntax/conventions.html</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmgncsqncdsn"></a></p>
+  <p id="idWasmgncsqncnam">name::
+    <br>* cpt.Wasm'sequence-of-abstract-syntax,
+    <br>* cpt.Wasm-abstract-syntax'sequence,
+    <a class="clsHide" href="#idWasmgncsqncnam"></a></p>
+  </section>
+
+  <section id="idWasmgncrcrd">
+  <h3 id="idWasmgncrcrdH3">record of abstract-grammar
+    <a class="clsHide" href="#idWasmgncrcrdH3"></a></h3>
+  <p id="idWasmgncrcrddsn">description::
+    <br>·
+    <a class="clsHide" href="#idWasmgncrcrddsn"></a></p>
+  <p id="idWasmgncrcrdnam">name::
+    <br>* cpt.Wasm'record-of-abstract-syntax,
+    <br>* cpt.Wasm-abstract-syntax'record,
+    <a class="clsHide" href="#idWasmgncrcrdnam"></a></p>
+  </section>
+
+  <section id="idWasmgncvctr">
+  <h3 id="idWasmgncvctrH3">vector of abstract-grammar
+    <a class="clsHide" href="#idWasmgncvctrH3"></a></h3>
+  <p id="idWasmgncvctrdsn">description::
+    <br>· vectors are bounded sequences of the-form A<sup>n</sup> (or A<sup>∗</sup>), where the-A can either be values or complex constructions.
+    <br>· a-vector can-have at most 2<sup>32</sup>−1 elements.
+    <br>- vec(A) ::= A<sup>n</sup> (if n &lt; 2<sup>32</sup>)
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/conventions.html#vectors">https://webassembly.github.io/spec/core/syntax/conventions.html#vectors</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmgncvctrdsn"></a></p>
+  <p id="idWasmgncvctrnam">name::
+    <br>* cpt.Wasm'vector-of-abstract-grammar,
+    <br>* cpt.Wasm-abstract-grammar'vector,
+    <a class="clsHide" href="#idWasmgncvctrnam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmgmrBnr">
   <h2 id="idWasmgmrBnrH2">grammar.BINARY
     <a class="clsHide" href="#idWasmgmrBnrH2"></a></h2>
+  <p id="idWasmgmrBnrdsn">description::
+    <br>· the-binary-format for <a class="clsPreview" href="#idWasmmdl">WebAssembly-modules</a> is a dense linear encoding of their <a class="clsPreview" href="#idWasmgmrGnc">abstract-syntax</a>. [<a class="clsPreview" href="#idWasmbnrnote1"> 1 </a>]
+    <br>· the-format is-defined by an-attribute-grammar whose only terminal-symbols are bytes.
+    <br>· a byte sequence is a-well-formed-encoding-of-a-module if and only if it is-generated by the-grammar.
+    <br>· each production of this grammar has exactly one synthesized-attribute: the-abstract-syntax that the respective byte sequence encodes.
+    <br>· thus, the-attribute-grammar implicitly defines a-decoding-function.
+    <br>· except for a few exceptions, the-binary-grammar closely mirrors <a class="clsPreview" href="#idWasmgmrGnc">the-grammar-of-the-abstract-syntax</a>.
+    <br>
+    <br>· note: some phrases of abstract-syntax have multiple possible encodings in the-binary-format.
+    <br>· for example, numbers may-be-encoded as if they had optional leading zeros.
+    <br>· implementations of decoders must-support all possible alternatives; implementations of encoders can-pick any allowed encoding.
+    <br>
+    <br>· the recommended extension for files containing WebAssembly-modules in binary-format is “.wasm” and the recommended Media-Type is “application/wasm”.
+    <br>
+    <br>· <span id="idWasmbnrnote1">[1]	additional encoding layers – for example, introducing compression – may-be-defined on top of the basic representation defined here. However, such layers are outside the-scope of the current specification.</span>
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/conventions.html">https://webassembly.github.io/spec/core/binary/conventions.html</a>]
+    <a class="clsHide" href="#idWasmgmrBnrdsn"></a></p>
   <p id="idWasmgmrBnrnam">name::
     <br>* cpt.Wasm'binary-grammar,
     <br>* cpt.Wasm-grammar.binary,
@@ -2244,17 +2352,46 @@
   <h2 id="idWasmgmrTxtH2">grammar.TEXT
     <a class="clsHide" href="#idWasmgmrTxtH2"></a></h2>
   <p id="idWasmgmrTxtdsn">description::
-    <br>· Like the-binary-format, the-text-format is defined by an-attribute-grammar.
+    <br>· like the-binary-format, the-text-format is defined by an-attribute-grammar.
     <br>· a-text-string is a well-formed description of a-module if and only if it is-generated by the-grammar.
     <br>[<a href="https://webassembly.github.io/spec/core/text/conventions.html">https://webassembly.github.io/spec/core/text/conventions.html</a> {1-0.2018-03-28}]
     <a class="clsHide" href="#idWasmgmrTxtdsn"></a></p>
   <p id="idWasmgmrTxtnam">name::
     <br>* cpt.Wasm'text-grammar,
     <br>* cpt.Wasm-grammar.text,
+    <br>* cpt.Wasm-text-grammar,
     <a class="clsHide" href="#idWasmgmrTxtnam"></a></p>
   <p id="idWasmgmrTxtwpa">addressWpg::
     <br>* <a href="https://webassembly.github.io/spec/core/text/conventions.html">https://webassembly.github.io/spec/core/text/conventions.html</a>,
     <a class="clsHide" href="#idWasmgmrTxtwpa"></a></p>
+
+  <section id="idWasmgmrTxtidcxt">
+  <h3 id="idWasmgmrTxtidcxtH3">identifier-context of text-grammar
+    <a class="clsHide" href="#idWasmgmrTxtidcxtH3"></a></h3>
+  <p id="idWasmgmrTxtidcxtdsn">description::
+    <br>· the-text-format allows to use symbolic-identifiers in place of indices.
+    <br>· to resolve these identifiers into concrete indices, some grammar production are-indexed by an-identifier-context-I as a-synthesized-attribute that records the declared identifiers in each index-space.
+    <br>· in addition, the-context records the-types defined in the-module, so that parameter indices can-be-computed for functions.
+    <br>
+    <br>· it is convenient to define identifier-contexts as records I with abstract-syntax as follows:
+    <br>- I ::= {types (id<sup>?</sup>)∗,
+    <br> funcs (id<sup>?</sup>)∗,
+    <br> tables (id<sup>?</sup>)∗,
+    <br> mems (id<sup>?</sup>)∗,
+    <br> globals (id<sup>?</sup>)∗,
+    <br> locals (id<sup>?</sup>)∗,
+    <br> labels (id<sup>?</sup>)∗,
+    <br> typedefs functype∗ }
+    <br>
+    <br>· for each index-space, such a-context contains the list of identifiers assigned to the defined indices.
+    <br>· unnamed indices are-associated with empty (ϵ) entries in these lists.
+    <br>
+    <br>· an-identifier-context is well-formed if no index-space contains duplicate identifiers.
+    <br>[<a href="https://webassembly.github.io/spec/core/text/conventions.html#contexts">https://webassembly.github.io/spec/core/text/conventions.html#contexts</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmgmrTxtidcxtdsn"></a></p>
+  <p id="idWasmgmrTxtidcxtnam">name::
+    <br>* cpt.Wasm-text-grammar'identifier-context,
+    <a class="clsHide" href="#idWasmgmrTxtidcxtnam"></a></p>
   </section>
   </section>
 
@@ -2310,6 +2447,38 @@
     <br>* <a href="https://wasdk.github.io/WasmFiddle/">https://wasdk.github.io/WasmFiddle/</a>,
     <br>* <a href="http://mbebenita.github.io/WasmExplorer/">http://mbebenita.github.io/WasmExplorer/</a>,
     <a class="clsHide" href="#idWasmtoolCplrSpc"></a></p>
+
+  <section id="idWasmtoolCplrTowat">
+  <h3 id="idWasmtoolCplrTowatH3">compiler.to-wat
+    <a class="clsHide" href="#idWasmtoolCplrTowatH3"></a></h3>
+  <p id="idWasmtoolCplrTowatnam">name::
+    <br>* cpt.Wasm-compiler.to-wat,
+    <a class="clsHide" href="#idWasmtoolCplrTowatnam"></a></p>
+  </section>
+
+  <section id="idWasmtoolCplrTowasm">
+  <h3 id="idWasmtoolCplrTowasmH3">compiler.to-wasm
+    <a class="clsHide" href="#idWasmtoolCplrTowasmH3"></a></h3>
+  <p id="idWasmtoolCplrTowasmnam">name::
+    <br>* cpt.Wasm-compiler.to-wasm,
+    <a class="clsHide" href="#idWasmtoolCplrTowasmnam"></a></p>
+  </section>
+
+  <section id="idWasmtoolCplrWattowasm">
+  <h3 id="idWasmtoolCplrWattowasmH3">compiler.wat-to-wasm
+    <a class="clsHide" href="#idWasmtoolCplrWattowasmH3"></a></h3>
+  <p id="idWasmtoolCplrWattowasmnam">name::
+    <br>* cpt.Wasm-compiler.wat-to-wasm,
+    <a class="clsHide" href="#idWasmtoolCplrWattowasmnam"></a></p>
+  </section>
+
+  <section id="idWasmtoolCplrWasmtomchn">
+  <h3 id="idWasmtoolCplrWasmtomchnH3">compiler.wasm-to-machine
+    <a class="clsHide" href="#idWasmtoolCplrWasmtomchnH3"></a></h3>
+  <p id="idWasmtoolCplrWasmtomchnnam">name::
+    <br>* cpt.Wasm-compiler.wasm-to-machine,
+    <a class="clsHide" href="#idWasmtoolCplrWasmtomchnnam"></a></p>
+  </section>
   </section>
 </section>
 
