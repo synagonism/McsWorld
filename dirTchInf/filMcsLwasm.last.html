@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-17-0.2018-04-06 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-18-0.2018-04-07 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -2146,72 +2146,6 @@
   </section>
 </section>
 
-<section id="idWasmalgAbt">
-  <h1 id="idWasmalgAbtH1">algo.abstract-format of Wasm
-    <a class="clsHide" href="#idWasmalgAbtH1"></a></h1>
-  <p id="idWasmalgAbtdsn">description::
-    <br>· Wasm-specification represents a-Wasm-document AND in a generic format of the-two Wasm-formats, the-text and the-binary.
-    <br>· this generic format it calls it 'abstract-format'.
-    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-04-06]
-    <a class="clsHide" href="#idWasmalgAbtdsn"></a></p>
-  <p id="idWasmalgAbtnam">name::
-    <br>* cpt.Wasm'abstract-format,
-    <a class="clsHide" href="#idWasmalgAbtnam"></a></p>
-
-  <section id="idWasmalgAbtgmr">
-  <h2 id="idWasmalgAbtgmrH2">grammar of abstract-format (<a class="clsPreview" href="#idWasmgmrGnc">link</a>)
-    <a class="clsHide" href="#idWasmalgAbtgmrH2"></a></h2>
-  </section>
-</section>
-
-<section id="idWasmalgTxt">
-  <h1 id="idWasmalgTxtH1">algo.text-format of Wasm
-    <a class="clsHide" href="#idWasmalgTxtH1"></a></h1>
-  <p id="idWasmalgTxtdsn">description::
-    <br>· WebAssembly has an-S-expression-based textual representation, an intermediate form designed to be-exposed in text-editors, browser-developer-tools, etc.
-    <br>[<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Text_format_to_wasm">https://developer.mozilla.org/en-US/docs/WebAssembly/Text_format_to_wasm</a>]
-    <a class="clsHide" href="#idWasmalgTxtdsn"></a></p>
-  <p id="idWasmalgTxtnam">name::
-    <br>* cpt.Wasm'source-format,
-    <br>* cpt.Wasm'textual-format,
-    <br>* cpt.Wasm-txt-algo,
-    <a class="clsHide" href="#idWasmalgTxtnam"></a></p>
-
-  <section id="idWasmalgTxtfile">
-  <h2 id="idWasmalgTxtfileH2">S-expression of txt-algo
-    <a class="clsHide" href="#idWasmalgTxtfileH2"></a></h2>
-  <p id="idWasmalgTxtfiledsn">description::
-    <br>· S-expressions are a very old and very simple textual-format for representing trees of nodes.
-    <br>· each node in the-tree goes inside a-pair of parentheses — ( ... ).
-    <br>· the first label inside the-parenthesis tells you what type of node it is, and after that there-is a space-separated list of either attributes or child-nodes.
-    <br>[<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format">https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format</a>]
-    <a class="clsHide" href="#idWasmalgTxtfiledsn"></a></p>
-  <p id="idWasmalgTxtfilenam">name::
-    <br>* cpt.Wasm'S-expression,
-    <a class="clsHide" href="#idWasmalgTxtfilenam"></a></p>
-  </section>
-
-  <section id="idWasmalgTxtfile">
-  <h2 id="idWasmalgTxtfileH2">file of txt-algo
-    <a class="clsHide" href="#idWasmalgTxtfileH2"></a></h2>
-  <p id="idWasmalgTxtfiledsn">description::
-    <br>· the recommended file-extension for WebAssembly code in textual-format is <code>.wat</code>.
-    <a class="clsHide" href="#idWasmalgTxtfiledsn"></a></p>
-  </section>
-
-  <section id="idWasmalgTxttbf">
-  <h2 id="idWasmalgTxttbfH2">converting-to-binary-format of txt-algo
-    <a class="clsHide" href="#idWasmalgTxttbfH2"></a></h2>
-  <p id="idWasmalgTxttbfnam">name::
-    <br>* cpt.Wasm'converting-text-to-binary-format,
-    <br>* cpt.Wasm'translating-text-to-binary-format,
-    <a class="clsHide" href="#idWasmalgTxttbfnam"></a></p>
-  <p id="idWasmalgTxttbfwpa">addressWpg::
-    <br>* wat2wasm: <a href="https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wat2wasm/">https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wat2wasm/</a>,
-    <a class="clsHide" href="#idWasmalgTxttbfwpa"></a></p>
-  </section>
-</section>
-
 <section id="idWasmalgBnr">
   <h1 id="idWasmalgBnrH1">algo.binary-format of Wasm
     <a class="clsHide" href="#idWasmalgBnrH1"></a></h1>
@@ -2235,6 +2169,9 @@
   <p id="idWasmalgPgmnam">name::
     <br>* cpt.Wasm'program,
     <a class="clsHide" href="#idWasmalgPgmnam"></a></p>
+  <p id="idWasmalgPgmwpa">addressWpg::
+    <br>* Hello World: <a href="https://github.com/tgsstdio/Hello-WebAssembly">https://github.com/tgsstdio/Hello-WebAssembly</a>,
+    <a class="clsHide" href="#idWasmalgPgmwpa"></a></p>
 </section>
 
 <section id="idWasmmnc">
@@ -2300,6 +2237,7 @@
     <br>* cpt.Wasm-grammar,
     <br>* cpt.Wasm-spec'grammar,
     <a class="clsHide" href="#idWasmgmrnam"></a></p>
+  </section>
 
   <section id="idWasmgmrGnc">
   <h2 id="idWasmgmrGncH2">grammar.ABSTRACT
@@ -2433,6 +2371,7 @@
     <a class="clsHide" href="#idWasmgmrTxtnam"></a></p>
   <p id="idWasmgmrTxtwpa">addressWpg::
     <br>* <a href="https://webassembly.github.io/spec/core/text/conventions.html">https://webassembly.github.io/spec/core/text/conventions.html</a>,
+    <br>* <a href="https://github.com/WebAssembly/spec/tree/master/interpreter/#s-expression-syntax">https://github.com/WebAssembly/spec/tree/master/interpreter/#s-expression-syntax</a>,
     <a class="clsHide" href="#idWasmgmrTxtwpa"></a></p>
 
   <section id="idWasmgmrTxtidcxt">
@@ -2505,6 +2444,14 @@
     <br>* cpt.Wasm'tool,
     <br>* cpt.Wasm-tool,
     <a class="clsHide" href="#idWasmtoolnam"></a></p>
+  <p id="idWasmtoolwpa">addressWpg::
+    <br>* <a href="https://github.com/WebAssembly/design/blob/master/Tooling.md">https://github.com/WebAssembly/design/blob/master/Tooling.md</a>,
+    <a class="clsHide" href="#idWasmtoolwpa"></a></p>
+  <p id="idWasmtoolSpc">specific::
+    <br>* <a class="clsPreview" href="#idWasmtoolRte">runtime-environment</a>,
+    <br>* editor,
+    <br>* <a class="clsPreview" href="idWasmtoolCplr">compiler</a>,
+    <a class="clsHide" href="#idWasmtoolSpc"></a></p>
 
   <section id="idWasmtoolCplr">
   <h2 id="idWasmtoolCplrH2">tool.COMPILER
@@ -2524,6 +2471,9 @@
   <p id="idWasmtoolCplrTowatnam">name::
     <br>* cpt.Wasm-compiler.to-wat,
     <a class="clsHide" href="#idWasmtoolCplrTowatnam"></a></p>
+  <p id="idWasmtoolCplrTowatSpc">specific::
+    <br>* online C-to-wat: <a href="https://wasdk.github.io/WasmFiddle/">https://wasdk.github.io/WasmFiddle/</a>,
+    <a class="clsHide" href="#idWasmtoolCplrTowatSpc"></a></p>
   </section>
 
   <section id="idWasmtoolCplrTowasm">
@@ -2532,6 +2482,11 @@
   <p id="idWasmtoolCplrTowasmnam">name::
     <br>* cpt.Wasm-compiler.to-wasm,
     <a class="clsHide" href="#idWasmtoolCplrTowasmnam"></a></p>
+  <p id="idWasmtoolCplrTowasmSpc">specific::
+    <br>* online C-to-wasm: <a href="https://wasdk.github.io/WasmFiddle/">https://wasdk.github.io/WasmFiddle/</a>,
+    <br>* TypeScript-to-wasm: AssemblyScript <a href="https://github.com/AssemblyScript/assemblyscript">https://github.com/AssemblyScript/assemblyscript</a>,
+    <br>* TypeScript-to-wasm: speedy.js <a href="https://github.com/MichaReiser/speedy.js">https://github.com/MichaReiser/speedy.js</a>,
+    <a class="clsHide" href="#idWasmtoolCplrTowasmSpc"></a></p>
   </section>
 
   <section id="idWasmtoolCplrWattowasm">
@@ -2540,6 +2495,20 @@
   <p id="idWasmtoolCplrWattowasmnam">name::
     <br>* cpt.Wasm-compiler.wat-to-wasm,
     <a class="clsHide" href="#idWasmtoolCplrWattowasmnam"></a></p>
+  <p id="idWasmtoolCplrWattowasmSpc">specific::
+    <br>* online: <a href="https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wat2wasm/">https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wat2wasm/</a>,
+    <a class="clsHide" href="#idWasmtoolCplrWattowasmSpc"></a></p>
+  </section>
+
+  <section id="idWasmtoolCplrWasm2wat">
+  <h3 id="idWasmtoolCplrWasm2watH3">compiler.wasm-to-wat
+    <a class="clsHide" href="#idWasmtoolCplrWasm2watH3"></a></h3>
+  <p id="idWasmtoolCplrWasm2watnam">name::
+    <br>* cpt.Wasm-compiler.wasm-to-wat,
+    <a class="clsHide" href="#idWasmtoolCplrWasm2watnam"></a></p>
+  <p id="idWasmtoolCplrWasm2watwpa">addressWpg::
+    <br>* online: <a href="https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wasm2wat/">https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wasm2wat/</a>,
+    <a class="clsHide" href="#idWasmtoolCplrWasm2watwpa"></a></p>
   </section>
 
   <section id="idWasmtoolCplrWasmtomchn">
@@ -2548,7 +2517,24 @@
   <p id="idWasmtoolCplrWasmtomchnnam">name::
     <br>* cpt.Wasm-compiler.wasm-to-machine,
     <a class="clsHide" href="#idWasmtoolCplrWasmtomchnnam"></a></p>
+  <p id="idWasmtoolCplrWasmtomchnSpc">specific::
+    <br>* ,
+    <a class="clsHide" href="#idWasmtoolCplrWasmtomchnSpc"></a></p>
   </section>
+  </section>
+
+  <section id="idWasmtoolHexv">
+  <h2 id="idWasmtoolHexvH2">tool.HEX-VIEWER
+    <a class="clsHide" href="#idWasmtoolHexvH2"></a></h2>
+  <p id="idWasmtoolHexvdsn">description::
+    <br>· view a-wasm-file in hexadecimal-format.
+    <a class="clsHide" href="#idWasmtoolHexvdsn"></a></p>
+  <p id="idWasmtoolHexvnam">name::
+    <br>* cpt.Wasm-tool.hex-viewer,
+    <a class="clsHide" href="#idWasmtoolHexvnam"></a></p>
+  <p id="idWasmtoolHexvwpa">addressWpg::
+    <br>* online: <a href="http://tomeko.net/online_tools/file_to_hex.php?lang=en">http://tomeko.net/online_tools/file_to_hex.php?lang=en</a>,
+    <a class="clsHide" href="#idWasmtoolHexvwpa"></a></p>
   </section>
 </section>
 
@@ -2609,11 +2595,10 @@
   <p id="idWasmrteextgnam">name::
     <br>* cpt.Wasm'executing,
     <a class="clsHide" href="#idWasmrteextgnam"></a></p>
-  </section>
 
   <section id="idWasmrteinstg">
-  <h2 id="idWasmrteinstgH2">instatiating of runtime
-    <a class="clsHide" href="#idWasmrteinstgH2"></a></h2>
+  <h3 id="idWasmrteinstgH3">instatiating of runtime
+    <a class="clsHide" href="#idWasmrteinstgH3"></a></h3>
   <p id="idWasmrteinstgdsn">description::
     <br>Instantiation. A module instance is the dynamic representation of a module, complete with its own state and execution stack. Instantiation executes the module body itself, given definitions for all its imports. It initializes globals, memories and tables and invokes the module’s start function if defined. It returns the instances of the module’s exports.
     <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases">https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases</a> {1-0.2018-03-22}]
@@ -2624,8 +2609,8 @@
    </section>
 
   <section id="idWasmrteinvg">
-  <h2 id="idWasmrteinvgH2">invocating of runtime
-    <a class="clsHide" href="#idWasmrteinvgH2"></a></h2>
+  <h3 id="idWasmrteinvgH3">invocating of runtime
+    <a class="clsHide" href="#idWasmrteinvgH3"></a></h3>
   <p id="idWasmrteinvgdsn">description::
     <br>'Invocation. Once instantiated, further WebAssembly computations can be initiated by invoking an exported function on a module instance. Given the required arguments, that executes the respective function and returns its results.'
     <br>[<a href="https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases">https://webassembly.github.io/spec/core/intro/overview.html#semantic-phases</a> {1-0.2018-03-22}]
@@ -2633,6 +2618,7 @@
   <p id="idWasmrteinvgnam">name::
     <br>* cpt.Wasm'invocating,
     <a class="clsHide" href="#idWasmrteinvgnam"></a></p>
+  </section>
   </section>
 </section>
 
@@ -2687,22 +2673,89 @@
     <br>* text-format,
     <br>* Ethereum flavored WebAssembly (ewasm): <a href="https://github.com/ewasm">https://github.com/ewasm</a>,
     <a class="clsHide" href="#idWasmSpcP1"></a></p>
+</section>
 
-  <section id="idWasmBnr">
-  <h2 id="idWasmBnrH2">Wasm.BINARY-FORMAT
-    <a class="clsHide" href="#idWasmBnrH2"></a></h2>
+<section id="idWasmAbt">
+  <h1 id="idWasmAbtH1">Wasm.ABSTRACT-FORMAT
+    <a class="clsHide" href="#idWasmAbtH1"></a></h1>
+  <p id="idWasmAbtdsn">description::
+    <br>· Wasm-specification represents a-Wasm-document AND in a generic format of the-two Wasm-formats, the-text and the-binary.
+    <br>· this generic format it calls it 'abstract-format'.
+    <br>[<a class="clsPreview" href="../../#idAboutme">HmnSgm</a>.2018-04-06]
+    <a class="clsHide" href="#idWasmAbtdsn"></a></p>
+  <p id="idWasmAbtnam">name::
+    <br>* cpt.Wasm'abstract-format,
+    <a class="clsHide" href="#idWasmAbtnam"></a></p>
+
+  <section id="idWasmAbtgmr">
+  <h2 id="idWasmAbtgmrH2">grammar of abstract-format (<a class="clsPreview" href="#idWasmgmrGnc">link</a>)
+    <a class="clsHide" href="#idWasmAbtgmrH2"></a></h2>
+  </section>
+</section>
+
+<section id="idWasmTxt">
+  <h1 id="idWasmTxtH1">Wasm.TEXT-FORMAT
+    <a class="clsHide" href="#idWasmTxtH1"></a></h1>
+  <p id="idWasmTxtdsn">description::
+    <br>· WebAssembly has an-S-expression-based textual representation, an intermediate form designed to be-exposed in text-editors, browser-developer-tools, etc.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Text_format_to_wasm">https://developer.mozilla.org/en-US/docs/WebAssembly/Text_format_to_wasm</a>]
+    <a class="clsHide" href="#idWasmTxtdsn"></a></p>
+  <p id="idWasmTxtnam">name::
+    <br>* cpt.text-Wasm,
+    <br>* cpt.Wasm.source-format,
+    <br>* cpt.Wasm.textual-format,
+    <br>* cpt.Wasm.text-format,
+    <a class="clsHide" href="#idWasmTxtnam"></a></p>
+
+  <section id="idWasmTxtsexn">
+  <h2 id="idWasmTxtsexnH2">S-expression of text-Wasm
+    <a class="clsHide" href="#idWasmTxtsexnH2"></a></h2>
+  <p id="idWasmTxtsexndsn">description::
+    <br>· S-expressions are a very old and very simple textual-format for representing trees of nodes.
+    <br>· each node in the-tree goes inside a-pair of parentheses — ( ... ).
+    <br>· the first label inside the-parenthesis tells you what type of node it is, and after that there-is a space-separated list of either attributes or child-nodes.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format">https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format</a>]
+    <a class="clsHide" href="#idWasmTxtsexndsn"></a></p>
+  <p id="idWasmTxtsexnnam">name::
+    <br>* cpt.Wasm'S-expression,
+    <a class="clsHide" href="#idWasmTxtsexnnam"></a></p>
+  </section>
+
+  <section id="idWasmTxtfile">
+  <h2 id="idWasmTxtfileH2">file of text-Wasm
+    <a class="clsHide" href="#idWasmTxtfileH2"></a></h2>
+  <p id="idWasmTxtfiledsn">description::
+    <br>· the recommended file-extension for WebAssembly code in textual-format is <code>.wat</code>.
+    <a class="clsHide" href="#idWasmTxtfiledsn"></a></p>
+  </section>
+
+  <section id="idWasmTxttbf">
+  <h2 id="idWasmTxttbfH2">converting-to-binary-format of text-Wasm
+    <a class="clsHide" href="#idWasmTxttbfH2"></a></h2>
+  <p id="idWasmTxttbfnam">name::
+    <br>* cpt.Wasm'converting-text-to-binary-format,
+    <br>* cpt.Wasm'translating-text-to-binary-format,
+    <a class="clsHide" href="#idWasmTxttbfnam"></a></p>
+  <p id="idWasmTxttbfwpa">addressWpg::
+    <br>* wat2wasm: <a href="https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wat2wasm/">https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wat2wasm/</a>,
+    <a class="clsHide" href="#idWasmTxttbfwpa"></a></p>
+  </section>
+
+  <section id="idWasmTxtrsc">
+  <h2 id="idWasmTxtrscH2">resource of text-Wasm
+    <a class="clsHide" href="#idWasmTxtrscH2"></a></h2>
+  <p id="idWasmTxtrscwpa">addressWpg::
+    <br>* <a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format">https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format</a>,
+    <a class="clsHide" href="#idWasmTxtrscwpa"></a></p>
+  </section>
+</section>
+
+<section id="idWasmBnr">
+  <h1 id="idWasmBnrH1">Wasm.BINARY-FORMAT
+    <a class="clsHide" href="#idWasmBnrH1"></a></h1>
   <p id="idWasmBnrnam">name::
     <br>* cpt.Wasm.binary-format,
     <a class="clsHide" href="#idWasmBnrnam"></a></p>
-  </section>
-
-  <section id="idWasmTxt">
-  <h2 id="idWasmTxtH2">Wasm.TEXT-FORMAT
-    <a class="clsHide" href="#idWasmTxtH2"></a></h2>
-  <p id="idWasmTxtnam">name::
-    <br>* cpt.Wasm.text-format,
-    <a class="clsHide" href="#idWasmTxtnam"></a></p>
-  </section>
 </section>
 
 <section id="idWasmEvgFT">
