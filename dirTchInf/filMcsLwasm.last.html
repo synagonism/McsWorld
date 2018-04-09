@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-19-0.2018-04-08 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-20-0.2018-04-09 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -2179,6 +2179,8 @@
     <br>* binary-program,
     <br>* text-program,
     <br>===
+    <br>* examples that accompany the-MDN-WebAssembly-documentation: <a href="https://github.com/mdn/webassembly-examples">https://github.com/mdn/webassembly-examples</a>
+    <br>- demo: <a href="https://mdn.github.io/webassembly-examples/js-api-examples/">https://mdn.github.io/webassembly-examples/js-api-examples/</a>,
     <br>* Hello World: <a href="https://github.com/tgsstdio/Hello-WebAssembly">https://github.com/tgsstdio/Hello-WebAssembly</a>,
     <a class="clsHide" href="#idWasmpgmSpcP1"></a></p>
   </section>
@@ -2626,7 +2628,7 @@
     <a class="clsHide" href="#idWasmtoolRtenam"></a></p>
 
   <section id="idWasmrtewajo">
-  <h2 id="idWasmrtewajoH2">WebAssebly--javascript-object
+  <h2 id="idWasmrtewajoH2">WebAssembly--javascript-object
     <a class="clsHide" href="#idWasmrtewajoH2"></a></h2>
   <p id="idWasmrtewajodsn">description::
     <br>· The-WebAssembly-JavaScript-object acts as the-namespace for all WebAssembly-related functionality.
@@ -2639,19 +2641,192 @@
     <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly</a>]
     <a class="clsHide" href="#idWasmrtewajodsn"></a></p>
   <p id="idWasmrtewajonam">name::
-    <br>* cpt.Ljb-o.WebAssebly,
-    <br>* cpt.Wasm'WebAssebly--javascript-object,
-    <br>* cpt.Wasm-WebAssebly-object,
-    <br>* cpt.WebAssebly--javascript-object,
+    <br>* cpt.Ljb-o.WebAssembly,
+    <br>* cpt.Wasm'WebAssembly--javascript-object,
+    <br>* cpt.Wasm-WebAssembly-object,
+    <br>* cpt.WebAssembly--javascript-object,
     <a class="clsHide" href="#idWasmrtewajonam"></a></p>
 
   <section id="idWasmrtewajombr">
-  <h3 id="idWasmrtewajombrH3">member of WebAssebly-object
+  <h3 id="idWasmrtewajombrH3">member of WebAssembly-object
     <a class="clsHide" href="#idWasmrtewajombrH3"></a></h3>
   <p id="idWasmrtewajombrmbr">member::
     <br>> Object.getOwnPropertyNames(WebAssembly).sort().join(', ')
     <br>"CompileError, Instance, LinkError, Memory, Module, RuntimeError, Table, compile, compileStreaming, instantiate, instantiateStreaming, validate"
     <a class="clsHide" href="#idWasmrtewajombrmbr"></a></p>
+  </section>
+
+  <section id="idWasmrtewajoinstf">
+  <h3 id="idWasmrtewajoinstfH3">WebAssembly.instantiate-function
+    <a class="clsHide" href="#idWasmrtewajoinstfH3"></a></h3>
+  <p id="idWasmrtewajoinstfdsn">description::
+    <br>· the-WebAssembly.instantiate()-function allows you to compile and instantiate WebAssembly-code.
+    <br>· this function has two overloads:
+    <br>* the primary overload takes the-WebAssembly-binary-code, in the-form of a-typed-array or ArrayBuffer, and performs both compilation and instantiation in one step.  The returned Promise resolves to both a compiled WebAssembly.Module and its first WebAssembly.Instance.
+    <br>* the secondary overload takes an already-compiled WebAssembly.Module and returns a-Promise that resolves to an Instance of that Module. This overload is useful if the-Module has already been-compiled or retrieved from cache.
+    <br>· important: this method is-not the most efficient way of fetching and instantiating wasm-modules. If at all possible, you should-use the newer WebAssembly.instantiateStreaming() method instead, which fetches, compiles, and instantiates a-module all in one step, directly from the raw bytecode, so doesn't require conversation to an-ArrayBuffer.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate</a>]
+    <a class="clsHide" href="#idWasmrtewajoinstfdsn"></a></p>
+  <p id="idWasmrtewajoinstfnam">name::
+    <br>* cpt.Wasm'WebAssembly.instantiate-function,
+    <br>* cpt.WebAssembly.instantiate-function,
+    <a class="clsHide" href="#idWasmrtewajoinstfnam"></a></p>
+  </section>
+
+  <section id="idWasmrtewajoinststmf">
+  <h3 id="idWasmrtewajoinststmfH3">WebAssembly.instantiateSteaming-function
+    <a class="clsHide" href="#idWasmrtewajoinststmfH3"></a></h3>
+  <p id="idWasmrtewajoinststmfdsn">description::
+    <br>· the-WebAssembly.instantiateStreaming()-function compiles and instantiates a-WebAssembly-module directly from a streamed underlying source.
+    <br>· this is the most efficient, optimized way to load wasm-code.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming</a>]
+    <a class="clsHide" href="#idWasmrtewajoinststmfdsn"></a></p>
+  <p id="idWasmrtewajoinststmfnam">name::
+    <br>* cpt.Wasm'WebAssembly.instantiateSteaming-function,
+    <br>* cpt.WebAssembly.instantiateSteaming-function,
+    <a class="clsHide" href="#idWasmrtewajoinststmfnam"></a></p>
+  </section>
+
+  <section id="idWasmrtewajocmplf">
+  <h3 id="idWasmrtewajocmplfH3">WebAssembly.compile-function
+    <a class="clsHide" href="#idWasmrtewajocmplfH3"></a></h3>
+  <p id="idWasmrtewajocmplfdsn">description::
+    <br>· the-WebAssembly.compile()-function compiles a-WebAssembly.Module from WebAssembly-binary-code.
+    <br>· this function is useful if it is necessary to compile a-module before it can-be-instantiated (otherwise, the-WebAssembly.instantiate()-function should-be-used).
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile</a>]
+    <a class="clsHide" href="#idWasmrtewajocmplfdsn"></a></p>
+  <p id="idWasmrtewajocmplfnam">name::
+    <br>* cpt.Wasm'WebAssembly.compile-function,
+    <br>* cpt.WebAssembly.compile-function,
+    <a class="clsHide" href="#idWasmrtewajocmplfnam"></a></p>
+  </section>
+
+  <section id="idWasmrtewajocmplsmgf">
+  <h3 id="idWasmrtewajocmplsmgfH3">WebAssembly.compileStreaming-function
+    <a class="clsHide" href="#idWasmrtewajocmplsmgfH3"></a></h3>
+  <p id="idWasmrtewajocmplsmgfdsn">description::
+    <br>· the-WebAssembly.compileStreaming()-function compiles a-WebAssembly.Module directly from a streamed underlying source.
+    <br>· this function is useful if it is necessary to compile a-module before it can-be-instantiated (otherwise, the-WebAssembly.instantiateStreaming()-function should-be-used).
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming</a>]
+    <a class="clsHide" href="#idWasmrtewajocmplsmgfdsn"></a></p>
+  <p id="idWasmrtewajocmplsmgfnam">name::
+    <br>* cpt.Wasm'WebAssembly.compileStreaming-function,
+    <br>* cpt.WebAssembly.compileStreaming-function,
+    <a class="clsHide" href="#idWasmrtewajocmplsmgfnam"></a></p>
+  </section>
+
+  <section id="idWasmrtewajovldtf">
+  <h3 id="idWasmrtewajovldtfH3">WebAssembly.validate-function
+    <a class="clsHide" href="#idWasmrtewajovldtfH3"></a></h3>
+  <p id="idWasmrtewajovldtfdsn">description::
+    <br>· the-WebAssembly.validate()-function validates a given <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">typed-array</a> of WebAssembly-binary-code, returning whether the-bytes form a valid wasm-module (true) or not (false).
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate</a>]
+    <a class="clsHide" href="#idWasmrtewajovldtfdsn"></a></p>
+  <p id="idWasmrtewajovldtfnam">name::
+    <br>* cpt.Wasm'WebAssembly.validate-function,
+    <br>* cpt.WebAssembly.validate-function,
+    <a class="clsHide" href="#idWasmrtewajovldtfnam"></a></p>
+  </section>
+
+  <section id="idWasmrtewajomdlf">
+  <h3 id="idWasmrtewajomdlfH3">WebAssembly.Module-function
+    <a class="clsHide" href="#idWasmrtewajomdlfH3"></a></h3>
+  <p id="idWasmrtewajomdlfdsn">description::
+    <br>· a-WebAssembly.Module-object contains stateless WebAssembly-code that has already been-compiled by the-browser and can-be efficiently shared with Workers, cached in IndexedDB and instantiated multiple times.
+    <br>· the-WebAssembly.Module()-constructor-function can-be-called to synchronously compile given WebAssembly-binary-code.
+    <br>· however, the primary way to get a-Module is through an asynchronous compilation function like WebAssembly.compile() or by reading a-Module out of IndexedDB.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module</a>]
+    <a class="clsHide" href="#idWasmrtewajomdlfdsn"></a></p>
+  <p id="idWasmrtewajomdlfnam">name::
+    <br>* cpt.Wasm'WebAssembly.Module-function,
+    <br>* cpt.WebAssembly.Module-function,
+    <a class="clsHide" href="#idWasmrtewajomdlfnam"></a></p>
+  </section>
+
+  <section id="idWasmrtewajoinstcf">
+  <h3 id="idWasmrtewajoinstcfH3">WebAssembly.Instance-function
+    <a class="clsHide" href="#idWasmrtewajoinstcfH3"></a></h3>
+  <p id="idWasmrtewajoinstcfdsn">description::
+    <br>· a-WebAssembly.Instance-object is a stateful, executable instance of a-WebAssembly.Module.
+    <br>· instance-objects contain all the Exported WebAssembly functions that allow calling into WebAssembly code from JavaScript.
+    <br>· the-WebAssembly.Instance()-constructor-function can-be-called to synchronously instantiate a given WebAssembly.Module-object.
+    <br>· however, the primary way to get an Instance is through the asynchronous WebAssembly.instantiateStreaming()-function.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance</a>]
+    <a class="clsHide" href="#idWasmrtewajoinstcfdsn"></a></p>
+  <p id="idWasmrtewajoinstcfnam">name::
+    <br>* cpt.Wasm'WebAssembly.Instance-function,
+    <br>* cpt.WebAssembly.Instance-function,
+    <a class="clsHide" href="#idWasmrtewajoinstcfnam"></a></p>
+  </section>
+
+  <section id="idWasmrtewajommrf">
+  <h3 id="idWasmrtewajommrfH3">WebAssembly.Memory-function
+    <a class="clsHide" href="#idWasmrtewajommrfH3"></a></h3>
+  <p id="idWasmrtewajommrfdsn">description::
+    <br>· the-WebAssembly.Memory()-constructor creates a new Memory-object which is a resizable ArrayBuffer that holds the raw bytes of memory accessed by a-WebAssembly-Instance.
+    <br>· a-memory created by JavaScript or in WebAssembly-code will-be accessible and mutable from both JavaScript and WebAssembly.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory</a>]
+    <a class="clsHide" href="#idWasmrtewajommrfdsn"></a></p>
+  <p id="idWasmrtewajommrfnam">name::
+    <br>* cpt.Wasm'WebAssembly.Memory-function,
+    <br>* cpt.WebAssembly.Memory-function,
+    <a class="clsHide" href="#idWasmrtewajommrfnam"></a></p>
+  </section>
+
+  <section id="idWasmrtewajotblf">
+  <h3 id="idWasmrtewajotblfH3">WebAssembly.Table-function
+    <a class="clsHide" href="#idWasmrtewajotblfH3"></a></h3>
+  <p id="idWasmrtewajotblfdsn">description::
+    <br>· the-WebAssembly.Table()-constructor creates a new Table-object of the given size and element type.
+    <br>· this is a-JavaScript wrapper object — an array-like structure representing a-WebAssembly-Table, which stores function-references.
+    <br>· a-table created by JavaScript or in WebAssembly-code will-be accessible and mutable from both JavaScript and WebAssembly.
+    <br>· note: tables can currently only store function-references, but this will likely be-expanded in the-future.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table</a>]
+    <a class="clsHide" href="#idWasmrtewajotblfdsn"></a></p>
+  <p id="idWasmrtewajotblfnam">name::
+    <br>* cpt.Wasm'WebAssembly.Table-function,
+    <br>* cpt.WebAssembly.Table-function,
+    <a class="clsHide" href="#idWasmrtewajotblfnam"></a></p>
+  </section>
+
+  <section id="idWasmrtewajocplef">
+  <h3 id="idWasmrtewajocplefH3">WebAssembly.CompileError-function
+    <a class="clsHide" href="#idWasmrtewajocplefH3"></a></h3>
+  <p id="idWasmrtewajocplefdsn">description::
+    <br>· the-WebAssembly.CompileError()-constructor creates a new WebAssembly-CompileError-object, which indicates an-error during WebAssembly <a class="clsPreview" href="#idWasmrtedcdg">decoding</a> or <a class="clsPreview" href="#idWasmrtevldg">validation</a>.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError</a>]
+    <a class="clsHide" href="#idWasmrtewajocplefdsn"></a></p>
+  <p id="idWasmrtewajocplefnam">name::
+    <br>* cpt.Wasm'WebAssembly.CompileError-function,
+    <br>* cpt.WebAssembly.CompileError-function,
+    <a class="clsHide" href="#idWasmrtewajocplefnam"></a></p>
+  </section>
+
+  <section id="idWasmrtewajolnkef">
+  <h3 id="idWasmrtewajolnkefH3">WebAssembly.LinkError-function
+    <a class="clsHide" href="#idWasmrtewajolnkefH3"></a></h3>
+  <p id="idWasmrtewajolnkefdsn">description::
+    <br>· the-WebAssembly.LinkError()-constructor creates a new WebAssembly-LinkError-object, which indicates an-error during module-instantiation (besides traps from the-start-function).
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError</a>]
+    <a class="clsHide" href="#idWasmrtewajolnkefdsn"></a></p>
+  <p id="idWasmrtewajolnkefnam">name::
+    <br>* cpt.Wasm'WebAssembly.LinkError-function,
+    <br>* cpt.WebAssembly.LinkError-function,
+    <a class="clsHide" href="#idWasmrtewajolnkefnam"></a></p>
+  </section>
+
+  <section id="idWasmrtewajortmef">
+  <h3 id="idWasmrtewajortmefH3">WebAssembly.RuntimeError-function
+    <a class="clsHide" href="#idWasmrtewajortmefH3"></a></h3>
+  <p id="idWasmrtewajortmefdsn">description::
+    <br>· the-WebAssembly.RuntimeError()-constructor creates a new WebAssembly-RuntimeError-object — the-type that is-thrown whenever WebAssembly specifies a-trap.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError</a>]
+    <br>
+    <a class="clsHide" href="#idWasmrtewajortmefdsn"></a></p>
+  <p id="idWasmrtewajortmefnam">name::
+    <br>* cpt.Wasm'WebAssembly.RuntimeError-function,
+    <br>* cpt.WebAssembly.RuntimeError-function,
+    <a class="clsHide" href="#idWasmrtewajortmefnam"></a></p>
   </section>
   </section>
 
