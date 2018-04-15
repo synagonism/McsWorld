@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.javascript-language (Ljs.5-10-0.2018-03-28)</title>
+  <title>Mcs.javascript-language (Ljs.5-11-0.2018-04-15)</title>
   <meta name="keywords" content="JavaScript, js, javascript-tutorial, browser-js, Node.js, ljs, ljb, ljn, Mcs, structured-concept">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -4479,10 +4479,10 @@
     <a class="clsHide" href="#idLjstolSpc"></a></p>
   </section>
 
-  <section id="idLjstolEgn">
-  <h2 id="idLjstolEgnH2">Ljs-tool.ENGINE (Runtime)
-    <a class="clsHide" href="#idLjstolEgnH2"></a></h2>
-  <p id="idLjstolEgndsn">description::
+  <section id="idLjstolRte">
+  <h2 id="idLjstolRteH2">Ljs-tool.RUNTIME
+    <a class="clsHide" href="#idLjstolRteH2"></a></h2>
+  <p id="idLjstolRtedsn">description::
     <br>What is the difference between javascript engine and javascript runtime?
     <br>The distinction between the two is not always clear and you'll find that the terms are commonly used interchangeably.
     <br>Conceptuallly, the difference is that an engine is responsible for providing the mechanics of parsing and JIT compilation, i.e. producing machine-executable operations from a script written in JavaScript.
@@ -4490,7 +4490,27 @@
     <br>Chrome and Node.js therefore share the same engine (Google's V8), but they have different runtime (execution) environments.
     <br>In a way, the runtime is to the engine what the linker is to the compiler in a traditional compiled language.
     <br>[2016-06-24, Alex-Giannakakos, <a href="https://www.quora.com/What-is-the-difference-between-javascript-engine-and-javascript-runtime">https://www.quora.com/What-is-the-difference-between-javascript-engine-and-javascript-runtime</a>]
-    <br>===
+    <a class="clsHide" href="#idLjstolRtedsn"></a></p>
+  <p id="idLjstolRtenam">name::
+    <br>* cpt.javascript-runtime-environment,
+    <br>* cpt.Ljs-runtime,
+    <br>* cpt.Ljs-tool.runtime-environment,
+    <a class="clsHide" href="#idLjstolRtenam"></a></p>
+
+  <section id="idLjstolRteSpc">
+  <h3 id="idLjstolRteSpcH3">Ljs-runtime.SPECIFIC
+    <a class="clsHide" href="#idLjstolRteSpcH3"></a></h3>
+  <p id="idLjstolRteSpcP1">specific::
+    <br>* <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbbsr">browser</a>,
+    <br>* <a class="clsPreview" href="FilMcsLjn.Last.html#idLjnrtm">Node.js-runtime</a>,
+    <a class="clsHide" href="#idLjstolRteSpcP1"></a></p>
+  </section>
+  </section>
+
+  <section id="idLjstolEgn">
+  <h2 id="idLjstolEgnH2">Ljs-tool.ENGINE
+    <a class="clsHide" href="#idLjstolEgnH2"></a></h2>
+  <p id="idLjstolEgndsn">description::
     <br><span class="clsQuote">A JavaScript engine is a program or library which executes JavaScript code.
     <br>A JavaScript engine may be a traditional interpreter, or it may utilize just-in-time compilation to bytecode in some manner.
     <br>Although there are several uses for a JavaScript engine, it is most commonly used in web browsers.</span>
@@ -4498,26 +4518,35 @@
     <a class="clsHide" href="#idLjstolEgndsn"></a></p>
   <p id="idLjstolEgnnam">Name::
     <br>* cpt.Ljs-engine,
-    <br>* cpt.Ljs-javascript-engine,
     <br>* cpt.Ljs-interpreter,
-    <br>* cpt.Ljs-runtime,
     <br>* cpt.Ljs-tool.engine,
     <br>* cpt.javascript-engine,
     <br>* cpt.javascript-execution-environment,
-    <br>* cpt.javascript-runtime-environment,
     <a class="clsHide" href="#idLjstolEgnnam"></a></p>
   <p id="idLjstolEgnSpc">Specific::
-    <br>* <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbbsregnJs">browser-runtime</a>,
-    <br>* browserNo-runtime,
-    <br>* desktop-runtime,
-    <br>* <a class="clsPreview" href="FilMcsLjn.Last.html#idLjnrtm">Node.js-runtime</a>,
-    <br>* <a class="clsPreview" href="#idLjstolV8">Google-V8-runtime</a>,
+    <br>* <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbbsregnJs">browser-engine</a>,
+    <br>* browserNo-engine,
+    <br>===
+    <br>* <a class="clsPreview" href="#idLjstolV8">Google-V8-engine</a>,
     <a class="clsHide" href="#idLjstolEgnSpc"></a></p>
+
+  <section id="idLjstolSrmk">
+  <h3 id="idLjstolSrmkH3">Ljs-engine.SpiderMonkey
+    <a class="clsHide" href="#idLjstolSrmkH3"></a></h3>
+  <p id="idLjstolSrmkdsn">description::
+    <br>SpiderMonkey is the code name for the first JavaScript engine, written by Brendan Eich at Netscape Communications, later released as open source and currently maintained by the Mozilla Foundation. SpiderMonkey provides JavaScript support for Mozilla Firefox and various embeddings such as the GNOME 3 desktop.
+    <br>[<a href="https://en.wikipedia.org/wiki/SpiderMonkey">https://en.wikipedia.org/wiki/SpiderMonkey</a>]
+    <a class="clsHide" href="#idLjstolSrmkdsn"></a></p>
+  <p id="idLjstolSrmknam">name::
+    <br>* cpt.javascript-engine.SpiderMonkey,
+    <br>* cpt.Ljs-engine.SpiderMonkey,
+    <br>* cpt.SpiderMonkey-javascript-engine,
+    <a class="clsHide" href="#idLjstolSrmknam"></a></p>
   </section>
 
   <section id="idLjstolV8">
-  <h2 id="idLjstolV8H2">Ljs-tool.engine.V8
-    <a class="clsHide" href="#idLjstolV8H2"></a></h2>
+  <h3 id="idLjstolV8H3">Ljs-engine.V8
+    <a class="clsHide" href="#idLjstolV8H3"></a></h3>
   <p id="idLjstolV8dsn">description::
     <br><span class="clsQuote">V8 is Google's open source high-performance <strong>JavaScript engine</strong>, written in C++ and used in Google Chrome, the open source browser from Google.
     <br>It implements ECMAScript as specified in ECMA-262, and runs on Windows XP or later, Mac OS X 10.5+, and Linux systems that use IA-32, ARM or MIPS processors.
@@ -4525,10 +4554,13 @@
     <br>[<a href="https://github.com/v8/v8/wiki">https://github.com/v8/v8/wiki</a>]
     <a class="clsHide" href="#idLjstolV8dsn"></a></p>
   <p id="idLjstolV8nam">Name::
-    <br>* cpt.Ljs-v8,
+    <br>* cpt.Google-V8-javascript-engine,
+    <br>* cpt.javascript-engine.V8,
+    <br>* cpt.Ljs-V8,
     <br>* cpt.Ljs-Google-V8-engine,
-    <br>* cpt.Ljs-Google-V8-javascript-engine,
+    <br>* cpt.V8-javascript-engine,
     <a class="clsHide" href="#idLjstolV8nam"></a></p>
+  </section>
   </section>
 
   <section id="idLjstolCdanl">
