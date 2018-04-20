@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-20-0.2018-04-09 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-21-0.2018-04-20 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -57,9 +57,9 @@
   <h1 id="idWasmalgH1">algorithm (output-doc) of Wasm
     <a class="clsHide" href="#idWasmalgH1"></a></h1>
   <p id="idWasmalgdsn">description::
-    <br>· algorithm of Wasm is a-document describing the-Wasm-archetype understood by Wasm-virtual-machine.
-    <br>· a-Wams-algorithm is-not-understood directly by a-physical-machine.
-    <br>· it must-be-translated to <a class="clsPreview" href="#idWasmmnc">machine-document</a>.
+    <br>· algorithm of Wasm is a-document describing the-Wasm-archetype understood by <a class="clsPreview" href="#idWasmalgmchn">Wasm-virtual-machine</a>.
+    <br>· a-Wasm-algorithm is-not-understood directly by a-physical-machine.
+    <br>· it must-be-translated to machine-document.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-03-18]
     <a class="clsHide" href="#idWasmalgdsn"></a></p>
   <p id="idWasmalgnam">name::
@@ -76,7 +76,7 @@
     <a class="clsHide" href="#idWasmalgmchnH1"></a></h1>
   <p id="idWasmalgmchndsn">description::
     <br>· the-machine that understands <a class="clsPreview" href="#idWasmalg">a-Wasm-algorithm</a> is not a real machine, it is a virtual machine, intermediate to the real machine that executes the-algorithm.
-    <br>· it is a-stack-machine, this means that all the-values an-operation needs are-insterted in a-stack before the-operation is-performed.
+    <br>· it is a-stack-machine, this means that all the-values an-operation needs are-inserted in a-stack before the-operation is-performed.
     <a class="clsHide" href="#idWasmalgmchndsn"></a></p>
   <p id="idWasmalgmchnnam">name::
     <br>* cpt.Wasm'computational-model,
@@ -131,7 +131,7 @@
   <h2 id="idWasmuntBnrH2">unit.BINARY
     <a class="clsHide" href="#idWasmuntBnrH2"></a></h2>
   <p id="idWasmuntBnrdsn">description::
-    <br>·
+    <br>· bit is the-unit of <a class="clsPreview" href="#idWasmalgBnr">a-binary-algo</a>.
     <a class="clsHide" href="#idWasmuntBnrdsn"></a></p>
   <p id="idWasmuntBnrnam">name::
     <br>* cpt.Wasm'binary-unit,
@@ -2176,8 +2176,8 @@
   <h2 id="idWasmpgmSpcH2">program.SPECIFIC
     <a class="clsHide" href="#idWasmpgmSpcH2"></a></h2>
   <p id="idWasmpgmSpcP1">specific::
-    <br>* binary-program,
-    <br>* text-program,
+    <br>* <a class="clsPreview" href="#idWasmpgmBnr">Wasm-binary-program</a>,
+    <br>* <a class="clsPreview" href="#idWasmpgmTxt">Wasm-text-program</a>,
     <br>===
     <br>* examples that accompany the-MDN-WebAssembly-documentation: <a href="https://github.com/mdn/webassembly-examples">https://github.com/mdn/webassembly-examples</a>
     <br>- demo: <a href="https://mdn.github.io/webassembly-examples/js-api-examples/">https://mdn.github.io/webassembly-examples/js-api-examples/</a>,
@@ -2188,7 +2188,11 @@
   <section id="idWasmpgmBnr">
   <h2 id="idWasmpgmBnrH2">program.BINARY
     <a class="clsHide" href="#idWasmpgmBnrH2"></a></h2>
+  <p id="idWasmpgmBnrdsn">description::
+    <br>· Wasm-binary-program is a-Wasm-program written in <a class="clsPreview" href="#idWasmBnr">binary-format</a>.
+    <a class="clsHide" href="#idWasmpgmBnrdsn"></a></p>
   <p id="idWasmpgmBnrnam">name::
+    <br>* cpt.Wasm'binary-program,
     <br>* cpt.Wasm-program.binary,
     <a class="clsHide" href="#idWasmpgmBnrnam"></a></p>
 
@@ -2231,9 +2235,13 @@
 <section id="idWasmalgBnr">
   <h1 id="idWasmalgBnrH1">algo.BINARY
     <a class="clsHide" href="#idWasmalgBnrH1"></a></h1>
+  <p id="idWasmalgBnrdsn">description::
+    <br>· Wasm-binary-algo is <a class="clsPreview" href="#idWasmalg">a-Wasm-algo</a> written with <a class="clsPreview" href="#idWasmBnr">the-Wasm-binary-format</a>.
+    <a class="clsHide" href="#idWasmalgBnrdsn"></a></p>
   <p id="idWasmalgBnrnam">name::
     <br>* cpt.Wasm'binary-algo,
     <br>* cpt.Wasm-algo.binary,
+    <br>* cpt.Wasm-binary-algo,
     <br>* cpt.Wasm-bnr-algo,
     <a class="clsHide" href="#idWasmalgBnrnam"></a></p>
 
@@ -2249,6 +2257,9 @@
 <section id="idWasmalgTxt">
   <h1 id="idWasmalgTxtH1">algo.TEXT
     <a class="clsHide" href="#idWasmalgTxtH1"></a></h1>
+  <p id="idWasmalgTxtdsn">description::
+    <br>· Wasm-text-algo is <a class="clsPreview" href="#idWasmalg">a-Wasm-algo</a> written with <a class="clsPreview" href="#idWasmTxt">the-Wasm-text-format</a> using <a class="clsPreview" href="#idWasmTxtsexn">S-expressions</a>.
+    <a class="clsHide" href="#idWasmalgTxtdsn"></a></p>
   <p id="idWasmalgTxtnam">name::
     <br>* cpt.Wasm-algo.text,
     <br>* cpt.Wasm-text-algo,
@@ -2605,13 +2616,73 @@
     <br>* online: <a href="http://tomeko.net/online_tools/file_to_hex.php?lang=en">http://tomeko.net/online_tools/file_to_hex.php?lang=en</a>,
     <a class="clsHide" href="#idWasmtoolHexvwpa"></a></p>
   </section>
+
+  <section id="idWasmtoolWabt">
+  <h2 id="idWasmtoolWabtH2">tool.WABT
+    <a class="clsHide" href="#idWasmtoolWabtH2"></a></h2>
+  <p id="idWasmtoolWabtdsn">description::
+    <br>· WABT includes tools for development and/or use in tools meant to work with WebAssembly:
+    <br>- it perfectly supports the format specification
+    <br>- it can convert from/to the textual format
+    <br>- it include an interpreter
+    <br>· In short, it ensures a clean and easy access to the data in the WebAssembly format so that you can work with it.
+    <br>[<a href="https://tomassetti.me/introduction-to-webassembly/">https://tomassetti.me/introduction-to-webassembly/</a>]
+    <a class="clsHide" href="#idWasmtoolWabtdsn"></a></p>
+  <p id="idWasmtoolWabtnam">name::
+    <br>* cpt.WABT,
+    <br>* cpt.Wasm'WABT, /wabit/
+    <br>* cpt.Wasm'WebAssembly-Binary-Toolkit,
+    <br>* cpt.Wasm-tool.WABT,
+    <a class="clsHide" href="#idWasmtoolWabtnam"></a></p>
+  <p id="idWasmtoolWabtwpa">addressWpg::
+    <br>* <a href="https://github.com/WebAssembly/wabt">https://github.com/WebAssembly/wabt</a>,
+    <a class="clsHide" href="#idWasmtoolWabtwpa"></a></p>
+  </section>
+
+  <section id="idWasmtoolBnrn">
+  <h2 id="idWasmtoolBnrnH2">tool.Binaryen
+    <a class="clsHide" href="#idWasmtoolBnrnH2"></a></h2>
+  <p id="idWasmtoolBnrndsn">description::
+    <br>· Binaryen is an industrial-strength toolkit meant for usage in a compiler infrastructure:
+    <br>- it can work with WebAssembly code or a control flow graph form meant for compilers
+    <br>- it optimizes the code with many passes, both standard optimization and specific ones for WebAssembly
+    <br>- it can compile from/to asm.js (a subset of JavaScript), Rust MIR (an intermediate language for Rust) and LLVM
+    <br>· So, this toolkit is ready to be integrated in your production backend.
+    <br>[<a href="https://tomassetti.me/introduction-to-webassembly/">https://tomassetti.me/introduction-to-webassembly/</a>]
+    <a class="clsHide" href="#idWasmtoolBnrndsn"></a></p>
+  <p id="idWasmtoolBnrnnam">name::
+    <br>* cpt.Binaryen,
+    <br>* cpt.Wasm'Binaryen,
+    <br>* cpt.Wasm-tool.Binaryen,
+    <a class="clsHide" href="#idWasmtoolBnrnnam"></a></p>
+  <p id="idWasmtoolBnrnwpa">addressWpg::
+    <br>* <a href="https://github.com/WebAssembly/binaryen">https://github.com/WebAssembly/binaryen</a>,
+    <a class="clsHide" href="#idWasmtoolBnrnwpa"></a></p>
+  </section>
+
+  <section id="idWasmtoolEmsdk">
+  <h2 id="idWasmtoolEmsdkH2">tool.Emscripten-SDK
+    <a class="clsHide" href="#idWasmtoolEmsdkH2"></a></h2>
+  <p id="idWasmtoolEmsdkdsn">description::
+    <br>· Emscripten is a toolchain for compiling to asm.js and WebAssembly, built using LLVM, that lets you run C and C++ on the web at near-native speed without plugins.
+    <br>[<a href="http://kripken.github.io/emscripten-site/index.html">http://kripken.github.io/emscripten-site/index.html</a>]
+    <a class="clsHide" href="#idWasmtoolEmsdkdsn"></a></p>
+  <p id="idWasmtoolEmsdknam">name::
+    <br>* cpt.Emscripten,
+    <br>* cpt.Wasm'Emscripten,
+    <br>* cpt.Wasm-tool.Emscripten,
+    <a class="clsHide" href="#idWasmtoolEmsdknam"></a></p>
+  <p id="idWasmtoolEmsdkwpa">addressWpg::
+    <br>* <a href="http://kripken.github.io/emscripten-site/index.html">http://kripken.github.io/emscripten-site/index.html</a>,
+    <a class="clsHide" href="#idWasmtoolEmsdkwpa"></a></p>
+  </section>
 </section>
 
 <section id="idWasmtoolRte">
   <h1 id="idWasmtoolRteH1">tool.RUNTIME-ENVIRONMENT
     <a class="clsHide" href="#idWasmtoolRteH1"></a></h1>
   <p id="idWasmtoolRtedsn">description::
-    <br>· the-runtime-environment is the-software-system that provides the necessary libraries and executes a-Wasm-program.
+    <br>· the-runtime-environment is the-software-system that provides the necessary libraries and executes <a class="clsPreview" href="#idWasmpgm">a-Wasm-program</a>.
     <br>· now, it is <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbbsr">a-browser</a>.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-04-08]
     <br>===
@@ -2990,6 +3061,11 @@
     <br>* cpt.Wasm.text-format,
     <a class="clsHide" href="#idWasmTxtnam"></a></p>
 
+  <section id="idWasmTxtgmr">
+  <h2 id="idWasmTxtgmrH2">grammar of text-Wasm (<a class="clsPreview" href="#idWasmgmrTxt">link</a>)
+    <a class="clsHide" href="#idWasmTxtgmrH2"></a></h2>
+  </section>
+
   <section id="idWasmTxtsexn">
   <h2 id="idWasmTxtsexnH2">S-expression of text-Wasm
     <a class="clsHide" href="#idWasmTxtsexnH2"></a></h2>
@@ -3036,9 +3112,18 @@
 <section id="idWasmBnr">
   <h1 id="idWasmBnrH1">Wasm.BINARY-FORMAT
     <a class="clsHide" href="#idWasmBnrH1"></a></h1>
+  <p id="idWasmBnrdsn">description::
+    <br>· Wasm-binary-format is a-WebAssembly with bits as <a class="clsPreview" href="#idWasmunt">algo-units</a>.
+    <a class="clsHide" href="#idWasmBnrdsn"></a></p>
   <p id="idWasmBnrnam">name::
+    <br>* cpt.binary-Wasm,
     <br>* cpt.Wasm.binary-format,
     <a class="clsHide" href="#idWasmBnrnam"></a></p>
+
+  <section id="idWasmBnrgmr">
+  <h2 id="idWasmBnrgmrH2">grammar of binary-Wasm (<a class="clsPreview" href="#idWasmgmrBnr">link</a>)
+    <a class="clsHide" href="#idWasmBnrgmrH2"></a></h2>
+  </section>
 </section>
 
 <section id="idWasmEvgFT">
