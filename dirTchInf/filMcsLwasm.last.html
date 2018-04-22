@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-21-0.2018-04-20 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-22-0.2018-04-21 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -2297,13 +2297,21 @@
 <section id="idWasmspec">
   <h1 id="idWasmspecH1">specification of Wasm
     <a class="clsHide" href="#idWasmspecH1"></a></h1>
+  <p id="idWasmspecdsn">description::
+    <br>· to support the-embedding of WebAssembly into different environments, its specification is split into layers that are specified in separate documents.
+    <br>· <strong>core-specification</strong>: defines the-semantics of WebAssembly-modules and its instruction-set, independent from a concrete embedding.
+    <br>· <strong>API-specifications</strong>: define application-programming-interfaces enabling the-use of WebAssembly-modules in concrete embedding environments.
+    <br>[<a href="https://webassembly.github.io/spec/">https://webassembly.github.io/spec/</a>]
+    <a class="clsHide" href="#idWasmspecdsn"></a></p>
   <p id="idWasmspecnam">name::
     <br>* cpt.Wasm'specification,
     <br>* cpt.Wasm-spec,
     <a class="clsHide" href="#idWasmspecnam"></a></p>
   <p id="idWasmspecwpa">addressWpg::
-    <br>* <a href="https://webassembly.github.io/spec/core/">https://webassembly.github.io/spec/core/</a>,
-    <br>* <a href="https://webassembly.github.io/spec/core/_download/WebAssembly.pdf">https://webassembly.github.io/spec/core/_download/WebAssembly.pdf</a>,
+    <br>* core-spec.html : <a href="https://webassembly.github.io/spec/core/">https://webassembly.github.io/spec/core/</a>,
+    <br>* core-spec.pdf: <a href="https://webassembly.github.io/spec/core/_download/WebAssembly.pdf">https://webassembly.github.io/spec/core/_download/WebAssembly.pdf</a>,
+    <br>* JavaScript-API-spec: <a href="https://webassembly.github.io/spec/js-api/index.html">https://webassembly.github.io/spec/js-api/index.html</a>,
+    <br>* web-API-spec: <a href="https://webassembly.github.io/spec/web-api/index.html">https://webassembly.github.io/spec/web-api/index.html</a>,
     <br>* WebAssembly-Reference-Manual: a human-readable document written in Markdown, an alternative to the official WebAssembly specification: <a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md</a>,
     <br>* Conrad-Watt, Mechanising and Verifying the WebAssembly Specification: <a href="https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf">https://www.cl.cam.ac.uk/~caw77/</a>,
     <br>* Bringing the Web up to Speed with WebAssembly: <a href="https://github.com/WebAssembly/spec/blob/master/papers/pldi2017.pdf">https://github.com/WebAssembly/spec/blob/master/papers/pldi2017.pdf</a>,
@@ -2549,6 +2557,7 @@
   <h3 id="idWasmtoolCplrTowatH3">compiler.to-wat
     <a class="clsHide" href="#idWasmtoolCplrTowatH3"></a></h3>
   <p id="idWasmtoolCplrTowatnam">name::
+    <br>* cpt.Wasm'to-wat-compiler,
     <br>* cpt.Wasm-compiler.to-wat,
     <a class="clsHide" href="#idWasmtoolCplrTowatnam"></a></p>
   <p id="idWasmtoolCplrTowatSpc">specific::
@@ -2560,6 +2569,7 @@
   <h3 id="idWasmtoolCplrTowasmH3">compiler.to-wasm
     <a class="clsHide" href="#idWasmtoolCplrTowasmH3"></a></h3>
   <p id="idWasmtoolCplrTowasmnam">name::
+    <br>* cpt.Wasm'to-wasm-compiler,
     <br>* cpt.Wasm-compiler.to-wasm,
     <a class="clsHide" href="#idWasmtoolCplrTowasmnam"></a></p>
   <p id="idWasmtoolCplrTowasmSpc">specific::
@@ -2573,6 +2583,7 @@
   <h3 id="idWasmtoolCplrWattowasmH3">compiler.wat-to-wasm
     <a class="clsHide" href="#idWasmtoolCplrWattowasmH3"></a></h3>
   <p id="idWasmtoolCplrWattowasmnam">name::
+    <br>* cpt.Wasm'wat-to-wasm,
     <br>* cpt.Wasm-compiler.wat-to-wasm,
     <a class="clsHide" href="#idWasmtoolCplrWattowasmnam"></a></p>
   <p id="idWasmtoolCplrWattowasmSpc">specific::
@@ -2584,6 +2595,7 @@
   <h3 id="idWasmtoolCplrWasm2watH3">compiler.wasm-to-wat
     <a class="clsHide" href="#idWasmtoolCplrWasm2watH3"></a></h3>
   <p id="idWasmtoolCplrWasm2watnam">name::
+    <br>* cpt.Wasm'wasm-to-wat,
     <br>* cpt.Wasm-compiler.wasm-to-wat,
     <a class="clsHide" href="#idWasmtoolCplrWasm2watnam"></a></p>
   <p id="idWasmtoolCplrWasm2watwpa">addressWpg::
@@ -2595,10 +2607,11 @@
   <h3 id="idWasmtoolCplrWasmtomchnH3">compiler.wasm-to-machine
     <a class="clsHide" href="#idWasmtoolCplrWasmtomchnH3"></a></h3>
   <p id="idWasmtoolCplrWasmtomchnnam">name::
+    <br>* cpt.Wasm'wasm-to-machine,
     <br>* cpt.Wasm-compiler.wasm-to-machine,
     <a class="clsHide" href="#idWasmtoolCplrWasmtomchnnam"></a></p>
   <p id="idWasmtoolCplrWasmtomchnSpc">specific::
-    <br>* ,
+    <br>* <a class="clsPreview" href="#idWasmtoolRte">Wasm-runtime-environment</a>,
     <a class="clsHide" href="#idWasmtoolCplrWasmtomchnSpc"></a></p>
   </section>
   </section>
@@ -2712,6 +2725,7 @@
     <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly</a>]
     <a class="clsHide" href="#idWasmrtewajodsn"></a></p>
   <p id="idWasmrtewajonam">name::
+    <br>* cpt.Ljb-API'WebAssembly-object,
     <br>* cpt.Ljb-o.WebAssembly,
     <br>* cpt.Wasm'WebAssembly--javascript-object,
     <br>* cpt.Wasm-WebAssembly-object,
@@ -3033,7 +3047,7 @@
   <h1 id="idWasmAbtH1">Wasm.ABSTRACT-FORMAT
     <a class="clsHide" href="#idWasmAbtH1"></a></h1>
   <p id="idWasmAbtdsn">description::
-    <br>· Wasm-specification represents a-Wasm-document AND in a generic format of the-two Wasm-formats, the-text and the-binary.
+    <br>· <a class="clsPreview" href="#idWasmspec">the-Wasm-specification</a> represents a-Wasm-document AND in a generic format of the-two Wasm-formats, the-text and the-binary.
     <br>· this generic format it calls it 'abstract-format'.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-04-06]
     <a class="clsHide" href="#idWasmAbtdsn"></a></p>
