@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-22-0.2018-04-21 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-23-0.2018-04-22 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -2214,8 +2214,55 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-04-08]
     <a class="clsHide" href="#idWasmpgmTxtdsn"></a></p>
   <p id="idWasmpgmTxtnam">name::
+    <br>* cpt.Wasm'text-program,
     <br>* cpt.Wasm-program.text,
+    <br>* cpt.Wasm-program.wat,
     <a class="clsHide" href="#idWasmpgmTxtnam"></a></p>
+  </section>
+
+  <section id="idWasmpgmHlwd">
+  <h2 id="idWasmpgmHlwdH2">program.hello-world
+    <a class="clsHide" href="#idWasmpgmHlwdH2"></a></h2>
+  <p id="idWasmpgmHlwddsn">description::
+    <br>·
+    <a class="clsHide" href="#idWasmpgmHlwddsn"></a></p>
+  <p id="idWasmpgmHlwdnam">name::
+    <br>* cpt.,
+    <a class="clsHide" href="#idWasmpgmHlwdnam"></a></p>
+  <p id="idWasmpgmHlwdwat">wat-program::
+    <br><code>(module
+    <br> &nbsp;(import "oJs" "fImport1" (func $fImp1))
+    <br> &nbsp;(import "oJs" "fImport2" (func $fImp2))
+    <br> &nbsp;(func $fStart (call $fImp1))
+    <br> &nbsp;(start $fStart)
+    <br> &nbsp;(func (export "f") (call $fImp2))
+    <br>)</code>
+    <a class="clsHide" href="#idWasmpgmHlwdwat"></a></p>
+  <p id="idWasmpgmHlwdwasm">wasm-program::
+    <br>· we compile the-wat-program to wasm.
+    <br>· one method is with <a href="https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wat2wasm/">an-online-compiler</a>.
+    <a class="clsHide" href="#idWasmpgmHlwdwasm"></a></p>
+  <p id="idWasmpgmHlwdhml">html-program::
+    <br><code>&lt;html>
+    <br>&lt;body>
+    <br> &nbsp;&lt;h1>hello-world example&lt;/h1>
+    <br> &nbsp;&lt;p>· example from spec's &lt;a href="https://webassembly.github.io/spec/js-api/index.html">WebAssembly JavaScript Interface&lt;/a>
+    <br> &nbsp;&lt;p>· hit F12 to see console's output.
+    <br> &nbsp;&lt;script>
+    <br> &nbsp; &nbsp;var oImport = {oJs: {
+    <br> &nbsp; &nbsp; &nbsp;fImport1: () => console.log("hello,"),
+    <br> &nbsp; &nbsp; &nbsp;fImport2: () => console.log("world!")
+    <br> &nbsp; &nbsp;}};
+    <br> &nbsp; &nbsp;fetch('demo.wasm').then(oResponse =>
+    <br> &nbsp; &nbsp; &nbsp;oResponse.arrayBuffer()
+    <br> &nbsp; &nbsp;).then(buffer =>
+    <br> &nbsp; &nbsp; &nbsp;WebAssembly.instantiate(buffer, oImport)
+    <br> &nbsp; &nbsp;).then(({module, instance}) =>
+    <br> &nbsp; &nbsp; &nbsp;instance.exports.f()
+    <br> &nbsp; &nbsp;);
+    <br> &nbsp;&lt;/script>
+    <br>&lt;/body></code>
+    <a class="clsHide" href="#idWasmpgmHlwdhml"></a></p>
   </section>
 </section>
 
