@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-23-0.2018-04-22 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-24-0.2018-04-23 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -2220,14 +2220,78 @@
     <a class="clsHide" href="#idWasmpgmTxtnam"></a></p>
   </section>
 
+  <section id="idWasmpgmSmpl">
+  <h2 id="idWasmpgmSmplH2">program.simple
+    <a class="clsHide" href="#idWasmpgmSmplH2"></a></h2>
+  <p id="idWasmpgmSmpldsn">description::
+    <br>· simple program from <a href="https://github.com/mdn/webassembly-examples/tree/master/js-api-examples">Mdn-examples</a>.
+    <br>· imports a-javascript-function that prints on console its argument.
+    <br>· creates and exports a-Wasm-function that creates the value 42 and calls the imported function that prints 42 on console.
+    <a class="clsHide" href="#idWasmpgmSmpldsn"></a></p>
+  <p id="idWasmpgmSmplnam">name::
+    <br>* cpt.Wasm-program.simple,
+    <a class="clsHide" href="#idWasmpgmSmplnam"></a></p>
+  <p id="idWasmpgmSmplwat">wat-file::
+    <br><code>(module
+    <br> &nbsp;(func $fImp (import "oJs" "fImported") (param i32))
+    <br> &nbsp;(func (export "fExported")
+    <br> &nbsp; &nbsp;i32.const 42
+    <br> &nbsp; &nbsp;call $fImp
+    <br> &nbsp;)
+    <br>)</code>
+    <a class="clsHide" href="#idWasmpgmSmplwat"></a></p>
+  <p id="idWasmpgmSmplhml">html-file::
+    <br><code>&lt;!doctype html>
+    <br>&lt;html>
+    <br>&lt;head>
+    <br> &nbsp;&lt;meta charset="utf-8">
+    <br> &nbsp;&lt;title>Wasm compile() test</title>
+    <br>&lt;/head>
+    <br>&lt;body>
+    <br> &nbsp;&lt;script>
+    <br> &nbsp; &nbsp;var oImport = {
+    <br> &nbsp; &nbsp; &nbsp;oJs: {fImported: arg => console.log(arg)}
+    <br> &nbsp; &nbsp;};
+    <br> &nbsp; &nbsp;//case1: with <a class="clsPreview" href="#idWasmrtewajocmplf">compile()</a>
+    <br> &nbsp; &nbsp;fetch('simple.wasm')
+    <br> &nbsp; &nbsp;.then(oResponse => oResponse.arrayBuffer())
+    <br> &nbsp; &nbsp;.then(bytes => WebAssembly.compile(bytes))
+    <br> &nbsp; &nbsp;.then(oModule => WebAssembly.instantiate(oModule, oImport))
+    <br> &nbsp; &nbsp;.then(oModuleInst => oModuleInst.exports.fExported());
+    <br> &nbsp; &nbsp;//case2: with <a class="clsPreview" href="#idWasmrtewajocmplsmgf">compileStreaming()</a>
+    <br> &nbsp; &nbsp;WebAssembly.compileStreaming(fetch('simple.wasm'))
+    <br> &nbsp; &nbsp;.then(oModule => WebAssembly.instantiate(oModule, oImport))
+    <br> &nbsp; &nbsp;.then(instance => instance.exports.fExported());
+    <br> &nbsp; &nbsp;//case3: with <a class="clsPreview" href="#idWasmrtewajoinstf">instantiate()</a>
+    <br> &nbsp; &nbsp;fetch('simple.wasm')
+    <br> &nbsp; &nbsp;.then(oResponse => oResponse.arrayBuffer())
+    <br> &nbsp; &nbsp;.then(oArrayBuffer => WebAssembly.instantiate(oArrayBuffer, oImport))
+    <br> &nbsp; &nbsp;.then(oModule => oModule.instance.exports.fExported());
+    <br> &nbsp; &nbsp;//case4: with <a class="clsPreview" href="#idWasmrtewajoinststmf">instantiateStreaming()</a>
+    <br> &nbsp; &nbsp;WebAssembly.instantiateStreaming(fetch('simple.wasm'), oImport)
+    <br> &nbsp; &nbsp;.then(oModule => oModule.instance.exports.fExported());
+    <br> &nbsp;&lt;/script>
+    <br>&lt;/body>
+    <br>&lt;/html></code>
+    <a class="clsHide" href="#idWasmpgmSmpldem"></a></p>
+  <p id="idWasmpgmSmpldem">demo::
+    <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-compile.html">compile-demo</a>,
+    <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-compileStreaming.html">compileStreaming-demo</a>,
+    <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-instantiate.html">instantiate-demo</a>,
+    <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-instantiateStreaming.html">instantiateStreaming-demo,
+    <a class="clsHide" href="#idWasmpgmSmplhml"></a></p>
+  </section>
+
   <section id="idWasmpgmHlwd">
   <h2 id="idWasmpgmHlwdH2">program.hello-world
     <a class="clsHide" href="#idWasmpgmHlwdH2"></a></h2>
   <p id="idWasmpgmHlwddsn">description::
-    <br>·
+    <br>· example from spec's <a href="https://webassembly.github.io/spec/js-api/index.html">WebAssembly JavaScript Interface</a>.
+    <br>· imports 2 javascript-functions that print on console "hello," the-first and "world!" the-second.
+    <br>· then, uses the first imported as <a class="clsPreview" href="#idWasmfcnStrt">start-function</a> and exports the second imported.
     <a class="clsHide" href="#idWasmpgmHlwddsn"></a></p>
   <p id="idWasmpgmHlwdnam">name::
-    <br>* cpt.,
+    <br>* cpt.Wasm-program.hello-world,
     <a class="clsHide" href="#idWasmpgmHlwdnam"></a></p>
   <p id="idWasmpgmHlwdwat">wat-program::
     <br><code>(module
@@ -2253,16 +2317,14 @@
     <br> &nbsp; &nbsp; &nbsp;fImport1: () => console.log("hello,"),
     <br> &nbsp; &nbsp; &nbsp;fImport2: () => console.log("world!")
     <br> &nbsp; &nbsp;}};
-    <br> &nbsp; &nbsp;fetch('demo.wasm').then(oResponse =>
-    <br> &nbsp; &nbsp; &nbsp;oResponse.arrayBuffer()
-    <br> &nbsp; &nbsp;).then(buffer =>
-    <br> &nbsp; &nbsp; &nbsp;WebAssembly.instantiate(buffer, oImport)
-    <br> &nbsp; &nbsp;).then(({module, instance}) =>
-    <br> &nbsp; &nbsp; &nbsp;instance.exports.f()
-    <br> &nbsp; &nbsp;);
+    <br> &nbsp; &nbsp;<a class="clsPreview" href="#idWasmrtewajoinststmf">WebAssembly.instantiateStreaming</a>(fetch('demo.wasm'), oImport)
+    <br> &nbsp; &nbsp;.then(oModule => oModule.instance.exports.f());
     <br> &nbsp;&lt;/script>
     <br>&lt;/body></code>
     <a class="clsHide" href="#idWasmpgmHlwdhml"></a></p>
+  <p id="idWasmpgmHlwddem">demo::
+    <br>· <a href="filMcsLwasm.files/demo.html">link</a>.
+    <a class="clsHide" href="#idWasmpgmHlwddem"></a></p>
   </section>
 </section>
 
