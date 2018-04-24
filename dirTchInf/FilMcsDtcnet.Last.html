@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.chain-network (chain-net.7-49-0.2018-04-23)</title>
+  <title>Mcs.chain-network (chain-net.7-50-0.2018-04-24)</title>
   <meta name="keywords" content="chain-net, Đ-net, Đ-chain, transaction-chain, Dledger, McsHitp">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -469,6 +469,9 @@
   <h3 id="idDtctpsH3">transaction-per-second
     <a class="clsHide" href="#idDtctpsH3"></a></h3>
   <p id="idDtctpsdsn">description::
+    <br>PERFORMANCE - The most compelling use cases require hundreds of thousands of transactions per second in a single shard (perhaps millions of transactions per second (tps) in a fully-sharded solution), and many require consensus latency measured in seconds. These performance metrics are orders of magnitude beyond what current public DLT platforms can achieve.
+    <br>[<a href="https://s3.amazonaws.com/hedera-hashgraph/hh-whitepaper-v1.0-180313.pdf">https://s3.amazonaws.com/hedera-hashgraph/hh-whitepaper-v1.0-180313.pdf</a>]
+    <br>===
     <br>Blockchain scalability
     <br>This problem is nothing new.
     <br>A quick Google search on the topic of Blockchain scalability produces hundreds of results from forums, websites, and blogs that all describe the same problem.
@@ -481,6 +484,7 @@
     <br>[<a href="https://ripple.com/xrp/">https://ripple.com/xrp/</a>]
     <a class="clsHide" href="#idDtctpsdsn"></a></p>
   <p id="idDtctpsnam">name::
+    <br>* cpt.chain-net'performance,
     <br>* cpt.performance-of--chain-network,
     <br>* cpt.tps-(Transaction-Per-Second),
     <br>* cpt.transaction-per-second--of-Đ-net,
@@ -1157,6 +1161,15 @@
     <br>* Company's-share--chain-asset,
     <br>* Investment-fund--chain-asset,
     <a class="clsHide" href="#idDtcevuSpcP1"></a></p>
+  </section>
+
+  <section id="idDtcevuSpcCnsa">
+  <h2 id="idDtcevuSpcCnsaH2">chain-asset.SPECIFIC-DIVISION.consensus-algorithm
+    <a class="clsHide" href="#idDtcevuSpcCnsaH2"></a></h2>
+  <p id="idDtcevuSpcCnsaSpc">specific::
+    <br>* <a class="clsPreview" href="#idDtcevuCns">consensus--chain-asset</a>,
+    <br>* <a class="clsPreview" href="#idDtcevuCnsN">consensusNo--chain-asset</a>,
+    <a class="clsHide" href="#idDtcevuSpcCnsaSpc"></a></p>
   </section>
 
   <section id="idDtcevuSpcClm">
@@ -2410,6 +2423,37 @@
   </section>
   </section>
 
+  <section id="idDtcevuCns">
+  <h2 id="idDtcevuCnsH2">chain-asset.CONSENSUS
+    <a class="clsHide" href="#idDtcevuCnsH2"></a></h2>
+  <p id="idDtcevuCnsdsn">description::
+    <br>· <a class="clsPreview" href="#idDescription">chain-networks[a]</a> to exist, need an incentive mechanism.
+    <br>· they[a] create an internal digital exchange-value-unit[b] and reward with it[b] <a class="clsPreview" href="#idDtcnodApdr">the-nodes</a> that append <a class="clsPreview" href="#idDtcchnFNT">the-chain</a> with the new <a class="clsPreview" href="#idDtctxFNT">transactions</a> using <a class="clsPreview" href="#idDtccsaFNT">the-consensus-algorithm</a>.
+    <br>· this exchange-value-unit[b] is the-consensus-chain-asset.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-04-24]
+    <a class="clsHide" href="#idDtcevuCnsdsn"></a></p>
+  <p id="idDtcevuCnsnam">name::
+    <br>* cpt.chain-asset.consensus,
+    <br>* cpt.chain-asset.native,
+    <br>* cpt.chain-asset.protocol,
+    <br>* cpt.consensus-token,
+    <br>* cpt.native-token,
+    <br>* cpt.platform-token,
+    <br>* cpt.protocol-token,
+    <a class="clsHide" href="#idDtcevuCnsnam"></a></p>
+  <p id="idDtcevuCnsSpc">specific::
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDbcevuC">blockchain-consensus-asset</a>,
+    <br>* dagchain-consensus-asset,
+    <br>===
+    <br>* <a class="clsPreview" href="#idDtcevuMoeCns">consensus-currency</a>,
+    <a class="clsHide" href="#idDtcevuCnsSpc"></a></p>
+  </section>
+
+  <section id="idDtcevuCnsN">
+  <h2 id="idDtcevuCnsNH2">chain-asset.CONSENSUS.NO
+    <a class="clsHide" href="#idDtcevuCnsNH2"></a></h2>
+  </section>
+
   <section id="idDtcevuMoe">
   <h2 id="idDtcevuMoeH2">chain-asset.CURRENCY
     <a class="clsHide" href="#idDtcevuMoeH2"></a></h2>
@@ -2710,13 +2754,16 @@
     <br>This medium-of-exhange is the-consensus-cryptocurrency.
     <a class="clsHide" href="#idDtcevuMoeCnsdsn"></a></p>
   <p id="idDtcevuMoeCnsnam">name::
-    <br>* cpt.chain-asset.consensus,
+    <br>* cpt.chain-currency.consensus,
     <br>* cpt.consensus-cryptocurrency,
     <br>* cpt.cryptocurrency.consensus,
     <br>* cpt.đ-currency.consensus,
     <br>* cpt.Dtc-net'consensus-cryptocurrency,
     <br>* cpt.Dtc-Moe.consensus,
     <a class="clsHide" href="#idDtcevuMoeCnsnam"></a></p>
+  <p id="idDtcevuMoeCnsgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="#idDtcevuCns">consensus--chain-asset</a>,
+    <a class="clsHide" href="#idDtcevuMoeCnsgncchn"></a></p>
   </section>
 
   <section id="idDtcevuMoeCnsN">
@@ -2869,6 +2916,27 @@
     <br>* cpt.đ-asset.claimNo,
     <br>* cpt.đ-asset.liabilityNo,
     <a class="clsHide" href="#idDtcevuClmNnam"></a></p>
+  </section>
+
+  <section id="idDtcevuFgbl">
+  <h2 id="idDtcevuFgblH2">chain-asset.FUNGIBLE
+    <a class="clsHide" href="#idDtcevuFgblH2"></a></h2>
+  <p id="idDtcevuFgblnam">name::
+    <br>* cpt.chain-asset.fungible,
+    <br>* cpt.fungible--chain-asset,
+    <a class="clsHide" href="#idDtcevuFgblnam"></a></p>
+  </section>
+
+  <section id="idDtcevuFgblN">
+  <h2 id="idDtcevuFgblNH2">chain-asset.FUNGIBLE.NO
+    <a class="clsHide" href="#idDtcevuFgblNH2"></a></h2>
+  <p id="idDtcevuFgblNnam">name::
+    <br>* cpt.chain-asset.fungibleNo,
+    <br>* cpt.fungibleNo--chain-asset,
+    <a class="clsHide" href="#idDtcevuFgblNnam"></a></p>
+  <p id="idDtcevuFgblNwpa">addressWpg::
+    <br>* {2017-12-23} Gerald-Nash, The Anatomy of ERC721: Understanding Non-Fungible Ethereum Tokens: <a href="https://medium.com/crypto-currently/the-anatomy-of-erc721-e9db77abfc24">https://medium.com/crypto-currently/</a>,
+    <a class="clsHide" href="#idDtcevuFgblNwpa"></a></p>
   </section>
 
   <section id="idDtcevuScrt">
@@ -3058,6 +3126,10 @@
   <h1 id="idDtcgovFTH1">governance-system of chain-net
     <a class="clsHide" href="#idDtcgovFTH1"></a></h1>
   <p id="idDtcgovFTdsn">description::
+    <br>A governance model for a public ledger will define the rules and policies that control the evolution of the node software, issuance of coins, and the reward model by which participants are incentivized.
+    <br>The stakeholders whose interests and motivations must be balanced are those running the consensus nodes, those building applications on the platform, those businesses relying on those applications, the end-users of those applications, and relevant regulatory bodies.
+    <br>[<a href="https://s3.amazonaws.com/hedera-hashgraph/hh-whitepaper-v1.0-180313.pdf">https://s3.amazonaws.com/hedera-hashgraph/hh-whitepaper-v1.0-180313.pdf</a>]
+    <br>===
     <br>Why Blockchain Governance Matters
     <br>As with organisms, the most successful blockchains will be those that can best adapt to their environments.
     <br>Assuming these systems need to evolve to survive, initial design is important, but over a long enough timeline, the mechanisms for change are most important.
@@ -3094,6 +3166,19 @@
   <section id="idDtcgovvtg">
   <h2 id="idDtcgovvtgH2">voting of chain-governance
     <a class="clsHide" href="#idDtcgovvtgH2"></a></h2>
+  </section>
+
+  <section id="idDtcgovpblm">
+  <h2 id="idDtcgovpblmH2">problem of chain-governance
+    <a class="clsHide" href="#idDtcgovpblmH2"></a></h2>
+  <p id="idDtcgovpblmdsn">description::
+    <br>GOVERNANCE - A general-purpose public ledger should be governed by representatives from a broad range of market sectors, each with world-class expertise in their respective industries, and also selected to provide global geographic representation for all markets. Those that are governing need technical expertise so they can competently manage the technical roadmap. They need business expertise so they can manage business operations of the organization. They need expertise in economics and currency markets so they can manage the cryptocurrency. They need legal expertise to help navigate the evolving regulatory environment. In other words, governance should be by those globally recognized as world leaders in their respective industries, and representative of every market in the world.
+    <br>[<a href="https://s3.amazonaws.com/hedera-hashgraph/hh-whitepaper-v1.0-180313.pdf">https://s3.amazonaws.com/hedera-hashgraph/hh-whitepaper-v1.0-180313.pdf</a>]
+    <a class="clsHide" href="#idDtcgovpblmdsn"></a></p>
+  <p id="idDtcgovpblmnam">name::
+    <br>* cpt.chain-net'governance-problem,
+    <br>* cpt.chain-net'problem.governance,
+    <a class="clsHide" href="#idDtcgovpblmnam"></a></p>
   </section>
 
   <section id="idDtcgovSpc">
@@ -4100,6 +4185,7 @@
   <p id="idDtcelnSconnam">name::
     <br>* cpt.chain-evaluation.con,
     <br>* cpt.chain-net'evaluation.con,
+    <br>* cpt.chain-net'problem,
     <br>* cpt.Dcc-evalCon,
     <br>* cpt.Dtc-evaluationCon,
     <br>* cpt.Dtc-net'evaluation.con,
@@ -4133,7 +4219,7 @@
   <h3 id="idDtcelnSconSpcH3">chain-con.SPECIFIC
     <a class="clsHide" href="#idDtcelnSconSpcH3"></a></h3>
   <p id="idDtcelnSconP1">specific::
-    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDbcpbmFT">Blockchain-net--problem</a>,
+    <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDbcpbmFT">blockchain-net--problem</a>,
     <br>===
     <br>* bandwidth-problem,
     <br>* computations-problem,
@@ -4149,7 +4235,8 @@
     <br>* distribution-of-chain-asset--problem,
     <br>* evoluting-management--problem,
     <br>* forking-a-chain--problem,
-    <br>* <a class="clsPreview" href="#idDtcelnSconMcpm">micropayment</a>,
+    <br>* governance-problem,
+    <br>* <a class="clsPreview" href="#idDtcelnSconMcpm">micropayment-problem</a>,
     <br>* resource-efficiency-on-appending--problem,
     <br>* size-of-chain--problem,
     <br>* <a class="clsPreview" href="#idDtcevuvltlt">speculation-on-đ-asset--problem</a>,
@@ -4167,6 +4254,7 @@
   <p id="idDtcelnSconAnmtnam">name::
     <br>* cpt.chain-net'anonymity,
     <br>* cpt.chain-net'con.anonymity,
+    <br>* cpt.chain-net'problem.anonymity,
     <a class="clsHide" href="#idDtcelnSconAnmtnam"></a></p>
   </section>
 
@@ -4183,6 +4271,7 @@
     <a class="clsHide" href="#idDtcelnSconMcpmP1"></a></p>
   <p id="idDtcelnSconMcpmnam">name::
     <br>* cpt.chain-net'con.micropayment,
+    <br>* cpt.chain-net'problem.micropayment,
     <a class="clsHide" href="#idDtcelnSconMcpmnam"></a></p>
   </section>
 
@@ -4196,15 +4285,20 @@
     <a class="clsHide" href="#idDtcelnSconCtrnP1"></a></p>
   <p id="idDtcelnSconCtrnnam">name::
     <br>* cpt.chain-net'con.conflict-resolution,
+    <br>* cpt.chain-net'problem.conflict-resolution,
     <a class="clsHide" href="#idDtcelnSconCtrnnam"></a></p>
-  </section>
   </section>
 
   <section id="idDtcscrt">
-  <h2 id="idDtcscrtH2">chain-con.SECURITY
-    <a class="clsHide" href="#idDtcscrtH2"></a></h2>
+  <h3 id="idDtcscrtH3">chain-con.SECURITY
+    <a class="clsHide" href="#idDtcscrtH3"></a></h3>
+  <p id="idDtcscrtdsn">description::
+    <br>SECURITY - If public platforms are to facilitate the transfer of trillions of dollars of value, we have to expect them to be targeted, and we have to prepare for this. To do so requires a consensus algorithm that provides the best security one can achieve, with the security properties of the algorithm formally proven. Vectors of security vulnerabilities shouldn’t be mitigated; they should be eliminated entirely. Other public DLT platforms are trading off decentralization (and so potentially compromising security) for performance gains.
+    <br>[<a href="https://s3.amazonaws.com/hedera-hashgraph/hh-whitepaper-v1.0-180313.pdf">https://s3.amazonaws.com/hedera-hashgraph/hh-whitepaper-v1.0-180313.pdf</a>]
+    <a class="clsHide" href="#idDtcscrtdsn"></a></p>
   <p id="idDtcscrtnam">name::
     <br>* cpt.chain-net'con.security,
+    <br>* cpt.chain-net'problem.security,
     <br>* cpt.chain-net'security,
     <br>* cpt.chain-security,
     <br>* cpt.Dtc-net'security,
@@ -4225,11 +4319,12 @@
   </section>
 
   <section id="idDtcsclbt">
-  <h2 id="idDtcsclbtH2">chain-con.SCALABILITY
-    <a class="clsHide" href="#idDtcsclbtH2"></a></h2>
+  <h3 id="idDtcsclbtH3">chain-con.SCALABILITY
+    <a class="clsHide" href="#idDtcsclbtH3"></a></h3>
   <p id="idDtcsclbtnam">name::
     <br>* cpt.chain-scalability,
     <br>* cpt.chain-net'con.scalability,
+    <br>* cpt.chain-net'problem.scalability,
     <br>* cpt.scalability-of--chain-network,
     <br>* cpt.Đ-problem.scalability,
     <a class="clsHide" href="#idDtcsclbtnam"></a></p>
@@ -4239,7 +4334,21 @@
     <br>* network-bandwidth,
     <a class="clsHide" href="#idDtcsclbtSpc"></a></p>
   </section>
-</section>
+
+  <section id="idDtcstblt">
+  <h3 id="idDtcstbltH3">chain-con.STABILITY
+    <a class="clsHide" href="#idDtcstbltH3"></a></h3>
+  <p id="idDtcstbltdsn">description::
+    <br>STABILITY - Without technical and legal mechanisms to enforce the decisions of the governing body, public platforms are at risk of devolving into chaos. Strong security and mature governance will enable a stable platform - one that engenders the necessary trust and confidence among those that would build commercial or sensitive applications on it.
+    <br>[<a href="https://s3.amazonaws.com/hedera-hashgraph/hh-whitepaper-v1.0-180313.pdf">https://s3.amazonaws.com/hedera-hashgraph/hh-whitepaper-v1.0-180313.pdf</a>]
+    <a class="clsHide" href="#idDtcstbltdsn"></a></p>
+  <p id="idDtcstbltnam">name::
+    <br>* cpt.chain-net'con.stability,
+    <br>* cpt.chain-net'problem.stability,
+    <br>* cpt.chain-net'stability,
+    <a class="clsHide" href="#idDtcstbltnam"></a></p>
+  </section>
+  </section>
 </section>
 
 <section id="idDtclawFNT">
@@ -4269,6 +4378,20 @@
     <br>* <a class="clsPreview" href="FilMcsDbcnet.Last.html#idDtclawFNT">Blockchain-law</a>,
     <a class="clsHide" href="#idDtclawSpc"></a></p>
 
+  <section id="idDtclawpblm">
+  <h2 id="idDtclawpblmH2">problem of chain-law
+    <a class="clsHide" href="#idDtclawpblmH2"></a></h2>
+  <p id="idDtclawpblmdsn">description::
+    <br>REGULATORY COMPLIANCE - We expect that governments will continue to increase oversight of public ledgers and associated cryptocurrencies and tokens. We consider that a distributed public ledger must be capable of enabling appropriate Know Your Customer (KYC) and Anti Money Laundering (AML) checks.
+    <a class="clsHide" href="#idDtclawpblmdsn"></a></p>
+  <p id="idDtclawpblmnam">name::
+    <br>* cpt.chain-net'con.law-problem,
+    <br>* cpt.chain-net'law-problem,
+    <br>* cpt.chain-net'problem.law-problem,
+    <br>* cpt.chain-net'regulatory-compliance,
+    <a class="clsHide" href="#idDtclawpblmnam"></a></p>
+  </section>
+
   <section id="idDtclawTax">
   <h2 id="idDtclawTaxH2">chain-law.TAX
     <a class="clsHide" href="#idDtclawTaxH2"></a></h2>
@@ -4297,12 +4420,13 @@
     <br>[<a href="http://complexitylabs.io/distributed-organizations/">http://complexitylabs.io/distributed-organizations/</a>]
     <a class="clsHide" href="#idDtcdaodsn"></a></p>
   <p id="idDtcdaonam">name::
-    <br>* cpt.decentralized-autonomous-organization-(Dao),
-    <br>* cpt.Đ-chain-Dao,
-    <br>* cpt.Dao-of--chain-network,
     <br>* cpt.Dao,
+    <br>* cpt.Dao-of--chain-network,
     <br>* cpt.Dao-(decentralized-autonomous-organization),
-    <br>* cpt.Dcc-Dao,
+    <br>* cpt.decentralized-autonomous-organization-(Dao),
+    <br>* cpt.decentralized-trust-organization, {2018-04-24}
+    <br>* cpt.Dto, {2018-04-24}
+    <br>* cpt.Đ-chain-Dao,
     <a class="clsHide" href="#idDtcdaonam"></a></p>
 
   <section id="idDtcdaoeval">
