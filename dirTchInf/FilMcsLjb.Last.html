@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.browser-javascript-language (Ljb.5-5-0.2018-04-21)</title>
+  <title>Mcs.browser-javascript-language (Ljb.5-6-0.2018-04-27)</title>
   <meta name="keywords" content="javascript, js, javascript-tutorial, browser-js, ljb,  title-content-tree, hitp-webpage">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -3829,6 +3829,16 @@ var oOut = (function () {
     <br>* cpt.Ljb'XMLHttpRequest-function,
     <br>* cpt.XMLHttpRequest-constructor-of-Ljb,
     <a class="clsHide" href="#idLjbXhrfnam"></a></p>
+  <p id="idLjbXhrfexpl">example::
+    <br><code>oXHR = new XMLHttpRequest();
+    <br>oXHR.open('GET', sUrl, true);
+    <br>oXHR.send(null);
+    <br>oXHR.onreadystatechange = function () {
+    <br> &nbsp;if (oXHR.readyState === 4 && oXHR.status === 200) { //DONE, OK
+    <br> &nbsp; &nbsp;//work on oXHR.responseText
+    <br> &nbsp;}
+    <br>}</code>
+    <a class="clsHide" href="#idLjbXhrfexpl"></a></p>
   </section>
 </section>
 

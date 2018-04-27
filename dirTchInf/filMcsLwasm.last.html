@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-24-0.2018-04-23 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-25-0.2018-04-27 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -2252,24 +2252,34 @@
     <br> &nbsp; &nbsp;var oImport = {
     <br> &nbsp; &nbsp; &nbsp;oJs: {fImported: arg => console.log(arg)}
     <br> &nbsp; &nbsp;};
-    <br> &nbsp; &nbsp;//case1: with <a class="clsPreview" href="#idWasmrtewajocmplf">compile()</a>
+    <br> &nbsp; &nbsp;//<span class="clsColorRed">case1</span>: with <a class="clsPreview" href="#idWasmrtewajocmplf">compile()</a>
     <br> &nbsp; &nbsp;fetch('simple.wasm')
     <br> &nbsp; &nbsp;.then(oResponse => oResponse.arrayBuffer())
     <br> &nbsp; &nbsp;.then(bytes => WebAssembly.compile(bytes))
     <br> &nbsp; &nbsp;.then(oModule => WebAssembly.instantiate(oModule, oImport))
     <br> &nbsp; &nbsp;.then(oModuleInst => oModuleInst.exports.fExported());
-    <br> &nbsp; &nbsp;//case2: with <a class="clsPreview" href="#idWasmrtewajocmplsmgf">compileStreaming()</a>
+    <br> &nbsp; &nbsp;//<span class="clsColorRed">case2</span>: with <a class="clsPreview" href="#idWasmrtewajocmplsmgf">compileStreaming()</a>
     <br> &nbsp; &nbsp;WebAssembly.compileStreaming(fetch('simple.wasm'))
     <br> &nbsp; &nbsp;.then(oModule => WebAssembly.instantiate(oModule, oImport))
     <br> &nbsp; &nbsp;.then(instance => instance.exports.fExported());
-    <br> &nbsp; &nbsp;//case3: with <a class="clsPreview" href="#idWasmrtewajoinstf">instantiate()</a>
+    <br> &nbsp; &nbsp;//<span class="clsColorRed">case3</span>: with <a class="clsPreview" href="#idWasmrtewajoinstf">instantiate()</a>
     <br> &nbsp; &nbsp;fetch('simple.wasm')
     <br> &nbsp; &nbsp;.then(oResponse => oResponse.arrayBuffer())
     <br> &nbsp; &nbsp;.then(oArrayBuffer => WebAssembly.instantiate(oArrayBuffer, oImport))
     <br> &nbsp; &nbsp;.then(oModule => oModule.instance.exports.fExported());
-    <br> &nbsp; &nbsp;//case4: with <a class="clsPreview" href="#idWasmrtewajoinststmf">instantiateStreaming()</a>
+    <br> &nbsp; &nbsp;//<span class="clsColorRed">case4</span>: with <a class="clsPreview" href="#idWasmrtewajoinststmf">instantiateStreaming()</a>
     <br> &nbsp; &nbsp;WebAssembly.instantiateStreaming(fetch('simple.wasm'), oImport)
     <br> &nbsp; &nbsp;.then(oModule => oModule.instance.exports.fExported());
+    <br> &nbsp; &nbsp;//<span class="clsColorRed">case5</span>: with <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbXhrf">XMLHttpRequest</a>
+    <br> &nbsp; &nbsp;oXHR = new XMLHttpRequest();
+    <br> &nbsp; &nbsp;oXHR.open('GET', 'simple.wasm');
+    <br> &nbsp; &nbsp;oXHR.responseType = 'arraybuffer';
+    <br> &nbsp; &nbsp;oXHR.send();
+    <br> &nbsp; &nbsp;
+    <br> &nbsp; &nbsp;oXHR.onload = function() {
+    <br> &nbsp; &nbsp; &nbsp;WebAssembly.instantiate(oXHR.response, oImport))
+    <br> &nbsp; &nbsp; &nbsp;.then(oModule => oModule.instance.exports.fExported());
+    <br> &nbsp; &nbsp;}
     <br> &nbsp;&lt;/script>
     <br>&lt;/body>
     <br>&lt;/html></code>
@@ -2920,6 +2930,15 @@
     <br>* cpt.Wasm'WebAssembly.validate-function,
     <br>* cpt.WebAssembly.validate-function,
     <a class="clsHide" href="#idWasmrtewajovldtfnam"></a></p>
+  <p id="idWasmrtewajovldtfexpl">example::
+    <br><code>fetch('simple.wasm')
+    <br>.then(oResponse => oResponse.arrayBuffer())
+    <br>.then(function(oArrayBuffer) {
+        var bValid = WebAssembly.validate(oArrayBuffer);
+        console.log("The given bytes are " + (bValid ? "" : "not ") + "a valid wasm module");
+    <br>});</code>
+    <br>[https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html]
+    <a class="clsHide" href="#idWasmrtewajovldtfexpl"></a></p>
   </section>
 
   <section id="idWasmrtewajomdlf">
@@ -2935,6 +2954,29 @@
     <br>* cpt.Wasm'WebAssembly.Module-function,
     <br>* cpt.WebAssembly.Module-function,
     <a class="clsHide" href="#idWasmrtewajomdlfnam"></a></p>
+  <p id="idWasmrtewajomdlfmbr">member::
+    <br>>Object.getOwnPropertyNames(WebAssembly.Module).sort()
+    <br>(8) ["arguments", "caller", "customSections", "exports", "imports", "length", "name", "prototype"]
+    <a class="clsHide" href="#idWasmrtewajomdlfmbr"></a></p>
+  <p id="idWasmrtewajomdlfexpl">example Module.imports::
+    <br><code>//display the-imports of <a class="clsPreview" href="#idWasmpgmSmpl">the-simple-program</a>
+    <br>WebAssembly.compileStreaming(fetch('simple.wasm'))
+    <br>.then(function(mod) {
+    <br> &nbsp;var aImports = WebAssembly.Module.imports(mod);
+    <br> &nbsp;console.log(aImports[0]);
+    <br>});</code>
+    <br> <a href="filMcsLwasm.files/simple-imports.html">demo</a>.
+    <br>[https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/imports.html]
+    <a class="clsHide" href="#idWasmrtewajomdlfexpl"></a></p>
+  <p id="idWasmrtewajomdlfexplex">example Module.exports::
+    <br><code>//display the-exports of <a class="clsPreview" href="#idWasmpgmSmpl">the-simple-program</a>
+    <br>WebAssembly.compileStreaming(fetch('simple.wasm'))
+    <br>.then(function(mod) {
+    <br> &nbsp;var aExports = WebAssembly.Module.exports(mod);
+    <br> &nbsp;console.log(aExports[0]);
+    <br>});</code>
+    <br> <a href="filMcsLwasm.files/simple-exports.html">demo</a>.
+    <a class="clsHide" href="#idWasmrtewajomdlfexplex"></a></p>
   </section>
 
   <section id="idWasmrtewajoinstcf">
