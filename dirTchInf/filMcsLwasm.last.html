@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-25-0.2018-04-27 DRAFT)</title>
+  <title>Mcs.Weitcoinssembly-language (Wasm.0-26-0.2018-04-28 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-26-0.2018-04-28 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -2290,6 +2291,38 @@
     <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-instantiate.html">instantiate-demo</a>,
     <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-instantiateStreaming.html">instantiateStreaming-demo,
     <a class="clsHide" href="#idWasmpgmSmplhml"></a></p>
+  </section>
+
+  <section id="idWasmpgmSmpl2">
+  <h2 id="idWasmpgmSmpl2H2">program.simple2
+    <a class="clsHide" href="#idWasmpgmSmpl2H2"></a></h2>
+  <p id="idWasmpgmSmpl2dsn">description::
+    <br>· simple2-program.
+    <br>· creates and exports a-Wasm-function that creates and outputs the-value 59.
+    <br>· from javascript we execute that function.
+    <a class="clsHide" href="#idWasmpgmSmpl2dsn"></a></p>
+  <p id="idWasmpgmSmpl2nam">name::
+    <br>* cpt.Wasm-program.simple2,
+    <a class="clsHide" href="#idWasmpgmSmpl2nam"></a></p>
+  <p id="idWasmpgmSmpl2wat">wat-file::
+    <br><code>(module
+    <br> &nbsp;(func (export "f59") (result i32) (i32.const 59))
+    <br>)</code>
+    <a class="clsHide" href="#idWasmpgmSmpl2wat"></a></p>
+  <p id="idWasmpgmSmpl2hml">html-file::
+    <br><code>&lt;!doctype html>
+    <br>&lt;html>
+    <br>&lt;body>
+    <br> &nbsp;&lt;script>
+    <br> &nbsp; &nbsp;WebAssembly.instantiateStreaming(fetch('simple2.wasm'))
+    <br> &nbsp; &nbsp;.then(oModule => console.log(oModule.instance.exports.f59()))
+    <br> &nbsp;&lt;/script>
+    <br>&lt;/body>
+    <br>&lt;/html></code>
+    <a class="clsHide" href="#idWasmpgmSmpl2hml"></a></p>
+  <p id="idWasmpgmSmpl2dem">demo::
+    <br>· <a href="filMcsLwasm.files/simple2.html">link</a>.
+    <a class="clsHide" href="#idWasmpgmSmpl2dem"></a></p>
   </section>
 
   <section id="idWasmpgmHlwd">
