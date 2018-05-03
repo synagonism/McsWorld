@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Weitcoinssembly-language (Wasm.0-26-0.2018-04-28 DRAFT)</title>
-  <title>Mcs.WebAssembly-language (Wasm.0-26-0.2018-04-28 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-27-0.2018-05-03 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -2309,6 +2308,66 @@
     <br> &nbsp;(func (export "f59") (result i32) (i32.const 59))
     <br>)</code>
     <a class="clsHide" href="#idWasmpgmSmpl2wat"></a></p>
+  <p id="idWasmpgmSmpl2wasm">wasm-file::
+    <br><code>0000000: 0061 736d ; WASM_BINARY_MAGIC
+    <br>0000004: 0100 0000 ; WASM_BINARY_VERSION
+    <br>; section "Type" (1)
+    <br>0000008: 01 ; section code
+    <br>0000009: 00 ; section size (guess)
+    <br>000000a: 01 ; num types
+    <br>; type 0
+    <br>000000b: 60 ; func
+    <br>000000c: 00 ; num params
+    <br>000000d: 01 ; num results
+    <br>000000e: 7f ; i32
+    <br>0000009: 05 ; FIXUP section size
+    <br>; section "Function" (3)
+    <br>000000f: 03 ; section code
+    <br>0000010: 00 ; section size (guess)
+    <br>0000011: 01 ; num functions
+    <br>0000012: 00 ; function 0 signature index
+    <br>0000010: 02 ; FIXUP section size
+    <br>; section "Export" (7)
+    <br>0000013: 07 ; section code
+    <br>0000014: 00 ; section size (guess)
+    <br>0000015: 01 ; num exports
+    <br>0000016: 03 ; string length
+    <br>0000017: 6635 39                                  f59  ; export name
+    <br>000001a: 00 ; export kind
+    <br>000001b: 00 ; export func index
+    <br>0000014: 07 ; FIXUP section size
+    <br>; section "Code" (10)
+    <br>000001c: 0a ; section code
+    <br>000001d: 00 ; section size (guess)
+    <br>000001e: 01 ; num functions
+    <br>; function body 0
+    <br>000001f: 00 ; func body size (guess)
+    <br>0000020: 00 ; local decl count
+    <br>0000021: 41 ; i32.const
+    <br>0000022: 3b ; i32 literal
+    <br>0000023: 0b ; end
+    <br>000001f: 04 ; FIXUP func body size
+    <br>000001d: 06 ; FIXUP section size
+    <br>; section "name"
+    <br>0000024: 00 ; section code
+    <br>0000025: 00 ; section size (guess)
+    <br>0000026: 04 ; string length
+    <br>0000027: 6e61 6d65                                name  ; custom section name
+    <br>000002b: 02 ; local name type
+    <br>000002c: 00 ; subsection size (guess)
+    <br>000002d: 01 ; num functions
+    <br>000002e: 00 ; function index
+    <br>000002f: 00 ; num locals
+    <br>000002c: 03 ; FIXUP subsection size
+    <br>0000025: 0a ; FIXUP section size
+    <br>; continous code
+    <br>00 61 73 6D 01 00 00 00 ; magic version
+    <br>01 05 01 60 00 01 7F ; section "Type-1"
+    <br>03 02 01 00 ; section "Function-3"
+    <br>07 07 01 03 66 35 39 00 00 ; section "Export-7"
+    <br>0A 06 01 04 00 41 3B 0B ; section "Code-10"
+    <br>00 0A 04 6E 61 6D 65 02 03 01 00 00 ; section "name-0"</code>
+    <a class="clsHide" href="#idWasmpgmSmpl2wasm"></a></p>
   <p id="idWasmpgmSmpl2hml">html-file::
     <br><code>&lt;!doctype html>
     <br>&lt;html>
