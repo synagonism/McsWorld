@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-27-0.2018-05-03 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-28-0.2018-05-05 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -790,6 +790,19 @@
   <p id="idWasmsuntTblidxspcnam">name::
     <br>* cpt.Wasm-table'index-space,
     <a class="clsHide" href="#idWasmsuntTblidxspcnam"></a></p>
+  </section>
+
+  <section id="idWasmsuntTblTxt">
+  <h3 id="idWasmsuntTblTxtH3">table.TXT
+    <a class="clsHide" href="#idWasmsuntTblTxtH3"></a></h3>
+  <p id="idWasmsuntTblTxtexpl">example::
+    <br>// defines a-table with elements 2 funtions, and export it
+    <br><code>(table (export "tbl") anyfunc (elem $f13 $f42))</code>
+    <br>===
+    <br>// imports a-table with 2 elements and initializes the 2 elements.
+    <br><code>(import "js" "tbl" (table 2 anyfunc))
+    <br>(elem (i32.const 0) $f42 $f83)</code>
+    <a class="clsHide" href="#idWasmsuntTblTxtexpl"></a></p>
   </section>
   </section>
 
@@ -1886,7 +1899,7 @@
     <a class="clsHide" href="#idWasmalgscnTablH2"></a></h2>
   <p id="idWasmalgscnTabldsn">description::
     <br>· opcode: 0x04.
-    <br>· it consists of an-array of table-descriptions|definitions.
+    <br>· it consists of an-array of <a class="clsPreview" href="#idWasmsuntTbldlrn">table-descriptions|definitions</a>.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#table-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#table-section</a>]
     <a class="clsHide" href="#idWasmalgscnTabldsn"></a></p>
   <p id="idWasmalgscnTablnam">name::
@@ -1902,7 +1915,7 @@
     <a class="clsHide" href="#idWasmalgscnLrmrH2"></a></h2>
   <p id="idWasmalgscnLrmrdsn">description::
     <br>· opcode: 0x05.
-    <br>· it consists of an-array of linear-memory-descriptions.
+    <br>· it consists of an-array of <a class="clsPreview" href="#idWasmsuntMmrdlrn">linear-memory-descriptions</a>.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#linear-memory-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#linear-memory-section</a>]
     <br>===
     <br>· the-memory-section defines the optional memory of the-module by defining its initial size and optionally how large it is-expected to expand.
@@ -1996,7 +2009,7 @@
     <br>· it consists of an-array of table-initializers.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#element-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#element-section</a>]
     <br>===
-    <br>· the-element-section allows a-module to initialize the-contents of a-table imported from the-outside or defined in the-table-section.
+    <br>· the-element-section allows a-module to initialize the-contents of a-table imported from the-outside or defined in <a class="clsPreview" href="#idWasmalgscnTabl">the-table-section</a>.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
     <br>===
     <br>· the initial contents of a-table is-uninitialized.
@@ -2311,7 +2324,7 @@
   <p id="idWasmpgmSmpl2wasm">wasm-file::
     <br><code>0000000: 0061 736d ; WASM_BINARY_MAGIC
     <br>0000004: 0100 0000 ; WASM_BINARY_VERSION
-    <br>; section "Type" (1)
+    <br>; <a class="clsPreview" href="#idWasmalgscnType">section "Type" (1)</a>
     <br>0000008: 01 ; section code
     <br>0000009: 00 ; section size (guess)
     <br>000000a: 01 ; num types
@@ -2321,22 +2334,22 @@
     <br>000000d: 01 ; num results
     <br>000000e: 7f ; i32
     <br>0000009: 05 ; FIXUP section size
-    <br>; section "Function" (3)
+    <br>; <a class="clsPreview" href="#idWasmalgscnFctn">section "Function" (3)</a>
     <br>000000f: 03 ; section code
     <br>0000010: 00 ; section size (guess)
     <br>0000011: 01 ; num functions
     <br>0000012: 00 ; function 0 signature index
     <br>0000010: 02 ; FIXUP section size
-    <br>; section "Export" (7)
+    <br>; <a class="clsPreview" href="#idWasmalgscnExpt">section "Export" (7)</a>
     <br>0000013: 07 ; section code
     <br>0000014: 00 ; section size (guess)
     <br>0000015: 01 ; num exports
     <br>0000016: 03 ; string length
-    <br>0000017: 6635 39                                  f59  ; export name
+    <br>0000017: 6635 39  f59  ; export name
     <br>000001a: 00 ; export kind
     <br>000001b: 00 ; export func index
     <br>0000014: 07 ; FIXUP section size
-    <br>; section "Code" (10)
+    <br>; <a class="clsPreview" href="#idWasmalgscnCode">section "Code" (10)</a>
     <br>000001c: 0a ; section code
     <br>000001d: 00 ; section size (guess)
     <br>000001e: 01 ; num functions
@@ -2348,11 +2361,11 @@
     <br>0000023: 0b ; end
     <br>000001f: 04 ; FIXUP func body size
     <br>000001d: 06 ; FIXUP section size
-    <br>; section "name"
+    <br>; <a class="clsPreview" href="#idWasmalgscnCtm">section "name"</a>
     <br>0000024: 00 ; section code
     <br>0000025: 00 ; section size (guess)
     <br>0000026: 04 ; string length
-    <br>0000027: 6e61 6d65                                name  ; custom section name
+    <br>0000027: 6e61 6d65  name  ; custom section name
     <br>000002b: 02 ; local name type
     <br>000002c: 00 ; subsection size (guess)
     <br>000002d: 01 ; num functions
@@ -2360,13 +2373,13 @@
     <br>000002f: 00 ; num locals
     <br>000002c: 03 ; FIXUP subsection size
     <br>0000025: 0a ; FIXUP section size
-    <br>; continous code
+    <br>=== same-code continously
     <br>00 61 73 6D 01 00 00 00 ; magic version
-    <br>01 05 01 60 00 01 7F ; section "Type-1"
-    <br>03 02 01 00 ; section "Function-3"
-    <br>07 07 01 03 66 35 39 00 00 ; section "Export-7"
-    <br>0A 06 01 04 00 41 3B 0B ; section "Code-10"
-    <br>00 0A 04 6E 61 6D 65 02 03 01 00 00 ; section "name-0"</code>
+    <br>01 05 01 60 00 01 7F ; <a class="clsPreview" href="#idWasmalgscnType">section "Type-1"</a>
+    <br>03 02 01 00 ; <a class="clsPreview" href="#idWasmalgscnFctn">section "Function-3"</a>
+    <br>07 07 01 03 66 35 39 00 00 ; <a class="clsPreview" href="#idWasmalgscnExpt">section "Export-7"</a>
+    <br>0A 06 01 04 00 41 3B 0B ; <a class="clsPreview" href="#idWasmalgscnCode">section "Code-10"</a>
+    <br>00 0A 04 6E 61 6D 65 02 03 01 00 00 ; <a class="clsPreview" href="#idWasmalgscnCtm">section "name-0"</a></code>
     <a class="clsHide" href="#idWasmpgmSmpl2wasm"></a></p>
   <p id="idWasmpgmSmpl2hml">html-file::
     <br><code>&lt;!doctype html>
@@ -2427,6 +2440,124 @@
   <p id="idWasmpgmHlwddem">demo::
     <br>· <a href="filMcsLwasm.files/demo.html">link</a>.
     <a class="clsHide" href="#idWasmpgmHlwddem"></a></p>
+  </section>
+
+  <section id="idWasmpgmTbl">
+  <h2 id="idWasmpgmTblH2">program.table-demo
+    <a class="clsHide" href="#idWasmpgmTblH2"></a></h2>
+  <p id="idWasmpgmTbldsn">description::
+    <br>· creates a-wasm-function that outputs 42.
+    <br>· creates and exports a-table with element the previous function.
+    <br>· then, from javascript get the-table, calls its element and also displays the-length of table's elements.
+    <a class="clsHide" href="#idWasmpgmTbldsn"></a></p>
+  <p id="idWasmpgmTblnam">name::
+    <br>* cpt.Wasm-program.table-demo,
+    <a class="clsHide" href="#idWasmpgmTblnam"></a></p>
+  <p id="idWasmpgmTblwat">wat-program::
+    <br><code>(module
+    <br> &nbsp;(func $f42 (result i32) (i32.const 42))
+    <br> &nbsp;(table (export "tbl") anyfunc (elem $f42))
+    <br>)</code>
+    <a class="clsHide" href="#idWasmpgmTblwat"></a></p>
+  <p id="idWasmpgmTblwasm">wasm-program::
+    <br><code>0000000: 0061 736d                                 ; WASM_BINARY_MAGIC
+    <br>0000004: 0100 0000                                 ; WASM_BINARY_VERSION
+    <br>; section "Type" (1)
+    <br>0000008: 01                                        ; section code
+    <br>0000009: 00                                        ; section size (guess)
+    <br>000000a: 01                                        ; num types
+    <br>; type 0
+    <br>000000b: 60                                        ; func
+    <br>000000c: 00                                        ; num params
+    <br>000000d: 01                                        ; num results
+    <br>000000e: 7f                                        ; i32
+    <br>0000009: 05                                        ; FIXUP section size
+    <br>; section "Function" (3)
+    <br>000000f: 03                                        ; section code
+    <br>0000010: 00                                        ; section size (guess)
+    <br>0000011: 01                                        ; num functions
+    <br>0000012: 00                                        ; function 0 signature index
+    <br>0000010: 02                                        ; FIXUP section size
+    <br>; section "Table" (4)
+    <br>0000013: 04                                        ; section code
+    <br>0000014: 00                                        ; section size (guess)
+    <br>0000015: 01                                        ; num tables
+    <br>; table 0
+    <br>0000016: 70                                        ; anyfunc
+    <br>0000017: 01                                        ; limits: flags
+    <br>0000018: 01                                        ; limits: initial
+    <br>0000019: 01                                        ; limits: max
+    <br>0000014: 05                                        ; FIXUP section size
+    <br>; section "Export" (7)
+    <br>000001a: 07                                        ; section code
+    <br>000001b: 00                                        ; section size (guess)
+    <br>000001c: 01                                        ; num exports
+    <br>000001d: 03                                        ; string length
+    <br>000001e: 7462 6c                                  tbl  ; export name
+    <br>0000021: 01                                        ; export kind
+    <br>0000022: 00                                        ; export table index
+    <br>000001b: 07                                        ; FIXUP section size
+    <br>; section "Elem" (9)
+    <br>0000023: 09                                        ; section code
+    <br>0000024: 00                                        ; section size (guess)
+    <br>0000025: 01                                        ; num elem segments
+    <br>; elem segment header 0
+    <br>0000026: 00                                        ; table index
+    <br>0000027: 41                                        ; i32.const
+    <br>0000028: 00                                        ; i32 literal
+    <br>0000029: 0b                                        ; end
+    <br>000002a: 01                                        ; num function indices
+    <br>000002b: 00                                        ; function index
+    <br>0000024: 07                                        ; FIXUP section size
+    <br>; section "Code" (10)
+    <br>000002c: 0a                                        ; section code
+    <br>000002d: 00                                        ; section size (guess)
+    <br>000002e: 01                                        ; num functions
+    <br>; function body 0
+    <br>000002f: 00                                        ; func body size (guess)
+    <br>0000030: 00                                        ; local decl count
+    <br>0000031: 41                                        ; i32.const
+    <br>0000032: 2a                                        ; i32 literal
+    <br>0000033: 0b                                        ; end
+    <br>000002f: 04                                        ; FIXUP func body size
+    <br>000002d: 06                                        ; FIXUP section size
+    <br>; section "name"
+    <br>0000034: 00                                        ; section code
+    <br>0000035: 00                                        ; section size (guess)
+    <br>0000036: 04                                        ; string length
+    <br>0000037: 6e61 6d65                                name  ; custom section name
+    <br>000003b: 01                                        ; function name type
+    <br>000003c: 00                                        ; subsection size (guess)
+    <br>000003d: 01                                        ; num functions
+    <br>000003e: 00                                        ; function index
+    <br>000003f: 03                                        ; string length
+    <br>0000040: 6634 32                                  f42  ; func name 0
+    <br>000003c: 06                                        ; FIXUP subsection size
+    <br>0000043: 02                                        ; local name type
+    <br>0000044: 00                                        ; subsection size (guess)
+    <br>0000045: 01                                        ; num functions
+    <br>0000046: 00                                        ; function index
+    <br>0000047: 00                                        ; num locals
+    <br>0000044: 03                                        ; FIXUP subsection size
+    <br>0000035: 12                                        ; FIXUP section size</code>
+    <a class="clsHide" href="#idWasmpgmTblwasm"></a></p>
+  <p id="idWasmpgmTblhml">html-program::
+    <br><code>&lt;html>
+    <br>&lt;body>
+    <br> &nbsp;&lt;h1>table-demo&lt;/h1>
+    <br> &nbsp;&lt;p>· hit F12 to see console's output.
+    <br> &nbsp;&lt;script>
+    <br> &nbsp; &nbsp;WebAssembly.instantiateStreaming</a>(fetch('table3.wasm'))
+    <br> &nbsp; &nbsp; &nbsp;var oTbl = oModule.instance.exports.tbl;
+    <br> &nbsp; &nbsp; &nbsp;console.log(oTbl.get(0)());  // 42
+    <br> &nbsp; &nbsp; &nbsp;console.log(oTbl.length);    // 1
+    <br> &nbsp; &nbsp;})
+    <br> &nbsp;&lt;/script>
+    <br>&lt;/body></code>
+    <a class="clsHide" href="#idWasmpgmTblhml"></a></p>
+  <p id="idWasmpgmTbldem">demo::
+    <br>· <a href="filMcsLwasm.files/table3.html">link</a>.
+    <a class="clsHide" href="#idWasmpgmTbldem"></a></p>
   </section>
 </section>
 
@@ -3437,7 +3568,7 @@
   <p id="idFooterP1">footer::
     <br>• author: <a class="clsPreview" href="../../#idAboutme">Kaseluris.Nikos.1959</a>
     <br>• email:
-    <br> &nbsp;<img src="../../misc/img/mail.png" alt="imgMail">
+    <br> &nbsp;<img src="../../dirRsc/dirImg/mail.png" alt="imgMail">
     <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>
     <br>• steemit: <a href="https://steemit.com/synagonism">https://steemit.com/@synagonism</a>
     <br>• github: <a href="https://github.com/synagonism/Mcsw/blob/master/dirTchInf/filMcsLwasm.last.html">https://github.com/synagonism/Mcsw/blob/master/dirTchInf/filMcsLwasm.last.html</a>,
