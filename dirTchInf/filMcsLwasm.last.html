@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-28-0.2018-05-05 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-29-0.2018-05-06 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -2233,88 +2233,16 @@
     <a class="clsHide" href="#idWasmpgmTxtnam"></a></p>
   </section>
 
-  <section id="idWasmpgmSmpl">
-  <h2 id="idWasmpgmSmplH2">program.simple
-    <a class="clsHide" href="#idWasmpgmSmplH2"></a></h2>
-  <p id="idWasmpgmSmpldsn">description::
-    <br>· simple program from <a href="https://github.com/mdn/webassembly-examples/tree/master/js-api-examples">Mdn-examples</a>.
-    <br>· imports a-javascript-function that prints on console its argument.
-    <br>· creates and exports a-Wasm-function that creates the value 42 and calls the imported function that prints 42 on console.
-    <a class="clsHide" href="#idWasmpgmSmpldsn"></a></p>
-  <p id="idWasmpgmSmplnam">name::
-    <br>* cpt.Wasm-program.simple,
-    <a class="clsHide" href="#idWasmpgmSmplnam"></a></p>
-  <p id="idWasmpgmSmplwat">wat-file::
-    <br><code>(module
-    <br> &nbsp;(func $fImp (import "oJs" "fImported") (param i32))
-    <br> &nbsp;(func (export "fExported")
-    <br> &nbsp; &nbsp;i32.const 42
-    <br> &nbsp; &nbsp;call $fImp
-    <br> &nbsp;)
-    <br>)</code>
-    <a class="clsHide" href="#idWasmpgmSmplwat"></a></p>
-  <p id="idWasmpgmSmplhml">html-file::
-    <br><code>&lt;!doctype html>
-    <br>&lt;html>
-    <br>&lt;head>
-    <br> &nbsp;&lt;meta charset="utf-8">
-    <br> &nbsp;&lt;title>Wasm compile() test</title>
-    <br>&lt;/head>
-    <br>&lt;body>
-    <br> &nbsp;&lt;script>
-    <br> &nbsp; &nbsp;var oImport = {
-    <br> &nbsp; &nbsp; &nbsp;oJs: {fImported: arg => console.log(arg)}
-    <br> &nbsp; &nbsp;};
-    <br> &nbsp; &nbsp;//<span class="clsColorRed">case1</span>: with <a class="clsPreview" href="#idWasmrtewajocmplf">compile()</a>
-    <br> &nbsp; &nbsp;fetch('simple.wasm')
-    <br> &nbsp; &nbsp;.then(oResponse => oResponse.arrayBuffer())
-    <br> &nbsp; &nbsp;.then(bytes => WebAssembly.compile(bytes))
-    <br> &nbsp; &nbsp;.then(oModule => WebAssembly.instantiate(oModule, oImport))
-    <br> &nbsp; &nbsp;.then(oModuleInst => oModuleInst.exports.fExported());
-    <br> &nbsp; &nbsp;//<span class="clsColorRed">case2</span>: with <a class="clsPreview" href="#idWasmrtewajocmplsmgf">compileStreaming()</a>
-    <br> &nbsp; &nbsp;WebAssembly.compileStreaming(fetch('simple.wasm'))
-    <br> &nbsp; &nbsp;.then(oModule => WebAssembly.instantiate(oModule, oImport))
-    <br> &nbsp; &nbsp;.then(instance => instance.exports.fExported());
-    <br> &nbsp; &nbsp;//<span class="clsColorRed">case3</span>: with <a class="clsPreview" href="#idWasmrtewajoinstf">instantiate()</a>
-    <br> &nbsp; &nbsp;fetch('simple.wasm')
-    <br> &nbsp; &nbsp;.then(oResponse => oResponse.arrayBuffer())
-    <br> &nbsp; &nbsp;.then(oArrayBuffer => WebAssembly.instantiate(oArrayBuffer, oImport))
-    <br> &nbsp; &nbsp;.then(oModule => oModule.instance.exports.fExported());
-    <br> &nbsp; &nbsp;//<span class="clsColorRed">case4</span>: with <a class="clsPreview" href="#idWasmrtewajoinststmf">instantiateStreaming()</a>
-    <br> &nbsp; &nbsp;WebAssembly.instantiateStreaming(fetch('simple.wasm'), oImport)
-    <br> &nbsp; &nbsp;.then(oModule => oModule.instance.exports.fExported());
-    <br> &nbsp; &nbsp;//<span class="clsColorRed">case5</span>: with <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbXhrf">XMLHttpRequest</a>
-    <br> &nbsp; &nbsp;oXHR = new XMLHttpRequest();
-    <br> &nbsp; &nbsp;oXHR.open('GET', 'simple.wasm');
-    <br> &nbsp; &nbsp;oXHR.responseType = 'arraybuffer';
-    <br> &nbsp; &nbsp;oXHR.send();
-    <br> &nbsp; &nbsp;
-    <br> &nbsp; &nbsp;oXHR.onload = function() {
-    <br> &nbsp; &nbsp; &nbsp;WebAssembly.instantiate(oXHR.response, oImport))
-    <br> &nbsp; &nbsp; &nbsp;.then(oModule => oModule.instance.exports.fExported());
-    <br> &nbsp; &nbsp;}
-    <br> &nbsp;&lt;/script>
-    <br>&lt;/body>
-    <br>&lt;/html></code>
-    <a class="clsHide" href="#idWasmpgmSmpldem"></a></p>
-  <p id="idWasmpgmSmpldem">demo::
-    <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-compile.html">compile-demo</a>,
-    <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-compileStreaming.html">compileStreaming-demo</a>,
-    <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-instantiate.html">instantiate-demo</a>,
-    <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-instantiateStreaming.html">instantiateStreaming-demo,
-    <a class="clsHide" href="#idWasmpgmSmplhml"></a></p>
-  </section>
-
   <section id="idWasmpgmSmpl2">
-  <h2 id="idWasmpgmSmpl2H2">program.simple2
+  <h2 id="idWasmpgmSmpl2H2">program.simple-demo
     <a class="clsHide" href="#idWasmpgmSmpl2H2"></a></h2>
   <p id="idWasmpgmSmpl2dsn">description::
-    <br>· simple2-program.
+    <br>· simple-demo-program.
     <br>· creates and exports a-Wasm-function that creates and outputs the-value 59.
     <br>· from javascript we execute that function.
     <a class="clsHide" href="#idWasmpgmSmpl2dsn"></a></p>
   <p id="idWasmpgmSmpl2nam">name::
-    <br>* cpt.Wasm-program.simple2,
+    <br>* cpt.Wasm-program.simple-demo,
     <a class="clsHide" href="#idWasmpgmSmpl2nam"></a></p>
   <p id="idWasmpgmSmpl2wat">wat-file::
     <br><code>(module
@@ -2322,64 +2250,50 @@
     <br>)</code>
     <a class="clsHide" href="#idWasmpgmSmpl2wat"></a></p>
   <p id="idWasmpgmSmpl2wasm">wasm-file::
-    <br><code>0000000: 0061 736d ; WASM_BINARY_MAGIC
-    <br>0000004: 0100 0000 ; WASM_BINARY_VERSION
+    <br>// a-sequence of bytes, in hex-format here.
+    <br><code>00 61 73 6d ; WASM_BINARY_MAGIC
+    <br>01 00 00 00 ; WASM_BINARY_VERSION
     <br>; <a class="clsPreview" href="#idWasmalgscnType">section "Type" (1)</a>
-    <br>0000008: 01 ; section code
-    <br>0000009: 00 ; section size (guess)
-    <br>000000a: 01 ; num types
-    <br>; type 0
-    <br>000000b: 60 ; func
-    <br>000000c: 00 ; num params
-    <br>000000d: 01 ; num results
-    <br>000000e: 7f ; i32
-    <br>0000009: 05 ; FIXUP section size
+    <br>01 ; section code
+    <br>05 ; section size
+    <br>01 ; num types
+    <br>60 ; func
+    <br>00 ; num params
+    <br>01 ; num results
+    <br>7f ; i32
     <br>; <a class="clsPreview" href="#idWasmalgscnFctn">section "Function" (3)</a>
-    <br>000000f: 03 ; section code
-    <br>0000010: 00 ; section size (guess)
-    <br>0000011: 01 ; num functions
-    <br>0000012: 00 ; function 0 signature index
-    <br>0000010: 02 ; FIXUP section size
+    <br>03 ; section code
+    <br>02 ; section size (guess)
+    <br>01 ; num functions
+    <br>00 ; function 0 signature index
     <br>; <a class="clsPreview" href="#idWasmalgscnExpt">section "Export" (7)</a>
-    <br>0000013: 07 ; section code
-    <br>0000014: 00 ; section size (guess)
-    <br>0000015: 01 ; num exports
-    <br>0000016: 03 ; string length
-    <br>0000017: 6635 39  f59  ; export name
-    <br>000001a: 00 ; export kind
-    <br>000001b: 00 ; export func index
-    <br>0000014: 07 ; FIXUP section size
+    <br>07 ; section code
+    <br>07 ; section size (guess)
+    <br>01 ; num exports
+    <br>03 ; string length
+    <br>66 35 39 ; f59 export name
+    <br>00 ; export kind
+    <br>00 ; export func index
     <br>; <a class="clsPreview" href="#idWasmalgscnCode">section "Code" (10)</a>
-    <br>000001c: 0a ; section code
-    <br>000001d: 00 ; section size (guess)
-    <br>000001e: 01 ; num functions
+    <br>0a ; section code
+    <br>06 ; section size (guess)
+    <br>01 ; num functions
     <br>; function body 0
-    <br>000001f: 00 ; func body size (guess)
-    <br>0000020: 00 ; local decl count
-    <br>0000021: 41 ; i32.const
-    <br>0000022: 3b ; i32 literal
-    <br>0000023: 0b ; end
-    <br>000001f: 04 ; FIXUP func body size
-    <br>000001d: 06 ; FIXUP section size
+    <br>04 ; func body size (guess)
+    <br>00 ; local decl count
+    <br>41 ; i32.const
+    <br>3b ; i32 literal
+    <br>0b ; end
     <br>; <a class="clsPreview" href="#idWasmalgscnCtm">section "name"</a>
-    <br>0000024: 00 ; section code
-    <br>0000025: 00 ; section size (guess)
-    <br>0000026: 04 ; string length
-    <br>0000027: 6e61 6d65  name  ; custom section name
-    <br>000002b: 02 ; local name type
-    <br>000002c: 00 ; subsection size (guess)
-    <br>000002d: 01 ; num functions
-    <br>000002e: 00 ; function index
-    <br>000002f: 00 ; num locals
-    <br>000002c: 03 ; FIXUP subsection size
-    <br>0000025: 0a ; FIXUP section size
-    <br>=== same-code continously
-    <br>00 61 73 6D 01 00 00 00 ; magic version
-    <br>01 05 01 60 00 01 7F ; <a class="clsPreview" href="#idWasmalgscnType">section "Type-1"</a>
-    <br>03 02 01 00 ; <a class="clsPreview" href="#idWasmalgscnFctn">section "Function-3"</a>
-    <br>07 07 01 03 66 35 39 00 00 ; <a class="clsPreview" href="#idWasmalgscnExpt">section "Export-7"</a>
-    <br>0A 06 01 04 00 41 3B 0B ; <a class="clsPreview" href="#idWasmalgscnCode">section "Code-10"</a>
-    <br>00 0A 04 6E 61 6D 65 02 03 01 00 00 ; <a class="clsPreview" href="#idWasmalgscnCtm">section "name-0"</a></code>
+    <br>00 ; section code
+    <br>0a ; section size (guess)
+    <br>04 ; string length
+    <br>6e 61 6d 65 ; name custom section name
+    <br>02 ; local name type
+    <br>03 ; subsection size (guess)
+    <br>01 ; num functions
+    <br>00 ; function index
+    <br>00 ; num locals</code>
     <a class="clsHide" href="#idWasmpgmSmpl2wasm"></a></p>
   <p id="idWasmpgmSmpl2hml">html-file::
     <br><code>&lt;!doctype html>
@@ -2395,51 +2309,6 @@
   <p id="idWasmpgmSmpl2dem">demo::
     <br>· <a href="filMcsLwasm.files/simple2.html">link</a>.
     <a class="clsHide" href="#idWasmpgmSmpl2dem"></a></p>
-  </section>
-
-  <section id="idWasmpgmHlwd">
-  <h2 id="idWasmpgmHlwdH2">program.hello-world
-    <a class="clsHide" href="#idWasmpgmHlwdH2"></a></h2>
-  <p id="idWasmpgmHlwddsn">description::
-    <br>· example from spec's <a href="https://webassembly.github.io/spec/js-api/index.html">WebAssembly JavaScript Interface</a>.
-    <br>· imports 2 javascript-functions that print on console "hello," the-first and "world!" the-second.
-    <br>· then, uses the first imported as <a class="clsPreview" href="#idWasmfcnStrt">start-function</a> and exports the second imported.
-    <a class="clsHide" href="#idWasmpgmHlwddsn"></a></p>
-  <p id="idWasmpgmHlwdnam">name::
-    <br>* cpt.Wasm-program.hello-world,
-    <a class="clsHide" href="#idWasmpgmHlwdnam"></a></p>
-  <p id="idWasmpgmHlwdwat">wat-program::
-    <br><code>(module
-    <br> &nbsp;(import "oJs" "fImport1" (func $fImp1))
-    <br> &nbsp;(import "oJs" "fImport2" (func $fImp2))
-    <br> &nbsp;(func $fStart (call $fImp1))
-    <br> &nbsp;(start $fStart)
-    <br> &nbsp;(func (export "f") (call $fImp2))
-    <br>)</code>
-    <a class="clsHide" href="#idWasmpgmHlwdwat"></a></p>
-  <p id="idWasmpgmHlwdwasm">wasm-program::
-    <br>· we compile the-wat-program to wasm.
-    <br>· one method is with <a href="https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wat2wasm/">an-online-compiler</a>.
-    <a class="clsHide" href="#idWasmpgmHlwdwasm"></a></p>
-  <p id="idWasmpgmHlwdhml">html-program::
-    <br><code>&lt;html>
-    <br>&lt;body>
-    <br> &nbsp;&lt;h1>hello-world example&lt;/h1>
-    <br> &nbsp;&lt;p>· example from spec's &lt;a href="https://webassembly.github.io/spec/js-api/index.html">WebAssembly JavaScript Interface&lt;/a>
-    <br> &nbsp;&lt;p>· hit F12 to see console's output.
-    <br> &nbsp;&lt;script>
-    <br> &nbsp; &nbsp;var oImport = {oJs: {
-    <br> &nbsp; &nbsp; &nbsp;fImport1: () => console.log("hello,"),
-    <br> &nbsp; &nbsp; &nbsp;fImport2: () => console.log("world!")
-    <br> &nbsp; &nbsp;}};
-    <br> &nbsp; &nbsp;<a class="clsPreview" href="#idWasmrtewajoinststmf">WebAssembly.instantiateStreaming</a>(fetch('demo.wasm'), oImport)
-    <br> &nbsp; &nbsp;.then(oModule => oModule.instance.exports.f());
-    <br> &nbsp;&lt;/script>
-    <br>&lt;/body></code>
-    <a class="clsHide" href="#idWasmpgmHlwdhml"></a></p>
-  <p id="idWasmpgmHlwddem">demo::
-    <br>· <a href="filMcsLwasm.files/demo.html">link</a>.
-    <a class="clsHide" href="#idWasmpgmHlwddem"></a></p>
   </section>
 
   <section id="idWasmpgmTbl">
@@ -2547,17 +2416,217 @@
     <br> &nbsp;&lt;h1>table-demo&lt;/h1>
     <br> &nbsp;&lt;p>· hit F12 to see console's output.
     <br> &nbsp;&lt;script>
-    <br> &nbsp; &nbsp;WebAssembly.instantiateStreaming</a>(fetch('table3.wasm'))
+    <br> &nbsp; &nbsp;WebAssembly.instantiateStreaming(fetch('table3.wasm'))
     <br> &nbsp; &nbsp; &nbsp;var oTbl = oModule.instance.exports.tbl;
     <br> &nbsp; &nbsp; &nbsp;console.log(oTbl.get(0)());  // 42
     <br> &nbsp; &nbsp; &nbsp;console.log(oTbl.length);    // 1
     <br> &nbsp; &nbsp;})
     <br> &nbsp;&lt;/script>
-    <br>&lt;/body></code>
+    <br>&lt;/body>
+    <br>&lt;/html></code>
     <a class="clsHide" href="#idWasmpgmTblhml"></a></p>
   <p id="idWasmpgmTbldem">demo::
     <br>· <a href="filMcsLwasm.files/table3.html">link</a>.
     <a class="clsHide" href="#idWasmpgmTbldem"></a></p>
+  </section>
+
+  <section id="idWasmpgmMmr">
+  <h2 id="idWasmpgmMmrH2">program.memory-demo
+    <a class="clsHide" href="#idWasmpgmMmrH2"></a></h2>
+  <p id="idWasmpgmMmrdsn">description::
+    <br>· creates a-wasm-memory and export it.
+    <br>· at offset 0, of memory puts the-string "Hello World".
+    <br>· then, from javascript it gets the-memory, creates an-Uint8Array from its buffer, and String.fromCharCode() the-items of the-array.
+    <a class="clsHide" href="#idWasmpgmMmrdsn"></a></p>
+  <p id="idWasmpgmMmrnam">name::
+    <br>* cpt.Wasm-program.memory-demo,
+    <a class="clsHide" href="#idWasmpgmMmrnam"></a></p>
+  <p id="idWasmpgmMmrwat">wat-program::
+    <br><code>(module
+    <br> &nbsp;(memory (export "mem") 1)
+    <br> &nbsp;(data (i32.const 0) "Hello World")
+    <br>)</code>
+    <a class="clsHide" href="#idWasmpgmMmrwat"></a></p>
+  <p id="idWasmpgmMmrwasm">wasm-program::
+    <br>// a-sequence of bytes, here in hex
+    <br><code>00 61 73 6D ; magic
+    <br>01 00 00 00 ; version
+    <br>; memory-section
+    <br>05 ; section code
+    <br>03 ; section size
+    <br>01 ; num memories
+    <br>00 ; limits: flags
+    <br>01 ; limits: initial
+    <br>; export-section
+    <br>07 ; section code
+    <br>07 ; section size
+    <br>01 ; num exports
+    <br>03 ; string length
+    <br>6D 65 6D ; mem
+    <br>02 ; export kind
+    <br>00 ; export memory index
+    <br>; data-section
+    <br>0B ; section code
+    <br>11 ; section size
+    <br>01 ; num data segments
+    <br>00 ; memory index
+    <br>41 ; i32.const
+    <br>00 ; i32 value
+    <br>0B ; end
+    <br>0B ; data segment size
+    <br>48 65 6C 6C 6F 20 57 6F 72 6C 64 ; Hello World
+    <br>; custom-section
+    <br>00 ; section code
+    <br>08 ; section size
+    <br>04 ; string length
+    <br>6E 61 6D 65 ; name
+    <br>02 ; local name type
+    <br>01 ; subsection size
+    <br>00 ; num functions</code>
+    <a class="clsHide" href="#idWasmpgmMmrwasm"></a></p>
+  <p id="idWasmpgmMmrhml">html-program::
+    <br><code>&lt;html>
+    <br>&lt;body>
+    <br> &nbsp;&lt;h1>Wasm-memory demo&lt;/h1>
+    <br> &nbsp;&lt;p>· hit F12 to see console's output.
+    <br> &nbsp;&lt;script>
+    <br> &nbsp; &nbsp;WebAssembly.instantiateStreaming(fetch('memory2.wasm'))
+    <br> &nbsp; &nbsp;.then(oModule => {
+    <br> &nbsp; &nbsp; &nbsp;function fUint8_to_string(aIn) {
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;let s = "";
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;for (let i = 0; i &lt; 11; i++) {
+    <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;s += String.fromCharCode(aIn[i]);
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;}
+    <br> &nbsp; &nbsp; &nbsp; &nbsp;return s;
+    <br> &nbsp; &nbsp; &nbsp;}
+    <br> &nbsp; &nbsp; &nbsp;let a = new Uint8Array(oModule.instance.exports.mem.buffer);
+    <br> &nbsp; &nbsp; &nbsp;console.log(fUint8_to_string(a));
+    <br> &nbsp; &nbsp;})
+    <br> &nbsp;&lt;/script>
+    <br>&lt;/body>
+    <br>&lt;/html></code>
+    <a class="clsHide" href="#idWasmpgmMmrhml"></a></p>
+  <p id="idWasmpgmMmrdem">demo::
+    <br>· <a href="filMcsLwasm.files/memory2.html">link</a>.
+    <a class="clsHide" href="#idWasmpgmMmrdem"></a></p>
+  </section>
+
+  <section id="idWasmpgmSmpl">
+  <h2 id="idWasmpgmSmplH2">program.simple
+    <a class="clsHide" href="#idWasmpgmSmplH2"></a></h2>
+  <p id="idWasmpgmSmpldsn">description::
+    <br>· simple program from <a href="https://github.com/mdn/webassembly-examples/tree/master/js-api-examples">Mdn-examples</a>.
+    <br>· imports a-javascript-function that prints on console its argument.
+    <br>· creates and exports a-Wasm-function that creates the value 42 and calls the imported function that prints 42 on console.
+    <a class="clsHide" href="#idWasmpgmSmpldsn"></a></p>
+  <p id="idWasmpgmSmplnam">name::
+    <br>* cpt.Wasm-program.simple,
+    <a class="clsHide" href="#idWasmpgmSmplnam"></a></p>
+  <p id="idWasmpgmSmplwat">wat-file::
+    <br><code>(module
+    <br> &nbsp;(func $fImp (import "oJs" "fImported") (param i32))
+    <br> &nbsp;(func (export "fExported")
+    <br> &nbsp; &nbsp;i32.const 42
+    <br> &nbsp; &nbsp;call $fImp
+    <br> &nbsp;)
+    <br>)</code>
+    <a class="clsHide" href="#idWasmpgmSmplwat"></a></p>
+  <p id="idWasmpgmSmplhml">html-file::
+    <br><code>&lt;!doctype html>
+    <br>&lt;html>
+    <br>&lt;head>
+    <br> &nbsp;&lt;meta charset="utf-8">
+    <br> &nbsp;&lt;title>Wasm compile() test</title>
+    <br>&lt;/head>
+    <br>&lt;body>
+    <br> &nbsp;&lt;script>
+    <br> &nbsp; &nbsp;var oImport = {
+    <br> &nbsp; &nbsp; &nbsp;oJs: {fImported: arg => console.log(arg)}
+    <br> &nbsp; &nbsp;};
+    <br> &nbsp; &nbsp;//<span class="clsColorRed">case1</span>: with <a class="clsPreview" href="#idWasmrtewajocmplf">compile()</a>
+    <br> &nbsp; &nbsp;fetch('simple.wasm')
+    <br> &nbsp; &nbsp;.then(oResponse => oResponse.arrayBuffer())
+    <br> &nbsp; &nbsp;.then(bytes => WebAssembly.compile(bytes))
+    <br> &nbsp; &nbsp;.then(oModule => WebAssembly.instantiate(oModule, oImport))
+    <br> &nbsp; &nbsp;.then(oModuleInst => oModuleInst.exports.fExported());
+    <br> &nbsp; &nbsp;//<span class="clsColorRed">case2</span>: with <a class="clsPreview" href="#idWasmrtewajocmplsmgf">compileStreaming()</a>
+    <br> &nbsp; &nbsp;WebAssembly.compileStreaming(fetch('simple.wasm'))
+    <br> &nbsp; &nbsp;.then(oModule => WebAssembly.instantiate(oModule, oImport))
+    <br> &nbsp; &nbsp;.then(instance => instance.exports.fExported());
+    <br> &nbsp; &nbsp;//<span class="clsColorRed">case3</span>: with <a class="clsPreview" href="#idWasmrtewajoinstf">instantiate()</a>
+    <br> &nbsp; &nbsp;fetch('simple.wasm')
+    <br> &nbsp; &nbsp;.then(oResponse => oResponse.arrayBuffer())
+    <br> &nbsp; &nbsp;.then(oArrayBuffer => WebAssembly.instantiate(oArrayBuffer, oImport))
+    <br> &nbsp; &nbsp;.then(oModule => oModule.instance.exports.fExported());
+    <br> &nbsp; &nbsp;//<span class="clsColorRed">case4</span>: with <a class="clsPreview" href="#idWasmrtewajoinststmf">instantiateStreaming()</a>
+    <br> &nbsp; &nbsp;WebAssembly.instantiateStreaming(fetch('simple.wasm'), oImport)
+    <br> &nbsp; &nbsp;.then(oModule => oModule.instance.exports.fExported());
+    <br> &nbsp; &nbsp;//<span class="clsColorRed">case5</span>: with <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbXhrf">XMLHttpRequest</a>
+    <br> &nbsp; &nbsp;oXHR = new XMLHttpRequest();
+    <br> &nbsp; &nbsp;oXHR.open('GET', 'simple.wasm');
+    <br> &nbsp; &nbsp;oXHR.responseType = 'arraybuffer';
+    <br> &nbsp; &nbsp;oXHR.send();
+    <br> &nbsp; &nbsp;
+    <br> &nbsp; &nbsp;oXHR.onload = function() {
+    <br> &nbsp; &nbsp; &nbsp;WebAssembly.instantiate(oXHR.response, oImport))
+    <br> &nbsp; &nbsp; &nbsp;.then(oModule => oModule.instance.exports.fExported());
+    <br> &nbsp; &nbsp;}
+    <br> &nbsp;&lt;/script>
+    <br>&lt;/body>
+    <br>&lt;/html></code>
+    <a class="clsHide" href="#idWasmpgmSmpldem"></a></p>
+  <p id="idWasmpgmSmpldem">demo::
+    <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-compile.html">compile-demo</a>,
+    <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-compileStreaming.html">compileStreaming-demo</a>,
+    <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-instantiate.html">instantiate-demo</a>,
+    <br>* <a class="clsPreview" href="filMcsLwasm.files/simple-instantiateStreaming.html">instantiateStreaming-demo,
+    <a class="clsHide" href="#idWasmpgmSmplhml"></a></p>
+  </section>
+
+  <section id="idWasmpgmHlwd">
+  <h2 id="idWasmpgmHlwdH2">program.hello-world
+    <a class="clsHide" href="#idWasmpgmHlwdH2"></a></h2>
+  <p id="idWasmpgmHlwddsn">description::
+    <br>· example from spec's <a href="https://webassembly.github.io/spec/js-api/index.html">WebAssembly JavaScript Interface</a>.
+    <br>· imports 2 javascript-functions that print on console "hello," the-first and "world!" the-second.
+    <br>· then, uses the first imported as <a class="clsPreview" href="#idWasmfcnStrt">start-function</a> and exports the second imported.
+    <a class="clsHide" href="#idWasmpgmHlwddsn"></a></p>
+  <p id="idWasmpgmHlwdnam">name::
+    <br>* cpt.Wasm-program.hello-world,
+    <a class="clsHide" href="#idWasmpgmHlwdnam"></a></p>
+  <p id="idWasmpgmHlwdwat">wat-program::
+    <br><code>(module
+    <br> &nbsp;(import "oJs" "fImport1" (func $fImp1))
+    <br> &nbsp;(import "oJs" "fImport2" (func $fImp2))
+    <br> &nbsp;(func $fStart (call $fImp1))
+    <br> &nbsp;(start $fStart)
+    <br> &nbsp;(func (export "f") (call $fImp2))
+    <br>)</code>
+    <a class="clsHide" href="#idWasmpgmHlwdwat"></a></p>
+  <p id="idWasmpgmHlwdwasm">wasm-program::
+    <br>· we compile the-wat-program to wasm.
+    <br>· one method is with <a href="https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wat2wasm/">an-online-compiler</a>.
+    <a class="clsHide" href="#idWasmpgmHlwdwasm"></a></p>
+  <p id="idWasmpgmHlwdhml">html-program::
+    <br><code>&lt;html>
+    <br>&lt;body>
+    <br> &nbsp;&lt;h1>hello-world example&lt;/h1>
+    <br> &nbsp;&lt;p>· example from spec's &lt;a href="https://webassembly.github.io/spec/js-api/index.html">WebAssembly JavaScript Interface&lt;/a>
+    <br> &nbsp;&lt;p>· hit F12 to see console's output.
+    <br> &nbsp;&lt;script>
+    <br> &nbsp; &nbsp;var oImport = {oJs: {
+    <br> &nbsp; &nbsp; &nbsp;fImport1: () => console.log("hello,"),
+    <br> &nbsp; &nbsp; &nbsp;fImport2: () => console.log("world!")
+    <br> &nbsp; &nbsp;}};
+    <br> &nbsp; &nbsp;<a class="clsPreview" href="#idWasmrtewajoinststmf">WebAssembly.instantiateStreaming</a>(fetch('demo.wasm'), oImport)
+    <br> &nbsp; &nbsp;.then(oModule => oModule.instance.exports.f());
+    <br> &nbsp;&lt;/script>
+    <br>&lt;/body>
+    <br>&lt;/html></code>
+    <a class="clsHide" href="#idWasmpgmHlwdhml"></a></p>
+  <p id="idWasmpgmHlwddem">demo::
+    <br>· <a href="filMcsLwasm.files/demo.html">link</a>.
+    <a class="clsHide" href="#idWasmpgmHlwddem"></a></p>
   </section>
 </section>
 
