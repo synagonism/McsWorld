@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-29-0.2018-05-06 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-31-0.2018-05-08 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -44,23 +44,43 @@
     <a class="clsHide" href="#idWasmarchH1"></a></h1>
   <p id="idWasmarchdsn">description::
     <br>· Wasm is an intermediate language between a-high|middle-level and a-machine languge.
-    <br>· the-Wasm-archetype is a-high|middle-level-source-document of programing-languages such as C, C++, Rust, ...
-    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-03-20]
+    <br>· the-Wasm-archetype is a-high|middle-level-source-document of programing-languages such as C, C++, Rust, ..., which will-be-mapped to a-Wasm-binary-algorithm by a-compiler.
+    <br>· also, the-Wasm-archetype could-be a human info-processing-document, which will-be-mapped to a-Wasm-text-algorithm by a-human.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-05-07]
+    <br>===
+    <br>Consider WebAssembly for performance-intensive use cases such as games, music streaming, video editing, and CAD applications.
+    <br>[https://www.technologybreakingnews.com/2018/02/webassembly-tutorial-get-started-with-webassembly/]
     <a class="clsHide" href="#idWasmarchdsn"></a></p>
   <p id="idWasmarchnam">name::
     <br>* cpt.Wasm'archetype,
     <br>* cpt.Wasm'input-document,
     <a class="clsHide" href="#idWasmarchnam"></a></p>
+
+  <section id="idWasmlagtwa">
+  <h2 id="idWasmlagtwaH2">language compiled to Wasm
+    <a class="clsHide" href="#idWasmlagtwaH2"></a></h2>
+  <p id="idWasmlagtwadsn">description::
+    <br>· WebAssembly[a] is also a-compile-target, that is other languages like C, C++, Rust are-compiled to it[a].
+    <a class="clsHide" href="#idWasmlagtwadsn"></a></p>
+  <p id="idWasmlagtwanam">name::
+    <br>* cpt.Wasm'compile-target,
+    <br>* cpt.Wasm'language-that-is-compiled-to-Wasm,
+    <a class="clsHide" href="#idWasmlagtwanam"></a></p>
+  <p id="idWasmlagtwawpa">addressWpg::
+    <br>* <a href="https://github.com/appcypher/awesome-wasm-langs">https://github.com/appcypher/awesome-wasm-langs</a>,
+    <a class="clsHide" href="#idWasmlagtwawpa"></a></p>
+  </section>
 </section>
 
 <section id="idWasmalg">
   <h1 id="idWasmalgH1">algorithm (output-doc) of Wasm
     <a class="clsHide" href="#idWasmalgH1"></a></h1>
   <p id="idWasmalgdsn">description::
-    <br>· algorithm of Wasm is a-document describing the-Wasm-archetype understood by <a class="clsPreview" href="#idWasmalgmchn">Wasm-virtual-machine</a>.
+    <br>· Wasm-algorithm[a] is a-document, which is a-translation of <a class="clsPreview" href="#idWasmarch">a-Wasm-archetype</a> in a-format that <a class="clsPreview" href="#idWasmalgmchn">the-Wasm-virtual-machine</a> executes.
+    <br>· it[a] is written in 2 formats, a-text and a-binary.
     <br>· a-Wasm-algorithm is-not-understood directly by a-physical-machine.
-    <br>· it must-be-translated to machine-document.
-    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-03-18]
+    <br>· it[a] must-be-translated to machine-document.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-05-07]
     <a class="clsHide" href="#idWasmalgdsn"></a></p>
   <p id="idWasmalgnam">name::
     <br>* cpt.Wasm'algorithm,
@@ -465,6 +485,12 @@
   <section id="idWasmfcnrnvl">
   <h3 id="idWasmfcnrnvlH3">return-value of function
     <a class="clsHide" href="#idWasmfcnrnvlH3"></a></h3>
+  <p id="idWasmfcnrnvldsn">description::
+    <br>· the-return-value of a-function is just the final value left on the-stack.
+    <br>· the-WebAssembly validation-rules ensure the-stack matches exactly: if you declare a (result f32), then the-stack must contain exactly one f32 at the-end.
+    <br>· If there is no result-type, the-stack must-be-empty.
+    <br>[https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format]
+    <a class="clsHide" href="#idWasmfcnrnvldsn"></a></p>
   <p id="idWasmfcnrnvlnam">name::
     <br>* cpt.Wasm'result-of-function,
     <br>* cpt.Wasm-function'result,
@@ -606,6 +632,27 @@
     <br>* cpt.Wasm-start-function.text,
     <a class="clsHide" href="#idWasmfcnStrtTxtnam"></a></p>
   </section>
+  </section>
+
+  <section id="idWasmfcnAdd">
+  <h3 id="idWasmfcnAddH3">function.ADD
+    <a class="clsHide" href="#idWasmfcnAddH3"></a></h3>
+  <p id="idWasmfcnAdddsn">description::
+    <br>· input: 2 i32 numbers.
+    <br>· output: the-sum of input.
+    <br><code>
+    <br>(func (export "f") (param $p1 i32) (param $p2 i32) (result i32)
+    <br> &nbsp;<a class="clsPreview" href="#idWasmstcGtlcl">get_local</a> $p1
+    <br> &nbsp;get_local $p2
+    <br> &nbsp;<a class="clsPreview" href="#idWasmstcI32add">i32.add</a>
+    <br>)
+    <br>//=== javascript code:
+    <br>let f = oModule.instance.exports.f;
+    <br>console.log(f(8,2)); //outputs 10</code>
+    <a class="clsHide" href="#idWasmfcnAdddsn"></a></p>
+  <p id="idWasmfcnAddnam">name::
+    <br>* cpt.Wasm-function.add,
+    <a class="clsHide" href="#idWasmfcnAddnam"></a></p>
   </section>
   </section>
 
@@ -1453,8 +1500,21 @@
     <br>[<a href="https://webassembly.github.io/spec/core/_download/WebAssembly.pdf">https://webassembly.github.io/spec/core/_download/WebAssembly.pdf</a>]
     <a class="clsHide" href="#idWasmstcClfwNdsn"></a></p>
   <p id="idWasmstcClfwNnam">name::
+    <br>* cpt.Wasm'control-flow.no-instruction,
     <br>* cpt.Wasm-instruction.control-flow.no,
     <a class="clsHide" href="#idWasmstcClfwNnam"></a></p>
+
+  <section id="idWasmstcI32add">
+  <h3 id="idWasmstcI32addH3">instruction.i32.add
+    <a class="clsHide" href="#idWasmstcI32addH3"></a></h3>
+  <p id="idWasmstcI32adddsn">description::
+    <br>· i32.add pops two i32 values from the-stack, computes their sum (modulo 2^32) and pushes the resulting i32 value.
+    <a class="clsHide" href="#idWasmstcI32adddsn"></a></p>
+  <p id="idWasmstcI32addnam">name::
+    <br>* cpt.Wasm'i32.add-instruction,
+    <br>* cpt.Wasm-instruction.i32.add,
+    <a class="clsHide" href="#idWasmstcI32addnam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmstcNmrc">
@@ -1528,10 +1588,24 @@
   <section id="idWasmstcGtlcl">
   <h3 id="idWasmstcGtlclH3">instruction.get_local
     <a class="clsHide" href="#idWasmstcGtlclH3"></a></h3>
+  <p id="idWasmstcGtlcldsn">description::
+    <br>· pushes the-value of a-variable onto <a class="clsPreview" href="#idWasmalgmchnstk">the-stack</a>,
+    <a class="clsHide" href="#idWasmstcGtlcldsn"></a></p>
   <p id="idWasmstcGtlclnam">name::
     <br>* cpt.Wasm'get_local,
     <br>* cpt.Wasm-instruction.get_local,
     <a class="clsHide" href="#idWasmstcGtlclnam"></a></p>
+  <p id="idWasmstcGtlclexpl">example::
+    <br><code>(func (param $p1 i32) (param $p2 f32) (local $loc i32)
+    <br> &nbsp;get_local $p1
+    <br>)</code>
+    <br>===
+    <br><code>(func (param i32) (param f32) (local i32)
+    <br> &nbsp;get_local 0 ;; gets first parameter
+    <br> &nbsp;get_local 1 ;; gets second parameter
+    <br> &nbsp;get_local 2 ;; gets first local
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcGtlclexpl"></a></p>
   </section>
 
   <section id="idWasmstcStlcl">
@@ -2930,17 +3004,6 @@
   </section>
 </section>
 
-<section id="idWasmlagtwa">
-  <h1 id="idWasmlagtwaH1">language compiled to Wasm
-    <a class="clsHide" href="#idWasmlagtwaH1"></a></h1>
-  <p id="idWasmlagtwanam">name::
-    <br>* cpt.Wasm'language-that-is-compiled-to-Wasm,
-    <a class="clsHide" href="#idWasmlagtwanam"></a></p>
-  <p id="idWasmlagtwawpa">addressWpg::
-    <br>* <a href="https://github.com/appcypher/awesome-wasm-langs">https://github.com/appcypher/awesome-wasm-langs</a>,
-    <a class="clsHide" href="#idWasmlagtwawpa"></a></p>
-</section>
-
 <section id="idWasmtool">
   <h1 id="idWasmtoolH1">tool of Wasm
     <a class="clsHide" href="#idWasmtoolH1"></a></h1>
@@ -3016,6 +3079,7 @@
     <a class="clsHide" href="#idWasmtoolCplrWasm2watnam"></a></p>
   <p id="idWasmtoolCplrWasm2watwpa">addressWpg::
     <br>* online: <a href="https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wasm2wat/">https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wasm2wat/</a>,
+    <br>* wat2wasm: <a class="clsPreview" href="#idWasmtoolWabt">WABT</a> cli tool (wat2wasm test.wat -o test.wasm).
     <a class="clsHide" href="#idWasmtoolCplrWasm2watwpa"></a></p>
   </section>
 
@@ -3066,6 +3130,20 @@
   <p id="idWasmtoolWabtwpa">addressWpg::
     <br>* <a href="https://github.com/WebAssembly/wabt">https://github.com/WebAssembly/wabt</a>,
     <a class="clsHide" href="#idWasmtoolWabtwpa"></a></p>
+  <p id="idWasmtoolWabttool">tool::
+    <br>* wat2wasm: translate from WebAssembly text format to the WebAssembly binary format
+    <br>* wasm2wat: the inverse of wat2wasm, translate from the binary format back to the text format (also known as a .wat)
+    <br>* wasm-objdump: print information about a wasm binary. Similiar to objdump.
+    <br>* wasm-interp: decode and run a WebAssembly binary file using a stack-based interpreter
+    <br>* wat-desugar: parse .wat text form as supported by the spec interpreter (s-expressions, flat syntax, or mixed) and print "canonical" flat format
+    <br>* wasm2c: convert a WebAssembly binary file to a C source and header
+    <br>[<a href="https://github.com/WebAssembly/wabt">https://github.com/WebAssembly/wabt</a>]
+    <a class="clsHide" href="#idWasmtoolWabttool"></a></p>
+  <p id="idWasmtoolWabtinstg">installing::
+    <br>* clone: $ git clone --recursive https://github.com/WebAssembly/wabt
+    <br>* build: instructions in <a href="https://github.com/WebAssembly/wabt">https://github.com/WebAssembly/wabt</a>.
+    <br>* set directory of tools on path.
+    <a class="clsHide" href="#idWasmtoolWabtinstg"></a></p>
   </section>
 
   <section id="idWasmtoolBnrn">
@@ -3532,12 +3610,13 @@
   <h2 id="idWasmTxtsexnH2">S-expression of text-Wasm
     <a class="clsHide" href="#idWasmTxtsexnH2"></a></h2>
   <p id="idWasmTxtsexndsn">description::
-    <br>· S-expressions are a very old and very simple textual-format for representing trees of nodes.
+    <br>· S-expressions are a very old and very simple textual-format for <span class="clsColorRed">representing trees of nodes</span>.
     <br>· each node in the-tree goes inside a-pair of parentheses — ( ... ).
     <br>· the first label inside the-parenthesis tells you what type of node it is, and after that there-is a space-separated list of either attributes or child-nodes.
     <br>[<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format">https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format</a>]
     <a class="clsHide" href="#idWasmTxtsexndsn"></a></p>
   <p id="idWasmTxtsexnnam">name::
+    <br>* cpt.S-expression.Wasm,
     <br>* cpt.Wasm'S-expression,
     <a class="clsHide" href="#idWasmTxtsexnnam"></a></p>
   </section>
