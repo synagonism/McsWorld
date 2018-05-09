@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-31-0.2018-05-08 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-32-0.2018-05-09 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -865,6 +865,9 @@
     <br>* cpt.Wasm-memory,
     <br>* cpt.Wasm-sem-unit.memory,
     <a class="clsHide" href="#idWasmsuntMmrnam"></a></p>
+  <p id="idWasmsuntMmrusg">usage::
+    <br>· the-memory is-used to store strings and other data other than numbers.
+    <a class="clsHide" href="#idWasmsuntMmrusg"></a></p>
 
   <section id="idWasmsuntMmrdlrn">
   <h3 id="idWasmsuntMmrdlrnH3">declaration of memory
@@ -897,6 +900,11 @@
   <p id="idWasmsuntMmrTxtnam">name::
     <br>* cpt.Wasm-memory.text,
     <a class="clsHide" href="#idWasmsuntMmrTxtnam"></a></p>
+  <p id="idWasmsuntMmrTxtexpl">example::
+    <br><code>//declares a-memory and exports it as "mem"
+    <br>(memory (export "mem") 1)</code>
+    <br>
+    <a class="clsHide" href="#idWasmsuntMmrTxtexpl"></a></p>
   </section>
   </section>
 
@@ -982,64 +990,6 @@
     <br>* cpt.Wasm'external-type,
     <br>* cpt.Wasm-sem-unit.external,
     <a class="clsHide" href="#idWasmsuntExtlnam"></a></p>
-
-  <section id="idWasmsuntExpt">
-  <h3 id="idWasmsuntExptH3">sem-unit.EXPORT
-    <a class="clsHide" href="#idWasmsuntExptH3"></a></h3>
-  <p id="idWasmsuntExptdsn">description::
-    <br>· <a class="clsPreview" href="#idWasmalgscnExpt">the-exports-component</a> of a-module defines a-set of exports that become accessible to the-host-environment once the-module has-been-instantiated.
-    <br><code>- export ::= {name name,desc exportdesc}
-    <br>- exportdesc ::= func funcidx
-    <br> &nbsp; | table tableidx
-    <br> &nbsp; | mem memidx
-    <br> &nbsp; | global globalidx</code>
-    <br>· each export is-labeled by a unique name.
-    <br>· exportable definitions are functions, tables, memories, and globals, which are-referenced through a respective descriptor.
-    <br>· note: in the current version of WebAssembly, only immutable globals may-be-exported.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#exports">https://webassembly.github.io/spec/core/syntax/modules.html#exports</a> {1-0.2018-03-28}]
-    <a class="clsHide" href="#idWasmsuntExptdsn"></a></p>
-  <p id="idWasmsuntExptnam">name::
-    <br>* cpt.Wasm'export-sem-unit,
-    <br>* cpt.Wasm-export,
-    <br>* cpt.Wasm-sem-unit.export,
-    <a class="clsHide" href="#idWasmsuntExptnam"></a></p>
-
-  <section id="idWasmsuntExptBnr">
-  <h4 id="idWasmsuntExptBnrH4">export.BINARY
-    <a class="clsHide" href="#idWasmsuntExptBnrH4"></a></h4>
-  <p id="idWasmsuntExptBnrdsn">description::
-    <br>· the-export-section has the-id 7.
-    <br>· it decodes into a-vector of exports that represent the-exports-component of a-module.
-    <br><code>- exportsec ::= ex∗:section7 (vec(export)) ⇒ ex∗
-    <br>- export ::= nm:name  d:exportdesc ⇒ {name nm,desc d}
-    <br>- exportdesc ::= 0x00  x:funcidx ⇒ func x
-    <br> &nbsp; | 0x01  x:tableidx ⇒ table x
-    <br> &nbsp; | 0x02  x:memidx ⇒ mem x
-    <br> &nbsp; | 0x03  x:globalidx ⇒ global x</code>
-    <a class="clsHide" href="#idWasmsuntExptBnrdsn"></a></p>
-  <p id="idWasmsuntExptBnrnam">name::
-    <br>* cpt.Wasm-export.binary,
-    <a class="clsHide" href="#idWasmsuntExptBnrnam"></a></p>
-  </section>
-
-  <section id="idWasmsuntExptTxt">
-  <h4 id="idWasmsuntExptTxtH4">export.TEXT
-    <a class="clsHide" href="#idWasmsuntExptTxtH4"></a></h4>
-  <p id="idWasmsuntExptTxtdsn">description::
-    <br>· the-syntax for exports mirrors their abstract-syntax directly.
-    <br><code>- exportI ::= ‘(’ ‘export’  nm:name  d:exportdescI ‘)’ ⇒ {name nm,desc d}
-    <br>- exportdescI ::= ‘(’ ‘func’  x:funcidxI ‘)’ ⇒ func x
-    <br> &nbsp; | ‘(’ ‘table’  x:tableidxI ‘)’ ⇒ table x
-    <br> &nbsp; | ‘(’ ‘memory’  x:memidxI ‘)’ ⇒mem x
-    <br> &nbsp; | ‘(’ ‘global’  x:globalidxI ‘)’ ⇒ global x</code>
-    <br>· abbreviations: as an-abbreviation, exports may also be-specified inline with function, table, memory, or global definitions; see the respective sections.
-    <br>
-    <a class="clsHide" href="#idWasmsuntExptTxtdsn"></a></p>
-  <p id="idWasmsuntExptTxtnam">name::
-    <br>* cpt.Wasm-export.text,
-    <a class="clsHide" href="#idWasmsuntExptTxtnam"></a></p>
-  </section>
-  </section>
   </section>
 
   <section id="idWasmsuntNmd">
@@ -1352,27 +1302,6 @@
     <a class="clsHide" href="#idWasmstcSpcP1"></a></p>
   </section>
 
-  <section id="idWasmstcBsc">
-  <h2 id="idWasmstcBscH2">instruction.BASIC
-    <a class="clsHide" href="#idWasmstcBscH2"></a></h2>
-  <p id="idWasmstcBscnam">name::
-    <br>* cpt.Wasm-instruction.basic,
-    <a class="clsHide" href="#idWasmstcBscnam"></a></p>
-  <p id="idWasmstcBscSpc">specific::
-    <br>* No-Op
-    <br>* Drop
-    <br>* Constant
-    <br>* Get Local
-    <br>* Set Local
-    <br>* Tee Local
-    <br>* Get Global
-    <br>* Set Global
-    <br>* Select
-    <br>* Call
-    <br>* Indirect Call,
-    <a class="clsHide" href="#idWasmstcBscSpc"></a></p>
-  </section>
-
   <section id="idWasmstcClfw">
   <h2 id="idWasmstcClfwH2">instruction.CONTROL-FLOW
     <a class="clsHide" href="#idWasmstcClfwH2"></a></h2>
@@ -1380,16 +1309,17 @@
     <br>* cpt.Wasm-instruction.control-flow,
     <a class="clsHide" href="#idWasmstcClfwnam"></a></p>
   <p id="idWasmstcClfwSpc">specific::
-    <br>* Block
-    <br>* Loop
+    <br>* <a class="clsPreview" href="#idWasmstcClfwBlck">block</a>,
+    <br>* <a class="clsPreview" href="#idWasmstcClfwLoop">loop</a>,
+    <br>* <a class="clsPreview" href="#idWasmstcClfwIf">if</a>,
+    <br>* else,
+    <br>* end,
+    <br>* <a class="clsPreview" href="#idWasmstcClfwNop">nop</a>,
+    <br>* return,
+    <br>* <a class="clsPreview" href="#idWasmstcClfwUnrcbl">unreachable</a>,
     <br>* Unconditional Branch
     <br>* Conditional Branch
     <br>* Table Branch
-    <br>* If
-    <br>* Else
-    <br>* End
-    <br>* Return
-    <br>* Unreachable,
     <a class="clsHide" href="#idWasmstcClfwSpc"></a></p>
 
   <section id="idWasmstcClfwStrd">
@@ -1439,6 +1369,29 @@
     <a class="clsHide" href="#idWasmstcClfwBlcknam"></a></p>
   </section>
 
+  <section id="idWasmstcClfwElse">
+  <h3 id="idWasmstcClfwElseH3">instruction.else
+    <a class="clsHide" href="#idWasmstcClfwElseH3"></a></h3>
+  <p id="idWasmstcClfwElsenam">name::
+    <br>* cpt.Wasm'else-instruction,
+    <br>* cpt.Wasm-instruction.else,
+    <a class="clsHide" href="#idWasmstcClfwElsenam"></a></p>
+  </section>
+
+  <section id="idWasmstcClfwEnd">
+  <h3 id="idWasmstcClfwEndH3">instruction.end
+    <a class="clsHide" href="#idWasmstcClfwEndH3"></a></h3>
+  <p id="idWasmstcClfwEnddsn">description::
+    <br>· marks the end of a block, loop, if, or function.
+    <br>· Blocks are composed of matched pairs of block … end instructions, loops with matched pairs of loop … end instructions, and ifs with either if … end or if … else … end sequences. For each of these constructs the instructions in the ellipsis are said to be enclosed in the construct.
+    <br>[https://webassembly.org/docs/semantics/]
+    <a class="clsHide" href="#idWasmstcClfwEnddsn"></a></p>
+  <p id="idWasmstcClfwEndnam">name::
+    <br>* cpt.Wasm'end-instruction,
+    <br>* cpt.Wasm-instruction.end,
+    <a class="clsHide" href="#idWasmstcClfwEndnam"></a></p>
+  </section>
+
   <section id="idWasmstcClfwIf">
   <h3 id="idWasmstcClfwIfH3">instruction.if
     <a class="clsHide" href="#idWasmstcClfwIfH3"></a></h3>
@@ -1475,6 +1428,15 @@
     <a class="clsHide" href="#idWasmstcClfwNopnam"></a></p>
   </section>
 
+  <section id="idWasmstcClfwRtrn">
+  <h3 id="idWasmstcClfwRtrnH3">instruction.return
+    <a class="clsHide" href="#idWasmstcClfwRtrnH3"></a></h3>
+  <p id="idWasmstcClfwRtrnnam">name::
+    <br>* cpt.Wasm'return-instruction,
+    <br>* cpt.Wasm-instruction.return,
+    <a class="clsHide" href="#idWasmstcClfwRtrnnam"></a></p>
+  </section>
+
   <section id="idWasmstcClfwUnrcbl">
   <h3 id="idWasmstcClfwUnrcblH3">instruction.unreachable
     <a class="clsHide" href="#idWasmstcClfwUnrcblH3"></a></h3>
@@ -1504,6 +1466,24 @@
     <br>* cpt.Wasm-instruction.control-flow.no,
     <a class="clsHide" href="#idWasmstcClfwNnam"></a></p>
 
+  <section id="idWasmstcCall">
+  <h3 id="idWasmstcCallH3">instruction.call
+    <a class="clsHide" href="#idWasmstcCallH3"></a></h3>
+  <p id="idWasmstcCalldsn">description::
+    <br>· the-call-instruction calls a single function, given its index or name.
+    <a class="clsHide" href="#idWasmstcCalldsn"></a></p>
+  <p id="idWasmstcCallnam">name::
+    <br>* cpt.Wasm'call-instruction,
+    <br>* cpt.Wasm-instruction.call,
+    <a class="clsHide" href="#idWasmstcCallnam"></a></p>
+  <p id="idWasmstcCallexpl">example::
+    <br><code>(func $f1 ...)
+    <br>(func (export "f2") (result i32)
+    <br> &nbsp;call $f1
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcCallexpl"></a></p>
+  </section>
+
   <section id="idWasmstcI32add">
   <h3 id="idWasmstcI32addH3">instruction.i32.add
     <a class="clsHide" href="#idWasmstcI32addH3"></a></h3>
@@ -1515,6 +1495,39 @@
     <br>* cpt.Wasm-instruction.i32.add,
     <a class="clsHide" href="#idWasmstcI32addnam"></a></p>
   </section>
+
+  <section id="idWasmstcI32cnst">
+  <h3 id="idWasmstcI32cnstH3">instruction.i32.const
+    <a class="clsHide" href="#idWasmstcI32cnstH3"></a></h3>
+  <p id="idWasmstcI32cnstdsn">description::
+    <br>· i32.const just defines a 32-bit integer and pushes it onto <a class="clsPreview" href="#idWasmalgmchnstk">the-stack</a>.
+    <a class="clsHide" href="#idWasmstcI32cnstdsn"></a></p>
+  <p id="idWasmstcI32cnstnam">name::
+    <br>* cpt.Wasm'i32.const-instruction,
+    <br>* cpt.Wasm-instruction.i32.const,
+    <a class="clsHide" href="#idWasmstcI32cnstnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idWasmstcBsc">
+  <h2 id="idWasmstcBscH2">instruction.BASIC
+    <a class="clsHide" href="#idWasmstcBscH2"></a></h2>
+  <p id="idWasmstcBscnam">name::
+    <br>* cpt.Wasm-instruction.basic,
+    <a class="clsHide" href="#idWasmstcBscnam"></a></p>
+  <p id="idWasmstcBscSpc">specific::
+    <br>* No-Op
+    <br>* Drop
+    <br>* Constant
+    <br>* Get Local
+    <br>* Set Local
+    <br>* Tee Local
+    <br>* Get Global
+    <br>* Set Global
+    <br>* Select
+    <br>* Call
+    <br>* Indirect Call,
+    <a class="clsHide" href="#idWasmstcBscSpc"></a></p>
   </section>
 
   <section id="idWasmstcNmrc">
@@ -1762,6 +1775,97 @@
   <p id="idWasmstcExrnTxtnam">name::
     <br>* cpt.Wasm-expression.text,
     <a class="clsHide" href="#idWasmstcExrnTxtnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idWasmstcExpt">
+  <h2 id="idWasmstcExptH2">instruction.EXPORT
+    <a class="clsHide" href="#idWasmstcExptH2"></a></h2>
+  <p id="idWasmstcExptdsn">description::
+    <br>· <a class="clsPreview" href="#idWasmalgscnExpt">the-exports-component</a> of a-module defines a-set of exports that become accessible to the-host-environment once the-module has-been-instantiated.
+    <br><code>- export ::= {name name,desc exportdesc}
+    <br>- exportdesc ::= func funcidx
+    <br> &nbsp; | table tableidx
+    <br> &nbsp; | mem memidx
+    <br> &nbsp; | global globalidx</code>
+    <br>· each export is-labeled by a unique name.
+    <br>· exportable definitions are functions, tables, memories, and globals, which are-referenced through a respective descriptor.
+    <br>· note: in the current version of WebAssembly, only immutable globals may-be-exported.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#exports">https://webassembly.github.io/spec/core/syntax/modules.html#exports</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmstcExptdsn"></a></p>
+  <p id="idWasmstcExptnam">name::
+    <br>* cpt.Wasm'export-instruction,
+    <br>* cpt.Wasm-export,
+    <br>* cpt.Wasm-instruction.export,
+    <a class="clsHide" href="#idWasmstcExptnam"></a></p>
+
+  <section id="idWasmstcExptBnr">
+  <h3 id="idWasmstcExptBnrH3">export.BINARY
+    <a class="clsHide" href="#idWasmstcExptBnrH3"></a></h3>
+  <p id="idWasmstcExptBnrdsn">description::
+    <br>· the-export-section has the-id 7.
+    <br>· it decodes into a-vector of exports that represent the-exports-component of a-module.
+    <br><code>- exportsec ::= ex∗:section7 (vec(export)) ⇒ ex∗
+    <br>- export ::= nm:name  d:exportdesc ⇒ {name nm,desc d}
+    <br>- exportdesc ::= 0x00  x:funcidx ⇒ func x
+    <br> &nbsp; | 0x01  x:tableidx ⇒ table x
+    <br> &nbsp; | 0x02  x:memidx ⇒ mem x
+    <br> &nbsp; | 0x03  x:globalidx ⇒ global x</code>
+    <a class="clsHide" href="#idWasmstcExptBnrdsn"></a></p>
+  <p id="idWasmstcExptBnrnam">name::
+    <br>* cpt.Wasm-export.binary,
+    <a class="clsHide" href="#idWasmstcExptBnrnam"></a></p>
+  </section>
+
+  <section id="idWasmstcExptTxt">
+  <h3 id="idWasmstcExptTxtH3">export.TEXT
+    <a class="clsHide" href="#idWasmstcExptTxtH3"></a></h3>
+  <p id="idWasmstcExptTxtdsn">description::
+    <br>· the-syntax for exports mirrors their abstract-syntax directly.
+    <br><code>- exportI ::= ‘(’ ‘export’  nm:name  d:exportdescI ‘)’ ⇒ {name nm,desc d}
+    <br>- exportdescI ::= ‘(’ ‘func’  x:funcidxI ‘)’ ⇒ func x
+    <br> &nbsp; | ‘(’ ‘table’  x:tableidxI ‘)’ ⇒ table x
+    <br> &nbsp; | ‘(’ ‘memory’  x:memidxI ‘)’ ⇒mem x
+    <br> &nbsp; | ‘(’ ‘global’  x:globalidxI ‘)’ ⇒ global x</code>
+    <br>· abbreviations: as an-abbreviation, exports may also be-specified inline with function, table, memory, or global definitions; see the respective sections.
+    <br>
+    <a class="clsHide" href="#idWasmstcExptTxtdsn"></a></p>
+  <p id="idWasmstcExptTxtnam">name::
+    <br>* cpt.Wasm-export.text,
+    <a class="clsHide" href="#idWasmstcExptTxtnam"></a></p>
+  <p id="idWasmstcExptTxtexpl">example::
+    <br><code>(func $fAdd … )
+    <br>(export "fAdd" (func $fAdd))</code>
+    <br>or
+    <br><code>(func (export "fAdd") ...)</code>
+    <a class="clsHide" href="#idWasmstcExptTxtexpl"></a></p>
+  </section>
+  </section>
+
+  <section id="idWasmstcImprt">
+  <h2 id="idWasmstcImprtH2">instruction.IMPORT
+    <a class="clsHide" href="#idWasmstcImprtH2"></a></h2>
+  <p id="idWasmstcImprtnam">name::
+    <br>* cpt.Wasm'import-instruction,
+    <br>* cpt.Wasm-import,
+    <br>* cpt.Wasm-instruction.import,
+    <a class="clsHide" href="#idWasmstcImprtnam"></a></p>
+
+  <section id="idWasmstcImprtTxt">
+  <h3 id="idWasmstcImprtTxtH3">import.TEXT
+    <a class="clsHide" href="#idWasmstcImprtTxtH3"></a></h3>
+  <p id="idWasmstcImprtTxtexpl">example::
+    <br>//imports the-fImported javascript-function and name it fImp.
+    <br><code>//wat file:
+    <br>(func $fImp (import "oJs" "fImported") (param i32))
+    <br>//html file:
+    <br>var oImport = {oJs: {fImported: arg => console.log(arg)} };
+    <br>WebAssembly.instantiateStreaming(fetch('simple.wasm'), oImport)</code>
+    <br>===
+    <br>//the-above with import-sentence
+    <br><code>//wat file:
+    <br>(import "oJs" "fImported" (func $fImp (param i32)))</code>
+    <a class="clsHide" href="#idWasmstcImprtTxtexpl"></a></p>
   </section>
   </section>
 </section>
@@ -3647,6 +3751,19 @@
   <p id="idWasmTxtrscwpa">addressWpg::
     <br>* <a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format">https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format</a>,
     <a class="clsHide" href="#idWasmTxtrscwpa"></a></p>
+  </section>
+
+  <section id="idWasmWast">
+  <h2 id="idWasmWastH2">.wast-format
+    <a class="clsHide" href="#idWasmWastH2"></a></h2>
+  <p id="idWasmWastdsn">description::
+    <br>The .wast format understood by some of the listed tools is a superset of the .wat format that is intended for writing test scripts. Besides the definition of modules such scripts can contain assertions and other commands as defined by a grammar extension. These extensions are not part of the official text format, which may only contain a single module.
+    <br>[<a href="https://webassembly.org/docs/text-format/">https://webassembly.org/docs/text-format/</a>]
+    <a class="clsHide" href="#idWasmWastdsn"></a></p>
+  <p id="idWasmWastnam">name::
+    <br>* cpt.Wasm'wast-format,
+    <br>* cpt.wast-format,
+    <a class="clsHide" href="#idWasmWastnam"></a></p>
   </section>
 </section>
 
