@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-33-0.2018-05-10 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-34-0.2018-05-11 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -95,8 +95,8 @@
   <h1 id="idWasmalgmchnH1">algo-machine of Wasm
     <a class="clsHide" href="#idWasmalgmchnH1"></a></h1>
   <p id="idWasmalgmchndsn">description::
-    <br>· the-machine that understands <a class="clsPreview" href="#idWasmalg">a-Wasm-algorithm</a> is not a real machine, it is a virtual machine, intermediate to the real machine that executes the-algorithm.
-    <br>· it is a-stack-machine, this means that all the-values an-operation needs are-inserted in a-stack before the-operation is-performed.
+    <br>· the-machine[a] that understands <a class="clsPreview" href="#idWasmalg">a-Wasm-algorithm</a> is not a real machine, it is a virtual machine, intermediate to the real machine that executes the-algorithm.
+    <br>· it[a] is a-stack-machine, this means that all the-values an-operation needs are-inserted in a-stack before the-operation is-performed.
     <a class="clsHide" href="#idWasmalgmchndsn"></a></p>
   <p id="idWasmalgmchnnam">name::
     <br>* cpt.Wasm'computational-model,
@@ -105,6 +105,9 @@
     <br>* cpt.Wasm'stack-machine,
     <br>* cpt.Wasm'virtual-machine,
     <a class="clsHide" href="#idWasmalgmchnnam"></a></p>
+  <p id="idWasmalgmchnwpa">addressWpg::
+    <br>* {2017-04-25} Sven-Sauleau, Imagine the computer is a stack (using Forth), <a href="https://medium.com/@svensauleau/imagine-the-computer-is-a-stack-91456cde51da">https://medium.com/@svensauleau/</a>,
+    <a class="clsHide" href="#idWasmalgmchnwpa"></a></p>
 
   <section id="idWasmalgmchnstr">
   <h2 id="idWasmalgmchnstrH2">store of Wasm-machine
@@ -548,10 +551,17 @@
     <a class="clsHide" href="#idWasmfcnbodyH3"></a></h3>
   <p id="idWasmfcnbodydsn">description::
     <br>· the-body-of-a-function is a-sequence of instructions that describe the-process of the-function:
-    <br><code>get_local 0  // push parameter #0 on stack (our dividend)
-    <br>i64.const 2  // push constant int64 "2" on stack (our divisor)
-    <br>i64.div_u    // unsigned division; pushes result onto stack
-    <br>end // ends function, resulting in one i64 (top of stack)</code>
+    <br><code>(i32.mul
+    <br> &nbsp;(i32.add (i32.const 5) (get_local $x))
+    <br> &nbsp;(i32.const 2)
+    <br>)</code>
+    <br>or in the following format:
+    <br><code>i32.const 5
+    <br>get_local $x
+    <br>i32.add
+    <br>i32.const 2
+    <br>i32.mul</code>
+    <br>· in the-binary-format, the-order of instructions is always sequential.
     <a class="clsHide" href="#idWasmfcnbodydsn"></a></p>
   <p id="idWasmfcnbodynam">name::
     <br>* cpt.Wasm-function'body,
@@ -902,6 +912,7 @@
     <a class="clsHide" href="#idWasmsuntMmrTxtnam"></a></p>
   <p id="idWasmsuntMmrTxtexpl">example::
     <br><code>//declares a-memory and exports it as "mem"
+    <br>//the ‘1’ indicates that the-memory requires at 1 <a class="clsPreview" href="#idWasmsuntMmrpage">page</a>.
     <br>(memory (export "mem") 1)</code>
     <br>
     <a class="clsHide" href="#idWasmsuntMmrTxtexpl"></a></p>
@@ -1506,6 +1517,18 @@
     <br>* cpt.Wasm'i32.const-instruction,
     <br>* cpt.Wasm-instruction.i32.const,
     <a class="clsHide" href="#idWasmstcI32cnstnam"></a></p>
+  </section>
+
+  <section id="idWasmstcI32mul">
+  <h3 id="idWasmstcI32mulH3">instruction.i32.mul
+    <a class="clsHide" href="#idWasmstcI32mulH3"></a></h3>
+  <p id="idWasmstcI32muldsn">description::
+    <br>· pop two values from <a class="clsPreview" href="#idWasmalgmchnstk">the-stack</a>, multiply them, and push the-result onto the-stack.
+    <a class="clsHide" href="#idWasmstcI32muldsn"></a></p>
+  <p id="idWasmstcI32mulnam">name::
+    <br>* cpt.Wasm'i32.mul-instruction,
+    <br>* cpt.Wasm-instruction.i32.mul,
+    <a class="clsHide" href="#idWasmstcI32mulnam"></a></p>
   </section>
   </section>
 
@@ -2815,8 +2838,8 @@
   <h1 id="idWasmalgLbrH1">algo.LIBRARY
     <a class="clsHide" href="#idWasmalgLbrH1"></a></h1>
   <p id="idWasmalgLbrdsn">description::
-    <br>· Wasm-library is <a class="clsPreview" href="#idWasmmdl">a-module</a> written with the-goal to be-used inside other modules.
-    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-04-08]
+    <br>with WebAssembly there’s no difference between a “program” and a “library” — there are only “modules”, each which can tie in and communicate with other modules, and each which can have a “main” function.
+    <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
     <a class="clsHide" href="#idWasmalgLbrdsn"></a></p>
   <p id="idWasmalgLbrnam">name::
     <br>* cpt.Wasm'library,
@@ -3584,6 +3607,9 @@
   <p id="idWasmrtevldgnam">name::
     <br>* cpt.Wasm'validating,
     <a class="clsHide" href="#idWasmrtevldgnam"></a></p>
+  <p id="idWasmrtevldgwpa">addressWpg::
+    <br>* {2018-04-07} Mauro-Bringolf, Learning the Webassembly type system, <a href="https://maurobringolf.ch/2018/04/learning-the-webassembly-type-system/">https://maurobringolf.ch/</a>,
+    <a class="clsHide" href="#idWasmrtevldgwpa"></a></p>
   </section>
 
   <section id="idWasmrteextg">
