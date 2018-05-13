@@ -1098,151 +1098,155 @@
   <section id="idWasmalgopcdSpc">
   <h3 id="idWasmalgopcdSpcH3">opcode.SPECIFIC
     <a class="clsHide" href="#idWasmalgopcdSpcH3"></a></h3>
-  <p id="idWasmalgopcdSpcSpc">specific::
-    <br>* opcode.block: the beginning of a block construct, a sequence of instructions with a label at the end
-    <br>* opcode.br: branch to a given label in an enclosing construct
-    <br>* opcode.br_if: conditionally branch to a given label in an enclosing construct
-    <br>* opcode.br_table: a jump table which jumps to a label in an enclosing construct
-    <br>* opcode.call: call function directly
-    <br>* opcode.call_indirect: call function indirectly
-    <br>* opcode.current_memory : return the current memory size in units of pages.
-    <br>* opcode.drop: a unary operator that discards the value of its operand.
-    <br>* opcode.else: marks the else block of an if
-    <br>* opcode.end: an instruction that marks the end of a block, loop, if, or function
-    <br>* opcode.f32.abs: absolute value
-    <br>* opcode.f32.add: addition
-    <br>* opcode.f32.ceil: ceiling operator
-    <br>* opcode.f32.const: produce the value of an f32 immediate
-    <br>* opcode.f32.convert_s/i32: convert a signed 32-bit integer to a 32-bit float
-    <br>* opcode.f32.convert_s/i64: convert a signed 64-bit integer to a 32-bit float
-    <br>* opcode.f32.convert_u/i32: convert an unsigned 32-bit integer to a 32-bit float
-    <br>* opcode.f32.convert_u/i64: convert an unsigned 64-bit integer to a 32-bit float
-    <br>* opcode.f32.copysign: copysign
-    <br>* opcode.f32.demote/f64: demote a 64-bit float to a 32-bit float
-    <br>* opcode.f32.div: division
-    <br>* opcode.f32.eq: compare ordered and equal
-    <br>* opcode.f32.floor: floor operator
-    <br>* opcode.f32.ge: compare ordered and greater than or equal
-    <br>* opcode.f32.gt: compare ordered and greater than
-    <br>* opcode.f32.le: compare ordered and less than or equal
-    <br>* opcode.f32.load: load 4 bytes as f32
-    <br>* opcode.f32.lt: compare ordered and less than
-    <br>* opcode.f32.max: maximum (binary operator); if either operand is NaN, returns NaN
-    <br>* opcode.f32.min: minimum (binary operator); if either operand is NaN, returns NaN
-    <br>* opcode.f32.mul: multiplication
-    <br>* opcode.f32.ne: compare unordered or unequal
-    <br>* opcode.f32.nearest: round to nearest integer, ties to even
-    <br>* opcode.f32.neg: negation
-    <br>* opcode.f32.reinterpret/i32: reinterpret the bits of a 32-bit integer as a 32-bit float
-    <br>* opcode.f32.sqrt: square root
-    <br>* opcode.f32.store: (no conversion) store 4 bytes
-    <br>* opcode.f32.sub: subtraction
-    <br>* opcode.f32.trunc: round to nearest integer towards zero
-    <br>* opcode.f64.abs: absolute value
-    <br>* opcode.f64.add: addition
-    <br>* opcode.f64.ceil: ceiling operator
-    <br>* opcode.f64.const: produce the value of an f64 immediate
-    <br>* opcode.f64.convert_s/i32: convert a signed 32-bit integer to a 64-bit float
-    <br>* opcode.f64.convert_s/i64: convert a signed 64-bit integer to a 64-bit float
-    <br>* opcode.f64.convert_u/i32: convert an unsigned 32-bit integer to a 64-bit float
-    <br>* opcode.f64.convert_u/i64: convert an unsigned 64-bit integer to a 64-bit float
-    <br>* opcode.f64.copysign: copysign
-    <br>* opcode.f64.div: division
-    <br>* opcode.f64.eq: compare ordered and equal
-    <br>* opcode.f64.floor: floor operator
-    <br>* opcode.f64.ge: compare ordered and greater than or equal
-    <br>* opcode.f64.gt: compare ordered and greater than
-    <br>* opcode.f64.le: compare ordered and less than or equal
-    <br>* opcode.f64.load: load 8 bytes as f64
-    <br>* opcode.f64.lt: compare ordered and less than
-    <br>* opcode.f64.max: maximum (binary operator); if either operand is NaN, returns NaN
-    <br>* opcode.f64.min: minimum (binary operator); if either operand is NaN, returns NaN
-    <br>* opcode.f64.mul: multiplication
-    <br>* opcode.f64.ne: compare unordered or unequal
-    <br>* opcode.f64.nearest: round to nearest integer, ties to even
-    <br>* opcode.f64.neg: negation
-    <br>* opcode.f64.promote/f32: promote a 32-bit float to a 64-bit float
-    <br>* opcode.f64.reinterpret/i64: reinterpret the bits of a 64-bit integer as a 64-bit float
-    <br>* opcode.f64.sqrt: square root
-    <br>* opcode.f64.store: (no conversion) store 8 bytes
-    <br>* opcode.f64.sub: subtraction
-    <br>* opcode.f64.trunc: round to nearest integer towards zero
-    <br>* opcode.get_global: get the current value of a global variable
-    <br>* opcode.get_local: read the current value of a local variable
-    <br>* opcode.grow_memory : grow linear memory by a given unsigned delta of pages. Return the previous memory size in units of pages or -1 on failure.
-    <br>* opcode.i32.add: sign-agnostic addition
-    <br>* opcode.i32.and: sign-agnostic bitwise and
-    <br>* opcode.i32.clz: sign-agnostic count leading zero bits (All zero bits are considered leading if the value is zero)
-    <br>* opcode.i32.const: produce the value of an i32 immediate
-    <br>* opcode.i32.ctz: sign-agnostic count trailing zero bits (All zero bits are considered trailing if the value is zero)
-    <br>* opcode.i32.div_s: signed division (result is truncated toward zero)
-    <br>* opcode.i32.div_u: unsigned division (result is floored)
-    <br>* opcode.i32.eq: sign-agnostic compare equal
-    <br>* opcode.i32.eqz: compare equal to zero (return 1 if operand is zero, 0 otherwise)
-    <br>* opcode.i32.ge_s: signed greater than or equal
-    <br>* opcode.i32.ge_u: unsigned greater than or equal
-    <br>* opcode.i32.gt_s: signed greater than
-    <br>* opcode.i32.gt_u: unsigned greater than
-    <br>* opcode.i32.le_s: signed less than or equal
-    <br>* opcode.i32.le_u: unsigned less than or equal
-    <br>* opcode.i32.load8_s: load 1 byte and sign-extend i8 to i32
-    <br>* opcode.i32.load8_u: load 1 byte and zero-extend i8 to i32
-    <br>* opcode.i32.load16_s: load 2 bytes and sign-extend i16 to i32
-    <br>* opcode.i32.load16_u: load 2 bytes and zero-extend i16 to i32
-    <br>* opcode.i32.load: load 4 bytes as i32
-    <br>* opcode.i32.lt_s: signed less than
-    <br>* opcode.i32.lt_u: unsigned less than
-    <br>* opcode.i32.mul: sign-agnostic multiplication (lower 32-bits)
-    <br>* opcode.i32.ne: sign-agnostic compare unequal
-    <br>* opcode.i32.or: sign-agnostic bitwise inclusive or
-    <br>* opcode.i32.popcnt: sign-agnostic count number of one bits
-    <br>* opcode.i32.reinterpret/f32: reinterpret the bits of a 32-bit float as a 32-bit integer
-    <br>* opcode.i32.rem_s: signed remainder (result has the sign of the dividend)
-    <br>* opcode.i32.rem_u: unsigned remainder
-    <br>* opcode.i32.rotl: sign-agnostic rotate left
-    <br>* opcode.i32.rotr: sign-agnostic rotate right
-    <br>* opcode.i32.shl: sign-agnostic shift left
-    <br>* opcode.i32.shr_s: sign-replicating (arithmetic) shift right
-    <br>* opcode.i32.shr_u: zero-replicating (logical) shift right
-    <br>* opcode.i32.store8: wrap i32 to i8 and store 1 byte
-    <br>* opcode.i32.store16: wrap i32 to i16 and store 2 bytes
-    <br>* opcode.i32.store: (no conversion) store 4 bytes
-    <br>* opcode.i32.sub: sign-agnostic subtraction
-    <br>* opcode.i32.trunc_s/f32: truncate a 32-bit float to a signed 32-bit integer
-    <br>* opcode.i32.trunc_s/f64: truncate a 64-bit float to a signed 32-bit integer
-    <br>* opcode.i32.trunc_u/f32: truncate a 32-bit float to an unsigned 32-bit integer
-    <br>* opcode.i32.trunc_u/f64: truncate a 64-bit float to an unsigned 32-bit integer
-    <br>* opcode.i32.wrap/i64: wrap a 64-bit integer to a 32-bit integer
-    <br>* opcode.i32.xor: sign-agnostic bitwise exclusive or
-    <br>* opcode.i64.const: produce the value of an i64 immediate
-    <br>* opcode.i64.extend_s/i32: extend a signed 32-bit integer to a 64-bit integer
-    <br>* opcode.i64.extend_u/i32: extend an unsigned 32-bit integer to a 64-bit integer
-    <br>* opcode.i64.load8_s: load 1 byte and sign-extend i8 to i64
-    <br>* opcode.i64.load8_u: load 1 byte and zero-extend i8 to i64
-    <br>* opcode.i64.load16_s: load 2 bytes and sign-extend i16 to i64
-    <br>* opcode.i64.load16_u: load 2 bytes and zero-extend i16 to i64
-    <br>* opcode.i64.load32_s: load 4 bytes and sign-extend i32 to i64
-    <br>* opcode.i64.load32_u: load 4 bytes and zero-extend i32 to i64
-    <br>* opcode.i64.load: load 8 bytes as i64
-    <br>* opcode.i64.reinterpret/f64: reinterpret the bits of a 64-bit float as a 64-bit integer
-    <br>* opcode.i64.store8: wrap i64 to i8 and store 1 byte
-    <br>* opcode.i64.store16: wrap i64 to i16 and store 2 bytes
-    <br>* opcode.i64.store32: wrap i64 to i32 and store 4 bytes
-    <br>* opcode.i64.store: (no conversion) store 8 bytes
-    <br>* opcode.i64.trunc_s/f32: truncate a 32-bit float to a signed 64-bit integer
-    <br>* opcode.i64.trunc_s/f64: truncate a 64-bit float to a signed 64-bit integer
-    <br>* opcode.i64.trunc_u/f32: truncate a 32-bit float to an unsigned 64-bit integer
-    <br>* opcode.i64.trunc_u/f64: truncate a 64-bit float to an unsigned 64-bit integer
-    <br>* opcode.if: the beginning of an if construct with an implicit then block
-    <br>* opcode.loop: a block with a label at the beginning which may be used to form loops
-    <br>* opcode.nop: no operation, no effect
-    <br>* opcode.return: return zero or more values from this function
-    <br>* opcode.select: a ternary operator with two operands, which have the same type as each other, plus a boolean (i32) condition. select returns the first operand if the condition operand is non-zero, or the second otherwise.
-    <br>* opcode.set_global: set the current value of a global variable
-    <br>* opcode.set_local: set the current value of a local variable
-    <br>* opcode.tee_local: like set_local, but also returns the set value
-    <br>* opcode.unreachable: An instruction which always traps. It is intended to be used for example after calls to functions which are known by the producer not to return. This trap is intended to be impossible for user code to catch or handle, even in the future when it may be possible to handle some other kinds of traps or exceptions.
-    <a class="clsHide" href="#idWasmalgopcdSpcSpc"></a></p>
+  <div id="idWasmalgopcdSpcSpc">
+    <p>specific::
+    </p>
+    <ol>
+      <li>opcode.block: the beginning of a block construct, a sequence of instructions with a label at the end
+      <li>opcode.br: branch to a given label in an enclosing construct
+      <li>opcode.br_if: conditionally branch to a given label in an enclosing construct
+      <li>opcode.br_table: a jump table which jumps to a label in an enclosing construct
+      <li>opcode.call: call function directly
+      <li>opcode.call_indirect: call function indirectly
+      <li>opcode.current_memory : return the current memory size in units of pages.
+      <li>opcode.drop: a unary operator that discards the value of its operand.
+      <li>opcode.else: marks the else block of an if
+      <li>opcode.end: an instruction that marks the end of a block, loop, if, or function
+      <li>opcode.f32.abs: absolute value
+      <li>opcode.f32.add: addition
+      <li>opcode.f32.ceil: ceiling operator
+      <li>opcode.f32.const: produce the value of an f32 immediate
+      <li>opcode.f32.convert_s/i32: convert a signed 32-bit integer to a 32-bit float
+      <li>opcode.f32.convert_s/i64: convert a signed 64-bit integer to a 32-bit float
+      <li>opcode.f32.convert_u/i32: convert an unsigned 32-bit integer to a 32-bit float
+      <li>opcode.f32.convert_u/i64: convert an unsigned 64-bit integer to a 32-bit float
+      <li>opcode.f32.copysign: copysign
+      <li>opcode.f32.demote/f64: demote a 64-bit float to a 32-bit float
+      <li>opcode.f32.div: division
+      <li>opcode.f32.eq: compare ordered and equal
+      <li>opcode.f32.floor: floor operator
+      <li>opcode.f32.ge: compare ordered and greater than or equal
+      <li>opcode.f32.gt: compare ordered and greater than
+      <li>opcode.f32.le: compare ordered and less than or equal
+      <li>opcode.f32.load: load 4 bytes as f32
+      <li>opcode.f32.lt: compare ordered and less than
+      <li>opcode.f32.max: maximum (binary operator); if either operand is NaN, returns NaN
+      <li>opcode.f32.min: minimum (binary operator); if either operand is NaN, returns NaN
+      <li>opcode.f32.mul: multiplication
+      <li>opcode.f32.ne: compare unordered or unequal
+      <li>opcode.f32.nearest: round to nearest integer, ties to even
+      <li>opcode.f32.neg: negation
+      <li>opcode.f32.reinterpret/i32: reinterpret the bits of a 32-bit integer as a 32-bit float
+      <li>opcode.f32.sqrt: square root
+      <li>opcode.f32.store: (no conversion) store 4 bytes
+      <li>opcode.f32.sub: subtraction
+      <li>opcode.f32.trunc: round to nearest integer towards zero
+      <li>opcode.f64.abs: absolute value
+      <li>opcode.f64.add: addition
+      <li>opcode.f64.ceil: ceiling operator
+      <li>opcode.f64.const: produce the value of an f64 immediate
+      <li>opcode.f64.convert_s/i32: convert a signed 32-bit integer to a 64-bit float
+      <li>opcode.f64.convert_s/i64: convert a signed 64-bit integer to a 64-bit float
+      <li>opcode.f64.convert_u/i32: convert an unsigned 32-bit integer to a 64-bit float
+      <li>opcode.f64.convert_u/i64: convert an unsigned 64-bit integer to a 64-bit float
+      <li>opcode.f64.copysign: copysign
+      <li>opcode.f64.div: division
+      <li>opcode.f64.eq: compare ordered and equal
+      <li>opcode.f64.floor: floor operator
+      <li>opcode.f64.ge: compare ordered and greater than or equal
+      <li>opcode.f64.gt: compare ordered and greater than
+      <li>opcode.f64.le: compare ordered and less than or equal
+      <li>opcode.f64.load: load 8 bytes as f64
+      <li>opcode.f64.lt: compare ordered and less than
+      <li>opcode.f64.max: maximum (binary operator); if either operand is NaN, returns NaN
+      <li>opcode.f64.min: minimum (binary operator); if either operand is NaN, returns NaN
+      <li>opcode.f64.mul: multiplication
+      <li>opcode.f64.ne: compare unordered or unequal
+      <li>opcode.f64.nearest: round to nearest integer, ties to even
+      <li>opcode.f64.neg: negation
+      <li>opcode.f64.promote/f32: promote a 32-bit float to a 64-bit float
+      <li>opcode.f64.reinterpret/i64: reinterpret the bits of a 64-bit integer as a 64-bit float
+      <li>opcode.f64.sqrt: square root
+      <li>opcode.f64.store: (no conversion) store 8 bytes
+      <li>opcode.f64.sub: subtraction
+      <li>opcode.f64.trunc: round to nearest integer towards zero
+      <li>opcode.get_global: get the current value of a global variable
+      <li>opcode.get_local: read the current value of a local variable
+      <li>opcode.grow_memory : grow linear memory by a given unsigned delta of pages. Return the previous memory size in units of pages or -1 on failure.
+      <li>opcode.i32.add: sign-agnostic addition
+      <li>opcode.i32.and: sign-agnostic bitwise and
+      <li>opcode.i32.clz: sign-agnostic count leading zero bits (All zero bits are considered leading if the value is zero)
+      <li>opcode.i32.const: produce the value of an i32 immediate
+      <li>opcode.i32.ctz: sign-agnostic count trailing zero bits (All zero bits are considered trailing if the value is zero)
+      <li>opcode.i32.div_s: signed division (result is truncated toward zero)
+      <li>opcode.i32.div_u: unsigned division (result is floored)
+      <li>opcode.i32.eq: sign-agnostic compare equal
+      <li>opcode.i32.eqz: compare equal to zero (return 1 if operand is zero, 0 otherwise)
+      <li>opcode.i32.ge_s: signed greater than or equal
+      <li>opcode.i32.ge_u: unsigned greater than or equal
+      <li>opcode.i32.gt_s: signed greater than
+      <li>opcode.i32.gt_u: unsigned greater than
+      <li>opcode.i32.le_s: signed less than or equal
+      <li>opcode.i32.le_u: unsigned less than or equal
+      <li>opcode.i32.load8_s: load 1 byte and sign-extend i8 to i32
+      <li>opcode.i32.load8_u: load 1 byte and zero-extend i8 to i32
+      <li>opcode.i32.load16_s: load 2 bytes and sign-extend i16 to i32
+      <li>opcode.i32.load16_u: load 2 bytes and zero-extend i16 to i32
+      <li>opcode.i32.load: load 4 bytes as i32
+      <li>opcode.i32.lt_s: signed less than
+      <li>opcode.i32.lt_u: unsigned less than
+      <li>opcode.i32.mul: sign-agnostic multiplication (lower 32-bits)
+      <li>opcode.i32.ne: sign-agnostic compare unequal
+      <li>opcode.i32.or: sign-agnostic bitwise inclusive or
+      <li>opcode.i32.popcnt: sign-agnostic count number of one bits
+      <li>opcode.i32.reinterpret/f32: reinterpret the bits of a 32-bit float as a 32-bit integer
+      <li>opcode.i32.rem_s: signed remainder (result has the sign of the dividend)
+      <li>opcode.i32.rem_u: unsigned remainder
+      <li>opcode.i32.rotl: sign-agnostic rotate left
+      <li>opcode.i32.rotr: sign-agnostic rotate right
+      <li>opcode.i32.shl: sign-agnostic shift left
+      <li>opcode.i32.shr_s: sign-replicating (arithmetic) shift right
+      <li>opcode.i32.shr_u: zero-replicating (logical) shift right
+      <li>opcode.i32.store8: wrap i32 to i8 and store 1 byte
+      <li>opcode.i32.store16: wrap i32 to i16 and store 2 bytes
+      <li>opcode.i32.store: (no conversion) store 4 bytes
+      <li>opcode.i32.sub: sign-agnostic subtraction
+      <li>opcode.i32.trunc_s/f32: truncate a 32-bit float to a signed 32-bit integer
+      <li>opcode.i32.trunc_s/f64: truncate a 64-bit float to a signed 32-bit integer
+      <li>opcode.i32.trunc_u/f32: truncate a 32-bit float to an unsigned 32-bit integer
+      <li>opcode.i32.trunc_u/f64: truncate a 64-bit float to an unsigned 32-bit integer
+      <li>opcode.i32.wrap/i64: wrap a 64-bit integer to a 32-bit integer
+      <li>opcode.i32.xor: sign-agnostic bitwise exclusive or
+      <li>opcode.i64.const: produce the value of an i64 immediate
+      <li>opcode.i64.extend_s/i32: extend a signed 32-bit integer to a 64-bit integer
+      <li>opcode.i64.extend_u/i32: extend an unsigned 32-bit integer to a 64-bit integer
+      <li>opcode.i64.load8_s: load 1 byte and sign-extend i8 to i64
+      <li>opcode.i64.load8_u: load 1 byte and zero-extend i8 to i64
+      <li>opcode.i64.load16_s: load 2 bytes and sign-extend i16 to i64
+      <li>opcode.i64.load16_u: load 2 bytes and zero-extend i16 to i64
+      <li>opcode.i64.load32_s: load 4 bytes and sign-extend i32 to i64
+      <li>opcode.i64.load32_u: load 4 bytes and zero-extend i32 to i64
+      <li>opcode.i64.load: load 8 bytes as i64
+      <li>opcode.i64.reinterpret/f64: reinterpret the bits of a 64-bit float as a 64-bit integer
+      <li>opcode.i64.store8: wrap i64 to i8 and store 1 byte
+      <li>opcode.i64.store16: wrap i64 to i16 and store 2 bytes
+      <li>opcode.i64.store32: wrap i64 to i32 and store 4 bytes
+      <li>opcode.i64.store: (no conversion) store 8 bytes
+      <li>opcode.i64.trunc_s/f32: truncate a 32-bit float to a signed 64-bit integer
+      <li>opcode.i64.trunc_s/f64: truncate a 64-bit float to a signed 64-bit integer
+      <li>opcode.i64.trunc_u/f32: truncate a 32-bit float to an unsigned 64-bit integer
+      <li>opcode.i64.trunc_u/f64: truncate a 64-bit float to an unsigned 64-bit integer
+      <li>opcode.if: the beginning of an if construct with an implicit then block
+      <li>opcode.loop: a block with a label at the beginning which may be used to form loops
+      <li>opcode.nop: no operation, no effect
+      <li>opcode.return: return zero or more values from this function
+      <li>opcode.select: a ternary operator with two operands, which have the same type as each other, plus a boolean (i32) condition. select returns the first operand if the condition operand is non-zero, or the second otherwise.
+      <li>opcode.set_global: set the current value of a global variable
+      <li>opcode.set_local: set the current value of a local variable
+      <li>opcode.tee_local: like set_local, but also returns the set value
+      <li>opcode.unreachable: An instruction which always traps. It is intended to be used for example after calls to functions which are known by the producer not to return. This trap is intended to be impossible for user code to catch or handle, even in the future when it may be possible to handle some other kinds of traps or exceptions.
+    </ol>
+    <a class="clsHide" href="#idWasmalgopcdSpcSpc"></a></div>
   </section>
   </section>
 
@@ -2452,6 +2456,7 @@
     <br>)</code>
     <a class="clsHide" href="#idWasmpgmSmpl2wat"></a></p>
   <p id="idWasmpgmSmpl2wasm">wasm-file::
+    <br>// <a class="clsPreview" href="#idWasmtoolCplrWattowasm">wat2wasm</a> simple2.wat -o simple2.wasm
     <br>// a-sequence of bytes, in hex-format here.
     <br><code>00 61 73 6d ; WASM_BINARY_MAGIC
     <br>01 00 00 00 ; WASM_BINARY_VERSION
@@ -2508,8 +2513,22 @@
     <br>&lt;/body>
     <br>&lt;/html></code>
     <a class="clsHide" href="#idWasmpgmSmpl2hml"></a></p>
+  <p id="idWasmpgmSmpl2Ljn">Node.js-file::
+    <br>//Node.js 8.11.1
+    <br>//node simple2.js
+    <br><code>const { readFileSync } = require("fs");
+    <br>
+    <br>const fRun = async () => {
+    <br> &nbsp;const oModule = await WebAssembly.compile(readFileSync("simple2.wasm"));
+    <br> &nbsp;const oModuleInst = await WebAssembly.instantiate(oModule);
+    <br> &nbsp;console.log(oModuleInst.exports.f59());
+    <br>};
+    <br>
+    <br>fRun();</code>
+    <br>[http://blog.scottlogic.com/2018/04/26/webassembly-by-hand.html]
+    <a class="clsHide" href="#idWasmpgmSmpl2Ljn"></a></p>
   <p id="idWasmpgmSmpl2dem">demo::
-    <br>· <a href="filMcsLwasm.files/simple2.html">link</a>.
+    <br>· <a href="filMcsLwasm.files/simple2.html">browser-demo</a>.
     <a class="clsHide" href="#idWasmpgmSmpl2dem"></a></p>
   </section>
 
@@ -2831,6 +2850,46 @@
   <p id="idWasmpgmHlwddem">demo::
     <br>· <a href="filMcsLwasm.files/demo.html">link</a>.
     <a class="clsHide" href="#idWasmpgmHlwddem"></a></p>
+  </section>
+
+  <section id="idWasmpgmFctrl">
+  <h2 id="idWasmpgmFctrlH2">program.FACTORIAL
+    <a class="clsHide" href="#idWasmpgmFctrlH2"></a></h2>
+  <p id="idWasmpgmFctrldsn">description::
+    <br>· computes the-factorial of a-number, !4=1*2*3*4=24.
+    <a class="clsHide" href="#idWasmpgmFctrldsn"></a></p>
+  <p id="idWasmpgmFctrlnam">name::
+    <br>* cpt.factorial-Wasm-program,
+    <br>* cpt.Wasm-program.factorial,
+    <a class="clsHide" href="#idWasmpgmFctrlnam"></a></p>
+  <p id="idWasmpgmFctrlwat">wat-file::
+    <br><code>(module
+    <br> &nbsp;(func $factorial (export "f") (param i32) (result i32)
+    <br> &nbsp; &nbsp;(if (result i32) (i32.lt_s (get_local 0) (i32.const 1))
+    <br> &nbsp; &nbsp; &nbsp;;; if input < 1, then output 1
+    <br> &nbsp; &nbsp; &nbsp;(then (i32.const 1))
+    <br> &nbsp; &nbsp; &nbsp;;; else input * factorial(input-1)
+    <br> &nbsp; &nbsp; &nbsp;(else (i32.mul (get_local 0) (call $factorial (i32.sub (get_local 0) (i32.const 1)))))
+    <br> &nbsp; &nbsp;)
+    <br> &nbsp;)
+    <br>)</code>
+    <a class="clsHide" href="#idWasmpgmFctrlwat"></a></p>
+  <p id="idWasmpgmFctrlwasm">wasm-file::
+    <br>// <a class="clsPreview" href="#idWasmtoolCplrWattowasm">wat2wasm</a> factorial.wat -o factorial.wasm
+    <a class="clsHide" href="#idWasmpgmFctrlwasm"></a></p>
+  <p id="idWasmpgmFctrlLjn">Node.js-file::
+    <br>//Node.js 8.11.1
+    <br>//node <a href="filMcsLwasm.files/factorial.js">factorial.js</a>
+    <br><code>const { readFileSync } = require("fs");
+    <br>
+    <br>const fRun = async () => {
+    <br> &nbsp;const oModule = await WebAssembly.compile(readFileSync("factorial.wasm"));
+    <br> &nbsp;const oModuleInst = await WebAssembly.instantiate(oModule);
+    <br> &nbsp;console.log(oModuleInst.exports.f(4)); //24
+    <br>};
+    <br>
+    <br>fRun();</code>
+    <a class="clsHide" href="#idWasmpgmFctrlLjn"></a></p>
   </section>
 </section>
 
@@ -3196,6 +3255,7 @@
     <br>* cpt.Wasm-compiler.wat-to-wasm,
     <a class="clsHide" href="#idWasmtoolCplrWattowasmnam"></a></p>
   <p id="idWasmtoolCplrWattowasmSpc">specific::
+    <br>* wat2wasm cli-tool (<a class="clsPreview" href="#idWasmtoolWabt">WABT</a>),
     <br>* online: <a href="https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wat2wasm/">https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wat2wasm/</a>,
     <a class="clsHide" href="#idWasmtoolCplrWattowasmSpc"></a></p>
   </section>
@@ -3259,6 +3319,7 @@
     <a class="clsHide" href="#idWasmtoolWabtnam"></a></p>
   <p id="idWasmtoolWabtwpa">addressWpg::
     <br>* <a href="https://github.com/WebAssembly/wabt">https://github.com/WebAssembly/wabt</a>,
+    <br>* on npm: <a href="https://www.npmjs.com/package/wabt">https://www.npmjs.com/package/wabt</a>,
     <a class="clsHide" href="#idWasmtoolWabtwpa"></a></p>
   <p id="idWasmtoolWabttool">tool::
     <br>* wat2wasm: translate from WebAssembly text format to the WebAssembly binary format
@@ -3350,7 +3411,11 @@
     <a class="clsHide" href="#idWasmrtewajodsn"></a></p>
   <p id="idWasmrtewajonam">name::
     <br>* cpt.Ljb-API'WebAssembly-object,
+    <br>* cpt.Ljn-API'WebAssembly-object,
+    <br>* cpt.Ljs-API'WebAssembly-object,
     <br>* cpt.Ljb-o.WebAssembly,
+    <br>* cpt.Wasm'Api.javascript,
+    <br>* cpt.Wasm'javascript-Api,
     <br>* cpt.Wasm'WebAssembly--javascript-object,
     <br>* cpt.Wasm-WebAssembly-object,
     <br>* cpt.WebAssembly--javascript-object,
@@ -3362,6 +3427,9 @@
   <p id="idWasmrtewajombrmbr">member::
     <br>> Object.getOwnPropertyNames(WebAssembly).sort().join(', ')
     <br>"CompileError, Instance, LinkError, Memory, Module, RuntimeError, Table, compile, compileStreaming, instantiate, instantiateStreaming, validate"
+    <br>===
+    <br>//Node.js 8.11.1
+    <br>"CompileError, Instance, LinkError, Memory, Module, RuntimeError, Table, compile, instantiate, validate"
     <a class="clsHide" href="#idWasmrtewajombrmbr"></a></p>
   </section>
 
@@ -3839,6 +3907,18 @@
 <section id="idMeta">
   <h1 id="idMetaH1">meta-info
     <a class="clsHide" href="#idMetaH1"></a></h1>
+  <p id="idMetaCounter" class="clsCenter">this page was-visited
+    <span class="clsColorRed">
+    <script>
+      if (localStorage.filMcsLwasm) {
+        localStorage.filMcsLwasm=Number(localStorage.filMcsLwasm) +1;
+      } else {
+        localStorage.filMcsLwasm=1;
+      }
+      document.write(localStorage.filMcsLwasm);
+    </script>
+    </span>
+    times since {2018-03-18}</p>
   <p id="idMetaCounter" class="clsCenter">this page was-visited
     <span class="clsColorRed">
     <script src="../../dirPgm/dirCntr/counter.php?page=Mws-dirTchInf.Lwasm"></script>
