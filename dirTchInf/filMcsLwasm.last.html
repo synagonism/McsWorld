@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-34-0.2018-05-11 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-35-0.2018-05-13 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -1286,6 +1286,19 @@
     <a class="clsHide" href="#idWasmstctrapnam"></a></p>
   </section>
 
+  <section id="idWasmstcrsc">
+  <h2 id="idWasmstcrscH2">resource of instruction
+    <a class="clsHide" href="#idWasmstcrscH2"></a></h2>
+  <p id="idWasmstcrscnam">name::
+    <br>* cpt.Wasm-instruction'resource,
+    <a class="clsHide" href="#idWasmstcrscnam"></a></p>
+  <p id="idWasmstcrscwpa">addressWpg::
+    <br>* <a href="https://webassembly.org/docs/semantics/">https://webassembly.org/docs/semantics/</a>,
+    <br>* <a href="https://webassembly.github.io/spec/core/syntax/instructions.html">https://webassembly.github.io/spec/core/syntax/instructions.html</a>,
+    <br>* {2018-04-07} Mauro-Bringolf, Learning the Webassembly type system, <a href="https://maurobringolf.ch/2018/04/learning-the-webassembly-type-system/">https://maurobringolf.ch/</a>,
+    <a class="clsHide" href="#idWasmstcrscwpa"></a></p>
+  </section>
+
   <section id="idWasmstcSpc">
   <h2 id="idWasmstcSpcH2">instruction.SPECIFIC
     <a class="clsHide" href="#idWasmstcSpcH2"></a></h2>
@@ -1321,10 +1334,14 @@
   <h2 id="idWasmstcClfwH2">instruction.CONTROL-FLOW
     <a class="clsHide" href="#idWasmstcClfwH2"></a></h2>
   <p id="idWasmstcClfwnam">name::
+    <br>* cpt.Wasm'control-flow-instruction,
     <br>* cpt.Wasm-instruction.control-flow,
     <a class="clsHide" href="#idWasmstcClfwnam"></a></p>
   <p id="idWasmstcClfwSpc">specific::
     <br>* <a class="clsPreview" href="#idWasmstcClfwBlck">block</a>,
+    <br>* br (unconditional-branch),
+    <br>* <a class="clsPreview" href="#idWasmstcClfwLoop">br_if (conditional-brance)</a>,
+    <br>* br_table (table-branch),
     <br>* <a class="clsPreview" href="#idWasmstcClfwLoop">loop</a>,
     <br>* <a class="clsPreview" href="#idWasmstcClfwIf">if</a>,
     <br>* else,
@@ -1332,9 +1349,6 @@
     <br>* <a class="clsPreview" href="#idWasmstcClfwNop">nop</a>,
     <br>* return,
     <br>* <a class="clsPreview" href="#idWasmstcClfwUnrcbl">unreachable</a>,
-    <br>* Unconditional Branch
-    <br>* Conditional Branch
-    <br>* Table Branch
     <a class="clsHide" href="#idWasmstcClfwSpc"></a></p>
 
   <section id="idWasmstcClfwStrd">
@@ -1351,6 +1365,9 @@
     <br>* cpt.Wasm'structured-control-instruction,
     <br>* cpt.Wasm-instruction.structured-control,
     <a class="clsHide" href="#idWasmstcClfwStrdnam"></a></p>
+  <p id="idWasmstcClfwStrdwpa">addressWpg::
+    <br>* {2018-04-22} Mauro-Bringolf, Structured control flow in WebAssembly by example, <a href="https://maurobringolf.ch/2018/04/structured-control-flow-in-webassembly-by-example/">https://maurobringolf.ch/</a>,
+    <a class="clsHide" href="#idWasmstcClfwStrdwpa"></a></p>
 
   <section id="idWasmstcClfwStrdlbl">
   <h4 id="idWasmstcClfwStrdlblH4">label of structured-control-instruction
@@ -1382,6 +1399,28 @@
     <br>* cpt.Wasm'block-instruction,
     <br>* cpt.Wasm-instruction.block,
     <a class="clsHide" href="#idWasmstcClfwBlcknam"></a></p>
+  </section>
+
+  <section id="idWasmstcClfwBrif">
+  <h3 id="idWasmstcClfwBrifH3">instruction.br_if
+    <a class="clsHide" href="#idWasmstcClfwBrifH3"></a></h3>
+  <p id="idWasmstcClfwBrifnam">name::
+    <br>* cpt.Wasm'br_if-instruction,
+    <br>* cpt.Wasm-instruction.br_if,
+    <a class="clsHide" href="#idWasmstcClfwBrifnam"></a></p>
+  <p id="idWasmstcClfwBrifexpl">example::
+    <br><code>(func (export "f") (result i32)
+    <br> &nbsp;(local $v1 i32)
+    <br> &nbsp;(set_local $v1 (i32.const 1))
+    <br> &nbsp;loop
+    <br> &nbsp; &nbsp;;; v1 + 1
+    <br> &nbsp; &nbsp;(i32.add (get_local $v1) (i32.const 1))
+    <br> &nbsp; &nbsp;;; if v1 &lt; 10, loop
+    <br> &nbsp; &nbsp;(<span class="clsColorRed">br_if</span> 0 (i32.lt_u (tee_local $v1) (i32.const 10)))
+    <br> &nbsp;end
+    <br> &nbsp;get_local $v1
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcClfwBrifexpl"></a></p>
   </section>
 
   <section id="idWasmstcClfwElse">
@@ -1417,6 +1456,18 @@
     <br>* cpt.Wasm'if-instruction,
     <br>* cpt.Wasm-instruction.if,
     <a class="clsHide" href="#idWasmstcClfwIfnam"></a></p>
+  <p id="idWasmstcClfwIfexpl">example::
+    <br><code>(module
+    <br> &nbsp;(func (export "f") (param i32) (result i32)
+    <br> &nbsp; &nbsp;(<span class="clsColorRed">if</span> (result i32) (i32.lt_s (get_local 0) (i32.const 0))
+    <br> &nbsp; &nbsp; &nbsp;;; if input &lt; 0, then output 1
+    <br> &nbsp; &nbsp; &nbsp;(<span class="clsColorRed">then</span> (i32.const 1))
+    <br> &nbsp; &nbsp; &nbsp;;; else output 2
+    <br> &nbsp; &nbsp; &nbsp;(<span class="clsColorRed">else</span> (i32.const 2))
+    <br> &nbsp; &nbsp;)
+    <br> &nbsp;)
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcClfwIfexpl"></a></p>
   </section>
 
   <section id="idWasmstcClfwLoop">
@@ -1429,6 +1480,34 @@
     <br>* cpt.Wasm'loop-instruction,
     <br>* cpt.Wasm-instruction.loop,
     <a class="clsHide" href="#idWasmstcClfwLoopnam"></a></p>
+  <p id="idWasmstcClfwLoopexpl">example::
+    <br><code>(func (export "f") (result i32)
+    <br> &nbsp;(local $v1 i32)
+    <br> &nbsp;(set_local $v1 (i32.const 1))
+    <br> &nbsp;<span class="clsColorRed">loop</span>
+    <br> &nbsp; &nbsp;;; v1 + 1
+    <br> &nbsp; &nbsp;(i32.add (get_local $v1) (i32.const 1))
+    <br> &nbsp; &nbsp;;; if v1 &lt; 10, loop
+    <br> &nbsp; &nbsp;(br_if 0 (i32.lt_u (tee_local $v1) (i32.const 10)))
+    <br> &nbsp;<span class="clsColorRed">end</span>
+    <br> &nbsp;get_local $v1
+    <br>)</code>
+    <br>or
+    <br><code>(func (export "f") (result i32)
+    <br> &nbsp;(local $v1 i32)
+    <br> &nbsp;(set_local $v1 (i32.const 1))
+    <br> &nbsp;<span class="clsColorRed">loop</span> &L0
+    <br> &nbsp; &nbsp;get_local $v1
+    <br> &nbsp; &nbsp;i32.const 1
+    <br> &nbsp; &nbsp;i32.add
+    <br> &nbsp; &nbsp;tee_local $v1
+    <br> &nbsp; &nbsp;i32.const 10
+    <br> &nbsp; &nbsp;i32.lt_u
+    <br> &nbsp; &nbsp;br_if $L0
+    <br> &nbsp;<span class="clsColorRed">end</span>
+    <br> &nbsp;get_local $v1
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcClfwLoopexpl"></a></p>
   </section>
 
   <section id="idWasmstcClfwNop">
@@ -1446,10 +1525,38 @@
   <section id="idWasmstcClfwRtrn">
   <h3 id="idWasmstcClfwRtrnH3">instruction.return
     <a class="clsHide" href="#idWasmstcClfwRtrnH3"></a></h3>
+  <p id="idWasmstcClfwRtrndsn">description::
+    <br>· return value from function.
+    <a class="clsHide" href="#idWasmstcClfwRtrndsn"></a></p>
   <p id="idWasmstcClfwRtrnnam">name::
     <br>* cpt.Wasm'return-instruction,
     <br>* cpt.Wasm-instruction.return,
     <a class="clsHide" href="#idWasmstcClfwRtrnnam"></a></p>
+  <p id="idWasmstcClfwRtrnexpl">example::
+    <br><code>(func (export "f") (param $a i32) (param $b i32) (result i32)
+    <br> &nbsp;;; if (a > b) return 1, return 2
+    <br> &nbsp;(if (i32.gt_s (get_local $a) (get_local $b))
+    <br> &nbsp; &nbsp;(return (i32.const 1))
+    <br> &nbsp;)
+    <br> &nbsp;(return (i32.const 2))
+    <br>)</code>
+    <br>or using <a class="clsPreview" href="#idWasmtoolWabt">wasm2wat</a>
+    <br><code>(module
+    <br> &nbsp;(type (;0;) (func (param i32 i32) (result i32)))
+    <br> &nbsp;(func (;0;) (type 0) (param i32 i32) (result i32)
+    <br> &nbsp; &nbsp;get_local 0
+    <br> &nbsp; &nbsp;get_local 1
+    <br> &nbsp; &nbsp;i32.gt_s
+    <br> &nbsp; &nbsp;if  ;; label = @1
+    <br> &nbsp; &nbsp; &nbsp;i32.const 1
+    <br> &nbsp; &nbsp; &nbsp;return
+    <br> &nbsp; &nbsp;end
+    <br> &nbsp; &nbsp;i32.const 2
+    <br> &nbsp; &nbsp;return
+    <br> &nbsp;)
+    <br> &nbsp;(export "f" (func 0))
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcClfwRtrnexpl"></a></p>
   </section>
 
   <section id="idWasmstcClfwUnrcbl">
@@ -1509,6 +1616,17 @@
     <br>* cpt.Wasm'i32.add-instruction,
     <br>* cpt.Wasm-instruction.i32.add,
     <a class="clsHide" href="#idWasmstcI32addnam"></a></p>
+  <p id="idWasmstcI32addexpl">example::
+    <br><code>(func (export "f") (param $a i32) (result i32)
+    <br> &nbsp;(i32.add (get_local 0) (i32.const 10))
+    <br>)</code>
+    <br>or
+    <br><code>(func (export "f") (param $a i32) (result i32)
+    <br> &nbsp;get_local 0
+    <br> &nbsp;i32.const 10
+    <br> &nbsp;i32.add
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcI32addexpl"></a></p>
   </section>
 
   <section id="idWasmstcI32cnst">
@@ -1521,6 +1639,16 @@
     <br>* cpt.Wasm'i32.const-instruction,
     <br>* cpt.Wasm-instruction.i32.const,
     <a class="clsHide" href="#idWasmstcI32cnstnam"></a></p>
+  <p id="idWasmstcI32cnstexpl">example::
+    <br>// returns 10
+    <br><code>(func (export "f") (result i32)
+    <br> &nbsp;(i32.const 10)
+    <br>)</code>
+    <br>or
+    <br><code>(func (export "f") (result i32)
+    <br> &nbsp;i32.const 10
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcI32cnstexpl"></a></p>
   </section>
 
   <section id="idWasmstcI32mul">
@@ -1533,6 +1661,18 @@
     <br>* cpt.Wasm'i32.mul-instruction,
     <br>* cpt.Wasm-instruction.i32.mul,
     <a class="clsHide" href="#idWasmstcI32mulnam"></a></p>
+  <p id="idWasmstcI32mulexpl">example::
+    <br>//for input 6 and 5, outputs 30
+    <br><code>(func (export "f") (param $a i32) (param $b i32) (result i32)
+    <br> &nbsp;(i32.mul (get_local 0) (get_local 1))
+    <br>)</code>
+    <br>or
+    <br><code>(func (export "f") (param $a i32) (param $b i32) (result i32)
+    <br> &nbsp;get_local 0
+    <br> &nbsp;get_local 1
+    <br> &nbsp;i32.mul
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcI32mulexpl"></a></p>
   </section>
   </section>
 
@@ -1566,6 +1706,72 @@
   <p id="idWasmstcNmrcnam">name::
     <br>* cpt.Wasm-instruction.numeric,
     <a class="clsHide" href="#idWasmstcNmrcnam"></a></p>
+  <p id="idWasmstcNmrcSpc">specific::
+    <br>* i32.clz (0x67),
+    <br>* i32.ctz (0x68),
+    <br>* i32.popcnt (0x69),
+    <br>* i32.add (0x6a),
+    <br>* i32.sub (0x6b),
+    <br>* i32.mul (0x6c),
+    <br>* i32.div_s (0x6d),
+    <br>* i32.div_u (0x6e),
+    <br>* i32.rem_s (0x6f),
+    <br>* i32.rem_u (0x70),
+    <br>* i32.and (0x71),
+    <br>* i32.or (0x72),
+    <br>* i32.xor (0x73),
+    <br>* i32.shl (0x74),
+    <br>* i32.shr_s (0x75),
+    <br>* i32.shr_u (0x76),
+    <br>* i32.rotl (0x77),
+    <br>* i32.rotr (0x78),
+    <br>* i64.clz (0x79),
+    <br>* i64.ctz (0x7a),
+    <br>* i64.popcnt (0x7b),
+    <br>* i64.add (0x7c),
+    <br>* i64.sub (0x7d),
+    <br>* i64.mul (0x7e),
+    <br>* i64.div_s (0x7f),
+    <br>* i64.div_u (0x80),
+    <br>* i64.rem_s (0x81),
+    <br>* i64.rem_u (0x82),
+    <br>* i64.and (0x83),
+    <br>* i64.or (0x84),
+    <br>* i64.xor (0x85),
+    <br>* i64.shl (0x86),
+    <br>* i64.shr_s (0x87),
+    <br>* i64.shr_u (0x88),
+    <br>* i64.rotl (0x89),
+    <br>* i64.rotr (0x8a),
+    <br>* f32.abs (0x8b),
+    <br>* f32.neg (0x8c),
+    <br>* f32.ceil (0x8d),
+    <br>* f32.floor (0x8e),
+    <br>* f32.trunc (0x8f),
+    <br>* f32.nearest (0x90),
+    <br>* f32.sqrt (0x91),
+    <br>* f32.add (0x92),
+    <br>* f32.sub (0x93),
+    <br>* f32.mul (0x94),
+    <br>* f32.div (0x95),
+    <br>* f32.min (0x96),
+    <br>* f32.max (0x97),
+    <br>* f32.copysign (0x98),
+    <br>* f64.abs (0x99),
+    <br>* f64.neg (0x9a),
+    <br>* f64.ceil (0x9b),
+    <br>* f64.floor (0x9c),
+    <br>* f64.trunc (0x9d),
+    <br>* f64.nearest (0x9e),
+    <br>* f64.sqrt (0x9f),
+    <br>* f64.add (0xa0),
+    <br>* f64.sub (0xa1),
+    <br>* f64.mul (0xa2),
+    <br>* f64.div (0xa3),
+    <br>* f64.min (0xa4),
+    <br>* f64.max (0xa5),
+    <br>* f64.copysign (0xa6),
+    <a class="clsHide" href="#idWasmstcNmrcSpc"></a></p>
   </section>
 
   <section id="idWasmstcPrmc">
@@ -1599,6 +1805,9 @@
   <h3 id="idWasmstcPrmcSlctH3">instruction.select
     <a class="clsHide" href="#idWasmstcPrmcSlctH3"></a></h3>
   <p id="idWasmstcPrmcSlctdsn">description::
+    <br>· a-ternary-operator with two operands, which have the same type as each other, plus a-boolean (i32) condition.
+    <br>· it returns the first operand if the-condition operand is non-zero, or the-second otherwise.
+    <br>===
     <br>· the-select-operator selects one of its first two operands based on whether its third operand is zero or not.
     <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions</a> {1-0.2018-03-22}]
     <br>===
@@ -1609,6 +1818,25 @@
     <br>* cpt.Wasm-instruction.0x1B,
     <br>* cpt.Wasm-instruction.select,
     <a class="clsHide" href="#idWasmstcPrmcSlctnam"></a></p>
+  <p id="idWasmstcPrmcSlctexpl">example::
+    <br><code>(func (export "f") (param $a i32) (param $b i32) (result i32)
+    <br> &nbsp;;; return a > b ? a : b
+    <br> &nbsp;(select
+    <br> &nbsp; &nbsp;(get_local $a)
+    <br> &nbsp; &nbsp;(get_local $b)
+    <br> &nbsp; &nbsp;(i32.gt_s (get_local $a) (get_local $b))
+    <br> &nbsp;)
+    <br>)</code>
+    <br>or
+    <br><code>(func (export "f") (param $a i32) (param $b i32) (result i32)
+    <br> &nbsp;get_local 0
+    <br> &nbsp;get_local 1
+    <br> &nbsp;get_local 0
+    <br> &nbsp;get_local 1
+    <br> &nbsp;i32.gt_s
+    <br> &nbsp;select
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcPrmcSlctexpl"></a></p>
   </section>
   </section>
 
@@ -1637,13 +1865,13 @@
     <a class="clsHide" href="#idWasmstcGtlclnam"></a></p>
   <p id="idWasmstcGtlclexpl">example::
     <br><code>(func (param $p1 i32) (param $p2 f32) (local $loc i32)
-    <br> &nbsp;get_local $p1
+    <br> &nbsp;get_local $p1 ;; pushes param1 on stack
     <br>)</code>
     <br>===
     <br><code>(func (param i32) (param f32) (local i32)
-    <br> &nbsp;get_local 0 ;; gets first parameter
-    <br> &nbsp;get_local 1 ;; gets second parameter
-    <br> &nbsp;get_local 2 ;; gets first local
+    <br> &nbsp;get_local 0 ;; pushes first parameter on stack
+    <br> &nbsp;get_local 1 ;; pushes second parameter on stack
+    <br> &nbsp;get_local 2 ;; pushes first local on stack
     <br>)</code>
     <a class="clsHide" href="#idWasmstcGtlclexpl"></a></p>
   </section>
@@ -2502,7 +2730,9 @@
     <br>00 ; function index
     <br>00 ; num locals</code>
     <a class="clsHide" href="#idWasmpgmSmpl2wasm"></a></p>
-  <p id="idWasmpgmSmpl2hml">html-file::
+  <p id="idWasmpgmSmpl2hml">browser-file::
+    <br>· we can-run the-program in <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbbsr">a-browser-environment</a>.
+    <br>· we open this file in a-browser and hit F12 to see the-console.
     <br><code>&lt;!doctype html>
     <br>&lt;html>
     <br>&lt;body>
@@ -2515,7 +2745,8 @@
     <a class="clsHide" href="#idWasmpgmSmpl2hml"></a></p>
   <p id="idWasmpgmSmpl2Ljn">Node.js-file::
     <br>//Node.js 8.11.1
-    <br>//node simple2.js
+    <br>· we ALSO can-run the-Wasm-program in <a class="clsPreview" href="FilMcsLjn.Last.html#idLjnrtm">a-Node.js-environment</a>.
+    <br>· we need this Node.js-program (simple2.js) and to run the-command: <code>node simple2.js</code>.
     <br><code>const { readFileSync } = require("fs");
     <br>
     <br>const fRun = async () => {
@@ -2906,6 +3137,18 @@
     <a class="clsHide" href="#idWasmalgLbrnam"></a></p>
 </section>
 
+<section id="idWasmalgTxt">
+  <h1 id="idWasmalgTxtH1">algo.TEXT
+    <a class="clsHide" href="#idWasmalgTxtH1"></a></h1>
+  <p id="idWasmalgTxtdsn">description::
+    <br>· Wasm-text-algo is <a class="clsPreview" href="#idWasmalg">a-Wasm-algo</a> written with <a class="clsPreview" href="#idWasmTxt">the-Wasm-text-format</a> using <a class="clsPreview" href="#idWasmTxtsexn">S-expressions</a>.
+    <a class="clsHide" href="#idWasmalgTxtdsn"></a></p>
+  <p id="idWasmalgTxtnam">name::
+    <br>* cpt.Wasm-algo.text,
+    <br>* cpt.Wasm-text-algo,
+    <a class="clsHide" href="#idWasmalgTxtnam"></a></p>
+</section>
+
 <section id="idWasmalgBnr">
   <h1 id="idWasmalgBnrH1">algo.BINARY
     <a class="clsHide" href="#idWasmalgBnrH1"></a></h1>
@@ -2926,18 +3169,6 @@
     <br>· the-extention of a-Wasm-binary-file is <code>.wasm</code>.
     <a class="clsHide" href="#idWasmalgBnrfiledsn"></a></p>
   </section>
-</section>
-
-<section id="idWasmalgTxt">
-  <h1 id="idWasmalgTxtH1">algo.TEXT
-    <a class="clsHide" href="#idWasmalgTxtH1"></a></h1>
-  <p id="idWasmalgTxtdsn">description::
-    <br>· Wasm-text-algo is <a class="clsPreview" href="#idWasmalg">a-Wasm-algo</a> written with <a class="clsPreview" href="#idWasmTxt">the-Wasm-text-format</a> using <a class="clsPreview" href="#idWasmTxtsexn">S-expressions</a>.
-    <a class="clsHide" href="#idWasmalgTxtdsn"></a></p>
-  <p id="idWasmalgTxtnam">name::
-    <br>* cpt.Wasm-algo.text,
-    <br>* cpt.Wasm-text-algo,
-    <a class="clsHide" href="#idWasmalgTxtnam"></a></p>
 </section>
 
 <section id="idWasmeval">
@@ -3742,6 +3973,7 @@
     <a class="clsHide" href="#idWasmrscTtrlH2"></a></h2>
   <p id="idWasmrscTtrlwpa">addressWpg::
     <br>* Clark.Lin, A cartoon intro to WebAssembly: <a href="https://hacks.mozilla.org/2017/02/a-cartoon-intro-to-webassembly/">https://hacks.mozilla.org/2017/02/</a>,
+    <br>* code-examples: <a href="https://github.com/reklatsmasters/webassembly-examples">https://github.com/reklatsmasters/webassembly-examples</a>,
     <a class="clsHide" href="#idWasmrscTtrlwpa"></a></p>
   </section>
 </section>
@@ -3907,18 +4139,6 @@
 <section id="idMeta">
   <h1 id="idMetaH1">meta-info
     <a class="clsHide" href="#idMetaH1"></a></h1>
-  <p id="idMetaCounter" class="clsCenter">this page was-visited
-    <span class="clsColorRed">
-    <script>
-      if (localStorage.filMcsLwasm) {
-        localStorage.filMcsLwasm=Number(localStorage.filMcsLwasm) +1;
-      } else {
-        localStorage.filMcsLwasm=1;
-      }
-      document.write(localStorage.filMcsLwasm);
-    </script>
-    </span>
-    times since {2018-03-18}</p>
   <p id="idMetaCounter" class="clsCenter">this page was-visited
     <span class="clsColorRed">
     <script src="../../dirPgm/dirCntr/counter.php?page=Mws-dirTchInf.Lwasm"></script>
