@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-35-0.2018-05-13 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-36-0.2018-05-14 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -543,6 +543,16 @@
   <p id="idWasmfcnsgtrTxtnam">name::
     <br>* cpt.Wasm-function-type.text,
     <a class="clsHide" href="#idWasmfcnsgtrTxtnam"></a></p>
+  <p id="idWasmfcnsgtrTxtexpl">example::
+    <br><code>(func (param $p1 i32) (param $p2 i32) (result i32))</code>
+    <br>or
+    <br><code>(func (export "f") (param $p1 i32) (param $p2 i32) (result i32))</code>
+    <br>or
+    <br><code>(func (export "f") (param i32 i32) (result i32))</code>
+    <br>or
+    <br><code>(type (;0;) (func (param i32 i32) (result i32)))
+    <br>(func (;0;) (type 0) (param i32 i32) (result i32))</code>
+    <a class="clsHide" href="#idWasmfcnsgtrTxtexpl"></a></p>
   </section>
   </section>
 
@@ -1102,16 +1112,16 @@
     <p>specific::
     </p>
     <ol>
-      <li>opcode.block: the beginning of a block construct, a sequence of instructions with a label at the end
+      <li><a class="clsPreview" href="#idWasmstcClfwBlck">opcode.block</a>: the beginning of a block construct, a sequence of instructions with a label at the end
       <li>opcode.br: branch to a given label in an enclosing construct
-      <li>opcode.br_if: conditionally branch to a given label in an enclosing construct
+      <li><a class="clsPreview" href="#idWasmstcClfwBrif">opcode.br_if</a>: conditionally branch to a given label in an enclosing construct
       <li>opcode.br_table: a jump table which jumps to a label in an enclosing construct
-      <li>opcode.call: call function directly
+      <li><a class="clsPreview" href="#idWasmstcCall">opcode.call</a>: call function directly
       <li>opcode.call_indirect: call function indirectly
-      <li>opcode.current_memory : return the current memory size in units of pages.
-      <li>opcode.drop: a unary operator that discards the value of its operand.
-      <li>opcode.else: marks the else block of an if
-      <li>opcode.end: an instruction that marks the end of a block, loop, if, or function
+      <li><a class="clsPreview" href="#idWasmstcCrtmmr">opcode.current_memory</a>: return the current memory size in units of pages.
+      <li><a class="clsPreview" href="#idWasmstcPrmcDrp">opcode.drop</a>: a unary operator that discards the value of its operand.
+      <li><a class="clsPreview" href="#idWasmstcClfwElse">opcode.else</a>: marks the else block of an if
+      <li><a class="clsPreview" href="#idWasmstcClfwEnd">opcode.end</a>: an instruction that marks the end of a block, loop, if, or function
       <li>opcode.f32.abs: absolute value
       <li>opcode.f32.add: addition
       <li>opcode.f32.ceil: ceiling operator
@@ -1170,13 +1180,13 @@
       <li>opcode.f64.store: (no conversion) store 8 bytes
       <li>opcode.f64.sub: subtraction
       <li>opcode.f64.trunc: round to nearest integer towards zero
-      <li>opcode.get_global: get the current value of a global variable
-      <li>opcode.get_local: read the current value of a local variable
-      <li>opcode.grow_memory : grow linear memory by a given unsigned delta of pages. Return the previous memory size in units of pages or -1 on failure.
-      <li>opcode.i32.add: sign-agnostic addition
+      <li>opcode.<a class="clsPreview" href="#idWasmstcGtgbl">get_global</a>: get the current value of a global variable
+      <li><a class="clsPreview" href="#idWasmstcGtlcl">opcode.get_local</a>: read the current value of a local variable
+      <li><a class="clsPreview" href="#idWasmstcGrwmmr">opcode.grow_memory</a>: grow linear memory by a given unsigned delta of pages. Return the previous memory size in units of pages or -1 on failure.
+      <li><a class="clsPreview" href="#idWasmstcI32add">opcode.i32.add</a>: sign-agnostic addition
       <li>opcode.i32.and: sign-agnostic bitwise and
       <li>opcode.i32.clz: sign-agnostic count leading zero bits (All zero bits are considered leading if the value is zero)
-      <li>opcode.i32.const: produce the value of an i32 immediate
+      <li><a class="clsPreview" href="#idWasmstcI32cnst">opcode.i32.const</a>: produce the value of an i32 immediate
       <li>opcode.i32.ctz: sign-agnostic count trailing zero bits (All zero bits are considered trailing if the value is zero)
       <li>opcode.i32.div_s: signed division (result is truncated toward zero)
       <li>opcode.i32.div_u: unsigned division (result is floored)
@@ -1195,7 +1205,7 @@
       <li>opcode.i32.load: load 4 bytes as i32
       <li>opcode.i32.lt_s: signed less than
       <li>opcode.i32.lt_u: unsigned less than
-      <li>opcode.i32.mul: sign-agnostic multiplication (lower 32-bits)
+      <li><a class="clsPreview" href="#idWasmstcI32mul">opcode.i32.mul</a>: sign-agnostic multiplication (lower 32-bits)
       <li>opcode.i32.ne: sign-agnostic compare unequal
       <li>opcode.i32.or: sign-agnostic bitwise inclusive or
       <li>opcode.i32.popcnt: sign-agnostic count number of one bits
@@ -1236,15 +1246,17 @@
       <li>opcode.i64.trunc_s/f64: truncate a 64-bit float to a signed 64-bit integer
       <li>opcode.i64.trunc_u/f32: truncate a 32-bit float to an unsigned 64-bit integer
       <li>opcode.i64.trunc_u/f64: truncate a 64-bit float to an unsigned 64-bit integer
-      <li>opcode.if: the beginning of an if construct with an implicit then block
-      <li>opcode.loop: a block with a label at the beginning which may be used to form loops
-      <li>opcode.nop: no operation, no effect
-      <li>opcode.return: return zero or more values from this function
-      <li>opcode.select: a ternary operator with two operands, which have the same type as each other, plus a boolean (i32) condition. select returns the first operand if the condition operand is non-zero, or the second otherwise.
-      <li>opcode.set_global: set the current value of a global variable
-      <li>opcode.set_local: set the current value of a local variable
-      <li>opcode.tee_local: like set_local, but also returns the set value
-      <li>opcode.unreachable: An instruction which always traps. It is intended to be used for example after calls to functions which are known by the producer not to return. This trap is intended to be impossible for user code to catch or handle, even in the future when it may be possible to handle some other kinds of traps or exceptions.
+      <li><a class="clsPreview" href="#idWasmstcClfwIf">opcode.if</a>: the beginning of an if construct with an implicit then block
+      <li><a class="clsPreview" href="#idWasmstcLoad">opcode.load</a>:
+      <li><a class="clsPreview" href="#idWasmstcClfwLoop">opcode.loop</a>: a block with a label at the beginning which may be used to form loops
+      <li><a class="clsPreview" href="#idWasmstcClfwNop">opcode.nop</a>: no operation, no effect
+      <li><a class="clsPreview" href="#idWasmstcClfwRtrn">opcode.return</a>: return zero or more values from this function
+      <li><a class="clsPreview" href="#idWasmstcPrmcSlct">opcode.select</a>: a ternary operator with two operands, which have the same type as each other, plus a boolean (i32) condition. select returns the first operand if the condition operand is non-zero, or the second otherwise.
+      <li><a class="clsPreview" href="#idWasmstcStgbl">opcode.set_global</a>: set the current value of a global variable
+      <li><a class="clsPreview" href="#idWasmstcStlcl">opcode.set_local</a>: set the current value of a local variable
+      <li>opcode.<a class="clsPreview" href="#idWasmstcStore">store</a>:
+      <li><a class="clsPreview" href="#idWasmstcTelcl">opcode.tee_local</a>: like set_local, but also returns the set value
+      <li><a class="clsPreview" href="#idWasmstcClfwUnrcbl">opcode.unreachable</a>: An instruction which always traps. It is intended to be used for example after calls to functions which are known by the producer not to return. This trap is intended to be impossible for user code to catch or handle, even in the future when it may be possible to handle some other kinds of traps or exceptions.
     </ol>
     <a class="clsHide" href="#idWasmalgopcdSpcSpc"></a></div>
   </section>
@@ -1426,10 +1438,40 @@
   <section id="idWasmstcClfwElse">
   <h3 id="idWasmstcClfwElseH3">instruction.else
     <a class="clsHide" href="#idWasmstcClfwElseH3"></a></h3>
+  <p id="idWasmstcClfwElsedsn">description::
+    <br>· marks the else block of <a class="clsPreview" href="#idWasmstcClfwIf">an-if</a>.
+    <a class="clsHide" href="#idWasmstcClfwElsedsn"></a></p>
   <p id="idWasmstcClfwElsenam">name::
     <br>* cpt.Wasm'else-instruction,
     <br>* cpt.Wasm-instruction.else,
     <a class="clsHide" href="#idWasmstcClfwElsenam"></a></p>
+  <p id="idWasmstcClfwElseexpl">example::
+    <br><code>(module
+    <br> &nbsp;(func (export "f") (param i32) (result i32)
+    <br> &nbsp; &nbsp;(<span class="clsColorRed">if</span> (result i32) (i32.lt_s (get_local 0) (i32.const 0))
+    <br> &nbsp; &nbsp; &nbsp;;; if input &lt; 0, then output 1
+    <br> &nbsp; &nbsp; &nbsp;(<span class="clsColorRed">then</span> (i32.const 1))
+    <br> &nbsp; &nbsp; &nbsp;;; else output 2
+    <br> &nbsp; &nbsp; &nbsp;(<span class="clsColorRed">else</span> (i32.const 2))
+    <br> &nbsp; &nbsp;)
+    <br> &nbsp;)
+    <br>)</code>
+    <br>or
+    <br><code>(module
+    <br> &nbsp;(type (;0;) (func (param i32) (result i32)))
+    <br> &nbsp;(func (;0;) (type 0) (param i32) (result i32)
+    <br> &nbsp; &nbsp;get_local 0
+    <br> &nbsp; &nbsp;i32.const 0
+    <br> &nbsp; &nbsp;i32.lt_s
+    <br> &nbsp; &nbsp;<span class="clsColorRed">if</span> (result i32)  ;; label = @1
+    <br> &nbsp; &nbsp; &nbsp;i32.const 1
+    <br> &nbsp; &nbsp;<span class="clsColorRed">else</span>
+    <br> &nbsp; &nbsp; &nbsp;i32.const 2
+    <br> &nbsp; &nbsp;<span class="clsColorRed">end</span>
+    <br> &nbsp;)
+    <br> &nbsp;(export "f" (func 0))
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcClfwElseexpl"></a></p>
   </section>
 
   <section id="idWasmstcClfwEnd">
@@ -1444,6 +1486,22 @@
     <br>* cpt.Wasm'end-instruction,
     <br>* cpt.Wasm-instruction.end,
     <a class="clsHide" href="#idWasmstcClfwEndnam"></a></p>
+  <p id="idWasmstcClfwEndexpl">example::
+    <br><code>(module
+    <br> &nbsp;(type (;0;) (func (param i32) (result i32)))
+    <br> &nbsp;(func (;0;) (type 0) (param i32) (result i32)
+    <br> &nbsp; &nbsp;get_local 0
+    <br> &nbsp; &nbsp;i32.const 0
+    <br> &nbsp; &nbsp;i32.lt_s
+    <br> &nbsp; &nbsp;<span class="clsColorRed">if</span> (result i32)  ;; label = @1
+    <br> &nbsp; &nbsp; &nbsp;i32.const 1
+    <br> &nbsp; &nbsp;<span class="clsColorRed">else</span>
+    <br> &nbsp; &nbsp; &nbsp;i32.const 2
+    <br> &nbsp; &nbsp;<span class="clsColorRed">end</span>
+    <br> &nbsp;)
+    <br> &nbsp;(export "f" (func 0))
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcClfwEndexpl"></a></p>
   </section>
 
   <section id="idWasmstcClfwIf">
@@ -1466,6 +1524,21 @@
     <br> &nbsp; &nbsp; &nbsp;(<span class="clsColorRed">else</span> (i32.const 2))
     <br> &nbsp; &nbsp;)
     <br> &nbsp;)
+    <br>)</code>
+    <br>or
+    <br><code>(module
+    <br> &nbsp;(type (;0;) (func (param i32) (result i32)))
+    <br> &nbsp;(func (;0;) (type 0) (param i32) (result i32)
+    <br> &nbsp; &nbsp;get_local 0
+    <br> &nbsp; &nbsp;i32.const 0
+    <br> &nbsp; &nbsp;i32.lt_s
+    <br> &nbsp; &nbsp;<span class="clsColorRed">if</span> (result i32)  ;; label = @1
+    <br> &nbsp; &nbsp; &nbsp;i32.const 1
+    <br> &nbsp; &nbsp;<span class="clsColorRed">else</span>
+    <br> &nbsp; &nbsp; &nbsp;i32.const 2
+    <br> &nbsp; &nbsp;<span class="clsColorRed">end</span>
+    <br> &nbsp;)
+    <br> &nbsp;(export "f" (func 0))
     <br>)</code>
     <a class="clsHide" href="#idWasmstcClfwIfexpl"></a></p>
   </section>
@@ -1601,7 +1674,7 @@
   <p id="idWasmstcCallexpl">example::
     <br><code>(func $f1 ...)
     <br>(func (export "f2") (result i32)
-    <br> &nbsp;call $f1
+    <br> &nbsp;<span class="clsColorRed">call</span> $f1
     <br>)</code>
     <a class="clsHide" href="#idWasmstcCallexpl"></a></p>
   </section>
@@ -1796,8 +1869,8 @@
     <a class="clsHide" href="#idWasmstcPrmcDrpdsn"></a></p>
   <p id="idWasmstcPrmcDrpnam">name::
     <br>* cpt.Wasm'drop-instruction,
-    <br>* cpt.Wasm-instruction.0x1A,
-    <br>* cpt.Wasm-instruction.drop,
+    <br>* cpt.Wasm-instruction.0x1a_drop,
+    <br>* cpt.Wasm-instruction.drop_0x1a,
     <a class="clsHide" href="#idWasmstcPrmcDrpnam"></a></p>
   </section>
 
@@ -1815,8 +1888,8 @@
     <a class="clsHide" href="#idWasmstcPrmcSlctdsn"></a></p>
   <p id="idWasmstcPrmcSlctnam">name::
     <br>* cpt.Wasm'select-instruction,
-    <br>* cpt.Wasm-instruction.0x1B,
-    <br>* cpt.Wasm-instruction.select,
+    <br>* cpt.Wasm-instruction.0x1b_select,
+    <br>* cpt.Wasm-instruction.select_0x1b,
     <a class="clsHide" href="#idWasmstcPrmcSlctnam"></a></p>
   <p id="idWasmstcPrmcSlctexpl">example::
     <br><code>(func (export "f") (param $a i32) (param $b i32) (result i32)
