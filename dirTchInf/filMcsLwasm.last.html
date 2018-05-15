@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-36-0.2018-05-14 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-37-0.2018-05-15 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -230,13 +230,18 @@
   <h3 id="idWasmuntTxtCmntH3">text-unit.COMMENT
     <a class="clsHide" href="#idWasmuntTxtCmntH3"></a></h3>
   <p id="idWasmuntTxtCmntdsn">description::
-    <br>· a-comment can either be a-line-comment, started with a double semicolon ‘;;’ and extending to the-end of the-line, or a-block-comment, enclosed in delimiters ‘(;’…‘;)’.
+    <br>· a-comment can either be <span class="clsColorRed">a-line-comment</span>, started with a double semicolon ‘;;’ and extending to the-end of the-line, or <span class="clsColorRed">a-block-comment</span>, enclosed in delimiters ‘(;’…‘;)’.
     <br>· block-comments can-be-nested.
     <br>[<a href="https://webassembly.github.io/spec/core/text/lexical.html#comments">https://webassembly.github.io/spec/core/text/lexical.html#comments</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmuntTxtCmntdsn"></a></p>
   <p id="idWasmuntTxtCmntnam">name::
     <br>* cpt.Wasm'comment,
     <a class="clsHide" href="#idWasmuntTxtCmntnam"></a></p>
+  <p id="idWasmuntTxtCmntexpl">example::
+    <br><code>(global (;0;) (mut i32) (i32.const 100)) ;;mutable-variable
+    <br>//(;0;) is a-block-comment denoting the-index of the-global
+    <br>//;;mutable-variable is a-line-comment</code>
+    <a class="clsHide" href="#idWasmuntTxtCmntexpl"></a></p>
   </section>
   </section>
 </section>
@@ -679,6 +684,9 @@
   <section id="idWasmsuntVar">
   <h2 id="idWasmsuntVarH2">sem-unit.VARIABLE
     <a class="clsHide" href="#idWasmsuntVarH2"></a></h2>
+  <p id="idWasmsuntVardsn">description::
+    <br>· a-variable is a-name-value pair.
+    <a class="clsHide" href="#idWasmsuntVardsn"></a></p>
   <p id="idWasmsuntVarnam">name::
     <br>* cpt.Wasm'variable,
     <br>* cpt.Wasm-sem-unit.named-value,
@@ -697,16 +705,9 @@
   <h4 id="idWasmglbldlrnH4">declaration of global-variable
     <a class="clsHide" href="#idWasmglbldlrnH4"></a></h4>
   <p id="idWasmglbldlrndsn">description::
-    <br>· a-global-declaration consists of:
-    <br>Field-Name | Type | Description
-    <br>desc | global description | a description of the global variable
-    <br>init | instantiation-time initializer | the initial value of the global variable
-    <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-section</a>]
-    <br>===
-    <br>Field Name | Type | Description
-    <br>type | value type | the type of the global variable
-    <br>mutability | varuint1 | 0 if immutable, 1 if mutable
-    <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-description">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-description</a>]
+    <br>· type | mutability | initialization
+    <br>· text: (global (mut i32) (i32.const 100))  ;; mutable
+    <br>· binary: 7F <a class="clsPreview" href="#idWasmuntTxtCmnt">(;i32;)</a> 01 (;mutable;) e400 (;i32 100;) 0b (;end;)
     <a class="clsHide" href="#idWasmglbldlrndsn"></a></p>
   <p id="idWasmglbldlrnnam">name::
     <br>* cpt.Wasm-global'declaration,
@@ -716,8 +717,8 @@
     <a class="clsHide" href="#idWasmglbldlrnnam"></a></p>
 
   <section id="idWasmglbldlrnBnr">
-  <h4 id="idWasmglbldlrnBnrH4">global-declaration.BINARY
-    <a class="clsHide" href="#idWasmglbldlrnBnrH4"></a></h4>
+  <h5 id="idWasmglbldlrnBnrH5">global-declaration.BINARY
+    <a class="clsHide" href="#idWasmglbldlrnBnrH5"></a></h5>
   <p id="idWasmglbldlrnBnrdsn">description::
     <br>· Global types are encoded by their value type and a flag for their mutability.
     <br>- globaltype ::= t:valtype  m:mut ⇒ m t
@@ -731,8 +732,8 @@
   </section>
 
   <section id="idWasmglbldlrnTxt">
-  <h4 id="idWasmglbldlrnTxtH4">global-declaration.TEXT
-    <a class="clsHide" href="#idWasmglbldlrnTxtH4"></a></h4>
+  <h5 id="idWasmglbldlrnTxtH5">global-declaration.TEXT
+    <a class="clsHide" href="#idWasmglbldlrnTxtH5"></a></h5>
   <p id="idWasmglbldlrnTxtdsn">description::
     <br>- globaltype ::= t:valtype ⇒ const t
     <br> &nbsp; | ‘(’ ‘mut’  t:valtype ‘)’ ⇒ var t
@@ -741,6 +742,10 @@
   <p id="idWasmglbldlrnTxtnam">name::
     <br>* cpt.Wasm-global-dfn.text,
     <a class="clsHide" href="#idWasmglbldlrnTxtnam"></a></p>
+  <p id="idWasmglbldlrnTxtexpl">example::
+    <br><code>(global (;0;) (mut i32) (i32.const 100)) ;;mutable
+    <br>(global (;1;) i32 (i32.const 200)) ;;immutable</code>
+    <a class="clsHide" href="#idWasmglbldlrnTxtexpl"></a></p>
   </section>
   </section>
 
@@ -756,12 +761,27 @@
     <br>* cpt.Wasm-global-variable'index-space,
     <a class="clsHide" href="#idWasmglblidxspcnam"></a></p>
   </section>
+
+  <section id="idWasmglblmut">
+  <h4 id="idWasmglblmutH4">mutability of global
+    <a class="clsHide" href="#idWasmglblmutH4"></a></h4>
+  <p id="idWasmglblmutdsn">description::
+    <br>· every global is mutable or immutable.
+    <br>· in text-format it is-denoted with the-mut keyword.
+    <br>· in binary-format this attribute takes 0 or 1 value.
+    <a class="clsHide" href="#idWasmglblmutdsn"></a></p>
+  <p id="idWasmglblmutnam">name::
+    <br>* cpt.Wasm-global'mutability,
+    <a class="clsHide" href="#idWasmglblmutnam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmsuntVarLcl">
   <h3 id="idWasmsuntVarLclH3">variable.LOCAL
     <a class="clsHide" href="#idWasmsuntVarLclH3"></a></h3>
   <p id="idWasmsuntVarLcldsn">description::
+    <br>· locals are <a class="clsPreview" href="#idWasmsuntVar">the-variables</a> of <a class="clsPreview" href="#idWasmfcn">functions</a>, parameters AND body variables.
+    <br>===
     <br>· locals are like variables in many higher-level-programming-languages: we can-name them, store values to them and load values from them.
     <br>· locals are-named using function-local integer index.
     <br>· when defining a-function-body, we can-declare any number of locals for the function's code.
@@ -775,16 +795,16 @@
     <br>* cpt.Wasm-variable.local,
     <a class="clsHide" href="#idWasmsuntVarLclnam"></a></p>
 
-  <section id="idWasmsuntVarLcl">
-  <h4 id="idWasmsuntVarLclH4">index-space of local
-    <a class="clsHide" href="#idWasmsuntVarLclH4"></a></h4>
-  <p id="idWasmsuntVarLcldsn">description::
+  <section id="idWasmsuntVarLclidx">
+  <h4 id="idWasmsuntVarLclidxH4">index-space of local
+    <a class="clsHide" href="#idWasmsuntVarLclidxH4"></a></h4>
+  <p id="idWasmsuntVarLclidxdsn">description::
     <br>· the-index-space for locals is only accessible inside a-function and includes the-parameters and local-variables of that function, which precede the other locals.
     <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {1-0.2018-03-22}]
-    <a class="clsHide" href="#idWasmsuntVarLcldsn"></a></p>
-  <p id="idWasmsuntVarLclnam">name::
+    <a class="clsHide" href="#idWasmsuntVarLclidxdsn"></a></p>
+  <p id="idWasmsuntVarLclidxnam">name::
     <br>* cpt.Wasm-local'index-space,
-    <a class="clsHide" href="#idWasmsuntVarLclnam"></a></p>
+    <a class="clsHide" href="#idWasmsuntVarLclidxnam"></a></p>
   </section>
   </section>
   </section>
@@ -1307,6 +1327,7 @@
   <p id="idWasmstcrscwpa">addressWpg::
     <br>* <a href="https://webassembly.org/docs/semantics/">https://webassembly.org/docs/semantics/</a>,
     <br>* <a href="https://webassembly.github.io/spec/core/syntax/instructions.html">https://webassembly.github.io/spec/core/syntax/instructions.html</a>,
+    <br>* <a href="https://webassembly.github.io/spec/core/appendix/index-instructions.html">https://webassembly.github.io/spec/core/appendix/index-instructions.html</a>,
     <br>* {2018-04-07} Mauro-Bringolf, Learning the Webassembly type system, <a href="https://maurobringolf.ch/2018/04/learning-the-webassembly-type-system/">https://maurobringolf.ch/</a>,
     <a class="clsHide" href="#idWasmstcrscwpa"></a></p>
   </section>
@@ -1409,7 +1430,8 @@
     <a class="clsHide" href="#idWasmstcClfwBlckdsn"></a></p>
   <p id="idWasmstcClfwBlcknam">name::
     <br>* cpt.Wasm'block-instruction,
-    <br>* cpt.Wasm-instruction.block,
+    <br>* cpt.Wasm-instruction.0x02-block,
+    <br>* cpt.Wasm-instruction.block-0x02,
     <a class="clsHide" href="#idWasmstcClfwBlcknam"></a></p>
   </section>
 
@@ -1418,7 +1440,8 @@
     <a class="clsHide" href="#idWasmstcClfwBrifH3"></a></h3>
   <p id="idWasmstcClfwBrifnam">name::
     <br>* cpt.Wasm'br_if-instruction,
-    <br>* cpt.Wasm-instruction.br_if,
+    <br>* cpt.Wasm-instruction.0x0D-br_if,
+    <br>* cpt.Wasm-instruction.br_if-0x0D,
     <a class="clsHide" href="#idWasmstcClfwBrifnam"></a></p>
   <p id="idWasmstcClfwBrifexpl">example::
     <br><code>(func (export "f") (result i32)
@@ -1443,7 +1466,8 @@
     <a class="clsHide" href="#idWasmstcClfwElsedsn"></a></p>
   <p id="idWasmstcClfwElsenam">name::
     <br>* cpt.Wasm'else-instruction,
-    <br>* cpt.Wasm-instruction.else,
+    <br>* cpt.Wasm-instruction.0x05-else,
+    <br>* cpt.Wasm-instruction.else-0x05,
     <a class="clsHide" href="#idWasmstcClfwElsenam"></a></p>
   <p id="idWasmstcClfwElseexpl">example::
     <br><code>(module
@@ -1484,7 +1508,8 @@
     <a class="clsHide" href="#idWasmstcClfwEnddsn"></a></p>
   <p id="idWasmstcClfwEndnam">name::
     <br>* cpt.Wasm'end-instruction,
-    <br>* cpt.Wasm-instruction.end,
+    <br>* cpt.Wasm-instruction.0x0B-end,
+    <br>* cpt.Wasm-instruction.end-0x0B,
     <a class="clsHide" href="#idWasmstcClfwEndnam"></a></p>
   <p id="idWasmstcClfwEndexpl">example::
     <br><code>(module
@@ -1512,7 +1537,8 @@
     <a class="clsHide" href="#idWasmstcClfwIfdsn"></a></p>
   <p id="idWasmstcClfwIfnam">name::
     <br>* cpt.Wasm'if-instruction,
-    <br>* cpt.Wasm-instruction.if,
+    <br>* cpt.Wasm-instruction.0x04-if,
+    <br>* cpt.Wasm-instruction.if-0x04,
     <a class="clsHide" href="#idWasmstcClfwIfnam"></a></p>
   <p id="idWasmstcClfwIfexpl">example::
     <br><code>(module
@@ -1551,7 +1577,8 @@
     <a class="clsHide" href="#idWasmstcClfwLoopdsn"></a></p>
   <p id="idWasmstcClfwLoopnam">name::
     <br>* cpt.Wasm'loop-instruction,
-    <br>* cpt.Wasm-instruction.loop,
+    <br>* cpt.Wasm-instruction.0x03-loop,
+    <br>* cpt.Wasm-instruction.loop-0x03,
     <a class="clsHide" href="#idWasmstcClfwLoopnam"></a></p>
   <p id="idWasmstcClfwLoopexpl">example::
     <br><code>(func (export "f") (result i32)
@@ -1591,7 +1618,8 @@
     <a class="clsHide" href="#idWasmstcClfwNopdsn"></a></p>
   <p id="idWasmstcClfwNopnam">name::
     <br>* cpt.Wasm'nop-instruction,
-    <br>* cpt.Wasm-instruction.nop,
+    <br>* cpt.Wasm-instruction.0x01-nop,
+    <br>* cpt.Wasm-instruction.nop-0x01,
     <a class="clsHide" href="#idWasmstcClfwNopnam"></a></p>
   </section>
 
@@ -1603,7 +1631,8 @@
     <a class="clsHide" href="#idWasmstcClfwRtrndsn"></a></p>
   <p id="idWasmstcClfwRtrnnam">name::
     <br>* cpt.Wasm'return-instruction,
-    <br>* cpt.Wasm-instruction.return,
+    <br>* cpt.Wasm-instruction.0x0F-return,
+    <br>* cpt.Wasm-instruction.return-0x0F,
     <a class="clsHide" href="#idWasmstcClfwRtrnnam"></a></p>
   <p id="idWasmstcClfwRtrnexpl">example::
     <br><code>(func (export "f") (param $a i32) (param $b i32) (result i32)
@@ -1640,7 +1669,8 @@
     <a class="clsHide" href="#idWasmstcClfwUnrcbldsn"></a></p>
   <p id="idWasmstcClfwUnrcblnam">name::
     <br>* cpt.Wasm'unreachable-instruction,
-    <br>* cpt.Wasm-instruction.unreachable,
+    <br>* cpt.Wasm-instruction.0x00-unreachable,
+    <br>* cpt.Wasm-instruction.unreachable-0x00,
     <a class="clsHide" href="#idWasmstcClfwUnrcblnam"></a></p>
   </section>
   </section>
@@ -1669,7 +1699,8 @@
     <a class="clsHide" href="#idWasmstcCalldsn"></a></p>
   <p id="idWasmstcCallnam">name::
     <br>* cpt.Wasm'call-instruction,
-    <br>* cpt.Wasm-instruction.call,
+    <br>* cpt.Wasm-instruction.0x10-call,
+    <br>* cpt.Wasm-instruction.call-0x10,
     <a class="clsHide" href="#idWasmstcCallnam"></a></p>
   <p id="idWasmstcCallexpl">example::
     <br><code>(func $f1 ...)
@@ -1677,6 +1708,84 @@
     <br> &nbsp;<span class="clsColorRed">call</span> $f1
     <br>)</code>
     <a class="clsHide" href="#idWasmstcCallexpl"></a></p>
+  </section>
+
+  <section id="idWasmstcCrtmmr">
+  <h3 id="idWasmstcCrtmmrH3">instruction.current_memory
+    <a class="clsHide" href="#idWasmstcCrtmmrH3"></a></h3>
+  <p id="idWasmstcCrtmmrdsn">description::
+    <br>· the-current_memory instruction returns the current size of a-memory.
+    <a class="clsHide" href="#idWasmstcCrtmmrdsn"></a></p>
+  <p id="idWasmstcCrtmmrnam">name::
+    <br>* cpt.Wasm'current_memory,
+    <br>* cpt.Wasm-instruction.current_memory,
+    <a class="clsHide" href="#idWasmstcCrtmmrnam"></a></p>
+  </section>
+
+  <section id="idWasmstcPrmcDrp">
+  <h3 id="idWasmstcPrmcDrpH3">instruction.drop
+    <a class="clsHide" href="#idWasmstcPrmcDrpH3"></a></h3>
+  <p id="idWasmstcPrmcDrpdsn">description::
+    <br>· the-drop-operator simply throws away a single operand.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions</a> {1-0.2018-03-22}]
+    <br>===
+    <br>· binary-format: 0x1A
+    <a class="clsHide" href="#idWasmstcPrmcDrpdsn"></a></p>
+  <p id="idWasmstcPrmcDrpnam">name::
+    <br>* cpt.Wasm'drop-instruction,
+    <br>* cpt.Wasm-instruction.0x1A-drop,
+    <br>* cpt.Wasm-instruction.drop-0x1A,
+    <a class="clsHide" href="#idWasmstcPrmcDrpnam"></a></p>
+  </section>
+
+  <section id="idWasmstcGtgbl">
+  <h3 id="idWasmstcGtgblH3">instruction.get_global
+    <a class="clsHide" href="#idWasmstcGtgblH3"></a></h3>
+  <p id="idWasmstcGtgblnam">name::
+    <br>* cpt.Wasm'get_global,
+    <br>* cpt.Wasm-instruction.0x23-get_global,
+    <br>* cpt.Wasm-instruction.get_global-0x23,
+    <a class="clsHide" href="#idWasmstcGtgblnam"></a></p>
+  </section>
+
+  <section id="idWasmstcGtlcl">
+  <h3 id="idWasmstcGtlclH3">instruction.get_local
+    <a class="clsHide" href="#idWasmstcGtlclH3"></a></h3>
+  <p id="idWasmstcGtlcldsn">description::
+    <br>· pushes the-value of a-variable onto <a class="clsPreview" href="#idWasmalgmchnstk">the-stack</a>,
+    <a class="clsHide" href="#idWasmstcGtlcldsn"></a></p>
+  <p id="idWasmstcGtlclnam">name::
+    <br>* cpt.Wasm'get_local,
+    <br>* cpt.Wasm-instruction.0x20-get_local,
+    <br>* cpt.Wasm-instruction.get_local-0x20,
+    <a class="clsHide" href="#idWasmstcGtlclnam"></a></p>
+  <p id="idWasmstcGtlclexpl">example::
+    <br><code>(func (param $p1 i32) (param $p2 f32) (local $loc i32)
+    <br> &nbsp;get_local $p1 ;; pushes param1 on stack
+    <br>)</code>
+    <br>===
+    <br><code>(func (param i32) (param f32) (local i32)
+    <br> &nbsp;get_local 0 ;; pushes first parameter on stack
+    <br> &nbsp;get_local 1 ;; pushes second parameter on stack
+    <br> &nbsp;get_local 2 ;; pushes first local on stack
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcGtlclexpl"></a></p>
+  </section>
+
+  <section id="idWasmstcGrwmmr">
+  <h3 id="idWasmstcGrwmmrH3">instruction.grow_memory
+    <a class="clsHide" href="#idWasmstcGrwmmrH3"></a></h3>
+  <p id="idWasmstcGrwmmrdsn">description::
+    <br>· the-grow_memory-instruction grows memory by a given delta and returns the previous size, or −1 if enough memory cannot-be-allocated.
+    <br>· operate in units of <a class="clsPreview" href="#idWasmsuntMmrpage">page</a> size.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions</a> {1-0.2018-03-22}]
+    <a class="clsHide" href="#idWasmstcGrwmmrdsn"></a></p>
+  <p id="idWasmstcGrwmmrnam">name::
+    <br>* cpt.Wasm'grow_memory,
+    <br>* cpt.Wasm'memory.grow,
+    <br>* cpt.Wasm-instruction.0x40-memory.grow,
+    <br>* cpt.Wasm-instruction.memory.grow-0x40,
+    <a class="clsHide" href="#idWasmstcGrwmmrnam"></a></p>
   </section>
 
   <section id="idWasmstcI32add">
@@ -1687,7 +1796,8 @@
     <a class="clsHide" href="#idWasmstcI32adddsn"></a></p>
   <p id="idWasmstcI32addnam">name::
     <br>* cpt.Wasm'i32.add-instruction,
-    <br>* cpt.Wasm-instruction.i32.add,
+    <br>* cpt.Wasm-instruction.0x6A-i32.add,
+    <br>* cpt.Wasm-instruction.i32.add-0x6A,
     <a class="clsHide" href="#idWasmstcI32addnam"></a></p>
   <p id="idWasmstcI32addexpl">example::
     <br><code>(func (export "f") (param $a i32) (result i32)
@@ -1710,7 +1820,8 @@
     <a class="clsHide" href="#idWasmstcI32cnstdsn"></a></p>
   <p id="idWasmstcI32cnstnam">name::
     <br>* cpt.Wasm'i32.const-instruction,
-    <br>* cpt.Wasm-instruction.i32.const,
+    <br>* cpt.Wasm-instruction.0x41-i32.const,
+    <br>* cpt.Wasm-instruction.i32.const-0x41,
     <a class="clsHide" href="#idWasmstcI32cnstnam"></a></p>
   <p id="idWasmstcI32cnstexpl">example::
     <br>// returns 10
@@ -1732,7 +1843,8 @@
     <a class="clsHide" href="#idWasmstcI32muldsn"></a></p>
   <p id="idWasmstcI32mulnam">name::
     <br>* cpt.Wasm'i32.mul-instruction,
-    <br>* cpt.Wasm-instruction.i32.mul,
+    <br>* cpt.Wasm-instruction.0x6C-i32.mul,
+    <br>* cpt.Wasm-instruction.i32.mul-0x6C,
     <a class="clsHide" href="#idWasmstcI32mulnam"></a></p>
   <p id="idWasmstcI32mulexpl">example::
     <br>//for input 6 and 5, outputs 30
@@ -1746,6 +1858,124 @@
     <br> &nbsp;i32.mul
     <br>)</code>
     <a class="clsHide" href="#idWasmstcI32mulexpl"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h3 id="idWasmstcLoadH3">instruction.load
+    <a class="clsHide" href="#idWasmstcLoadH3"></a></h3>
+  <p id="idWasmstcLoaddsn">description::
+    <br>· memory is-accessed with load and store instructions for the different <a class="clsPreview" href="idWasmsuntValType">value-types</a>.
+    <br>· they all take <a class="clsPreview" href="idWasmstcMmrarg">a-memory-immediate-memarg</a> that contains an address-offset and an-alignment-hint (in base 2 logarithmic representation).
+    <br>· integer loads and stores can optionally specify a storage size that is smaller than the bit width of the respective value-type.
+    <br>· in the-case of loads, a-sign-extension-mode-sx-(u|s) is then required to select appropriate behavior.
+    <br>· the-static-address offset is added to the-dynamic-address operand, yielding a 33-bit effective-address that is the zero-based index at which the-memory is-accessed.
+    <br>· all values are read and written in little-endian-byte-order.
+    <br>· a-trap results if any of the accessed memory bytes lies outside the address range implied by the memory's current size.
+    <br>· note: future version of WebAssembly might-provide memory-instructions with 64-bit address ranges.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions</a> {1-0.2018-03-22}]
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'load-memory-instruction,
+    <br>* cpt.Wasm-instruction.load-memory,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcPrmcSlct">
+  <h3 id="idWasmstcPrmcSlctH3">instruction.select
+    <a class="clsHide" href="#idWasmstcPrmcSlctH3"></a></h3>
+  <p id="idWasmstcPrmcSlctdsn">description::
+    <br>· a-ternary-operator with two operands, which have the same type as each other, plus a-boolean (i32) condition.
+    <br>· it returns the first operand if the-condition operand is non-zero, or the-second otherwise.
+    <br>===
+    <br>· the-select-operator selects one of its first two operands based on whether its third operand is zero or not.
+    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions</a> {1-0.2018-03-22}]
+    <br>===
+    <br>· binary-format: 0x1B
+    <a class="clsHide" href="#idWasmstcPrmcSlctdsn"></a></p>
+  <p id="idWasmstcPrmcSlctnam">name::
+    <br>* cpt.Wasm'select-instruction,
+    <br>* cpt.Wasm-instruction.0x1B-select,
+    <br>* cpt.Wasm-instruction.select-0x1B,
+    <a class="clsHide" href="#idWasmstcPrmcSlctnam"></a></p>
+  <p id="idWasmstcPrmcSlctexpl">example::
+    <br><code>(func (export "f") (param $a i32) (param $b i32) (result i32)
+    <br> &nbsp;;; return a > b ? a : b
+    <br> &nbsp;(select
+    <br> &nbsp; &nbsp;(get_local $a)
+    <br> &nbsp; &nbsp;(get_local $b)
+    <br> &nbsp; &nbsp;(i32.gt_s (get_local $a) (get_local $b))
+    <br> &nbsp;)
+    <br>)</code>
+    <br>or
+    <br><code>(func (export "f") (param $a i32) (param $b i32) (result i32)
+    <br> &nbsp;get_local 0
+    <br> &nbsp;get_local 1
+    <br> &nbsp;get_local 0
+    <br> &nbsp;get_local 1
+    <br> &nbsp;i32.gt_s
+    <br> &nbsp;select
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcPrmcSlctexpl"></a></p>
+  </section>
+
+  <section id="idWasmstcStgbl">
+  <h3 id="idWasmstcStgblH3">instruction.set_global
+    <a class="clsHide" href="#idWasmstcStgblH3"></a></h3>
+  <p id="idWasmstcStgblnam">name::
+    <br>* cpt.Wasm'set_global,
+    <br>* cpt.Wasm-instruction.0x24-set_global,
+    <br>* cpt.Wasm-instruction.set_global-0x24,
+    <a class="clsHide" href="#idWasmstcStgblnam"></a></p>
+  </section>
+
+  <section id="idWasmstcStlcl">
+  <h3 id="idWasmstcStlclH3">instruction.set_local
+    <a class="clsHide" href="#idWasmstcStlclH3"></a></h3>
+  <p id="idWasmstcStlcldsn">description::
+    <br>· set the-value of <a class="clsPreview" href="#idWasmalgmchnstk">the-stack</a> on <a class="clsPreview" href="#idWasmsuntVarLcl">a-local</a>.
+    <a class="clsHide" href="#idWasmstcStlcldsn"></a></p>
+  <p id="idWasmstcStlclnam">name::
+    <br>* cpt.Wasm'set_local,
+    <br>* cpt.Wasm-instruction.0x20-set_local,
+    <br>* cpt.Wasm-instruction.set_local-0x20,
+    <a class="clsHide" href="#idWasmstcStlclnam"></a></p>
+  <p id="idWasmstcStlclexpl">example::
+    <br><code>(func (export "f") (param (;0;) i32) (result i32)
+    <br> &nbsp;(local (;1;) i32)
+    <br> &nbsp;i32.const 7
+    <br> &nbsp;<span class="clsColorRed">set_local</span> 1
+    <br> &nbsp;get_local 1 ;;no get_local, compile-error
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcStlclexpl"></a></p>
+  </section>
+
+  <section id="idWasmstcStore">
+  <h3 id="idWasmstcStoreH3">instruction.store
+    <a class="clsHide" href="#idWasmstcStoreH3"></a></h3>
+  <p id="idWasmstcStorenam">name::
+    <br>* cpt.Wasm'store-memory-instruction,
+    <br>* cpt.Wasm-instruction.store-memory,
+    <a class="clsHide" href="#idWasmstcStorenam"></a></p>
+  </section>
+
+  <section id="idWasmstcTelcl">
+  <h3 id="idWasmstcTelclH3">instruction.tee_local
+    <a class="clsHide" href="#idWasmstcTelclH3"></a></h3>
+  <p id="idWasmstcTelcldsn">description::
+    <br>· set the-value of <a class="clsPreview" href="#idWasmalgmchnstk">the-stack</a> on <a class="clsPreview" href="#idWasmsuntVarLcl">a-local</a> AND return it.
+    <a class="clsHide" href="#idWasmstcTelcldsn"></a></p>
+  <p id="idWasmstcTelclnam">name::
+    <br>* cpt.Wasm'tee_local,
+    <br>* cpt.Wasm-instruction.0x22-tee_local,
+    <br>* cpt.Wasm-instruction.tee_local-0x22,
+    <a class="clsHide" href="#idWasmstcTelclnam"></a></p>
+  <p id="idWasmstcTelclexpl">example::
+    <br><code>(func (export "f") (param (;0;) i32) (result i32)
+    <br> &nbsp;(local (;1;) i32)
+    <br> &nbsp;i32.const 7
+    <br> &nbsp;<span class="clsColorRed">tee_local</span> 1
+    <br>)</code>
+    <a class="clsHide" href="#idWasmstcTelclexpl"></a></p>
   </section>
   </section>
 
@@ -1857,60 +2087,10 @@
   <p id="idWasmstcPrmcnam">name::
     <br>* cpt.Wasm-instruction.parametric,
     <a class="clsHide" href="#idWasmstcPrmcnam"></a></p>
-
-  <section id="idWasmstcPrmcDrp">
-  <h3 id="idWasmstcPrmcDrpH3">instruction.drop
-    <a class="clsHide" href="#idWasmstcPrmcDrpH3"></a></h3>
-  <p id="idWasmstcPrmcDrpdsn">description::
-    <br>· the-drop-operator simply throws away a single operand.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions</a> {1-0.2018-03-22}]
-    <br>===
-    <br>· binary-format: 0x1A
-    <a class="clsHide" href="#idWasmstcPrmcDrpdsn"></a></p>
-  <p id="idWasmstcPrmcDrpnam">name::
-    <br>* cpt.Wasm'drop-instruction,
-    <br>* cpt.Wasm-instruction.0x1a_drop,
-    <br>* cpt.Wasm-instruction.drop_0x1a,
-    <a class="clsHide" href="#idWasmstcPrmcDrpnam"></a></p>
-  </section>
-
-  <section id="idWasmstcPrmcSlct">
-  <h3 id="idWasmstcPrmcSlctH3">instruction.select
-    <a class="clsHide" href="#idWasmstcPrmcSlctH3"></a></h3>
-  <p id="idWasmstcPrmcSlctdsn">description::
-    <br>· a-ternary-operator with two operands, which have the same type as each other, plus a-boolean (i32) condition.
-    <br>· it returns the first operand if the-condition operand is non-zero, or the-second otherwise.
-    <br>===
-    <br>· the-select-operator selects one of its first two operands based on whether its third operand is zero or not.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#parametric-instructions</a> {1-0.2018-03-22}]
-    <br>===
-    <br>· binary-format: 0x1B
-    <a class="clsHide" href="#idWasmstcPrmcSlctdsn"></a></p>
-  <p id="idWasmstcPrmcSlctnam">name::
-    <br>* cpt.Wasm'select-instruction,
-    <br>* cpt.Wasm-instruction.0x1b_select,
-    <br>* cpt.Wasm-instruction.select_0x1b,
-    <a class="clsHide" href="#idWasmstcPrmcSlctnam"></a></p>
-  <p id="idWasmstcPrmcSlctexpl">example::
-    <br><code>(func (export "f") (param $a i32) (param $b i32) (result i32)
-    <br> &nbsp;;; return a > b ? a : b
-    <br> &nbsp;(select
-    <br> &nbsp; &nbsp;(get_local $a)
-    <br> &nbsp; &nbsp;(get_local $b)
-    <br> &nbsp; &nbsp;(i32.gt_s (get_local $a) (get_local $b))
-    <br> &nbsp;)
-    <br>)</code>
-    <br>or
-    <br><code>(func (export "f") (param $a i32) (param $b i32) (result i32)
-    <br> &nbsp;get_local 0
-    <br> &nbsp;get_local 1
-    <br> &nbsp;get_local 0
-    <br> &nbsp;get_local 1
-    <br> &nbsp;i32.gt_s
-    <br> &nbsp;select
-    <br>)</code>
-    <a class="clsHide" href="#idWasmstcPrmcSlctexpl"></a></p>
-  </section>
+  <p id="idWasmstcPrmcSpc">specific::
+    <br>* <a class="clsPreview" href="#idWasmstcPrmcDrp">drop</a>,
+    <br>* <a class="clsPreview" href="#idWasmstcPrmcSlct">select-instruction</a>,
+    <a class="clsHide" href="#idWasmstcPrmcSpc"></a></p>
   </section>
 
   <section id="idWasmstcVrbl">
@@ -1925,65 +2105,13 @@
     <br>* cpt.Wasm'variable-instruction,
     <br>* cpt.Wasm-instruction.variable,
     <a class="clsHide" href="#idWasmstcVrblnam"></a></p>
-
-  <section id="idWasmstcGtlcl">
-  <h3 id="idWasmstcGtlclH3">instruction.get_local
-    <a class="clsHide" href="#idWasmstcGtlclH3"></a></h3>
-  <p id="idWasmstcGtlcldsn">description::
-    <br>· pushes the-value of a-variable onto <a class="clsPreview" href="#idWasmalgmchnstk">the-stack</a>,
-    <a class="clsHide" href="#idWasmstcGtlcldsn"></a></p>
-  <p id="idWasmstcGtlclnam">name::
-    <br>* cpt.Wasm'get_local,
-    <br>* cpt.Wasm-instruction.get_local,
-    <a class="clsHide" href="#idWasmstcGtlclnam"></a></p>
-  <p id="idWasmstcGtlclexpl">example::
-    <br><code>(func (param $p1 i32) (param $p2 f32) (local $loc i32)
-    <br> &nbsp;get_local $p1 ;; pushes param1 on stack
-    <br>)</code>
-    <br>===
-    <br><code>(func (param i32) (param f32) (local i32)
-    <br> &nbsp;get_local 0 ;; pushes first parameter on stack
-    <br> &nbsp;get_local 1 ;; pushes second parameter on stack
-    <br> &nbsp;get_local 2 ;; pushes first local on stack
-    <br>)</code>
-    <a class="clsHide" href="#idWasmstcGtlclexpl"></a></p>
-  </section>
-
-  <section id="idWasmstcStlcl">
-  <h3 id="idWasmstcStlclH3">instruction.set_local
-    <a class="clsHide" href="#idWasmstcStlclH3"></a></h3>
-  <p id="idWasmstcStlclnam">name::
-    <br>* cpt.Wasm'set_local,
-    <br>* cpt.Wasm-instruction.set_local,
-    <a class="clsHide" href="#idWasmstcStlclnam"></a></p>
-  </section>
-
-  <section id="idWasmstcTelcl">
-  <h3 id="idWasmstcTelclH3">instruction.tee_local
-    <a class="clsHide" href="#idWasmstcTelclH3"></a></h3>
-  <p id="idWasmstcTelclnam">name::
-    <br>* cpt.Wasm'tee_local,
-    <br>* cpt.Wasm-instruction.tee_local,
-    <a class="clsHide" href="#idWasmstcTelclnam"></a></p>
-  </section>
-
-  <section id="idWasmstcGtgbl">
-  <h3 id="idWasmstcGtgblH3">instruction.get_global
-    <a class="clsHide" href="#idWasmstcGtgblH3"></a></h3>
-  <p id="idWasmstcGtgblnam">name::
-    <br>* cpt.Wasm'get_global,
-    <br>* cpt.Wasm-instruction.get_global,
-    <a class="clsHide" href="#idWasmstcGtgblnam"></a></p>
-  </section>
-
-  <section id="idWasmstcStgbl">
-  <h3 id="idWasmstcStgblH3">instruction.set_global
-    <a class="clsHide" href="#idWasmstcStgblH3"></a></h3>
-  <p id="idWasmstcStgblnam">name::
-    <br>* cpt.Wasm'set_global,
-    <br>* cpt.Wasm-instruction.set_global,
-    <a class="clsHide" href="#idWasmstcStgblnam"></a></p>
-  </section>
+  <p id="idWasmstcVrblSpc">specific::
+    <br>* get_global,
+    <br>* get_local,
+    <br>* set_global,
+    <br>* set_local,
+    <br>* tee_local,
+    <a class="clsHide" href="#idWasmstcVrblSpc"></a></p>
   </section>
 
   <section id="idWasmstcMmr">
@@ -2009,61 +2137,12 @@
     <br>* cpt.Wasm-memory-instruction'memarg,
     <a class="clsHide" href="#idWasmstcMmrargnam"></a></p>
   </section>
-
-  <section id="idWasmstcCrtmmr">
-  <h3 id="idWasmstcCrtmmrH3">instruction.current_memory
-    <a class="clsHide" href="#idWasmstcCrtmmrH3"></a></h3>
-  <p id="idWasmstcCrtmmrdsn">description::
-    <br>· the-current_memory instruction returns the current size of a-memory.
-    <a class="clsHide" href="#idWasmstcCrtmmrdsn"></a></p>
-  <p id="idWasmstcCrtmmrnam">name::
-    <br>* cpt.Wasm'current_memory,
-    <br>* cpt.Wasm-instruction.current_memory,
-    <a class="clsHide" href="#idWasmstcCrtmmrnam"></a></p>
-  </section>
-
-  <section id="idWasmstcGrwmmr">
-  <h3 id="idWasmstcGrwmmrH3">instruction.grow_memory
-    <a class="clsHide" href="#idWasmstcGrwmmrH3"></a></h3>
-  <p id="idWasmstcGrwmmrdsn">description::
-    <br>· the-grow_memory-instruction grows memory by a given delta and returns the previous size, or −1 if enough memory cannot-be-allocated.
-    <br>· operate in units of <a class="clsPreview" href="#idWasmsuntMmrpage">page</a> size.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions</a> {1-0.2018-03-22}]
-    <a class="clsHide" href="#idWasmstcGrwmmrdsn"></a></p>
-  <p id="idWasmstcGrwmmrnam">name::
-    <br>* cpt.Wasm'grow_memory,
-    <br>* cpt.Wasm-instruction.grow_memory,
-    <a class="clsHide" href="#idWasmstcGrwmmrnam"></a></p>
-  </section>
-
-  <section id="idWasmstcLoad">
-  <h3 id="idWasmstcLoadH3">instruction.load
-    <a class="clsHide" href="#idWasmstcLoadH3"></a></h3>
-  <p id="idWasmstcLoaddsn">description::
-    <br>· memory is-accessed with load and store instructions for the different <a class="clsPreview" href="idWasmsuntValType">value-types</a>.
-    <br>· they all take <a class="clsPreview" href="idWasmstcMmrarg">a-memory-immediate-memarg</a> that contains an address-offset and an-alignment-hint (in base 2 logarithmic representation).
-    <br>· integer loads and stores can optionally specify a storage size that is smaller than the bit width of the respective value-type.
-    <br>· in the-case of loads, a-sign-extension-mode-sx-(u|s) is then required to select appropriate behavior.
-    <br>· the-static-address offset is added to the-dynamic-address operand, yielding a 33-bit effective-address that is the zero-based index at which the-memory is-accessed.
-    <br>· all values are read and written in little-endian-byte-order.
-    <br>· a-trap results if any of the accessed memory bytes lies outside the address range implied by the memory's current size.
-    <br>· note: future version of WebAssembly might-provide memory-instructions with 64-bit address ranges.
-    <br>[<a href="https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions">https://webassembly.github.io/spec/core/syntax/instructions.html#memory-instructions</a> {1-0.2018-03-22}]
-    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
-  <p id="idWasmstcLoadnam">name::
-    <br>* cpt.Wasm'load-memory-instruction,
-    <br>* cpt.Wasm-instruction.load-memory,
-    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
-  </section>
-
-  <section id="idWasmstcStore">
-  <h3 id="idWasmstcStoreH3">instruction.store
-    <a class="clsHide" href="#idWasmstcStoreH3"></a></h3>
-  <p id="idWasmstcStorenam">name::
-    <br>* cpt.Wasm'store-memory-instruction,
-    <br>* cpt.Wasm-instruction.store-memory,
-    <a class="clsHide" href="#idWasmstcStorenam"></a></p>
-  </section>
+  <p id="idWasmstcMmrargSpc">specific::
+    <br>* current_memory,
+    <br>* grow_memory,
+    <br>* load,
+    <br>* store,
+    <a class="clsHide" href="#idWasmstcMmrargSpc"></a></p>
   </section>
 
   <section id="idWasmstcExrn">
@@ -2166,6 +2245,10 @@
     <br>(export "fAdd" (func $fAdd))</code>
     <br>or
     <br><code>(func (export "fAdd") ...)</code>
+    <br>===
+    <br>//export global
+    <br><code>(global (;1;) i32 (i32.const 20))
+    <br>(export "CONSTA" (global 1))</code>
     <a class="clsHide" href="#idWasmstcExptTxtexpl"></a></p>
   </section>
   </section>
@@ -2442,7 +2525,7 @@
     <a class="clsHide" href="#idWasmalgscnGlblH2"></a></h2>
   <p id="idWasmalgscnGlbldsn">description::
     <br>· Opcode: 0x06.
-    <br>· it consists of an-array of global-declarations.
+    <br>· it consists of an-array of <a class="clsPreview" href="#idWasmglbldlrn">global-declarations</a>.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-section</a>]
     <a class="clsHide" href="#idWasmalgscnGlbldsn"></a></p>
   <p id="idWasmalgscnGlblnam">name::
@@ -3684,8 +3767,8 @@
   <h1 id="idWasmtoolRteH1">tool.RUNTIME-ENVIRONMENT
     <a class="clsHide" href="#idWasmtoolRteH1"></a></h1>
   <p id="idWasmtoolRtedsn">description::
-    <br>· the-runtime-environment is the-software-system that provides the necessary libraries and executes <a class="clsPreview" href="#idWasmpgm">a-Wasm-program</a>.
-    <br>· now, it is <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbbsr">a-browser</a>.
+    <br>· the-runtime-environment[a] is the-software-system that provides the necessary libraries and executes <a class="clsPreview" href="#idWasmpgm">a-Wasm-program</a>.
+    <br>· now, it[a] is <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbbsr">a-browser</a> and <a class="clsPreview" href="FilMcsLjn.Last.html#idLjnrtm">the-Node.js</a>.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-04-08]
     <br>===
     <br>· a WebAssembly runtime-environment will typically provide APIs for interacting with the-outside-world, as-well-as mechanisms for loading and linking wasm-modules.
