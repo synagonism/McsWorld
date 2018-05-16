@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-37-0.2018-05-15 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-38-0.2018-05-16 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -715,6 +715,9 @@
     <br>* cpt.Wasm-global'description,
     <br>* cpt.Wasm-global-variable'description,
     <a class="clsHide" href="#idWasmglbldlrnnam"></a></p>
+  <p id="idWasmglbldlrnwhlchn">whole-chain::
+    <br>* <a class="clsPreview" href="#idWasmalgscnGlbl">global-section</a>,
+    <a class="clsHide" href="#idWasmglbldlrnwhlchn"></a></p>
 
   <section id="idWasmglbldlrnBnr">
   <h5 id="idWasmglbldlrnBnrH5">global-declaration.BINARY
@@ -794,6 +797,18 @@
     <br>* cpt.Wasm-local,
     <br>* cpt.Wasm-variable.local,
     <a class="clsHide" href="#idWasmsuntVarLclnam"></a></p>
+
+  <section id="idWasmsuntVarLcldfn">
+  <h4 id="idWasmsuntVarLcldfnH4">declaration of local
+    <a class="clsHide" href="#idWasmsuntVarLcldfnH4"></a></h4>
+  <p id="idWasmsuntVarLcldfndsn">description::
+    <br>· body-locals are-decleared in function's-body.
+    <br>· text-format: (local i32 i32 i64)
+    <a class="clsHide" href="#idWasmsuntVarLcldfndsn"></a></p>
+  <p id="idWasmsuntVarLcldfnnam">name::
+    <br>* cpt.Wasm-local.declaration,
+    <a class="clsHide" href="#idWasmsuntVarLcldfnnam"></a></p>
+  </section>
 
   <section id="idWasmsuntVarLclidx">
   <h4 id="idWasmsuntVarLclidxH4">index-space of local
@@ -2185,6 +2200,30 @@
   </section>
   </section>
 
+  <section id="idWasmstcType">
+  <h2 id="idWasmstcTypeH2">instruction.TYPE
+    <a class="clsHide" href="#idWasmstcTypeH2"></a></h2>
+  <p id="idWasmstcTypenam">name::
+    <br>* cpt.Wasm'type-signature,
+    <br>* cpt.Wasm-instruction.type,
+    <a class="clsHide" href="#idWasmstcTypenam"></a></p>
+  <p id="idWasmstcTypewhlchn">whole-chain::
+    <br>* <a class="clsPreview" href="#idWasmalgscnType">type-section</a>,
+    <a class="clsHide" href="#idWasmstcTypewhlchn"></a></p>
+  <p id="idWasmstcTypeexpl">example::
+    <br>;;text-format
+    <br><code>(type (;0;) (func (param i32 i32) (result i32)))</code>
+    <br>;;binary-format
+    <br><code>; type 0
+    <br>60 ; func
+    <br>02 ; num params
+    <br>7f ; i32
+    <br>7f ; i32
+    <br>01 ; num results
+    <br>7f ; i32</code>
+    <a class="clsHide" href="#idWasmstcTypeexpl"></a></p>
+  </section>
+
   <section id="idWasmstcExpt">
   <h2 id="idWasmstcExptH2">instruction.EXPORT
     <a class="clsHide" href="#idWasmstcExptH2"></a></h2>
@@ -2205,6 +2244,9 @@
     <br>* cpt.Wasm-export,
     <br>* cpt.Wasm-instruction.export,
     <a class="clsHide" href="#idWasmstcExptnam"></a></p>
+  <p id="idWasmstcExptwhlchn">whole-chain::
+    <br>* <a class="clsPreview" href="#idWasmalgscnExpt">export-section</a>,
+    <a class="clsHide" href="#idWasmstcExptwhlchn"></a></p>
 
   <section id="idWasmstcExptBnr">
   <h3 id="idWasmstcExptBnrH3">export.BINARY
@@ -2222,6 +2264,15 @@
   <p id="idWasmstcExptBnrnam">name::
     <br>* cpt.Wasm-export.binary,
     <a class="clsHide" href="#idWasmstcExptBnrnam"></a></p>
+  <p id="idWasmstcExptBnrexpl">example::
+    <br><code>02; string length
+    <br>6632 ; 'f2' export name
+    <br>00 ; export kind
+    <br>01 ; export func index
+    <br></code>
+    <br>or in text-format
+    <br><code>(export "f2" (func 1)))</code>
+    <a class="clsHide" href="#idWasmstcExptBnrexpl"></a></p>
   </section>
 
   <section id="idWasmstcExptTxt">
@@ -2261,6 +2312,12 @@
     <br>* cpt.Wasm-import,
     <br>* cpt.Wasm-instruction.import,
     <a class="clsHide" href="#idWasmstcImprtnam"></a></p>
+  <p id="idWasmstcImprtwhlchn">whole-chain::
+    <br>* <a class="clsPreview" href="#idWasmalgscnImpt">import-section</a>,
+    <a class="clsHide" href="#idWasmstcImprtwhlchn"></a></p>
+  <p id="idWasmstcImprtwhlchn">whole-chain::
+    <br>* <a class="clsPreview" href="#idWasmalgscnImpt">import-section</a>,
+    <a class="clsHide" href="#idWasmstcImprtwhlchn"></a></p>
 
   <section id="idWasmstcImprtTxt">
   <h3 id="idWasmstcImprtTxtH3">import.TEXT
@@ -2414,7 +2471,7 @@
     <a class="clsHide" href="#idWasmalgscnTypeH2"></a></h2>
   <p id="idWasmalgscnTypedsn">description::
     <br>· opcode: 0x01.
-    <br>· it consists of a-list of type-signatures, today of <a class="clsPreview" href="#idWasmfcnsgtr">function-signatures</a>.
+    <br>· it consists of a-list of <a class="clsPreview" href="#idWasmstcType">type-signatures</a>, today of <a class="clsPreview" href="#idWasmfcnsgtr">function-signatures</a>.
     <br>· it includes signatures of imported-functions.
     <br>· the-position in this list, define the unique index of the-type inside the-module.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
@@ -2425,6 +2482,29 @@
     <br>* cpt.Wasm-section.type,
     <br>* cpt.Wasm-type-section,
     <a class="clsHide" href="#idWasmalgscnTypenam"></a></p>
+  <p id="idWasmalgscnTypeexpl">example::
+    <br>;;text-format
+    <br><code>(type (;0;) (func (param i32 i32) (result i32)))
+    <br>(type (;1;) (func (param i32) (result i32)))</code>
+    <br>;;or binary
+    <br><code>; section "Type" (1)
+    <br>01 ; section code
+    <br>00 ; section size (guess)
+    <br>02 ; num types
+    <br>; type 0
+    <br>60 ; func
+    <br>02 ; num params
+    <br>7f ; i32
+    <br>7f ; i32
+    <br>01 ; num results
+    <br>7f ; i32
+    <br>; type 1
+    <br>60 ; func
+    <br>01 ; num params
+    <br>7f ; i32
+    <br>01 ; num results
+    <br>7f ; i32</code>
+    <a class="clsHide" href="#idWasmalgscnTypeexpl"></a></p>
   </section>
 
   <section id="idWasmalgscnImpt">
@@ -2432,7 +2512,7 @@
     <a class="clsHide" href="#idWasmalgscnImptH2"></a></h2>
   <p id="idWasmalgscnImptdsn">description::
     <br>· opcode: 0x02.
-    <br>· it consists of an-array of imports.
+    <br>· it consists of an-array of <a class="clsPreview" href="#idWasmstcImprt">imports</a>.
     <br>· the-import-section declares any external dependencies by listing module name, field name and type for each function, value or data required:
     <br><code>("dumb-math", "quadruple", (func_type 1))       // func #0
     <br>("dumb-math", "pi", (global_type i64 immutable))</code>
@@ -2446,6 +2526,30 @@
     <br>* cpt.Wasm-section.2-import,
     <br>* cpt.Wasm-section.import,
     <a class="clsHide" href="#idWasmalgscnImptnam"></a></p>
+  <p id="idWasmalgscnImptexpl">example::
+    <br>;; text-format
+    <br><code>(import "oJs" "fImport1" (func (;0;) (type 0)))
+    <br>(import "oJs" "fImport2" (func (;1;) (type 0)))</code>
+    <br>;; binary-format
+    <br><code>; section "Import" (2)
+    <br>02 ; section code
+    <br>00 ; section size (guess)
+    <br>02 ; num imports
+    <br>; import header 0
+    <br>03 ; string length
+    <br>6f4a 73 ; oJs  import module name
+    <br>08 ; string length
+    <br>6649 6d70 6f72 7431 ; fImport1  import field name
+    <br>00 ; import kind
+    <br>00 ; import signature index
+    <br>; import header 1
+    <br>03 ; string length
+    <br>6f4a 73 ; oJs import module name
+    <br>08 ; string length
+    <br>6649 6d70 6f72 7432 ; fImport2  import field name
+    <br>00 ; import kind
+    <br>00 ; import signature index</code>
+    <a class="clsHide" href="#idWasmalgscnImptexpl"></a></p>
   </section>
 
   <section id="idWasmalgscnFctn">
@@ -2534,6 +2638,26 @@
     <br>* cpt.Wasm-section.6-global,
     <br>* cpt.Wasm-section.global,
     <a class="clsHide" href="#idWasmalgscnGlblnam"></a></p>
+  <p id="idWasmalgscnGlblexpl">example::
+    <br>;; text-format
+    <br><code>(global (;0;) (mut i32) (i32.const 100))
+    <br>(global (;1;) i32 (i32.const 200))</code>
+    <br>;; binary-format
+    <br><code>; section "Global" (6)
+    <br>06 ; section code
+    <br>00 ; section size (guess)
+    <br>02 ; num globals
+    <br>7f ; i32
+    <br>01 ; global mutability
+    <br>41 ; i32.const
+    <br>e400 ; i32 literal
+    <br>0b ; end
+    <br>7f ; i32
+    <br>00 ; global mutability
+    <br>41 ; i32.const
+    <br>c801 ; i32 literal
+    <br>0b ; end</code>
+    <a class="clsHide" href="#idWasmalgscnGlblexpl"></a></p>
   </section>
 
   <section id="idWasmalgscnExpt">
@@ -2541,7 +2665,7 @@
     <a class="clsHide" href="#idWasmalgscnExptH2"></a></h2>
   <p id="idWasmalgscnExptdsn">description::
     <br>· opcode: 0x07.
-    <br>· it consists of an-array of exports.
+    <br>· it consists of an-array of <a class="clsPreview" href="#idWasmstcExpt">exports</a>.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#export-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#export-section</a>]
     <br>===
     <br>· the-export-section declares any parts of the-module that can-be-accessed by the-host-environment, not-including the special start-function, which we will get to in a just a few sentences.
@@ -2558,6 +2682,26 @@
     <br>* cpt.Wasm-section.7-export,
     <br>* cpt.Wasm-section.export,
     <a class="clsHide" href="#idWasmalgscnExptnam"></a></p>
+  <p id="idWasmalgscnExptexpl">example::
+    <br>;;text-format
+    <br><code>(export "f" (func 0))
+    <br>(export "f2" (func 1)))</code>
+    <br>;; binary-format
+    <br><code>; section "Export" (7)
+    <br>07 ; section code
+    <br>00 ; section size (guess)
+    <br>02 ; num exports
+    <br>;; export f
+    <br>01 ; string length
+    <br>66 ; 'f' export name
+    <br>00 ; export kind
+    <br>00 ; export func index
+    <br>;; export f2
+    <br>02; string length
+    <br>6632 ; 'f2' export name
+    <br>00 ; export kind
+    <br>01 ; export func index</code>
+    <a class="clsHide" href="#idWasmalgscnExptexpl"></a></p>
   </section>
 
   <section id="idWasmalgscnStrt">
@@ -2583,6 +2727,16 @@
     <br>* cpt.Wasm-section.8-start,
     <br>* cpt.Wasm-section.start,
     <a class="clsHide" href="#idWasmalgscnStrtnam"></a></p>
+  <p id="idWasmalgscnStrtexpl">example::
+    <br>;; text-format
+    <br><code>(func (;2;) (type 0) call 0)
+    <br>(start 2)</code>
+    <br>;; binary-format
+    <br><code>; section "Start" (8)
+    <br>08 ; section code
+    <br>00 ; section size (guess)
+    <br>02 ; start func index</code>
+    <a class="clsHide" href="#idWasmalgscnStrtexpl"></a></p>
 
   <section id="idWasmalgscnStrtstfn">
   <h3 id="idWasmalgscnStrtstfnH3">start-function of start-section (<a class="clsPreview" href="#idWasmfcnStrt">link</a>)
