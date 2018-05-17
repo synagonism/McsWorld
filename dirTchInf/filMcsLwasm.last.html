@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-38-0.2018-05-16 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-39-0.2018-05-17 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -476,6 +476,10 @@
   <section id="idWasmfcn">
   <h2 id="idWasmfcnH2">sem-unit.FUNCTION
     <a class="clsHide" href="#idWasmfcnH2"></a></h2>
+  <p id="idWasmfcndsn">description::
+    <br>· function is <a class="clsPreview" href="#idWasmsunt">a-semantic-unit</a> that denote a-process.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-05-17]
+    <a class="clsHide" href="#idWasmfcndsn"></a></p>
   <p id="idWasmfcnnam">name::
     <br>* cpt.Wasm'function,
     <br>* cpt.Wasm-func,
@@ -518,6 +522,7 @@
     <br>[<a href="https://webassembly.github.io/spec/core/syntax/types.html#syntax-functype">https://webassembly.github.io/spec/core/syntax/types.html#syntax-functype</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmfcnsgtrdsn"></a></p>
   <p id="idWasmfcnsgtrnam">name::
+    <br>* cpt.Wasm'type-of-function,
     <br>* cpt.Wasm-function'signature,
     <br>* cpt.Wasm-function'type,
     <br>* cpt.Wasm-function-type,
@@ -549,14 +554,14 @@
     <br>* cpt.Wasm-function-type.text,
     <a class="clsHide" href="#idWasmfcnsgtrTxtnam"></a></p>
   <p id="idWasmfcnsgtrTxtexpl">example::
+    <br><code>(type (;0;) (func (param i32 i32) (result i32)))
+    <br>(func (;0;) (type 0) (param i32 i32) (result i32))</code>
+    <br>or
     <br><code>(func (param $p1 i32) (param $p2 i32) (result i32))</code>
     <br>or
     <br><code>(func (export "f") (param $p1 i32) (param $p2 i32) (result i32))</code>
     <br>or
     <br><code>(func (export "f") (param i32 i32) (result i32))</code>
-    <br>or
-    <br><code>(type (;0;) (func (param i32 i32) (result i32)))
-    <br>(func (;0;) (type 0) (param i32 i32) (result i32))</code>
     <a class="clsHide" href="#idWasmfcnsgtrTxtexpl"></a></p>
   </section>
   </section>
@@ -1312,6 +1317,20 @@
   <p id="idWasmstcrsltnam">name::
     <br>* cpt.Wasm-instruction'result,
     <a class="clsHide" href="#idWasmstcrsltnam"></a></p>
+  </section>
+
+  <section id="idWasmstctype">
+  <h2 id="idWasmstctypeH2">type of instruction
+    <a class="clsHide" href="#idWasmstctypeH2"></a></h2>
+  <p id="idWasmstctypedsn">description::
+    <br>· type-of-instruction is the-input (operands) and output (result) of an-instruction.
+    <br>· it is-denoted as e.g.: [i32 i32]→[i32]
+    <br>· you can-see them at: <a href="https://webassembly.github.io/spec/core/appendix/index-instructions.html">https://webassembly.github.io/spec/core/appendix/index-instructions.html</a>,
+    <a class="clsHide" href="#idWasmstctypedsn"></a></p>
+  <p id="idWasmstctypenam">name::
+    <br>* cpt.Wasm'type-of-instruction,
+    <br>* cpt.Wasm-instruction'type,
+    <a class="clsHide" href="#idWasmstctypenam"></a></p>
   </section>
 
   <section id="idWasmstcstck">
