@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-39-0.2018-05-17 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-40-0.2018-05-18 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -539,6 +539,16 @@
   <p id="idWasmfcnsgtrBnrnam">name::
     <br>* cpt.Wasm-function-type.binary,
     <a class="clsHide" href="#idWasmfcnsgtrBnrnam"></a></p>
+  <p id="idWasmfcnsgtrBnrexpl">example::
+    <br><code>;; (func (;0;) (param i32 i32) (result i32))
+    <br>; type 0
+    <br>60 ; function-type
+    <br>02 ; num params
+    <br>7f ; i32 type of first parameter
+    <br>7f ; i32
+    <br>01 ; num results
+    <br>7f ; i32</code>
+    <a class="clsHide" href="#idWasmfcnsgtrBnrexpl"></a></p>
   </section>
 
   <section id="idWasmfcnsgtrTxt">
@@ -721,7 +731,7 @@
     <br>* cpt.Wasm-global-variable'description,
     <a class="clsHide" href="#idWasmglbldlrnnam"></a></p>
   <p id="idWasmglbldlrnwhlchn">whole-chain::
-    <br>* <a class="clsPreview" href="#idWasmalgscnGlbl">global-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnGlbl">global-section</a>,
     <a class="clsHide" href="#idWasmglbldlrnwhlchn"></a></p>
 
   <section id="idWasmglbldlrnBnr">
@@ -761,7 +771,7 @@
   <h4 id="idWasmglblidxspcH4">index-space of global
     <a class="clsHide" href="#idWasmglblidxspcH4"></a></h4>
   <p id="idWasmglblidxspcdsn">description::
-    <br>· the-global-index starts with any imported-globals and continues incrementing with any globals defined in <a class="clsPreview" href="#idWasmalgscnGlbl">the-global-section</a>.
+    <br>· the-global-index starts with any imported-globals and continues incrementing with any globals defined in <a class="clsPreview" href="#idWasmscnGlbl">the-global-section</a>.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
     <a class="clsHide" href="#idWasmglblidxspcdsn"></a></p>
   <p id="idWasmglblidxspcnam">name::
@@ -2227,7 +2237,7 @@
     <br>* cpt.Wasm-instruction.type,
     <a class="clsHide" href="#idWasmstcTypenam"></a></p>
   <p id="idWasmstcTypewhlchn">whole-chain::
-    <br>* <a class="clsPreview" href="#idWasmalgscnType">type-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnType">type-section</a>,
     <a class="clsHide" href="#idWasmstcTypewhlchn"></a></p>
   <p id="idWasmstcTypeexpl">example::
     <br>;;text-format
@@ -2247,7 +2257,7 @@
   <h2 id="idWasmstcExptH2">instruction.EXPORT
     <a class="clsHide" href="#idWasmstcExptH2"></a></h2>
   <p id="idWasmstcExptdsn">description::
-    <br>· <a class="clsPreview" href="#idWasmalgscnExpt">the-exports-component</a> of a-module defines a-set of exports that become accessible to the-host-environment once the-module has-been-instantiated.
+    <br>· <a class="clsPreview" href="#idWasmscnExpt">the-exports-component</a> of a-module defines a-set of exports that become accessible to the-host-environment once the-module has-been-instantiated.
     <br><code>- export ::= {name name,desc exportdesc}
     <br>- exportdesc ::= func funcidx
     <br> &nbsp; | table tableidx
@@ -2264,7 +2274,7 @@
     <br>* cpt.Wasm-instruction.export,
     <a class="clsHide" href="#idWasmstcExptnam"></a></p>
   <p id="idWasmstcExptwhlchn">whole-chain::
-    <br>* <a class="clsPreview" href="#idWasmalgscnExpt">export-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnExpt">export-section</a>,
     <a class="clsHide" href="#idWasmstcExptwhlchn"></a></p>
 
   <section id="idWasmstcExptBnr">
@@ -2332,10 +2342,10 @@
     <br>* cpt.Wasm-instruction.import,
     <a class="clsHide" href="#idWasmstcImprtnam"></a></p>
   <p id="idWasmstcImprtwhlchn">whole-chain::
-    <br>* <a class="clsPreview" href="#idWasmalgscnImpt">import-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnImpt">import-section</a>,
     <a class="clsHide" href="#idWasmstcImprtwhlchn"></a></p>
   <p id="idWasmstcImprtwhlchn">whole-chain::
-    <br>* <a class="clsPreview" href="#idWasmalgscnImpt">import-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnImpt">import-section</a>,
     <a class="clsHide" href="#idWasmstcImprtwhlchn"></a></p>
 
   <section id="idWasmstcImprtTxt">
@@ -2357,101 +2367,132 @@
   </section>
 </section>
 
-<section id="idWasmalgscn">
-  <h1 id="idWasmalgscnH1">algo-section of Wasm
-    <a class="clsHide" href="#idWasmalgscnH1"></a></h1>
-  <p id="idWasmalgscndsn">description::
-    <br>· <a class="clsPreview" href="#idWasmmdl">a-module</a> consists of <a class="clsPreview" href="#idWasmmdlhdr">a-header</a> and a sequence of sections.
-    <br>· a-section consists of a varuint7 opcode followed by a byte-array payload.
-    <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#module-contents">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#module-contents</a>]
-    <a class="clsHide" href="#idWasmalgscndsn"></a></p>
-  <p id="idWasmalgscnnam">name::
+<section id="idWasmscn">
+  <h1 id="idWasmscnH1">algo-section of Wasm
+    <a class="clsHide" href="#idWasmscnH1"></a></h1>
+  <p id="idWasmscndsn">description::
+    <br>· section is a-sequence of similar <a class="clsPreview" href="#idWasmstc">instructions</a>.
+    <a class="clsHide" href="#idWasmscndsn"></a></p>
+  <p id="idWasmscnnam">name::
     <br>* cpt.Wasm'section,
     <br>* cpt.Wasm-section,
-    <a class="clsHide" href="#idWasmalgscnnam"></a></p>
+    <a class="clsHide" href="#idWasmscnnam"></a></p>
 
-  <section id="idWasmalgscnopcd">
-  <h2 id="idWasmalgscnopcdH2">opcode of section
-    <a class="clsHide" href="#idWasmalgscnopcdH2"></a></h2>
-  <p id="idWasmalgscnopcddsn">description::
-    <br>· the-opcode is required to either indicate <a class="clsPreview" href="#idWasmalgscnKnn">a-known-section</a>, or be 0x00, indicating <a class="clsPreview" href="#idWasmalgscnCtm">a-custom-section</a>.
-    <a class="clsHide" href="#idWasmalgscnopcddsn"></a></p>
-  <p id="idWasmalgscnopcdnam">name::
+  <section id="idWasmscnitrcn">
+  <h2 id="idWasmscnitrcnH2">instruction of section (<a class="clsPreview" href="#idWasmstc">link</a>)
+    <a class="clsHide" href="#idWasmscnitrcnH2"></a></h2>
+  </section>
+
+  <section id="idWasmscnwhl">
+  <h2 id="idWasmscnwhlH2">WHOLE of section
+    <a class="clsHide" href="#idWasmscnwhlH2"></a></h2>
+  <p id="idWasmscnwhlwhlchn">whole-chain::
+    <br>* <a class="clsPreview" href="#idWasmmdl">module</a>,
+    <a class="clsHide" href="#idWasmscnwhlwhlchn"></a></p>
+  </section>
+
+  <section id="idWasmscnSpc">
+  <h2 id="idWasmscnSpcH2">section.SPECIFIC
+    <a class="clsHide" href="#idWasmscnSpcH2"></a></h2>
+  <p id="idWasmscnSpcnam">name::
+    <br>* cpt.Wasm-section.specific,
+    <a class="clsHide" href="#idWasmscnSpcnam"></a></p>
+  <p id="idWasmscnSpcP1">specific::
+    <br>* text-section,
+    <br>* binary-section,
+    <br>===
+    <br>* <a class="clsPreview" href="#idWasmscnCode">code-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnCtm">custom-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnData">data-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnElmt">element-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnExpt">export-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnFctn">function-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnGlbl">global-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnImpt">import-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnKnn">known-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnLrmr">linear-memory--section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnStrt">start-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnTabl">table-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnType">type-section</a>,
+    <a class="clsHide" href="#idWasmscnSpcP1"></a></p>
+  </section>
+
+  <section id="idWasmscnTxt">
+  <h2 id="idWasmscnTxtH2">section.TEXT
+    <a class="clsHide" href="#idWasmscnTxtH2"></a></h2>
+  <p id="idWasmscnTxtnam">name::
+    <br>* cpt.Wasm'text-section,
+    <br>* cpt.Wasm-section.text,
+    <a class="clsHide" href="#idWasmscnTxtnam"></a></p>
+  </section>
+
+  <section id="idWasmscnBnr">
+  <h2 id="idWasmscnBnrH2">section.BINARY
+    <a class="clsHide" href="#idWasmscnBnrH2"></a></h2>
+  <p id="idWasmscnBnrdsn">description::
+    <br>· <a class="clsPreview" href="#idWasmmdl">a-module</a> consists of <a class="clsPreview" href="#idWasmmdlBnrhdr">a-header</a> and a sequence of sections.
+    <br>· a-section consists of a varuint7 opcode followed by a byte-array payload.
+    <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#module-contents">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#module-contents</a>]
+    <a class="clsHide" href="#idWasmscnBnrdsn"></a></p>
+  <p id="idWasmscnBnrnam">name::
+    <br>* cpt.Wasm'binary-section,
+    <br>* cpt.Wasm-binary-section,
+    <br>* cpt.Wasm-section.binary,
+    <a class="clsHide" href="#idWasmscnBnrnam"></a></p>
+
+  <section id="idWasmscnBnropcd">
+  <h3 id="idWasmscnBnropcdH3">opcode of binary-section
+    <a class="clsHide" href="#idWasmscnBnropcdH3"></a></h3>
+  <p id="idWasmscnBnropcddsn">description::
+    <br>· the-opcode is required to either indicate <a class="clsPreview" href="#idWasmscnKnn">a-known-section</a>, or be 0x00, indicating <a class="clsPreview" href="#idWasmscnCtm">a-custom-section</a>.
+    <a class="clsHide" href="#idWasmscnBnropcddsn"></a></p>
+  <p id="idWasmscnBnropcdnam">name::
     <br>* cpt.Wasm'opcode-of-section,
     <br>* cpt.Wasm-section'id,
     <br>* cpt.Wasm-section'opcode,
-    <a class="clsHide" href="#idWasmalgscnopcdnam"></a></p>
+    <a class="clsHide" href="#idWasmscnBnropcdnam"></a></p>
   </section>
 
-  <section id="idWasmalgscnsize">
-  <h2 id="idWasmalgscnsizeH2">size of section
-    <a class="clsHide" href="#idWasmalgscnsizeH2"></a></h2>
-  <p id="idWasmalgscnsizedsn">description::
+  <section id="idWasmscnBnrsize">
+  <h3 id="idWasmscnBnrsizeH3">size of binary-section
+    <a class="clsHide" href="#idWasmscnBnrsizeH3"></a></h3>
+  <p id="idWasmscnBnrsizedsn">description::
     <br>· each section consists of
     <br>- a one-byte section-id,
     <br>- the-u32-size of the-contents, in bytes,
     <br>- the actual contents, whose structure is depended on the section-id.
     <br>[<a href="https://webassembly.github.io/spec/core/binary/modules.html#sections">https://webassembly.github.io/spec/core/binary/modules.html#sections</a> {1-0.2018-03-22}]
-    <a class="clsHide" href="#idWasmalgscnsizedsn"></a></p>
-  <p id="idWasmalgscnsizenam">name::
+    <a class="clsHide" href="#idWasmscnBnrsizedsn"></a></p>
+  <p id="idWasmscnBnrsizenam">name::
     <br>* cpt.Wasm-section'size,
-    <a class="clsHide" href="#idWasmalgscnsizenam"></a></p>
+    <a class="clsHide" href="#idWasmscnBnrsizenam"></a></p>
   </section>
 
-  <section id="idWasmalgscncnt">
-  <h2 id="idWasmalgscncntH2">content of section
-    <a class="clsHide" href="#idWasmalgscncntH2"></a></h2>
-  <p id="idWasmalgscncntdsn">description::
+  <section id="idWasmscnBnrcnt">
+  <h3 id="idWasmscnBnrcntH3">content of binary-section
+    <a class="clsHide" href="#idWasmscnBnrcntH3"></a></h3>
+  <p id="idWasmscnBnrcntdsn">description::
     <br>· each section consists of
     <br>- a one-byte section-id,
     <br>- the-u32-size of the-contents, in bytes,
     <br>- the actual contents, whose structure is depended on the section-id.
     <br>[<a href="https://webassembly.github.io/spec/core/binary/modules.html#sections">https://webassembly.github.io/spec/core/binary/modules.html#sections</a> {1-0.2018-03-22}]
-    <a class="clsHide" href="#idWasmalgscncntdsn"></a></p>
-  <p id="idWasmalgscncntnam">name::
+    <a class="clsHide" href="#idWasmscnBnrcntdsn"></a></p>
+  <p id="idWasmscnBnrcntnam">name::
+    <br>* cpt.Wasm-section'content,
     <br>* cpt.Wasm-section'payload,
-    <a class="clsHide" href="#idWasmalgscncntnam"></a></p>
+    <a class="clsHide" href="#idWasmscnBnrcntnam"></a></p>
+  </section>
   </section>
 
-  <section id="idWasmalgscnwhl">
-  <h2 id="idWasmalgscnwhlH2">WHOLE of section
-    <a class="clsHide" href="#idWasmalgscnwhlH2"></a></h2>
-  <p id="idWasmalgscnwhlwhlchn">whole-chain::
-    <br>* <a class="clsPreview" href="#idWasmmdl">module</a>,
-    <a class="clsHide" href="#idWasmalgscnwhlwhlchn"></a></p>
-  </section>
-
-  <section id="idWasmalgscnSpc">
-  <h2 id="idWasmalgscnSpcH2">section.SPECIFIC
-    <a class="clsHide" href="#idWasmalgscnSpcH2"></a></h2>
-  <p id="idWasmalgscnSpcnam">name::
-    <br>* cpt.Wasm-section.specific,
-    <a class="clsHide" href="#idWasmalgscnSpcnam"></a></p>
-  <p id="idWasmalgscnSpcP1">specific::
-    <br>* <a class="clsPreview" href="#idWasmalgscnCode">code-section</a>,
-    <br>* <a class="clsPreview" href="#idWasmalgscnCtm">custom-section</a>,
-    <br>* <a class="clsPreview" href="#idWasmalgscnData">data-section</a>,
-    <br>* <a class="clsPreview" href="#idWasmalgscnElmt">element-section</a>,
-    <br>* <a class="clsPreview" href="#idWasmalgscnExpt">export-section</a>,
-    <br>* <a class="clsPreview" href="#idWasmalgscnFctn">function-section</a>,
-    <br>* <a class="clsPreview" href="#idWasmalgscnGlbl">global-section</a>,
-    <br>* <a class="clsPreview" href="#idWasmalgscnImpt">import-section</a>,
-    <br>* <a class="clsPreview" href="#idWasmalgscnKnn">known-section</a>,
-    <br>* <a class="clsPreview" href="#idWasmalgscnLrmr">linear-memory--section</a>,
-    <br>* <a class="clsPreview" href="#idWasmalgscnStrt">start-section</a>,
-    <br>* <a class="clsPreview" href="#idWasmalgscnTabl">table-section</a>,
-    <br>* <a class="clsPreview" href="#idWasmalgscnType">type-section</a>,
-    <a class="clsHide" href="#idWasmalgscnSpcP1"></a></p>
-  </section>
-
-  <section id="idWasmalgscnKnn">
-  <h2 id="idWasmalgscnKnnH2">section.KNOWN
-    <a class="clsHide" href="#idWasmalgscnKnnH2"></a></h2>
-  <p id="idWasmalgscnKnnnam">name::
+  <section id="idWasmscnKnn">
+  <h2 id="idWasmscnKnnH2">section.KNOWN
+    <a class="clsHide" href="#idWasmscnKnnH2"></a></h2>
+  <p id="idWasmscnKnnnam">name::
     <br>* cpt.Wasm-known-section,
     <br>* cpt.Wasm-section.known,
-    <a class="clsHide" href="#idWasmalgscnKnnnam"></a></p>
-  <p id="idWasmalgscnKnnSpc">specific::
+    <a class="clsHide" href="#idWasmscnKnnnam"></a></p>
+  <p id="idWasmscnKnnSpc">specific::
     <br>There are several known sections:
     <br>01. type-section,
     <br>02. import-section,
@@ -2464,44 +2505,28 @@
     <br>09. element-section,
     <br>10. code-section,
     <br>11. data-section,
-    <a class="clsHide" href="#idWasmalgscnKnnSpc"></a></p>
+    <a class="clsHide" href="#idWasmscnKnnSpc"></a></p>
   </section>
 
-  <section id="idWasmalgscnCtm">
-  <h2 id="idWasmalgscnCtmH2">section.0-CUSTOM
-    <a class="clsHide" href="#idWasmalgscnCtmH2"></a></h2>
-  <p id="idWasmalgscnCtmdsn">description::
-    <br>· opcode: 0x00.
-    <br>· this appendix defines dedicated custom-sections for WebAssembly’s binary format.
-    <br>· such sections do-not-contribute to, or otherwise affect, the WebAssembly semantics, and like any custom-section they may-be-ignored by an-implementation.
-    <br>· however, they provide useful meta data that implementations can-make-use of to improve user experience or take compilation hints.
-    <br>· currently, only one dedicated custom-section is-defined, the-name-section.
-    <br>[<a href="https://webassembly.github.io/spec/core/appendix/custom.html#custom-sections">https://webassembly.github.io/spec/core/appendix/custom.html#custom-sections</a> {1-0.2018-03-28}]
-    <a class="clsHide" href="#idWasmalgscnCtmdsn"></a></p>
-  <p id="idWasmalgscnCtmnam">name::
-    <br>* cpt.Wasm-custom-section,
-    <br>* cpt.Wasm-section.0-custom,
-    <br>* cpt.Wasm-section.custom,
-    <a class="clsHide" href="#idWasmalgscnCtmnam"></a></p>
-  </section>
-
-  <section id="idWasmalgscnType">
-  <h2 id="idWasmalgscnTypeH2">section.1-TYPE
-    <a class="clsHide" href="#idWasmalgscnTypeH2"></a></h2>
-  <p id="idWasmalgscnTypedsn">description::
+  <section id="idWasmscnType">
+  <h2 id="idWasmscnTypeH2">section.01-TYPE
+    <a class="clsHide" href="#idWasmscnTypeH2"></a></h2>
+  <p id="idWasmscnTypedsn">description::
+    <br>· for now, the-type-section contains <a class="clsPreview" href="#idWasmfcnsgtr">function-types</a>.
+    <br>===
     <br>· opcode: 0x01.
     <br>· it consists of a-list of <a class="clsPreview" href="#idWasmstcType">type-signatures</a>, today of <a class="clsPreview" href="#idWasmfcnsgtr">function-signatures</a>.
     <br>· it includes signatures of imported-functions.
     <br>· the-position in this list, define the unique index of the-type inside the-module.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
-    <a class="clsHide" href="#idWasmalgscnTypedsn"></a></p>
-  <p id="idWasmalgscnTypenam">name::
+    <a class="clsHide" href="#idWasmscnTypedsn"></a></p>
+  <p id="idWasmscnTypenam">name::
     <br>* cpt.Wasm'types-component,
     <br>* cpt.Wasm-section.1-type,
     <br>* cpt.Wasm-section.type,
     <br>* cpt.Wasm-type-section,
-    <a class="clsHide" href="#idWasmalgscnTypenam"></a></p>
-  <p id="idWasmalgscnTypeexpl">example::
+    <a class="clsHide" href="#idWasmscnTypenam"></a></p>
+  <p id="idWasmscnTypeexpl">example::
     <br>;;text-format
     <br><code>(type (;0;) (func (param i32 i32) (result i32)))
     <br>(type (;1;) (func (param i32) (result i32)))</code>
@@ -2523,13 +2548,55 @@
     <br>7f ; i32
     <br>01 ; num results
     <br>7f ; i32</code>
-    <a class="clsHide" href="#idWasmalgscnTypeexpl"></a></p>
+    <a class="clsHide" href="#idWasmscnTypeexpl"></a></p>
+
+  <section id="idWasmscnTypeTxt">
+  <h3 id="idWasmscnTypeTxtH3">type-section.TEXT
+    <a class="clsHide" href="#idWasmscnTypeTxtH3"></a></h3>
+  <p id="idWasmscnTypeTxtnam">name::
+    <br>* cpt.Wasm'text-type-section,
+    <br>* cpt.Wasm'type-section.text,
+    <a class="clsHide" href="#idWasmscnTypeTxtnam"></a></p>
+  <p id="idWasmscnTypeTxtexpl">example::
+    <br>;;text-format
+    <br><code>(type (;0;) (func (param i32 i32) (result i32)))
+    <br>(type (;1;) (func (param i32) (result i32)))</code>
+    <a class="clsHide" href="#idWasmscnTypeTxtexpl"></a></p>
   </section>
 
-  <section id="idWasmalgscnImpt">
-  <h2 id="idWasmalgscnImptH2">section.2-IMPORT
-    <a class="clsHide" href="#idWasmalgscnImptH2"></a></h2>
-  <p id="idWasmalgscnImptdsn">description::
+  <section id="idWasmscnTypeBnr">
+  <h3 id="idWasmscnTypeBnrH3">type-section.BINARY
+    <a class="clsHide" href="#idWasmscnTypeBnrH3"></a></h3>
+  <p id="idWasmscnTypeBnrnam">name::
+    <br>* cpt.Wasm'binary-type-section,
+    <br>* cpt.Wasm'type-section.binary,
+    <a class="clsHide" href="#idWasmscnTypeBnrnam"></a></p>
+  <p id="idWasmscnTypeBnrexpl">example::
+    <br><code>; section "Type" (1)
+    <br>01 ; section code
+    <br>00 ; section size (guess)
+    <br>02 ; num types
+    <br>; type 0
+    <br>60 ; func
+    <br>02 ; num params
+    <br>7f ; i32
+    <br>7f ; i32
+    <br>01 ; num results
+    <br>7f ; i32
+    <br>; type 1
+    <br>60 ; func
+    <br>01 ; num params
+    <br>7f ; i32
+    <br>01 ; num results
+    <br>7f ; i32</code>
+    <a class="clsHide" href="#idWasmscnTypeBnrexpl"></a></p>
+  </section>
+  </section>
+
+  <section id="idWasmscnImpt">
+  <h2 id="idWasmscnImptH2">section.02-IMPORT
+    <a class="clsHide" href="#idWasmscnImptH2"></a></h2>
+  <p id="idWasmscnImptdsn">description::
     <br>· opcode: 0x02.
     <br>· it consists of an-array of <a class="clsPreview" href="#idWasmstcImprt">imports</a>.
     <br>· the-import-section declares any external dependencies by listing module name, field name and type for each function, value or data required:
@@ -2538,14 +2605,14 @@
     <br>· it's up to <a class="clsPreview" href="#idWasmtoolRte">the-host-system</a> (e.g. web browser) to resolve these imports and this is how runtime-dynamic linking is made possible in Wasm, and is also the foreign-function interface for interacting with non-Wasm-functions.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#import-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#import-section</a>]
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
-    <a class="clsHide" href="#idWasmalgscnImptdsn"></a></p>
-  <p id="idWasmalgscnImptnam">name::
+    <a class="clsHide" href="#idWasmscnImptdsn"></a></p>
+  <p id="idWasmscnImptnam">name::
     <br>* cpt.Wasm'imports-component,
     <br>* cpt.Wasm-import-section,
     <br>* cpt.Wasm-section.2-import,
     <br>* cpt.Wasm-section.import,
-    <a class="clsHide" href="#idWasmalgscnImptnam"></a></p>
-  <p id="idWasmalgscnImptexpl">example::
+    <a class="clsHide" href="#idWasmscnImptnam"></a></p>
+  <p id="idWasmscnImptexpl">example::
     <br>;; text-format
     <br><code>(import "oJs" "fImport1" (func (;0;) (type 0)))
     <br>(import "oJs" "fImport2" (func (;1;) (type 0)))</code>
@@ -2568,13 +2635,13 @@
     <br>6649 6d70 6f72 7432 ; fImport2  import field name
     <br>00 ; import kind
     <br>00 ; import signature index</code>
-    <a class="clsHide" href="#idWasmalgscnImptexpl"></a></p>
+    <a class="clsHide" href="#idWasmscnImptexpl"></a></p>
   </section>
 
-  <section id="idWasmalgscnFctn">
-  <h2 id="idWasmalgscnFctnH2">section.3-FUNCTION
-    <a class="clsHide" href="#idWasmalgscnFctnH2"></a></h2>
-  <p id="idWasmalgscnFctndsn">description::
+  <section id="idWasmscnFctn">
+  <h2 id="idWasmscnFctnH2">section.03-FUNCTION
+    <a class="clsHide" href="#idWasmscnFctnH2"></a></h2>
+  <p id="idWasmscnFctndsn">description::
     <br>· the-funcs-component of a-module defines a-vector of functions with the following structure:
     <br>· func ::= {type typeidx, locals vec(valtype), body expr}
     <br>· the-type of a-function declares its signature by reference to a-type defined in the-module.
@@ -2591,73 +2658,84 @@
     <br>===
     <br>· opcode: 0x03.
     <br>· it consists of an-array of function-declarations.
-    <br>· a-function-declaration consists of: an-index in <a class="clsPreview" href="#idWasmalgscnType">the-type-section</a> of <a class="clsPreview" href="#idWasmfcnsgtr">the-signature-of-the-function</a>.
-    <br>· the-function-declarations directly correspond to elements in <a class="clsPreview" href="#idWasmalgscnCode">the-code-section</a> array.
+    <br>· a-function-declaration consists of: an-index in <a class="clsPreview" href="#idWasmscnType">the-type-section</a> of <a class="clsPreview" href="#idWasmfcnsgtr">the-signature-of-the-function</a>.
+    <br>· the-function-declarations directly correspond to elements in <a class="clsPreview" href="#idWasmscnCode">the-code-section</a> array.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#function-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#function-section</a>]
-    <a class="clsHide" href="#idWasmalgscnFctndsn"></a></p>
-  <p id="idWasmalgscnFctnnam">name::
+    <a class="clsHide" href="#idWasmscnFctndsn"></a></p>
+  <p id="idWasmscnFctnnam">name::
     <br>* cpt.Wasm'funcs-component,
     <br>* cpt.Wasm-function-section,
     <br>* cpt.Wasm-section.3-function,
     <br>* cpt.Wasm-section.function,
-    <a class="clsHide" href="#idWasmalgscnFctnnam"></a></p>
-  <p id="idWasmalgscnFctnwhlchn">whole-chain::
+    <a class="clsHide" href="#idWasmscnFctnnam"></a></p>
+  <p id="idWasmscnFctnwhlchn">whole-chain::
     <br>* <a class="clsPreview" href="#idWasmmdl">module</a>,
-    <a class="clsHide" href="#idWasmalgscnFctnwhlchn"></a></p>
+    <a class="clsHide" href="#idWasmscnFctnwhlchn"></a></p>
   </section>
 
-  <section id="idWasmalgscnTabl">
-  <h2 id="idWasmalgscnTablH2">section.4-TABLE
-    <a class="clsHide" href="#idWasmalgscnTablH2"></a></h2>
-  <p id="idWasmalgscnTabldsn">description::
+  <section id="idWasmscnTabl">
+  <h2 id="idWasmscnTablH2">section.04-TABLE
+    <a class="clsHide" href="#idWasmscnTablH2"></a></h2>
+  <p id="idWasmscnTabldsn">description::
     <br>· opcode: 0x04.
     <br>· it consists of an-array of <a class="clsPreview" href="#idWasmsuntTbldlrn">table-descriptions|definitions</a>.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#table-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#table-section</a>]
-    <a class="clsHide" href="#idWasmalgscnTabldsn"></a></p>
-  <p id="idWasmalgscnTablnam">name::
+    <a class="clsHide" href="#idWasmscnTabldsn"></a></p>
+  <p id="idWasmscnTablnam">name::
     <br>* cpt.Wasm'tables-component,
     <br>* cpt.Wasm-table-section,
     <br>* cpt.Wasm-section.4-table,
     <br>* cpt.Wasm-section.table,
-    <a class="clsHide" href="#idWasmalgscnTablnam"></a></p>
+    <a class="clsHide" href="#idWasmscnTablnam"></a></p>
+  <p id="idWasmscnTablexpl">example::
+    <br>;; text-format, function and data sections are-written together
+    <br><code>(func (;0;) (type 0) (result i32)
+    <br> &nbsp;i32.const 59)</code>
+    <br>;; binary-format
+    <br>; <a class="clsPreview" href="#idWasmscnFctn">section "Function" (3)</a>
+    <br><code>03 ; section code
+    <br>02 ; section size (guess)
+    <br>01 ; num functions
+    <br>00 ; function 0 signature index</code>
+    <a class="clsHide" href="#idWasmscnTablexpl"></a></p>
   </section>
 
-  <section id="idWasmalgscnLrmr">
-  <h2 id="idWasmalgscnLrmrH2">section.5-LINEAR-MEMORY
-    <a class="clsHide" href="#idWasmalgscnLrmrH2"></a></h2>
-  <p id="idWasmalgscnLrmrdsn">description::
+  <section id="idWasmscnLrmr">
+  <h2 id="idWasmscnLrmrH2">section.05-LINEAR-MEMORY
+    <a class="clsHide" href="#idWasmscnLrmrH2"></a></h2>
+  <p id="idWasmscnLrmrdsn">description::
     <br>· opcode: 0x05.
     <br>· it consists of an-array of <a class="clsPreview" href="#idWasmsuntMmrdlrn">linear-memory-descriptions</a>.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#linear-memory-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#linear-memory-section</a>]
     <br>===
     <br>· the-memory-section defines the optional memory of the-module by defining its initial size and optionally how large it is-expected to expand.
-    <br>· <a class="clsPreview" href="#idWasmalgscnData">the-data-section</a> can-be-used to initialize the-memory.
+    <br>· <a class="clsPreview" href="#idWasmscnData">the-data-section</a> can-be-used to initialize the-memory.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
-    <a class="clsHide" href="#idWasmalgscnLrmrdsn"></a></p>
-  <p id="idWasmalgscnLrmrnam">name::
+    <a class="clsHide" href="#idWasmscnLrmrdsn"></a></p>
+  <p id="idWasmscnLrmrnam">name::
     <br>* cpt.Wasm'mems-component,
     <br>* cpt.Wasm-memory-section,
     <br>* cpt.Wasm-section.5-linear-memory,
     <br>* cpt.Wasm-section.linear-memory,
     <br>* cpt.Wasm-section.memory,
-    <a class="clsHide" href="#idWasmalgscnLrmrnam"></a></p>
+    <a class="clsHide" href="#idWasmscnLrmrnam"></a></p>
   </section>
 
-  <section id="idWasmalgscnGlbl">
-  <h2 id="idWasmalgscnGlblH2">section.6-GLOBAL
-    <a class="clsHide" href="#idWasmalgscnGlblH2"></a></h2>
-  <p id="idWasmalgscnGlbldsn">description::
+  <section id="idWasmscnGlbl">
+  <h2 id="idWasmscnGlblH2">section.06-GLOBAL
+    <a class="clsHide" href="#idWasmscnGlblH2"></a></h2>
+  <p id="idWasmscnGlbldsn">description::
     <br>· Opcode: 0x06.
     <br>· it consists of an-array of <a class="clsPreview" href="#idWasmglbldlrn">global-declarations</a>.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#global-section</a>]
-    <a class="clsHide" href="#idWasmalgscnGlbldsn"></a></p>
-  <p id="idWasmalgscnGlblnam">name::
+    <a class="clsHide" href="#idWasmscnGlbldsn"></a></p>
+  <p id="idWasmscnGlblnam">name::
     <br>* cpt.Wasm'globals-component,
     <br>* cpt.Wasm-global-section,
     <br>* cpt.Wasm-section.6-global,
     <br>* cpt.Wasm-section.global,
-    <a class="clsHide" href="#idWasmalgscnGlblnam"></a></p>
-  <p id="idWasmalgscnGlblexpl">example::
+    <a class="clsHide" href="#idWasmscnGlblnam"></a></p>
+  <p id="idWasmscnGlblexpl">example::
     <br>;; text-format
     <br><code>(global (;0;) (mut i32) (i32.const 100))
     <br>(global (;1;) i32 (i32.const 200))</code>
@@ -2676,13 +2754,13 @@
     <br>41 ; i32.const
     <br>c801 ; i32 literal
     <br>0b ; end</code>
-    <a class="clsHide" href="#idWasmalgscnGlblexpl"></a></p>
+    <a class="clsHide" href="#idWasmscnGlblexpl"></a></p>
   </section>
 
-  <section id="idWasmalgscnExpt">
-  <h2 id="idWasmalgscnExptH2">section.7-EXPORT
-    <a class="clsHide" href="#idWasmalgscnExptH2"></a></h2>
-  <p id="idWasmalgscnExptdsn">description::
+  <section id="idWasmscnExpt">
+  <h2 id="idWasmscnExptH2">section.07-EXPORT
+    <a class="clsHide" href="#idWasmscnExptH2"></a></h2>
+  <p id="idWasmscnExptdsn">description::
     <br>· opcode: 0x07.
     <br>· it consists of an-array of <a class="clsPreview" href="#idWasmstcExpt">exports</a>.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#export-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#export-section</a>]
@@ -2694,14 +2772,14 @@
     <br><code>function half(arg0 :int64) :int64</code>
     <br>· in addition to functions, modules can also export tables, memory-segments and global-variables to the-outside-world.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
-    <a class="clsHide" href="#idWasmalgscnExptdsn"></a></p>
-  <p id="idWasmalgscnExptnam">name::
+    <a class="clsHide" href="#idWasmscnExptdsn"></a></p>
+  <p id="idWasmscnExptnam">name::
     <br>* cpt.Wasm'exports-component,
     <br>* cpt.Wasm-export-section,
     <br>* cpt.Wasm-section.7-export,
     <br>* cpt.Wasm-section.export,
-    <a class="clsHide" href="#idWasmalgscnExptnam"></a></p>
-  <p id="idWasmalgscnExptexpl">example::
+    <a class="clsHide" href="#idWasmscnExptnam"></a></p>
+  <p id="idWasmscnExptexpl">example::
     <br>;;text-format
     <br><code>(export "f" (func 0))
     <br>(export "f2" (func 1)))</code>
@@ -2720,13 +2798,13 @@
     <br>6632 ; 'f2' export name
     <br>00 ; export kind
     <br>01 ; export func index</code>
-    <a class="clsHide" href="#idWasmalgscnExptexpl"></a></p>
+    <a class="clsHide" href="#idWasmscnExptexpl"></a></p>
   </section>
 
-  <section id="idWasmalgscnStrt">
-  <h2 id="idWasmalgscnStrtH2">section.8-START
-    <a class="clsHide" href="#idWasmalgscnStrtH2"></a></h2>
-  <p id="idWasmalgscnStrtdsn">description::
+  <section id="idWasmscnStrt">
+  <h2 id="idWasmscnStrtH2">section.08-START
+    <a class="clsHide" href="#idWasmscnStrtH2"></a></h2>
+  <p id="idWasmscnStrtdsn">description::
     <br>· opcode: 0x08.
     <br>· it consists of a-varuint32-index into the-function-index-space. This is-used by Instance-Execution.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#start-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#start-section</a>]
@@ -2739,14 +2817,14 @@
     <br>===
     <br>· the-start-section designates a-function-index for a-function to be-called when the-module is loading and is the-mechanism that can-be-used to make a-module an-executable-program, or used to dynamically initialize globals or memory of a-module.
     <br>[https://rsms.me/wasm-intro]
-    <a class="clsHide" href="#idWasmalgscnStrtdsn"></a></p>
-  <p id="idWasmalgscnStrtnam">name::
+    <a class="clsHide" href="#idWasmscnStrtdsn"></a></p>
+  <p id="idWasmscnStrtnam">name::
     <br>* cpt.Wasm'start-component,
     <br>* cpt.Wasm-start-section,
     <br>* cpt.Wasm-section.8-start,
     <br>* cpt.Wasm-section.start,
-    <a class="clsHide" href="#idWasmalgscnStrtnam"></a></p>
-  <p id="idWasmalgscnStrtexpl">example::
+    <a class="clsHide" href="#idWasmscnStrtnam"></a></p>
+  <p id="idWasmscnStrtexpl">example::
     <br>;; text-format
     <br><code>(func (;2;) (type 0) call 0)
     <br>(start 2)</code>
@@ -2755,23 +2833,23 @@
     <br>08 ; section code
     <br>00 ; section size (guess)
     <br>02 ; start func index</code>
-    <a class="clsHide" href="#idWasmalgscnStrtexpl"></a></p>
+    <a class="clsHide" href="#idWasmscnStrtexpl"></a></p>
 
-  <section id="idWasmalgscnStrtstfn">
-  <h3 id="idWasmalgscnStrtstfnH3">start-function of start-section (<a class="clsPreview" href="#idWasmfcnStrt">link</a>)
-    <a class="clsHide" href="#idWasmalgscnStrtstfnH3"></a></h3>
+  <section id="idWasmscnStrtstfn">
+  <h3 id="idWasmscnStrtstfnH3">start-function of start-section (<a class="clsPreview" href="#idWasmfcnStrt">link</a>)
+    <a class="clsHide" href="#idWasmscnStrtstfnH3"></a></h3>
   </section>
   </section>
 
-  <section id="idWasmalgscnElmt">
-  <h2 id="idWasmalgscnElmtH2">section.9-ELEMENT
-    <a class="clsHide" href="#idWasmalgscnElmtH2"></a></h2>
-  <p id="idWasmalgscnElmtdsn">description::
+  <section id="idWasmscnElmt">
+  <h2 id="idWasmscnElmtH2">section.09-ELEMENT
+    <a class="clsHide" href="#idWasmscnElmtH2"></a></h2>
+  <p id="idWasmscnElmtdsn">description::
     <br>· opcode: 0x09.
     <br>· it consists of an-array of table-initializers.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#element-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#element-section</a>]
     <br>===
-    <br>· the-element-section allows a-module to initialize the-contents of a-table imported from the-outside or defined in <a class="clsPreview" href="#idWasmalgscnTabl">the-table-section</a>.
+    <br>· the-element-section allows a-module to initialize the-contents of a-table imported from the-outside or defined in <a class="clsPreview" href="#idWasmscnTabl">the-table-section</a>.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
     <br>===
     <br>· the initial contents of a-table is-uninitialized.
@@ -2780,37 +2858,37 @@
     <br>· the-offset is-given by a constant expression.
     <br>· note: in the current version of WebAssembly, at most one table is-allowed in a-module. Consequently, the only valid tableidx is 0.
     <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#syntax-elem">https://webassembly.github.io/spec/core/syntax/modules.html#syntax-elem</a> {1-0.2018-03-28}]
-    <a class="clsHide" href="#idWasmalgscnElmtdsn"></a></p>
-  <p id="idWasmalgscnElmtnam">name::
+    <a class="clsHide" href="#idWasmscnElmtdsn"></a></p>
+  <p id="idWasmscnElmtnam">name::
     <br>* cpt.Wasm'elem-component,
     <br>* cpt.Wasm-element-section,
     <br>* cpt.Wasm-section.9-element,
     <br>* cpt.Wasm-section.element,
-    <a class="clsHide" href="#idWasmalgscnElmtnam"></a></p>
+    <a class="clsHide" href="#idWasmscnElmtnam"></a></p>
   </section>
 
-  <section id="idWasmalgscnCode">
-  <h2 id="idWasmalgscnCodeH2">section.10-CODE
-    <a class="clsHide" href="#idWasmalgscnCodeH2"></a></h2>
-  <p id="idWasmalgscnCodedsn">description::
+  <section id="idWasmscnCode">
+  <h2 id="idWasmscnCodeH2">section.10-CODE
+    <a class="clsHide" href="#idWasmscnCodeH2"></a></h2>
+  <p id="idWasmscnCodedsn">description::
     <br>· opcode: 0x0a.
     <br>· it consists of an-array of <a class="clsPreview" href="#idWasmfcnbody">function-bodies</a>.
     <br>===
     <br>· the-code-section is probably the-bulk of most WebAssembly-modules as it defines all code for all functions in the-module.
-    <br>· the-function-bodies are-defined in the same order as their respective function-indexes in <a class="clsPreview" href="#idWasmalgscnFctn">the-function-section</a>, not including imports of course.
+    <br>· the-function-bodies are-defined in the same order as their respective function-indexes in <a class="clsPreview" href="#idWasmscnFctn">the-function-section</a>, not including imports of course.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
-    <a class="clsHide" href="#idWasmalgscnCodedsn"></a></p>
-  <p id="idWasmalgscnCodenam">name::
+    <a class="clsHide" href="#idWasmscnCodedsn"></a></p>
+  <p id="idWasmscnCodenam">name::
     <br>* cpt.Wasm-code-section,
     <br>* cpt.Wasm-section.10-code,
     <br>* cpt.Wasm-section.code,
-    <a class="clsHide" href="#idWasmalgscnCodenam"></a></p>
+    <a class="clsHide" href="#idWasmscnCodenam"></a></p>
   </section>
 
-  <section id="idWasmalgscnData">
-  <h2 id="idWasmalgscnDataH2">section.11-DATA
-    <a class="clsHide" href="#idWasmalgscnDataH2"></a></h2>
-  <p id="idWasmalgscnDatadsn">description::
+  <section id="idWasmscnData">
+  <h2 id="idWasmscnDataH2">section.11-DATA
+    <a class="clsHide" href="#idWasmscnDataH2"></a></h2>
+  <p id="idWasmscnDatadsn">description::
     <br>· opcode: 0x0b.
     <br>· it consists of an-array of data-initializers.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#data-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#data-section</a>]
@@ -2821,13 +2899,31 @@
     <br>· the-offset is-given by a constant expression.
     <br>· note: in the current version of WebAssembly, at most one memory is-allowed in a-module. Consequently, the only valid memidx is 0.
     <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#data-segments">https://webassembly.github.io/spec/core/syntax/modules.html#data-segments</a> {1-0.2018-03-28}]
-    <a class="clsHide" href="#idWasmalgscnDatadsn"></a></p>
-  <p id="idWasmalgscnDatanam">name::
+    <a class="clsHide" href="#idWasmscnDatadsn"></a></p>
+  <p id="idWasmscnDatanam">name::
     <br>* cpt.Wasm'data-component,
     <br>* cpt.Wasm-data-section,
     <br>* cpt.Wasm-section.11-data,
     <br>* cpt.Wasm-section.data,
-    <a class="clsHide" href="#idWasmalgscnDatanam"></a></p>
+    <a class="clsHide" href="#idWasmscnDatanam"></a></p>
+  </section>
+
+  <section id="idWasmscnCtm">
+  <h2 id="idWasmscnCtmH2">section.0-CUSTOM
+    <a class="clsHide" href="#idWasmscnCtmH2"></a></h2>
+  <p id="idWasmscnCtmdsn">description::
+    <br>· opcode: 0x00.
+    <br>· this appendix defines dedicated custom-sections for WebAssembly’s binary format.
+    <br>· such sections do-not-contribute to, or otherwise affect, the WebAssembly semantics, and like any custom-section they may-be-ignored by an-implementation.
+    <br>· however, they provide useful meta data that implementations can-make-use of to improve user experience or take compilation hints.
+    <br>· currently, only one dedicated custom-section is-defined, the-name-section.
+    <br>[<a href="https://webassembly.github.io/spec/core/appendix/custom.html#custom-sections">https://webassembly.github.io/spec/core/appendix/custom.html#custom-sections</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmscnCtmdsn"></a></p>
+  <p id="idWasmscnCtmnam">name::
+    <br>* cpt.Wasm-custom-section,
+    <br>* cpt.Wasm-section.0-custom,
+    <br>* cpt.Wasm-section.custom,
+    <a class="clsHide" href="#idWasmscnCtmnam"></a></p>
   </section>
 </section>
 
@@ -2836,89 +2932,107 @@
     <a class="clsHide" href="#idWasmmdlH1"></a></h1>
   <p id="idWasmmdldsn">description::
     <br>· module is the outermost construction.
-    <br>· a-module consists of <a class="clsPreview" href="#idWasmmdlhdr">a-header</a> followed by a sequence of <a class="clsPreview" href="#idWasmalgscn">sections</a>.
+    <br>· a-module consists of a sequence of <a class="clsPreview" href="#idWasmscn">sections</a>.
     <br>===
     <br>· WebAssembly-programs are-organized into modules, which are the-unit of deployment, loading, and compilation.
     <br>· a-module collects definitions for types, functions, tables, memories, and globals.
     <br>· in addition, it can-declare imports and exports and provide initialization logic in the-form of data and element segments or a-start-function.
     <br><code>- module ::= {
-    <br> &nbsp;<a class="clsPreview" href="#idWasmalgscnType">types</a> vec(functype),
-    <br> &nbsp;<a class="clsPreview" href="#idWasmalgscnFctn">funcs</a> vec(func),
-    <br> &nbsp;<a class="clsPreview" href="#idWasmalgscnTabl">tables</a> vec(table),
-    <br> &nbsp;<a class="clsPreview" href="#idWasmalgscnLrmr">mems</a> vec(mem),
-    <br> &nbsp;<a class="clsPreview" href="#idWasmalgscnGlbl">globals</a> vec(global),
-    <br> &nbsp;<a class="clsPreview" href="#idWasmalgscnElmt">elem</a> vec(elem),
-    <br> &nbsp;<a class="clsPreview" href="#idWasmalgscnData">data</a> vec(data),
-    <br> &nbsp;<a class="clsPreview" href="#idWasmalgscnStrt">start</a> start?,
-    <br> &nbsp;<a class="clsPreview" href="#idWasmalgscnImpt">imports</a> vec(import),
-    <br> &nbsp;<a class="clsPreview" href="#idWasmalgscnExpt">exports</a> vec(export)
+    <br> &nbsp;<a class="clsPreview" href="#idWasmscnType">types</a> vec(functype),
+    <br> &nbsp;<a class="clsPreview" href="#idWasmscnFctn">funcs</a> vec(func),
+    <br> &nbsp;<a class="clsPreview" href="#idWasmscnTabl">tables</a> vec(table),
+    <br> &nbsp;<a class="clsPreview" href="#idWasmscnLrmr">mems</a> vec(mem),
+    <br> &nbsp;<a class="clsPreview" href="#idWasmscnGlbl">globals</a> vec(global),
+    <br> &nbsp;<a class="clsPreview" href="#idWasmscnElmt">elem</a> vec(elem),
+    <br> &nbsp;<a class="clsPreview" href="#idWasmscnData">data</a> vec(data),
+    <br> &nbsp;<a class="clsPreview" href="#idWasmscnStrt">start</a> start?,
+    <br> &nbsp;<a class="clsPreview" href="#idWasmscnImpt">imports</a> vec(import),
+    <br> &nbsp;<a class="clsPreview" href="#idWasmscnExpt">exports</a> vec(export)
     <br>}</code>
     <br>· each of the-vectors – and thus the entire module – may-be empty.
     <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html">https://webassembly.github.io/spec/core/syntax/modules.html</a> {1-0.2018-04-05}]
     <a class="clsHide" href="#idWasmmdldsn"></a></p>
   <p id="idWasmmdlnam">name::
     <br>* cpt.Wasm'module,
+    <br>* cpt.Wasm-module,
     <a class="clsHide" href="#idWasmmdlnam"></a></p>
 
-  <section id="idWasmmdlhdr">
-  <h2 id="idWasmmdlhdrH2">header of module
-    <a class="clsHide" href="#idWasmmdlhdrH2"></a></h2>
-  <p id="idWasmmdlhdrdsn">description::
-    <br>· the-header is the first part of <a class="clsPreview" href="#idWasmmdl">a-module</a>.
-    <br>· the-header consists of the-magic_cookie and the-version parts.
-    <a class="clsHide" href="#idWasmmdlhdrdsn"></a></p>
-  <p id="idWasmmdlhdrnam">name::
-    <br>* cpt.Wasm'header-of-module,
-    <a class="clsHide" href="#idWasmmdlhdrnam"></a></p>
-
-  <section id="idWasmmdlhdrmcck">
-  <h3 id="idWasmmdlhdrmcckH3">magic_cookie of header
-    <a class="clsHide" href="#idWasmmdlhdrmcckH3"></a></h3>
-  <p id="idWasmmdlhdrmcckdsn">description::
-    <br>· magic_cookie is-required to be 0x6d736100 (<a href="https://codebeautify.org/hex-string-converter">the-string "asm"</a>) which identifies a-file as a-WebAssembly-module.
-    <br>· its size is 4-bytes.
-    <a class="clsHide" href="#idWasmmdlhdrmcckdsn"></a></p>
-  <p id="idWasmmdlhdrmccknam">name::
-    <br>* cpt.Wasm'magic_cookie-of-header,
-    <a class="clsHide" href="#idWasmmdlhdrmccknam"></a></p>
-  </section>
-
-  <section id="idWasmmdlhdrvsn">
-  <h3 id="idWasmmdlhdrvsnH3">version of header
-    <a class="clsHide" href="#idWasmmdlhdrvsnH3"></a></h3>
-  <p id="idWasmmdlhdrvsndsn">description::
-    <br>· version is a-32-bit-unsigned-integer which denotes the-WebAssembly-version.
-    <a class="clsHide" href="#idWasmmdlhdrvsndsn"></a></p>
-  <p id="idWasmmdlhdrvsnnam">name::
-    <br>* cpt.Wasm'version-of-header,
-    <a class="clsHide" href="#idWasmmdlhdrvsnnam"></a></p>
-  </section>
-  </section>
-
   <section id="idWasmmdlscn">
-  <h2 id="idWasmmdlscnH2">section of module (<a class="clsPreview" href="#idWasmalgscn">link</a>)
+  <h2 id="idWasmmdlscnH2">section of module (<a class="clsPreview" href="#idWasmscn">link</a>)
     <a class="clsHide" href="#idWasmmdlscnH2"></a></h2>
+  </section>
+
+  <section id="idWasmmdlSpc">
+  <h2 id="idWasmmdlSpcH2">module.SPECIFIC
+    <a class="clsHide" href="#idWasmmdlSpcH2"></a></h2>
+  <p id="idWasmmdlSpcnam">name::
+    <br>* cpt.Wasm-module.specific,
+    <a class="clsHide" href="#idWasmmdlSpcnam"></a></p>
+  <p id="idWasmmdlSpcP1">specific::
+    <br>* text-module,
+    <br>* binary-module,
+    <a class="clsHide" href="#idWasmmdlSpcP1"></a></p>
   </section>
 
   <section id="idWasmmdlBnr">
   <h2 id="idWasmmdlBnrH2">module.BINARY
     <a class="clsHide" href="#idWasmmdlBnrH2"></a></h2>
   <p id="idWasmmdlBnrdsn">description::
-    <br>·
+    <br>· a-binary-module consists of <a class="clsPreview" href="#idWasmmdlBnrhdr">a-header</a> followed by a sequence of <a class="clsPreview" href="#idWasmscnBnr">binary-sections</a>.
     <a class="clsHide" href="#idWasmmdlBnrdsn"></a></p>
   <p id="idWasmmdlBnrnam">name::
+    <br>* cpt.Wasm'binary-module,
+    <br>* cpt.Wasm-binary-module,
     <br>* cpt.Wasm-module.binary,
     <a class="clsHide" href="#idWasmmdlBnrnam"></a></p>
+
+  <section id="idWasmmdlBnrhdr">
+  <h3 id="idWasmmdlBnrhdrH3">header of binary-module
+    <a class="clsHide" href="#idWasmmdlBnrhdrH3"></a></h3>
+  <p id="idWasmmdlBnrhdrdsn">description::
+    <br>· the-header is the first part of <a class="clsPreview" href="#idWasmmdl">a-module</a>.
+    <br>· the-header consists of the-magic_cookie and the-version parts.
+    <a class="clsHide" href="#idWasmmdlBnrhdrdsn"></a></p>
+  <p id="idWasmmdlBnrhdrnam">name::
+    <br>* cpt.Wasm'header-of-module,
+    <br>* cpt.Wasm-binary-module'header,
+    <a class="clsHide" href="#idWasmmdlBnrhdrnam"></a></p>
+
+  <section id="idWasmmdlBnrhdrmcck">
+  <h4 id="idWasmmdlBnrhdrmcckH4">magic_cookie of header
+    <a class="clsHide" href="#idWasmmdlBnrhdrmcckH4"></a></h4>
+  <p id="idWasmmdlBnrhdrmcckdsn">description::
+    <br>· magic_cookie is-required to be 0x6d736100 (<a href="https://codebeautify.org/hex-string-converter">the-string "asm"</a>) which identifies a-file as a-WebAssembly-module.
+    <br>· its size is 4-bytes.
+    <a class="clsHide" href="#idWasmmdlBnrhdrmcckdsn"></a></p>
+  <p id="idWasmmdlBnrhdrmccknam">name::
+    <br>* cpt.Wasm'magic_cookie-of-header,
+    <a class="clsHide" href="#idWasmmdlBnrhdrmccknam"></a></p>
+  </section>
+
+  <section id="idWasmmdlBnrhdrvsn">
+  <h4 id="idWasmmdlBnrhdrvsnH4">version of header
+    <a class="clsHide" href="#idWasmmdlBnrhdrvsnH4"></a></h4>
+  <p id="idWasmmdlBnrhdrvsndsn">description::
+    <br>· version is a-32-bit-unsigned-integer which denotes the-WebAssembly-version.
+    <a class="clsHide" href="#idWasmmdlBnrhdrvsndsn"></a></p>
+  <p id="idWasmmdlBnrhdrvsnnam">name::
+    <br>* cpt.Wasm'version-of-header,
+    <a class="clsHide" href="#idWasmmdlBnrhdrvsnnam"></a></p>
+  </section>
+  </section>
   </section>
 
   <section id="idWasmmdlTxt">
   <h2 id="idWasmmdlTxtH2">module.TEXT
     <a class="clsHide" href="#idWasmmdlTxtH2"></a></h2>
   <p id="idWasmmdlTxtdsn">description::
-    <br>·
+    <br>· a-module consists of a sequence of <a class="clsPreview" href="#idWasmscnTxt">text-sections</a>.
     <a class="clsHide" href="#idWasmmdlTxtdsn"></a></p>
   <p id="idWasmmdlTxtnam">name::
+    <br>* cpt.Wasm'text-module,
     <br>* cpt.Wasm-module.text,
+    <br>* cpt.Wasm-text-module,
     <a class="clsHide" href="#idWasmmdlTxtnam"></a></p>
   </section>
 </section>
@@ -2930,7 +3044,11 @@
     <br>* cpt.Wasm-algo.specific,
     <a class="clsHide" href="#idWasmalgSpcnam"></a></p>
   <p id="idWasmalgSpcP1">specific::
-    <br>* ,
+    <br>* <a class="clsPreview" href="#idWasmalgTxt">text-algo</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgBnr">binary-algo</a>,
+    <br>===
+    <br>* <a class="clsPreview" href="#idWasmpgm">program</a>,
+    <br>* <a class="clsPreview" href="#idWasmalgLbr">library</a>,
     <a class="clsHide" href="#idWasmalgSpcP1"></a></p>
 </section>
 
@@ -2938,8 +3056,8 @@
   <h1 id="idWasmpgmH1">algo.PROGRAM
     <a class="clsHide" href="#idWasmpgmH1"></a></h1>
   <p id="idWasmpgmdsn">description::
-    <br>· a-Wasm-program is <a class="clsPreview" href="#idWasmmdl">a-module</a> with <a class="clsPreview" href="#idWasmfcnStrt">a-start-function</a> or an-exported-function.
-    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-04-08]
+    <br>· a-Wasm-program is one or more <a class="clsPreview" href="#idWasmmdl">modules</a> working together.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-05-19]
     <a class="clsHide" href="#idWasmpgmdsn"></a></p>
   <p id="idWasmpgmnam">name::
     <br>* cpt.program.Wasm,
@@ -3017,7 +3135,7 @@
     <br>// a-sequence of bytes, in hex-format here.
     <br><code>00 61 73 6d ; WASM_BINARY_MAGIC
     <br>01 00 00 00 ; WASM_BINARY_VERSION
-    <br>; <a class="clsPreview" href="#idWasmalgscnType">section "Type" (1)</a>
+    <br>; <a class="clsPreview" href="#idWasmscnType">section "Type" (1)</a>
     <br>01 ; section code
     <br>05 ; section size
     <br>01 ; num types
@@ -3025,12 +3143,12 @@
     <br>00 ; num params
     <br>01 ; num results
     <br>7f ; i32
-    <br>; <a class="clsPreview" href="#idWasmalgscnFctn">section "Function" (3)</a>
+    <br>; <a class="clsPreview" href="#idWasmscnFctn">section "Function" (3)</a>
     <br>03 ; section code
     <br>02 ; section size (guess)
     <br>01 ; num functions
     <br>00 ; function 0 signature index
-    <br>; <a class="clsPreview" href="#idWasmalgscnExpt">section "Export" (7)</a>
+    <br>; <a class="clsPreview" href="#idWasmscnExpt">section "Export" (7)</a>
     <br>07 ; section code
     <br>07 ; section size (guess)
     <br>01 ; num exports
@@ -3038,7 +3156,7 @@
     <br>66 35 39 ; f59 export name
     <br>00 ; export kind
     <br>00 ; export func index
-    <br>; <a class="clsPreview" href="#idWasmalgscnCode">section "Code" (10)</a>
+    <br>; <a class="clsPreview" href="#idWasmscnCode">section "Code" (10)</a>
     <br>0a ; section code
     <br>06 ; section size (guess)
     <br>01 ; num functions
@@ -3048,7 +3166,7 @@
     <br>41 ; i32.const
     <br>3b ; i32 literal
     <br>0b ; end
-    <br>; <a class="clsPreview" href="#idWasmalgscnCtm">section "name"</a>
+    <br>; <a class="clsPreview" href="#idWasmscnCtm">section "name"</a>
     <br>00 ; section code
     <br>0a ; section size (guess)
     <br>04 ; string length
