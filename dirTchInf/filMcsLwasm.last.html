@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-40-0.2018-05-18 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-41-0.2018-05-20 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -22,9 +22,9 @@
   <h1 id="idDescriptionFTH1">description of Wasm
     <a class="clsHide" href="#idDescriptionFTH1"></a></h1>
   <p id="idDescriptionP1">description::
-    <br>· WebAssembly-(Wasm) is a low-level, assembly-like programing-language understood by <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbbsr">browsers</a>.
+    <br>· WebAssembly-(Wasm) is a low-level, assembly-like programing-language understood by javascript-runtimes, <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbbsr">browsers</a> and <a class="clsPreview" href="FilMcsLjn.Last.html#idLjnrtm">Node.js</a>.
     <br>· it is an intermediate language, between a-high|middle-level and a-machine programing-language.
-    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-03-19]
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-05-20]
     <a class="clsHide" href="#idDescriptionP1"></a></p>
   <p id="idName">name::
     <br>* cpt.filMcsLwasm.last.html,
@@ -2406,13 +2406,13 @@
     <br>* <a class="clsPreview" href="#idWasmscnData">data-section</a>,
     <br>* <a class="clsPreview" href="#idWasmscnElmt">element-section</a>,
     <br>* <a class="clsPreview" href="#idWasmscnExpt">export-section</a>,
-    <br>* <a class="clsPreview" href="#idWasmscnFctn">function-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnFcn">function-section</a>,
     <br>* <a class="clsPreview" href="#idWasmscnGlbl">global-section</a>,
     <br>* <a class="clsPreview" href="#idWasmscnImpt">import-section</a>,
     <br>* <a class="clsPreview" href="#idWasmscnKnn">known-section</a>,
     <br>* <a class="clsPreview" href="#idWasmscnLrmr">linear-memory--section</a>,
     <br>* <a class="clsPreview" href="#idWasmscnStrt">start-section</a>,
-    <br>* <a class="clsPreview" href="#idWasmscnTabl">table-section</a>,
+    <br>* <a class="clsPreview" href="#idWasmscnTbl">table-section</a>,
     <br>* <a class="clsPreview" href="#idWasmscnType">type-section</a>,
     <a class="clsHide" href="#idWasmscnSpcP1"></a></p>
   </section>
@@ -2522,7 +2522,7 @@
     <a class="clsHide" href="#idWasmscnTypedsn"></a></p>
   <p id="idWasmscnTypenam">name::
     <br>* cpt.Wasm'types-component,
-    <br>* cpt.Wasm-section.1-type,
+    <br>* cpt.Wasm-section.01-type,
     <br>* cpt.Wasm-section.type,
     <br>* cpt.Wasm-type-section,
     <a class="clsHide" href="#idWasmscnTypenam"></a></p>
@@ -2554,8 +2554,10 @@
   <h3 id="idWasmscnTypeTxtH3">type-section.TEXT
     <a class="clsHide" href="#idWasmscnTypeTxtH3"></a></h3>
   <p id="idWasmscnTypeTxtnam">name::
+    <br>* cpt.Wasm'section.type.text,
     <br>* cpt.Wasm'text-type-section,
     <br>* cpt.Wasm'type-section.text,
+    <br>* cpt.Wasm-section.type.text,
     <a class="clsHide" href="#idWasmscnTypeTxtnam"></a></p>
   <p id="idWasmscnTypeTxtexpl">example::
     <br>;;text-format
@@ -2569,7 +2571,9 @@
     <a class="clsHide" href="#idWasmscnTypeBnrH3"></a></h3>
   <p id="idWasmscnTypeBnrnam">name::
     <br>* cpt.Wasm'binary-type-section,
+    <br>* cpt.Wasm'section.type.binary,
     <br>* cpt.Wasm'type-section.binary,
+    <br>* cpt.Wasm-section.type.binary,
     <a class="clsHide" href="#idWasmscnTypeBnrnam"></a></p>
   <p id="idWasmscnTypeBnrexpl">example::
     <br><code>; section "Type" (1)
@@ -2609,7 +2613,7 @@
   <p id="idWasmscnImptnam">name::
     <br>* cpt.Wasm'imports-component,
     <br>* cpt.Wasm-import-section,
-    <br>* cpt.Wasm-section.2-import,
+    <br>* cpt.Wasm-section.02-import,
     <br>* cpt.Wasm-section.import,
     <a class="clsHide" href="#idWasmscnImptnam"></a></p>
   <p id="idWasmscnImptexpl">example::
@@ -2636,12 +2640,58 @@
     <br>00 ; import kind
     <br>00 ; import signature index</code>
     <a class="clsHide" href="#idWasmscnImptexpl"></a></p>
+
+  <section id="idWasmscnImptTxt">
+  <h3 id="idWasmscnImptTxtH3">import-section.TEXT
+    <a class="clsHide" href="#idWasmscnImptTxtH3"></a></h3>
+  <p id="idWasmscnImptTxtnam">name::
+    <br>* cpt.Wasm'import-section.text,
+    <br>* cpt.Wasm'section.import.text,
+    <br>* cpt.Wasm'text-import-section,
+    <br>* cpt.Wasm-section.import.text,
+    <a class="clsHide" href="#idWasmscnImptTxtnam"></a></p>
+  <p id="idWasmscnImptTxtexpl">example::
+    <br><code>(import "oJs" "fImport1" (func (;0;) (type 0)))
+    <br>(import "oJs" "fImport2" (func (;1;) (type 0)))</code>
+    <a class="clsHide" href="#idWasmscnImptTxtexpl"></a></p>
   </section>
 
-  <section id="idWasmscnFctn">
-  <h2 id="idWasmscnFctnH2">section.03-FUNCTION
-    <a class="clsHide" href="#idWasmscnFctnH2"></a></h2>
-  <p id="idWasmscnFctndsn">description::
+  <section id="idWasmscnImptBnr">
+  <h3 id="idWasmscnImptBnrH3">import-section.BINARY
+    <a class="clsHide" href="#idWasmscnImptBnrH3"></a></h3>
+  <p id="idWasmscnImptBnrnam">name::
+    <br>* cpt.Wasm'binary-import-section,
+    <br>* cpt.Wasm'import-section.binary,
+    <br>* cpt.Wasm'section.import.binary,
+    <br>* cpt.Wasm-section.import.binary,
+    <a class="clsHide" href="#idWasmscnImptBnrnam"></a></p>
+  <p id="idWasmscnImptBnrexpl">example::
+    <br><code>; section "Import" (2)
+    <br>02 ; section code
+    <br>00 ; section size (guess)
+    <br>02 ; num imports
+    <br>; import header 0
+    <br>03 ; string length
+    <br>6f4a 73 ; oJs  import module name
+    <br>08 ; string length
+    <br>6649 6d70 6f72 7431 ; fImport1  import field name
+    <br>00 ; import kind
+    <br>00 ; import signature index
+    <br>; import header 1
+    <br>03 ; string length
+    <br>6f4a 73 ; oJs import module name
+    <br>08 ; string length
+    <br>6649 6d70 6f72 7432 ; fImport2  import field name
+    <br>00 ; import kind
+    <br>00 ; import signature index</code>
+    <a class="clsHide" href="#idWasmscnImptBnrexpl"></a></p>
+  </section>
+  </section>
+
+  <section id="idWasmscnFcn">
+  <h2 id="idWasmscnFcnH2">section.03-FUNCTION
+    <a class="clsHide" href="#idWasmscnFcnH2"></a></h2>
+  <p id="idWasmscnFcndsn">description::
     <br>· the-funcs-component of a-module defines a-vector of functions with the following structure:
     <br>· func ::= {type typeidx, locals vec(valtype), body expr}
     <br>· the-type of a-function declares its signature by reference to a-type defined in the-module.
@@ -2661,43 +2711,110 @@
     <br>· a-function-declaration consists of: an-index in <a class="clsPreview" href="#idWasmscnType">the-type-section</a> of <a class="clsPreview" href="#idWasmfcnsgtr">the-signature-of-the-function</a>.
     <br>· the-function-declarations directly correspond to elements in <a class="clsPreview" href="#idWasmscnCode">the-code-section</a> array.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#function-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#function-section</a>]
-    <a class="clsHide" href="#idWasmscnFctndsn"></a></p>
-  <p id="idWasmscnFctnnam">name::
+    <a class="clsHide" href="#idWasmscnFcndsn"></a></p>
+  <p id="idWasmscnFcnnam">name::
     <br>* cpt.Wasm'funcs-component,
     <br>* cpt.Wasm-function-section,
-    <br>* cpt.Wasm-section.3-function,
+    <br>* cpt.Wasm-section.03-function,
     <br>* cpt.Wasm-section.function,
-    <a class="clsHide" href="#idWasmscnFctnnam"></a></p>
-  <p id="idWasmscnFctnwhlchn">whole-chain::
+    <a class="clsHide" href="#idWasmscnFcnnam"></a></p>
+  <p id="idWasmscnFcnwhlchn">whole-chain::
     <br>* <a class="clsPreview" href="#idWasmmdl">module</a>,
-    <a class="clsHide" href="#idWasmscnFctnwhlchn"></a></p>
+    <a class="clsHide" href="#idWasmscnFcnwhlchn"></a></p>
+
+  <section id="idWasmscnFcnTxt">
+  <h3 id="idWasmscnFcnTxtH3">function-section.TEXT
+    <a class="clsHide" href="#idWasmscnFcnTxtH3"></a></h3>
+  <p id="idWasmscnFcnTxtdsn">description::
+    <br>· the-text-function-section contains AND the-body[a] of functions, which[a] in <a class="clsPreview" href="#idWasmBnr">the-binary-format</a> is-included in <a class="clsPreview" href="#idWasmscnCode">the-binary-code-section</a>.
+    <a class="clsHide" href="#idWasmscnFcnTxtdsn"></a></p>
+  <p id="idWasmscnFcnTxtnam">name::
+    <br>* cpt.Wasm'function-section.text,
+    <br>* cpt.Wasm'section.function.text,
+    <br>* cpt.Wasm'text-function-section,
+    <br>* cpt.Wasm-section.function.text,
+    <a class="clsHide" href="#idWasmscnFcnTxtnam"></a></p>
+  <p id="idWasmscnFcnTxtexpl">example::
+    <br><code>(func $fAddTwo (param i32 i32) (result i32)
+    get_local 0
+    get_local 1
+    i32.add)</code>
+    <a class="clsHide" href="#idWasmscnFcnTxtexpl"></a></p>
   </section>
 
-  <section id="idWasmscnTabl">
-  <h2 id="idWasmscnTablH2">section.04-TABLE
-    <a class="clsHide" href="#idWasmscnTablH2"></a></h2>
-  <p id="idWasmscnTabldsn">description::
+  <section id="idWasmscnFcnBnr">
+  <h3 id="idWasmscnFcnBnrH3">function-section.BINARY
+    <a class="clsHide" href="#idWasmscnFcnBnrH3"></a></h3>
+  <p id="idWasmscnFcnBnrnam">name::
+    <br>* cpt.Wasm'function-section.binary,
+    <br>* cpt.Wasm'section.function.binary,
+    <br>* cpt.Wasm'binary-function-section,
+    <br>* cpt.Wasm-section.function.binary,
+    <a class="clsHide" href="#idWasmscnFcnBnrnam"></a></p>
+  <p id="idWasmscnFcnBnrexpl">example::
+    <br><code>; section "Function" (3)
+    <br>03 ; section code
+    <br>00 ; section size (guess)
+    <br>01 ; num functions
+    <br>00 ; function 0 type-index</code>
+    <a class="clsHide" href="#idWasmscnFcnBnrexpl"></a></p>
+  </section>
+  </section>
+
+  <section id="idWasmscnTbl">
+  <h2 id="idWasmscnTblH2">section.04-TABLE
+    <a class="clsHide" href="#idWasmscnTblH2"></a></h2>
+  <p id="idWasmscnTbldsn">description::
     <br>· opcode: 0x04.
     <br>· it consists of an-array of <a class="clsPreview" href="#idWasmsuntTbldlrn">table-descriptions|definitions</a>.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#table-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#table-section</a>]
-    <a class="clsHide" href="#idWasmscnTabldsn"></a></p>
-  <p id="idWasmscnTablnam">name::
+    <a class="clsHide" href="#idWasmscnTbldsn"></a></p>
+  <p id="idWasmscnTblnam">name::
     <br>* cpt.Wasm'tables-component,
     <br>* cpt.Wasm-table-section,
-    <br>* cpt.Wasm-section.4-table,
+    <br>* cpt.Wasm-section.04-table,
     <br>* cpt.Wasm-section.table,
-    <a class="clsHide" href="#idWasmscnTablnam"></a></p>
-  <p id="idWasmscnTablexpl">example::
-    <br>;; text-format, function and data sections are-written together
-    <br><code>(func (;0;) (type 0) (result i32)
-    <br> &nbsp;i32.const 59)</code>
-    <br>;; binary-format
-    <br>; <a class="clsPreview" href="#idWasmscnFctn">section "Function" (3)</a>
-    <br><code>03 ; section code
-    <br>02 ; section size (guess)
-    <br>01 ; num functions
-    <br>00 ; function 0 signature index</code>
-    <a class="clsHide" href="#idWasmscnTablexpl"></a></p>
+    <a class="clsHide" href="#idWasmscnTblnam"></a></p>
+
+  <section id="idWasmscnTblTxt">
+  <h3 id="idWasmscnTblTxtH3">table-section.TEXT
+    <a class="clsHide" href="#idWasmscnTblTxtH3"></a></h3>
+  <p id="idWasmscnTblTxtdsn">description::
+    <br>· the-text-table-section includes and the-table initializations, which in <a class="clsPreview" href="#idWasmBnr">the-binary-format</a> is-included in <a class="clsPreview" href="#idWasmscnElmt">the-element-section</a>.
+    <a class="clsHide" href="#idWasmscnTblTxtdsn"></a></p>
+  <p id="idWasmscnTblTxtnam">name::
+    <br>* cpt.Wasm'table-section.text,
+    <br>* cpt.Wasm'section.table.text,
+    <br>* cpt.Wasm'text-table-section,
+    <br>* cpt.Wasm-section.table.text,
+    <a class="clsHide" href="#idWasmscnTblTxtnam"></a></p>
+  <p id="idWasmscnTblTxtexpl">example::
+    <br><code>(table (export "tbl") anyfunc (elem $f42))</code>
+    <a class="clsHide" href="#idWasmscnTblTxtexpl"></a></p>
+  </section>
+
+  <section id="idWasmscnTblBnr">
+  <h3 id="idWasmscnTblBnrH3">table-section.BINARY
+    <a class="clsHide" href="#idWasmscnTblBnrH3"></a></h3>
+  <p id="idWasmscnTblBnrnam">name::
+    <br>* cpt.Wasm'table-section.binary,
+    <br>* cpt.Wasm'section.table.binary,
+    <br>* cpt.Wasm'binary-table-section,
+    <br>* cpt.Wasm-section.table.binary,
+    <a class="clsHide" href="#idWasmscnTblBnrnam"></a></p>
+  <p id="idWasmscnTblBnrexpl">example::
+    <br><code>; section "Table" (4)
+    <br>0000013: 04 ; section code
+    <br>0000014: 00 ; section size (guess)
+    <br>0000015: 01 ; num tables
+    <br>; table 0
+    <br>0000016: 70 ; anyfunc
+    <br>0000017: 01 ; limits: flags
+    <br>0000018: 01 ; limits: initial
+    <br>0000019: 01 ; limits: max
+    <br>0000014: 05 ; FIXUP section size</code>
+    <a class="clsHide" href="#idWasmscnTblBnrexpl"></a></p>
+  </section>
   </section>
 
   <section id="idWasmscnLrmr">
@@ -2715,10 +2832,45 @@
   <p id="idWasmscnLrmrnam">name::
     <br>* cpt.Wasm'mems-component,
     <br>* cpt.Wasm-memory-section,
-    <br>* cpt.Wasm-section.5-linear-memory,
+    <br>* cpt.Wasm-section.05-linear-memory,
     <br>* cpt.Wasm-section.linear-memory,
     <br>* cpt.Wasm-section.memory,
     <a class="clsHide" href="#idWasmscnLrmrnam"></a></p>
+
+  <section id="idWasmscnLrmrTxt">
+  <h3 id="idWasmscnLrmrTxtH3">memory-section.TEXT
+    <a class="clsHide" href="#idWasmscnLrmrTxtH3"></a></h3>
+  <p id="idWasmscnLrmrTxtnam">name::
+    <br>* cpt.Wasm'memory-section.text,
+    <br>* cpt.Wasm'section.memory.text,
+    <br>* cpt.Wasm'text-memory-section,
+    <br>* cpt.Wasm-section.memory.text,
+    <a class="clsHide" href="#idWasmscnLrmrTxtnam"></a></p>
+  <p id="idWasmscnLrmrTxtexpl">example::
+    <br><code>(memory 1)</code>
+    <br>or
+    <br><code>(memory (export "mem") 1)</code>
+    <a class="clsHide" href="#idWasmscnLrmrTxtexpl"></a></p>
+  </section>
+
+  <section id="idWasmscnLrmrBnr">
+  <h3 id="idWasmscnLrmrBnrH3">memory-section.BINARY
+    <a class="clsHide" href="#idWasmscnLrmrBnrH3"></a></h3>
+  <p id="idWasmscnLrmrBnrnam">name::
+    <br>* cpt.Wasm'binary-memory-section,
+    <br>* cpt.Wasm'memory-section.binary,
+    <br>* cpt.Wasm'section.memory.binary,
+    <br>* cpt.Wasm-section.memory.binary,
+    <a class="clsHide" href="#idWasmscnLrmrBnrnam"></a></p>
+  <p id="idWasmscnLrmrBnrexpl">example::
+    <br><code>; memory-section
+    <br>05 ; section code
+    <br>03 ; section size
+    <br>01 ; num memories
+    <br>00 ; limits: flags
+    <br>01 ; limits: initial</code>
+    <a class="clsHide" href="#idWasmscnLrmrBnrexpl"></a></p>
+  </section>
   </section>
 
   <section id="idWasmscnGlbl">
@@ -2732,7 +2884,7 @@
   <p id="idWasmscnGlblnam">name::
     <br>* cpt.Wasm'globals-component,
     <br>* cpt.Wasm-global-section,
-    <br>* cpt.Wasm-section.6-global,
+    <br>* cpt.Wasm-section.06-global,
     <br>* cpt.Wasm-section.global,
     <a class="clsHide" href="#idWasmscnGlblnam"></a></p>
   <p id="idWasmscnGlblexpl">example::
@@ -2755,6 +2907,48 @@
     <br>c801 ; i32 literal
     <br>0b ; end</code>
     <a class="clsHide" href="#idWasmscnGlblexpl"></a></p>
+
+  <section id="idWasmscnGlblTxt">
+  <h3 id="idWasmscnGlblTxtH3">global-section.TEXT
+    <a class="clsHide" href="#idWasmscnGlblTxtH3"></a></h3>
+  <p id="idWasmscnGlblTxtnam">name::
+    <br>* cpt.Wasm'text-global-section,
+    <br>* cpt.Wasm'global-section.text,
+    <br>* cpt.Wasm'section.global.text,
+    <br>* cpt.Wasm-section.global.text,
+    <a class="clsHide" href="#idWasmscnGlblTxtnam"></a></p>
+  <p id="idWasmscnGlblTxtexpl">example::
+    <br><code>(global (;0;) (mut i32) (i32.const 100))
+    <br>(global (;1;) i32 (i32.const 200))</code>
+    <a class="clsHide" href="#idWasmscnGlblTxtexpl"></a></p>
+  </section>
+
+  <section id="idWasmscnGlblBnr">
+  <h3 id="idWasmscnGlblBnrH3">global-section.BINARY
+    <a class="clsHide" href="#idWasmscnGlblBnrH3"></a></h3>
+  <p id="idWasmscnGlblBnrnam">name::
+    <br>* cpt.Wasm'binary-global-section,
+    <br>* cpt.Wasm'global-section.binary,
+    <br>* cpt.Wasm'section.global.binary,
+    <br>* cpt.Wasm-section.global.binary,
+    <a class="clsHide" href="#idWasmscnGlblBnrnam"></a></p>
+  <p id="idWasmscnGlblBnrexpl">example::
+    <br><code>; section "Global" (6)
+    <br>06 ; section code
+    <br>00 ; section size (guess)
+    <br>02 ; num globals
+    <br>7f ; i32
+    <br>01 ; global mutability
+    <br>41 ; i32.const
+    <br>e400 ; i32 literal
+    <br>0b ; end
+    <br>7f ; i32
+    <br>00 ; global mutability
+    <br>41 ; i32.const
+    <br>c801 ; i32 literal
+    <br>0b ; end</code>
+    <a class="clsHide" href="#idWasmscnGlblBnrexpl"></a></p>
+  </section>
   </section>
 
   <section id="idWasmscnExpt">
@@ -2776,7 +2970,7 @@
   <p id="idWasmscnExptnam">name::
     <br>* cpt.Wasm'exports-component,
     <br>* cpt.Wasm-export-section,
-    <br>* cpt.Wasm-section.7-export,
+    <br>* cpt.Wasm-section.07-export,
     <br>* cpt.Wasm-section.export,
     <a class="clsHide" href="#idWasmscnExptnam"></a></p>
   <p id="idWasmscnExptexpl">example::
@@ -2799,6 +2993,48 @@
     <br>00 ; export kind
     <br>01 ; export func index</code>
     <a class="clsHide" href="#idWasmscnExptexpl"></a></p>
+
+  <section id="idWasmscnExptTxt">
+  <h3 id="idWasmscnExptTxtH3">export-section.TEXT
+    <a class="clsHide" href="#idWasmscnExptTxtH3"></a></h3>
+  <p id="idWasmscnExptTxtnam">name::
+    <br>* cpt.Wasm'text-export-section,
+    <br>* cpt.Wasm'export-section.text,
+    <br>* cpt.Wasm'section.export.text,
+    <br>* cpt.Wasm-section.export.text,
+    <a class="clsHide" href="#idWasmscnExptTxtnam"></a></p>
+  <p id="idWasmscnExptTxtexpl">example::
+    <br><code>(export "f" (func 0))
+    <br>(export "f2" (func 1)))</code>
+    <a class="clsHide" href="#idWasmscnExptTxtexpl"></a></p>
+  </section>
+
+  <section id="idWasmscnExptBnr">
+  <h3 id="idWasmscnExptBnrH3">export-section.BINARY
+    <a class="clsHide" href="#idWasmscnExptBnrH3"></a></h3>
+  <p id="idWasmscnExptBnrnam">name::
+    <br>* cpt.Wasm'binary-export-section,
+    <br>* cpt.Wasm'export-section.binary,
+    <br>* cpt.Wasm'section.export.binary,
+    <br>* cpt.Wasm-section.export.binary,
+    <a class="clsHide" href="#idWasmscnExptBnrnam"></a></p>
+  <p id="idWasmscnExptBnrexpl">example::
+    <br><code>; section "Export" (7)
+    <br>07 ; section code
+    <br>00 ; section size (guess)
+    <br>02 ; num exports
+    <br>;; export f
+    <br>01 ; string length
+    <br>66 ; 'f' export name
+    <br>00 ; export kind
+    <br>00 ; export func index
+    <br>;; export f2
+    <br>02; string length
+    <br>6632 ; 'f2' export name
+    <br>00 ; export kind
+    <br>01 ; export func index</code>
+    <a class="clsHide" href="#idWasmscnExptBnrexpl"></a></p>
+  </section>
   </section>
 
   <section id="idWasmscnStrt">
@@ -2821,7 +3057,7 @@
   <p id="idWasmscnStrtnam">name::
     <br>* cpt.Wasm'start-component,
     <br>* cpt.Wasm-start-section,
-    <br>* cpt.Wasm-section.8-start,
+    <br>* cpt.Wasm-section.08-start,
     <br>* cpt.Wasm-section.start,
     <a class="clsHide" href="#idWasmscnStrtnam"></a></p>
   <p id="idWasmscnStrtexpl">example::
@@ -2839,6 +3075,37 @@
   <h3 id="idWasmscnStrtstfnH3">start-function of start-section (<a class="clsPreview" href="#idWasmfcnStrt">link</a>)
     <a class="clsHide" href="#idWasmscnStrtstfnH3"></a></h3>
   </section>
+
+  <section id="idWasmscnStrtTxt">
+  <h3 id="idWasmscnStrtTxtH3">start-section.TEXT
+    <a class="clsHide" href="#idWasmscnStrtTxtH3"></a></h3>
+  <p id="idWasmscnStrtTxtnam">name::
+    <br>* cpt.Wasm'text-start-section,
+    <br>* cpt.Wasm'start-section.text,
+    <br>* cpt.Wasm'section.start.text,
+    <br>* cpt.Wasm-section.start.text,
+    <a class="clsHide" href="#idWasmscnStrtTxtnam"></a></p>
+  <p id="idWasmscnStrtTxtexpl">example::
+    <br><code>(start 2)</code>
+    <a class="clsHide" href="#idWasmscnStrtTxtexpl"></a></p>
+  </section>
+
+  <section id="idWasmscnStrtBnr">
+  <h3 id="idWasmscnStrtBnrH3">start-section.BINARY
+    <a class="clsHide" href="#idWasmscnStrtBnrH3"></a></h3>
+  <p id="idWasmscnStrtBnrnam">name::
+    <br>* cpt.Wasm'binary-start-section,
+    <br>* cpt.Wasm'start-section.binary,
+    <br>* cpt.Wasm'section.start.binary,
+    <br>* cpt.Wasm-section.start.binary,
+    <a class="clsHide" href="#idWasmscnStrtBnrnam"></a></p>
+  <p id="idWasmscnStrtBnrexpl">example::
+    <br><code>; section "Start" (8)
+    <br>08 ; section code
+    <br>00 ; section size (guess)
+    <br>02 ; start func index</code>
+    <a class="clsHide" href="#idWasmscnStrtBnrexpl"></a></p>
+  </section>
   </section>
 
   <section id="idWasmscnElmt">
@@ -2849,7 +3116,7 @@
     <br>· it consists of an-array of table-initializers.
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#element-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#element-section</a>]
     <br>===
-    <br>· the-element-section allows a-module to initialize the-contents of a-table imported from the-outside or defined in <a class="clsPreview" href="#idWasmscnTabl">the-table-section</a>.
+    <br>· the-element-section allows a-module to initialize the-contents of a-table imported from the-outside or defined in <a class="clsPreview" href="#idWasmscnTbl">the-table-section</a>.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
     <br>===
     <br>· the initial contents of a-table is-uninitialized.
@@ -2862,9 +3129,51 @@
   <p id="idWasmscnElmtnam">name::
     <br>* cpt.Wasm'elem-component,
     <br>* cpt.Wasm-element-section,
-    <br>* cpt.Wasm-section.9-element,
+    <br>* cpt.Wasm-section.09-element,
     <br>* cpt.Wasm-section.element,
     <a class="clsHide" href="#idWasmscnElmtnam"></a></p>
+
+  <section id="idWasmscnElmtTxt">
+  <h3 id="idWasmscnElmtTxtH3">element-section.TEXT
+    <a class="clsHide" href="#idWasmscnElmtTxtH3"></a></h3>
+  <p id="idWasmscnElmtTxtdsn">description::
+    <br>· in <a class="clsPreview" href="#idWasmTxt">text-Wasm</a>, the-element-section is-included in <a class="clsPreview" href="#idWasmscnTblTxt">the-table-section</a>.
+    <a class="clsHide" href="#idWasmscnElmtTxtdsn"></a></p>
+  <p id="idWasmscnElmtTxtnam">name::
+    <br>* cpt.Wasm'text-element-section,
+    <br>* cpt.Wasm'element-section.text,
+    <br>* cpt.Wasm'section.element.text,
+    <br>* cpt.Wasm-section.element.text,
+    <a class="clsHide" href="#idWasmscnElmtTxtnam"></a></p>
+  <p id="idWasmscnElmtTxtexpl">example::
+    <br><code>(table (export "tbl") anyfunc (elem $f42))</code>
+    <a class="clsHide" href="#idWasmscnElmtTxtexpl"></a></p>
+  </section>
+
+  <section id="idWasmscnElmtBnr">
+  <h3 id="idWasmscnElmtBnrH3">element-section.BINARY
+    <a class="clsHide" href="#idWasmscnElmtBnrH3"></a></h3>
+  <p id="idWasmscnElmtBnrnam">name::
+    <br>* cpt.Wasm'binary-element-section,
+    <br>* cpt.Wasm'element-section.binary,
+    <br>* cpt.Wasm'section.element.binary,
+    <br>* cpt.Wasm-section.element.binary,
+    <a class="clsHide" href="#idWasmscnElmtBnrnam"></a></p>
+  <p id="idWasmscnElmtBnrexpl">example::
+    <br><code>; section "Elem" (9)
+    <br>0000023: 09 ; section code
+    <br>0000024: 00 ; section size (guess)
+    <br>0000025: 01 ; num elem segments
+    <br>; elem segment header 0
+    <br>0000026: 00 ; table index
+    <br>0000027: 41 ; i32.const
+    <br>0000028: 00 ; i32 literal
+    <br>0000029: 0b ; end
+    <br>000002a: 01 ; num function indices
+    <br>000002b: 00 ; function index
+    <br>0000024: 07 ; FIXUP section size</code>
+    <a class="clsHide" href="#idWasmscnElmtBnrexpl"></a></p>
+  </section>
   </section>
 
   <section id="idWasmscnCode">
@@ -2875,7 +3184,7 @@
     <br>· it consists of an-array of <a class="clsPreview" href="#idWasmfcnbody">function-bodies</a>.
     <br>===
     <br>· the-code-section is probably the-bulk of most WebAssembly-modules as it defines all code for all functions in the-module.
-    <br>· the-function-bodies are-defined in the same order as their respective function-indexes in <a class="clsPreview" href="#idWasmscnFctn">the-function-section</a>, not including imports of course.
+    <br>· the-function-bodies are-defined in the same order as their respective function-indexes in <a class="clsPreview" href="#idWasmscnFcn">the-function-section</a>, not including imports of course.
     <br>[<a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>]
     <a class="clsHide" href="#idWasmscnCodedsn"></a></p>
   <p id="idWasmscnCodenam">name::
@@ -2883,6 +3192,44 @@
     <br>* cpt.Wasm-section.10-code,
     <br>* cpt.Wasm-section.code,
     <a class="clsHide" href="#idWasmscnCodenam"></a></p>
+
+  <section id="idWasmscnCodeTxt">
+  <h3 id="idWasmscnCodeTxtH3">code-section.TEXT
+    <a class="clsHide" href="#idWasmscnCodeTxtH3"></a></h3>
+  <p id="idWasmscnCodeTxtdsn">description::
+    <br>· in <a class="clsPreview" href="#idWasmTxt">text-Wasm</a>, the-code-section (<a class="clsPreview" href="#idWasmfcnbody">the-bodies</a> of functions) is-included in <a class="clsPreview" href="#idWasmscnFcnTxt">the-function-section</a>.
+    <a class="clsHide" href="#idWasmscnCodeTxtdsn"></a></p>
+  <p id="idWasmscnCodeTxtnam">name::
+    <br>* cpt.Wasm'text-code-section,
+    <br>* cpt.Wasm'code-section.text,
+    <br>* cpt.Wasm'section.code.text,
+    <br>* cpt.Wasm-section.code.text,
+    <a class="clsHide" href="#idWasmscnCodeTxtnam"></a></p>
+  </section>
+
+  <section id="idWasmscnCodeBnr">
+  <h3 id="idWasmscnCodeBnrH3">code-section.BINARY
+    <a class="clsHide" href="#idWasmscnCodeBnrH3"></a></h3>
+  <p id="idWasmscnCodeBnrnam">name::
+    <br>* cpt.Wasm'binary-code-section,
+    <br>* cpt.Wasm'code-section.binary,
+    <br>* cpt.Wasm'section.code.binary,
+    <br>* cpt.Wasm-section.code.binary,
+    <a class="clsHide" href="#idWasmscnCodeBnrnam"></a></p>
+  <p id="idWasmscnCodeBnrexpl">example::
+    <br>;; (func (result i32) (i32.const 59))
+    <br><code>; section "Code" (10)
+    <br>0a ; section code
+    <br>06 ; section size (guess)
+    <br>01 ; num functions
+    <br>; function body 0
+    <br>04 ; func body size (guess)
+    <br>00 ; local decl count
+    <br>41 ; i32.const
+    <br>3b ; i32 literal
+    <br>0b ; end</code>
+    <a class="clsHide" href="#idWasmscnCodeBnrexpl"></a></p>
+  </section>
   </section>
 
   <section id="idWasmscnData">
@@ -2906,6 +3253,43 @@
     <br>* cpt.Wasm-section.11-data,
     <br>* cpt.Wasm-section.data,
     <a class="clsHide" href="#idWasmscnDatanam"></a></p>
+
+  <section id="idWasmscnDataTxt">
+  <h3 id="idWasmscnDataTxtH3">data-section.TEXT
+    <a class="clsHide" href="#idWasmscnDataTxtH3"></a></h3>
+  <p id="idWasmscnDataTxtnam">name::
+    <br>* cpt.Wasm'text-data-section,
+    <br>* cpt.Wasm'text-section.binary,
+    <br>* cpt.Wasm'section.text.binary,
+    <br>* cpt.Wasm-section.text.binary,
+    <a class="clsHide" href="#idWasmscnDataTxtnam"></a></p>
+  <p id="idWasmscnDataTxtexpl">example::
+    <br><code>(data (i32.const 0) "Hello World")</code>
+    <a class="clsHide" href="#idWasmscnDataTxtexpl"></a></p>
+  </section>
+
+  <section id="idWasmscnDataBnr">
+  <h3 id="idWasmscnDataBnrH3">data-section.BINARY
+    <a class="clsHide" href="#idWasmscnDataBnrH3"></a></h3>
+  <p id="idWasmscnDataBnrnam">name::
+    <br>* cpt.Wasm'binary-data-section,
+    <br>* cpt.Wasm'data-section.binary,
+    <br>* cpt.Wasm'section.data.binary,
+    <br>* cpt.Wasm-section.data.binary,
+    <a class="clsHide" href="#idWasmscnDataBnrnam"></a></p>
+  <p id="idWasmscnDataBnrexpl">example::
+    <br><code>; data-section
+    <br>0B ; section code
+    <br>11 ; section size
+    <br>01 ; num data segments
+    <br>00 ; memory index
+    <br>41 ; i32.const
+    <br>00 ; i32 value
+    <br>0B ; end
+    <br>0B ; data segment size
+    <br>48 65 6C 6C 6F 20 57 6F 72 6C 64 ; Hello World</code>
+    <a class="clsHide" href="#idWasmscnDataBnrexpl"></a></p>
+  </section>
   </section>
 
   <section id="idWasmscnCtm">
@@ -2939,8 +3323,8 @@
     <br>· in addition, it can-declare imports and exports and provide initialization logic in the-form of data and element segments or a-start-function.
     <br><code>- module ::= {
     <br> &nbsp;<a class="clsPreview" href="#idWasmscnType">types</a> vec(functype),
-    <br> &nbsp;<a class="clsPreview" href="#idWasmscnFctn">funcs</a> vec(func),
-    <br> &nbsp;<a class="clsPreview" href="#idWasmscnTabl">tables</a> vec(table),
+    <br> &nbsp;<a class="clsPreview" href="#idWasmscnFcn">funcs</a> vec(func),
+    <br> &nbsp;<a class="clsPreview" href="#idWasmscnTbl">tables</a> vec(table),
     <br> &nbsp;<a class="clsPreview" href="#idWasmscnLrmr">mems</a> vec(mem),
     <br> &nbsp;<a class="clsPreview" href="#idWasmscnGlbl">globals</a> vec(global),
     <br> &nbsp;<a class="clsPreview" href="#idWasmscnElmt">elem</a> vec(elem),
@@ -3143,7 +3527,7 @@
     <br>00 ; num params
     <br>01 ; num results
     <br>7f ; i32
-    <br>; <a class="clsPreview" href="#idWasmscnFctn">section "Function" (3)</a>
+    <br>; <a class="clsPreview" href="#idWasmscnFcn">section "Function" (3)</a>
     <br>03 ; section code
     <br>02 ; section size (guess)
     <br>01 ; num functions
@@ -3230,85 +3614,85 @@
     <a class="clsHide" href="#idWasmpgmTblwat"></a></p>
   <p id="idWasmpgmTblwasm">wasm-program::
     <br><code>0000000: 0061 736d                                 ; WASM_BINARY_MAGIC
-    <br>0000004: 0100 0000                                 ; WASM_BINARY_VERSION
+    <br>0000004: 0100 0000 ; WASM_BINARY_VERSION
     <br>; section "Type" (1)
-    <br>0000008: 01                                        ; section code
-    <br>0000009: 00                                        ; section size (guess)
-    <br>000000a: 01                                        ; num types
+    <br>0000008: 01 ; section code
+    <br>0000009: 00 ; section size (guess)
+    <br>000000a: 01 ; num types
     <br>; type 0
-    <br>000000b: 60                                        ; func
-    <br>000000c: 00                                        ; num params
-    <br>000000d: 01                                        ; num results
-    <br>000000e: 7f                                        ; i32
-    <br>0000009: 05                                        ; FIXUP section size
+    <br>000000b: 60 ; func
+    <br>000000c: 00 ; num params
+    <br>000000d: 01 ; num results
+    <br>000000e: 7f ; i32
+    <br>0000009: 05 ; FIXUP section size
     <br>; section "Function" (3)
-    <br>000000f: 03                                        ; section code
-    <br>0000010: 00                                        ; section size (guess)
-    <br>0000011: 01                                        ; num functions
-    <br>0000012: 00                                        ; function 0 signature index
-    <br>0000010: 02                                        ; FIXUP section size
+    <br>000000f: 03 ; section code
+    <br>0000010: 00 ; section size (guess)
+    <br>0000011: 01 ; num functions
+    <br>0000012: 00 ; function 0 signature index
+    <br>0000010: 02 ; FIXUP section size
     <br>; section "Table" (4)
-    <br>0000013: 04                                        ; section code
-    <br>0000014: 00                                        ; section size (guess)
-    <br>0000015: 01                                        ; num tables
+    <br>0000013: 04 ; section code
+    <br>0000014: 00 ; section size (guess)
+    <br>0000015: 01 ; num tables
     <br>; table 0
-    <br>0000016: 70                                        ; anyfunc
-    <br>0000017: 01                                        ; limits: flags
-    <br>0000018: 01                                        ; limits: initial
-    <br>0000019: 01                                        ; limits: max
-    <br>0000014: 05                                        ; FIXUP section size
+    <br>0000016: 70 ; anyfunc
+    <br>0000017: 01 ; limits: flags
+    <br>0000018: 01 ; limits: initial
+    <br>0000019: 01 ; limits: max
+    <br>0000014: 05 ; FIXUP section size
     <br>; section "Export" (7)
-    <br>000001a: 07                                        ; section code
-    <br>000001b: 00                                        ; section size (guess)
-    <br>000001c: 01                                        ; num exports
-    <br>000001d: 03                                        ; string length
-    <br>000001e: 7462 6c                                  tbl  ; export name
-    <br>0000021: 01                                        ; export kind
-    <br>0000022: 00                                        ; export table index
-    <br>000001b: 07                                        ; FIXUP section size
+    <br>000001a: 07 ; section code
+    <br>000001b: 00 ; section size (guess)
+    <br>000001c: 01 ; num exports
+    <br>000001d: 03 ; string length
+    <br>000001e: 7462 6c ; tbl export name
+    <br>0000021: 01 ; export kind
+    <br>0000022: 00 ; export table index
+    <br>000001b: 07 ; FIXUP section size
     <br>; section "Elem" (9)
-    <br>0000023: 09                                        ; section code
-    <br>0000024: 00                                        ; section size (guess)
-    <br>0000025: 01                                        ; num elem segments
+    <br>0000023: 09 ; section code
+    <br>0000024: 00 ; section size (guess)
+    <br>0000025: 01 ; num elem segments
     <br>; elem segment header 0
-    <br>0000026: 00                                        ; table index
-    <br>0000027: 41                                        ; i32.const
-    <br>0000028: 00                                        ; i32 literal
-    <br>0000029: 0b                                        ; end
-    <br>000002a: 01                                        ; num function indices
-    <br>000002b: 00                                        ; function index
-    <br>0000024: 07                                        ; FIXUP section size
+    <br>0000026: 00 ; table index
+    <br>0000027: 41 ; i32.const
+    <br>0000028: 00 ; i32 literal
+    <br>0000029: 0b ; end
+    <br>000002a: 01 ; num function indices
+    <br>000002b: 00 ; function index
+    <br>0000024: 07 ; FIXUP section size
     <br>; section "Code" (10)
-    <br>000002c: 0a                                        ; section code
-    <br>000002d: 00                                        ; section size (guess)
-    <br>000002e: 01                                        ; num functions
+    <br>000002c: 0a ; section code
+    <br>000002d: 00 ; section size (guess)
+    <br>000002e: 01 ; num functions
     <br>; function body 0
-    <br>000002f: 00                                        ; func body size (guess)
-    <br>0000030: 00                                        ; local decl count
-    <br>0000031: 41                                        ; i32.const
-    <br>0000032: 2a                                        ; i32 literal
-    <br>0000033: 0b                                        ; end
-    <br>000002f: 04                                        ; FIXUP func body size
-    <br>000002d: 06                                        ; FIXUP section size
+    <br>000002f: 00 ; func body size (guess)
+    <br>0000030: 00 ; local decl count
+    <br>0000031: 41 ; i32.const
+    <br>0000032: 2a ; i32 literal
+    <br>0000033: 0b ; end
+    <br>000002f: 04 ; FIXUP func body size
+    <br>000002d: 06 ; FIXUP section size
     <br>; section "name"
-    <br>0000034: 00                                        ; section code
-    <br>0000035: 00                                        ; section size (guess)
-    <br>0000036: 04                                        ; string length
-    <br>0000037: 6e61 6d65                                name  ; custom section name
-    <br>000003b: 01                                        ; function name type
-    <br>000003c: 00                                        ; subsection size (guess)
-    <br>000003d: 01                                        ; num functions
-    <br>000003e: 00                                        ; function index
-    <br>000003f: 03                                        ; string length
-    <br>0000040: 6634 32                                  f42  ; func name 0
-    <br>000003c: 06                                        ; FIXUP subsection size
-    <br>0000043: 02                                        ; local name type
-    <br>0000044: 00                                        ; subsection size (guess)
-    <br>0000045: 01                                        ; num functions
-    <br>0000046: 00                                        ; function index
-    <br>0000047: 00                                        ; num locals
-    <br>0000044: 03                                        ; FIXUP subsection size
-    <br>0000035: 12                                        ; FIXUP section size</code>
+    <br>0000034: 00 ; section code
+    <br>0000035: 00 ; section size (guess)
+    <br>0000036: 04 ; string length
+    <br>0000037: 6e61 6d65 ; name custom section name
+    <br>000003b: 01 ; function name type
+    <br>000003c: 00 ; subsection size (guess)
+    <br>000003d: 01 ; num functions
+    <br>000003e: 00 ; function index
+    <br>000003f: 03 ; string length
+    <br>0000040: 6634 32 ; f42 func name 0
+    <br>000003c: 06 ; FIXUP subsection size
+    <br>0000043: 02 ; local name type
+    <br>0000044: 00 ; subsection size (guess)
+    <br>0000045: 01 ; num functions
+    <br>0000046: 00 ; function index
+    <br>0000047: 00 ; num locals
+    <br>0000044: 03 ; FIXUP subsection size
+    <br>0000035: 12 ; FIXUP section size</code>
     <a class="clsHide" href="#idWasmpgmTblwasm"></a></p>
   <p id="idWasmpgmTblhml">html-program::
     <br><code>&lt;html>
