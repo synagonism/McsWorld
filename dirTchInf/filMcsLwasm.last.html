@@ -150,18 +150,6 @@
     <br>* cpt.Wasm'unit-of-algo,
     <a class="clsHide" href="#idWasmuntnam"></a></p>
 
-  <section id="idWasmuntBnr">
-  <h2 id="idWasmuntBnrH2">unit.BINARY
-    <a class="clsHide" href="#idWasmuntBnrH2"></a></h2>
-  <p id="idWasmuntBnrdsn">description::
-    <br>· bit is the-unit of <a class="clsPreview" href="#idWasmalgBnr">a-binary-algo</a>.
-    <a class="clsHide" href="#idWasmuntBnrdsn"></a></p>
-  <p id="idWasmuntBnrnam">name::
-    <br>* cpt.Wasm'binary-unit,
-    <br>* cpt.Wasm-unit.binary,
-    <a class="clsHide" href="#idWasmuntBnrnam"></a></p>
-  </section>
-
   <section id="idWasmuntTxt">
   <h2 id="idWasmuntTxtH2">unit.TEXT
     <a class="clsHide" href="#idWasmuntTxtH2"></a></h2>
@@ -200,7 +188,7 @@
     <br><code>space ::= (‘  ’ | format | comment)∗
     <br> format ::= U+09 | U+0A | U+0D</code>
     <br>· the only relevance of white-space is to separate tokens, it is-ignored otherwise.
-    <br>[]
+    <br>[https://webassembly.github.io/spec/core/text/lexical.html#white-space]
     <a class="clsHide" href="#idWasmuntTxtWtscdsn"></a></p>
   <p id="idWasmuntTxtWtscnam">name::
     <br>* cpt.Wasm'white-space,
@@ -244,6 +232,18 @@
     <a class="clsHide" href="#idWasmuntTxtCmntexpl"></a></p>
   </section>
   </section>
+
+  <section id="idWasmuntBnr">
+  <h2 id="idWasmuntBnrH2">unit.BINARY
+    <a class="clsHide" href="#idWasmuntBnrH2"></a></h2>
+  <p id="idWasmuntBnrdsn">description::
+    <br>· bit is the-unit of <a class="clsPreview" href="#idWasmalgBnr">a-binary-algo</a>.
+    <a class="clsHide" href="#idWasmuntBnrdsn"></a></p>
+  <p id="idWasmuntBnrnam">name::
+    <br>* cpt.Wasm'binary-unit,
+    <br>* cpt.Wasm-unit.binary,
+    <a class="clsHide" href="#idWasmuntBnrnam"></a></p>
+  </section>
 </section>
 
 <section id="idWasmsunt">
@@ -258,21 +258,15 @@
   <h2 id="idWasmsuntSpcH2">sem-unit.SPECIFIC
     <a class="clsHide" href="#idWasmsuntSpcH2"></a></h2>
   <p id="idWasmsuntSpcP1">specific::
+    <br>* <a class="clsPreview" href="#idWasmsuntTxt">text--sem-unit</a>,
+    <br>* <a class="clsPreview" href="#idWasmsuntBnr">binary--sem-unit</a>,
+    <br>===
     <br>* <a class="clsPreview" href="#idWasmsuntVal">value</a>,
     <br>* <a class="clsPreview" href="#idWasmfcn">function</a>,
     <br>* <a class="clsPreview" href="#idWasmsuntVar">variable</a>,
     <br>* <a class="clsPreview" href="#idWasmsuntTbl">table</a>,
     <br>* <a class="clsPreview" href="#idWasmsuntMmr">memory</a>,
     <a class="clsHide" href="#idWasmsuntSpcP1"></a></p>
-  </section>
-
-  <section id="idWasmsuntBnr">
-  <h2 id="idWasmsuntBnrH2">sem-unit.BINARY
-    <a class="clsHide" href="#idWasmsuntBnrH2"></a></h2>
-  <p id="idWasmsuntBnrnam">name::
-    <br>* cpt.Wasm'binary-sem-unit,
-    <br>* cpt.Wasm-sem-unit.binary,
-    <a class="clsHide" href="#idWasmsuntBnrnam"></a></p>
   </section>
 
   <section id="idWasmsuntTxt">
@@ -296,6 +290,15 @@
     <br>* cpt.Wasm-sem-unit.string,
     <a class="clsHide" href="#idWasmsuntTxtStrgnam"></a></p>
   </section>
+  </section>
+
+  <section id="idWasmsuntBnr">
+  <h2 id="idWasmsuntBnrH2">sem-unit.BINARY
+    <a class="clsHide" href="#idWasmsuntBnrH2"></a></h2>
+  <p id="idWasmsuntBnrnam">name::
+    <br>* cpt.Wasm'binary-sem-unit,
+    <br>* cpt.Wasm-sem-unit.binary,
+    <a class="clsHide" href="#idWasmsuntBnrnam"></a></p>
   </section>
 
   <section id="idWasmsuntVal">
@@ -843,6 +846,11 @@
   <h2 id="idWasmsuntTblH2">sem-unit.TABLE
     <a class="clsHide" href="#idWasmsuntTblH2"></a></h2>
   <p id="idWasmsuntTbldsn">description::
+    <br>A table is similar to a linear memory whose elements, instead of being bytes, are opaque values of a particular table element type.
+    <br>This allows the table to contain values—like GC references, raw OS handles, or native pointers—that are accessed by WebAssembly code indirectly through an integer index.
+    <br>This feature bridges the gap between low-level, untrusted linear memory and high-level opaque handles/references at the cost of a bounds-checked table indirection.
+    <br>[<a href="https://webassembly.org/docs/semantics/#table">https://webassembly.org/docs/semantics/#table</a>]
+    <br>===
     <br>· tables are basically resizable arrays of references that can-be-accessed by index from WebAssembly-code.
     <br>[<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format">https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format</a>]
     <br>===
@@ -852,6 +860,9 @@
   <p id="idWasmsuntTblnam">name::
     <br>* cpt.Wasm'table,
     <a class="clsHide" href="#idWasmsuntTblnam"></a></p>
+  <p id="idWasmsuntTblwpa">addressWpg::
+    <br>* <a href="https://webassembly.org/docs/semantics/#table">https://webassembly.org/docs/semantics/#table</a>,
+    <a class="clsHide" href="#idWasmsuntTblwpa"></a></p>
 
   <section id="idWasmsuntTbldlrn">
   <h3 id="idWasmsuntTbldlrnH3">declaration of table
@@ -2770,7 +2781,7 @@
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#table-section">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#table-section</a>]
     <a class="clsHide" href="#idWasmscnTbldsn"></a></p>
   <p id="idWasmscnTblnam">name::
-    <br>* cpt.Wasm'tables-component,
+    <br>* cpt.Wasm'table-section,
     <br>* cpt.Wasm-table-section,
     <br>* cpt.Wasm-section.04-table,
     <br>* cpt.Wasm-section.table,
