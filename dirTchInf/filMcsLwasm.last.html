@@ -874,23 +874,10 @@
     <br>[<a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#table-description">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#table-description</a>]
     <a class="clsHide" href="#idWasmsuntTbldlrndsn"></a></p>
   <p id="idWasmsuntTbldlrnnam">name::
+    <br>* cpt.Wasm'table'declaration,
     <br>* cpt.Wasm-table'declaration,
     <br>* cpt.Wasm-table'description,
     <a class="clsHide" href="#idWasmsuntTbldlrnnam"></a></p>
-
-  <section id="idWasmsuntTbldlrnBnr">
-  <h4 id="idWasmsuntTbldlrnBnrH4">table-declaration.BINARY
-    <a class="clsHide" href="#idWasmsuntTbldlrnBnrH4"></a></h4>
-  <p id="idWasmsuntTbldlrnBnrdsn">description::
-    <br>· Table types are encoded with their limits and a constant byte indicating their element type.
-    <br>- tabletype ::= et:elemtype  lim:limits ⇒ lim et
-    <br>- elemtype ::= 0x70 ⇒ anyfunc
-    <br>[<a href="https://webassembly.github.io/spec/core/binary/types.html#table-types">https://webassembly.github.io/spec/core/binary/types.html#table-types</a> {1-0.2018-03-28}]
-    <a class="clsHide" href="#idWasmsuntTbldlrnBnrdsn"></a></p>
-  <p id="idWasmsuntTbldlrnBnrnam">name::
-    <br>* cpt.Wasm-table-dfn.binary,
-    <a class="clsHide" href="#idWasmsuntTbldlrnBnrnam"></a></p>
-  </section>
 
   <section id="idWasmsuntTbldlrnTxt">
   <h4 id="idWasmsuntTbldlrnTxtH4">table-declaration.TEXT
@@ -905,6 +892,20 @@
     <br>* cpt.Wasm-table-dfn.text,
     <a class="clsHide" href="#idWasmsuntTbldlrnTxtnam"></a></p>
   </section>
+
+  <section id="idWasmsuntTbldlrnBnr">
+  <h4 id="idWasmsuntTbldlrnBnrH4">table-declaration.BINARY
+    <a class="clsHide" href="#idWasmsuntTbldlrnBnrH4"></a></h4>
+  <p id="idWasmsuntTbldlrnBnrdsn">description::
+    <br>· Table types are encoded with their limits and a constant byte indicating their element type.
+    <br>- tabletype ::= et:elemtype  lim:limits ⇒ lim et
+    <br>- elemtype ::= 0x70 ⇒ anyfunc
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/types.html#table-types">https://webassembly.github.io/spec/core/binary/types.html#table-types</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmsuntTbldlrnBnrdsn"></a></p>
+  <p id="idWasmsuntTbldlrnBnrnam">name::
+    <br>* cpt.Wasm-table-dfn.binary,
+    <a class="clsHide" href="#idWasmsuntTbldlrnBnrnam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmsuntTblidxspc">
@@ -916,12 +917,22 @@
     <br>[<a href="https://webassembly.github.io/spec/core/syntax/modules.html#indices">https://webassembly.github.io/spec/core/syntax/modules.html#indices</a> {1-0.2018-03-22}]
     <a class="clsHide" href="#idWasmsuntTblidxspcdsn"></a></p>
   <p id="idWasmsuntTblidxspcnam">name::
+    <br>* cpt.Wasm'table'index-space,
     <br>* cpt.Wasm-table'index-space,
     <a class="clsHide" href="#idWasmsuntTblidxspcnam"></a></p>
   </section>
 
+  <section id="idWasmsuntTblelmt">
+  <h3 id="idWasmsuntTblelmtH3">element of table
+    <a class="clsHide" href="#idWasmsuntTblelmtH3"></a></h3>
+  <p id="idWasmsuntTblelmtnam">name::
+    <br>* cpt.Wasm'element-segment,
+    <br>* cpt.Wasm'table'element-segment,
+    <a class="clsHide" href="#idWasmsuntTblelmtnam"></a></p>
+  </section>
+
   <section id="idWasmsuntTblTxt">
-  <h3 id="idWasmsuntTblTxtH3">table.TXT
+  <h3 id="idWasmsuntTblTxtH3">table.TEXT
     <a class="clsHide" href="#idWasmsuntTblTxtH3"></a></h3>
   <p id="idWasmsuntTblTxtexpl">example::
     <br>// defines a-table with elements 2 funtions, and export it
@@ -931,6 +942,14 @@
     <br><code>(import "js" "tbl" (table 2 anyfunc))
     <br>(elem (i32.const 0) $f42 $f83)</code>
     <a class="clsHide" href="#idWasmsuntTblTxtexpl"></a></p>
+  </section>
+
+  <section id="idWasmsuntTblType">
+  <h3 id="idWasmsuntTblTypeH3">table.TYPE
+    <a class="clsHide" href="#idWasmsuntTblTypeH3"></a></h3>
+  <p id="idWasmsuntTblTypedsn">description::
+    <br>·
+    <a class="clsHide" href="#idWasmsuntTblTypedsn"></a></p>
   </section>
   </section>
 
@@ -1034,20 +1053,6 @@
     <br>* cpt.Wasm-sem-unit.limit,
     <a class="clsHide" href="#idWasmsuntLmtnam"></a></p>
 
-  <section id="idWasmsuntLmtBnr">
-  <h3 id="idWasmsuntLmtBnrH3">limit.BINARY
-    <a class="clsHide" href="#idWasmsuntLmtBnrH3"></a></h3>
-  <p id="idWasmsuntLmtBnrdsn">description::
-    <br>· limits are-encoded with a preceding flag indicating whether a-maximum is present.
-    <br>limits ::= 0x00  n:u32 ⇒ {min n,max ϵ}
-    <br> &nbsp; | 0x01  n:u32  m:u32 ⇒ {min n,max m}
-    <br>[<a href="https://webassembly.github.io/spec/core/binary/types.html#limits">https://webassembly.github.io/spec/core/binary/types.html#limits</a> {1-0.2018-03-28}]
-    <a class="clsHide" href="#idWasmsuntLmtBnrdsn"></a></p>
-  <p id="idWasmsuntLmtBnrnam">name::
-    <br>* cpt.Wasm-limit.binary,
-    <a class="clsHide" href="#idWasmsuntLmtBnrnam"></a></p>
-  </section>
-
   <section id="idWasmsuntLmtTxt">
   <h3 id="idWasmsuntLmtTxtH3">limit.TEXT
     <a class="clsHide" href="#idWasmsuntLmtTxtH3"></a></h3>
@@ -1059,6 +1064,36 @@
   <p id="idWasmsuntLmtTxtnam">name::
     <br>* cpt.Wasm-limit.text,
     <a class="clsHide" href="#idWasmsuntLmtTxtnam"></a></p>
+  <p id="idWasmsuntLmtTxtexpl">example::
+    <br>;; table with min and max limit
+    <br><code>(table (;0;) 1 1 anyfunc)</code>
+    <br>;; table with min limit
+    <br><code>(table (;0;) 1 anyfunc)</code>
+    <a class="clsHide" href="#idWasmsuntLmtTxtexpl"></a></p>
+  </section>
+
+  <section id="idWasmsuntLmtBnr">
+  <h3 id="idWasmsuntLmtBnrH3">limit.BINARY
+    <a class="clsHide" href="#idWasmsuntLmtBnrH3"></a></h3>
+  <p id="idWasmsuntLmtBnrdsn">description::
+    <br>· limits are-encoded with a preceding flag indicating whether a-maximum is present.
+    <br>limits ::= 0x00  n:u32 ⇒ {min n,max ϵ}
+    <br> &nbsp; | 0x01  n:u32  m:u32 ⇒ {min n,max m}
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/types.html#limits">https://webassembly.github.io/spec/core/binary/types.html#limits</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmsuntLmtBnrdsn"></a></p>
+  <p id="idWasmsuntLmtBnrnam">name::
+    <br>* cpt.Wasm'limit.binary,
+    <br>* cpt.Wasm-limit.binary,
+    <a class="clsHide" href="#idWasmsuntLmtBnrnam"></a></p>
+  <p id="idWasmsuntLmtBnrexpl">example::
+    <br>;; limit with max
+    <br><code>01 ; limits: max present
+    <br>01 ; limits: initial
+    <br>01 ; limits: max </code>
+    <br>;; limit with NO max
+    <br><code>00 ; limits: max absent
+    <br>01 ; limits: initial</code>
+    <a class="clsHide" href="#idWasmsuntLmtBnrexpl"></a></p>
   </section>
   </section>
 
@@ -3619,8 +3654,11 @@
     <a class="clsHide" href="#idWasmpgmTblnam"></a></p>
   <p id="idWasmpgmTblwat">wat-program::
     <br><code>(module
-    <br> &nbsp;(func $f42 (result i32) (i32.const 42))
-    <br> &nbsp;(table (export "tbl") anyfunc (elem $f42))
+    <br> &nbsp;(type (;0;) (func (result i32)))
+    <br> &nbsp;(func (;0;) (type 0) (result i32) i32.const 42)
+    <br> &nbsp;(table (;0;) 1 1 anyfunc)
+    <br> &nbsp;(export "tbl" (table 0))
+    <br> &nbsp;(elem (i32.const 0) 0)
     <br>)</code>
     <a class="clsHide" href="#idWasmpgmTblwat"></a></p>
   <p id="idWasmpgmTblwasm">wasm-program::
