@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.javascript-language (Ljs.5-14-0.2018-05-27)</title>
+  <title>Mcs.javascript-language (Ljs.5-15-0.2018-05-28)</title>
   <meta name="keywords" content="JavaScript, js, javascript-tutorial, browser-js, Node.js, ljs, ljb, ljn, Mcs, structured-concept">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -251,7 +251,7 @@
     <br>A-semantic-unit can have many reference-names.
     <br>The other name that a-semantic-unit can-have (as a-member of it) I call <span class="clsColorRed">INTERNAL-NAME</span>.
     <a class="clsHide" href="#idLjssutnamedsn"></a></p>
-  <p id="idLjssutnamecod">Code.ljs::
+  <p id="idLjssutnamecod">code.Ljs:::
     <br><code>> function f(){} //function with internal-name
     <br>> var f = function(){} //anonymous function, with reference-name
     <br>> var f = function f2(){} //function with internal and reference name
@@ -3100,6 +3100,8 @@
     <br>- a-directory-tree-structure.
     <a class="clsHide" href="#idLjsapiNtvdsn"></a></p>
   <p id="idLjsapiNtvnam">name::
+    <br>* cpt.javascript'API.native,
+    <br>* cpt.Ljs'API.native,
     <br>* cpt.Ljs-API.native,
     <br>* cpt.Ljs-native-API,
     <br>* cpt.Ljs-builtin-API,
@@ -3270,6 +3272,30 @@
     <a class="clsHide" href="#idLjsPromisersc"></a></p>
   </section>
 
+  <section id="idLjsoconsole">
+  <h3 id="idLjsoconsoleH3">Ljs'console-object
+    <a class="clsHide" href="#idLjsoconsoleH3"></a></h3>
+  <p id="idLjsoconsoledsn">description::
+    <br>The Console object provides access to the browser's debugging console (e.g. the Web Console in Firefox). The specifics of how it works varies from browser to browser, but there is a de facto set of features that are typically provided.
+    <br>The Console object can be accessed from any global object. Window on browsing scopes and WorkerGlobalScope as specific variants in workers via the property console. It's exposed as Window.console, and can be referenced as simply console.
+    <br>[https://developer.mozilla.org/en-US/docs/Web/API/console]
+    <a class="clsHide" href="#idLjsoconsoledsn"></a></p>
+  <p id="idLjsoconsolenam">name::
+    <br>* cpt.javascript'console-object,
+    <br>* cpt.Ljs'console-object,
+    <br>* cpt.Ljs-API'console-object,
+    <a class="clsHide" href="#idLjsoconsolenam"></a></p>
+  <p id="idLjsoconsoleexpl">example::
+    <br><code>console.log('text') //text
+    <br>console.log('do %s -> %s', 'str1', 'str2') //do str1 -> str2</code>
+    <a class="clsHide" href="#idLjsoconsoleexpl"></a></p>
+  <p id="idLjsoconsolembr">member::
+    <br>//Chrome.66
+    <br>> Object.getOwnPropertyNames(console).sort().join(', ')
+    <br>"assert, clear, context, count, debug, dir, dirxml, error, group, groupCollapsed, groupEnd, info, log, markTimeline, memory, profile, profileEnd, table, time, timeEnd, timeStamp, timeline, timelineEnd, trace, warn"
+    <a class="clsHide" href="#idLjsoconsolembr"></a></p>
+  </section>
+
   <section id="idLjsfDecodeURI">
   <h3 id="idLjsfDecodeURIH3">Ljs'decodeURI-function
     <a class="clsHide" href="#idLjsfDecodeURIH3"></a></h3>
@@ -3283,7 +3309,7 @@
     <br>* cpt.decodeURI-function-in-javascript,
     <br>* cpt.Ljs'decodeURI-function,
     <a class="clsHide" href="#idLjsfDecodeURInam"></a></p>
-  <p id="idLjsfDecodeURIcod">Code.ljs:
+  <p id="idLjsfDecodeURIcod">code.Ljs::
     <br><code>> decodeURI('https://el.wikipedia.org/wiki/
     <br>%CE%91%CE%BB%CE%AD%CE%BA%CE%BF%CF%82_%CE%86%CF%87%CE%BF%CE%BB%CE%BF%CF%82')
     <br>&lt; "https://el.wikipedia.org/wiki/Αλέκος_Άχολος"</code>
@@ -3812,7 +3838,7 @@
   <section id="idLjssdocDatYMD">
   <h3 id="idLjssdocDatYMDH3">src-doc.date.YYYY-MM-DD
     <a class="clsHide" href="#idLjssdocDatYMDH3"></a></h3>
-  <p id="idLjssdocDatYMDcod">Code.ljs::
+  <p id="idLjssdocDatYMDcod">code.Ljs:::
     <br><code>function fDateYMD() {
     <br> &nbsp;var
     <br> &nbsp; &nbsp;oD, sY, sM, sD;
@@ -3886,7 +3912,7 @@
   <section id="idLjssdocObtEqlt">
   <h3 id="idLjssdocObtEqltH3">src-doc.object.EQUALITY
     <a class="clsHide" href="#idLjssdocObtEqltH3"></a></h3>
-  <p id="idLjssdocObtEqltcod">Code.ljs::
+  <p id="idLjssdocObtEqltcod">code.Ljs:::
     <br><code>[1,3] === [1,3] //false
     <br>a = [1,3]
     <br>b = [1,3]
@@ -3904,7 +3930,7 @@
   <section id="idLjssdocObtFkbv">
   <h3 id="idLjssdocObtFkbvH3">src-doc.object.FIND-KEY-BY-VALUE
     <a class="clsHide" href="#idLjssdocObtFkbvH3"></a></h3>
-  <p id="idLjssdocObtFkbvcod">Code.ljs::
+  <p id="idLjssdocObtFkbvcod">code.Ljs:::
     <br><code>//input: object, value
     <br>//output: key of value
     <br>function fObjvalRKey(oIn, valIn) {
@@ -3924,7 +3950,7 @@
   <section id="idLjssdocObtMbrcnt">
   <h3 id="idLjssdocObtMbrcntH3">src-doc.object.MEMBER-COUNTING
     <a class="clsHide" href="#idLjssdocObtMbrcntH3"></a></h3>
-  <p id="idLjssdocObtMbrcntcod">Code.ljs::
+  <p id="idLjssdocObtMbrcntcod">code.Ljs:::
     <br><code>Object.keys(o).length</code>
     <a class="clsHide" href="#idLjssdocObtMbrcntcod"></a></p>
   <p id="idLjssdocObtMbrcntnam">name::
@@ -3936,7 +3962,7 @@
   <section id="idLjssdocObtMbrdlt">
   <h3 id="idLjssdocObtMbrdltH3">src-doc.object.MEMBER-DELETING
     <a class="clsHide" href="#idLjssdocObtMbrdltH3"></a></h3>
-  <p id="idLjssdocObtMbrdltcod">Code.ljs::
+  <p id="idLjssdocObtMbrdltcod">code.Ljs:::
     <br><code>var o = {a:1, b:2};
     <br>var mbr = 'a';
     <br>delete o[mbr];
@@ -3953,7 +3979,7 @@
   <section id="idLjssdocObtMbrexst">
   <h3 id="idLjssdocObtMbrexstH3">src-doc.object.MEMBER-EXISTANCE
     <a class="clsHide" href="#idLjssdocObtMbrexstH3"></a></h3>
-  <p id="idLjssdocObtMbrexstcod">Code.ljs::
+  <p id="idLjssdocObtMbrexstcod">code.Ljs:::
     <br><code>var o = {a:1, b:2};
     <br>'a' in o //true, <a class="clsPreview" href="#idLjsapigst">search IN ITS GENERIC-CHAIN</a>
     <br>o.hasOwnProperty('a') //true, search NOT in generic-chain</code>
@@ -3968,7 +3994,7 @@
   <section id="idLjssdocObtMbrsrt">
   <h3 id="idLjssdocObtMbrsrtH3">src-doc.object.MEMBER-SORTING
     <a class="clsHide" href="#idLjssdocObtMbrsrtH3"></a></h3>
-  <p id="idLjssdocObtMbrsrtcod">Code.ljs::
+  <p id="idLjssdocObtMbrsrtcod">code.Ljs:::
     <br>All methods that iterate over property keys do so in the same order:
     <br>- First all Array indices, sorted numerically.
     <br>- Then all string keys (that are not indices), in the order in which they were created.

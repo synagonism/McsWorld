@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-42-0.2018-05-23 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-43-0.2018-05-29 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -125,6 +125,8 @@
   <h2 id="idWasmalgmchnstkH2">stack of Wasm-machine
     <a class="clsHide" href="#idWasmalgmchnstkH2"></a></h2>
   <p id="idWasmalgmchnstkdsn">description::
+    <br>· stack is a-LIFO-Last-In-First-Out data-structure.
+    <br>==
     <br>· <a class="clsPreview" href="#idWasmstc">instructions</a>  manipulate values on an-implicit-operand-stack, consuming (popping) argument-values and producing (pushing) result-values.
     <br>[<a href="https://webassembly.github.io/spec/core/_download/WebAssembly.pdf">https://webassembly.github.io/spec/core/_download/WebAssembly.pdf</a>]
     <a class="clsHide" href="#idWasmalgmchnstkdsn"></a></p>
@@ -321,12 +323,23 @@
     <br>* cpt.Wasm-value,
     <a class="clsHide" href="#idWasmsuntValnam"></a></p>
 
-  <section id="idWasmsuntValType">
-  <h3 id="idWasmsuntValTypeH3">value.SPECIFIC
-    <a class="clsHide" href="#idWasmsuntValTypeH3"></a></h3>
-  <p id="idWasmsuntValTypenam">name::
+  <section id="idWasmsuntValSpc">
+  <h3 id="idWasmsuntValSpcH3">value.SPECIFIC
+    <a class="clsHide" href="#idWasmsuntValSpcH3"></a></h3>
+  <p id="idWasmsuntValSpcnam">name::
     <br>* cpt.Wasm-value.specific,
-    <a class="clsHide" href="#idWasmsuntValTypenam"></a></p>
+    <a class="clsHide" href="#idWasmsuntValSpcnam"></a></p>
+  <p id="idWasmsuntValSpcP1">specific::
+    <br>* <a class="clsPreview" href="#idWasmsuntByte">byte</a>,
+    <br>* <a class="clsPreview" href="#idWasmsuntF32">f32</a>,
+    <br>* <a class="clsPreview" href="#idWasmsuntF64">f64</a>,
+    <br>* <a class="clsPreview" href="#idWasmsuntFgpt">floating-point</a>,
+    <br>* <a class="clsPreview" href="#idWasmsuntI32">i32</a>,
+    <br>* <a class="clsPreview" href="#idWasmsuntI64">i64</a>,
+    <br>* <a class="clsPreview" href="#idWasmsuntItgr">integer</a>,
+    <br>* <a class="clsPreview" href="#idWasmsuntRslt">result</a>,
+    <br>* <a class="clsPreview" href="#idWasmsuntValType">value-type</a>,
+    <a class="clsHide" href="#idWasmsuntValSpcP1"></a></p>
   </section>
 
   <section id="idWasmsuntValType">
@@ -427,6 +440,9 @@
   <section id="idWasmsuntByte">
   <h3 id="idWasmsuntByteH3">value.BYTE
     <a class="clsHide" href="#idWasmsuntByteH3"></a></h3>
+  <p id="idWasmsuntBytedsn">description::
+    <br>· byte is equal to 8 bits, and it is-used to denote different things.
+    <a class="clsHide" href="#idWasmsuntBytedsn"></a></p>
   <p id="idWasmsuntBytenam">name::
     <br>* cpt.Wasm'byte,
     <br>* cpt.Wasm-value.byte,
@@ -1954,8 +1970,10 @@
   <h3 id="idWasmstcLoadH3">instruction.load
     <a class="clsHide" href="#idWasmstcLoadH3"></a></h3>
   <p id="idWasmstcLoaddsn">description::
-    <br>· memory is-accessed with load and store instructions for the different <a class="clsPreview" href="idWasmsuntValType">value-types</a>.
-    <br>· they all take <a class="clsPreview" href="idWasmstcMmrarg">a-memory-immediate-memarg</a> that contains an address-offset and an-alignment-hint (in base 2 logarithmic representation).
+    <br>· loads <a class="clsPreview" href="#idWasmsuntMmr">memory's</a> bytes on <a class="clsPreview" href="#idWasmalgmchnstk">the-stack</a>.
+    <br>===
+    <br>· memory is-accessed with load and store instructions for the different <a class="clsPreview" href="#idWasmsuntValType">value-types</a>.
+    <br>· they all take <a class="clsPreview" href="#idWasmstcMmrarg">a-memory-immediate-memarg</a> that contains an address-offset and an-alignment-hint (in base 2 logarithmic representation).
     <br>· integer loads and stores can optionally specify a storage size that is smaller than the bit width of the respective value-type.
     <br>· in the-case of loads, a-sign-extension-mode-sx-(u|s) is then required to select appropriate behavior.
     <br>· the-static-address offset is added to the-dynamic-address operand, yielding a 33-bit effective-address that is the zero-based index at which the-memory is-accessed.
@@ -2042,7 +2060,10 @@
   <section id="idWasmstcStore">
   <h3 id="idWasmstcStoreH3">instruction.store
     <a class="clsHide" href="#idWasmstcStoreH3"></a></h3>
-  <p id="idWasmstcStorenam">name::
+  <p id="idWasmstcStoredsn">description::
+    <br>· stores <a class="clsPreview" href="#idWasmalgmchnstk">the-stack's</a> last value on <a class="clsPreview" href="#idWasmsuntMmr">memory</a>.
+    <a class="clsHide" href="#idWasmstcStoredsn"></a></p>
+   <p id="idWasmstcStorenam">name::
     <br>* cpt.Wasm'store-memory-instruction,
     <br>* cpt.Wasm-instruction.store-memory,
     <a class="clsHide" href="#idWasmstcStorenam"></a></p>
