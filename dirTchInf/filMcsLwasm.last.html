@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-43-0.2018-05-29 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-44-0.2018-05-30 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -1986,6 +1986,198 @@
     <br>* cpt.Wasm'load-memory-instruction,
     <br>* cpt.Wasm-instruction.load-memory,
     <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  <p id="idWasmstcLoadexpl">example::
+    <br>//put var1 on stack
+    <br>//load on stack 1 byte from memory var1 position and zero-extend i8 to i32
+    <br><code>(i32.load8_u (get_local $v1)</code>
+    <br>or
+    <br><code>get_local 1
+    <br>i32.load8_u</code>
+    <a class="clsHide" href="#idWasmstcLoadexpl"></a></p>
+  <p id="idWasmstcLoadSpc">specific::
+    <br>* f32.load: load 4 bytes as f32,
+    <br>* f64.load: load 8 bytes as f64
+    <br>* i32.load8_s: load 1 byte and sign-extend i8 to i32
+    <br>* i32.load8_u: load 1 byte and zero-extend i8 to i32
+    <br>* i32.load16_s: load 2 bytes and sign-extend i16 to i32
+    <br>* i32.load16_u: load 2 bytes and zero-extend i16 to i32
+    <br>* i32.load: load 4 bytes as i32
+    <br>* i64.load8_s: load 1 byte and sign-extend i8 to i64
+    <br>* i64.load8_u: load 1 byte and zero-extend i8 to i64
+    <br>* i64.load16_s: load 2 bytes and sign-extend i16 to i64
+    <br>* i64.load16_u: load 2 bytes and zero-extend i16 to i64
+    <br>* i64.load32_s: load 4 bytes and sign-extend i32 to i64
+    <br>* i64.load32_u: load 4 bytes and zero-extend i32 to i64
+    <br>* i64.load: load 8 bytes as i64
+    <a class="clsHide" href="#idWasmstcLoadSpc"></a></p>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.f32.load
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>f32.load: load 4 bytes as f32
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'f32.load,
+    <br>* cpt.Wasm-instruction.f32.load,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.f64.load
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>f64.load: load 8 bytes as f64
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'f64.load,
+    <br>* cpt.Wasm-instruction.f64.load,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.i32.load8_s
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>i32.load8_s: load 1 byte and sign-extend i8 to i32
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'i32.load8_s,
+    <br>* cpt.Wasm-instruction.i32.load8_s,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.i32.load8_u
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>i32.load8_u: load 1 byte and zero-extend i8 to i32
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'i32.load8_u,
+    <br>* cpt.Wasm-instruction.i32.load8_u,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.i32.load16_s
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>i32.load16_s: load 2 bytes and sign-extend i16 to i32
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'i32.load16_s,
+    <br>* cpt.Wasm-instruction.i32.load16_s,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.i32.load16_u
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>i32.load16_u: load 2 bytes and zero-extend i16 to i32
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'i32.load16_u,
+    <br>* cpt.Wasm-instruction.i32.load16_u,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.i32.load
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>i32.load: load 4 bytes as i32
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'i32.load,
+    <br>* cpt.Wasm-instruction.i32.load,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.i64.load8_s
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>i64.load8_s: load 1 byte and sign-extend i8 to i64
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'i64.load8_s,
+    <br>* cpt.Wasm-instruction.i64.load8_s,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.i64.load8_u
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>i64.load8_u: load 1 byte and zero-extend i8 to i64
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'i64.load8_u,
+    <br>* cpt.Wasm-instruction.i64.load8_u,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.i64.load16_s
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>i64.load16_s: load 2 bytes and sign-extend i16 to i64
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'i64.load16_s,
+    <br>* cpt.Wasm-instruction.i64.load16_s,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.i64.load16_u
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>i64.load16_u: load 2 bytes and zero-extend i16 to i64
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'i64.load16_u,
+    <br>* cpt.Wasm-instruction.i64.load16_u,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.i64.load32_s
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>i64.load32_s: load 4 bytes and sign-extend i32 to i64
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'i64.load32_s,
+    <br>* cpt.Wasm-instruction.i64.load32_s,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.i64.load32_u
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>i64.load32_u: load 4 bytes and zero-extend i32 to i64
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'i64.load32_u,
+    <br>* cpt.Wasm-instruction.i64.load32_u,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
+
+  <section id="idWasmstcLoad">
+  <h4 id="idWasmstcLoadH4">instruction.i64.load
+    <a class="clsHide" href="#idWasmstcLoadH4"></a></h4>
+  <p id="idWasmstcLoaddsn">description::
+    <br>i64.load: load 8 bytes as i64
+    <a class="clsHide" href="#idWasmstcLoaddsn"></a></p>
+  <p id="idWasmstcLoadnam">name::
+    <br>* cpt.Wasm'i64.load,
+    <br>* cpt.Wasm-instruction.i64.load,
+    <a class="clsHide" href="#idWasmstcLoadnam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmstcPrmcSlct">
@@ -2067,6 +2259,134 @@
     <br>* cpt.Wasm'store-memory-instruction,
     <br>* cpt.Wasm-instruction.store-memory,
     <a class="clsHide" href="#idWasmstcStorenam"></a></p>
+  <p id="idWasmstcStoreexpl">example::
+    <br>// wrap stack's value to i8 (1 byte), i2 value,
+    <br>// and store it in memory's i1 position
+    <br><code>(i32.store8 (get_local $i1) (get_local $i2))</code>
+    <br>or
+    <br><code>get_local 1
+    <br>get_local 2
+    <br>i32.store8</code>
+    <a class="clsHide" href="#idWasmstcStoreexpl"></a></p>
+  <p id="idWasmstcStoreSpc">specific::
+    <br>* f32.store: (no conversion) store 4 bytes
+    <br>* f64.store: (no conversion) store 8 bytes
+    <br>* i32.store8: wrap i32 to i8 and store 1 byte
+    <br>* i32.store16: wrap i32 to i16 and store 2 bytes
+    <br>* i32.store: (no conversion) store 4 bytes,
+    <br>* i64.store8: wrap i64 to i8 and store 1 byte
+    <br>* i64.store16: wrap i64 to i16 and store 2 bytes
+    <br>* i64.store32: wrap i64 to i32 and store 4 bytes
+    <br>* i64.store: (no conversion) store 8 bytes
+    <a class="clsHide" href="#idWasmstcStoreSpc"></a></p>
+
+  <section id="idWasmstcStoreF32">
+  <h4 id="idWasmstcStoreF32H4">instruction.f32.store
+    <a class="clsHide" href="#idWasmstcStoreF32H4"></a></h4>
+  <p id="idWasmstcStoreF32dsn">description::
+    <br>f32.store: (no conversion) store 4 bytes
+    <a class="clsHide" href="#idWasmstcStoreF32dsn"></a></p>
+  <p id="idWasmstcStoreF32nam">name::
+    <br>* cpt.Wasm'f32.store,
+    <br>* cpt.Wasm-instruction.f32.store,
+    <a class="clsHide" href="#idWasmstcStoreF32nam"></a></p>
+  </section>
+
+  <section id="idWasmstcStoreF64">
+  <h4 id="idWasmstcStoreF64H4">instruction.f64.store
+    <a class="clsHide" href="#idWasmstcStoreF64H4"></a></h4>
+  <p id="idWasmstcStoreF64dsn">description::
+    <br>f64.store: (no conversion) store 8 bytes
+    <a class="clsHide" href="#idWasmstcStoreF64dsn"></a></p>
+  <p id="idWasmstcStoreF64nam">name::
+    <br>* cpt.Wasm'f64.store,
+    <br>* cpt.Wasm-instruction.f64.store,
+    <a class="clsHide" href="#idWasmstcStoreF64nam"></a></p>
+  </section>
+
+  <section id="idWasmstcStoreI328">
+  <h4 id="idWasmstcStoreI328H4">instruction.i32.store8
+    <a class="clsHide" href="#idWasmstcStoreI328H4"></a></h4>
+  <p id="idWasmstcStoreI328dsn">description::
+    <br>i32.store8: wrap i32 to i8 and store 1 byte
+    <a class="clsHide" href="#idWasmstcStoreI328dsn"></a></p>
+  <p id="idWasmstcStoreI328nam">name::
+    <br>* cpt.Wasm'i32.store8,
+    <br>* cpt.Wasm-instruction.i32.store8,
+    <a class="clsHide" href="#idWasmstcStoreI328nam"></a></p>
+  </section>
+
+  <section id="idWasmstcStoreI3216">
+  <h4 id="idWasmstcStoreI3216H4">instruction.i32.store16
+    <a class="clsHide" href="#idWasmstcStoreI3216H4"></a></h4>
+  <p id="idWasmstcStoreI3216dsn">description::
+    <br>i32.store16: wrap i32 to i16 and store 2 bytes
+    <a class="clsHide" href="#idWasmstcStoreI3216dsn"></a></p>
+  <p id="idWasmstcStoreI3216nam">name::
+    <br>* cpt.Wasm'i32.store16,
+    <br>* cpt.Wasm-instruction.i32.store16,
+    <a class="clsHide" href="#idWasmstcStoreI3216nam"></a></p>
+  </section>
+
+  <section id="idWasmstcStoreI32">
+  <h4 id="idWasmstcStoreI32H4">instruction.i32.store
+    <a class="clsHide" href="#idWasmstcStoreI32H4"></a></h4>
+  <p id="idWasmstcStoreI32dsn">description::
+    <br>i32.store: (no conversion) store 4 bytes,
+    <a class="clsHide" href="#idWasmstcStoreI32dsn"></a></p>
+  <p id="idWasmstcStoreI32nam">name::
+    <br>* cpt.Wasm'i32.store,
+    <br>* cpt.Wasm-instruction.i32.store,
+    <a class="clsHide" href="#idWasmstcStoreI32nam"></a></p>
+  </section>
+
+  <section id="idWasmstcStoreI648">
+  <h4 id="idWasmstcStoreI648H4">instruction.i64.store8
+    <a class="clsHide" href="#idWasmstcStoreI648H4"></a></h4>
+  <p id="idWasmstcStoreI648dsn">description::
+    <br>i64.store8: wrap i64 to i8 and store 1 byte
+    <a class="clsHide" href="#idWasmstcStoreI648dsn"></a></p>
+  <p id="idWasmstcStoreI648nam">name::
+    <br>* cpt.Wasm'i64.store8,
+    <br>* cpt.Wasm-instruction.i64.store8,
+    <a class="clsHide" href="#idWasmstcStoreI648nam"></a></p>
+  </section>
+
+  <section id="idWasmstcStoreI6416">
+  <h4 id="idWasmstcStoreI6416H4">instruction.i64.store16
+    <a class="clsHide" href="#idWasmstcStoreI6416H4"></a></h4>
+  <p id="idWasmstcStoreI6416dsn">description::
+    <br>i64.store16: wrap i64 to i16 and store 2 bytes
+    <a class="clsHide" href="#idWasmstcStoreI6416dsn"></a></p>
+  <p id="idWasmstcStoreI6416nam">name::
+    <br>* cpt.Wasm'i64.store16,
+    <br>* cpt.Wasm-instruction.i64.store16,
+    <a class="clsHide" href="#idWasmstcStoreI6416nam"></a></p>
+  </section>
+
+  <section id="idWasmstcStoreI6432">
+  <h4 id="idWasmstcStoreI6432H4">instruction.i64.store32
+    <a class="clsHide" href="#idWasmstcStoreI6432H4"></a></h4>
+  <p id="idWasmstcStoreI6432dsn">description::
+    <br>i64.store32: wrap i64 to i32 and store 4 bytes
+    <a class="clsHide" href="#idWasmstcStoreI6432dsn"></a></p>
+  <p id="idWasmstcStoreI6432nam">name::
+    <br>* cpt.Wasm'i64.store32,
+    <br>* cpt.Wasm-instruction.i64.store32,
+    <a class="clsHide" href="#idWasmstcStoreI6432nam"></a></p>
+  </section>
+
+  <section id="idWasmstcStoreI64">
+  <h4 id="idWasmstcStoreI64H4">instruction.i64.store
+    <a class="clsHide" href="#idWasmstcStoreI64H4"></a></h4>
+  <p id="idWasmstcStoreI64dsn">description::
+    <br>i64.store: (no conversion) store 8 bytes
+    <a class="clsHide" href="#idWasmstcStoreI64dsn"></a></p>
+  <p id="idWasmstcStoreI64nam">name::
+    <br>* cpt.Wasm'i64.store,
+    <br>* cpt.Wasm-instruction.i64.store,
+    <a class="clsHide" href="#idWasmstcStoreI64nam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmstcTelcl">
