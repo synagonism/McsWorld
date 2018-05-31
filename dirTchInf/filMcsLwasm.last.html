@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-44-0.2018-05-30 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-45-0.2018-05-31 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -125,7 +125,7 @@
   <h2 id="idWasmalgmchnstkH2">stack of Wasm-machine
     <a class="clsHide" href="#idWasmalgmchnstkH2"></a></h2>
   <p id="idWasmalgmchnstkdsn">description::
-    <br>· stack is a-LIFO-Last-In-First-Out data-structure.
+    <br>· stack is a-LIFO-Last-In-First-Out data-structure with push and pop operations.
     <br>==
     <br>· <a class="clsPreview" href="#idWasmstc">instructions</a>  manipulate values on an-implicit-operand-stack, consuming (popping) argument-values and producing (pushing) result-values.
     <br>[<a href="https://webassembly.github.io/spec/core/_download/WebAssembly.pdf">https://webassembly.github.io/spec/core/_download/WebAssembly.pdf</a>]
@@ -713,6 +713,84 @@
     <br>* cpt.Wasm-function.add,
     <a class="clsHide" href="#idWasmfcnAddnam"></a></p>
   </section>
+
+  <section id="idWasmfcnUpr">
+  <h3 id="idWasmfcnUprH3">function.UPPER-CASE
+    <a class="clsHide" href="#idWasmfcnUprH3"></a></h3>
+  <p id="idWasmfcnUprdsn">description::
+    <br>· make upper-case the-english-letters (as numbers) of wasm-memory.
+    <br>· input: the-length of memory to work with.
+    <br>
+    <br><code>(func (export "fWupper") (param $length i32)
+    <br>&nbsp; ;; var i = 0
+    <br>&nbsp; (local $i i32)    ;; store loop index
+    <br>&nbsp; (local $sbl i32)  ;; store char code
+    <br>
+    <br>&nbsp; (<span class="clsColorRed">block</span> $Lbreak
+    <br>&nbsp; &nbsp; ;; while(true)
+    <br>&nbsp; &nbsp; (loop $Lloop
+    <br>&nbsp; &nbsp; &nbsp; ;; if (i >= length) break
+    <br>&nbsp; &nbsp; &nbsp; (br_if $Lbreak (i32.ge_u (get_local $i) (get_local $length)))
+    <br>&nbsp; &nbsp; &nbsp; ;; sbl = $memory[i]
+    <br>&nbsp; &nbsp; &nbsp; (set_local $sbl (i32.load8_u (get_local $i)))
+    <br>
+    <br>&nbsp; &nbsp; &nbsp; ;; if (sbl >= 97 && sbl <= 122)
+    <br>&nbsp; &nbsp; &nbsp; (if (i32.ge_u (get_local $sbl) (i32.const 97))
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; (if (i32.le_u (get_local $sbl) (i32.const 122))
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ;; $memory[i] = sbl - 32, upper-case
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (i32.store8 (get_local $i) (i32.sub (get_local $sbl) (i32.const 32)))
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; )
+    <br>&nbsp; &nbsp; &nbsp; )
+
+    <br>&nbsp; &nbsp; &nbsp; ;; ++i
+    <br>&nbsp; &nbsp; &nbsp; (set_local $i (i32.add (get_local $i) (i32.const 1)))
+    <br>&nbsp; &nbsp; &nbsp; ;; continue
+    <br>&nbsp; &nbsp; &nbsp; (<span class="clsColorRed">br</span> $Lloop)
+    <br>&nbsp; &nbsp; )
+    <br>&nbsp; )
+    <br>)</code>
+    <br>or
+    <br><code>(type (;0;) (func (param i32)))
+    <br>(func (;0;) (type 0) (param i32)
+    <br>&nbsp; (local i32 i32)
+    <br>&nbsp; block  ;; label = @1
+    <br>&nbsp; &nbsp; loop  ;; label = @2
+    <br>&nbsp; &nbsp; &nbsp; get_local 1
+    <br>&nbsp; &nbsp; &nbsp; get_local 0
+    <br>&nbsp; &nbsp; &nbsp; i32.ge_u
+    <br>&nbsp; &nbsp; &nbsp; br_if 1 (;@1;)
+    <br>&nbsp; &nbsp; &nbsp; get_local 1
+    <br>&nbsp; &nbsp; &nbsp; i32.load8_u
+    <br>&nbsp; &nbsp; &nbsp; set_local 2
+    <br>&nbsp; &nbsp; &nbsp; get_local 2
+    <br>&nbsp; &nbsp; &nbsp; i32.const 97
+    <br>&nbsp; &nbsp; &nbsp; i32.ge_u
+    <br>&nbsp; &nbsp; &nbsp; if  ;; label = @3
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; get_local 2
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; i32.const 122
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; i32.le_u
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; if  ;; label = @4
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; get_local 1
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; get_local 2
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i32.const 32
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i32.sub
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i32.store8
+    <br>&nbsp; &nbsp; &nbsp; &nbsp; end
+    <br>&nbsp; &nbsp; &nbsp; end
+    <br>&nbsp; &nbsp; &nbsp; get_local 1
+    <br>&nbsp; &nbsp; &nbsp; i32.const 1
+    <br>&nbsp; &nbsp; &nbsp; i32.add
+    <br>&nbsp; &nbsp; &nbsp; set_local 1
+    <br>&nbsp; &nbsp; &nbsp; br 0 (;@2;)
+    <br>&nbsp; &nbsp; end
+    <br>&nbsp; end
+    <br>)</code>
+    <br>[https://github.com/reklatsmasters/webassembly-examples/blob/master/%235-loop/loop.wat]
+    <a class="clsHide" href="#idWasmfcnUprdsn"></a></p>
+  <p id="idWasmfcnUprnam">name::
+    <br>* cpt.Wasm-function.upper-case,
+    <a class="clsHide" href="#idWasmfcnUprnam"></a></p>
+  </section>
   </section>
 
   <section id="idWasmsuntVar">
@@ -993,24 +1071,11 @@
     <br>* cpt.Wasm-memory'definition,
     <a class="clsHide" href="#idWasmsuntMmrdlrnnam"></a></p>
 
-  <section id="idWasmsuntMmrBnr">
-  <h4 id="idWasmsuntMmrBnrH4">memory-declaration.BINARY
-    <a class="clsHide" href="#idWasmsuntMmrBnrH4"></a></h4>
-  <p id="idWasmsuntMmrBnrdsn">description::
-    <br>· Memory types are encoded with their limits.
-    <br>- memtype ::= lim:limits ⇒ lim
-    <br>[<a href="https://webassembly.github.io/spec/core/binary/types.html#memory-types">https://webassembly.github.io/spec/core/binary/types.html#memory-types</a> {1-0.2018-03-28}]
-    <a class="clsHide" href="#idWasmsuntMmrBnrdsn"></a></p>
-  <p id="idWasmsuntMmrBnrnam">name::
-    <br>* cpt.Wasm-memory.binary,
-    <a class="clsHide" href="#idWasmsuntMmrBnrnam"></a></p>
-  </section>
-
   <section id="idWasmsuntMmrTxt">
   <h4 id="idWasmsuntMmrTxtH4">memory-declaration.TEXT
     <a class="clsHide" href="#idWasmsuntMmrTxtH4"></a></h4>
   <p id="idWasmsuntMmrTxtdsn">description::
-    <br>- memtype ::= lim:limits ⇒ lim
+    <br>- memtype ::= lim:<a class="clsPreview" href="#idWasmsuntLmtTxt">limits</a> ⇒ lim
     <br>[<a href="https://webassembly.github.io/spec/core/text/types.html#memory-types">https://webassembly.github.io/spec/core/text/types.html#memory-types</a> {1-0.2018-03-28}]
     <a class="clsHide" href="#idWasmsuntMmrTxtdsn"></a></p>
   <p id="idWasmsuntMmrTxtnam">name::
@@ -1022,6 +1087,19 @@
     <br>(memory (export "mem") 1)</code>
     <br>
     <a class="clsHide" href="#idWasmsuntMmrTxtexpl"></a></p>
+  </section>
+
+  <section id="idWasmsuntMmrBnr">
+  <h4 id="idWasmsuntMmrBnrH4">memory-declaration.BINARY
+    <a class="clsHide" href="#idWasmsuntMmrBnrH4"></a></h4>
+  <p id="idWasmsuntMmrBnrdsn">description::
+    <br>· Memory types are encoded with their <a class="clsPreview" href="#idWasmsuntLmtBnr">limits</a>.
+    <br>- memtype ::= lim:limits ⇒ lim
+    <br>[<a href="https://webassembly.github.io/spec/core/binary/types.html#memory-types">https://webassembly.github.io/spec/core/binary/types.html#memory-types</a> {1-0.2018-03-28}]
+    <a class="clsHide" href="#idWasmsuntMmrBnrdsn"></a></p>
+  <p id="idWasmsuntMmrBnrnam">name::
+    <br>* cpt.Wasm-memory.binary,
+    <a class="clsHide" href="#idWasmsuntMmrBnrnam"></a></p>
   </section>
   </section>
 
@@ -1078,6 +1156,7 @@
     <br>[<a href="https://webassembly.github.io/spec/core/text/types.html#limits">https://webassembly.github.io/spec/core/text/types.html#limits</a> {1-0.2018-03-28}]
     <a class="clsHide" href="#idWasmsuntLmtTxtdsn"></a></p>
   <p id="idWasmsuntLmtTxtnam">name::
+    <br>* cpt.Wasm'limit.text,
     <br>* cpt.Wasm-limit.text,
     <a class="clsHide" href="#idWasmsuntLmtTxtnam"></a></p>
   <p id="idWasmsuntLmtTxtexpl">example::
@@ -1085,6 +1164,8 @@
     <br><code>(table (;0;) 1 1 anyfunc)</code>
     <br>;; table with min limit
     <br><code>(table (;0;) 1 anyfunc)</code>
+    <br>;; memory with min and max limit
+    <br><code>(memory 256 256)</code>
     <a class="clsHide" href="#idWasmsuntLmtTxtexpl"></a></p>
   </section>
 
@@ -1478,15 +1559,15 @@
     <a class="clsHide" href="#idWasmstcClfwnam"></a></p>
   <p id="idWasmstcClfwSpc">specific::
     <br>* <a class="clsPreview" href="#idWasmstcClfwBlck">block</a>,
-    <br>* br (unconditional-branch),
-    <br>* <a class="clsPreview" href="#idWasmstcClfwLoop">br_if (conditional-brance)</a>,
+    <br>* <a class="clsPreview" href="#idWasmstcClfwBr">br (unconditional-branch)</a>,
+    <br>* <a class="clsPreview" href="#idWasmstcClfwBrif">br_if (conditional-brance)</a>,
     <br>* br_table (table-branch),
     <br>* <a class="clsPreview" href="#idWasmstcClfwLoop">loop</a>,
     <br>* <a class="clsPreview" href="#idWasmstcClfwIf">if</a>,
-    <br>* else,
-    <br>* end,
+    <br>* <a class="clsPreview" href="#idWasmstcClfwElse">else</a>,
+    <br>* <a class="clsPreview" href="#idWasmstcClfwEnd">end</a>,
     <br>* <a class="clsPreview" href="#idWasmstcClfwNop">nop</a>,
-    <br>* return,
+    <br>* <a class="clsPreview" href="#idWasmstcClfwRtrn">return</a>,
     <br>* <a class="clsPreview" href="#idWasmstcClfwUnrcbl">unreachable</a>,
     <a class="clsHide" href="#idWasmstcClfwSpc"></a></p>
 
@@ -1539,6 +1620,21 @@
     <br>* cpt.Wasm-instruction.0x02-block,
     <br>* cpt.Wasm-instruction.block-0x02,
     <a class="clsHide" href="#idWasmstcClfwBlcknam"></a></p>
+  <p id="idWasmstcClfwBlckexpl">example::
+    <br>* <a class="clsPreview" href="#idWasmfcnUpr">link</a>,
+    <a class="clsHide" href="#idWasmstcClfwBlckexpl"></a></p>
+  </section>
+
+  <section id="idWasmstcClfwBr">
+  <h3 id="idWasmstcClfwBrH3">instruction.br
+    <a class="clsHide" href="#idWasmstcClfwBrH3"></a></h3>
+  <p id="idWasmstcClfwBrnam">name::
+    <br>* cpt.Wasm'br-instruction,
+    <br>* cpt.Wasm-instruction.br,
+    <a class="clsHide" href="#idWasmstcClfwBrnam"></a></p>
+  <p id="idWasmstcClfwBrexpl">example::
+    <br>* <a class="clsPreview" href="#idWasmfcnUpr">link</a>,
+    <a class="clsHide" href="#idWasmstcClfwBrexpl"></a></p>
   </section>
 
   <section id="idWasmstcClfwBrif">
@@ -1562,6 +1658,15 @@
     <br> &nbsp;get_local $v1
     <br>)</code>
     <a class="clsHide" href="#idWasmstcClfwBrifexpl"></a></p>
+  </section>
+
+  <section id="idWasmstcClfwBrtbl">
+  <h3 id="idWasmstcClfwBrtblH3">instruction.br_table
+    <a class="clsHide" href="#idWasmstcClfwBrtblH3"></a></h3>
+  <p id="idWasmstcClfwBrtblnam">name::
+    <br>* cpt.Wasm'br_table-instruction,
+    <br>* cpt.Wasm-instruction.br_table,
+    <a class="clsHide" href="#idWasmstcClfwBrtblnam"></a></p>
   </section>
 
   <section id="idWasmstcClfwElse">
@@ -1746,7 +1851,7 @@
     <br> &nbsp;(if (i32.gt_s (get_local $a) (get_local $b))
     <br> &nbsp; &nbsp;(return (i32.const 1))
     <br> &nbsp;)
-    <br> &nbsp;(return (i32.const 2))
+    <br> &nbsp;(<span class="clsColorRed">return</span> (i32.const 2))
     <br>)</code>
     <br>or using <a class="clsPreview" href="#idWasmtoolWabt">wasm2wat</a>
     <br><code>(module
@@ -1760,7 +1865,7 @@
     <br> &nbsp; &nbsp; &nbsp;return
     <br> &nbsp; &nbsp;end
     <br> &nbsp; &nbsp;i32.const 2
-    <br> &nbsp; &nbsp;return
+    <br> &nbsp; &nbsp;<span class="clsColorRed">return</span>
     <br> &nbsp;)
     <br> &nbsp;(export "f" (func 0))
     <br>)</code>
@@ -3101,6 +3206,7 @@
     <a class="clsHide" href="#idWasmscnFcndsn"></a></p>
   <p id="idWasmscnFcnnam">name::
     <br>* cpt.Wasm'funcs-component,
+    <br>* cpt.Wasm'function-section,
     <br>* cpt.Wasm-function-section,
     <br>* cpt.Wasm-section.03-function,
     <br>* cpt.Wasm-section.function,
@@ -5187,6 +5293,7 @@
     <br>* <a href="https://rsms.me/wasm-intro">https://rsms.me/wasm-intro</a>,
     <br>* <a href="https://hacks.mozilla.org/2017/07/creating-a-webassembly-module-instance-with-javascript/">https://hacks.mozilla.org/2017/07/creating-a-webassembly-module-instance-with-javascript/</a>,
     <br>* <a href="https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md#primitive-type-encodings">https://github.com/sunfishcode/wasm-reference-manual/blob/master/WebAssembly.md</a>,
+    <br>* {2018-01-01} Mirko-Sertic, Object-Oriented WebAssembly, <a href="https://www.mirkosertic.de/blog/2018/01/object-oriented-webassembly/">https://www.mirkosertic.de/blog/2018/01/object-oriented-webassembly/</a>,
     <a class="clsHide" href="#idWasmrscwpa"></a></p>
 
   <section id="idWasmrscTtrl">
