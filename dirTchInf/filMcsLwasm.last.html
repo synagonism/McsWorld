@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.WebAssembly-language (Wasm.0-45-0.2018-05-31 DRAFT)</title>
+  <title>Mcs.WebAssembly-language (Wasm.0-46-0.2018-06-01 DRAFT)</title>
   <meta name="keywords" content="WebAssembly, Wasm, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -25,6 +25,9 @@
     <br>· WebAssembly-(Wasm) is a low-level, assembly-like programing-language understood by javascript-runtimes, <a class="clsPreview" href="FilMcsLjb.Last.html#idLjbbsr">browsers</a> and <a class="clsPreview" href="FilMcsLjn.Last.html#idLjnrtm">Node.js</a>.
     <br>· it is an intermediate language, between a-high|middle-level and a-machine programing-language.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-05-20]
+    <br>===
+    <br>"The name WebAsssembly is actually a bit of a misnomer because it’s a statically typed instruction format targeting stack based virtual machines which is much higher level representation in constrast with your typical register based assembly."
+    <br>[https://medium.com/@caspervonb/hello-webassembly-882bba5c9fb7]
     <a class="clsHide" href="#idDescriptionP1"></a></p>
   <p id="idName">name::
     <br>* cpt.filMcsLwasm.last.html,
@@ -69,6 +72,14 @@
   <p id="idWasmlagtwawpa">addressWpg::
     <br>* <a href="https://github.com/appcypher/awesome-wasm-langs">https://github.com/appcypher/awesome-wasm-langs</a>,
     <a class="clsHide" href="#idWasmlagtwawpa"></a></p>
+  <p id="idWasmlagtwaSpc">specific::
+    <br>* C,
+    <br>* C++,
+    <br>* C#,
+    <br>* Go,
+    <br>* Java,
+    <br>* Rust,
+    <a class="clsHide" href="#idWasmlagtwaSpc"></a></p>
   </section>
 </section>
 
@@ -1373,7 +1384,7 @@
       <li>opcode.f64.store: (no conversion) store 8 bytes
       <li>opcode.f64.sub: subtraction
       <li>opcode.f64.trunc: round to nearest integer towards zero
-      <li>opcode.<a class="clsPreview" href="#idWasmstcGtgbl">get_global</a>: get the current value of a global variable
+      <li><a class="clsPreview" href="#idWasmstcGtgbl">opcode.get_global</a>: get the current value of a global variable
       <li><a class="clsPreview" href="#idWasmstcGtlcl">opcode.get_local</a>: read the current value of a local variable
       <li><a class="clsPreview" href="#idWasmstcGrwmmr">opcode.grow_memory</a>: grow linear memory by a given unsigned delta of pages. Return the previous memory size in units of pages or -1 on failure.
       <li><a class="clsPreview" href="#idWasmstcI32add">opcode.i32.add</a>: sign-agnostic addition
