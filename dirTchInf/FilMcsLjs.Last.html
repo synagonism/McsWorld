@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.javascript-language (Ljs.5-19-0.2018-06-04)</title>
+  <title>Mcs.javascript-language (Ljs.5-20-0.2018-06-09)</title>
   <meta name="keywords" content="JavaScript, js, javascript-tutorial, browser-js, Node.js, ljs, ljb, ljn, Mcs, structured-concept">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -201,8 +201,8 @@
     <br>Programing-languages use different semantic-units and combinations of semantic-units to create algorithms that map the same archetype.
     <a class="clsHide" href="#idLjssutdsn"></a></p>
   <p id="idLjssutnam">name::
-    <br>* cpt.data-type.ljs,
-    <br>* cpt.data-structure.ljs,
+    <br>* cpt.data-type.Ljs,
+    <br>* cpt.data-structure.Ljs,
     <br>* cpt.javascript'semantic-unit,
     <br>* cpt.javascript'data-type,
     <br>* cpt.Ljs'data-type,
@@ -2339,6 +2339,19 @@
     <br><code>> Object.getOwnPropertyNames(Number.prototype).sort()
     <br>["constructor", "toExponential", "toFixed", "toLocaleString", "toPrecision", "toString", "valueOf"]</code>
     <a class="clsHide" href="#idLjsNumberpmbr"></a></p>
+
+  <section id="idLjstoLocaleString">
+  <h4 id="idLjstoLocaleStringH4">Number.prototype.toLocaleString-function
+    <a class="clsHide" href="#idLjstoLocaleStringH4"></a></h4>
+  <p id="idLjstoLocaleStringexpl">example::
+    <br><code>(123456789).toLocaleString() //123,456,789</code>
+    <a class="clsHide" href="#idLjstoLocaleStringexpl"></a></p>
+  <p id="idLjstoLocaleStringnam">name::
+    <br>* cpt.javascript'Number.prototype.toLocaleString-function,
+    <br>* cpt.Ljs'Number.prototype.toLocaleString-function,
+    <br>* cpt.Number.prototype.toLocaleString-function.javascript,
+    <a class="clsHide" href="#idLjstoLocaleStringnam"></a></p>
+  </section>
   </section>
 
   <section id="idLjsnNaN">
@@ -2833,7 +2846,7 @@
     <br>The-discovery (not invention) that an-API has and a-whole-part and a-generic-specific tree-structure, is <a class="clsPreview" href="../../#idAboutme">mine</a> which I first discovered to has any <a class="clsPreview" href="http://synagonism.net/dirMiwMcs/#idMwsscrH1">human-conceptual-information</a>.
     <a class="clsHide" href="#idLjsapidsn"></a></p>
   <p id="idLjsapinam">name::
-    <br>* cpt.API.ljs,
+    <br>* cpt.API.Ljs,
     <br>* cpt.javascript'API,
     <br>* cpt.Ljs'API,
     <br>* cpt.Ljs'Application-Programming-Interface,
@@ -2861,7 +2874,7 @@
     <br>* cpt.Ljs-global-object,
     <br>* cpt.Ljs-most-whole-object,
     <br>* cpt.Ljs-mwo,
-    <br>* cpt.Most-whole-object.ljs,
+    <br>* cpt.Most-whole-object.Ljs,
     <a class="clsHide" href="#idLjsmwonam"></a></p>
   <p id="idLjsmwowhl">Whole-chain::
     <br>* none,
@@ -2907,7 +2920,7 @@
     <br>* cpt.Ljs-Object.prototype,
     <br>* cpt.Ljs-mgo-(most-generic-object),
     <br>* cpt.Ljs-most-generic-object,
-    <br>* cpt.Most-generic-object.ljs,
+    <br>* cpt.Most-generic-object.Ljs,
     <br>* cpt.Object.prototype-in-javascript,
     <a class="clsHide" href="#idLjsmgonam"></a></p>
   <p id="idLjsmgowhl">Whole-chain::
@@ -2941,7 +2954,7 @@
     <a class="clsHide" href="#idLjsmgoSpc"></a></p>
 
   <section id="idLjsObject">
-  <h3 id="idLjsObjectH3">Ljs'Object-function
+  <h3 id="idLjsObjectH3">Object-function
     <a class="clsHide" href="#idLjsObjectH3"></a></h3>
   <p id="idLjsObjectdsn">description::
     <br><code>Object</code> is <a class="clsPreview" href="#idLjsfCsr">the-constructor</a> that contains <a class="clsPreview" href="#idLjsmgo">the-Object.prototype</a>.
@@ -3907,14 +3920,47 @@
     <br>Math, number managing related algorithms.
     <a class="clsHide" href="#idLjssdocMthdsn"></a></p>
   <p id="idLjssdocMthnam">name::
-    <br>* cpt.Ljs-math-managing,
+    <br>* cpt.javascript'math-managing,
+    <br>* cpt.Ljs'math-managing,
     <br>* cpt.Ljs-algo.math-managing,
-    <br>* cpt.Math-managing.ljs,
-    <br>* cpt.Number-managing.ljs,
+    <br>* cpt.math-managing.Ljs,
+    <br>* cpt.number-managing.Ljs,
     <a class="clsHide" href="#idLjssdocMthnam"></a></p>
   <p id="idLjssdocMthSpc">specific::
     <br>* A 218b spreadsheet app in HTML/JS: <a href="http://xem.github.io/sheet/">http://xem.github.io/sheet/</a>,
     <a class="clsHide" href="#idLjssdocMthSpc"></a></p>
+
+  <section id="idLjssdocMthHti">
+  <h3 id="idLjssdocMthHtiH3">src-doc.HEX-TO-INT
+    <a class="clsHide" href="#idLjssdocMthHtiH3"></a></h3>
+  <p id="idLjssdocMthHtiexpl">example::
+    <br><code>//hexadecimal to decimal
+    <br>parseInt("ffff", 16) //65535</code>
+    <a class="clsHide" href="#idLjssdocMthHtiexpl"></a></p>
+  <p id="idLjssdocMthHtinam">name::
+    <br>* cpt.hex-to-int.javascript,
+    <br>* cpt.javascript'hexadecimal-to-decimal,
+    <br>* cpt.javascript'hex-to-int,
+    <br>* cpt.Ljs'hexadecimal-to-decimal,
+    <br>* cpt.Ljs'hex-to-int,
+    <a class="clsHide" href="#idLjssdocMthHtinam"></a></p>
+  </section>
+
+  <section id="idLjssdocMthIth">
+  <h3 id="idLjssdocMthIthH3">src-doc.INT-TO-HEX
+    <a class="clsHide" href="#idLjssdocMthIthH3"></a></h3>
+  <p id="idLjssdocMthIthexpl">example::
+    <br><code>//decimal to hexadecimal
+    <br>(65535).toString(16) //ffff</code>
+    <a class="clsHide" href="#idLjssdocMthIthexpl"></a></p>
+  <p id="idLjssdocMthIthnam">name::
+    <br>* cpt.int-to-hex.javascript,
+    <br>* cpt.javascript'decimal-to-hexadecimal,
+    <br>* cpt.javascript'int-to-hex,
+    <br>* cpt.Ljs'decimal-to-hexadecimal,
+    <br>* cpt.Ljs'int-to-hex,
+    <a class="clsHide" href="#idLjssdocMthIthnam"></a></p>
+  </section>
   </section>
 
   <section id="idLjssdocObt">
@@ -4260,7 +4306,7 @@
     <br>Node.js implementation of 'classes' is-done by creating special functions.
     <a class="clsHide" href="#idLjselnProInheritanceP1"></a></p>
   <p id="idLjselnProInheritancenam">name::
-    <br>* cpt.Inheritance.ljs,
+    <br>* cpt.Inheritance.Ljs,
     <br>* cpt.Ljs-inheritance,
     <a class="clsHide" href="#idLjselnProInheritancenam"></a></p>
   <p id="idLjselnProInheritancewpa">addressWpg::
