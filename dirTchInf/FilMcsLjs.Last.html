@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.javascript-language (Ljs.5-22-0.2018-06-13)</title>
+  <title>Mcs.javascript-language (Ljs.5-23-0.2018-06-14)</title>
   <meta name="keywords" content="JavaScript, js, javascript-tutorial, browser-js, Node.js, ljs, ljb, ljn, Mcs, structured-concept">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -2765,6 +2765,7 @@
     <a class="clsHide" href="#idLjssgnc"></a></p>
   <p id="idLjssP1">addressWpg::
     <br>* <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</a>/
+    <br>* <a href="https://mathiasbynens.be/notes/javascript-escapes">https://mathiasbynens.be/notes/javascript-escapes</a>,
     <a class="clsHide" href="#idLjssP1"></a></p>
   <p id="idLjssexpl">example::
     <br><code>"a string"
@@ -2810,13 +2811,31 @@
     <a class="clsHide" href="#idLjsStringpmbr"></a></p>
   </section>
 
+  <section id="idLjscodePointAt">
+  <h3 id="idLjscodePointAtH3">String.prototype.codePointAt-function
+    <a class="clsHide" href="#idLjscodePointAtH3"></a></h3>
+  <p id="idLjscodePointAtdsn">description::
+    <br>· returns the-decimal Unicode-code-point of a-character in a-string.
+    <a class="clsHide" href="#idLjscodePointAtdsn"></a></p>
+  <p id="idLjscodePointAtnam">name::
+    <br>* cpt.javascript'codePointAt-function,
+    <br>* cpt.Ljs'codePointAt-function,
+    <br>* cpt.String.prototype.codePointAt-function,
+    <br>* cpt.codePointAt-function--of--javascript-string,
+    <a class="clsHide" href="#idLjscodePointAtnam"></a></p>
+  <p id="idLjscodePointAtexpl">example::
+    <br><code>"&#119558;".codePointAt(0) //119558</code>
+    <a class="clsHide" href="#idLjscodePointAtexpl"></a></p>
+  </section>
+
   <section id="idLjsssubstr">
-  <h3 id="idLjsssubstrH3">String.prototype.substring--of--Ljs-s
+  <h3 id="idLjsssubstrH3">String.prototype.substring-function
     <a class="clsHide" href="#idLjsssubstrH3"></a></h3>
   <p id="idLjsssubstrnam">name::
-    <br>* cpt.Ljs-substring-function,
+    <br>* cpt.javascript'substring-function,
+    <br>* cpt.Ljs'substring-function,
+    <br>* cpt.String.prototype.substring-function,
     <br>* cpt.substring-function--of--javascript-string,
-    <br>* cpt.substring-function--of--Ljs-string,
     <a class="clsHide" href="#idLjsssubstrnam"></a></p>
   <p id="idLjsssubstrcod">Code::
     <br><code>&gt; "nameXyz".substring(2) //meXyz
@@ -3865,6 +3884,28 @@
     <br>* cpt.Ljs-algo.array-of-array.javascript,
     <a class="clsHide" href="#idLjssdocSarrSaoaSortnam"></a></p>
   </section>
+  </section>
+
+  <section id="idLjssdocChar">
+  <h2 id="idLjssdocCharH2">src-doc.CHARACTER
+    <a class="clsHide" href="#idLjssdocCharH2"></a></h2>
+  <p id="idLjssdocChardsn">description::
+    <br>· character-management algos.
+    <a class="clsHide" href="#idLjssdocChardsn"></a></p>
+  <p id="idLjssdocCharnam">name::
+    <br>* cpt.character-algo.javascript,
+    <br>* cpt.javascript'character-algo,
+    <br>* cpt.Ljs-algo.character,
+    <a class="clsHide" href="#idLjssdocCharnam"></a></p>
+  <p id="idLjssdocCharexpl">example::
+    <br><code>//surrogates of a-char above U+FFFF
+    <br>"&#119558;".charCodeAt(0).toString(16); //"d834"
+    <br>"&#119558;".charCodeAt(1).toString(16); //"df06"
+    <br>'\ud834\udf06}' //"&#119558;"
+    <br>"&#119558;".codePointAt(0) //119558
+    <br>(119558).toString(16) //"1d306"
+    <br>'\u{1d306}' //"&#119558;"</code>
+    <a class="clsHide" href="#idLjssdocCharexpl"></a></p>
   </section>
 
   <section id="idLjssdocChrt">
