@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char (char.0-1-0.2018-06-19 draft)</title>
+  <title>Mcs.char (char.0-2-0.2018-06-20 draft)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -96,6 +96,7 @@
     <a class="clsHide" href="#idCharUcddsn"></a></p>
   <p id="idCharUcdnam">name::
     <br>* cpt.char.Unicode,
+    <br>* cpt.Unicode'char,
     <br>* cpt.Unicode-char,
     <a class="clsHide" href="#idCharUcdnam"></a></p>
 
@@ -121,19 +122,133 @@
     <a class="clsHide" href="#idCharUcdagedsn"></a></p>
   <p id="idCharUcdagenam">name::
     <br>* cpt.char.Unicode'age-property,
+    <br>* cpt.Unicode'age-property,
     <a class="clsHide" href="#idCharUcdagenam"></a></p>
   </section>
 
   <section id="idCharUcdbdcls">
-  <h2 id="idCharUcdbdclsH2">Unicode-char'bidi_class-property
+  <h2 id="idCharUcdbdclsH2">Unicode-char'Bidi_Class-property
     <a class="clsHide" href="#idCharUcdbdclsH2"></a></h2>
+  <p id="idCharUcdbdclsdsn">description::
+    <br>determine the directionality for bidirectional Unicode text.
+    <br>[https://www.unicode.org/reports/tr9/tr9-39.html]
+    <a class="clsHide" href="#idCharUcdbdclsdsn"></a></p>
   <p id="idCharUcdbdclsnam">name::
-    <br>* cpt.char.Unicode'bidi_class-property,
+    <br>* cpt.char.Unicode'Bidi_Class-property,
+    <br>* cpt.Unicode'Bidi_Class-property,
     <a class="clsHide" href="#idCharUcdbdclsnam"></a></p>
+  <p id="idCharUcdbdclswpa">addressWpg::
+    <br>* Unicode® Standard Annex #9, UNICODE BIDIRECTIONAL ALGORITHM, <a href="http://www.unicode.org/reports/tr9/">http://www.unicode.org/reports/tr9/</a>,
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBidiClass.txt,
+    <a class="clsHide" href="#idCharUcdbdclswpa"></a></p>
+  <p id="idCharUcdbdclsSpc">specific::
+    <br>* L-Left_To_Right,
+    <br>* R-Right_To_Left,
+    <br>* EN-European_Number,
+    <br>* ES-European_Separator,
+    <br>* ET-European_Terminator,
+    <br>* AN-Arabic_Number,
+    <br>* CS-Common_Separator,
+    <br>* B-Paragraph_Separator,
+    <br>* S-Segment_Separator,
+    <br>* WS-White_Space,
+    <br>* ON-Other_Neutral,
+    <br>* BN-Boundary_Neutral,
+    <br>* NSM-Nonspacing_Mark,
+    <br>* AL-Arabic_Letter,
+    <br>* LRO-Left_To_Right_Override,
+    <br>* RLO-Right_To_Left_Override,
+    <br>* LRE-Left_To_Right_Embedding,
+    <br>* RLE-Right_To_Left_Embedding,
+    <br>* PDF-Pop_Directional_Format,
+    <br>* LRI-Left_To_Right_Isolate,
+    <br>* RLI-Right_To_Left_Isolate,
+    <br>* FSI-First_Strong_Isolate,
+    <br>* PDI-Pop_Directional_Isolate,
+    <a class="clsHide" href="#idCharUcdbdclsSpc"></a></p>
+  </section>
+
+  <section id="idCharUcdbdmr">
+  <h2 id="idCharUcdbdmrH2">Unicode-char'Bidi_Mirrored-property
+    <a class="clsHide" href="#idCharUcdbdmrH2"></a></h2>
+  <p id="idCharUcdbdmrdsn">description::
+    <br>If the character is a "mirrored" character in bidirectional text, this field has the value "Y"; otherwise "N". See Section 4.7, Bidi Mirrored of [Unicode].
+    <br>Do not confuse this with the Bidi_Mirroring_Glyph property.
+    <br>[https://www.unicode.org/reports/tr44/#Bidi_Mirrored]
+    <a class="clsHide" href="#idCharUcdbdmrdsn"></a></p>
+  <p id="idCharUcdbdmrnam">name::
+    <br>* cpt.char.Unicode'Bidi_Mirrored-property,
+    <br>* cpt.Unicode'Bidi_Mirrored-property,
+    <a class="clsHide" href="#idCharUcdbdmrnam"></a></p>
+  <p id="idCharUcdbdmrwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBinaryProperties.txt,
+    <a class="clsHide" href="#idCharUcdbdmrwpa"></a></p>
+  </section>
+
+  <section id="idCharUcddnmg">
+  <h2 id="idCharUcddnmgH2">Unicode-char'Decomposition_Mapping-property
+    <a class="clsHide" href="#idCharUcddnmgH2"></a></h2>
+  <p id="idCharUcddnmgdsn">description::
+    <br>This is a string property, consisting of a sequence of one or more Unicode code points.
+    <br>... The prefixed tags supplied with a subset of the decomposition mappings generally indicate formatting information.
+    <br>[https://www.unicode.org/reports/tr44/#Character_Decomposition_Mappings]
+    <a class="clsHide" href="#idCharUcddnmgdsn"></a></p>
+  <p id="idCharUcddnmgnam">name::
+    <br>* cpt.char.Unicode'Decomposition_Mapping-property,
+    <br>* cpt.Unicode'Decomposition_Mapping-property,
+    <a class="clsHide" href="#idCharUcddnmgnam"></a></p>
+  <p id="idCharUcddnmgwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedDecompositionType.txt,
+    <a class="clsHide" href="#idCharUcddnmgwpa"></a></p>
+  <p id="idCharUcddnmgSpc">specific::
+    <br>* &lt;font>: Font variant (for example, a blackletter form)
+    <br>* &lt;noBreak>: No-break version of a space or hyphen
+    <br>* &lt;initial>: Initial presentation form (Arabic)
+    <br>* &lt;medial>: Medial presentation form (Arabic)
+    <br>* &lt;final>: Final presentation form (Arabic)
+    <br>* &lt;isolated>: Isolated presentation form (Arabic)
+    <br>* &lt;circle>: Encircled form
+    <br>* &lt;super>: Superscript form
+    <br>* &lt;sub>: Subscript form
+    <br>* &lt;vertical>: Vertical layout presentation form
+    <br>* &lt;wide>: Wide (or zenkaku) compatibility character
+    <br>* &lt;narrow>: Narrow (or hankaku) compatibility character
+    <br>* &lt;small>: Small variant form (CNS compatibility)
+    <br>* &lt;square>: CJK squared font variant
+    <br>* &lt;fraction>: Vulgar fraction form
+    <br>* &lt;compat>: Otherwise unspecified compatibility character
+    <br>[https://www.unicode.org/reports/tr44/#Formatting_Tags_Table]
+    <a class="clsHide" href="#idCharUcddnmgSpc"></a></p>
+  </section>
+
+  <section id="idCharUcdeaw">
+  <h2 id="idCharUcdeawH2">Unicode-char'East_Asian_Width-property
+    <a class="clsHide" href="#idCharUcdeawH2"></a></h2>
+  <p id="idCharUcdeawdsn">description::
+    <br>When dealing with East Asian text, there is the concept of an inherent width of a character. This width takes on either of two values: narrow or wide. For traditional mixed-width East Asian legacy character sets, this classification into narrow and wide corresponds with few exceptions directly to the storage size for each character: a few narrow characters use a single byte per character and all other characters (usually wide) use two or more bytes.
+    <br>[https://www.unicode.org/reports/tr11/tr11-35.html#Overview]
+    <a class="clsHide" href="#idCharUcdeawdsn"></a></p>
+  <p id="idCharUcdeawnam">name::
+    <br>* cpt.char.Unicode'East_Asian_Width-property,
+    <br>* cpt.Unicode'East_Asian_Width-property,
+    <a class="clsHide" href="#idCharUcdeawnam"></a></p>
+  <p id="idCharUcdeawwpa">addressWpg::
+    <br>* <a href="https://www.unicode.org/reports/tr11/tr11-35.html#Overview">https://www.unicode.org/reports/tr11/</a>,
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/EastAsianWidth.txt,
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedEastAsianWidth.txt,
+    <a class="clsHide" href="#idCharUcdeawwpa"></a></p>
+  <p id="idCharUcdeawSpc">specific::
+    <br>* A-Ambiguous: can be sometimes wide and sometimes narrow,
+    <br>* F-Fullwidth,
+    <br>* H-Halfwidth,
+    <br>* N-Neutral (= Not East Asian),
+    <br>* Na-Narrow,
+    <br>* W-Wide: always wide,
+    <a class="clsHide" href="#idCharUcdeawSpc"></a></p>
   </section>
 
   <section id="idCharUcdglcr">
-  <h2 id="idCharUcdglcrH2">Unicode-char'general_category-property
+  <h2 id="idCharUcdglcrH2">Unicode-char'General_Category-property
     <a class="clsHide" href="#idCharUcdglcrH2"></a></h2>
   <p id="idCharUcdglcrdsn">description::
     <br>The General_Category property of a code point provides for the most general classification of that code point.
@@ -142,7 +257,7 @@
     <br>[http://www.unicode.org/reports/tr44/#General_Category_Values]
     <a class="clsHide" href="#idCharUcdglcrdsn"></a></p>
   <p id="idCharUcdglcrnam">name::
-    <br>* cpt.char.Unicode'general_category,
+    <br>* cpt.char.Unicode'General_Category,
     <a class="clsHide" href="#idCharUcdglcrnam"></a></p>
   <div id="idCharUcdglcrSpc">
     <p>specific::
@@ -239,6 +354,7 @@
     <a class="clsHide" href="#idCharUcdprptdsn"></a></p>
   <p id="idCharUcdprptnam">name::
     <br>* cpt.char.Unicode'property,
+    <br>* cpt.Unicode'property,
     <a class="clsHide" href="#idCharUcdprptnam"></a></p>
   <p id="idCharUcdprptwpa">addressWpg::
     <br>* <a href="http://www.unicode.org/reports/tr44/#Property_Definitions">http://www.unicode.org/reports/tr44/#Property_Definitions</a>,
@@ -380,25 +496,551 @@
   <h2 id="idCharUcdstrdH2">Unicode-char'Unicode-standard
     <a class="clsHide" href="#idCharUcdstrdH2"></a></h2>
   <p id="idCharUcdstrdnam">name::
+    <br>* cpt.char.Unicode'standard,
     <br>* cpt.char.Unicode'Unicode-standard,
+    <br>* cpt.Unicode,
     <br>* cpt.Unicode-standard,
     <a class="clsHide" href="#idCharUcdstrdnam"></a></p>
 
-  <section id="idCharUcddtbs">
-  <h3 id="idCharUcddtbsH3">Unicode-character-database
-    <a class="clsHide" href="#idCharUcddtbsH3"></a></h3>
-  <p id="idCharUcddtbsdsn">description::
+  <section id="idCharUcdstdurt">
+  <h3 id="idCharUcdstdurtH3">report of Unicode
+    <a class="clsHide" href="#idCharUcdstdurtH3"></a></h3>
+  <p id="idCharUcdstdurtdsn">description::
+    <br>Unicode Technical Reports cover a wide range of topics related to the implementation or development of the Unicode Standard. These include topics such as:
+    <br>* normalizing Unicode text for comparison and storage
+    <br>* collating (sorting) Unicode strings
+    <br>* determining line break opportunities or other segmentation boundaries in text
+    <br>* regular expression syntax extensions for Unicode text
+    <br>* compressing Unicode text
+    <br>These reports are normatively referenced by a number of international standards and by a wide range of products.
+    <br>[https://www.unicode.org/reports/about-reports.html]
+    <a class="clsHide" href="#idCharUcdstdurtdsn"></a></p>
+  <p id="idCharUcdstdurtnam">name::
+    <br>* cpt.char.Unicode'standard'technical-report,
+    <br>* cpt.Unicode'report,
+    <br>* cpt.Unicode'technical-report,
+    <br>* cpt.Unicode-technical-report,
+    <a class="clsHide" href="#idCharUcdstdurtnam"></a></p>
+
+  <section id="idCharUcdstdurtSpc">
+  <h4 id="idCharUcdstdurtSpcH4">Unicode-report.SPECIFIC
+    <a class="clsHide" href="#idCharUcdstdurtSpcH4"></a></h4>
+  <p id="idCharUcdstdurtSpcP1">specific::
+    <br>* UAX,
+    <br>* UTS,
+    <br>* UTR,
+    <a class="clsHide" href="#idCharUcdstdurtSpcP1"></a></p>
+  </section>
+
+  <section id="idCharUcdstdurtUax">
+  <h4 id="idCharUcdstdurtUaxH4">Unicode-report.UAX
+    <a class="clsHide" href="#idCharUcdstdurtUaxH4"></a></h4>
+  <p id="idCharUcdstdurtUaxdsn">description::
+    <br>A Unicode Standard Annex (UAX) forms an integral part of the Unicode Standard, but is published as a separate document.
+    <br>The Unicode Standard may require conformance to normative content in a Unicode Standard Annex, if so specified in the Conformance chapter of that version of the Unicode Standard.
+    <br>The version number of a UAX document is always the same as the version of the Unicode Standard of which it forms a part.
+    <br>[https://www.unicode.org/reports/about-reports.html]
+    <a class="clsHide" href="#idCharUcdstdurtUaxdsn"></a></p>
+  <p id="idCharUcdstdurtUaxnam">name::
+    <br>* cpt.Unicode'UAX,
+    <br>* cpt.Unicode-Standard-Anexx-UAX,
+    <br>* cpt.UAX-Unicode-Standard-Anexx,
+    <a class="clsHide" href="#idCharUcdstdurtUaxnam"></a></p>
+  <p id="idCharUcdstdurtUaxSpc">specific::
+    <br>* [UAX9]	Unicode Standard Annex #9: Unicode Bidirectional Algorithm, Latest version: http://www.unicode.org/reports/tr9/
+    <br>* [UAX11]	Unicode Standard Annex #11: East Asian Width, Latest version: http://www.unicode.org/reports/tr11/
+    <br>* [UAX14]	Unicode Standard Annex #14: Unicode Line Breaking Algorithm, Latest version: http://www.unicode.org/reports/tr14/
+    <br>* [UAX15]	Unicode Standard Annex #15: Unicode Normalization Forms, Latest version: http://www.unicode.org/reports/tr15/
+    <br>* [UAX24]	Unicode Standard Annex #24: Unicode Script Property, Latest version: http://www.unicode.org/reports/tr24/
+    <br>* [UAX29]	Unicode Standard Annex #29: Unicode Text Segmentation, Latest version: http://www.unicode.org/reports/tr29/
+    <br>* [UAX31]	Unicode Standard Annex #31: Unicode Identifier and Pattern Syntax, Latest version: http://www.unicode.org/reports/tr31/
+    <br>* [UAX34]	Unicode Standard Annex #34: Unicode Named Character Sequences, Latest version: http://www.unicode.org/reports/tr34/
+    <br>* [UAX38]	Unicode Standard Annex #38: Unicode Han Database (Unihan), Latest version: http://www.unicode.org/reports/tr38/
+    <br>* [UAX41]	Unicode Standard Annex #41: Common References for Unicode Standard Annexes, Latest version: http://www.unicode.org/reports/tr41/
+    <br>* [UAX42]	Unicode Standard Annex #42: Unicode Character Database in XML, Latest version: http://www.unicode.org/reports/tr42/
+    <br>* [UAX44]	Unicode Standard Annex #44: Unicode Character Database, Latest version: http://www.unicode.org/reports/tr44/
+    <br>* [UAX45]	Unicode Standard Annex #45: U-Source Ideographs, Latest version: http://www.unicode.org/reports/tr45/
+    <br>* [UAX50]	Unicode Standard Annex #50: Unicode Vertical Text Layout, Latest version: http://www.unicode.org/reports/tr50/
+    <a class="clsHide" href="#idCharUcdstdurtUaxSpc"></a></p>
+  </section>
+
+  <section id="idCharUcdstdurtUts">
+  <h4 id="idCharUcdstdurtUtsH4">Unicode-report.UTS
+    <a class="clsHide" href="#idCharUcdstdurtUtsH4"></a></h4>
+  <p id="idCharUcdstdurtUtsdsn">description::
+    <br>A Unicode Technical Standard (UTS) is an independent specification.
+    <br>Conformance to the Unicode Standard does not imply conformance to any UTS.
+    <br>[https://www.unicode.org/reports/about-reports.html]
+    <a class="clsHide" href="#idCharUcdstdurtUtsdsn"></a></p>
+  <p id="idCharUcdstdurtUtsnam">name::
+    <br>* cpt.Unicode'UTS,
+    <br>* cpt.Unicode-Techincal-Standard-UTS,
+    <br>* cpt.UTS-Unicode-Technical-Standard,
+    <a class="clsHide" href="#idCharUcdstdurtUtsnam"></a></p>
+  </section>
+
+  <section id="idCharUcdstdurtUtr">
+  <h4 id="idCharUcdstdurtUtrH4">Unicode-report.UTR
+    <a class="clsHide" href="#idCharUcdstdurtUtrH4"></a></h4>
+  <p id="idCharUcdstdurtUtrdsn">description::
+    <br>A Unicode Technical Report (UTR) contains informative material.
+    <br>Conformance to the Unicode Standard does not imply conformance to any UTR.
+    <br>Other specifications, however, are free to make normative references to a UTR.
+    <br>[https://www.unicode.org/reports/about-reports.html]
+    <br>===
+    <br>· here, there-is a name collision.
+    <br>· a-Unicode-Technical-Report-UTR is a-type of Unicode-techinical-report!!!
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-20]
+    <a class="clsHide" href="#idCharUcdstdurtUtrdsn"></a></p>
+  <p id="idCharUcdstdurtUtrnam">name::
+    <br>* cpt.Unicode'UTR,
+    <br>* cpt.Unicode-Techincal-Report-UTR,
+    <br>* cpt.UTR-Unicode-Techincal-Report,
+    <a class="clsHide" href="#idCharUcdstdurtUtrnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCharUcdstducd">
+  <h3 id="idCharUcdstducdH3">Unicode-character-database
+    <a class="clsHide" href="#idCharUcdstducdH3"></a></h3>
+  <p id="idCharUcdstducddsn">description::
     <br>The Unicode Standard is far more than a simple encoding of characters.
     <br>The standard also associates a rich set of semantics with each encoded character—properties that are required for interoperability and correct behavior in implementations, as well as for Unicode conformance.
     <br>These semantics are cataloged in the Unicode Character Database (UCD), a collection of data files which contain the Unicode character code points and character names.
     <br>The data files define the Unicode character properties and mappings between Unicode characters (such as case mappings).
     <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Introduction]
-    <a class="clsHide" href="#idCharUcddtbsdsn"></a></p>
-  <p id="idCharUcddtbsnam">name::
+    <a class="clsHide" href="#idCharUcdstducddsn"></a></p>
+  <p id="idCharUcdstducdnam">name::
     <br>* cpt.char.Unicode'Unicode-database,
+    <br>* cpt.UCD.Unicode-character-database,
+    <br>* cpt.Unicode'database-(UCD),
     <br>* cpt.Unicode-character-database-(UCD),
     <br>* cpt.Unicode-database-(UCD),
-    <a class="clsHide" href="#idCharUcddtbsnam"></a></p>
+    <a class="clsHide" href="#idCharUcdstducdnam"></a></p>
+
+  <section id="idCharUcdstducdrsc">
+  <h4 id="idCharUcdstducdrscH4">resoure of UCD
+    <a class="clsHide" href="#idCharUcdstducdrscH4"></a></h4>
+  <p id="idCharUcdstducdrscwpa">addressWpg::
+    <br>* files.latest: <a href="ftp://www.unicode.org/Public/UCD/latest/ucd/">ftp://www.unicode.org/Public/UCD/latest/ucd/</a>,
+    <br>* files.11: <a href="ftp://www.unicode.org/Public/11.0.0/ucd/">ftp://www.unicode.org/Public/11.0.0/ucd/</a>,
+    <br>* Unicode® Standard Annex #44: UNICODE CHARACTER DATABASE, <a href="https://www.unicode.org/reports/tr44/">https://www.unicode.org/reports/tr44/</a>,
+    <a class="clsHide" href="#idCharUcdstducdrscwpa"></a></p>
+  </section>
+  </section>
+
+  <section id="idCharUcdstdrsc">
+  <h3 id="idCharUcdstdrscH3">resource of Unicode
+    <a class="clsHide" href="#idCharUcdstdrscH3"></a></h3>
+  <p id="idCharUcdstdrscnam">name::
+    <br>* cpt.char.Unicode'standard'resource,
+    <br>* cpt.Unicode'resource,
+    <a class="clsHide" href="#idCharUcdstdrscnam"></a></p>
+  <p id="idCharUcdstdrscwpa">addressWpg::
+    <br>* <a href="http://www.unicode.org/">http://www.unicode.org/</a>,
+    <br>* 11.0.0: <a href="https://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf">https://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf</a>,
+    <a class="clsHide" href="#idCharUcdstdrscwpa"></a></p>
+  </section>
+
+  <section id="idCharUcdstdSpc">
+  <h3 id="idCharUcdstdSpcH3">Unicode.SPECIFIC
+    <a class="clsHide" href="#idCharUcdstdSpcH3"></a></h3>
+  <p id="idCharUcdstdSpcnam">name::
+    <br>* cpt.char.Unicode'standard.specific,
+    <br>* cpt.Unicode.specific,
+    <a class="clsHide" href="#idCharUcdstdSpcnam"></a></p>
+  <p id="idCharUcdstdSpcwpa">addressWpg::
+    <br>* https://www.unicode.org/versions/,
+    <a class="clsHide" href="#idCharUcdstdSpcwpa"></a></p>
+  </section>
+
+  <section id="idCharUcdstd11002018">
+  <h3 id="idCharUcdstd11002018H3">Unicode.11-0-0.2018
+    <a class="clsHide" href="#idCharUcsstd11002018H3"></a></h3>
+  <p id="idCharUcdstd11002018dsn">description::
+    <br>The Unicode Consortium. The Unicode Standard, Version 11.0.0, (Mountain View, CA: The Unicode Consortium, 2018. ISBN 978-1-936213-19-1)
+    <br>http://www.unicode.org/versions/Unicode11.0.0/
+    <br>===
+    <br>script= 146
+    <br>char= 137,439	Dogra, Georgian Mtavruli capital letters, Gunjala Gondi, Hanifi Rohingya, Indic Siyaq numbers, Makasar, Medefaidrin, Old Sogdian and Sogdian, Mayan numerals, 5 urgently needed CJK unified ideographs, symbols for xiangqi (Chinese chess) and star ratings, and 145 emoji
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd11002018dsn"></a></p>
+  <p id="idCharUcdstd11002018nam">name::
+    <br>* cpt.char.Unicode.11-0-0.2018,
+    <br>* cpt.Unicode.11-0-0.2018,
+    <a class="clsHide" href="#idCharUcdstd11002018nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd10002017">
+  <h3 id="idCharUcdstd10002017H3">Unicode.10-0-0.2017
+    <a class="clsHide" href="#idCharUcsstd10002017H3"></a></h3>
+  <p id="idCharUcdstd10002017dsn">description::
+    <br>The Unicode Consortium. The Unicode Standard, Version 10.0.0, (Mountain View, CA: The Unicode Consortium, 2017. ISBN 978-1-936213-16-0)
+    <br>http://www.unicode.org/versions/Unicode10.0.0/
+    <br>===
+    <br>script= 139
+    <br>char= 136,755	Zanabazar Square, Soyombo, Masaram Gondi, Nüshu, hentaigana (non-standard hiragana), 7,494 CJK unified ideographs, and 56 emoji
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd10002017dsn"></a></p>
+  <p id="idCharUcdstd10002017nam">name::
+    <br>* cpt.char.Unicode.10-0-0.2017,
+    <br>* cpt.Unicode.10-0-0.2017,
+    <a class="clsHide" href="#idCharUcdstd10002017nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd9002016">
+  <h3 id="idCharUcdstd9002016H3">Unicode.9-0-0.2016
+    <a class="clsHide" href="#idCharUcsstd9002016H3"></a></h3>
+  <p id="idCharUcdstd9002016dsn">description::
+    <br>The Unicode Consortium. The Unicode Standard, Version 9.0.0, (Mountain View, CA: The Unicode Consortium, 2016. ISBN 978-1-936213-13-9)
+    <br>http://www.unicode.org/versions/Unicode9.0.0/
+    <br>===
+    <br>script= 135
+    <br>char= 128,237	Adlam, Bhaiksuki, Marchen, Newa, Osage, Tangut, and 72 emoji
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd9002016dsn"></a></p>
+  <p id="idCharUcdstd9002016nam">name::
+    <br>* cpt.char.Unicode.9-0-0.2016,
+    <br>* cpt.Unicode.9-0-0.2016,
+    <a class="clsHide" href="#idCharUcdstd9002016nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd8002015">
+  <h3 id="idCharUcdstd8002015H3">Unicode.8-0-0.2015
+    <a class="clsHide" href="#idCharUcsstd8002015H3"></a></h3>
+  <p id="idCharUcdstd8002015dsn">description::
+    <br>The Unicode Consortium. The Unicode Standard, Version 8.0.0, (Mountain View, CA: The Unicode Consortium, 2015. ISBN 978-1-936213-10-8)
+    <br>http://www.unicode.org/versions/Unicode8.0.0/
+    <br>===
+    <br>script= 129
+    <br>char= 120,737	Ahom, Anatolian hieroglyphs, Hatran, Multani, Old Hungarian, SignWriting, 5,771 CJK unified ideographs, a set of lowercase letters for Cherokee, and five emoji skin tone modifiers
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd8002015dsn"></a></p>
+  <p id="idCharUcdstd8002015nam">name::
+    <br>* cpt.char.Unicode.8-0-0.2015,
+    <br>* cpt.Unicode.8-0-0.2015,
+    <a class="clsHide" href="#idCharUcdstd8002015nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd7002014">
+  <h3 id="idCharUcdstd7002014H3">Unicode.7-0-0.2014
+    <a class="clsHide" href="#idCharUcsstd7002014H3"></a></h3>
+  <p id="idCharUcdstd7002014dsn">description::
+    <br>The Unicode Consortium. The Unicode Standard, Version 7.0.0, (Mountain View, CA: The Unicode Consortium, 2014. ISBN 978-1-936213-09-2)
+    <br>http://www.unicode.org/versions/Unicode7.0.0/
+    <br>===
+    <br>script= 123
+    <br>char= 113,021	Bassa Vah, Caucasian Albanian, Duployan, Elbasan, Grantha, Khojki, Khudawadi, Linear A, Mahajani, Manichaean, Mende Kikakui, Modi, Mro, Nabataean, Old North Arabian, Old Permic, Pahawh Hmong, Palmyrene, Pau Cin Hau, Psalter Pahlavi, Siddham, Tirhuta, Warang Citi, and Dingbats.
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd7002014dsn"></a></p>
+  <p id="idCharUcdstd7002014nam">name::
+    <br>* cpt.char.Unicode.7-0-0.2014,
+    <br>* cpt.Unicode.7-0-0.2014,
+    <a class="clsHide" href="#idCharUcdstd7002014nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd6302013">
+  <h3 id="idCharUcdstd6302013H3">Unicode.6-3-0.2013
+    <a class="clsHide" href="#idCharUcsstd6302013H3"></a></h3>
+  <p id="idCharUcdstd6302013dsn">description::
+    <br>The Unicode Consortium. The Unicode Standard, Version 6.3.0, (Mountain View, CA: The Unicode Consortium, 2013. ISBN 978-1-936213-08-5)
+    <br>http://www.unicode.org/versions/Unicode6.3.0/
+    <br>===
+    <br>script= 100
+    <br>char= 110,187	5 bidirectional formatting characters.
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd6302013dsn"></a></p>
+  <p id="idCharUcdstd6302013nam">name::
+    <br>* cpt.char.Unicode.6-3-0.2013,
+    <br>* cpt.Unicode.6-3-0.2013,
+    <a class="clsHide" href="#idCharUcdstd6302013nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd6202012">
+  <h3 id="idCharUcdstd6202012H3">Unicode.6-2-0.2012
+    <a class="clsHide" href="#idCharUcsstd6202012H3"></a></h3>
+  <p id="idCharUcdstd6202012dsn">description::
+    <br>The Unicode Consortium. The Unicode Standard, Version 6.2.0, (Mountain View, CA: The Unicode Consortium, 2012. ISBN 978-1-936213-07-8)
+    <br>http://www.unicode.org/versions/Unicode6.2.0/
+    <br>===
+    <br>script= 100
+    <br>char= 110,182	Turkish lira sign.
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd6202012dsn"></a></p>
+  <p id="idCharUcdstd6202012nam">name::
+    <br>* cpt.char.Unicode.6-2-0.2012,
+    <br>* cpt.Unicode.6-2-0.2012,
+    <a class="clsHide" href="#idCharUcdstd6202012nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd6102012">
+  <h3 id="idCharUcdstd6102012H3">Unicode.6-1-0.2012
+    <a class="clsHide" href="#idCharUcsstd6102012H3"></a></h3>
+  <p id="idCharUcdstd6102012dsn">description::
+    <br>The Unicode Consortium. The Unicode Standard, Version 6.1.0, (Mountain View, CA: The Unicode Consortium, 2012. ISBN 978-1-936213-02-3)
+    <br>http://www.unicode.org/versions/Unicode6.1.0/
+    <br>===
+    <br>script= 100
+    <br>char= 110,181	Chakma, Meroitic cursive, Meroitic hieroglyphs, Miao, Sharada, Sora Sompeng, and Takri.
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd6102012dsn"></a></p>
+  <p id="idCharUcdstd6102012nam">name::
+    <br>* cpt.char.Unicode.6-1-0.2012,
+    <br>* cpt.Unicode.6-1-0.2012,
+    <a class="clsHide" href="#idCharUcdstd6102012nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd6002011">
+  <h3 id="idCharUcdstd6002011H3">Unicode.6-0-0.2011
+    <a class="clsHide" href="#idCharUcsstd6002011H3"></a></h3>
+  <p id="idCharUcdstd6002011dsn">description::
+    <br>The Unicode Consortium. The Unicode Standard, Version 6.0.0, (Mountain View, CA: The Unicode Consortium, 2011. ISBN 978-1-936213-01-6)
+    <br>http://www.unicode.org/versions/Unicode6.0.0/
+    <br>===
+    <br>script= 93
+    <br>char= 109,449	Batak, Brahmi, Mandaic, playing card symbols, transport and map symbols, alchemical symbols, emoticons and emoji. 222 additional CJK Unified Ideographs (CJK-D) added.
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd6002011dsn"></a></p>
+  <p id="idCharUcdstd6002011nam">name::
+    <br>* cpt.char.Unicode.6-0-0.2011,
+    <br>* cpt.Unicode.6-0-0.2011,
+    <a class="clsHide" href="#idCharUcdstd6002011nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd5202009">
+  <h3 id="idCharUcdstd5202009H3">Unicode.5-2-0.2009
+    <a class="clsHide" href="#idCharUcsstd5202009H3"></a></h3>
+  <p id="idCharUcdstd5202009dsn">description::
+    <br>The Unicode Consortium. The Unicode Standard, Version 5.2.0 (Mountain View, CA: The Unicode Consortium, 2009. ISBN 978-1-936213-00-9)
+    <br>http://www.unicode.org/versions/Unicode5.2.0/
+    <br>===
+    <br>script= 90
+    <br>char= 107,361	Avestan, Bamum, Egyptian hieroglyphs (the Gardiner Set, comprising 1,071 characters), Imperial Aramaic, Inscriptional Pahlavi, Inscriptional Parthian, Javanese, Kaithi, Lisu, Meetei Mayek, Old South Arabian, Old Turkic, Samaritan, Tai Tham and Tai Viet added. 4,149 additional CJK Unified Ideographs (CJK-C), as well as extended Jamo for Old Hangul, and characters for Vedic Sanskrit.
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd5202009dsn"></a></p>
+  <p id="idCharUcdstd5202009nam">name::
+    <br>* cpt.char.Unicode.5-2-0.2009,
+    <br>* cpt.Unicode.5-2-0.2009,
+    <a class="clsHide" href="#idCharUcdstd5202009nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd5102007">
+  <h3 id="idCharUcdstd5102007H3">Unicode.5-1-0.2007
+    <a class="clsHide" href="#idCharUcsstd5102007H3"></a></h3>
+  <p id="idCharUcdstd5102007dsn">description::
+    <br>The Unicode Consortium. The Unicode Standard, Version 5.1.0, defined by: The Unicode Standard, Version 5.0 (Boston, MA, Addison-Wesley, 2007. ISBN 0-321-48091-0), as amended by Unicode 5.1.0
+    <br>http://www.unicode.org/versions/Unicode5.1.0/
+    <br>===
+    <br>script= 75
+    <br>char= 100,713	Carian, Cham, Kayah Li, Lepcha, Lycian, Lydian, Ol Chiki, Rejang, Saurashtra, Sundanese, and Vai added, as well as sets of symbols for the Phaistos Disc, Mahjong tiles, and Domino tiles. There were also important additions for Burmese, additions of letters and Scribal abbreviations used in medieval manuscripts, and the addition of Capital ẞ.
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd5102007dsn"></a></p>
+  <p id="idCharUcdstd5102007nam">name::
+    <br>* cpt.char.Unicode.5-1-0.2007,
+    <br>* cpt.Unicode.5-1-0.2007,
+    <a class="clsHide" href="#idCharUcdstd5102007nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd5002007">
+  <h3 id="idCharUcdstd5002007H3">Unicode.5-0-0.2007
+    <a class="clsHide" href="#idCharUcsstd5002007H3"></a></h3>
+  <p id="idCharUcdstd5002007dsn">description::
+    <br>The Unicode Consortium. The Unicode Standard, Version 5.0.0, defined by: The Unicode Standard, Version 5.0 (Boston, MA, Addison-Wesley, 2007. ISBN 0-321-48091-0)
+    <br>===
+    <br>script= 64
+    <br>char= 99,089	Balinese, Cuneiform, N'Ko, Phags-pa, and Phoenician added.
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd5002007dsn"></a></p>
+  <p id="idCharUcdstd5002007nam">name::
+    <br>* cpt.char.Unicode.5-0-0.2007,
+    <br>* cpt.Unicode.5-0-0.2007,
+    <a class="clsHide" href="#idCharUcdstd5002007nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd4102005">
+  <h3 id="idCharUcdstd4102005H3">Unicode.4-1-0.2005
+    <a class="clsHide" href="#idCharUcsstd4012003H3"></a></h3>
+  <p id="idCharUcdstd4102005dsn">description::
+    <br>date= March 2005
+    <br>ISO= ISO/IEC 10646:2003 plus Amendment 1
+    <br>script= 59
+    <br>char= 97,720	Buginese, Glagolitic, Kharoshthi, New Tai Lue, Old Persian, Syloti Nagri, and Tifinagh added, and Coptic was disunified from Greek. Ancient Greek numbers and musical symbols were also added.
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd4102005dsn"></a></p>
+  <p id="idCharUcdstd4102005nam">name::
+    <br>* cpt.char.Unicode.4-1-0.2005,
+    <br>* cpt.Unicode.4-1-0.2005,
+    <a class="clsHide" href="#idCharUcdstd4102005nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd4012003">
+  <h3 id="idCharUcdstd4012003H3">Unicode.4-0-1.2003
+    <a class="clsHide" href="#idCharUcsstd4012003H3"></a></h3>
+  <p id="idCharUcdstd4012003dsn">description::
+    <br>The Unicode Consortium. The Unicode Standard, Version 4.0.1, defined by: The Unicode Standard, Version 4.0 (Boston, MA, Addison-Wesley, 2003. ISBN 0-321-18578-1), as amended by Unicode 4.0.1
+    <br>http://www.unicode.org/versions/Unicode4.0.1/
+    <br>===
+    <br>script=
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd4012003dsn"></a></p>
+  <p id="idCharUcdstd4012003nam">name::
+    <br>* cpt.char.Unicode.4-0-1.2003,
+    <br>* cpt.Unicode.4-0-1.2003,
+    <a class="clsHide" href="#idCharUcdstd4012003nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd4002003">
+  <h3 id="idCharUcdstd4002003H3">Unicode.4-0-0.2003
+    <a class="clsHide" href="#idCharUcsstd4012003H3"></a></h3>
+  <p id="idCharUcdstd4002003dsn">description::
+    <br>date= April 2003
+    <br>book= ISBN 0-321-18578-1
+    <br>ISO= ISO/IEC 10646:2003
+    <br>script= 52
+    <br>char= 96,447	Cypriot syllabary, Limbu, Linear B, Osmanya, Shavian, Tai Le, and Ugaritic added, as well as Hexagram symbols.
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd4002003dsn"></a></p>
+  <p id="idCharUcdstd4002003nam">name::
+    <br>* cpt.char.Unicode.4-0-0.2003,
+    <br>* cpt.Unicode.4-0-0.2003,
+    <a class="clsHide" href="#idCharUcdstd4002003nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd3202000">
+  <h3 id="idCharUcdstd3202000H3">Unicode.3-2-0.2000
+    <a class="clsHide" href="#idCharUcsstd3202000H3"></a></h3>
+  <p id="idCharUcdstd3202000dsn">description::
+    <br>The Unicode Consortium, The Unicode Standard, Version 3.2.0,
+    <br>defined by: The Unicode Standard, Version 3.0 (Reading, MA: Addison-Wesley, 2000. ISBN 0-201-61633-5),
+    <br>as amended by the Unicode Standard Annex #27: Unicode 3.1 and the Unicode Standard Annex #28: Unicode 3.2
+    <br>http://www.unicode.org/reports/tr28/
+    <br>===
+    <br>script= 45
+    <br>char= 95,221	Philippine scripts Buhid, Hanunó'o, Tagalog, and Tagbanwa added.
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd3202000dsn"></a></p>
+  <p id="idCharUcdstd3202000nam">name::
+    <br>* cpt.char.Unicode.3-2-0.2000,
+    <br>* cpt.Unicode.3-2-0.2000,
+    <a class="clsHide" href="#idCharUcdstd3202000nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd3102000">
+  <h3 id="idCharUcdstd3102000H3">Unicode.3-1-0.2000
+    <a class="clsHide" href="#idCharUcsstd3102000H3"></a></h3>
+  <p id="idCharUcdstd3102000dsn">description::
+    <br>The Unicode Consortium, The Unicode Standard, Version 3.1.0,
+    <br>defined by: The Unicode Standard, Version 3.0 (Reading, MA: Addison-Wesley, 2000. ISBN 0-201-61633-5),
+    <br>as amended by the Unicode Standard Annex #27: Unicode 3.1
+    <br>http://www.unicode.org/reports/tr27/
+    <br>===
+    <br>script= 41
+    <br>char= 94,205	Deseret, Gothic and Old Italic added, as well as sets of symbols for Western music and Byzantine music, and 42,711 additional CJK Unified Ideographs.
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd3102000dsn"></a></p>
+  <p id="idCharUcdstd3102000nam">name::
+    <br>* cpt.char.Unicode.3-1-0.2000,
+    <br>* cpt.Unicode.3-1-0.2000,
+    <a class="clsHide" href="#idCharUcdstd3102000nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd3002000">
+  <h3 id="idCharUcdstd3002000H3">Unicode.3-0-0.2000
+    <a class="clsHide" href="#idCharUcsstd3002000H3"></a></h3>
+  <p id="idCharUcdstd3002000dsn">description::
+    <br>The Unicode Consortium, The Unicode Standard, Version 3.0.0
+    <br>defined by: The Unicode Standard, Version 3.0 (Reading, MA: Addison-Wesley, 2000. ISBN 0-201-61633-5),
+    <br>http://www.unicode.org/versions/Unicode3.0.0/
+    <br>===
+    <br>script= 38
+    <br>char= 49,259	Cherokee, Ethiopic, Khmer, Mongolian, Burmese, Ogham, Runic, Sinhala, Syriac, Thaana, Unified Canadian Aboriginal Syllabics, and Yi Syllables added, as well as a set of Braille patterns.
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd3002000dsn"></a></p>
+  <p id="idCharUcdstd3002000nam">name::
+    <br>* cpt.char.Unicode.3-0-0.2000,
+    <br>* cpt.Unicode.3-0-0.2000,
+    <a class="clsHide" href="#idCharUcdstd3002000nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd2101998">
+  <h3 id="idCharUcdstd2101998H3">Unicode.2-1-0.1998
+    <a class="clsHide" href="#idCharUcsstd2101998H3"></a></h3>
+  <p id="idCharUcdstd2101998dsn">description::
+    <br>date= May 1998
+    <br>ISO= ISO/IEC 10646-1:1993 plus Amendments 5, 6 and 7, and two characters from Amendment 18
+    <br>script= 25
+    <br>char= 38,952	Euro sign added.
+    <br>[http://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd2101998dsn"></a></p>
+  <p id="idCharUcdstd2101998nam">name::
+    <br>* cpt.char.Unicode.2-1-0.1998,
+    <br>* cpt.Unicode.2-1-0.1998,
+    <a class="clsHide" href="#idCharUcdstd2101998nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd2001996">
+  <h3 id="idCharUcdstd2001996H3">Unicode.2-0-0.1996
+    <a class="clsHide" href="#idCharUcsstd2001996H3"></a></h3>
+  <p id="idCharUcdstd2001996dsn">description::
+    <br>date= July 1996
+    <br>book= ISBN 0-201-48345-9
+    <br>ISO= ISO/IEC 10646-1:1993 plus Amendments 5, 6 and 7
+    <br>script= 25
+    <br>char= 38,950	Original set of Hangul syllables removed, and a new set of 11,172 Hangul syllables added at a new location. Tibetan added back in a new location and with a different character repertoire. Surrogate character mechanism defined, and Plane 15 and Plane 16 Private Use Areas allocated.
+    <br>[http://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd2001996dsn"></a></p>
+  <p id="idCharUcdstd2001996nam">name::
+    <br>* cpt.char.Unicode.2-0-0.1996,
+    <br>* cpt.Unicode.2-0-0.1996,
+    <a class="clsHide" href="#idCharUcdstd2001996nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd1101993">
+  <h3 id="idCharUcdstd1101993H3">Unicode.1-1-0.1993
+    <a class="clsHide" href="#idCharUcsstd1101993H3"></a></h3>
+  <p id="idCharUcdstd1101993dsn">description::
+    <br>date= June 1993
+    <br>ISO= ISO/IEC 10646-1:1993
+    <br>script= 24
+    <br>char= 34,233	4,306 more Hangul syllables added to original set of 2,350 characters. Tibetan removed.
+    <br>[http://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd1101993dsn"></a></p>
+  <p id="idCharUcdstd1101993nam">name::
+    <br>* cpt.char.Unicode.1-1-0.1993,
+    <br>* cpt.Unicode.1-1-0.1993,
+    <a class="clsHide" href="#idCharUcdstd1101993nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd1011992">
+  <h3 id="idCharUcdstd1011992H3">Unicode.1-0-1.1992
+    <a class="clsHide" href="#idCharUcsstd1011992H3"></a></h3>
+  <p id="idCharUcdstd1011992dsn">description::
+    <br>date= June 1992
+    <br>book= ISBN 0-201-60845-6 (Vol.2)
+    <br>script= 25
+    <br>char= 28,359	The initial set of 20,902 CJK Unified Ideographs is defined.
+    <br>[http://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd1011992dsn"></a></p>
+  <p id="idCharUcdstd1011992nam">name::
+    <br>* cpt.char.Unicode.1-0-1.1992,
+    <br>* cpt.Unicode.1-0-1.1992,
+    <a class="clsHide" href="#idCharUcdstd1011992nam"></a></p>
+  </section>
+
+  <section id="idCharUcdstd1001991">
+  <h3 id="idCharUcdstd1001991H3">Unicode.1-0-0.1991
+    <a class="clsHide" href="#idCharUcsstd1001991H3"></a></h3>
+  <p id="idCharUcdstd1001991dsn">description::
+    <br>date= October 1991
+    <br>book= ISBN 0-201-56788-1 (Vol.1)
+    <br>script= 24
+    <br>char= 7,161	Initial repertoire covers these scripts: Arabic, Armenian, Bengali, Bopomofo, Cyrillic, Devanagari, Georgian, Greek and Coptic, Gujarati, Gurmukhi, Hangul, Hebrew, Hiragana, Kannada, Katakana, Lao, Latin, Malayalam, Oriya, Tamil, Telugu, Thai, and Tibetan.
+    <br>[http://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdstd1001991dsn"></a></p>
+  <p id="idCharUcdstd1001991nam">name::
+    <br>* cpt.char.Unicode.1-0-0.1991,
+    <br>* cpt.Unicode.1-0-0.1991,
+    <a class="clsHide" href="#idCharUcdstd1001991nam"></a></p>
   </section>
   </section>
 
@@ -423,6 +1065,7 @@
     <a class="clsHide" href="#idCharUcdPlnH2"></a></h2>
   <p id="idCharUcdPlnnam">name::
     <br>* cpt.char.Unicode.plane,
+    <br>* cpt.Unicode'plane,
     <br>* cpt.Unicode-plane,
     <a class="clsHide" href="#idCharUcdPlnnam"></a></p>
   </section>
@@ -432,6 +1075,7 @@
     <a class="clsHide" href="#idCharUcdBlkH2"></a></h2>
   <p id="idCharUcdBlknam">name::
     <br>* cpt.char.Unicode.block,
+    <br>* cpt.Unicode'block,
     <br>* cpt.Unicode-block,
     <a class="clsHide" href="#idCharUcdBlknam"></a></p>
   </section>
