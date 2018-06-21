@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char (char.0-2-0.2018-06-20 draft)</title>
+  <title>Mcs.char (char.0-3-0.2018-06-21 draft)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -113,17 +113,20 @@
   </section>
 
   <section id="idCharUcdage">
-  <h2 id="idCharUcdageH2">Unicode-char'age-property
+  <h2 id="idCharUcdageH2">Unicode-char'Age-property
     <a class="clsHide" href="#idCharUcdageH2"></a></h2>
   <p id="idCharUcdagedsn">description::
     <br>The Age property indicates the first version in which a particular Unicode character was assigned.
     <br>For example, U+20AC € EURO SIGN was added to Version 2.1 of the Unicode Standard, so it has age=2.1, while U+20B9 ₹ INDIAN RUPEE SIGN was added to Version 6.0 of the Unicode Standard, so it has age=6.0.
-    <br>[http://www.unicode.org/reports/tr44/#Character_Age]
+    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Character_Age]
     <a class="clsHide" href="#idCharUcdagedsn"></a></p>
   <p id="idCharUcdagenam">name::
-    <br>* cpt.char.Unicode'age-property,
-    <br>* cpt.Unicode'age-property,
+    <br>* cpt.char.Unicode'Age-property,
+    <br>* cpt.Unicode'Age-property,
     <a class="clsHide" href="#idCharUcdagenam"></a></p>
+  <p id="idCharUcdagewpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedAge.txt,
+    <a class="clsHide" href="#idCharUcdagewpa"></a></p>
   </section>
 
   <section id="idCharUcdbdcls">
@@ -258,7 +261,11 @@
     <a class="clsHide" href="#idCharUcdglcrdsn"></a></p>
   <p id="idCharUcdglcrnam">name::
     <br>* cpt.char.Unicode'General_Category,
+    <br>* cpt.Unicode'General_Category,
     <a class="clsHide" href="#idCharUcdglcrnam"></a></p>
+  <p id="idCharUcdglcrwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedGeneralCategory.txt,
+    <a class="clsHide" href="#idCharUcdglcrwpa"></a></p>
   <div id="idCharUcdglcrSpc">
     <p>specific::
     <br>[http://www.unicode.org/reports/tr44/#GC_Values_Table]
@@ -346,6 +353,438 @@
     <a class="clsHide" href="#idCharUcdglcrSpc"></a></div>
   </section>
 
+  <section id="idCharUcdjggp">
+  <h2 id="idCharUcdjggpH2">Unicode-char'Joining_Group-property
+    <a class="clsHide" href="#idCharUcdjggpH2"></a></h2>
+  <p id="idCharUcdjggpdsn">description::
+    <br>The Arabic characters with the property values Joining_Type=Dual_Joining and Joining_Type=Right_Joining can each be subdivided into shaping groups, based on the behavior of their letter skeletons when shaped in context.
+    <br>The Unicode character property that specifies these groups is called Joining_Group.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf]
+    <br>===
+    <br>All code points not explicitly listed for Joining_Group  have the value No_Joining_Group.
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningGroup.txt]
+    <a class="clsHide" href="#idCharUcdjggpdsn"></a></p>
+  <p id="idCharUcdjggpnam">name::
+    <br>* cpt.char.Unicode'Joining_Group-property,
+    <br>* cpt.Unicode'Joining_Group-property,
+    <a class="clsHide" href="#idCharUcdjggpnam"></a></p>
+  <p id="idCharUcdjggpwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningGroup.txt,
+    <a class="clsHide" href="#idCharUcdjggpwpa"></a></p>
+  <p id="idCharUcdjggpSpc">specific::
+    <br>* African_Feh,
+    <br>* African_Noon,
+    <br>* African_Qaf,
+    <br>* Ain,
+    <br>* Alaph,
+    <br>* Alef,
+    <br>* Beh,
+    <br>* Beth,
+    <br>* Burushaski_Yeh_Barree,
+    <br>* Dal,
+    <br>* Dalath_Rish,
+    <br>* E,
+    <br>* Farsi_Yeh,
+    <br>* Fe,
+    <br>* Feh,
+    <br>* Final_Semkath,
+    <br>* Gaf,
+    <br>* Gamal,
+    <br>* Hah,
+    <br>* Hanifi_Rohingya_Kinna_Ya,
+    <br>* Hanifi_Rohingya_Pa,
+    <br>* He,
+    <br>* Heh,
+    <br>* Heh_Goal,
+    <br>* Heth,
+    <br>* Kaf,
+    <br>* Kaph,
+    <br>* Khaph,
+    <br>* Knotted_Heh,
+    <br>* Lam,
+    <br>* Lamadh,
+    <br>* Malayalam_Bha,
+    <br>* Malayalam_Ja,
+    <br>* Malayalam_Lla,
+    <br>* Malayalam_Llla,
+    <br>* Malayalam_Nga,
+    <br>* Malayalam_Nna,
+    <br>* Malayalam_Nnna,
+    <br>* Malayalam_Nya,
+    <br>* Malayalam_Ra,
+    <br>* Malayalam_Ssa,
+    <br>* Malayalam_Tta,
+    <br>* Manichaean_Aleph,
+    <br>* Manichaean_Ayin,
+    <br>* Manichaean_Beth,
+    <br>* Manichaean_Daleth,
+    <br>* Manichaean_Dhamedh,
+    <br>* Manichaean_Five,
+    <br>* Manichaean_Gimel,
+    <br>* Manichaean_Heth,
+    <br>* Manichaean_Hundred,
+    <br>* Manichaean_Kaph,
+    <br>* Manichaean_Lamedh,
+    <br>* Manichaean_Mem,
+    <br>* Manichaean_Nun,
+    <br>* Manichaean_One,
+    <br>* Manichaean_Pe,
+    <br>* Manichaean_Qoph,
+    <br>* Manichaean_Resh,
+    <br>* Manichaean_Sadhe,
+    <br>* Manichaean_Samekh,
+    <br>* Manichaean_Taw,
+    <br>* Manichaean_Ten,
+    <br>* Manichaean_Teth,
+    <br>* Manichaean_Thamedh,
+    <br>* Manichaean_Twenty,
+    <br>* Manichaean_Waw,
+    <br>* Manichaean_Yodh,
+    <br>* Manichaean_Zayin,
+    <br>* Meem,
+    <br>* Mim,
+    <br>* Noon,
+    <br>* Nun,
+    <br>* Nya,
+    <br>* Pe,
+    <br>* Qaf,
+    <br>* Qaph,
+    <br>* Reh,
+    <br>* Reversed_Pe,
+    <br>* Rohingya_Yeh,
+    <br>* Sad,
+    <br>* Sadhe,
+    <br>* Seen,
+    <br>* Semkath,
+    <br>* Shin,
+    <br>* Straight_Waw,
+    <br>* Swash_Kaf,
+    <br>* Syriac_Waw,
+    <br>* Tah,
+    <br>* Taw,
+    <br>* Teh_Marbuta,
+    <br>* Teh_Marbuta_Goal,
+    <br>* Teth,
+    <br>* Waw,
+    <br>* Yeh,
+    <br>* Yeh_Barree,
+    <br>* Yeh_With_Tail,
+    <br>* Yudh,
+    <br>* Yudh_He,
+    <br>* Zain,
+    <br>* Zhain,
+    <a class="clsHide" href="#idCharUcdjggpSpc"></a></p>
+  </section>
+
+  <section id="idCharUcdjgtp">
+  <h2 id="idCharUcdjgtpH2">Unicode-char'Joining_Type-property
+    <a class="clsHide" href="#idCharUcdjgtpH2"></a></h2>
+  <p id="idCharUcdjgtpdsn">description::
+    <br>Each Arabic letter must be depicted by one of a number of possible contextual glyph forms.
+    <br>The appropriate form is determined on the basis of the cursive joining behavior of that character as it interacts with the cursive joining behavior of adjacent characters.
+    <br>In the Unicode Standard, such cursive joining behavior is formally described in terms of values of a character property called Joining_Type.
+    [http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf]
+    <br>
+    <br>All code points not explicitly listed for Joining_Type have the value Non_Joining (U).
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningType.txt]
+    <a class="clsHide" href="#idCharUcdjgtpdsn"></a></p>
+  <p id="idCharUcdjgtpnam">name::
+    <br>* cpt.char.Unicode'Joining_Type-property,
+    <br>* cpt.Unicode'Joining_Type-property,
+    <a class="clsHide" href="#idCharUcdjgtpnam"></a></p>
+  <p id="idCharUcdjgtpwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningType.txt,
+    <a class="clsHide" href="#idCharUcdjgtpwpa"></a></p>
+  <p id="idCharUcdjgtpSpc">specific::
+    <br>* R-Right_Joining
+    <br>* L-Left_Joining
+    <br>* D-Dual_Joining
+    <br>* C-Join_Causing
+    <br>* U-Non_Joining
+    <br>* T-Transparent,
+    <a class="clsHide" href="#idCharUcdjgtpSpc"></a></p>
+  </section>
+
+  <section id="idCharUcdlnbk">
+  <h2 id="idCharUcdlnbkH2">Unicode-char'Line_Break-property
+    <a class="clsHide" href="#idCharUcdlnbkH2"></a></h2>
+  <p id="idCharUcdlnbkdsn">description::
+    <br>Line breaking, also known as word wrapping, is the process of breaking a section of text into lines such that it will fit in the available width of a page, window or other display area.
+    <br>The Unicode Line Breaking Algorithm performs part of this process.
+    <br>Given an input text, it produces a set of positions called "break opportunities" that are appropriate points to begin a new line.
+    <br>The selection of actual line break positions from the set of break opportunities is not covered by the Unicode Line Breaking Algorithm, but is in the domain of higher level software with knowledge of the available width and the display size of the text.
+    <br>[https://www.unicode.org/reports/tr14/tr14-41.html#Scope]
+    <a class="clsHide" href="#idCharUcdlnbkdsn"></a></p>
+  <p id="idCharUcdlnbknam">name::
+    <br>* cpt.char.Unicode'Line_Break-property,
+    <br>* cpt.Unicode'Line_Break-property,
+    <a class="clsHide" href="#idCharUcdlnbknam"></a></p>
+  <p id="idCharUcdlnbkwpa">addressWpg::
+    <br>* https://www.unicode.org/reports/tr14/,
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/LineBreak.txt,
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedLineBreak.txt,
+    <a class="clsHide" href="#idCharUcdlnbkwpa"></a></p>
+  <div id="idCharUcdlnbkSpc">specific::
+    <table>
+      <tr>
+        <td>Class
+        <td>Descriptive Name
+        <td>Examples
+        <td>Behavior
+      <tr>
+      <td class="clsCenter clsB" colspan="4">Non-tailorable Line Breaking Classes
+      <tr>
+        <td>BK
+        <td>Mandatory Break
+        <td>NL, PARAGRAPH SEPARATOR
+        <td>Cause a line break (after)
+      <tr>
+        <td>CR
+        <td>Carriage Return
+        <td>CR
+        <td>Cause a line break (after), except between CR and LF
+      <tr>
+        <td>LF
+        <td>Line Feed
+        <td>LF
+        <td>Cause a line break (after)
+      <tr>
+        <td>CM
+        <td>Combining Mark
+        <td>Combining marks, control codes
+        <td>Prohibit a line break between the character and the preceding character
+      <tr>
+        <td>NL
+        <td>Next Line
+        <td>NEL
+        <td>Cause a line break (after)
+      <tr>
+        <td>SG
+        <td>Surrogate
+        <td>Surrogates
+        <td>Do not occur in well-formed text
+      <tr>
+        <td>WJ
+        <td>Word Joiner
+        <td>WJ
+        <td>Prohibit line breaks before and after
+      <tr>
+        <td>ZW
+        <td>Zero Width Space
+        <td>ZWSP
+        <td>Provide a break opportunity
+      <tr>
+        <td>GL
+        <td>Non-breaking (“Glue”)
+        <td>CGJ, NBSP, ZWNBSP
+        <td>Prohibit line breaks before and after
+      <tr>
+        <td>SP
+        <td>Space
+        <td>SPACE
+        <td>Enable indirect line breaks
+      <tr>
+        <td>ZWJ
+        <td>Zero Width Joiner
+        <td>Zero Width Joiner
+        <td>Prohibit line breaks within joiner sequences
+      <tr>
+      <td class="clsCenter clsB" colspan="4">Break Opportunities
+      <tr>
+        <td>B2
+        <td>Break Opportunity Before and After
+        <td>Em dash
+        <td>Provide a line break opportunity before and after the character
+      <tr>
+        <td>BA
+        <td>Break After
+        <td>Spaces, hyphens
+        <td>Generally provide a line break opportunity after the character
+      <tr>
+        <td>BB
+        <td>Break Before
+        <td>Punctuation used in dictionaries
+        <td>Generally provide a line break opportunity before the character
+      <tr>
+        <td>HY
+        <td>Hyphen
+        <td>HYPHEN-MINUS
+        <td>Provide a line break opportunity after the character, except in numeric context
+      <tr>
+        <td>CB
+        <td>Contingent Break Opportunity
+        <td>Inline objects
+        <td>Provide a line break opportunity contingent on additional information
+      <tr>
+      <td class="clsCenter clsB" colspan="4">Characters Prohibiting Certain Breaks
+      <tr>
+        <td>CL
+        <td>Close Punctuation
+        <td>“}”, “❳”, “⟫” etc.
+        <td>Prohibit line breaks before
+      <tr>
+        <td>CP
+        <td>Close Parenthesis
+        <td>“)”, “]”
+        <td>Prohibit line breaks before
+      <tr>
+        <td>EX
+        <td>Exclamation/<br> Interrogation
+        <td>“!”, “?”, etc.
+        <td>Prohibit line breaks before
+      <tr>
+        <td>IN
+        <td>Inseparable
+        <td>Leaders
+        <td>Allow only indirect line breaks between pairs
+      <tr>
+        <td>NS
+        <td>Nonstarter
+        <td>“‼”, “‽”, “⁇”, “⁉”, etc.
+        <td>Allow only indirect line breaks before
+      <tr>
+        <td>OP
+        <td>Open Punctuation
+        <td>“(“, “[“, “{“, etc.
+        <td>Prohibit line breaks after
+      <tr>
+        <td>QU
+        <td>Quotation
+        <td>Quotation marks
+        <td>Act like they are both opening and closing
+      <tr>
+      <td class="clsCenter clsB" colspan="4">Numeric Context
+      <tr>
+        <td>IS
+        <td>Infix Numeric Separator
+        <td>. ,
+        <td>Prevent breaks after any and before numeric
+      <tr>
+        <td>NU
+        <td>Numeric
+        <td>Digits
+        <td>Form numeric expressions for line breaking purposes
+      <tr>
+        <td>PO
+        <td>Postfix Numeric
+        <td>%, ¢
+        <td>Do not break following a numeric expression
+      <tr>
+        <td>PR
+        <td>Prefix Numeric
+        <td>$, £, ¥, etc.
+        <td>Do not break in front of a numeric expression
+      <tr>
+        <td>SY
+        <td>Symbols Allowing Break After
+        <td>/
+        <td>Prevent a break before, and allow a break after
+      <tr>
+      <td class="clsCenter clsB" colspan="4">Other Characters
+      <tr>
+        <td>AI
+        <td>Ambiguous (Alphabetic or Ideographic)
+        <td>Characters with Ambiguous East Asian Width
+        <td>Act like AL when the resolved <abbr title="East Asian Width">EAW</abbr> is N; otherwise, act as ID
+      <tr>
+        <td>AL
+        <td>Alphabetic
+        <td>Alphabets and regular symbols
+        <td>Are alphabetic characters or symbols that are used with alphabetic characters
+      <tr>
+        <td>CJ
+        <td>Conditional Japanese Starter
+        <td>Small kana
+        <td>Treat as NS or ID for strict or normal breaking.
+       <tr>
+        <td>EB
+        <td>Emoji Base
+        <td>All emoji allowing modifiers
+        <td>Do not break from following Emoji Modifier
+       <tr>
+        <td>EM
+        <td>Emoji Modifier
+        <td>Skin tone modifiers
+        <td>Do not break from preceding Emoji Base
+       <tr>
+        <td>H2
+        <td>Hangul LV Syllable
+        <td>Hangul
+        <td>Form Korean syllable blocks
+      <tr>
+        <td>H3
+        <td>Hangul LVT Syllable
+        <td>Hangul
+        <td>Form Korean syllable blocks
+      <tr>
+        <td>HL
+        <td>Hebrew Letter
+        <td>Hebrew
+        <td>Do not break around a following hyphen; otherwise act as Alphabetic
+      <tr>
+        <td>ID
+        <td>Ideographic
+        <td>Ideographs
+        <td>Break before or after, except in some numeric context
+      <tr>
+        <td>JL
+        <td>Hangul L Jamo
+        <td>Conjoining jamo
+        <td>Form Korean syllable blocks
+      <tr>
+        <td>JV
+        <td>Hangul V Jamo
+        <td>Conjoining jamo
+        <td>Form Korean syllable blocks
+      <tr>
+        <td>JT
+        <td>Hangul T Jamo
+        <td>Conjoining jamo
+        <td>Form Korean syllable blocks
+      <tr>
+        <td>RI
+        <td>Regional Indicator
+        <td>REGIONAL INDICATOR SYMBOL LETTER A .. Z
+        <td>Keep pairs together. For pairs, break before and after other classes
+      <tr>
+        <td>SA
+        <td>Complex Context Dependent (South East Asian)
+        <td>South East Asian: Thai, Lao, Khmer
+        <td>Provide a line break opportunity contingent on additional, language-specific context analysis
+      <tr>
+        <td>XX
+        <td>Unknown
+        <td>Most unassigned, private-use
+        <td>Have as yet unknown line breaking behavior or unassigned code positions
+    </table>
+    <p>[https://www.unicode.org/reports/tr14/tr14-41.html#Table1]
+    </p>
+    <a class="clsHide" href="#idCharUcdlnbkSpc"></a></div>
+  </section>
+
+  <section id="idCharUcdnctp">
+  <h2 id="idCharUcdnctpH2">Unicode-char'Numeric_Type-property
+    <a class="clsHide" href="#idCharUcdnctpH2"></a></h2>
+  <p id="idCharUcdnctpdsn">description::
+    <br>Derived Property:   Numeric_Type
+    <br>The values are based on fields 6-8 of UnicodeData.txt, plus the fields kAccountingNumeric, kOtherNumeric, kPrimaryNumeric in the Unicode Han Database (Unihan).
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericType.txt]
+    <a class="clsHide" href="#idCharUcdnctpdsn"></a></p>
+  <p id="idCharUcdnctpnam">name::
+    <br>* cpt.char.Unicode'Numeric_Type-property,
+    <br>* cpt.Unicode'Numeric_Type-property,
+    <a class="clsHide" href="#idCharUcdnctpnam"></a></p>
+  <p id="idCharUcdnctpwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericType.txt,
+    <a class="clsHide" href="#idCharUcdnctpwpa"></a></p>
+  <p id="idCharUcdnctpSpc">specific::
+    <br>* Decimal: When there is a value in field 6.
+    <br>* Digit:   When there is a value in field 7, but not in field 6.
+    <br>* Numeric: When there are values for kAccountingNumeric, kOtherNumeric, kPrimaryNumeric, or there is a value in field 8, but not in field 7.
+    <br>* None:    Otherwise. All code points not explicitly listed for Numeric_Type have the value None.
+    <a class="clsHide" href="#idCharUcdnctpSpc"></a></p>
+  </section>
+
   <section id="idCharUcdprpt">
   <h2 id="idCharUcdprptH2">Unicode-char'property
     <a class="clsHide" href="#idCharUcdprptH2"></a></h2>
@@ -397,6 +836,8 @@
     <br>* cpt.char.Unicode'simple-property,
     <br>* cpt.char.Unicode'property.derivedNo,
     <br>* cpt.char.Unicode'property.simple,
+    <br>* cpt.Unicode'property.derivedNo,
+    <br>* cpt.Unicode'property.simple,
     <a class="clsHide" href="#idCharUcdprptSmplnam"></a></p>
   </section>
 
@@ -410,6 +851,7 @@
   <p id="idCharUcdprptDrvdnam">name::
     <br>* cpt.char.Unicode'derived-property,
     <br>* cpt.char.Unicode'property.derived,
+    <br>* cpt.Unicode'property.derived,
     <a class="clsHide" href="#idCharUcdprptDrvdnam"></a></p>
   </section>
 
@@ -423,6 +865,7 @@
   <p id="idCharUcdprptBnrnam">name::
     <br>* cpt.char.Unicode'binary-property,
     <br>* cpt.char.Unicode'property.binary,
+    <br>* cpt.Unicode'property.binary,
     <a class="clsHide" href="#idCharUcdprptBnrnam"></a></p>
   </section>
 
@@ -436,6 +879,7 @@
   <p id="idCharUcdprptCtlgnam">name::
     <br>* cpt.char.Unicode'catalog-property,
     <br>* cpt.char.Unicode'property.catalog,
+    <br>* cpt.Unicode'property.catalog,
     <a class="clsHide" href="#idCharUcdprptCtlgnam"></a></p>
   </section>
 
@@ -449,6 +893,7 @@
   <p id="idCharUcdprptEnmnnam">name::
     <br>* cpt.char.Unicode'enumeration-property,
     <br>* cpt.char.Unicode'property.enumeration,
+    <br>* cpt.Unicode'property.enumeration,
     <a class="clsHide" href="#idCharUcdprptEnmnnam"></a></p>
   </section>
 
@@ -462,6 +907,7 @@
   <p id="idCharUcdprptStrgnam">name::
     <br>* cpt.char.Unicode'string-property,
     <br>* cpt.char.Unicode'property.string,
+    <br>* cpt.Unicode'property.string,
     <a class="clsHide" href="#idCharUcdprptStrgnam"></a></p>
   </section>
 
@@ -474,7 +920,7 @@
     <a class="clsHide" href="#idCharUcdprptNmrcdsn"></a></p>
   <p id="idCharUcdprptNmrcnam">name::
     <br>* cpt.char.Unicode'numeric-property,
-    <br>* cpt.char.Unicode'property.numeric,
+    <br>* cpt.Unicode'property.numeric,
     <a class="clsHide" href="#idCharUcdprptNmrcnam"></a></p>
   </section>
 
@@ -488,6 +934,7 @@
   <p id="idCharUcdprptMiscnam">name::
     <br>* cpt.char.Unicode'misc-property,
     <br>* cpt.char.Unicode'property.misc,
+    <br>* cpt.Unicode'property.misc,
     <a class="clsHide" href="#idCharUcdprptMiscnam"></a></p>
   </section>
   </section>
@@ -612,7 +1059,7 @@
     <a class="clsHide" href="#idCharUcdstducddsn"></a></p>
   <p id="idCharUcdstducdnam">name::
     <br>* cpt.char.Unicode'Unicode-database,
-    <br>* cpt.UCD.Unicode-character-database,
+    <br>* cpt.UCD-Unicode-character-database,
     <br>* cpt.Unicode'database-(UCD),
     <br>* cpt.Unicode-character-database-(UCD),
     <br>* cpt.Unicode-database-(UCD),
