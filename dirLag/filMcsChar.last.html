@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char (char.0-3-0.2018-06-21 draft)</title>
+  <title>Mcs.char (char.0-4-0.2018-06-22 draft)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -49,7 +49,7 @@
   <h1 id="idChargncFTH1">GENERIC of char
     <a class="clsHide" href="#idChargncFTH1"></a></h1>
   <p id="idChargncchn">Generic-chain::
-    <br>*
+    <br>* written-language-attribute,
     <br>...
     <br>* entity,
     <a class="clsHide" href="#idChargncchn"></a></p>
@@ -129,6 +129,23 @@
     <a class="clsHide" href="#idCharUcdagewpa"></a></p>
   </section>
 
+  <section id="idCharUcdalfc">
+  <h2 id="idCharUcdalfcH2">Unicode-char'Alphabetic-property
+    <a class="clsHide" href="#idCharUcdalfcH2"></a></h2>
+  <p id="idCharUcdalfcdsn">description::
+    <br>Derived Property: Alphabetic
+    <br>Generated from: Uppercase + Lowercase + Lt + Lm + Lo + Nl + Other_Alphabetic
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt]
+    <a class="clsHide" href="#idCharUcdalfcdsn"></a></p>
+  <p id="idCharUcdalfcnam">name::
+    <br>* cpt.char.Unicode'Alphabetic-property,
+    <br>* cpt.Unicode'Alphabetic-property,
+    <a class="clsHide" href="#idCharUcdalfcnam"></a></p>
+  <p id="idCharUcdalfcwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt,
+    <a class="clsHide" href="#idCharUcdalfcwpa"></a></p>
+  </section>
+
   <section id="idCharUcdbdcls">
   <h2 id="idCharUcdbdclsH2">Unicode-char'Bidi_Class-property
     <a class="clsHide" href="#idCharUcdbdclsH2"></a></h2>
@@ -186,6 +203,163 @@
   <p id="idCharUcdbdmrwpa">addressWpg::
     <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBinaryProperties.txt,
     <a class="clsHide" href="#idCharUcdbdmrwpa"></a></p>
+  </section>
+
+  <section id="idCharUcdbmg">
+  <h2 id="idCharUcdbmgH2">Unicode-char'Bidi_Mirroring_Glyph-property
+    <a class="clsHide" href="#idCharUcdbmgH2"></a></h2>
+  <p id="idCharUcdbmgdsn">description::
+    <br>Informative mapping for substituting characters in an implementation of bidirectional mirroring. This maps a subset of characters with the Bidi_Mirrored property to other characters that normally are displayed with the corresponding mirrored glyph. When a character with the Bidi_Mirrored property has the default value for Bidi_Mirroring_Glyph, that means that no other character exists whose glyph is appropriate for character-based glyph mirroring. Implementations must then use other mechanisms to implement mirroring of those characters for the Unicode Bidirectional Algorithm. See Unicode Standard Annex #9, "Unicode Bidirectional Algorithm" [UAX9]. Do not confuse this property with the Bidi_Mirrored property itself.
+    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Bidi_Mirroring_Glyph]
+    <a class="clsHide" href="#idCharUcdbmgdsn"></a></p>
+  <p id="idCharUcdbmgnam">name::
+    <br>* cpt.char.Unicode'Bidi_Mirroring_Glyph-property,
+    <br>* cpt.Unicode'Bidi_Mirroring_Glyph-property,
+    <a class="clsHide" href="#idCharUcdbmgnam"></a></p>
+  <p id="idCharUcdbmgwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/BidiMirroring.txt,
+    <a class="clsHide" href="#idCharUcdbmgwpa"></a></p>
+  </section>
+
+  <section id="idCharUcdcase">
+  <h2 id="idCharUcdcaseH2">Unicode-char'Case-property
+    <a class="clsHide" href="#idCharUcdcaseH2"></a></h2>
+  <p id="idCharUcdcasedsn">description::
+    <br>Case is a normative property of characters in certain alphabets whereby characters are considered to be variants of a single letter. These variants, which may differ markedly in shapeand size, are called the uppercase letter (also known as capital or majuscule) and the lowercase letter (also known as small or minuscule). The uppercase letter is generally larger than the lowercase letter.
+    <br>Because of the inclusion of certain composite characters for compatibility, such as U+01F1 latin capital letter dz, a third case, called titlecase, is used where the first character of a word must be capitalized. An example of such a character is U+01F2 latin capital letter d with small letter z. The three case forms are UPPERCASE, Titlecase, and lowercase.
+    <br>For those scripts that have case (Latin, Greek, Coptic, Cyrillic, Glagolitic, Armenian, archaic Georgian, Deseret, and Warang Citi), uppercase characters typically contain the word capital in their names. Lowercase characters typically contain the word small. However, this is not a reliable guide.  The word small in the names of characters from scripts other than those just listed has nothing to do with case. There are other exceptions as well, such as small capital letters that are not formally uppercase.  Some Greek characters with capital  in their names are actually titlecase.  (Note that while the archaic Georgian script contained upper- and lowercase pairs, they are not used in modern Georgian.  See Section 7.7, Georgian.)
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 4.2]
+    <a class="clsHide" href="#idCharUcdcasedsn"></a></p>
+  <p id="idCharUcdcasenam">name::
+    <br>* cpt.char.Unicode'Case-property,
+    <br>* cpt.Unicode'Case-property,
+    <a class="clsHide" href="#idCharUcdcasenam"></a></p>
+  <p id="idCharUcdcaseSpc">specific::
+    <br>* Lowercase,
+    <br>* Titlecase,
+    <br>* Uppercase,
+    <a class="clsHide" href="#idCharUcdcaseSpc"></a></p>
+
+  <section id="idCharUcdcaseLwr">
+  <h3 id="idCharUcdcaseLwrH3">Unicode-char'Lowercase-property
+    <a class="clsHide" href="#idCharUcdcaseLwrH3"></a></h3>
+  <p id="idCharUcdcaseLwrdsn">description::
+    <br>Derived Property: Lowercase
+    <br>Generated from: Ll + Other_Lowercase
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt]
+    <a class="clsHide" href="#idCharUcdcaseLwrdsn"></a></p>
+  <p id="idCharUcdcaseLwrnam">name::
+    <br>* cpt.char.Unicode'Lowercase-property,
+    <br>* cpt.Unicode'Lowercase-property,
+    <a class="clsHide" href="#idCharUcdcaseLwrnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcaseUpr">
+  <h3 id="idCharUcdcaseUprH3">Unicode-char'Uppercase-property
+    <a class="clsHide" href="#idCharUcdcaseUprH3"></a></h3>
+  <p id="idCharUcdcaseUprdsn">description::
+    <br>Derived Property: Uppercase
+    <br>Generated from: Lu + Other_Uppercase
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt]
+    <a class="clsHide" href="#idCharUcdcaseUprdsn"></a></p>
+  <p id="idCharUcdcaseUprnam">name::
+    <br>* cpt.char.Unicode'Uppercase-property,
+    <br>* cpt.Unicode'Uppercase-property,
+    <a class="clsHide" href="#idCharUcdcaseUprnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcaseTtl">
+  <h3 id="idCharUcdcaseTtlH3">Unicode-char'Titlecase-property
+    <a class="clsHide" href="#idCharUcdcaseTtlH3"></a></h3>
+  <p id="idCharUcdcaseTtldsn">description::
+    <br>Because of the inclusion of certain composite characters for compatibility, such as U+01F1 latin capital letter dz, a third case, called titlecase, is used where the first character of a word must be capitalized. An example of such a character is U+01F2 latin capital letter d with small letter z. The three case forms are UPPERCASE, Titlecase, and lowercase.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 4.2]
+    <a class="clsHide" href="#idCharUcdcaseTtldsn"></a></p>
+  <p id="idCharUcdcaseTtlnam">name::
+    <br>* cpt.char.Unicode'Titlecase-property,
+    <br>* cpt.Unicode'Titlecase-property,
+    <a class="clsHide" href="#idCharUcdcaseTtlnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcaseCsd">
+  <h3 id="idCharUcdcaseCsdH3">Unicode-char'Cased-property
+    <a class="clsHide" href="#idCharUcdcaseCsdH3"></a></h3>
+  <p id="idCharUcdcaseCsddsn">description::
+    <br>D135 A character C is defined to be cased if and only if C has the Lowercase or Uppercase property or has a General_Category value of Titlecase_Letter.
+    <br>• The Uppercase and Lowercase property values are specified in the data file DerivedCoreProperties.txt in the Unicode Character Database.  The derived property Cased is also listed in DerivedCoreProperties.txt.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf]
+    <a class="clsHide" href="#idCharUcdcaseCsddsn"></a></p>
+  <p id="idCharUcdcaseCsdnam">name::
+    <br>* cpt.char.Unicode'Cased-property,
+    <br>* cpt.Unicode'Cased-property,
+    <a class="clsHide" href="#idCharUcdcaseCsdnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCharUcdcsfg">
+  <h2 id="idCharUcdcsfgH2">Unicode-char'Case_Folding-property
+    <a class="clsHide" href="#idCharUcdcsfgH2"></a></h2>
+  <p id="idCharUcdcsfgdsn">description::
+    <br>Mapping from characters to their case-folded forms. This is an informative file containing normative derived properties.
+    <br>Derived from UnicodeData and SpecialCasing.
+    <br>Note: The case foldings are omitted in the data file if they are the same as the code point itself.
+    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#CaseFolding.txt]
+    <a class="clsHide" href="#idCharUcdcsfgdsn"></a></p>
+  <p id="idCharUcdcsfgnam">name::
+    <br>* cpt.char.Unicode'Case_Folding-property,
+    <br>* cpt.Unicode'Case_Folding-property,
+    <a class="clsHide" href="#idCharUcdcsfgnam"></a></p>
+  <p id="idCharUcdcsfgwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/CaseFolding.txt,
+    <a class="clsHide" href="#idCharUcdcsfgwpa"></a></p>
+  <p id="idCharUcdcsfgSpc">specific::
+    <br>* C: common case folding, common mappings shared by both simple and full mappings.
+    <br>* F: full case folding, mappings that cause strings to grow in length. Multiple characters are separated by spaces.
+    <br>* S: simple case folding, mappings to single characters where different from F.
+    <br>* T: special case for uppercase I and dotted uppercase I
+    <br> - For non-Turkic languages, this mapping is normally not used.
+    <br> - For Turkic languages (tr, az), this mapping can be used instead of the normal mapping for these characters. Note that the Turkic mappings do not maintain canonical equivalence without additional processing. See the discussions of case mapping in the Unicode Standard for more information.
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/CaseFolding.txt]
+    <a class="clsHide" href="#idCharUcdcsfgSpc"></a></p>
+  </section>
+
+  <section id="idCharUcdbpbp">
+  <h2 id="idCharUcdbpbpH2">Unicode-char'Bidi_Paired_Bracket-property
+    <a class="clsHide" href="#idCharUcdbpbpH2"></a></h2>
+  <p id="idCharUcdbpbpdsn">description::
+    <br>For an opening bracket, the code point of the matching closing bracket. For a closing bracket, the code point of the matching opening bracket. This property is used in the implementation of parenthesis matching. See Unicode Standard Annex #9, "Unicode Bidirectional Algorithm" [UAX9].
+    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Bidi_Paired_Bracket]
+    <a class="clsHide" href="#idCharUcdbpbpdsn"></a></p>
+  <p id="idCharUcdbpbpnam">name::
+    <br>* cpt.char.Unicode'Bidi_Paired_Bracket-property,
+    <br>* cpt.Unicode'Bidi_Paired_Bracket-property,
+    <a class="clsHide" href="#idCharUcdbpbpnam"></a></p>
+  <p id="idCharUcdbpbpwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/BidiBrackets.txt,
+    <br>* https://www.unicode.org/reports/tr9/,
+    <a class="clsHide" href="#idCharUcdbpbpwpa"></a></p>
+  </section>
+
+  <section id="idCharUcdbpbtp">
+  <h2 id="idCharUcdbpbtpH2">Unicode-char'Bidi_Paired_Bracket_Type-property
+    <a class="clsHide" href="#idCharUcdbpbtpH2"></a></h2>
+  <p id="idCharUcdbpbtpdsn">description::
+    <br>Type of a paired bracket, either opening or closing. This property is used in the implementation of parenthesis matching. See Unicode Standard Annex #9, "Unicode Bidirectional Algorithm" [UAX9].
+    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Bidi_Paired_Bracket_Type]
+    <a class="clsHide" href="#idCharUcdbpbtpdsn"></a></p>
+  <p id="idCharUcdbpbtpnam">name::
+    <br>* cpt.char.Unicode'Bidi_Paired_Bracket_Type-property,
+    <br>* cpt.Unicode'Bidi_Paired_Bracket_Type-property,
+    <a class="clsHide" href="#idCharUcdbpbtpnam"></a></p>
+  <p id="idCharUcdbpbtpwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/BidiBrackets.txt,
+    <br>* https://www.unicode.org/reports/tr9/,
+    <a class="clsHide" href="#idCharUcdbpbtpwpa"></a></p>
+  <p id="idCharUcdbpbtpSpc">specific::
+    <br>* o-Open,
+    <br>* c-Close,
+    <br>* n-None,
+    <a class="clsHide" href="#idCharUcdbpbtpSpc"></a></p>
   </section>
 
   <section id="idCharUcddnmg">
@@ -260,8 +434,8 @@
     <br>[http://www.unicode.org/reports/tr44/#General_Category_Values]
     <a class="clsHide" href="#idCharUcdglcrdsn"></a></p>
   <p id="idCharUcdglcrnam">name::
-    <br>* cpt.char.Unicode'General_Category,
-    <br>* cpt.Unicode'General_Category,
+    <br>* cpt.char.Unicode'General_Category-property,
+    <br>* cpt.Unicode'General_Category-property,
     <a class="clsHide" href="#idCharUcdglcrnam"></a></p>
   <p id="idCharUcdglcrwpa">addressWpg::
     <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedGeneralCategory.txt,
@@ -762,6 +936,23 @@
     <a class="clsHide" href="#idCharUcdlnbkSpc"></a></div>
   </section>
 
+  <section id="idCharUcdmth">
+  <h2 id="idCharUcdmthH2">Unicode-char'Math-property
+    <a class="clsHide" href="#idCharUcdmthH2"></a></h2>
+  <p id="idCharUcdmthdsn">description::
+    <br>Derived Property: Math
+    <br>Generated from: Sm + Other_Math
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt]
+    <a class="clsHide" href="#idCharUcdmthdsn"></a></p>
+  <p id="idCharUcdmthnam">name::
+    <br>* cpt.char.Unicode'Math-property,
+    <br>* cpt.Unicode'Math-property,
+    <a class="clsHide" href="#idCharUcdmthnam"></a></p>
+  <p id="idCharUcdmthwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt,
+    <a class="clsHide" href="#idCharUcdmthwpa"></a></p>
+  </section>
+
   <section id="idCharUcdnctp">
   <h2 id="idCharUcdnctpH2">Unicode-char'Numeric_Type-property
     <a class="clsHide" href="#idCharUcdnctpH2"></a></h2>
@@ -785,6 +976,24 @@
     <a class="clsHide" href="#idCharUcdnctpSpc"></a></p>
   </section>
 
+  <section id="idCharUcdnctp">
+  <h2 id="idCharUcdnctpH2">Unicode-char'Numeric_Value-property
+    <a class="clsHide" href="#idCharUcdnctpH2"></a></h2>
+  <p id="idCharUcdnctpdsn">description::
+    <br>Finally, we have three fields, kAccountingNumeric, kOtherNumeric, and kPrimaryNumeric to indicate the numerical values an ideograph may have.
+    <br>Traditionally, ideographs were used both for numbers and words, and so many ideographs have (or can have) numeric values.
+    <br>The various kinds of numeric values are specified by these three fields.
+    <br>[https://www.unicode.org/reports/tr38/tr38-25.html#N1024D]
+    <a class="clsHide" href="#idCharUcdnctpdsn"></a></p>
+  <p id="idCharUcdnctpnam">name::
+    <br>* cpt.char.Unicode'Numeric_Value-property,
+    <br>* cpt.Unicode'Numeric_Value-property,
+    <a class="clsHide" href="#idCharUcdnctpnam"></a></p>
+  <p id="idCharUcdnctpwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericValues.txt,
+    <a class="clsHide" href="#idCharUcdnctpwpa"></a></p>
+  </section>
+
   <section id="idCharUcdprpt">
   <h2 id="idCharUcdprptH2">Unicode-char'property
     <a class="clsHide" href="#idCharUcdprptH2"></a></h2>
@@ -799,6 +1008,12 @@
     <br>* <a href="http://www.unicode.org/reports/tr44/#Property_Definitions">http://www.unicode.org/reports/tr44/#Property_Definitions</a>,
     <a class="clsHide" href="#idCharUcdprptwpa"></a></p>
   <p id="idCharUcdprptSpc">specific::
+    <br>* normative,
+    <br>* overridable,
+    <br>* informative,
+    <br>* contributory,
+    <br>* provisional,
+    <br>===
     <br>* simple,
     <br>* derived,
     <br>===
@@ -824,6 +1039,73 @@
     <br>* Script,
     <br>* Vertical_Orientation,
     <a class="clsHide" href="#idCharUcdprptSpc"></a></p>
+
+  <section id="idCharUcdprptNrmv">
+  <h3 id="idCharUcdprptNrmvH3">Unicode-char'property.NORMATIVE
+    <a class="clsHide" href="#idCharUcdprptNrmvH3"></a></h3>
+  <p id="idCharUcdprptNrmvdsn">description::
+    <br>Normative property: A Unicode character property used in the specification of the standard.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
+    <a class="clsHide" href="#idCharUcdprptNrmvdsn"></a></p>
+  <p id="idCharUcdprptNrmvnam">name::
+    <br>* cpt.char.Unicode'property.normative,
+    <br>* cpt.Unicode'property.normative,
+    <a class="clsHide" href="#idCharUcdprptNrmvnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptOvrl">
+  <h3 id="idCharUcdprptOvrlH3">Unicode-char'property.OVERRIDABLE
+    <a class="clsHide" href="#idCharUcdprptOvrlH3"></a></h3>
+  <p id="idCharUcdprptOvrldsn">description::
+    <br>Overridable property: A normative property whose values may be overridden by conformant higher-level protocols.
+    <br>• For example, the Canonical_Decomposition property is not overridable.  The Uppercase property can be overridden.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
+    <a class="clsHide" href="#idCharUcdprptOvrldsn"></a></p>
+  <p id="idCharUcdprptOvrlnam">name::
+    <br>* cpt.char.Unicode'property.overridable,
+    <br>* cpt.Unicode'property.overridable,
+    <a class="clsHide" href="#idCharUcdprptOvrlnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptInfv">
+  <h3 id="idCharUcdprptInfvH3">Unicode-char'property.INFORMATIVE
+    <a class="clsHide" href="#idCharUcdprptInfvH3"></a></h3>
+  <p id="idCharUcdprptInfvdsn">description::
+    <br>Informative property: A Unicode character property whose values are provided for information only.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
+    <a class="clsHide" href="#idCharUcdprptInfvdsn"></a></p>
+  <p id="idCharUcdprptInfvnam">name::
+    <br>* cpt.char.Unicode'property.informative,
+    <br>* cpt.Unicode'property.informative,
+    <a class="clsHide" href="#idCharUcdprptInfvnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptCrbr">
+  <h3 id="idCharUcdprptCrbrH3">Unicode-char'property.CONTRIBUTORY
+    <a class="clsHide" href="#idCharUcdprptCrbrH3"></a></h3>
+  <p id="idCharUcdprptCrbrdsn">description::
+    <br>Contributory property:  A simple property defined merely to make the statement of a rule defining a derived property more compact or general.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
+    <a class="clsHide" href="#idCharUcdprptCrbrdsn"></a></p>
+  <p id="idCharUcdprptCrbrnam">name::
+    <br>* cpt.char.Unicode'property.contributory,
+    <br>* cpt.Unicode'property.contributory,
+    <a class="clsHide" href="#idCharUcdprptCrbrnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptPvsl">
+  <h3 id="idCharUcdprptPvslH3">Unicode-char'property.PROVISIONAL
+    <a class="clsHide" href="#idCharUcdprptPvslH3"></a></h3>
+  <p id="idCharUcdprptPvsldsn">description::
+    <br>Provisional property: A Unicode character property whose values are unapproved and tentative, and which may be incomplete or otherwise not in a usable state.
+    <br>• Provisional properties may be removed from future versions of the standard, without prior notice.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
+    <a class="clsHide" href="#idCharUcdprptPvsldsn"></a></p>
+  <p id="idCharUcdprptPvslnam">name::
+    <br>* cpt.char.Unicode'property.provisional,
+    <br>* cpt.Unicode'property.provisional,
+    <a class="clsHide" href="#idCharUcdprptPvslnam"></a></p>
+  </section>
 
   <section id="idCharUcdprptSmpl">
   <h3 id="idCharUcdprptSmplH3">Unicode-char'property.SIMPLE
@@ -989,7 +1271,7 @@
     <br>[https://www.unicode.org/reports/about-reports.html]
     <a class="clsHide" href="#idCharUcdstdurtUaxdsn"></a></p>
   <p id="idCharUcdstdurtUaxnam">name::
-    <br>* cpt.Unicode'UAX,
+    <br>* cpt.Unicode'UAX-Unicode-Standard-Anexx,
     <br>* cpt.Unicode-Standard-Anexx-UAX,
     <br>* cpt.UAX-Unicode-Standard-Anexx,
     <a class="clsHide" href="#idCharUcdstdurtUaxnam"></a></p>
@@ -1020,7 +1302,7 @@
     <br>[https://www.unicode.org/reports/about-reports.html]
     <a class="clsHide" href="#idCharUcdstdurtUtsdsn"></a></p>
   <p id="idCharUcdstdurtUtsnam">name::
-    <br>* cpt.Unicode'UTS,
+    <br>* cpt.Unicode'UTS-Unicode-Techincal-Standard,
     <br>* cpt.Unicode-Techincal-Standard-UTS,
     <br>* cpt.UTS-Unicode-Technical-Standard,
     <a class="clsHide" href="#idCharUcdstdurtUtsnam"></a></p>
@@ -1040,7 +1322,7 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-20]
     <a class="clsHide" href="#idCharUcdstdurtUtrdsn"></a></p>
   <p id="idCharUcdstdurtUtrnam">name::
-    <br>* cpt.Unicode'UTR,
+    <br>* cpt.Unicode'UTR-Unicode-Techincal-Report,
     <br>* cpt.Unicode-Techincal-Report-UTR,
     <br>* cpt.UTR-Unicode-Techincal-Report,
     <a class="clsHide" href="#idCharUcdstdurtUtrnam"></a></p>
@@ -1048,7 +1330,7 @@
   </section>
 
   <section id="idCharUcdstducd">
-  <h3 id="idCharUcdstducdH3">Unicode-character-database
+  <h3 id="idCharUcdstducdH3">Unicode-Character-Database
     <a class="clsHide" href="#idCharUcdstducdH3"></a></h3>
   <p id="idCharUcdstducddsn">description::
     <br>The Unicode Standard is far more than a simple encoding of characters.
@@ -1058,12 +1340,92 @@
     <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Introduction]
     <a class="clsHide" href="#idCharUcdstducddsn"></a></p>
   <p id="idCharUcdstducdnam">name::
+    <br>* cpt.char.Unicode'UCD,
     <br>* cpt.char.Unicode'Unicode-database,
-    <br>* cpt.UCD-Unicode-character-database,
+    <br>* cpt.UCD-Unicode-Character-Database,
     <br>* cpt.Unicode'database-(UCD),
-    <br>* cpt.Unicode-character-database-(UCD),
-    <br>* cpt.Unicode-database-(UCD),
+    <br>* cpt.Unicode-Character-Database-(UCD),
     <a class="clsHide" href="#idCharUcdstducdnam"></a></p>
+
+  <section id="idCharUcdstducdfil">
+  <h4 id="idCharUcdstducdfilH4">file of UCD
+    <a class="clsHide" href="#idCharUcdstducdfilH4"></a></h4>
+  <p id="idCharUcdstducdfilnam">name::
+    <br>* cpt.char.Unicode'UCD'file,
+    <br>* cpt.Unicode'UCD'file,
+    <a class="clsHide" href="#idCharUcdstducdfilnam"></a></p>
+  <p id="idCharUcdstducdfilSpc">specific::
+    <br>* ArabicShaping.txt,
+    <br>* BidiBrackets.txt,
+    <br>* BidiCharacterTest.txt,
+    <br>* BidiMirroring.txt,
+    <br>* BidiTest.txt,
+    <br>* Blocks.txt,
+    <br>* CJKRadicals.txt,
+    <br>* CaseFolding.txt,
+    <br>* CompositionExclusions.txt,
+    <br>* DerivedAge.txt,
+    <br>* DerivedCoreProperties.txt,
+    <br>* DerivedNormalizationProps.txt,
+    <br>* EastAsianWidth.txt,
+    <br>* EmojiSources.txt,
+    <br>* EquivalentUnifiedIdeograph.txt,
+    <br>* HangulSyllableType.txt,
+    <br>* Index.txt,
+    <br>* IndicPositionalCategory.txt,
+    <br>* IndicSyllabicCategory.txt,
+    <br>* Jamo.txt,
+    <br>* LineBreak.txt,
+    <br>* NameAliases.txt,
+    <br>* NamedSequences.txt,
+    <br>* NamedSequencesProv.txt,
+    <br>* NamesList.html,
+    <br>* NamesList.txt,
+    <br>* NormalizationCorrections.txt,
+    <br>* NormalizationTest.txt,
+    <br>* NushuSources.txt,
+    <br>* PropList.txt,
+    <br>* PropertyAliases.txt,
+    <br>* PropertyValueAliases.txt,
+    <br>* ReadMe.txt,
+    <br>* ScriptExtensions.txt,
+    <br>* Scripts.txt,
+    <br>* SpecialCasing.txt,
+    <br>* StandardizedVariants.txt,
+    <br>* TangutSources.txt,
+    <br>* UCD.zip,
+    <br>* USourceData.txt,
+    <br>* USourceGlyphs.pdf,
+    <br>* UnicodeData.txt,
+    <br>* Unihan.zip,
+    <br>* VerticalOrientation.txt,
+    <br>* auxiliary/,
+    <br>-- GraphemeBreakProperty.txt,
+    <br>-- GraphemeBreakTest.html,
+    <br>-- GraphemeBreakTest.txt,
+    <br>-- LineBreakTest.html,
+    <br>-- LineBreakTest.txt,
+    <br>-- SentenceBreakProperty.txt,
+    <br>-- SentenceBreakTest.html,
+    <br>-- SentenceBreakTest.txt,
+    <br>-- WordBreakProperty.txt,
+    <br>-- WordBreakTest.html,
+    <br>-- WordBreakTest.txt,
+    <br>* extracted/,
+    <br>-- DerivedBidiClass.txt,
+    <br>-- DerivedBinaryProperties.txt,
+    <br>-- DerivedCombiningClass.txt,
+    <br>-- DerivedDecompositionType.txt,
+    <br>-- DerivedEastAsianWidth.txt,
+    <br>-- DerivedGeneralCategory.txt,
+    <br>-- DerivedJoiningGroup.txt,
+    <br>-- DerivedJoiningType.txt,
+    <br>-- DerivedLineBreak.txt,
+    <br>-- DerivedName.txt,
+    <br>-- DerivedNumericType.txt,
+    <br>-- DerivedNumericValues.txt,
+    <a class="clsHide" href="#idCharUcdstducdfilSpc"></a></p>
+  </section>
 
   <section id="idCharUcdstducdrsc">
   <h4 id="idCharUcdstducdrscH4">resoure of UCD
@@ -1074,6 +1436,26 @@
     <br>* Unicode® Standard Annex #44: UNICODE CHARACTER DATABASE, <a href="https://www.unicode.org/reports/tr44/">https://www.unicode.org/reports/tr44/</a>,
     <a class="clsHide" href="#idCharUcdstducdrscwpa"></a></p>
   </section>
+  </section>
+
+  <section id="idCharUcdstduhd">
+  <h3 id="idCharUcdstduhdH3">Unicode-Han-Database
+    <a class="clsHide" href="#idCharUcdstduhdH3"></a></h3>
+  <p id="idCharUcdstduhddsn">description::
+    <br>The Unihan database is the repository for the Unicode Consortium’s collective knowledge regarding the CJK Unified Ideographs contained in the Unicode Standard. It contains mapping data to allow conversion to and from other coded character sets and additional information to help implement support for the various languages which use the Han ideographic script.
+    <br>Formally, ideographs are defined within the Unicode Standard via their mappings. That is, the Unicode Standard does not formally define what the ideograph U+4E00 is; rather, it defines it as being the equivalent of, say, 0x523B in GB 2312, 0x14421 in CNS 11643, 0x306C in JIS X 0208, and so on.
+    <br>In practice, implementation of ideographs requires large amounts of ancillary data. Input methods require information such as pronunciations, as do collation algorithms. Data in character sets not included in the world of international standards bodies needs to be converted. Relationships between ideographs need to be defined to allow for fuzzy string matching. Beyond all this, it’s important to track not only what properties a given ideograph has, but who claims it has those properties.
+    <br>Unlike characters in Western scripts such as Latin and Greek, whose basic property is their sound, which stays largely constant across languages, the basic property for Han ideographs is their meaning. This isn’t to say that ideographs are truly ideographic, in that they represent abstract ideas; but they generally have one root meaning from which the others derive, and generally retain the bulk of their semantic content across linguistic boundaries. Most ideographs are divided into a determinative, which gives a vague sense of meaning, and a phonetic, which gives a vague sense of pronunciation. The Unihan database therefore includes structural analyses and definitions for ideographs.
+    <br>[https://www.unicode.org/reports/tr38/tr38-25.html]
+    <a class="clsHide" href="#idCharUcdstduhddsn"></a></p>
+  <p id="idCharUcdstduhdnam">name::
+    <br>* cpt.char.Unicode'Unicode-Han-Database,
+    <br>* cpt.Unicode'Unicode-Han-Database,
+    <br>* cpt.Unihan-Unicode-Han-Database,
+    <a class="clsHide" href="#idCharUcdstduhdnam"></a></p>
+  <p id="idCharUcdstduhdwpa">addressWpg::
+    <br>* https://www.unicode.org/reports/tr38/,
+    <a class="clsHide" href="#idCharUcdstduhdwpa"></a></p>
   </section>
 
   <section id="idCharUcdstdrsc">
@@ -1525,6 +1907,59 @@
     <br>* cpt.Unicode'block,
     <br>* cpt.Unicode-block,
     <a class="clsHide" href="#idCharUcdBlknam"></a></p>
+  </section>
+</section>
+
+<section id="idCharHtml">
+  <h1 id="idCharHtmlH1">char.HTML
+    <a class="clsHide" href="#idCharHtmlH1"></a></h1>
+  <p id="idCharHtmldsn">description::
+    <br>· Html-char is <a class="clsPreview" href="#idDescriptionFT">a-char</a> in a-format used in the-Html-computer-language.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-22]
+    <a class="clsHide" href="#idCharHtmldsn"></a></p>
+  <p id="idCharHtmlnam">name::
+    <br>* cpt.char.Html,
+    <br>* cpt.Html-char,
+    <br>* cpt.Html-character-reference,
+    <a class="clsHide" href="#idCharHtmlnam"></a></p>
+
+  <section id="idCharHtmlDcml">
+  <h2 id="idCharHtmlDcmlH2">Html-char.DECIMAL
+    <a class="clsHide" href="#idCharHtmlDcmlH2"></a></h2>
+  <p id="idCharHtmlDcmldsn">description::
+    <br>· all <a class="clsPreview" href="#idCharUcd">Unicode-chars</a> can-be-written in Html, using its <a class="clsPreview" href="#idCharUcdcdpt">Unicode-decimal-code-point</a> as: &#DECIMALCP;
+    <a class="clsHide" href="#idCharHtmlDcmldsn"></a></p>
+  <p id="idCharHtmlDcmlnam">name::
+    <br>* cpt.char.Html.decimal,
+    <br>* cpt.decimal-Html-char,
+    <br>* cpt.Html-char.decimal,
+    <a class="clsHide" href="#idCharHtmlDcmlnam"></a></p>
+  </section>
+
+  <section id="idCharHtmlHdml">
+  <h2 id="idCharHtmlHdmlH2">Html-char.HEXADECIMAL
+    <a class="clsHide" href="#idCharHtmlHdmlH2"></a></h2>
+  <p id="idCharHtmlHdmldsn">description::
+    <br>· all <a class="clsPreview" href="#idCharUcd">Unicode-chars</a> can-be-written in Html, using its <a class="clsPreview" href="#idCharUcdcdpt">Unicode-hexadecimal-code-point</a> as: &#xHEXCP;
+    <a class="clsHide" href="#idCharHtmlHdmldsn"></a></p>
+  <p id="idCharHtmlHdmlnam">name::
+    <br>* cpt.char.Html.hexadecimal,
+    <br>* cpt.hexadecimal-Html-char,
+    <br>* cpt.Html-char.hexadecimal,
+    <a class="clsHide" href="#idCharHtmlHdmlnam"></a></p>
+  </section>
+
+  <section id="idCharHtmlNmd">
+  <h2 id="idCharHtmlNmdH2">Html-char.NAMED
+    <a class="clsHide" href="#idCharHtmlNmdH2"></a></h2>
+  <p id="idCharHtmlNmddsn">description::
+    <br>· some chars are-written with a-name: &NAME;
+    <a class="clsHide" href="#idCharHtmlNmddsn"></a></p>
+  <p id="idCharHtmlNmdnam">name::
+    <br>* cpt.char.Html.named,
+    <br>* cpt.Html-char.named,
+    <br>* cpt.named-Html-char,
+    <a class="clsHide" href="#idCharHtmlNmdnam"></a></p>
   </section>
 </section>
 
