@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char (char.0-5-0.2018-06-23 draft)</title>
+  <title>Mcs.char (char.0-6-0.2018-06-24 draft)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -73,7 +73,8 @@
     <a class="clsHide" href="#idCharCmrH1"></a></h1>
   <p id="idCharCmrdsn">description::
     <br>· computer-char is any char used in computer-languages.
-    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-19]
+    <br>· they are units of human-texts AND units of formats of computer-texts.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-24]
     <a class="clsHide" href="#idCharCmrdsn"></a></p>
   <p id="idCharCmrnam">name::
     <br>* cpt.char.computer,
@@ -81,7 +82,7 @@
     <a class="clsHide" href="#idCharCmrnam"></a></p>
 
   <section id="idCharCmrSpc">
-  <h2 id="idCharCmrSpcH2">computer-car.SPECIFIC
+  <h2 id="idCharCmrSpcH2">computer-char.SPECIFIC
     <a class="clsHide" href="#idCharCmrSpcH2"></a></h2>
   <p id="idCharCmrSpcP1">specific::
     <br>* <a class="clsPreview" href="#idCharUcd">Unicode-char</a>,
@@ -93,7 +94,7 @@
   <h1 id="idCharUcdH1">char.UNICODE
     <a class="clsHide" href="#idCharUcdH1"></a></h1>
   <p id="idCharUcddsn">description::
-    <br>· Unicode-char is any char of the-Unicode-standard.
+    <br>· Unicode-char is any <a class="clsPreview" href="#idCharCmr">computer-char</a> of <a class="clsPreview" href="#idCharUcdstrd">the-Unicode-standard</a>.
     <a class="clsHide" href="#idCharUcddsn"></a></p>
   <p id="idCharUcdnam">name::
     <br>* cpt.char.Unicode,
@@ -101,16 +102,176 @@
     <br>* cpt.Unicode-char,
     <a class="clsHide" href="#idCharUcdnam"></a></p>
 
-  <section id="idCharUcdcdpt">
-  <h2 id="idCharUcdcdptH2">Unicode-char'code-point
-    <a class="clsHide" href="#idCharUcdcdptH2"></a></h2>
-  <p id="idCharUcdcdptdsn">description::
-    <br>·
-    <a class="clsHide" href="#idCharUcdcdptdsn"></a></p>
-  <p id="idCharUcdcdptnam">name::
+  <section id="idCharUcdcp">
+  <h2 id="idCharUcdcpH2">Unicode-char'code-point
+    <a class="clsHide" href="#idCharUcdcpH2"></a></h2>
+  <p id="idCharUcdcpdsn">description::
+    <br>· code-point of a-Unicode-char[a] is a UNIQUE number, reserved by <a class="clsPreview" href="#idCharUcdstrd">the-standard</a>, used to assign the-char[a] in hexadecimal-format (U+FFFF with 4 to 6 digits in the-standard) or decimal-format.
+    <br>· the-Unicode-standard reserves 65,536x17=1,114,112 code-points to assign chars.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-24]
+    <a class="clsHide" href="#idCharUcdcpdsn"></a></p>
+  <p id="idCharUcdcpnam">name::
     <br>* cpt.char.Unicode'code-point,
     <br>* cpt.code-point-of--Unicode-char,
-    <a class="clsHide" href="#idCharUcdcdptnam"></a></p>
+    <br>* cpt.Unicode'code-point,
+    <a class="clsHide" href="#idCharUcdcpnam"></a></p>
+
+  <section id="idCharUcdcpSpace">
+  <h3 id="idCharUcdcpSpaceH3">code-point.CODE-SPACE
+    <a class="clsHide" href="#idCharUcdcpSpaceH3"></a></h3>
+  <p id="idCharUcdcpSpacedsn">description::
+    <br>· Unicode--code-space is the aggregate code-points of <a class="clsPreview" href="#idCharUcdstrd">the-standard</a>, 65,536x17=1,114,112, that reserves to assign chars.
+    <a class="clsHide" href="#idCharUcdcpSpacedsn"></a></p>
+  <p id="idCharUcdcpSpacenam">name::
+    <br>* cpt.char.Unicode'code-space,
+    <br>* cpt.code-space--of-Unicode,
+    <br>* cpt.Unicode'code-space,
+    <a class="clsHide" href="#idCharUcdcpSpacenam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpPlane">
+  <h3 id="idCharUcdcpPlaneH3">code-point.PLANE
+    <a class="clsHide" href="#idCharUcdcpPlaneH3"></a></h3>
+  <p id="idCharUcdcpPlanedsn">description::
+    <br>In the Unicode standard, a plane is a continuous group of 65,536 (216) code points. There are 17 planes, identified by the numbers 0 to 16, which corresponds with the possible values 00–1016 of the first two positions in six position hexadecimal format (U+hhhhhh). The very last code point in Unicode is the last code point in plane 16, U+10FFFF. Plane 0 is the Basic Multilingual Plane (BMP), which contains most commonly-used characters. The higher planes 1 through 16 are called "supplementary planes". As of Unicode version 11.0, six of the planes have assigned code points (characters), and four are named.
+    <br>[https://en.wikipedia.org/wiki/Plane_(Unicode), {2018-06-24}]
+    <a class="clsHide" href="#idCharUcdcpPlanedsn"></a></p>
+  <p id="idCharUcdcpPlanenam">name::
+    <br>* cpt.char.Unicode'plane,
+    <br>* cpt.Unicode-char'plane,
+    <br>* cpt.Unicode'plane,
+    <br>* cpt.Unicode-plane,
+    <a class="clsHide" href="#idCharUcdcpPlanenam"></a></p>
+
+  <section id="idCharUcdcpPlane0">
+  <h4 id="idCharUcdcpPlane0H4">plane.0
+    <a class="clsHide" href="#idCharUcdcpPlane0H4"></a></h4>
+  <p id="idCharUcdcpPlane0dsn">description::
+    <br>The first plane, plane 0, the Basic Multilingual Plane (BMP) contains characters for almost all modern languages, and a large number of symbols. A primary objective for the BMP is to support the unification of prior character sets as well as characters for writing. Most of the assigned code points in the BMP are used to encode Chinese, Japanese, and Korean (CJK) characters.
+    <br>The High Surrogates (U+D800–U+DBFF) and Low Surrogate (U+DC00–U+DFFF) codes are reserved for encoding non-BMP characters in UTF-16 by using a pair of 16-bit codes: one High Surrogate and one Low Surrogate. A single surrogate code point will never be assigned a character.
+    <br>65,472 of the 65,536 code points in this plane have been allocated to a Unicode block, leaving just 64 code points in unallocated ranges (48 code points at 0870..089F and 16 code points at 2FE0..2FEF).
+    <br>As of Unicode 11.0, the BMP comprises the following 163 blocks:
+    <br>[https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane]
+    <a class="clsHide" href="#idCharUcdcpPlane0dsn"></a></p>
+  <p id="idCharUcdcpPlane0nam">name::
+    <br>* cpt.BMP-Basic-Multilingual-Plane--of-Unicode,
+    <br>* cpt.char.Unicode'plane.0-BMP-Basic-Multilingual-Plane,
+    <br>* cpt.Unicode'plane.0-BMP-Basic-Multilingual-Plane,
+    <a class="clsHide" href="#idCharUcdcpPlane0nam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpPlane1">
+  <h4 id="idCharUcdcpPlane1H4">plane.1
+    <a class="clsHide" href="#idCharUcdcpPlane1H4"></a></h4>
+  <p id="idCharUcdcpPlane1dsn">description::
+    <br>Plane 1, the Supplementary Multilingual Plane (SMP), contains historic scripts (except CJK ideographic), and symbols and notation used within certain fields. Scripts include Linear B, Egyptian hieroglyphs, and cuneiform scripts. It also includes English reform orthographies like Shavian and Deseret, and some modern scripts like Osage, Warang Citi, and Adlam. Symbols and notations include historic and modern musical notation; mathematical alphanumerics; Emoji and other pictographic sets; and game symbols for playing cards, Mah Jongg, and dominoes.
+    <br>As of Unicode 11.0, the SMP comprises the following 118 blocks:
+    <br>[https://en.wikipedia.org/wiki/Plane_(Unicode)#Supplementary_Multilingual_Plane]
+    <a class="clsHide" href="#idCharUcdcpPlane1dsn"></a></p>
+  <p id="idCharUcdcpPlane1nam">name::
+    <br>* cpt.char.Unicode'plane.1-SMP-Supplementary-Multilingual-Plane,
+    <br>* cpt.SMP-Supplementary-Multilingual-Plane--of-Unicode,
+    <br>* cpt.Unicode'plane.1-SMP-Supplementary-Multilingual-Plane,
+    <a class="clsHide" href="#idCharUcdcpPlane1nam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpPlane2">
+  <h4 id="idCharUcdcpPlane2H4">plane.2
+    <a class="clsHide" href="#idCharUcdcpPlane2H4"></a></h4>
+  <p id="idCharUcdcpPlane2dsn">description::
+    <br>Plane 2, the Supplementary Ideographic Plane (SIP), is used for CJK Ideographs, mostly CJK Unified Ideographs, that were not included in earlier character encoding standards.
+    <br>As of Unicode 11.0, the SIP comprises the following six blocks:
+    <br>* CJK Unified Ideographs Extension B (20000–2A6DF)
+    <br>* CJK Unified Ideographs Extension C (2A700–2B73F)
+    <br>* CJK Unified Ideographs Extension D (2B740–2B81F)
+    <br>* CJK Unified Ideographs Extension E (2B820–2CEAF)
+    <br>* CJK Unified Ideographs Extension F (2CEB0–2EBEF)
+    <br>* CJK Compatibility Ideographs Supplement (2F800–2FA1F)
+    <br>[https://en.wikipedia.org/wiki/Plane_(Unicode)#Supplementary_Ideographic_Plane]
+    <a class="clsHide" href="#idCharUcdcpPlane2dsn"></a></p>
+  <p id="idCharUcdcpPlane2nam">name::
+    <br>* cpt.char.Unicode'plane.2-SIP-Supplementary-Ideographic-Plane,
+    <br>* cpt.SIP-Supplementary-Ideographic-Plane--of-Unicode,
+    <br>* cpt.Unicode'plane.2-SIP-Supplementary-Ideographic-Plane,
+    <a class="clsHide" href="#idCharUcdcpPlane2nam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpPlane14">
+  <h4 id="idCharUcdcpPlane14H4">plane.14
+    <a class="clsHide" href="#idCharUcdcpPlane14H4"></a></h4>
+  <p id="idCharUcdcpPlane14dsn">description::
+    <br>Plane 14 (E in hexadecimal), the Supplementary Special-purpose Plane (SSP), currently contains non-graphical characters. The first block is for special use tag characters. The other block contains glyph variation selectors to indicate an alternate glyph for a character that cannot be determined by context.
+    <br>As of Unicode 11.0, the SSP comprises the following two blocks:
+    <br>* Tags (E0000–E007F)
+    <br>* Variation Selectors Supplement (E0100–E01EF)
+    <a class="clsHide" href="#idCharUcdcpPlane14dsn"></a></p>
+  <p id="idCharUcdcpPlane14nam">name::
+    <br>* cpt.char.Unicode'plane.14-SSP-Supplementary-Special-purpose-Plane,
+    <br>* cpt.SSP-Supplementary-Special-purpose-Plane--of-Unicode,
+    <br>* cpt.Unicode'plane.14-SSP-Supplementary-Special-purpose-Plane,
+    <a class="clsHide" href="#idCharUcdcpPlane14nam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpPlaneSpmr">
+  <h4 id="idCharUcdcpPlaneSpmrH4">plane.SUPPLEMENTARY
+    <a class="clsHide" href="#idCharUcdcpPlaneSpmrH4"></a></h4>
+  <p id="idCharUcdcpPlaneSpmrdsn">description::
+    <br>· the-planes 1 through 16 are-called "supplementary-planes".
+    <a class="clsHide" href="#idCharUcdcpPlaneSpmrdsn"></a></p>
+  <p id="idCharUcdcpPlaneSpmrnam">name::
+    <br>* cpt.char.Unicode'plane.supplementary,
+    <br>* cpt.supplementary-plane--of-Unicode,
+    <br>* cpt.Unicode'plane.supplementary,
+    <a class="clsHide" href="#idCharUcdcpPlaneSpmrnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpPlaneUnsd">
+  <h4 id="idCharUcdcpPlaneUnsdH4">plane.UNASSIGNED
+    <a class="clsHide" href="#idCharUcdcpPlaneUnsdH4"></a></h4>
+  <p id="idCharUcdcpPlaneUnsddsn">description::
+    <br>Planes 3 to 13 (planes 3 to D in hexadecimal): No characters have yet been assigned to Planes 3 through 13. Plane 3 is tentatively named the Tertiary Ideographic Plane (TIP), but as of version 11.0 there are no characters assigned to it. It is reserved for Oracle Bone script, Bronze Script, Small Seal Script, additional CJK unified ideographs, supplement characters for existing scripts, and other historic ideographic scripts.
+    <br>It is not anticipated that all these planes will be used in the foreseeable future, given the total sizes of the known writing systems left to be encoded. The number of possible symbol characters that could arise outside of the context of writing systems is potentially huge. At the moment, these 11 planes out of 17 are unused.
+    <br>[https://en.wikipedia.org/wiki/Plane_(Unicode)#Unassigned_planes]
+    <a class="clsHide" href="#idCharUcdcpPlaneUnsddsn"></a></p>
+  <p id="idCharUcdcpPlaneUnsdnam">name::
+    <br>* cpt.char.Unicode'plane.unassigned,
+    <br>* cpt.unassigned-plane--of-Unicode,
+    <br>* cpt.unused-plane--of-Unicode,
+    <br>* cpt.Unicode'plane.unassigned,
+    <a class="clsHide" href="#idCharUcdcpPlaneUnsdnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpPlanePtua">
+  <h4 id="idCharUcdcpPlanePtuaH4">plane.PRIVATE-USE-AREA
+    <a class="clsHide" href="#idCharUcdcpPlanePtuaH4"></a></h4>
+  <p id="idCharUcdcpPlanePtuadsn">description::
+    <br>The two planes 15 and 16 (planes F and 10 in hexadecimal), are designated as "private use planes". They contain blocks called Supplementary Private Use Area-A (PUA-A) and -B (PUA-B), Private Use Areas, which are available for character assignment by parties outside the ISO and the Unicode Consortium. They are used by fonts internally to refer to auxiliary glyphs, for example, ligatures and building blocks for other glyphs. Such characters will have limited interoperability. Software and fonts that support Unicode will not necessarily support character assignments by other parties.
+    <br>[https://en.wikipedia.org/wiki/Plane_(Unicode)#Private_Use_Area_planes]
+    <a class="clsHide" href="#idCharUcdcpPlanePtuadsn"></a></p>
+  <p id="idCharUcdcpPlanePtuanam">name::
+    <br>* cpt.char.Unicode'plane.PUA-Private-Use-Area,
+    <br>* cpt.PUA-Private-Use-Area-plane--of-Unicode,
+    <br>* cpt.Unicode'plane.PUA-Private-Use-Area,
+    <a class="clsHide" href="#idCharUcdcpPlanePtuanam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCharUcdcpBlock">
+  <h3 id="idCharUcdcpBlockH3">code-point.BLOCK
+    <a class="clsHide" href="#idCharUcdcpBlockH3"></a></h3>
+  <p id="idCharUcdcpBlockdsn">description::
+    <br>·
+    <a class="clsHide" href="#idCharUcdcpBlockdsn"></a></p>
+  <p id="idCharUcdcpBlocknam">name::
+    <br>* cpt.char.Unicode'block,
+    <br>* cpt.Unicode'block,
+    <br>* cpt.Unicode'char'block,
+    <br>* cpt.Unicode-block,
+    <a class="clsHide" href="#idCharUcdcpBlocknam"></a></p>
+  <p id="idCharUcdcpBlockSpc">specific::
+    <br>* ,
+    <a class="clsHide" href="#idCharUcdcpBlockSpc"></a></p>
+  </section>
   </section>
 
   <section id="idCharUcdage">
@@ -1225,6 +1386,10 @@
   <section id="idCharUcdstrd">
   <h2 id="idCharUcdstrdH2">Unicode-char'Unicode-standard
     <a class="clsHide" href="#idCharUcdstrdH2"></a></h2>
+  <p id="idCharUcdstrddsn">description::
+    <br>· Unicode is a computing-industry standard for the consistent encoding, representation, and handling of <a class="clsPreview" href="#idCharCmr">computer-chars</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-24]
+    <a class="clsHide" href="#idCharUcdstrddsn"></a></p>
   <p id="idCharUcdstrdnam">name::
     <br>* cpt.char.Unicode'standard,
     <br>* cpt.char.Unicode'Unicode-standard,
@@ -1889,26 +2054,6 @@
     <br>* cpt.char.Unicode.specific,
     <a class="clsHide" href="#idCharUcdSpcnam"></a></p>
   </section>
-
-  <section id="idCharUcdPln">
-  <h2 id="idCharUcdPlnH2">Unicode-char.PLANE
-    <a class="clsHide" href="#idCharUcdPlnH2"></a></h2>
-  <p id="idCharUcdPlnnam">name::
-    <br>* cpt.char.Unicode.plane,
-    <br>* cpt.Unicode'plane,
-    <br>* cpt.Unicode-plane,
-    <a class="clsHide" href="#idCharUcdPlnnam"></a></p>
-  </section>
-
-  <section id="idCharUcdBlk">
-  <h2 id="idCharUcdBlkH2">Unicode-char.BLOCK
-    <a class="clsHide" href="#idCharUcdBlkH2"></a></h2>
-  <p id="idCharUcdBlknam">name::
-    <br>* cpt.char.Unicode.block,
-    <br>* cpt.Unicode'block,
-    <br>* cpt.Unicode-block,
-    <a class="clsHide" href="#idCharUcdBlknam"></a></p>
-  </section>
 </section>
 
 <section id="idCharHtml">
@@ -1928,7 +2073,7 @@
   <h2 id="idCharHtmlDcmlH2">Html-char.DECIMAL
     <a class="clsHide" href="#idCharHtmlDcmlH2"></a></h2>
   <p id="idCharHtmlDcmldsn">description::
-    <br>· all <a class="clsPreview" href="#idCharUcd">Unicode-chars</a> can-be-written in Html, using its <a class="clsPreview" href="#idCharUcdcdpt">Unicode-decimal-code-point</a> as: &#DECIMALCP;
+    <br>· all <a class="clsPreview" href="#idCharUcd">Unicode-chars</a> can-be-written in Html, using its <a class="clsPreview" href="#idCharUcdcp">Unicode-decimal-code-point</a> as: &#DECIMALCP;
     <a class="clsHide" href="#idCharHtmlDcmldsn"></a></p>
   <p id="idCharHtmlDcmlnam">name::
     <br>* cpt.char.Html.decimal,
@@ -1941,7 +2086,7 @@
   <h2 id="idCharHtmlHdmlH2">Html-char.HEXADECIMAL
     <a class="clsHide" href="#idCharHtmlHdmlH2"></a></h2>
   <p id="idCharHtmlHdmldsn">description::
-    <br>· all <a class="clsPreview" href="#idCharUcd">Unicode-chars</a> can-be-written in Html, using its <a class="clsPreview" href="#idCharUcdcdpt">Unicode-hexadecimal-code-point</a> as: &#xHEXCP;
+    <br>· all <a class="clsPreview" href="#idCharUcd">Unicode-chars</a> can-be-written in Html, using its <a class="clsPreview" href="#idCharUcdcp">Unicode-hexadecimal-code-point</a> as: &#xHEXCP;
     <a class="clsHide" href="#idCharHtmlHdmldsn"></a></p>
   <p id="idCharHtmlHdmlnam">name::
     <br>* cpt.char.Html.hexadecimal,
@@ -1978,7 +2123,11 @@
 <section id="idMeta">
   <h1 id="idMetaH1">meta-info
     <a class="clsHide" href="#idMetaH1"></a></h1>
-  <script src="../../dirPgm/dirCntr/counter.php?page=Mws-dirLag"></script>
+  <p id="idMetaCounter" class="clsCenter">dirLag was visited
+    <span class="clsColorRed">
+    <script src="../../dirPgm/dirCntr/counter.php?page=Mws-dirLag"></script>
+    </span>
+    times since {2017-07-01}</p>
   <!-- the content of page-path paragraph is displayed as it is on top of toc -->
   <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-path</span>:
     <a class="clsPreview" href="../../#idDescription">synagonism.net</a> /
