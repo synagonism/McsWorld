@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char (char.0-7-0.2018-06-25 draft)</title>
+  <title>Mcs.char (char.0-8-0.2018-06-26 draft)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -32,6 +32,48 @@
     <br>* cpt.character.language,
     <br>* cpt.language'character,
     <a class="clsHide" href="#idName"></a></p>
+</section>
+
+<section id="idCharglyph">
+  <h1 id="idCharglyphH1">glyph of char
+    <a class="clsHide" href="#idCharglyphH1"></a></h1>
+  <p id="idCharglyphdsn">description::
+    <br>· glyph-of-char[a] is ANY written or printed icon associated with the-char[a].
+    <br>· some chars have NO glyphs.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
+    <a class="clsHide" href="#idCharglyphdsn"></a></p>
+  <p id="idCharglyphnam">name::
+    <br>* cpt.char'glyph,
+    <br>* cpt.glyph-of-char,
+    <a class="clsHide" href="#idCharglyphnam"></a></p>
+
+  <section id="idCharglyphFnt">
+  <h2 id="idCharglyphFntH2">glyph.FONT
+    <a class="clsHide" href="#idCharglyphFntH2"></a></h2>
+  <p id="idCharglyphFntdsn">description::
+    <br>· font is A-SET of glyphs of a-set of chars with similar attributes.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
+    <a class="clsHide" href="#idCharglyphFntdsn"></a></p>
+  <p id="idCharglyphFntnam">name::
+    <br>* cpt.char'font,
+    <br>* cpt.char'glyph.font,
+    <br>* cpt.font-of-char,
+    <a class="clsHide" href="#idCharglyphFntnam"></a></p>
+  </section>
+</section>
+
+<section id="idCharencdg">
+  <h1 id="idCharencdgH1">encoding of char
+    <a class="clsHide" href="#idCharencdgH1"></a></h1>
+  <p id="idCharencdgdsn">description::
+    <br>· char-encoding is a-code of bits|bytes, computers use to represent chars.
+    <br>· do not confuse <a class="clsPreview" href="#idCharUcdcp">the-code-points-of-chars</a>, which are numbers, with the-encodings-of-chars which are codes of bits, especially when BOTH are-represented with hexadecimal-numbers.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
+    <a class="clsHide" href="#idCharencdgdsn"></a></p>
+  <p id="idCharencdgnam">name::
+    <br>* cpt.char'encoding,
+    <br>* cpt.encoding-of-char,
+    <a class="clsHide" href="#idCharencdgnam"></a></p>
 </section>
 
 <section id="idCharrscFT">
@@ -103,7 +145,7 @@
     <a class="clsHide" href="#idCharUcdnam"></a></p>
 
   <section id="idCharUcdcp">
-  <h2 id="idCharUcdcpH2">Unicode-char'code-point
+  <h2 id="idCharUcdcpH2">code-point of Unicode-char
     <a class="clsHide" href="#idCharUcdcpH2"></a></h2>
   <p id="idCharUcdcpdsn">description::
     <br>· code-point of a-Unicode-char[a] is a UNIQUE number, reserved by <a class="clsPreview" href="#idCharUcdstrd">the-standard</a>, used to assign the-char[a] in hexadecimal-format (U+FFFF with 4 to 6 digits in the-standard) or decimal-format.
@@ -260,7 +302,13 @@
   <h3 id="idCharUcdcpBlockH3">code-point.BLOCK
     <a class="clsHide" href="#idCharUcdcpBlockH3"></a></h3>
   <p id="idCharUcdcpBlockdsn">description::
-    <br>·
+    <br>A block is a uniquely named, contiguous range of code points.
+    <br>It is identified by its first and last code point.
+    <br>Blocks do not overlap.
+    <br>A block may contain code points that are reserved, not-assigned etc.
+    <br>Each character that is assigned, has a single "block name" value from the 291 names assigned as of Unicode version 11.0.
+    <br>Unassigned code points outside of an existing block, have the default value "No_block".
+    <br>[https://en.wikipedia.org/wiki/Unicode_character_property#Block {2018-06-26}]
     <a class="clsHide" href="#idCharUcdcpBlockdsn"></a></p>
   <p id="idCharUcdcpBlocknam">name::
     <br>* cpt.char.Unicode'block,
@@ -268,14 +316,453 @@
     <br>* cpt.Unicode'char'block,
     <br>* cpt.Unicode-block,
     <a class="clsHide" href="#idCharUcdcpBlocknam"></a></p>
-  <p id="idCharUcdcpBlockSpc">specific::
-    <br>* ,
-    <a class="clsHide" href="#idCharUcdcpBlockSpc"></a></p>
+
+  <section id="idCharUcdcpBlockpln">
+  <h4 id="idCharUcdcpBlockplnH4">plane of Unicode-block
+    <a class="clsHide" href="#idCharUcdcpBlockplnH4"></a></h4>
+  <p id="idCharUcdcpBlockplndsn">description::
+    <br>· every <a class="clsPreview" href="#idCharUcdcpBlock">block</a> is part of <a class="clsPreview" href="#idCharUcdcpPlane">a-plane</a>.
+    <a class="clsHide" href="#idCharUcdcpBlockplndsn"></a></p>
+  <p id="idCharUcdcpBlockplnnam">name::
+    <br>* cpt.Unicode'block'plane,
+    <a class="clsHide" href="#idCharUcdcpBlockplnnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpBlockcp">
+  <h4 id="idCharUcdcpBlockcpH4">code-point of Unicode-block
+    <a class="clsHide" href="#idCharUcdcpBlockcpH4"></a></h4>
+  <p id="idCharUcdcpBlockcpdsn">description::
+    <br>· every block contains some <a class="clsPreview" href="#idCharUcdcp">code-points</a>.
+    <br>· there are 280,752 code-points in 291 blocks in <a class="clsPreview" href="#idCharUcdstd11002018">Unicode.11-0-0.2018</a> and 137,439 chars assigned to them.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
+    <a class="clsHide" href="#idCharUcdcpBlockcpdsn"></a></p>
+  <p id="idCharUcdcpBlockcpnam">name::
+    <br>* cpt.Unicode'block'code-point,
+    <a class="clsHide" href="#idCharUcdcpBlockcpnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpBlockchr">
+  <h4 id="idCharUcdcpBlockchrH4">char of Unicode-block
+    <a class="clsHide" href="#idCharUcdcpBlockchrH4"></a></h4>
+  <p id="idCharUcdcpBlockchrdsn">description::
+    <br>· from 280,752 code-points in 291 blocks in <a class="clsPreview" href="#idCharUcdstd11002018">Unicode.11-0-0.2018</a> ONLY 137,439 are-assigned with chars.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
+    <a class="clsHide" href="#idCharUcdcpBlockchrdsn"></a></p>
+  <p id="idCharUcdcpBlockchrnam">name::
+    <br>* cpt.Unicode'block'char,
+    <a class="clsHide" href="#idCharUcdcpBlockchrnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpBlockSpc">
+  <h4 id="idCharUcdcpBlockSpcH4">Unicode-block.SPECIFIC
+    <a class="clsHide" href="#idCharUcdcpBlockSpcH4"></a></h4>
+  <div id="idCharUcdcpBlockP1">specific::
+    <ol>
+      <li><a class="clsPreview" href="../dirTchInf/dirUcd/filMcsU0000.last.html#idDescriptionFT">U+0000|0..U+007F|127</a>, Basic-Latin, 128/128
+      <li><a class="clsPreview" href="../dirTchInf/dirUcd/filMcsU0080.last.html#idDescriptionFT">U+0080|128..U+00FF|255|&#x00FF;</a>, Latin-1-Supplement, 128/128
+      <li>U+0100|256|&#x0100;..U+017F|383|&#x017F;, Latin-Extended-A, 128/128
+      <li>U+0180|384|&#x0180;..U+024F|591|&#x024F;, Latin-Extended-B, 208/208
+      <li>U+0250|592|&#x0250;..U+02AF|687|&#x02AF;, IPA-Extensions, 96/96
+      <li>U+02B0|688|&#x02B0;..U+02FF|767|&#x02FF;, Spacing-Modifier-Letters, 80/80
+      <li>U+0300|768|&#x0300;..U+036F|879|&#x036F;, Combining-Diacritical-Marks, 112/112
+      <li>U+0370|880|&#x0370;..U+03FF|1023|&#x03FF;, Greek-and-Coptic, 144/135
+      <li>U+0400|1024|&#x0400;..U+04FF|1279|&#x04FF;, Cyrillic, 256/256
+      <li>U+0500|1280|&#x0500;..U+052F|1327|&#x052F;, Cyrillic-Supplement, 48/48
+      <li>U+0530|1328|&#x0530;..U+058F|1423|&#x058F;, Armenian, 96/91
+      <li>U+0590|1424|&#x0590;..U+05FF|1535|&#x05FF;, Hebrew, 112/88
+      <li>U+0600|1536|&#x0600;..U+06FF|1791|&#x06FF;, Arabic, 256/255
+      <li>U+0700|1792|&#x0700;..U+074F|1871|&#x074F;, Syriac, 80/77
+      <li>U+0750|1872|&#x0750;..U+077F|1919|&#x077F;, Arabic-Supplement, 48/48
+      <li>U+0780|1920|&#x0780;..U+07BF|1983|&#x07BF;, Thaana, 64/50
+      <li>U+07C0|1984|&#x07C0;..U+07FF|2047|&#x07FF;, NKo, 64/62
+      <li>U+0800|2048|&#x0800;..U+083F|2111|&#x083F;, Samaritan, 64/61
+      <li>U+0840|2112|&#x0840;..U+085F|2143|&#x085F;, Mandaic, 32/29
+      <li>U+0860|2144|&#x0860;..U+086F|2159|&#x086F;, Syriac-Supplement, 16/11
+      <li>U+08A0|2208|&#x08A0;..U+08FF|2303|&#x08FF;, Arabic-Extended-A, 96/74
+      <li>U+0900|2304|&#x0900;..U+097F|2431|&#x097F;, Devanagari, 128/128
+      <li>U+0980|2432|&#x0980;..U+09FF|2559|&#x09FF;, Bengali, 128/96
+      <li>U+0A00|2560|&#x0A00;..U+0A7F|2687|&#x0A7F;, Gurmukhi, 128/80
+      <li>U+0A80|2688|&#x0A80;..U+0AFF|2815|&#x0AFF;, Gujarati, 128/91
+      <li>U+0B00|2816|&#x0B00;..U+0B7F|2943|&#x0B7F;, Oriya, 128/90
+      <li>U+0B80|2944|&#x0B80;..U+0BFF|3071|&#x0BFF;, Tamil, 128/72
+      <li>U+0C00|3072|&#x0C00;..U+0C7F|3199|&#x0C7F;, Telugu, 128/97
+      <li>U+0C80|3200|&#x0C80;..U+0CFF|3327|&#x0CFF;, Kannada, 128/89
+      <li>U+0D00|3328|&#x0D00;..U+0D7F|3455|&#x0D7F;, Malayalam, 128/117
+      <li>U+0D80|3456|&#x0D80;..U+0DFF|3583|&#x0DFF;, Sinhala, 128/90
+      <li>U+0E00|3584|&#x0E00;..U+0E7F|3711|&#x0E7F;, Thai, 128/87
+      <li>U+0E80|3712|&#x0E80;..U+0EFF|3839|&#x0EFF;, Lao, 128/67
+      <li>U+0F00|3840|&#x0F00;..U+0FFF|4095|&#x0FFF;, Tibetan, 256/211
+      <li>U+1000|4096|&#x1000;..U+109F|4255|&#x109F;, Myanmar, 160/160
+      <li>U+10A0|4256|&#x10A0;..U+10FF|4351|&#x10FF;, Georgian, 96/88
+      <li>U+1100|4352|&#x1100;..U+11FF|4607|&#x11FF;, Hangul-Jamo, 256/256
+      <li>U+1200|4608|&#x1200;..U+137F|4991|&#x137F;, Ethiopic, 384/358
+      <li>U+1380|4992|&#x1380;..U+139F|5023|&#x139F;, Ethiopic-Supplement, 32/26
+      <li>U+13A0|5024|&#x13A0;..U+13FF|5119|&#x13FF;, Cherokee, 96/92
+      <li>U+1400|5120|&#x1400;..U+167F|5759|&#x167F;, Unified-Canadian-Aboriginal-Syllabics, 640/640
+      <li>U+1680|5760|&#x1680;..U+169F|5791|&#x169F;, Ogham, 32/29
+      <li>U+16A0|5792|&#x16A0;..U+16FF|5887|&#x16FF;, Runic, 96/89
+      <li>U+1700|5888|&#x1700;..U+171F|5919|&#x171F;, Tagalog, 32/20
+      <li>U+1720|5920|&#x1720;..U+173F|5951|&#x173F;, Hanunoo, 32/23
+      <li>U+1740|5952|&#x1740;..U+175F|5983|&#x175F;, Buhid, 32/20
+      <li>U+1760|5984|&#x1760;..U+177F|6015|&#x177F;, Tagbanwa, 32/18
+      <li>U+1780|6016|&#x1780;..U+17FF|6143|&#x17FF;, Khmer, 128/114
+      <li>U+1800|6144|&#x1800;..U+18AF|6319|&#x18AF;, Mongolian, 176/157
+      <li>U+18B0|6320|&#x18B0;..U+18FF|6399|&#x18FF;, Unified-Canadian-Aboriginal-Syllabics-Extended, 80/70
+      <li>U+1900|6400|&#x1900;..U+194F|6479|&#x194F;, Limbu, 80/68
+      <li>U+1950|6480|&#x1950;..U+197F|6527|&#x197F;, Tai-Le, 48/35
+      <li>U+1980|6528|&#x1980;..U+19DF|6623|&#x19DF;, New-Tai-Lue, 96/83
+      <li>U+19E0|6624|&#x19E0;..U+19FF|6655|&#x19FF;, Khmer-Symbols, 32/32
+      <li>U+1A00|6656|&#x1A00;..U+1A1F|6687|&#x1A1F;, Buginese, 32/30
+      <li>U+1A20|6688|&#x1A20;..U+1AAF|6831|&#x1AAF;, Tai-Tham, 144/127
+      <li>U+1AB0|6832|&#x1AB0;..U+1AFF|6911|&#x1AFF;, Combining-Diacritical-Marks-Extended, 80/15
+      <li>U+1B00|6912|&#x1B00;..U+1B7F|7039|&#x1B7F;, Balinese, 128/121
+      <li>U+1B80|7040|&#x1B80;..U+1BBF|7103|&#x1BBF;, Sundanese, 64/64
+      <li>U+1BC0|7104|&#x1BC0;..U+1BFF|7167|&#x1BFF;, Batak, 64/56
+      <li>U+1C00|7168|&#x1C00;..U+1C4F|7247|&#x1C4F;, Lepcha, 80/74
+      <li>U+1C50|7248|&#x1C50;..U+1C7F|7295|&#x1C7F;, Ol-Chiki, 48/48
+      <li>U+1C80|7296|&#x1C80;..U+1C8F|7311|&#x1C8F;, Cyrillic-Extended-C, 16/9
+      <li>U+1C90|7312|&#x1C90;..U+1CBF|7359|&#x1CBF;, Georgian-Extended, 48/46
+      <li>U+1CC0|7360|&#x1CC0;..U+1CCF|7375|&#x1CCF;, Sundanese-Supplement, 16/8
+      <li>U+1CD0|7376|&#x1CD0;..U+1CFF|7423|&#x1CFF;, Vedic-Extensions, 48/42
+      <li>U+1D00|7424|&#x1D00;..U+1D7F|7551|&#x1D7F;, Phonetic-Extensions, 128/128
+      <li>U+1D80|7552|&#x1D80;..U+1DBF|7615|&#x1DBF;, Phonetic-Extensions-Supplement, 64/64
+      <li>U+1DC0|7616|&#x1DC0;..U+1DFF|7679|&#x1DFF;, Combining-Diacritical-Marks-Supplement, 64/63
+      <li>U+1E00|7680|&#x1E00;..U+1EFF|7935|&#x1EFF;, Latin-Extended-Additional, 256/256
+      <li>U+1F00|7936|&#x1F00;..U+1FFF|8191|&#x1FFF;, Greek-Extended, 256/233
+      <li>U+2000|8192|&#x2000;..U+206F|8303|&#x206F;, General-Punctuation, 112/111
+      <li>U+2070|8304|&#x2070;..U+209F|8351|&#x209F;, Superscripts-and-Subscripts, 48/42
+      <li>U+20A0|8352|&#x20A0;..U+20CF|8399|&#x20CF;, Currency-Symbols, 48/32
+      <li>U+20D0|8400|&#x20D0;..U+20FF|8447|&#x20FF;, Combining-Diacritical-Marks-for-Symbols, 48/33
+      <li>U+2100|8448|&#x2100;..U+214F|8527|&#x214F;, Letterlike-Symbols, 80/80
+      <li>U+2150|8528|&#x2150;..U+218F|8591|&#x218F;, Number-Forms, 64/60
+      <li>U+2190|8592|&#x2190;..U+21FF|8703|&#x21FF;, Arrows, 112/112
+      <li>U+2200|8704|&#x2200;..U+22FF|8959|&#x22FF;, Mathematical-Operators, 256/256
+      <li>U+2300|8960|&#x2300;..U+23FF|9215|&#x23FF;, Miscellaneous-Technical, 256/256
+      <li>U+2400|9216|&#x2400;..U+243F|9279|&#x243F;, Control-Pictures, 64/39
+      <li>U+2440|9280|&#x2440;..U+245F|9311|&#x245F;, Optical-Character-Recognition, 32/11
+      <li>U+2460|9312|&#x2460;..U+24FF|9471|&#x24FF;, Enclosed-Alphanumerics, 160/160
+      <li>U+2500|9472|&#x2500;..U+257F|9599|&#x257F;, Box-Drawing, 128/128
+      <li>U+2580|9600|&#x2580;..U+259F|9631|&#x259F;, Block-Elements, 32/32
+      <li>U+25A0|9632|&#x25A0;..U+25FF|9727|&#x25FF;, Geometric-Shapes, 96/96
+      <li>U+2600|9728|&#x2600;..U+26FF|9983|&#x26FF;, Miscellaneous-Symbols, 256/256
+      <li>U+2700|9984|&#x2700;..U+27BF|10175|&#x27BF;, Dingbats, 192/192
+      <li>U+27C0|10176|&#x27C0;..U+27EF|10223|&#x27EF;, Miscellaneous-Mathematical-Symbols-A, 48/48
+      <li>U+27F0|10224|&#x27F0;..U+27FF|10239|&#x27FF;, Supplemental-Arrows-A, 16/16
+      <li>U+2800|10240|&#x2800;..U+28FF|10495|&#x28FF;, Braille-Patterns, 256/256
+      <li>U+2900|10496|&#x2900;..U+297F|10623|&#x297F;, Supplemental-Arrows-B, 128/128
+      <li>U+2980|10624|&#x2980;..U+29FF|10751|&#x29FF;, Miscellaneous-Mathematical-Symbols-B, 128/128
+      <li>U+2A00|10752|&#x2A00;..U+2AFF|11007|&#x2AFF;, Supplemental-Mathematical-Operators, 256/256
+      <li>U+2B00|11008|&#x2B00;..U+2BFF|11263|&#x2BFF;, Miscellaneous-Symbols-and-Arrows, 256/250
+      <li>U+2C00|11264|&#x2C00;..U+2C5F|11359|&#x2C5F;, Glagolitic, 96/94
+      <li>U+2C60|11360|&#x2C60;..U+2C7F|11391|&#x2C7F;, Latin-Extended-C, 32/32
+      <li>U+2C80|11392|&#x2C80;..U+2CFF|11519|&#x2CFF;, Coptic, 128/123
+      <li>U+2D00|11520|&#x2D00;..U+2D2F|11567|&#x2D2F;, Georgian-Supplement, 48/40
+      <li>U+2D30|11568|&#x2D30;..U+2D7F|11647|&#x2D7F;, Tifinagh, 80/59
+      <li>U+2D80|11648|&#x2D80;..U+2DDF|11743|&#x2DDF;, Ethiopic-Extended, 96/79
+      <li>U+2DE0|11744|&#x2DE0;..U+2DFF|11775|&#x2DFF;, Cyrillic-Extended-A, 32/32
+      <li>U+2E00|11776|&#x2E00;..U+2E7F|11903|&#x2E7F;, Supplemental-Punctuation, 128/79
+      <li>U+2E80|11904|&#x2E80;..U+2EFF|12031|&#x2EFF;, CJK-Radicals-Supplement, 128/115
+      <li>U+2F00|12032|&#x2F00;..U+2FDF|12255|&#x2FDF;, Kangxi-Radicals, 224/214
+      <li>U+2FF0|12272|&#x2FF0;..U+2FFF|12287|&#x2FFF;, Ideographic-Description-Characters, 16/12
+      <li>U+3000|12288|&#x3000;..U+303F|12351|&#x303F;, CJK-Symbols-and-Punctuation, 64/64
+      <li>U+3040|12352|&#x3040;..U+309F|12447|&#x309F;, Hiragana, 96/93
+      <li>U+30A0|12448|&#x30A0;..U+30FF|12543|&#x30FF;, Katakana, 96/96
+      <li>U+3100|12544|&#x3100;..U+312F|12591|&#x312F;, Bopomofo, 48/43
+      <li>U+3130|12592|&#x3130;..U+318F|12687|&#x318F;, Hangul-Compatibility-Jamo, 96/94
+      <li>U+3190|12688|&#x3190;..U+319F|12703|&#x319F;, Kanbun, 16/16
+      <li>U+31A0|12704|&#x31A0;..U+31BF|12735|&#x31BF;, Bopomofo-Extended, 32/27
+      <li>U+31C0|12736|&#x31C0;..U+31EF|12783|&#x31EF;, CJK-Strokes, 48/36
+      <li>U+31F0|12784|&#x31F0;..U+31FF|12799|&#x31FF;, Katakana-Phonetic-Extensions, 16/16
+      <li>U+3200|12800|&#x3200;..U+32FF|13055|&#x32FF;, Enclosed-CJK-Letters-and-Months, 256/254
+      <li>U+3300|13056|&#x3300;..U+33FF|13311|&#x33FF;, CJK-Compatibility, 256/256
+      <li>(U+3400|13312|&#x3400;..U+4DBF|19903|&#x4DBF;, CJK-Unified-Ideographs-Extension-A, 6592/6582)
+      <li>U+4DC0|19904|&#x4DC0;..U+4DFF|19967|&#x4DFF;, Yijing-Hexagram-Symbols, 64/64
+      <li>(U+4E00|19968|&#x4E00;..U+9FFF|40959|&#x9FFF;, CJK-Unified-Ideographs, 20992/20976)
+      <li>U+A000|40960|&#xA000;..U+A48F|42127|&#xA48F;, Yi-Syllables, 1168/1165
+      <li>U+A490|42128|&#xA490;..U+A4CF|42191|&#xA4CF;, Yi-Radicals, 64/55
+      <li>U+A4D0|42192|&#xA4D0;..U+A4FF|42239|&#xA4FF;, Lisu, 48/48
+      <li>U+A500|42240|&#xA500;..U+A63F|42559|&#xA63F;, Vai, 320/300
+      <li>U+A640|42560|&#xA640;..U+A69F|42655|&#xA69F;, Cyrillic-Extended-B, 96/96
+      <li>U+A6A0|42656|&#xA6A0;..U+A6FF|42751|&#xA6FF;, Bamum, 96/88
+      <li>U+A700|42752|&#xA700;..U+A71F|42783|&#xA71F;, Modifier-Tone-Letters, 32/32
+      <li>U+A720|42784|&#xA720;..U+A7FF|43007|&#xA7FF;, Latin-Extended-D, 224/163
+      <li>U+A800|43008|&#xA800;..U+A82F|43055|&#xA82F;, Syloti-Nagri, 48/44
+      <li>U+A830|43056|&#xA830;..U+A83F|43071|&#xA83F;, Common-Indic-Number-Forms, 16/10
+      <li>U+A840|43072|&#xA840;..U+A87F|43135|&#xA87F;, Phags-pa, 64/56
+      <li>U+A880|43136|&#xA880;..U+A8DF|43231|&#xA8DF;, Saurashtra, 96/82
+      <li>U+A8E0|43232|&#xA8E0;..U+A8FF|43263|&#xA8FF;, Devanagari-Extended, 32/32
+      <li>U+A900|43264|&#xA900;..U+A92F|43311|&#xA92F;, Kayah-Li, 48/48
+      <li>U+A930|43312|&#xA930;..U+A95F|43359|&#xA95F;, Rejang, 48/37
+      <li>U+A960|43360|&#xA960;..U+A97F|43391|&#xA97F;, Hangul-Jamo-Extended-A, 32/29
+      <li>U+A980|43392|&#xA980;..U+A9DF|43487|&#xA9DF;, Javanese, 96/91
+      <li>U+A9E0|43488|&#xA9E0;..U+A9FF|43519|&#xA9FF;, Myanmar-Extended-B, 32/31
+      <li>U+AA00|43520|&#xAA00;..U+AA5F|43615|&#xAA5F;, Cham, 96/83
+      <li>U+AA60|43616|&#xAA60;..U+AA7F|43647|&#xAA7F;, Myanmar-Extended-A, 32/32
+      <li>U+AA80|43648|&#xAA80;..U+AADF|43743|&#xAADF;, Tai-Viet, 96/72
+      <li>U+AAE0|43744|&#xAAE0;..U+AAFF|43775|&#xAAFF;, Meetei-Mayek-Extensions, 32/23
+      <li>U+AB00|43776|&#xAB00;..U+AB2F|43823|&#xAB2F;, Ethiopic-Extended-A, 48/32
+      <li>U+AB30|43824|&#xAB30;..U+AB6F|43887|&#xAB6F;, Latin-Extended-E, 64/54
+      <li>U+AB70|43888|&#xAB70;..U+ABBF|43967|&#xABBF;, Cherokee-Supplement, 80/80
+      <li>U+ABC0|43968|&#xABC0;..U+ABFF|44031|&#xABFF;, Meetei-Mayek, 64/56
+      <li>(U+AC00|44032|&#xAC00;..U+D7AF|55215|&#xD7AF;, Hangul-Syllables, 11184/11172)
+      <li>U+D7B0|55216|&#xD7B0;..U+D7FF|55295|&#xD7FF;, Hangul-Jamo-Extended-B, 80/72
+      <li>(U+D800|55296..U+DB7F|56191, High-Surrogates, 896/0)
+      <li>(U+DB80|56192..U+DBFF|56319, High-Private-Use-Surrogates, 128/0)
+      <li>(U+DC00|56320..U+DFFF|57343, Low-Surrogates, 1024/0)
+      <li>(U+E000|57344..U+F8FF|63743, Private-Use-Area, 6400/0)
+      <li>U+F900|63744|&#xF900;..U+FAFF|64255|&#xFAFF;, CJK-Compatibility-Ideographs, 512/472
+      <li>U+FB00|64256|&#xFB00;..U+FB4F|64335|&#xFB4F;, Alphabetic-Presentation-Forms, 80/58
+      <li>U+FB50|64336|&#xFB50;..U+FDFF|65023|&#xFDFF;, Arabic-Presentation-Forms-A, 688/611
+      <li>U+FE00|65024|&#xFE00;..U+FE0F|65039|&#xFE0F;, Variation-Selectors, 16/16
+      <li>U+FE10|65040|&#xFE10;..U+FE1F|65055|&#xFE1F;, Vertical-Forms, 16/10
+      <li>U+FE20|65056|&#xFE20;..U+FE2F|65071|&#xFE2F;, Combining-Half-Marks, 16/16
+      <li>U+FE30|65072|&#xFE30;..U+FE4F|65103|&#xFE4F;, CJK-Compatibility-Forms, 32/32
+      <li>U+FE50|65104|&#xFE50;..U+FE6F|65135|&#xFE6F;, Small-Form-Variants, 32/26
+      <li>U+FE70|65136|&#xFE70;..U+FEFF|65279|&#xFEFF;, Arabic-Presentation-Forms-B, 144/141
+      <li>U+FF00|65280|&#xFF00;..U+FFEF|65519|&#xFFEF;, Halfwidth-and-Fullwidth-Forms, 240/225
+      <li>U+FFF0|65520|&#xFFF0;..U+FFFF|65535|&#xFFFF;, Specials, 16/5
+      <li>U+10000|65536|&#x10000;..U+1007F|65663|&#x1007F;, Linear-B-Syllabary, 128/88
+      <li>U+10080|65664|&#x10080;..U+100FF|65791|&#x100FF;, Linear-B-Ideograms, 128/123
+      <li>U+10100|65792|&#x10100;..U+1013F|65855|&#x1013F;, Aegean-Numbers, 64/57
+      <li>U+10140|65856|&#x10140;..U+1018F|65935|&#x1018F;, Ancient-Greek-Numbers, 80/79
+      <li>U+10190|65936|&#x10190;..U+101CF|65999|&#x101CF;, Ancient-Symbols, 64/13
+      <li>U+101D0|66000|&#x101D0;..U+101FF|66047|&#x101FF;, Phaistos-Disc, 48/46
+      <li>U+10280|66176|&#x10280;..U+1029F|66207|&#x1029F;, Lycian, 32/29
+      <li>U+102A0|66208|&#x102A0;..U+102DF|66271|&#x102DF;, Carian, 64/49
+      <li>U+102E0|66272|&#x102E0;..U+102FF|66303|&#x102FF;, Coptic-Epact-Numbers, 32/28
+      <li>U+10300|66304|&#x10300;..U+1032F|66351|&#x1032F;, Old-Italic, 48/39
+      <li>U+10330|66352|&#x10330;..U+1034F|66383|&#x1034F;, Gothic, 32/27
+      <li>U+10350|66384|&#x10350;..U+1037F|66431|&#x1037F;, Old-Permic, 48/43
+      <li>U+10380|66432|&#x10380;..U+1039F|66463|&#x1039F;, Ugaritic, 32/31
+      <li>U+103A0|66464|&#x103A0;..U+103DF|66527|&#x103DF;, Old-Persian, 64/50
+      <li>U+10400|66560|&#x10400;..U+1044F|66639|&#x1044F;, Deseret, 80/80
+      <li>U+10450|66640|&#x10450;..U+1047F|66687|&#x1047F;, Shavian, 48/48
+      <li>U+10480|66688|&#x10480;..U+104AF|66735|&#x104AF;, Osmanya, 48/40
+      <li>U+104B0|66736|&#x104B0;..U+104FF|66815|&#x104FF;, Osage, 80/72
+      <li>U+10500|66816|&#x10500;..U+1052F|66863|&#x1052F;, Elbasan, 48/40
+      <li>U+10530|66864|&#x10530;..U+1056F|66927|&#x1056F;, Caucasian-Albanian, 64/53
+      <li>U+10600|67072|&#x10600;..U+1077F|67455|&#x1077F;, Linear-A, 384/341
+      <li>U+10800|67584|&#x10800;..U+1083F|67647|&#x1083F;, Cypriot-Syllabary, 64/55
+      <li>U+10840|67648|&#x10840;..U+1085F|67679|&#x1085F;, Imperial-Aramaic, 32/31
+      <li>U+10860|67680|&#x10860;..U+1087F|67711|&#x1087F;, Palmyrene, 32/32
+      <li>U+10880|67712|&#x10880;..U+108AF|67759|&#x108AF;, Nabataean, 48/40
+      <li>U+108E0|67808|&#x108E0;..U+108FF|67839|&#x108FF;, Hatran, 32/26
+      <li>U+10900|67840|&#x10900;..U+1091F|67871|&#x1091F;, Phoenician, 32/29
+      <li>U+10920|67872|&#x10920;..U+1093F|67903|&#x1093F;, Lydian, 32/27
+      <li>U+10980|67968|&#x10980;..U+1099F|67999|&#x1099F;, Meroitic-Hieroglyphs, 32/32
+      <li>U+109A0|68000|&#x109A0;..U+109FF|68095|&#x109FF;, Meroitic-Cursive, 96/90
+      <li>U+10A00|68096|&#x10A00;..U+10A5F|68191|&#x10A5F;, Kharoshthi, 96/68
+      <li>U+10A60|68192|&#x10A60;..U+10A7F|68223|&#x10A7F;, Old-South-Arabian, 32/32
+      <li>U+10A80|68224|&#x10A80;..U+10A9F|68255|&#x10A9F;, Old-North-Arabian, 32/32
+      <li>U+10AC0|68288|&#x10AC0;..U+10AFF|68351|&#x10AFF;, Manichaean, 64/51
+      <li>U+10B00|68352|&#x10B00;..U+10B3F|68415|&#x10B3F;, Avestan, 64/61
+      <li>U+10B40|68416|&#x10B40;..U+10B5F|68447|&#x10B5F;, Inscriptional-Parthian, 32/30
+      <li>U+10B60|68448|&#x10B60;..U+10B7F|68479|&#x10B7F;, Inscriptional-Pahlavi, 32/27
+      <li>U+10B80|68480|&#x10B80;..U+10BAF|68527|&#x10BAF;, Psalter-Pahlavi, 48/29
+      <li>U+10C00|68608|&#x10C00;..U+10C4F|68687|&#x10C4F;, Old-Turkic, 80/73
+      <li>U+10C80|68736|&#x10C80;..U+10CFF|68863|&#x10CFF;, Old-Hungarian, 128/108
+      <li>U+10D00|68864|&#x10D00;..U+10D3F|68927|&#x10D3F;, Hanifi-Rohingya, 64/50
+      <li>U+10E60|69216|&#x10E60;..U+10E7F|69247|&#x10E7F;, Rumi-Numeral-Symbols, 32/31
+      <li>U+10F00|69376|&#x10F00;..U+10F2F|69423|&#x10F2F;, Old-Sogdian, 48/40
+      <li>U+10F30|69424|&#x10F30;..U+10F6F|69487|&#x10F6F;, Sogdian, 64/42
+      <li>U+11000|69632|&#x11000;..U+1107F|69759|&#x1107F;, Brahmi, 128/109
+      <li>U+11080|69760|&#x11080;..U+110CF|69839|&#x110CF;, Kaithi, 80/67
+      <li>U+110D0|69840|&#x110D0;..U+110FF|69887|&#x110FF;, Sora-Sompeng, 48/35
+      <li>U+11100|69888|&#x11100;..U+1114F|69967|&#x1114F;, Chakma, 80/70
+      <li>U+11150|69968|&#x11150;..U+1117F|70015|&#x1117F;, Mahajani, 48/39
+      <li>U+11180|70016|&#x11180;..U+111DF|70111|&#x111DF;, Sharada, 96/94
+      <li>U+111E0|70112|&#x111E0;..U+111FF|70143|&#x111FF;, Sinhala-Archaic-Numbers, 32/20
+      <li>U+11200|70144|&#x11200;..U+1124F|70223|&#x1124F;, Khojki, 80/62
+      <li>U+11280|70272|&#x11280;..U+112AF|70319|&#x112AF;, Multani, 48/38
+      <li>U+112B0|70320|&#x112B0;..U+112FF|70399|&#x112FF;, Khudawadi, 80/69
+      <li>U+11300|70400|&#x11300;..U+1137F|70527|&#x1137F;, Grantha, 128/86
+      <li>U+11400|70656|&#x11400;..U+1147F|70783|&#x1147F;, Newa, 128/93
+      <li>U+11480|70784|&#x11480;..U+114DF|70879|&#x114DF;, Tirhuta, 96/82
+      <li>U+11580|71040|&#x11580;..U+115FF|71167|&#x115FF;, Siddham, 128/92
+      <li>U+11600|71168|&#x11600;..U+1165F|71263|&#x1165F;, Modi, 96/79
+      <li>(U+11660|71264|&#x11660;..U+1167F|71295|&#x1167F;, Mongolian-Supplement, 32/13)
+      <li>U+11680|71296|&#x11680;..U+116CF|71375|&#x116CF;, Takri, 80/66
+      <li>U+11700|71424|&#x11700;..U+1173F|71487|&#x1173F;, Ahom, 64/58
+      <li>U+11800|71680|&#x11800;..U+1184F|71759|&#x1184F;, Dogra, 80/60
+      <li>U+118A0|71840|&#x118A0;..U+118FF|71935|&#x118FF;, Warang-Citi, 96/84
+      <li>U+11A00|72192|&#x11A00;..U+11A4F|72271|&#x11A4F;, Zanabazar-Square, 80/72
+      <li>U+11A50|72272|&#x11A50;..U+11AAF|72367|&#x11AAF;, Soyombo, 96/81
+      <li>U+11AC0|72384|&#x11AC0;..U+11AFF|72447|&#x11AFF;, Pau-Cin-Hau, 64/57
+      <li>U+11C00|72704|&#x11C00;..U+11C6F|72815|&#x11C6F;, Bhaiksuki, 112/97
+      <li>U+11C70|72816|&#x11C70;..U+11CBF|72895|&#x11CBF;, Marchen, 80/68
+      <li>U+11D00|72960|&#x11D00;..U+11D5F|73055|&#x11D5F;, Masaram-Gondi, 96/75
+      <li>U+11D60|73056|&#x11D60;..U+11DAF|73135|&#x11DAF;, Gunjala-Gondi, 80/63
+      <li>U+11EE0|73440|&#x11EE0;..U+11EFF|73471|&#x11EFF;, Makasar, 32/25
+      <li>U+12000|73728|&#x12000;..U+123FF|74751|&#x123FF;, Cuneiform, 1024/922
+      <li>U+12400|74752|&#x12400;..U+1247F|74879|&#x1247F;, Cuneiform-Numbers-and-Punctuation, 128/116
+      <li>U+12480|74880|&#x12480;..U+1254F|75087|&#x1254F;, Early-Dynastic-Cuneiform, 208/196
+      <li>U+13000|77824|&#x13000;..U+1342F|78895|&#x1342F;, Egyptian-Hieroglyphs, 1072/1071
+      <li>U+14400|82944|&#x14400;..U+1467F|83583|&#x1467F;, Anatolian-Hieroglyphs, 640/583
+      <li>U+16800|92160|&#x16800;..U+16A3F|92735|&#x16A3F;, Bamum-Supplement, 576/569
+      <li>U+16A40|92736|&#x16A40;..U+16A6F|92783|&#x16A6F;, Mro, 48/43
+      <li>U+16AD0|92880|&#x16AD0;..U+16AFF|92927|&#x16AFF;, Bassa-Vah, 48/36
+      <li>U+16B00|92928|&#x16B00;..U+16B8F|93071|&#x16B8F;, Pahawh-Hmong, 144/127
+      <li>U+16E40|93760|&#x16E40;..U+16E9F|93855|&#x16E9F;, Medefaidrin, 96/91
+      <li>U+16F00|93952|&#x16F00;..U+16F9F|94111|&#x16F9F;, Miao, 160/133
+      <li>U+16FE0|94176|&#x16FE0;..U+16FFF|94207|&#x16FFF;, Ideographic-Symbols-and-Punctuation, 32/2
+      <li>(U+17000|94208|&#x17000;..U+187FF|100351|&#x187FF;, Tangut, 6144/6130)
+      <li>U+18800|100352|&#x18800;..U+18AFF|101119|&#x18AFF;, Tangut-Components, 768/755
+      <li>U+1B000|110592|&#x1B000;..U+1B0FF|110847|&#x1B0FF;, Kana-Supplement, 256/256
+      <li>U+1B100|110848|&#x1B100;..U+1B12F|110895|&#x1B12F;, Kana-Extended-A, 48/31
+      <li>U+1B170|110960|&#x1B170;..U+1B2FF|111359|&#x1B2FF;, Nushu, 400/396
+      <li>U+1BC00|113664|&#x1BC00;..U+1BC9F|113823|&#x1BC9F;, Duployan, 160/143
+      <li>U+1BCA0|113824|&#x1BCA0;..U+1BCAF|113839|&#x1BCAF;, Shorthand-Format-Controls, 16/4
+      <li>U+1D000|118784|&#x1D000;..U+1D0FF|119039|&#x1D0FF;, Byzantine-Musical-Symbols, 256/246
+      <li>U+1D100|119040|&#x1D100;..U+1D1FF|119295|&#x1D1FF;, Musical-Symbols, 256/231
+      <li>U+1D200|119296|&#x1D200;..U+1D24F|119375|&#x1D24F;, Ancient-Greek-Musical-Notation, 80/70
+      <li>U+1D2E0|119520|&#x1D2E0;..U+1D2FF|119551|&#x1D2FF;, Mayan-Numerals, 32/20
+      <li>U+1D300|119552|&#x1D300;..U+1D35F|119647|&#x1D35F;, Tai-Xuan-Jing-Symbols, 96/87
+      <li>U+1D360|119648|&#x1D360;..U+1D37F|119679|&#x1D37F;, Counting-Rod-Numerals, 32/25
+      <li>U+1D400|119808|&#x1D400;..U+1D7FF|120831|&#x1D7FF;, Mathematical-Alphanumeric-Symbols, 1024/996
+      <li>U+1D800|120832|&#x1D800;..U+1DAAF|121519|&#x1DAAF;, Sutton-SignWriting, 688/672
+      <li>U+1E000|122880|&#x1E000;..U+1E02F|122927|&#x1E02F;, Glagolitic-Supplement, 48/38
+      <li>U+1E800|124928|&#x1E800;..U+1E8DF|125151|&#x1E8DF;, Mende-Kikakui, 224/213
+      <li>U+1E900|125184|&#x1E900;..U+1E95F|125279|&#x1E95F;, Adlam, 96/87
+      <li>U+1EC70|126064|&#x1EC70;..U+1ECBF|126143|&#x1ECBF;, Indic-Siyaq-Numbers, 80/68
+      <li>U+1EE00|126464|&#x1EE00;..U+1EEFF|126719|&#x1EEFF;, Arabic-Mathematical-Alphabetic-Symbols, 256/143
+      <li>U+1F000|126976|&#x1F000;..U+1F02F|127023|&#x1F02F;, Mahjong-Tiles, 48/44
+      <li>U+1F030|127024|&#x1F030;..U+1F09F|127135|&#x1F09F;, Domino-Tiles, 112/100
+      <li>U+1F0A0|127136|&#x1F0A0;..U+1F0FF|127231|&#x1F0FF;, Playing-Cards, 96/82
+      <li>U+1F100|127232|&#x1F100;..U+1F1FF|127487|&#x1F1FF;, Enclosed-Alphanumeric-Supplement, 256/192
+      <li>U+1F200|127488|&#x1F200;..U+1F2FF|127743|&#x1F2FF;, Enclosed-Ideographic-Supplement, 256/64
+      <li>U+1F300|127744|&#x1F300;..U+1F5FF|128511|&#x1F5FF;, Miscellaneous-Symbols-and-Pictographs, 768/768
+      <li>U+1F600|128512|&#x1F600;..U+1F64F|128591|&#x1F64F;, Emoticons, 80/80
+      <li>U+1F650|128592|&#x1F650;..U+1F67F|128639|&#x1F67F;, Ornamental-Dingbats, 48/48
+      <li>U+1F680|128640|&#x1F680;..U+1F6FF|128767|&#x1F6FF;, Transport-and-Map-Symbols, 128/108
+      <li>U+1F700|128768|&#x1F700;..U+1F77F|128895|&#x1F77F;, Alchemical-Symbols, 128/116
+      <li>U+1F780|128896|&#x1F780;..U+1F7FF|129023|&#x1F7FF;, Geometric-Shapes-Extended, 128/89
+      <li>U+1F800|129024|&#x1F800;..U+1F8FF|129279|&#x1F8FF;, Supplemental-Arrows-C, 256/148
+      <li>U+1F900|129280|&#x1F900;..U+1F9FF|129535|&#x1F9FF;, Supplemental-Symbols-and-Pictographs, 256/213
+      <li>U+1FA00|129536|&#x1FA00;..U+1FA6F|129647|&#x1FA6F;, Chess-Symbols, 112/14
+      <li>(U+20000|131072|&#x20000;..U+2A6DF|173791|&#x2A6DF;, CJK-Unified-Ideographs-Extension-B, 42720/42711)
+      <li>(U+2A700|173824|&#x2A700;..U+2B73F|177983|&#x2B73F;, CJK-Unified-Ideographs-Extension-C, 4160/4149)
+      <li>(U+2B740|177984|&#x2B740;..U+2B81F|178207|&#x2B81F;, CJK-Unified-Ideographs-Extension-D, 224/222)
+      <li>(U+2B820|178208|&#x2B820;..U+2CEAF|183983|&#x2CEAF;, CJK-Unified-Ideographs-Extension-E, 5776/5762)
+      <li>(U+2CEB0|183984|&#x2CEB0;..U+2EBEF|191471|&#x2EBEF;, CJK-Unified-Ideographs-Extension-F, 7488/7473)
+      <li>U+2F800|194560|&#x2F800;..U+2FA1F|195103|&#x2FA1F;, CJK-Compatibility-Ideographs-Supplement, 544/542
+      <li>U+E0000|917504..U+E007F|917631, Tags, 128/97
+      <li>U+E0100|917760..U+E01EF|917999, Variation-Selectors-Supplement, 240/240
+      <li>(U+F0000|983040..U+FFFFF|1048575, Supplementary-Private-Use-Area-A, 65536/0)
+      <li>(U+100000|1048576..U+10FFFF|1114111, Supplementary-Private-Use-Area-B, 65536/0)
+    </ol>
+    <a class="clsHide" href="#idCharUcdcpBlockP1"></a></div>
+  </section>
+  </section>
+
+  <section id="idCharUcdcpUsd">
+  <h3 id="idCharUcdcpUsdH3">code-point.USED
+    <a class="clsHide" href="#idCharUcdcpUsdH3"></a></h3>
+  <p id="idCharUcdcpUsddsn">description::
+    <br>· used-code-point of Unicode is <a class="clsPreview" href="#idCharUcdcp">a-code-point</a> with an assigned <a class="clsPreview" href="#idCharUcd">char</a>, or reserved for surrogates, internal-use or private-use.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
+    <a class="clsHide" href="#idCharUcdcpUsddsn"></a></p>
+  <p id="idCharUcdcpUsdnam">name::
+    <br>* cpt.char.Unicode'code-point.used,
+    <br>* cpt.Unicode'code-point.used,
+    <br>* cpt.Unicode'char'code-point.used,
+    <br>* cpt.used-code-point--of-Unicode,
+    <a class="clsHide" href="#idCharUcdcpUsdnam"></a></p>
+
+  <section id="idCharUcdcpAsgd">
+  <h4 id="idCharUcdcpAsgdH4">code-point.ASSIGNED
+    <a class="clsHide" href="#idCharUcdcpAsgdH4"></a></h4>
+  <p id="idCharUcdcpAsgddsn">description::
+    <br>· assigned--Unicode-code-point is <a class="clsPreview" href="#idCharUcdcpUsd">a-used-code-point</a> with an assigned char.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
+    <a class="clsHide" href="#idCharUcdcpAsgddsn"></a></p>
+  <p id="idCharUcdcpAsgdnam">name::
+    <br>* cpt.assigned--Unicode-code-point,
+    <br>* cpt.char.Unicode'code-point.assigned,
+    <br>* cpt.Unicode'code-point.assigned,
+    <a class="clsHide" href="#idCharUcdcpAsgdnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpPtus">
+  <h4 id="idCharUcdcpPtusH4">code-point.PRIVATE-USE
+    <a class="clsHide" href="#idCharUcdcpPtusH4"></a></h4>
+  <p id="idCharUcdcpPtusdsn">description::
+    <br>Private-use characters <span class="clsColorRed">are code points</span> whose interpretation is not specified by a character encoding standard and whose use and interpretation may be determined by private agreement among cooperating users. Private-use characters are sometimes also referred to as user-defined characters (UDC) or vendor-defined characters (VDC).
+    <br>[http://www.unicode.org/faq/private_use.html#pua1]
+    <a class="clsHide" href="#idCharUcdcpPtusdsn"></a></p>
+  <p id="idCharUcdcpPtusnam">name::
+    <br>* cpt.char.Unicode'code-point.private-use-character,
+    <br>* cpt.private-use-character--Unicode-code-point,
+    <br>* cpt.Unicode'code-point.private-use-character,
+    <br>* cpt.Unicode'code-point.user-defined-character,
+    <br>* cpt.Unicode'code-point.vendor-defined-character,
+    <a class="clsHide" href="#idCharUcdcpPtusnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpIlus">
+  <h4 id="idCharUcdcpIlusH4">code-point.INTERNAL-USE
+    <a class="clsHide" href="#idCharUcdcpIlusH4"></a></h4>
+  <p id="idCharUcdcpIlusdsn">description::
+    <br>A "noncharacter" is a code point that is permanently reserved in the Unicode Standard for internal use.
+    <br>[http://www.unicode.org/faq/private_use.html#noncharacters]
+    <a class="clsHide" href="#idCharUcdcpIlusdsn"></a></p>
+  <p id="idCharUcdcpIlusnam">name::
+    <br>* cpt.char.Unicode'code-point.internal-use,
+    <br>* cpt.noncharacter--Unicode-code-point,
+    <br>* cpt.Unicode'code-point.internal-use,
+    <br>* cpt.Unicode'code-point.noncharacter,
+    <a class="clsHide" href="#idCharUcdcpIlusnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCharUcdcpUsdN">
+  <h3 id="idCharUcdcpUsdNH3">code-point.USED.NO
+    <a class="clsHide" href="#idCharUcdcpUsdNH3"></a></h3>
+  <p id="idCharUcdcpUsdNdsn">description::
+    <br>· usedNo-code-point of Unicode is <a class="clsPreview" href="#idCharUcdcp">a-code-point</a> with NOT an assigned <a class="clsPreview" href="#idCharUcd">char</a>, or reserved for surrogates, internal-use or private-use.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
+    <a class="clsHide" href="#idCharUcdcpUsdNdsn"></a></p>
+  <p id="idCharUcdcpUsdNnam">name::
+    <br>* cpt.char.Unicode'code-point.usedNo,
+    <br>* cpt.Unicode'code-point.usedNo,
+    <br>* cpt.Unicode'char'code-point.usedNo,
+    <br>* cpt.usedNo-code-point--of-Unicode,
+    <a class="clsHide" href="#idCharUcdcpUsdNnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpStUn">
+  <h3 id="idCharUcdcpStUnH3">code-point.UNKNOWN-SCRIPT
+    <a class="clsHide" href="#idCharUcdcpStUnH3"></a></h3>
+  <p id="idCharUcdcpStUndsn">description::
+    <br>The value of <strong>"unknown" script</strong> (ISO 15924 code Zzzz) is given to unassigned, private use, noncharacter, and surrogate code points.
+    <br>[https://en.wikipedia.org/wiki/Script_(Unicode)#Special_script_property_values {2018-06-26}]
+    <a class="clsHide" href="#idCharUcdcpStUndsn"></a></p>
+  <p id="idCharUcdcpStUnnam">name::
+    <br>* cpt.unknown-script-code-point--of-Unicode,
+    <br>* cpt.unknown-script--Unicode-code-point,
+    <br>* cpt.char.Unicode'code-point.unknown-script,
+    <br>* cpt.Unicode'code-point.unknown-script,
+    <a class="clsHide" href="#idCharUcdcpStUnnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcpStUnN">
+  <h3 id="idCharUcdcpStUnNH3">code-point.UNKNOWN-SCRIPT.NO
+    <a class="clsHide" href="#idCharUcdcpStUnNH3"></a></h3>
+  <p id="idCharUcdcpStUnNdsn">description::
+    <br>· known-script--code-points are Unicode-code-points with assigned characters[a] which[a] are part of <a class="clsPreview" href="#idCharUcdScrpt">a-script</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
+    <a class="clsHide" href="#idCharUcdcpStUnNdsn"></a></p>
+  <p id="idCharUcdcpStUnNnam">name::
+    <br>* cpt.known-script-code-point--of-Unicode,
+    <br>* cpt.unknown-scriptNo-code-point--of-Unicode,
+    <br>* cpt.unknown-scriptNo--Unicode-code-point,
+    <br>* cpt.char.Unicode'code-point.unknown-scriptNo,
+    <br>* cpt.Unicode'code-point.unknown-scriptNo,
+    <a class="clsHide" href="#idCharUcdcpStUnNnam"></a></p>
   </section>
   </section>
 
   <section id="idCharUcdage">
-  <h2 id="idCharUcdageH2">Unicode-char'Age-property
+  <h2 id="idCharUcdageH2">Age-property of Unicode-char
     <a class="clsHide" href="#idCharUcdageH2"></a></h2>
   <p id="idCharUcdagedsn">description::
     <br>The Age property indicates the first version in which a particular Unicode character was assigned.
@@ -292,7 +779,7 @@
   </section>
 
   <section id="idCharUcdalfc">
-  <h2 id="idCharUcdalfcH2">Unicode-char'Alphabetic-property
+  <h2 id="idCharUcdalfcH2">Alphabetic-property of Unicode-char
     <a class="clsHide" href="#idCharUcdalfcH2"></a></h2>
   <p id="idCharUcdalfcdsn">description::
     <br>Derived Property: Alphabetic
@@ -309,7 +796,7 @@
   </section>
 
   <section id="idCharUcdbdcls">
-  <h2 id="idCharUcdbdclsH2">Unicode-char'Bidi_Class-property
+  <h2 id="idCharUcdbdclsH2">Bidi_Class-property of Unicode-char
     <a class="clsHide" href="#idCharUcdbdclsH2"></a></h2>
   <p id="idCharUcdbdclsdsn">description::
     <br>determine the directionality for bidirectional Unicode text.
@@ -351,7 +838,7 @@
   </section>
 
   <section id="idCharUcdbdmr">
-  <h2 id="idCharUcdbdmrH2">Unicode-char'Bidi_Mirrored-property
+  <h2 id="idCharUcdbdmrH2">Bidi_Mirrored-property of Unicode-char
     <a class="clsHide" href="#idCharUcdbdmrH2"></a></h2>
   <p id="idCharUcdbdmrdsn">description::
     <br>If the character is a "mirrored" character in bidirectional text, this field has the value "Y"; otherwise "N". See Section 4.7, Bidi Mirrored of [Unicode].
@@ -368,7 +855,7 @@
   </section>
 
   <section id="idCharUcdbmg">
-  <h2 id="idCharUcdbmgH2">Unicode-char'Bidi_Mirroring_Glyph-property
+  <h2 id="idCharUcdbmgH2">Bidi_Mirroring_Glyph-property of Unicode-char
     <a class="clsHide" href="#idCharUcdbmgH2"></a></h2>
   <p id="idCharUcdbmgdsn">description::
     <br>Informative mapping for substituting characters in an implementation of bidirectional mirroring. This maps a subset of characters with the Bidi_Mirrored property to other characters that normally are displayed with the corresponding mirrored glyph. When a character with the Bidi_Mirrored property has the default value for Bidi_Mirroring_Glyph, that means that no other character exists whose glyph is appropriate for character-based glyph mirroring. Implementations must then use other mechanisms to implement mirroring of those characters for the Unicode Bidirectional Algorithm. See Unicode Standard Annex #9, "Unicode Bidirectional Algorithm" [UAX9]. Do not confuse this property with the Bidi_Mirrored property itself.
@@ -384,7 +871,7 @@
   </section>
 
   <section id="idCharUcdcase">
-  <h2 id="idCharUcdcaseH2">Unicode-char'Case-property
+  <h2 id="idCharUcdcaseH2">Case-property of Unicode-char
     <a class="clsHide" href="#idCharUcdcaseH2"></a></h2>
   <p id="idCharUcdcasedsn">description::
     <br>Case is a normative property of characters in certain alphabets whereby characters are considered to be variants of a single letter. These variants, which may differ markedly in shapeand size, are called the uppercase letter (also known as capital or majuscule) and the lowercase letter (also known as small or minuscule). The uppercase letter is generally larger than the lowercase letter.
@@ -403,7 +890,7 @@
     <a class="clsHide" href="#idCharUcdcaseSpc"></a></p>
 
   <section id="idCharUcdcaseLwr">
-  <h3 id="idCharUcdcaseLwrH3">Unicode-char'Lowercase-property
+  <h3 id="idCharUcdcaseLwrH3">Lowercase-property of Unicode-char
     <a class="clsHide" href="#idCharUcdcaseLwrH3"></a></h3>
   <p id="idCharUcdcaseLwrdsn">description::
     <br>Derived Property: Lowercase
@@ -417,7 +904,7 @@
   </section>
 
   <section id="idCharUcdcaseUpr">
-  <h3 id="idCharUcdcaseUprH3">Unicode-char'Uppercase-property
+  <h3 id="idCharUcdcaseUprH3">Uppercase-property of Unicode-char
     <a class="clsHide" href="#idCharUcdcaseUprH3"></a></h3>
   <p id="idCharUcdcaseUprdsn">description::
     <br>Derived Property: Uppercase
@@ -431,7 +918,7 @@
   </section>
 
   <section id="idCharUcdcaseTtl">
-  <h3 id="idCharUcdcaseTtlH3">Unicode-char'Titlecase-property
+  <h3 id="idCharUcdcaseTtlH3">Titlecase-property of Unicode-char
     <a class="clsHide" href="#idCharUcdcaseTtlH3"></a></h3>
   <p id="idCharUcdcaseTtldsn">description::
     <br>Because of the inclusion of certain composite characters for compatibility, such as U+01F1 latin capital letter dz, a third case, called titlecase, is used where the first character of a word must be capitalized. An example of such a character is U+01F2 latin capital letter d with small letter z. The three case forms are UPPERCASE, Titlecase, and lowercase.
@@ -444,7 +931,7 @@
   </section>
 
   <section id="idCharUcdcaseCsd">
-  <h3 id="idCharUcdcaseCsdH3">Unicode-char'Cased-property
+  <h3 id="idCharUcdcaseCsdH3">Cased-property of Unicode-char
     <a class="clsHide" href="#idCharUcdcaseCsdH3"></a></h3>
   <p id="idCharUcdcaseCsddsn">description::
     <br>D135 A character C is defined to be cased if and only if C has the Lowercase or Uppercase property or has a General_Category value of Titlecase_Letter.
@@ -459,7 +946,7 @@
   </section>
 
   <section id="idCharUcdcsfg">
-  <h2 id="idCharUcdcsfgH2">Unicode-char'Case_Folding-property
+  <h2 id="idCharUcdcsfgH2">Case_Folding-property of Unicode-char
     <a class="clsHide" href="#idCharUcdcsfgH2"></a></h2>
   <p id="idCharUcdcsfgdsn">description::
     <br>Mapping from characters to their case-folded forms. This is an informative file containing normative derived properties.
@@ -486,7 +973,7 @@
   </section>
 
   <section id="idCharUcdbpbp">
-  <h2 id="idCharUcdbpbpH2">Unicode-char'Bidi_Paired_Bracket-property
+  <h2 id="idCharUcdbpbpH2">Bidi_Paired_Bracket-property of Unicode-char
     <a class="clsHide" href="#idCharUcdbpbpH2"></a></h2>
   <p id="idCharUcdbpbpdsn">description::
     <br>For an opening bracket, the code point of the matching closing bracket. For a closing bracket, the code point of the matching opening bracket. This property is used in the implementation of parenthesis matching. See Unicode Standard Annex #9, "Unicode Bidirectional Algorithm" [UAX9].
@@ -503,7 +990,7 @@
   </section>
 
   <section id="idCharUcdbpbtp">
-  <h2 id="idCharUcdbpbtpH2">Unicode-char'Bidi_Paired_Bracket_Type-property
+  <h2 id="idCharUcdbpbtpH2">Bidi_Paired_Bracket_Type-property of Unicode-char
     <a class="clsHide" href="#idCharUcdbpbtpH2"></a></h2>
   <p id="idCharUcdbpbtpdsn">description::
     <br>Type of a paired bracket, either opening or closing. This property is used in the implementation of parenthesis matching. See Unicode Standard Annex #9, "Unicode Bidirectional Algorithm" [UAX9].
@@ -525,7 +1012,7 @@
   </section>
 
   <section id="idCharUcddnmg">
-  <h2 id="idCharUcddnmgH2">Unicode-char'Decomposition_Mapping-property
+  <h2 id="idCharUcddnmgH2">Decomposition_Mapping-property of Unicode-char
     <a class="clsHide" href="#idCharUcddnmgH2"></a></h2>
   <p id="idCharUcddnmgdsn">description::
     <br>This is a string property, consisting of a sequence of one or more Unicode code points.
@@ -561,7 +1048,7 @@
   </section>
 
   <section id="idCharUcdeaw">
-  <h2 id="idCharUcdeawH2">Unicode-char'East_Asian_Width-property
+  <h2 id="idCharUcdeawH2">East_Asian_Width-property of Unicode-char
     <a class="clsHide" href="#idCharUcdeawH2"></a></h2>
   <p id="idCharUcdeawdsn">description::
     <br>When dealing with East Asian text, there is the concept of an inherent width of a character. This width takes on either of two values: narrow or wide. For traditional mixed-width East Asian legacy character sets, this classification into narrow and wide corresponds with few exceptions directly to the storage size for each character: a few narrow characters use a single byte per character and all other characters (usually wide) use two or more bytes.
@@ -587,7 +1074,7 @@
   </section>
 
   <section id="idCharUcdglcr">
-  <h2 id="idCharUcdglcrH2">Unicode-char'General_Category-property
+  <h2 id="idCharUcdglcrH2">General_Category-property of Unicode-char
     <a class="clsHide" href="#idCharUcdglcrH2"></a></h2>
   <p id="idCharUcdglcrdsn">description::
     <br>The General_Category property of a code point provides for the most general classification of that code point.
@@ -690,7 +1177,7 @@
   </section>
 
   <section id="idCharUcdjggp">
-  <h2 id="idCharUcdjggpH2">Unicode-char'Joining_Group-property
+  <h2 id="idCharUcdjggpH2">Joining_Group-property of Unicode-char
     <a class="clsHide" href="#idCharUcdjggpH2"></a></h2>
   <p id="idCharUcdjggpdsn">description::
     <br>The Arabic characters with the property values Joining_Type=Dual_Joining and Joining_Type=Right_Joining can each be subdivided into shaping groups, based on the behavior of their letter skeletons when shaped in context.
@@ -813,7 +1300,7 @@
   </section>
 
   <section id="idCharUcdjgtp">
-  <h2 id="idCharUcdjgtpH2">Unicode-char'Joining_Type-property
+  <h2 id="idCharUcdjgtpH2">Joining_Type-property of Unicode-char
     <a class="clsHide" href="#idCharUcdjgtpH2"></a></h2>
   <p id="idCharUcdjgtpdsn">description::
     <br>Each Arabic letter must be depicted by one of a number of possible contextual glyph forms.
@@ -842,7 +1329,7 @@
   </section>
 
   <section id="idCharUcdlnbk">
-  <h2 id="idCharUcdlnbkH2">Unicode-char'Line_Break-property
+  <h2 id="idCharUcdlnbkH2">Line_Break-property of Unicode-char
     <a class="clsHide" href="#idCharUcdlnbkH2"></a></h2>
   <p id="idCharUcdlnbkdsn">description::
     <br>Line breaking, also known as word wrapping, is the process of breaking a section of text into lines such that it will fit in the available width of a page, window or other display area.
@@ -1099,7 +1586,7 @@
   </section>
 
   <section id="idCharUcdmth">
-  <h2 id="idCharUcdmthH2">Unicode-char'Math-property
+  <h2 id="idCharUcdmthH2">Math-property of Unicode-char
     <a class="clsHide" href="#idCharUcdmthH2"></a></h2>
   <p id="idCharUcdmthdsn">description::
     <br>Derived Property: Math
@@ -1116,7 +1603,7 @@
   </section>
 
   <section id="idCharUcdnctp">
-  <h2 id="idCharUcdnctpH2">Unicode-char'Numeric_Type-property
+  <h2 id="idCharUcdnctpH2">Numeric_Type-property of Unicode-char
     <a class="clsHide" href="#idCharUcdnctpH2"></a></h2>
   <p id="idCharUcdnctpdsn">description::
     <br>Derived Property:   Numeric_Type
@@ -1139,7 +1626,7 @@
   </section>
 
   <section id="idCharUcdnctp">
-  <h2 id="idCharUcdnctpH2">Unicode-char'Numeric_Value-property
+  <h2 id="idCharUcdnctpH2">Numeric_Value-property of Unicode-char
     <a class="clsHide" href="#idCharUcdnctpH2"></a></h2>
   <p id="idCharUcdnctpdsn">description::
     <br>Finally, we have three fields, kAccountingNumeric, kOtherNumeric, and kPrimaryNumeric to indicate the numerical values an ideograph may have.
@@ -1157,7 +1644,7 @@
   </section>
 
   <section id="idCharUcdprpt">
-  <h2 id="idCharUcdprptH2">Unicode-char'property
+  <h2 id="idCharUcdprptH2">property of Unicode-char
     <a class="clsHide" href="#idCharUcdprptH2"></a></h2>
   <p id="idCharUcdprptdsn">description::
     <br>· property of Unicode-char is-called a-generic-attribute of a-Unicode-char, with specifics, called values.
@@ -1203,7 +1690,7 @@
     <a class="clsHide" href="#idCharUcdprptSpc"></a></p>
 
   <section id="idCharUcdprptNrmv">
-  <h3 id="idCharUcdprptNrmvH3">Unicode-char'property.NORMATIVE
+  <h3 id="idCharUcdprptNrmvH3">property.NORMATIVE of Unicode-char
     <a class="clsHide" href="#idCharUcdprptNrmvH3"></a></h3>
   <p id="idCharUcdprptNrmvdsn">description::
     <br>Normative property: A Unicode character property used in the specification of the standard.
@@ -1216,7 +1703,7 @@
   </section>
 
   <section id="idCharUcdprptOvrl">
-  <h3 id="idCharUcdprptOvrlH3">Unicode-char'property.OVERRIDABLE
+  <h3 id="idCharUcdprptOvrlH3">property.OVERRIDABLE of Unicode-char
     <a class="clsHide" href="#idCharUcdprptOvrlH3"></a></h3>
   <p id="idCharUcdprptOvrldsn">description::
     <br>Overridable property: A normative property whose values may be overridden by conformant higher-level protocols.
@@ -1230,7 +1717,7 @@
   </section>
 
   <section id="idCharUcdprptInfv">
-  <h3 id="idCharUcdprptInfvH3">Unicode-char'property.INFORMATIVE
+  <h3 id="idCharUcdprptInfvH3">property.INFORMATIVE of Unicode-char
     <a class="clsHide" href="#idCharUcdprptInfvH3"></a></h3>
   <p id="idCharUcdprptInfvdsn">description::
     <br>Informative property: A Unicode character property whose values are provided for information only.
@@ -1243,7 +1730,7 @@
   </section>
 
   <section id="idCharUcdprptCrbr">
-  <h3 id="idCharUcdprptCrbrH3">Unicode-char'property.CONTRIBUTORY
+  <h3 id="idCharUcdprptCrbrH3">property.CONTRIBUTORY of Unicode-char
     <a class="clsHide" href="#idCharUcdprptCrbrH3"></a></h3>
   <p id="idCharUcdprptCrbrdsn">description::
     <br>Contributory property:  A simple property defined merely to make the statement of a rule defining a derived property more compact or general.
@@ -1256,7 +1743,7 @@
   </section>
 
   <section id="idCharUcdprptPvsl">
-  <h3 id="idCharUcdprptPvslH3">Unicode-char'property.PROVISIONAL
+  <h3 id="idCharUcdprptPvslH3">property.PROVISIONAL of Unicode-char
     <a class="clsHide" href="#idCharUcdprptPvslH3"></a></h3>
   <p id="idCharUcdprptPvsldsn">description::
     <br>Provisional property: A Unicode character property whose values are unapproved and tentative, and which may be incomplete or otherwise not in a usable state.
@@ -1270,7 +1757,7 @@
   </section>
 
   <section id="idCharUcdprptSmpl">
-  <h3 id="idCharUcdprptSmplH3">Unicode-char'property.SIMPLE
+  <h3 id="idCharUcdprptSmplH3">property.SIMPLE of Unicode-char
     <a class="clsHide" href="#idCharUcdprptSmplH3"></a></h3>
   <p id="idCharUcdprptSmpldsn">description::
     <br>Some character properties in the UCD are simple properties. This status has no bearing on whether or not the properties are normative, but merely indicates that their values are not derived from some combination of other properties.
@@ -1286,7 +1773,7 @@
   </section>
 
   <section id="idCharUcdprptDrvd">
-  <h3 id="idCharUcdprptDrvdH3">Unicode-char'property.DERIVED
+  <h3 id="idCharUcdprptDrvdH3">property.DERIVED of Unicode-char
     <a class="clsHide" href="#idCharUcdprptDrvdH3"></a></h3>
   <p id="idCharUcdprptDrvddsn">description::
     <br>Other character properties are derived. This means that their values are derived by rule from some other combination of properties. Generally such rules are stated as set operations, and may or may not include explicit exception lists for individual characters.
@@ -1300,7 +1787,7 @@
   </section>
 
   <section id="idCharUcdprptBnr">
-  <h3 id="idCharUcdprptBnrH3">Unicode-char'property.BINARY
+  <h3 id="idCharUcdprptBnrH3">property.BINARY of Unicode-char
     <a class="clsHide" href="#idCharUcdprptBnrH3"></a></h3>
   <p id="idCharUcdprptBnrdsn">description::
     <br>Binary properties are a special case of Enumeration properties, which have exactly two values: Yes and No (or True and False).
@@ -1314,7 +1801,7 @@
   </section>
 
   <section id="idCharUcdprptCtlg">
-  <h3 id="idCharUcdprptCtlgH3">Unicode-char'property.CATALOG
+  <h3 id="idCharUcdprptCtlgH3">property.CATALOG of Unicode-char
     <a class="clsHide" href="#idCharUcdprptCtlgH3"></a></h3>
   <p id="idCharUcdprptCtlgdsn">description::
     <br>Catalog properties have enumerated values which are expected to be regularly extended in successive versions of the Unicode Standard. This distinguishes them from Enumeration properties.
@@ -1328,7 +1815,7 @@
   </section>
 
   <section id="idCharUcdprptEnmn">
-  <h3 id="idCharUcdprptEnmnH3">Unicode-char'property.ENUMERATION
+  <h3 id="idCharUcdprptEnmnH3">property.ENUMERATION of Unicode-char
     <a class="clsHide" href="#idCharUcdprptEnmnH3"></a></h3>
   <p id="idCharUcdprptEnmndsn">description::
     <br>Enumeration properties have enumerated values which constitute a logical partition space; new values will generally not be added to them in successive versions of the standard.
@@ -1342,7 +1829,7 @@
   </section>
 
   <section id="idCharUcdprptStrg">
-  <h3 id="idCharUcdprptStrgH3">Unicode-char'property.STRING
+  <h3 id="idCharUcdprptStrgH3">property.STRING of Unicode-char
     <a class="clsHide" href="#idCharUcdprptStrgH3"></a></h3>
   <p id="idCharUcdprptStrgdsn">description::
     <br>String properties are typically mappings from a Unicode code point to another Unicode code point or sequence of Unicode code points; examples include case mappings and decomposition mappings.
@@ -1356,7 +1843,7 @@
   </section>
 
   <section id="idCharUcdprptNmrc">
-  <h3 id="idCharUcdprptNmrcH3">Unicode-char'property.NUMERIC
+  <h3 id="idCharUcdprptNmrcH3">property.NUMERIC of Unicode-char
     <a class="clsHide" href="#idCharUcdprptNmrcH3"></a></h3>
   <p id="idCharUcdprptNmrcdsn">description::
     <br>Numeric properties specify the actual numeric values for digits and other characters associated with numbers in some way.
@@ -1369,7 +1856,7 @@
   </section>
 
   <section id="idCharUcdprptMisc">
-  <h3 id="idCharUcdprptMiscH3">Unicode-char'property.MISC
+  <h3 id="idCharUcdprptMiscH3">property.MISC of Unicode-char
     <a class="clsHide" href="#idCharUcdprptMiscH3"></a></h3>
   <p id="idCharUcdprptMiscdsn">description::
     <br>Miscellaneous properties are those properties that do not fit neatly into the other property categories; they currently include character names, comments about characters, the Script_Extensions property, the Equivalent_Unified_Ideograph property, and the Unicode_Radical_Stroke property (a combination of numeric values) documented in Unicode Standard Annex #38, "Unicode Han Database (Unihan)" [UAX38].
@@ -1384,7 +1871,7 @@
   </section>
 
   <section id="idCharUcdstrd">
-  <h2 id="idCharUcdstrdH2">Unicode-char'Unicode-standard
+  <h2 id="idCharUcdstrdH2">Unicode-STANDARD of Unicode-char
     <a class="clsHide" href="#idCharUcdstrdH2"></a></h2>
   <p id="idCharUcdstrddsn">description::
     <br>· Unicode is a computing-industry standard for the consistent encoding, representation, and handling of <a class="clsPreview" href="#idCharCmr">computer-chars</a>.
@@ -1874,9 +2361,6 @@
   <p id="idCharUcdstd4012003dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 4.0.1, defined by: The Unicode Standard, Version 4.0 (Boston, MA, Addison-Wesley, 2003. ISBN 0-321-18578-1), as amended by Unicode 4.0.1
     <br>http://www.unicode.org/versions/Unicode4.0.1/
-    <br>===
-    <br>script=
-    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd4012003dsn"></a></p>
   <p id="idCharUcdstd4012003nam">name::
     <br>* cpt.char.Unicode'standard.4-0-1.2003,
@@ -2040,7 +2524,7 @@
   </section>
 
   <section id="idCharUcdgnc">
-  <h2 id="idCharUcdgncH2">Unicode-char'GENERIC
+  <h2 id="idCharUcdgncH2">GENERIC of Unicode-char
     <a class="clsHide" href="#idCharUcdgncH2"></a></h2>
   <p id="idCharUcdgncgncchn">generic-chain::
     <br>* <a class="clsPreview" href="#idCharCmr">computer-char</a>,
@@ -2061,6 +2545,136 @@
     <a class="clsHide" href="#idCharUcdSpcP1"></a></p>
   </section>
 
+  <section id="idCharUcdAgrt">
+  <h2 id="idCharUcdAgrtH2">Unicode-char.AGGREGATE
+    <a class="clsHide" href="#idCharUcdAgrtH2"></a></h2>
+  <p id="idCharUcdAgrtdsn">description::
+    <br>· 137,439 v.11-0-0.2018
+    <br>· 136,755 v.10-0-0.2017
+    <br>· 128,237 v.9-0-0.2016
+    <br>· 120,737 v.8-0-0.2015
+    <br>· 113,021 v.7-0-0.2014
+    <br>· 110,187 v.6-3-0.2013
+    <br>· 110,182 v.6-2-0.2012
+    <br>· 110,181 v.6-1-0.2012
+    <br>· 109,449 v.6-0-0.2011
+    <br>· 107,361 v.5-2-0.2009
+    <br>· 100,713 v.5-1-0.2007
+    <br>· 99,089 v.5-0-0.2007
+    <br>· 97,720 v.4-1-0.2005
+    <br>· 96,447 v.4-0-0.2003
+    <br>· 95,221 v.3-2-0.2000
+    <br>· 94,205 v.3-1-0.2000
+    <br>· 49,259 v.3-0-0.2000
+    <br>· 38,952 v.2-1-0.1998
+    <br>· 38,950 v.2-0-0.1996
+    <br>· 34,233 v.1-1-0.1993
+    <br>· 28,359 v.1-0-1.1992
+    <br>· 7,161 v.1-0-0.1991
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdAgrtdsn"></a></p>
+  <p id="idCharUcdAgrtnam">name::
+    <br>* cpt.aggregate-Unicode-char,
+    <br>* cpt.char.Unicode.aggregate,
+    <br>* cpt.Unicode'char.aggregate,
+    <a class="clsHide" href="#idCharUcdAgrtnam"></a></p>
+  </section>
+
+  <section id="idCharUcdScrpt">
+  <h2 id="idCharUcdScrptH2">Unicode-char.SCRIPT
+    <a class="clsHide" href="#idCharUcdScrptH2"></a></h2>
+  <p id="idCharUcdScrptdsn">description::
+    <br>· Unicode-script is A-SET of Unicode-chars used in one or more written-human-languages.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
+    <a class="clsHide" href="#idCharUcdScrptdsn"></a></p>
+  <p id="idCharUcdScrptnam">name::
+    <br>* cpt.char.Unicode.script,
+    <br>* cpt.script.Unicode,
+    <br>* cpt.Unicode'script,
+    <br>* cpt.Unicode-char.script,
+    <br>* cpt.Unicode-script,
+    <a class="clsHide" href="#idCharUcdScrptnam"></a></p>
+  <p id="idCharUcdScrptwpa">addressWpg::
+    <br>* https://en.wikipedia.org/wiki/Script_(Unicode)#List_of_scripts_in_Unicode,
+    <a class="clsHide" href="#idCharUcdScrptwpa"></a></p>
+
+  <section id="idCharUcdScrptchar">
+  <h3 id="idCharUcdScrptcharH3">char of Unicode-script
+    <a class="clsHide" href="#idCharUcdScrptcharH3"></a></h3>
+  <p id="idCharUcdScrptchardsn">description::
+    <br>· every Unicode-script contains a-quantity of <a class="clsPreview" href="#idCharUcd">chars</a>.
+    <a class="clsHide" href="#idCharUcdScrptchardsn"></a></p>
+  </section>
+
+  <section id="idCharUcdScrptdrct">
+  <h3 id="idCharUcdScrptdrctH3">directionality of Unicode-script
+    <a class="clsHide" href="#idCharUcdScrptdrctH3"></a></h3>
+  <p id="idCharUcdScrptdrctdsn">description::
+    <br>· L-to-R
+    <br>· R-to-L
+    <br>· Varies
+    <br>· T-to-B (Mongolian)
+    <br>· Inherited
+    <a class="clsHide" href="#idCharUcdScrptdrctdsn"></a></p>
+  </section>
+
+  <section id="idCharUcdScrptSpc">
+  <h3 id="idCharUcdScrptSpcH3">Unicode-script.SPECIFIC
+    <a class="clsHide" href="#idCharUcdScrptSpcH3"></a></h3>
+  <p id="idCharUcdScrptP1">specific::
+    <br>* <a class="clsPreview" href="#idCharUcdScrptCmn">common</a>,
+    <br>* <a class="clsPreview" href="#idCharUcdScrptInhd">inherited</a>,
+    <br>=== aggregate:
+    <br>· 146 v.11-0-0.2018
+    <br>· 139 v.10-0-0.2017
+    <br>· 135 v.9-0-0.2016
+    <br>· 129 v.8-0-0.2015
+    <br>· 123 v.7-0-0.2014
+    <br>· 100 v.6-3-0.2013
+    <br>· 93 v.6-0-0.2011
+    <br>· 90 v.5-2-0.2009
+    <br>· 75 v.5-1-0.2007
+    <br>· 64 v.5-0-0.2007
+    <br>· 59 v.4-1-0.2005
+    <br>· 52 v.4-0-0.2003
+    <br>· 45 v.3-2-0.2000
+    <br>· 41 v.3-1-0.2000
+    <br>· 38 v.3-0-0.2000
+    <br>· 25 v.2-1-0.1998
+    <br>· 24 v.1-1-0.1993
+    <br>· 25 v.1-0-1.1992
+    <br>· 24 v.1-0-0.1991
+    <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
+    <a class="clsHide" href="#idCharUcdScrptP1"></a></p>
+  </section>
+
+  <section id="idCharUcdScrptCmn">
+  <h3 id="idCharUcdScrptCmnH3">Unicode-script.COMMON
+    <a class="clsHide" href="#idCharUcdScrptCmnH3"></a></h3>
+  <p id="idCharUcdScrptCmndsn">description::
+    <br>Unicode can assign a character in the UCS to a single script only. However, many characters — those that are not part of a formal natural language writing system or are unified across many writing systems may be used in more than one script. For example, currency signs, symbols, numerals and punctuation marks. In these cases Unicode defines them as belonging to the "common" script (ISO 15924 code "Zyyy").
+    <br>[https://en.wikipedia.org/wiki/Script_(Unicode)#Special_script_property_values {2018-06-26}]
+    <a class="clsHide" href="#idCharUcdScrptCmndsn"></a></p>
+  <p id="idCharUcdScrptCmnnam">name::
+    <br>* cpt.common-script.Unicode,
+    <br>* cpt.Unicode'script.common,
+    <a class="clsHide" href="#idCharUcdScrptCmnnam"></a></p>
+  </section>
+
+  <section id="idCharUcdScrptInhd">
+  <h3 id="idCharUcdScrptInhdH3">Unicode-script.INHERITED
+    <a class="clsHide" href="#idCharUcdScrptInhdH3"></a></h3>
+  <p id="idCharUcdScrptInhddsn">description::
+    <br>Many diacritics and non-spacing combining characters may be applied to characters from more than one script. In these cases Unicode assigns them to the "inherited" script (ISO 15924 code Zinh), which means that they have the same script class as the base character with which they combine, and so in different contexts they may be treated as belonging to different scripts. For example, U+0308  ̈ Combining Diaeresis may combine with either U+0065 e Latin Small Letter E to create a Latin "ë", or with U+0435 е Cyrillic Small Letter IE for the Cyrillic "ё". In the former case it inherits the Latin script of the base character whereas in the latter case it inherits the Cyrillic script of the base character.
+    <br>[https://en.wikipedia.org/wiki/Script_(Unicode)#Special_script_property_values, {2018-06-26}]
+    <a class="clsHide" href="#idCharUcdScrptInhddsn"></a></p>
+  <p id="idCharUcdScrptInhdnam">name::
+    <br>* cpt.inherited-script.Unicode,
+    <br>* cpt.Unicode'script.inherited,
+    <a class="clsHide" href="#idCharUcdScrptInhdnam"></a></p>
+  </section>
+  </section>
+
   <section id="idCharUcdGrfc">
   <h2 id="idCharUcdGrfcH2">Unicode-char.GRAPHIC
     <a class="clsHide" href="#idCharUcdGrfcH2"></a></h2>
@@ -2069,6 +2683,7 @@
     <br>[https://en.wikipedia.org/wiki/Graphic_character#Unicode]
     <a class="clsHide" href="#idCharUcdGrfcdsn"></a></p>
   <p id="idCharUcdGrfcnam">name::
+    <br>* cpt.char.graphic.Unicode,
     <br>* cpt.char.Unicode.graphic,
     <br>* cpt.graphic-Unicode-char,
     <br>* cpt.Unicode'char.graphic,
@@ -2150,9 +2765,30 @@
     <br>[https://en.wikipedia.org/wiki/Graphic_character {2018-06-25}]
     <a class="clsHide" href="#idCharGrfcdsn"></a></p>
   <p id="idCharGrfcnam">name::
+    <br>* cpt.char.glyph,
     <br>* cpt.char.graphic,
+    <br>* cpt.glyph-char,
     <br>* cpt.graphic-char,
     <a class="clsHide" href="#idCharGrfcnam"></a></p>
+  <p id="idCharGrfcSpc">specific::
+    <br>* <a class="clsPreview" href="#idCharUcdGrfc">Unicode-graphic-char</a>,
+    <a class="clsHide" href="#idCharGrfcSpc"></a></p>
+</section>
+
+<section id="idCharGrfcNo">
+  <h1 id="idCharGrfcNoH1">char.GRAPHIC.NO
+    <a class="clsHide" href="#idCharGrfcNoH1"></a></h1>
+  <p id="idCharGrfcNodsn">description::
+    <br>· graphicNo-char is <a class="clsPreview" href="#idCharCmr">a-computer-char</a> WITHOUT a-written or printed icon associated with it.
+    <br>· all <a class="clsPreview" href="#idDescriptionFT">chars</a> of written-human-languages are <a class="clsPreview" href="#idCharGrfc">graphic-chars</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
+    <a class="clsHide" href="#idCharGrfcNodsn"></a></p>
+  <p id="idCharGrfcNonam">name::
+    <br>* cpt.char.glyphNo,
+    <br>* cpt.char.graphicNo,
+    <br>* cpt.glyphNo-char,
+    <br>* cpt.graphicNo-char,
+    <a class="clsHide" href="#idCharGrfcNonam"></a></p>
 </section>
 
 <section id="idCharEvgFT">
@@ -2161,8 +2797,8 @@
   <p id="idCharEvgnam">name::
     <br>* cpt.char.evoluting,
     <a class="clsHide" href="#idCharEvgnam"></a></p>
-  <p id="idCharEvg">{time.}::
-    <br>=== :
+  <p id="idCharEvg">{time.2018-06-19}::
+    <br>=== creation of this structured-concept:
     <a class="clsHide" href="#idCharEvg"></a></p>
 </section>
 
