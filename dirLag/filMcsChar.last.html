@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char (char.0-8-0.2018-06-26 draft)</title>
+  <title>Mcs.char (char.0-9-0.2018-06-28 draft)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
-  <link rel="stylesheet" href="http://synagonism.github.io/hitp/hitp.css">
+  <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
 
 <body>
@@ -186,7 +186,7 @@
     <a class="clsHide" href="#idCharUcdcpPlanenam"></a></p>
 
   <section id="idCharUcdcpPlane0">
-  <h4 id="idCharUcdcpPlane0H4">plane.0
+  <h4 id="idCharUcdcpPlane0H4">plane.0 (BMP)
     <a class="clsHide" href="#idCharUcdcpPlane0H4"></a></h4>
   <p id="idCharUcdcpPlane0dsn">description::
     <br>The first plane, plane 0, the Basic Multilingual Plane (BMP) contains characters for almost all modern languages, and a large number of symbols. A primary objective for the BMP is to support the unification of prior character sets as well as characters for writing. Most of the assigned code points in the BMP are used to encode Chinese, Japanese, and Korean (CJK) characters.
@@ -203,7 +203,7 @@
   </section>
 
   <section id="idCharUcdcpPlane1">
-  <h4 id="idCharUcdcpPlane1H4">plane.1
+  <h4 id="idCharUcdcpPlane1H4">plane.1 (SMP)
     <a class="clsHide" href="#idCharUcdcpPlane1H4"></a></h4>
   <p id="idCharUcdcpPlane1dsn">description::
     <br>Plane 1, the Supplementary Multilingual Plane (SMP), contains historic scripts (except CJK ideographic), and symbols and notation used within certain fields. Scripts include Linear B, Egyptian hieroglyphs, and cuneiform scripts. It also includes English reform orthographies like Shavian and Deseret, and some modern scripts like Osage, Warang Citi, and Adlam. Symbols and notations include historic and modern musical notation; mathematical alphanumerics; Emoji and other pictographic sets; and game symbols for playing cards, Mah Jongg, and dominoes.
@@ -218,7 +218,7 @@
   </section>
 
   <section id="idCharUcdcpPlane2">
-  <h4 id="idCharUcdcpPlane2H4">plane.2
+  <h4 id="idCharUcdcpPlane2H4">plane.2 (SIP)
     <a class="clsHide" href="#idCharUcdcpPlane2H4"></a></h4>
   <p id="idCharUcdcpPlane2dsn">description::
     <br>Plane 2, the Supplementary Ideographic Plane (SIP), is used for CJK Ideographs, mostly CJK Unified Ideographs, that were not included in earlier character encoding standards.
@@ -239,7 +239,7 @@
   </section>
 
   <section id="idCharUcdcpPlane14">
-  <h4 id="idCharUcdcpPlane14H4">plane.14
+  <h4 id="idCharUcdcpPlane14H4">plane.14 (SSP)
     <a class="clsHide" href="#idCharUcdcpPlane14H4"></a></h4>
   <p id="idCharUcdcpPlane14dsn">description::
     <br>Plane 14 (E in hexadecimal), the Supplementary Special-purpose Plane (SSP), currently contains non-graphical characters. The first block is for special use tag characters. The other block contains glyph variation selectors to indicate an alternate glyph for a character that cannot be determined by context.
@@ -357,6 +357,7 @@
   <h4 id="idCharUcdcpBlockSpcH4">Unicode-block.SPECIFIC
     <a class="clsHide" href="#idCharUcdcpBlockSpcH4"></a></h4>
   <div id="idCharUcdcpBlockP1">specific::
+    <br>(code-points/chars)
     <ol>
       <li><a class="clsPreview" href="../dirTchInf/dirUcd/filMcsU0000.last.html#idDescriptionFT">U+0000|0..U+007F|127</a>, Basic-Latin, 128/128
       <li><a class="clsPreview" href="../dirTchInf/dirUcd/filMcsU0080.last.html#idDescriptionFT">U+0080|128..U+00FF|255|&#x00FF;</a>, Latin-1-Supplement, 128/128
@@ -759,6 +760,16 @@
     <br>* cpt.Unicode'code-point.unknown-scriptNo,
     <a class="clsHide" href="#idCharUcdcpStUnNnam"></a></p>
   </section>
+  </section>
+
+  <section id="idCharUcdblock">
+  <h2 id="idCharUcdblockH2">block of Unicode-char (<a class="clsPreview" href="#idCharUcdcpBlock">link</a>)
+    <a class="clsHide" href="#idCharUcdblockH2"></a></h2>
+  </section>
+
+  <section id="idCharUcdplane">
+  <h2 id="idCharUcdplaneH2">plane of Unicode-char (<a class="clsPreview" href="#idCharUcdcpPlane">link</a>)
+    <a class="clsHide" href="#idCharUcdplaneH2"></a></h2>
   </section>
 
   <section id="idCharUcdage">
@@ -1625,22 +1636,22 @@
     <a class="clsHide" href="#idCharUcdnctpSpc"></a></p>
   </section>
 
-  <section id="idCharUcdnctp">
-  <h2 id="idCharUcdnctpH2">Numeric_Value-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdnctpH2"></a></h2>
-  <p id="idCharUcdnctpdsn">description::
+  <section id="idCharUcdncvl">
+  <h2 id="idCharUcdncvlH2">Numeric_Value-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdncvlH2"></a></h2>
+  <p id="idCharUcdncvldsn">description::
     <br>Finally, we have three fields, kAccountingNumeric, kOtherNumeric, and kPrimaryNumeric to indicate the numerical values an ideograph may have.
     <br>Traditionally, ideographs were used both for numbers and words, and so many ideographs have (or can have) numeric values.
     <br>The various kinds of numeric values are specified by these three fields.
     <br>[https://www.unicode.org/reports/tr38/tr38-25.html#N1024D]
-    <a class="clsHide" href="#idCharUcdnctpdsn"></a></p>
-  <p id="idCharUcdnctpnam">name::
+    <a class="clsHide" href="#idCharUcdncvldsn"></a></p>
+  <p id="idCharUcdncvlnam">name::
     <br>* cpt.char.Unicode'Numeric_Value-property,
     <br>* cpt.Unicode'Numeric_Value-property,
-    <a class="clsHide" href="#idCharUcdnctpnam"></a></p>
-  <p id="idCharUcdnctpwpa">addressWpg::
+    <a class="clsHide" href="#idCharUcdncvlnam"></a></p>
+  <p id="idCharUcdncvlwpa">addressWpg::
     <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericValues.txt,
-    <a class="clsHide" href="#idCharUcdnctpwpa"></a></p>
+    <a class="clsHide" href="#idCharUcdncvlwpa"></a></p>
   </section>
 
   <section id="idCharUcdprpt">
@@ -2861,6 +2872,6 @@
   ga('send', 'pageview');
 </script>
 
-<script src="http://synagonism.github.io/hitp/hitp.js"></script>
+<script src="https://synagonism.github.io/hitp/hitp.js"></script>
 </body>
 </html>
