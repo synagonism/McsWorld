@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Hitp-language (Hitp.17-5-0.2018-07-03)</title>
+  <title>Mcs.Hitp-language (Hitp.17-7-0.2018-08-11)</title>
   <meta name="keywords" content="McsHitp, ebook, title-content-tree-document, hitp-webpage-dialect, html5.id.toc.preview, synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -1237,7 +1237,7 @@
     <br>· contains the-versions of <a class="clsPreview" href="#idHitpljbfil">hitp.js</a>.
     <a class="clsHide" href="#idHitpoHitpaVersiondsn"></a></p>
   <p id="idHitpoHitpaVersionnam">name::
-    <br>* cpt.oHitp.aVersion,
+    <br>* cpt.oHitp'aVersion,
     <a class="clsHide" href="#idHitpoHitpaVersionnam"></a></p>
   </section>
 
@@ -1248,7 +1248,7 @@
     <br>· boolean if the-runtime is the-Edge-browser.
     <a class="clsHide" href="#idHitpoHitpbEdgedsn"></a></p>
   <p id="idHitpoHitpbEdgenam">name::
-    <br>* cpt.oHitp.bEdge,
+    <br>* cpt.oHitp'bEdge,
     <a class="clsHide" href="#idHitpoHitpbEdgenam"></a></p>
   </section>
 
@@ -1259,7 +1259,7 @@
     <br>· boolean if the-runtime is the-Firefox-browser.
     <a class="clsHide" href="#idHitpoHitpbFirefoxdsn"></a></p>
   <p id="idHitpoHitpbFirefoxnam">name::
-    <br>* cpt.oHitp.bFirefox,
+    <br>* cpt.oHitp'bFirefox,
     <a class="clsHide" href="#idHitpoHitpbFirefoxnam"></a></p>
   </section>
 
@@ -1270,24 +1270,263 @@
     <br>· boolean if exists a-site-structure-menu.
     <a class="clsHide" href="#idHitpoHitpbSitedsn"></a></p>
   <p id="idHitpoHitpbSitenam">name::
-    <br>* cpt.oHitp.bSite,
+    <br>* cpt.oHitp'bSite,
     <a class="clsHide" href="#idHitpoHitpbSitenam"></a></p>
   </section>
 
-  <section id="idHitpoHitpfContainersInsert">
-  <h3 id="idHitpoHitpfContainersInsertH3">oHitp.fContainersInsert
-    <a class="clsHide" href="#idHitpoHitpfContainersInsertH3"></a></h3>
-  <p id="idHitpoHitpfContainersInsertdsn">description::
+  <section id="idHitpoHitpfCnrsIsrt">
+  <h3 id="idHitpoHitpfCnrsIsrtH3">oHitp.fContainersInsert
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtH3"></a></h3>
+  <p id="idHitpoHitpfCnrsIsrtdsn">description::
     <br>Creates new containers and inserts them in the-body-element:
     <br>- Top-cnr for title and menus.
     <br>- Main-cnr for page-info and page-content.
     <br>- Width-cnr for managing the-width of page-info.
     <br>- Site-cnr for containing the-site-strucute.
     <br>- Preview-cnr to display link-previews.
-    <a class="clsHide" href="#idHitpoHitpfContainersInsertdsn"></a></p>
-  <p id="idHitpoHitpfContainersInsertnam">name::
-    <br>* cpt.oHitp.fContainersInsert,
-    <a class="clsHide" href="#idHitpoHitpfContainersInsertnam"></a></p>
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtnam">name::
+    <br>* cpt.oHitp'fContainersInsert,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtnam"></a></p>
+
+  <section id="idHitpoHitpfCnrsIsrtbSrvr">
+  <h4 id="idHitpoHitpfCnrsIsrtbSrvrH4">fContainersInsert.bServer
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtbSrvrH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtbSrvrdsn">description::
+    <br>· bServer is a-boolean denoting if a-page is-running on a-webserver (online or local) or not.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtbSrvrdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtbSrvrnam">name::
+    <br>* cpt.oHitp'bServer.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'bServer,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtbSrvrnam"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtbMcs">
+  <h4 id="idHitpoHitpfCnrsIsrtbMcsH4">fContainersInsert.bMcs
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtbMcsH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtbMcsdsn">description::
+    <br>· bMcs is a-boolean denoting if the-webpage displays a-structured-concept-Mcs or not.
+    <br>· we need it to display the-search-tab or not.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtbMcsdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtbMcsnam">name::
+    <br>* cpt.oHitp'bMcs.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'bMcs,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtbMcsnam"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtfEvtClkCnt">
+  <h4 id="idHitpoHitpfCnrsIsrtfEvtClkCntH4">fContainersInsert.fEvtClickContent
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtfEvtClkCntH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtfEvtClkCntdsn">description::
+    <br>· fEvtClickContent is a-click-event added to all content-Html-elements.
+    <br>· highlights click position on table-of-contents.
+    <br>· highlights links on click element.
+    <br>· removes popup,
+    <br>· removes previous highlighted links.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtfEvtClkCntdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtfEvtClkCntnam">name::
+    <br>* cpt.oHitp'fEvtClickContent.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'fEvtClickContent,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtfEvtClkCntnam"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtfEvtMsorCnt">
+  <h4 id="idHitpoHitpfCnrsIsrtfEvtMsorCntH4">fContainersInsert.fEvtMouseoverContent
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtfEvtMsorCntH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtfEvtMsorCntdsn">description::
+    <br>· fEvtMouseoverContent is a-mouseover-event added to all content-Html-elements.
+    <br>· highlights mouseover position on table-of-contents.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtfEvtMsorCntdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtfEvtMsorCntnam">name::
+    <br>* cpt.oHitp'fEvtMouseoverContent.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'fEvtMouseoverContent,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtfEvtMsorCntnam"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtfEvtLink">
+  <h4 id="idHitpoHitpfCnrsIsrtfEvtLinkH4">fContainersInsert.fEvtLink
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtfEvtLinkH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtfEvtLinkdsn">description::
+    <br>· fEvtLink adds click-events on the-links inside the Html-elemens we click.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtfEvtLinkdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtfEvtLinknam">name::
+    <br>* cpt.oHitp'fEvtLink.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'fEvtLink,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtfEvtLinknam"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtfEvtPrv">
+  <h4 id="idHitpoHitpfCnrsIsrtfEvtPrvH4">fContainersInsert.fEvtPreview
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtfEvtPrvH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtfEvtPrvdsn">description::
+    <br>· fEvtPreview is an-event-listener we add on clsPreview-links to show a-preview.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtfEvtPrvdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtfEvtPrvnam">name::
+    <br>* cpt.oHitp'fEvtPreview.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'fEvtPreview,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtfEvtPrvnam"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtoEBod">
+  <h4 id="idHitpoHitpfCnrsIsrtoEBodH4">fContainersInsert.oEltBody
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoEBodH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtoEBoddsn">description::
+    <br>· oEltBody is the-javascript-object representing the-Html-body-element of the-web-page.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoEBoddsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoEBodnam">name::
+    <br>* cpt.Hitp'body,
+    <br>* cpt.oHitp'oEltBody.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'oEltBody,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoEBodnam"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtoECnrTopD">
+  <h4 id="idHitpoHitpfCnrsIsrtoECnrTopDH4">fContainersInsert.oEltCnrTopDiv
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrTopDH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtoECnrTopDdsn">description::
+    <br>· oEltCnrTopDiv is a-javascript-div-object that contains the-title of the-page plus the-icons of site, home, search and width.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrTopDdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoECnrTopDnam">name::
+    <br>* cpt.Hitp'container.top,
+    <br>* cpt.Hitp'container.oEltCnrTopDiv,
+    <br>* cpt.oHitp'oEltCnrTopDiv.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'oEltCnrTopDiv,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrTopDnam"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoECnrTopDwhlchn">whole-chain::
+    <br>* <a class="clsPreview" href="#idHitpoHitpfCnrsIsrtoEBod">oEltBody</a>,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrTopDwhlchn"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtoECnrMainD">
+  <h4 id="idHitpoHitpfCnrsIsrtoECnrMainDH4">fContainersInsert.oEltCnrMainDiv
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrMainDH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtoECnrMainDdsn">description::
+    <br>· oEltCnrMainDiv is a-javascript-div-object that contains the-content of the-page and info about it.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrMainDdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoECnrMainDnam">name::
+    <br>* cpt.Hitp'container.main,
+    <br>* cpt.Hitp'container.oEltCnrMainDiv,
+    <br>* cpt.oHitp'oEltCnrMainDiv.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'oEltCnrMainDiv,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrMainDnam"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoECnrMainDprt">part::
+    <br>* oEltCnrMainPgcntDiv,
+    <br>* oEltCnrMainPginfDiv,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrMainDprt"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoECnrMainDwhlchn">whole-chain::
+    <br>* <a class="clsPreview" href="#idHitpoHitpfCnrsIsrtoEBod">oEltBody</a>,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrMainDwhlchn"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtoECnrMPcntD">
+  <h4 id="idHitpoHitpfCnrsIsrtoECnrMPcntDH4">fContainersInsert.oEltCnrMainPgcntDiv
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrMPcntDH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtoECnrMPcntDdsn">description::
+    <br>· oEltCnrMainPgcntDiv is a-javascript-div-object that contains the-content of the-page.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrMPcntDdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoECnrMPcntDnam">name::
+    <br>* cpt.Hitp'container.content,
+    <br>* cpt.Hitp'container.oEltCnrMainPgcntDiv,
+    <br>* cpt.oHitp'oEltCnrMainPgcntDiv.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'oEltCnrMainPgcntDiv,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrMPcntDnam"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtoECnrMPinfD">
+  <h4 id="idHitpoHitpfCnrsIsrtoECnrMPinfDH4">fContainersInsert.oEltCnrMainPginfDiv
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrMPinfDH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtoECnrMPinfDdsn">description::
+    <br>· oEltCnrMainPginfDiv is a-javascript-div-object that contains information about the-page such as table-of-contents and search tab.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrMPinfDdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoECnrMPinfDnam">name::
+    <br>* cpt.Hitp'container.page-info,
+    <br>* cpt.Hitp'container.oEltCnrMainPginfDiv,
+    <br>* cpt.oHitp'oEltCnrMainPginfDiv.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'oEltCnrMainPginfDiv,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrMPinfDnam"></a></p>
+
+  <section id="idHitpoHitpfCnrsIsrtoEPinfPathP">
+  <h5 id="idHitpoHitpfCnrsIsrtoEPinfPathPH5">fContainersInsert.oEltPginfPathP
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoEPinfPathPH5"></a></h5>
+  <p id="idHitpoHitpfCnrsIsrtoEPinfPathPdsn">description::
+    <br>· oEltPginfPathP is a-javascript-Html-p-object that contains the-whole-path of the-page, ie the-path of the-directories that contain this page.
+    <br>· contains the-innerHTML of the-element with id=idMetaWebpage_path.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoEPinfPathPdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoEPinfPathPnam">name::
+    <br>* cpt.Hitp'page-whole-path,
+    <br>* cpt.oHitp'oEltPginfPathP.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'oEltPginfPathP,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoEPinfPathPnam"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtoEPinfTbhr">
+  <h5 id="idHitpoHitpfCnrsIsrtoEPinfTbhrH5">fContainersInsert.oEltPginfTabHeadersUl
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoEPinfTbhrH5"></a></h5>
+  <p id="idHitpoHitpfCnrsIsrtoEPinfTbhrdsn">description::
+    <br>· oEltPginfTabHeadersUl is a-javascript-Html-ul-object that contains the-headers of the-tabs we have inside page-info-container.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoEPinfTbhrdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoEPinfTbhrnam">name::
+    <br>* cpt.Hitp'tab-headers-container,
+    <br>* cpt.oHitp'oEltPginfTabHeadersUl.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'oEltPginfTabHeadersUl,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoEPinfTbhrnam"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtoEPinfTbct">
+  <h5 id="idHitpoHitpfCnrsIsrtoEPinfTbctH5">fContainersInsert.oEltPginfTabCntDiv
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoEPinfTbctH5"></a></h5>
+  <p id="idHitpoHitpfCnrsIsrtoEPinfTbctdsn">description::
+    <br>· oEltPginfTabCntDiv is a-javascript-div-object that contain the-contents of the-tabs of the-page-info-container.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoEPinfTbctdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoEPinfTbctnam">name::
+    <br>* cpt.Hitp'tab-content-container,
+    <br>* cpt.oHitp'oEltPginfTabCntDiv.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'oEltPginfTabCntDiv,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoEPinfTbctnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtoECnrWdthD">
+  <h4 id="idHitpoHitpfCnrsIsrtoECnrWdthDH4">fContainersInsert.oEltCnrWidthDiv
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrWdthDH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtoECnrWdthDdsn">description::
+    <br>· oEltCnrWidthDiv is a-javascript-div-object that contains the-settings on the-width of <a class="clsPreview" href="#idHitpoHitpfCnrsIsrtoECnrMPinfD">the-page-info-container</a>.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrWdthDdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoECnrWdthDnam">name::
+    <br>* cpt.Hitp'container.width,
+    <br>* cpt.Hitp'container.oEltCnrWidthDiv,
+    <br>* cpt.oHitp'oEltCnrWidthDiv.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'oEltCnrWidthDiv,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrWdthDnam"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtoECnrSitD">
+  <h4 id="idHitpoHitpfCnrsIsrtoECnrSitDH4">fContainersInsert.oEltCnrSiteDiv
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrSitDH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtoECnrSitDdsn">description::
+    <br>· oEltCnrSiteDiv is a-javascript-div-object that contains the-site-structure-list.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrSitDdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoECnrSitDnam">name::
+    <br>* cpt.Hitp'container.site,
+    <br>* cpt.Hitp'container.oEltCnrSiteDiv,
+    <br>* cpt.oHitp'oEltCnrSiteDiv.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'oEltCnrSiteDiv,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrSitDnam"></a></p>
+  </section>
+
+  <section id="idHitpoHitpfCnrsIsrtoECnrPrvD">
+  <h4 id="idHitpoHitpfCnrsIsrtoECnrPrvDH4">fContainersInsert.oEltCnrPreviewDiv
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrPrvDH4"></a></h4>
+  <p id="idHitpoHitpfCnrsIsrtoECnrPrvDdsn">description::
+    <br>· oEltCnrPreviewDiv is a-javascript-div-object that contains previews of links.
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrPrvDdsn"></a></p>
+  <p id="idHitpoHitpfCnrsIsrtoECnrPrvDnam">name::
+    <br>* cpt.Hitp'container.preview,
+    <br>* cpt.Hitp'container.oEltCnrPreviewDiv,
+    <br>* cpt.oHitp'oEltCnrPreviewDiv.fContainersInsert,
+    <br>* cpt.oHitp'fContainersInsert'oEltCnrPreviewDiv,
+    <a class="clsHide" href="#idHitpoHitpfCnrsIsrtoECnrPrvDnam"></a></p>
+  </section>
   </section>
 
   <section id="idHitpoHitpfObjvalRKey">
@@ -1297,7 +1536,7 @@
     <br>· utility-function, returns the-key of an-object, given its value.
     <a class="clsHide" href="#idHitpoHitpfObjvalRKeydsn"></a></p>
   <p id="idHitpoHitpfObjvalRKeynam">name::
-    <br>* cpt.oHitp.fObjvalRKey,
+    <br>* cpt.oHitp'fObjvalRKey,
     <a class="clsHide" href="#idHitpoHitpfObjvalRKeynam"></a></p>
   </section>
 
@@ -1316,7 +1555,7 @@
     <br>&lt;/ul>
     <a class="clsHide" href="#idHitpoHitpfTocTriCreatedsn"></a></p>
   <p id="idHitpoHitpfTocTriCreatenam">name::
-    <br>* cpt.oHitp.fTocTriCreate,
+    <br>* cpt.oHitp'fTocTriCreate,
     <a class="clsHide" href="#idHitpoHitpfTocTriCreatenam"></a></p>
   </section>
 
@@ -1327,7 +1566,7 @@
     <br>· Highlights ONE item in toc-list
     <a class="clsHide" href="#idHitpoHitpfTocTriHtNddsn"></a></p>
   <p id="idHitpoHitpfTocTriHtNdnam">name::
-    <br>* cpt.oHitp.fTocTriHighlightNode,
+    <br>* cpt.oHitp'fTocTriHighlightNode,
     <a class="clsHide" href="#idHitpoHitpfTocTriHtNdnam"></a></p>
   </section>
 
@@ -1339,7 +1578,7 @@
     <br>· default 30.
     <a class="clsHide" href="#idHitpoHitpnCfgPageinfoWidthdsn"></a></p>
   <p id="idHitpoHitpnCfgPageinfoWidthnam">name::
-    <br>* cpt.oHitp.nCfgPageinfoWidth,
+    <br>* cpt.oHitp'nCfgPageinfoWidth,
     <a class="clsHide" href="#idHitpoHitpnCfgPageinfoWidthnam"></a></p>
   </section>
 
@@ -1350,7 +1589,7 @@
     <br>· holds the-object of the-Html-element a-user clicks on.
     <a class="clsHide" href="#idHitpoHitpoEltClickeddsn"></a></p>
   <p id="idHitpoHitpoEltClickednam">name::
-    <br>* cpt.oHitp.oEltClicked,
+    <br>* cpt.oHitp'oEltClicked,
     <a class="clsHide" href="#idHitpoHitpoEltClickednam"></a></p>
   </section>
 
@@ -1361,7 +1600,7 @@
     <br>Makes collapsible-trees, from unordered-lists with clsTreeUl.
     <a class="clsHide" href="#idHitpoHitpoTreeUldsn"></a></p>
   <p id="idHitpoHitpoTreeUlnam">name::
-    <br>* cpt.oHitp.oTreeUl,
+    <br>* cpt.oHitp'oTreeUl,
     <a class="clsHide" href="#idHitpoHitpoTreeUlnam"></a></p>
   </section>
 
@@ -1372,7 +1611,7 @@
     <br>* config-variable, contains the-string of the-local-directory of the-site.
     <a class="clsHide" href="#idHitpoHitpsCfgHomeLocalSpc"></a></p>
   <p id="idHitpoHitpsCfgHomeLocalnam">name::
-    <br>* cpt.oHitp.sCfgHomeLocal,
+    <br>* cpt.oHitp'sCfgHomeLocal,
     <a class="clsHide" href="#idHitpoHitpsCfgHomeLocalnam"></a></p>
   </section>
 
@@ -1383,7 +1622,7 @@
     <br>· selector for a-elements with clsClickCnt
     <a class="clsHide" href="#idHitpoHitpsQrslrAClkdsn"></a></p>
   <p id="idHitpoHitpsQrslrAClknam">name::
-    <br>* cpt.oHitp.sQrslrAClk,
+    <br>* cpt.oHitp'sQrslrAClk,
     <a class="clsHide" href="#idHitpoHitpsQrslrAClknam"></a></p>
   </section>
 
@@ -1394,7 +1633,7 @@
     <br>· last selector for a-elements with clsClickCnt
     <a class="clsHide" href="#idHitpoHitpsQrslrAClkLstdsn"></a></p>
   <p id="idHitpoHitpsQrslrAClkLstnam">name::
-    <br>* cpt.oHitp.sQrslrAClk,
+    <br>* cpt.oHitp'sQrslrAClk,
     <a class="clsHide" href="#idHitpoHitpsQrslrAClkLstnam"></a></p>
   </section>
   </section>
@@ -1701,11 +1940,11 @@
     <br>This site presents many examples with our proposal.
     <br>Actually I'm writing the-site with this proposal.
     <br>Reading the-code of these examples and seeing its behavior, is the best way to understand what really we are-proposing.
-    <br>* <a href="../book/">Hitp.eBook</a>,
-    <br>* <a href="../law/index.en.html">Hitp.Law</a>,
-    <br>* <a href="../standard/">Hitp.Standard</a>,
+    <br>* <a href="../book/">Hitp.eBook-page</a>,
+    <br>* <a href="../law/index.en.html">Hitp.law-page</a>,
+    <br>* <a href="../standard/">Hitp.standard-page</a>,
     <br>* <a href="https://synagonism.github.io/hitp/hitp.html">Hitp.Example</a> empty-page to edit on GitHub-project-page,
-    <br>* Hitp.Structured-concept,
+    <br>* <a class="clsPreview" href="../dirCor/FilMcs.Last.html#idMcsHitp">Hitp.structured-concept--page</a>,
     <a class="clsHide" href="#idHitpSpcP1"></a></p>
 </section>
 
@@ -1871,8 +2110,10 @@ structured-concepts</a>.
     times since {2013-05-30}
     <a class="clsHide" href="#idMetaCounter"></a></p>
   <!-- the content of page-path paragraph is displayed as it is on top of toc -->
-  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">Page-wholepath</span>:
+  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-wholepath</span>:
     <a class="clsPreview" href="../index.html#idDescription">synagonism.net</a> /
+    <a class="clsPreview" href="../FilMcsw.Last.html#idDescription">Mcs-worldview</a> /
+    <a class="clsPreview" href="FilMcsDirTchInf.Last.html#idDescription">dirTchInf</a> /
     hitp-webpage-dialect
     </p>
   <p id="idFooterP1">Contact:
@@ -1941,14 +2182,5 @@ structured-concepts</a>.
 </section>
 
 <script src="https://synagonism.github.io/hitp/hitp.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-19285371-5', 'synagonism.net');
-  ga('send', 'pageview');
-</script>
 </body>
 </html>
