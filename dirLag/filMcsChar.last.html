@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char (char.0-11-0.2018-07-11 draft)</title>
+  <title>Mcs.char (char.0-15-0.2018-10-05 draft)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -22,7 +22,7 @@
   <h1 id="idDescriptionFTH1">description of char
     <a class="clsHide" href="#idDescriptionFTH1"></a></h1>
   <p id="idDescriptionP1">description::
-    <br>· char I define any UNIT of written human and non-human-languages.
+    <br>· char I define any UNIT of WRITTEN human and non-human-languages.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-19]
     <a class="clsHide" href="#idDescriptionP1"></a></p>
   <p id="idName">name::
@@ -51,7 +51,7 @@
   <h2 id="idCharglyphFntH2">glyph.FONT
     <a class="clsHide" href="#idCharglyphFntH2"></a></h2>
   <p id="idCharglyphFntdsn">description::
-    <br>· font is A-SET of glyphs of a-set of chars with similar attributes.
+    <br>· font is A-SET of <a class="clsPreview" href="#idCharglyph">glyphs</a> of a-set of chars with similar attributes.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
     <a class="clsHide" href="#idCharglyphFntdsn"></a></p>
   <p id="idCharglyphFntnam">name::
@@ -79,7 +79,7 @@
 <section id="idCharrscFT">
   <h1 id="idCharrscFTH1">resource of char
     <a class="clsHide" href="#idCharrscFTH1"></a></h1>
-  <p id="idCharrscnam">Name::
+  <p id="idCharrscnam">name::
     <br>* cpt.char'resource,
     <br>* cpt.charAeResource,
     <a class="clsHide" href="#idCharrscnam"></a></p>
@@ -106,7 +106,12 @@
     <br>* cpt.charAsSpecific,
     <a class="clsHide" href="#idCharSpcnam"></a></p>
   <p id="idCharSpcP1">specific::
-    <br>* Unicode-char,
+    <br>* <a class="clsPreview" href="#idCharCmr">computer-char</a>,
+    <br>* <a class="clsPreview" href="#idCharEscp">escape-char</a>,
+    <br>* <a class="clsPreview" href="#idCharGrfc">graphic-char</a>,
+    <br>* <a class="clsPreview" href="#idCharGrfcNo">graphicNo-char</a>,
+    <br>* <a class="clsPreview" href="#idCharHtml">Html-char</a>,
+    <br>* <a class="clsPreview" href="#idCharUcd">Unicode-char</a>,
     <a class="clsHide" href="#idCharSpcP1"></a></p>
 </section>
 
@@ -154,7 +159,7 @@
     <a class="clsHide" href="#idCharUcdcpdsn"></a></p>
   <p id="idCharUcdcpnam">name::
     <br>* cpt.char.Unicode'code-point,
-    <br>* cpt.code-point-of--Unicode-char,
+    <br>* cpt.code-point--of--Unicode-char,
     <br>* cpt.Unicode'code-point,
     <a class="clsHide" href="#idCharUcdcpnam"></a></p>
 
@@ -175,11 +180,17 @@
   <h3 id="idCharUcdcpPlaneH3">code-point.PLANE
     <a class="clsHide" href="#idCharUcdcpPlaneH3"></a></h3>
   <p id="idCharUcdcpPlanedsn">description::
-    <br>In the Unicode standard, a plane is a continuous group of 65,536 (216) code points. There are 17 planes, identified by the numbers 0 to 16, which corresponds with the possible values 00–1016 of the first two positions in six position hexadecimal format (U+hhhhhh). The very last code point in Unicode is the last code point in plane 16, U+10FFFF. Plane 0 is the Basic Multilingual Plane (BMP), which contains most commonly-used characters. The higher planes 1 through 16 are called "supplementary planes". As of Unicode version 11.0, six of the planes have assigned code points (characters), and four are named.
+    <br>In the Unicode standard, a plane is a continuous group of 65,536 (2<sup>16</sup>) code points.
+    <br>There are 17 planes, identified by the numbers 0 to 16, which corresponds with the possible values 00–10<sub>16</sub> of the first two positions in six position hexadecimal format (U+<strong>hh</strong>hhhh).
+    <br>The very last code point in Unicode is the last code point in plane 16, U+10FFFF.
+    <br>Plane 0 is the Basic Multilingual Plane (BMP), which contains most commonly-used characters.
+    <br>The higher planes 1 through 16 are called "supplementary planes".
+    <br>As of Unicode version 11.0, six of the planes have assigned code points (characters), and four are named.
     <br>[https://en.wikipedia.org/wiki/Plane_(Unicode), {2018-06-24}]
     <a class="clsHide" href="#idCharUcdcpPlanedsn"></a></p>
   <p id="idCharUcdcpPlanenam">name::
     <br>* cpt.char.Unicode'plane,
+    <br>* cpt.plane-of-Unicode,
     <br>* cpt.Unicode-char'plane,
     <br>* cpt.Unicode'plane,
     <br>* cpt.Unicode-plane,
@@ -311,6 +322,7 @@
     <br>[https://en.wikipedia.org/wiki/Unicode_character_property#Block {2018-06-26}]
     <a class="clsHide" href="#idCharUcdcpBlockdsn"></a></p>
   <p id="idCharUcdcpBlocknam">name::
+    <br>* cpt.block-of-Unicode,
     <br>* cpt.char.Unicode'block,
     <br>* cpt.Unicode'block,
     <br>* cpt.Unicode'char'block,
@@ -2825,7 +2837,7 @@
   <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-path</span>:
     <a class="clsPreview" href="../../#idDescription">synagonism.net</a> /
     <a class="clsPreview" href="../FilMcsw.Last.html#idDescription">Mcs-worldview</a> /
-    <a class="clsPreview" href="FilMcsDirLag.Last.html#idDescription">dirLag</a> /
+    <a class="clsPreview" href="filMcsDirLag.last.html#idDescription">dirLag</a> /
     char
     </p>
   <p id="idMetaP1">SEARCH::
@@ -2859,7 +2871,7 @@
   <h1 id="idCommentH1">comments
     <a class="clsHide" href="#idCommentH1"></a></h1>
   <p id="idCommentSpc">specific::
-    <br>* <a class="clsPreview" href="disqus-dirLag.html#idDescription">on Disqus</a>,
+    <br>* <a class="clsPreview" href="Disqus-dirLag.html#idDescription">on Disqus</a>,
     <a class="clsHide" href="#idCommentSpc"></a></p>
 </section>
 

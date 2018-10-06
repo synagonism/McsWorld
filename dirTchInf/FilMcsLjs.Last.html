@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.javascript-language (Ljs.5-28-0.2018-07-12)</title>
+  <title>Mcs.javascript-language (Ljs.5-40-0.2018-09-14)</title>
   <meta name="keywords" content="JavaScript, js, javascript-tutorial, browser-js, Node.js, Ljs, ljb, ljn, Mcs, structured-concept">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -20,7 +20,7 @@
   <h1 id="idDescriptionH1">description of Ljs
     <a class="clsHide" href="#idDescriptionH1"></a></h1>
   <p id="idDescriptionP1">description::
-    <br>· <strong>javascript (Ljs)</strong> is the GENERIC language of <a class="clsPreview" href="FilMcsLjb.Last.html#idDescription">browser-javascript (ljb, client-side)</a>, <a class="clsPreview" href="FilMcsLjn.Last.html#idDescription">Node-javascript (ljn, server-side)</a>, desktop-javascript (ljd) and other differentiations.
+    <br>· <strong>javascript (Ljs)</strong> is the GENERIC language of <a class="clsPreview" href="FilMcsLjb.Last.html#idDescription">browser-javascript (Ljb, client-side)</a>, <a class="clsPreview" href="FilMcsLjn.Last.html#idDescription">Node-javascript (Ljn, server-side)</a>, desktop-javascript (Ljd) and other differentiations.
     <br>
     <br>· javascript was originally developed in {1995} by Brendan-Eich, at Netscape-Communications-Corporation. [<a href="https://en.wikipedia.org/wiki/javascript#Beginnings_at_Netscape">en.wikipedia.org</a>]
     <br>
@@ -2059,7 +2059,7 @@
     <a class="clsHide" href="#idLjsfOprnam"></a></p>
 
   <section id="idLjsfOpropd">
-  <h4 id="idLjsfOpropdH4">Operand-of--Ljs-opr
+  <h4 id="idLjsfOpropdH4">operand of Ljs-opr
     <a class="clsHide" href="#idLjsfOpropdH4"></a></h4>
   <p id="idLjsfOpropddsn">description::
     <br>Operands are the INPUT information of <a class="clsPreview" href="#idLjsfOpr">operators</a>.
@@ -2183,6 +2183,43 @@
   <p id="idLjsfOprBnrSpc">specific::
     <br>* <a href="http://www.ecma-international.org/ecma-262/index.html#sec-unary-operators">http://www.ecma-international.org/ecma-262/index.html#sec-unary-operators</a>,
     <a class="clsHide" href="#idLjsfOprBnrSpc"></a></p>
+
+  <section id="idLjsfOprAdd">
+  <h5 id="idLjsfOprAddH5">Ljs-opr.ADDITION (+)
+    <a class="clsHide" href="#idLjsfOprAddH5"></a></h5>
+  <p id="idLjsfOprAdddsn">description::
+    <br>The addition operator produces <strong>the sum</strong> of numeric operands or <strong>string concatenation</strong>.
+    <br>[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators]
+    <a class="clsHide" href="#idLjsfOprAdddsn"></a></p>
+  <p id="idLjsfOprAddnam">name::
+    <br>* cpt.addition-operator.javascript,
+    <br>* cpt.Ljs'+(addition-operator),
+    <br>* cpt.Ljs'addition-operator,
+    <br>* cpt.Ljs'operator.addition(+),
+    <br>* cpt.Ljs'operator.+(addition),
+    <br>* cpt.javascript'addition-operator,
+    <a class="clsHide" href="#idLjsfOprAddnam"></a></p>
+  <p id="idLjsfOprAddexpl">example::
+    <br><code>// Number + Number -> addition
+    <br>1 + 2 // 3
+    <br>
+    <br>// Boolean + Number -> addition
+    <br>true + 1 // 2
+    <br>
+    <br>// Boolean + Boolean -> addition
+    <br>false + false // 0
+    <br>
+    <br>// Number + String -> concatenation
+    <br>5 + 'foo' // "5foo"
+    <br>
+    <br>// String + Boolean -> concatenation
+    <br>'foo' + false // "foofalse"
+    <br>
+    <br>// String + String -> concatenation
+    <br>'foo' + 'bar' // "foobar"</code>
+    <br>[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators]
+    <a class="clsHide" href="#idLjsfOprAddexpl"></a></p>
+  </section>
   </section>
 
   <section id="idLjsfOprTnr">
@@ -2291,24 +2328,42 @@
     <br>* cpt.Ljs-m,
     <br>* cpt.module--semantic-unit--of-javascript-(Ljs-m),
     <a class="clsHide" href="#idLjsmnam"></a></p>
-  <p id="idLjsmscp">scope::
+  <p id="idLjsmwpa">addressWpg::
+    <br>* {2018-06-18} Addy-Osmani, Mathias-Bynens, Using JavaScript modules on the web, <a href="https://developers.google.com/web/fundamentals/primers/modules">https://developers.google.com/web/fundamentals/</a>,
+    <br>* {2018-03-28} Lin-Clark, ES modules: A cartoon deep-dive: <a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/</a>,
+    <br>* {2017-05-02} Jake-Archibald, ECMAScript modules in browsers: <a href="https://jakearchibald.com/2017/es-modules-in-browsers/">https://jakearchibald.com/2017/es-modules-in-browsers/</a>,
+    <a class="clsHide" href="#idLjsmwpa"></a></p>
+  <p id="idLjsmgnc">generic-chain::
+    <br>* <a class="clsPreview" href="#idLjssut">semantic-unit</a>,
+    <a class="clsHide" href="#idLjsmgnc"></a></p>
+
+  <section id="idLjsmscp">
+  <h3 id="idLjsmscpH3">scope of Ljs-m
+    <a class="clsHide" href="#idLjsmscpH3"></a></h3>
+  <p id="idLjsmscpdsn">description::
     <br>With modules, you group the variables and functions that make sense to go together.
     <br>This puts these functions and variables into a module scope.
     <br>The module scope can be used to share variables between the functions in the module.
     <br>But unlike function scopes, module scopes have a way of making their variables available to other modules as well. They can say explicitly which of the variables, classes, or functions in the module should be available.
     <br>[https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/]
-    <a class="clsHide" href="#idLjsmscp"></a></p>
-  <p id="idLjsmwpa">addressWpg::
-    <br>* {2018-06-18} Addy-Osmani, Mathias-Bynens, Using JavaScript modules on the web, <a href="https://developers.google.com/web/fundamentals/primers/modules">https://developers.google.com/web/fundamentals/</a>,
-    <br>* {time.2018-03-28} Lin-Clark, ES modules: A cartoon deep-dive: <a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/</a>,
-    <br>* {time.2017-05-02} ECMAScript modules in browsers: <a href="https://jakearchibald.com/2017/es-modules-in-browsers/">https://jakearchibald.com/2017/es-modules-in-browsers/</a>,
-    <a class="clsHide" href="#idLjsmwpa"></a></p>
-  <p id="idLjsmgnc">generic-chain::
-    <br>* <a class="clsPreview" href="#idLjssut">semantic-unit</a>,
-    <a class="clsHide" href="#idLjsmgnc"></a></p>
-  <p id="idLjsmSpc">specific::
-    <br>* <a class="clsPreview" href="FilMcsLjn.Last.html#idLjnm">Nodejs-module</a>,
-    <a class="clsHide" href="#idLjsmSpc"></a></p>
+    <a class="clsHide" href="#idLjsmscpdsn"></a></p>
+  <p id="idLjsmscpnam">name::
+    <br>* cpt.Ljs-m'scope,
+    <br>* cpt.scope-of--javascript-module,
+    <a class="clsHide" href="#idLjsmscpnam"></a></p>
+  </section>
+
+  <section id="idLjsmSpc">
+  <h3 id="idLjsmSpcH3">Ljs-m.SPECIFIC
+    <a class="clsHide" href="#idLjsmSpcH3"></a></h3>
+  <p id="idLjsmSpcnam">name::
+    <br>* cpt.Ljs-m.specific,
+    <a class="clsHide" href="#idLjsmSpcnam"></a></p>
+  <p id="idLjsmSpcP1">specific::
+    <br>* browser-module,
+    <br>* <a class="clsPreview" href="FilMcsLjn.Last.html#idLjnm">Node.js-module</a>,
+    <a class="clsHide" href="#idLjsmSpcP1"></a></p>
+  </section>
   </section>
 
   <section id="idLjsl">
@@ -2452,16 +2507,17 @@
     <a class="clsHide" href="#idLjsonam"></a></p>
 
   <section id="idLjsombr">
-  <h3 id="idLjsombrH3">Member-of--Ljs-o
+  <h3 id="idLjsombrH3">member of Ljs-o
     <a class="clsHide" href="#idLjsombrH3"></a></h3>
   <p id="idLjsombrdsn">description::
-    <br>Members are-called <a class="clsPreview" href="#idLjssutRfrd">the-name-value-pairs</a> of an-object.
+    <br>· member-of-object is any of <a class="clsPreview" href="#idLjssutRfrd">the-name-value-pairs</a> of the-object.
     <a class="clsHide" href="#idLjsombrdsn"></a></p>
   <p id="idLjsombrnam">name::
     <br>* cpt.Ljs'member-of-an-object,
     <br>* cpt.Ljs'object'member,
     <br>* cpt.Ljs-o'member,
     <br>* cpt.Ljs-o'property,
+    <br>* cpt.property-of--javascript-object,
     <br>===
     <br>* Some (spec) call the-members-of-an-object 'properties', and some (MDN) with 'properties' call <a class="clsPreview" href="#idLjsombrSpc">the-non-methods-members-of-an-object</a>.
     <a class="clsHide" href="#idLjsombrnam"></a></p>
@@ -2501,13 +2557,37 @@
     <a class="clsHide" href="#idLjsombrSpc"></a></p>
   </section>
 
+  <section id="idLjsokey">
+  <h3 id="idLjsokeyH3">key of Ljs-o
+    <a class="clsHide" href="#idLjsokeyH3"></a></h3>
+  <p id="idLjsokeydsn">description::
+    <br>· key-of-object is any NAME of <a class="clsPreview" href="#idLjssutRfrd">the-name-value-pairs</a> of the-object.
+    <br>· <code>Object.keys(oX)</code> returns an-array with the-keys of object oX.
+    <a class="clsHide" href="#idLjsokeydsn"></a></p>
+  <p id="idLjsokeynam">name::
+    <br>* cpt.Ljs-o'key,
+    <a class="clsHide" href="#idLjsokeynam"></a></p>
+  </section>
+
+  <section id="idLjsoval">
+  <h3 id="idLjsovalH3">value of Ljs-o
+    <a class="clsHide" href="#idLjsovalH3"></a></h3>
+  <p id="idLjsovaldsn">description::
+    <br>· value-of-object is any VALUE of <a class="clsPreview" href="#idLjssutRfrd">the-name-value-pairs</a> of the-object.
+    <br>· <code>Object.values(oX)</code> returns an-array with the-values of object oX.
+    <a class="clsHide" href="#idLjsovaldsn"></a></p>
+  <p id="idLjsovalnam">name::
+    <br>* cpt.Ljs-o'value,
+    <a class="clsHide" href="#idLjsovalnam"></a></p>
+  </section>
+
   <section id="idLjsoscp">
-  <h3 id="idLjsoscpH3">Scope-of--Ljs-o (<a class="clsPreview" href="#idLjselnConOspH3">link</a>)
+  <h3 id="idLjsoscpH3">scope of Ljs-o (<a class="clsPreview" href="#idLjselnConOspH3">link</a>)
     <a class="clsHide" href="#idLjsoscpH3"></a></h3>
   </section>
 
   <section id="idLjsowhl">
-  <h3 id="idLjsowhlH3">WHOLE-of--Ljs-o
+  <h3 id="idLjsowhlH3">WHOLE of Ljs-o
     <a class="clsHide" href="#idLjsowhlH3"></a></h3>
   <p id="idLjsowhlP1">Whole-chain::
     <br>=== (<a class="clsPreview" href="#idLjssxt">syntax--whole-part-tree</a>)
@@ -2523,7 +2603,7 @@
   </section>
 
   <section id="idLjsognc">
-  <h3 id="idLjsogncH3">GENERIC-of--Ljs-o
+  <h3 id="idLjsogncH3">GENERIC of Ljs-o
     <a class="clsHide" href="#idLjsogncH3"></a></h3>
   <p id="idLjsogncP1">generic-chain::
     <br>The-generic-object of an-object is-called 'prototype'.
@@ -2572,11 +2652,13 @@
     <br>Constructor-object is <a class="clsPreview" href="#idLjso">an-object</a> created with <a class="clsPreview" href="#idLjsfCsr">a-constructor-function</a>: <code>var o = new Constructor();</code>
     <a class="clsHide" href="#idLjsoCsrdsn"></a></p>
   <p id="idLjsoCsrnam">name::
+    <br>* cpt.javascript'this,
     <br>* cpt.Ljs'constructor-object,
     <br>* cpt.Ljs'object.constructor,
     <br>* cpt.Ljs'object-created-by-a-constructor,
-    <br>* cpt.Ljs'constructor-object,
+    <br>* cpt.Ljs'this,
     <br>* cpt.Ljs-o.constructor,
+    <br>* cpt.this.javascript,
     <br>===
     <br>I use to name individual <a class="clsPreview" href="#idLjsoCsr">constructor-objecs</a> as: <code>oConstructor</code> which helps reading <a class="clsPreview" href="#idLjssdoc">the-code</a>.
     <a class="clsHide" href="#idLjsoCsrnam"></a></p>
@@ -2711,27 +2793,46 @@
   <h2 id="idLjsrH2">Ljs-Sut.REGEXP (Ljs-r)
     <a class="clsHide" href="#idLjsrH2"></a></h2>
   <p id="idLjsrdsn">description::
-    <br>RegExp (regular-expression) denotes parts of texts.
-    <br>They are the-query-language for texts in <a class="clsPreview" href="#idLjsarc">archetype</a>.
+    <br>· a-regexp-(regular-expression) denotes parts of texts.
+    <br>· it is the-query-language for texts in <a class="clsPreview" href="#idLjsarc">archetype</a>.
     <br><a class="clsPreview" href="#idLjssdoc">Code-example</a>:
     <br><code>var r = /d/;</code>
     <a class="clsHide" href="#idLjsrdsn"></a></p>
   <p id="idLjsrnam">name::
     <br>* cpt.javascript'regexp--semantic-unit,
     <br>* cpt.Ljs'regexp--semantic-unit,
-    <br>* cpt.Ljs'Sut.regexp,
-    <br>* cpt.Ljs-r,
-    <br>* cpt.Ljs-r-(regular-expression),
-    <br>* cpt.Ljs'regexp,
-    <br>* cpt.regexp--semantic-unit--of-javascript-(Ljs-r),
+    <br>* cpt.Ljs'sut.regexp,
+    <br>* cpt.Ljs-r-(regular-expression.javascript),
+    <br>* cpt.regexp--semantic-unit.javascript-(Ljs-r),
+    <br>* cpt.regular-expression.javascript-(Ljs-r),
     <a class="clsHide" href="#idLjsrnam"></a></p>
   <p id="idLjsrgnc">generic-chain::
     <br>* <a class="clsPreview" href="#idLjsRegExpp">RegExp.prototype</a>, (<code>/r/.__proto__ === RegExp.prototype //true</code>)
     <br>* <a class="clsPreview" href="#idLjsmgo">Object.prototype</a>, (<code>/r/.__proto__.__proto__ === Object.prototype //true</code>)
     <a class="clsHide" href="#idLjsrgnc"></a></p>
 
+  <section id="idLjsrmdfr">
+  <h3 id="idLjsrmdfrH3">modifier of Ljs-r
+    <a class="clsHide" href="#idLjsrmdfrH3"></a></h3>
+  <p id="idLjsrmdfrdsn">description::
+    <br>In JavaScript source code, a regular expression is written in the form of <code>/pattern/modifiers</code> where "pattern" is the regular expression itself, and "modifiers" are a series of characters indicating various options.
+    <br>The "modifiers" part is optional.
+    <br>This syntax is borrowed from Perl.
+    <br>JavaScript supports the following modifiers, a subset of those supported by Perl:
+    <br>* <code>/g</code> enables "global" matching. When using the replace() method, specify this modifier to replace all matches, rather than only the first one.
+    <br>* <code>/i</code> makes the regex match case insensitive.
+    <br>* <code>/m</code> enables "multi-line mode". In this mode, the caret and dollar match before and after newlines in the subject string.
+    <br>You can combine multiple modifiers by stringing them together as in /regex/gim. Notably absent is an option to make the dot match line break characters.
+    <br>[http://www.regular-expressions.info/javascript.html]
+    <a class="clsHide" href="#idLjsrmdfrdsn"></a></p>
+  <p id="idLjsrmdfrnam">name::
+    <br>* cpt.Ljs-r'modifier,
+    <br>* cpt.modifier-of-javascript-regexp,
+    <a class="clsHide" href="#idLjsrmdfrnam"></a></p>
+  </section>
+
   <section id="idLjsRegExpp">
-  <h3 id="idLjsRegExppH3">Ljs-n'RegExp.prototype
+  <h3 id="idLjsRegExppH3">RegExp.prototype
     <a class="clsHide" href="#idLjsRegExppH3"></a></h3>
   <p id="idLjsRegExppdsn">description::
     <br><code>RegExp.prototype</code> is <a class="clsPreview" href="#idLjsognc">the-generic-object</a>, of all <a class="clsPreview" href="#idLjsr">regexp</a>.
@@ -2758,6 +2859,88 @@
     <br>["compile", "constructor", "exec", "global", "ignoreCase", "lastIndex", "multiline", "source", "test", "toString"]</code>
     <a class="clsHide" href="#idLjsRegExppmbr"></a></p>
   </section>
+
+  <section id="idLjsRegExpptest">
+  <h3 id="idLjsRegExpptestH3">RegExp.prototype.test-function
+    <a class="clsHide" href="#idLjsRegExpptestH3"></a></h3>
+  <p id="idLjsRegExpptestdsn">description::
+    <br>The test() method executes a search for a match between a regular expression and a specified string. Returns true or false.
+    <br>[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test]
+    <a class="clsHide" href="#idLjsRegExpptestdsn"></a></p>
+  <p id="idLjsRegExpptestnam">name::
+    <br>* cpt.RegExp.prototype.test-function,
+    <a class="clsHide" href="#idLjsRegExpptestnam"></a></p>
+  <p id="idLjsRegExpptestexpl">example::
+    <br><code>/\* cpt...\./.test('&lt;br>* cptItalake')
+    <br>//false
+    <br>/\* cpt...\./.test('&lt;br>* cptIta.lake')
+    <br>//true</code>
+    <a class="clsHide" href="#idLjsRegExpptestexpl"></a></p>
+  </section>
+
+  <section id="idLjsrmatch">
+  <h3 id="idLjsrmatchH3">String.prototype.match-function (<a class="clsPreview" href="#idLjssmatch">link</a>)
+    <a class="clsHide" href="#idLjsrmatchH3"></a></h3>
+  </section>
+
+  <section id="idLjsrreplace">
+  <h3 id="idLjsrreplaceH3">String.prototype.replace-function (<a class="clsPreview" href="#idLjssreplace">link</a>)
+    <a class="clsHide" href="#idLjsrreplaceH3"></a></h3>
+  </section>
+
+  <section id="idLjsrsplit">
+  <h3 id="idLjsrsplitH3">String.prototype.split-function (<a class="clsPreview" href="#idLjsssplit">link</a>)
+    <a class="clsHide" href="#idLjsrsplitH3"></a></h3>
+  </section>
+
+  <section id="idLjsrSpc">
+  <h3 id="idLjsrSpcH3">Ljs-r.SPECIFIC
+    <a class="clsHide" href="#idLjsrSpcH3"></a></h3>
+  <p id="idLjsrSpcnam">name::
+    <br>* cpt.Ljs-r.specific,
+    <a class="clsHide" href="#idLjsrSpcnam"></a></p>
+  <p id="idLjsrSpcP1">specific::
+    <br>* Ljs-r.char.any /./,
+    <br>* Ljs-r.char.no /[^a]/,
+    <br>* Ljs-r.char.digit /\d/,
+    <br>* Ljs-r.char.quantity.one_or_more /a+/,
+    <br>* Ljs-r.char.quantity.zero_or_more /a*/,
+    <br>* Ljs-r.char.quantity.zero_or_one /a?/,
+    <br>* Ljs-r.char.quantity.number /a{n}/,
+    <br>* Ljs-r.char.range /[a-z0-9]/ /[\u0020-\u007E],
+    <br>* Ljs-r.char.whitespace /\s/,
+    <br>* Ljs-r.char.whitespaceNo /\S/,
+    <br>* Ljs-r.string.start /^string/,
+    <br>* Ljs-r.string.end /string$/,
+    <br>* <a class="clsPreview" href="#idLjsrwrdbtr">Ljs-r.word-bountary /\b/</a>,
+    <a class="clsHide" href="#idLjsrSpcP1"></a></p>
+  </section>
+
+  <section id="idLjsrvar">
+  <h3 id="idLjsrvarH3">Ljs-r.with-variable
+    <a class="clsHide" href="#idLjsrvarH3"></a></h3>
+  <p id="idLjsrvarnam">name::
+    <br>* cpt.Ljs-r.with-variable,
+    <a class="clsHide" href="#idLjsrvarnam"></a></p>
+  <p id="idLjsrvarexpl">example::
+    <br><code>var s = 'c'
+    <br>/s/i.test('C') //false
+    <br>new RegExp(s, 'i').test('C') //true</code>
+    <a class="clsHide" href="#idLjsrvarexpl"></a></p>
+  </section>
+
+  <section id="idLjsrwrdbtr">
+  <h3 id="idLjsrwrdbtrH3">Ljs-r.word-bountary
+    <a class="clsHide" href="#idLjsrwrdbtrH3"></a></h3>
+  <p id="idLjsrwrdbtrdsn">description::
+    <br>· <code>\b</code> matches boundaries of words (= chars between spaces).
+    <br><code>/\ba/.test('xx add') //true
+    <br>/\bd/.test('xx add') //false
+    <br>/d\b/.test('xx add') //true</code>
+    <a class="clsHide" href="#idLjsrwrdbtrdsn"></a></p>
+  <p id="idLjsrwrdbtrnam">name::
+    <br>* cpt.Ljs-r.word-bountary,
+    <a class="clsHide" href="#idLjsrwrdbtrnam"></a></p>
   </section>
 
   <section id="idLjss">
@@ -2795,7 +2978,7 @@
     <a class="clsHide" href="#idLjssexpl"></a></p>
 
   <section id="idLjsStringp">
-  <h3 id="idLjsStringpH3">String.prototype-object--of--Ljs-s
+  <h3 id="idLjsStringpH3">String.prototype-object of Ljs-s
     <a class="clsHide" href="#idLjsStringpH3"></a></h3>
   <p id="idLjsStringpdsn">description::
     <br><code>String.prototype</code> is <a class="clsPreview" href="#idLjsognc">the-generic-object</a>, of all <a class="clsPreview" href="#idLjss">strings</a>.
@@ -2894,8 +3077,45 @@
     <br>===
     <br>> 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, function(match, p1, p2, p3, offset, string) {  return [match, p1, p2, p3].join(' - '); });
     <br>// "abc12345#$*% - abc - 12345 - #$*%"
-    <br>// p1, p2, p3 are (the-groups) inside regexp</code>
+    <br>// p1, p2, p3 are (the-groups) inside regexp
+    <br>===
+    <br>//replace-all
+    <br>'monopoly'.replace('o', 'a') //"manopoly"
+    <br>'monopoly'.replace(/o/g, 'a') //"manapaly"
+    <br>'monopoly'.split('o').join('a') //"manapaly"</code>
     <a class="clsHide" href="#idLjssreplaceexpl"></a></p>
+  </section>
+
+  <section id="idLjsssplit">
+  <h3 id="idLjsssplitH3">String.prototype.split-function
+    <a class="clsHide" href="#idLjsssplitH3"></a></h3>
+  <p id="idLjsssplitdsn">description::
+    <br>The split() method splits a String object into an array of strings by separating the string into substrings, using a specified separator string to determine where to make each split.
+    <br><strong>Syntax</strong>
+    <br><code>str.split([separator[, limit]])</code>
+    <br>Attention: If an empty string ("") is used as the separator, the string is not split between each user-perceived character (grapheme cluster) or between each unicode character (codepoint) but between each UTF-16 codeunit. This destroys surrogate pairs. See also How do you get a string to a character array in JavaScript? on stackoverflow.
+    <br><strong>Parameters</strong>
+    <br>separator Optional
+    <br>Specifies the string which denotes the points at which each split should occur. The separator is treated as a string or as a regular expression. If a plain-text separator contains more than one character, that entire string must be found to represent a split point. If separator is omitted or does not occur in str, the array returned contains one element consisting of the entire string. If separator is an empty string, str is converted to an array of characters. If no separator is specified, an array containing the input string is returned.
+    <br>limit Optional
+    <br>Integer specifying a limit on the number of splits to be found. When this parameter is provided, the split() method splits the string at each occurrence of the specified separator but stops when limit entries have been placed into the array. It may still contain fewer entries than limit if the end of the string is reached before the specified limit is reached. The left-over text is not returned in the new array.
+    <br><strong>Return value</strong>
+    <br>An Array of strings split at each point where the separator occurs in the given string.
+    <br>[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split]
+    <a class="clsHide" href="#idLjsssplitdsn"></a></p>
+  <p id="idLjsssplitnam">name::
+    <br>* cpt.javascript'split-function,
+    <br>* cpt.Ljs'split-function,
+    <br>* cpt.split-function.string.javascript,
+    <br>* cpt.String.prototype.split-function,
+    <a class="clsHide" href="#idLjsssplitnam"></a></p>
+  <p id="idLjsssplitexpl">example::
+    <br><code>'Jan,Feb,Mar'.split(',') //["Jan", "Feb", "Mar"]
+    <br>'Jan,Feb,Mar'.split(',', 2) //["Jan", "Feb"]
+    <br>'Fred Barney; Helen Rigby ; Bill Abel'.split(/\s*;\s*/)
+    <br>//["Fred Barney", "Helen Rigby", "Bill Abel"]</code>
+    <br>[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split]
+    <a class="clsHide" href="#idLjsssplitexpl"></a></p>
   </section>
 
   <section id="idLjsssubstr">
@@ -2919,7 +3139,7 @@
   </section>
 
   <section id="idLjsStringf">
-  <h3 id="idLjsStringfH3">String-function--of--Ljs-s
+  <h3 id="idLjsStringfH3">String-function of Ljs-s
     <a class="clsHide" href="#idLjsStringfH3"></a></h3>
   <p id="idLjsStringpdsn">description::
     <br>The-String-function contains the-<code>String.prototype</code>-object is <a class="clsPreview" href="#idLjsognc">the-generic-object</a>, of all <a class="clsPreview" href="#idLjss">strings</a>.
@@ -2932,6 +3152,29 @@
     <br>(Chrome.61)&gt; Object.getOwnPropertyNames(String)
     <br>(6) ["length", "name", "prototype", "fromCharCode", "fromCodePoint", "raw"]
     <a class="clsHide" href="#idLjsStringpmbr"></a></p>
+  </section>
+
+  <section id="idLjstltltrl">
+  <h3 id="idLjstltltrlH3">Ljs-s.
+    <a class="clsHide" href="#idLjstltltrlH3"></a></h3>
+  <p id="idLjstltltrldsn">description::
+    <br>"Template literals are string literals allowing embedded expressions. You can use multi-line strings and string interpolation features with them.
+    <br>They were called "template strings" in prior editions of the ES2015 specification."
+    <br>[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals]
+    <a class="clsHide" href="#idLjstltltrldsn"></a></p>
+  <p id="idLjstltltrlnam">name::
+    <br>* cpt.Ljs-s'template-literal,
+    <br>* cpt.template-literal.javascript,
+    <a class="clsHide" href="#idLjstltltrlnam"></a></p>
+  <p id="idLjstltltrlexpl">example::
+    <br><code>var a = 5;
+    <br>var b = 10;
+    <br>console.log(`Fifteen is ${a + b} and
+    <br>not ${2 * a + b}.`);
+    <br>// "Fifteen is 15 and
+    <br>// not 20."</code>
+    <br>[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Expression_interpolation]
+    <a class="clsHide" href="#idLjstltltrlexpl"></a></p>
   </section>
   </section>
 
@@ -3415,6 +3658,7 @@
     <br>[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set]
     <a class="clsHide" href="#idLjsfSetdsn"></a></p>
   <p id="idLjsfSetnam">name::
+    <br>* cpt.javascript'set,
     <br>* cpt.Ljs'Api'Set-function,
     <br>* cpt.Ljs'Set-function,
     <br>* cpt.set.javascript,
@@ -3426,6 +3670,68 @@
   <p id="idLjsfSetwpa">addressWpg::
     <br>* {2018-01-24} Maya-Shavin, ES6 — Set vs Array — What and when? <a href="https://medium.com/front-end-hacking/es6-set-vs-array-what-and-when-efc055655e1a">https://medium.com/front-end-hacking/</a>,
     <a class="clsHide" href="#idLjsfSetwpa"></a></p>
+
+  <section id="idLjsfSetelmt">
+  <h4 id="idLjsfSetelmtH4">set'element-checking
+    <a class="clsHide" href="#idLjsfSetelmtH4"></a></h4>
+  <p id="idLjsfSetelmtnam">name::
+    <br>* cpt.Ljs'set'element-checking,
+    <a class="clsHide" href="#idLjsfSetelmtnam"></a></p>
+  <p id="idLjsfSetelmtexpl">example::
+    <br><code>var oSet = new Set([1,2,3]); //{1,2,3}
+    <br>oSet.has(2); //true</code>
+    <a class="clsHide" href="#idLjsfSetelmtexpl"></a></p>
+  </section>
+
+  <section id="idLjsfSetelmtadd">
+  <h4 id="idLjsfSetelmtaddH4">set'element-adding
+    <a class="clsHide" href="#idLjsfSetelmtaddH4"></a></h4>
+  <p id="idLjsfSetelmtaddnam">name::
+    <br>* cpt.Ljs'set'element-adding,
+    <a class="clsHide" href="#idLjsfSetelmtaddnam"></a></p>
+  <p id="idLjsfSetelmtaddexpl">example::
+    <br><code>var oSet = new Set([1,2,3]); //{1,2,3}
+    <br>oSet.add('n'); //{1,2,3,'n'}</code>
+    <a class="clsHide" href="#idLjsfSetelmtaddexpl"></a></p>
+  </section>
+
+  <section id="idLjsfSetelmtdel">
+  <h4 id="idLjsfSetelmtdelH4">set'element-removing
+    <a class="clsHide" href="#idLjsfSetelmtdelH4"></a></h4>
+  <p id="idLjsfSetelmtdelnam">name::
+    <br>* cpt.Ljs'set'element-removing,
+    <a class="clsHide" href="#idLjsfSetelmtdelnam"></a></p>
+  <p id="idLjsfSetelmtdelexpl">example::
+    <br><code>var oSet = new Set([1,2,3]); //{1,2,3}
+    <br>oSet.delete(1); //{2,3}
+    <br>oSet.clear() //removes all</code>
+    <a class="clsHide" href="#idLjsfSetelmtdelexpl"></a></p>
+  </section>
+
+  <section id="idLjsfSettoarray">
+  <h4 id="idLjsfSettoarrayH4">set'convert-to-array
+    <a class="clsHide" href="#idLjsfSettoarrayH4"></a></h4>
+  <p id="idLjsfSettoarraynam">name::
+    <br>* cpt.Ljs'set'convert-to-array,
+    <a class="clsHide" href="#idLjsfSettoarraynam"></a></p>
+  <p id="idLjsfSettoarrayexpl">example::
+    <br><code>var oSet = new Set([1,2,3]); // {1,2,3}
+    <br>var a = Array.from(oSet); //[1,2,3]</code>
+    <a class="clsHide" href="#idLjsfSettoarrayexpl"></a></p>
+  </section>
+
+  <section id="idLjsfSetreltoarray">
+  <h4 id="idLjsfSetreltoarrayH4">set'relation-to-array
+    <a class="clsHide" href="#idLjsfSetreltoarrayH4"></a></h4>
+  <p id="idLjsfSetreltoarraydsn">description::
+    <br>"In general, to my opinion, Set doesn’t really have a huge clear advantage over Array, except in specific scenarios such as when we want to maintain “distinct” data with minimum effort, or to work with a lot of distinct data sets together using the most basic set operations, without the need of direct accessing element.
+    <br>Otherwise, Array should always the choice. Reason? Less CPU work to fetch the element when it is needed."
+    <br>[https://medium.com/front-end-hacking/es6-set-vs-array-what-and-when-efc055655e1a]
+    <a class="clsHide" href="#idLjsfSetreltoarraydsn"></a></p>
+  <p id="idLjsfSetreltoarraynam">name::
+    <br>* cpt.Ljs'set'relation-to-array,
+    <a class="clsHide" href="#idLjsfSetreltoarraynam"></a></p>
+  </section>
   </section>
 
   <section id="idLjsoconsole">
@@ -4845,6 +5151,7 @@
     <br>* editor-tool,
     <br>* <a class="clsPreview" href="#idLjstolEgn">interpreter-(runtime)-tool</a>,
     <br>* <a class="clsPreview" href="#idLjstolPkg">package-manager</a>,
+    <br>* <a class="clsPreview" href="#idLjstolTask">task-runner-tool</a>,
     <br>* <a class="clsPreview" href="#idLjstolTest">testing-tool</a>,
     <a class="clsHide" href="#idLjstolSpc"></a></p>
   </section>
@@ -5036,6 +5343,36 @@
   <p id="idLjstulPrsgwpa">addressWpg::
     <br>* <a href="https://tomassetti.me/parsing-in-javascript/">https://tomassetti.me/parsing-in-javascript/</a>,
     <a class="clsHide" href="#idLjstulPrsgwpa"></a></p>
+  </section>
+
+  <section id="idLjstolTask">
+  <h2 id="idLjstolTaskH2">Ljs-tool.TASK-RUNNER
+    <a class="clsHide" href="#idLjstolTaskH2"></a></h2>
+  <p id="idLjstolTasknam">name::
+    <br>* cpt.javascript'task-runner,
+    <br>* cpt.Ljs'tool.task-runner,
+    <br>* cpt.task-runner--Ljs-tool,
+    <a class="clsHide" href="#idLjstolTasknam"></a></p>
+  <p id="idLjstolTaskSpc">specific::
+    <br>* drome,
+    <br>* <a class="clsPreview" href="FilMcsLjn.Last.html#idLjntolGlp">gulp</a>,
+    <a class="clsHide" href="#idLjstolTaskSpc"></a></p>
+
+  <section id="idLjstolDrome">
+  <h3 id="idLjstolDromeH3">Ljs-tool.DROME
+    <a class="clsHide" href="#idLjstolDromeH3"></a></h3>
+  <p id="idLjstolDromedsn">description::
+    <br>Drome project is my try to create JavaScript task runner which would be easy to use, lightweight, powerful and with well maintained ecosystem.
+    <br>Features
+    <br>⊛ Minimal abstraction: You can define tasks with command line statements and Node.js APIs
+    <br>⊛ Independent: Drome doesn't have dependencies - it's really light and can grow up in his own way
+    <br>⊛ Plug & play: All Node packages are Drome ecosystem - you don't have to wait for plugin updates
+    <br>[https://github.com/dromejs/drome]
+    <a class="clsHide" href="#idLjstolDromedsn"></a></p>
+  <p id="idLjstolDromenam">name::
+    <br>* cpt.drome--task-runner,
+    <a class="clsHide" href="#idLjstolDromenam"></a></p>
+  </section>
   </section>
 
   <section id="idLjstolTest">
