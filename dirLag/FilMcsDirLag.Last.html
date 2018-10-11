@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.dirLanguage-Mws-view (Mwsv-dirLag.2-2-0.2018-10-06)</title>
+  <title>Mcs.dirLanguage-Mws-view (dirLag.2-3-0.2018-10-11)</title>
   <meta name="keywords" content="dirLanguage, Mcs, Mws, Kaseluris.Nikos.1959, Hitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -11,53 +11,48 @@
 <body>
 <header id="idHeader">
   <p></p>
-  <h1 id="idHeaderH1">Mcs.dirLanguage-Mws-view (Mwsv-dirLag)
+  <h1 id="idHeaderH1">Mcs.dirLanguage-Mws-view (dirLag)
     </h1>
 </header>
 
 <section id="idDescription">
-  <h1 id="idDescriptionH1">description of Mwsv-dirLag
+  <h1 id="idDescriptionH1">description of dirLag
     <a class="clsHide" href="#idDescriptionH1"></a></h1>
   <p id="idDescriptionP1">description::
-    <br>· dirLanguage is a-modelInfoView of
-    <a class="clsPreview" href="../../#idAboutme">Kaseluris.Nikos.1959's</a> modelInfoWorld.
-    <br>· it contains <a class="clsPreview" href="../dirCor/filMcs.last.html#idDescription">structured-concepts</a> related to language.
+    <br>· dirLanguage is <a class="clsPreview" href="../dirCor/filMcs.last.html#idMcswhlviw">a-McsView</a> of
+    <a class="clsPreview" href="../filMcsWorld.last.html#idDescription">Kaseluris.Nikos.1959's-Mcs-worldview</a>.
+    <br>· it contains <a class="clsPreview" href="../dirCor/filMcs.last.html#idDescription">structured-concepts-Mcs</a> related to language.
     <a class="clsHide" href="#idDescriptionP1"></a></p>
   <p id="idName">name::
     <br>* cpt.dirLanguage-view-of-mws-(dirLag),
     <br>* cpt.Kaseluris.Nikos.1959-view-dirLanguage,
-    <br>* cpt.modelInfoView.dirLanguage-of-mws-(Mwsv-dirLag),
-    <br>* cpt.Mws-dirLanguage-view-(Mwsv-dirLag),
-    <br>* cpt.Mws-view-dirLanguage-(Mwsv-dirLag),
+    <br>* cpt.modelInfoView.dirLanguage-of-mws-(dirLag),
+    <br>* cpt.Mws-dirLanguage-view-(dirLag),
+    <br>* cpt.Mws-view-dirLanguage-(dirLag),
     <br>* cpt.Mws-dirLag-view-(dirLanguage-view-of-Mws),
     <br>* cpt.Mwsv-dirLag-(modelWorldSynagonismView.dirLanguage),
     <a class="clsHide" href="#idName"></a></p>
 </section>
 
 <section id="idMwsdirLagFile">
-  <h1 id="idMwsdirLagFileH1">Mcs.FILE of Mwsv-dirLag
+  <h1 id="idMwsdirLagFileH1">Mcs.FILE of dirLag
     <a class="clsHide" href="#idMwsdirLagFileH1"></a></h1>
   <p id="idMwsdirLagFilenam">name::
-    <br>* cpt.Mwsv-dirLag'McsFile,
+    <br>* cpt.dirLag'McsFile,
     <a class="clsHide" href="#idMwsdirLagFilenam"></a></p>
   <p id="idMwsdirLagFileP1">quantity-of-concepts::
-    <br><span id="idMwsdirLagFilespn" class="clsColorRed">115</span>,
+    <br>* <span id="idMwsdirLagFilespn" class="clsColorRed"></span>,
     <a class="clsHide" href="#idMwsdirLagFileP1"></a></p>
-  <div id="idMwsdirLagFileP2">
-    <p>list-of--file-concepts::
-    </p>
-    <ol id="idMwsdirLagFileOl">
-      <li>filMcsDirLag.last.html, 3,
-      <li><a class="clsPreview" href="filMcsChar.last.html#idDescriptionFT">filMcsChar.last.html</a>, 112,
-    </ol>
-    <a class="clsHide" href="#idMwsdirLagFileP2"></a></div>
+  <p id="idMwsdirLagFileP2">list-of--file-concepts::
+    <br>(<a href="cptqnt.json">link</a>)
+    <a class="clsHide" href="#idMwsdirLagFileP2"></a></p>
 </section>
 
 <section id="idMwsdirLagTodo">
-  <h1 id="idMwsdirLagTodoH1">Mcs.TODO of Mwsv-dirLag
+  <h1 id="idMwsdirLagTodoH1">Mcs.TODO of dirLag
     <a class="clsHide" href="#idMwsdirLagTodoH1"></a></h1>
   <p id="idMwsdirLagTodonam">name::
-    <br>* cpt.Mwsv-dirLag'McsTodo,
+    <br>* cpt.dirLag'McsTodo,
     <a class="clsHide" href="#idMwsdirLagTodonam"></a></p>
   <p id="idMwsdirLagTodoP1">specific:
     <br>• cpt.codeBrain
@@ -151,5 +146,22 @@
 </script>
 
 <script src="https://synagonism.github.io/hitp/hitp.js"></script>
+<script>
+  window.addEventListener('load', function () {
+    var
+      aCpts,
+      oXHR = new XMLHttpRequest()
+
+    oXHR.open('GET', 'cptqnt.json', true)
+    oXHR.send(null)
+    oXHR.onreadystatechange = function () {
+      if (oXHR.readyState === 4 && oXHR.status === 200) {
+        aCpts = JSON.parse(oXHR.responseText)
+        document.getElementById('idMwsdirLagFilespn').innerHTML =
+          aCpts[0][1].toLocaleString() + ' Mcs'
+      }
+    }
+  });
+</script>
 </body>
 </html>

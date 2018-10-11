@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.modelWorldSynagonism (Mws.6-1-0.2018-10-06)</title>
+  <title>Mcs.modelWorldSynagonism (Mws.6-3-0.2018-10-10)</title>
   <meta name="keywords" content="Mcs-worldview, Kaseluris.Nikos.1959, free book, ebook, html5.id.toc.preview, HITP, synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -95,6 +95,10 @@
 <section id="idMwsstatCpt">
   <h1 id="idMwsstatCptH1">concept-quantity of Mws
     <a class="clsHide" href="#idMwsstatCptH1"></a></h1>
+  <p id="idMwsstatCptEvlg">evoluting::
+    <br>* <span id="idMwsstatCptEvlgspn" class="clsColorRed"></span>
+    <br>* {2018-10-10} 36,307 Mcs
+    <a class="clsHide" href="#idMwsstatCptEvlg"></a></p>
   <p id="idMwsstatCptnam">name::
     <br>* cpt.Mws'concept-quantity,
     <br>* cpt.Mws'quantity-of-concepts,
@@ -127,7 +131,7 @@
     <a class="clsHide" href="#idMwspdvnDirnam"></a></p>
 
   <section id="idDirMivCor">
-  <h2 id="idDirMivCorH2">Mws'dir-view.core (<a class="clsPreview" href="dirCor/FilMcsDirCor.Last.html#idDescription">link</a>)
+  <h2 id="idDirMivCorH2">Mws'dir-view.core (<a class="clsPreview" href="dirCor/filMcsDirCor.last.html#idDescription">link</a>)
     <a class="clsHide" href="#idDirMivCorH2"></a></h2>
   </section>
 
@@ -253,11 +257,25 @@
 <script>
   window.addEventListener('load', function () {
     var
+      aCpts,
+      oXHR = new XMLHttpRequest(),
       sQ = ''
+
+    oXHR.open('GET', 'cptqnt.root.json', true)
+    oXHR.send(null)
+    oXHR.onreadystatechange = function () {
+      if (oXHR.readyState === 4 && oXHR.status === 200) {
+        aCpts = JSON.parse(oXHR.responseText)
+        document.getElementById('idMwsstatCptEvlgspn').innerHTML =
+          aCpts[0][1].toLocaleString() + ' Mcs'
+      }
+    }
 
     for (var n = 0; n < oHitp.aNamidxRoot.length; n++) {
       if (oHitp.aNamidxRoot[n][1] === ';letter') {
-        sQ = '<li>⊛ SUM: ' + oHitp.aNamidxRoot[n][2]
+        sQ = '<li>⊛ SUM: <span class="clsColorRed">'
+             + oHitp.aNamidxRoot[n][2].toLocaleString()
+             +' names</span>'
       } else if (oHitp.aNamidxRoot[n][1].startsWith(';')) {
         sQ = sQ + '<li>⊛ ' + oHitp.aNamidxRoot[n][1].substring(1)
            + ': ' + oHitp.aNamidxRoot[n][2]
