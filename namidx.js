@@ -5,6 +5,11 @@
  * OUTPUT: nameidx.X.json
  * RUN: node namidx
  *
+ * PROBLEM:
+ * - on many languages, store all files in one dir dirEll eg
+ *
+ * modified: {2018-10-25} 'cptqnt.json'
+ * modified: {2018-10-16} '* Mcs.'
  * modified: {2018-09-22}
  * created: {2017-06-01}
  */
@@ -14,7 +19,7 @@ var
   mfReadlines = require('n-readlines'), // npm install n-readlines
   bExtra = false,
   oNextln,
-  oSetNiUp = new Set, // namidx to upload
+  oSetFileUp = new Set, // files to upload, namidx, html, json
   aFilMcsInComments = moFs.readFileSync('namidx.txt').toString().split('\n'),
   //array with names of filMcsName.html to remove|add
   aFilMcsIn = [],
@@ -26,6 +31,7 @@ var
   ],
   //[['lagEng01ei','A',1111]} with quantity of names
   aNamidxRootSum = JSON.parse(moFs.readFileSync('dirNamidx/namidx.root.json')),
+  aCpt = [],
   n,
   //hold the-names of namidx-files and the related capital-letters
   //we want the-names of files to be only english.
@@ -91,7 +97,7 @@ if (aLag[0] === 'lagALL') {
 }
 
 if (aFilMcsIn.length > 0) {
-  oSetNiUp.add('dirNamidx/namidx.root.json');
+  oSetFileUp.add('dirNamidx/namidx.root.json');
 }
 
 /**
@@ -103,9 +109,11 @@ if (aFilMcsIn.length > 0) {
  */
 for (n = 0; n < aFilMcsIn.length; n++) {
   var
+    nCptqnt = 0,
     sFil = aFilMcsIn[n] //the-Mcs-file we want to work
 
-  oSetNiUp.add(sFil)
+  oSetFileUp.add(sFil)
+  oSetFileUp.add(sFil.substring(0, sFil.lastIndexOf('/')) + '/cptqnt.json')
   //for EACH language
   for (var nL = 0; nL < aLag.length; nL++) {
     var
@@ -147,24 +155,37 @@ for (n = 0; n < aFilMcsIn.length; n++) {
         //names are-stored inside a-section
         sUrl = sLn.substring(sLn.indexOf('"')+1,sLn.lastIndexOf('"'))
         sUrl = aFilMcsIn[n] + '#' + sUrl
+      } else if (sLn.indexOf('name::') >= 0 || sLn.indexOf('name::') >= 0) {
+        nCptqnt = nCptqnt + 1
       } else {
         if (aLag[nL] === 'lagEng') {
-          if (sLn.startsWith('    <br>* cpt.')) {
-            aNU = [sLn.substring(sLn.indexOf('* cpt.')+6, sLn.indexOf(',')), sUrl]
-            sChar = sLn.charAt(sLn.indexOf('* cpt.')+6).toUpperCase() //char at cpt.X
-            fStoreNULetter(aNU, sChar, aLag[nL])
+          if (sLn.startsWith('    <br>* cpt.') ||
+              sLn.startsWith('    <br>* Mcs.')) {
+            if (sLn.indexOf('* cpt.') > 0) {
+              aNU = [sLn.substring(sLn.indexOf('* cpt.')+6, sLn.indexOf(',')), sUrl]
+              sChar = sLn.charAt(sLn.indexOf('* cpt.')+6).toUpperCase() //char at cpt.X
+              fStoreNULetter(aNU, sChar, aLag[nL])
+            } else {
+              aNU = [sLn.substring(sLn.indexOf('* Mcs.')+6, sLn.indexOf(',')), sUrl]
+              sChar = sLn.charAt(sLn.indexOf('* Mcs.')+6).toUpperCase() //char at cpt.X
+              fStoreNULetter(aNU, sChar, aLag[nL])
+            }
           }
         } else if (aLag[nL] === 'lagEll') {
           if (sLn.startsWith('    <br>* ενν.')
+           || sLn.startsWith('    <br>* McsEll.')
            || sLn.startsWith('    <br>* cptEll.')
            || sLn.startsWith('    <br> &nbsp; &nbsp;* ενν.') //σύνταγμα.2008 ειδική περίπτωση!
            || sLn.startsWith('    <br> &nbsp; &nbsp; &nbsp; &nbsp;* ενν.')) {
             if (sLn.indexOf('* ενν.') > 0) {
               aNU = [sLn.substring(sLn.indexOf('* ενν.')+6, sLn.indexOf(',')), sUrl]
               sChar = sLn.charAt(sLn.indexOf('* ενν.')+6).toUpperCase() //char at ενν.X
-            } else {
+            } else if (sLn.indexOf('* cptEll.') > 0) {
               aNU = [sLn.substring(sLn.indexOf('* cptEll.')+9, sLn.indexOf(',')), sUrl]
               sChar = sLn.charAt(sLn.indexOf('* cptEll.')+9).toUpperCase()
+            } else  {
+              aNU = [sLn.substring(sLn.indexOf('* McsEll.')+9, sLn.indexOf(',')), sUrl]
+              sChar = sLn.charAt(sLn.indexOf('* McsEll.')+9).toUpperCase()
             }
             //GREEK INDEX CHANGES
             if (sChar === 'Ά') {sChar = 'Α'}
@@ -205,7 +226,7 @@ for (n = 0; n < aFilMcsIn.length; n++) {
         sNamidxExistFull = 'dirNamidx/dirLag' +sL +'/namidx.' +sNmix +'.json',
         sMeta
 
-      oSetNiUp.add(sNamidxExistFull)
+      oSetFileUp.add(sNamidxExistFull)
       aNew.sort(fCompare)
 
       //if namidx-file exists, put new names and write
@@ -231,6 +252,9 @@ for (n = 0; n < aFilMcsIn.length; n++) {
       }
     }
   }
+
+  //update cptqnt.json
+  aCpt.push([sFil, nCptqnt])
 }
 
 /**
@@ -265,7 +289,7 @@ function fRemoveNames(oNamidxFIIn, sFilRmvIn, sLagIn) {
         if (sNamidxFull.endsWith('_0.json')) {
           var oIN = fCreateONamidxRO(aEx)
           fRemoveNames(oIN, sFilRmvIn, sLagIn)
-          oSetNiUp.add(sNamidxFull)
+          oSetFileUp.add(sNamidxFull)
         } else {
           //ELSE remove names
           //create new array with names NOT in sFilRmvIn
@@ -277,7 +301,7 @@ function fRemoveNames(oNamidxFIIn, sFilRmvIn, sLagIn) {
               aNamDif.push(aEx[nE])
             } else if (sUrl.startsWith(sFilRmvIn)) {
               bRemoved = true
-              oSetNiUp.add(sNamidxFull)
+              oSetFileUp.add(sNamidxFull)
             }
           }
           //store namidx length
@@ -478,7 +502,7 @@ function fObjvalRKey(oIn, valIn) {
 /**
  * DOING: computes quantities of names
  */
-function fComputeQ() {
+function fComputeQName() {
   //oNamidxQ={lagEng00: 1101,lagEng01ei: 419,lagEng03si_1: 1038,lagEng03si_2_1: 6959}
   //the-set of namidx-files we computed
   var oSetNamidx = new Set()
@@ -632,9 +656,81 @@ function fComputeQ() {
   }
 }
 
-fComputeQ()
+fComputeQName()
 
-var aSftp = Array.from(oSetNiUp)
+var aSftp = Array.from(oSetFileUp)
 aSftp.sort()
 console.log(aSftp)
 fWriteJson2Sync('sftp.json', aSftp)
+
+/**
+ * DOING: computes the-quantity of Mcs of a-Mcs and updates the-cptqnt.json files with it
+ * INPUT: the-name of a-Mcs[a] and the-quantity of Mcs of this[a] file.
+ * OUTPUT: the-cptqnt-files affected 
+ */
+function fComputeQMcs(sMcsIn, nCptqntIn) {
+  var
+    aCptqnt,
+    bMcs = false,
+    nCptqntSum = 0,
+    sDir = sMcsIn.substring(0, sMcsIn.lastIndexOf('/'))
+    sCptqnt = sDir + '/cptqnt.json'
+
+  aCptqnt = JSON.parse(moFs.readFileSync(sCptqnt))
+  for (n = 1; n < aCptqnt.length; n++) {
+    // [";dirLag",115,"2018-10-06"],
+    // ["dirLag/filMcsChar.last.html",112],
+    if (aCptqnt[n][0] === sMcsIn) {
+      aCptqnt[n][1] = nCptqntIn
+      nCptqntSum = nCptqntSum + nCptqntIn
+      bMcs = true
+    } else {
+      nCptqntSum = nCptqntSum + aCptqnt[n][1]
+    }
+  }
+  if (!bMcs) {
+    aCptqnt.push([sMcsIn, nCptqntIn])
+    nCptqntSum = nCptqntSum + nCptqntIn
+  }
+  aCptqnt[0] = [';'+sDir, nCptqntSum, fDateYMD()]
+  aCptqnt.sort()
+  fWriteJson2Sync(sCptqnt, aCptqnt)
+
+  // update parents
+  if (sDir.indexOf('/') === -1) {
+    // parent = root
+    fUpdate_root(sDir, nCptqntSum)
+  } else {
+    fComputeQMcs(sDir, nCptqntSum)
+  }
+
+  // update root file
+  function fUpdate_root(sDfIn, nQIn) {
+    var
+      aCptqntRt,
+      nCptqntRtSum = 0,
+      sCptqntRt = 'cptqnt.root.json'
+
+    aCptqntRt = JSON.parse(moFs.readFileSync(sCptqntRt))
+    for (n = 1; n < aCptqntRt.length; n++) {
+      // [";qntALL",179925,"2018-10-05"],
+      // ["dirCor",10],
+      if (aCptqntRt[n][0] === sDfIn) {
+        aCptqntRt[n][1] = nQIn
+        nCptqntRtSum = nCptqntRtSum + nQIn
+      } else {
+        nCptqntRtSum = nCptqntRtSum + aCptqntRt[n][1]
+      }
+    }
+    aCptqntRt[0] = [';qntALL', nCptqntRtSum, fDateYMD()]
+    fWriteJson2Sync(sCptqntRt, aCptqntRt)
+  }
+}
+//console.log(aCpt)
+
+async function fQMcs(aIn) {
+  for (const item of aIn) {
+   await fComputeQMcs(item[0], item[1])
+  }
+}
+fQMcs(aCpt)
