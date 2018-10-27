@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Faircoin-network (Faircoin-net.0-6-0.2018-10-25 draft)</title>
+  <title>Mcs.Faircoin--blockchain-network (Faircoin-net.0-7-0.2018-10-26 draft)</title>
   <meta name="keywords" content="FairCoin-network, Faircoin-net, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -12,7 +12,7 @@
 <header id="idHeader">
   <p></p>
   <h1 id="idHeaderH1">structured-concept:
-    <br>Faircoin-network (Faircoin-net)
+    <br>Faircoin--blockchain-network (Faircoin-net)
     </h1>
   <p id="idHeadercrd">McsHitp-creation: {2015-08-25}
     <a class="clsHide" href="#idHeadercrd"></a></p>
@@ -799,7 +799,7 @@
     <br>* Mcs.Faircoin-net'block'payload,
     <a class="clsHide" href="#idFairnetblkpldnam"></a></p>
   <p id="idFairnetblkpldgncchn">generic-chain::
-    <br>* <a class="clsPreview" href="FilMcsDbcnetBtc.Last.html#idBtcblkpld">Bitcoin-block-payload</a>,
+    <br>* <a class="clsPreview" href="filMcsDtcbnetBtc.last.html#idBtcblkpld">Bitcoin-block-payload</a>,
     <a class="clsHide" href="#idFairnetblkpldgncchn"></a></p>
   </section>
 
@@ -949,6 +949,12 @@
     <br>* Mcs.Faircoin-net'FAIR'exchange-rate,
     <br>* Mcs.FAIR'exchange-rate,
     <a class="clsHide" href="#idFairnetevuCexrnam"></a></p>
+  <p id="idFairnetevuCexrgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsDtcnet.last.html#idDtcevuexrate">chain-asset--exchange-rate</a>,
+    <a class="clsHide" href="#idFairnetevuCexrgncchn"></a></p>
+  <p id="idFairnetevuCexrwpa">addressWpg::
+    <br>* {2016-04-29} MARO, https://2017.fair.coop/clearing-up-doubts-about-faircoin-how-is-the-price-determined/,
+    <a class="clsHide" href="#idFairnetevuCexrwpa"></a></p>
   </section>
 
   <section id="idFairnetevuCAgg">
@@ -956,7 +962,7 @@
     <a class="clsHide" href="#idFairnetevuCAggH2"></a></h2>
   <p id="idFairnetevuCAggdsn">description::
     <br>53,193,831 FAIR
-    <br>[https://coinmarketcap.com/currencies/faircoin/]
+    <br>[{2018-10-26} https://coinmarketcap.com/currencies/faircoin/]
     <br>===
     <br>"The coin supply is fixed and cannot be increased in FairCoin."
     <br>[<a class="clsPreview" href="#idFairnetwpr2180752P1">#idFairnetwpr2180752P1</a>]
@@ -1016,6 +1022,11 @@
     <br>* <a class="clsPreview" href="filMcsDtcbnet.last.html#idDbcgovFT">blockchain-governance-system</a>,
     <a class="clsHide" href="#idFairnetgovgncchn"></a></p>
 
+  <section id="idFairnetgovcvn">
+  <h2 id="idFairnetgovcvnH2">CVN (<a class="clsPreview" href="#idFairnetnodCvn">link</a>)
+    <a class="clsHide" href="#idFairnetgovcvnH2"></a></h2>
+  </section>
+
   <section id="idFairnetgovcnan">
   <h2 id="idFairnetgovcnanH2">chain-admin
     <a class="clsHide" href="#idFairnetgovcnanH2"></a></h2>
@@ -1030,9 +1041,44 @@
     <br>* Mcs.Faircoin-net'chain-admin,
     <a class="clsHide" href="#idFairnetgovcnannam"></a></p>
 
+  <section id="idFairnetgovcnanpwr">
+  <h3 id="idFairnetgovcnanpwrH3">power of chain-admin
+    <a class="clsHide" href="#idFairnetgovcnanpwrH3"></a></h3>
+  <p id="idFairnetgovcnanpwrdsn">description::
+    <br>"Don't have the chain admins too much power?
+    <br>No.  The most harmful thing chain admins could do is trying to earn FairCoins by increasing the transaction fee for CVNs they control (the upper limit of this parameter is 0,2 FAIR per standard transaction). However, if it became known that more than five chain admins wanted to break out and not follow the decisions of the assembly, a new wallet could be issued, re-establishing the rules decided democratically. FairCoin users would need to change their wallet, though, but this is the way all other cryptocurrencies patch any severe or unforeseen problem which may occur during their lifecycle anyway. With chain admins being able to fine-tune some parameters with the move to FairCoin, we likely will never need to change the algorithm again, as they are able to fine-tune operational parameters."
+    <br>[https://fair-coin.org/en/faircoin-faqs]
+    <a class="clsHide" href="#idFairnetgovcnanpwrdsn"></a></p>
+  <p id="idFairnetgovcnanpwrnam">name::
+    <br>* Mcs.Faircoin-net'chain-admin'power,
+    <a class="clsHide" href="#idFairnetgovcnanpwrnam"></a></p>
+  </section>
+
+  <section id="idFairnetgovcnandg">
+  <h3 id="idFairnetgovcnandgH3">doing of chain-admin
+    <a class="clsHide" href="#idFairnetgovcnandgH3"></a></h3>
+  <p id="idFairnetgovcnandgdsn">description::
+    <br>"What is the task of the FairCoin chain administrators?
+    <br>FairCoin administrators activate nodes after cooperatively validating the operators and may adjust some technical parameters in the FairCoin blockchain. This happens seldom and is designed thus because of the very long lifecycle of a cryptocurrency. The FairCoin assembly prepares the decisions and the chain administrators are the operators that are executing the decisions (see detailled technical instructions). At least 5 out of 8 chain admins need to agree when performing one of the following tasks:
+    <br>✦ add a CVN
+    <br>✦ delete a CVN
+    <br>✦ change admins list
+    <br>✦ change transaction fee (min 0, max 1 FAIR per kB)
+    <br>✦ change technical parameters
+    <br>-- block spacing (default is 3 minutes)
+    <br>-- block spacing grace period (default is 1 minute)
+    <br>-- minimum successive hash signatures (default is 10 = minimum half hour online, so that CVN may create a block)
+    <br>In any blockchain based model, more than 51% nodes are needed to do a software update, in case the algorithm needs to be adapted. With FairCoin, some operation parameters can be set by storing them in the blockchain, if at least five administrators sign within three minutes. A maximum of eleven chain admins can be assigned. At the assembly on 15th of September 2016, eight people have fulfilled the criteria. Therefore 5 of the 8 need to sign each modification. Modifications can not stop the blockchain, but make it run smoother, e.g. if the number of transactions per second is reaching a certain limit (default blocksize is 1,5 MB, which can hold max. 3000 transactions = max. 10,6 transactions per second - FairCoin is the only (!) blockchain which can adjust such a limit, which is always a compromise between speed and storage consumption).
+    <br>Compare it with an equalizer: if you adjust some frequencies, the sound will be better, depending on the room and music you play. The song may distort if you do not take care, but it does not fade away."
+    <br>[https://fair-coin.org/en/faircoin-faqs]
+    <a class="clsHide" href="#idFairnetgovcnandgdsn"></a></p>
+  <p id="idFairnetgovcnandgnam">name::
+    <br>* Mcs.Faircoin-net'chain-admin'doing,
+    <a class="clsHide" href="#idFairnetgovcnandgnam"></a></p>
+
   <section id="idFairnetgovcnandgCvn">
-  <h3 id="idFairnetgovcnandgCvnH3">doing.ADD-REMOVE-CVN of chain-admin
-    <a class="clsHide" href="#idFairnetgovcnandgCvnH3"></a></h3>
+  <h4 id="idFairnetgovcnandgCvnH4">doing.ADD-REMOVE-CVN of chain-admin
+    <a class="clsHide" href="#idFairnetgovcnandgCvnH4"></a></h4>
   <p id="idFairnetgovcnandgCvndsn">description::
     <br>"In the event malicious behaviour of a CVN is detected, it is removed instantly by the chain administrators. Re-application of such a person to become a CVN operator is not possible in the future. CVN operators can request removal if they are no longer willing or able to run a CVN.
     <br>The removal of a CVN will be performed by the chain administrators."
@@ -1044,8 +1090,8 @@
   </section>
 
   <section id="idFairnetgovcnandgCnan">
-  <h3 id="idFairnetgovcnandgCnanH3">doing.ADD-REMOVE-CHAIN-ADMIN of chain-admin
-    <a class="clsHide" href="#idFairnetgovcnandgCnanH3"></a></h3>
+  <h4 id="idFairnetgovcnandgCnanH4">doing.ADD-REMOVE-CHAIN-ADMIN of chain-admin
+    <a class="clsHide" href="#idFairnetgovcnandgCnanH4"></a></h4>
   <p id="idFairnetgovcnandgCnandsn">description::
     <br>"To add or remove CVNs and chain administrators or update the dynamic chain parameters at least the currently defined minimum number of chain administrators have to sign the corresponding command which is then injected into the network via the wallets RPC interface."
     <br>[<a class="clsPreview" href="#idFairnetwpr2180753P1">#idFairnetwpr2180753P1</a>]
@@ -1055,12 +1101,18 @@
     <a class="clsHide" href="#idFairnetgovcnandgCnannam"></a></p>
   </section>
   </section>
+  </section>
 
   <section id="idFairnetgovFcga">
   <h2 id="idFairnetgovFcgaH2">FairCoop-general-assembly
     <a class="clsHide" href="#idFairnetgovFcgaH2"></a></h2>
   <p id="idFairnetgovFcgadsn">description::
-    <br>·
+    <br>"FairCoop’s global decision-making process is structured by open global assemblies that take place in telegram groups. There are several different general assemblies gathered around different topics and scheduled on fixed days each month:
+    <br>❖ FairCoop General Assembly: Third Thursday of each month.
+    <br>❖ FairCoop Local Nodes Assembly: Last Monday of each month.
+    <br>❖ FreedomCoop Assembly. Second Thursday of each month.
+    <br>❖ Bank of the Commons General Assembly: Last Tuesday of each month."
+    <br>[https://wiki.fair.coop/en:faircoop_governance:start]
     <a class="clsHide" href="#idFairnetgovFcgadsn"></a></p>
   <p id="idFairnetgovFcganam">name::
     <br>* Mcs.Faircoin-net'general-assembly,
@@ -1129,6 +1181,20 @@
     <br>* <a class="clsPreview" href="filMcsDtcbnet.last.html#idDbcognFT">blockchain-organization</a>,
     <a class="clsHide" href="#idFairnetogngncchn"></a></p>
 
+  <section id="idFairnetognGfc">
+  <h2 id="idFairnetognGfcH2">getfaircoin.net
+    <a class="clsHide" href="#idFairnetognGfcH2"></a></h2>
+  <p id="idFairnetognGfcdsn">description::
+    <br>"WHAT IS GETFAIRCOIN:
+    <br>Getfaircoin.net is an easy way to buy Faircoin from different national currencies like EUR, USD, SYP, CNY, RUB, GBP, INR, NGN, BRL, MXN, etc with commonly-used payment methods like wire Transfer, credit or debit Card, and now also using Cash, through the physical places set up by local nodes involved in FairCoop.
+    <br>getFairCoin is backed and managed by FairCoop."
+    <br>[https://getfaircoin.net/about/]
+    <a class="clsHide" href="#idFairnetognGfcdsn"></a></p>
+  <p id="idFairnetognGfcnam">name::
+    <br>* Mcs.,
+    <a class="clsHide" href="#idFairnetognGfcnam"></a></p>
+  </section>
+
   <section id="idFairnetognFrcp">
   <h2 id="idFairnetognFrcpH2">FairCoop
     <a class="clsHide" href="#idFairnetognFrcpH2"></a></h2>
@@ -1137,12 +1203,20 @@
     <br>Its aim is to make the transition to a new world by reducing the economic and social inequalities among human beings as much as possible, and at the same time gradually contribute to a new global wealth, accessible to all humankind as commons.
     <br>Fair.coop understands that the transformation to a fairer monetary system is a key element. Therefore, Faircoin was proposed as the cryptocurrency upon which to base its resource-redistribution actions and building of a new global economic system."
     <br>[https://2017.fair.coop/faircoop/]
+    <br>===
+    <br>"FairCoop is not a registered organization nor has a headquarter."
+    <br>[https://fair-coin.org/en/faircoin-faqs]
     <a class="clsHide" href="#idFairnetognFrcpdsn"></a></p>
   <p id="idFairnetognFrcpnam">name::
     <br>* Mcs.Faircoin-net'FairCoop,
     <br>* Mcs.Fair.coop,
     <br>* Mcs.FairCoop,
     <a class="clsHide" href="#idFairnetognFrcpnam"></a></p>
+
+  <section id="idFairnetognFrcpga">
+  <h3 id="idFairnetognFrcpgaH3">general-assembly of FairCoop (<a class="clsPreview" href="#idFairnetgovFcga">link</a>)
+    <a class="clsHide" href="#idFairnetognFrcpgaH3"></a></h3>
+  </section>
 
   <section id="idFairnetognFrcplclnd">
   <h3 id="idFairnetognFrcplclndH3">local-node of FairCoop
@@ -1171,12 +1245,22 @@
   <section id="idFairnetognFrcprsc">
   <h3 id="idFairnetognFrcprscH3">resource of FairCoop
     <a class="clsHide" href="#idFairnetognFrcprscH3"></a></h3>
+  <p id="idFairnetognFrcprscdsn">description::
+    <br>"Since a few days ago, we have a new website, more adapted to the current needs of the FairCoop ecosystem movement.
+    <br>This new website is mainly composed of:
+    <br>✬ Home page https://fair.coop, which contains fixed information for those who want to know about us for the first time (newbies).
+    <br>✬ New Forum https://forum.fair.coop, which replaces the role of the old FairNetwork (from now on, you need to register here to join our new site).
+    <br>✬ New Blog https://blog.fair.coop, which is the space where we will publish the posts that were published here until now.
+    <br>✬ New Wiki https://wiki.fair.coop, a tool still in preparation, which will be very useful to document FairCoop!
+    <br>As you can see, the old website has been moved to https://2017.fair.coop, where you can still access the old content."
+    <br>[{2017-12-25} https://2017.fair.coop/new-faircoop-website-published/]
+    <a class="clsHide" href="#idFairnetognFrcprscdsn"></a></p>
   <p id="idFairnetognFrcprscnam">name::
     <br>* Mcs.Faircoin-net'FairCoop'resource,
     <a class="clsHide" href="#idFairnetognFrcprscnam"></a></p>
   <p id="idFairnetognFrcprscwpa">addressWpg::
     <br>* https://fair.coop/en,
-    <br>* https://2017.fair.coop/,
+    <br>* old-site: https://2017.fair.coop/,
     <br>* https://twitter.com/Fair_Coop,
     <a class="clsHide" href="#idFairnetognFrcprscwpa"></a></p>
   </section>
@@ -1204,10 +1288,10 @@
     <br>* <a class="clsPreview" href="filMcsDtcbnet.last.html#idDbcpbmFT">blockchain-problem</a>,
     <a class="clsHide" href="#idFairnetelnScongncchn"></a></p>
 
-  <section id="#idFairnetelnSconDbn">
-  <h3 id="#idFairnetelnSconDbnH3">Faircoin-con.FAIR-distribution
-    <a class="clsHide" href="##idFairnetelnSconDbnH3"></a></h3>
-  <p id="#idFairnetelnSconDbndsn">description::
+  <section id="idFairnetelnSconDbn">
+  <h3 id="idFairnetelnSconDbnH3">Faircoin-con.FAIR-distribution
+    <a class="clsHide" href="#idFairnetelnSconDbnH3"></a></h3>
+  <p id="idFairnetelnSconDbndsn">description::
     <br>"FairCoin is a decentralised virtual currency, distributed through a vast airdrop process during the 6th and 8th of March, 2014 (view airdrop statistics). An approximate 49,750 addresses were logged for the giveaway, each able to claim 1000 FAIR per hour. Automated airdrop claiming methods had no effect, as each IP address could register once per hour, and 2 different captchas had to be solved. These security precautions were hidden till the day of distribution. FairCoin’s vast distribution method allowed a good portion of the cryptocurrency community to claim a little bit of the 50,000,000 FairCoins, each."
     <br>[https://2017.fair.coop/questions-and-answers-a-faircoop-faq/]
     <br>===
@@ -1225,11 +1309,32 @@
     <br>"FairCoin will help to create the conditions for existing coins to be redistributed to amazing social projects worldwide, thanks to funds like Global South Fund, Commons Fund, Technological Infrastructure Fund and Refugees Fund."
     <br>[<a class="clsPreview" href="#idFairnetwpr218072P1">#idFairnetwpr218072P1</a>]
     <a class="clsHide" href="##idFairnetelnSconDbndsn"></a></p>
-  <p id="#idFairnetelnSconDbnnam">name::
+  <p id="idFairnetelnSconDbnnam">name::
     <br>* Mcs.Faircoin-net'con.distribution-of-FAIR,
     <br>* Mcs.Faircoin-net'distribution-of-FAIR,
     <br>* Mcs.Faircoin-net'FAIR'distribution,
-    <a class="clsHide" href="##idFairnetelnSconDbnnam"></a></p>
+    <a class="clsHide" href="#idFairnetelnSconDbnnam"></a></p>
+  </section>
+
+  <section id="idFairnetelnSconScrt">
+  <h3 id="idFairnetelnSconScrtH3">Faircoin-con.SECURITY
+    <a class="clsHide" href="#idFairnetelnSconScrtH3"></a></h3>
+  <p id="idFairnetelnSconScrtdsn">description::
+    <br>"<strong>How are attacks handled</strong>?
+    <br>The peer-to-peer mechanism of blockchain frameworks is very failure proof. Each node (in FairCoin any wallet or CVN is a node) checks the behavior of other connected nodes and ranks them. If the bad behavior of a node exceeds a certain level, then it is disconnected for 24 hours. This also helps to prevent from DDoS attacks.
+    <br>As CVNs behave like any other nodes. Their IP addresses are not listed, they can not be easily identified. The only means  to find a potential CVN is to connect to a huge number of nodes and monitor all the packages and determine where you got the block/signature/nonce pool first. This becomes increasingly harder when the number of nodes grows to some thousand.
+    <br>To make the network even more resilient, in future we could establish a network of full nodes at trusted partners that are very well connected. Selected CVNs could connect to these nodes only, to make them totally invisible.
+    <br>If you want to analyse the block signing mechanism, have a look at the code and raise an issue in Github for comments.
+    <br>
+    <br><strong>Is there a risk, that CVNs get attacked to interrupt the blockchain</strong>?
+    <br>You can not easily distinguish regular full nodes from CVNs because both run the exact same software and do the same thing except that CVNs also create blocks. Thus, there is no easy way to directly target a particular CVN. Proof-of-cooperation only defines what node ID is to create the next block and not what IP address it has or where it is located.
+    <br>Almost all P2P crypto-currencies are vulnerable to DOS attacks. Because the IP addresses of all nodes is public information. Thus, you can flood all the known nodes and interfere with the network. There are currently about 10000 Bitcoin nodes and about 100 FairCoin nodes active. For a serious attacker it wouldn't make any difference if 10000 or 100 nodes are to be attacked.
+    <br>Nevertheless, we have been discussing this issue. If we'd face such a situation one day we'd inter-connect CVNs directly and/or use well connected proxy nodes on some VPS. This would keep the blockchain running. Remember, the worst case is that an attacker could bring the blockchain to a temporary halt, that's it. It simply would continue when the attack is over."
+    <br>[https://fair-coin.org/en/faircoin-faqs]
+    <a class="clsHide" href="#idFairnetelnSconScrtdsn"></a></p>
+  <p id="idFairnetelnSconScrtnam">name::
+    <br>* Mcs.Faircoin-net'security,
+    <a class="clsHide" href="#idFairnetelnSconScrtnam"></a></p>
   </section>
   </section>
 </section>
@@ -1243,13 +1348,26 @@
   <p id="idFairnetlawgncchn">generic-chain::
     <br>* <a class="clsPreview" href="filMcsDtcbnet.last.html#idDbclawFT">blockchain-law</a>,
     <a class="clsHide" href="#idFairnetlawgncchn"></a></p>
+
+  <section id="idFairnetlawTax">
+  <h2 id="idFairnetlawTaxH2">taxes of Faircoin-net
+    <a class="clsHide" href="#idFairnetlawTaxH2"></a></h2>
+  <p id="idFairnetlawTaxdsn">description::
+    <br>"Do I have to pay taxes with FairCoin?
+    <br>According to a decision of the European Court in Luxembourg, exchanging fiat money to cryptocurrencies or vice versa is not subject to value added taxes. However, if you do business with FairCoins, you should treat them like a foreign currency in your books and add the trade value to your accounts or profit and loss statements, from which you calculate all taxes. Taxation rules may vary in detail (rules e.g. for Austria). It is at your own risk if you do tax disobedience with cryptocurrencies."
+    <br>[https://fair-coin.org/en/faircoin-faqs]
+    <a class="clsHide" href="#idFairnetlawTaxdsn"></a></p>
+  <p id="idFairnetlawTaxnam">name::
+    <br>* Mcs.Faircoin-net'tax,
+    <a class="clsHide" href="#idFairnetlawTaxnam"></a></p>
+  </section>
 </section>
 
 <section id="idFairnetrscFT">
   <h1 id="idFairnetrscFTH1">resource of Faircoin-net
     <a class="clsHide" href="#idFairnetrscFTH1"></a></h1>
   <p id="idFairnetrscnam">name::
-    <br>* Mcs.Faircoin-network'resource,
+    <br>* Mcs.Faircoin-net'resource,
     <br>* Mcs.Faircoin-netAeResource,
     <a class="clsHide" href="#idFairnetrscnam"></a></p>
   <p id="idFairnetrscFTgncchn">generic-chain::
@@ -1303,7 +1421,7 @@
   <h1 id="idFairnetSpcFTH1">Faircoin-net.SPECIFIC
     <a class="clsHide" href="#idFairnetSpcFTH1"></a></h1>
   <p id="idFairnetSpcnam">name::
-    <br>* Mcs.Faircoin-network.specific,
+    <br>* Mcs.Faircoin-net.specific,
     <br>* Mcs.Faircoin-netAsSpecific,
     <a class="clsHide" href="#idFairnetSpcnam"></a></p>
   <p id="idFairnetSpcP1">specific::
@@ -1353,7 +1471,7 @@
   <!-- the content of page-path paragraph is displayed as it is on top of toc -->
   <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-path</span>:
     <a class="clsPreview" href="../../#idDescription">synagonism.net</a> /
-    <a class="clsPreview" href="../FilMcsw.Last.html#idDescription">Mcs-worldview</a> /
+    <a class="clsPreview" href="../filMcsWorld.last.html#idDescription">Mcs-worldview</a> /
     <a class="clsPreview" href="FilMcsDirTchInf.Last.html#idDescription">dirTchInf</a> /
     Faircoin-network
     </p>
@@ -1375,7 +1493,7 @@
   <!--                              -->
   <p id="idMetaVersion">webpage-versions::
     <br>• version.last.dynamic: <a href="filMcsDtcbnetFair.last.html">filMcsDtcbnetFair.last.html</a>,
-    <br>• version.0-1-0.2018-10-19.created: filMcsDtcbnetFair.0-1-0.2018-10-19.html,
+    <br>• version.0-1-0.2018-10-19 draft creation
     <a class="clsHide" href="#idMetaVersion"></a></p>
 </section>
 

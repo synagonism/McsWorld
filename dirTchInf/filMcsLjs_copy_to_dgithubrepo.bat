@@ -1,1 +1,0 @@
-copy filMcsLj*.html D:\dAGitHub\McsLjs\
