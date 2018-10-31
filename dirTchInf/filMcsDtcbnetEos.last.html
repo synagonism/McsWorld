@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Eos--blockchain-network (Eos-net.0-18-0.2018-10-30 DRAFT)</title>
+  <title>Mcs.Eos--blockchain-network (Eos-net.0-19-0.2018-10-31 DRAFT)</title>
   <meta name="keywords" content="Eos-network, Eos-net, modelConceptStructured, Mcs, modelWorldSynagonism, Mws, Hitp, Kaseluris.Nikos.1959, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -452,6 +452,10 @@
   <h1 id="idEosacntH1">account of Eos-net
     <a class="clsHide" href="#idEosacntH1"></a></h1>
   <p id="idEosacntdsn">description::
+    <br>"Account
+    <br>On an EOSIO blockchain, the principle identifier for a user is an account name, rather than public key. An account can be controlled through public key/private key pairs. By default, an account name is 12 characters long, and must be made up of the lowercase letters a through z, and the numbers 1 through 5. There is a mechanism to obtain shorter account names, through Namespace Bidding. An account can have many different permissions associated to different actions that can be done on the EOS network. These permissions are controlled through various private keys, or specific authorities can be delegated to other accounts."
+    <br>[https://www.eoscanada.com/en/abc-eos]
+    <br>===
     <br>"The EOS.IO software permits all accounts to be referenced by a unique human readable name of 2 to 32 characters in length. The name is chosen by the creator of the account. All accounts must be funded with the minimal account balance at the time they are created to cover the cost of storing account data. Account names also support namespaces such that the owner of account @domain is the only one who can create the account @user.domain.
     <br>In a decentralized context, application developers will pay the nominal cost of account creation to sign up a new user. Traditional businesses already spend significant sums of money per customer they acquire in the form of advertising, free services, etc. The cost of funding a new blockchain account should be insignificant in comparison. Fortunately, there is no need to create accounts for users already signed up by another application."
     <br>[<a href="https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#accounts">https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#accounts</a>]
@@ -510,6 +514,11 @@
   <p id="idEosacntkeynam">name::
     <br>* Mcs.Eos-net'account'key,
     <a class="clsHide" href="#idEosacntkeynam"></a></p>
+  </section>
+
+  <section id="idEosacnthmn">
+  <h2 id="idEosacnthmnH2">human of Eos-account (<a class="clsPreview" href="#idEoshmnTnhr">link</a>)
+    <a class="clsHide" href="#idEosacnthmnH2"></a></h2>
   </section>
 
   <section id="idEosacntAgg">
@@ -590,7 +599,13 @@
   <section id="idEosevuEOSStkd">
   <h3 id="idEosevuEOSStkdH3">EOS.STAKED
     <a class="clsHide" href="#idEosevuEOSStkdH3"></a></h3>
+  <p id="idEosevuEOSStkddsn">description::
+    <br>"Tokens on the EOS network can have two states, delegated and undelegated. When a token is delegated, it provides an allocation of network resources for an account. You can delegate resources towards your own account, or to another account, using your tokens. (also known as stake)"
+    <br>[https://www.eoscanada.com/en/abc-eos]
+    <a class="clsHide" href="#idEosevuEOSStkddsn"></a></p>
   <p id="idEosevuEOSStkdnam">name::
+    <br>* Mcs.Eos-net'EOS.delegated,
+    <br>* Mcs.Eos-net'EOS.staked,
     <br>* Mcs.Eos-net'staked-token,
     <a class="clsHide" href="#idEosevuEOSStkdnam"></a></p>
   </section>
@@ -603,6 +618,7 @@
     <br>[https://www.eoscanada.com/en/voting-faqs]
     <a class="clsHide" href="#idEosevuEOSStkdNdsn"></a></p>
   <p id="idEosevuEOSStkdNnam">name::
+    <br>* Mcs.Eos-net'EOS.unstaked,
     <br>* Mcs.Eos-net'unstaked-token,
     <a class="clsHide" href="#idEosevuEOSStkdNnam"></a></p>
 
@@ -812,12 +828,92 @@
   </section>
   </section>
 
+  <section id="idEosgovvtg">
+  <h2 id="idEosgovvtgH2">voting of Eos-governance
+    <a class="clsHide" href="#idEosgovvtgH2"></a></h2>
+  <p id="idEosgovvtgdsn">description::
+    <br>"With on-chain governance being at the forefront of EOSIO software, voting is a fundamental part of the system. The most widely used application of voting is to elect which Block Producers will actually produce blocks for the network. Voting will also be used to help collect the communal decisions through which we will change the course of the network - through referendums to alter the Constitution, to elect members to any boards that may form, and to vote things through the Worker Proposal System, amongst others."
+    <br>[https://www.eoscanada.com/en/abc-eos]
+    <a class="clsHide" href="#idEosgovvtgdsn"></a></p>
+  <p id="idEosgovvtgnam">name::
+    <br>* Mcs.Eos-net'goverance'voting,
+    <br>* Mcs.Eos-net'voting,
+    <br>* Mcs.Eos-voting,
+    <a class="clsHide" href="#idEosgovvtgnam"></a></p>
+  <p id="idEosgovvtggncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsDtcnet.last.html#idDtcgovvtg">chain-net'voting</a>,
+    <a class="clsHide" href="#idEosgovvtggncchn"></a></p>
+  </section>
+
+  <section id="idEosgovabrn">
+  <h2 id="idEosgovabrnH2">arbitration of Eos-governance
+    <a class="clsHide" href="#idEosgovabrnH2"></a></h2>
+  <p id="idEosgovabrndsn">description::
+    <br>"Arbitration
+    <br>A means of dispute resolution. Arbitration is performed by an arbitrator, who belongs to an Arbitration Forum. Arbitration is a recognized method of dispute resolution in 159 countries around the world. Within EOS, the default Arbitration Forum is the EOS Core Arbitration Forum (ECAF). Users and developers are free to name and use other Arbitration Forums, however this is the current default forum."
+    <br>[https://www.eoscanada.com/en/abc-eos]
+    <br>===
+    <br>"Arbitration is a way of resolving disputes without going to court. Both parties in the dispute present their side to a professional arbitrator who thoroughly reviews the dispute and comes to a reasonable resolution."
+    <br>[https://eoscorearbitration.io/faq/]
+    <a class="clsHide" href="#idEosgovabrndsn"></a></p>
+  <p id="idEosgovabrnnam">name::
+    <br>* Mcs.Eos-arbitration,
+    <br>* Mcs.Eos-net'arbitration,
+    <a class="clsHide" href="#idEosgovabrnnam"></a></p>
+
+  <section id="idEosgovabrnEcaf">
+  <h3 id="idEosgovabrnEcafH3">ECAF of Eos-governance
+    <a class="clsHide" href="#idEosgovabrnEcafH3"></a></h3>
+  <p id="idEosgovabrnEcafdsn">description::
+    <br>"ECAF - EOS Core Arbitration Forum
+    <br>EOS Core Arbitration Forum; the default arbitration forum for the EOS Mainnet. It is named in <a class="clsPreview" href="#idEoscttntxtaIX">the current Constitution in Article IX</a>. Users and developers are free to name and use other Arbitration Forums, however this is the current default forum."
+    <br>[https://www.eoscanada.com/en/abc-eos]
+    <a class="clsHide" href="#idEosgovabrnEcafdsn"></a></p>
+  <p id="idEosgovabrnEcafnam">name::
+    <br>* Mcs.Eos-ECAF,
+    <br>* Mcs.Eos-net'ECAF,
+    <br>* Mcs.Eos-net'EOS-Core-Arbitration-Forum,
+    <a class="clsHide" href="#idEosgovabrnEcafnam"></a></p>
+  <p id="idEosgovabrnEcafwpa">addressWpg::
+    <br>* <a href="https://eoscorearbitration.io/">https://eoscorearbitration.io/</a>,
+    <a class="clsHide" href="#idEosgovabrnEcafwpa"></a></p>
+  </section>
+  </section>
+
+  <section id="idEosgovrfdm">
+  <h2 id="idEosgovrfdmH2">referendum of Eos-governance
+    <a class="clsHide" href="#idEosgovrfdmH2"></a></h2>
+  <p id="idEosgovrfdmdsn">description::
+    <br>"Referendums are used to poll a community to discover a communal opinion on a topic/question. As a 'governed blockchain', users use their stake to vote on proposals. The current referendum contract - eosio.forum - was written by EOS Canada."
+    <br>[https://www.eoscanada.com/en/abc-eos]
+    <a class="clsHide" href="#idEosgovrfdmdsn"></a></p>
+  <p id="idEosgovrfdmnam">name::
+    <br>* Mcs.Eos-referendum,
+    <br>* Mcs.Eos-net'governance'referendum,
+    <a class="clsHide" href="#idEosgovrfdmnam"></a></p>
+  </section>
+
+  <section id="idEosgovWps">
+  <h2 id="idEosgovWpsH2">worker-proposal-system of Eos-governance
+    <a class="clsHide" href="#idEosgovWpsH2"></a></h2>
+  <p id="idEosgovWpsdsn">description::
+    <br>"WPS - Worker Proposal System
+    <br>A system through which communal funds would be used to support chain-enhancements, community projects, and anything that the community felt was deserving of public funding. It is set up to be funded through a portion of inflation."
+    <br>[https://www.eoscanada.com/en/abc-eos]
+    <a class="clsHide" href="#idEosgovWpsdsn"></a></p>
+  <p id="idEosgovWpsnam">name::
+    <br>* Mcs.Eos-worker-proposal-system,
+    <br>* Mcs.Eos-net'governance'worker-proposal-system,
+    <br>* Mcs.Eos-net'governance'WPS,
+    <a class="clsHide" href="#idEosgovWpsnam"></a></p>
+  </section>
+
   <section id="idEosgovrsc">
   <h2 id="idEosgovrscH2">resouce of Eos-governance
     <a class="clsHide" href="#idEosgovrscH2"></a></h2>
   <p id="idEosgovrscnam">name::
     <br>* Mcs.Eos-governance'resource,
-    <br>* Mcs.Eos-net'governance'resource,
+    <br>* Mcs.Eos-net'resource.governance,
     <a class="clsHide" href="#idEosgovrscnam"></a></p>
   <p id="idEosgovrscwpa">addressWpg::
     <br>* https://github.com/EOS-Mainnet/governance,
@@ -863,6 +959,8 @@
     <br>* Mcs.EOS.IO-software,
     <br>* Mcs.EOSIO-software,
     <br>* Mcs.Eos-client,
+    <br>* Mcs.Eos-net'client,
+    <br>* Mcs.Eos-net'EOSIO-software,
     <a class="clsHide" href="#idEospgmClntnam"></a></p>
 
   <section id="idEospgmClntitlg">
@@ -915,6 +1013,8 @@
     <br>* repository: <a href="https://github.com/eosio/eos">https://github.com/eosio/eos</a>,
     <br>* documentation: <a href="https://eosio.github.io/eos/">https://eosio.github.io/eos/</a>,
     <br>* <a href="https://github.com/eosio/eos/wiki">wiki: https://github.com/eosio/eos/wiki</a>,
+    <br>===
+    <br>* https://www.eoscanada.com/en/abc-eos,
     <br>===
     <br>* {2018-06-02} EOSIO 1.0 Release, <a href="https://block.one/news/eosio-1-0-release/">https://block.one/news/eosio-1-0-release/</a>,
     <br>* <a href="https://forums.eosgo.io/categories/developers">https://forums.eosgo.io/categories/developers</a>,
@@ -1119,12 +1219,33 @@
     <a class="clsHide" href="#idEoshmnTnhrH2"></a></h2>
   <p id="idEoshmnTnhrdsn">description::
     <br>· Eos-token-holder is any human who holds <a class="clsPreview" href="#idEosevuEOS">EOS-tokens</a>.
+    <br>· in other words, s|he controls <a class="clsPreview" href="#idEosacnt">an-account</a>.
+    <br>· an-account could-have MANY owners.
+    <br>· a-human could-owns MANY accounts.
     <a class="clsHide" href="#idEoshmnTnhrdsn"></a></p>
   <p id="idEoshmnTnhrnam">name::
+    <br>* Mcs.Eos-account-owner,
     <br>* Mcs.Eos-human'token-holder,
+    <br>* Mcs.Eos-member,
+    <br>* Mcs.Eos-net'account'owner,
+    <br>* Mcs.Eos-net'human.token-holder,
     <br>* Mcs.Eos-net'token-holder,
     <br>* Mcs.Eos-token-holder,
+    <br>* Mcs.Eos-user,
+    <br>* Mcs.Eos-voter,
     <a class="clsHide" href="#idEoshmnTnhrnam"></a></p>
+
+  <section id="idEoshmnTnhrWhl">
+  <h3 id="idEoshmnTnhrWhlH3">Eos-human.WHALE
+    <a class="clsHide" href="#idEoshmnTnhrWhlH3"></a></h3>
+  <p id="idEoshmnTnhrWhldsn">description::
+    <br>· Eos-whale is any-human that owns account|s with very large EOS-token quantities.
+    <a class="clsHide" href="#idEoshmnTnhrWhldsn"></a></p>
+  <p id="idEoshmnTnhrWhlnam">name::
+    <br>* Mcs.Eos-whale,
+    <br>* Mcs.Eos-net'human.whale,
+    <a class="clsHide" href="#idEoshmnTnhrWhlnam"></a></p>
+  </section>
   </section>
 
   <section id="idEoshmnLmrDnl">
@@ -1166,16 +1287,19 @@
     <a class="clsHide" href="#idEosognFTgncchn"></a></p>
 
   <section id="idEosognBkon">
-  <h2 id="idEosognBkonH2">Eos-ogn.block.one
+  <h2 id="idEosognBkonH2">Eos-ogn.Block.one
     <a class="clsHide" href="#idEosognBkonH2"></a></h2>
   <p id="idEosognBkondsn">description::
     <br>"2. Who is building the EOS.IO Software?
     <br>block.one, a Cayman Islands exempted company, is building the EOS.IO Software. With employees and advisors based around the world, the company focuses on business-grade technology solutions, including blockchain software development."
     <br>[<a href="https://eos.io/faq.html">https://eos.io/faq.html</a>]
+    <br>===
+    <br>"Block.one is the company that created the EOSIO software. The CEO is Brendan Blumer and the CTO is Daniel Larmier. Block.one held the largest and longest ICO in history, lasting 350 days, and raising over $4 Billion USD. They have committed $1 Billion USD towards Venture Capital firms who will help to build technologies that leverage the EOSIO software."
+    <br>[https://www.eoscanada.com/en/abc-eos]
     <a class="clsHide" href="#idEosognBkondsn"></a></p>
   <p id="idEosognBkonnam">name::
-    <br>* Mcs.block.one,
-    <br>* Mcs.Eos-net'block.one,
+    <br>* Mcs.Block.one,
+    <br>* Mcs.Eos-net'Block.one,
     <a class="clsHide" href="#idEosognBkonnam"></a></p>
   </section>
 </section>
@@ -1285,6 +1409,19 @@
   <p id="idEosSpcP1">specific::
     <br>
     <a class="clsHide" href="#idEosSpcP1"></a></p>
+</section>
+
+<section id="idEosMnet">
+  <h1 id="idEosMnetH1">Eos-net.MAINNET
+    <a class="clsHide" href="#idEosMnetH1"></a></h1>
+  <p id="idEosMnetdsn">description::
+    <br>"The main EOSIO blockchain. As the EOSIO software is open source and freely available, there can be many instances of it. The first one to be spun up for public usage was the one with chain ID: aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906."
+    <br>[https://www.eoscanada.com/en/abc-eos]
+    <a class="clsHide" href="#idEosMnetdsn"></a></p>
+  <p id="idEosMnetnam">name::
+    <br>* Mcs.Eos-mainnet,
+    <br>* Mcs.Eos-net.mainnet,
+    <a class="clsHide" href="#idEosMnetnam"></a></p>
 </section>
 
 <section id="idEosTtntPlc">
