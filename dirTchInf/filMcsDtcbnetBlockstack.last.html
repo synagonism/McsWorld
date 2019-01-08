@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Blockstack-network (Blockstack.0-7-0.2018-12-22 draft)</title>
+  <title>Mcs.Blockstack-network (Blockstack.0-19-0.2019-01-06 draft)</title>
   <meta name="keywords" content="Blockstack--blockchain-net, Blockstack, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -22,7 +22,7 @@
   <h1 id="idOverviewH1">overview of Blockstack
     <a class="clsHide" href="#idOverviewH1"></a></h1>
   <p id="idDescription">description::
-    <br>Blockstack-network is A-DECENTRALIZED-NETWORK on top of a-blockchain-network for <a class="clsPreview" href="#idBkskDapp">decentralized-apps</a> that let you own your data and maintain your privacy, security and freedom.
+    <br>Blockstack-network is A-DECENTRALIZED-NETWORK on top of a-blockchain-network for <a class="clsPreview" href="#idBkskDap">decentralized-apps</a> that let you own your data and maintain your privacy, security and freedom.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-12-16]
     <br>===
     <br>"Blockstack is a new internet for decentralized applications that replaces points of centralization from the application layer of the internet; these include DNS root servers, certificate authorities, and  centralized data stores."
@@ -53,6 +53,128 @@
   <p id="idBkskpclnam">name::
     <br>* Mcs.Blockstack'protocol,
     <a class="clsHide" href="#idBkskpclnam"></a></p>
+  <p id="idBkskpclwpa">addressWpg::
+    <br>* whitepapers: https://blockstack.org/papers,
+    <a class="clsHide" href="#idBkskpclwpa"></a></p>
+
+  <section id="idBkskpclarcr">
+  <h2 id="idBkskpclarcrH2">architecture of Blockstack
+    <a class="clsHide" href="#idBkskpclarcrH2"></a></h2>
+  <p id="idBkskpclarcrdsn">description::
+    <br>"Blockstack’s  architecture  has  three  layers  as  shown  in  Figure  1),  with  one  layer  (the blockchain layer) in the control plane and two layers (the peer network and data-storage) in the data plane.
+    <br>The control plane deals with smaller volumes of data and is mostly concerned  with  bootstrapping  trust  [11]  and  defining  the  mapping  between  human-readable names and network resources.
+    <br>The data plane contains information on how to  discover  data  (routes/pointers  to  data)  and  the  actual  storage  backends.
+    <br>Data  is widely replicated and it doesn’t matter from what source clients read data; clients can independently verify from the control plane if they received the correct data or not.
+    <br><img src="filMcsDtcnet.files/Blockstack-architecture.png">"
+    <br>[https://blockstack.org/whitepaper.pdf {2017-10-12}]
+    <a class="clsHide" href="#idBkskpclarcrdsn"></a></p>
+  <p id="idBkskpclarcrnam">name::
+    <br>* Mcs.Blockstack'architecture,
+    <a class="clsHide" href="#idBkskpclarcrnam"></a></p>
+
+  <section id="idBkskclpn">
+  <h3 id="idBkskclpnH3">control-plane of Blockstack
+    <a class="clsHide" href="#idBkskclpnH3"></a></h3>
+  <p id="idBkskclpndsn">description::
+    <br>· the-control-plane contains <a class="clsPreview" href="#idBkskbclr">the-blockchain-layer</a>.
+    <br>"The control plane deals with smaller volumes of data and is mostly concerned  with  bootstrapping  trust  [11]  and  defining  the  mapping  between  human-readable names and network resources"
+    <br>[https://blockstack.org/whitepaper.pdf {2017-10-12}]
+    <a class="clsHide" href="#idBkskclpndsn"></a></p>
+  <p id="idBkskclpnnam">name::
+    <br>* Mcs.Blockstack'control-plane,
+    <br>* Mcs.Blockstack'plane.control,
+    <a class="clsHide" href="#idBkskclpnnam"></a></p>
+  </section>
+
+  <section id="idBkskdtpn">
+  <h3 id="idBkskdtpnH3">data-plane of Blockstack
+    <a class="clsHide" href="#idBkskdtpnH3"></a></h3>
+  <p id="idBkskdtpndsn">description::
+    <br>· the-data-plane contains <a class="clsPreview" href="#idBkskpnlr">the-peer-network-layer</a> and <a class="clsPreview" href="#idBkskdslr">the-data-storage-layer</a>.
+    <br>"  The data plane contains information on how to  discover  data  (routes/pointers  to  data)  and  the  actual  storage  backends.   Data  is widely replicated and it doesn’t matter from what source clients read data; clients can independently verify from the control plane if they received the correct data or not."
+    <br>[https://blockstack.org/whitepaper.pdf {2017-10-12}]
+    <a class="clsHide" href="#idBkskdtpndsn"></a></p>
+  <p id="idBkskdtpnnam">name::
+    <br>* Mcs.Blockstack'data-plane,
+    <br>* Mcs.Blockstack'plane.data,
+    <a class="clsHide" href="#idBkskdtpnnam"></a></p>
+  </section>
+
+  <section id="idBkskbclr">
+  <h3 id="idBkskbclrH3">blockchain-layer of Blockstack
+    <a class="clsHide" href="#idBkskbclrH3"></a></h3>
+  <p id="idBkskbclrdsn">description::
+    <br>· the-blockchain-layer contains the-blockchain and <a class="clsPreview" href="#idBkskvlcn">the-virtualchain</a>.
+    <br>[https://blockstack.org/whitepaper.pdf {2017-10-12}]
+    <a class="clsHide" href="#idBkskbclrdsn"></a></p>
+  <p id="idBkskbclrnam">name::
+    <br>* Mcs.Blockstack'blockchain-layer,
+    <br>* Mcs.Blockstack'layer-1,
+    <br>* Mcs.Blockstack'layer.blockchain,
+    <a class="clsHide" href="#idBkskbclrnam"></a></p>
+  </section>
+
+  <section id="idBkskpnlr">
+  <h3 id="idBkskpnlrH3">peer-network--layer of Blockstack
+    <a class="clsHide" href="#idBkskpnlrH3"></a></h3>
+  <p id="idBkskpnlrdsn">description::
+    <br>"Layer 2: Peer Network
+    <br>Blockstack  uses  a  peer  network  for  discovery.   The  peer  network  is  part  of  the  data plane.  Our architecture separates the task of discovering resources (i.e., routes to data) from  the  actual  storage  of  data.   This  avoids  the  need  for  the  system  to  adopt  any particular storage service from the onset, and instead allows multiple storage providers to coexist, including both cloud storage and P2P systems.
+    <br>The Blockstack implementation uses zone files for storing routing information, which are identical to DNS zone files in their format.  The zone files are stored in the discovery layer, implemented as a peer network by Blockstack. Users do not need to trust the discovery layer because the integrity of any data record in the discovery layer can be verified by checking the respective hash of that data record in the control plane.
+    <br>In Blockstack’s current implementation, nodes form a peer network, called the Atlas network (Section  5), for storing zone files.  The peer network only allows zone files to be written if hash (zonefile) was previously announced in the blockchain.  This effectively whitelists  the  data  that  can  be  stored  in  the  peer  network.   Data  records  representing routes (irrespective of where they are fetched from) can be verified and therefore cannot be tampered with.  In the current implementation of the Atlas network,  peer nodes  maintain  a  full  copy  of  all zone  files since  the  size  of zone  files is  relatively small (4KB per file).  Keeping a full copy of all routing data introduces only a marginal storage cost on top of storing the blockchain data (which is in the order of several GBs)."
+    <br>[https://blockstack.org/whitepaper.pdf {2017-10-12}]
+    <a class="clsHide" href="#idBkskpnlrdsn"></a></p>
+  <p id="idBkskpnlrnam">name::
+    <br>* Mcs.Blockstack'layer-2,
+    <br>* Mcs.Blockstack'layer.peer-network,
+    <br>* Mcs.Blockstack'peer-network--layer,
+    <a class="clsHide" href="#idBkskpnlrnam"></a></p>
+  </section>
+
+  <section id="idBkskdslr">
+  <h3 id="idBkskdslrH3">data-storage-layer of Blockstack
+    <a class="clsHide" href="#idBkskdslrH3"></a></h3>
+  <p id="idBkskdslrdsn">description::
+    <br>"Layer 3: Storage
+    <br>The top-most layer (layer-3) is the storage layer, which hosts the actual data values and is part of the data plane.  All stored data values are signed by an owner key defined in the control plane.  By storing data values outside of the blockchain, Blockstack allows values  of arbitrary size  and allows for  a variety of storage  backends. Users do not need to trust the storage layer and can verify their integrity in the control plane. Our design benefits from the performance and reliability of the backend cloud storage systems used and offers comparable performance to traditional internet services."
+    <br>[https://blockstack.org/whitepaper.pdf {2017-10-12}]
+    <a class="clsHide" href="#idBkskdslrdsn"></a></p>
+  <p id="idBkskdslrnam">name::
+    <br>* Mcs.Blockstack'data-storage--layer,
+    <br>* Mcs.Blockstack'layer-3,
+    <br>* Mcs.Blockstack'layer.data-storage,
+    <a class="clsHide" href="#idBkskdslrnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idBkskpclBscr">
+  <h2 id="idBkskpclBscrH2">Blockstack-Core (<a class="clsPreview" href="#idBkskpgmBscr">link</a>)
+    <a class="clsHide" href="#idBkskpclBscrH2"></a></h2>
+  <p id="idBkskpclBscrdsn">description::
+    <br>· Blockstack-Core is the-reference-implementation of the-Blockstack-protocol.
+    <a class="clsHide" href="#idBkskpclBscrdsn"></a></p>
+  </section>
+</section>
+
+<section id="idBksknode">
+  <h1 id="idBksknodeH1">node of Blockstack
+    <a class="clsHide" href="#idBksknodeH1"></a></h1>
+  <p id="idBksknodedsn">description::
+    <br>"Blockstack Core nodes form the backbone of the Blockstack network. Each node indexes the Bitcoin blockchain and maintains a full replica of all names, public keys, and storage routing information. This makes the Blockstack network particularly resilient to node failure---applications only need to talk to a single Blockstack Core node to work, and a new or recovering node can quickly reconstruct all of its missing state from its peers.
+    <br>Power users are encouraged to run local Blockstack Core nodes on their laptops or home/office networks in order to have reliable access to the Blockstack network. Your local node maintains the same state as the rest of the Blockstack Core nodes, so it will keep serving names, public keys, and storage routes even if upstream nodes are unreachable or go offline."
+    <br>[https://github.com/blockstack/blockstack-core#what-is-blockstack-core]
+    <br>===
+    <br>"With the Blockstack software, a network of computers collectively maintain a global registry of names. When you run a Blockstack node, you join this network, which is more secure by design than traditional DNS and identity systems. This is because the system's registry and its records are secured by an underlying blockchain, which is extremely resilient against tampering and control."
+    <br>[https://github.com/blockstack/blockstack#architecture]
+    <a class="clsHide" href="#idBksknodedsn"></a></p>
+  <p id="idBksknodenam">name::
+    <br>* Mcs.Blockstack'node,
+    <a class="clsHide" href="#idBksknodenam"></a></p>
+
+  <section id="idBksknodeBscr">
+  <h2 id="idBksknodeBscrH2">Blockstack-Core (<a class="clsPreview" href="#idBkskpgmBscr">link</a>)
+    <a class="clsHide" href="#idBksknodeBscrH2"></a></h2>
+  </section>
 </section>
 
 <section id="idBkskBcnet">
@@ -70,6 +192,31 @@
   <p id="idBkskBcnetgncchn">generic-chain::
     <br>* blockchain-network,
     <a class="clsHide" href="#idBkskBcnetgncchn"></a></p>
+
+  <section id="idBkskvlcn">
+  <h2 id="idBkskvlcnH2">virtualchain of Blockstack
+    <a class="clsHide" href="#idBkskvlcnH2"></a></h2>
+  <p id="idBkskvlcndsn">description::
+    <br>"The blockchain layer also includes a virtualchain, which defines new operations without requiring changes to the underlying blockchain. Nodes of the underlying blockchains are  not  aware  of  this  layer.   Virtualchains  are  like  virtual  machines,  where  a  specific VM like Debian 8.7 can run on top of a specific physical machine.  Different types of virtualchains can be defined and they run on top of the specific underlying blockchain. Virtualchain operations are encoded in valid blockchain transactions as additional metadata. Blockchain nodes do see the raw transactions, but the logic to process virtualchain operations only exists at the virtualchain level.
+    <br>The rules for accepting or rejecting virtualchain operations are defined in the specific virtualchain, e.g., a virtualchain which defines a single state machine implementing operations  for  a  global  naming  system.   Operations  accepted  by  rules  defined  in  our virtualchain are processed to construct a database that stores information on the global state of the naming system along with state changes at any given blockchain block."
+    <br>[https://blockstack.org/whitepaper.pdf {2017-10-12}]
+    <a class="clsHide" href="#idBkskvlcndsn"></a></p>
+  <p id="idBkskvlcnnam">name::
+    <br>* Mcs.Blockstack'virtualchain,
+    <a class="clsHide" href="#idBkskvlcnnam"></a></p>
+  </section>
+
+  <section id="idBkskbcmgn">
+  <h2 id="idBkskbcmgnH2">blockchain-migration
+    <a class="clsHide" href="#idBkskbcmgnH2"></a></h2>
+  <p id="idBkskbcmgndsn">description::
+    <br>"We believe that enabling the ability to migrate from one blockchain to another is important as it allows for the larger system to survive, even when the underlying blockchain is compromised."
+    <br>[https://blockstack.org/whitepaper.pdf {2017-10-12}]
+    <a class="clsHide" href="#idBkskbcmgndsn"></a></p>
+  <p id="idBkskbcmgnnam">name::
+    <br>* Mcs.Blockstack'blockchain-migration,
+    <a class="clsHide" href="#idBkskbcmgnnam"></a></p>
+  </section>
 
   <section id="idBkskStxnet">
   <h2 id="idBkskStxnetH2">Stacks-blockchain-network of Blockstack
@@ -141,6 +288,7 @@
     <br>[https://docs.blockstack.org/core/naming/introduction.html#what-is-bns]
     <a class="clsHide" href="#idBkskDnsdsn"></a></p>
   <p id="idBkskDnsnam">name::
+    <br>* Mcs.Blockstack'blockchain-name-system, [whitepaper]
     <br>* Mcs.Blockstack'BNS,
     <br>* Mcs.Blockstack'decentralized-name-system,
     <br>* Mcs.Blockstack'naming-service,
@@ -326,6 +474,19 @@
     <br>* Mcs.Blockstack'name,
     <a class="clsHide" href="#idBksknamenam"></a></p>
 
+  <section id="idBksknameonr">
+  <h3 id="idBksknameonrH3">owner of name
+    <a class="clsHide" href="#idBksknameonrH3"></a></h3>
+  <p id="idBksknameonrdsn">description::
+    <br>"Why should I trust the information, like name ownership or public key mappings, read from Blockstack?
+    <br>Blockstack records are extremely hard to tamper with. This is because the bindings for name ownership (names on Blockstack are owned by public keys) are announced in a proof-of-work blockchain (Bitcoin) and to change these binding an attacker will need to come up with a blockchain with more proof-of-work than the current Bitcoin blockchain but with a different history. Bitcoin’s current hash rate makes this task almost impossible for non-state actors."
+    <br>[https://docs.blockstack.org/core/faq_technical.html#why-should-i-trust-the-information-like-name-ownership-or-public-key-mappings-read-from-blockstack]
+    <a class="clsHide" href="#idBksknameonrdsn"></a></p>
+  <p id="idBksknameonrnam">name::
+    <br>* Mcs.Blockstack'name'owner,
+    <a class="clsHide" href="#idBksknameonrnam"></a></p>
+  </section>
+
   <section id="idBksknameprc">
   <h3 id="idBksknameprcH3">price of name
     <a class="clsHide" href="#idBksknameprcH3"></a></h3>
@@ -337,20 +498,30 @@
     <a class="clsHide" href="#idBksknameprcnam"></a></p>
   </section>
 
+  <section id="idBksknametime">
+  <h3 id="idBksknametimeH3">time of name
+    <a class="clsHide" href="#idBksknametimeH3"></a></h3>
+  <p id="idBksknametimedsn">description::
+    <br>· after 2 years you have to reregister a-name.
+    <a class="clsHide" href="#idBksknametimedsn"></a></p>
+  <p id="idBksknametimenam">name::
+    <br>* Mcs.Blockstack'name'time,
+    <a class="clsHide" href="#idBksknametimenam"></a></p>
+  </section>
+
   <section id="idBksknameSpc">
   <h3 id="idBksknameSpcH3">name.SPECIFIC
     <a class="clsHide" href="#idBksknameSpcH3"></a></h3>
   <p id="idBksknameSpcP1">specific::
     <br>* <a class="clsPreview" href="#idBksknmsc">namespace</a>,
-    <br>* <a class="clsPreview" href="#idBkskBnsocnm">on-chain-name</a>,
-    <br>* <a class="clsPreview" href="#idBkskBnssdn">subdomain</a>,
+    <br>* <a class="clsPreview" href="#idBkskBnsocnm">on-chain--name</a>,
+    <br>* <a class="clsPreview" href="#idBkskBnssdn">off-chain--name-(subdomain)</a>,
     <a class="clsHide" href="#idBksknameSpcP1"></a></p>
-  </section>
   </section>
 
   <section id="idBksknmsc">
-  <h2 id="idBksknmscH2">namespace of BNS
-    <a class="clsHide" href="#idBksknmscH2"></a></h2>
+  <h3 id="idBksknmscH3">name.NAMESPACE
+    <a class="clsHide" href="#idBksknmscH3"></a></h3>
   <p id="idBksknmscdsn">description::
     <br>"Namespaces. These are the top-level names in the hierarchy. An analogy to BNS namespaces are DNS top-level domains. Existing BNS namespaces include .id, .podcast, and .helloworld. All other names belong to exactly one namespace. Anyone can create a namespace, but in order for the namespace to be persisted, it must be launched so that anyone can register names in it. Namespaces are not owned by their creators."
     <br>[https://docs.blockstack.org/core/naming/introduction.html#organization-of-bns]
@@ -366,17 +537,52 @@
   <p id="idBksknmscnam">name::
     <br>* Mcs.Blockstack'BNS'namespace,
     <br>* Mcs.Blockstack'namespace,
+    <br>* Mcs.Blockstack'TLD-(Top-Level-Domain),
     <a class="clsHide" href="#idBksknmscnam"></a></p>
-  <p id="idBksknmscSpc">specific::
+
+  <section id="idBksknmsccrtr">
+  <h4 id="idBksknmsccrtrH4">owner of namespace
+    <a class="clsHide" href="#idBksknmsccrtrH4"></a></h4>
+  <p id="idBksknmsccrtrdsn">description::
+    <br>"Can anyone register a TLD?
+    <br>Yes, anyone can register a TLD. If a TLD has not been registered already and you’re willing to pay the registration fee for it, you can go ahead and register that TLD. There is no centralized party that can stop you from registering a TLD."
+    <br>[https://docs.blockstack.org/core/faq_technical.html#can-anyone-register-a-tld]
+    <a class="clsHide" href="#idBksknmsccrtrdsn"></a></p>
+  <p id="idBksknmsccrtrnam">name::
+    <br>* Mcs.Blockstack'namespace'creator,
+    <br>* Mcs.Blockstack'namespace'owner,
+    <a class="clsHide" href="#idBksknmsccrtrnam"></a></p>
+  </section>
+
+  <section id="idBksknmscSpc">
+  <h4 id="idBksknmscSpcH4">namespace.SPECIFIC
+    <a class="clsHide" href="#idBksknmscSpcH4"></a></h4>
+  <p id="idBksknmscSpcnam">name::
+    <br>* Mcs.Blockstack'namespace.specific,
+    <a class="clsHide" href="#idBksknmscSpcnam"></a></p>
+  <p id="idBksknmscSpcP1">specific::
     <br>* .id,
     <br>* .podcast,
     <br>* .helloworld,
-    <a class="clsHide" href="#idBksknmscSpc"></a></p>
+    <a class="clsHide" href="#idBksknmscSpcP1"></a></p>
+  </section>
+
+  <section id="idBksknmscId">
+  <h4 id="idBksknmscIdH4">namespace.id
+    <a class="clsHide" href="#idBksknmscIdH4"></a></h4>
+  <p id="idBksknmscIddsn">description::
+    <br>"To start the first namespace on Blockstack, the <code>.id</code> namespace, we paid 40 bitcoins ($10,000 at the time) to the network. This shows that even the developers of this decentralized system have to follow the rules and pay appropriate fees."
+    <br>[https://blockstack.org/whitepaper.pdf {2017-10-12}]
+    <a class="clsHide" href="#idBksknmscIddsn"></a></p>
+  <p id="idBksknmscIdnam">name::
+    <br>* Mcs.Blockstack'namespace.id,
+    <a class="clsHide" href="#idBksknmscIdnam"></a></p>
+  </section>
   </section>
 
   <section id="idBkskBnsocnm">
-  <h2 id="idBkskBnsocnmH2">on-chain-name of BNS
-    <a class="clsHide" href="#idBkskBnsocnmH2"></a></h2>
+  <h3 id="idBkskBnsocnmH3">name.ON-CHAIN
+    <a class="clsHide" href="#idBkskBnsocnmH3"></a></h3>
   <p id="idBkskBnsocnmdsn">description::
     <br>"BNS names. These are names whose records are stored directly on the blockchain. The ownership and state of these names are controlled by sending blockchain transactions. Example names include verified.podcast and muneeb.id. Anyone can create a BNS name, as long as the namespace that contains it exists already. The state for BNS names is usually stored in the Atlas network."
     <br>[https://docs.blockstack.org/core/naming/introduction.html#organization-of-bns]
@@ -387,28 +593,29 @@
   </section>
 
   <section id="idBkskBnssdn">
-  <h2 id="idBkskBnssdnH2">subdomain of BNS (off-chain)
-    <a class="clsHide" href="#idBkskBnssdnH2"></a></h2>
+  <h3 id="idBkskBnssdnH3">name.OFF-CHAIN (subdomain)
+    <a class="clsHide" href="#idBkskBnssdnH3"></a></h3>
   <p id="idBkskBnssdndsn">description::
     <br>"A BNS subdomain is a type of BNS name whose state and owner are stored outside of the blockchain, but whose existence and operation history are anchored to the blockchain. In the example table in the Resolving BNS Names section, the names <code>cicero.res_publica.id</code> and <code>podsaveamerica.verified.podcast</code> are subdomains.
     <br>Like their on-chain counterparts, subdomains are globally unique, strongly-owned, and human-readable. BNS gives them their own name state and public keys."
     <br>[https://docs.blockstack.org/core/naming/subdomains.html]
     <a class="clsHide" href="#idBkskBnssdndsn"></a></p>
   <p id="idBkskBnssdnnam">name::
-    <br>* Mcs.Blockchain'BNS'subdomain,
+    <br>* Mcs.Blockstack'BNS'subdomain,
     <a class="clsHide" href="#idBkskBnssdnnam"></a></p>
 
   <section id="idBkskBnssdnprc">
-  <h3 id="idBkskBnssdnprcH3">price of subdomain
-    <a class="clsHide" href="#idBkskBnssdnprcH3"></a></h3>
+  <h4 id="idBkskBnssdnprcH4">price of subdomain
+    <a class="clsHide" href="#idBkskBnssdnprcH4"></a></h4>
   <p id="idBkskBnssdnprcdsn">description::
     <br>"Can I get a Blockstack ID without spending Bitcoin?
     <br>Blockstack subdomains can be obtained without spending Bitcoin by asking a subdomain registrar to create one for you."
     <br>[https://docs.blockstack.org/core/faq_technical.html#can-i-get-a-blockstack-id-without-spending-bitcoin]
     <a class="clsHide" href="#idBkskBnssdnprcdsn"></a></p>
   <p id="idBkskBnssdnprcnam">name::
-    <br>* Mcs.Blockchain'BNS'subdomain'price,
+    <br>* Mcs.Blockstack'BNS'subdomain'price,
     <a class="clsHide" href="#idBkskBnssdnprcnam"></a></p>
+  </section>
   </section>
   </section>
 
@@ -425,7 +632,7 @@
     <br>[https://docs.blockstack.org/core/naming/architecture.html]
     <a class="clsHide" href="#idBkskBnsidxrdsn"></a></p>
   <p id="idBkskBnsidxrnam">name::
-    <br>* Mcs.Blockchain'BNS'indexer,
+    <br>* Mcs.Blockstack'BNS'indexer,
     <a class="clsHide" href="#idBkskBnsidxrnam"></a></p>
   </section>
 
@@ -437,7 +644,7 @@
     <br>[https://docs.blockstack.org/core/naming/architecture.html]
     <a class="clsHide" href="#idBkskBnsapidsn"></a></p>
   <p id="idBkskBnsapinam">name::
-    <br>* Mcs.Blockchain'BNS'Api,
+    <br>* Mcs.Blockstack'BNS'Api,
     <a class="clsHide" href="#idBkskBnsapinam"></a></p>
   </section>
 
@@ -449,7 +656,7 @@
     <br>[https://docs.blockstack.org/core/naming/architecture.html]
     <a class="clsHide" href="#idBkskBnscltdsn"></a></p>
   <p id="idBkskBnscltnam">name::
-    <br>* Mcs.Blockchain'BNS'client,
+    <br>* Mcs.Blockstack'BNS'client,
     <a class="clsHide" href="#idBkskBnscltnam"></a></p>
   </section>
 
@@ -505,6 +712,9 @@
   <h2 id="idBkskGaiaH2">Gaia-storage-system
     <a class="clsHide" href="#idBkskGaiaH2"></a></h2>
   <p id="idBkskGaiadsn">description::
+    <br>"It handles storage using Gaia, a scalable decentralized key/value storage system that looks and feels like localStorage, but lets users securely store and share application data via existing storage systems like Dropbox or S3."
+    <br>[https://github.com/blockstack/blockstack-core#what-is-blockstack]
+    <br>===
     <br>"Gaia works by hosting data in one or more existing storage systems of the user's choice. These storage systems are typically cloud storage systems. We currently have driver support for S3 and Azure Blob Storage, but the driver model allows for other backend support as well. The point is, the user gets to choose where their data lives, and Gaia enables applications to access it via a uniform API.
     <br>Blockstack applications use the Gaia storage system to store data on behalf of a user. When the user logs in to an application, the authentication process gives the application the URL of a Gaia hub, which performs writes on behalf of that user. The Gaia hub authenticates writes to a location by requiring a valid authentication token, generated by a private key authorized to write at that location."
     <br>[https://github.com/blockstack/gaia#overview]
@@ -553,13 +763,14 @@
     <a class="clsHide" href="#idBkskAtlsH1"></a></h1>
   <p id="idBkskAtlsdsn">description::
     <br>Atlas is the storage routing system for <a class="clsPreview" href="#idBkskGaia">Gaia</a>.
-    <br>[http://localhost/dWstSgm/dirMiwMcs/dirTchInf/filMcsDtcbnetBlockstack.last.html#idBkskpgmbsjs]
+    <br>[http://localhost/dWstSgm/dirMiwMcs/dirTchInf/filMcsDtcbnetBlockstack.last.html#idBkskjs]
     <br>===
     <br>"the Atlas network, a peer-to-peer content-addressed storage system whose chunks’ hashes are announced on a public blockchain. Atlas allows users and developers to permanently store chunks of data that are replicated across every peer. As long as at least one Atlas peer is online, all chunks are available to clients."
     <br>[https://docs.blockstack.org/core/atlas/overview.html]
     <a class="clsHide" href="#idBkskAtlsdsn"></a></p>
   <p id="idBkskAtlsnam">name::
-    <br>* Mcs.Blockstack'Atlas-netwrok,
+    <br>* Mcs.Blockstack'Atlas-network,
+    <br>* Mcs.Blockstack'peer-network,
     <br>* Mcs.Atlas-network-of-Blockstack,
     <a class="clsHide" href="#idBkskAtlsnam"></a></p>
 </section>
@@ -593,18 +804,31 @@
     <br>[https://github.com/blockstack/blockstack-core#blockstack-core]
     <br>===
     <br>"Blockstack Core implements BNS and Atlas, the storage routing system for Gaia."
-    <br>[http://localhost/dWstSgm/dirMiwMcs/dirTchInf/filMcsDtcbnetBlockstack.last.html#idBkskpgmbsjs]
+    <br>[http://localhost/dWstSgm/dirMiwMcs/dirTchInf/filMcsDtcbnetBlockstack.last.html#idBkskjs]
+    <br>===
+    <br>"What is Blockstack Core and who is working on it?
+    <br>Blockstack Core is the reference implementation of the Blockstack protocol described in our white paper. It consists of a couple of parts:
+    <br>* Virtualchain implementation: This is a python library that parses the underlying blockchain (Bitcoin) and builds the state of the Blockstack DNS.
+    <br>* Blockstack Core: Uses the Virtualchain to build the DNS state and comes to a consensus on that state in a peer network (Atlas).
+    <br>* Blockstack API: Indexes the data stored by Blockstack Core and makes it available in a performant way to applications.
+    <br>The project is open-source and anyone can contribute! The major contributors are mostly employees of Blockstack PBC. You can see the full list of contributors here: https://github.com/blockstack/blockstack-core/graphs/contributors"
+    <br>[https://docs.blockstack.org/core/faq_technical.html#what-is-blockstack-core-and-who-is-working-on-it]
     <a class="clsHide" href="#idBkskpgmBscrdsn"></a></p>
   <p id="idBkskpgmBscrnam">name::
     <br>* Mcs.Blockstack'Blockstack-Core,
     <br>* Mcs.Blockstack-Core,
     <a class="clsHide" href="#idBkskpgmBscrnam"></a></p>
+
+  <section id="idBkskpgmBscrdvpr">
+  <h3 id="idBkskpgmBscrdvprH3">core-developer (<a class="clsPreview" href="#idBkskhmnDvprCore">link</a>)
+    <a class="clsHide" href="#idBkskpgmBscrdvprH3"></a></h3>
+  </section>
   </section>
 
-  <section id="idBkskpgmbsjs">
-  <h2 id="idBkskpgmbsjsH2">program.blockstack.js
-    <a class="clsHide" href="#idBkskpgmbsjsH2"></a></h2>
-  <p id="idBkskpgmbsjsdsn">description::
+  <section id="idBkskjs">
+  <h2 id="idBkskjsH2">program.blockstack.js
+    <a class="clsHide" href="#idBkskjsH2"></a></h2>
+  <p id="idBkskjsdsn">description::
     <br>"Blockstack JS is a library for profiles/identity, authentication, and storage.
     <br>The authentication portion of this library can be used to:
     <br>1. create an authentication request
@@ -617,30 +841,133 @@
     <br>1. store and retrieve your app's data in storage that is controlled by the user
     <br>Note: this document uses ES6 in its examples but it is compiled down to Javascript (ES5) and is perfectly compatible with it. If you're using the latter, just make a few adjustments to the examples below (e.g. use "let" instead of "var")."
     <br>[https://github.com/blockstack/blockstack.js]
-    <a class="clsHide" href="#idBkskpgmbsjsdsn"></a></p>
-  <p id="idBkskpgmbsjsnam">name::
+    <a class="clsHide" href="#idBkskjsdsn"></a></p>
+  <p id="idBkskjsnam">name::
     <br>* Mcs.Blockstack'blockstack.js,
-    <a class="clsHide" href="#idBkskpgmbsjsnam"></a></p>
-  <p id="idBkskpgmbsjswpa">addressWpg::
-    <br>* http://blockstack.github.io/blockstack.js/,
-    <a class="clsHide" href="#idBkskpgmbsjswpa"></a></p>
-  </section>
-</section>
+    <br>* Mcs.blockstack.js,
+    <a class="clsHide" href="#idBkskjsnam"></a></p>
+  <p id="idBkskjswpa">addressWpg::
+    <br>* https://github.com/blockstack/blockstack.js,
+    <br>* doc: http://blockstack.github.io/blockstack.js/,
+    <a class="clsHide" href="#idBkskjswpa"></a></p>
 
-<section id="idBkskbrsr">
-  <h1 id="idBkskbrsrH1">Blockstack-browser of Blockstack
-    <a class="clsHide" href="#idBkskbrsrH1"></a></h1>
+  <section id="idBkskjsmbr">
+  <h3 id="idBkskjsmbrH3">member of blockstack.js
+    <a class="clsHide" href="#idBkskjsmbrH3"></a></h3>
+  <p id="idBkskjsmbrP1">member::
+    <br>{2019-01-03}
+  	<br>Object.getOwnPropertyNames(blockstack).sort().join(', ')
+  	<br>"BLOCKSTACK_GAIA_HUB_LABEL, BlockstackWallet, CreativeWork, IdentityKeyPair, Organization, Person, Profile, PubkeyHashSigner, TransactionSigner, __esModule, addUTXOsToFund, config, connectToGaiaHub, containsValidAddressProofStatement, containsValidProofStatement, decodeToken, decryptContent, decryptMnemonic, deleteFile, doPublicKeysMatchIssuer, doPublicKeysMatchUsername, doSignaturesMatchPublicKeys, ecPairToAddress, ecPairToHexString, encryptContent, encryptMnemonic, estimateTXBytes, extractProfile, fetchAppManifest, generateAndStoreTransitKey, getAddressFromDID, getAppBucketUrl, getAuthRequestFromURL, getAuthResponseToken, getCoreSession, getDIDType, getEntropy, getFile, getPublicKeyFromPrivate, getTokenFileUrl, getTransitKey, getUserAppFileUrl, handlePendingSignIn, hexStringToECPair, isExpirationDateValid, isIssuanceDateValid, isLaterVersion, isManifestUriValid, isRedirectUriValid, isSameOriginAbsoluteUrl, isSignInPending, isUserSignedIn, listFiles, loadUserData, lookupProfile, makeAuthRequest, makeAuthResponse, makeCoreSessionRequest, makeDIDFromAddress, makeDIDFromPublicKey, makeECPrivateKey, makeProfileZoneFile, makeUUID4, network, nextHour, nextMonth, nextYear, profileServices, publicKeyToAddress, putFile, redirectToSignIn, redirectToSignInWithAuthRequest, redirectUserToApp, resolveZoneFileToPerson, resolveZoneFileToProfile, safety, sendCoreSessionRequest, signProfileToken, signUserOut, transactions, updateQueryStringParameter, uploadToGaiaHub, validateProofs, verifyAuthRequest, verifyAuthRequestAndLoadManifest, verifyAuthResponse, verifyProfileToken, wrapProfileToken"
+    <a class="clsHide" href="#idBkskjsmbrP1"></a></p>
+  <p id="idBkskjsmbrnam">name::
+    <br>* Mcs.Blockstack'blockstack.js'member,
+    <br>* Mcs.blockstack.js'member,
+    <a class="clsHide" href="#idBkskjsmbrnam"></a></p>
+  </section>
+
+  <section id="idBkskjsdltfile">
+  <h3 id="idBkskjsdltfileH3">deleteFile() of blockstack.js
+    <a class="clsHide" href="#idBkskjsdltfileH3"></a></h3>
+  <p id="idBkskjsdltfiledsn">description::
+    <br>"deleteFile is currently not implemented. For now, we recommend writing an empty file to wipe data"
+    <br>[http://blockstack.github.io/blockstack.js/#storage]
+    <a class="clsHide" href="#idBkskjsdltfiledsn"></a></p>
+  <p id="idBkskjsdltfilenam">name::
+    <br>* Mcs.Blockstack'blockstack.js'deleteFile(),
+    <br>* Mcs.blockstack.js'deleteFile(),
+    <a class="clsHide" href="#idBkskjsdltfilenam"></a></p>
+  <p id="idBkskjsdltfileexpl">example::
+    <br><code>blockstack.deleteFile("/hello.txt")
+    <br>.then(() => {
+    <br> &nbsp;// /hello.txt is now removed.
+    <br>})</code>
+    <a class="clsHide" href="#idBkskjsdltfileexpl"></a></p>
+  </section>
+
+  <section id="idBkskjsgtfile">
+  <h3 id="idBkskjsgtfileH3">getFile() of blockstack.js
+    <a class="clsHide" href="#idBkskjsgtfileH3"></a></h3>
+  <p id="idBkskjsgtfiledsn">description::
+    <br>"Retrieves the specified file from the app's data store.
+    <br><code>getFile(path: String, options: Object): Promise</code>"
+    <br>[http://blockstack.github.io/blockstack.js/#getfile]
+    <a class="clsHide" href="#idBkskjsgtfiledsn"></a></p>
+  <p id="idBkskjsgtfilenam">name::
+    <br>* Mcs.Blockstack'blockstack.js'getFile(),
+    <br>* Mcs.blockstack.js'getFile(),
+    <a class="clsHide" href="#idBkskjsgtfilenam"></a></p>
+  <p id="idBkskjsgtfileexpl1">example::
+    <br><code>//reading a-file
+    <br>blockstack.getFile("/hello.txt")
+    <br>.then((fileContents) => {
+    <br> &nbsp;// get the contents of the file /hello.txt
+    <br> &nbsp;assert(fileContents === "hello world!")
+    <br>});</code>
+    <br>[http://blockstack.github.io/blockstack.js/#storage]
+    <a class="clsHide" href="#idBkskjsgtfileexpl1"></a></p>
+  <p id="idBkskjsgtfileexpl2">example::
+    <br><code>//reading an-encrypted-file
+    <br>blockstack.getFile("/hello2.txt", {decrypt: true})
+    <br>.then((fileContents) => {
+    <br> &nbsp;// get the contents of the file /hello2.txt
+    <br> &nbsp;assert(fileContents === "Secret hello!")
+    <br>});</code>
+    <br>[http://blockstack.github.io/blockstack.js/#storage]
+    <a class="clsHide" href="#idBkskjsgtfileexpl2"></a></p>
+  </section>
+
+  <section id="idBkskjsisip">
+  <h3 id="idBkskjsisipH3">isSignInPending() of blockstack.js
+    <a class="clsHide" href="#idBkskjsisipH3"></a></h3>
+  <p id="idBkskjsisipdsn">description::
+    <br>"Check if there is a authentication request that hasn't been handled.
+    <br><code>isSignInPending(): Boolean</code>"
+    <br>[http://blockstack.github.io/blockstack.js/#issigninpending]
+    <a class="clsHide" href="#idBkskjsisipdsn"></a></p>
+  <p id="idBkskjsisipipt">input::
+    <br>· none
+    <a class="clsHide" href="#idBkskjsisipipt"></a></p>
+  <p id="idBkskjsisipopt">output::
+    <br>"Boolean: true if there is a pending sign in, otherwise false"
+    <br>[http://blockstack.github.io/blockstack.js/#issigninpending]
+    <a class="clsHide" href="#idBkskjsisipopt"></a></p>
+  <p id="idBkskjsisipnam">name::
+    <br>* Mcs.Blockstack'blockstack.js'isSignInPending(),
+    <br>* Mcs.blockstack.js'isSignInPending(),
+    <a class="clsHide" href="#idBkskjsisipnam"></a></p>
+  </section>
+
+  <section id="idBkskjsrdttsn">
+  <h3 id="idBkskjsrdttsnH3">redirectToSignIn() of blockstack.js
+    <a class="clsHide" href="#idBkskjsrdttsnH3"></a></h3>
+  <p id="idBkskjsrdttsndsn">description::
+    <br>"Generates an authentication request and redirects the user to the Blockstack browser to approve the sign in request.
+    <br>Please note that this requires that the web browser properly handles the blockstack: URL protocol handler.
+    <br>Most applications should use this method for sign in unless they require more fine grained control over how the authentication request is generated. If your app falls into this category, use makeAuthRequest and redirectToSignInWithAuthRequest to build your own sign in process.
+    <br><code>redirectToSignIn(redirectURI: String, manifestURI: String, scopes: Array): void</code>"
+    <a class="clsHide" href="#idBkskjsrdttsndsn"></a></p>
+  <p id="idBkskjsrdttsnnam">name::
+    <br>* Mcs.Blockstack'blockstack.js'redirectToSignIn(),
+    <br>* Mcs.blockstack.js'redirectToSignIn(),
+    <a class="clsHide" href="#idBkskjsrdttsnnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idBkskbrsr">
+  <h2 id="idBkskbrsrH2">program.Blockstack-browser
+    <a class="clsHide" href="#idBkskbrsrH2"></a></h2>
   <p id="idBkskbrsrdsn">description::
     <br>"The Blockstack Browser gives users the ability to explore and use the decentralized applications (DApps). DApps are a new way to interact with the internet. DApps give users control of their data. Data about them personally, name, birthdate, phone number and data about what they do such as visiting a website or buying an item."
     <br>[https://docs.blockstack.org/browser/browser-introduction.html]
     <a class="clsHide" href="#idBkskbrsrdsn"></a></p>
   <p id="idBkskbrsrnam">name::
+    <br>* Mcs.Blockstack'Blockstack-browser,
     <br>* Mcs.Blockstack'browser,
     <a class="clsHide" href="#idBkskbrsrnam"></a></p>
 
   <section id="idBkskbrsrdng">
-  <h2 id="idBkskbrsrdngH2">doing Blockstack-browser of Blockstack
-    <a class="clsHide" href="#idBkskbrsrdngH2"></a></h2>
+  <h3 id="idBkskbrsrdngH3">DOING of Blockstack-browser
+    <a class="clsHide" href="#idBkskbrsrdngH3"></a></h3>
   <p id="idBkskbrsrdngdsn">description::
     <br>"The Blockstack Browser is itself, a simple DApp. It allows you to:
     <br>* create one or more identities
@@ -656,8 +983,8 @@
   </section>
 
   <section id="idBkskbrsrSpc">
-  <h2 id="idBkskbrsrSpcH2">Blockstack-browser.SPECIFIC
-    <a class="clsHide" href="#idBkskbrsrSpcH2"></a></h2>
+  <h3 id="idBkskbrsrSpcH3">Blockstack-browser.SPECIFIC
+    <a class="clsHide" href="#idBkskbrsrSpcH3"></a></h3>
   <p id="idBkskbrsrSpcP1">specific::
     <br>* Web,
     <br>* Win,
@@ -667,8 +994,8 @@
   </section>
 
   <section id="idBkskbrsrWeb">
-  <h2 id="idBkskbrsrWebH2">Blockstack-browser.WEB
-    <a class="clsHide" href="#idBkskbrsrWebH2"></a></h2>
+  <h3 id="idBkskbrsrWebH3">Blockstack-browser.WEB
+    <a class="clsHide" href="#idBkskbrsrWebH3"></a></h3>
   <p id="idBkskbrsrWebwpa">addressWpg::
     <br>* <a href="https://browser.blockstack.org/">https://browser.blockstack.org/</a>,
     <a class="clsHide" href="#idBkskbrsrWebwpa"></a></p>
@@ -678,8 +1005,8 @@
     <a class="clsHide" href="#idBkskbrsrWebnam"></a></p>
 
   <section id="idBkskbrsrWebpbk">
-  <h3 id="idBkskbrsrWebpbkH3">using-on-public-computers of web-browser
-    <a class="clsHide" href="#idBkskbrsrWebpbkH3"></a></h3>
+  <h4 id="idBkskbrsrWebpbkH4">using-on-public-computers of web-browser
+    <a class="clsHide" href="#idBkskbrsrWebpbkH4"></a></h4>
   <p id="idBkskbrsrWebpbkdsn">description::
     <br>"Using the Browser on public computers
     <br>Before you use the web application, it is important to note that once you log into the application with the brower, your session does not expire until you choose <strong>Settings > RESET BROWSER</strong>. For this reason, you should be careful when using the browser on public computers.
@@ -687,11 +1014,11 @@
     <a class="clsHide" href="#idBkskbrsrWebpbkdsn"></a></p>
   </section>
   </section>
-</section>
+  </section>
 
-<section id="idBkskexlr">
-  <h1 id="idBkskexlrH1">explorer of Blockstack
-    <a class="clsHide" href="#idBkskexlrH1"></a></h1>
+  <section id="idBkskexlr">
+  <h2 id="idBkskexlrH2">program.Blockstack-explorer
+    <a class="clsHide" href="#idBkskexlrH2"></a></h2>
   <p id="idBkskexlrwpa">addressWpg::
     <br>* https://explorer.blockstack.org/,
     <a class="clsHide" href="#idBkskexlrwpa"></a></p>
@@ -703,12 +1030,13 @@
     <br>* Mcs.Blockstack'explorer,
     <br>* Mcs.Blockstack'Stacks-explorer,
     <a class="clsHide" href="#idBkskexlrnam"></a></p>
+  </section>
 </section>
 
-<section id="idBkskDapp">
-  <h1 id="idBkskDappH1">Dapp of Blockstack
-    <a class="clsHide" href="#idBkskDappH1"></a></h1>
-  <p id="idBkskDappdsn">description::
+<section id="idBkskDap">
+  <h1 id="idBkskDapH1">Dapp of Blockstack
+    <a class="clsHide" href="#idBkskDapH1"></a></h1>
+  <p id="idBkskDapdsn">description::
     <br>An application is considered a Blockstack DApp if it adheres to three principles.
     <br>I. Users own their data
     <br>II. Users own their identities
@@ -717,33 +1045,71 @@
     <br>===
     <br>"Blockstack is a new internet for decentralized apps that you access through the Blockstack Browser. With Blockstack, there is a new world of apps that let you own your data and maintain your privacy, security and freedom."
     <br>[https://blockstack.org/about/]
-    <a class="clsHide" href="#idBkskDappdsn"></a></p>
-  <p id="idBkskDappnam">name::
+    <a class="clsHide" href="#idBkskDapdsn"></a></p>
+  <p id="idBkskDapnam">name::
     <br>* Mcs.Blockstack'Dapp,
-    <a class="clsHide" href="#idBkskDappnam"></a></p>
+    <a class="clsHide" href="#idBkskDapnam"></a></p>
 
-  <section id="idBkskDappappco">
-  <h2 id="idBkskDappappcoH2">https://app.co
-    <a class="clsHide" href="#idBkskDappappcoH2"></a></h2>
-  <p id="idBkskDappappcowpa">addressWpg::
+  <section id="idBkskDapappco">
+  <h2 id="idBkskDapappcoH2">https://app.co
+    <a class="clsHide" href="#idBkskDapappcoH2"></a></h2>
+  <p id="idBkskDapappcowpa">addressWpg::
     <br>* <a href="https://app.co">https://app.co</a>,
-    <a class="clsHide" href="#idBkskDappappcowpa"></a></p>
-  <p id="idBkskDappappcodsn">description::
+    <a class="clsHide" href="#idBkskDapappcowpa"></a></p>
+  <p id="idBkskDapappcodsn">description::
     <br>"About app.co
     <br>App.co surfaces the best new dapps every day. It’s a place for blockchain-loving nerds, enthusiasts, and investors to geek out over the latest decentralized tech—from currency exchanges to mutant-feline-marketplaces.
     <br>App.co is sponsored by Blockstack, a decentralized app protocol and community. All protocols are welcome on App.co as we’re committed to celebrating an open, decentralized internet for all."
     <br>[https://app.co/faq]
-    <a class="clsHide" href="#idBkskDappappcodsn"></a></p>
-  <p id="idBkskDappappconam">name::
+    <a class="clsHide" href="#idBkskDapappcodsn"></a></p>
+  <p id="idBkskDapappconam">name::
     <br>* Mcs.app.co,
     <br>* Mcs.Blockstack'app.co,
-    <a class="clsHide" href="#idBkskDappappconam"></a></p>
+    <a class="clsHide" href="#idBkskDapappconam"></a></p>
   </section>
 
-  <section id="idBkskDapprtwa">
-  <h2 id="idBkskDapprtwaH2">Dapp-relation-to-traditional-web-apps
-    <a class="clsHide" href="#idBkskDapprtwaH2"></a></h2>
-  <p id="idBkskDapprtwadsn">description::
+  <section id="idBkskDapsbp">
+  <h2 id="idBkskDapsbpH2">Signature-Bounty-program of Dapp
+    <a class="clsHide" href="#idBkskDapsbpH2"></a></h2>
+  <p id="idBkskDapsbpdsn">description::
+    <br>"In 2017 Blockstack announced the Blockstack Signature Fund. The Signature Fund is aimed at growing an ecosystem of decentralized applications on Blockstack. The fund releases funds through a Signature Bounty program. This is a global bounty program using a contest model. Teams from all over the world submit products and a set of judges determine who wins the prize for the best product."
+    <br>[https://docs.blockstack.org/develop/zero_to_dapp_1.html#seeding-dapp-market-with-application-mining]
+    <a class="clsHide" href="#idBkskDapsbpdsn"></a></p>
+  <p id="idBkskDapsbpnam">name::
+    <br>* Mcs.Blockstack'Dapp'Signature-Bounty-program,
+    <br>* Mcs.Blockstack'Signature-Bounty-program,
+    <a class="clsHide" href="#idBkskDapsbpnam"></a></p>
+  </section>
+
+  <section id="idBkskDapamp">
+  <h2 id="idBkskDapampH2">mining-program of Dapp
+    <a class="clsHide" href="#idBkskDapampH2"></a></h2>
+  <p id="idBkskDapampdsn">description::
+    <br>"In addition to the bounty program, Blockstack supports an application mining program. This is an early stage program for developers. In this program, application developers register their application on App.co. Then, each month, application developers get paid depending on their application quality ranking. The ranking is determined by a set of application reviewers.
+    <br>Application mining differs from the venture model or the app studio model because the rewards are in cryptocurrency. Blockstack PBC administrates both the review and delivery of these monthly payments."
+    <br>[https://docs.blockstack.org/develop/zero_to_dapp_1.html#seeding-dapp-market-with-application-mining]
+    <a class="clsHide" href="#idBkskDapampdsn"></a></p>
+  <p id="idBkskDapampnam">name::
+    <br>* Mcs.Blockstack'Dapp'mining-program,
+    <br>* Mcs.Blockstack'application-mining-program,
+    <a class="clsHide" href="#idBkskDapampnam"></a></p>
+  </section>
+
+  <section id="idBkskDaprsc">
+  <h2 id="idBkskDaprscH2">resource of Dapp
+    <a class="clsHide" href="#idBkskDaprscH2"></a></h2>
+  <p id="idBkskDaprscnam">name::
+    <br>* Mcs.Blockstack'Dapp'resource,
+    <a class="clsHide" href="#idBkskDaprscnam"></a></p>
+  <p id="idBkskDaprscwpa">addressWpg::
+    <br>* tutorial: https://docs.blockstack.org/browser/hello-blockstack.html,
+    <a class="clsHide" href="#idBkskDaprscwpa"></a></p>
+  </section>
+
+  <section id="idBkskDaprtwa">
+  <h2 id="idBkskDaprtwaH2">relation-to-traditional-web-apps
+    <a class="clsHide" href="#idBkskDaprtwaH2"></a></h2>
+  <p id="idBkskDaprtwadsn">description::
     <br>"Blockstack applications differ from traditional Web applications in two key ways. First, users own their identities. The Blockstack Browser gives users direct control over their private keys and profile data, and fulfills the role of a SSO provider to Blockstack apps. Blockstack Core provides BNS as a way for users to discover each other's public keys.
     <br>The second key difference is that users own their data. Users choose where their app data gets hosted, and who is allowed to read it. Gaia loads and stores data with the user's chosen storage providers, and automatically signs and encrypts it with their app-specific keys. Only the intended recipients can authenticate and read the data; the storage providers are treated as untrusted middlemen."
     <br>[https://github.com/blockstack/blockstack-core#what-is-blockstack]
@@ -752,84 +1118,199 @@
     <br><strong>Users have identities not accounts</strong>. The user brings their identity to the applications; applications do not require the user to create accounts and passwords.
     <br><strong>Users own their data</strong>. Users control access to their data. Users decide where to store their data and which applications can read or write to your. Companies and their decentralized applications don’t keep or save your data."
     <br>[https://docs.blockstack.org/browser/faq_general.html#how-do-dapps-differ-applications-i-typically-use]
-    <a class="clsHide" href="#idBkskDapprtwadsn"></a></p>
-  <p id="idBkskDapprtwanam">name::
+    <a class="clsHide" href="#idBkskDaprtwadsn"></a></p>
+  <p id="idBkskDaprtwanam">name::
     <br>* Mcs.Blockstack'Dapp'relation-to-traditional-web-apps,
-    <a class="clsHide" href="#idBkskDapprtwanam"></a></p>
+    <a class="clsHide" href="#idBkskDaprtwanam"></a></p>
   </section>
 
-  <section id="idBkskDappsbp">
-  <h2 id="idBkskDappsbpH2">Signature-Bounty-program of Dapp
-    <a class="clsHide" href="#idBkskDappsbpH2"></a></h2>
-  <p id="idBkskDappsbpdsn">description::
-    <br>"In 2017 Blockstack announced the Blockstack Signature Fund. The Signature Fund is aimed at growing an ecosystem of decentralized applications on Blockstack. The fund releases funds through a Signature Bounty program. This is a global bounty program using a contest model. Teams from all over the world submit products and a set of judges determine who wins the prize for the best product."
-    <br>[https://docs.blockstack.org/develop/zero_to_dapp_1.html#seeding-dapp-market-with-application-mining]
-    <a class="clsHide" href="#idBkskDappsbpdsn"></a></p>
-  <p id="idBkskDappsbpnam">name::
-    <br>* Mcs.Blockstack'Dapp'Signature-Bounty-program,
-    <br>* Mcs.Blockstack'Signature-Bounty-program,
-    <a class="clsHide" href="#idBkskDappsbpnam"></a></p>
-  </section>
+  <section id="idBkskDapdng">
+  <h2 id="idBkskDapdngH2">DOING of Dapp
+    <a class="clsHide" href="#idBkskDapdngH2"></a></h2>
+  <p id="idBkskDapdngnam">name::
+    <br>* Mcs.Blockstack'Dapp'doing,
+    <a class="clsHide" href="#idBkskDapdngnam"></a></p>
 
-  <section id="idBkskDappamp">
-  <h2 id="idBkskDappampH2">mining-program of Dapp
-    <a class="clsHide" href="#idBkskDappampH2"></a></h2>
-  <p id="idBkskDappampdsn">description::
-    <br>"In addition to the bounty program, Blockstack supports an application mining program. This is an early stage program for developers. In this program, application developers register their application on App.co. Then, each month, application developers get paid depending on their application quality ranking. The ranking is determined by a set of application reviewers.
-    <br>Application mining differs from the venture model or the app studio model because the rewards are in cryptocurrency. Blockstack PBC administrates both the review and delivery of these monthly payments."
-    <br>[https://docs.blockstack.org/develop/zero_to_dapp_1.html#seeding-dapp-market-with-application-mining]
-    <a class="clsHide" href="#idBkskDappampdsn"></a></p>
-  <p id="idBkskDappampnam">name::
-    <br>* Mcs.Blockstack'Dapp'mining-program,
-    <br>* Mcs.Blockstack'application-mining-program,
-    <a class="clsHide" href="#idBkskDappampnam"></a></p>
-  </section>
-
-  <section id="idBkskDapprsc">
-  <h2 id="idBkskDapprscH2">resource of Dapp
-    <a class="clsHide" href="#idBkskDapprscH2"></a></h2>
-  <p id="idBkskDapprscnam">name::
-    <br>* Mcs.Blockstack'Dapp'resource,
-    <a class="clsHide" href="#idBkskDapprscnam"></a></p>
-  <p id="idBkskDapprscwpa">addressWpg::
-    <br>* tutorial: https://docs.blockstack.org/browser/hello-blockstack.html,
-    <a class="clsHide" href="#idBkskDapprscwpa"></a></p>
-  </section>
-
-  <section id="idBkskDapprng">
-  <h2 id="idBkskDapprngH2">running Dapp
-    <a class="clsHide" href="#idBkskDapprngH2"></a></h2>
-  <p id="idBkskDapprngdsn">description::
+  <section id="idBkskDaprng">
+  <h3 id="idBkskDaprngH3">running Dapp
+    <a class="clsHide" href="#idBkskDaprngH3"></a></h3>
+  <p id="idBkskDaprngdsn">description::
+    <br>1) open web-blockstack-browser
+    <br>2) click on an-Dapp
+    <br>3) sign in with blockstack
+    <br>===
     <br>"Do DApps work with a regular browser?
     <br>Yes! DApps run in the web browsers (Chrome, Safari, Internet Explorer, etc.) you know and love."
     <br>[https://docs.blockstack.org/browser/faq_general.html#do-dapps-uwork-with-a-regular-browser]
-    <a class="clsHide" href="#idBkskDapprngdsn"></a></p>
-  <p id="idBkskDapprngnam">name::
+    <a class="clsHide" href="#idBkskDaprngdsn"></a></p>
+  <p id="idBkskDaprngnam">name::
     <br>* Mcs.Blockstack'Dapp'running,
-    <a class="clsHide" href="#idBkskDapprngnam"></a></p>
+    <a class="clsHide" href="#idBkskDaprngnam"></a></p>
+
+  <section id="idBkskDaprngpbm">
+  <h4 id="idBkskDaprngpbmH4">problem running Dapp
+    <a class="clsHide" href="#idBkskDaprngpbmH4"></a></h4>
+  <p id="idBkskDaprngpbmdsn">description::
+    <br>· problem: not running on Windows machine
+    <br>· solution: remove desktop-blockstack, clear cache.
+    <a class="clsHide" href="#idBkskDaprngpbmdsn"></a></p>
+  <p id="idBkskDaprngpbmnam">name::
+    <br>* Mcs.Blockstack'Dapp'problem.running,
+    <br>* Mcs.Blockstack'Dapp'running'problem,
+    <a class="clsHide" href="#idBkskDaprngpbmnam"></a></p>
+  </section>
   </section>
 
-  <section id="idBkskDappiwob">
-  <h2 id="idBkskDappiwobH2">interacting-with-other-blockchains
-    <a class="clsHide" href="#idBkskDappiwobH2"></a></h2>
-  <p id="idBkskDappiwobdsn">description::
+  <section id="idBkskDapsclg">
+  <h3 id="idBkskDapsclgH3">scaling Dapp
+    <a class="clsHide" href="#idBkskDapsclgH3"></a></h3>
+  <p id="idBkskDapsclgdsn">description::
+    <br>"Can Blockstack apps scale, given that Blockstack uses blockchains which don’t scale that well?
+    <br>Yes. Blockstack only uses the blockchain for name registration. Everything else happens off-chain, so apps work just as fast as they do on the Web."
+    <br>[https://docs.blockstack.org/core/faq_technical.html#can-blockstack-apps-scale-given-that-blockstack-uses-blockchains-which-dont-scale-that-well]
+    <a class="clsHide" href="#idBkskDapsclgdsn"></a></p>
+  <p id="idBkskDapsclgnam">name::
+    <br>* Mcs.Blockstack'Dapp'scaling,
+    <a class="clsHide" href="#idBkskDapsclgnam"></a></p>
+  </section>
+
+  <section id="idBkskDapiwob">
+  <h3 id="idBkskDapiwobH3">interacting-with-other-blockchains
+    <a class="clsHide" href="#idBkskDapiwobH3"></a></h3>
+  <p id="idBkskDapiwobdsn">description::
     <br>"Can Blockstack applications interact with Bitcoin? Ethereum? Smart contracts? Other blockchains?
     <br>Yes! Since Blockstack applications are built like web applications, all you need to do is include the relevant Javascript library into your application."
     <br>[https://docs.blockstack.org/core/faq_developer.html#can-blockstack-applications-interact-with-bitcoin-ethereum-smart-contracts-other-blockchains]
-    <a class="clsHide" href="#idBkskDappiwobdsn"></a></p>
-  <p id="idBkskDappiwobnam">name::
+    <a class="clsHide" href="#idBkskDapiwobdsn"></a></p>
+  <p id="idBkskDapiwobnam">name::
     <br>* Mcs.Blockstack'Dapp'interacting-with-other-blockchains,
-    <a class="clsHide" href="#idBkskDappiwobnam"></a></p>
+    <a class="clsHide" href="#idBkskDapiwobnam"></a></p>
+  </section>
   </section>
 
-  <section id="idBkskDappgnc">
-  <h2 id="idBkskDappgncH2">GENERIC of Dapp
-    <a class="clsHide" href="#idBkskDappgncH2"></a></h2>
-  <p id="idBkskDappgncgncchn">generic-chain::
+  <section id="idBkskDapatt">
+  <h2 id="idBkskDapattH2">ATTRIBUTE of Dapp
+    <a class="clsHide" href="#idBkskDapattH2"></a></h2>
+  <p id="idBkskDapattnam">name::
+    <br>* Mcs.Blockstack'Dapp'attribute,
+    <a class="clsHide" href="#idBkskDapattnam"></a></p>
+
+  <section id="idBkskDapcnbe">
+  <h3 id="idBkskDapcnbeH3">can't-be-evil
+    <a class="clsHide" href="#idBkskDapcnbeH3"></a></h3>
+  <p id="idBkskDapcnbedsn">description::
+    <br>"Blockstack applications follow a can't-be-evil design philosophy. They cannot alter, transfer, or revoke the user's identity, and they cannot read or write the user's data without permission. Blockstack provides the platform, network, and SDKs for building can't-be-evil applications using existing Web tools. If you are Web developer, all of your skills are immediately transferrable to Blockstack."
+    <br>[https://github.com/blockstack/blockstack-core#what-is-blockstack]
+    <a class="clsHide" href="#idBkskDapcnbedsn"></a></p>
+  <p id="idBkskDapcnbenam">name::
+    <br>* Mcs.Blockstack'Dapp'can't-be-evil,
+    <a class="clsHide" href="#idBkskDapcnbenam"></a></p>
+  </section>
+  </section>
+
+  <section id="idBkskDapgnc">
+  <h2 id="idBkskDapgncH2">GENERIC of Dapp
+    <a class="clsHide" href="#idBkskDapgncH2"></a></h2>
+  <p id="idBkskDapgncgncchn">generic-chain::
     <br>* <a class="clsPreview" href="filMcsDtcnet.last.html#idDtcpgmDapp">Dapp</a>,
     <br>===
     <br>* web-app,
-    <a class="clsHide" href="#idBkskDappgncgncchn"></a></p>
+    <a class="clsHide" href="#idBkskDapgncgncchn"></a></p>
+  </section>
+
+  <section id="idBkskDapSpc">
+  <h2 id="idBkskDapSpcH2">Dapp.SPECIFIC
+    <a class="clsHide" href="#idBkskDapSpcH2"></a></h2>
+  <p id="idBkskDapSpcnam">name::
+    <br>* Mcs.Blockstack'Dapp.specific,
+    <a class="clsHide" href="#idBkskDapSpcnam"></a></p>
+  <p id="idBkskDapSpcP1">specific::
+    <br>* Graphite: https://www.graphitedocs.com/,
+    <br>* Your-Note: https://yournote.app/,
+    <a class="clsHide" href="#idBkskDapSpcP1"></a></p>
+  </section>
+
+  <section id="idBkskDapHll">
+  <h2 id="idBkskDapHllH2">Dapp.HELLO-BLOCKSTACK
+    <a class="clsHide" href="#idBkskDapHllH2"></a></h2>
+  <p id="idBkskDapHlldsn">description::
+    <br>"In this tutorial, you generate a simple application on Blockstack. The application is a single-page application (SPA) that runs completely client-side. The application has no backend API to talk to, other than the identity and storage API that the user provides. In this sense, the application is a completely decentralized, server-less application."
+    <br>[https://docs.blockstack.org/browser/hello-blockstack.html]
+    <a class="clsHide" href="#idBkskDapHlldsn"></a></p>
+  <p id="idBkskDapHllnam">name::
+    <br>* Mcs.Blockstack'Dapp.Hello-Blockstack,
+    <a class="clsHide" href="#idBkskDapHllnam"></a></p>
+  <p id="idBkskDapHllwpa">addressWpg::
+    <br>* https://helloblockstack.com/,
+    <br>* tutorial: https://docs.blockstack.org/browser/hello-blockstack.html,
+    <a class="clsHide" href="#idBkskDapHllwpa"></a></p>
+  </section>
+
+  <section id="idBkskDapTdl">
+  <h2 id="idBkskDapTdlH2">Dapp.TODO-LIST
+    <a class="clsHide" href="#idBkskDapTdlH2"></a></h2>
+  <p id="idBkskDapTdldsn">description::
+    <br>"In this tutorial, you build the code for and run a single-page application (SPA) with Blockstack and Vue.js. Once the application is running, you take a tour through the applications’ Blockstack functionality. You’ll learn how it manages authentiation using a Blockstack ID and how it stores information associated with that ID using Blockstack Storage (Gaia)."
+    <br>[https://docs.blockstack.org/browser/todo-list.html]
+    <a class="clsHide" href="#idBkskDapTdldsn"></a></p>
+  <p id="idBkskDapTdlnam">name::
+    <br>* Mcs.Blockstack'Dapp.todo-list,
+    <a class="clsHide" href="#idBkskDapTdlnam"></a></p>
+  <p id="idBkskDapTdlwpa">addressWpg::
+    <br>* https://blockstack-todos.appartisan.com/,
+    <br>* https://docs.blockstack.org/browser/todo-list.html,
+    <a class="clsHide" href="#idBkskDapTdlwpa"></a></p>
+  </section>
+
+  <section id="idBkskDapGft">
+  <h2 id="idBkskDapGftH2">Dapp.GRAPHITE
+    <a class="clsHide" href="#idBkskDapGftH2"></a></h2>
+  <p id="idBkskDapGftdsn">description::
+    <br>"Graphite is a decentralized and encrypted replacement for Google's G-Suite. Built on Blockstack and powered by the Bitcoin Blockchain."
+    <br>[https://app.graphitedocs.com/]
+    <br>===
+    <br>"All your files in one place, secure and totally owned by you."
+    <br>[https://www.graphitedocs.com/]
+    <a class="clsHide" href="#idBkskDapGftdsn"></a></p>
+  <p id="idBkskDapGftnam">name::
+    <br>* Mcs.Blockstack'Dapp.Graphite,
+    <br>* Mcs.Graphite.Blockstack-Dapp,
+    <a class="clsHide" href="#idBkskDapGftnam"></a></p>
+
+  <section id="idBkskDapGftdbd">
+  <h3 id="idBkskDapGftdbdH3">dashboard of Graphite
+    <a class="clsHide" href="#idBkskDapGftdbdH3"></a></h3>
+  </section>
+
+  <section id="idBkskDapGftdoc">
+  <h3 id="idBkskDapGftdocH3">document of Graphite
+    <a class="clsHide" href="#idBkskDapGftdocH3"></a></h3>
+  </section>
+
+  <section id="idBkskDapGftsht">
+  <h3 id="idBkskDapGftshtH3">sheet of Graphite
+    <a class="clsHide" href="#idBkskDapGftshtH3"></a></h3>
+  </section>
+
+  <section id="idBkskDapGftvlt">
+  <h3 id="idBkskDapGftvltH3">vault of Graphite
+    <a class="clsHide" href="#idBkskDapGftvltH3"></a></h3>
+  </section>
+
+  <section id="idBkskDapGftctt">
+  <h3 id="idBkskDapGftcttH3">contact of Graphite
+    <a class="clsHide" href="#idBkskDapGftcttH3"></a></h3>
+  </section>
+
+  <section id="idBkskDapGftavr">
+  <h3 id="idBkskDapGftavrH3">avatar of Graphite
+    <a class="clsHide" href="#idBkskDapGftavrH3"></a></h3>
+  </section>
+
+  <section id="idBkskDapGftrsc">
+  <h3 id="idBkskDapGftrscH3">resource of Graphite
+    <a class="clsHide" href="#idBkskDapGftrscH3"></a></h3>
+  </section>
   </section>
 </section>
 
@@ -845,7 +1326,23 @@
     <br>* Nelson.Jude,
     <br>* Freedman.Michael.J.,
     <br>===
+    <br>* developer.core,
+    <br>* developer.Dapp,
     <a class="clsHide" href="#idBkskhmnFTSpc"></a></p>
+
+  <section id="idBkskhmnDvprCore">
+  <h2 id="idBkskhmnDvprCoreH2">human.developer.core
+    <a class="clsHide" href="#idBkskhmnDvprCoreH2"></a></h2>
+  <p id="idBkskhmnDvprCoredsn">description::
+    <br>"Where are the current core developers based? What are the requirements for being a core developer?
+    <br>Most of the core developers work in NYC and Hong Kong. Developers who’ve contributed to the core open-source software over a long enough time period, by default, get included in the list of core developers. There is no formal process for being part of this informal list. Core developers, generally, have the ability to write high-quality code, understand distributed systems and applied crypto, and share a vision of building a truly decentralized internet and are dedicated to that cause."
+    <br>[https://docs.blockstack.org/core/faq_technical.html#where-are-the-current-core-developers-based-what-are-the-requirements-for-being-a-core-developer]
+    <a class="clsHide" href="#idBkskhmnDvprCoredsn"></a></p>
+  <p id="idBkskhmnDvprCorenam">name::
+    <br>* Mcs.Blockstack'core-developer,
+    <br>* Mcs.Blockstack'developer.core,
+    <a class="clsHide" href="#idBkskhmnDvprCorenam"></a></p>
+  </section>
 </section>
 
 <section id="idBkskognFT">
@@ -896,6 +1393,9 @@
   <h2 id="idBkskognBtllcH2">ogn.Blockstack-Token-LLC
     <a class="clsHide" href="#idBkskognBtllcH2"></a></h2>
   <p id="idBkskognBtllcdsn">description::
+    <br>"a Delaware limited liability company"
+    <br>[https://blockstack.org/whitepaper.pdf {2017-10-12}]
+    <br>===
     <br>"Through the 2017 Blockstack token offering, Blockstack Token LLC created the Stacks token."
     <br>[https://docs.blockstack.org/org/overview.html#blockstack-token-llc]
     <a class="clsHide" href="#idBkskognBtllcdsn"></a></p>
@@ -942,8 +1442,35 @@
     <br>* Mcs.Blockstack'doing,
     <a class="clsHide" href="#idBkskdngFTnam"></a></p>
 
+  <section id="idBkskugdgFT">
+  <h2 id="idBkskugdgFTH2">upgrading Blockstack
+    <a class="clsHide" href="#idBkskugdgFTH2"></a></h2>
+  <p id="idBkskugdgFTdsn">description::
+    <br>"How is the Blockstack network upgraded over time? What parties need to agree on an upgrade?
+    <br>We’re working on an on-chain voting strategy similar to how mining works, where anyone can cast a vote proportional to the amount of Bitcoin burned. Similar to how Bitcoin upgrades, a new feature will activate if a certain threshold (e.g. 80%) of votes consistently request its adoption over a given time interval (e.g. a couple weeks).
+    <br>Until then, we will publicly announce the availability of new software, with the promise that each release will bring highly-desired features to make upgrading worth the users’ whiles."
+    <br>[https://docs.blockstack.org/core/faq_technical.html#how-is-the-blockstack-network-upgraded-over-time-what-parties-need-to-agree-on-an-upgrade]
+    <a class="clsHide" href="#idBkskugdgFTdsn"></a></p>
+  <p id="idBkskugdgFTnam">name::
+    <br>* Mcs.Blockstack'upgrading,
+    <a class="clsHide" href="#idBkskugdgFTnam"></a></p>
+  </section>
+
+  <section id="idBkskdrngFT">
+  <h2 id="idBkskdrngFTH2">destroying Blockstack
+    <a class="clsHide" href="#idBkskdrngFTH2"></a></h2>
+  <p id="idBkskdrngdsn">description::
+    <br>"What if the current companies and developers working on Blockstack disappear, would the network keep running?
+    <br>Yes, the Blockstack network will keep running. All of Blockstack’s code is open-source and anyone can deploy Blockstack nodes or maintain the code. Further, Blockstack nodes don’t need to coordinate with each other to function. Any node that a user deploys can function correctly independently."
+    <br>[https://docs.blockstack.org/core/faq_technical.html#what-if-the-current-companies-and-developers-working-on-blockstack-disappear-would-the-network-keep-running]
+    <a class="clsHide" href="#idBkskdrngdsn"></a></p>
+  <p id="idBkskdrngnam">name::
+    <br>* Mcs.Blockstack'doing.destroying,
+    <a class="clsHide" href="#idBkskdrngnam"></a></p>
+  </section>
+
   <section id="idBksklrngFT">
-  <h2 id="idBksklrngFTH2">learning of Blockstack
+  <h2 id="idBksklrngFTH2">learning Blockstack
     <a class="clsHide" href="#idBksklrngFTH2"></a></h2>
   <p id="idBksklrngnam">name::
     <br>* Mcs.Blockstack'doing.learning,
@@ -953,6 +1480,49 @@
     <br>* https://blockstack.org/faq/,
     <br>* https://docs.blockstack.org/core/faq_technical.html,
     <a class="clsHide" href="#idBksklrngwpa"></a></p>
+  </section>
+</section>
+
+<section id="idBkskattFT">
+  <h1 id="idBkskattFTH1">ATTRIBUTE of Blockstack
+    <a class="clsHide" href="#idBkskattFTH1"></a></h1>
+  <p id="idBkskattFTnam">name::
+    <br>* Mcs.Blockstack'attribute,
+    <a class="clsHide" href="#idBkskattFTnam"></a></p>
+
+  <section id="idBkskdngl">
+  <h2 id="idBkskdnglH2">design-goal of Blockstack
+    <a class="clsHide" href="#idBkskdnglH2"></a></h2>
+  <p id="idBkskdngldsn">description::
+    <br>"Blockstack has the following design goals:
+    <br>1. Decentralized Naming &amp; Discovery: End-users should be able to (a) register and  use  human-readable  names  and  (b)  discover  network  resources  mapped  to human-readable names without trusting any remote parties.
+    <br>2. Decentralized Storage: End-users should be able to use decentralized storage systems where they can store their data without revealing it to any remote parties.
+    <br>3. Comparable Performance: The end-to-end performance of the new architecture (including name/resource lookups, storage access, etc.)  should be comparable to the traditional internet with centralized services."
+    <br>[https://blockstack.org/whitepaper.pdf {2017-10-12}]
+    <a class="clsHide" href="#idBkskdngldsn"></a></p>
+  </section>
+</section>
+
+<section id="idBkskenvtFT">
+  <h1 id="idBkskenvtFTH1">ENVIRONMENT of Blockstack
+    <a class="clsHide" href="#idBkskenvtFTH1"></a></h1>
+  <p id="idBkskenvtnam">name::
+    <br>* Mcs.Blockstack'environment,
+    <a class="clsHide" href="#idBkskenvtnam"></a></p>
+
+  <section id="idBkskrteth">
+  <h2 id="idBkskrtethH2">relation-to-Ethereum
+    <a class="clsHide" href="#idBkskrtethH2"></a></h2>
+  <p id="idBkskrtethdsn">description::
+    <br>"How is Blockstack different from <a class="clsPreview" href="filMcsDtcbnetEth.last.html#idOverview">Ethereum</a> for building decentralized apps?
+    <br>You can think of Ethereum as a “heavy” blockchain that does everything for you. All the complexity is handled on-chain, computations are run there, and all scalability and security concerns need to be handled at the blockchain level. It amounts to a “mainframe” that runs all the applications in the ecosystem.
+    <br>Blockstack puts minimal logic into a blockchain and handles scalability outside of the blockchain by re-using existing internet infrastructure. Our architectural design mirrors how computing has developed; moving from mainframes to smaller networked entities.
+    <br>Read more about the differences between Blockstack and Ethereum dapps in the following forum post: https://forum.blockstack.org/t/what-is-the-difference-between-blockstack-and-ethereum/781/2"
+    <br>[https://docs.blockstack.org/core/faq_technical.html#how-is-blockstack-different-from-ethereum-for-building-decentralized-apps]
+    <a class="clsHide" href="#idBkskrtethdsn"></a></p>
+  <p id="idBkskrtethnam">name::
+    <br>* Mcs.Blockstack'relation-to-Ethereum,
+    <a class="clsHide" href="#idBkskrtethnam"></a></p>
   </section>
 </section>
 
@@ -999,6 +1569,11 @@
     <br>"Blockstack Public Benefit Corp. (PBC) started development of the Blockstack platform in 2014 and launched an alpha of the platform in early 2017."
     <br>[https://docs.blockstack.org/org/overview.html#blockstack-public-benefit-corp-pbc]
     <a class="clsHide" href="#idBkskEvg2014"></a></p>
+  <p id="idBkskEvg2016fall">{2016fall}::
+    <br>=== <a class="clsPreview" href="#idBkskAtls">Atlas-network</a>:
+    <br>"The  Blockstack  implementation  switched  to  the  Atlas  network  from  the  DHT-based discovery network in Fall 2016,  and since November 2016,  we have been distributing BNS zone files using the Atlas network."
+    <br>[https://blockstack.org/whitepaper.pdf {2017-10-12}]
+    <a class="clsHide" href="#idBkskEvg2016fall"></a></p>
   <p id="idBkskEvg201509">{2015-09}::
     <br>=== Bitcoin migration:
     <br>· Onename (Blockstack-PBC) migrated fron Namecoin-blockchain to Bitocoin-blockchain.
