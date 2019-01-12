@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.structured-concept (Mcs.3-34-0.2019-01-11)</title>
+  <title>Mcs.structured-concept (Mcs.3-35-0.2019-01-12)</title>
   <meta name="keywords" content="modelConceptStructured, Mcs, ModelInfoWorld, Worldview, Mws, Hitp, Kaseluris.Nikos.1959, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -53,7 +53,7 @@
   <h1 id="idMcsttlH1">title of Mcs-part
     <a class="clsHide" href="#idMcsttlH1"></a></h1>
   <p id="idMcsttldsn">description::
-    <br>· title-of-Mcs is the most used <a class="clsPreview" href="#idMcsattNamelmt">name</a> of <a class="clsPreview" href="#idDescription">a-Mcs</a>.
+    <br>· title-of-Mcs is <a class="clsPreview" href="#idMcsatt">the-att</a> that contains the most used <a class="clsPreview" href="#idMcsattNamelmt">name</a> of <a class="clsPreview" href="#idDescription">a-Mcs</a>.
     <a class="clsHide" href="#idMcsttldsn"></a></p>
   <p id="idMcsttlnam">name::
     <br>* Mcs.Mcs'title,
@@ -75,6 +75,7 @@
     <br>· attribute-of-Mcs[a] is any <a class="clsPreview" href="#idDescription">Mcs[b]</a> related with Mcs[a].
     <a class="clsHide" href="#idMcsattdsn"></a></p>
   <p id="idMcsattnam">name::
+    <br>* Mcs.attribute-instance--of-Mcs, {2019-01-12}
     <br>* Mcs.attribute-of-Mcs,
     <br>* Mcs.Mcs'attribute,
     <br>* Mcs.McsAaAttribute,
@@ -210,7 +211,7 @@
   <h2 id="idMcsattPrtH2">Mcs-att.PART (internal)
     <a class="clsHide" href="#idMcsattPrtH2"></a></h2>
   <p id="idMcsattPrtdsn">description::
-    <br>· part--Mcs-att is <a class="clsPreview" href="#idMcsatt">an-attribute</a> we view as internal|intrincic to <a class="clsPreview" href="#idDescription">Mcs</a>.
+    <br>· part--Mcs[a]-att is LISTS of <a class="clsPreview" href="#idMcsattPrtitc">part-instances-of-Mcs[a]</a>.
     <a class="clsHide" href="#idMcsattPrtdsn"></a></p>
   <p id="idMcsattPrtnam">name::
     <br>* Mcs.externalNo--Mcs-att,
@@ -226,6 +227,18 @@
     <br>* Mcs.Mcs'attAsPart,
     <br>* Mcs.part--Mcs-att,
     <a class="clsHide" href="#idMcsattPrtnam"></a></p>
+
+  <section id="idMcsattPrtitc">
+  <h3 id="idMcsattPrtitcH3">Mcs-att.part-instance
+    <a class="clsHide" href="#idMcsattPrtitcH3"></a></h3>
+  <p id="idMcsattPrtitcdsn">description::
+    <br>· part-instance--Mcs[a]-att is <a class="clsPreview" href="#idMcsatt">an-attribute</a> <a class="clsPreview" href="#idMcsattWhlNSptr">we</a> view as internal|intrincic to <a class="clsPreview" href="#idDescription">Mcs[a]</a>.
+    <a class="clsHide" href="#idMcsattPrtitcdsn"></a></p>
+  <p id="idMcsattPrtitcnam">name::
+    <br>* Mcs.Mcs'att.part-instance,
+    <br>* Mcs.part-instance--Mcs-att,
+    <a class="clsHide" href="#idMcsattPrtitcnam"></a></p>
+  </section>
 
   <section id="idMcsattOvv">
   <h3 id="idMcsattOvvH3">Mcs-att.overview
@@ -270,7 +283,7 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-11-03]
     <a class="clsHide" href="#idMcsattNamdsn"></a></p>
   <p id="idMcsattNamnam">name::
-    <br>* Mcs.name-of-Mcs-part-att,
+    <br>* Mcs.name-att--of,
     <br>* Mcs.Mcs'att.name,
     <br>* Mcs.Mcs'att.part.name,
     <br>* Mcs.Mcs'attAsName,
@@ -290,7 +303,8 @@
     <br>* Mcs.Mcs'name,
     <br>* Mcs.Mcs'name-element,
     <br>* Mcs.name-element--of-Mcs,
-    <br>* Mcs.name-of-Mcs,
+    <br>* Mcs.name-instance--Mcs-att,
+    <br>* Mcs.name--Mcs-att,
     <a class="clsHide" href="#idMcsattNamelmtnam"></a></p>
 
   <section id="idMcsattNamcvn">
@@ -525,7 +539,7 @@
   <h2 id="idMcsattPrtNH2">Mcs-att.PART-NO (external)
     <a class="clsHide" href="#idMcsattPrtNH2"></a></h2>
   <p id="idMcsattPrtNdsn">description::
-    <br>PartNo--Mcs-att is <a class="clsPreview" href="#idMcsattDvsnclmt">the-complement</a> of <a class="clsPreview" href="#idMcsattPrt">part-attributes</a>.
+    <br>PartNo--Mcs-att is <a class="clsPreview" href="#idMcsattDvsnclmt">the-complement</a> of <a class="clsPreview" href="#idMcsattPrt">part-attribute</a>.
     <a class="clsHide" href="#idMcsattPrtNdsn"></a></p>
   <p id="idMcsattPrtNnam">name::
     <br>* Mcs.external--Mcs-att,
@@ -546,7 +560,7 @@
   <h3 id="idMcsattWhlH3">Mcs-att.WHOLE
     <a class="clsHide" href="#idMcsattWhlH3"></a></h3>
   <p id="idMcsattWhldsn">description::
-    <br>Whole--Mcs[a]-att is another <a class="clsPreview" href="#idDescription">Mcs[b]</a> which has as <a class="clsPreview" href="#idMcsattPrt">part</a> the-Mcs[a].
+    <br>Whole--Mcs[a]-att is LISTS of whole-instances-of-Mcs[a].
     <a class="clsHide" href="#idMcsattWhldsn"></a></p>
   <p id="idMcsattWhlnam">name::
     <br>* Mcs.Mcs'att.partNo.whole,
@@ -554,6 +568,18 @@
     <br>* Mcs.Mcs'attAsWhole,
     <br>* Mcs.whole--Mcs-att,
     <a class="clsHide" href="#idMcsattWhlnam"></a></p>
+
+  <section id="idMcsattWhlitc">
+  <h4 id="idMcsattWhlitcH4">Mcs-att.WHOLE-INSTANCE
+    <a class="clsHide" href="#idMcsattWhlitcH4"></a></h4>
+  <p id="idMcsattWhlitcdsn">description::
+    <br>· whole-instance--Mcs[a]-att is another <a class="clsPreview" href="#idDescription">Mcs[b]</a> which has as <a class="clsPreview" href="#idMcsattPrt">part</a> the-Mcs[a].
+    <a class="clsHide" href="#idMcsattWhlitcdsn"></a></p>
+  <p id="idMcsattWhlitcnam">name::
+    <br>* Mcs.Mcs'att.whole-instance,
+    <br>* Mcs.whole-instance--Mcs-att,
+    <a class="clsHide" href="#idMcsattWhlitcnam"></a></p>
+  </section>
 
   <section id="idMcsattWhlchn">
   <h4 id="idMcsattWhlchnH4">Mcs-att.WHOLE-CHAIN
@@ -667,7 +693,7 @@
     <a class="clsHide" href="#idMcsattGncnam"></a></p>
 
   <section id="idMcsattGncelt">
-  <h4 id="idMcsattGnceltH4">Mcs-att.GENERIC-ELEMENT
+  <h4 id="idMcsattGnceltH4">Mcs-att.GENERIC-INSTANCE
     <a class="clsHide" href="#idMcsattGnceltH4"></a></h4>
   <p id="idMcsattGnceltdsn">description::
     <br>· generic-element--Mcs[a] is another <a class="clsPreview" href="#idDescription">Mcs[b]</a> whose[b] <a class="clsPreview" href="#idMcsatt">attributes</a> are and attributes of Mcs[a] but not the-opposite.
@@ -675,13 +701,11 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-11-03]
     <a class="clsHide" href="#idMcsattGnceltdsn"></a></p>
   <p id="idMcsattGnceltnam">name::
-    <br>* Mcs.generic-of-Mcs,
-    <br>* Mcs.generic-element--of-Mcs,
-    <br>* Mcs.generic-instance--of-Mcs,
+    <br>* Mcs.generic-instance--Mcs-att,
     <br>* Mcs.Mcs'att.generic-element,
     <br>* Mcs.Mcs'att.generic-instance,
-    <br>* Mcs.Mcs'attAsGeneric,
-    <br>* Mcs.Mcs'generic-element,
+    <br>* Mcs.Mcs'attAsGeneric-instance,
+    <br>* Mcs.Mcs'generic-instance,
     <a class="clsHide" href="#idMcsattGnceltnam"></a></p>
   </section>
 
@@ -715,20 +739,19 @@
     <a class="clsHide" href="#idMcsattWhlNSpcnam"></a></p>
 
   <section id="idMcsattWhlNSpcelt">
-  <h4 id="idMcsattWhlNSpceltH4">Mcs-att.SPECIFIC-ELEMENT
+  <h4 id="idMcsattWhlNSpceltH4">Mcs-att.SPECIFIC-INSTANCE
     <a class="clsHide" href="#idMcsattWhlNSpceltH4"></a></h4>
   <p id="idMcsattWhlNSpceltdsn">description::
     <br>· specific-element--of-Mcs[a] is another <a class="clsPreview" href="#idDescription">Mcs[b]</a> if <a class="clsPreview" href="#idMcsatt">the-attributes</a> of Mcs[a] are and attributes of Mcs[b] and not the-opposite.
     <br>· also, <a class="clsPreview" href="#idMcsrft">the-referent</a> of a-specific is a-subset of the-referent of its generic.
     <a class="clsHide" href="#idMcsattWhlNSpceltdsn"></a></p>
   <p id="idMcsattWhlNSpceltnam">name::
-    <br>* Mcs.specific-of-Mcs,
-    <br>* Mcs.specific-element--of-Mcs,
-    <br>* Mcs.specific-concept--of-Mcs,
+    <br>* Mcs.specific-element--Mcs-att,
+    <br>* Mcs.specific-instance--Mcs-att,
     <br>* Mcs.Mcs'att.specific-element,
     <br>* Mcs.Mcs'att.specific-instance,
-    <br>* Mcs.Mcs'attAsSpecific,
-    <br>* Mcs.Mcs'specific-element,
+    <br>* Mcs.Mcs'attAsSpecific-instance,
+    <br>* Mcs.Mcs'specific-instance,
     <a class="clsHide" href="#idMcsattWhlNSpceltnam"></a></p>
   </section>
 
@@ -786,7 +809,7 @@
   <h2 id="idMcsattDngH2">Mcs-att.DOING
     <a class="clsHide" href="#idMcsattDngH2"></a></h2>
   <p id="idMcsattDngdsn">description::
-    <br>· doing--Mcs-att is <a class="clsPreview" href="#idMcsatt">a-Mcs-att</a> which is a-doing|process.
+    <br>· doing--Mcs-att is LISTS of <a class="clsPreview" href="#idMcsatt">a-Mcs-att</a> which are a-doing|process.
     <a class="clsHide" href="#idMcsattDngdsn"></a></p>
   <p id="idMcsattDngnam">name::
     <br>* Mcs.doing--Mcs-att,
@@ -798,7 +821,7 @@
   <h2 id="idMcsattDngNH2">Mcs-att.DOING.NO
     <a class="clsHide" href="#idMcsattDngNH2"></a></h2>
   <p id="idMcsattDngNdsn">description::
-    <br>· doingNo--Mcs-att is <a class="clsPreview" href="#idMcsatt">a-Mcs-att</a> which is NOT a-doing|process.
+    <br>· doingNo--Mcs-att is <a class="clsPreview" href="#idMcsattDvsnclmt">the-complement</a> <a class="clsPreview" href="#idMcsattDng">doing-att</a>.
     <a class="clsHide" href="#idMcsattDngNdsn"></a></p>
   <p id="idMcsattDngNnam">name::
     <br>* Mcs.doingNo--Mcs-att,
