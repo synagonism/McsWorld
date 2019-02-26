@@ -388,7 +388,7 @@ function fStoreNUCodepoint(aNamidxIn, aNUIn, sLagIn) {
     } else if (aNUIn[0] >= aNamidxIn[n][1].split('..')[0] &&
                aNUIn[0] < aNamidxIn[n][1].split('..')[1].toLowerCase() && //capital-next-letter or small between
                n === aNamidxIn.length - 1) {
-      console.log(aNUIn[0]+', '+aNamidxIn[n])
+      //console.log(aNUIn[0]+', '+aNamidxIn[n])
       if (!aNamidxIn[n][0].endsWith('_0')) {
         if (oNamidxAnu[aNamidxIn[n][0]]) {
           oNamidxAnu[aNamidxIn[n][0]].push(aNUIn)
@@ -726,7 +726,7 @@ function fComputeQMcs(sMcsIn, nCptqntIn) {
     fWriteJson2Sync(sCptqntRt, aCptqntRt)
   }
 }
-//console.log(aCpt)
+console.log(aCpt)
 
 async function fQMcs(aIn) {
   for (const item of aIn) {
