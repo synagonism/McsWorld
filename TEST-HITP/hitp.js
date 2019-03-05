@@ -33,7 +33,7 @@ var oHitp = (function () {
   var oHitp = {
     /** contains the-versions of hitp.js */
     aVersion: [
-      'hitp.js.17-3-0.2019-02-19.2019-: main-name-searching',
+      'hitp.js.17-3-0.2019-02-19.2019-03-05: main-name-searching',
       'hitp.js.17-2-1.2018-10-08: filMcs.last.html',
       'hitp.js.17-2-0.2018-09-21: name-notation',
       'hitp.js.17-1-0.2018-09-16: location.hash',
@@ -620,9 +620,9 @@ var oHitp = (function () {
       })
 
       /**
-       * DOING: suggests names of structured-concepts,
+       * doing: suggests names of structured-concepts,
        *   that BEGIN with input-search-string.
-       * INPUT: nothing string of namidx to search: lagEng03si_2_0, root, ...
+       * input: nothing string of namidx to search: lagEng03si_2_0, root, ...
        */
       function fSearchSuggest(sSSNamidxIn) {
         var
@@ -687,8 +687,8 @@ var oHitp = (function () {
         }
 
         /**
-         * DOING: decide what to do with a-reference-namidx
-         * INPUT: lagEng03si_0, lagEng03si_2_0
+         * doing: decide what to do with a-reference-namidx
+         * input: lagEng03si_0, lagEng03si_2_0
          */
         function fSSNamidxRefManage(sNamidxRefIn) {
           // console.log(sNamidxRefIn + ': RefManage')
@@ -752,10 +752,10 @@ var oHitp = (function () {
         }
 
         /**
-         * DOING: display names of a-reference-namidx,
+         * doing: display names of a-reference-namidx,
          *   make them clickable,
-         *   highlits first.
-         * INPUT: sNamidxRefIn: lagEng03si_0, ..
+         *   highligts first.
+         * input: sNamidxRefIn: lagEng03si_0, ..
          */
         function fSSNamidxRefDisplay(sNamidxRefIn) {
           oHitp.sNamidx = sNamidxRefIn
@@ -813,8 +813,8 @@ var oHitp = (function () {
         }
 
         /**
-         * DOING: display names of a-namidx
-         * INPUT: sNamidxIn: lagEll01alfa, lagEng02bi, lagEng03si_0
+         * doing: display names of a-namidx
+         * input: sNamidxIn: lagEll01alfa, lagEng02bi, lagEng03si_0
          */
         function fSSNamidxDisplay(sNamidxIn) {
           oHitp.sNamidx = sNamidxIn
@@ -846,6 +846,12 @@ var oHitp = (function () {
             }
           } // refNo-namidx
 
+          /**
+           * doing: reads from aSuggestions the-names that match the-search-name,
+           *   formats them as preview-links,
+           *   adds the-eventlistener 'link-preview' on them and
+           *   highlights the-first.
+           */
           function fSSNamidxDisplayRead() {
             var n, i
             if (sSrchInpt.toUpperCase() === oHitp.sSrchCrnt.toUpperCase()) {
@@ -926,8 +932,8 @@ var oHitp = (function () {
         }
 
         /**
-         * INPUT: lagEng01ei, lagEll01alfa
-         * OUTPUT: site/dirMiwMcs/dirNamidx/dirLagEng/namidx.lagEng01ei.json
+         * input: lagEng01ei, lagEll01alfa
+         * output: site/dirMiwMcs/dirNamidx/dirLagEng/namidx.lagEng01ei.json
          */
         function fSSNamidx_pathFind(sNamidxIn) {
           return sPathNames + 'dirL' + sNamidxIn.substring(1, 6) +
@@ -935,22 +941,34 @@ var oHitp = (function () {
         }
 
         /**
-         * DOING: adds preview-event on links in search-sugestions and
+         * doing: adds preview-event on links in search-sugestions and
          *   adds its text on search-input
          */
         function fSSEvtPreview() {
           // clicking on TabCntSrchOl-links, first highlight
           Array.prototype.slice.call(document.querySelectorAll('#idTabCntSrchOl a')).forEach(function (oEltIn) {
-            fEvtLink(oEltIn)
-            oEltIn.addEventListener('click', function () {
-              oEltTabCntSrchIpt.value = oEltIn.innerHTML
-            })
+            var sTxt = oEltIn.innerHTML
+            if (sTxt.indexOf('!⇒') > 0) {
+              // found main-name
+              oEltIn.addEventListener('click', function (oEvtIn) {
+                // don't link, set main-name as search-name, search for this.
+                oEvtIn.preventDefault()
+                oEltTabCntSrchIpt.value = sTxt.substring(sTxt.indexOf('!⇒') + 2)
+                fSearchSuggest()
+              })
+            } else {
+              fEvtLink(oEltIn)
+              oEltIn.addEventListener('click', function () {
+                oEltTabCntSrchIpt.value = sTxt
+              })
+            }
           })
         }
 
         /**
-         * INPUT: a search-input string
-         * OUTPUT: the same string escaped to use it as a-regexp without special chars.
+         * input: a-search-name string
+         * output: the same string escaped (for '+' '.' '|' '(' '*')
+         *   to use it as a-regexp without special chars.
          */
         function fSSEscapeRs(sIn) {
           if (sIn.indexOf('+') !== -1) {
@@ -1014,7 +1032,7 @@ var oHitp = (function () {
     }
 
     /**
-     * DOING: returns the-text with the-number of names found in search-tab
+     * doing: returns the-text with the-number of names found in search-tab
      */
     function fTabCntSrchPSetText() {
       var
@@ -1676,7 +1694,7 @@ var oHitp = (function () {
   })()
 
   /**
-   * DOING: reads the-config, site-menu, namidx.root files, if exist,
+   * doing: reads the-config, site-menu, namidx.root files, if exist,
    * and creates the-containers of the-page.
    *
    * The DOMContentLoaded event fires when the initial HTML document 
@@ -1747,7 +1765,7 @@ var oHitp = (function () {
     }
 
     /**
-     * DOING: reads the-site-menu, if exists, and creates the-containers of the-page.
+     * doing: reads the-site-menu, if exists, and creates the-containers of the-page.
      */
     function fSitemenu() {
       // site-menu
@@ -1771,7 +1789,7 @@ var oHitp = (function () {
     }
 
     /**
-     * DOING: reads the-namidx.root-file, if exists, and creates the-containers of the-page.
+     * doing: reads the-namidx.root-file, if exists, and creates the-containers of the-page.
      */
     function fNamidx() {
       // find aNamidxRoot
