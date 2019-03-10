@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.structured-concept (Mcs.3-50-0.2019-03-05)</title>
+  <title>Mcs.structured-concept (Mcs.3-52-0.2019-03-10)</title>
   <meta name="keywords" content="modelConceptStructured, Mcs, ModelInfoWorld, Worldview, Mws, Hitp, Kaseluris.Nikos.1959, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -52,7 +52,8 @@
   <h1 id="idMcsattH1">attribute of Mcs
     <a class="clsHide" href="#idMcsattH1"></a></h1>
   <p id="idMcsattdsn">description::
-    <br>· attribute-of-Mcs[a] is any <a class="clsPreview" href="#idDescription">Mcs[b]</a> related with Mcs[a].
+    <br>· attribute-of-Mcs[a] is one or more <a class="clsPreview" href="#idDescription">Mcs[b]</a> related with Mcs[a].
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2019-03-10]
     <a class="clsHide" href="#idMcsattdsn"></a></p>
   <p id="idMcsattnam">name::
     <br>* Mcs.attribute-of-Mcs!⇒Mcs'att,
@@ -383,13 +384,17 @@
   <h4 id="idMcsattNamdrvdH4">derived-name of name-att
     <a class="clsHide" href="#idMcsattNamdrvdH4"></a></h4>
   <p id="idMcsattNamdrvddsn">description::
-    <br>· derived-name--of--a-Mcs-name[a] is a-name of an-attribute of the-concept with the-Mcs-name[a].
+    <br>· derived-name--of--a-Mcs-name[a] is <a class="clsPreview" href="#idMcsattNamIstc">a-name</a> of <a class="clsPreview" href="#idMcsatt">an-attribute</a> of the-concept with the-Mcs-name[a], that is-created from it[a].
     <br>· with <a class="clsPreview" href="#idMcsattNamcvn">the-Mcs-naming-convension</a> it begins with the-Mcs-name[a] which is-called 'original-name'.
     <a class="clsHide" href="#idMcsattNamdrvddsn"></a></p>
   <p id="idMcsattNamdrvdnam">name::
-    <br>* Mcs.derived-name--of--a-Mcs-name,
+    <br>* Mcs.derived-name--of--Mcs-name,
     <br>* Mcs.Mcs'att.name'derived-name,
+    <br>* Mcs.related-name--of--Mcs-name,
     <a class="clsHide" href="#idMcsattNamdrvdnam"></a></p>
+  <p id="idMcsattNamdrvdSpc">specific::
+    <br>* <a class="clsPreview" href="#idMcsattNamMaindrvd">derived--main-name</a>,
+    <a class="clsHide" href="#idMcsattNamdrvdSpc"></a></p>
   </section>
 
   <section id="idMcsattNamorgl">
@@ -526,10 +531,27 @@
     <br>· the related names of the-concept (part, specific) are created from the-main-name.
     <a class="clsHide" href="#idMcsattNamMaindsn"></a></p>
   <p id="idMcsattNamMainnam">name::
-    <br>* Mcs.main--Mcs-name,
-    <br>* Mcs.Mcs'att.name.main,
-    <br>* Mcs.Mcs'attAsNameAsMain,
+    <br>* Mcs.main--Mcs-name!⇒Mcs-main-name,
+    <br>* Mcs.main-name--of-Mcs!⇒Mcs-main-name,
+    <br>* Mcs.Mcs'att.name.main!⇒Mcs-main-name,
+    <br>* Mcs.Mcs'attAsNameAsMain!⇒Mcs-main-name,
+    <br>* Mcs.Mcs'main-name!⇒Mcs-main-name,
+    <br>* Mcs.Mcs-main-name, {2019-03-10}
     <a class="clsHide" href="#idMcsattNamMainnam"></a></p>
+
+  <section id="idMcsattNamMaindrvd">
+  <h5 id="idMcsattNamMaindrvdH5">derived-name of main-name
+    <a class="clsHide" href="#idMcsattNamMaindrvdH5"></a></h5>
+  <p id="idMcsattNamMaindrvddsn">description::
+    <br>· derived-name--of--Mcs-main-name[a] is <a class="clsPreview" href="#idMcsattNamdrvd">a-derived-name</a> of it[a]
+    <a class="clsHide" href="#idMcsattNamMaindrvddsn"></a></p>
+  <p id="idMcsattNamMaindrvdnam">name::
+    <br>* Mcs.derived-name--of--Mcs-main-name,
+    <br>* Mcs.Mcs'att.name.main'derived-name,
+    <br>* Mcs.Mcs-main-name'derived-name,
+    <br>* Mcs.related-name--of--Mcs-main-name,
+    <a class="clsHide" href="#idMcsattNamMaindrvdnam"></a></p>
+  </section>
   </section>
 
   <section id="idMcsattNamMainN">
@@ -614,20 +636,20 @@
     <br>PartNo--Mcs-att is <a class="clsPreview" href="#idMcsattDvsnclmt">the-complement</a> of <a class="clsPreview" href="#idMcsattPrt">part-attribute</a>.
     <a class="clsHide" href="#idMcsattPrtNdsn"></a></p>
   <p id="idMcsattPrtNnam">name::
-    <br>* Mcs.environment--Mcs-att,
-    <br>* Mcs.external--Mcs-att,
-    <br>* Mcs.extrinsic--Mcs-att,
-    <br>* Mcs.intrinsicNo--Mcs-att,
-    <br>* Mcs.Mcs'att.environment,
-    <br>* Mcs.Mcs'external-attribute,
-    <br>* Mcs.Mcs'internalNo-attribute,
-    <br>* Mcs.Mcs'att.external,
-    <br>* Mcs.Mcs'attAsExternal,
-    <br>* Mcs.Mcs'att.internalNo,
-    <br>* Mcs.Mcs'attAsInternalNo,
-    <br>* Mcs.Mcs'att.partNo,
-    <br>* Mcs.Mcs'attAsPartNo,
-    <br>* Mcs.partNo--Mcs-att,
+    <br>* Mcs.environment--Mcs-att, {2019-03-09}
+    <br>* Mcs.external--Mcs-att!⇒environment--Mcs-att,
+    <br>* Mcs.extrinsic--Mcs-att!⇒environment--Mcs-att,
+    <br>* Mcs.intrinsicNo--Mcs-att!⇒environment--Mcs-att,
+    <br>* Mcs.Mcs'att.environment!⇒environment--Mcs-att,
+    <br>* Mcs.Mcs'external-attribute!⇒environment--Mcs-att,
+    <br>* Mcs.Mcs'internalNo-attribute!⇒environment--Mcs-att,
+    <br>* Mcs.Mcs'att.external!⇒environment--Mcs-att,
+    <br>* Mcs.Mcs'attAsExternal!⇒environment--Mcs-att,
+    <br>* Mcs.Mcs'att.internalNo!⇒environment--Mcs-att,
+    <br>* Mcs.Mcs'attAsInternalNo!⇒environment--Mcs-att,
+    <br>* Mcs.Mcs'att.partNo!⇒environment--Mcs-att,
+    <br>* Mcs.Mcs'attAsPartNo!⇒environment--Mcs-att,
+    <br>* Mcs.partNo--Mcs-att!⇒environment--Mcs-att,
     <a class="clsHide" href="#idMcsattPrtNnam"></a></p>
   <p id="idMcsattPrtNSpc">specific::
     <br>* whole,
@@ -642,10 +664,10 @@
     <br>Whole--Mcs[a]-att is LISTS of whole-instances-of-Mcs[a].
     <a class="clsHide" href="#idMcsattWhldsn"></a></p>
   <p id="idMcsattWhlnam">name::
-    <br>* Mcs.Mcs'att.partNo.whole,
-    <br>* Mcs.Mcs'att.whole,
-    <br>* Mcs.Mcs'attAsWhole,
-    <br>* Mcs.whole--Mcs-att,
+    <br>* Mcs.Mcs'att.partNo.whole!⇒whole--Mcs-att,
+    <br>* Mcs.Mcs'att.whole!⇒whole--Mcs-att,
+    <br>* Mcs.Mcs'attAsWhole!⇒whole--Mcs-att,
+    <br>* Mcs.whole--Mcs-att, {2019-03-09}
     <a class="clsHide" href="#idMcsattWhlnam"></a></p>
 
   <section id="idMcsattWhlitc">
@@ -655,8 +677,9 @@
     <br>· whole-instance--Mcs[a]-att is another <a class="clsPreview" href="#idDescription">Mcs[b]</a> which has as <a class="clsPreview" href="#idMcsattPrt">part</a> the-Mcs[a].
     <a class="clsHide" href="#idMcsattWhlitcdsn"></a></p>
   <p id="idMcsattWhlitcnam">name::
-    <br>* Mcs.Mcs'att.whole-instance,
-    <br>* Mcs.whole-instance--Mcs-att,
+    <br>* Mcs.Mcs'att.whole-instance!⇒Mcs'whole,
+    <br>* Mcs.Mcs'whole,
+    <br>* Mcs.whole-instance--Mcs-att!⇒Mcs'whole,
     <a class="clsHide" href="#idMcsattWhlitcnam"></a></p>
   </section>
 
