@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.ChronoBank--blockchain-service (ChronoBank.2-5-0.2019-02-18)</title>
+  <title>Mcs.ChronoBank--blockchain-service (ChronoBank.2-6-0.2019-03-14)</title>
   <meta name="keywords" content="ChronoBank, Blockchain, TIME, LHT, McsHitp">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -1770,11 +1770,12 @@ contract ExchangeInterface {
 </section>
 
 <section id="idChbevu">
-  <h1 id="idChbevuH1">exchange-value-token of ChronoBank
+  <h1 id="idChbevuH1">exchange-value-unit of ChronoBank
     <a class="clsHide" href="#idChbevuH1"></a></h1>
   <p id="idChbevunam">name::
-    <br>* Mcs.Chronobank'exchange-value-token,
-    <br>* Mcs.ChronoBank'token,
+    <br>* Mcs.ChronoBank'Evu,
+    <br>* Mcs.ChronoBank'exchange-value-unit!⇒ChronoBank'Evu,
+    <br>* Mcs.ChronoBank'token!⇒ChronoBank'Evu,
     <a class="clsHide" href="#idChbevunam"></a></p>
   <p id="idChbevuSpc">specific::
     <br>* <a class="clsPreview" href="#idChblht">LH-token</a>,
@@ -1782,7 +1783,7 @@ contract ExchangeInterface {
     <a class="clsHide" href="#idChbevuSpc"></a></p>
 
   <section id="idChblht">
-  <h2 id="idChblhtH2">chbevt.LH-token (chblht)
+  <h2 id="idChblhtH2">Evu.LH-token
     <a class="clsHide" href="#idChblhtH2"></a></h2>
   <p id="idChblhtdsn">description::
     <br>One of the major drawbacks in <strong>a debt-backed currency system</strong> is the possibility of backers (<a class="clsPreview" href="#idChbwprLOC">LOC</a> in our case) defaulting on their contractual obligations.
@@ -1796,17 +1797,17 @@ contract ExchangeInterface {
     <br>[<a href="https://chronobank.io/">https://chronobank.io/</a>]
     <a class="clsHide" href="#idChblhtdsn"></a></p>
   <p id="idChblhtnam">name::
-    <br>* Mcs.Chb-LH-(Chronobank-labour-hour-token),
-    <br>* Mcs.Chronobank'labour-hour-token,
-    <br>* Mcs.labour-hours-cryptocurrency,
-    <br>* Mcs.mnyLh,
-    <br>* Mcs.money.blockchain.labour-hours,
-    <br>* Mcs.money.cryptocurrency.LH,
-    <br>* Mcs.money.LH,
+    <br>* Mcs.ChronoBank'labour-hour-token!⇒EvuLH,
+    <br>* Mcs.EvuLH, {2019-03-14}
+    <br>* Mcs.labour-hours-cryptocurrency!⇒EvuLH,
+    <br>* Mcs.LH-token!⇒EvuLH,
+    <br>* Mcs.money.blockchain.labour-hours!⇒EvuLH,
+    <br>* Mcs.money.cryptocurrency.LH!⇒EvuLH,
+    <br>* Mcs.money.LH!⇒EvuLH,
     <a class="clsHide" href="#idChblhtnam"></a></p>
 
   <section id="idChblhtbkr">
-  <h3 id="idChblhtbkrH3">chblht'Baker
+  <h3 id="idChblhtbkrH3">EvuLH'Baker
     <a class="clsHide" href="#idChblhtbkrH3"></a></h3>
   <p id="idChblhtbkrdsn">description::
     <br>One of the major drawbacks in <strong>a debt-backed currency system</strong> is the possibility of backers (<a class="clsPreview" href="#idChbwprLOC">LOC</a> in our case) defaulting on their contractual obligations.
@@ -1816,12 +1817,12 @@ contract ExchangeInterface {
 
 
   <section id="idChblhtsmct">
-  <h3 id="idChblhtsmctH3">chblht'Smart-contract (<a class="clsPreview" href="#idChbctpLht">link</a>)
+  <h3 id="idChblhtsmctH3">EvuLH'Smart-contract (<a class="clsPreview" href="#idChbctpLht">link</a>)
     <a class="clsHide" href="#idChblhtsmctH3"></a></h3>
   </section>
 
   <section id="idChblhtisng">
-  <h3 id="idChblhtisngH3">chblht'Issuance
+  <h3 id="idChblhtisngH3">EvuLH'Issuance
     <a class="clsHide" href="#idChblhtisngH3"></a></h3>
   <p id="idChblhtisngP1">Q: Who are the issuing labour-hire companies?
     <br>A: Chronobank selects labour hire/recruitment and HR companies based on their credibility, size, and financial performance, among other factors.
@@ -1844,7 +1845,7 @@ contract ExchangeInterface {
   </section>
 
   <section id="idChblhtexr">
-  <h3 id="idChblhtexrH3">chblht'Exchange-rate
+  <h3 id="idChblhtexrH3">EvuLH'Exchange-rate
     <a class="clsHide" href="#idChblhtexrH3"></a></h3>
   <p id="idChblhtexrP1">Q: What will guarantee that LH value will stay stable relative to fiat, in the case of a massive short-sale attack by speculators?
     <br>A: To stop a possible short-sale attack by speculators, Labour Hour tokens will always be refundable at a small discount less the issuance fee. That will remove any motivation for any short-sale attack.
@@ -1853,7 +1854,7 @@ contract ExchangeInterface {
   </section>
 
   <section id="idChblhtAgg">
-  <h3 id="idChblhtAggH3">chblht.AGGREGATE
+  <h3 id="idChblhtAggH3">EvuLH.AGGREGATE
     <a class="clsHide" href="#idChblhtAggH3"></a></h3>
   <p id="idChblhtAggP1">Q: What are the total number of LH tokens?
     <br>A: The total number of coins will always depend on the number of companies in the system and labour hours available in those companies that companies are able to fulfill.
@@ -1863,18 +1864,21 @@ contract ExchangeInterface {
   </section>
 
   <section id="idChbtmt">
-  <h2 id="idChbtmtH2">chbevt.TIME-token
+  <h2 id="idChbtmtH2">Evu.TIME
     <a class="clsHide" href="#idChbtmtH2"></a></h2>
   <p id="idChbtmtdsn">description::
+    <br>"TIME is ChronoBank’s publicly tradable utility token. It powers the ChronoBank economy and enables holders to access platform features such as voting and staking. TIME can be staked to mine LHT."
+    <br>[https://mvp.timex.io/faq?queryString=What%20is%20TIME%20token]
+    <br>===
     <br>TIME, the Ethereum token <strong>representing a stake in the ChronoBank initiative</strong> to disrupt the inefficient labour-hire market, has already been added to several exchanges — with more on the way.
     <br>[<a href="https://blog.chronobank.io/chronobanks-time-launches-on-four-exchanges-71c2bb5c989a#.wnktm5kng">https://blog.chronobank.io/chronobanks-time-launches-on-four-exchanges-71c2bb5c989a#.wnktm5kng</a>]
     <a class="clsHide" href="#idChbtmtdsn"></a></p>
   <p id="idChbtmtnam">name::
-    <br>* Mcs.ChronoBank'TIME-token,
-    <br>* Mcs.Ethereum'TIME-token,
-    <br>* Mcs.mnyTIME,
-    <br>* Mcs.TIME-token,
-    <br>* Mcs.TIME--exchange-value-unit.consensusNo), {2017-05-17}
+    <br>* Mcs.ChronoBank'TIME-token!⇒EvuTIME,
+    <br>* Mcs.Ethereum'TIME-token!⇒EvuTIME,
+    <br>* Mcs.EvuTIME, {2019-03-14}
+    <br>* Mcs.TIME-token!⇒EvuTIME,
+    <br>* Mcs.TIME--exchange-value-unit.consensusNo!⇒EvuTIME, {2017-05-17}
     <a class="clsHide" href="#idChbtmtnam"></a></p>
   <p id="idChbtmtgnc">generic::
     <br>* <a class="clsPreview" href="filMcsDtcbnetEth.last.html#idEthevuCN">Ethereum-consensusNo-asset</a>,
@@ -1902,7 +1906,7 @@ contract ExchangeInterface {
     <a class="clsHide" href="#idChbtmtP1"></a></p>
 
   <section id="idChbtmtexr">
-  <h3 id="idChbtmtexrH3">TIME'exchange-rate
+  <h3 id="idChbtmtexrH3">EvuTIME'exchange-rate
     <a class="clsHide" href="#idChbtmtexrH3"></a></h3>
   <p id="idChbtmtexrP3">{2017-05-17}
     <br>TIME/BTC
@@ -1926,7 +1930,7 @@ contract ExchangeInterface {
   </section>
 
   <section id="idChbtmtcrtr">
-  <h3 id="idChbtmtcrtrH3">TIME'creator
+  <h3 id="idChbtmtcrtrH3">EvuTIME'creator
     <a class="clsHide" href="#idChbtmtcrtrH3"></a></h3>
   <p id="idChbtmtcrtrP1">Contract Creator:
     <br>address:&nbsp; &nbsp; <a href="https://etherscan.io/address/0x28a44f49b940b3875f882d08487d16295fb8bc09">0x28a44f49b940b3875f882d08487d16295fb8bc09</a>,
@@ -1935,7 +1939,7 @@ contract ExchangeInterface {
   </section>
 
   <section id="idChbtmtads">
-  <h3 id="idChbtmtadsH3">TIME'address
+  <h3 id="idChbtmtadsH3">EvuTIME'address
     <a class="clsHide" href="#idChbtmtadsH3"></a></h3>
   <p id="idChbtmtadsP1">address::
     <br>TIME contract address: 0x6531f133e6deebe7f2dce5a0441aa7ef330b4e53
@@ -1943,7 +1947,7 @@ contract ExchangeInterface {
   </section>
 
   <section id="idChbtmtcodBnr">
-  <h3 id="idChbtmtcodBnrH3">TIME'codeBinary
+  <h3 id="idChbtmtcodBnrH3">EvuTIME'codeBinary
     <a class="clsHide" href="#idChbtmtcodBnrH3"></a></h3>
   <p id="idChbtmtcodBnrP1">codeBinary::
     <br><code>0x6060604052361561014e5763fff...dd6a500029</code>
@@ -1952,7 +1956,7 @@ contract ExchangeInterface {
   </section>
 
   <section id="idChbtmtcodAsm">
-  <h3 id="idChbtmtcodAsmH3">TIME'codeAssembly
+  <h3 id="idChbtmtcodAsmH3">EvuTIME'codeAssembly
     <a class="clsHide" href="#idChbtmtcodAsmH3"></a></h3>
   <p id="idChbtmtcodAsmP1">codeAssembly::
     <br><code>PUSH1 0x60
@@ -1967,7 +1971,7 @@ contract ExchangeInterface {
   </section>
 
   <section id="idChbtmtognExc">
-  <h3 id="idChbtmtognExcH3">TIME'ognExchange
+  <h3 id="idChbtmtognExcH3">EvuTIME'ognExchange
     <a class="clsHide" href="#idChbtmtognExcH3"></a></h3>
   <p id="idChbtmtognExcdsn">description::
     <br>Livecoin is a well-established exchange that opened in 2015, at the bottom of the bitcoin bear market. Registered in London, the exchange has undertaken a series of measures to make it an attractive destination for traders, including lowering fees and offering VISA cards for rapid and easy withdrawal of funds. Currently, the majority of TIME’s volume occurs on Livecoin, as recorded by CoinMarketCap.
@@ -1985,7 +1989,7 @@ contract ExchangeInterface {
   </section>
 
   <section id="idChbtmtsmlr">
-  <h3 id="idChbtmtsmlrH3">TIME'similar
+  <h3 id="idChbtmtsmlrH3">EvuTIME'similar
     <a class="clsHide" href="#idChbtmtsmlrH3"></a></h3>
   <p id="idChbtmtsmlrwpa">addressWpg::
     <br>* <a href="https://etherscan.io/address/0x1818c9f1e2b22e37c3652c1a8df060f946dc6231">https://etherscan.io/address/0x1818c9f1e2b22e37c3652c1a8df060f946dc6231</a>,
@@ -1995,7 +1999,7 @@ contract ExchangeInterface {
   </section>
 
   <section id="idChbtmtrsc">
-  <h3 id="idChbtmtrscH3">TIME'resource
+  <h3 id="idChbtmtrscH3">EvuTIME'resource
     <a class="clsHide" href="#idChbtmtrscH3"></a></h3>
   <p id="idChbtmtrscwpa">addressWpg::
     <br>* <a href="https://etherscan.io/token/TIME">https://etherscan.io/token/TIME</a>,
@@ -2005,7 +2009,7 @@ contract ExchangeInterface {
   </section>
 
   <section id="idChbtmtAgg">
-  <h3 id="idChbtmtAggH3">TIME.AGGREGATE
+  <h3 id="idChbtmtAggH3">EvuTIME.AGGREGATE
     <a class="clsHide" href="#idChbtmtAggH3"></a></h3>
   <p id="idChbtmtAggdsn">description::
     <br>After ChronoBank’s ICO ended in February, a total of 710,113 TIME tokens were created on the Ethereum blockchain and distributed to supporters.
@@ -2040,8 +2044,24 @@ contract ExchangeInterface {
     <a class="clsHide" href="#idChbhmnSpc"></a></p>
 </section>
 
+<section id="idChbtmx">
+  <h1 id="idChbtmxH1">TimeX-Dapp of ChronoBank
+    <a class="clsHide" href="#idChbtmxH1"></a></h1>
+  <p id="idChbtmxdsn">description::
+    <br>"Decentralised exchange
+    <br>Moving assets from one blockchain to another involves additional technical challenges, but it’s a hugely important development that needs to happen if the crypto world is to stop relying on centralised exchanges, and all the disadvantages associated with them. To date, there are no popular and reliable distributed exchanges.
+    <br>This is something ChronoBank aims to address with TimeX. Our exchange will use the 0x protocol, which we started exploring last year. The reasoning behind this is that we want to make it compatible with other decentralised exchanges, so that they can all benefit from the additional liquidity and depth of sharing orderbooks. In short, it’s good for the market."
+    <br>[https://blog.chronobank.io/chronobank-developing-distributed-exchange-timex-99dabd1d1132]
+    <a class="clsHide" href="#idChbtmxdsn"></a></p>
+  <p id="idChbtmxnam">name::
+    <br>* Mcs.ChronoBank'TimeX!⇒ChronoBank-TimeX,
+    <br>* Mcs.ChronoBank-TimeX, {2019-03-14}
+    <br>* Mcs.TimeX-of-ChronoBank!⇒ChronoBank-TimeX,
+    <a class="clsHide" href="#idChbtmxnam"></a></p>
+</section>
+
 <section id="idChblrx">
-  <h1 id="idChblrxH1">LaborX-exchange-dApp of ChronoBank
+  <h1 id="idChblrxH1">LaborX-Dapp of ChronoBank
     <a class="clsHide" href="#idChblrxH1"></a></h1>
   <p id="idChblrxdsn">description::
     <br>The heart of the ChronoBank project is the LaborX exchange: a decentralised marketplace for work opportunities.
@@ -2056,10 +2076,11 @@ contract ExchangeInterface {
     <br>[<a href="https://cointelegraph.com/news/how-ethereum-based-uber-of-time-chronobank-could-boost-cryptocurrency-adoption? {2017-01-22}">https://cointelegraph.com/news/how-ethereum-based-uber-of-time-chronobank-could-boost-cryptocurrency-adoption? {2017-01-22}</a>]
     <a class="clsHide" href="#idChblrxdsn"></a></p>
   <p id="idChblrxnam">name::
-    <br>* Mcs.Chb-Lrx-(Chronobank-LaborX), {2017-03-20}
-    <br>* Mcs.ChronoBank'LaborX,
-    <br>* Mcs.ChronoBank'dApp.LaborX,
-    <br>* Mcs.LaborX-of-ChronoBank,
+    <br>* Mcs.ChronoBank'LaborX!⇒ChronoBank-LaborX,
+    <br>* Mcs.ChronoBank-LaborX, {2019-03-14}
+    <br>* Mcs.ChronoBank'Dapp.LaborX!⇒ChronoBank-LaborX,
+    <br>* Mcs.Dapp.LaborX.ChronoBank!⇒ChronoBank-LaborX,
+    <br>* Mcs.LaborX-of-ChronoBank!⇒ChronoBank-LaborX,
     <a class="clsHide" href="#idChblrxnam"></a></p>
 
   <section id="idChblrxatt">
@@ -2094,7 +2115,7 @@ contract ExchangeInterface {
     <br>[<img src="filMcsDtcnet.files/imgChblxwTbl1.png">
     <a class="clsHide" href="#idChblxcdsn"></a></p>
   <p id="idChblxcnam">name::
-    <br>* Mcs.ChronoBank'LaborX'core,
+    <br>* Mcs.ChronoBank-LaborX'core,
     <br>* Mcs.ChronoBank'backend,
     <a class="clsHide" href="#idChblxcnam"></a></p>
   </section>
@@ -2127,7 +2148,7 @@ contract ExchangeInterface {
     <br>[<img src="filMcsDtcnet.files/imgChblxwTbl1.png">
     <a class="clsHide" href="#idChblxddsn"></a></p>
   <p id="idChblxdnam">name::
-    <br>* Mcs.ChronoBank'LaborX'frontend,
+    <br>* Mcs.ChronoBank-LaborX'frontend,
     <a class="clsHide" href="#idChblxdnam"></a></p>
 
   <section id="idChblxdcclgjb">
@@ -2140,7 +2161,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw33P1">#idChblxw33P1</a>]
     <a class="clsHide" href="#idChblxdcclgjbdsn"></a></p>
   <p id="idChblxdcclgjbnam">name::
-    <br>* Mcs.ChronoBank'LaborX'canceling-job,
+    <br>* Mcs.ChronoBank-LaborX'canceling-job,
     <a class="clsHide" href="#idChblxdcclgjbnam"></a></p>
   </section>
   </section>
@@ -2154,9 +2175,9 @@ contract ExchangeInterface {
     <a class="clsHide" href="#idChbwkrdsn"></a></p>
   <p id="idChbwkrnam">name::
     <br>* Mcs.Chb-wkr!⇒Chronobank-worker,
-    <br>* Mcs.ChronoBank'LaborX'employee!⇒Chronobank-worker,
-    <br>* Mcs.ChronoBank'LaborX'job-seeker!⇒Chronobank-worker,
-    <br>* Mcs.ChronoBank'LaborX'worker!⇒Chronobank-worker,
+    <br>* Mcs.ChronoBank-LaborX'employee!⇒Chronobank-worker,
+    <br>* Mcs.ChronoBank-LaborX'job-seeker!⇒Chronobank-worker,
+    <br>* Mcs.ChronoBank-LaborX'worker!⇒Chronobank-worker,
     <br>* Mcs.ChronoBank'worker,
     <a class="clsHide" href="#idChbwkrnam"></a></p>
 
@@ -2172,7 +2193,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw33P1">#idChblxw33P1</a>]
     <a class="clsHide" href="#idChblrxcpsnphdsn"></a></p>
   <p id="idChblrxcpsnphnam">name::
-    <br>* Mcs.ChronoBank'LaborX'rate,
+    <br>* Mcs.ChronoBank-LaborX'rate,
     <br>* Mcs.ChronoBank'worker'compensation,
     <a class="clsHide" href="#idChblrxcpsnphnam"></a></p>
   </section>
@@ -2203,7 +2224,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw7P1">#idChblxw7P1</a>]
     <a class="clsHide" href="#idChblrxwkrprfldsn"></a></p>
   <p id="idChblrxwkrprflnam">name::
-    <br>* Mcs.Chronobank'worker'profile,
+    <br>* Mcs.ChronoBank'worker'profile,
     <a class="clsHide" href="#idChblrxwkrprflnam"></a></p>
   </section>
 
@@ -2269,8 +2290,8 @@ contract ExchangeInterface {
   <p id="idChblrxemplrnam">name::
     <br>* Mcs.ChronoBank'client!⇒Cronobank'employer,
     <br>* Mcs.ChronoBank'employer,
-    <br>* Mcs.ChronoBank'LaborX'employer!⇒Cronobank'employer,
-    <br>* Mcs.ChronoBank'LaborX'client!⇒Cronobank'employer,
+    <br>* Mcs.ChronoBank-LaborX'employer!⇒Cronobank'employer,
+    <br>* Mcs.ChronoBank-LaborX'client!⇒Cronobank'employer,
     <a class="clsHide" href="#idChblrxemplrnam"></a></p>
 
   <section id="idChblrxemrevln">
@@ -2327,8 +2348,8 @@ contract ExchangeInterface {
     <br>[<a href="https://github.com/ChronoBank/Documentation/blob/master/laborx_whitepaper.pdf">https://github.com/ChronoBank/Documentation/blob/master/laborx_whitepaper.pdf</a>]
     <a class="clsHide" href="#idChblrxpvdrdsn"></a></p>
   <p id="idChblrxpvdrnam">name::
-    <br>* Mcs.ChronoBank'LaborX'mediator,
-    <br>* Mcs.ChronoBank'LaborX'provider,
+    <br>* Mcs.ChronoBank-LaborX'mediator,
+    <br>* Mcs.ChronoBank-LaborX'provider,
     <br>* Mcs.ChronoBank'mediator,
     <br>* Mcs.ChronoBank'provider,
     <br>* Mcs.labor-hiring-company-of-Chronobank,
@@ -2357,7 +2378,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw63P1">#idChblxw63P1</a>]
     <a class="clsHide" href="#idChblrxpvdrjbbrddsn"></a></p>
   <p id="idChblrxpvdrjbbrdnam">name::
-    <br>* Mcs.ChronoBank'LaborX'job-board,
+    <br>* Mcs.ChronoBank-LaborX'job-board,
     <br>* Mcs.ChronoBank'job-board,
     <a class="clsHide" href="#idChblrxpvdrjbbrdnam"></a></p>
 
@@ -2383,7 +2404,7 @@ contract ExchangeInterface {
     <br>[<a href="https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px">https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px</a>]
     <a class="clsHide" href="#idChblrxttsdsn"></a></p>
   <p id="idChblrxttsnam">name::
-    <br>* Mcs.ChronoBank'LaborX'trust-system,
+    <br>* Mcs.ChronoBank-LaborX'trust-system,
     <br>* Mcs.ChronoBank'trust-system,
     <a class="clsHide" href="#idChblrxttsnam"></a></p>
   </section>
@@ -2396,7 +2417,7 @@ contract ExchangeInterface {
     <br>[<a href="https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px">https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px</a>]
     <a class="clsHide" href="#idChblrxrmrdsn"></a></p>
   <p id="idChblrxrmrnam">name::
-    <br>* Mcs.ChronoBank'LaborX'recommender,
+    <br>* Mcs.ChronoBank-LaborX'recommender,
     <br>* Mcs.ChronoBank'recommender,
     <a class="clsHide" href="#idChblrxrmrnam"></a></p>
   </section>
@@ -2409,7 +2430,7 @@ contract ExchangeInterface {
     <br>[<a href="https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px">https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px</a>]
     <a class="clsHide" href="#idChblrxevrdsn"></a></p>
   <p id="idChblrxevrnam">name::
-    <br>* Mcs.ChronoBank'LaborX'evaluator,
+    <br>* Mcs.ChronoBank-LaborX'evaluator,
     <br>* Mcs.ChronoBank'evaluator,
     <a class="clsHide" href="#idChblrxevrnam"></a></p>
   </section>
@@ -2422,7 +2443,7 @@ contract ExchangeInterface {
     <br>[<a href="https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px">https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px</a>]
     <a class="clsHide" href="#idChblrxvfrdsn"></a></p>
   <p id="idChblrxvfrnam">name::
-    <br>* Mcs.ChronoBank'LaborX'verifier,
+    <br>* Mcs.ChronoBank-LaborX'verifier,
     <br>* Mcs.ChronoBank'verifier,
     <a class="clsHide" href="#idChblrxvfrnam"></a></p>
   </section>
@@ -2440,7 +2461,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw32P2">#idChblxw32P2</a>]
     <a class="clsHide" href="#idChblrxjobdsn"></a></p>
   <p id="idChblrxjobnam">name::
-    <br>* Mcs.ChronoBank'LaborX'job,
+    <br>* Mcs.ChronoBank-LaborX'job,
     <br>* Mcs.ChronoBank'job,
     <a class="clsHide" href="#idChblrxjobnam"></a></p>
 
@@ -2509,8 +2530,8 @@ contract ExchangeInterface {
     <br>[<a href="https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px">https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px</a>]
     <a class="clsHide" href="#idChblrxrgsdsn"></a></p>
   <p id="idChblrxrgsnam">name::
-    <br>* Mcs.ChronoBank'LaborX'metrics,
-    <br>* Mcs.ChronoBank'LaborX'rating-system,
+    <br>* Mcs.ChronoBank-LaborX'metrics,
+    <br>* Mcs.ChronoBank-LaborX'rating-system,
     <a class="clsHide" href="#idChblrxrgsnam"></a></p>
 
   <section id="idChblrxatp">
@@ -2522,7 +2543,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxwactivitypoint">#idChblxwactivitypoint</a>]
     <a class="clsHide" href="#idChblrxatpdsn"></a></p>
   <p id="idChblrxatpnam">name::
-    <br>* Mcs.ChronoBank'LaborX'activity-points,
+    <br>* Mcs.ChronoBank-LaborX'activity-points,
     <br>* Mcs.ChronoBank'activity-points,
     <a class="clsHide" href="#idChblrxatpnam"></a></p>
   <p id="idChblrxatpP1">description::
@@ -2550,7 +2571,7 @@ contract ExchangeInterface {
     <br>A negative rating will also affect evaluator’s reputation.
     <a class="clsHide" href="#idChblrxrtgdsn"></a></p>
   <p id="idChblrxrtgnam">name::
-    <br>* Mcs.ChronoBank'LaborX'rating,
+    <br>* Mcs.ChronoBank-LaborX'rating,
     <br>* Mcs.ChronoBank'rating,
     <a class="clsHide" href="#idChblrxrtgnam"></a></p>
   </section>
@@ -2569,7 +2590,7 @@ contract ExchangeInterface {
     [<a class="clsPreview" href="#idChblxw4">#idChblxw4</a>]
     <a class="clsHide" href="#idChblrxwltdsn"></a></p>
   <p id="idChblrxwltnam">name::
-    <br>* Mcs.ChronoBank'LaborX'wallet,
+    <br>* Mcs.ChronoBank-LaborX'wallet,
     <br>* Mcs.ChronoBank'wallet,
     <a class="clsHide" href="#idChblrxwltnam"></a></p>
   </section>
@@ -2601,7 +2622,7 @@ contract ExchangeInterface {
     [<a class="clsPreview" href="#idChblxw65">#idChblxw65</a>]
     <a class="clsHide" href="#idChblrxmsgngdsn"></a></p>
   <p id="idChblrxmsgngnam">name::
-    <br>* Mcs.ChronoBank'LaborX'messaging,
+    <br>* Mcs.ChronoBank-LaborX'messaging,
     <br>* Mcs.ChronoBank'messaging,
     <a class="clsHide" href="#idChblrxmsgngnam"></a></p>
   </section>
@@ -2621,7 +2642,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw64">#idChblxw64</a>]
     <a class="clsHide" href="#idChblrxschgdsn"></a></p>
   <p id="idChblrxschgnam">name::
-    <br>* Mcs.ChronoBank'LaborX'searching,
+    <br>* Mcs.ChronoBank-LaborX'searching,
     <br>* Mcs.ChronoBank'searching,
     <a class="clsHide" href="#idChblrxschgnam"></a></p>
 
@@ -2633,7 +2654,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw8P1">#idChblxw8P1</a>]
     <a class="clsHide" href="#idChblrxschgmtchgdsn"></a></p>
   <p id="idChblrxschgmtchgnam">name::
-    <br>* Mcs.ChronoBank'LaborX'matching,
+    <br>* Mcs.ChronoBank-LaborX'matching,
     <br>* Mcs.ChronoBank'matching,
     <a class="clsHide" href="#idChblrxschgmtchgnam"></a></p>
   </section>
@@ -2725,22 +2746,27 @@ contract ExchangeInterface {
   </section>
 </section>
 
-<section id="idChbevn">
-  <h1 id="idChbevnH1">ChronoBank.EVOLUTING
-    <a class="clsHide" href="#idChbevnH1"></a></h1>
-  <p id="idChbevnwpa">addressWpg::
+<section id="idChbevg">
+  <h1 id="idChbevgH1">EVOLUTING of ChronoBank
+    <a class="clsHide" href="#idChbevgH1"></a></h1>
+  <p id="idChbevgwpa">addressWpg::
     <br>* {time.2018-03-02} ChronoBank: roadmap for 2018: <a href="https://medium.com/@Chronobank/chronobank-roadmap-for-2018-6a1ec52c7988">https://medium.com/@Chronobank/</a>,
-    <a class="clsHide" href="#idChbevnwpa"></a></p>
-  <p id="idChbevnP1">{time.2016-12-15..2017-02-14}
+    <a class="clsHide" href="#idChbevgwpa"></a></p>
+  <p id="idChbevg20161215">{time.2019-03-14}
+    <br>=== TimeX-MVP:
+    <br>· launched at https://mvp.timex.io/
+    <br>[TimeX MVP is live!, https://blog.chronobank.io/timex-mvp-is-live-3d73ef046513]
+    <a class="clsHide" href="#idChbevg20161215"></a></p>
+  <p id="idChbevg20161215">{time.2016-12-15..2017-02-14}
     <br>=== CROWDSALE:
     <br>- 5,416  BTC
     <br>- 2,985 participants
     <br>[<a href="https://chronobank.io/">https://chronobank.io/</a>]
-    <a class="clsHide" href="#idChbevnP1"></a></p>
-  <p id="idChbevnP2">Q: How long will it take to go from where Chronobank is now to where it needs to be to start challenging Labour Hire and Recruitment companies?
+    <a class="clsHide" href="#idChbevg20161215"></a></p>
+  <p id="idChbevgP2">Q: How long will it take to go from where Chronobank is now to where it needs to be to start challenging Labour Hire and Recruitment companies?
     <br>A: We anticipate this time period to be between a year and year and a half from February 2017
     <br>[<a href="https://blog.chronobank.io/chronobank-io-faq-4b920f003640#.sraeqe3iv">https://blog.chronobank.io/chronobank-io-faq-4b920f003640#.sraeqe3iv</a>]
-    <a class="clsHide" href="#idChbevnP2"></a></p>
+    <a class="clsHide" href="#idChbevgP2"></a></p>
 </section>
 
 <section id="idMeta">
