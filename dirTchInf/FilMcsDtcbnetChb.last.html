@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.ChronoBank--blockchain-service (ChronoBank.2-8-0.2019-03-20)</title>
+  <title>Mcs.ChronoBank--blockchain-service (ChronoBank.2-9-0.2019-03-21)</title>
   <meta name="keywords" content="ChronoBank, Blockchain, TIME, LHT, McsHitp">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -1773,9 +1773,9 @@ contract ExchangeInterface {
   <h1 id="idChbevuH1">exchange-value-unit of ChronoBank
     <a class="clsHide" href="#idChbevuH1"></a></h1>
   <p id="idChbevunam">name::
-    <br>* Mcs.ChronoBank'Evu,
-    <br>* Mcs.ChronoBank'exchange-value-unit!⇒ChronoBank'Evu,
-    <br>* Mcs.ChronoBank'token!⇒ChronoBank'Evu,
+    <br>* Mcs.ChronoBank-Evu,
+    <br>* Mcs.ChronoBank'exchange-value-unit!⇒ChronoBank-Evu,
+    <br>* Mcs.ChronoBank'token!⇒ChronoBank-Evu,
     <a class="clsHide" href="#idChbevunam"></a></p>
   <p id="idChbevuSpc">specific::
     <br>* <a class="clsPreview" href="#idChblht">LH-token</a>,
@@ -1798,6 +1798,7 @@ contract ExchangeInterface {
     <a class="clsHide" href="#idChblhtdsn"></a></p>
   <p id="idChblhtnam">name::
     <br>* Mcs.ChronoBank'labour-hour-token!⇒EvuLH,
+    <br>* Mcs.ChronoBank-Evu.LH!⇒EvuLH,
     <br>* Mcs.EvuLH, {2019-03-14}
     <br>* Mcs.labour-hours-cryptocurrency!⇒EvuLH,
     <br>* Mcs.LH-token!⇒EvuLH,
@@ -1875,6 +1876,7 @@ contract ExchangeInterface {
     <a class="clsHide" href="#idChbtmtdsn"></a></p>
   <p id="idChbtmtnam">name::
     <br>* Mcs.ChronoBank'TIME-token!⇒EvuTIME,
+    <br>* Mcs.ChronoBank-Evu.TIME!⇒EvuTIME,
     <br>* Mcs.Ethereum'TIME-token!⇒EvuTIME,
     <br>* Mcs.EvuTIME, {2019-03-14}
     <br>* Mcs.TIME-token!⇒EvuTIME,
@@ -2057,16 +2059,33 @@ contract ExchangeInterface {
     <br>[https://www.stateofthedapps.com/dapps/timex]
     <a class="clsHide" href="#idChbtmxdsn"></a></p>
   <p id="idChbtmxnam">name::
-    <br>* Mcs.ChronoBank'TimeX!⇒ChronoBank-TimeX,
-    <br>* Mcs.ChronoBank-TimeX, {2019-03-14}
-    <br>* Mcs.TimeX-of-ChronoBank!⇒ChronoBank-TimeX,
+    <br>* Mcs.Chb-TimeX, {2019-03-21}
+    <br>* Mcs.ChronoBank'TimeX!⇒Chb-TimeX,
+    <br>* Mcs.ChronoBank-TimeX!⇒Chb-TimeX, {2019-03-14}
+    <br>* Mcs.TimeX-of-ChronoBank!⇒Chb-TimeX,
     <a class="clsHide" href="#idChbtmxnam"></a></p>
+
+  <section id="idChbtmxsdcn">
+  <h2 id="idChbtmxsdcnH2">sidechain of TimeX
+    <a class="clsHide" href="#idChbtmxsdcnH2"></a></h2>
+  <p id="idChbtmxsdcndsn">description::
+    <br>"The LaborX marketplace and its economy will be hosted on an Ethereum sidechain due to the cost improvements and efficiency that this approach offers over the main chain.
+    <br>TimeX, ChronoBank’s decentralised exchange, will also be hosted on the same sidechain."
+    <br>[https://blog.chronobank.io/laborx-sidechain-and-token-mining-explained-39777984ebaf]
+    <a class="clsHide" href="#idChbtmxsdcndsn"></a></p>
+  <p id="idChbtmxsdcnnam">name::
+    <br>* Mcs.Chb-TimeX'sidechain,
+    <a class="clsHide" href="#idChbtmxsdcnnam"></a></p>
+  </section>
 </section>
 
 <section id="idChblrx">
   <h1 id="idChblrxH1">LaborX-Dapp of ChronoBank
     <a class="clsHide" href="#idChblrxH1"></a></h1>
   <p id="idChblrxdsn">description::
+    <br>"LaborX is a dApp that runs on top of independent ethereum sidechain with dPOS consensus algorithm. LaborX tokenomics relies on TIME and LHT tokens."
+    <br>[https://blog.chronobank.io/what-is-a-decentralised-application-and-how-it-works-625514e207eb]
+    <br>===
     <br>The heart of the ChronoBank project is the LaborX exchange: a decentralised marketplace for work opportunities.
     <br>Freelancers and businesses will be able to trade labour on a peer-to-peer basis, without the costs and frictions of using a traditional recruitment company.
     <br>The efficiencies this brings can be passed on to both parties, raising pay and lowering costs whilst simultaneously increasing quality of work.
@@ -2079,12 +2098,12 @@ contract ExchangeInterface {
     <br>[<a href="https://cointelegraph.com/news/how-ethereum-based-uber-of-time-chronobank-could-boost-cryptocurrency-adoption? {2017-01-22}">https://cointelegraph.com/news/how-ethereum-based-uber-of-time-chronobank-could-boost-cryptocurrency-adoption? {2017-01-22}</a>]
     <a class="clsHide" href="#idChblrxdsn"></a></p>
   <p id="idChblrxnam">name::
-    <br>* Mcs.ChronoBank'LaborX!⇒LaborX, {2019-03-20}
-    <br>* Mcs.ChronoBank'Dapp.LaborX!⇒LaborX,
-    <br>* Mcs.ChronoBank-LaborX!⇒LaborX, {2019-03-14}
-    <br>* Mcs.Dapp.LaborX.ChronoBank!⇒LaborX,
-    <br>* Mcs.LaborX, {2019-03-20}
-    <br>* Mcs.LaborX-of-ChronoBank!⇒LaborX,
+    <br>* Mcs.Chb-LaborX, {2019-03-21}
+    <br>* Mcs.ChronoBank'LaborX!⇒Chb-LaborX, {2019-03-20}
+    <br>* Mcs.ChronoBank'Dapp.LaborX!⇒Chb-LaborX,
+    <br>* Mcs.ChronoBank-LaborX!⇒Chb-LaborX, {2019-03-14}
+    <br>* Mcs.Dapp.LaborX.ChronoBank!⇒Chb-LaborX,
+    <br>* Mcs.LaborX-of-ChronoBank!⇒Chb-LaborX,
     <a class="clsHide" href="#idChblrxnam"></a></p>
 
   <section id="idChblrxatt">
@@ -2119,8 +2138,8 @@ contract ExchangeInterface {
     <br>[<img src="filMcsDtcnet.files/imgChblxwTbl1.png">
     <a class="clsHide" href="#idChblxcdsn"></a></p>
   <p id="idChblxcnam">name::
-    <br>* Mcs.LaborX'core,
-    <br>* Mcs.LaborX'backend,
+    <br>* Mcs.Chb-LaborX'core,
+    <br>* Mcs.Chb-LaborX'backend,
     <a class="clsHide" href="#idChblxcnam"></a></p>
   </section>
 
@@ -2152,7 +2171,7 @@ contract ExchangeInterface {
     <br>[<img src="filMcsDtcnet.files/imgChblxwTbl1.png">
     <a class="clsHide" href="#idChblxddsn"></a></p>
   <p id="idChblxdnam">name::
-    <br>* Mcs.LaborX'frontend,
+    <br>* Mcs.Chb-LaborX'frontend,
     <a class="clsHide" href="#idChblxdnam"></a></p>
 
   <section id="idChblxdcclgjb">
@@ -2165,7 +2184,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw33P1">#idChblxw33P1</a>]
     <a class="clsHide" href="#idChblxdcclgjbdsn"></a></p>
   <p id="idChblxdcclgjbnam">name::
-    <br>* Mcs.LaborX'canceling-job,
+    <br>* Mcs.Chb-LaborX'canceling-job,
     <a class="clsHide" href="#idChblxdcclgjbnam"></a></p>
   </section>
   </section>
@@ -2178,10 +2197,10 @@ contract ExchangeInterface {
     <br>[<a href="https://github.com/ChronoBank/Documentation/blob/master/laborx_whitepaper.pdf">https://github.com/ChronoBank/Documentation/blob/master/laborx_whitepaper.pdf</a>]
     <a class="clsHide" href="#idChbwkrdsn"></a></p>
   <p id="idChbwkrnam">name::
-    <br>* Mcs.LaborX'employee!⇒LaborX-worker,
-    <br>* Mcs.LaborX'job-seeker!⇒LaborX-worker,
-    <br>* Mcs.LaborX'worker!⇒LaborX-worker,
-    <br>* Mcs.LaborX-worker, {2019-03-20}
+    <br>* Mcs.Chb-LaborX'employee!⇒Chb-LaborX-worker,
+    <br>* Mcs.Chb-LaborX'job-seeker!⇒Chb-LaborX-worker,
+    <br>* Mcs.Chb-LaborX'worker!⇒Chb-LaborX-worker,
+    <br>* Mcs.Chb-LaborX-worker, {2019-03-20}
     <a class="clsHide" href="#idChbwkrnam"></a></p>
 
   <section id="idChblrxcpsnph">
@@ -2196,8 +2215,8 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw33P1">#idChblxw33P1</a>]
     <a class="clsHide" href="#idChblrxcpsnphdsn"></a></p>
   <p id="idChblrxcpsnphnam">name::
-    <br>* Mcs.LaborX'rate,
-    <br>* Mcs.LaborX-worker'compensation,
+    <br>* Mcs.Chb-LaborX'rate,
+    <br>* Mcs.Chb-LaborX-worker'compensation,
     <a class="clsHide" href="#idChblrxcpsnphnam"></a></p>
   </section>
 
@@ -2215,7 +2234,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw41P2">#idChblxw41P2</a>]
     <a class="clsHide" href="#idChblrxwkrevlndsn"></a></p>
   <p id="idChblrxwkrevlnnam">name::
-    <br>* Mcs.LaborX-worker'evaluation,
+    <br>* Mcs.Chb-LaborX-worker'evaluation,
     <a class="clsHide" href="#idChblrxwkrevlnnam"></a></p>
   </section>
 
@@ -2227,7 +2246,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw7P1">#idChblxw7P1</a>]
     <a class="clsHide" href="#idChblrxwkrprfldsn"></a></p>
   <p id="idChblrxwkrprflnam">name::
-    <br>* Mcs.LaborX-worker'profile,
+    <br>* Mcs.Chb-LaborX-worker'profile,
     <a class="clsHide" href="#idChblrxwkrprflnam"></a></p>
   </section>
 
@@ -2243,8 +2262,8 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw33P1">#idChblxw33P1</a>]
     <a class="clsHide" href="#idChblrxwkrrtgdsn"></a></p>
   <p id="idChblrxwkrrtgnam">name::
-    <br>* Mcs.LaborX'rating-of-worker,
-    <br>* Mcs.LaborX-worker'rating,
+    <br>* Mcs.Chb-LaborX'rating-of-worker,
+    <br>* Mcs.Chb-LaborX-worker'rating,
     <a class="clsHide" href="#idChblrxwkrrtgnam"></a></p>
   </section>
 
@@ -2256,8 +2275,8 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxwglrP2">#idChblxwglrP2</a>]
     <a class="clsHide" href="#idChblrxwkrEvltrP1"></a></p>
   <p id="idChblrxwkrEvltrnam">name::
-    <br>* Mcs.LaborX'evaluator.worker,
-    <br>* Mcs.LaborX-worker.evaluator,
+    <br>* Mcs.Chb-LaborX'evaluator.worker,
+    <br>* Mcs.Chb-LaborX-worker.evaluator,
     <a class="clsHide" href="#idChblrxwkrEvltrnam"></a></p>
   <p id="idChblrxwkrEvltrP2">description::
     <br>Evaluation by Clients. Any verified client may advertise individual worker’s skills after completing the job if some of them are exceptional. This information would be used to separately promote the workers who are constantly rated 10/10.
@@ -2276,8 +2295,8 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw61P2">#idChblxw61P2</a>]
     <a class="clsHide" href="#idChblrxwkrVrfctrP1"></a></p>
   <p id="idChblrxwkrVrfctrnam">name::
-    <br>* Mcs.LaborX'verificator-of-worker,
-    <br>* Mcs.LaborX-worker.verificator,
+    <br>* Mcs.Chb-LaborX'verificator-of-worker,
+    <br>* Mcs.Chb-LaborX-worker.verificator,
     <a class="clsHide" href="#idChblrxwkrVrfctrnam"></a></p>
   </section>
   </section>
@@ -2291,8 +2310,8 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxwclient">#idChblxwclient</a>]
     <a class="clsHide" href="#idChblrxemplrdsn"></a></p>
   <p id="idChblrxemplrnam">name::
-    <br>* Mcs.LaborX'employer!⇒LaborX-employer,
-    <br>* Mcs.LaborX'client!⇒LaborX-employer,
+    <br>* Mcs.Chb-LaborX'employer!⇒Chb-LaborX-employer,
+    <br>* Mcs.Chb-LaborX'client!⇒Chb-LaborX-employer,
     <a class="clsHide" href="#idChblrxemplrnam"></a></p>
 
   <section id="idChblrxemrevln">
@@ -2308,8 +2327,8 @@ contract ExchangeInterface {
     <br>Furthermore, LaborX will implement an easy to use interface, paying serious attention to UX.
     <a class="clsHide" href="#idChblrxemrevlndsn"></a></p>
   <p id="idChblrxemrevlnnam">name::
-    <br>* Mcs.LaborX'evaluation-of-employer,
-    <br>* Mcs.LaborX-employer'evaluation,
+    <br>* Mcs.Chb-LaborX'evaluation-of-employer,
+    <br>* Mcs.Chb-LaborX-employer'evaluation,
     <a class="clsHide" href="#idChblrxemrevlnnam"></a></p>
   </section>
 
@@ -2321,8 +2340,8 @@ contract ExchangeInterface {
     <br>According to the current model, the governing smart contract returns a selection of workers that fit the criteria of a given job posted by a client. The LaborX DApp takes preference of workers who have more completed jobs and higher ratings. The system may grow such that the ratio of workers to jobs becomes quite large. It is therefore important that the LaborX DApp does some advanced filtering. This means that the application should not show all workers capable of performing a given job, instead select only several of the available best workers with varying rates and ratings. In this way, the most competent workers will get more work and will be paid more for their reputation. Clients may also use different custom filters that will help them to find the most fitting worker to suit their needs. They may also pick specific workers they are already familiar with. The application will also utilise smart filtering to minimise the worker intersection between clients. This is crucial for the system, especially when considering similar jobs.
     <a class="clsHide" href="#idChblrxemrschngdsn"></a></p>
   <p id="idChblrxemrschngnam">name::
-    <br>* Mcs.LaborX-employer'searching-for-worker,
-    <br>* Mcs.LaborX'searching-for-worker,
+    <br>* Mcs.Chb-LaborX-employer'searching-for-worker,
+    <br>* Mcs.Chb-LaborX'searching-for-worker,
     <a class="clsHide" href="#idChblrxemrschngnam"></a></p>
   </section>
 
@@ -2334,7 +2353,7 @@ contract ExchangeInterface {
     <br>[<a href="https://blog.chronobank.io/laborx-getting-paid-on-time-every-time-364700e3709#.fa8sj2r0p">https://blog.chronobank.io/laborx-getting-paid-on-time-every-time-364700e3709#.fa8sj2r0p</a>]
     <a class="clsHide" href="#idChblrxemrprtctndsn"></a></p>
   <p id="idChblrxemrprtctnnam">name::
-    <br>* Mcs.LaborX-employer'protection,
+    <br>* Mcs.Chb-LaborX-employer'protection,
     <a class="clsHide" href="#idChblrxemrprtctnnam"></a></p>
   </section>
   </section>
@@ -2349,8 +2368,8 @@ contract ExchangeInterface {
     <br>[<a href="https://github.com/ChronoBank/Documentation/blob/master/laborx_whitepaper.pdf">https://github.com/ChronoBank/Documentation/blob/master/laborx_whitepaper.pdf</a>]
     <a class="clsHide" href="#idChblrxpvdrdsn"></a></p>
   <p id="idChblrxpvdrnam">name::
-    <br>* Mcs.LaborX'mediator,
-    <br>* Mcs.LaborX'provider,
+    <br>* Mcs.Chb-LaborX'mediator,
+    <br>* Mcs.Chb-LaborX'provider,
     <br>* Mcs.labor-hiring-company-of-LaborX,
     <a class="clsHide" href="#idChblrxpvdrnam"></a></p>
 
@@ -2377,7 +2396,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw63P1">#idChblxw63P1</a>]
     <a class="clsHide" href="#idChblrxpvdrjbbrddsn"></a></p>
   <p id="idChblrxpvdrjbbrdnam">name::
-    <br>* Mcs.LaborX'job-board,
+    <br>* Mcs.Chb-LaborX'job-board,
     <a class="clsHide" href="#idChblrxpvdrjbbrdnam"></a></p>
 
   <section id="idChblrxpvdjbbrdschng">
@@ -2388,7 +2407,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw32P2">#idChblxw32P2</a>]
     <a class="clsHide" href="#idChblrxpvdjbbrdschngdsn"></a></p>
   <p id="idChblrxpvdjbbrdschngnam">name::
-    <br>* Mcs.LaborX'job-board-searching,
+    <br>* Mcs.Chb-LaborX'job-board-searching,
     <a class="clsHide" href="#idChblrxpvdjbbrdschngnam"></a></p>
   </section>
   </section>
@@ -2402,7 +2421,7 @@ contract ExchangeInterface {
     <br>[<a href="https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px">https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px</a>]
     <a class="clsHide" href="#idChblrxttsdsn"></a></p>
   <p id="idChblrxttsnam">name::
-    <br>* Mcs.LaborX'trust-system,
+    <br>* Mcs.Chb-LaborX'trust-system,
     <a class="clsHide" href="#idChblrxttsnam"></a></p>
   </section>
 
@@ -2414,7 +2433,7 @@ contract ExchangeInterface {
     <br>[<a href="https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px">https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px</a>]
     <a class="clsHide" href="#idChblrxrmrdsn"></a></p>
   <p id="idChblrxrmrnam">name::
-    <br>* Mcs.LaborX'recommender,
+    <br>* Mcs.Chb-LaborX'recommender,
     <a class="clsHide" href="#idChblrxrmrnam"></a></p>
   </section>
 
@@ -2426,7 +2445,7 @@ contract ExchangeInterface {
     <br>[<a href="https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px">https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px</a>]
     <a class="clsHide" href="#idChblrxevrdsn"></a></p>
   <p id="idChblrxevrnam">name::
-    <br>* Mcs.LaborX'evaluator,
+    <br>* Mcs.Chb-LaborX'evaluator,
     <a class="clsHide" href="#idChblrxevrnam"></a></p>
   </section>
 
@@ -2438,7 +2457,7 @@ contract ExchangeInterface {
     <br>[<a href="https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px">https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px</a>]
     <a class="clsHide" href="#idChblrxvfrdsn"></a></p>
   <p id="idChblrxvfrnam">name::
-    <br>* Mcs.LaborX'verifier,
+    <br>* Mcs.Chb-LaborX'verifier,
     <a class="clsHide" href="#idChblrxvfrnam"></a></p>
   </section>
 
@@ -2455,16 +2474,16 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw32P2">#idChblxw32P2</a>]
     <a class="clsHide" href="#idChblrxjobdsn"></a></p>
   <p id="idChblrxjobnam">name::
-    <br>* Mcs.LaborX'job!⇒LaborX-job,
-    <br>* Mcs.LaborX-job,
+    <br>* Mcs.Chb-LaborX'job!⇒Chb-LaborX-job,
+    <br>* Mcs.Chb-LaborX-job,
     <a class="clsHide" href="#idChblrxjobnam"></a></p>
 
   <section id="idChblrxjobwrkdsn">
   <h3 id="idChblrxjobwrkdsnH3">LaborX-job'work-description
     <a class="clsHide" href="#idChblrxjobwrkdsnH3"></a></h3>
   <p id="idChblrxjobwrkdsnnam">name::
-    <br>* Mcs.LaborX-job'work-description,
-    <br>* Mcs.LaborX-job'job-description,
+    <br>* Mcs.Chb-LaborX-job'work-description,
+    <br>* Mcs.Chb-LaborX-job'job-description,
     <a class="clsHide" href="#idChblrxjobwrkdsnnam"></a></p>
 
   <section id="idChblrxjobwrkdsnfow">
@@ -2476,7 +2495,7 @@ contract ExchangeInterface {
   <h4 id="idChblrxjobwrkdsnsklH4">LaborX-job'skills
     <a class="clsHide" href="#idChblrxjobwrkdsnsklH4"></a></h4>
   <p id="idChblrxjobwrkdsnsklnam">name::
-    <br>* Mcs.LaborX-job'skills,
+    <br>* Mcs.Chb-LaborX-job'skills,
     <a class="clsHide" href="#idChblrxjobwrkdsnsklnam"></a></p>
   </section>
 
@@ -2488,7 +2507,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw32P2">#idChblxw32P2</a>]
     <a class="clsHide" href="#idChblrxjobwrkdsntmdudsn"></a></p>
   <p id="idChblrxjobwrkdsntmdunam">name::
-    <br>* Mcs.LaborX-job'time-due,
+    <br>* Mcs.Chb-LaborX-job'time-due,
     <a class="clsHide" href="#idChblrxjobwrkdsntmdunam"></a></p>
   </section>
 
@@ -2496,7 +2515,7 @@ contract ExchangeInterface {
   <h4 id="idChblrxjobwrkdsntknH4">LaborX-job'money-used (token)
     <a class="clsHide" href="#idChblrxjobwrkdsntknH4"></a></h4>
   <p id="idChblrxjobwrkdsntknnam">name::
-    <br>* Mcs.LaborX-job'money-used,
+    <br>* Mcs.Chb-LaborX-job'money-used,
     <a class="clsHide" href="#idChblrxjobwrkdsntknnam"></a></p>
   </section>
   </section>
@@ -2513,7 +2532,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw32P2">#idChblxw32P2</a>]
     <a class="clsHide" href="#idChblrxjoblocdsn"></a></p>
   <p id="idChblrxjoblocnam">name::
-    <br>* Mcs.LaborX-job'location,
+    <br>* Mcs.Chb-LaborX-job'location,
     <a class="clsHide" href="#idChblrxjoblocnam"></a></p>
   </section>
 
@@ -2521,7 +2540,7 @@ contract ExchangeInterface {
   <h3 id="idChblrxjobpvdrusdH3">LaborX-job'provider-used
     <a class="clsHide" href="#idChblrxjobpvdrusdH3"></a></h3>
   <p id="idChblrxjobpvdrusdnam">name::
-    <br>* Mcs.LaborX-job'provider-used,
+    <br>* Mcs.Chb-LaborX-job'provider-used,
     <a class="clsHide" href="#idChblrxjobpvdrusdnam"></a></p>
   </section>
   </section>
@@ -2536,8 +2555,8 @@ contract ExchangeInterface {
     <br>[<a href="https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px">https://blog.chronobank.io/how-laborxs-reputation-system-will-work-478cdd7aab8e#.vd7xhx1px</a>]
     <a class="clsHide" href="#idChblrxrgsdsn"></a></p>
   <p id="idChblrxrgsnam">name::
-    <br>* Mcs.LaborX'metrics,
-    <br>* Mcs.LaborX'rating-system,
+    <br>* Mcs.Chb-LaborX'metrics,
+    <br>* Mcs.Chb-LaborX'rating-system,
     <a class="clsHide" href="#idChblrxrgsnam"></a></p>
 
   <section id="idChblrxatp">
@@ -2549,7 +2568,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxwactivitypoint">#idChblxwactivitypoint</a>]
     <a class="clsHide" href="#idChblrxatpdsn"></a></p>
   <p id="idChblrxatpnam">name::
-    <br>* Mcs.LaborX'activity-points,
+    <br>* Mcs.Chb-LaborX'activity-points,
     <br>* Mcs.ChronoBank'activity-points,
     <a class="clsHide" href="#idChblrxatpnam"></a></p>
   <p id="idChblrxatpP1">description::
@@ -2577,7 +2596,7 @@ contract ExchangeInterface {
     <br>A negative rating will also affect evaluator’s reputation.
     <a class="clsHide" href="#idChblrxrtgdsn"></a></p>
   <p id="idChblrxrtgnam">name::
-    <br>* Mcs.LaborX'rating,
+    <br>* Mcs.Chb-LaborX'rating,
     <a class="clsHide" href="#idChblrxrtgnam"></a></p>
   </section>
   </section>
@@ -2595,7 +2614,7 @@ contract ExchangeInterface {
     [<a class="clsPreview" href="#idChblxw4">#idChblxw4</a>]
     <a class="clsHide" href="#idChblrxwltdsn"></a></p>
   <p id="idChblrxwltnam">name::
-    <br>* Mcs.LaborX'wallet,
+    <br>* Mcs.Chb-LaborX'wallet,
     <a class="clsHide" href="#idChblrxwltnam"></a></p>
   </section>
 
@@ -2603,10 +2622,13 @@ contract ExchangeInterface {
   <h2 id="idChblrxrscH2">LaborX'resource
     <a class="clsHide" href="#idChblrxrscH2"></a></h2>
   <p id="idChblrxrscnam">name::
-    <br>* Mcs.LaborX'resource,
+    <br>* Mcs.Chb-LaborX'resource,
     <a class="clsHide" href="#idChblrxrscnam"></a></p>
   <p id="idChblrxrscwpa">addressWpg::
+    <br>* {2019-01-17} https://blog.chronobank.io/what-is-a-decentralised-application-and-how-it-works-625514e207eb,
+    <br>* {2018-06-24} https://blog.chronobank.io/laborx-sidechain-and-token-mining-explained-39777984ebaf,
     <br>* {2018-05-22} Three roles on the LaborX platform, <a href="https://blog.chronobank.io/three-roles-on-the-laborx-platform-9af9294a8be2">https://blog.chronobank.io/</a>,
+    <br>* {2018-02-21} https://blog.chronobank.io/chronobanks-new-white-paper-and-laborx-sidechain-functionality-explained-f7d0940e58e7,
     <br>* <a href="https://github.com/ChronoBank/Documentation/blob/master/laborx_whitepaper.pdf">https://github.com/ChronoBank/Documentation/blob/master/laborx_whitepaper.pdf</a>,
     <a class="clsHide" href="#idChblrxrscwpa"></a></p>
 
@@ -2629,7 +2651,7 @@ contract ExchangeInterface {
     [<a class="clsPreview" href="#idChblxw65">#idChblxw65</a>]
     <a class="clsHide" href="#idChblrxmsgngdsn"></a></p>
   <p id="idChblrxmsgngnam">name::
-    <br>* Mcs.LaborX'messaging,
+    <br>* Mcs.Chb-LaborX'messaging,
     <a class="clsHide" href="#idChblrxmsgngnam"></a></p>
   </section>
 
@@ -2648,7 +2670,7 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw64">#idChblxw64</a>]
     <a class="clsHide" href="#idChblrxschgdsn"></a></p>
   <p id="idChblrxschgnam">name::
-    <br>* Mcs.LaborX'searching,
+    <br>* Mcs.Chb-LaborX'searching,
     <a class="clsHide" href="#idChblrxschgnam"></a></p>
 
   <section id="idChblrxschgmtchg">
@@ -2659,18 +2681,23 @@ contract ExchangeInterface {
     <br>[<a class="clsPreview" href="#idChblxw8P1">#idChblxw8P1</a>]
     <a class="clsHide" href="#idChblrxschgmtchgdsn"></a></p>
   <p id="idChblrxschgmtchgnam">name::
-    <br>* Mcs.LaborX'matching,
+    <br>* Mcs.Chb-LaborX'matching,
     <a class="clsHide" href="#idChblrxschgmtchgnam"></a></p>
   </section>
   </section>
   </section>
 
-  <section id="idChblrxEvg">
-  <h2 id="idChblrxEvgH2">LaborX'EVOLUTING
-    <a class="clsHide" href="#idChblrxEvgH2"></a></h2>
-  <p id="idChblrxEvgnam">name::
-    <br>* Mcs.LaborX'evoluting,
-    <a class="clsHide" href="#idChblrxEvgnam"></a></p>
+  <section id="idChblrxevg">
+  <h2 id="idChblrxevgH2">LaborX'EVOLUTING
+    <a class="clsHide" href="#idChblrxevgH2"></a></h2>
+  <p id="idChblrxevgnam">name::
+    <br>* Mcs.Chb-LaborX'evoluting,
+    <a class="clsHide" href="#idChblrxevgnam"></a></p>
+  <p id="idChblrxevg20190311">{time.2019-03-11}::
+    <br>=== version 0.9.1:
+    <br>In this release (0.9.1), we have added a number of improvements to the application process and made communication between users easier. In total, we have fixed 48 bugs and carried out significant work on network stability. The UX and UI are also much improved, especially the UX for the job workflow.
+    <br>[https://blog.chronobank.io/development-update-laborx-0-9-1-a918cea8aed2]
+    <a class="clsHide" href="#idChblrxevg20190311"></a></p>
   </section>
 </section>
 

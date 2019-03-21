@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.chain-network (chain-net.8-72-0.2019-03-20)</title>
+  <title>Mcs.chain-network (chain-net.8-73-0.2019-03-21)</title>
   <meta name="keywords" content="crypto-economics-chain--net, chain-net, decentralized-trust, Đ-net, Đ-chain, Dledger, McsHitp">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -332,6 +332,7 @@
     <br>* Mcs.appender-node--of--chain-network!⇒chain-node.appender,
     <br>* Mcs.chain-net'appender-node!⇒chain-node.appender,
     <br>* Mcs.chain-node.appender,
+    <br>* Mcs.chain-node.full.appender!⇒chain-node.appender,
     <br>* Mcs.validator-node--of--chain-net!⇒chain-node.appender,
     <a class="clsHide" href="#idDtcnodApdrnam"></a></p>
   <p id="idDtcnodApdrwpa">addressWpg::
@@ -343,18 +344,38 @@
     <a class="clsHide" href="#idDtcnodApdrSpc"></a></p>
   </section>
 
-  <section id="idDtcnodApdrFul">
-  <h2 id="idDtcnodApdrFulH2">chain-node.FULL
-    <a class="clsHide" href="#idDtcnodApdrFulH2"></a></h2>
-  <p id="idDtcnodApdrFuldsn">description::
+  <section id="idDtcnodFul">
+  <h2 id="idDtcnodFulH2">chain-node.FULL
+    <a class="clsHide" href="#idDtcnodFulH2"></a></h2>
+  <p id="idDtcnodFuldsn">description::
     <br>· full-Đ-node is <a class="clsPreview" href="#idDtcnodFT">a-Đ-node</a> that stores the-whole <a class="clsPreview" href="#idDtcchnT">Đ-chain</a>.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2017-12-16]
-    <a class="clsHide" href="#idDtcnodApdrFuldsn"></a></p>
-  <p id="idDtcnodApdrFulnam">name::
+    <a class="clsHide" href="#idDtcnodFuldsn"></a></p>
+  <p id="idDtcnodFulnam">name::
     <br>* Mcs.full-node--of--chain-net,
     <br>* Mcs.chain-net'full-node,
     <br>* Mcs.chain-node.full,
-    <a class="clsHide" href="#idDtcnodApdrFulnam"></a></p>
+    <a class="clsHide" href="#idDtcnodFulnam"></a></p>
+  <p id="idDtcnodFulSpc">specific::
+    <br>* appender--full-node,
+    <br>* appenderNo--full-node,
+    <a class="clsHide" href="#idDtcnodFulSpc"></a></p>
+
+  <section id="idDtcnodFulApdr">
+  <h3 id="idDtcnodFulApdrH3">full-node.APPENDER (<a class="clsPreview" href="#idDtcnodApdr">link</a>)
+    <a class="clsHide" href="#idDtcnodFulApdrH3"></a></h3>
+  </section>
+
+  <section id="idDtcnodFulApdrN">
+  <h3 id="idDtcnodFulApdrNH3">full-node.APPENDER.NO
+    <a class="clsHide" href="#idDtcnodFulApdrNH3"></a></h3>
+  <p id="idDtcnodFulApdrNdsn">description::
+    <br>· non-appender full-nodes help ensure the-security and stability of the-net.
+    <a class="clsHide" href="#idDtcnodFulApdrNdsn"></a></p>
+  <p id="idDtcnodFulApdrNnam">name::
+    <br>* Mcs.chain-node.full.appenderNo,
+    <a class="clsHide" href="#idDtcnodFulApdrNnam"></a></p>
+  </section>
   </section>
 
   <section id="idDtcnodApdrLgt">
@@ -6593,6 +6614,11 @@
     <a class="clsHide" href="#idDtcdngSpcP1"></a></p>
   </section>
 
+  <section id="idDtcdngTx">
+  <h2 id="idDtcdngTxH2">chain-doing.TRANSACTION (<a class="clsPreview" href="#idDtctxFNT">link</a>)
+    <a class="clsHide" href="#idDtcdngTxH2"></a></h2>
+  </section>
+
   <section id="idDtcdngOpn">
   <h2 id="idDtcdngOpnH2">chain-doing.OPERATION
     <a class="clsHide" href="#idDtcdngOpnH2"></a></h2>
@@ -6636,8 +6662,6 @@
     <br>* Mcs.chain-net'upgrating,
     <br>* Mcs.chain-netAeProtocol-upgrate-mechanism,
     <br>* Mcs.chain-netAeUpgrating,
-    <br>* Mcs.chain'protocol-upgrate-mechanism,
-    <br>* Mcs.Dledger-upgrating,
     <a class="clsHide" href="#idDtcdngUpgnam"></a></p>
 
   <section id="idDtcdngUpgHfk">
@@ -7290,16 +7314,20 @@
     <a class="clsHide" href="#idDtcsvcEduSpc"></a></p>
   </section>
 
-  <section id="idDtcsvcEdu">
-  <h3 id="idDtcsvcEduH3">chain-service.FORCASTING
-    <a class="clsHide" href="#idDtcsvcEduH3"></a></h3>
-  <p id="idDtcsvcEdunam">name::
+  <section id="idDtcsvcFctg">
+  <h3 id="idDtcsvcFctgH3">chain-service.FORCASTING
+    <a class="clsHide" href="#idDtcsvcFctgH3"></a></h3>
+  <p id="idDtcsvcFctgnam">name::
     <br>* Mcs.chain-service.forcasting,
+    <br>* Mcs.chain-service.prediction,
     <br>* Mcs.forcasting--chain-service,
-    <a class="clsHide" href="#idDtcsvcEdunam"></a></p>
-  <p id="idDtcsvcEduSpc">specific::
+    <a class="clsHide" href="#idDtcsvcFctgnam"></a></p>
+  <p id="idDtcsvcFctgwpa">addressWpg::
+    <br>* {2019-03-21} https://cointelegraph.com/news/redditors-call-out-reported-scam-on-blockchain-based-prediction-platform-augur,
+    <a class="clsHide" href="#idDtcsvcFctgwpa"></a></p>
+  <p id="idDtcsvcFctgSpc">specific::
     <br>* prediction-markets: https://gnosis.pm/faq.html,
-    <a class="clsHide" href="#idDtcsvcEduSpc"></a></p>
+    <a class="clsHide" href="#idDtcsvcFctgSpc"></a></p>
   </section>
   </section>
 
