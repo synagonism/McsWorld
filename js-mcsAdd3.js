@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-6-1.2019-05-05: misc,
  * version.0-6-0.2018-06-29: disqus-dir,
  * version.0-5-1.2018-03-17: filMcs,
  * version.0-5-0.2018-02-18: steemit,
@@ -21,22 +22,23 @@
 var
   moFs = require('fs'),
   moUtil = require('./js-moUtil-old.js'),
+  s,
+
   //// INPUT VALUES ////
   //1. Add counter or not
   bCounter = true,
   bDisqus = false,
-  //3. Directory of the-concept (dirCor or else)
+  //2. Directory of the-concept (dirCor or else)
   sDir = 'dirTchInf',
   sDIR = 'DirTchInf',
-  //4. Name of the-title
-  sN = 'Blockstack--blockchain-net',
-  //5. SHORT-name: Dcc-net, Đnet, ĐEthereum,
-  sNS = 'Blockstack',
-  //6. FILE-name: shows relation of another file: DtcnetIota
-  sNFil = 'DtcbnetBlockstack',
-  //7. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Bksk',
-  s;
+  //3. Name of the-title
+  sN = 'decentralized-autonomous-organization',
+  //4. SHORT-name: Dchain-net, Đnet,
+  sNS = 'Dogn',
+  //5. FILE-name: shows relation of another file: DtcnetIota
+  sNFil = 'Dogn',
+  //6. Name for IDs eg Dtc, unique in this file.
+  sNId = 'Dogn';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -52,7 +54,8 @@ s =
   '<body>\n' +
   '<header id="idHeader">\n' +
   '  <p></p>\n' +
-  '  <h1 id="idHeaderH1">structured-concept: ' + sN + ' (' + sNS + ')\n' +
+  '  <h1 id="idHeaderH1">structured-concept:\n' +
+  '    <br>' + sN + ' (' + sNS + ')\n' +
   '    </h1>\n' +
   '  <p id="idHeadercrd">McsHitp-creation: {' + moUtil.fDateYMD() + '}\n' +
   '    <a class="clsHide" href="#idHeadercrd"></a></p>\n' +
@@ -65,11 +68,11 @@ s =
   '    <br>· \n' +
   '    <a class="clsHide" href="#idDescription"></a></p>\n' +
   '  <p id="idName">name::\n' +
-  '    <br>* Mcs.filMcs' + sNFil + '.last.html,\n' +
-  '    <br>* Mcs.' + sDir +'/filMcs' + sNFil + '.last.html,\n' +
-  '    <br>* Mcs.' + sN + ',\n' +
-  '    <br>* Mcs.' + sN + '-(' + sNS + '),\n' +
-  '    <br>* Mcs.' + sNS + '-(' + sN + '),\n' +
+  '    <br>* Mcs.filMcs' + sNFil + '.last.html' + '!⇒' + sNS + ',\n' +
+  '    <br>* Mcs.' + sDir +'/filMcs' + sNFil + '.last.html' + '!⇒' + sNS + ',\n' +
+  '    <br>* Mcs.' + sNS + ',\n' +
+  '    <br>* Mcs.' + sN + '!⇒' + sNS + ',\n' +
+  '    <br>* Mcs.' + sNS + '-(' + sN + ')' + '!⇒' + sNS + ',\n' +
   '    <a class="clsHide" href="#idName"></a></p>\n' +
   '</section>\n' +
   '\n' +
@@ -77,12 +80,22 @@ s =
   '  <h1 id="id' + sNId + 'rscFTH1">resource of ' + sNS + '\n' +
   '    <a class="clsHide" href="#id' + sNId + 'rscFTH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'rscnam">name::\n' +
-  '    <br>* Mcs.' + sN + '\'resource,\n' +
-  '    <br>* Mcs.' + sNS + 'AeResource,\n' +
+  '    <br>* Mcs.' + sNS + '\'resource,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'rscnam"></a></p>\n' +
   '  <p id="id' + sNId + 'rscwpa">addressWpg::\n' +
   '    <br>* \n' +
   '    <a class="clsHide" href="#id' + sNId + 'rscwpa"></a></p>\n' +
+  '</section>\n' +
+  '\n' +
+  '<section id="id' + sNId + 'evgFT">\n' +
+  '  <h1 id="id' + sNId + 'evgFTH1">EVOLUTING of ' + sNS + '\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'evgFTH1"></a></h1>\n' +
+  '  <p id="id' + sNId + 'evgnam">name::\n' +
+  '    <br>* Mcs.' + sNS + '\'evoluting,\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'evgnam"></a></p>\n' +
+  '  <p id="id' + sNId + 'evg">{time.}::\n' +
+  '    <br>=== :\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'evg"></a></p>\n' +
   '</section>\n' +
   '\n' +
   '<section id="id' + sNId + 'gncFT">\n' +
@@ -99,23 +112,11 @@ s =
   '  <h1 id="id' + sNId + 'SpcFTH1">' + sNS + '.SPECIFIC\n' +
   '    <a class="clsHide" href="#id' + sNId + 'SpcFTH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'Spcnam">name::\n' +
-  '    <br>* Mcs.' + sN + '.specific,\n' +
-  '    <br>* Mcs.' + sNS + 'AsSpecific,\n' +
+  '    <br>* Mcs.' + sNS + '\'specific,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'Spcnam"></a></p>\n' +
   '  <p id="id' + sNId + 'SpcP1">specific::\n' +
   '    <br>\n' +
   '    <a class="clsHide" href="#id' + sNId + 'SpcP1"></a></p>\n' +
-  '</section>\n' +
-  '\n' +
-  '<section id="id' + sNId + 'EvgFT">\n' +
-  '  <h1 id="id' + sNId + 'EvgFTH1">' + sNS + '\.EVOLUTING\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'EvgFTH1"></a></h1>\n' +
-  '  <p id="id' + sNId + 'Evgnam">name::\n' +
-  '    <br>* Mcs.' + sNS + '.evoluting,\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'Evgnam"></a></p>\n' +
-  '  <p id="id' + sNId + 'Evg">{time.}::\n' +
-  '    <br>=== :\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'Evg"></a></p>\n' +
   '</section>\n' +
   '\n' +
   '<section id="idMeta">\n' +
@@ -136,7 +137,7 @@ s = s +
   '    <a class="clsPreview" href="../../#idDescription">synagonism.net</a> /\n' +
   '    <a class="clsPreview" href="../filMcsWorld.last.html#idDescription">Mcs-worldview</a> /\n' +
   '    <a class="clsPreview" href="FilMcs' + sDir + '.last.html#idDescription">' + sDir + '</a> /\n' +
-  '    ' + sN + '\n' +
+  '    ' + sNS + '\n' +
   '    </p>\n' +
   '  <p id="idMetaP1">SEARCH::\n' +
   '    <br>· this page uses \'<span class="clsColorRed">locator-names</span>\', names that when you find them, you find the-LOCATION of the-concept they denote.\n' +
