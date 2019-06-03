@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.decentralized-autonomous-organization (Dogn.0-21-0.2019-06-01 draft)</title>
+  <title>Mcs.decentralized-autonomous-organization (Dogn.0-23-0.2019-06-03 draft)</title>
   <meta name="keywords" content="decentralized-autonomous-organization, Dogn, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -54,6 +54,9 @@
     <br>===
     <br>"the current system (rule of law) makes room for the new system (rule of code)"
     <br>[https://github.com/aragon/nest/issues/48]
+    <br>===
+    <br>"A DAO is a self-organizing entity, and at large better resembles an organism rather than an organization."
+    <br>[https://daostack.io/wp/DAOstack-White-Paper-en.pdf]
     <a class="clsHide" href="#idDescription"></a></p>
   <p id="idName">name::
     <br>* Mcs.filMcsDogn.last.html!⇒Dogn,
@@ -109,12 +112,19 @@
   <h2 id="idDognskhrSpcH2">stakeholder.SPECIFIC
     <a class="clsHide" href="#idDognskhrSpcH2"></a></h2>
   <p id="idDognskhrSpcP1">specific::
-    <br>* account-stakeholder,
-    <br>* accountNo-stakeholder,
+    <br>* <a class="clsPreview" href="stakeholder.ACCOUNT">account-stakeholder</a>,
+    <br>* <a class="clsPreview" href="#idDognskhrAcntN">accountNo-stakeholder</a>,
     <br>===
     <br>* <a class="clsPreview" href="#idDognmbr">internal-stakeholder</a>,
-    <br>* internalNo-stakeholder,
+    <br>* <a class="clsPreview" href="#idDognskhrExl">internalNo-stakeholder</a>,
     <br>===
+    <br>* contractor,
+    <br>* contributor,
+    <br>* customer,
+    <br>* developer,
+    <br>* governor,
+    <br>* human-entity,
+    <br>* user,
     <a class="clsHide" href="#idDognskhrSpcP1"></a></p>
   </section>
 
@@ -151,8 +161,8 @@
     <br>· this account is-managed by any human-entity.
     <a class="clsHide" href="#idDognskhrAcntdsn"></a></p>
   <p id="idDognskhrAcntnam">name::
-    <br>* Mcs.Dogn-stakholder.account,
-    <br>* Mcs.account-stakholder--of-Dogn,
+    <br>* Mcs.Dogn-stakeholder.account,
+    <br>* Mcs.account-stakeholder--of-Dogn,
     <a class="clsHide" href="#idDognskhrAcntnam"></a></p>
   </section>
 
@@ -186,6 +196,8 @@
   <h2 id="idDognmbrH2">stakeholder.INTERNAL
     <a class="clsHide" href="#idDognmbrH2"></a></h2>
   <p id="idDognmbrdsn">description::
+    <br>· member-of-Dorg is any <a class="clsPreview" href="#idDognskhr">stakeholder</a> that MAKES UP (undefined!) the-Dorg.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2019-06-02]
     <br>· member-of-Dorg is any human or human-organization that MAKE UP the-Dorg.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-11-03]
     <a class="clsHide" href="#idDognmbrdsn"></a></p>
@@ -207,6 +219,10 @@
     <br>* Mcs.Dogn'external-stakeholder,
     <br>* Mcs.Dogn'stakeholder.external,
     <a class="clsHide" href="#idDognskhrExlnam"></a></p>
+  <p id="idDognskhrExlSpc">specific::
+    <br>* contractor,
+    <br>* customer,
+    <a class="clsHide" href="#idDognskhrExlSpc"></a></p>
   </section>
 
   <section id="idDognskhrCrtr">
@@ -301,6 +317,9 @@
     <br>· a-Dogn must have a-governance-system.
     <br>· if not it is not an-organization but a-group.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2019-04-03]
+    <br>===
+    <br>"Decentralized governance is the field of protocols that coordinate large number of agents into a collective action, implemented with smart contracts on the blockchain. It is also the basis for decentralized autonomous organization (DAO)."
+    <br>[https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c]
     <a class="clsHide" href="#idDogngovcdsn"></a></p>
   <p id="idDogngovcnam">name::
     <br>* Mcs.Dgovernance-service.organization!⇒Dogn-govc,
@@ -314,6 +333,7 @@
     <a class="clsHide" href="#idDognalgoH2"></a></h2>
   <p id="idDognalgodsn">description::
     <br>· a-Dogn operates on rules stored on <a class="clsPreview" href="filMcsDtcnet.last.html#idDtcchnT">a-Dchain</a>.
+    <br>· members submit proposals, then vote on them, with a proposal passing if a majority of members vote yes.
     <a class="clsHide" href="#idDognalgodsn"></a></p>
   <p id="idDognalgonam">name::
     <br>* Mcs.Dogn'algorithm,
@@ -343,7 +363,7 @@
   <h2 id="idDognprpslH2">proposal of govc
     <a class="clsHide" href="#idDognprpslH2"></a></h2>
   <p id="idDognprpsldsn">description::
-    <br>·
+    <br>· members submit proposals, then vote on them, with a proposal passing if a majority of members vote yes.
     <a class="clsHide" href="#idDognprpsldsn"></a></p>
   <p id="idDognprpslnam">name::
     <br>* Mcs.Dogn'proposal,
@@ -455,6 +475,9 @@
   <p id="idDogngovcefvndsn">description::
     <br>"successful in producing a desired or intended result."
     <br>[Google dictionary]
+    <br>===
+    <br>"DAOs will replace the existing corporate structures not because they are nicer or more moral, but rather simply since they will be far more effective."
+    <br>[{2018-04-22} https://daostack.io/wp/DAOstack-White-Paper-en.pdf]
     <a class="clsHide" href="#idDogngovcefvndsn"></a></p>
   <p id="idDogngovcefvnnam">name::
     <br>* Mcs.Dogn'effectiveness-of-governance,
@@ -485,6 +508,14 @@
     <br>* Mcs.Dogn-govc'governing,
     <br>* Mcs.Dogn'governing,
     <a class="clsHide" href="#idDogngovgnam"></a></p>
+  <p id="idDogngovgSpc">specific::
+    <br>* off-chain,
+    <br>* on-chain,
+    <br>===
+    <br>* creating,
+    <br>* budgeting,
+    <br>* voting,
+    <a class="clsHide" href="#idDogngovgSpc"></a></p>
 
   <section id="idDognvtg">
   <h3 id="idDognvtgH3">voting of govc
@@ -495,21 +526,18 @@
     <br>[https://github.com/DemocracyEarth/paper/blob/master/FAQ/FAQ-en.md]
     <a class="clsHide" href="#idDognvtgdsn"></a></p>
   <p id="idDognvtgnam">name::
-    <br>* Mcs.Dogn-govc'voting,
     <br>* Mcs.Dogn'voting,
+    <br>* Mcs.Dogn-govc'voting,
     <a class="clsHide" href="#idDognvtgnam"></a></p>
-  </section>
-
-  <section id="idDognactg">
-  <h3 id="idDognactgH3">accounting of govc
-    <a class="clsHide" href="#idDognactgH3"></a></h3>
-  <p id="idDognactgdsn">description::
-    <br>· the-managing of financial-accounts of the-Dogn.
-    <a class="clsHide" href="#idDognactgdsn"></a></p>
-  <p id="idDognactgnam">name::
-    <br>* Mcs.Dogn'accounting,
-    <br>* Mcs.Dogn-govc'accounting,
-    <a class="clsHide" href="#idDognactgnam"></a></p>
+  <p id="idDognvtgwpa">addressWpg::
+    <br>* {2019-03-25} Adam-Levi, https://medium.com/daostack/reputation-vs-tokens-6d7642c7a538,
+    <a class="clsHide" href="#idDognvtgwpa"></a></p>
+  <p id="idDognvtgSpc">specific::
+    <br>* account-voting,
+    <br>===
+    <br>* reputation-voting,
+    <br>* token-voting,
+    <a class="clsHide" href="#idDognvtgSpc"></a></p>
   </section>
   </section>
 </section>
@@ -523,6 +551,18 @@
   <p id="idDognspcnam">name::
     <br>* Mcs.Dogn'space,
     <a class="clsHide" href="#idDognspcnam"></a></p>
+</section>
+
+<section id="idDogntool">
+  <h1 id="idDogntoolH1">tool of Dogn
+    <a class="clsHide" href="#idDogntoolH1"></a></h1>
+  <p id="idDogntooldsn">description::
+    <br>· computer-programs (mainly <a class="clsPreview" href="#idDtcpgmDapp">Dapps</a>) used in the-management of Dogn.
+    <a class="clsHide" href="#idDogntooldsn"></a></p>
+  <p id="idDogntoolnam">name::
+    <br>* Mcs.Dogn'tool,
+    <br>* Mcs.Dogn-tool,
+    <a class="clsHide" href="#idDogntoolnam"></a></p>
 </section>
 
 <section id="idDogneval">
@@ -540,6 +580,18 @@
     <br>* {2013-11-02} Daniel-Larimer, DAC Revisited: <a href="https://letstalkbitcoin.com/dac-revisited">https://letstalkbitcoin.com/dac-revisited</a>,
     <br>* {2016-05-16} Daniel-Larimer, Is The DAO going to be DOA?: <a href="https://steemit.com/crypto-news/@dan/is-the-dao-going-to-be-doa">https://steemit.com/crypto-news/@dan/</a>,
     <a class="clsHide" href="#idDognevalwpa"></a></p>
+
+  <section id="idDognevalBnft">
+  <h2 id="idDognevalBnftH2">benefit of Dogn
+    <a class="clsHide" href="#idDognevalBnftH2"></a></h2>
+  <p id="idDognevalBnftdsn">description::
+    <br>· no single point of control, or failure.
+    <a class="clsHide" href="#idDognevalBnftdsn"></a></p>
+  <p id="idDognevalBnftnam">name::
+    <br>* Mcs.Dogn'evaluation.benefit!⇒Dogn-benefit,
+    <br>* Mcs.Dogn-benefit,
+    <a class="clsHide" href="#idDognevalBnftnam"></a></p>
+  </section>
 
   <section id="idDognevalPblm">
   <h2 id="idDognevalPblmH2">problem of Dogn
@@ -582,7 +634,9 @@
     <br>* {2019-01-28} Eric-Gorski, https://blog.gnosis.pm/2019-is-the-year-of-the-dao-5a428f90fb55,
     <br>* {2018-11-28} Stefano-Bernardi, Decentralized organizations are the future: why I’m joining Aragon, https://medium.com/@stefanobernardi/decentralized-organizations-are-the-future-why-im-joining-aragon-52ddd339ed2e,
     <br>* {2018-10-30} Aragon 0.6 is live on Mainnet, https://blog.aragon.org/aragon-06-is-live-on-mainnet/,
+    <br>* {2018-10-23} Max-Semenchuk, What is Distributed Governance? https://medium.com/dgov/what-is-distributed-governance-3b103eb082c0,
     <br>* {2018-06-18} Andrew-Furmanczyk, What is a DAC? - Explained, https://www.youtube.com/watch?time_continue=54&v=ahoFGzxE_NY,
+    <br>* {2018-02-06} Field.Matan, Decentralized Governance Matters, https://medium.com/daostack/decentralized-governance-first-principles-1fc6eaa492ed,
     <br>* {2016-05-31} Ralph C. Merkle: Daos, Democracy and Governance: <a href="http://merkle.com/papers/DaodemocracyDraft.pdf">http://merkle.com/papers/DaodemocracyDraft.pdf</a>,
     <br>* {2016-05-27} Dino-Mark, Vlad-Zamfir, Emin-Gün-Sirer, http://hackingdistributed.com/2016/05/27/dao-call-for-moratorium/,
     <br>* {2013-09-19} Vitalik Buterin: Bootstrapping A Decentralized Autonomous Corporation: Part I: <a href="https://bitcoinmagazine.com/articles/bootstrapping-a-decentralized-autonomous-corporation-part-i-1379644274/">https://bitcoinmagazine.com/articles/bootstrapping-a-decentralized-autonomous-corp.../</a>
@@ -590,6 +644,7 @@
     <br>* https://aragon.one/,
     <br>* https://docs.bisq.network/user-dao-intro.html,
     <br>* What if the blockchain's killer app was governance? https://klsn.io/,
+    <br>* https://dgov.foundation/,
     <a class="clsHide" href="#idDognrscwpa"></a></p>
 
   <section id="idDognwbst">
@@ -655,6 +710,35 @@
   <p id="idDogndngFTnam">name::
     <br>* Mcs.Dogn'doing,
     <a class="clsHide" href="#idDogndngFTnam"></a></p>
+  <p id="idDogndngFTSpc">specific::
+    <br>* service,
+    <br>* accounting,
+    <br>* predicting,
+    <br>* proposing,
+    <br>* staking,
+    <a class="clsHide" href="#idDogndngFTSpc"></a></p>
+
+  <section id="idDognsrvc">
+  <h3 id="idDognsrvcH3">service of Dogn
+    <a class="clsHide" href="#idDognsrvcH3"></a></h3>
+  <p id="idDognsrvcdsn">description::
+    <br>· the-function of a-Dogn, the reason for its existence.
+    <a class="clsHide" href="#idDognsrvcdsn"></a></p>
+  <p id="idDognsrvcnam">name::
+    <br>* Mcs.Dogn'service,
+    <a class="clsHide" href="#idDognsrvcnam"></a></p>
+  </section>
+
+  <section id="idDognactg">
+  <h3 id="idDognactgH3">accounting of Dogn
+    <a class="clsHide" href="#idDognactgH3"></a></h3>
+  <p id="idDognactgdsn">description::
+    <br>· the-process of keeping financial-accounts of the-Dogn.
+    <a class="clsHide" href="#idDognactgdsn"></a></p>
+  <p id="idDognactgnam">name::
+    <br>* Mcs.Dogn'accounting,
+    <a class="clsHide" href="#idDognactgnam"></a></p>
+  </section>
 </section>
 
 <section id="idDognevlgFT">
@@ -2039,6 +2123,91 @@
     <br>* <a class="clsPreview" href="#idDognskhr">Dogn-stakeholder</a>,
     <a class="clsHide" href="#idDaostkskhrgncchn"></a></p>
 
+  <section id="idDaostkskhrSpc">
+  <h3 id="idDaostkskhrSpcH3">stakeholder.SPECIFIC
+    <a class="clsHide" href="#idDaostkskhrSpcH3"></a></h3>
+  <p id="idDaostkskhrSpcnam">name::
+    <br>* Mcs.DAOstack-stakeholder.specific,
+    <a class="clsHide" href="#idDaostkskhrSpcnam"></a></p>
+  <p id="idDaostkskhrSpcSpc">specific::
+    <br>* governor,
+    <br>* predictor,
+    <a class="clsHide" href="#idDaostkskhrSpcSpc"></a></p>
+  </section>
+
+  <section id="idDaostkskhrPdtr">
+  <h3 id="idDaostkskhrPdtrH3">stakeholder.PREDICTOR
+    <a class="clsHide" href="#idDaostkskhrPdtrH3"></a></h3>
+  <p id="idDaostkskhrPdtrdsn">description::
+    <br>· predictors are GEN-holders (members or non-members of a-DAOstack-ogn) who stake GEN on proposals.
+    <a class="clsHide" href="#idDaostkskhrPdtrdsn"></a></p>
+  <p id="idDaostkskhrPdtrnam">name::
+    <br>* Mcs.DAOstack'predictor,
+    <br>* Mcs.DAOstack-stakeholder'predictor,
+    <a class="clsHide" href="#idDaostkskhrPdtrnam"></a></p>
+  </section>
+
+  <section id="idDaostkskhrGvnr">
+  <h3 id="idDaostkskhrGvnrH3">stakeholder.GOVERNOR
+    <a class="clsHide" href="#idDaostkskhrGvnrH3"></a></h3>
+  <p id="idDaostkskhrGvnrnam">name::
+    <br>* Mcs.DAOstack-stakeholder.governor!⇒DAOstack-governor,
+    <br>* Mcs.DAOstack-governor,
+    <a class="clsHide" href="#idDaostkskhrGvnrnam"></a></p>
+  <p id="idDaostkskhrGvnrgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="#idDogngvnr">Dogn-governor</a>,
+    <a class="clsHide" href="#idDaostkskhrGvnrgncchn"></a></p>
+
+  <section id="idDaostkskhrGvnrrptn">
+  <h4 id="idDaostkskhrGvnrrptnH4">reputation of governor
+    <a class="clsHide" href="#idDaostkskhrGvnrrptnH4"></a></h4>
+  <p id="idDaostkskhrGvnrrptndsn">description::
+    <br>"In the initial protocol, a user’s Reputation score represents their decision-making power.
+    <br>Each DAO built on the stack has its own Reputation ledger that records the Reputation scores of users in that DAO.
+    <br>In any given DAO, the weight of a user’s vote, their “voting power,” is equal to their Reputation score in that DAO.
+    <br>Since any Ethereum address can be assigned Reputation, other DAOs can also be Reputation-holders, allowing authority to be flexibly distributed across sub-agencies or partner organizations."
+    <br>[https://medium.com/daostack/a-guide-to-daostacks-initial-reputation-protocol-f8365f157f7a]
+    <br>===
+    <br>"In DAOstack, Reputation has the following properties:
+    <br>Burnable: namely, it is not really “yours.” It is yours as long as the owner of the Reputation system does not choose to take it away. With DAOstack, there is a hidden assumption that the Reputation system owner is not a single person, but rather a DAO, whose actions are controlled by the DAO’s Reputation holders.
+    <br>Non-transferable: namely, an account to which some Reputation was allocated can neither transfer nor burn it."
+    <br>[https://medium.com/daostack/reputation-vs-tokens-6d7642c7a538]
+    <br>===
+    <br>"Reputation is quantifiable (for example, I have over 150 reputation), but it has no monetary value. However, it does represent how much influence a user has on the system, and that’s why it is integral to the system. By increasing the amount of reputation that you have, you have a greater ability to determine the outcome of proposals."
+    <br>[https://medium.com/ethex-market/how-to-use-the-alchemy-dapp-and-the-genesis-dao-6bfd91a357dc]
+    <a class="clsHide" href="#idDaostkskhrGvnrrptndsn"></a></p>
+  <p id="idDaostkskhrGvnrrptnnam">name::
+    <br>* Mcs.DAOstack'reputation!⇒DAOstack-reputation,
+    <br>* Mcs.DAOstack'reputation-points!⇒DAOstack-reputation,
+    <br>* Mcs.DAOstack'voting-power!⇒DAOstack-reputation,
+    <br>* Mcs.DAOstack-governor'reputation!⇒DAOstack-reputation,
+    <br>* Mcs.DAOstack-reputation,
+    <a class="clsHide" href="#idDaostkskhrGvnrrptnnam"></a></p>
+  <p id="idDaostkskhrGvnrrptnwpa">addressWpg::
+    <br>* https://docs.google.com/document/d/1_niOtwmcRBGsGVNQvahB-ANgOlqrH_ZHV4A_PvHu8Yw/edit,
+    <br>* {2019-02-12} https://medium.com/daostack/a-guide-to-daostacks-initial-reputation-protocol-f8365f157f7a,
+    <a class="clsHide" href="#idDaostkskhrGvnrrptnwpa"></a></p>
+
+  <section id="idDaostkskhrGvnrrptnchg">
+  <h5 id="idDaostkskhrGvnrrptnchgH5">change of reputation
+    <a class="clsHide" href="#idDaostkskhrGvnrrptnchgH5"></a></h5>
+  <p id="idDaostkskhrGvnrrptnchgdsn">description::
+    <br>"You can request to receive some reputation in a proposal, however, it’s not directly transferable between users.
+    <br>It can also be acquired through participating in the DAO in other ways. For example, by submitting and passing a proposal, you can receive more reputation. If you vote correctly on the outcome of a non-boosted proposal, you can receive more reputation, and if you vote incorrectly you lose reputation."
+    <br>[https://medium.com/ethex-market/how-to-use-the-alchemy-dapp-and-the-genesis-dao-6bfd91a357dc]
+    <a class="clsHide" href="#idDaostkskhrGvnrrptnchgdsn"></a></p>
+  <p id="idDaostkskhrGvnrrptnchgnam">name::
+    <br>* Mcs.DAOstack-reputation'change,
+    <a class="clsHide" href="#idDaostkskhrGvnrrptnchgnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idDaostkskhrGvnrvtg">
+  <h4 id="idDaostkskhrGvnrvtgH4">voting of governor (<a class="clsPreview" href="#idDaostkvtg">link</a>)
+    <a class="clsHide" href="#idDaostkskhrGvnrvtgH4"></a></h4>
+  </section>
+  </section>
+
   <section id="idDaostkskhrHmn">
   <h3 id="idDaostkskhrHmnH3">stakeholder.HUMAN
     <a class="clsHide" href="#idDaostkskhrHmnH3"></a></h3>
@@ -2084,13 +2253,30 @@
   <h4 id="idDaostkgovcgnpnH4">GEN-prediction of DAOstack
     <a class="clsHide" href="#idDaostkgovcgnpnH4"></a></h4>
   <p id="idDaostkgovcgnpndsn">description::
-    <br>"GEN Prediction is a prediction system embedded in DAOstack’s unique DAO governance protocol, which can be accessed through the Alchemy interface. It plays a vital role in solving a basic problem of governance: how to efficiently make decisions that accurately represent the views of large groups of people."
+    <br>"GEN Prediction is a prediction system embedded in DAOstack’s unique DAO governance protocol, which can be accessed through <a class="clsPreview" href="#idDaostkAlcm">the Alchemy interface</a>. It plays a vital role in solving a basic problem of governance: how to efficiently make decisions that accurately represent the views of large groups of people."
     <br>[https://medium.com/daostack/joining-the-gen-predictors-network-f7be2d93754d]
+    <br>===
+    <br>"In such a DAO, both members and non-members can stake GEN on a proposal, betting that the DAO will either pass or fail it. They have strong motive to do this since correct predictions will earn them a reward. Essentially, both DAO members and outsiders have the opportunity to offer a DAO their expert attention in exchange for a GEN reward, helping the DAO focus on the highest-leverage proposals and make smarter collective decisions. Put another way, any individual who confidently believes a particular proposal will pass can boost it by purchasing a large prediction stake, directly influencing the DAO’s collective attention. This set of incentives is a core part of what we call the “holographic consensus” approach.
+    <br>... All organizations built on DAOstack are free to install the GEN prediction system in their own governance schemes, and there are some good reasons to include it: 1) GEN prediction puts an existing network of knowledgeable, active predictors to work for you, 2) the module to activate it is pre-built, and 3) it gives the entire GEN ecosystem skin in the game of your DAO’s success."
+    <br>[https://medium.com/daostack/on-the-utility-of-the-gen-token-eb4f341d770e]
     <a class="clsHide" href="#idDaostkgovcgnpndsn"></a></p>
   <p id="idDaostkgovcgnpnnam">name::
     <br>* Mcs.DAOstack'GEN-prediction,
     <br>* Mcs.DAOstack-govc'GEN-prediction,
     <a class="clsHide" href="#idDaostkgovcgnpnnam"></a></p>
+  </section>
+
+  <section id="idDaostkgovcrnsm">
+  <h4 id="idDaostkgovcrnsmH4">reputation-system of DAOstack
+    <a class="clsHide" href="#idDaostkgovcrnsmH4"></a></h4>
+  <p id="idDaostkgovcrnsmdsn">description::
+    <br>"The Reputation system aims to help DAOs maintain and work towards a set of collective preferences or goals."
+    <br>[https://medium.com/daostack/a-guide-to-daostacks-initial-reputation-protocol-f8365f157f7a]
+    <a class="clsHide" href="#idDaostkgovcrnsmdsn"></a></p>
+  <p id="idDaostkgovcrnsmnam">name::
+    <br>* Mcs.DAOstack'reputation-system,
+    <br>* Mcs.DAOstack-govc'reputation-system,
+    <a class="clsHide" href="#idDaostkgovcrnsmnam"></a></p>
   </section>
   </section>
 
@@ -2101,9 +2287,9 @@
     <br>· GEN is <a class="clsPreview" href="#idDogngovcdast">the-governance-token</a> of DAOstack.
     <a class="clsHide" href="#idDaostkgovcgendsn"></a></p>
   <p id="idDaostkgovcgennam">name::
-    <br>* Mcs.DAOstack'GEN-token!⇒DevuGEN,
-    <br>* Mcs.DAOstack-govc'GEN-token!⇒DevuGEN,
-    <br>* Mcs.DevuGEN, {2019-06-01}
+    <br>* Mcs.DAOstack'GEN-token!⇒DvGEN,
+    <br>* Mcs.DAOstack-govc'GEN-token!⇒DvGEN,
+    <br>* Mcs.DvGEN, {2019-06-03}
     <a class="clsHide" href="#idDaostkgovcgennam"></a></p>
 
   <section id="idDaostkgovcgenx">
@@ -2114,7 +2300,7 @@
     <br>[https://medium.com/daostack/joining-the-gen-predictors-network-f7be2d93754d]
     <a class="clsHide" href="#idDaostkgovcgenxdsn"></a></p>
   <p id="idDaostkgovcgenxnam">name::
-    <br>* Mcs.DevuGEN'exchange-ogn,
+    <br>* Mcs.DvGEN'exchange-ogn,
     <a class="clsHide" href="#idDaostkgovcgenxnam"></a></p>
   </section>
   </section>
@@ -2123,6 +2309,9 @@
   <h3 id="idDaostkpslH3">proposal of DAOstack
     <a class="clsHide" href="#idDaostkpslH3"></a></h3>
   <p id="idDaostkpsldsn">description::
+    <br>"A proposal is equivalent to a project pitch that contains an explanation of objectives, methods, costs and milestones of the proposed project."
+    <br>[https://docs.google.com/document/d/1M1erC1TVPPul3V_RmhKbyuFrpFikyOX0LnDfWOqO20Q/edit]
+    <br>===
     <br>"Proposals are DAOs’ basic method of making decisions, and thus funding work and taking collective action."
     <br>[https://medium.com/daostack/how-to-use-alchemy-earth-d6df01acb0fc]
     <a class="clsHide" href="#idDaostkpsldsn"></a></p>
@@ -2131,6 +2320,63 @@
     <br>* Mcs.DAOstack-govc'proposal!⇒DAOstack-proposal,
     <br>* Mcs.DAOstack-proposal,
     <a class="clsHide" href="#idDaostkpslnam"></a></p>
+
+  <section id="idDaostkpslttl">
+  <h4 id="idDaostkpslttlH4">title of proposal
+    <a class="clsHide" href="#idDaostkpslttlH4"></a></h4>
+  <p id="idDaostkpslttlnam">name::
+    <br>* Mcs.DAOstack-proposal'title,
+    <a class="clsHide" href="#idDaostkpslttlnam"></a></p>
+  </section>
+
+  <section id="idDaostkpsldrpn">
+  <h4 id="idDaostkpsldrpnH4">description of proposal
+    <a class="clsHide" href="#idDaostkpsldrpnH4"></a></h4>
+  <p id="idDaostkpsldrpnnam">name::
+    <br>* Mcs.DAOstack-proposal'description,
+    <a class="clsHide" href="#idDaostkpsldrpnnam"></a></p>
+  </section>
+
+  <section id="idDaostkpslurl">
+  <h4 id="idDaostkpslurlH4">Url of proposal
+    <a class="clsHide" href="#idDaostkpslurlH4"></a></h4>
+  <p id="idDaostkpslurlnam">name::
+    <br>* Mcs.DAOstack-proposal'Url,
+    <a class="clsHide" href="#idDaostkpslurlnam"></a></p>
+  </section>
+
+  <section id="idDaostkpslrptn">
+  <h4 id="idDaostkpslrptnH4">reputation of proposal
+    <a class="clsHide" href="#idDaostkpslrptnH4"></a></h4>
+  <p id="idDaostkpslrptndsn">description::
+    <br>"Why should I ask for reputation when submitting a proposal?
+    <br>You are not required to ask for reputation when submitting a proposal. However, if you would like to be a decision-maker within the DAO, you should request some. Proposals are ultimately passed or failed based off of the voting of reputation holders; without it, you have no ability to help steer the DAO. Generally, having those who submit and execute proposals be the DAO’s decision-makers helps promote a meritocratic governance system."
+    <br>[https://docs.google.com/document/d/1M1erC1TVPPul3V_RmhKbyuFrpFikyOX0LnDfWOqO20Q/edit]
+    <a class="clsHide" href="#idDaostkpslrptndsn"></a></p>
+  <p id="idDaostkpslrptnnam">name::
+    <br>* Mcs.DAOstack-proposal'reputation,
+    <a class="clsHide" href="#idDaostkpslrptnnam"></a></p>
+  </section>
+
+  <section id="idDaostkpslpsr">
+  <h4 id="idDaostkpslpsrH4">proposer of proposal of DAOstack
+    <a class="clsHide" href="#idDaostkpslpsrH4"></a></h4>
+  <p id="idDaostkpslpsrdsn">description::
+    <br>· proposer is <a class="clsPreview" href="#idDaostkskhr">a-stakeholder</a> who creates a-proposal.
+    <br>===
+    <br>"Proposers receive an automatic Reputation reward if their proposal passes, because passing a proposal is assumed to contribute to the DAO’s collective goals in some way. Setting this reward to be larger relative to a DAO’s total Reputation will cause the DAO’s Reputation distribution to shift more quickly over time, while setting it to be smaller leads to slower change. As with all of these parameters, each DAO will decide for itself what’s appropriate (possibly even setting the parameter to 0)."
+    <br>[https://medium.com/daostack/a-guide-to-daostacks-initial-reputation-protocol-f8365f157f7a]
+    <a class="clsHide" href="#idDaostkpslpsrdsn"></a></p>
+  <p id="idDaostkpslpsrnam">name::
+    <br>* Mcs.DAOstack'proposer,
+    <br>* Mcs.DAOstack-proposal'proposer,
+    <a class="clsHide" href="#idDaostkpslpsrnam"></a></p>
+  </section>
+
+  <section id="idDaostkpslppsg">
+  <h4 id="idDaostkpslppsgH4">proposing of proposal (<a class="clsPreview" href="#idDaostkppsg">link</a>)
+    <a class="clsHide" href="#idDaostkpslppsgH4"></a></h4>
+  </section>
 
   <section id="idDaostkpslstk">
   <h4 id="idDaostkpslstkH4">stake of proposal of DAOstack
@@ -2143,6 +2389,16 @@
     <br>* Mcs.DAOstack-proposal'stake,
     <a class="clsHide" href="#idDaostkpslstknam"></a></p>
 
+  <section id="idDaostkpslpdtr">
+  <h5 id="idDaostkpslpdtrH5">predictor of proposal (<a class="clsPreview" href="#idDaostkskhrPdtr">link</a>)
+    <a class="clsHide" href="#idDaostkpslpdtrH5"></a></h5>
+  </section>
+
+  <section id="idDaostkpslpdtg">
+  <h5 id="idDaostkpslpdtgH5">predicting of proposal (<a class="clsPreview" href="#idDaostkpdtg">link</a>)
+    <a class="clsHide" href="#idDaostkpslpdtgH5"></a></h5>
+  </section>
+
   <section id="idDaostkpslstkrwd">
   <h5 id="idDaostkpslstkrwdH5">staking-reward of proposal of DAOstack
     <a class="clsHide" href="#idDaostkpslstkrwdH5"></a></h5>
@@ -2151,6 +2407,8 @@
     <br>[https://medium.com/daostack/joining-the-gen-predictors-network-f7be2d93754d]
     <a class="clsHide" href="#idDaostkpslstkrwddsn"></a></p>
   <p id="idDaostkpslstkrwdnam">name::
+    <br>* Mcs.DAOstack'predicting-reward,
+    <br>* Mcs.DAOstack'staking-reward,
     <br>* Mcs.DAOstack-proposal'staking-reward,
     <a class="clsHide" href="#idDaostkpslstkrwdnam"></a></p>
   </section>
@@ -2232,7 +2490,7 @@
   <h4 id="idDaostkpslBstdH4">proposal.BOOSTED
     <a class="clsHide" href="#idDaostkpslBstdH4"></a></h4>
   <p id="idDaostkpslBstddsn">description::
-    <br>"A pending proposal is still open for predicting, and if its confidence score remains above the boosting threshold for longer than the pending period, anyone can boost the proposal.
+    <br>"<a class="clsPreview" href="#idDaostkpslPndg">A pending proposal</a> is still open for predicting, and if its confidence score remains above the boosting threshold for longer than the pending period, anyone can boost the proposal.
     <br>To incentivize people to take this boosting action, whoever boosts a qualified proposal receives a modest GEN reward.²
     <br>Once admitted to the boosted queue, proposals are closed to predictions and will be passed or failed at the close of the boosted period. Once a proposal is passed, anyone can take the execute action on it to trigger whatever actions the proposal specifies (distributing funds, deploying contracts, etc.). The executor of the proposal is rewarded in GEN similarly to the booster."
     <br>[https://medium.com/daostack/joining-the-gen-predictors-network-f7be2d93754d]
@@ -2245,12 +2503,122 @@
   <h5 id="idDaostkpslBstdprdH5">boosting-period of proposal
     <a class="clsHide" href="#idDaostkpslBstdprdH5"></a></h5>
   <p id="idDaostkpslBstdprddsn">description::
-    <br>·
+    <br>· boosting-period is the-time a-DAOstack-Dogn defines <a class="clsPreview" href="#idDaostkpslBstd">a-boosting-proposal</a> must-stay in the-boosting-queue and then to be-executed.
     <a class="clsHide" href="#idDaostkpslBstdprddsn"></a></p>
   <p id="idDaostkpslBstdprdnam">name::
     <br>* Mcs.DAOstack-proposal'boosting-period,
     <a class="clsHide" href="#idDaostkpslBstdprdnam"></a></p>
   </section>
+  </section>
+
+  <section id="idDaostkpslExtd">
+  <h4 id="idDaostkpslExtdH4">proposal.EXECUTED
+    <a class="clsHide" href="#idDaostkpslExtdH4"></a></h4>
+  <p id="idDaostkpslExtddsn">description::
+    <br>Once admitted to the boosted queue, proposals are closed to predictions and will be passed or failed at the close of the boosted period. Once a proposal is passed, anyone can take the execute action on it to trigger whatever actions the proposal specifies (distributing funds, deploying contracts, etc.). The executor of the proposal is rewarded in GEN similarly to the booster."
+    <br>[https://medium.com/daostack/joining-the-gen-predictors-network-f7be2d93754d]
+    <a class="clsHide" href="#idDaostkpslExtddsn"></a></p>
+  <p id="idDaostkpslExtdnam">name::
+    <br>* Mcs.DAOstack-proposal.executed,
+    <a class="clsHide" href="#idDaostkpslExtdnam"></a></p>
+  </section>
+
+  <section id="idDaostkpslExpl">
+  <h4 id="idDaostkpslExplH4">proposal.EXAMPLE
+    <a class="clsHide" href="#idDaostkpslExplH4"></a></h4>
+  <p id="idDaostkpslExplnam">name::
+    <br>* Mcs.DAOstack-proposal.example,
+    <a class="clsHide" href="#idDaostkpslExplnam"></a></p>
+  <p id="idDaostkpslExplwpa">addressWpg::
+    <br>* template: https://docs.google.com/document/d/1nBSIO0tOf1CcfzsyO7dlQd_LiYsV3sKPSQXmCkvibhU/edit,
+    <br>* tutorial article of Alchemy: https://docs.google.com/document/d/16k4pJ7_iWOnFnCjwyDGZUX492fYtPEeHlxavR_cZw4Y/edit,
+    <a class="clsHide" href="#idDaostkpslExplwpa"></a></p>
+  </section>
+  </section>
+
+  <section id="idDaostkpmtr">
+  <h3 id="idDaostkpmtrH3">parameter of DAOstack
+    <a class="clsHide" href="#idDaostkpmtrH3"></a></h3>
+  <p id="idDaostkpmtrdsn">description::
+    <br>· parameters are attributes a-DAOstack-ogn can-set in its code.
+    <br>===
+    <br>"The upcoming Alchemy Earth release will enable DAOs to adjust these parameters through the proposal submission process."
+    <br>[https://medium.com/daostack/a-guide-to-daostacks-initial-reputation-protocol-f8365f157f7a]
+    <a class="clsHide" href="#idDaostkpmtrdsn"></a></p>
+  <p id="idDaostkpmtrnam">name::
+    <br>* Mcs.DAOstack'parameter,
+    <br>* Mcs.DAOstack-govc'parameter,
+    <a class="clsHide" href="#idDaostkpmtrnam"></a></p>
+  </section>
+
+  <section id="idDaostkgovg">
+  <h3 id="idDaostkgovgH3">governing of DAOstack
+    <a class="clsHide" href="#idDaostkgovgH3"></a></h3>
+  <p id="idDaostkgovgdsn">description::
+    <br>"Alchemy offers a rigorous, on-chain decision-making platform for DAOs, solving their hard governance.
+    <br>Soft governance, on the other hand, is about the off-chain processes in the DAO; communication, collaboration, deliberation and everything else that eventually lead to the DAO decision-making. If hard governance is the backbone of the DAO, soft governance is its blood and spirit."
+    <br>[https://medium.com/@matanfield/the-biggest-threat-to-genesis-711c6adbe90]
+    <a class="clsHide" href="#idDaostkgovgdsn"></a></p>
+  <p id="idDaostkgovgnam">name::
+    <br>* Mcs.DAOstack'governing,
+    <br>* Mcs.DAOstack-govc'governing,
+    <a class="clsHide" href="#idDaostkgovgnam"></a></p>
+  <p id="idDaostkgovgSpc">specific::
+    <br>* proposing,
+    <br>* voting,
+    <br>* staking|predicting,
+    <a class="clsHide" href="#idDaostkgovgSpc"></a></p>
+
+  <section id="idDaostkppsg">
+  <h4 id="idDaostkppsgH4">proposing of DAOstack
+    <a class="clsHide" href="#idDaostkppsgH4"></a></h4>
+  <p id="idDaostkppsgdsn">description::
+    <br>"Anyone can propose and predict, however only people who hold reputation (voting power) in that specific DAO can vote."
+    <br>[https://docs.google.com/document/d/1M1erC1TVPPul3V_RmhKbyuFrpFikyOX0LnDfWOqO20Q/edit]
+    <br>===
+    <br>"How do I submit a proposal?
+    <br>While it’s possible to go directly to Alchemy and simply submit a proposal through the proposal form, we recommend the following steps:
+    <br>1) Draft your proposal with the help of our guidelines using this template
+    <br>2) Share your draft with others that are part of the DAO you will be submitting to, to get feedback
+    <br>3) Adapt the proposal based on the feedback you receive
+    <br>4) Submit your proposal in Alchemy by clicking “create proposal”, adding the ETH amount and reputation you are requesting, shall your proposal pass"
+    <br>[https://docs.google.com/document/d/1M1erC1TVPPul3V_RmhKbyuFrpFikyOX0LnDfWOqO20Q/edit]
+    <a class="clsHide" href="#idDaostkppsgdsn"></a></p>
+  <p id="idDaostkppsgnam">name::
+    <br>* Mcs.DAOstack'proposing,
+    <br>* Mcs.DAOstack-govc'proposing,
+    <br>* Mcs.DAOstack-proposal'proposing,
+    <br>* Mcs.DAOstack-proposal'submitting,
+    <a class="clsHide" href="#idDaostkppsgnam"></a></p>
+  </section>
+
+  <section id="idDaostkpdtg">
+  <h4 id="idDaostkpdtgH4">predicting of DAOstack
+    <a class="clsHide" href="#idDaostkpdtgH4"></a></h4>
+  <p id="idDaostkpdtgdsn">description::
+    <br>"Predict whether a proposal is going to pass or not in the DAO. This helps guide the collective voting process by sorting and prioritizing the proposals. Predicting is also called staking.
+    <br>... Anyone can propose and predict, however only people who hold reputation (voting power) in that specific DAO can vote."
+    <br>[https://docs.google.com/document/d/1M1erC1TVPPul3V_RmhKbyuFrpFikyOX0LnDfWOqO20Q/edit]
+    <a class="clsHide" href="#idDaostkpdtgdsn"></a></p>
+  <p id="idDaostkpdtgnam">name::
+    <br>* Mcs.DAOstack'predicting,
+    <br>* Mcs.DAOstack'staking,
+    <br>* Mcs.DAOstack-govc'predicting,
+    <br>* Mcs.DAOstack-govc'staking,
+    <a class="clsHide" href="#idDaostkpdtgnam"></a></p>
+  </section>
+
+  <section id="idDaostkvtg">
+  <h4 id="idDaostkvtgH4">voting of DAOstack
+    <a class="clsHide" href="#idDaostkvtgH4"></a></h4>
+  <p id="idDaostkvtgdsn">description::
+    <br>"Anyone can propose and predict, however only people who hold reputation (voting power) in that specific DAO can vote."
+    <br>[https://docs.google.com/document/d/1M1erC1TVPPul3V_RmhKbyuFrpFikyOX0LnDfWOqO20Q/edit]
+    <a class="clsHide" href="#idDaostkvtgdsn"></a></p>
+  <p id="idDaostkvtgnam">name::
+    <br>* Mcs.DAOstack'voting,
+    <br>* Mcs.DAOstack-govc'voting,
+    <a class="clsHide" href="#idDaostkvtgnam"></a></p>
   </section>
   </section>
   </section>
@@ -2265,6 +2633,16 @@
   <p id="idDaostkAlcmnam">name::
     <br>* Mcs.DAOstack'Alchemy,
     <a class="clsHide" href="#idDaostkAlcmnam"></a></p>
+  <p id="idDaostkAlcmgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsDtcbnetEth.last.html#idEthdap">Ethereum-Dapp</a>,
+    <a class="clsHide" href="#idDaostkAlcmgncchn"></a></p>
+  <p id="idDaostkAlcmwpa">addressWpg::
+    <br>* https://alchemy.daostack.io/,
+    <br>* https://github.com/daostack/alchemy,
+    <br>===
+    <br>* {2018-10-30} Jordan-Randolph, https://medium.com/ethex-market/how-to-use-the-alchemy-dapp-and-the-genesis-dao-6bfd91a357dc,
+    <br>* {2018-06-08} Dor-Garbash, https://medium.com/daostack/new-introducing-alchemy-budgeting-for-decentralized-organizations-b81ba8501b23,
+    <a class="clsHide" href="#idDaostkAlcmwpa"></a></p>
   </section>
 
   <section id="idDaostkrsc">
@@ -2279,6 +2657,7 @@
     <br>* https://daostack.io/wp/DAOstack-White-Paper-en.pdf,
     <br>* A Toolkit for Decentralized Governance: https://daostack.io/deck/DAOstack-Deck-en.pdf,
     <br>* https://github.com/daostack/DAOstack-Hackers-Kit,
+    <br>* FAQ: https://docs.google.com/document/d/1M1erC1TVPPul3V_RmhKbyuFrpFikyOX0LnDfWOqO20Q/edit,
     <br>===
     <br>* https://twitter.com/daostack,
     <br>* https://medium.com/daostack,
@@ -2288,6 +2667,22 @@
     <br>* {2018-04-11} Josh-Zemel, An Explanation of DAOstack in Fairly Simple Terms, https://medium.com/daostack/an-explanation-of-daostack-in-fairly-simple-terms-d0e034739c5a,
     <br>* {2018-02-06} Matan-Field, Decentralized Governance Matters, https://medium.com/daostack/decentralized-governance-first-principles-1fc6eaa492ed,
     <a class="clsHide" href="#idDaostkrscwpa"></a></p>
+  </section>
+
+  <section id="idDaostkrtArgn">
+  <h2 id="idDaostkrtArgnH2">relation-to-Aragon of DAOstack
+    <a class="clsHide" href="#idDaostkrtArgnH2"></a></h2>
+  <p id="idDaostkrtArgndsn">description::
+    <br>"What is the difference between Aragon and DAOstack?
+    <br>DAOstack is a modular governance framework for decentralized organizations at scale, while Aragon is more of a general suite for blockchain-based organizational management.
+    <br>In terms of token utility, we invite you to read this article to understand the GEN use case and compare it to ANT: https://medium.com/daostack/on-the-utility-of-the-gen-token-eb4f341d770e
+    <br>We have to admit that Aragon’s applications are looking really nice and we're actually working on a bridge so their application suite can be used by ourselves."
+    <br>[https://docs.google.com/document/d/1M1erC1TVPPul3V_RmhKbyuFrpFikyOX0LnDfWOqO20Q/edit#heading=h.t3hprwsx8hu0]
+    <a class="clsHide" href="#idDaostkrtArgndsn"></a></p>
+  <p id="idDaostkrtArgnnam">name::
+    <br>* Mcs.Aragon'relation-to-DAOstack,
+    <br>* Mcs.DAOstack'relation-to-Aragon,
+    <a class="clsHide" href="#idDaostkrtArgnnam"></a></p>
   </section>
 
   <section id="idDaostkevg">
@@ -2308,17 +2703,28 @@
     <a class="clsHide" href="#idDaostkevg2017early"></a></p>
   </section>
 
-  <section id="idDaostkGnsdao">
-  <h2 id="idDaostkGnsdaoH2">DAOstack.Genesis-DAO
-    <a class="clsHide" href="#idDaostkGnsdaoH2"></a></h2>
-  <p id="idDaostkGnsdaodsn">description::
+  <section id="idGnsdao">
+  <h2 id="idGnsdaoH2">DAOstack.Genesis-DAO
+    <a class="clsHide" href="#idGnsdaoH2"></a></h2>
+  <p id="idGnsdaodsn">description::
     <br>"Launched June 2018, the Genesis Alpha was the first DAO powered by DAOstack. Genesis Beta is the second step of a three step plan to eventually transition Genesis to being the “Coordinator DAO” of the DAOstack ecosystem. According to the DAOstack team’s recent statement, Genesis would have additional responsibilities as coordinator, such as management of 40m unminted GEN. In this sense, it could be a decentralized institution that distributes ecosystemic grants loosely analogous to the Ethereum Foundation."
     <br>[https://medium.com/daostack/daos-marching-forward-1b8bef05a6d7]
-    <a class="clsHide" href="#idDaostkGnsdaodsn"></a></p>
-  <p id="idDaostkGnsdaonam">name::
+    <a class="clsHide" href="#idGnsdaodsn"></a></p>
+  <p id="idGnsdaonam">name::
     <br>* Mcs.DAOstack.Genesis-DAO!⇒Genesis-DAO,
     <br>* Mcs.Genesis-DAO,
-    <a class="clsHide" href="#idDaostkGnsdaonam"></a></p>
+    <a class="clsHide" href="#idGnsdaonam"></a></p>
+
+  <section id="idGnsdaorsc">
+  <h3 id="idGnsdaorscH3">resource of Genesis-DAO
+    <a class="clsHide" href="#idGnsdaorscH3"></a></h3>
+  <p id="idGnsdaorscnam">name::
+    <br>* Mcs.Genesis-DAO'resource,
+    <a class="clsHide" href="#idGnsdaorscnam"></a></p>
+  <p id="idGnsdaorscwpa">addressWpg::
+    <br>* {2019-02-08} Levi-Adam, A Technical Analysis of the Genesis, https://medium.com/daostack/a-technical-analysis-of-the-genesis-alpha-hack-f8e34433c14b,
+    <a class="clsHide" href="#idGnsdaorscwpa"></a></p>
+  </section>
   </section>
 
   <section id="idDxdao">
@@ -2391,10 +2797,11 @@
 </section>
 
 <section id="idEosdac">
-  <h1 id="idEosdacH1">Dogn.eosDAC
+  <h1 id="idEosdacH1">Dogn.eosDAC (EOS-net)
     <a class="clsHide" href="#idEosdacH1"></a></h1>
   <p id="idEosdacdsn">description::
-    <br>· eosDAC is <a class="clsPreview" href="#idOverview">a-Dogn</a> on <a class="clsPreview" href="filMcsDtcbnetEos.last.html#idOverview">Deos-net</a> which is <a class="clsPreview" href="filMcsDtcbnetEos.last.html#idEosnodBp">a-block-producer</a>.
+    <br>· eosDAC[a] is <a class="clsPreview" href="#idOverview">a-Dogn</a> on <a class="clsPreview" href="filMcsDtcbnetEos.last.html#idOverview">Deos-net</a>.
+    <br>· it[a] is <a class="clsPreview" href="filMcsDtcbnetEos.last.html#idEosnodBp">a-block-producer</a>.
     <br>===
     <br>A Decentralised Autonomous Community (DAC) is governed by it’s constitution, which is encoded in smart contracts on the blockchain. This revolutionary way of bringing a community together as a cooperative is made possible by the EOS software. The DAC is controlled by it’s token holders and the board members they vote to run it’s operations.
     <br>eosDAC is being created and launched by BlockMaker Ltd. Once eosDAC is launched BlockMaker Ltd will not have any ownership or control over eosDAC, nor own any eosDAC tokens. BlockMaker Ltd has invested heavily in people, infrastructure and processes, in order to ensure that eosDAC can serve as a main block producer should it receive sufficient votes from EOS token holders.
@@ -2729,11 +3136,11 @@
     <br>· EOSDAC is <a class="clsPreview" href="#idDogngovcdast">the-governance-token</a> of eosDAC.
     <a class="clsHide" href="#idEosdactkndsn"></a></p>
   <p id="idEosdactknnam">name::
-    <br>* Mcs.DevuEosDAC!⇒EOSDAC,
-    <br>* Mcs.EOSDAC,
-    <br>* Mcs.eosDAC'token!⇒EOSDAC,
-    <br>* Mcs.eosDAC-govc'token!⇒EOSDAC,
-    <br>* Mcs.eosDAC-token!⇒EOSDAC,
+    <br>* Mcs.DvEOSDAC, {2019-06-03}
+    <br>* Mcs.EOSDAC!⇒DvEOSDAC,
+    <br>* Mcs.eosDAC'token!⇒DvEOSDAC,
+    <br>* Mcs.eosDAC-govc'token!⇒DvEOSDAC,
+    <br>* Mcs.eosDAC-token!⇒DvEOSDAC,
     <a class="clsHide" href="#idEosdactknnam"></a></p>
   </section>
 
