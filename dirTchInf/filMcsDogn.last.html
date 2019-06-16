@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.decentralized-autonomous-organization (Dogn.0-32-0.2019-06-15 draft)</title>
+  <title>Mcs.decentralized-autonomous-organization (Dogn.0-33-0.2019-06-16 draft)</title>
   <meta name="keywords" content="decentralized-autonomous-organization, Dogn, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -327,11 +327,10 @@
     <br>* outsourcer,
     <a class="clsHide" href="#idDognskhrSplrSpc"></a></p>
   </section>
-  </section>
 
   <section id="idDognskhrCrtr">
-  <h2 id="idDognskhrCrtrH2">stakeholder.CONTRACTOR
-    <a class="clsHide" href="#idDognskhrCrtrH2"></a></h2>
+  <h3 id="idDognskhrCrtrH3">stakeholder.CONTRACTOR
+    <a class="clsHide" href="#idDognskhrCrtrH3"></a></h3>
   <p id="idDognskhrCrtrdsn">description::
     <br>· contractor is a-human or human-organization appointed to accomplish the-goals of Dogn.
     <a class="clsHide" href="#idDognskhrCrtrdsn"></a></p>
@@ -339,16 +338,6 @@
     <br>* Mcs.Dogn'contractor,
     <a class="clsHide" href="#idDognskhrCrtrnam"></a></p>
   </section>
-
-  <section id="idDognskhrCtmr">
-  <h2 id="idDognskhrCtmrH2">stakeholder.CUSTOMER
-    <a class="clsHide" href="#idDognskhrCtmrH2"></a></h2>
-  <p id="idDognskhrCtmrdsn">description::
-    <br>· customer is a-buyer of <a class="clsPreview" href="#idDognoptsfr">the-product</a> of the-Dogn.
-    <a class="clsHide" href="#idDognskhrCtmrdsn"></a></p>
-  <p id="idDognskhrCtmrnam">name::
-    <br>* Mcs.Dogn-stakeholder.customer,
-    <a class="clsHide" href="#idDognskhrCtmrnam"></a></p>
   </section>
 </section>
 
@@ -385,6 +374,18 @@
   <p id="idDognepdrnam">name::
     <br>* Mcs.Dogn'expenditure,
     <a class="clsHide" href="#idDognepdrnam"></a></p>
+  </section>
+
+  <section id="idDognprft">
+  <h2 id="idDognprftH2">profit of Dogn
+    <a class="clsHide" href="#idDognprftH2"></a></h2>
+  <p id="idDognprftdsn">description::
+    <br>· profit = <a class="clsPreview" href="#idDognrvn">reveneu</a> - <a class="clsPreview" href="#idDognepdr">expenditure</a>
+    <a class="clsHide" href="#idDognprftdsn"></a></p>
+  <p id="idDognprftnam">name::
+    <br>* Mcs.Dogn'profit,
+    <br>* Mcs.profit-of-Dogn,
+    <a class="clsHide" href="#idDognprftnam"></a></p>
   </section>
 
   <section id="idDognoptsfr">
@@ -2227,14 +2228,45 @@
     <br>· Aragon-Dogn is <a class="clsPreview" href="#idEthdao">a-Deth-Dogn</a> created using <a class="clsPreview" href="#idEthdapArgn">the-Aragon-Dapp</a>,
     <a class="clsHide" href="#idArgndsn"></a></p>
   <p id="idArgnnam">name::
-    <br>* Mcs.Aragon-Dogn, {2019-05-06}
-    <br>* Mcs.Deth-Dogn.Aragon!⇒Aragon-Dogn,
-    <br>* Mcs.Dogn.Aragon!⇒Aragon-Dogn,
+    <br>* Mcs.Aragon-Dogn!⇒DoAragon, {2019-05-06}
+    <br>* Mcs.Deth-Dogn.Aragon!⇒DoAragon,
+    <br>* Mcs.DoAragon, {2019-06-16}
+    <br>* Mcs.Dogn.Aragon!⇒DoAragon,
     <a class="clsHide" href="#idArgnnam"></a></p>
 
   <section id="idArgnskhr">
   <h2 id="idArgnskhrH2">stakeholder of Aragon-Dogn
     <a class="clsHide" href="#idArgnskhrH2"></a></h2>
+  <p id="idArgnskhrnam">name::
+    <br>* Mcs.DoAragon'stakeholder,
+    <a class="clsHide" href="#idArgnskhrnam"></a></p>
+  <p id="idArgnskhrgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="#idDognskhr">stakeholder-of--Dogn</a>,
+    <a class="clsHide" href="#idArgnskhrgncchn"></a></p>
+
+  <section id="idArgnentt">
+  <h3 id="idArgnenttH3">entity of Aragon-Dogn
+    <a class="clsHide" href="#idArgnenttH3"></a></h3>
+  <p id="idArgnenttdsn">description::
+    <br>"... accounts and contracts (what Aragon refers to as “entities”)"
+    <br>[https://help.aragon.org/article/6-anatomy-of-an-aragon-organization]
+    <a class="clsHide" href="#idArgnenttdsn"></a></p>
+  <p id="idArgnenttnam">name::
+    <br>* Mcs.DoAragon'entity,
+    <a class="clsHide" href="#idArgnenttnam"></a></p>
+  </section>
+
+  <section id="idArgnhmn">
+  <h3 id="idArgnhmnH3">human of Aragon-Dogn
+    <a class="clsHide" href="#idArgnhmnH3"></a></h3>
+  <p id="idArgnhmnnam">name::
+    <br>* Mcs.DoAragon'human,
+    <a class="clsHide" href="#idArgnhmnnam"></a></p>
+  <p id="idArgnhmnSpc">specific::
+    <br>* https://aragon.one/#team,
+    <br>* Guende.Luis: project leader. by Luis Cuende, who was featured on the 'Forbes 30 under 30' category in 'Technology'.,
+    <a class="clsHide" href="#idArgnhmnSpc"></a></p>
+  </section>
   </section>
 
   <section id="idArgnasst">
@@ -2245,13 +2277,32 @@
   <section id="idArgngovc">
   <h2 id="idArgngovcH2">governance of Aragon-Dogn
     <a class="clsHide" href="#idArgngovcH2"></a></h2>
+  <p id="idArgngovcnam">name::
+    <br>* Mcs.DoAragon'governance!⇒Aragon-govc,
+    <br>* Mcs.Aragon-govc,
+    <a class="clsHide" href="#idArgngovcnam"></a></p>
+
+  <section id="idArgngovcpmsn">
+  <h3 id="idArgngovcpmsnH3">permission of govc
+    <a class="clsHide" href="#idArgngovcpmsnH3"></a></h3>
+  <p id="idArgngovcpmsndsn">description::
+    <br>"Aragon organizations control which addresses have access to perform actions on behalf of the organization in a permission registry called the Access Control List."
+    <br>[https://github.com/aragon/whitepaper]
+    <a class="clsHide" href="#idArgngovcpmsndsn"></a></p>
+  <p id="idArgngovcpmsnnam">name::
+    <br>* Mcs.DoAragon'ACL!⇒Aragon-permission,
+    <br>* Mcs.DoAragon'access-control-list!⇒Aragon-permission,
+    <br>* Mcs.DoAragon'permission-architecture!⇒Aragon-permission,
+    <br>* Mcs.Aragon-permission,
+    <a class="clsHide" href="#idArgngovcpmsnnam"></a></p>
+  </section>
   </section>
 
   <section id="idArgntool">
   <h2 id="idArgntoolH2">tool of Aragon-Dogn
     <a class="clsHide" href="#idArgntoolH2"></a></h2>
   <p id="idArgntoolnam">name::
-    <br>* Mcs.Aragon-Dogn'tool,
+    <br>* Mcs.DoAragon'tool,
     <a class="clsHide" href="#idArgntoolnam"></a></p>
 
   <section id="idArgnstck">
@@ -2262,22 +2313,123 @@
     <br>[https://hack.aragon.org/docs/stack]
     <a class="clsHide" href="#idArgnstckdsn"></a></p>
   <p id="idArgnstcknam">name::
-    <br>* Mcs.Aragon-Dogn'Aragon-stack,
+    <br>* Mcs.DoAragon'Aragon-stack,
     <a class="clsHide" href="#idArgnstcknam"></a></p>
+  </section>
+
+  <section id="idArgnclnt">
+  <h3 id="idArgnclntH3">client of Aragon-Dogn
+    <a class="clsHide" href="#idArgnclntH3"></a></h3>
+  <p id="idArgnclntdsn">description::
+    <br>"1.1. About Aragon Core
+    <br>Aragon is a dApp that lets anyone create and manage any kind of organization (companies, open source projects, NGOs, foundations, hedge funds...) on the Ethereum blockchain.
+    <br>Aragon implements basic features of an organization like a cap table, token transfers, voting, role assignments, fundraising, and accounting.
+    <br>The behavior of an Aragon organization is easily customized by changing the bylaws.
+    <br>In addition, Aragon organizations are extensible through third party modules that interact with the organizations' contracts."
+    <br>[<a href="https://github.com/AragonOne/whitepaper/raw/master/Aragon%20Whitepaper.pdf">https://github.com/AragonOne/whitepaper/raw/master/Aragon%20Whitepaper.pdf</a>]
+    <a class="clsHide" href="#idArgnclntdsn"></a></p>
+  <p id="idArgnclntnam">name::
+    <br>* Mcs.Aragon-client,
+    <br>* Mcs.Aragon-Core!⇒Aragon-client,
+    <br>* Mcs.Deth-Dapp.Aragon-client!⇒Aragon-client,
+    <a class="clsHide" href="#idArgnclntnam"></a></p>
+  <p id="idArgnclntgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsDtcbnetEth.last.html#idEthdao">Ethereum-DAO-dApp</a>,
+    <a class="clsHide" href="#idArgnclntgncchn"></a></p>
+
+  <section id="idArgndktp">
+  <h4 id="idArgndktpH4">Aragon-desktop
+    <a class="clsHide" href="#idArgndktpH4"></a></h4>
+  <p id="idArgndktpdsn">description::
+    <br>"Aragon Desktop is an Electron app that runs the Aragon client in a fully decentralized way.
+    <br>It queries the Ethereum blockchain for the latest version of the app, and then serves it over a local IPFS node."
+    <br>[https://github.com/aragon/aragon-desktop]
+    <a class="clsHide" href="#idArgndktpdsn"></a></p>
+  <p id="idArgndktpnam">name::
+    <br>* Mcs.DoAragon'Aragon-Desktop,
+    <a class="clsHide" href="#idArgndktpnam"></a></p>
+  </section>
   </section>
 
   <section id="idArgndapp">
   <h3 id="idArgndappH3">Dapp of Aragon-Dogn
     <a class="clsHide" href="#idArgndappH3"></a></h3>
   <p id="idArgndappdsn">description::
+    <br>"Each Aragon organization has apps that can be “installed” on aragonOS. These apps extend the functionality of the organization and give members new ways of interacting with each other and the organization itself. Some examples of applications that can be added to Aragon organizations are the Token Manager, Voting, and Finance apps. Anyone can develop their own app, add it to their own organization, and publish it for others to use as well."
+    <br>[https://help.aragon.org/article/6-anatomy-of-an-aragon-organization]
+    <br>==
     <br>"Aragon organizations are fully modular.
     <br>You can install apps that enhance your organization.
     <br>Maybe you want a different voting process, or a different way to manage funds."
     <br>[https://aragon.org/discover]
     <a class="clsHide" href="#idArgndappdsn"></a></p>
   <p id="idArgndappnam">name::
-    <br>* Mcs.Aragon-Dogn-Dogn'Dapp,
+    <br>* Mcs.DoAragon'Dapp!⇒DoAragon-Dapp,
     <a class="clsHide" href="#idArgndappnam"></a></p>
+
+  <section id="idArgntnmr">
+  <h4 id="idArgntnmrH4">Token-Manager of Aragon-Dogn
+    <a class="clsHide" href="#idArgntnmrH4"></a></h4>
+  <p id="idArgntnmrdsn">description::
+    <br>"The Token Manager is the app that is used to manage membership and voting power in an organization. To add members to an organization, it’s as easy as minting and assigning a token to them."
+    <br>[https://help.aragon.org/article/18-token-manager]
+    <a class="clsHide" href="#idArgntnmrdsn"></a></p>
+  <p id="idArgntnmrnam">name::
+    <br>* Mcs.DoAragon'Token-Manager,
+    <br>* Mcs.DoAragon-Dapp.Token-Manager,
+    <a class="clsHide" href="#idArgntnmrnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idArgnos">
+  <h3 id="idArgnosH3">aragonOS
+    <a class="clsHide" href="#idArgnosH3"></a></h3>
+  <p id="idArgnosdsn">description::
+    <br>"The smart contract system Aragon is built on is called aragonOS. This system ensures that only authorized accounts and contracts (what Aragon refers to as “entities”) have permission to perform specific actions in an organization. The same way that a legal contract defines what rights and obligations a party to the contract has, the aragonOS smart contracts define what rights and obligations entities have in an Aragon organization."
+    <br>[https://help.aragon.org/article/6-anatomy-of-an-aragon-organization]
+    <a class="clsHide" href="#idArgnosdsn"></a></p>
+  <p id="idArgnosnam">name::
+    <br>* Mcs.DoAragon'aragonOS,
+    <a class="clsHide" href="#idArgnosnam"></a></p>
+  </section>
+
+  <section id="idArgncli">
+  <h3 id="idArgncliH3">aragonCLI
+    <a class="clsHide" href="#idArgncliH3"></a></h3>
+  <p id="idArgnclidsn">description::
+    <br>"The aragonCLI (Command Line Interface) is used to create and develop Aragon Apps, as well as to interact with DAOs (create, install apps, inspect permissions, etc.)."
+    <br>[https://github.com/aragon/aragon-cli]
+    <a class="clsHide" href="#idArgnclidsn"></a></p>
+  <p id="idArgnclinam">name::
+    <br>* Mcs.DoAragon'aragonCLI,
+    <a class="clsHide" href="#idArgnclinam"></a></p>
+  </section>
+
+  <section id="idArgnkit">
+  <h3 id="idArgnkitH3">template of Aragon-Dogn
+    <a class="clsHide" href="#idArgnkitH3"></a></h3>
+  <p id="idArgnkitdsn">description::
+    <br>"The best way to kickstart an Aragon DAO is by using a Kit, or template. A kit is a set of smart contracts that will create a DAO from scratch and configure it according to some provided parameters.
+    <br>Because they involve smart contract code, modifying a kit, even though really easy, must be done with extreme care. It is always recommended to do a third party security audit to the kit code if modified."
+    <br>[https://github.com/aragon/dao-kits]
+    <a class="clsHide" href="#idArgnkitdsn"></a></p>
+  <p id="idArgnkitnam">name::
+    <br>* Mcs.DoAragon'DAO-kit!⇒DoAragon-template,
+    <br>* Mcs.DoAragon'template!⇒DoAragon-template,
+    <br>* Mcs.DoAragon-template,
+    <a class="clsHide" href="#idArgnkitnam"></a></p>
+
+  <section id="idArgnkitrsc">
+  <h4 id="idArgnkitrscH4">resource of template
+    <a class="clsHide" href="#idArgnkitrscH4"></a></h4>
+  <p id="idArgnkitrscnam">name::
+    <br>* Mcs.DoAragon-template'resource,
+    <a class="clsHide" href="#idArgnkitrscnam"></a></p>
+  <p id="idArgnkitrscwpa">addressWpg::
+    <br>* https://github.com/aragon/dao-kits,
+    <br>* https://help.aragon.org/article/8-about-templates,
+    <a class="clsHide" href="#idArgnkitrscwpa"></a></p>
+  </section>
   </section>
   </section>
 
@@ -2286,15 +2438,50 @@
     <a class="clsHide" href="#idArgnevalH2"></a></h2>
   </section>
 
+  <section id="idArgnogn">
+  <h2 id="idArgnognH2">organization of Aragon-Dogn
+    <a class="clsHide" href="#idArgnognH2"></a></h2>
+  <p id="idArgnognnam">name::
+    <br>* Mcs.DoAragon'organization,
+    <a class="clsHide" href="#idArgnognnam"></a></p>
+
+  <section id="idArgnOne">
+  <h3 id="idArgnOneH3">Aragon-One
+    <a class="clsHide" href="#idArgnOneH3"></a></h3>
+  <p id="idArgnOnedsn">description::
+    <br>"Aragon One is a Swiss company formed by the founders of the Aragon project, building the tools and community necessary for the project to succeed."
+    <br>[https://aragon.one/#about]
+    <a class="clsHide" href="#idArgnOnedsn"></a></p>
+  <p id="idArgnOnenam">name::
+    <br>* Mcs.DoAragon'Aragon-One,
+    <a class="clsHide" href="#idArgnOnenam"></a></p>
+  </section>
+
+  <section id="idArgnAscn">
+  <h3 id="idArgnAscnH3">Aragon-Association
+    <a class="clsHide" href="#idArgnAscnH3"></a></h3>
+  <p id="idArgnAscndsn">description::
+    <br>"the non-profit steward of the Aragon project."
+    <br>[https://aragon.one/#about]
+    <a class="clsHide" href="#idArgnAscndsn"></a></p>
+  <p id="idArgnAscnnam">name::
+    <br>* Mcs.DoAragon'Aragon-Association,
+    <a class="clsHide" href="#idArgnAscnnam"></a></p>
+  </section>
+  </section>
+
   <section id="idArgnrsc">
   <h2 id="idArgnrscH2">resource of Aragon-Dogn
     <a class="clsHide" href="#idArgnrscH2"></a></h2>
   <p id="idArgnrscnam">name::
-    <br>* Mcs.Aragon-Dogn'resource,
+    <br>* Mcs.DoAragon'resource,
     <a class="clsHide" href="#idArgnrscnam"></a></p>
   <p id="idArgnrscwpa">addressWpg::
+    <br>* https://aragon.org/,
     <br>* https://aragon.one/,
     <br>* https://github.com/aragon,
+    <br>* https://github.com/aragon/whitepaper,
+    <br>* https://help.aragon.org/,
     <br>* https://hack.aragon.org/docs/tutorial.html,
     <br>* dashboard: https://scout.cool/aragon/mainnet,
     <br>* https://wiki.aragon.org/,
@@ -2309,18 +2496,46 @@
     <br>=== news:
     <br>* {2019-05-30} Introducing Aragon Fundraising, https://blog.aragon.org/introducing-aragon-fundraising/,
     <br>* {2019-05-28} Ross-Campbell, Launching Digital Guilds on OpenLaw &amp; Ethereum, https://medium.com/@rosscampbell9/launching-digital-guilds-on-openlaw-ethereum-5fc8478c655c,
+    <br>* {2017-04-21} Spain’s Aragon Joins Ethereum Startups Eyeing Token Sale Glory: <a href="https://cointelegraph.com/news/spains-aragon-joins-ethereum-startups-eyeing-token-sale-glory">https://cointelegraph.com/news/spains-aragon-joins-ethereum-startups-eyeing-token-sale-glory</a>,
     <a class="clsHide" href="#idArgnrscwpa"></a></p>
   </section>
 
   <section id="idArgnSpc">
-  <h2 id="idArgnSpcH2">Aragon-Dogn.SPECIFIC
+  <h2 id="idArgnSpcH2">DoAragon.SPECIFIC
     <a class="clsHide" href="#idArgnSpcH2"></a></h2>
   <p id="idArgnSpcnam">name::
-    <br>* Mcs.Aragon-Dogn.specific,
+    <br>* Mcs.DoAragon.specific,
     <a class="clsHide" href="#idArgnSpcnam"></a></p>
   <p id="idArgnSpcP1">specific::
     <br>* {2019-05-09} Aragon has passed 500 organizations on mainnet [https://twitter.com/AragonProject/status/1126535012520796161],
     <a class="clsHide" href="#idArgnSpcP1"></a></p>
+  </section>
+
+  <section id="idArgnAnnt">
+  <h2 id="idArgnAnntH2">DoAragon.Aragon-Network
+    <a class="clsHide" href="#idArgnAnntH2"></a></h2>
+  <p id="idArgnAnntdsn">description::
+    <br>"The Aragon Network is an Aragon organization that provides infrastructure and services to users of the Aragon platform, and is governed by ANT holders. The existing Aragon infrastructure enables users to create and manage organizations. Each Aragon organization exists as a set of smart contracts that define the organization's stakeholders and their associated rights and privileges. However, some rights and privileges require subjective constraints that cannot be encoded in a smart contract directly."
+    <br>===
+    <br>"We are committed to transitioning Aragon into a fully decentralized organization. That organization will become the Aragon Network."
+    <br>[https://aragon.org/project/governance/]
+    <a class="clsHide" href="#idArgnAnntdsn"></a></p>
+  <p id="idArgnAnntnam">name::
+    <br>* Mcs.DoAragon.Aragon-Network!⇒Aragon-Network,
+    <br>* Mcs.Aragon-Network,
+    <a class="clsHide" href="#idArgnAnntnam"></a></p>
+
+  <section id="idArgnAnct">
+  <h3 id="idArgnAnctH3">Aragon-Court of Aragon-Network
+    <a class="clsHide" href="#idArgnAnctH3"></a></h3>
+  <p id="idArgnAnctdsn">description::
+    <br>"The Aragon Court is a decentralized oracle protocol developed and maintained by the Aragon Network. The Aragon Court can be used by organizations, including the Aragon Network itself, to resolve subjective disputes with binary outcomes. When combined with the existing Aragon infrastructure, it enables an organization to create Proposal Agreements that define subjective constraints on an organization's operation and can be enforced by minority stakeholders."
+    <br>[https://github.com/aragon/whitepaper]
+    <a class="clsHide" href="#idArgnAnctdsn"></a></p>
+  <p id="idArgnAnctnam">name::
+    <br>* Mcs.Aragon-Network'Aragon-Court,
+    <a class="clsHide" href="#idArgnAnctnam"></a></p>
+  </section>
   </section>
 </section>
 
@@ -3151,7 +3366,7 @@
     <br>[https://docs.google.com/document/d/1M1erC1TVPPul3V_RmhKbyuFrpFikyOX0LnDfWOqO20Q/edit#heading=h.t3hprwsx8hu0]
     <a class="clsHide" href="#idDaostkrtArgndsn"></a></p>
   <p id="idDaostkrtArgnnam">name::
-    <br>* Mcs.Aragon-Dogn'relation-to-DAOstack,
+    <br>* Mcs.DoAragon'relation-to-DAOstack,
     <br>* Mcs.DAOstack'relation-to-Aragon,
     <a class="clsHide" href="#idDaostkrtArgnnam"></a></p>
   </section>
