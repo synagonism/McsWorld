@@ -31,14 +31,14 @@ var
   //2. Directory of the-concept (dirCor or else)
   sDir = 'dirTchInf',
   sDIR = 'DirTchInf',
-  //3. Name of the-title
-  sN = 'decentralized-autonomous-organization',
-  //4. SHORT-name: Dchain-net, Đnet,
-  sNS = 'Dogn',
-  //5. FILE-name: shows relation of another file: DtcnetIota
-  sNFil = 'Dogn',
+  //3. Name of the-title: Ethereum--blockchain-net
+  sN = 'Libra--blockchain-net',
+  //4. SHORT-name: DnChain, DnEth, Dchain-net,
+  sNS = 'DnLibra',
+  //5. FILE-name: shows relation of another file: DtcbnetEth
+  sNFil = 'DnLbr',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Dogn';
+  sNId = 'Dnlbr';
 
 s =
   '<!DOCTYPE html>\n' +
