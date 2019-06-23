@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Ethereum--blockchain-net {2015-07-30} (DnEthereum.2-37-0.2019-06-18)</title>
+  <title>Mcs.Ethereum--blockchain-net {2015-07-30} (DnEthereum.2-38-0.2019-06-21)</title>
   <meta name="keywords" content="Ethereum, ETH, Ether, ETH, McsHitp">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -4366,12 +4366,13 @@ def register(name, value):
     <br>[<a href="https://solidity.readthedocs.org/en/latest/introduction-to-smart-contracts.html#overview">https://solidity.readthedocs.org/en/latest/introduction-to-smart-contracts.html#overview</a>]
     <a class="clsHide" href="#idEthevmdsn"></a></p>
   <p id="idEthevmnam">name::
-    <br>* Mcs.Deth-Evm, {2019-03-28}
-    <br>* Mcs.DnEthereum'Virtual-Machine!⇒DnEthereum-Evm,
-    <br>* Mcs.EVM-(Ethereum-Vitrual-Machine)!⇒DnEthereum-Evm,
-    <br>* Mcs.Ethereum-EVM!⇒DnEthereum-Evm,
-    <br>* Mcs.Ethereum-Vitrual-Machine!⇒DnEthereum-Evm,
-    <br>* Mcs.Ethereum-VM!⇒DnEthereum-Evm,
+    <br>* Mcs.Deth-Evm!⇒DnEthvm, {2019-03-28}
+    <br>* Mcs.DnEthereum'Virtual-Machine!⇒DnEthvm,
+    <br>* Mcs.DnEthvm, {2019-06-21}
+    <br>* Mcs.EVM-(Ethereum-Vitrual-Machine)!⇒DnEthvm,
+    <br>* Mcs.Ethereum-EVM!⇒DnEthvm,
+    <br>* Mcs.Ethereum-Vitrual-Machine!⇒DnEthvm,
+    <br>* Mcs.Ethereum-VM!⇒DnEthvm,
     <a class="clsHide" href="#idEthevmnam"></a></p>
   <p id="idEthevmP1">whole::
     <br>Ethereum enables this complexity by <strong>placing a virtual machine (called the Ethereum Virtual Machine, or EVM) in every node on the network</strong>.
@@ -4382,7 +4383,7 @@ def register(name, value):
     <a class="clsHide" href="#idEthevmP1"></a></p>
 
   <section id="idEthevmskar">
-  <h3 id="idEthevmskarH3">Deth-Evm'stack-area
+  <h3 id="idEthevmskarH3">DnEthvm'stack-area
     <a class="clsHide" href="#idEthevmskarH3"></a></h3>
   <p id="idEthevmskardsn">description::
     <br>The EVM is not a register machine but a stack machine, so all <strong>computations</strong> are performed on <strong>an area called the stack</strong>.
@@ -4403,13 +4404,13 @@ def register(name, value):
     <br>[<a href="https://learnxinyminutes.com/docs/solidity/">https://learnxinyminutes.com/docs/solidity</a>/]
     <a class="clsHide" href="#idEthevmskardsn"></a></p>
   <p id="idEthevmskarnam">name::
-    <br>* Mcs.Deth-Evm'stack,
+    <br>* Mcs.DnEthvm'stack,
     <br>* Mcs.DnEthereum'stack,
     <a class="clsHide" href="#idEthevmskarnam"></a></p>
   </section>
 
   <section id="idEthevmsgar">
-  <h3 id="idEthevmsgarH3">Deth-Evm'storage-area (persistent)
+  <h3 id="idEthevmsgarH3">DnEthvm'storage-area (persistent)
     <a class="clsHide" href="#idEthevmsgarH3"></a></h3>
   <p id="idEthevmsgardsn">description::
     <br>Each account has <strong>a persistent memory area</strong> which is called storage.
@@ -4437,14 +4438,14 @@ def register(name, value):
     <a class="clsHide" href="#idEthevmsgardsn"></a></p>
   <p id="idEthevmsgarnam">name::
     <br>* Mcs.Deth-account'storage,
-    <br>* Mcs.Deth-Evm'storage,
+    <br>* Mcs.DnEthvm'storage,
     <br>* Mcs.DnEthereum'storage,
-    <br>* Mcs.Deth-Evm'key-value-storage,
+    <br>* Mcs.DnEthvm'key-value-storage,
     <a class="clsHide" href="#idEthevmsgarnam"></a></p>
   </section>
 
   <section id="idEthevmmrar">
-  <h3 id="idEthevmmrarH3">Deth-Evm'memory-area (non-persistent)
+  <h3 id="idEthevmmrarH3">DnEthvm'memory-area (non-persistent)
     <a class="clsHide" href="#idEthevmmrarH3"></a></h3>
   <p id="idEthevmmrardsn">description::
     <br>The second memory area is called memory, of which a contract obtains a freshly cleared instance for each message call.
@@ -4462,14 +4463,14 @@ def register(name, value):
     <br>[<a href="http://solidity.readthedocs.io/en/v0.4.9/types.html#index-13">http://solidity.readthedocs.io/en/v0.4.9/types.html#index-13</a>]
     <a class="clsHide" href="#idEthevmmrardsn"></a></p>
   <p id="idEthevmmrarnam">name::
-    <br>* Mcs.Deth-Evm'memory,
+    <br>* Mcs.DnEthvm'memory,
     <br>* Mcs.DnEthereum'memory,
     <br>* Mcs.Ephemeral-memory-of-evm,
     <a class="clsHide" href="#idEthevmmrarnam"></a></p>
   </section>
 
   <section id="idEthevmcldt">
-  <h3 id="idEthevmcldtH3">Deth-Evm'calldata
+  <h3 id="idEthevmcldtH3">DnEthvm'calldata
     <a class="clsHide" href="#idEthevmcldtH3"></a></h3>
   <p id="idEthevmcldtdsn">description::
     <br>Calldata is a byte-array, just like memory, but it is read-only.
@@ -4477,30 +4478,30 @@ def register(name, value):
     <br>[<a href="https://github.com/androlo/solidity-workshop/blob/master/tutorials/2016-03-11-advanced-solidity-III.md#memory">https://github.com/androlo/solidity-workshop/blob/master/tutorials/2016-03-11-advanced-solidity-III.md#memory</a>]
     <a class="clsHide" href="#idEthevmcldtdsn"></a></p>
   <p id="idEthevmcldtnam">name::
-    <br>* Mcs.Deth-Evm'calldata,
+    <br>* Mcs.DnEthvm'calldata,
     <br>* Mcs.DnEthereum'calldata,
     <a class="clsHide" href="#idEthevmcldtnam"></a></p>
   </section>
 
   <section id="idEthevmpc">
-  <h3 id="idEthevmpcH3">Deth-Evm'PC (Program-Counter)
+  <h3 id="idEthevmpcH3">DnEthvm'PC (Program-Counter)
     <a class="clsHide" href="#idEthevmpcH3"></a></h3>
   </section>
 
   <section id="idEthevmabi">
-  <h3 id="idEthevmabiH3">Deth-Evm'ABI (App-Binary-Interface) (<a class="clsPreview" href="#idEthctpabi">link</a>)
+  <h3 id="idEthevmabiH3">DnEthvm'ABI (App-Binary-Interface) (<a class="clsPreview" href="#idEthctpabi">link</a>)
     <a class="clsHide" href="#idEthevmabiH3"></a></h3>
   </section>
 
   <section id="idEthevmcode">
-  <h3 id="idEthevmcodeH3">Deth-Evm'code
+  <h3 id="idEthevmcodeH3">DnEthvm'code
     <a class="clsHide" href="#idEthevmcodeH3"></a></h3>
   <p id="idEthevmcodenam">name::
-    <br>* Mcs.Deth-Evm'code,
+    <br>* Mcs.DnEthvm'code,
     <a class="clsHide" href="#idEthevmcodenam"></a></p>
 
   <section id="idEthevmbtcd">
-  <h4 id="idEthevmbtcdH4">Evm-code.bytecode
+  <h4 id="idEthevmbtcdH4">DnEthvm-code.bytecode
     <a class="clsHide" href="#idEthevmbtcdH4"></a></h4>
   <p id="idEthevmbtcddsn">description::
     <br>Contracts live on the blockchain in an Ethereum-specific binary format (EVM bytecode).
@@ -4511,18 +4512,40 @@ def register(name, value):
     <br>[http://gavwood.com/Paper.pdf]
     <a class="clsHide" href="#idEthevmbtcddsn"></a></p>
   <p id="idEthevmbtcdnam">name::
-    <br>* Mcs.Deth-Evm'bytecode,
-    <br>* Mcs.Deth-Evm'code,
+    <br>* Mcs.DnEthvm'bytecode,
+    <br>* Mcs.DnEthvm'code,
     <a class="clsHide" href="#idEthevmbtcdnam"></a></p>
 
   <section id="idEthevmpgm">
-  <h5 id="idEthevmpgmH5">Deth-Evm'program (binary-contract) (<a class="clsPreview" href="#idEthctpbnr">link</a>)
+  <h5 id="idEthevmpgmH5">DnEthvm'program (binary-contract) (<a class="clsPreview" href="#idEthctpbnr">link</a>)
     <a class="clsHide" href="#idEthevmpgmH5"></a></h5>
   </section>
   </section>
 
+  <section id="idEthevmcdAsm">
+  <h4 id="idEthevmcdAsmH4">DnEthvm-code.ASSEMBLY
+    <a class="clsHide" href="#idEthevmcdAsmH4"></a></h4>
+  <p id="idEthevmcdAsmnam">name::
+    <br>* Mcs.DnEthvm'code.assembly,
+    <br>* Mcs.Deth-asm,
+    <br>* Mcs.Deth-asm-code--of-Evm,
+    <a class="clsHide" href="#idEthevmcdAsmnam"></a></p>
+  </section>
+
+  <section id="idEthevmcdSrc">
+  <h4 id="idEthevmcdSrcH4">DnEthvm-code.SOURCE
+    <a class="clsHide" href="#idEthevmcdSrcH4"></a></h4>
+  <p id="idEthevmcdSrcdsn">description::
+    <br>· Evm-source-code is code writter in high-level-languages (Solidity, Serpent, LLL, Viper) which is translated to <a class="clsPreview" href="#idEthevmbtcd">bytecode</a> with <a class="clsPreview" href="#idEthevmcplr">an-Evm-compiler</a>.
+    <a class="clsHide" href="#idEthevmcdSrcdsn"></a></p>
+  <p id="idEthevmcdSrcnam">name::
+    <br>* Mcs.DnEthvm'code.source,
+    <br>* Mcs.Deth-source-code--of-Evm,
+    <a class="clsHide" href="#idEthevmcdSrcnam"></a></p>
+  </section>
+
   <section id="idEthevminn">
-  <h4 id="idEthevminnH4">Evm-code.opcode (instruction)
+  <h4 id="idEthevminnH4">DnEthvm-code.opcode (instruction)
     <a class="clsHide" href="#idEthevminnH4"></a></h4>
   <p id="idEthevminndsn">description::
     <br>The instruction set of the EVM is kept minimal in order to avoid incorrect implementations which could cause consensus problems.
@@ -4535,10 +4558,10 @@ def register(name, value):
     <br>Every single operation that is executed inside the EVM is actually simultaneously executed by every node in the network.
     <br>[<a href="https://medium.com/zeppelin-blog/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05#262d">https://medium.com/zeppelin-blog/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05#262d</a>]
   <p id="idEthevminnnam">name::
-    <br>* Mcs.Deth-Evm'computation!⇒DnEthereum-opcode,
-    <br>* Mcs.Deth-Evm'instruction!⇒DnEthereum-opcode,
-    <br>* Mcs.Deth-Evm'opcode!⇒DnEthereum-opcode,
-    <br>* Mcs.Deth-Evm'operation!⇒DnEthereum-opcode,
+    <br>* Mcs.DnEthvm'computation!⇒DnEthereum-opcode,
+    <br>* Mcs.DnEthvm'instruction!⇒DnEthereum-opcode,
+    <br>* Mcs.DnEthvm'opcode!⇒DnEthereum-opcode,
+    <br>* Mcs.DnEthvm'operation!⇒DnEthereum-opcode,
     <br>* Mcs.Deth-inn!⇒DnEthereum-opcode, {2019-03-29}
     <br>* Mcs.Deth-inn'(Ethereum-instruction)!⇒DnEthereum-opcode,
     <br>* Mcs.Deth-opcode, {2019-03-30}
@@ -4774,32 +4797,10 @@ def register(name, value):
     <a class="clsHide" href="#idEthinnSpcSpc"></a></p>
   </section>
   </section>
-
-  <section id="idEthevmcdAsm">
-  <h4 id="idEthevmcdAsmH4">Evm-code.ASSEMBLY
-    <a class="clsHide" href="#idEthevmcdAsmH4"></a></h4>
-  <p id="idEthevmcdAsmnam">name::
-    <br>* Mcs.Deth-Evm'code.assembly,
-    <br>* Mcs.Deth-asm,
-    <br>* Mcs.Deth-asm-code--of-Evm,
-    <a class="clsHide" href="#idEthevmcdAsmnam"></a></p>
-  </section>
-
-  <section id="idEthevmcdSrc">
-  <h4 id="idEthevmcdSrcH4">Evm-code.SOURCE
-    <a class="clsHide" href="#idEthevmcdSrcH4"></a></h4>
-  <p id="idEthevmcdSrcdsn">description::
-    <br>· Evm-source-code is code writter in high-level-languages (Solidity, Serpent, LLL, Viper) which is translated to <a class="clsPreview" href="#idEthevmbtcd">bytecode</a> with <a class="clsPreview" href="#idEthevmcplr">an-Evm-compiler</a>.
-    <a class="clsHide" href="#idEthevmcdSrcdsn"></a></p>
-  <p id="idEthevmcdSrcnam">name::
-    <br>* Mcs.Deth-Evm'code.source,
-    <br>* Mcs.Deth-source-code--of-Evm,
-    <a class="clsHide" href="#idEthevmcdSrcnam"></a></p>
-  </section>
   </section>
 
   <section id="idEthevmcplr">
-  <h3 id="idEthevmcplrH3">Deth-Evm'compiler
+  <h3 id="idEthevmcplrH3">DnEthvm'compiler
     <a class="clsHide" href="#idEthevmcplrH3"></a></h3>
   <p id="idEthevmcplrdsn">description::
     <br>Contracts live on the blockchain in an Ethereum-specific binary format (EVM bytecode).
@@ -4807,12 +4808,12 @@ def register(name, value):
     <br>[<a href="https://ethereum-homestead.readthedocs.org/en/latest/contracts-and-transactions/developer-tools.html#the-evm">https://ethereum-homestead.readthedocs.org/en/latest/contracts-and-transactions/developer-tools.html#the-evm</a>]
     <a class="clsHide" href="#idEthevmcplrdsn"></a></p>
   <p id="idEthevmcplrnam">name::
-    <br>* Mcs.Deth-Evm'compiler,
+    <br>* Mcs.DnEthvm'compiler,
     <a class="clsHide" href="#idEthevmcplrnam"></a></p>
   </section>
 
   <section id="idEthevmscrt">
-  <h3 id="idEthevmscrtH3">Deth-Evm'security
+  <h3 id="idEthevmscrtH3">DnEthvm'security
     <a class="clsHide" href="#idEthevmscrtH3"></a></h3>
   <p id="idEthevmscrtdsn">description::
     <br>The EVM is a security oriented virtual machine, designed to permit untrusted code to be executed by a global network of computers. To do so securely, it imposes the following restrictions:
@@ -4831,7 +4832,7 @@ def register(name, value):
   </section>
 
   <section id="idEthevmrsc">
-  <h3 id="idEthevmrscH3">Deth-Evm'resource
+  <h3 id="idEthevmrscH3">DnEthvm'resource
     <a class="clsHide" href="#idEthevmrscH3"></a></h3>
   <p id="idEthevmrscwpa">addressWpg::
     <br>* <a href="https://github.com/ebuchman/evm-tools/blob/master/analysis/guide.md">https://github.com/ebuchman/evm-tools/blob/master/analysis/guide.md</a>,
@@ -4839,7 +4840,7 @@ def register(name, value):
   </section>
 
   <section id="idEthevmcdexg">
-  <h3 id="idEthevmcdexgH3">Deth-Evm'code-executing
+  <h3 id="idEthevmcdexgH3">DnEthvm'code-executing
     <a class="clsHide" href="#idEthevmcdexgH3"></a></h3>
   <p id="idEthevmcdexgdsn">description::
     <br>In general, code execution is an infinite loop that consists of repeatedly carrying out the operation at the current program counter (which begins at zero) and then incrementing the program counter by one, until the end of the code is reached or an error or STOP or RETURN instruction is detected.
@@ -4853,7 +4854,7 @@ def register(name, value):
     <br>[<a href="https://github.com/ethereum/wiki/wiki/White-Paper#blockchain-and-mining">https://github.com/ethereum/wiki/wiki/White-Paper#blockchain-and-mining</a>]
     <a class="clsHide" href="#idEthevmcdexgdsn"></a></p>
   <p id="idEthevmcdexgnam">name::
-    <br>* Mcs.Deth-Evm'execution,
+    <br>* Mcs.DnEthvm'execution,
     <a class="clsHide" href="#idEthevmcdexgnam"></a></p>
   </section>
   </section>
@@ -9772,7 +9773,7 @@ contract CMgrWill {
     <br>* Mcs.Deth-account'code,
     <br>* Mcs.Deth-contract.binary-code,
     <br>* Mcs.Deth-contract.bytecode,
-    <br>* Mcs.Deth-Evm'contract-bytecode,
+    <br>* Mcs.DnEthvm'contract-bytecode,
     <a class="clsHide" href="#idEthctpBnrnam"></a></p>
 
   <section id="idEthctpBnrstrg">

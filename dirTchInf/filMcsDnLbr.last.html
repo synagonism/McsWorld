@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Libra--blockchain-net (DnLibra.0-1-0.2019-06-18 draft)</title>
+  <title>Mcs.Libra-DnChain (DnLibra.0-6-0.2019-06-23 draft)</title>
   <meta name="keywords" content="Libra--blockchain-net, DnLibra, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -12,7 +12,7 @@
 <header id="idHeader">
   <p></p>
   <h1 id="idHeaderH1">structured-concept:
-    <br>Libra--blockchain-net (DnLibra)
+    <br>Libra--Dchain-net (DnLibra)
     </h1>
   <p id="idHeadercrd">McsHitp-creation: {2019-06-18}
     <a class="clsHide" href="#idHeadercrd"></a></p>
@@ -22,14 +22,16 @@
   <h1 id="idOverviewH1">overview of DnLibra
     <a class="clsHide" href="#idOverviewH1"></a></h1>
   <p id="idDescription">description::
-    <br>· DnLibra is a-Dcurrency-network with permissioned appender-nodes and a-Dcurrency backed with a-reserve-fund.
+    <br>· DnLibra is <a class="clsPreview" href="filMcsDtcnet.last.html#idDcnetMoe">a-Dcurrency-DnChain</a> with permissioned <a class="clsPreview" href="filMcsDtcnet.last.html#idDtcnodApdr">appender-nodes</a> and <a class="clsPreview" href="filMcsDtcnet.last.html#idDtcevuMoe">a-Dcurrency</a> backed with <a class="clsPreview" href="#idDnlbrrsrv">a-reserve-fund</a>.
     <a class="clsHide" href="#idDescription"></a></p>
   <p id="idName">name::
     <br>* Mcs.filMcsDnLbr.last.html!⇒DnLibra,
     <br>* Mcs.dirTchInf/filMcsDnLbr.last.html!⇒DnLibra,
+    <br>* Mcs.DnChain.Libra!⇒DnLibra,
     <br>* Mcs.DnLibra, {2019-06-18}
     <br>* Mcs.DnLibra'(Libra--blockchain-net)!⇒DnLibra,
-    <br>* Mcs.Libra--blockchain-net!⇒DnLibra,
+    <br>* Mcs.Libra--Dchain-net!⇒DnLibra,
+    <br>* Mcs.Libra-DnChain!⇒DnLibra,
     <br>* Mcs.Libra-Network!⇒DnLibra,
     <a class="clsHide" href="#idName"></a></p>
 </section>
@@ -41,6 +43,9 @@
     <br>* Mcs.DnLibra'stakeholder!⇒DnLibra-stakeholder,
     <br>* Mcs.DnLibra-stakeholder,
     <a class="clsHide" href="#idDnlbrskhrnam"></a></p>
+  <p id="idDnlbrskhrgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsDtcnet.last.html#idDtcprlFT">stakeholder-of-DnChain</a>,
+    <a class="clsHide" href="#idDnlbrskhrgncchn"></a></p>
 
   <section id="idDnlbrskhrSpc">
   <h2 id="idDnlbrskhrSpcH2">stakeholder.SPECIFIC
@@ -49,10 +54,25 @@
     <br>* Mcs.DnLibra-stakeholder.specific,
     <a class="clsHide" href="#idDnlbrskhrSpcnam"></a></p>
   <p id="idDnlbrskhrSpcP1">specific::
-    <br>* Facebook,-Inc.,
+    <br>* user,
+    <br>* validator,
+    <br>* Facebook-Inc.,
     <br>* Libra-Association,
     <br>* Calibra-company,
     <a class="clsHide" href="#idDnlbrskhrSpcP1"></a></p>
+  </section>
+
+  <section id="idDnlbrskhrUsr">
+  <h2 id="idDnlbrskhrUsrH2">stakeholder.USER
+    <a class="clsHide" href="#idDnlbrskhrUsrH2"></a></h2>
+  <p id="idDnlbrskhrUsrdsn">description::
+    <br>· DnLibra-user is a-human-entity who owns <a class="clsPreview" href="#idDnlbracnt">an-account</a>.
+    <a class="clsHide" href="#idDnlbrskhrUsrdsn"></a></p>
+  <p id="idDnlbrskhrUsrnam">name::
+    <br>* Mcs.DnLibra'user!⇒DnLibra-user,
+    <br>* Mcs.DnLibra-user,
+    <br>* Mcs.DnLibra-stakeholder!⇒DnLibra-user,
+    <a class="clsHide" href="#idDnlbrskhrUsrnam"></a></p>
   </section>
 </section>
 
@@ -67,31 +87,53 @@
   <h2 id="idDnlbrtknH2">Libra-token of DnLibra
     <a class="clsHide" href="#idDnlbrtknH2"></a></h2>
   <p id="idDnlbrtkndsn">description::
-    <br>·
+    <br>"Libra is a global digital currency.
+    <br>- It is stored on the Libra Blockchain.
+    <br>- It is backed by <a class="clsPreview" href="#idDnlbrrsrv">a reserve of assets</a>.
+    <br>- It is governed by the independent <a class="clsPreview" href="#idDnlbrAscn">Libra Association</a>."
+    <br>[https://developers.libra.org/docs/reference/glossary#libra-the-currency]
     <a class="clsHide" href="#idDnlbrtkndsn"></a></p>
   <p id="idDnlbrtknnam">name::
-    <br>* Mcs.DnLibra'Libra-cryptocurrency!⇒DvLibra,
+    <br>* Mcs.DnLibra'cryptocurrency!⇒DvLibra,
     <br>* Mcs.DvLibra,
+    <br>* Mcs.Libra-coin!⇒DvLibra,
+    <br>* Mcs.Libra-currency!⇒DvLibra,
     <a class="clsHide" href="#idDnlbrtknnam"></a></p>
+
+  <section id="idDnlbrtkngnc">
+  <h2 id="idDnlbrtkngncH2">GENERIC of DvLibra
+    <a class="clsHide" href="#idDnlbrtkngncH2"></a></h2>
+  <p id="idDnlbrtkngncnam">name::
+    <br>* Mcs.DvLibra'generic,
+    <a class="clsHide" href="#idDnlbrtkngncnam"></a></p>
+  <p id="idDnlbrtkngncgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsDtcnet.last.html#idDtcevuMoe">Dcurrency</a>,
+    <br>* <a class="clsPreview" href="#idLmvprsrcTp">Lmv--resource-type</a>,
+    <a class="clsHide" href="#idDnlbrtkngncgncchn"></a></p>
+  </section>
   </section>
 
   <section id="idDnlbrrsrv">
   <h2 id="idDnlbrrsrvH2">Libra-Reserve of DnLibra
     <a class="clsHide" href="#idDnlbrrsrvH2"></a></h2>
   <p id="idDnlbrrsrvdsn">description::
+    <br>"the Libra coin —which will be fully backed with a basket of bank deposits and treasuries from high-quality central banks."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <br>===
     <br>"Unlike the majority of cryptocurrencies, Libra is fully backed by a reserve of real assets. A basket of currencies and assets will be held in the Libra Reserve for every Libra that is created, building trust in its intrinsic value."
     <br>[https://libra.org/en-US/vision/#how_it_works]
     <a class="clsHide" href="#idDnlbrrsrvdsn"></a></p>
   <p id="idDnlbrrsrvnam">name::
-    <br>* Mcs.DnLibra'Libra-Reserve!⇒Libra-Reserve,
-    <br>* Mcs.Libra-Reserve,
+    <br>* Mcs.DnLibra'Reserve!⇒DnLibra-reserve,
+    <br>* Mcs.DnLibra-reserve,
+    <br>* Mcs.Libra-Reserve!⇒DnLibra-reserve,
     <a class="clsHide" href="#idDnlbrrsrvnam"></a></p>
 
   <section id="idDnlbrrsrvasst">
   <h3 id="idDnlbrrsrvasstH3">asset of Libra-Reserve
     <a class="clsHide" href="#idDnlbrrsrvasstH3"></a></h3>
   <p id="idDnlbrrsrvasstnam">name::
-    <br>* Mcs.Libra-Reserve'asset,
+    <br>* Mcs.DnLibra-reserve'asset,
     <a class="clsHide" href="#idDnlbrrsrvasstnam"></a></p>
   <p id="idDnlbrrsrvasstSpc">specific::
     <br>* government-backed-currency,
@@ -106,9 +148,703 @@
     <br>· DvLibra will-fail when Libra-Reserve-assets will-fail.
     <a class="clsHide" href="#idDnlbrrsrvpbmdsn"></a></p>
   <p id="idDnlbrrsrvpbmnam">name::
-    <br>* Mcs.Libra-Reserve'problem,
+    <br>* Mcs.DnLibra-problem.reserve,
+    <br>* Mcs.DnLibra-reserve'problem,
     <a class="clsHide" href="#idDnlbrrsrvpbmnam"></a></p>
   </section>
+  </section>
+</section>
+
+<section id="idDnlbrprcl">
+  <h1 id="idDnlbrprclH1">protocol of DnLibra
+    <a class="clsHide" href="#idDnlbrprclH1"></a></h1>
+  <p id="idDnlbrprcldsn">description::
+    <br>"Libra protocol is the specification of how transactions are submitted, ordered, executed, and recorded within the Libra ecosystem."
+    <br>[https://developers.libra.org/docs/reference/glossary#libra-protocol]
+    <br>===
+    <br>"The Libra Blockchain uses LibraBFT, a consensus protocol based on HotStuff."
+    <br>[https://developers.libra.org/docs/reference/glossary#byzantine-fault-tolerance-bft]
+    <a class="clsHide" href="#idDnlbrprcldsn"></a></p>
+  <p id="idDnlbrprclnam">name::
+    <br>* Mcs.DnLibra'consensus-algorithm!⇒LibraBFT,
+    <br>* Mcs.DnLibra'consensus-protocol!⇒LibraBFT,
+    <br>* Mcs.DnLibra'protocol!⇒LibraBFT,
+    <br>* Mcs.LibraBFT,
+    <br>* Mcs.Libra-protocol!⇒LibraBFT,
+    <a class="clsHide" href="#idDnlbrprclnam"></a></p>
+  <p id="idDnlbrprclgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsDtcnet.last.html#idDtcprlFT">protocol-of-DnChain</a>,
+    <a class="clsHide" href="#idDnlbrprclgncchn"></a></p>
+
+  <section id="idDnlbrprclwtpr">
+  <h2 id="idDnlbrprclwtprH2">&#8779; libra White Paper
+    <a class="clsHide" href="#idDnlbrprclwtprH2"></a></h2>
+  <p id="idDnlbrprclwtprnam">name::
+    <br>* Mcs.DnLibra'white-paper,
+    <br>* Mcs.DnLibra-protocol'white-paper,
+    <br>* Mcs.DnLibra-whitepaper,
+    <br>* Mcs.Libra-white-paper,
+    <br>* Mcs.white-paper--of--Libra-Network,
+    <a class="clsHide" href="#idDnlbrprclwtprnam"></a></p>
+  <p id="idDnlbrprclwtprwpa">addressWpg::
+    <br>* https://libra.org/en-US/white-paper/,
+    <a class="clsHide" href="#idDnlbrprclwtprwpa"></a></p>
+  <section id="idDnlbrprclwtpr1">
+  <h3 id="idDnlbrprclwtpr1H3">1. Introduction
+    <a class="clsHide" href="#idDnlbrprclwtpr1H3"></a></h3>
+  <p id="idDnlbrprclwtpr1P1"><strong>Libra’s mission is to enable a simple global currency and financial infrastructure that empowers billions of people.</strong>
+    <a class="clsHide" href="#idDnlbrprclwtpr1P1"></a></p>
+  <p id="idDnlbrprclwtpr1P2">This document outlines our plans for a new decentralized blockchain, a low-volatility cryptocurrency, and a smart contract platform that together aim to create a new opportunity for responsible financial services innovation.
+    <a class="clsHide" href="#idDnlbrprclwtpr1P2"></a></p>
+
+  <section id="idDnlbrprclwtpr1-1">
+  <h4 id="idDnlbrprclwtpr1-1H4">1.1 Problem Statement
+    <a class="clsHide" href="#idDnlbrprclwtpr1-1H4"></a></h4>
+  <p id="idDnlbrprclwtpr1-1P1">The advent of the internet and mobile broadband has empowered billions of people globally to have access to the world's knowledge and information, high-fidelity communications, and a wide range of lower-cost, more convenient services.
+    <br>These services are now accessible using a $40 smartphone from almost anywhere in the world.<sup><a class="clsPreview" href="#idDnlbrprclwtprfnP1">[ 1 ]</a></sup>
+    <br>This connectivity has driven economic empowerment by enabling more people to access the financial ecosystem.
+    <br>Working together, technology companies and financial institutions have also found solutions to help increase economic empowerment around the world.
+    <br>Despite this progress, large swaths of the world's population are still left behind — 1.7 billion adults globally remain outside of the financial system with no access to a traditional bank, even though one billion have a mobile phone and nearly half a billion have internet access.<sup><a class="clsPreview" href="#idDnlbrprclwtprfnP2">[ 2 ]</a></sup>
+    <a class="clsHide" href="#idDnlbrprclwtpr1-1P1"></a></p>
+  <p id="idDnlbrprclwtpr1-1P2">For too many, parts of the financial system look like telecommunication networks pre-internet.
+    <br>Twenty years ago, the average price to send a text message in Europe was 16 cents per message.<sup><a class="clsPreview" href="#idDnlbrprclwtprfnP3">[ 3 ]</a></sup>
+    <br>Now everyone with a smartphone can communicate across the world for free with a basic data plan.
+    <br>Back then, telecommunications prices were high but uniform; whereas today, access to financial services is limited or restricted for those who need it most — those impacted by cost, reliability, and the ability to seamlessly send money.
+    <a class="clsHide" href="#idDnlbrprclwtpr1-1P2"></a></p>
+  <p id="idDnlbrprclwtpr1-1P3">All over the world, people with less money pay more for financial services.
+    <br>Hard-earned income is eroded by fees, from remittances and wire costs to overdraft and ATM charges.
+    <br>Payday loans can charge annualized interest rates of 400 percent or more, and finance charges can be as high as $30 just to borrow $100.<sup><a class="clsPreview" href="#idDnlbrprclwtprfnP4">[ 4 ]</a></sup>
+    <br>When people are asked why they remain on the fringe of the existing financial system, those who remain “unbanked” point to not having sufficient funds, high and unpredictable fees, banks being too far away, and lacking the necessary documentation.<sup><a class="clsPreview" href="#idDnlbrprclwtprfnP5">[ 5 ]</a></sup>
+    <a class="clsHide" href="#idDnlbrprclwtpr1-1P3"></a></p>
+  <p id="idDnlbrprclwtpr1-1P4">Blockchains and cryptocurrencies have a number of unique properties that can potentially address some of the problems of accessibility and trustworthiness.
+    <br>These include distributed governance, which ensures that no single entity controls the network; open access, which allows anybody with an internet connection to participate; and security through cryptography, which protects the integrity of funds.
+    <a class="clsHide" href="#idDnlbrprclwtpr1-1P4"></a></p>
+  <p id="idDnlbrprclwtpr1-1P5">But the existing blockchain systems have yet to reach mainstream adoption.
+    <br>Mass-market usage of existing blockchains and cryptocurrencies has been hindered by their volatility and lack of scalability, which have, so far, made them poor stores of value and mediums of exchange.
+    <br>Some projects have also aimed to disrupt the existing system and bypass regulation as opposed to innovating on compliance and regulatory fronts to improve the effectiveness of anti-money laundering.
+    <br>We believe that collaborating and innovating with the financial sector, including regulators and experts across a variety of industries, is the only way to ensure that a sustainable, secure and trusted framework underpins this new system.
+    <br>And this approach can deliver a giant leap forward toward a lower-cost, more accessible, more connected global financial system.
+    <a class="clsHide" href="#idDnlbrprclwtpr1-1P5"></a></p>
+  </section>
+
+  <section id="idDnlbrprclwtpr1-2">
+  <h4 id="idDnlbrprclwtpr1-2H4">1.2 The Opportunity
+    <a class="clsHide" href="#idDnlbrprclwtpr1-2H4"></a></h4>
+  <p id="idDnlbrprclwtpr1-2P1">As we embark on this journey together, we think it is important to share our beliefs to align the community and ecosystem we intend to spark around this initiative:
+    <br>• We believe that many more people should have access to financial services and to cheap capital.
+    <br>• We believe that people have an inherent right to control the fruit of their legal labor.
+    <br>• We believe that global, open, instant, and low-cost movement of money will create immense economic opportunity and more commerce across the world.
+    <br>• We believe that people will increasingly trust decentralized forms of governance.
+    <br>• We believe that a global currency and financial infrastructure should be designed and governed as a public good.
+    <br>• We believe that we all have a responsibility to help advance financial inclusion, support ethical actors, and continuously uphold the integrity of the ecosystem.
+    <a class="clsHide" href="#idDnlbrprclwtpr1-2P1"></a></p>
+  </section>
+  </section>
+
+  <section id="idDnlbrprclwtpr2">
+  <h3 id="idDnlbrprclwtpr2H3">2. Introducing Libra
+    <a class="clsHide" href="#idDnlbrprclwtpr2H3"></a></h3>
+  <p id="idDnlbrprclwtpr2P1">The world truly needs a reliable digital currency and infrastructure that together can deliver on the promise of “the internet of money.”
+    <a class="clsHide" href="#idDnlbrprclwtpr2P1"></a></p>
+  <p id="idDnlbrprclwtpr2P2">Securing your financial assets on your mobile device should be simple and intuitive.
+    <br>Moving money around globally should be as easy and cost-effective as — and even more safe and secure than — sending a text message or sharing a photo, no matter where you live, what you do, or how much you earn.
+    <br>New product innovation and additional entrants to the ecosystem will enable the lowering of barriers to access and cost of capital for everyone and facilitate frictionless payments for more people.
+    <a class="clsHide" href="#idDnlbrprclwtpr2P2"></a></p>
+  <p id="idDnlbrprclwtpr2P3">Now is the time to create a new kind of digital currency built on the foundation of blockchain technology.
+    <br>The mission for <strong>Libra is a simple global currency and financial infrastructure that empowers billions of people.</strong> Libra is made up of three parts that will work together to create a more inclusive financial system:
+    <br>1. It is built on a secure, scalable, and <strong>reliable blockchain;</strong>
+    <br>2. It is <strong>backed by a reserve</strong> of assets designed to give it intrinsic value;
+    <br>3. It is <strong>governed by the independent Libra Association</strong> tasked with evolving the ecosystem.
+    <a class="clsHide" href="#idDnlbrprclwtpr2P3"></a></p>
+  <p id="idDnlbrprclwtpr2P4">The Libra currency is built on the “Libra Blockchain.” Because it is intended to address a global audience, the software that implements the Libra Blockchain is open source — designed so that anyone can build on it, and billions of people can depend on it for their financial needs.
+    <br>Imagine an open, interoperable ecosystem of financial services that developers and organizations will build to help people and businesses hold and transfer Libra for everyday use.
+    <br>With the proliferation of smartphones and wireless data, increasingly more people will be online and able to access Libra through these new services.
+    <br>To enable the Libra ecosystem to achieve this vision over time, the blockchain has been built from the ground up to prioritize scalability, security, efficiency in storage and throughput, and future adaptability.
+    <br>Keep reading for an overview of the Libra Blockchain, or read the <a href="https://developers.libra.org/docs/the-libra-blockchain-paper" target="_blank" rel="noopener">technical paper</a>.
+    <a class="clsHide" href="#idDnlbrprclwtpr2P4"></a></p>
+  <p id="idDnlbrprclwtpr2P5">The unit of currency is called “Libra.” Libra will need to be accepted in many places and easy to access for those who want to use it.
+    <br>In other words, people need to have confidence that they can use Libra and that its value will remain relatively stable over time.
+    <br>Unlike the majority of cryptocurrencies, Libra is fully backed by a reserve of real assets.
+    <br>A basket of bank deposits and short-term government securities will be held in the Libra Reserve for every Libra that is created, building trust in its intrinsic value.
+    <br>The Libra Reserve will be administered with the objective of preserving the value of Libra over time.
+    <br>Keep reading for an overview of Libra and the reserve, or read more <a href="https://libra.org/en-us/about-currency-reserve">here</a>.
+    <a class="clsHide" href="#idDnlbrprclwtpr2P5"></a></p>
+  <p id="idDnlbrprclwtpr2P6">The Libra Association is an independent, not-for-profit membership organization headquartered in Geneva, Switzerland.
+    <br>The association’s purpose is to coordinate and provide a framework for governance for the network and reserve and lead social impact grant-making in support of financial inclusion.
+    <br>This white paper is a reflection of its mission, vision, and purview.
+    <br>The association’s membership is formed from the network of validator nodes that operate the Libra Blockchain.
+    <a class="clsHide" href="#idDnlbrprclwtpr2P6"></a></p>
+  <p id="idDnlbrprclwtpr2P7">Members of the Libra Association will consist of geographically distributed and diverse businesses, nonprofit and multilateral organizations, and academic institutions.
+    <br>The initial group of organizations that will work together on finalizing the association’s charter and become “Founding Members” upon its completion are, by industry:
+    <br>• Payments: <strong>Mastercard, PayPal, PayU (Naspers’ fintech arm), Stripe, Visa</strong>
+    <br>• Technology and marketplaces: <strong>Booking Holdings, eBay, Facebook/Calibra, Farfetch, Lyft, Mercado</strong><strong>Pago, Spotify AB, Uber Technologies, Inc.</strong>
+    <br>• Telecommunications: <strong>Iliad, Vodafone Group</strong>
+    <br>• Blockchain: <strong>Anchorage, Bison Trails, Coinbase, Inc., Xapo Holdings Limited</strong>
+    <br>• Venture Capital: <strong>Andreessen Horowitz, Breakthrough Initiatives, Ribbit Capital, Thrive Capital, Union </strong><strong>Square Ventures</strong>
+    <br>• Nonprofit and multilateral organizations, and academic institutions: <strong>Creative Destruction Lab, Kiva,</strong> <strong>Mercy Corps, Women’s World Banking</strong>
+    <a class="clsHide" href="#idDnlbrprclwtpr2P7"></a></p>
+  <p id="idDnlbrprclwtpr2P8">We hope to have approximately 100 members of the Libra Association by the target launch in the first half of 2020.
+    <a class="clsHide" href="#idDnlbrprclwtpr2P8"></a></p>
+  <p id="idDnlbrprclwtpr2P9">Facebook teams played a key role in the creation of the Libra Association and the Libra Blockchain, working with the other Founding Members.
+    <br>While final decision-making authority rests with the association, Facebook is expected to maintain a leadership role through 2019.
+    <br>Facebook created Calibra, a regulated subsidiary, to ensure separation between social and financial data and to build and operate services on its behalf on top of the Libra network.
+    <a class="clsHide" href="#idDnlbrprclwtpr2P9"></a></p>
+  <p id="idDnlbrprclwtpr2P10">Once the Libra network launches, Facebook, and its affiliates, will have the same commitments, privileges, and financial obligations as any other Founding Member.
+    <br>As one member among many, Facebook’s role in governance of the association will be equal to that of its peers.
+    <a class="clsHide" href="#idDnlbrprclwtpr2P10"></a></p>
+  <p id="idDnlbrprclwtpr2P11">Blockchains are described as either permissioned or permissionless in relation to the ability to participate as a validator node.
+    <br>In a “permissioned blockchain,” access is granted to run a validator node.
+    <br>In a “permissionless blockchain,” anyone who meets the technical requirements can run a validator node.
+    <br>In that sense, Libra will start as a permissioned blockchain.
+    <a class="clsHide" href="#idDnlbrprclwtpr2P11"></a></p>
+  <p id="idDnlbrprclwtpr2P12">To ensure that Libra is truly open and always operates in the best interest of its users, our ambition is for the Libra network to become permissionless.
+    <br>The challenge is that as of today we do not believe that there is a proven solution that can deliver the scale, stability, and security needed to support billions of people and transactions across the globe through a permissionless network.
+    <br>One of the association’s directives will be to work with the community to research and implement this transition, which will begin within five years of the public launch of the Libra Blockchain and ecosystem.
+    <a class="clsHide" href="#idDnlbrprclwtpr2P12"></a></p>
+  <p id="idDnlbrprclwtpr2P13">Essential to the spirit of Libra, in both its permissioned and permissionless state, the Libra Blockchain will be open to everyone: any consumer, developer, or business can use the Libra network, build products on top of it, and add value through their services.
+    <br>Open access ensures low barriers to entry and innovation and encourages healthy competition that benefits consumers.
+    <br>This is foundational to the goal of building more inclusive financial options for the world.
+    <a class="clsHide" href="#idDnlbrprclwtpr2P13"></a></p>
+  </section>
+
+  <section id="idDnlbrprclwtpr3">
+  <h3 id="idDnlbrprclwtpr3H3">3. The Libra Blockchain
+    <a class="clsHide" href="#idDnlbrprclwtpr3H3"></a></h3>
+  <p id="idDnlbrprclwtpr3P1">The goal of the Libra Blockchain is to serve as a solid foundation for financial services, including a new global currency, which could meet the daily financial needs of billions of people.
+    <br>Through the process of evaluating existing options, we decided to build a new blockchain based on these three requirements:
+    <br>• Able to scale to billions of accounts, which requires high transaction throughput, low latency, and an efficient, high-capacity storage system.
+    <br>• Highly secure, to ensure safety of funds and financial data.
+    <br>• Flexible, so it can power the Libra ecosystem’s governance as well as future innovation in financial services.
+    <a class="clsHide" href="#idDnlbrprclwtpr3P1"></a></p>
+  <p id="idDnlbrprclwtpr3P2">The Libra Blockchain is designed from the ground up to holistically address these requirements and build on the learnings from existing projects and research — a combination of innovative approaches and well- understood techniques.
+    <br>This next section will highlight <strong>three decisions regarding the Libra Blockchain</strong>:
+    <br>1. Designing and using the Move programming language.
+    <br>2. Using a Byzantine Fault Tolerant (BFT) consensus approach.
+    <br>3. Adopting and iterating on widely adopted blockchain data structures.
+    <a class="clsHide" href="#idDnlbrprclwtpr3P2"></a></p>
+  <p id="idDnlbrprclwtpr3P3"><strong>“Move” is a new programming language</strong> for implementing custom transaction logic and “smart contracts” on the Libra Blockchain.
+    <br>Because of Libra’s goal to one day serve billions of people, Move is designed with safety and security as the highest priorities.
+    <br>Move takes insights from security incidents that have happened with smart contracts to date and creates a language that makes it inherently easier to write code that fulfills the author’s intent, thereby lessening the risk of unintended bugs or security incidents.
+    <br>Specifically, Move is designed to prevent assets from being cloned.
+    <br>It enables “resource types” that constrain digital assets to the same properties as physical assets: a resource has a single owner, it can only be spent once, and the creation of new resources is restricted.
+    <br>The Move language also facilitates automatic proofs that transactions satisfy certain properties, such as payment transactions only changing the account balances of the payer and receiver.
+    <br>By prioritizing these features, Move will help keep the Libra Blockchain secure.
+    <br>By making the development of critical transaction code easier, Move enables the secure implementation of the Libra ecosystem’s governance policies, such as the management of the Libra currency and the network of validator nodes.
+    <br>Move will accelerate the evolution of the Libra Blockchain protocol and any financial innovations built on top of it.
+    <br>We anticipate that the ability for developers to create contracts will be opened up over time in order to support the evolution and validation of Move.
+    <a class="clsHide" href="#idDnlbrprclwtpr3P3"></a></p>
+  <p id="idDnlbrprclwtpr3P4">To facilitate agreement among all validator nodes on the transactions to be executed and the order in which they are executed, <strong>the Libra Blockchain adopted the BFT approach by using the LibraBFT consensus protocol.</strong> This approach builds trust in the network because BFT consensus protocols are designed to function correctly even if some validator nodes — up to one-third of the network — are compromised or fail.
+    <br>This class of consensus protocols also enables high transaction throughput, low latency, and a more energy-efficient approach to consensus than “proof of work” used in some other blockchains.
+    <a class="clsHide" href="#idDnlbrprclwtpr3P4"></a></p>
+  <p id="idDnlbrprclwtpr3P5">In order to securely store transactions, data on the Libra Blockchain is protected by Merkle trees, a data structure used by other blockchains that enables the detection of any changes to existing data.
+    <br>Unlike previous blockchains, which view the blockchain as a collection of blocks of transactions, <strong>the Libra Blockchain is a single data structure that records the history of transactions and states over time.</strong> This implementation simplifies the work of applications accessing the blockchain, allowing them to read any data from any point in time and verify the integrity of that data using a unified framework.
+    <a class="clsHide" href="#idDnlbrprclwtpr3P5"></a></p>
+  <p id="idDnlbrprclwtpr3P6"><strong>The Libra Blockchain is pseudonymous and allows users to hold one or more addresses that are not linked to their real-world identity.</strong> This approach is familiar to many users, developers, and regulators.
+    <br>The Libra Association will oversee the evolution of the Libra Blockchain protocol and network, and it will continue to evaluate new techniques that enhance privacy in the blockchain while considering concerns of practicality, scalability, and regulatory impact.
+    <a class="clsHide" href="#idDnlbrprclwtpr3P6"></a></p>
+  <p id="idDnlbrprclwtpr3P7"><strong>For more details, read the</strong> <a href="https://developers.libra.org/docs/the-libra-blockchain-paper" target="_blank" rel="noopener">technical paper</a> <strong>on the Libra Blockchain.</strong> Detailed information is also available on the <a href="https://developers.libra.org/docs/move-paper" target="_blank" rel="noopener">Move programming language</a> and the <a href="https://developers.libra.org/docs/state-machine-replication-paper" target="_blank" rel="noopener">LibraBFT consensus protocol</a>. <strong>We’ve open sourced an early preview of the</strong> <a href="https://developers.libra.org/" target="_blank" rel="noopener">Libra testnet</a>, with accompanying documentation.
+    <br>The testnet is still under development, and APIs are subject to change.
+    <br>Our commitment is to work in the open with the community and hope you will read, build, and provide feedback.
+    <a class="clsHide" href="#idDnlbrprclwtpr3P7"></a></p>
+  </section>
+
+  <section id="idDnlbrprclwtpr4">
+  <h3 id="idDnlbrprclwtpr4H3">4. The Libra Currency and Reserve
+    <a class="clsHide" href="#idDnlbrprclwtpr4H3"></a></h3>
+  <p id="idDnlbrprclwtpr4P1">We believe that the world needs a global, digitally native currency that brings together the attributes of the world’s best currencies: stability, low inflation, wide global acceptance, and fungibility.
+    <br>The Libra currency is designed to help with these global needs, aiming to expand how money works for more people around the world.
+    <a class="clsHide" href="#idDnlbrprclwtpr4P1"></a></p>
+  <p id="idDnlbrprclwtpr4P2"><strong>Libra is designed to be a stable digital cryptocurrency that will be fully backed by a reserve of real assets — the Libra Reserve — and supported by a competitive network of exchanges buying and selling Libra.</strong> That means anyone with Libra has a high degree of assurance they can convert their digital currency into local fiat currency based on an exchange rate, just like exchanging one currency for another when traveling.
+    <br>This approach is similar to how other currencies were introduced in the past: to help instill trust in a new currency and gain widespread adoption during its infancy, it was guaranteed that a country’s notes could be traded in for real assets, such as gold.
+    <br>Instead of backing Libra with gold, though, it will be backed by a collection of low-volatility assets, such as bank deposits and short-term government securities in currencies from stable and reputable central banks.
+    <a class="clsHide" href="#idDnlbrprclwtpr4P2"></a></p>
+  <p id="idDnlbrprclwtpr4P3">It is important to highlight that this means one Libra will not always be able to convert into the same amount of a given local currency (i.e., Libra is not a “peg” to a single currency).
+    <br>Rather, as the value of the underlying assets moves, the value of one Libra in any local currency may fluctuate.
+    <br>However, the reserve assets are being chosen to minimize volatility, so holders of Libra can trust the currency’s ability to preserve value over time.
+    <br>The assets in the Libra Reserve will be held by a geographically distributed network of custodians with investment-grade credit rating to provide both security and decentralization of the assets.
+    <a class="clsHide" href="#idDnlbrprclwtpr4P3"></a></p>
+  <p id="idDnlbrprclwtpr4P4">The assets behind Libra are the major difference between it and many existing cryptocurrencies that lack such intrinsic value and hence have prices that fluctuate significantly based on expectations.
+    <br>Libra is indeed a cryptocurrency, though, and by virtue of that, it inherits several attractive properties of these new digital currencies: the ability to send money quickly, the security of cryptography, and the freedom to easily transmit funds across borders.
+    <br>Just as people can use their phones to message friends anywhere in the world today, with Libra, the same can be done with money — instantly, securely, and at low cost.
+    <a class="clsHide" href="#idDnlbrprclwtpr4P4"></a></p>
+  <p id="idDnlbrprclwtpr4P5">Interest on the reserve assets will be used to cover the costs of the system, ensure low transaction fees, pay dividends to investors who provided capital to jumpstart the ecosystem (read “The Libra Association” <a href="https://libra.org/en-us/association-council-principles">here</a>), and support further growth and adoption.
+    <br>The rules for allocating interest on the reserve will be set in advance and will be overseen by the Libra Association.
+    <br>Users of Libra do not receive a return from the reserve.
+    <a class="clsHide" href="#idDnlbrprclwtpr4P5"></a></p>
+  <p id="idDnlbrprclwtpr4P6">For more on the reserve policy and the details of the Libra currency, please read <a href="https://libra.org/en-us/about-currency-reserve">here</a>.
+    <a class="clsHide" href="#idDnlbrprclwtpr4P6"></a></p>
+  </section>
+
+  <section id="idDnlbrprclwtpr5">
+  <h3 id="idDnlbrprclwtpr5H3">5. The Libra Association
+    <a class="clsHide" href="#idDnlbrprclwtpr5H3"></a></h3>
+  <p id="idDnlbrprclwtpr5P1">To make the mission of Libra a reality — a simple global currency and financial infrastructure that empowers billions of people — the Libra Blockchain and Libra Reserve need a governing entity that is comprised of diverse and independent members.
+    <br>This governing entity is the Libra Association, an independent, not-for-profit membership organization, headquartered in Geneva, Switzerland.
+    <br>Switzerland has a history of global neutrality and openness to blockchain technology, and the association strives to be a neutral, international institution, hence the choice to be registered there.
+    <br>The association is designed to facilitate the operation of the Libra Blockchain; to coordinate the agreement among its stakeholders — the network’s validator nodes — in their pursuit to promote, develop, and expand the network, and to manage the reserve.
+    <a class="clsHide" href="#idDnlbrprclwtpr5P1"></a></p>
+  <p id="idDnlbrprclwtpr5P2">The association is governed by the Libra Association Council, which is comprised of one representative per validator node.
+    <br>Together, they make decisions on the governance of the network and reserve.
+    <br>Initially, this group consists of the <a href="https://libra.org/en-us/non-profit-association">Founding Members</a>: businesses, nonprofit and multilateral organizations, and academic institutions from around the world.
+    <br>All decisions are brought to the council, and major policy or technical decisions require the consent of two-thirds of the votes, the same supermajority of the network required in the BFT consensus protocol.
+    <a class="clsHide" href="#idDnlbrprclwtpr5P2"></a></p>
+  <p id="idDnlbrprclwtpr5P3">Through the association, the validator nodes align on the network’s technical roadmap and development goals.
+    <br>In that sense, it is similar to other not-for-profit entities, often in the form of foundations, which govern open-source projects.
+    <br>As Libra relies on a growing distributed community of open-source contributors to further itself, the association is a necessary vehicle to establish guidance as to which protocols or specifications to develop and to adopt.
+    <a class="clsHide" href="#idDnlbrprclwtpr5P3"></a></p>
+  <p id="idDnlbrprclwtpr5P4">The Libra Association also serves as the entity through which the Libra Reserve is managed, and hence the stability and growth of the Libra economy are achieved.
+    <br>The association is the only party able to create (mint) and destroy (burn) Libra.
+    <br>Coins are only minted when authorized resellers have purchased those coins from the association with fiat assets to fully back the new coins.
+    <br>Coins are only burned when the authorized resellers sell Libra coin to the association in exchange for the underlying assets.
+    <br>Since authorized resellers will always be able to sell Libra coins to the reserve at a price equal to the value of the basket, the Libra Reserve acts as a “buyer of last resort.” These activities of the association are governed and constrained by a <a href="https://libra.org/en-us/association-council-principles">Reserve Management Policy</a> that can only be changed by a supermajority of the association members.
+    <a class="clsHide" href="#idDnlbrprclwtpr5P4"></a></p>
+  <p id="idDnlbrprclwtpr5P5">In these early years of the network, there are additional roles that need to be performed on behalf of the association: the recruitment of Founding Members to serve as validator nodes; the fundraising to jumpstart the ecosystem; the design and implementation of incentive programs to propel the adoption of Libra, including the distribution of such incentives to Founding Members; and the establishment of the association’s social impact grant-making program.
+    <a class="clsHide" href="#idDnlbrprclwtpr5P5"></a></p>
+  <p id="idDnlbrprclwtpr5P6">An additional goal of the association is to develop and promote an open identity standard.
+    <br>We believe that decentralized and portable digital identity is a prerequisite to financial inclusion and competition.
+    <a class="clsHide" href="#idDnlbrprclwtpr5P6"></a></p>
+  <p id="idDnlbrprclwtpr5P7">An important objective of the Libra Association is to move toward increasing decentralization over time.
+    <br>This decentralization ensures that there are low barriers to entry for both building on and using the network and improves the Libra ecosystem’s resilience over the long term.
+    <br>As discussed above, the association will develop a path toward permissionless governance and consensus on the Libra network.
+    <br>The association’s objective will be to start this transition within five years, and in so doing will gradually reduce the reliance on the Founding Members.
+    <br>In the same spirit, the association aspires to minimize the reliance on itself as the administrator of the Libra Reserve.
+    <a class="clsHide" href="#idDnlbrprclwtpr5P7"></a></p>
+  <p id="idDnlbrprclwtpr5P8">For more on the Libra Association, please read <a href="https://libra.org/en-us/association-council-principles">here</a>.
+    <a class="clsHide" href="#idDnlbrprclwtpr5P8"></a></p>
+  </section>
+
+  <section id="idDnlbrprclwtpr6">
+  <h3 id="idDnlbrprclwtpr6H3">6. What’s Next for Libra?
+    <a class="clsHide" href="#idDnlbrprclwtpr6H3"></a></h3>
+  <p id="idDnlbrprclwtpr6P1">Today we are publishing this document outlining our goals for Libra and launching libra.org as a home for the association and all things Libra.
+    <br>It will continue to be updated over the coming months.
+    <br>We are also open- sourcing the <a href="https://developers.libra.org/" target="_blank" rel="noopener">code for the Libra Blockchain</a> and launching Libra’s initial testnet for developers to experiment with and build upon.
+    <a class="clsHide" href="#idDnlbrprclwtpr6P1"></a></p>
+  <p id="idDnlbrprclwtpr6P2">There is much left to do before the target launch in the first half of 2020.
+    <a class="clsHide" href="#idDnlbrprclwtpr6P2"></a></p>
+  <p id="idDnlbrprclwtpr6P3"><strong>The Libra Blockchain:</strong>
+    <br>Over the coming months, the association will work with the community to gather feedback on theLibra Blockchain prototype and bring it to a production-ready state.
+    <br>In particular, this work will focus on ensuring the security, performance, and scalability of the protocol and implementation.
+    <br>
+    <br>• The Libra Association will construct well-documented APIs and libraries to enable users to interact with the Libra Blockchain.
+    <br>• The Libra Association will create a framework for the collaborative development of the technology behind the Libra Blockchain using the <a href="https://developers.libra.org/docs/libra-open-source-paper" target="_blank" rel="noopener">open-source methodology</a>.
+    <br>Procedures will be created for discussing and reviewing changes to the protocol and software that support the blockchain.
+    <br>• The association will perform extensive testing of the blockchain, which range from tests of the protocol to constructing a full-scale test of the network in collaboration with entities such as wallet services and exchanges to ensure the system is working before launch.
+    <br>• The association will work to foster the development of the Move language and determine a path for third parties to create smart contracts once language development has stabilized — after the launch of the Libra ecosystem.
+    <br>
+    <br>Together with the community, the association will research the technological challenges on the path to a permissionless ecosystem so that we can meet the objective to begin the transition within five years of the launch.
+    <a class="clsHide" href="#idDnlbrprclwtpr6P3"></a></p>
+  <p id="idDnlbrprclwtpr6P4"><strong>The Reserve:</strong>
+    <br>• The association will work to establish a geographically distributed and regulated group of global institutional custodians for the reserve.
+    <br>• The association will establish operational procedures for the reserve to interact with authorized resellers and ensure high-transparency and auditability.
+    <br>• The association will establish policies and procedures that establish how the association can change the composition of the reserve basket.
+    <a class="clsHide" href="#idDnlbrprclwtpr6P4"></a></p>
+  <p id="idDnlbrprclwtpr6P5"><strong>The Libra Association:</strong>
+    <br>• We will work to grow the Libra Association Council to around 100 geographically distributed and diverse members, all serving as the initial validator nodes of the Libra Blockchain.
+    <br>• The association will develop and adopt a comprehensive charter and set of bylaws for the association on the basis of the currently proposed governance structure.
+    <br>• We will recruit a Managing Director for the association and work with her/him to continue hiring for the association’s executive team.
+    <br>• We will identify social impact partners aligned with our joint mission and will work with them to establish a Social Impact Advisory Board and a social impact program.
+    <a class="clsHide" href="#idDnlbrprclwtpr6P5"></a></p>
+  </section>
+
+  <section id="idDnlbrprclwtpr7">
+  <h3 id="idDnlbrprclwtpr7H3">7. How to Get Involved
+    <a class="clsHide" href="#idDnlbrprclwtpr7H3"></a></h3>
+  <p id="idDnlbrprclwtpr7P1">The association envisions a vibrant ecosystem of developers building apps and services to spur the global use of Libra.
+    <br>The association defines success as enabling any person or business globally to have fair, affordable, and instant access to their money.
+    <br>For example, success will mean that a person working abroad has a fast and simple way to send money to family back home, and a college student can pay their rent as easily as they can buy a coffee.
+    <a class="clsHide" href="#idDnlbrprclwtpr7P1"></a></p>
+  <p id="idDnlbrprclwtpr7P2">Our journey is just beginning, and we are asking the community to help.
+    <br>If you believe in what Libra could do for billions of people around the world, share your perspective and join in.
+    <br>Your feedback is needed to make financial inclusion a reality for people everywhere.
+    <br>• <strong>If you are a researcher or protocol developer,</strong> an early preview of the <a href="https://developers.libra.org/" target="_blank" rel="noopener">Libra testnet</a> is available under the Apache 2.0 Open Source License, with accompanying documentation.
+    <br>This is just the start of the process, and the testnet is still an early prototype under development, but you can read, build, and provide feedback right away.
+    <br>Since the current focus is on stabilizing the prototype, the project may initially be slower to take community contributions.
+    <br>However, we are committed to building a community-oriented development process and opening the platform to developers — starting with pull requests — as soon as possible.
+    <br>• <strong>If you want to learn about the Libra Association</strong>, read more <a href="https://libra.org/en-us/non-profit-association">here</a>.
+    <br>• <strong>If your organization is interested in becoming a Founding Member or applying for social impact grants from the Libra Association,</strong> read more <a href="https://libra.org/en-us/becoming-founding-member">here</a>.
+    <a class="clsHide" href="#idDnlbrprclwtpr7P2"></a></p>
+  <p id="idDnlbrprclwtpr7P3">The association will work with the global community in the coming months and continue to partner with policymakers worldwide to further the mission.
+    <a class="clsHide" href="#idDnlbrprclwtpr7P3"></a></p>
+  </section>
+
+  <section id="idDnlbrprclwtpr8">
+  <h3 id="idDnlbrprclwtpr8H3">8. Conclusion
+    <a class="clsHide" href="#idDnlbrprclwtpr8H3"></a></h3>
+  <p id="idDnlbrprclwtpr8P1">This is the goal for Libra: A stable currency built on a secure and stable open-source blockchain, backed by a reserve of real assets, and governed by an independent association.
+    <a class="clsHide" href="#idDnlbrprclwtpr8P1"></a></p>
+  <p id="idDnlbrprclwtpr8P2">Our hope is to create more access to better, cheaper, and open financial services — no matter who you are, where you live, what you do, or how much you have.
+    <br>We recognize that the road to delivering this will be long, arduous, and won’t be achieved in isolation — it will take coming together and forming a real movement around this pursuit.
+    <br>We hope you’ll join us and help turn this dream into a reality for billions of people around the world.
+    <a class="clsHide" href="#idDnlbrprclwtpr8P2"></a></p>
+  </section>
+
+  <section id="idDnlbrprclwtprfn">
+  <h3 id="idDnlbrprclwtprfnH3">footnotes
+    <a class="clsHide" href="#idDnlbrprclwtprfnH3"></a></h3>
+  <p id="idDnlbrprclwtprfnP1">[1] Best Buy. “AT&T prepaid Alcatel CAMEOX device purchase.” Bestbuy.com.(Accessed: May 15, 2019). Available: https://www.bestbuy.com/site/at-t-prepaid-alcatel-cameox-4g-lte-with- 16gb-memory-cell-phone-arctic-white/6008102.p?skuId=6008102
+    <a class="clsHide" href="#idDnlbrprclwtprfnP1"></a></p>
+  <p id="idDnlbrprclwtprfnP2">[2] A. Demirgüç-Kunt, L. Klapper, D. Singer, S. Ansar, and J. Hess. The Global Findex database 2017: Measuring financial inclusion and the fintech revolution. World Bank Group, 2018. Globalfindex.worldbank.org. Accessed: May 15 2019. Available: https://globalfindex.worldbank.org/sites/globalfindex/ files/2018-04/2017%20Findex%20full%20report_0.pdf
+    <a class="clsHide" href="#idDnlbrprclwtprfnP2"></a></p>
+  <p id="idDnlbrprclwtprfnP3">[3] OECD. Mobile phones: Pricing structures and trends. Paris, France: OECD Publishing, 2000, p. 67. Available: https://books.google.com/books?id=p- cP84M_GBeoC&pg=PA6&lpg=PA6&dq=1999+price+SMS+europe&source=bl&ots=TIbwgZWCmj&sig=ACfU3U2Z_yRawxW78qVSVO_wHCtRupoqoA&hl=en&sa=X- &ved=2ahUKEwjOmeG9tMHiAhVVFzQIHU8eBEMQ6AEwD3oECAkQAQ#v=onepage&q=SMS&f=false
+    <a class="clsHide" href="#idDnlbrprclwtprfnP3"></a></p>
+  <p id="idDnlbrprclwtprfnP4">[4] Consumer Federation of America. “How payday loans work.” Payday Loan Consumer Information. (Accessed: May 19, 2019). Available: https://paydayloaninfo.org/facts.
+    <a class="clsHide" href="#idDnlbrprclwtprfnP4"></a></p>
+  <p id="idDnlbrprclwtprfnP5">[5] A. Demirgüç-Kunt, L. Klapper, D. Singer, S. Ansar, and J. Hess. The Global Findex database 2017: Measuring financial inclusion and the fintech revolution. World Bank Group, 2018. Globalfindex.worldbank.org. Accessed: May 15 2019. Available: https://globalfindex.worldbank.org/sites/globalfindex/ files/2018-04/2017%20Findex%20full%20report_0.pdf
+    <a class="clsHide" href="#idDnlbrprclwtprfnP5"></a></p>
+  </section>
+  </section>
+</section>
+
+<section id="idLmv">
+  <h1 id="idLmvH1">Move-language of DnLibra
+    <a class="clsHide" href="#idLmvH1"></a></h1>
+  <p id="idLmvdsn">description::
+    <br>"We present Move, a safe and flexible programming language for the Libra Blockchain.
+    <br>Move is an executable bytecode language used to implement custom transactions and smart contracts.
+    <br>The key feature of Move is the ability to define custom resource types with semantics inspired by linear logic: a resource can never be copied or implicitly discarded, only moved between program storage locations.
+    <br>These safety guarantees are enforced statically by Move’s type system.
+    <br>Despite these special protections, resources are ordinary program values — they can be stored in data structures, passed as arguments to procedures, and so on.
+    <br>First-class resources are a very general concept that programmers can use not only to implement safe digital assets but also to write correct business logic for wrapping assets and enforcing access control policies.
+    <br>The safety and expressivity of Move have enabled us to implement significant parts of the Libra protocol in Move, including Libra coin, transaction processing, and validator management."
+    <br>[https://developers.libra.org/docs/assets/papers/libra-move-a-language-with-programmable-resources.pdf]
+    <a class="clsHide" href="#idLmvdsn"></a></p>
+  <p id="idLmvnam">name::
+    <br>* Mcs.DnLibra'Move-language!⇒Lmv,
+    <br>* Mcs.Lmv, /el-muv/ {2019-06-23}
+    <br>* Mcs.Move-language!⇒Lmv,
+    <br>* Mcs.lagMove!⇒Lmv,
+    <a class="clsHide" href="#idLmvnam"></a></p>
+
+  <section id="idLmvarch">
+  <h2 id="idLmvarchH2">archetype of Lmv
+    <a class="clsHide" href="#idLmvarchH2"></a></h2>
+  <p id="idLmvarchdsn">description::
+    <br>"The safety and expressivity of Move have enabled us to implement significant parts of <a class="clsPreview" href="#idDnlbrprcl">the Libra protocol</a> in Move, including Libra coin, transaction processing, and validator management."
+    <br>[https://developers.libra.org/docs/assets/papers/libra-move-a-language-with-programmable-resources.pdf]
+    <a class="clsHide" href="#idLmvarchdsn"></a></p>
+  <p id="idLmvarchnam">name::
+    <br>* Mcs.Lmv'archetype,
+    <a class="clsHide" href="#idLmvarchnam"></a></p>
+  </section>
+
+  <section id="idLmvalgo">
+  <h2 id="idLmvalgoH2">algorithm of Lmv
+    <a class="clsHide" href="#idLmvalgoH2"></a></h2>
+  <p id="idLmvalgodsn">description::
+    <br>· Move-algorithm is a-document describing the-info-processing of its archetype as done by the-Move-vm.
+    <a class="clsHide" href="#idLmvalgodsn"></a></p>
+  <p id="idLmvalgonam">name::
+    <br>* Mcs.Lmv'algorithm!⇒Lmv-algo,
+    <br>* Mcs.Lmv-algo,
+    <a class="clsHide" href="#idLmvalgonam"></a></p>
+  </section>
+
+  <section id="idLmvprsrc">
+  <h2 id="idLmvprsrcH2">algo'resource-sut of Lmv
+    <a class="clsHide" href="#idLmvprsrcH2"></a></h2>
+  <p id="idLmvprsrcdsn">description::
+    <br>"The key feature of Move is the ability to define custom resource types with semantics inspired by linear logic: a resource can never be copied or implicitly discarded, only moved between program storage locations.
+    <br>These safety guarantees are enforced statically by Move’s type system.
+    <br>Despite these special protections, resources are ordinary program values — they can be stored in data structures, passed as arguments to procedures, and so on.
+    <br>First-class resources are a very general concept that programmers can use not only to implement safe digital assets but also to write correct business logic for wrapping assets and enforcing access control policies."
+    <br>[https://developers.libra.org/docs/assets/papers/libra-move-a-language-with-programmable-resources.pdf]
+    <br>===
+    <br>"The Move resources store data values and modules store code."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idLmvprsrcdsn"></a></p>
+  <p id="idLmvprsrcnam">name::
+    <br>* Mcs.DnLibra'resource-value!⇒Lmv-resource,
+    <br>* Mcs.Lmv'resource!⇒Lmv-resource,
+    <br>* Mcs.Lmv'programmable-resource!⇒Lmv-resource,
+    <br>* Mcs.Lmv-resource,
+    <br>* Mcs.lagMove'resource-sut!⇒Lmv-resource,
+    <a class="clsHide" href="#idLmvprsrcnam"></a></p>
+
+  <section id="idLmvprsrcinam">
+  <h3 id="idLmvprsrcinamH3">individual-name of Lmv-resource
+    <a class="clsHide" href="#idLmvprsrcinamH3"></a></h3>
+  <p id="idLmvprsrcinamdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLmvprsrcinamdsn"></a></p>
+  <p id="idLmvprsrcinamnam">name::
+    <br>* Mcs.Lmv-resource'name,
+    <a class="clsHide" href="#idLmvprsrcinamnam"></a></p>
+  </section>
+
+  <section id="idLmvprsrcsft">
+  <h3 id="idLmvprsrcsftH3">safety of Lmv-resource
+    <a class="clsHide" href="#idLmvprsrcsftH3"></a></h3>
+  <p id="idLmvprsrcsftdsn">description::
+    <br>"We use the term <strong>resource safety</strong> to describe the guarantees that Move resources can never be copied, reused, or lost. These guarantees are quite powerful because Move programmers can implement custom resources that also enjoy these protections."
+    <a class="clsHide" href="#idLmvprsrcsftdsn"></a></p>
+  <p id="idLmvprsrcsftnam">name::
+    <br>* Mcs.Lmv-resource'safety,
+    <a class="clsHide" href="#idLmvprsrcsftnam"></a></p>
+  </section>
+
+  <section id="idLmvprsrcTp">
+  <h3 id="idLmvprsrcTpH3">resource.TYPE
+    <a class="clsHide" href="#idLmvprsrcTpH3"></a></h3>
+  <p id="idLmvprsrcTpdsn">description::
+    <br>· example: 0x56.Currency.T
+    <br>· 0x56 is the address where the-Currency-module is stored, Currency is the name of the module, and Currency.T is the name of the resource.
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idLmvprsrcTpdsn"></a></p>
+  <p id="idLmvprsrcTpnam">name::
+    <br>* Mcs.DnLibra'resource-type,
+    <br>* Mcs.Lmv-resource'type,
+    <a class="clsHide" href="#idLmvprsrcTpnam"></a></p>
+
+  <section id="idLmvprsrcTpSpc">
+  <h4 id="idLmvprsrcTpSpcH4">resource-type.SPECIFIC
+    <a class="clsHide" href="#idLmvprsrcTpSpcH4"></a></h4>
+  <p id="idLmvprsrcTpSpcnam">name::
+    <br>* Mcs.Lmv--resource-type.specific,
+    <a class="clsHide" href="#idLmvprsrcTpSpcnam"></a></p>
+  <p id="idLmvprsrcTpSpcP1">specific::
+    <br>* LibraAccount.T,
+    <br>* LibraCoin.T,
+    <br>* Libra-coin: This allows us to represent Libra coins as a resource type in the Move language (in contrast to Ether and Bitcoin, which have a special status in their respective languages) [https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf],
+    <a class="clsHide" href="#idLmvprsrcTpSpcP1"></a></p>
+  </section>
+
+  <section id="idLmvprsrcTpLAccT">
+  <h4 id="idLmvprsrcTpLAccTH4">resource-type.LibraAccount.T
+    <a class="clsHide" href="#idLmvprsrcTpLAccTH4"></a></h4>
+  <p id="idLmvprsrcTpLAccTdsn">description::
+    <br>"When we say that a user "has an account at address 0xff on the Libra Blockchain", what we mean is that the address 0xff holds an instance of the LibraAccount.T resource. Every nonempty address has a LibraAccount.T resource. This resource stores account data, such as the sequence number, authentication key, and balance. Any part of the Libra system that wants to interact with an account must do so by reading data from the LibraAccount.T resource or invoking procedures of the LibraAccount module."
+    <br>[https://developers.libra.org/docs/move-overview#writing-transaction-scripts]
+    <a class="clsHide" href="#idLmvprsrcTpLAccTdsn"></a></p>
+  <p id="idLmvprsrcTpLAccTnam">name::
+    <br>* Mcs.Lmv'LibraAccount.T,
+    <a class="clsHide" href="#idLmvprsrcTpLAccTnam"></a></p>
+  </section>
+
+  <section id="idLmvprsrcTpLCnT">
+  <h4 id="idLmvprsrcTpLCnTH4">resource-type.LibraCoin.T
+    <a class="clsHide" href="#idLmvprsrcTpLCnTH4"></a></h4>
+  <p id="idLmvprsrcTpLCnTdsn">description::
+    <br>"The account balance is a resource of type LibraCoin.T.
+    <br>As we explained in Move Has First Class Resources, this is the type of a Libra coin. This type is a "first-class citizen" in the language just like any other Move resource. Resources of type LibraCoin.T can be stored in program variables, passed between procedures, and so on."
+    <br>[https://developers.libra.org/docs/move-overview#writing-transaction-scripts]
+    <a class="clsHide" href="#idLmvprsrcTpLCnTdsn"></a></p>
+  <p id="idLmvprsrcTpLCnTnam">name::
+    <br>* Mcs.Lmv'LibraCoin.T,
+    <a class="clsHide" href="#idLmvprsrcTpLCnTnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLmvprsrcCstm">
+  <h3 id="idLmvprsrcCstmH3">resource.CUSTOM
+    <a class="clsHide" href="#idLmvprsrcCstmH3"></a></h3>
+  <p id="idLmvprsrcCstmdsn">description::
+    <br>· Move-resources defined by programers.
+    <a class="clsHide" href="#idLmvprsrcCstmdsn"></a></p>
+  <p id="idLmvprsrcCstmnam">name::
+    <br>* Mcs.Lmv-resource.custom,
+    <a class="clsHide" href="#idLmvprsrcCstmnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLmvmdl">
+  <h2 id="idLmvmdlH2">algo'module-sut of Lmv
+    <a class="clsHide" href="#idLmvmdlH2"></a></h2>
+  <p id="idLmvmdldsn">description::
+    <br>"Move modules are similar to <a class="clsPreview" href="filMcsDtcnet.last.html#idDtcpgmStct">smart contracts</a> in other blockchain languages. A module declares resource types and procedures that encode the rules for creating, destroying, and updating its declared resources. Modules can invoke procedures declared by other modules and use types declared by other modules. However, modules enforce strong data abstraction — a type is transparent inside its declaring module and opaque outside of it. Furthermore, critical operations on a resource type T may only be performed inside the module that defines T."
+    <br>[https://developers.libra.org/docs/assets/papers/libra-move-a-language-with-programmable-resources.pdf]
+    <br>===
+    <br>"The Move resources store data values and modules store code.
+    <br>...A module value, or module, contains Move bytecode that declares resource types and procedures (see Section 3.4 for more details). Like a resource type, a module is identified by the address of the account where the module is declared. For example, the identifier for the Currency module in <a class="clsPreview" href="#idDnlbrstatestcr">Figure 2</a> is 0x56.Currency."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idLmvmdldsn"></a></p>
+  <p id="idLmvmdlnam">name::
+    <br>* Mcs.Move-module!⇒Lmv-module,
+    <br>* Mcs.Lmv'module!⇒Lmv-module,
+    <br>* Mcs.Lmv-module,
+    <br>* Mcs.lagMove'module!⇒Lmv-module,
+    <a class="clsHide" href="#idLmvmdlnam"></a></p>
+
+  <section id="idLmvmdlinam">
+  <h3 id="idLmvmdlinamH3">individual-name of module
+    <a class="clsHide" href="#idLmvmdlinamH3"></a></h3>
+  <p id="idLmvmdlinamdsn">description::
+    <br>"The module name <strong>0x0.Currency</strong> used in the example above contains the account address <strong>0x0</strong> where the module code is published."
+    <a class="clsHide" href="#idLmvmdlinamdsn"></a></p>
+  <p id="idLmvmdlinamnam">name::
+    <br>* Mcs.Lmv-module'name,
+    <a class="clsHide" href="#idLmvmdlinamnam"></a></p>
+  </section>
+
+  <section id="idLmvmdlacnt">
+  <h3 id="idLmvmdlacntH3">account of module
+    <a class="clsHide" href="#idLmvmdlacntH3"></a></h3>
+  <p id="idLmvmdlacntdsn">description::
+    <br>· every Move-module is-stored in an-account.
+    <a class="clsHide" href="#idLmvmdlacntdsn"></a></p>
+  <p id="idLmvmdlacntnam">name::
+    <br>* Mcs.Lmv-module'account,
+    <a class="clsHide" href="#idLmvmdlacntnam"></a></p>
+  </section>
+
+  <section id="idLmvmdlstrct">
+  <h3 id="idLmvmdlstrctH3">struct of module
+    <a class="clsHide" href="#idLmvmdlstrctH3"></a></h3>
+  <p id="idLmvmdlstrctdsn">description::
+    <br>"A module declares both struct types (including resources, which are a special kind of struct) and procedures."
+    <br>[https://developers.libra.org/docs/move-overview#move-modules-allow-composable-smart-contracts]
+    <a class="clsHide" href="#idLmvmdlstrctdsn"></a></p>
+  <p id="idLmvmdlstrctnam">name::
+    <br>* Mcs.Lmv-module'struct,
+    <a class="clsHide" href="#idLmvmdlstrctnam"></a></p>
+  </section>
+
+  <section id="idLmvmdlpcdr">
+  <h3 id="idLmvmdlpcdrH3">procedure of module
+    <a class="clsHide" href="#idLmvmdlpcdrH3"></a></h3>
+  <p id="idLmvmdlpcdrdsn">description::
+    <br>"The procedures of a Move module define the rules for creating, accessing, and destroying the types it declares."
+    <br>[https://developers.libra.org/docs/move-overview#move-modules-allow-composable-smart-contracts]
+    <a class="clsHide" href="#idLmvmdlpcdrdsn"></a></p>
+  <p id="idLmvmdlpcdrnam">name::
+    <br>* Mcs.Lmv-module'procedure,
+    <a class="clsHide" href="#idLmvmdlpcdrnam"></a></p>
+  </section>
+
+  <section id="idLmvmdlircd">
+  <h3 id="idLmvmdlircdH3">Ircode of module
+    <a class="clsHide" href="#idLmvmdlircdH3"></a></h3>
+  <p id="idLmvmdlircddsn">description::
+    <br><code>module Currency {
+    <br>&nbsp; resource Coin { value: u64 }
+    <br>&nbsp; // ...
+    <br>}</code>
+    <a class="clsHide" href="#idLmvmdlircddsn"></a></p>
+  <p id="idLmvmdlircdnam">name::
+    <br>* Mcs.Lmv-module'Ircode,
+    <a class="clsHide" href="#idLmvmdlircdnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLmvalgovm">
+  <h2 id="idLmvalgovmH2">algo'VM of Lmv
+    <a class="clsHide" href="#idLmvalgovmH2"></a></h2>
+  <p id="idLmvalgovmdsn">description::
+    <br>"The MoveVM is a stack machine with a static type system."
+    <br>[https://developers.libra.org/docs/crates/vm]
+    <br>===
+    <br>"The Move virtual machine executes transaction scripts written in <a class="clsPreview" href="#idLmvbtcd">Move bytecode</a> to produce an execution result. This result is used to update the blockchain state.
+    <br>The virtual machine is part of <a class="clsPreview" href="#idDnlbrnodeVdtr">a validator node</a>."
+    <a class="clsHide" href="#idLmvalgovmdsn"></a></p>
+  <p id="idLmvalgovmnam">name::
+    <br>* Mcs.Move-Virtual-Machine!⇒Lmvm,
+    <br>* Mcs.MoveVM!⇒Lmvm,
+    <br>* Mcs.MVM!⇒Lmvm,
+    <br>* Mcs.Lmv'virtual-machine!⇒Lmvm,
+    <br>* Mcs.Lmvm,
+    <a class="clsHide" href="#idLmvalgovmnam"></a></p>
+  </section>
+
+  <section id="idLmvalgoSpc">
+  <h2 id="idLmvalgoSpcH2">algo.SPECIFIC of Lmv
+    <a class="clsHide" href="#idLmvalgoSpcH2"></a></h2>
+  <p id="idLmvalgoSpcnam">name::
+    <br>* Mcs.Lmv-algo.specific,
+    <a class="clsHide" href="#idLmvalgoSpcnam"></a></p>
+  <p id="idLmvalgoSpcP1">specific::
+    <br>* source-algorithm,
+    <br>* intermediate-representation--algorithm,
+    <br>* bytecode-algorithm,
+    <br>===
+    <br>* <a class="clsPreview" href="#idLmvmdl">module</a>,
+    <br>* <a class="clsPreview" href="#idDnlbrtxscpt">transaction-script</a>,
+    <a class="clsHide" href="#idLmvalgoSpcP1"></a></p>
+  </section>
+
+  <section id="idLmvalgoSrc">
+  <h2 id="idLmvalgoSrcH2">algo.SOURCECODE of Lmv
+    <a class="clsHide" href="#idLmvalgoSrcH2"></a></h2>
+  <p id="idLmvalgoSrcdsn">description::
+    <br>"In the future, we will have a higher-level Move source language. This source language will be designed to express common Move idioms and programming patterns safely and easily.
+    <br>Since Move bytecode is a new language and the Libra Blockchain is a new programming environment, our understanding of the idioms and patterns we should support is still evolving. The source language is in the early stages of development, and we do not have a timetable for its release yet."
+    <br>[https://developers.libra.org/docs/move-overview#future-developer-experience]
+    <a class="clsHide" href="#idLmvalgoSrcdsn"></a></p>
+  <p id="idLmvalgoSrcnam">name::
+    <br>* Mcs.Lmv-algo.sourcecode,
+    <a class="clsHide" href="#idLmvalgoSrcnam"></a></p>
+  </section>
+
+  <section id="idLmvalgoIr">
+  <h2 id="idLmvalgoIrH2">algo.IRCODE of Lmv
+    <a class="clsHide" href="#idLmvalgoIrH2"></a></h2>
+  <p id="idLmvalgoIrdsn">description::
+    <br>"This section describes how to write transaction scripts and modules in the Move intermediate representation (IR).
+    <br>We caution the reader that the IR is an early (and unstable) precursor to a forthcoming Move source language (see Future Developer Experience for more details).
+    <br>Move IR is a thin syntactic layer over Move bytecode that is used to test the bytecode verifier and virtual machine, and it is not particularly developer-friendly.
+    <br>It is high level enough to write human-readable code, yet low level enough to compile directly to Move bytecode.
+    <br>Nevertheless, we are excited about the Move language and hope that developers will give the IR a try, despite the rough edges."
+    <br>[https://developers.libra.org/docs/move-overview#move-intermediate-representation]
+    <a class="clsHide" href="#idLmvalgoIrdsn"></a></p>
+  <p id="idLmvalgoIrnam">name::
+    <br>* Mcs.Lmv-algo.Ircode,
+    <a class="clsHide" href="#idLmvalgoIrnam"></a></p>
+
+  <section id="idLmvircd">
+  <h3 id="idLmvircdH3">Ircode of Lmv
+    <a class="clsHide" href="#idLmvircdH3"></a></h3>
+  <p id="idLmvircddsn">description::
+    <br>· Ircode is any part of an-Ircode-algo.
+    <a class="clsHide" href="#idLmvircddsn"></a></p>
+  <p id="idLmvircdnam">name::
+    <br>* Mcs.Lmv-Ircode, /el-muv-aiar-koud/
+    <br>* Mcs.Move-IR!⇒Lmv-Ircode,
+    <br>* Mcs.MOve-intermediate-representation!⇒Lmv-Ircode,
+    <a class="clsHide" href="#idLmvircdnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLmvalgoBtcd">
+  <h2 id="idLmvalgoBtcdH2">algo.BYTECODE of Lmv
+    <a class="clsHide" href="#idLmvalgoBtcdH2"></a></h2>
+  <p id="idLmvalgoBtcdnam">name::
+    <br>* Mcs.Lmv-algo.bytecode,
+    <a class="clsHide" href="#idLmvalgoBtcdnam"></a></p>
+
+  <section id="idLmvbtcd">
+  <h3 id="idLmvbtcdH3">bytecode of Lmv
+    <a class="clsHide" href="#idLmvbtcdH3"></a></h3>
+  <p id="idLmvbtcddsn">description::
+    <br>· Move-bytecode is any part of a-bytecode-algo.
+    <a class="clsHide" href="#idLmvbtcddsn"></a></p>
+  <p id="idLmvbtcdnam">name::
+    <br>* Mcs.Move-bytecode!⇒Lmv-bytcode,
+    <br>* Mcs.Lmv'bytecode!⇒Lmv-bytcode,
+    <br>* Mcs.Lmv-bytcode,
+    <a class="clsHide" href="#idLmvbtcdnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLmvrsc">
+  <h2 id="idLmvrscH2">resource-reference of Lmv
+    <a class="clsHide" href="#idLmvrscH2"></a></h2>
+  <p id="idLmvrscnam">name::
+    <br>* Mcs.Lmv'resource-reference,
+    <a class="clsHide" href="#idLmvrscnam"></a></p>
+  <p id="idLmvrscwpa">addressWpg::
+    <br>* https://developers.libra.org/docs/move-overview,
+    <br>* Move-technical-paper: https://developers.libra.org/docs/assets/papers/libra-move-a-language-with-programmable-resources.pdf,
+    <a class="clsHide" href="#idLmvrscwpa"></a></p>
+  </section>
+
+  <section id="idLmvgnc">
+  <h2 id="idLmvgncH2">GENERIC of Lmv
+    <a class="clsHide" href="#idLmvgncH2"></a></h2>
+  <p id="idLmvgncnam">name::
+    <br>* Mcs.Lmv'generic,
+    <a class="clsHide" href="#idLmvgncnam"></a></p>
+  <p id="idLmvgncgncchn">generic-chain::
+    <br>* DnChain--programing-language,
+    <a class="clsHide" href="#idLmvgncgncchn"></a></p>
   </section>
 </section>
 
@@ -116,7 +852,8 @@
   <h1 id="idDnlbrnodeH1">node of DnLibra
     <a class="clsHide" href="#idDnlbrnodeH1"></a></h1>
   <p id="idDnlbrnodenam">name::
-    <br>* Mcs.DnLibra'node,
+    <br>* Mcs.DnLibra'node!⇒DnLibra-node,
+    <br>* Mcs.DnLibra-node,
     <a class="clsHide" href="#idDnlbrnodenam"></a></p>
   <p id="idDnlbrnodegncchn">generic-chain::
     <br>* <a class="clsPreview" href="filMcsDtcnet.last.html#idDtcnodFT">Dnode</a>,
@@ -126,14 +863,437 @@
   <h2 id="idDnlbrnodeVdtrH2">Dnode.VALIDATOR
     <a class="clsHide" href="#idDnlbrnodeVdtrH2"></a></h2>
   <p id="idDnlbrnodeVdtrdsn">description::
+    <br>"The Libra protocol allows a set of replicas — referred to as validators — from different authorities to jointly maintain a database of programmable resources."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <br>===
     <br>· validators paid with interest from the-reserve.
     <a class="clsHide" href="#idDnlbrnodeVdtrdsn"></a></p>
   <p id="idDnlbrnodeVdtrnam">name::
-    <br>* Mcs.DnLibra'node.validator,
+    <br>* Mcs.DnLibra'node.validator!⇒DnLibra-validator,
+    <br>* Mcs.DnLibra'validator-node!⇒DnLibra-validator,
+    <br>* Mcs.DnLibra-validator,
     <a class="clsHide" href="#idDnlbrnodeVdtrnam"></a></p>
   <p id="idDnlbrnodeVdtrgncchn">generic-chain::
     <br>* <a class="clsPreview" href="filMcsDtcnet.last.html#idDtcnodApdr">appender-Dnode</a>,
     <a class="clsHide" href="#idDnlbrnodeVdtrgncchn"></a></p>
+
+  <section id="idDnlbrnodeVdtronr">
+  <h3 id="idDnlbrnodeVdtronrH3">owner of validator-node
+    <a class="clsHide" href="#idDnlbrnodeVdtronrH3"></a></h3>
+  <p id="idDnlbrnodeVdtronrdsn">description::
+    <br>·
+    <a class="clsHide" href="#idDnlbrnodeVdtronrdsn"></a></p>
+  <p id="idDnlbrnodeVdtronrnam">name::
+    <br>* Mcs.DnLibra-validator'owner,
+    <a class="clsHide" href="#idDnlbrnodeVdtronrnam"></a></p>
+  </section>
+
+  <section id="idDnlbrnodeVdtrSmrml">
+  <h3 id="idDnlbrnodeVdtrSmrmlH3">SMR-module of validator
+    <a class="clsHide" href="#idDnlbrnodeVdtrSmrmlH3"></a></h3>
+  <p id="idDnlbrnodeVdtrSmrmldsn">description::
+    <br>"We call <strong>SMR module</strong> the software implementation of a LibraBFT node run by each validator."
+    <a class="clsHide" href="#idDnlbrnodeVdtrSmrmldsn"></a></p>
+  <p id="idDnlbrnodeVdtrSmrmlnam">name::
+    <br>* Mcs.DnLibra'SMR-module,
+    <br>* Mcs.DnLibra-validator'SMR-module,
+    <a class="clsHide" href="#idDnlbrnodeVdtrSmrmlnam"></a></p>
+  </section>
+
+  <section id="idDnlbrnodeVdtrmvm">
+  <h3 id="idDnlbrnodeVdtrmvmH3">Move-vm of validator (<a class="clsPreview" href="#idLmvalgovm">link</a>)
+    <a class="clsHide" href="#idDnlbrnodeVdtrmvmH3"></a></h3>
+  </section>
+
+  <section id="idDnlbrnodeVdtrLdr">
+  <h3 id="idDnlbrnodeVdtrLdrH3">validator.LEADER
+    <a class="clsHide" href="#idDnlbrnodeVdtrLdrH3"></a></h3>
+  <p id="idDnlbrnodeVdtrLdrdsn">description::
+    <br>"LibraBFT belongs to the family of leader-based consensus protocols. In leader-based protocols, validators make progress in rounds, each having a designated validator called a leader. Leaders are responsible for proposing new blocks and obtaining signed votes from the validators on their proposals."
+    <br>[https://developers.libra.org/docs/assets/papers/libra-consensus-state-machine-replication-in-the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idDnlbrnodeVdtrLdrdsn"></a></p>
+  <p id="idDnlbrnodeVdtrLdrnam">name::
+    <br>* Mcs.DnLibra'leader,
+    <br>* Mcs.DnLibra-validator.leader,
+    <a class="clsHide" href="#idDnlbrnodeVdtrLdrnam"></a></p>
+  </section>
+  </section>
+</section>
+
+<section id="idDnlbrbkcn">
+  <h1 id="idDnlbrbkcnH1">chain of DnLibra
+    <a class="clsHide" href="#idDnlbrbkcnH1"></a></h1>
+  <p id="idDnlbrbkcndsn">description::
+    <br>"The Libra Blockchain is a decentralized, programmable database designed to support a low-volatility cryptocurrency that will have the ability to serve as an efficient medium of exchange for billions of people around the world."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <br>===
+    <br>"The blockchain is represented as an ever-growing Merkle tree of transactions. A “leaf” is appended to the tree for each transaction executed on the blockchain."
+    <br>[https://developers.libra.org/docs/libra-protocol#proof]
+    <a class="clsHide" href="#idDnlbrbkcndsn"></a></p>
+  <p id="idDnlbrbkcnnam">name::
+    <br>* Mcs.DnLibra'blockchain!⇒DnLibra-chain,
+    <br>* Mcs.DnLibra-chain,
+    <br>* Mcs.Libra-Blockchain!⇒DnLibra-chain,
+    <a class="clsHide" href="#idDnlbrbkcnnam"></a></p>
+
+  <section id="idDnlbrhstr">
+  <h2 id="idDnlbrhstrH2">history of Dchain
+    <a class="clsHide" href="#idDnlbrhstrH2"></a></h2>
+  <p id="idDnlbrhstrdsn">description::
+    <br>"The ledger history stores the sequence of committed and executed transactions as well as the associated events they emitted. The purpose of the ledger history is to keep a record of how the latest ledger state was computed. There is no concept of a block of transactions in the ledger history. The consensus protocol batches transactions into blocks as an optimization and to drive the consensus protocol. However, in the logical data model, the transactions occur in sequence without distinction as to which block contained each transaction."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idDnlbrhstrdsn"></a></p>
+  <p id="idDnlbrhstrnam">name::
+    <br>* Mcs.DnLibra-chain'history,
+    <a class="clsHide" href="#idDnlbrhstrnam"></a></p>
+  </section>
+
+  <section id="idDnlbrstate">
+  <h2 id="idDnlbrstateH2">state of Dchain
+    <a class="clsHide" href="#idDnlbrstateH2"></a></h2>
+  <p id="idDnlbrstatedsn">description::
+    <br>"The ledger state represents the ground truth about the Libra ecosystem, including the quantity of Libra held by each user at a given version. Each validator must know the ledger state at the latest version in order to execute new transactions."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <br>===
+    <br>"At the heart of the Libra protocol are two fundamental concepts — transactions and states. At any point in time, the blockchain has a “state.” The state (or ledger state) represents the current snapshot of data on the chain. Executing a transaction changes the state of the blockchain."
+    <br>[https://developers.libra.org/docs/libra-protocol]
+    <a class="clsHide" href="#idDnlbrstatedsn"></a></p>
+  <p id="idDnlbrstatenam">name::
+    <br>* Mcs.DnLibra'ledger-state!⇒DnLibra-state,
+    <br>* Mcs.DnLibra'state!⇒DnLibra-state,
+    <br>* Mcs.DnLibra-chain'state!⇒DnLibra-state,
+    <br>* Mcs.DnLibra-state,
+    <a class="clsHide" href="#idDnlbrstatenam"></a></p>
+
+  <section id="idDnlbrstatestcr">
+  <h3 id="idDnlbrstatestcrH3">structure of state
+    <a class="clsHide" href="#idDnlbrstatestcrH3"></a></h3>
+  <p id="idDnlbrstatestcrdsn">description::
+    <br>"The Libra protocol uses an account-based data model [16] to encode the ledger state. The state is structured as a key-value store, which maps account address keys to account values. An account value in the ledger state is a collection of published Move resources and modules. The Move resources store data values and modules store code. The initial set of accounts and their state are specified in the genesis ledger state (seeSection 3.1)."
+    <br><img src="filMcsDtcnet.files/DnLibra-state.png">
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idDnlbrstatestcrdsn"></a></p>
+  <p id="idDnlbrstatestcrnam">name::
+    <br>* Mcs.DnLibra-state'structure,
+    <a class="clsHide" href="#idDnlbrstatestcrnam"></a></p>
+  </section>
+
+  <section id="idDnlbrstateLtst">
+  <h3 id="idDnlbrstateLtstH3">state.LATEST
+    <a class="clsHide" href="#idDnlbrstateLtstH3"></a></h3>
+  <p id="idDnlbrstateLtstdsn">description::
+    <br>· the-latest-state is-computed from <a class="clsPreview" href="idDnlbrhstr">Libra's--ledger-history</a>.
+    <a class="clsHide" href="#idDnlbrstateLtstdsn"></a></p>
+  <p id="idDnlbrstateLtstnam">name::
+    <br>* Mcs.DnLibra-state.latest,
+    <a class="clsHide" href="#idDnlbrstateLtstnam"></a></p>
+  </section>
+
+  <section id="idDnlbrstateGns">
+  <h3 id="idDnlbrstateGnsH3">state.GENESIS
+    <a class="clsHide" href="#idDnlbrstateGnsH3"></a></h3>
+  <p id="idDnlbrstateGnsdsn">description::
+    <br>"The initial set of accounts and their state are specified in the genesis ledger state"
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idDnlbrstateGnsdsn"></a></p>
+  <p id="idDnlbrstateGnsnam">name::
+    <br>* Mcs.DnLibra'genesis-ledger-state,
+    <br>* Mcs.DnLibra-state.genesis,
+    <a class="clsHide" href="#idDnlbrstateGnsnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idDnlbrtx">
+  <h2 id="idDnlbrtxH2">transaction of Dchain
+    <a class="clsHide" href="#idDnlbrtxH2"></a></h2>
+  <p id="idDnlbrtxdsn">description::
+    <br>·
+    <a class="clsHide" href="#idDnlbrtxdsn"></a></p>
+  <p id="idDnlbrtxnam">name::
+    <br>* Mcs.DnLibra'transaction!⇒DnLibra-tx,
+    <br>* Mcs.DnLibra-chain'transaction!⇒DnLibra-tx,
+    <br>* Mcs.DnLibra-tx,
+    <a class="clsHide" href="#idDnlbrtxnam"></a></p>
+
+  <section id="idDnlbrtxscpt">
+  <h3 id="idDnlbrtxscptH3">script of transaction
+    <a class="clsHide" href="#idDnlbrtxscptH3"></a></h3>
+  <p id="idDnlbrtxscptdsn">description::
+    <br>"- Each Libra transaction includes a Move transaction script that encodes the logic <a class="clsPreview" href="#idDnlbrnodeVdtr">a validator</a> should perform on the client's behalf (for example, to move Libra from Alice's account to Bob's account).
+    <br>- The transaction script interacts with <a class="clsPreview" href="#idLmvprsrc">Move resources</a> published in the global storage of the Libra Blockchain by calling the procedures of one or more <a class="clsPreview" href="#idLmvmdl">Move modules</a>.
+    <br>- A transaction script is not stored in the global state, and it cannot be invoked by other transaction scripts. It is a single-use program."
+    <br>[https://developers.libra.org/docs/move-overview#move-transaction-scripts-enable-programmable-transactions]
+    <br>===
+    <br>"At a high level, a transaction consists of a transaction script (written in Move bytecode) and arguments to the transaction script (e.g., a recipient account address or the number of Libra to send)."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idDnlbrtxscptdsn"></a></p>
+  <p id="idDnlbrtxscptnam">name::
+    <br>* Mcs.DnLibra-tx'script!⇒DnLibra-tx-script,
+    <br>* Mcs.DnLibra-tx-script,
+    <br>* Mcs.Libra-transaction-script!⇒DnLibra-tx-script,
+    <br>* Mcs.Move-transaction-script!⇒DnLibra-tx-script,
+    <a class="clsHide" href="#idDnlbrtxscptnam"></a></p>
+  </section>
+
+  <section id="idDnlbrtxargt">
+  <h3 id="idDnlbrtxargtH3">argument of transaction
+    <a class="clsHide" href="#idDnlbrtxargtH3"></a></h3>
+  <p id="idDnlbrtxargtdsn">description::
+    <br>"At a high level, a transaction consists of a transaction script (written in Move bytecode) and arguments to the transaction script (e.g., a recipient account address or the number of Libra to send)."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idDnlbrtxargtdsn"></a></p>
+  <p id="idDnlbrtxargtnam">name::
+    <br>* Mcs.DnLibra-tx'argument,
+    <a class="clsHide" href="#idDnlbrtxargtnam"></a></p>
+  </section>
+
+  <section id="idDnlbrtxexrt">
+  <h3 id="idDnlbrtxexrtH3">execution-result of transaction
+    <a class="clsHide" href="#idDnlbrtxexrtH3"></a></h3>
+  <p id="idDnlbrtxexrtdsn">description::
+    <br>"Execution result of a transaction is a combination of:
+    <br>- The new state of the set of accounts affected by the transaction.
+    <br>- The events emitted by executing the transaction.
+    <br>- The exit code, which indicates either success or a specific error.
+    <br>- The number of gas units consumed while executing the transaction."
+    <br>[https://developers.libra.org/docs/reference/glossary#execution-result]
+    <a class="clsHide" href="#idDnlbrtxexrtdsn"></a></p>
+  <p id="idDnlbrtxexrtnam">name::
+    <br>* Mcs.DnLibra-tx'execution-result,
+    <a class="clsHide" href="#idDnlbrtxexrtnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idDnlbrbkcnvsn">
+  <h2 id="idDnlbrbkcnvsnH2">version-number of Dchain
+    <a class="clsHide" href="#idDnlbrbkcnvsnH2"></a></h2>
+  <p id="idDnlbrbkcnvsndsn">description::
+    <br>"A version number isan unsigned 64-bit integer that corresponds to the number of transactions the system has executed. At each version i, the database contains a tuple (Ti, Oi, Si) representing the transaction (Ti), transaction output (Oi), and ledger state (Si)."
+    <a class="clsHide" href="#idDnlbrbkcnvsndsn"></a></p>
+  <p id="idDnlbrbkcnvsnnam">name::
+    <br>* Mcs.DnLibra-chain'version-number!⇒DnLibra-version,
+    <br>* Mcs.DnLibra-version,
+    <a class="clsHide" href="#idDnlbrbkcnvsnnam"></a></p>
+  </section>
+
+  <section id="idDnlbrbkcnrsc">
+  <h2 id="idDnlbrbkcnrscH2">resource of Dchain
+    <a class="clsHide" href="#idDnlbrbkcnrscH2"></a></h2>
+  <p id="idDnlbrbkcnrscnam">name::
+    <br>* Mcs.DnLibra-chain'resource,
+    <a class="clsHide" href="#idDnlbrbkcnrscnam"></a></p>
+  <p id="idDnlbrbkcnrscwpa">addressWpg::
+    <br>* https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf,
+    <a class="clsHide" href="#idDnlbrbkcnrscwpa"></a></p>
+  </section>
+</section>
+
+<section id="idDnlbrgovc">
+  <h1 id="idDnlbrgovcH1">governance of DnLibra
+    <a class="clsHide" href="#idDnlbrgovcH1"></a></h1>
+
+  <section id="idDnlbrAscn">
+  <h2 id="idDnlbrAscnH2">Libra-Association of DnLibra
+    <a class="clsHide" href="#idDnlbrAscnH2"></a></h2>
+  <p id="idDnlbrAscndsn">description::
+    <br>"The Libra Association is an independent, not-for-profit membership organization, headquartered in Geneva, Switzerland.
+    <br>Role
+    <br>The Libra Association works to evolve and scale the network and reserve and leads a social impact grant-making program that supports financial inclusion efforts worldwide. The association collaborates with the global community and partners with policymakers to help further the Libra mission."
+    <br>[https://libra.org/en-US/association/]
+    <a class="clsHide" href="#idDnlbrAscndsn"></a></p>
+  <p id="idDnlbrAscnnam">name::
+    <br>* Mcs.DnLibra'Association!⇒DnLibra-Association,
+    <br>* Mcs.DnLibra-Association,
+    <br>* Mcs.Libra-Association!⇒DnLibra-Association,
+    <a class="clsHide" href="#idDnlbrAscnnam"></a></p>
+
+  <section id="idDnlbrAscnmbsp">
+  <h3 id="idDnlbrAscnmbspH3">membership of DnLibra-Association
+    <a class="clsHide" href="#idDnlbrAscnmbspH3"></a></h3>
+  <p id="idDnlbrAscnmbspdsn">description::
+    <br>· the-owners of validator-nodes consist the-membership of the-Association.
+    <br>===
+    <br>"Over time, membership eligibility will shift to become completely open and based only on the member’s holdings of Libra."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idDnlbrAscnmbspdsn"></a></p>
+  <p id="idDnlbrAscnmbspnam">name::
+    <br>* Mcs.DnLibra-Association'membership,
+    <a class="clsHide" href="#idDnlbrAscnmbspnam"></a></p>
+
+  <section id="idDnlbrAscnFdmb">
+  <h4 id="idDnlbrAscnFdmbH4">Founding-Members of DnLibra-Association
+    <a class="clsHide" href="#idDnlbrAscnFdmbH4"></a></h4>
+  <p id="idDnlbrAscnFdmbdsn">description::
+    <br>"Initially, the association (and validators) will consist of a geographically distributed and diverse set of Founding Members. These members are organizations chosen according to objective participation criteria, including that they have a stake in bootstrapping the Libra ecosystem and investing resources toward its success."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idDnlbrAscnFdmbdsn"></a></p>
+  <p id="idDnlbrAscnFdmbnam">name::
+    <br>* Mcs.DnLibra-Association'Founding-Members,
+    <a class="clsHide" href="#idDnlbrAscnFdmbnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idDnlbrAscncncl">
+  <h3 id="idDnlbrAscncnclH3">Council of DnLibra-Association
+    <a class="clsHide" href="#idDnlbrAscncnclH3"></a></h3>
+  <p id="idDnlbrAscncncldsn">description::
+    <br>"Libra Association Council is the governing body of the Libra Association.
+    <br>Libra Association Council is part of the Libra Association."
+    <a class="clsHide" href="#idDnlbrAscncncldsn"></a></p>
+  <p id="idDnlbrAscncnclnam">name::
+    <br>* Mcs.DnLibra-Association'Council,
+    <br>* Mcs.Libra-Association-Council,
+    <a class="clsHide" href="#idDnlbrAscncnclnam"></a></p>
+  </section>
+  </section>
+</section>
+
+<section id="idDnlbrprgm">
+  <h1 id="idDnlbrprgmH1">program of DnLibra
+    <a class="clsHide" href="#idDnlbrprgmH1"></a></h1>
+
+  <section id="idDnlbrcore">
+  <h2 id="idDnlbrcoreH2">Libra-Core of DnLibra
+    <a class="clsHide" href="#idDnlbrcoreH2"></a></h2>
+  <p id="idDnlbrcoredsn">description::
+    <br>· Libra-Core is an-open-source prototype of the-Libra-protocol.
+    <br>· you can-run <a class="clsPreview" href="#idDnlbrnodeVdtr">validator-nodes</a> using the-Libra-Core.
+    <br>[https://developers.libra.org/docs/welcome-to-libra]
+    <br>"Libra Core is the official name for the open-source implementation of the Libra protocol published by the Libra Association.
+    <br>- This software is the first implementation of the Libra protocol and the Move language.
+    <br>- Libra Core includes both validator and client functionalities.
+    <br>- Libra Core is written in Rust."
+    <br>[https://developers.libra.org/docs/libra-core-overview]
+    <a class="clsHide" href="#idDnlbrcoredsn"></a></p>
+  <p id="idDnlbrcorenam">name::
+    <br>* Mcs.DnLibra'Core!⇒DnLibra-Core,
+    <br>* Mcs.DnLibra-Core,
+    <br>* Mcs.Libra-Core!⇒DnLibra-Core,
+    <a class="clsHide" href="#idDnlbrcorenam"></a></p>
+  </section>
+
+  <section id="idDnlbrclnt">
+  <h2 id="idDnlbrclntH2">Libra-client of DnLibra
+    <a class="clsHide" href="#idDnlbrclntH2"></a></h2>
+  <p id="idDnlbrclntdsn">description::
+    <br>"A Libra client:
+    <br>- Is a piece of software that has the capability to interact with the Libra Blockchain.
+    <br>- Can be run by the end-user or on behalf of the end user (for example, for a custodial client).
+    <br>- Allows the user to construct, sign, and submit transactions to a validator node.
+    <br>- Can issue queries to the Libra Blockchain (through the validator node), request the status of a transaction or account, and verify the response.
+    <br><a class="clsPreview" href="#idDnlbrcore">Libra Core</a> contains a client"
+    <br>[https://developers.libra.org/docs/welcome-to-libra#clients]
+    <a class="clsHide" href="#idDnlbrclntdsn"></a></p>
+  <p id="idDnlbrclntnam">name::
+    <br>* Mcs.DnLibra'client!⇒DnLibra-client,
+    <br>* Mcs.DnLibra-client,
+    <a class="clsHide" href="#idDnlbrclntnam"></a></p>
+  </section>
+
+  <section id="idDnlbrcli">
+  <h2 id="idDnlbrcliH2">Libra-CLI of DnLibra
+    <a class="clsHide" href="#idDnlbrcliH2"></a></h2>
+  <p id="idDnlbrclidsn">description::
+    <br>· Libra-CLI is <a class="clsPreview" href="idDnlbrcli">a-Libra-client</a>.
+    <a class="clsHide" href="#idDnlbrclidsn"></a></p>
+  <p id="idDnlbrclinam">name::
+    <br>* Mcs.DnLibra'CLI,
+    <a class="clsHide" href="#idDnlbrclinam"></a></p>
+  </section>
+</section>
+
+<section id="idDnlbrwlt">
+  <h1 id="idDnlbrwltH1">wallet of DnLibra
+    <a class="clsHide" href="#idDnlbrwltH1"></a></h1>
+  <p id="idDnlbrwltdsn">description::
+    <br>·
+    <a class="clsHide" href="#idDnlbrwltdsn"></a></p>
+  <p id="idDnlbrwltnam">name::
+    <br>* Mcs.DnLibra'wallet,
+    <a class="clsHide" href="#idDnlbrwltnam"></a></p>
+
+  <section id="idDnlbracnt">
+  <h2 id="idDnlbracntH2">account of DnLibra
+    <a class="clsHide" href="#idDnlbracntH2"></a></h2>
+  <p id="idDnlbracntdsn">description::
+    <br>"An account in the Libra Blockchain is a container for an arbitrary number of Move resources and Move modules."
+    <br>[https://developers.libra.org/docs/move-overview]
+    <a class="clsHide" href="#idDnlbracntdsn"></a></p>
+  <p id="idDnlbracntnam">name::
+    <br>* Mcs.DnLibra'account!⇒DnLibra-account,
+    <br>* Mcs.DnLibra-account,
+    <a class="clsHide" href="#idDnlbracntnam"></a></p>
+
+  <section id="idDnlbracntadrs">
+  <h3 id="idDnlbracntadrsH3">address of account
+    <a class="clsHide" href="#idDnlbracntadrsH3"></a></h3>
+  <p id="idDnlbracntadrsdsn">description::
+    <br>"An account address is a 256-bit value. To create a new account, a user first generates a fresh verification/signature key-pair (vk,sk) for a signature scheme and uses the cryptographic hash of the public verification key vk as an account address a=H(vk)."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idDnlbracntadrsdsn"></a></p>
+  <p id="idDnlbracntadrsnam">name::
+    <br>* Mcs.DnLibra-account'address,
+    <a class="clsHide" href="#idDnlbracntadrsnam"></a></p>
+  </section>
+
+  <section id="idDnlbracntpvk">
+  <h3 id="idDnlbracntpvkH3">public-verification-key of account
+    <a class="clsHide" href="#idDnlbracntpvkH3"></a></h3>
+  <p id="idDnlbracntpvkdsn">description::
+    <br>"To create a new account, a user first generates a fresh verification/signature key-pair (vk,sk) for a signature scheme"
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idDnlbracntpvkdsn"></a></p>
+  <p id="idDnlbracntpvknam">name::
+    <br>* Mcs.DnLibra-account'public-verification-key!⇒DnLibra-vk,
+    <a class="clsHide" href="#idDnlbracntpvknam"></a></p>
+  </section>
+
+  <section id="idDnlbracntpsk">
+  <h3 id="idDnlbracntpskH3">private-signing-key of account
+    <a class="clsHide" href="#idDnlbracntpskH3"></a></h3>
+  <p id="idDnlbracntpskdsn">description::
+    <br>"To create a new account, a user first generates a fresh verification/signature key-pair (vk,sk) for a signature scheme
+    <br>... Once the new account is created at a, the user can sign transactions to be sent from that account using the private signing key sk. The user can also rotate the key used to sign transactions from the account without changing its address, e.g., to proactively change the key or to respond to a possible compromise of the key."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idDnlbracntpskdsn"></a></p>
+  <p id="idDnlbracntpsknam">name::
+    <br>* Mcs.DnLibra-account'private-signing-key!⇒DnLibra-sk,
+    <a class="clsHide" href="#idDnlbracntpsknam"></a></p>
+  </section>
+
+  <section id="idDnlbracntmrsc">
+  <h3 id="idDnlbracntmrscH3">Move-resource of account
+    <a class="clsHide" href="#idDnlbracntmrscH3"></a></h3>
+  <p id="idDnlbracntmrscdsn">description::
+    <br>· each account contains one or more <a class="clsPreview" href="#idLmvprsrc">resources</a>.
+    <a class="clsHide" href="#idDnlbracntmrscdsn"></a></p>
+  <p id="idDnlbracntmrscnam">name::
+    <br>* Mcs.DnLibra-account'Move-resource,
+    <a class="clsHide" href="#idDnlbracntmrscnam"></a></p>
+  </section>
+
+  <section id="idDnlbracntmmdl">
+  <h3 id="idDnlbracntmmdlH3">Move-module of account
+    <a class="clsHide" href="#idDnlbracntmmdlH3"></a></h3>
+  <p id="idDnlbracntmmdldsn">description::
+    <br>· each account contains zero or more <a class="clsPreview" href="#idLmvmdl">modules</a>.
+    <a class="clsHide" href="#idDnlbracntmmdldsn"></a></p>
+  <p id="idDnlbracntmmdlnam">name::
+    <br>* Mcs.DnLibra-account'Move-module,
+    <a class="clsHide" href="#idDnlbracntmmdlnam"></a></p>
+  </section>
+
+  <section id="idDnlbracntrthe">
+  <h3 id="idDnlbracntrtheH3">relation-to--human-entity of account
+    <a class="clsHide" href="#idDnlbracntrtheH3"></a></h3>
+  <p id="idDnlbracntrthedsn">description::
+    <br>"The Libra protocol does not link accounts to a real-world identity. A user is free to create multiple accounts by generating multiple key-pairs. Accounts controlled by the same user have no inherent link to each other. This scheme follows the example of Bitcoin and Ethereum in that it provides pseudonymity [19] for users."
+    <br>[https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf]
+    <a class="clsHide" href="#idDnlbracntrthedsn"></a></p>
+  <p id="idDnlbracntrthenam">name::
+    <br>* Mcs.DnLibra-account'relation-to--human-entity,
+    <a class="clsHide" href="#idDnlbracntrthenam"></a></p>
+  </section>
   </section>
 </section>
 
@@ -144,6 +1304,7 @@
     <br>* Mcs.DnLibra'evaluation,
     <a class="clsHide" href="#idDnlbrevalFTnam"></a></p>
   <p id="idDnlbrevalFTwpa">addressWpg::
+    <br>* white-paper evaluation from Muneeb.Ali (<a class="clsPreview" href="filMcsDtcbnetBlockstack.last.html#idOverview">Blockstack</a>) https://muneebali.com/static/files/libra-muneeb.pdf,
     <br>* {2019-06-18} Alastair-Marsh, Facebook Token Runs Into Instant Political Opposition in Europe, https://www.bloomberg.com/news/articles/2019-06-18/france-calls-for-central-bank-review-of-facebook-cryptocurrency,
     <br>* {2019-06-11} Antonopoulos, Bitcoin Q&amp;A: Facebook's Libra, https://www.youtube.com/watch?v=OjTQAkem-VU,
     <a class="clsHide" href="#idDnlbrevalFTwpa"></a></p>
@@ -157,12 +1318,24 @@
   <h2 id="idDnlbrprbmH2">problem of DnLibra
     <a class="clsHide" href="#idDnlbrprbmH2"></a></h2>
   <p id="idDnlbrprbmnam">name::
-    <br>* Mcs.DnLibra'problem,
+    <br>* Mcs.DnLibra'problem!⇒DnLibra-problem,
+    <br>* Mcs.DnLibra-problem,
     <a class="clsHide" href="#idDnlbrprbmnam"></a></p>
-  <p id="idDnlbrprbmnam">name::
-    <br>* Mcs.Libra-Reserve-problem,
-    <a class="clsHide" href="#idDnlbrprbmnam"></a></p>
+  <p id="idDnlbrprbmSpc">specific::
+    <br>* Libra-Reserve-problem,
+    <a class="clsHide" href="#idDnlbrprbmSpc"></a></p>
   </section>
+</section>
+
+<section id="idDnlbrlaw">
+  <h1 id="idDnlbrlawH1">law of DnLibra
+    <a class="clsHide" href="#idDnlbrlawH1"></a></h1>
+  <p id="idDnlbrlawnam">name::
+    <br>* Mcs.DnLibra'law,
+    <a class="clsHide" href="#idDnlbrlawnam"></a></p>
+  <p id="idDnlbrlawwpa">addressWpg::
+    <br>* {2019-06-19} https://cointelegraph.com/news/russia-will-not-legalize-facebooks-cryptocurrency-official-says,
+    <a class="clsHide" href="#idDnlbrlawwpa"></a></p>
 </section>
 
 <section id="idDnlbrrscFT">
@@ -176,6 +1349,9 @@
     <br>* https://developers.libra.org/,
     <br>* https://libra.org/en-US/white-paper/,
     <br>* https://calibra.com/,
+    <br>=== community:
+    <br>* https://community.libra.org/,
+    <br>* https://twitter.com/LibraDev,
     <br>===
     <br>* {2019-06-18} Nick-Statt, FACEBOOK’S CALIBRA IS A SECRET WEAPON FOR MONETIZING ITS NEW CRYPTOCURRENCY The newly formed subsidiary will build Facebook’s digital wallet, https://www.theverge.com/2019/6/18/18682838/facebook-digital-wallet-calibra-libra-cryptocurrency-kevin-weil-david-marcus-interview,
     <br>* {2019-06-18} https://www.nytimes.com/2019/06/18/technology/how-libra-would-work-for-you.html,
@@ -185,22 +1361,41 @@
     <a class="clsHide" href="#idDnlbrrscwpa"></a></p>
 </section>
 
+<section id="idDnlbrdngFT">
+  <h1 id="idDnlbrdngFTH1">DOING of DnLibra
+    <a class="clsHide" href="#idDnlbrdngFTH1"></a></h1>
+
+  <section id="idDnlbrmfcnFT">
+  <h2 id="idDnlbrmfcnFTH2">main-function of DnLibra
+    <a class="clsHide" href="#idDnlbrmfcnFTH2"></a></h2>
+  <p id="idDnlbrmfcnFTdsn">description::
+    <br>"Libra’s mission is to enable a simple global currency and financial infrastructure that empowers billions of people."
+    <br>[https://developers.libra.org/docs/welcome-to-libra]
+    <a class="clsHide" href="#idDnlbrmfcnFTdsn"></a></p>
+  <p id="idDnlbrmfcnFTnam">name::
+    <br>* Mcs.DnLibra'main-function,
+    <a class="clsHide" href="#idDnlbrmfcnFTnam"></a></p>
+  </section>
+</section>
+
 <section id="idDnlbrevgFT">
   <h1 id="idDnlbrevgFTH1">EVOLUTING of DnLibra
     <a class="clsHide" href="#idDnlbrevgFTH1"></a></h1>
   <p id="idDnlbrevgnam">name::
     <br>* Mcs.DnLibra'evoluting,
     <a class="clsHide" href="#idDnlbrevgnam"></a></p>
-  <p id="idDnlbrevg">{time.2019-06-18}::
-    <br>=== :
-    <a class="clsHide" href="#idDnlbrevg"></a></p>
+  <p id="idDnlbrevg20190618">{time.2019-06-18}::
+    <br>=== whitepaper release:
+    <br>"Social media giant Facebook has released the white paper for its long-awaited cryptocurrency and blockchain-based financial infrastructure project today, June 18."
+    <br>[https://cointelegraph.com/news/facebook-releases-cryptocurrency-white-paper-for-libra-currency]
+    <a class="clsHide" href="#idDnlbrevg20190618"></a></p>
 </section>
 
 <section id="idDnlbrgncFT">
   <h1 id="idDnlbrgncFTH1">GENERIC of DnLibra
     <a class="clsHide" href="#idDnlbrgncFTH1"></a></h1>
   <p id="idDnlbrgncchn">generic-chain::
-    <br>*
+    <br>* <a class="clsPreview" href="filMcsDtcnet.last.html#idDcnetMoe">Dcurrency-DnChain</a>,
     <br>...
     <br>* entity,
     <a class="clsHide" href="#idDnlbrgncchn"></a></p>
@@ -213,8 +1408,21 @@
     <br>* Mcs.DnLibra'specific,
     <a class="clsHide" href="#idDnlbrSpcnam"></a></p>
   <p id="idDnlbrSpcP1">specific::
-    <br>
+    <br>* mainnet,
+    <br>* testnet,
     <a class="clsHide" href="#idDnlbrSpcP1"></a></p>
+</section>
+
+<section id="idDnlbrTstnt">
+  <h1 id="idDnlbrTstntH1">DnLibra.TESTNET
+    <a class="clsHide" href="#idDnlbrTstntH1"></a></h1>
+  <p id="idDnlbrTstntdsn">description::
+    <br>"The Libra testnet is a demonstration of an early prototype of the Libra Blockchain software — Libra Core."
+    <br>[https://developers.libra.org/docs/libra-protocol]
+    <a class="clsHide" href="#idDnlbrTstntdsn"></a></p>
+  <p id="idDnlbrTstntnam">name::
+    <br>* Mcs.DnLibra.testnet,
+    <a class="clsHide" href="#idDnlbrTstntnam"></a></p>
 </section>
 
 <section id="idMeta">
