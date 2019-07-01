@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Libra-DnChain (DnLibra.0-10-0.2019-06-27 draft)</title>
+  <title>Mcs.Libra-DnChain (DnLibra.0-12-0.2019-06-29 draft)</title>
   <meta name="keywords" content="Libra--blockchain-net, DnLibra, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -285,6 +285,8 @@
     <a class="clsHide" href="#idDnlbrrsrvrscnam"></a></p>
   <p id="idDnlbrrsrvrscwpa">addressWpg::
     <br>* https://libra.org/en-US/about-currency-reserve/,
+    <br>===
+    <br>* {2019-06-28} https://cointelegraph.com/news/steve-forbes-tells-zuckerberg-use-gold-to-back-libra-call-it-the-mark,
     <a class="clsHide" href="#idDnlbrrsrvrscwpa"></a></p>
   </section>
 
@@ -699,6 +701,10 @@
   <h1 id="idLmvH1">Move-language of DnLibra
     <a class="clsHide" href="#idLmvH1"></a></h1>
   <p id="idLmvdsn">description::
+    <br>· Move is "a blockchain language" that maps parts of <a class="clsPreview" href="filMcsDtcnet.last.html#idDtcprlFT">a-Dprotocol</a> to bytecode documents that a-stack-virtual-machine executes.
+    <br>· also defines and a-source-language and a-intermediate-representation-language that can-be-translated to its bytecode-language.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2019-06-28]
+    <br>===
     <br>"We present Move, a safe and flexible programming language for the Libra Blockchain.
     <br>Move is an executable bytecode language used to implement custom transactions and smart contracts.
     <br>The key feature of Move is the ability to define custom resource types with semantics inspired by linear logic: a resource can never be copied or implicitly discarded, only moved between program storage locations.
@@ -711,6 +717,7 @@
   <p id="idLmvnam">name::
     <br>* Mcs.DnLibra'Move-language!⇒Lmv,
     <br>* Mcs.Lmv, /el-muv/ {2019-06-23}
+    <br>* Mcs.Lmv'(Move-language)!⇒Lmv,
     <br>* Mcs.Move-language!⇒Lmv,
     <br>* Mcs.lagMove!⇒Lmv,
     <a class="clsHide" href="#idLmvnam"></a></p>
@@ -731,7 +738,7 @@
   <h2 id="idLmvalgoH2">algorithm of Lmv
     <a class="clsHide" href="#idLmvalgoH2"></a></h2>
   <p id="idLmvalgodsn">description::
-    <br>· Move-algorithm is a-document describing the-info-processing of its archetype as done by the-Move-vm.
+    <br>· Move-algorithm is a-document describing the-info-processing of its archetype as done by a-machine.
     <a class="clsHide" href="#idLmvalgodsn"></a></p>
   <p id="idLmvalgonam">name::
     <br>* Mcs.Lmv'algorithm!⇒Lmv-algo,
@@ -740,7 +747,7 @@
   </section>
 
   <section id="idLmvprsrc">
-  <h2 id="idLmvprsrcH2">algo'resource-sut of Lmv
+  <h2 id="idLmvprsrcH2">algo'resource-sunt of Lmv
     <a class="clsHide" href="#idLmvprsrcH2"></a></h2>
   <p id="idLmvprsrcdsn">description::
     <br>"The key feature of Move is the ability to define custom resource types with semantics inspired by linear logic: a resource can never be copied or implicitly discarded, only moved between program storage locations.
@@ -959,25 +966,6 @@
   </section>
   </section>
 
-  <section id="idLmvalgovm">
-  <h2 id="idLmvalgovmH2">algo'VM of Lmv
-    <a class="clsHide" href="#idLmvalgovmH2"></a></h2>
-  <p id="idLmvalgovmdsn">description::
-    <br>"The MoveVM is a stack machine with a static type system."
-    <br>[https://developers.libra.org/docs/crates/vm]
-    <br>===
-    <br>"The Move virtual machine executes transaction scripts written in <a class="clsPreview" href="#idLmvbtcd">Move bytecode</a> to produce an execution result. This result is used to update the blockchain state.
-    <br>The virtual machine is part of <a class="clsPreview" href="#idDnlbrnodeVdtr">a validator node</a>."
-    <a class="clsHide" href="#idLmvalgovmdsn"></a></p>
-  <p id="idLmvalgovmnam">name::
-    <br>* Mcs.Move-Virtual-Machine!⇒Lmvvm,
-    <br>* Mcs.MoveVM!⇒Lmvvm,
-    <br>* Mcs.MVM!⇒Lmvvm,
-    <br>* Mcs.Lmv'virtual-machine!⇒Lmvvm,
-    <br>* Mcs.Lmvvm,
-    <a class="clsHide" href="#idLmvalgovmnam"></a></p>
-  </section>
-
   <section id="idLmvalgoSpc">
   <h2 id="idLmvalgoSpcH2">algo.SPECIFIC of Lmv
     <a class="clsHide" href="#idLmvalgoSpcH2"></a></h2>
@@ -1005,6 +993,17 @@
   <p id="idLmvalgoSrcnam">name::
     <br>* Mcs.Lmv-algo.sourcecode,
     <a class="clsHide" href="#idLmvalgoSrcnam"></a></p>
+
+  <section id="idLmvsclag">
+  <h3 id="idLmvsclagH3">source-language of Lmv
+    <a class="clsHide" href="#idLmvsclagH3"></a></h3>
+  <p id="idLmvsclagdsn">description::
+    <br>· Move-source-language is the-language that maps <a class="clsPreview" href="#idLmvarch">Move-archetypes</a> to <a class="clsPreview" href="#idLmvalgoSrc">Move-source-algos</a> which are-translated to <a class="clsPreview" href="#idLmvalgoBtcd">Move-bytecode-algos</a>.
+    <a class="clsHide" href="#idLmvsclagdsn"></a></p>
+  <p id="idLmvsclagnam">name::
+    <br>* Mcs.Move-source-language,
+    <a class="clsHide" href="#idLmvsclagnam"></a></p>
+  </section>
   </section>
 
   <section id="idLmvalgoIr">
@@ -1012,7 +1011,7 @@
     <a class="clsHide" href="#idLmvalgoIrH2"></a></h2>
   <p id="idLmvalgoIrdsn">description::
     <br>"This section describes how to write transaction scripts and modules in the Move intermediate representation (IR).
-    <br>We caution the reader that the IR is an early (and unstable) precursor to a forthcoming Move source language (see Future Developer Experience for more details).
+    <br>We caution the reader that the IR is an early (and unstable) precursor to a forthcoming Move source language (see <a href="https://developers.libra.org/docs/move-overview#future-developer-experience">Future Developer Experience</a> for more details).
     <br>Move IR is a thin syntactic layer over Move bytecode that is used to test the bytecode verifier and virtual machine, and it is not particularly developer-friendly.
     <br>It is high level enough to write human-readable code, yet low level enough to compile directly to Move bytecode.
     <br>Nevertheless, we are excited about the Move language and hope that developers will give the IR a try, despite the rough edges."
@@ -1021,6 +1020,18 @@
   <p id="idLmvalgoIrnam">name::
     <br>* Mcs.Lmv-algo.Ircode,
     <a class="clsHide" href="#idLmvalgoIrnam"></a></p>
+
+  <section id="idLmvirlag">
+  <h3 id="idLmvirlagH3">intermediate-representation-language of Lmv
+    <a class="clsHide" href="#idLmvirlagH3"></a></h3>
+  <p id="idLmvirlagdsn">description::
+    <br>· Move-Ir-language is the-language that maps <a class="clsPreview" href="#idLmvarch">Move-archetypes</a> to <a class="clsPreview" href="#idLmvalgoIr">Move-Ir-algos</a> which are-translated to <a class="clsPreview" href="#idLmvalgoBtcd">Move-bytecode-algos</a>.
+    <a class="clsHide" href="#idLmvirlagdsn"></a></p>
+  <p id="idLmvirlagnam">name::
+    <br>* Mcs.Move-IR-language,
+    <br>* Mcs.Move-intermediate-representation-language,
+    <a class="clsHide" href="#idLmvirlagnam"></a></p>
+  </section>
 
   <section id="idLmvircd">
   <h3 id="idLmvircdH3">Ircode of Lmv
@@ -1043,6 +1054,17 @@
     <br>* Mcs.Lmv-algo.bytecode,
     <a class="clsHide" href="#idLmvalgoBtcdnam"></a></p>
 
+  <section id="idLmvbclag">
+  <h3 id="idLmvbclagH3">bytecode-language of Lmv
+    <a class="clsHide" href="#idLmvbclagH3"></a></h3>
+  <p id="idLmvbclagdsn">description::
+    <br>· Move-bytecode-language is the-language that maps <a class="clsPreview" href="#idLmvarch">Move-archetypes</a> to <a class="clsPreview" href="#idLmvalgoBtcd">Move-bytecode-algos</a>.
+    <a class="clsHide" href="#idLmvbclagdsn"></a></p>
+  <p id="idLmvbclagnam">name::
+    <br>* Mcs.Move-bytecode-language,
+    <a class="clsHide" href="#idLmvbclagnam"></a></p>
+  </section>
+
   <section id="idLmvbtcd">
   <h3 id="idLmvbtcdH3">bytecode of Lmv
     <a class="clsHide" href="#idLmvbtcdH3"></a></h3>
@@ -1053,7 +1075,50 @@
     <br>* Mcs.Move-bytecode!⇒Lmv-bytcode,
     <br>* Mcs.Lmv'bytecode!⇒Lmv-bytcode,
     <br>* Mcs.Lmv-bytcode,
+    <br>* Mcs.bytecode-of-Move!⇒Lmv-bytcode,
     <a class="clsHide" href="#idLmvbtcdnam"></a></p>
+  </section>
+
+  <section id="idLmvalgovm">
+  <h3 id="idLmvalgovmH3">virtual-machine of Lmv
+    <a class="clsHide" href="#idLmvalgovmH3"></a></h3>
+  <p id="idLmvalgovmdsn">description::
+    <br>"The MoveVM is a stack machine with a static type system."
+    <br>[https://developers.libra.org/docs/crates/vm]
+    <br>===
+    <br>"The Move virtual machine executes transaction scripts written in <a class="clsPreview" href="#idLmvbtcd">Move bytecode</a> to produce an execution result. This result is used to update the blockchain state.
+    <br>The virtual machine is part of <a class="clsPreview" href="#idDnlbrnodeVdtr">a validator node</a>."
+    <a class="clsHide" href="#idLmvalgovmdsn"></a></p>
+  <p id="idLmvalgovmnam">name::
+    <br>* Mcs.Move-Virtual-Machine!⇒Lmvvm,
+    <br>* Mcs.MoveVM!⇒Lmvvm,
+    <br>* Mcs.MVM!⇒Lmvvm,
+    <br>* Mcs.Lmv'virtual-machine!⇒Lmvvm,
+    <br>* Mcs.Lmvvm,
+    <a class="clsHide" href="#idLmvalgovmnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLmveval">
+  <h2 id="idLmvevalH2">evaluation of Lmv
+    <a class="clsHide" href="#idLmvevalH2"></a></h2>
+
+  <section id="idLmvbnft">
+  <h3 id="idLmvbnftH3">benefit of Lmv
+    <a class="clsHide" href="#idLmvbnftH3"></a></h3>
+  <p id="idLmvbnftdsn">description::
+    <br>· Dasset--semantic-unit that can-not-be-copied or implicitly discarded.
+    <br>"The key feature of Move is the ability to define custom resource types with semantics inspired by linearlogic: a resource can never be copied or implicitly discarded, only moved between program storage locations"
+    <br>[https://developers.libra.org/docs/assets/papers/libra-move-a-language-with-programmable-resources.pdf]
+    <a class="clsHide" href="#idLmvbnftdsn"></a></p>
+  <p id="idLmvbnftnam">name::
+    <br>* Mcs.Lmv-benefit,
+    <a class="clsHide" href="#idLmvbnftnam"></a></p>
+  </section>
+
+  <section id="idLmvpblm">
+  <h3 id="idLmvpblmH3">problem of Lmv
+    <a class="clsHide" href="#idLmvpblmH3"></a></h3>
   </section>
   </section>
 
@@ -1081,6 +1146,35 @@
     <br>===
     <br>* {2019-06-19} Lee-Ting-Ting, Whitepaper Deep Dive — Move: Facebook Libra Blockchain’s New Programming Language: Key characteristics of Move and How it differentiates with Ethereum from a developer’s perspective, https://medium.com/coinmonks/whitepaper-deep-dive-move-facebook-libra-blockchains-new-programming-language-7dbd5b242c2b,
     <a class="clsHide" href="#idLmvrscwpa"></a></p>
+  </section>
+
+  <section id="idLmvatt">
+  <h2 id="idLmvattH2">attribute of Lmv
+    <a class="clsHide" href="#idLmvattH2"></a></h2>
+
+  <section id="idLmvexst">
+  <h3 id="idLmvexstH3">expressivity of Lmv
+    <a class="clsHide" href="#idLmvexstH3"></a></h3>
+  <p id="idLmvexstdsn">description::
+    <br>"The safety and expressivity of Move have enabled us to implement significant parts of the Libra protocol in Move, including Libra coin, transaction processing, and validator management."
+    <br>[https://developers.libra.org/docs/assets/papers/libra-move-a-language-with-programmable-resources.pdf]
+    <a class="clsHide" href="#idLmvexstdsn"></a></p>
+  <p id="idLmvexstnam">name::
+    <br>* Mcs.Lmv'expressivity,
+    <a class="clsHide" href="#idLmvexstnam"></a></p>
+  </section>
+
+  <section id="idLmvsft">
+  <h3 id="idLmvsftH3">safty of Lmv
+    <a class="clsHide" href="#idLmvsftH3"></a></h3>
+  <p id="idLmvsftdsn">description::
+    <br>"The safety and expressivity of Move have enabled us to implement significant parts of the Libra protocol in Move, including Libra coin, transaction processing, and validator management."
+    <br>[https://developers.libra.org/docs/assets/papers/libra-move-a-language-with-programmable-resources.pdf]
+    <a class="clsHide" href="#idLmvsftdsn"></a></p>
+  <p id="idLmvsftnam">name::
+    <br>* Mcs.Lmv'safty,
+    <a class="clsHide" href="#idLmvsftnam"></a></p>
+  </section>
   </section>
 
   <section id="idLmvgnc">
@@ -1784,6 +1878,19 @@
     <a class="clsHide" href="#idDnlbrclirscwpa"></a></p>
   </section>
   </section>
+
+  <section id="idDnlbrpgmrsc">
+  <h2 id="idDnlbrpgmrscH2">resource of program
+    <a class="clsHide" href="#idDnlbrpgmrscH2"></a></h2>
+  <p id="idDnlbrpgmrscnam">name::
+    <br>* Mcs.DnLibra-program'resource,
+    <a class="clsHide" href="#idDnlbrpgmrscnam"></a></p>
+  <p id="idDnlbrpgmrscwpa">addressWpg::
+    <br>* A lightweight JavaScript library for Libra: https://github.com/bonustrack/libra-grpc,
+    <br>* Example Libra Go client SDK: https://github.com/phlip9/libra_example,
+    <br>* Libra Testnet Explorer: https://librabrowser.io/,
+    <a class="clsHide" href="#idDnlbrpgmrscwpa"></a></p>
+  </section>
 </section>
 
 <section id="idDnlbrwlt">
@@ -1912,6 +2019,21 @@
   <p id="idDnlbrprbmSpc">specific::
     <br>* Libra-Reserve-problem,
     <a class="clsHide" href="#idDnlbrprbmSpc"></a></p>
+
+  <section id="idDnlbrprbmMrpc">
+  <h3 id="idDnlbrprbmMrpcH3">problem.monetary-policy
+    <a class="clsHide" href="#idDnlbrprbmMrpcH3"></a></h3>
+  <p id="idDnlbrprbmMrpcdsn">description::
+    <br>· the-system must prove that preserves the ability of governments to conduct monetary policy.
+    <br>[https://medium.com/@oneadamreese/does-facebooks-libra-threaten-fiscal-sovereignty-in-the-global-south-cca3dcba39a6]
+    <a class="clsHide" href="#idDnlbrprbmMrpcdsn"></a></p>
+  <p id="idDnlbrprbmMrpcnam">name::
+    <br>* Mcs.DnLibra-problem.monetary-policy,
+    <a class="clsHide" href="#idDnlbrprbmMrpcnam"></a></p>
+  <p id="idDnlbrprbmMrpcwpa">addressWpg::
+    <br>* {2019-06-28} Adam-Reese, https://medium.com/@oneadamreese/does-facebooks-libra-threaten-fiscal-sovereignty-in-the-global-south-cca3dcba39a6,
+    <a class="clsHide" href="#idDnlbrprbmMrpcwpa"></a></p>
+  </section>
 
   <section id="idDnlbrprbmCprc">
   <h3 id="idDnlbrprbmCprcH3">problem.censorship-resistance

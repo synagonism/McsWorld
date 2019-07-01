@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-6-2.2019-06-29: misc,
  * version.0-6-1.2019-05-05: misc,
  * version.0-6-0.2018-06-29: disqus-dir,
  * version.0-5-1.2018-03-17: filMcs,
@@ -32,13 +33,13 @@ var
   sDir = 'dirTchInf',
   sDIR = 'DirTchInf',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'Libra--blockchain-net',
+  sN = 'Rust-language',
   //4. SHORT-name: DnChain, DnEth, Dchain-net,
-  sNS = 'DnLibra',
-  //5. FILE-name: shows relation of another file: DtcbnetEth
-  sNFil = 'DnLbr',
+  sNS = 'Lrst',
+  //5. FILE-name: shows relation of another file: DnLbr, DtcbnetEth
+  sNFil = 'Lrust',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Dnlbr';
+  sNId = 'Lrst';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -72,7 +73,7 @@ s =
   '    <br>* Mcs.' + sDir +'/filMcs' + sNFil + '.last.html' + '!⇒' + sNS + ',\n' +
   '    <br>* Mcs.' + sNS + ',\n' +
   '    <br>* Mcs.' + sN + '!⇒' + sNS + ',\n' +
-  '    <br>* Mcs.' + sNS + '-(' + sN + ')' + '!⇒' + sNS + ',\n' +
+  '    <br>* Mcs.' + sNS + '\'(' + sN + ')' + '!⇒' + sNS + ',\n' +
   '    <a class="clsHide" href="#idName"></a></p>\n' +
   '</section>\n' +
   '\n' +
@@ -112,7 +113,7 @@ s =
   '  <h1 id="id' + sNId + 'SpcFTH1">' + sNS + '.SPECIFIC\n' +
   '    <a class="clsHide" href="#id' + sNId + 'SpcFTH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'Spcnam">name::\n' +
-  '    <br>* Mcs.' + sNS + '\'specific,\n' +
+  '    <br>* Mcs.' + sNS + '.specific,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'Spcnam"></a></p>\n' +
   '  <p id="id' + sNId + 'SpcP1">specific::\n' +
   '    <br>\n' +
