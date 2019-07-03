@@ -39,7 +39,7 @@
   <h1 id="idLpgmarchH1">archetype (input) of Lpgm
     <a class="clsHide" href="#idLpgmarchH1"></a></h1>
   <p id="idLpgmarchdsn">description::
-    <br>· Lpgm-archetype is a-document describing information-processing as done by humans.
+    <br>· Lpgm-archetype is a-document describing information-processing as done by humans or other machines.
     <a class="clsHide" href="#idLpgmarchdsn"></a></p>
   <p id="idLpgmarchnam">name::
     <br>* Mcs.Lpgm'archetype!⇒Lpgm-archo,
@@ -428,6 +428,7 @@
     <a class="clsHide" href="#idLpgmalgSpcnam"></a></p>
   <p id="idLpgmalgSpcP1">specific::
     <br>* machine-algo,
+    <br>* binary-algo,
     <br>* assembly-algo,
     <br>* bytecode-algo,
     <br>* source-algo,
@@ -455,26 +456,6 @@
     <br>* Mcs.Lpgm'program,
     <br>* Mcs.Lpgm-algo.program,
     <a class="clsHide" href="#idLpgmalgPgmnam"></a></p>
-  </section>
-
-  <section id="idLpgmalgBnr">
-  <h2 id="idLpgmalgBnrH2">algo.MACHINE
-    <a class="clsHide" href="#idLpgmalgBnrH2"></a></h2>
-  </section>
-
-  <section id="idLpgmalgAsm">
-  <h2 id="idLpgmalgAsmH2">algo.ASSEMBLY
-    <a class="clsHide" href="#idLpgmalgAsmH2"></a></h2>
-  </section>
-
-  <section id="idLpgmalgBtcd">
-  <h2 id="idLpgmalgBtcdH2">algo.BYTECODE
-    <a class="clsHide" href="#idLpgmalgBtcdH2"></a></h2>
-  </section>
-
-  <section id="idLpgmalgSrc">
-  <h2 id="idLpgmalgSrcH2">algo.SOURCE
-    <a class="clsHide" href="#idLpgmalgSrcH2"></a></h2>
   </section>
 </section>
 
@@ -759,21 +740,16 @@
     <br>* Mcs.programing-language.macnine!⇒Lmchn,
     <a class="clsHide" href="#idLmchnnam"></a></p>
 
-  <section id="idLbnr">
-  <h2 id="idLbnrH2">Lpgm.BINARY
-    <a class="clsHide" href="#idLbnrH2"></a></h2>
-  <p id="idLbnrdsn">description::
-    <br>· binary-language is <a class="clsPreview" href="#idOverview">a-machine-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLpgmalgcodeBnr">binary-code</a> that a-real-machine understands.
-    <a class="clsHide" href="#idLbnrdsn"></a></p>
-  <p id="idLbnrnam">name::
-    <br>* Mcs.Lbnr, {2019-06-29}
-    <br>* Mcs.Lbnr'(binary-language)!⇒Lbnr,
-    <br>* Mcs.binary-lag!⇒Lbnr,
-    <br>* Mcs.binary-programing-language!⇒Lbnr,
-    <br>* Mcs.lagBnr!⇒Lbnr,
-    <br>* Mcs.language.binary!⇒Lbnr,
-    <br>* Mcs.programing-language.binary!⇒Lbnr,
-    <a class="clsHide" href="#idLbnrnam"></a></p>
+  <section id="idLmchnalg">
+  <h2 id="idLmchnalgH2">algo of Lmchn
+    <a class="clsHide" href="#idLmchnalgH2"></a></h2>
+  <p id="idLmchnalgdsn">description::
+    <br>· machine-algo of <a class="clsPreview" href="#idLmchndsn">a-Lmchn</a> is <a class="clsPreview" href="#idLpgmalg">an-algo</a> <a class="clsPreview" href="#idLpgmalgmchnReal">a-real-machine</a> understands.
+    <a class="clsHide" href="#idLmchnalgdsn"></a></p>
+  <p id="idLmchnalgnam">name::
+    <br>* Mcs.Lpgm-algo.machine,
+    <br>* Mcs.Lmchn-algo,
+    <a class="clsHide" href="#idLmchnalgnam"></a></p>
   </section>
 
   <section id="idLtnr">
@@ -794,6 +770,35 @@
   </section>
 </section>
 
+<section id="idLbnr">
+  <h1 id="idLbnrH1">Lpgm.BINARY
+    <a class="clsHide" href="#idLbnrH1"></a></h1>
+  <p id="idLbnrdsn">description::
+    <br>· binary-language is <a class="clsPreview" href="#idOverview">a-machine-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLpgmalgcodeBnr">binary-code</a> that a-real-machine understands.
+    <a class="clsHide" href="#idLbnrdsn"></a></p>
+  <p id="idLbnrnam">name::
+    <br>* Mcs.Lbnr, {2019-06-29}
+    <br>* Mcs.Lbnr'(binary-language)!⇒Lbnr,
+    <br>* Mcs.binary-lag!⇒Lbnr,
+    <br>* Mcs.binary-programing-language!⇒Lbnr,
+    <br>* Mcs.lagBnr!⇒Lbnr,
+    <br>* Mcs.language.binary!⇒Lbnr,
+    <br>* Mcs.programing-language.binary!⇒Lbnr,
+    <a class="clsHide" href="#idLbnrnam"></a></p>
+
+  <section id="idLbnralg">
+  <h2 id="idLbnralgH2">algo of Lbnr
+    <a class="clsHide" href="#idLbnralgH2"></a></h2>
+  <p id="idLbnralgdsn">description::
+    <br>· binary-algo is <a class="clsPreview" href="#idLmchnalg">a-machine-algo</a> written in <a class="clsPreview" href="#idLpgmalgcodeBnr">binary-code</a>.
+    <a class="clsHide" href="#idLbnralgdsn"></a></p>
+  <p id="idLbnralgnam">name::
+    <br>* Mcs.Lpgm-algo.binary,
+    <br>* Mcs.Lbnr-algo,
+    <a class="clsHide" href="#idLbnralgnam"></a></p>
+  </section>
+</section>
+
 <section id="idLasm">
   <h1 id="idLasmH1">Lpgm.ASSEMBLY
     <a class="clsHide" href="#idLasmH1"></a></h1>
@@ -804,6 +809,18 @@
     <br>* Mcs.Lasm,
     <br>* Mcs.Lpgm.assembly!⇒Lasm,
     <a class="clsHide" href="#idLasmnam"></a></p>
+
+  <section id="idLasmalg">
+  <h2 id="idLasmalgH2">algo of Lasm
+    <a class="clsHide" href="#idLasmalgH2"></a></h2>
+  <p id="idLasmalgdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLasmalgdsn"></a></p>
+  <p id="idLasmalgnam">name::
+    <br>* Mcs.Lpgm-algo.assembly,
+    <br>* Mcs.Lasm-algo,
+    <a class="clsHide" href="#idLasmalgnam"></a></p>
+  </section>
 </section>
 
 <section id="idLbtcd">
@@ -816,6 +833,18 @@
     <br>* Mcs.Lbtcd,
     <br>* Mcs.Lpgm.bytecode!⇒Lbtcd,
     <a class="clsHide" href="#idLbtcdnam"></a></p>
+
+  <section id="idLbtcdalg">
+  <h2 id="idLbtcdalgH2">algo of Lbtcd
+    <a class="clsHide" href="#idLbtcdalgH2"></a></h2>
+  <p id="idLbtcdalgdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLbtcdalgdsn"></a></p>
+  <p id="idLbtcdalgnam">name::
+    <br>* Mcs.Lpgm-algo.bytecode,
+    <br>* Mcs.Lbtcd-algo,
+    <a class="clsHide" href="#idLbtcdalgnam"></a></p>
+  </section>
 </section>
 
 <section id="idLsrc">
@@ -833,25 +862,55 @@
   <h2 id="idLsrcarchH2">archetype of Lsrc
     <a class="clsHide" href="#idLsrcarchH2"></a></h2>
   <p id="idLsrcarchdsn">description::
-    <br>·
+    <br>· archetype of <a class="clsPreview" href="#idLsrc">Lsrc</a> is a-document describing information-processing as done by humans.
     <a class="clsHide" href="#idLsrcarchdsn"></a></p>
   <p id="idLsrcarchnam">name::
-    <br>* Mcs.Lsrc'archetype,
+    <br>* Mcs.Lsrc'archetype!⇒Lsrc-archetype,
     <br>* Mcs.Lsrc-archetype,
     <a class="clsHide" href="#idLsrcarchnam"></a></p>
   <p id="idLsrcarchgncchn">generic-chain::
     <br>* <a class="clsPreview" href="#idLpgmarch">archetype-of-Lpgm</a>,
     <a class="clsHide" href="#idLsrcarchgncchn"></a></p>
+
+  <section id="idLsrcarchcd">
+  <h3 id="idLsrcarchcdH3">archocode of archetype of Lsrc
+    <a class="clsHide" href="#idLsrcarchcdH3"></a></h3>
+  <p id="idLsrcarchcddsn">description::
+    <br>· archocode of <a class="clsPreview" href="#idLsrc">Lsrc</a> is any human-code part of <a class="clsPreview" href="#idLsrcarch">archetype</a>.
+    <a class="clsHide" href="#idLsrcarchcddsn"></a></p>
+  <p id="idLsrcarchcdnam">name::
+    <br>* Mcs.Lsrc-archetype'archocode,
+    <br>* Mcs.Lsrc-archocode,
+    <a class="clsHide" href="#idLsrcarchcdnam"></a></p>
+  <p id="idLsrcarchcdgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="#idLpgmarchcd">archocode-of-Lpgm</a>,
+    <a class="clsHide" href="#idLsrcarchcdgncchn"></a></p>
+  </section>
+
+  <section id="idLsrcarchdmn">
+  <h3 id="idLsrcarchdmnH3">domain of archetype of Lsrc
+    <a class="clsHide" href="#idLsrcarchdmnH3"></a></h3>
+  <p id="idLsrcarchdmndsn">description::
+    <br>· domain of <a class="clsPreview" href="#idLsrc">Lsrc</a>[a] is the-set of all archetypes that mapped with it[a].
+    <a class="clsHide" href="#idLsrcarchdmndsn"></a></p>
+  <p id="idLsrcarchdmnnam">name::
+    <br>* Mcs.Lsrc-algo'domain,
+    <a class="clsHide" href="#idLsrcarchdmnnam"></a></p>
+  <p id="idLsrcarchdmngncchn">generic-chain::
+    <br>* <a class="clsPreview" href="#idLpgmarchdmn">domain-of-Lpgm</a>,
+    <a class="clsHide" href="#idLsrcarchdmngncchn"></a></p>
+  </section>
   </section>
 
   <section id="idLsrcalg">
   <h2 id="idLsrcalgH2">algorithm of Lsrc
     <a class="clsHide" href="#idLsrcalgH2"></a></h2>
   <p id="idLsrcalgdsn">description::
-    <br>·
+    <br>· algorithm of <a class="clsPreview" href="#idLsrcdsn">a-Lsrc</a> is <a class="clsPreview" href="#idLpgmalg">an-algo</a> <a class="clsPreview" href="#idLpgmalgmchnReal">a-source-machine</a> understands, written is <a class="clsPreview" href="#idLpgmalgcodeSrc">source-code</a>.
     <a class="clsHide" href="#idLsrcalgdsn"></a></p>
   <p id="idLsrcalgnam">name::
-    <br>* Mcs.Lsrc'algo,
+    <br>* Mcs.Lpgm-algo.source!⇒Lsrc-algo,
+    <br>* Mcs.Lsrc'algo!⇒Lsrc-algo,
     <br>* Mcs.Lsrc-algo,
     <a class="clsHide" href="#idLsrcalgnam"></a></p>
   <p id="idLsrcalggncchn">generic-chain::
@@ -882,29 +941,117 @@
     <br>· algo-word of Lsrc is a-structure of <a class="clsPreview" href="#idLsrcunt">units</a> the-language uses to create more compound algo-structures.
     <a class="clsHide" href="#idLsrcwrddsn"></a></p>
   <p id="idLsrcwrdnam">name::
-    <br>* Mcs.Lsrc'word,
-    <br>* Mcs.Lsrc-algo'word,
+    <br>* Mcs.Lsrc'word!⇒Lsrc-word,
+    <br>* Mcs.Lsrc-algo'word!⇒Lsrc-word,
     <br>* Mcs.Lsrc-word,
     <a class="clsHide" href="#idLsrcwrdnam"></a></p>
   <p id="idLsrcwrdgncchn">generic-chain::
     <br>* <a class="clsPreview" href="#idLpgmalgwrd">word-of-Lpgm</a>,
     <a class="clsHide" href="#idLsrcwrdgncchn"></a></p>
+  <p id="idLsrcwrdSpc">specific::
+    <br>* <a class="clsPreview" href="#idLsrcsuntNmdidfr">identifier</a>,
+    <br>* <a class="clsPreview" href="#idLsrcwrdRsvd">keyword</a>,
+    <a class="clsHide" href="#idLsrcwrdSpc"></a></p>
+
+  <section id="idLsrcwrdRsvd">
+  <h2 id="idLsrcwrdRsvdH2">word.keyword of Lsrc
+    <a class="clsHide" href="#idLsrcwrdRsvdH2"></a></h2>
+  <p id="idLsrcwrdRsvddsn">description::
+    <br>· keyword of Lsrc is <a class="clsPreview" href="#idLsrcwrd">a-word</a> reserved to construct algo-structures.
+    <a class="clsHide" href="#idLsrcwrdRsvddsn"></a></p>
+  <p id="idLsrcwrdRsvdnam">name::
+    <br>* Mcs.Lsrc-word.keyword,
+    <br>* Mcs.Lsrc-word.reserved,
+    <a class="clsHide" href="#idLsrcwrdRsvdnam"></a></p>
+  </section>
   </section>
 
   <section id="idLsrcsunt">
   <h2 id="idLsrcsuntH2">algo'semantic-unit of Lsrc
     <a class="clsHide" href="#idLsrcsuntH2"></a></h2>
   <p id="idLsrcsuntdsn">description::
-    <br>·
+    <br>· semantic-unit of <a class="clsPreview" href="#idLsrc">Lsrc</a> is a-structure of <a class="clsPreview" href="#idLsrcwrd">words</a> that DENOTES <a class="clsPreview" href="#idLsrcarchcd">archocode</a>.
     <a class="clsHide" href="#idLsrcsuntdsn"></a></p>
   <p id="idLsrcsuntnam">name::
-    <br>* Mcs.Lsrc'semantic-unit,
-    <br>* Mcs.Lsrc-algo'semantic-unit,
-    <br>* Mcs.Lsrc-semantic-unit,
+    <br>* Mcs.Lsrc'semantic-unit!⇒Lsrc-sunt,
+    <br>* Mcs.Lsrc-algo'semantic-unit!⇒Lsrc-sunt,
+    <br>* Mcs.Lsrc-semantic-unit!⇒Lsrc-sunt,
+    <br>* Mcs.Lsrc-sunt,
     <a class="clsHide" href="#idLsrcsuntnam"></a></p>
   <p id="idLsrcsuntgncchn">generic-chain::
     <br>* <a class="clsPreview" href="#idLpgmsunt">sem-unit-of-Lpgm</a>,
     <a class="clsHide" href="#idLsrcsuntgncchn"></a></p>
+
+  <section id="idLsrcsuntNmd">
+  <h3 id="idLsrcsuntNmdH3">sunt.NAMED of Lsrc
+    <a class="clsHide" href="#idLsrcsuntNmdH3"></a></h3>
+  <p id="idLsrcsuntNmddsn">description::
+    <br>· named-sunt of Lsrc is <a class="clsPreview" href="#idLsrcsunt">a-semantic-unit</a> associated with an-identifier.
+    <a class="clsHide" href="#idLsrcsuntNmddsn"></a></p>
+  <p id="idLsrcsuntNmdnam">name::
+    <br>* Mcs.Lsrc-sunt.named,
+    <a class="clsHide" href="#idLsrcsuntNmdnam"></a></p>
+
+  <section id="idLsrcsuntNmdidfr">
+  <h4 id="idLsrcsuntNmdidfrH4">identifier of named-sunt
+    <a class="clsHide" href="#idLsrcsuntNmdidfrH4"></a></h4>
+  <p id="idLsrcsuntNmdidfrdsn">description::
+    <br>· identifier of Lsrc is <a class="clsPreview" href="#idLsrcwrd">a-word</a>, not a-keyword, that folows concrete rules to be-constructed.
+    <a class="clsHide" href="#idLsrcsuntNmdidfrdsn"></a></p>
+  <p id="idLsrcsuntNmdidfrnam">name::
+    <br>* Mcs.Lsrc-named-sunt'identifier,
+    <br>* Mcs.Lsrc-word.identifier,
+    <a class="clsHide" href="#idLsrcsuntNmdidfrnam"></a></p>
+  </section>
+
+  <section id="idLsrcsuntNmdval">
+  <h4 id="idLsrcsuntNmdvalH4">value of named-sunt
+    <a class="clsHide" href="#idLsrcsuntNmdvalH4"></a></h4>
+  <p id="idLsrcsuntNmdvaldsn">description::
+    <br>· value of Lsrc is the-semantic-unit associated with an-identifier.
+    <a class="clsHide" href="#idLsrcsuntNmdvaldsn"></a></p>
+  <p id="idLsrcsuntNmdvalnam">name::
+    <br>* Mcs.Lsrc-named-sunt'value,
+    <a class="clsHide" href="#idLsrcsuntNmdvalnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLsrcsuntNmdN">
+  <h3 id="idLsrcsuntNmdNH3">sunt.NAMED.NO of Lsrc
+    <a class="clsHide" href="#idLsrcsuntNmdNH3"></a></h3>
+  <p id="idLsrcsuntNmdNdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLsrcsuntNmdNdsn"></a></p>
+  <p id="idLsrcsuntNmdNnam">name::
+    <br>* Mcs.Lsrc-sunt.namedNo,
+    <a class="clsHide" href="#idLsrcsuntNmdNnam"></a></p>
+  </section>
+
+  <section id="idLsrcsuntIntc">
+  <h3 id="idLsrcsuntIntcH3">sunt.INSTANCE of Lsrc
+    <a class="clsHide" href="#idLsrcsuntIntcH3"></a></h3>
+  <p id="idLsrcsuntIntcdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLsrcsuntIntcdsn"></a></p>
+  <p id="idLsrcsuntIntcnam">name::
+    <br>* Mcs.Lsrc'literal,
+    <br>* Mcs.Lsrc-sunt.instance,
+    <br>* Mcs.Lsrc-sunt.literal,
+    <a class="clsHide" href="#idLsrcsuntIntcnam"></a></p>
+  </section>
+
+  <section id="idLsrcsuntIntcN">
+  <h3 id="idLsrcsuntIntcNH3">sunt.INSTANCE.NO of Lsrc
+    <a class="clsHide" href="#idLsrcsuntIntcNH3"></a></h3>
+  <p id="idLsrcsuntIntcNdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLsrcsuntIntcNdsn"></a></p>
+  <p id="idLsrcsuntIntcNnam">name::
+    <br>* Mcs.Lsrc'type,
+    <br>* Mcs.Lsrc-sunt.instanceNo,
+    <br>* Mcs.Lsrc-sunt.type,
+    <a class="clsHide" href="#idLsrcsuntIntcNnam"></a></p>
+  </section>
   </section>
 
   <section id="idLsrcphrs">
