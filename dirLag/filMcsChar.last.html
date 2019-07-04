@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char (char.0-15-0.2018-10-05 draft)</title>
+  <title>Mcs.char (char.0-16-0.2019-07-04 draft)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -18,19 +18,19 @@
     <a class="clsHide" href="#idHeadercrd"></a></p>
 </header>
 
-<section id="idDescriptionFT">
-  <h1 id="idDescriptionFTH1">description of char
-    <a class="clsHide" href="#idDescriptionFTH1"></a></h1>
-  <p id="idDescriptionP1">description::
+<section id="idOverview">
+  <h1 id="idOverviewH1">description of char
+    <a class="clsHide" href="#idOverviewH1"></a></h1>
+  <p id="idDescription">description::
     <br>· char I define any UNIT of WRITTEN human and non-human-languages.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-19]
-    <a class="clsHide" href="#idDescriptionP1"></a></p>
+    <a class="clsHide" href="#idDescription"></a></p>
   <p id="idName">name::
-    <br>* cpt.filMcsChar.last.html,
-    <br>* cpt.dirLag/filMcsChar.last.html,
+    <br>* cpt.filMcsChar.last.html!⇒char,
+    <br>* cpt.dirLag/filMcsChar.last.html!⇒char,
     <br>* cpt.char,
-    <br>* cpt.character.language,
-    <br>* cpt.language'character,
+    <br>* cpt.character.language!⇒char,
+    <br>* cpt.language'character!⇒char,
     <a class="clsHide" href="#idName"></a></p>
 </section>
 
@@ -71,9 +71,105 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
     <a class="clsHide" href="#idCharencdgdsn"></a></p>
   <p id="idCharencdgnam">name::
-    <br>* cpt.char'encoding,
-    <br>* cpt.encoding-of-char,
+    <br>* cpt.char'encoding!⇒char-encoding,
+    <br>* cpt.char-encoding,
+    <br>* cpt.character-encoding!⇒char-encoding,
+    <br>* cpt.encoding-of-char!⇒char-encoding,
     <a class="clsHide" href="#idCharencdgnam"></a></p>
+
+  <section id="idCharencdgrsc">
+  <h2 id="idCharencdgrscH2">resource of char-encoding
+    <a class="clsHide" href="#idCharencdgrscH2"></a></h2>
+  <p id="idCharencdgrscnam">name::
+    <br>* Mcs.char-encoding'resource,
+    <a class="clsHide" href="#idCharencdgrscnam"></a></p>
+  <p id="idCharencdgrscwpa">addressWpg::
+    <br>* https://everipedia.org/wiki/lang_en/Character_encoding,
+    <a class="clsHide" href="#idCharencdgrscwpa"></a></p>
+  </section>
+
+  <section id="idCharencdgSpc">
+  <h2 id="idCharencdgSpcH2">char-encoding.SPECIFIC
+    <a class="clsHide" href="#idCharencdgSpcH2"></a></h2>
+  <p id="idCharencdgSpcdsn">description::
+    <br>* fixed-length-encoding,
+    <br>* variable-length-encoding,
+    <br>===
+    <br>* UTF-8,
+    <br>* UTF-16,
+    <br>* UTF-32,
+    <a class="clsHide" href="#idCharencdgSpcdsn"></a></p>
+  <p id="idCharencdgSpcnam">name::
+    <br>* Mcs.char-encoding.specific,
+    <a class="clsHide" href="#idCharencdgSpcnam"></a></p>
+  </section>
+
+  <section id="idCharencdgFxlg">
+  <h2 id="idCharencdgFxlgH2">char-encoding.fixed-length
+    <a class="clsHide" href="#idCharencdgFxlgH2"></a></h2>
+  <p id="idCharencdgFxlgdsn">description::
+    <br>· fixed-length--char-encoding is a-char-encoding that always uses the same quantity of bits to represent chars.
+    <br>· benefit: direct access.
+    <br>· problem: storage inefficient.
+    <a class="clsHide" href="#idCharencdgFxlgdsn"></a></p>
+  <p id="idCharencdgFxlgnam">name::
+    <br>* Mcs.char-encoding.fixed-length,
+    <br>* Mcs.fixed-length--char-encoding,
+    <a class="clsHide" href="#idCharencdgFxlgnam"></a></p>
+  </section>
+
+  <section id="idCharencdgVrlg">
+  <h2 id="idCharencdgVrlgH2">char-encoding.variable-length
+    <a class="clsHide" href="#idCharencdgVrlgH2"></a></h2>
+  <p id="idCharencdgVrlgdsn">description::
+    <br>· variable-length--char-encoding is a-char-encoding that uses different quantity of bits to represent chars.
+    <br>· benefit: storage efficiency.
+    <br>· problem: needs sequential access.
+    <a class="clsHide" href="#idCharencdgVrlgdsn"></a></p>
+  <p id="idCharencdgVrlgnam">name::
+    <br>* Mcs.char-encoding.variable-length,
+    <br>* Mcs.variable-length--char-encoding,
+    <a class="clsHide" href="#idCharencdgVrlgnam"></a></p>
+  </section>
+
+  <section id="idCharencdgUtf8">
+  <h2 id="idCharencdgUtf8H2">char-encoding.UTF-8
+    <a class="clsHide" href="#idCharencdgUtf8H2"></a></h2>
+  <p id="idCharencdgUtf8dsn">description::
+    <br>· UTF-8 is <a class="clsPreview" href="#idCharencdgVrlg">a-variable-length-encoding</a> that uses 1 to 4 8-bits to represent chars.
+    <a class="clsHide" href="#idCharencdgUtf8dsn"></a></p>
+  <p id="idCharencdgUtf8nam">name::
+    <br>* Mcs.UTF-8--char-encoding,
+    <br>* Mcs.char-encoding.UTF-8,
+    <a class="clsHide" href="#idCharencdgUtf8nam"></a></p>
+  </section>
+
+  <section id="idCharencdgUtf16">
+  <h2 id="idCharencdgUtf16H2">char-encoding.UTF-16
+    <a class="clsHide" href="#idCharencdgUtf16H2"></a></h2>
+  <p id="idCharencdgUtf16dsn">description::
+    <br>· UTF-16 is <a class="clsPreview" href="#idCharencdgVrlg">a-variable-length-encoding</a> that uses 1 to 2 16-bits to represent chars.
+    <a class="clsHide" href="#idCharencdgUtf16dsn"></a></p>
+  <p id="idCharencdgUtf16nam">name::
+    <br>* Mcs.UTF-16--char-encoding,
+    <br>* Mcs.char-encoding.UTF-16,
+    <a class="clsHide" href="#idCharencdgUtf16nam"></a></p>
+  </section>
+
+  <section id="idCharencdgUtf32">
+  <h2 id="idCharencdgUtf32H2">char-encoding.UTF-32
+    <a class="clsHide" href="#idCharencdgUtf32H2"></a></h2>
+  <p id="idCharencdgUtf32dsn">description::
+    <br>"UTF-32 stands for Unicode Transformation Format in 32 bits. It is a protocol to encode Unicode code points that uses exactly 32 bits per Unicode code point (but a number of leading bits must be zero as there are fewer than 221 Unicode code points). UTF-32 is a fixed-length encoding, in contrast to all other Unicode transformation formats, which are variable-length encodings. Each 32-bit value in UTF-32 represents one Unicode code point and is exactly equal to that code point's numerical value.
+    <br>The main advantage of UTF-32 is that the Unicode code points are directly indexed. Finding the Nth code point in a sequence of code points is a constant time operation. In contrast, a variable-length code requires sequential access to find the Nth code point in a sequence. This makes UTF-32 a simple replacement in code that uses integers that are incremented by one to examine each location in a string, as was commonly done for ASCII.
+    <br>The main disadvantage of UTF-32 is that it is space-inefficient, using four bytes per code point. Characters beyond the BMP are relatively rare in most texts, and can typically be ignored for sizing estimates. This makes UTF-32 close to twice the size of UTF-16. It can be up to four times the size of UTF-8 depending on how many of the characters are in the ASCII subset."
+    <br>[https://en.wikipedia.org/wiki/UTF-32]
+    <a class="clsHide" href="#idCharencdgUtf32dsn"></a></p>
+  <p id="idCharencdgUtf32nam">name::
+    <br>* Mcs.UTF-32--char-encoding,
+    <br>* Mcs.char-encoding.UTF-32,
+    <a class="clsHide" href="#idCharencdgUtf32nam"></a></p>
+  </section>
 </section>
 
 <section id="idCharrscFT">
@@ -2835,8 +2931,8 @@
     times since {2017-07-01}</p>
   <!-- the content of page-path paragraph is displayed as it is on top of toc -->
   <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-path</span>:
-    <a class="clsPreview" href="../../#idDescription">synagonism.net</a> /
-    <a class="clsPreview" href="../filMcsWorld.last.html#idDescription">Mcs-worldview</a> /
+    <a class="clsPreview" href="../../#idOverview">synagonism.net</a> /
+    <a class="clsPreview" href="../filMcsWorld.last.html#idOverview">Mcs-worldview</a> /
     <a class="clsPreview" href="filMcsDirLag.last.html#idDescription">dirLag</a> /
     char
     </p>

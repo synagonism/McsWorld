@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-6-3.2019-07-30: idOverview,
  * version.0-6-2.2019-06-29: misc,
  * version.0-6-1.2019-05-05: misc,
  * version.0-6-0.2018-06-29: disqus-dir,
@@ -33,13 +34,13 @@ var
   sDir = 'dirTchInf',
   sDIR = 'DirTchInf',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'Rust-language',
+  sN = 'computer-machine',
   //4. SHORT-name: DnChain, DnEth, Dchain-net,
-  sNS = 'Lrst',
+  sNS = 'computer',
   //5. FILE-name: shows relation of another file: DnLbr, DtcbnetEth
-  sNFil = 'Lrust',
+  sNFil = 'Cmpr',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Lrst';
+  sNId = 'Cmr';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -135,9 +136,9 @@ if (bCounter) {
 s = s +
   '  <!-- the content of page-path paragraph is displayed as it is on top of toc -->\n' +
   '  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-path</span>:\n' +
-  '    <a class="clsPreview" href="../../#idDescription">synagonism.net</a> /\n' +
-  '    <a class="clsPreview" href="../filMcsWorld.last.html#idDescription">Mcs-worldview</a> /\n' +
-  '    <a class="clsPreview" href="FilMcs' + sDir + '.last.html#idDescription">' + sDir + '</a> /\n' +
+  '    <a class="clsPreview" href="../../#idOverview">synagonism.net</a> /\n' +
+  '    <a class="clsPreview" href="../filMcsWorld.last.html#idOverview">Mcs-worldview</a> /\n' +
+  '    <a class="clsPreview" href="filMcs' + sDir + '.last.html#idOverview">' + sDir + '</a> /\n' +
   '    ' + sNS + '\n' +
   '    </p>\n' +
   '  <p id="idMetaP1">SEARCH::\n' +
