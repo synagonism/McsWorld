@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.programing-language (lagPgm.0-4-0.2019-07-04 draft)</title>
+  <title>Mcs.programing-language (lagPgm.0-6-0.2019-07-06 draft)</title>
   <meta name="keywords" content="programing-language, lagPgm, Lpgm, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -33,13 +33,16 @@
     <br>* Mcs.language.programing!⇒lagPgm,
     <br>* Mcs.programing-language!⇒lagPgm,
     <a class="clsHide" href="#idName"></a></p>
+  <p id="idOverviewnamEll">nameGreek::
+    <br>* McsEll.γλώσσα-προγραμματισμού,
+    <a class="clsHide" href="#idOverviewnamEll"></a></p>
 </section>
 
 <section id="idLpgmarch">
   <h1 id="idLpgmarchH1">archetype (input) of lagPgm
     <a class="clsHide" href="#idLpgmarchH1"></a></h1>
   <p id="idLpgmarchdsn">description::
-    <br>· Lpgm-archetype is a-document describing information-processing as done by humans or other machines.
+    <br>· lagPgm-archetype is a-document describing information-processing as done by humans or other machines.
     <a class="clsHide" href="#idLpgmarchdsn"></a></p>
   <p id="idLpgmarchnam">name::
     <br>* Mcs.lagPgm'archetype!⇒lagPgm-archo,
@@ -82,7 +85,7 @@
   <h1 id="idLpgmalgH1">algo (output) of lagPgm
     <a class="clsHide" href="#idLpgmalgH1"></a></h1>
   <p id="idLpgmalgdsn">description::
-    <br>· Lpgm-algo is document describing <a class="clsPreview" href="#idLpgmarch">an-archetype</a> as done by <a class="clsPreview" href="idLpgmalgmchn">a-machine</a> that understands this doc.
+    <br>· lagPgm-algo is document describing <a class="clsPreview" href="#idLpgmarch">an-archetype</a> as done by <a class="clsPreview" href="#idLpgmalgmchn">a-machine</a> that understands this doc.
     <a class="clsHide" href="#idLpgmalgdsn"></a></p>
   <p id="idLpgmalgnam">name::
     <br>* Mcs.lagPgm'algorithm!⇒lagPgm-algo,
@@ -107,7 +110,7 @@
   <h3 id="idLpgmalgmchnRealH3">machine.REAL
     <a class="clsHide" href="#idLpgmalgmchnRealH3"></a></h3>
   <p id="idLpgmalgmchnRealdsn">description::
-    <br>· a-real-machine[a] works with <a class="clsPreview" href="#idLpgmalgcodeMchn">machine-code</a> today with<a class="clsPreview" href="#idLpgmalgcodeBnr">binary-code</a> which includes an-instruction-set, it[a] has memory-areas and it[a] is operating-system dependent.
+    <br>· a-real-machine[a] works with <a class="clsPreview" href="#idLmchnalgcode">machine-code</a> today with<a class="clsPreview" href="#idLbnralgcode">binary-code</a> which includes an-instruction-set, it[a] has memory-areas and it[a] is operating-system dependent.
     <a class="clsHide" href="#idLpgmalgmchnRealdsn"></a></p>
   <p id="idLpgmalgmchnRealnam">name::
     <br>* Mcs.lagPgm-machine.physical,
@@ -121,7 +124,7 @@
     <a class="clsHide" href="#idLpgmalgmchnVrtlH3"></a></h3>
   <p id="idLpgmalgmchnVrtldsn">description::
     <br>· a-virtual-machine[a] is not a-real-machine but works like a-real-machine.
-    <br>· it[a] works with <a class="clsPreview" href="#idLpgmalgcodeBnr">binary-code</a>, it[a] has memory managed with the-code, but it[a] is independent of operating-systems.
+    <br>· it[a] works with <a class="clsPreview" href="#idLbnralgcode">binary-code</a>, it[a] has memory managed with the-code, but it[a] is independent of operating-systems.
     <a class="clsHide" href="#idLpgmalgmchnVrtldsn"></a></p>
   <p id="idLpgmalgmchnVrtlnam">name::
     <br>* Mcs.bytcode-machine--of-lagPgm,
@@ -140,7 +143,7 @@
     <a class="clsHide" href="#idLpgmalgmchnSrcH3"></a></h3>
   <p id="idLpgmalgmchnSrcdsn">description::
     <br>· a-source-machine[a] is not a-real-machine.
-    <br>· it[a] is simpler than a-real, usually auto-manages its[a] memory, it[a] works with <a class="clsPreview" href="#idLpgmalgcodeSrc">source-code</a>, and it[a] is independent of operating-systems.
+    <br>· it[a] is simpler than a-real, usually auto-manages its[a] memory, it[a] works with <a class="clsPreview" href="#idLsrcalgcode">source-code</a>, and it[a] is independent of operating-systems.
     <a class="clsHide" href="#idLpgmalgmchnSrcdsn"></a></p>
   <p id="idLpgmalgmchnSrcnam">name::
     <br>* Mcs.lagPgm-machine.abstract,
@@ -154,7 +157,7 @@
   <h2 id="idLpgmalgcodeH2">code of algo
     <a class="clsHide" href="#idLpgmalgcodeH2"></a></h2>
   <p id="idLpgmalgcodedsn">description::
-    <br>· code of algo is any PART of an algo.
+    <br>· code of algo is any PART of an <a class="clsPreview" href="#idLpgmalg">algo</a>.
     <a class="clsHide" href="#idLpgmalgcodedsn"></a></p>
   <p id="idLpgmalgcodenam">name::
     <br>* Mcs.lagPgm-algo'code!⇒lagPgm-code,
@@ -162,71 +165,12 @@
     <br>* Mcs.code-of-lagPgm!⇒lagPgm-code,
     <br>* Mcs.output-code--of-lagPgm!⇒lagPgm-code,
     <a class="clsHide" href="#idLpgmalgcodenam"></a></p>
-
-  <section id="idLpgmalgcodeMchn">
-  <h3 id="idLpgmalgcodeMchnH3">code.MACHINE
-    <a class="clsHide" href="#idLpgmalgcodeMchnH3"></a></h3>
-  <p id="idLpgmalgcodeMchndsn">description::
-    <br>· machine-code is <a class="clsPreview" href="#idLpgmalgcode">code</a> a-real-machine understands (today <a class="clsPreview" href="idLpgmalgcodeBnr">binary-code</a>).
-    <a class="clsHide" href="#idLpgmalgcodeMchndsn"></a></p>
-  <p id="idLpgmalgcodeMchnnam">name::
-    <br>* Mcs.lagPgm-code.machine,
-    <br>* Mcs.machine-code,
-    <a class="clsHide" href="#idLpgmalgcodeMchnnam"></a></p>
-  <p id="idLpgmalgcodeMchnSpc">specific::
-    <br>* binary-code,
-    <br>* trinary-code,
-    <a class="clsHide" href="#idLpgmalgcodeMchnSpc"></a></p>
-
-  <section id="idLpgmalgcodeBnr">
-  <h4 id="idLpgmalgcodeBnrH4">code.BINARY
-    <a class="clsHide" href="#idLpgmalgcodeBnrH4"></a></h4>
-  <p id="idLpgmalgcodeBnrdsn">description::
-    <br>· binary-code is <a class="clsPreview" href="#idLpgmalgcode">code</a> written in 0 and 1, bits.
-    <a class="clsHide" href="#idLpgmalgcodeBnrdsn"></a></p>
-  <p id="idLpgmalgcodeBnrnam">name::
-    <br>* Mcs.lagPgm-code.binary,
-    <br>* Mcs.binary-code,
-    <br>* Mcs.object-code,
-    <a class="clsHide" href="#idLpgmalgcodeBnrnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idLpgmalgcodeAsm">
-  <h3 id="idLpgmalgcodeAsmH3">code.ASSEMBLY
-    <a class="clsHide" href="#idLpgmalgcodeAsmH3"></a></h3>
-  <p id="idLpgmalgcodeAsmdsn">description::
-    <br>· assembly-code is <a class="clsPreview" href="#idLpgmalgcode">code</a> written with mnemonics very close to binary-code.
-    <a class="clsHide" href="#idLpgmalgcodeAsmdsn"></a></p>
-  <p id="idLpgmalgcodeAsmnam">name::
-    <br>* Mcs.lagPgm-code.assembly,
-    <br>* Mcs.assembly-code,
-    <a class="clsHide" href="#idLpgmalgcodeAsmnam"></a></p>
-  </section>
-
-  <section id="idLpgmalgcodeBtcd">
-  <h3 id="idLpgmalgcodeBtcdH3">code.BYTECODE
-    <a class="clsHide" href="#idLpgmalgcodeBtcdH3"></a></h3>
-  <p id="idLpgmalgcodeBtcddsn">description::
-    <br>· bytecode is <a class="clsPreview" href="#idLpgmalgcode">code</a> written in 0 and 1, that <a class="clsPreview" href="#idLpgmalgmchnVrtl">a-virtual-machine</a> understands.
-    <a class="clsHide" href="#idLpgmalgcodeBtcddsn"></a></p>
-  <p id="idLpgmalgcodeBtcdnam">name::
-    <br>* Mcs.lagPgm-code.bytecode,
-    <br>* Mcs.bytecode-of-lagPgm,
-    <a class="clsHide" href="#idLpgmalgcodeBtcdnam"></a></p>
-  </section>
-
-  <section id="idLpgmalgcodeSrc">
-  <h3 id="idLpgmalgcodeSrcH3">code.SOURCE
-    <a class="clsHide" href="#idLpgmalgcodeSrcH3"></a></h3>
-  <p id="idLpgmalgcodeSrcdsn">description::
-    <br>· source-code is <a class="clsPreview" href="#idLpgmalgcode">code</a> written in human readable format.
-    <a class="clsHide" href="#idLpgmalgcodeSrcdsn"></a></p>
-  <p id="idLpgmalgcodeSrcnam">name::
-    <br>* Mcs.lagPgm-code.source,
-    <br>* Mcs.source-code,
-    <a class="clsHide" href="#idLpgmalgcodeSrcnam"></a></p>
-  </section>
+  <p id="idLpgmalgcodeSpc">specific::
+    <br>* machine-code,
+    <br>* assembly-code,
+    <br>* virtual-code,
+    <br>* source-code,
+    <a class="clsHide" href="#idLpgmalgcodeSpc"></a></p>
   </section>
 
   <section id="idLpgmalgcdmn">
@@ -246,13 +190,36 @@
   <h2 id="idLpgmalgsxtrH2">syntax-tree of algo
     <a class="clsHide" href="#idLpgmalgsxtrH2"></a></h2>
   <p id="idLpgmalgsxtrdsn">description::
-    <br>· the-structure of an-algo is a-whole-part-tree of <a class="clsPreview" href="#idLpgmunt">units</a>, <a class="clsPreview" href="#idLpgmsunt">semantic-units</a>, <a class="clsPreview" href="#idLpgmsntc">sentences</a>, <a class="clsPreview" href="#idLpgmsctn">sections</a>.
+    <br>· the-structure of an-algo is a-whole-part-tree of <a class="clsPreview" href="#idLpgmunt">units</a>, <a class="clsPreview" href="#idLpgmsunt">semantic-units</a>, <a class="clsPreview" href="#idLpgmsntc">sentences</a>, <a class="clsPreview" href="#idLpgmsctn">sections</a>, ie <a class="clsPreview" href="#idLpgmalgstrr">output-structures</a>.
     <br>· this structure we call syntax-tree.
     <a class="clsHide" href="#idLpgmalgsxtrdsn"></a></p>
   <p id="idLpgmalgsxtrnam">name::
     <br>* Mcs.lagPgm-algo'syntax-tree,
     <br>* Mcs.syntax-tree--of--lagPgm-algo,
     <a class="clsHide" href="#idLpgmalgsxtrnam"></a></p>
+  </section>
+
+  <section id="idLpgmalgstrr">
+  <h2 id="idLpgmalgstrrH2">structure of algo
+    <a class="clsHide" href="#idLpgmalgstrrH2"></a></h2>
+  <p id="idLpgmalgstrrdsn">description::
+    <br>· algo-structure is any identifiable part of algo.
+    <a class="clsHide" href="#idLpgmalgstrrdsn"></a></p>
+  <p id="idLpgmalgstrrnam">name::
+    <br>* Mcs.lagPgm-algo'node!⇒lagPgm-node,
+    <br>* Mcs.lagPgm-algo'structure!⇒lagPgm-node,
+    <br>* Mcs.lagPgm-algo-structure!⇒lagPgm-node,
+    <br>* Mcs.lagPgm-node, {2019-07-05}
+    <br>* Mcs.lagPgm'output-structure!⇒lagPgm-node,
+    <a class="clsHide" href="#idLpgmalgstrrnam"></a></p>
+  <p id="idLpgmalgstrrSpc">specific::
+    <br>* <a class="clsPreview" href="#idLpgmunt">unit</a>,
+    <br>* <a class="clsPreview" href="#idLpgmwrd">word</a>,
+    <br>* <a class="clsPreview" href="#idLpgmsunt">semantic-unit</a>,
+    <br>* <a class="clsPreview" href="#idLpgmphrs">phrase</a>,
+    <br>* <a class="clsPreview" href="#idLpgmsntc">sentence</a>,
+    <br>* <a class="clsPreview" href="#idLpgmsctn">section</a>,
+    <a class="clsHide" href="#idLpgmalgstrrSpc"></a></p>
   </section>
 
   <section id="idLpgmalgfile">
@@ -264,26 +231,6 @@
   <p id="idLpgmalgfilenam">name::
     <br>* Mcs.lagPgm-algo'file,
     <a class="clsHide" href="#idLpgmalgfilenam"></a></p>
-  </section>
-
-  <section id="idLpgmalgstrr">
-  <h2 id="idLpgmalgstrrH2">structure of algo
-    <a class="clsHide" href="#idLpgmalgstrrH2"></a></h2>
-  <p id="idLpgmalgstrrdsn">description::
-    <br>· algo-structure is any identifiable part of algo.
-    <a class="clsHide" href="#idLpgmalgstrrdsn"></a></p>
-  <p id="idLpgmalgstrrnam">name::
-    <br>* Mcs.lagPgm-algo'structure,
-    <br>* Mcs.lagPgm-algo-structure,
-    <a class="clsHide" href="#idLpgmalgstrrnam"></a></p>
-  <p id="idLpgmalgstrrSpc">specific::
-    <br>* unit,
-    <br>* word,
-    <br>* sem-unit,
-    <br>* phrase,
-    <br>* sentence,
-    <br>* section,
-    <a class="clsHide" href="#idLpgmalgstrrSpc"></a></p>
   </section>
 </section>
 
@@ -317,7 +264,7 @@
   <h2 id="idLpgmwrdNameH2">word.NAME
     <a class="clsHide" href="#idLpgmwrdNameH2"></a></h2>
   <p id="idLpgmwrdNamedsn">description::
-    <br>· Lpgm-word is a-structure of <a class="clsPreview" href="#idLpgmunt">units</a>, that denote nothing in archetype, but are-used to be-associated with algo-structures.
+    <br>· lagPgm-word is a-structure of <a class="clsPreview" href="#idLpgmunt">units</a>, that denote nothing in archetype, but are-used to be-associated with algo-structures.
     <a class="clsHide" href="#idLpgmwrdNamedsn"></a></p>
   <p id="idLpgmwrdNamenam">name::
     <br>* Mcs.lagPgm-word.name,
@@ -336,43 +283,52 @@
     <br>· semantic-unit is a-structure of <a class="clsPreview" href="#idLpgmwrd">words</a> that DENOTES <a class="clsPreview" href="#idLpgmarchcd">archocode</a>.
     <a class="clsHide" href="#idLpgmsuntdsn"></a></p>
   <p id="idLpgmsuntnam">name::
-    <br>* Mcs.lagPgm-algo'semantic-unit!⇒lagPgm-sunt,
-    <br>* Mcs.lagPgm-sunt,
-    <br>* Mcs.semantic-unit--of-lagPgm!⇒lagPgm-sunt,
+    <br>* Mcs.lagPgm-algo'semantic-unit!⇒lagPgm-Sunt,
+    <br>* Mcs.lagPgm-Sunt,
+    <br>* Mcs.semantic-unit--of-lagPgm!⇒lagPgm-Sunt,
     <a class="clsHide" href="#idLpgmsuntnam"></a></p>
 
   <section id="idLpgmsuntNmd">
-  <h2 id="idLpgmsuntNmdH2">sunt.NAMED
+  <h2 id="idLpgmsuntNmdH2">Sunt.NAMED
     <a class="clsHide" href="#idLpgmsuntNmdH2"></a></h2>
   <p id="idLpgmsuntNmddsn">description::
     <br>· named--semantic-unit is a-semantic-unit associated with a-name.
     <a class="clsHide" href="#idLpgmsuntNmddsn"></a></p>
   <p id="idLpgmsuntNmdnam">name::
-    <br>* Mcs.lagPgm-sunt.named,
+    <br>* Mcs.lagPgm-Sunt.named,
     <br>* Mcs.named--semantic-unit---of--programing-language,
     <br>* Mcs.variable-of--programing-language,
     <a class="clsHide" href="#idLpgmsuntNmdnam"></a></p>
   </section>
 
   <section id="idLpgmsuntNmdN">
-  <h2 id="idLpgmsuntNmdNH2">sunt.NAMED.NO
+  <h2 id="idLpgmsuntNmdNH2">Sunt.NAMED.NO
     <a class="clsHide" href="#idLpgmsuntNmdNH2"></a></h2>
   </section>
 </section>
 
 <section id="idLpgmphrs">
-  <h1 id="idLpgmphrsH1">algo'frase of lagPgm
+  <h1 id="idLpgmphrsH1">algo'phrase of lagPgm
     <a class="clsHide" href="#idLpgmphrsH1"></a></h1>
+  <p id="idLpgmphrsdsn">description::
+    <br>· algo-phrase is a-structure of simpler <a class="clsPreview" href="#idLpgmalgstrr">algo-structures</a> that denote INCOMPLETE relations or processes ( 3 + 5 ).
+    <a class="clsHide" href="#idLpgmphrsdsn"></a></p>
+  <p id="idLpgmphrsnam">name::
+    <br>* Mcs.lagPgm-algo'phrase,
+    <br>* Mcs.lagPgm-phrase,
+    <a class="clsHide" href="#idLpgmphrsnam"></a></p>
 </section>
 
 <section id="idLpgmsntc">
   <h1 id="idLpgmsntcH1">algo'sentence of lagPgm
     <a class="clsHide" href="#idLpgmsntcH1"></a></h1>
   <p id="idLpgmsntcdsn">description::
-    <br>·
+    <br>· algo-sentence is a-structure of simpler <a class="clsPreview" href="#idLpgmalgstrr">algo-structures</a> that denote COMPLETE relations or processes ( 3 + 5 = 8 ).
+    <br>· a-sentence can-have as part other simpler sentences.
     <a class="clsHide" href="#idLpgmsntcdsn"></a></p>
   <p id="idLpgmsntcnam">name::
     <br>* Mcs.lagPgm-algo'sentence,
+    <br>* Mcs.lagPgm-sentence,
     <a class="clsHide" href="#idLpgmsntcnam"></a></p>
 </section>
 
@@ -380,11 +336,17 @@
   <h1 id="idLpgmsctnH1">algo'section of lagPgm
     <a class="clsHide" href="#idLpgmsctnH1"></a></h1>
   <p id="idLpgmsctndsn">description::
-    <br>·
+    <br>· algo-section is whole constructs of <a class="clsPreview" href="#idLpgmsntc">sentences</a> or comments.
     <a class="clsHide" href="#idLpgmsctndsn"></a></p>
   <p id="idLpgmsctnnam">name::
-    <br>* Mcs.lagPgm-algo'section,
+    <br>* Mcs.lagPgm-algo'section!⇒lagPgm-section,
+    <br>* Mcs.lagPgm-section,
     <a class="clsHide" href="#idLpgmsctnnam"></a></p>
+  <p id="idLpgmsctnSpc">specific::
+    <br>* comment,
+    <br>* titled-section,
+    <br>* titledNo-section,
+    <a class="clsHide" href="#idLpgmsctnSpc"></a></p>
 
   <section id="idLpgmalgttld">
   <h2 id="idLpgmalgttldH2">section.TITLED of lagPgm
@@ -394,6 +356,7 @@
     <a class="clsHide" href="#idLpgmalgttlddsn"></a></p>
   <p id="idLpgmalgttldnam">name::
     <br>* Mcs.lagPgm-algo'titled-section,
+    <br>* Mcs.lagPgm-section.titled,
     <a class="clsHide" href="#idLpgmalgttldnam"></a></p>
   </section>
 
@@ -405,12 +368,26 @@
     <a class="clsHide" href="#idLpgmalgttldNdsn"></a></p>
   <p id="idLpgmalgttldNnam">name::
     <br>* Mcs.lagPgm-algo'paragraph,
+    <br>* Mcs.lagPgm-section.paragraph,
+    <br>* Mcs.lagPgm-section.titledNo,
     <a class="clsHide" href="#idLpgmalgttldNnam"></a></p>
   </section>
 </section>
 
+<section id="idLpgmroot">
+  <h1 id="idLpgmrootH1">algo'root of lagPgm
+    <a class="clsHide" href="#idLpgmrootH1"></a></h1>
+  <p id="idLpgmrootdsn">description::
+    <br>· algo-root is the-outermost <a class="clsPreview" href="#idLpgmalgstrr">structure</a> of <a class="clsPreview" href="#idLpgmalgsxtr">the-syntax-tree</a>.
+    <a class="clsHide" href="#idLpgmrootdsn"></a></p>
+  <p id="idLpgmrootnam">name::
+    <br>* Mcs.lagPgm-algo'root,
+    <br>* Mcs.lagPgm-root,
+    <a class="clsHide" href="#idLpgmrootnam"></a></p>
+</section>
+
 <section id="idLpgmalgdng">
-  <h1 id="idLpgmalgdngH1">algo'DOING
+  <h1 id="idLpgmalgdngH1">algo'DOING of lagPgm
     <a class="clsHide" href="#idLpgmalgdngH1"></a></h1>
   <p id="idLpgmalgdngnam">name::
     <br>* Mcs.lagPgm-algo'doing,
@@ -420,10 +397,25 @@
     <br>* translating,
     <br>* executing,
     <a class="clsHide" href="#idLpgmalgdngSpc"></a></p>
+
+  <section id="idLpgmalgdngExg">
+  <h2 id="idLpgmalgdngExgH2">executing of algo of lagPgm
+    <a class="clsHide" href="#idLpgmalgdngExgH2"></a></h2>
+  <p id="idLpgmalgdngExgdsn">description::
+    <br>· algo-executing is the-process of doing <a class="clsPreview" href="#idLpgmalg">the-algo</a> by <a class="clsPreview" href="#idLpgmalgmchn">a-machine</a>.
+    <br>· like cooking is the-process of doing a-cooking-recipe.
+    <a class="clsHide" href="#idLpgmalgdngExgdsn"></a></p>
+  <p id="idLpgmalgdngExgnam">name::
+    <br>* Mcs.executing-of--lagPgm-algo,
+    <br>* Mcs.lagPgm-algo'executing,
+    <br>* Mcs.lagPgm-algo'running,
+    <br>* Mcs.running-of--lagPgm-algo,
+    <a class="clsHide" href="#idLpgmalgdngExgnam"></a></p>
+  </section>
 </section>
 
 <section id="idLpgmalgSpc">
-  <h1 id="idLpgmalgSpcH1">algo.SPECIFIC
+  <h1 id="idLpgmalgSpcH1">algo.SPECIFIC of lagPgm
     <a class="clsHide" href="#idLpgmalgSpcH1"></a></h1>
   <p id="idLpgmalgSpcnam">name::
     <br>* Mcs.lagPgm-algo.specific,
@@ -515,7 +507,7 @@
   <h2 id="idLpgmtoolCmprH2">tool.compiler
     <a class="clsHide" href="#idLpgmtoolCmprH2"></a></h2>
   <p id="idLpgmtoolCmprdsn">description::
-    <br>· compiler is a-program that translates <a class="clsPreview" href="#idLsrcalg">a-source-algo</a> to <a class="clsPreview" href="#idLmchnalg">machine-algo</a> or <a class="clsPreview" href="#idLbtcdalg">bytcode-algo</a>.
+    <br>· compiler is a-program that translates <a class="clsPreview" href="#idLsrcalg">a-source-algo</a> to <a class="clsPreview" href="#idLmchnalg">machine-algo</a> or <a class="clsPreview" href="#idLvtlalg">bytcode-algo</a>.
     <a class="clsHide" href="#idLpgmtoolCmprdsn"></a></p>
   <p id="idLpgmtoolCmprnam">name::
     <br>* Mcs.compiler-of-lagPgm,
@@ -654,7 +646,7 @@
   <h2 id="idLpgmtrlgH2">translating of lagPgm
     <a class="clsHide" href="#idLpgmtrlgH2"></a></h2>
   <p id="idLpgmtrlgdsn">description::
-    <br>· Lpgm-translating of lagPgm1 to Lpgm2 is the-process of mapping <a class="clsPreview" href="#idLpgmalg">the-output</a> of lagPgm1 to the-output of lagPgm2.
+    <br>· translating of lagPgm1 to Lpgm2 is the-process of mapping <a class="clsPreview" href="#idLpgmalg">the-output</a> of lagPgm1 to the-output of lagPgm2.
     <a class="clsHide" href="#idLpgmtrlgdsn"></a></p>
   <p id="idLpgmtrlgnam">name::
     <br>* Mcs.lagPgm'translating,
@@ -787,10 +779,10 @@
 </section>
 
 <section id="idLmchn">
-  <h1 id="idLmchnH1">lagPgm.MACHINE
+  <h1 id="idLmchnH1">lagPgm.MACHINE-CODE
     <a class="clsHide" href="#idLmchnH1"></a></h1>
   <p id="idLmchndsn">description::
-    <br>· machine-language is <a class="clsPreview" href="#idOverview">a-programing-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLpgmalgcodeBnr">machine-code</a> that a-real-machine understands.
+    <br>· machine-language is <a class="clsPreview" href="#idOverview">a-programing-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLbnralgcode">machine-code</a> that a-real-machine understands.
     <a class="clsHide" href="#idLmchndsn"></a></p>
   <p id="idLmchnnam">name::
     <br>* Mcs.Lmchn!⇒lagMchn, {2019-07-02}
@@ -805,7 +797,7 @@
     <a class="clsHide" href="#idLmchnnam"></a></p>
 
   <section id="idLmchnalg">
-  <h2 id="idLmchnalgH2">algo of lagMchn
+  <h2 id="idLmchnalgH2">algo (output) of lagMchn
     <a class="clsHide" href="#idLmchnalgH2"></a></h2>
   <p id="idLmchnalgdsn">description::
     <br>· machine-algo of <a class="clsPreview" href="#idLmchndsn">a-lagMchn</a> is <a class="clsPreview" href="#idLpgmalg">an-algo</a> <a class="clsPreview" href="#idLpgmalgmchnReal">a-real-machine</a> understands.
@@ -814,14 +806,33 @@
     <br>* Mcs.lagPgm-algo.machine!⇒lagMchn-algo,
     <br>* Mcs.lagMchn-algo,
     <br>* Mcs.machine-algo!⇒lagMchn-algo,
+    <br>* Mcs.machine-doc!⇒lagMchn-algo,
     <a class="clsHide" href="#idLmchnalgnam"></a></p>
+
+  <section id="idLmchnalgcode">
+  <h3 id="idLmchnalgcodeH3">machine-code of lagMchn
+    <a class="clsHide" href="#idLmchnalgcodeH3"></a></h3>
+  <p id="idLmchnalgcodedsn">description::
+    <br>· machine-code is <a class="clsPreview" href="#idLpgmalgcode">code</a> a-real-machine understands (today <a class="clsPreview" href="#idLbnralgcode">binary-code</a>).
+    <a class="clsHide" href="#idLmchnalgcodedsn"></a></p>
+  <p id="idLmchnalgcodenam">name::
+    <br>* Mcs.lagMchn'machine-code,
+    <br>* Mcs.lagMchn-algo'machine-code,
+    <br>* Mcs.lagPgm-code.machine,
+    <br>* Mcs.machine-code,
+    <a class="clsHide" href="#idLmchnalgcodenam"></a></p>
+  <p id="idLmchnalgcodeSpc">specific::
+    <br>* binary-code,
+    <br>* trinary-code,
+    <a class="clsHide" href="#idLmchnalgcodeSpc"></a></p>
+  </section>
   </section>
 
   <section id="idLtnr">
-  <h2 id="idLtnrH2">lagPgm.TRINARY
+  <h2 id="idLtnrH2">lagMchn.TRINARY-CODE
     <a class="clsHide" href="#idLtnrH2"></a></h2>
   <p id="idLtnrdsn">description::
-    <br>·
+    <br>· trinary-language is <a class="clsPreview" href="#idOverview">a-machine-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLpgmalgcodeTnr">trinary-code</a> that <a class="clsPreview" href="#idLpgmalgmchnReal">a-real-machine</a> understands.
     <a class="clsHide" href="#idLtnrdsn"></a></p>
   <p id="idLtnrnam">name::
     <br>* Mcs.Ltnr, {2019-07-02}
@@ -832,14 +843,32 @@
     <br>* Mcs.language.trinary!⇒Ltnr,
     <br>* Mcs.programing-language.trinary!⇒Ltnr,
     <a class="clsHide" href="#idLtnrnam"></a></p>
+
+  <section id="idLtnralg">
+  <h3 id="idLtnralgH3">algo (output) of lagTnr
+    <a class="clsHide" href="#idLtnralgH3"></a></h3>
+
+  <section id="idLtnralgcode">
+  <h4 id="idLtnralgcodeH4">trinary-code of lagTnr
+    <a class="clsHide" href="#idLtnralgcodeH4"></a></h4>
+  <p id="idLtnralgcodedsn">description::
+    <br>· trinary-code is <a class="clsPreview" href="#idLpgmalgcode">code</a> written in 3 digits a-trinary-machine understands.
+    <a class="clsHide" href="#idLtnralgcodedsn"></a></p>
+  <p id="idLtnralgcodenam">name::
+    <br>* Mcs.lagPgm-code.trinary,
+    <br>* Mcs.lagTnr'trinary-code,
+    <br>* Mcs.lagTnr-algo'trinary-code,
+    <br>* Mcs.trinary-code,
+    <a class="clsHide" href="#idLtnralgcodenam"></a></p>
+  </section>
   </section>
 </section>
 
 <section id="idLbnr">
-  <h1 id="idLbnrH1">lagPgm.BINARY
+  <h1 id="idLbnrH1">lagPgm.BINARY-CODE
     <a class="clsHide" href="#idLbnrH1"></a></h1>
   <p id="idLbnrdsn">description::
-    <br>· binary-language is <a class="clsPreview" href="#idOverview">a-machine-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLpgmalgcodeBnr">binary-code</a> that a-real-machine understands.
+    <br>· binary-language is <a class="clsPreview" href="#idOverview">a-machine-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLbnralgcode">binary-code</a> that <a class="clsPreview" href="#idLpgmalgmchnReal">a-real-machine</a> understands.
     <a class="clsHide" href="#idLbnrdsn"></a></p>
   <p id="idLbnrnam">name::
     <br>* Mcs.Lbnr!⇒lagBnr, {2019-06-29}
@@ -852,26 +881,40 @@
     <a class="clsHide" href="#idLbnrnam"></a></p>
 
   <section id="idLbnralg">
-  <h2 id="idLbnralgH2">algo of lagBnr
+  <h2 id="idLbnralgH2">algo (output) of lagBnr
     <a class="clsHide" href="#idLbnralgH2"></a></h2>
   <p id="idLbnralgdsn">description::
-    <br>· binary-algo is <a class="clsPreview" href="#idLmchnalg">a-machine-algo</a> written in <a class="clsPreview" href="#idLpgmalgcodeBnr">binary-code</a>.
+    <br>· binary-algo is <a class="clsPreview" href="#idLmchnalg">a-machine-algo</a> written in <a class="clsPreview" href="#idLbnralgcode">binary-code</a>.
     <a class="clsHide" href="#idLbnralgdsn"></a></p>
   <p id="idLbnralgnam">name::
     <br>* Mcs.Lbnr-algo!⇒lagBnr-algo,
-    <br>* Mcs.lagBnr-algo,
-    <br>* Mcs.lagPgm-algo.binary!⇒lagBnr-algo,
     <br>* Mcs.bin-algo!⇒lagBnr-algo,
     <br>* Mcs.binary-algo!⇒lagBnr-algo,
+    <br>* Mcs.binary-doc!⇒lagBnr-algo,
+    <br>* Mcs.lagBnr-algo,
+    <br>* Mcs.lagPgm-algo.binary!⇒lagBnr-algo,
     <a class="clsHide" href="#idLbnralgnam"></a></p>
+
+  <section id="idLbnralgcode">
+  <h3 id="idLbnralgcodeH3">binary-code of lagBnr
+    <a class="clsHide" href="#idLbnralgcodeH3"></a></h3>
+  <p id="idLbnralgcodedsn">description::
+    <br>· binary-code is <a class="clsPreview" href="#idLpgmalgcode">code</a> written in 0 and 1, bits.
+    <a class="clsHide" href="#idLbnralgcodedsn"></a></p>
+  <p id="idLbnralgcodenam">name::
+    <br>* Mcs.lagPgm-code.binary,
+    <br>* Mcs.binary-code,
+    <br>* Mcs.object-code,
+    <a class="clsHide" href="#idLbnralgcodenam"></a></p>
+  </section>
   </section>
 </section>
 
 <section id="idLasm">
-  <h1 id="idLasmH1">lagPgm.ASSEMBLY
+  <h1 id="idLasmH1">lagPgm.ASSEMBLY-CODE
     <a class="clsHide" href="#idLasmH1"></a></h1>
   <p id="idLasmdsn">description::
-    <br>· assembly-language is <a class="clsPreview" href="#idOverview">a-programing-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLpgmalgcodeAsm">assembly-code</a> that is-translated to <a class="clsPreview" href="#idLpgmalgcodeBnr">binary-code</a>.
+    <br>· assembly-language is <a class="clsPreview" href="#idOverview">a-programing-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLasmalgcode">assembly-code</a> that is-translated to <a class="clsPreview" href="#idLmchnalgcode">machine-code</a>.
     <a class="clsHide" href="#idLasmdsn"></a></p>
   <p id="idLasmnam">name::
     <br>* Mcs.Lasm!⇒lagAsm,
@@ -881,54 +924,92 @@
     <br>* Mcs.lagPgm.assembly!⇒lagAsm,
     <a class="clsHide" href="#idLasmnam"></a></p>
 
+  <section id="idLasmarch">
+  <h2 id="idLasmarchH2">archetype (input) of lagAsm
+    <a class="clsHide" href="#idLasmarchH2"></a></h2>
+  <p id="idLasmarchdsn">description::
+    <br>· lagAsm-archetype is an-input document we want to be-mapped to assembly-doc.
+    <a class="clsHide" href="#idLasmarchdsn"></a></p>
+  <p id="idLasmarchnam">name::
+    <br>* Mcs.lagAsm'archetype,
+    <a class="clsHide" href="#idLasmarchnam"></a></p>
+  </section>
+
   <section id="idLasmalg">
-  <h2 id="idLasmalgH2">algo of lagAsm
+  <h2 id="idLasmalgH2">algo (output) of lagAsm
     <a class="clsHide" href="#idLasmalgH2"></a></h2>
   <p id="idLasmalgdsn">description::
-    <br>·
+    <br>· lagAsm-algo is a-document[a] describing a-lagAsm-archetype which[a] is-translated to <a class="clsPreview" href="#idLmchnalgcode">machine-code</a> to be-executed by <a class="clsPreview" href="#idLpgmalgmchnReal">a-machine</a>.
     <a class="clsHide" href="#idLasmalgdsn"></a></p>
   <p id="idLasmalgnam">name::
+    <br>* Mcs.assembly-doc!⇒lagAsm-algo,
     <br>* Mcs.lagPgm-algo.assembly!⇒lagAsm-algo,
     <br>* Mcs.Lasm-algo,
     <br>* Mcs.assembly-algo!⇒lagAsm-algo,
     <a class="clsHide" href="#idLasmalgnam"></a></p>
+
+  <section id="idLasmalgcode">
+  <h3 id="idLasmalgcodeH3">assembly-code of lagAsm
+    <a class="clsHide" href="#idLasmalgcodeH3"></a></h3>
+  <p id="idLasmalgcodedsn">description::
+    <br>· assembly-code is <a class="clsPreview" href="#idLpgmalgcode">code</a> written with mnemonics very close to <a class="clsPreview" href="#idLmchnalgcode">machine-code</a>.
+    <a class="clsHide" href="#idLasmalgcodedsn"></a></p>
+  <p id="idLasmalgcodenam">name::
+    <br>* Mcs.lagPgm-code.assembly,
+    <br>* Mcs.assembly-code,
+    <a class="clsHide" href="#idLasmalgcodenam"></a></p>
+  </section>
   </section>
 </section>
 
-<section id="idLbtcd">
-  <h1 id="idLbtcdH1">lagPgm.BYTECODE
-    <a class="clsHide" href="#idLbtcdH1"></a></h1>
-  <p id="idLbtcddsn">description::
-    <br>· bytecode-language is <a class="clsPreview" href="#idOverview">a-programing-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLpgmalgcodeBtcd">bytecode-code</a> that <a class="clsPreview" href="#idLpgmalgmchnVrtl">a-virtual-machine</a> understands.
-    <a class="clsHide" href="#idLbtcddsn"></a></p>
-  <p id="idLbtcdnam">name::
+<section id="idLvtl">
+  <h1 id="idLvtlH1">lagPgm.VIRTUAL-CODE
+    <a class="clsHide" href="#idLvtlH1"></a></h1>
+  <p id="idLvtldsn">description::
+    <br>· virtual-language is <a class="clsPreview" href="#idOverview">a-programing-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLvtlalgcode">bytecode-code</a> that <a class="clsPreview" href="#idLpgmalgmchnVrtl">a-virtual-machine</a> understands.
+    <a class="clsHide" href="#idLvtldsn"></a></p>
+  <p id="idLvtlnam">name::
     <br>* Mcs.Lbtcd!⇒lagBtcd,
     <br>* Mcs.bytecode-lagPgm!⇒lagBtcd,
     <br>* Mcs.lagBtcd,
     <br>* Mcs.lagBtcd'(bytecode-language)!⇒lagBtcd,
     <br>* Mcs.lagPgm.bytecode!⇒lagBtcd,
-    <a class="clsHide" href="#idLbtcdnam"></a></p>
+    <a class="clsHide" href="#idLvtlnam"></a></p>
 
-  <section id="idLbtcdalg">
-  <h2 id="idLbtcdalgH2">algo of lagBtcd
-    <a class="clsHide" href="#idLbtcdalgH2"></a></h2>
-  <p id="idLbtcdalgdsn">description::
+  <section id="idLvtlalg">
+  <h2 id="idLvtlalgH2">algo (input) of lagBtcd
+    <a class="clsHide" href="#idLvtlalgH2"></a></h2>
+  <p id="idLvtlalgdsn">description::
     <br>· bytecode-algorithm is <a class="clsPreview" href="#idLpgmalg">an-algo</a> <a class="clsPreview" href="#idLpgmalgmchnVrtl">a-bytecode-machine</a> understands.
-    <br>· it[a] is-written in <a class="clsPreview" href="#idLpgmalgcodeBtcd">bytecode</a>.
-    <a class="clsHide" href="#idLbtcdalgdsn"></a></p>
-  <p id="idLbtcdalgnam">name::
+    <br>· it[a] is-written in <a class="clsPreview" href="#idLvtlalgcode">bytecode</a>.
+    <a class="clsHide" href="#idLvtlalgdsn"></a></p>
+  <p id="idLvtlalgnam">name::
     <br>* Mcs.bytecode-algo!⇒lagBtcd-algo,
     <br>* Mcs.lagPgm-algo.bytecode!⇒lagBtcd-algo,
     <br>* Mcs.lagBtcd-algo,
-    <a class="clsHide" href="#idLbtcdalgnam"></a></p>
+    <a class="clsHide" href="#idLvtlalgnam"></a></p>
+
+  <section id="idLvtlalgcode">
+  <h3 id="idLvtlalgcodeH3">virtual-code of lagVtl
+    <a class="clsHide" href="#idLvtlalgcodeH3"></a></h3>
+  <p id="idLvtlalgcodedsn">description::
+    <br>· virtual-code is <a class="clsPreview" href="#idLpgmalgcode">code</a> written in 0 and 1, that <a class="clsPreview" href="#idLpgmalgmchnVrtl">a-virtual-machine</a> understands.
+    <a class="clsHide" href="#idLvtlalgcodedsn"></a></p>
+  <p id="idLvtlalgcodenam">name::
+    <br>* Mcs.lagPgm-code.bytecode,
+    <br>* Mcs.lagPgm-code.virtual-code,
+    <br>* Mcs.bytecode-of-lagPgm,
+    <br>* Mcs.virtual-code,
+    <a class="clsHide" href="#idLvtlalgcodenam"></a></p>
+  </section>
   </section>
 </section>
 
 <section id="idLsrc">
-  <h1 id="idLsrcH1">lagPgm.SOURCE
+  <h1 id="idLsrcH1">lagPgm.SOURCE-CODE
     <a class="clsHide" href="#idLsrcH1"></a></h1>
   <p id="idLsrcdsn">description::
-    <br>· source-language is <a class="clsPreview" href="#idOverview">a-programing-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLpgmalgcodeSrc">source-code</a> that <a class="clsPreview" href="#idLpgmalgmchnSrc">a-source-machine</a> understands.
+    <br>· source-language is <a class="clsPreview" href="#idOverview">a-programing-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLsrcalgcode">source-code</a> that <a class="clsPreview" href="#idLpgmalgmchnSrc">a-source-machine</a> understands.
     <a class="clsHide" href="#idLsrcdsn"></a></p>
   <p id="idLsrcnam">name::
     <br>* Mcs.Lsrc!⇒lagSrc,
@@ -936,9 +1017,12 @@
     <br>* Mcs.lagPgm.source!⇒lagSrc,
     <br>* Mcs.source-lagPgm!⇒lagSrc,
     <a class="clsHide" href="#idLsrcnam"></a></p>
+  <p id="idLsrcnamEll">nameGreek::
+    <br>* McsEll.πηγαία--γλώσσα-προγραμματισμού,
+    <a class="clsHide" href="#idLsrcnamEll"></a></p>
 
   <section id="idLsrcarch">
-  <h2 id="idLsrcarchH2">archetype of lagSrc
+  <h2 id="idLsrcarchH2">archetype (input) of lagSrc
     <a class="clsHide" href="#idLsrcarchH2"></a></h2>
   <p id="idLsrcarchdsn">description::
     <br>· archetype of <a class="clsPreview" href="#idLsrc">lagSrc</a> is a-document describing information-processing as done by humans.
@@ -982,11 +1066,11 @@
   </section>
 
   <section id="idLsrcalg">
-  <h2 id="idLsrcalgH2">algorithm of lagSrc
+  <h2 id="idLsrcalgH2">algorithm (output) of lagSrc
     <a class="clsHide" href="#idLsrcalgH2"></a></h2>
   <p id="idLsrcalgdsn">description::
     <br>· source-algorithm is <a class="clsPreview" href="#idLpgmalg">an-algo</a> <a class="clsPreview" href="#idLpgmalgmchnReal">a-source-machine</a> understands.
-    <br>· it[a] is-written in <a class="clsPreview" href="#idLpgmalgcodeSrc">source-code</a>.
+    <br>· it[a] is-written in <a class="clsPreview" href="#idLsrcalgcode">source-code</a>.
     <a class="clsHide" href="#idLsrcalgdsn"></a></p>
   <p id="idLsrcalgnam">name::
     <br>* Mcs.lagPgm-algo.source!⇒lagSrc-algo,
@@ -994,21 +1078,99 @@
     <br>* Mcs.lagSrc-algo,
     <br>* Mcs.source-algo!⇒lagSrc-algo,
     <a class="clsHide" href="#idLsrcalgnam"></a></p>
-  <p id="idLsrcalgnamEll">name.Greek::
+  <p id="idLsrcalgnamEll">nameGreek::
     <br>* McsEll.πηγαίος-αλγόριθμος,
     <a class="clsHide" href="#idLsrcalgnamEll"></a></p>
   <p id="idLsrcalggncchn">generic-chain::
     <br>* <a class="clsPreview" href="#idLpgmalg">algorithm-of-lagPgm</a>,
     <a class="clsHide" href="#idLsrcalggncchn"></a></p>
+
+  <section id="idLsrcalgencg">
+  <h3 id="idLsrcalgencgH3">encoding of lagSrc-algo
+    <a class="clsHide" href="#idLsrcalgencgH3"></a></h3>
+  <p id="idLsrcalgencgdsn">description::
+    <br>· the-output of a-lagSrc is digital-text and therefore uses <a class="clsPreview" href="../dirLag/filMcsChar.last.html#idCharencdg">a-character-encoding</a>.
+    <a class="clsHide" href="#idLsrcalgencgdsn"></a></p>
+  <p id="idLsrcalgencgnam">name::
+    <br>* Mcs.encoding-of--lagSrc-output,
+    <br>* Mcs.lagSrc'output-encoding,
+    <br>* Mcs.lagSrc-algo'encoding,
+    <a class="clsHide" href="#idLsrcalgencgnam"></a></p>
+  </section>
+
+  <section id="idLsrcalgcode">
+  <h3 id="idLsrcalgcodeH3">source-code of lagSrc-algo
+    <a class="clsHide" href="#idLsrcalgcodeH3"></a></h3>
+  <p id="idLsrcalgcodedsn">description::
+    <br>· source-code[a] of lagPgm[b] is <a class="clsPreview" href="#idLpgmalgcode">code</a> written in human readable format.
+    <br>· it[a] is any part of its[b] <a class="clsPreview" href="#idLpgmalg">algo</a>.
+    <a class="clsHide" href="#idLsrcalgcodedsn"></a></p>
+  <p id="idLsrcalgcodenam">name::
+    <br>* Mcs.lagPgm-code.source,
+    <br>* Mcs.lagSrc'source-code,
+    <br>* Mcs.lagSrc-algo'source-code,
+    <br>* Mcs.source-code,
+    <a class="clsHide" href="#idLsrcalgcodenam"></a></p>
+  </section>
+
+  <section id="idLsrcalgcdm">
+  <h3 id="idLsrcalgcdmH3">codomain of lagSrc-algo
+    <a class="clsHide" href="#idLsrcalgcdmH3"></a></h3>
+  <p id="idLsrcalgcdmdsn">description::
+    <br>· codomain of lagSrc is the-set of all algorithms that produces.
+    <a class="clsHide" href="#idLsrcalgcdmdsn"></a></p>
+  <p id="idLsrcalgcdmnam">name::
+    <br>* Mcs.lagSrc'codomain,
+    <br>* Mcs.lagSrc-algo'codomain,
+    <a class="clsHide" href="#idLsrcalgcdmnam"></a></p>
+  </section>
+
+  <section id="idLsrcalgsxtr">
+  <h3 id="idLsrcalgsxtrH3">syntax-tree of lagSrc-algo
+    <a class="clsHide" href="#idLsrcalgsxtrH3"></a></h3>
+  <p id="idLsrcalgsxtrdsn">description::
+    <br>· syntax-tree of lagSrc[a] is the-whole-part-tree of <a class="clsPreview" href="#idLsrcalgnode">output-structures</a> of its[a] <a class="clsPreview" href="#idLsrcalg">algo</a>.
+    <a class="clsHide" href="#idLsrcalgsxtrdsn"></a></p>
+  <p id="idLsrcalgsxtrnam">name::
+    <br>* Mcs.lagSrc'output-syntax-tree,
+    <br>* Mcs.lagSrc-algo'syntax-tree,
+    <a class="clsHide" href="#idLsrcalgsxtrnam"></a></p>
+  </section>
+
+  <section id="idLsrcalgnode">
+  <h3 id="idLsrcalgnodeH3">output-structure of lagSrc-algo
+    <a class="clsHide" href="#idLsrcalgnodeH3"></a></h3>
+  <p id="idLsrcalgnodedsn">description::
+    <br>· output-structure of lagSrc[a] is any identifiable part of its[a] <a class="clsPreview" href="#idLsrcalg">algo</a>.
+    <a class="clsHide" href="#idLsrcalgnodedsn"></a></p>
+  <p id="idLsrcalgnodenam">name::
+    <br>* Mcs.lagSrc'output-node,
+    <br>* Mcs.lagSrc'output-structure,
+    <br>* Mcs.lagSrc-algo'structure,
+    <a class="clsHide" href="#idLsrcalgnodenam"></a></p>
+  </section>
+
+  <section id="idLsrcalgfile">
+  <h3 id="idLsrcalgfileH3">file of lagSrc-algo
+    <a class="clsHide" href="#idLsrcalgfileH3"></a></h3>
+  <p id="idLsrcalgfiledsn">description::
+    <br>· the-algos are-stored in files.
+    <a class="clsHide" href="#idLsrcalgfiledsn"></a></p>
+  <p id="idLsrcalgfilenam">name::
+    <br>* Mcs.lagSrc'output-file,
+    <br>* Mcs.lagSrc-algo'file,
+    <a class="clsHide" href="#idLsrcalgfilenam"></a></p>
+  </section>
   </section>
 
   <section id="idLsrcunt">
   <h2 id="idLsrcuntH2">algo'unit of lagSrc
     <a class="clsHide" href="#idLsrcuntH2"></a></h2>
   <p id="idLsrcuntdsn">description::
-    <br>·
+    <br>· output-unit of lagSrc[a] is any indivisible part of its[a] <a class="clsPreview" href="#idLsrcalg">algo</a>.
     <a class="clsHide" href="#idLsrcuntdsn"></a></p>
   <p id="idLsrcuntnam">name::
+    <br>* Mcs.lagSrc'output-unit,
     <br>* Mcs.lagSrc'unit,
     <br>* Mcs.lagSrc-algo'unit,
     <br>* Mcs.lagSrc-unit,
@@ -1016,15 +1178,19 @@
   <p id="idLsrcuntgncchn">generic-chain::
     <br>* <a class="clsPreview" href="#idLpgmunt">unit-of-lagPgm</a>,
     <a class="clsHide" href="#idLsrcuntgncchn"></a></p>
+  <p id="idLsrcuntSpc">specific::
+    <br>* white-space,
+    <a class="clsHide" href="#idLsrcuntSpc"></a></p>
   </section>
 
   <section id="idLsrcwrd">
   <h2 id="idLsrcwrdH2">algo'word of lagSrc
     <a class="clsHide" href="#idLsrcwrdH2"></a></h2>
   <p id="idLsrcwrddsn">description::
-    <br>· algo-word of lagSrc is a-structure of <a class="clsPreview" href="#idLsrcunt">units</a> the-language uses to create more compound algo-structures.
+    <br>· output-word of lagSrc is a-structure of <a class="clsPreview" href="#idLsrcunt">units</a> the-language uses to create more compound algo-structures.
     <a class="clsHide" href="#idLsrcwrddsn"></a></p>
   <p id="idLsrcwrdnam">name::
+    <br>* Mcs.lagSrc'output-word!⇒lagSrc-word,
     <br>* Mcs.lagSrc'word!⇒lagSrc-word,
     <br>* Mcs.lagSrc-algo'word!⇒lagSrc-word,
     <br>* Mcs.lagSrc-word,
@@ -1058,83 +1224,83 @@
     <br>· semantic-unit of <a class="clsPreview" href="#idLsrc">lagSrc</a> is a-structure of <a class="clsPreview" href="#idLsrcwrd">words</a> that DENOTES <a class="clsPreview" href="#idLsrcarchcd">archocode</a>.
     <a class="clsHide" href="#idLsrcsuntdsn"></a></p>
   <p id="idLsrcsuntnam">name::
-    <br>* Mcs.lagSrc'semantic-unit!⇒lagSrc-sunt,
-    <br>* Mcs.lagSrc-algo'semantic-unit!⇒lagSrc-sunt,
-    <br>* Mcs.lagSrc-semantic-unit!⇒lagSrc-sunt,
-    <br>* Mcs.lagSrc-sunt,
+    <br>* Mcs.lagSrc'semantic-unit!⇒lagSrc-Sunt,
+    <br>* Mcs.lagSrc-algo'semantic-unit!⇒lagSrc-Sunt,
+    <br>* Mcs.lagSrc-semantic-unit!⇒lagSrc-Sunt,
+    <br>* Mcs.lagSrc-Sunt,
     <a class="clsHide" href="#idLsrcsuntnam"></a></p>
   <p id="idLsrcsuntgncchn">generic-chain::
     <br>* <a class="clsPreview" href="#idLpgmsunt">sem-unit-of-lagPgm</a>,
     <a class="clsHide" href="#idLsrcsuntgncchn"></a></p>
 
   <section id="idLsrcsuntNmd">
-  <h3 id="idLsrcsuntNmdH3">sunt.NAMED of lagSrc
+  <h3 id="idLsrcsuntNmdH3">Sunt.NAMED of lagSrc
     <a class="clsHide" href="#idLsrcsuntNmdH3"></a></h3>
   <p id="idLsrcsuntNmddsn">description::
-    <br>· named-sunt of lagSrc is <a class="clsPreview" href="#idLsrcsunt">a-semantic-unit</a> associated with an-identifier.
+    <br>· named-Sunt of lagSrc is <a class="clsPreview" href="#idLsrcsunt">a-semantic-unit</a> associated with an-identifier.
     <a class="clsHide" href="#idLsrcsuntNmddsn"></a></p>
   <p id="idLsrcsuntNmdnam">name::
-    <br>* Mcs.lagSrc-sunt.named,
+    <br>* Mcs.lagSrc-Sunt.named,
     <a class="clsHide" href="#idLsrcsuntNmdnam"></a></p>
 
   <section id="idLsrcsuntNmdidfr">
-  <h4 id="idLsrcsuntNmdidfrH4">identifier of named-sunt
+  <h4 id="idLsrcsuntNmdidfrH4">identifier of named-Sunt
     <a class="clsHide" href="#idLsrcsuntNmdidfrH4"></a></h4>
   <p id="idLsrcsuntNmdidfrdsn">description::
     <br>· identifier of lagSrc is <a class="clsPreview" href="#idLsrcwrd">a-word</a>, not a-keyword, that folows concrete rules to be-constructed.
     <a class="clsHide" href="#idLsrcsuntNmdidfrdsn"></a></p>
   <p id="idLsrcsuntNmdidfrnam">name::
-    <br>* Mcs.lagSrc-named-sunt'identifier,
+    <br>* Mcs.lagSrc-named-Sunt'identifier,
     <br>* Mcs.lagSrc-word.identifier,
     <a class="clsHide" href="#idLsrcsuntNmdidfrnam"></a></p>
   </section>
 
   <section id="idLsrcsuntNmdval">
-  <h4 id="idLsrcsuntNmdvalH4">value of named-sunt
+  <h4 id="idLsrcsuntNmdvalH4">value of named-Sunt
     <a class="clsHide" href="#idLsrcsuntNmdvalH4"></a></h4>
   <p id="idLsrcsuntNmdvaldsn">description::
     <br>· value of lagSrc is the-semantic-unit associated with an-identifier.
     <a class="clsHide" href="#idLsrcsuntNmdvaldsn"></a></p>
   <p id="idLsrcsuntNmdvalnam">name::
-    <br>* Mcs.lagSrc-named-sunt'value,
+    <br>* Mcs.lagSrc-named-Sunt'value,
     <a class="clsHide" href="#idLsrcsuntNmdvalnam"></a></p>
   </section>
   </section>
 
   <section id="idLsrcsuntNmdN">
-  <h3 id="idLsrcsuntNmdNH3">sunt.NAMED.NO of lagSrc
+  <h3 id="idLsrcsuntNmdNH3">Sunt.NAMED.NO of lagSrc
     <a class="clsHide" href="#idLsrcsuntNmdNH3"></a></h3>
   <p id="idLsrcsuntNmdNdsn">description::
     <br>·
     <a class="clsHide" href="#idLsrcsuntNmdNdsn"></a></p>
   <p id="idLsrcsuntNmdNnam">name::
-    <br>* Mcs.lagSrc-sunt.namedNo,
+    <br>* Mcs.lagSrc-Sunt.namedNo,
     <a class="clsHide" href="#idLsrcsuntNmdNnam"></a></p>
   </section>
 
   <section id="idLsrcsuntIntc">
-  <h3 id="idLsrcsuntIntcH3">sunt.INSTANCE of lagSrc
+  <h3 id="idLsrcsuntIntcH3">Sunt.INSTANCE of lagSrc
     <a class="clsHide" href="#idLsrcsuntIntcH3"></a></h3>
   <p id="idLsrcsuntIntcdsn">description::
     <br>·
     <a class="clsHide" href="#idLsrcsuntIntcdsn"></a></p>
   <p id="idLsrcsuntIntcnam">name::
     <br>* Mcs.lagSrc'literal,
-    <br>* Mcs.lagSrc-sunt.instance,
-    <br>* Mcs.lagSrc-sunt.literal,
+    <br>* Mcs.lagSrc-Sunt.instance,
+    <br>* Mcs.lagSrc-Sunt.literal,
     <a class="clsHide" href="#idLsrcsuntIntcnam"></a></p>
   </section>
 
   <section id="idLsrcsuntIntcN">
-  <h3 id="idLsrcsuntIntcNH3">sunt.INSTANCE.NO of lagSrc
+  <h3 id="idLsrcsuntIntcNH3">Sunt.INSTANCE.NO of lagSrc
     <a class="clsHide" href="#idLsrcsuntIntcNH3"></a></h3>
   <p id="idLsrcsuntIntcNdsn">description::
     <br>·
     <a class="clsHide" href="#idLsrcsuntIntcNdsn"></a></p>
   <p id="idLsrcsuntIntcNnam">name::
     <br>* Mcs.lagSrc'type,
-    <br>* Mcs.lagSrc-sunt.instanceNo,
-    <br>* Mcs.lagSrc-sunt.type,
+    <br>* Mcs.lagSrc-Sunt.instanceNo,
+    <br>* Mcs.lagSrc-Sunt.type,
     <a class="clsHide" href="#idLsrcsuntIntcNnam"></a></p>
   </section>
   </section>
@@ -1143,9 +1309,10 @@
   <h2 id="idLsrcphrsH2">algo'phrase of lagSrc
     <a class="clsHide" href="#idLsrcphrsH2"></a></h2>
   <p id="idLsrcphrsdsn">description::
-    <br>·
+    <br>· output-phrase of lagSrc is a-structure of simpler algo-structures that denote INCOMPLETE relations or processes ( 3 + 5 ).
     <a class="clsHide" href="#idLsrcphrsdsn"></a></p>
   <p id="idLsrcphrsnam">name::
+    <br>* Mcs.lagSrc'output-phrase,
     <br>* Mcs.lagSrc'phrase,
     <br>* Mcs.lagSrc-algo'phrase,
     <br>* Mcs.lagSrc-phrase,
@@ -1159,9 +1326,11 @@
   <h2 id="idLsrcsntcH2">algo'sentence of lagSrc
     <a class="clsHide" href="#idLsrcsntcH2"></a></h2>
   <p id="idLsrcsntcdsn">description::
-    <br>·
+    <br>· output-sentence of lagSrc is a-structure of simpler algo-structures that denote COMPLETE relations or processes ( 3 + 5 = 8 ).
+    <br>· a-sentence can-have as part other simpler sentences.
     <a class="clsHide" href="#idLsrcsntcdsn"></a></p>
   <p id="idLsrcsntcnam">name::
+    <br>* Mcs.lagSrc'output-sentence,
     <br>* Mcs.lagSrc'sentence,
     <br>* Mcs.lagSrc-algo'sentence,
     <br>* Mcs.lagSrc-sentence,
@@ -1175,9 +1344,10 @@
   <h2 id="idLsrcsctnH2">algo'section of lagSrc
     <a class="clsHide" href="#idLsrcsctnH2"></a></h2>
   <p id="idLsrcsctndsn">description::
-    <br>·
+    <br>· output-section of lagSrc is a-structure of sentences or comments.
     <a class="clsHide" href="#idLsrcsctndsn"></a></p>
   <p id="idLsrcsctnnam">name::
+    <br>* Mcs.lagSrc'output-section,
     <br>* Mcs.lagSrc'section,
     <br>* Mcs.lagSrc-algo'section,
     <br>* Mcs.lagSrc-section,
@@ -1185,6 +1355,23 @@
   <p id="idLsrcsctngncchn">generic-chain::
     <br>* <a class="clsPreview" href="#idLpgmsctn">section-of-lagPgm</a>,
     <a class="clsHide" href="#idLsrcsctngncchn"></a></p>
+  <p id="idLsrcsctnSpc">specific::
+    <br>* comment,
+    <br>* titled-section,
+    <br>* titledNo-section,
+    <a class="clsHide" href="#idLsrcsctnSpc"></a></p>
+  </section>
+
+  <section id="idLsrcroot">
+  <h2 id="idLsrcrootH2">algo'root of lagSrc
+    <a class="clsHide" href="#idLsrcrootH2"></a></h2>
+  <p id="idLsrcrootdsn">description::
+    <br>· root of lagSrc[a] is the-outermost structure of its[a] output-syntax-tree.
+    <a class="clsHide" href="#idLsrcrootdsn"></a></p>
+  <p id="idLsrcrootnam">name::
+    <br>* Mcs.lagSrc-algo'root,
+    <br>* Mcs.lagSrc-root,
+    <a class="clsHide" href="#idLsrcrootnam"></a></p>
   </section>
 
   <section id="idLsrcalgSpc">
@@ -1250,7 +1437,7 @@
   <h2 id="idLsrcCmpdH2">lagSrc.COMPILED
     <a class="clsHide" href="#idLsrcCmpdH2"></a></h2>
   <p id="idLsrcCmpddsn">description::
-    <br>· compiled-language[a] is <a class="clsPreview" href="#idLsrc">a-source-language</a> <a class="clsPreview" href="#idLpgmalg">the-output</a>[b] of which[a] must-be-translated to <a class="clsPreview" href="#idLpgmalgcodeBnr">machine-code</a> or <a class="clsPreview" href="#idLpgmalgcodeBtcd">bytecode</a> for a-real-machine to understand it[b].
+    <br>· compiled-language[a] is <a class="clsPreview" href="#idLsrc">a-source-language</a> <a class="clsPreview" href="#idLpgmalg">the-output</a>[b] of which[a] must-be-translated to <a class="clsPreview" href="#idLbnralgcode">machine-code</a> or <a class="clsPreview" href="#idLvtlalgcode">bytecode</a> for a-real-machine to understand it[b].
     <a class="clsHide" href="#idLsrcCmpddsn"></a></p>
   <p id="idLsrcCmpdnam">name::
     <br>* Mcs.Lscr.compiled,
