@@ -56,8 +56,8 @@ s =
   '<body>\n' +
   '<header id="idHeader">\n' +
   '  <p></p>\n' +
-  '  <h1 id="idHeaderH1">structured-concept:\n' +
-  '    <br>' + sN + ' (' + sNS + ')\n' +
+  '  <h1 id="idHeaderH1">' + sN + ' structured-concept-Mcs\n' +
+  '    <br>' +  '(' + sNS + ')\n' +
   '    </h1>\n' +
   '  <p id="idHeadercrd">McsHitp-creation: {' + moUtil.fDateYMD() + '}\n' +
   '    <a class="clsHide" href="#idHeadercrd"></a></p>\n' +

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.programing-language (lagPgm.0-6-0.2019-07-06 draft)</title>
+  <title>Mcs.programing-language (lagPgm.0-7-0.2019-07-08 draft)</title>
   <meta name="keywords" content="programing-language, lagPgm, Lpgm, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -56,14 +56,14 @@
   <h2 id="idLpgmarchcdH2">code of archetype
     <a class="clsHide" href="#idLpgmarchcdH2"></a></h2>
   <p id="idLpgmarchcddsn">description::
-    <br>· archocode is any part of <a class="clsPreview" href="#idLpgmarch">an-archetype</a>.
-    <br>· in a-source-language the-archocode is human-code.
+    <br>· archo-code is any part of <a class="clsPreview" href="#idLpgmarch">an-archetype</a>.
+    <br>· in a-source-language the-archo-code is human-code.
     <a class="clsHide" href="#idLpgmarchcddsn"></a></p>
   <p id="idLpgmarchcdnam">name::
-    <br>* Mcs.lagPgm-archo'code!⇒lagPgm-archocode,
-    <br>* Mcs.lagPgm-archo'input!⇒lagPgm-archocode,
-    <br>* Mcs.lagPgm-archocode,
-    <br>* Mcs.input-code--of-lagPgm!⇒lagPgm-archocode,
+    <br>* Mcs.lagPgm-archo'code!⇒lagPgm-archo-code,
+    <br>* Mcs.lagPgm-archo'input!⇒lagPgm-archo-code,
+    <br>* Mcs.lagPgm-archo-code,
+    <br>* Mcs.input-code--of-lagPgm!⇒lagPgm-archo-code,
     <a class="clsHide" href="#idLpgmarchcdnam"></a></p>
   </section>
 
@@ -242,8 +242,11 @@
     <br>· bits, chars.
     <a class="clsHide" href="#idLpgmuntdsn"></a></p>
   <p id="idLpgmuntnam">name::
+    <br>* Mcs.lagPgm'algo-unit,
+    <br>* Mcs.lagPgm'output-unit,
     <br>* Mcs.lagPgm'unit,
     <br>* Mcs.lagPgm-algo'unit,
+    <br>* Mcs.lagPgm-node.unit,
     <br>* Mcs.lagPgm-unit,
     <a class="clsHide" href="#idLpgmuntnam"></a></p>
 </section>
@@ -252,27 +255,46 @@
   <h1 id="idLpgmwrdH1">algo'word of lagPgm
     <a class="clsHide" href="#idLpgmwrdH1"></a></h1>
   <p id="idLpgmwrddsn">description::
-    <br>· algo-word is a-structure of <a class="clsPreview" href="#idLpgmunt">units</a>[a] the-language considers it[a] autonomous.
+    <br>· output-word of lagPgm is a-structure of <a class="clsPreview" href="#idLpgmunt">units</a>, that denote nothing in archetype, the-language uses to create more compound <a class="clsPreview" href="#idLpgmalgstrr">algo-structures</a>.
     <a class="clsHide" href="#idLpgmwrddsn"></a></p>
   <p id="idLpgmwrdnam">name::
+    <br>* Mcs.lagPgm'algo-word,
+    <br>* Mcs.lagPgm'output-word,
     <br>* Mcs.lagPgm'word,
     <br>* Mcs.lagPgm-algo'word,
+    <br>* Mcs.lagPgm-node.word,
     <br>* Mcs.lagPgm-word,
     <a class="clsHide" href="#idLpgmwrdnam"></a></p>
+  <p id="idLpgmwrdSpc">specific::
+    <br>* identifier,
+    <br>* keyword,
+    <a class="clsHide" href="#idLpgmwrdSpc"></a></p>
 
   <section id="idLpgmwrdName">
-  <h2 id="idLpgmwrdNameH2">word.NAME
+  <h2 id="idLpgmwrdNameH2">word.identifier
     <a class="clsHide" href="#idLpgmwrdNameH2"></a></h2>
   <p id="idLpgmwrdNamedsn">description::
-    <br>· lagPgm-word is a-structure of <a class="clsPreview" href="#idLpgmunt">units</a>, that denote nothing in archetype, but are-used to be-associated with algo-structures.
+    <br>· lagPgm-indentifer is <a class="clsPreview" href="#idLpgmwrd">a-word</a>, created by a-programer, that is-used to be-associated with <a class="clsPreview" href="#idLpgmalgstrr">algo-structures</a>.
     <a class="clsHide" href="#idLpgmwrdNamedsn"></a></p>
   <p id="idLpgmwrdNamenam">name::
+    <br>* Mcs.identifier-of-lagPgm,
+    <br>* Mcs.lagPgm-identifier,
+    <br>* Mcs.lagPgm-word.identifier,
     <br>* Mcs.lagPgm-word.name,
     <a class="clsHide" href="#idLpgmwrdNamenam"></a></p>
-  <p id="idLpgmwrdNameSpc">specific::
-    <br>* custom-name,
-    <br>* reserved-name,
-    <a class="clsHide" href="#idLpgmwrdNameSpc"></a></p>
+  </section>
+
+  <section id="idLpgmwrdKywd">
+  <h2 id="idLpgmwrdKywdH2">word.keyword
+    <a class="clsHide" href="#idLpgmwrdKywdH2"></a></h2>
+  <p id="idLpgmwrdKywddsn">description::
+    <br>· algo-keyword of lagPgm is <a class="clsPreview" href="#idLpgmwrd">a-word</a> reserved by the-language to be-used to create more compound <a class="clsPreview" href="#idLpgmalgstrr">algo-structures</a>.
+    <a class="clsHide" href="#idLpgmwrdKywddsn"></a></p>
+  <p id="idLpgmwrdKywdnam">name::
+    <br>* Mcs.keyword-of-lagPgm,
+    <br>* Mcs.lagPgm-algo'keyword,
+    <br>* Mcs.lagPgm-keyword,
+    <a class="clsHide" href="#idLpgmwrdKywdnam"></a></p>
   </section>
 </section>
 
@@ -280,10 +302,11 @@
   <h1 id="idLpgmsuntH1">algo'semantic-unit of lagPgm
     <a class="clsHide" href="#idLpgmsuntH1"></a></h1>
   <p id="idLpgmsuntdsn">description::
-    <br>· semantic-unit is a-structure of <a class="clsPreview" href="#idLpgmwrd">words</a> that DENOTES <a class="clsPreview" href="#idLpgmarchcd">archocode</a>.
+    <br>· semantic-unit of lagPgm[a] is an-indivisible part of its[a] <a class="clsPreview" href="#idLpgmalg">algo</a> that DENOTES <a class="clsPreview" href="#idLpgmarchcd">archo-code</a>.
     <a class="clsHide" href="#idLpgmsuntdsn"></a></p>
   <p id="idLpgmsuntnam">name::
     <br>* Mcs.lagPgm-algo'semantic-unit!⇒lagPgm-Sunt,
+    <br>* Mcs.lagPgm-node.semantic-unit!⇒lagPgm-Sunt,
     <br>* Mcs.lagPgm-Sunt,
     <br>* Mcs.semantic-unit--of-lagPgm!⇒lagPgm-Sunt,
     <a class="clsHide" href="#idLpgmsuntnam"></a></p>
@@ -315,6 +338,7 @@
     <a class="clsHide" href="#idLpgmphrsdsn"></a></p>
   <p id="idLpgmphrsnam">name::
     <br>* Mcs.lagPgm-algo'phrase,
+    <br>* Mcs.lagPgm-node.phrase,
     <br>* Mcs.lagPgm-phrase,
     <a class="clsHide" href="#idLpgmphrsnam"></a></p>
 </section>
@@ -328,6 +352,7 @@
     <a class="clsHide" href="#idLpgmsntcdsn"></a></p>
   <p id="idLpgmsntcnam">name::
     <br>* Mcs.lagPgm-algo'sentence,
+    <br>* Mcs.lagPgm-node.sentence,
     <br>* Mcs.lagPgm-sentence,
     <a class="clsHide" href="#idLpgmsntcnam"></a></p>
 </section>
@@ -340,6 +365,7 @@
     <a class="clsHide" href="#idLpgmsctndsn"></a></p>
   <p id="idLpgmsctnnam">name::
     <br>* Mcs.lagPgm-algo'section!⇒lagPgm-section,
+    <br>* Mcs.lagPgm-node.section!⇒lagPgm-section,
     <br>* Mcs.lagPgm-section,
     <a class="clsHide" href="#idLpgmsctnnam"></a></p>
   <p id="idLpgmsctnSpc">specific::
@@ -1036,17 +1062,17 @@
     <a class="clsHide" href="#idLsrcarchgncchn"></a></p>
 
   <section id="idLsrcarchcd">
-  <h3 id="idLsrcarchcdH3">archocode of archetype of lagSrc
+  <h3 id="idLsrcarchcdH3">archo-code of archetype of lagSrc
     <a class="clsHide" href="#idLsrcarchcdH3"></a></h3>
   <p id="idLsrcarchcddsn">description::
-    <br>· archocode of <a class="clsPreview" href="#idLsrc">lagSrc</a> is any human-code part of <a class="clsPreview" href="#idLsrcarch">archetype</a>.
+    <br>· archo-code of <a class="clsPreview" href="#idLsrc">lagSrc</a> is any human-code part of <a class="clsPreview" href="#idLsrcarch">archetype</a>.
     <a class="clsHide" href="#idLsrcarchcddsn"></a></p>
   <p id="idLsrcarchcdnam">name::
-    <br>* Mcs.lagSrc-archetype'archocode,
-    <br>* Mcs.lagSrc-archocode,
+    <br>* Mcs.lagSrc-archetype'archo-code,
+    <br>* Mcs.lagSrc-archo-code,
     <a class="clsHide" href="#idLsrcarchcdnam"></a></p>
   <p id="idLsrcarchcdgncchn">generic-chain::
-    <br>* <a class="clsPreview" href="#idLpgmarchcd">archocode-of-lagPgm</a>,
+    <br>* <a class="clsPreview" href="#idLpgmarchcd">archo-code-of-lagPgm</a>,
     <a class="clsHide" href="#idLsrcarchcdgncchn"></a></p>
   </section>
 
@@ -1144,10 +1170,47 @@
     <br>· output-structure of lagSrc[a] is any identifiable part of its[a] <a class="clsPreview" href="#idLsrcalg">algo</a>.
     <a class="clsHide" href="#idLsrcalgnodedsn"></a></p>
   <p id="idLsrcalgnodenam">name::
-    <br>* Mcs.lagSrc'output-node,
-    <br>* Mcs.lagSrc'output-structure,
-    <br>* Mcs.lagSrc-algo'structure,
+    <br>* Mcs.lagSrc'output-node!⇒lagSrc-node,
+    <br>* Mcs.lagSrc'output-structure!⇒lagSrc-node,
+    <br>* Mcs.lagSrc-algo'structure!⇒lagSrc-node,
+    <br>* Mcs.lagSrc-node,
     <a class="clsHide" href="#idLsrcalgnodenam"></a></p>
+  <p id="idLsrcalgnodeSpc">specific::
+    <br>* unit-node,
+    <br>* word-node,
+    <br>* semantic-unit-node,
+    <br>* phrase-node,
+    <br>* sentence-node,
+    <br>* section-node,
+    <br>* root-node,
+    <br>===
+    <br>* named-node,
+    <br>* namedNo-node,
+    <a class="clsHide" href="#idLsrcalgnodeSpc"></a></p>
+
+  <section id="idLsrcalgnodeNmd">
+  <h4 id="idLsrcalgnodeNmdH4">node.named of lagSrc-algo
+    <a class="clsHide" href="#idLsrcalgnodeNmdH4"></a></h4>
+  <p id="idLsrcalgnodeNmddsn">description::
+    <br>· named-node of lagSrc is <a class="clsPreview" href="idLsrcalgnode">a-node</a>[a] with <a class="clsPreview" href="#idLsrcwrdIdfr">an-identifier</a> associated with it[a].
+    <a class="clsHide" href="#idLsrcalgnodeNmddsn"></a></p>
+  <p id="idLsrcalgnodeNmdnam">name::
+    <br>* Mcs.named--lagSrc-node,
+    <br>* Mcs.lagSrc-node.named,
+    <a class="clsHide" href="#idLsrcalgnodeNmdnam"></a></p>
+  </section>
+
+  <section id="idLsrcalgnodeNmdN">
+  <h4 id="idLsrcalgnodeNmdNH4">node.namedNo of lagSrc-algo
+    <a class="clsHide" href="#idLsrcalgnodeNmdNH4"></a></h4>
+  <p id="idLsrcalgnodeNmdNdsn">description::
+    <br>· namedNo-node of lagSrc is <a class="clsPreview" href="idLsrcalgnode">a-node</a>[a] without <a class="clsPreview" href="#idLsrcwrdIdfr">an-identifier</a> associated with it[a].
+    <a class="clsHide" href="#idLsrcalgnodeNmdNdsn"></a></p>
+  <p id="idLsrcalgnodeNmdNnam">name::
+    <br>* Mcs.namedNo--agSrc-node,
+    <br>* Mcs.lagSrc-node.namedNo,
+    <a class="clsHide" href="#idLsrcalgnodeNmdNnam"></a></p>
+  </section>
   </section>
 
   <section id="idLsrcalgfile">
@@ -1173,6 +1236,7 @@
     <br>* Mcs.lagSrc'output-unit,
     <br>* Mcs.lagSrc'unit,
     <br>* Mcs.lagSrc-algo'unit,
+    <br>* Mcs.lagSrc-node.unit,
     <br>* Mcs.lagSrc-unit,
     <a class="clsHide" href="#idLsrcuntnam"></a></p>
   <p id="idLsrcuntgncchn">generic-chain::
@@ -1193,15 +1257,89 @@
     <br>* Mcs.lagSrc'output-word!⇒lagSrc-word,
     <br>* Mcs.lagSrc'word!⇒lagSrc-word,
     <br>* Mcs.lagSrc-algo'word!⇒lagSrc-word,
+    <br>* Mcs.lagSrc-node.word!⇒lagSrc-word,
     <br>* Mcs.lagSrc-word,
     <a class="clsHide" href="#idLsrcwrdnam"></a></p>
   <p id="idLsrcwrdgncchn">generic-chain::
     <br>* <a class="clsPreview" href="#idLpgmalgwrd">word-of-lagPgm</a>,
     <a class="clsHide" href="#idLsrcwrdgncchn"></a></p>
   <p id="idLsrcwrdSpc">specific::
-    <br>* <a class="clsPreview" href="#idLsrcsuntNmdidfr">identifier</a>,
+    <br>* <a class="clsPreview" href="#idLsrcwrdIdfr">identifier</a>,
     <br>* <a class="clsPreview" href="#idLsrcwrdRsvd">keyword</a>,
     <a class="clsHide" href="#idLsrcwrdSpc"></a></p>
+
+  <section id="idLsrcwrdIdfr">
+  <h3 id="idLsrcwrdIdfrH3">word.identifier of lagSrc
+    <a class="clsHide" href="#idLsrcwrdIdfrH3"></a></h3>
+  <p id="idLsrcwrdIdfrdsn">description::
+    <br>· identifier of lagSrc is <a class="clsPreview" href="#idLsrcwrd">a-word</a>, not a-keyword, that folows concrete rules to be-constructed and used to construct named-algo-structures.
+    <a class="clsHide" href="#idLsrcwrdIdfrdsn"></a></p>
+  <p id="idLsrcwrdIdfrnam">name::
+    <br>* Mcs.identifier-of-lagSrc!⇒lagSrc-identifier,
+    <br>* Mcs.lagSrc'identifier!⇒lagSrc-identifier,
+    <br>* Mcs.lagSrc-identifier,
+    <br>* Mcs.lagSrc-word.identifier!⇒lagSrc-identifier,
+    <a class="clsHide" href="#idLsrcwrdIdfrnam"></a></p>
+
+  <section id="idLsrcwrdIdfrnmcvn">
+  <h4 id="idLsrcwrdIdfrnmcvnH4">naming-convention of identifier
+    <a class="clsHide" href="#idLsrcwrdIdfrnmcvnH4"></a></h4>
+  <p id="idLsrcwrdIdfrnmcvndsn">description::
+    <br>· source-code-languages use misc naming conventsions to form identifiers.
+    <a class="clsHide" href="#idLsrcwrdIdfrnmcvndsn"></a></p>
+  <p id="idLsrcwrdIdfrnmcvnnam">name::
+    <br>* Mcs.lagSrc'naming-convention!⇒lagSrc-naming-convention,
+    <br>* Mcs.lagSrc-identifier'naming-convention!⇒lagSrc-naming-convention,
+    <br>* Mcs.lagSrc-naming-convention,
+    <a class="clsHide" href="#idLsrcwrdIdfrnmcvnnam"></a></p>
+  <p id="idLsrcwrdIdfrnmcvnSpc">specific::
+    <br>* camel-case--naming-convention,
+    <br>* snake-case--naming-convention,
+    <br>* Hungarian-case--naming-convention,
+    <a class="clsHide" href="#idLsrcwrdIdfrnmcvnSpc"></a></p>
+
+  <section id="idLsrcwrdIdfrnmcvnHgn">
+  <h5 id="idLsrcwrdIdfrnmcvnHgnH5">naming-convention.Hungarian of lagSrc
+    <a class="clsHide" href="#idLsrcwrdIdfrnmcvnHgnH5"></a></h5>
+  <p id="idLsrcwrdIdfrnmcvnHgndsn">description::
+    <br>· Hungarian--naming-convention of lagSrc is <a class="clsPreview" href="#idLsrcwrdIdfrnmcvn">the-convention</a> of writing identifiers with a-prefix denoting the-type or other attribute of the-identifier.
+    <br>· the-name of the-notation[a] is a-reference to its[a] inventor Charls-Simonyi's nation of origin, Hungary.
+    <br>· Hungarian-people's-names are "reversed" compared to most other European-names, the-family-name precedes the-given-name.
+    <br>[https://en.wikipedia.org/wiki/Hungarian_notation]
+    <a class="clsHide" href="#idLsrcwrdIdfrnmcvnHgndsn"></a></p>
+  <p id="idLsrcwrdIdfrnmcvnHgnnam">name::
+    <br>* Mcs.Hungarian--lagSrc-naming-convention,
+    <br>* Mcs.lagSrc-naming-convention.Hungarian,
+    <a class="clsHide" href="#idLsrcwrdIdfrnmcvnHgnnam"></a></p>
+  </section>
+
+  <section id="idLsrcwrdIdfrnmcvnCml">
+  <h5 id="idLsrcwrdIdfrnmcvnCmlH5">naming-convention.camel-case of lagSrc
+    <a class="clsHide" href="#idLsrcwrdIdfrnmcvnCmlH5"></a></h5>
+  <p id="idLsrcwrdIdfrnmcvnCmldsn">description::
+    <br>· camel-case--naming-convention of lagSrc is <a class="clsPreview" href="#idLsrcwrdIdfrnmcvn">the-convention</a> of writing multi-word identifier with no space but with capital the-first letter of words, eg camelCase or CamelCase.
+    <br>[https://en.wikipedia.org/wiki/Camel_case]
+    <a class="clsHide" href="#idLsrcwrdIdfrnmcvnCmldsn"></a></p>
+  <p id="idLsrcwrdIdfrnmcvnCmlnam">name::
+    <br>* Mcs.camel-case--lagSrc-naming-convention,
+    <br>* Mcs.lagSrc-naming-convention.camel-case,
+    <a class="clsHide" href="#idLsrcwrdIdfrnmcvnCmlnam"></a></p>
+  </section>
+
+  <section id="idLsrcwrdIdfrnmcvnSnk">
+  <h5 id="idLsrcwrdIdfrnmcvnSnkH5">naming-convention.snake-case of lagSrc
+    <a class="clsHide" href="#idLsrcwrdIdfrnmcvnSnkH5"></a></h5>
+  <p id="idLsrcwrdIdfrnmcvnSnkdsn">description::
+    <br>· snake-case--naming-convention of lagSrc is <a class="clsPreview" href="#idLsrcwrdIdfrnmcvn">the-convention</a> of writing multi-word identifiers separated with <a class="clsPreview" href="dirUcd/filMcsU0000.last.html#idU0000U005F">the-underscore-(_ LOW-LINE)-char</a>.
+    <br>[https://en.wikipedia.org/wiki/Snake_case]
+    <a class="clsHide" href="#idLsrcwrdIdfrnmcvnSnkdsn"></a></p>
+  <p id="idLsrcwrdIdfrnmcvnSnknam">name::
+    <br>* Mcs.lagSrc-naming-convention.snake-case,
+    <br>* Mcs.snake-case--lagSrc-naming-convention,
+    <a class="clsHide" href="#idLsrcwrdIdfrnmcvnSnknam"></a></p>
+  </section>
+  </section>
+  </section>
 
   <section id="idLsrcwrdRsvd">
   <h3 id="idLsrcwrdRsvdH3">word.keyword of lagSrc
@@ -1221,11 +1359,12 @@
   <h2 id="idLsrcsuntH2">algo'semantic-unit of lagSrc
     <a class="clsHide" href="#idLsrcsuntH2"></a></h2>
   <p id="idLsrcsuntdsn">description::
-    <br>· semantic-unit of <a class="clsPreview" href="#idLsrc">lagSrc</a> is a-structure of <a class="clsPreview" href="#idLsrcwrd">words</a> that DENOTES <a class="clsPreview" href="#idLsrcarchcd">archocode</a>.
+    <br>· semantic-unit of lagSrc[a] is an-indivisible part of its[a] <a class="clsPreview" href="#idLsrcalg">algo</a> that DENOTES <a class="clsPreview" href="#idLsrcarchcd">archo-code</a>.
     <a class="clsHide" href="#idLsrcsuntdsn"></a></p>
   <p id="idLsrcsuntnam">name::
     <br>* Mcs.lagSrc'semantic-unit!⇒lagSrc-Sunt,
     <br>* Mcs.lagSrc-algo'semantic-unit!⇒lagSrc-Sunt,
+    <br>* Mcs.lagSrc-node.semantic-unit!⇒lagSrc-Sunt,
     <br>* Mcs.lagSrc-semantic-unit!⇒lagSrc-Sunt,
     <br>* Mcs.lagSrc-Sunt,
     <a class="clsHide" href="#idLsrcsuntnam"></a></p>
@@ -1233,8 +1372,63 @@
     <br>* <a class="clsPreview" href="#idLpgmsunt">sem-unit-of-lagPgm</a>,
     <a class="clsHide" href="#idLsrcsuntgncchn"></a></p>
 
+  <section id="idLsrcsuntSpc">
+  <h3 id="idLsrcsuntSpcH3">Sunt.SPECIFIC of lagSrc
+    <a class="clsHide" href="#idLsrcsuntSpcH3"></a></h3>
+  <p id="idLsrcsuntSpcdsn">description::
+    <br>* compound--lagSrc-Sunt,
+    <br>* compoundNo--lagSrc-Sunt,
+    <br>* instance--lagSrc-Sunt,
+    <br>* instanceNo--lagSrc-Sunt,
+    <br>* named--lagSrc-Sunt,
+    <br>* namedNo--lagSrc-Sunt,
+    <a class="clsHide" href="#idLsrcsuntSpcdsn"></a></p>
+  <p id="idLsrcsuntSpcnam">name::
+    <br>* Mcs.lagSrc-Sunt.specific,
+    <a class="clsHide" href="#idLsrcsuntSpcnam"></a></p>
+  </section>
+
+  <section id="idLsrcsuntF">
+  <h3 id="idLsrcsuntFH3">Sunt.function (f) of lagSrc
+    <a class="clsHide" href="#idLsrcsuntFH3"></a></h3>
+  <p id="idLsrcsuntFdsn">description::
+    <br>· source-function of lagSrc is <a class="clsPreview" href="#idLsrcsunt">a-semantic-unit</a> that PROCESS information.
+    <a class="clsHide" href="#idLsrcsuntFdsn"></a></p>
+  <p id="idLsrcsuntFnam">name::
+    <br>* Mcs.lagSrc'function!⇒lagSrc-f,
+    <br>* Mcs.lagSrc-Sunt.function!⇒lagSrc-f,
+    <br>* Mcs.lagSrc-f,
+    <a class="clsHide" href="#idLsrcsuntFnam"></a></p>
+  </section>
+
+  <section id="idLsrcsuntIntc">
+  <h3 id="idLsrcsuntIntcH3">Sunt.instance (literal) of lagSrc
+    <a class="clsHide" href="#idLsrcsuntIntcH3"></a></h3>
+  <p id="idLsrcsuntIntcdsn">description::
+    <br>· literal--semantic-unit of lagSrc is an-individual Sunt.
+    <a class="clsHide" href="#idLsrcsuntIntcdsn"></a></p>
+  <p id="idLsrcsuntIntcnam">name::
+    <br>* Mcs.lagSrc'literal,
+    <br>* Mcs.lagSrc-Sunt.instance,
+    <br>* Mcs.lagSrc-Sunt.literal,
+    <a class="clsHide" href="#idLsrcsuntIntcnam"></a></p>
+  </section>
+
+  <section id="idLsrcsuntIntcN">
+  <h3 id="idLsrcsuntIntcNH3">Sunt.instanceNo of lagSrc
+    <a class="clsHide" href="#idLsrcsuntIntcNH3"></a></h3>
+  <p id="idLsrcsuntIntcNdsn">description::
+    <br>· type--semantic-unit of lagSrc is a-generic Sunt.
+    <a class="clsHide" href="#idLsrcsuntIntcNdsn"></a></p>
+  <p id="idLsrcsuntIntcNnam">name::
+    <br>* Mcs.lagSrc'type,
+    <br>* Mcs.lagSrc-Sunt.instanceNo,
+    <br>* Mcs.lagSrc-Sunt.type,
+    <a class="clsHide" href="#idLsrcsuntIntcNnam"></a></p>
+  </section>
+
   <section id="idLsrcsuntNmd">
-  <h3 id="idLsrcsuntNmdH3">Sunt.NAMED of lagSrc
+  <h3 id="idLsrcsuntNmdH3">Sunt.named of lagSrc
     <a class="clsHide" href="#idLsrcsuntNmdH3"></a></h3>
   <p id="idLsrcsuntNmddsn">description::
     <br>· named-Sunt of lagSrc is <a class="clsPreview" href="#idLsrcsunt">a-semantic-unit</a> associated with an-identifier.
@@ -1244,15 +1438,8 @@
     <a class="clsHide" href="#idLsrcsuntNmdnam"></a></p>
 
   <section id="idLsrcsuntNmdidfr">
-  <h4 id="idLsrcsuntNmdidfrH4">identifier of named-Sunt
+  <h4 id="idLsrcsuntNmdidfrH4">identifier of named-Sunt (link)
     <a class="clsHide" href="#idLsrcsuntNmdidfrH4"></a></h4>
-  <p id="idLsrcsuntNmdidfrdsn">description::
-    <br>· identifier of lagSrc is <a class="clsPreview" href="#idLsrcwrd">a-word</a>, not a-keyword, that folows concrete rules to be-constructed.
-    <a class="clsHide" href="#idLsrcsuntNmdidfrdsn"></a></p>
-  <p id="idLsrcsuntNmdidfrnam">name::
-    <br>* Mcs.lagSrc-named-Sunt'identifier,
-    <br>* Mcs.lagSrc-word.identifier,
-    <a class="clsHide" href="#idLsrcsuntNmdidfrnam"></a></p>
   </section>
 
   <section id="idLsrcsuntNmdval">
@@ -1268,7 +1455,7 @@
   </section>
 
   <section id="idLsrcsuntNmdN">
-  <h3 id="idLsrcsuntNmdNH3">Sunt.NAMED.NO of lagSrc
+  <h3 id="idLsrcsuntNmdNH3">Sunt.namedNo of lagSrc
     <a class="clsHide" href="#idLsrcsuntNmdNH3"></a></h3>
   <p id="idLsrcsuntNmdNdsn">description::
     <br>·
@@ -1276,32 +1463,6 @@
   <p id="idLsrcsuntNmdNnam">name::
     <br>* Mcs.lagSrc-Sunt.namedNo,
     <a class="clsHide" href="#idLsrcsuntNmdNnam"></a></p>
-  </section>
-
-  <section id="idLsrcsuntIntc">
-  <h3 id="idLsrcsuntIntcH3">Sunt.INSTANCE of lagSrc
-    <a class="clsHide" href="#idLsrcsuntIntcH3"></a></h3>
-  <p id="idLsrcsuntIntcdsn">description::
-    <br>·
-    <a class="clsHide" href="#idLsrcsuntIntcdsn"></a></p>
-  <p id="idLsrcsuntIntcnam">name::
-    <br>* Mcs.lagSrc'literal,
-    <br>* Mcs.lagSrc-Sunt.instance,
-    <br>* Mcs.lagSrc-Sunt.literal,
-    <a class="clsHide" href="#idLsrcsuntIntcnam"></a></p>
-  </section>
-
-  <section id="idLsrcsuntIntcN">
-  <h3 id="idLsrcsuntIntcNH3">Sunt.INSTANCE.NO of lagSrc
-    <a class="clsHide" href="#idLsrcsuntIntcNH3"></a></h3>
-  <p id="idLsrcsuntIntcNdsn">description::
-    <br>·
-    <a class="clsHide" href="#idLsrcsuntIntcNdsn"></a></p>
-  <p id="idLsrcsuntIntcNnam">name::
-    <br>* Mcs.lagSrc'type,
-    <br>* Mcs.lagSrc-Sunt.instanceNo,
-    <br>* Mcs.lagSrc-Sunt.type,
-    <a class="clsHide" href="#idLsrcsuntIntcNnam"></a></p>
   </section>
   </section>
 
@@ -1315,6 +1476,7 @@
     <br>* Mcs.lagSrc'output-phrase,
     <br>* Mcs.lagSrc'phrase,
     <br>* Mcs.lagSrc-algo'phrase,
+    <br>* Mcs.lagSrc-node.phrase,
     <br>* Mcs.lagSrc-phrase,
     <a class="clsHide" href="#idLsrcphrsnam"></a></p>
   <p id="idLsrcphrsgncchn">generic-chain::
@@ -1333,11 +1495,38 @@
     <br>* Mcs.lagSrc'output-sentence,
     <br>* Mcs.lagSrc'sentence,
     <br>* Mcs.lagSrc-algo'sentence,
+    <br>* Mcs.lagSrc-node.sentence,
     <br>* Mcs.lagSrc-sentence,
     <a class="clsHide" href="#idLsrcsntcnam"></a></p>
   <p id="idLsrcsntcgncchn">generic-chain::
     <br>* <a class="clsPreview" href="#idLpgmsntc">sentence-of-lagPgm</a>,
     <a class="clsHide" href="#idLsrcsntcgncchn"></a></p>
+
+  <section id="idLsrcsntcSpc">
+  <h3 id="idLsrcsntcSpcH3">sentence.SPECIFIC of lagSrc
+    <a class="clsHide" href="#idLsrcsntcSpcH3"></a></h3>
+  <p id="idLsrcsntcSpcdsn">description::
+    <br>* definition-sentence,
+    <a class="clsHide" href="#idLsrcsntcSpcdsn"></a></p>
+  <p id="idLsrcsntcSpcnam">name::
+    <br>* Mcs.lagSrc.specific,
+    <a class="clsHide" href="#idLsrcsntcSpcnam"></a></p>
+  </section>
+
+  <section id="idLsrcsntcDef">
+  <h3 id="idLsrcsntcDefH3">sentence.definition of lagSrc
+    <a class="clsHide" href="#idLsrcsntcDefH3"></a></h3>
+  <p id="idLsrcsntcDefdsn">description::
+    <br>· definition is <a class="clsPreview" href="#idLsrcsntc">a-sentence</a> that uniquely creates instances of <a class="clsPreview" href="#idLsrcsunt">semantic-units</a>.
+    <a class="clsHide" href="#idLsrcsntcDefdsn"></a></p>
+  <p id="idLsrcsntcDefnam">name::
+    <br>* Mcs.lagSrc-sentence.definition,
+    <a class="clsHide" href="#idLsrcsntcDefnam"></a></p>
+  <p id="idLsrcsntcDefSpc">specific::
+    <br>* assignment-definition,
+    <br>* function-definition,
+    <a class="clsHide" href="#idLsrcsntcDefSpc"></a></p>
+  </section>
   </section>
 
   <section id="idLsrcsctn">
@@ -1350,6 +1539,7 @@
     <br>* Mcs.lagSrc'output-section,
     <br>* Mcs.lagSrc'section,
     <br>* Mcs.lagSrc-algo'section,
+    <br>* Mcs.lagSrc-node.section,
     <br>* Mcs.lagSrc-section,
     <a class="clsHide" href="#idLsrcsctnnam"></a></p>
   <p id="idLsrcsctngncchn">generic-chain::
@@ -1360,6 +1550,17 @@
     <br>* titled-section,
     <br>* titledNo-section,
     <a class="clsHide" href="#idLsrcsctnSpc"></a></p>
+
+  <section id="idLsrcsctnBlk">
+  <h3 id="idLsrcsctnBlkH3">section.block of lagSrc
+    <a class="clsHide" href="#idLsrcsctnBlkH3"></a></h3>
+  <p id="idLsrcsctnBlkdsn">description::
+    <br>· source-block is a-sequence of sentences, usually denoted with <a class="clsPreview" href="dirUcd/filMcsU0000.last.html#idU0000U007B">left</a> and <a class="clsPreview" href="dirUcd/filMcsU0000.last.html#idU0000U007D">right</a> curly-brackets-{}.
+    <a class="clsHide" href="#idLsrcsctnBlkdsn"></a></p>
+  <p id="idLsrcsctnBlknam">name::
+    <br>* Mcs.,
+    <a class="clsHide" href="#idLsrcsctnBlknam"></a></p>
+  </section>
   </section>
 
   <section id="idLsrcroot">
@@ -1370,6 +1571,7 @@
     <a class="clsHide" href="#idLsrcrootdsn"></a></p>
   <p id="idLsrcrootnam">name::
     <br>* Mcs.lagSrc-algo'root,
+    <br>* Mcs.lagSrc-node.root,
     <br>* Mcs.lagSrc-root,
     <a class="clsHide" href="#idLsrcrootnam"></a></p>
   </section>

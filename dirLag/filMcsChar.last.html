@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char (char.0-16-0.2019-07-04 draft)</title>
+  <title>Mcs.char (char.0-18-0.2019-07-08 draft)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -26,11 +26,11 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-19]
     <a class="clsHide" href="#idDescription"></a></p>
   <p id="idName">name::
-    <br>* cpt.filMcsChar.last.html!⇒char,
-    <br>* cpt.dirLag/filMcsChar.last.html!⇒char,
-    <br>* cpt.char,
-    <br>* cpt.character.language!⇒char,
-    <br>* cpt.language'character!⇒char,
+    <br>* Mcs.filMcsChar.last.html!⇒char,
+    <br>* Mcs.dirLag/filMcsChar.last.html!⇒char,
+    <br>* Mcs.char,
+    <br>* Mcs.character.language!⇒char,
+    <br>* Mcs.language'character!⇒char,
     <a class="clsHide" href="#idName"></a></p>
 </section>
 
@@ -43,8 +43,8 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-07-11]
     <a class="clsHide" href="#idCharglyphdsn"></a></p>
   <p id="idCharglyphnam">name::
-    <br>* cpt.char'glyph,
-    <br>* cpt.glyph-of-char,
+    <br>* Mcs.char'glyph,
+    <br>* Mcs.glyph-of-char,
     <a class="clsHide" href="#idCharglyphnam"></a></p>
 
   <section id="idCharglyphFnt">
@@ -55,120 +55,10 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
     <a class="clsHide" href="#idCharglyphFntdsn"></a></p>
   <p id="idCharglyphFntnam">name::
-    <br>* cpt.char'font,
-    <br>* cpt.char'glyph.font,
-    <br>* cpt.font-of-char,
+    <br>* Mcs.char'font,
+    <br>* Mcs.char'glyph.font,
+    <br>* Mcs.font-of-char,
     <a class="clsHide" href="#idCharglyphFntnam"></a></p>
-  </section>
-</section>
-
-<section id="idCharencdg">
-  <h1 id="idCharencdgH1">encoding of char
-    <a class="clsHide" href="#idCharencdgH1"></a></h1>
-  <p id="idCharencdgdsn">description::
-    <br>· char-encoding is a-code of bits|bytes, computers use to represent chars.
-    <br>· do not confuse <a class="clsPreview" href="#idCharUcdcp">the-code-points-of-chars</a>, which are numbers, with the-encodings-of-chars which are codes of bits, especially when BOTH are-represented with hexadecimal-numbers.
-    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
-    <a class="clsHide" href="#idCharencdgdsn"></a></p>
-  <p id="idCharencdgnam">name::
-    <br>* cpt.char'encoding!⇒char-encoding,
-    <br>* cpt.char-encoding,
-    <br>* cpt.character-encoding!⇒char-encoding,
-    <br>* cpt.encoding-of-char!⇒char-encoding,
-    <a class="clsHide" href="#idCharencdgnam"></a></p>
-
-  <section id="idCharencdgrsc">
-  <h2 id="idCharencdgrscH2">resource of char-encoding
-    <a class="clsHide" href="#idCharencdgrscH2"></a></h2>
-  <p id="idCharencdgrscnam">name::
-    <br>* Mcs.char-encoding'resource,
-    <a class="clsHide" href="#idCharencdgrscnam"></a></p>
-  <p id="idCharencdgrscwpa">addressWpg::
-    <br>* https://everipedia.org/wiki/lang_en/Character_encoding,
-    <a class="clsHide" href="#idCharencdgrscwpa"></a></p>
-  </section>
-
-  <section id="idCharencdgSpc">
-  <h2 id="idCharencdgSpcH2">char-encoding.SPECIFIC
-    <a class="clsHide" href="#idCharencdgSpcH2"></a></h2>
-  <p id="idCharencdgSpcdsn">description::
-    <br>* fixed-length-encoding,
-    <br>* variable-length-encoding,
-    <br>===
-    <br>* UTF-8,
-    <br>* UTF-16,
-    <br>* UTF-32,
-    <a class="clsHide" href="#idCharencdgSpcdsn"></a></p>
-  <p id="idCharencdgSpcnam">name::
-    <br>* Mcs.char-encoding.specific,
-    <a class="clsHide" href="#idCharencdgSpcnam"></a></p>
-  </section>
-
-  <section id="idCharencdgFxlg">
-  <h2 id="idCharencdgFxlgH2">char-encoding.fixed-length
-    <a class="clsHide" href="#idCharencdgFxlgH2"></a></h2>
-  <p id="idCharencdgFxlgdsn">description::
-    <br>· fixed-length--char-encoding is a-char-encoding that always uses the same quantity of bits to represent chars.
-    <br>· benefit: direct access.
-    <br>· problem: storage inefficient.
-    <a class="clsHide" href="#idCharencdgFxlgdsn"></a></p>
-  <p id="idCharencdgFxlgnam">name::
-    <br>* Mcs.char-encoding.fixed-length,
-    <br>* Mcs.fixed-length--char-encoding,
-    <a class="clsHide" href="#idCharencdgFxlgnam"></a></p>
-  </section>
-
-  <section id="idCharencdgVrlg">
-  <h2 id="idCharencdgVrlgH2">char-encoding.variable-length
-    <a class="clsHide" href="#idCharencdgVrlgH2"></a></h2>
-  <p id="idCharencdgVrlgdsn">description::
-    <br>· variable-length--char-encoding is a-char-encoding that uses different quantity of bits to represent chars.
-    <br>· benefit: storage efficiency.
-    <br>· problem: needs sequential access.
-    <a class="clsHide" href="#idCharencdgVrlgdsn"></a></p>
-  <p id="idCharencdgVrlgnam">name::
-    <br>* Mcs.char-encoding.variable-length,
-    <br>* Mcs.variable-length--char-encoding,
-    <a class="clsHide" href="#idCharencdgVrlgnam"></a></p>
-  </section>
-
-  <section id="idCharencdgUtf8">
-  <h2 id="idCharencdgUtf8H2">char-encoding.UTF-8
-    <a class="clsHide" href="#idCharencdgUtf8H2"></a></h2>
-  <p id="idCharencdgUtf8dsn">description::
-    <br>· UTF-8 is <a class="clsPreview" href="#idCharencdgVrlg">a-variable-length-encoding</a> that uses 1 to 4 8-bits to represent chars.
-    <a class="clsHide" href="#idCharencdgUtf8dsn"></a></p>
-  <p id="idCharencdgUtf8nam">name::
-    <br>* Mcs.UTF-8--char-encoding,
-    <br>* Mcs.char-encoding.UTF-8,
-    <a class="clsHide" href="#idCharencdgUtf8nam"></a></p>
-  </section>
-
-  <section id="idCharencdgUtf16">
-  <h2 id="idCharencdgUtf16H2">char-encoding.UTF-16
-    <a class="clsHide" href="#idCharencdgUtf16H2"></a></h2>
-  <p id="idCharencdgUtf16dsn">description::
-    <br>· UTF-16 is <a class="clsPreview" href="#idCharencdgVrlg">a-variable-length-encoding</a> that uses 1 to 2 16-bits to represent chars.
-    <a class="clsHide" href="#idCharencdgUtf16dsn"></a></p>
-  <p id="idCharencdgUtf16nam">name::
-    <br>* Mcs.UTF-16--char-encoding,
-    <br>* Mcs.char-encoding.UTF-16,
-    <a class="clsHide" href="#idCharencdgUtf16nam"></a></p>
-  </section>
-
-  <section id="idCharencdgUtf32">
-  <h2 id="idCharencdgUtf32H2">char-encoding.UTF-32
-    <a class="clsHide" href="#idCharencdgUtf32H2"></a></h2>
-  <p id="idCharencdgUtf32dsn">description::
-    <br>"UTF-32 stands for Unicode Transformation Format in 32 bits. It is a protocol to encode Unicode code points that uses exactly 32 bits per Unicode code point (but a number of leading bits must be zero as there are fewer than 221 Unicode code points). UTF-32 is a fixed-length encoding, in contrast to all other Unicode transformation formats, which are variable-length encodings. Each 32-bit value in UTF-32 represents one Unicode code point and is exactly equal to that code point's numerical value.
-    <br>The main advantage of UTF-32 is that the Unicode code points are directly indexed. Finding the Nth code point in a sequence of code points is a constant time operation. In contrast, a variable-length code requires sequential access to find the Nth code point in a sequence. This makes UTF-32 a simple replacement in code that uses integers that are incremented by one to examine each location in a string, as was commonly done for ASCII.
-    <br>The main disadvantage of UTF-32 is that it is space-inefficient, using four bytes per code point. Characters beyond the BMP are relatively rare in most texts, and can typically be ignored for sizing estimates. This makes UTF-32 close to twice the size of UTF-16. It can be up to four times the size of UTF-8 depending on how many of the characters are in the ASCII subset."
-    <br>[https://en.wikipedia.org/wiki/UTF-32]
-    <a class="clsHide" href="#idCharencdgUtf32dsn"></a></p>
-  <p id="idCharencdgUtf32nam">name::
-    <br>* Mcs.UTF-32--char-encoding,
-    <br>* Mcs.char-encoding.UTF-32,
-    <a class="clsHide" href="#idCharencdgUtf32nam"></a></p>
   </section>
 </section>
 
@@ -176,12 +66,23 @@
   <h1 id="idCharrscFTH1">resource of char
     <a class="clsHide" href="#idCharrscFTH1"></a></h1>
   <p id="idCharrscnam">name::
-    <br>* cpt.char'resource,
-    <br>* cpt.charAeResource,
+    <br>* Mcs.char'resource,
+    <br>* Mcs.charAeResource,
     <a class="clsHide" href="#idCharrscnam"></a></p>
   <p id="idCharrscwpa">addressWpg::
     <br>*
     <a class="clsHide" href="#idCharrscwpa"></a></p>
+</section>
+
+<section id="idCharEvgFT">
+  <h1 id="idCharEvgFTH1">EVOLUTING of char
+    <a class="clsHide" href="#idCharEvgFTH1"></a></h1>
+  <p id="idCharEvgnam">name::
+    <br>* Mcs.char'evoluting,
+    <a class="clsHide" href="#idCharEvgnam"></a></p>
+  <p id="idCharEvg">{time.2018-06-19}::
+    <br>=== creation of this structured-concept:
+    <a class="clsHide" href="#idCharEvg"></a></p>
 </section>
 
 <section id="idChargncFT">
@@ -198,8 +99,8 @@
   <h1 id="idCharSpcFTH1">char.SPECIFIC
     <a class="clsHide" href="#idCharSpcFTH1"></a></h1>
   <p id="idCharSpcnam">name::
-    <br>* cpt.char.specific,
-    <br>* cpt.charAsSpecific,
+    <br>* Mcs.char.specific,
+    <br>* Mcs.charAsSpecific,
     <a class="clsHide" href="#idCharSpcnam"></a></p>
   <p id="idCharSpcP1">specific::
     <br>* <a class="clsPreview" href="#idCharCmr">computer-char</a>,
@@ -220,9 +121,119 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-24]
     <a class="clsHide" href="#idCharCmrdsn"></a></p>
   <p id="idCharCmrnam">name::
-    <br>* cpt.char.computer,
-    <br>* cpt.computer-char,
+    <br>* Mcs.char.computer,
+    <br>* Mcs.computer-char,
     <a class="clsHide" href="#idCharCmrnam"></a></p>
+
+  <section id="idCharencdg">
+  <h2 id="idCharencdgH2">encoding of computer-char
+    <a class="clsHide" href="#idCharencdgH2"></a></h2>
+  <p id="idCharencdgdsn">description::
+    <br>· char-encoding is a-code of bits|bytes, computers use to represent chars.
+    <br>· do not confuse <a class="clsPreview" href="#idCharUcdcp">the-code-points-of-chars</a>, which are numbers, with the-encodings-of-chars which are codes of bits, especially when BOTH are-represented with hexadecimal-numbers.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
+    <a class="clsHide" href="#idCharencdgdsn"></a></p>
+  <p id="idCharencdgnam">name::
+    <br>* Mcs.char'encoding!⇒char-encoding,
+    <br>* Mcs.char-encoding,
+    <br>* Mcs.character-encoding!⇒char-encoding,
+    <br>* Mcs.encoding-of-char!⇒char-encoding,
+    <a class="clsHide" href="#idCharencdgnam"></a></p>
+
+  <section id="idCharencdgrsc">
+  <h3 id="idCharencdgrscH3">resource of char-encoding
+    <a class="clsHide" href="#idCharencdgrscH3"></a></h3>
+  <p id="idCharencdgrscnam">name::
+    <br>* Mcs.char-encoding'resource,
+    <a class="clsHide" href="#idCharencdgrscnam"></a></p>
+  <p id="idCharencdgrscwpa">addressWpg::
+    <br>* https://everipedia.org/wiki/lang_en/Character_encoding,
+    <a class="clsHide" href="#idCharencdgrscwpa"></a></p>
+  </section>
+
+  <section id="idCharencdgSpc">
+  <h3 id="idCharencdgSpcH3">char-encoding.SPECIFIC
+    <a class="clsHide" href="#idCharencdgSpcH3"></a></h3>
+  <p id="idCharencdgSpcdsn">description::
+    <br>* fixed-length-encoding,
+    <br>* variable-length-encoding,
+    <br>===
+    <br>* UTF-8,
+    <br>* UTF-16,
+    <br>* UTF-32,
+    <a class="clsHide" href="#idCharencdgSpcdsn"></a></p>
+  <p id="idCharencdgSpcnam">name::
+    <br>* Mcs.char-encoding.specific,
+    <a class="clsHide" href="#idCharencdgSpcnam"></a></p>
+  </section>
+
+  <section id="idCharencdgFxlg">
+  <h3 id="idCharencdgFxlgH3">char-encoding.fixed-length
+    <a class="clsHide" href="#idCharencdgFxlgH3"></a></h3>
+  <p id="idCharencdgFxlgdsn">description::
+    <br>· fixed-length--char-encoding is a-char-encoding that always uses the same quantity of bits to represent chars.
+    <br>· benefit: direct access.
+    <br>· problem: storage inefficient.
+    <a class="clsHide" href="#idCharencdgFxlgdsn"></a></p>
+  <p id="idCharencdgFxlgnam">name::
+    <br>* Mcs.char-encoding.fixed-length,
+    <br>* Mcs.fixed-length--char-encoding,
+    <a class="clsHide" href="#idCharencdgFxlgnam"></a></p>
+  </section>
+
+  <section id="idCharencdgVrlg">
+  <h3 id="idCharencdgVrlgH3">char-encoding.variable-length
+    <a class="clsHide" href="#idCharencdgVrlgH3"></a></h3>
+  <p id="idCharencdgVrlgdsn">description::
+    <br>· variable-length--char-encoding is a-char-encoding that uses different quantity of bits to represent chars.
+    <br>· benefit: storage efficiency.
+    <br>· problem: needs sequential access.
+    <a class="clsHide" href="#idCharencdgVrlgdsn"></a></p>
+  <p id="idCharencdgVrlgnam">name::
+    <br>* Mcs.char-encoding.variable-length,
+    <br>* Mcs.variable-length--char-encoding,
+    <a class="clsHide" href="#idCharencdgVrlgnam"></a></p>
+  </section>
+
+  <section id="idCharencdgUtf8">
+  <h3 id="idCharencdgUtf8H3">char-encoding.UTF-8
+    <a class="clsHide" href="#idCharencdgUtf8H3"></a></h3>
+  <p id="idCharencdgUtf8dsn">description::
+    <br>· UTF-8 is <a class="clsPreview" href="#idCharencdgVrlg">a-variable-length-encoding</a> that uses 1 to 4 8-bits to represent chars.
+    <a class="clsHide" href="#idCharencdgUtf8dsn"></a></p>
+  <p id="idCharencdgUtf8nam">name::
+    <br>* Mcs.UTF-8--char-encoding,
+    <br>* Mcs.char-encoding.UTF-8,
+    <a class="clsHide" href="#idCharencdgUtf8nam"></a></p>
+  </section>
+
+  <section id="idCharencdgUtf16">
+  <h3 id="idCharencdgUtf16H3">char-encoding.UTF-16
+    <a class="clsHide" href="#idCharencdgUtf16H3"></a></h3>
+  <p id="idCharencdgUtf16dsn">description::
+    <br>· UTF-16 is <a class="clsPreview" href="#idCharencdgVrlg">a-variable-length-encoding</a> that uses 1 to 2 16-bits to represent chars.
+    <a class="clsHide" href="#idCharencdgUtf16dsn"></a></p>
+  <p id="idCharencdgUtf16nam">name::
+    <br>* Mcs.UTF-16--char-encoding,
+    <br>* Mcs.char-encoding.UTF-16,
+    <a class="clsHide" href="#idCharencdgUtf16nam"></a></p>
+  </section>
+
+  <section id="idCharencdgUtf32">
+  <h3 id="idCharencdgUtf32H3">char-encoding.UTF-32
+    <a class="clsHide" href="#idCharencdgUtf32H3"></a></h3>
+  <p id="idCharencdgUtf32dsn">description::
+    <br>"UTF-32 stands for Unicode Transformation Format in 32 bits. It is a protocol to encode Unicode code points that uses exactly 32 bits per Unicode code point (but a number of leading bits must be zero as there are fewer than 221 Unicode code points). UTF-32 is a fixed-length encoding, in contrast to all other Unicode transformation formats, which are variable-length encodings. Each 32-bit value in UTF-32 represents one Unicode code point and is exactly equal to that code point's numerical value.
+    <br>The main advantage of UTF-32 is that the Unicode code points are directly indexed. Finding the Nth code point in a sequence of code points is a constant time operation. In contrast, a variable-length code requires sequential access to find the Nth code point in a sequence. This makes UTF-32 a simple replacement in code that uses integers that are incremented by one to examine each location in a string, as was commonly done for ASCII.
+    <br>The main disadvantage of UTF-32 is that it is space-inefficient, using four bytes per code point. Characters beyond the BMP are relatively rare in most texts, and can typically be ignored for sizing estimates. This makes UTF-32 close to twice the size of UTF-16. It can be up to four times the size of UTF-8 depending on how many of the characters are in the ASCII subset."
+    <br>[https://en.wikipedia.org/wiki/UTF-32]
+    <a class="clsHide" href="#idCharencdgUtf32dsn"></a></p>
+  <p id="idCharencdgUtf32nam">name::
+    <br>* Mcs.UTF-32--char-encoding,
+    <br>* Mcs.char-encoding.UTF-32,
+    <a class="clsHide" href="#idCharencdgUtf32nam"></a></p>
+  </section>
+  </section>
 
   <section id="idCharCmrSpc">
   <h2 id="idCharCmrSpcH2">computer-char.SPECIFIC
@@ -240,42 +251,1192 @@
     <br>· Unicode-char is any <a class="clsPreview" href="#idCharCmr">computer-char</a> of <a class="clsPreview" href="#idCharUcdstrd">the-Unicode-standard</a>.
     <a class="clsHide" href="#idCharUcddsn"></a></p>
   <p id="idCharUcdnam">name::
-    <br>* cpt.char.Unicode,
-    <br>* cpt.Unicode'char,
-    <br>* cpt.Unicode-char,
+    <br>* Mcs.char.Unicode!⇒Unicode-char,
+    <br>* Mcs.Unicode'char!⇒Unicode-char,
+    <br>* Mcs.Unicode-char,
     <a class="clsHide" href="#idCharUcdnam"></a></p>
 
   <section id="idCharUcdcp">
   <h2 id="idCharUcdcpH2">code-point of Unicode-char
     <a class="clsHide" href="#idCharUcdcpH2"></a></h2>
   <p id="idCharUcdcpdsn">description::
-    <br>· code-point of a-Unicode-char[a] is a UNIQUE number, reserved by <a class="clsPreview" href="#idCharUcdstrd">the-standard</a>, used to assign the-char[a] in hexadecimal-format (U+FFFF with 4 to 6 digits in the-standard) or decimal-format.
-    <br>· the-Unicode-standard reserves 65,536x17=1,114,112 code-points to assign chars.
-    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-24]
+    <br>· code-point of a-Unicode-char[a] is <a class="clsPreview" href="#idCharUcdstdcp">Unicode--code-point</a> on which this[a] char is-assigned.
     <a class="clsHide" href="#idCharUcdcpdsn"></a></p>
   <p id="idCharUcdcpnam">name::
-    <br>* cpt.char.Unicode'code-point,
-    <br>* cpt.code-point--of--Unicode-char,
-    <br>* cpt.Unicode'code-point,
+    <br>* Mcs.Unicode-char'code-point,
+    <br>* Mcs.Unicode'code-point-of-char,
+    <br>* Mcs.code-point--of--Unicode-char,
     <a class="clsHide" href="#idCharUcdcpnam"></a></p>
-
-  <section id="idCharUcdcpSpace">
-  <h3 id="idCharUcdcpSpaceH3">code-point.CODE-SPACE
-    <a class="clsHide" href="#idCharUcdcpSpaceH3"></a></h3>
-  <p id="idCharUcdcpSpacedsn">description::
-    <br>· Unicode--code-space is the aggregate code-points of <a class="clsPreview" href="#idCharUcdstrd">the-standard</a>, 65,536x17=1,114,112, that reserves to assign chars.
-    <a class="clsHide" href="#idCharUcdcpSpacedsn"></a></p>
-  <p id="idCharUcdcpSpacenam">name::
-    <br>* cpt.char.Unicode'code-space,
-    <br>* cpt.code-space--of-Unicode,
-    <br>* cpt.Unicode'code-space,
-    <a class="clsHide" href="#idCharUcdcpSpacenam"></a></p>
   </section>
 
-  <section id="idCharUcdcpPlane">
-  <h3 id="idCharUcdcpPlaneH3">code-point.PLANE
-    <a class="clsHide" href="#idCharUcdcpPlaneH3"></a></h3>
-  <p id="idCharUcdcpPlanedsn">description::
+  <section id="idCharUcdblock">
+  <h2 id="idCharUcdblockH2">block of Unicode-char (<a class="clsPreview" href="#idCharUcdstdcpBlk">link</a>)
+    <a class="clsHide" href="#idCharUcdblockH2"></a></h2>
+  </section>
+
+  <section id="idCharUcdplane">
+  <h2 id="idCharUcdplaneH2">plane of Unicode-char (<a class="clsPreview" href="#idCharUcdstdcpPln">link</a>)
+    <a class="clsHide" href="#idCharUcdplaneH2"></a></h2>
+  </section>
+
+  <section id="idCharUcdage">
+  <h2 id="idCharUcdageH2">Age-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdageH2"></a></h2>
+  <p id="idCharUcdagedsn">description::
+    <br>The Age property indicates the first version in which a particular Unicode character was assigned.
+    <br>For example, U+20AC € EURO SIGN was added to Version 2.1 of the Unicode Standard, so it has age=2.1, while U+20B9 ₹ INDIAN RUPEE SIGN was added to Version 6.0 of the Unicode Standard, so it has age=6.0.
+    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Character_Age]
+    <a class="clsHide" href="#idCharUcdagedsn"></a></p>
+  <p id="idCharUcdagenam">name::
+    <br>* Mcs.Unicode-char'Age-property,
+    <br>* Mcs.Unicode'Age-property,
+    <a class="clsHide" href="#idCharUcdagenam"></a></p>
+  <p id="idCharUcdagewpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedAge.txt,
+    <a class="clsHide" href="#idCharUcdagewpa"></a></p>
+  </section>
+
+  <section id="idCharUcdalfc">
+  <h2 id="idCharUcdalfcH2">Alphabetic-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdalfcH2"></a></h2>
+  <p id="idCharUcdalfcdsn">description::
+    <br>Derived Property: Alphabetic
+    <br>Generated from: Uppercase + Lowercase + Lt + Lm + Lo + Nl + Other_Alphabetic
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt]
+    <a class="clsHide" href="#idCharUcdalfcdsn"></a></p>
+  <p id="idCharUcdalfcnam">name::
+    <br>* Mcs.Unicode-char'Alphabetic-property,
+    <br>* Mcs.Unicode'Alphabetic-property,
+    <a class="clsHide" href="#idCharUcdalfcnam"></a></p>
+  <p id="idCharUcdalfcwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt,
+    <a class="clsHide" href="#idCharUcdalfcwpa"></a></p>
+  </section>
+
+  <section id="idCharUcdbdcls">
+  <h2 id="idCharUcdbdclsH2">Bidi_Class-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdbdclsH2"></a></h2>
+  <p id="idCharUcdbdclsdsn">description::
+    <br>determine the directionality for bidirectional Unicode text.
+    <br>[https://www.unicode.org/reports/tr9/tr9-39.html]
+    <a class="clsHide" href="#idCharUcdbdclsdsn"></a></p>
+  <p id="idCharUcdbdclsnam">name::
+    <br>* Mcs.Unicode-char'Bidi_Class-property,
+    <br>* Mcs.Unicode'Bidi_Class-property,
+    <a class="clsHide" href="#idCharUcdbdclsnam"></a></p>
+  <p id="idCharUcdbdclswpa">addressWpg::
+    <br>* Unicode® Standard Annex #9, UNICODE BIDIRECTIONAL ALGORITHM, <a href="http://www.unicode.org/reports/tr9/">http://www.unicode.org/reports/tr9/</a>,
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBidiClass.txt,
+    <a class="clsHide" href="#idCharUcdbdclswpa"></a></p>
+  <p id="idCharUcdbdclsSpc">specific::
+    <br>* L-Left_To_Right,
+    <br>* R-Right_To_Left,
+    <br>* EN-European_Number,
+    <br>* ES-European_Separator,
+    <br>* ET-European_Terminator,
+    <br>* AN-Arabic_Number,
+    <br>* CS-Common_Separator,
+    <br>* B-Paragraph_Separator,
+    <br>* S-Segment_Separator,
+    <br>* WS-White_Space,
+    <br>* ON-Other_Neutral,
+    <br>* BN-Boundary_Neutral,
+    <br>* NSM-Nonspacing_Mark,
+    <br>* AL-Arabic_Letter,
+    <br>* LRO-Left_To_Right_Override,
+    <br>* RLO-Right_To_Left_Override,
+    <br>* LRE-Left_To_Right_Embedding,
+    <br>* RLE-Right_To_Left_Embedding,
+    <br>* PDF-Pop_Directional_Format,
+    <br>* LRI-Left_To_Right_Isolate,
+    <br>* RLI-Right_To_Left_Isolate,
+    <br>* FSI-First_Strong_Isolate,
+    <br>* PDI-Pop_Directional_Isolate,
+    <a class="clsHide" href="#idCharUcdbdclsSpc"></a></p>
+  </section>
+
+  <section id="idCharUcdbdmr">
+  <h2 id="idCharUcdbdmrH2">Bidi_Mirrored-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdbdmrH2"></a></h2>
+  <p id="idCharUcdbdmrdsn">description::
+    <br>If the character is a "mirrored" character in bidirectional text, this field has the value "Y"; otherwise "N". See Section 4.7, Bidi Mirrored of [Unicode].
+    <br>Do not confuse this with the Bidi_Mirroring_Glyph property.
+    <br>[https://www.unicode.org/reports/tr44/#Bidi_Mirrored]
+    <a class="clsHide" href="#idCharUcdbdmrdsn"></a></p>
+  <p id="idCharUcdbdmrnam">name::
+    <br>* Mcs.Unicode-char'Bidi_Mirrored-property,
+    <br>* Mcs.Unicode'Bidi_Mirrored-property,
+    <a class="clsHide" href="#idCharUcdbdmrnam"></a></p>
+  <p id="idCharUcdbdmrwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBinaryProperties.txt,
+    <a class="clsHide" href="#idCharUcdbdmrwpa"></a></p>
+  </section>
+
+  <section id="idCharUcdbmg">
+  <h2 id="idCharUcdbmgH2">Bidi_Mirroring_Glyph-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdbmgH2"></a></h2>
+  <p id="idCharUcdbmgdsn">description::
+    <br>Informative mapping for substituting characters in an implementation of bidirectional mirroring. This maps a subset of characters with the Bidi_Mirrored property to other characters that normally are displayed with the corresponding mirrored glyph. When a character with the Bidi_Mirrored property has the default value for Bidi_Mirroring_Glyph, that means that no other character exists whose glyph is appropriate for character-based glyph mirroring. Implementations must then use other mechanisms to implement mirroring of those characters for the Unicode Bidirectional Algorithm. See Unicode Standard Annex #9, "Unicode Bidirectional Algorithm" [UAX9]. Do not confuse this property with the Bidi_Mirrored property itself.
+    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Bidi_Mirroring_Glyph]
+    <a class="clsHide" href="#idCharUcdbmgdsn"></a></p>
+  <p id="idCharUcdbmgnam">name::
+    <br>* Mcs.Unicode-char'Bidi_Mirroring_Glyph-property,
+    <br>* Mcs.Unicode'Bidi_Mirroring_Glyph-property,
+    <a class="clsHide" href="#idCharUcdbmgnam"></a></p>
+  <p id="idCharUcdbmgwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/BidiMirroring.txt,
+    <a class="clsHide" href="#idCharUcdbmgwpa"></a></p>
+  </section>
+
+  <section id="idCharUcdcase">
+  <h2 id="idCharUcdcaseH2">Case-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdcaseH2"></a></h2>
+  <p id="idCharUcdcasedsn">description::
+    <br>Case is a normative property of characters in certain alphabets whereby characters are considered to be variants of a single letter. These variants, which may differ markedly in shapeand size, are called the uppercase letter (also known as capital or majuscule) and the lowercase letter (also known as small or minuscule). The uppercase letter is generally larger than the lowercase letter.
+    <br>Because of the inclusion of certain composite characters for compatibility, such as U+01F1 latin capital letter dz, a third case, called titlecase, is used where the first character of a word must be capitalized. An example of such a character is U+01F2 latin capital letter d with small letter z. The three case forms are UPPERCASE, Titlecase, and lowercase.
+    <br>For those scripts that have case (Latin, Greek, Coptic, Cyrillic, Glagolitic, Armenian, archaic Georgian, Deseret, and Warang Citi), uppercase characters typically contain the word capital in their names. Lowercase characters typically contain the word small. However, this is not a reliable guide.  The word small in the names of characters from scripts other than those just listed has nothing to do with case. There are other exceptions as well, such as small capital letters that are not formally uppercase.  Some Greek characters with capital  in their names are actually titlecase.  (Note that while the archaic Georgian script contained upper- and lowercase pairs, they are not used in modern Georgian.  See Section 7.7, Georgian.)
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 4.2]
+    <a class="clsHide" href="#idCharUcdcasedsn"></a></p>
+  <p id="idCharUcdcasenam">name::
+    <br>* Mcs.Unicode-char'Case-property,
+    <br>* Mcs.Unicode'Case-property,
+    <a class="clsHide" href="#idCharUcdcasenam"></a></p>
+  <p id="idCharUcdcaseSpc">specific::
+    <br>* Lowercase,
+    <br>* Titlecase,
+    <br>* Uppercase,
+    <a class="clsHide" href="#idCharUcdcaseSpc"></a></p>
+
+  <section id="idCharUcdcaseLwr">
+  <h3 id="idCharUcdcaseLwrH3">Lowercase-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdcaseLwrH3"></a></h3>
+  <p id="idCharUcdcaseLwrdsn">description::
+    <br>Derived Property: Lowercase
+    <br>Generated from: Ll + Other_Lowercase
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt]
+    <a class="clsHide" href="#idCharUcdcaseLwrdsn"></a></p>
+  <p id="idCharUcdcaseLwrnam">name::
+    <br>* Mcs.Unicode-char'Lowercase-property,
+    <br>* Mcs.Unicode'Lowercase-property,
+    <a class="clsHide" href="#idCharUcdcaseLwrnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcaseUpr">
+  <h3 id="idCharUcdcaseUprH3">Uppercase-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdcaseUprH3"></a></h3>
+  <p id="idCharUcdcaseUprdsn">description::
+    <br>Derived Property: Uppercase
+    <br>Generated from: Lu + Other_Uppercase
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt]
+    <a class="clsHide" href="#idCharUcdcaseUprdsn"></a></p>
+  <p id="idCharUcdcaseUprnam">name::
+    <br>* Mcs.Unicode-char'Uppercase-property,
+    <br>* Mcs.Unicode'Uppercase-property,
+    <a class="clsHide" href="#idCharUcdcaseUprnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcaseTtl">
+  <h3 id="idCharUcdcaseTtlH3">Titlecase-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdcaseTtlH3"></a></h3>
+  <p id="idCharUcdcaseTtldsn">description::
+    <br>Because of the inclusion of certain composite characters for compatibility, such as U+01F1 latin capital letter dz, a third case, called titlecase, is used where the first character of a word must be capitalized. An example of such a character is U+01F2 latin capital letter d with small letter z. The three case forms are UPPERCASE, Titlecase, and lowercase.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 4.2]
+    <a class="clsHide" href="#idCharUcdcaseTtldsn"></a></p>
+  <p id="idCharUcdcaseTtlnam">name::
+    <br>* Mcs.Unicode-char'Titlecase-property,
+    <br>* Mcs.Unicode'Titlecase-property,
+    <a class="clsHide" href="#idCharUcdcaseTtlnam"></a></p>
+  </section>
+
+  <section id="idCharUcdcaseCsd">
+  <h3 id="idCharUcdcaseCsdH3">Cased-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdcaseCsdH3"></a></h3>
+  <p id="idCharUcdcaseCsddsn">description::
+    <br>D135 A character C is defined to be cased if and only if C has the Lowercase or Uppercase property or has a General_Category value of Titlecase_Letter.
+    <br>• The Uppercase and Lowercase property values are specified in the data file DerivedCoreProperties.txt in the Unicode Character Database.  The derived property Cased is also listed in DerivedCoreProperties.txt.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf]
+    <a class="clsHide" href="#idCharUcdcaseCsddsn"></a></p>
+  <p id="idCharUcdcaseCsdnam">name::
+    <br>* Mcs.Unicode-char'Cased-property,
+    <br>* Mcs.Unicode'Cased-property,
+    <a class="clsHide" href="#idCharUcdcaseCsdnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCharUcdcsfg">
+  <h2 id="idCharUcdcsfgH2">Case_Folding-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdcsfgH2"></a></h2>
+  <p id="idCharUcdcsfgdsn">description::
+    <br>Mapping from characters to their case-folded forms. This is an informative file containing normative derived properties.
+    <br>Derived from UnicodeData and SpecialCasing.
+    <br>Note: The case foldings are omitted in the data file if they are the same as the code point itself.
+    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#CaseFolding.txt]
+    <a class="clsHide" href="#idCharUcdcsfgdsn"></a></p>
+  <p id="idCharUcdcsfgnam">name::
+    <br>* Mcs.Unicode-char'Case_Folding-property,
+    <br>* Mcs.Unicode'Case_Folding-property,
+    <a class="clsHide" href="#idCharUcdcsfgnam"></a></p>
+  <p id="idCharUcdcsfgwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/CaseFolding.txt,
+    <a class="clsHide" href="#idCharUcdcsfgwpa"></a></p>
+  <p id="idCharUcdcsfgSpc">specific::
+    <br>* C: common case folding, common mappings shared by both simple and full mappings.
+    <br>* F: full case folding, mappings that cause strings to grow in length. Multiple characters are separated by spaces.
+    <br>* S: simple case folding, mappings to single characters where different from F.
+    <br>* T: special case for uppercase I and dotted uppercase I
+    <br> - For non-Turkic languages, this mapping is normally not used.
+    <br> - For Turkic languages (tr, az), this mapping can be used instead of the normal mapping for these characters. Note that the Turkic mappings do not maintain canonical equivalence without additional processing. See the discussions of case mapping in the Unicode Standard for more information.
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/CaseFolding.txt]
+    <a class="clsHide" href="#idCharUcdcsfgSpc"></a></p>
+  </section>
+
+  <section id="idCharUcdbpbp">
+  <h2 id="idCharUcdbpbpH2">Bidi_Paired_Bracket-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdbpbpH2"></a></h2>
+  <p id="idCharUcdbpbpdsn">description::
+    <br>For an opening bracket, the code point of the matching closing bracket. For a closing bracket, the code point of the matching opening bracket. This property is used in the implementation of parenthesis matching. See Unicode Standard Annex #9, "Unicode Bidirectional Algorithm" [UAX9].
+    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Bidi_Paired_Bracket]
+    <a class="clsHide" href="#idCharUcdbpbpdsn"></a></p>
+  <p id="idCharUcdbpbpnam">name::
+    <br>* Mcs.Unicode-char'Bidi_Paired_Bracket-property,
+    <br>* Mcs.Unicode'Bidi_Paired_Bracket-property,
+    <a class="clsHide" href="#idCharUcdbpbpnam"></a></p>
+  <p id="idCharUcdbpbpwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/BidiBrackets.txt,
+    <br>* https://www.unicode.org/reports/tr9/,
+    <a class="clsHide" href="#idCharUcdbpbpwpa"></a></p>
+  </section>
+
+  <section id="idCharUcdbpbtp">
+  <h2 id="idCharUcdbpbtpH2">Bidi_Paired_Bracket_Type-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdbpbtpH2"></a></h2>
+  <p id="idCharUcdbpbtpdsn">description::
+    <br>Type of a paired bracket, either opening or closing. This property is used in the implementation of parenthesis matching. See Unicode Standard Annex #9, "Unicode Bidirectional Algorithm" [UAX9].
+    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Bidi_Paired_Bracket_Type]
+    <a class="clsHide" href="#idCharUcdbpbtpdsn"></a></p>
+  <p id="idCharUcdbpbtpnam">name::
+    <br>* Mcs.Unicode-char'Bidi_Paired_Bracket_Type-property,
+    <br>* Mcs.Unicode'Bidi_Paired_Bracket_Type-property,
+    <a class="clsHide" href="#idCharUcdbpbtpnam"></a></p>
+  <p id="idCharUcdbpbtpwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/BidiBrackets.txt,
+    <br>* https://www.unicode.org/reports/tr9/,
+    <a class="clsHide" href="#idCharUcdbpbtpwpa"></a></p>
+  <p id="idCharUcdbpbtpSpc">specific::
+    <br>* o-Open,
+    <br>* c-Close,
+    <br>* n-None,
+    <a class="clsHide" href="#idCharUcdbpbtpSpc"></a></p>
+  </section>
+
+  <section id="idCharUcddnmg">
+  <h2 id="idCharUcddnmgH2">Decomposition_Mapping-property of Unicode-char
+    <a class="clsHide" href="#idCharUcddnmgH2"></a></h2>
+  <p id="idCharUcddnmgdsn">description::
+    <br>This is a string property, consisting of a sequence of one or more Unicode code points.
+    <br>... The prefixed tags supplied with a subset of the decomposition mappings generally indicate formatting information.
+    <br>[https://www.unicode.org/reports/tr44/#Character_Decomposition_Mappings]
+    <a class="clsHide" href="#idCharUcddnmgdsn"></a></p>
+  <p id="idCharUcddnmgnam">name::
+    <br>* Mcs.Unicode-char'Decomposition_Mapping-property,
+    <br>* Mcs.Unicode'Decomposition_Mapping-property,
+    <a class="clsHide" href="#idCharUcddnmgnam"></a></p>
+  <p id="idCharUcddnmgwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedDecompositionType.txt,
+    <a class="clsHide" href="#idCharUcddnmgwpa"></a></p>
+  <p id="idCharUcddnmgSpc">specific::
+    <br>* &lt;font>: Font variant (for example, a blackletter form)
+    <br>* &lt;noBreak>: No-break version of a space or hyphen
+    <br>* &lt;initial>: Initial presentation form (Arabic)
+    <br>* &lt;medial>: Medial presentation form (Arabic)
+    <br>* &lt;final>: Final presentation form (Arabic)
+    <br>* &lt;isolated>: Isolated presentation form (Arabic)
+    <br>* &lt;circle>: Encircled form
+    <br>* &lt;super>: Superscript form
+    <br>* &lt;sub>: Subscript form
+    <br>* &lt;vertical>: Vertical layout presentation form
+    <br>* &lt;wide>: Wide (or zenkaku) compatibility character
+    <br>* &lt;narrow>: Narrow (or hankaku) compatibility character
+    <br>* &lt;small>: Small variant form (CNS compatibility)
+    <br>* &lt;square>: CJK squared font variant
+    <br>* &lt;fraction>: Vulgar fraction form
+    <br>* &lt;compat>: Otherwise unspecified compatibility character
+    <br>[https://www.unicode.org/reports/tr44/#Formatting_Tags_Table]
+    <a class="clsHide" href="#idCharUcddnmgSpc"></a></p>
+  </section>
+
+  <section id="idCharUcdeaw">
+  <h2 id="idCharUcdeawH2">East_Asian_Width-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdeawH2"></a></h2>
+  <p id="idCharUcdeawdsn">description::
+    <br>When dealing with East Asian text, there is the concept of an inherent width of a character. This width takes on either of two values: narrow or wide. For traditional mixed-width East Asian legacy character sets, this classification into narrow and wide corresponds with few exceptions directly to the storage size for each character: a few narrow characters use a single byte per character and all other characters (usually wide) use two or more bytes.
+    <br>[https://www.unicode.org/reports/tr11/tr11-35.html#Overview]
+    <a class="clsHide" href="#idCharUcdeawdsn"></a></p>
+  <p id="idCharUcdeawnam">name::
+    <br>* Mcs.Unicode-char'East_Asian_Width-property,
+    <br>* Mcs.Unicode'East_Asian_Width-property,
+    <a class="clsHide" href="#idCharUcdeawnam"></a></p>
+  <p id="idCharUcdeawwpa">addressWpg::
+    <br>* <a href="https://www.unicode.org/reports/tr11/tr11-35.html#Overview">https://www.unicode.org/reports/tr11/</a>,
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/EastAsianWidth.txt,
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedEastAsianWidth.txt,
+    <a class="clsHide" href="#idCharUcdeawwpa"></a></p>
+  <p id="idCharUcdeawSpc">specific::
+    <br>* A-Ambiguous: can be sometimes wide and sometimes narrow,
+    <br>* F-Fullwidth,
+    <br>* H-Halfwidth,
+    <br>* N-Neutral (= Not East Asian),
+    <br>* Na-Narrow,
+    <br>* W-Wide: always wide,
+    <a class="clsHide" href="#idCharUcdeawSpc"></a></p>
+  </section>
+
+  <section id="idCharUcdglcr">
+  <h2 id="idCharUcdglcrH2">General_Category-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdglcrH2"></a></h2>
+  <p id="idCharUcdglcrdsn">description::
+    <br>The General_Category property of a code point provides for the most general classification of that code point.
+    <br>It is usually determined based on the primary characteristic of the assigned character for that code point. For example, is the character a letter, a mark, a number, punctuation, or a symbol, and if so, of what type?
+    <br>Other General_Category values define the classification of code points which are not assigned to regular graphic characters, including such statuses as private-use, control, surrogate code point, and reserved unassigned.
+    <br>[http://www.unicode.org/reports/tr44/#General_Category_Values]
+    <a class="clsHide" href="#idCharUcdglcrdsn"></a></p>
+  <p id="idCharUcdglcrnam">name::
+    <br>* Mcs.Unicode-char'General_Category-property,
+    <br>* Mcs.Unicode'General_Category-property,
+    <a class="clsHide" href="#idCharUcdglcrnam"></a></p>
+  <p id="idCharUcdglcrwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedGeneralCategory.txt,
+    <a class="clsHide" href="#idCharUcdglcrwpa"></a></p>
+  <div id="idCharUcdglcrSpc">
+    <p>specific::
+    <br>[http://www.unicode.org/reports/tr44/#GC_Values_Table]
+    </p>
+    <table>
+      <tr>
+        <td>Abbr<td>Long<td>Description
+      <tr>
+        <td>Lu<td>Uppercase_Letter<td>an uppercase letter
+      <tr>
+        <td>Ll<td>Lowercase_Letter<td>a lowercase letter
+      <tr>
+        <td>Lt<td>Titlecase_Letter<td>a digraphic character, with first part uppercase
+      <tr>
+        <td>LC<td>Cased_Letter<td>Lu | Ll | Lt
+      <tr>
+        <td>Lm<td>Modifier_Letter<td>a modifier letter
+      <tr>
+        <td>Lo<td>Other_Letter<td>other letters, including syllables and ideographs
+      <tr>
+        <td>L<td>Letter<td>Lu | Ll | Lt | Lm | Lo
+      <tr>
+        <td>Mn<td>Nonspacing_Mark<td>a nonspacing combining mark (zero advance width)
+      <tr>
+        <td>Mc<td>Spacing_Mark<td>a spacing combining mark (positive advance width)
+      <tr>
+        <td>Me<td>Enclosing_Mark<td>an enclosing combining mark
+      <tr>
+        <td>M<td>Mark<td>Mn | Mc | Me
+      <tr>
+        <td>Nd<td>Decimal_Number<td>a decimal digit
+      <tr>
+        <td>Nl<td>Letter_Number<td>a letterlike numeric character
+      <tr>
+        <td>No<td>Other_Number<td>a numeric character of other type
+      <tr>
+        <td>N<td>Number<td>Nd | Nl | No
+      <tr>
+        <td>Pc<td>Connector_Punctuation<td>a connecting punctuation mark, like a tie
+      <tr>
+        <td>Pd<td>Dash_Punctuation<td>a dash or hyphen punctuation mark
+      <tr>
+        <td>Ps<td>Open_Punctuation<td>an opening punctuation mark (of a pair)
+      <tr>
+        <td>Pe<td>Close_Punctuation<td>a closing punctuation mark (of a pair)
+      <tr>
+        <td>Pi<td>Initial_Punctuation<td>an initial quotation mark
+      <tr>
+        <td>Pf<td>Final_Punctuation<td>a final quotation mark
+      <tr>
+        <td>Po<td>Other_Punctuation<td>a punctuation mark of other type
+      <tr>
+        <td>P<td>Punctuation<td>Pc | Pd | Ps | Pe | Pi | Pf | Po
+      <tr>
+        <td>Sm<td>Math_Symbol<td>a symbol of mathematical use
+      <tr>
+        <td>Sc<td>Currency_Symbol<td>a currency sign
+      <tr>
+        <td>Sk<td>Modifier_Symbol<td>a non-letterlike modifier symbol
+      <tr>
+        <td>So<td>Other_Symbol<td>a symbol of other type
+      <tr>
+        <td>S<td>Symbol<td>Sm | Sc | Sk | So
+      <tr>
+        <td>Zs<td>Space_Separator<td>a space character (of various non-zero widths)
+      <tr>
+        <td>Zl<td>Line_Separator<td>U+2028 LINE SEPARATOR only
+      <tr>
+        <td>Zp<td>Paragraph_Separator<td>U+2029 PARAGRAPH SEPARATOR only
+      <tr>
+        <td>Z<td>Separator<td>Zs | Zl | Zp
+      <tr>
+        <td>Cc<td>Control<td>a C0 or C1 control code
+      <tr>
+        <td>Cf<td>Format<td>a format control character
+      <tr>
+        <td>Cs<td>Surrogate<td>a surrogate code point
+      <tr>
+        <td>Co<td>Private_Use<td>a private-use character
+      <tr>
+        <td>Cn<td>Unassigned<td>a reserved unassigned code point or a noncharacter
+      <tr>
+        <td>C<td>Other<td>Cc | Cf | Cs | Co | Cn
+    </table>
+    <a class="clsHide" href="#idCharUcdglcrSpc"></a></div>
+  </section>
+
+  <section id="idCharUcdjggp">
+  <h2 id="idCharUcdjggpH2">Joining_Group-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdjggpH2"></a></h2>
+  <p id="idCharUcdjggpdsn">description::
+    <br>The Arabic characters with the property values Joining_Type=Dual_Joining and Joining_Type=Right_Joining can each be subdivided into shaping groups, based on the behavior of their letter skeletons when shaped in context.
+    <br>The Unicode character property that specifies these groups is called Joining_Group.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf]
+    <br>===
+    <br>All code points not explicitly listed for Joining_Group  have the value No_Joining_Group.
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningGroup.txt]
+    <a class="clsHide" href="#idCharUcdjggpdsn"></a></p>
+  <p id="idCharUcdjggpnam">name::
+    <br>* Mcs.Unicode-char'Joining_Group-property,
+    <br>* Mcs.Unicode'Joining_Group-property,
+    <a class="clsHide" href="#idCharUcdjggpnam"></a></p>
+  <p id="idCharUcdjggpwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningGroup.txt,
+    <a class="clsHide" href="#idCharUcdjggpwpa"></a></p>
+  <p id="idCharUcdjggpSpc">specific::
+    <br>* African_Feh,
+    <br>* African_Noon,
+    <br>* African_Qaf,
+    <br>* Ain,
+    <br>* Alaph,
+    <br>* Alef,
+    <br>* Beh,
+    <br>* Beth,
+    <br>* Burushaski_Yeh_Barree,
+    <br>* Dal,
+    <br>* Dalath_Rish,
+    <br>* E,
+    <br>* Farsi_Yeh,
+    <br>* Fe,
+    <br>* Feh,
+    <br>* Final_Semkath,
+    <br>* Gaf,
+    <br>* Gamal,
+    <br>* Hah,
+    <br>* Hanifi_Rohingya_Kinna_Ya,
+    <br>* Hanifi_Rohingya_Pa,
+    <br>* He,
+    <br>* Heh,
+    <br>* Heh_Goal,
+    <br>* Heth,
+    <br>* Kaf,
+    <br>* Kaph,
+    <br>* Khaph,
+    <br>* Knotted_Heh,
+    <br>* Lam,
+    <br>* Lamadh,
+    <br>* Malayalam_Bha,
+    <br>* Malayalam_Ja,
+    <br>* Malayalam_Lla,
+    <br>* Malayalam_Llla,
+    <br>* Malayalam_Nga,
+    <br>* Malayalam_Nna,
+    <br>* Malayalam_Nnna,
+    <br>* Malayalam_Nya,
+    <br>* Malayalam_Ra,
+    <br>* Malayalam_Ssa,
+    <br>* Malayalam_Tta,
+    <br>* Manichaean_Aleph,
+    <br>* Manichaean_Ayin,
+    <br>* Manichaean_Beth,
+    <br>* Manichaean_Daleth,
+    <br>* Manichaean_Dhamedh,
+    <br>* Manichaean_Five,
+    <br>* Manichaean_Gimel,
+    <br>* Manichaean_Heth,
+    <br>* Manichaean_Hundred,
+    <br>* Manichaean_Kaph,
+    <br>* Manichaean_Lamedh,
+    <br>* Manichaean_Mem,
+    <br>* Manichaean_Nun,
+    <br>* Manichaean_One,
+    <br>* Manichaean_Pe,
+    <br>* Manichaean_Qoph,
+    <br>* Manichaean_Resh,
+    <br>* Manichaean_Sadhe,
+    <br>* Manichaean_Samekh,
+    <br>* Manichaean_Taw,
+    <br>* Manichaean_Ten,
+    <br>* Manichaean_Teth,
+    <br>* Manichaean_Thamedh,
+    <br>* Manichaean_Twenty,
+    <br>* Manichaean_Waw,
+    <br>* Manichaean_Yodh,
+    <br>* Manichaean_Zayin,
+    <br>* Meem,
+    <br>* Mim,
+    <br>* Noon,
+    <br>* Nun,
+    <br>* Nya,
+    <br>* Pe,
+    <br>* Qaf,
+    <br>* Qaph,
+    <br>* Reh,
+    <br>* Reversed_Pe,
+    <br>* Rohingya_Yeh,
+    <br>* Sad,
+    <br>* Sadhe,
+    <br>* Seen,
+    <br>* Semkath,
+    <br>* Shin,
+    <br>* Straight_Waw,
+    <br>* Swash_Kaf,
+    <br>* Syriac_Waw,
+    <br>* Tah,
+    <br>* Taw,
+    <br>* Teh_Marbuta,
+    <br>* Teh_Marbuta_Goal,
+    <br>* Teth,
+    <br>* Waw,
+    <br>* Yeh,
+    <br>* Yeh_Barree,
+    <br>* Yeh_With_Tail,
+    <br>* Yudh,
+    <br>* Yudh_He,
+    <br>* Zain,
+    <br>* Zhain,
+    <a class="clsHide" href="#idCharUcdjggpSpc"></a></p>
+  </section>
+
+  <section id="idCharUcdjgtp">
+  <h2 id="idCharUcdjgtpH2">Joining_Type-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdjgtpH2"></a></h2>
+  <p id="idCharUcdjgtpdsn">description::
+    <br>Each Arabic letter must be depicted by one of a number of possible contextual glyph forms.
+    <br>The appropriate form is determined on the basis of the cursive joining behavior of that character as it interacts with the cursive joining behavior of adjacent characters.
+    <br>In the Unicode Standard, such cursive joining behavior is formally described in terms of values of a character property called Joining_Type.
+    [http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf]
+    <br>
+    <br>All code points not explicitly listed for Joining_Type have the value Non_Joining (U).
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningType.txt]
+    <a class="clsHide" href="#idCharUcdjgtpdsn"></a></p>
+  <p id="idCharUcdjgtpnam">name::
+    <br>* Mcs.Unicode-char'Joining_Type-property,
+    <br>* Mcs.Unicode'Joining_Type-property,
+    <a class="clsHide" href="#idCharUcdjgtpnam"></a></p>
+  <p id="idCharUcdjgtpwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningType.txt,
+    <a class="clsHide" href="#idCharUcdjgtpwpa"></a></p>
+  <p id="idCharUcdjgtpSpc">specific::
+    <br>* R-Right_Joining
+    <br>* L-Left_Joining
+    <br>* D-Dual_Joining
+    <br>* C-Join_Causing
+    <br>* U-Non_Joining
+    <br>* T-Transparent,
+    <a class="clsHide" href="#idCharUcdjgtpSpc"></a></p>
+  </section>
+
+  <section id="idCharUcdlnbk">
+  <h2 id="idCharUcdlnbkH2">Line_Break-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdlnbkH2"></a></h2>
+  <p id="idCharUcdlnbkdsn">description::
+    <br>Line breaking, also known as word wrapping, is the process of breaking a section of text into lines such that it will fit in the available width of a page, window or other display area.
+    <br>The Unicode Line Breaking Algorithm performs part of this process.
+    <br>Given an input text, it produces a set of positions called "break opportunities" that are appropriate points to begin a new line.
+    <br>The selection of actual line break positions from the set of break opportunities is not covered by the Unicode Line Breaking Algorithm, but is in the domain of higher level software with knowledge of the available width and the display size of the text.
+    <br>[https://www.unicode.org/reports/tr14/tr14-41.html#Scope]
+    <a class="clsHide" href="#idCharUcdlnbkdsn"></a></p>
+  <p id="idCharUcdlnbknam">name::
+    <br>* Mcs.Unicode-char'Line_Break-property,
+    <br>* Mcs.Unicode'Line_Break-property,
+    <a class="clsHide" href="#idCharUcdlnbknam"></a></p>
+  <p id="idCharUcdlnbkwpa">addressWpg::
+    <br>* https://www.unicode.org/reports/tr14/,
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/LineBreak.txt,
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedLineBreak.txt,
+    <a class="clsHide" href="#idCharUcdlnbkwpa"></a></p>
+  <div id="idCharUcdlnbkSpc">specific::
+    <table>
+      <tr>
+        <td>Class
+        <td>Descriptive Name
+        <td>Examples
+        <td>Behavior
+      <tr>
+      <td class="clsCenter clsB" colspan="4">Non-tailorable Line Breaking Classes
+      <tr>
+        <td>BK
+        <td>Mandatory Break
+        <td>NL, PARAGRAPH SEPARATOR
+        <td>Cause a line break (after)
+      <tr>
+        <td>CR
+        <td>Carriage Return
+        <td>CR
+        <td>Cause a line break (after), except between CR and LF
+      <tr>
+        <td>LF
+        <td>Line Feed
+        <td>LF
+        <td>Cause a line break (after)
+      <tr>
+        <td>CM
+        <td>Combining Mark
+        <td>Combining marks, control codes
+        <td>Prohibit a line break between the character and the preceding character
+      <tr>
+        <td>NL
+        <td>Next Line
+        <td>NEL
+        <td>Cause a line break (after)
+      <tr>
+        <td>SG
+        <td>Surrogate
+        <td>Surrogates
+        <td>Do not occur in well-formed text
+      <tr>
+        <td>WJ
+        <td>Word Joiner
+        <td>WJ
+        <td>Prohibit line breaks before and after
+      <tr>
+        <td>ZW
+        <td>Zero Width Space
+        <td>ZWSP
+        <td>Provide a break opportunity
+      <tr>
+        <td>GL
+        <td>Non-breaking (“Glue”)
+        <td>CGJ, NBSP, ZWNBSP
+        <td>Prohibit line breaks before and after
+      <tr>
+        <td>SP
+        <td>Space
+        <td>SPACE
+        <td>Enable indirect line breaks
+      <tr>
+        <td>ZWJ
+        <td>Zero Width Joiner
+        <td>Zero Width Joiner
+        <td>Prohibit line breaks within joiner sequences
+      <tr>
+      <td class="clsCenter clsB" colspan="4">Break Opportunities
+      <tr>
+        <td>B2
+        <td>Break Opportunity Before and After
+        <td>Em dash
+        <td>Provide a line break opportunity before and after the character
+      <tr>
+        <td>BA
+        <td>Break After
+        <td>Spaces, hyphens
+        <td>Generally provide a line break opportunity after the character
+      <tr>
+        <td>BB
+        <td>Break Before
+        <td>Punctuation used in dictionaries
+        <td>Generally provide a line break opportunity before the character
+      <tr>
+        <td>HY
+        <td>Hyphen
+        <td>HYPHEN-MINUS
+        <td>Provide a line break opportunity after the character, except in numeric context
+      <tr>
+        <td>CB
+        <td>Contingent Break Opportunity
+        <td>Inline objects
+        <td>Provide a line break opportunity contingent on additional information
+      <tr>
+      <td class="clsCenter clsB" colspan="4">Characters Prohibiting Certain Breaks
+      <tr>
+        <td>CL
+        <td>Close Punctuation
+        <td>“}”, “❳”, “⟫” etc.
+        <td>Prohibit line breaks before
+      <tr>
+        <td>CP
+        <td>Close Parenthesis
+        <td>“)”, “]”
+        <td>Prohibit line breaks before
+      <tr>
+        <td>EX
+        <td>Exclamation/<br> Interrogation
+        <td>“!”, “?”, etc.
+        <td>Prohibit line breaks before
+      <tr>
+        <td>IN
+        <td>Inseparable
+        <td>Leaders
+        <td>Allow only indirect line breaks between pairs
+      <tr>
+        <td>NS
+        <td>Nonstarter
+        <td>“‼”, “‽”, “⁇”, “⁉”, etc.
+        <td>Allow only indirect line breaks before
+      <tr>
+        <td>OP
+        <td>Open Punctuation
+        <td>“(“, “[“, “{“, etc.
+        <td>Prohibit line breaks after
+      <tr>
+        <td>QU
+        <td>Quotation
+        <td>Quotation marks
+        <td>Act like they are both opening and closing
+      <tr>
+      <td class="clsCenter clsB" colspan="4">Numeric Context
+      <tr>
+        <td>IS
+        <td>Infix Numeric Separator
+        <td>. ,
+        <td>Prevent breaks after any and before numeric
+      <tr>
+        <td>NU
+        <td>Numeric
+        <td>Digits
+        <td>Form numeric expressions for line breaking purposes
+      <tr>
+        <td>PO
+        <td>Postfix Numeric
+        <td>%, ¢
+        <td>Do not break following a numeric expression
+      <tr>
+        <td>PR
+        <td>Prefix Numeric
+        <td>$, £, ¥, etc.
+        <td>Do not break in front of a numeric expression
+      <tr>
+        <td>SY
+        <td>Symbols Allowing Break After
+        <td>/
+        <td>Prevent a break before, and allow a break after
+      <tr>
+      <td class="clsCenter clsB" colspan="4">Other Characters
+      <tr>
+        <td>AI
+        <td>Ambiguous (Alphabetic or Ideographic)
+        <td>Characters with Ambiguous East Asian Width
+        <td>Act like AL when the resolved <abbr title="East Asian Width">EAW</abbr> is N; otherwise, act as ID
+      <tr>
+        <td>AL
+        <td>Alphabetic
+        <td>Alphabets and regular symbols
+        <td>Are alphabetic characters or symbols that are used with alphabetic characters
+      <tr>
+        <td>CJ
+        <td>Conditional Japanese Starter
+        <td>Small kana
+        <td>Treat as NS or ID for strict or normal breaking.
+       <tr>
+        <td>EB
+        <td>Emoji Base
+        <td>All emoji allowing modifiers
+        <td>Do not break from following Emoji Modifier
+       <tr>
+        <td>EM
+        <td>Emoji Modifier
+        <td>Skin tone modifiers
+        <td>Do not break from preceding Emoji Base
+       <tr>
+        <td>H2
+        <td>Hangul LV Syllable
+        <td>Hangul
+        <td>Form Korean syllable blocks
+      <tr>
+        <td>H3
+        <td>Hangul LVT Syllable
+        <td>Hangul
+        <td>Form Korean syllable blocks
+      <tr>
+        <td>HL
+        <td>Hebrew Letter
+        <td>Hebrew
+        <td>Do not break around a following hyphen; otherwise act as Alphabetic
+      <tr>
+        <td>ID
+        <td>Ideographic
+        <td>Ideographs
+        <td>Break before or after, except in some numeric context
+      <tr>
+        <td>JL
+        <td>Hangul L Jamo
+        <td>Conjoining jamo
+        <td>Form Korean syllable blocks
+      <tr>
+        <td>JV
+        <td>Hangul V Jamo
+        <td>Conjoining jamo
+        <td>Form Korean syllable blocks
+      <tr>
+        <td>JT
+        <td>Hangul T Jamo
+        <td>Conjoining jamo
+        <td>Form Korean syllable blocks
+      <tr>
+        <td>RI
+        <td>Regional Indicator
+        <td>REGIONAL INDICATOR SYMBOL LETTER A .. Z
+        <td>Keep pairs together. For pairs, break before and after other classes
+      <tr>
+        <td>SA
+        <td>Complex Context Dependent (South East Asian)
+        <td>South East Asian: Thai, Lao, Khmer
+        <td>Provide a line break opportunity contingent on additional, language-specific context analysis
+      <tr>
+        <td>XX
+        <td>Unknown
+        <td>Most unassigned, private-use
+        <td>Have as yet unknown line breaking behavior or unassigned code positions
+    </table>
+    <p>[https://www.unicode.org/reports/tr14/tr14-41.html#Table1]
+    </p>
+    <a class="clsHide" href="#idCharUcdlnbkSpc"></a></div>
+  </section>
+
+  <section id="idCharUcdmth">
+  <h2 id="idCharUcdmthH2">Math-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdmthH2"></a></h2>
+  <p id="idCharUcdmthdsn">description::
+    <br>Derived Property: Math
+    <br>Generated from: Sm + Other_Math
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt]
+    <a class="clsHide" href="#idCharUcdmthdsn"></a></p>
+  <p id="idCharUcdmthnam">name::
+    <br>* Mcs.Unicode-char'Math-property,
+    <br>* Mcs.Unicode'Math-property,
+    <a class="clsHide" href="#idCharUcdmthnam"></a></p>
+  <p id="idCharUcdmthwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt,
+    <a class="clsHide" href="#idCharUcdmthwpa"></a></p>
+  </section>
+
+  <section id="idCharUcdnctp">
+  <h2 id="idCharUcdnctpH2">Numeric_Type-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdnctpH2"></a></h2>
+  <p id="idCharUcdnctpdsn">description::
+    <br>Derived Property:   Numeric_Type
+    <br>The values are based on fields 6-8 of UnicodeData.txt, plus the fields kAccountingNumeric, kOtherNumeric, kPrimaryNumeric in the Unicode Han Database (Unihan).
+    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericType.txt]
+    <a class="clsHide" href="#idCharUcdnctpdsn"></a></p>
+  <p id="idCharUcdnctpnam">name::
+    <br>* Mcs.Unicode-char'Numeric_Type-property,
+    <br>* Mcs.Unicode'Numeric_Type-property,
+    <a class="clsHide" href="#idCharUcdnctpnam"></a></p>
+  <p id="idCharUcdnctpwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericType.txt,
+    <a class="clsHide" href="#idCharUcdnctpwpa"></a></p>
+  <p id="idCharUcdnctpSpc">specific::
+    <br>* Decimal: When there is a value in field 6.
+    <br>* Digit:   When there is a value in field 7, but not in field 6.
+    <br>* Numeric: When there are values for kAccountingNumeric, kOtherNumeric, kPrimaryNumeric, or there is a value in field 8, but not in field 7.
+    <br>* None:    Otherwise. All code points not explicitly listed for Numeric_Type have the value None.
+    <a class="clsHide" href="#idCharUcdnctpSpc"></a></p>
+  </section>
+
+  <section id="idCharUcdncvl">
+  <h2 id="idCharUcdncvlH2">Numeric_Value-property of Unicode-char
+    <a class="clsHide" href="#idCharUcdncvlH2"></a></h2>
+  <p id="idCharUcdncvldsn">description::
+    <br>Finally, we have three fields, kAccountingNumeric, kOtherNumeric, and kPrimaryNumeric to indicate the numerical values an ideograph may have.
+    <br>Traditionally, ideographs were used both for numbers and words, and so many ideographs have (or can have) numeric values.
+    <br>The various kinds of numeric values are specified by these three fields.
+    <br>[https://www.unicode.org/reports/tr38/tr38-25.html#N1024D]
+    <a class="clsHide" href="#idCharUcdncvldsn"></a></p>
+  <p id="idCharUcdncvlnam">name::
+    <br>* Mcs.Unicode-char'Numeric_Value-property,
+    <br>* Mcs.Unicode'Numeric_Value-property,
+    <a class="clsHide" href="#idCharUcdncvlnam"></a></p>
+  <p id="idCharUcdncvlwpa">addressWpg::
+    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericValues.txt,
+    <a class="clsHide" href="#idCharUcdncvlwpa"></a></p>
+  </section>
+
+  <section id="idCharUcdprpt">
+  <h2 id="idCharUcdprptH2">property of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptH2"></a></h2>
+  <p id="idCharUcdprptdsn">description::
+    <br>· property of Unicode-char is-called a-generic-attribute of a-Unicode-char, with specifics, called values.
+    <a class="clsHide" href="#idCharUcdprptdsn"></a></p>
+  <p id="idCharUcdprptnam">name::
+    <br>* Mcs.Unicode-char'property,
+    <br>* Mcs.Unicode'property,
+    <a class="clsHide" href="#idCharUcdprptnam"></a></p>
+  <p id="idCharUcdprptwpa">addressWpg::
+    <br>* <a href="http://www.unicode.org/reports/tr44/#Property_Definitions">http://www.unicode.org/reports/tr44/#Property_Definitions</a>,
+    <a class="clsHide" href="#idCharUcdprptwpa"></a></p>
+  <p id="idCharUcdprptSpc">specific::
+    <br>* normative,
+    <br>* overridable,
+    <br>* informative,
+    <br>* contributory,
+    <br>* provisional,
+    <br>===
+    <br>* simple,
+    <br>* derived,
+    <br>===
+    <br>* catalog,
+    <br>* enumeration,
+    <br>* binary,
+    <br>* string,
+    <br>* numeric,
+    <br>* misc,
+    <br>===
+    <br>* complex,
+    <br>===
+    <br>* Age,
+    <br>* Bidi_Class,
+    <br>* Block,
+    <br>* Canonical_Combining_Class,
+    <br>* Decomposition_Type,
+    <br>* East_Asian_Width,
+    <br>* General_Category,
+    <br>* Line_Break,
+    <br>* Numeric_Type,
+    <br>* Numeric_Value,
+    <br>* Script,
+    <br>* Vertical_Orientation,
+    <a class="clsHide" href="#idCharUcdprptSpc"></a></p>
+
+  <section id="idCharUcdprptNrmv">
+  <h3 id="idCharUcdprptNrmvH3">property.NORMATIVE of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptNrmvH3"></a></h3>
+  <p id="idCharUcdprptNrmvdsn">description::
+    <br>Normative property: A Unicode character property used in the specification of the standard.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
+    <a class="clsHide" href="#idCharUcdprptNrmvdsn"></a></p>
+  <p id="idCharUcdprptNrmvnam">name::
+    <br>* Mcs.Unicode-char'property.normative,
+    <br>* Mcs.Unicode'property.normative,
+    <a class="clsHide" href="#idCharUcdprptNrmvnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptOvrl">
+  <h3 id="idCharUcdprptOvrlH3">property.OVERRIDABLE of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptOvrlH3"></a></h3>
+  <p id="idCharUcdprptOvrldsn">description::
+    <br>Overridable property: A normative property whose values may be overridden by conformant higher-level protocols.
+    <br>• For example, the Canonical_Decomposition property is not overridable.  The Uppercase property can be overridden.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
+    <a class="clsHide" href="#idCharUcdprptOvrldsn"></a></p>
+  <p id="idCharUcdprptOvrlnam">name::
+    <br>* Mcs.Unicode-char'property.overridable,
+    <br>* Mcs.Unicode'property.overridable,
+    <a class="clsHide" href="#idCharUcdprptOvrlnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptInfv">
+  <h3 id="idCharUcdprptInfvH3">property.INFORMATIVE of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptInfvH3"></a></h3>
+  <p id="idCharUcdprptInfvdsn">description::
+    <br>Informative property: A Unicode character property whose values are provided for information only.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
+    <a class="clsHide" href="#idCharUcdprptInfvdsn"></a></p>
+  <p id="idCharUcdprptInfvnam">name::
+    <br>* Mcs.Unicode-char'property.informative,
+    <br>* Mcs.Unicode'property.informative,
+    <a class="clsHide" href="#idCharUcdprptInfvnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptCrbr">
+  <h3 id="idCharUcdprptCrbrH3">property.CONTRIBUTORY of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptCrbrH3"></a></h3>
+  <p id="idCharUcdprptCrbrdsn">description::
+    <br>Contributory property:  A simple property defined merely to make the statement of a rule defining a derived property more compact or general.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
+    <a class="clsHide" href="#idCharUcdprptCrbrdsn"></a></p>
+  <p id="idCharUcdprptCrbrnam">name::
+    <br>* Mcs.Unicode-char'property.contributory,
+    <br>* Mcs.Unicode'property.contributory,
+    <a class="clsHide" href="#idCharUcdprptCrbrnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptPvsl">
+  <h3 id="idCharUcdprptPvslH3">property.PROVISIONAL of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptPvslH3"></a></h3>
+  <p id="idCharUcdprptPvsldsn">description::
+    <br>Provisional property: A Unicode character property whose values are unapproved and tentative, and which may be incomplete or otherwise not in a usable state.
+    <br>• Provisional properties may be removed from future versions of the standard, without prior notice.
+    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
+    <a class="clsHide" href="#idCharUcdprptPvsldsn"></a></p>
+  <p id="idCharUcdprptPvslnam">name::
+    <br>* Mcs.Unicode-char'property.provisional,
+    <br>* Mcs.Unicode'property.provisional,
+    <a class="clsHide" href="#idCharUcdprptPvslnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptSmpl">
+  <h3 id="idCharUcdprptSmplH3">property.SIMPLE of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptSmplH3"></a></h3>
+  <p id="idCharUcdprptSmpldsn">description::
+    <br>Some character properties in the UCD are simple properties. This status has no bearing on whether or not the properties are normative, but merely indicates that their values are not derived from some combination of other properties.
+    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Simple_Props]
+    <a class="clsHide" href="#idCharUcdprptSmpldsn"></a></p>
+  <p id="idCharUcdprptSmplnam">name::
+    <br>* Mcs.Unicode-char'simple-property,
+    <br>* Mcs.Unicode-char'property.derivedNo,
+    <br>* Mcs.Unicode-char'property.simple,
+    <br>* Mcs.Unicode'property.derivedNo,
+    <br>* Mcs.Unicode'property.simple,
+    <a class="clsHide" href="#idCharUcdprptSmplnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptDrvd">
+  <h3 id="idCharUcdprptDrvdH3">property.DERIVED of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptDrvdH3"></a></h3>
+  <p id="idCharUcdprptDrvddsn">description::
+    <br>Other character properties are derived. This means that their values are derived by rule from some other combination of properties. Generally such rules are stated as set operations, and may or may not include explicit exception lists for individual characters.
+    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Derived_Props]
+    <a class="clsHide" href="#idCharUcdprptDrvddsn"></a></p>
+  <p id="idCharUcdprptDrvdnam">name::
+    <br>* Mcs.Unicode-char'derived-property,
+    <br>* Mcs.Unicode-char'property.derived,
+    <br>* Mcs.Unicode'property.derived,
+    <a class="clsHide" href="#idCharUcdprptDrvdnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptBnr">
+  <h3 id="idCharUcdprptBnrH3">property.BINARY of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptBnrH3"></a></h3>
+  <p id="idCharUcdprptBnrdsn">description::
+    <br>Binary properties are a special case of Enumeration properties, which have exactly two values: Yes and No (or True and False).
+    <br>[http://www.unicode.org/reports/tr44/#Type_Key_Table]
+    <a class="clsHide" href="#idCharUcdprptBnrdsn"></a></p>
+  <p id="idCharUcdprptBnrnam">name::
+    <br>* Mcs.Unicode-char'binary-property,
+    <br>* Mcs.Unicode-char'property.binary,
+    <br>* Mcs.Unicode'property.binary,
+    <a class="clsHide" href="#idCharUcdprptBnrnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptCtlg">
+  <h3 id="idCharUcdprptCtlgH3">property.CATALOG of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptCtlgH3"></a></h3>
+  <p id="idCharUcdprptCtlgdsn">description::
+    <br>Catalog properties have enumerated values which are expected to be regularly extended in successive versions of the Unicode Standard. This distinguishes them from Enumeration properties.
+    <br>[http://www.unicode.org/reports/tr44/#Type_Key_Table]
+    <a class="clsHide" href="#idCharUcdprptCtlgdsn"></a></p>
+  <p id="idCharUcdprptCtlgnam">name::
+    <br>* Mcs.Unicode-char'catalog-property,
+    <br>* Mcs.Unicode-char'property.catalog,
+    <br>* Mcs.Unicode'property.catalog,
+    <a class="clsHide" href="#idCharUcdprptCtlgnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptEnmn">
+  <h3 id="idCharUcdprptEnmnH3">property.ENUMERATION of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptEnmnH3"></a></h3>
+  <p id="idCharUcdprptEnmndsn">description::
+    <br>Enumeration properties have enumerated values which constitute a logical partition space; new values will generally not be added to them in successive versions of the standard.
+    <br>[http://www.unicode.org/reports/tr44/#Type_Key_Table]
+    <a class="clsHide" href="#idCharUcdprptEnmndsn"></a></p>
+  <p id="idCharUcdprptEnmnnam">name::
+    <br>* Mcs.Unicode-char'enumeration-property,
+    <br>* Mcs.Unicode-char'property.enumeration,
+    <br>* Mcs.Unicode'property.enumeration,
+    <a class="clsHide" href="#idCharUcdprptEnmnnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptStrg">
+  <h3 id="idCharUcdprptStrgH3">property.STRING of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptStrgH3"></a></h3>
+  <p id="idCharUcdprptStrgdsn">description::
+    <br>String properties are typically mappings from a Unicode code point to another Unicode code point or sequence of Unicode code points; examples include case mappings and decomposition mappings.
+    <br>[http://www.unicode.org/reports/tr44/#Type_Key_Table]
+    <a class="clsHide" href="#idCharUcdprptStrgdsn"></a></p>
+  <p id="idCharUcdprptStrgnam">name::
+    <br>* Mcs.Unicode-char'string-property,
+    <br>* Mcs.Unicode-char'property.string,
+    <br>* Mcs.Unicode'property.string,
+    <a class="clsHide" href="#idCharUcdprptStrgnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptNmrc">
+  <h3 id="idCharUcdprptNmrcH3">property.NUMERIC of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptNmrcH3"></a></h3>
+  <p id="idCharUcdprptNmrcdsn">description::
+    <br>Numeric properties specify the actual numeric values for digits and other characters associated with numbers in some way.
+    <br>[http://www.unicode.org/reports/tr44/#Type_Key_Table]
+    <a class="clsHide" href="#idCharUcdprptNmrcdsn"></a></p>
+  <p id="idCharUcdprptNmrcnam">name::
+    <br>* Mcs.Unicode-char'numeric-property,
+    <br>* Mcs.Unicode'property.numeric,
+    <a class="clsHide" href="#idCharUcdprptNmrcnam"></a></p>
+  </section>
+
+  <section id="idCharUcdprptMisc">
+  <h3 id="idCharUcdprptMiscH3">property.MISC of Unicode-char
+    <a class="clsHide" href="#idCharUcdprptMiscH3"></a></h3>
+  <p id="idCharUcdprptMiscdsn">description::
+    <br>Miscellaneous properties are those properties that do not fit neatly into the other property categories; they currently include character names, comments about characters, the Script_Extensions property, the Equivalent_Unified_Ideograph property, and the Unicode_Radical_Stroke property (a combination of numeric values) documented in Unicode Standard Annex #38, "Unicode Han Database (Unihan)" [UAX38].
+    <br>[http://www.unicode.org/reports/tr44/#Type_Key_Table]
+    <a class="clsHide" href="#idCharUcdprptMiscdsn"></a></p>
+  <p id="idCharUcdprptMiscnam">name::
+    <br>* Mcs.Unicode-char'misc-property,
+    <br>* Mcs.Unicode-char'property.misc,
+    <br>* Mcs.Unicode'property.misc,
+    <a class="clsHide" href="#idCharUcdprptMiscnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCharUcdstrd">
+  <h2 id="idCharUcdstrdH2">Unicode-STANDARD of Unicode-char
+    <a class="clsHide" href="#idCharUcdstrdH2"></a></h2>
+  <p id="idCharUcdstrddsn">description::
+    <br>· Unicode is a computing-industry standard for the consistent encoding, representation, and handling of <a class="clsPreview" href="#idCharCmr">computer-chars</a>.
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-24]
+    <a class="clsHide" href="#idCharUcdstrddsn"></a></p>
+  <p id="idCharUcdstrdnam">name::
+    <br>* Mcs.Unicode-char'standard!⇒Unicode,
+    <br>* Mcs.Unicode,
+    <br>* Mcs.Unicode'(Unicode-standard)!⇒Unicode,
+    <br>* Mcs.Unicode-standard!⇒Unicode,
+    <a class="clsHide" href="#idCharUcdstrdnam"></a></p>
+
+  <section id="idCharUcdstdcp">
+  <h3 id="idCharUcdstdcpH3">code-point of Unicode
+    <a class="clsHide" href="#idCharUcdstdcpH3"></a></h3>
+  <p id="idCharUcdstdcpdsn">description::
+    <br>· code-point of Unicode is a-UNIQUE number, from a-sequence of numbers, reserved by the-standard, used to assign chars and other usefull entities for the-standard, written in hexadecimal-format (U+FFFF with 4 to 6 digits) or decimal-format.
+    <br>· the-Unicode-standard reserves 65,536 x 17 = 1,114,112 code-points.
+    <br>· the-chars assigned are 137,439 in version'11-0-0.2018.
+    <a class="clsHide" href="#idCharUcdstdcpdsn"></a></p>
+  <p id="idCharUcdstdcpnam">name::
+    <br>* Mcs.Unicode'code-point!⇒Unicode--code-point,
+    <br>* Mcs.Unicode--code-point,
+    <a class="clsHide" href="#idCharUcdstdcpnam"></a></p>
+
+  <section id="idCharUcdstdcpchr">
+  <h4 id="idCharUcdstdcpchrH4">char of code-point (<a class="clsPreview" href="#idCharUcd">link</a>)
+    <a class="clsHide" href="#idCharUcdstdcpchrH4"></a></h4>
+  </section>
+
+  <section id="idCharUcdstdcpAgg">
+  <h4 id="idCharUcdstdcpAggH4">code-point.aggregate
+    <a class="clsHide" href="#idCharUcdstdcpAggH4"></a></h4>
+  <p id="idCharUcdstdcpAggdsn">description::
+    <br>· Unicode--code-space is the aggregate code-points of <a class="clsPreview" href="#idCharUcdstrd">the-standard</a>, 65,536 x 17 = 1,114,112, that reserves to assign chars or reserved for surrogates, internal-use or private-use..
+    <a class="clsHide" href="#idCharUcdstdcpAggdsn"></a></p>
+  <p id="idCharUcdstdcpAggnam">name::
+    <br>* Mcs.Unicode-char'code-space,
+    <br>* Mcs.code-space--of-Unicode,
+    <br>* Mcs.Unicode'code-space,
+    <a class="clsHide" href="#idCharUcdstdcpAggnam"></a></p>
+  </section>
+
+  <section id="idCharUcdstdcpPln">
+  <h4 id="idCharUcdstdcpPlnH4">code-point.plane of Unicode
+    <a class="clsHide" href="#idCharUcdstdcpPlnH4"></a></h4>
+  <p id="idCharUcdstdcpPlndsn">description::
     <br>In the Unicode standard, a plane is a continuous group of 65,536 (2<sup>16</sup>) code points.
     <br>There are 17 planes, identified by the numbers 0 to 16, which corresponds with the possible values 00–10<sub>16</sub> of the first two positions in six position hexadecimal format (U+<strong>hh</strong>hhhh).
     <br>The very last code point in Unicode is the last code point in plane 16, U+10FFFF.
@@ -283,51 +1444,48 @@
     <br>The higher planes 1 through 16 are called "supplementary planes".
     <br>As of Unicode version 11.0, six of the planes have assigned code points (characters), and four are named.
     <br>[https://en.wikipedia.org/wiki/Plane_(Unicode), {2018-06-24}]
-    <a class="clsHide" href="#idCharUcdcpPlanedsn"></a></p>
-  <p id="idCharUcdcpPlanenam">name::
-    <br>* cpt.char.Unicode'plane,
-    <br>* cpt.plane-of-Unicode,
-    <br>* cpt.Unicode-char'plane,
-    <br>* cpt.Unicode'plane,
-    <br>* cpt.Unicode-plane,
-    <a class="clsHide" href="#idCharUcdcpPlanenam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpPlndsn"></a></p>
+  <p id="idCharUcdstdcpPlnnam">name::
+    <br>* Mcs.Unicode-char'plane!⇒Unicode-plane,
+    <br>* Mcs.Unicode'plane!⇒Unicode-plane,
+    <br>* Mcs.Unicode-plane,
+    <br>* Mcs.plane-of-Unicode!⇒Unicode-plane,
+    <a class="clsHide" href="#idCharUcdstdcpPlnnam"></a></p>
 
-  <section id="idCharUcdcpPlane0">
-  <h4 id="idCharUcdcpPlane0H4">plane.0 (BMP)
-    <a class="clsHide" href="#idCharUcdcpPlane0H4"></a></h4>
-  <p id="idCharUcdcpPlane0dsn">description::
+  <section id="idCharUcdstdcpPln0">
+  <h5 id="idCharUcdstdcpPln0H5">plane.0 (BMP)
+    <a class="clsHide" href="#idCharUcdstdcpPln0H5"></a></h5>
+  <p id="idCharUcdstdcpPln0dsn">description::
     <br>The first plane, plane 0, the Basic Multilingual Plane (BMP) contains characters for almost all modern languages, and a large number of symbols. A primary objective for the BMP is to support the unification of prior character sets as well as characters for writing. Most of the assigned code points in the BMP are used to encode Chinese, Japanese, and Korean (CJK) characters.
     <br>The High Surrogates (U+D800–U+DBFF) and Low Surrogate (U+DC00–U+DFFF) codes are reserved for encoding non-BMP characters in UTF-16 by using a pair of 16-bit codes: one High Surrogate and one Low Surrogate. A single surrogate code point will never be assigned a character.
     <br>65,472 of the 65,536 code points in this plane have been allocated to a Unicode block, leaving just 64 code points in unallocated ranges (48 code points at 0870..089F and 16 code points at 2FE0..2FEF).
     <br>As of Unicode 11.0, the BMP comprises the following 163 blocks:
     <br>[https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane]
-    <a class="clsHide" href="#idCharUcdcpPlane0dsn"></a></p>
-  <p id="idCharUcdcpPlane0nam">name::
-    <br>* cpt.BMP-Basic-Multilingual-Plane--of-Unicode,
-    <br>* cpt.char.Unicode'plane.0-BMP-Basic-Multilingual-Plane,
-    <br>* cpt.Unicode'plane.0-BMP-Basic-Multilingual-Plane,
-    <a class="clsHide" href="#idCharUcdcpPlane0nam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpPln0dsn"></a></p>
+  <p id="idCharUcdstdcpPln0nam">name::
+    <br>* Mcs.BMP-Basic-Multilingual-Plane--of-Unicode,
+    <br>* Mcs.Unicode-plane.0-BMP-Basic-Multilingual-Plane,
+    <a class="clsHide" href="#idCharUcdstdcpPln0nam"></a></p>
   </section>
 
-  <section id="idCharUcdcpPlane1">
-  <h4 id="idCharUcdcpPlane1H4">plane.1 (SMP)
-    <a class="clsHide" href="#idCharUcdcpPlane1H4"></a></h4>
-  <p id="idCharUcdcpPlane1dsn">description::
+  <section id="idCharUcdstdcpPln1">
+  <h5 id="idCharUcdstdcpPln1H5">plane.1 (SMP)
+    <a class="clsHide" href="#idCharUcdstdcpPln1H5"></a></h5>
+  <p id="idCharUcdstdcpPln1dsn">description::
     <br>Plane 1, the Supplementary Multilingual Plane (SMP), contains historic scripts (except CJK ideographic), and symbols and notation used within certain fields. Scripts include Linear B, Egyptian hieroglyphs, and cuneiform scripts. It also includes English reform orthographies like Shavian and Deseret, and some modern scripts like Osage, Warang Citi, and Adlam. Symbols and notations include historic and modern musical notation; mathematical alphanumerics; Emoji and other pictographic sets; and game symbols for playing cards, Mah Jongg, and dominoes.
     <br>As of Unicode 11.0, the SMP comprises the following 118 blocks:
     <br>[https://en.wikipedia.org/wiki/Plane_(Unicode)#Supplementary_Multilingual_Plane]
-    <a class="clsHide" href="#idCharUcdcpPlane1dsn"></a></p>
-  <p id="idCharUcdcpPlane1nam">name::
-    <br>* cpt.char.Unicode'plane.1-SMP-Supplementary-Multilingual-Plane,
-    <br>* cpt.SMP-Supplementary-Multilingual-Plane--of-Unicode,
-    <br>* cpt.Unicode'plane.1-SMP-Supplementary-Multilingual-Plane,
-    <a class="clsHide" href="#idCharUcdcpPlane1nam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpPln1dsn"></a></p>
+  <p id="idCharUcdstdcpPln1nam">name::
+    <br>* Mcs.SMP-Supplementary-Multilingual-Plane--of-Unicode,
+    <br>* Mcs.Unicode-plane.1-SMP-Supplementary-Multilingual-Plane,
+    <a class="clsHide" href="#idCharUcdstdcpPln1nam"></a></p>
   </section>
 
-  <section id="idCharUcdcpPlane2">
-  <h4 id="idCharUcdcpPlane2H4">plane.2 (SIP)
-    <a class="clsHide" href="#idCharUcdcpPlane2H4"></a></h4>
-  <p id="idCharUcdcpPlane2dsn">description::
+  <section id="idCharUcdstdcpPln2">
+  <h5 id="idCharUcdstdcpPln2H5">plane.2 (SIP)
+    <a class="clsHide" href="#idCharUcdstdcpPln2H5"></a></h5>
+  <p id="idCharUcdstdcpPln2dsn">description::
     <br>Plane 2, the Supplementary Ideographic Plane (SIP), is used for CJK Ideographs, mostly CJK Unified Ideographs, that were not included in earlier character encoding standards.
     <br>As of Unicode 11.0, the SIP comprises the following six blocks:
     <br>* CJK Unified Ideographs Extension B (20000–2A6DF)
@@ -337,78 +1495,73 @@
     <br>* CJK Unified Ideographs Extension F (2CEB0–2EBEF)
     <br>* CJK Compatibility Ideographs Supplement (2F800–2FA1F)
     <br>[https://en.wikipedia.org/wiki/Plane_(Unicode)#Supplementary_Ideographic_Plane]
-    <a class="clsHide" href="#idCharUcdcpPlane2dsn"></a></p>
-  <p id="idCharUcdcpPlane2nam">name::
-    <br>* cpt.char.Unicode'plane.2-SIP-Supplementary-Ideographic-Plane,
-    <br>* cpt.SIP-Supplementary-Ideographic-Plane--of-Unicode,
-    <br>* cpt.Unicode'plane.2-SIP-Supplementary-Ideographic-Plane,
-    <a class="clsHide" href="#idCharUcdcpPlane2nam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpPln2dsn"></a></p>
+  <p id="idCharUcdstdcpPln2nam">name::
+    <br>* Mcs.SIP-Supplementary-Ideographic-Plane--of-Unicode,
+    <br>* Mcs.Unicode-plane.2-SIP-Supplementary-Ideographic-Plane,
+    <a class="clsHide" href="#idCharUcdstdcpPln2nam"></a></p>
   </section>
 
-  <section id="idCharUcdcpPlane14">
-  <h4 id="idCharUcdcpPlane14H4">plane.14 (SSP)
-    <a class="clsHide" href="#idCharUcdcpPlane14H4"></a></h4>
-  <p id="idCharUcdcpPlane14dsn">description::
+  <section id="idCharUcdstdcpPln14">
+  <h5 id="idCharUcdstdcpPln14H5">plane.14 (SSP)
+    <a class="clsHide" href="#idCharUcdstdcpPln14H5"></a></h5>
+  <p id="idCharUcdstdcpPln14dsn">description::
     <br>Plane 14 (E in hexadecimal), the Supplementary Special-purpose Plane (SSP), currently contains non-graphical characters. The first block is for special use tag characters. The other block contains glyph variation selectors to indicate an alternate glyph for a character that cannot be determined by context.
     <br>As of Unicode 11.0, the SSP comprises the following two blocks:
     <br>* Tags (E0000–E007F)
     <br>* Variation Selectors Supplement (E0100–E01EF)
-    <a class="clsHide" href="#idCharUcdcpPlane14dsn"></a></p>
-  <p id="idCharUcdcpPlane14nam">name::
-    <br>* cpt.char.Unicode'plane.14-SSP-Supplementary-Special-purpose-Plane,
-    <br>* cpt.SSP-Supplementary-Special-purpose-Plane--of-Unicode,
-    <br>* cpt.Unicode'plane.14-SSP-Supplementary-Special-purpose-Plane,
-    <a class="clsHide" href="#idCharUcdcpPlane14nam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpPln14dsn"></a></p>
+  <p id="idCharUcdstdcpPln14nam">name::
+    <br>* Mcs.SSP-Supplementary-Special-purpose-Plane--of-Unicode,
+    <br>* Mcs.Unicode-plane.14-SSP-Supplementary-Special-purpose-Plane,
+    <a class="clsHide" href="#idCharUcdstdcpPln14nam"></a></p>
   </section>
 
-  <section id="idCharUcdcpPlaneSpmr">
-  <h4 id="idCharUcdcpPlaneSpmrH4">plane.SUPPLEMENTARY
-    <a class="clsHide" href="#idCharUcdcpPlaneSpmrH4"></a></h4>
-  <p id="idCharUcdcpPlaneSpmrdsn">description::
+  <section id="idCharUcdstdcpPlnSpmr">
+  <h5 id="idCharUcdstdcpPlnSpmrH5">plane.SUPPLEMENTARY
+    <a class="clsHide" href="#idCharUcdstdcpPlnSpmrH5"></a></h5>
+  <p id="idCharUcdstdcpPlnSpmrdsn">description::
     <br>· the-planes 1 through 16 are-called "supplementary-planes".
-    <a class="clsHide" href="#idCharUcdcpPlaneSpmrdsn"></a></p>
-  <p id="idCharUcdcpPlaneSpmrnam">name::
-    <br>* cpt.char.Unicode'plane.supplementary,
-    <br>* cpt.supplementary-plane--of-Unicode,
-    <br>* cpt.Unicode'plane.supplementary,
-    <a class="clsHide" href="#idCharUcdcpPlaneSpmrnam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpPlnSpmrdsn"></a></p>
+  <p id="idCharUcdstdcpPlnSpmrnam">name::
+    <br>* Mcs.supplementary-plane--of-Unicode,
+    <br>* Mcs.Unicode-plane.supplementary,
+    <a class="clsHide" href="#idCharUcdstdcpPlnSpmrnam"></a></p>
   </section>
 
-  <section id="idCharUcdcpPlaneUnsd">
-  <h4 id="idCharUcdcpPlaneUnsdH4">plane.UNASSIGNED
-    <a class="clsHide" href="#idCharUcdcpPlaneUnsdH4"></a></h4>
-  <p id="idCharUcdcpPlaneUnsddsn">description::
+  <section id="idCharUcdstdcpPlnUnsd">
+  <h5 id="idCharUcdstdcpPlnUnsdH5">plane.UNASSIGNED
+    <a class="clsHide" href="#idCharUcdstdcpPlnUnsdH5"></a></h5>
+  <p id="idCharUcdstdcpPlnUnsddsn">description::
     <br>Planes 3 to 13 (planes 3 to D in hexadecimal): No characters have yet been assigned to Planes 3 through 13. Plane 3 is tentatively named the Tertiary Ideographic Plane (TIP), but as of version 11.0 there are no characters assigned to it. It is reserved for Oracle Bone script, Bronze Script, Small Seal Script, additional CJK unified ideographs, supplement characters for existing scripts, and other historic ideographic scripts.
     <br>It is not anticipated that all these planes will be used in the foreseeable future, given the total sizes of the known writing systems left to be encoded. The number of possible symbol characters that could arise outside of the context of writing systems is potentially huge. At the moment, these 11 planes out of 17 are unused.
     <br>[https://en.wikipedia.org/wiki/Plane_(Unicode)#Unassigned_planes]
-    <a class="clsHide" href="#idCharUcdcpPlaneUnsddsn"></a></p>
-  <p id="idCharUcdcpPlaneUnsdnam">name::
-    <br>* cpt.char.Unicode'plane.unassigned,
-    <br>* cpt.unassigned-plane--of-Unicode,
-    <br>* cpt.unused-plane--of-Unicode,
-    <br>* cpt.Unicode'plane.unassigned,
-    <a class="clsHide" href="#idCharUcdcpPlaneUnsdnam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpPlnUnsddsn"></a></p>
+  <p id="idCharUcdstdcpPlnUnsdnam">name::
+    <br>* Mcs.unassigned-plane--of-Unicode,
+    <br>* Mcs.unused-plane--of-Unicode,
+    <br>* Mcs.Unicode-plane.unassigned,
+    <a class="clsHide" href="#idCharUcdstdcpPlnUnsdnam"></a></p>
   </section>
 
-  <section id="idCharUcdcpPlanePtua">
-  <h4 id="idCharUcdcpPlanePtuaH4">plane.PRIVATE-USE-AREA
-    <a class="clsHide" href="#idCharUcdcpPlanePtuaH4"></a></h4>
-  <p id="idCharUcdcpPlanePtuadsn">description::
+  <section id="idCharUcdstdcpPlnPtua">
+  <h5 id="idCharUcdstdcpPlnPtuaH5">plane.PRIVATE-USE-AREA
+    <a class="clsHide" href="#idCharUcdstdcpPlnPtuaH5"></a></h5>
+  <p id="idCharUcdstdcpPlnPtuadsn">description::
     <br>The two planes 15 and 16 (planes F and 10 in hexadecimal), are designated as "private use planes". They contain blocks called Supplementary Private Use Area-A (PUA-A) and -B (PUA-B), Private Use Areas, which are available for character assignment by parties outside the ISO and the Unicode Consortium. They are used by fonts internally to refer to auxiliary glyphs, for example, ligatures and building blocks for other glyphs. Such characters will have limited interoperability. Software and fonts that support Unicode will not necessarily support character assignments by other parties.
     <br>[https://en.wikipedia.org/wiki/Plane_(Unicode)#Private_Use_Area_planes]
-    <a class="clsHide" href="#idCharUcdcpPlanePtuadsn"></a></p>
-  <p id="idCharUcdcpPlanePtuanam">name::
-    <br>* cpt.char.Unicode'plane.PUA-Private-Use-Area,
-    <br>* cpt.PUA-Private-Use-Area-plane--of-Unicode,
-    <br>* cpt.Unicode'plane.PUA-Private-Use-Area,
-    <a class="clsHide" href="#idCharUcdcpPlanePtuanam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpPlnPtuadsn"></a></p>
+  <p id="idCharUcdstdcpPlnPtuanam">name::
+    <br>* Mcs.PUA-Private-Use-Area-plane--of-Unicode,
+    <br>* Mcs.Unicode-plane.PUA-Private-Use-Area,
+    <a class="clsHide" href="#idCharUcdstdcpPlnPtuanam"></a></p>
   </section>
   </section>
 
-  <section id="idCharUcdcpBlock">
-  <h3 id="idCharUcdcpBlockH3">code-point.BLOCK
-    <a class="clsHide" href="#idCharUcdcpBlockH3"></a></h3>
-  <p id="idCharUcdcpBlockdsn">description::
+  <section id="idCharUcdstdcpBlk">
+  <h4 id="idCharUcdstdcpBlkH4">code-point.block of Unicode
+    <a class="clsHide" href="#idCharUcdstdcpBlkH4"></a></h4>
+  <p id="idCharUcdstdcpBlkdsn">description::
     <br>A block is a uniquely named, contiguous range of code points.
     <br>It is identified by its first and last code point.
     <br>Blocks do not overlap.
@@ -416,55 +1569,58 @@
     <br>Each character that is assigned, has a single "block name" value from the 291 names assigned as of Unicode version 11.0.
     <br>Unassigned code points outside of an existing block, have the default value "No_block".
     <br>[https://en.wikipedia.org/wiki/Unicode_character_property#Block {2018-06-26}]
-    <a class="clsHide" href="#idCharUcdcpBlockdsn"></a></p>
-  <p id="idCharUcdcpBlocknam">name::
-    <br>* cpt.block-of-Unicode,
-    <br>* cpt.char.Unicode'block,
-    <br>* cpt.Unicode'block,
-    <br>* cpt.Unicode'char'block,
-    <br>* cpt.Unicode-block,
-    <a class="clsHide" href="#idCharUcdcpBlocknam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpBlkdsn"></a></p>
+  <p id="idCharUcdstdcpBlknam">name::
+    <br>* Mcs.Unicode'block!⇒Unicode-block,
+    <br>* Mcs.Unicode-char'block!⇒Unicode-block,
+    <br>* Mcs.Unicode-block,
+    <br>* Mcs.block-of-Unicode!⇒Unicode-block,
+    <a class="clsHide" href="#idCharUcdstdcpBlknam"></a></p>
 
-  <section id="idCharUcdcpBlockpln">
-  <h4 id="idCharUcdcpBlockplnH4">plane of Unicode-block
-    <a class="clsHide" href="#idCharUcdcpBlockplnH4"></a></h4>
-  <p id="idCharUcdcpBlockplndsn">description::
-    <br>· every <a class="clsPreview" href="#idCharUcdcpBlock">block</a> is part of <a class="clsPreview" href="#idCharUcdcpPlane">a-plane</a>.
-    <a class="clsHide" href="#idCharUcdcpBlockplndsn"></a></p>
-  <p id="idCharUcdcpBlockplnnam">name::
-    <br>* cpt.Unicode'block'plane,
-    <a class="clsHide" href="#idCharUcdcpBlockplnnam"></a></p>
+  <section id="idCharUcdstdcpBlkpln">
+  <h5 id="idCharUcdstdcpBlkplnH5">plane of Unicode-block
+    <a class="clsHide" href="#idCharUcdstdcpBlkplnH5"></a></h5>
+  <p id="idCharUcdstdcpBlkplndsn">description::
+    <br>· every <a class="clsPreview" href="#idCharUcdstdcpBlk">block</a> is part of <a class="clsPreview" href="#idCharUcdstdcpPln">a-plane</a>.
+    <a class="clsHide" href="#idCharUcdstdcpBlkplndsn"></a></p>
+  <p id="idCharUcdstdcpBlkplnnam">name::
+    <br>* Mcs.Unicode-block'plane,
+    <a class="clsHide" href="#idCharUcdstdcpBlkplnnam"></a></p>
   </section>
 
-  <section id="idCharUcdcpBlockcp">
-  <h4 id="idCharUcdcpBlockcpH4">code-point of Unicode-block
-    <a class="clsHide" href="#idCharUcdcpBlockcpH4"></a></h4>
-  <p id="idCharUcdcpBlockcpdsn">description::
-    <br>· every block contains some <a class="clsPreview" href="#idCharUcdcp">code-points</a>.
-    <br>· there are 280,752 code-points in 291 blocks in <a class="clsPreview" href="#idCharUcdstd11002018">Unicode.11-0-0.2018</a> and 137,439 chars assigned to them.
+  <section id="idCharUcdstdcpBlkcp">
+  <h5 id="idCharUcdstdcpBlkcpH5">code-point of Unicode-block
+    <a class="clsHide" href="#idCharUcdstdcpBlkcpH5"></a></h5>
+  <p id="idCharUcdstdcpBlkcpdsn">description::
+    <br>· every block contains some <a class="clsPreview" href="#idCharUcdstdcp">code-points</a>.
+    <br>· there are 1,114,112 code-points in 291 blocks in <a class="clsPreview" href="#idCharUcdstd11002018">Unicode.11-0-0.2018</a> and 137,439 chars assigned to them.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
-    <a class="clsHide" href="#idCharUcdcpBlockcpdsn"></a></p>
-  <p id="idCharUcdcpBlockcpnam">name::
-    <br>* cpt.Unicode'block'code-point,
-    <a class="clsHide" href="#idCharUcdcpBlockcpnam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpBlkcpdsn"></a></p>
+  <p id="idCharUcdstdcpBlkcpnam">name::
+    <br>* Mcs.Unicode-block'code-point,
+    <a class="clsHide" href="#idCharUcdstdcpBlkcpnam"></a></p>
   </section>
 
-  <section id="idCharUcdcpBlockchr">
-  <h4 id="idCharUcdcpBlockchrH4">char of Unicode-block
-    <a class="clsHide" href="#idCharUcdcpBlockchrH4"></a></h4>
-  <p id="idCharUcdcpBlockchrdsn">description::
-    <br>· from 280,752 code-points in 291 blocks in <a class="clsPreview" href="#idCharUcdstd11002018">Unicode.11-0-0.2018</a> ONLY 137,439 are-assigned with chars.
+  <section id="idCharUcdstdcpBlkchr">
+  <h5 id="idCharUcdstdcpBlkchrH5">char of Unicode-block
+    <a class="clsHide" href="#idCharUcdstdcpBlkchrH5"></a></h5>
+  <p id="idCharUcdstdcpBlkchrdsn">description::
+    <br>· from 1,114,112 code-points in 291 blocks in <a class="clsPreview" href="#idCharUcdstd11002018">Unicode.11-0-0.2018</a> ONLY 137,439 are-assigned with chars.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
-    <a class="clsHide" href="#idCharUcdcpBlockchrdsn"></a></p>
-  <p id="idCharUcdcpBlockchrnam">name::
-    <br>* cpt.Unicode'block'char,
-    <a class="clsHide" href="#idCharUcdcpBlockchrnam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpBlkchrdsn"></a></p>
+  <p id="idCharUcdstdcpBlkchrnam">name::
+    <br>* Mcs.Unicode-block'char,
+    <a class="clsHide" href="#idCharUcdstdcpBlkchrnam"></a></p>
   </section>
 
-  <section id="idCharUcdcpBlockSpc">
-  <h4 id="idCharUcdcpBlockSpcH4">Unicode-block.SPECIFIC
-    <a class="clsHide" href="#idCharUcdcpBlockSpcH4"></a></h4>
-  <div id="idCharUcdcpBlockP1">specific::
+  <section id="idCharUcdstdcpBlkSpc">
+  <h5 id="idCharUcdstdcpBlkSpcH5">Unicode-block.SPECIFIC
+    <a class="clsHide" href="#idCharUcdstdcpBlkSpcH5"></a></h5>
+  <p id="idCharUcdstdcpBlkSpcnam">name::
+    <br>* Mcs.Unicode-block.specific,
+    <a class="clsHide" href="#idCharUcdstdcpBlkSpcnam"></a></p>
+  <div id="idCharUcdstdcpBlkP1">specific::
+    <br>* 291,
     <br>(code-points/chars)
     <ol>
       <li><a class="clsPreview" href="../dirTchInf/dirUcd/filMcsU0000.last.html#idDescriptionFT">U+0000|0..U+007F|127</a>, Basic-Latin, 128/128
@@ -759,1249 +1915,127 @@
       <li>(<a class="clsPreview" href="../dirTchInf/dirUcd/filMcsUF0000.last.html#idDescriptionFT">U+F0000|983040..U+FFFFF|1048575</a>, Supplementary-Private-Use-Area-A, 65536/0)
       <li>(<a class="clsPreview" href="../dirTchInf/dirUcd/filMcsU100000.last.html#idDescriptionFT">U+100000|1048576..U+10FFFF|1114111</a>, Supplementary-Private-Use-Area-B, 65536/0)
     </ol>
-    <a class="clsHide" href="#idCharUcdcpBlockP1"></a></div>
+    <a class="clsHide" href="#idCharUcdstdcpBlkP1"></a></div>
   </section>
   </section>
 
-  <section id="idCharUcdcpUsd">
-  <h3 id="idCharUcdcpUsdH3">code-point.USED
-    <a class="clsHide" href="#idCharUcdcpUsdH3"></a></h3>
-  <p id="idCharUcdcpUsddsn">description::
-    <br>· used-code-point of Unicode is <a class="clsPreview" href="#idCharUcdcp">a-code-point</a> with an assigned <a class="clsPreview" href="#idCharUcd">char</a>, or reserved for surrogates, internal-use or private-use.
+  <section id="idCharUcdstdcpUsd">
+  <h4 id="idCharUcdstdcpUsdH4">code-point.used
+    <a class="clsHide" href="#idCharUcdstdcpUsdH4"></a></h4>
+  <p id="idCharUcdstdcpUsddsn">description::
+    <br>· used-code-point of Unicode is <a class="clsPreview" href="#idCharUcdstdcp">a-code-point</a> with an assigned <a class="clsPreview" href="#idCharUcd">char</a>, or reserved for surrogates, internal-use or private-use.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
-    <a class="clsHide" href="#idCharUcdcpUsddsn"></a></p>
-  <p id="idCharUcdcpUsdnam">name::
-    <br>* cpt.char.Unicode'code-point.used,
-    <br>* cpt.Unicode'code-point.used,
-    <br>* cpt.Unicode'char'code-point.used,
-    <br>* cpt.used-code-point--of-Unicode,
-    <a class="clsHide" href="#idCharUcdcpUsdnam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpUsddsn"></a></p>
+  <p id="idCharUcdstdcpUsdnam">name::
+    <br>* Mcs.Unicode--code-point.used,
+    <br>* Mcs.Unicode-char'code-point.used,
+    <br>* Mcs.used-code-point--of-Unicode,
+    <a class="clsHide" href="#idCharUcdstdcpUsdnam"></a></p>
 
-  <section id="idCharUcdcpAsgd">
-  <h4 id="idCharUcdcpAsgdH4">code-point.ASSIGNED
-    <a class="clsHide" href="#idCharUcdcpAsgdH4"></a></h4>
-  <p id="idCharUcdcpAsgddsn">description::
-    <br>· assigned--Unicode-code-point is <a class="clsPreview" href="#idCharUcdcpUsd">a-used-code-point</a> with an assigned char.
-    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
-    <a class="clsHide" href="#idCharUcdcpAsgddsn"></a></p>
-  <p id="idCharUcdcpAsgdnam">name::
-    <br>* cpt.assigned--Unicode-code-point,
-    <br>* cpt.char.Unicode'code-point.assigned,
-    <br>* cpt.Unicode'code-point.assigned,
-    <a class="clsHide" href="#idCharUcdcpAsgdnam"></a></p>
+  <section id="idCharUcdstdcpAsgd">
+  <h5 id="idCharUcdstdcpAsgdH5">code-point.char-assigned
+    <a class="clsHide" href="#idCharUcdstdcpAsgdH5"></a></h5>
+  <p id="idCharUcdstdcpAsgddsn">description::
+    <br>· assigned--Unicode--code-point is <a class="clsPreview" href="#idCharUcdstdcpUsd">a-used-code-point</a> with an assigned char.
+    <br>· the-Unicode-standard[a] uses 137,439 from its[a] 1,114,112 code-points to assign chars in version'11-0-0.2018.
+    <a class="clsHide" href="#idCharUcdstdcpAsgddsn"></a></p>
+  <p id="idCharUcdstdcpAsgdnam">name::
+    <br>* Mcs.Unicode--code-point.assigned,
+    <br>* Mcs.Unicode-char'code-point.assigned,
+    <br>* Mcs.assigned---Unicode--code-point,
+    <a class="clsHide" href="#idCharUcdstdcpAsgdnam"></a></p>
   </section>
 
-  <section id="idCharUcdcpPtus">
-  <h4 id="idCharUcdcpPtusH4">code-point.PRIVATE-USE
-    <a class="clsHide" href="#idCharUcdcpPtusH4"></a></h4>
-  <p id="idCharUcdcpPtusdsn">description::
+  <section id="idCharUcdstdcpPtus">
+  <h5 id="idCharUcdstdcpPtusH5">code-point.private-use
+    <a class="clsHide" href="#idCharUcdstdcpPtusH5"></a></h5>
+  <p id="idCharUcdstdcpPtusdsn">description::
     <br>Private-use characters <span class="clsColorRed">are code points</span> whose interpretation is not specified by a character encoding standard and whose use and interpretation may be determined by private agreement among cooperating users. Private-use characters are sometimes also referred to as user-defined characters (UDC) or vendor-defined characters (VDC).
     <br>[http://www.unicode.org/faq/private_use.html#pua1]
-    <a class="clsHide" href="#idCharUcdcpPtusdsn"></a></p>
-  <p id="idCharUcdcpPtusnam">name::
-    <br>* cpt.char.Unicode'code-point.private-use-character,
-    <br>* cpt.private-use-character--Unicode-code-point,
-    <br>* cpt.Unicode'code-point.private-use-character,
-    <br>* cpt.Unicode'code-point.user-defined-character,
-    <br>* cpt.Unicode'code-point.vendor-defined-character,
-    <a class="clsHide" href="#idCharUcdcpPtusnam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpPtusdsn"></a></p>
+  <p id="idCharUcdstdcpPtusnam">name::
+    <br>* Mcs.Unicode-char'code-point.private-use-character,
+    <br>* Mcs.Unicode--code-point.private-use-character,
+    <br>* Mcs.Unicode--code-point.user-defined-character,
+    <br>* Mcs.Unicode--code-point.vendor-defined-character,
+    <br>* Mcs.private-use-character---Unicode--code-point,
+    <a class="clsHide" href="#idCharUcdstdcpPtusnam"></a></p>
   </section>
 
-  <section id="idCharUcdcpIlus">
-  <h4 id="idCharUcdcpIlusH4">code-point.INTERNAL-USE
-    <a class="clsHide" href="#idCharUcdcpIlusH4"></a></h4>
-  <p id="idCharUcdcpIlusdsn">description::
+  <section id="idCharUcdstdcpIlus">
+  <h5 id="idCharUcdstdcpIlusH5">code-point.internal-use
+    <a class="clsHide" href="#idCharUcdstdcpIlusH5"></a></h5>
+  <p id="idCharUcdstdcpIlusdsn">description::
     <br>A "noncharacter" is a code point that is permanently reserved in the Unicode Standard for internal use.
     <br>[http://www.unicode.org/faq/private_use.html#noncharacters]
-    <a class="clsHide" href="#idCharUcdcpIlusdsn"></a></p>
-  <p id="idCharUcdcpIlusnam">name::
-    <br>* cpt.char.Unicode'code-point.internal-use,
-    <br>* cpt.noncharacter--Unicode-code-point,
-    <br>* cpt.Unicode'code-point.internal-use,
-    <br>* cpt.Unicode'code-point.noncharacter,
-    <a class="clsHide" href="#idCharUcdcpIlusnam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpIlusdsn"></a></p>
+  <p id="idCharUcdstdcpIlusnam">name::
+    <br>* Mcs.Unicode-char'code-point.internal-use,
+    <br>* Mcs.noncharacter---Unicode--code-point,
+    <br>* Mcs.Unicode--code-point.internal-use,
+    <br>* Mcs.Unicode--code-point.noncharacter,
+    <a class="clsHide" href="#idCharUcdstdcpIlusnam"></a></p>
   </section>
   </section>
 
-  <section id="idCharUcdcpUsdN">
-  <h3 id="idCharUcdcpUsdNH3">code-point.USED.NO
-    <a class="clsHide" href="#idCharUcdcpUsdNH3"></a></h3>
-  <p id="idCharUcdcpUsdNdsn">description::
-    <br>· usedNo-code-point of Unicode is <a class="clsPreview" href="#idCharUcdcp">a-code-point</a> with NOT an assigned <a class="clsPreview" href="#idCharUcd">char</a>, or reserved for surrogates, internal-use or private-use.
+  <section id="idCharUcdstdcpUsdN">
+  <h4 id="idCharUcdstdcpUsdNH4">code-point.usedNo
+    <a class="clsHide" href="#idCharUcdstdcpUsdNH4"></a></h4>
+  <p id="idCharUcdstdcpUsdNdsn">description::
+    <br>· usedNo-code-point of Unicode is <a class="clsPreview" href="#idCharUcdstdcp">a-code-point</a> with NOT an assigned <a class="clsPreview" href="#idCharUcd">char</a>, or reserved for surrogates, internal-use or private-use.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
-    <a class="clsHide" href="#idCharUcdcpUsdNdsn"></a></p>
-  <p id="idCharUcdcpUsdNnam">name::
-    <br>* cpt.char.Unicode'code-point.usedNo,
-    <br>* cpt.Unicode'code-point.usedNo,
-    <br>* cpt.Unicode'char'code-point.usedNo,
-    <br>* cpt.usedNo-code-point--of-Unicode,
-    <a class="clsHide" href="#idCharUcdcpUsdNnam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpUsdNdsn"></a></p>
+  <p id="idCharUcdstdcpUsdNnam">name::
+    <br>* Mcs.Unicode-char'code-point.usedNo,
+    <br>* Mcs.Unicode--code-point.usedNo,
+    <br>* Mcs.usedNo-code-point--of-Unicode,
+    <a class="clsHide" href="#idCharUcdstdcpUsdNnam"></a></p>
   </section>
 
-  <section id="idCharUcdcpStUn">
-  <h3 id="idCharUcdcpStUnH3">code-point.UNKNOWN-SCRIPT
-    <a class="clsHide" href="#idCharUcdcpStUnH3"></a></h3>
-  <p id="idCharUcdcpStUndsn">description::
+  <section id="idCharUcdstdcpStUn">
+  <h4 id="idCharUcdstdcpStUnH4">code-point.unknown-script
+    <a class="clsHide" href="#idCharUcdstdcpStUnH4"></a></h4>
+  <p id="idCharUcdstdcpStUndsn">description::
     <br>The value of <strong>"unknown" script</strong> (ISO 15924 code Zzzz) is given to unassigned, private use, noncharacter, and surrogate code points.
     <br>[https://en.wikipedia.org/wiki/Script_(Unicode)#Special_script_property_values {2018-06-26}]
-    <a class="clsHide" href="#idCharUcdcpStUndsn"></a></p>
-  <p id="idCharUcdcpStUnnam">name::
-    <br>* cpt.unknown-script-code-point--of-Unicode,
-    <br>* cpt.unknown-script--Unicode-code-point,
-    <br>* cpt.char.Unicode'code-point.unknown-script,
-    <br>* cpt.Unicode'code-point.unknown-script,
-    <a class="clsHide" href="#idCharUcdcpStUnnam"></a></p>
+    <a class="clsHide" href="#idCharUcdstdcpStUndsn"></a></p>
+  <p id="idCharUcdstdcpStUnnam">name::
+    <br>* Mcs.unknown-script-code-point--of-Unicode,
+    <br>* Mcs.unknown-script---Unicode--code-point,
+    <br>* Mcs.Unicode-char'code-point.unknown-script,
+    <br>* Mcs.Unicode--code-point.unknown-script,
+    <a class="clsHide" href="#idCharUcdstdcpStUnnam"></a></p>
   </section>
 
-  <section id="idCharUcdcpStUnN">
-  <h3 id="idCharUcdcpStUnNH3">code-point.UNKNOWN-SCRIPT.NO
-    <a class="clsHide" href="#idCharUcdcpStUnNH3"></a></h3>
-  <p id="idCharUcdcpStUnNdsn">description::
-    <br>· known-script--code-points are Unicode-code-points with assigned characters[a] which[a] are part of <a class="clsPreview" href="#idCharUcdScrpt">a-script</a>.
+  <section id="idCharUcdstdcpStUnN">
+  <h4 id="idCharUcdstdcpStUnNH4">code-point.unknown-script.no
+    <a class="clsHide" href="#idCharUcdstdcpStUnNH4"></a></h4>
+  <p id="idCharUcdstdcpStUnNdsn">description::
+    <br>· known-script--code-points are Unicode--code-points with assigned characters[a] which[a] are part of <a class="clsPreview" href="#idCharUcdScrpt">a-script</a>.
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
-    <a class="clsHide" href="#idCharUcdcpStUnNdsn"></a></p>
-  <p id="idCharUcdcpStUnNnam">name::
-    <br>* cpt.known-script-code-point--of-Unicode,
-    <br>* cpt.unknown-scriptNo-code-point--of-Unicode,
-    <br>* cpt.unknown-scriptNo--Unicode-code-point,
-    <br>* cpt.char.Unicode'code-point.unknown-scriptNo,
-    <br>* cpt.Unicode'code-point.unknown-scriptNo,
-    <a class="clsHide" href="#idCharUcdcpStUnNnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idCharUcdblock">
-  <h2 id="idCharUcdblockH2">block of Unicode-char (<a class="clsPreview" href="#idCharUcdcpBlock">link</a>)
-    <a class="clsHide" href="#idCharUcdblockH2"></a></h2>
+    <a class="clsHide" href="#idCharUcdstdcpStUnNdsn"></a></p>
+  <p id="idCharUcdstdcpStUnNnam">name::
+    <br>* Mcs.known-script-code-point--of-Unicode,
+    <br>* Mcs.unknown-scriptNo-code-point--of-Unicode,
+    <br>* Mcs.unknown-scriptNo---Unicode--code-point,
+    <br>* Mcs.Unicode-char'code-point.unknown-scriptNo,
+    <br>* Mcs.Unicode--code-point.unknown-scriptNo,
+    <a class="clsHide" href="#idCharUcdstdcpStUnNnam"></a></p>
   </section>
 
-  <section id="idCharUcdplane">
-  <h2 id="idCharUcdplaneH2">plane of Unicode-char (<a class="clsPreview" href="#idCharUcdcpPlane">link</a>)
-    <a class="clsHide" href="#idCharUcdplaneH2"></a></h2>
-  </section>
-
-  <section id="idCharUcdage">
-  <h2 id="idCharUcdageH2">Age-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdageH2"></a></h2>
-  <p id="idCharUcdagedsn">description::
-    <br>The Age property indicates the first version in which a particular Unicode character was assigned.
-    <br>For example, U+20AC € EURO SIGN was added to Version 2.1 of the Unicode Standard, so it has age=2.1, while U+20B9 ₹ INDIAN RUPEE SIGN was added to Version 6.0 of the Unicode Standard, so it has age=6.0.
-    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Character_Age]
-    <a class="clsHide" href="#idCharUcdagedsn"></a></p>
-  <p id="idCharUcdagenam">name::
-    <br>* cpt.char.Unicode'Age-property,
-    <br>* cpt.Unicode'Age-property,
-    <a class="clsHide" href="#idCharUcdagenam"></a></p>
-  <p id="idCharUcdagewpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedAge.txt,
-    <a class="clsHide" href="#idCharUcdagewpa"></a></p>
-  </section>
-
-  <section id="idCharUcdalfc">
-  <h2 id="idCharUcdalfcH2">Alphabetic-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdalfcH2"></a></h2>
-  <p id="idCharUcdalfcdsn">description::
-    <br>Derived Property: Alphabetic
-    <br>Generated from: Uppercase + Lowercase + Lt + Lm + Lo + Nl + Other_Alphabetic
-    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt]
-    <a class="clsHide" href="#idCharUcdalfcdsn"></a></p>
-  <p id="idCharUcdalfcnam">name::
-    <br>* cpt.char.Unicode'Alphabetic-property,
-    <br>* cpt.Unicode'Alphabetic-property,
-    <a class="clsHide" href="#idCharUcdalfcnam"></a></p>
-  <p id="idCharUcdalfcwpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt,
-    <a class="clsHide" href="#idCharUcdalfcwpa"></a></p>
-  </section>
-
-  <section id="idCharUcdbdcls">
-  <h2 id="idCharUcdbdclsH2">Bidi_Class-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdbdclsH2"></a></h2>
-  <p id="idCharUcdbdclsdsn">description::
-    <br>determine the directionality for bidirectional Unicode text.
-    <br>[https://www.unicode.org/reports/tr9/tr9-39.html]
-    <a class="clsHide" href="#idCharUcdbdclsdsn"></a></p>
-  <p id="idCharUcdbdclsnam">name::
-    <br>* cpt.char.Unicode'Bidi_Class-property,
-    <br>* cpt.Unicode'Bidi_Class-property,
-    <a class="clsHide" href="#idCharUcdbdclsnam"></a></p>
-  <p id="idCharUcdbdclswpa">addressWpg::
-    <br>* Unicode® Standard Annex #9, UNICODE BIDIRECTIONAL ALGORITHM, <a href="http://www.unicode.org/reports/tr9/">http://www.unicode.org/reports/tr9/</a>,
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBidiClass.txt,
-    <a class="clsHide" href="#idCharUcdbdclswpa"></a></p>
-  <p id="idCharUcdbdclsSpc">specific::
-    <br>* L-Left_To_Right,
-    <br>* R-Right_To_Left,
-    <br>* EN-European_Number,
-    <br>* ES-European_Separator,
-    <br>* ET-European_Terminator,
-    <br>* AN-Arabic_Number,
-    <br>* CS-Common_Separator,
-    <br>* B-Paragraph_Separator,
-    <br>* S-Segment_Separator,
-    <br>* WS-White_Space,
-    <br>* ON-Other_Neutral,
-    <br>* BN-Boundary_Neutral,
-    <br>* NSM-Nonspacing_Mark,
-    <br>* AL-Arabic_Letter,
-    <br>* LRO-Left_To_Right_Override,
-    <br>* RLO-Right_To_Left_Override,
-    <br>* LRE-Left_To_Right_Embedding,
-    <br>* RLE-Right_To_Left_Embedding,
-    <br>* PDF-Pop_Directional_Format,
-    <br>* LRI-Left_To_Right_Isolate,
-    <br>* RLI-Right_To_Left_Isolate,
-    <br>* FSI-First_Strong_Isolate,
-    <br>* PDI-Pop_Directional_Isolate,
-    <a class="clsHide" href="#idCharUcdbdclsSpc"></a></p>
-  </section>
-
-  <section id="idCharUcdbdmr">
-  <h2 id="idCharUcdbdmrH2">Bidi_Mirrored-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdbdmrH2"></a></h2>
-  <p id="idCharUcdbdmrdsn">description::
-    <br>If the character is a "mirrored" character in bidirectional text, this field has the value "Y"; otherwise "N". See Section 4.7, Bidi Mirrored of [Unicode].
-    <br>Do not confuse this with the Bidi_Mirroring_Glyph property.
-    <br>[https://www.unicode.org/reports/tr44/#Bidi_Mirrored]
-    <a class="clsHide" href="#idCharUcdbdmrdsn"></a></p>
-  <p id="idCharUcdbdmrnam">name::
-    <br>* cpt.char.Unicode'Bidi_Mirrored-property,
-    <br>* cpt.Unicode'Bidi_Mirrored-property,
-    <a class="clsHide" href="#idCharUcdbdmrnam"></a></p>
-  <p id="idCharUcdbdmrwpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBinaryProperties.txt,
-    <a class="clsHide" href="#idCharUcdbdmrwpa"></a></p>
-  </section>
-
-  <section id="idCharUcdbmg">
-  <h2 id="idCharUcdbmgH2">Bidi_Mirroring_Glyph-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdbmgH2"></a></h2>
-  <p id="idCharUcdbmgdsn">description::
-    <br>Informative mapping for substituting characters in an implementation of bidirectional mirroring. This maps a subset of characters with the Bidi_Mirrored property to other characters that normally are displayed with the corresponding mirrored glyph. When a character with the Bidi_Mirrored property has the default value for Bidi_Mirroring_Glyph, that means that no other character exists whose glyph is appropriate for character-based glyph mirroring. Implementations must then use other mechanisms to implement mirroring of those characters for the Unicode Bidirectional Algorithm. See Unicode Standard Annex #9, "Unicode Bidirectional Algorithm" [UAX9]. Do not confuse this property with the Bidi_Mirrored property itself.
-    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Bidi_Mirroring_Glyph]
-    <a class="clsHide" href="#idCharUcdbmgdsn"></a></p>
-  <p id="idCharUcdbmgnam">name::
-    <br>* cpt.char.Unicode'Bidi_Mirroring_Glyph-property,
-    <br>* cpt.Unicode'Bidi_Mirroring_Glyph-property,
-    <a class="clsHide" href="#idCharUcdbmgnam"></a></p>
-  <p id="idCharUcdbmgwpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/BidiMirroring.txt,
-    <a class="clsHide" href="#idCharUcdbmgwpa"></a></p>
-  </section>
-
-  <section id="idCharUcdcase">
-  <h2 id="idCharUcdcaseH2">Case-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdcaseH2"></a></h2>
-  <p id="idCharUcdcasedsn">description::
-    <br>Case is a normative property of characters in certain alphabets whereby characters are considered to be variants of a single letter. These variants, which may differ markedly in shapeand size, are called the uppercase letter (also known as capital or majuscule) and the lowercase letter (also known as small or minuscule). The uppercase letter is generally larger than the lowercase letter.
-    <br>Because of the inclusion of certain composite characters for compatibility, such as U+01F1 latin capital letter dz, a third case, called titlecase, is used where the first character of a word must be capitalized. An example of such a character is U+01F2 latin capital letter d with small letter z. The three case forms are UPPERCASE, Titlecase, and lowercase.
-    <br>For those scripts that have case (Latin, Greek, Coptic, Cyrillic, Glagolitic, Armenian, archaic Georgian, Deseret, and Warang Citi), uppercase characters typically contain the word capital in their names. Lowercase characters typically contain the word small. However, this is not a reliable guide.  The word small in the names of characters from scripts other than those just listed has nothing to do with case. There are other exceptions as well, such as small capital letters that are not formally uppercase.  Some Greek characters with capital  in their names are actually titlecase.  (Note that while the archaic Georgian script contained upper- and lowercase pairs, they are not used in modern Georgian.  See Section 7.7, Georgian.)
-    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 4.2]
-    <a class="clsHide" href="#idCharUcdcasedsn"></a></p>
-  <p id="idCharUcdcasenam">name::
-    <br>* cpt.char.Unicode'Case-property,
-    <br>* cpt.Unicode'Case-property,
-    <a class="clsHide" href="#idCharUcdcasenam"></a></p>
-  <p id="idCharUcdcaseSpc">specific::
-    <br>* Lowercase,
-    <br>* Titlecase,
-    <br>* Uppercase,
-    <a class="clsHide" href="#idCharUcdcaseSpc"></a></p>
-
-  <section id="idCharUcdcaseLwr">
-  <h3 id="idCharUcdcaseLwrH3">Lowercase-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdcaseLwrH3"></a></h3>
-  <p id="idCharUcdcaseLwrdsn">description::
-    <br>Derived Property: Lowercase
-    <br>Generated from: Ll + Other_Lowercase
-    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt]
-    <a class="clsHide" href="#idCharUcdcaseLwrdsn"></a></p>
-  <p id="idCharUcdcaseLwrnam">name::
-    <br>* cpt.char.Unicode'Lowercase-property,
-    <br>* cpt.Unicode'Lowercase-property,
-    <a class="clsHide" href="#idCharUcdcaseLwrnam"></a></p>
-  </section>
-
-  <section id="idCharUcdcaseUpr">
-  <h3 id="idCharUcdcaseUprH3">Uppercase-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdcaseUprH3"></a></h3>
-  <p id="idCharUcdcaseUprdsn">description::
-    <br>Derived Property: Uppercase
-    <br>Generated from: Lu + Other_Uppercase
-    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt]
-    <a class="clsHide" href="#idCharUcdcaseUprdsn"></a></p>
-  <p id="idCharUcdcaseUprnam">name::
-    <br>* cpt.char.Unicode'Uppercase-property,
-    <br>* cpt.Unicode'Uppercase-property,
-    <a class="clsHide" href="#idCharUcdcaseUprnam"></a></p>
-  </section>
-
-  <section id="idCharUcdcaseTtl">
-  <h3 id="idCharUcdcaseTtlH3">Titlecase-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdcaseTtlH3"></a></h3>
-  <p id="idCharUcdcaseTtldsn">description::
-    <br>Because of the inclusion of certain composite characters for compatibility, such as U+01F1 latin capital letter dz, a third case, called titlecase, is used where the first character of a word must be capitalized. An example of such a character is U+01F2 latin capital letter d with small letter z. The three case forms are UPPERCASE, Titlecase, and lowercase.
-    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 4.2]
-    <a class="clsHide" href="#idCharUcdcaseTtldsn"></a></p>
-  <p id="idCharUcdcaseTtlnam">name::
-    <br>* cpt.char.Unicode'Titlecase-property,
-    <br>* cpt.Unicode'Titlecase-property,
-    <a class="clsHide" href="#idCharUcdcaseTtlnam"></a></p>
-  </section>
-
-  <section id="idCharUcdcaseCsd">
-  <h3 id="idCharUcdcaseCsdH3">Cased-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdcaseCsdH3"></a></h3>
-  <p id="idCharUcdcaseCsddsn">description::
-    <br>D135 A character C is defined to be cased if and only if C has the Lowercase or Uppercase property or has a General_Category value of Titlecase_Letter.
-    <br>• The Uppercase and Lowercase property values are specified in the data file DerivedCoreProperties.txt in the Unicode Character Database.  The derived property Cased is also listed in DerivedCoreProperties.txt.
-    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf]
-    <a class="clsHide" href="#idCharUcdcaseCsddsn"></a></p>
-  <p id="idCharUcdcaseCsdnam">name::
-    <br>* cpt.char.Unicode'Cased-property,
-    <br>* cpt.Unicode'Cased-property,
-    <a class="clsHide" href="#idCharUcdcaseCsdnam"></a></p>
+  <section id="idCharUcdstdcpSrgt">
+  <h4 id="idCharUcdstdcpSrgtH4">code-point.surrogate
+    <a class="clsHide" href="#idCharUcdstdcpSrgtH4"></a></h4>
+  <p id="idCharUcdstdcpSrgtdsn">description::
+    <br>"The High Surrogates (U+D800–U+DBFF) and Low Surrogate (U+DC00–U+DFFF) codes are reserved for encoding non-BMP characters in UTF-16 by using a pair of 16-bit codes: one High Surrogate and one Low Surrogate. A single surrogate code point will never be assigned a character.
+    <br>[https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane]"
+    <a class="clsHide" href="#idCharUcdstdcpSrgtdsn"></a></p>
+  <p id="idCharUcdstdcpSrgtnam">name::
+    <br>* Mcs.Unicode--code-point.surrogate,
+    <br>* Mcs.surrogate--code-point---of-Unicode,
+    <a class="clsHide" href="#idCharUcdstdcpSrgtnam"></a></p>
   </section>
   </section>
-
-  <section id="idCharUcdcsfg">
-  <h2 id="idCharUcdcsfgH2">Case_Folding-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdcsfgH2"></a></h2>
-  <p id="idCharUcdcsfgdsn">description::
-    <br>Mapping from characters to their case-folded forms. This is an informative file containing normative derived properties.
-    <br>Derived from UnicodeData and SpecialCasing.
-    <br>Note: The case foldings are omitted in the data file if they are the same as the code point itself.
-    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#CaseFolding.txt]
-    <a class="clsHide" href="#idCharUcdcsfgdsn"></a></p>
-  <p id="idCharUcdcsfgnam">name::
-    <br>* cpt.char.Unicode'Case_Folding-property,
-    <br>* cpt.Unicode'Case_Folding-property,
-    <a class="clsHide" href="#idCharUcdcsfgnam"></a></p>
-  <p id="idCharUcdcsfgwpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/CaseFolding.txt,
-    <a class="clsHide" href="#idCharUcdcsfgwpa"></a></p>
-  <p id="idCharUcdcsfgSpc">specific::
-    <br>* C: common case folding, common mappings shared by both simple and full mappings.
-    <br>* F: full case folding, mappings that cause strings to grow in length. Multiple characters are separated by spaces.
-    <br>* S: simple case folding, mappings to single characters where different from F.
-    <br>* T: special case for uppercase I and dotted uppercase I
-    <br> - For non-Turkic languages, this mapping is normally not used.
-    <br> - For Turkic languages (tr, az), this mapping can be used instead of the normal mapping for these characters. Note that the Turkic mappings do not maintain canonical equivalence without additional processing. See the discussions of case mapping in the Unicode Standard for more information.
-    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/CaseFolding.txt]
-    <a class="clsHide" href="#idCharUcdcsfgSpc"></a></p>
-  </section>
-
-  <section id="idCharUcdbpbp">
-  <h2 id="idCharUcdbpbpH2">Bidi_Paired_Bracket-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdbpbpH2"></a></h2>
-  <p id="idCharUcdbpbpdsn">description::
-    <br>For an opening bracket, the code point of the matching closing bracket. For a closing bracket, the code point of the matching opening bracket. This property is used in the implementation of parenthesis matching. See Unicode Standard Annex #9, "Unicode Bidirectional Algorithm" [UAX9].
-    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Bidi_Paired_Bracket]
-    <a class="clsHide" href="#idCharUcdbpbpdsn"></a></p>
-  <p id="idCharUcdbpbpnam">name::
-    <br>* cpt.char.Unicode'Bidi_Paired_Bracket-property,
-    <br>* cpt.Unicode'Bidi_Paired_Bracket-property,
-    <a class="clsHide" href="#idCharUcdbpbpnam"></a></p>
-  <p id="idCharUcdbpbpwpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/BidiBrackets.txt,
-    <br>* https://www.unicode.org/reports/tr9/,
-    <a class="clsHide" href="#idCharUcdbpbpwpa"></a></p>
-  </section>
-
-  <section id="idCharUcdbpbtp">
-  <h2 id="idCharUcdbpbtpH2">Bidi_Paired_Bracket_Type-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdbpbtpH2"></a></h2>
-  <p id="idCharUcdbpbtpdsn">description::
-    <br>Type of a paired bracket, either opening or closing. This property is used in the implementation of parenthesis matching. See Unicode Standard Annex #9, "Unicode Bidirectional Algorithm" [UAX9].
-    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Bidi_Paired_Bracket_Type]
-    <a class="clsHide" href="#idCharUcdbpbtpdsn"></a></p>
-  <p id="idCharUcdbpbtpnam">name::
-    <br>* cpt.char.Unicode'Bidi_Paired_Bracket_Type-property,
-    <br>* cpt.Unicode'Bidi_Paired_Bracket_Type-property,
-    <a class="clsHide" href="#idCharUcdbpbtpnam"></a></p>
-  <p id="idCharUcdbpbtpwpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/BidiBrackets.txt,
-    <br>* https://www.unicode.org/reports/tr9/,
-    <a class="clsHide" href="#idCharUcdbpbtpwpa"></a></p>
-  <p id="idCharUcdbpbtpSpc">specific::
-    <br>* o-Open,
-    <br>* c-Close,
-    <br>* n-None,
-    <a class="clsHide" href="#idCharUcdbpbtpSpc"></a></p>
-  </section>
-
-  <section id="idCharUcddnmg">
-  <h2 id="idCharUcddnmgH2">Decomposition_Mapping-property of Unicode-char
-    <a class="clsHide" href="#idCharUcddnmgH2"></a></h2>
-  <p id="idCharUcddnmgdsn">description::
-    <br>This is a string property, consisting of a sequence of one or more Unicode code points.
-    <br>... The prefixed tags supplied with a subset of the decomposition mappings generally indicate formatting information.
-    <br>[https://www.unicode.org/reports/tr44/#Character_Decomposition_Mappings]
-    <a class="clsHide" href="#idCharUcddnmgdsn"></a></p>
-  <p id="idCharUcddnmgnam">name::
-    <br>* cpt.char.Unicode'Decomposition_Mapping-property,
-    <br>* cpt.Unicode'Decomposition_Mapping-property,
-    <a class="clsHide" href="#idCharUcddnmgnam"></a></p>
-  <p id="idCharUcddnmgwpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedDecompositionType.txt,
-    <a class="clsHide" href="#idCharUcddnmgwpa"></a></p>
-  <p id="idCharUcddnmgSpc">specific::
-    <br>* &lt;font>: Font variant (for example, a blackletter form)
-    <br>* &lt;noBreak>: No-break version of a space or hyphen
-    <br>* &lt;initial>: Initial presentation form (Arabic)
-    <br>* &lt;medial>: Medial presentation form (Arabic)
-    <br>* &lt;final>: Final presentation form (Arabic)
-    <br>* &lt;isolated>: Isolated presentation form (Arabic)
-    <br>* &lt;circle>: Encircled form
-    <br>* &lt;super>: Superscript form
-    <br>* &lt;sub>: Subscript form
-    <br>* &lt;vertical>: Vertical layout presentation form
-    <br>* &lt;wide>: Wide (or zenkaku) compatibility character
-    <br>* &lt;narrow>: Narrow (or hankaku) compatibility character
-    <br>* &lt;small>: Small variant form (CNS compatibility)
-    <br>* &lt;square>: CJK squared font variant
-    <br>* &lt;fraction>: Vulgar fraction form
-    <br>* &lt;compat>: Otherwise unspecified compatibility character
-    <br>[https://www.unicode.org/reports/tr44/#Formatting_Tags_Table]
-    <a class="clsHide" href="#idCharUcddnmgSpc"></a></p>
-  </section>
-
-  <section id="idCharUcdeaw">
-  <h2 id="idCharUcdeawH2">East_Asian_Width-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdeawH2"></a></h2>
-  <p id="idCharUcdeawdsn">description::
-    <br>When dealing with East Asian text, there is the concept of an inherent width of a character. This width takes on either of two values: narrow or wide. For traditional mixed-width East Asian legacy character sets, this classification into narrow and wide corresponds with few exceptions directly to the storage size for each character: a few narrow characters use a single byte per character and all other characters (usually wide) use two or more bytes.
-    <br>[https://www.unicode.org/reports/tr11/tr11-35.html#Overview]
-    <a class="clsHide" href="#idCharUcdeawdsn"></a></p>
-  <p id="idCharUcdeawnam">name::
-    <br>* cpt.char.Unicode'East_Asian_Width-property,
-    <br>* cpt.Unicode'East_Asian_Width-property,
-    <a class="clsHide" href="#idCharUcdeawnam"></a></p>
-  <p id="idCharUcdeawwpa">addressWpg::
-    <br>* <a href="https://www.unicode.org/reports/tr11/tr11-35.html#Overview">https://www.unicode.org/reports/tr11/</a>,
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/EastAsianWidth.txt,
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedEastAsianWidth.txt,
-    <a class="clsHide" href="#idCharUcdeawwpa"></a></p>
-  <p id="idCharUcdeawSpc">specific::
-    <br>* A-Ambiguous: can be sometimes wide and sometimes narrow,
-    <br>* F-Fullwidth,
-    <br>* H-Halfwidth,
-    <br>* N-Neutral (= Not East Asian),
-    <br>* Na-Narrow,
-    <br>* W-Wide: always wide,
-    <a class="clsHide" href="#idCharUcdeawSpc"></a></p>
-  </section>
-
-  <section id="idCharUcdglcr">
-  <h2 id="idCharUcdglcrH2">General_Category-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdglcrH2"></a></h2>
-  <p id="idCharUcdglcrdsn">description::
-    <br>The General_Category property of a code point provides for the most general classification of that code point.
-    <br>It is usually determined based on the primary characteristic of the assigned character for that code point. For example, is the character a letter, a mark, a number, punctuation, or a symbol, and if so, of what type?
-    <br>Other General_Category values define the classification of code points which are not assigned to regular graphic characters, including such statuses as private-use, control, surrogate code point, and reserved unassigned.
-    <br>[http://www.unicode.org/reports/tr44/#General_Category_Values]
-    <a class="clsHide" href="#idCharUcdglcrdsn"></a></p>
-  <p id="idCharUcdglcrnam">name::
-    <br>* cpt.char.Unicode'General_Category-property,
-    <br>* cpt.Unicode'General_Category-property,
-    <a class="clsHide" href="#idCharUcdglcrnam"></a></p>
-  <p id="idCharUcdglcrwpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedGeneralCategory.txt,
-    <a class="clsHide" href="#idCharUcdglcrwpa"></a></p>
-  <div id="idCharUcdglcrSpc">
-    <p>specific::
-    <br>[http://www.unicode.org/reports/tr44/#GC_Values_Table]
-    </p>
-    <table>
-      <tr>
-        <td>Abbr<td>Long<td>Description
-      <tr>
-        <td>Lu<td>Uppercase_Letter<td>an uppercase letter
-      <tr>
-        <td>Ll<td>Lowercase_Letter<td>a lowercase letter
-      <tr>
-        <td>Lt<td>Titlecase_Letter<td>a digraphic character, with first part uppercase
-      <tr>
-        <td>LC<td>Cased_Letter<td>Lu | Ll | Lt
-      <tr>
-        <td>Lm<td>Modifier_Letter<td>a modifier letter
-      <tr>
-        <td>Lo<td>Other_Letter<td>other letters, including syllables and ideographs
-      <tr>
-        <td>L<td>Letter<td>Lu | Ll | Lt | Lm | Lo
-      <tr>
-        <td>Mn<td>Nonspacing_Mark<td>a nonspacing combining mark (zero advance width)
-      <tr>
-        <td>Mc<td>Spacing_Mark<td>a spacing combining mark (positive advance width)
-      <tr>
-        <td>Me<td>Enclosing_Mark<td>an enclosing combining mark
-      <tr>
-        <td>M<td>Mark<td>Mn | Mc | Me
-      <tr>
-        <td>Nd<td>Decimal_Number<td>a decimal digit
-      <tr>
-        <td>Nl<td>Letter_Number<td>a letterlike numeric character
-      <tr>
-        <td>No<td>Other_Number<td>a numeric character of other type
-      <tr>
-        <td>N<td>Number<td>Nd | Nl | No
-      <tr>
-        <td>Pc<td>Connector_Punctuation<td>a connecting punctuation mark, like a tie
-      <tr>
-        <td>Pd<td>Dash_Punctuation<td>a dash or hyphen punctuation mark
-      <tr>
-        <td>Ps<td>Open_Punctuation<td>an opening punctuation mark (of a pair)
-      <tr>
-        <td>Pe<td>Close_Punctuation<td>a closing punctuation mark (of a pair)
-      <tr>
-        <td>Pi<td>Initial_Punctuation<td>an initial quotation mark
-      <tr>
-        <td>Pf<td>Final_Punctuation<td>a final quotation mark
-      <tr>
-        <td>Po<td>Other_Punctuation<td>a punctuation mark of other type
-      <tr>
-        <td>P<td>Punctuation<td>Pc | Pd | Ps | Pe | Pi | Pf | Po
-      <tr>
-        <td>Sm<td>Math_Symbol<td>a symbol of mathematical use
-      <tr>
-        <td>Sc<td>Currency_Symbol<td>a currency sign
-      <tr>
-        <td>Sk<td>Modifier_Symbol<td>a non-letterlike modifier symbol
-      <tr>
-        <td>So<td>Other_Symbol<td>a symbol of other type
-      <tr>
-        <td>S<td>Symbol<td>Sm | Sc | Sk | So
-      <tr>
-        <td>Zs<td>Space_Separator<td>a space character (of various non-zero widths)
-      <tr>
-        <td>Zl<td>Line_Separator<td>U+2028 LINE SEPARATOR only
-      <tr>
-        <td>Zp<td>Paragraph_Separator<td>U+2029 PARAGRAPH SEPARATOR only
-      <tr>
-        <td>Z<td>Separator<td>Zs | Zl | Zp
-      <tr>
-        <td>Cc<td>Control<td>a C0 or C1 control code
-      <tr>
-        <td>Cf<td>Format<td>a format control character
-      <tr>
-        <td>Cs<td>Surrogate<td>a surrogate code point
-      <tr>
-        <td>Co<td>Private_Use<td>a private-use character
-      <tr>
-        <td>Cn<td>Unassigned<td>a reserved unassigned code point or a noncharacter
-      <tr>
-        <td>C<td>Other<td>Cc | Cf | Cs | Co | Cn
-    </table>
-    <a class="clsHide" href="#idCharUcdglcrSpc"></a></div>
-  </section>
-
-  <section id="idCharUcdjggp">
-  <h2 id="idCharUcdjggpH2">Joining_Group-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdjggpH2"></a></h2>
-  <p id="idCharUcdjggpdsn">description::
-    <br>The Arabic characters with the property values Joining_Type=Dual_Joining and Joining_Type=Right_Joining can each be subdivided into shaping groups, based on the behavior of their letter skeletons when shaped in context.
-    <br>The Unicode character property that specifies these groups is called Joining_Group.
-    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf]
-    <br>===
-    <br>All code points not explicitly listed for Joining_Group  have the value No_Joining_Group.
-    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningGroup.txt]
-    <a class="clsHide" href="#idCharUcdjggpdsn"></a></p>
-  <p id="idCharUcdjggpnam">name::
-    <br>* cpt.char.Unicode'Joining_Group-property,
-    <br>* cpt.Unicode'Joining_Group-property,
-    <a class="clsHide" href="#idCharUcdjggpnam"></a></p>
-  <p id="idCharUcdjggpwpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningGroup.txt,
-    <a class="clsHide" href="#idCharUcdjggpwpa"></a></p>
-  <p id="idCharUcdjggpSpc">specific::
-    <br>* African_Feh,
-    <br>* African_Noon,
-    <br>* African_Qaf,
-    <br>* Ain,
-    <br>* Alaph,
-    <br>* Alef,
-    <br>* Beh,
-    <br>* Beth,
-    <br>* Burushaski_Yeh_Barree,
-    <br>* Dal,
-    <br>* Dalath_Rish,
-    <br>* E,
-    <br>* Farsi_Yeh,
-    <br>* Fe,
-    <br>* Feh,
-    <br>* Final_Semkath,
-    <br>* Gaf,
-    <br>* Gamal,
-    <br>* Hah,
-    <br>* Hanifi_Rohingya_Kinna_Ya,
-    <br>* Hanifi_Rohingya_Pa,
-    <br>* He,
-    <br>* Heh,
-    <br>* Heh_Goal,
-    <br>* Heth,
-    <br>* Kaf,
-    <br>* Kaph,
-    <br>* Khaph,
-    <br>* Knotted_Heh,
-    <br>* Lam,
-    <br>* Lamadh,
-    <br>* Malayalam_Bha,
-    <br>* Malayalam_Ja,
-    <br>* Malayalam_Lla,
-    <br>* Malayalam_Llla,
-    <br>* Malayalam_Nga,
-    <br>* Malayalam_Nna,
-    <br>* Malayalam_Nnna,
-    <br>* Malayalam_Nya,
-    <br>* Malayalam_Ra,
-    <br>* Malayalam_Ssa,
-    <br>* Malayalam_Tta,
-    <br>* Manichaean_Aleph,
-    <br>* Manichaean_Ayin,
-    <br>* Manichaean_Beth,
-    <br>* Manichaean_Daleth,
-    <br>* Manichaean_Dhamedh,
-    <br>* Manichaean_Five,
-    <br>* Manichaean_Gimel,
-    <br>* Manichaean_Heth,
-    <br>* Manichaean_Hundred,
-    <br>* Manichaean_Kaph,
-    <br>* Manichaean_Lamedh,
-    <br>* Manichaean_Mem,
-    <br>* Manichaean_Nun,
-    <br>* Manichaean_One,
-    <br>* Manichaean_Pe,
-    <br>* Manichaean_Qoph,
-    <br>* Manichaean_Resh,
-    <br>* Manichaean_Sadhe,
-    <br>* Manichaean_Samekh,
-    <br>* Manichaean_Taw,
-    <br>* Manichaean_Ten,
-    <br>* Manichaean_Teth,
-    <br>* Manichaean_Thamedh,
-    <br>* Manichaean_Twenty,
-    <br>* Manichaean_Waw,
-    <br>* Manichaean_Yodh,
-    <br>* Manichaean_Zayin,
-    <br>* Meem,
-    <br>* Mim,
-    <br>* Noon,
-    <br>* Nun,
-    <br>* Nya,
-    <br>* Pe,
-    <br>* Qaf,
-    <br>* Qaph,
-    <br>* Reh,
-    <br>* Reversed_Pe,
-    <br>* Rohingya_Yeh,
-    <br>* Sad,
-    <br>* Sadhe,
-    <br>* Seen,
-    <br>* Semkath,
-    <br>* Shin,
-    <br>* Straight_Waw,
-    <br>* Swash_Kaf,
-    <br>* Syriac_Waw,
-    <br>* Tah,
-    <br>* Taw,
-    <br>* Teh_Marbuta,
-    <br>* Teh_Marbuta_Goal,
-    <br>* Teth,
-    <br>* Waw,
-    <br>* Yeh,
-    <br>* Yeh_Barree,
-    <br>* Yeh_With_Tail,
-    <br>* Yudh,
-    <br>* Yudh_He,
-    <br>* Zain,
-    <br>* Zhain,
-    <a class="clsHide" href="#idCharUcdjggpSpc"></a></p>
-  </section>
-
-  <section id="idCharUcdjgtp">
-  <h2 id="idCharUcdjgtpH2">Joining_Type-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdjgtpH2"></a></h2>
-  <p id="idCharUcdjgtpdsn">description::
-    <br>Each Arabic letter must be depicted by one of a number of possible contextual glyph forms.
-    <br>The appropriate form is determined on the basis of the cursive joining behavior of that character as it interacts with the cursive joining behavior of adjacent characters.
-    <br>In the Unicode Standard, such cursive joining behavior is formally described in terms of values of a character property called Joining_Type.
-    [http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf]
-    <br>
-    <br>All code points not explicitly listed for Joining_Type have the value Non_Joining (U).
-    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningType.txt]
-    <a class="clsHide" href="#idCharUcdjgtpdsn"></a></p>
-  <p id="idCharUcdjgtpnam">name::
-    <br>* cpt.char.Unicode'Joining_Type-property,
-    <br>* cpt.Unicode'Joining_Type-property,
-    <a class="clsHide" href="#idCharUcdjgtpnam"></a></p>
-  <p id="idCharUcdjgtpwpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningType.txt,
-    <a class="clsHide" href="#idCharUcdjgtpwpa"></a></p>
-  <p id="idCharUcdjgtpSpc">specific::
-    <br>* R-Right_Joining
-    <br>* L-Left_Joining
-    <br>* D-Dual_Joining
-    <br>* C-Join_Causing
-    <br>* U-Non_Joining
-    <br>* T-Transparent,
-    <a class="clsHide" href="#idCharUcdjgtpSpc"></a></p>
-  </section>
-
-  <section id="idCharUcdlnbk">
-  <h2 id="idCharUcdlnbkH2">Line_Break-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdlnbkH2"></a></h2>
-  <p id="idCharUcdlnbkdsn">description::
-    <br>Line breaking, also known as word wrapping, is the process of breaking a section of text into lines such that it will fit in the available width of a page, window or other display area.
-    <br>The Unicode Line Breaking Algorithm performs part of this process.
-    <br>Given an input text, it produces a set of positions called "break opportunities" that are appropriate points to begin a new line.
-    <br>The selection of actual line break positions from the set of break opportunities is not covered by the Unicode Line Breaking Algorithm, but is in the domain of higher level software with knowledge of the available width and the display size of the text.
-    <br>[https://www.unicode.org/reports/tr14/tr14-41.html#Scope]
-    <a class="clsHide" href="#idCharUcdlnbkdsn"></a></p>
-  <p id="idCharUcdlnbknam">name::
-    <br>* cpt.char.Unicode'Line_Break-property,
-    <br>* cpt.Unicode'Line_Break-property,
-    <a class="clsHide" href="#idCharUcdlnbknam"></a></p>
-  <p id="idCharUcdlnbkwpa">addressWpg::
-    <br>* https://www.unicode.org/reports/tr14/,
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/LineBreak.txt,
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedLineBreak.txt,
-    <a class="clsHide" href="#idCharUcdlnbkwpa"></a></p>
-  <div id="idCharUcdlnbkSpc">specific::
-    <table>
-      <tr>
-        <td>Class
-        <td>Descriptive Name
-        <td>Examples
-        <td>Behavior
-      <tr>
-      <td class="clsCenter clsB" colspan="4">Non-tailorable Line Breaking Classes
-      <tr>
-        <td>BK
-        <td>Mandatory Break
-        <td>NL, PARAGRAPH SEPARATOR
-        <td>Cause a line break (after)
-      <tr>
-        <td>CR
-        <td>Carriage Return
-        <td>CR
-        <td>Cause a line break (after), except between CR and LF
-      <tr>
-        <td>LF
-        <td>Line Feed
-        <td>LF
-        <td>Cause a line break (after)
-      <tr>
-        <td>CM
-        <td>Combining Mark
-        <td>Combining marks, control codes
-        <td>Prohibit a line break between the character and the preceding character
-      <tr>
-        <td>NL
-        <td>Next Line
-        <td>NEL
-        <td>Cause a line break (after)
-      <tr>
-        <td>SG
-        <td>Surrogate
-        <td>Surrogates
-        <td>Do not occur in well-formed text
-      <tr>
-        <td>WJ
-        <td>Word Joiner
-        <td>WJ
-        <td>Prohibit line breaks before and after
-      <tr>
-        <td>ZW
-        <td>Zero Width Space
-        <td>ZWSP
-        <td>Provide a break opportunity
-      <tr>
-        <td>GL
-        <td>Non-breaking (“Glue”)
-        <td>CGJ, NBSP, ZWNBSP
-        <td>Prohibit line breaks before and after
-      <tr>
-        <td>SP
-        <td>Space
-        <td>SPACE
-        <td>Enable indirect line breaks
-      <tr>
-        <td>ZWJ
-        <td>Zero Width Joiner
-        <td>Zero Width Joiner
-        <td>Prohibit line breaks within joiner sequences
-      <tr>
-      <td class="clsCenter clsB" colspan="4">Break Opportunities
-      <tr>
-        <td>B2
-        <td>Break Opportunity Before and After
-        <td>Em dash
-        <td>Provide a line break opportunity before and after the character
-      <tr>
-        <td>BA
-        <td>Break After
-        <td>Spaces, hyphens
-        <td>Generally provide a line break opportunity after the character
-      <tr>
-        <td>BB
-        <td>Break Before
-        <td>Punctuation used in dictionaries
-        <td>Generally provide a line break opportunity before the character
-      <tr>
-        <td>HY
-        <td>Hyphen
-        <td>HYPHEN-MINUS
-        <td>Provide a line break opportunity after the character, except in numeric context
-      <tr>
-        <td>CB
-        <td>Contingent Break Opportunity
-        <td>Inline objects
-        <td>Provide a line break opportunity contingent on additional information
-      <tr>
-      <td class="clsCenter clsB" colspan="4">Characters Prohibiting Certain Breaks
-      <tr>
-        <td>CL
-        <td>Close Punctuation
-        <td>“}”, “❳”, “⟫” etc.
-        <td>Prohibit line breaks before
-      <tr>
-        <td>CP
-        <td>Close Parenthesis
-        <td>“)”, “]”
-        <td>Prohibit line breaks before
-      <tr>
-        <td>EX
-        <td>Exclamation/<br> Interrogation
-        <td>“!”, “?”, etc.
-        <td>Prohibit line breaks before
-      <tr>
-        <td>IN
-        <td>Inseparable
-        <td>Leaders
-        <td>Allow only indirect line breaks between pairs
-      <tr>
-        <td>NS
-        <td>Nonstarter
-        <td>“‼”, “‽”, “⁇”, “⁉”, etc.
-        <td>Allow only indirect line breaks before
-      <tr>
-        <td>OP
-        <td>Open Punctuation
-        <td>“(“, “[“, “{“, etc.
-        <td>Prohibit line breaks after
-      <tr>
-        <td>QU
-        <td>Quotation
-        <td>Quotation marks
-        <td>Act like they are both opening and closing
-      <tr>
-      <td class="clsCenter clsB" colspan="4">Numeric Context
-      <tr>
-        <td>IS
-        <td>Infix Numeric Separator
-        <td>. ,
-        <td>Prevent breaks after any and before numeric
-      <tr>
-        <td>NU
-        <td>Numeric
-        <td>Digits
-        <td>Form numeric expressions for line breaking purposes
-      <tr>
-        <td>PO
-        <td>Postfix Numeric
-        <td>%, ¢
-        <td>Do not break following a numeric expression
-      <tr>
-        <td>PR
-        <td>Prefix Numeric
-        <td>$, £, ¥, etc.
-        <td>Do not break in front of a numeric expression
-      <tr>
-        <td>SY
-        <td>Symbols Allowing Break After
-        <td>/
-        <td>Prevent a break before, and allow a break after
-      <tr>
-      <td class="clsCenter clsB" colspan="4">Other Characters
-      <tr>
-        <td>AI
-        <td>Ambiguous (Alphabetic or Ideographic)
-        <td>Characters with Ambiguous East Asian Width
-        <td>Act like AL when the resolved <abbr title="East Asian Width">EAW</abbr> is N; otherwise, act as ID
-      <tr>
-        <td>AL
-        <td>Alphabetic
-        <td>Alphabets and regular symbols
-        <td>Are alphabetic characters or symbols that are used with alphabetic characters
-      <tr>
-        <td>CJ
-        <td>Conditional Japanese Starter
-        <td>Small kana
-        <td>Treat as NS or ID for strict or normal breaking.
-       <tr>
-        <td>EB
-        <td>Emoji Base
-        <td>All emoji allowing modifiers
-        <td>Do not break from following Emoji Modifier
-       <tr>
-        <td>EM
-        <td>Emoji Modifier
-        <td>Skin tone modifiers
-        <td>Do not break from preceding Emoji Base
-       <tr>
-        <td>H2
-        <td>Hangul LV Syllable
-        <td>Hangul
-        <td>Form Korean syllable blocks
-      <tr>
-        <td>H3
-        <td>Hangul LVT Syllable
-        <td>Hangul
-        <td>Form Korean syllable blocks
-      <tr>
-        <td>HL
-        <td>Hebrew Letter
-        <td>Hebrew
-        <td>Do not break around a following hyphen; otherwise act as Alphabetic
-      <tr>
-        <td>ID
-        <td>Ideographic
-        <td>Ideographs
-        <td>Break before or after, except in some numeric context
-      <tr>
-        <td>JL
-        <td>Hangul L Jamo
-        <td>Conjoining jamo
-        <td>Form Korean syllable blocks
-      <tr>
-        <td>JV
-        <td>Hangul V Jamo
-        <td>Conjoining jamo
-        <td>Form Korean syllable blocks
-      <tr>
-        <td>JT
-        <td>Hangul T Jamo
-        <td>Conjoining jamo
-        <td>Form Korean syllable blocks
-      <tr>
-        <td>RI
-        <td>Regional Indicator
-        <td>REGIONAL INDICATOR SYMBOL LETTER A .. Z
-        <td>Keep pairs together. For pairs, break before and after other classes
-      <tr>
-        <td>SA
-        <td>Complex Context Dependent (South East Asian)
-        <td>South East Asian: Thai, Lao, Khmer
-        <td>Provide a line break opportunity contingent on additional, language-specific context analysis
-      <tr>
-        <td>XX
-        <td>Unknown
-        <td>Most unassigned, private-use
-        <td>Have as yet unknown line breaking behavior or unassigned code positions
-    </table>
-    <p>[https://www.unicode.org/reports/tr14/tr14-41.html#Table1]
-    </p>
-    <a class="clsHide" href="#idCharUcdlnbkSpc"></a></div>
-  </section>
-
-  <section id="idCharUcdmth">
-  <h2 id="idCharUcdmthH2">Math-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdmthH2"></a></h2>
-  <p id="idCharUcdmthdsn">description::
-    <br>Derived Property: Math
-    <br>Generated from: Sm + Other_Math
-    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt]
-    <a class="clsHide" href="#idCharUcdmthdsn"></a></p>
-  <p id="idCharUcdmthnam">name::
-    <br>* cpt.char.Unicode'Math-property,
-    <br>* cpt.Unicode'Math-property,
-    <a class="clsHide" href="#idCharUcdmthnam"></a></p>
-  <p id="idCharUcdmthwpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt,
-    <a class="clsHide" href="#idCharUcdmthwpa"></a></p>
-  </section>
-
-  <section id="idCharUcdnctp">
-  <h2 id="idCharUcdnctpH2">Numeric_Type-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdnctpH2"></a></h2>
-  <p id="idCharUcdnctpdsn">description::
-    <br>Derived Property:   Numeric_Type
-    <br>The values are based on fields 6-8 of UnicodeData.txt, plus the fields kAccountingNumeric, kOtherNumeric, kPrimaryNumeric in the Unicode Han Database (Unihan).
-    <br>[ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericType.txt]
-    <a class="clsHide" href="#idCharUcdnctpdsn"></a></p>
-  <p id="idCharUcdnctpnam">name::
-    <br>* cpt.char.Unicode'Numeric_Type-property,
-    <br>* cpt.Unicode'Numeric_Type-property,
-    <a class="clsHide" href="#idCharUcdnctpnam"></a></p>
-  <p id="idCharUcdnctpwpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericType.txt,
-    <a class="clsHide" href="#idCharUcdnctpwpa"></a></p>
-  <p id="idCharUcdnctpSpc">specific::
-    <br>* Decimal: When there is a value in field 6.
-    <br>* Digit:   When there is a value in field 7, but not in field 6.
-    <br>* Numeric: When there are values for kAccountingNumeric, kOtherNumeric, kPrimaryNumeric, or there is a value in field 8, but not in field 7.
-    <br>* None:    Otherwise. All code points not explicitly listed for Numeric_Type have the value None.
-    <a class="clsHide" href="#idCharUcdnctpSpc"></a></p>
-  </section>
-
-  <section id="idCharUcdncvl">
-  <h2 id="idCharUcdncvlH2">Numeric_Value-property of Unicode-char
-    <a class="clsHide" href="#idCharUcdncvlH2"></a></h2>
-  <p id="idCharUcdncvldsn">description::
-    <br>Finally, we have three fields, kAccountingNumeric, kOtherNumeric, and kPrimaryNumeric to indicate the numerical values an ideograph may have.
-    <br>Traditionally, ideographs were used both for numbers and words, and so many ideographs have (or can have) numeric values.
-    <br>The various kinds of numeric values are specified by these three fields.
-    <br>[https://www.unicode.org/reports/tr38/tr38-25.html#N1024D]
-    <a class="clsHide" href="#idCharUcdncvldsn"></a></p>
-  <p id="idCharUcdncvlnam">name::
-    <br>* cpt.char.Unicode'Numeric_Value-property,
-    <br>* cpt.Unicode'Numeric_Value-property,
-    <a class="clsHide" href="#idCharUcdncvlnam"></a></p>
-  <p id="idCharUcdncvlwpa">addressWpg::
-    <br>* ftp://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericValues.txt,
-    <a class="clsHide" href="#idCharUcdncvlwpa"></a></p>
-  </section>
-
-  <section id="idCharUcdprpt">
-  <h2 id="idCharUcdprptH2">property of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptH2"></a></h2>
-  <p id="idCharUcdprptdsn">description::
-    <br>· property of Unicode-char is-called a-generic-attribute of a-Unicode-char, with specifics, called values.
-    <a class="clsHide" href="#idCharUcdprptdsn"></a></p>
-  <p id="idCharUcdprptnam">name::
-    <br>* cpt.char.Unicode'property,
-    <br>* cpt.Unicode'property,
-    <a class="clsHide" href="#idCharUcdprptnam"></a></p>
-  <p id="idCharUcdprptwpa">addressWpg::
-    <br>* <a href="http://www.unicode.org/reports/tr44/#Property_Definitions">http://www.unicode.org/reports/tr44/#Property_Definitions</a>,
-    <a class="clsHide" href="#idCharUcdprptwpa"></a></p>
-  <p id="idCharUcdprptSpc">specific::
-    <br>* normative,
-    <br>* overridable,
-    <br>* informative,
-    <br>* contributory,
-    <br>* provisional,
-    <br>===
-    <br>* simple,
-    <br>* derived,
-    <br>===
-    <br>* catalog,
-    <br>* enumeration,
-    <br>* binary,
-    <br>* string,
-    <br>* numeric,
-    <br>* misc,
-    <br>===
-    <br>* complex,
-    <br>===
-    <br>* Age,
-    <br>* Bidi_Class,
-    <br>* Block,
-    <br>* Canonical_Combining_Class,
-    <br>* Decomposition_Type,
-    <br>* East_Asian_Width,
-    <br>* General_Category,
-    <br>* Line_Break,
-    <br>* Numeric_Type,
-    <br>* Numeric_Value,
-    <br>* Script,
-    <br>* Vertical_Orientation,
-    <a class="clsHide" href="#idCharUcdprptSpc"></a></p>
-
-  <section id="idCharUcdprptNrmv">
-  <h3 id="idCharUcdprptNrmvH3">property.NORMATIVE of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptNrmvH3"></a></h3>
-  <p id="idCharUcdprptNrmvdsn">description::
-    <br>Normative property: A Unicode character property used in the specification of the standard.
-    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
-    <a class="clsHide" href="#idCharUcdprptNrmvdsn"></a></p>
-  <p id="idCharUcdprptNrmvnam">name::
-    <br>* cpt.char.Unicode'property.normative,
-    <br>* cpt.Unicode'property.normative,
-    <a class="clsHide" href="#idCharUcdprptNrmvnam"></a></p>
-  </section>
-
-  <section id="idCharUcdprptOvrl">
-  <h3 id="idCharUcdprptOvrlH3">property.OVERRIDABLE of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptOvrlH3"></a></h3>
-  <p id="idCharUcdprptOvrldsn">description::
-    <br>Overridable property: A normative property whose values may be overridden by conformant higher-level protocols.
-    <br>• For example, the Canonical_Decomposition property is not overridable.  The Uppercase property can be overridden.
-    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
-    <a class="clsHide" href="#idCharUcdprptOvrldsn"></a></p>
-  <p id="idCharUcdprptOvrlnam">name::
-    <br>* cpt.char.Unicode'property.overridable,
-    <br>* cpt.Unicode'property.overridable,
-    <a class="clsHide" href="#idCharUcdprptOvrlnam"></a></p>
-  </section>
-
-  <section id="idCharUcdprptInfv">
-  <h3 id="idCharUcdprptInfvH3">property.INFORMATIVE of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptInfvH3"></a></h3>
-  <p id="idCharUcdprptInfvdsn">description::
-    <br>Informative property: A Unicode character property whose values are provided for information only.
-    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
-    <a class="clsHide" href="#idCharUcdprptInfvdsn"></a></p>
-  <p id="idCharUcdprptInfvnam">name::
-    <br>* cpt.char.Unicode'property.informative,
-    <br>* cpt.Unicode'property.informative,
-    <a class="clsHide" href="#idCharUcdprptInfvnam"></a></p>
-  </section>
-
-  <section id="idCharUcdprptCrbr">
-  <h3 id="idCharUcdprptCrbrH3">property.CONTRIBUTORY of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptCrbrH3"></a></h3>
-  <p id="idCharUcdprptCrbrdsn">description::
-    <br>Contributory property:  A simple property defined merely to make the statement of a rule defining a derived property more compact or general.
-    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
-    <a class="clsHide" href="#idCharUcdprptCrbrdsn"></a></p>
-  <p id="idCharUcdprptCrbrnam">name::
-    <br>* cpt.char.Unicode'property.contributory,
-    <br>* cpt.Unicode'property.contributory,
-    <a class="clsHide" href="#idCharUcdprptCrbrnam"></a></p>
-  </section>
-
-  <section id="idCharUcdprptPvsl">
-  <h3 id="idCharUcdprptPvslH3">property.PROVISIONAL of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptPvslH3"></a></h3>
-  <p id="idCharUcdprptPvsldsn">description::
-    <br>Provisional property: A Unicode character property whose values are unapproved and tentative, and which may be incomplete or otherwise not in a usable state.
-    <br>• Provisional properties may be removed from future versions of the standard, without prior notice.
-    <br>[http://www.unicode.org/versions/Unicode11.0.0/UnicodeStandard-11.0.pdf, 3.5]
-    <a class="clsHide" href="#idCharUcdprptPvsldsn"></a></p>
-  <p id="idCharUcdprptPvslnam">name::
-    <br>* cpt.char.Unicode'property.provisional,
-    <br>* cpt.Unicode'property.provisional,
-    <a class="clsHide" href="#idCharUcdprptPvslnam"></a></p>
-  </section>
-
-  <section id="idCharUcdprptSmpl">
-  <h3 id="idCharUcdprptSmplH3">property.SIMPLE of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptSmplH3"></a></h3>
-  <p id="idCharUcdprptSmpldsn">description::
-    <br>Some character properties in the UCD are simple properties. This status has no bearing on whether or not the properties are normative, but merely indicates that their values are not derived from some combination of other properties.
-    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Simple_Props]
-    <a class="clsHide" href="#idCharUcdprptSmpldsn"></a></p>
-  <p id="idCharUcdprptSmplnam">name::
-    <br>* cpt.char.Unicode'simple-property,
-    <br>* cpt.char.Unicode'property.derivedNo,
-    <br>* cpt.char.Unicode'property.simple,
-    <br>* cpt.Unicode'property.derivedNo,
-    <br>* cpt.Unicode'property.simple,
-    <a class="clsHide" href="#idCharUcdprptSmplnam"></a></p>
-  </section>
-
-  <section id="idCharUcdprptDrvd">
-  <h3 id="idCharUcdprptDrvdH3">property.DERIVED of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptDrvdH3"></a></h3>
-  <p id="idCharUcdprptDrvddsn">description::
-    <br>Other character properties are derived. This means that their values are derived by rule from some other combination of properties. Generally such rules are stated as set operations, and may or may not include explicit exception lists for individual characters.
-    <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Derived_Props]
-    <a class="clsHide" href="#idCharUcdprptDrvddsn"></a></p>
-  <p id="idCharUcdprptDrvdnam">name::
-    <br>* cpt.char.Unicode'derived-property,
-    <br>* cpt.char.Unicode'property.derived,
-    <br>* cpt.Unicode'property.derived,
-    <a class="clsHide" href="#idCharUcdprptDrvdnam"></a></p>
-  </section>
-
-  <section id="idCharUcdprptBnr">
-  <h3 id="idCharUcdprptBnrH3">property.BINARY of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptBnrH3"></a></h3>
-  <p id="idCharUcdprptBnrdsn">description::
-    <br>Binary properties are a special case of Enumeration properties, which have exactly two values: Yes and No (or True and False).
-    <br>[http://www.unicode.org/reports/tr44/#Type_Key_Table]
-    <a class="clsHide" href="#idCharUcdprptBnrdsn"></a></p>
-  <p id="idCharUcdprptBnrnam">name::
-    <br>* cpt.char.Unicode'binary-property,
-    <br>* cpt.char.Unicode'property.binary,
-    <br>* cpt.Unicode'property.binary,
-    <a class="clsHide" href="#idCharUcdprptBnrnam"></a></p>
-  </section>
-
-  <section id="idCharUcdprptCtlg">
-  <h3 id="idCharUcdprptCtlgH3">property.CATALOG of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptCtlgH3"></a></h3>
-  <p id="idCharUcdprptCtlgdsn">description::
-    <br>Catalog properties have enumerated values which are expected to be regularly extended in successive versions of the Unicode Standard. This distinguishes them from Enumeration properties.
-    <br>[http://www.unicode.org/reports/tr44/#Type_Key_Table]
-    <a class="clsHide" href="#idCharUcdprptCtlgdsn"></a></p>
-  <p id="idCharUcdprptCtlgnam">name::
-    <br>* cpt.char.Unicode'catalog-property,
-    <br>* cpt.char.Unicode'property.catalog,
-    <br>* cpt.Unicode'property.catalog,
-    <a class="clsHide" href="#idCharUcdprptCtlgnam"></a></p>
-  </section>
-
-  <section id="idCharUcdprptEnmn">
-  <h3 id="idCharUcdprptEnmnH3">property.ENUMERATION of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptEnmnH3"></a></h3>
-  <p id="idCharUcdprptEnmndsn">description::
-    <br>Enumeration properties have enumerated values which constitute a logical partition space; new values will generally not be added to them in successive versions of the standard.
-    <br>[http://www.unicode.org/reports/tr44/#Type_Key_Table]
-    <a class="clsHide" href="#idCharUcdprptEnmndsn"></a></p>
-  <p id="idCharUcdprptEnmnnam">name::
-    <br>* cpt.char.Unicode'enumeration-property,
-    <br>* cpt.char.Unicode'property.enumeration,
-    <br>* cpt.Unicode'property.enumeration,
-    <a class="clsHide" href="#idCharUcdprptEnmnnam"></a></p>
-  </section>
-
-  <section id="idCharUcdprptStrg">
-  <h3 id="idCharUcdprptStrgH3">property.STRING of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptStrgH3"></a></h3>
-  <p id="idCharUcdprptStrgdsn">description::
-    <br>String properties are typically mappings from a Unicode code point to another Unicode code point or sequence of Unicode code points; examples include case mappings and decomposition mappings.
-    <br>[http://www.unicode.org/reports/tr44/#Type_Key_Table]
-    <a class="clsHide" href="#idCharUcdprptStrgdsn"></a></p>
-  <p id="idCharUcdprptStrgnam">name::
-    <br>* cpt.char.Unicode'string-property,
-    <br>* cpt.char.Unicode'property.string,
-    <br>* cpt.Unicode'property.string,
-    <a class="clsHide" href="#idCharUcdprptStrgnam"></a></p>
-  </section>
-
-  <section id="idCharUcdprptNmrc">
-  <h3 id="idCharUcdprptNmrcH3">property.NUMERIC of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptNmrcH3"></a></h3>
-  <p id="idCharUcdprptNmrcdsn">description::
-    <br>Numeric properties specify the actual numeric values for digits and other characters associated with numbers in some way.
-    <br>[http://www.unicode.org/reports/tr44/#Type_Key_Table]
-    <a class="clsHide" href="#idCharUcdprptNmrcdsn"></a></p>
-  <p id="idCharUcdprptNmrcnam">name::
-    <br>* cpt.char.Unicode'numeric-property,
-    <br>* cpt.Unicode'property.numeric,
-    <a class="clsHide" href="#idCharUcdprptNmrcnam"></a></p>
-  </section>
-
-  <section id="idCharUcdprptMisc">
-  <h3 id="idCharUcdprptMiscH3">property.MISC of Unicode-char
-    <a class="clsHide" href="#idCharUcdprptMiscH3"></a></h3>
-  <p id="idCharUcdprptMiscdsn">description::
-    <br>Miscellaneous properties are those properties that do not fit neatly into the other property categories; they currently include character names, comments about characters, the Script_Extensions property, the Equivalent_Unified_Ideograph property, and the Unicode_Radical_Stroke property (a combination of numeric values) documented in Unicode Standard Annex #38, "Unicode Han Database (Unihan)" [UAX38].
-    <br>[http://www.unicode.org/reports/tr44/#Type_Key_Table]
-    <a class="clsHide" href="#idCharUcdprptMiscdsn"></a></p>
-  <p id="idCharUcdprptMiscnam">name::
-    <br>* cpt.char.Unicode'misc-property,
-    <br>* cpt.char.Unicode'property.misc,
-    <br>* cpt.Unicode'property.misc,
-    <a class="clsHide" href="#idCharUcdprptMiscnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idCharUcdstrd">
-  <h2 id="idCharUcdstrdH2">Unicode-STANDARD of Unicode-char
-    <a class="clsHide" href="#idCharUcdstrdH2"></a></h2>
-  <p id="idCharUcdstrddsn">description::
-    <br>· Unicode is a computing-industry standard for the consistent encoding, representation, and handling of <a class="clsPreview" href="#idCharCmr">computer-chars</a>.
-    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-24]
-    <a class="clsHide" href="#idCharUcdstrddsn"></a></p>
-  <p id="idCharUcdstrdnam">name::
-    <br>* cpt.char.Unicode'standard,
-    <br>* cpt.char.Unicode'Unicode-standard,
-    <br>* cpt.Unicode,
-    <br>* cpt.Unicode-standard,
-    <a class="clsHide" href="#idCharUcdstrdnam"></a></p>
 
   <section id="idCharUcdstdurt">
   <h3 id="idCharUcdstdurtH3">report of Unicode
@@ -2017,10 +2051,10 @@
     <br>[https://www.unicode.org/reports/about-reports.html]
     <a class="clsHide" href="#idCharUcdstdurtdsn"></a></p>
   <p id="idCharUcdstdurtnam">name::
-    <br>* cpt.char.Unicode'standard'technical-report,
-    <br>* cpt.Unicode'report,
-    <br>* cpt.Unicode'technical-report,
-    <br>* cpt.Unicode-technical-report,
+    <br>* Mcs.Unicode-char'standard'technical-report,
+    <br>* Mcs.Unicode'report,
+    <br>* Mcs.Unicode'technical-report,
+    <br>* Mcs.Unicode-technical-report,
     <a class="clsHide" href="#idCharUcdstdurtnam"></a></p>
 
   <section id="idCharUcdstdurtSpc">
@@ -2043,9 +2077,9 @@
     <br>[https://www.unicode.org/reports/about-reports.html]
     <a class="clsHide" href="#idCharUcdstdurtUaxdsn"></a></p>
   <p id="idCharUcdstdurtUaxnam">name::
-    <br>* cpt.Unicode'UAX-Unicode-Standard-Anexx,
-    <br>* cpt.Unicode-Standard-Anexx-UAX,
-    <br>* cpt.UAX-Unicode-Standard-Anexx,
+    <br>* Mcs.Unicode'UAX-Unicode-Standard-Anexx,
+    <br>* Mcs.Unicode-Standard-Anexx-UAX,
+    <br>* Mcs.UAX-Unicode-Standard-Anexx,
     <a class="clsHide" href="#idCharUcdstdurtUaxnam"></a></p>
   <p id="idCharUcdstdurtUaxSpc">specific::
     <br>* [UAX9]	Unicode Standard Annex #9: Unicode Bidirectional Algorithm, Latest version: http://www.unicode.org/reports/tr9/
@@ -2074,9 +2108,9 @@
     <br>[https://www.unicode.org/reports/about-reports.html]
     <a class="clsHide" href="#idCharUcdstdurtUtsdsn"></a></p>
   <p id="idCharUcdstdurtUtsnam">name::
-    <br>* cpt.Unicode'UTS-Unicode-Techincal-Standard,
-    <br>* cpt.Unicode-Techincal-Standard-UTS,
-    <br>* cpt.UTS-Unicode-Technical-Standard,
+    <br>* Mcs.Unicode'UTS-Unicode-Techincal-Standard,
+    <br>* Mcs.Unicode-Techincal-Standard-UTS,
+    <br>* Mcs.UTS-Unicode-Technical-Standard,
     <a class="clsHide" href="#idCharUcdstdurtUtsnam"></a></p>
   </section>
 
@@ -2094,9 +2128,9 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-20]
     <a class="clsHide" href="#idCharUcdstdurtUtrdsn"></a></p>
   <p id="idCharUcdstdurtUtrnam">name::
-    <br>* cpt.Unicode'UTR-Unicode-Techincal-Report,
-    <br>* cpt.Unicode-Techincal-Report-UTR,
-    <br>* cpt.UTR-Unicode-Techincal-Report,
+    <br>* Mcs.Unicode'UTR-Unicode-Techincal-Report,
+    <br>* Mcs.Unicode-Techincal-Report-UTR,
+    <br>* Mcs.UTR-Unicode-Techincal-Report,
     <a class="clsHide" href="#idCharUcdstdurtUtrnam"></a></p>
   </section>
   </section>
@@ -2112,19 +2146,19 @@
     <br>[https://www.unicode.org/reports/tr44/tr44-22.html#Introduction]
     <a class="clsHide" href="#idCharUcdstducddsn"></a></p>
   <p id="idCharUcdstducdnam">name::
-    <br>* cpt.char.Unicode'UCD,
-    <br>* cpt.char.Unicode'Unicode-database,
-    <br>* cpt.UCD-Unicode-Character-Database,
-    <br>* cpt.Unicode'database-(UCD),
-    <br>* cpt.Unicode-Character-Database-(UCD),
+    <br>* Mcs.Unicode-char'UCD,
+    <br>* Mcs.Unicode-char'Unicode-database,
+    <br>* Mcs.UCD-Unicode-Character-Database,
+    <br>* Mcs.Unicode'database-(UCD),
+    <br>* Mcs.Unicode-Character-Database-(UCD),
     <a class="clsHide" href="#idCharUcdstducdnam"></a></p>
 
   <section id="idCharUcdstducdfil">
   <h4 id="idCharUcdstducdfilH4">file of UCD
     <a class="clsHide" href="#idCharUcdstducdfilH4"></a></h4>
   <p id="idCharUcdstducdfilnam">name::
-    <br>* cpt.char.Unicode'UCD'file,
-    <br>* cpt.Unicode'UCD'file,
+    <br>* Mcs.Unicode-char'UCD'file,
+    <br>* Mcs.Unicode'UCD'file,
     <a class="clsHide" href="#idCharUcdstducdfilnam"></a></p>
   <p id="idCharUcdstducdfilSpc">specific::
     <br>* ArabicShaping.txt,
@@ -2221,9 +2255,9 @@
     <br>[https://www.unicode.org/reports/tr38/tr38-25.html]
     <a class="clsHide" href="#idCharUcdstduhddsn"></a></p>
   <p id="idCharUcdstduhdnam">name::
-    <br>* cpt.char.Unicode'Unicode-Han-Database,
-    <br>* cpt.Unicode'Unicode-Han-Database,
-    <br>* cpt.Unihan-Unicode-Han-Database,
+    <br>* Mcs.Unicode-char'Unicode-Han-Database,
+    <br>* Mcs.Unicode'Unicode-Han-Database,
+    <br>* Mcs.Unihan-Unicode-Han-Database,
     <a class="clsHide" href="#idCharUcdstduhdnam"></a></p>
   <p id="idCharUcdstduhdwpa">addressWpg::
     <br>* https://www.unicode.org/reports/tr38/,
@@ -2234,8 +2268,8 @@
   <h3 id="idCharUcdstdrscH3">resource of Unicode
     <a class="clsHide" href="#idCharUcdstdrscH3"></a></h3>
   <p id="idCharUcdstdrscnam">name::
-    <br>* cpt.char.Unicode'standard'resource,
-    <br>* cpt.Unicode'resource,
+    <br>* Mcs.Unicode-char'standard'resource,
+    <br>* Mcs.Unicode'resource,
     <a class="clsHide" href="#idCharUcdstdrscnam"></a></p>
   <p id="idCharUcdstdrscwpa">addressWpg::
     <br>* <a href="http://www.unicode.org/">http://www.unicode.org/</a>,
@@ -2244,11 +2278,10 @@
   </section>
 
   <section id="idCharUcdstdSpc">
-  <h3 id="idCharUcdstdSpcH3">Unicode.SPECIFIC
+  <h3 id="idCharUcdstdSpcH3">EVOLUTING of Unicode
     <a class="clsHide" href="#idCharUcdstdSpcH3"></a></h3>
   <p id="idCharUcdstdSpcnam">name::
-    <br>* cpt.char.Unicode'standard.specific,
-    <br>* cpt.Unicode.specific,
+    <br>* Mcs.Unicode'evoluting,
     <a class="clsHide" href="#idCharUcdstdSpcnam"></a></p>
   <p id="idCharUcdstdSpcwpa">addressWpg::
     <br>* https://www.unicode.org/versions/,
@@ -2256,7 +2289,7 @@
   </section>
 
   <section id="idCharUcdstd11002018">
-  <h3 id="idCharUcdstd11002018H3">Unicode.11-0-0.2018
+  <h3 id="idCharUcdstd11002018H3">Unicode'11-0-0.2018
     <a class="clsHide" href="#idCharUcsstd11002018H3"></a></h3>
   <p id="idCharUcdstd11002018dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 11.0.0, (Mountain View, CA: The Unicode Consortium, 2018. ISBN 978-1-936213-19-1)
@@ -2267,13 +2300,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd11002018dsn"></a></p>
   <p id="idCharUcdstd11002018nam">name::
-    <br>* cpt.char.Unicode'standard.11-0-0.2018,
-    <br>* cpt.Unicode.11-0-0.2018,
+    <br>* Mcs.Unicode'11-0-0.2018,
     <a class="clsHide" href="#idCharUcdstd11002018nam"></a></p>
   </section>
 
   <section id="idCharUcdstd10002017">
-  <h3 id="idCharUcdstd10002017H3">Unicode.10-0-0.2017
+  <h3 id="idCharUcdstd10002017H3">Unicode'10-0-0.2017
     <a class="clsHide" href="#idCharUcsstd10002017H3"></a></h3>
   <p id="idCharUcdstd10002017dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 10.0.0, (Mountain View, CA: The Unicode Consortium, 2017. ISBN 978-1-936213-16-0)
@@ -2284,13 +2316,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd10002017dsn"></a></p>
   <p id="idCharUcdstd10002017nam">name::
-    <br>* cpt.char.Unicode'standard.10-0-0.2017,
-    <br>* cpt.Unicode.10-0-0.2017,
+    <br>* Mcs.Unicode'10-0-0.2017,
     <a class="clsHide" href="#idCharUcdstd10002017nam"></a></p>
   </section>
 
   <section id="idCharUcdstd9002016">
-  <h3 id="idCharUcdstd9002016H3">Unicode.9-0-0.2016
+  <h3 id="idCharUcdstd9002016H3">Unicode'9-0-0.2016
     <a class="clsHide" href="#idCharUcsstd9002016H3"></a></h3>
   <p id="idCharUcdstd9002016dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 9.0.0, (Mountain View, CA: The Unicode Consortium, 2016. ISBN 978-1-936213-13-9)
@@ -2301,13 +2332,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd9002016dsn"></a></p>
   <p id="idCharUcdstd9002016nam">name::
-    <br>* cpt.char.Unicode'standard.9-0-0.2016,
-    <br>* cpt.Unicode.9-0-0.2016,
+    <br>* Mcs.Unicode'9-0-0.2016,
     <a class="clsHide" href="#idCharUcdstd9002016nam"></a></p>
   </section>
 
   <section id="idCharUcdstd8002015">
-  <h3 id="idCharUcdstd8002015H3">Unicode.8-0-0.2015
+  <h3 id="idCharUcdstd8002015H3">Unicode'8-0-0.2015
     <a class="clsHide" href="#idCharUcsstd8002015H3"></a></h3>
   <p id="idCharUcdstd8002015dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 8.0.0, (Mountain View, CA: The Unicode Consortium, 2015. ISBN 978-1-936213-10-8)
@@ -2318,13 +2348,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd8002015dsn"></a></p>
   <p id="idCharUcdstd8002015nam">name::
-    <br>* cpt.char.Unicode'standard.8-0-0.2015,
-    <br>* cpt.Unicode.8-0-0.2015,
+    <br>* Mcs.Unicode'8-0-0.2015,
     <a class="clsHide" href="#idCharUcdstd8002015nam"></a></p>
   </section>
 
   <section id="idCharUcdstd7002014">
-  <h3 id="idCharUcdstd7002014H3">Unicode.7-0-0.2014
+  <h3 id="idCharUcdstd7002014H3">Unicode'7-0-0.2014
     <a class="clsHide" href="#idCharUcsstd7002014H3"></a></h3>
   <p id="idCharUcdstd7002014dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 7.0.0, (Mountain View, CA: The Unicode Consortium, 2014. ISBN 978-1-936213-09-2)
@@ -2335,13 +2364,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd7002014dsn"></a></p>
   <p id="idCharUcdstd7002014nam">name::
-    <br>* cpt.char.Unicode'standard.7-0-0.2014,
-    <br>* cpt.Unicode.7-0-0.2014,
+    <br>* Mcs.Unicode'7-0-0.2014,
     <a class="clsHide" href="#idCharUcdstd7002014nam"></a></p>
   </section>
 
   <section id="idCharUcdstd6302013">
-  <h3 id="idCharUcdstd6302013H3">Unicode.6-3-0.2013
+  <h3 id="idCharUcdstd6302013H3">Unicode'6-3-0.2013
     <a class="clsHide" href="#idCharUcsstd6302013H3"></a></h3>
   <p id="idCharUcdstd6302013dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 6.3.0, (Mountain View, CA: The Unicode Consortium, 2013. ISBN 978-1-936213-08-5)
@@ -2352,13 +2380,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd6302013dsn"></a></p>
   <p id="idCharUcdstd6302013nam">name::
-    <br>* cpt.char.Unicode'standard.6-3-0.2013,
-    <br>* cpt.Unicode.6-3-0.2013,
+    <br>* Mcs.Unicode'6-3-0.2013,
     <a class="clsHide" href="#idCharUcdstd6302013nam"></a></p>
   </section>
 
   <section id="idCharUcdstd6202012">
-  <h3 id="idCharUcdstd6202012H3">Unicode.6-2-0.2012
+  <h3 id="idCharUcdstd6202012H3">Unicode'6-2-0.2012
     <a class="clsHide" href="#idCharUcsstd6202012H3"></a></h3>
   <p id="idCharUcdstd6202012dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 6.2.0, (Mountain View, CA: The Unicode Consortium, 2012. ISBN 978-1-936213-07-8)
@@ -2369,13 +2396,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd6202012dsn"></a></p>
   <p id="idCharUcdstd6202012nam">name::
-    <br>* cpt.char.Unicode'standard.6-2-0.2012,
-    <br>* cpt.Unicode.6-2-0.2012,
+    <br>* Mcs.Unicode'6-2-0.2012,
     <a class="clsHide" href="#idCharUcdstd6202012nam"></a></p>
   </section>
 
   <section id="idCharUcdstd6102012">
-  <h3 id="idCharUcdstd6102012H3">Unicode.6-1-0.2012
+  <h3 id="idCharUcdstd6102012H3">Unicode'6-1-0.2012
     <a class="clsHide" href="#idCharUcsstd6102012H3"></a></h3>
   <p id="idCharUcdstd6102012dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 6.1.0, (Mountain View, CA: The Unicode Consortium, 2012. ISBN 978-1-936213-02-3)
@@ -2386,13 +2412,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd6102012dsn"></a></p>
   <p id="idCharUcdstd6102012nam">name::
-    <br>* cpt.char.Unicode'standard.6-1-0.2012,
-    <br>* cpt.Unicode.6-1-0.2012,
+    <br>* Mcs.Unicode'6-1-0.2012,
     <a class="clsHide" href="#idCharUcdstd6102012nam"></a></p>
   </section>
 
   <section id="idCharUcdstd6002011">
-  <h3 id="idCharUcdstd6002011H3">Unicode.6-0-0.2011
+  <h3 id="idCharUcdstd6002011H3">Unicode'6-0-0.2011
     <a class="clsHide" href="#idCharUcsstd6002011H3"></a></h3>
   <p id="idCharUcdstd6002011dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 6.0.0, (Mountain View, CA: The Unicode Consortium, 2011. ISBN 978-1-936213-01-6)
@@ -2403,13 +2428,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd6002011dsn"></a></p>
   <p id="idCharUcdstd6002011nam">name::
-    <br>* cpt.char.Unicode'standard.6-0-0.2011,
-    <br>* cpt.Unicode.6-0-0.2011,
+    <br>* Mcs.Unicode'6-0-0.2011,
     <a class="clsHide" href="#idCharUcdstd6002011nam"></a></p>
   </section>
 
   <section id="idCharUcdstd5202009">
-  <h3 id="idCharUcdstd5202009H3">Unicode.5-2-0.2009
+  <h3 id="idCharUcdstd5202009H3">Unicode'5-2-0.2009
     <a class="clsHide" href="#idCharUcsstd5202009H3"></a></h3>
   <p id="idCharUcdstd5202009dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 5.2.0 (Mountain View, CA: The Unicode Consortium, 2009. ISBN 978-1-936213-00-9)
@@ -2420,13 +2444,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd5202009dsn"></a></p>
   <p id="idCharUcdstd5202009nam">name::
-    <br>* cpt.char.Unicode'standard.5-2-0.2009,
-    <br>* cpt.Unicode.5-2-0.2009,
+    <br>* Mcs.Unicode'5-2-0.2009,
     <a class="clsHide" href="#idCharUcdstd5202009nam"></a></p>
   </section>
 
   <section id="idCharUcdstd5102007">
-  <h3 id="idCharUcdstd5102007H3">Unicode.5-1-0.2007
+  <h3 id="idCharUcdstd5102007H3">Unicode'5-1-0.2007
     <a class="clsHide" href="#idCharUcsstd5102007H3"></a></h3>
   <p id="idCharUcdstd5102007dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 5.1.0, defined by: The Unicode Standard, Version 5.0 (Boston, MA, Addison-Wesley, 2007. ISBN 0-321-48091-0), as amended by Unicode 5.1.0
@@ -2437,13 +2460,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd5102007dsn"></a></p>
   <p id="idCharUcdstd5102007nam">name::
-    <br>* cpt.char.Unicode'standard.5-1-0.2007,
-    <br>* cpt.Unicode.5-1-0.2007,
+    <br>* Mcs.Unicode'5-1-0.2007,
     <a class="clsHide" href="#idCharUcdstd5102007nam"></a></p>
   </section>
 
   <section id="idCharUcdstd5002007">
-  <h3 id="idCharUcdstd5002007H3">Unicode.5-0-0.2007
+  <h3 id="idCharUcdstd5002007H3">Unicode'5-0-0.2007
     <a class="clsHide" href="#idCharUcsstd5002007H3"></a></h3>
   <p id="idCharUcdstd5002007dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 5.0.0, defined by: The Unicode Standard, Version 5.0 (Boston, MA, Addison-Wesley, 2007. ISBN 0-321-48091-0)
@@ -2453,13 +2475,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd5002007dsn"></a></p>
   <p id="idCharUcdstd5002007nam">name::
-    <br>* cpt.char.Unicode'standard.5-0-0.2007,
-    <br>* cpt.Unicode.5-0-0.2007,
+    <br>* Mcs.Unicode'5-0-0.2007,
     <a class="clsHide" href="#idCharUcdstd5002007nam"></a></p>
   </section>
 
   <section id="idCharUcdstd4102005">
-  <h3 id="idCharUcdstd4102005H3">Unicode.4-1-0.2005
+  <h3 id="idCharUcdstd4102005H3">Unicode'4-1-0.2005
     <a class="clsHide" href="#idCharUcsstd4012003H3"></a></h3>
   <p id="idCharUcdstd4102005dsn">description::
     <br>· date= March 2005
@@ -2469,26 +2490,24 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd4102005dsn"></a></p>
   <p id="idCharUcdstd4102005nam">name::
-    <br>* cpt.char.Unicode'standard.4-1-0.2005,
-    <br>* cpt.Unicode.4-1-0.2005,
+    <br>* Mcs.Unicode'4-1-0.2005,
     <a class="clsHide" href="#idCharUcdstd4102005nam"></a></p>
   </section>
 
   <section id="idCharUcdstd4012003">
-  <h3 id="idCharUcdstd4012003H3">Unicode.4-0-1.2003
+  <h3 id="idCharUcdstd4012003H3">Unicode'4-0-1.2003
     <a class="clsHide" href="#idCharUcsstd4012003H3"></a></h3>
   <p id="idCharUcdstd4012003dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 4.0.1, defined by: The Unicode Standard, Version 4.0 (Boston, MA, Addison-Wesley, 2003. ISBN 0-321-18578-1), as amended by Unicode 4.0.1
     <br>http://www.unicode.org/versions/Unicode4.0.1/
     <a class="clsHide" href="#idCharUcdstd4012003dsn"></a></p>
   <p id="idCharUcdstd4012003nam">name::
-    <br>* cpt.char.Unicode'standard.4-0-1.2003,
-    <br>* cpt.Unicode.4-0-1.2003,
+    <br>* Mcs.Unicode'4-0-1.2003,
     <a class="clsHide" href="#idCharUcdstd4012003nam"></a></p>
   </section>
 
   <section id="idCharUcdstd4002003">
-  <h3 id="idCharUcdstd4002003H3">Unicode.4-0-0.2003
+  <h3 id="idCharUcdstd4002003H3">Unicode'4-0-0.2003
     <a class="clsHide" href="#idCharUcsstd4012003H3"></a></h3>
   <p id="idCharUcdstd4002003dsn">description::
     <br>· date= April 2003
@@ -2499,13 +2518,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd4002003dsn"></a></p>
   <p id="idCharUcdstd4002003nam">name::
-    <br>* cpt.char.Unicode'standard.4-0-0.2003,
-    <br>* cpt.Unicode.4-0-0.2003,
+    <br>* Mcs.Unicode'4-0-0.2003,
     <a class="clsHide" href="#idCharUcdstd4002003nam"></a></p>
   </section>
 
   <section id="idCharUcdstd3202000">
-  <h3 id="idCharUcdstd3202000H3">Unicode.3-2-0.2000
+  <h3 id="idCharUcdstd3202000H3">Unicode'3-2-0.2000
     <a class="clsHide" href="#idCharUcsstd3202000H3"></a></h3>
   <p id="idCharUcdstd3202000dsn">description::
     <br>The Unicode Consortium, The Unicode Standard, Version 3.2.0,
@@ -2518,13 +2536,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd3202000dsn"></a></p>
   <p id="idCharUcdstd3202000nam">name::
-    <br>* cpt.char.Unicode'standard.3-2-0.2000,
-    <br>* cpt.Unicode.3-2-0.2000,
+    <br>* Mcs.Unicode'3-2-0.2000,
     <a class="clsHide" href="#idCharUcdstd3202000nam"></a></p>
   </section>
 
   <section id="idCharUcdstd3102000">
-  <h3 id="idCharUcdstd3102000H3">Unicode.3-1-0.2000
+  <h3 id="idCharUcdstd3102000H3">Unicode'3-1-0.2000
     <a class="clsHide" href="#idCharUcsstd3102000H3"></a></h3>
   <p id="idCharUcdstd3102000dsn">description::
     <br>The Unicode Consortium, The Unicode Standard, Version 3.1.0,
@@ -2537,13 +2554,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd3102000dsn"></a></p>
   <p id="idCharUcdstd3102000nam">name::
-    <br>* cpt.char.Unicode'standard.3-1-0.2000,
-    <br>* cpt.Unicode.3-1-0.2000,
+    <br>* Mcs.Unicode'3-1-0.2000,
     <a class="clsHide" href="#idCharUcdstd3102000nam"></a></p>
   </section>
 
   <section id="idCharUcdstd3002000">
-  <h3 id="idCharUcdstd3002000H3">Unicode.3-0-0.2000
+  <h3 id="idCharUcdstd3002000H3">Unicode'3-0-0.2000
     <a class="clsHide" href="#idCharUcsstd3002000H3"></a></h3>
   <p id="idCharUcdstd3002000dsn">description::
     <br>The Unicode Consortium, The Unicode Standard, Version 3.0.0
@@ -2555,13 +2571,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd3002000dsn"></a></p>
   <p id="idCharUcdstd3002000nam">name::
-    <br>* cpt.char.Unicode'standard.3-0-0.2000,
-    <br>* cpt.Unicode.3-0-0.2000,
+    <br>* Mcs.Unicode'3-0-0.2000,
     <a class="clsHide" href="#idCharUcdstd3002000nam"></a></p>
   </section>
 
   <section id="idCharUcdstd2101998">
-  <h3 id="idCharUcdstd2101998H3">Unicode.2-1-0.1998
+  <h3 id="idCharUcdstd2101998H3">Unicode'2-1-0.1998
     <a class="clsHide" href="#idCharUcsstd2101998H3"></a></h3>
   <p id="idCharUcdstd2101998dsn">description::
     <br>· date= May 1998
@@ -2571,13 +2586,12 @@
     <br>[http://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd2101998dsn"></a></p>
   <p id="idCharUcdstd2101998nam">name::
-    <br>* cpt.char.Unicode'standard.2-1-0.1998,
-    <br>* cpt.Unicode.2-1-0.1998,
+    <br>* Mcs.Unicode'2-1-0.1998,
     <a class="clsHide" href="#idCharUcdstd2101998nam"></a></p>
   </section>
 
   <section id="idCharUcdstd2001996">
-  <h3 id="idCharUcdstd2001996H3">Unicode.2-0-0.1996
+  <h3 id="idCharUcdstd2001996H3">Unicode'2-0-0.1996
     <a class="clsHide" href="#idCharUcsstd2001996H3"></a></h3>
   <p id="idCharUcdstd2001996dsn">description::
     <br>· date= July 1996
@@ -2588,13 +2602,12 @@
     <br>[http://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd2001996dsn"></a></p>
   <p id="idCharUcdstd2001996nam">name::
-    <br>* cpt.char.Unicode'standard.2-0-0.1996,
-    <br>* cpt.Unicode.2-0-0.1996,
+    <br>* Mcs.Unicode'2-0-0.1996,
     <a class="clsHide" href="#idCharUcdstd2001996nam"></a></p>
   </section>
 
   <section id="idCharUcdstd1101993">
-  <h3 id="idCharUcdstd1101993H3">Unicode.1-1-0.1993
+  <h3 id="idCharUcdstd1101993H3">Unicode'1-1-0.1993
     <a class="clsHide" href="#idCharUcsstd1101993H3"></a></h3>
   <p id="idCharUcdstd1101993dsn">description::
     <br>· date= June 1993
@@ -2604,13 +2617,12 @@
     <br>[http://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd1101993dsn"></a></p>
   <p id="idCharUcdstd1101993nam">name::
-    <br>* cpt.char.Unicode'standard.1-1-0.1993,
-    <br>* cpt.Unicode.1-1-0.1993,
+    <br>* Mcs.Unicode'1-1-0.1993,
     <a class="clsHide" href="#idCharUcdstd1101993nam"></a></p>
   </section>
 
   <section id="idCharUcdstd1011992">
-  <h3 id="idCharUcdstd1011992H3">Unicode.1-0-1.1992
+  <h3 id="idCharUcdstd1011992H3">Unicode'1-0-1.1992
     <a class="clsHide" href="#idCharUcsstd1011992H3"></a></h3>
   <p id="idCharUcdstd1011992dsn">description::
     <br>· date= June 1992
@@ -2620,13 +2632,12 @@
     <br>[http://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd1011992dsn"></a></p>
   <p id="idCharUcdstd1011992nam">name::
-    <br>* cpt.char.Unicode'standard.1-0-1.1992,
-    <br>* cpt.Unicode.1-0-1.1992,
+    <br>* Mcs.Unicode'1-0-1.1992,
     <a class="clsHide" href="#idCharUcdstd1011992nam"></a></p>
   </section>
 
   <section id="idCharUcdstd1001991">
-  <h3 id="idCharUcdstd1001991H3">Unicode.1-0-0.1991
+  <h3 id="idCharUcdstd1001991H3">Unicode'1-0-0.1991
     <a class="clsHide" href="#idCharUcsstd1001991H3"></a></h3>
   <p id="idCharUcdstd1001991dsn">description::
     <br>· date= October 1991
@@ -2636,8 +2647,7 @@
     <br>[http://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdstd1001991dsn"></a></p>
   <p id="idCharUcdstd1001991nam">name::
-    <br>* cpt.char.Unicode'standard.1-0-0.1991,
-    <br>* cpt.Unicode.1-0-0.1991,
+    <br>* Mcs.Unicode'1-0-0.1991,
     <a class="clsHide" href="#idCharUcdstd1001991nam"></a></p>
   </section>
   </section>
@@ -2654,7 +2664,7 @@
   <h2 id="idCharUcdSpcH2">Unicode-char.SPECIFIC
     <a class="clsHide" href="#idCharUcdSpcH2"></a></h2>
   <p id="idCharUcdSpcnam">name::
-    <br>* cpt.char.Unicode.specific,
+    <br>* Mcs.char.Unicode.specific,
     <a class="clsHide" href="#idCharUcdSpcnam"></a></p>
   <p id="idCharUcdSpcP1">specific::
     <br>* alphabetic,
@@ -2693,9 +2703,9 @@
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdAgrtdsn"></a></p>
   <p id="idCharUcdAgrtnam">name::
-    <br>* cpt.aggregate-Unicode-char,
-    <br>* cpt.char.Unicode.aggregate,
-    <br>* cpt.Unicode'char.aggregate,
+    <br>* Mcs.aggregate-Unicode-char,
+    <br>* Mcs.char.Unicode.aggregate,
+    <br>* Mcs.Unicode-char.aggregate,
     <a class="clsHide" href="#idCharUcdAgrtnam"></a></p>
   </section>
 
@@ -2707,11 +2717,11 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
     <a class="clsHide" href="#idCharUcdScrptdsn"></a></p>
   <p id="idCharUcdScrptnam">name::
-    <br>* cpt.char.Unicode.script,
-    <br>* cpt.script.Unicode,
-    <br>* cpt.Unicode'script,
-    <br>* cpt.Unicode-char.script,
-    <br>* cpt.Unicode-script,
+    <br>* Mcs.char.Unicode.script,
+    <br>* Mcs.script.Unicode,
+    <br>* Mcs.Unicode'script,
+    <br>* Mcs.Unicode-char.script,
+    <br>* Mcs.Unicode-script,
     <a class="clsHide" href="#idCharUcdScrptnam"></a></p>
   <p id="idCharUcdScrptwpa">addressWpg::
     <br>* https://en.wikipedia.org/wiki/Script_(Unicode)#List_of_scripts_in_Unicode,
@@ -2775,8 +2785,8 @@
     <br>[https://en.wikipedia.org/wiki/Script_(Unicode)#Special_script_property_values {2018-06-26}]
     <a class="clsHide" href="#idCharUcdScrptCmndsn"></a></p>
   <p id="idCharUcdScrptCmnnam">name::
-    <br>* cpt.common-script.Unicode,
-    <br>* cpt.Unicode'script.common,
+    <br>* Mcs.common-script.Unicode,
+    <br>* Mcs.Unicode'script.common,
     <a class="clsHide" href="#idCharUcdScrptCmnnam"></a></p>
   </section>
 
@@ -2788,8 +2798,8 @@
     <br>[https://en.wikipedia.org/wiki/Script_(Unicode)#Special_script_property_values, {2018-06-26}]
     <a class="clsHide" href="#idCharUcdScrptInhddsn"></a></p>
   <p id="idCharUcdScrptInhdnam">name::
-    <br>* cpt.inherited-script.Unicode,
-    <br>* cpt.Unicode'script.inherited,
+    <br>* Mcs.inherited-script.Unicode,
+    <br>* Mcs.Unicode'script.inherited,
     <a class="clsHide" href="#idCharUcdScrptInhdnam"></a></p>
   </section>
   </section>
@@ -2802,10 +2812,10 @@
     <br>[https://en.wikipedia.org/wiki/Graphic_character#Unicode]
     <a class="clsHide" href="#idCharUcdGrfcdsn"></a></p>
   <p id="idCharUcdGrfcnam">name::
-    <br>* cpt.char.graphic.Unicode,
-    <br>* cpt.char.Unicode.graphic,
-    <br>* cpt.graphic-Unicode-char,
-    <br>* cpt.Unicode'char.graphic,
+    <br>* Mcs.char.graphic.Unicode,
+    <br>* Mcs.char.Unicode.graphic,
+    <br>* Mcs.graphic-Unicode-char,
+    <br>* Mcs.Unicode-char.graphic,
     <a class="clsHide" href="#idCharUcdGrfcnam"></a></p>
   </section>
 </section>
@@ -2818,21 +2828,21 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-22]
     <a class="clsHide" href="#idCharHtmldsn"></a></p>
   <p id="idCharHtmlnam">name::
-    <br>* cpt.char.Html,
-    <br>* cpt.Html-char,
-    <br>* cpt.Html-character-reference,
+    <br>* Mcs.char.Html,
+    <br>* Mcs.Html-char,
+    <br>* Mcs.Html-character-reference,
     <a class="clsHide" href="#idCharHtmlnam"></a></p>
 
   <section id="idCharHtmlDcml">
   <h2 id="idCharHtmlDcmlH2">Html-char.DECIMAL
     <a class="clsHide" href="#idCharHtmlDcmlH2"></a></h2>
   <p id="idCharHtmlDcmldsn">description::
-    <br>· all <a class="clsPreview" href="#idCharUcd">Unicode-chars</a> can-be-written in Html, using its <a class="clsPreview" href="#idCharUcdcp">Unicode-decimal-code-point</a> as: &#DECIMALCP;
+    <br>· all <a class="clsPreview" href="#idCharUcd">Unicode-chars</a> can-be-written in Html, using its <a class="clsPreview" href="#idCharUcdstdcp">Unicode-decimal-code-point</a> as: &#DECIMALCP;
     <a class="clsHide" href="#idCharHtmlDcmldsn"></a></p>
   <p id="idCharHtmlDcmlnam">name::
-    <br>* cpt.char.Html.decimal,
-    <br>* cpt.decimal-Html-char,
-    <br>* cpt.Html-char.decimal,
+    <br>* Mcs.char.Html.decimal,
+    <br>* Mcs.decimal-Html-char,
+    <br>* Mcs.Html-char.decimal,
     <a class="clsHide" href="#idCharHtmlDcmlnam"></a></p>
   </section>
 
@@ -2840,12 +2850,12 @@
   <h2 id="idCharHtmlHdmlH2">Html-char.HEXADECIMAL
     <a class="clsHide" href="#idCharHtmlHdmlH2"></a></h2>
   <p id="idCharHtmlHdmldsn">description::
-    <br>· all <a class="clsPreview" href="#idCharUcd">Unicode-chars</a> can-be-written in Html, using its <a class="clsPreview" href="#idCharUcdcp">Unicode-hexadecimal-code-point</a> as: &#xHEXCP;
+    <br>· all <a class="clsPreview" href="#idCharUcd">Unicode-chars</a> can-be-written in Html, using its <a class="clsPreview" href="#idCharUcdstdcp">Unicode-hexadecimal-code-point</a> as: &#xHEXCP;
     <a class="clsHide" href="#idCharHtmlHdmldsn"></a></p>
   <p id="idCharHtmlHdmlnam">name::
-    <br>* cpt.char.Html.hexadecimal,
-    <br>* cpt.hexadecimal-Html-char,
-    <br>* cpt.Html-char.hexadecimal,
+    <br>* Mcs.char.Html.hexadecimal,
+    <br>* Mcs.hexadecimal-Html-char,
+    <br>* Mcs.Html-char.hexadecimal,
     <a class="clsHide" href="#idCharHtmlHdmlnam"></a></p>
   </section>
 
@@ -2856,9 +2866,9 @@
     <br>· some chars are-written with a-name: &NAME;
     <a class="clsHide" href="#idCharHtmlNmddsn"></a></p>
   <p id="idCharHtmlNmdnam">name::
-    <br>* cpt.char.Html.named,
-    <br>* cpt.Html-char.named,
-    <br>* cpt.named-Html-char,
+    <br>* Mcs.char.Html.named,
+    <br>* Mcs.Html-char.named,
+    <br>* Mcs.named-Html-char,
     <a class="clsHide" href="#idCharHtmlNmdnam"></a></p>
   </section>
 </section>
@@ -2871,8 +2881,8 @@
     <br>[https://en.wikipedia.org/wiki/Escape_character {2018-06-25}]
     <a class="clsHide" href="#idCharEscpdsn"></a></p>
   <p id="idCharEscpnam">name::
-    <br>* cpt.char.escape,
-    <br>* cpt.escape-char,
+    <br>* Mcs.char.escape,
+    <br>* Mcs.escape-char,
     <a class="clsHide" href="#idCharEscpnam"></a></p>
 </section>
 
@@ -2884,10 +2894,10 @@
     <br>[https://en.wikipedia.org/wiki/Graphic_character {2018-06-25}]
     <a class="clsHide" href="#idCharGrfcdsn"></a></p>
   <p id="idCharGrfcnam">name::
-    <br>* cpt.char.glyph,
-    <br>* cpt.char.graphic,
-    <br>* cpt.glyph-char,
-    <br>* cpt.graphic-char,
+    <br>* Mcs.char.glyph,
+    <br>* Mcs.char.graphic,
+    <br>* Mcs.glyph-char,
+    <br>* Mcs.graphic-char,
     <a class="clsHide" href="#idCharGrfcnam"></a></p>
   <p id="idCharGrfcSpc">specific::
     <br>* <a class="clsPreview" href="#idCharUcdGrfc">Unicode-graphic-char</a>,
@@ -2903,22 +2913,11 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
     <a class="clsHide" href="#idCharGrfcNodsn"></a></p>
   <p id="idCharGrfcNonam">name::
-    <br>* cpt.char.glyphNo,
-    <br>* cpt.char.graphicNo,
-    <br>* cpt.glyphNo-char,
-    <br>* cpt.graphicNo-char,
+    <br>* Mcs.char.glyphNo,
+    <br>* Mcs.char.graphicNo,
+    <br>* Mcs.glyphNo-char,
+    <br>* Mcs.graphicNo-char,
     <a class="clsHide" href="#idCharGrfcNonam"></a></p>
-</section>
-
-<section id="idCharEvgFT">
-  <h1 id="idCharEvgFTH1">char.EVOLUTING
-    <a class="clsHide" href="#idCharEvgFTH1"></a></h1>
-  <p id="idCharEvgnam">name::
-    <br>* cpt.char.evoluting,
-    <a class="clsHide" href="#idCharEvgnam"></a></p>
-  <p id="idCharEvg">{time.2018-06-19}::
-    <br>=== creation of this structured-concept:
-    <a class="clsHide" href="#idCharEvg"></a></p>
 </section>
 
 <section id="idMeta">
@@ -2939,7 +2938,7 @@
   <p id="idMetaP1">SEARCH::
     <br>· this page uses '<span class="clsColorRed">locator-names</span>', names that when you find them, you find the-LOCATION of the-concept they denote.
     <br>• <strong>LOCAL-SEARCH</strong>:
-    <br>· TYPE <span class="clsColorRed">CTRL+F "cpt.words-of-concept's-name"</span>, to go to the-LOCATION of the-concept.
+    <br>· TYPE <span class="clsColorRed">CTRL+F "Mcs.words-of-concept's-name"</span>, to go to the-LOCATION of the-concept.
     <br>• <strong>GLOBAL-SEARCH</strong>:
     <br>· clicking on the-green-TITLE of a-page you have access to the-global--locator-names of my-site.
     <br>· a-preview of the-description of a-global-name makes reading fast.
