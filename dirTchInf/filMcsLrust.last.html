@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Rust-language (lagRust.0-9-0.2019-07-08 draft)</title>
+  <title>Mcs.Rust-language (lagRust.0-10-0.2019-07-09 draft)</title>
   <meta name="keywords" content="Rust-language, lagRust, Lrst, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -232,23 +232,65 @@
   </section>
   </section>
 
-  <section id="idLrstsuntArr">
-  <h2 id="idLrstsuntArrH2">Sunt.array (a) of lagRust
-    <a class="clsHide" href="#idLrstsuntArrH2"></a></h2>
-  <p id="idLrstsuntArrdsn">description::
-    <br>·
-    <a class="clsHide" href="#idLrstsuntArrdsn"></a></p>
-  <p id="idLrstsuntArrnam">name::
-    <br>* Mcs.lagRust'array,
-    <br>* Mcs.lagRust-a,
-    <a class="clsHide" href="#idLrstsuntArrnam"></a></p>
+  <section id="idLrstsuntCh">
+  <h2 id="idLrstsuntChH2">Sunt.character (ch) of lagRust
+    <a class="clsHide" href="#idLrstsuntChH2"></a></h2>
+  <p id="idLrstsuntChdsn">description::
+    <br>· a-character denotes a-single <a class="clsPreview" href="../dirLag/filMcsChar.last.html#idCharUcd">Unicode-char</a>.
+    <br>· a-Rust-character is-mapped with 32bit in its binary-algo.
+    <br>· thus, Rust can-represents ALL the-Unicode-characters assigned to <a class="clsPreview" href="../dirLag/filMcsChar.last.html#idCharUcdcp">Unicode-code-points</a>, Latin, Greek, Chinese, all of them.
+    <a class="clsHide" href="#idLrstsuntChdsn"></a></p>
+  <p id="idLrstsuntChnam">name::
+    <br>* Mcs.lagRust'character!⇒lagRust-ch,
+    <br>* Mcs.lagRust-Sunt.character!⇒lagRust-ch,
+    <br>* Mcs.lagRust-ch,
+    <a class="clsHide" href="#idLrstsuntChnam"></a></p>
+  </section>
+
+  <section id="idLrstsuntS">
+  <h2 id="idLrstsuntSH2">Sunt.string (s) of lagRust
+    <a class="clsHide" href="#idLrstsuntSH2"></a></h2>
+  <p id="idLrstsuntSdsn">description::
+    <br>· string of lagRust is a-collection of <a class="clsPreview" href="#idLrstsuntCh">characters</a>.
+    <a class="clsHide" href="#idLrstsuntSdsn"></a></p>
+  <p id="idLrstsuntSnam">name::
+    <br>* Mcs.lagRust'string!⇒lagRust-s,
+    <br>* Mcs.lagRust-Sunt.string!⇒lagRust-s,
+    <br>* Mcs.lagRust-s,
+    <a class="clsHide" href="#idLrstsuntSnam"></a></p>
+
+  <section id="idLrstsuntSll">
+  <h3 id="idLrstsuntSllH3">string.literal of lagRust
+    <a class="clsHide" href="#idLrstsuntSllH3"></a></h3>
+  <p id="idLrstsuntSlldsn">description::
+    <br>· <code>let s = "hello";</code>
+    <br>· literal-strings are immutable.
+    <br>[https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#the-string-type]
+    <a class="clsHide" href="#idLrstsuntSlldsn"></a></p>
+  <p id="idLrstsuntSllnam">name::
+    <br>* Mcs.lagRust'literal-string,
+    <br>* Mcs.lagRust-s.literal,
+    <a class="clsHide" href="#idLrstsuntSllnam"></a></p>
+  </section>
+
+  <section id="idLrstsuntStp">
+  <h3 id="idLrstsuntStpH3">string.String-type of lagRust
+    <a class="clsHide" href="#idLrstsuntStpH3"></a></h3>
+  <p id="idLrstsuntStpdsn">description::
+    <br>· <code>let mut s = String::from("hello");</code>
+    <a class="clsHide" href="#idLrstsuntStpdsn"></a></p>
+  <p id="idLrstsuntStpnam">name::
+    <br>* Mcs.lagRust'String-type,
+    <br>* Mcs.lagRust-s.String-type,
+    <a class="clsHide" href="#idLrstsuntStpnam"></a></p>
+  </section>
   </section>
 
   <section id="idLrstsuntBln">
   <h2 id="idLrstsuntBlnH2">Sunt.boolean (b) of lagRust
     <a class="clsHide" href="#idLrstsuntBlnH2"></a></h2>
   <p id="idLrstsuntBlndsn">description::
-    <br>·
+    <br>· source-boolean of lagRust is any of the-two semantic-units <code>true</code> and <code>false</code> that denote the-same with the-same human-code.
     <a class="clsHide" href="#idLrstsuntBlndsn"></a></p>
   <p id="idLrstsuntBlnnam">name::
     <br>* Mcs.lagRust'boolean,
@@ -256,18 +298,56 @@
     <a class="clsHide" href="#idLrstsuntBlnnam"></a></p>
   </section>
 
-  <section id="idLrstsuntChr">
-  <h2 id="idLrstsuntChrH2">Sunt.character (c) of lagRust
-    <a class="clsHide" href="#idLrstsuntChrH2"></a></h2>
-  <p id="idLrstsuntChrdsn">description::
-    <br>· a-character denotes a-single <a class="clsPreview" href="../dirLag/filMcsChar.last.html#idCharUcd">Unicode-char</a>.
-    <br>· a-Rust-character is-mapped with 32bit in its binary-algo.
-    <br>· thus, Rust can-represents ALL the-Unicode-characters assigned to <a class="clsPreview" href="../dirLag/filMcsChar.last.html#idCharUcdcp">Unicode-code-points</a>, Latin, Greek, Chinese, all of them.
-    <a class="clsHide" href="#idLrstsuntChrdsn"></a></p>
-  <p id="idLrstsuntChrnam">name::
-    <br>* Mcs.lagRust'character,
-    <br>* Mcs.lagRust-c,
-    <a class="clsHide" href="#idLrstsuntChrnam"></a></p>
+  <section id="idLrstsuntN">
+  <h2 id="idLrstsuntNH2">Sunt.number (n) of lagRust
+    <a class="clsHide" href="#idLrstsuntNH2"></a></h2>
+  <p id="idLrstsuntNdsn">description::
+    <br>· source-number of lagRust is the-semantic-unit that denotes human-numbers.
+    <a class="clsHide" href="#idLrstsuntNdsn"></a></p>
+  <p id="idLrstsuntNnam">name::
+    <br>* Mcs.lagRust'number,
+    <br>* Mcs.lagRust-n,
+    <a class="clsHide" href="#idLrstsuntNnam"></a></p>
+  <p id="idLrstsuntNgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idLsrcsuntN">number-of-lagSrc</a>,
+    <a class="clsHide" href="#idLrstsuntNgncchn"></a></p>
+
+  <section id="idLrstsuntN">
+  <h3 id="idLrstsuntNH3">lagRust-n.SPECIFIC
+    <a class="clsHide" href="#idLrstsuntNH3"></a></h3>
+  <p id="idLrstsuntNdsn">description::
+    <br>* integer-number,
+    <br>* integerNo-number,
+    <br>* signed-number,
+    <br>* signedNo-number,
+    <br>===
+    <br>* f32-number.floating-point.32bit,
+    <br>* f64-number.floating-point.64bit,
+    <br>* i8-number.signed.8bit,
+    <br>* i16-number.signed.16bit,
+    <br>* i32-number.signed.32bit,
+    <br>* i64-number.signed.64bit,
+    <br>* i128-number.signed.128bit,
+    <br>* u8-number.unsigned.8bit,
+    <br>* u16-number.unsigned.16bit,
+    <br>* u32-number.unsigned.32bit,
+    <br>* u64-number.unsigned.64bit,
+    <br>* u128-number.unsigned.128bit,
+    <a class="clsHide" href="#idLrstsuntNdsn"></a></p>
+  <p id="idLrstsuntNnam">name::
+    <br>* Mcs.lagRust-n.specific,
+    <a class="clsHide" href="#idLrstsuntNnam"></a></p>
+
+  <section id="idLrstsuntN">
+  <h3 id="idLrstsuntNH3">lagRust-n.integer
+    <a class="clsHide" href="#idLrstsuntNH3"></a></h3>
+  </section>
+
+  <section id="idLrstsuntN">
+  <h3 id="idLrstsuntNH3">lagRust-n.integerNo
+    <a class="clsHide" href="#idLrstsuntNH3"></a></h3>
+  </section>
+  </section>
   </section>
 
   <section id="idLrstsuntF">
@@ -285,18 +365,62 @@
     <br>* <a class="clsPreview" href="#idLrstsunt">source--semantic-unit---of-lagRust</a>,
     <br>* source-function--of-lagSrc,
     <a class="clsHide" href="#idLrstsuntFgncchn"></a></p>
+
+  <section id="idLrstsuntFSpc">
+  <h3 id="idLrstsuntFSpcH3">lagRust-f.SPECIFIC
+    <a class="clsHide" href="#idLrstsuntFSpcH3"></a></h3>
+  <p id="idLrstsuntFSpcdsn">description::
+    <br>* main-function,
+    <br>* operator,
+    <a class="clsHide" href="#idLrstsuntFSpcdsn"></a></p>
+  <p id="idLrstsuntFSpcnam">name::
+    <br>* Mcs.lagRust-f.specific,
+    <a class="clsHide" href="#idLrstsuntFSpcnam"></a></p>
   </section>
 
-  <section id="idLrstsuntNbr">
-  <h2 id="idLrstsuntNbrH2">Sunt.number (n) of lagRust
-    <a class="clsHide" href="#idLrstsuntNbrH2"></a></h2>
-  <p id="idLrstsuntNbrdsn">description::
+  <section id="idLrstsuntFOpr">
+  <h3 id="idLrstsuntFOprH3">lagRust.operator
+    <a class="clsHide" href="#idLrstsuntFOprH3"></a></h3>
+  <p id="idLrstsuntFOprdsn">description::
+    <br>· source-operator of lagRust is a-special function with syntax like math-operators.
+    <a class="clsHide" href="#idLrstsuntFOprdsn"></a></p>
+  <p id="idLrstsuntFOprnam">name::
+    <br>* Mcs.lagRust'operator!⇒lagRust-opr,
+    <br>* Mcs.lagRust-Sunt.operator!⇒lagRust-opr,
+    <br>* Mcs.lagRust-opr,
+    <a class="clsHide" href="#idLrstsuntFOprnam"></a></p>
+  <p id="idLrstsuntFOprgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idLsrcsuntFOpr">lagSrc-operator</a>,
+    <a class="clsHide" href="#idLrstsuntFOprgncchn"></a></p>
+  <p id="idLrstsuntFOprwpa">addressWpg::
+    <br>* https://doc.rust-lang.org/book/appendix-02-operators.html,
+    <a class="clsHide" href="#idLrstsuntFOprwpa"></a></p>
+
+  <section id="idLrstsuntFOprSpc">
+  <h4 id="idLrstsuntFOprSpcH4">lagRust-opr.SPECIFIC
+    <a class="clsHide" href="#idLrstsuntFOprSpcH4"></a></h4>
+  <p id="idLrstsuntFOprSpcdsn">description::
+    <br>* unary-operator,
+    <br>* binary-operator,
+    <br>* ternary-operator,
+    <a class="clsHide" href="#idLrstsuntFOprSpcdsn"></a></p>
+  <p id="idLrstsuntFOprSpcnam">name::
+    <br>* Mcs.lagRust-opr.specific,
+    <a class="clsHide" href="#idLrstsuntFOprSpcnam"></a></p>
+  </section>
+  </section>
+  </section>
+
+  <section id="idLrstsuntArr">
+  <h2 id="idLrstsuntArrH2">Sunt.array (a) of lagRust
+    <a class="clsHide" href="#idLrstsuntArrH2"></a></h2>
+  <p id="idLrstsuntArrdsn">description::
     <br>·
-    <a class="clsHide" href="#idLrstsuntNbrdsn"></a></p>
-  <p id="idLrstsuntNbrnam">name::
-    <br>* Mcs.lagRust'number,
-    <br>* Mcs.lagRust-n,
-    <a class="clsHide" href="#idLrstsuntNbrnam"></a></p>
+    <a class="clsHide" href="#idLrstsuntArrdsn"></a></p>
+  <p id="idLrstsuntArrnam">name::
+    <br>* Mcs.lagRust'array,
+    <br>* Mcs.lagRust-a,
+    <a class="clsHide" href="#idLrstsuntArrnam"></a></p>
   </section>
 
   <section id="idLrstsuntTpl">
@@ -425,10 +549,12 @@
   <h2 id="idLrstsuntCpdNH2">Sunt.compoundNo of lagRust
     <a class="clsHide" href="#idLrstsuntCpdNH2"></a></h2>
   <p id="idLrstsuntCpdNdsn">description::
-    <br>"A scalar type represents a single value. Rust has four primary scalar types: integers, floating-point numbers, Booleans, and characters."
+    <br>"A scalar type represents a single value.
+    <br>Rust has four primary scalar types: integers, floating-point numbers, <a class="clsPreview" href="#idLrstsuntBln">Booleans</a>, and <a class="clsPreview" href="#idLrstsuntCh">characters</a>."
     <br>[https://doc.rust-lang.org/book/ch03-02-data-types.html#scalar-types]
     <a class="clsHide" href="#idLrstsuntCpdNdsn"></a></p>
   <p id="idLrstsuntCpdNnam">name::
+    <br>* Mcs.lagRust'scalar-type,
     <br>* Mcs.lagRust-Sunt.compoundNo,
     <br>* Mcs.lagRust-Sunt.scalar,
     <a class="clsHide" href="#idLrstsuntCpdNnam"></a></p>
