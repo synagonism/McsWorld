@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Rust-language (lagRust.0-10-0.2019-07-09 draft)</title>
+  <title>Mcs.Rust-language (lagRust.0-11-0.2019-07-10 draft)</title>
   <meta name="keywords" content="Rust-language, lagRust, Lrst, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -623,11 +623,167 @@
   <h1 id="idLrstalgSpcH1">algo.SPECIFIC of lagRust
     <a class="clsHide" href="#idLrstalgSpcH1"></a></h1>
   <p id="idLrstalgSpcdsn">description::
-    <br>·
+    <br>* library,
+    <br>* program,
     <a class="clsHide" href="#idLrstalgSpcdsn"></a></p>
   <p id="idLrstalgSpcnam">name::
     <br>* Mcs.lagRust-algo.specific,
     <a class="clsHide" href="#idLrstalgSpcnam"></a></p>
+</section>
+
+<section id="idLrstalgMdl">
+  <h1 id="idLrstalgMdlH1">algo.module of lagRust
+    <a class="clsHide" href="#idLrstalgMdlH1"></a></h1>
+  <p id="idLrstalgMdldsn">description::
+    <br>·
+    <a class="clsHide" href="#idLrstalgMdldsn"></a></p>
+  <p id="idLrstalgMdlnam">name::
+    <br>* Mcs.lagRust'module!⇒lagRust-mod,
+    <br>* Mcs.lagRust-mod,
+    <a class="clsHide" href="#idLrstalgMdlnam"></a></p>
+</section>
+
+<section id="idLrstalgCrt">
+  <h1 id="idLrstalgCrtH1">algo.crate of lagRust
+    <a class="clsHide" href="#idLrstalgCrtH1"></a></h1>
+  <p id="idLrstalgCrtdsn">description::
+    <br>· source-crate of lagRust is an-algo which can-produce a-bin-library or a-bin-program.
+    <br>"Crates: A tree of modules that produces a library or executable"
+    <br>[https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html]
+    <a class="clsHide" href="#idLrstalgCrtdsn"></a></p>
+  <p id="idLrstalgCrtnam">name::
+    <br>* Mcs.lagRust'crate!⇒lagRust-crate,
+    <br>* Mcs.lagRust'library!⇒lagRust-crate,
+    <br>* Mcs.lagRust-algo.crate!⇒lagRust-crate,
+    <a class="clsHide" href="#idLrstalgCrtnam"></a></p>
+
+  <section id="idLrstalgCrtmnmdl">
+  <h2 id="idLrstalgCrtmnmdlH2">main-module of crate of lagRust
+    <a class="clsHide" href="#idLrstalgCrtmnmdlH2"></a></h2>
+  <p id="idLrstalgCrtmnmdldsn">description::
+    <br>""
+    <a class="clsHide" href="#idLrstalgCrtmnmdldsn"></a></p>
+  <p id="idLrstalgCrtmnmdlnam">name::
+    <br>* Mcs.lagRust-crate'main-module,
+    <a class="clsHide" href="#idLrstalgCrtmnmdlnam"></a></p>
+  </section>
+
+  <section id="idLrstalgCrtSpc">
+  <h2 id="idLrstalgCrtSpcH2">crate.SPECIFIC of lagRust
+    <a class="clsHide" href="#idLrstalgCrtSpcH2"></a></h2>
+  <p id="idLrstalgCrtSpcdsn">description::
+    <br>* package-registry: https://crates.io/,
+    <br>===
+    <br>* standard-library,
+    <a class="clsHide" href="#idLrstalgCrtSpcdsn"></a></p>
+  <p id="idLrstalgCrtSpcnam">name::
+    <br>* Mcs.lagRust-crate.specific,
+    <a class="clsHide" href="#idLrstalgCrtSpcnam"></a></p>
+  </section>
+
+  <section id="idLrstalgCrtStd">
+  <h2 id="idLrstalgCrtStdH2">crate.standard of lagRust
+    <a class="clsHide" href="#idLrstalgCrtStdH2"></a></h2>
+  <p id="idLrstalgCrtStddsn">description::
+    <br>"The Rust Standard Library is the foundation of portable Rust software, a set of minimal and battle-tested shared abstractions for the broader Rust ecosystem. It offers core types, like Vec&lt;T> and Option&lt;T>, library-defined operations on language primitives, standard macros, I/O and multithreading, among many other things.
+    <br>std is available to all Rust crates by default. Therefore, the standard library can be accessed in use statements through the path std, as in use std::env."
+    <br>[https://doc.rust-lang.org/std/index.html]
+    <a class="clsHide" href="#idLrstalgCrtStddsn"></a></p>
+  <p id="idLrstalgCrtStdnam">name::
+    <br>* Mcs.Rust-Standard-Library!⇒lagRust-std,
+    <br>* Mcs.lagRust'standard-library!⇒lagRust-std,
+    <br>* Mcs.lagRust-std,
+    <a class="clsHide" href="#idLrstalgCrtStdnam"></a></p>
+
+  <section id="idLrstalgCrtStdprt">
+  <h3 id="idLrstalgCrtStdprtH3">part of lagRust-std
+    <a class="clsHide" href="#idLrstalgCrtStdprtH3"></a></h3>
+  <p id="idLrstalgCrtStdprtdsn">description::
+    <br>* structs,
+    <br>* enums,
+    <br>* unions,
+    <br>* primitives,
+    <br>* traits,
+    <br>* macros,
+    <br>* functions,
+    <br>* typedefs,
+    <br>* constants,
+    <br>===
+    <br>* re-exports,
+    <br>* primitive-types,
+    <br>* modules,
+    <br>* macros,
+    <a class="clsHide" href="#idLrstalgCrtStdprtdsn"></a></p>
+  <p id="idLrstalgCrtStdprtnam">name::
+    <br>* Mcs.lagRust-std'part,
+    <a class="clsHide" href="#idLrstalgCrtStdprtnam"></a></p>
+  </section>
+
+  <section id="idLrstalgCrtStdmdl">
+  <h3 id="idLrstalgCrtStdmdlH3">module of lagRust-std
+    <a class="clsHide" href="#idLrstalgCrtStdmdlH3"></a></h3>
+  <p id="idLrstalgCrtStdmdldsn">description::
+    <br>·
+    <a class="clsHide" href="#idLrstalgCrtStdmdldsn"></a></p>
+  <p id="idLrstalgCrtStdmdlnam">name::
+    <br>* Mcs.lagRust-std'module,
+    <a class="clsHide" href="#idLrstalgCrtStdmdlnam"></a></p>
+  </section>
+
+  <section id="idLrstalgCrtStdpld">
+  <h3 id="idLrstalgCrtStdpldH3">std::prelude of lagRust
+    <a class="clsHide" href="#idLrstalgCrtStdpldH3"></a></h3>
+  <p id="idLrstalgCrtStdplddsn">description::
+    <br>"Rust comes with a variety of things in its standard library. However, if you had to manually import every single thing that you used, it would be very verbose. But importing a lot of things that a program never uses isn't good either. A balance needs to be struck.
+    <br>The prelude is the list of things that Rust automatically imports into every Rust program. It's kept as small as possible, and is focused on things, particularly traits, which are used in almost every single Rust program.
+    <br>On a technical level, Rust inserts
+    <br><code>extern crate std;</code>
+    <br>into the crate root of every crate, and
+    <br><code>use std::prelude::v1::*;</code>
+    <br>into every module."
+    <br>[https://doc.rust-lang.org/std/prelude/index.html]
+    <a class="clsHide" href="#idLrstalgCrtStdplddsn"></a></p>
+  <p id="idLrstalgCrtStdpldnam">name::
+    <br>* Mcs.lagRust-std::prelude,
+    <a class="clsHide" href="#idLrstalgCrtStdpldnam"></a></p>
+  </section>
+
+  <section id="idLrstalgCrtStdrsc">
+  <h3 id="idLrstalgCrtStdrscH3">resource of lagRust-std
+    <a class="clsHide" href="#idLrstalgCrtStdrscH3"></a></h3>
+  <p id="idLrstalgCrtStdrscnam">name::
+    <br>* Mcs.lagRust-std'resource,
+    <a class="clsHide" href="#idLrstalgCrtStdrscnam"></a></p>
+  <p id="idLrstalgCrtStdrscwpa">addressWpg::
+    <br>* https://doc.rust-lang.org/std/,
+    <a class="clsHide" href="#idLrstalgCrtStdrscwpa"></a></p>
+  </section>
+  </section>
+</section>
+
+<section id="idLrstalgPkg">
+  <h1 id="idLrstalgPkgH1">algo.package of lagRust
+    <a class="clsHide" href="#idLrstalgPkgH1"></a></h1>
+  <p id="idLrstalgPkgdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLrstalgPkgdsn"></a></p>
+  <p id="idLrstalgPkgnam">name::
+    <br>* Mcs.lagRust'package!⇒lagRust-pkg,
+    <br>* Mcs.lagRust-pkg,
+    <a class="clsHide" href="#idLrstalgPkgnam"></a></p>
+</section>
+
+<section id="idLrstalgPgm">
+  <h1 id="idLrstalgPgmH1">algo.program of lagRust
+    <a class="clsHide" href="#idLrstalgPgmH1"></a></h1>
+  <p id="idLrstalgPgmdsn">description::
+    <br>· source-program of lagRust is a-source-algo WITH an-executing-entry-point.
+    <a class="clsHide" href="#idLrstalgPgmdsn"></a></p>
+  <p id="idLrstalgPgmnam">name::
+    <br>* Mcs.lagRust-algo.executable!⇒lagRust-algo-program,
+    <br>* Mcs.lagRust-algo.program!⇒lagRust-algo-program,
+    <br>* Mcs.lagRust-algo-program,
+    <a class="clsHide" href="#idLrstalgPgmnam"></a></p>
 </section>
 
 <section id="idLrstbalgo">
@@ -638,22 +794,81 @@
     <br>· its[a]-algo, written by a-programer, is-compiled to <a class="clsPreview" href="filMcsLpgm.last.html#idLbnralg">a-binary-algo</a> a-real-machine understands.
     <a class="clsHide" href="#idLrstbalgodsn"></a></p>
   <p id="idLrstbalgonam">name::
-    <br>* Mcs.lagRust'binary-algo,
+    <br>* Mcs.lagRust'binary-algo!⇒lagRust-bin-algo,
+    <br>* Mcs.lagRust-bin-algo,
     <a class="clsHide" href="#idLrstbalgonam"></a></p>
+
+  <section id="idLrstbalgoSpc">
+  <h2 id="idLrstbalgoSpcH2">bin-algo.SPECIFIC of lagRust
+    <a class="clsHide" href="#idLrstbalgoSpcH2"></a></h2>
+  <p id="idLrstbalgoSpcdsn">description::
+    <br>* bin-program,
+    <a class="clsHide" href="#idLrstbalgoSpcdsn"></a></p>
+  <p id="idLrstbalgoSpcnam">name::
+    <br>* Mcs.lagRust-bin-algo.specific,
+    <a class="clsHide" href="#idLrstbalgoSpcnam"></a></p>
+  </section>
+
+  <section id="idLrstbalgoPgm">
+  <h2 id="idLrstbalgoPgmH2">bin-algo.program of lagRust
+    <a class="clsHide" href="#idLrstbalgoPgmH2"></a></h2>
+  <p id="idLrstbalgoPgmdsn">description::
+    <br>· executable of lagRust is a-bin-algo with an-executable-entry-point.
+    <a class="clsHide" href="#idLrstbalgoPgmdsn"></a></p>
+  <p id="idLrstbalgoPgmnam">name::
+    <br>* Mcs.lagRust'bin-program!⇒lagRust-exe,
+    <br>* Mcs.lagRust'executable!⇒lagRust-exe,
+    <br>* Mcs.lagRust-bin-algo.program!⇒lagRust-exe,
+    <br>* Mcs.lagRust-exe,
+    <a class="clsHide" href="#idLrstbalgoPgmnam"></a></p>
+  </section>
+</section>
+
+<section id="idLrsteval">
+  <h1 id="idLrstevalH1">evaluation of lagRust
+    <a class="clsHide" href="#idLrstevalH1"></a></h1>
+  <p id="idLrstevalnam">name::
+    <br>* Mcs.lagRust'evaluation,
+    <a class="clsHide" href="#idLrstevalnam"></a></p>
+
+  <section id="idLrstbnft">
+  <h2 id="idLrstbnftH2">benefit of lagRust
+    <a class="clsHide" href="#idLrstbnftH2"></a></h2>
+  </section>
+
+  <section id="idLrstbnftN">
+  <h2 id="idLrstbnftNH2">benefitNo of lagRust
+    <a class="clsHide" href="#idLrstbnftNH2"></a></h2>
+  </section>
 </section>
 
 <section id="idLrsttool">
   <h1 id="idLrsttoolH1">tool of lagRust
     <a class="clsHide" href="#idLrsttoolH1"></a></h1>
   <p id="idLrsttoolnam">name::
+    <br>* Mcs.lagRust'tool!⇒lagRust-tool,
     <br>* Mcs.lagRust-tool,
     <a class="clsHide" href="#idLrsttoolnam"></a></p>
+
+  <section id="idLrsttoolSpc">
+  <h2 id="idLrsttoolSpcH2">tool.SPECIFIC of lagRust
+    <a class="clsHide" href="#idLrsttoolSpcH2"></a></h2>
+  <p id="idLrsttoolSpcdsn">description::
+    <br>* rustc,
+    <br>* cargo,
+    <br>===
+    <br>* https://play.rust-lang.org/,
+    <a class="clsHide" href="#idLrsttoolSpcdsn"></a></p>
+  <p id="idLrsttoolSpcnam">name::
+    <br>* Mcs.lagRust-tool.specific,
+    <a class="clsHide" href="#idLrsttoolSpcnam"></a></p>
+  </section>
 
   <section id="idLrstrstc">
   <h2 id="idLrstrstcH2">rustc of lagRust
     <a class="clsHide" href="#idLrstrstcH2"></a></h2>
   <p id="idLrstrstcdsn">description::
-    <br>·
+    <br>· rustc is <a class="clsPreview" href="filMcsLpgm.last.html#idLpgmtoolCmpr">a-lagPgm-compiler</a>.
     <a class="clsHide" href="#idLrstrstcdsn"></a></p>
   <p id="idLrstrstcnam">name::
     <br>* Mcs.lagRust'compiler!⇒lagRust-rustc,
@@ -666,11 +881,14 @@
   <h3 id="idLrstrstcH3">error of rustc
     <a class="clsHide" href="#idLrstrstcH3"></a></h3>
   <p id="idLrstrstcdsn">description::
-    <br>·
+    <br>· <a href="https://doc.rust-lang.org/error-index.html#E00001">E00001</a> to <a href="https://doc.rust-lang.org/error-index.html#E0725">E0725</a> are-recorded in docs.
     <a class="clsHide" href="#idLrstrstcdsn"></a></p>
   <p id="idLrstrstcnam">name::
     <br>* Mcs.lagRust-rustc'error,
     <a class="clsHide" href="#idLrstrstcnam"></a></p>
+  <p id="idLrstrstcwpa">addressWpg::
+    <br>* https://doc.rust-lang.org/error-index.html,
+    <a class="clsHide" href="#idLrstrstcwpa"></a></p>
   </section>
 
   <section id="idLrstrstcrsc">
@@ -686,25 +904,448 @@
   </section>
 
   <section id="idLrstcargo">
-  <h2 id="idLrstcargoH2">Cargo of lagRust
+  <h2 id="idLrstcargoH2">cargo of lagRust
     <a class="clsHide" href="#idLrstcargoH2"></a></h2>
   <p id="idLrstcargodsn">description::
-    <br>· Cargo is Rust’s package-manager and build-tool.
+    <br>· cargo is Rust’s package-manager and build-tool.
     <a class="clsHide" href="#idLrstcargodsn"></a></p>
   <p id="idLrstcargonam">name::
-    <br>* Mcs.lagRust-Cargo,
-    <br>* Mcs.lagRust-tool.Cargo!⇒lagRust-Cargo,
-    <br>* Mcs.Rust-Cargo!⇒lagRust-Cargo,
+    <br>* Mcs.lagRust-cargo,
+    <br>* Mcs.lagRust-tool.Cargo!⇒lagRust-cargo,
+    <br>* Mcs.Rust-Cargo!⇒lagRust-cargo,
     <a class="clsHide" href="#idLrstcargonam"></a></p>
 
+  <section id="idLrstcargocmd">
+  <h3 id="idLrstcargocmdH3">command of cargo
+    <a class="clsHide" href="#idLrstcargocmdH3"></a></h3>
+  <p id="idLrstcargocmddsn">description::
+    <br>· cargo is a-command-line tool, so it has many commands that do different things.
+    <a class="clsHide" href="#idLrstcargocmddsn"></a></p>
+  <p id="idLrstcargocmdnam">name::
+    <br>* Mcs.lagRust-cargo'command!⇒lagRust-cargo-cmd,
+    <br>* Mcs.lagRust-cargo-cmd,
+    <a class="clsHide" href="#idLrstcargocmdnam"></a></p>
+  <p id="idLrstcargocmdSpc">specific::
+    <br>* bench: Execute all benchmarks of a local package
+    <br>* build: Compile a local package and all of its dependencies
+    <br>* check: Check a local package and all of its dependencies for errors
+    <br>* clean: Remove artifacts that cargo has generated in the past
+    <br>* clippy-preview: Checks a package to catch common mistakes and improve your Rust code.
+    <br>* doc: Build a package's documentation
+    <br>* fetch: Fetch dependencies of a package from the network
+    <br>* fix: Automatically fix lint warnings reported by rustc
+    <br>* generate-lockfile: Generate the lockfile for a package
+    <br>* git-checkout: Checkout a copy of a Git repository
+    <br>* init: Create a new cargo package in an existing directory
+    <br>* install: Install a Rust binary. Default location is $HOME/.cargo/bin
+    <br>* locate-project: Print a JSON representation of a Cargo.toml file's location
+    <br>* login: Save an api token from the registry locally. If token is not specified, it will be read from stdin.
+    <br>* metadata: Output the resolved dependencies of a package, the concrete used versions including overrides, in machine-readable format
+    <br>* new: Create a new cargo package at <path>
+    <br>* owner: Manage the owners of a crate on the registry
+    <br>* package: Assemble the local package into a distributable tarball
+    <br>* pkgid: Print a fully qualified package specification
+    <br>* publish: Upload a package to the registry
+    <br>* read-manifest: Print a JSON representation of a Cargo.toml manifest.
+    <br>* run: Run a binary or example of the local package
+    <br>* rustc: Compile a package and all of its dependencies
+    <br>* rustdoc: Build a package's documentation, using specified custom flags.
+    <br>* search: Search packages in crates.io
+    <br>* test: Execute all unit and integration tests and build examples of a local package
+    <br>* uninstall: Remove a Rust binary
+    <br>* update: Update dependencies as recorded in the local lock file
+    <br>* verify-project: Check correctness of crate manifest
+    <br>* version: Show version information
+    <br>* yank: Remove a pushed crate from the index
+    <br>* clippy
+    <br>* fmt
+    <br>* miri
+    <a class="clsHide" href="#idLrstcargocmdSpc"></a></p>
+
+  <section id="idLrstcrgcmdbench">
+  <h4 id="idLrstcrgcmdbenchH4">cargo-cmd.bench of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdbenchH4"></a></h4>
+  <p id="idLrstcrgcmdbenchdsn">description::
+    <br>* bench: Execute all benchmarks of a local package
+    <a class="clsHide" href="#idLrstcrgcmddsn"></a></p>
+  <p id="idLrstcrgcmdbenchnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.bench,
+    <a class="clsHide" href="#idLrstcrgcmdbenchnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdbuild">
+  <h4 id="idLrstcrgcmdbuildH4">cargo-cmd.build of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdbuildH4"></a></h4>
+  <p id="idLrstcrgcmdbuilddsn">description::
+    <br>* build: Compile a local package and all of its dependencies
+    <a class="clsHide" href="#idLrstcrgcmdbuilddsn"></a></p>
+  <p id="idLrstcrgcmdbuildnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.build,
+    <a class="clsHide" href="#idLrstcrgcmdbuildnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdcheck">
+  <h4 id="idLrstcrgcmdcheckH4">cargo-cmd.check of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdcheckH4"></a></h4>
+  <p id="idLrstcrgcmdcheckdsn">description::
+    <br>* check: Check a local package and all of its dependencies for errors
+    <a class="clsHide" href="#idLrstcrgcmdcheckdsn"></a></p>
+  <p id="idLrstcrgcmdchecknam">name::
+    <br>* Mcs.lagRust-cargo-cmd.check,
+    <a class="clsHide" href="#idLrstcrgcmdchecknam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdclean">
+  <h4 id="idLrstcrgcmdcleanH4">cargo-cmd.clean of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdcleanH4"></a></h4>
+  <p id="idLrstcrgcmdcleandsn">description::
+    <br>* clean: Remove artifacts that cargo has generated in the past
+    <a class="clsHide" href="#idLrstcrgcmdcleandsn"></a></p>
+  <p id="idLrstcrgcmdcleannam">name::
+    <br>* Mcs.lagRust-cargo-cmd.clean,
+    <a class="clsHide" href="#idLrstcrgcmdcleannam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdclippy">
+  <h4 id="idLrstcrgcmdclippyH4">cargo-cmd.clippy-preview of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdclippyH4"></a></h4>
+  <p id="idLrstcrgcmdclippydsn">description::
+    <br>* clippy-preview: Checks a package to catch common mistakes and improve your Rust code.
+    <a class="clsHide" href="#idLrstcrgcmdclippydsn"></a></p>
+  <p id="idLrstcrgcmdclippynam">name::
+    <br>* Mcs.lagRust-cargo-cmd.clippy-preview,
+    <a class="clsHide" href="#idLrstcrgcmdclippynam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmddoc">
+  <h4 id="idLrstcrgcmddocH4">cargo-cmd.doc of lagRust
+    <a class="clsHide" href="#idLrstcrgcmddocH4"></a></h4>
+  <p id="idLrstcrgcmddocdsn">description::
+    <br>* doc: Build a package's documentation
+    <a class="clsHide" href="#idLrstcrgcmddocdsn"></a></p>
+  <p id="idLrstcrgcmddocnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.doc,
+    <a class="clsHide" href="#idLrstcrgcmddocnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdfetch">
+  <h4 id="idLrstcrgcmdfetchH4">cargo-cmd.fetch of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdfetchH4"></a></h4>
+  <p id="idLrstcrgcmdfetchdsn">description::
+    <br>* fetch: Fetch dependencies of a package from the network
+    <a class="clsHide" href="#idLrstcrgcmdfetchdsn"></a></p>
+  <p id="idLrstcrgcmdfetchnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.fetch,
+    <a class="clsHide" href="#idLrstcrgcmdfetchnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdfix">
+  <h4 id="idLrstcrgcmdfixH4">cargo-cmd.fix of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdfixH4"></a></h4>
+  <p id="idLrstcrgcmdfixdsn">description::
+    <br>* fix: Automatically fix lint warnings reported by rustc
+    <a class="clsHide" href="#idLrstcrgcmdfixdsn"></a></p>
+  <p id="idLrstcrgcmdfixnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.fix,
+    <a class="clsHide" href="#idLrstcrgcmdfixnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdgenerate">
+  <h4 id="idLrstcrgcmdgenerateH4">cargo-cmd.generate-lockfile of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdgenerateH4"></a></h4>
+  <p id="idLrstcrgcmdgeneratedsn">description::
+    <br>* generate-lockfile: Generate the lockfile for a package
+    <a class="clsHide" href="#idLrstcrgcmdgeneratedsn"></a></p>
+  <p id="idLrstcrgcmdgeneratenam">name::
+    <br>* Mcs.lagRust-cargo-cmd.generate-lockfile,
+    <a class="clsHide" href="#idLrstcrgcmdgeneratenam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdgit">
+  <h4 id="idLrstcrgcmdgitH4">cargo-cmd.git-checkout of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdgitH4"></a></h4>
+  <p id="idLrstcrgcmdgitdsn">description::
+    <br>* git-checkout: Checkout a copy of a Git repository
+    <a class="clsHide" href="#idLrstcrgcmdgitdsn"></a></p>
+  <p id="idLrstcrgcmdgitnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.git-checkout,
+    <a class="clsHide" href="#idLrstcrgcmdgitnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdinit">
+  <h4 id="idLrstcrgcmdinitH4">cargo-cmd.init of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdinitH4"></a></h4>
+  <p id="idLrstcrgcmdinitdsn">description::
+    <br>* init: Create a new cargo package in an existing directory
+    <a class="clsHide" href="#idLrstcrgcmdinitdsn"></a></p>
+  <p id="idLrstcrgcmdinitnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.init,
+    <a class="clsHide" href="#idLrstcrgcmdinitnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdinstall">
+  <h4 id="idLrstcrgcmdinstallH4">cargo-cmd.install of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdinstallH4"></a></h4>
+  <p id="idLrstcrgcmdinstalldsn">description::
+    <br>* install: Install a Rust binary. Default location is $HOME/.cargo/bin
+    <a class="clsHide" href="#idLrstcrgcmdinstalldsn"></a></p>
+  <p id="idLrstcrgcmdinstallnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.install,
+    <a class="clsHide" href="#idLrstcrgcmdinstallnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdlocate">
+  <h4 id="idLrstcrgcmdlocateH4">cargo-cmd.locate-project of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdlocateH4"></a></h4>
+  <p id="idLrstcrgcmdlocatedsn">description::
+    <br>* locate-project: Print a JSON representation of a Cargo.toml file's location
+    <a class="clsHide" href="#idLrstcrgcmdlocatedsn"></a></p>
+  <p id="idLrstcrgcmdlocatenam">name::
+    <br>* Mcs.lagRust-cargo-cmd.locate-project,
+    <a class="clsHide" href="#idLrstcrgcmdlocatenam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdlogin">
+  <h4 id="idLrstcrgcmdloginH4">cargo-cmd.login of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdloginH4"></a></h4>
+  <p id="idLrstcrgcmdlogindsn">description::
+    <br>* login: Save an api token from the registry locally. If token is not specified, it will be read from stdin.
+    <a class="clsHide" href="#idLrstcrgcmdlogindsn"></a></p>
+  <p id="idLrstcrgcmdloginnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.login,
+    <a class="clsHide" href="#idLrstcrgcmdloginnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdmetadata">
+  <h4 id="idLrstcrgcmdmetadataH4">cargo-cmd.metadata of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdmetadataH4"></a></h4>
+  <p id="idLrstcrgcmdmetadatadsn">description::
+    <br>* metadata: Output the resolved dependencies of a package, the concrete used versions including overrides, in machine-readable format
+    <a class="clsHide" href="#idLrstcrgcmdmetadatadsn"></a></p>
+  <p id="idLrstcrgcmdmetadatanam">name::
+    <br>* Mcs.lagRust-cargo-cmd.metadata,
+    <a class="clsHide" href="#idLrstcrgcmdmetadatanam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdnew">
+  <h4 id="idLrstcrgcmdnewH4">cargo-cmd.new of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdnewH4"></a></h4>
+  <p id="idLrstcrgcmdnewdsn">description::
+    <br>* new: Create a new cargo package at &lt;path>
+    <a class="clsHide" href="#idLrstcrgcmdnewdsn"></a></p>
+  <p id="idLrstcrgcmdnewnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.new,
+    <a class="clsHide" href="#idLrstcrgcmdnewnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdowner">
+  <h4 id="idLrstcrgcmdownerH4">cargo-cmd.owner of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdownerH4"></a></h4>
+  <p id="idLrstcrgcmdownerdsn">description::
+    <br>* owner: Manage the owners of a crate on the registry
+    <a class="clsHide" href="#idLrstcrgcmdownerdsn"></a></p>
+  <p id="idLrstcrgcmdownernam">name::
+    <br>* Mcs.lagRust-cargo-cmd.owner,
+    <a class="clsHide" href="#idLrstcrgcmdownernam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdpackage">
+  <h4 id="idLrstcrgcmdpackageH4">cargo-cmd.package of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdpackageH4"></a></h4>
+  <p id="idLrstcrgcmdpackagedsn">description::
+    <br>* package: Assemble the local package into a distributable tarball
+    <a class="clsHide" href="#idLrstcrgcmdpackagedsn"></a></p>
+  <p id="idLrstcrgcmdpackagenam">name::
+    <br>* Mcs.lagRust-cargo-cmd.package,
+    <a class="clsHide" href="#idLrstcrgcmdpackagenam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdpkgid">
+  <h4 id="idLrstcrgcmdpkgidH4">cargo-cmd.pkgid of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdpkgidH4"></a></h4>
+  <p id="idLrstcrgcmdpkgiddsn">description::
+    <br>* pkgid: Print a fully qualified package specification
+    <a class="clsHide" href="#idLrstcrgcmdpkgiddsn"></a></p>
+  <p id="idLrstcrgcmdpkgidnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.pkgid,
+    <a class="clsHide" href="#idLrstcrgcmdpkgidnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdpublish">
+  <h4 id="idLrstcrgcmdpublishH4">cargo-cmd.publish of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdpublishH4"></a></h4>
+  <p id="idLrstcrgcmdpublishdsn">description::
+    <br>* publish: Upload a package to the registry
+    <a class="clsHide" href="#idLrstcrgcmdpublishdsn"></a></p>
+  <p id="idLrstcrgcmdpublishnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.publish,
+    <a class="clsHide" href="#idLrstcrgcmdpublishnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdread">
+  <h4 id="idLrstcrgcmdreadH4">cargo-cmd.read-manifest of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdreadH4"></a></h4>
+  <p id="idLrstcrgcmdreaddsn">description::
+    <br>* read-manifest: Print a JSON representation of a Cargo.toml manifest.
+    <a class="clsHide" href="#idLrstcrgcmdreaddsn"></a></p>
+  <p id="idLrstcrgcmdreadnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.read-manifest,
+    <a class="clsHide" href="#idLrstcrgcmdreadnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdrun">
+  <h4 id="idLrstcrgcmdrunH4">cargo-cmd.run of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdrunH4"></a></h4>
+  <p id="idLrstcrgcmdrundsn">description::
+    <br>* run: Run a binary or example of the local package
+    <a class="clsHide" href="#idLrstcrgcmdrundsn"></a></p>
+  <p id="idLrstcrgcmdrunnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.run,
+    <a class="clsHide" href="#idLrstcrgcmdrunnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdrustc">
+  <h4 id="idLrstcrgcmdrustcH4">cargo-cmd.rustc of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdrustcH4"></a></h4>
+  <p id="idLrstcrgcmdrustcdsn">description::
+    <br>* rustc: Compile a package and all of its dependencies
+    <a class="clsHide" href="#idLrstcrgcmdrustcdsn"></a></p>
+  <p id="idLrstcrgcmdrustcnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.rustc,
+    <a class="clsHide" href="#idLrstcrgcmdrustcnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdrustdoc">
+  <h4 id="idLrstcrgcmdrustdocH4">cargo-cmd.rustdoc of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdrustdocH4"></a></h4>
+  <p id="idLrstcrgcmdrustdocdsn">description::
+    <br>* rustdoc: Build a package's documentation, using specified custom flags.
+    <a class="clsHide" href="#idLrstcrgcmdrustdocdsn"></a></p>
+  <p id="idLrstcrgcmdrustdocnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.rustdoc,
+    <a class="clsHide" href="#idLrstcrgcmdrustdocnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdsearch">
+  <h4 id="idLrstcrgcmdsearchH4">cargo-cmd.search of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdsearchH4"></a></h4>
+  <p id="idLrstcrgcmdsearchdsn">description::
+    <br>* search: Search packages in crates.io
+    <a class="clsHide" href="#idLrstcrgcmdsearchdsn"></a></p>
+  <p id="idLrstcrgcmdsearchnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.search,
+    <a class="clsHide" href="#idLrstcrgcmdsearchnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdtest">
+  <h4 id="idLrstcrgcmdtestH4">cargo-cmd.test of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdtestH4"></a></h4>
+  <p id="idLrstcrgcmdtestdsn">description::
+    <br>* test: Execute all unit and integration tests and build examples of a local package
+    <a class="clsHide" href="#idLrstcrgcmdtestdsn"></a></p>
+  <p id="idLrstcrgcmdtestnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.test,
+    <a class="clsHide" href="#idLrstcrgcmdtestnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmduninstall">
+  <h4 id="idLrstcrgcmduninstallH4">cargo-cmd.uninstall of lagRust
+    <a class="clsHide" href="#idLrstcrgcmduninstallH4"></a></h4>
+  <p id="idLrstcrgcmduninstalldsn">description::
+    <br>* uninstall: Remove a Rust binary
+    <a class="clsHide" href="#idLrstcrgcmduninstalldsn"></a></p>
+  <p id="idLrstcrgcmduninstallnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.uninstall,
+    <a class="clsHide" href="#idLrstcrgcmduninstallnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdupdate">
+  <h4 id="idLrstcrgcmdupdateH4">cargo-cmd.update of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdupdateH4"></a></h4>
+  <p id="idLrstcrgcmdupdatedsn">description::
+    <br>* update: Update dependencies as recorded in the local lock file
+    <a class="clsHide" href="#idLrstcrgcmdupdatedsn"></a></p>
+  <p id="idLrstcrgcmdupdatenam">name::
+    <br>* Mcs.lagRust-cargo-cmd.update,
+    <a class="clsHide" href="#idLrstcrgcmdupdatenam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdverify">
+  <h4 id="idLrstcrgcmdverifyH4">cargo-cmd.verify-project of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdverifyH4"></a></h4>
+  <p id="idLrstcrgcmdverifydsn">description::
+    <br>* verify-project: Check correctness of crate manifest
+    <a class="clsHide" href="#idLrstcrgcmdverifydsn"></a></p>
+  <p id="idLrstcrgcmdverifynam">name::
+    <br>* Mcs.lagRust-cargo-cmd.verify-project,
+    <a class="clsHide" href="#idLrstcrgcmdverifynam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdversion">
+  <h4 id="idLrstcrgcmdversionH4">cargo-cmd.version of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdversionH4"></a></h4>
+  <p id="idLrstcrgcmdversiondsn">description::
+    <br>* version: Show version information
+    <a class="clsHide" href="#idLrstcrgcmdversiondsn"></a></p>
+  <p id="idLrstcrgcmdversionnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.version,
+    <a class="clsHide" href="#idLrstcrgcmdversionnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdyank">
+  <h4 id="idLrstcrgcmdyankH4">cargo-cmd.yank of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdyankH4"></a></h4>
+  <p id="idLrstcrgcmdyankdsn">description::
+    <br>* yank: Remove a pushed crate from the index
+    <a class="clsHide" href="#idLrstcrgcmdyankdsn"></a></p>
+  <p id="idLrstcrgcmdyanknam">name::
+    <br>* Mcs.lagRust-cargo-cmd.yank,
+    <a class="clsHide" href="#idLrstcrgcmdyanknam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdclippy">
+  <h4 id="idLrstcrgcmdclippyH4">cargo-cmd.clippy of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdclippyH4"></a></h4>
+  <p id="idLrstcrgcmdclippydsn">description::
+    <br>* clippy:
+    <a class="clsHide" href="#idLrstcrgcmdclippydsn"></a></p>
+  <p id="idLrstcrgcmdclippynam">name::
+    <br>* Mcs.lagRust-cargo-cmd.clippy,
+    <a class="clsHide" href="#idLrstcrgcmdclippynam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdfmt">
+  <h4 id="idLrstcrgcmdfmtH4">cargo-cmd.fmt of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdfmtH4"></a></h4>
+  <p id="idLrstcrgcmdfmtdsn">description::
+    <br>* fmt:
+    <a class="clsHide" href="#idLrstcrgcmdfmtdsn"></a></p>
+  <p id="idLrstcrgcmdfmtnam">name::
+    <br>* Mcs.lagRust-cargo-cmd.fmt,
+    <a class="clsHide" href="#idLrstcrgcmdfmtnam"></a></p>
+  </section>
+
+  <section id="idLrstcrgcmdmiri">
+  <h4 id="idLrstcrgcmdmiriH4">cargo-cmd.miri of lagRust
+    <a class="clsHide" href="#idLrstcrgcmdmiriH4"></a></h4>
+  <p id="idLrstcrgcmdmiridsn">description::
+    <br>* miri:
+    <a class="clsHide" href="#idLrstcrgcmdmiridsn"></a></p>
+  <p id="idLrstcrgcmdmirinam">name::
+    <br>* Mcs.lagRust-cargo-cmd.miri,
+    <a class="clsHide" href="#idLrstcrgcmdmirinam"></a></p>
+  </section>
+  </section>
+
   <section id="idLrstcargorsc">
-  <h3 id="idLrstcargorscH3">resource of Cargo
+  <h3 id="idLrstcargorscH3">resource of cargo
     <a class="clsHide" href="#idLrstcargorscH3"></a></h3>
   <p id="idLrstcargorscnam">name::
-    <br>* Mcs.lagRust-Cargo'resource,
+    <br>* Mcs.lagRust-cargo'resource,
     <a class="clsHide" href="#idLrstcargorscnam"></a></p>
   <p id="idLrstcargorscwpa">addressWpg::
     <br>* https://doc.rust-lang.org/cargo/,
+    <br>* https://doc.rust-lang.org/cargo/guide/,
     <a class="clsHide" href="#idLrstcargorscwpa"></a></p>
   </section>
 
@@ -756,6 +1397,7 @@
     <br>* https://www.rust-lang.org/learn,
     <br>* https://doc.rust-lang.org/reference/introduction.html,
     <br>* https://doc.rust-lang.org/book/,
+    <br>* https://rust-lang-nursery.github.io/rust-cookbook/,
     <br>=== community:
     <br>* https://discord.gg/rust-lang,
     <br>* https://twitter.com/rustlang,
@@ -819,6 +1461,35 @@
   <p id="idLrstevg">{time.}::
     <br>=== :
     <a class="clsHide" href="#idLrstevg"></a></p>
+
+  <section id="idLrstrls">
+  <h2 id="idLrstrlsH2">release of lagRust
+    <a class="clsHide" href="#idLrstrlsH2"></a></h2>
+  <p id="idLrstrlsdsn">description::
+    <br>"The Rust language and compiler have a six-week release cycle, meaning users get a constant stream of new features. Other programming languages release larger changes less often; Rust releases smaller updates more frequently. After a while, all of these tiny changes add up. But from release to release, it can be difficult to look back and say, “Wow, between Rust 1.10 and Rust 1.31, Rust has changed a lot!”"
+    <br>[https://doc.rust-lang.org/book/appendix-05-editions.html]
+    <a class="clsHide" href="#idLrstrlsdsn"></a></p>
+  <p id="idLrstrlsnam">name::
+    <br>* Mcs.lagRust'release,
+    <a class="clsHide" href="#idLrstrlsnam"></a></p>
+  </section>
+
+  <section id="idLrstedtn">
+  <h2 id="idLrstedtnH2">edition of lagRust
+    <a class="clsHide" href="#idLrstedtnH2"></a></h2>
+  <p id="idLrstedtndsn">description::
+    <br>"Every two or three years, the Rust team produces a new Rust edition. Each edition brings together the features that have landed into a clear package with fully updated documentation and tooling. New editions ship as part of the usual six-week release process.
+    <br>Editions serve different purposes for different people:
+    <br>- For active Rust users, a new edition brings together incremental changes into an easy-to-understand package.
+    <br>- For non-users, a new edition signals that some major advancements have landed, which might make Rust worth another look.
+    <br>- For those developing Rust, a new edition provides a rallying point for the project as a whole.
+    <br>At the time of this writing, two Rust editions are available: Rust 2015 and Rust 2018. This book is written using Rust 2018 edition idioms.
+    <br>The edition key in Cargo.toml indicates which edition the compiler should use for your code. If the key doesn’t exist, Rust uses 2015 as the edition value for backward compatibility reasons."
+    <br>[https://doc.rust-lang.org/book/appendix-05-editions.html]
+    <a class="clsHide" href="#idLrstedtndsn"></a></p>
+  <p id="idLrstedtnnam">name::
+    <br>* Mcs.lagRust'edition,
+    <a class="clsHide" href="#idLrstedtnnam"></a></p>
 </section>
 
 <section id="idLrstgncFT">
