@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char (char.0-19-0.2019-07-09 draft)</title>
+  <title>Mcs.char (char.0-20-0.2019-07-11 draft)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -693,11 +693,11 @@
       <tr>
         <td>Cf<td>Format<td>a format control character
       <tr>
-        <td>Cs<td>Surrogate<td>a surrogate code point
+        <td>Cs<td>Surrogate<td><a class="clsPreview" href="#idCharUcdstdcpSrgt">a surrogate code point</a>
       <tr>
         <td>Co<td>Private_Use<td>a private-use character
       <tr>
-        <td>Cn<td>Unassigned<td>a reserved unassigned code point or a noncharacter
+        <td>Cn<td>Unassigned<td>a reserved unassigned code point or <a class="clsPreview" href="#idCharUcdstdcpIlus">a noncharacter</a>
       <tr>
         <td>C<td>Other<td>Cc | Cf | Cs | Co | Cn
     </table>
@@ -1939,7 +1939,6 @@
     <a class="clsHide" href="#idCharUcdstdcpUsddsn"></a></p>
   <p id="idCharUcdstdcpUsdnam">name::
     <br>* Mcs.Unicode--code-point.used,
-    <br>* Mcs.Unicode-char'code-point.used,
     <br>* Mcs.used-code-point--of-Unicode,
     <a class="clsHide" href="#idCharUcdstdcpUsdnam"></a></p>
 
@@ -1951,9 +1950,8 @@
     <br>· the-Unicode-standard[a] uses 137,439 from its[a] 1,114,112 code-points to assign chars in version'11-0-0.2018.
     <a class="clsHide" href="#idCharUcdstdcpAsgddsn"></a></p>
   <p id="idCharUcdstdcpAsgdnam">name::
-    <br>* Mcs.Unicode--code-point.assigned,
-    <br>* Mcs.Unicode-char'code-point.assigned,
-    <br>* Mcs.assigned---Unicode--code-point,
+    <br>* Mcs.Unicode--code-point.assigned-char,
+    <br>* Mcs.assigned-char---Unicode--code-point,
     <a class="clsHide" href="#idCharUcdstdcpAsgdnam"></a></p>
   </section>
 
@@ -1965,7 +1963,7 @@
     <br>[http://www.unicode.org/faq/private_use.html#pua1]
     <a class="clsHide" href="#idCharUcdstdcpPtusdsn"></a></p>
   <p id="idCharUcdstdcpPtusnam">name::
-    <br>* Mcs.Unicode-char'code-point.private-use-character,
+    <br>* Mcs.Unicode-char.private-use-character,
     <br>* Mcs.Unicode--code-point.private-use-character,
     <br>* Mcs.Unicode--code-point.user-defined-character,
     <br>* Mcs.Unicode--code-point.vendor-defined-character,
@@ -1981,7 +1979,6 @@
     <br>[http://www.unicode.org/faq/private_use.html#noncharacters]
     <a class="clsHide" href="#idCharUcdstdcpIlusdsn"></a></p>
   <p id="idCharUcdstdcpIlusnam">name::
-    <br>* Mcs.Unicode-char'code-point.internal-use,
     <br>* Mcs.noncharacter---Unicode--code-point,
     <br>* Mcs.Unicode--code-point.internal-use,
     <br>* Mcs.Unicode--code-point.noncharacter,
@@ -1997,7 +1994,6 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
     <a class="clsHide" href="#idCharUcdstdcpUsdNdsn"></a></p>
   <p id="idCharUcdstdcpUsdNnam">name::
-    <br>* Mcs.Unicode-char'code-point.usedNo,
     <br>* Mcs.Unicode--code-point.usedNo,
     <br>* Mcs.usedNo-code-point--of-Unicode,
     <a class="clsHide" href="#idCharUcdstdcpUsdNnam"></a></p>
@@ -2007,13 +2003,12 @@
   <h4 id="idCharUcdstdcpStUnH4">code-point.unknown-script
     <a class="clsHide" href="#idCharUcdstdcpStUnH4"></a></h4>
   <p id="idCharUcdstdcpStUndsn">description::
-    <br>The value of <strong>"unknown" script</strong> (ISO 15924 code Zzzz) is given to unassigned, private use, noncharacter, and surrogate code points.
+    <br>The value of <strong>"unknown" script</strong> (ISO 15924 code Zzzz) is given to unassigned, private use, <a class="clsPreview" href="#idCharUcdstdcpIlus">noncharacter</a>, and surrogate code points.
     <br>[https://en.wikipedia.org/wiki/Script_(Unicode)#Special_script_property_values {2018-06-26}]
     <a class="clsHide" href="#idCharUcdstdcpStUndsn"></a></p>
   <p id="idCharUcdstdcpStUnnam">name::
     <br>* Mcs.unknown-script-code-point--of-Unicode,
     <br>* Mcs.unknown-script---Unicode--code-point,
-    <br>* Mcs.Unicode-char'code-point.unknown-script,
     <br>* Mcs.Unicode--code-point.unknown-script,
     <a class="clsHide" href="#idCharUcdstdcpStUnnam"></a></p>
   </section>
@@ -2029,7 +2024,7 @@
     <br>* Mcs.known-script-code-point--of-Unicode,
     <br>* Mcs.unknown-scriptNo-code-point--of-Unicode,
     <br>* Mcs.unknown-scriptNo---Unicode--code-point,
-    <br>* Mcs.Unicode-char'code-point.unknown-scriptNo,
+    <br>* Mcs.Unicode-char'known-script,
     <br>* Mcs.Unicode--code-point.unknown-scriptNo,
     <a class="clsHide" href="#idCharUcdstdcpStUnNnam"></a></p>
   </section>
@@ -2695,12 +2690,203 @@
     <br>* alphabetic,
     <br>* graphic,
     <br>* graphicNo,
+    <br>* letter,
+    <br>* mark,
     <br>* math,
+    <br>* other,
+    <br>* punctuation,
+    <br>* separator,
+    <br>* symbol,
     <a class="clsHide" href="#idCharUcdSpcP1"></a></p>
   </section>
 
+  <section id="idCharUcdSdogc">
+  <h2 id="idCharUcdSdogcH2">Unicode-char.SPECIFIC-DIVISION.general-category
+    <a class="clsHide" href="#idCharUcdSdogcH2"></a></h2>
+  <p id="idCharUcdSdogcdsn">description::
+    <br>· the-general-category-property is-determined on the-primary attribute of <a class="clsPreview" href="#idCharUcdglcr">the-assigned-character</a>.
+    <br>* letter,
+    <br>* mark,
+    <br>* number,
+    <br>* punctuation,
+    <br>* symbol,
+    <br>* separator,
+    <br>* other,
+    <a class="clsHide" href="#idCharUcdSdogcdsn"></a></p>
+  <p id="idCharUcdSdogcnam">name::
+    <br>* Mcs.Unicode-char.specific-division.general-category,
+    <a class="clsHide" href="#idCharUcdSdogcnam"></a></p>
+
+  <section id="idCharUcdLtr">
+  <h3 id="idCharUcdLtrH3">Unicode-char.letter
+    <a class="clsHide" href="#idCharUcdLtrH3"></a></h3>
+  <p id="idCharUcdLtrdsn">description::
+    <br>* L-Letter: Lu | Ll | Lt | Lm | Lo
+    <br>* Lu-Uppercase_Letter: an uppercase letter
+    <br>* Ll-Lowercase_Letter: a lowercase letter
+    <br>* Lt-Titlecase_Letter: a digraphic character, with first part uppercase
+    <br>* LC-Cased_Letter: Lu | Ll | Lt
+    <br>* Lm-Modifier_Letter: a modifier letter
+    <br>* Lo-Other_Letter: other letters, including syllables and ideographs
+    <br>[http://www.unicode.org/reports/tr44/#GC_Values_Table]
+    <a class="clsHide" href="#idCharUcdLtrdsn"></a></p>
+  <p id="idCharUcdLtrnam">name::
+    <br>* Mcs.Unicode-char.L-letter,
+    <br>* Mcs.Unicode-char.Lu-uppercase-letter,
+    <br>* Mcs.Unicode-char.Ll-lowercase-letter,
+    <br>* Mcs.Unicode-char.Lt-titlecase-letter,
+    <br>* Mcs.Unicode-char.LC-cased-letter,
+    <br>* Mcs.Unicode-char.Lm-modifier-letter,
+    <br>* Mcs.Unicode-char.Lo-other-letter,
+    <br>* Mcs.Unicode-char.letter-L,
+    <br>* Mcs.Unicode-letter-L,
+    <br>* Mcs.letter-L.Unicode-char,
+    <a class="clsHide" href="#idCharUcdLtrnam"></a></p>
+  </section>
+
+  <section id="idCharUcdMrk">
+  <h3 id="idCharUcdMrkH3">Unicode-char.mark
+    <a class="clsHide" href="#idCharUcdMrkH3"></a></h3>
+  <p id="idCharUcdMrkdsn">description::
+    <br>* M-Mark: Mn | Mc | Me
+    <br>* Mn-Nonspacing_Mark: a nonspacing combining mark (zero advance width)
+    <br>* Mc-Spacing_Mark: a spacing combining mark (positive advance width)
+    <br>* Me-Enclosing_Mark: an enclosing combining mark
+    <br>[http://www.unicode.org/reports/tr44/#GC_Values_Table]
+    <a class="clsHide" href="#idCharUcdMrkdsn"></a></p>
+  <p id="idCharUcdMrknam">name::
+    <br>* Mcs.Unicode-char.M-mark,
+    <br>* Mcs.Unicode-char.Mn-nonspacing-mark,
+    <br>* Mcs.Unicode-char.Mc-spacing-mark,
+    <br>* Mcs.Unicode-char.Me-encolosing-mark,
+    <br>* Mcs.Unicode-char.mark-M,
+    <br>* Mcs.Unicode-mark-M,
+    <br>* Mcs.mark-M.Unicode-char,
+    <a class="clsHide" href="#idCharUcdMrknam"></a></p>
+  </section>
+
+  <section id="idCharUcdNbr">
+  <h3 id="idCharUcdNbrH3">Unicode-char.number-N
+    <a class="clsHide" href="#idCharUcdNbrH3"></a></h3>
+  <p id="idCharUcdNbrdsn">description::
+    <br>* N-Number: Nd | Nl | No
+    <br>* Nd-Decimal_Number: a decimal digit
+    <br>* Nl-Letter_Number: a letterlike numeric character
+    <br>* No-Other_Number: a numeric character of other type
+    <br>[http://www.unicode.org/reports/tr44/#GC_Values_Table]
+    <a class="clsHide" href="#idCharUcdNbrdsn"></a></p>
+  <p id="idCharUcdNbrnam">name::
+    <br>* Mcs.Unicode-char.N-number,
+    <br>* Mcs.Unicode-char.Nd-decimal-number,
+    <br>* Mcs.Unicode-char.Nl-letter-number,
+    <br>* Mcs.Unicode-char.No-other-number,
+    <br>* Mcs.Unicode-char.number-N,
+    <br>* Mcs.Unicode-number-N,
+    <br>* Mcs.number-N.Unicode-char,
+    <a class="clsHide" href="#idCharUcdNbrnam"></a></p>
+  </section>
+
+  <section id="idCharUcdPtn">
+  <h3 id="idCharUcdPtnH3">Unicode-char.punctuation-P
+    <a class="clsHide" href="#idCharUcdPtnH3"></a></h3>
+  <p id="idCharUcdPtndsn">description::
+    <br>* P-Punctuation: Pc | Pd | Ps | Pe | Pi | Pf | Po
+    <br>* Pc-Connector_Punctuation: a connecting punctuation mark, like a tie
+    <br>* Pd-Dash_Punctuation: a dash or hyphen punctuation mark
+    <br>* Ps-Open_Punctuation: an opening punctuation mark (of a pair)
+    <br>* Pe-Close_Punctuation: a closing punctuation mark (of a pair)
+    <br>* Pi-Initial_Punctuation: an initial quotation mark
+    <br>* Pf-Final_Punctuation: a final quotation mark
+    <br>* Po-Other_Punctuation: a punctuation mark of other type
+    <br>[http://www.unicode.org/reports/tr44/#GC_Values_Table]
+    <a class="clsHide" href="#idCharUcdPtndsn"></a></p>
+  <p id="idCharUcdPtnnam">name::
+    <br>* Mcs.Unicode-char.P-punctuation,
+    <br>* Mcs.Unicode-char.Pc-connector-punctuation,
+    <br>* Mcs.Unicode-char.Pd-dash-punctuation,
+    <br>* Mcs.Unicode-char.Ps-open-punctuation,
+    <br>* Mcs.Unicode-char.Pe-close-punctuation,
+    <br>* Mcs.Unicode-char.Pi-initial-punctuation,
+    <br>* Mcs.Unicode-char.Pf-final-punctuation,
+    <br>* Mcs.Unicode-char.Po-other-punctuation,
+    <br>* Mcs.Unicode-char.punctuation-P,
+    <br>* Mcs.Unicode-punctuation-P,
+    <br>* Mcs.punctuation-P.Unicode-char,
+    <a class="clsHide" href="#idCharUcdPtnnam"></a></p>
+  </section>
+
+  <section id="idCharUcdSbl">
+  <h3 id="idCharUcdSblH3">Unicode-char.symbol-S
+    <a class="clsHide" href="#idCharUcdSblH3"></a></h3>
+  <p id="idCharUcdSbldsn">description::
+    <br>* S-Symbol: Sm | Sc | Sk | So
+    <br>* Sm-Math_Symbol: a symbol of mathematical use
+    <br>* Sc-Currency_Symbol: a currency sign
+    <br>* Sk-Modifier_Symbol: a non-letterlike modifier symbol
+    <br>* So-Other_Symbol: a symbol of other type
+    <br>[http://www.unicode.org/reports/tr44/#GC_Values_Table]
+    <a class="clsHide" href="#idCharUcdSbldsn"></a></p>
+  <p id="idCharUcdSblnam">name::
+    <br>* Mcs.Unicode-char.S-symbol,
+    <br>* Mcs.Unicode-char.Sm-math-symbol-(char.math.),
+    <br>* Mcs.Unicode-char.Sc-currency-symbol-(char.currency.),
+    <br>* Mcs.Unicode-char.Sk-modifier-symbol,
+    <br>* Mcs.Unicode-char.So-other-symbol,
+    <br>* Mcs.Unicode-char.symbol-S,
+    <br>* Mcs.Unicode-symbol-S,
+    <br>* Mcs.symbol-S.Unicode-char,
+    <a class="clsHide" href="#idCharUcdSblnam"></a></p>
+  </section>
+
+  <section id="idCharUcdSpr">
+  <h3 id="idCharUcdSprH3">Unicode-char.separator-Z
+    <a class="clsHide" href="#idCharUcdSprH3"></a></h3>
+  <p id="idCharUcdSprdsn">description::
+    <br>* Z-Separator: Zs | Zl | Zp
+    <br>* Zs-Space_Separator: a space character (of various non-zero widths)
+    <br>* Zl-Line_Separator: U+2028 LINE SEPARATOR only
+    <br>* Zp-Paragraph_Separator: U+2029 PARAGRAPH SEPARATOR only
+    <br>[http://www.unicode.org/reports/tr44/#GC_Values_Table]
+    <a class="clsHide" href="#idCharUcdSprdsn"></a></p>
+  <p id="idCharUcdSprnam">name::
+    <br>* Mcs.Unicode-char.Z-separator,
+    <br>* Mcs.Unicode-char.Zs-space-separator,
+    <br>* Mcs.Unicode-char.Zl-line-separator,
+    <br>* Mcs.Unicode-char.Zp-paragraph-separator,
+    <br>* Mcs.Unicode-char.separator-Z,
+    <br>* Mcs.Unicode-separator-Z,
+    <br>* Mcs.separator-Z.Unicode-char,
+    <a class="clsHide" href="#idCharUcdSprnam"></a></p>
+  </section>
+
+  <section id="idCharUcdOtr">
+  <h3 id="idCharUcdOtrH3">Unicode-char.other-C
+    <a class="clsHide" href="#idCharUcdOtrH3"></a></h3>
+  <p id="idCharUcdOtrdsn">description::
+    <br>* C-Other: Cc | Cf | Cs | Co | Cn
+    <br>* Cc-Control: a C0 or <a class="clsPreview" href="../dirTchInf/dirUcd/filMcsU0080.last.html#idU0080chr0">C1 control code</a>
+    <br>* Cf-Format: a format control character
+    <br>* Cs-Surrogate: <a class="clsPreview" href="#idCharUcdstdcpSrgt">a surrogate code point</a>
+    <br>* Co-Private_Use: a private-use character
+    <br>* Cn-Unassigned: a reserved unassigned code point or <a class="clsPreview" href="#idCharUcdstdcpIlus">a noncharacter</a>
+    <br>[http://www.unicode.org/reports/tr44/#GC_Values_Table]
+    <a class="clsHide" href="#idCharUcdOtrdsn"></a></p>
+  <p id="idCharUcdOtrnam">name::
+    <br>* Mcs.Unicode-char.C-other,
+    <br>* Mcs.Unicode-char.Cc-control,
+    <br>* Mcs.Unicode-char.Cf-format,
+    <br>* Mcs.Unicode-char.Cs-surrogate,
+    <br>* Mcs.Unicode-char.Co-private-use,
+    <br>* Mcs.Unicode-char.Cn-unassigned,
+    <br>* Mcs.Unicode-char.other-C,
+    <br>* Mcs.Unicode-other-C,
+    <br>* Mcs.other-C.Unicode-char,
+    <a class="clsHide" href="#idCharUcdOtrnam"></a></p>
+  </section>
+  </section>
+
   <section id="idCharUcdAgrt">
-  <h2 id="idCharUcdAgrtH2">Unicode-char.AGGREGATE
+  <h2 id="idCharUcdAgrtH2">Unicode-char.aggregate
     <a class="clsHide" href="#idCharUcdAgrtH2"></a></h2>
   <p id="idCharUcdAgrtdsn">description::
     <br>· 137,439 v.11-0-0.2018
@@ -2735,7 +2921,7 @@
   </section>
 
   <section id="idCharUcdScrpt">
-  <h2 id="idCharUcdScrptH2">Unicode-char.SCRIPT
+  <h2 id="idCharUcdScrptH2">Unicode-char.script
     <a class="clsHide" href="#idCharUcdScrptH2"></a></h2>
   <p id="idCharUcdScrptdsn">description::
     <br>· Unicode-script is A-SET of Unicode-chars used in one or more written-human-languages.
@@ -2830,7 +3016,7 @@
   </section>
 
   <section id="idCharUcdGrfc">
-  <h2 id="idCharUcdGrfcH2">Unicode-char.GRAPHIC
+  <h2 id="idCharUcdGrfcH2">Unicode-char.graphic
     <a class="clsHide" href="#idCharUcdGrfcH2"></a></h2>
   <p id="idCharUcdGrfcdsn">description::
     <br>In Unicode, Graphic characters are those with General Category Letter, Mark, Number, Punctuation, Symbol or Zs=space.

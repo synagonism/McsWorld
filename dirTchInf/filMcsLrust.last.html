@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Rust-language (lagRust.0-11-0.2019-07-10 draft)</title>
+  <title>Mcs.Rust-language (lagRust.0-13-0.2019-07-12 draft)</title>
   <meta name="keywords" content="Rust-language, lagRust, Lrst, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -39,6 +39,9 @@
 <section id="idLrstarch">
   <h1 id="idLrstarchH1">archetype (input) of lagRust
     <a class="clsHide" href="#idLrstarchH1"></a></h1>
+  <p id="idLrstarchdsn">description::
+    <br>· archetype of lagRust is a-document describing information-processing as done by humans or other machines.
+    <a class="clsHide" href="#idLrstarchdsn"></a></p>
   <p id="idLrstarchnam">name::
     <br>* Mcs.lagRust'archetype,
     <a class="clsHide" href="#idLrstarchnam"></a></p>
@@ -51,7 +54,7 @@
   <h1 id="idLrstalgH1">algo (output) of lagRust
     <a class="clsHide" href="#idLrstalgH1"></a></h1>
   <p id="idLrstalgdsn">description::
-    <br>·
+    <br>· source-algo of lagRust[a] is the-document that maps its[a] <a class="clsPreview" href="#idLrstarch">archetype</a> using it[a].
     <a class="clsHide" href="#idLrstalgdsn"></a></p>
   <p id="idLrstalgnam">name::
     <br>* Mcs.lagRust'algorithm!⇒lagRust-algo,
@@ -104,7 +107,7 @@
   <h2 id="idLrstalgsxtrH2">syntax-tree of lagRust-algo
     <a class="clsHide" href="#idLrstalgsxtrH2"></a></h2>
   <p id="idLrstalgsxtrdsn">description::
-    <br>· syntax-tree of lagRust[a] is the-whole-part-tree of <a class="clsPreview" href="#idLrstalgnode">the-source-nodes</a> of its[a] <a class="clsPreview" href="#idLrstalg">algo</a>.
+    <br>· source-syntax-tree of lagRust[a] is the-whole-part-tree of <a class="clsPreview" href="#idLrstalgnode">the-source-nodes</a> of its[a] <a class="clsPreview" href="#idLrstalg">algo</a>.
     <a class="clsHide" href="#idLrstalgsxtrdsn"></a></p>
   <p id="idLrstalgsxtrnam">name::
     <br>* Mcs.lagRust'source-syntax-tree,
@@ -153,7 +156,7 @@
   <h1 id="idLrstuntH1">algo'unit of lagRust
     <a class="clsHide" href="#idLrstuntH1"></a></h1>
   <p id="idLrstuntdsn">description::
-    <br>· indivisible parts of an-algo.
+    <br>· source-unit of lagRust is the-indivisible parts of an-algo.
     <a class="clsHide" href="#idLrstuntdsn"></a></p>
   <p id="idLrstuntnam">name::
     <br>* Mcs.lagRust-algo'unit,
@@ -167,7 +170,7 @@
   <h1 id="idLrstwrdH1">algo'word of lagRust
     <a class="clsHide" href="#idLrstwrdH1"></a></h1>
   <p id="idLrstwrddsn">description::
-    <br>· word of Lsrt is a-structure of units the-language uses to create more compound algo-structures.
+    <br>· source-word of lagRust is a-structure of units the-language uses to create more compound algo-structures.
     <a class="clsHide" href="#idLrstwrddsn"></a></p>
   <p id="idLrstwrdnam">name::
     <br>* Mcs.lagRust-algo'word!⇒lagRust-word,
@@ -176,13 +179,32 @@
   <p id="idLrstwrdgncchn">generic-chain::
     <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idLsrcwrd">word-of-Lsrc</a>,
     <a class="clsHide" href="#idLrstwrdgncchn"></a></p>
+  <p id="idLrstwrdSpc">specific::
+    <br>* identifier,
+    <br>* keyword,
+    <a class="clsHide" href="#idLrstwrdSpc"></a></p>
+
+  <section id="idLrstwrdKwd">
+  <h2 id="idLrstwrdKwdH2">word.keyword of lagRust
+    <a class="clsHide" href="#idLrstwrdKwdH2"></a></h2>
+  <p id="idLrstwrdKwddsn">description::
+    <br>· source-keyword of lagRust is a-word reserved by the-language to create algo-nodes.
+    <a class="clsHide" href="#idLrstwrdKwddsn"></a></p>
+  <p id="idLrstwrdKwdnam">name::
+    <br>* Mcs.lagRust-word.keyword!⇒lagRust.keyword,
+    <br>* Mcs.lagRust.keyword,
+    <a class="clsHide" href="#idLrstwrdKwdnam"></a></p>
+  <p id="idLrstwrdKwdgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idLsrcwrdRsvd">lagSrc-keyword</a>,
+    <a class="clsHide" href="#idLrstwrdKwdgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idLrstsunt">
   <h1 id="idLrstsuntH1">algo'semantic-unit of lagRust
     <a class="clsHide" href="#idLrstsuntH1"></a></h1>
   <p id="idLrstsuntdsn">description::
-    <br>· semantic-unit of lagRust is a-lagSrc-Sunt that
+    <br>· source-semantic-unit of lagRust is a-lagSrc-Sunt that
     <a class="clsHide" href="#idLrstsuntdsn"></a></p>
   <p id="idLrstsuntnam">name::
     <br>* Mcs.lagRust'semantic-unit!⇒lagRust-Sunt,
@@ -338,14 +360,259 @@
     <br>* Mcs.lagRust-n.specific,
     <a class="clsHide" href="#idLrstsuntNnam"></a></p>
 
-  <section id="idLrstsuntN">
-  <h3 id="idLrstsuntNH3">lagRust-n.integer
-    <a class="clsHide" href="#idLrstsuntNH3"></a></h3>
+  <section id="idLrstsuntNInt">
+  <h3 id="idLrstsuntNIntH3">lagRust-n.integer
+    <a class="clsHide" href="#idLrstsuntNIntH3"></a></h3>
+  <p id="idLrstsuntNIntdsn">description::
+    <br>· integer is a-number that denotes whole quantities.
+    <a class="clsHide" href="#idLrstsuntNIntdsn"></a></p>
+  <p id="idLrstsuntNIntnam">name::
+    <br>* Mcs.lagRust-n.integer!⇒lagRust-ni,
+    <a class="clsHide" href="#idLrstsuntNIntnam"></a></p>
+  <p id="idLrstsuntNIntSpc">specific::
+    <br>* linteral-integer,
+    <br>* signed-integer,
+    <br>* signedNo-integer,
+    <a class="clsHide" href="#idLrstsuntNIntSpc"></a></p>
+
+  <section id="idLrstsuntNILrl">
+  <h4 id="idLrstsuntNILrlH4">lagRust-ni.literal
+    <a class="clsHide" href="#idLrstsuntNILrlH4"></a></h4>
+  <p id="idLrstsuntNILrldsn">description::
+    <br>· example:
+    <br>* Decimal	98_222
+    <br>* Hex	0xff
+    <br>* Octal	0o77
+    <br>* Binary	0b1111_0000
+    <br>* Byte (u8 only)	b'A'
+    <a class="clsHide" href="#idLrstsuntNILrldsn"></a></p>
+  <p id="idLrstsuntNILrlnam">name::
+    <br>* Mcs.lagRust-ni.literal,
+    <a class="clsHide" href="#idLrstsuntNILrlnam"></a></p>
   </section>
 
-  <section id="idLrstsuntN">
-  <h3 id="idLrstsuntNH3">lagRust-n.integerNo
-    <a class="clsHide" href="#idLrstsuntNH3"></a></h3>
+  <section id="idLrstsuntNISnd">
+  <h4 id="idLrstsuntNISndH4">lagRust-ni.signed
+    <a class="clsHide" href="#idLrstsuntNISndH4"></a></h4>
+  <p id="idLrstsuntNISnddsn">description::
+    <br>· negative and positive numbers.
+    <br>· they can-represent numbers from -2^(n-1) to 2^(n-1)-1, where n is the-number of bits used in <a class="clsPreview" href="#idLrstbalgocode">bin-code</a> representation.
+    <a class="clsHide" href="#idLrstsuntNISnddsn"></a></p>
+  <p id="idLrstsuntNISndnam">name::
+    <br>* Mcs.lagRust-ni.signed,
+    <a class="clsHide" href="#idLrstsuntNISndnam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNISndN">
+  <h4 id="idLrstsuntNISndNH4">lagRust-ni.signedNo
+    <a class="clsHide" href="#idLrstsuntNISndNH4"></a></h4>
+  <p id="idLrstsuntNISndNdsn">description::
+    <br>· positive only numbers.
+    <br>· they can-represent numbers from 0 to 2^n-1, where n is the-number of bits used in <a class="clsPreview" href="#idLrstbalgocode">bin-code</a> representation.
+    <a class="clsHide" href="#idLrstsuntNISndNdsn"></a></p>
+  <p id="idLrstsuntNISndNnam">name::
+    <br>* Mcs.lagRust-ni.signedNo,
+    <br>* Mcs.lagRust-ni.unsigned,
+    <a class="clsHide" href="#idLrstsuntNISndNnam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNI8">
+  <h4 id="idLrstsuntNI8H4">lagRust-ni.i8
+    <a class="clsHide" href="#idLrstsuntNI8H4"></a></h4>
+  <p id="idLrstsuntNI8dsn">description::
+    <br>·
+    <a class="clsHide" href="#idLrstsuntNI8dsn"></a></p>
+  <p id="idLrstsuntNI8nam">name::
+    <br>* Mcs.lagRust'i8,
+    <br>* Mcs.lagRust-Sunt.i8,
+    <br>* Mcs.lagRust-ni.i8,
+    <a class="clsHide" href="#idLrstsuntNI8nam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNI16">
+  <h4 id="idLrstsuntNI16H4">lagRust-ni.i16
+    <a class="clsHide" href="#idLrstsuntNI16H4"></a></h4>
+  <p id="idLrstsuntNI16dsn">description::
+    <br>·
+    <a class="clsHide" href="#idLrstsuntNI16dsn"></a></p>
+  <p id="idLrstsuntNI16nam">name::
+    <br>* Mcs.lagRust'i16,
+    <br>* Mcs.lagRust-Sunt.i16,
+    <br>* Mcs.lagRust-ni.i16,
+    <a class="clsHide" href="#idLrstsuntNI16nam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNI32">
+  <h4 id="idLrstsuntNI32H4">lagRust-ni.i32
+    <a class="clsHide" href="#idLrstsuntNI32H4"></a></h4>
+  <p id="idLrstsuntNI32dsn">description::
+    <br>·
+    <a class="clsHide" href="#idLrstsuntNI32dsn"></a></p>
+  <p id="idLrstsuntNI32nam">name::
+    <br>* Mcs.lagRust'i32,
+    <br>* Mcs.lagRust-Sunt.i32,
+    <br>* Mcs.lagRust-ni.i32,
+    <a class="clsHide" href="#idLrstsuntNI32nam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNI64">
+  <h4 id="idLrstsuntNI64H4">lagRust-ni.i64
+    <a class="clsHide" href="#idLrstsuntNI64H4"></a></h4>
+  <p id="idLrstsuntNI64dsn">description::
+    <br>·
+    <a class="clsHide" href="#idLrstsuntNI64dsn"></a></p>
+  <p id="idLrstsuntNI64nam">name::
+    <br>* Mcs.lagRust'i64,
+    <br>* Mcs.lagRust-Sunt.i64,
+    <br>* Mcs.lagRust-ni.i64,
+    <a class="clsHide" href="#idLrstsuntNI64nam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNI128">
+  <h4 id="idLrstsuntNI128H4">lagRust-ni.i128
+    <a class="clsHide" href="#idLrstsuntNI128H4"></a></h4>
+  <p id="idLrstsuntNI128dsn">description::
+    <br>·
+    <a class="clsHide" href="#idLrstsuntNI128dsn"></a></p>
+  <p id="idLrstsuntNI128nam">name::
+    <br>* Mcs.lagRust'i128,
+    <br>* Mcs.lagRust-Sunt.i128,
+    <br>* Mcs.lagRust-ni.i128,
+    <a class="clsHide" href="#idLrstsuntNI128nam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNIsize">
+  <h4 id="idLrstsuntNIsizeH4">lagRust-ni.isize
+    <a class="clsHide" href="#idLrstsuntNIsizeH4"></a></h4>
+  <p id="idLrstsuntNIsizedsn">description::
+    <br>·
+    <a class="clsHide" href="#idLrstsuntNIsizedsn"></a></p>
+  <p id="idLrstsuntNIsizenam">name::
+    <br>* Mcs.lagRust'isize,
+    <br>* Mcs.lagRust-Sunt.isize,
+    <br>* Mcs.lagRust-ni.isize,
+    <a class="clsHide" href="#idLrstsuntNIsizenam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNIu8">
+  <h4 id="idLrstsuntNIu8H4">lagRust-ni.u8
+    <a class="clsHide" href="#idLrstsuntNIu8H4"></a></h4>
+  <p id="idLrstsuntNIu8dsn">description::
+    <br>· range: 0-(2^8-1) 256 numbers.
+    <a class="clsHide" href="#idLrstsuntNIu8dsn"></a></p>
+  <p id="idLrstsuntNIu8nam">name::
+    <br>* Mcs.lagRust'u8,
+    <br>* Mcs.lagRust-Sunt.u8,
+    <br>* Mcs.lagRust-ni.u8,
+    <a class="clsHide" href="#idLrstsuntNIu8nam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNIu16">
+  <h4 id="idLrstsuntNIu16H4">lagRust-ni.u16
+    <a class="clsHide" href="#idLrstsuntNIu16H4"></a></h4>
+  <p id="idLrstsuntNIu16dsn">description::
+    <br>· range: 0-(2^16-1) 65536 numbers.
+    <a class="clsHide" href="#idLrstsuntNIu16dsn"></a></p>
+  <p id="idLrstsuntNIu16nam">name::
+    <br>* Mcs.lagRust'u16,
+    <br>* Mcs.lagRust-Sunt.u16,
+    <br>* Mcs.lagRust-ni.u16,
+    <a class="clsHide" href="#idLrstsuntNIu16nam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNIu32">
+  <h4 id="idLrstsuntNIu32H4">lagRust-ni.u32
+    <a class="clsHide" href="#idLrstsuntNIu32H4"></a></h4>
+  <p id="idLrstsuntNIu32dsn">description::
+    <br>· range: 0-(2^32-1) 4294967296 numbers.
+    <a class="clsHide" href="#idLrstsuntNIu32dsn"></a></p>
+  <p id="idLrstsuntNIu32nam">name::
+    <br>* Mcs.lagRust'u32,
+    <br>* Mcs.lagRust-Sunt.u32,
+    <br>* Mcs.lagRust-ni.u32,
+    <a class="clsHide" href="#idLrstsuntNIu32nam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNIu64">
+  <h4 id="idLrstsuntNIu64H4">lagRust-ni.u64
+    <a class="clsHide" href="#idLrstsuntNIu64H4"></a></h4>
+  <p id="idLrstsuntNIu64dsn">description::
+    <br>· range: 0-(2^64-1) 18,446,744,073,709,551,616 numbers.
+    <a class="clsHide" href="#idLrstsuntNIu64dsn"></a></p>
+  <p id="idLrstsuntNIu64nam">name::
+    <br>* Mcs.lagRust'u64,
+    <br>* Mcs.lagRust-Sunt.u64,
+    <br>* Mcs.lagRust-ni.u64,
+    <a class="clsHide" href="#idLrstsuntNIu64nam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNIu128">
+  <h4 id="idLrstsuntNIu128H4">lagRust-ni.u128
+    <a class="clsHide" href="#idLrstsuntNIu128H4"></a></h4>
+  <p id="idLrstsuntNIu128dsn">description::
+    <br>· range: 0-(2^128-1) 3,4e+38 numbers.
+    <br>· bin-code: 128 bit.
+    <a class="clsHide" href="#idLrstsuntNIu128dsn"></a></p>
+  <p id="idLrstsuntNIu128nam">name::
+    <br>* Mcs.lagRust'u128,
+    <br>* Mcs.lagRust-Sunt.u128,
+    <br>* Mcs.lagRust-ni.u128,
+    <a class="clsHide" href="#idLrstsuntNIu128nam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNIusize">
+  <h4 id="idLrstsuntNIusizeH4">lagRust-ni.usize
+    <a class="clsHide" href="#idLrstsuntNIusizeH4"></a></h4>
+  <p id="idLrstsuntNIusizedsn">description::
+    <br>"Additionally, the isize and usize types depend on the kind of computer your program is running on: 64 bits if you’re on a 64-bit architecture and 32 bits if you’re on a 32-bit architecture."
+    <br>[https://doc.rust-lang.org/book/ch03-02-data-types.html#integer-types]
+    <a class="clsHide" href="#idLrstsuntNIusizedsn"></a></p>
+  <p id="idLrstsuntNIusizenam">name::
+    <br>* Mcs.lagRust'usize,
+    <br>* Mcs.lagRust-Sunt.usize,
+    <br>* Mcs.lagRust-ni.usize,
+    <a class="clsHide" href="#idLrstsuntNIusizenam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLrstsuntNFp">
+  <h3 id="idLrstsuntNFpH3">lagRust-n.floating-point
+    <a class="clsHide" href="#idLrstsuntNFpH3"></a></h3>
+  <p id="idLrstsuntNFpdsn">description::
+    <br>· floating-point is a-number that maps decimal-numbers.
+    <a class="clsHide" href="#idLrstsuntNFpdsn"></a></p>
+  <p id="idLrstsuntNFpnam">name::
+    <br>* Mcs.lagRust-n.decimal!⇒lagRust-nf,
+    <br>* Mcs.lagRust-n.floating-point!⇒lagRust-nf,
+    <br>* Mcs.lagRust-n.integerNo!⇒lagRust-nf,
+    <a class="clsHide" href="#idLrstsuntNFpnam"></a></p>
+
+  <section id="idLrstsuntNFp32">
+  <h4 id="idLrstsuntNFp32H4">lagRust-nf.f32
+    <a class="clsHide" href="#idLrstsuntNFp32H4"></a></h4>
+  <p id="idLrstsuntNFp32dsn">description::
+    <br>·
+    <a class="clsHide" href="#idLrstsuntNFp32dsn"></a></p>
+  <p id="idLrstsuntNFp32nam">name::
+    <br>* Mcs.lagRust'f32,
+    <br>* Mcs.lagRust-Sunt.f32,
+    <br>* Mcs.lagRust-nf.f32,
+    <a class="clsHide" href="#idLrstsuntNFp32nam"></a></p>
+  </section>
+
+  <section id="idLrstsuntNFp64">
+  <h4 id="idLrstsuntNFp64H4">lagRust-nf.f64
+    <a class="clsHide" href="#idLrstsuntNFp64H4"></a></h4>
+  <p id="idLrstsuntNFp64dsn">description::
+    <br>"The default type is f64 because on modern CPUs it’s roughly the same speed as f32 but is capable of more precision."
+    <br>[https://doc.rust-lang.org/book/ch03-02-data-types.html#floating-point-types]
+    <a class="clsHide" href="#idLrstsuntNFp64dsn"></a></p>
+  <p id="idLrstsuntNFp64nam">name::
+    <br>* Mcs.lagRust'f64,
+    <br>* Mcs.lagRust-Sunt.f64,
+    <br>* Mcs.lagRust-nf.f64,
+    <a class="clsHide" href="#idLrstsuntNFp64nam"></a></p>
+  </section>
   </section>
   </section>
   </section>
@@ -415,7 +682,8 @@
   <h2 id="idLrstsuntArrH2">Sunt.array (a) of lagRust
     <a class="clsHide" href="#idLrstsuntArrH2"></a></h2>
   <p id="idLrstsuntArrdsn">description::
-    <br>·
+    <br>· source-array of lagRust is an-orderd-list of same type semantic-units with fixed length.
+    <br>· <code>let a = [1, 2, 3, 4, 5];</code>
     <a class="clsHide" href="#idLrstsuntArrdsn"></a></p>
   <p id="idLrstsuntArrnam">name::
     <br>* Mcs.lagRust'array,
@@ -427,11 +695,31 @@
   <h2 id="idLrstsuntTplH2">Sunt.tuple () of lagRust
     <a class="clsHide" href="#idLrstsuntTplH2"></a></h2>
   <p id="idLrstsuntTpldsn">description::
-    <br>·
+    <br>· source-tuple of lagRust is an-orderd-list of different type semantic-units with fixed length.
+    <br>· <code>let t: (i32, f64, u8) = (500, 6.4, 1);</code>
     <a class="clsHide" href="#idLrstsuntTpldsn"></a></p>
   <p id="idLrstsuntTplnam">name::
     <br>* Mcs.lagRust-Sunt.tuple,
     <a class="clsHide" href="#idLrstsuntTplnam"></a></p>
+  </section>
+
+  <section id="idLrstsuntSrt">
+  <h2 id="idLrstsuntSrtH2">Sunt.struct () of lagRust
+    <a class="clsHide" href="#idLrstsuntSrtH2"></a></h2>
+  <p id="idLrstsuntSrtdsn">description::
+    <br>"Structs are similar to tuples, which were discussed in Chapter 3. Like tuples, the pieces of a struct can be different types. Unlike with tuples, you’ll name each piece of data so it’s clear what the values mean. As a result of these names, structs are more flexible than tuples: you don’t have to rely on the order of the data to specify or access the values of an instance."
+    <br>· example:
+    <br><code>struct User {
+    <br>&nbsp; username: String,
+    <br>&nbsp; count: u64,
+    <br>&nbsp; active: bool,
+    <br>}</code>
+    <br>[https://doc.rust-lang.org/book/ch05-01-defining-structs.html]
+    <a class="clsHide" href="#idLrstsuntSrtdsn"></a></p>
+  <p id="idLrstsuntSrtnam">name::
+    <br>* Mcs.lagRust-Sunt.struct!⇒lagRust-struct,
+    <br>* Mcs.lagRust-struct,
+    <a class="clsHide" href="#idLrstsuntSrtnam"></a></p>
   </section>
 
   <section id="idLrstsuntIstc">
@@ -556,6 +844,7 @@
   <p id="idLrstsuntCpdNnam">name::
     <br>* Mcs.lagRust'scalar-type,
     <br>* Mcs.lagRust-Sunt.compoundNo,
+    <br>* Mcs.lagRust-Sunt.primitive,
     <br>* Mcs.lagRust-Sunt.scalar,
     <a class="clsHide" href="#idLrstsuntCpdNnam"></a></p>
   </section>
@@ -735,7 +1024,7 @@
     <a class="clsHide" href="#idLrstalgCrtStdpldH3"></a></h3>
   <p id="idLrstalgCrtStdplddsn">description::
     <br>"Rust comes with a variety of things in its standard library. However, if you had to manually import every single thing that you used, it would be very verbose. But importing a lot of things that a program never uses isn't good either. A balance needs to be struck.
-    <br>The prelude is the list of things that Rust automatically imports into every Rust program. It's kept as small as possible, and is focused on things, particularly traits, which are used in almost every single Rust program.
+    <br><span class="clsColorRed">The prelude is the list of things that Rust automatically imports into every Rust program</span>. It's kept as small as possible, and is focused on things, particularly traits, which are used in almost every single Rust program.
     <br>On a technical level, Rust inserts
     <br><code>extern crate std;</code>
     <br>into the crate root of every crate, and
@@ -744,8 +1033,54 @@
     <br>[https://doc.rust-lang.org/std/prelude/index.html]
     <a class="clsHide" href="#idLrstalgCrtStdplddsn"></a></p>
   <p id="idLrstalgCrtStdpldnam">name::
-    <br>* Mcs.lagRust-std::prelude,
+    <br>* Mcs.lagRust'prelude-of-std!⇒lagRust-prelude,
+    <br>* Mcs.lagRust-prelude,
+    <br>* Mcs.lagRust-std::prelude!⇒lagRust-prelude,
     <a class="clsHide" href="#idLrstalgCrtStdpldnam"></a></p>
+
+  <section id="idLrstalgCrtStdpldprt">
+  <h4 id="idLrstalgCrtStdpldprtH4">part of prelude of lagRust
+    <a class="clsHide" href="#idLrstalgCrtStdpldprtH4"></a></h4>
+  <p id="idLrstalgCrtStdpldprtdsn">description::
+    <br>The current version of the prelude (version 1) lives in std::prelude::v1, and re-exports the following.
+    <br>♦ std::marker::{Copy, Send, Sized, Sync, Unpin}. The marker traits indicate fundamental properties of types.
+    <br>♦ std::ops::{Drop, Fn, FnMut, FnOnce}. Various operations for both destructors and overloading ().
+    <br>♦ std::mem::drop, a convenience function for explicitly dropping a value.
+    <br>♦ std::boxed::Box, a way to allocate values on the heap.
+    <br>♦ std::borrow::ToOwned, The conversion trait that defines to_owned, the generic method for creating an owned type from a borrowed type.
+    <br>♦ std::clone::Clone, the ubiquitous trait that defines clone, the method for producing a copy of a value.
+    <br>♦ std::cmp::{PartialEq, PartialOrd, Eq, Ord }. The comparison traits, which implement the comparison operators and are often seen in trait bounds.
+    <br>♦ std::convert::{AsRef, AsMut, Into, From}. Generic conversions, used by savvy API authors to create overloaded methods.
+    <br>♦ std::default::Default, types that have default values.
+    <br>♦ std::iter::{Iterator, Extend, IntoIterator, DoubleEndedIterator, ExactSizeIterator}. Iterators of various kinds.
+    <br>♦ std::option::Option::{self, Some, None}. A type which expresses the presence or absence of a value. This type is so commonly used, its variants are also exported.
+    <br>♦ std::result::Result::{self, Ok, Err}. A type for functions that may succeed or fail. Like Option, its variants are exported as well.
+    <br>♦ std::slice::SliceConcatExt, a trait that exists for technical reasons, but shouldn't have to exist. It provides a few useful methods on slices.
+    <br>♦ std::string::{String, ToString}, heap allocated strings.
+    <br>♦ std::vec::Vec, a growable, heap-allocated vector.
+    <br>[https://doc.rust-lang.org/std/prelude/index.html#prelude-contents]
+    <a class="clsHide" href="#idLrstalgCrtStdpldprtdsn"></a></p>
+  <p id="idLrstalgCrtStdpldprtnam">name::
+    <br>* Mcs.lagRust-prelude'part,
+    <a class="clsHide" href="#idLrstalgCrtStdpldprtnam"></a></p>
+  </section>
+
+  <section id="idLrstalgCrtStdpldVec">
+  <h4 id="idLrstalgCrtStdpldVecH4">std::vec::Vec-struct of prelude of lagRust
+    <a class="clsHide" href="#idLrstalgCrtStdpldVecH4"></a></h4>
+  <p id="idLrstalgCrtStdpldVecdsn">description::
+    <br>"A contiguous growable array type, written Vec&lt;T> but pronounced 'vector'."
+    <br>[https://doc.rust-lang.org/std/vec/struct.Vec.html]
+    <a class="clsHide" href="#idLrstalgCrtStdpldVecdsn"></a></p>
+  <p id="idLrstalgCrtStdpldVecnam">name::
+    <br>* Mcs.lagRust'Vec-struct,
+    <br>* Mcs.lagRust'vector,
+    <br>* Mcs.lagRust-struct.Vec,
+    <a class="clsHide" href="#idLrstalgCrtStdpldVecnam"></a></p>
+  <p id="idLrstalgCrtStdpldVecgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="#idLrstsuntSrt">lagRust-struct</a>,
+    <a class="clsHide" href="#idLrstalgCrtStdpldVecgncchn"></a></p>
+  </section>
   </section>
 
   <section id="idLrstalgCrtStdrsc">
@@ -791,12 +1126,24 @@
     <a class="clsHide" href="#idLrstbalgoH1"></a></h1>
   <p id="idLrstbalgodsn">description::
     <br>· Rust[a] is <a class="clsPreview" href="filMcsLpgm.last.html#idLsrcCmpd">a-compiled-language</a>.
-    <br>· its[a]-algo, written by a-programer, is-compiled to <a class="clsPreview" href="filMcsLpgm.last.html#idLbnralg">a-binary-algo</a> a-real-machine understands.
+    <br>· its[a]-<a class="clsPreview" href="#idLrstalg">algo</a>, written by a-programer, <a class="clsPreview" href="filMcsLpgm.last.html#idLpgmtoolCmprdng">is-compiled</a> to <a class="clsPreview" href="filMcsLpgm.last.html#idLbnralg">a-binary-algo</a> a-real-machine understands.
     <a class="clsHide" href="#idLrstbalgodsn"></a></p>
   <p id="idLrstbalgonam">name::
     <br>* Mcs.lagRust'binary-algo!⇒lagRust-bin-algo,
     <br>* Mcs.lagRust-bin-algo,
     <a class="clsHide" href="#idLrstbalgonam"></a></p>
+
+  <section id="idLrstbalgocode">
+  <h2 id="idLrstbalgocodeH2">bin-code of bin-algo of lagRust
+    <a class="clsHide" href="#idLrstbalgocodeH2"></a></h2>
+  <p id="idLrstbalgocodedsn">description::
+    <br>· bin-code of lagRust is any part of its <a class="clsPreview" href="#idLrstbalgo">bin-algo</a>.
+    <a class="clsHide" href="#idLrstbalgocodedsn"></a></p>
+  <p id="idLrstbalgocodenam">name::
+    <br>* Mcs.lagRust'bin-code,
+    <br>* Mcs.lagRust-bin-algo'code,
+    <a class="clsHide" href="#idLrstbalgocodenam"></a></p>
+  </section>
 
   <section id="idLrstbalgoSpc">
   <h2 id="idLrstbalgoSpcH2">bin-algo.SPECIFIC of lagRust
@@ -1499,7 +1846,7 @@
     <br>* Mcs.lagRust'generic,
     <a class="clsHide" href="#idLrstgncFTnam"></a></p>
   <p id="idLrstgncchn">generic-chain::
-    <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idLpgmSrcCmpd">compiled-Lpgm</a>,
+    <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idLpgmSrcCmpd">compiled-language</a>,
     <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idLpgmSrcStctp">statically-typed-language</a>,
     <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idOverview">programing-language</a>,
     <br>* language,
