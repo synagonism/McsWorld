@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Rust-language (lagRust.0-13-0.2019-07-12 draft)</title>
+  <title>Mcs.Rust-language (lagRust.0-14-0.2019-07-13 draft)</title>
   <meta name="keywords" content="Rust-language, lagRust, Lrst, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -115,19 +115,6 @@
     <a class="clsHide" href="#idLrstalgsxtrnam"></a></p>
   </section>
 
-  <section id="idLrstalgnode">
-  <h2 id="idLrstalgnodeH2">source-structure of lagRust-algo
-    <a class="clsHide" href="#idLrstalgnodeH2"></a></h2>
-  <p id="idLrstalgnodedsn">description::
-    <br>· source-node of lagRst[a] is any identifiable part of its[a] <a class="clsPreview" href="#idLrstalg">algo</a>.
-    <a class="clsHide" href="#idLrstalgnodedsn"></a></p>
-  <p id="idLrstalgnodenam">name::
-    <br>* Mcs.lagRust'source-node,
-    <br>* Mcs.lagRust-algo'node,
-    <br>* Mcs.lagRust-algo'structure,
-    <a class="clsHide" href="#idLrstalgnodenam"></a></p>
-  </section>
-
   <section id="idLrstalgfile">
   <h2 id="idLrstalgfileH2">file of lagRust-algo
     <a class="clsHide" href="#idLrstalgfileH2"></a></h2>
@@ -149,6 +136,36 @@
   <h3 id="idLrstalgfileH3">file.Cargo.toml
     <a class="clsHide" href="#idLrstalgfileH3"></a></h3>
   </section>
+  </section>
+</section>
+
+<section id="idLrstalgnode">
+  <h1 id="idLrstalgnodeH1">algo'node of lagRust
+    <a class="clsHide" href="#idLrstalgnodeH1"></a></h1>
+  <p id="idLrstalgnodedsn">description::
+    <br>· source-node of lagRst[a] is any identifiable part of its[a] <a class="clsPreview" href="#idLrstalg">algo</a>.
+    <a class="clsHide" href="#idLrstalgnodedsn"></a></p>
+  <p id="idLrstalgnodenam">name::
+    <br>* Mcs.lagRust'source-node!⇒lagRust-node,
+    <br>* Mcs.lagRust-algo'node!⇒lagRust-node,
+    <br>* Mcs.lagRust-algo'structure!⇒lagRust-node,
+    <br>* Mcs.lagRust-node,
+    <a class="clsHide" href="#idLrstalgnodenam"></a></p>
+  <p id="idLrstalgnodegncchn">generic-chain::
+    <br>* <a class="clsPreview" href="#idLsrcalgnode">algo-node-of-lagSrc</a>,
+    <a class="clsHide" href="#idLrstalgnodegncchn"></a></p>
+
+  <section id="idLrstalgnodescp">
+  <h2 id="idLrstalgnodescpH2">scope of node of lagRust-algo
+    <a class="clsHide" href="#idLrstalgnodescpH2"></a></h2>
+  <p id="idLrstalgnodescpdsn">description::
+    <br>"A scope is the range within a program for which an item is valid."
+    <br>[https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#variable-scope]
+    <a class="clsHide" href="#idLrstalgnodescpdsn"></a></p>
+  <p id="idLrstalgnodescpnam">name::
+    <br>* Mcs.lagRust'scope,
+    <br>* Mcs.lagRust-node'scope,
+    <a class="clsHide" href="#idLrstalgnodescpnam"></a></p>
   </section>
 </section>
 
@@ -181,22 +198,714 @@
     <a class="clsHide" href="#idLrstwrdgncchn"></a></p>
   <p id="idLrstwrdSpc">specific::
     <br>* identifier,
-    <br>* keyword,
+    <br>* <a class="clsPreview" href="#idLrstkwd">keyword</a>,
     <a class="clsHide" href="#idLrstwrdSpc"></a></p>
 
-  <section id="idLrstwrdKwd">
-  <h2 id="idLrstwrdKwdH2">word.keyword of lagRust
-    <a class="clsHide" href="#idLrstwrdKwdH2"></a></h2>
-  <p id="idLrstwrdKwddsn">description::
+  <section id="idLrstwrdIdr">
+  <h2 id="idLrstwrdIdrH2">word.identifier of lagRust
+    <a class="clsHide" href="#idLrstwrdIdrH2"></a></h2>
+  <p id="idLrstwrdIdrdsn">description::
+    <br>· identifier of lagRust is a-word, not <a class="clsPreview" href="idLrstkwd">a-keyword</a>, that folows concrete rules to be-constructed and used to construct named-algo-nodes.
+    <a class="clsHide" href="#idLrstwrdIdrdsn"></a></p>
+  <p id="idLrstwrdIdrnam">name::
+    <br>* Mcs.lagRust-word.identifier!⇒lagRust-identifier,
+    <a class="clsHide" href="#idLrstwrdIdrnam"></a></p>
+  </section>
+
+  <section id="idLrstkwd">
+  <h2 id="idLrstkwdH2">word.keyword of lagRust
+    <a class="clsHide" href="#idLrstkwdH2"></a></h2>
+  <p id="idLrstkwddsn">description::
     <br>· source-keyword of lagRust is a-word reserved by the-language to create algo-nodes.
-    <a class="clsHide" href="#idLrstwrdKwddsn"></a></p>
-  <p id="idLrstwrdKwdnam">name::
-    <br>* Mcs.lagRust-word.keyword!⇒lagRust.keyword,
-    <br>* Mcs.lagRust.keyword,
-    <a class="clsHide" href="#idLrstwrdKwdnam"></a></p>
-  <p id="idLrstwrdKwdgncchn">generic-chain::
+    <a class="clsHide" href="#idLrstkwddsn"></a></p>
+  <p id="idLrstkwdnam">name::
+    <br>* Mcs.lagRust'keyword!⇒lagRust-keyword,
+    <br>* Mcs.lagRust-word.keyword!⇒lagRust-keyword,
+    <br>* Mcs.lagRust-keyword,
+    <a class="clsHide" href="#idLrstkwdnam"></a></p>
+  <p id="idLrstkwdgncchn">generic-chain::
     <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idLsrcwrdRsvd">lagSrc-keyword</a>,
-    <a class="clsHide" href="#idLrstwrdKwdgncchn"></a></p>
+    <a class="clsHide" href="#idLrstkwdgncchn"></a></p>
+  <p id="idLrstkwdSpc">specific::
+    <br>* reserved-keyword--of-lagRust,
+    <br>* used-keyword--of-lagRust,
+    <a class="clsHide" href="#idLrstkwdSpc"></a></p>
+
+  <section id="idLrstkwdUsd">
+  <h3 id="idLrstkwdUsdH3">keyword.used of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdH3"></a></h3>
+  <p id="idLrstkwdUsddsn">description::
+    <br>· used-keyword of lagRust is a-keyword currently used.
+    <a class="clsHide" href="#idLrstkwdUsddsn"></a></p>
+  <p id="idLrstkwdUsdnam">name::
+    <br>* Mcs.lagRust'used-keyword!⇒lagRust-used-keyword,
+    <br>* Mcs.lagRust-keyword.used!⇒lagRust-used-keyword,
+    <br>* Mcs.lagRust-used-keyword,
+    <a class="clsHide" href="#idLrstkwdUsdnam"></a></p>
+
+  <section id="idLrstkwdUsdas">
+  <h4 id="idLrstkwdUsdasH4">used-keyword.as of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdasH4"></a></h4>
+  <p id="idLrstkwdUsdasdsn">description::
+    <br>"as: perform primitive casting, disambiguate the specific trait containing an item, or rename items in use and extern crate statements."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdasdsn"></a></p>
+  <p id="idLrstkwdUsdasnam">name::
+    <br>* Mcs.lagRust'as--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.as,
+    <a class="clsHide" href="#idLrstkwdUsdasnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdbreak">
+  <h4 id="idLrstkwdUsdbreakH4">used-keyword.break of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdbreakH4"></a></h4>
+  <p id="idLrstkwdUsdbreakdsn">description::
+    <br>"break: exit a loop immediately."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdbreakdsn"></a></p>
+  <p id="idLrstkwdUsdbreaknam">name::
+    <br>* Mcs.lagRust'break--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.break,
+    <a class="clsHide" href="#idLrstkwdUsdbreaknam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdconst">
+  <h4 id="idLrstkwdUsdconstH4">used-keyword.const of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdconstH4"></a></h4>
+  <p id="idLrstkwdUsdconstdsn">description::
+    <br>"const: define constant items or constant raw pointers."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdconstdsn"></a></p>
+  <p id="idLrstkwdUsdconstnam">name::
+    <br>* Mcs.lagRust'const--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.const,
+    <a class="clsHide" href="#idLrstkwdUsdconstnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdcontinue">
+  <h4 id="idLrstkwdUsdcontinueH4">used-keyword.continue of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdcontinueH4"></a></h4>
+  <p id="idLrstkwdUsdcontinuedsn">description::
+    <br>"continue: continue to the next loop iteration."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdcontinuedsn"></a></p>
+  <p id="idLrstkwdUsdcontinuenam">name::
+    <br>* Mcs.lagRust'continue--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.continue,
+    <a class="clsHide" href="#idLrstkwdUsdcontinuenam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdcrate">
+  <h4 id="idLrstkwdUsdcrateH4">used-keyword.crate of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdcrateH4"></a></h4>
+  <p id="idLrstkwdUsdcratedsn">description::
+    <br>"crate: link an external crate or a macro variable representing the crate in which the macro is defined."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdcratedsn"></a></p>
+  <p id="idLrstkwdUsdcratenam">name::
+    <br>* Mcs.lagRust'crate--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.crate,
+    <a class="clsHide" href="#idLrstkwdUsdcratenam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsddyn">
+  <h4 id="idLrstkwdUsddynH4">used-keyword.dyn of lagRust
+    <a class="clsHide" href="#idLrstkwdUsddynH4"></a></h4>
+  <p id="idLrstkwdUsddyndsn">description::
+    <br>"dyn: dynamic dispatch to a trait object."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsddyndsn"></a></p>
+  <p id="idLrstkwdUsddynnam">name::
+    <br>* Mcs.lagRust'dyn--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.dyn,
+    <a class="clsHide" href="#idLrstkwdUsddynnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdelse">
+  <h4 id="idLrstkwdUsdelseH4">used-keyword.else of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdelseH4"></a></h4>
+  <p id="idLrstkwdUsdelsedsn">description::
+    <br>"else: fallback for if and if let control flow constructs."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdelsedsn"></a></p>
+  <p id="idLrstkwdUsdelsenam">name::
+    <br>* Mcs.lagRust'else--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.else,
+    <a class="clsHide" href="#idLrstkwdUsdelsenam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdenum">
+  <h4 id="idLrstkwdUsdenumH4">used-keyword.enum of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdenumH4"></a></h4>
+  <p id="idLrstkwdUsdenumdsn">description::
+    <br>"enum: define an enumeration."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdenumdsn"></a></p>
+  <p id="idLrstkwdUsdenumnam">name::
+    <br>* Mcs.lagRust'enum--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.enum,
+    <a class="clsHide" href="#idLrstkwdUsdenumnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdextern">
+  <h4 id="idLrstkwdUsdexternH4">used-keyword.extern of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdexternH4"></a></h4>
+  <p id="idLrstkwdUsdexterndsn">description::
+    <br>"extern: link an external crate, function, or variable."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdexterndsn"></a></p>
+  <p id="idLrstkwdUsdexternnam">name::
+    <br>* Mcs.lagRust'extern--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.extern,
+    <a class="clsHide" href="#idLrstkwdUsdexternnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdfalse">
+  <h4 id="idLrstkwdUsdfalseH4">used-keyword.false of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdfalseH4"></a></h4>
+  <p id="idLrstkwdUsdfalsedsn">description::
+    <br>"false: Boolean false literal."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdfalsedsn"></a></p>
+  <p id="idLrstkwdUsdfalsenam">name::
+    <br>* Mcs.lagRust'false--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.false,
+    <a class="clsHide" href="#idLrstkwdUsdfalsenam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdfn">
+  <h4 id="idLrstkwdUsdfnH4">used-keyword.fn of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdfnH4"></a></h4>
+  <p id="idLrstkwdUsdfndsn">description::
+    <br>"fn: define a function or the function pointer type."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdfndsn"></a></p>
+  <p id="idLrstkwdUsdfnnam">name::
+    <br>* Mcs.lagRust'fn--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.fn,
+    <a class="clsHide" href="#idLrstkwdUsdfnnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdfor">
+  <h4 id="idLrstkwdUsdforH4">used-keyword.for of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdforH4"></a></h4>
+  <p id="idLrstkwdUsdfordsn">description::
+    <br>"for: loop over items from an iterator, implement a trait, or specify a higher-ranked lifetime."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdfordsn"></a></p>
+  <p id="idLrstkwdUsdfornam">name::
+    <br>* Mcs.lagRust'for--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.for,
+    <a class="clsHide" href="#idLrstkwdUsdfornam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdif">
+  <h4 id="idLrstkwdUsdifH4">used-keyword.if of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdifH4"></a></h4>
+  <p id="idLrstkwdUsdifdsn">description::
+    <br>"if: branch based on the result of a conditional expression."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdifdsn"></a></p>
+  <p id="idLrstkwdUsdifnam">name::
+    <br>* Mcs.lagRust'if--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.if,
+    <a class="clsHide" href="#idLrstkwdUsdifnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdimpl">
+  <h4 id="idLrstkwdUsdimplH4">used-keyword.impl of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdimplH4"></a></h4>
+  <p id="idLrstkwdUsdimpldsn">description::
+    <br>"impl: implement inherent or trait functionality."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdimpldsn"></a></p>
+  <p id="idLrstkwdUsdimplnam">name::
+    <br>* Mcs.lagRust'impl--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.impl,
+    <a class="clsHide" href="#idLrstkwdUsdimplnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdin">
+  <h4 id="idLrstkwdUsdinH4">used-keyword.in of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdinH4"></a></h4>
+  <p id="idLrstkwdUsdindsn">description::
+    <br>"in: part of for loop syntax."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdindsn"></a></p>
+  <p id="idLrstkwdUsdinnam">name::
+    <br>* Mcs.lagRust'in--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.in,
+    <a class="clsHide" href="#idLrstkwdUsdinnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdlet">
+  <h4 id="idLrstkwdUsdletH4">used-keyword.let of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdletH4"></a></h4>
+  <p id="idLrstkwdUsdletdsn">description::
+    <br>"let: bind a variable."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdletdsn"></a></p>
+  <p id="idLrstkwdUsdletnam">name::
+    <br>* Mcs.lagRust'let--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.let,
+    <a class="clsHide" href="#idLrstkwdUsdletnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdloop">
+  <h4 id="idLrstkwdUsdloopH4">used-keyword.loop of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdloopH4"></a></h4>
+  <p id="idLrstkwdUsdloopdsn">description::
+    <br>"loop: loop unconditionally."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdloopdsn"></a></p>
+  <p id="idLrstkwdUsdloopnam">name::
+    <br>* Mcs.lagRust'loop--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.loop,
+    <a class="clsHide" href="#idLrstkwdUsdloopnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdmatch">
+  <h4 id="idLrstkwdUsdmatchH4">used-keyword.match of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdmatchH4"></a></h4>
+  <p id="idLrstkwdUsdmatchdsn">description::
+    <br>"match: match a value to patterns."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdmatchdsn"></a></p>
+  <p id="idLrstkwdUsdmatchnam">name::
+    <br>* Mcs.lagRust'match--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.match,
+    <a class="clsHide" href="#idLrstkwdUsdmatchnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdmod">
+  <h4 id="idLrstkwdUsdmodH4">used-keyword.mod of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdmodH4"></a></h4>
+  <p id="idLrstkwdUsdmoddsn">description::
+    <br>"mod: define a module."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdmoddsn"></a></p>
+  <p id="idLrstkwdUsdmodnam">name::
+    <br>* Mcs.lagRust'mod--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.mod,
+    <a class="clsHide" href="#idLrstkwdUsdmodnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdmove">
+  <h4 id="idLrstkwdUsdmoveH4">used-keyword.move of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdmoveH4"></a></h4>
+  <p id="idLrstkwdUsdmovedsn">description::
+    <br>"move: make a closure take ownership of all its captures."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdmovedsn"></a></p>
+  <p id="idLrstkwdUsdmovenam">name::
+    <br>* Mcs.lagRust'move--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.move,
+    <a class="clsHide" href="#idLrstkwdUsdmovenam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdmut">
+  <h4 id="idLrstkwdUsdmutH4">used-keyword.mut of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdmutH4"></a></h4>
+  <p id="idLrstkwdUsdmutdsn">description::
+    <br>"mut: denote mutability in references, raw pointers, or pattern bindings."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdmutdsn"></a></p>
+  <p id="idLrstkwdUsdmutnam">name::
+    <br>* Mcs.lagRust'mut--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.mut,
+    <a class="clsHide" href="#idLrstkwdUsdmutnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdpub">
+  <h4 id="idLrstkwdUsdpubH4">used-keyword.pub of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdpubH4"></a></h4>
+  <p id="idLrstkwdUsdpubdsn">description::
+    <br>"pub: denote public visibility in struct fields, impl blocks, or modules."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdpubdsn"></a></p>
+  <p id="idLrstkwdUsdpubnam">name::
+    <br>* Mcs.lagRust'pub--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.pub,
+    <a class="clsHide" href="#idLrstkwdUsdpubnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdref">
+  <h4 id="idLrstkwdUsdrefH4">used-keyword.ref of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdrefH4"></a></h4>
+  <p id="idLrstkwdUsdrefdsn">description::
+    <br>"ref: bind by reference."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdrefdsn"></a></p>
+  <p id="idLrstkwdUsdrefnam">name::
+    <br>* Mcs.lagRust'ref--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.ref,
+    <a class="clsHide" href="#idLrstkwdUsdrefnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdreturn">
+  <h4 id="idLrstkwdUsdreturnH4">used-keyword.return of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdreturnH4"></a></h4>
+  <p id="idLrstkwdUsdreturndsn">description::
+    <br>"return: return from function."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdreturndsn"></a></p>
+  <p id="idLrstkwdUsdreturnnam">name::
+    <br>* Mcs.lagRust'return--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.return,
+    <a class="clsHide" href="#idLrstkwdUsdreturnnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdSelf">
+  <h4 id="idLrstkwdUsdSelfH4">used-keyword.Self of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdSelfH4"></a></h4>
+  <p id="idLrstkwdUsdSelfdsn">description::
+    <br>"Self: a type alias for the type implementing a trait."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdSelfdsn"></a></p>
+  <p id="idLrstkwdUsdSelfnam">name::
+    <br>* Mcs.lagRust'Self--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.Self,
+    <a class="clsHide" href="#idLrstkwdUsdSelfnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdself">
+  <h4 id="idLrstkwdUsdselfH4">used-keyword.self of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdselfH4"></a></h4>
+  <p id="idLrstkwdUsdselfdsn">description::
+    <br>"self: method subject or current module."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdselfdsn"></a></p>
+  <p id="idLrstkwdUsdselfnam">name::
+    <br>* Mcs.lagRust'self--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.self,
+    <a class="clsHide" href="#idLrstkwdUsdselfnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdstatic">
+  <h4 id="idLrstkwdUsdstaticH4">used-keyword.static of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdstaticH4"></a></h4>
+  <p id="idLrstkwdUsdstaticdsn">description::
+    <br>"static: global variable or lifetime lasting the entire program execution."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdstaticdsn"></a></p>
+  <p id="idLrstkwdUsdstaticnam">name::
+    <br>* Mcs.lagRust'static--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.static,
+    <a class="clsHide" href="#idLrstkwdUsdstaticnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdstruct">
+  <h4 id="idLrstkwdUsdstructH4">used-keyword.struct of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdstructH4"></a></h4>
+  <p id="idLrstkwdUsdstructdsn">description::
+    <br>"struct: define a structure."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdstructdsn"></a></p>
+  <p id="idLrstkwdUsdstructnam">name::
+    <br>* Mcs.lagRust'struct--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.struct,
+    <a class="clsHide" href="#idLrstkwdUsdstructnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdsuper">
+  <h4 id="idLrstkwdUsdsuperH4">used-keyword.super of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdsuperH4"></a></h4>
+  <p id="idLrstkwdUsdsuperdsn">description::
+    <br>"super: parent module of the current module."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdsuperdsn"></a></p>
+  <p id="idLrstkwdUsdsupernam">name::
+    <br>* Mcs.lagRust'super--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.super,
+    <a class="clsHide" href="#idLrstkwdUsdsupernam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdtrait">
+  <h4 id="idLrstkwdUsdtraitH4">used-keyword.trait of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdtraitH4"></a></h4>
+  <p id="idLrstkwdUsdtraitdsn">description::
+    <br>"trait: define a trait."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdtraitdsn"></a></p>
+  <p id="idLrstkwdUsdtraitnam">name::
+    <br>* Mcs.lagRust'trait--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.trait,
+    <a class="clsHide" href="#idLrstkwdUsdtraitnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdtrue">
+  <h4 id="idLrstkwdUsdtrueH4">used-keyword.true of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdtrueH4"></a></h4>
+  <p id="idLrstkwdUsdtruedsn">description::
+    <br>"true: Boolean true literal."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdtruedsn"></a></p>
+  <p id="idLrstkwdUsdtruenam">name::
+    <br>* Mcs.lagRust'true--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.true,
+    <a class="clsHide" href="#idLrstkwdUsdtruenam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdtype">
+  <h4 id="idLrstkwdUsdtypeH4">used-keyword.type of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdtypeH4"></a></h4>
+  <p id="idLrstkwdUsdtypedsn">description::
+    <br>"type: define a type alias or associated type."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdtypedsn"></a></p>
+  <p id="idLrstkwdUsdtypenam">name::
+    <br>* Mcs.lagRust'type--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.type,
+    <a class="clsHide" href="#idLrstkwdUsdtypenam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdunsafe">
+  <h4 id="idLrstkwdUsdunsafeH4">used-keyword.unsafe of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdunsafeH4"></a></h4>
+  <p id="idLrstkwdUsdunsafedsn">description::
+    <br>"unsafe: denote unsafe code, functions, traits, or implementations."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdunsafedsn"></a></p>
+  <p id="idLrstkwdUsdunsafenam">name::
+    <br>* Mcs.lagRust'unsafe--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.unsafe,
+    <a class="clsHide" href="#idLrstkwdUsdunsafenam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsduse">
+  <h4 id="idLrstkwdUsduseH4">used-keyword.use of lagRust
+    <a class="clsHide" href="#idLrstkwdUsduseH4"></a></h4>
+  <p id="idLrstkwdUsdusedsn">description::
+    <br>"use: bring symbols into scope."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdusedsn"></a></p>
+  <p id="idLrstkwdUsdusenam">name::
+    <br>* Mcs.lagRust'use--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.use,
+    <a class="clsHide" href="#idLrstkwdUsdusenam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdwhere">
+  <h4 id="idLrstkwdUsdwhereH4">used-keyword.where of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdwhereH4"></a></h4>
+  <p id="idLrstkwdUsdwheredsn">description::
+    <br>"where: denote clauses that constrain a type."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdwheredsn"></a></p>
+  <p id="idLrstkwdUsdwherenam">name::
+    <br>* Mcs.lagRust'where--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.where,
+    <a class="clsHide" href="#idLrstkwdUsdwherenam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdwhile">
+  <h4 id="idLrstkwdUsdwhileH4">used-keyword.while of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdwhileH4"></a></h4>
+  <p id="idLrstkwdUsdwhiledsn">description::
+    <br>"while: loop conditionally based on the result of an expression."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdwhiledsn"></a></p>
+  <p id="idLrstkwdUsdwhilenam">name::
+    <br>* Mcs.lagRust'while--used-keyword,
+    <br>* Mcs.lagRust-used-keyword.while,
+    <a class="clsHide" href="#idLrstkwdUsdwhilenam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLrstkwdUsdN">
+  <h3 id="idLrstkwdUsdNH3">keyword.usedNo of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNH3"></a></h3>
+  <p id="idLrstkwdUsdNdsn">description::
+    <br>· reserved-keyword of lagRust is a-keyword NOT used currently.
+    <a class="clsHide" href="#idLrstkwdUsdNdsn"></a></p>
+  <p id="idLrstkwdUsdNnam">name::
+    <br>* Mcs.lagRust'reserved-keyword!⇒lagRust-usedNo-keyword,
+    <br>* Mcs.lagRust-keyword.reserved!⇒lagRust-usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword,
+    <a class="clsHide" href="#idLrstkwdUsdNnam"></a></p>
+
+  <section id="idLrstkwdUsdNabstract">
+  <h4 id="idLrstkwdUsdNabstractH4">usedNo-keyword.abstract of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNabstractH4"></a></h4>
+  <p id="idLrstkwdUsdNabstractdsn">description::
+    <br>"abstract: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNabstractdsn"></a></p>
+  <p id="idLrstkwdUsdNabstractnam">name::
+    <br>* Mcs.lagRust'abstract--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.abstract,
+    <a class="clsHide" href="#idLrstkwdUsdNabstractnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdNasync">
+  <h4 id="idLrstkwdUsdNasyncH4">usedNo-keyword.async of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNasyncH4"></a></h4>
+  <p id="idLrstkwdUsdNasyncdsn">description::
+    <br>"async: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNasyncdsn"></a></p>
+  <p id="idLrstkwdUsdNasyncnam">name::
+    <br>* Mcs.lagRust'async--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.async,
+    <a class="clsHide" href="#idLrstkwdUsdNasyncnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdNbecome">
+  <h4 id="idLrstkwdUsdNbecomeH4">usedNo-keyword.become of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNbecomeH4"></a></h4>
+  <p id="idLrstkwdUsdNbecomedsn">description::
+    <br>"become: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNbecomedsn"></a></p>
+  <p id="idLrstkwdUsdNbecomenam">name::
+    <br>* Mcs.lagRust'become--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.become,
+    <a class="clsHide" href="#idLrstkwdUsdNbecomenam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdNbox">
+  <h4 id="idLrstkwdUsdNboxH4">usedNo-keyword.box of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNboxH4"></a></h4>
+  <p id="idLrstkwdUsdNboxdsn">description::
+    <br>"box: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNboxdsn"></a></p>
+  <p id="idLrstkwdUsdNboxnam">name::
+    <br>* Mcs.lagRust'box--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.box,
+    <a class="clsHide" href="#idLrstkwdUsdNboxnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdNdo">
+  <h4 id="idLrstkwdUsdNdoH4">usedNo-keyword.do of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNdoH4"></a></h4>
+  <p id="idLrstkwdUsdNdodsn">description::
+    <br>"do: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNdodsn"></a></p>
+  <p id="idLrstkwdUsdNdonam">name::
+    <br>* Mcs.lagRust'do--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.do,
+    <a class="clsHide" href="#idLrstkwdUsdNdonam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdNfinal">
+  <h4 id="idLrstkwdUsdNfinalH4">usedNo-keyword.final of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNfinalH4"></a></h4>
+  <p id="idLrstkwdUsdNfinaldsn">description::
+    <br>"final: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNfinaldsn"></a></p>
+  <p id="idLrstkwdUsdNfinalnam">name::
+    <br>* Mcs.lagRust'final--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.final,
+    <a class="clsHide" href="#idLrstkwdUsdNfinalnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdNmacro">
+  <h4 id="idLrstkwdUsdNmacroH4">usedNo-keyword.macro of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNmacroH4"></a></h4>
+  <p id="idLrstkwdUsdNmacrodsn">description::
+    <br>"macro: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNmacrodsn"></a></p>
+  <p id="idLrstkwdUsdNmacronam">name::
+    <br>* Mcs.lagRust'macro--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.macro,
+    <a class="clsHide" href="#idLrstkwdUsdNmacronam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdNoverride">
+  <h4 id="idLrstkwdUsdNoverrideH4">usedNo-keyword.override of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNoverrideH4"></a></h4>
+  <p id="idLrstkwdUsdNoverridedsn">description::
+    <br>"override: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNoverridedsn"></a></p>
+  <p id="idLrstkwdUsdNoverridenam">name::
+    <br>* Mcs.lagRust'override--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.override,
+    <a class="clsHide" href="#idLrstkwdUsdNoverridenam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdNpriv">
+  <h4 id="idLrstkwdUsdNprivH4">usedNo-keyword.priv of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNprivH4"></a></h4>
+  <p id="idLrstkwdUsdNprivdsn">description::
+    <br>"priv: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNprivdsn"></a></p>
+  <p id="idLrstkwdUsdNprivnam">name::
+    <br>* Mcs.lagRust'priv--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.priv,
+    <a class="clsHide" href="#idLrstkwdUsdNprivnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdNtry">
+  <h4 id="idLrstkwdUsdNtryH4">usedNo-keyword.try of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNtryH4"></a></h4>
+  <p id="idLrstkwdUsdNtrydsn">description::
+    <br>"try: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNtrydsn"></a></p>
+  <p id="idLrstkwdUsdNtrynam">name::
+    <br>* Mcs.lagRust'try--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.try,
+    <a class="clsHide" href="#idLrstkwdUsdNtrynam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdNtypeof">
+  <h4 id="idLrstkwdUsdNtypeofH4">usedNo-keyword.typeof of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNtypeofH4"></a></h4>
+  <p id="idLrstkwdUsdNtypeofdsn">description::
+    <br>"typeof: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNtypeofdsn"></a></p>
+  <p id="idLrstkwdUsdNtypeofnam">name::
+    <br>* Mcs.lagRust'typeof--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.typeof,
+    <a class="clsHide" href="#idLrstkwdUsdNtypeofnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdNunsized">
+  <h4 id="idLrstkwdUsdNunsizedH4">usedNo-keyword.unsized of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNunsizedH4"></a></h4>
+  <p id="idLrstkwdUsdNunsizeddsn">description::
+    <br>"unsized: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNunsizeddsn"></a></p>
+  <p id="idLrstkwdUsdNunsizednam">name::
+    <br>* Mcs.lagRust'unsized--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.unsized,
+    <a class="clsHide" href="#idLrstkwdUsdNunsizednam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdNvirtual">
+  <h4 id="idLrstkwdUsdNvirtualH4">usedNo-keyword.virtual of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNvirtualH4"></a></h4>
+  <p id="idLrstkwdUsdNvirtualdsn">description::
+    <br>"virtual: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNvirtualdsn"></a></p>
+  <p id="idLrstkwdUsdNvirtualnam">name::
+    <br>* Mcs.lagRust'virtual--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.virtual,
+    <a class="clsHide" href="#idLrstkwdUsdNvirtualnam"></a></p>
+  </section>
+
+  <section id="idLrstkwdUsdNyield">
+  <h4 id="idLrstkwdUsdNyieldH4">usedNo-keyword.yield of lagRust
+    <a class="clsHide" href="#idLrstkwdUsdNyieldH4"></a></h4>
+  <p id="idLrstkwdUsdNyielddsn">description::
+    <br>"yield: reserved for potential future use."
+    <br>[https://doc.rust-lang.org/book/appendix-01-keywords.html]
+    <a class="clsHide" href="#idLrstkwdUsdNyielddsn"></a></p>
+  <p id="idLrstkwdUsdNyieldnam">name::
+    <br>* Mcs.lagRust'yield--usedNo-keyword,
+    <br>* Mcs.lagRust-usedNo-keyword.yield,
+    <a class="clsHide" href="#idLrstkwdUsdNyieldnam"></a></p>
+  </section>
+  </section>
   </section>
 </section>
 
@@ -237,11 +946,12 @@
     <br>* i32-number.signed.32bit,
     <br>* i64-number.signed.64bit,
     <br>* i128-number.signed.128bit,
+    <br>* impl,
     <br>* let-variable,
     <br>* mod-module,
     <br>* str-string,
     <br>* struct,
-    <br>* union,
+    <br>* trait,
     <br>* u8-number.unsigned.8bit,
     <br>* u16-number.unsigned.16bit,
     <br>* u32-number.unsigned.32bit,
@@ -722,6 +1432,37 @@
     <a class="clsHide" href="#idLrstsuntSrtnam"></a></p>
   </section>
 
+  <section id="idLrstsuntEnm">
+  <h2 id="idLrstsuntEnmH2">Sunt.enum () of lagRust
+    <a class="clsHide" href="#idLrstsuntEnmH2"></a></h2>
+  <p id="idLrstsuntEnmdsn">description::
+    <br>· example:
+    <br><code>enum IpAddrKind {
+    <br>&nbsp; V4,
+    <br>&nbsp; V6,
+    <br>}</code>
+    <a class="clsHide" href="#idLrstsuntEnmdsn"></a></p>
+  <p id="idLrstsuntEnmnam">name::
+    <br>* Mcs.lagRust-Sunt.enum!⇒lagRust-enum,
+    <br>* Mcs.lagRust-enum,
+    <a class="clsHide" href="#idLrstsuntEnmnam"></a></p>
+  </section>
+
+  <section id="idLrstsuntTrt">
+  <h2 id="idLrstsuntTrtH2">Sunt.trait () of lagRust
+    <a class="clsHide" href="#idLrstsuntTrtH2"></a></h2>
+  <p id="idLrstsuntTrtdsn">description::
+    <br>"A trait tells the Rust compiler about functionality a particular type has and can share with other types. We can use traits to define shared behavior in an abstract way. We can use trait bounds to specify that a generic can be any type that has certain behavior.
+    <br>Note: Traits are similar to a feature often called interfaces in other languages, although with some differences."
+    <br>[https://doc.rust-lang.org/book/ch10-02-traits.html]
+    <a class="clsHide" href="#idLrstsuntTrtdsn"></a></p>
+  <p id="idLrstsuntTrtnam">name::
+    <br>* Mcs.lagRust'trait!⇒lagRust-trait,
+    <br>* Mcs.lagRust-Sunt.trait!⇒lagRust-trait,
+    <br>* Mcs.lagRust-trait,
+    <a class="clsHide" href="#idLrstsuntTrtnam"></a></p>
+  </section>
+
   <section id="idLrstsuntIstc">
   <h2 id="idLrstsuntIstcH2">Sunt.instance (literal) of lagRust
     <a class="clsHide" href="#idLrstsuntIstcH2"></a></h2>
@@ -864,12 +1605,102 @@
 <section id="idLrstsntc">
   <h1 id="idLrstsntcH1">algo'sentence of lagRust
     <a class="clsHide" href="#idLrstsntcH1"></a></h1>
+  <p id="idLrstsntcdsn">description::
+    <br>· source-sentence of lagRust is a-structure of <a class="clsPreview" href="#idLrstalgnode">algo-nodes</a> that denotes COMPLETE relations or processes ( 3 + 5 = 8 ).
+    <a class="clsHide" href="#idLrstsntcdsn"></a></p>
   <p id="idLrstsntcnam">name::
-    <br>* Mcs.lagRust-algo'sentence,
+    <br>* Mcs.lagRust-algo'sentence!⇒lagRust-sentence,
+    <br>* Mcs.lagRust-sentence,
     <a class="clsHide" href="#idLrstsntcnam"></a></p>
   <p id="idLrstsntcgncchn">generic-chain::
     <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idLsrcsntc">sentence-of-Lsrc</a>,
     <a class="clsHide" href="#idLrstsntcgncchn"></a></p>
+
+  <section id="idLrstsntcSpc">
+  <h2 id="idLrstsntcSpcH2">sentence.SPECIFIC of lagRust
+    <a class="clsHide" href="#idLrstsntcSpcH2"></a></h2>
+  <p id="idLrstsntcSpcdsn">description::
+    <br>* assignment-sentence,
+    <br>* definition-sentence,
+    <br>* conditional-sentence,
+    <br>* loop-sentence,
+    <br>* use-sentence,
+    <a class="clsHide" href="#idLrstsntcSpcdsn"></a></p>
+  <p id="idLrstsntcSpcnam">name::
+    <br>* Mcs.lagRust-sentence.specific,
+    <a class="clsHide" href="#idLrstsntcSpcnam"></a></p>
+  </section>
+
+  <section id="idLrstsntcLoopg">
+  <h2 id="idLrstsntcLoopgH2">sentence.loop-gnc of lagRust
+    <a class="clsHide" href="#idLrstsntcLoopgH2"></a></h2>
+  <p id="idLrstsntcLoopgdsn">description::
+    <br>* for-sentence,
+    <br>* loop-sentence,
+    <br>* while-sentence,
+    <a class="clsHide" href="#idLrstsntcLoopgdsn"></a></p>
+  <p id="idLrstsntcLoopgnam">name::
+    <br>* Mcs.lagRust'loop-gnc!⇒lagRust-loop-gnc,
+    <br>* Mcs.lagRust-loop-gnc,
+    <br>* Mcs.lagRust-sentence.loop-gnc!⇒lagRust-loop-gnc,
+    <a class="clsHide" href="#idLrstsntcLoopgnam"></a></p>
+
+  <section id="idLrstsntcLoopgFr">
+  <h3 id="idLrstsntcLoopgFrH3">loop-gnc.for of lagRust
+    <a class="clsHide" href="#idLrstsntcLoopgFrH3"></a></h3>
+  <p id="idLrstsntcLoopgFrdsn">description::
+    <br>· example:
+    <br><code>let a = [10, 20, 30, 40, 50];
+    <br>for element in a.iter() {
+    <br>&nbsp; println!("the value is: {}", element);
+    <br>}</code>
+    <a class="clsHide" href="#idLrstsntcLoopgFrdsn"></a></p>
+  <p id="idLrstsntcLoopgFrnam">name::
+    <br>* Mcs.lagRust'for-sentence,
+    <br>* Mcs.lagRust-for,
+    <br>* Mcs.lagRust-loop-gnc.for,
+    <a class="clsHide" href="#idLrstsntcLoopgFrnam"></a></p>
+  </section>
+
+  <section id="idLrstsntcLoopgLp">
+  <h3 id="idLrstsntcLoopgLpH3">loop-gnc.loop of lagRust
+    <a class="clsHide" href="#idLrstsntcLoopgLpH3"></a></h3>
+  <p id="idLrstsntcLoopgLpdsn">description::
+    <br>· example:
+    <br><code>let mut counter = 0;
+    <br>let result = loop {
+    <br>&nbsp; counter += 1;
+    <br>&nbsp; if counter == 10 {
+    <br>&nbsp; &nbsp; break counter * 2;
+    <br>&nbsp; }
+    <br>};
+    <br>println!("The result is {}", result);</code>
+    <a class="clsHide" href="#idLrstsntcLoopgLpdsn"></a></p>
+  <p id="idLrstsntcLoopgLpnam">name::
+    <br>* Mcs.lagRust'loop-sentence,
+    <br>* Mcs.lagRust-loop,
+    <br>* Mcs.lagRust-loop-gnc.loop,
+    <a class="clsHide" href="#idLrstsntcLoopgLpnam"></a></p>
+  </section>
+
+  <section id="idLrstsntcLoopgWhl">
+  <h3 id="idLrstsntcLoopgWhlH3">loop-gnc.while of lagRust
+    <a class="clsHide" href="#idLrstsntcLoopgWhlH3"></a></h3>
+  <p id="idLrstsntcLoopgWhldsn">description::
+    <br>· example:
+    <br><code>let mut number = 3;
+    <br>while number != 0 {
+    <br>&nbsp; println!("{}!", number);
+    <br>&nbsp; number -= 1;
+    <br>}</code>
+    <a class="clsHide" href="#idLrstsntcLoopgWhldsn"></a></p>
+  <p id="idLrstsntcLoopgWhlnam">name::
+    <br>* Mcs.lagRust'while-sentence,
+    <br>* Mcs.lagRust-while,
+    <br>* Mcs.lagRust-loop-gnc.while,
+    <a class="clsHide" href="#idLrstsntcLoopgWhlnam"></a></p>
+  </section>
+  </section>
 </section>
 
 <section id="idLrstsctn">
@@ -1065,21 +1896,38 @@
     <a class="clsHide" href="#idLrstalgCrtStdpldprtnam"></a></p>
   </section>
 
-  <section id="idLrstalgCrtStdpldVec">
-  <h4 id="idLrstalgCrtStdpldVecH4">std::vec::Vec-struct of prelude of lagRust
-    <a class="clsHide" href="#idLrstalgCrtStdpldVecH4"></a></h4>
-  <p id="idLrstalgCrtStdpldVecdsn">description::
+  <section id="idLrstalgStdpldString">
+  <h4 id="idLrstalgStdpldStringH4">std::string::String-struct of prelude of lagRust
+    <a class="clsHide" href="#idLrstalgStdpldStringH4"></a></h4>
+  <p id="idLrstalgStdpldStringdsn">description::
+    <br>"A UTF-8 encoded, growable string.
+    <br>The String type is the most common string type that has ownership over the contents of the string. It has a close relationship with its borrowed counterpart, the primitive str."
+    <br>[https://doc.rust-lang.org/std/string/struct.String.html]
+    <a class="clsHide" href="#idLrstalgStdpldStringdsn"></a></p>
+  <p id="idLrstalgStdpldStringnam">name::
+    <br>* Mcs.lagRust'String-struct!⇒lagRust-String,
+    <br>* Mcs.lagRust-String,
+    <br>* Mcs.lagRust-prelude'String-struct!⇒lagRust-String,
+    <br>* Mcs.lagRust-struct.String!⇒lagRust-String,
+    <a class="clsHide" href="#idLrstalgStdpldStringnam"></a></p>
+  </section>
+
+  <section id="idLrstalgStdpldVec">
+  <h4 id="idLrstalgStdpldVecH4">std::vec::Vec-struct of prelude of lagRust
+    <a class="clsHide" href="#idLrstalgStdpldVecH4"></a></h4>
+  <p id="idLrstalgStdpldVecdsn">description::
     <br>"A contiguous growable array type, written Vec&lt;T> but pronounced 'vector'."
     <br>[https://doc.rust-lang.org/std/vec/struct.Vec.html]
-    <a class="clsHide" href="#idLrstalgCrtStdpldVecdsn"></a></p>
-  <p id="idLrstalgCrtStdpldVecnam">name::
-    <br>* Mcs.lagRust'Vec-struct,
-    <br>* Mcs.lagRust'vector,
-    <br>* Mcs.lagRust-struct.Vec,
-    <a class="clsHide" href="#idLrstalgCrtStdpldVecnam"></a></p>
-  <p id="idLrstalgCrtStdpldVecgncchn">generic-chain::
+    <a class="clsHide" href="#idLrstalgStdpldVecdsn"></a></p>
+  <p id="idLrstalgStdpldVecnam">name::
+    <br>* Mcs.lagRust'Vec-struct!⇒lagRust-Vec,
+    <br>* Mcs.lagRust'vector!⇒lagRust-Vec,
+    <br>* Mcs.lagRust-Vec,
+    <br>* Mcs.lagRust-struct.Vec!⇒lagRust-Vec,
+    <a class="clsHide" href="#idLrstalgStdpldVecnam"></a></p>
+  <p id="idLrstalgStdpldVecgncchn">generic-chain::
     <br>* <a class="clsPreview" href="#idLrstsuntSrt">lagRust-struct</a>,
-    <a class="clsHide" href="#idLrstalgCrtStdpldVecgncchn"></a></p>
+    <a class="clsHide" href="#idLrstalgStdpldVecgncchn"></a></p>
   </section>
   </section>
 
@@ -1115,10 +1963,42 @@
     <br>· source-program of lagRust is a-source-algo WITH an-executing-entry-point.
     <a class="clsHide" href="#idLrstalgPgmdsn"></a></p>
   <p id="idLrstalgPgmnam">name::
-    <br>* Mcs.lagRust-algo.executable!⇒lagRust-algo-program,
-    <br>* Mcs.lagRust-algo.program!⇒lagRust-algo-program,
-    <br>* Mcs.lagRust-algo-program,
+    <br>* Mcs.lagRust-algo.executable!⇒lagRust-pgm,
+    <br>* Mcs.lagRust-algo.program!⇒lagRust-pgm,
+    <br>* Mcs.lagRust-pgm,
     <a class="clsHide" href="#idLrstalgPgmnam"></a></p>
+
+  <section id="idLrstalgPgmCli">
+  <h2 id="idLrstalgPgmCliH2">program.command-line of lagRust
+    <a class="clsHide" href="#idLrstalgPgmCliH2"></a></h2>
+  <p id="idLrstalgPgmClidsn">description::
+    <br>·
+    <a class="clsHide" href="#idLrstalgPgmClidsn"></a></p>
+  <p id="idLrstalgPgmClinam">name::
+    <br>* Mcs.lagRust-pgm.command-line!⇒lagRust-clip,
+    <br>* Mcs.lagRust-clip,
+    <a class="clsHide" href="#idLrstalgPgmClinam"></a></p>
+
+  <section id="idLrstalgPgmClirsc">
+  <h3 id="idLrstalgPgmClirscH3">resource of clip of lagRust
+    <a class="clsHide" href="#idLrstalgPgmClirscH3"></a></h3>
+  <p id="idLrstalgPgmClirscwpa">addressWpg::
+    <br>* https://doc.rust-lang.org/book/ch12-00-an-io-project.html,
+    <a class="clsHide" href="#idLrstalgPgmClirscwpa"></a></p>
+  </section>
+  </section>
+
+  <section id="idLrstalgPgmGui">
+  <h2 id="idLrstalgPgmGuiH2">program.command-line.no of lagRust
+    <a class="clsHide" href="#idLrstalgPgmGuiH2"></a></h2>
+  <p id="idLrstalgPgmGuidsn">description::
+    <br>·
+    <a class="clsHide" href="#idLrstalgPgmGuidsn"></a></p>
+  <p id="idLrstalgPgmGuinam">name::
+    <br>* Mcs.lagRust-pgm.command-line.no!⇒lagRust-guip,
+    <br>* Mcs.lagRust-guip,
+    <a class="clsHide" href="#idLrstalgPgmGuinam"></a></p>
+  </section>
 </section>
 
 <section id="idLrstbalgo">
@@ -1224,18 +2104,20 @@
     <br>* Mcs.Rust-compiler!⇒lagRust-rustc,
     <a class="clsHide" href="#idLrstrstcnam"></a></p>
 
-  <section id="idLrstrstc">
-  <h3 id="idLrstrstcH3">error of rustc
-    <a class="clsHide" href="#idLrstrstcH3"></a></h3>
-  <p id="idLrstrstcdsn">description::
-    <br>· <a href="https://doc.rust-lang.org/error-index.html#E00001">E00001</a> to <a href="https://doc.rust-lang.org/error-index.html#E0725">E0725</a> are-recorded in docs.
-    <a class="clsHide" href="#idLrstrstcdsn"></a></p>
-  <p id="idLrstrstcnam">name::
+  <section id="idLrstrstcerr">
+  <h3 id="idLrstrstcerrH3">error of rustc
+    <a class="clsHide" href="#idLrstrstcerrH3"></a></h3>
+  <p id="idLrstrstcerrdsn">description::
+    <br>· <a href="https://doc.rust-lang.org/error-index.html#E0001">E0001</a> to <a href="https://doc.rust-lang.org/error-index.html#E0725">E0725</a> are-recorded in docs.
+    <a class="clsHide" href="#idLrstrstcerrdsn"></a></p>
+  <p id="idLrstrstcerrnam">name::
     <br>* Mcs.lagRust-rustc'error,
-    <a class="clsHide" href="#idLrstrstcnam"></a></p>
-  <p id="idLrstrstcwpa">addressWpg::
+    <a class="clsHide" href="#idLrstrstcerrnam"></a></p>
+  <p id="idLrstrstcerrwpa">addressWpg::
     <br>* https://doc.rust-lang.org/error-index.html,
-    <a class="clsHide" href="#idLrstrstcwpa"></a></p>
+    <br>* https://doc.rust-lang.org/error-index.html#E0019,
+    <br>- <code>$ rustc --explain E0019</code>
+    <a class="clsHide" href="#idLrstrstcerrwpa"></a></p>
   </section>
 
   <section id="idLrstrstcrsc">
@@ -1246,6 +2128,7 @@
     <a class="clsHide" href="#idLrstrstcrscnam"></a></p>
   <p id="idLrstrstcrscwpa">addressWpg::
     <br>* https://doc.rust-lang.org/rustc/index.html,
+    <br>* https://blog.rust-lang.org/2016/04/19/MIR.html,
     <a class="clsHide" href="#idLrstrstcrscwpa"></a></p>
   </section>
   </section>
