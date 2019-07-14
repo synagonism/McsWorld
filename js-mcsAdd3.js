@@ -36,9 +36,9 @@ var
   //3. Name of the-title: Ethereum--blockchain-net
   sN = 'computer-machine',
   //4. SHORT-name: DnChain, DnEth, Dchain-net,
-  sNS = 'computer',
+  sNS = 'cmr',
   //5. FILE-name: shows relation of another file: DnLbr, DtcbnetEth
-  sNFil = 'Cmpr',
+  sNFil = 'Cmr',
   //6. Name for IDs eg Dtc, unique in this file.
   sNId = 'Cmr';
 
