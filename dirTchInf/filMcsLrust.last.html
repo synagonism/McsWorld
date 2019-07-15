@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Rust-language (lagRust.0-15-0.2019-07-14 draft)</title>
+  <title>Mcs.Rust-language (lagRust.0-16-0.2019-07-15 draft)</title>
   <meta name="keywords" content="Rust-language, lagRust, Lrst, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -1355,35 +1355,594 @@
     <a class="clsHide" href="#idLrstsuntFSpcnam"></a></p>
   </section>
 
-  <section id="idLrstsuntFOpr">
-  <h3 id="idLrstsuntFOprH3">lagRust.operator
-    <a class="clsHide" href="#idLrstsuntFOprH3"></a></h3>
-  <p id="idLrstsuntFOprdsn">description::
+  <section id="idLrstopr">
+  <h3 id="idLrstoprH3">lagRust.operator
+    <a class="clsHide" href="#idLrstoprH3"></a></h3>
+  <p id="idLrstoprdsn">description::
     <br>· source-operator of lagRust is a-special function with syntax like math-operators.
-    <a class="clsHide" href="#idLrstsuntFOprdsn"></a></p>
-  <p id="idLrstsuntFOprnam">name::
+    <a class="clsHide" href="#idLrstoprdsn"></a></p>
+  <p id="idLrstoprnam">name::
     <br>* Mcs.lagRust'operator!⇒lagRust-opr,
     <br>* Mcs.lagRust-Sunt.operator!⇒lagRust-opr,
     <br>* Mcs.lagRust-opr,
-    <a class="clsHide" href="#idLrstsuntFOprnam"></a></p>
-  <p id="idLrstsuntFOprgncchn">generic-chain::
+    <a class="clsHide" href="#idLrstoprnam"></a></p>
+  <p id="idLrstoprgncchn">generic-chain::
     <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idLsrcsuntFOpr">lagSrc-operator</a>,
-    <a class="clsHide" href="#idLrstsuntFOprgncchn"></a></p>
-  <p id="idLrstsuntFOprwpa">addressWpg::
+    <a class="clsHide" href="#idLrstoprgncchn"></a></p>
+  <p id="idLrstoprwpa">addressWpg::
     <br>* https://doc.rust-lang.org/book/appendix-02-operators.html,
-    <a class="clsHide" href="#idLrstsuntFOprwpa"></a></p>
+    <a class="clsHide" href="#idLrstoprwpa"></a></p>
 
-  <section id="idLrstsuntFOprSpc">
-  <h4 id="idLrstsuntFOprSpcH4">lagRust-opr.SPECIFIC
-    <a class="clsHide" href="#idLrstsuntFOprSpcH4"></a></h4>
-  <p id="idLrstsuntFOprSpcdsn">description::
+  <section id="idLrstoprovlg">
+  <h4 id="idLrstoprovlgH4">overloading of opr of lagRust
+    <a class="clsHide" href="#idLrstoprovlgH4"></a></h4>
+  <p id="idLrstoprovlgdsn">description::
+    <br>"Operator overloading is customizing the behavior of an operator (such as +) in particular situations.
+    <br>Rust doesn’t allow you to create your own operators or overload arbitrary operators. But you can overload the operations and corresponding traits listed in std::ops by implementing the traits associated with the operator."
+    <br>[https://doc.rust-lang.org/book/ch19-03-advanced-traits.html#default-generic-type-parameters-and-operator-overloading]
+    <a class="clsHide" href="#idLrstoprovlgdsn"></a></p>
+  <p id="idLrstoprovlgnam">name::
+    <br>* Mcs.lagRust-opr'overloading,
+    <a class="clsHide" href="#idLrstoprovlgnam"></a></p>
+  </section>
+
+  <section id="idLrstoprSpc">
+  <h4 id="idLrstoprSpcH4">lagRust-opr.SPECIFIC
+    <a class="clsHide" href="#idLrstoprSpcH4"></a></h4>
+  <p id="idLrstoprSpcdsn">description::
     <br>* unary-operator,
     <br>* binary-operator,
     <br>* ternary-operator,
-    <a class="clsHide" href="#idLrstsuntFOprSpcdsn"></a></p>
-  <p id="idLrstsuntFOprSpcnam">name::
+    <a class="clsHide" href="#idLrstoprSpcdsn"></a></p>
+  <p id="idLrstoprSpcnam">name::
     <br>* Mcs.lagRust-opr.specific,
-    <a class="clsHide" href="#idLrstsuntFOprSpcnam"></a></p>
+    <a class="clsHide" href="#idLrstoprSpcnam"></a></p>
+  </section>
+
+  <section id="idLrstopr33">
+  <h4 id="idLrstopr33H4">opr.!33 of lagRust
+    <a class="clsHide" href="#idLrstopr33H4"></a></h4>
+  <p id="idLrstopr33dsn">description::
+    <br>· 33 (!): ident!(...), ident!{...}, ident![...]: Macro expansion:
+    <br>: !expr: Bitwise or logical complement: Not
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr33dsn"></a></p>
+  <p id="idLrstopr33nam">name::
+    <br>* Mcs.lagRust'!33--opr,
+    <br>* Mcs.lagRust-opr.!33,
+    <a class="clsHide" href="#idLrstopr33nam"></a></p>
+  </section>
+
+  <section id="idLrstopr3361">
+  <h4 id="idLrstopr3361H4">opr.!=3361 of lagRust
+    <a class="clsHide" href="#idLrstopr3361H4"></a></h4>
+  <p id="idLrstopr3361dsn">description::
+    <br>· 3361 (!=): var != expr: Nonequality comparison: PartialEq
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr3361dsn"></a></p>
+  <p id="idLrstopr3361nam">name::
+    <br>* Mcs.lagRust'!=3361--opr,
+    <br>* Mcs.lagRust-opr.!=3361,
+    <a class="clsHide" href="#idLrstopr3361nam"></a></p>
+  </section>
+
+  <section id="idLrstopr37">
+  <h4 id="idLrstopr37H4">opr.%37 of lagRust
+    <a class="clsHide" href="#idLrstopr37H4"></a></h4>
+  <p id="idLrstopr37dsn">description::
+    <br>· 37 (%): expr % expr: Arithmetic remainder: Rem
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr37dsn"></a></p>
+  <p id="idLrstopr37nam">name::
+    <br>* Mcs.lagRust'%37--opr,
+    <br>* Mcs.lagRust-opr.%37,
+    <a class="clsHide" href="#idLrstopr37nam"></a></p>
+  </section>
+
+  <section id="idLrstopr3761">
+  <h4 id="idLrstopr3761H4">opr.%=3761 of lagRust
+    <a class="clsHide" href="#idLrstopr3761H4"></a></h4>
+  <p id="idLrstopr3761dsn">description::
+    <br>· 3761 (%=): var %= expr: Arithmetic remainder and assignment: RemAssign
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr3761dsn"></a></p>
+  <p id="idLrstopr3761nam">name::
+    <br>* Mcs.lagRust'%=3761--opr,
+    <br>* Mcs.lagRust-opr.%=3761,
+    <a class="clsHide" href="#idLrstopr3761nam"></a></p>
+  </section>
+
+  <section id="idLrstopr38">
+  <h4 id="idLrstopr38H4">opr.&amp;38 of lagRust
+    <a class="clsHide" href="#idLrstopr38H4"></a></h4>
+  <p id="idLrstopr38dsn">description::
+    <br>· 38 (&amp;): &amp;expr, &amp;mut expr: Borrow:
+    <br>: &amp;type, &amp;mut type, &amp;'a type, &amp;'a mut type: Borrowed pointer type:
+    <br>: expr &amp; expr: Bitwise AND: BitAnd
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr38dsn"></a></p>
+  <p id="idLrstopr38nam">name::
+    <br>* Mcs.lagRust'&amp;38--opr,
+    <br>* Mcs.lagRust-opr.&amp;38,
+    <a class="clsHide" href="#idLrstopr38nam"></a></p>
+  </section>
+
+  <section id="idLrstopr3861">
+  <h4 id="idLrstopr3861H4">opr.&amp;=3861 of lagRust
+    <a class="clsHide" href="#idLrstopr3861H4"></a></h4>
+  <p id="idLrstopr3861dsn">description::
+    <br>· 3861 (&amp;=): var &amp;= expr: Bitwise AND and assignment: BitAndAssign
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr3861dsn"></a></p>
+  <p id="idLrstopr3861nam">name::
+    <br>* Mcs.lagRust'&amp;=3861--opr,
+    <br>* Mcs.lagRust-opr.&amp;=3861,
+    <a class="clsHide" href="#idLrstopr3861nam"></a></p>
+  </section>
+
+  <section id="idLrstopr3838">
+  <h4 id="idLrstopr3838H4">opr.&amp;&amp;3838 of lagRust
+    <a class="clsHide" href="#idLrstopr3838H4"></a></h4>
+  <p id="idLrstopr3838dsn">description::
+    <br>· 3838 (&amp;&amp;): expr &amp;&amp; expr: Logical AND:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr3838dsn"></a></p>
+  <p id="idLrstopr3838nam">name::
+    <br>* Mcs.lagRust'&amp;&amp;3838--opr,
+    <br>* Mcs.lagRust-opr.&amp;&amp;3838,
+    <a class="clsHide" href="#idLrstopr3838nam"></a></p>
+  </section>
+
+  <section id="idLrstopr42">
+  <h4 id="idLrstopr42H4">opr.*42 of lagRust
+    <a class="clsHide" href="#idLrstopr42H4"></a></h4>
+  <p id="idLrstopr42dsn">description::
+    <br>· 42 (*): expr * expr: Arithmetic multiplication: Mul
+    <br>: *expr: Dereference:
+    <br>: *const type, *mut type: Raw pointer:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr42dsn"></a></p>
+  <p id="idLrstopr42nam">name::
+    <br>* Mcs.lagRust'*42--opr,
+    <br>* Mcs.lagRust-opr.*42,
+    <a class="clsHide" href="#idLrstopr42nam"></a></p>
+  </section>
+
+  <section id="idLrstopr4261">
+  <h4 id="idLrstopr4261H4">opr.*=4261 of lagRust
+    <a class="clsHide" href="#idLrstopr4261H4"></a></h4>
+  <p id="idLrstopr4261dsn">description::
+    <br>· 4261 (*=): var *= expr: Arithmetic multiplication and assignment: MulAssign
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr4261dsn"></a></p>
+  <p id="idLrstopr4261nam">name::
+    <br>* Mcs.lagRust'*=4261--opr,
+    <br>* Mcs.lagRust-opr.*=4261,
+    <a class="clsHide" href="#idLrstopr4261nam"></a></p>
+  </section>
+
+  <section id="idLrstopr43">
+  <h4 id="idLrstopr43H4">opr.+43 of lagRust
+    <a class="clsHide" href="#idLrstopr43H4"></a></h4>
+  <p id="idLrstopr43dsn">description::
+    <br>· 43 (+): trait + trait, 'a + trait: Compound type constraint:
+    <br>: expr + expr: Arithmetic addition: Add
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr43dsn"></a></p>
+  <p id="idLrstopr43nam">name::
+    <br>* Mcs.lagRust'+43--opr,
+    <br>* Mcs.lagRust-opr.+43,
+    <a class="clsHide" href="#idLrstopr43nam"></a></p>
+  </section>
+
+  <section id="idLrstopr4361">
+  <h4 id="idLrstopr4361H4">opr.+=4361 of lagRust
+    <a class="clsHide" href="#idLrstopr4361H4"></a></h4>
+  <p id="idLrstopr4361dsn">description::
+    <br>· 4361 (+=): var += expr: Arithmetic addition and assignment: AddAssign
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr4361dsn"></a></p>
+  <p id="idLrstopr4361nam">name::
+    <br>* Mcs.lagRust'+=4361--opr,
+    <br>* Mcs.lagRust-opr.+=4361,
+    <a class="clsHide" href="#idLrstopr4361nam"></a></p>
+  </section>
+
+  <section id="idLrstopr44">
+  <h4 id="idLrstopr44H4">opr.,44 of lagRust
+    <a class="clsHide" href="#idLrstopr44H4"></a></h4>
+  <p id="idLrstopr44dsn">description::
+    <br>· 44 (,): expr, expr: Argument and element separator:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr44dsn"></a></p>
+  <p id="idLrstopr44nam">name::
+    <br>* Mcs.lagRust'&#44;44--opr,
+    <br>* Mcs.lagRust-opr.&#44;44,
+    <a class="clsHide" href="#idLrstopr44nam"></a></p>
+  </section>
+
+  <section id="idLrstopr45">
+  <h4 id="idLrstopr45H4">opr.-45 of lagRust
+    <a class="clsHide" href="#idLrstopr45H4"></a></h4>
+  <p id="idLrstopr45dsn">description::
+    <br>· 45 (-): - expr: Arithmetic negation: Neg
+    <br>: expr - expr: Arithmetic subtraction: Sub
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr45dsn"></a></p>
+  <p id="idLrstopr45nam">name::
+    <br>* Mcs.lagRust'-45--opr,
+    <br>* Mcs.lagRust-opr.-45,
+    <a class="clsHide" href="#idLrstopr45nam"></a></p>
+  </section>
+
+  <section id="idLrstopr4561">
+  <h4 id="idLrstopr4561H4">opr.=4561 of lagRust
+    <a class="clsHide" href="#idLrstopr4561H4"></a></h4>
+  <p id="idLrstopr4561dsn">description::
+    <br>· 4561 (=): var -= expr: Arithmetic subtraction and assignment: SubAssign
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr4561dsn"></a></p>
+  <p id="idLrstopr4561nam">name::
+    <br>* Mcs.lagRust'=4561--opr,
+    <br>* Mcs.lagRust-opr.=4561,
+    <a class="clsHide" href="#idLrstopr4561nam"></a></p>
+  </section>
+
+  <section id="idLrstopr4562">
+  <h4 id="idLrstopr4562H4">opr.->4562 of lagRust
+    <a class="clsHide" href="#idLrstopr4562H4"></a></h4>
+  <p id="idLrstopr4562dsn">description::
+    <br>· 4562 (->): fn(...) -> type, |...| -> type: Function and closure return type:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr4562dsn"></a></p>
+  <p id="idLrstopr4562nam">name::
+    <br>* Mcs.lagRust'->4562--opr,
+    <br>* Mcs.lagRust-opr.->4562,
+    <a class="clsHide" href="#idLrstopr4562nam"></a></p>
+  </section>
+
+  <section id="idLrstopr46">
+  <h4 id="idLrstopr46H4">opr..46 of lagRust
+    <a class="clsHide" href="#idLrstopr46H4"></a></h4>
+  <p id="idLrstopr46dsn">description::
+    <br>· 46 (.): expr.ident: Member access:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr46dsn"></a></p>
+  <p id="idLrstopr46nam">name::
+    <br>* Mcs.lagRust'.46--opr,
+    <br>* Mcs.lagRust-opr..46,
+    <a class="clsHide" href="#idLrstopr46nam"></a></p>
+  </section>
+
+  <section id="idLrstopr4646">
+  <h4 id="idLrstopr4646H4">opr...4646 of lagRust
+    <a class="clsHide" href="#idLrstopr4646H4"></a></h4>
+  <p id="idLrstopr4646dsn">description::
+    <br>· 4646 (..): .., expr.., ..expr, expr..expr: Right-exclusive range literal:
+    <br>: ..expr: Struct literal update syntax:
+    <br>: variant(x, ..), struct_type { x, .. }: “And the rest” pattern binding:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr4646dsn"></a></p>
+  <p id="idLrstopr4646nam">name::
+    <br>* Mcs.lagRust'..4646--opr,
+    <br>* Mcs.lagRust-opr...4646,
+    <a class="clsHide" href="#idLrstopr4646nam"></a></p>
+  </section>
+
+  <section id="idLrstopr464661">
+  <h4 id="idLrstopr464661H4">opr...=464661 of lagRust
+    <a class="clsHide" href="#idLrstopr464661H4"></a></h4>
+  <p id="idLrstopr464661dsn">description::
+    <br>· 464661 (..=): ..=expr, expr..=expr: Right-inclusive range literal:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr464661dsn"></a></p>
+  <p id="idLrstopr464661nam">name::
+    <br>* Mcs.lagRust'..=464661--opr,
+    <br>* Mcs.lagRust-opr...=464661,
+    <a class="clsHide" href="#idLrstopr464661nam"></a></p>
+  </section>
+
+  <section id="idLrstopr464646">
+  <h4 id="idLrstopr464646H4">opr....464646 of lagRust
+    <a class="clsHide" href="#idLrstopr464646H4"></a></h4>
+  <p id="idLrstopr464646dsn">description::
+    <br>· 464646 (...): expr...expr: In a pattern: inclusive range pattern:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr464646dsn"></a></p>
+  <p id="idLrstopr464646nam">name::
+    <br>* Mcs.lagRust'...464646--opr,
+    <br>* Mcs.lagRust-opr....464646,
+    <a class="clsHide" href="#idLrstopr464646nam"></a></p>
+  </section>
+
+  <section id="idLrstopr47">
+  <h4 id="idLrstopr47H4">opr./47 of lagRust
+    <a class="clsHide" href="#idLrstopr47H4"></a></h4>
+  <p id="idLrstopr47dsn">description::
+    <br>· 47 (/): expr / expr: Arithmetic division: Div
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr47dsn"></a></p>
+  <p id="idLrstopr47nam">name::
+    <br>* Mcs.lagRust'/47--opr,
+    <br>* Mcs.lagRust-opr./47,
+    <a class="clsHide" href="#idLrstopr47nam"></a></p>
+  </section>
+
+  <section id="idLrstopr4761">
+  <h4 id="idLrstopr4761H4">opr./=4761 of lagRust
+    <a class="clsHide" href="#idLrstopr4761H4"></a></h4>
+  <p id="idLrstopr4761dsn">description::
+    <br>· 4761 (/=): var /= expr: Arithmetic division and assignment: DivAssign
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr4761dsn"></a></p>
+  <p id="idLrstopr4761nam">name::
+    <br>* Mcs.lagRust'/=4761--opr,
+    <br>* Mcs.lagRust-opr./=4761,
+    <a class="clsHide" href="#idLrstopr4761nam"></a></p>
+  </section>
+
+  <section id="idLrstopr58">
+  <h4 id="idLrstopr58H4">opr.:58 of lagRust
+    <a class="clsHide" href="#idLrstopr58H4"></a></h4>
+  <p id="idLrstopr58dsn">description::
+    <br>· 58 (:): pat: type, ident: type: Constraints:
+    <br>: ident: expr: Struct field initializer:
+    <br>: 'a: loop {...}: Loop label:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr58dsn"></a></p>
+  <p id="idLrstopr58nam">name::
+    <br>* Mcs.lagRust':58--opr,
+    <br>* Mcs.lagRust-opr.:58,
+    <a class="clsHide" href="#idLrstopr58nam"></a></p>
+  </section>
+
+  <section id="idLrstopr59">
+  <h4 id="idLrstopr59H4">opr.;59 of lagRust
+    <a class="clsHide" href="#idLrstopr59H4"></a></h4>
+  <p id="idLrstopr59dsn">description::
+    <br>· 59 (;): expr;: Statement and item terminator:
+    <br>: [...; len]: Part of fixed-size array syntax:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr59dsn"></a></p>
+  <p id="idLrstopr59nam">name::
+    <br>* Mcs.lagRust';59--opr,
+    <br>* Mcs.lagRust-opr.;59,
+    <a class="clsHide" href="#idLrstopr59nam"></a></p>
+  </section>
+
+  <section id="idLrstopr6060">
+  <h4 id="idLrstopr6060H4">opr.;6060 of lagRust
+    <a class="clsHide" href="#idLrstopr6060H4"></a></h4>
+  <p id="idLrstopr6060dsn">description::
+    <br>· 6060 (&lt;&lt;): expr &lt;&lt; expr: Left-shift: Shl
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr6060dsn"></a></p>
+  <p id="idLrstopr6060nam">name::
+    <br>* Mcs.lagRust';6060--opr,
+    <br>* Mcs.lagRust-opr.;6060,
+    <a class="clsHide" href="#idLrstopr6060nam"></a></p>
+  </section>
+
+  <section id="idLrstopr606061">
+  <h4 id="idLrstopr606061H4">opr.;606061 of lagRust
+    <a class="clsHide" href="#idLrstopr606061H4"></a></h4>
+  <p id="idLrstopr606061dsn">description::
+    <br>· 606061 (&lt;&lt;=): var &lt;&lt;= expr: Left-shift and assignment: ShlAssign
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr606061dsn"></a></p>
+  <p id="idLrstopr606061nam">name::
+    <br>* Mcs.lagRust';606061--opr,
+    <br>* Mcs.lagRust-opr.;606061,
+    <a class="clsHide" href="#idLrstopr606061nam"></a></p>
+  </section>
+
+  <section id="idLrstopr60">
+  <h4 id="idLrstopr60H4">opr.;60 of lagRust
+    <a class="clsHide" href="#idLrstopr60H4"></a></h4>
+  <p id="idLrstopr60dsn">description::
+    <br>· 60 (&lt;): expr &lt; expr: Less than comparison: PartialOrd
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr60dsn"></a></p>
+  <p id="idLrstopr60nam">name::
+    <br>* Mcs.lagRust';60--opr,
+    <br>* Mcs.lagRust-opr.;60,
+    <a class="clsHide" href="#idLrstopr60nam"></a></p>
+  </section>
+
+  <section id="idLrstopr6061">
+  <h4 id="idLrstopr6061H4">opr.;6061 of lagRust
+    <a class="clsHide" href="#idLrstopr6061H4"></a></h4>
+  <p id="idLrstopr6061dsn">description::
+    <br>· 6061 (&lt;=): expr &lt;= expr: Less than or equal to comparison: PartialOrd
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr6061dsn"></a></p>
+  <p id="idLrstopr6061nam">name::
+    <br>* Mcs.lagRust';6061--opr,
+    <br>* Mcs.lagRust-opr.;6061,
+    <a class="clsHide" href="#idLrstopr6061nam"></a></p>
+  </section>
+
+  <section id="idLrstopr61">
+  <h4 id="idLrstopr61H4">opr.=61 of lagRust
+    <a class="clsHide" href="#idLrstopr61H4"></a></h4>
+  <p id="idLrstopr61dsn">description::
+    <br>· 61 (=): var = expr, ident = type: Assignment/equivalence:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr61dsn"></a></p>
+  <p id="idLrstopr61nam">name::
+    <br>* Mcs.lagRust'=61--opr,
+    <br>* Mcs.lagRust-opr.=61,
+    <a class="clsHide" href="#idLrstopr61nam"></a></p>
+  </section>
+
+  <section id="idLrstopr6161">
+  <h4 id="idLrstopr6161H4">opr.==6161 of lagRust
+    <a class="clsHide" href="#idLrstopr6161H4"></a></h4>
+  <p id="idLrstopr6161dsn">description::
+    <br>· 6161 (==): expr == expr: Equality comparison: PartialEq
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr6161dsn"></a></p>
+  <p id="idLrstopr6161nam">name::
+    <br>* Mcs.lagRust'==6161--opr,
+    <br>* Mcs.lagRust-opr.==6161,
+    <a class="clsHide" href="#idLrstopr6161nam"></a></p>
+  </section>
+
+  <section id="idLrstopr6162">
+  <h4 id="idLrstopr6162H4">opr.=>6162 of lagRust
+    <a class="clsHide" href="#idLrstopr6162H4"></a></h4>
+  <p id="idLrstopr6162dsn">description::
+    <br>· 6162 (=>): pat => expr: Part of match arm syntax:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr6162dsn"></a></p>
+  <p id="idLrstopr6162nam">name::
+    <br>* Mcs.lagRust'=>6162--opr,
+    <br>* Mcs.lagRust-opr.=>6162,
+    <a class="clsHide" href="#idLrstopr6162nam"></a></p>
+  </section>
+
+  <section id="idLrstopr62">
+  <h4 id="idLrstopr62H4">opr.>62 of lagRust
+    <a class="clsHide" href="#idLrstopr62H4"></a></h4>
+  <p id="idLrstopr62dsn">description::
+    <br>· 62 (>): expr > expr: Greater than comparison: PartialOrd
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr62dsn"></a></p>
+  <p id="idLrstopr62nam">name::
+    <br>* Mcs.lagRust'>62--opr,
+    <br>* Mcs.lagRust-opr.>62,
+    <a class="clsHide" href="#idLrstopr62nam"></a></p>
+  </section>
+
+  <section id="idLrstopr6261">
+  <h4 id="idLrstopr6261H4">opr.>=6261 of lagRust
+    <a class="clsHide" href="#idLrstopr6261H4"></a></h4>
+  <p id="idLrstopr6261dsn">description::
+    <br>· 6261 (>=): expr >= expr: Greater than or equal to comparison: PartialOrd
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr6261dsn"></a></p>
+  <p id="idLrstopr6261nam">name::
+    <br>* Mcs.lagRust'>=6261--opr,
+    <br>* Mcs.lagRust-opr.>=6261,
+    <a class="clsHide" href="#idLrstopr6261nam"></a></p>
+  </section>
+
+  <section id="idLrstopr6262">
+  <h4 id="idLrstopr6262H4">opr.>>6262 of lagRust
+    <a class="clsHide" href="#idLrstopr6262H4"></a></h4>
+  <p id="idLrstopr6262dsn">description::
+    <br>· 6262 (>>): expr >> expr: Right-shift: Shr
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr6262dsn"></a></p>
+  <p id="idLrstopr6262nam">name::
+    <br>* Mcs.lagRust'>>6262--opr,
+    <br>* Mcs.lagRust-opr.>>6262,
+    <a class="clsHide" href="#idLrstopr6262nam"></a></p>
+  </section>
+
+  <section id="idLrstopr626261">
+  <h4 id="idLrstopr626261H4">opr.>>=626261 of lagRust
+    <a class="clsHide" href="#idLrstopr626261H4"></a></h4>
+  <p id="idLrstopr626261dsn">description::
+    <br>· 626261 (>>=): var >>= expr: Right-shift and assignment: ShrAssign
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr626261dsn"></a></p>
+  <p id="idLrstopr626261nam">name::
+    <br>* Mcs.lagRust'>>=626261--opr,
+    <br>* Mcs.lagRust-opr.>>=626261,
+    <a class="clsHide" href="#idLrstopr626261nam"></a></p>
+  </section>
+
+  <section id="idLrstopr64">
+  <h4 id="idLrstopr64H4">opr.@64 of lagRust
+    <a class="clsHide" href="#idLrstopr64H4"></a></h4>
+  <p id="idLrstopr64dsn">description::
+    <br>· 64 (@): ident @ pat: Pattern binding:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr64dsn"></a></p>
+  <p id="idLrstopr64nam">name::
+    <br>* Mcs.lagRust'@64--opr,
+    <br>* Mcs.lagRust-opr.@64,
+    <a class="clsHide" href="#idLrstopr64nam"></a></p>
+  </section>
+
+  <section id="idLrstopr94">
+  <h4 id="idLrstopr94H4">opr.^94 of lagRust
+    <a class="clsHide" href="#idLrstopr94H4"></a></h4>
+  <p id="idLrstopr94dsn">description::
+    <br>· 94 (^): expr ^ expr: Bitwise exclusive OR: BitXor
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr94dsn"></a></p>
+  <p id="idLrstopr94nam">name::
+    <br>* Mcs.lagRust'^94--opr,
+    <br>* Mcs.lagRust-opr.^94,
+    <a class="clsHide" href="#idLrstopr94nam"></a></p>
+  </section>
+
+  <section id="idLrstopr9461">
+  <h4 id="idLrstopr9461H4">opr.^=9461 of lagRust
+    <a class="clsHide" href="#idLrstopr9461H4"></a></h4>
+  <p id="idLrstopr9461dsn">description::
+    <br>· 9461 (^=): var ^= expr: Bitwise exclusive OR and assignment: BitXorAssign
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr9461dsn"></a></p>
+  <p id="idLrstopr9461nam">name::
+    <br>* Mcs.lagRust'^=9461--opr,
+    <br>* Mcs.lagRust-opr.^=9461,
+    <a class="clsHide" href="#idLrstopr9461nam"></a></p>
+  </section>
+
+  <section id="idLrstopr124">
+  <h4 id="idLrstopr124H4">opr.|124 of lagRust
+    <a class="clsHide" href="#idLrstopr124H4"></a></h4>
+  <p id="idLrstopr124dsn">description::
+    <br>· 124 (|): pat | pat: Pattern alternatives:
+    <br>: expr | expr: Bitwise OR: BitOr
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr124dsn"></a></p>
+  <p id="idLrstopr124nam">name::
+    <br>* Mcs.lagRust'|124--opr,
+    <br>* Mcs.lagRust-opr.|124,
+    <a class="clsHide" href="#idLrstopr124nam"></a></p>
+  </section>
+
+  <section id="idLrstopr12461">
+  <h4 id="idLrstopr12461H4">opr.|=12461 of lagRust
+    <a class="clsHide" href="#idLrstopr12461H4"></a></h4>
+  <p id="idLrstopr12461dsn">description::
+    <br>· 12461 (|=): var |= expr: Bitwise OR and assignment: BitOrAssign
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr12461dsn"></a></p>
+  <p id="idLrstopr12461nam">name::
+    <br>* Mcs.lagRust'|=12461--opr,
+    <br>* Mcs.lagRust-opr.|=12461,
+    <a class="clsHide" href="#idLrstopr12461nam"></a></p>
+  </section>
+
+  <section id="idLrstopr124124">
+  <h4 id="idLrstopr124124H4">opr.||124124 of lagRust
+    <a class="clsHide" href="#idLrstopr124124H4"></a></h4>
+  <p id="idLrstopr124124dsn">description::
+    <br>· 124124 (||): expr || expr: Logical OR:
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr124124dsn"></a></p>
+  <p id="idLrstopr124124nam">name::
+    <br>* Mcs.lagRust'||124124--opr,
+    <br>* Mcs.lagRust-opr.||124124,
+    <a class="clsHide" href="#idLrstopr124124nam"></a></p>
+  </section>
+
+  <section id="idLrstopr63">
+  <h4 id="idLrstopr63H4">opr.?63 of lagRust
+    <a class="clsHide" href="#idLrstopr63H4"></a></h4>
+  <p id="idLrstopr63dsn">description::
+    <br>· 63 (?): expr?: Error propagation
+    <br>[https://doc.rust-lang.org/book/appendix-02-operators.html]
+    <a class="clsHide" href="#idLrstopr63dsn"></a></p>
+  <p id="idLrstopr63nam">name::
+    <br>* Mcs.lagRust'?63--opr,
+    <br>* Mcs.lagRust-opr.?63,
+    <a class="clsHide" href="#idLrstopr63nam"></a></p>
   </section>
   </section>
   </section>
@@ -1755,7 +2314,13 @@
   <h1 id="idLrstalgMdlH1">algo.module of lagRust
     <a class="clsHide" href="#idLrstalgMdlH1"></a></h1>
   <p id="idLrstalgMdldsn">description::
-    <br>·
+    <br>"Modules let us organize code within a crate into groups for readability and easy reuse. Modules also control the privacy of items, which is whether an item can be used by outside code (public) or whether it’s an internal implementation detail and not available for outside use (private)."
+    <br>· example:
+    <br><code>mod m_whole {
+    <br> mod m_part {
+    <br> }
+    <br>}</code>
+    <br>[https://doc.rust-lang.org/book/ch07-02-defining-modules-to-control-scope-and-privacy.html]
     <a class="clsHide" href="#idLrstalgMdldsn"></a></p>
   <p id="idLrstalgMdlnam">name::
     <br>* Mcs.lagRust'module!⇒lagRust-mod,
@@ -1948,12 +2513,29 @@
   <h1 id="idLrstalgPkgH1">algo.package of lagRust
     <a class="clsHide" href="#idLrstalgPkgH1"></a></h1>
   <p id="idLrstalgPkgdsn">description::
-    <br>·
+    <br>"A package is one or more crates that provide a set of functionality.
+    <br>A package contains a Cargo.toml file that describes how to build those crates."
+    <br>[https://doc.rust-lang.org/book/ch07-01-packages-and-crates.html]
     <a class="clsHide" href="#idLrstalgPkgdsn"></a></p>
   <p id="idLrstalgPkgnam">name::
+    <br>* Mcs.lagRust'Cargo-package!⇒lagRust-pkg,
     <br>* Mcs.lagRust'package!⇒lagRust-pkg,
     <br>* Mcs.lagRust-pkg,
     <a class="clsHide" href="#idLrstalgPkgnam"></a></p>
+
+  <section id="idLrstalgPkgCgtf">
+  <h2 id="idLrstalgPkgCgtfH2">Cargo.toml-file of package of lagRust
+    <a class="clsHide" href="#idLrstalgPkgCgtfH2"></a></h2>
+  <p id="idLrstalgPkgCgtfdsn">description::
+    <br>"The Cargo.toml file for each package is called its manifest. Every manifest file consists of one or more sections."
+    <br>[https://doc.rust-lang.org/cargo/reference/manifest.html]
+    <a class="clsHide" href="#idLrstalgPkgCgtfdsn"></a></p>
+  <p id="idLrstalgPkgCgtfnam">name::
+    <br>* Mcs.lagRust-Cargo.toml,
+    <br>* Mcs.lagRust-pkg'Cargo.toml-file!⇒lagRust-Cargo.toml,
+    <br>* Mcs.lagRust-source-file.Cargo.toml-file!⇒lagRust-Cargo.toml,
+    <a class="clsHide" href="#idLrstalgPkgCgtfnam"></a></p>
+  </section>
 </section>
 
 <section id="idLrstalgPgm">
@@ -2134,445 +2716,446 @@
   </section>
 
   <section id="idLrstcargo">
-  <h2 id="idLrstcargoH2">cargo of lagRust
+  <h2 id="idLrstcargoH2">Cargo of lagRust
     <a class="clsHide" href="#idLrstcargoH2"></a></h2>
   <p id="idLrstcargodsn">description::
-    <br>· cargo is Rust’s package-manager and build-tool.
+    <br>· Cargo is Rust’s package-manager and build-tool.
     <a class="clsHide" href="#idLrstcargodsn"></a></p>
   <p id="idLrstcargonam">name::
-    <br>* Mcs.Rust-cargo!⇒lagRust-cargo,
-    <br>* Mcs.lagRust'cargo-tool!⇒lagRust-cargo,
-    <br>* Mcs.lagRust-cargo,
-    <br>* Mcs.lagRust-tool.cargo!⇒lagRust-cargo,
+    <br>* Mcs.Rust-Cargo!⇒lagRust-Cargo,
+    <br>* Mcs.lagRust'Cargo-tool!⇒lagRust-Cargo,
+    <br>* Mcs.lagRust-Cargo,
+    <br>* Mcs.lagRust-tool.Cargo!⇒lagRust-Cargo,
     <a class="clsHide" href="#idLrstcargonam"></a></p>
 
   <section id="idLrstcargocmd">
-  <h3 id="idLrstcargocmdH3">command of cargo
+  <h3 id="idLrstcargocmdH3">command of Cargo
     <a class="clsHide" href="#idLrstcargocmdH3"></a></h3>
   <p id="idLrstcargocmddsn">description::
-    <br>· cargo is a-command-line tool, so it has many commands that do different things.
+    <br>· Cargo is a-command-line tool, so it has many commands that do different things.
     <a class="clsHide" href="#idLrstcargocmddsn"></a></p>
   <p id="idLrstcargocmdnam">name::
-    <br>* Mcs.lagRust-cargo'command!⇒lagRust-cargo-cmd,
-    <br>* Mcs.lagRust-cargo-cmd,
+    <br>* Mcs.lagRust-Cargo'command!⇒lagRust-Cargo-cmd,
+    <br>* Mcs.lagRust-Cargo-cmd,
     <a class="clsHide" href="#idLrstcargocmdnam"></a></p>
   <p id="idLrstcargocmdSpc">specific::
-    <br>* bench: Execute all benchmarks of a local package
-    <br>* build: Compile a local package and all of its dependencies
-    <br>* check: Check a local package and all of its dependencies for errors
-    <br>* clean: Remove artifacts that cargo has generated in the past
-    <br>* clippy-preview: Checks a package to catch common mistakes and improve your Rust code.
-    <br>* doc: Build a package's documentation
-    <br>* fetch: Fetch dependencies of a package from the network
-    <br>* fix: Automatically fix lint warnings reported by rustc
-    <br>* generate-lockfile: Generate the lockfile for a package
-    <br>* git-checkout: Checkout a copy of a Git repository
-    <br>* init: Create a new cargo package in an existing directory
-    <br>* install: Install a Rust binary. Default location is $HOME/.cargo/bin
-    <br>* locate-project: Print a JSON representation of a Cargo.toml file's location
-    <br>* login: Save an api token from the registry locally. If token is not specified, it will be read from stdin.
-    <br>* metadata: Output the resolved dependencies of a package, the concrete used versions including overrides, in machine-readable format
-    <br>* new: Create a new cargo package at <path>
-    <br>* owner: Manage the owners of a crate on the registry
-    <br>* package: Assemble the local package into a distributable tarball
-    <br>* pkgid: Print a fully qualified package specification
-    <br>* publish: Upload a package to the registry
-    <br>* read-manifest: Print a JSON representation of a Cargo.toml manifest.
-    <br>* run: Run a binary or example of the local package
-    <br>* rustc: Compile a package and all of its dependencies
-    <br>* rustdoc: Build a package's documentation, using specified custom flags.
-    <br>* search: Search packages in crates.io
-    <br>* test: Execute all unit and integration tests and build examples of a local package
-    <br>* uninstall: Remove a Rust binary
-    <br>* update: Update dependencies as recorded in the local lock file
-    <br>* verify-project: Check correctness of crate manifest
-    <br>* version: Show version information
-    <br>* yank: Remove a pushed crate from the index
-    <br>* clippy
-    <br>* fmt
-    <br>* miri
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdbench">bench</a>: Execute all benchmarks of a local package
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdbuild">build</a>: Compile a local package and all of its dependencies
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdcheck">check</a>: Check a local package and all of its dependencies for errors
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdclean">clean</a>: Remove artifacts that cargo has generated in the past
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdclippy">clippy-preview</a>: Checks a package to catch common mistakes and improve your Rust code.
+    <br>* <a class="clsPreview" href="#idLrstcrgcmddoc">doc</a>: Build a package's documentation
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdfetch">fetch</a>: Fetch dependencies of a package from the network
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdfix">fix</a>: Automatically fix lint warnings reported by rustc
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdgenerate">generate-lockfile</a>: Generate the lockfile for a package
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdgit">git-checkout</a>: Checkout a copy of a Git repository
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdinit">init</a>: Create a new cargo package in an existing directory
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdinstall">install</a>: Install a Rust binary. Default location is $HOME/.cargo/bin
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdlocate">locate-project</a>: Print a JSON representation of a Cargo.toml file's location
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdlogin">login</a>: Save an api token from the registry locally. If token is not specified, it will be read from stdin.
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdmetadata">metadata</a>: Output the resolved dependencies of a package, the concrete used versions including overrides, in machine-readable format
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdnew">new</a>: create a new cargo-package at &lt;path>
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdowner">owner</a>: Manage the owners of a crate on the registry
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdpackage">package</a>: Assemble the local package into a distributable tarball
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdpkgid">pkgid</a>: Print a fully qualified package specification
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdpublish">publish</a>: Upload a package to the registry
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdread">read-manifest</a>: Print a JSON representation of a Cargo.toml manifest.
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdrun">run</a>: Run a binary or example of the local package
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdrustc">rustc</a>: Compile a package and all of its dependencies
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdrustdoc">rustdoc</a>: Build a package's documentation, using specified custom flags.
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdsearch">search</a>: Search packages in crates.io
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdtest">test</a>: Execute all unit and integration tests and build examples of a local package
+    <br>* <a class="clsPreview" href="#idLrstcrgcmduninstall">uninstall</a>: Remove a Rust binary
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdupdate">update</a>: Update dependencies as recorded in the local lock file
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdverify">verify-project</a>: Check correctness of crate manifest
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdversion">version</a>: Show version information
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdyank">yank</a>: Remove a pushed crate from the index
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdclippy">clippy</a>:
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdfmt">fmt</a>:
+    <br>* <a class="clsPreview" href="#idLrstcrgcmdmiri">miri</a>:
     <a class="clsHide" href="#idLrstcargocmdSpc"></a></p>
 
   <section id="idLrstcrgcmdbench">
-  <h4 id="idLrstcrgcmdbenchH4">cargo-cmd.bench of lagRust
+  <h4 id="idLrstcrgcmdbenchH4">Cargo-cmd.bench of lagRust
     <a class="clsHide" href="#idLrstcrgcmdbenchH4"></a></h4>
   <p id="idLrstcrgcmdbenchdsn">description::
     <br>* bench: Execute all benchmarks of a local package
     <a class="clsHide" href="#idLrstcrgcmddsn"></a></p>
   <p id="idLrstcrgcmdbenchnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.bench,
+    <br>* Mcs.lagRust-Cargo-cmd.bench,
     <a class="clsHide" href="#idLrstcrgcmdbenchnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdbuild">
-  <h4 id="idLrstcrgcmdbuildH4">cargo-cmd.build of lagRust
+  <h4 id="idLrstcrgcmdbuildH4">Cargo-cmd.build of lagRust
     <a class="clsHide" href="#idLrstcrgcmdbuildH4"></a></h4>
   <p id="idLrstcrgcmdbuilddsn">description::
     <br>* build: Compile a local package and all of its dependencies
     <a class="clsHide" href="#idLrstcrgcmdbuilddsn"></a></p>
   <p id="idLrstcrgcmdbuildnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.build,
+    <br>* Mcs.lagRust-Cargo-cmd.build,
     <a class="clsHide" href="#idLrstcrgcmdbuildnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdcheck">
-  <h4 id="idLrstcrgcmdcheckH4">cargo-cmd.check of lagRust
+  <h4 id="idLrstcrgcmdcheckH4">Cargo-cmd.check of lagRust
     <a class="clsHide" href="#idLrstcrgcmdcheckH4"></a></h4>
   <p id="idLrstcrgcmdcheckdsn">description::
     <br>* check: Check a local package and all of its dependencies for errors
     <a class="clsHide" href="#idLrstcrgcmdcheckdsn"></a></p>
   <p id="idLrstcrgcmdchecknam">name::
-    <br>* Mcs.lagRust-cargo-cmd.check,
+    <br>* Mcs.lagRust-Cargo-cmd.check,
     <a class="clsHide" href="#idLrstcrgcmdchecknam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdclean">
-  <h4 id="idLrstcrgcmdcleanH4">cargo-cmd.clean of lagRust
+  <h4 id="idLrstcrgcmdcleanH4">Cargo-cmd.clean of lagRust
     <a class="clsHide" href="#idLrstcrgcmdcleanH4"></a></h4>
   <p id="idLrstcrgcmdcleandsn">description::
     <br>* clean: Remove artifacts that cargo has generated in the past
     <a class="clsHide" href="#idLrstcrgcmdcleandsn"></a></p>
   <p id="idLrstcrgcmdcleannam">name::
-    <br>* Mcs.lagRust-cargo-cmd.clean,
+    <br>* Mcs.lagRust-Cargo-cmd.clean,
     <a class="clsHide" href="#idLrstcrgcmdcleannam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdclippy">
-  <h4 id="idLrstcrgcmdclippyH4">cargo-cmd.clippy-preview of lagRust
+  <h4 id="idLrstcrgcmdclippyH4">Cargo-cmd.clippy-preview of lagRust
     <a class="clsHide" href="#idLrstcrgcmdclippyH4"></a></h4>
   <p id="idLrstcrgcmdclippydsn">description::
     <br>* clippy-preview: Checks a package to catch common mistakes and improve your Rust code.
     <a class="clsHide" href="#idLrstcrgcmdclippydsn"></a></p>
   <p id="idLrstcrgcmdclippynam">name::
-    <br>* Mcs.lagRust-cargo-cmd.clippy-preview,
+    <br>* Mcs.lagRust-Cargo-cmd.clippy-preview,
     <a class="clsHide" href="#idLrstcrgcmdclippynam"></a></p>
   </section>
 
   <section id="idLrstcrgcmddoc">
-  <h4 id="idLrstcrgcmddocH4">cargo-cmd.doc of lagRust
+  <h4 id="idLrstcrgcmddocH4">Cargo-cmd.doc of lagRust
     <a class="clsHide" href="#idLrstcrgcmddocH4"></a></h4>
   <p id="idLrstcrgcmddocdsn">description::
     <br>* doc: Build a package's documentation
     <a class="clsHide" href="#idLrstcrgcmddocdsn"></a></p>
   <p id="idLrstcrgcmddocnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.doc,
+    <br>* Mcs.lagRust-Cargo-cmd.doc,
     <a class="clsHide" href="#idLrstcrgcmddocnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdfetch">
-  <h4 id="idLrstcrgcmdfetchH4">cargo-cmd.fetch of lagRust
+  <h4 id="idLrstcrgcmdfetchH4">Cargo-cmd.fetch of lagRust
     <a class="clsHide" href="#idLrstcrgcmdfetchH4"></a></h4>
   <p id="idLrstcrgcmdfetchdsn">description::
     <br>* fetch: Fetch dependencies of a package from the network
     <a class="clsHide" href="#idLrstcrgcmdfetchdsn"></a></p>
   <p id="idLrstcrgcmdfetchnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.fetch,
+    <br>* Mcs.lagRust-Cargo-cmd.fetch,
     <a class="clsHide" href="#idLrstcrgcmdfetchnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdfix">
-  <h4 id="idLrstcrgcmdfixH4">cargo-cmd.fix of lagRust
+  <h4 id="idLrstcrgcmdfixH4">Cargo-cmd.fix of lagRust
     <a class="clsHide" href="#idLrstcrgcmdfixH4"></a></h4>
   <p id="idLrstcrgcmdfixdsn">description::
     <br>* fix: Automatically fix lint warnings reported by rustc
     <a class="clsHide" href="#idLrstcrgcmdfixdsn"></a></p>
   <p id="idLrstcrgcmdfixnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.fix,
+    <br>* Mcs.lagRust-Cargo-cmd.fix,
     <a class="clsHide" href="#idLrstcrgcmdfixnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdgenerate">
-  <h4 id="idLrstcrgcmdgenerateH4">cargo-cmd.generate-lockfile of lagRust
+  <h4 id="idLrstcrgcmdgenerateH4">Cargo-cmd.generate-lockfile of lagRust
     <a class="clsHide" href="#idLrstcrgcmdgenerateH4"></a></h4>
   <p id="idLrstcrgcmdgeneratedsn">description::
     <br>* generate-lockfile: Generate the lockfile for a package
     <a class="clsHide" href="#idLrstcrgcmdgeneratedsn"></a></p>
   <p id="idLrstcrgcmdgeneratenam">name::
-    <br>* Mcs.lagRust-cargo-cmd.generate-lockfile,
+    <br>* Mcs.lagRust-Cargo-cmd.generate-lockfile,
     <a class="clsHide" href="#idLrstcrgcmdgeneratenam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdgit">
-  <h4 id="idLrstcrgcmdgitH4">cargo-cmd.git-checkout of lagRust
+  <h4 id="idLrstcrgcmdgitH4">Cargo-cmd.git-checkout of lagRust
     <a class="clsHide" href="#idLrstcrgcmdgitH4"></a></h4>
   <p id="idLrstcrgcmdgitdsn">description::
     <br>* git-checkout: Checkout a copy of a Git repository
     <a class="clsHide" href="#idLrstcrgcmdgitdsn"></a></p>
   <p id="idLrstcrgcmdgitnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.git-checkout,
+    <br>* Mcs.lagRust-Cargo-cmd.git-checkout,
     <a class="clsHide" href="#idLrstcrgcmdgitnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdinit">
-  <h4 id="idLrstcrgcmdinitH4">cargo-cmd.init of lagRust
+  <h4 id="idLrstcrgcmdinitH4">Cargo-cmd.init of lagRust
     <a class="clsHide" href="#idLrstcrgcmdinitH4"></a></h4>
   <p id="idLrstcrgcmdinitdsn">description::
     <br>* init: Create a new cargo package in an existing directory
     <a class="clsHide" href="#idLrstcrgcmdinitdsn"></a></p>
   <p id="idLrstcrgcmdinitnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.init,
+    <br>* Mcs.lagRust-Cargo-cmd.init,
     <a class="clsHide" href="#idLrstcrgcmdinitnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdinstall">
-  <h4 id="idLrstcrgcmdinstallH4">cargo-cmd.install of lagRust
+  <h4 id="idLrstcrgcmdinstallH4">Cargo-cmd.install of lagRust
     <a class="clsHide" href="#idLrstcrgcmdinstallH4"></a></h4>
   <p id="idLrstcrgcmdinstalldsn">description::
     <br>* install: Install a Rust binary. Default location is $HOME/.cargo/bin
     <a class="clsHide" href="#idLrstcrgcmdinstalldsn"></a></p>
   <p id="idLrstcrgcmdinstallnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.install,
+    <br>* Mcs.lagRust-Cargo-cmd.install,
     <a class="clsHide" href="#idLrstcrgcmdinstallnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdlocate">
-  <h4 id="idLrstcrgcmdlocateH4">cargo-cmd.locate-project of lagRust
+  <h4 id="idLrstcrgcmdlocateH4">Cargo-cmd.locate-project of lagRust
     <a class="clsHide" href="#idLrstcrgcmdlocateH4"></a></h4>
   <p id="idLrstcrgcmdlocatedsn">description::
     <br>* locate-project: Print a JSON representation of a Cargo.toml file's location
     <a class="clsHide" href="#idLrstcrgcmdlocatedsn"></a></p>
   <p id="idLrstcrgcmdlocatenam">name::
-    <br>* Mcs.lagRust-cargo-cmd.locate-project,
+    <br>* Mcs.lagRust-Cargo-cmd.locate-project,
     <a class="clsHide" href="#idLrstcrgcmdlocatenam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdlogin">
-  <h4 id="idLrstcrgcmdloginH4">cargo-cmd.login of lagRust
+  <h4 id="idLrstcrgcmdloginH4">Cargo-cmd.login of lagRust
     <a class="clsHide" href="#idLrstcrgcmdloginH4"></a></h4>
   <p id="idLrstcrgcmdlogindsn">description::
     <br>* login: Save an api token from the registry locally. If token is not specified, it will be read from stdin.
     <a class="clsHide" href="#idLrstcrgcmdlogindsn"></a></p>
   <p id="idLrstcrgcmdloginnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.login,
+    <br>* Mcs.lagRust-Cargo-cmd.login,
     <a class="clsHide" href="#idLrstcrgcmdloginnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdmetadata">
-  <h4 id="idLrstcrgcmdmetadataH4">cargo-cmd.metadata of lagRust
+  <h4 id="idLrstcrgcmdmetadataH4">Cargo-cmd.metadata of lagRust
     <a class="clsHide" href="#idLrstcrgcmdmetadataH4"></a></h4>
   <p id="idLrstcrgcmdmetadatadsn">description::
     <br>* metadata: Output the resolved dependencies of a package, the concrete used versions including overrides, in machine-readable format
     <a class="clsHide" href="#idLrstcrgcmdmetadatadsn"></a></p>
   <p id="idLrstcrgcmdmetadatanam">name::
-    <br>* Mcs.lagRust-cargo-cmd.metadata,
+    <br>* Mcs.lagRust-Cargo-cmd.metadata,
     <a class="clsHide" href="#idLrstcrgcmdmetadatanam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdnew">
-  <h4 id="idLrstcrgcmdnewH4">cargo-cmd.new of lagRust
+  <h4 id="idLrstcrgcmdnewH4">Cargo-cmd.new of lagRust
     <a class="clsHide" href="#idLrstcrgcmdnewH4"></a></h4>
   <p id="idLrstcrgcmdnewdsn">description::
-    <br>* new: Create a new cargo package at &lt;path>
+    <br>* creates a-new <a class="clsPreview" href="#idLrstalgPkg">cargo-package</a> at &lt;path>
+    <br>· <code>$ cargo new &nbsp;path></code>
     <a class="clsHide" href="#idLrstcrgcmdnewdsn"></a></p>
   <p id="idLrstcrgcmdnewnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.new,
+    <br>* Mcs.lagRust-Cargo-cmd.new,
     <a class="clsHide" href="#idLrstcrgcmdnewnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdowner">
-  <h4 id="idLrstcrgcmdownerH4">cargo-cmd.owner of lagRust
+  <h4 id="idLrstcrgcmdownerH4">Cargo-cmd.owner of lagRust
     <a class="clsHide" href="#idLrstcrgcmdownerH4"></a></h4>
   <p id="idLrstcrgcmdownerdsn">description::
     <br>* owner: Manage the owners of a crate on the registry
     <a class="clsHide" href="#idLrstcrgcmdownerdsn"></a></p>
   <p id="idLrstcrgcmdownernam">name::
-    <br>* Mcs.lagRust-cargo-cmd.owner,
+    <br>* Mcs.lagRust-Cargo-cmd.owner,
     <a class="clsHide" href="#idLrstcrgcmdownernam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdpackage">
-  <h4 id="idLrstcrgcmdpackageH4">cargo-cmd.package of lagRust
+  <h4 id="idLrstcrgcmdpackageH4">Cargo-cmd.package of lagRust
     <a class="clsHide" href="#idLrstcrgcmdpackageH4"></a></h4>
   <p id="idLrstcrgcmdpackagedsn">description::
     <br>* package: Assemble the local package into a distributable tarball
     <a class="clsHide" href="#idLrstcrgcmdpackagedsn"></a></p>
   <p id="idLrstcrgcmdpackagenam">name::
-    <br>* Mcs.lagRust-cargo-cmd.package,
+    <br>* Mcs.lagRust-Cargo-cmd.package,
     <a class="clsHide" href="#idLrstcrgcmdpackagenam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdpkgid">
-  <h4 id="idLrstcrgcmdpkgidH4">cargo-cmd.pkgid of lagRust
+  <h4 id="idLrstcrgcmdpkgidH4">Cargo-cmd.pkgid of lagRust
     <a class="clsHide" href="#idLrstcrgcmdpkgidH4"></a></h4>
   <p id="idLrstcrgcmdpkgiddsn">description::
     <br>* pkgid: Print a fully qualified package specification
     <a class="clsHide" href="#idLrstcrgcmdpkgiddsn"></a></p>
   <p id="idLrstcrgcmdpkgidnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.pkgid,
+    <br>* Mcs.lagRust-Cargo-cmd.pkgid,
     <a class="clsHide" href="#idLrstcrgcmdpkgidnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdpublish">
-  <h4 id="idLrstcrgcmdpublishH4">cargo-cmd.publish of lagRust
+  <h4 id="idLrstcrgcmdpublishH4">Cargo-cmd.publish of lagRust
     <a class="clsHide" href="#idLrstcrgcmdpublishH4"></a></h4>
   <p id="idLrstcrgcmdpublishdsn">description::
     <br>* publish: Upload a package to the registry
     <a class="clsHide" href="#idLrstcrgcmdpublishdsn"></a></p>
   <p id="idLrstcrgcmdpublishnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.publish,
+    <br>* Mcs.lagRust-Cargo-cmd.publish,
     <a class="clsHide" href="#idLrstcrgcmdpublishnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdread">
-  <h4 id="idLrstcrgcmdreadH4">cargo-cmd.read-manifest of lagRust
+  <h4 id="idLrstcrgcmdreadH4">Cargo-cmd.read-manifest of lagRust
     <a class="clsHide" href="#idLrstcrgcmdreadH4"></a></h4>
   <p id="idLrstcrgcmdreaddsn">description::
     <br>* read-manifest: Print a JSON representation of a Cargo.toml manifest.
     <a class="clsHide" href="#idLrstcrgcmdreaddsn"></a></p>
   <p id="idLrstcrgcmdreadnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.read-manifest,
+    <br>* Mcs.lagRust-Cargo-cmd.read-manifest,
     <a class="clsHide" href="#idLrstcrgcmdreadnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdrun">
-  <h4 id="idLrstcrgcmdrunH4">cargo-cmd.run of lagRust
+  <h4 id="idLrstcrgcmdrunH4">Cargo-cmd.run of lagRust
     <a class="clsHide" href="#idLrstcrgcmdrunH4"></a></h4>
   <p id="idLrstcrgcmdrundsn">description::
     <br>* run: Run a binary or example of the local package
     <a class="clsHide" href="#idLrstcrgcmdrundsn"></a></p>
   <p id="idLrstcrgcmdrunnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.run,
+    <br>* Mcs.lagRust-Cargo-cmd.run,
     <a class="clsHide" href="#idLrstcrgcmdrunnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdrustc">
-  <h4 id="idLrstcrgcmdrustcH4">cargo-cmd.rustc of lagRust
+  <h4 id="idLrstcrgcmdrustcH4">Cargo-cmd.rustc of lagRust
     <a class="clsHide" href="#idLrstcrgcmdrustcH4"></a></h4>
   <p id="idLrstcrgcmdrustcdsn">description::
     <br>* rustc: Compile a package and all of its dependencies
     <a class="clsHide" href="#idLrstcrgcmdrustcdsn"></a></p>
   <p id="idLrstcrgcmdrustcnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.rustc,
+    <br>* Mcs.lagRust-Cargo-cmd.rustc,
     <a class="clsHide" href="#idLrstcrgcmdrustcnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdrustdoc">
-  <h4 id="idLrstcrgcmdrustdocH4">cargo-cmd.rustdoc of lagRust
+  <h4 id="idLrstcrgcmdrustdocH4">Cargo-cmd.rustdoc of lagRust
     <a class="clsHide" href="#idLrstcrgcmdrustdocH4"></a></h4>
   <p id="idLrstcrgcmdrustdocdsn">description::
     <br>* rustdoc: Build a package's documentation, using specified custom flags.
     <a class="clsHide" href="#idLrstcrgcmdrustdocdsn"></a></p>
   <p id="idLrstcrgcmdrustdocnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.rustdoc,
+    <br>* Mcs.lagRust-Cargo-cmd.rustdoc,
     <a class="clsHide" href="#idLrstcrgcmdrustdocnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdsearch">
-  <h4 id="idLrstcrgcmdsearchH4">cargo-cmd.search of lagRust
+  <h4 id="idLrstcrgcmdsearchH4">Cargo-cmd.search of lagRust
     <a class="clsHide" href="#idLrstcrgcmdsearchH4"></a></h4>
   <p id="idLrstcrgcmdsearchdsn">description::
     <br>* search: Search packages in crates.io
     <a class="clsHide" href="#idLrstcrgcmdsearchdsn"></a></p>
   <p id="idLrstcrgcmdsearchnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.search,
+    <br>* Mcs.lagRust-Cargo-cmd.search,
     <a class="clsHide" href="#idLrstcrgcmdsearchnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdtest">
-  <h4 id="idLrstcrgcmdtestH4">cargo-cmd.test of lagRust
+  <h4 id="idLrstcrgcmdtestH4">Cargo-cmd.test of lagRust
     <a class="clsHide" href="#idLrstcrgcmdtestH4"></a></h4>
   <p id="idLrstcrgcmdtestdsn">description::
     <br>* test: Execute all unit and integration tests and build examples of a local package
     <a class="clsHide" href="#idLrstcrgcmdtestdsn"></a></p>
   <p id="idLrstcrgcmdtestnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.test,
+    <br>* Mcs.lagRust-Cargo-cmd.test,
     <a class="clsHide" href="#idLrstcrgcmdtestnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmduninstall">
-  <h4 id="idLrstcrgcmduninstallH4">cargo-cmd.uninstall of lagRust
+  <h4 id="idLrstcrgcmduninstallH4">Cargo-cmd.uninstall of lagRust
     <a class="clsHide" href="#idLrstcrgcmduninstallH4"></a></h4>
   <p id="idLrstcrgcmduninstalldsn">description::
     <br>* uninstall: Remove a Rust binary
     <a class="clsHide" href="#idLrstcrgcmduninstalldsn"></a></p>
   <p id="idLrstcrgcmduninstallnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.uninstall,
+    <br>* Mcs.lagRust-Cargo-cmd.uninstall,
     <a class="clsHide" href="#idLrstcrgcmduninstallnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdupdate">
-  <h4 id="idLrstcrgcmdupdateH4">cargo-cmd.update of lagRust
+  <h4 id="idLrstcrgcmdupdateH4">Cargo-cmd.update of lagRust
     <a class="clsHide" href="#idLrstcrgcmdupdateH4"></a></h4>
   <p id="idLrstcrgcmdupdatedsn">description::
     <br>* update: Update dependencies as recorded in the local lock file
     <a class="clsHide" href="#idLrstcrgcmdupdatedsn"></a></p>
   <p id="idLrstcrgcmdupdatenam">name::
-    <br>* Mcs.lagRust-cargo-cmd.update,
+    <br>* Mcs.lagRust-Cargo-cmd.update,
     <a class="clsHide" href="#idLrstcrgcmdupdatenam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdverify">
-  <h4 id="idLrstcrgcmdverifyH4">cargo-cmd.verify-project of lagRust
+  <h4 id="idLrstcrgcmdverifyH4">Cargo-cmd.verify-project of lagRust
     <a class="clsHide" href="#idLrstcrgcmdverifyH4"></a></h4>
   <p id="idLrstcrgcmdverifydsn">description::
     <br>* verify-project: Check correctness of crate manifest
     <a class="clsHide" href="#idLrstcrgcmdverifydsn"></a></p>
   <p id="idLrstcrgcmdverifynam">name::
-    <br>* Mcs.lagRust-cargo-cmd.verify-project,
+    <br>* Mcs.lagRust-Cargo-cmd.verify-project,
     <a class="clsHide" href="#idLrstcrgcmdverifynam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdversion">
-  <h4 id="idLrstcrgcmdversionH4">cargo-cmd.version of lagRust
+  <h4 id="idLrstcrgcmdversionH4">Cargo-cmd.version of lagRust
     <a class="clsHide" href="#idLrstcrgcmdversionH4"></a></h4>
   <p id="idLrstcrgcmdversiondsn">description::
     <br>* version: Show version information
     <a class="clsHide" href="#idLrstcrgcmdversiondsn"></a></p>
   <p id="idLrstcrgcmdversionnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.version,
+    <br>* Mcs.lagRust-Cargo-cmd.version,
     <a class="clsHide" href="#idLrstcrgcmdversionnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdyank">
-  <h4 id="idLrstcrgcmdyankH4">cargo-cmd.yank of lagRust
+  <h4 id="idLrstcrgcmdyankH4">Cargo-cmd.yank of lagRust
     <a class="clsHide" href="#idLrstcrgcmdyankH4"></a></h4>
   <p id="idLrstcrgcmdyankdsn">description::
     <br>* yank: Remove a pushed crate from the index
     <a class="clsHide" href="#idLrstcrgcmdyankdsn"></a></p>
   <p id="idLrstcrgcmdyanknam">name::
-    <br>* Mcs.lagRust-cargo-cmd.yank,
+    <br>* Mcs.lagRust-Cargo-cmd.yank,
     <a class="clsHide" href="#idLrstcrgcmdyanknam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdclippy">
-  <h4 id="idLrstcrgcmdclippyH4">cargo-cmd.clippy of lagRust
+  <h4 id="idLrstcrgcmdclippyH4">Cargo-cmd.clippy of lagRust
     <a class="clsHide" href="#idLrstcrgcmdclippyH4"></a></h4>
   <p id="idLrstcrgcmdclippydsn">description::
     <br>* clippy:
     <a class="clsHide" href="#idLrstcrgcmdclippydsn"></a></p>
   <p id="idLrstcrgcmdclippynam">name::
-    <br>* Mcs.lagRust-cargo-cmd.clippy,
+    <br>* Mcs.lagRust-Cargo-cmd.clippy,
     <a class="clsHide" href="#idLrstcrgcmdclippynam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdfmt">
-  <h4 id="idLrstcrgcmdfmtH4">cargo-cmd.fmt of lagRust
+  <h4 id="idLrstcrgcmdfmtH4">Cargo-cmd.fmt of lagRust
     <a class="clsHide" href="#idLrstcrgcmdfmtH4"></a></h4>
   <p id="idLrstcrgcmdfmtdsn">description::
     <br>* fmt:
     <a class="clsHide" href="#idLrstcrgcmdfmtdsn"></a></p>
   <p id="idLrstcrgcmdfmtnam">name::
-    <br>* Mcs.lagRust-cargo-cmd.fmt,
+    <br>* Mcs.lagRust-Cargo-cmd.fmt,
     <a class="clsHide" href="#idLrstcrgcmdfmtnam"></a></p>
   </section>
 
   <section id="idLrstcrgcmdmiri">
-  <h4 id="idLrstcrgcmdmiriH4">cargo-cmd.miri of lagRust
+  <h4 id="idLrstcrgcmdmiriH4">Cargo-cmd.miri of lagRust
     <a class="clsHide" href="#idLrstcrgcmdmiriH4"></a></h4>
   <p id="idLrstcrgcmdmiridsn">description::
     <br>* miri:
     <a class="clsHide" href="#idLrstcrgcmdmiridsn"></a></p>
   <p id="idLrstcrgcmdmirinam">name::
-    <br>* Mcs.lagRust-cargo-cmd.miri,
+    <br>* Mcs.lagRust-Cargo-cmd.miri,
     <a class="clsHide" href="#idLrstcrgcmdmirinam"></a></p>
   </section>
   </section>
 
   <section id="idLrstcargorsc">
-  <h3 id="idLrstcargorscH3">resource of cargo
+  <h3 id="idLrstcargorscH3">resource of Cargo
     <a class="clsHide" href="#idLrstcargorscH3"></a></h3>
   <p id="idLrstcargorscnam">name::
-    <br>* Mcs.lagRust-cargo'resource,
+    <br>* Mcs.lagRust-Cargo'resource,
     <a class="clsHide" href="#idLrstcargorscnam"></a></p>
   <p id="idLrstcargorscwpa">addressWpg::
     <br>* https://doc.rust-lang.org/cargo/,

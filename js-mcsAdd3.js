@@ -34,13 +34,13 @@ var
   sDir = 'dirTchInf',
   sDIR = 'DirTchInf',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'computer-machine',
+  sN = 'computer-language',
   //4. SHORT-name: DnChain, DnEth, Dchain-net,
-  sNS = 'cmr',
+  sNS = 'lagCmr',
   //5. FILE-name: shows relation of another file: DnLbr, DtcbnetEth
-  sNFil = 'Cmr',
+  sNFil = 'Lcmr',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Cmr';
+  sNId = 'Lcmr';
 
 s =
   '<!DOCTYPE html>\n' +
