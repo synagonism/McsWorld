@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.programing-language (lagPgm.0-10-0.2019-07-13 draft)</title>
+  <title>Mcs.programing-language (lagPgm.0-11-0.2019-07-16 draft)</title>
   <meta name="keywords" content="programing-language, lagPgm, Lpgm, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -28,9 +28,11 @@
     <br>* Mcs.filMcsLpgm.last.html!⇒lagPgm,
     <br>* Mcs.dirTchInf/filMcsLpgm.last.html!⇒lagPgm,
     <br>* Mcs.Lpgm!⇒lagPgm,
+    <br>* Mcs.lagCmr.programing!⇒lagPgm,
     <br>* Mcs.lagPgm'(programing-language)!⇒lagPgm,
     <br>* Mcs.lagPgm, {2019-07-04}
     <br>* Mcs.language.programing!⇒lagPgm,
+    <br>* Mcs.programing--computer-language!⇒lagPgm,
     <br>* Mcs.programing-language!⇒lagPgm,
     <a class="clsHide" href="#idName"></a></p>
   <p id="idOverviewnamEll">nameGreek::
@@ -39,7 +41,7 @@
 </section>
 
 <section id="idLpgmarch">
-  <h1 id="idLpgmarchH1">archetype (input) of lagPgm
+  <h1 id="idLpgmarchH1">input (archetype) of lagPgm
     <a class="clsHide" href="#idLpgmarchH1"></a></h1>
   <p id="idLpgmarchdsn">description::
     <br>· lagPgm-archetype is a-document describing information-processing as done by humans or other machines.
@@ -100,57 +102,14 @@
   <h2 id="idLpgmalgmchnH2">machine of algo
     <a class="clsHide" href="#idLpgmalgmchnH2"></a></h2>
   <p id="idLpgmalgmchndsn">description::
-    <br>· the-machine of an-algo could-be <a class="clsPreview" href="#idLpgmalgmchnReal">a-real-one</a>, <a class="clsPreview" href="#idLpgmalgmchnVrtl">a-virtual-machine</a>, or <a class="clsPreview" href="#idLpgmalgmchnSrc">an-imaginary-machine</a>.
+    <br>· the-machine of an-algo could-be <a class="clsPreview" href="filMcsCmr.last.html#idCmrPhcl">a-physical-one</a>, <a class="clsPreview" href="filMcsCmr.last.html#idCmrVrtl">a-virtual-machine</a>, or <a class="clsPreview" href="#idCmrRealN">an-imaginary-machine</a>.
     <a class="clsHide" href="#idLpgmalgmchndsn"></a></p>
   <p id="idLpgmalgmchnnam">name::
-    <br>* Mcs.lagPgm-algo'machine!⇒lagPgm-machine,
+    <br>* Mcs.lagPgm-algo'machine,
+    <br>* Mcs.lagPgm-machine,
     <a class="clsHide" href="#idLpgmalgmchnnam"></a></p>
-
-  <section id="idLpgmalgmchnReal">
-  <h3 id="idLpgmalgmchnRealH3">machine.REAL
-    <a class="clsHide" href="#idLpgmalgmchnRealH3"></a></h3>
-  <p id="idLpgmalgmchnRealdsn">description::
-    <br>· a-real-machine[a] works with <a class="clsPreview" href="#idLmchnalgcode">machine-code</a> today with<a class="clsPreview" href="#idLbnralgcode">binary-code</a> which includes an-instruction-set, it[a] has memory-areas and it[a] is operating-system dependent.
-    <a class="clsHide" href="#idLpgmalgmchnRealdsn"></a></p>
-  <p id="idLpgmalgmchnRealnam">name::
-    <br>* Mcs.lagPgm-machine.physical,
-    <br>* Mcs.lagPgm-machine.real,
-    <br>* Mcs.physical-machine--of-lagPgm,
-    <a class="clsHide" href="#idLpgmalgmchnRealnam"></a></p>
-  </section>
-
-  <section id="idLpgmalgmchnVrtl">
-  <h3 id="idLpgmalgmchnVrtlH3">machine.VIRTUAL
-    <a class="clsHide" href="#idLpgmalgmchnVrtlH3"></a></h3>
-  <p id="idLpgmalgmchnVrtldsn">description::
-    <br>· a-virtual-machine[a] is not a-real-machine but works like a-real-machine.
-    <br>· it[a] works with <a class="clsPreview" href="#idLbnralgcode">binary-code</a>, it[a] has memory managed with the-code, but it[a] is independent of operating-systems.
-    <a class="clsHide" href="#idLpgmalgmchnVrtldsn"></a></p>
-  <p id="idLpgmalgmchnVrtlnam">name::
-    <br>* Mcs.bytcode-machine--of-lagPgm,
-    <br>* Mcs.lagPgm-machine.bytecode,
-    <br>* Mcs.lagPgm-machine.virtual,
-    <br>* Mcs.virtual-machine--of-lagPgm,
-    <a class="clsHide" href="#idLpgmalgmchnVrtlnam"></a></p>
   <p id="idLpgmalgmchnVrtlSpc">specific::
-    <br>* register-vm,
-    <br>* stack-vm,
     <a class="clsHide" href="#idLpgmalgmchnVrtlSpc"></a></p>
-  </section>
-
-  <section id="idLpgmalgmchnSrc">
-  <h3 id="idLpgmalgmchnSrcH3">machine.SOURCE
-    <a class="clsHide" href="#idLpgmalgmchnSrcH3"></a></h3>
-  <p id="idLpgmalgmchnSrcdsn">description::
-    <br>· a-source-machine[a] is not a-real-machine.
-    <br>· it[a] is simpler than a-real, usually auto-manages its[a] memory, it[a] works with <a class="clsPreview" href="#idLsrcalgcode">source-code</a>, and it[a] is independent of operating-systems.
-    <a class="clsHide" href="#idLpgmalgmchnSrcdsn"></a></p>
-  <p id="idLpgmalgmchnSrcnam">name::
-    <br>* Mcs.lagPgm-machine.abstract,
-    <br>* Mcs.lagPgm-machine.hypothetical,
-    <br>* Mcs.lagPgm-machine.source,
-    <a class="clsHide" href="#idLpgmalgmchnSrcnam"></a></p>
-  </section>
   </section>
 
   <section id="idLpgmalgcode">
@@ -793,7 +752,7 @@
   <h1 id="idLpgmgncFTH1">GENERIC of lagPgm
     <a class="clsHide" href="#idLpgmgncFTH1"></a></h1>
   <p id="idLpgmgncchn">generic-chain::
-    <br>* computer-language,
+    <br>* <a class="clsPreview" href="filMcsLcmr.last.html#idOverview">computer-language</a>,
     <br>* language,
     <br>...
     <br>* entity,
@@ -820,13 +779,13 @@
     <a class="clsHide" href="#idLpgmScdnmcnH1"></a></h1>
   <p id="idLpgmScdnmcndsn">description::
     <br>· <a class="clsPreview" href="../dirCor/filMcs.last.html#idMcsattWhlNSpcdvn">a-specific-division</a> on <a class="clsPreview" href="#idLpgmalgmchn">the-machine</a> that understands and runs the-algo.
-    <br>* machine-lagPgm,
-    <br>* assembly-lagPgm,
-    <br>* bytcode-lagPgm,
-    <br>* source-lagPgm,
+    <br>* <a class="clsPreview" href="#idLmchn">machine-lagPgm</a>,
+    <br>* <a class="clsPreview" href="#idLasm">assembly-lagPgm</a>,
+    <br>* <a class="clsPreview" href="#idLvtl">virual-code--lagPgm</a>,
+    <br>* <a class="clsPreview" href="#idLsrc">source-code--lagPgm</a>,
     <br>===
     <br>* low-level (machine, assembly, bytcode),
-    <br>* high-level (source)
+    <br>* high-level (source),
     <a class="clsHide" href="#idLpgmScdnmcndsn"></a></p>
   <p id="idLpgmScdnmcnnam">name::
     <br>* Mcs.lagPgm.specific-division-on-machine,
@@ -911,6 +870,7 @@
     <br>* Mcs.machine-lagPgm!⇒lagMchn,
     <br>* Mcs.machine-programing-language!⇒lagMchn,
     <br>* Mcs.lagMchn,
+    <br>* Mcs.lagPgm.machine!⇒lagMchn,
     <br>* Mcs.language.machine!⇒lagMchn,
     <br>* Mcs.machine-code--language!⇒lagMchn,
     <br>* Mcs.machine-language!⇒lagMchn,
@@ -956,13 +916,15 @@
     <br>· trinary-language is <a class="clsPreview" href="#idOverview">a-machine-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLpgmalgcodeTnr">trinary-code</a> that <a class="clsPreview" href="#idLpgmalgmchnReal">a-real-machine</a> understands.
     <a class="clsHide" href="#idLtnrdsn"></a></p>
   <p id="idLtnrnam">name::
-    <br>* Mcs.Ltnr, {2019-07-02}
-    <br>* Mcs.Ltnr'(trinary-language)!⇒Ltnr,
-    <br>* Mcs.trinary-lagPgm!⇒Ltnr,
-    <br>* Mcs.trinary-programing-language!⇒Ltnr,
-    <br>* Mcs.lagTnr!⇒Ltnr,
-    <br>* Mcs.language.trinary!⇒Ltnr,
-    <br>* Mcs.programing-language.trinary!⇒Ltnr,
+    <br>* Mcs.Ltnr!⇒lagTnr, {2019-07-02}
+    <br>* Mcs.Ltnr'(trinary-language)!⇒lagTnr,
+    <br>* Mcs.trinary-lagPgm!⇒lagTnr,
+    <br>* Mcs.trinary-programing-language!⇒lagTnr,
+    <br>* Mcs.lagMchn.trinary!⇒lagTnr,
+    <br>* Mcs.lagPgm.trinary!⇒lagTnr,
+    <br>* Mcs.lagTnr, {2019-07-16}
+    <br>* Mcs.language.trinary!⇒lagTnr,
+    <br>* Mcs.programing-language.trinary!⇒lagTnr,
     <a class="clsHide" href="#idLtnrnam"></a></p>
 
   <section id="idLtnralg">
@@ -998,6 +960,8 @@
     <br>* Mcs.binary-lagPgm!⇒lagBnr,
     <br>* Mcs.binary-programing-language!⇒lagBnr,
     <br>* Mcs.lagBnr,
+    <br>* Mcs.lanMchn.binary!⇒lagBnr,
+    <br>* Mcs.lanPgm.binary!⇒lagBnr,
     <br>* Mcs.language.binary!⇒lagBnr,
     <br>* Mcs.programing-language.binary!⇒lagBnr,
     <a class="clsHide" href="#idLbnrnam"></a></p>
