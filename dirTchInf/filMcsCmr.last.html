@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.computer-machine (cmr.0-3-0.2019-07-16 draft)</title>
+  <title>Mcs.computer-machine (cmr.0-4-0.2019-07-17 draft)</title>
   <meta name="keywords" content="computer-machine, cmr, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -53,15 +53,226 @@
   <h2 id="idCmrhrdwrSpcH2">hardware.SPECIFIC of cmr
     <a class="clsHide" href="#idCmrhrdwrSpcH2"></a></h2>
   <p id="idCmrhrdwrSpcdsn">description::
-    <br>* processor,
-    <br>* memory,
-    <br>* storage,
-    <br>* input-device,
-    <br>* output-device,
+    <br>* processor-unit,
+    <br>* storage-unit,
+    <br>* input-unit,
+    <br>* output-unit,
     <a class="clsHide" href="#idCmrhrdwrSpcdsn"></a></p>
   <p id="idCmrhrdwrSpcnam">name::
     <br>* Mcs.cmr-hardware.specific,
     <a class="clsHide" href="#idCmrhrdwrSpcnam"></a></p>
+  </section>
+
+  <section id="idCmrpcsr">
+  <h2 id="idCmrpcsrH2">hardware.processor of cmr
+    <a class="clsHide" href="#idCmrpcsrH2"></a></h2>
+  <p id="idCmrpcsrdsn">description::
+    <br>· processor of a-computer[a] is its[a] unit that performs the-info-processing task.
+    <a class="clsHide" href="#idCmrpcsrdsn"></a></p>
+  <p id="idCmrpcsrnam">name::
+    <br>* Mcs.cmr'processor!⇒cmr-processor,
+    <br>* Mcs.cmr-hardware.processor!⇒cmr-processor,
+    <br>* Mcs.cmr-processor,
+    <br>* Mcs.computer-processor!⇒cmr-processor,
+    <br>* Mcs.processor-of-computer!⇒cmr-processor,
+    <a class="clsHide" href="#idCmrpcsrnam"></a></p>
+
+  <section id="idCmrpcsrSpc">
+  <h3 id="idCmrpcsrSpcH3">processor.SPECIFIC of cmr
+    <a class="clsHide" href="#idCmrpcsrSpcH3"></a></h3>
+  <p id="idCmrpcsrSpcdsn">description::
+    <br>· alphabetically:
+    <br>* CPU – central processing unit,
+    <br>* DSP – digital signal processor,
+    <br>* GPU – graphics processing unit,
+    <br>* ISP – image signal processor,
+    <br>* NPU – neural processing unit,
+    <br>* PPU – physics processing unit,
+    <br>* SPU or SPE – synergistic processing element in Cell microprocessor,
+    <br>* TPU – tensor processing unit,
+    <br>* VPU – vision processing unit,
+    <br>* FPGA – field-programmable gate array,
+    <br>* general-purpose--CPU,
+    <br>* general-purpose.no--CPU,
+    <br>* integrated-circuit--CPU,
+    <br>* mechanical-CPU,
+    <br>* microprocessor,
+    <br>* sound chip,
+    <br>* transistor-CPU,
+    <br>* vacuum-tube--CPU,
+    <a class="clsHide" href="#idCmrpcsrSpcdsn"></a></p>
+  <p id="idCmrpcsrSpcnam">name::
+    <br>* Mcs.cmr-processor.specific,
+    <a class="clsHide" href="#idCmrpcsrSpcnam"></a></p>
+  </section>
+
+  <section id="idCmrpcsrCpu">
+  <h3 id="idCmrpcsrCpuH3">processor.CPU of cmr
+    <a class="clsHide" href="#idCmrpcsrCpuH3"></a></h3>
+  <p id="idCmrpcsrCpudsn">description::
+    <br>· computer-CPU is the-main processing unit of a-computer.
+    <a class="clsHide" href="#idCmrpcsrCpudsn"></a></p>
+  <p id="idCmrpcsrCpunam">name::
+    <br>* Mcs.CPU-of-computer!⇒cmr-Cpu,
+    <br>* Mcs.central-processing-unit--of-computer!⇒cmr-Cpu,
+    <br>* Mcs.cmr'CPU!⇒cmr-Cpu,
+    <br>* Mcs.cmr-Cpu,
+    <br>* Mcs.cmr-hardware.CPU!⇒cmr-Cpu,
+    <br>* Mcs.cmr-processor.CPU!⇒cmr-Cpu,
+    <br>* Mcs.computer-CPU!⇒cmr-Cpu,
+    <a class="clsHide" href="#idCmrpcsrCpunam"></a></p>
+  </section>
+
+  <section id="idCmrpcsrCpuN">
+  <h3 id="idCmrpcsrCpuNH3">processor.CPU.NO of cmr
+    <a class="clsHide" href="#idCmrpcsrCpuNH3"></a></h3>
+  </section>
+
+  <section id="idCmrpcsrMcr">
+  <h3 id="idCmrpcsrMcrH3">processor.microprocessor of cmr
+    <a class="clsHide" href="#idCmrpcsrMcrH3"></a></h3>
+  <p id="idCmrpcsrMcrdsn">description::
+    <br>· a-microprocessor is one or more central-processing-units on a-single integrated-circuit.
+    <a class="clsHide" href="#idCmrpcsrMcrdsn"></a></p>
+  <p id="idCmrpcsrMcrnam">name::
+    <br>* Mcs.cmr-Cpu.microprocessor!⇒cmr-microprocessor,
+    <br>* Mcs.cmr-microprocessor,
+    <br>* Mcs.computer-microprocessor!⇒cmr-microprocessor,
+    <br>* Mcs.microprocessor-of-computer!⇒cmr-microprocessor,
+    <a class="clsHide" href="#idCmrpcsrMcrnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCmrstrg">
+  <h2 id="idCmrstrgH2">hardware.storage of cmr
+    <a class="clsHide" href="#idCmrstrgH2"></a></h2>
+  <p id="idCmrstrgdsn">description::
+    <br>· storage of computer[a] is <a class="clsPreview" href="#idCmrhrdwr">hardware</a> that stores its[a] <a class="clsPreview" href="#idCmrsftwr">software</a>.
+    <br><img src="filMcsCmr.files/computer_storage_types.svg" style="width:70%">
+    <br>[https://upload.wikimedia.org/wikipedia/commons/3/3e/Computer_storage_types.svg]
+    <a class="clsHide" href="#idCmrstrgdsn"></a></p>
+  <p id="idCmrstrgnam">name::
+    <br>* Mcs.cmr-hardware.storage!⇒cmr-storage,
+    <br>* Mcs.cmr-storage,
+    <br>* Mcs.storage-of-computer!⇒cmr-storage,
+    <a class="clsHide" href="#idCmrstrgnam"></a></p>
+
+  <section id="idCmrstrgCpuacc">
+  <h3 id="idCmrstrgCpuaccH3">storage.Cpu-accessible of cmr
+    <a class="clsHide" href="#idCmrstrgCpuaccH3"></a></h3>
+  <p id="idCmrstrgCpuaccdsn">description::
+    <br>· Cpu-accessible--computer-storage is computer-storage that the-Cpu access directly.
+    <a class="clsHide" href="#idCmrstrgCpuaccdsn"></a></p>
+  <p id="idCmrstrgCpuaccnam">name::
+    <br>* Mcs.Cpu-accessible--computer-storage!⇒cmr-Cpu-storage,
+    <br>* Mcs.cmr-storage.Cpu-accessible!⇒cmr-Cpu-storage,
+    <br>* Mcs.cmr-Cpu-storage,
+    <br>* Mcs.computer-memory!⇒cmr-Cpu-storage,
+    <br>* Mcs.memory-of-computer!⇒cmr-Cpu-storage,
+    <a class="clsHide" href="#idCmrstrgCpuaccnam"></a></p>
+
+  <section id="idCmrstrgCpuaccScdnCpu">
+  <h4 id="idCmrstrgCpuaccScdnCpuH4">Cpu-storage.specific-division.Cpu
+    <a class="clsHide" href="#idCmrstrgCpuaccScdnCpuH4"></a></h4>
+  <p id="idCmrstrgCpuaccScdnCpudsn">description::
+    <br>· division on location: inside Cpu or not:
+    <br>* <a class="clsPreview" href="#idCmrstrgCpuaccInl">internal--Cpu-storage</a>,
+    <br>* <a class="clsPreview" href="#idCmrstrgCpuaccInlN">internalNo--Cpu-storage</a>,
+    <a class="clsHide" href="#idCmrstrgCpuaccScdnCpudsn"></a></p>
+  <p id="idCmrstrgCpuaccScdnCpunam">name::
+    <br>* Mcs.cmr-Cpu-storage.specific-division.Cpu,
+    <a class="clsHide" href="#idCmrstrgCpuaccScdnCpunam"></a></p>
+
+  <section id="idCmrstrgCpuaccInl">
+  <h4 id="idCmrstrgCpuaccInlH4">Cpu-storage.internal of cmr
+    <a class="clsHide" href="#idCmrstrgCpuaccInlH4"></a></h4>
+  <p id="idCmrstrgCpuaccInldsn">description::
+    <br>· internal--Cpu-storage is <a class="clsPreview" href="#idCmrstrgCpuacc">Cpu-storage</a> inside <a class="clsPreview" href="#idCmrpcsrCpu">the-Cpu</a>.
+    <a class="clsHide" href="#idCmrstrgCpuaccInldsn"></a></p>
+  <p id="idCmrstrgCpuaccInlnam">name::
+    <br>* Mcs.cmr-internal--Cpu-storage,
+    <br>* Mcs.cmr-Cpu-storage.internal!⇒cmr-internal--Cpu-storage,
+    <a class="clsHide" href="#idCmrstrgCpuaccInlnam"></a></p>
+
+  <section id="idCmrstrgCpuaccInlCch">
+  <h5 id="idCmrstrgCpuaccInlCchH5">interal--Cpu-storage.cache of cmr
+    <a class="clsHide" href="#idCmrstrgCpuaccInlCchH5"></a></h5>
+  <p id="idCmrstrgCpuaccInlCchdsn">description::
+    <br>"Processor cache is an intermediate stage between ultra-fast registers and much slower main memory. It was introduced solely to improve the performance of computers. Most actively used information in the main memory is just duplicated in the cache memory, which is faster, but of much lesser capacity. On the other hand, main memory is much slower, but has a much greater storage capacity than processor registers. Multi-level hierarchical cache setup is also commonly used—primary cache being smallest, fastest and located inside the processor; secondary cache being somewhat larger and slower."
+    <br>[https://en.wikipedia.org/wiki/Computer_data_storage#Primary_storage]
+    <a class="clsHide" href="#idCmrstrgCpuaccInlCchdsn"></a></p>
+  <p id="idCmrstrgCpuaccInlCchnam">name::
+    <br>* Mcs.cmr-Cpu-cache,
+    <br>* Mcs.cmr-internal--Cpu-storage.cache!⇒cmr-Cpu-cache,
+    <a class="clsHide" href="#idCmrstrgCpuaccInlCchnam"></a></p>
+  </section>
+
+  <section id="idCmrstrgCpuaccInlRgr">
+  <h5 id="idCmrstrgCpuaccInlRgrH5">interal--Cpu-storage.register of cmr
+    <a class="clsHide" href="#idCmrstrgCpuaccInlRgrH5"></a></h5>
+  <p id="idCmrstrgCpuaccInlRgrdsn">description::
+    <br>"Processor registers are located inside the processor. Each register typically holds a word of data (often 32 or 64 bits). CPU instructions instruct the arithmetic logic unit to perform various calculations or other operations on this data (or with the help of it). Registers are the fastest of all forms of computer data storage."
+    <br>[https://en.wikipedia.org/wiki/Computer_data_storage#Primary_storage]
+    <a class="clsHide" href="#idCmrstrgCpuaccInlRgrdsn"></a></p>
+  <p id="idCmrstrgCpuaccInlRgrnam">name::
+    <br>* Mcs.cmr-Cpu-register,
+    <br>* Mcs.cmr-internal--Cpu-storage.register!⇒cmr-Cpu-register,
+    <a class="clsHide" href="#idCmrstrgCpuaccInlRgrnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCmrstrgCpuaccInlN">
+  <h4 id="idCmrstrgCpuaccInlNH4">Cpu-storage.internalNo of cmr
+    <a class="clsHide" href="#idCmrstrgCpuaccInlNH4"></a></h4>
+  <p id="idCmrstrgCpuaccInlNdsn">description::
+    <br>· internalNo--Cpu-storage is <a class="clsPreview" href="#idCmrstrgCpuacc">Cpu-storage</a> external to <a class="clsPreview" href="#idCmrpcsrCpu">Cpu</a>.
+    <a class="clsHide" href="#idCmrstrgCpuaccInlNdsn"></a></p>
+  <p id="idCmrstrgCpuaccInlNnam">name::
+    <br>* Mcs.cmr-internalNo--Cpu-storage,
+    <br>* Mcs.cmr-Cpu-storage.internalNo!⇒cmr-internalNo--Cpu-storage,
+    <br>* Mcs.main-memory-of-computer!⇒cmr-internalNo--Cpu-storage,
+    <a class="clsHide" href="#idCmrstrgCpuaccInlNnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCmrstrgCpuaccN">
+  <h3 id="idCmrstrgCpuaccNH3">storage.Cpu-accessible.no of cmr
+    <a class="clsHide" href="#idCmrstrgCpuaccNH3"></a></h3>
+  <p id="idCmrstrgCpuaccNdsn">description::
+    <br>·
+    <a class="clsHide" href="#idCmrstrgCpuaccNdsn"></a></p>
+  <p id="idCmrstrgCpuaccNnam">name::
+    <br>* Mcs.Cpu-accessible.no--computer-storage.!⇒cmr-CpuNo-storage,
+    <br>* Mcs.cmr-storage.Cpu-accessible.no!⇒cmr-CpuNo-storage,
+    <br>* Mcs.cmr-CpuNo-storage,
+    <a class="clsHide" href="#idCmrstrgCpuaccNnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCmrhdwrIn">
+  <h2 id="idCmrhdwrInH2">hardware.input of cmr
+    <a class="clsHide" href="#idCmrhdwrInH2"></a></h2>
+  <p id="idCmrhdwrIndsn">description::
+    <br>·
+    <a class="clsHide" href="#idCmrhdwrIndsn"></a></p>
+  <p id="idCmrhdwrInnam">name::
+    <br>* Mcs.cmr-hardware.input!⇒cmr-input,
+    <br>* Mcs.cmr-input,
+    <br>* Mcs.storage-of-computer!⇒cmr-input,
+    <a class="clsHide" href="#idCmrhdwrInnam"></a></p>
+  </section>
+
+  <section id="idCmrhdwrOut">
+  <h2 id="idCmrhdwrOutH2">hardware.output of cmr
+    <a class="clsHide" href="#idCmrhdwrOutH2"></a></h2>
+  <p id="idCmrhdwrOutdsn">description::
+    <br>·
+    <a class="clsHide" href="#idCmrhdwrOutdsn"></a></p>
+  <p id="idCmrhdwrOutnam">name::
+    <br>* Mcs.cmr-hardware.output!⇒cmr-output,
+    <br>* Mcs.cmr-output,
+    <br>* Mcs.output-of-computer!⇒cmr-output,
+    <a class="clsHide" href="#idCmrhdwrOutnam"></a></p>
   </section>
 </section>
 
@@ -69,12 +280,13 @@
   <h1 id="idCmrsftwrH1">software of cmr
     <a class="clsHide" href="#idCmrsftwrH1"></a></h1>
   <p id="idCmrsftwrdsn">description::
-    <br>· software of computer[a] is <a class="clsPreview" href="../dirCor/filMcs.last.html#idMcsattDvsnclmtPrt">the-part-complement</a> of <a class="clsPreview" href="#idCmrhrdwr">hardware</a>, ie the-info that it[a] processes[b] and <a class="clsPreview" href="filMcsLpgm.last.html#idLpgmalg">the-algorithms</a> that uses to do it[b].
+    <br>· software of computer[a] is <a class="clsPreview" href="../dirCor/filMcs.last.html#idMcsattDvsnclmtPrt">the-part-complement</a> of <a class="clsPreview" href="#idCmrhrdwr">hardware</a>, ie <a class="clsPreview" href="#idCmrsftwrData">the-data</a> that it[a] processes[b] and <a class="clsPreview" href="filMcsLpgm.last.html#idLpgmalg">the-algorithms</a> that uses to do it[b].
     <a class="clsHide" href="#idCmrsftwrdsn"></a></p>
   <p id="idCmrsftwrnam">name::
     <br>* Mcs.cmr'software!⇒cmr-software,
     <br>* Mcs.cmr-software,
     <br>* Mcs.computer-software!⇒cmr-software,
+    <br>* Mcs.information-of-computer!⇒cmr-software,
     <br>* Mcs.software-of-computer!⇒cmr-software,
     <a class="clsHide" href="#idCmrsftwrnam"></a></p>
 
@@ -261,18 +473,346 @@
     <a class="clsHide" href="#idCmrSpcFTwpa"></a></p>
 </section>
 
-<section id="idCmrScdnTime">
-  <h1 id="idCmrScdnTimeH1">cmr.specific-division.time
-    <a class="clsHide" href="#idCmrScdnTimeH1"></a></h1>
-  <p id="idCmrScdnTimedsn">description::
-    <br>· on time:
-    <br>* modern-computer,
-    <br>* old-computer,
-    <br>* future-computer,
-    <a class="clsHide" href="#idCmrScdnTimedsn"></a></p>
-  <p id="idCmrScdnTimenam">name::
-    <br>* Mcs.cmr.specific-division.time,
-    <a class="clsHide" href="#idCmrScdnTimenam"></a></p>
+<section id="idCmrScdnDcd">
+  <h1 id="idCmrScdnDcdH1">cmr.specific-division.decade
+    <a class="clsHide" href="#idCmrScdnDcdH1"></a></h1>
+  <p id="idCmrScdnDcddsn">description::
+    <br>· on 2010s:
+    <br>* <a class="clsPreview" href="#idCmrMdrn2010s">modern2010s-computer</a>,
+    <br>* old2010s-computer,
+    <br>* future2010s-computer,
+    <a class="clsHide" href="#idCmrScdnDcddsn"></a></p>
+  <p id="idCmrScdnDcdnam">name::
+    <br>* Mcs.cmr.specific-division.decade,
+    <a class="clsHide" href="#idCmrScdnDcdnam"></a></p>
+</section>
+
+<section id="idCmrScdnHdwr">
+  <h1 id="idCmrScdnHdwrH1">cmr.specific-division.hardware
+    <a class="clsHide" href="#idCmrScdnHdwrH1"></a></h1>
+  <p id="idCmrScdnHdwrdsn">description::
+    <br>· on hardware:
+    <br>* mechanical-computer,
+    <br>* electro-mechanical-computer,
+    <br>* electronic-computer:,
+    <br>* electronic.vacuum-tube--computer,
+    <br>* electronic.transistor-computer,
+    <br>* electronic.microchip-computer,
+    <a class="clsHide" href="#idCmrScdnHdwrdsn"></a></p>
+  <p id="idCmrScdnHdwrnam">name::
+    <br>* Mcs.cmr.specific-division.hardware,
+    <a class="clsHide" href="#idCmrScdnHdwrnam"></a></p>
+
+  <section id="idCmrMchl">
+  <h2 id="idCmrMchlH2">cmr.mechanical
+    <a class="clsHide" href="#idCmrMchlH2"></a></h2>
+  <p id="idCmrMchldsn">description::
+    <br>"A mechanical computer is built from mechanical components such as levers and gears, rather than electronic components. The most common examples are adding machines and mechanical counters, which use the turning of gears to increment output displays."
+    <br>[https://en.wikipedia.org/wiki/Mechanical_computer]
+    <a class="clsHide" href="#idCmrMchldsn"></a></p>
+  <p id="idCmrMchlnam">name::
+    <br>* Mcs.cmr.mechanical!⇒cmrMechanical,
+    <br>* Mcs.cmrMechanical,
+    <a class="clsHide" href="#idCmrMchlnam"></a></p>
+  </section>
+
+  <section id="idCmrErml">
+  <h2 id="idCmrErmlH2">cmr.electro-mechanical
+    <a class="clsHide" href="#idCmrErmlH2"></a></h2>
+  <p id="idCmrErmldsn">description::
+    <br>· electro-mechanical--computer is a-computer with electric-switches that drive mechanical-relays to perform computations.
+    <a class="clsHide" href="#idCmrErmldsn"></a></p>
+  <p id="idCmrErmlnam">name::
+    <br>* Mcs.cmr.electro-mechanical,
+    <br>* Mcs.electro-mechanical--computer,
+    <br>* Mcs.relay-computer,
+    <a class="clsHide" href="#idCmrErmlnam"></a></p>
+  <p id="idCmrErmlwpa">addressWpg::
+    <br>* https://en.wikipedia.org/wiki/Category:Electro-mechanical_computers,
+    <a class="clsHide" href="#idCmrErmlwpa"></a></p>
+  </section>
+
+  <section id="idCmrElrc">
+  <h2 id="idCmrElrcH2">cmr.electronic
+    <a class="clsHide" href="#idCmrElrcH2"></a></h2>
+  <p id="idCmrElrcdsn">description::
+    <br>· electronic-computer is a-computer that uses electronic components such as vacuum-tubes, transistors, microchips.
+    <a class="clsHide" href="#idCmrElrcdsn"></a></p>
+  <p id="idCmrElrcnam">name::
+    <br>* Mcs.cmr.electronic,
+    <br>* Mcs.electronic-computer,
+    <a class="clsHide" href="#idCmrElrcnam"></a></p>
+  </section>
+
+  <section id="idCmrVmtb">
+  <h2 id="idCmrVmtbH2">cmr.vacuum-tube
+    <a class="clsHide" href="#idCmrVmtbH2"></a></h2>
+  <p id="idCmrVmtbdsn">description::
+    <br>"Vacuum tube computers, now termed first generation computers, are programmable digital computers using vacuum tube logic circuitry. They were preceded by systems using electromechanical relays and followed by systems built from discrete transistors."
+    <br>[https://en.wikipedia.org/wiki/List_of_vacuum_tube_computers]
+    <a class="clsHide" href="#idCmrVmtbdsn"></a></p>
+  <p id="idCmrVmtbnam">name::
+    <br>* Mcs.cmr.vacuum-tube!⇒cmrVtube,
+    <br>* Mcs.cmrVtube,
+    <br>* Mcs.first-generation-computer!⇒cmrVtube,
+    <br>* Mcs.tube-computer!⇒cmrVtube,
+    <br>* Mcs.vacuum-tube-computer!⇒cmrVtube,
+    <a class="clsHide" href="#idCmrVmtbnam"></a></p>
+
+  <section id="idCmrVmtbrsc">
+  <h3 id="idCmrVmtbrscH3">resource of cmrVtube
+    <a class="clsHide" href="#idCmrVmtbrscH3"></a></h3>
+  <p id="idCmrVmtbrscnam">name::
+    <br>* Mcs.cmrVtube'resource,
+    <a class="clsHide" href="#idCmrVmtbrscnam"></a></p>
+  <p id="idCmrVmtbrscwpa">addressWpg::
+    <br>* https://en.wikipedia.org/wiki/Vacuum_tube_computer,
+    <br>* https://en.wikipedia.org/wiki/List_of_vacuum_tube_computers,
+    <a class="clsHide" href="#idCmrVmtbrscwpa"></a></p>
+  </section>
+
+  <section id="idCmrVmtbevg">
+  <h3 id="idCmrVmtbevgH3">EVOLUTING of cmrVtube
+    <a class="clsHide" href="#idCmrVmtbevgH3"></a></h3>
+  <p id="idCmrVmtbevgnam">name::
+    <br>* Mcs.cmrVtube'evoluting,
+    <a class="clsHide" href="#idCmrVmtbevgnam"></a></p>
+  <p id="idCmrVmtbevg1942">{1942}::
+    <br>=== Atanasoff-Berry-computer:
+    <br>"The Atanasoff–Berry computer (ABC) was the first automatic electronic digital computer, an early electronic digital computing device that has remained somewhat obscure. The ABC's priority is debated among historians of computer technology, because it was neither programmable, nor Turing-complete.
+    <br>Conceived in 1937, the machine was built by Iowa State College mathematics and physics professor John Vincent Atanasoff with the help of graduate student Clifford Berry. It was designed only to solve systems of linear equations and was successfully tested in 1942."
+    <br>[https://en.wikipedia.org/wiki/Atanasoff%E2%80%93Berry_computer]
+    <a class="clsHide" href="#idCmrVmtbevg1942"></a></p>
+  <p id="idCmrVmtbevg1939">{1939}::
+    <br>=== Atanasoff-Berry-computer-prototype:
+    <br>"The Atanasoff–Berry computer, a prototype of which was first demonstrated in 1939, is now credited as the first vacuum tube computer. However it was not a general-purpose computer being able to only solve a system of linear equations and it was also not very reliable."
+    <br>[https://en.wikipedia.org/wiki/Vacuum_tube_computer]
+    <a class="clsHide" href="#idCmrVmtbevg1939"></a></p>
+  </section>
+  </section>
+
+  <section id="idCmrTrtr">
+  <h2 id="idCmrTrtrH2">cmr.transistor
+    <a class="clsHide" href="#idCmrTrtrH2"></a></h2>
+  <p id="idCmrTrtrdsn">description::
+    <br>"A transistor computer, now often called a second generation computer,[1] is a computer which uses discrete transistors instead of vacuum tubes. The first generation of electronic computers used vacuum tubes, which generated large amounts of heat, were bulky and unreliable. A second generation of computers, through the late 1950s and 1960s featured circuit boards filled with individual transistors and magnetic core memory. These machines remained the mainstream design into the late 1960s, when integrated circuits started appearing and led to the third-generation machines."
+    <br>[https://en.wikipedia.org/wiki/Transistor_computer]
+    <a class="clsHide" href="#idCmrTrtrdsn"></a></p>
+  <p id="idCmrTrtrnam">name::
+    <br>* Mcs.cmr.transistor,
+    <br>* Mcs.second-generation--computer,
+    <br>* Mcs.transistor-computer,
+    <br>* Mcs.transistorized-computer,
+    <a class="clsHide" href="#idCmrTrtrnam"></a></p>
+  <p id="idCmrTrtrwpa">addressWpg::
+    <br>* https://en.wikipedia.org/wiki/List_of_transistorized_computers,
+    <a class="clsHide" href="#idCmrTrtrwpa"></a></p>
+  </section>
+
+  <section id="idCmrChip">
+  <h2 id="idCmrChipH2">cmr.integrated-circuit
+    <a class="clsHide" href="#idCmrChipH2"></a></h2>
+  <p id="idCmrChipdsn">description::
+    <br>· integrated-circuit--computer is an-electronic-computer that uses integrated-circuits.
+    <a class="clsHide" href="#idCmrChipdsn"></a></p>
+  <p id="idCmrChipnam">name::
+    <br>* Mcs.IC-computer!⇒cmrChip,
+    <br>* Mcs.cmr.microchip!⇒cmrChip,
+    <br>* Mcs.cmrChip,
+    <br>* Mcs.integrated-circuit--computer!⇒cmrChip,
+    <a class="clsHide" href="#idCmrChipnam"></a></p>
+
+  <section id="idCmrChipSpc">
+  <h3 id="idCmrChipSpcH3">cmrChip.SPECIFIC
+    <a class="clsHide" href="#idCmrChipSpcH3"></a></h3>
+  <p id="idCmrChipSpcdsn">description::
+    <br>· on CPU:
+    <br>* LSI-CPU--computer,
+    <br>* SSI-CPU--computer,
+    <br>* microprocessor-computer,
+    <a class="clsHide" href="#idCmrChipSpcdsn"></a></p>
+  <p id="idCmrChipSpcnam">name::
+    <br>* Mcs.cmrChip.specific,
+    <a class="clsHide" href="#idCmrChipSpcnam"></a></p>
+  </section>
+
+  <section id="idCmrChipMrpr">
+  <h3 id="idCmrChipMrprH3">cmrChip.microprocessor
+    <a class="clsHide" href="#idCmrChipMrprH3"></a></h3>
+  <p id="idCmrChipMrprdsn">description::
+    <br>· microprocessor-computer is a-chip-computer with one <a class="clsPreview" href="#idCmrpcsrMcr">microprocessor</a> as CPU.
+    <a class="clsHide" href="#idCmrChipMrprdsn"></a></p>
+  <p id="idCmrChipMrprnam">name::
+    <br>* Mcs.cmr.microprocessor!⇒cmrMicroprocessor,
+    <br>* Mcs.cmrChip.microprocessor!⇒cmrMicroprocessor,
+    <br>* Mcs.microcomputer!⇒cmrMicroprocessor,
+    <br>* Mcs.microprocessor-computer!⇒cmrMicroprocessor,
+    <a class="clsHide" href="#idCmrChipMrprnam"></a></p>
+  <p id="idCmrChipMrprwpa">addressWpg::
+    <br>* https://en.wikipedia.org/wiki/Microcomputer,
+    <br>* https://en.wikipedia.org/wiki/Lists_of_microcomputers,
+    <a class="clsHide" href="#idCmrChipMrprwpa"></a></p>
+  </section>
+  </section>
+
+  <section id="idCmrSoc">
+  <h2 id="idCmrSocH2">cmr.SoC
+    <a class="clsHide" href="#idCmrSocH2"></a></h2>
+  <p id="idCmrSocdsn">description::
+    <br>"A system on a chip or system on chip is an integrated circuit (also known as a "chip") that integrates all components of a computer or other electronic system. These components typically (but not always) include a central processing unit (CPU), memory, input/output ports and secondary storage – all on a single substrate or microchip, the size of a coin. It may contain digital, analog, mixed-signal, and often radio frequency signal processing functions, depending on the application."
+    <br>[https://en.wikipedia.org/wiki/System_on_a_chip]
+    <a class="clsHide" href="#idCmrSocdsn"></a></p>
+  <p id="idCmrSocnam">name::
+    <br>* Mcs.SoC-computer!⇒cmrOnchip,
+    <br>* Mcs.cmr.system-on-chip!⇒cmrOnchip,
+    <br>* Mcs.cmrOnchip,
+    <a class="clsHide" href="#idCmrSocnam"></a></p>
+  </section>
+  </section>
+</section>
+
+<section id="idCmrScdnPgm">
+  <h1 id="idCmrScdnPgmH1">cmr.specific-division.program
+    <a class="clsHide" href="#idCmrScdnPgmH1"></a></h1>
+  <p id="idCmrScdnPgmdsn">description::
+    <br>· if they are-controlled with <a class="clsPreview" href="filMcsLpgm.last.html#idLpgmalgPgm">a-program</a> or not:
+    <br>* programable-computer,
+    <br>* programableNo-computer,
+    <a class="clsHide" href="#idCmrScdnPgmdsn"></a></p>
+  <p id="idCmrScdnPgmnam">name::
+    <br>* Mcs.cmr.specific-division.program,
+    <a class="clsHide" href="#idCmrScdnPgmnam"></a></p>
+
+  <section id="idCmrPgml">
+  <h2 id="idCmrPgmlH2">cmr.programable
+    <a class="clsHide" href="#idCmrPgmlH2"></a></h2>
+  <p id="idCmrPgmldsn">description::
+    <br>· programable-computer is a-computer which it is-controlled by <a class="clsPreview" href="filMcsLpgm.last.html#idLpgmalgPgm">a-program</a>.
+    <a class="clsHide" href="#idCmrPgmldsn"></a></p>
+  <p id="idCmrPgmlnam">name::
+    <br>* Mcs.cmr.programable,
+    <br>* Mcs.program-controlled--computer,
+    <br>* Mcs.programable-computer,
+    <a class="clsHide" href="#idCmrPgmlnam"></a></p>
+  <p id="idCmrPgmlSpc">specific::
+    <br>* stored-program--programable-computer,
+    <br>* stored-program.no--programable-computer,
+    <a class="clsHide" href="#idCmrPgmlSpc"></a></p>
+
+  <section id="idCmrPgmlStrd">
+  <h3 id="idCmrPgmlStrdH3">cmr.stored-program programable-computer
+    <a class="clsHide" href="#idCmrPgmlStrdH3"></a></h3>
+  <p id="idCmrPgmlStrddsn">description::
+    <br>"A stored-program computer is a computer that stores program instructions in electronic memory. This contrasts with machines where the program instructions are stored on plugboards or similar mechanisms."
+    <br>[https://en.wikipedia.org/wiki/Stored-program_computer]
+    <a class="clsHide" href="#idCmrPgmlStrddsn"></a></p>
+  <p id="idCmrPgmlStrdnam">name::
+    <br>* Mcs.stored-program--programable-computer,
+    <a class="clsHide" href="#idCmrPgmlStrdnam"></a></p>
+  </section>
+
+  <section id="idCmrPgmlStrdN">
+  <h3 id="idCmrPgmlStrdNH3">cmr.stored-program.no programable-computer
+    <a class="clsHide" href="#idCmrPgmlStrdNH3"></a></h3>
+  <p id="idCmrPgmlStrdNdsn">description::
+    <br>"Early computers such as the ENIAC had to be physically rewired to perform different tasks, which caused these machines to be called "fixed-program computers". Since the term "CPU" is generally defined as a device for software (computer program) execution, the earliest devices that could rightly be called CPUs came with the advent of the stored-program computer."
+    <br>[https://en.wikipedia.org/wiki/Central_processing_unit]
+    <a class="clsHide" href="#idCmrPgmlStrdNdsn"></a></p>
+  <p id="idCmrPgmlStrdNnam">name::
+    <br>* Mcs.fixed-program--computer,
+    <br>* Mcs.stored-program.no--programable-computer,
+    <a class="clsHide" href="#idCmrPgmlStrdNnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCmrPgmlN">
+  <h2 id="idCmrPgmlNH2">cmr.programableNo
+    <a class="clsHide" href="#idCmrPgmlNH2"></a></h2>
+  <p id="idCmrPgmlNdsn">description::
+    <br>· programableNo-computer is a-computer which it is-NOT-controlled by <a class="clsPreview" href="filMcsLpgm.last.html#idLpgmalgPgm">a-program</a>.
+    <a class="clsHide" href="#idCmrPgmlNdsn"></a></p>
+  <p id="idCmrPgmlNnam">name::
+    <br>* Mcs.cmr.programableNo,
+    <br>* Mcs.programableNo-computer,
+    <a class="clsHide" href="#idCmrPgmlNnam"></a></p>
+  </section>
+</section>
+
+<section id="idCmrScdnDlif">
+  <h1 id="idCmrScdnDlifH1">cmr.specific-division.digital-info
+    <a class="clsHide" href="#idCmrScdnDlifH1"></a></h1>
+  <p id="idCmrScdnDlifdsn">description::
+    <br>* digital-compouter,
+    <br>* digitalNo-compouter,
+    <a class="clsHide" href="#idCmrScdnDlifdsn"></a></p>
+  <p id="idCmrScdnDlifnam">name::
+    <br>* Mcs.cmr.specific-division.digital-info,
+    <a class="clsHide" href="#idCmrScdnDlifnam"></a></p>
+
+  <section id="idCmrDgtl">
+  <h2 id="idCmrDgtlH2">cmr.digital
+    <a class="clsHide" href="#idCmrDgtlH2"></a></h2>
+  <p id="idCmrDgtldsn">description::
+    <br>· digital-computer is a-computer that process digital-information (information represented with discrete quantities) eg binary, trinary, ...
+    <a class="clsHide" href="#idCmrDgtldsn"></a></p>
+  <p id="idCmrDgtlnam">name::
+    <br>* Mcs.cmp.digital,
+    <br>* Mcs.digital-computer,
+    <a class="clsHide" href="#idCmrDgtlnam"></a></p>
+  </section>
+
+  <section id="idCmrDgtlN">
+  <h2 id="idCmrDgtlNH2">cmr.digitalNo (analog)
+    <a class="clsHide" href="#idCmrDgtlNH2"></a></h2>
+  <p id="idCmrDgtlNdsn">description::
+    <br>· analog-computer is a-computer that process analog-information (information represented with continuous quantities) eg distance, area, time, ...
+    <a class="clsHide" href="#idCmrDgtlNdsn"></a></p>
+  <p id="idCmrDgtlNnam">name::
+    <br>* Mcs.analog-computer,
+    <br>* Mcs.cmr.digitalNo,
+    <a class="clsHide" href="#idCmrDgtlNnam"></a></p>
+  </section>
+</section>
+
+<section id="idCmrScdnmnfg">
+  <h1 id="idCmrScdnmnfgH1">cmr.specific-division.main-functing
+    <a class="clsHide" href="#idCmrScdnmnfgH1"></a></h1>
+  <p id="idCmrScdnmnfgdsn">description::
+    <br>· on <a class="clsPreview" href="#idCmrdngMnfg">main-functing</a>:
+    <br>* general-purpose--computer,
+    <br>* general-purpose.no--computer,
+    <a class="clsHide" href="#idCmrScdnmnfgdsn"></a></p>
+  <p id="idCmrScdnmnfgnam">name::
+    <br>* Mcs.cmr.specific-division.main-functing,
+    <a class="clsHide" href="#idCmrScdnmnfgnam"></a></p>
+
+  <section id="idCmrGlps">
+  <h2 id="idCmrGlpsH2">cmr.general-purpose
+    <a class="clsHide" href="#idCmrGlpsH2"></a></h2>
+  <p id="idCmrGlpsdsn">description::
+    <br>· general-purpose--computer is a-computer with <a class="clsPreview" href="#idCmrdngMnfg">main-function</a> ANY info-processing task.
+    <a class="clsHide" href="#idCmrGlpsdsn"></a></p>
+  <p id="idCmrGlpsnam">name::
+    <br>* Mcs.cmr.general-purpose,
+    <br>* Mcs.general-purpose--computer,
+    <br>* Mcs.Turing-complete--computer,
+    <a class="clsHide" href="#idCmrGlpsnam"></a></p>
+  <p id="idCmrGlpswpa">addressWpg::
+    <br>* {2014-06-01} Rudd-Canaday, Early Turing-complete Computers, http://www.ruddcanaday.com/post-ww2-computers/,
+    <a class="clsHide" href="#idCmrGlpswpa"></a></p>
+  </section>
+
+  <section id="idCmrGlpsNo">
+  <h2 id="idCmrGlpsNoH2">cmr.general-purpose.no
+    <a class="clsHide" href="#idCmrGlpsNoH2"></a></h2>
+  <p id="idCmrGlpsNodsn">description::
+    <br>· special-purpose--computer is a-computer with <a class="clsPreview" href="#idCmrdngMnfg">main-function</a> a-specific task.
+    <a class="clsHide" href="#idCmrGlpsNodsn"></a></p>
+  <p id="idCmrGlpsNonam">name::
+    <br>* Mcs.cmp.general-purpose.no,
+    <br>* Mcs.special-purpose--computer,
+    <a class="clsHide" href="#idCmrGlpsNonam"></a></p>
+  </section>
 </section>
 
 <section id="idCmrScdnRlt">
@@ -358,242 +898,6 @@
   </section>
 </section>
 
-<section id="idCmrScdnHdwr">
-  <h1 id="idCmrScdnHdwrH1">cmr.specific-division.hardware
-    <a class="clsHide" href="#idCmrScdnHdwrH1"></a></h1>
-  <p id="idCmrScdnHdwrdsn">description::
-    <br>· on hardware:
-    <br>* mechanical-computer,
-    <br>* electro-mechanical-computer,
-    <br>* electronic-computer:,
-    <br>* electronic.vacuum-tube--computer,
-    <br>* electronic.transistor-computer,
-    <br>* electronic.microchip-computer,
-    <a class="clsHide" href="#idCmrScdnHdwrdsn"></a></p>
-  <p id="idCmrScdnHdwrnam">name::
-    <br>* Mcs.cmr.specific-division.hardware,
-    <a class="clsHide" href="#idCmrScdnHdwrnam"></a></p>
-
-  <section id="idCmrMchl">
-  <h2 id="idCmrMchlH2">cmr.mechanical
-    <a class="clsHide" href="#idCmrMchlH2"></a></h2>
-  <p id="idCmrMchldsn">description::
-    <br>"A mechanical computer is built from mechanical components such as levers and gears, rather than electronic components. The most common examples are adding machines and mechanical counters, which use the turning of gears to increment output displays."
-    <br>[https://en.wikipedia.org/wiki/Mechanical_computer]
-    <a class="clsHide" href="#idCmrMchldsn"></a></p>
-  <p id="idCmrMchlnam">name::
-    <br>* Mcs.cmr.mechanical!⇒cmrMechanical,
-    <br>* Mcs.cmrMechanical,
-    <a class="clsHide" href="#idCmrMchlnam"></a></p>
-  </section>
-
-  <section id="idCmrErml">
-  <h2 id="idCmrErmlH2">cmr.electro-mechanical
-    <a class="clsHide" href="#idCmrErmlH2"></a></h2>
-  <p id="idCmrErmldsn">description::
-    <br>· electro-mechanical--computer is a-computer with electric-switches that drive mechanical-relays to perform computations.
-    <a class="clsHide" href="#idCmrErmldsn"></a></p>
-  <p id="idCmrErmlnam">name::
-    <br>* Mcs.cmr.electro-mechanical,
-    <br>* Mcs.electro-mechanical--computer,
-    <a class="clsHide" href="#idCmrErmlnam"></a></p>
-  <p id="idCmrErmlwpa">addressWpg::
-    <br>* https://en.wikipedia.org/wiki/Category:Electro-mechanical_computers,
-    <a class="clsHide" href="#idCmrErmlwpa"></a></p>
-  </section>
-
-  <section id="idCmrElrc">
-  <h2 id="idCmrElrcH2">cmr.electronic
-    <a class="clsHide" href="#idCmrElrcH2"></a></h2>
-  <p id="idCmrElrcdsn">description::
-    <br>· electronic-computer is a-computer that uses electronic components such as vacuum-tubes, transistors, microchips.
-    <a class="clsHide" href="#idCmrElrcdsn"></a></p>
-  <p id="idCmrElrcnam">name::
-    <br>* Mcs.cmr.electronic,
-    <br>* Mcs.electronic-computer,
-    <a class="clsHide" href="#idCmrElrcnam"></a></p>
-  </section>
-
-  <section id="idCmrVmtb">
-  <h2 id="idCmrVmtbH2">cmr.vacuum-tube
-    <a class="clsHide" href="#idCmrVmtbH2"></a></h2>
-  <p id="idCmrVmtbdsn">description::
-    <br>"Vacuum tube computers, now termed first generation computers, are programmable digital computers using vacuum tube logic circuitry. They were preceded by systems using electromechanical relays and followed by systems built from discrete transistors."
-    <br>[https://en.wikipedia.org/wiki/List_of_vacuum_tube_computers]
-    <a class="clsHide" href="#idCmrVmtbdsn"></a></p>
-  <p id="idCmrVmtbnam">name::
-    <br>* Mcs.cmr.vacuum-tube!⇒cmrVtube,
-    <br>* Mcs.cmrVtube,
-    <br>* Mcs.first-generation-computer!⇒cmrVtube,
-    <br>* Mcs.vacuum-tube-computer!⇒cmrVtube,
-    <a class="clsHide" href="#idCmrVmtbnam"></a></p>
-
-  <section id="idCmrVmtbrsc">
-  <h3 id="idCmrVmtbrscH3">resource of cmrVtube
-    <a class="clsHide" href="#idCmrVmtbrscH3"></a></h3>
-  <p id="idCmrVmtbrscnam">name::
-    <br>* Mcs.cmrVtube'resource,
-    <a class="clsHide" href="#idCmrVmtbrscnam"></a></p>
-  <p id="idCmrVmtbrscwpa">addressWpg::
-    <br>* https://en.wikipedia.org/wiki/Vacuum_tube_computer,
-    <br>* https://en.wikipedia.org/wiki/List_of_vacuum_tube_computers,
-    <a class="clsHide" href="#idCmrVmtbrscwpa"></a></p>
-  </section>
-
-  <section id="idCmrVmtbevg">
-  <h3 id="idCmrVmtbevgH3">EVOLUTING of cmrVtube
-    <a class="clsHide" href="#idCmrVmtbevgH3"></a></h3>
-  <p id="idCmrVmtbevgnam">name::
-    <br>* Mcs.cmrVtube'evoluting,
-    <a class="clsHide" href="#idCmrVmtbevgnam"></a></p>
-  <p id="idCmrVmtbevg1942">{1942}::
-    <br>=== Atanasoff-Berry-computer:
-    <br>"The Atanasoff–Berry computer (ABC) was the first automatic electronic digital computer, an early electronic digital computing device that has remained somewhat obscure. The ABC's priority is debated among historians of computer technology, because it was neither programmable, nor Turing-complete.
-    <br>Conceived in 1937, the machine was built by Iowa State College mathematics and physics professor John Vincent Atanasoff with the help of graduate student Clifford Berry. It was designed only to solve systems of linear equations and was successfully tested in 1942."
-    <br>[https://en.wikipedia.org/wiki/Atanasoff%E2%80%93Berry_computer]
-    <a class="clsHide" href="#idCmrVmtbevg1942"></a></p>
-  <p id="idCmrVmtbevg1939">{1939}::
-    <br>=== Atanasoff-Berry-computer-prototype:
-    <br>"The Atanasoff–Berry computer, a prototype of which was first demonstrated in 1939, is now credited as the first vacuum tube computer. However it was not a general-purpose computer being able to only solve a system of linear equations and it was also not very reliable."
-    <br>[https://en.wikipedia.org/wiki/Vacuum_tube_computer]
-    <a class="clsHide" href="#idCmrVmtbevg1939"></a></p>
-  </section>
-  </section>
-
-  <section id="idCmrTrtr">
-  <h2 id="idCmrTrtrH2">cmr.transistor
-    <a class="clsHide" href="#idCmrTrtrH2"></a></h2>
-  <p id="idCmrTrtrdsn">description::
-    <br>·
-    <a class="clsHide" href="#idCmrTrtrdsn"></a></p>
-  <p id="idCmrTrtrnam">name::
-    <br>* Mcs.cmr.transistor,
-    <br>* Mcs.transistor-computer,
-    <a class="clsHide" href="#idCmrTrtrnam"></a></p>
-  </section>
-
-  <section id="idCmrMrcp">
-  <h2 id="idCmrMrcpH2">cmr.microchip
-    <a class="clsHide" href="#idCmrMrcpH2"></a></h2>
-  <p id="idCmrMrcpdsn">description::
-    <br>·
-    <a class="clsHide" href="#idCmrMrcpdsn"></a></p>
-  <p id="idCmrMrcpnam">name::
-    <br>* Mcs.cmr.microchip,
-    <a class="clsHide" href="#idCmrMrcpnam"></a></p>
-  </section>
-</section>
-
-<section id="idCmrScdnDlif">
-  <h1 id="idCmrScdnDlifH1">cmr.specific-division.digital-info
-    <a class="clsHide" href="#idCmrScdnDlifH1"></a></h1>
-  <p id="idCmrScdnDlifdsn">description::
-    <br>* digital-compouter,
-    <br>* digitalNo-compouter,
-    <a class="clsHide" href="#idCmrScdnDlifdsn"></a></p>
-  <p id="idCmrScdnDlifnam">name::
-    <br>* Mcs.cmr.specific-division.digital-info,
-    <a class="clsHide" href="#idCmrScdnDlifnam"></a></p>
-
-  <section id="idCmrDgtl">
-  <h2 id="idCmrDgtlH2">cmr.digital
-    <a class="clsHide" href="#idCmrDgtlH2"></a></h2>
-  <p id="idCmrDgtldsn">description::
-    <br>· digital-computer is a-computer that process digital-information (information represented with discrete quantities) eg binary, trinary, ...
-    <a class="clsHide" href="#idCmrDgtldsn"></a></p>
-  <p id="idCmrDgtlnam">name::
-    <br>* Mcs.cmp.digital,
-    <br>* Mcs.digital-computer,
-    <a class="clsHide" href="#idCmrDgtlnam"></a></p>
-  </section>
-
-  <section id="idCmrDgtlN">
-  <h2 id="idCmrDgtlNH2">cmr.digitalNo (analog)
-    <a class="clsHide" href="#idCmrDgtlNH2"></a></h2>
-  <p id="idCmrDgtlNdsn">description::
-    <br>· analog-computer is a-computer that process analog-information (information represented with continuous quantities) eg distance, area, time, ...
-    <a class="clsHide" href="#idCmrDgtlNdsn"></a></p>
-  <p id="idCmrDgtlNnam">name::
-    <br>* Mcs.analog-computer,
-    <br>* Mcs.cmr.digitalNo,
-    <a class="clsHide" href="#idCmrDgtlNnam"></a></p>
-  </section>
-</section>
-
-<section id="idCmrScdnmnfg">
-  <h1 id="idCmrScdnmnfgH1">cmr.specific-division.main-functing
-    <a class="clsHide" href="#idCmrScdnmnfgH1"></a></h1>
-  <p id="idCmrScdnmnfgdsn">description::
-    <br>· on <a class="clsPreview" href="#idCmrdngMnfg">main-functing</a>:
-    <br>* general-purpose--computer,
-    <br>* general-purpose.no--computer,
-    <a class="clsHide" href="#idCmrScdnmnfgdsn"></a></p>
-  <p id="idCmrScdnmnfgnam">name::
-    <br>* Mcs.cmr.specific-division.main-functing,
-    <a class="clsHide" href="#idCmrScdnmnfgnam"></a></p>
-
-  <section id="idCmrGlps">
-  <h2 id="idCmrGlpsH2">cmr.general-purpose
-    <a class="clsHide" href="#idCmrGlpsH2"></a></h2>
-  <p id="idCmrGlpsdsn">description::
-    <br>· general-purpose--computer is a-computer with <a class="clsPreview" href="#idCmrdngMnfg">main-function</a> ANY info-processing task.
-    <a class="clsHide" href="#idCmrGlpsdsn"></a></p>
-  <p id="idCmrGlpsnam">name::
-    <br>* Mcs.cmr.general-purpose,
-    <a class="clsHide" href="#idCmrGlpsnam"></a></p>
-  </section>
-
-  <section id="idCmrGlpsNo">
-  <h2 id="idCmrGlpsNoH2">cmr.general-purpose.no
-    <a class="clsHide" href="#idCmrGlpsNoH2"></a></h2>
-  <p id="idCmrGlpsNodsn">description::
-    <br>· special-purpose--computer is a-computer with <a class="clsPreview" href="#idCmrdngMnfg">main-function</a> a-specific task.
-    <a class="clsHide" href="#idCmrGlpsNodsn"></a></p>
-  <p id="idCmrGlpsNonam">name::
-    <br>* Mcs.cmp.general-purpose.no,
-    <br>* Mcs.special-purpose--computer,
-    <a class="clsHide" href="#idCmrGlpsNonam"></a></p>
-  </section>
-</section>
-
-<section id="idCmrScdnPgm">
-  <h1 id="idCmrScdnPgmH1">cmr.specific-division.program
-    <a class="clsHide" href="#idCmrScdnPgmH1"></a></h1>
-  <p id="idCmrScdnPgmdsn">description::
-    <br>· if they are-controlled with <a class="clsPreview" href="filMcsLpgm.last.html#idLpgmalgPgm">a-program</a> or not:
-    <br>* programable-computer,
-    <br>* programableNo-computer,
-    <a class="clsHide" href="#idCmrScdnPgmdsn"></a></p>
-  <p id="idCmrScdnPgmnam">name::
-    <br>* Mcs.cmr.specific-division.program,
-    <a class="clsHide" href="#idCmrScdnPgmnam"></a></p>
-
-  <section id="idCmrPgml">
-  <h2 id="idCmrPgmlH2">cmr.programable
-    <a class="clsHide" href="#idCmrPgmlH2"></a></h2>
-  <p id="idCmrPgmldsn">description::
-    <br>· programable-computer is a-computer which it is-controlled by <a class="clsPreview" href="filMcsLpgm.last.html#idLpgmalgPgm">a-program</a>.
-    <a class="clsHide" href="#idCmrPgmldsn"></a></p>
-  <p id="idCmrPgmlnam">name::
-    <br>* Mcs.cmr.programable,
-    <br>* Mcs.program-controlled--computer,
-    <br>* Mcs.programable-computer,
-    <a class="clsHide" href="#idCmrPgmlnam"></a></p>
-  </section>
-
-  <section id="idCmrPgmlN">
-  <h2 id="idCmrPgmlNH2">cmr.programableNo
-    <a class="clsHide" href="#idCmrPgmlNH2"></a></h2>
-  <p id="idCmrPgmlNdsn">description::
-    <br>· programableNo-computer is a-computer which it is-NOT-controlled by <a class="clsPreview" href="filMcsLpgm.last.html#idLpgmalgPgm">a-program</a>.
-    <a class="clsHide" href="#idCmrPgmlNdsn"></a></p>
-  <p id="idCmrPgmlNnam">name::
-    <br>* Mcs.cmr.programableNo,
-    <br>* Mcs.programableNo-computer,
-    <a class="clsHide" href="#idCmrPgmlNnam"></a></p>
-  </section>
-</section>
-
 <section id="idCmrBnr">
   <h1 id="idCmrBnrH1">cmr.binary
     <a class="clsHide" href="#idCmrBnrH1"></a></h1>
@@ -661,17 +965,17 @@
   </section>
 </section>
 
-<section id="idCmrMdrn">
-  <h1 id="idCmrMdrnH1">cmr.modern
-    <a class="clsHide" href="#idCmrMdrnH1"></a></h1>
-  <p id="idCmrMdrndsn">description::
-    <br>· modern-computer I call a-binary, physical, general-purpose, integrated-circuit computer.
-    <a class="clsHide" href="#idCmrMdrndsn"></a></p>
-  <p id="idCmrMdrnnam">name::
-    <br>* Mcs.cmr.modern!⇒cmrModern,
-    <br>* Mcs.cmrModern,
-    <br>* Mcs.modern-computer!⇒cmrModern,
-    <a class="clsHide" href="#idCmrMdrnnam"></a></p>
+<section id="idCmrMdrn2010s">
+  <h1 id="idCmrMdrn2010sH1">cmr.modern2010s
+    <a class="clsHide" href="#idCmrMdrn2010sH1"></a></h1>
+  <p id="idCmrMdrn2010sdsn">description::
+    <br>· modern2010s-computer I call <a class="clsPreview" href="#idCmrBnr">a-binary</a>, <a class="clsPreview" href="#idCmrPhcl">physical</a>, <a class="clsPreview" href="#idCmrGlps">general-purpose</a>, microprocessor-computer of <a href="https://en.wikipedia.org/wiki/2010s">2010s</a>.
+    <a class="clsHide" href="#idCmrMdrn2010sdsn"></a></p>
+  <p id="idCmrMdrn2010snam">name::
+    <br>* Mcs.cmr.modern2010s!⇒cmrModern2010s,
+    <br>* Mcs.cmrModern2010s,
+    <br>* Mcs.modern2010s-computer!⇒cmrModern2010s,
+    <a class="clsHide" href="#idCmrMdrn2010snam"></a></p>
 </section>
 
 <section id="idMeta">
