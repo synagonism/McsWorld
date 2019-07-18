@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.computer-language (lagCmr.0-2-0.2019-07-16 draft)</title>
+  <title>Mcs.computer-language (lagCmr.0-3-0.2019-07-18 draft)</title>
   <meta name="keywords" content="computer-language, lagCmr, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -108,7 +108,7 @@
     <a class="clsHide" href="#idLcmrScdnotfnH1"></a></h1>
   <p id="idLcmrScdnotfndsn">description::
     <br>· division on the-function of <a class="clsPreview" href="#idLcmropt">output</a>: processing, processingNo, both:
-    <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idOverview">data-lagCmr</a>,
+    <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idOverview">programingNo-lagCmr</a>,
     <br>* <a class="clsPreview" href="filMcsLpgm.last.html#idOverview">programing-lagCmr</a>,
     <br>* info-lagCmp,
     <a class="clsHide" href="#idLcmrScdnotfndsn"></a></p>
@@ -117,31 +117,159 @@
     <a class="clsHide" href="#idLcmrScdnotfnnam"></a></p>
 </section>
 
+<section id="idLbnr">
+  <h1 id="idLbnrH1">lagCmr.binary-info (lagBnr)
+    <a class="clsHide" href="#idLbnrH1"></a></h1>
+  <p id="idLbnrdsn">description::
+    <br>· binary--computer-language is a-computer-language that outputs binary-info.
+    <a class="clsHide" href="#idLbnrdsn"></a></p>
+  <p id="idLbnrnam">name::
+    <br>* Mcs.lagCmr.binary!⇒lagBnr,
+    <a class="clsHide" href="#idLbnrnam"></a></p>
+
+  <section id="idLbnript">
+  <h2 id="idLbnriptH2">input of lagBnr
+    <a class="clsHide" href="#idLbnriptH2"></a></h2>
+  <p id="idLbnriptdsn">description::
+    <br>· input of lagBnr is information we want to map in a-binary-format a-computer understands.
+    <a class="clsHide" href="#idLbnriptdsn"></a></p>
+  <p id="idLbnriptnam">name::
+    <br>* Mcs.lagBnr'input!⇒lagBnr-output,
+    <br>* Mcs.lagBnr-output,
+    <a class="clsHide" href="#idLbnriptnam"></a></p>
+  </section>
+
+  <section id="idLbnropt">
+  <h2 id="idLbnroptH2">output of lagBnr
+    <a class="clsHide" href="#idLbnroptH2"></a></h2>
+  <p id="idLbnroptdsn">description::
+    <br>· output of lagBnr is a-binary document that represents an-input a-computer understands.
+    <a class="clsHide" href="#idLbnroptdsn"></a></p>
+  <p id="idLbnroptnam">name::
+    <br>* Mcs.lagBnr'output!⇒lagBnr-output,
+    <br>* Mcs.lagBnr-output,
+    <a class="clsHide" href="#idLbnroptnam"></a></p>
+
+  <section id="idLbnroptInf">
+  <h3 id="idLbnroptInfH3">binary-info of lagBnr
+    <a class="clsHide" href="#idLbnroptInfH3"></a></h3>
+  <p id="idLbnroptInfdsn">description::
+    <br>· binary-info of lagBnr is any part of <a class="clsPreview" href="#idLbnropt">lagBnr-output</a>.
+    <a class="clsHide" href="#idLbnroptInfdsn"></a></p>
+  <p id="idLbnroptInfnam">name::
+    <br>* Mcs.binary-info--of-cmrBnr,
+    <br>* Mcs.binary-info--of-lagBnr,
+    <br>* Mcs.cmrBnr'binary-info,
+    <br>* Mcs.cmrBnr'software,
+    <br>* Mcs.lagBnr-output'binary-info,
+    <a class="clsHide" href="#idLbnroptInfnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLbnrunt">
+  <h2 id="idLbnruntH2">output'unit of lagBnr
+    <a class="clsHide" href="#idLbnruntH2"></a></h2>
+  <p id="idLbnruntdsn">description::
+    <br>· bit of lagBnr is the-unit of its[a] output and has 2 instances, written as 0 and 1.
+    <a class="clsHide" href="#idLbnruntdsn"></a></p>
+  <p id="idLbnruntnam">name::
+    <br>* Mcs.bit!⇒lagBnr-bit,
+    <br>* Mcs.cmrBnr'bit!⇒lagBnr-bit,
+    <br>* Mcs.lagBnr-bit,
+    <br>* Mcs.lagBnr-output'bit!⇒lagBnr-bit,
+    <a class="clsHide" href="#idLbnruntnam"></a></p>
+  </section>
+
+  <section id="idLbnrwrd">
+  <h2 id="idLbnrwrdH2">output'word of lagBnr
+    <a class="clsHide" href="#idLbnrwrdH2"></a></h2>
+  <p id="idLbnrwrddsn">description::
+    <br>· word is any structure of <a class="clsPreview" href="idLbnrunt">bits</a>.
+    <a class="clsHide" href="#idLbnrwrddsn"></a></p>
+  <p id="idLbnrwrdnam">name::
+    <br>* Mcs.lagBnr-output'word!⇒lagBnr-word,
+    <br>* Mcs.lagBnr'word!⇒lagBnr-word,
+    <br>* Mcs.lagBnr-word,
+    <a class="clsHide" href="#idLbnrwrdnam"></a></p>
+
+  <section id="idLbnrwrdByt">
+  <h3 id="idLbnrwrdBytH3">word.byte of lagBnr
+    <a class="clsHide" href="#idLbnrwrdBytH3"></a></h3>
+  <p id="idLbnrwrdBytdsn">description::
+    <br>· byte of lagBnr is <a class="clsPreview" href="idLbnrwrd">a-word</a> of 8 bits.
+    <a class="clsHide" href="#idLbnrwrdBytdsn"></a></p>
+  <p id="idLbnrwrdBytnam">name::
+    <br>* Mcs.lagBnr-word.byte!⇒lagBnr-byte,
+    <a class="clsHide" href="#idLbnrwrdBytnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLbnrsunt">
+  <h2 id="idLbnrsuntH2">output'Sunt of lagBnr
+    <a class="clsHide" href="#idLbnrsuntH2"></a></h2>
+  <p id="idLbnrsuntdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLbnrsuntdsn"></a></p>
+  <p id="idLbnrsuntnam">name::
+    <br>* Mcs.lagBnr'semantic-unit!⇒lagBnr-Sunt,
+    <br>* Mcs.lagBnr-Sunt,
+    <br>* Mcs.lagBnr-output'semantic-unit!⇒lagBnr-Sunt,
+    <a class="clsHide" href="#idLbnrsuntnam"></a></p>
+  </section>
+</section>
+
+<section id="idLsrc">
+  <h1 id="idLsrcH1">lagCmr.source-info (lagCmrSrc)
+    <a class="clsHide" href="#idLsrcH1"></a></h1>
+  <p id="idLsrcdsn">description::
+    <br>· source--computer-language is a-cmr-lag with output readable by humans and <a class="clsPreview" href="filMcsCmr.last.html#idCmrRealN">abstract-machines</a>.
+    <a class="clsHide" href="#idLsrcdsn"></a></p>
+  <p id="idLsrcnam">name::
+    <br>* Mcs.lagCmr.source!⇒lagCmrSrc,
+    <br>* Mcs.lagCmrSrc,
+    <br>* Mcs.source--computer-language!⇒lagCmrSrc,
+    <a class="clsHide" href="#idLsrcnam"></a></p>
+</section>
+
 <section id="idLdat">
-  <h1 id="idLdatH1">lagCmr.data
+  <h1 id="idLdatH1">lagCmr.programingNo (lagPgmNo)
     <a class="clsHide" href="#idLdatH1"></a></h1>
   <p id="idLdatdsn">description::
-    <br>· data-language is <a class="clsPreview" href="#idOverview">a-computer-language</a> that maps information to <a class="clsPreview" href="filMcsCmr.last.html#idCmrsftwrData">computer-data</a>.
+    <br>· data--computer-language is <a class="clsPreview" href="#idOverview">a-computer-language</a> that maps information to <a class="clsPreview" href="filMcsCmr.last.html#idCmrsftwrData">computer-data</a>.
     <a class="clsHide" href="#idLdatdsn"></a></p>
   <p id="idLdatnam">name::
-    <br>* Mcs.data--computer-language!⇒lagData,
-    <br>* Mcs.data-language!⇒lagData,
-    <br>* Mcs.data-representation-language!⇒lagData,
-    <br>* Mcs.lagCmr.data!⇒lagData,
-    <br>* Mcs.lagData,
+    <br>* Mcs.data--computer-language!⇒lagPgmNo,
+    <br>* Mcs.data-representation-language!⇒lagPgmNo,
+    <br>* Mcs.lagCmr.data!⇒lagPgmNo,
+    <br>* Mcs.lagPgmNo,
+    <br>* Mcs.programingNo--computer-language!⇒lagPgmNo,
     <a class="clsHide" href="#idLdatnam"></a></p>
 
   <section id="idLdatSpc">
-  <h2 id="idLdatSpcH2">lagData.SPECIFIC
+  <h2 id="idLdatSpcH2">lagPgmNo.SPECIFIC
     <a class="clsHide" href="#idLdatSpcH2"></a></h2>
   <p id="idLdatSpcdsn">description::
     <br>* <a class="clsPreview" href="filMcsHitp.last.html#idOverview">lagHitp</a>,
     <br>* <a class="clsPreview" href="filMcsJson.last.html#idOverview">lagJson</a>,
     <a class="clsHide" href="#idLdatSpcdsn"></a></p>
   <p id="idLdatSpcnam">name::
-    <br>* Mcs.lagData.specific,
+    <br>* Mcs.lagPgmNo.specific,
     <a class="clsHide" href="#idLdatSpcnam"></a></p>
   </section>
+</section>
+
+<section id="idLinf">
+  <h1 id="idLinfH1">lagCmr.programingBoth (lagPgmBo)
+    <a class="clsHide" href="#idLinfH1"></a></h1>
+  <p id="idLinfdsn">description::
+    <br>· info--computer-language is <a class="clsPreview" href="#idOverview">a-lagCmr</a> that maps both processing-info and processingNo.
+    <a class="clsHide" href="#idLinfdsn"></a></p>
+  <p id="idLinfnam">name::
+    <br>* Mcs.info--computer-language!⇒lagPgmBo,
+    <br>* Mcs.lagCmr.info!⇒lagPgmBo,
+    <br>* Mcs.lagPgmBo,
+    <br>* Mcs.processingBoth--computer-language!⇒lagPgmBo, {2019-07-18}
+    <a class="clsHide" href="#idLinfnam"></a></p>
 </section>
 
 <section id="idMeta">

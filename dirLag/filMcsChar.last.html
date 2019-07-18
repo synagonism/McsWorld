@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char (char.0-20-1.2019-07-13 draft)</title>
+  <title>Mcs.char (char.0-22-0.2019-07-18 draft)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -47,7 +47,7 @@
     <a class="clsHide" href="#idCharglyphnam"></a></p>
 
   <section id="idCharglyphFnt">
-  <h2 id="idCharglyphFntH2">glyph.FONT
+  <h2 id="idCharglyphFntH2">glyph.font
     <a class="clsHide" href="#idCharglyphFntH2"></a></h2>
   <p id="idCharglyphFntdsn">description::
     <br>· font is A-SET of <a class="clsPreview" href="#idCharglyph">glyphs</a> of a-set of chars with similar attributes.
@@ -58,6 +58,10 @@
     <br>* Mcs.char'glyph.font,
     <br>* Mcs.font-of-char,
     <a class="clsHide" href="#idCharglyphFntnam"></a></p>
+  <p id="idCharglyphFntwpa">addressWpg::
+    <br>* http://www.alanwood.net/unicode/fonts_windows.html,
+    <br>* Unicode Fonts for Ancient Scripts: http://users.teilar.gr/~g1951d/,
+    <a class="clsHide" href="#idCharglyphFntwpa"></a></p>
   </section>
 </section>
 
@@ -2928,13 +2932,14 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2018-06-26]
     <a class="clsHide" href="#idCharUcdScrptdsn"></a></p>
   <p id="idCharUcdScrptnam">name::
-    <br>* Mcs.char.Unicode.script,
-    <br>* Mcs.script.Unicode,
-    <br>* Mcs.Unicode'script,
-    <br>* Mcs.Unicode-char.script,
+    <br>* Mcs.char.Unicode.script!⇒Unicode-script,
+    <br>* Mcs.script.Unicode!⇒Unicode-script,
+    <br>* Mcs.Unicode'script!⇒Unicode-script,
+    <br>* Mcs.Unicode-char.script!⇒Unicode-script,
     <br>* Mcs.Unicode-script,
     <a class="clsHide" href="#idCharUcdScrptnam"></a></p>
   <p id="idCharUcdScrptwpa">addressWpg::
+    <br>* http://www.alanwood.net/unicode/index.html,
     <br>* https://en.wikipedia.org/wiki/Script_(Unicode)#List_of_scripts_in_Unicode,
     <a class="clsHide" href="#idCharUcdScrptwpa"></a></p>
 
@@ -2944,6 +2949,9 @@
   <p id="idCharUcdScrptchardsn">description::
     <br>· every Unicode-script contains a-quantity of <a class="clsPreview" href="#idCharUcd">chars</a>.
     <a class="clsHide" href="#idCharUcdScrptchardsn"></a></p>
+  <p id="idCharUcdScrptcharnam">name::
+    <br>* Mcs.Unicode-script'char,
+    <a class="clsHide" href="#idCharUcdScrptcharnam"></a></p>
   </section>
 
   <section id="idCharUcdScrptdrct">
@@ -2956,6 +2964,9 @@
     <br>· T-to-B (Mongolian)
     <br>· Inherited
     <a class="clsHide" href="#idCharUcdScrptdrctdsn"></a></p>
+  <p id="idCharUcdScrptdrctnam">name::
+    <br>* Mcs.Unicode-script'directionality,
+    <a class="clsHide" href="#idCharUcdScrptdrctnam"></a></p>
   </section>
 
   <section id="idCharUcdScrptSpc">
@@ -2986,10 +2997,13 @@
     <br>· 24 v.1-0-0.1991
     <br>[https://en.wikipedia.org/wiki/Unicode#Versions]
     <a class="clsHide" href="#idCharUcdScrptP1"></a></p>
+  <p id="idCharUcdScrptSpcnam">name::
+    <br>* Mcs.Unicode-script.specific,
+    <a class="clsHide" href="#idCharUcdScrptSpcnam"></a></p>
   </section>
 
   <section id="idCharUcdScrptCmn">
-  <h3 id="idCharUcdScrptCmnH3">Unicode-script.COMMON
+  <h3 id="idCharUcdScrptCmnH3">Unicode-script.common
     <a class="clsHide" href="#idCharUcdScrptCmnH3"></a></h3>
   <p id="idCharUcdScrptCmndsn">description::
     <br>Unicode can assign a character in the UCS to a single script only. However, many characters — those that are not part of a formal natural language writing system or are unified across many writing systems may be used in more than one script. For example, currency signs, symbols, numerals and punctuation marks. In these cases Unicode defines them as belonging to the "common" script (ISO 15924 code "Zyyy").
@@ -2997,12 +3011,12 @@
     <a class="clsHide" href="#idCharUcdScrptCmndsn"></a></p>
   <p id="idCharUcdScrptCmnnam">name::
     <br>* Mcs.common-script.Unicode,
-    <br>* Mcs.Unicode'script.common,
+    <br>* Mcs.Unicode-script.common,
     <a class="clsHide" href="#idCharUcdScrptCmnnam"></a></p>
   </section>
 
   <section id="idCharUcdScrptInhd">
-  <h3 id="idCharUcdScrptInhdH3">Unicode-script.INHERITED
+  <h3 id="idCharUcdScrptInhdH3">Unicode-script.inherited
     <a class="clsHide" href="#idCharUcdScrptInhdH3"></a></h3>
   <p id="idCharUcdScrptInhddsn">description::
     <br>Many diacritics and non-spacing combining characters may be applied to characters from more than one script. In these cases Unicode assigns them to the "inherited" script (ISO 15924 code Zinh), which means that they have the same script class as the base character with which they combine, and so in different contexts they may be treated as belonging to different scripts. For example, U+0308  ̈ Combining Diaeresis may combine with either U+0065 e Latin Small Letter E to create a Latin "ë", or with U+0435 е Cyrillic Small Letter IE for the Cyrillic "ё". In the former case it inherits the Latin script of the base character whereas in the latter case it inherits the Cyrillic script of the base character.
@@ -3010,7 +3024,7 @@
     <a class="clsHide" href="#idCharUcdScrptInhddsn"></a></p>
   <p id="idCharUcdScrptInhdnam">name::
     <br>* Mcs.inherited-script.Unicode,
-    <br>* Mcs.Unicode'script.inherited,
+    <br>* Mcs.Unicode-script.inherited,
     <a class="clsHide" href="#idCharUcdScrptInhdnam"></a></p>
   </section>
   </section>

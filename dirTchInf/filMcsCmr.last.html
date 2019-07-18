@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.computer-machine (cmr.0-4-0.2019-07-17 draft)</title>
+  <title>Mcs.computer-machine (cmr.0-5-0.2019-07-18 draft)</title>
   <meta name="keywords" content="computer-machine, cmr, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -31,7 +31,9 @@
     <br>* Mcs.cmr'(computer-machine)!⇒cmr,
     <br>* Mcs.computer!⇒cmr,
     <br>* Mcs.computer-machine!⇒cmr,
+    <br>* Mcs.computer-system!⇒cmr,
     <br>* Mcs.info-machine.computer!⇒cmr,
+    <br>* Mcs.info-processing-machine!⇒cmr,
     <br>* Mcs.machine.info.computer!⇒cmr,
     <a class="clsHide" href="#idName"></a></p>
 </section>
@@ -239,13 +241,34 @@
   <h3 id="idCmrstrgCpuaccNH3">storage.Cpu-accessible.no of cmr
     <a class="clsHide" href="#idCmrstrgCpuaccNH3"></a></h3>
   <p id="idCmrstrgCpuaccNdsn">description::
-    <br>·
+    <br>"Secondary storage (also known as external memory or auxiliary storage), differs from primary storage in that it is not directly accessible by the CPU. The computer usually uses its input/output channels to access secondary storage and transfer the desired data to primary storage. Secondary storage is non-volatile (retaining data when power is shut off)."
+    <br>[https://en.wikipedia.org/wiki/Computer_data_storage#Secondary_storage]
     <a class="clsHide" href="#idCmrstrgCpuaccNdsn"></a></p>
   <p id="idCmrstrgCpuaccNnam">name::
     <br>* Mcs.Cpu-accessible.no--computer-storage.!⇒cmr-CpuNo-storage,
     <br>* Mcs.cmr-storage.Cpu-accessible.no!⇒cmr-CpuNo-storage,
     <br>* Mcs.cmr-CpuNo-storage,
+    <br>* Mcs.secondary-storage-of-computer!⇒cmr-CpuNo-storage,
     <a class="clsHide" href="#idCmrstrgCpuaccNnam"></a></p>
+
+  <section id="idCmrstrgCpuaccN">
+  <h4 id="idCmrstrgCpuaccNH4">CpuNo-storage.SPECIFIC of cmr
+    <a class="clsHide" href="#idCmrstrgCpuaccNH4"></a></h4>
+  <p id="idCmrstrgCpuaccNdsn">description::
+    <br>· alphabetically:
+    <br>* CD-drive,
+    <br>* DVD-drive,
+    <br>* USB-drive,
+    <br>* floppy-disk,
+    <br>* hard-disk-drive-(HDD),
+    <br>* magnetic-tape,
+    <br>* optical-storage,
+    <br>* solid-state-drive-(SSD),
+    <a class="clsHide" href="#idCmrstrgCpuaccNdsn"></a></p>
+  <p id="idCmrstrgCpuaccNnam">name::
+    <br>* Mcs.cmr-CpuNo-storage.specific,
+    <a class="clsHide" href="#idCmrstrgCpuaccNnam"></a></p>
+  </section>
   </section>
   </section>
 
@@ -407,6 +430,11 @@
     <br>"A portable computer was a computer designed to be easily moved from one place to another and included a display and keyboard. The first commercially sold portable was the 50 pound IBM 5100, introduced 1975."
     <br>[https://en.wikipedia.org/wiki/Portable_computer]
     <a class="clsHide" href="#idCmrevg195311"></a></p>
+  <p id="idCmrevg1956">{time.1956}::
+    <br>=== operating-system:
+    <br>"The first operating system used for real work was GM-NAA I/O, produced in 1956 by General Motors' Research division[ for its IBM 704."
+    <br>[https://en.wikipedia.org/wiki/History_of_operating_systems#Mainframes]
+    <a class="clsHide" href="#idCmrevg1956"></a></p>
   <p id="idCmrevg195311">{time.1953-11}::
     <br>=== transistor-computer:
     <br>· the-first transistor-computer in the world, became operational in November 1953 at the-University-of-Manchester by a-team under the-leadersipt of Tom-Kilburn.
@@ -852,7 +880,7 @@
     <a class="clsHide" href="#idCmrRealNH2"></a></h2>
   <p id="idCmrRealNdsn">description::
     <br>· realNo-computer[a] is <a class="clsPreview" href="#idOverview">a-computer</a> that does-not-work in reality.
-    <br>· it[a] is simpler than a-real, usually auto-manages its[a] memory, it[a] works with <a class="clsPreview" href="filMcsLpgm.last.html#idLsrcalgcode">source-code</a>, and it[a] is independent of operating-systems.
+    <br>· it[a] is simpler than a-real, usually auto-manages its[a] memory, and it[a] is independent of <a class="clsPreview" href="filMcsLpgm.last.html#idLpgOs">operating-systems</a>.
     <a class="clsHide" href="#idCmrRealNdsn"></a></p>
   <p id="idCmrRealNnam">name::
     <br>* Mcs.abstract-computer!⇒cmrAbstract,
@@ -862,6 +890,18 @@
     <br>* Mcs.imaginary-computer!⇒cmrAbstract,
     <br>* Mcs.theoritical-computer!⇒cmrAbstract,
     <a class="clsHide" href="#idCmrRealNnam"></a></p>
+
+  <section id="idCmrRealNSrc">
+  <h3 id="idCmrRealNSrcH3">realNo.source cmr
+    <a class="clsHide" href="#idCmrRealNSrcH3"></a></h3>
+  <p id="idCmrRealNSrcdsn">description::
+    <br>· source-computer is <a class="clsPreview" href="idCmrRealN">a-realNo-cmr</a> that understands source-language.
+    <a class="clsHide" href="#idCmrRealNSrcdsn"></a></p>
+  <p id="idCmrRealNSrcnam">name::
+    <br>* Mcs.cmr.source,
+    <br>* Mcs.source-computer,
+    <a class="clsHide" href="#idCmrRealNSrcnam"></a></p>
+  </section>
   </section>
 
   <section id="idCmrPhcl">
@@ -919,44 +959,6 @@
   <section id="idCmrBnrstwr">
   <h2 id="idCmrBnrstwrH2">software of cmrBnr
     <a class="clsHide" href="#idCmrBnrstwrH2"></a></h2>
-  </section>
-
-  <section id="idCmrBnrbinf">
-  <h2 id="idCmrBnrbinfH2">binary-info of cmrBnr
-    <a class="clsHide" href="#idCmrBnrbinfH2"></a></h2>
-  <p id="idCmrBnrbinfdsn">description::
-    <br>· binary-info of cmrBnr is info represented with 2 units|bits.
-    <a class="clsHide" href="#idCmrBnrbinfdsn"></a></p>
-  <p id="idCmrBnrbinfnam">name::
-    <br>* Mcs.binary-info--of-cmrBnr,
-    <br>* Mcs.cmrBnr'binary-info,
-    <br>* Mcs.cmrBnr'data,
-    <br>* Mcs.cmrBnr'software,
-    <a class="clsHide" href="#idCmrBnrbinfnam"></a></p>
-
-  <section id="idCmrBnrbit">
-  <h3 id="idCmrBnrbitH3">bit of binary-info
-    <a class="clsHide" href="#idCmrBnrbitH3"></a></h3>
-  <p id="idCmrBnrbitdsn">description::
-    <br>· bit is the-unit of binary-info
-    <a class="clsHide" href="#idCmrBnrbitdsn"></a></p>
-  <p id="idCmrBnrbitnam">name::
-    <br>* Mcs.bit,
-    <br>* Mcs.cmrBnr'bit,
-    <a class="clsHide" href="#idCmrBnrbitnam"></a></p>
-  </section>
-
-  <section id="idCmrBnrbyte">
-  <h3 id="idCmrBnrbyteH3">byte of binary-info
-    <a class="clsHide" href="#idCmrBnrbyteH3"></a></h3>
-  <p id="idCmrBnrbytedsn">description::
-    <br>· byte is a-group of 8 <a class="clsPreview" href="idCmrBnrbit">bits</a>.
-    <a class="clsHide" href="#idCmrBnrbytedsn"></a></p>
-  <p id="idCmrBnrbytenam">name::
-    <br>* Mcs.byte,
-    <br>* Mcs.cmrBnr'byte,
-    <a class="clsHide" href="#idCmrBnrbytenam"></a></p>
-  </section>
   </section>
 
   <section id="idCmrBnrpglg">

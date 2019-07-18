@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Rust-language (lagRust.0-16-0.2019-07-15 draft)</title>
+  <title>Mcs.Rust-language (lagRust.0-18-0.2019-07-18 draft)</title>
   <meta name="keywords" content="Rust-language, lagRust, Lrst, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -76,6 +76,47 @@
     <br>* Mcs.lagRust'source-encoding,
     <br>* Mcs.lagRust-algo'encoding,
     <a class="clsHide" href="#idLrstalgencdgnam"></a></p>
+  </section>
+
+  <section id="idLrstalgmchn">
+  <h2 id="idLrstalgmchnH2">machine of lagRust-algo
+    <a class="clsHide" href="#idLrstalgmchnH2"></a></h2>
+  <p id="idLrstalgmchndsn">description::
+    <br>· the-machine that understands a-lagRust-algo is <a class="clsPreview" href="filMcsCmr.last.html#idCmrRealN">an-abstract-machine</a> with <a class="clsPreview" href="#idCmrstrgCpuacc">memory</a>.
+    <a class="clsHide" href="#idLrstalgmchndsn"></a></p>
+  <p id="idLrstalgmchnnam">name::
+    <br>* Mcs.lagRust-algo'machine!⇒lagRust-machine,
+    <br>* Mcs.lagRust-machine,
+    <a class="clsHide" href="#idLrstalgmchnnam"></a></p>
+
+  <section id="idLrstalgmchnhp">
+  <h3 id="idLrstalgmchnhpH3">heap of machine-memory of lagRust-algo
+    <a class="clsHide" href="#idLrstalgmchnhpH3"></a></h3>
+  <p id="idLrstalgmchnhpdsn">description::
+    <br>· the-heap is <a class="clsPreview" href="filMcsCmr.last.html#idCmrstrgCpuacc">memory</a> less organized than stack.
+    <br>"when you put data on the heap, you request a certain amount of space. The operating system finds an empty spot in the heap that is big enough, marks it as being in use, and returns a pointer, which is the address of that location. This process is called allocating on the heap and is sometimes abbreviated as just allocating. Pushing values onto the stack is not considered allocating. Because the pointer is a known, fixed size, you can store the pointer on the stack, but when you want the actual data, you must follow the pointer."
+    <br>· data with an-unknown size or a-size that might-change must-be-stored on the-heap.
+    <br>[https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#the-stack-and-the-heap]
+    <a class="clsHide" href="#idLrstalgmchnhpdsn"></a></p>
+  <p id="idLrstalgmchnhpnam">name::
+    <br>* Mcs.lagRust-heap,
+    <br>* Mcs.lagRust-machine'heap,
+    <a class="clsHide" href="#idLrstalgmchnhpnam"></a></p>
+  </section>
+
+  <section id="idLrstalgmchnstk">
+  <h3 id="idLrstalgmchnstkH3">stack of machine-memory of lagRust-algo
+    <a class="clsHide" href="#idLrstalgmchnstkH3"></a></h3>
+  <p id="idLrstalgmchnstkdsn">description::
+    <br>· the-stack is <a class="clsPreview" href="filMcsCmr.last.html#idCmrstrgCpuacc">memory</a> that stores values as last in, first out.
+    <br>· all data stored on the-stack must-have a-known, fixed size.
+    <br>[https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#the-stack-and-the-heap]
+    <a class="clsHide" href="#idLrstalgmchnstkdsn"></a></p>
+  <p id="idLrstalgmchnstknam">name::
+    <br>* Mcs.lagRust-machine'stack,
+    <br>* Mcs.lagRust-stack,
+    <a class="clsHide" href="#idLrstalgmchnstknam"></a></p>
+  </section>
   </section>
 
   <section id="idLrstalgcode">
@@ -1042,20 +1083,14 @@
     <a class="clsHide" href="#idLrstsuntSlldsn"></a></p>
   <p id="idLrstsuntSllnam">name::
     <br>* Mcs.lagRust'literal-string,
+    <br>* Mcs.lagRust-literal.string,
     <br>* Mcs.lagRust-s.literal,
     <a class="clsHide" href="#idLrstsuntSllnam"></a></p>
   </section>
 
   <section id="idLrstsuntStp">
-  <h3 id="idLrstsuntStpH3">string.String-type of lagRust
+  <h3 id="idLrstsuntStpH3">string.String-type (<a class="clsPreview" href="#idLrstalgStdpldString">link</a>) of lagRust
     <a class="clsHide" href="#idLrstsuntStpH3"></a></h3>
-  <p id="idLrstsuntStpdsn">description::
-    <br>· <code>let mut s = String::from("hello");</code>
-    <a class="clsHide" href="#idLrstsuntStpdsn"></a></p>
-  <p id="idLrstsuntStpnam">name::
-    <br>* Mcs.lagRust'String-type,
-    <br>* Mcs.lagRust-s.String-type,
-    <a class="clsHide" href="#idLrstsuntStpnam"></a></p>
   </section>
   </section>
 
@@ -1138,6 +1173,7 @@
     <br>* Byte (u8 only)	b'A'
     <a class="clsHide" href="#idLrstsuntNILrldsn"></a></p>
   <p id="idLrstsuntNILrlnam">name::
+    <br>* Mcs.lagRust-literal.ni,
     <br>* Mcs.lagRust-ni.literal,
     <a class="clsHide" href="#idLrstsuntNILrlnam"></a></p>
   </section>
@@ -2071,6 +2107,7 @@
     <a class="clsHide" href="#idLrstsuntIstcdsn"></a></p>
   <p id="idLrstsuntIstcnam">name::
     <br>* Mcs.lagRust-Sunt.instance!⇒lagRust-literal,
+    <br>* Mcs.lagRust-literal,
     <a class="clsHide" href="#idLrstsuntIstcnam"></a></p>
   </section>
 
@@ -2093,8 +2130,8 @@
     <br>· named-Sunt of <a class="clsPreview" href="#idOverview">lagRust</a> is <a class="clsPreview" href="#idLrstsunt">a-semantic-unit</a> associated with <a class="clsPreview" href="#idLrstsuntidfr">an-identifier</a>.
     <a class="clsHide" href="#idLrstsuntNmddsn"></a></p>
   <p id="idLrstsuntNmdnam">name::
-    <br>* Mcs.lagRust'named-Sunt,
-    <br>* Mcs.lagRust-Sunt.named,
+    <br>* Mcs.lagRust'named-Sunt!⇒lagRust-named-Sunt,
+    <br>* Mcs.lagRust-Sunt.named!⇒lagRust-named-Sunt,
     <br>* Mcs.lagRust-named-Sunt,
     <a class="clsHide" href="#idLrstsuntNmdnam"></a></p>
   <p id="idLrstsuntNmdgncchn">generic-chain::
@@ -2118,10 +2155,15 @@
   <h3 id="idLrstsuntVrblH3">named-Sunt.variable
     <a class="clsHide" href="#idLrstsuntVrblH3"></a></h3>
   <p id="idLrstsuntVrbldsn">description::
-    <br>·
+    <br>· variable of lagRust is a-named-Sunt whose value is immutable but we can-make mutable.
+    <br>· example:
+    <br><code>let s = "hello";
+    <br>let mut x = 5;</code>
     <a class="clsHide" href="#idLrstsuntVrbldsn"></a></p>
   <p id="idLrstsuntVrblnam">name::
-    <br>* Mcs.lagRust'variable,
+    <br>* Mcs.lagRust'variable!⇒lagRust-var,
+    <br>* Mcs.lagRust-named-Sunt.variable!⇒lagRust-var,
+    <br>* Mcs.lagRust-var,
     <a class="clsHide" href="#idLrstsuntVrblnam"></a></p>
   </section>
 
@@ -2130,9 +2172,14 @@
     <a class="clsHide" href="#idLrstsuntCnstH3"></a></h3>
   <p id="idLrstsuntCnstdsn">description::
     <br>· <code>const MAX_POINTS: u32 = 100_000;</code>
+    <br>"Like immutable variables, constants are values that are bound to a name and are not allowed to change, but there are a few differences between constants and variables.
+    <br>First, you aren’t allowed to use mut with constants. Constants aren’t just immutable by default—they’re always immutable."
+    <br>[https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#differences-between-variables-and-constants]
     <a class="clsHide" href="#idLrstsuntCnstdsn"></a></p>
   <p id="idLrstsuntCnstnam">name::
-    <br>* Mcs.lagRust'constannt,
+    <br>* Mcs.lagRust'constant!⇒lagRust-cnst,
+    <br>* Mcs.lagRust-named-Sunt.constant!⇒lagRust-cnst,
+    <br>* Mcs.lagRust-cnst,
     <a class="clsHide" href="#idLrstsuntCnstnam"></a></p>
   </section>
   </section>
@@ -2141,11 +2188,68 @@
   <h2 id="idLrstsuntNmdNH2">Sunt.namedNo of lagRust
     <a class="clsHide" href="#idLrstsuntNmdNH2"></a></h2>
   <p id="idLrstsuntNmdNdsn">description::
-    <br>·
+    <br>· anonymous-Sunt is <a class="clsPreview" href="#idLrstsunt">a-semantic-unit</a> NOT associated with <a class="clsPreview" href="#idLrstwrdIdr">an-identifier</a>.
     <a class="clsHide" href="#idLrstsuntNmdNdsn"></a></p>
   <p id="idLrstsuntNmdNnam">name::
-    <br>* Mcs.lagRust-Sunt.namedNo,
+    <br>* Mcs.lagRust'anonymous-Sunt!⇒lagRust-namedNo-Sunt,
+    <br>* Mcs.lagRust-namedNo-Sunt,
+    <br>* Mcs.lagRust-Sunt.namedNo!⇒lagRust-namedNo-Sunt,
     <a class="clsHide" href="#idLrstsuntNmdNnam"></a></p>
+  </section>
+
+  <section id="idLrstsuntHp">
+  <h2 id="idLrstsuntHpH2">Sunt.heap of lagRust
+    <a class="clsHide" href="#idLrstsuntHpH2"></a></h2>
+  <p id="idLrstsuntHpdsn">description::
+    <br>· heap-Sunt is <a class="clsPreview" href="#idLrstsunt">a-Sunt</a> stored on <a class="clsPreview" href="#idLrstalgmchnstk">heap</a>.
+    <a class="clsHide" href="#idLrstsuntHpdsn"></a></p>
+  <p id="idLrstsuntHpnam">name::
+    <br>* Mcs.lagRust-heap-Sunt,
+    <a class="clsHide" href="#idLrstsuntHpnam"></a></p>
+
+  <section id="idLrstsuntHpptr">
+  <h3 id="idLrstsuntHpptrH3">pointer of heap-Sunt of lagRust
+    <a class="clsHide" href="#idLrstsuntHpptrH3"></a></h3>
+  <p id="idLrstsuntHpptrdsn">description::
+    <br>· pointer of <a class="clsPreview" href="#idLrstsuntHp">lagRust-heap-Sunt</a> is the-address of the-location of the-Sunt on heap.
+    <a class="clsHide" href="#idLrstsuntHpptrdsn"></a></p>
+  <p id="idLrstsuntHpptrnam">name::
+    <br>* Mcs.lagRust-heap-Sunt'pointer,
+    <a class="clsHide" href="#idLrstsuntHpptrnam"></a></p>
+  </section>
+
+  <section id="idLrstsuntHplgh">
+  <h3 id="idLrstsuntHplghH3">length of heap-Sunt of lagRust
+    <a class="clsHide" href="#idLrstsuntHplghH3"></a></h3>
+  <p id="idLrstsuntHplghdsn">description::
+    <br>· length is the-quantity in bytes, the-Sunt is-using in <a class="clsPreview" href="#idLrstalgmchnhp">heap</a>.
+    <a class="clsHide" href="#idLrstsuntHplghdsn"></a></p>
+  <p id="idLrstsuntHplghnam">name::
+    <br>* Mcs.lagRust-heap-Sunt'length,
+    <a class="clsHide" href="#idLrstsuntHplghnam"></a></p>
+  </section>
+
+  <section id="idLrstsuntHpcpt">
+  <h3 id="idLrstsuntHpcptH3">capacity of heap-Sunt of lagRust
+    <a class="clsHide" href="#idLrstsuntHpcptH3"></a></h3>
+  <p id="idLrstsuntHpcptdsn">description::
+    <br>· capacity is the-total quantity in bytes, the-Sunt in <a class="clsPreview" href="#idLrstalgmchnhp">heap</a> has-received from <a class="clsPreview" href="filMcsLpgm.last.html#idLpgOs">the-operating-system</a>.
+    <a class="clsHide" href="#idLrstsuntHpcptdsn"></a></p>
+  <p id="idLrstsuntHpcptnam">name::
+    <br>* Mcs.lagRust-heap-Sunt'capacity,
+    <a class="clsHide" href="#idLrstsuntHpcptnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLrstsuntStk">
+  <h2 id="idLrstsuntStkH2">Sunt.stack of lagRust
+    <a class="clsHide" href="#idLrstsuntStkH2"></a></h2>
+  <p id="idLrstsuntStkdsn">description::
+    <br>· stack-Sunt is <a class="clsPreview" href="#idLrstsunt">a-Sunt</a> stored on <a class="clsPreview" href="#idLrstalgmchnstk">stack</a>.
+    <a class="clsHide" href="#idLrstsuntStkdsn"></a></p>
+  <p id="idLrstsuntStknam">name::
+    <br>* Mcs.lagRust-stack-Sunt,
+    <a class="clsHide" href="#idLrstsuntStknam"></a></p>
   </section>
 
   <section id="idLrstsuntCpd">
@@ -2461,9 +2565,21 @@
     <a class="clsHide" href="#idLrstalgCrtStdmdlnam"></a></p>
   </section>
 
+  <section id="idLrstalgCrtStdrsc">
+  <h3 id="idLrstalgCrtStdrscH3">resource of lagRust-std
+    <a class="clsHide" href="#idLrstalgCrtStdrscH3"></a></h3>
+  <p id="idLrstalgCrtStdrscnam">name::
+    <br>* Mcs.lagRust-std'resource,
+    <a class="clsHide" href="#idLrstalgCrtStdrscnam"></a></p>
+  <p id="idLrstalgCrtStdrscwpa">addressWpg::
+    <br>* https://doc.rust-lang.org/std/,
+    <a class="clsHide" href="#idLrstalgCrtStdrscwpa"></a></p>
+  </section>
+  </section>
+
   <section id="idLrstalgCrtStdpld">
-  <h3 id="idLrstalgCrtStdpldH3">std::prelude of lagRust
-    <a class="clsHide" href="#idLrstalgCrtStdpldH3"></a></h3>
+  <h2 id="idLrstalgCrtStdpldH2">std::prelude of lagRust
+    <a class="clsHide" href="#idLrstalgCrtStdpldH2"></a></h2>
   <p id="idLrstalgCrtStdplddsn">description::
     <br>"Rust comes with a variety of things in its standard library. However, if you had to manually import every single thing that you used, it would be very verbose. But importing a lot of things that a program never uses isn't good either. A balance needs to be struck.
     <br><span class="clsColorRed">The prelude is the list of things that Rust automatically imports into every Rust program</span>. It's kept as small as possible, and is focused on things, particularly traits, which are used in almost every single Rust program.
@@ -2481,8 +2597,8 @@
     <a class="clsHide" href="#idLrstalgCrtStdpldnam"></a></p>
 
   <section id="idLrstalgCrtStdpldprt">
-  <h4 id="idLrstalgCrtStdpldprtH4">part of prelude of lagRust
-    <a class="clsHide" href="#idLrstalgCrtStdpldprtH4"></a></h4>
+  <h3 id="idLrstalgCrtStdpldprtH3">part of prelude of lagRust
+    <a class="clsHide" href="#idLrstalgCrtStdpldprtH3"></a></h3>
   <p id="idLrstalgCrtStdpldprtdsn">description::
     <br>The current version of the prelude (version 1) lives in std::prelude::v1, and re-exports the following.
     <br>♦ std::marker::{Copy, Send, Sized, Sync, Unpin}. The marker traits indicate fundamental properties of types.
@@ -2508,9 +2624,10 @@
   </section>
 
   <section id="idLrstalgStdpldString">
-  <h4 id="idLrstalgStdpldStringH4">std::string::String-struct of prelude of lagRust
-    <a class="clsHide" href="#idLrstalgStdpldStringH4"></a></h4>
+  <h3 id="idLrstalgStdpldStringH3">std::string::String-struct of prelude of lagRust
+    <a class="clsHide" href="#idLrstalgStdpldStringH3"></a></h3>
   <p id="idLrstalgStdpldStringdsn">description::
+    <br><code>let mut s = String::from("hello");</code>
     <br>"A UTF-8 encoded, growable string.
     <br>The String type is the most common string type that has ownership over the contents of the string. It has a close relationship with its borrowed counterpart, the primitive str."
     <br>[https://doc.rust-lang.org/std/string/struct.String.html]
@@ -2524,8 +2641,8 @@
   </section>
 
   <section id="idLrstalgStdpldVec">
-  <h4 id="idLrstalgStdpldVecH4">std::vec::Vec-struct of prelude of lagRust
-    <a class="clsHide" href="#idLrstalgStdpldVecH4"></a></h4>
+  <h3 id="idLrstalgStdpldVecH3">std::vec::Vec-struct of prelude of lagRust
+    <a class="clsHide" href="#idLrstalgStdpldVecH3"></a></h3>
   <p id="idLrstalgStdpldVecdsn">description::
     <br>"A contiguous growable array type, written Vec&lt;T> but pronounced 'vector'."
     <br>[https://doc.rust-lang.org/std/vec/struct.Vec.html]
@@ -2544,18 +2661,6 @@
   <p id="idLrstalgStdpldVecgncchn">generic-chain::
     <br>* <a class="clsPreview" href="#idLrstsuntSrt">lagRust-struct</a>,
     <a class="clsHide" href="#idLrstalgStdpldVecgncchn"></a></p>
-  </section>
-  </section>
-
-  <section id="idLrstalgCrtStdrsc">
-  <h3 id="idLrstalgCrtStdrscH3">resource of lagRust-std
-    <a class="clsHide" href="#idLrstalgCrtStdrscH3"></a></h3>
-  <p id="idLrstalgCrtStdrscnam">name::
-    <br>* Mcs.lagRust-std'resource,
-    <a class="clsHide" href="#idLrstalgCrtStdrscnam"></a></p>
-  <p id="idLrstalgCrtStdrscwpa">addressWpg::
-    <br>* https://doc.rust-lang.org/std/,
-    <a class="clsHide" href="#idLrstalgCrtStdrscwpa"></a></p>
   </section>
   </section>
 </section>
