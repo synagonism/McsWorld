@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.programing-language (lagPgm.0-13-0.2019-07-18 draft)</title>
+  <title>Mcs.programing-language (lagPgm.0-14-0.2019-07-19 draft)</title>
   <meta name="keywords" content="programing-language, lagPgm, Lpgm, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -149,36 +149,13 @@
   <h2 id="idLpgmalgsxtrH2">syntax-tree of algo
     <a class="clsHide" href="#idLpgmalgsxtrH2"></a></h2>
   <p id="idLpgmalgsxtrdsn">description::
-    <br>· the-structure of an-algo is a-whole-part-tree of <a class="clsPreview" href="#idLpgmunt">units</a>, <a class="clsPreview" href="#idLpgmsunt">semantic-units</a>, <a class="clsPreview" href="#idLpgmsntc">sentences</a>, <a class="clsPreview" href="#idLpgmsctn">sections</a>, ie <a class="clsPreview" href="#idLpgmalgstrr">output-structures</a>.
+    <br>· the-structure of an-algo is a-whole-part-tree of <a class="clsPreview" href="#idLpgmunt">units</a>, <a class="clsPreview" href="#idLpgmsunt">semantic-units</a>, <a class="clsPreview" href="#idLpgmsntc">sentences</a>, <a class="clsPreview" href="#idLpgmsctn">sections</a>, ie <a class="clsPreview" href="#idLpgmnode">output-structures</a>.
     <br>· this structure we call syntax-tree.
     <a class="clsHide" href="#idLpgmalgsxtrdsn"></a></p>
   <p id="idLpgmalgsxtrnam">name::
     <br>* Mcs.lagPgm-algo'syntax-tree,
     <br>* Mcs.syntax-tree--of--lagPgm-algo,
     <a class="clsHide" href="#idLpgmalgsxtrnam"></a></p>
-  </section>
-
-  <section id="idLpgmalgstrr">
-  <h2 id="idLpgmalgstrrH2">structure of algo
-    <a class="clsHide" href="#idLpgmalgstrrH2"></a></h2>
-  <p id="idLpgmalgstrrdsn">description::
-    <br>· algo-structure is any identifiable part of algo.
-    <a class="clsHide" href="#idLpgmalgstrrdsn"></a></p>
-  <p id="idLpgmalgstrrnam">name::
-    <br>* Mcs.lagPgm-algo'node!⇒lagPgm-node,
-    <br>* Mcs.lagPgm-algo'structure!⇒lagPgm-node,
-    <br>* Mcs.lagPgm-algo-structure!⇒lagPgm-node,
-    <br>* Mcs.lagPgm-node, {2019-07-05}
-    <br>* Mcs.lagPgm'output-structure!⇒lagPgm-node,
-    <a class="clsHide" href="#idLpgmalgstrrnam"></a></p>
-  <p id="idLpgmalgstrrSpc">specific::
-    <br>* <a class="clsPreview" href="#idLpgmunt">unit</a>,
-    <br>* <a class="clsPreview" href="#idLpgmwrd">word</a>,
-    <br>* <a class="clsPreview" href="#idLpgmsunt">semantic-unit</a>,
-    <br>* <a class="clsPreview" href="#idLpgmphrs">phrase</a>,
-    <br>* <a class="clsPreview" href="#idLpgmsntc">sentence</a>,
-    <br>* <a class="clsPreview" href="#idLpgmsctn">section</a>,
-    <a class="clsHide" href="#idLpgmalgstrrSpc"></a></p>
   </section>
 
   <section id="idLpgmalgfile">
@@ -191,6 +168,29 @@
     <br>* Mcs.lagPgm-algo'file,
     <a class="clsHide" href="#idLpgmalgfilenam"></a></p>
   </section>
+</section>
+
+<section id="idLpgmnode">
+  <h1 id="idLpgmnodeH1">algo'node of lagPgm
+    <a class="clsHide" href="#idLpgmnodeH1"></a></h1>
+  <p id="idLpgmnodedsn">description::
+    <br>· algo-node of lagPgm is any identifiable part of algo.
+    <a class="clsHide" href="#idLpgmnodedsn"></a></p>
+  <p id="idLpgmnodenam">name::
+    <br>* Mcs.lagPgm-algo'node!⇒lagPgm-node,
+    <br>* Mcs.lagPgm-algo'structure!⇒lagPgm-node,
+    <br>* Mcs.lagPgm-algo-structure!⇒lagPgm-node,
+    <br>* Mcs.lagPgm-node, {2019-07-05}
+    <br>* Mcs.lagPgm'output-structure!⇒lagPgm-node,
+    <a class="clsHide" href="#idLpgmnodenam"></a></p>
+  <p id="idLpgmnodeSpc">specific::
+    <br>* <a class="clsPreview" href="#idLpgmunt">unit</a>,
+    <br>* <a class="clsPreview" href="#idLpgmwrd">word</a>,
+    <br>* <a class="clsPreview" href="#idLpgmsunt">semantic-unit</a>,
+    <br>* <a class="clsPreview" href="#idLpgmphrs">phrase</a>,
+    <br>* <a class="clsPreview" href="#idLpgmsntc">sentence</a>,
+    <br>* <a class="clsPreview" href="#idLpgmsctn">section</a>,
+    <a class="clsHide" href="#idLpgmnodeSpc"></a></p>
 </section>
 
 <section id="idLpgmunt">
@@ -214,7 +214,7 @@
   <h1 id="idLpgmwrdH1">algo'word of lagPgm
     <a class="clsHide" href="#idLpgmwrdH1"></a></h1>
   <p id="idLpgmwrddsn">description::
-    <br>· output-word of lagPgm is a-structure of <a class="clsPreview" href="#idLpgmunt">units</a>, that denote nothing in archetype, the-language uses to create more compound <a class="clsPreview" href="#idLpgmalgstrr">algo-structures</a>.
+    <br>· output-word of lagPgm is a-structure of <a class="clsPreview" href="#idLpgmunt">units</a>, that denote nothing in archetype, the-language uses to create more compound <a class="clsPreview" href="#idLpgmnode">algo-structures</a>.
     <a class="clsHide" href="#idLpgmwrddsn"></a></p>
   <p id="idLpgmwrdnam">name::
     <br>* Mcs.lagPgm'algo-word,
@@ -233,7 +233,7 @@
   <h2 id="idLpgmwrdNameH2">word.identifier
     <a class="clsHide" href="#idLpgmwrdNameH2"></a></h2>
   <p id="idLpgmwrdNamedsn">description::
-    <br>· lagPgm-indentifer is <a class="clsPreview" href="#idLpgmwrd">a-word</a>, created by a-programer, that is-used to be-associated with <a class="clsPreview" href="#idLpgmalgstrr">algo-structures</a>.
+    <br>· lagPgm-indentifer is <a class="clsPreview" href="#idLpgmwrd">a-word</a>, created by a-programer, that is-used to be-associated with <a class="clsPreview" href="#idLpgmnode">algo-structures</a>.
     <a class="clsHide" href="#idLpgmwrdNamedsn"></a></p>
   <p id="idLpgmwrdNamenam">name::
     <br>* Mcs.identifier-of-lagPgm,
@@ -247,7 +247,7 @@
   <h2 id="idLpgmwrdKywdH2">word.keyword
     <a class="clsHide" href="#idLpgmwrdKywdH2"></a></h2>
   <p id="idLpgmwrdKywddsn">description::
-    <br>· algo-keyword of lagPgm is <a class="clsPreview" href="#idLpgmwrd">a-word</a> reserved by the-language to be-used to create more compound <a class="clsPreview" href="#idLpgmalgstrr">algo-structures</a>.
+    <br>· algo-keyword of lagPgm is <a class="clsPreview" href="#idLpgmwrd">a-word</a> reserved by the-language to be-used to create more compound <a class="clsPreview" href="#idLpgmnode">algo-structures</a>.
     <a class="clsHide" href="#idLpgmwrdKywddsn"></a></p>
   <p id="idLpgmwrdKywdnam">name::
     <br>* Mcs.keyword-of-lagPgm,
@@ -314,7 +314,7 @@
   <h1 id="idLpgmphrsH1">algo'phrase of lagPgm
     <a class="clsHide" href="#idLpgmphrsH1"></a></h1>
   <p id="idLpgmphrsdsn">description::
-    <br>· algo-phrase is a-structure of simpler <a class="clsPreview" href="#idLpgmalgstrr">algo-structures</a> that denote INCOMPLETE relations or processes ( 3 + 5 ).
+    <br>· algo-phrase is a-structure of simpler <a class="clsPreview" href="#idLpgmnode">algo-structures</a> that denote INCOMPLETE relations or processes ( 3 + 5 ).
     <a class="clsHide" href="#idLpgmphrsdsn"></a></p>
   <p id="idLpgmphrsnam">name::
     <br>* Mcs.lagPgm-algo'phrase,
@@ -327,7 +327,7 @@
   <h1 id="idLpgmsntcH1">algo'sentence of lagPgm
     <a class="clsHide" href="#idLpgmsntcH1"></a></h1>
   <p id="idLpgmsntcdsn">description::
-    <br>· algo-sentence is a-structure of simpler <a class="clsPreview" href="#idLpgmalgstrr">algo-structures</a> that denote COMPLETE relations or processes ( 3 + 5 = 8 ).
+    <br>· algo-sentence is a-structure of simpler <a class="clsPreview" href="#idLpgmnode">algo-structures</a> that denote COMPLETE relations or processes ( 3 + 5 = 8 ).
     <br>· a-sentence can-have as part other simpler sentences.
     <a class="clsHide" href="#idLpgmsntcdsn"></a></p>
   <p id="idLpgmsntcnam">name::
@@ -384,7 +384,7 @@
   <h1 id="idLpgmrootH1">algo'root of lagPgm
     <a class="clsHide" href="#idLpgmrootH1"></a></h1>
   <p id="idLpgmrootdsn">description::
-    <br>· algo-root is the-outermost <a class="clsPreview" href="#idLpgmalgstrr">structure</a> of <a class="clsPreview" href="#idLpgmalgsxtr">the-syntax-tree</a>.
+    <br>· algo-root is the-outermost <a class="clsPreview" href="#idLpgmnode">structure</a> of <a class="clsPreview" href="#idLpgmalgsxtr">the-syntax-tree</a>.
     <a class="clsHide" href="#idLpgmrootdsn"></a></p>
   <p id="idLpgmrootnam">name::
     <br>* Mcs.lagPgm-algo'root,

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.computer-machine (cmr.0-5-0.2019-07-18 draft)</title>
+  <title>Mcs.computer-machine (cmr.0-6-0.2019-07-19 draft)</title>
   <meta name="keywords" content="computer-machine, cmr, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -22,7 +22,7 @@
   <h1 id="idOverviewH1">overview of cmr
     <a class="clsHide" href="#idOverviewH1"></a></h1>
   <p id="idDescription">description::
-    <br>· computer is an-info-machine that processes human-information.
+    <br>· computer is an-info-machine that processes human and machine-information.
     <a class="clsHide" href="#idDescription"></a></p>
   <p id="idName">name::
     <br>* Mcs.filMcsCmr.last.html!⇒cmr,
@@ -34,6 +34,7 @@
     <br>* Mcs.computer-system!⇒cmr,
     <br>* Mcs.info-machine.computer!⇒cmr,
     <br>* Mcs.info-processing-machine!⇒cmr,
+    <br>* Mcs.lagCmr-output'machine!⇒cmr,
     <br>* Mcs.machine.info.computer!⇒cmr,
     <a class="clsHide" href="#idName"></a></p>
 </section>
@@ -766,12 +767,55 @@
   </section>
 </section>
 
+<section id="idCmrScdnOs">
+  <h1 id="idCmrScdnOsH1">cmr.specific-division.Os
+    <a class="clsHide" href="#idCmrScdnOsH1"></a></h1>
+  <p id="idCmrScdnOsdsn">description::
+    <br>· division on if has <a class="clsPreview" href="filMcsLpgm.last.html#idLpgOs">operating-system</a>:
+    <br>* Os-cmr,
+    <br>* OsNo-cmr,
+    <a class="clsHide" href="#idCmrScdnOsdsn"></a></p>
+  <p id="idCmrScdnOsnam">name::
+    <br>* Mcs.cmr.specific-division.Os,
+    <a class="clsHide" href="#idCmrScdnOsnam"></a></p>
+
+  <section id="idCmrOs">
+  <h2 id="idCmrOsH2">cmr.Os
+    <a class="clsHide" href="#idCmrOsH2"></a></h2>
+  <p id="idCmrOsdsn">description::
+    <br>· Os-computer is <a class="clsPreview" href="#idOverview">a-computer</a> WITH <a class="clsPreview" href="filMcsLpgm.last.html#idLpgOs">an-operating-system</a>.
+    <br>==
+    <br>"The first operating system used for real work was GM-NAA I/O, produced in 1956 by General Motors' Research division for its IBM 704."
+    <br>[https://en.wikipedia.org/wiki/History_of_operating_systems#Mainframes]    <a class="clsHide" href="#idCmrOsdsn"></a></p>
+  <p id="idCmrOsnam">name::
+    <br>* Mcs.Os-computer!⇒cmrOs,
+    <br>* Mcs.cmr.Os!⇒cmrOs,
+    <br>* Mcs.cmrOs,
+    <br>* Mcs.operating-system--computer!⇒cmrOs,
+    <a class="clsHide" href="#idCmrOsnam"></a></p>
+  </section>
+
+  <section id="idCmrOsN">
+  <h2 id="idCmrOsNH2">cmr.OsNo
+    <a class="clsHide" href="#idCmrOsNH2"></a></h2>
+  <p id="idCmrOsNdsn">description::
+    <br>· OsNo-computer is <a class="clsPreview" href="#idOverview">a-computer</a> WITHOUT <a class="clsPreview" href="filMcsLpgm.last.html#idLpgOs">an-operating-system</a>.
+    <a class="clsHide" href="#idCmrOsNdsn"></a></p>
+  <p id="idCmrOsNnam">name::
+    <br>* Mcs.OsNo-computer!⇒cmrOsNo,
+    <br>* Mcs.cmr.OsNo!⇒cmrOsNo,
+    <br>* Mcs.cmrOsNo,
+    <br>* Mcs.operating-system.no--computer!⇒cmrOsNo,
+    <a class="clsHide" href="#idCmrOsNnam"></a></p>
+  </section>
+</section>
+
 <section id="idCmrScdnDlif">
   <h1 id="idCmrScdnDlifH1">cmr.specific-division.digital-info
     <a class="clsHide" href="#idCmrScdnDlifH1"></a></h1>
   <p id="idCmrScdnDlifdsn">description::
-    <br>* digital-compouter,
-    <br>* digitalNo-compouter,
+    <br>* digital-computer,
+    <br>* digitalNo-computer,
     <a class="clsHide" href="#idCmrScdnDlifdsn"></a></p>
   <p id="idCmrScdnDlifnam">name::
     <br>* Mcs.cmr.specific-division.digital-info,
@@ -935,6 +979,56 @@
     <br>* register-vm,
     <br>* stack-vm,
     <a class="clsHide" href="#idCmrVrtlSpc"></a></p>
+  </section>
+</section>
+
+<section id="idCmrScdnSize">
+  <h1 id="idCmrScdnSizeH1">cmr.specific-division.size
+    <a class="clsHide" href="#idCmrScdnSizeH1"></a></h1>
+  <p id="idCmrScdnSizedsn">description::
+    <br>· on size:
+    <br>* large-cmr,
+    <br>* desktop-cmr,
+    <br>* small-cmr,
+    <a class="clsHide" href="#idCmrScdnSizedsn"></a></p>
+  <p id="idCmrScdnSizenam">name::
+    <br>* Mcs.cmr.specific-division.size,
+    <a class="clsHide" href="#idCmrScdnSizenam"></a></p>
+
+  <section id="idCmrLrg">
+  <h2 id="idCmrLrgH2">cmr.large
+    <a class="clsHide" href="#idCmrLrgH2"></a></h2>
+  <p id="idCmrLrgdsn">description::
+    <br>· large-computer I call <a class="clsPreview" href="#idOverview">a-computer</a> bigger than <a class="clsPreview" href="#idCmrDktp">a-desktop</a>.
+    <a class="clsHide" href="#idCmrLrgdsn"></a></p>
+  <p id="idCmrLrgnam">name::
+    <br>* Mcs.cmrLarge,
+    <br>* Mcs.large-computer,
+    <a class="clsHide" href="#idCmrLrgnam"></a></p>
+  </section>
+
+  <section id="idCmrDktp">
+  <h2 id="idCmrDktpH2">cmr.desktop
+    <a class="clsHide" href="#idCmrDktpH2"></a></h2>
+  <p id="idCmrDktpdsn">description::
+    <br>· desktop-computer is a-computer that we use at a-single location on or near tables.
+    <a class="clsHide" href="#idCmrDktpdsn"></a></p>
+  <p id="idCmrDktpnam">name::
+    <br>* Mcs.cmrDesktop,
+    <br>* Mcs.desktop-computer,
+    <a class="clsHide" href="#idCmrDktpnam"></a></p>
+  </section>
+
+  <section id="idCmrSml">
+  <h2 id="idCmrSmlH2">cmr.small
+    <a class="clsHide" href="#idCmrSmlH2"></a></h2>
+  <p id="idCmrSmldsn">description::
+    <br>· small-computer I call <a class="clsPreview" href="#idOverview">a-computer</a> smaller than <a class="clsPreview" href="#idCmrDktp">a-desktop</a> we can-carry with us.
+    <a class="clsHide" href="#idCmrSmldsn"></a></p>
+  <p id="idCmrSmlnam">name::
+    <br>* Mcs.cmrSmall,
+    <br>* Mcs.small-computer,
+    <a class="clsHide" href="#idCmrSmlnam"></a></p>
   </section>
 </section>
 
