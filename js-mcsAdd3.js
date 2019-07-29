@@ -31,16 +31,15 @@ var
   bCounter = true,
   bDisqus = false,
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirTchInf',
-  sDIR = 'DirTchInf',
+  sDir = 'dirLag',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'computer-language',
+  sN = 'human-language',
   //4. SHORT-name: DnChain, DnEth, Dchain-net,
-  sNS = 'lagCmr',
+  sNS = 'lagHmn',
   //5. FILE-name: shows relation of another file: DnLbr, DtcbnetEth
-  sNFil = 'Lcmr',
+  sNFil = 'Lhmn',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Lcmr';
+  sNId = 'Lhmn';
 
 s =
   '<!DOCTYPE html>\n' +
