@@ -33,13 +33,13 @@ var
   //2. Directory of the-concept (dirCor or else)
   sDir = 'dirLag',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'human-language',
+  sN = 'alphabetic-language',
   //4. SHORT-name: DnChain, DnEth, Dchain-net,
-  sNS = 'lagHmn',
+  sNS = 'lagAbc',
   //5. FILE-name: shows relation of another file: DnLbr, DtcbnetEth
-  sNFil = 'Lhmn',
+  sNFil = 'Labc',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Lhmn';
+  sNId = 'Labc';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -144,7 +144,7 @@ s = s +
   '    <br>· this page uses \'<span class="clsColorRed">locator-names</span>\', names that when you find them, you find the-LOCATION of the-concept they denote.\n' +
   '    <br>⊛ <strong>GLOBAL-SEARCH</strong>:\n' +
   '    <br>· clicking on <span class="clsColorGreenBg">the-green-BAR of a-page</span> you have access to the-global--locator-names of my-site.\n' +
-  '    <br>· use the-prefix \'<span class="clsColorRed">' + sNS + '</span>\' for <a class="clsPreview" href="../dirCor/filMcs.last.html#idOverview">structured-concepts</a> related to current concept \'' + sN + '\'.' +
+  '    <br>· use the-prefix \'<span class="clsColorRed">' + sNS + '</span>\' for <a class="clsPreview" href="../dirCor/filMcs.last.html#idOverview">structured-concepts</a> related to current concept \'' + sN + '\'.\n' +
   '    <br>⊛ <strong>LOCAL-SEARCH</strong>:\n' +
   '    <br>· TYPE <span class="clsColorRed">CTRL+F "Mcs.words-of-concept\'s-name"</span>, to go to the-LOCATION of the-concept.\n' +
   '    <br>· a-preview of the-description of a-global-name makes reading fast.\n' +
