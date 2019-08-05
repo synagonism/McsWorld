@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.human-language (lagHmn.0-7-0.2019-08-04 draft)</title>
+  <title>Mcs.human-language (lagHmn.0-8-0.2019-08-05 draft)</title>
   <meta name="keywords" content="human-language, lagHmn, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -162,45 +162,38 @@
     <br>* semasio-verb,
     <br>* semasio-noun,
     <br>* semasio-conjunction,
+    <br>===
+    <br>* generic--semasio-concept,
+    <br>* genericNo--semasio-concept,
     <a class="clsHide" href="#idLhmnsmscptSpcdsn"></a></p>
   <p id="idLhmnsmscptSpcnam">name::
     <br>* Mcs.lagHmn-semasio-concept.specific,
     <a class="clsHide" href="#idLhmnsmscptSpcnam"></a></p>
   </section>
 
-  <section id="idLhmnsmsvrb">
-  <h3 id="idLhmnsmsvrbH3">semasio-concept.verb of lagHmn
-    <a class="clsHide" href="#idLhmnsmsvrbH3"></a></h3>
-  <p id="idLhmnsmsvrbdsn">description::
-    <br>· semasio-verb of lagHmn is <a class="clsPreview" href="#idLhmnsmscpt">a-semasio-concept</a> that denotes a-PROCESS-OR-RELATION in time (describes and the-time it happens) of an-ENTITY that has|does this process-or-relation.
-    <a class="clsHide" href="#idLhmnsmsvrbdsn"></a></p>
-  <p id="idLhmnsmsvrbnam">name::
-    <br>* Mcs.lagHmn-semasio-concept.verb!⇒lagHmn-semasio-verb,
-    <br>* Mcs.lagHmn-semasio-verb,
-    <br>* Mcs.semasio-verb--of-lagHmn!⇒lagHmn-semasio-verb,
-    <a class="clsHide" href="#idLhmnsmsvrbnam"></a></p>
-
-  <section id="idLhmnsmsvrbatt">
-  <h4 id="idLhmnsmsvrbattH4">attribute of semasio-verb of lagHmn
-    <a class="clsHide" href="#idLhmnsmsvrbattH4"></a></h4>
-  <p id="idLhmnsmsvrbattdsn">description::
-    <br>· the-full <a class="clsPreview" href="#idLhmnsmscptatt">semasio-attributes</a> of a-semasio-verb is language dependent.
-    <br>· the-English-language has these semasio-attributes with these values:
-    <br>* MOOD: indicative (fact), imperative (command), subjunctive (else).
-    <br>* TEMPO: past, present, future.
-    <br>* INSTANTNESS: instant, interval.
-    <br>* DIRECTION: active, passive.
-    <br>* PERFECTIVENESS: imperfect (not completed process-or-relation), perfect (completed process-or-relation).
-    <br>* INTERROGATION: noninterrogative, interrogative.
-    <br>* AFFIRMATION: affirmative, negative.
-    <br>* NUMBER: singular, plural.
-    <br>* PERSON: first, second, third.
-    <br>· every individual-semasio-verb has one value for EVERY attribute, not just for some of them.
-    <a class="clsHide" href="#idLhmnsmsvrbattdsn"></a></p>
-  <p id="idLhmnsmsvrbattnam">name::
-    <br>* Mcs.lagHmn-semasio-verb'attribute,
-    <a class="clsHide" href="#idLhmnsmsvrbattnam"></a></p>
+  <section id="idLhmnsmscptGnrc">
+  <h3 id="idLhmnsmscptGnrcH3">semasio-concept.generic of lagHmn
+    <a class="clsHide" href="#idLhmnsmscptGnrcH3"></a></h3>
+  <p id="idLhmnsmscptGnrcdsn">description::
+    <br>· semasio-generic-concept is <a class="clsPreview" href="#idLhmnsmscpt">a-semasio-concept</a> with generic <a class="clsPreview" href="#idLhmnsmscptatt">semasio-attributes</a>, ie semasio-attributes with specifics-(values).
+    <a class="clsHide" href="#idLhmnsmscptGnrcdsn"></a></p>
+  <p id="idLhmnsmscptGnrcnam">name::
+    <br>* Mcs.lagHmn-semasio-concept.generic,
+    <br>* Mcs.semasio-generic-concept--of-lagHmn,
+    <a class="clsHide" href="#idLhmnsmscptGnrcnam"></a></p>
   </section>
+
+  <section id="idLhmnsmscptGnrcN">
+  <h3 id="idLhmnsmscptGnrcNH3">semasio-concept.genericNo of lagHmn
+    <a class="clsHide" href="#idLhmnsmscptGnrcNH3"></a></h3>
+  <p id="idLhmnsmscptGnrcNdsn">description::
+    <br>· semasio-genericNo-concept is <a class="clsPreview" href="#idLhmnsmscpt">a-semasio-concept</a> with individual <a class="clsPreview" href="#idLhmnsmscptatt">semasio-attributes</a>.
+    <a class="clsHide" href="#idLhmnsmscptGnrcNdsn"></a></p>
+  <p id="idLhmnsmscptGnrcNnam">name::
+    <br>* Mcs.lagHmn-semasio-concept.genericNo,
+    <br>* Mcs.semasio-genericNo-concept--of-lagHmn,
+    <br>* Mcs.semasio-individual-concept--of-lagHmn,
+    <a class="clsHide" href="#idLhmnsmscptGnrcNnam"></a></p>
   </section>
 
   <section id="idLhmnsmsnoun">
@@ -231,12 +224,13 @@
   <h4 id="idLhmnsmsnounSplH4">semasio-noun.special of lagHmn
     <a class="clsHide" href="#idLhmnsmsnounSplH4"></a></h4>
   <p id="idLhmnsmsnounSpldsn">description::
-    <br>· semasio-special-noun is a-semasio-noun that is-mapped differently than the-majority of semasio-nouns and is language dependent.
+    <br>· semasio-special-noun is a-semasio-noun that has special semasio-attributes from the-rest and it is-mapped differently than the-majority of semasio-nouns and it is language dependent.
     <a class="clsHide" href="#idLhmnsmsnounSpldsn"></a></p>
   <p id="idLhmnsmsnounSplnam">name::
     <br>* Mcs.lagHmn-semasio-noun.ordinaryNo,
     <br>* Mcs.lagHmn-semasio-noun.special,
     <br>* Mcs.lagHmn-semasio-special-noun,
+    <br>* Mcs.semasio-special-noun--of-lagHmn,
     <a class="clsHide" href="#idLhmnsmsnounSplnam"></a></p>
   </section>
 
@@ -281,6 +275,41 @@
     <br>* Mcs.lagHmn-semasio-typical-ordinary-noun,
     <a class="clsHide" href="#idLhmnsmsnounAtbvNnam"></a></p>
   </section>
+  </section>
+  </section>
+
+  <section id="idLhmnsmsvrb">
+  <h3 id="idLhmnsmsvrbH3">semasio-concept.verb of lagHmn
+    <a class="clsHide" href="#idLhmnsmsvrbH3"></a></h3>
+  <p id="idLhmnsmsvrbdsn">description::
+    <br>· semasio-verb of lagHmn is <a class="clsPreview" href="#idLhmnsmscpt">a-semasio-concept</a> that denotes a-PROCESS-OR-RELATION in time (describes and the-time it happens) of an-ENTITY that has|does this process-or-relation.
+    <a class="clsHide" href="#idLhmnsmsvrbdsn"></a></p>
+  <p id="idLhmnsmsvrbnam">name::
+    <br>* Mcs.lagHmn-semasio-concept.verb!⇒lagHmn-semasio-verb,
+    <br>* Mcs.lagHmn-semasio-verb,
+    <br>* Mcs.semasio-verb--of-lagHmn!⇒lagHmn-semasio-verb,
+    <a class="clsHide" href="#idLhmnsmsvrbnam"></a></p>
+
+  <section id="idLhmnsmsvrbatt">
+  <h4 id="idLhmnsmsvrbattH4">attribute of semasio-verb of lagHmn
+    <a class="clsHide" href="#idLhmnsmsvrbattH4"></a></h4>
+  <p id="idLhmnsmsvrbattdsn">description::
+    <br>· the-full <a class="clsPreview" href="#idLhmnsmscptatt">semasio-attributes</a> of a-semasio-verb is language dependent.
+    <br>· the-English-language has these semasio-attributes with these values:
+    <br>* MOOD: indicative (fact), imperative (command), subjunctive (else).
+    <br>* TEMPO: past, present, future.
+    <br>* INSTANTNESS: instant, interval.
+    <br>* DIRECTION: active, passive.
+    <br>* PERFECTIVENESS: imperfect (not completed process-or-relation), perfect (completed process-or-relation).
+    <br>* INTERROGATION: noninterrogative, interrogative.
+    <br>* AFFIRMATION: affirmative, negative.
+    <br>* NUMBER: singular, plural.
+    <br>* PERSON: first, second, third.
+    <br>· every individual-semasio-verb has one value for EVERY attribute, not just for some of them.
+    <a class="clsHide" href="#idLhmnsmsvrbattdsn"></a></p>
+  <p id="idLhmnsmsvrbattnam">name::
+    <br>* Mcs.lagHmn-semasio-verb'attribute,
+    <a class="clsHide" href="#idLhmnsmsvrbattnam"></a></p>
   </section>
   </section>
 
@@ -531,20 +560,51 @@
     <br>* <a class="clsPreview" href="filMcsLabc.last.html#idLabcltr">phonemogram-(letter)</a>,
     <br>* syllabogram,
     <br>* conceptogram,
+    <br>===
     <br>* term-unit,
     <br>* termNo-unit,
+    <br>===
+    <br>* lingo-name--unit,
+    <br>* lingo-name.no--unit,
     <a class="clsHide" href="#idLhmnuntSpc"></a></p>
+
+  <section id="idLhmnuntLgnm">
+  <h3 id="idLhmnuntLgnmH3">unit.lingo-name of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnuntLgnmH3"></a></h3>
+  <p id="idLhmnuntLgnmdsn">description::
+    <br>· lingo-name--unit of lagHmn is <a class="clsPreview" href="#idLhmnunt">a-unit</a> used to create <a class="clsPreview" href="#idLhmnsunt">lingo-names</a>, <a class="clsPreview" href="#idLhmnuntTrm">term</a> and <a class="clsPreview" href="#idLhmnuntTrmN">termNo</a>.
+    <a class="clsHide" href="#idLhmnuntLgnmdsn"></a></p>
+  <p id="idLhmnuntLgnmnam">name::
+    <br>* Mcs.lagHmn-unit.lingo-name,
+    <br>* Mcs.lingo-name--unit--of-lagHmn,
+    <a class="clsHide" href="#idLhmnuntLgnmnam"></a></p>
+  </section>
+
+  <section id="idLhmnuntLgnmN">
+  <h3 id="idLhmnuntLgnmNH3">unit.lingo-name.no of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnuntLgnmNH3"></a></h3>
+  <p id="idLhmnuntLgnmNdsn">description::
+    <br>· lingo-name.no--unit of lagHmn is <a class="clsPreview" href="#idLhmnunt">a-unit</a> NOT-used to create <a class="clsPreview" href="#idLhmnsunt">lingo-names</a>, such as denoting syntax of <a class="clsPreview" href="#idLhmnnode">nodes</a> or <a class="clsPreview" href="#idLhmnprlg">paralanguage</a>.
+    <a class="clsHide" href="#idLhmnuntLgnmNdsn"></a></p>
+  <p id="idLhmnuntLgnmNnam">name::
+    <br>* Mcs.lagHmn-unit.lingo-name.no,
+    <br>* Mcs.lingo-name.no--unit--of-lagHmn,
+    <a class="clsHide" href="#idLhmnuntLgnmNnam"></a></p>
+  </section>
 
   <section id="idLhmnuntTrm">
   <h3 id="idLhmnuntTrmH3">unit.term of lingo of lagHmn
     <a class="clsHide" href="#idLhmnuntTrmH3"></a></h3>
   <p id="idLhmnuntTrmdsn">description::
-    <br>· term-unit of lagHmn is any <a class="clsPreview" href="#idLhmnunt">unit</a> used to create its <a class="clsPreview" href="#idLhmnsunt">semantic-units</a>.
+    <br>· term-unit of lagHmn is any <a class="clsPreview" href="#idLhmnunt">unit</a> used to create its <a class="clsPreview" href="#idLhmnsuntTrm">term-semantic-units</a>.
     <a class="clsHide" href="#idLhmnuntTrmdsn"></a></p>
   <p id="idLhmnuntTrmnam">name::
     <br>* Mcs.lagHmn-unit.term,
     <br>* Mcs.term-unit--of-lagHmn,
     <a class="clsHide" href="#idLhmnuntTrmnam"></a></p>
+  <p id="idLhmnuntTrmSpc">specific::
+    <br>* ,
+    <a class="clsHide" href="#idLhmnuntTrmSpc"></a></p>
   </section>
 
   <section id="idLhmnuntTrmN">
@@ -755,7 +815,7 @@
     <br>* Mcs.lagHmn'semantic-unit!⇒lagHmn-lingo-name,
     <br>* Mcs.lagHmn-node.semantic-unit!⇒lagHmn-lingo-name,
     <br>* Mcs.lagHmn-lingo-name,
-    <br>* Mcs.lingo-name-of-lagHmn!⇒lagHmn-lingo-name,
+    <br>* Mcs.lingo-name--of-lagHmn!⇒lagHmn-lingo-name,
     <br>* Mcs.lingo-semantic-unit--of-lagHmn!⇒lagHmn-lingo-name,
     <br>* Mcs.semantic-unit--of-lagHmn!⇒lagHmn-lingo-name,
     <a class="clsHide" href="#idLhmnsuntnam"></a></p>
@@ -768,6 +828,9 @@
   <h3 id="idLhmnsuntSpcH3">lingo-name.SPECIFIC of lingo of lagHmn
     <a class="clsHide" href="#idLhmnsuntSpcH3"></a></h3>
   <p id="idLhmnsuntSpcdsn">description::
+    <br>* <a class="clsPreview" href="#idLhmnsuntTrm">term--lingo-name</a>,
+    <br>* <a class="clsPreview" href="#idLhmnsuntTrmN">termNo--lingo-name</a>,
+    <br>===
     <br>* <a class="clsPreview" href="#idLhmnverb">verb</a>,
     <br>* <a class="clsPreview" href="#idLhmnnoun">noun</a>,
     <br>* <a class="clsPreview" href="#idLhmncnjn">conjunction</a>,
@@ -777,11 +840,205 @@
     <a class="clsHide" href="#idLhmnsuntSpcnam"></a></p>
   </section>
 
+  <section id="idLhmnsuntScdnUnt">
+  <h3 id="idLhmnsuntScdnUntH3">lingo-name.specific-division.unit of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnsuntScdnUntH3"></a></h3>
+  <p id="idLhmnsuntScdnUntdsn">description::
+    <br>* term--lingo-name,
+    <br>* termNo--lingo-name,
+    <a class="clsHide" href="#idLhmnsuntScdnUntdsn"></a></p>
+  <p id="idLhmnsuntScdnUntnam">name::
+    <br>* Mcs.lagHmn-lingo-name.specific-division.unit,
+    <a class="clsHide" href="#idLhmnsuntScdnUntnam"></a></p>
+  </section>
+
+  <section id="idLhmnsuntGnrc">
+  <h3 id="idLhmnsuntGnrcH3">lingo-name.generic of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnsuntGnrcH3"></a></h3>
+  <p id="idLhmnsuntGnrcdsn">description::
+    <br>· generic-lingo-name of lagHmn is <a class="clsPreview" href="#idLhmnsunt">a-lingo-name</a> that denotes <a class="clsPreview" href="#idLhmnsmscptGnrc">a-semasio-generic-concept</a>.
+    <a class="clsHide" href="#idLhmnsuntGnrcdsn"></a></p>
+  <p id="idLhmnsuntGnrcnam">name::
+    <br>* Mcs.generic-lingo-name--of-lagHmn,
+    <br>* Mcs.lagHmn-lingo-name.generic,
+    <a class="clsHide" href="#idLhmnsuntGnrcnam"></a></p>
+  </section>
+
+  <section id="idLhmnsuntGnrcN">
+  <h3 id="idLhmnsuntGnrcNH3">lingo-name.genericNo of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnsuntGnrcNH3"></a></h3>
+  <p id="idLhmnsuntGnrcNdsn">description::
+    <br>· genericNo-lingo-name of lagHmn is <a class="clsPreview" href="#idLhmnsunt">a-lingo-name</a> that denotes <a class="clsPreview" href="#idLhmnsmscptGnrcN">a-semasio-genericNo-concept</a>.
+    <a class="clsHide" href="#idLhmnsuntGnrcNdsn"></a></p>
+  <p id="idLhmnsuntGnrcNnam">name::
+    <br>* Mcs.genericNo-lingo-name--of-lagHmn,
+    <br>* Mcs.lagHmn-lingo-name.genericNo,
+    <a class="clsHide" href="#idLhmnsuntGnrcNnam"></a></p>
+  </section>
+
+  <section id="idLhmnsuntTrm">
+  <h3 id="idLhmnsuntTrmH3">lingo-name.term of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnsuntTrmH3"></a></h3>
+  <p id="idLhmnsuntTrmdsn">description::
+    <br>· term-lingo-name of lagHmn is <a class="clsPreview" href="#idLhmnsunt">a-lingo-name</a> comprised of <a class="clsPreview" href="#idLhmnuntTrm">term-units</a> like phonemes, letters.
+    <a class="clsHide" href="#idLhmnsuntTrmdsn"></a></p>
+  <p id="idLhmnsuntTrmnam">name::
+    <br>* Mcs.lagHmn-lingo-name.term!⇒lagHmn-term,
+    <br>* Mcs.lagHmn-term,
+    <br>* Mcs.term-of-lagHmn!⇒lagHmn-term,
+    <a class="clsHide" href="#idLhmnsuntTrmnam"></a></p>
+  <p id="idLhmnsuntTrmSpc">specific::
+    <br>* <a class="clsPreview" href="#idLhmnverb">verb</a>,
+    <br>* <a class="clsPreview" href="#idLhmnnoun">noun</a>,
+    <br>* <a class="clsPreview" href="#idLhmncnjn">conjunction</a>,
+    <a class="clsHide" href="#idLhmnsuntTrmSpc"></a></p>
+  </section>
+
+  <section id="idLhmnsuntTrmN">
+  <h3 id="idLhmnsuntTrmNH3">lingo-name.termNo of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnsuntTrmNH3"></a></h3>
+  <p id="idLhmnsuntTrmNdsn">description::
+    <br>· termNo-lingo-name of lagHmn is <a class="clsPreview" href="#idLhmnsunt">a-lingo-name</a> NOT comprised of <a class="clsPreview" href="#idLhmnuntTrm">term-units</a>.
+    <a class="clsHide" href="#idLhmnsuntTrmNdsn"></a></p>
+  <p id="idLhmnsuntTrmNnam">name::
+    <br>* Mcs.lagHmn-lingo-name.termNo,
+    <br>* Mcs.termNo-lingo-name--of-lagHmn,
+    <br>* Mcs.termNo-semantic-unit--of-lagHmn,
+    <a class="clsHide" href="#idLhmnsuntTrmNnam"></a></p>
+  </section>
+
+  <section id="idLhmnnoun">
+  <h3 id="idLhmnnounH3">lingo-name.noun of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnnounH3"></a></h3>
+  <p id="idLhmnnoundsn">description::
+    <br>· noun of lagHmn is <a class="clsPreview" href="#idLhmnsuntTrm">a-term-semantic-unit</a> that denotes <a class="clsPreview" href="#idLhmnsmsnoun">a-semasio-noun</a>.
+    <a class="clsHide" href="#idLhmnnoundsn"></a></p>
+  <p id="idLhmnnounnam">name::
+    <br>* Mcs.lagHmn'noun!⇒lagHmn-noun,
+    <br>* Mcs.lagHmn-lingo-name.noun!⇒lagHmn-noun,
+    <br>* Mcs.lagHmn-noun,
+    <br>* Mcs.noun-of-lagHmn!⇒lagHmn-noun,
+    <a class="clsHide" href="#idLhmnnounnam"></a></p>
+
+  <section id="idLhmnnounSpc">
+  <h4 id="idLhmnnounSpcH4">noun.SPECIFIC of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnnounSpcH4"></a></h4>
+  <p id="idLhmnnounSpcdsn">description::
+    <br>* special-noun,
+    <br>* specialNo-noun,
+    <br>===
+    <br>* attributive-noun,
+    <br>* attributiveNo-noun,
+    <br>===
+    <br>* adjective,
+    <br>* adverb,
+    <br>===
+    <br>* case-noun,
+    <br>* caseNo-noun,
+    <br>===
+    <br>* generic-noun,
+    <br>* genericNo-noun,
+    <a class="clsHide" href="#idLhmnnounSpcdsn"></a></p>
+  <p id="idLhmnnounSpcnam">name::
+    <br>* Mcs.lagHmn-noun.specific,
+    <a class="clsHide" href="#idLhmnnounSpcnam"></a></p>
+  </section>
+
+  <section id="idLhmnnounSpl">
+  <h4 id="idLhmnnounSplH4">noun.special of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnnounSplH4"></a></h4>
+  <p id="idLhmnnounSpldsn">description::
+    <br>· special-noun of lagHmn is <a class="clsPreview" href="#idLhmnnoun">a-noun</a> that denotes <a class="clsPreview" href="#idLhmnsmsnounSpl">a-semasio-special-noun</a>.
+    <a class="clsHide" href="#idLhmnnounSpldsn"></a></p>
+  <p id="idLhmnnounSplnam">name::
+    <br>* Mcs.lagHmn-noun.special,
+    <br>* Mcs.pronoun-of-lagHmn,
+    <br>* Mcs.special-noun--of-lagHmn,
+    <a class="clsHide" href="#idLhmnnounSplnam"></a></p>
+  </section>
+
+  <section id="idLhmnnounSplN">
+  <h4 id="idLhmnnounSplNH4">noun.specialNo of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnnounSplNH4"></a></h4>
+  <p id="idLhmnnounSplNdsn">description::
+    <br>· specialNo-noun of lagHmn is <a class="clsPreview" href="#idLhmnnoun">a-noun</a> that denotes <a class="clsPreview" href="#idLhmnsmsnounSplN">a-semasio-specialNo-noun</a>.
+    <a class="clsHide" href="#idLhmnnounSplNdsn"></a></p>
+  <p id="idLhmnnounSplNnam">name::
+    <br>* Mcs.lagHmn-noun.specialNo,
+    <br>* Mcs.ordinary-noun-of-lagHmn,
+    <br>* Mcs.specialNo-noun--of-lagHmn,
+    <a class="clsHide" href="#idLhmnnounSplNnam"></a></p>
+  </section>
+
+  <section id="idLhmnnounCase">
+  <h4 id="idLhmnnounCaseH4">noun.case of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnnounCaseH4"></a></h4>
+  <p id="idLhmnnounCasedsn">description::
+    <br>· case-noun of lagHmn is <a class="clsPreview" href="#idLhmnnoun">a-noun</a> that denotes <a class="clsPreview" href="#idLhmnsmsnoun">a-semasio-noun[a]</a> and <a class="clsPreview" href="#idLhmnsmscnjn">a-semasio-conjunction</a> of it[a].
+    <a class="clsHide" href="#idLhmnnounCasedsn"></a></p>
+  <p id="idLhmnnounCasenam">name::
+    <br>* Mcs.lagHmn-noun.case,
+    <br>* Mcs.case-noun--of-lagHmn,
+    <a class="clsHide" href="#idLhmnnounCasenam"></a></p>
+  </section>
+
+  <section id="idLhmnnounCaseN">
+  <h4 id="idLhmnnounCaseNH4">noun.caseNo of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnnounCaseNH4"></a></h4>
+  <p id="idLhmnnounCaseNdsn">description::
+    <br>· caseNo-noun of lagHmn is <a class="clsPreview" href="#idLhmnnoun">a-noun</a> that denotes <a class="clsPreview" href="#idLhmnsmsnoun">a-semasio-noun[a]</a> and NOT <a class="clsPreview" href="#idLhmnsmscnjn">a-semasio-conjunction</a> of it[a].
+    <a class="clsHide" href="#idLhmnnounCaseNdsn"></a></p>
+  <p id="idLhmnnounCaseNnam">name::
+    <br>* Mcs.lagHmn-noun.caseNo,
+    <br>* Mcs.caseNo-noun--of-lagHmn,
+    <a class="clsHide" href="#idLhmnnounCaseNnam"></a></p>
+  </section>
+
+  <section id="idLhmnnounAttv">
+  <h4 id="idLhmnnounAttvH4">noun.attributive of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnnounAttvH4"></a></h4>
+  <p id="idLhmnnounAttvdsn">description::
+    <br>· attributive-noun of lagHmn is <a class="clsPreview" href="#idLhmnnounCase">a-case-noun</a> which has an-attribute-relation with another semasio-concept.
+    <a class="clsHide" href="#idLhmnnounAttvdsn"></a></p>
+  <p id="idLhmnnounAttvnam">name::
+    <br>* Mcs.lagHmn-noun.attributive!⇒lagHmn-attributive-noun,
+    <br>* Mcs.attributive-noun--of-lagHmn!⇒lagHmn-attributive-noun,
+    <br>* Mcs.lagHmn-attributive-noun,
+    <a class="clsHide" href="#idLhmnnounAttvnam"></a></p>
+
+  <section id="idLhmnnounAdjv">
+  <h5 id="idLhmnnounAdjvH5">attributive-noun.adjective of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnnounAdjvH5"></a></h5>
+  <p id="idLhmnnounAdjvdsn">description::
+    <br>· adjective of lagHmn is <a class="clsPreview" href="#idLhmnnounAttv">an-attributive-noun</a> which is an-attribute of <a class="clsPreview" href="#idLhmnsmsnoun">a-semasio-noun</a>.
+    <a class="clsHide" href="#idLhmnnounAdjvdsn"></a></p>
+  <p id="idLhmnnounAdjvnam">name::
+    <br>* Mcs.adjective-of-lagHmn!⇒lagHmn-adjective,
+    <br>* Mcs.lagHmn'adjective!⇒lagHmn-adjective,
+    <br>* Mcs.lagHmn-adjective,
+    <a class="clsHide" href="#idLhmnnounAdjvnam"></a></p>
+  </section>
+
+  <section id="idLhmnnounAdvb">
+  <h5 id="idLhmnnounAdvbH5">attributive-noun.adverb of lingo of lagHmn
+    <a class="clsHide" href="#idLhmnnounAdvbH5"></a></h5>
+  <p id="idLhmnnounAdvbdsn">description::
+    <br>· adverb of lagHmn is <a class="clsPreview" href="#idLhmnnounAttv">an-attributive-noun</a> which is an-attribute of <a class="clsPreview" href="#idLhmnsmsverb">a-semasio-verb</a>.
+    <a class="clsHide" href="#idLhmnnounAdvbdsn"></a></p>
+  <p id="idLhmnnounAdvbnam">name::
+    <br>* Mcs.adverb-of-lagHmn!⇒lagHmn-adverb,
+    <br>* Mcs.lagHmn'adverb!⇒lagHmn-adverb,
+    <br>* Mcs.lagHmn-adverb,
+    <a class="clsHide" href="#idLhmnnounAdvbnam"></a></p>
+  </section>
+  </section>
+  </section>
+
   <section id="idLhmnverb">
   <h3 id="idLhmnverbH3">lingo-name.verb of lingo of lagHmn
     <a class="clsHide" href="#idLhmnverbH3"></a></h3>
   <p id="idLhmnverbdsn">description::
-    <br>· verb of lagHmn is <a class="clsPreview" href="#idLhmnsunt">a-semantic-unit</a> that denotes <a class="clsPreview" href="#idLhmnsmsverb">a-semasio-verb</a>.
+    <br>· verb of lagHmn is <a class="clsPreview" href="#idLhmnsuntTrm">a-term-semantic-unit</a> that denotes <a class="clsPreview" href="#idLhmnsmsverb">a-semasio-verb</a>.
     <a class="clsHide" href="#idLhmnverbdsn"></a></p>
   <p id="idLhmnverbnam">name::
     <br>* Mcs.lagHmn'verb!⇒lagHmn-verb,
@@ -791,25 +1048,11 @@
     <a class="clsHide" href="#idLhmnverbnam"></a></p>
   </section>
 
-  <section id="idLhmnnoun">
-  <h3 id="idLhmnnounH3">lingo-name.noun of lingo of lagHmn
-    <a class="clsHide" href="#idLhmnnounH3"></a></h3>
-  <p id="idLhmnnoundsn">description::
-    <br>· noun of lagHmn is <a class="clsPreview" href="#idLhmnsunt">a-semantic-unit</a> that denotes <a class="clsPreview" href="#idLhmnsmsnoun">a-semasio-noun</a>.
-    <a class="clsHide" href="#idLhmnnoundsn"></a></p>
-  <p id="idLhmnnounnam">name::
-    <br>* Mcs.lagHmn'noun!⇒lagHmn-noun,
-    <br>* Mcs.lagHmn-lingo-name.noun!⇒lagHmn-noun,
-    <br>* Mcs.lagHmn-noun,
-    <br>* Mcs.noun-of-lagHmn!⇒lagHmn-noun,
-    <a class="clsHide" href="#idLhmnnounnam"></a></p>
-  </section>
-
   <section id="idLhmncnjn">
   <h3 id="idLhmncnjnH3">lingo-name.conjunction of lingo of lagHmn
     <a class="clsHide" href="#idLhmncnjnH3"></a></h3>
   <p id="idLhmncnjndsn">description::
-    <br>· conjunction of lagHmn is <a class="clsPreview" href="#idLhmnsunt">a-semantic-unit</a> that denotes <a class="clsPreview" href="#idLhmnsmscnjn">a-semasio-conjunction</a>.
+    <br>· conjunction of lagHmn is <a class="clsPreview" href="#idLhmnsuntTrm">a-term-semantic-unit</a> that denotes <a class="clsPreview" href="#idLhmnsmscnjn">a-semasio-conjunction</a>.
     <a class="clsHide" href="#idLhmncnjndsn"></a></p>
   <p id="idLhmncnjnnam">name::
     <br>* Mcs.conjunction-of-lagHmn!⇒lagHmn-conjunction,
