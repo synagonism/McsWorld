@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-6-4.2019-08-09: github,
  * version.0-6-3.2019-07-30: idOverview,
  * version.0-6-2.2019-06-29: misc,
  * version.0-6-1.2019-05-05: misc,
@@ -153,13 +154,14 @@ s = s +
   '    <br>• author: <a class="clsPreview" href="../../#idAboutme">Kaseluris.Nikos.1959</a>\n' +
   '    <br>• email:\n' +
   '    <br> &nbsp;<img src="../../misc/img/mail.png" alt="imgMail">\n' +
-  '    <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>\n' +
-  '    <br>• steemit: <a href="https://steemit.com/synagonism">https://steemit.com/@synagonism</a>\n' +
+  '    <br>• edit on github: https://github.com/synagonism/Mcsw/blob/master/' + sDir +'/filMcs' + sNFil + '.last.html,\n' +
+  '    <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>,\n' +
+  '    <br>• steemit: <a href="https://steemit.com/synagonism">https://steemit.com/@synagonism</a>,\n' +
   '    <a class="clsHide" href="#idFooterP1"></a></p>\n' +
   '  <!--                              -->\n' +
   '  <p id="idMetaVersion">webpage-versions::\n' +
   '    <br>• version.last.dynamic: <a href="filMcs' + sNFil + '.last.html">filMcs' + sNFil + '.last.html</a>,\n' +
-  '    <br>• version.0-1-0.' + moUtil.fDateYMD() + ' draft creation,' +
+  '    <br>• version.0-1-0.' + moUtil.fDateYMD() + ' draft creation,\n' +
   '    <a class="clsHide" href="#idMetaVersion"></a></p>\n' +
   '</section>\n' +
   '\n' +

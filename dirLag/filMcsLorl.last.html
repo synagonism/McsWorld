@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.oral--human-language (lagOrl.0-4-0.2019-08-06 draft)</title>
+  <title>Mcs.oral--human-language (lagOrl.0-6-0.2019-08-10 draft)</title>
   <meta name="keywords" content="oral--human-language, lagOrl, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -108,16 +108,16 @@
     <a class="clsHide" href="#idLorluntgncchn"></a></p>
   <p id="idLorluntSpc">specific::
     <br>* <a class="clsPreview" href="#idLorlphnm">term-unit</a>,
-    <br>* termNo-unit,
+    <br>* <a class="clsPreview" href="#idLorluntTrmN">termNo-unit</a>,
     <a class="clsHide" href="#idLorluntSpc"></a></p>
 
   <section id="idLorlphnm">
-  <h3 id="idLorlphnmH3">phoneme of speech of lagOrl
+  <h3 id="idLorlphnmH3">unit.term-(phoneme) of speech of lagOrl
     <a class="clsHide" href="#idLorlphnmH3"></a></h3>
   <p id="idLorlphnmdsn">description::
-    <br>· phoneme of lagOrl is its <a class="clsPreview" href="filMcsLhmn.last.html#idLhmnuntTrm">term-unit</a>.
     <br>· phoneme is a-set of sounds that distinguish words (i.e. changing one phoneme in a-word can-produce another word).
-    <br>· <a class="clsPreview" href="#idLorlphnmPhn">phone</a> is an-instance of a-phoneme.
+    <br>· phoneme of lagOrl is its <a class="clsPreview" href="filMcsLhmn.last.html#idLhmnuntTrm">term-unit</a>.
+    <br>· <a class="clsPreview" href="#idLorlphnmPhn">phone</a> is an-individual phoneme.
     <br>· <a class="clsPreview" href="#idLorlphnmAlphn">allophone</a> is the-phones of one phoneme.
     <br>· a-phoneme is-symbolized as /p/
     <a class="clsHide" href="#idLorlphnmdsn"></a></p>
@@ -126,6 +126,7 @@
     <br>* Mcs.lagOrl-unit.phoneme!⇒lagOrl-phoneme,
     <br>* Mcs.lagOrl-unit.term!⇒lagOrl-phoneme,
     <br>* Mcs.lagOrl-phoneme,
+    <br>* Mcs.generic-phone--of-lagOrl!⇒lagOrl-phoneme,
     <br>* Mcs.main-unit--of-lagOrl!⇒lagOrl-phoneme,
     <br>* Mcs.phoneme-of-lagOrl!⇒lagOrl-phoneme,
     <br>* Mcs.speech-unit-of-lagOrl!⇒lagOrl-phoneme,
@@ -239,6 +240,7 @@
     <br>· a-phone is-symbolized as [p].
     <a class="clsHide" href="#idLorlphnmPhndsn"></a></p>
   <p id="idLorlphnmPhnnam">name::
+    <br>* Mcs.individual-phoneme--of-lagOrl!⇒lagOrl-phone,
     <br>* Mcs.lagOrl'phone!⇒lagOrl-phone,
     <br>* Mcs.lagOrl-phone,
     <br>* Mcs.lagOrl-phoneme.phone!⇒lagOrl-phone,
@@ -419,6 +421,84 @@
     <br>* Mcs.lagOrl-consonant'voiceness,
     <a class="clsHide" href="#idLorlphnmVwlNvoicnam"></a></p>
   </section>
+
+  <section id="idLorlphnmAfrt">
+  <h5 id="idLorlphnmAfrtH5">consonant.affricat of speech of lagOrl
+    <a class="clsHide" href="#idLorlphnmAfrtH5"></a></h5>
+  <p id="idLorlphnmAfrtdsn">description::
+    <br>"An affricate is a consonant that begins as a stop and releases as a fricative, generally with the same place of articulation (most often coronal). It is often difficult to decide if a stop and fricative form a single phoneme or a consonant pair. English has two affricate phonemes, /t͡ʃ/ and /d͡ʒ/, often spelled ch and j, respectively."
+    <br>[https://en.wikipedia.org/wiki/Affricate_consonant {2019-08-10}]
+    <a class="clsHide" href="#idLorlphnmAfrtdsn"></a></p>
+  <p id="idLorlphnmAfrtnam">name::
+    <br>* Mcs.affricat-consonant--of-lagOrl,
+    <br>* Mcs.lagOrl-consonant.affricat,
+    <a class="clsHide" href="#idLorlphnmAfrtnam"></a></p>
+  </section>
+
+  <section id="idLorlphnmApxt">
+  <h5 id="idLorlphnmApxtH5">consonant.aproximant of speech of lagOrl
+    <a class="clsHide" href="#idLorlphnmApxtH5"></a></h5>
+  <p id="idLorlphnmApxtdsn">description::
+    <br>"Approximants are speech sounds that involve the articulators approaching each other but not narrowly enough nor with enough articulatory precision to create turbulent airflow. Therefore, approximants fall between fricatives, which do produce a turbulent airstream, and vowels, which produce no turbulence. This class is composed of sounds like [ɹ] (as in rest) and semivowels like [j] and [w] (as in yes and west, respectively), as well as lateral approximants like [l] (as in less)."
+    <br>[https://en.wikipedia.org/wiki/Approximant_consonant {2019-08-10}]
+    <a class="clsHide" href="#idLorlphnmApxtdsn"></a></p>
+  <p id="idLorlphnmApxtnam">name::
+    <br>* Mcs.aproximant-consonant--of-lagOrl,
+    <br>* Mcs.lagOrl-consonant.aproximant,
+    <a class="clsHide" href="#idLorlphnmApxtnam"></a></p>
+  </section>
+
+  <section id="idLorlphnmFrtv">
+  <h5 id="idLorlphnmFrtvH5">consonant.fricative of speech of lagOrl
+    <a class="clsHide" href="#idLorlphnmFrtvH5"></a></h5>
+  <p id="idLorlphnmFrtvdsn">description::
+    <br>"Fricatives are consonants produced by forcing air through a narrow channel made by placing two articulators close together. These may be the lower lip against the upper teeth, in the case of [f]; the back of the tongue against the soft palate, in the case of German [x] (the final consonant of Bach); or the side of the tongue against the molars, in the case of Welsh [ɬ] (appearing twice in the name Llanelli). This turbulent airflow is called frication.
+    <br>A particular subset of fricatives are the sibilants. When forming a sibilant, one still is forcing air through a narrow channel, but in addition, the tongue is curled lengthwise to direct the air over the edge of the teeth[1]. English [s], [z], [ʃ], and [ʒ] are examples of sibilants.
+    <br>The usage of two other terms is less standardized: "Spirant" is an older term for fricatives used by some American and European phoneticians and phonologists. "Strident" could mean just "sibilant", but some authors[who?] include also labiodental and uvular fricatives in the class."
+    <br>[https://en.wikipedia.org/wiki/Fricative_consonant {2019-08-10}]
+    <a class="clsHide" href="#idLorlphnmFrtvdsn"></a></p>
+  <p id="idLorlphnmFrtvnam">name::
+    <br>* Mcs.fricative-consonant--of-lagOrl,
+    <br>* Mcs.lagOrl-consonant.fricative,
+    <a class="clsHide" href="#idLorlphnmFrtvnam"></a></p>
+  </section>
+
+  <section id="idLorlphnmNsl">
+  <h5 id="idLorlphnmNslH5">consonant.nasal of speech of lagOrl
+    <a class="clsHide" href="#idLorlphnmNslH5"></a></h5>
+  <p id="idLorlphnmNsldsn">description::
+    <br>"In phonetics, a nasal, also called a nasal occlusive, nasal stop in contrast with a nasal fricative or nasal continuant, is an occlusive consonant produced with a lowered velum, allowing air to escape freely through the nose. The vast majority of consonants are oral consonants. Examples of nasals in English are [n], [ŋ] and [m], in words such as nose, bring and mouth. Nasal occlusives are nearly universal in human languages. There are also other kinds of nasal consonants in some languages."
+    <br>[https://en.wikipedia.org/wiki/Nasal_consonant {2019-08-10}]
+    <a class="clsHide" href="#idLorlphnmNsldsn"></a></p>
+  <p id="idLorlphnmNslnam">name::
+    <br>* Mcs.lagOrl-consonant.nasal,
+    <br>* Mcs.nasal-consonant--of-lagOrl,
+    <a class="clsHide" href="#idLorlphnmNslnam"></a></p>
+
+  <section id="idLorlphnmM">
+  <h6 id="idLorlphnmMH6">consonant.m of speech of lagOrl
+    <a class="clsHide" href="#idLorlphnmMH6"></a></h6>
+  <p id="idLorlphnmMdsn">description::
+    <br>· voiced bilabial nasal	[m]
+    <a class="clsHide" href="#idLorlphnmMdsn"></a></p>
+  <p id="idLorlphnmMnam">name::
+    <br>* Mcs.lagOrl-consonant.m!⇒lagOrl-m,
+    <br>* Mcs.lagOrl-m,
+    <a class="clsHide" href="#idLorlphnmMnam"></a></p>
+  </section>
+
+  <section id="idLorlphnmN">
+  <h6 id="idLorlphnmNH6">consonant.n of speech of lagOrl
+    <a class="clsHide" href="#idLorlphnmNH6"></a></h6>
+  <p id="idLorlphnmNdsn">description::
+    <br>· voiced alveolar nasal	[n]
+    <a class="clsHide" href="#idLorlphnmNdsn"></a></p>
+  <p id="idLorlphnmNnam">name::
+    <br>* Mcs.lagOrl-consonant.n!⇒lagOrl-n,
+    <br>* Mcs.lagOrl-n,
+    <a class="clsHide" href="#idLorlphnmNnam"></a></p>
+  </section>
+  </section>
   </section>
 
   <section id="idLorlphnmVwlB">
@@ -597,6 +677,33 @@
   </section>
 </section>
 
+<section id="idLorldngFT">
+  <h1 id="idLorldngFTH1">DOING of lagOrl
+    <a class="clsHide" href="#idLorldngFTH1"></a></h1>
+  <p id="idLorldngnam">name::
+    <br>* Mcs.lagOrl'doing,
+    <a class="clsHide" href="#idLorldngnam"></a></p>
+  <p id="idLorldnggncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsLhmn.last.html#idLhmndng">lagHmn-doing</a>,
+    <a class="clsHide" href="#idLorldnggncchn"></a></p>
+  <p id="idLorldngSpc">specific::
+    <br>* main-functing,
+    <br>* evoluting,
+    <br>* pronunciation,
+    <a class="clsHide" href="#idLorldngSpc"></a></p>
+
+  <section id="idLorlprcn">
+  <h2 id="idLorlprcnH2">doing.pronunciation of lagOrl
+    <a class="clsHide" href="#idLorlprcnH2"></a></h2>
+  <p id="idLorlprcndsn">description::
+    <br>· pronunciation of lagOrl is its <a class="clsPreview" href="filMcsLhmn.last.html#idLhmndngImpn">lagHmn-implementation</a>.
+    <a class="clsHide" href="#idLorlprcndsn"></a></p>
+  <p id="idLorlprcnnam">name::
+    <br>* Mcs.lagOrl'pronunciation,
+    <a class="clsHide" href="#idLorlprcnnam"></a></p>
+  </section>
+</section>
+
 <section id="idLorlevgFT">
   <h1 id="idLorlevgFTH1">EVOLUTING of lagOrl
     <a class="clsHide" href="#idLorlevgFTH1"></a></h1>
@@ -663,13 +770,15 @@
     <br>• author: <a class="clsPreview" href="../../#idAboutme">Kaseluris.Nikos.1959</a>
     <br>• email:
     <br> &nbsp;<img src="../../misc/img/mail.png" alt="imgMail">
+    <br>• github: https://github.com/synagonism/Mcsw/blob/master/dirLag/filMcsLorl.last.html,
     <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>
     <br>• steemit: <a href="https://steemit.com/synagonism">https://steemit.com/@synagonism</a>
     <a class="clsHide" href="#idFooterP1"></a></p>
   <!--                              -->
   <p id="idMetaVersion">webpage-versions::
     <br>• version.last.dynamic: <a href="filMcsLorl.last.html">filMcsLorl.last.html</a>,
-    <br>• version.0-1-0.2019-08-02 draft creation,    <a class="clsHide" href="#idMetaVersion"></a></p>
+    <br>• version.0-1-0.2019-08-02 draft creation,
+    <a class="clsHide" href="#idMetaVersion"></a></p>
 </section>
 
 <section id="idSupport">
