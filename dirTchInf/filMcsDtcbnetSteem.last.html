@@ -3708,28 +3708,28 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
 
-     function fDateYMD(nUnix) {
-       var
-         oD, sY, sM, sD, sTh, sTm, sTs, a;
-       if (nUnix) {
-         oD = new Date(nUnix * 1000)
-       } else {
-         oD = new Date();
+    function fDateYMD(nUnix) {
+      var
+        oD, sY, sM, sD, sTh, sTm, sTs, a;
+      if (nUnix) {
+        oD = new Date(nUnix * 1000)
+      } else {
+        oD = new Date();
+      }
+      sY = oD.getFullYear().toString();
+      sM = (oD.getMonth() + 1).toString();
+      sD = oD.getDate().toString();
+      sTh = (oD.getHours()).toString();
+      sTm = (oD.getMinutes()).toString();
+      sTs = (oD.getSeconds()).toString();
+      a = [sM, sD, sTh, sTm, sTs];
+      for (var n in a) {
+       if (a[n].length === 1) {
+         a[n] = "0" + a[n];
        }
-       sY = oD.getFullYear().toString();
-       sM = (oD.getMonth() + 1).toString();
-       sD = oD.getDate().toString();
-       sTh = (oD.getHours()).toString();
-       sTm = (oD.getMinutes()).toString();
-       sTs = (oD.getSeconds()).toString();
-       a = [sM, sD, sTh, sTm, sTs];
-       for (var n in a) {
-         if (a[n].length === 1) {
-           a[n] = "0" + a[n];
-         }
-       }
-       return sY + "-" + a[0] + "-" + a[1] + ' ' + a[2] + ':' + a[3] + ':' + a[4];
-     }
+      }
+      return sY + "-" + a[0] + "-" + a[1] + ' ' + a[2] + ':' + a[3] + ':' + a[4];
+    }
 
     // *** BLOCK *** //
     //get account'attribute
