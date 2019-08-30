@@ -171,6 +171,12 @@ for (n = 0; n < aFilMcsIn.length; n++) {
               fStoreNULetter(aNU, sChar, aLag[nL])
             }
           }
+        } else if (aLag[nL] === 'lagKmo') {
+          if (sLn.startsWith('    <br>* McsKmo.')) {
+            aNU = [sLn.substring(sLn.indexOf('* McsKmo.')+9, sLn.indexOf(',')), sUrl]
+            sChar = sLn.charAt(sLn.indexOf('* McsKmo.')+9).toUpperCase()
+            fStoreNULetter(aNU, sChar, aLag[nL])
+          }
         } else if (aLag[nL] === 'lagEll') {
           if (sLn.startsWith('    <br>* ενν.')
            || sLn.startsWith('    <br>* McsEll.')
