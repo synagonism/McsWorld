@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.English--human-language (lagEng.0-21-0.2019-08-31 draft)</title>
+  <title>Mcs.English--human-language (lagEng.0-22-0.2019-09-01 draft)</title>
   <meta name="keywords" content="English--human-language, lagEng, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -488,9 +488,39 @@
     <br>* <a class="clsPreview" href="#idLengphnm">term-unit</a>,
     <br>* termNo-unit,
     <br>===
-    <br>* oral-unit,
-    <br>* alphabetic-unit,
+    <br>* <a class="clsPreview" href="#idLengphnm">phoneme</a>,
+    <br>* <a class="clsPreview" href="#idLengltr">letter</a>,
     <a class="clsHide" href="#idLenguntSpc"></a></p>
+
+  <section id="idLenguntTrm">
+  <h3 id="idLenguntTrmH3">unitLigEng.term
+    <a class="clsHide" href="#idLenguntTrmH3"></a></h3>
+  <p id="idLenguntTrmdsn">description::
+    <br>· term-unit of lagEng is any <a class="clsPreview" href="filMcsLhmn.last.html#idLhmnuntTrm">human-term-unit</a>.
+    <br>· the-main units that create its <a class="clsPreview" href="#idLengopt">output</a> (speech or text).
+    <a class="clsHide" href="#idLenguntTrmdsn"></a></p>
+  <p id="idLenguntTrmnam">name::
+    <br>* Mcs.lagEng-unit.term,
+    <a class="clsHide" href="#idLenguntTrmnam"></a></p>
+  <p id="idLenguntTrmgncchn">generic-chain::
+    <br>* human-term-unit,
+    <a class="clsHide" href="#idLenguntTrmgncchn"></a></p>
+  <p id="idLenguntTrmSpc">specific::
+    <br>* English-phoneme,
+    <br>* English-letter,
+    <a class="clsHide" href="#idLenguntTrmSpc"></a></p>
+  </section>
+
+  <section id="idLenguntTrmN">
+  <h3 id="idLenguntTrmNH3">unitLigEng.termNo
+    <a class="clsHide" href="#idLenguntTrmNH3"></a></h3>
+  <p id="idLenguntTrmNdsn">description::
+    <br>· termNo-unit of lagEng is any other unit except <a class="clsPreview" href="#idLenguntTrm">term-unit</a>.
+    <a class="clsHide" href="#idLenguntTrmNdsn"></a></p>
+  <p id="idLenguntTrmNnam">name::
+    <br>* Mcs.lagEng-unit.termNo,
+    <a class="clsHide" href="#idLenguntTrmNnam"></a></p>
+  </section>
 
   <section id="idLengphnm">
   <h3 id="idLengphnmH3">unitLigEng.phoneme of speech
@@ -595,36 +625,6 @@
     <br>* A a B b C c D d E e F f G g H h I i J j K k L l M m N n O o P p Q q R r S s T t U u V v W w X x Y y Z z.
     <a class="clsHide" href="#idLengltrSpc"></a></p>
   </section>
-
-  <section id="idLenguntTrm">
-  <h3 id="idLenguntTrmH3">unitLigEng.term
-    <a class="clsHide" href="#idLenguntTrmH3"></a></h3>
-  <p id="idLenguntTrmdsn">description::
-    <br>· term of lagEng is any <a class="clsPreview" href="filMcsLhmn.last.html#idLhmnuntTrm">lagHmn-term</a>.
-    <br>· the-main units that create its <a class="clsPreview" href="#idLengopt">output</a> (speech or text).
-    <a class="clsHide" href="#idLenguntTrmdsn"></a></p>
-  <p id="idLenguntTrmnam">name::
-    <br>* Mcs.lagEng-unit.term,
-    <a class="clsHide" href="#idLenguntTrmnam"></a></p>
-  <p id="idLenguntTrmgncchn">generic-chain::
-    <br>* lagHmn-term-unit,
-    <a class="clsHide" href="#idLenguntTrmgncchn"></a></p>
-  <p id="idLenguntTrmSpc">specific::
-    <br>* English-phoneme,
-    <br>* English-letter,
-    <a class="clsHide" href="#idLenguntTrmSpc"></a></p>
-  </section>
-
-  <section id="idLenguntTrmN">
-  <h3 id="idLenguntTrmNH3">unitLigEng.termNo
-    <a class="clsHide" href="#idLenguntTrmNH3"></a></h3>
-  <p id="idLenguntTrmNdsn">description::
-    <br>· termNo-unit of lagEng is any other unit except <a class="clsPreview" href="#idLengphnm">phonemes</a>.
-    <a class="clsHide" href="#idLenguntTrmNdsn"></a></p>
-  <p id="idLenguntTrmNnam">name::
-    <br>* Mcs.lagEng-unit.termNo,
-    <a class="clsHide" href="#idLenguntTrmNnam"></a></p>
-  </section>
   </section>
 
   <section id="idLengutsr">
@@ -653,12 +653,14 @@
     <br>· lingo-word of lagEng is <a class="clsPreview" href="#idLengnode">a-output-node</a> that is a-structure of <a class="clsPreview" href="filMcsLhmn.last.html#idLhmnuntTrm">term-units</a>.
     <a class="clsHide" href="#idLengwrddsn"></a></p>
   <p id="idLengwrdnam">name::
-    <br>* Mcs.English-word!⇒wordLigEng,
-    <br>* Mcs.lagEng'word!⇒wordLigEng,
-    <br>* Mcs.lagEng-node.word!⇒wordLigEng,
-    <br>* Mcs.lagEng-word!⇒wordLigEng,
-    <br>* Mcs.word-of-lagEng!⇒wordLigEng,
-    <br>* Mcs.wordLigEng,
+    <br>* Mcs.English-word!⇒wordEng,
+    <br>* Mcs.lagEng'word!⇒wordEng,
+    <br>* Mcs.lagEng-node.word!⇒wordEng,
+    <br>* Mcs.lagEng-word!⇒wordEng,
+    <br>* Mcs.lingo-word--of-lagEng!⇒wordEng,
+    <br>* Mcs.word-of-lagEng!⇒wordEng,
+    <br>* Mcs.wordLigEng!⇒wordEng,
+    <br>* Mcs.wordEng,
     <a class="clsHide" href="#idLengwrdnam"></a></p>
   <p id="idLengwrdgncchn">generic-chain::
     <br>* <a class="clsPreview" href="filMcsLhmn.last.html#idLhmnwrd">lagHmn-word</a>,
@@ -911,7 +913,7 @@
   <h4 id="idLengnunAttCasH4">nounLigEng.case
     <a class="clsHide" href="#idLengnunAttCasH4"></a></h4>
   <p id="idLengnunAttCasdsn">description::
-    <br>· lingo-ordinary-case of lagEng is <a class="clsPreview" href="filMcsLhmn.last.html#idLhmnnunCaseSplN">a-human-ordinary-case</a> of lagEng.
+    <br>· lingo-ordinary-case of lagEng is <a class="clsPreview" href="filMcsLhmn.last.html#idLhmnnunCasSplN">a-human-ordinary-case</a> of lagEng.
     <br>· English has one ordinary-case: the-possessive that denotes <a class="clsPreview" href="filMcsLhmn.last.html#idLhmnsmsnunCasPos">a-semasio-possessive-case</a>.
     <a class="clsHide" href="#idLengnunAttCasdsn"></a></p>
   <p id="idLengnunAttCasnam">name::
@@ -7244,6 +7246,7 @@
     <br>• email:
     <br> &nbsp;<img src="../../misc/img/mail.png" alt="imgMail">
     <br>• edit on github: https://github.com/synagonism/Mcsw/blob/master/dirLag/filMcsLeng.last.html,
+    <br>• comments on <a class="clsPreview" href="filMcsdirLag.last.html#idComment">Disqus</a>,
     <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>
     <br>• steemit: <a href="https://steemit.com/synagonism">https://steemit.com/@synagonism</a>
     <a class="clsHide" href="#idFooterP1"></a></p>
