@@ -1,10 +1,11 @@
 /**
- * Create filMcsName.last.html with NO disqus-comments.
+ * Create filMcsName.last.html with disqus-comments on filMcsDirNam.last.html
  *
  * Input:
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-7-0.2019-09-06: comments on filMcsDirNam,
  * version.0-6-4.2019-08-09: github,
  * version.0-6-3.2019-07-30: idOverview,
  * version.0-6-2.2019-06-29: misc,
@@ -32,15 +33,16 @@ var
   bCounter = true,
   bDisqus = false,
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirLag',
+  sDir = 'dirCor',
+  sDIR = 'DirCor',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'alphabetic-language',
-  //4. SHORT-name: DnChain, DnEth, Dchain-net,
-  sNS = 'lagAbc',
+  sN = 'entity',
+  //4. SHORT-name: DnChain, DnEth, Dchain-net, lagKmo,
+  sNS = 'entity',
   //5. FILE-name: shows relation of another file: DnLbr, DtcbnetEth
-  sNFil = 'Labc',
+  sNFil = 'Ent',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Labc';
+  sNId = 'Ent';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -49,14 +51,14 @@ s =
   '  <meta charset="utf-8">\n' +
   '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
   '  <title>Mcs.' + sN + ' (' + sNS + '.0-1-0.' + moUtil.fDateYMD() + ' draft)</title>\n' +
-  '  <meta name="keywords" content="' + sN + ', ' + sNS + ', ModelConceptStructured, McsHitp, Synagonism">\n' +
+  '  <meta name="keywords" content="' + sN + ', ' + sNS + ', ModelConceptSensorial, McsHitp, Synagonism">\n' +
   '  <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">\n' +
   '</head>\n' +
   '\n' +
   '<body>\n' +
   '<header id="idHeader">\n' +
   '  <p></p>\n' +
-  '  <h1 id="idHeaderH1">' + sN + ' structured-concept-Mcs\n' +
+  '  <h1 id="idHeaderH1">' + sN + ' sensorial-concept-Mcs\n' +
   '    <br>' +  '(' + sNS + ')\n' +
   '    </h1>\n' +
   '  <p id="idHeadercrd">McsHitp-creation: {' + moUtil.fDateYMD() + '}\n' +
@@ -138,14 +140,14 @@ s = s +
   '  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-path</span>:\n' +
   '    <a class="clsPreview" href="../../#idOverview">synagonism.net</a> /\n' +
   '    <a class="clsPreview" href="../filMcsWorld.last.html#idOverview">Mcs-worldview</a> /\n' +
-  '    <a class="clsPreview" href="filMcs' + sDir + '.last.html#idOverview">' + sDir + '</a> /\n' +
+  '    <a class="clsPreview" href="filMcs' + sDIR + '.last.html#idOverview">' + sDir + '</a> /\n' +
   '    ' + sNS + '\n' +
   '    </p>\n' +
   '  <p id="idMetaP1">SEARCH::\n' +
   '    <br>· this page uses \'<span class="clsColorRed">locator-names</span>\', names that when you find them, you find the-LOCATION of the-concept they denote.\n' +
   '    <br>⊛ <strong>GLOBAL-SEARCH</strong>:\n' +
   '    <br>· clicking on <span class="clsColorGreenBg">the-green-BAR of a-page</span> you have access to the-global--locator-names of my-site.\n' +
-  '    <br>· use the-prefix \'<span class="clsColorRed">' + sNS + '</span>\' for <a class="clsPreview" href="../dirCor/filMcs.last.html#idOverview">structured-concepts</a> related to current concept \'' + sN + '\'.\n' +
+  '    <br>· use the-prefix \'<span class="clsColorRed">' + sNS + '</span>\' for <a class="clsPreview" href="../dirCor/filMcs.last.html#idOverview">sensorial-concepts</a> related to current concept \'' + sN + '\'.\n' +
   '    <br>⊛ <strong>LOCAL-SEARCH</strong>:\n' +
   '    <br>· TYPE <span class="clsColorRed">CTRL+F "Mcs.words-of-concept\'s-name"</span>, to go to the-LOCATION of the-concept.\n' +
   '    <br>· a-preview of the-description of a-global-name makes reading fast.\n' +
@@ -155,6 +157,7 @@ s = s +
   '    <br>• email:\n' +
   '    <br> &nbsp;<img src="../../misc/img/mail.png" alt="imgMail">\n' +
   '    <br>• edit on github: https://github.com/synagonism/Mcsw/blob/master/' + sDir +'/filMcs' + sNFil + '.last.html,\n' +
+  '    <br>• comments on <a class="clsPreview" href="filMcs' + sDIR + '.last.html#idComment">Disqus</a>,\n' +
   '    <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>,\n' +
   '    <br>• steemit: <a href="https://steemit.com/synagonism">https://steemit.com/@synagonism</a>,\n' +
   '    <a class="clsHide" href="#idFooterP1"></a></p>\n' +
