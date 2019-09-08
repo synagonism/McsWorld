@@ -33,16 +33,16 @@ var
   bCounter = true,
   bDisqus = false,
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirCor',
-  sDIR = 'DirCor',
+  sDir = 'dirHmn',
+  sDIR = 'DirHmn',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'entity',
+  sN = 'human',
   //4. SHORT-name: DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'entity',
+  sNS = 'human',
   //5. FILE-name: shows relation of another file: DnLbr, DtcbnetEth
-  sNFil = 'Ent',
+  sNFil = 'Hmn',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Ent';
+  sNId = 'Hmn';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -97,9 +97,17 @@ s =
   '  <p id="id' + sNId + 'evgnam">name::\n' +
   '    <br>* Mcs.' + sNS + '\'evoluting,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'evgnam"></a></p>\n' +
-  '  <p id="id' + sNId + 'evg">{time.}::\n' +
-  '    <br>=== :\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'evg"></a></p>\n' +
+  '  <p id="id' + sNId + 'evg' + moUtil.fDateYMD2() + '">{time.' + moUtil.fDateYMD() + '}::\n' +
+  '    <br>=== McsHitp-creation:\n';
+if (sDir === 'dirCor') {
+  s = s +
+  '    <br>· creation of current <a class="clsPreview" href="filMcs.last.html#idOverview">concept</a>.\n'
+} else {
+  s = s +
+  '    <br>· creation of current <a class="clsPreview" href="../dirCor/filMcs.last.html#idOverview">concept</a>.\n'
+}
+s = s +
+  '    <a class="clsHide" href="#id' + sNId + 'evg' + moUtil.fDateYMD2() + '"></a></p>\n' +
   '</section>\n' +
   '\n' +
   '<section id="id' + sNId + 'gncFT">\n' +
