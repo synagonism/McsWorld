@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.entity (entity.0-3-0.2019-09-09 draft)</title>
+  <title>Mcs.entity (entity.0-5-0.2019-09-11 draft)</title>
   <meta name="keywords" content="entity, entity, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -39,6 +39,33 @@
     <a class="clsHide" href="#idName"></a></p>
 </section>
 
+<section id="idEntatt">
+  <h1 id="idEntattH1">attribute of entity
+    <a class="clsHide" href="#idEntattH1"></a></h1>
+  <p id="idEntattdsn">description::
+    <br>· attribute of entity[a] is any other entity related with it[a].
+    <a class="clsHide" href="#idEntattdsn"></a></p>
+  <p id="idEntattnam">name::
+    <br>* Mcs.attribute-of-entity,
+    <br>* Mcs.entity'attribute,
+    <a class="clsHide" href="#idEntattnam"></a></p>
+</section>
+
+<section id="idEntstrr">
+  <h1 id="idEntstrrH1">structure of entity
+    <a class="clsHide" href="#idEntstrrH1"></a></h1>
+  <p id="idEntstrrdsn">description::
+    <br>· structure-of-entity is the-partial-complement-of-its-attributes on doing.
+    <br>· ALL its relations and bodies, NOT each one.
+    <a class="clsHide" href="#idEntstrrdsn"></a></p>
+  <p id="idEntstrrnam">name::
+    <br>* Mcs.entity'structure,
+    <br>* Mcs.structure-of-entity,
+    <br>====== langoGreek:
+    <br>* McsEll.το-είναι-οντότητας,
+    <a class="clsHide" href="#idEntstrrnam"></a></p>
+</section>
+
 <section id="idEntrscFT">
   <h1 id="idEntrscFTH1">resource of entity
     <a class="clsHide" href="#idEntrscFTH1"></a></h1>
@@ -50,15 +77,31 @@
     <a class="clsHide" href="#idEntrscwpa"></a></p>
 </section>
 
+<section id="idEntdngFT">
+  <h1 id="idEntdngFTH1">doing of entity
+    <a class="clsHide" href="#idEntdngFTH1"></a></h1>
+  <p id="idEntdngFTdsn">description::
+    <br>· doing-of-entity is any doing of this entity.
+    <br>· the-partial-complement on entity's-attributes is the-structure-of-entity.
+    <a class="clsHide" href="#idEntdngFTdsn"></a></p>
+  <p id="idEntdngFTnam">name::
+    <br>* Mcs.doing-of-entity,
+    <br>* Mcs.entity'doing,
+    <br>====== langoGreek:
+    <br>* McsEll.το-γίγνεσθαι-οντότητας,
+    <a class="clsHide" href="#idEntdngFTnam"></a></p>
+</section>
+
 <section id="idEntevgFT">
   <h1 id="idEntevgFTH1">EVOLUTING of entity
     <a class="clsHide" href="#idEntevgFTH1"></a></h1>
   <p id="idEntevgnam">name::
     <br>* Mcs.entity'evoluting,
     <a class="clsHide" href="#idEntevgnam"></a></p>
-  <p id="idEntevg">{time.}::
-    <br>=== :
-    <a class="clsHide" href="#idEntevg"></a></p>
+  <p id="idEntevg20190906">{time.2019-09-06}::
+    <br>=== McsHitp-creation:
+    <br>· creation of current concept.
+    <a class="clsHide" href="#idEntevg20190906"></a></p>
 </section>
 
 <section id="idEntgncFT">
@@ -119,6 +162,19 @@
   <p id="idEntScdnDpdcnam">name::
     <br>* Mcs.entity.specific-division.dependance,
     <a class="clsHide" href="#idEntScdnDpdcnam"></a></p>
+</section>
+
+<section id="idEntScdnDng">
+  <h1 id="idEntScdnDngH1">entity.specific-division.doing
+    <a class="clsHide" href="#idEntScdnDngH1"></a></h1>
+  <p id="idEntScdnDngdsn">description::
+    <br>· on doing:
+    <br>* <a class="clsPreview" href="filMcsDng.last.html#idOverview">doing</a>,
+    <br>* <a class="clsPreview" href="#idEntDngN">doingNo</a>,
+    <a class="clsHide" href="#idEntScdnDngdsn"></a></p>
+  <p id="idEntScdnDngnam">name::
+    <br>* Mcs.entity.specific-division.doing,
+    <a class="clsHide" href="#idEntScdnDngnam"></a></p>
 </section>
 
 <section id="idEntSms">
@@ -212,14 +268,76 @@
     <a class="clsHide" href="#idEntBodyNdsn"></a></p>
   <p id="idEntBodyNnam">name::
     <br>* Mcs.bodyNo,
+    <br>* Mcs.doing-or-relation,
     <br>* Mcs.entity.bodyNo,
-    <br>* Mcs.process-relation,
+    <br>* Mcs.process-or-relation,
     <br>* Mcs.relation-or-process,
     <a class="clsHide" href="#idEntBodyNnam"></a></p>
-  <p id="idEntBodyNSpc">specific::
-    <br>* process,
-    <br>* relation,
-    <a class="clsHide" href="#idEntBodyNSpc"></a></p>
+
+  <section id="idEntBodyNarg">
+  <h2 id="idEntBodyNargH2">argument of bodyNo
+    <a class="clsHide" href="#idEntBodyNargH2"></a></h2>
+  <p id="idEntBodyNargdsn">description::
+    <br>· argument of <a class="clsPreview" href="#idEntBodyN">bodyNo[a]</a> is its entities.
+    <a class="clsHide" href="#idEntBodyNargdsn"></a></p>
+  <p id="idEntBodyNargnam">name::
+    <br>* Mcs.argument-of-bodyNo,
+    <br>* Mcs.bodyNo.argument,
+    <a class="clsHide" href="#idEntBodyNargnam"></a></p>
+  </section>
+
+  <section id="idEntBodyNvlc">
+  <h2 id="idEntBodyNvlcH2">valence of bodyNo
+    <a class="clsHide" href="#idEntBodyNvlcH2"></a></h2>
+  <p id="idEntBodyNvlcdsn">description::
+    <br>· valence of bodyNo is the-number of its arguments.
+    <a class="clsHide" href="#idEntBodyNvlcdsn"></a></p>
+  <p id="idEntBodyNvlcnam">name::
+    <br>* Mcs.bodyNo'valence,
+    <br>* Mcs.valence-of-bodyNo,
+    <a class="clsHide" href="#idEntBodyNvlcnam"></a></p>
+  </section>
+
+  <section id="idEntBodyNdrn">
+  <h2 id="idEntBodyNdrnH2">direction of bodyNo
+    <a class="clsHide" href="#idEntBodyNdrnH2"></a></h2>
+  <p id="idEntBodyNdrndsn">description::
+    <br>· direction of bodyNo is any SEQUENCE in its arguments.
+    <a class="clsHide" href="#idEntBodyNdrndsn"></a></p>
+  <p id="idEntBodyNdrnnam">name::
+    <br>* Mcs.bodyNo'direction,
+    <br>* Mcs.direction-of-bodyNo,
+    <a class="clsHide" href="#idEntBodyNdrnnam"></a></p>
+  </section>
+
+  <section id="idEntBodyNSpc">
+  <h2 id="idEntBodyNSpcH2">bodyNo.SPECIFIC
+    <a class="clsHide" href="#idEntBodyNSpcH2"></a></h2>
+  <p id="idEntBodyNSpcdsn">description::
+    <br>* <a class="clsPreview" href="filMcsDng.last.html#idOverview">process</a>,
+    <br>* <a class="clsPreview" href="filMcsRln.last.html#idOverview">relation</a>,
+    <br>* <a class="clsPreview" href="../dirLag/filMcsLhmn.last.html#idLhmnsmsvrb">semaso-verb</a>,
+    <a class="clsHide" href="#idEntBodyNSpcdsn"></a></p>
+  <p id="idEntBodyNSpcnam">name::
+    <br>* Mcs.bodyNo.specific,
+    <a class="clsHide" href="#idEntBodyNSpcnam"></a></p>
+  </section>
+</section>
+
+<section id="idEntDngN">
+  <h1 id="idEntDngNH1">entity.doingNo
+    <a class="clsHide" href="#idEntDngNH1"></a></h1>
+  <p id="idEntDngNdsn">description::
+    <br>· <a href="Red">doingNo</a> is <a class="clsPreview" href="#idOverview">an-entity</a> which is NO <a class="clsPreview" href="filMcsDng.last.html#idOverview">doing</a>.
+    <a class="clsHide" href="#idEntDngNdsn"></a></p>
+  <p id="idEntDngNnam">name::
+    <br>* Mcs.doingNo,
+    <br>* Mcs.entity.doingNo,
+    <a class="clsHide" href="#idEntDngNnam"></a></p>
+  <p id="idEntDngNSpc">specific::
+    <br>* <a class="clsPreview" href="l#idEntBody">body</a>,
+    <br>* <a class="clsPreview" href="filMcsRln.last.html#idOverview">relation</a>,
+    <a class="clsHide" href="#idEntDngNSpc"></a></p>
 </section>
 
 <section id="idEntHmnN">

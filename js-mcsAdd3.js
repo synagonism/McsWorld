@@ -36,13 +36,13 @@ var
   sDir = 'dirCor',
   sDIR = 'DirCor',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'doing',
+  sN = 'relation',
   //4. SHORT-name: DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'doing',
+  sNS = 'relation',
   //5. FILE-name: shows relation of another file: DnLbr, DtcbnetEth
-  sNFil = 'Dng',
+  sNFil = 'Rln',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Dng';
+  sNId = 'Rln';
 
 s =
   '<!DOCTYPE html>\n' +
