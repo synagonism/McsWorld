@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.entity (entity.0-6-0.2019-09-12 draft)</title>
+  <title>Mcs.entity (entity.0-7-0.2019-09-16 draft)</title>
   <meta name="keywords" content="entity, entity, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -194,6 +194,18 @@
     <a class="clsHide" href="#idEntScdnScatnam"></a></p>
 </section>
 
+<section id="idEntScdnBdr">
+  <h1 id="idEntScdnBdrH1">entity.specific-division.boundary
+    <a class="clsHide" href="#idEntScdnBdrH1"></a></h1>
+  <p id="idEntScdnBdrdsn">description::
+    <br>* definite-entity,
+    <br>* definiteNo-entity,
+    <a class="clsHide" href="#idEntScdnBdrdsn"></a></p>
+  <p id="idEntScdnBdrnam">name::
+    <br>* Mcs.entity.specific-division.boundary,
+    <a class="clsHide" href="#idEntScdnBdrnam"></a></p>
+</section>
+
 <section id="idEntSms">
   <h1 id="idEntSmsH1">entity.semaso
     <a class="clsHide" href="#idEntSmsH1"></a></h1>
@@ -213,10 +225,39 @@
     <br>· entity interrogative.
     <a class="clsHide" href="#idEntSmsIrgvdsn"></a></p>
   <p id="idEntSmsIrgvnam">name::
+    <br>* Mcs.entity.interrogative,
     <br>* Mcs.entitySms.interrogative,
     <br>====== langoKmo:
     <br>* McsKmo.oTsio,
     <a class="clsHide" href="#idEntSmsIrgvnam"></a></p>
+  </section>
+
+  <section id="idEntSmsDfnt">
+  <h2 id="idEntSmsDfntH2">entitySms.definite
+    <a class="clsHide" href="#idEntSmsDfntH2"></a></h2>
+  <p id="idEntSmsDfntdsn">description::
+    <br>· <span class="clsColorRed">definite-entity</span> is <a class="clsPreview" href="#idOverview">an-entity</a> identifiable WITH clear boundaries.
+    <a class="clsHide" href="#idEntSmsDfntdsn"></a></p>
+  <p id="idEntSmsDfntnam">name::
+    <br>* Mcs.definite-entity,
+    <br>* Mcs.entity.definite,
+    <a class="clsHide" href="#idEntSmsDfntnam"></a></p>
+  <p id="idEntSmsDfntSpc">specific::
+    <br>* <a class="clsPreview" href="#idEntSmsDctc">deictic-entity</a>,
+    <a class="clsHide" href="#idEntSmsDfntSpc"></a></p>
+  </section>
+
+  <section id="idEntSmsDfntN">
+  <h2 id="idEntSmsDfntNH2">entitySms.definiteNo
+    <a class="clsHide" href="#idEntSmsDfntNH2"></a></h2>
+  <p id="idEntSmsDfntNdsn">description::
+    <br>· <span class="clsColorRed">definiteNo-entity</span> is <a class="clsPreview" href="#idOverview">an-entity</a> identifiable WITHOUT clear boundaries.
+    <a class="clsHide" href="#idEntSmsDfntNdsn"></a></p>
+  <p id="idEntSmsDfntNnam">name::
+    <br>* Mcs.definiteNo-entity,
+    <br>* Mcs.entity.definiteNo,
+    <br>* Mcs.indefinite-entity,
+    <a class="clsHide" href="#idEntSmsDfntNnam"></a></p>
   </section>
 
   <section id="idEntSmsDctc">
@@ -226,11 +267,15 @@
     <br>· entity deictic.
     <a class="clsHide" href="#idEntSmsDctcdsn"></a></p>
   <p id="idEntSmsDctcnam">name::
+    <br>* Mcs.entity.deictic,
     <br>* Mcs.entitySms.deictic,
     <br>====== langoKomo:
     <br>* McsKmo.oΔio,
     <br>* McsKmo.oDhio,
     <a class="clsHide" href="#idEntSmsDctcnam"></a></p>
+  <p id="idEntSmsDctcgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="#idEntSmsDfnt">definite-entity</a>,
+    <a class="clsHide" href="#idEntSmsDctcgncchn"></a></p>
   </section>
 
   <section id="idEntSmsDctcNa1">
@@ -240,6 +285,7 @@
     <br>· entity, deictic, near <a class="clsPreview" href="../dirLag/filMcsLhmn.last.html#idLhmnprsnA">personA</a>, one.
     <a class="clsHide" href="#idEntSmsDctcNa1dsn"></a></p>
   <p id="idEntSmsDctcNa1nam">name::
+    <br>* Mcs.entity.deictic-nearA-one,
     <br>* Mcs.entitySms.deictic-nearA-one,
     <br>* Mcs.this,
     <br>====== langoKomo:
@@ -255,6 +301,7 @@
     <br>· entity, deictic, near <a class="clsPreview" href="../dirLag/filMcsLhmn.last.html#idLhmnprsnA">personA</a>, oneNo.
     <a class="clsHide" href="#idEntSmsDctcNa1Ndsn"></a></p>
   <p id="idEntSmsDctcNa1Nnam">name::
+    <br>* Mcs.entity.deictic-nearA-one,
     <br>* Mcs.entitySms.deictic-nearA-one,
     <br>* Mcs.these,
     <br>====== langoKomo:
@@ -405,8 +452,8 @@
     <a class="clsHide" href="#idEntGnrcNnam"></a></p>
 
   <section id="idEntGnrcNscct">
-  <h1 id="idEntGnrcNscctH1">SPECIFIC-COMPLEMENT of genericNo
-    <a class="clsHide" href="#idEntGnrcNscctH1"></a></h1>
+  <h2 id="idEntGnrcNscctH2">SPECIFIC-COMPLEMENT of genericNo
+    <a class="clsHide" href="#idEntGnrcNscctH2"></a></h2>
   <p id="idEntGnrcNscctdsn">description::
     <br>· on entity:
     <br>* <a class="clsPreview" href="filMcsGnrc.last.html#idOverview">generic-entity</a>,
