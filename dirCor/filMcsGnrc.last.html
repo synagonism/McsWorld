@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.generic-entity (generic.0-6-0.2019-09-24 draft)</title>
+  <title>Mcs.generic-entity (generic.0-7-0.2019-10-14 draft)</title>
   <meta name="keywords" content="generic-entity, generic, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -132,9 +132,9 @@
   <h1 id="idGnrcMsrdH1">generic.measured (quantity-of-entity)
     <a class="clsHide" href="#idGnrcMsrdH1"></a></h1>
   <p id="idGnrcMsrddsn">description::
-    <br>· <span class="clsColorRed">quantity</span> of <a class="clsPreview" href="#idOverview">a-generic[a]</a> is a-specific of it[a] on which we have-done <a class="clsPreview" href="#idGnrcmsrg">measuring</a>.
-    <br>· generic: time.
-    <br>· amount: 5 sec of time.
+    <br>· <span class="clsColorRed">quantity of generic-entity[a]</span> is a-specific of it[a] on which we have-done <a class="clsPreview" href="#idGnrcmsrg">measuring</a>.
+    <br>· generic-entity: time.
+    <br>· quantity-of--generic-entity: 5 sec of time.
     <br>· Uom: sec.
     <br>· abstract-quantity: 5.
     <a class="clsHide" href="#idGnrcMsrddsn"></a></p>
@@ -144,7 +144,7 @@
     <br>* Mcs.measure!⇒quantity-of-entity,
     <br>* Mcs.measured-generic!⇒quantity-of-entity,
     <br>* Mcs.quantity-of-entity,
-    <br>* Mcs.quantity-of-generic!⇒quantity-of-entity,
+    <br>* Mcs.quantity-of--generic-entity!⇒quantity-of-entity,
     <br>* in literature BOTH 'amount' and 'abstract-quantity' are-called 'quantity'.
     <br>====== langoGreek:
     <br>* McsEll.μετρημένο-μέγεθος,
@@ -154,13 +154,18 @@
     <br>* McsKmo.os-kuo,
     <a class="clsHide" href="#idGnrcMsrdnam"></a></p>
 
+  <section id="idGnrcMsrddng">
+  <h2 id="idGnrcMsrddngH2">measuring (<a class="clsPreview" href="#idGnrcmsrg">link</a>) of quantity-of-entity
+    <a class="clsHide" href="#idGnrcMsrddngH2"></a></h2>
+  </section>
+
   <section id="idGnrcMsrduom">
   <h2 id="idGnrcMsrduomH2">unit-of-measurement of quantity-of-entity
     <a class="clsHide" href="#idGnrcMsrduomH2"></a></h2>
   <p id="idGnrcMsrduomdsn">description::
     <br>· <span class="clsColorRed">unit-of-measurement</span> of <a class="clsPreview" href="#idGnrcMsrd">amount</a> is a-specific[a] of the-amount's generic-entity, known to all, which[a] we COMPARE with the-amount to find its relationship.
-    <br>· generic: time.
-    <br>· amount: 5 sec of time.
+    <br>· generic-entity: time.
+    <br>· quantity-of--generic-entity: 5 sec of time.
     <br>· Uom: sec.
     <br>· abstract-quantity: 5.
     <a class="clsHide" href="#idGnrcMsrduomdsn"></a></p>
@@ -178,6 +183,33 @@
   <h2 id="idGnrcMsrdaqntH2">abstract-quantity (<a class="clsPreview" href="filMcsQnt.last.html#idOverview">link</a>) of quantity-of-entity
     <a class="clsHide" href="#idGnrcMsrdaqntH2"></a></h2>
   </section>
+
+  <section id="idGnrcMsrdmsr">
+  <h2 id="idGnrcMsrdmsrH2">measurer of quantity-of-entity
+    <a class="clsHide" href="#idGnrcMsrdmsrH2"></a></h2>
+  <p id="idGnrcMsrdmsrdsn">description::
+    <br>· measurer is the-entity that does <a class="clsPreview" href="#idGnrcmsrg">the-measuring</a>.
+    <a class="clsHide" href="#idGnrcMsrdmsrdsn"></a></p>
+  <p id="idGnrcMsrdmsrnam">name::
+    <br>* Mcs.measurer,
+    <a class="clsHide" href="#idGnrcMsrdmsrnam"></a></p>
+  </section>
+
+  <section id="idGnrcMsrdrln">
+  <h2 id="idGnrcMsrdrlnH2">quantity-relation of quantity-of-entity
+    <a class="clsHide" href="#idGnrcMsrdrlnH2"></a></h2>
+  <p id="idGnrcMsrdrlndsn">description::
+    <br>· quantity-relation is a-relation among the-entities:
+    <br>· generic-entity: time.
+    <br>· quantity-of--generic-entity: 5 sec of time.
+    <br>· Uom: sec.
+    <br>· abstract-quantity: 5.
+    <br>· measurer: the-entity that does <a class="clsPreview" href="#idGnrcmsrg">the-measuring</a>.
+    <a class="clsHide" href="#idGnrcMsrdrlndsn"></a></p>
+  <p id="idGnrcMsrdrlnnam">name::
+    <br>* Mcs.relation-quantity,
+    <br>* Mcs.quantity-relation,
+    <a class="clsHide" href="#idGnrcMsrdrlnnam"></a></p>
   </section>
 </section>
 
