@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.time (time.0-9-0.2019-10-21 draft)</title>
+  <title>Mcs.time (time.0-10-0.2019-10-22 draft)</title>
   <meta name="keywords" content="time, time, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -41,7 +41,7 @@
     <a class="clsHide" href="#idTimentnH1"></a></h1>
   <p id="idTimentndsn">description::
     <br>· {1959} year,
-    <br>· {1959-02-17} date,
+    <br>· {1959-02-17} <a class="clsPreview" href="#idTimeUomDayDate">date</a>,
     <a class="clsHide" href="#idTimentndsn"></a></p>
   <p id="idTimentnnam">name::
     <br>* Mcs.time'notation,
@@ -584,12 +584,12 @@
     <br>[https://en.wikipedia.org/wiki/Anno_Domini {2019-10-21}]
     <a class="clsHide" href="#idTimeUomCldrBcedsn"></a></p>
   <p id="idTimeUomCldrBcenam">name::
-    <br>* Mcs.AD-(anno-Domini),
-    <br>* Mcs.BC-(before-Christ),
-    <br>* Mcs.BCE-(before-current-era),
-    <br>* Mcs.CE-(current|common-era)
-    <br>* Mcs.anno-Domini-(AD),
-    <br>* Mcs.before-Christ-(BC),
+    <br>* Mcs.AD-(anno-Domini=CE),
+    <br>* Mcs.BC-(before-Christ=BCE),
+    <br>* Mcs.BCE-(before-current-era=BC),
+    <br>* Mcs.CE-(current|common-era=AD)
+    <br>* Mcs.anno-Domini-(AD=CE),
+    <br>* Mcs.before-Christ-(BC=BCE),
     <a class="clsHide" href="#idTimeUomCldrBcenam"></a></p>
   </section>
 
@@ -607,66 +607,74 @@
     <br>* Mcs.before-present-(BP),
     <a class="clsHide" href="#idTimeUomCldrBpnam"></a></p>
   </section>
+
+  <section id="idTimeUomCldrSlr">
+  <h3 id="idTimeUomCldrSlrH3">calendar.solar
+    <a class="clsHide" href="#idTimeUomCldrSlrH3"></a></h3>
+  <p id="idTimeUomCldrSlrdsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomCldrSlrdsn"></a></p>
+  <p id="idTimeUomCldrSlrnam">name::
+    <br>* Mcs.calendar.solar,
+    <br>* Mcs.solar-calendar,
+    <br>* Mcs.time.solar,
+    <a class="clsHide" href="#idTimeUomCldrSlrnam"></a></p>
   </section>
 
-  <section id="idTimeUomMlnm">
-  <h2 id="idTimeUomMlnmH2">time-Uom.millennium
-    <a class="clsHide" href="#idTimeUomMlnmH2"></a></h2>
-  <p id="idTimeUomMlnmdsn">description::
-    <br>"(n) millennium, millenary (a span of 1000 years)"
-    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=millennium]
-    <a class="clsHide" href="#idTimeUomMlnmdsn"></a></p>
-  <p id="idTimeUomMlnmnam">name::
-    <br>* Mcs.millennium-time-Uom,
-    <br>* Mcs.time-Uom.millennium,
-    <br>* Mcs.time.millennium,
-    <br>====== langoKomo:
-    <br>* McsKmo.to-eto-kilo,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.miljaro,
-    <br>====== langoGreek:
-    <br>* McsEll.χιλιετία~η,
-    <a class="clsHide" href="#idTimeUomMlnmnam"></a></p>
+  <section id="idTimeUomCldrLnr">
+  <h3 id="idTimeUomCldrLnrH3">calendar.lunar
+    <a class="clsHide" href="#idTimeUomCldrLnrH3"></a></h3>
+  <p id="idTimeUomCldrLnrdsn">description::
+    <br>"A lunar calendar is a calendar based upon the monthly cycles of the Moon's phases (synodic months), in contrast to solar calendars, whose annual cycles are based only directly upon the solar year. The most commonly used calendar, the Gregorian calendar, is a solar calendar system that originally evolved out of a lunar calendar system. A purely lunar calendar is also distinguished from a lunisolar calendar, whose lunar months are brought into alignment with the solar year through some process of intercalation. The details of when months begin varies from calendar to calendar, with some using new, full, or crescent moons and others employing detailed calculations.
+    <br>Since each lunation is approximately ​29 1⁄2 days (29 days, 12 hours, 44 minutes, 3 seconds, or 29.530588 days), it is common for the months of a lunar calendar to alternate between 29 and 30 days. Since the period of twelve such lunations, a lunar year, is only 354 days, 8 hours, 48 minutes, 34 seconds (354.367056 days), purely lunar calendars lose around 11 days per year relative to the Gregorian calendar. In purely lunar calendars like the Islamic calendar, the lack of intercalation causes the lunar months to cycle through all the seasons of the Gregorian year over the course of a 33 lunar-year cycle.
+    <br>Although the Gregorian calendar is in common and legal use in most countries, traditional lunar and lunisolar calendars continue to be used throughout the Old World to determine religious festivals and national holidays. Examples of such holidays include Ramadan (Islamic calendar); Easter; the Chinese, Japanese, Korean, Vietnamese, and Mongolian New Year (Chinese, Japanese, Korean, Vietnamese, and Mongolian calendars); the Nepali New Year (Nepali calendar); the Mid-Autumn Festival and Chuseok (Chinese and Korean calendars); Loi Krathong (Thai calendar); Sunuwar calendar; Vesak/Buddha's Birthday (Buddhist calendar); Diwali (Hindu calendars); and Rosh Hashanah (Hebrew calendar)."
+    <br>[https://en.wikipedia.org/wiki/Lunar_calendar {2019-10-22}]
+    <a class="clsHide" href="#idTimeUomCldrLnrdsn"></a></p>
+  <p id="idTimeUomCldrLnrnam">name::
+    <br>* Mcs.calendar.lunar,
+    <br>* Mcs.lunar-calendar,
+    <br>* Mcs.time.lunar,
+    <a class="clsHide" href="#idTimeUomCldrLnrnam"></a></p>
   </section>
 
-  <section id="idTimeUomCntr">
-  <h2 id="idTimeUomCntrH2">time-Uom.century
-    <a class="clsHide" href="#idTimeUomCntrH2"></a></h2>
-  <p id="idTimeUomCntrdsn">description::
-    <br>"(n) century (a period of 100 years)"
-    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=century]
-    <a class="clsHide" href="#idTimeUomCntrdsn"></a></p>
-  <p id="idTimeUomCntrnam">name::
-    <br>* Mcs.century-time-Uom,
-    <br>* Mcs.time-Uom.century,
-    <br>* Mcs.time.century,
-    <br>====== langoKomo:
-    <br>* McsKmo.to-eto-foPoPo,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.jarcento,
-    <br>====== langoGreek:
-    <br>* McsEll.αιώνας~ο,
-    <a class="clsHide" href="#idTimeUomCntrnam"></a></p>
+  <section id="idTimeUomCldrLnsr">
+  <h3 id="idTimeUomCldrLnsrH3">calendar.lunisolar
+    <a class="clsHide" href="#idTimeUomCldrLnsrH3"></a></h3>
+  <p id="idTimeUomCldrLnsrdsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomCldrLnsrdsn"></a></p>
+  <p id="idTimeUomCldrLnsrnam">name::
+    <br>* Mcs.calendar.lunisolar,
+    <br>* Mcs.lunisolar-calendar,
+    <br>* Mcs.time.lunisolar,
+    <a class="clsHide" href="#idTimeUomCldrLnsrnam"></a></p>
+  </section>
   </section>
 
-  <section id="idTimeUomDcd">
-  <h2 id="idTimeUomDcdH2">time-Uom.decade
-    <a class="clsHide" href="#idTimeUomDcdH2"></a></h2>
-  <p id="idTimeUomDcddsn">description::
-    <br>"(n) decade, decennary, decennium (a period of 10 years)"
-    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=decade]
-    <a class="clsHide" href="#idTimeUomDcddsn"></a></p>
-  <p id="idTimeUomDcdnam">name::
-    <br>* Mcs.decade-time-Uom,
-    <br>* Mcs.time-Uom.decade,
-    <br>* Mcs.time.decade,
-    <br>====== langoKomo:
-    <br>* McsKmo.to-eto-foPo,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.jarcento,
-    <br>====== langoGreek:
-    <br>* McsEll.δεκαετία~η,
-    <a class="clsHide" href="#idTimeUomDcdnam"></a></p>
+  <section id="idTimeUomEra">
+  <h2 id="idTimeUomEraH2">time-Uom.era
+    <a class="clsHide" href="#idTimeUomEraH2"></a></h2>
+  <p id="idTimeUomEradsn">description::
+    <br>(n) era, epoch (a period marked by distinctive character or reckoned from a fixed point or event)
+    <br>(n) era, geological era (a major division of geological time; an era is usually divided into two or more periods)
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=era]
+    <br>===
+    <br>"a long and distinct period of history with a particular feature or characteristic.
+    <br>- a system of chronology dating from a particular noteworthy event.
+    <br>synonyms: epoch, age, period, time, eon, span, generation, stage, point in history, date, times, days, years
+    <br>- a major division of time that is a subdivision of an eon and is itself subdivided into periods.
+    <br>- a date or event marking the beginning of a new and distinct period of time."
+    <br>[Google dictionary]
+    <br>===
+    <br>"An era is a span of time defined for the purposes of chronology or historiography, as in the regnal eras in the history of a given monarchy, a calendar era used for a given calendar, or the geological eras defined for the history of Earth.
+    <br>Comparable terms are epoch, age, period, saeculum, aeon (Greek aion) and Sanskrit yuga."
+    <br>[https://en.wikipedia.org/wiki/Era {2019-10-22}]
+    <a class="clsHide" href="#idTimeUomEradsn"></a></p>
+  <p id="idTimeUomEranam">name::
+    <br>* Mcs.era,
+    <br>* Mcs.time.era,
+    <br>* Mcs.time-Uom.era,
+    <a class="clsHide" href="#idTimeUomEranam"></a></p>
   </section>
 
   <section id="idTimeUomYear">
@@ -741,6 +749,131 @@
     <br>* Mcs.common-year,
     <br>* Mcs.year.common,
     <a class="clsHide" href="#idTimeUomYearCmnnam"></a></p>
+  </section>
+
+  <section id="idTimeUomYear10">
+  <h3 id="idTimeUomYear10H3">year.10-decade
+    <a class="clsHide" href="#idTimeUomYear10H3"></a></h3>
+  <p id="idTimeUomYear10dsn">description::
+    <br>"(n) decade, decennary, decennium (a period of 10 years)"
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=decade]
+    <a class="clsHide" href="#idTimeUomYear10dsn"></a></p>
+  <p id="idTimeUomYear10nam">name::
+    <br>* Mcs.decade-time-Uom,
+    <br>* Mcs.time-Uom.decade,
+    <br>* Mcs.time.decade,
+    <br>====== langoKomo:
+    <br>* McsKmo.to-eto-foPo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.jarcento,
+    <br>====== langoGreek:
+    <br>* McsEll.δεκαετία~η,
+    <a class="clsHide" href="#idTimeUomYear10nam"></a></p>
+  </section>
+
+  <section id="idTimeUomYear100">
+  <h3 id="idTimeUomYear100H3">year.100-century
+    <a class="clsHide" href="#idTimeUomYear100H3"></a></h3>
+  <p id="idTimeUomYear100dsn">description::
+    <br>"(n) century (a period of 100 years)"
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=century]
+    <a class="clsHide" href="#idTimeUomYear100dsn"></a></p>
+  <p id="idTimeUomYear100nam">name::
+    <br>* Mcs.century-time-Uom,
+    <br>* Mcs.time-Uom.century,
+    <br>* Mcs.time.century,
+    <br>====== langoKomo:
+    <br>* McsKmo.to-eto-foPoPo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.jarcento,
+    <br>====== langoGreek:
+    <br>* McsEll.αιώνας~ο,
+    <a class="clsHide" href="#idTimeUomYear100nam"></a></p>
+  </section>
+
+  <section id="idTimeUomYearK">
+  <h3 id="idTimeUomYearKH3">year.1000-millennium
+    <a class="clsHide" href="#idTimeUomYearKH3"></a></h3>
+  <p id="idTimeUomYearKdsn">description::
+    <br>"(n) millennium, millenary (a span of 1000 years)"
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=millennium]
+    <a class="clsHide" href="#idTimeUomYearKdsn"></a></p>
+  <p id="idTimeUomYearKnam">name::
+    <br>* Mcs.Ka,
+    <br>* Mcs.kiloannum,
+    <br>* Mcs.kyr,
+    <br>* Mcs.millennium-time-Uom,
+    <br>* Mcs.time-Uom.millennium,
+    <br>* Mcs.time.Ka,
+    <br>* Mcs.time.kyr,
+    <br>* Mcs.time.millennium,
+    <br>====== langoKomo:
+    <br>* McsKmo.to-eto-kilo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.miljaro,
+    <br>====== langoGreek:
+    <br>* McsEll.χιλιετία~η,
+    <a class="clsHide" href="#idTimeUomYearKnam"></a></p>
+  </section>
+
+  <section id="idTimeUomYearK2">
+  <h3 id="idTimeUomYearK2H3">year.1000^2
+    <a class="clsHide" href="#idTimeUomYearK2H3"></a></h3>
+  <p id="idTimeUomYearK2dsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomYearK2dsn"></a></p>
+  <p id="idTimeUomYearK2nam">name::
+    <br>* Mcs.Ma,
+    <br>* Mcs.megaannum,
+    <br>* Mcs.myr,
+    <br>* Mcs.time.Ma,
+    <br>* Mcs.time.myr,
+    <br>* Mcs.time.year.1000^2,
+    <a class="clsHide" href="#idTimeUomYearK2nam"></a></p>
+  </section>
+
+  <section id="idTimeUomYearK3">
+  <h3 id="idTimeUomYearK3H3">year.1000^3
+    <a class="clsHide" href="#idTimeUomYearK3H3"></a></h3>
+  <p id="idTimeUomYearK3dsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomYearK3dsn"></a></p>
+  <p id="idTimeUomYearK3nam">name::
+    <br>* Mcs.Ga,
+    <br>* Mcs.byr,
+    <br>* Mcs.gigaannum,
+    <br>* Mcs.time.Ga,
+    <br>* Mcs.time.byr,
+    <br>* Mcs.time.year.1000^3,
+    <a class="clsHide" href="#idTimeUomYearK3nam"></a></p>
+  </section>
+
+  <section id="idTimeUomYearK4">
+  <h3 id="idTimeUomYearK4H3">year.1000^4
+    <a class="clsHide" href="#idTimeUomYearK4H3"></a></h3>
+  <p id="idTimeUomYearK4dsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomYearK4dsn"></a></p>
+  <p id="idTimeUomYearK4nam">name::
+    <br>* Mcs.Ta,
+    <br>* Mcs.teraannum,
+    <br>* Mcs.time.Ta,
+    <br>* Mcs.time.year.1000^4,
+    <a class="clsHide" href="#idTimeUomYearK4nam"></a></p>
+  </section>
+
+  <section id="idTimeUomYearK5">
+  <h3 id="idTimeUomYearK5H3">year.1000^5
+    <a class="clsHide" href="#idTimeUomYearK5H3"></a></h3>
+  <p id="idTimeUomYearK5dsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomYearK5dsn"></a></p>
+  <p id="idTimeUomYearK5nam">name::
+    <br>* Mcs.Pa,
+    <br>* Mcs.petaannum,
+    <br>* Mcs.time.Pa,
+    <br>* Mcs.time.year.1000^5,
+    <a class="clsHide" href="#idTimeUomYearK5nam"></a></p>
   </section>
   </section>
 
@@ -1087,7 +1220,7 @@
     <a class="clsHide" href="#idTimeUomDayDateH3"></a></h3>
   <p id="idTimeUomDayDatedsn">description::
     <br>· date is an-individual day.
-    <br>· 1959-02-17.
+    <br>· {1959-02-17}.
     <a class="clsHide" href="#idTimeUomDayDatedsn"></a></p>
   <p id="idTimeUomDayDatenam">name::
     <br>* Mcs.date,
@@ -1262,10 +1395,50 @@
     <br>* Mcs.time-Uom.hour,
     <br>* Mcs.time.hour,
     <br>====== langoKomo:
-    <br>* McsKmo.to-oro,
+    <br>* McsKmo.to-oro, from Greek 'ώρα'
     <br>====== langoGreek:
     <br>* McsEll.ώρα~η,
     <a class="clsHide" href="#idTimeUomHournam"></a></p>
+
+  <section id="idTimeUomHourInd">
+  <h3 id="idTimeUomHourIndH3">hour.clock-time
+    <a class="clsHide" href="#idTimeUomHourIndH3"></a></h3>
+  <p id="idTimeUomHourInddsn">description::
+    <br>· clock-time is an-individual-time of <a class="clsPreview" href="#idTimeUomDay">a-day</a>.
+    <a class="clsHide" href="#idTimeUomHourInddsn"></a></p>
+  <p id="idTimeUomHourIndnam">name::
+    <br>* Mcs.clock-time,
+    <br>* Mcs.time-of-day,
+    <a class="clsHide" href="#idTimeUomHourIndnam"></a></p>
+  </section>
+
+  <section id="idTimeUomHourTmzn">
+  <h3 id="idTimeUomHourTmznH3">hour.time-zone
+    <a class="clsHide" href="#idTimeUomHourTmznH3"></a></h3>
+  <p id="idTimeUomHourTmzndsn">description::
+    <br>"A time zone is a region of the globe that observes a uniform standard time for legal, commercial, and social purposes. Time zones tend to follow the boundaries of countries and their subdivisions instead of longitude, because it is convenient for areas in close commercial or other communication to keep the same time.
+    <br>Most of the time zones on land are offset from Coordinated Universal Time (UTC) by a whole number of hours (UTC−12:00 to UTC+14:00), but a few zones are offset by 30 or 45 minutes (e.g. Newfoundland Standard Time is UTC−03:30, Nepal Standard Time is UTC+05:45, and Indian Standard Time is UTC+05:30).
+    <br>Some higher latitude and temperate zone countries use daylight saving time for part of the year, typically by adjusting local clock time by an hour. Many land time zones are skewed toward the west of the corresponding nautical time zones. This also creates a permanent daylight saving time effect."
+    <br>[https://en.wikipedia.org/wiki/Time_zone {2019-10-22}]
+    <a class="clsHide" href="#idTimeUomHourTmzndsn"></a></p>
+  <p id="idTimeUomHourTmznnam">name::
+    <br>* Mcs.time-zone,
+    <a class="clsHide" href="#idTimeUomHourTmznnam"></a></p>
+  </section>
+
+  <section id="idTimeUomHourUtc">
+  <h3 id="idTimeUomHourUtcH3">hour.UTC
+    <a class="clsHide" href="#idTimeUomHourUtcH3"></a></h3>
+  <p id="idTimeUomHourUtcdsn">description::
+    <br>"Coordinated Universal Time (or UTC) is the primary time standard by which the world regulates clocks and time. It is within about 1 second of mean solar time at 0° longitude, and is not adjusted for daylight saving time. In some countries, the term Greenwich Mean Time is used."
+    <br>[https://en.wikipedia.org/wiki/Coordinated_Universal_Time {2019-10-22}]
+    <a class="clsHide" href="#idTimeUomHourUtcdsn"></a></p>
+  <p id="idTimeUomHourUtcnam">name::
+    <br>* Mcs.Coordinated-Universal-Time,
+    <br>* Mcs.UTC,
+    <br>* Mcs.hour.UTC,
+    <a class="clsHide" href="#idTimeUomHourUtcnam"></a></p>
+  </section>
   </section>
 
   <section id="idTimeUomMnut">
