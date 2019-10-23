@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.whole-entity (whole.0-1-0.2019-10-22 draft)</title>
+  <title>Mcs.whole-entity (whole.0-2-0.2019-10-23 draft)</title>
   <meta name="keywords" content="whole-entity, whole, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -171,12 +171,27 @@
     <a class="clsHide" href="#idWhlSysSqcH2"></a></h2>
   <p id="idWhlSysSqcdsn">description::
     <br>· sequence is a-system, the-simplest one, with its parts arranged.
+    <br>===
+    <br>"(n) ordering, order, ordination (logical or comprehensible arrangement of separate elements) "we shall consider these questions in the inverse order of their presentation""
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=order]
+    <br>"(n) series (similar things placed in order or happening one after another) "they were investigating a series of bank robberies""
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=series]
+    <br>"(n) sequence (serial arrangement in which things follow in logical order or a recurrent pattern) "the sequence of names was alphabetical"; "he invented a technique to determine the sequence of base pairs in DNA""
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=sequence]
     <a class="clsHide" href="#idWhlSysSqcdsn"></a></p>
   <p id="idWhlSysSqcnam">name::
     <br>* Mcs.list,
+    <br>* Mcs.order-system,
+    <br>* Mcs.ordering,
+    <br>* Mcs.ordination,
     <br>* Mcs.sequence,
+    <br>* Mcs.series,
     <br>* Mcs.system.ordered,
     <br>* Mcs.system.sequence,
+    <br>====== langoGreek:
+    <br>* McsEll.ακολουθία,
+    <br>* McsEll.λίστα,
+    <br>* McsEll.σειρά,
     <a class="clsHide" href="#idWhlSysSqcnam"></a></p>
 
   <section id="idWhlSysSqcelt">
@@ -188,31 +203,577 @@
   <p id="idWhlSysSqceltnam">name::
     <br>* Mcs.sequence'element,
     <a class="clsHide" href="#idWhlSysSqceltnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr">
+  <h3 id="idWhlSysSqcordrH3">abstract-order of sequence
+    <a class="clsHide" href="#idWhlSysSqcordrH3"></a></h3>
+  <p id="idWhlSysSqcordrdsn">description::
+    <br>· abstract-order[a] of sequence is the-position of <a class="clsPreview" href="#idWhlSysSqcelt">an-element</a> WITHOUT the-element.
+    <br>· it[a] is similar to <a class="clsPreview" href="filMcsQnt.last.html#idOverview">abstract-quantity</a>.
+    <a class="clsHide" href="#idWhlSysSqcordrdsn"></a></p>
+  <p id="idWhlSysSqcordrnam">name::
+    <br>* Mcs.abstract-order!⇒order,
+    <br>* Mcs.order,
+    <br>* Mcs.sequence'order!⇒order,
+    <br>* Mcs.sequence'position!⇒order,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo,
+    <a class="clsHide" href="#idWhlSysSqcordrnam"></a></p>
 
   <section id="idWhlSysSqcordnbr">
   <h4 id="idWhlSysSqcordnbrH4">ordinal-number of sequence
     <a class="clsHide" href="#idWhlSysSqcordnbrH4"></a></h4>
   <p id="idWhlSysSqcordnbrdsn">description::
-    <br>· ordinal-number is a-name of <a class="clsPreview" href="#idWhlSysSqcelt">the-elements-of-a-sequence</a>.
+    <br>· ordinal-number is a-name of <a class="clsPreview" href="#idWhlSysSqcordr">an-order</a>.
     <a class="clsHide" href="#idWhlSysSqcordnbrdsn"></a></p>
   <p id="idWhlSysSqcordnbrnam">name::
     <br>* Mcs.ordinal-number,
     <a class="clsHide" href="#idWhlSysSqcordnbrnam"></a></p>
   </section>
 
-  <section id="idWhlSysSqceltSpc">
-  <h4 id="idWhlSysSqceltSpcH4">sequence-element.SPECIFIC
-    <a class="clsHide" href="#idWhlSysSqceltSpcH4"></a></h4>
-  <p id="idWhlSysSqceltSpcdsn">description::
+  <section id="idWhlSysSqcordrSpc">
+  <h4 id="idWhlSysSqcordrSpcH4">order.SPECIFIC
+    <a class="clsHide" href="#idWhlSysSqcordrSpcH4"></a></h4>
+  <p id="idWhlSysSqcordrSpcdsn">description::
     <br>* first-1st,
     <br>* second-2nd,
     <br>* third-3rd,
     <br>* forth-4th,
     <br>* fifth-6th,
-    <a class="clsHide" href="#idWhlSysSqceltSpcdsn"></a></p>
-  <p id="idWhlSysSqceltSpcnam">name::
-    <br>* Mcs.sequence-element.specific,
-    <a class="clsHide" href="#idWhlSysSqceltSpcnam"></a></p>
+    <br>...
+    <a class="clsHide" href="#idWhlSysSqcordrSpcdsn"></a></p>
+  <p id="idWhlSysSqcordrSpcnam">name::
+    <br>* Mcs.order.specific,
+    <a class="clsHide" href="#idWhlSysSqcordrSpcnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr1st">
+  <h4 id="idWhlSysSqcordr1stH4">order.1st
+    <a class="clsHide" href="#idWhlSysSqcordr1stH4"></a></h4>
+  <p id="idWhlSysSqcordr1stdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr1stdsn"></a></p>
+  <p id="idWhlSysSqcordr1stnam">name::
+    <br>* Mcs.1st,
+    <br>* Mcs.first,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-fo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.unua,
+    <br>====== langoGreek:
+    <br>* McsEll.πρώτος~adjective:πρώτος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr1stnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr2nd">
+  <h4 id="idWhlSysSqcordr2ndH4">order.2nd
+    <a class="clsHide" href="#idWhlSysSqcordr2ndH4"></a></h4>
+  <p id="idWhlSysSqcordr2nddsn">description::
+    <br>"(n) second (following the first in an ordering or series) "he came in a close second""
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=second]
+    <a class="clsHide" href="#idWhlSysSqcordr2nddsn"></a></p>
+  <p id="idWhlSysSqcordr2ndnam">name::
+    <br>* Mcs.2nd,
+    <br>* Mcs.second,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-tho,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.dua,
+    <br>====== langoGreek:
+    <br>* McsEll.δεύτερος~adjective:δεύτερος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr2ndnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr3rd">
+  <h4 id="idWhlSysSqcordr3rdH4">order.3rd
+    <a class="clsHide" href="#idWhlSysSqcordr3rdH4"></a></h4>
+  <p id="idWhlSysSqcordr3rddsn">description::
+    <br>· abstract-order third.
+    <br>"(n) third (following the second position in an ordering or series) "a distant third"; "he answered the first question willingly, the second reluctantly, and the third with resentment""
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=third]
+    <a class="clsHide" href="#idWhlSysSqcordr3rddsn"></a></p>
+  <p id="idWhlSysSqcordr3rdnam">name::
+    <br>* Mcs.3rd,
+    <br>* Mcs.third,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-to,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.tria,
+    <br>====== langoGreek:
+    <br>* McsEll.τρίτος~adjective:τρίτος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr3rdnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr4th">
+  <h4 id="idWhlSysSqcordr4thH4">order.4th
+    <a class="clsHide" href="#idWhlSysSqcordr4thH4"></a></h4>
+  <p id="idWhlSysSqcordr4thdsn">description::
+    <br>· abstract-order fourth.
+    <a class="clsHide" href="#idWhlSysSqcordr4thdsn"></a></p>
+  <p id="idWhlSysSqcordr4thnam">name::
+    <br>* Mcs.4th,
+    <br>* Mcs.fourth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-so,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.kvara,
+    <br>====== langoGreek:
+    <br>* McsEll.τέταρτος~adjective:τέταρτος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr4thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr5">
+  <h4 id="idWhlSysSqcordr5H4">order.5th
+    <a class="clsHide" href="#idWhlSysSqcordr5H4"></a></h4>
+  <p id="idWhlSysSqcordr5dsn">description::
+    <br>· abstract-order fifth.
+    <a class="clsHide" href="#idWhlSysSqcordr5dsn"></a></p>
+  <p id="idWhlSysSqcordr5nam">name::
+    <br>* Mcs.5,
+    <br>* Mcs.fifth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-co,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.kvina,
+    <br>====== langoGreek:
+    <br>* McsEll.πέντε~το,
+    <a class="clsHide" href="#idWhlSysSqcordr5nam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr6th">
+  <h4 id="idWhlSysSqcordr6thH4">order.6th
+    <a class="clsHide" href="#idWhlSysSqcordr6thH4"></a></h4>
+  <p id="idWhlSysSqcordr6thdsn">description::
+    <br>· abstract-order six.
+    <br>"(n) sixth (position six in a countable series of things)"
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=sixth]
+    <a class="clsHide" href="#idWhlSysSqcordr6thdsn"></a></p>
+  <p id="idWhlSysSqcordr6thnam">name::
+    <br>* Mcs.6th,
+    <br>* Mcs.sixth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-ko,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.sesa,
+    <br>====== langoGreek:
+    <br>* McsEll.έκτος~adjective:έκτος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr6thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr7th">
+  <h4 id="idWhlSysSqcordr7thH4">order.7th
+    <a class="clsHide" href="#idWhlSysSqcordr7thH4"></a></h4>
+  <p id="idWhlSysSqcordr7thdsn">description::
+    <br>· abstract-order seventh.
+    <a class="clsHide" href="#idWhlSysSqcordr7thdsn"></a></p>
+  <p id="idWhlSysSqcordr7thnam">name::
+    <br>* Mcs.7th,
+    <br>* Mcs.seventh,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-ho,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.sepa,
+    <br>====== langoGreek:
+    <br>* McsEll.εφτά~το,
+    <a class="clsHide" href="#idWhlSysSqcordr7thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr8th">
+  <h4 id="idWhlSysSqcordr8thH4">order.8th
+    <a class="clsHide" href="#idWhlSysSqcordr8thH4"></a></h4>
+  <p id="idWhlSysSqcordr8thdsn">description::
+    <br>· abstract-order eighth.
+    <a class="clsHide" href="#idWhlSysSqcordr8thdsn"></a></p>
+  <p id="idWhlSysSqcordr8thnam">name::
+    <br>* Mcs.8th,
+    <br>* Mcs.eighth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-mo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.oka,
+    <br>====== langoGreek:
+    <br>* McsEll.όγδοος~adjective:όγδοος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr8thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr9th">
+  <h4 id="idWhlSysSqcordr9thH4">order.9th
+    <a class="clsHide" href="#idWhlSysSqcordr9thH4"></a></h4>
+  <p id="idWhlSysSqcordr9thdsn">description::
+    <br>· abstract-order nine.
+    <a class="clsHide" href="#idWhlSysSqcordr9thdsn"></a></p>
+  <p id="idWhlSysSqcordr9thnam">name::
+    <br>* Mcs.9th,
+    <br>* Mcs.ninth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-ro,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.naŭa,
+    <br>====== langoGreek:
+    <br>* McsEll.ένατος~adjective:ένατος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr9thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr10th">
+  <h4 id="idWhlSysSqcordr10thH4">order.10th
+    <a class="clsHide" href="#idWhlSysSqcordr10thH4"></a></h4>
+  <p id="idWhlSysSqcordr10thdsn">description::
+    <br>· abstract-order ten.
+    <a class="clsHide" href="#idWhlSysSqcordr10thdsn"></a></p>
+  <p id="idWhlSysSqcordr10thnam">name::
+    <br>* Mcs.10th,
+    <br>* Mcs.tenth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-foPo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.deka,
+    <br>====== langoGreek:
+    <br>* McsEll.δέκατος~adjective:δέκατος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr10thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr11th">
+  <h4 id="idWhlSysSqcordr11thH4">order.11th
+    <a class="clsHide" href="#idWhlSysSqcordr11thH4"></a></h4>
+  <p id="idWhlSysSqcordr11thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr11thdsn"></a></p>
+  <p id="idWhlSysSqcordr11thnam">name::
+    <br>* Mcs.11th,
+    <br>* Mcs.eleventh,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-foFo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.dekunua,
+    <br>====== langoGreek:
+    <br>* McsEll.ενδέκατος~adjective:ενδέκατος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr11thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr12th">
+  <h4 id="idWhlSysSqcordr12thH4">order.12th
+    <a class="clsHide" href="#idWhlSysSqcordr12thH4"></a></h4>
+  <p id="idWhlSysSqcordr12thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr12thdsn"></a></p>
+  <p id="idWhlSysSqcordr12thnam">name::
+    <br>* Mcs.12th,
+    <br>* Mcs.twelfth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-foTho,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.dekdua,
+    <br>====== langoGreek:
+    <br>* McsEll.δωδέκατος~adjective:δωδέκατος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr12thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr13th">
+  <h4 id="idWhlSysSqcordr13thH4">order.13th
+    <a class="clsHide" href="#idWhlSysSqcordr13thH4"></a></h4>
+  <p id="idWhlSysSqcordr13thdsn">description::
+    <br>"(n) thirteenth (position 13 in a countable series of things)"
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=thirteenth]
+    <a class="clsHide" href="#idWhlSysSqcordr13thdsn"></a></p>
+  <p id="idWhlSysSqcordr13thnam">name::
+    <br>* Mcs.13th,
+    <br>* Mcs.thirteenth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-foTho,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.dektria,
+    <br>====== langoGreek:
+    <br>* McsEll.δέκατος-τρίτος~adjective:δέκατος-τρίτος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr13thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr20th">
+  <h4 id="idWhlSysSqcordr20thH4">order.20th
+    <a class="clsHide" href="#idWhlSysSqcordr20thH4"></a></h4>
+  <p id="idWhlSysSqcordr20thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr20thdsn"></a></p>
+  <p id="idWhlSysSqcordr20thnam">name::
+    <br>* Mcs.20th,
+    <br>* Mcs.twentieth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-thoPo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.dudeka,
+    <br>====== langoGreek:
+    <br>* McsEll.εικοσιοστός~adjective:εικοσιοστός-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr20thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr21st">
+  <h4 id="idWhlSysSqcordr21stH4">order.21st
+    <a class="clsHide" href="#idWhlSysSqcordr21stH4"></a></h4>
+  <p id="idWhlSysSqcordr21stdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr21stdsn"></a></p>
+  <p id="idWhlSysSqcordr21stnam">name::
+    <br>* Mcs.21st,
+    <br>* Mcs.twentieth-first,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-thoPo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.dudeka-unua,
+    <br>====== langoGreek:
+    <br>* McsEll.εικοσιοστός-πρώτος~adjective:εικοσιοστός-πρώτος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr21stnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr99th">
+  <h4 id="idWhlSysSqcordr99thH4">order.99th
+    <a class="clsHide" href="#idWhlSysSqcordr99thH4"></a></h4>
+  <p id="idWhlSysSqcordr99thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr99thdsn"></a></p>
+  <p id="idWhlSysSqcordr99thnam">name::
+    <br>* Mcs.99th,
+    <br>* Mcs.ninetieth-ninth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-roRo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.naŭdeka-naŭa,
+    <br>====== langoGreek:
+    <br>* McsEll.ενενηκοστός-ένατος~adjective:ενενηκοστός-ένατος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr99thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr100th">
+  <h4 id="idWhlSysSqcordr100thH4">order.100th
+    <a class="clsHide" href="#idWhlSysSqcordr100thH4"></a></h4>
+  <p id="idWhlSysSqcordr100thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr100thdsn"></a></p>
+  <p id="idWhlSysSqcordr100thnam">name::
+    <br>* Mcs.100th,
+    <br>* Mcs.hundredth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-foPoPo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.centa,
+    <br>====== langoGreek:
+    <br>* McsEll.εκατοστός~adjective:εκατοστός-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr100thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr101st">
+  <h4 id="idWhlSysSqcordr101stH4">order.101st
+    <a class="clsHide" href="#idWhlSysSqcordr101stH4"></a></h4>
+  <p id="idWhlSysSqcordr101stdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr101stdsn"></a></p>
+  <p id="idWhlSysSqcordr101stnam">name::
+    <br>* Mcs.101st,
+    <br>* Mcs.one-hundredth-first,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-foPoFo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.centa-unua,
+    <br>====== langoGreek:
+    <br>* McsEll.εκατοστός-πρώτος~adjective:εκατοστός-πρώτος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr101stnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr200th">
+  <h4 id="idWhlSysSqcordr200thH4">order.200th
+    <a class="clsHide" href="#idWhlSysSqcordr200thH4"></a></h4>
+  <p id="idWhlSysSqcordr200thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr200thdsn"></a></p>
+  <p id="idWhlSysSqcordr200thnam">name::
+    <br>* Mcs.200th,
+    <br>* Mcs.two-hundredth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-thoPoPo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.ducenta,
+    <br>====== langoGreek:
+    <br>* McsEll.διακοσιοστός~adjective:διακοσιοστός-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr200thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr999st">
+  <h4 id="idWhlSysSqcordr999stH4">order.999th
+    <a class="clsHide" href="#idWhlSysSqcordr999stH4"></a></h4>
+  <p id="idWhlSysSqcordr999stdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr999stdsn"></a></p>
+  <p id="idWhlSysSqcordr999stnam">name::
+    <br>* Mcs.999th,
+    <br>* Mcs.nine-hundredth-ninetieth-ninth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-roRoRo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.naŭcenta-naŭdeka-naŭa,
+    <br>====== langoGreek:
+    <br>* McsEll.εννιακοσιοστός-ενενηκοστός-ένατος~adjective:ενιακοστός-ενενηκοστός-ένατος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr999stnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr1000th">
+  <h4 id="idWhlSysSqcordr1000thH4">order.1000th  (1000^1)
+    <a class="clsHide" href="#idWhlSysSqcordr1000thH4"></a></h4>
+  <p id="idWhlSysSqcordr1000thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr1000thdsn"></a></p>
+  <p id="idWhlSysSqcordr1000thnam">name::
+    <br>* Mcs.1000th,
+    <br>* Mcs.thousandth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-Kilo1Fo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.mila,
+    <br>====== langoGreek:
+    <br>* McsEll.χιλιοστός~adjective:χιλιοστός-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr1000thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr1000st">
+  <h4 id="idWhlSysSqcordr1000stH4">order.1'001st
+    <a class="clsHide" href="#idWhlSysSqcordr1000stH4"></a></h4>
+  <p id="idWhlSysSqcordr1000stdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr1000stdsn"></a></p>
+  <p id="idWhlSysSqcordr1000stnam">name::
+    <br>* Mcs.1001st,
+    <br>* Mcs.one-thousandth-first,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-Kilo1Fo-Kilo0PoPoFo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.unu-mila-unua,
+    <br>====== langoGreek:
+    <br>* McsEll.χιλιοστός-πρώτος~adjective:χιλιοστός-πρώτος-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr1000stnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr2000th">
+  <h4 id="idWhlSysSqcordr2000thH4">order.2000th
+    <a class="clsHide" href="#idWhlSysSqcordr2000thH4"></a></h4>
+  <p id="idWhlSysSqcordr2000thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr2000thdsn"></a></p>
+  <p id="idWhlSysSqcordr2000thnam">name::
+    <br>* Mcs.2000th,
+    <br>* Mcs.two-thousandth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-Kilo1Tho,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.dumila,
+    <br>====== langoGreek:
+    <br>* McsEll.δις-χιλιοστός~adjective:δις-χιλιοστός-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordr2000thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordr999999th">
+  <h4 id="idWhlSysSqcordr999999thH4">order.999'999th
+    <a class="clsHide" href="#idWhlSysSqcordr999999thH4"></a></h4>
+  <p id="idWhlSysSqcordr999999thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordr999999thdsn"></a></p>
+  <p id="idWhlSysSqcordr999999thnam">name::
+    <br>* Mcs.999'999th,
+    <br>* Mcs.nine-hundredth-ninetieth-ninth-thousandth-nine-hundredth-ninetieth-ninth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-Kilo1RoRoRo-Kilo0RoRoRo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.naŭcenta-naŭdeka-naŭa-mila-naŭcenta-naŭdeka-naŭa,
+    <br>====== langoGreek:
+    <br>* McsEll.εννιακοσιοστός-ενενηκοστός-ένατος-χιλιοστός-εννιακοσιοστός-ενενηκοστός-ένατος~adjective:,
+    <a class="clsHide" href="#idWhlSysSqcordr999999thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordrK21th">
+  <h4 id="idWhlSysSqcordrK21thH4">order.1'000'000th  (1000^2)
+    <a class="clsHide" href="#idWhlSysSqcordrK21thH4"></a></h4>
+  <p id="idWhlSysSqcordrK21thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordrK21thdsn"></a></p>
+  <p id="idWhlSysSqcordrK21thnam">name::
+    <br>* Mcs.1'000'000th,
+    <br>* Mcs.millionth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-Kilo2-fo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.unu-miliona,
+    <br>====== langoGreek:
+    <br>* McsEll.εκατομμυριοστός~adjective:εκατομμυριοστός-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordrK21thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordrK22th">
+  <h4 id="idWhlSysSqcordrK22thH4">order.2'000'000th
+    <a class="clsHide" href="#idWhlSysSqcordrK22thH4"></a></h4>
+  <p id="idWhlSysSqcordrK22thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordrK22thdsn"></a></p>
+  <p id="idWhlSysSqcordrK22thnam">name::
+    <br>* Mcs.2'000'000th,
+    <br>* Mcs.two-millionth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-Kilo2-tho,
+    <br>====== langoGreek:
+    <br>====== langoEsperanto:
+    <br>* McsEpo.du-miliona,
+    <br>* McsEll.δύο-εκατομμυριοστός~adjective:δύο-εκατομμυριοστός-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordrK22thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordrK31th">
+  <h4 id="idWhlSysSqcordrK31thH4">order.1'000'000'000th (1000^3)
+    <a class="clsHide" href="#idWhlSysSqcordrK31thH4"></a></h4>
+  <p id="idWhlSysSqcordrK31thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordrK31thdsn"></a></p>
+  <p id="idWhlSysSqcordrK31thnam">name::
+    <br>* Mcs.1'000'000'000th,
+    <br>* Mcs.billionth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-Kilo3-fo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.miliarda,
+    <br>====== langoGreek:
+    <br>* McsEll.δισεκατομμυριοστός~adjective:δισεκατομμυριοστός-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordrK31thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordrK41th">
+  <h4 id="idWhlSysSqcordrK41thH4">order.1'000'000'000'000th (1000^4)
+    <a class="clsHide" href="#idWhlSysSqcordrK41thH4"></a></h4>
+  <p id="idWhlSysSqcordrK41thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordrK41thdsn"></a></p>
+  <p id="idWhlSysSqcordrK41thnam">name::
+    <br>* Mcs.1'000'000'000'000th,
+    <br>* Mcs.trillionth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-Kilo4-fo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.duiliona,
+    <br>====== langoGreek:
+    <br>* McsEll.τρισεκατομμυριοστός~adjective:τρισεκατομμυριοστός-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordrK41thnam"></a></p>
+  </section>
+
+  <section id="idWhlSysSqcordrK51th">
+  <h4 id="idWhlSysSqcordrK51thH4">order.1'000'000'000'000'000th (1000^5)
+    <a class="clsHide" href="#idWhlSysSqcordrK51thH4"></a></h4>
+  <p id="idWhlSysSqcordrK51thdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlSysSqcordrK51thdsn"></a></p>
+  <p id="idWhlSysSqcordrK51thnam">name::
+    <br>* Mcs.1'000'000'000'000'000th,
+    <br>* Mcs.quadrillionth,
+    <br>====== langoKomo:
+    <br>* McsKmo.ordo-Kilo5-fo,
+    <br>====== langoEsperanto:
+    <br>* McsEpo.kvariliona,
+    <br>====== langoGreek:
+    <br>* McsEll.τετράκις-εκατομμυριοστός~adjective:τετράκις-εκατομμυριοστός-η-ο,
+    <a class="clsHide" href="#idWhlSysSqcordrK51thnam"></a></p>
   </section>
   </section>
 
