@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.sensorial-concept (Mcs.4-16-0.2019-10-25)</title>
+  <title>Mcs.sensorial-concept (Mcs.4-17-0.2019-10-26)</title>
   <meta name="keywords" content="sensorial-concept, modelConceptSensorial, modelConceptStructured, Mcs, ModelInfoWorld, Worldview, Mws, Hitp, Kaseluris.Nikos.1959, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -45,7 +45,9 @@
     <br>* Mcs.sensorial-concept-(Mcs)!⇒Mcs, {2019-08-23}
     <br>* Mcs.structured-concept-(Mcs)!⇒Mcs,
     <br>====== langoKomo:
-    <br>* McsKmo.enioSenso,
+    <br>* McsKmo.Mes!=sensorial-concept,
+    <br>* McsKmo.enioSenso!⇒Mes,
+    <br>* McsKmo.modelo-enio-senso!⇒Mes,
     <br>====== langoGreek:
     <br>* McsEll.Μεδ,
     <br>* McsEll.αισθητή-έννοια,
@@ -198,7 +200,7 @@
   <h2 id="idMcsattDvsnH2">attribute.division
     <a class="clsHide" href="#idMcsattDvsnH2"></a></h2>
   <p id="idMcsattDvsndsn">description::
-    <br>· division--Mcs-att is the-SET of <a class="clsPreview" href="#idMcsatt">attributes</a> of <a class="clsPreview" href="#idDescription">the-Mcs</a> that make-up the-Mcs (= same referent) divided on ONE attribute.
+    <br>· division--of--Mcs-attributes[a]-(part, partNo, specific, all-attributes) is the-SET of <a class="clsPreview" href="#idMcsatt">attributes</a> of <a class="clsPreview" href="#idDescription">the-Mcs</a> that make-up the-attributes[a] divided on ONE attribute.
     <br>· there-are no overlappings and no holes in the-attributes of the-division.
     <br>· the-attributes of one-concept can-have many divisions.
     <a class="clsHide" href="#idMcsattDvsndsn"></a></p>
@@ -207,67 +209,99 @@
     <br>* Mcs.Mcs'attAsDivision!⇒Mcs-division,
     <br>* Mcs.Mcs'division-attribute!⇒Mcs-division,
     <br>* Mcs.Mcs-division,
-    <br>* Mcs.division--Mcs-att!⇒Mcs-division,
+    <br>* Mcs.division--of--Mcs-atts!⇒Mcs-division,
     <a class="clsHide" href="#idMcsattDvsnnam"></a></p>
 
   <section id="idMcsattDvsnclmt">
-  <h3 id="idMcsattDvsnclmtH3">complement-of-att of division of Mcs
+  <h3 id="idMcsattDvsnclmtH3">complement-of-att of Mcs-division
     <a class="clsHide" href="#idMcsattDvsnclmtH3"></a></h3>
   <p id="idMcsattDvsnclmtdsn">description::
     <br>· in ONE <a class="clsPreview" href="#idMcsattDvsn">division</a> all the-other attributes of an-attribute[a] is the-complement of attribute[a] ON this division.
     <a class="clsHide" href="#idMcsattDvsnclmtdsn"></a></p>
   <p id="idMcsattDvsnclmtnam">name::
-    <br>* Mcs.complement-of--Mcs-att!⇒Mcs-complement,
     <br>* Mcs.Mcs-att'complement!⇒Mcs-complement,
     <br>* Mcs.Mcs'complement-of-att!⇒Mcs-complement,
     <br>* Mcs.Mcs-att.complement-of-att!⇒Mcs-complement,
     <br>* Mcs.Mcs-complement,
+    <br>* Mcs.complement-of--Mcs-att!⇒Mcs-complement,
     <br>====== langoKomo:
-    <br>* McsKmo.uo!=complement,
+    <br>* McsKmo.uto!=complement-of-att,
     <a class="clsHide" href="#idMcsattDvsnclmtnam"></a></p>
 
-  <section id="idMcsattDvsnclmtPrt">
-  <h4 id="idMcsattDvsnclmtPrtH4">complement.part in division
-    <a class="clsHide" href="#idMcsattDvsnclmtPrtH4"></a></h4>
-  <p id="idMcsattDvsnclmtPrtdsn">description::
-    <br>· part-complement of att[a] in <a class="clsPreview" href="#idMcsattDvsn">a-division</a> is <a class="clsPreview" href="#idMcsattDvsnclmt">the-complement-of-att[a]</a> in <a class="clsPreview" href="#idMcsattPrtdvn">a-part-division</a>.
-    <a class="clsHide" href="#idMcsattDvsnclmtPrtdsn"></a></p>
-  <p id="idMcsattDvsnclmtPrtnam">name::
-    <br>* Mcs.Mcs'part-complement--of-att!⇒Mcs-part-complement,
-    <br>* Mcs.Mcs-complement.part!⇒Mcs-part-complement,
-    <br>* Mcs.Mcs-part-complement,
-    <a class="clsHide" href="#idMcsattDvsnclmtPrtnam"></a></p>
+  <section id="idMcsattDvsnclmtSpcs">
+  <h4 id="idMcsattDvsnclmtSpcsH4">Mcs-complement.SPECIFIC in division
+    <a class="clsHide" href="#idMcsattDvsnclmtSpcsH4"></a></h4>
+  <p id="idMcsattDvsnclmtSpcsdsn">description::
+    <br>* attributes-complement,
+    <br>* parts-complement,
+    <br>* specifics-complement,
+    <a class="clsHide" href="#idMcsattDvsnclmtSpcsdsn"></a></p>
+  <p id="idMcsattDvsnclmtSpcsnam">name::
+    <br>* Mcs.Mcs-complement.specific,
+    <a class="clsHide" href="#idMcsattDvsnclmtSpcsnam"></a></p>
   </section>
 
-  <section id="idMcsattDvsnclmtSpc">
-  <h4 id="idMcsattDvsnclmtSpcH4">complement.specific in division
-    <a class="clsHide" href="#idMcsattDvsnclmtSpcH4"></a></h4>
-  <p id="idMcsattDvsnclmtSpcdsn">description::
-    <br>· specific-complement of att[a] in <a class="clsPreview" href="#idMcsattDvsn">a-division</a> is <a class="clsPreview" href="#idMcsattDvsnclmt">the-complement-of-att[a]</a> in <a class="clsPreview" href="#idMcsattWhlNSpcdvn">a-specific-division</a>.
-    <a class="clsHide" href="#idMcsattDvsnclmtSpcdsn"></a></p>
-  <p id="idMcsattDvsnclmtSpcnam">name::
-    <br>* Mcs.Mcs'specific-complement--of-att!⇒Mcs-specifc-complement,
-    <br>* Mcs.Mcs-complement.specific!⇒Mcs-specifc-complement,
-    <br>* Mcs.Mcs-specifc-complement,
-    <a class="clsHide" href="#idMcsattDvsnclmtSpcnam"></a></p>
+  <section id="idMcsattDvsnclmtAtts">
+  <h4 id="idMcsattDvsnclmtAttsH4">Mcs-complement.attributes in division
+    <a class="clsHide" href="#idMcsattDvsnclmtAttsH4"></a></h4>
+  <p id="idMcsattDvsnclmtAttsdsn">description::
+    <br>· attributes-complement of Mcs-att is <a class="clsPreview" href="#idMcsattDvsnclmt">a-complement</a> that makes-up all the-attributes of the-Mcs.
+    <a class="clsHide" href="#idMcsattDvsnclmtAttsdsn"></a></p>
+  <p id="idMcsattDvsnclmtAttsnam">name::
+    <br>* Mcs.attributes-complement--of-Mcs-att,
+    <br>* Mcs.Mcs-complement.attributes,
+    <br>====== langoKomo:
+    <br>* McsKmo.uatro-a-Mes!=complement.attributes,
+    <a class="clsHide" href="#idMcsattDvsnclmtAttsnam"></a></p>
+  </section>
+
+  <section id="idMcsattDvsnclmtPrts">
+  <h4 id="idMcsattDvsnclmtPrtsH4">Mcs-complement.parts in division
+    <a class="clsHide" href="#idMcsattDvsnclmtPrtsH4"></a></h4>
+  <p id="idMcsattDvsnclmtPrtsdsn">description::
+    <br>· parts-complement of att[a] in <a class="clsPreview" href="#idMcsattDvsn">a-division</a> is <a class="clsPreview" href="#idMcsattDvsnclmt">the-complement-of-att[a]</a> in <a class="clsPreview" href="#idMcsattPrtdvn">a-part-division</a>.
+    <a class="clsHide" href="#idMcsattDvsnclmtPrtsdsn"></a></p>
+  <p id="idMcsattDvsnclmtPrtsnam">name::
+    <br>* Mcs.Mcs'parts-complement--of-att!⇒Mcs-parts-complement,
+    <br>* Mcs.Mcs-complement.parts!⇒Mcs-parts-complement,
+    <br>* Mcs.Mcs-parts-complement,
+    <br>====== langoKomo:
+    <br>* McsKmo.ulo-a-Mes!=complement.parts,
+    <a class="clsHide" href="#idMcsattDvsnclmtPrtsnam"></a></p>
+  </section>
+
+  <section id="idMcsattDvsnclmtSpcs">
+  <h4 id="idMcsattDvsnclmtSpcsH4">Mcs-complement.specifics in division
+    <a class="clsHide" href="#idMcsattDvsnclmtSpcsH4"></a></h4>
+  <p id="idMcsattDvsnclmtSpcsdsn">description::
+    <br>· specifics-complement of att[a] in <a class="clsPreview" href="#idMcsattDvsn">a-division</a> is <a class="clsPreview" href="#idMcsattDvsnclmt">the-complement-of-att[a]</a> in <a class="clsPreview" href="#idMcsattWhlNSpcdvn">a-specific-division</a>.
+    <a class="clsHide" href="#idMcsattDvsnclmtSpcsdsn"></a></p>
+  <p id="idMcsattDvsnclmtSpcsnam">name::
+    <br>* Mcs.Mcs'specifics-complement--of-att!⇒Mcs-specifc-complement,
+    <br>* Mcs.Mcs-complement.specifics!⇒Mcs-specifics-complement,
+    <br>* Mcs.Mcs-specifics-complement,
+    <br>====== langoKomo:
+    <br>* McsKmo.uo-a-Mes!=complement.specifics,
+    <a class="clsHide" href="#idMcsattDvsnclmtSpcsnam"></a></p>
   </section>
   </section>
 
   <section id="idMcsattDvsnSpc">
-  <h3 id="idMcsattDvsnSpcH3">att-division.SPECIFIC
+  <h3 id="idMcsattDvsnSpcH3">Mcs-division.SPECIFIC
     <a class="clsHide" href="#idMcsattDvsnSpcH3"></a></h3>
   <p id="idMcsattDvsnSpcP1">specific::
     <br>* <a class="clsPreview" href="#idMcsattDvsnDhm">dichotomous-division</a>,
-    <br>* part-division,
-    <br>* doing-division,
+    <br>* <a class="clsPreview" href="#idMcsattDvsnThm">trichotomous-division</a>,
+    <br>* doing-att-division,
     <br>===
-    <br>* <a class="clsPreview" href="#idMcsattPrtdvn">part-division</a>,
-    <br>* <a class="clsPreview" href="#idMcsattWhlNSpcdvn">specific-division</a>,
+    <br>* <a class="clsPreview" href="#idMcsattPrtdvn">attributes-division</a>,
+    <br>* <a class="clsPreview" href="#idMcsattPrtdvn">parts-division</a>,
+    <br>* <a class="clsPreview" href="#idMcsattWhlNSpcdvn">specifics-division</a>,
     <a class="clsHide" href="#idMcsattDvsnSpcP1"></a></p>
   </section>
 
   <section id="idMcsattDvsnDhm">
-  <h3 id="idMcsattDvsnDhmH3">att-division.dichotomous
+  <h3 id="idMcsattDvsnDhmH3">Mcs-division.dichotomous
     <a class="clsHide" href="#idMcsattDvsnDhmH3"></a></h3>
   <p id="idMcsattDvsnDhmdsn">description::
     <br>· dichotomous-division is <a class="clsPreview" href="#idMcsattDvsn">a-division</a> with 2 members, the-one that has the-attribute and the-other that has not.
@@ -280,11 +314,12 @@
     <br>* Mcs.Mcs-att.division.dichotomous,
     <br>* Mcs.Mcs'attAsDichotomous-division,
     <br>* Mcs.Mcs'dichotomous-division-attribute,
+    <br>* Mcs.Mcs-division.dichotomous,
     <a class="clsHide" href="#idMcsattDvsnDhmnam"></a></p>
   </section>
 
   <section id="idMcsattDvsnThm">
-  <h3 id="idMcsattDvsnThmH3">att-division.trichotomous
+  <h3 id="idMcsattDvsnThmH3">Mcs-division.trichotomous
     <a class="clsHide" href="#idMcsattDvsnThmH3"></a></h3>
   <p id="idMcsattDvsnThmdsn">description::
     <br>· like a-dichotomous-division we have clear division in 3 entities:
@@ -296,9 +331,13 @@
     <br>* Mcs.Mcs-division.trihotomous,
     <br>* Mcs.trihotomous-division--of-Mcs,
     <a class="clsHide" href="#idMcsattDvsnThmnam"></a></p>
+  <p id="idMcsattDvsnThmSpc">specific::
+    <br>* ordered--trichotomous-division,
+    <br>* orderedNo-trichotomous-division,
+    <a class="clsHide" href="#idMcsattDvsnThmSpc"></a></p>
 
   <section id="idMcsattDvsnThm1att">
-  <h4 id="idMcsattDvsnThm1attH4">first-att of trichotomous-division
+  <h4 id="idMcsattDvsnThm1attH4">first-att of ordered--trichotomous-division
     <a class="clsHide" href="#idMcsattDvsnThm1attH4"></a></h4>
   <p id="idMcsattDvsnThm1attdsn">description::
     <br>·
@@ -311,7 +350,7 @@
   </section>
 
   <section id="idMcsattDvsnThm2att">
-  <h4 id="idMcsattDvsnThm2attH4">middle-att of trichotomous-division
+  <h4 id="idMcsattDvsnThm2attH4">middle-att of ordered--trichotomous-division
     <a class="clsHide" href="#idMcsattDvsnThm2attH4"></a></h4>
   <p id="idMcsattDvsnThm2attdsn">description::
     <br>·
@@ -325,7 +364,7 @@
   </section>
 
   <section id="idMcsattDvsnThm3att">
-  <h4 id="idMcsattDvsnThm3attH4">third-att of trichotomous-division
+  <h4 id="idMcsattDvsnThm3attH4">third-att of ordered--trichotomous-division
     <a class="clsHide" href="#idMcsattDvsnThm3attH4"></a></h4>
   <p id="idMcsattDvsnThm3attdsn">description::
     <br>·
@@ -338,28 +377,41 @@
   </section>
   </section>
 
-  <section id="idMcsattDvsnPrt">
-  <h3 id="idMcsattDvsnPrtH3">att-division.part
-    <a class="clsHide" href="#idMcsattDvsnPrtH3"></a></h3>
-  <p id="idMcsattDvsnPrtdsn">description::
-    <br>· part-division--Mcs-att is a-dichotomous-division of a-Mcs's attributes in <a class="clsPreview" href="#idMcsattPrt">part</a> and <a class="clsPreview" href="#idMcsattPrtN">partNo</a>.
-    <a class="clsHide" href="#idMcsattDvsnPrtdsn"></a></p>
-  <p id="idMcsattDvsnPrtnam">name::
-    <br>* Mcs.division.part--Mcs-att,
-    <br>* Mcs.Mcs-att.division.part,
-    <a class="clsHide" href="#idMcsattDvsnPrtnam"></a></p>
-  </section>
+  <section id="idMcsattDvsnAtts">
+  <h3 id="idMcsattDvsnAttsH3">Mcs-division.attributes
+    <a class="clsHide" href="#idMcsattDvsnAttsH3"></a></h3>
+  <p id="idMcsattDvsnAttsdsn">description::
+    <br>· attributes-division of Mcs[a] is <a class="clsPreview" href="#idMcsattDvsn">a-division</a> of its[a] <a class="clsPreview" href="#idMcsatt">attributes</a>.
+    <a class="clsHide" href="#idMcsattDvsnAttsdsn"></a></p>
+  <p id="idMcsattDvsnAttsnam">name::
+    <br>* Mcs.attributes-division-of-Mcs,
+    <a class="clsHide" href="#idMcsattDvsnAttsnam"></a></p>
 
   <section id="idMcsattDvsnDng">
-  <h3 id="idMcsattDvsnDngH3">att-division.doing
-    <a class="clsHide" href="#idMcsattDvsnDngH3"></a></h3>
+  <h4 id="idMcsattDvsnDngH4">Mcs-division.doing
+    <a class="clsHide" href="#idMcsattDvsnDngH4"></a></h4>
   <p id="idMcsattDvsnDngdsn">description::
     <br>· doing-division--Mcs-att is a-dichotomous-division of a-Mcs's attributes in <a class="clsPreview" href="#idMcsattDng">doing</a> and <a class="clsPreview" href="#idMcsattDngN">doingNo</a>.
     <a class="clsHide" href="#idMcsattDvsnDngdsn"></a></p>
   <p id="idMcsattDvsnDngnam">name::
     <br>* Mcs.division.doing--Mcs-att,
     <br>* Mcs.Mcs-att.division.doing,
+    <br>* Mcs.Mcs-division.doing,
     <a class="clsHide" href="#idMcsattDvsnDngnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idMcsattDvsnPrts">
+  <h3 id="idMcsattDvsnPrtsH3">Mcs-division.part-attributes
+    <a class="clsHide" href="#idMcsattDvsnPrtsH3"></a></h3>
+  <p id="idMcsattDvsnPrtsdsn">description::
+    <br>· parts-division--Mcs-att is a-division of a-Mcs's <a class="clsPreview" href="#idMcsattPrt">parts</a>.
+    <a class="clsHide" href="#idMcsattDvsnPrtsdsn"></a></p>
+  <p id="idMcsattDvsnPrtsnam">name::
+    <br>* Mcs.Mcs-division.parts,
+    <br>* Mcs.Mcs-att.division.parts,
+    <br>* Mcs.Mcs-division.parts,
+    <a class="clsHide" href="#idMcsattDvsnPrtsnam"></a></p>
   </section>
   </section>
 
@@ -394,6 +446,10 @@
   <p id="idMcsprtrlnnam">name::
     <br>* Mcs.Mcs'part-relation,
     <br>* Mcs.part-relation--of-Mcs,
+    <br>* Mcs.relation.part--of-Mcs,
+    <br>====== langoKomo:
+    <br>* McsKmo.la!=part-relation:conj,
+    <br>* McsKmo.ro-lo!=part-relation,
     <a class="clsHide" href="#idMcsprtrlnnam"></a></p>
   </section>
 
@@ -1243,7 +1299,7 @@
     <br>* Mcs.specific-att-of-Mcs,
     <br>* Mcs.specific-of-Mcs,
     <br>====== langoKomo:
-    <br>* McsKmo.atroUko-a-enioSenso,
+    <br>* McsKmo.koUanto-a-Mes,
     <a class="clsHide" href="#idMcsattWhlNSpcnam"></a></p>
 
   <section id="idMcsattIdvl">
@@ -1263,10 +1319,10 @@
   </section>
 
   <section id="idMcsattWhlNSpcdvn">
-  <h3 id="idMcsattWhlNSpcdvnH3">attribute.specific-division
+  <h3 id="idMcsattWhlNSpcdvnH3">attribute.specifics-division
     <a class="clsHide" href="#idMcsattWhlNSpcdvnH3"></a></h3>
   <p id="idMcsattWhlNSpcdvndsn">description::
-    <br>Specific-division-of-Mcs[a] is the-set of <a class="clsPreview" href="#idMcsattWhlNSpc">specific-concepts</a> of Mcs[a] on THE-SAME-ATTRIBUTE.
+    <br>Specifics-division-of-Mcs[a] is the-set of <a class="clsPreview" href="#idMcsattWhlNSpc">specific-concepts</a> of Mcs[a] on THE-SAME-ATTRIBUTE.
     <br><a class="clsPreview" href="#idMcsattGnc">A-generic-concept</a> can-have MANY specific-divisions on DIFFERENT attributes.
     <br>For example, humans on 'tallness' are tall and tallNo.
     <br>The same humans on 'fatness' are fat and fatNo.
@@ -1275,11 +1331,12 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.2017-11-15]
     <a class="clsHide" href="#idMcsattWhlNSpcdvndsn"></a></p>
   <p id="idMcsattWhlNSpcdvnnam">name::
-    <br>* Mcs.division.specific--Mcs-att,
-    <br>* Mcs.Mcs-att.division.specific,
-    <br>* Mcs.Mcs-att.specific-division,
-    <br>* Mcs.Mcs'attAsSpecific-division,
-    <br>* Mcs.specific-division--Mcs-att,
+    <br>* Mcs.division.specifics--Mcs-att,
+    <br>* Mcs.Mcs-att.division.specifics,
+    <br>* Mcs.Mcs-att.specifics-division,
+    <br>* Mcs.Mcs-division.specifics,
+    <br>* Mcs.Mcs'attAsSpecifics-division,
+    <br>* Mcs.specifics-division--Mcs-att,
     <a class="clsHide" href="#idMcsattWhlNSpcdvnnam"></a></p>
   </section>
 
