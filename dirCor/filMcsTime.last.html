@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.time (time.0-12-0.2019-10-25 draft)</title>
-  <meta name="keywords" content="time, time, ModelConceptSensorial, McsHitp, Synagonism">
+  <title>Mcs.time (time.0-13-0.2019-10-28 draft)</title>
+  <meta name="keywords" content="time, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
 
@@ -126,7 +126,16 @@
     <br>* Mcs.time.specific,
     <a class="clsHide" href="#idTimeSpcnam"></a></p>
   <p id="idTimeSpcP1">specific::
-    <br>
+    <br>* Uom-of-time,
+    <br>* semaso-time,
+    <br>* point-time,
+    <br>* pointNo-time,
+    <br>* definite-time,
+    <br>* definiteNo-time,
+    <br>* relative-time,
+    <br>* relativeNo-time,
+    <br>===
+    <br>* age,
     <a class="clsHide" href="#idTimeSpcP1"></a></p>
 </section>
 
@@ -198,7 +207,7 @@
 </section>
 
 <section id="idTimePntN">
-  <h1 id="idTimePntNH1">time.interval (pointNo)
+  <h1 id="idTimePntNH1">time.pointNo (interval)
     <a class="clsHide" href="#idTimePntNH1"></a></h1>
   <p id="idTimePntNdsn">description::
     <br>· time-interval is time between <a class="clsPreview" href="#idTimePnt">time-points</a>.
@@ -310,10 +319,21 @@
     <a class="clsHide" href="#idTimeSmsDftDtcCrtH3"></a></h3>
   <p id="idTimeSmsDftDtcCrtdsn">description::
     <br>· time, point|interval, definite, deictic, current.
+    <br>===
+    <br>"(n) present, nowadays (the period of time that is happening now; any continuous stretch of time including the moment of speech) "that is enough for the present"; "he lives in the present with no thought of tomorrow""
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=present]
+    <br>"(n) now (the momentary present) "Now is a good time to do it"; "it worked up to right now""
+    <br>"(adv) now, at present (at the present moment) "goods now on sale"; "the now-aging dictator"; "they are now abroad"; "he is busy at present writing a new novel"; "it could happen any time now""
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=now]
     <a class="clsHide" href="#idTimeSmsDftDtcCrtdsn"></a></p>
   <p id="idTimeSmsDftDtcCrtnam">name::
+    <br>* Mcs.current-time,
     <br>* Mcs.now,
+    <br>* Mcs.present,
+    <br>* Mcs.time.current,
     <br>* Mcs.time.definite.deictic.current,
+    <br>====== langoKomo:
+    <br>* McsKmo.to-dhio!=now,
     <br>====== langoGreek:
     <br>* McsEll.τώρα,
     <a class="clsHide" href="#idTimeSmsDftDtcCrtnam"></a></p>
@@ -390,7 +410,7 @@
     <br>* Mcs.sometimes,
     <br>* Mcs.time.definiteNo.quantity.oneNo,
     <br>====== langoKomo:
-    <br>* McsKmo.to-tio-foUo!=time.definiteNo.oneNo,
+    <br>* McsKmo.to-dioUo-foUo!=time.definiteNo.oneNo,
     <a class="clsHide" href="#idTimeSmsDftNOneNnam"></a></p>
   </section>
 
@@ -429,73 +449,193 @@
     <br>* McsEll.οποτεδήποτε,
     <a class="clsHide" href="#idTimeSmsDftNAnynam"></a></p>
   </section>
-
-  <section id="idTimeSmsDftNPst">
-  <h2 id="idTimeSmsDftNPstH2">time.definiteNo.relative.past
-    <a class="clsHide" href="#idTimeSmsDftNPstH2"></a></h2>
-  <p id="idTimeSmsDftNPstdsn">description::
-    <br>· time definiteNo, relative, past.
-    <a class="clsHide" href="#idTimeSmsDftNPstdsn"></a></p>
-  <p id="idTimeSmsDftNPstnam">name::
-    <br>* Mcs.then!~advb,
-    <br>* Mcs.past,
-    <br>* Mcs.time.definiteNo.relative.past,
-    <br>====== langoKomo:
-    <br>* McsKmo.to-ano!=time.past,
-    <a class="clsHide" href="#idTimeSmsDftNPstnam"></a></p>
-  </section>
-
-  <section id="idTimeSmsDftNPrt">
-  <h2 id="idTimeSmsDftNPrtH2">time.definiteNo.relative.present
-    <a class="clsHide" href="#idTimeSmsDftNPrtH2"></a></h2>
-  <p id="idTimeSmsDftNPrtdsn">description::
-    <br>· time definiteNo, relative, present.
-    <a class="clsHide" href="#idTimeSmsDftNPrtdsn"></a></p>
-  <p id="idTimeSmsDftNPrtnam">name::
-    <br>* Mcs.now!~advb,
-    <br>* Mcs.present,
-    <br>* Mcs.time.definiteNo.relative.present,
-    <br>====== langoKomo:
-    <br>* McsKmo.to-eno!=time.present,
-    <a class="clsHide" href="#idTimeSmsDftNPrtnam"></a></p>
-  </section>
-
-  <section id="idTimeSmsDftNFtr">
-  <h2 id="idTimeSmsDftNFtrH2">time.definiteNo.relative.future
-    <a class="clsHide" href="#idTimeSmsDftNFtrH2"></a></h2>
-  <p id="idTimeSmsDftNFtrdsn">description::
-    <br>· time definiteNo, relative, future.
-    <a class="clsHide" href="#idTimeSmsDftNFtrdsn"></a></p>
-  <p id="idTimeSmsDftNFtrnam">name::
-    <br>* Mcs.future,
-    <br>* Mcs.time.definiteNo.relative.future,
-    <br>====== langoKomo:
-    <br>* McsKmo.to-ino!=time.future,
-    <a class="clsHide" href="#idTimeSmsDftNFtrnam"></a></p>
-  </section>
 </section>
 
 <section id="idTimeRltv">
   <h1 id="idTimeRltvH1">time.relative
     <a class="clsHide" href="#idTimeRltvH1"></a></h1>
   <p id="idTimeRltvdsn">description::
+    <br>· relative-time is <a class="clsPreview" href="#idOverview">time</a> defined in relation to another time.
+    <br>===
     <br>"(adj) relative, comparative (estimated by comparison; not absolute or complete) "a relative stranger""
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=relative]
     <a class="clsHide" href="#idTimeRltvdsn"></a></p>
   <p id="idTimeRltvnam">name::
     <br>* Mcs.relative-time,
     <br>* Mcs.time.relative,
+    <br>====== langoKomo:
+    <br>* McsKmo.to-tio!=time.relative,
     <a class="clsHide" href="#idTimeRltvnam"></a></p>
 
-  <section id="idTimeRltv">
-  <h2 id="idTimeRltvH2">time.relative.before-time
-    <a class="clsHide" href="#idTimeRltvH2"></a></h2>
-  <p id="idTimeRltvdsn">description::
-    <br>·
-    <a class="clsHide" href="#idTimeRltvdsn"></a></p>
-  <p id="idTimeRltvnam">name::
+  <section id="idTimeRltvBfr">
+  <h2 id="idTimeRltvBfrH2">time.relative.before-time
+    <a class="clsHide" href="#idTimeRltvBfrH2"></a></h2>
+  <p id="idTimeRltvBfrdsn">description::
+    <br>· time, relative, before time.
+    <a class="clsHide" href="#idTimeRltvBfrdsn"></a></p>
+  <p id="idTimeRltvBfrnam">name::
     <br>* Mcs.time.relative.before-time,
-    <a class="clsHide" href="#idTimeRltvnam"></a></p>
+    <br>--- conjunction:
+    <br>* Mcs.before!~conj,
+    <br>====== langoKomo:
+    <br>* McsKmo.to-ana-to,
+    <br>--- conjunction:
+    <br>* McsKmo.ana!~conj,
+    <a class="clsHide" href="#idTimeRltvBfrnam"></a></p>
+  </section>
+
+  <section id="idTimeRltvSeim">
+  <h2 id="idTimeRltvSeimH2">time.relative.same-time
+    <a class="clsHide" href="#idTimeRltvSeimH2"></a></h2>
+  <p id="idTimeRltvSeimdsn">description::
+    <br>"(adj) coincident, coincidental, coinciding, concurrent, co-occurrent, cooccurring, simultaneous (occurring or operating at the same time) "a series of coincident events""
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=concurrent]
+    <br>"(adj) synchronous, synchronal, synchronic (occurring or existing at the same time or having the same period or phase) "recovery was synchronous with therapy"- Jour.A.M.A.; "a synchronous set of clocks"; "the synchronous action of a bird's wings in flight"; "synchronous oscillations""
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=synchronous]
+    <a class="clsHide" href="#idTimeRltvSeimdsn"></a></p>
+  <p id="idTimeRltvSeimnam">name::
+    <br>* Mcs.time.relative.same-time,
+    <br>--- adjective:
+    <br>* Mcs.concurrent!~adjv,
+    <br>* Mcs.simultaneous!~adjv,
+    <br>* Mcs.synchronous!~adjv,
+    <br>====== langoKomo:
+    <br>* McsKmo.to-ena-to,
+    <a class="clsHide" href="#idTimeRltvSeimnam"></a></p>
+  </section>
+
+  <section id="idTimeRltvAft">
+  <h2 id="idTimeRltvAftH2">time.relative.after-time
+    <a class="clsHide" href="#idTimeRltvAftH2"></a></h2>
+  <p id="idTimeRltvAftdsn">description::
+    <br>· time, relative, after time.
+    <a class="clsHide" href="#idTimeRltvAftdsn"></a></p>
+  <p id="idTimeRltvAftnam">name::
+    <br>* Mcs.time.relative.after-time,
+    <br>--- conjunction:
+    <br>* Mcs.after!~conj,
+    <br>====== langoKomo:
+    <br>* McsKmo.to-ina-to,
+    <br>--- conjunction:
+    <br>* Mcs.ina!~conj,
+    <a class="clsHide" href="#idTimeRltvAftnam"></a></p>
+
+  <section id="idTimeRltvAftstx">
+  <h3 id="idTimeRltvAftstxH3">syntax of time.relative.after-time
+    <a class="clsHide" href="#idTimeRltvAftstxH3"></a></h3>
+  <p id="idTimeRltvAftstxdsn">description::
+    <br>· English:
+    <br>_txtEng: _stxWhen:(after the launch) _stxSbj:(the commander) _stxVrb:(will give) _stxObj:(additional instructions) _stxTowhom:(to the astronaut).
+    <a class="clsHide" href="#idTimeRltvAftstxdsn"></a></p>
+  <p id="idTimeRltvAftstxnam">name::
+    <br>* Mcs.syntax.after,
+    <br>* Mcs.syntax.time.relative.after-time,
+    <a class="clsHide" href="#idTimeRltvAftstxnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idTimeRltvBfrc">
+  <h2 id="idTimeRltvBfrcH2">time.relative.before-current-time
+    <a class="clsHide" href="#idTimeRltvBfrcH2"></a></h2>
+  <p id="idTimeRltvBfrcdsn">description::
+    <br>· time, relative, before current-time.
+    <a class="clsHide" href="#idTimeRltvBfrcdsn"></a></p>
+  <p id="idTimeRltvBfrcnam">name::
+    <br>* Mcs.past,
+    <br>* Mcs.time.relative.before-current-time,
+    <br>====== langoKomo:
+    <br>* McsKmo.to-ano!=time.past,
+    <a class="clsHide" href="#idTimeRltvBfrcnam"></a></p>
+  </section>
+
+  <section id="idTimeRltvSamec">
+  <h2 id="idTimeRltvSamecH2">time.relative.same-current-time
+    <a class="clsHide" href="#idTimeRltvSamecH2"></a></h2>
+  <p id="idTimeRltvSamecdsn">description::
+    <br>· time, relative, same current-time.
+    <a class="clsHide" href="#idTimeRltvSamecdsn"></a></p>
+  <p id="idTimeRltvSamecnam">name::
+    <br>* Mcs.present,
+    <br>* Mcs.time.relative.same-current-time,
+    <br>====== langoKomo:
+    <br>* McsKmo.to-eno!=time.present,
+    <a class="clsHide" href="#idTimeRltvSamecnam"></a></p>
+  </section>
+
+  <section id="idTimeRltvAfrc">
+  <h2 id="idTimeRltvAfrcH2">time.relative.after-current-time
+    <a class="clsHide" href="#idTimeRltvAfrcH2"></a></h2>
+  <p id="idTimeRltvAfrcdsn">description::
+    <br>· time, relative, after current-time.
+    <a class="clsHide" href="#idTimeRltvAfrcdsn"></a></p>
+  <p id="idTimeRltvAfrcnam">name::
+    <br>* Mcs.future,
+    <br>* Mcs.time.relative.after-current-time,
+    <br>====== langoKomo:
+    <br>* McsKmo.to-ino!=time.future,
+    <a class="clsHide" href="#idTimeRltvAfrcnam"></a></p>
+  </section>
+
+  <section id="idTimeRltvArd">
+  <h2 id="idTimeRltvArdH2">time.relative.around-time
+    <a class="clsHide" href="#idTimeRltvArdH2"></a></h2>
+  <p id="idTimeRltvArddsn">description::
+    <br>· time, relative, around-time,
+    <a class="clsHide" href="#idTimeRltvArddsn"></a></p>
+  <p id="idTimeRltvArdnam">name::
+    <br>* Mcs.around-time,
+    <br>* Mcs.time.around-time,
+    <br>* Mcs.time.relative.around-time,
+    <br>--- conjunction:
+    <br>* Mcs.around!~conj,
+    <br>====== langoGreek:
+    <br>--- conjunction:
+    <br>* McsEll.γύρω-στο!~conj,
+    <br>* McsEll.περί!~conj,
+    <br>* McsEll.προς!~conj,
+    <a class="clsHide" href="#idTimeRltvArdnam"></a></p>
+  </section>
+
+  <section id="idTimeRltvBtn">
+  <h2 id="idTimeRltvBtnH2">time.relative.between-time
+    <a class="clsHide" href="#idTimeRltvBtnH2"></a></h2>
+  <p id="idTimeRltvBtndsn">description::
+    <br>· time, relative, between time.
+    <a class="clsHide" href="#idTimeRltvBtndsn"></a></p>
+  <p id="idTimeRltvBtnnam">name::
+    <br>* Mcs.time.between-time,
+    <br>* Mcs.time.relative.between-time,
+    <br>--- conjunction:
+    <br>* Mcs.between..and!~conj,
+    <br>* Mcs.until!~conj,
+    <a class="clsHide" href="#idTimeRltvBtnnam"></a></p>
+
+  <section id="idTimeRltvBtnstx">
+  <h3 id="idTimeRltvBtnstxH3">syntax of time.relative.between-time
+    <a class="clsHide" href="#idTimeRltvBtnstxH3"></a></h3>
+  <p id="idTimeRltvBtnstxdsn">description::
+    <br>· English:
+    <br>_txtEng: _stxWhen:(Between 1942 and 1944) _stxSbj:(the Frank and Van Damm families) _stxVrb:(were hiding) _stxWhere:(in a Amsterdam office building).
+    <br>_txtEng: _stxSbj:(they) _stxVrb:(will continue) _stxWhat:(_stxVrb:(to do) _stxManner:(so) _stxWhen:(until 1998)).
+    <a class="clsHide" href="#idTimeRltvBtnstxdsn"></a></p>
+  <p id="idTimeRltvBtnstxnam">name::
+    <br>* Mcs.syntax.between..and,
+    <br>* Mcs.syntax.time.relative.between-time,
+    <br>* Mcs.syntax.until,
+    <a class="clsHide" href="#idTimeRltvBtnstxnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idTimeRltvSqc">
+  <h2 id="idTimeRltvSqcH2">time.relative.sequence
+    <a class="clsHide" href="#idTimeRltvSqcH2"></a></h2>
+  <p id="idTimeRltvSqcdsn">description::
+    <br>· time, relative, sequence.
+    <a class="clsHide" href="#idTimeRltvSqcdsn"></a></p>
+  <p id="idTimeRltvSqcnam">name::
+    <br>* Mcs.time-line,
+    <br>* Mcs.time.relative.sequence,
+    <a class="clsHide" href="#idTimeRltvSqcnam"></a></p>
   </section>
 </section>
 
