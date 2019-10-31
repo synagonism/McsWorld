@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.generic-entity (generic.0-14-0.2019-10-29 draft)</title>
+  <title>Mcs.generic-entity (generic.0-16-0.2019-10-31 draft)</title>
   <meta name="keywords" content="generic-entity, generic, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -114,7 +114,11 @@
     <a class="clsHide" href="#idGnrcSpcFTdsn"></a></p>
   <p id="idGnrcSpcnam">name::
     <br>* Mcs.generic.specific,
+    <br>* Mcs.quantity-of-entity,
+    <br>* Mcs.quantity-of--generic-entity,
     <br>* Mcs.specific-of-generic,
+    <br>====== langoKomo:
+    <br>* McsKmo.koUanto!=generic.specific,
     <a class="clsHide" href="#idGnrcSpcnam"></a></p>
   <p id="idGnrcSpcP1">specific::
     <br>* <a class="clsPreview" href="#idGnrcCnt">continuous</a>,
@@ -153,8 +157,6 @@
     <br>* Mcs.measure!⇒measure-of-entity,
     <br>* Mcs.measure-of-entity,
     <br>* Mcs.measured-generic!⇒measure-of-entity,
-    <br>* Mcs.quantity-of-entity!⇒measure-of-entity,
-    <br>* Mcs.quantity-of--generic-entity!⇒measure-of-entity,
     <br>* in literature BOTH 'amount' and 'abstract-quantity' are-called 'quantity'.
     <br>====== langoKomo:
     <br>* McsKmo.kao!=measure,
@@ -264,6 +266,8 @@
     <br>* Mcs.mass-noun,
     <br>* Mcs.non-countable-noun,
     <br>* Mcs.uncountable-noun,
+    <br>====== langoKomo:
+    <br>* McsKmo.ko-apartoUo!=generic.continuous,
     <br>====== langoGreek:
     <br>* McsEll.μέγεθος.συνεχές,
     <br>* McsEll.συνεχές-μέγεθος,
@@ -292,7 +296,7 @@
     <br>* Mcs.continuous-generic.interval,
     <br>* Mcs.interval-generic,
     <br>====== langoKomo:
-    <br>* McsKmo.ko-dotoUno,
+    <br>* McsKmo.ko-dotoUo!=generic.continuous.interval,
     <a class="clsHide" href="#idGnrcCntIvlnam"></a></p>
   </section>
 
@@ -308,7 +312,7 @@
     <br>* Mcs.continuous-generic.point,
     <br>* Mcs.point-generic,
     <br>====== langoKomo:
-    <br>* McsKmo.ko-doto,
+    <br>* McsKmo.ko-doto!=generic.continuous.point,
     <a class="clsHide" href="#idGnrcCntIvlNnam"></a></p>
   </section>
 </section>
@@ -325,6 +329,8 @@
     <br>* Mcs.countable-noun,
     <br>* Mcs.discrete-generic,
     <br>* Mcs.generic.continuousNo,
+    <br>====== langoKomo:
+    <br>* McsKmo.ko-aparto!=generic.discrete,
     <br>====== langoGreek:
     <br>* McsEll.διακριτό-μέγεθος,
     <br>* McsEll.μέγεθος.διακριτό,
@@ -360,6 +366,38 @@
     <br>====== langoGreek:
     <br>* McsEll.μονόμετρο-μέγεθος,
     <a class="clsHide" href="#idGnrcVctrNnam"></a></p>
+</section>
+
+<section id="idGnrcTmpt">
+  <h1 id="idGnrcTmptH1">generic.timepoint
+    <a class="clsHide" href="#idGnrcTmptH1"></a></h1>
+  <p id="idGnrcTmptdsn">description::
+    <br>· timepoint-generic is a-generic measured in timepoints.
+    <a class="clsHide" href="#idGnrcTmptdsn"></a></p>
+  <p id="idGnrcTmptnam">name::
+    <br>* Mcs.generic.timeintervalNo,
+    <br>* Mcs.generic.timepoint,
+    <br>* Mcs.stock-quantity,
+    <br>* Mcs.timepoint-generic,
+    <br>====== langoKomo:
+    <br>* McsKmo.ko-to-doto!=generic.timepoint,
+    <a class="clsHide" href="#idGnrcTmptnam"></a></p>
+</section>
+
+<section id="idGnrcTmptN">
+  <h1 id="idGnrcTmptNH1">generic.timeinterval
+    <a class="clsHide" href="#idGnrcTmptNH1"></a></h1>
+  <p id="idGnrcTmptNdsn">description::
+    <br>· timeinterval-generic is a-generic measured in timeintervals.
+    <a class="clsHide" href="#idGnrcTmptNdsn"></a></p>
+  <p id="idGnrcTmptNnam">name::
+    <br>* Mcs.flow-quantity,
+    <br>* Mcs.generic.timeinterval,
+    <br>* Mcs.generic.timepointNo,
+    <br>* Mcs.timeinterval-generic,
+    <br>====== langoKomo:
+    <br>* McsKmo.ko-to-dotoUo!=generic.timepoint,
+    <a class="clsHide" href="#idGnrcTmptNnam"></a></p>
 </section>
 
 <section id="idMeta">
