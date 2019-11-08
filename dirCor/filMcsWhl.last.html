@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.whole-entity (whole.0-11-0.2019-11-07 draft)</title>
+  <title>Mcs.whole-entity (whole.0-12-0.2019-11-08 draft)</title>
   <meta name="keywords" content="whole-entity, whole, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -64,7 +64,7 @@
     <br>* Mcs.undirected---whole-part--relation,
     <br>* Mcs.whole-part--relation,
     <br>====== langoKomo:
-    <br>* McsKmo.ro-lo-loUanto,
+    <br>* McsKmo.ro-lo-loUanto!=relation.whole-part,
     <br>====== langoGreek:
     <br>* McsEll.σχέση-όλου-μέρους,
     <a class="clsHide" href="#idWhlprtrlnnam"></a></p>
@@ -79,7 +79,7 @@
     <br>* Mcs.part-relation,
     <br>* Mcs.relation.part,
     <br>====== langoKomo:
-    <br>* McsKmo.ro-lo,
+    <br>* McsKmo.ro!=relation.part,
     <a class="clsHide" href="#idWhlprtrln2nam"></a></p>
   </section>
 
@@ -93,7 +93,7 @@
     <br>* Mcs.relation.whole,
     <br>* Mcs.whole-relation,
     <br>====== langoKomo:
-    <br>* McsKmo.ro-loUanto,
+    <br>* McsKmo.ro-loUanto!=relation.whole,
     <a class="clsHide" href="#idWhlprtrln1nam"></a></p>
   </section>
 </section>
@@ -158,6 +158,7 @@
     <a class="clsHide" href="#idWhlClcnH1"></a></h1>
   <p id="idWhlClcndsn">description::
     <br>· collection is <a class="clsPreview" href="#idOverview">a-whole-entity</a> without <a class="clsPreview" href="filMcsEnt.last.html#idEntstrr">structure</a>.
+    <br><img src="filMcsWhl.files/collection.jpg">
     <a class="clsHide" href="#idWhlClcndsn"></a></p>
   <p id="idWhlClcnnam">name::
     <br>* Mcs.collection,
@@ -179,6 +180,8 @@
     <br>* Mcs.collection'element,
     <br>* Mcs.collection'member,
     <br>* Mcs.element-of-collection,
+    <br>====== langoKomo:
+    <br>* McsKmo.luo-a-kolekto,
     <br>====== langoGreek:
     <br>* McsEll.μέλος-συλλογής,
     <br>* McsEll.στοιχείο-συλλογής,
@@ -202,6 +205,7 @@
     <a class="clsHide" href="#idWhlClcnSetH2"></a></h2>
   <p id="idWhlClcnSetdsn">description::
     <br>· set is <a class="clsPreview" href="#idWhlClcn">a-collection</a> WITHOUT duplicate <a class="clsPreview" href="#idWhlClcnelt">elements</a>.
+    <br><img src="filMcsWhl.files/collection.set.jpg">
     <a class="clsHide" href="#idWhlClcnSetdsn"></a></p>
   <p id="idWhlClcnSetnam">name::
     <br>* Mcs.collection.duplicateNo,
@@ -218,13 +222,14 @@
     <a class="clsHide" href="#idWhlSysH1"></a></h1>
   <p id="idWhlSysdsn">description::
     <br>· system is <a class="clsPreview" href="#idOverview">a-whole-entity</a> WITH <a class="clsPreview" href="filMcsEnt.last.html#idEntstrr">structure</a>.
+    <br><img src="filMcsWhl.files/system.jpg">
     <a class="clsHide" href="#idWhlSysdsn"></a></p>
   <p id="idWhlSysnam">name::
     <br>* Mcs.system,
     <br>* Mcs.whole.system,
     <br>====== langoKomo:
-    <br>* McsKmo.loUanto-sistemo!=system,
-    <br>* McsKmo.sistemo!=system,
+    <br>* McsKmo.loUanto-sisto!=whole.system,
+    <br>* McsKmo.sisto!=system,
     <a class="clsHide" href="#idWhlSysnam"></a></p>
 
   <section id="idWhlSysnode">
@@ -236,6 +241,10 @@
   <p id="idWhlSysnodenam">name::
     <br>* Mcs.node-of-system,
     <br>* Mcs.system'node,
+    <br>====== langoKomo:
+    <br>* McsKmo.sistos-luo,
+    <br>====== langoGreek:
+    <br>* McsEll.κόμβος-συστήματος,
     <a class="clsHide" href="#idWhlSysnodenam"></a></p>
   </section>
 
@@ -248,6 +257,11 @@
   <p id="idWhlSysndrnnam">name::
     <br>* Mcs.system'edge,
     <br>* Mcs.system'node-relation,
+    <br>====== langoKomo:
+    <br>* McsKmo.ro-luo--a-sisto,
+    <br>* McsKmo.sistos-ro-luo,
+    <br>====== langoGreek:
+    <br>* McsEll.σχέση-κόμβου--συστήματος,
     <a class="clsHide" href="#idWhlSysndrnnam"></a></p>
   </section>
 
@@ -256,9 +270,15 @@
     <a class="clsHide" href="#idWhlSysstrrH2"></a></h2>
   <p id="idWhlSysstrrdsn">description::
     <br>· structure of a-system is its <a class="clsPreview" href="#idWhlSysnode">nodes</a> AND its <a class="clsPreview" href="#idWhlSysndrn">node-relations</a>.
+    <br><img src="filMcsWhl.files/system'structure.jpg">
     <a class="clsHide" href="#idWhlSysstrrdsn"></a></p>
   <p id="idWhlSysstrrnam">name::
     <br>* Mcs.system'structure,
+    <br>====== langoKomo:
+    <br>* McsKmo.sistos-strukto,
+    <br>* McsKmo.strukto-a-sisto,
+    <br>====== langoGreek:
+    <br>* McsEll.δομή-συστήματος,
     <a class="clsHide" href="#idWhlSysstrrnam"></a></p>
   </section>
 
@@ -279,6 +299,7 @@
     <a class="clsHide" href="#idWhlSysSqcH2"></a></h2>
   <p id="idWhlSysSqcdsn">description::
     <br>· sequence is <a class="clsPreview" href="#idWhlSys">a-system</a>, the-simplest one, with its parts arranged.
+    <br><img src="filMcsWhl.files/system.sequence.jpg">
     <br>===
     <br>"(n) ordering, order, ordination (logical or comprehensible arrangement of separate elements) "we shall consider these questions in the inverse order of their presentation""
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=order]
@@ -298,7 +319,7 @@
     <br>* Mcs.system.sequence,
     <br>====== langoKomo:
     <br>* McsKmo.siro!=sequence,
-    <br>* McsKmo.sistemo-siro!=sequence,
+    <br>* McsKmo.sisto-siro!=sequence,
     <br>====== langoGreek:
     <br>* McsEll.ακολουθία,
     <br>* McsEll.λίστα,
@@ -314,9 +335,9 @@
   <p id="idWhlSysSqceltnam">name::
     <br>* Mcs.sequence'element,
     <br>====== langoKomo:
-    <br>* McsKmo.lo-a-sistemoSiro!=sequence'element,
+    <br>* McsKmo.luo-a-sistoSiro!=sequence'element,
     <br>* McsKmo.saro!=sequence'element,
-    <br>* McsKmo.sistemosSiros-lo!=sequence'element,
+    <br>* McsKmo.sistosSiros-luo!=sequence'element,
     <a class="clsHide" href="#idWhlSysSqceltnam"></a></p>
   </section>
 
@@ -1049,14 +1070,15 @@
   <h2 id="idWhlSysTriH2">system.tree
     <a class="clsHide" href="#idWhlSysTriH2"></a></h2>
   <p id="idWhlSysTridsn">description::
-    <br>· tree-system is <a class="clsPreview" href="#idWhlSys">a-system</a> with a-tree-structure.
+    <br>· tree-system is <a class="clsPreview" href="#idWhlSys">a-system</a> with <a class="clsPreview" href="#idWhlSysTristcr">a-tree-structure</a>.
+    <br><img src="filMcsWhl.files/system.tree.jpg">
     <a class="clsHide" href="#idWhlSysTridsn"></a></p>
   <p id="idWhlSysTrinam">name::
     <br>* Mcs.system.tree!⇒systemTree,
     <br>* Mcs.systemTree,
     <br>* Mcs.tree-system!⇒systemTree,
     <br>====== langoKomo:
-    <br>* McsKmo.sistemo-tro,
+    <br>* McsKmo.sisto-tro,
     <br>====== langoGreek:
     <br>* McsEll.δένδρου-σύστημα,
     <br>* McsEll.σύστημα-δένδρου,
@@ -1075,8 +1097,10 @@
     <br>* Mcs.systemTree'vertex,
     <br>* Mcs.tree-node,
     <br>====== langoKomo:
-    <br>* McsKmo.lo-a-sistemoTro,
-    <br>* McsKmo.sistemosTros-lo,
+    <br>* McsKmo.luo-a-sistoTro,
+    <br>* McsKmo.sistosTros-luo,
+    <br>====== langoGreek:
+    <br>* McsEll.κόμβος--συστήματος-δένδρου,
     <a class="clsHide" href="#idWhlSysTrinodenam"></a></p>
 
   <section id="idWhlSysTrinodecnnr">
@@ -1153,7 +1177,7 @@
     <br>* subtree,
     <a class="clsHide" href="#idWhlSysTrinodeSpcdsn"></a></p>
   <p id="idWhlSysTrinodeSpcnam">name::
-    <br>* Mcs.tree-node'specific,
+    <br>* Mcs.tree-node.specific,
     <a class="clsHide" href="#idWhlSysTrinodeSpcnam"></a></p>
   </section>
 
@@ -1351,7 +1375,7 @@
     <br>* Mcs.tree-structure,
     <br>* Mcs.tree-system'structure,
     <br>====== langoKomo:
-    <br>* McsKmo.sistemosTros-strukto,
+    <br>* McsKmo.sistosTros-strukto,
     <br>* McsKmo.strukto-tro,
     <br>====== langoGreek:
     <br>* McsEll.δομή-δένδρου,
@@ -1466,6 +1490,7 @@
     <br>[https://en.wikipedia.org/wiki/Graph_(discrete_mathematics) {2019-11-07}]
     <a class="clsHide" href="#idWhlSysGrfdsn"></a></p>
   <p id="idWhlSysGrfnam">name::
+    <br>* Mcs.abstract-system,
     <br>* Mcs.graph-system,
     <br>* Mcs.system.graph,
     <br>* Mcs.systemGraph,
