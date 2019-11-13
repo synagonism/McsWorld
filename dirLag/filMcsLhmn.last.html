@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.human-language (lagHmn.0-63-0.2019-11-12 draft)</title>
+  <title>Mcs.human-language (lagHmn.0-64-0.2019-11-13 draft)</title>
   <meta name="keywords" content="human-language, lagHmn, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -11570,6 +11570,7 @@
     <br>* Mcs.lagHmn-verb!⇒verbHmn,
     <br>* Mcs.logo-verb!⇒verbHmn,
     <br>* Mcs.nameHmn.verb!⇒verbHmn,
+    <br>* Mcs.sentence'verb!⇒verbHmn,
     <br>* Mcs.termHmn.verb!⇒verbHmn,
     <br>* Mcs.verb!⇒verbHmn,
     <br>* Mcs.verb-of-lagHmn!⇒verbHmn,
@@ -12640,7 +12641,6 @@
   <p id="idLhmncnjnam">name::
     <br>* Mcs.cnjHmn!⇒conjHmn,
     <br>* Mcs.conjHmn,
-    <br>* Mcs.conjLigHmn!⇒conjHmn,
     <br>* Mcs.conjunction-of-lagHmn!⇒conjHmn,
     <br>* Mcs.lagHmn'conjunction!⇒conjHmn,
     <br>* Mcs.lagHmn-conjunction!⇒conjHmn,
@@ -12652,12 +12652,12 @@
     <a class="clsHide" href="#idLhmncnjnam"></a></p>
 
   <section id="idLhmncnjsms">
-  <h4 id="idLhmncnjsmsH4">semaso-conjunction (<a class="clsPreview" href="#idLhmnsmscnj">link</a>) of conjLigHmn
+  <h4 id="idLhmncnjsmsH4">semaso-conjunction (<a class="clsPreview" href="#idLhmnsmscnj">link</a>) of conjHmn
     <a class="clsHide" href="#idLhmncnjsmsH4"></a></h4>
   </section>
 
   <section id="idLhmncnjddrn">
-  <h4 id="idLhmncnjddrnH4">decoding-relation of conjLigHmn
+  <h4 id="idLhmncnjddrnH4">decoding-relation of conjHmn
     <a class="clsHide" href="#idLhmncnjddrnH4"></a></h4>
   <p id="idLhmncnjddrndsn">description::
     <br>·
@@ -12668,12 +12668,17 @@
   </section>
 
   <section id="idLhmncnjSpc">
-  <h4 id="idLhmncnjSpcH4">conjLigHmn.SPECIFIC
+  <h4 id="idLhmncnjSpcH4">conjHmn.SPECIFIC
     <a class="clsHide" href="#idLhmncnjSpcH4"></a></h4>
   <p id="idLhmncnjSpcdsn">description::
     <br>* English-conjHmn,
+    <br>* Komo-conjHmn,
+    <br>* Espereanto-conjHmn,
     <br>* Greek-conjHmn,
-    <br>* langoKomo-conjHmn,
+    <br>===
+    <br>* noun-conjHmn,
+    <br>* verb-conjHmn,
+    <br>* sentence-conjHmn,
     <a class="clsHide" href="#idLhmncnjSpcdsn"></a></p>
   <p id="idLhmncnjSpcnam">name::
     <br>* Mcs.conjHmn.specific,
@@ -12972,20 +12977,110 @@
   </section>
   </section>
 
-  <section id="idLhmnnnfs">
-  <h2 id="idLhmnnnfsH2">noun-system of logoHmn
-    <a class="clsHide" href="#idLhmnnnfsH2"></a></h2>
-  <p id="idLhmnnnfsdsn">description::
+  <section id="idLhmnnnsm">
+  <h2 id="idLhmnnnsmH2">noun-system of logoHmn
+    <a class="clsHide" href="#idLhmnnnsmH2"></a></h2>
+  <p id="idLhmnnnsmdsn">description::
     <br>· logo-noun-system of lagHmn is <a class="clsPreview" href="#idLhmnnode">a-logo-node</a> that denotes <a class="clsPreview" href="#idLhmnsmsnnfr">a-semaso-noun-system</a>.
-    <a class="clsHide" href="#idLhmnnnfsdsn"></a></p>
-  <p id="idLhmnnnfsnam">name::
-    <br>* Mcs.lagHmn-node.noun-phrase,
-    <br>* Mcs.lagHmn-noun-phrase,
-    <br>* Mcs.logo-noun-system--of-lagHmn,
-    <br>* Mcs.noun-phrase--of-lagHmn,
-    <br>* Mcs.noun-system--of-lagHmn,
-    <br>* Mcs.systNounHmn,
-    <a class="clsHide" href="#idLhmnnnfsnam"></a></p>
+    <a class="clsHide" href="#idLhmnnnsmdsn"></a></p>
+  <p id="idLhmnnnsmnam">name::
+    <br>* Mcs.lagHmn-node.noun-phrase!⇒systNoun,
+    <br>* Mcs.lagHmn-noun-phrase!⇒systNoun,
+    <br>* Mcs.logo-noun-system--of-lagHmn!⇒systNoun,
+    <br>* Mcs.noun-phrase--of-lagHmn!⇒systNoun,
+    <br>* Mcs.noun-system--of-lagHmn!⇒systNoun,
+    <br>* Mcs.systNoun,
+    <br>* Mcs.systNounHmn!⇒systNoun,
+    <a class="clsHide" href="#idLhmnnnsmnam"></a></p>
+
+  <section id="idLhmnnnsmSpc">
+  <h3 id="idLhmnnnsmSpcH3">systNoun.SPECIFIC
+    <a class="clsHide" href="#idLhmnnnsmSpcH3"></a></h3>
+  <p id="idLhmnnnsmSpcdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLhmnnnsmSpcdsn"></a></p>
+  <p id="idLhmnnnsmSpcnam">name::
+    <br>* Mcs.systNoun.specific,
+    <a class="clsHide" href="#idLhmnnnsmSpcnam"></a></p>
+  </section>
+
+  <section id="idLhmnnnsmNoun">
+  <h3 id="idLhmnnnsmNounH3">systNoun.noun-noun
+    <a class="clsHide" href="#idLhmnnnsmNounH3"></a></h3>
+  <p id="idLhmnnnsmNoundsn">description::
+    <br>·
+    <a class="clsHide" href="#idLhmnnnsmNoundsn"></a></p>
+  <p id="idLhmnnnsmNounnam">name::
+    <br>* Mcs.systNoun.noun-noun,
+    <a class="clsHide" href="#idLhmnnnsmNounnam"></a></p>
+  </section>
+
+  <section id="idLhmnnnsmCase">
+  <h3 id="idLhmnnnsmCaseH3">systNoun.noun-case
+    <a class="clsHide" href="#idLhmnnnsmCaseH3"></a></h3>
+  <p id="idLhmnnnsmCasedsn">description::
+    <br>·
+    <a class="clsHide" href="#idLhmnnnsmCasedsn"></a></p>
+  <p id="idLhmnnnsmCasenam">name::
+    <br>* Mcs.systNoun.noun-case,
+    <a class="clsHide" href="#idLhmnnnsmCasenam"></a></p>
+  </section>
+
+  <section id="idLhmnnnsmAdjv">
+  <h3 id="idLhmnnnsmAdjvH3">systNoun.noun-adjective
+    <a class="clsHide" href="#idLhmnnnsmAdjvH3"></a></h3>
+  <p id="idLhmnnnsmAdjvdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLhmnnnsmAdjvdsn"></a></p>
+  <p id="idLhmnnnsmAdjvnam">name::
+    <br>* Mcs.systNoun.noun-adjective,
+    <a class="clsHide" href="#idLhmnnnsmAdjvnam"></a></p>
+  </section>
+
+  <section id="idLhmnnnsmAdvb">
+  <h3 id="idLhmnnnsmAdvbH3">systNoun.noun-adverb
+    <a class="clsHide" href="#idLhmnnnsmAdvbH3"></a></h3>
+  <p id="idLhmnnnsmAdvbdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLhmnnnsmAdvbdsn"></a></p>
+  <p id="idLhmnnnsmAdvbnam">name::
+    <br>* Mcs.systNoun.noun-adverb,
+    <a class="clsHide" href="#idLhmnnnsmAdvbnam"></a></p>
+  </section>
+
+  <section id="idLhmnnnsmAvab">
+  <h3 id="idLhmnnnsmAvabH3">systNoun.noun-adjective-adverb
+    <a class="clsHide" href="#idLhmnnnsmAvabH3"></a></h3>
+  <p id="idLhmnnnsmAvabdsn">description::
+    <br>·
+    <br>_txtEng: _stxSbj:(A squinting modifier) _stxVbr:(is) _stxSbjc:((<span class="clsColorRed">an ambiguously placed modifier</span>) (that can modify either the word before it or the word after it).
+    <a class="clsHide" href="#idLhmnnnsmAvabdsn"></a></p>
+  <p id="idLhmnnnsmAvabnam">name::
+    <br>* Mcs.systNoun.noun-adjective-adverb,
+    <a class="clsHide" href="#idLhmnnnsmAvabnam"></a></p>
+  </section>
+
+  <section id="idLhmnnnsmPrsn">
+  <h3 id="idLhmnnnsmPrsnH3">systNoun.noun-preposition
+    <a class="clsHide" href="#idLhmnnnsmPrsnH3"></a></h3>
+  <p id="idLhmnnnsmPrsndsn">description::
+    <br>·
+    <a class="clsHide" href="#idLhmnnnsmPrsndsn"></a></p>
+  <p id="idLhmnnnsmPrsnnam">name::
+    <br>* Mcs.systNoun.noun-preposition,
+    <a class="clsHide" href="#idLhmnnnsmPrsnnam"></a></p>
+  </section>
+
+  <section id="idLhmnnnsmSntc">
+  <h3 id="idLhmnnnsmSntcH3">systNoun.noun-sentence
+    <a class="clsHide" href="#idLhmnnnsmSntcH3"></a></h3>
+  <p id="idLhmnnnsmSntcdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLhmnnnsmSntcdsn"></a></p>
+  <p id="idLhmnnnsmSntcnam">name::
+    <br>* Mcs.systNoun.noun-sentence,
+    <a class="clsHide" href="#idLhmnnnsmSntcnam"></a></p>
+  </section>
   </section>
 
   <section id="idLhmnsntc">
@@ -13012,10 +13107,12 @@
     <a class="clsHide" href="#idLhmnsntcprtH3"></a></h3>
   <p id="idLhmnsntcprtdsn">description::
     <br>* <a class="clsPreview" href="#idLhmnvrb">verb</a>,
-    <br>* verb-argument,
+    <br>* <a class="clsPreview" href="#idLhmnvbat">verb-argument</a>,
     <a class="clsHide" href="#idLhmnsntcprtdsn"></a></p>
   <p id="idLhmnsntcprtnam">name::
     <br>* Mcs.lagHmn-sentence'part,
+    <br>* Mcs.sentHmn'part,
+    <br>* Mcs.sentence'part,
     <a class="clsHide" href="#idLhmnsntcprtnam"></a></p>
   </section>
 
@@ -13030,6 +13127,8 @@
     <br>* Mcs.lagHmn-node.verb-argument!⇒argVrbHmn,
     <br>* Mcs.lagHmn-verb-argument!⇒argVrbHmn,
     <br>* Mcs.logo-verb-argument!⇒argVrbHmn,
+    <br>* Mcs.sentHmn'verb-argument!⇒argVrbHmn,
+    <br>* Mcs.sentence'verb-argument!⇒argVrbHmn,
     <br>* Mcs.verb-argument!⇒argVrbHmn,
     <a class="clsHide" href="#idLhmnvbatnam"></a></p>
   <p id="idLhmnvbatSpc">specific::
@@ -13269,6 +13368,64 @@
     <br>* Mcs.speed--verb-arg,
     <a class="clsHide" href="#idLhmnvbatSpdnam"></a></p>
   </section>
+
+  <section id="idLhmnvbatNoun">
+  <h4 id="idLhmnvbatNounH4">argVrbHmn.noun of logoHmn
+    <a class="clsHide" href="#idLhmnvbatNounH4"></a></h4>
+  <p id="idLhmnvbatNoundsn">description::
+    <br>· noun--verb-arg is <a class="clsPreview" href="#idLhmnvbat">a-verb-arg</a> which is <a class="clsPreview" href="#idLhmnnun">a-noun</a>.
+    <br>* <a class="clsPreview" href="#idLhmnnunMain">main-noun</a>:
+    <br>_txtEng: _stxSbj:(<span class="clsColorRed">Cars</span>) _stxVrb:(have) _stxSbjc:(wheels).
+    <br>* <a class="clsPreview" href="#idLhmnAdj">adjective</a>:
+    <br>_txtEng: _stxSbj:(every person)_stxVrb:(is) _stxSbjc:(<span class="clsColorRed">mortal</span>).
+    <br>* <a class="clsPreview" href="#idLhmnAdv">adverb</a>:
+    <br>_txtEng: _stxSbj:(I)_stxVrb:(word) _stxSbjc:(<span class="clsColorRed">hard</span>).
+    <br>* <a class="clsPreview" href="#idLhmnduntPrn">pronoun</a>:
+    <br>_txtEng: _stxSbj:(<span class="clsColorRed">She</span>)_stxVrb:(word) _stxSbjc:(hard).
+    <a class="clsHide" href="#idLhmnvbatNoundsn"></a></p>
+  <p id="idLhmnvbatNounnam">name::
+    <br>* Mcs.argVrbHmn.noun,
+    <a class="clsHide" href="#idLhmnvbatNounnam"></a></p>
+  </section>
+
+  <section id="idLhmnvbatNnsm">
+  <h4 id="idLhmnvbatNnsmH4">argVrbHmn.noun-system of logoHmn
+    <a class="clsHide" href="#idLhmnvbatNnsmH4"></a></h4>
+  <p id="idLhmnvbatNnsmdsn">description::
+    <br>· noun-system--verb-arg is <a class="clsPreview" href="#idLhmnvbat">a-verb-arg</a> which is <a class="clsPreview" href="#idLhmnnnsm">a-noun-system</a>.
+    <br>_txtEng: _sxtSbj:(cars) _stxVrb:(are) _stxSbjc:(<span class="clsColorRed">dangerous machines</span>).
+    <br>_txtEng: _stxSbj:(<span class="clsColorRed">Our teacher, Professor Lamanna,</span>) _stxSbj:(loves) _stxObj:(grammar).
+    <br>_txtEng: _stxSbj:(<span class="clsColorRed">Jane's good friend FROM Boston</span>) _stxSbj:(met) _stxObj:(Paul).
+    <br>_txtEng: _stxSbj:(They) _stxVrb:(lived) _stxWhere:(<span class="clsColorRed">in Canada</span>) _stxWhen:(during the war).
+    <br>_txtEng: _sxtSbj:(<span class="clsColorRed">the man (who is bying a book)</span>) _sxtSbj:(is) _sxtSbjc:(my uncle).
+    <a class="clsHide" href="#idLhmnvbatNnsmdsn"></a></p>
+  <p id="idLhmnvbatNnsmnam">name::
+    <br>* Mcs.argVrbHmn.noun-system,
+    <a class="clsHide" href="#idLhmnvbatNnsmnam"></a></p>
+  </section>
+
+  <section id="idLhmnvbatSntc">
+  <h4 id="idLhmnvbatSntcH4">argVrbHmn.sentence of logoHmn
+    <a class="clsHide" href="#idLhmnvbatSntcH4"></a></h4>
+  <p id="idLhmnvbatSntcdsn">description::
+    <br>· sentence--verb-arg is <a class="clsPreview" href="#idLhmnvbat">a-verb-arg</a> which is <a class="clsPreview" href="#idLhmnsntc">a-sentence</a>.
+    <br>_txtEng: _stxSbj:(The senator) _stxVerb:(ran) _stxWhy:(<span class="clsColorRed">to catch the bus</span>).
+    <a class="clsHide" href="#idLhmnvbatSntcdsn"></a></p>
+  <p id="idLhmnvbatSntcnam">name::
+    <br>* Mcs.argVrbHmn.sentence,
+    <a class="clsHide" href="#idLhmnvbatSntcnam"></a></p>
+  </section>
+
+  <section id="idLhmnvbatScsm">
+  <h4 id="idLhmnvbatScsmH4">argVrbHmn.sentence-system of logoHmn
+    <a class="clsHide" href="#idLhmnvbatScsmH4"></a></h4>
+  <p id="idLhmnvbatScsmdsn">description::
+    <br>· sentence-system--verb-arg is <a class="clsPreview" href="#idLhmnvbat">a-verb-arg</a> which is <a class="clsPreview" href="#idLhmnscsm">a-sentence-system</a>.
+    <a class="clsHide" href="#idLhmnvbatScsmdsn"></a></p>
+  <p id="idLhmnvbatScsmnam">name::
+    <br>* Mcs.argVrbHmn.sentence-system,
+    <a class="clsHide" href="#idLhmnvbatScsmnam"></a></p>
+  </section>
   </section>
 
   <section id="idLhmnsntcstx">
@@ -13280,6 +13437,7 @@
     <a class="clsHide" href="#idLhmnsntcstxdsn"></a></p>
   <p id="idLhmnsntcstxnam">name::
     <br>* Mcs.sentHmn'syntax,
+    <br>* Mcs.sentence'syntax,
     <br>* Mcs.syntax.sentence.human,
     <a class="clsHide" href="#idLhmnsntcstxnam"></a></p>
   </section>
@@ -13455,8 +13613,8 @@
     <a class="clsHide" href="#idLhmnsntcQtnnam"></a></p>
 
   <section id="idLhmnansr">
-  <h3 id="idLhmnansrH3">answer
-    <a class="clsHide" href="#idLhmnansrH3"></a></h3>
+  <h4 id="idLhmnansrH4">answer
+    <a class="clsHide" href="#idLhmnansrH4"></a></h4>
   <p id="idLhmnansrdsn">description::
     <br>· answer is logoHmn which is a-reply to <a class="clsPreview" href="#idLhmnsntcQtn">a-question</a>.
     <a class="clsHide" href="#idLhmnansrdsn"></a></p>
@@ -13503,9 +13661,11 @@
   <h3 id="idLhmnsntcSms1H3">sentence.semaso.one
     <a class="clsHide" href="#idLhmnsntcSms1H3"></a></h3>
   <p id="idLhmnsntcSms1dsn">description::
-    <br>·
+    <br>· monosemous-sentence is <a class="clsPreview" href="#idLhmnsntc">a-sentence</a> that denotes ONE <a class="clsPreview" href="#idLhmnsmssntc">semaso-sentence</a>.
+    <br>· this happens when <a class="clsPreview" href="#idLhmndunt">the-names</a> used to create <a class="clsPreview" href="#idLhmnsntcprt">the-parts-of-a-sentence</a> are undefined.
     <a class="clsHide" href="#idLhmnsntcSms1dsn"></a></p>
   <p id="idLhmnsntcSms1nam">name::
+    <br>* Mcs.monosemous-sentence,
     <br>* Mcs.sentence.semaso.one,
     <a class="clsHide" href="#idLhmnsntcSms1nam"></a></p>
   </section>
@@ -13514,9 +13674,10 @@
   <h3 id="idLhmnsntcSms2H3">sentence.semaso.two
     <a class="clsHide" href="#idLhmnsntcSms2H3"></a></h3>
   <p id="idLhmnsntcSms2dsn">description::
-    <br>·
+    <br>· doublosemous-sentence is <a class="clsPreview" href="#idLhmnsntc">a-sentence</a> that denotes TWO <a class="clsPreview" href="#idLhmnsmssntc">semaso-sentence</a>.
     <a class="clsHide" href="#idLhmnsntcSms2dsn"></a></p>
   <p id="idLhmnsntcSms2nam">name::
+    <br>* Mcs.doublosemous-sentence,
     <br>* Mcs.sentence.semaso.two,
     <a class="clsHide" href="#idLhmnsntcSms2nam"></a></p>
   </section>
@@ -13525,9 +13686,11 @@
   <h3 id="idLhmnsntcSmsMnH3">sentence.semaso.many
     <a class="clsHide" href="#idLhmnsntcSmsMnH3"></a></h3>
   <p id="idLhmnsntcSmsMndsn">description::
-    <br>·
+    <br>· polysemous-sentence is <a class="clsPreview" href="#idLhmnsntc">a-sentence</a> that denotes MANY <a class="clsPreview" href="#idLhmnsmssntc">semaso-sentence</a>.
     <a class="clsHide" href="#idLhmnsntcSmsMndsn"></a></p>
   <p id="idLhmnsntcSmsMnnam">name::
+    <br>* Mcs.multisemous-sentence,
+    <br>* Mcs.polysemous-sentence,
     <br>* Mcs.sentence.semaso.many,
     <a class="clsHide" href="#idLhmnsntcSmsMnnam"></a></p>
   </section>
@@ -13536,9 +13699,11 @@
   <h3 id="idLhmnsntcSmsNnH3">sentence.semaso.none
     <a class="clsHide" href="#idLhmnsntcSmsNnH3"></a></h3>
   <p id="idLhmnsntcSmsNndsn">description::
-    <br>·
+    <br>· zerosemous-sentence is <a class="clsPreview" href="#idLhmnsntc">a-sentence</a> that denotes ZERO <a class="clsPreview" href="#idLhmnsmssntc">semaso-sentence</a>.
+    <br>· in other words, a-semaso-sentence that does-not-denote brain-info.
     <a class="clsHide" href="#idLhmnsntcSmsNndsn"></a></p>
   <p id="idLhmnsntcSmsNnnam">name::
+    <br>* Mcs.zerosemous-sentence,
     <br>* Mcs.sentence.semaso.none,
     <a class="clsHide" href="#idLhmnsntcSmsNnnam"></a></p>
   </section>
@@ -13547,9 +13712,10 @@
   <h3 id="idLhmnsntcOrlH3">sentence.oral
     <a class="clsHide" href="#idLhmnsntcOrlH3"></a></h3>
   <p id="idLhmnsntcOrldsn">description::
-    <br>·
+    <br>· oral-sentence is <a class="clsPreview" href="#idLhmnsntc">a-sentence</a> of <a class="clsPreview" href="filMcsLorl.last.html#idOverview">an-oral-language</a>.
     <a class="clsHide" href="#idLhmnsntcOrldsn"></a></p>
   <p id="idLhmnsntcOrlnam">name::
+    <br>* Mcs.oral-sentence,
     <br>* Mcs.sentence.oral,
     <a class="clsHide" href="#idLhmnsntcOrlnam"></a></p>
   </section>
@@ -13558,9 +13724,10 @@
   <h3 id="idLhmnsntcAbcH3">sentence.alphbetic
     <a class="clsHide" href="#idLhmnsntcAbcH3"></a></h3>
   <p id="idLhmnsntcAbcdsn">description::
-    <br>·
+    <br>· alphbetic-sentence is <a class="clsPreview" href="#idLhmnsntc">a-sentence</a> of <a class="clsPreview" href="filMcsLabc.last.html#idOverview">an-alphbetic-language</a>.
     <a class="clsHide" href="#idLhmnsntcAbcdsn"></a></p>
   <p id="idLhmnsntcAbcnam">name::
+    <br>* Mcs.alphbetic-sentence,
     <br>* Mcs.sentence.alphbetic,
     <a class="clsHide" href="#idLhmnsntcAbcnam"></a></p>
   </section>
@@ -13569,9 +13736,10 @@
   <h3 id="idLhmnsntcEngH3">sentence.lango.English
     <a class="clsHide" href="#idLhmnsntcEngH3"></a></h3>
   <p id="idLhmnsntcEngdsn">description::
-    <br>·
+    <br>· English-sentence is <a class="clsPreview" href="#idLhmnsntc">a-sentence</a> of <a class="clsPreview" href="filMcsLabc.last.html#idOverview">the-English-language</a>.
     <a class="clsHide" href="#idLhmnsntcEngdsn"></a></p>
   <p id="idLhmnsntcEngnam">name::
+    <br>* Mcs.English-sentence,
     <br>* Mcs.sentence.lango.English,
     <a class="clsHide" href="#idLhmnsntcEngnam"></a></p>
   </section>
@@ -13580,9 +13748,10 @@
   <h3 id="idLhmnsntcKmoH3">sentence.lango.Komo
     <a class="clsHide" href="#idLhmnsntcKmoH3"></a></h3>
   <p id="idLhmnsntcKmodsn">description::
-    <br>·
+    <br>· Komo-sentence is <a class="clsPreview" href="#idLhmnsntc">a-sentence</a> of <a class="clsPreview" href="filMcsLkmo.last.html#idOverview">the-Komo-language</a>.
     <a class="clsHide" href="#idLhmnsntcKmodsn"></a></p>
   <p id="idLhmnsntcKmonam">name::
+    <br>* Mcs.Komo-sentence,
     <br>* Mcs.sentence.lango.Komo,
     <a class="clsHide" href="#idLhmnsntcKmonam"></a></p>
   </section>
@@ -13591,9 +13760,10 @@
   <h3 id="idLhmnsntcEpoH3">sentence.lango.Esperanto
     <a class="clsHide" href="#idLhmnsntcEpoH3"></a></h3>
   <p id="idLhmnsntcEpodsn">description::
-    <br>·
+    <br>· Esperanto-sentence is <a class="clsPreview" href="#idLhmnsntc">a-sentence</a> of <a class="clsPreview" href="filMcsLepo.last.html#idOverview">the-Esperanto-language</a>.
     <a class="clsHide" href="#idLhmnsntcEpodsn"></a></p>
   <p id="idLhmnsntcEponam">name::
+    <br>* Mcs.Esperanto-sentence,
     <br>* Mcs.sentence.lango.Esperanto,
     <a class="clsHide" href="#idLhmnsntcEponam"></a></p>
   </section>
@@ -13602,9 +13772,10 @@
   <h3 id="idLhmnsntcEllH3">sentence.lango.Greek
     <a class="clsHide" href="#idLhmnsntcEllH3"></a></h3>
   <p id="idLhmnsntcElldsn">description::
-    <br>·
+    <br>· Greek-sentence is <a class="clsPreview" href="#idLhmnsntc">a-sentence</a> of <a class="clsPreview" href="filMcsLell.last.html#idOverview">the-Greek-language</a>.
     <a class="clsHide" href="#idLhmnsntcElldsn"></a></p>
   <p id="idLhmnsntcEllnam">name::
+    <br>* Mcs.Greek-sentence,
     <br>* Mcs.sentence.lango.Greek,
     <a class="clsHide" href="#idLhmnsntcEllnam"></a></p>
   </section>
@@ -13690,6 +13861,7 @@
     <a class="clsHide" href="#idLhmnrootH2"></a></h2>
   <p id="idLhmnrootdsn">description::
     <br>· root-node of lagHmn is the-outermost <a class="clsPreview" href="#idLhmnnode">node</a> of <a class="clsPreview" href="#idLhmnopt">the-logo-view</a>.
+    <br>· it has as children a-title and some <a class="clsPreview" href="#idLhmnsctn">sections</a> or <a class="clsPreview" href="#idLhmnscsm">system-of-sentences</a>.
     <a class="clsHide" href="#idLhmnrootdsn"></a></p>
   <p id="idLhmnrootnam">name::
     <br>* Mcs.lagHmn'root!⇒lagHmn-root,
