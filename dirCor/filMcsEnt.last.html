@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.entity (entity.0-27-0.2019-11-12 draft)</title>
+  <title>Mcs.entity (entity.0-29-0.2019-11-18 draft)</title>
   <meta name="keywords" content="entity, entity, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -52,6 +52,16 @@
     <br>* Mcs.entity'attribute,
     <br>* Mcs.feature-of-entity,
     <a class="clsHide" href="#idEntattnam"></a></p>
+  <p id="idEntattSpc">specific::
+    <br>* part-of-entity,
+    <br>* partNo-of-entity,
+    <br>* whole-of-entity,
+    <br>* wholeNo-of-entity,
+    <br>* <a class="clsPreview" href="#idEntgncFT">generic-of-entity</a>,
+    <br>* <a class="clsPreview" href="#idEntSpcFT">specific-of-entity</a>,
+    <br>* <a class="clsPreview" href="#idEntdngFT">doing-of-entity</a>,
+    <br>* doingNo-of-entity,
+    <a class="clsHide" href="#idEntattSpc"></a></p>
 </section>
 
 <section id="idEntatrrln">
@@ -76,9 +86,18 @@
     <a class="clsHide" href="#idEntatrrln2dsn"></a></p>
   <p id="idEntatrrln2nam">name::
     <br>* Mcs.relation.attribute-of-entity,
+    <br>* Mcs.relation.of-entity,
     <br>====== langoKomo:
     <br>* McsKmo.ro-atro-a-o!=relation.att-of-entity,
     <a class="clsHide" href="#idEntatrrln2nam"></a></p>
+  <p id="idEntatrrln2Spc">specific::
+    <br>* <a class="clsPreview" href="filMcsWhl.last.html#idWhlprtrln2">part-of-entity--relation</a>,
+    <br>* partNo-of-entity--relation,
+    <br>* whole-of-entity--relation,
+    <br>* wholeNo-of-entity--relation,
+    <br>* generic-of-entity--relation,
+    <br>* specific-of-entity--relation,
+    <a class="clsHide" href="#idEntatrrln2Spc"></a></p>
   </section>
 
   <section id="idEntatrrln1">
@@ -128,6 +147,28 @@
     <br>* sequence-structure,
     <br>* tree-structure,
     <a class="clsHide" href="#idEntstrrSpc"></a></p>
+</section>
+
+<section id="idEntprtN">
+  <h1 id="idEntprtNH1">ENVIRONMENT of entity
+    <a class="clsHide" href="#idEntprtNH1"></a></h1>
+  <p id="idEntprtNdsn">description::
+    <br>· environment-of-entity[a] is any <a class="clsPreview" href="#idEntatt">attribute</a> of it[a] which is-not <a class="clsPreview" href="filMcsWhl.last.html#idWhlprt">part</a>.
+    <a class="clsHide" href="#idEntprtNdsn"></a></p>
+  <p id="idEntprtNnam">name::
+    <br>* Mcs.entity'environment,
+    <a class="clsHide" href="#idEntprtNnam"></a></p>
+  <p id="idEntprtNSpc">specific::
+    <br>* <a class="clsPreview" href="filMcsWhl.last.html#idOverview">whole-of-entity</a>,
+    <br>* wholeNo-of-entity,
+    <br>* <a class="clsPreview" href="#idEntgncFT">generic-of-entity</a>,
+    <br>* <a class="clsPreview" href="#idEntSpcFT">specific-of-entity</a>,
+    <a class="clsHide" href="#idEntprtNSpc"></a></p>
+</section>
+
+<section id="idEntwhl">
+  <h1 id="idEntwhlH1">WHOLE of entity (<a class="clsPreview" href="filMcsWhl.last.html#idOverview">link</a>)
+    <a class="clsHide" href="#idEntwhlH1"></a></h1>
 </section>
 
 <section id="idEntdngFT">
@@ -326,7 +367,24 @@
     <br>* Mcs.entity.specific,
     <a class="clsHide" href="#idEntSpcnam"></a></p>
   <p id="idEntSpcP1">specific::
-    <br>
+    <br>* human,
+    <br>* humanNo,
+    <br>===
+    <br>* first-person,
+    <br>* second-person,
+    <br>* third-person,
+    <br>===
+    <br>* body,
+    <br>* doing,
+    <br>* relation,
+    <br>===
+    <br>* generic,
+    <br>* genericNo,
+    <br>===
+    <br>* definite,
+    <br>* definiteNo,
+    <br>===
+    <br>* semaso-entity,
     <a class="clsHide" href="#idEntSpcP1"></a></p>
 </section>
 
