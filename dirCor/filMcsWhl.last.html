@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.whole-entity (whole.0-14-0.2019-11-10 draft)</title>
+  <title>Mcs.whole-entity (whole.0-15-0.2019-11-19 draft)</title>
   <meta name="keywords" content="whole-entity, whole, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -31,8 +31,8 @@
     <br>* Mcs.whole-entity!⇒whole,
     <br>* Mcs.whole'(whole-entity)!⇒whole,
     <br>====== langoKomo:
-    <br>* McsKmo.o-loUanto!=whole-entity,
-    <br>* McsKmo.loUanto!=whole-entity,
+    <br>* McsKmo.o-co!=whole-entity,
+    <br>* McsKmo.co!=whole-entity,
     <a class="clsHide" href="#idName"></a></p>
 </section>
 
@@ -47,7 +47,7 @@
     <br>* Mcs.part-of-whole,
     <br>* Mcs.whole'part,
     <br>====== langoKomo:
-    <br>* McsKmo.lo,
+    <br>* McsKmo.jo!=part,
     <a class="clsHide" href="#idWhlprtnam"></a></p>
 </section>
 
@@ -64,7 +64,7 @@
     <br>* Mcs.undirected---whole-part--relation,
     <br>* Mcs.whole-part--relation,
     <br>====== langoKomo:
-    <br>* McsKmo.ro-lo-loUanto!=relation.whole-part,
+    <br>* McsKmo.ro-co-jo!=relation.whole-part,
     <br>====== langoGreek:
     <br>* McsEll.σχέση-όλου-μέρους,
     <a class="clsHide" href="#idWhlprtrlnnam"></a></p>
@@ -93,7 +93,7 @@
     <br>* Mcs.relation.whole,
     <br>* Mcs.whole-relation,
     <br>====== langoKomo:
-    <br>* McsKmo.ro-loUanto!=relation.whole,
+    <br>* McsKmo.ro-co!=relation.whole,
     <a class="clsHide" href="#idWhlprtrln1nam"></a></p>
   </section>
 </section>
@@ -165,7 +165,7 @@
     <br>* Mcs.whole.collection,
     <br>====== langoKomo:
     <br>* McsKmo.kolekto!=collection,
-    <br>* McsKmo.loUanto-kolekto!=collection,
+    <br>* McsKmo.co-kolekto!=collection,
     <br>====== langoGreek:
     <br>* McsEll.συλλογή,
     <a class="clsHide" href="#idWhlClcnnam"></a></p>
@@ -181,7 +181,7 @@
     <br>* Mcs.collection'member,
     <br>* Mcs.element-of-collection,
     <br>====== langoKomo:
-    <br>* McsKmo.luo-a-kolekto,
+    <br>* McsKmo.juo-a-kolekto,
     <br>====== langoGreek:
     <br>* McsEll.μέλος-συλλογής,
     <br>* McsEll.στοιχείο-συλλογής,
@@ -228,7 +228,7 @@
     <br>* Mcs.system,
     <br>* Mcs.whole.system,
     <br>====== langoKomo:
-    <br>* McsKmo.loUanto-sisto!=whole.system,
+    <br>* McsKmo.co-sisto!=whole.system,
     <br>* McsKmo.sisto!=system,
     <a class="clsHide" href="#idWhlSysnam"></a></p>
 
@@ -243,7 +243,7 @@
     <br>* Mcs.node-of-system,
     <br>* Mcs.system'node,
     <br>====== langoKomo:
-    <br>* McsKmo.luo-a-sisto,
+    <br>* McsKmo.juo-a-sisto,
     <br>* McsKmo.sistos-luo,
     <br>====== langoGreek:
     <br>* McsEll.κόμβος-συστήματος,
@@ -257,10 +257,11 @@
     <br>· the-thing that differentiates a-system from a-collection, which both are <a class="clsPreview" href="#idOverview">wholes</a>, is that a-system, except its parts, has AND relations among these parts.
     <a class="clsHide" href="#idWhlSysndrndsn"></a></p>
   <p id="idWhlSysndrnnam">name::
+    <br>* Mcs.edge-of-system,
     <br>* Mcs.system'edge,
     <br>* Mcs.system'node-relation,
     <br>====== langoKomo:
-    <br>* McsKmo.ro-luo--a-sisto,
+    <br>* McsKmo.ro-juo--a-sisto,
     <br>* McsKmo.sistos-ro-luo,
     <br>====== langoGreek:
     <br>* McsEll.σχέση-κόμβου--συστήματος,
@@ -275,12 +276,13 @@
     <br><img src="filMcsWhl.files/system'structure.jpg">
     <a class="clsHide" href="#idWhlSysstrrdsn"></a></p>
   <p id="idWhlSysstrrnam">name::
+    <br>* Mcs.structure-of-system,
     <br>* Mcs.system'structure,
     <br>====== langoKomo:
-    <br>* McsKmo.sistos-strukto,
-    <br>* McsKmo.strukto-a-sisto,
+    <br>* McsKmo.sistos-strukto!=system's-structure,
+    <br>* McsKmo.strukto-a-sisto!=structure-of-system,
     <br>====== langoGreek:
-    <br>* McsEll.δομή-συστήματος,
+    <br>* McsEll.δομή-συστήματος!=structure-of-system,
     <a class="clsHide" href="#idWhlSysstrrnam"></a></p>
   </section>
 
@@ -337,7 +339,7 @@
   <p id="idWhlSysSqceltnam">name::
     <br>* Mcs.sequence'element,
     <br>====== langoKomo:
-    <br>* McsKmo.luo-a-sistoSiro!=sequence'element,
+    <br>* McsKmo.juo-a-sistoSiro!=sequence'element,
     <br>* McsKmo.saro!=sequence'element,
     <br>* McsKmo.sistosSiros-luo!=sequence'element,
     <a class="clsHide" href="#idWhlSysSqceltnam"></a></p>
@@ -1099,7 +1101,7 @@
     <br>* Mcs.systemTree'vertex,
     <br>* Mcs.tree-node,
     <br>====== langoKomo:
-    <br>* McsKmo.luo-a-sistoTro,
+    <br>* McsKmo.juo-a-sistoTro,
     <br>* McsKmo.sistosTros-luo,
     <br>====== langoGreek:
     <br>* McsEll.κόμβος--συστήματος-δένδρου,
