@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.entity (entity.0-31-0.2019-11-20 draft)</title>
+  <title>Mcs.entity (entity.0-32-0.2019-11-21 draft)</title>
   <meta name="keywords" content="entity, entity, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -83,7 +83,7 @@
   <h2 id="idEntatrrln2H2">relation.attribute-of-entity
     <a class="clsHide" href="#idEntatrrln2H2"></a></h2>
   <p id="idEntatrrln2dsn">description::
-    <br>· attribute-attribute--relation is <a class="clsPreview" href="filMcsRln.last.html#idRlnSqcdN">a-sequenced-relation</a> between <a class="clsPreview" href="#idEntatt">an-attribute[a]</a> and <a class="clsPreview" href="#idOverview">the-entity</a> of it[a].
+    <br>· attribute-relation is <a class="clsPreview" href="filMcsRln.last.html#idRlnSqcdN">a-sequenced-relation</a> between <a class="clsPreview" href="#idEntatt">an-attribute[a]</a> and <a class="clsPreview" href="#idOverview">the-entity</a> of it[a].
     <a class="clsHide" href="#idEntatrrln2dsn"></a></p>
   <p id="idEntatrrln2nam">name::
     <br>* Mcs.attribute-of-entity--relation,
@@ -99,7 +99,7 @@
     <a class="clsHide" href="#idEntatrrln2nam"></a></p>
   <p id="idEntatrrln2Spc">specific::
     <br>* <a class="clsPreview" href="filMcsWhl.last.html#idWhlprtrln2">part-relation--of-entity</a>,
-    <br>* partNo-relation--of-entity,
+    <br>* <a class="clsPreview" href="#idEntprtNrln">partNo-relation--of-entity</a>,
     <br>* whole-relation--of-entity,
     <br>* wholeNo-relation--of-entity,
     <br>* generic-relation--of-entity,
@@ -136,6 +136,80 @@
     <a class="clsHide" href="#idEntrscwpa"></a></p>
 </section>
 
+<section id="idEntprt">
+  <h1 id="idEntprtH1">PART of entity (<a class="clsPreview" href="filMcsWhl.last.html#idWhlprt">link</a>)
+    <a class="clsHide" href="#idEntprtH1"></a></h1>
+</section>
+
+<section id="idEntprtN">
+  <h1 id="idEntprtNH1">ENVIRONMENT (partNo) of entity
+    <a class="clsHide" href="#idEntprtNH1"></a></h1>
+  <p id="idEntprtNdsn">description::
+    <br>· environment-of-entity[a] is any <a class="clsPreview" href="#idEntatt">attribute</a> of it[a] which is-not <a class="clsPreview" href="filMcsWhl.last.html#idWhlprt">part</a>.
+    <a class="clsHide" href="#idEntprtNdsn"></a></p>
+  <p id="idEntprtNnam">name::
+    <br>* Mcs.entity'environment,
+    <br>* Mcs.entity'partNo,
+    <br>* Mcs.environment-of-entity,
+    <br>* Mcs.partNo-of-entity,
+    <a class="clsHide" href="#idEntprtNnam"></a></p>
+
+  <section id="idEntprtNrln">
+  <h2 id="idEntprtNrlnH2">partNo-relation of entity
+    <a class="clsHide" href="#idEntprtNrlnH2"></a></h2>
+  <p id="idEntprtNrlndsn">description::
+    <br>· partNo-relation is any <a class="clsPreview" href="#idEntatrrln2">attribute-relation--of-entity</a> which is-not <a class="clsPreview" href="filMcsWhl.last.html#idWhlprtrln2">part-relation</a>.
+    <a class="clsHide" href="#idEntprtNrlndsn"></a></p>
+  <p id="idEntprtNrlnnam">name::
+    <br>* Mcs.partNo-relation,
+    <br>* Mcs.relation.partNo,
+    <a class="clsHide" href="#idEntprtNrlnnam"></a></p>
+  </section>
+
+  <section id="idEntprtNSpc">
+  <h2 id="idEntprtNSpcH2">environment.SPECIFIC
+    <a class="clsHide" href="#idEntprtNSpcH2"></a></h2>
+  <p id="idEntprtNSpcdsn">description::
+    <br>* <a class="clsPreview" href="filMcsWhl.last.html#idOverview">whole-of-entity</a>,
+    <br>* wholeNo-of-entity,
+    <br>* <a class="clsPreview" href="#idEntgncFT">generic-of-entity</a>,
+    <br>* <a class="clsPreview" href="#idEntSpcFT">specific-of-entity</a>,
+    <a class="clsHide" href="#idEntprtNSpcdsn"></a></p>
+  <p id="idEntprtNSpcnam">name::
+    <br>* Mcs.environment-of-entity.specific,
+    <a class="clsHide" href="#idEntprtNSpcnam"></a></p>
+  </section>
+</section>
+
+<section id="idEntwhl">
+  <h1 id="idEntwhlH1">WHOLE of entity (<a class="clsPreview" href="filMcsWhl.last.html#idOverview">link</a>)
+    <a class="clsHide" href="#idEntwhlH1"></a></h1>
+</section>
+
+<section id="idEntwhlN">
+  <h1 id="idEntwhlNH1">WHOLE.NO of entity
+    <a class="clsHide" href="#idEntwhlNH1"></a></h1>
+  <p id="idEntwhlNdsn">description::
+    <br>· wholeNo-of-entity[a] is any <a class="clsPreview" href="#idEntprtN">environment-att--of-entity</a> which is-NOT <a class="clsPreview" href="filMcsWhl.last.html#idOverview">whole</a> of it[a].
+    <a class="clsHide" href="#idEntwhlNdsn"></a></p>
+  <p id="idEntwhlNnam">name::
+    <br>* Mcs.entity'wholeNo,
+    <br>* Mcs.wholeNo-of-entity,
+    <a class="clsHide" href="#idEntwhlNnam"></a></p>
+
+  <section id="idEntwhlNrln">
+  <h2 id="idEntwhlNrlnH2">wholeNo-relation of entity
+    <a class="clsHide" href="#idEntwhlNrlnH2"></a></h2>
+  <p id="idEntwhlNrlndsn">description::
+    <br>· wholeNo-relation of entity[a] is <a class="clsPreview" href="#idEntprtNrln">partNo-relation</a> with a-wholeNo-attribute of it[a].
+    <a class="clsHide" href="#idEntwhlNrlndsn"></a></p>
+  <p id="idEntwhlNrlnnam">name::
+    <br>* Mcs.relation.wholeNo,
+    <br>* Mcs.wholeNo-relation,
+    <a class="clsHide" href="#idEntwhlNrlnnam"></a></p>
+  </section>
+</section>
+
 <section id="idEntstrr">
   <h1 id="idEntstrrH1">structure of entity
     <a class="clsHide" href="#idEntstrrH1"></a></h1>
@@ -158,28 +232,6 @@
     <br>* sequence-structure,
     <br>* tree-structure,
     <a class="clsHide" href="#idEntstrrSpc"></a></p>
-</section>
-
-<section id="idEntprtN">
-  <h1 id="idEntprtNH1">ENVIRONMENT of entity
-    <a class="clsHide" href="#idEntprtNH1"></a></h1>
-  <p id="idEntprtNdsn">description::
-    <br>· environment-of-entity[a] is any <a class="clsPreview" href="#idEntatt">attribute</a> of it[a] which is-not <a class="clsPreview" href="filMcsWhl.last.html#idWhlprt">part</a>.
-    <a class="clsHide" href="#idEntprtNdsn"></a></p>
-  <p id="idEntprtNnam">name::
-    <br>* Mcs.entity'environment,
-    <a class="clsHide" href="#idEntprtNnam"></a></p>
-  <p id="idEntprtNSpc">specific::
-    <br>* <a class="clsPreview" href="filMcsWhl.last.html#idOverview">whole-of-entity</a>,
-    <br>* wholeNo-of-entity,
-    <br>* <a class="clsPreview" href="#idEntgncFT">generic-of-entity</a>,
-    <br>* <a class="clsPreview" href="#idEntSpcFT">specific-of-entity</a>,
-    <a class="clsHide" href="#idEntprtNSpc"></a></p>
-</section>
-
-<section id="idEntwhl">
-  <h1 id="idEntwhlH1">WHOLE of entity (<a class="clsPreview" href="filMcsWhl.last.html#idOverview">link</a>)
-    <a class="clsHide" href="#idEntwhlH1"></a></h1>
 </section>
 
 <section id="idEntdngFT">
@@ -532,7 +584,7 @@
     <br>* Mcs.entity.definiteNo,
     <br>* Mcs.indefinite-entity,
     <br>====== langoKomo:
-    <br>* McsKmo.o-dioUo!=entity.definiteNo,
+    <br>* McsKmo.o-dioUgo!=entity.definiteNo,
     <a class="clsHide" href="#idEntSmsDfntNnam"></a></p>
   </section>
 
@@ -583,8 +635,8 @@
     <br>* Mcs.entitySms.deictic-nearA-oneΝο,
     <br>* Mcs.these,
     <br>====== langoKomo:
-    <br>* McsKmo.o-δio-foUo!=entity.deictic.oneNo,
-    <br>* McsKmo.o-dhio-foUo!=entity.deictic.oneNo,
+    <br>* McsKmo.o-δio-foUgo!=entity.deictic.oneNo,
+    <br>* McsKmo.o-dhio-foUgo!=entity.deictic.oneNo,
     <a class="clsHide" href="#idEntSmsDctcNa1Nnam"></a></p>
   </section>
 
@@ -626,7 +678,7 @@
     <br>* Mcs.an-entity,
     <br>* Mcs.entity.definiteNo.quantity.one,
     <br>====== langoKomo:
-    <br>* McsKmo.o-dioUo-fo!=entity.definiteNo.one,
+    <br>* McsKmo.o-dioUgo-fo!=entity.definiteNo.one,
     <a class="clsHide" href="#idEntSmsDfnNOnenam"></a></p>
   </section>
 
@@ -640,7 +692,7 @@
     <br>* Mcs.some-entities,
     <br>* Mcs.entity.definiteNo.quantity.oneNo,
     <br>====== langoKomo:
-    <br>* McsKmo.o-dioUo-foUo!=entity.definiteNo.oneNo,
+    <br>* McsKmo.o-dioUgo-foUgo!=entity.definiteNo.oneNo,
     <a class="clsHide" href="#idEntSmsDfnNOneNnam"></a></p>
   </section>
 
@@ -690,7 +742,7 @@
     <br>* Mcs.process-or-relation,
     <br>* Mcs.relation-or-process,
     <br>====== langoKomo:
-    <br>* McsKmo.o-ruoUo!=entity.bodyNo,
+    <br>* McsKmo.o-ruoUgo!=entity.bodyNo,
     <a class="clsHide" href="#idEntBodyNnam"></a></p>
 
   <section id="idEntBodyNarg">
@@ -704,7 +756,7 @@
     <br>* Mcs.argument-of-bodyNo,
     <br>* Mcs.bodyNo.argument,
     <br>====== langoKomo:
-    <br>* McsKmo.argo-a-ruoUo!=argument-of-bodyNo,
+    <br>* McsKmo.argo-a-ruoUgo!=argument-of-bodyNo,
     <a class="clsHide" href="#idEntBodyNargnam"></a></p>
   <p id="idEntBodyNargSpc">specific::
     <br>* <a class="clsPreview" href="filMcsDng.last.html#idDngarg">doing-argument</a>,
@@ -817,7 +869,7 @@
     <br>* McsEll.ατομική-οντότητα,
     <br>* McsEll.συγκεκριμένη-έννοια,
     <br>====== langoKomo:
-    <br>* McsKmo.koUo!=entity.individual,
+    <br>* McsKmo.koUgo!=entity.individual,
     <a class="clsHide" href="#idEntGnrcNnam"></a></p>
 
   <section id="idEntGnrcNscct">
@@ -843,7 +895,7 @@
     <br>* Mcs.entity.humanNo,
     <br>* Mcs.humanNo,
     <br>====== langoKomo:
-    <br>* McsKmo.hoUo!=entity.humanNo,
+    <br>* McsKmo.hoUgo!=entity.humanNo,
     <a class="clsHide" href="#idEntHmnNnam"></a></p>
 </section>
 

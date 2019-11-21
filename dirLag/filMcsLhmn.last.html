@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.human-language (lagHmn.0-69-0.2019-11-19 draft)</title>
+  <title>Mcs.human-language (lagHmn.0-70-0.2019-11-21 draft)</title>
   <meta name="keywords" content="human-language, lagHmn, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -10038,11 +10038,14 @@
     <br>· logo-info of lagHmn I call any part of <a class="clsPreview" href="#idLhmnopt">logoHmn</a>.
     <a class="clsHide" href="#idLhmnoptinfdsn"></a></p>
   <p id="idLhmnoptinfnam">name::
+    <br>* Mcs.expression,
     <br>* Mcs.lagHmn-logo-info,
     <br>* Mcs.logo-info--of-lagHmn,
     <br>* Mcs.logoHmn'info,
     <br>====== langoKomo:
-    <br>* McsKmo.logosHos-lo!=logoHmn'info,
+    <br>* McsKmo.logosHos-jo!=logoHmn'info,
+    <br>====== langoGreek:
+    <br>* McsEll.έκφραση!~η!=expression,
     <a class="clsHide" href="#idLhmnoptinfnam"></a></p>
 
   <section id="idLhmnoptinfdtrn">
@@ -11143,6 +11146,8 @@
   <p id="idLhmnduntTrmMnwnam">name::
     <br>* Mcs.termHmn.monoword,
     <br>* Mcs.monoword-term--of-lagHmn,
+    <br>====== langoGreek:
+    <br>* McsEll.μονολεκτικός-όρος!=termHmn.monoword,
     <a class="clsHide" href="#idLhmnduntTrmMnwnam"></a></p>
   </section>
 
@@ -11150,12 +11155,29 @@
   <h4 id="idLhmnduntTrmMtwH4">termHmn.multiword
     <a class="clsHide" href="#idLhmnduntTrmMtwH4"></a></h4>
   <p id="idLhmnduntTrmMtwdsn">description::
-    <br>· monoword-term of lagHmn is <a class="clsPreview" href="#idLhmnduntTrm">a-term</a> with MANY <a class="clsPreview" href="#idLhmnwrd">word</a>.
+    <br>· multiword-term of lagHmn is <a class="clsPreview" href="#idLhmnduntTrm">a-term</a> with MANY <a class="clsPreview" href="#idLhmnwrd">words</a>.
+    <br>· the-difference between a-multiword-term and an-expression with the-same words is the-existance or not of a-concept with name the-multiword-term.
+    <br>· in this worldview I denote the-multiword-terms combined with hyphens(-).
     <a class="clsHide" href="#idLhmnduntTrmMtwdsn"></a></p>
   <p id="idLhmnduntTrmMtwnam">name::
     <br>* Mcs.termHmn.multiword,
     <br>* Mcs.multiword-term--of-lagHmn,
+    <br>====== langoGreek:
+    <br>* McsEll.πολυλεκτικός-όρος!=termHmn.multiword,
     <a class="clsHide" href="#idLhmnduntTrmMtwnam"></a></p>
+
+  <section id="idLhmnduntTrmMtwSpc">
+  <h5 id="idLhmnduntTrmMtwSpcH5">multiword-term.SPECIFIC
+    <a class="clsHide" href="#idLhmnduntTrmMtwSpcH5"></a></h5>
+  <p id="idLhmnduntTrmMtwSpcdsn">description::
+    <br>* multiword-noun,
+    <br>* multiword-verb,
+    <br>* multiword-conjunction,
+    <a class="clsHide" href="#idLhmnduntTrmMtwSpcdsn"></a></p>
+  <p id="idLhmnduntTrmMtwSpcnam">name::
+    <br>* Mcs.multiword-term.specific,
+    <a class="clsHide" href="#idLhmnduntTrmMtwSpcnam"></a></p>
+  </section>
   </section>
   </section>
 
@@ -11725,7 +11747,7 @@
   </section>
 
   <section id="idLhmnduntPrn">
-  <h3 id="idLhmnduntPrnH3">nameHmn.pronoun
+  <h3 id="idLhmnduntPrnH3">noun.pronoun
     <a class="clsHide" href="#idLhmnduntPrnH3"></a></h3>
   <p id="idLhmnduntPrndsn">description::
     <br>· pronoun of lagHmn is <a class="clsPreview" href="#idLhmnnun">a-noun</a> that denotes <a class="clsPreview" href="#idLhmnsmsnunsmatDctc">deictic</a>, <a class="clsPreview" href="#idLhmnsmsnunsmatAnfc">anaphoric</a> and interrogative <a class="clsPreview" href="#idLhmnsmscpt">semaso-concepts</a> of important <a class="clsPreview" href="../dirCor/filMcs.last.html#idOverview">concepts</a> of a-lagHmn such as <a class="clsPreview" href="#idLhmnprsn">person-of-lag</a>, <a class="clsPreview" href="../dirCor/filMcsSpace.last.html#idOverview">space</a>, <a class="clsPreview" href="/dirCor/filMcsTime.last.html#idOverview">time</a> etc, and it is language dependent.
@@ -11908,6 +11930,21 @@
     <a class="clsHide" href="#idLhmnduntPrnCausnam"></a></p>
   </section>
   </section>
+
+  <section id="idLhmnduntMtwd">
+  <h3 id="idLhmnduntMtwdH3">noun.multiword
+    <a class="clsHide" href="#idLhmnduntMtwdH3"></a></h3>
+  <p id="idLhmnduntMtwddsn">description::
+    <br>· multiword-noun is a-noun with its auxiliaryNo-part comprised of many words.
+    <a class="clsHide" href="#idLhmnduntMtwddsn"></a></p>
+  <p id="idLhmnduntMtwdnam">name::
+    <br>* Mcs.multiword-noun,
+    <br>* Mcs.noun.multiword,
+    <a class="clsHide" href="#idLhmnduntMtwdnam"></a></p>
+  <p id="idLhmnduntMtwdgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="#idLhmnduntTrmMtw">multiword-term</a>,
+    <a class="clsHide" href="#idLhmnduntMtwdgncchn"></a></p>
+  </section>
   </section>
 
   <section id="idLhmnvrb">
@@ -11929,7 +11966,7 @@
     <br>* Mcs.verbHmn,
     <br>* Mcs.verbLοgHmn!⇒verbHmn,
     <br>====== langoKomo:
-    <br>* McsKmo.namo-ruoUo!=verb,
+    <br>* McsKmo.namo-ruoUgo!=verb,
     <br>====== langoEsperanto:
     <br>* McsEpo.verbo!=verb,
     <br>====== langoGerman:
@@ -12982,6 +13019,26 @@
     <br>* Mcs.verbHmn.affirmativeNo,
     <a class="clsHide" href="#idLhmnvrbAfvNnam"></a></p>
   </section>
+
+  <section id="idLhmnvrbMtwd">
+  <h3 id="idLhmnvrbMtwdH3">verbHmn.multiword
+    <a class="clsHide" href="#idLhmnvrbMtwdH3"></a></h3>
+  <p id="idLhmnvrbMtwddsn">description::
+    <br>· multiword-verb is a-verb with its auxiliaryNo-part comprised of many words.
+    <br>· like <a class="clsPreview" href="#idLhmnduntMtwd">the-multiword-nouns</a> what makes an-expression multiword-verb if there is <a class="clsPreview" href="#idLhmnsmsvrb">a-semaso-verb</a> with name this expression.
+    <br>· for example, the-expression "have-the-opinion" and the-verb "think" denote the-same thing and thus are synonyms.
+    <a class="clsHide" href="#idLhmnvrbMtwddsn"></a></p>
+  <p id="idLhmnvrbMtwdnam">name::
+    <br>* Mcs.multiword-verbHmn,
+    <br>* Mcs.phrasal-verb,
+    <br>* Mcs.verbHmn.multiword,
+    <br>====== langoGreek:
+    <br>* McsEll.πολυλεκτικό-ρήμα!~το!=multiword-verb,
+    <a class="clsHide" href="#idLhmnvrbMtwdnam"></a></p>
+  <p id="idLhmnvrbMtwdgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="#idLhmnduntTrmMtw">multiword-term</a>,
+    <a class="clsHide" href="#idLhmnvrbMtwdgncchn"></a></p>
+  </section>
   </section>
 
   <section id="idLhmncnj">
@@ -13625,9 +13682,14 @@
     <br>·
     <a class="clsHide" href="#idLhmncnjWrdmnydsn"></a></p>
   <p id="idLhmncnjWrdmnynam">name::
+    <br>* Mcs.conjHmn.multiword,
     <br>* Mcs.conjHmn.word-many,
     <br>* Mcs.many-word-conjHmn,
+    <br>* Mcs.multiword-conjHmn,
     <a class="clsHide" href="#idLhmncnjWrdmnynam"></a></p>
+  <p id="idLhmncnjWrdmnygncchn">generic-chain::
+    <br>* <a class="clsPreview" href="#idLhmnduntTrmMtw">multiword-term</a>,
+    <a class="clsHide" href="#idLhmncnjWrdmnygncchn"></a></p>
   </section>
   </section>
 
@@ -13755,20 +13817,6 @@
     <br>* Mcs.systNoun.noun-sentence,
     <a class="clsHide" href="#idLhmnnnsmSntcnam"></a></p>
   </section>
-  </section>
-
-  <section id="idLhmnvbsm">
-  <h2 id="idLhmnvbsmH2">verb-system of logoHmn
-    <a class="clsHide" href="#idLhmnvbsmH2"></a></h2>
-  <p id="idLhmnvbsmdsn">description::
-    <br>· verb-system is <a class="clsPreview" href="/dirCor/filMcsWhl.last.html#idWhlSys">a-system</a> of <a class="clsPreview" href="#idLhmnvrb">a-verb</a>, PART of <a class="clsPreview" href="#idLhmnsntc">a-sentence</a>.
-    <br>· for example, the-verb-system "have the opinion" and the-verb "think" denote the-same thing.
-    <a class="clsHide" href="#idLhmnvbsmdsn"></a></p>
-  <p id="idLhmnvbsmnam">name::
-    <br>* Mcs.systVerb,
-    <br>* Mcs.verb-phrase,
-    <br>* Mcs.verb-system,
-    <a class="clsHide" href="#idLhmnvbsmnam"></a></p>
   </section>
 
   <section id="idLhmnsntc">
@@ -14798,7 +14846,7 @@
     <br>* Mcs.personASmsHmn.3-deictic-plural,
     <br>* Mcs.personASmsHmn3,
     <br>====== langoKmo:
-    <br>* McsKmo.io-foUo,
+    <br>* McsKmo.io-foUgo,
     <a class="clsHide" href="#idLhmnprsnAHmn3nam"></a></p>
   </section>
 
@@ -14830,7 +14878,7 @@
     <br>* Mcs.personASmsHmn.5-deictic-plural-object,
     <br>* Mcs.personASmsHmn5,
     <br>====== langoKmo:
-    <br>* McsKmo.io-foUo+after-verb,
+    <br>* McsKmo.io-foUgo+after-verb,
     <a class="clsHide" href="#idLhmnprsnAHmn5nam"></a></p>
   </section>
 
@@ -14866,7 +14914,7 @@
     <br>=== adjective:
     <br>* Mcs.our,
     <br>====== langoKmo:
-    <br>* McsKmo.ios-foUos,
+    <br>* McsKmo.ios-foUgos,
     <a class="clsHide" href="#idLhmnprsnAHmn7nam"></a></p>
   </section>
 
@@ -14897,7 +14945,7 @@
     <br>* Mcs.personASmsHmn.9-deictic-plural-intensive,
     <br>* Mcs.personASmsHmn9,
     <br>====== langoKmo:
-    <br>* McsKmo.io-io-foUo,
+    <br>* McsKmo.io-io-foUgo,
     <a class="clsHide" href="#idLhmnprsnAHmn9nam"></a></p>
   </section>
   </section>
