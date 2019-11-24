@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.relation (relation.0-23-0.2019-11-23 draft)</title>
+  <title>Mcs.relation (relation.0-24-0.2019-11-24 draft)</title>
   <meta name="keywords" content="relation, relation, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -916,6 +916,7 @@
     <br>· cause-of-entity--relation is <a class="clsPreview" href="#idRlnSqcd">the-sequenced-relation</a> of an-entity[a] and <a class="clsPreview" href="#idRlnCsltkoz">a-cause</a> of it[a].
     <a class="clsHide" href="#idRlnCausedsn"></a></p>
   <p id="idRlnCausenam">name::
+    <br>* Mcs._stxCause,
     <br>* Mcs.causality.cause-of-entity,
     <br>* Mcs.cause-relation,
     <br>* Mcs.relation.cause-of-entity,
@@ -957,6 +958,7 @@
     <br>· effect-of-entity--relation is <a class="clsPreview" href="#idRlnSqcd">the-sequenced-relation</a> of an-entity[a] and <a class="clsPreview" href="#idRlnCslteft">an-effect</a> of it[a].
     <a class="clsHide" href="#idRlnEfctdsn"></a></p>
   <p id="idRlnEfctnam">name::
+    <br>* Mcs._stxEffect,
     <br>* Mcs.causality.effect-of-entity,
     <br>* Mcs.effect-relation,
     <br>* Mcs.relation.effect-of-entity,
@@ -967,13 +969,95 @@
     <a class="clsHide" href="#idRlnEfctstxH3"></a></h3>
   <p id="idRlnEfctstxdsn">description::
     <br>* English:
-    <br>_txtEng: _stxSbj:(sleepiness) _stxVrb:(<span class="clsColorRed">causes</span>) _stxObj:(many driving accidents). [wn 2.0]
+    <br>_txtEng: _stxSbj:(sleepiness) _stxVrb:(<span class="clsColorRed">causes</span>) _stxObj:(many driving accidents). [WordNet 2.0]
+    <br>_txtEng: _stxSbj:(The statements of earlier rabbinic scholars) _stxVrb:(<span class="clsColorRed">imply</span>) _stxSbjc:(such a belief). [HarperCollins]
+    <br>_txtEng: _stxSbj=cause:(The water shortage) _stxVrb:(<span class="clsColorRed">means</span>) _stxSbjc=effect:(that we have to stop taking long showers).
+    <br>_txtEng: _stxCause:(The elephant had eaten all the hay) _stxEffect:(<span class="clsColorRed">so</span> we fed it oats for a week).
+    <br>_txtEng: _stxSbj:(Leap seconds) _stxVrb:(are introduced) _stxManner:(as needed) _stxObj:(into UTC) _stxEffect:(<span class="clsColorRed">so as</span> to keep UTC within 0.9 seconds of UT1, which is a version of UT with certain corrections applied).
+    <br>_txtEng: _stxManner:(Unfortunately), _stxSbj:(most modern democracies) _stxVrb:(are) _stxSbjc:(stxCause:(<span class="clsColorRed">so</span> large) _stxEffect:(<span class="clsColorRed">that</span> accountability is often difficult to achieve)).
+    <br>_txtEng: _stxCause:(The government has cut university budgets); _stxEffect:(<span class="clsColorRed">consequently</span>, (class sizes have been increased).
+    <br>_txtEng: _stxCause:(Grandfather Dingsdale had sustained a broken back while working in the mines). _stxEffect:(<span class="clsColorRed">Consequently</span>, (he spent the rest of his life in a wheelchair)). [HarperCollins]
+    <br>_txtEng: _stxCause:(He did not have all the ingredients the recipe called for); _stxEffect:(<span class="clsColorRed">therefore</span>, (he decided to make something else)).
+    <br>_txtEng: _stxCause:(sentence.) _stxEffect:(Thus, (before a machine of any kind is intorduced into mass production, it is tested in practice.)
     <a class="clsHide" href="#idRlnEfctstxdsn"></a></p>
   <p id="idRlnEfctstxnam">name::
     <br>* Mcs.effect-relation'syntax,
     <br>* Mcs.syntax.effect-relation,
     <br>* Mcs.syntax.cause-verb:effect-rel,
+    <br>* Mcs.syntax.imply-verb:effect-rel,
+    <br>* Mcs.syntax.mean-verb:effect-rel,
+    <br>* Mcs.syntax.so-conj:effect-rel,
+    <br>* Mcs.syntax.so-as-conj:effect-rel,
+    <br>* Mcs.syntax.so..that-conj:effect-rel,
+    <br>* Mcs.syntax.consequently-advb:effect-rel,
+    <br>* Mcs.syntax.therefore-advb:effect-rel,
+    <br>* Mcs.syntax.thus-advb:effect-rel,
     <a class="clsHide" href="#idRlnEfctstxnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idRlnCdn">
+  <h2 id="idRlnCdnH2">causality.condition-of-entity
+    <a class="clsHide" href="#idRlnCdnH2"></a></h2>
+  <p id="idRlnCdndsn">description::
+    <br>· conditional-relation is <a class="clsPreview" href="#idRlnCause">a-cause-relation</a> where the-cause, the-condition, is an-inteded (hypothetic or factual) entity.
+    <a class="clsHide" href="#idRlnCdndsn"></a></p>
+  <p id="idRlnCdnnam">name::
+    <br>* Mcs._stxCondition,
+    <br>* Mcs.causality.condition-of-entity,
+    <br>* Mcs.condition-of-entity--relation,
+    <br>* Mcs.condition-relation,
+    <br>* Mcs.conditional-relation,
+    <br>* Mcs.relation.condition-of-entity,
+    <a class="clsHide" href="#idRlnCdnnam"></a></p>
+
+  <section id="idRlnCdnstx">
+  <h3 id="idRlnCdnstxH3">syntax of condition-rel
+    <a class="clsHide" href="#idRlnCdnstxH3"></a></h3>
+  <p id="idRlnCdnstxdsn">description::
+    <br>* English:
+    <br>_txtEng: _stxCondition:(<span class="clsColorRed">If</span> (the supplliers deliver the parts on time)), _stxEffect:(<span class="clsColorRed">then</span> (the factory will fulfil its production plan)).
+    <br>_txtEng: _stxCondition:(<span class="clsColorRed">When</span> (bad weather sets in)), _stxSbj:(there) _stxVrb:(occurs) _stxObj:(a growth in the number of cardiovascular illnesses).
+    <br>_txtEng: _stxCondition:(<span class="clsColorRed">As soon as</span> (the force on a tensed spring is released)), _stxEffect:(<span class="clsColorRed">then</span> (it returns to its original shape)).
+    <a class="clsHide" href="#idRlnCdnstxdsn"></a></p>
+  <p id="idRlnCdnstxnam">name::
+    <br>* Mcs.condition-relation'syntax,
+    <br>* Mcs.condition-relation'syntax,
+    <br>* Mcs.syntax.condition-relation,
+    <br>* Mcs.syntax.as-soon-as..then-conj:condition-relation,
+    <br>* Mcs.syntax.if..then-conj:condition-relation,
+    <br>* Mcs.syntax.when-conj:condition-relation,
+    <a class="clsHide" href="#idRlnCdnstxnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idRlnGoal">
+  <h2 id="idRlnGoalH2">causality.goal-of-entity
+    <a class="clsHide" href="#idRlnGoalH2"></a></h2>
+  <p id="idRlnGoaldsn">description::
+    <br>· goal-of-entity--relation is <a class="clsPreview" href="#idRlnEfct">an-effect-relation</a> where the-effect, the-goal, is an-inteded entity.
+    <a class="clsHide" href="#idRlnGoaldsn"></a></p>
+  <p id="idRlnGoalnam">name::
+    <br>* Mcs.causality.goal,
+    <br>* Mcs.goal-of-entity--relation,
+    <br>* Mcs.goal-relation,
+    <br>* Mcs.relation.goal,
+    <a class="clsHide" href="#idRlnGoalnam"></a></p>
+
+  <section id="idRlnGoalstx">
+  <h3 id="idRlnGoalstxH3">syntax of goal-rel
+    <a class="clsHide" href="#idRlnGoalstxH3"></a></h3>
+  <p id="idRlnGoalstxdsn">description::
+    <br>* English:
+    <br>_txtEng: _stxSbj:(Birds) _stxVrb:(have) _stxSbjc:((stxCause:(wings) _stxGoal:(<span class="clsColorRed">in order to</span> fly)).
+    <br>_txtEng: _stxGoal:(<span class="clsColorRed">to</span> make a gerund), _stxSbj:(you) _stxVrb:(add) _stxObj:("-ing'') _stxObj2:(to the verb), _stxArg:(just as with a present participle).
+    <a class="clsHide" href="#idRlnGoalstxdsn"></a></p>
+  <p id="idRlnGoalstxnam">name::
+    <br>* Mcs.goal-relation'syntax,
+    <br>* Mcs.syntax.goal-relation,
+    <br>* Mcs.syntax.in-order-to-conj:goal-relation,
+    <br>* Mcs.syntax.to-conj:goal-relation,
+    <a class="clsHide" href="#idRlnGoalstxnam"></a></p>
   </section>
   </section>
 </section>
