@@ -36,13 +36,13 @@ var
   sDir = 'dirCor',
   sDIR = 'DirCor',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'whole-entity',
+  sN = 'functing.braining',
   //4. SHORT-name: DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'whole',
-  //5. FILE-name: shows relation of another file: DnLbr, DtcbnetEth
-  sNFil = 'Whl',
+  sNS = 'braining',
+  //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
+  sNFil = 'DngBrng',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Whl';
+  sNId = 'Brng';
 
 s =
   '<!DOCTYPE html>\n' +
