@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.relation (relation.0-25-0.2019-11-25 draft)</title>
+  <title>Mcs.relation (relation.0-26-0.2019-12-02 draft)</title>
   <meta name="keywords" content="relation, relation, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -1173,6 +1173,19 @@
     <br>* Mcs.relation.information,
     <a class="clsHide" href="#idRlnInfnam"></a></p>
 
+  <section id="idRlnInfarch">
+  <h2 id="idRlnInfarchH2">relation.info-archetype
+    <a class="clsHide" href="#idRlnInfarchH2"></a></h2>
+  <p id="idRlnInfarchdsn">description::
+    <br>· info-archetype--relation is <a class="clsPreview" href="#idRlnMpg">a-mapping-relation</a> between <a class="clsPreview" href="filMcsDngBrng.last.html#idBrnginf">an-info</a> and its <a class="clsPreview" href="filMcsDngBrng.last.html#idBrnginfarch">archetype</a>.
+    <a class="clsHide" href="#idRlnInfarchdsn"></a></p>
+  <p id="idRlnInfarchnam">name::
+    <br>* Mcs.archetype-info--relation,
+    <br>* Mcs.info-archetype--relation,
+    <br>* Mcs.relation.info-archetype,
+    <a class="clsHide" href="#idRlnInfarchnam"></a></p>
+  </section>
+
   <section id="idRlnInfpsoent">
   <h2 id="idRlnInfpsoentH2">relation.info-possession-of-entity
     <a class="clsHide" href="#idRlnInfpsoentH2"></a></h2>
@@ -1239,9 +1252,9 @@
   <h3 id="idRlnInfBlfoentargH3">argument of belief--relation-of-entity
     <a class="clsHide" href="#idRlnInfBlfoentargH3"></a></h3>
   <p id="idRlnInfBlfoentargdsn">description::
-    <br>* entity that possess the-belief.
-    <br>* the-belief.
-    <br>* entity2 that originated the-belief.
+    <br>* brain-entity: that possesses the-belief.
+    <br>* belief.
+    <br>* brain-entity2: the original possessor of the-belief.
     <a class="clsHide" href="#idRlnInfBlfoentargdsn"></a></p>
   <p id="idRlnInfBlfoentargnam">name::
     <br>* Mcs.belief--relation-of-entity'argument,
@@ -1260,6 +1273,23 @@
     <br>====== langoGreek:
     <br>* McsEll.πίστη-οντότητας!=belief,
     <a class="clsHide" href="#idRlnInfBlfoentblfnam"></a></p>
+  </section>
+
+  <section id="idRlnInfBlfoentstx">
+  <h3 id="idRlnInfBlfoentstxH3">syntax of belief-relation
+    <a class="clsHide" href="#idRlnInfBlfoentstxH3"></a></h3>
+  <p id="idRlnInfBlfoentstxdsn">description::
+    <br>* English:
+    <br>_txtEng: _stxSbj=brain-entity:(I) _stxVrb:(believe) _stxObj=belief:(his report).
+    <br>_txtEng: _stxSbj=brain-entity:(I) _stxVrb:(believe) _stxObj=belief:(that he will come back from the war). [WordNet 2.0]
+    <br>_txtEng: _stxSbj=brain-entity:(She) _stxVrb:(believes) _stxArg=belief:(in spirits). [WordNet]
+    <br>_txtEng: _stxSbj=brain-entity:(I) _stxVrb:(believe) _stxObj=brain-entity2:(her).
+    <a class="clsHide" href="#idRlnInfBlfoentstxdsn"></a></p>
+  <p id="idRlnInfBlfoentstxnam">name::
+    <br>* Mcs.belief-relation'syntax,
+    <br>* Mcs.syntax.relation.belief,
+    <br>* Mcs.syntax.verb.believe,
+    <a class="clsHide" href="#idRlnInfBlfoentstxnam"></a></p>
   </section>
   </section>
 </section>
@@ -1526,11 +1556,13 @@
   <p id="idRlnMpgnam">name::
     <br>* Mcs.mapping-relation,
     <br>* Mcs.relation.mapping,
+    <br>* Mcs.am-mapped!~verbEng,
     <br>====== langoKomo:
     <br>* McsKmo.ro-mapo!=relation.mapping,
     <br>====== langoGreek:
     <br>* McsEll.αντιστοιχία!=relation.mapping,
     <br>* McsEll.σχέση-αντιστοιχίας!=relation.mapping,
+    <br>* McsEll.αντιστοιχούμαι!~verbEll!=relation.mapping,
     <a class="clsHide" href="#idRlnMpgnam"></a></p>
 
   <section id="idRlnMpgarg">
@@ -1543,6 +1575,33 @@
   <p id="idRlnMpgargnam">name::
     <br>* Mcs.mapping-relation'argument,
     <a class="clsHide" href="#idRlnMpgargnam"></a></p>
+  </section>
+
+  <section id="idRlnMpgarch">
+  <h3 id="idRlnMpgarchH3">archetype of mapping-rel
+    <a class="clsHide" href="#idRlnMpgarchH3"></a></h3>
+  <p id="idRlnMpgarchdsn">description::
+    <br>· archetype is the-original entity that <a class="clsPreview" href="#idRlnMpg">a-mapping-relation</a> connects with another entity, <a class="clsPreview" href="#idRlnMpgmdl">the-model</a>.
+    <a class="clsHide" href="#idRlnMpgarchdsn"></a></p>
+  <p id="idRlnMpgarchnam">name::
+    <br>* Mcs.ARCHETYPE,
+    <br>* Mcs.mapping-relation'archetype,
+    <a class="clsHide" href="#idRlnMpgarchnam"></a></p>
+  </section>
+
+  <section id="idRlnMpgmdl">
+  <h3 id="idRlnMpgmdlH3">model of mapping-rel
+    <a class="clsHide" href="#idRlnMpgmdlH3"></a></h3>
+  <p id="idRlnMpgmdldsn">description::
+    <br>· model is the-secondary entity that <a class="clsPreview" href="#idRlnMpg">a-mapping-relation</a> connects with an-original-entity, <a class="clsPreview" href="#idRlnMpgarch">the-archetype</a>.
+    <a class="clsHide" href="#idRlnMpgmdldsn"></a></p>
+  <p id="idRlnMpgmdlnam">name::
+    <br>* Mcs.MODEL,
+    <br>* Mcs.mapping-relation'model,
+    <a class="clsHide" href="#idRlnMpgmdlnam"></a></p>
+  <p id="idRlnMpgmdlgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsEnt.last.html#idOverview">entity</a>,
+    <a class="clsHide" href="#idRlnMpgmdlgncchn"></a></p>
   </section>
   </section>
 
