@@ -33,16 +33,16 @@ var
   bCounter = true,
   bDisqus = false,
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirCor',
-  sDIR = 'DirCor',
+  sDir = 'dirLag',
+  sDIR = 'DirLag',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'functing.braining',
+  sN = 'language',
   //4. SHORT-name: DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'braining',
+  sNS = 'lag',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'DngBrng',
+  sNFil = 'Lag',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Brng';
+  sNId = 'Lag';
 
 s =
   '<!DOCTYPE html>\n' +
