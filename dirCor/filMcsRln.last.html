@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.relation (relation.0-27-0.2019-12-06 draft)</title>
+  <title>Mcs.relation (relation.0-28-0.2019-12-09 draft)</title>
   <meta name="keywords" content="relation, relation, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -111,7 +111,9 @@
   <h1 id="idRlnstxH1">syntax of relation
     <a class="clsHide" href="#idRlnstxH1"></a></h1>
   <p id="idRlnstxdsn">description::
-    <br>· a-relation is-expressed with a-noun, a-verb, or a-conjunction.
+    <br>· a-relation is-expressed with a-noun, a-case, an-adjective, an-adverb, a-verb, or a-conjunction.
+    <br>* English:
+    <br>_txtEng:_
     <a class="clsHide" href="#idRlnstxdsn"></a></p>
   <p id="idRlnstxnam">name::
     <br>* Mcs.relation.syntax,
@@ -1265,7 +1267,8 @@
     <a class="clsHide" href="#idRlnInfBlfoentargH3"></a></h3>
   <p id="idRlnInfBlfoentargdsn">description::
     <br>* brain-entity: that possesses the-belief.
-    <br>* belief.
+    <br>* belief: belief-info.
+    <br>* belief-archetype.
     <br>* brain-entity2: the original possessor of the-belief.
     <a class="clsHide" href="#idRlnInfBlfoentargdsn"></a></p>
   <p id="idRlnInfBlfoentargnam">name::
@@ -1281,6 +1284,7 @@
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=belief]
     <a class="clsHide" href="#idRlnInfBlfoentblfdsn"></a></p>
   <p id="idRlnInfBlfoentblfnam">name::
+    <br>* Mcs.belief-info,
     <br>* Mcs.belief-of-entity,
     <br>====== langoGreek:
     <br>* McsEll.πίστη-οντότητας!=belief,
@@ -1292,16 +1296,50 @@
     <a class="clsHide" href="#idRlnInfBlfoentstxH3"></a></h3>
   <p id="idRlnInfBlfoentstxdsn">description::
     <br>* English:
-    <br>_txtEng: _stxSbj=brain-entity:(I) _stxVrb:(believe) _stxObj=belief:(his report).
-    <br>_txtEng: _stxSbj=brain-entity:(I) _stxVrb:(believe) _stxObj=belief:(that he will come back from the war). [WordNet 2.0]
-    <br>_txtEng: _stxSbj=brain-entity:(She) _stxVrb:(believes) _stxArg=belief:(in spirits). [WordNet]
-    <br>_txtEng: _stxSbj=brain-entity:(I) _stxVrb:(believe) _stxObj=brain-entity2:(her).
+    <br>_txtEng:_stxSbj=brain-entity:(...) _stxVrb:(believe)_stxArg=belief:(in(...)).
+    <br>_txtEng:_stxSbj=brain-entity:(...) _stxVrb:(believe)_stxObj=arhetype:(...).
+    <br>_txtEng:_stxSbj=brain-entity:(..) _stxVrb:(believe)_stxObj=brain-entity2:(...).
     <a class="clsHide" href="#idRlnInfBlfoentstxdsn"></a></p>
   <p id="idRlnInfBlfoentstxnam">name::
     <br>* Mcs.belief-relation'syntax,
     <br>* Mcs.syntax.relation.belief,
     <br>* Mcs.syntax.verb.believe,
     <a class="clsHide" href="#idRlnInfBlfoentstxnam"></a></p>
+
+  <section id="idRlnInfBlfoentstxEngbebi">
+  <h4 id="idRlnInfBlfoentstxEngbebiH4">_txtEng:_stxSbj=brain-entity:(...)_stxVrb:(believe)_stxArg=belief:(in(...))
+    <a class="clsHide" href="#idRlnInfBlfoentstxEngbebiH4"></a></h4>
+  <p id="idRlnInfBlfoentstxEngbebidsn">description::
+    <br>_txtEng: _stxSbj=brain-entity:(She) _stxVrb:(believes) _stxArg=belief:(in spirits). [WordNet]
+    <a class="clsHide" href="#idRlnInfBlfoentstxEngbebidsn"></a></p>
+  <p id="idRlnInfBlfoentstxEngbebinam">name::
+    <br>* Mcs._txtEng:_stxSbj=brain-entity:(...)_stxVrb:(believe)_stxArg=belief:(in(...)),
+    <br>* Mcs.syntax.conj.in,
+    <a class="clsHide" href="#idRlnInfBlfoentstxEngbebinam"></a></p>
+  </section>
+
+  <section id="idRlnInfBlfoentstxEngbeba">
+  <h4 id="idRlnInfBlfoentstxEngbebaH4">_txtEng:_stxSbj=brain-entity:(...)_stxVrb:(believe)_stxObj=arhetype:(...)
+    <a class="clsHide" href="#idRlnInfBlfoentstxEngbebaH4"></a></h4>
+  <p id="idRlnInfBlfoentstxEngbebadsn">description::
+    <br>_txtEng: _stxSbj=brain-entity:(I) _stxVrb:(believe) _stxObj=arhetype:(his report).
+    <br>_txtEng: _stxSbj=brain-entity:(I) _stxVrb:(believe) _stxObj=archetye:(that (he will come back from the war)). [WordNet 2.0]
+    <a class="clsHide" href="#idRlnInfBlfoentstxEngbebadsn"></a></p>
+  <p id="idRlnInfBlfoentstxEngbebanam">name::
+    <br>* Mcs._txtEng:_stxSbj=brain-entity:(...)_stxVrb:(believe)_stxObj=arhetype:(...),
+    <a class="clsHide" href="#idRlnInfBlfoentstxEngbebanam"></a></p>
+  </section>
+
+  <section id="idRlnInfBlfoentstxEngbebbe">
+  <h4 id="idRlnInfBlfoentstxEngbebbeH4">_txtEng:_stxSbj=brain-entity:(..)_stxVrb:(believe)_stxObj=brain-entity2:(...)
+    <a class="clsHide" href="#idRlnInfBlfoentstxEngbebbeH4"></a></h4>
+  <p id="idRlnInfBlfoentstxEngbebbedsn">description::
+    <br>_txtEng: _stxSbj=brain-entity:(I) _stxVrb:(believe) _stxObj=brain-entity2:(her).
+    <a class="clsHide" href="#idRlnInfBlfoentstxEngbebbedsn"></a></p>
+  <p id="idRlnInfBlfoentstxEngbebbenam">name::
+    <br>* Mcs._txtEng:_stxSbj=brain-entity:(..)_stxVrb:(believe)_stxObj=brain-entity2:(...),
+    <a class="clsHide" href="#idRlnInfBlfoentstxEngbebbenam"></a></p>
+  </section>
   </section>
   </section>
 </section>
@@ -1329,6 +1367,10 @@
     <a class="clsHide" href="#idRlnOpsnargH2"></a></h2>
   <p id="idRlnOpsnargdsn">description::
     <br>· opposite is an-argument of <a class="clsPreview" href="#idRlnOpsn">opposition-relation</a>.
+    <br>* entity1,
+    <br>* entity2,
+    <br>* ...
+    <br>* entityN,
     <a class="clsHide" href="#idRlnOpsnargdsn"></a></p>
   <p id="idRlnOpsnargnam">name::
     <br>* Mcs.opposite,
@@ -1668,7 +1710,7 @@
     <a class="clsHide" href="#idRlnRsbcstxdsn"></a></p>
   <p id="idRlnRsbcstxnam">name::
     <br>* Mcs.resemblance-relation'syntax,
-    <br>* Mcs.syntax.resemblance-relation,
+    <br>* Mcs.syntax.relation.resemblance,
     <br>* Mcs.syntax.verb.resemble,
     <br>* Mcs.syntax.conj.like:resemblance,
     <a class="clsHide" href="#idRlnRsbcstxnam"></a></p>
