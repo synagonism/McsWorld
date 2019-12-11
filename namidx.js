@@ -12,6 +12,7 @@
  * PROBLEM:
  * - on lagALL, store all files in one dir dirEll eg
  *
+ * modified: {2019-12-11} 'cptqnt.root.json'
  * modified: {2019-09-05} 'lagKmo'
  * modified: {2018-10-25} 'cptqnt.json'
  * modified: {2018-10-16} '* Mcs.'
@@ -106,6 +107,8 @@ if (aLag[0] === 'lagALL') {
 if (aFilMcsIn.length > 0) {
   //first file we want to upload
   oSetFileUp.add('dirNamidx/namidx.root.json');
+  //also we want the-file with the-quantity of concepts.
+  oSetFileUp.add('cptqnt.root.json');
 }
 
 /**
