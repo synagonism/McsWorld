@@ -33,16 +33,16 @@ var
   bCounter = true,
   bDisqus = false,
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirLag',
-  sDIR = 'DirLag',
+  sDir = 'dirSct',
+  sDIR = 'DirSct',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'language',
+  sN = 'satisfier',
   //4. SHORT-name: DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'lag',
+  sNS = 'satisfier',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'Lag',
+  sNFil = 'Sfr',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Lag';
+  sNId = 'Sfr';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -58,8 +58,8 @@ s =
   '<body>\n' +
   '<header id="idHeader">\n' +
   '  <p></p>\n' +
-  '  <h1 id="idHeaderH1">' + sN + ' sensorial-concept-Mcs\n' +
-  '    <br>' +  '(' + sNS + ')\n' +
+  '  <h1 id="idHeaderH1">' + sN + '\n' +
+  '    <br>' +  'sensorial-concept-Mcs (' + sNS + ')\n' +
   '    </h1>\n' +
   '  <p id="idHeadercrd">McsHitp-creation: {' + moUtil.fDateYMD() + '}\n' +
   '    <a class="clsHide" href="#idHeadercrd"></a></p>\n' +
