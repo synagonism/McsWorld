@@ -33,16 +33,16 @@ var
   bCounter = true,
   bDisqus = false,
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirSct',
-  sDIR = 'DirSct',
+  sDir = 'dirLag',
+  sDIR = 'DirLag',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'satisfier',
+  sN = 'information',
   //4. SHORT-name: DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'satisfier',
+  sNS = 'info',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'Sfr',
+  sNFil = 'Inf',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Sfr';
+  sNId = 'Inf';
 
 s =
   '<!DOCTYPE html>\n' +
