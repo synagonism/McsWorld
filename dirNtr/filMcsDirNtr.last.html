@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.dirNature--Mws-view (dirNature.2-1-0.2019-12-17)</title>
+  <title>Mcs.dirNature--Mws-view (dirNature.2-2-0.2019-12-19)</title>
   <meta name="keywords" content="DirNature, Mcs, Mws, Kaseluris.Nikos.1959, Hitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -12,7 +12,7 @@
 <header id="idHeader">
   <p></p>
   <h1 id="idHeaderH1">dirNature--Mws-view
-    <br>sensorial-concept-Mcs (dirNtr)
+    <br>sensorial-concept-Mcs (dirNature)
     </h1>
 </header>
 
@@ -25,7 +25,7 @@
     <a class="clsPreview" href="../filMcsWorld.last.html#idOverview">Kaseluris.Nikos.1959-worldview</a>.
     <br>· it contains <a class="clsPreview" href="../dirCor/filMcs.last.html#idOverview">sensorial-concepts</a> related to Nature.
     <a class="clsHide" href="#idDescription"></a></p>
-  <p id="idName">Name:
+  <p id="idName">name::
     <br>* cpt.Kaseluris.Nikos.1959-view-dirNature,
     <br>* cpt.modelInfoView.dirNature-of-mws!⇒dirNature,
     <br>* cpt.Mws-dirNature-view!⇒dirNature,
@@ -36,31 +36,34 @@
     <a class="clsHide" href="#idName"></a></p>
 </section>
 
-<section id="idMwsdntrTodo">
-  <h1 id="idMwsdntrTodoH1">Mwsv-dntr'Structured-concept.TODO
-    <a class="clsHide" href="#idMwsdntrTodoH1"></a></h1>
-  <p id="idMwsdntrTodoP1">Specific:
-    <br>• cpt.nature
-    <br>and infinite others!!!
-    <a class="clsHide" href="#idMwsdntrTodoP1"></a></p>
+<section id="idMwsdirNtrFile">
+  <h1 id="idMwsdirNtrFileH1">Mcs.FILE of dirNature
+    <a class="clsHide" href="#idMwsdirNtrFileH1"></a></h1>
+  <p id="idMwsdirNtrFilenam">name::
+    <br>* Mcs.dirNature'McsFile,
+    <a class="clsHide" href="#idMwsdirNtrFilenam"></a></p>
+  <p id="idMwsdirNtrFileP1">quantity-of-concepts::
+    <br>* <span id="idMwsdirNtrFilespn" class="clsColorRed"></span>,
+    <a class="clsHide" href="#idMwsdirNtrFileP1"></a></p>
+  <p id="idMwsdirNtrFileP2">list-of--file-concepts::
+    <br>(<a href="cptqnt.json">link</a>)
+    <a class="clsHide" href="#idMwsdirNtrFileP2"></a></p>
 </section>
 
-<section id="idMwsdntrCmpt">
-  <h1 id="idMwsdntrCmptH1">Mwsv-dntr'Structured-concept.COMPUTED
-    <a class="clsHide" href="#idMwsdntrCmptH1"></a></h1>
-  <p id="idMwsdntrCmptP1">Quantity-of-concepts:
-    <br><span id="idMwsdntrCmptspn" class="clsColorRed"></span>,
-    <a class="clsHide" href="#idMwsdntrCmptP1"></a></p>
-  <div id="idMwsdntrCmptP2">
-    <p>List-of-concepts:
-    </p>
-    <ol id="idMwsdntrCmptOl">
-    </ol>
-    <a class="clsHide" href="#idMwsdntrCmptP2"></a></div>
+<section id="idMwsdirNtrTodo">
+  <h1 id="idMwsdirNtrTodoH1">Mcs.TODO of dirNature
+    <a class="clsHide" href="#idMwsdirNtrTodoH1"></a></h1>
+  <p id="idMwsdirNtrTododsn">description::
+    <br>• cpt.nature,
+    <br>and infinite others!!!
+    <a class="clsHide" href="#idMwsdirNtrTododsn"></a></p>
+  <p id="idMwsdirNtrTodonam">name::
+    <br>* Mcs.dirNature'McsTodo,
+    <a class="clsHide" href="#idMwsdirNtrTodonam"></a></p>
 </section>
 
 <section id="idMeta">
-  <h1 id="idMetaH1">Meta-Info
+  <h1 id="idMetaH1">meta-info
     <a class="clsHide" href="#idMetaH1"></a></h1>
   <p id="idMetaCounter" class="clsCenter">This page was visited
     <span class="clsColorRed">
@@ -71,7 +74,7 @@
   <p id="idMetaWebpage_path" class="classTocExpand"><span class="clsB clsColorGreen">page-wholepath</span>:
     <a class="clsPreview" href="../../index.html#idOverview">synagonism.net</a> /
     <a class="clsPreview" href="../filMcsWorld.last.html#idOverview">Mcs-worldview</a> /
-    DirNature-view
+    dirNature-view
     </p>
   <p id="idFooterP1">Contact:
     <br>• email:
@@ -128,46 +131,17 @@
 <script>
   window.addEventListener('load', function () {
     var
-      a,         //existing name-url array
-      sNam = '', //individual name
-      sUrl = '', //individual url
-      s = '';
+      aCpts,
+      oXHR = new XMLHttpRequest()
 
-    oMws.oDntr = {};    //object with DirNtr concepts
-    for (var sK in oMws.oIdxNam) {
-      a = oMws['a' + sK];
-      //IF array exists
-      //{"dirNtr/id":['nam1','nam2']}
-      if (a) {
-        for (var nC = 1; nC < a.length; nC++) {
-          sNam = a[nC][0]; //individual name
-          sUrl = a[nC][1]; //individual url
-          //find URL
-          if (sUrl.startsWith('dirNtr/')) {
-            if (!(sUrl in oMws.oDntr)) {
-              oMws.oDntr[sUrl] = [sNam];
-            } else if (sUrl in oMws.oDntr) {
-              //put the-name if not in
-              if (!oMws.oDntr[sUrl].includes(sNam)) {
-                oMws.oDntr[sUrl].push(sNam);
-              }
-            }
-          }
-        }
+    oXHR.open('GET', 'cptqnt.json', true)
+    oXHR.send(null)
+    oXHR.onreadystatechange = function () {
+      if (oXHR.readyState === 4 && oXHR.status === 200) {
+        aCpts = JSON.parse(oXHR.responseText)
+        document.getElementById('idMwsdirNtrFilespn').innerHTML =
+          aCpts[0][1].toLocaleString() + ' Mcs'
       }
-    }
-    // Put sum of urls
-    document.getElementById('idMwsdntrCmptspn').innerHTML = Object.keys(oMws.oDntr).length;
-    // Put urls
-    for (var sK in oMws.oDntr) {
-      s = s +
-        '<li>' + sK +
-        '::\n<br>- ' + oMws.oDntr[sK].join('<br>- ');
-    }
-    if (Object.keys(oMws.oDntr).length === 0) {
-      document.getElementById('idMwsdntrCmptOl').innerHTML = '<li>Empty-list.';
-    } else {
-      document.getElementById('idMwsdntrCmptOl').innerHTML = s;
     }
   });
 </script>

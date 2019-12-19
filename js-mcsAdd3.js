@@ -33,16 +33,16 @@ var
   bCounter = true,
   bDisqus = false,
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirHlth',
-  sDIR = 'DirHlth',
+  sDir = 'dirNtr',
+  sDIR = 'DirNtr',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'health-of-organism',
+  sN = 'bio-system',
   //4. SHORT-name: DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'health',
+  sNS = 'biosys',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'Hlth',
+  sNFil = 'Bio',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Hlth';
+  sNId = 'Bio';
 
 s =
   '<!DOCTYPE html>\n' +
