@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-8-0.2019-12-23: entity-link,
  * version.0-7-0.2019-09-06: comments on filMcsDirNam,
  * version.0-6-4.2019-08-09: github,
  * version.0-6-3.2019-07-30: idOverview,
@@ -33,16 +34,16 @@ var
   bCounter = true,
   bDisqus = false,
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirNtr',
-  sDIR = 'DirNtr',
+  sDir = 'dirStn',
+  sDIR = 'DirStn',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'complex-system',
+  sN = 'system.socialitation',
   //4. SHORT-name: DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'sysComplex',
+  sNS = 'Stn',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'SysCmlx',
+  sNFil = 'Stn',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Cxsm';
+  sNId = 'Stn';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -115,8 +116,15 @@ s = s +
   '    <a class="clsHide" href="#id' + sNId + 'gncFTH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'gncchn">generic-chain::\n' +
   '    <br>* \n' +
-  '    <br>...\n' +
-  '    <br>* entity,\n' +
+  '    <br>...\n';
+if (sDir === 'dirCor') {
+  s = s +
+  '    <br>* <a class="clsPreview" href="filMcsEnt.last.html#idOverview">entity</a>.\n'
+} else {
+  s = s +
+  '    <br>* <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">entity</a>.\n'
+}
+s = s +
   '    <a class="clsHide" href="#id' + sNId + 'gncchn"></a></p>\n' +
   '</section>\n' +
   '\n' +
