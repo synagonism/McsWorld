@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.whole-entity (whole.0-23-0.2019-12-22 draft)</title>
+  <title>Mcs.whole-entity (whole.0-24-0.2019-12-24 draft)</title>
   <meta name="keywords" content="whole-entity, whole, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -1226,6 +1226,7 @@
     <br><img src="filMcsWhl.files/system.tree.jpg">
     <a class="clsHide" href="#idWhlSysTridsn"></a></p>
   <p id="idWhlSysTrinam">name::
+    <br>* Mcs.hierarchy!⇒systemTree,
     <br>* Mcs.system.tree!⇒systemTree,
     <br>* Mcs.systemTree,
     <br>* Mcs.tree-system!⇒systemTree,
@@ -1454,18 +1455,14 @@
   <h4 id="idWhlSysTrinodeLvlH4">tree-node.level
     <a class="clsHide" href="#idWhlSysTrinodeLvlH4"></a></h4>
   <p id="idWhlSysTrinodeLvldsn">description::
-    <br>· level-of--tree-system is the-set of nodes with the-same level-number.
+    <br>· level-of--tree-system is the-set of nodes with the-same <a class="clsPreview" href="#idWhlSysTrinodelvnr">level-number</a>.
     <a class="clsHide" href="#idWhlSysTrinodeLvldsn"></a></p>
   <p id="idWhlSysTrinodeLvlnam">name::
-    <br>* Mcs.level--of--tree-system,
-    <br>* Mcs.systemTree'level,
-    <br>* Mcs.tree-node.level,
+    <br>* Mcs.level--of--tree-system!⇒tree-level,
+    <br>* Mcs.systemTree'level!⇒tree-level,
+    <br>* Mcs.tree-level,
+    <br>* Mcs.tree-node.level!⇒tree-level,
     <a class="clsHide" href="#idWhlSysTrinodeLvlnam"></a></p>
-
-  <section id="idWhlSysTrinodeLvlRut">
-  <h5 id="idWhlSysTrinodeLvlRutH5">tree-node.level.root (<a class="clsPreview" href="#idWhlSysTrinodeRoot">link</a>)
-    <a class="clsHide" href="#idWhlSysTrinodeLvlRutH5"></a></h5>
-  </section>
 
   <section id="idWhlSysTrinodeLvlwdth">
   <h5 id="idWhlSysTrinodeLvlwdthH5">width of tree-level
@@ -1478,8 +1475,13 @@
     <a class="clsHide" href="#idWhlSysTrinodeLvlwdthnam"></a></p>
   </section>
 
+  <section id="idWhlSysTrinodeLvlRut">
+  <h5 id="idWhlSysTrinodeLvlRutH5">tree-level.root (<a class="clsPreview" href="#idWhlSysTrinodeRoot">link</a>)
+    <a class="clsHide" href="#idWhlSysTrinodeLvlRutH5"></a></h5>
+  </section>
+
   <section id="idWhlSysTrinodeLvlBtm">
-  <h5 id="idWhlSysTrinodeLvlBtmH5">tree-node.level.bottom
+  <h5 id="idWhlSysTrinodeLvlBtmH5">tree-level.bottom
     <a class="clsHide" href="#idWhlSysTrinodeLvlBtmH5"></a></h5>
   <p id="idWhlSysTrinodeLvlBtmdsn">description::
     <br>· bottom-level is the-most lower level of a-tree.
@@ -1514,6 +1516,11 @@
     <br>* Mcs.systemTree'edge,
     <br>* Mcs.systemTree'node-relation,
     <a class="clsHide" href="#idWhlSysTrindrnnam"></a></p>
+  </section>
+
+  <section id="idWhlSysTrilvl">
+  <h3 id="idWhlSysTrilvlH3">level (<a class="clsPreview" href="#idWhlSysTrinodeLvl">link</a>) of tree-system
+    <a class="clsHide" href="#idWhlSysTrilvlH3"></a></h3>
   </section>
 
   <section id="idWhlSysTristcr">
@@ -1611,11 +1618,30 @@
     <a class="clsHide" href="#idWhlSysTriGcscH3"></a></h3>
   <p id="idWhlSysTriGcscdsn">description::
     <br>· generic-specific--tree-system is <a class="clsPreview" href="#idWhlSysTri">a-tree-system</a> with <a class="clsPreview" href="filMcsGnrc.last.html#idGnrspcrln">generic-specific</a> <a class="clsPreview" href="#idWhlSysTrindrn">node-relations</a>.
+    <br>"Taxonomy is the practice and science of classification. The word is also used as a count noun: a taxonomy, or taxonomic scheme, is a particular classification. The word finds its roots in the Greek language τάξις, taxis (meaning 'order', 'arrangement') and νόμος, nomos ('law' or 'science'). Originally, taxonomy referred only to the classification of organisms or a particular classification of organisms. In a wider, more general sense, it may refer to a classification of things or concepts, as well as to the principles underlying such a classification. Taxonomy is different from meronomy, which is dealing with the classification of parts of a whole.
+    <br>Many taxonomies have a hierarchical structure, but this is not a requirement. Taxonomy uses taxonomic units, known as "taxa" (singular "taxon")."
+    <br>[https://en.wikipedia.org/wiki/Taxonomy_(general) {2019-12-24}]
     <a class="clsHide" href="#idWhlSysTriGcscdsn"></a></p>
   <p id="idWhlSysTriGcscnam">name::
-    <br>* Mcs.generic-specific--tree-system,
-    <br>* Mcs.tree-system.generic-specific,
+    <br>* Mcs.generic-specific--tree-system!⇒treeGnc,
+    <br>* Mcs.generic-tree!⇒treeGnc,
+    <br>* Mcs.treeGnc,
+    <br>* Mcs.tree-system.generic-specific!⇒treeGnc,
+    <br>* Mcs.taxonomy!⇒treeGnc,
     <a class="clsHide" href="#idWhlSysTriGcscnam"></a></p>
+
+  <section id="idWhlSysTriGcsctxn">
+  <h4 id="idWhlSysTriGcsctxnH4">treeGnc.taxon
+    <a class="clsHide" href="#idWhlSysTriGcsctxnH4"></a></h4>
+  <p id="idWhlSysTriGcsctxndsn">description::
+    <br>· taxon is <a class="clsPreview" href="#idWhlSysTrinode">a-node</a> of <a class="clsPreview" href="#idWhlSysTriGcsc">a-generic-tree</a>.
+    <a class="clsHide" href="#idWhlSysTriGcsctxndsn"></a></p>
+  <p id="idWhlSysTriGcsctxnnam">name::
+    <br>* Mcs.taxa!~plural-of-taxon,
+    <br>* Mcs.taxon,
+    <br>* Mcs.treeGnc.taxon,
+    <a class="clsHide" href="#idWhlSysTriGcsctxnnam"></a></p>
+  </section
   </section>
 
   <section id="idWhlSysTriWlpt">
@@ -1623,12 +1649,31 @@
     <a class="clsHide" href="#idWhlSysTriWlptH3"></a></h3>
   <p id="idWhlSysTriWlptdsn">description::
     <br>· part-whole--tree-system is <a class="clsPreview" href="#idWhlSysTri">a-tree-system</a> with <a class="clsPreview" href="#idWhlprtrln">whole-part</a> <a class="clsPreview" href="#idWhlSysTrindrn">node-relations</a>.
+    <br>===
+    <br>"A meronomy or partonomy is a type of hierarchy that deals with part–whole relationships, in contrast to a taxonomy whose categorisation is based on discrete sets. Accordingly, the unit of meronomical classification is meron, while the unit of taxonomical classification is taxon. These conceptual structures are used in linguistics and computer science, with applications in biology. The part–whole relationship is sometimes referred to as HAS-A, and corresponds to object composition in object-oriented programming.[1] The study of meronomy is known as mereology, and in linguistics a meronym is the name given to a constituent part of, the substance of, or a member of something. "X" is a meronym of "Y" if an X is a part of a Y.[2]"
+    <br>[https://en.wikipedia.org/wiki/Meronomy {2019-12-24}]
     <a class="clsHide" href="#idWhlSysTriWlptdsn"></a></p>
   <p id="idWhlSysTriWlptnam">name::
-    <br>* Mcs.part-whole--tree-system,
-    <br>* Mcs.tree-system.whole-part,
-    <br>* Mcs.whole-part--tree-system,
+    <br>* Mcs.meronomy!⇒treeWhl,
+    <br>* Mcs.part-whole--tree-system!⇒treeWhl,
+    <br>* Mcs.partonomy!⇒treeWhl,
+    <br>* Mcs.treeWhl,
+    <br>* Mcs.tree-system.whole-part!⇒treeWhl,
+    <br>* Mcs.whole-part--tree-system!⇒treeWhl,
+    <br>* Mcs.whole-tree!⇒treeWhl,
     <a class="clsHide" href="#idWhlSysTriWlptnam"></a></p>
+
+  <section id="idWhlSysTriWlptmrn">
+  <h4 id="idWhlSysTriWlptmrnH4">treeWhl.meron
+    <a class="clsHide" href="#idWhlSysTriWlptmrnH4"></a></h4>
+  <p id="idWhlSysTriWlptmrndsn">description::
+    <br>· meron is <a class="clsPreview" href="#idWhlSysTrinode">a-node</a> of <a class="clsPreview" href="#idWhlSysTriWlpt">a-whole-tree</a>.
+    <a class="clsHide" href="#idWhlSysTriWlptmrndsn"></a></p>
+  <p id="idWhlSysTriWlptmrnnam">name::
+    <br>* Mcs.meron,
+    <br>* Mcs.treeWhl'meron,
+    <a class="clsHide" href="#idWhlSysTriWlptmrnnam"></a></p>
+  </section>
   </section>
   </section>
 

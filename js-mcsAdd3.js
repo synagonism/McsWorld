@@ -37,13 +37,13 @@ var
   sDir = 'dirStn',
   sDIR = 'DirStn',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'system.socialitation',
-  //4. SHORT-name: DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'Stn',
+  sN = 'socialitation.group',
+  //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
+  sNS = 'social-group',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'Stn',
+  sNFil = 'Sgrp',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Stn';
+  sNId = 'Sgrp';
 
 s =
   '<!DOCTYPE html>\n' +
