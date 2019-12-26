@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-9-0.2019-12-25: whole-att,
  * version.0-8-0.2019-12-23: entity-link,
  * version.0-7-0.2019-09-06: comments on filMcsDirNam,
  * version.0-6-4.2019-08-09: github,
@@ -111,6 +112,26 @@ s = s +
   '    <a class="clsHide" href="#id' + sNId + 'evg' + moUtil.fDateYMD2() + '"></a></p>\n' +
   '</section>\n' +
   '\n' +
+  '<section id="id' + sNId + 'whlFT">\n' +
+  '  <h1 id="id' + sNId + 'whlFTH1">WHOLE of ' + sNS + '\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'whlFTH1"></a></h1>\n' +
+  '  <p id="id' + sNId + 'whlchn">whole-chain::\n' +
+  '    <br>* \n' +
+  '    <br>...\n';
+if (sDir === 'dirCor') {
+  s = s +
+  '    <br>* <a class="clsPreview" href="filMcsSmpn.last.html#idOverview">Sympan</a>.\n'
+} else {
+  s = s +
+  '    <br>* <a class="clsPreview" href="../dirCor/filMcsSmpn.last.html#idOverview">Sympan</a>.\n'
+}
+s = s +
+  '    <a class="clsHide" href="#id' + sNId + 'whlchn"></a></p>\n' +
+  '  <p id="id' + sNId + 'whlnam">name::\n' +
+  '    <br>* Mcs.' + sNS + '\'whole,\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'whlnam"></a></p>\n' +
+  '</section>\n' +
+  '\n' +
   '<section id="id' + sNId + 'gncFT">\n' +
   '  <h1 id="id' + sNId + 'gncFTH1">GENERIC of ' + sNS + '\n' +
   '    <a class="clsHide" href="#id' + sNId + 'gncFTH1"></a></h1>\n' +
@@ -126,6 +147,9 @@ if (sDir === 'dirCor') {
 }
 s = s +
   '    <a class="clsHide" href="#id' + sNId + 'gncchn"></a></p>\n' +
+  '  <p id="id' + sNId + 'gncnam">name::\n' +
+  '    <br>* Mcs.' + sNS + '\'generic,\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'gncnam"></a></p>\n' +
   '</section>\n' +
   '\n' +
   '<section id="id' + sNId + 'SpcFT">\n' +

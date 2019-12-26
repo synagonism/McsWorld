@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.whole-entity (whole.0-24-0.2019-12-24 draft)</title>
+  <title>Mcs.whole-entity (whole.0-26-0.2019-12-26 draft)</title>
   <meta name="keywords" content="whole-entity, whole, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -198,10 +198,9 @@
     <br>* Mcs.collection,
     <br>* Mcs.whole.collection,
     <br>====== langoKomo:
-    <br>* McsKmo.kolekto!=collection,
     <br>* McsKmo.co-kolekto!=collection,
     <br>====== langoGreek:
-    <br>* McsEll.συλλογή,
+    <br>* McsEll.συλλογή!=collection,
     <a class="clsHide" href="#idWhlClcnnam"></a></p>
 
   <section id="idWhlClcnelt">
@@ -1305,11 +1304,16 @@
   <h4 id="idWhlSysTrinodepthH4">path of tree-node
     <a class="clsHide" href="#idWhlSysTrinodepthH4"></a></h4>
   <p id="idWhlSysTrinodepthdsn">description::
-    <br>· path-of-node[a] is <a class="clsPreview" href="#idWhlSysSqc">the-sequence</a> of nodes and <a class="clsPreview" href="#idWhlSysTrindrn">edges</a> from <a class="clsPreview" href="#idWhlSysTrinodeRoot">root</a> to node[a].
+    <br>· path-of-node[a] is <a class="clsPreview" href="#idWhlSysSqc">the-sequence</a> of nodes and <a class="clsPreview" href="#idWhlSysTrindrn">edges</a> from node[a] to <a class="clsPreview" href="#idWhlSysTrinodeRoot">root</a> or the-opposite.
     <a class="clsHide" href="#idWhlSysTrinodepthdsn"></a></p>
   <p id="idWhlSysTrinodepthnam">name::
+    <br>* Mcs.tree-node'chain,
     <br>* Mcs.tree-node'path,
     <a class="clsHide" href="#idWhlSysTrinodepthnam"></a></p>
+  <p id="idWhlSysTrinodepthSpc">specific::
+    <br>* generic-chain,
+    <br>* whole-chain,
+    <a class="clsHide" href="#idWhlSysTrinodepthSpc"></a></p>
   </section>
 
   <section id="idWhlSysTrinodeSpc">
@@ -1489,6 +1493,7 @@
   <p id="idWhlSysTrinodeLvlBtmnam">name::
     <br>* Mcs.bottom-level--of-systemTree,
     <br>* Mcs.systemTree'bottom-level,
+    <br>* Mcs.tree-level.bottom,
     <a class="clsHide" href="#idWhlSysTrinodeLvlBtmnam"></a></p>
   </section>
   </section>
@@ -1623,15 +1628,15 @@
     <br>[https://en.wikipedia.org/wiki/Taxonomy_(general) {2019-12-24}]
     <a class="clsHide" href="#idWhlSysTriGcscdsn"></a></p>
   <p id="idWhlSysTriGcscnam">name::
-    <br>* Mcs.generic-specific--tree-system!⇒treeGnc,
-    <br>* Mcs.generic-tree!⇒treeGnc,
-    <br>* Mcs.treeGnc,
-    <br>* Mcs.tree-system.generic-specific!⇒treeGnc,
-    <br>* Mcs.taxonomy!⇒treeGnc,
+    <br>* Mcs.generic-specific--tree-system!⇒treeGncspc,
+    <br>* Mcs.generic-specific--tree!⇒treeGncspc,
+    <br>* Mcs.treeGncspc,
+    <br>* Mcs.tree-system.generic-specific!⇒treeGncspc,
+    <br>* Mcs.taxonomy!⇒treeGncspc,
     <a class="clsHide" href="#idWhlSysTriGcscnam"></a></p>
 
   <section id="idWhlSysTriGcsctxn">
-  <h4 id="idWhlSysTriGcsctxnH4">treeGnc.taxon
+  <h4 id="idWhlSysTriGcsctxnH4">treeGncspc'taxon
     <a class="clsHide" href="#idWhlSysTriGcsctxnH4"></a></h4>
   <p id="idWhlSysTriGcsctxndsn">description::
     <br>· taxon is <a class="clsPreview" href="#idWhlSysTrinode">a-node</a> of <a class="clsPreview" href="#idWhlSysTriGcsc">a-generic-tree</a>.
@@ -1639,9 +1644,33 @@
   <p id="idWhlSysTriGcsctxnnam">name::
     <br>* Mcs.taxa!~plural-of-taxon,
     <br>* Mcs.taxon,
-    <br>* Mcs.treeGnc.taxon,
+    <br>* Mcs.treeGncspc'taxon,
     <a class="clsHide" href="#idWhlSysTriGcsctxnnam"></a></p>
   </section
+
+  <section id="idWhlSysTriGcscGcoc">
+  <h4 id="idWhlSysTriGcscGcocH4">treeGncspc.generic-of-concept
+    <a class="clsHide" href="#idWhlSysTriGcscGcocH4"></a></h4>
+  <p id="idWhlSysTriGcscGcocdsn">description::
+    <br>· generic-tree--of-concept is <a class="clsPreview" href="#idWhlSysTriGcsc">a-generic-specific-tree</a> with the-concept on <a class="clsPreview" href="#idWhlSysTrinodeLvlBtm">the-bottom-level</a>.
+    <a class="clsHide" href="#idWhlSysTriGcscGcocdsn"></a></p>
+  <p id="idWhlSysTriGcscGcocnam">name::
+    <br>* Mcs.generic-tree--of-concept,
+    <br>* Mcs.treeGncspc.generic-of-concept,
+    <a class="clsHide" href="#idWhlSysTriGcscGcocnam"></a></p>
+  </section>
+
+  <section id="idWhlSysTriGcscScoc">
+  <h4 id="idWhlSysTriGcscScocH4">treeGncspc.specific-of-concept
+    <a class="clsHide" href="#idWhlSysTriGcscScocH4"></a></h4>
+  <p id="idWhlSysTriGcscScocdsn">description::
+    <br>· specific-tree--of-concept is <a class="clsPreview" href="#idWhlSysTriGcsc">a-generic-specific-tree</a> with the-concept on <a class="clsPreview" href="#idWhlSysTrinodeRoot">the-root-level</a>.
+    <a class="clsHide" href="#idWhlSysTriGcscScocdsn"></a></p>
+  <p id="idWhlSysTriGcscScocnam">name::
+    <br>* Mcs.specific-tree--of-concept,
+    <br>* Mcs.treeGncspc.specific-of-concept,
+    <a class="clsHide" href="#idWhlSysTriGcscScocnam"></a></p>
+  </section>
   </section>
 
   <section id="idWhlSysTriWlpt">
@@ -1654,24 +1683,24 @@
     <br>[https://en.wikipedia.org/wiki/Meronomy {2019-12-24}]
     <a class="clsHide" href="#idWhlSysTriWlptdsn"></a></p>
   <p id="idWhlSysTriWlptnam">name::
-    <br>* Mcs.meronomy!⇒treeWhl,
-    <br>* Mcs.part-whole--tree-system!⇒treeWhl,
-    <br>* Mcs.partonomy!⇒treeWhl,
-    <br>* Mcs.treeWhl,
-    <br>* Mcs.tree-system.whole-part!⇒treeWhl,
-    <br>* Mcs.whole-part--tree-system!⇒treeWhl,
-    <br>* Mcs.whole-tree!⇒treeWhl,
+    <br>* Mcs.meronomy!⇒treeWhlprt,
+    <br>* Mcs.part-whole--tree-system!⇒treeWhlprt,
+    <br>* Mcs.partonomy!⇒treeWhlprt,
+    <br>* Mcs.treeWhlprt,
+    <br>* Mcs.tree-system.whole-part!⇒treeWhlprt,
+    <br>* Mcs.whole-part--tree-system!⇒treeWhlprt,
+    <br>* Mcs.whole-part--tree!⇒treeWhlprt,
     <a class="clsHide" href="#idWhlSysTriWlptnam"></a></p>
 
   <section id="idWhlSysTriWlptmrn">
-  <h4 id="idWhlSysTriWlptmrnH4">treeWhl.meron
+  <h4 id="idWhlSysTriWlptmrnH4">treeWhlprt'meron
     <a class="clsHide" href="#idWhlSysTriWlptmrnH4"></a></h4>
   <p id="idWhlSysTriWlptmrndsn">description::
     <br>· meron is <a class="clsPreview" href="#idWhlSysTrinode">a-node</a> of <a class="clsPreview" href="#idWhlSysTriWlpt">a-whole-tree</a>.
     <a class="clsHide" href="#idWhlSysTriWlptmrndsn"></a></p>
   <p id="idWhlSysTriWlptmrnnam">name::
     <br>* Mcs.meron,
-    <br>* Mcs.treeWhl'meron,
+    <br>* Mcs.treeWhlprt'meron,
     <a class="clsHide" href="#idWhlSysTriWlptmrnnam"></a></p>
   </section>
   </section>
@@ -1732,7 +1761,7 @@
   <h2 id="idWhlSysDnmcNH2">system.dynamicNo
     <a class="clsHide" href="#idWhlSysDnmcNH2"></a></h2>
   <p id="idWhlSysDnmcNdsn">description::
-    <br>· static-system is <a class="clsPreview" href="#idWhlSys">a-system</a> without <a class="clsPreview" href="filMcsDng.last.html#idOverview">doings</a>.
+    <br>· static-system is <a class="clsPreview" href="#idWhlSys">a-system</a> without <a class="clsPreview" href="filMcsDng.last.html#idDngFctg">functings</a>.
     <a class="clsHide" href="#idWhlSysDnmcNdsn"></a></p>
   <p id="idWhlSysDnmcNnam">name::
     <br>* Mcs.dynamicNo-system,
