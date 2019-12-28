@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-10-0.2019-12-28: generic-whole-trees,
  * version.0-9-0.2019-12-25: whole-att,
  * version.0-8-0.2019-12-23: entity-link,
  * version.0-7-0.2019-09-06: comments on filMcsDirNam,
@@ -35,16 +36,16 @@ var
   bCounter = true,
   bDisqus = false,
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirStn',
-  sDIR = 'DirStn',
+  sDir = 'dirNtr',
+  sDIR = 'DirNtr',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'human-society',
+  sN = 'Sympan\'Nature',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'socHmn',
+  sNS = 'Nature',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'SocHmn',
+  sNFil = 'Ntr',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Hnsc';
+  sNId = 'Ntr';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -112,10 +113,13 @@ s = s +
   '    <a class="clsHide" href="#id' + sNId + 'evg' + moUtil.fDateYMD2() + '"></a></p>\n' +
   '</section>\n' +
   '\n' +
-  '<section id="id' + sNId + 'whlFT">\n' +
-  '  <h1 id="id' + sNId + 'whlFTH1">WHOLE of ' + sNS + '\n' +
+  '<section id="id' + sNId + 'wptFT">\n' +
+  '  <h1 id="id' + sNId + 'wptFTH1">WHOLE-PART-TREE of ' + sNS + '\n' +
   '    <a class="clsHide" href="#id' + sNId + 'whlFTH1"></a></h1>\n' +
-  '  <p id="id' + sNId + 'whlchn">whole-chain::\n' +
+  '  <p id="id' + sNId + 'wptnam">name::\n' +
+  '    <br>* Mcs.' + sNS + '\'whole-part-tree,\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'wptnam"></a></p>\n' +
+  '  <p id="id' + sNId + 'wptchn">whole-chain::\n' +
   '    <br>* \n' +
   '    <br>...\n';
 if (sDir === 'dirCor') {
@@ -126,16 +130,19 @@ if (sDir === 'dirCor') {
   '    <br>* <a class="clsPreview" href="../dirCor/filMcsSmpn.last.html#idOverview">Sympan</a>.\n'
 }
 s = s +
-  '    <a class="clsHide" href="#id' + sNId + 'whlchn"></a></p>\n' +
-  '  <p id="id' + sNId + 'whlnam">name::\n' +
-  '    <br>* Mcs.' + sNS + '\'whole,\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'whlnam"></a></p>\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'wptchn"></a></p>\n' +
+  '  <p id="id' + sNId + 'wptprt">part::\n' +
+  '    <br>*\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'wptprt"></a></p>\n' +
   '</section>\n' +
   '\n' +
-  '<section id="id' + sNId + 'gncFT">\n' +
-  '  <h1 id="id' + sNId + 'gncFTH1">GENERIC of ' + sNS + '\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'gncFTH1"></a></h1>\n' +
-  '  <p id="id' + sNId + 'gncchn">generic-chain::\n' +
+  '<section id="id' + sNId + 'gstFT">\n' +
+  '  <h1 id="id' + sNId + 'gstFTH1">GENERIC-SPECIFIC-TREE of ' + sNS + '\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'gstFTH1"></a></h1>\n' +
+  '  <p id="id' + sNId + 'gstnam">name::\n' +
+  '    <br>* Mcs.' + sNS + '\'generic-specific-tree,\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'gstnam"></a></p>\n' +
+  '  <p id="id' + sNId + 'gstchn">generic-chain::\n' +
   '    <br>* \n' +
   '    <br>...\n';
 if (sDir === 'dirCor') {
@@ -146,21 +153,18 @@ if (sDir === 'dirCor') {
   '    <br>* <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">entity</a>.\n'
 }
 s = s +
-  '    <a class="clsHide" href="#id' + sNId + 'gncchn"></a></p>\n' +
-  '  <p id="id' + sNId + 'gncnam">name::\n' +
-  '    <br>* Mcs.' + sNS + '\'generic,\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'gncnam"></a></p>\n' +
-  '</section>\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'gstchn"></a></p>\n' +
   '\n' +
-  '<section id="id' + sNId + 'SpcFT">\n' +
-  '  <h1 id="id' + sNId + 'SpcFTH1">' + sNS + '.SPECIFIC\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'SpcFTH1"></a></h1>\n' +
+  '  <section id="id' + sNId + 'SpcFT">\n' +
+  '  <h2 id="id' + sNId + 'SpcFTH2">' + sNS + '.SPECIFIC\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'SpcFTH2"></a></h2>\n' +
   '  <p id="id' + sNId + 'Spcnam">name::\n' +
   '    <br>* Mcs.' + sNS + '.specific,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'Spcnam"></a></p>\n' +
   '  <p id="id' + sNId + 'SpcP1">specific::\n' +
   '    <br>\n' +
   '    <a class="clsHide" href="#id' + sNId + 'SpcP1"></a></p>\n' +
+  '  </section>\n' +
   '</section>\n' +
   '\n' +
   '<section id="idMeta">\n' +
