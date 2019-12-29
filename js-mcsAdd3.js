@@ -39,13 +39,13 @@ var
   sDir = 'dirNtr',
   sDIR = 'DirNtr',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'Sympan\'Nature',
+  sN = 'mixture.alloy',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'Nature',
+  sNS = 'alloy',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'Ntr',
+  sNFil = 'MxrAly',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Ntr';
+  sNId = 'Aly';
 
 s =
   '<!DOCTYPE html>\n' +

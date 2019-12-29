@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.generic-entity (generic.0-22-0.2019-11-22 draft)</title>
+  <title>Mcs.generic-entity (generic.0-23-0.2019-12-29 draft)</title>
   <meta name="keywords" content="generic-entity, generic, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -37,12 +37,14 @@
     <br>* Mcs.instanceNo-entity!⇒generic,
     <br>* Mcs.the-singular!⇒generic, [The camel is a beast of burden]
     <br>* Mcs.plural!⇒generic, [camels are beasts of burden]
+    <br>* Mcs.quantity.abstractNo!⇒generic,
     <br>====== langoKomo:
-    <br>* McsKmo.ko!=entity.generic,
+    <br>* McsKmo.ko!=generic,
     <br>====== langoGreek:
-    <br>* McsEll.γενική-έννοια,
-    <br>* McsEll.γενική-οντότητα,
-    <br>* McsEll.μέγεθος,
+    <br>* McsEll.γενική-έννοια!=generic,
+    <br>* McsEll.γενική-οντότητα!=generic,
+    <br>* McsEll.μέγεθος!=generic,
+    <br>* McsEll.ποσότητα-μή-αφηρημένη!=generic,
     <a class="clsHide" href="#idName"></a></p>
 </section>
 
@@ -427,11 +429,13 @@
     <br>"In mathematics, physics, and engineering, a Euclidean vector (sometimes called a geometric[1] or spatial vector,[2] or—as here—simply a vector) is a geometric object that has magnitude (or length) and direction. Vectors can be added to other vectors according to vector algebra. A Euclidean vector is frequently represented by a line segment with a definite direction, or graphically as an arrow, connecting an initial point A with a terminal point B,[3] and denoted by &#11106;AB."
     <a class="clsHide" href="#idGnrcVctrdsn"></a></p>
   <p id="idGnrcVctrnam">name::
-    <br>* Mcs.generic.vector,
-    <br>* Mcs.vector-generic,
+    <br>* Mcs.genericVector,
+    <br>* Mcs.generic.vector!⇒genericVector,
+    <br>* Mcs.vector-generic!⇒genericVector,
+    <br>* Mcs.vector-quantity!⇒genericVector,
     <br>====== langoGreek:
-    <br>* McsEll.ανυσματικό-μέγεθος,
-    <br>* McsEll.διανυσματικό-μέγεθος,
+    <br>* McsEll.ανυσματικό-μέγεθος!=genericVector,
+    <br>* McsEll.διανυσματικό-μέγεθος!=genericVector,
     <a class="clsHide" href="#idGnrcVctrnam"></a></p>
 </section>
 
@@ -444,10 +448,13 @@
     <br>[https://en.wikipedia.org/wiki/Scalar_(physics) {2019-10-26}]
     <a class="clsHide" href="#idGnrcVctrNdsn"></a></p>
   <p id="idGnrcVctrNnam">name::
-    <br>* Mcs.generic.vectorNo,
-    <br>* Mcs.scalar-generic,
+    <br>* Mcs.genericVectorNo,
+    <br>* Mcs.generic.vectorNo!⇒genericVectorNo,
+    <br>* Mcs.scalar-generic!⇒genericVectorNo,
+    <br>* Mcs.scalar-quantity!⇒genericVectorNo,
+    <br>* Mcs.vectorNo-quantity!⇒genericVectorNo,
     <br>====== langoGreek:
-    <br>* McsEll.μονόμετρο-μέγεθος,
+    <br>* McsEll.μονόμετρο-μέγεθος!=genericVectorNo,
     <a class="clsHide" href="#idGnrcVctrNnam"></a></p>
 </section>
 
