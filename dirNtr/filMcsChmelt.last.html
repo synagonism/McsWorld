@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.chemical-element (Chmelt.0-3-0.2020-01-01 draft)</title>
+  <title>Mcs.chemical-element (Chmelt.0-4-0.2020-01-04 draft)</title>
   <meta name="keywords" content="chemical-element, Chmelt, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -22,7 +22,7 @@
   <h1 id="idOverviewH1">overview of Chmelt
     <a class="clsHide" href="#idOverviewH1"></a></h1>
   <p id="idDescription">description::
-    <br>· chemical-element is <a class="clsPreview" href="filMcsBdyMtr.last.html#idBdMtrPur">the-chemical-substance</a> which is-composed of same atoms.
+    <br>· chemical-element is <a class="clsPreview" href="filMcsBdyMtr.last.html#idBdMtrPur">A-CHEMICAL-SUBSTANCE</a> which is-composed of same <a class="clsPreview" href="filMcsAtom.last.html#idOverview">atoms</a>.
     <br>===
     <br>"Elements, Chemical, substances that cannot be decomposed, or broken into more elementary substances, by ordinary chemical means. Elements were at one time believed to be the fundamental substances but are now known to consist of a number of different elementary particles: electrons, protons, and neutrons."
     <br>["Elements, Chemical," Microsoft(R) Encarta(R) 97 Encyclopedia. (c) 1993-1996 Microsoft Corporation. All rights reserved.]
@@ -33,6 +33,7 @@
     <br>* Mcs.Chmelt,
     <br>* Mcs.Chmelt'(chemical-element)!⇒Chmelt,
     <br>* Mcs.chemical-element!⇒Chmelt,
+    <br>* Mcs.substance-chemical-element!⇒Chmelt,
     <br>====== langoKomo:
     <br>* McsKmo.kemo-fo!=Chmelt,
     <br>====== langoGreek:
@@ -58,8 +59,9 @@
     <br>"Τα μόρια των χημικών στοιχείων δεν αποτελούνται πάντοτε από τον ίδιο αριθμό ατόμων. Έτσι υπάρχουν στοιχεία μονοατομικά, όπως είναι τα ευγενή αέρια, π.χ. ήλιο (He), στοιχεία διατομικά, όπως είναι το οξυγόνο (O2), το υδρογόνο (Η2), ή ακόμα και τριατομικά, όπως είναι το όζον (O3)."
     <br>[http://digitalschool.minedu.gov.gr/modules/ebook/show.php/DSGL111/394/2612,10241/]
     <br>===
-    <br>"The concept of allotropy was originally proposed in 1841 by the Swedish scientist Baron Jöns Jakob Berzelius (1779–1848).[2] The term is derived from Greek άλλοτροπἱα (allotropia), meaning 'variability, changeableness'.[3] After the acceptance of Avogadro's hypothesis in 1860, it was understood that elements could exist as polyatomic molecules, and two allotropes of oxygen were recognized as O2 and O3.[2] In the early 20th century, it was recognized that other cases such as carbon were due to differences in crystal structure."
-    <br>[https://en.wikipedia.org/wiki/Allotropy]
+    <br>"The concept of allotropy was originally proposed in 1841 by the Swedish scientist Baron Jöns Jakob Berzelius (1779–1848).[2] The term is derived from Greek άλλοτροπἱα (allotropia), meaning 'variability, changeableness'.[3] After the acceptance of Avogadro's hypothesis in 1860, it was understood that elements could exist as polyatomic molecules, and two allotropes of oxygen were recognized as O<sub>2</sub> and O<sub>3</sub>.[2] In the early 20th century, it was recognized that other cases such as carbon were due to differences in crystal structure.
+    <br>By 1912, Ostwald noted that the allotropy of elements is just a special case of the phenomenon of polymorphism known for compounds, and proposed that the terms allotrope and allotropy be abandoned and replaced by polymorph and polymorphism.[2] Although many other chemists have repeated this advice, IUPAC and most chemistry texts still favour the usage of allotrope and allotropy for elements only.[4]"
+    <br>[https://en.wikipedia.org/wiki/Allotropy {2020-01-02}]
     <a class="clsHide" href="#idCletmlclFTdsn"></a></p>
   <p id="idCletmlclFTnam">name::
     <br>* Mcs.Chmelt'molecule,
@@ -91,14 +93,8 @@
 </section>
 
 <section id="idCletatmFT">
-  <h1 id="idCletatmFTH1">atom of Chmelt
+  <h1 id="idCletatmFTH1">atom (<a class="clsPreview" href="filMcsChmatm.last.html#idOverview">link</a>) of Chmelt
     <a class="clsHide" href="#idCletatmFTH1"></a></h1>
-  <p id="idCletatmFTdsn">description::
-    <br>·
-    <a class="clsHide" href="#idCletatmFTdsn"></a></p>
-  <p id="idCletatmFTnam">name::
-    <br>* Mcs.Chmelt'atom,
-    <a class="clsHide" href="#idCletatmFTnam"></a></p>
 </section>
 
 <section id="idCletmsnrT">
@@ -175,6 +171,18 @@
   <p id="idCletsomFTnam">name::
     <br>* Mcs.Chmelt'state-of-matter,
     <a class="clsHide" href="#idCletsomFTnam"></a></p>
+</section>
+
+<section id="idCletmtltT">
+  <h1 id="idCletmtltTH1">metalicity of Chmelt
+    <a class="clsHide" href="#idCletmtltTH1"></a></h1>
+  <p id="idCletmtltTdsn">description::
+    <br>"The chemical elements can be broadly divided into metals, metalloids and nonmetals according to their shared physical and chemical properties. All metals have a shiny appearance (at least when freshly polished); are good conductors of heat and electricity; form alloys with other metals; and have at least one basic oxide. Metalloids are metallic-looking brittle solids that are either semiconductors or exist in semiconducting forms, and have amphoteric or weakly acidic oxides. Typical nonmetals have a dull, coloured or colourless appearance; are brittle when solid; are poor conductors of heat and electricity; and have acidic oxides. Most or some elements in each category share a range of other properties; a few elements have properties that are either anomalous given their category, or otherwise extraordinary."
+    <br>[https://en.wikipedia.org/wiki/Properties_of_metals,_metalloids_and_nonmetals {2020-01-03}]
+    <a class="clsHide" href="#idCletmtltTdsn"></a></p>
+  <p id="idCletmtltTnam">name::
+    <br>* Mcs.Chmelt'metalicity,
+    <a class="clsHide" href="#idCletmtltTnam"></a></p>
 </section>
 
 <section id="idCletusgFT">
@@ -285,7 +293,7 @@
   </section>
 
   <section id="idCletScdnPctl">
-  <h2 id="idCletScdnPctlH2">Chmelt.specifics-division.periodic-table
+  <h2 id="idCletScdnPctlH2">Chmelt.specs-div.periodic-table
     <a class="clsHide" href="#idCletScdnPctlH2"></a></h2>
   <p id="idCletScdnPctldsn">description::
     <br>"Periodic Table, a chart of all the chemical elements arranged in order of increasing atomic number, and in a manner that reflects the structure of the elements. The elements are arranged in seven horizontal rows, called the periods, and in 18 vertical columns, called the groups. The first period, containing two elements, hydrogen and helium, and the next two periods, each containing eight elements, are called the short periods. The remaining periods, called the long periods, contain 18 elements, as in periods 4 and 5, or 32 elements, as in period 6. The long period 7 includes the actinide series, which has been filled in by the synthesis of radioactive nuclei beyond element 92, uranium."
@@ -309,8 +317,9 @@
     <br>[https://en.wikipedia.org/wiki/Period_(periodic_table) {2020-01-02}]
     <a class="clsHide" href="#idCletScdnPctlprddsn"></a></p>
   <p id="idCletScdnPctlprdnam">name::
-    <br>* Mcs.Chmelt.period,
-    <br>* Mcs.periodic-table'period,
+    <br>* Mcs.ChmeltPeriod,
+    <br>* Mcs.Chmelt.period!⇒ChmeltPeriod,
+    <br>* Mcs.periodic-table'period!⇒ChmeltPeriod,
     <a class="clsHide" href="#idCletScdnPctlprdnam"></a></p>
   </section>
 
@@ -324,8 +333,13 @@
     <br>[https://en.wikipedia.org/wiki/Group_(periodic_table) {2020-01-02}]
     <a class="clsHide" href="#idCletScdnPctlgrpdsn"></a></p>
   <p id="idCletScdnPctlgrpnam">name::
-    <br>* Mcs.Chmelt.group,
-    <br>* Mcs.periodic-table'group,
+    <br>* Mcs.ChmeltGroup,
+    <br>* Mcs.Chmelt.group!⇒ChmeltGroup,
+    <br>* Mcs.periodic-table'family!⇒ChmeltGroup,
+    <br>* Mcs.periodic-table'group!⇒ChmeltGroup,
+    <br>====== langoGreek:
+    <br>* McsEll.ομάδα_περιοδικου_πίνακα!⇒ChmeltGroup,
+    <br>* McsEll.στήλη_περιοδικου_πίνακα!⇒ChmeltGroup,
     <a class="clsHide" href="#idCletScdnPctlgrpnam"></a></p>
   </section>
 
@@ -348,12 +362,468 @@
     <a class="clsHide" href="#idCletScdnPctlrscH3"></a></h3>
   <p id="idCletScdnPctlrscdsn">description::
     <br>* http://www.ptable.com/?lang=el,
-    <br>* http://el.wikipedia.org/wiki/Ðåñéïäéêüò_ðßíáêáò,
+    <br>* http://el.wikipedia.org/wiki/Περιοδικός_πίνακας,
     <a class="clsHide" href="#idCletScdnPctlrscdsn"></a></p>
   <p id="idCletScdnPctlrscnam">name::
     <br>* Mcs.periodic-table'resource,
     <a class="clsHide" href="#idCletScdnPctlrscnam"></a></p>
   </section>
+
+  <section id="idCletScdnPctlevg">
+  <h3 id="idCletScdnPctlevgH3">evoluting of periodic-table
+    <a class="clsHide" href="#idCletScdnPctlevgH3"></a></h3>
+  <p id="idCletScdnPctl1913">{time.1913}::
+    <br>"To 1913 ο Moseley έδωσε το σημερινό τρόπο ταξινόμησης των στοιχείων στον περιοδικό πίνακα κατά σειρά αυξανόμενου ατομικού αριθμού (Ζ). Ο Moseley έγραψε: «Υπάρχει στο άτομο μία θεμελιώδης ποσότητα που αυξάνεται κανονικά από στοιχείο σε στοιχείο. Η ποσότητα αυτή είναι το θετικό ηλεκτρικό φορτίο. Ο αριθμός των θετικών φορτίων του πυρήνα είναι ίδιος με τον αύξοντα αριθμό που έχει το στοιχείο στον περιοδικό πίνακα.» Έτσι διαμορφώθηκε ο σύγχρονος περιοδικός νόμος:
+    <br>Οι ιδιότητες των στοιχείων είναι περιοδικές συναρτήσεις του ατομικού αριθμού."
+    <br>[http://digitalschool.minedu.gov.gr/modules/ebook/show.php/DSGL111/394/2612,10245/]
+    <a class="clsHide" href="#idCletScdnPctl1913"></a></p>
+  <p id="idCletScdnPctl20151230">{time.2015-12-30}::
+    <br>=== The periodic table gets 4 new elements
+    <br>Written by Akshat Rathi, Reporter, Quartz
+    <br>Published Tuesday 5 January 2016
+    <br>This article is published in collaboration with Quartz.
+    <br>
+    <br>If science has an iconic image, it is that of the periodic table of elements.
+    <br>
+    <br>To a keen eye, however, there were gaps. Large empty slots in the seventh row where, although scientists had predicted the existence of an element, they hadn’t found one.
+    <br>160105-periodic table Quartz
+    <br>On Dec. 30, those holes were filled by the official body that governs the rules of naming chemicals and defining its measurements. The International Union of Pure and Applied Chemistry (IUPAC) added four new elements (number 113, 115, 117, and 118) and completed the seventh row in the periodic table.
+    <br>The RIKEN institute in Japan was credited with the discovery of element 113, and thus received naming rights. It is the first time Asian scientists will get to name an element. The remaining elements were discovered by Russian and American scientists.
+    <br>These chemical elements—which find their unique place in the table depending on the number protons in their nuclei—are fundamental building blocks of the universe. So unless future humans change the names of elements, naming one is creating history. Existing elements have been named after mythological concepts (cerium), minerals (lithium), places (americium), or scientists (einsteinium).
+    <br>Although the four new elements are credited as having been “discovered,” on Earth they had to be created because the conditions under which these elements exist are extreme. To do this, scientists slam already existing elements into each other at near speeds of light, and end up with a handful of atoms of a new element that exist for only fractions of a second. In fact, all elements from 95 to 118 are synthetic elements that once formed quickly decay into simpler elements.
+    <br>Publication does not imply endorsement of views by the World Economic Forum.
+    <br>To keep up with the Agenda subscribe to our weekly newsletter.
+    <br>
+    <br>Author: Akshat Rathi is a reporter for Quartz in London.
+    <br>
+    <br>Image: A sign showing titanium on the periodic table of elements is seen at the Nobel Biocare manufacturing facility in Yorba Linda, California. REUTERS/Mike Blake.
+    <br>[http://www.weforum.org/agenda/2016/01/the-periodic-table-gets-4-new-elements/]
+    <a class="clsHide" href="#idCletScdnPctl20151230"></a></p>
+  <p id="idCletScdnPctlevgnam">name::
+    <br>* Mcs.periodic-table'evoluting,
+    <a class="clsHide" href="#idCletScdnPctlevgnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCletScdnName">
+  <h2 id="idCletScdnNameH2">Chmelt.specs-div.name
+    <a class="clsHide" href="#idCletScdnNameH2"></a></h2>
+  <p id="idCletScdnNamedsn">description::
+    <br>* <a class="clsPreview" href="#idCletActinium">Actinium-Ac89</a>,
+    <br>* <a class="clsPreview" href="#idCletAluminium">Aluminium-Al13</a>,
+    <br>* <a class="clsPreview" href="#idCletAmericium">Americium-Am95</a>,
+    <br>* <a class="clsPreview" href="#idCletAntimony">Antimony-Sb51</a>,
+    <br>* <a class="clsPreview" href="#idCletArgon">Argon-Ar18</a>,
+    <br>* <a class="clsPreview" href="#idCletArsenic">Arsenic-As33</a>,
+    <br>* <a class="clsPreview" href="#idCletAstatine">Astatine-At85</a>,
+    <br>* <a class="clsPreview" href="#idCletBarium">Barium-Ba56</a>,
+    <br>* <a class="clsPreview" href="#idCletBerkelium">Berkelium-Bk97</a>,
+    <br>* <a class="clsPreview" href="#idCletBeryllium">Beryllium-Be4</a>,
+    <br>* <a class="clsPreview" href="#idCletBismuth">Bismuth-Bi83</a>,
+    <br>* <a class="clsPreview" href="#idCletBohrium">Bohrium-Bh107</a>,
+    <br>* <a class="clsPreview" href="#idCletBoron">Boron-B5</a>,
+    <br>* <a class="clsPreview" href="#idCletBromine">Bromine-Br35</a>,
+    <br>* <a class="clsPreview" href="#idCletCadmium">Cadmium-Cd48</a>,
+    <br>* <a class="clsPreview" href="#idCletCaesium">Caesium-Cs55</a>,
+    <br>* <a class="clsPreview" href="#idCletCalcium">Calcium-Ca20</a>,
+    <br>* <a class="clsPreview" href="#idCletCalifornium">Californium-Cf98</a>,
+    <br>* <a class="clsPreview" href="#idCletCarbon">Carbon-C6</a>,
+    <br>* <a class="clsPreview" href="#idCletCerium">Cerium-Ce58</a>,
+    <br>* <a class="clsPreview" href="#idCletCesium">Cesium-Cs55</a>,
+    <br>* <a class="clsPreview" href="#idCletChlorine">Chlorine-Cl17</a>,
+    <br>* <a class="clsPreview" href="#idCletChromium">Chromium-Cr24</a>,
+    <br>* <a class="clsPreview" href="#idCletCobalt">Cobalt-Co27</a>,
+    <br>* <a class="clsPreview" href="#idCletCopper">Copper-Cu29</a>,
+    <br>* <a class="clsPreview" href="#idCletCurium">Curium-Cm96</a>,
+    <br>* <a class="clsPreview" href="#idCletDarmstadtium">Darmstadtium-Ds110</a>,
+    <br>* <a class="clsPreview" href="#idCletDubnium">Dubnium-Db105</a>,
+    <br>* <a class="clsPreview" href="#idCletDysprosium">Dysprosium-Dy66</a>,
+    <br>* <a class="clsPreview" href="#idCletEinsteinium">Einsteinium-Es99</a>,
+    <br>* <a class="clsPreview" href="#idCletErbium">Erbium-Er68</a>,
+    <br>* <a class="clsPreview" href="#idCletEuropium">Europium-Eu63</a>,
+    <br>* <a class="clsPreview" href="#idCletFermium">Fermium-Fm100</a>,
+    <br>* <a class="clsPreview" href="#idCletFluorine">Fluorine-F9</a>,
+    <br>* <a class="clsPreview" href="#idCletFrancium">Francium-Fr87</a>,
+    <br>* <a class="clsPreview" href="#idCletGadolinium">Gadolinium-Gd64</a>,
+    <br>* <a class="clsPreview" href="#idCletGallium">Gallium-Ga31</a>,
+    <br>* <a class="clsPreview" href="#idCletGermanium">Germanium-Ge32</a>,
+    <br>* <a class="clsPreview" href="#idCletGold">Gold-Au79</a>,
+    <br>* <a class="clsPreview" href="#idCletHafnium">Hafnium-Hf72</a>,
+    <br>* <a class="clsPreview" href="#idCletHassium">Hassium-Hs108</a>,
+    <br>* <a class="clsPreview" href="#idCletHelium">Helium-He2</a>,
+    <br>* <a class="clsPreview" href="#idCletHolmium">Holmium-Ho67</a>,
+    <br>* <a class="clsPreview" href="#idCletHydrogen">Hydrogen-H1</a>,
+    <br>* <a class="clsPreview" href="#idCletIndium">Indium-In49</a>,
+    <br>* <a class="clsPreview" href="#idCletIodine">Iodine-I53</a>,
+    <br>* <a class="clsPreview" href="#idCletIridium">Iridium-Ir77</a>,
+    <br>* <a class="clsPreview" href="#idCletIron">Iron-Fe26</a>,
+    <br>* <a class="clsPreview" href="#idCletKrypton">Krypton-Kr36</a>,
+    <br>* <a class="clsPreview" href="#idCletLanthanum">Lanthanum-La57</a>,
+    <br>* <a class="clsPreview" href="#idCletLawrencium">Lawrencium-Lr103</a>,
+    <br>* <a class="clsPreview" href="#idCletLead">Lead-Pb82</a>,
+    <br>* <a class="clsPreview" href="#idCletLithium">Lithium-Li3</a>,
+    <br>* <a class="clsPreview" href="#idCletLutetium">Lutetium-Lu71</a>,
+    <br>* <a class="clsPreview" href="#idCletMagnesium">Magnesium-Mg12</a>,
+    <br>* <a class="clsPreview" href="#idCletManganese">Manganese-Mn25</a>,
+    <br>* <a class="clsPreview" href="#idCletMeitnerium">Meitnerium-Mt109</a>,
+    <br>* <a class="clsPreview" href="#idCletMendelevium">Mendelevium-Md101</a>,
+    <br>* <a class="clsPreview" href="#idCletMercury">Mercury-Hg80</a>,
+    <br>* <a class="clsPreview" href="#idCletMolybdenum">Molybdenum-Mo42</a>,
+    <br>* <a class="clsPreview" href="#idCletNeodymium">Neodymium-Nd60</a>,
+    <br>* <a class="clsPreview" href="#idCletNeon">Neon-Ne10</a>,
+    <br>* <a class="clsPreview" href="#idCletNeptunium">Neptunium-Np93</a>,
+    <br>* <a class="clsPreview" href="#idCletNickel">Nickel-Ni28</a>,
+    <br>* <a class="clsPreview" href="#idCletNiobium">Niobium-Nb41</a>,
+    <br>* <a class="clsPreview" href="#idCletNitrogen">Nitrogen-N7</a>,
+    <br>* <a class="clsPreview" href="#idCletNobelium">Nobelium-No102</a>,
+    <br>* <a class="clsPreview" href="#idCletOsmium">Osmium-Os76</a>,
+    <br>* <a class="clsPreview" href="#idCletOxygen">Oxygen-O8</a>,
+    <br>* <a class="clsPreview" href="#idCletPalladium">Palladium-Pd46</a>,
+    <br>* <a class="clsPreview" href="#idCletPhosphorus">Phosphorus-P15</a>,
+    <br>* <a class="clsPreview" href="#idCletPlatinum">Platinum-Pt78</a>,
+    <br>* <a class="clsPreview" href="#idCletPlutonium">Plutonium-Pu94</a>,
+    <br>* <a class="clsPreview" href="#idCletPolonium">Polonium-Po84</a>,
+    <br>* <a class="clsPreview" href="#idCletPotassium">Potassium-K19</a>,
+    <br>* <a class="clsPreview" href="#idCletPraseodymium">Praseodymium-Pr59</a>,
+    <br>* <a class="clsPreview" href="#idCletPromethium">Promethium-Pm61</a>,
+    <br>* <a class="clsPreview" href="#idCletProtactinium">Protactinium-Pa91</a>,
+    <br>* <a class="clsPreview" href="#idCletRadium">Radium-Ra88</a>,
+    <br>* <a class="clsPreview" href="#idCletRadon">Radon-Rn86</a>,
+    <br>* <a class="clsPreview" href="#idCletRhenium">Rhenium-Re75</a>,
+    <br>* <a class="clsPreview" href="#idCletRhodium">Rhodium-Rh45</a>,
+    <br>* <a class="clsPreview" href="#idCletRubidium">Rubidium-Rb37</a>,
+    <br>* <a class="clsPreview" href="#idCletRuthenium">Ruthenium-Ru44</a>,
+    <br>* <a class="clsPreview" href="#idCletRutherfordium">Rutherfordium-Rf104</a>,
+    <br>* <a class="clsPreview" href="#idCletSamarium">Samarium-Sm62</a>,
+    <br>* <a class="clsPreview" href="#idCletScandium">Scandium-Sc21</a>,
+    <br>* <a class="clsPreview" href="#idCletSeaborgium">Seaborgium-Sg106</a>,
+    <br>* <a class="clsPreview" href="#idCletSelenium">Selenium-Se34</a>,
+    <br>* <a class="clsPreview" href="#idCletSilicon">Silicon-Si14</a>,
+    <br>* <a class="clsPreview" href="#idCletSilver">Silver-Ag47</a>,
+    <br>* <a class="clsPreview" href="#idCletSodium">Sodium-Na11</a>,
+    <br>* <a class="clsPreview" href="#idCletStrontium">Strontium-Sr38</a>,
+    <br>* <a class="clsPreview" href="#idCletSulfur">Sulfur-S16</a>,
+    <br>* <a class="clsPreview" href="#idCletTantalum">Tantalum-Ta73</a>,
+    <br>* <a class="clsPreview" href="#idCletTechnetium">Technetium-Tc43</a>,
+    <br>* <a class="clsPreview" href="#idCletTellurium">Tellurium-Te52</a>,
+    <br>* <a class="clsPreview" href="#idCletTerbium">Terbium-Tb65</a>,
+    <br>* <a class="clsPreview" href="#idCletThallium">Thallium-Tl81</a>,
+    <br>* <a class="clsPreview" href="#idCletThorium">Thorium-Th90</a>,
+    <br>* <a class="clsPreview" href="#idCletThulium">Thulium-Tm69</a>,
+    <br>* <a class="clsPreview" href="#idCletTin">Tin-Sn50</a>,
+    <br>* <a class="clsPreview" href="#idCletTitanium">Titanium-Ti22</a>,
+    <br>* <a class="clsPreview" href="#idCletTungsten">Tungsten-W74</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunbium">Ununbium-Uub112</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunhexium">Ununhexium-Uuh116</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunoctium">Ununoctium-Uuo118</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunpentium">Ununpentium-Uup115</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunquadium">Ununquadium-Uuq114</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunseptium">Ununseptium-Uus117</a>,
+    <br>* <a class="clsPreview" href="#idCletUnuntrium">Ununtrium-Uut113</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunium">Ununium-Uuu111</a>,
+    <br>* <a class="clsPreview" href="#idCletUranium">Uranium-U92</a>,
+    <br>* <a class="clsPreview" href="#idCletVanadium">Vanadium-V23</a>,
+    <br>* <a class="clsPreview" href="#idCletXenon">Xenon-Xe54</a>,
+    <br>* <a class="clsPreview" href="#idCletYtterbium">Ytterbium-Yb70</a>,
+    <br>* <a class="clsPreview" href="#idCletYttrium">Yttrium-Y39</a>,
+    <br>* <a class="clsPreview" href="#idCletZinc">Zinc-Zn30</a>,
+    <br>* <a class="clsPreview" href="#idCletZirconium">Zirconium-Zr40</a>,
+    <a class="clsHide" href="#idCletScdnNamedsn"></a></p>
+  <p id="idCletScdnNamenam">name::
+    <br>* Mcs.Chmelt.specifics-division.name,
+    <a class="clsHide" href="#idCletScdnNamenam"></a></p>
+  </section>
+
+  <section id="idCletScdnSbl">
+  <h2 id="idCletScdnSblH2">Chmelt.specs-div.symbol
+    <a class="clsHide" href="#idCletScdnSblH2"></a></h2>
+  <p id="idCletScdnSbldsn">description::
+    <br>* <a class="clsPreview" href="#idCletActinium">Ac89-Actinium</a>,
+    <br>* <a class="clsPreview" href="#idCletSilver">Ag47-Silver</a>,
+    <br>* <a class="clsPreview" href="#idCletAluminium">Al13-Aluminium</a>,
+    <br>* <a class="clsPreview" href="#idCletAmericium">Am95-Americium</a>,
+    <br>* <a class="clsPreview" href="#idCletArgon">Ar18-Argon</a>,
+    <br>* <a class="clsPreview" href="#idCletArsenic">As33-Arsenic</a>,
+    <br>* <a class="clsPreview" href="#idCletAstatine">At85-Astatine</a>,
+    <br>* <a class="clsPreview" href="#idCletGold">Au79-Gold</a>,
+    <br>* <a class="clsPreview" href="#idCletBoron">B5-Boron</a>,
+    <br>* <a class="clsPreview" href="#idCletBarium">Ba56-Barium</a>,
+    <br>* <a class="clsPreview" href="#idCletBeryllium">Be4-Beryllium</a>,
+    <br>* <a class="clsPreview" href="#idCletBohrium">Bh107-Bohrium</a>,
+    <br>* <a class="clsPreview" href="#idCletBismuth">Bi83-Bismuth</a>,
+    <br>* <a class="clsPreview" href="#idCletBerkelium">Bk97-Berkelium</a>,
+    <br>* <a class="clsPreview" href="#idCletBromine">Br35-Bromine</a>,
+    <br>* <a class="clsPreview" href="#idCletCarbon">C6-Carbon</a>,
+    <br>* <a class="clsPreview" href="#idCletCalcium">Ca20-Calcium</a>,
+    <br>* <a class="clsPreview" href="#idCletCadmium">Cd48-Cadmium</a>,
+    <br>* <a class="clsPreview" href="#idCletCerium">Ce58-Cerium</a>,
+    <br>* <a class="clsPreview" href="#idCletCalifornium">Cf98-Californium</a>,
+    <br>* <a class="clsPreview" href="#idCletChlorine">Cl17-Chlorine</a>,
+    <br>* <a class="clsPreview" href="#idCletCurium">Cm96-Curium</a>,
+    <br>* <a class="clsPreview" href="#idCletCobalt">Co27-Cobalt</a>,
+    <br>* <a class="clsPreview" href="#idCletChromium">Cr24-Chromium</a>,
+    <br>* <a class="clsPreview" href="#idCletCaesium">Cs55-Caesium</a>,
+    <br>* <a class="clsPreview" href="#idCletCesium">Cs55-Cesium</a>,
+    <br>* <a class="clsPreview" href="#idCletCopper">Cu29-Copper</a>,
+    <br>* <a class="clsPreview" href="#idCletDubnium">Db105-Dubnium</a>,
+    <br>* <a class="clsPreview" href="#idCletDarmstadtium">Ds110-Darmstadtium</a>,
+    <br>* <a class="clsPreview" href="#idCletDysprosium">Dy66-Dysprosium</a>,
+    <br>* <a class="clsPreview" href="#idCletErbium">Er68-Erbium</a>,
+    <br>* <a class="clsPreview" href="#idCletEinsteinium">Es99-Einsteinium</a>,
+    <br>* <a class="clsPreview" href="#idCletEuropium">Eu63-Europium</a>,
+    <br>* <a class="clsPreview" href="#idCletFluorine">F9-Fluorine</a>,
+    <br>* <a class="clsPreview" href="#idCletIron">Fe26-Iron</a>,
+    <br>* <a class="clsPreview" href="#idCletFermium">Fm100-Fermium</a>,
+    <br>* <a class="clsPreview" href="#idCletFrancium">Fr87-Francium</a>,
+    <br>* <a class="clsPreview" href="#idCletGallium">Ga31-Gallium</a>,
+    <br>* <a class="clsPreview" href="#idCletGadolinium">Gd64-Gadolinium</a>,
+    <br>* <a class="clsPreview" href="#idCletGermanium">Ge32-Germanium</a>,
+    <br>* <a class="clsPreview" href="#idCletHydrogen">H1-Hydrogen</a>,
+    <br>* <a class="clsPreview" href="#idCletHelium">He2-Helium</a>,
+    <br>* <a class="clsPreview" href="#idCletHafnium">Hf72-Hafnium</a>,
+    <br>* <a class="clsPreview" href="#idCletMercury">Hg80-Mercury</a>,
+    <br>* <a class="clsPreview" href="#idCletHolmium">Ho67-Holmium</a>,
+    <br>* <a class="clsPreview" href="#idCletHassium">Hs108-Hassium</a>,
+    <br>* <a class="clsPreview" href="#idCletIodine">I53-Iodine</a>,
+    <br>* <a class="clsPreview" href="#idCletIndium">In49-Indium</a>,
+    <br>* <a class="clsPreview" href="#idCletIridium">Ir77-Iridium</a>,
+    <br>* <a class="clsPreview" href="#idCletPotassium">K19-Potassium</a>,
+    <br>* <a class="clsPreview" href="#idCletKrypton">Kr36-Krypton</a>,
+    <br>* <a class="clsPreview" href="#idCletLanthanum">La57-Lanthanum</a>,
+    <br>* <a class="clsPreview" href="#idCletLithium">Li3-Lithium</a>,
+    <br>* <a class="clsPreview" href="#idCletLawrencium">Lr103-Lawrencium</a>,
+    <br>* <a class="clsPreview" href="#idCletLutetium">Lu71-Lutetium</a>,
+    <br>* <a class="clsPreview" href="#idCletMendelevium">Md101-Mendelevium</a>,
+    <br>* <a class="clsPreview" href="#idCletMagnesium">Mg12-Magnesium</a>,
+    <br>* <a class="clsPreview" href="#idCletManganese">Mn25-Manganese</a>,
+    <br>* <a class="clsPreview" href="#idCletMolybdenum">Mo42-Molybdenum</a>,
+    <br>* <a class="clsPreview" href="#idCletMeitnerium">Mt109-Meitnerium</a>,
+    <br>* <a class="clsPreview" href="#idCletNitrogen">N7-Nitrogen</a>,
+    <br>* <a class="clsPreview" href="#idCletSodium">Na11-Sodium</a>,
+    <br>* <a class="clsPreview" href="#idCletNiobium">Nb41-Niobium</a>,
+    <br>* <a class="clsPreview" href="#idCletNeodymium">Nd60-Neodymium</a>,
+    <br>* <a class="clsPreview" href="#idCletNeon">Ne10-Neon</a>,
+    <br>* <a class="clsPreview" href="#idCletNickel">Ni28-Nickel</a>,
+    <br>* <a class="clsPreview" href="#idCletNobelium">No102-Nobelium</a>,
+    <br>* <a class="clsPreview" href="#idCletNeptunium">Np93-Neptunium</a>,
+    <br>* <a class="clsPreview" href="#idCletOxygen">O8-Oxygen</a>,
+    <br>* <a class="clsPreview" href="#idCletOsmium">Os76-Osmium</a>,
+    <br>* <a class="clsPreview" href="#idCletPhosphorus">P15-Phosphorus</a>,
+    <br>* <a class="clsPreview" href="#idCletProtactinium">Pa91-Protactinium</a>,
+    <br>* <a class="clsPreview" href="#idCletLead">Pb82-Lead</a>,
+    <br>* <a class="clsPreview" href="#idCletPalladium">Pd46-Palladium</a>,
+    <br>* <a class="clsPreview" href="#idCletPromethium">Pm61-Promethium</a>,
+    <br>* <a class="clsPreview" href="#idCletPolonium">Po84-Polonium</a>,
+    <br>* <a class="clsPreview" href="#idCletPraseodymium">Pr59-Praseodymium</a>,
+    <br>* <a class="clsPreview" href="#idCletPlatinum">Pt78-Platinum</a>,
+    <br>* <a class="clsPreview" href="#idCletPlutonium">Pu94-Plutonium</a>,
+    <br>* <a class="clsPreview" href="#idCletRadium">Ra88-Radium</a>,
+    <br>* <a class="clsPreview" href="#idCletRubidium">Rb37-Rubidium</a>,
+    <br>* <a class="clsPreview" href="#idCletRhenium">Re75-Rhenium</a>,
+    <br>* <a class="clsPreview" href="#idCletRutherfordium">Rf104-Rutherfordium</a>,
+    <br>* <a class="clsPreview" href="#idCletRhodium">Rh45-Rhodium</a>,
+    <br>* <a class="clsPreview" href="#idCletRadon">Rn86-Radon</a>,
+    <br>* <a class="clsPreview" href="#idCletRuthenium">Ru44-Ruthenium</a>,
+    <br>* <a class="clsPreview" href="#idCletSulfur">S16-Sulfur</a>,
+    <br>* <a class="clsPreview" href="#idCletAntimony">Sb51-Antimony</a>,
+    <br>* <a class="clsPreview" href="#idCletScandium">Sc21-Scandium</a>,
+    <br>* <a class="clsPreview" href="#idCletSelenium">Se34-Selenium</a>,
+    <br>* <a class="clsPreview" href="#idCletSeaborgium">Sg106-Seaborgium</a>,
+    <br>* <a class="clsPreview" href="#idCletSilicon">Si14-Silicon</a>,
+    <br>* <a class="clsPreview" href="#idCletSamarium">Sm62-Samarium</a>,
+    <br>* <a class="clsPreview" href="#idCletTin">Sn50-Tin</a>,
+    <br>* <a class="clsPreview" href="#idCletStrontium">Sr38-Strontium</a>,
+    <br>* <a class="clsPreview" href="#idCletTantalum">Ta73-Tantalum</a>,
+    <br>* <a class="clsPreview" href="#idCletTerbium">Tb65-Terbium</a>,
+    <br>* <a class="clsPreview" href="#idCletTechnetium">Tc43-Technetium</a>,
+    <br>* <a class="clsPreview" href="#idCletTellurium">Te52-Tellurium</a>,
+    <br>* <a class="clsPreview" href="#idCletThorium">Th90-Thorium</a>,
+    <br>* <a class="clsPreview" href="#idCletTitanium">Ti22-Titanium</a>,
+    <br>* <a class="clsPreview" href="#idCletThallium">Tl81-Thallium</a>,
+    <br>* <a class="clsPreview" href="#idCletThulium">Tm69-Thulium</a>,
+    <br>* <a class="clsPreview" href="#idCletUranium">U92-Uranium</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunbium">Uub112-Ununbium</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunhexium">Uuh116-Ununhexium</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunoctium">Uuo118-Ununoctium</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunpentium">Uup115-Ununpentium</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunquadium">Uuq114-Ununquadium</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunseptium">Uus117-Ununseptium</a>,
+    <br>* <a class="clsPreview" href="#idCletUnuntrium">Uut113-Ununtrium</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunium">Uuu111-Ununium</a>,
+    <br>* <a class="clsPreview" href="#idCletVanadium">V23-Vanadium</a>,
+    <br>* <a class="clsPreview" href="#idCletTungsten">W74-Tungsten</a>,
+    <br>* <a class="clsPreview" href="#idCletXenon">Xe54-Xenon</a>,
+    <br>* <a class="clsPreview" href="#idCletYttrium">Y39-Yttrium</a>,
+    <br>* <a class="clsPreview" href="#idCletYtterbium">Yb70-Ytterbium</a>,
+    <br>* <a class="clsPreview" href="#idCletZinc">Zn30-Zinc</a>,
+    <br>* <a class="clsPreview" href="#idCletZirconium">Zr40-Zirconium</a>,
+    <a class="clsHide" href="#idCletScdnSbldsn"></a></p>
+  <p id="idCletScdnSblnam">name::
+    <br>* Mcs.Chmelt.specifics-division.symbol,
+    <a class="clsHide" href="#idCletScdnSblnam"></a></p>
+  </section>
+
+  <section id="idCletScdnZ">
+  <h2 id="idCletScdnZH2">Chmelt.specs-div.atomic-number
+    <a class="clsHide" href="#idCletScdnZH2"></a></h2>
+  <p id="idCletScdnZdsn">description::
+    <br>· on <a class="clsPreview" href="#idCletacnrT">atomic-number</a>:
+    <br>* <a class="clsPreview" href="#idCletHydrogen">1-Hydrogen-H</a>,
+    <br>* <a class="clsPreview" href="#idCletHelium">2-Helium-He</a>,
+    <br>* <a class="clsPreview" href="#idCletLithium">3-Lithium-Li</a>,
+    <br>* <a class="clsPreview" href="#idCletBeryllium">4-Beryllium-Be</a>,
+    <br>* <a class="clsPreview" href="#idCletBoron">5-Boron-B</a>,
+    <br>* <a class="clsPreview" href="#idCletCarbon">6-Carbon-C</a>,
+    <br>* <a class="clsPreview" href="#idCletNitrogen">7-Nitrogen-N</a>,
+    <br>* <a class="clsPreview" href="#idCletOxygen">8-Oxygen-O</a>,
+    <br>* <a class="clsPreview" href="#idCletFluorine">9-Fluorine-F</a>,
+    <br>* <a class="clsPreview" href="#idCletNeon">10-Neon-Ne</a>,
+    <br>* <a class="clsPreview" href="#idCletSodium">11-Sodium-Na</a>,
+    <br>* <a class="clsPreview" href="#idCletMagnesium">12-Magnesium-Mg</a>,
+    <br>* <a class="clsPreview" href="#idCletAluminium">13-Aluminium-Al</a>,
+    <br>* <a class="clsPreview" href="#idCletSilicon">14-Silicon-Si</a>,
+    <br>* <a class="clsPreview" href="#idCletPhosphorus">15-Phosphorus-P</a>,
+    <br>* <a class="clsPreview" href="#idCletSulfur">16-Sulfur-S</a>,
+    <br>* <a class="clsPreview" href="#idCletChlorine">17-Chlorine-Cl</a>,
+    <br>* <a class="clsPreview" href="#idCletArgon">18-Argon-Ar</a>,
+    <br>* <a class="clsPreview" href="#idCletPotassium">19-Potassium-K</a>,
+    <br>* <a class="clsPreview" href="#idCletCalcium">20-Calcium-Ca</a>,
+    <br>* <a class="clsPreview" href="#idCletScandium">21-Scandium-Sc</a>,
+    <br>* <a class="clsPreview" href="#idCletTitanium">22-Titanium-Ti</a>,
+    <br>* <a class="clsPreview" href="#idCletVanadium">23-Vanadium-V</a>,
+    <br>* <a class="clsPreview" href="#idCletChromium">24-Chromium-Cr</a>,
+    <br>* <a class="clsPreview" href="#idCletManganese">25-Manganese-Mn</a>,
+    <br>* <a class="clsPreview" href="#idCletIron">26-Iron-Fe</a>,
+    <br>* <a class="clsPreview" href="#idCletCobalt">27-Cobalt-Co</a>,
+    <br>* <a class="clsPreview" href="#idCletNickel">28-Nickel-Ni</a>,
+    <br>* <a class="clsPreview" href="#idCletCopper">29-Copper-Cu</a>,
+    <br>* <a class="clsPreview" href="#idCletZinc">30-Zinc-Zn</a>,
+    <br>* <a class="clsPreview" href="#idCletGallium">31-Gallium-Ga</a>,
+    <br>* <a class="clsPreview" href="#idCletGermanium">32-Germanium-Ge</a>,
+    <br>* <a class="clsPreview" href="#idCletArsenic">33-Arsenic-As</a>,
+    <br>* <a class="clsPreview" href="#idCletSelenium">34-Selenium-Se</a>,
+    <br>* <a class="clsPreview" href="#idCletBromine">35-Bromine-Br</a>,
+    <br>* <a class="clsPreview" href="#idCletKrypton">36-Krypton-Kr</a>,
+    <br>* <a class="clsPreview" href="#idCletRubidium">37-Rubidium-Rb</a>,
+    <br>* <a class="clsPreview" href="#idCletStrontium">38-Strontium-Sr</a>,
+    <br>* <a class="clsPreview" href="#idCletYttrium">39-Yttrium-Y</a>,
+    <br>* <a class="clsPreview" href="#idCletZirconium">40-Zirconium-Zr</a>,
+    <br>* <a class="clsPreview" href="#idCletNiobium">41-Niobium-Nb</a>,
+    <br>* <a class="clsPreview" href="#idCletMolybdenum">42-Molybdenum-Mo</a>,
+    <br>* <a class="clsPreview" href="#idCletTechnetium">43-Technetium-Tc</a>,
+    <br>* <a class="clsPreview" href="#idCletRuthenium">44-Ruthenium-Ru</a>,
+    <br>* <a class="clsPreview" href="#idCletRhodium">45-Rhodium-Rh</a>,
+    <br>* <a class="clsPreview" href="#idCletPalladium">46-Palladium-Pd</a>,
+    <br>* <a class="clsPreview" href="#idCletSilver">47-Silver-Ag</a>,
+    <br>* <a class="clsPreview" href="#idCletCadmium">48-Cadmium-Cd</a>,
+    <br>* <a class="clsPreview" href="#idCletIndium">49-Indium-In</a>,
+    <br>* <a class="clsPreview" href="#idCletTin">50-Tin-Sn</a>,
+    <br>* <a class="clsPreview" href="#idCletAntimony">51-Antimony-Sb</a>,
+    <br>* <a class="clsPreview" href="#idCletTellurium">52-Tellurium-Te</a>,
+    <br>* <a class="clsPreview" href="#idCletIodine">53-Iodine-I</a>,
+    <br>* <a class="clsPreview" href="#idCletXenon">54-Xenon-Xe</a>,
+    <br>* <a class="clsPreview" href="#idCletCaesium">55-Caesium-Cs</a>,
+    <br>* <a class="clsPreview" href="#idCletCesium">55-Cesium-Cs</a>,
+    <br>* <a class="clsPreview" href="#idCletBarium">56-Barium-Ba</a>,
+    <br>* <a class="clsPreview" href="#idCletLanthanum">57-Lanthanum-La</a>,
+    <br>* <a class="clsPreview" href="#idCletCerium">58-Cerium-Ce</a>,
+    <br>* <a class="clsPreview" href="#idCletPraseodymium">59-Praseodymium-Pr</a>,
+    <br>* <a class="clsPreview" href="#idCletNeodymium">60-Neodymium-Nd</a>,
+    <br>* <a class="clsPreview" href="#idCletPromethium">61-Promethium-Pm</a>,
+    <br>* <a class="clsPreview" href="#idCletSamarium">62-Samarium-Sm</a>,
+    <br>* <a class="clsPreview" href="#idCletEuropium">63-Europium-Eu</a>,
+    <br>* <a class="clsPreview" href="#idCletGadolinium">64-Gadolinium-Gd</a>,
+    <br>* <a class="clsPreview" href="#idCletTerbium">65-Terbium-Tb</a>,
+    <br>* <a class="clsPreview" href="#idCletDysprosium">66-Dysprosium-Dy</a>,
+    <br>* <a class="clsPreview" href="#idCletHolmium">67-Holmium-Ho</a>,
+    <br>* <a class="clsPreview" href="#idCletErbium">68-Erbium-Er</a>,
+    <br>* <a class="clsPreview" href="#idCletThulium">69-Thulium-Tm</a>,
+    <br>* <a class="clsPreview" href="#idCletYtterbium">70-Ytterbium-Yb</a>,
+    <br>* <a class="clsPreview" href="#idCletLutetium">71-Lutetium-Lu</a>,
+    <br>* <a class="clsPreview" href="#idCletHafnium">72-Hafnium-Hf</a>,
+    <br>* <a class="clsPreview" href="#idCletTantalum">73-Tantalum-Ta</a>,
+    <br>* <a class="clsPreview" href="#idCletTungsten">74-Tungsten-W</a>,
+    <br>* <a class="clsPreview" href="#idCletRhenium">75-Rhenium-Re</a>,
+    <br>* <a class="clsPreview" href="#idCletOsmium">76-Osmium-Os</a>,
+    <br>* <a class="clsPreview" href="#idCletIridium">77-Iridium-Ir</a>,
+    <br>* <a class="clsPreview" href="#idCletPlatinum">78-Platinum-Pt</a>,
+    <br>* <a class="clsPreview" href="#idCletGold">79-Gold-Au</a>,
+    <br>* <a class="clsPreview" href="#idCletMercury">80-Mercury-Hg</a>,
+    <br>* <a class="clsPreview" href="#idCletThallium">81-Thallium-Tl</a>,
+    <br>* <a class="clsPreview" href="#idCletLead">82-Lead-Pb</a>,
+    <br>* <a class="clsPreview" href="#idCletBismuth">83-Bismuth-Bi</a>,
+    <br>* <a class="clsPreview" href="#idCletPolonium">84-Polonium-Po</a>,
+    <br>* <a class="clsPreview" href="#idCletAstatine">85-Astatine-At</a>,
+    <br>* <a class="clsPreview" href="#idCletRadon">86-Radon-Rn</a>,
+    <br>* <a class="clsPreview" href="#idCletFrancium">87-Francium-Fr</a>,
+    <br>* <a class="clsPreview" href="#idCletRadium">88-Radium-Ra</a>,
+    <br>* <a class="clsPreview" href="#idCletActinium">89-Actinium-Ac</a>,
+    <br>* <a class="clsPreview" href="#idCletThorium">90-Thorium-Th</a>,
+    <br>* <a class="clsPreview" href="#idCletProtactinium">91-Protactinium-Pa</a>,
+    <br>* <a class="clsPreview" href="#idCletUranium">92-Uranium-U</a>,
+    <br>* <a class="clsPreview" href="#idCletNeptunium">93-Neptunium-Np</a>,
+    <br>* <a class="clsPreview" href="#idCletPlutonium">94-Plutonium-Pu</a>,
+    <br>* <a class="clsPreview" href="#idCletAmericium">95-Americium-Am</a>,
+    <br>* <a class="clsPreview" href="#idCletCurium">96-Curium-Cm</a>,
+    <br>* <a class="clsPreview" href="#idCletBerkelium">97-Berkelium-Bk</a>,
+    <br>* <a class="clsPreview" href="#idCletCalifornium">98-Californium-Cf</a>,
+    <br>* <a class="clsPreview" href="#idCletEinsteinium">99-Einsteinium-Es</a>,
+    <br>* <a class="clsPreview" href="#idCletFermium">100-Fermium-Fm</a>,
+    <br>* <a class="clsPreview" href="#idCletMendelevium">101-Mendelevium-Md</a>,
+    <br>* <a class="clsPreview" href="#idCletNobelium">102-Nobelium-No</a>,
+    <br>* <a class="clsPreview" href="#idCletLawrencium">103-Lawrencium-Lr</a>,
+    <br>* <a class="clsPreview" href="#idCletRutherfordium">104-Rutherfordium-Rf</a>,
+    <br>* <a class="clsPreview" href="#idCletDubnium">105-Dubnium-Db</a>,
+    <br>* <a class="clsPreview" href="#idCletSeaborgium">106-Seaborgium-Sg</a>,
+    <br>* <a class="clsPreview" href="#idCletBohrium">107-Bohrium-Bh</a>,
+    <br>* <a class="clsPreview" href="#idCletHassium">108-Hassium-Hs</a>,
+    <br>* <a class="clsPreview" href="#idCletMeitnerium">109-Meitnerium-Mt</a>,
+    <br>* <a class="clsPreview" href="#idCletDarmstadtium">110-Darmstadtium-Ds</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunium">111-Ununium-Uuu</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunbium">112-Ununbium-Uub</a>,
+    <br>* <a class="clsPreview" href="#idCletUnuntrium">113-Ununtrium-Uut</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunquadium">114-Ununquadium-Uuq</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunpentium">115-Ununpentium-Uup</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunhexium">116-Ununhexium-Uuh</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunseptium">117-Ununseptium-Uus</a>,
+    <br>* <a class="clsPreview" href="#idCletUnunoctium">118-Ununoctium-Uuo</a>,
+    <a class="clsHide" href="#idCletScdnZdsn"></a></p>
+  <p id="idCletScdnZnam">name::
+    <br>* Mcs.Chmelt.specifics-division.atomic-number,
+    <a class="clsHide" href="#idCletScdnZnam"></a></p>
+  </section>
+
+  <section id="idCletScdnSom">
+  <h2 id="idCletScdnSomH2">Chmelt.specs-div.state-of-matter
+    <a class="clsHide" href="#idCletScdnSomH2"></a></h2>
+  <p id="idCletScdnSomdsn">description::
+    <br>· on <a class="clsPreview" href="#idCletsomFT">state-of-matter</a>:
+    <br>* gas-Chmelt,
+    <br>* liquid-Chmelt,
+    <br>* solid-Chmelt,
+    <a class="clsHide" href="#idCletScdnSomdsn"></a></p>
+  <p id="idCletScdnSomnam">name::
+    <br>* Mcs.Chmelt.specifics-division.state-of-matter,
+    <a class="clsHide" href="#idCletScdnSomnam"></a></p>
+  </section>
+
+  <section id="idCletScdnNoaim">
+  <h2 id="idCletScdnNoaimH2">Chmelt.specs-div.number-of-atoms-in-molecule
+    <a class="clsHide" href="#idCletScdnNoaimH2"></a></h2>
+  <p id="idCletScdnNoaimdsn">description::
+    <br>"Ο αριθμός που δείχνει από πόσα άτομα συγκροτείται το μόριο ενός στοιχείου ονομάζεται ατομικότητα στοιχείου
+    <br>Η ατομικότητα του στοιχείου αναγράφεται ως δείκτης στο σύμβολο του στοιχείου. Παρακάτω δίνεται πίνακας με τις ατομικότητες των σημαντικότερων στοιχείων.
+    <br>ΠΙΝΑΚΑΣ 1.3: Ατομικότητες στοιχείων
+    <br>ΜΟΝΟΑΤΟΜΙΚΑ: Ευγενή αέρια: He, Ne, Ar, Kr, Xe, Rn, και τα μέταλλα σε κατάσταση ατμών.
+    <br>Επίσης, στις χημικές εξισώσεις γράφονται σαν μονοατομικά τα στοιχεία C, S και P.
+    <br>ΔΙΑΤΟΜΙΚΑ: Η2, O2, Ν2, F2, Cl2, Br2, I2.
+    <br>ΤΡΙΑΤΟΜΙΚΑ: O3.
+    <br>ΤΕΤΡΑΤΟΜΙΚΑ: Ρ4, As4, Sb4."
+    <br>[http://digitalschool.minedu.gov.gr/modules/ebook/show.php/DSGL111/394/2612,10241/]
+    <a class="clsHide" href="#idCletScdnNoaimdsn"></a></p>
+  <p id="idCletScdnNoaimnam">name::
+    <br>* Mcs.Chmelt.specifics-division.number-of-atoms-in-molecule,
+    <a class="clsHide" href="#idCletScdnNoaimnam"></a></p>
   </section>
 </section>
 
@@ -407,7 +877,7 @@
     <a class="clsHide" href="#idCletIndlNrscnam"></a></p>
   </section>
 </section>
-
+nnn
 <section id="idCletActinium">
   <h1 id="idCletActiniumH1">Chmelt.Actinium-Ac89
     <a class="clsHide" href="#idCletActiniumH1"></a></h1>
@@ -423,6 +893,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ακτίνιο-Ac89,
     <a class="clsHide" href="#idCletActiniumnam"></a></p>
+
+  <section id="idAtmActinium">
+  <h2 id="idAtmActiniumH2">atom-Actinium
+    <a class="clsHide" href="#idAtmActiniumH2"></a></h2>
+  <p id="idAtmActiniumnam">name::
+    <br>* Mcs.Chmatm.Actinium,
+    <br>* Mcs.Actinium-atom,
+    <a class="clsHide" href="#idAtmActiniumnam"></a></p>
+  <p id="idAtmActiniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmActiniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletAluminium">
@@ -444,6 +926,18 @@
     <br>* McsEll.Αλουμίνιο-Al13,
     <br>* McsEll.Αργίλιο-Al13,
     <a class="clsHide" href="#idCletAluminiumnam"></a></p>
+
+  <section id="idAtmAluminium">
+  <h2 id="idAtmAluminiumH2">atom-Aluminium
+    <a class="clsHide" href="#idAtmAluminiumH2"></a></h2>
+  <p id="idAtmAluminiumnam">name::
+    <br>* Mcs.Chmatm.Aluminium,
+    <br>* Mcs.Aluminium-atom,
+    <a class="clsHide" href="#idAtmAluminiumnam"></a></p>
+  <p id="idAtmAluminiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmAluminiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletAmericium">
@@ -461,6 +955,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Αμερίκιο-Am95,
     <a class="clsHide" href="#idCletAmericiumnam"></a></p>
+
+  <section id="idAtmAmericium">
+  <h2 id="idAtmAmericiumH2">atom-Americium
+    <a class="clsHide" href="#idAtmAmericiumH2"></a></h2>
+  <p id="idAtmAmericiumnam">name::
+    <br>* Mcs.Chmatm.Americium,
+    <br>* Mcs.Americium-atom,
+    <a class="clsHide" href="#idAtmAmericiumnam"></a></p>
+  <p id="idAtmAmericiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmAmericiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletAntimony">
@@ -478,6 +984,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Αντιμόνιο-Sb51,
     <a class="clsHide" href="#idCletAntimonynam"></a></p>
+
+  <section id="idAtmAntimony">
+  <h2 id="idAtmAntimonyH2">atom-Antimony
+    <a class="clsHide" href="#idAtmAntimonyH2"></a></h2>
+  <p id="idAtmAntimonynam">name::
+    <br>* Mcs.Chmatm.Antimony,
+    <br>* Mcs.Antimony-atom,
+    <a class="clsHide" href="#idAtmAntimonynam"></a></p>
+  <p id="idAtmAntimonygncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmAntimonygncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletArgon">
@@ -495,6 +1013,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Αργό-Ar18,
     <a class="clsHide" href="#idCletArgonnam"></a></p>
+
+  <section id="idAtmArgon">
+  <h2 id="idAtmArgonH2">atom-Argon
+    <a class="clsHide" href="#idAtmArgonH2"></a></h2>
+  <p id="idAtmArgonnam">name::
+    <br>* Mcs.Chmatm.Argon,
+    <br>* Mcs.Argon-atom,
+    <a class="clsHide" href="#idAtmArgonnam"></a></p>
+  <p id="idAtmArgongncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmArgongncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletArsenic">
@@ -512,6 +1042,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Αρσενικό-As33,
     <a class="clsHide" href="#idCletArsenicnam"></a></p>
+
+  <section id="idAtmArsenic">
+  <h2 id="idAtmArsenicH2">atom-Arsenic
+    <a class="clsHide" href="#idAtmArsenicH2"></a></h2>
+  <p id="idAtmArsenicnam">name::
+    <br>* Mcs.Chmatm.Arsenic,
+    <br>* Mcs.Arsenic-atom,
+    <a class="clsHide" href="#idAtmArsenicnam"></a></p>
+  <p id="idAtmArsenicgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmArsenicgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletAstatine">
@@ -529,6 +1071,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Άστατο-At85,
     <a class="clsHide" href="#idCletAstatinenam"></a></p>
+
+  <section id="idAtmAstatine">
+  <h2 id="idAtmAstatineH2">atom-Astatine
+    <a class="clsHide" href="#idAtmAstatineH2"></a></h2>
+  <p id="idAtmAstatinenam">name::
+    <br>* Mcs.Chmatm.Astatine,
+    <br>* Mcs.Astatine-atom,
+    <a class="clsHide" href="#idAtmAstatinenam"></a></p>
+  <p id="idAtmAstatinegncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmAstatinegncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletBarium">
@@ -546,6 +1100,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Βάριο-Ba56,
     <a class="clsHide" href="#idCletBariumnam"></a></p>
+
+  <section id="idAtmBarium">
+  <h2 id="idAtmBariumH2">atom-Barium
+    <a class="clsHide" href="#idAtmBariumH2"></a></h2>
+  <p id="idAtmBariumnam">name::
+    <br>* Mcs.Chmatm.Barium,
+    <br>* Mcs.Barium-atom,
+    <a class="clsHide" href="#idAtmBariumnam"></a></p>
+  <p id="idAtmBariumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmBariumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletBerkelium">
@@ -563,6 +1129,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Μπερκέλιο-Bk97,
     <a class="clsHide" href="#idCletBerkeliumnam"></a></p>
+
+  <section id="idAtmBerkelium">
+  <h2 id="idAtmBerkeliumH2">atom-Berkelium
+    <a class="clsHide" href="#idAtmBerkeliumH2"></a></h2>
+  <p id="idAtmBerkeliumnam">name::
+    <br>* Mcs.Chmatm.Berkelium,
+    <br>* Mcs.Berkelium-atom,
+    <a class="clsHide" href="#idAtmBerkeliumnam"></a></p>
+  <p id="idAtmBerkeliumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmBerkeliumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletBeryllium">
@@ -580,6 +1158,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Βηρύλλιο-Be4,
     <a class="clsHide" href="#idCletBerylliumnam"></a></p>
+
+  <section id="idAtmBeryllium">
+  <h2 id="idAtmBerylliumH2">atom-Beryllium
+    <a class="clsHide" href="#idAtmBerylliumH2"></a></h2>
+  <p id="idAtmBerylliumnam">name::
+    <br>* Mcs.Chmatm.Beryllium,
+    <br>* Mcs.Beryllium-atom,
+    <a class="clsHide" href="#idAtmBerylliumnam"></a></p>
+  <p id="idAtmBerylliumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmBerylliumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletBismuth">
@@ -597,6 +1187,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Βισμούθιο-Bi83,
     <a class="clsHide" href="#idCletBismuthnam"></a></p>
+
+  <section id="idAtmBismuth">
+  <h2 id="idAtmBismuthH2">atom-Bismuth
+    <a class="clsHide" href="#idAtmBismuthH2"></a></h2>
+  <p id="idAtmBismuthnam">name::
+    <br>* Mcs.Chmatm.Bismuth,
+    <br>* Mcs.Bismuth-atom,
+    <a class="clsHide" href="#idAtmBismuthnam"></a></p>
+  <p id="idAtmBismuthgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmBismuthgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletBohrium">
@@ -614,6 +1216,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Μπόριο-Bh107,
     <a class="clsHide" href="#idCletBohriumnam"></a></p>
+
+  <section id="idAtmBohrium">
+  <h2 id="idAtmBohriumH2">atom-Bohrium
+    <a class="clsHide" href="#idAtmBohriumH2"></a></h2>
+  <p id="idAtmBohriumnam">name::
+    <br>* Mcs.Chmatm.Bohrium,
+    <br>* Mcs.Bohrium-atom,
+    <a class="clsHide" href="#idAtmBohriumnam"></a></p>
+  <p id="idAtmBohriumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmBohriumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletBoron">
@@ -631,6 +1245,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Βόριο-B5,
     <a class="clsHide" href="#idCletBoronnam"></a></p>
+
+  <section id="idAtmBoron">
+  <h2 id="idAtmBoronH2">atom-Boron
+    <a class="clsHide" href="#idAtmBoronH2"></a></h2>
+  <p id="idAtmBoronnam">name::
+    <br>* Mcs.Chmatm.Boron,
+    <br>* Mcs.Boron-atom,
+    <a class="clsHide" href="#idAtmBoronnam"></a></p>
+  <p id="idAtmBorongncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmBorongncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletBromine">
@@ -648,6 +1274,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Βρώμιο-Br35,
     <a class="clsHide" href="#idCletBrominenam"></a></p>
+
+  <section id="idAtmBromine">
+  <h2 id="idAtmBromineH2">atom-Bromine
+    <a class="clsHide" href="#idAtmBromineH2"></a></h2>
+  <p id="idAtmBrominenam">name::
+    <br>* Mcs.Chmatm.Bromine,
+    <br>* Mcs.Bromine-atom,
+    <a class="clsHide" href="#idAtmBrominenam"></a></p>
+  <p id="idAtmBrominegncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmBrominegncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletCadmium">
@@ -665,6 +1303,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Κάδμιο-Cd48,
     <a class="clsHide" href="#idCletCadmiumnam"></a></p>
+
+  <section id="idAtmCadmium">
+  <h2 id="idAtmCadmiumH2">atom-Cadmium
+    <a class="clsHide" href="#idAtmCadmiumH2"></a></h2>
+  <p id="idAtmCadmiumnam">name::
+    <br>* Mcs.Chmatm.Cadmium,
+    <br>* Mcs.Cadmium-atom,
+    <a class="clsHide" href="#idAtmCadmiumnam"></a></p>
+  <p id="idAtmCadmiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmCadmiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletCaesium">
@@ -693,6 +1343,18 @@
   <p id="idCletCaesiumgstFnam">name::
     <br>* Mcs.ChmeltCs55'generic-specific-tree,
     <a class="clsHide" href="#idCletCaesiumgstFnam"></a></p>
+  </section>
+
+  <section id="idAtmCaesium">
+  <h2 id="idAtmCaesiumH2">atom-Caesium
+    <a class="clsHide" href="#idAtmCaesiumH2"></a></h2>
+  <p id="idAtmCaesiumnam">name::
+    <br>* Mcs.Chmatm.Caesium,
+    <br>* Mcs.Caesium-atom,
+    <a class="clsHide" href="#idAtmCaesiumnam"></a></p>
+  <p id="idAtmCaesiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmCaesiumgncchn"></a></p>
   </section>
 </section>
 
@@ -746,6 +1408,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Καλιφόρνιο-Cf98,
     <a class="clsHide" href="#idCletCaliforniumnam"></a></p>
+
+  <section id="idAtmCalifornium">
+  <h2 id="idAtmCaliforniumH2">atom-Californium
+    <a class="clsHide" href="#idAtmCaliforniumH2"></a></h2>
+  <p id="idAtmCaliforniumnam">name::
+    <br>* Mcs.Chmatm.Californium,
+    <br>* Mcs.Californium-atom,
+    <a class="clsHide" href="#idAtmCaliforniumnam"></a></p>
+  <p id="idAtmCaliforniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmCaliforniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletCarbon">
@@ -774,6 +1448,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Άνθρακας-C6,
     <a class="clsHide" href="#idCletCarbonnam"></a></p>
+
+  <section id="idAtmCarbon">
+  <h2 id="idAtmCarbonH2">atom-Carbon
+    <a class="clsHide" href="#idAtmCarbonH2"></a></h2>
+  <p id="idAtmCarbonnam">name::
+    <br>* Mcs.Chmatm.Carbon,
+    <br>* Mcs.Carbon-atom,
+    <a class="clsHide" href="#idAtmCarbonnam"></a></p>
+  <p id="idAtmCarbongncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmCarbongncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletCerium">
@@ -791,6 +1477,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Δημήτριο-Ce58,
     <a class="clsHide" href="#idCletCeriumnam"></a></p>
+
+  <section id="idAtmCerium">
+  <h2 id="idAtmCeriumH2">atom-Cerium
+    <a class="clsHide" href="#idAtmCeriumH2"></a></h2>
+  <p id="idAtmCeriumnam">name::
+    <br>* Mcs.Chmatm.Cerium,
+    <br>* Mcs.Cerium-atom,
+    <a class="clsHide" href="#idAtmCeriumnam"></a></p>
+  <p id="idAtmCeriumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmCeriumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletChlorine">
@@ -808,6 +1506,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Xλώριο-Cl17,
     <a class="clsHide" href="#idCletChlorinenam"></a></p>
+
+  <section id="idAtmChlorine">
+  <h2 id="idAtmChlorineH2">atom-Chlorine
+    <a class="clsHide" href="#idAtmChlorineH2"></a></h2>
+  <p id="idAtmChlorinenam">name::
+    <br>* Mcs.Chmatm.Chlorine,
+    <br>* Mcs.Chlorine-atom,
+    <a class="clsHide" href="#idAtmChlorinenam"></a></p>
+  <p id="idAtmChlorinegncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmChlorinegncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletChromium">
@@ -825,6 +1535,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Χρώμιο-Cr24,
     <a class="clsHide" href="#idCletChromiumnam"></a></p>
+
+  <section id="idAtmChromium">
+  <h2 id="idAtmChromiumH2">atom-Chromium
+    <a class="clsHide" href="#idAtmChromiumH2"></a></h2>
+  <p id="idAtmChromiumnam">name::
+    <br>* Mcs.Chmatm.Chromium,
+    <br>* Mcs.Chromium-atom,
+    <a class="clsHide" href="#idAtmChromiumnam"></a></p>
+  <p id="idAtmChromiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmChromiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletCobalt">
@@ -842,6 +1564,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Κοβάλτιο-Co27,
     <a class="clsHide" href="#idCletCobaltnam"></a></p>
+
+  <section id="idAtmCobalt">
+  <h2 id="idAtmCobaltH2">atom-Cobalt
+    <a class="clsHide" href="#idAtmCobaltH2"></a></h2>
+  <p id="idAtmCobaltnam">name::
+    <br>* Mcs.Chmatm.Cobalt,
+    <br>* Mcs.Cobalt-atom,
+    <a class="clsHide" href="#idAtmCobaltnam"></a></p>
+  <p id="idAtmCobaltgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmCobaltgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletCopper">
@@ -871,6 +1605,18 @@
     <br>* Mcs.ChmeltCu29'toxicity,
     <a class="clsHide" href="#idCletCoppertxctnam"></a></p>
   </section>
+
+  <section id="idAtmCopper">
+  <h2 id="idAtmCopperH2">atom-Copper
+    <a class="clsHide" href="#idAtmCopperH2"></a></h2>
+  <p id="idAtmCoppernam">name::
+    <br>* Mcs.Chmatm.Copper,
+    <br>* Mcs.Copper-atom,
+    <a class="clsHide" href="#idAtmCoppernam"></a></p>
+  <p id="idAtmCoppergncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmCoppergncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletCopernicium">
@@ -888,6 +1634,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Κοπερνίκιο-Cn112,
     <a class="clsHide" href="#idCletCoperniciumnam"></a></p>
+
+  <section id="idAtmCopernicium">
+  <h2 id="idAtmCoperniciumH2">atom-Copernicium
+    <a class="clsHide" href="#idAtmCoperniciumH2"></a></h2>
+  <p id="idAtmCoperniciumnam">name::
+    <br>* Mcs.Chmatm.Copernicium,
+    <br>* Mcs.Copernicium-atom,
+    <a class="clsHide" href="#idAtmCoperniciumnam"></a></p>
+  <p id="idAtmCoperniciumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmCoperniciumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletCurium">
@@ -905,6 +1663,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Κιούριο-Cm96,
     <a class="clsHide" href="#idCletCuriumnam"></a></p>
+
+  <section id="idAtmCurium">
+  <h2 id="idAtmCuriumH2">atom-Curium
+    <a class="clsHide" href="#idAtmCuriumH2"></a></h2>
+  <p id="idAtmCuriumnam">name::
+    <br>* Mcs.Chmatm.Curium,
+    <br>* Mcs.Curium-atom,
+    <a class="clsHide" href="#idAtmCuriumnam"></a></p>
+  <p id="idAtmCuriumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmCuriumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletDarmstadtium">
@@ -922,6 +1692,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Νταρμστάντιο-Ds110,
     <a class="clsHide" href="#idCletDarmstadtiumnam"></a></p>
+
+  <section id="idAtmDarmstadtium">
+  <h2 id="idAtmDarmstadtiumH2">atom-Darmstadtium
+    <a class="clsHide" href="#idAtmDarmstadtiumH2"></a></h2>
+  <p id="idAtmDarmstadtiumnam">name::
+    <br>* Mcs.Chmatm.Darmstadtium,
+    <br>* Mcs.Darmstadtium-atom,
+    <a class="clsHide" href="#idAtmDarmstadtiumnam"></a></p>
+  <p id="idAtmDarmstadtiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmDarmstadtiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletDubnium">
@@ -939,6 +1721,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ντούμπνιο-Db105,
     <a class="clsHide" href="#idCletDubniumnam"></a></p>
+
+  <section id="idAtmDubnium">
+  <h2 id="idAtmDubniumH2">atom-Dubnium
+    <a class="clsHide" href="#idAtmDubniumH2"></a></h2>
+  <p id="idAtmDubniumnam">name::
+    <br>* Mcs.Chmatm.Dubnium,
+    <br>* Mcs.Dubnium-atom,
+    <a class="clsHide" href="#idAtmDubniumnam"></a></p>
+  <p id="idAtmDubniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmDubniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletDysprosium">
@@ -956,6 +1750,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Δυσπρόσιο-Dy66,
     <a class="clsHide" href="#idCletDysprosiumnam"></a></p>
+
+  <section id="idAtmDysprosium">
+  <h2 id="idAtmDysprosiumH2">atom-Dysprosium
+    <a class="clsHide" href="#idAtmDysprosiumH2"></a></h2>
+  <p id="idAtmDysprosiumnam">name::
+    <br>* Mcs.Chmatm.Dysprosium,
+    <br>* Mcs.Dysprosium-atom,
+    <a class="clsHide" href="#idAtmDysprosiumnam"></a></p>
+  <p id="idAtmDysprosiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmDysprosiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletEinsteinium">
@@ -973,6 +1779,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Αϊνσταΐνιο-Es99,
     <a class="clsHide" href="#idCletEinsteiniumnam"></a></p>
+
+  <section id="idAtmEinsteinium">
+  <h2 id="idAtmEinsteiniumH2">atom-Einsteinium
+    <a class="clsHide" href="#idAtmEinsteiniumH2"></a></h2>
+  <p id="idAtmEinsteiniumnam">name::
+    <br>* Mcs.Chmatm.Einsteinium,
+    <br>* Mcs.Einsteinium-atom,
+    <a class="clsHide" href="#idAtmEinsteiniumnam"></a></p>
+  <p id="idAtmEinsteiniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmEinsteiniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletErbium">
@@ -990,6 +1808,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Έρβιο-Er68,
     <a class="clsHide" href="#idCletErbiumnam"></a></p>
+
+  <section id="idAtmErbium">
+  <h2 id="idAtmErbiumH2">atom-Erbium
+    <a class="clsHide" href="#idAtmErbiumH2"></a></h2>
+  <p id="idAtmErbiumnam">name::
+    <br>* Mcs.Chmatm.Erbium,
+    <br>* Mcs.Erbium-atom,
+    <a class="clsHide" href="#idAtmErbiumnam"></a></p>
+  <p id="idAtmErbiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmErbiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletEuropium">
@@ -1007,6 +1837,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ευρώπιο-Eu63,
     <a class="clsHide" href="#idCletEuropiumnam"></a></p>
+
+  <section id="idAtmEuropium">
+  <h2 id="idAtmEuropiumH2">atom-Europium
+    <a class="clsHide" href="#idAtmEuropiumH2"></a></h2>
+  <p id="idAtmEuropiumnam">name::
+    <br>* Mcs.Chmatm.Europium,
+    <br>* Mcs.Europium-atom,
+    <a class="clsHide" href="#idAtmEuropiumnam"></a></p>
+  <p id="idAtmEuropiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmEuropiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletFermium">
@@ -1024,6 +1866,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Φέρμιο-Fm100,
     <a class="clsHide" href="#idCletFermiumnam"></a></p>
+
+  <section id="idAtmFermium">
+  <h2 id="idAtmFermiumH2">atom-Fermium
+    <a class="clsHide" href="#idAtmFermiumH2"></a></h2>
+  <p id="idAtmFermiumnam">name::
+    <br>* Mcs.Chmatm.Fermium,
+    <br>* Mcs.Fermium-atom,
+    <a class="clsHide" href="#idAtmFermiumnam"></a></p>
+  <p id="idAtmFermiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmFermiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletFluorine">
@@ -1041,6 +1895,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Φθόριο-F9,
     <a class="clsHide" href="#idCletFluorinenam"></a></p>
+
+  <section id="idAtmFluorine">
+  <h2 id="idAtmFluorineH2">atom-Fluorine
+    <a class="clsHide" href="#idAtmFluorineH2"></a></h2>
+  <p id="idAtmFluorinenam">name::
+    <br>* Mcs.Chmatm.Fluorine,
+    <br>* Mcs.Fluorine-atom,
+    <a class="clsHide" href="#idAtmFluorinenam"></a></p>
+  <p id="idAtmFluorinegncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmFluorinegncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletFrancium">
@@ -1069,6 +1935,18 @@
     <br>* Mcs.ChmeltFr87'generic-specific-tree,
     <a class="clsHide" href="#idCletFranciumstFnam"></a></p>
   </section>
+
+  <section id="idAtmFrancium">
+  <h2 id="idAtmFranciumH2">atom-Francium
+    <a class="clsHide" href="#idAtmFranciumH2"></a></h2>
+  <p id="idAtmFranciumnam">name::
+    <br>* Mcs.Chmatm.Francium,
+    <br>* Mcs.Francium-atom,
+    <a class="clsHide" href="#idAtmFranciumnam"></a></p>
+  <p id="idAtmFranciumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmFranciumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletGadolinium">
@@ -1086,6 +1964,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Γαδολίνιο-Gd64,
     <a class="clsHide" href="#idCletGadoliniumnam"></a></p>
+
+  <section id="idAtmGadolinium">
+  <h2 id="idAtmGadoliniumH2">atom-Gadolinium
+    <a class="clsHide" href="#idAtmGadoliniumH2"></a></h2>
+  <p id="idAtmGadoliniumnam">name::
+    <br>* Mcs.Chmatm.Gadolinium,
+    <br>* Mcs.Gadolinium-atom,
+    <a class="clsHide" href="#idAtmGadoliniumnam"></a></p>
+  <p id="idAtmGadoliniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmGadoliniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletGallium">
@@ -1103,6 +1993,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Γάλλιο-Ga31,
     <a class="clsHide" href="#idCletGalliumnam"></a></p>
+
+  <section id="idAtmGallium">
+  <h2 id="idAtmGalliumH2">atom-Gallium
+    <a class="clsHide" href="#idAtmGalliumH2"></a></h2>
+  <p id="idAtmGalliumnam">name::
+    <br>* Mcs.Chmatm.Gallium,
+    <br>* Mcs.Gallium-atom,
+    <a class="clsHide" href="#idAtmGalliumnam"></a></p>
+  <p id="idAtmGalliumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmGalliumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletGermanium">
@@ -1120,6 +2022,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Γερμάνιο-Ge32,
     <a class="clsHide" href="#idCletGermaniumnam"></a></p>
+
+  <section id="idAtmGermanium">
+  <h2 id="idAtmGermaniumH2">atom-Germanium
+    <a class="clsHide" href="#idAtmGermaniumH2"></a></h2>
+  <p id="idAtmGermaniumnam">name::
+    <br>* Mcs.Chmatm.Germanium,
+    <br>* Mcs.Germanium-atom,
+    <a class="clsHide" href="#idAtmGermaniumnam"></a></p>
+  <p id="idAtmGermaniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmGermaniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletGold">
@@ -1137,6 +2051,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Χρυσός-Au79,
     <a class="clsHide" href="#idCletGoldnam"></a></p>
+
+  <section id="idAtmGold">
+  <h2 id="idAtmGoldH2">atom-Gold
+    <a class="clsHide" href="#idAtmGoldH2"></a></h2>
+  <p id="idAtmGoldnam">name::
+    <br>* Mcs.Chmatm.Gold,
+    <br>* Mcs.Gold-atom,
+    <a class="clsHide" href="#idAtmGoldnam"></a></p>
+  <p id="idAtmGoldgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmGoldgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletHafnium">
@@ -1154,6 +2080,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Άφνιο-Hf72,
     <a class="clsHide" href="#idCletHafniumnam"></a></p>
+
+  <section id="idAtmHafnium">
+  <h2 id="idAtmHafniumH2">atom-Hafnium
+    <a class="clsHide" href="#idAtmHafniumH2"></a></h2>
+  <p id="idAtmHafniumnam">name::
+    <br>* Mcs.Chmatm.Hafnium,
+    <br>* Mcs.Hafnium-atom,
+    <a class="clsHide" href="#idAtmHafniumnam"></a></p>
+  <p id="idAtmHafniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmHafniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletHassium">
@@ -1171,6 +2109,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Χάσιο-Hs108,
     <a class="clsHide" href="#idCletHassiumnam"></a></p>
+
+  <section id="idAtmHassium">
+  <h2 id="idAtmHassiumH2">atom-Hassium
+    <a class="clsHide" href="#idAtmHassiumH2"></a></h2>
+  <p id="idAtmHassiumnam">name::
+    <br>* Mcs.Chmatm.Hassium,
+    <br>* Mcs.Hassium-atom,
+    <a class="clsHide" href="#idAtmHassiumnam"></a></p>
+  <p id="idAtmHassiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmHassiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletHelium">
@@ -1188,6 +2138,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ήλιο-He2,
     <a class="clsHide" href="#idCletHeliumnam"></a></p>
+
+  <section id="idAtmHelium">
+  <h2 id="idAtmHeliumH2">atom-Helium
+    <a class="clsHide" href="#idAtmHeliumH2"></a></h2>
+  <p id="idAtmHeliumnam">name::
+    <br>* Mcs.Chmatm.Helium,
+    <br>* Mcs.Helium-atom,
+    <a class="clsHide" href="#idAtmHeliumnam"></a></p>
+  <p id="idAtmHeliumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmHeliumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletHolmium">
@@ -1205,6 +2167,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Όλμιο-Ho67,
     <a class="clsHide" href="#idCletHolmiumnam"></a></p>
+
+  <section id="idAtmHolmium">
+  <h2 id="idAtmHolmiumH2">atom-Holmium
+    <a class="clsHide" href="#idAtmHolmiumH2"></a></h2>
+  <p id="idAtmHolmiumnam">name::
+    <br>* Mcs.Chmatm.Holmium,
+    <br>* Mcs.Holmium-atom,
+    <a class="clsHide" href="#idAtmHolmiumnam"></a></p>
+  <p id="idAtmHolmiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmHolmiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletHydrogen">
@@ -1272,6 +2246,18 @@
     <br>* Mcs.ChmeltH1'generic-specific-tree,
     <a class="clsHide" href="#idCletHydrogengstFnam"></a></p>
   </section>
+
+  <section id="idAtmHydrogen">
+  <h2 id="idAtmHydrogenH2">atom-Hydrogen
+    <a class="clsHide" href="#idAtmHydrogenH2"></a></h2>
+  <p id="idAtmHydrogennam">name::
+    <br>* Mcs.Chmatm.Hydrogen,
+    <br>* Mcs.Hydrogen-atom,
+    <a class="clsHide" href="#idAtmHydrogennam"></a></p>
+  <p id="idAtmHydrogengncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmHydrogengncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletIndium">
@@ -1289,6 +2275,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ίνδιο-In49,
     <a class="clsHide" href="#idCletIndiumnam"></a></p>
+
+  <section id="idAtmIndium">
+  <h2 id="idAtmIndiumH2">atom-Indium
+    <a class="clsHide" href="#idAtmIndiumH2"></a></h2>
+  <p id="idAtmIndiumnam">name::
+    <br>* Mcs.Chmatm.Indium,
+    <br>* Mcs.Indium-atom,
+    <a class="clsHide" href="#idAtmIndiumnam"></a></p>
+  <p id="idAtmIndiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmIndiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletIodine">
@@ -1306,6 +2304,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ιώδιο-I53,
     <a class="clsHide" href="#idCletIodinenam"></a></p>
+
+  <section id="idAtmIodine">
+  <h2 id="idAtmIodineH2">atom-Iodine
+    <a class="clsHide" href="#idAtmIodineH2"></a></h2>
+  <p id="idAtmIodinenam">name::
+    <br>* Mcs.Chmatm.Iodine,
+    <br>* Mcs.Iodine-atom,
+    <a class="clsHide" href="#idAtmIodinenam"></a></p>
+  <p id="idAtmIodinegncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmIodinegncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletIridium">
@@ -1323,6 +2333,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ιρίδιο-Ir77,
     <a class="clsHide" href="#idCletIridiumnam"></a></p>
+
+  <section id="idAtmIridium">
+  <h2 id="idAtmIridiumH2">atom-Iridium
+    <a class="clsHide" href="#idAtmIridiumH2"></a></h2>
+  <p id="idAtmIridiumnam">name::
+    <br>* Mcs.Chmatm.Iridium,
+    <br>* Mcs.Iridium-atom,
+    <a class="clsHide" href="#idAtmIridiumnam"></a></p>
+  <p id="idAtmIridiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmIridiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletIron">
@@ -1340,6 +2362,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Σίδηρος-Fe26,
     <a class="clsHide" href="#idCletIronnam"></a></p>
+
+  <section id="idAtmIron">
+  <h2 id="idAtmIronH2">atom-Iron
+    <a class="clsHide" href="#idAtmIronH2"></a></h2>
+  <p id="idAtmIronnam">name::
+    <br>* Mcs.Chmatm.Iron,
+    <br>* Mcs.Iron-atom,
+    <a class="clsHide" href="#idAtmIronnam"></a></p>
+  <p id="idAtmIrongncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmIrongncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletKrypton">
@@ -1357,6 +2391,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Κρύπτο-Kr36,
     <a class="clsHide" href="#idCletKryptonnam"></a></p>
+
+  <section id="idAtmKrypton">
+  <h2 id="idAtmKryptonH2">atom-Krypton
+    <a class="clsHide" href="#idAtmKryptonH2"></a></h2>
+  <p id="idAtmKryptonnam">name::
+    <br>* Mcs.Chmatm.Krypton,
+    <br>* Mcs.Krypton-atom,
+    <a class="clsHide" href="#idAtmKryptonnam"></a></p>
+  <p id="idAtmKryptongncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmKryptongncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletLanthanum">
@@ -1374,6 +2420,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Λανθάνιο-La57,
     <a class="clsHide" href="#idCletLanthanumnam"></a></p>
+
+  <section id="idAtmLanthanum">
+  <h2 id="idAtmLanthanumH2">atom-Lanthanum
+    <a class="clsHide" href="#idAtmLanthanumH2"></a></h2>
+  <p id="idAtmLanthanumnam">name::
+    <br>* Mcs.Chmatm.Lanthanum,
+    <br>* Mcs.Lanthanum-atom,
+    <a class="clsHide" href="#idAtmLanthanumnam"></a></p>
+  <p id="idAtmLanthanumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmLanthanumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletLawrencium">
@@ -1391,6 +2449,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Λωρέτσιο-Lr103,
     <a class="clsHide" href="#idCletLawrenciumnam"></a></p>
+
+  <section id="idAtmLawrencium">
+  <h2 id="idAtmLawrenciumH2">atom-Lawrencium
+    <a class="clsHide" href="#idAtmLawrenciumH2"></a></h2>
+  <p id="idAtmLawrenciumnam">name::
+    <br>* Mcs.Chmatm.Lawrencium,
+    <br>* Mcs.Lawrencium-atom,
+    <a class="clsHide" href="#idAtmLawrenciumnam"></a></p>
+  <p id="idAtmLawrenciumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmLawrenciumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletLead">
@@ -1408,6 +2478,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Μόλυβδος-Pb82,
     <a class="clsHide" href="#idCletLeadnam"></a></p>
+
+  <section id="idAtmLead">
+  <h2 id="idAtmLeadH2">atom-Lead
+    <a class="clsHide" href="#idAtmLeadH2"></a></h2>
+  <p id="idAtmLeadnam">name::
+    <br>* Mcs.Chmatm.Lead,
+    <br>* Mcs.Lead-atom,
+    <a class="clsHide" href="#idAtmLeadnam"></a></p>
+  <p id="idAtmLeadgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmLeadgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletLithium">
@@ -1425,6 +2507,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Λίθιο-Li3,
     <a class="clsHide" href="#idCletLithiumnam"></a></p>
+
+  <section id="idAtmLithium">
+  <h2 id="idAtmLithiumH2">atom-Lithium
+    <a class="clsHide" href="#idAtmLithiumH2"></a></h2>
+  <p id="idAtmLithiumnam">name::
+    <br>* Mcs.Chmatm.Lithium,
+    <br>* Mcs.Lithium-atom,
+    <a class="clsHide" href="#idAtmLithiumnam"></a></p>
+  <p id="idAtmLithiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmLithiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletLutetium">
@@ -1442,6 +2536,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Λουτήτιο-Lu71,
     <a class="clsHide" href="#idCletLutetiumnam"></a></p>
+
+  <section id="idAtmLutetium">
+  <h2 id="idAtmLutetiumH2">atom-Lutetium
+    <a class="clsHide" href="#idAtmLutetiumH2"></a></h2>
+  <p id="idAtmLutetiumnam">name::
+    <br>* Mcs.Chmatm.Lutetium,
+    <br>* Mcs.Lutetium-atom,
+    <a class="clsHide" href="#idAtmLutetiumnam"></a></p>
+  <p id="idAtmLutetiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmLutetiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletMagnesium">
@@ -1494,6 +2600,18 @@
     <a class="clsHide" href="#idCletMagnesiumunnlvlnam"></a></p>
   </section>
   </section>
+
+  <section id="idAtmMagnesium">
+  <h2 id="idAtmMagnesiumH2">atom-Magnesium
+    <a class="clsHide" href="#idAtmMagnesiumH2"></a></h2>
+  <p id="idAtmMagnesiumnam">name::
+    <br>* Mcs.Chmatm.Magnesium,
+    <br>* Mcs.Magnesium-atom,
+    <a class="clsHide" href="#idAtmMagnesiumnam"></a></p>
+  <p id="idAtmMagnesiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmMagnesiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletManganese">
@@ -1511,6 +2629,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Μαγγάνιο-Mn25,
     <a class="clsHide" href="#idCletManganesenam"></a></p>
+
+  <section id="idAtmManganese">
+  <h2 id="idAtmManganeseH2">atom-Manganese
+    <a class="clsHide" href="#idAtmManganeseH2"></a></h2>
+  <p id="idAtmManganesenam">name::
+    <br>* Mcs.Chmatm.Manganese,
+    <br>* Mcs.Manganese-atom,
+    <a class="clsHide" href="#idAtmManganesenam"></a></p>
+  <p id="idAtmManganesegncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmManganesegncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletMeitnerium">
@@ -1528,6 +2658,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Μαϊτνέριο-Mt109,
     <a class="clsHide" href="#idCletMeitneriumnam"></a></p>
+
+  <section id="idAtmMeitnerium">
+  <h2 id="idAtmMeitneriumH2">atom-Meitnerium
+    <a class="clsHide" href="#idAtmMeitneriumH2"></a></h2>
+  <p id="idAtmMeitneriumnam">name::
+    <br>* Mcs.Chmatm.Meitnerium,
+    <br>* Mcs.Meitnerium-atom,
+    <a class="clsHide" href="#idAtmMeitneriumnam"></a></p>
+  <p id="idAtmMeitneriumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmMeitneriumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletMendelevium">
@@ -1545,6 +2687,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Μεντελέβιο-Md101,
     <a class="clsHide" href="#idCletMendeleviumnam"></a></p>
+
+  <section id="idAtmMendelevium">
+  <h2 id="idAtmMendeleviumH2">atom-Mendelevium
+    <a class="clsHide" href="#idAtmMendeleviumH2"></a></h2>
+  <p id="idAtmMendeleviumnam">name::
+    <br>* Mcs.Chmatm.Mendelevium,
+    <br>* Mcs.Mendelevium-atom,
+    <a class="clsHide" href="#idAtmMendeleviumnam"></a></p>
+  <p id="idAtmMendeleviumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmMendeleviumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletMercury">
@@ -1562,6 +2716,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Υδράργυρος-Hg80,
     <a class="clsHide" href="#idCletMercurynam"></a></p>
+
+  <section id="idAtmMercury">
+  <h2 id="idAtmMercuryH2">atom-Mercury
+    <a class="clsHide" href="#idAtmMercuryH2"></a></h2>
+  <p id="idAtmMercurynam">name::
+    <br>* Mcs.Chmatm.Mercury,
+    <br>* Mcs.Mercury-atom,
+    <a class="clsHide" href="#idAtmMercurynam"></a></p>
+  <p id="idAtmMercurygncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmMercurygncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletMolybdenum">
@@ -1579,6 +2745,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Μολυβδαίνιο-Mo42,
     <a class="clsHide" href="#idCletMolybdenumnam"></a></p>
+
+  <section id="idAtmMolybdenum">
+  <h2 id="idAtmMolybdenumH2">atom-Molybdenum
+    <a class="clsHide" href="#idAtmMolybdenumH2"></a></h2>
+  <p id="idAtmMolybdenumnam">name::
+    <br>* Mcs.Chmatm.Molybdenum,
+    <br>* Mcs.Molybdenum-atom,
+    <a class="clsHide" href="#idAtmMolybdenumnam"></a></p>
+  <p id="idAtmMolybdenumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmMolybdenumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletNeodymium">
@@ -1596,6 +2774,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Νεοδύμιο-Nd60,
     <a class="clsHide" href="#idCletNeodymiumnam"></a></p>
+
+  <section id="idAtmNeodymium">
+  <h2 id="idAtmNeodymiumH2">atom-Neodymium
+    <a class="clsHide" href="#idAtmNeodymiumH2"></a></h2>
+  <p id="idAtmNeodymiumnam">name::
+    <br>* Mcs.Chmatm.Neodymium,
+    <br>* Mcs.Neodymium-atom,
+    <a class="clsHide" href="#idAtmNeodymiumnam"></a></p>
+  <p id="idAtmNeodymiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmNeodymiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletNeon">
@@ -1613,6 +2803,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Νέον-Ne10,
     <a class="clsHide" href="#idCletNeonnam"></a></p>
+
+  <section id="idAtmNeon">
+  <h2 id="idAtmNeonH2">atom-Neon
+    <a class="clsHide" href="#idAtmNeonH2"></a></h2>
+  <p id="idAtmNeonnam">name::
+    <br>* Mcs.Chmatm.Neon,
+    <br>* Mcs.Neon-atom,
+    <a class="clsHide" href="#idAtmNeonnam"></a></p>
+  <p id="idAtmNeongncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmNeongncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletNeptunium">
@@ -1630,6 +2832,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ποσειδώνιο-Np93,
     <a class="clsHide" href="#idCletNeptuniumnam"></a></p>
+
+  <section id="idAtmNeptunium">
+  <h2 id="idAtmNeptuniumH2">atom-Neptunium
+    <a class="clsHide" href="#idAtmNeptuniumH2"></a></h2>
+  <p id="idAtmNeptuniumnam">name::
+    <br>* Mcs.Chmatm.Neptunium,
+    <br>* Mcs.Neptunium-atom,
+    <a class="clsHide" href="#idAtmNeptuniumnam"></a></p>
+  <p id="idAtmNeptuniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmNeptuniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletNickel">
@@ -1647,6 +2861,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Νικέλιο-Ni28,
     <a class="clsHide" href="#idCletNickelnam"></a></p>
+
+  <section id="idAtmNickel">
+  <h2 id="idAtmNickelH2">atom-Nickel
+    <a class="clsHide" href="#idAtmNickelH2"></a></h2>
+  <p id="idAtmNickelnam">name::
+    <br>* Mcs.Chmatm.Nickel,
+    <br>* Mcs.Nickel-atom,
+    <a class="clsHide" href="#idAtmNickelnam"></a></p>
+  <p id="idAtmNickelgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmNickelgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletNiobium">
@@ -1664,6 +2890,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Νιόβιο-Nb41,
     <a class="clsHide" href="#idCletNiobiumnam"></a></p>
+
+  <section id="idAtmNiobium">
+  <h2 id="idAtmNiobiumH2">atom-Niobium
+    <a class="clsHide" href="#idAtmNiobiumH2"></a></h2>
+  <p id="idAtmNiobiumnam">name::
+    <br>* Mcs.Chmatm.Niobium,
+    <br>* Mcs.Niobium-atom,
+    <a class="clsHide" href="#idAtmNiobiumnam"></a></p>
+  <p id="idAtmNiobiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmNiobiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletNitrogen">
@@ -1710,6 +2948,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Νομπέλιο-No102,
     <a class="clsHide" href="#idCletNobeliumnam"></a></p>
+
+  <section id="idAtmNobelium">
+  <h2 id="idAtmNobeliumH2">atom-Nobelium
+    <a class="clsHide" href="#idAtmNobeliumH2"></a></h2>
+  <p id="idAtmNobeliumnam">name::
+    <br>* Mcs.Chmatm.Nobelium,
+    <br>* Mcs.Nobelium-atom,
+    <a class="clsHide" href="#idAtmNobeliumnam"></a></p>
+  <p id="idAtmNobeliumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmNobeliumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletOsmium">
@@ -1727,6 +2977,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Όσμιο-Os76,
     <a class="clsHide" href="#idCletOsmiumnam"></a></p>
+
+  <section id="idAtmOsmium">
+  <h2 id="idAtmOsmiumH2">atom-Osmium
+    <a class="clsHide" href="#idAtmOsmiumH2"></a></h2>
+  <p id="idAtmOsmiumnam">name::
+    <br>* Mcs.Chmatm.Osmium,
+    <br>* Mcs.Osmium-atom,
+    <a class="clsHide" href="#idAtmOsmiumnam"></a></p>
+  <p id="idAtmOsmiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmOsmiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletOxygen">
@@ -1766,6 +3028,18 @@
     <a class="clsHide" href="#idCletOxygenprdgnam"></a></p>
   </section>
   </section>
+
+  <section id="idAtmOzygen">
+  <h2 id="idAtmOzygenH2">atom-Ozygen
+    <a class="clsHide" href="#idAtmOzygenH2"></a></h2>
+  <p id="idAtmOzygennam">name::
+    <br>* Mcs.Chmatm.Ozygen,
+    <br>* Mcs.Ozygen-atom,
+    <a class="clsHide" href="#idAtmOzygennam"></a></p>
+  <p id="idAtmOzygengncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmOzygengncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletPalladium">
@@ -1783,6 +3057,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Παλλάδιο-Pd46,
     <a class="clsHide" href="#idCletPalladiumnam"></a></p>
+
+  <section id="idAtmPalladium">
+  <h2 id="idAtmPalladiumH2">atom-Palladium
+    <a class="clsHide" href="#idAtmPalladiumH2"></a></h2>
+  <p id="idAtmPalladiumnam">name::
+    <br>* Mcs.Chmatm.Palladium,
+    <br>* Mcs.Palladium-atom,
+    <a class="clsHide" href="#idAtmPalladiumnam"></a></p>
+  <p id="idAtmPalladiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmPalladiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletPhosphorus">
@@ -1814,6 +3100,18 @@
     <br>* Mcs.ChmeltP15'evoluting,
     <a class="clsHide" href="#idCletPhosphorusevgnam"></a></p>
   </section>
+
+  <section id="idAtmPhosphorus">
+  <h2 id="idAtmPhosphorusH2">atom-Phosphorus
+    <a class="clsHide" href="#idAtmPhosphorusH2"></a></h2>
+  <p id="idAtmPhosphorusnam">name::
+    <br>* Mcs.Chmatm.Phosphorus,
+    <br>* Mcs.Phosphorus-atom,
+    <a class="clsHide" href="#idAtmPhosphorusnam"></a></p>
+  <p id="idAtmPhosphorusgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmPhosphorusgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletPlatinum">
@@ -1831,6 +3129,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Λευκόχρυσος-Pt78,
     <a class="clsHide" href="#idCletPlatinumnam"></a></p>
+
+  <section id="idAtmPlatinum">
+  <h2 id="idAtmPlatinumH2">atom-Platinum
+    <a class="clsHide" href="#idAtmPlatinumH2"></a></h2>
+  <p id="idAtmPlatinumnam">name::
+    <br>* Mcs.Chmatm.Platinum,
+    <br>* Mcs.Platinum-atom,
+    <a class="clsHide" href="#idAtmPlatinumnam"></a></p>
+  <p id="idAtmPlatinumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmPlatinumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletPlutonium">
@@ -1848,6 +3158,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Πλουτώνιο-Pu94,
     <a class="clsHide" href="#idCletPlutoniumnam"></a></p>
+
+  <section id="idAtmPlutonium">
+  <h2 id="idAtmPlutoniumH2">atom-Plutonium
+    <a class="clsHide" href="#idAtmPlutoniumH2"></a></h2>
+  <p id="idAtmPlutoniumnam">name::
+    <br>* Mcs.Chmatm.Plutonium,
+    <br>* Mcs.Plutonium-atom,
+    <a class="clsHide" href="#idAtmPlutoniumnam"></a></p>
+  <p id="idAtmPlutoniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmPlutoniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletPolonium">
@@ -1865,6 +3187,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Πολώνιο-Po84,
     <a class="clsHide" href="#idCletPoloniumnam"></a></p>
+
+  <section id="idAtmPolonium">
+  <h2 id="idAtmPoloniumH2">atom-Polonium
+    <a class="clsHide" href="#idAtmPoloniumH2"></a></h2>
+  <p id="idAtmPoloniumnam">name::
+    <br>* Mcs.Chmatm.Polonium,
+    <br>* Mcs.Polonium-atom,
+    <a class="clsHide" href="#idAtmPoloniumnam"></a></p>
+  <p id="idAtmPoloniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmPoloniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletPotassium">
@@ -1910,6 +3244,18 @@
     <a class="clsHide" href="#idCletPotassiumunnlvlnam"></a></p>
   </section>
   </section>
+
+  <section id="idAtmPotassium">
+  <h2 id="idAtmPotassiumH2">atom-Potassium
+    <a class="clsHide" href="#idAtmPotassiumH2"></a></h2>
+  <p id="idAtmPotassiumnam">name::
+    <br>* Mcs.Chmatm.Potassium,
+    <br>* Mcs.Potassium-atom,
+    <a class="clsHide" href="#idAtmPotassiumnam"></a></p>
+  <p id="idAtmPotassiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmPotassiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletPraseodymium">
@@ -1927,6 +3273,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Πρασινοδύμιο-Pr59,
     <a class="clsHide" href="#idCletPraseodymiumnam"></a></p>
+
+  <section id="idAtmPraseodymium">
+  <h2 id="idAtmPraseodymiumH2">atom-Praseodymium
+    <a class="clsHide" href="#idAtmPraseodymiumH2"></a></h2>
+  <p id="idAtmPraseodymiumnam">name::
+    <br>* Mcs.Chmatm.Praseodymium,
+    <br>* Mcs.Praseodymium-atom,
+    <a class="clsHide" href="#idAtmPraseodymiumnam"></a></p>
+  <p id="idAtmPraseodymiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmPraseodymiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletPromethium">
@@ -1944,6 +3302,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Προμήθιο-Pm61,
     <a class="clsHide" href="#idCletPromethiumnam"></a></p>
+
+  <section id="idAtmPromethium">
+  <h2 id="idAtmPromethiumH2">atom-Promethium
+    <a class="clsHide" href="#idAtmPromethiumH2"></a></h2>
+  <p id="idAtmPromethiumnam">name::
+    <br>* Mcs.Chmatm.Promethium,
+    <br>* Mcs.Promethium-atom,
+    <a class="clsHide" href="#idAtmPromethiumnam"></a></p>
+  <p id="idAtmPromethiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmPromethiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletProtactinium">
@@ -1961,6 +3331,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Πρωτακτίνιο-Pa91,
     <a class="clsHide" href="#idCletProtactiniumnam"></a></p>
+
+  <section id="idAtmProtactinium">
+  <h2 id="idAtmProtactiniumH2">atom-Protactinium
+    <a class="clsHide" href="#idAtmProtactiniumH2"></a></h2>
+  <p id="idAtmProtactiniumnam">name::
+    <br>* Mcs.Chmatm.Protactinium,
+    <br>* Mcs.Protactinium-atom,
+    <a class="clsHide" href="#idAtmProtactiniumnam"></a></p>
+  <p id="idAtmProtactiniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmProtactiniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletRadium">
@@ -1978,6 +3360,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ράδιο-Ra88,
     <a class="clsHide" href="#idCletRadiumnam"></a></p>
+
+  <section id="idAtmRadium">
+  <h2 id="idAtmRadiumH2">atom-Radium
+    <a class="clsHide" href="#idAtmRadiumH2"></a></h2>
+  <p id="idAtmRadiumnam">name::
+    <br>* Mcs.Chmatm.Radium,
+    <br>* Mcs.Radium-atom,
+    <a class="clsHide" href="#idAtmRadiumnam"></a></p>
+  <p id="idAtmRadiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmRadiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletRadon">
@@ -1995,6 +3389,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ραδόνιο-Rn86,
     <a class="clsHide" href="#idCletRadonnam"></a></p>
+
+  <section id="idAtmRadon">
+  <h2 id="idAtmRadonH2">atom-Radon
+    <a class="clsHide" href="#idAtmRadonH2"></a></h2>
+  <p id="idAtmRadonnam">name::
+    <br>* Mcs.Chmatm.Radon,
+    <br>* Mcs.Radon-atom,
+    <a class="clsHide" href="#idAtmRadonnam"></a></p>
+  <p id="idAtmRadongncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmRadongncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletRhenium">
@@ -2012,6 +3418,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ρήνιο-Re75,
     <a class="clsHide" href="#idCletRheniumnam"></a></p>
+
+  <section id="idAtmRhenium">
+  <h2 id="idAtmRheniumH2">atom-Rhenium
+    <a class="clsHide" href="#idAtmRheniumH2"></a></h2>
+  <p id="idAtmRheniumnam">name::
+    <br>* Mcs.Chmatm.Rhenium,
+    <br>* Mcs.Rhenium-atom,
+    <a class="clsHide" href="#idAtmRheniumnam"></a></p>
+  <p id="idAtmRheniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmRheniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletRhodium">
@@ -2029,6 +3447,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ρόδιο-Rh45,
     <a class="clsHide" href="#idCletRhodiumnam"></a></p>
+
+  <section id="idAtmRhodium">
+  <h2 id="idAtmRhodiumH2">atom-Rhodium
+    <a class="clsHide" href="#idAtmRhodiumH2"></a></h2>
+  <p id="idAtmRhodiumnam">name::
+    <br>* Mcs.Chmatm.Rhodium,
+    <br>* Mcs.Rhodium-atom,
+    <a class="clsHide" href="#idAtmRhodiumnam"></a></p>
+  <p id="idAtmRhodiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmRhodiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletRubidium">
@@ -2046,6 +3476,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ρουβίδιο-Rb37,
     <a class="clsHide" href="#idCletRubidiumnam"></a></p>
+
+  <section id="idAtmRubidium">
+  <h2 id="idAtmRubidiumH2">atom-Rubidium
+    <a class="clsHide" href="#idAtmRubidiumH2"></a></h2>
+  <p id="idAtmRubidiumnam">name::
+    <br>* Mcs.Chmatm.Rubidium,
+    <br>* Mcs.Rubidium-atom,
+    <a class="clsHide" href="#idAtmRubidiumnam"></a></p>
+  <p id="idAtmRubidiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmRubidiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletRuthenium">
@@ -2063,6 +3505,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ρουθήνιο-Ru44,
     <a class="clsHide" href="#idCletRutheniumnam"></a></p>
+
+  <section id="idAtmRuthenium">
+  <h2 id="idAtmRutheniumH2">atom-Ruthenium
+    <a class="clsHide" href="#idAtmRutheniumH2"></a></h2>
+  <p id="idAtmRutheniumnam">name::
+    <br>* Mcs.Chmatm.Ruthenium,
+    <br>* Mcs.Ruthenium-atom,
+    <a class="clsHide" href="#idAtmRutheniumnam"></a></p>
+  <p id="idAtmRutheniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmRutheniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletRutherfordium">
@@ -2080,6 +3534,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ραδερφόρντιο-Rf104,
     <a class="clsHide" href="#idCletRutherfordiumnam"></a></p>
+
+  <section id="idAtmRutherfordium">
+  <h2 id="idAtmRutherfordiumH2">atom-Rutherfordium
+    <a class="clsHide" href="#idAtmRutherfordiumH2"></a></h2>
+  <p id="idAtmRutherfordiumnam">name::
+    <br>* Mcs.Chmatm.Rutherfordium,
+    <br>* Mcs.Rutherfordium-atom,
+    <a class="clsHide" href="#idAtmRutherfordiumnam"></a></p>
+  <p id="idAtmRutherfordiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmRutherfordiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletSamarium">
@@ -2097,6 +3563,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Σαμάριο-Sm62,
     <a class="clsHide" href="#idCletSamariumnam"></a></p>
+
+  <section id="idAtmSamarium">
+  <h2 id="idAtmSamariumH2">atom-Samarium
+    <a class="clsHide" href="#idAtmSamariumH2"></a></h2>
+  <p id="idAtmSamariumnam">name::
+    <br>* Mcs.Chmatm.Samarium,
+    <br>* Mcs.Samarium-atom,
+    <a class="clsHide" href="#idAtmSamariumnam"></a></p>
+  <p id="idAtmSamariumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmSamariumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletScandium">
@@ -2114,6 +3592,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Σκάνδιο-Sc21,
     <a class="clsHide" href="#idCletScandiumnam"></a></p>
+
+  <section id="idAtmScandium">
+  <h2 id="idAtmScandiumH2">atom-Scandium
+    <a class="clsHide" href="#idAtmScandiumH2"></a></h2>
+  <p id="idAtmScandiumnam">name::
+    <br>* Mcs.Chmatm.Scandium,
+    <br>* Mcs.Scandium-atom,
+    <a class="clsHide" href="#idAtmScandiumnam"></a></p>
+  <p id="idAtmScandiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmScandiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletSeaborgium">
@@ -2131,6 +3621,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Σιμπόργκιο-Sg106,
     <a class="clsHide" href="#idCletSeaborgiumnam"></a></p>
+
+  <section id="idAtmSeaborgium">
+  <h2 id="idAtmSeaborgiumH2">atom-Seaborgium
+    <a class="clsHide" href="#idAtmSeaborgiumH2"></a></h2>
+  <p id="idAtmSeaborgiumnam">name::
+    <br>* Mcs.Chmatm.Seaborgium,
+    <br>* Mcs.Seaborgium-atom,
+    <a class="clsHide" href="#idAtmSeaborgiumnam"></a></p>
+  <p id="idAtmSeaborgiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmSeaborgiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletSelenium">
@@ -2148,6 +3650,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Σελήνιο-Se34,
     <a class="clsHide" href="#idCletSeleniumnam"></a></p>
+
+  <section id="idAtmSelenium">
+  <h2 id="idAtmSeleniumH2">atom-Selenium
+    <a class="clsHide" href="#idAtmSeleniumH2"></a></h2>
+  <p id="idAtmSeleniumnam">name::
+    <br>* Mcs.Chmatm.Selenium,
+    <br>* Mcs.Selenium-atom,
+    <a class="clsHide" href="#idAtmSeleniumnam"></a></p>
+  <p id="idAtmSeleniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmSeleniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletSilicon">
@@ -2165,6 +3679,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Πυρίτιο-Si14,
     <a class="clsHide" href="#idCletSiliconnam"></a></p>
+
+  <section id="idAtmSilicon">
+  <h2 id="idAtmSiliconH2">atom-Silicon
+    <a class="clsHide" href="#idAtmSiliconH2"></a></h2>
+  <p id="idAtmSiliconnam">name::
+    <br>* Mcs.Chmatm.Silicon,
+    <br>* Mcs.Silicon-atom,
+    <a class="clsHide" href="#idAtmSiliconnam"></a></p>
+  <p id="idAtmSilicongncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmSilicongncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletSilver">
@@ -2182,6 +3708,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Άργυρος-Ag47,
     <a class="clsHide" href="#idCletSilvernam"></a></p>
+
+  <section id="idAtmSilver">
+  <h2 id="idAtmSilverH2">atom-Silver
+    <a class="clsHide" href="#idAtmSilverH2"></a></h2>
+  <p id="idAtmSilvernam">name::
+    <br>* Mcs.Chmatm.Silver,
+    <br>* Mcs.Silver-atom,
+    <a class="clsHide" href="#idAtmSilvernam"></a></p>
+  <p id="idAtmSilvergncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmSilvergncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletSodium">
@@ -2199,6 +3737,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Νάτριο-Na11,
     <a class="clsHide" href="#idCletSodiumnam"></a></p>
+
+  <section id="idAtmSodium">
+  <h2 id="idAtmSodiumH2">atom-Sodium
+    <a class="clsHide" href="#idAtmSodiumH2"></a></h2>
+  <p id="idAtmSodiumnam">name::
+    <br>* Mcs.Chmatm.Sodium,
+    <br>* Mcs.Sodium-atom,
+    <a class="clsHide" href="#idAtmSodiumnam"></a></p>
+  <p id="idAtmSodiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmSodiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletStrontium">
@@ -2216,6 +3766,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Στρόντιο-Sr38,
     <a class="clsHide" href="#idCletStrontiumnam"></a></p>
+
+  <section id="idAtmStrontium">
+  <h2 id="idAtmStrontiumH2">atom-Strontium
+    <a class="clsHide" href="#idAtmStrontiumH2"></a></h2>
+  <p id="idAtmStrontiumnam">name::
+    <br>* Mcs.Chmatm.Strontium,
+    <br>* Mcs.Strontium-atom,
+    <a class="clsHide" href="#idAtmStrontiumnam"></a></p>
+  <p id="idAtmStrontiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmStrontiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletSulfur">
@@ -2233,6 +3795,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Θείο-S16,
     <a class="clsHide" href="#idCletSulfurnam"></a></p>
+
+  <section id="idAtmSulfur">
+  <h2 id="idAtmSulfurH2">atom-Sulfur
+    <a class="clsHide" href="#idAtmSulfurH2"></a></h2>
+  <p id="idAtmSulfurnam">name::
+    <br>* Mcs.Chmatm.Sulfur,
+    <br>* Mcs.Sulfur-atom,
+    <a class="clsHide" href="#idAtmSulfurnam"></a></p>
+  <p id="idAtmSulfurgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmSulfurgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletTantalum">
@@ -2250,6 +3824,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ταντάλιο-Ta73,
     <a class="clsHide" href="#idCletTantalumnam"></a></p>
+
+  <section id="idAtmTantalum">
+  <h2 id="idAtmTantalumH2">atom-Tantalum
+    <a class="clsHide" href="#idAtmTantalumH2"></a></h2>
+  <p id="idAtmTantalumnam">name::
+    <br>* Mcs.Chmatm.Tantalum,
+    <br>* Mcs.Tantalum-atom,
+    <a class="clsHide" href="#idAtmTantalumnam"></a></p>
+  <p id="idAtmTantalumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmTantalumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletTechnetium">
@@ -2267,6 +3853,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Τεχνήτιο-Tc43,
     <a class="clsHide" href="#idCletTechnetiumnam"></a></p>
+
+  <section id="idAtmTechnetium">
+  <h2 id="idAtmTechnetiumH2">atom-Technetium
+    <a class="clsHide" href="#idAtmTechnetiumH2"></a></h2>
+  <p id="idAtmTechnetiumnam">name::
+    <br>* Mcs.Chmatm.Technetium,
+    <br>* Mcs.Technetium-atom,
+    <a class="clsHide" href="#idAtmTechnetiumnam"></a></p>
+  <p id="idAtmTechnetiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmTechnetiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletTellurium">
@@ -2284,6 +3882,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Τελλούριο-Te52,
     <a class="clsHide" href="#idCletTelluriumnam"></a></p>
+
+  <section id="idAtmTellurium">
+  <h2 id="idAtmTelluriumH2">atom-Tellurium
+    <a class="clsHide" href="#idAtmTelluriumH2"></a></h2>
+  <p id="idAtmTelluriumnam">name::
+    <br>* Mcs.Chmatm.Tellurium,
+    <br>* Mcs.Tellurium-atom,
+    <a class="clsHide" href="#idAtmTelluriumnam"></a></p>
+  <p id="idAtmTelluriumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmTelluriumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletTerbium">
@@ -2301,6 +3911,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Τέρβιο-Tb65,
     <a class="clsHide" href="#idCletTerbiumnam"></a></p>
+
+  <section id="idAtmTerbium">
+  <h2 id="idAtmTerbiumH2">atom-Terbium
+    <a class="clsHide" href="#idAtmTerbiumH2"></a></h2>
+  <p id="idAtmTerbiumnam">name::
+    <br>* Mcs.Chmatm.Terbium,
+    <br>* Mcs.Terbium-atom,
+    <a class="clsHide" href="#idAtmTerbiumnam"></a></p>
+  <p id="idAtmTerbiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmTerbiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletThallium">
@@ -2318,6 +3940,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Θάλλιο-Tl81,
     <a class="clsHide" href="#idCletThalliumnam"></a></p>
+
+  <section id="idAtmThallium">
+  <h2 id="idAtmThalliumH2">atom-Thallium
+    <a class="clsHide" href="#idAtmThalliumH2"></a></h2>
+  <p id="idAtmThalliumnam">name::
+    <br>* Mcs.Chmatm.Thallium,
+    <br>* Mcs.Thallium-atom,
+    <a class="clsHide" href="#idAtmThalliumnam"></a></p>
+  <p id="idAtmThalliumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmThalliumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletThorium">
@@ -2335,6 +3969,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Θόριο-Th90,
     <a class="clsHide" href="#idCletThoriumnam"></a></p>
+
+  <section id="idAtmThorium">
+  <h2 id="idAtmThoriumH2">atom-Thorium
+    <a class="clsHide" href="#idAtmThoriumH2"></a></h2>
+  <p id="idAtmThoriumnam">name::
+    <br>* Mcs.Chmatm.Thorium,
+    <br>* Mcs.Thorium-atom,
+    <a class="clsHide" href="#idAtmThoriumnam"></a></p>
+  <p id="idAtmThoriumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmThoriumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletThulium">
@@ -2352,6 +3998,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Θούλιο-Tm69,
     <a class="clsHide" href="#idCletThuliumnam"></a></p>
+
+  <section id="idAtmThulium">
+  <h2 id="idAtmThuliumH2">atom-Thulium
+    <a class="clsHide" href="#idAtmThuliumH2"></a></h2>
+  <p id="idAtmThuliumnam">name::
+    <br>* Mcs.Chmatm.Thulium,
+    <br>* Mcs.Thulium-atom,
+    <a class="clsHide" href="#idAtmThuliumnam"></a></p>
+  <p id="idAtmThuliumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmThuliumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletTin">
@@ -2369,6 +4027,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Κασσίτερος-Sn50,
     <a class="clsHide" href="#idCletTinnam"></a></p>
+
+  <section id="idAtmTin">
+  <h2 id="idAtmTinH2">atom-Tin
+    <a class="clsHide" href="#idAtmTinH2"></a></h2>
+  <p id="idAtmTinnam">name::
+    <br>* Mcs.Chmatm.Tin,
+    <br>* Mcs.Tin-atom,
+    <a class="clsHide" href="#idAtmTinnam"></a></p>
+  <p id="idAtmTingncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmTingncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletTitanium">
@@ -2386,6 +4056,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Τιτάνιο-Ti22,
     <a class="clsHide" href="#idCletTitaniumnam"></a></p>
+
+  <section id="idAtmTitanium">
+  <h2 id="idAtmTitaniumH2">atom-Titanium
+    <a class="clsHide" href="#idAtmTitaniumH2"></a></h2>
+  <p id="idAtmTitaniumnam">name::
+    <br>* Mcs.Chmatm.Titanium,
+    <br>* Mcs.Titanium-atom,
+    <a class="clsHide" href="#idAtmTitaniumnam"></a></p>
+  <p id="idAtmTitaniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmTitaniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletTungsten">
@@ -2403,6 +4085,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Βολφράμιο-W74,
     <a class="clsHide" href="#idCletTungstennam"></a></p>
+
+  <section id="idAtmTungsten">
+  <h2 id="idAtmTungstenH2">atom-Tungsten
+    <a class="clsHide" href="#idAtmTungstenH2"></a></h2>
+  <p id="idAtmTungstennam">name::
+    <br>* Mcs.Chmatm.Tungsten,
+    <br>* Mcs.Tungsten-atom,
+    <a class="clsHide" href="#idAtmTungstennam"></a></p>
+  <p id="idAtmTungstengncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmTungstengncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletUnunbium">
@@ -2420,6 +4114,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Κοπερνίκιο-Uub112,
     <a class="clsHide" href="#idCletUnunbiumnam"></a></p>
+
+  <section id="idAtmUnunbium">
+  <h2 id="idAtmUnunbiumH2">atom-Ununbium
+    <a class="clsHide" href="#idAtmUnunbiumH2"></a></h2>
+  <p id="idAtmUnunbiumnam">name::
+    <br>* Mcs.Chmatm.Ununbium,
+    <br>* Mcs.Ununbium-atom,
+    <a class="clsHide" href="#idAtmUnunbiumnam"></a></p>
+  <p id="idAtmUnunbiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmUnunbiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletUnunhexium">
@@ -2437,6 +4143,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ουνουχέξιο-Uuh116,
     <a class="clsHide" href="#idCletUnunhexiumnam"></a></p>
+
+  <section id="idAtmUnunhexium">
+  <h2 id="idAtmUnunhexiumH2">atom-Ununhexium
+    <a class="clsHide" href="#idAtmUnunhexiumH2"></a></h2>
+  <p id="idAtmUnunhexiumnam">name::
+    <br>* Mcs.Chmatm.Ununhexium,
+    <br>* Mcs.Ununhexium-atom,
+    <a class="clsHide" href="#idAtmUnunhexiumnam"></a></p>
+  <p id="idAtmUnunhexiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmUnunhexiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletUnunoctium">
@@ -2454,6 +4172,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Uuo118,
     <a class="clsHide" href="#idCletUnunoctiumnam"></a></p>
+
+  <section id="idAtmUnunoctium">
+  <h2 id="idAtmUnunoctiumH2">atom-Ununoctium
+    <a class="clsHide" href="#idAtmUnunoctiumH2"></a></h2>
+  <p id="idAtmUnunoctiumnam">name::
+    <br>* Mcs.Chmatm.Ununoctium,
+    <br>* Mcs.Ununoctium-atom,
+    <a class="clsHide" href="#idAtmUnunoctiumnam"></a></p>
+  <p id="idAtmUnunoctiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmUnunoctiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletUnunpentium">
@@ -2471,6 +4201,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ουνουπέντιο-Uup115,
     <a class="clsHide" href="#idCletUnunpentiumnam"></a></p>
+
+  <section id="idAtmUnunpentium">
+  <h2 id="idAtmUnunpentiumH2">atom-Ununpentium
+    <a class="clsHide" href="#idAtmUnunpentiumH2"></a></h2>
+  <p id="idAtmUnunpentiumnam">name::
+    <br>* Mcs.Chmatm.Ununpentium,
+    <br>* Mcs.Ununpentium-atom,
+    <a class="clsHide" href="#idAtmUnunpentiumnam"></a></p>
+  <p id="idAtmUnunpentiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmUnunpentiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletUnunquadium">
@@ -2488,6 +4230,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ουνοκουάντιο-Uuq114,
     <a class="clsHide" href="#idCletUnunquadiumnam"></a></p>
+
+  <section id="idAtmUnunquadium">
+  <h2 id="idAtmUnunquadiumH2">atom-Ununquadium
+    <a class="clsHide" href="#idAtmUnunquadiumH2"></a></h2>
+  <p id="idAtmUnunquadiumnam">name::
+    <br>* Mcs.Chmatm.Ununquadium,
+    <br>* Mcs.Ununquadium-atom,
+    <a class="clsHide" href="#idAtmUnunquadiumnam"></a></p>
+  <p id="idAtmUnunquadiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmUnunquadiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletUnunseptium">
@@ -2505,6 +4259,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ουνουσέπτιο-Uus117,
     <a class="clsHide" href="#idCletUnunseptiumnam"></a></p>
+
+  <section id="idAtmUnunseptium">
+  <h2 id="idAtmUnunseptiumH2">atom-Ununseptium
+    <a class="clsHide" href="#idAtmUnunseptiumH2"></a></h2>
+  <p id="idAtmUnunseptiumnam">name::
+    <br>* Mcs.Chmatm.Ununseptium,
+    <br>* Mcs.Ununseptium-atom,
+    <a class="clsHide" href="#idAtmUnunseptiumnam"></a></p>
+  <p id="idAtmUnunseptiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmUnunseptiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletUnuntrium">
@@ -2539,6 +4305,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ουνούντριο-Uut113,
     <a class="clsHide" href="#idCletUnuntriumnam"></a></p>
+
+  <section id="idAtmUnuntrium">
+  <h2 id="idAtmUnuntriumH2">atom-Ununtrium
+    <a class="clsHide" href="#idAtmUnuntriumH2"></a></h2>
+  <p id="idAtmUnuntriumnam">name::
+    <br>* Mcs.Chmatm.Ununtrium,
+    <br>* Mcs.Ununtrium-atom,
+    <a class="clsHide" href="#idAtmUnuntriumnam"></a></p>
+  <p id="idAtmUnuntriumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmUnuntriumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletUnunium">
@@ -2556,6 +4334,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ρεντγκένιο-Uuu111,
     <a class="clsHide" href="#idCletUnuniumnam"></a></p>
+
+  <section id="idAtmUnunium">
+  <h2 id="idAtmUnuniumH2">atom-Ununium
+    <a class="clsHide" href="#idAtmUnuniumH2"></a></h2>
+  <p id="idAtmUnuniumnam">name::
+    <br>* Mcs.Chmatm.Ununium,
+    <br>* Mcs.Ununium-atom,
+    <a class="clsHide" href="#idAtmUnuniumnam"></a></p>
+  <p id="idAtmUnuniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmUnuniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletUranium">
@@ -2573,6 +4363,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ουράνιο-U92,
     <a class="clsHide" href="#idCletUraniumnam"></a></p>
+
+  <section id="idAtmUranium">
+  <h2 id="idAtmUraniumH2">atom-Uranium
+    <a class="clsHide" href="#idAtmUraniumH2"></a></h2>
+  <p id="idAtmUraniumnam">name::
+    <br>* Mcs.Chmatm.Uranium,
+    <br>* Mcs.Uranium-atom,
+    <a class="clsHide" href="#idAtmUraniumnam"></a></p>
+  <p id="idAtmUraniumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmUraniumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletVanadium">
@@ -2590,6 +4392,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Βανάδιο-V23,
     <a class="clsHide" href="#idCletVanadiumnam"></a></p>
+
+  <section id="idAtmVanadium">
+  <h2 id="idAtmVanadiumH2">atom-Vanadium
+    <a class="clsHide" href="#idAtmVanadiumH2"></a></h2>
+  <p id="idAtmVanadiumnam">name::
+    <br>* Mcs.Chmatm.Vanadium,
+    <br>* Mcs.Vanadium-atom,
+    <a class="clsHide" href="#idAtmVanadiumnam"></a></p>
+  <p id="idAtmVanadiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmVanadiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletXenon">
@@ -2607,6 +4421,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ξένο-Xe54,
     <a class="clsHide" href="#idCletXenonnam"></a></p>
+
+  <section id="idAtmXenon">
+  <h2 id="idAtmXenonH2">atom-Xenon
+    <a class="clsHide" href="#idAtmXenonH2"></a></h2>
+  <p id="idAtmXenonnam">name::
+    <br>* Mcs.Chmatm.Xenon,
+    <br>* Mcs.Xenon-atom,
+    <a class="clsHide" href="#idAtmXenonnam"></a></p>
+  <p id="idAtmXenongncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmXenongncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletYtterbium">
@@ -2624,6 +4450,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Υπέρβιο-Yb70,
     <a class="clsHide" href="#idCletYtterbiumnam"></a></p>
+
+  <section id="idAtmYtterbium">
+  <h2 id="idAtmYtterbiumH2">atom-Ytterbium
+    <a class="clsHide" href="#idAtmYtterbiumH2"></a></h2>
+  <p id="idAtmYtterbiumnam">name::
+    <br>* Mcs.Chmatm.Ytterbium,
+    <br>* Mcs.Ytterbium-atom,
+    <a class="clsHide" href="#idAtmYtterbiumnam"></a></p>
+  <p id="idAtmYtterbiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmYtterbiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletYttrium">
@@ -2641,6 +4479,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ύτριο-Y39,
     <a class="clsHide" href="#idCletYttriumnam"></a></p>
+
+  <section id="idAtmYttrium">
+  <h2 id="idAtmYttriumH2">atom-Yttrium
+    <a class="clsHide" href="#idAtmYttriumH2"></a></h2>
+  <p id="idAtmYttriumnam">name::
+    <br>* Mcs.Chmatm.Yttrium,
+    <br>* Mcs.Yttrium-atom,
+    <a class="clsHide" href="#idAtmYttriumnam"></a></p>
+  <p id="idAtmYttriumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmYttriumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletZinc">
@@ -2658,6 +4508,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ψευδάργυρος-Zinc,
     <a class="clsHide" href="#idCletZincnam"></a></p>
+
+  <section id="idAtmZinc">
+  <h2 id="idAtmZincH2">atom-Zinc
+    <a class="clsHide" href="#idAtmZincH2"></a></h2>
+  <p id="idAtmZincnam">name::
+    <br>* Mcs.Chmatm.Zinc,
+    <br>* Mcs.Zinc-atom,
+    <a class="clsHide" href="#idAtmZincnam"></a></p>
+  <p id="idAtmZincgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmZincgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idCletZirconium">
@@ -2675,6 +4537,18 @@
     <br>====== langoGreek:
     <br>* McsEll.Ζιρκόνιο-Zr40,
     <a class="clsHide" href="#idCletZirconiumnam"></a></p>
+
+  <section id="idAtmZirconium">
+  <h2 id="idAtmZirconiumH2">atom-Zirconium
+    <a class="clsHide" href="#idAtmZirconiumH2"></a></h2>
+  <p id="idAtmZirconiumnam">name::
+    <br>* Mcs.Chmatm.Zirconium,
+    <br>* Mcs.Zirconium-atom,
+    <a class="clsHide" href="#idAtmZirconiumnam"></a></p>
+  <p id="idAtmZirconiumgncchn">generic-chain::
+    <br>* <a class="clsPreview" href="filMcsChmatm.last.html#idOverview">chemical-atom</a>,
+    <a class="clsHide" href="#idAtmZirconiumgncchn"></a></p>
+  </section>
 </section>
 
 <section id="idMeta">
