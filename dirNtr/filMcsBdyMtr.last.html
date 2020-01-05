@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.material-body (bodyMtr.0-5-0.2020-01-03 draft)</title>
+  <title>Mcs.material-body (bodyMtr.0-6-0.2020-01-04 draft)</title>
   <meta name="keywords" content="material-body, bodyMtr, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -30,7 +30,6 @@
     <br>* Mcs.bodyMaterial!⇒bodyMtr,
     <br>* Mcs.bodyMtr,
     <br>* Mcs.bodyMtr'(material-body)!⇒bodyMtr,
-    <br>* Mcs.material!⇒bodyMtr,
     <br>* Mcs.material-body!⇒bodyMtr,
     <br>* Mcs.mentalNo-body!⇒bodyMtr,
     <br>* Mcs.object!⇒bodyMtr,
@@ -169,12 +168,8 @@
     <br>* Mcs.bodyMtr.specific,
     <a class="clsHide" href="#idBdMtrSpcnam"></a></p>
   <p id="idBdMtrSpcP1">specific::
-    <br>* pure-bodyMtr,
-    <br>* pureNo-bodyMtr,
-    <br>===
-    <br>* solid-bodyMtr,
-    <br>* liquid-bodyMtr,
-    <br>* gas-bodyMtr,
+    <br>* substance-bodyMtr,
+    <br>* substanceNo-bodyMtr,
     <br>===
     <br>* microscopic-bodyMtr,
     <br>* microscopicNo-bodyMtr,
@@ -185,11 +180,60 @@
     <br>* whole-bodyMtr,
     <a class="clsHide" href="#idBdMtrSpcP1"></a></p>
   </section>
+
+  <section id="idBdMtrScdnShape">
+  <h2 id="idBdMtrScdnShapeH2">bodyMtr.specs-div.shape
+    <a class="clsHide" href="#idBdMtrScdnShapeH2"></a></h2>
+  <p id="idBdMtrScdnShapedsn">description::
+    <br>· substance,
+    <br>· substanceNo,
+    <a class="clsHide" href="#idBdMtrScdnShapedsn"></a></p>
+  <p id="idBdMtrScdnShapenam">name::
+    <br>* Mcs.bodyMtr.specifics-division.shape,
+    <a class="clsHide" href="#idBdMtrScdnShapenam"></a></p>
+  </section>
 </section>
 
-<section id="idBdMtrPur">
-  <h1 id="idBdMtrPurH1">bodyMtr.chemical
-    <a class="clsHide" href="#idBdMtrPurH1"></a></h1>
+<section id="idBdMtrSbtc">
+  <h1 id="idBdMtrSbtcH1">bodyMtr.substance
+    <a class="clsHide" href="#idBdMtrSbtcH1"></a></h1>
+  <p id="idBdMtrSbtcdsn">description::
+    <br>· a-material-body without shape or not interesting in its shape, is a-substance.
+    <br>· a-liquid, a-gas or a-powder is always a-substance.
+    <br>· a-rock from its shape view, is an-object.
+    <br>· a-rock from its matter view, is a-substance.
+    <br>===
+    <br>"(n) shape, form (the spatial arrangement of something as distinct from its substance) "geometry is the mathematical science of shape""
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=shape]
+    <a class="clsHide" href="#idBdMtrSbtcdsn"></a></p>
+  <p id="idBdMtrSbtcnam">name::
+    <br>* Mcs.bodyMtr.substance!⇒bodySbtc,
+    <br>* Mcs.bodySbtc,
+    <br>* Mcs.substance!⇒bodySbtc,
+    <br>====== langoGreek:
+    <br>* McsEll.ουσία!=substance,
+    <a class="clsHide" href="#idBdMtrSbtcnam"></a></p>
+
+  <section id="idBdMtrSbtcgst">
+  <h2 id="idBdMtrSbtcgstH2">GENERIC-SPECIFIC-TREE of bodySbtc
+    <a class="clsHide" href="#idBdMtrSbtcgstH2"></a></h2>
+  <p id="idBdMtrSbtcgstnam">name::
+    <br>* Mcs.bodySbtc'generic-specific-tree,
+    <a class="clsHide" href="#idBdMtrSbtcgstnam"></a></p>
+  <p id="idBdMtrSbtcgstSpc">specific::
+    <br>* pure-bodySbtc,
+    <br>* pureNo-bodySbtc,
+    <br>===
+    <br>* solid-bodySbtc,
+    <br>* liquid-bodySbtc,
+    <br>* gas-bodySbtc,
+    <br>===
+    <a class="clsHide" href="#idBdMtrSbtcgstSpc"></a></p>
+  </section>
+
+  <section id="idBdMtrPur">
+  <h2 id="idBdMtrPurH2">bodySbtc.chemical
+    <a class="clsHide" href="#idBdMtrPurH2"></a></h2>
   <p id="idBdMtrPurdsn">description::
     <br>"In chemistry, a chemical substance is a form of matter that has constant chemical composition and characteristic properties.[1] It cannot be separated into components by physical separation methods, i.e. without breaking chemical bonds. They can be solids, liquids or gases.
     <br>Chemical substances are often called 'pure' to set them apart from mixtures. A common example of a chemical substance is pure water; it has the same properties and the same ratio of hydrogen to oxygen whether it is isolated from a river or made in a laboratory. Other chemical substances commonly encountered in pure form are diamond (carbon), gold, table salt (sodium chloride) and refined sugar (sucrose). However, simple or seemingly pure substances found in nature can in fact be mixtures of chemical substances. For example, tap water may contain small amounts of dissolved sodium chloride and compounds containing iron, calcium and many other chemical substances.
@@ -212,8 +256,8 @@
     <a class="clsHide" href="#idBdMtrPurnam"></a></p>
 
   <section id="idBdMtrPurprty">
-  <h2 id="idBdMtrPurprtyH2">chemical-property of chemical
-    <a class="clsHide" href="#idBdMtrPurprtyH2"></a></h2>
+  <h3 id="idBdMtrPurprtyH3">chemical-property of chemical
+    <a class="clsHide" href="#idBdMtrPurprtyH3"></a></h3>
   <p id="idBdMtrPurprtydsn">description::
     <br>"A chemical property is any of a material's properties that becomes evident during, or after, a chemical reaction; that is, any quality that can be established only by changing a substance's chemical identity.[1] Simply speaking, chemical properties cannot be determined just by viewing or touching the substance; the substance's internal structure must be affected greatly for its chemical properties to be investigated. When a substance goes under a chemical reaction, the properties will change drastically, resulting in chemical change. However, a catalytic property would also be a chemical property.
     <br>Chemical properties can be contrasted with physical properties, which can be discerned without changing the substance's structure. However, for many properties within the scope of physical chemistry, and other disciplines at the boundary between chemistry and physics, the distinction may be a matter of researcher's perspective. Material properties, both physical and chemical, can be viewed as supervenient; i.e., secondary to the underlying reality. Several layers of superveniency[clarification needed] are possible.
@@ -228,18 +272,18 @@
   </section>
 
   <section id="idBdMtrPurbnd">
-  <h2 id="idBdMtrPurbndH2">chemical-bond (<a class="clsPreview" href="filMcsActFrc.last.html#idFrcChmbnd">link</a>) of chemical
-    <a class="clsHide" href="#idBdMtrPurbndH2"></a></h2>
+  <h3 id="idBdMtrPurbndH3">chemical-bond (<a class="clsPreview" href="filMcsActFrc.last.html#idFrcChmbnd">link</a>) of chemical
+    <a class="clsHide" href="#idBdMtrPurbndH3"></a></h3>
   </section>
 
   <section id="idBdMtrPurrctn">
-  <h2 id="idBdMtrPurrctnH2">chemical-reaction (<a class="clsPreview" href="filMcsChmrctn.last.html#idOverview">link</a>) of chemical
-    <a class="clsHide" href="#idBdMtrPurrctnH2"></a></h2>
+  <h3 id="idBdMtrPurrctnH3">chemical-reaction (<a class="clsPreview" href="filMcsChmrctn.last.html#idOverview">link</a>) of chemical
+    <a class="clsHide" href="#idBdMtrPurrctnH3"></a></h3>
   </section>
 
   <section id="idBdMtrPurSpc">
-  <h2 id="idBdMtrPurSpcH2">chemical.specific
-    <a class="clsHide" href="#idBdMtrPurSpcH2"></a></h2>
+  <h3 id="idBdMtrPurSpcH3">chemical.specific
+    <a class="clsHide" href="#idBdMtrPurSpcH3"></a></h3>
   <p id="idBdMtrPurSpcdsn">description::
     <br>* chemical-compound,
     <br>* chemical-element,
@@ -248,11 +292,11 @@
     <br>* Mcs.bodyMtrPure.specific,
     <a class="clsHide" href="#idBdMtrPurSpcnam"></a></p>
   </section>
-</section>
+  </section>
 
-<section id="idBdMtrPurN">
-  <h1 id="idBdMtrPurNH1">bodyMtr.chemicalNo
-    <a class="clsHide" href="#idBdMtrPurNH1"></a></h1>
+  <section id="idBdMtrPurN">
+  <h2 id="idBdMtrPurNH2">bodySbtc.chemicalNo
+    <a class="clsHide" href="#idBdMtrPurNH2"></a></h2>
   <p id="idBdMtrPurNdsn">description::
     <br>"In chemistry, a mixture is a material made up of two or more different substances which are physically combined.[1]A mixture is the physical combination of two or more substances in which the identities are retained and are mixed in the form of solutions, suspensions and colloids.[2][3]
     <br>Mixtures are one product of mechanically blending or mixing chemical substances such as elements and compounds, without chemical bonding or other chemical change, so that each ingredient substance retains its own chemical properties and makeup.[4] Despite the fact that there are no chemical changes to its constituents, the physical properties of a mixture, such as its melting point, may differ from those of the components. Some mixtures can be separated into their components by using physical (mechanical or thermal) means. Azeotropes are one kind of mixture that usually poses considerable difficulties regarding the separation processes required to obtain their constituents (physical or chemical processes or, even a blend of them).[5][6][7]"
@@ -268,6 +312,39 @@
     <br>====== langoKomo:
     <br>* McsKmo.kemoUgo!=chemicalNo,
     <a class="clsHide" href="#idBdMtrPurNnam"></a></p>
+  </section>
+</section>
+
+<section id="idBdMtrSbtcN">
+  <h1 id="idBdMtrSbtcNH1">bodyMtr.substanceNo
+    <a class="clsHide" href="#idBdMtrSbtcNH1"></a></h1>
+  <p id="idBdMtrSbtcNdsn">description::
+    <br>· object is a-material-body with shape.
+    <br>· a-rock from its shape view, is an-object.
+    <br>· a-rock from its matter view, is a-substance.
+    <a class="clsHide" href="#idBdMtrSbtcNdsn"></a></p>
+  <p id="idBdMtrSbtcNnam">name::
+    <br>* Mcs.bodyMtr.object,
+    <br>* Mcs.bodyMtr.substanceNo,
+    <br>* Mcs.bodyObjt,
+    <br>* Mcs.material-object,
+    <br>* Mcs.object,
+    <br>====== langoGreek:
+    <br>* McsEll.αντικείμενο!=object,
+    <a class="clsHide" href="#idBdMtrSbtcNnam"></a></p>
+
+  <section id="idBdMtrSbtcNshp">
+  <h2 id="idBdMtrSbtcNshpH2">shape of bodyObjt
+    <a class="clsHide" href="#idBdMtrSbtcNshpH2"></a></h2>
+  <p id="idBdMtrSbtcNshpdsn">description::
+    <br>"(n) shape, form (the spatial arrangement of something as distinct from its substance) "geometry is the mathematical science of shape""
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=shape]
+    <a class="clsHide" href="#idBdMtrSbtcNshpdsn"></a></p>
+  <p id="idBdMtrSbtcNshpnam">name::
+    <br>* Mcs.bodyObjt'form,
+    <br>* Mcs.bodyObjt'shape,
+    <a class="clsHide" href="#idBdMtrSbtcNshpnam"></a></p>
+  </section>
 </section>
 
 <section id="idMeta">
@@ -279,7 +356,7 @@
     </span>
     times since {2019-12-28}</p>
   <!-- the content of page-path paragraph is displayed as it is on top of toc -->
-  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-path</span>:
+  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-wholepath</span>:
     <a class="clsPreview" href="../../#idOverview">synagonism.net</a> /
     <a class="clsPreview" href="../filMcsWorld.last.html#idOverview">Mcs-worldview</a> /
     <a class="clsPreview" href="filMcsDirNtr.last.html#idOverview">dirNtr</a> /

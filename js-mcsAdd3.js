@@ -34,18 +34,18 @@ var
   //// INPUT VALUES ////
   //1. Add counter or not
   bCounter = true,
-  bDisqus = false,
+  bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirNtr',
-  sDIR = 'DirNtr',
+  sDir = 'dirHlth',
+  sDIR = 'DirHlth',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'atom',
+  sN = 'human-health',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'atom',
+  sNS = 'health',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'Atom',
+  sNFil = 'HlthHmn',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Atm';
+  sNId = 'Hlth';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -181,7 +181,7 @@ if (bCounter) {
 }
 s = s +
   '  <!-- the content of page-path paragraph is displayed as it is on top of toc -->\n' +
-  '  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-path</span>:\n' +
+  '  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-wholepath</span>:\n' +
   '    <a class="clsPreview" href="../../#idOverview">synagonism.net</a> /\n' +
   '    <a class="clsPreview" href="../filMcsWorld.last.html#idOverview">Mcs-worldview</a> /\n' +
   '    <a class="clsPreview" href="filMcs' + sDIR + '.last.html#idOverview">' + sDir + '</a> /\n' +
