@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-11-0.2020-01-12: versions,
  * version.0-10-0.2019-12-28: generic-whole-trees,
  * version.0-9-0.2019-12-25: whole-att,
  * version.0-8-0.2019-12-23: entity-link,
@@ -39,13 +40,13 @@ var
   sDir = 'dirHlth',
   sDIR = 'DirHlth',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'human-health',
+  sN = 'therapy-of-human',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'health',
+  sNS = 'therapy',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'HlthHmn',
+  sNFil = 'ThrpHmn',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Hlth';
+  sNId = 'ThrpHmn';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -83,9 +84,9 @@ s =
   '    <a class="clsHide" href="#idName"></a></p>\n' +
   '</section>\n' +
   '\n' +
-  '<section id="id' + sNId + 'rscFT">\n' +
-  '  <h1 id="id' + sNId + 'rscFTH1">resource of ' + sNS + '\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'rscFTH1"></a></h1>\n' +
+  '<section id="id' + sNId + 'rscF">\n' +
+  '  <h1 id="id' + sNId + 'rscFH1">resource of ' + sNS + '\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'rscFH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'rscnam">name::\n' +
   '    <br>* Mcs.' + sNS + '\'resource,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'rscnam"></a></p>\n' +
@@ -94,9 +95,9 @@ s =
   '    <a class="clsHide" href="#id' + sNId + 'rscwpa"></a></p>\n' +
   '</section>\n' +
   '\n' +
-  '<section id="id' + sNId + 'evgFT">\n' +
-  '  <h1 id="id' + sNId + 'evgFTH1">EVOLUTING of ' + sNS + '\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'evgFTH1"></a></h1>\n' +
+  '<section id="id' + sNId + 'evgF">\n' +
+  '  <h1 id="id' + sNId + 'evgFH1">EVOLUTING of ' + sNS + '\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'evgFH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'evgnam">name::\n' +
   '    <br>* Mcs.' + sNS + '\'evoluting,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'evgnam"></a></p>\n' +
@@ -113,9 +114,9 @@ s = s +
   '    <a class="clsHide" href="#id' + sNId + 'evg' + moUtil.fDateYMD2() + '"></a></p>\n' +
   '</section>\n' +
   '\n' +
-  '<section id="id' + sNId + 'wptFT">\n' +
-  '  <h1 id="id' + sNId + 'wptFTH1">WHOLE-PART-TREE of ' + sNS + '\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'whlFTH1"></a></h1>\n' +
+  '<section id="id' + sNId + 'wptF">\n' +
+  '  <h1 id="id' + sNId + 'wptFH1">WHOLE-PART-TREE of ' + sNS + '\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'whlFH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'wptnam">name::\n' +
   '    <br>* Mcs.' + sNS + '\'whole-part-tree,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'wptnam"></a></p>\n' +
@@ -136,9 +137,9 @@ s = s +
   '    <a class="clsHide" href="#id' + sNId + 'wptprt"></a></p>\n' +
   '</section>\n' +
   '\n' +
-  '<section id="id' + sNId + 'gstFT">\n' +
-  '  <h1 id="id' + sNId + 'gstFTH1">GENERIC-SPECIFIC-TREE of ' + sNS + '\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'gstFTH1"></a></h1>\n' +
+  '<section id="id' + sNId + 'gstF">\n' +
+  '  <h1 id="id' + sNId + 'gstFH1">GENERIC-SPECIFIC-TREE of ' + sNS + '\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'gstFH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'gstnam">name::\n' +
   '    <br>* Mcs.' + sNS + '\'generic-specific-tree,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'gstnam"></a></p>\n' +
@@ -155,9 +156,9 @@ if (sDir === 'dirCor') {
 s = s +
   '    <a class="clsHide" href="#id' + sNId + 'gstchn"></a></p>\n' +
   '\n' +
-  '  <section id="id' + sNId + 'SpcFT">\n' +
-  '  <h2 id="id' + sNId + 'SpcFTH2">' + sNS + '.SPECIFIC\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'SpcFTH2"></a></h2>\n' +
+  '  <section id="id' + sNId + 'SpcF">\n' +
+  '  <h2 id="id' + sNId + 'SpcFH2">' + sNS + '.SPECIFIC\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'SpcFH2"></a></h2>\n' +
   '  <p id="id' + sNId + 'Spcnam">name::\n' +
   '    <br>* Mcs.' + sNS + '.specific,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'Spcnam"></a></p>\n' +
@@ -207,8 +208,8 @@ s = s +
   '    <a class="clsHide" href="#idFooterP1"></a></p>\n' +
   '  <!--                              -->\n' +
   '  <p id="idMetaVersion">webpage-versions::\n' +
-  '    <br>• version.last.dynamic: <a href="filMcs' + sNFil + '.last.html">filMcs' + sNFil + '.last.html</a>,\n' +
-  '    <br>• version.0-1-0.' + moUtil.fDateYMD() + ' draft creation,\n' +
+  '    <br>• <a href="filMcs' + sNFil + '.last.html">filMcs' + sNFil + '.last.html</a>: dynamic,\n' +
+  '    <br>• filMcs' + sNFil + '.0-1-0.' + moUtil.fDateYMD() + '.last.html: draft creation,\n' +
   '    <a class="clsHide" href="#idMetaVersion"></a></p>\n' +
   '</section>\n' +
   '\n' +
