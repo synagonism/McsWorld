@@ -40,13 +40,13 @@ var
   sDir = 'dirHlth',
   sDIR = 'DirHlth',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'therapy-of-human',
+  sN = 'human-medication',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'therapy',
+  sNS = 'medication',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'ThrpHmn',
+  sNFil = 'MedHmn',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'ThrpHmn';
+  sNId = 'MedHmn';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -54,7 +54,7 @@ s =
   '<head>\n' +
   '  <meta charset="utf-8">\n' +
   '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-  '  <title>Mcs.' + sN + ' (' + sNS + '.0-1-0.' + moUtil.fDateYMD() + ' draft)</title>\n' +
+  '  <title>Mcs.' + sNS + ' (' + sN + ' 0-1-0.' + moUtil.fDateYMD() + ' draft)</title>\n' +
   '  <meta name="keywords" content="' + sN + ', ' + sNS + ', ModelConceptSensorial, McsHitp, Synagonism">\n' +
   '  <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">\n' +
   '</head>\n' +
@@ -65,7 +65,7 @@ s =
   '  <h1 id="idHeaderH1">' + sN + '\n' +
   '    <br>' +  'sensorial-concept-Mcs (' + sNS + ')\n' +
   '    </h1>\n' +
-  '  <p id="idHeadercrd">McsHitp-creation: {' + moUtil.fDateYMD() + '}\n' +
+  '  <p id="idHeadercrd">McsHitp-creation:: {' + moUtil.fDateYMD() + '}\n' +
   '    <a class="clsHide" href="#idHeadercrd"></a></p>\n' +
   '</header>\n' +
   '\n' +
