@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.medication (human-medication 0-2-0.2020-01-17 draft)</title>
+  <title>Mcs.medication (human-medication 0-3-0.2020-01-18 draft)</title>
   <meta name="keywords" content="human-medication, medication, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -42,19 +42,97 @@
     <a class="clsHide" href="#idName"></a></p>
 </section>
 
+<section id="idMedHmnbdnm">
+  <h1 id="idMedHmnbdnmH1">brand-name of medication
+    <a class="clsHide" href="#idMedHmnbdnmH1"></a></h1>
+  <p id="idMedHmnbdnmdsn">description::
+    <br>"A brand is a name, term, design, symbol or any other feature that identifies one seller's good or service as distinct from those of other sellers.[2][3][4] Brands are used in business, marketing, and advertising for recognition. Name brands are sometimes distinguished from generic or store brands."
+    <br>[https://en.wikipedia.org/wiki/Brand {2020-01-18}]
+    <a class="clsHide" href="#idMedHmnbdnmdsn"></a></p>
+  <p id="idMedHmnbdnmnam">name::
+    <br>* Mcs.medication'brand-name,
+    <a class="clsHide" href="#idMedHmnbdnmnam"></a></p>
+</section>
+
 <section id="idMedHmnidcnF">
   <h1 id="idMedHmnidcnFH1">indication of medication
     <a class="clsHide" href="#idMedHmnidcnFH1"></a></h1>
+  <p id="idMedHmnidcnFdsn">description::
+    <br>· indication of medication is <a class="clsPreview" href="filMcsDssHmn.last.html#idOverview">a-disease</a> on which the-medication is useful.
+    <a class="clsHide" href="#idMedHmnidcnFdsn"></a></p>
+  <p id="idMedHmnidcnFnam">name::
+    <br>* Mcs.indication-of-medication,
+    <br>* Mcs.medication'indication,
+    <br>* Mcs.medication'use,
+    <br>====== langoGreek:
+    <br>* McsEll.φαρμάκου-ένδειξη!=medication'indication,
+    <a class="clsHide" href="#idMedHmnidcnFnam"></a></p>
 </section>
 
 <section id="idMedHmncridnF">
   <h1 id="idMedHmncridnFH1">contraindication of medication
     <a class="clsHide" href="#idMedHmncridnFH1"></a></h1>
+  <p id="idMedHmncridnFdsn">description::
+    <br>· contraindication of medication is <a class="clsPreview" href="filMcsDssHmn.last.html#idOverview">a-disease</a> on which the-medication is harmful.
+    <a class="clsHide" href="#idMedHmncridnFdsn"></a></p>
+  <p id="idMedHmncridnFnam">name::
+    <br>* Mcs.contraindication-of-medication,
+    <br>* Mcs.medication'contraindication,
+    <br>====== langoGreek:
+    <br>* McsEll.φαρμάκου-αντένδειξη!=medication'contraindication,
+    <a class="clsHide" href="#idMedHmncridnFnam"></a></p>
 </section>
 
 <section id="idMedHmnsdetF">
   <h1 id="idMedHmnsdetFH1">side-effect of medication
     <a class="clsHide" href="#idMedHmnsdetFH1"></a></h1>
+  <p id="idMedHmnsdetFdsn">description::
+    <br>· positive or negative effects of medication on top of its <a class="clsPreview" href="#idMedHmnidcnF">indications</a>.
+    <a class="clsHide" href="#idMedHmnsdetFdsn"></a></p>
+  <p id="idMedHmnsdetFnam">name::
+    <br>* Mcs.medication'side-effect,
+    <a class="clsHide" href="#idMedHmnsdetFnam"></a></p>
+  <p id="idMedHmnsdetFSpc">specific::
+    <br>* therapeutic-effect-(positive),
+    <br>* adverse-effect-(negative),
+    <a class="clsHide" href="#idMedHmnsdetFSpc"></a></p>
+
+  <section id="idMedHmnsdetPos">
+  <h2 id="idMedHmnsdetPosH2">side-effect.adverse of medication
+    <a class="clsHide" href="#idMedHmnsdetPosH2"></a></h2>
+  <p id="idMedHmnsdetPosdsn">description::
+    <br>·
+    <a class="clsHide" href="#idMedHmnsdetPosdsn"></a></p>
+  <p id="idMedHmnsdetPosnam">name::
+    <br>* Mcs.medication'adverse-effect,
+    <br>* Mcs.medication'risk,
+    <br>* Mcs.medication'safety,
+    <br>* Mcs.medication'side-effect.adverse,
+    <a class="clsHide" href="#idMedHmnsdetPosnam"></a></p>
+  </section>
+
+  <section id="idMedHmnsdetNeg">
+  <h2 id="idMedHmnsdetNegH2">side-effect.therapeutic of medication
+    <a class="clsHide" href="#idMedHmnsdetNegH2"></a></h2>
+  <p id="idMedHmnsdetNegdsn">description::
+    <br>·
+    <a class="clsHide" href="#idMedHmnsdetNegdsn"></a></p>
+  <p id="idMedHmnsdetNegnam">name::
+    <br>* Mcs.medication'side-effect.therapeutic,
+    <br>* Mcs.medication'therapeutic-effect,
+    <a class="clsHide" href="#idMedHmnsdetNegnam"></a></p>
+  </section>
+</section>
+
+<section id="idMedHmniractF">
+  <h1 id="idMedHmniractFH1">interaction of medication
+    <a class="clsHide" href="#idMedHmniractFH1"></a></h1>
+  <p id="idMedHmniractFdsn">description::
+    <br>·
+    <a class="clsHide" href="#idMedHmniractFdsn"></a></p>
+  <p id="idMedHmniractFnam">name::
+    <br>* Mcs.medication'interaction,
+    <a class="clsHide" href="#idMedHmniractFnam"></a></p>
 </section>
 
 <section id="idMedHmnprtF">
@@ -94,6 +172,8 @@
   <p id="idMedHmnprtActvnam">name::
     <br>* Mcs.medication'active-ingredient,
     <br>* Mcs.medication-part.active-ingredient,
+    <br>====== langoGreek:
+    <br>* McsEll.φαρμάκου-δραστική-ουσία!=medication'active-ingredient,
     <a class="clsHide" href="#idMedHmnprtActvnam"></a></p>
   </section>
 
@@ -113,9 +193,34 @@
   </section>
 </section>
 
-<section id="idMedHmndgfm">
-  <h1 id="idMedHmndgfmH1">dosage-form of medication
-    <a class="clsHide" href="#idMedHmndgfmH1"></a></h1>
+<section id="idMedHmndsg">
+  <h1 id="idMedHmndsgH1">dosage of medication
+    <a class="clsHide" href="#idMedHmndsgH1"></a></h1>
+  <p id="idMedHmndsgdsn">description::
+    <br>· dosage of medication is the-rate (= dose per time) of application of <a class="clsPreview" href="#idMedHmndose">a-dose</a>.
+    <a class="clsHide" href="#idMedHmndsgdsn"></a></p>
+  <p id="idMedHmndsgnam">name::
+    <br>* Mcs.medication'dosage,
+    <br>====== langoGreek:
+    <br>* McsEll.φαρμάκου-δοσολογία!=medication'dosage,
+    <a class="clsHide" href="#idMedHmndsgnam"></a></p>
+
+  <section id="idMedHmndose">
+  <h2 id="idMedHmndoseH2">dose of medication
+    <a class="clsHide" href="#idMedHmndoseH2"></a></h2>
+  <p id="idMedHmndosedsn">description::
+    <br>· dose of medication is <a class="clsPreview" href="../dirCor/filMcsGnrc.last.html#idGnrcMsrd">a-measure-of-a-medication</a>.
+    <a class="clsHide" href="#idMedHmndosedsn"></a></p>
+  <p id="idMedHmndosenam">name::
+    <br>* Mcs.medication'dose,
+    <br>====== langoGreek:
+    <br>* McsEll.φαρμάκου-δοση!=medication'dose,
+    <a class="clsHide" href="#idMedHmndosenam"></a></p>
+  </section>
+
+  <section id="idMedHmndgfm">
+  <h2 id="idMedHmndgfmH2">dosage-form of medication
+    <a class="clsHide" href="#idMedHmndgfmH2"></a></h2>
   <p id="idMedHmndgfmdsn">description::
     <br>"Dosage forms (also called unit doses) are pharmaceutical drug products in the form in which they are marketed for use, with a specific mixture of active ingredients and inactive components (excipients), in a particular configuration (such as a capsule shell, for example), and apportioned into a particular dose. For example, two products may both be amoxicillin, but one is in 500 mg capsules and another is in 250 mg chewable tablets. The term unit dose can also sometimes encompass non-reusable packaging as well (especially when each drug product is individually packaged[1]), although the FDA distinguishes that by unit-dose "packaging" or "dispensing".[2] Depending on the context, multi(ple) unit dose can refer to distinct drug products packaged together, or to a single drug product containing multiple drugs and/or doses. The term dosage form can also sometimes refer only to the pharmaceutical formulation of a drug product's constituent drug substance(s) and any blends involved, without considering matters beyond that (like how it is ultimately configured as a consumable product such as a capsule, patch, etc.). Because of the somewhat vague boundaries and unclear overlap of these terms and certain variants and qualifiers within the pharmaceutical industry, caution is often advisable when conversing with someone who may be unfamiliar with another person's use of the term.
     <br>Depending on the method/route of administration, dosage forms come in several types. These include many kinds of liquid, solid, and semisolid dosage forms. Common dosage forms include pill, tablet, or capsule, drink or syrup, and natural or herbal form such as plant or food of sorts, among many others. Notably, the route of administration (ROA) for drug delivery is dependent on the dosage form of the substance in question. A liquid dosage form is the liquid form of a dose of a chemical compound used as a drug or medication intended for administration or consumption.
@@ -131,6 +236,7 @@
     <br>* drink-form,
     <br>* herbal-form,
     <a class="clsHide" href="#idMedHmndgfmSpc"></a></p>
+  </section>
 </section>
 
 <section id="idMedHmnsrtoaF">
@@ -149,6 +255,22 @@
     <a class="clsHide" href="#idMedHmnsrtoaFnam"></a></p>
 </section>
 
+<section id="idMedHmnprspn">
+  <h1 id="idMedHmnprspnH1">prescription of medication
+    <a class="clsHide" href="#idMedHmnprspnH1"></a></h1>
+  <p id="idMedHmnprspndsn">description::
+    <br>"A prescription, often abbreviated ℞ or Rx, is a health-care program implemented by a physician or other qualified health care practitioner in the form of instructions that govern the plan of care for an individual patient.[1]
+    <br>The term often refers to a health care provider's written authorization for a patient to purchase a prescription drug from a pharmacist."
+    <br>[https://en.wikipedia.org/wiki/Medical_prescription {2020-01-18}]
+    <a class="clsHide" href="#idMedHmnprspndsn"></a></p>
+  <p id="idMedHmnprspnnam">name::
+    <br>* Mcs.medical-prescription,
+    <br>* Mcs.medication'prescription,
+    <br>====== langoGreek:
+    <br>* McsEll.φαρμάκου-συνταγή!=medication'prescription,
+    <a class="clsHide" href="#idMedHmnprspnnam"></a></p>
+</section>
+
 <section id="idMedHmnprcF">
   <h1 id="idMedHmnprcFH1">price of medication
     <a class="clsHide" href="#idMedHmnprcFH1"></a></h1>
@@ -158,6 +280,35 @@
   <p id="idMedHmnprcFnam">name::
     <br>* Mcs.medication'price,
     <a class="clsHide" href="#idMedHmnprcFnam"></a></p>
+
+  <section id="idMedHmncstF">
+  <h2 id="idMedHmncstFH2">cost of medication
+    <a class="clsHide" href="#idMedHmncstFH2"></a></h2>
+  <p id="idMedHmncstFnam">name::
+    <br>* Mcs.medication'cost-of-production,
+    <a class="clsHide" href="#idMedHmncstFnam"></a></p>
+  <p id="idMedHmncstFcpnmom">How Much Does It Cost to Put a New Medication on the Market?
+    <br>On average, it costs about $2.6 billion USD to develop and get FDA approval for a new prescription drug.
+    <br>Developing a new medicine is an expensive undertaking. An analysis published in the Journal of Health Economics in March 2016 found that the average cost of developing a drug is $2.558 billion USD. The analysis from the Tufts Center for the Study of Drug Development is based on an average out-of-pocket cost of $1.395 billion USD, plus the inclusion of what economists call “time costs,” described by Joseph A. DiMasi, director of economic analysis at Tufts, as “expected returns that investors forego while a drug is in development.”
+    <br>[Read More: http://www.wisegeek.com/how-much-does-it-cost-to-put-a-new-medication-on-the-market.htm?m {2016.10.23}]
+    <a class="clsHide" href="#idMedHmncstFcpnmom"></a></p>
+  <p id="idMedHmncstFmcewmm">What Is the Most Cost-Effective Way to Manufacture Medicines?
+    <br>Researchers have genetically modified hens to lay eggs containing protein-based drugs used for treating cancer.
+    <br>The next battle in the fight against cancer is not being waged in a factory. It’s going on inside genetically-modified chickens. Researchers at the University of Edinburgh in Scotland are producing chickens that can manufacture a particular protein that may eventually lead to cancer-fighting drugs for humans. The researchers have successfully encoded human proteins into chicken DNA, which then become accessible in their egg whites. One protein has anti-cancer properties, while another spurs tissue repair. “Production from chickens can cost anywhere from 10 to 100 times less than the factories," said a biochemist on the project.
+    <br>[Read More: http://www.wisegeek.com/what-is-the-most-cost-effective-way-to-manufacture-medicines.htm?m {2019-06-15}]
+    <a class="clsHide" href="#idMedHmncstFmcewmm"></a></p>
+  </section>
+</section>
+
+<section id="idMedHmndpslF">
+  <h1 id="idMedHmndpslFH1">disposal of medication
+    <a class="clsHide" href="#idMedHmndpslFH1"></a></h1>
+  <p id="idMedHmndpslFdsn">description::
+    <br>· ask your pharmacist what to do with any that are left over.
+    <a class="clsHide" href="#idMedHmndpslFdsn"></a></p>
+  <p id="idMedHmndpslFnam">name::
+    <br>* Mcs.medication'disposal,
+    <a class="clsHide" href="#idMedHmndpslFnam"></a></p>
 </section>
 
 <section id="idMedHmnrscF">
@@ -169,6 +320,52 @@
   <p id="idMedHmnrscwpa">addressWpg::
     <br>*
     <a class="clsHide" href="#idMedHmnrscwpa"></a></p>
+</section>
+
+<section id="idMedHmnognF">
+  <h1 id="idMedHmnognFH1">organization of medication
+    <a class="clsHide" href="#idMedHmnognFH1"></a></h1>
+  <p id="idMedHmnognFdsn">description::
+    <br>·
+    <a class="clsHide" href="#idMedHmnognFdsn"></a></p>
+  <p id="idMedHmnognFnam">name::
+    <br>* Mcs.medication'organization,
+    <br>* Mcs.ognMed,
+    <a class="clsHide" href="#idMedHmnognFnam"></a></p>
+
+  <section id="idMedHmnognEof">
+  <h2 id="idMedHmnognEofH2">ognMed.National-Organization-for-Medicines-of-Greece
+    <a class="clsHide" href="#idMedHmnognEofH2"></a></h2>
+  <p id="idMedHmnognEofdsn">description::
+    <br>"Ο Εθνικός Οργανισμός Φαρμάκων ιδρύθηκε το 1983 με το Ν. 1316 και είναι Νομικό Πρόσωπο Δημοσίου Δικαίου του Υπουργείου Υγείας και Κοινωνικής Αλληλεγγύης.
+    <br>Αποστολή του ΕΟΦ είναι η προστασία της Δημόσιας Υγείας σε σχέση με την κυκλοφορία στην Ελλάδα:
+    <br>- φαρμακευτικών προϊόντων ανθρώπινης και κτηνιατρικής χρήσης
+    <br>- φαρμακούχων ζωοτροφών και προσθετικών ζωοτροφών
+    <br>- τροφίμων ειδικής διατροφής και συμπληρωμάτων διατροφής
+    <br>- βιοκτόνων
+    <br>- ιατρικών βοηθημάτων
+    <br>- καλλυντικών"
+    <br>[https://www.eof.gr/web/guest/organization]
+    <a class="clsHide" href="#idMedHmnognEofdsn"></a></p>
+  <p id="idMedHmnognEofnam">name::
+    <br>* Mcs.Eof,
+    <br>* Mcs.National-Organization-for-Medicines-(Eof),
+    <a class="clsHide" href="#idMedHmnognEofnam"></a></p>
+  </section>
+</section>
+
+<section id="idMedHmndngF">
+  <h1 id="idMedHmndngFH1">DOING of medication
+    <a class="clsHide" href="#idMedHmndngFH1"></a></h1>
+  <p id="idMedHmndngFdsn">description::
+    <br>* indication,
+    <br>* contraindication,
+    <br>* side-effect,
+    <br>* evoluting,
+    <a class="clsHide" href="#idMedHmndngFdsn"></a></p>
+  <p id="idMedHmndngFnam">name::
+    <br>* Mcs.medication'doing,
+    <a class="clsHide" href="#idMedHmndngFnam"></a></p>
 </section>
 
 <section id="idMedHmnevgF">
@@ -190,12 +387,14 @@
     <br>* Mcs.medication'whole-part-tree,
     <a class="clsHide" href="#idMedHmnwptnam"></a></p>
   <p id="idMedHmnwptchn">whole-chain::
-    <br>*
+    <br>* medication,
+    <br>* <a class="clsPreview" href="filMcsThrpHmn.last.html#idThrpHmnPhrmc">pharmacotherapy</a>,
     <br>...
     <br>* <a class="clsPreview" href="../dirCor/filMcsSmpn.last.html#idOverview">Sympan</a>.
     <a class="clsHide" href="#idMedHmnwptchn"></a></p>
   <p id="idMedHmnwptprt">part::
-    <br>*
+    <br>* active-ingredient,
+    <br>* activeNo-ingredient,
     <a class="clsHide" href="#idMedHmnwptprt"></a></p>
 </section>
 
@@ -218,9 +417,146 @@
   <p id="idMedHmnSpcnam">name::
     <br>* Mcs.medication.specific,
     <a class="clsHide" href="#idMedHmnSpcnam"></a></p>
+  <p id="idMedHmnSpcFwpa">addressWpg::
+    <br>* https://www.news-medical.net/drugs-a-z.aspx,
+    <br>* https://www.galinos.gr/web/drugs/main/lists/icdcodes,
+    <a class="clsHide" href="#idMedHmnSpcFwpa"></a></p>
   <p id="idMedHmnSpcP1">specific::
     <br>
     <a class="clsHide" href="#idMedHmnSpcP1"></a></p>
+  </section>
+
+  <section id="idMedHmnScdvPspn">
+  <h2 id="idMedHmnScdvPspnH2">medication.specs-div.prescription
+    <a class="clsHide" href="#idMedHmnScdvPspnH2"></a></h2>
+  <p id="idMedHmnScdvPspndsn">description::
+    <br>· on prescription:
+    <br>* prescription-medication,
+    <br>* prescriptionNo-medication,
+    <a class="clsHide" href="#idMedHmnScdvPspndsn"></a></p>
+  <p id="idMedHmnScdvPspnnam">name::
+    <br>* Mcs.medication.specifics-division.prescription,
+    <a class="clsHide" href="#idMedHmnScdvPspnnam"></a></p>
+  </section>
+</section>
+
+<section id="idMedHmnPspn">
+  <h1 id="idMedHmnPspnH1">medication.prescription
+    <a class="clsHide" href="#idMedHmnPspnH1"></a></h1>
+  <p id="idMedHmnPspndsn">description::
+    <br>"A prescription drug (also prescription medication or prescription medicine) is a pharmaceutical drug that legally requires a medical prescription to be dispensed. In contrast, over-the-counter drugs can be obtained without a prescription. The reason for this difference in substance control is the potential scope of misuse, from drug abuse to practicing medicine without a license and without sufficient education. Different jurisdictions have different definitions of what constitutes a prescription drug.
+    <br>"Rx" (℞) is often used as a short form for prescription drug in North America - a contraction of the Latin word "recipe" (an imperative form of "recipere") meaning "take".[1] Prescription drugs are often dispensed together with a monograph (in Europe, a Patient Information Leaflet or PIL) that gives detailed information about the drug.
+    <br>The use of prescription drugs has been increasing since the 1960s."
+    <br>[https://en.wikipedia.org/wiki/Prescription_drug]
+    <a class="clsHide" href="#idMedHmnPspndsn"></a></p>
+  <p id="idMedHmnPspnnam">name::
+    <br>* Mcs.medication.prescription,
+    <br>* Mcs.prescription-medication,
+    <a class="clsHide" href="#idMedHmnPspnnam"></a></p>
+</section>
+
+<section id="idMedHmnPspnN">
+  <h1 id="idMedHmnPspnNH1">medication.prescriptionNo
+    <a class="clsHide" href="#idMedHmnPspnNH1"></a></h1>
+  <p id="idMedHmnPspnNdsn">description::
+    <br>"Over-the-counter (OTC) drugs are medicines sold directly to a consumer without a prescription from a healthcare professional,[1] as opposed to prescription drugs, which may be sold only to consumers possessing a valid prescription. In many countries, OTC drugs are selected by a regulatory agency to ensure that they contain ingredients that are safe and effective when used without a physician's care. OTC drugs are usually regulated according to their active pharmaceutical ingredient (API) rather than final products. By regulating APIs instead of specific drug formulations, governments allow manufacturers the freedom to formulate ingredients, or combinations of ingredients, into proprietary mixtures.[2]
+    <br>The term over-the-counter (OTC) refers to a medication that can be purchased without a medical prescription.[3] In contrast, prescription drugs require a prescription from a doctor and should only be used by the prescribed individual.[4] Some drugs may be legally classified as over-the-counter (i.e. no prescription is required), but may only be dispensed by a pharmacist after an assessment of the patient's needs or the provision of patient education. In many countries, a number of OTC drugs are available in establishments without a pharmacy, such as general stores, supermarkets, and gas stations. Regulations detailing the establishments where drugs may be sold, who is authorized to dispense them, and whether a prescription is required vary considerably from country to country."
+    <br>[https://en.wikipedia.org/wiki/Over-the-counter_drug]
+    <a class="clsHide" href="#idMedHmnPspnNdsn"></a></p>
+  <p id="idMedHmnPspnNnam">name::
+    <br>* Mcs.medication.prescriptionNo,
+    <br>* Mcs.over-the-counter--medication,
+    <a class="clsHide" href="#idMedHmnPspnNnam"></a></p>
+</section>
+
+<section id="idMedHmnChlrl">
+  <h1 id="idMedHmnChlrlH1">medication.cholesterol
+    <a class="clsHide" href="#idMedHmnChlrlH1"></a></h1>
+  <p id="idMedHmnChlrldsn">description::
+    <br>·
+    <a class="clsHide" href="#idMedHmnChlrldsn"></a></p>
+  <p id="idMedHmnChlrlnam">name::
+    <br>* Mcs.medCholesterol,
+    <br>* Mcs.medication.cholesterol!⇒medCholesterol,
+    <a class="clsHide" href="#idMedHmnChlrlnam"></a></p>
+
+  <section id="idMedHmnChlrlEztmb">
+  <h2 id="idMedHmnChlrlEztmbH2">medCholesterol.ezetimibe
+    <a class="clsHide" href="#idMedHmnChlrlEztmbH2"></a></h2>
+  <p id="idMedHmnChlrlEztmbdsn">description::
+    <br>"Η εζετιμίμπη (ezetimibe) ελαττώνει τα λιπίδια που αναστέλλουν επιλεκτικά την εντερική απορρόφηση της χοληστερόλης και των συναφών φυτικών στερολών. Η εζετιμίμπη είναι ενεργή χορηγούμενη από το στόμα και έχει μηχανισμό δράσης που διαφέρει από άλλες κατηγορίες ουσιών που μειώνουν τη χοληστερόλη (π.χ. στατίνες, ενώσεις που δεσμεύουν τα χολικά οξέα [ρητίνες], παράγωγα ινικού οξέος και φυτικές στανόλες). Ο μοριακός στόχος της εζετιμίμπης είναι ο μεταφορέας στερολών, Niemann-Pick Cl-Like 1 (NPC1L1) που είναι υπεύθυνος για την εντερική απορρόφηση της χοληστερόλης και των φυτοστερολών.
+    <br>Η εζετιμίμπη εντοπίζεται στις ψηκτροειδείς παρυφές του λεπτού εντέρου και αναστέλλει την απορρόφηση της χοληστερόλης, οδηγώντας σε μείωση της προσαγόμενης εντερικής χοληστερόλης στο ήπαρ. Οι στατίνες μειώνουν τη σύνθεση της χοληστερόλης στο ήπαρ και από κοινού, οι δύο αυτοί διαφορετικοί μηχανισμοί παρέχουν συμπληρωματικά μείωση της χοληστερόλης. Σε μία κλινική μελέτη 2 εβδομάδων σε 18 υπερχοληστερολαιμικούς ασθενείς, η εζετιμίμπη ανέστειλε την απορρόφηση της εντερικής χοληστερόλης κατά 54% σε σύγκριση με το εικονικό φάρμακο.
+    <br>[https://www.galinos.gr/web/drugs/main/substances/ezetimibe]
+    <a class="clsHide" href="#idMedHmnChlrlEztmbdsn"></a></p>
+  <p id="idMedHmnChlrlEztmbnam">name::
+    <br>* Mcs.medCholesterol.ezetimibe,
+    <a class="clsHide" href="#idMedHmnChlrlEztmbnam"></a></p>
+  </section>
+</section>
+
+<section id="idMedHmnFntrd">
+  <h1 id="idMedHmnFntrdH1">medication.finasteride
+    <a class="clsHide" href="#idMedHmnFntrdH1"></a></h1>
+  <p id="idMedHmnFntrddsn">description::
+    <br>"Finasteride, sold under the brand names Proscar and Propecia among others, is a medication used mainly to treat an enlarged prostate or hair loss in men.[2] It can also be used to treat excessive hair growth in women and as a part of hormone therapy for transgender women.[3][4] It is taken by mouth.[2]
+    <br>Side effects are generally mild.[5] Some men experience sexual dysfunction, depression, anxiety, or breast enlargement.[6] It may also increase the risk of certain forms of prostate cancer.[6] Finasteride is a 5α-reductase inhibitor, and therefore an antiandrogen.[7] It works by decreasing the production of dihydrotestosterone (DHT) by about 70%, including in the prostate gland and the scalp.[2]
+    <br>Finasteride was patented in 1984 and approved for medical use in 1992.[8] It is available as a generic medication.[9] A month supply in the United Kingdom costs the NHS about £0.89 per month as of 2019.[10] In the United States the wholesale cost of this amount is about US$2.34.[11] In 2016 it was the 75th most prescribed medication in the United States with more than 10 million prescriptions.[12]"
+    <br>[https://en.wikipedia.org/wiki/Finasteride {2020-01-18}]
+    <a class="clsHide" href="#idMedHmnFntrddsn"></a></p>
+  <p id="idMedHmnFntrdnam">name::
+    <br>* Mcs.finasteride-medication!⇒medFinasteride,
+    <br>* Mcs.medFinasteride,
+    <br>* Mcs.medication.finasteride!⇒medFinasteride,
+    <a class="clsHide" href="#idMedHmnFntrdnam"></a></p>
+
+  <section id="idMedHmnFntrdbdnm">
+  <h2 id="idMedHmnFntrdbdnmH2">brand-name of medFinasteride
+    <a class="clsHide" href="#idMedHmnFntrdbdnmH2"></a></h2>
+  <p id="idMedHmnFntrdbdnmdsn">description::
+    <br>* Proscar,
+    <br>* Propecia,
+    <br>· "Finasteride is marketed primarily under the brand names Propecia, for pattern hair loss, and Proscar, for BPH, both of which are products of Merck &amp; Co.[77] There is 1 mg of finasteride in Propecia and 5 mg in Proscar. Merck's patent on finasteride for the treatment of BPH expired in June 2006.[78] Merck was awarded a separate patent for the use of finasteride to treat pattern hair loss and it expired in November 2013.[79] Finasteride is also marketed under a variety of other brand names throughout the world.[77]" [https://en.wikipedia.org/wiki/Finasteride#Brand_names {2020-01-18}]
+    <a class="clsHide" href="#idMedHmnFntrdbdnmdsn"></a></p>
+  <p id="idMedHmnFntrdbdnmnam">name::
+    <br>* Mcs.medFinasteride'brand-name,
+    <a class="clsHide" href="#idMedHmnFntrdbdnmnam"></a></p>
+  </section>
+
+  <section id="idMedHmnFntrdidcn">
+  <h2 id="idMedHmnFntrdidcnH2">indication of medFinasteride
+    <a class="clsHide" href="#idMedHmnFntrdidcnH2"></a></h2>
+  <p id="idMedHmnFntrdidcndsn">description::
+    <br>* BPS-(benign-prostatic-hyperplasia),
+    <br>* hair-loss,
+    <a class="clsHide" href="#idMedHmnFntrdidcndsn"></a></p>
+  <p id="idMedHmnFntrdidcnnam">name::
+    <br>* Mcs.medFinasteride'indication,
+    <a class="clsHide" href="#idMedHmnFntrdidcnnam"></a></p>
+  </section>
+
+  <section id="idMedHmnFntrdsdet">
+  <h2 id="idMedHmnFntrdsdetH2">side-effect of medFinasteride
+    <a class="clsHide" href="#idMedHmnFntrdsdetH2"></a></h2>
+  <p id="idMedHmnFntrdsdetdsn">description::
+    <br>·
+    <a class="clsHide" href="#idMedHmnFntrdsdetdsn"></a></p>
+  <p id="idMedHmnFntrdsdetnam">name::
+    <br>* Mcs.medFinasteride'side-effect,
+    <a class="clsHide" href="#idMedHmnFntrdsdetnam"></a></p>
+  <p id="idMedHmnFntrdsdetwpa">addressWpg::
+    <br>* https://www.drugs.com/sfx/finasteride-side-effects.html,
+    <a class="clsHide" href="#idMedHmnFntrdsdetwpa"></a></p>
+  </section>
+
+  <section id="idMedHmnFntrdrsc">
+  <h2 id="idMedHmnFntrdrscH2">resource of medFinasteride
+    <a class="clsHide" href="#idMedHmnFntrdrscH2"></a></h2>
+  <p id="idMedHmnFntrdrscdsn">description::
+    <br>* {2016} Investigation of the Plausibility of 5-Alpha-Reductase Inhibitor Syndrome, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5264352/,
+    <a class="clsHide" href="#idMedHmnFntrdrscdsn"></a></p>
+  <p id="idMedHmnFntrdrscnam">name::
+    <br>* Mcs.medFinasteride'resouce,
+    <a class="clsHide" href="#idMedHmnFntrdrscnam"></a></p>
   </section>
 </section>
 
