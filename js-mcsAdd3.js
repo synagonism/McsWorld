@@ -37,16 +37,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirNtr',
-  sDIR = 'DirNtr',
+  sDir = 'dirLag',
+  sDIR = 'DirLag',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'bio-information',
+  sN = 'human-information',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'infoBio',
+  sNS = 'info',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'InfBio',
+  sNFil = 'InfHmn',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'InfBio';
+  sNId = 'InfHmn';
 
 s =
   '<!DOCTYPE html>\n' +
