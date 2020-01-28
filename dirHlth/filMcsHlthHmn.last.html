@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.health (human-health 0-7-0.2020-01-25 draft)</title>
+  <title>Mcs.health (human-health 0-8-0.2020-01-28 draft)</title>
   <meta name="keywords" content="human-health, health, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -22,7 +22,7 @@
   <h1 id="idOverviewH1">overview of health
     <a class="clsHide" href="#idOverviewH1"></a></h1>
   <p id="idDescription">description::
-    <br>· human-health is <a class="clsPreview" href="filMcsHlth.last.html#idOverview">the-organism's-health</a> (= the-state) of <a class="clsPreview" href="../dirHmn/filMcsHmn.last.html#idOverview">a-human</a>.
+    <br>· human-health is <a class="clsPreview" href="filMcsHlth.last.html#idOverview">the-organism's-health</a> (= the-state of well-being and bad-being) of <a class="clsPreview" href="../dirHmn/filMcsHmn.last.html#idOverview">a-human</a>.
     <a class="clsHide" href="#idDescription"></a></p>
   <p id="idName">name::
     <br>* Mcs.filMcsHlthHmn.last.html!⇒health,
@@ -73,8 +73,27 @@
   </section>
 </section>
 
+<section id="idHlthwlbg">
+  <h1 id="idHlthwlbgH1">well-being of health
+    <a class="clsHide" href="#idHlthwlbgH1"></a></h1>
+  <p id="idHlthwlbgnam">name::
+    <br>* Mcs.health'well-being,
+    <a class="clsHide" href="#idHlthwlbgnam"></a></p>
+</section>
+
+<section id="idHlthbdbg">
+  <h1 id="idHlthbdbgH1">bad-being of health
+    <a class="clsHide" href="#idHlthbdbgH1"></a></h1>
+  <p id="idHlthbdbgnam">name::
+    <br>* Mcs.health'bad-being,
+    <a class="clsHide" href="#idHlthbdbgnam"></a></p>
+  <p id="idHlthbdbgSpc">specific::
+    <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idOverview">disease</a>,
+    <a class="clsHide" href="#idHlthbdbgSpc"></a></p>
+</section>
+
 <section id="idHlthrcrd">
-  <h1 id="idHlthrcrdH1">health-record
+  <h1 id="idHlthrcrdH1">record of health
     <a class="clsHide" href="#idHlthrcrdH1"></a></h1>
   <p id="idHlthrcrddsn">description::
     <br>"The terms medical record, health record, and medical chart are used somewhat interchangeably to describe the systematic documentation of a single patient's medical history and care across time within one particular health care provider's jurisdiction.[1] The medical record includes a variety of types of "notes" entered over time by health care professionals, recording observations and administration of drugs and therapies, orders for the administration of drugs and therapies, test results, x-rays, reports, etc. The maintenance of complete and accurate medical records is a requirement of health care providers and is generally enforced as a licensing or certification prerequisite.
@@ -215,7 +234,13 @@
   <h1 id="idHlthBdyH1">health.body
     <a class="clsHide" href="#idHlthBdyH1"></a></h1>
   <p id="idHlthBdydsn">description::
-    <br>· physical-health is the-health of the-human-body.
+    <br>· physical-health is the-health of <a class="clsPreview" href="filMcsBdyHmn.last.html#idOverview">the-human-body</a>.
+    <br>===
+    <br>έχε τα πόδια σου ζεστά,
+    <br>την κεφαλή σου κρύα,
+    <br>τον στόμαχόν σου ελαφρύ,
+    <br>γιατρού δεν έχεις χρεία.
+    <br>[Παροιμιακός κανόνας]
     <a class="clsHide" href="#idHlthBdydsn"></a></p>
   <p id="idHlthBdynam">name::
     <br>* Mcs.health.body,
@@ -228,13 +253,16 @@
   <h1 id="idHlthMndH1">health.mind
     <a class="clsHide" href="#idHlthMndH1"></a></h1>
   <p id="idHlthMnddsn">description::
-    <br>·
+    <br>"Mental health is the level of psychological well-being or an absence of mental illness. It is the state of someone who is "functioning at a satisfactory level of emotional and behavioral adjustment".[1] From the perspectives of positive psychology or of holism, mental health may include an individual's ability to enjoy life and to create a balance between life activities and efforts to achieve psychological resilience.[2] According to the World Health Organization (WHO), mental health includes "subjective well-being, perceived self-efficacy, autonomy, competence, inter-generational dependence, and self-actualization of one's intellectual and emotional potential, among others".[3] The WHO further states that the well-being of an individual is encompassed in the realization of their abilities, coping with normal stresses of life, productive work, and contribution to their community.[4] Cultural differences, subjective assessments, and competing professional theories all affect how one defines "mental health".[3][5]"
+    <br>[https://en.wikipedia.org/wiki/Mental_health {2020-01-28}]
     <a class="clsHide" href="#idHlthMnddsn"></a></p>
   <p id="idHlthMndnam">name::
     <br>* Mcs.health.mental,
     <br>* Mcs.health.mind,
     <br>* Mcs.health.psyche,
     <br>* Mcs.mental-health,
+    <br>====== langoGreek:
+    <br>* McsEll.ψυχική-υγεία!=health.mental,
     <a class="clsHide" href="#idHlthMndnam"></a></p>
 </section>
 
@@ -242,10 +270,16 @@
   <h1 id="idHlthSclH1">health.social
     <a class="clsHide" href="#idHlthSclH1"></a></h1>
   <p id="idHlthScldsn">description::
-    <br>·
+    <br>"Social isolation, regardless of feelings of loneliness, may have negative health consequences and even shorten lives.
+    <br>Social isolation -- a lack of companionship or interaction -- might correlate with a higher rate of illness and mortality, according to a study that followed participants age 52 or older from 2004-2012.
+    <br>Even if the respondents did not necessarily feel lonely, researchers found that the most socially isolated participants had a 26% higher mortality rate.
+    <br>These findings led researchers to think that having confidants could result in symptoms of illness or poor health being noticed sooner.
+    <br>In addition, physical contact correlated with a decrease in health symptoms such as pain or high blood pressure.
+    <br>[http://www.wisegeek.com/does-social-isolation-impact-mortality.htm?m, [2013-08-22}]"
     <a class="clsHide" href="#idHlthScldsn"></a></p>
   <p id="idHlthSclnam">name::
-    <br>* Mcs.,
+    <br>* Mcs.health.social,
+    <br>* Mcs.social-health,
     <a class="clsHide" href="#idHlthSclnam"></a></p>
 </section>
 
