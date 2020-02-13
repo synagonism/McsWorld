@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.health (human-health 0-9-0.2020-02-05 draft)</title>
+  <title>Mcs.health (human-health 0-10-0.2020-02-13 draft)</title>
   <meta name="keywords" content="human-health, health, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -73,23 +73,30 @@
   </section>
 </section>
 
-<section id="idHlthwlbg">
-  <h1 id="idHlthwlbgH1">well-being of health
-    <a class="clsHide" href="#idHlthwlbgH1"></a></h1>
-  <p id="idHlthwlbgnam">name::
-    <br>* Mcs.health'well-being,
-    <a class="clsHide" href="#idHlthwlbgnam"></a></p>
-</section>
-
 <section id="idHlthbdbg">
-  <h1 id="idHlthbdbgH1">bad-being of health
+  <h1 id="idHlthbdbgH1">disorder of health
     <a class="clsHide" href="#idHlthbdbgH1"></a></h1>
   <p id="idHlthbdbgnam">name::
+    <br>* Mcs.health'disorder,
     <br>* Mcs.health'bad-being,
+    <br>* Mcs.bad-being,
     <a class="clsHide" href="#idHlthbdbgnam"></a></p>
   <p id="idHlthbdbgSpc">specific::
     <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idOverview">disease</a>,
     <a class="clsHide" href="#idHlthbdbgSpc"></a></p>
+</section>
+
+<section id="idHlthwlbg">
+  <h1 id="idHlthwlbgH1">disorderNO of health
+    <a class="clsHide" href="#idHlthwlbgH1"></a></h1>
+  <p id="idHlthwlbgnam">name::
+    <br>* Mcs.health'disorderNo,
+    <br>* Mcs.health'well-being,
+    <br>* Mcs.well-being,
+    <br>* Mcs.wellness,
+    <br>====== langoGreek:
+    <br>* McsEll.μή-διαταραχή!=disorderNo,
+    <a class="clsHide" href="#idHlthwlbgnam"></a></p>
 </section>
 
 <section id="idHlthrcrd">
@@ -235,6 +242,11 @@
 <section id="idHlthBdy">
   <h1 id="idHlthBdyH1">health.body
     <a class="clsHide" href="#idHlthBdyH1"></a></h1>
+  <p id="idHlthBdynam">name::
+    <br>* Mcs.health.body,
+    <br>* Mcs.health.physical,
+    <br>* Mcs.physical-health,
+    <a class="clsHide" href="#idHlthBdynam"></a></p>
   <p id="idHlthBdydsn">description::
     <br>· physical-health is the-health of <a class="clsPreview" href="filMcsBdyHmn.last.html#idOverview">the-human-body</a>.
     <br>===
@@ -244,11 +256,15 @@
     <br>γιατρού δεν έχεις χρεία.
     <br>[Παροιμιακός κανόνας]
     <a class="clsHide" href="#idHlthBdydsn"></a></p>
-  <p id="idHlthBdynam">name::
-    <br>* Mcs.health.body,
-    <br>* Mcs.health.physical,
-    <br>* Mcs.physical-health,
-    <a class="clsHide" href="#idHlthBdynam"></a></p>
+
+  <section id="idHlthBdySpc">
+  <h2 id="idHlthBdySpcH2">healthBody.SPECIFIC
+    <a class="clsHide" href="#idHlthBdySpcH2"></a></h2>
+  <p id="idHlthBdySpcSpc">specific::
+    <br>* body-disorder,
+    <br>* body-disorderNO,
+    <a class="clsHide" href="#idHlthBdySpcSpc"></a></p>
+  </section>
 </section>
 
 <section id="idHlthMnd">
@@ -266,6 +282,15 @@
     <br>====== langoGreek:
     <br>* McsEll.ψυχική-υγεία!=health.mental,
     <a class="clsHide" href="#idHlthMndnam"></a></p>
+
+  <section id="idHlthMnd">
+  <h2 id="idHlthMndH2">health.mind
+    <a class="clsHide" href="#idHlthMndH2"></a></h2>
+  <p id="idHlthMndSpc">specific::
+    <br>* mental-disorder,
+    <br>* mental-disorderNo,
+    <a class="clsHide" href="#idHlthMndSpc"></a></p>
+  </section>
 </section>
 
 <section id="idHlthScl">
@@ -282,7 +307,18 @@
   <p id="idHlthSclnam">name::
     <br>* Mcs.health.social,
     <br>* Mcs.social-health,
+    <br>====== langoGreek:
+    <br>* McsEll.κοινωνική-υγεία!=social-health,
     <a class="clsHide" href="#idHlthSclnam"></a></p>
+
+  <section id="idHlthSclSpc">
+  <h2 id="idHlthSclSpcH2">healthSocial.SPECIFIC
+    <a class="clsHide" href="#idHlthSclSpcH2"></a></h2>
+  <p id="idHlthSclSpcSpc">specific::
+    <br>* social-disorder,
+    <br>* social-disorderNo,
+    <a class="clsHide" href="#idHlthSclSpcSpc"></a></p>
+  </section>
 </section>
 
 <section id="idHlthHlsc">
