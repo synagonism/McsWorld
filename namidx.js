@@ -11,6 +11,7 @@
  *
  * PROBLEM:
  * - on lagALL, store all files in one dir dirEll eg
+ * - to compute the-number of concepts, we must set new DIRS at cptqnt.root.json. 
  *
  * modified: {2019-12-11} 'cptqnt.root.json'
  * modified: {2019-09-05} 'lagKmo'

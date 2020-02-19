@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-11-1.2020-02-19: whole-part-generic-tree,
  * version.0-11-0.2020-01-12: versions,
  * version.0-10-0.2019-12-28: generic-whole-trees,
  * version.0-9-0.2019-12-25: whole-att,
@@ -120,7 +121,7 @@ s = s +
   '  <p id="id' + sNId + 'wptnam">name::\n' +
   '    <br>* Mcs.' + sNS + '\'whole-part-tree,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'wptnam"></a></p>\n' +
-  '  <p id="id' + sNId + 'wptchn">whole-chain::\n' +
+  '  <p id="id' + sNId + 'wtr">whole-tree::\n' +
   '    <br>* \n' +
   '    <br>...\n';
 if (sDir === 'dirCor') {
@@ -131,10 +132,10 @@ if (sDir === 'dirCor') {
   '    <br>* <a class="clsPreview" href="../dirCor/filMcsSmpn.last.html#idOverview">Sympan</a>.\n'
 }
 s = s +
-  '    <a class="clsHide" href="#id' + sNId + 'wptchn"></a></p>\n' +
-  '  <p id="id' + sNId + 'wptprt">part::\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'wtr"></a></p>\n' +
+  '  <p id="id' + sNId + 'ptr">part-tree::\n' +
   '    <br>*\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'wptprt"></a></p>\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'ptr"></a></p>\n' +
   '</section>\n' +
   '\n' +
   '<section id="id' + sNId + 'gstF">\n' +
@@ -143,7 +144,7 @@ s = s +
   '  <p id="id' + sNId + 'gstnam">name::\n' +
   '    <br>* Mcs.' + sNS + '\'generic-specific-tree,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'gstnam"></a></p>\n' +
-  '  <p id="id' + sNId + 'gstchn">generic-chain::\n' +
+  '  <p id="id' + sNId + 'gtr">generic-tree::\n' +
   '    <br>* \n' +
   '    <br>...\n';
 if (sDir === 'dirCor') {
@@ -154,7 +155,7 @@ if (sDir === 'dirCor') {
   '    <br>* <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">entity</a>.\n'
 }
 s = s +
-  '    <a class="clsHide" href="#id' + sNId + 'gstchn"></a></p>\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'gtr"></a></p>\n' +
   '\n' +
   '  <section id="id' + sNId + 'SpcF">\n' +
   '  <h2 id="id' + sNId + 'SpcFH2">' + sNS + '.SPECIFIC\n' +

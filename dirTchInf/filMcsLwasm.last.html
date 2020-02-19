@@ -4564,12 +4564,12 @@
     <br>[{2018-04-02} Willian-Martins, <a href="https://hackernoon.com/webassembly-the-journey-what-is-wasm-caf9871108aa">https://hackernoon.com/webassembly-the-journey-what-is-wasm-caf9871108aa</a>]
     <br>===
     <br>WebAssembly is faster than JavaScript in many cases because:
-    <br>* fetching WebAssembly takes less time because it is more compact than JavaScript, even when compressed.
-    <br>* decoding WebAssembly takes less time than parsing JavaScript.
-    <br>* compiling and optimizing takes less time because WebAssembly is closer to machine code than JavaScript and already has gone through optimization on the server side.
-    <br>* reoptimizing doesn’t need to happen because WebAssembly has types and other information built in, so the JS engine doesn’t need to speculate when it optimizes the way it does with JavaScript.
-    <br>* executing often takes less time because there are fewer compiler tricks and gotchas that the developer needs to know to write consistently performant code, plus WebAssembly’s set of instructions are more ideal for machines.
-    <br>* garbage collection is not required since the memory is managed manually.
+    <br>* fetching WebAssembly takes less time because it is more compact than JavaScript, even when compressed,
+    <br>* decoding WebAssembly takes less time than parsing JavaScript,
+    <br>* compiling and optimizing takes less time because WebAssembly is closer to machine code than JavaScript and already has gone through optimization on the server side,
+    <br>* reoptimizing doesn’t need to happen because WebAssembly has types and other information built in, so the JS engine doesn’t need to speculate when it optimizes the way it does with JavaScript,
+    <br>* executing often takes less time because there are fewer compiler tricks and gotchas that the developer needs to know to write consistently performant code, plus WebAssembly’s set of instructions are more ideal for machines,
+    <br>* garbage collection is not required since the memory is managed manually,
     <br>This is why, in many cases, WebAssembly will outperform JavaScript when doing the same task.
     <br>There are some cases where WebAssembly doesn’t perform as well as expected, and there are also some changes on the horizon that will make it faster.
     <br>[<a href="https://hacks.mozilla.org/2017/02/what-makes-webassembly-fast/">https://hacks.mozilla.org/2017/02/what-makes-webassembly-fast/</a>]
@@ -4873,7 +4873,7 @@
     <a class="clsHide" href="#idWasmtoolCplrWasm2watnam"></a></p>
   <p id="idWasmtoolCplrWasm2watwpa">addressWpg::
     <br>* online: <a href="https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wasm2wat/">https://cdn.rawgit.com/WebAssembly/wabt/aae5a4b7/demo/wasm2wat/</a>,
-    <br>* wat2wasm: <a class="clsPreview" href="#idWasmtoolWabt">WABT</a> cli tool (wat2wasm test.wat -o test.wasm).
+    <br>* wat2wasm: <a class="clsPreview" href="#idWasmtoolWabt">WABT</a> cli tool (wat2wasm test.wat -o test.wasm),
     <a class="clsHide" href="#idWasmtoolCplrWasm2watwpa"></a></p>
   </section>
 
@@ -4928,7 +4928,7 @@
   <p id="idWasmtoolWabttool">tool::
     <br>* wat2wasm: translate from WebAssembly text format to the WebAssembly binary format
     <br>* wasm2wat: the inverse of wat2wasm, translate from the binary format back to the text format (also known as a .wat)
-    <br>* wasm-objdump: print information about a wasm binary. Similiar to objdump.
+    <br>* wasm-objdump: print information about a wasm binary. Similiar to objdump,
     <br>* wasm-interp: decode and run a WebAssembly binary file using a stack-based interpreter
     <br>* wat-desugar: parse .wat text form as supported by the spec interpreter (s-expressions, flat syntax, or mixed) and print "canonical" flat format
     <br>* wasm2c: convert a WebAssembly binary file to a C source and header
@@ -4936,8 +4936,8 @@
     <a class="clsHide" href="#idWasmtoolWabttool"></a></p>
   <p id="idWasmtoolWabtinstg">installing::
     <br>* clone: $ git clone --recursive https://github.com/WebAssembly/wabt
-    <br>* build: instructions in <a href="https://github.com/WebAssembly/wabt">https://github.com/WebAssembly/wabt</a>.
-    <br>* set directory of tools on path.
+    <br>* build: instructions in <a href="https://github.com/WebAssembly/wabt">https://github.com/WebAssembly/wabt</a>,
+    <br>* set directory of tools on path,
     <a class="clsHide" href="#idWasmtoolWabtinstg"></a></p>
   </section>
 
@@ -5008,9 +5008,9 @@
     <br>· unlike most other global-objects, WebAssembly is-not a-constructor (it is-not a-function-object).
     <br>· you can-compare it to Math, which is also a namespace object for mathematical constants and functions, or to Intl which is the namespace object for internationalization constructors and other language sensitive functions.
     <br>· the primary uses for the-WebAssembly-object are:
-    <br>* loading WebAssembly-code, using the-WebAssembly.instantiate()-function.
-    <br>* creating new memory and table instances via the-WebAssembly.Memory()/WebAssembly.Table()-constructors.
-    <br>* providing facilities to handle errors that occur in WebAssembly via the-WebAssembly.CompileError()/WebAssembly.LinkError()/WebAssembly.RuntimeError()-constructors.
+    <br>* loading WebAssembly-code, using the-WebAssembly.instantiate()-function,
+    <br>* creating new memory and table instances via the-WebAssembly.Memory()/WebAssembly.Table()-constructors,
+    <br>* providing facilities to handle errors that occur in WebAssembly via the-WebAssembly.CompileError()/WebAssembly.LinkError()/WebAssembly.RuntimeError()-constructors,
     <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly</a>]
     <a class="clsHide" href="#idWasmrtewajodsn"></a></p>
   <p id="idWasmrtewajonam">name::
@@ -5043,8 +5043,8 @@
   <p id="idWasmrtewajoinstfdsn">description::
     <br>· the-WebAssembly.instantiate()-function allows you to compile and instantiate WebAssembly-code.
     <br>· this function has two overloads:
-    <br>* the primary overload takes the-WebAssembly-binary-code, in the-form of a-typed-array or ArrayBuffer, and performs both compilation and instantiation in one step.  The returned Promise resolves to both a compiled WebAssembly.Module and its first WebAssembly.Instance.
-    <br>* the secondary overload takes an already-compiled WebAssembly.Module and returns a-Promise that resolves to an Instance of that Module. This overload is useful if the-Module has already been-compiled or retrieved from cache.
+    <br>* the primary overload takes the-WebAssembly-binary-code, in the-form of a-typed-array or ArrayBuffer, and performs both compilation and instantiation in one step.  The returned Promise resolves to both a compiled WebAssembly.Module and its first WebAssembly.Instance,
+    <br>* the secondary overload takes an already-compiled WebAssembly.Module and returns a-Promise that resolves to an Instance of that Module. This overload is useful if the-Module has already been-compiled or retrieved from cache,
     <br>· important: this method is-not the most efficient way of fetching and instantiating wasm-modules. If at all possible, you should-use the newer WebAssembly.instantiateStreaming() method instead, which fetches, compiles, and instantiates a-module all in one step, directly from the raw bytecode, so doesn't require conversation to an-ArrayBuffer.
     <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate</a>]
     <a class="clsHide" href="#idWasmrtewajoinstfdsn"></a></p>

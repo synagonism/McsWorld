@@ -668,7 +668,7 @@
     <br>
     <br>* The <strong>stack</strong>, a last-in-first-out container to which values can be pushed and popped
     <br>* <strong>Memory</strong>, an infinitely expandable byte array
-    <br>* The contract's long-term <strong>storage</strong>, a key/value store. Unlike stack and memory, which reset after computation ends, storage persists for the long term.
+    <br>* The contract's long-term <strong>storage</strong>, a key/value store. Unlike stack and memory, which reset after computation ends, storage persists for the long term,
     <a class="clsHide" href="#idEthwprcdenP1"></a></p>
   <p id="idEthwprcdenP2">The code can also access the value, sender and data of the incoming message, as well as block header data, and the code can also return a byte array of data as an output.
     <a class="clsHide" href="#idEthwprcdenP2"></a></p>
@@ -855,9 +855,9 @@ def register(name, value):
     <br>Suppose that Alice wants to keep her funds safe, but is worried that she will lose or someone will hack her private key.
     <br>She puts ether into a contract with Bob, a bank, as follows:
     <br>
-    <br>* Alice alone can withdraw a maximum of 1% of the funds per day.
-    <br>* Bob alone can withdraw a maximum of 1% of the funds per day, but Alice has the ability to make a transaction with her key shutting off this ability.
-    <br>* Alice and Bob together can withdraw anything.
+    <br>* Alice alone can withdraw a maximum of 1% of the funds per day,
+    <br>* Bob alone can withdraw a maximum of 1% of the funds per day, but Alice has the ability to make a transaction with her key shutting off this ability,
+    <br>* Alice and Bob together can withdraw anything,
     <br>
     <br>Normally, 1% per day is enough for Alice, and if Alice wants to withdraw more she can contact Bob for help.
     <br>If Alice's key gets hacked, she runs to Bob to move the funds to a new contract.
@@ -925,7 +925,7 @@ def register(name, value):
     <br> &nbsp;o It cannot be an ancestor of B
     <br> &nbsp;o An uncle must be a valid block header, but does not need to be a previously verified or even valid block
     <br> &nbsp;o An uncle must be different from all uncles included in previous blocks and all other uncles included in the same block (non-double-inclusion)
-    <br>* For every uncle U in block B, the miner of B gets an additional 3.125% added to its coinbase reward and the miner of U gets 93.75% of a standard coinbase reward.
+    <br>* For every uncle U in block B, the miner of B gets an additional 3.125% added to its coinbase reward and the miner of U gets 93.75% of a standard coinbase reward,
     <a class="clsHide" href="#idEthwprghostP3"></a></p>
   <p id="idEthwprghostP4">This limited version of GHOST, with uncles includable only up to 7 generations, was used for two reasons.
     <br>First, unlimited GHOST would include too many complications into the calculation of which uncles for a given block are valid.
@@ -1042,10 +1042,10 @@ def register(name, value):
     <a class="clsHide" href="#idEthwprcaiP2"></a></p>
   <p id="idEthwprcaiP3">The issuance model will be as follows:
     <br>
-    <br>* Ether will be released in a currency sale at the price of 1000-2000 ether per BTC, a mechanism intended to fund the Ethereum organization and pay for development that has been used with success by other platforms such as Mastercoin and NXT. Earlier buyers will benefit from larger discounts. The BTC received from the sale will be used entirely to pay salaries and bounties to developers and invested into various for-profit and non-profit projects in the Ethereum and cryptocurrency ecosystem.
-    <br>* 0.099x the total amount sold (60102216 ETH) will be allocated to the organization to compensate early contributors and pay ETH-denominated expenses before the genesis block.
-    <br>* 0.099x the total amount sold will be maintained as a long-term reserve.
-    <br>* 0.26x the total amount sold will be allocated to miners per year forever after that point.
+    <br>* Ether will be released in a currency sale at the price of 1000-2000 ether per BTC, a mechanism intended to fund the Ethereum organization and pay for development that has been used with success by other platforms such as Mastercoin and NXT. Earlier buyers will benefit from larger discounts. The BTC received from the sale will be used entirely to pay salaries and bounties to developers and invested into various for-profit and non-profit projects in the Ethereum and cryptocurrency ecosystem,
+    <br>* 0.099x the total amount sold (60102216 ETH) will be allocated to the organization to compensate early contributors and pay ETH-denominated expenses before the genesis block,
+    <br>* 0.099x the total amount sold will be maintained as a long-term reserve,
+    <br>* 0.26x the total amount sold will be allocated to miners per year forever after that point,
     <a class="clsHide" href="#idEthwprcaiP3"></a></p>
   <div id="idEthwprcaiP4">
     <table>
