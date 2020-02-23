@@ -38,16 +38,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirHlth',
-  sDIR = 'DirHlth',
+  sDir = 'dirNtr',
+  sDIR = 'DirNtr',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'human-body',
+  sN = 'bio-brain',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'bodyHmn',
+  sNS = 'brainBio',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'BdyHmn',
+  sNFil = 'BrnBio',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'BdyHmn';
+  sNId = 'BrnBio';
 
 s =
   '<!DOCTYPE html>\n' +
