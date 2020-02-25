@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.bodyHmn (human-body 0-20-0.2020-02-24 draft)</title>
+  <title>Mcs.bodyHmn (human-body 0-21-0.2020-02-25 draft)</title>
   <meta name="keywords" content="human-body, bodyHmn, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -502,7 +502,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn107">gland.salivay</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn161">gland.thymus</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn052_8">gland.thyroid</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn004">heart</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn004">organHeart</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn157">hypophysis</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn106">intestine</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn273">intestine.large</a>,
@@ -511,8 +511,8 @@
     <br>* <a class="clsPreview" href="#idBdyHmn084">larynx</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn072">liver</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn049">lung</a>,
-    <br>* <a class="clsPreview" href="#idOrgnHmn031">lymph</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn080">mouth</a>,
+    <br>* <a class="clsPreview" href="#idOrgnHmn031">organLymph</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn080">organMouth</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn101">muscle</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn677">nerve</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn322">ovary</a>,
@@ -540,7 +540,7 @@
     <br>===
     <br>* <a class="clsPreview" href="#idGlndHmn">αδένας</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn014">αιδοίο</a>,
-    <br>* <a class="clsPreview" href="#idOrgnHmn007">αισθητήριο-όργανο</a>,
+    <br>* <a class="clsPreview" href="#idOrgnHmn007">organSense</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn008">αυτί</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn012">γλώσσα</a>,
     <br>* <a class="clsPreview" href="#idBrainHmn">εγκέφαλος</a>,
@@ -553,13 +553,13 @@
     <br>* <a class="clsPreview" href="#idBdyHmn280">θυμοειδής-αδένας</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn161">θύμος-αδένας</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn158">θυροειδης-αδένας</a>,
-    <br>* <a class="clsPreview" href="#idHrtHmn">καρδιά</a>,
+    <br>* <a class="clsPreview" href="#idHrtHmn">organHeart</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn028">κόλπος</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn020">λάρυγγας</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn031">λεμφογαγγλια</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn033">λεπτο-εντερο</a>,
-    <br>* <a class="clsPreview" href="#idOrgnHmn009">eye</a>,
-    <br>* μεικτοι αδένες,
+    <br>* <a class="clsPreview" href="#idOrgnHmn009">organEye</a>,
+    <br>* μεικτοί-αδένες,
     <br>* <a class="clsPreview" href="#idOrgnHmn027">μήτρα</a>,
     <br>* <a class="clsPreview" href="#idMsclHmn">μυς</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn010">μύτη</a>,
@@ -703,7 +703,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn054">επιθηλιακός-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn056">ερειστικός-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn256">καλυπτηριος-ιστός</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn057">μυικός-ιστός</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn057">tissueMuscle</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn058">νευρικός-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn100">οστιτης-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn098">συνδετικός-ιστός</a>,
@@ -1564,7 +1564,7 @@
     <br>Glial cells surround the neurons, outnumbering them ten to one. They help regulate the biochemical environment within the brain, provide structural support for neurons, repair the central nervous-system after injury, and supply chemicals and other substances that are essential for healthy functioning of the brain.
     <br>[ Copyright 1991 Compton's Learning Company ]
     <a class="clsHide" href="#idCellHmn001dsn"></a></p>
-  <p id="idCellHmn001P1">γενικη:
+  <p id="idCellHmn001P1">γενική:
     <br>* κύτταρο νευρικού-συστήματος,
     <a class="clsHide" href="#idCellHmn001P1"></a></p>
   <p id="idCellHmn001P2">θάνατος:
@@ -1627,11 +1627,12 @@
   <h3 id="idCellHmn004H3">cellBrain.neuron.004
     <a class="clsHide" href="#idCellHmn004H3"></a></h3>
   <p id="idCellHmn004nam">name::
-    <br>* Mcs.cell.004.neuron,
-    <br>* Mcs.cell.neuron.004,
-    <br>* Mcs.cell.brain.neuron,
-    <br>* Mcs.nerve-cell,
-    <br>* Mcs.neuron,
+    <br>* Mcs.cellNeuron,
+    <br>* Mcs.cell.004.neuron!⇒cellNeuron,
+    <br>* Mcs.cell.neuron.004!⇒cellNeuron,
+    <br>* Mcs.cell.brain.neuron!⇒cellNeuron,
+    <br>* Mcs.nerve-cell!⇒cellNeuron,
+    <br>* Mcs.neuron!⇒cellNeuron,
     <br>====== langoGreek:
     <br>* McsEll.κύτταρο.νευρικό,
     <br>* McsEll.νευρικό-κύτταρο,
@@ -1640,7 +1641,7 @@
   <p id="idCellHmn004dsn">description::
     <br>analytic: τελικος ορισμός αναλυσης.
     <br>===
-    <br>τα νευρικά κύτταρα είναι κύτταρα που επιτελούν την κύρια νευρική λειτουργία, παραγωγή και μεταβίβαση νευρικων ωσεων.
+    <br>τα νευρικά κύτταρα είναι κύτταρα που επιτελούν την κύρια νευρική λειτουργία, παραγωγή και μεταβίβαση νευρικών ωσεων.
     <br>[Αργύρης, {1994}, 244⧺cptRsc31⧺]
     <br>===
     <br>Neuron:
@@ -1698,7 +1699,7 @@
     <br>- φερνουν στη συνέχεια τις εντολές στους μυς.
     <br>[Αργύρης, {1994}, 9⧺cptRsc29⧺]
     <a class="clsHide" href="#idCellHmn004doingP1"></a></p>
-  <p id="idCellHmn004doingP2">τα κύτταρα του νευρικού-συστήματος μεταφέρουν με μεγάλη ταχύτητα ηλεκτρικα-σηματα τα οποία κωδικοποιούν πληροφορίες ή εντολές προς και από συγκεκριμένα σημεία του σώματος.
+  <p id="idCellHmn004doingP2">τα κύτταρα του νευρικού-συστήματος μεταφέρουν με μεγάλη ταχύτητα ηλεκτρικά-σηματα τα οποία κωδικοποιούν πληροφορίες ή εντολές προς και από συγκεκριμένα σημεία του σώματος.
     <br>[RAM, επιστημη 21ος αιωνας, νοηση, δεκέμβριος 2002, 12]
     <a class="clsHide" href="#idCellHmn004doingP2"></a></p>
 
@@ -1739,7 +1740,7 @@
   <p id="idCellHmn004srtrP2">Each nerve cell consists of a central portion containing the nucleus, known as the cell body, and one or more structures referred to as axons and dendrites. The dendrites are rather short extensions of the cell body and are involved in the reception of stimuli. The axon, by contrast, is usually a single elongated extension; it is especially important in the transmission of nerve impulses from the region of the cell body to other cells.
     <br>"Nervous System," Microsoft(R) Encarta(R) 97 Encyclopedia. (c) 1993-1996 Microsoft Corporation. All rights reserved.
     <a class="clsHide" href="#idCellHmn004srtrP2"></a></p>
-  <p id="idCellHmn004srtrP3">αποτελούνται από το κυτταρικο σώμα, που φέρνει τον πυρήνα και το κυτταρόπλασμα, και τις αποφυαδες. Η πιο μακριά αποφυάδα λέγεται νευριτης ή νευρική ινα, ενώ όλες οι άλλες, πιο κοντές, αποτελούν τους δενδριτες.
+  <p id="idCellHmn004srtrP3">αποτελούνται από το κυτταρικο σώμα, που φέρνει τον πυρήνα και το κυτταρόπλασμα, και τις αποφυαδες. Η πιο μακριά αποφυάδα λέγεται νευριτης ή νευρική ινα, ενώ όλες οι άλλες, πιο κοντές, αποτελούν τους δενδρίτες.
     <br>[Αργύρης, {1994}, 84⧺cptRsc29⧺]
     <a class="clsHide" href="#idCellHmn004srtrP3"></a></p>
   <p id="idCellHmn004partP4">δυναμικο ηρεμιας:
@@ -1956,7 +1957,7 @@
     <br>* <a class="clsPreview" href="#idCellHmngtr">cell</a>,
     <a class="clsHide" href="#idBdyHmn105gtr"></a></p>
   <p id="idBdyHmn105wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn057wtr">μυικός-ιστός</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn057wtr">tissueMuscle</a>,
     <a class="clsHide" href="#idBdyHmn105wtr"></a></p>
 
   <section id="idBdyHmn105doing">
@@ -3155,11 +3156,11 @@
   <h2 id="idSognHmn002srtrH2">structure
     <a class="clsHide" href="#idSognHmn002srtrH2"></a></h2>
   <p id="idSognHmn002srtrP1">structure::
-    <br>* <a class="clsPreview" href="#idBdyHmn004">heart</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn004">organHeart</a>,
     <br>===
     <br>* <a class="clsPreview" href="#idBdyHmn028">blood</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn006">αγγειακό-σύνολο</a>,
-    <br>* <a class="clsPreview" href="#idHrtHmn">καρδιά</a>,
+    <br>* <a class="clsPreview" href="#idHrtHmn">organHeart</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn125">λεμφος</a>,
     <a class="clsHide" href="#idSognHmn002srtrP1"></a></p>
   <p id="idSognHmn002srtrP2">είναι ένα κλειστο κυκλωμα που περιλαμβάνει εκτός από την αντλια (καρδιά) και τους σωληνες (αγγεία) που εξασφαλίζει τη συνεχή ροή αίματος.
@@ -3782,7 +3783,7 @@
     <br>* αναπνεομενος-αέρας,
     <br>* αεραγωγά-όργανα,
     <br>* <a class="clsPreview" href="#idOrgnHmn010">μύτη</a>,
-    <br>* <a class="clsPreview" href="#idOrgnHmn032">λαιμός</a>,
+    <br>* <a class="clsPreview" href="#idOrgnHmn032">organThroat</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn025">τραχεία</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn294">βρόγχος</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn049">lung</a>,
@@ -3935,7 +3936,7 @@
   <h2 id="idSognHmn007srtrH2">structure
     <a class="clsHide" href="#idSognHmn007srtrH2"></a></h2>
   <p id="idSognHmn007srtrP1">structure::
-    <br>* <a class="clsPreview" href="#idOrgnHmn017">mouth</a>,
+    <br>* <a class="clsPreview" href="#idOrgnHmn017">organMouth</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn018">pharynx</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn019">esophagus</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn015">stomach</a>,
@@ -4311,6 +4312,30 @@
   <section id="idBoneHmndisease">
   <h2 id="idBoneHmndiseaseH2">disease
     <a class="clsHide" href="#idBoneHmndiseaseH2"></a></h2>
+  </section>
+
+  <section id="idBdyHmn258">
+  <h2 id="idBdyHmn258H2">osteoid
+    <a class="clsHide" href="#idBdyHmn258H2"></a></h2>
+  <p id="idBdyHmn258nam">name::
+    <br>* Mcs.cptBdyHmn258,
+    <br>* Mcs.osteoid,
+    <br>====== langoGreek:
+    <br>* McsEll.οστέινη-ουσία,
+    <br>* McsEll.οστεΐνη,
+    <a class="clsHide" href="#idBdyHmn258nam"></a></p>
+  <p id="idBdyHmn258dsn">description::
+    <br>analytic: η οστέινη ουσία παράγεται από τους <a class="clsPreview" href="#idBdyHmn254">cellOsteoblast</a>.
+    <br>[Αργύρης, {1994}, 12⧺cptRsc29⧺]
+    <a class="clsHide" href="#idBdyHmn258dsn"></a></p>
+
+  <section id="idBdyHmn258srtr">
+  <h3 id="idBdyHmn258srtrH3">structure
+    <a class="clsHide" href="#idBdyHmn258srtrH3"></a></h3>
+  <p id="idBdyHmn258srtrP1">H οστεΐνη είναι ελαστική.
+    <br>[Αργύρης, {1994}, 12⧺cptRsc29⧺]
+    <a class="clsHide" href="#idBdyHmn258srtrP1"></a></p>
+  </section>
   </section>
 
   <section id="idBoneHmnrelation-to-alcohol">
@@ -6845,7 +6870,7 @@
     <br>κάθε χρόνο την τελευταία κυριακή του σεπτεμβρίου έχει καθιερωθεί από την διεθνή ομοσπονδία καρδιάς να διοργανώνονται ενέργειες ενημέρωσης του κοινού για τις καρδιαγγείακές παθήσεις, τα αίτια και τις δυνατότητες πρόληψης και αντιμετώπισής τους.
     <br>[EFG Eurolife ασφαλιστική info@eurolife.gr, σάββατο 29 σεπτεμβρίου 2012]
     <br>===
-    <br>analytic: η καρδιά είναι όργανο του καρδιαγγειακόυ συστήματος  σχημα κώνου και σε μέγεθος όσο η γροθιά ενός άνδρα που βρίσκεται ανάμεσα στους πνεύμονες και πλησιέστερα στον αριστερό πνεύμονα.
+    <br>analytic: η καρδιά είναι όργανο του καρδιαγγειακού συστήματος  σχημα κώνου και σε μέγεθος όσο η γροθιά ενός άνδρα που βρίσκεται ανάμεσα στους πνεύμονες και πλησιέστερα στον αριστερό πνεύμονα.
     <br>[hmnSgm, {1995-02}]
     <br>===
     <br>HEART: a hollow muscular organ that by rhythmic contraction keeps up the circulation of the blood in the body.
@@ -6858,15 +6883,30 @@
     <a class="clsHide" href="#idHrtHmnwtr"></a></p>
 
   <section id="idHrtHmndisease">
-  <h2 id="idHrtHmndiseaseH2">disease
+  <h2 id="idHrtHmndiseaseH2">disease (<a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn047">link</a>) of organHeart
     <a class="clsHide" href="#idHrtHmndiseaseH2"></a></h2>
-  <p id="idHrtHmndiseaseP1">disease::
-    <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn047">heart-disease</a>,
-    <a class="clsHide" href="#idHrtHmndiseaseP1"></a></p>
+  </section>
+
+  <section id="idBdyHmn137">
+  <h2 id="idBdyHmn137H2">pericardium of organHeart
+    <a class="clsHide" href="#idBdyHmn137H2"></a></h2>
+  <p id="idBdyHmn137nam">name::
+    <br>* Mcs.cptBdyHmn137,
+    <br>* Mcs.pericardium,
+    <br>====== langoGreek:
+    <br>* McsEll.περικάρδιο,
+    <a class="clsHide" href="#idBdyHmn137nam"></a></p>
+  <p id="idBdyHmn137dsn">description::
+    <br>analytic: - εξωτερικά περιβάλλεται από έναν προστατευτικό υμένα, το περικάρδιο.
+    <br>[Αργύρης, {1994}, 55⧺cptRsc29⧺]
+    <a class="clsHide" href="#idBdyHmn137dsn"></a></p>
+  <p id="idBdyHmn137wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idHrtHmnwtr">organHeart</a>,
+    <a class="clsHide" href="#idBdyHmn137wtr"></a></p>
   </section>
 
   <section id="idHrtHmn_2">
-  <h2 id="idHrtHmn_2H2">electrocardiogram
+  <h2 id="idHrtHmn_2H2">electrocardiogram of organHeart
     <a class="clsHide" href="#idHrtHmn_2H2"></a></h2>
   <p id="idHrtHmn_2crtn">McsHitp-creation:: {2013-12-30}
     <a class="clsHide" href="#idHrtHmn_2crtn"></a></p>
@@ -6889,7 +6929,7 @@
   </section>
 
   <section id="idHrtHmn_1">
-  <h2 id="idHrtHmn_1H2">beat
+  <h2 id="idHrtHmn_1H2">beat of organHeart
     <a class="clsHide" href="#idHrtHmn_1H2"></a></h2>
   <p id="idHrtHmn_1nam">name::
     <br>* Mcs.cptBdyHmn.heart-beat,
@@ -6911,7 +6951,7 @@
     <a class="clsHide" href="#idHrtHmn_1P2"></a></p>
 
   <section id="idHrtHmn_1managing">
-  <h3 id="idHrtHmn_1managingH3">managing
+  <h3 id="idHrtHmn_1managingH3">managing of organHeart
     <a class="clsHide" href="#idHrtHmn_1managingH3"></a></h3>
   <p id="idHrtHmn_1managingP1">η λειτουργία της καρδιάς ρυθμιζεται κυρίως από δικό της κλειστο νευρικό-σύστημα καθώς και από το φυτικό νευρικό-σύστημα.
     <br>[Αργύρης, {1994}, 59⧺cptRsc29⧺]
@@ -6919,8 +6959,24 @@
   </section>
   </section>
 
+  <section id="idBdyHmn045">
+  <h2 id="idBdyHmn045H2">sound of organHeart
+    <a class="clsHide" href="#idBdyHmn045H2"></a></h2>
+  <p id="idBdyHmn045nam">name::
+    <br>* Mcs.cptBdyHmn045,
+    <br>* Mcs.heart'sound,
+    <br>* Mcs.heart-sound,
+    <br>====== langoGreek:
+    <br>* McsEll.καρδιακός-ηχος,
+    <a class="clsHide" href="#idBdyHmn045nam"></a></p>
+  <p id="idBdyHmn045dsn">description::
+    <br>οι ήχοι που παράγονται από τη φυσιολογική καρδιά και εξετάζονται από την ακρόαση είναι οι καρδιακοί τόνοι. Αυτό που ακούει εύκολα κανείς, τικ-τακ, τικ-τακ, είναι οι καρδιακοί τόνοι, βραχείς, ευκρινείς ήχοι με ποικίλουσα ένταση, χροιά και ποιότητα και ονομάζονται: πρώτος και δεύτερος.
+    <br>[Εικ, 1994, 74⧺cptRsc33⧺]
+    <a class="clsHide" href="#idBdyHmn045dsn"></a></p>
+  </section>
+
   <section id="idHrtHmnsrtr">
-  <h2 id="idHrtHmnsrtrH2">structure
+  <h2 id="idHrtHmnsrtrH2">structure of organHeart
     <a class="clsHide" href="#idHrtHmnsrtrH2"></a></h2>
   <p id="idHrtHmnsrtrP1">structure::
     <br>* αρτηρίες,
@@ -6945,22 +7001,6 @@
     <br>- όπως και το αριστερό με τη διγλωχινη ή μιτροειδή.
     <br>[Αργύρης, {1994}, 55⧺cptRsc29⧺]
     <a class="clsHide" href="#idHrtHmnsrtrP2"></a></p>
-  </section>
-
-  <section id="idBdyHmn045">
-  <h2 id="idBdyHmn045H2">sound
-    <a class="clsHide" href="#idBdyHmn045H2"></a></h2>
-  <p id="idBdyHmn045nam">name::
-    <br>* Mcs.cptBdyHmn045,
-    <br>* Mcs.heart'sound,
-    <br>* Mcs.heart-sound,
-    <br>====== langoGreek:
-    <br>* McsEll.καρδιακός-ηχος,
-    <a class="clsHide" href="#idBdyHmn045nam"></a></p>
-  <p id="idBdyHmn045dsn">description::
-    <br>οι ήχοι που παράγονται από τη φυσιολογική καρδιά και εξετάζονται από την ακρόαση είναι οι καρδιακοί τόνοι. Αυτό που ακούει εύκολα κανείς, τικ-τακ, τικ-τακ, είναι οι καρδιακοί τόνοι, βραχείς, ευκρινείς ήχοι με ποικίλουσα ένταση, χροιά και ποιότητα και ονομάζονται: πρώτος και δεύτερος.
-    <br>[Εικ, 1994, 74⧺cptRsc33⧺]
-    <a class="clsHide" href="#idBdyHmn045dsn"></a></p>
   </section>
 </section>
 
@@ -7015,7 +7055,7 @@
     <br>gland.SPECIFIC_DIVISION.SUBSTANCE:
     <br>* <a class="clsPreview" href="#idBdyHmn076">ενδοκρινεις-αδένες</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn153">εξωκρινεις-αδένες</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn326">μεικτοι-αδένες</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn326">μεικτοί-αδένες</a>,
     <a class="clsHide" href="#idGlndHmnstr"></a></p>
   <p id="idGlndHmnstr">specific-tree::
     <br>gland.alphabetically:
@@ -7030,7 +7070,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn280">θυμοειδής-αδένας</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn161">θύμος-αδένας</a>,
     <br>* θυροειδης/THYROID αδένας⧺cptBdyHmn158⧺,
-    <br>* <a class="clsPreview" href="#idBdyHmn326">μεικτοι-αδένες</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn326">μεικτοί-αδένες</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn321">ορχεις/TESTICLE</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn044">πάγκρεας/PANCREAS</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn160">παραθυροειδης-αδένας</a>,
@@ -8085,10 +8125,11 @@
   <h1 id="idOrgnHmn006H1">organ.nerve.006
     <a class="clsHide" href="#idOrgnHmn006H1"></a></h1>
   <p id="idOrgnHmn006nam">name::
-    <br>* Mcs.organ.006.nerve,
-    <br>* Mcs.organ.nerve,
-    <br>* Mcs.nerve.human,
-    <br>* Mcs.nerve,
+    <br>* Mcs.organNerve,
+    <br>* Mcs.organ.006.nerve!⇒organNerve,
+    <br>* Mcs.organ.nerve!⇒organNerve,
+    <br>* Mcs.nerve.human!⇒organNerve,
+    <br>* Mcs.nerve!⇒organNerve,
     <br>====== langoGreek:
     <br>* McsEll.όργανο.νεύρο,
     <br>* McsEll.νεύρο,
@@ -8101,7 +8142,7 @@
     <br>- τα νεύρα, τα οποία συνδέουν τα όργανα του κεντρικού συστήματος με τα υπόλοιπα όργανα ή συστήματα.
     <br>[RAM, επιστημη 21ος αιωνας, νοηση, δεκέμβριος 2002, 15]
     <br>===
-    <br>synthetic: νεύρο: άθροισμα νευρικων κυττάρων.
+    <br>synthetic: νεύρο: άθροισμα νευρικών κυττάρων.
     <br>[Αργύρης, {1994}, 148⧺cptRsc29⧺]
     <a class="clsHide" href="#idOrgnHmn006dsn"></a></p>
   <p id="idOrgnHmn006P1">τα νεύρα που διακλαδίζονται σε όλο μας το σώμα, είναι δεσμες από νευρικες ινες, που διατάσονται όπως τα λεπτά σύρματα των ηλεκτρικών καλωδίων.
@@ -8114,14 +8155,51 @@
     <br>* <a class="clsPreview" href="#idSognHmn003wtr">nervous-system</a>,
     <a class="clsHide" href="#idOrgnHmn006wtr"></a></p>
 
+  <section id="idBdyHmn385">
+  <h2 id="idBdyHmn385H2">synapse
+    <a class="clsHide" href="#idBdyHmn385H2"></a></h2>
+  <p id="idBdyHmn385nam">name::
+    <br>* Mcs.cptBdyHmn385,
+    <br>* Mcs.synapse,
+    <br>====== langoGreek:
+    <br>* McsEll.σύναψη-νευρικών-κυττάρων,
+    <br>* McsEll.σύναψη,
+    <a class="clsHide" href="#idBdyHmn385nam"></a></p>
+  <p id="idBdyHmn385dsn">description::
+    <br>analytic: σύναψη νευρικού κυττάρου είναι η σύνδεση της <a class="clsPreview" href="#idBdyHmn195">νευρικής-του-ινας</a> με άλλο νευρικό κύτταρο ή εκτελεστικό όργανο.
+    <br>[hmnSgm, {1995-03}]
+    <br>===
+    <br>κάθε νευρώνας με τα τελικά του κομβία μπορεί να έρχεται σε λειτουργικη συνδεση με
+    <br>- τους δενδρίτες,
+    <br>- τα κυτταρικά σώματα ή και
+    <br>- τους νευρίτες άλλων κυττάρων, καθώς και
+    <br>- με ειδικά διαμορφωμένες θέσεις των εκτελεστικών οργάνων. Η θέση της λειτουργικής αυτης σύνδεσης μέσω της οποίας μεταβιβάζεται η νευρική ώση, λέγεται σύναψη.
+    <br>[Αργύρης, {1994}, 246⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn385dsn"></a></p>
+  <p id="idBdyHmn385wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idCellHmn004wtr">νευρικό-κύτταρο</a>,
+    <a class="clsHide" href="#idBdyHmn385wtr"></a></p>
+
+  <section id="idBdyHmn385doing">
+  <h3 id="idBdyHmn385doingH3">doing
+    <a class="clsHide" href="#idBdyHmn385doingH3"></a></h3>
+  <p id="idBdyHmn385doingP1">doing::
+    <br>η μεταβίβαση της νευρικής ώσης μέσω των συνάψεων γίνεται με τη βοήθεια διαβιβαστικών ουσιών, των νεύροδιαβιβατων, και σε δύο στάδια.
+    <br>
+    <br>επειδή οι νευροδιαβιβαστικές ουσίες υπάρχουν μόνο στις απολήξεις των <a class="clsPreview" href="#idBdyHmn195">νευριτών</a>, η μεταβίβαση μιας νευρικής ώσης γινεται μόνο προς μια κατευθυνση, δηλαδή από το νευρίτη προς το μετασυναπτικό νευρώνα και όχι αντίθετα.
+    <br>[Αργύρης, {1994}, 246⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn385doingP1"></a></p>
+  </section>
+  </section>
+
   <section id="idOrgnHmn006srtr">
   <h2 id="idOrgnHmn006srtrH2">structure of nerve
     <a class="clsHide" href="#idOrgnHmn006srtrH2"></a></h2>
   <p id="idOrgnHmn006srtrP1">structure::
     <br>* <a class="clsPreview" href="#idBdyHmn385">συναψεις</a>,
     <a class="clsHide" href="#idOrgnHmn006srtrP1"></a></p>
-  <p id="idOrgnHmn006srtrP2">ηλεκτρικα φορτια:
-    <br>τα νεύρα φέρουν ηλεκτρικά φορτία που προέρχονται από τα ιοντα των στοιχείων νατρίου και καλίου. Τα ιόντα των προηγουμένων στοιχείων είναι τα άτομά τους που έχουν χάσει ένα ηλεκτρόνιο.
+  <p id="idOrgnHmn006srtrP2">ηλεκτρικά φορτία:
+    <br>τα νεύρα φέρουν ηλεκτρικά φορτία που προέρχονται από τα ιόντα των στοιχείων νατρίου και καλίου. Τα ιόντα των προηγουμένων στοιχείων είναι τα άτομά τους που έχουν χάσει ένα ηλεκτρόνιο.
     <br>[Αργύρης, {1994}, 84⧺cptRsc29⧺]
     <a class="clsHide" href="#idOrgnHmn006srtrP2"></a></p>
   <p id="idOrgnHmn006srtrP3">συναψεις:
@@ -8175,7 +8253,7 @@
     <br>τα νεύρα είτε εκφύονται από τον εγκέφαλο, οπότε μιλάμε για εγκεφαλικά νεύρα, είτε από το νωτιαίο μυελό. Τα εγκεφαλικά νεύρα είναι 12 ζεύγη, που διανέμονται στην περιοχή του κεφαλιού και τον αυχένα, εκτός του πνευμονογαστρικού νεύρου, κλάδοι του οποίου νευρώνουν το θώρακα και την κοιλιά. Από το νωτιαίο μυελό εκφύονται 31 ζεύγη, που νευρώνουν τον κορμό και τα άκρα του σώματος.
     <br>[RAM, επιστημη 21ος αιωνας, νοηση, δεκέμβριος 2002, 16]
     <a class="clsHide" href="#idOrgnHmn006SPECIFICP1"></a></p>
-  <p id="idOrgnHmn006SPECIFICP2">τα νεύρα ανάλογα με το είδος των νευρικων ινων που περιέχουν διακρίνονται σε κινητικά, αισθητικά και μεικτά.
+  <p id="idOrgnHmn006SPECIFICP2">τα νεύρα ανάλογα με το είδος των νευρικών ινων που περιέχουν διακρίνονται σε κινητικά, αισθητικά και μεικτά.
     <br>[Αργύρης, {1994}, 245⧺cptRsc31⧺]
     <a class="clsHide" href="#idOrgnHmn006SPECIFICP2"></a></p>
   </section>
@@ -8693,8 +8771,675 @@
     <br>* <a class="clsPreview" href="#idBdyHmn312wtr">όρασης-σύστημα</a>,
     <a class="clsHide" href="#idOrgnHmn009wtr"></a></p>
 
+  <section id="idBdyHmn415">
+  <h2 id="idBdyHmn415H2">eye-appendage
+    <a class="clsHide" href="#idBdyHmn415H2"></a></h2>
+  <p id="idBdyHmn415nam">name::
+    <br>* Mcs.cptBdyHmn415,
+    <br>* Mcs.eye-appendage,
+    <br>====== langoGreek:
+    <br>* McsEll.επικουρικό-όργανο-ματιού/οφθαλμου,
+    <a class="clsHide" href="#idBdyHmn415nam"></a></p>
+  <p id="idBdyHmn415dsn">description::
+    <br>analytic: επικουρικό όργανο ματιού ονομάζουν κάθε μέρος του ματιού πέρα από το κύριο όργανο, τον οφθαλμικο βολβο.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmn415dsn"></a></p>
+  <p id="idBdyHmn415wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idOrgnHmn009wtr">organEye</a>,
+    <a class="clsHide" href="#idBdyHmn415wtr"></a></p>
+
+  <section id="idBdyHmn415SPECIFIC">
+  <h3 id="idBdyHmn415SPECIFICH3">SPECIFIC
+    <a class="clsHide" href="#idBdyHmn415SPECIFICH3"></a></h3>
+  <p id="idBdyHmn415str">specific-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn416">βλεφαρα</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn419">δακρυικη-συσκευή</a>,
+    <br>* μύες (6)⧺cptBdyHmn418⧺,
+    <br>* <a class="clsPreview" href="#idBdyHmn417">φρυδια</a>,
+    <a class="clsHide" href="#idBdyHmn415str"></a></p>
+  <p id="idBdyHmn415SPECIFICP1">επικουρικα όργανα (φρύδια, βλέφαρα, μύες κτλ) που είναι απαραίτητα για την προστασία και τη λειτουργία του βολβου.
+    <br>[Αργύρης, {1994}, 273⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn415SPECIFICP1"></a></p>
+  </section>
+
+  <section id="idBdyHmn416">
+  <h3 id="idBdyHmn416H3">eyelid
+    <a class="clsHide" href="#idBdyHmn416H3"></a></h3>
+  <p id="idBdyHmn416nam">name::
+    <br>* Mcs.cptBdyHmn416,
+    <br>* Mcs.eyelid,
+    <br>====== langoGreek:
+    <br>* McsEll.βλέφαρο,
+    <a class="clsHide" href="#idBdyHmn416nam"></a></p>
+  <p id="idBdyHmn416dsn">description::
+    <br>analytic: βλέφαρο είναι <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-οφθαλμου</a>, που σκεπάζει τον βολβο.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmn416dsn"></a></p>
+  <p id="idBdyHmn416gtr">generic-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-ματιού</a>,
+    <a class="clsHide" href="#idBdyHmn416gtr"></a></p>
+  <p id="idBdyHmn416wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idOrgnHmn009wtr">organEye</a>,
+    <a class="clsHide" href="#idBdyHmn416wtr"></a></p>
+
+  <section id="idBdyHmn416doing">
+  <h4 id="idBdyHmn416doingH4">doing
+    <a class="clsHide" href="#idBdyHmn416doingH4"></a></h4>
+  <p id="idBdyHmn416doingP1">doing::
+    <br>προστατεύουν το βοβλό και υγραίνουν τον κερατοειδή χειτώνα.
+    <br>[Αργύρης, {1994}, 280⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn416doingP1"></a></p>
+  </section>
+
+  <section id="idBdyHmn416srtr">
+  <h4 id="idBdyHmn416srtrH4">structure
+    <a class="clsHide" href="#idBdyHmn416srtrH4"></a></h4>
+  <p id="idBdyHmn416srtrP1">structure::
+    <br>* βλαφαριδες,
+    <br>* επιπεφυκοτας,
+    <a class="clsHide" href="#idBdyHmn416srtrP1"></a></p>
+  <p id="idBdyHmn416srtrP2">τα βλέφαρα φέρουν στα χείλη τους βλεφαριδες. Η εσωτερική επιφάνει έχει βλεννογόνο που λέγεται επιπεφυκοτας. Η χροιά του επιπεφυκότα έχει σημασία για ορισμένες παθολογικές καταστάσεις. Φυσιολογικά έχει ένα ροδαλό χρώμα, το οποίο όμως χάνει (λευκάζει) κατά την αναιμία. Στον ίκτερο (χρυσή) παίρνει ένα έντονο κίτρινο χρώμα (χρυσαφί).
+    <br>[Αργύρης, {1994}, 280⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn416srtrP2"></a></p>
+  </section>
+
+  <section id="idBdyHmn416SPECIFIC">
+  <h4 id="idBdyHmn416SPECIFICH4">SPECIFIC
+    <a class="clsHide" href="#idBdyHmn416SPECIFICH4"></a></h4>
+  <p id="idBdyHmn416str">specific-tree::
+    <br>κάθε μάτι έχει από ένα βλέφαρο.
+    <a class="clsHide" href="#idBdyHmn416str"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn417">
+  <h3 id="idBdyHmn417H3">eyebrow
+    <a class="clsHide" href="#idBdyHmn417H3"></a></h3>
+  <p id="idBdyHmn417nam">name::
+    <br>* Mcs.cptBdyHmn417,
+    <br>* Mcs.eyebrow,
+    <br>====== langoGreek:
+    <br>* McsEll.φρυδι,
+    <a class="clsHide" href="#idBdyHmn417nam"></a></p>
+  <p id="idBdyHmn417dsn">description::
+    <br>analytic: φρυδι είναι <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-οφθαλμου</a>, δερματινο τριχωτό τόξο που προστατεύουν το μάτι από τη σκόνη και τον ιδρώτα.
+    <br>[Αργύρης, {1994}, 280⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn417dsn"></a></p>
+  <p id="idBdyHmn417gtr">generic-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-ματιού</a>,
+    <a class="clsHide" href="#idBdyHmn417gtr"></a></p>
+  <p id="idBdyHmn417wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idOrgnHmn009wtr">organEye</a>,
+    <a class="clsHide" href="#idBdyHmn417wtr"></a></p>
+  </section>
+
+  <section id="idBdyHmn418">
+  <h3 id="idBdyHmn418H3">eye-muscle
+    <a class="clsHide" href="#idBdyHmn418H3"></a></h3>
+  <p id="idBdyHmn418nam">name::
+    <br>* Mcs.cptBdyHmn418,
+    <br>* Mcs.eye-muscle,
+    <br>====== langoGreek:
+    <br>* McsEll.μυς-ματιού,
+    <a class="clsHide" href="#idBdyHmn418nam"></a></p>
+  <p id="idBdyHmn418dsn">description::
+    <br>analytic: μυς ματιού είναι επικουρικό ορανο ματιού, που είναι μυς.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmn418dsn"></a></p>
+  <p id="idBdyHmn418gtr">generic-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-ματιού</a>,
+    <a class="clsHide" href="#idBdyHmn418gtr"></a></p>
+  <p id="idBdyHmn418wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idOrgnHmn009wtr">organEye</a>,
+    <a class="clsHide" href="#idBdyHmn418wtr"></a></p>
+
+  <section id="idBdyHmn418SPECIFIC">
+  <h4 id="idBdyHmn418SPECIFICH4">SPECIFIC
+    <a class="clsHide" href="#idBdyHmn418SPECIFICH4"></a></h4>
+  <p id="idBdyHmn418str">specific-tree::
+    <br>κάθε μάτι έχει 6 μύες.
+    <a class="clsHide" href="#idBdyHmn418str"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn419">
+  <h3 id="idBdyHmn419H3">lacrimal-apparatus
+    <a class="clsHide" href="#idBdyHmn419H3"></a></h3>
+  <p id="idBdyHmn419nam">name::
+    <br>* Mcs.cptBdyHmn419,
+    <br>* Mcs.lacrimal-apparatus,
+    <br>====== langoGreek:
+    <br>* McsEll.δακρυικη-συσκευή,
+    <a class="clsHide" href="#idBdyHmn419nam"></a></p>
+  <p id="idBdyHmn419dsn">description::
+    <br>analytic: δακρυικη συσκευή είναι επικουρικό όργανο ματιού που παράγει δακρυα.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmn419dsn"></a></p>
+  <p id="idBdyHmn419gtr">generic-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-ματιού</a>,
+    <a class="clsHide" href="#idBdyHmn419gtr"></a></p>
+  <p id="idBdyHmn419wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idOrgnHmn009wtr">organEye</a>,
+    <a class="clsHide" href="#idBdyHmn419wtr"></a></p>
+
+  <section id="idBdyHmn419doing">
+  <h4 id="idBdyHmn419doingH4">doing
+    <a class="clsHide" href="#idBdyHmn419doingH4"></a></h4>
+  <p id="idBdyHmn419doingP1">doing::
+    <br>τα δάκρυα εφυγραίνουν τον επιπεφυκότα και τον κερατοειδή χιτώνα και τον προφυλάσσουν έτσι από ξήρανση. Οταν η παραγωγή των δακρύων είναι μεγάλη (κλάμα), τότε τα περισσότερα τρεχουν από τη βλεφαρική σχισμή προς τα έξω.
+    <br>[Αργύρης, {1994}, 280⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn419doingP1"></a></p>
+  </section>
+
+  <section id="idBdyHmn419srtr">
+  <h4 id="idBdyHmn419srtrH4">structure
+    <a class="clsHide" href="#idBdyHmn419srtrH4"></a></h4>
+  <p id="idBdyHmn419srtrP1">structure::
+    <br>η δακρυική συσκευή αποτελείται από το δακρυικο αδενα και την αποχετευτική δακρυική οδό που φέρει τα δάκρυα μέσα στη μύτη.
+    <br>[Αργύρης, {1994}, 280⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn419srtrP1"></a></p>
+  </section>
+  </section>
+  </section>
+
+  <section id="idBdyHmn420">
+  <h2 id="idBdyHmn420H2">bulbus-oculi
+    <a class="clsHide" href="#idBdyHmn420H2"></a></h2>
+  <p id="idBdyHmn420nam">name::
+    <br>* Mcs.cptBdyHmn420,
+    <br>* Mcs.globe,
+    <br>* Mcs.bulbus-oculi,
+    <br>* Mcs.eyeball,
+    <br>====== langoGreek:
+    <br>* McsEll.βολβός,
+    <br>* McsEll.οφθαλμικός-βολβός,
+    <a class="clsHide" href="#idBdyHmn420nam"></a></p>
+  <p id="idBdyHmn420dsn">description::
+    <br>"The globe of the eye, or bulbus oculi, is the eyeball apart from its appendages.[1] A hollow structure, the bulbus oculi is composed of a wall enclosing a cavity filled with fluid with three coats: the sclera, choroid, and the retina.[2] Normally, the bulbus oculi is bulb-like structure.[3] However, the bulbus oculi is not completely spherical. Its anterior surface, transparent and more curved, is known as the cornea of the bulbus oculi."
+    <br>[https://en.wikipedia.org/wiki/Globe_(human_eye) {2020-01-30}]
+    <br>analytic: οφθαλμικός βολβός είναι μέρος του ματιού, το κυρίως όργανο της όρασης.
+    <br>[Αργύρης, {1994}, 273⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn420dsn"></a></p>
+  <p id="idBdyHmn420wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idOrgnHmn009wtr">organEye</a>,
+    <a class="clsHide" href="#idBdyHmn420wtr"></a></p>
+
+  <section id="idBdyHmn420srtr">
+  <h3 id="idBdyHmn420srtrH3">structure
+    <a class="clsHide" href="#idBdyHmn420srtrH3"></a></h3>
+  <p id="idBdyHmn420srtrP1">structure::
+    <br>* <a class="clsPreview" href="#idBdyHmn421">τοιχωμα</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn422">περιεχομενο</a>,
+    <a class="clsHide" href="#idBdyHmn420srtrP1"></a></p>
+  <p id="idBdyHmn420srtrP2">O οφθαλμικός βολβός που έχει περίπου σφαρικό σχήμα, αποτελείται από τοιχωμα (περίβλημα) και περιεχομενο.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn420srtrP2"></a></p>
+  </section>
+
+  <section id="idBdyHmn421">
+  <h3 id="idBdyHmn421H3">exterior-bulbus-oculi
+    <a class="clsHide" href="#idBdyHmn421H3"></a></h3>
+  <p id="idBdyHmn421nam">name::
+    <br>* Mcs.cptBdyHmn421,
+    <br>* Mcs.exterior-bulbus-oculi,
+    <br>====== langoGreek:
+    <br>* McsEll.τοιχωμα-οφθαλμικου-βολβου,
+    <a class="clsHide" href="#idBdyHmn421nam"></a></p>
+  <p id="idBdyHmn421dsn">description::
+    <br>analytic: τοιχωμα οφθλαλμικου βολβου είναι το περίβλημα του <a class="clsPreview" href="#idBdyHmn420">οφθλαμικου-βολβου</a>.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn421dsn"></a></p>
+  <p id="idBdyHmn421wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn420wtr">οφθαλμικός-βολβός</a>,
+    <a class="clsHide" href="#idBdyHmn421wtr"></a></p>
+
+  <section id="idBdyHmn421srtr">
+  <h3 id="idBdyHmn421srtrH3">structure
+    <a class="clsHide" href="#idBdyHmn421srtrH3"></a></h3>
+  <p id="idBdyHmn421srtrP1">structure::
+    <br>* <a class="clsPreview" href="#idBdyHmn423">ινώδης-χιτώνας</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn424">αγγειώδης-χιτώνας</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn425">αμφιβληστροειδής-χιτώνας</a>,
+    <a class="clsHide" href="#idBdyHmn421srtrP1"></a></p>
+  <p id="idBdyHmn421srtrP2">To τοίχωμα αποτελείται από 3 χιτώνες που απ' έξω προς τα μέσα είναι: ο ινώδης, ο αγγειώδης και ο αμφιβληστροειδής χιτώνας.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn421srtrP2"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn422">
+  <h2 id="idBdyHmn422H2">interior-bulbus-oculi
+    <a class="clsHide" href="#idBdyHmn422H2"></a></h2>
+  <p id="idBdyHmn422nam">name::
+    <br>* Mcs.cptBdyHmn422,
+    <br>* Mcs.interior-bulbus-oculi,
+    <br>====== langoGreek:
+    <br>* McsEll.περιεχομενο-οφθαλμικου-βολβου,
+    <a class="clsHide" href="#idBdyHmn422nam"></a></p>
+  <p id="idBdyHmn422dsn">description::
+    <br>analytic: περιεχομενο οφθαλμικου βολβου είναι το εσωτερικό μέρος του <a class="clsPreview" href="#idBdyHmn420">οφθαλμικου-βολβου</a>.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn422dsn"></a></p>
+  <p id="idBdyHmn422wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn420wtr">οφθαλμικός-βολβός</a>,
+    <a class="clsHide" href="#idBdyHmn422wtr"></a></p>
+
+  <section id="idBdyHmn422srtr">
+  <h3 id="idBdyHmn422srtrH3">structure
+    <a class="clsHide" href="#idBdyHmn422srtrH3"></a></h3>
+  <p id="idBdyHmn422srtrP1">structure::
+    <br>* <a class="clsPreview" href="#idBdyHmn431">κρυσταλλοειδης-φακός</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn432">υδατοειδες-υγρό</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn433">υαλωδες-σώμα</a>,
+    <a class="clsHide" href="#idBdyHmn422srtrP1"></a></p>
+  <p id="idBdyHmn422srtrP2">το περιεχόμενο του οφθαλμικου βολβού αποτελείται από το υδατοειδές υγρό, τον κρυσταλλοειδή φακό και το υαλώδες σώμα.
+    <a class="clsHide" href="#idBdyHmn422srtrP2"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn423">
+  <h2 id="idBdyHmn423H2">fibrous-tunic
+    <a class="clsHide" href="#idBdyHmn423H2"></a></h2>
+  <p id="idBdyHmn423nam">name::
+    <br>* Mcs.cptBdyHmn423,
+    <br>* Mcs.fibrous-tunic,
+    <br>====== langoGreek:
+    <br>* McsEll.ινώδης-χιτώνας-ματιού,
+    <br>* McsEll.ινώδης'χιτώνας'ματιού,
+    <a class="clsHide" href="#idBdyHmn423nam"></a></p>
+  <p id="idBdyHmn423dsn">description::
+    <br>analytic: ινώδης χιτώνας είναι το πρώτο μέρος απ' έξω προς τα μέσα του <a class="clsPreview" href="#idBdyHmn421">τοιχωματος</a> οφθαλμικού βολβού του ματιού.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn423dsn"></a></p>
+  <p id="idBdyHmn423wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn421wtr">τοιχωμα-βολβου</a>,
+    <a class="clsHide" href="#idBdyHmn423wtr"></a></p>
+
+  <section id="idBdyHmn423srtr">
+  <h3 id="idBdyHmn423srtrH3">structure
+    <a class="clsHide" href="#idBdyHmn423srtrH3"></a></h3>
+  <p id="idBdyHmn423srtrP1">structure::
+    <br>* <a class="clsPreview" href="#idBdyHmn427">κερατοειδης-χιτώνας</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn426">σκληρός-χιτώνας</a>,
+    <a class="clsHide" href="#idBdyHmn423srtrP1"></a></p>
+  <p id="idBdyHmn423srtrP2">O ινώδης χιτώνας αποτελείται από τον κερατοειδη χιτώνα και το σκληρο χιτώνα.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn423srtrP2"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn424">
+  <h2 id="idBdyHmn424H2">uvea
+    <a class="clsHide" href="#idBdyHmn424H2"></a></h2>
+  <p id="idBdyHmn424nam">name::
+    <br>* Mcs.cptBdyHmn424,
+    <br>* Mcs.uvea, /yyúvia/,
+    <br>====== langoGreek:
+    <br>* McsEll.αγγειώδης-χιτώνας,
+    <br>* McsEll.ραγοειδής-χειτώνας,
+    <a class="clsHide" href="#idBdyHmn424nam"></a></p>
+  <p id="idBdyHmn424dsn">description::
+    <br>analytic: αγγειώδης χιτώνας είναι το δεύτερο μέρος απ' έξω προς τα μέσα του <a class="clsPreview" href="#idBdyHmn421">τοιχωματος</a> οφθαλμικού βολβού.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn424dsn"></a></p>
+  <p id="idBdyHmn424wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn421wtr">τοιχωμα-βολβου</a>,
+    <a class="clsHide" href="#idBdyHmn424wtr"></a></p>
+
+  <section id="idBdyHmn424srtr">
+  <h3 id="idBdyHmn424srtrH3">structure
+    <a class="clsHide" href="#idBdyHmn424srtrH3"></a></h3>
+  <p id="idBdyHmn424srtrP1">structure::
+    <br>* <a class="clsPreview" href="#idBdyHmn428">χοριειδής-χιτώνας</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn429">ακτινωτό-σώμα</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn430">ίριδα</a>,
+    <a class="clsHide" href="#idBdyHmn424srtrP1"></a></p>
+  <p id="idBdyHmn424srtrP2">αποτελείται, από πίσω προς τα μπρος, από:
+    <br>τον χοριειδή χιτώνα, το ακτινωτό σώμα και την ίριδα.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn424srtrP2"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn425">
+  <h2 id="idBdyHmn425H2">retina
+    <a class="clsHide" href="#idBdyHmn425H2"></a></h2>
+  <p id="idBdyHmn425nam">name::
+    <br>* Mcs.cptBdyHmn425,
+    <br>* Mcs.retina,
+    <br>====== langoGreek:
+    <br>* McsEll.αμφιβληστροειδής-χιτώνας,
+    <a class="clsHide" href="#idBdyHmn425nam"></a></p>
+  <p id="idBdyHmn425dsn">description::
+    <br>analytic: αμφιβληστροειδής χιτώνας είναι το τρίτο μέρος απ' έξω προς τα μέσα του <a class="clsPreview" href="#idBdyHmn421">τοιχωματος</a> οφθαλμικού βολβού.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn425dsn"></a></p>
+  <p id="idBdyHmn425wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn421wtr">τοιχωμα-βολβου</a>,
+    <a class="clsHide" href="#idBdyHmn425wtr"></a></p>
+
+  <section id="idBdyHmn425srtr">
+  <h3 id="idBdyHmn425srtrH3">structure
+    <a class="clsHide" href="#idBdyHmn425srtrH3"></a></h3>
+  <p id="idBdyHmn425srtrP1">structure::
+    <br>* αγγεία,
+    <br>* <a class="clsPreview" href="#idBdyHmn253">κύτταρα-οπτικα</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn439">οπτικη-θηλη</a>,
+    <br>* φωτοδεκτες,
+    <br>* <a class="clsPreview" href="#idBdyHmn438">ωχρη-κηλιδα</a>,
+    <a class="clsHide" href="#idBdyHmn425srtrP1"></a></p>
+  <p id="idBdyHmn425srtrP2">ο αμφιβληστροειδής είναι ο φωτοευαίσθητος νευρικός χιτώνας που καλύπτει εσωτερικά το χόριοειδή χιτώνα. Είναι μια πολύπλοκη κατασκευή από νευρικά κύτταρα και νευρικές ίνες, αλλά το κυριότερο περιέχει τα οπτικα κύτταρα που οι αποφυάδες τους λέγονται ραβδία και κωνία. Τα ραβδία και κωνία είναι ευαίσθητα στο φως και αποτελούν το υποδεκτικό όργανο του αισθητηρίου της όρασης.
+    <br>[Αργύρης, {1994}, 275⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn425srtrP2"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn426">
+  <h2 id="idBdyHmn426H2">sclera
+    <a class="clsHide" href="#idBdyHmn426H2"></a></h2>
+  <p id="idBdyHmn426nam">name::
+    <br>* Mcs.cptBdyHmn426,
+    <br>* Mcs.sclera,
+    <br>====== langoGreek:
+    <br>* McsEll.σκληρός-χιτώνας,
+    <a class="clsHide" href="#idBdyHmn426nam"></a></p>
+  <p id="idBdyHmn426dsn">description::
+    <br>analytic: σκληρός χιτώνας είναι το άσπρο μέρος του <a class="clsPreview" href="#idBdyHmn423">ινωδη-χιτώνα</a>.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn426dsn"></a></p>
+  <p id="idBdyHmn426wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn423wtr">ινώδης-χιτώνας</a>,
+    <a class="clsHide" href="#idBdyHmn426wtr"></a></p>
+
+  <section id="idBdyHmn426doing">
+  <h3 id="idBdyHmn426doingH3">doing
+    <a class="clsHide" href="#idBdyHmn426doingH3"></a></h3>
+  <p id="idBdyHmn426doingP1">doing::
+    <br>ο σκληρός χιτώνας είναι αρκετά ισχυρός, ώστε να διατηρεί το σχήμα και να προστατεύει το εσωτερικό του οφθαλμικού βολβού.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn426doingP1"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn427">
+  <h2 id="idBdyHmn427H2">cornea
+    <a class="clsHide" href="#idBdyHmn427H2"></a></h2>
+  <p id="idBdyHmn427nam">name::
+    <br>* Mcs.cptBdyHmn427,
+    <br>* Mcs.cornea,
+    <br>====== langoGreek:
+    <br>* McsEll.κερατοειδης-χιτώνας,
+    <a class="clsHide" href="#idBdyHmn427nam"></a></p>
+  <p id="idBdyHmn427dsn">description::
+    <br>analytic: κερατοειδης χιτώνας είναι το διαφανές μέρος του <a class="clsPreview" href="#idBdyHmn423">ινωδη-χιτώνα</a> για να επιτρέπει την είσοδο του φωτός.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn427dsn"></a></p>
+  <p id="idBdyHmn427wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn423wtr">ινώδης-χιτώνας</a>,
+    <a class="clsHide" href="#idBdyHmn427wtr"></a></p>
+  </section>
+
+  <section id="idBdyHmn428">
+  <h2 id="idBdyHmn428H2">choroid
+    <a class="clsHide" href="#idBdyHmn428H2"></a></h2>
+  <p id="idBdyHmn428nam">name::
+    <br>* Mcs.cptBdyHmn428,
+    <br>* Mcs.choroid,
+    <br>====== langoGreek:
+    <br>* McsEll.χοριειδής-χιτώνας,
+    <a class="clsHide" href="#idBdyHmn428nam"></a></p>
+  <p id="idBdyHmn428dsn">description::
+    <br>analytic: χοριειδής χιτώνας είναι το πρώτο μέρος, από πίσω προς τα μπρός, του <a class="clsPreview" href="#idBdyHmn424">αγγειωδη-χιτώνα</a>.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn428dsn"></a></p>
+  <p id="idBdyHmn428wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn424wtr">αγγειώδης-χιτώνας</a>,
+    <a class="clsHide" href="#idBdyHmn428wtr"></a></p>
+
+  <section id="idBdyHmn428srtr">
+  <h3 id="idBdyHmn428srtrH3">structure
+    <a class="clsHide" href="#idBdyHmn428srtrH3"></a></h3>
+  <p id="idBdyHmn428srtrP1">structure::
+    <br>ο χόριοειδής καλύπτει εσωτερικά το <a class="clsPreview" href="#idBdyHmn426">σκληρό</a> και περιέχει πολλά αγγεία.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn428srtrP1"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn429">
+  <h2 id="idBdyHmn429H2">ciliary-body
+    <a class="clsHide" href="#idBdyHmn429H2"></a></h2>
+  <p id="idBdyHmn429nam">name::
+    <br>* Mcs.cptBdyHmn429,
+    <br>* Mcs.ciliary-body,
+    <br>====== langoGreek:
+    <br>* McsEll.ακτινωτό-σώμα,
+    <a class="clsHide" href="#idBdyHmn429nam"></a></p>
+  <p id="idBdyHmn429dsn">description::
+    <br>analytic: ακτινωτό σώμα είναι το δεύτερο μέρος, από πίσω προς τα μπρός, του <a class="clsPreview" href="#idBdyHmn424">αγγειωδη-χιτώνα</a>.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn429dsn"></a></p>
+  <p id="idBdyHmn429wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn424wtr">αγγειώδης-χιτώνας</a>,
+    <a class="clsHide" href="#idBdyHmn429wtr"></a></p>
+
+  <section id="idBdyHmn429srtr">
+  <h3 id="idBdyHmn429srtrH3">structure
+    <a class="clsHide" href="#idBdyHmn429srtrH3"></a></h3>
+  <p id="idBdyHmn429srtrP1">structure::
+    <br>το ακτινωτό σώμα συνδέει το χόριοειδή με την ίριδα και περιέχει τον ακτινωτό μυ, ο οποίος συγκρατεί το φακο του ματιού στη θέση του, αλλά και του μεταβάλει την καμπυλότητα ανάλογα με την απόσταση των αντικειμένων.
+    <br>[Αργύρης, {1994}, 275⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn429srtrP1"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn430">
+  <h2 id="idBdyHmn430H2">iris
+    <a class="clsHide" href="#idBdyHmn430H2"></a></h2>
+  <p id="idBdyHmn430nam">name::
+    <br>* Mcs.cptBdyHmn430,
+    <br>* Mcs.iris,
+    <br>====== langoGreek:
+    <br>* McsEll.ίρις,
+    <br>* McsEll.ίριδα,
+    <a class="clsHide" href="#idBdyHmn430nam"></a></p>
+  <p id="idBdyHmn430dsn">description::
+    <br>analytic: ίριδα είναι το τρίτο μέρος, από πίσω προς τα μπρός, του <a class="clsPreview" href="#idBdyHmn424">αγγειωδη-χιτώνα</a>.
+    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn430dsn"></a></p>
+  <p id="idBdyHmn430wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn424wtr">αγγειώδης-χιτώνας</a>,
+    <a class="clsHide" href="#idBdyHmn430wtr"></a></p>
+
+  <section id="idBdyHmn430srtr">
+  <h3 id="idBdyHmn430srtrH3">structure
+    <a class="clsHide" href="#idBdyHmn430srtrH3"></a></h3>
+  <p id="idBdyHmn430srtrP1">structure::
+    <br>η ίριδα είναι ένας έγχρωμος δίσκος μπροστά από το φακό σαν διάφραγμα με μια στρογγυλή οπή στο κέντρο, την κορη του οφθαλμου. Η ίριδα έχει μυς, με τη βοήθεια των οποίων μεταβάλλεται το εύρος της κόρης ανάλογα με την ένταση του φωτος. Στο πολύ φως η κόρη μικραίνει (συστολή) και σε λίγο φως μεγαλώνει (διαστολή).  οι μεταβολές αυτές γίνονται αυτόματα (αντανακλαστικό της κόρης).
+    <br>το χρώμα των ματιών (καστανό, πράσινο, κτλ.) οφείλεται στις αντίστοιχες χρωστικές που περιέχουν κύτταρα της ίριδας.
+    <br>[Αργύρης, {1994}, 275⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn430srtrP1"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn431">
+  <h2 id="idBdyHmn431H2">crystalline-lens
+    <a class="clsHide" href="#idBdyHmn431H2"></a></h2>
+  <p id="idBdyHmn431nam">name::
+    <br>* Mcs.cptBdyHmn431,
+    <br>* Mcs.crystalline-lens,
+    <br>====== langoGreek:
+    <br>* McsEll.κρυσταλλικος-φακός,
+    <br>* McsEll.κρυσταλλοειδης-φακός,
+    <a class="clsHide" href="#idBdyHmn431nam"></a></p>
+  <p id="idBdyHmn431dsn">description::
+    <br>analytic: κρυσταλλοειδης φακός είναι μέρος του <a class="clsPreview" href="#idBdyHmn422">περιεχομενου</a> οφλαλμικού βολβού, που εστιάζει το φως.
+    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn431dsn"></a></p>
+  <p id="idBdyHmn431wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn422wtr">περιεχομενο-βολβου</a>,
+    <a class="clsHide" href="#idBdyHmn431wtr"></a></p>
+  </section>
+
+  <section id="idBdyHmn432">
+  <h2 id="idBdyHmn432H2">aqueous-humour
+    <a class="clsHide" href="#idBdyHmn432H2"></a></h2>
+  <p id="idBdyHmn432nam">name::
+    <br>* Mcs.cptBdyHmn432,
+    <br>* Mcs.aqueous-humour,
+    <br>====== langoGreek:
+    <br>* McsEll.υδατοειδες-υγρό,
+    <a class="clsHide" href="#idBdyHmn432nam"></a></p>
+  <p id="idBdyHmn432dsn">description::
+    <br>analytic: υδατοειδες υγρό είναι μέρος του <a class="clsPreview" href="#idBdyHmn422">περιεχομενου</a> οφλαλμικού βολβού, υγρό που βρίσκεται μεταξύ του <a class="clsPreview" href="#idBdyHmn427">κερατοειδή</a> και του φακού.
+    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn432dsn"></a></p>
+  <p id="idBdyHmn432wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn422wtr">περιεχομενο-βολβου</a>,
+    <a class="clsHide" href="#idBdyHmn432wtr"></a></p>
+  </section>
+
+  <section id="idBdyHmn433">
+  <h2 id="idBdyHmn433H2">vitreous-humor
+    <a class="clsHide" href="#idBdyHmn433H2"></a></h2>
+  <p id="idBdyHmn433nam">name::
+    <br>* Mcs.cptBdyHmn433,
+    <br>* Mcs.vitreous-humor,
+    <br>====== langoGreek:
+    <br>* McsEll.υαλοειδες-σώμα,
+    <br>* McsEll.υαλωδες-σώμα,
+    <a class="clsHide" href="#idBdyHmn433nam"></a></p>
+  <p id="idBdyHmn433dsn">description::
+    <br>analytic: υαλωδες σώμα είναι μέρος του <a class="clsPreview" href="#idBdyHmn422">περιεχομενου</a> οφλαλμικού βολβού, ημίρευστη διαφανής ουσία που γεμίζει όλο το χώρο του βολβού πίσω από το φακό.
+    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn433dsn"></a></p>
+  <p id="idBdyHmn433wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn422wtr">περιεχομενο-βολβου</a>,
+    <a class="clsHide" href="#idBdyHmn433wtr"></a></p>
+
+  <section id="idBdyHmn433doing">
+  <h3 id="idBdyHmn433doingH3">doing
+    <a class="clsHide" href="#idBdyHmn433doingH3"></a></h3>
+  <p id="idBdyHmn433doingP1">doing::
+    <br>συντελεί στη διατήρηση του σχήματος του οφθαλμικού βολβού και στη συγκράτηση του αμφιβληστροειδή στη θέση του.
+    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn433doingP1"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn438">
+  <h2 id="idBdyHmn438H2">macula
+    <a class="clsHide" href="#idBdyHmn438H2"></a></h2>
+  <p id="idBdyHmn438nam">name::
+    <br>* Mcs.cptBdyHmn438,
+    <br>* Mcs.macula,
+    <br>====== langoGreek:
+    <br>* McsEll.ωχρη-κηλιδα,
+    <a class="clsHide" href="#idBdyHmn438nam"></a></p>
+  <p id="idBdyHmn438dsn">description::
+    <br>analytic: ωχρη κηλιδα βρίσκεται στο πίσω μέρος του <a class="clsPreview" href="#idBdyHmn425">retina</a> όπου παρατηρείται μεγαλύτερη συγκέντρωση κωνίων.
+    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn438dsn"></a></p>
+  <p id="idBdyHmn438wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn425wtr">retina</a>,
+    <a class="clsHide" href="#idBdyHmn438wtr"></a></p>
+  </section>
+
+  <section id="idBdyHmn439">
+  <h2 id="idBdyHmn439H2">optic-disk
+    <a class="clsHide" href="#idBdyHmn439H2"></a></h2>
+  <p id="idBdyHmn439nam">name::
+    <br>* Mcs.cptBdyHmn439,
+    <br>* Mcs.optic-disk,
+    <br>* Mcs.optic-nerve-head,
+    <br>====== langoGreek:
+    <br>* McsEll.οπτικη-θηλη,
+    <a class="clsHide" href="#idBdyHmn439nam"></a></p>
+  <p id="idBdyHmn439dsn">description::
+    <br>analytic: οπτικη θηλη είναι το μέρος του <a class="clsPreview" href="#idBdyHmn425">retina</a> στο οποιο εισέρχεται το οπτικο νεύρο. Δεν έχει ούτε ραβδία ούτε κωνία.
+    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn439dsn"></a></p>
+  <p id="idBdyHmn439wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn425wtr">retina</a>,
+    <a class="clsHide" href="#idBdyHmn439wtr"></a></p>
+  </section>
+
+  <section id="idBdyHmn440">
+  <h2 id="idBdyHmn440H2">cones
+    <a class="clsHide" href="#idBdyHmn440H2"></a></h2>
+  <p id="idBdyHmn440nam">name::
+    <br>* Mcs.cptBdyHmn440,
+    <br>* Mcs.cones,
+    <br>====== langoGreek:
+    <br>* McsEll.κωνία,
+    <a class="clsHide" href="#idBdyHmn440nam"></a></p>
+  <p id="idBdyHmn440dsn">description::
+    <br>analytic: κωνία είναι αποφυάδες οπτικων κυττάρων που χρησιμεύουν για την όραση στο φώς και την αντίληψη των χρωμάτων.
+    <br>[Αργύρης, {1994}, 275/276⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn440dsn"></a></p>
+  <p id="idBdyHmn440wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn253wtr">οπτικο-κύτταρο</a>,
+    <a class="clsHide" href="#idBdyHmn440wtr"></a></p>
+
+  <section id="idBdyHmn440srtr">
+  <h3 id="idBdyHmn440srtrH3">structure
+    <a class="clsHide" href="#idBdyHmn440srtrH3"></a></h3>
+  <p id="idBdyHmn440srtrP1">structure::
+    <br>για τα κωνία έχουν περιγραφεί 3 διαφορετικές φωτοευαίσθητες ουσίες. Κάθε μια από αυτές αντιστοιχεί σ' έναν από τους τρεις τυπους κωνιων που καθένας είναι ευαίσθητος στην ακτινοβολία ενός από τα τρία πρωταρχικά χρωματα (μπλε, πρασινο, κοκκινο).  από τα τρία αυτά χρωματα μπορούν να παραχθούν με ανάμειξη κάτω από ορισμένες αναλογίες όλα τα χρώματα. Δηλαδή η βάση της έγχρωμης όρασής μας είναι τριχρωματική.
+    <br>[Αργύρης, {1994}, 278⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn440srtrP1"></a></p>
+  </section>
+
+  <section id="idBdyHmn440aggregate">
+  <h3 id="idBdyHmn440aggregateH3">aggregate
+    <a class="clsHide" href="#idBdyHmn440aggregateH3"></a></h3>
+  <p id="idBdyHmn440aggregateP1">aggregate::
+    <br>ανέρχονται σε 6.000.000 περίπου.
+    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn440aggregateP1"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn441">
+  <h2 id="idBdyHmn441H2">rods
+    <a class="clsHide" href="#idBdyHmn441H2"></a></h2>
+  <p id="idBdyHmn441nam">name::
+    <br>* Mcs.cptBdyHmn441,
+    <br>* Mcs.rods,
+    <br>====== langoGreek:
+    <br>* McsEll.ραβδία,
+    <a class="clsHide" href="#idBdyHmn441nam"></a></p>
+  <p id="idBdyHmn441dsn">description::
+    <br>analytic: ραβδία είναι αποφυάδες οπτικων κυττάρων που χρησιμεύουν για την όραση σε αμυδρά φωτισμένους χώρους.
+    <br>[Αργύρης, {1994}, 275/276⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn441dsn"></a></p>
+  <p id="idBdyHmn441wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idBdyHmn253wtr">οπτικο-κύτταρο</a>,
+    <a class="clsHide" href="#idBdyHmn441wtr"></a></p>
+
+  <section id="idBdyHmn441srtr">
+  <h3 id="idBdyHmn441srtrH3">structure
+    <a class="clsHide" href="#idBdyHmn441srtrH3"></a></h3>
+  <p id="idBdyHmn441srtrP1">structure::
+    <br>ροδοψινη,
+    <a class="clsHide" href="#idBdyHmn441srtrP1"></a></p>
+  <p id="idBdyHmn441srtrP2">η φωτοευαισθητη ουσία των ραβδίων λέγεται ροδοψινη.
+    <br>[Αργύρης, {1994}, 278⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn441srtrP2"></a></p>
+  </section>
+
+  <section id="idBdyHmn441aggregate">
+  <h3 id="idBdyHmn441aggregateH3">aggregate
+    <a class="clsHide" href="#idBdyHmn441aggregateH3"></a></h3>
+  <p id="idBdyHmn441aggregateP1">aggregate::
+    <br>ανέρχονται σε 120.000.000 περίπου.
+    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn441aggregateP1"></a></p>
+  </section>
+  </section>
+
   <section id="idOrgnHmn009color">
-  <h2 id="idOrgnHmn009colorH2">color
+  <h2 id="idOrgnHmn009colorH2">color of organEye
     <a class="clsHide" href="#idOrgnHmn009colorH2"></a></h2>
   <p id="idOrgnHmn009colorP1">Can One Change Eye Color Through Laser Surgery?
     <br>A type of laser surgery can permanently change a person’s eye color from brown to blue.
@@ -8761,28 +9506,8 @@
   </section>
 
   <section id="idOrgnHmn009disease">
-  <h2 id="idOrgnHmn009diseaseH2">disease
+  <h2 id="idOrgnHmn009diseaseH2">disease (<a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn096">link</a>) of organEye
     <a class="clsHide" href="#idOrgnHmn009diseaseH2"></a></h2>
-  <p id="idOrgnHmn009diseaseP1">disease::
-    <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn096">eye-disease</a>,
-    <a class="clsHide" href="#idOrgnHmn009diseaseP1"></a></p>
-  </section>
-
-  <section id="idOrgnHmn009doing">
-  <h2 id="idOrgnHmn009doingH2">doing
-    <a class="clsHide" href="#idOrgnHmn009doingH2"></a></h2>
-  <p id="idOrgnHmn009doingP1">doing::
-    <br>το φώς περνάει από τον κερατοειδή, το υδατοειδές υγρό, φτάνει και περνάει στον κρυσταλλικό φακό, μέσα από την κόρη. Ο φακός ρυθμίζει, με τη βοήθεια των μυών του, έτσι την κυρτότητά του, ώστε οι φωτεινές ακτίνες να σχηματίσουν το είδωλο ακριβώς επάνω στον αμφιβληστροειδή, εφόσον η απόσταση του αντικειμένου δεν είναι μικρότερη από 12 εκ.  η μεταβολή της κυρτότητας του φακού με τη βοήθεια των μυών λέγεται προσαρμοστικη ικανοτητα του ματιού.
-    <br>τα κωνία, οι φωτοδέκτες, ερεθίζονται και μεταβιβάζουν τη νευρική διέγερση στο οπτικό νεύρο και αυτό στο οπτικό κέντρο του εγκεφάλου. Εκεί συνειδητοποιούμε την εικόνα, η οποία στη συνέχεια προβάλλεται μέσω του ματιού στη θέση που βρίσκεται το αντικείμενο, έτσι έχουμε την αίσθηση οτι τη βλέπουμε με τα βάτια μας.
-    <br>σε αμυδρά φωτιζόμενους χώρους έχουμε κάποιες δυσκολίες στο να διακρίνουμε τα αντικείμενα. Αυτό συμβαίνει, γιατί τα ραβδία που είναι υπεύθυνα για την όραση σε λίγο φώς, είναι λίγα στο ανθρώπινο μάτι σε σύγκριση με άλλα ζώα, όπως η γάτα που βλέπει στο σκοτάδι, γιατί έχει πολλά ραβδία.
-    <br>[Αργύρης, {1994}, 99⧺cptRsc29⧺]
-    <a class="clsHide" href="#idOrgnHmn009doingP1"></a></p>
-  <p id="idOrgnHmn009doingP2">Will Eating More Carrots Improve Your Eyesight?
-    <br>In WWII, the British military tried to hide its new radar system by saying that carrots had improved pilots' vision.
-    <br>
-    <br>That line your parents used to tell you about eating all the carrots off your plate so you could see better? It was a ruse. In fact, the carrot myth was first popularized during World War II by the British military, in hopes that the Germans wouldn’t find out that the Royal Air Force (RAF) had started using a new, high-tech tool to spot Nazi bombers attacking at night. Instead of admitting that radar was giving them superior night vision, the RAF told the world that their pilots were on a carrot-rich diet, and that their collective eyesight had improved dramatically.
-    <br>[http://www.wisegeek.com/will-eating-more-carrots-improve-your-eyesight.htm?m {2018-12-23}]
-    <a class="clsHide" href="#idOrgnHmn009doingP2"></a></p>
   </section>
 
   <section id="idOrgnHmn009fundoscopy">
@@ -8852,8 +9577,25 @@
     <a class="clsHide" href="#idOrgnHmn009srtrP2"></a></p>
   </section>
 
+  <section id="idOrgnHmn009doing">
+  <h2 id="idOrgnHmn009doingH2">doing of organEye
+    <a class="clsHide" href="#idOrgnHmn009doingH2"></a></h2>
+  <p id="idOrgnHmn009doingP1">doing::
+    <br>το φώς περνάει από τον κερατοειδή, το υδατοειδές υγρό, φτάνει και περνάει στον κρυσταλλικό φακό, μέσα από την κόρη. Ο φακός ρυθμίζει, με τη βοήθεια των μυών του, έτσι την κυρτότητά του, ώστε οι φωτεινές ακτίνες να σχηματίσουν το είδωλο ακριβώς επάνω στον αμφιβληστροειδή, εφόσον η απόσταση του αντικειμένου δεν είναι μικρότερη από 12 εκ.  η μεταβολή της κυρτότητας του φακού με τη βοήθεια των μυών λέγεται προσαρμοστικη ικανοτητα του ματιού.
+    <br>τα κωνία, οι φωτοδέκτες, ερεθίζονται και μεταβιβάζουν τη νευρική διέγερση στο οπτικό νεύρο και αυτό στο οπτικό κέντρο του εγκεφάλου. Εκεί συνειδητοποιούμε την εικόνα, η οποία στη συνέχεια προβάλλεται μέσω του ματιού στη θέση που βρίσκεται το αντικείμενο, έτσι έχουμε την αίσθηση οτι τη βλέπουμε με τα βάτια μας.
+    <br>σε αμυδρά φωτιζόμενους χώρους έχουμε κάποιες δυσκολίες στο να διακρίνουμε τα αντικείμενα. Αυτό συμβαίνει, γιατί τα ραβδία που είναι υπεύθυνα για την όραση σε λίγο φώς, είναι λίγα στο ανθρώπινο μάτι σε σύγκριση με άλλα ζώα, όπως η γάτα που βλέπει στο σκοτάδι, γιατί έχει πολλά ραβδία.
+    <br>[Αργύρης, {1994}, 99⧺cptRsc29⧺]
+    <a class="clsHide" href="#idOrgnHmn009doingP1"></a></p>
+  <p id="idOrgnHmn009doingP2">Will Eating More Carrots Improve Your Eyesight?
+    <br>In WWII, the British military tried to hide its new radar system by saying that carrots had improved pilots' vision.
+    <br>
+    <br>That line your parents used to tell you about eating all the carrots off your plate so you could see better? It was a ruse. In fact, the carrot myth was first popularized during World War II by the British military, in hopes that the Germans wouldn’t find out that the Royal Air Force (RAF) had started using a new, high-tech tool to spot Nazi bombers attacking at night. Instead of admitting that radar was giving them superior night vision, the RAF told the world that their pilots were on a carrot-rich diet, and that their collective eyesight had improved dramatically.
+    <br>[http://www.wisegeek.com/will-eating-more-carrots-improve-your-eyesight.htm?m {2018-12-23}]
+    <a class="clsHide" href="#idOrgnHmn009doingP2"></a></p>
+  </section>
+
   <section id="idOrgnHmn009SPECIFIC">
-  <h2 id="idOrgnHmn009SPECIFICH2">SPECIFIC
+  <h2 id="idOrgnHmn009SPECIFICH2">organEye.SPECIFIC
     <a class="clsHide" href="#idOrgnHmn009SPECIFICH2"></a></h2>
   <p id="idOrgnHmn009str">specific-tree::
     <br>έχουμε 2 μάτια, αριστερό και δεξιό.
@@ -8880,18 +9622,6 @@
     <br>* <a class="clsPreview" href="#idOrgnHmn">organ</a>,
     <a class="clsHide" href="#idOrgnHmn010gtr"></a></p>
 
-  <section id="idOrgnHmn010doing">
-  <h2 id="idOrgnHmn010doingH2">doing
-    <a class="clsHide" href="#idOrgnHmn010doingH2"></a></h2>
-  <p id="idOrgnHmn010doingP1">doing::
-    <br>* οσφρηση,
-    <a class="clsHide" href="#idOrgnHmn010doingP1"></a></p>
-  <p id="idOrgnHmn010doingP2">η αίσθηση της όσφρησης πραγματοποιείται στον οσφρητικο βλενογονο, που βρίσκεται στο πίσω και άνω μέρος μέρος της ρινικής κοιλότητας. Τα νευρικά κύτταρα βρίσκονται ανάμεσα στο οσφρητικό επιθήλιο και διεγείρονται από τις  οσμηρές ουσίες. Στη συνέχεια το ερέθισμα μεταβιβάζεται στον εγκέφαλο, όπου γίνεται αντιληπτή η δυσάρεστη ή εχάριστη μυρωδιά.
-    <br>σε περιπτώσεις  όμως ψυξης στην περιοχή της μύτης εκκρίνεται περισσότερη βλέννα (μύξα), η οποία επικαλύπτει τα οσφρητικά κύτταρα και έτσι δεν ερεθίζονται αυτά από τις οσμηρές ουσίες.
-    <br>[Αργύρης, {1994}, 105⧺cptRsc29⧺]
-    <a class="clsHide" href="#idOrgnHmn010doingP2"></a></p>
-  </section>
-
   <section id="idOrgnHmn010srtr">
   <h2 id="idOrgnHmn010srtrH2">structure
     <a class="clsHide" href="#idOrgnHmn010srtrH2"></a></h2>
@@ -8903,6 +9633,18 @@
   <p id="idOrgnHmn010srtrP2">η μύτη εσωτερικά έχει τις ρινικές κοιλότητες που τα τοιχώματά τους σκεπάζονται με το βλεννογόνο επιθήλιο. Το βλεννογόνο επιθήλιο με τη βλέννα και τις βλεφαρίδες του υγραίνει τον αέρα και τον καθαρίζει από τα διάφορα σώματίδια (σκόνες).
     <br>[Αργύρης, {1994}, 74⧺cptRsc29⧺]
     <a class="clsHide" href="#idOrgnHmn010srtrP2"></a></p>
+  </section>
+
+  <section id="idOrgnHmn010doing">
+  <h2 id="idOrgnHmn010doingH2">doing
+    <a class="clsHide" href="#idOrgnHmn010doingH2"></a></h2>
+  <p id="idOrgnHmn010doingP1">doing::
+    <br>* όσφρηση,
+    <a class="clsHide" href="#idOrgnHmn010doingP1"></a></p>
+  <p id="idOrgnHmn010doingP2">η αίσθηση της όσφρησης πραγματοποιείται στον οσφρητικο βλενογονο, που βρίσκεται στο πίσω και άνω μέρος μέρος της ρινικής κοιλότητας. Τα νευρικά κύτταρα βρίσκονται ανάμεσα στο οσφρητικό επιθήλιο και διεγείρονται από τις  οσμηρές ουσίες. Στη συνέχεια το ερέθισμα μεταβιβάζεται στον εγκέφαλο, όπου γίνεται αντιληπτή η δυσάρεστη ή εχάριστη μυρωδιά.
+    <br>σε περιπτώσεις  όμως ψυξης στην περιοχή της μύτης εκκρίνεται περισσότερη βλέννα (μύξα), η οποία επικαλύπτει τα οσφρητικά κύτταρα και έτσι δεν ερεθίζονται αυτά από τις οσμηρές ουσίες.
+    <br>[Αργύρης, {1994}, 105⧺cptRsc29⧺]
+    <a class="clsHide" href="#idOrgnHmn010doingP2"></a></p>
   </section>
 </section>
 
@@ -9054,6 +9796,7 @@
   <h1 id="idOrgnHmn012H1">organ.sense.tongue.012
     <a class="clsHide" href="#idOrgnHmn012H1"></a></h1>
   <p id="idOrgnHmn012nam">name::
+    <br>* Mcs.organTongue,
     <br>* Mcs.organ.012.tongue,
     <br>* Mcs.organ.tongue,
     <br>* Mcs.tongue.human,
@@ -9070,12 +9813,59 @@
     <br>γλώσσα είναι ένα μυώδες όργανο που βοηθάει στην ανάμειξη των τροφών και την κατάποση του βλωμού (μπουκιάς).
     <br>[Αργύρης, {1994}, 34⧺cptRsc29⧺]
     <a class="clsHide" href="#idOrgnHmn012dsn"></a></p>
-  <p id="idOrgnHmn012gtr">generic-tree::
+  <p id="idOrgnHmn012gtr">generic-tree-of-organTongue::
     <br>* <a class="clsPreview" href="#idOrgnHmn">organ</a>,
     <a class="clsHide" href="#idOrgnHmn012gtr"></a></p>
-  <p id="idOrgnHmn012wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn017wtr">mouth</a>,
+  <p id="idOrgnHmn012wtr">whole-tree-of-organTongue::
+    <br>* <a class="clsPreview" href="#idOrgnHmn017wtr">organMouth</a>,
     <a class="clsHide" href="#idOrgnHmn012wtr"></a></p>
+
+  <section id="idBdyHmn446">
+  <h2 id="idBdyHmn446H2">taste-bud of organTongue
+    <a class="clsHide" href="#idBdyHmn446H2"></a></h2>
+  <p id="idBdyHmn446nam">name::
+    <br>* Mcs.cptBdyHmn446,
+    <br>* Mcs.taste-bud,
+    <br>====== langoGreek:
+    <br>* McsEll.γευστικός-καλυκας,
+    <a class="clsHide" href="#idBdyHmn446nam"></a></p>
+  <p id="idBdyHmn446dsn">description::
+    <br>analytic: γευστικη καλυκα είναι το <a class="clsPreview" href="#idOrgnHmn007">organSense</a> του συστήματος γεύσης που βρίσκονται στη <a class="clsPreview" href="#idOrgnHmn012">γλώσσα</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmn446dsn"></a></p>
+  <p id="idBdyHmn446gtr">generic-tree::
+    <br>* <a class="clsPreview" href="#idOrgnHmn007">organSense</a>,
+    <a class="clsHide" href="#idBdyHmn446gtr"></a></p>
+  <p id="idBdyHmn446wtr">whole-tree::
+    <br>* <a class="clsPreview" href="#idOrgnHmn012wtr">γλώσσα</a>,
+    <br>γεύσης σύστημα⧺cptBdyHmn319⧺,
+    <a class="clsHide" href="#idBdyHmn446wtr"></a></p>
+
+  <section id="idBdyHmn446srtr">
+  <h3 id="idBdyHmn446srtrH3">structure of organTongue
+    <a class="clsHide" href="#idBdyHmn446srtrH3"></a></h3>
+  <p id="idBdyHmn446srtrP1">structure::
+    <br>υποδεκτικο όργανο (γευστικα κύτταρα)⧺cptBdyHmn447⧺
+    <a class="clsHide" href="#idBdyHmn446srtrP1"></a></p>
+  <p id="idBdyHmn446srtrP2">οι γευστικές κάλυκες είναι ειδικές κατασκευές που περιέχονται στις θηλες της γλώσσας.
+    <br>
+    <br>στις γευστικές κάλυκες υπάρχουν ειδικά κύτταρα, οι υποδοχείς των γευστικών ερεθισμάτων, οι οποίοι είναι χημειοϋποδοχείς, δηλαδή όπως και στην όσφρηση, αντιδρούν με την επίδραση χημικών ουσιών.
+    <br>[Αργύρης, {1994}, 286⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn446srtrP2"></a></p>
+  </section>
+  </section>
+
+  <section id="idOrgnHmn012srtr">
+  <h2 id="idOrgnHmn012srtrH2">structure of organTongue
+    <a class="clsHide" href="#idOrgnHmn012srtrH2"></a></h2>
+  <p id="idOrgnHmn012srtrP1">structure::
+    <br><img src="filMcsBdyHmn.files/img.hb-tongue.jpg">
+    <br>* <a class="clsPreview" href="#idBdyHmn446">γευστικες-καλυκες</a>,
+    <a class="clsHide" href="#idOrgnHmn012srtrP1"></a></p>
+  <p id="idOrgnHmn012srtrP2">To αισθητήριο της γεύσης το αποτελούν οι γευστικες καλυκες της γλώσσας.
+    <br>[Αργύρης, {1994}, 286⧺cptRsc31⧺]
+    <a class="clsHide" href="#idOrgnHmn012srtrP2"></a></p>
+  </section>
 
   <section id="idOrgnHmn012doing">
   <h2 id="idOrgnHmn012doingH2">doing
@@ -9091,18 +9881,6 @@
     <br>[Αργύρης, {1994}, 105⧺cptRsc29⧺]
     <a class="clsHide" href="#idOrgnHmn012doingP3"></a></p>
   </section>
-
-  <section id="idOrgnHmn012srtr">
-  <h2 id="idOrgnHmn012srtrH2">structure
-    <a class="clsHide" href="#idOrgnHmn012srtrH2"></a></h2>
-  <p id="idOrgnHmn012srtrP1">structure::
-    <br><img src="filMcsBdyHmn.files/img.hb-tongue.jpg">
-    <br>* <a class="clsPreview" href="#idBdyHmn446">γευστικες-καλυκες</a>,
-    <a class="clsHide" href="#idOrgnHmn012srtrP1"></a></p>
-  <p id="idOrgnHmn012srtrP2">To αισθητήριο της γεύσης το αποτελούν οι γευστικες καλυκες της γλώσσας.
-    <br>[Αργύρης, {1994}, 286⧺cptRsc31⧺]
-    <a class="clsHide" href="#idOrgnHmn012srtrP2"></a></p>
-  </section>
 </section>
 
 <section id="idOrgnHmn013">
@@ -9117,7 +9895,7 @@
     <br>* McsEll.αγγείο,
     <a class="clsHide" href="#idOrgnHmn013nam"></a></p>
   <p id="idOrgnHmn013dsn">description::
-    <br>αγγείο είναι κάθε σωληνας του αγγειακού σύνολου του καρδιαγγειακόύ συστήματος.
+    <br>αγγείο είναι κάθε σωληνας του αγγειακού συνόλου του καρδιαγγειακόύ συστήματος.
     <a class="clsHide" href="#idOrgnHmn013dsn"></a></p>
   <p id="idOrgnHmn013gtr">generic-tree::
     <br>* <a class="clsPreview" href="#idOrgnHmn">organ</a>,
@@ -9211,7 +9989,7 @@
     <br>* McsEll.αιμοφόρο-σύνολο-αγγειων,
     <a class="clsHide" href="#idBdyHmn678aggregatenam"></a></p>
   <p id="idBdyHmn678aggregatedsn">description::
-    <br>το αιμοφόρο-σύνολο-αγγείων είναι το μέρος του αγγειακού σύνολου στο οποίο διέρχεται αίμα.
+    <br>το αιμοφόρο-σύνολο-αγγείων είναι το μέρος του αγγειακού συνόλου στο οποίο διέρχεται αίμα.
     <br>===
     <br>How Many Blood Vessels Are There in a Human Body?
     <br>A human body contains enough blood vessels to circle the globe at least two times.
@@ -9335,14 +10113,14 @@
     <br>* McsEll.λεμφαγγείο,
     <a class="clsHide" href="#idBdyHmn286nam"></a></p>
   <p id="idBdyHmn286dsn">description::
-    <br>λεμφαγγεία είναι τα <a class="clsPreview" href="#idOrgnHmn013">αγγεία</a> του λεμφοφορου σύνολου.
+    <br>λεμφαγγεία είναι τα <a class="clsPreview" href="#idOrgnHmn013">αγγεία</a> του λεμφοφόρου συνόλου.
     <a class="clsHide" href="#idBdyHmn286dsn"></a></p>
 
   <section id="idBdyHmn286srtr">
   <h3 id="idBdyHmn286srtrH3">structure
     <a class="clsHide" href="#idBdyHmn286srtrH3"></a></h3>
   <p id="idBdyHmn286srtrP1">structure::
-    <br>τα λεμφαγγεία φέρνουν βαλβίδες, συνενώνονται σε στελέχη, που τελικά φέρουν τη λέμφο στο δεξιό κολπο της καρδιάς και από εκεί στη κυκλοφορία του αίματος. Η λέμφος που έρχεται από το λεπτό έντερο είναι πλούσια σε λίπη.
+    <br>τα λεμφαγγεία φέρνουν βαλβίδες, συνενώνονται σε στελέχη, που τελικά φέρουν τη λέμφο στο δεξιό κόλπο της καρδιάς και από εκεί στη κυκλοφορία του αίματος. Η λέμφος που έρχεται από το λεπτό έντερο είναι πλούσια σε λίπη.
     <br>[Αργύρης, {1994}, 55⧺cptRsc29⧺]
     <a class="clsHide" href="#idBdyHmn286srtrP1"></a></p>
   </section>
@@ -9364,7 +10142,7 @@
     <br>The blood vessels are the part of the circulatory system that transports blood throughout the body. There are three major types of blood vessels: the arteries, which carry the blood away from the heart; the capillaries, which enable the actual exchange of water and chemicals between the blood and the tissues; and the veins, which carry blood from the capillaries back toward the heart.
     <br>[http://en.wikipedia.org/wiki/Blood_vessel]
     <br>===
-    <br>analytic: το αγγειακό-σύνολο είναι το μέρος του καρδιαγγειακόυ συστήματος που αποτελείται μόνο από τα σωληνες.
+    <br>analytic: το αγγειακό-σύνολο είναι το μέρος του καρδιαγγειακού συστήματος που αποτελείται μόνο από τα σωληνες.
     <br>[hmnSgm, {1995-02}]
     <br>===
     <br>το κυκλοφοριακο σύστημα είναι ένα δίκτυο αγγείων (σωλήνων), το οποίο διακλαδίζεται σε όλα τα όργανα και τους ιστους του σώματος και έχει σαν αποστόλή την μεταφορά του αίματος.
@@ -9411,7 +10189,7 @@
     <br>* McsEll.λεμφοφορο-σύστημα-αγγειων,
     <a class="clsHide" href="#idBdyHmn070nam"></a></p>
   <p id="idBdyHmn070dsn">description::
-    <br>analytic: το λεμφοφορο-σύνολο-αγγειων είναι το μέρος του αγγειακού-σύνολου που μεταφέρει τη <a class="clsPreview" href="#idBdyHmn125">λεμφο</a>.
+    <br>analytic: το λεμφοφορο-σύνολο-αγγειων είναι το μέρος του αγγειακού-συνόλου που μεταφέρει τη <a class="clsPreview" href="#idBdyHmn125">λεμφο</a>.
     <br>===
     <br>το λεμφορόρο σύστημα αποτελεί προσαρτημα στο φλεβικο σκελους του 'αιμοφόρου συστήματος', μέσα στο οποίο η λεμφος κυκλοφορεί μόνο προς μια κατεύθυνση, δηλ. Από τους ιστους προς το φλεβικό σύστημα.
     <br>[Αργύρης, {1994}, 383⧺cptRsc31⧺]
@@ -9426,7 +10204,7 @@
     <a class="clsHide" href="#idBdyHmn070srtrH3"></a></h3>
   <p id="idBdyHmn070srtrP1">structure::
     <br>* <a class="clsPreview" href="#idBdyHmn286">λεμφαγγεία</a>,
-    <br>* λεμφικα τριχοειδη,
+    <br>* λεμφικα-τριχοειδη,
     <br>* <a class="clsPreview" href="#idOrgnHmn031">λεμφογαγγλια</a>,
     <a class="clsHide" href="#idBdyHmn070srtrP1"></a></p>
   <p id="idBdyHmn070srtrP2">το λεμφοφόρο σύστημα αποτελείται από
@@ -9652,7 +10430,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn515">nodeBodyHmn</a>,
     <a class="clsHide" href="#idBdyHmn111gtr"></a></p>
   <p id="idBdyHmn111wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn017wtr">mouth</a>,
+    <br>* <a class="clsPreview" href="#idOrgnHmn017wtr">organMouth</a>,
     <a class="clsHide" href="#idBdyHmn111wtr"></a></p>
   </section>
 
@@ -9681,7 +10459,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn515">nodeBodyHmn</a>,
     <a class="clsHide" href="#idBdyHmn110gtr"></a></p>
   <p id="idBdyHmn110wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn017wtr">mouth</a>,
+    <br>* <a class="clsPreview" href="#idOrgnHmn017wtr">organMouth</a>,
     <a class="clsHide" href="#idBdyHmn110wtr"></a></p>
 
   <section id="idBdyHmn110disease">
@@ -9887,7 +10665,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn515">nodeBodyHmn</a>,
     <a class="clsHide" href="#idBdyHmn327gtr"></a></p>
   <p id="idBdyHmn327wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn017wtr">mouth</a>,
+    <br>* <a class="clsPreview" href="#idOrgnHmn017wtr">organMouth</a>,
     <a class="clsHide" href="#idBdyHmn327wtr"></a></p>
   </section>
 
@@ -9909,7 +10687,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn515">nodeBodyHmn</a>,
     <a class="clsHide" href="#idBdyHmn328gtr"></a></p>
   <p id="idBdyHmn328wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn017wtr">mouth</a>,
+    <br>* <a class="clsPreview" href="#idOrgnHmn017wtr">organMouth</a>,
     <a class="clsHide" href="#idBdyHmn328wtr"></a></p>
   </section>
 
@@ -9934,7 +10712,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn515">nodeBodyHmn</a>,
     <a class="clsHide" href="#idBdyHmn329gtr"></a></p>
   <p id="idBdyHmn329wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn017wtr">mouth</a>,
+    <br>* <a class="clsPreview" href="#idOrgnHmn017wtr">organMouth</a>,
     <a class="clsHide" href="#idBdyHmn329wtr"></a></p>
 
   <section id="idBdyHmn329srtr">
@@ -9987,7 +10765,7 @@
     <br>* McsEll.φάρυγγας-ανθρώπου, {2012-08-13},
     <a class="clsHide" href="#idOrgnHmn018nam"></a></p>
   <p id="idOrgnHmn018dsn">description::
-    <br>analytic: φαρυγγα ονομάζω το όργανο που είναι το δεύτερο μέρος του <a class="clsPreview" href="#idOrgnHmn032">λαιμου</a>.
+    <br>analytic: φαρυγγα ονομάζω το όργανο που είναι το δεύτερο μέρος του <a class="clsPreview" href="#idOrgnHmn032">organThroat</a>.
     <br>[hmnSgm, μρτ. 1995]
     <br>===
     <br>ο φάρυγγας αποτελεί κοινη κοιλότητα του <a class="clsPreview" href="#idSognHmn006">αναπνευστικου</a> και του πεπτικού συστήματος.
@@ -10066,14 +10844,14 @@
     <br>* McsEll.λάρυγγας,
     <a class="clsHide" href="#idOrgnHmn020nam"></a></p>
   <p id="idOrgnHmn020dsn">description::
-    <br>analytic: λαρυγγα ονομάζω το όργανο που είναι το πρώτο μέρος του <a class="clsPreview" href="#idOrgnHmn032">λαιμου</a>.
+    <br>analytic: λαρυγγα ονομάζω το όργανο που είναι το πρώτο μέρος του <a class="clsPreview" href="#idOrgnHmn032">organThroat</a>.
     <br>[hmnSgm, μρτ. 1995]
     <a class="clsHide" href="#idOrgnHmn020dsn"></a></p>
   <p id="idOrgnHmn020gtr">generic-tree::
     <br>* <a class="clsPreview" href="#idOrgnHmn">organ</a>,
     <a class="clsHide" href="#idOrgnHmn020gtr"></a></p>
   <p id="idOrgnHmn020wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn032wtr">λαιμός</a>,
+    <br>* <a class="clsPreview" href="#idOrgnHmn032wtr">organThroat</a>,
     <a class="clsHide" href="#idOrgnHmn020wtr"></a></p>
 
   <section id="idOrgnHmn020disease">
@@ -10133,7 +10911,7 @@
     <br>* McsEll.τραχεία,
     <a class="clsHide" href="#idOrgnHmn025nam"></a></p>
   <p id="idOrgnHmn025dsn">description::
-    <br>analytic: η τραχεία είναι όργανο του <a class="clsPreview" href="#idSognHmn006">αναπνευστικου-συστήματος</a> μετά το <a class="clsPreview" href="#idOrgnHmn032">λαιμό</a>.
+    <br>analytic: η τραχεία είναι όργανο του <a class="clsPreview" href="#idSognHmn006">αναπνευστικου-συστήματος</a> μετά το <a class="clsPreview" href="#idOrgnHmn032">organThroat</a>.
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idOrgnHmn025dsn"></a></p>
   <p id="idOrgnHmn025gtr">generic-tree::
@@ -10480,10 +11258,11 @@
   <h1 id="idMsclHmnH1">organ.muscle.029
     <a class="clsHide" href="#idMsclHmnH1"></a></h1>
   <p id="idMsclHmnnam">name::
-    <br>* Mcs.organ.029.muscle,
-    <br>* Mcs.organ.muscle,
-    <br>* Mcs.muscle,
-    <br>* Mcs.muscle.human,
+    <br>* Mcs.organMuscle,
+    <br>* Mcs.organ.029.muscle,!⇒organMuscle
+    <br>* Mcs.organ.muscle!⇒organMuscle,
+    <br>* Mcs.muscle!⇒organMuscle,
+    <br>* Mcs.muscle.human!⇒organMuscle,
     <br>====== langoGreek:
     <br>* McsEll.όργανο.μυς,
     <br>* McsEll.μυς!=muscle,
@@ -10504,7 +11283,7 @@
     <a class="clsHide" href="#idMsclHmngtr"></a></p>
 
   <section id="idMsclHmndisease">
-  <h2 id="idMsclHmndiseaseH2">disease
+  <h2 id="idMsclHmndiseaseH2">disease of organMuscle
     <a class="clsHide" href="#idMsclHmndiseaseH2"></a></h2>
   <p id="idMsclHmndiseaseP1">disease::
     <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn267">muscle-atrophy-disease</a>,
@@ -10512,14 +11291,19 @@
     <a class="clsHide" href="#idMsclHmndiseaseP1"></a></p>
   </section>
 
+  <section id="idMsclHmntss">
+  <h2 id="idMsclHmntssH2">tissueMuscle (<a class="clsPreview" href="#idBdyHmn057">link</a>) of organMuscle
+    <a class="clsHide" href="#idMsclHmntssH2"></a></h2>
+  </section>
+
   <section id="idMsclHmnsrtr">
-  <h2 id="idMsclHmnsrtrH2">structure
+  <h2 id="idMsclHmnsrtrH2">structure of organMuscle
     <a class="clsHide" href="#idMsclHmnsrtrH2"></a></h2>
   <p id="idMsclHmnsrtrnam">name::
-    <br>* Mcs.muscle'structure,
+    <br>* Mcs.organMuscle'structure,
     <a class="clsHide" href="#idMsclHmnsrtrnam"></a></p>
   <p id="idMsclHmnsrtrP1">structure::
-    <br>* <a class="clsPreview" href="#idBdyHmn057">μυικός-ιστός</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn057">tissueMuscle</a>,
     <a class="clsHide" href="#idMsclHmnsrtrP1"></a></p>
   <p id="idMsclHmnsrtrP2">οι βασικές ανατομικές και λειτουργικές μοναδες των μυών είναι τα μυικά κύτταρα.
     <br>[Αργύρης, {1994}, 29⧺cptRsc29⧺]
@@ -10951,6 +11735,96 @@
     <br>* <a class="clsPreview" href="#idSognHmn007wtr">digestive-sys</a>,
     <a class="clsHide" href="#idOrgnHmn030wtr"></a></p>
 
+  <section id="idOrgnHmn033">
+  <h2 id="idOrgnHmn033H2">organ.small-intestine.033
+    <a class="clsHide" href="#idOrgnHmn033H2"></a></h2>
+  <p id="idOrgnHmn033nam">name::
+    <br>* Mcs.organ.033.small-intestine,
+    <br>* Mcs.organ.small-intestine,
+    <br>* Mcs.human-small-intestine, {2012-08-13},
+    <br>* Mcs.small-intestine.human, {2012-08-13},
+    <br>====== langoGreek:
+    <br>* McsEll.όργανο.λεπτό-έντερο,
+    <br>* McsEll.λεπτο-εντερο,
+    <br>* McsEll.λεπτό-έντερο-ανθρώπου, {2012-08-13},
+    <a class="clsHide" href="#idOrgnHmn033nam"></a></p>
+  <p id="idOrgnHmn033dsn">description::
+    <br>The small intestine is the part of the gastrointestinal tract following the stomach and followed by the large intestine, and is where much of the digestion and absorption of food takes place. In invertebrates such as worms, the terms "gastrointestinal tract" and "large intestine" are often used to describe the entire intestine. This article is primarily about the human gut, though the information about its processes is directly applicable to most placental mammals. The primary function of the small intestine is the absorption of nutrients and minerals found in food. [2] (A major exception to this is cows; for information about digestion in cows and other similar mammals, see ruminants.)
+    <br>[http://en.wikipedia.org/wiki/Small_intestine]
+    <a class="clsHide" href="#idOrgnHmn033dsn"></a></p>
+  <p id="idOrgnHmn033P1">το λεπτό έντερο είναι το πρώτο <strong>πιο μακρύ</strong> μέρος του εντέρου.
+    <a class="clsHide" href="#idOrgnHmn033P1"></a></p>
+  <p id="idOrgnHmn033gtr">generic-tree::
+    <br>* <a class="clsPreview" href="#idOrgnHmn">organ</a>,
+    <a class="clsHide" href="#idOrgnHmn033gtr"></a></p>
+
+  <section id="idOrgnHmn033doing">
+  <h3 id="idOrgnHmn033doingH3">doing
+    <a class="clsHide" href="#idOrgnHmn033doingH3"></a></h3>
+  <p id="idOrgnHmn033doingP1">doing::
+    <br>τα συστατικά της διάσπασης των τροφών μαζί με νερό, άλατα και βιταμίνες, θα απορροφηθούν από τις λάχνες και θα περάσουν στο αίμα.
+    <br>[Αργύρης, {1994}, 40⧺cptRsc29⧺]
+    <a class="clsHide" href="#idOrgnHmn033doingP1"></a></p>
+  </section>
+
+  <section id="idOrgnHmn033srtr">
+  <h3 id="idOrgnHmn033srtrH3">structure
+    <a class="clsHide" href="#idOrgnHmn033srtrH3"></a></h3>
+  <p id="idOrgnHmn033srtrP1">structure::
+    <br>* <a class="clsPreview" href="#idOrgnHmn035">δωδεκαδάκτυλο</a>,
+    <br>* εντερικο υγρό,
+    <br>* λαχνες,
+    <br>* πτυχες,
+    <a class="clsHide" href="#idOrgnHmn033srtrP1"></a></p>
+  <p id="idOrgnHmn033srtrP2">το πρώτο τμήμα του λεπτού εντέρου, το δωδεκαδάκτυλο, έχει σχήμα περίπου πετάλου και μήκος περί τα 30 εκ.
+    <br>το λεπτό έντερο εσωτερικά αποτελείται από βλεννογονο χιτώνα, ο οποίος φέρει αδένες που εκκρίνουν το εντερικο υγρό και είναι γεμάτος από μικρές κυλινδρικές προεξοχές, τις λαχνες, και πλήθος πτυχων.
+    <br>[Αργύρης, {1994}, 39⧺cptRsc29⧺]
+    <a class="clsHide" href="#idOrgnHmn033srtrP2"></a></p>
+  </section>
+  </section>
+
+  <section id="idOrgnHmn034">
+  <h2 id="idOrgnHmn034H2">organ.large-intestine.034
+    <a class="clsHide" href="#idOrgnHmn034H2"></a></h2>
+  <p id="idOrgnHmn034nam">name::
+    <br>* Mcs.organ.034.large-intestine,
+    <br>* Mcs.organ.large-intestine,
+    <br>* Mcs.human-large-intestine, {2012-08-13},
+    <br>* Mcs.large-intestine.human, {2012-08-13},
+    <br>====== langoGreek:
+    <br>* McsEll.όργανο.παχύ-έντερο,
+    <br>* McsEll.παχύ-εντερο,
+    <br>* McsEll.παxύ-έντερο-ανθρώπου, {2012-08-13},
+    <a class="clsHide" href="#idOrgnHmn034nam"></a></p>
+  <p id="idOrgnHmn034dsn">description::
+    <br>The large intestine (or "large bowel") is the third-to-last part of the digestive system in vertebrate animals. Its function is to absorb water from the remaining indigestible food matter, and then to pass useless waste material from the body.[1] This article is primarily about the human gut, though the information about its processes are directly applicable to most mammals.
+    <br>The large intestine consists of the cecum and colon. It starts in the right iliac region of the pelvis, just at or below the right waist, where it is joined to the bottom end of the small intestine. From here it continues up the abdomen, then across the width of the abdominal cavity, and then it turns down, continuing to its endpoint at the anus.
+    <br>The large intestine is about 4.9 feet (1.5 m) long, which is about one-fifth of the whole length of the intestinal canal.
+    <br>In Terminologia Anatomica the large intestine includes the cecum, colon, rectum, and anal canal. However, some sources exclude the anal canal.[2]
+    <br>[http://en.wikipedia.org/wiki/Large_intestine]
+    <br>===
+    <br>παχύ έντερο είναι το δευτερο τμήμα του εντέρου που είναι παχύ και πιο κοντό.
+    <a class="clsHide" href="#idOrgnHmn034dsn"></a></p>
+
+  <section id="idOrgnHmn034doing">
+  <h3 id="idOrgnHmn034doingH3">doing
+    <a class="clsHide" href="#idOrgnHmn034doingH3"></a></h3>
+  <p id="idOrgnHmn034doingP1">doing::
+    <br>στο παχύ έντερο δε γίνεται απομύζηση θρεπτικών συστατικών παρά μόνο απορρόφηση νερού από τα περιττώματα, τα οποία αποβάλλονται μαζί με βλέννα και βακτήρια από τον πρωκτό.
+    <br>[Αργύρης, {1994}, 40⧺cptRsc29⧺]
+    <a class="clsHide" href="#idOrgnHmn034doingP1"></a></p>
+  </section>
+
+  <section id="idOrgnHmn034disease">
+  <h3 id="idOrgnHmn034diseaseH3">disease
+    <a class="clsHide" href="#idOrgnHmn034diseaseH3"></a></h3>
+  <p id="idOrgnHmn034diseaseP1">disease::
+    <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn014">constipation</a>,
+    <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn128">diarrhea-disease</a>,
+    <a class="clsHide" href="#idOrgnHmn034diseaseP1"></a></p>
+  </section>
+  </section>
+
   <section id="idOrgnHmn030_1">
   <h2 id="idOrgnHmn030_1H2">anus
     <a class="clsHide" href="#idOrgnHmn030_1H2"></a></h2>
@@ -10995,10 +11869,10 @@
     <br>* McsEll.όργανο.λεμφαδένας,
     <br>* McsEll.λεμφαδένας-ανθρώπου, {2012-08-16},
     <br>* McsEll.λεμφογάγγλιο-ανθρώπου, {2012-08-16},
-    <br>* McsEll.λεμφογαγγλιο,
+    <br>* McsEll.λεμφογάγγλιο,
     <a class="clsHide" href="#idOrgnHmn031nam"></a></p>
   <p id="idOrgnHmn031dsn">description::
-    <br>analytic: τα λεμφογάγγλια είναι όργανα του λεμφοφορου σύνολου στα οποία φονεύονται τα βακτήρια και απορροφούνται τοξικές ουσίες.
+    <br>analytic: τα λεμφογάγγλια είναι όργανα του λεμφοφόρου συνόλου στα οποία φονεύονται τα βακτήρια και απορροφούνται τοξικές ουσίες.
     <a class="clsHide" href="#idOrgnHmn031dsn"></a></p>
   <p id="idOrgnHmn031gtr">generic-tree::
     <br>* <a class="clsPreview" href="#idOrgnHmn">organ</a>,
@@ -11066,7 +11940,7 @@
     <br>* McsEll.πονόλαιμος,
     <a class="clsHide" href="#idBdyHmn220nam"></a></p>
   <p id="idBdyHmn220dsn">description::
-    <br>παθήσεις λαιμου ονομάζω <a class="clsPreview" href="#idBdyHmn007">παθήσεις</a> του <a class="clsPreview" href="#idOrgnHmn032">λαιμου</a>.
+    <br>παθήσεις λαιμου ονομάζω <a class="clsPreview" href="#idBdyHmn007">παθήσεις</a> του <a class="clsPreview" href="#idOrgnHmn032">organThroat</a>.
     <a class="clsHide" href="#idBdyHmn220dsn"></a></p>
   <p id="idBdyHmn220gtr">generic-tree::
     <br>* <a class="clsPreview" href="#idBdyHmn007">disease</a>,
@@ -11104,96 +11978,6 @@
     <br>[http://www.nooz.gr/Health/oksis-ponolaimos-8-liseis-gia-amesi-anakoifisi]
     <a class="clsHide" href="#idBdyHmn220therapyP5"></a></p>
   </section>
-  </section>
-</section>
-
-<section id="idOrgnHmn033">
-  <h1 id="idOrgnHmn033H1">organ.small-intestine.033
-    <a class="clsHide" href="#idOrgnHmn033H1"></a></h1>
-  <p id="idOrgnHmn033nam">name::
-    <br>* Mcs.organ.033.small-intestine,
-    <br>* Mcs.organ.small-intestine,
-    <br>* Mcs.human-small-intestine, {2012-08-13},
-    <br>* Mcs.small-intestine.human, {2012-08-13},
-    <br>====== langoGreek:
-    <br>* McsEll.όργανο.λεπτό-έντερο,
-    <br>* McsEll.λεπτο-εντερο,
-    <br>* McsEll.λεπτό-έντερο-ανθρώπου, {2012-08-13},
-    <a class="clsHide" href="#idOrgnHmn033nam"></a></p>
-  <p id="idOrgnHmn033dsn">description::
-    <br>The small intestine is the part of the gastrointestinal tract following the stomach and followed by the large intestine, and is where much of the digestion and absorption of food takes place. In invertebrates such as worms, the terms "gastrointestinal tract" and "large intestine" are often used to describe the entire intestine. This article is primarily about the human gut, though the information about its processes is directly applicable to most placental mammals. The primary function of the small intestine is the absorption of nutrients and minerals found in food. [2] (A major exception to this is cows; for information about digestion in cows and other similar mammals, see ruminants.)
-    <br>[http://en.wikipedia.org/wiki/Small_intestine]
-    <a class="clsHide" href="#idOrgnHmn033dsn"></a></p>
-  <p id="idOrgnHmn033P1">το λεπτό έντερο είναι το πρώτο <strong>πιο μακρύ</strong> μέρος του εντέρου.
-    <a class="clsHide" href="#idOrgnHmn033P1"></a></p>
-  <p id="idOrgnHmn033gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn">organ</a>,
-    <a class="clsHide" href="#idOrgnHmn033gtr"></a></p>
-
-  <section id="idOrgnHmn033doing">
-  <h2 id="idOrgnHmn033doingH2">doing
-    <a class="clsHide" href="#idOrgnHmn033doingH2"></a></h2>
-  <p id="idOrgnHmn033doingP1">doing::
-    <br>τα συστατικά της διάσπασης των τροφών μαζί με νερό, άλατα και βιταμίνες, θα απορροφηθούν από τις λάχνες και θα περάσουν στο αίμα.
-    <br>[Αργύρης, {1994}, 40⧺cptRsc29⧺]
-    <a class="clsHide" href="#idOrgnHmn033doingP1"></a></p>
-  </section>
-
-  <section id="idOrgnHmn033srtr">
-  <h2 id="idOrgnHmn033srtrH2">structure
-    <a class="clsHide" href="#idOrgnHmn033srtrH2"></a></h2>
-  <p id="idOrgnHmn033srtrP1">structure::
-    <br>* <a class="clsPreview" href="#idOrgnHmn035">δωδεκαδάκτυλο</a>,
-    <br>* εντερικο υγρό,
-    <br>* λαχνες,
-    <br>* πτυχες,
-    <a class="clsHide" href="#idOrgnHmn033srtrP1"></a></p>
-  <p id="idOrgnHmn033srtrP2">το πρώτο τμήμα του λεπτού εντέρου, το δωδεκαδάκτυλο, έχει σχήμα περίπου πετάλου και μήκος περί τα 30 εκ.
-    <br>το λεπτό έντερο εσωτερικά αποτελείται από βλεννογονο χιτώνα, ο οποίος φέρει αδένες που εκκρίνουν το εντερικο υγρό και είναι γεμάτος από μικρές κυλινδρικές προεξοχές, τις λαχνες, και πλήθος πτυχων.
-    <br>[Αργύρης, {1994}, 39⧺cptRsc29⧺]
-    <a class="clsHide" href="#idOrgnHmn033srtrP2"></a></p>
-  </section>
-</section>
-
-<section id="idOrgnHmn034">
-  <h1 id="idOrgnHmn034H1">organ.large-intestine.034
-    <a class="clsHide" href="#idOrgnHmn034H1"></a></h1>
-  <p id="idOrgnHmn034nam">name::
-    <br>* Mcs.organ.034.large-intestine,
-    <br>* Mcs.organ.large-intestine,
-    <br>* Mcs.human-large-intestine, {2012-08-13},
-    <br>* Mcs.large-intestine.human, {2012-08-13},
-    <br>====== langoGreek:
-    <br>* McsEll.όργανο.παχύ-έντερο,
-    <br>* McsEll.παχύ-εντερο,
-    <br>* McsEll.παxύ-έντερο-ανθρώπου, {2012-08-13},
-    <a class="clsHide" href="#idOrgnHmn034nam"></a></p>
-  <p id="idOrgnHmn034dsn">description::
-    <br>The large intestine (or "large bowel") is the third-to-last part of the digestive system in vertebrate animals. Its function is to absorb water from the remaining indigestible food matter, and then to pass useless waste material from the body.[1] This article is primarily about the human gut, though the information about its processes are directly applicable to most mammals.
-    <br>The large intestine consists of the cecum and colon. It starts in the right iliac region of the pelvis, just at or below the right waist, where it is joined to the bottom end of the small intestine. From here it continues up the abdomen, then across the width of the abdominal cavity, and then it turns down, continuing to its endpoint at the anus.
-    <br>The large intestine is about 4.9 feet (1.5 m) long, which is about one-fifth of the whole length of the intestinal canal.
-    <br>In Terminologia Anatomica the large intestine includes the cecum, colon, rectum, and anal canal. However, some sources exclude the anal canal.[2]
-    <br>[http://en.wikipedia.org/wiki/Large_intestine]
-    <br>===
-    <br>παχύ έντερο είναι το δευτερο τμήμα του εντέρου που είναι παχύ και πιο κοντό.
-    <a class="clsHide" href="#idOrgnHmn034dsn"></a></p>
-
-  <section id="idOrgnHmn034doing">
-  <h2 id="idOrgnHmn034doingH2">doing
-    <a class="clsHide" href="#idOrgnHmn034doingH2"></a></h2>
-  <p id="idOrgnHmn034doingP1">doing::
-    <br>στο παχύ έντερο δε γίνεται απομύζηση θρεπτικών συστατικών παρά μόνο απορρόφηση νερού από τα περιττώματα, τα οποία αποβάλλονται μαζί με βλέννα και βακτήρια από τον πρωκτό.
-    <br>[Αργύρης, {1994}, 40⧺cptRsc29⧺]
-    <a class="clsHide" href="#idOrgnHmn034doingP1"></a></p>
-  </section>
-
-  <section id="idOrgnHmn034disease">
-  <h2 id="idOrgnHmn034diseaseH2">disease
-    <a class="clsHide" href="#idOrgnHmn034diseaseH2"></a></h2>
-  <p id="idOrgnHmn034diseaseP1">disease::
-    <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn014">constipation</a>,
-    <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn128">diarrhea-disease</a>,
-    <a class="clsHide" href="#idOrgnHmn034diseaseP1"></a></p>
   </section>
 </section>
 
@@ -11568,7 +12352,7 @@
 </section>
 
 <section id="idBdyHmn311">
-  <h1 id="idBdyHmn311H1">sensory-system of nervous-sys
+  <h1 id="idBdyHmn311H1">sense-system of nervous-sys
     <a class="clsHide" href="#idBdyHmn311H1"></a></h1>
   <p id="idBdyHmn311nam">name::
     <br>* Mcs.cptBdyHmn311,
@@ -11592,42 +12376,49 @@
     <a class="clsHide" href="#idBdyHmn311wtr"></a></p>
 
   <section id="idBdyHmn311disease">
-  <h2 id="idBdyHmn311diseaseH2">disease of sensory-sys
+  <h2 id="idBdyHmn311diseaseH2">disease (<a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn027">link</a>) of sense-sys
     <a class="clsHide" href="#idBdyHmn311diseaseH2"></a></h2>
-  <p id="idBdyHmn311diseasenam">name::
-    <br>* Mcs.disease.sensory-sys,
-    <br>* Mcs.sensory-sys'disease,
-    <a class="clsHide" href="#idBdyHmn311diseasenam"></a></p>
-  <p id="idBdyHmn311diseaseP1">disease::
-    <br>οποιαδήποτε βλάβη στο αισθητήριο όργανο, στην αισθητική οδό ή στο αισθητικό κέντρο έχει σαν αποτέλεσμα ανάλογη απώλεια της αντιστοιχης αίσθησης.
-    <br>[Αργύρης, {1994}, 70⧺cptRsc31⧺]
-    <br>ενδεχόμενη βλάβη αισθητικού εγκεφαλικού κέντρου, σημαίνει ότι καταργείται και η αντίστοιχη αίσθηση παρά τη λειτουργική ακεραιότητα του αισθητηρίου οργάνου και του νεύρου του.
-    <br>[Αργύρης, {1994}, 96⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn311diseaseP1"></a></p>
+  </section>
+
+  <section id="idBdyHmn311organ">
+  <h2 id="idBdyHmn311organH2">organ (<a class="clsPreview" href="#idOrgnHmn007">link</a>) of sense-sys
+    <a class="clsHide" href="#idBdyHmn311organH2"></a></h2>
+  </section>
+
+  <section id="idBdyHmn311cortex">
+  <h2 id="idBdyHmn311cortexH2">cortext (<a class="clsPreview" href="##idBdyHmn444">link</a>) of sense-sys
+    <a class="clsHide" href="#idBdyHmn311cortexH2"></a></h2>
   </section>
 
   <section id="idBdyHmn311_1">
-  <h2 id="idBdyHmn311_1H2">receptor of sensory-sys
+  <h2 id="idBdyHmn311_1H2">receptor of sense-sys
     <a class="clsHide" href="#idBdyHmn311_1H2"></a></h2>
   </section>
 
   <section id="idBdyHmn311_3">
-  <h2 id="idBdyHmn311_3H2">sensation of sensory-sys
+  <h2 id="idBdyHmn311_3H2">sensation (<a class="clsPreview" href="../dirLag/filMcsInfHmn.last.html#idInfHmnBrninSstn">link</a>) of sense-sys
     <a class="clsHide" href="#idBdyHmn311_3H2"></a></h2>
   </section>
 
   <section id="idBdyHmn311_4">
-  <h2 id="idBdyHmn311_4H2">stimulus of sensory-sys
+  <h2 id="idBdyHmn311_4H2">stimulus of sense-sys
     <a class="clsHide" href="#idBdyHmn311_4H2"></a></h2>
+  <p id="idBdyHmn311_4nam">name::
+    <br>* Mcs.stimulus,
+    <br>* Mcs.sense-sys'stimulus,
+    <a class="clsHide" href="#idBdyHmn311_4nam"></a></p>
+  <p id="idBdyHmn311_4dsn">description::
+    <br>·
+    <a class="clsHide" href="#idBdyHmn311_4dsn"></a></p>
   </section>
 
   <section id="idBdyHmn311srtr">
-  <h2 id="idBdyHmn311srtrH2">structure of sensory-sys
+  <h2 id="idBdyHmn311srtrH2">structure of sense-sys
     <a class="clsHide" href="#idBdyHmn311srtrH2"></a></h2>
   <p id="idBdyHmn311srtrP1">structure::
     <br>* αισθητήριο-νεύρο,
     <br>* <a class="clsPreview" href="#idBdyHmn444">αισθητικό-κέντρο</a>,
-    <br>* <a class="clsPreview" href="#idOrgnHmn007">αισθητήριο-όργανο</a>,
+    <br>* <a class="clsPreview" href="#idOrgnHmn007">organSense</a>,
     <br>===
     <br>για να δημιουργηθεί μια αίσθηση είναι απαραίτητο να υπάρχουν τα εξής:
     <br>α) το ειδικό για κάθε αίσθηση υποδεκτικο όργανο που βρίσκεται μέσα στο αντίστοιχο αισθητήριο όργανο.
@@ -11645,12 +12436,12 @@
   </section>
 
   <section id="idBdyHmn311_2">
-  <h2 id="idBdyHmn311_2H2">sensing (link) of sensory-sys
+  <h2 id="idBdyHmn311_2H2">sensing (<a class="clsPreview" href="#idBrainHmnsnsg">link</a>) of sense-sys
     <a class="clsHide" href="#idBdyHmn311_2H2"></a></h2>
   </section>
 
   <section id="idBdyHmn311SPECIFIC">
-  <h2 id="idBdyHmn311SPECIFICH2">SPECIFIC
+  <h2 id="idBdyHmn311SPECIFICH2">sense-sys.SPECIFIC
     <a class="clsHide" href="#idBdyHmn311SPECIFICH2"></a></h2>
   <p id="idBdyHmn311str">specific-tree::
     <br>* <a class="clsPreview" href="#idBdyHmn296">hearing-system</a>,
@@ -11662,7 +12453,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn312">όρασης-σύστημα</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn296">ακοής-σύστημα</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn464">αφης-σύστημα</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn318">οσφρησης-σύστημα</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn318">όσφρησης-σύστημα</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn319">γεύσης-σύστημα</a>,
     <br>===
     <br>* <a class="clsPreview" href="#idBdyHmn465">θερμοκρασίας-σύστημα</a>,
@@ -11673,7 +12464,7 @@
   </section>
 
   <section id="idBdyHmn467">
-  <h2 id="idBdyHmn467H2">sensory-sys.balancing
+  <h2 id="idBdyHmn467H2">sense-sys.balancing
     <a class="clsHide" href="#idBdyHmn467H2"></a></h2>
   <p id="idBdyHmn467nam">name::
     <br>* Mcs.cptBdyHmn467,
@@ -11706,7 +12497,7 @@
   </section>
 
   <section id="idBdyHmn296">
-  <h2 id="idBdyHmn296H2">sensory-sys.hearing
+  <h2 id="idBdyHmn296H2">sense-sys.hearing
     <a class="clsHide" href="#idBdyHmn296H2"></a></h2>
   <p id="idBdyHmn296nam">name::
     <br>* Mcs.cptBdyHmn296,
@@ -11755,7 +12546,7 @@
   </section>
 
   <section id="idBdyHmn466">
-  <h2 id="idBdyHmn466H2">sensory-sys.paining
+  <h2 id="idBdyHmn466H2">sense-sys.paining
     <a class="clsHide" href="#idBdyHmn466H2"></a></h2>
   <p id="idBdyHmn466nam">name::
     <br>* Mcs.cptBdyHmn466,
@@ -11788,7 +12579,7 @@
   </section>
 
   <section id="idBdyHmn312">
-  <h2 id="idBdyHmn312H2">sensory-sys.seeing
+  <h2 id="idBdyHmn312H2">sense-sys.seeing
     <a class="clsHide" href="#idBdyHmn312H2"></a></h2>
   <p id="idBdyHmn312nam">name::
     <br>* Mcs.cptBdyHmn312,
@@ -11822,7 +12613,7 @@
   <h3 id="idBdyHmn312doingH3">doing
     <a class="clsHide" href="#idBdyHmn312doingH3"></a></h3>
   <p id="idBdyHmn312doingP1">doing::
-    <br>όραση⧺cptBdyHmn313⧺
+    <br>* <a class="clsPreview" href="#idBdyHmn313">sensingSeeing-(sensationImage)</a>,
     <a class="clsHide" href="#idBdyHmn312doingP1"></a></p>
   </section>
 
@@ -11840,7 +12631,7 @@
     <br>* OPTIC NERVE,
     <br>* <a class="clsPreview" href="#idBdyHmn403">κέντρο-όρασης</a>,
     <br>* νεύρο οπτικο,
-    <br>* <a class="clsPreview" href="#idOrgnHmn009">eye</a>,
+    <br>* <a class="clsPreview" href="#idOrgnHmn009">organEye</a>,
     <br>* οπτικη-οδος,
     <a class="clsHide" href="#idBdyHmn312srtrP1"></a></p>
   <p id="idBdyHmn312srtrP2">η λειτουργία της όρασης έχει σαν δέκτη (αισθητήριο όργανο) το ματι.
@@ -11854,18 +12645,18 @@
   </section>
 
   <section id="idBdyHmn318">
-  <h2 id="idBdyHmn318H2">sensory-sys.smelling
+  <h2 id="idBdyHmn318H2">sense-sys.smelling
     <a class="clsHide" href="#idBdyHmn318H2"></a></h2>
   <p id="idBdyHmn318nam">name::
     <br>* Mcs.cptBdyHmn318,
     <br>* Mcs.smell'system'human,
     <br>====== langoGreek:
-    <br>* McsEll.οσφρησης-σύστημα,
-    <br>* McsEll.οσφρησης,
+    <br>* McsEll.όσφρησης-σύστημα,
+    <br>* McsEll.όσφρησης,
     <br>* McsEll.οσφρητικο-σύστημα,
     <a class="clsHide" href="#idBdyHmn318nam"></a></p>
   <p id="idBdyHmn318dsn">description::
-    <br>analytic: οσφρησης σύστημα είναι το <a class="clsPreview" href="#idBdyHmn311">αισθητηριακο-σύστημα</a> που εκτελεί τη λειτουργία της οσφρησης.
+    <br>analytic: όσφρησης σύστημα είναι το <a class="clsPreview" href="#idBdyHmn311">αισθητηριακο-σύστημα</a> που εκτελεί τη λειτουργία της όσφρησης.
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idBdyHmn318dsn"></a></p>
   <p id="idBdyHmn318gtr">generic-tree::
@@ -11879,7 +12670,7 @@
   <h3 id="idBdyHmn318doingH3">doing
     <a class="clsHide" href="#idBdyHmn318doingH3"></a></h3>
   <p id="idBdyHmn318doingP1">doing::
-    <br>οσφρηση⧺cptBdyHmn317⧺
+    <br>* <a class="clsPreview" href="#idBdyHmn317">smelling</a>,
     <a class="clsHide" href="#idBdyHmn318doingP1"></a></p>
   <p id="idBdyHmn318doingP2">ο οσφρητικός βλεννογόνος έχει μεγάλη ικανότητα στο να διακρινει οσμηρές ουσίες, ακόμη και σε μικρή συγκέντρωση στον αέρα. Αυτό εξαρτάται από τη χημική φύση της οσμηρής ουσίας.
     <br>χαρακτηριστικό της αίσθησης της όσφρησης είναι ότι πολύ γρήγορα αμβλύνεται (συνηθίζουμε) ακόμη και στην πιο έντονη μυρωδιά, δυσάρεστη ή ευχάριστη. Σε ξηρή ατμόσφαιρα ή όταν έχουμε συνάχι (ρινικός κατάρρους), η αίσθηση της όσφρησης ελαττώνεται ή και εξαφανίζεται.
@@ -11898,7 +12689,7 @@
   <h3 id="idBdyHmn318srtrH3">structure
     <a class="clsHide" href="#idBdyHmn318srtrH3"></a></h3>
   <p id="idBdyHmn318srtrP1">structure::
-    <br>* αίσθημα-οσφρησης,
+    <br>* αίσθημα-όσφρησης,
     <br>* <a class="clsPreview" href="#idBdyHmn442">οσφρητικος-βλεννογονος</a>,
     <br>* οσφρητικο κέντρο,
     <br>* <a class="clsPreview" href="#idBdyHmn445">οσφρητικο-νεύρο</a>,
@@ -11907,7 +12698,7 @@
   </section>
 
   <section id="idBdyHmn319">
-  <h2 id="idBdyHmn319H2">sensory-sys.tasting
+  <h2 id="idBdyHmn319H2">sense-sys.tasting
     <a class="clsHide" href="#idBdyHmn319H2"></a></h2>
   <p id="idBdyHmn319nam">name::
     <br>* Mcs.cptBdyHmn319,
@@ -11964,7 +12755,7 @@
   </section>
 
   <section id="idBdyHmn465">
-  <h2 id="idBdyHmn465H2">sensory-sys.temperature
+  <h2 id="idBdyHmn465H2">sense-sys.temperature
     <a class="clsHide" href="#idBdyHmn465H2"></a></h2>
   <p id="idBdyHmn465nam">name::
     <br>* Mcs.cptBdyHmn465,
@@ -11992,7 +12783,7 @@
   </section>
 
   <section id="idBdyHmn464">
-  <h2 id="idBdyHmn464H2">sensory-sys.touching
+  <h2 id="idBdyHmn464H2">sense-sys.touching
     <a class="clsHide" href="#idBdyHmn464H2"></a></h2>
   <p id="idBdyHmn464nam">name::
     <br>* Mcs.cptBdyHmn464,
@@ -12605,24 +13396,6 @@
   </section>
 </section>
 
-<section id="idBdyHmn137">
-  <h1 id="idBdyHmn137H1">pericardium
-    <a class="clsHide" href="#idBdyHmn137H1"></a></h1>
-  <p id="idBdyHmn137nam">name::
-    <br>* Mcs.cptBdyHmn137,
-    <br>* Mcs.pericardium,
-    <br>====== langoGreek:
-    <br>* McsEll.περικάρδιο,
-    <a class="clsHide" href="#idBdyHmn137nam"></a></p>
-  <p id="idBdyHmn137dsn">description::
-    <br>analytic: - εξωτερικά περιβάλλεται από έναν προστατευτικό υμένα, το περικάρδιο.
-    <br>[Αργύρης, {1994}, 55⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn137dsn"></a></p>
-  <p id="idBdyHmn137wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idHrtHmnwtr">heart</a>,
-    <a class="clsHide" href="#idBdyHmn137wtr"></a></p>
-</section>
-
 <section id="idBdyHmn142">
   <h1 id="idBdyHmn142H1">pulse
     <a class="clsHide" href="#idBdyHmn142H1"></a></h1>
@@ -12654,45 +13427,6 @@
     <br>[Αργύρης, {1994}, 63⧺cptRsc29⧺]
     <a class="clsHide" href="#idBdyHmn142measuringmeasureP1"></a></p>
   </section>
-  </section>
-</section>
-
-<section id="idBdyHmn144">
-  <h1 id="idBdyHmn144H1">metabolism
-    <a class="clsHide" href="#idBdyHmn144H1"></a></h1>
-  <p id="idBdyHmn144nam">name::
-    <br>* Mcs.cptBdyHmn144,
-    <br>* Mcs.metabolism,
-    <br>====== langoGreek:
-    <br>* McsEll.μεταβολισμός,
-    <a class="clsHide" href="#idBdyHmn144nam"></a></p>
-  <p id="idBdyHmn144dsn">description::
-    <br>Metabolism (from Greek: µetaί??? "metabole", "change" or Greek: µetaί???sµ?? metabolismos, "outthrow") is the set of chemical reactions that happen in the cells of living organisms to sustain life. These processes allow organisms to grow and reproduce, maintain their structures, and respond to their environments. The word metabolism can also refer to all chemical reactions that occur in living organisms, including digestion and the transport of substances into and between different cells, in which case the set of reactions within the cells is called intermediary metabolism or intermediate metabolism.
-    <br>Metabolism is usually divided into two categories. Catabolism breaks down organic matter, for example to harvest energy in cellular respiration. Anabolism uses energy to construct components of cells such as proteins and nucleic acids.
-    <br>The chemical reactions of metabolism are organized into metabolic pathways, in which one chemical is transformed through a series of steps into another chemical, by a sequence of enzymes. Enzymes are crucial to metabolism because they allow organisms to drive desirable reactions that require energy and will not occur by themselves, by coupling them to spontaneous reactions that release energy. As enzymes act as catalysts they allow these reactions to proceed quickly and efficiently. Enzymes also allow the regulation of metabolic pathways in response to changes in the cell's environment or signals from other cells.
-    <br>The metabolism of an organism determines which substances it will find nutritious and which it will find poisonous. For example, some prokaryotes use hydrogen sulfide as a nutrient, yet this gas is poisonous to animals.[1] The speed of metabolism, the metabolic rate, influences how much food an organism will require, and also affects how it is able to obtain that food.
-    <br>A striking feature of metabolism is the similarity of the basic metabolic pathways and components between even vastly different species.[2] For example, the set of carboxylic acids that are best known as the intermediates in the citric acid cycle are present in all known organisms, being found in species as diverse as the unicellular bacteria Escherichia coli and huge multicellular organisms like elephants.[3] These striking similarities in metabolic pathways are likely due to their early appearance in evolutionary history, and being retained because of their efficacy.[4][5]
-    <br>[http://en.wikipedia.org/wiki/Metabolism]
-    <br>===
-    <br>μεταβολισμος είναι η διάσπαση των θρεπτικών συστατικών που έχει προμηθευτεί ο οργανισμός στα κύτταρα.
-    <a class="clsHide" href="#idBdyHmn144dsn"></a></p>
-  <p id="idBdyHmn144gtr">generic-tree::
-    <br>* entity.bodyNo.doing.chem_reacting⧺cptEpistem740.1⧺,
-    <a class="clsHide" href="#idBdyHmn144gtr"></a></p>
-  <p id="idBdyHmn144wtr">whole-tree::
-    <br>* sympan'sysOrgms'organism⧺cptEpistem482⧺,
-    <a class="clsHide" href="#idBdyHmn144wtr"></a></p>
-
-  <section id="idBdyHmn144srtr">
-  <h2 id="idBdyHmn144srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn144srtrH2"></a></h2>
-  <p id="idBdyHmn144srtrP1">structure::
-    <br>ο μεταβολισμος γίνεται
-    <br>- στους ιστούς και
-    <br>- τα κύτταρα όπως και
-    <br>- σε ορισμένα όργανα πχ το συκώτι.
-    <br>[Αργύρης, {1994}, 70⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn144srtrP1"></a></p>
   </section>
 </section>
 
@@ -14724,31 +15458,6 @@
     <a class="clsHide" href="#idBdyHmn257dsn"></a></p>
 </section>
 
-<section id="idBdyHmn258">
-  <h1 id="idBdyHmn258H1">osteoid
-    <a class="clsHide" href="#idBdyHmn258H1"></a></h1>
-  <p id="idBdyHmn258nam">name::
-    <br>* Mcs.cptBdyHmn258,
-    <br>* Mcs.osteoid,
-    <br>====== langoGreek:
-    <br>* McsEll.οστέινη-ουσία,
-    <br>* McsEll.οστέινη-ουσία,
-    <br>* McsEll.οστείνη,
-    <a class="clsHide" href="#idBdyHmn258nam"></a></p>
-  <p id="idBdyHmn258dsn">description::
-    <br>analytic: η οστέινη ουσία παράγεται από τους οστεοβλάστες.
-    <br>[Αργύρης, {1994}, 12⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn258dsn"></a></p>
-
-  <section id="idBdyHmn258srtr">
-  <h2 id="idBdyHmn258srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn258srtrH2"></a></h2>
-  <p id="idBdyHmn258srtrP1">H οστεΐνη είναι ελαστική.
-    <br>[Αργύρης, {1994}, 12⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn258srtrP1"></a></p>
-  </section>
-</section>
-
 <section id="idBdyHmn260">
   <h1 id="idBdyHmn260H1">periosteum
     <a class="clsHide" href="#idBdyHmn260H1"></a></h1>
@@ -15250,7 +15959,7 @@
     <br>ο παλμός της καρδιάς περιλαμβάνει 3 φασεις τις εξής:
     <br>- συστολη των κολπων: με τη συστολή των κόλπων, διάρκεια 1/10 δευτ., το αίμα κατεβαίνει προς τις κοιλίες.
     <br>- συστολη των κοιλιων: με τη συστολή των κοιλιών, διάρκεια 3/10 δευτ, κλείνουν οι κολποκοιλίακές βαλβίδες και στη συνέχεια ανοίγουν οι βαλβίδες -μηνοειδείς ή σιγμοειδείς- που βρίσκονται στην αρχή των δύο μεγάλων αρτηριών, της πνευμονικής στη δεξιά κοιλία και της αορτής στην αριστερή.
-    <br>- γενικη αναπαυλα ή διαστολη: σ' αυτή τη φάση το μυοκάρδιο είναι χαλαρό, οι κολποκοιλίακές βαλβίδες ανοιχτές, οι σιγμοειδείς κλείνουν και το αίμα κατεβαίνει από τους κόλπους στις κοιλίες, ενώ ταυτόχρονα οι κόλποι γεμίζουν με αίμα. Η διάρκεια της διαστολής είναι 4/10 δευτ.
+    <br>- γενική αναπαυλα ή διαστολη: σ' αυτή τη φάση το μυοκάρδιο είναι χαλαρό, οι κολποκοιλίακές βαλβίδες ανοιχτές, οι σιγμοειδείς κλείνουν και το αίμα κατεβαίνει από τους κόλπους στις κοιλίες, ενώ ταυτόχρονα οι κόλποι γεμίζουν με αίμα. Η διάρκεια της διαστολής είναι 4/10 δευτ.
     <br>[Αργύρης, {1994}, 60⧺cptRsc29⧺]
     <a class="clsHide" href="#idBdyHmn287evolutingP1"></a></p>
   </section>
@@ -15674,7 +16383,7 @@
   <p id="idBdyHmn402gtr">generic-tree::
     <br>* <a class="clsPreview" href="#idBdyHmn306">κέντρο</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn388">cortical-area</a>,
-    <br>αισθητικό κέντρο⧺cptBdyHmn444⧺,
+    <br>* <a class="clsPreview" href="#idBdyHmn444">censory-cortex</a>,
     <a class="clsHide" href="#idBdyHmn402gtr"></a></p>
   <p id="idBdyHmn402wtr">whole-tree::
     <br>* <a class="clsPreview" href="#idBdyHmn296wtr">ακοής-σύστημα</a>,
@@ -15700,7 +16409,7 @@
   <p id="idBdyHmn403gtr">generic-tree::
     <br>* <a class="clsPreview" href="#idBdyHmn306">κέντρο</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn388">cortical-area</a>,
-    <br>αισθητικό κέντρο⧺cptBdyHmn444⧺,
+    <br>* <a class="clsPreview" href="#idBdyHmn444">censory-cortex</a>,
     <a class="clsHide" href="#idBdyHmn403gtr"></a></p>
   <p id="idBdyHmn403wtr">whole-tree::
     <br>* <a class="clsPreview" href="#idBdyHmn392wtr">ινιακος-λοβός</a>,
@@ -15781,7 +16490,7 @@
   <p id="idBdyHmn397gtr">generic-tree::
     <br>* <a class="clsPreview" href="#idBdyHmn306">κέντρο</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn388">cortical-area</a>,
-    <br>αισθητικό κέντρο⧺cptBdyHmn444⧺,
+    <br>* <a class="clsPreview" href="#idBdyHmn444">censory-cortex</a>,
     <a class="clsHide" href="#idBdyHmn397gtr"></a></p>
   </section>
 
@@ -15801,7 +16510,7 @@
   <p id="idBdyHmn398gtr">generic-tree::
     <br>* <a class="clsPreview" href="#idBdyHmn306">κέντρο</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn388">cortical-area</a>,
-    <br>αισθητικό κέντρο⧺cptBdyHmn444⧺,
+    <br>* <a class="clsPreview" href="#idBdyHmn444">censory-cortex</a>,
     <a class="clsHide" href="#idBdyHmn398gtr"></a></p>
   </section>
 
@@ -15826,7 +16535,7 @@
   <p id="idBdyHmn399gtr">generic-tree::
     <br>* <a class="clsPreview" href="#idBdyHmn306">κέντρο</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn388">cortical-area</a>,
-    <br>αισθητικό κέντρο⧺cptBdyHmn444⧺,
+    <br>* <a class="clsPreview" href="#idBdyHmn444">censory-cortex</a>,
     <a class="clsHide" href="#idBdyHmn399gtr"></a></p>
   </section>
 
@@ -15846,7 +16555,7 @@
   <p id="idBdyHmn400gtr">generic-tree::
     <br>* <a class="clsPreview" href="#idBdyHmn306">κέντρο</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn388">cortical-area</a>,
-    <br>αισθητικό κέντρο⧺cptBdyHmn444⧺,
+    <br>* <a class="clsPreview" href="#idBdyHmn444">censory-cortex</a>,
     <a class="clsHide" href="#idBdyHmn400gtr"></a></p>
   </section>
 
@@ -15866,7 +16575,7 @@
   <p id="idBdyHmn401gtr">generic-tree::
     <br>* <a class="clsPreview" href="#idBdyHmn306">κέντρο</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn388">cortical-area</a>,
-    <br>αισθητικό κέντρο⧺cptBdyHmn444⧺,
+    <br>* <a class="clsPreview" href="#idBdyHmn444">censory-cortex</a>,
     <a class="clsHide" href="#idBdyHmn401gtr"></a></p>
   </section>
 </section>
@@ -16086,7 +16795,7 @@
     <br>[Αργύρης, {1994}, 238⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn381dsn"></a></p>
   <p id="idBdyHmn381gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn057">μυικός-ιστός</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn057">tissueMuscle</a>,
     <a class="clsHide" href="#idBdyHmn381gtr"></a></p>
 </section>
 
@@ -16108,7 +16817,7 @@
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idBdyHmn382dsn"></a></p>
   <p id="idBdyHmn382gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn057">μυικός-ιστός</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn057">tissueMuscle</a>,
     <a class="clsHide" href="#idBdyHmn382gtr"></a></p>
 </section>
 
@@ -16129,7 +16838,7 @@
     <br>synthetic: μυοκαρδίου μυικός ιστός αποτελείται από καρδιακα μυικά κύτταρα.
     <a class="clsHide" href="#idBdyHmn383dsn"></a></p>
   <p id="idBdyHmn383gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn057">μυικός-ιστός</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn057">tissueMuscle</a>,
     <a class="clsHide" href="#idBdyHmn383gtr"></a></p>
 </section>
 
@@ -16154,7 +16863,7 @@
   <h2 id="idBdyHmn384SPECIFICH2">SPECIFIC
     <a class="clsHide" href="#idBdyHmn384SPECIFICH2"></a></h2>
   <p id="idBdyHmn384str">specific-tree::
-    <br>* δενδριτες,
+    <br>* δενδρίτες,
     <br>* νευριτης,
     <a class="clsHide" href="#idBdyHmn384str"></a></p>
   </section>
@@ -16171,7 +16880,7 @@
   <p id="idBdyHmn384_2dsn">description::
     <br>νευρική-ινα είναι η πιο μακριά <a class="clsPreview" href="#idBdyHmn384">αποφυάδα</a> του νευρικού-κυττάρου.
     <br>[hmnSgm, {1995-03}]
-    <br>τα νευρικά κύτταρα αποτελούνται από το κυτταρικο σώμα, που φέρνει τον πυρήνα και το κυτταρόπλασμα, και τις αποφυαδες. Η πιο μακριά αποφυάδα λέγεται νευριτης ή νευρική ινα, ενώ όλες οι άλλες, πιο κοντές, αποτελούν τους δενδριτες.
+    <br>τα νευρικά κύτταρα αποτελούνται από το κυτταρικο σώμα, που φέρνει τον πυρήνα και το κυτταρόπλασμα, και τις αποφυαδες. Η πιο μακριά αποφυάδα λέγεται νευριτης ή νευρική ινα, ενώ όλες οι άλλες, πιο κοντές, αποτελούν τους δενδρίτες.
     <br>[Αργύρης, {1994}, 84⧺cptRsc29⧺]
     <a class="clsHide" href="#idBdyHmn384_2dsn"></a></p>
   <p id="idBdyHmn384_2P1">WHOLE:
@@ -16199,43 +16908,6 @@
     <br>Each nerve cell consists of a central portion containing the nucleus, known as the cell body, and one or more structures referred to as axons and dendrites. The dendrites are rather short extensions of the cell body and are involved in the reception of stimuli. The axon, by contrast, is usually a single elongated extension; it is especially important in the transmission of nerve impulses from the region of the cell body to other cells.
     <br>"Nervous System," Microsoft(R) Encarta(R) 97 Encyclopedia. (c) 1993-1996 Microsoft Corporation. All rights reserved.
     <a class="clsHide" href="#idBdyHmn384_1dsn"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn385">
-  <h1 id="idBdyHmn385H1">synapse
-    <a class="clsHide" href="#idBdyHmn385H1"></a></h1>
-  <p id="idBdyHmn385nam">name::
-    <br>* Mcs.cptBdyHmn385,
-    <br>* Mcs.synapse,
-    <br>====== langoGreek:
-    <br>* McsEll.σύναψη-νευρικων-κυττάρων,
-    <br>* McsEll.σύναψη,
-    <a class="clsHide" href="#idBdyHmn385nam"></a></p>
-  <p id="idBdyHmn385dsn">description::
-    <br>analytic: σύναψη νευρικού κυττάρου είναι η σύνδεση της <a class="clsPreview" href="#idBdyHmn195">νευρικής-του-ινας</a> με άλλο νευρικό κύτταρο ή εκτελεστικό όργανο.
-    <br>[hmnSgm, {1995-03}]
-    <br>===
-    <br>κάθε νευρώνας με τα τελικά του κομβία μπορεί να έρχεται σε λειτουργικη συνδεση με
-    <br>- τους δενδριτες,
-    <br>- τα κυτταρικά σώματα ή και
-    <br>- τους νευρίτες άλλων κυττάρων, καθώς και
-    <br>- με ειδικά διαμορφωμένες θέσεις των εκτελεστικών οργάνων. Η θέση της λειτουργικής αυτης σύνδεσης μέσω της οποίας μεταβιβάζεται η νευρική ώση, λέγεται σύναψη.
-    <br>[Αργύρης, {1994}, 246⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn385dsn"></a></p>
-  <p id="idBdyHmn385wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idCellHmn004wtr">νευρικό-κύτταρο</a>,
-    <a class="clsHide" href="#idBdyHmn385wtr"></a></p>
-
-  <section id="idBdyHmn385doing">
-  <h2 id="idBdyHmn385doingH2">doing
-    <a class="clsHide" href="#idBdyHmn385doingH2"></a></h2>
-  <p id="idBdyHmn385doingP1">doing::
-    <br>η μεταβίβαση της νευρικής ώσης μέσω των συνάψεων γίνεται με τη βοήθεια διαβιβαστικών ουσιών, των νεύροδιαβιβατων, και σε δύο στάδια.
-    <br>
-    <br>επειδή οι νεύροδιαβιβαστικές ουσίες υπάρχουν μόνο στις απολήξεις των <a class="clsPreview" href="#idBdyHmn195">νευριτών</a>, η μεταβίβαση μιας νευρικής ώσης γινεται μόνο προς μια κατευθυνση, δηλαδή από το νευρίτη προς το μετασυναπτικό νευρώνα και όχι αντίθετα.
-    <br>[Αργύρης, {1994}, 246⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn385doingP1"></a></p>
   </section>
 </section>
 
@@ -16453,676 +17125,6 @@
   </section>
 </section>
 
-<section id="idBdyHmn415">
-  <h1 id="idBdyHmn415H1">eye-appendage
-    <a class="clsHide" href="#idBdyHmn415H1"></a></h1>
-  <p id="idBdyHmn415nam">name::
-    <br>* Mcs.cptBdyHmn415,
-    <br>* Mcs.eye-appendage,
-    <br>====== langoGreek:
-    <br>* McsEll.επικουρικό-όργανο-ματιού/οφθαλμου,
-    <a class="clsHide" href="#idBdyHmn415nam"></a></p>
-  <p id="idBdyHmn415dsn">description::
-    <br>analytic: επικουρικό όργανο ματιού ονομάζουν κάθε μέρος του ματιού πέρα από το κύριο όργανο, τον οφθαλμικο βολβο.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn415dsn"></a></p>
-  <p id="idBdyHmn415wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn009wtr">eye</a>,
-    <a class="clsHide" href="#idBdyHmn415wtr"></a></p>
-
-  <section id="idBdyHmn415SPECIFIC">
-  <h2 id="idBdyHmn415SPECIFICH2">SPECIFIC
-    <a class="clsHide" href="#idBdyHmn415SPECIFICH2"></a></h2>
-  <p id="idBdyHmn415str">specific-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn416">βλεφαρα</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn419">δακρυικη-συσκευή</a>,
-    <br>* μύες (6)⧺cptBdyHmn418⧺,
-    <br>* <a class="clsPreview" href="#idBdyHmn417">φρυδια</a>,
-    <a class="clsHide" href="#idBdyHmn415str"></a></p>
-  <p id="idBdyHmn415SPECIFICP1">επικουρικα όργανα (φρύδια, βλέφαρα, μύες κτλ) που είναι απαραίτητα για την προστασία και τη λειτουργία του βολβου.
-    <br>[Αργύρης, {1994}, 273⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn415SPECIFICP1"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn416">
-  <h1 id="idBdyHmn416H1">eyelid
-    <a class="clsHide" href="#idBdyHmn416H1"></a></h1>
-  <p id="idBdyHmn416nam">name::
-    <br>* Mcs.cptBdyHmn416,
-    <br>* Mcs.eyelid,
-    <br>====== langoGreek:
-    <br>* McsEll.βλεφαρο,
-    <br>* McsEll.βλεφαρο,
-    <a class="clsHide" href="#idBdyHmn416nam"></a></p>
-  <p id="idBdyHmn416dsn">description::
-    <br>analytic: βλεφαρο είναι <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-οφθαλμου</a>, που σκεπάζει τον βολβο.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn416dsn"></a></p>
-  <p id="idBdyHmn416gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-ματιού</a>,
-    <a class="clsHide" href="#idBdyHmn416gtr"></a></p>
-  <p id="idBdyHmn416wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn009wtr">eye</a>,
-    <a class="clsHide" href="#idBdyHmn416wtr"></a></p>
-  </section>
-
-  <section id="idBdyHmn416doing">
-  <h2 id="idBdyHmn416doingH2">doing
-    <a class="clsHide" href="#idBdyHmn416doingH2"></a></h2>
-  <p id="idBdyHmn416doingP1">doing::
-    <br>προστατεύουν το βοβλό και υγραίνουν τον κερατοειδή χειτώνα.
-    <br>[Αργύρης, {1994}, 280⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn416doingP1"></a></p>
-  </section>
-
-  <section id="idBdyHmn416srtr">
-  <h2 id="idBdyHmn416srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn416srtrH2"></a></h2>
-  <p id="idBdyHmn416srtrP1">structure::
-    <br>* βλαφαριδες,
-    <br>* επιπεφυκοτας,
-    <a class="clsHide" href="#idBdyHmn416srtrP1"></a></p>
-  <p id="idBdyHmn416srtrP2">τα βλέφαρα φέρουν στα χείλη τους βλεφαριδες. Η εσωτερική επιφάνει έχει βλεννογόνο που λέγεται επιπεφυκοτας. Η χροιά του επιπεφυκότα έχει σημασία για ορισμένες παθολογικές καταστάσεις. Φυσιολογικά έχει ένα ροδαλό χρώμα, το οποίο όμως χάνει (λευκάζει) κατά την αναιμία. Στον ίκτερο (χρυσή) παίρνει ένα έντονο κίτρινο χρώμα (χρυσαφί).
-    <br>[Αργύρης, {1994}, 280⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn416srtrP2"></a></p>
-  </section>
-
-  <section id="idBdyHmn416SPECIFIC">
-  <h2 id="idBdyHmn416SPECIFICH2">SPECIFIC
-    <a class="clsHide" href="#idBdyHmn416SPECIFICH2"></a></h2>
-  <p id="idBdyHmn416str">specific-tree::
-    <br>κάθε μάτι έχει από ένα βλέφαρο.
-    <a class="clsHide" href="#idBdyHmn416str"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn417">
-  <h1 id="idBdyHmn417H1">eyebrow
-    <a class="clsHide" href="#idBdyHmn417H1"></a></h1>
-  <p id="idBdyHmn417nam">name::
-    <br>* Mcs.cptBdyHmn417,
-    <br>* Mcs.eyebrow,
-    <br>====== langoGreek:
-    <br>* McsEll.φρυδι,
-    <a class="clsHide" href="#idBdyHmn417nam"></a></p>
-  <p id="idBdyHmn417dsn">description::
-    <br>analytic: φρυδι είναι <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-οφθαλμου</a>, δερματινο τριχωτό τόξο που προστατεύουν το μάτι από τη σκόνη και τον ιδρώτα.
-    <br>[Αργύρης, {1994}, 280⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn417dsn"></a></p>
-  <p id="idBdyHmn417gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-ματιού</a>,
-    <a class="clsHide" href="#idBdyHmn417gtr"></a></p>
-  <p id="idBdyHmn417wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn009wtr">eye</a>,
-    <a class="clsHide" href="#idBdyHmn417wtr"></a></p>
-</section>
-
-<section id="idBdyHmn418">
-  <h1 id="idBdyHmn418H1">eye-muscle
-    <a class="clsHide" href="#idBdyHmn418H1"></a></h1>
-  <p id="idBdyHmn418nam">name::
-    <br>* Mcs.cptBdyHmn418,
-    <br>* Mcs.eye-muscle,
-    <br>====== langoGreek:
-    <br>* McsEll.μυς-ματιού,
-    <a class="clsHide" href="#idBdyHmn418nam"></a></p>
-  <p id="idBdyHmn418dsn">description::
-    <br>analytic: μυς ματιού είναι επικουρικό ορανο ματιού, που είναι μυς.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn418dsn"></a></p>
-  <p id="idBdyHmn418gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-ματιού</a>,
-    <a class="clsHide" href="#idBdyHmn418gtr"></a></p>
-  <p id="idBdyHmn418wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn009wtr">eye</a>,
-    <a class="clsHide" href="#idBdyHmn418wtr"></a></p>
-
-  <section id="idBdyHmn418SPECIFIC">
-  <h2 id="idBdyHmn418SPECIFICH2">SPECIFIC
-    <a class="clsHide" href="#idBdyHmn418SPECIFICH2"></a></h2>
-  <p id="idBdyHmn418str">specific-tree::
-    <br>κάθε μάτι έχει 6 μύες.
-    <a class="clsHide" href="#idBdyHmn418str"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn419">
-  <h1 id="idBdyHmn419H1">lacrimal-apparatus
-    <a class="clsHide" href="#idBdyHmn419H1"></a></h1>
-  <p id="idBdyHmn419nam">name::
-    <br>* Mcs.cptBdyHmn419,
-    <br>* Mcs.lacrimal-apparatus,
-    <br>====== langoGreek:
-    <br>* McsEll.δακρυικη-συσκευή,
-    <a class="clsHide" href="#idBdyHmn419nam"></a></p>
-  <p id="idBdyHmn419dsn">description::
-    <br>analytic: δακρυικη συσκευή είναι επικουρικό όργανο ματιού που παράγει δακρυα.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn419dsn"></a></p>
-  <p id="idBdyHmn419gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-ματιού</a>,
-    <a class="clsHide" href="#idBdyHmn419gtr"></a></p>
-  <p id="idBdyHmn419wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn009wtr">eye</a>,
-    <a class="clsHide" href="#idBdyHmn419wtr"></a></p>
-
-  <section id="idBdyHmn419doing">
-  <h2 id="idBdyHmn419doingH2">doing
-    <a class="clsHide" href="#idBdyHmn419doingH2"></a></h2>
-  <p id="idBdyHmn419doingP1">doing::
-    <br>τα δάκρυα εφυγραίνουν τον επιπεφυκότα και τον κερατοειδή χιτώνα και τον προφυλάσσουν έτσι από ξήρανση. Οταν η παραγωγή των δακρύων είναι μεγάλη (κλάμα), τότε τα περισσότερα τρεχουν από τη βλεφαρική σχισμή προς τα έξω.
-    <br>[Αργύρης, {1994}, 280⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn419doingP1"></a></p>
-  </section>
-
-  <section id="idBdyHmn419srtr">
-  <h2 id="idBdyHmn419srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn419srtrH2"></a></h2>
-  <p id="idBdyHmn419srtrP1">structure::
-    <br>η δακρυική συσκευή αποτελείται από το δακρυικο αδενα και την αποχετευτική δακρυική οδό που φέρει τα δάκρυα μέσα στη μύτη.
-    <br>[Αργύρης, {1994}, 280⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn419srtrP1"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn420">
-  <h1 id="idBdyHmn420H1">bulbus-oculi
-    <a class="clsHide" href="#idBdyHmn420H1"></a></h1>
-  <p id="idBdyHmn420nam">name::
-    <br>* Mcs.cptBdyHmn420,
-    <br>* Mcs.globe,
-    <br>* Mcs.bulbus-oculi,
-    <br>* Mcs.eyeball,
-    <br>====== langoGreek:
-    <br>* McsEll.βολβός,
-    <br>* McsEll.οφθαλμικός-βολβός,
-    <a class="clsHide" href="#idBdyHmn420nam"></a></p>
-  <p id="idBdyHmn420dsn">description::
-    <br>"The globe of the eye, or bulbus oculi, is the eyeball apart from its appendages.[1] A hollow structure, the bulbus oculi is composed of a wall enclosing a cavity filled with fluid with three coats: the sclera, choroid, and the retina.[2] Normally, the bulbus oculi is bulb-like structure.[3] However, the bulbus oculi is not completely spherical. Its anterior surface, transparent and more curved, is known as the cornea of the bulbus oculi."
-    <br>[https://en.wikipedia.org/wiki/Globe_(human_eye) {2020-01-30}]
-    <br>analytic: οφθαλμικός βολβός είναι μέρος του ματιού, το κυρίως όργανο της όρασης.
-    <br>[Αργύρης, {1994}, 273⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn420dsn"></a></p>
-  <p id="idBdyHmn420wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn009wtr">eye</a>,
-    <a class="clsHide" href="#idBdyHmn420wtr"></a></p>
-
-  <section id="idBdyHmn420srtr">
-  <h2 id="idBdyHmn420srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn420srtrH2"></a></h2>
-  <p id="idBdyHmn420srtrP1">structure::
-    <br>* <a class="clsPreview" href="#idBdyHmn421">τοιχωμα</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn422">περιεχομενο</a>,
-    <a class="clsHide" href="#idBdyHmn420srtrP1"></a></p>
-  <p id="idBdyHmn420srtrP2">O οφθαλμικός βολβός που έχει περίπου σφαρικό σχήμα, αποτελείται από τοιχωμα (περίβλημα) και περιεχομενο.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn420srtrP2"></a></p>
-</section>
-
-<section id="idBdyHmn421">
-  <h1 id="idBdyHmn421H1">exterior-bulbus-oculi
-    <a class="clsHide" href="#idBdyHmn421H1"></a></h1>
-  <p id="idBdyHmn421nam">name::
-    <br>* Mcs.cptBdyHmn421,
-    <br>* Mcs.exterior-bulbus-oculi,
-    <br>====== langoGreek:
-    <br>* McsEll.τοιχωμα-οφθαλμικου-βολβου,
-    <a class="clsHide" href="#idBdyHmn421nam"></a></p>
-  <p id="idBdyHmn421dsn">description::
-    <br>analytic: τοιχωμα οφθλαλμικου βολβου είναι το περίβλημα του <a class="clsPreview" href="#idBdyHmn420">οφθλαμικου-βολβου</a>.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn421dsn"></a></p>
-  <p id="idBdyHmn421wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn420wtr">οφθαλμικός-βολβός</a>,
-    <a class="clsHide" href="#idBdyHmn421wtr"></a></p>
-
-  <section id="idBdyHmn421srtr">
-  <h2 id="idBdyHmn421srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn421srtrH2"></a></h2>
-  <p id="idBdyHmn421srtrP1">structure::
-    <br>* <a class="clsPreview" href="#idBdyHmn423">ινώδης-χιτώνας</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn424">αγγειώδης-χιτώνας</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn425">αμφιβληστροειδής-χιτώνας</a>,
-    <a class="clsHide" href="#idBdyHmn421srtrP1"></a></p>
-  <p id="idBdyHmn421srtrP2">To τοίχωμα αποτελείται από 3 χιτώνες που απ' έξω προς τα μέσα είναι: ο ινώδης, ο αγγειώδης και ο αμφιβληστροειδής χιτώνας.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn421srtrP2"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn422">
-  <h1 id="idBdyHmn422H1">interior-bulbus-oculi
-    <a class="clsHide" href="#idBdyHmn422H1"></a></h1>
-  <p id="idBdyHmn422nam">name::
-    <br>* Mcs.cptBdyHmn422,
-    <br>* Mcs.interior-bulbus-oculi,
-    <br>====== langoGreek:
-    <br>* McsEll.περιεχομενο-οφθαλμικου-βολβου,
-    <a class="clsHide" href="#idBdyHmn422nam"></a></p>
-  <p id="idBdyHmn422dsn">description::
-    <br>analytic: περιεχομενο οφθαλμικου βολβου είναι το εσωτερικό μέρος του <a class="clsPreview" href="#idBdyHmn420">οφθαλμικου-βολβου</a>.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn422dsn"></a></p>
-  <p id="idBdyHmn422wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn420wtr">οφθαλμικός-βολβός</a>,
-    <a class="clsHide" href="#idBdyHmn422wtr"></a></p>
-
-  <section id="idBdyHmn422srtr">
-  <h2 id="idBdyHmn422srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn422srtrH2"></a></h2>
-  <p id="idBdyHmn422srtrP1">structure::
-    <br>* <a class="clsPreview" href="#idBdyHmn431">κρυσταλλοειδης-φακός</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn432">υδατοειδες-υγρό</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn433">υαλωδες-σώμα</a>,
-    <a class="clsHide" href="#idBdyHmn422srtrP1"></a></p>
-  <p id="idBdyHmn422srtrP2">το περιεχόμενο του οφθαλμικου βολβού αποτελείται από το υδατοειδές υγρό, τον κρυσταλλοειδή φακό και το υαλώδες σώμα.
-    <a class="clsHide" href="#idBdyHmn422srtrP2"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn423">
-  <h1 id="idBdyHmn423H1">fibrous-tunic
-    <a class="clsHide" href="#idBdyHmn423H1"></a></h1>
-  <p id="idBdyHmn423nam">name::
-    <br>* Mcs.cptBdyHmn423,
-    <br>* Mcs.fibrous-tunic,
-    <br>====== langoGreek:
-    <br>* McsEll.ινώδης-χιτώνας-ματιού,
-    <br>* McsEll.ινώδης'χιτώνας'ματιού,
-    <a class="clsHide" href="#idBdyHmn423nam"></a></p>
-  <p id="idBdyHmn423dsn">description::
-    <br>analytic: ινώδης χιτώνας είναι το πρώτο μέρος απ' έξω προς τα μέσα του <a class="clsPreview" href="#idBdyHmn421">τοιχωματος</a> οφθαλμικού βολβού του ματιού.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn423dsn"></a></p>
-  <p id="idBdyHmn423wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn421wtr">τοιχωμα-βολβου</a>,
-    <a class="clsHide" href="#idBdyHmn423wtr"></a></p>
-
-  <section id="idBdyHmn423srtr">
-  <h2 id="idBdyHmn423srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn423srtrH2"></a></h2>
-  <p id="idBdyHmn423srtrP1">structure::
-    <br>* <a class="clsPreview" href="#idBdyHmn427">κερατοειδης-χιτώνας</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn426">σκληρός-χιτώνας</a>,
-    <a class="clsHide" href="#idBdyHmn423srtrP1"></a></p>
-  <p id="idBdyHmn423srtrP2">O ινώδης χιτώνας αποτελείται από τον κερατοειδη χιτώνα και το σκληρο χιτώνα.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn423srtrP2"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn424">
-  <h1 id="idBdyHmn424H1">uvea
-    <a class="clsHide" href="#idBdyHmn424H1"></a></h1>
-  <p id="idBdyHmn424nam">name::
-    <br>* Mcs.cptBdyHmn424,
-    <br>* Mcs.uvea, /yyúvia/,
-    <br>====== langoGreek:
-    <br>* McsEll.αγγειώδης-χιτώνας,
-    <br>* McsEll.ραγοειδής-χειτώνας,
-    <a class="clsHide" href="#idBdyHmn424nam"></a></p>
-  <p id="idBdyHmn424dsn">description::
-    <br>analytic: αγγειώδης χιτώνας είναι το δεύτερο μέρος απ' έξω προς τα μέσα του <a class="clsPreview" href="#idBdyHmn421">τοιχωματος</a> οφθαλμικού βολβού.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn424dsn"></a></p>
-  <p id="idBdyHmn424wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn421wtr">τοιχωμα-βολβου</a>,
-    <a class="clsHide" href="#idBdyHmn424wtr"></a></p>
-
-  <section id="idBdyHmn424srtr">
-  <h2 id="idBdyHmn424srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn424srtrH2"></a></h2>
-  <p id="idBdyHmn424srtrP1">structure::
-    <br>* <a class="clsPreview" href="#idBdyHmn428">χοριειδής-χιτώνας</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn429">ακτινωτό-σώμα</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn430">ίριδα</a>,
-    <a class="clsHide" href="#idBdyHmn424srtrP1"></a></p>
-  <p id="idBdyHmn424srtrP2">αποτελείται, από πίσω προς τα μπρος, από:
-    <br>τον χοριειδή χιτώνα, το ακτινωτό σώμα και την ίριδα.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn424srtrP2"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn425">
-  <h1 id="idBdyHmn425H1">retina
-    <a class="clsHide" href="#idBdyHmn425H1"></a></h1>
-  <p id="idBdyHmn425nam">name::
-    <br>* Mcs.cptBdyHmn425,
-    <br>* Mcs.retina,
-    <br>====== langoGreek:
-    <br>* McsEll.αμφιβληστροειδής-χιτώνας,
-    <a class="clsHide" href="#idBdyHmn425nam"></a></p>
-  <p id="idBdyHmn425dsn">description::
-    <br>analytic: αμφιβληστροειδής χιτώνας είναι το τρίτο μέρος απ' έξω προς τα μέσα του <a class="clsPreview" href="#idBdyHmn421">τοιχωματος</a> οφθαλμικού βολβού.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn425dsn"></a></p>
-  <p id="idBdyHmn425wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn421wtr">τοιχωμα-βολβου</a>,
-    <a class="clsHide" href="#idBdyHmn425wtr"></a></p>
-
-  <section id="idBdyHmn425srtr">
-  <h2 id="idBdyHmn425srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn425srtrH2"></a></h2>
-  <p id="idBdyHmn425srtrP1">structure::
-    <br>* αγγεία,
-    <br>* <a class="clsPreview" href="#idBdyHmn253">κύτταρα-οπτικα</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn439">οπτικη-θηλη</a>,
-    <br>* φωτοδεκτες,
-    <br>* <a class="clsPreview" href="#idBdyHmn438">ωχρη-κηλιδα</a>,
-    <a class="clsHide" href="#idBdyHmn425srtrP1"></a></p>
-  <p id="idBdyHmn425srtrP2">ο αμφιβληστροειδής είναι ο φωτοευαίσθητος νευρικός χιτώνας που καλύπτει εσωτερικά το χόριοειδή χιτώνα. Είναι μια πολύπλοκη κατασκευή από νευρικά κύτταρα και νευρικές ίνες, αλλά το κυριότερο περιέχει τα οπτικα κύτταρα που οι αποφυάδες τους λέγονται ραβδία και κωνία. Τα ραβδία και κωνία είναι ευαίσθητα στο φως και αποτελούν το υποδεκτικό όργανο του αισθητηρίου της όρασης.
-    <br>[Αργύρης, {1994}, 275⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn425srtrP2"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn426">
-  <h1 id="idBdyHmn426H1">sclera
-    <a class="clsHide" href="#idBdyHmn426H1"></a></h1>
-  <p id="idBdyHmn426nam">name::
-    <br>* Mcs.cptBdyHmn426,
-    <br>* Mcs.sclera,
-    <br>====== langoGreek:
-    <br>* McsEll.σκληρός-χιτώνας,
-    <br>* McsEll.σκληρός,
-    <a class="clsHide" href="#idBdyHmn426nam"></a></p>
-  <p id="idBdyHmn426dsn">description::
-    <br>analytic: σκληρός χιτώνας είναι το άσπρο μέρος του <a class="clsPreview" href="#idBdyHmn423">ινωδη-χιτώνα</a>.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn426dsn"></a></p>
-  <p id="idBdyHmn426wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn423wtr">ινώδης-χιτώνας</a>,
-    <a class="clsHide" href="#idBdyHmn426wtr"></a></p>
-
-  <section id="idBdyHmn426doing">
-  <h2 id="idBdyHmn426doingH2">doing
-    <a class="clsHide" href="#idBdyHmn426doingH2"></a></h2>
-  <p id="idBdyHmn426doingP1">doing::
-    <br>ο σκληρός χιτώνας είναι αρκετά ισχυρός, ώστε να διατηρεί το σχήμα και να προστατεύει το εσωτερικό του οφθαλμικού βολβού.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn426doingP1"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn427">
-  <h1 id="idBdyHmn427H1">cornea
-    <a class="clsHide" href="#idBdyHmn427H1"></a></h1>
-  <p id="idBdyHmn427nam">name::
-    <br>* Mcs.cptBdyHmn427,
-    <br>* Mcs.cornea,
-    <br>====== langoGreek:
-    <br>* McsEll.κερατοειδης-χιτώνας,
-    <a class="clsHide" href="#idBdyHmn427nam"></a></p>
-  <p id="idBdyHmn427dsn">description::
-    <br>analytic: κερατοειδης χιτώνας είναι το διαφανές μέρος του <a class="clsPreview" href="#idBdyHmn423">ινωδη-χιτώνα</a> για να επιτρέπει την είσοδο του φωτός.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn427dsn"></a></p>
-  <p id="idBdyHmn427wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn423wtr">ινώδης-χιτώνας</a>,
-    <a class="clsHide" href="#idBdyHmn427wtr"></a></p>
-</section>
-
-<section id="idBdyHmn428">
-  <h1 id="idBdyHmn428H1">choroid
-    <a class="clsHide" href="#idBdyHmn428H1"></a></h1>
-  <p id="idBdyHmn428nam">name::
-    <br>* Mcs.cptBdyHmn428,
-    <br>* Mcs.choroid,
-    <br>====== langoGreek:
-    <br>* McsEll.χοριειδής-χιτώνας,
-    <a class="clsHide" href="#idBdyHmn428nam"></a></p>
-  <p id="idBdyHmn428dsn">description::
-    <br>analytic: χοριειδής χιτώνας είναι το πρώτο μέρος, από πίσω προς τα μπρός, του <a class="clsPreview" href="#idBdyHmn424">αγγειωδη-χιτώνα</a>.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn428dsn"></a></p>
-  <p id="idBdyHmn428wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn424wtr">αγγειώδης-χιτώνας</a>,
-    <a class="clsHide" href="#idBdyHmn428wtr"></a></p>
-
-  <section id="idBdyHmn428srtr">
-  <h2 id="idBdyHmn428srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn428srtrH2"></a></h2>
-  <p id="idBdyHmn428srtrP1">structure::
-    <br>ο χόριοειδής καλύπτει εσωτερικά το <a class="clsPreview" href="#idBdyHmn426">σκληρό</a> και περιέχει πολλά αγγεία.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn428srtrP1"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn429">
-  <h1 id="idBdyHmn429H1">ciliary-body
-    <a class="clsHide" href="#idBdyHmn429H1"></a></h1>
-  <p id="idBdyHmn429nam">name::
-    <br>* Mcs.cptBdyHmn429,
-    <br>* Mcs.ciliary-body,
-    <br>====== langoGreek:
-    <br>* McsEll.ακτινωτό-σώμα,
-    <a class="clsHide" href="#idBdyHmn429nam"></a></p>
-  <p id="idBdyHmn429dsn">description::
-    <br>analytic: ακτινωτό σώμα είναι το δεύτερο μέρος, από πίσω προς τα μπρός, του <a class="clsPreview" href="#idBdyHmn424">αγγειωδη-χιτώνα</a>.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn429dsn"></a></p>
-  <p id="idBdyHmn429wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn424wtr">αγγειώδης-χιτώνας</a>,
-    <a class="clsHide" href="#idBdyHmn429wtr"></a></p>
-
-  <section id="idBdyHmn429srtr">
-  <h2 id="idBdyHmn429srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn429srtrH2"></a></h2>
-  <p id="idBdyHmn429srtrP1">structure::
-    <br>το ακτινωτό σώμα συνδέει το χόριοειδή με την ίριδα και περιέχει τον ακτινωτό μυ, ο οποίος συγκρατεί το φακο του ματιού στη θέση του, αλλά και του μεταβάλει την καμπυλότητα ανάλογα με την απόσταση των αντικειμένων.
-    <br>[Αργύρης, {1994}, 275⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn429srtrP1"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn430">
-  <h1 id="idBdyHmn430H1">iris
-    <a class="clsHide" href="#idBdyHmn430H1"></a></h1>
-  <p id="idBdyHmn430nam">name::
-    <br>* Mcs.cptBdyHmn430,
-    <br>* Mcs.iris,
-    <br>====== langoGreek:
-    <br>* McsEll.ίρις,
-    <br>* McsEll.ίριδα,
-    <a class="clsHide" href="#idBdyHmn430nam"></a></p>
-  <p id="idBdyHmn430dsn">description::
-    <br>analytic: ίριδα είναι το τρίτο μέρος, από πίσω προς τα μπρός, του <a class="clsPreview" href="#idBdyHmn424">αγγειωδη-χιτώνα</a>.
-    <br>[Αργύρης, {1994}, 274⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn430dsn"></a></p>
-  <p id="idBdyHmn430wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn424wtr">αγγειώδης-χιτώνας</a>,
-    <a class="clsHide" href="#idBdyHmn430wtr"></a></p>
-
-  <section id="idBdyHmn430srtr">
-  <h2 id="idBdyHmn430srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn430srtrH2"></a></h2>
-  <p id="idBdyHmn430srtrP1">structure::
-    <br>η ίριδα είναι ένας έγχρωμος δίσκος μπροστά από το φακό σαν διάφραγμα με μια στρογγυλή οπή στο κέντρο, την κορη του οφθαλμου. Η ίριδα έχει μυς, με τη βοήθεια των οποίων μεταβάλλεται το εύρος της κόρης ανάλογα με την ένταση του φωτος. Στο πολύ φως η κόρη μικραίνει (συστολή) και σε λίγο φως μεγαλώνει (διαστολή).  οι μεταβολές αυτές γίνονται αυτόματα (αντανακλαστικό της κόρης).
-    <br>το χρώμα των ματιών (καστανό, πράσινο, κτλ.) οφείλεται στις αντίστοιχες χρωστικές που περιέχουν κύτταρα της ίριδας.
-    <br>[Αργύρης, {1994}, 275⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn430srtrP1"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn431">
-  <h1 id="idBdyHmn431H1">crystalline-lens
-    <a class="clsHide" href="#idBdyHmn431H1"></a></h1>
-  <p id="idBdyHmn431nam">name::
-    <br>* Mcs.cptBdyHmn431,
-    <br>* Mcs.crystalline-lens,
-    <br>====== langoGreek:
-    <br>* McsEll.κρυσταλλικος-φακός,
-    <br>* McsEll.κρυσταλλοειδης-φακός,
-    <a class="clsHide" href="#idBdyHmn431nam"></a></p>
-  <p id="idBdyHmn431dsn">description::
-    <br>analytic: κρυσταλλοειδης φακός είναι μέρος του <a class="clsPreview" href="#idBdyHmn422">περιεχομενου</a> οφλαλμικού βολβού, που εστιάζει το φως.
-    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn431dsn"></a></p>
-  <p id="idBdyHmn431wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn422wtr">περιεχομενο-βολβου</a>,
-    <a class="clsHide" href="#idBdyHmn431wtr"></a></p>
-</section>
-
-<section id="idBdyHmn432">
-  <h1 id="idBdyHmn432H1">aqueous-humour
-    <a class="clsHide" href="#idBdyHmn432H1"></a></h1>
-  <p id="idBdyHmn432nam">name::
-    <br>* Mcs.cptBdyHmn432,
-    <br>* Mcs.aqueous-humour,
-    <br>====== langoGreek:
-    <br>* McsEll.υδατοειδες-υγρό,
-    <a class="clsHide" href="#idBdyHmn432nam"></a></p>
-  <p id="idBdyHmn432dsn">description::
-    <br>analytic: υδατοειδες υγρό είναι μέρος του <a class="clsPreview" href="#idBdyHmn422">περιεχομενου</a> οφλαλμικού βολβού, υγρό που βρίσκεται μεταξύ του <a class="clsPreview" href="#idBdyHmn427">κερατοειδή</a> και του φακού.
-    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn432dsn"></a></p>
-  <p id="idBdyHmn432wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn422wtr">περιεχομενο-βολβου</a>,
-    <a class="clsHide" href="#idBdyHmn432wtr"></a></p>
-</section>
-
-<section id="idBdyHmn433">
-  <h1 id="idBdyHmn433H1">vitreous-humor
-    <a class="clsHide" href="#idBdyHmn433H1"></a></h1>
-  <p id="idBdyHmn433nam">name::
-    <br>* Mcs.cptBdyHmn433,
-    <br>* Mcs.vitreous-humor,
-    <br>====== langoGreek:
-    <br>* McsEll.υαλοειδες-σώμα,
-    <br>* McsEll.υαλωδες-σώμα,
-    <a class="clsHide" href="#idBdyHmn433nam"></a></p>
-  <p id="idBdyHmn433dsn">description::
-    <br>analytic: υαλωδες σώμα είναι μέρος του <a class="clsPreview" href="#idBdyHmn422">περιεχομενου</a> οφλαλμικού βολβού, ημίρευστη διαφανής ουσία που γεμίζει όλο το χώρο του βολβού πίσω από το φακό.
-    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn433dsn"></a></p>
-  <p id="idBdyHmn433wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn422wtr">περιεχομενο-βολβου</a>,
-    <a class="clsHide" href="#idBdyHmn433wtr"></a></p>
-
-  <section id="idBdyHmn433doing">
-  <h2 id="idBdyHmn433doingH2">doing
-    <a class="clsHide" href="#idBdyHmn433doingH2"></a></h2>
-  <p id="idBdyHmn433doingP1">doing::
-    <br>συντελεί στη διατήρηση του σχήματος του οφθαλμικού βολβού και στη συγκράτηση του αμφιβληστροειδή στη θέση του.
-    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn433doingP1"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn438">
-  <h1 id="idBdyHmn438H1">macula
-    <a class="clsHide" href="#idBdyHmn438H1"></a></h1>
-  <p id="idBdyHmn438nam">name::
-    <br>* Mcs.cptBdyHmn438,
-    <br>* Mcs.macula,
-    <br>====== langoGreek:
-    <br>* McsEll.ωχρη-κηλιδα,
-    <a class="clsHide" href="#idBdyHmn438nam"></a></p>
-  <p id="idBdyHmn438dsn">description::
-    <br>analytic: ωχρη κηλιδα βρίσκεται στο πίσω μέρος του <a class="clsPreview" href="#idBdyHmn425">retina</a> όπου παρατηρείται μεγαλύτερη συγκέντρωση κωνίων.
-    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn438dsn"></a></p>
-  <p id="idBdyHmn438wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn425wtr">retina</a>,
-    <a class="clsHide" href="#idBdyHmn438wtr"></a></p>
-</section>
-
-<section id="idBdyHmn439">
-  <h1 id="idBdyHmn439H1">optic-disk
-    <a class="clsHide" href="#idBdyHmn439H1"></a></h1>
-  <p id="idBdyHmn439nam">name::
-    <br>* Mcs.cptBdyHmn439,
-    <br>* Mcs.optic-disk,
-    <br>* Mcs.optic-nerve-head,
-    <br>====== langoGreek:
-    <br>* McsEll.οπτικη-θηλη,
-    <a class="clsHide" href="#idBdyHmn439nam"></a></p>
-  <p id="idBdyHmn439dsn">description::
-    <br>analytic: οπτικη θηλη είναι το μέρος του <a class="clsPreview" href="#idBdyHmn425">retina</a> στο οποιο εισέρχεται το οπτικο νεύρο. Δεν έχει ούτε ραβδία ούτε κωνία.
-    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn439dsn"></a></p>
-  <p id="idBdyHmn439wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn425wtr">retina</a>,
-    <a class="clsHide" href="#idBdyHmn439wtr"></a></p>
-</section>
-
-<section id="idBdyHmn440">
-  <h1 id="idBdyHmn440H1">cones
-    <a class="clsHide" href="#idBdyHmn440H1"></a></h1>
-  <p id="idBdyHmn440nam">name::
-    <br>* Mcs.cptBdyHmn440,
-    <br>* Mcs.cones,
-    <br>====== langoGreek:
-    <br>* McsEll.κωνία,
-    <a class="clsHide" href="#idBdyHmn440nam"></a></p>
-  <p id="idBdyHmn440dsn">description::
-    <br>analytic: κωνία είναι αποφυάδες οπτικων κυττάρων που χρησιμεύουν για την όραση στο φώς και την αντίληψη των χρωμάτων.
-    <br>[Αργύρης, {1994}, 275/276⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn440dsn"></a></p>
-  <p id="idBdyHmn440wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn253wtr">οπτικο-κύτταρο</a>,
-    <a class="clsHide" href="#idBdyHmn440wtr"></a></p>
-
-  <section id="idBdyHmn440srtr">
-  <h2 id="idBdyHmn440srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn440srtrH2"></a></h2>
-  <p id="idBdyHmn440srtrP1">structure::
-    <br>για τα κωνία έχουν περιγραφεί 3 διαφορετικές φωτοευαίσθητες ουσίες. Κάθε μια από αυτές αντιστοιχεί σ' έναν από τους τρεις τυπους κωνιων που καθένας είναι ευαίσθητος στην ακτινοβολία ενός από τα τρία πρωταρχικά χρωματα (μπλε, πρασινο, κοκκινο).  από τα τρία αυτά χρωματα μπορούν να παραχθούν με ανάμειξη κάτω από ορισμένες αναλογίες όλα τα χρώματα. Δηλαδή η βάση της έγχρωμης όρασής μας είναι τριχρωματική.
-    <br>[Αργύρης, {1994}, 278⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn440srtrP1"></a></p>
-  </section>
-
-  <section id="idBdyHmn440aggregate">
-  <h2 id="idBdyHmn440aggregateH2">aggregate
-    <a class="clsHide" href="#idBdyHmn440aggregateH2"></a></h2>
-  <p id="idBdyHmn440aggregateP1">aggregate::
-    <br>ανέρχονται σε 6.000.000 περίπου.
-    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn440aggregateP1"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn441">
-  <h1 id="idBdyHmn441H1">rods
-    <a class="clsHide" href="#idBdyHmn441H1"></a></h1>
-  <p id="idBdyHmn441nam">name::
-    <br>* Mcs.cptBdyHmn441,
-    <br>* Mcs.rods,
-    <br>====== langoGreek:
-    <br>* McsEll.ραβδία,
-    <a class="clsHide" href="#idBdyHmn441nam"></a></p>
-  <p id="idBdyHmn441dsn">description::
-    <br>analytic: ραβδία είναι αποφυάδες οπτικων κυττάρων που χρησιμεύουν για την όραση σε αμυδρά φωτισμένους χώρους.
-    <br>[Αργύρης, {1994}, 275/276⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn441dsn"></a></p>
-  <p id="idBdyHmn441wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn253wtr">οπτικο-κύτταρο</a>,
-    <a class="clsHide" href="#idBdyHmn441wtr"></a></p>
-
-  <section id="idBdyHmn441srtr">
-  <h2 id="idBdyHmn441srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn441srtrH2"></a></h2>
-  <p id="idBdyHmn441srtrP1">structure::
-    <br>ροδοψινη,
-    <a class="clsHide" href="#idBdyHmn441srtrP1"></a></p>
-  <p id="idBdyHmn441srtrP2">η φωτοευαισθητη ουσία των ραβδίων λέγεται ροδοψινη.
-    <br>[Αργύρης, {1994}, 278⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn441srtrP2"></a></p>
-  </section>
-
-  <section id="idBdyHmn441aggregate">
-  <h2 id="idBdyHmn441aggregateH2">aggregate
-    <a class="clsHide" href="#idBdyHmn441aggregateH2"></a></h2>
-  <p id="idBdyHmn441aggregateP1">aggregate::
-    <br>ανέρχονται σε 120.000.000 περίπου.
-    <br>[Αργύρης, {1994}, 276⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn441aggregateP1"></a></p>
-  </section>
-</section>
-
 <section id="idBdyHmn442">
   <h1 id="idBdyHmn442H1">olfactory-mucous
     <a class="clsHide" href="#idBdyHmn442H1"></a></h1>
@@ -17159,7 +17161,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn196">αισθητικό-νεύρο</a>,
     <a class="clsHide" href="#idBdyHmn445gtr"></a></p>
   <p id="idBdyHmn445wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn318wtr">οσφρησης-σύστημα</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn318wtr">όσφρησης-σύστημα</a>,
     <a class="clsHide" href="#idBdyHmn445wtr"></a></p>
 
   <section id="idBdyHmn445srtr">
@@ -17170,192 +17172,6 @@
     <br>[Αργύρης, {1994}, 285⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn445srtrP1"></a></p>
   </section>
-</section>
-
-<section id="idBdyHmn446">
-  <h1 id="idBdyHmn446H1">taste-bud
-    <a class="clsHide" href="#idBdyHmn446H1"></a></h1>
-  <p id="idBdyHmn446nam">name::
-    <br>* Mcs.cptBdyHmn446,
-    <br>* Mcs.taste-bud,
-    <br>====== langoGreek:
-    <br>* McsEll.γευστικός-καλυκας,
-    <a class="clsHide" href="#idBdyHmn446nam"></a></p>
-  <p id="idBdyHmn446dsn">description::
-    <br>analytic: γευστικη καλυκα είναι το <a class="clsPreview" href="#idOrgnHmn007">αισθητήριο-όργανο</a> του συστήματος γεύσης που βρίσκονται στη <a class="clsPreview" href="#idOrgnHmn012">γλώσσα</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn446dsn"></a></p>
-  <p id="idBdyHmn446gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn007">αισθητήριο-όργανο</a>,
-    <a class="clsHide" href="#idBdyHmn446gtr"></a></p>
-  <p id="idBdyHmn446wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idOrgnHmn012wtr">γλώσσα</a>,
-    <br>γεύσης σύστημα⧺cptBdyHmn319⧺,
-    <a class="clsHide" href="#idBdyHmn446wtr"></a></p>
-
-  <section id="idBdyHmn446srtr">
-  <h2 id="idBdyHmn446srtrH2">structure
-    <a class="clsHide" href="#idBdyHmn446srtrH2"></a></h2>
-  <p id="idBdyHmn446srtrP1">structure::
-    <br>υποδεκτικο όργανο (γευστικα κύτταρα)⧺cptBdyHmn447⧺
-    <a class="clsHide" href="#idBdyHmn446srtrP1"></a></p>
-  <p id="idBdyHmn446srtrP2">οι γευστικές κάλυκες είναι ειδικές κατασκευές που περιέχονται στις θηλες της γλώσσας.
-    <br>
-    <br>στις γευστικές κάλυκες υπάρχουν ειδικά κύτταρα, οι υποδοχείς των γευστικών ερεθισμάτων, οι οποίοι είναι χημειοϋποδοχείς, δηλαδή όπως και στην όσφρηση, αντιδρούν με την επίδραση χημικών ουσιών.
-    <br>[Αργύρης, {1994}, 286⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn446srtrP2"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn448">
-  <h1 id="idBdyHmn448H1">sensation.touch
-    <a class="clsHide" href="#idBdyHmn448H1"></a></h1>
-  <p id="idBdyHmn448nam">name::
-    <br>* Mcs.cptBdyHmn448,
-    <br>* Mcs.haptic-perception,
-    <br>* Mcs.touch,
-    <br>* Mcs.touch,
-    <br>====== langoGreek:
-    <br>* McsEll.αφη,
-    <br>* McsEll.αφη,
-    <a class="clsHide" href="#idBdyHmn448nam"></a></p>
-  <p id="idBdyHmn448dsn">description::
-    <br>analytic: η αφη είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε ... <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn448dsn"></a></p>
-  <p id="idBdyHmn448gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
-    <a class="clsHide" href="#idBdyHmn448gtr"></a></p>
-</section>
-
-<section id="idBdyHmn449">
-  <h1 id="idBdyHmn449H1">sensation.presure
-    <a class="clsHide" href="#idBdyHmn449H1"></a></h1>
-  <p id="idBdyHmn449nam">name::
-    <br>* Mcs.cptBdyHmn449,
-    <br>* Mcs.sensation.presure,
-    <br>====== langoGreek:
-    <br>* McsEll.αίσθηση-πίεσης,
-    <br>* McsEll.αίσθηση.πίεση,
-    <a class="clsHide" href="#idBdyHmn449nam"></a></p>
-  <p id="idBdyHmn449dsn">description::
-    <br>analytic: η αίσθηση πίεσης είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε πίεσης <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn449dsn"></a></p>
-  <p id="idBdyHmn449gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
-    <a class="clsHide" href="#idBdyHmn449gtr"></a></p>
-</section>
-
-<section id="idBdyHmn450">
-  <h1 id="idBdyHmn450H1">sensation.pain
-    <a class="clsHide" href="#idBdyHmn450H1"></a></h1>
-  <p id="idBdyHmn450nam">name::
-    <br>* Mcs.cptBdyHmn450,
-    <br>* Mcs.sensation.pain,
-    <br>====== langoGreek:
-    <br>* McsEll.πονος,
-    <br>* McsEll.αίσθηση-πόνου,
-    <br>* McsEll.αίσθηση.πόνου,
-    <a class="clsHide" href="#idBdyHmn450nam"></a></p>
-  <p id="idBdyHmn450dsn">description::
-    <br>analytic: η αίσθηση πόνου είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε ... <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn450dsn"></a></p>
-  <p id="idBdyHmn450gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
-    <a class="clsHide" href="#idBdyHmn450gtr"></a></p>
-
-  <section id="idBdyHmn450therapy">
-  <h2 id="idBdyHmn450therapyH2">therapy
-    <a class="clsHide" href="#idBdyHmn450therapyH2"></a></h2>
-  <p id="idBdyHmn450therapyP1">therapy::
-    <br>ένα φλιτζάνι πράσινου τσαγιού μέντας από τη βραζιλία ανακουφίζει από τον πόνο όσο και τα εμπορικά αναλγητικά υποστηρίζουν βρετανοί ερευνητές.
-    <br>[http://www.enet.gr/] {2009-11-25}
-    <a class="clsHide" href="#idBdyHmn450therapyP1"></a></p>
-  <p id="idBdyHmn450therapyP2">What Is the Oldest Treatment for Gout?
-    <br>The ancient Romans treated gout by having sufferers stand in water with electric eels until their feet went numb.
-    <br>
-    <br>Today's doctors sometimes treat pain by using low voltage electrical impulses to block pain signals from reaching the brain, a concept that was born in Ancient Rome. In 46 A.D., physician Scribonius Largus wrote in De Compositiones Medicae about using electric eels to generate similar electrical charges. The eels were used to treat patients with gout, a form of arthritis affecting the feet that can cause painful flare-ups lasting for days.
-    <br>[http://www.wisegeek.com/what-is-the-oldest-treatment-for-gout.htm?m, {2015-12-17}]
-    <a class="clsHide" href="#idBdyHmn450therapyP2"></a></p>
-  </section>
-</section>
-
-<section id="idBdyHmn451">
-  <h1 id="idBdyHmn451H1">sensation.temperature
-    <a class="clsHide" href="#idBdyHmn451H1"></a></h1>
-  <p id="idBdyHmn451nam">name::
-    <br>* Mcs.cptBdyHmn451,
-    <br>* Mcs.sensation.temperature,
-    <br>====== langoGreek:
-    <br>* McsEll.αίσθηση-θερμοκρασίας,
-    <br>* McsEll.αίσθηση.θερμοκρασία,
-    <a class="clsHide" href="#idBdyHmn451nam"></a></p>
-  <p id="idBdyHmn451dsn">description::
-    <br>analytic: η αίσθηση θερμοκρασίας είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε θερμοκρασίας <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn451dsn"></a></p>
-  <p id="idBdyHmn451gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
-    <a class="clsHide" href="#idBdyHmn451gtr"></a></p>
-</section>
-
-<section id="idBdyHmn452">
-  <h1 id="idBdyHmn452H1">sensation.thirsty
-    <a class="clsHide" href="#idBdyHmn452H1"></a></h1>
-  <p id="idBdyHmn452nam">name::
-    <br>* Mcs.cptBdyHmn452,
-    <br>* Mcs.sensation.thirsty,
-    <br>====== langoGreek:
-    <br>* McsEll.αίσθηση-δίψας,
-    <br>* McsEll.αίσθηση.δίψα,
-    <a class="clsHide" href="#idBdyHmn452nam"></a></p>
-  <p id="idBdyHmn452dsn">description::
-    <br>analytic: η αίσθηση διψας είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε ... <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn452dsn"></a></p>
-  <p id="idBdyHmn452gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
-    <a class="clsHide" href="#idBdyHmn452gtr"></a></p>
-</section>
-
-<section id="idBdyHmn453">
-  <h1 id="idBdyHmn453H1">sensation.itch
-    <a class="clsHide" href="#idBdyHmn453H1"></a></h1>
-  <p id="idBdyHmn453nam">name::
-    <br>* Mcs.cptBdyHmn453,
-    <br>* Mcs.sensation.itch,
-    <br>====== langoGreek:
-    <br>* McsEll.αίσθηση-κνησμού,
-    <br>* McsEll.αίσθηση.κνησμού,
-    <a class="clsHide" href="#idBdyHmn453nam"></a></p>
-  <p id="idBdyHmn453dsn">description::
-    <br>analytic: η αίσθηση κνησμού είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε ... <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn453dsn"></a></p>
-  <p id="idBdyHmn453gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
-    <a class="clsHide" href="#idBdyHmn453gtr"></a></p>
-</section>
-
-<section id="idBdyHmn454">
-  <h1 id="idBdyHmn454H1">sensation.hunger
-    <a class="clsHide" href="#idBdyHmn454H1"></a></h1>
-  <p id="idBdyHmn454nam">name::
-    <br>* Mcs.cptBdyHmn454,
-    <br>* Mcs.sensation.hunger,
-    <br>====== langoGreek:
-    <br>* McsEll.αίσθηση-πεινας,
-    <br>* McsEll.αίσθηση.πείνα,
-    <a class="clsHide" href="#idBdyHmn454nam"></a></p>
-  <p id="idBdyHmn454dsn">description::
-    <br>analytic: η αίσθηση πεινας είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε ... <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn454dsn"></a></p>
-  <p id="idBdyHmn454gtr">generic-tree::
-    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
-    <a class="clsHide" href="#idBdyHmn454gtr"></a></p>
 </section>
 
 <section id="idBdyHmn455">
@@ -19215,6 +19031,45 @@
     <a class="clsHide" href="#idBdyΗmndngClngH2"></a></h2>
   </section>
 
+  <section id="idBdyHmn144">
+  <h2 id="idBdyHmn144H2">metabolism
+    <a class="clsHide" href="#idBdyHmn144H2"></a></h2>
+  <p id="idBdyHmn144nam">name::
+    <br>* Mcs.cptBdyHmn144,
+    <br>* Mcs.metabolism,
+    <br>====== langoGreek:
+    <br>* McsEll.μεταβολισμός,
+    <a class="clsHide" href="#idBdyHmn144nam"></a></p>
+  <p id="idBdyHmn144dsn">description::
+    <br>Metabolism (from Greek: µetaί??? "metabole", "change" or Greek: µetaί???sµ?? metabolismos, "outthrow") is the set of chemical reactions that happen in the cells of living organisms to sustain life. These processes allow organisms to grow and reproduce, maintain their structures, and respond to their environments. The word metabolism can also refer to all chemical reactions that occur in living organisms, including digestion and the transport of substances into and between different cells, in which case the set of reactions within the cells is called intermediary metabolism or intermediate metabolism.
+    <br>Metabolism is usually divided into two categories. Catabolism breaks down organic matter, for example to harvest energy in cellular respiration. Anabolism uses energy to construct components of cells such as proteins and nucleic acids.
+    <br>The chemical reactions of metabolism are organized into metabolic pathways, in which one chemical is transformed through a series of steps into another chemical, by a sequence of enzymes. Enzymes are crucial to metabolism because they allow organisms to drive desirable reactions that require energy and will not occur by themselves, by coupling them to spontaneous reactions that release energy. As enzymes act as catalysts they allow these reactions to proceed quickly and efficiently. Enzymes also allow the regulation of metabolic pathways in response to changes in the cell's environment or signals from other cells.
+    <br>The metabolism of an organism determines which substances it will find nutritious and which it will find poisonous. For example, some prokaryotes use hydrogen sulfide as a nutrient, yet this gas is poisonous to animals.[1] The speed of metabolism, the metabolic rate, influences how much food an organism will require, and also affects how it is able to obtain that food.
+    <br>A striking feature of metabolism is the similarity of the basic metabolic pathways and components between even vastly different species.[2] For example, the set of carboxylic acids that are best known as the intermediates in the citric acid cycle are present in all known organisms, being found in species as diverse as the unicellular bacteria Escherichia coli and huge multicellular organisms like elephants.[3] These striking similarities in metabolic pathways are likely due to their early appearance in evolutionary history, and being retained because of their efficacy.[4][5]
+    <br>[http://en.wikipedia.org/wiki/Metabolism]
+    <br>===
+    <br>μεταβολισμός είναι η διάσπαση των θρεπτικών συστατικών που έχει προμηθευτεί ο οργανισμός στα κύτταρα.
+    <a class="clsHide" href="#idBdyHmn144dsn"></a></p>
+  <p id="idBdyHmn144gtr">generic-tree::
+    <br>* entity.bodyNo.doing.chem_reacting⧺cptEpistem740.1⧺,
+    <a class="clsHide" href="#idBdyHmn144gtr"></a></p>
+  <p id="idBdyHmn144wtr">whole-tree::
+    <br>* sympan'sysOrgms'organism⧺cptEpistem482⧺,
+    <a class="clsHide" href="#idBdyHmn144wtr"></a></p>
+
+  <section id="idBdyHmn144srtr">
+  <h3 id="idBdyHmn144srtrH3">structure
+    <a class="clsHide" href="#idBdyHmn144srtrH3"></a></h3>
+  <p id="idBdyHmn144srtrP1">structure::
+    <br>ο μεταβολισμός γίνεται
+    <br>- στους ιστούς και
+    <br>- τα κύτταρα όπως και
+    <br>- σε ορισμένα όργανα πχ το συκώτι.
+    <br>[Αργύρης, {1994}, 70⧺cptRsc29⧺]
+    <a class="clsHide" href="#idBdyHmn144srtrP1"></a></p>
+  </section>
+  </section>
+
   <section id="idBdyΗmndngClng">
   <h2 id="idBdyΗmndngClngH2">doing.cleaning of bodyHmn
     <a class="clsHide" href="#idBdyΗmndngClngH2"></a></h2>
@@ -19490,7 +19345,7 @@
   <h3 id="idBdyHmn298SPECIFICH3">SPECIFIC
     <a class="clsHide" href="#idBdyHmn298SPECIFICH3"></a></h3>
   <p id="idBdyHmn298str">specific-tree::
-    <br>* πρόσληψη ερεθισμάτων (αισθησεις)⧺cptBdyHmn310⧺,
+    <br>* πρόσληψη ερεθισμάτων (αισθήσεις)⧺cptBdyHmn310⧺,
     <br>* μεταβιβαση ερεθισμάτων σε όργανα,
     <a class="clsHide" href="#idBdyHmn298str"></a></p>
   </section>
@@ -19978,7 +19833,7 @@
     <br>αίσθηση είναι η <a class="clsPreview" href="#idBdyHmn298">λειτουργία-επικοινωνιας</a> του '<a class="clsPreview" href="#idSognHmn003">νευρικού-συστήματος</a>' με την οποία γίνεται πρόσληψη '<a class="clsPreview" href="#idBdyHmn386">ερεθισμάτων</a>' από το περιβάλλον αλλά και από τον ίδιο τον οργανισμό.
     <br>[hmnSgm, {1995-03}]
     <br>===
-    <br>"αίσθηση:  αντανακλαση των ιδιοτητων των πραγματων του αντικειμενικου κοσμου, που είναι αποτελεσμα της επιδρασης-τους πάνω στα αισθητηρια όργανα και του ερεθισμου των νευρικων κεντρων του εγκεφάλου. Η αίσθηση είναι η αφετηρια της γνωσης, αναποσπαστο στοιχειο-της".
+    <br>"αίσθηση:  αντανακλαση των ιδιοτητων των πραγματων του αντικειμενικου κοσμου, που είναι αποτελεσμα της επιδρασης-τους πάνω στα αισθητηρια όργανα και του ερεθισμου των νευρικών κεντρων του εγκεφάλου. Η αίσθηση είναι η αφετηρια της γνωσης, αναποσπαστο στοιχειο-της".
     <br>[ηλιτσεφ κλπ, φιλοσοφικο λεξικο 1985, α50⧺cptRsc164⧺]
     <br>===
     <br>"SENSATION is the reflection of individual properties of objects or phenomena belonging to the material world and acting directly on the sense organs (for example, the reflection of bitter, salty, hot, red, round, smooth, etc, properties...
@@ -20045,27 +19900,27 @@
   </section>
 
   <section id="idBrainHmnsnsgSPECIFIC">
-  <h3 id="idBrainHmnsnsgSPECIFICH3">SPECIFIC
+  <h3 id="idBrainHmnsnsgSPECIFICH3">sensing.SPECIFIC
     <a class="clsHide" href="#idBrainHmnsnsgSPECIFICH3"></a></h3>
   <p id="idBrainHmnsnsgstr">specific-tree::
-    <br>* HEARING / ακοής-αίσθηση (ηχος)⧺cptBdyHmn314⧺,
-    <br>* SIGHT / όρασης-αίσθηση (εικονες)⧺cptBdyHmn313⧺,
-    <br>* SMELL / οσφρησης-αίσθηση (μυρωδια)⧺cptBdyHmn317⧺,
-    <br>* TASTE / γεύσης-αίσθηση (γεύση)⧺cptBdyHmn316⧺,
+    <br>* <a class="clsPreview" href="#idBdyHmn314">sensingHearing-(sensationSound)</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn313">sensingSeeing-(sensationImage)</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn317">sensingSmelling-(sensationSmell)</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn316">sensingTasting-(sensationTaste)</a>,
     <br>* TOUCH / αφης-αίσθηση (σκληρο|μαλακο)⧺cptBdyHmn448⧺,
     <br>
     <br>* THIRST / διψας-αίσθηση (διψα)⧺cptBdyHmn452⧺,
     <br>* θερμοκρασίας-αίσθηση (θερμο/ψυχρο)⧺cptBdyHmn451⧺,
     <br>* <a class="clsPreview" href="#idBdyHmn315">ισορροπίας-αίσθηση</a>,
     <br>* κνησμού-αίσθηση (κνησμος)⧺cptBdyHmn453⧺,
-    <br>* HUNGER / πεινας-αίσθηση (πεινα)⧺cptBdyHmn454⧺,
+    <br>* HUNGER / πείνας-αίσθηση (πεινα)⧺cptBdyHmn454⧺,
     <br>* PRESSURE / πίεσης-αίσθηση (πίεση)⧺cptBdyHmn449⧺,
     <br>* PAIN / πόνου-αίσθηση (πονος)⧺cptBdyHmn450⧺,
     <br>
-    <br>* γενικη-αίσθηση,
-    <br>* ειδικες αισθησεις,
-    <br>* σώματικες αισθησεις,
-    <br>* χημικές αισθησεις,
+    <br>* γενική-αίσθηση,
+    <br>* ειδική-αίσθηση,
+    <br>* σωματική-αίσθηση,
+    <br>* χημική-αίσθηση,
     <a class="clsHide" href="#idBrainHmnsnsgstr"></a></p>
   <p id="idBrainHmnsnsgSPECIFICP1">Hearing, sight, smell, taste, and touch are regarded as the classical five senses.
     <br><strong>Touch</strong> has a multiplicity of subdivisions, including the senses of pressure, heat, cold, and pain.
@@ -20074,14 +19929,14 @@
     <br>General senses, which produce information concerning bodily needs (hunger, thirst, fatigue, and pain), are also recognized.
     <br>"Sense Organs," Microsoft(R) Encarta(R) 97 Encyclopedia. (c) 1993-1996 Microsoft Corporation. All rights reserved.
     <a class="clsHide" href="#idBrainHmnsnsgSPECIFICP1"></a></p>
-  <p id="idBrainHmnsnsgSPECIFICP2">γενικες/ειδικες:
-    <br>οι αισθήσεις χωρίζονται σε δύο μεγάλες κατηγορίες, τις γενικες και τις ειδικες.
+  <p id="idBrainHmnsnsgSPECIFICP2">γενικες/ειδικές:
+    <br>οι αισθήσεις χωρίζονται σε δύο μεγάλες κατηγορίες, τις γενικες και τις ειδικές.
     <br>οι γενικές αισθήσεις γίνονται αντιληπτές από όλα τα σημεία του σώματος (δέρμα, μυς, αρθρώσεις, σπλάγχνα) και αφορούν ερεθίσματα που προκαλούν πόνο, πίεση, θερμοκρασία κτλ. Τα ερεθίσματα παραλαμβάνονται από τα αισθητικά νεύρα και με την αισθητική οδό φτάνουν στο αισθητικό κέντρο του φλοιού του εγκεφάλου.
     <br>οι ειδικές αισθήσεις διαθέτουν ειδικά όργανα, εντελώς εξειδικευμένα για την υποδοχή των αντίστοιχων ερεθισμάτων, όπως πχ το μάτι για τα φωτεινά ερεθίσματα, το αυτί για τα ηχητικά κτλ. Ειδικές αισθήσεις είναι η όραση, η ακοή και η αίσθηση της ισορροπίας στο χώρο, η όσφρηση και η γεύση.
     <br>[Αργύρης, {1994}, 272⧺cptRsc31⧺]
     <a class="clsHide" href="#idBrainHmnsnsgSPECIFICP2"></a></p>
-  <p id="idBrainHmnsnsgSPECIFICP3">σώματικες/ειδικες:
-    <br>τις αισθήσεις τις διακρίνουμε σε σώματικες (πόνος, κνησμός, αίσθηση θερμού-ψυχρού, δίψας, πεινας) και σε ειδικες (όραση, ακοή, όσφρηση, γεύση)
+  <p id="idBrainHmnsnsgSPECIFICP3">σωματικές/ειδικές:
+    <br>τις αισθήσεις τις διακρίνουμε σε σωματικές (πόνος, κνησμός, αίσθηση θερμού-ψυχρού, δίψας, πείνας) και σε ειδικές (όραση, ακοή, όσφρηση, γεύση)
     <br>[Αργύρης, {1994}, 96⧺cptRsc29⧺]
     <a class="clsHide" href="#idBrainHmnsnsgSPECIFICP3"></a></p>
   </section>
@@ -20092,12 +19947,11 @@
     <a class="clsHide" href="#idBrainHmnseegH2"></a></h2>
   <p id="idBrainHmnseegnam">name::
     <br>* Mcs.cptBdyHmn313,
-    <br>* Mcs.seeing,
+    <br>* Mcs.sensing.seeing,
     <br>* Mcs.vision,
     <br>====== langoGreek:
-    <br>* McsEll.αίσθηση-όρασης,
     <br>* McsEll.αίσθηση.όραση,
-    <br>* McsEll.όραση,
+    <br>* McsEll.όρασης-αίσθηση,
     <a class="clsHide" href="#idBrainHmnseegnam"></a></p>
   <p id="idBrainHmnseegdsn">description::
     <br>analytic: όραση είναι η <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία γίνεται πρόσληψη του φωτος.
@@ -20133,9 +19987,11 @@
     <a class="clsHide" href="#idBdyHmn314H2"></a></h2>
   <p id="idBdyHmn314nam">name::
     <br>* Mcs.cptBdyHmn314,
+    <br>* Mcs.sensing.hearing,
     <br>* Mcs.hearing,
     <br>====== langoGreek:
-    <br>* McsEll.ακοή,
+    <br>* McsEll.αίσθηση.ακοή,
+    <br>* McsEll.ακοής-αίσθηση,
     <a class="clsHide" href="#idBdyHmn314nam"></a></p>
   <p id="idBdyHmn314dsn">description::
     <br>analytic: HEARING is the <a class="clsPreview" href="#idBrainHmnsnsg">SENSE</a> of perceiving SOUND-WAVES.
@@ -20177,10 +20033,11 @@
     <a class="clsHide" href="#idBdyHmn316H2"></a></h2>
   <p id="idBdyHmn316nam">name::
     <br>* Mcs.cptBdyHmn316,
-    <br>* Mcs.taste,
+    <br>* Mcs.sensing.tasting,
+    <br>* Mcs.tasting,
     <br>====== langoGreek:
+    <br>* McsEll.αίσθηση.γεύση,
     <br>* McsEll.γεύσης-αίσθηση,
-    <br>* McsEll.γεύση,
     <a class="clsHide" href="#idBdyHmn316nam"></a></p>
   <p id="idBdyHmn316dsn">description::
     <br>analytic: γεύση είναι η <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία αντιλαμβανόμαστα χαρακτηριστικά ουσιών που έρχονται σε επαφή με τη γλώσσα.
@@ -20217,22 +20074,19 @@
     <a class="clsHide" href="#idBdyHmn317H2"></a></h2>
   <p id="idBdyHmn317nam">name::
     <br>* Mcs.cptBdyHmn317,
-    <br>* Mcs.smell,
     <br>* Mcs.smelling,
     <br>====== langoGreek:
-    <br>* McsEll.οσφρησης-αίσθηση,
-    <br>* McsEll.οσφρηση,
-    <br>* McsEll.οσφρηση,
+    <br>* McsEll.όσφρησης-αίσθηση,
     <a class="clsHide" href="#idBdyHmn317nam"></a></p>
   <p id="idBdyHmn317dsn">description::
-    <br>analytic: οσφρηση είναι η <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία αντιλαμβανόμαστε οσμές (αερια).
+    <br>analytic: όσφρηση είναι η <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία αντιλαμβανόμαστε οσμές (αερια).
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idBdyHmn317dsn"></a></p>
   <p id="idBdyHmn317gtr">generic-tree::
     <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
     <a class="clsHide" href="#idBdyHmn317gtr"></a></p>
   <p id="idBdyHmn317wtr">whole-tree::
-    <br>* <a class="clsPreview" href="#idBdyHmn318wtr">οσφρησης-σύστημα</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn318wtr">όσφρησης-σύστημα</a>,
     <a class="clsHide" href="#idBdyHmn317wtr"></a></p>
 
   <section id="idBdyHmn317evoluting">
@@ -20243,6 +20097,157 @@
     <br>[Αργύρης, {1994}, 285⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn317evolutingP1"></a></p>
   </section>
+  </section>
+
+  <section id="idBdyHmn448">
+  <h2 id="idBdyHmn448H2">sensing.touching
+    <a class="clsHide" href="#idBdyHmn448H2"></a></h2>
+  <p id="idBdyHmn448nam">name::
+    <br>* Mcs.cptBdyHmn448,
+    <br>* Mcs.haptic-perception,
+    <br>* Mcs.sensing.touching,
+    <br>* Mcs.touching,
+    <br>====== langoGreek:
+    <br>* McsEll.αίσθηση.αφή,
+    <br>* McsEll.αφής-αίσθηση,
+    <a class="clsHide" href="#idBdyHmn448nam"></a></p>
+  <p id="idBdyHmn448dsn">description::
+    <br>analytic: η αφή είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε ... <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmn448dsn"></a></p>
+  <p id="idBdyHmn448gtr">generic-tree::
+    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
+    <a class="clsHide" href="#idBdyHmn448gtr"></a></p>
+  </section>
+
+  <section id="idBdyHmn449">
+  <h2 id="idBdyHmn449H2">sensing.presure
+    <a class="clsHide" href="#idBdyHmn449H2"></a></h2>
+  <p id="idBdyHmn449nam">name::
+    <br>* Mcs.cptBdyHmn449,
+    <br>* Mcs.sensation.presure,
+    <br>====== langoGreek:
+    <br>* McsEll.αίσθηση-πίεσης,
+    <br>* McsEll.αίσθηση.πίεση,
+    <a class="clsHide" href="#idBdyHmn449nam"></a></p>
+  <p id="idBdyHmn449dsn">description::
+    <br>analytic: η αίσθηση πίεσης είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε πίεσης <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmn449dsn"></a></p>
+  <p id="idBdyHmn449gtr">generic-tree::
+    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
+    <a class="clsHide" href="#idBdyHmn449gtr"></a></p>
+  </section>
+
+  <section id="idBdyHmn450">
+  <h2 id="idBdyHmn450H2">sensing.pain
+    <a class="clsHide" href="#idBdyHmn450H2"></a></h2>
+  <p id="idBdyHmn450nam">name::
+    <br>* Mcs.cptBdyHmn450,
+    <br>* Mcs.sensation.pain,
+    <br>====== langoGreek:
+    <br>* McsEll.πονος,
+    <br>* McsEll.αίσθηση-πόνου,
+    <br>* McsEll.αίσθηση.πόνου,
+    <a class="clsHide" href="#idBdyHmn450nam"></a></p>
+  <p id="idBdyHmn450dsn">description::
+    <br>analytic: η αίσθηση πόνου είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε ... <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmn450dsn"></a></p>
+  <p id="idBdyHmn450gtr">generic-tree::
+    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
+    <a class="clsHide" href="#idBdyHmn450gtr"></a></p>
+
+  <section id="idBdyHmn450therapy">
+  <h3 id="idBdyHmn450therapyH3">therapy
+    <a class="clsHide" href="#idBdyHmn450therapyH3"></a></h3>
+  <p id="idBdyHmn450therapyP1">therapy::
+    <br>ένα φλιτζάνι πράσινου τσαγιού μέντας από τη βραζιλία ανακουφίζει από τον πόνο όσο και τα εμπορικά αναλγητικά υποστηρίζουν βρετανοί ερευνητές.
+    <br>[http://www.enet.gr/] {2009-11-25}
+    <a class="clsHide" href="#idBdyHmn450therapyP1"></a></p>
+  <p id="idBdyHmn450therapyP2">What Is the Oldest Treatment for Gout?
+    <br>The ancient Romans treated gout by having sufferers stand in water with electric eels until their feet went numb.
+    <br>
+    <br>Today's doctors sometimes treat pain by using low voltage electrical impulses to block pain signals from reaching the brain, a concept that was born in Ancient Rome. In 46 A.D., physician Scribonius Largus wrote in De Compositiones Medicae about using electric eels to generate similar electrical charges. The eels were used to treat patients with gout, a form of arthritis affecting the feet that can cause painful flare-ups lasting for days.
+    <br>[http://www.wisegeek.com/what-is-the-oldest-treatment-for-gout.htm?m, {2015-12-17}]
+    <a class="clsHide" href="#idBdyHmn450therapyP2"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmn451">
+  <h2 id="idBdyHmn451H2">sensing.temperature
+    <a class="clsHide" href="#idBdyHmn451H2"></a></h2>
+  <p id="idBdyHmn451nam">name::
+    <br>* Mcs.cptBdyHmn451,
+    <br>* Mcs.sensation.temperature,
+    <br>====== langoGreek:
+    <br>* McsEll.αίσθηση-θερμοκρασίας,
+    <br>* McsEll.αίσθηση.θερμοκρασία,
+    <a class="clsHide" href="#idBdyHmn451nam"></a></p>
+  <p id="idBdyHmn451dsn">description::
+    <br>analytic: η αίσθηση θερμοκρασίας είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε θερμοκρασίας <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmn451dsn"></a></p>
+  <p id="idBdyHmn451gtr">generic-tree::
+    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
+    <a class="clsHide" href="#idBdyHmn451gtr"></a></p>
+  </section>
+
+  <section id="idBdyHmn452">
+  <h2 id="idBdyHmn452H2">sensing.thirsty
+    <a class="clsHide" href="#idBdyHmn452H2"></a></h2>
+  <p id="idBdyHmn452nam">name::
+    <br>* Mcs.cptBdyHmn452,
+    <br>* Mcs.sensation.thirsty,
+    <br>====== langoGreek:
+    <br>* McsEll.αίσθηση-δίψας,
+    <br>* McsEll.αίσθηση.δίψα,
+    <a class="clsHide" href="#idBdyHmn452nam"></a></p>
+  <p id="idBdyHmn452dsn">description::
+    <br>analytic: η αίσθηση διψας είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε ... <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmn452dsn"></a></p>
+  <p id="idBdyHmn452gtr">generic-tree::
+    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
+    <a class="clsHide" href="#idBdyHmn452gtr"></a></p>
+  </section>
+
+  <section id="idBdyHmn453">
+  <h2 id="idBdyHmn453H2">sensing.itch
+    <a class="clsHide" href="#idBdyHmn453H2"></a></h2>
+  <p id="idBdyHmn453nam">name::
+    <br>* Mcs.cptBdyHmn453,
+    <br>* Mcs.sensation.itch,
+    <br>====== langoGreek:
+    <br>* McsEll.αίσθηση-κνησμού,
+    <br>* McsEll.αίσθηση.κνησμού,
+    <a class="clsHide" href="#idBdyHmn453nam"></a></p>
+  <p id="idBdyHmn453dsn">description::
+    <br>analytic: η αίσθηση κνησμού είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε ... <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmn453dsn"></a></p>
+  <p id="idBdyHmn453gtr">generic-tree::
+    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
+    <a class="clsHide" href="#idBdyHmn453gtr"></a></p>
+  </section>
+
+  <section id="idBdyHmn454">
+  <h2 id="idBdyHmn454H2">sensing.hunger
+    <a class="clsHide" href="#idBdyHmn454H2"></a></h2>
+  <p id="idBdyHmn454nam">name::
+    <br>* Mcs.cptBdyHmn454,
+    <br>* Mcs.sensation.hunger,
+    <br>====== langoGreek:
+    <br>* McsEll.αίσθηση-πείνας,
+    <br>* McsEll.αίσθηση.πείνα,
+    <a class="clsHide" href="#idBdyHmn454nam"></a></p>
+  <p id="idBdyHmn454dsn">description::
+    <br>analytic: η αίσθηση πείνας είναι <a class="clsPreview" href="#idBrainHmnsnsg">αίσθηση</a> με την οποία προσλαμβάνουμε ... <a class="clsPreview" href="#idBdyHmn386">ερεθίσματα</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmn454dsn"></a></p>
+  <p id="idBdyHmn454gtr">generic-tree::
+    <br>* <a class="clsPreview" href="#idBrainHmnsnsg">sensing</a>,
+    <a class="clsHide" href="#idBdyHmn454gtr"></a></p>
   </section>
 </section>
 
