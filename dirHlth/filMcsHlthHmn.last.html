@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.health (human-health 0-10-0.2020-02-13 draft)</title>
+  <title>Mcs.health (human-health 0-12-0.2020-03-02 draft)</title>
   <meta name="keywords" content="human-health, health, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -116,15 +116,54 @@
     <a class="clsHide" href="#idHlthrcrdnam"></a></p>
 </section>
 
-<section id="idHlthsbtc">
-  <h1 id="idHlthsbtcH1">substance of health
-    <a class="clsHide" href="#idHlthsbtcH1"></a></h1>
+<section id="idHlthbdyMtr">
+  <h1 id="idHlthbdyMtrH1">bodyMtr of health
+    <a class="clsHide" href="#idHlthbdyMtrH1"></a></h1>
+  <p id="idHlthbdyMtrnam">name::
+    <br>* Mcs.health'bodyMtr!⇒bodyMtrHlth,
+    <br>* Mcs.bodyMaterialHealthHuman!⇒bodyMtrHlth,
+    <br>* Mcs.bodyMtrHmnRld.health!⇒bodyMtrHlth,
+    <br>* Mcs.bodyMtrHlth,
+    <a class="clsHide" href="#idHlthbdyMtrnam"></a></p>
+  <p id="idHlthbdyMtrdsn">description::
+    <br>· health-material-body is <a class="clsPreview" href="../dirNtr/filMcsBdyMtr.last.html#idOverview">a-material-body</a> that affects human-health.
+    <a class="clsHide" href="#idHlthbdyMtrdsn"></a></p>
+
+  <section id="idHlthbdyMtrgst">
+  <h2 id="idHlthbdyMtrgstH2">GENERIC-SPECIFIC-TREE of bodyMtrHlth
+    <a class="clsHide" href="#idHlthbdyMtrgstH2"></a></h2>
+  <p id="idHlthbdyMtrgstnam">name::
+    <br>* Mcs.bodyMtrHlth'generic-specific-tree,
+    <a class="clsHide" href="#idHlthbdyMtrgstnam"></a></p>
+  <p id="idHlthbdyMtrgtr">generic-tree-of-bodyMtrHlth::
+    <br>* <a class="clsPreview" href="../dirNtr/filMcsBdyMtr.last.html#idOverview">bodyMtr</a>,
+    <a class="clsHide" href="#idHlthbdyMtrgtr"></a></p>
+  <p id="idHlthbdyMtrstr">specific-tree-of-bodyMtrHlth::
+    <br>* nutrient-bodyMtrHlth,
+    <br>* nutrientNo-bodyMtrHlth,
+    <br>===
+    <br>* harmfulNo-bodyMtrHlth,
+    <br>* harmful-bodyMtrHlth,
+    <br>===
+    <br>* eyeMicro-bodyMtrHlth,
+    <br>* eye-bodyMtrHlth,
+    <br>===
+    <br>* internal-bodyMtrHlth,
+    <br>* external-bodyMtrHlth,
+    <br>===
+    <a class="clsHide" href="#idHlthbdyMtrstr"></a></p>
+  </section>
+
+  <section id="idHlthsbtc">
+  <h2 id="idHlthsbtcH2">substance of health
+    <a class="clsHide" href="#idHlthsbtcH2"></a></h2>
   <p id="idHlthsbtcdfn">definition::
     <br><span id="idHlthsbtcdfnSpc">specific-definition:
-    <br>· health-substance is any <a class="clsPreview" href="../dirNtr/filMcsBdyMtr.last.html#idBdMtrSbtc">substance</a>, nutrient or not, humans consume and affects their health.
+    <br>· health-substance is any <a class="clsPreview" href="../dirNtr/filMcsBdyMtr.last.html#idBdyMtrSbtc">substance-(eye-bodyMtr-shapeNo)</a>, nutrient or not, humans CONSUME and affects their health.
     <a class="clsHide" href="#idHlthsbtcdfnSpc"></a></span>
+    <br>===
     <br><span id="idHlthsbtcdfnGnc">generic-definition:
-    <br>· health-substance is any food or <a class="clsPreview" href="filMcsDrgHmn.last.html#idOverview">drug</a>.
+    <br>· health-substance is any <a class="clsPreview" href="filMcsFoodHmn.last.html#idOverview">food</a> or <a class="clsPreview" href="filMcsDrgHmn.last.html#idOverview">drug</a>.
     <a class="clsHide" href="#idHlthsbtcdfnGnc"></a></span>
     <a class="clsHide" href="#idHlthsbtcdfn"></a></p>
   <p id="idHlthsbtcnam">name::
@@ -133,48 +172,32 @@
     <a class="clsHide" href="#idHlthsbtcnam"></a></p>
 
   <section id="idHlthsbtcgst">
-  <h2 id="idHlthsbtcgstH2">GENERIC-SPECIFIC-TREE of health
-    <a class="clsHide" href="#idHlthsbtcgstH2"></a></h2>
+  <h3 id="idHlthsbtcgstH3">GENERIC-SPECIFIC-TREE of health
+    <a class="clsHide" href="#idHlthsbtcgstH3"></a></h3>
   <p id="idHlthsbtcgstnam">name::
     <br>* Mcs.health'generic-specific-tree,
     <a class="clsHide" href="#idHlthsbtcgstnam"></a></p>
-  <p id="idHlthsbtcgstgt">generic-tree-of-::
-    <br>* health-substance,
-    <br>* <a class="clsPreview" href="../dirNtr/filMcsBdyMtr.last.html#idBdMtrSbtc">substance</a>,
+  <p id="idHlthsbtcgstgt">generic-tree-of-health-substance::
+    <br>* <a class="clsPreview" href="../dirNtr/filMcsBdyMtr.last.html#idBdyMtrSbtc">substance</a>,
     <br>* <a class="clsPreview" href="../dirNtr/filMcsBdyMtr.last.html#idOverview">material-body</a>,
     <br>* <a class="clsPreview" href="../dirCor/filMcsWhl.last.html#idWhlSysBdy">body-system</a>,
     <br>* <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idEntBody">body</a>,
     <br>* <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">entity</a>,
     <a class="clsHide" href="#idHlthsbtcgstgt"></a></p>
-
-  <section id="idHlthsbtcSpc">
-  <h3 id="idHlthsbtcSpcH3">health-substance.SPECIFIC
-    <a class="clsHide" href="#idHlthsbtcSpcH3"></a></h3>
-  <p id="idHlthsbtcSpcnam">name::
-    <br>* Mcs.health-substance.specific,
-    <a class="clsHide" href="#idHlthsbtcSpcnam"></a></p>
-  <p id="idHlthsbtcSpcP1">specific::
+  <p id="idHlthsbtcstr">specific-tree-of-health-substance::
+    <br>* beneficial--health-substance,
+    <br>* harmful--health-substance,
+    <br>===
     <br>* <a class="clsPreview" href="filMcsFoodHmn.last.html#idOverview">food</a>,
     <br>* <a class="clsPreview" href="filMcsDrgHmn.last.html#idOverview">foodNo</a>,
-    <a class="clsHide" href="#idHlthsbtcSpcP1"></a></p>
+    <a class="clsHide" href="#idHlthsbtcstr"></a></p>
   </section>
   </section>
 </section>
 
 <section id="idHlthsplt">
-  <h1 id="idHlthspltH1">supplement of health
+  <h1 id="idHlthspltH1">supplement (<a class="clsPreview" href="filMcsFoodHmn.last.html#idFoodHmn073">link</a>) of health
     <a class="clsHide" href="#idHlthspltH1"></a></h1>
-  <p id="idHlthspltdsn">description::
-    <br>Is It Worthwhile to Take Dietary Supplements?
-    <br>After analyzing 277 clinical trials, researchers concluded that most supplements can't be linked to better health.
-    <br>If you're one of the millions of Americans who collectively spend more than $30 billion a year on health-related supplements, you might want to stash that credit card and focus on your financial well-being instead. According to a wide-ranging study by researchers from Johns Hopkins University, there isn't any connection between a longer life or improved heart health and nearly all dietary supplements. The researchers examined the results of 277 previously-concluded clinical trials that focused on 16 vitamins, minerals, and other supplements and their impact on heart health and longevity in nearly one million participants. The only significant health benefits they discerned were modest and came from omega-3 fatty acid and folic acid supplements. Even then, only some of the participants appeared to reap any benefits.
-    <br>[http://www.wisegeek.com/is-it-worthwhile-to-take-dietary-supplements.htm?m {2019-12-16}]
-    <a class="clsHide" href="#idHlthspltdsn"></a></p>
-  <p id="idHlthspltnam">name::
-    <br>* Mcs.health'supplement,
-    <br>====== langoGreek:
-    <br>* McsEll.συμπλήρωμα-διατροφής-ανθρώπου!=health-supplement,
-    <a class="clsHide" href="#idHlthspltnam"></a></p>
 </section>
 
 <section id="idHlthrscFT">

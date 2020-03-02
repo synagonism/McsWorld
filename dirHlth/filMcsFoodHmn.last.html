@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.food (human-food 0-5-0.2020-02-28 draft)</title>
+  <title>Mcs.food (human-food 0-6-0.2020-03-02 draft)</title>
   <meta name="keywords" content="food-of-human, food, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -23,7 +23,7 @@
     <a class="clsHide" href="#idOverviewH1"></a></h1>
   <p id="idDefinition">definition::
     <br><span id="idDefinitionSpc">specific:
-    <br>· food is <a class="clsPreview" href="filMcsHlthHmn.last.html#idHlthsbtcdfnSpc">a-health-substance</a> needed to provied <a class="clsPreview" href="#idFoodHmnntrt">nutrients</a> to human-body.
+    <br>· food is <a class="clsPreview" href="filMcsHlthHmn.last.html#idHlthsbtcdfnSpc">a-health-substance</a> needed to provide <a class="clsPreview" href="#idFoodHmnntrt">nutrients</a> to human-body.
     <a class="clsHide" href="#idDefinitionSpc"></a></span>
     <a class="clsHide" href="#idDefinition"></a></p>
   <p id="idName">name::
@@ -117,7 +117,7 @@
     <a class="clsHide" href="#idFoodHmnntrtdsn"></a></p>
   <p id="idFoodHmnntrtnam">name::
     <br>* Mcs.food'nutrient,
-    <br>* Mcs.nutrient,
+    <br>* Mcs.nutrient-of-food,
     <a class="clsHide" href="#idFoodHmnntrtnam"></a></p>
 </section>
 
@@ -128,6 +128,7 @@
     <a class="clsHide" href="#idFoodHmnadtvcrtd"></a></p>
   <p id="idFoodHmnadtvnam">name::
     <br>* Mcs.food'additive,
+    <br>* Mcs.additive-of-food,
     <br>====== langoGreek:
     <br>* McsEll.πρόσθετα-τροφίμων!=food'additive,
     <a class="clsHide" href="#idFoodHmnadtvnam"></a></p>
@@ -361,6 +362,21 @@
   <p id="idFoodHmndngFnam">name::
     <br>* Mcs.food'doing,
     <a class="clsHide" href="#idFoodHmndngFnam"></a></p>
+
+  <section id="idFoodHmnftfn">
+  <h2 id="idFoodHmnftfnH2">fortification of food
+    <a class="clsHide" href="#idFoodHmnftfnH2"></a></h2>
+  <p id="idFoodHmnftfnnam">name::
+    <br>* Mcs.food'enrichment,
+    <br>* Mcs.food'fortification,
+    <a class="clsHide" href="#idFoodHmnftfnnam"></a></p>
+  <p id="idFoodHmnftfndsn">description::
+    <br>"Food fortification or enrichment is the process of adding micronutrients (essential trace elements and vitamins) to food. It can be carried out by food manufacturers, or by governments as a public health policy which aims to reduce the number of people with dietary deficiencies within a population. The predominant diet within a region can lack particular nutrients due to the local soil or from inherent deficiencies within the staple foods; addition of micronutrients to staples and condiments can prevent large-scale deficiency diseases in these cases.[1]
+    <br>As defined by the World Health Organization (WHO) and the Food and Agricultural Organization of the United Nations (FAO), fortification refers to "the practice of deliberately increasing the content of an essential micronutrient, ie. vitamins and minerals (including trace elements) in a food, so as to improve the nutritional quality of the food supply and to provide a public health benefit with minimal risk to health", whereas enrichment is defined as "synonymous with fortification and refers to the addition of micronutrients to a food which are lost during processing".[2]
+    <br>Food fortification has been identified as the second strategy of four by the WHO and FAO to begin decreasing the incidence of nutrient deficiencies at the global level.[2] As outlined by the FAO, the most commonly fortified foods are cereals and cereal-based products; milk and dairy products; fats and oils; accessory food items; tea and other beverages; and infant formulas.[3] Undernutrition and nutrient deficiency is estimated globally to cause the deaths of between 3 and 5 million people per year.[1]"
+    <br>[https://en.wikipedia.org/wiki/Food_fortification {2020-03-01}]
+    <a class="clsHide" href="#idFoodHmnftfndsn"></a></p>
+  </section>
 </section>
 
 <section id="idFoodHmnckng">
@@ -461,7 +477,7 @@
   <p id="idFoodHmngstchn">generic-chain::
     <br>* food,
     <br>* <a class="clsPreview" href="filMcsFoodBio.last.html#idOverview">foodBio</a>,
-    <br>* <a class="clsPreview" href="../dirNtr/filMcsBdyMtr.last.html#idBdMtrSbtc">substance</a>,
+    <br>* <a class="clsPreview" href="../dirNtr/filMcsBdyMtr.last.html#idBdyMtrSbtc">substance</a>,
     <br>* <a class="clsPreview" href="../dirNtr/filMcsBdyMtr.last.html#idOverview">material-body</a>,
     <br>* <a class="clsPreview" href="../dirNtr/filMcsBdyMtr.last.html#idOverview">body</a>,
     <br>* <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">entity</a>,
@@ -3521,6 +3537,9 @@
     <br>* Mcs.food.dietary-supplement-073,
     <br>* Mcs.dietary-supplement,
     <br>* Mcs.food-supplement,
+    <br>* Mcs.health-supplement,
+    <br>====== langoGreek:
+    <br>* McsEll.συμπλήρωμα-διατροφής-ανθρώπου!=food-supplement,
     <a class="clsHide" href="#idFoodHmn073nam"></a></p>
   <p id="idFoodHmn073dsn">description::
     <br>A dietary supplement is intended to provide nutrients that may otherwise not be consumed in sufficient quantities.
@@ -3529,6 +3548,11 @@
     <br>These products are not intended to prevent or treat any disease and in some circumstances are dangerous, according to the U.S. National Institutes of Health. For those who fail to consume a balanced diet, the agency says that certain supplements "may have value."[3]
     <br>Most supplements should be avoided, and usually people should not eat micronutrients except people with clearly shown deficiency.[4] Those people should first consult a doctor.[5] An exception is vitamin D, which is recommended in Nordic countries[6] due to weak sunlight.
     <br>[http://en.wikipedia.org/wiki/Dietary_supplement]
+    <br>===
+    <br>Is It Worthwhile to Take Dietary Supplements?
+    <br>After analyzing 277 clinical trials, researchers concluded that most supplements can't be linked to better health.
+    <br>If you're one of the millions of Americans who collectively spend more than $30 billion a year on health-related supplements, you might want to stash that credit card and focus on your financial well-being instead. According to a wide-ranging study by researchers from Johns Hopkins University, there isn't any connection between a longer life or improved heart health and nearly all dietary supplements. The researchers examined the results of 277 previously-concluded clinical trials that focused on 16 vitamins, minerals, and other supplements and their impact on heart health and longevity in nearly one million participants. The only significant health benefits they discerned were modest and came from omega-3 fatty acid and folic acid supplements. Even then, only some of the participants appeared to reap any benefits.
+    <br>[http://www.wisegeek.com/is-it-worthwhile-to-take-dietary-supplements.htm?m {2019-12-16}]
     <a class="clsHide" href="#idFoodHmn073dsn"></a></p>
 </section>
 
