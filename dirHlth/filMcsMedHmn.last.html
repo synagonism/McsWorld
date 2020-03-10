@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.medication (human-medication 0-10-0.2020-03-04 draft)</title>
+  <title>Mcs.medication (human-medication 0-11-0.2020-03-09 draft)</title>
   <meta name="keywords" content="human-medication, medication, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -508,6 +508,21 @@
     <a class="clsHide" href="#idMedHmn003nam"></a></p>
 </section>
 
+<section id="idMedHmn030">
+  <h1 id="idMedHmn030H1">medication.antimicrobial
+    <a class="clsHide" href="#idMedHmn030H1"></a></h1>
+  <p id="idMedHmn030nam">name::
+    <br>* Mcs.medication.030-antimicrobial,
+    <br>* Mcs.medication.antimicrobial-030,
+    <br>* Mcs.antimicrobial-medication-030,
+    <a class="clsHide" href="#idMedHmn030nam"></a></p>
+  <p id="idMedHmn030dsn">description::
+    <br>"An antimicrobial is an agent that kills microorganisms or stops their growth.[1] Antimicrobial medicines can be grouped according to the microorganisms they act primarily against. For example, antibiotics are used against bacteria, and antifungals are used against fungi. They can also be classified according to their function. Agents that kill microbes are microbicidal, while those that merely inhibit their growth are called biostatic. The use of antimicrobial medicines to treat infection is known as antimicrobial chemotherapy, while the use of antimicrobial medicines to prevent infection is known as antimicrobial prophylaxis.
+    <br>The main classes of antimicrobial agents are disinfectants (non-selective agents, such as bleach), which kill a wide range of microbes on non-living surfaces to prevent the spread of illness, antiseptics (which are applied to living tissue and help reduce infection during surgery), and antibiotics (which destroy microorganisms within the body). The term "antibiotic" originally described only those formulations derived from living microorganisms but is now also applied to synthetic agents, such as sulfonamides or fluoroquinolones. The term also used to be restricted to antibacterials (and is often used as a synonym for them by medical professionals and in medical literature), but its context has broadened to include all antimicrobials. Antibacterial agents can be further subdivided into bactericidal agents, which kill bacteria, and bacteriostatic agents, which slow down or stall bacterial growth. In response, further advancements in antimicrobial technologies have resulted in solutions that can go beyond simply inhibiting microbial growth. Instead, certain types of porous media have been developed to kill microbes on contact.[2]"
+    <br>[https://en.wikipedia.org/wiki/Antimicrobial {2020-03-09}]
+    <a class="clsHide" href="#idMedHmn030dsn"></a></p>
+</section>
+
 <section id="idMedHmn004">
   <h1 id="idMedHmn004H1">medication.antibiotic
     <a class="clsHide" href="#idMedHmn004H1"></a></h1>
@@ -521,24 +536,21 @@
   <p id="idMedHmn004nam">name::
     <br>* Mcs.medication.004-antibiotic,
     <br>* Mcs.medication.antibiotic-004,
+    <br>* Mcs.antibacterial,
     <br>* Mcs.antibiotic,
     <br>====== langoGreek:
     <br>* McsEll.αντιβιοτικό,
     <a class="clsHide" href="#idMedHmn004nam"></a></p>
-  <p id="idMedHmn004gccn">generic-chain::
-    <br>* emical-compound,
-    <br>* medication,
-    <a class="clsHide" href="#idMedHmn004gccn"></a></p>
 
   <section id="idMedHmn004Doing">
-  <h2 id="idMedHmn004DoingH2">Doing
+  <h2 id="idMedHmn004DoingH2">doing of antibiotic
     <a class="clsHide" href="#idMedHmn004DoingH2"></a></h2>
   <p id="idMedHmn004Doingdsn">description::
     <br>Ορισμένα αντιβιοτικά έχουν ΔΥΣΜΕΝΕΙΣ ΕΠΙΔΡΑΣΕΙΣ σε διάφορα οργανικά συστήματα.
     <a class="clsHide" href="#idMedHmn004Doingdsn"></a></p>
 
   <section id="idMedHmn004Doingevg">
-  <h3 id="idMedHmn004DoingevgH3">Evoluting
+  <h3 id="idMedHmn004DoingevgH3">evoluting of antibiotic
     <a class="clsHide" href="#idMedHmn004DoingevgH3"></a></h3>
   <p id="idMedHmn004Doingevg1939">1939::
     <br>The first antibiotic to be used in the treatment of human disease was tyrothricin, isolated from certain soil bacteria by the American bacteriologist Renι Dubos in 1939. This substance is too toxic for general use, but it is employed in the external treatment of certain infections.
@@ -551,15 +563,34 @@
   </section>
   </section>
 
-  <section id="idMedHmn004Spc">
-  <h2 id="idMedHmn004SpcH2">Specific
-    <a class="clsHide" href="#idMedHmn004SpcH2"></a></h2>
-  <p id="idMedHmn004SpcSpc">SPECIFIC::
-    <br>* ΠΕΝΙΚΙΛΙΝΗ
-    <br>* ΣΤΡΕΠΤΟΜΥΚΙΝΗ
-    <br>* ΤΕΡΑΜΥΚΙΝΗ
-    <br>* ΧΛΩΡΟΜΗΚΙΝΗ
-    <a class="clsHide" href="#idMedHmn004SpcSpc"></a></p>
+  <section id="idMedHmn004gst">
+  <h2 id="idMedHmn004gstH2">GENERIC-SPECIFIC-TREE of antibiotic
+    <a class="clsHide" href="#idMedHmn004gstH2"></a></h2>
+  <p id="idMedHmn004gstnam">name::
+    <br>* Mcs.antibiotic'generic-specific-tree,
+    <a class="clsHide" href="#idMedHmn004gstnam"></a></p>
+  <p id="idMedHmn004gtr">generic-tree-of-antibiotic::
+    <br>* <a class="clsPreview" href="#idMedHmn030">antimicrobial</a>,
+    <br>* ... <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">entity</a>,
+    <a class="clsHide" href="#idMedHmn004gtr"></a></p>
+  <p id="idMedHmn004str">specific-tree-of-antibiotic::
+    <br>*
+    <br>=== on bacteria:
+    <br>* staphylococcus,
+    <br>* streptococcus,
+    <br>* Escherichia-coli,
+    <br>=== on chemical structure:
+    <br>* penicillin,
+    <br>* cephalosporin,
+    <br>* aminoglycoside,
+    <br>* tetracycline,
+    <br>* macrolide,
+    <br>* sulphonamides,
+    <br>===
+    <br>* beta-lactams,
+    <br>* macrolides,
+    <br>* quinolones,
+    <a class="clsHide" href="#idMedHmn004str"></a></p>
   <p id="idMedHmn004Spcclfn">classification::
     <br>Antibiotics can be classified in several ways. The most common method classifies them according to their action against the infecting organism. Some antibiotics attack the cell wall; some disrupt the cell membrane; and the majority inhibit the synthesis of nucleic acids and proteins, the polymers that make up the bacterial cell. Another method classifies antibiotics according to which bacterial strains they affect: staphylococcus, streptococcus, or Escherichia coli, for example. Antibiotics are also classified based on chemical structure, as penicillins, cephalosporins, aminoglycosides, tetracyclines, macrolides, or sulphonamides, among others.
     <br>"Antibiotic," Microsoft(R) Encarta(R) 97 Encyclopedia. (c) 1993-1996 Microsoft Corporation. All rights reserved.
@@ -568,30 +599,167 @@
     <br>Antibiotics may also be classed as bactericidal (killing bacteria) or bacteriostatic (stopping bacterial growth and multiplication). Bacteriostatic drugs are effective because bacteria that are prevented from growing will die off after a time or be killed by the defence mechanisms of the host. The tetracyclines and the sulphonamides are among the bacteriostatic antiobiotics. Antibiotics that damage the cell membrane cause the cell's metabolites to leak out, eventually killing the organism. These compounds, including penicillins and cephalosporins, are therefore classed as bactericidal.
     <br>"Antibiotic," Microsoft(R) Encarta(R) 97 Encyclopedia. (c) 1993-1996 Microsoft Corporation. All rights reserved.
     <a class="clsHide" href="#idMedHmn004Spceags"></a></p>
-
-  <section id="idMedHmn004DoingAugmentin">
-  <h3 id="idMedHmn004DoingAugmentinH3">Augmentin
-    <a class="clsHide" href="#idMedHmn004DoingAugmentinH3"></a></h3>
   </section>
 
-  <section id="idMedHmn004SpcCeklor">
-  <h3 id="idMedHmn004SpcCeklorH3">Ceklor
-    <a class="clsHide" href="#idMedHmn004SpcCeklorH3"></a></h3>
-  <p id="idMedHmn004SpcCeklordsn">description::
+  <section id="idMedHmn004Augmentin">
+  <h2 id="idMedHmn004AugmentinH2">antibiotic.augmentin
+    <a class="clsHide" href="#idMedHmn004AugmentinH2"></a></h2>
+  </section>
+
+  <section id="idMedHmn004Ceklor">
+  <h2 id="idMedHmn004CeklorH2">antibiotic.ceklor
+    <a class="clsHide" href="#idMedHmn004CeklorH2"></a></h2>
+  <p id="idMedHmn004Ceklordsn">description::
     <br>(3ης γεννιας)
-    <a class="clsHide" href="#idMedHmn004SpcCeklordsn"></a></p>
+    <a class="clsHide" href="#idMedHmn004Ceklordsn"></a></p>
   </section>
 
-  <section id="idMedHmn004SpcKlaricit">
-  <h3 id="idMedHmn004SpcKlaricitH3">Klaricit
-    <a class="clsHide" href="#idMedHmn004SpcKlaricitH3"></a></h3>
+  <section id="idMedHmn004Klaricit">
+  <h2 id="idMedHmn004KlaricitH2">antibiotic.klaricit
+    <a class="clsHide" href="#idMedHmn004KlaricitH2"></a></h2>
   </section>
 
-  <section id="idMedHmn004SpcProcef">
-  <h3 id="idMedHmn004SpcProcefH3">Procef
-    <a class="clsHide" href="#idMedHmn004SpcProcefH3"></a></h3>
+  <section id="idMedHmn004Procef">
+  <h2 id="idMedHmn004ProcefH2">antibiotic.procef
+    <a class="clsHide" href="#idMedHmn004ProcefH2"></a></h2>
   </section>
+</section>
+
+<section id="idMedHmn029">
+  <h1 id="idMedHmn029H1">medication.antiviral
+    <a class="clsHide" href="#idMedHmn029H1"></a></h1>
+  <p id="idMedHmn029nam">name::
+    <br>* Mcs.medication.029-antiviral,
+    <br>* Mcs.medication.antiviral-029,
+    <br>* Mcs.medAntiviral-029,
+    <br>* Mcs.antiviral-medication-029,
+    <a class="clsHide" href="#idMedHmn029nam"></a></p>
+  <p id="idMedHmn029dsn">description::
+    <br>"Antiviral drugs are a class of medication used specifically for treating viral infections rather than bacterial ones.[1] Most antivirals are used for specific viral infections, while a broad-spectrum antiviral is effective against a wide range of viruses.[2] Unlike most antibiotics, antiviral drugs do not destroy their target pathogen; instead they inhibit their development.
+    <br>Antiviral drugs are one class of antimicrobials, a larger group which also includes antibiotic (also termed antibacterial), antifungal and antiparasitic drugs,[3] or antiviral drugs based on monoclonal antibodies.[4] Most antivirals are considered relatively harmless to the host, and therefore can be used to treat infections. They should be distinguished from viricides, which are not medication but deactivate or destroy virus particles, either inside or outside the body. Natural antivirals are produced by some plants such as eucalyptus and Australian tea trees.[5]"
+    <br>[https://en.wikipedia.org/wiki/Antiviral_drug]
+    <a class="clsHide" href="#idMedHmn029dsn"></a></p>
+
+  <section id="idMedHmn029gst">
+  <h2 id="idMedHmn029gstH2">GENERIC-SPECIFIC-TREE of medAntiviral
+    <a class="clsHide" href="#idMedHmn029gstH2"></a></h2>
+  <p id="idMedHmn029gstnam">name::
+    <br>* Mcs.medAntiviral'generic-specific-tree,
+    <a class="clsHide" href="#idMedHmn029gstnam"></a></p>
+  <p id="idMedHmn029gtr">generic-tree-of-medAntiviral::
+    <br>* antimicrobial-medication,
+    <br>* ... <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">entity</a>,
+    <a class="clsHide" href="#idMedHmn029gtr"></a></p>
+  <p id="idMedHmn029str">specific-tree-of-medAntiviral::
+    <br>* ,
+    <br>* abacavir Use for HIV,
+    <br>* acyclovir (Aciclovir) Use for herpes e.g. Chicken pox,
+    <br>* adefovir Use for chronic Hepatitis B,
+    <br>* amantadine Use for influenza,
+    <br>* ampligen,
+    <br>* amprenavir (Agenerase) Use for inhibition of HIV,
+    <br>* arbidol,
+    <br>* atazanavir,
+    <br>* atripla (fixed dose drug),
+    <br>* balavir,
+    <br>* baloxavir marboxil (Xofluza),
+    <br>* biktarvy,
+    <br>* cidofovir,
+    <br>* combivir (fixed dose drug),
+    <br>* darunavir,
+    <br>* delavirdine,
+    <br>* descovy,
+    <br>* didanosine,
+    <br>* docosanol,
+    <br>* dolutegravir,
+    <br>* ecoliever,
+    <br>* edoxudine,
+    <br>* efavirenz,
+    <br>* emtricitabine,
+    <br>* enfuvirtide,
+    <br>* entecavir,
+    <br>* famciclovir,
+    <br>* fixed dose combination (antiretroviral),
+    <br>* fomivirsen,
+    <br>* fosamprenavir,
+    <br>* foscarnet,
+    <br>* fosfonet,
+    <br>* fusion inhibitor,
+    <br>* ibacitabine,
+    <br>* idoxuridine,
+    <br>* imiquimod,
+    <br>* imunovir,
+    <br>* indinavir,
+    <br>* inosine,
+    <br>* integrase inhibitor,
+    <br>* interferon type I,
+    <br>* interferon type II,
+    <br>* interferon type III,
+    <br>* interferon,
+    <br>* lamivudine,
+    <br>* lopinavir,
+    <br>* loviride,
+    <br>* maraviroc,
+    <br>* methisazone,
+    <br>* moroxydine,
+    <br>* nelfinavir,
+    <br>* nevirapine,
+    <br>* nexavir,
+    <br>* nitazoxanide,
+    <br>* norvir,
+    <br>* nucleoside analogues,
+    <br>* oseltamivir (Tamiflu),
+    <br>* peginterferon alfa-2a,
+    <br>* penciclovir,
+    <br>* peramivir (Rapivab),
+    <br>* pleconaril,
+    <br>* podophyllotoxin,
+    <br>* protease inhibitor (pharmacology),
+    <br>* pyramidine,
+    <br>* raltegravir,
+    <br>* reverse transcriptase inhibitor,
+    <br>* ribavirin,
+    <br>* rimantadine,
+    <br>* ritonavir,
+    <br>* saquinavir,
+    <br>* sofosbuvir,
+    <br>* stavudine,
+    <br>* synergistic enhancer (antiretroviral),
+    <br>* telaprevir,
+    <br>* tenofovir alafenamide,
+    <br>* tenofovir disoproxil,
+    <br>* tenofovir,
+    <br>* tipranavir,
+    <br>* trifluridine,
+    <br>* trizivir,
+    <br>* tromantadine,
+    <br>* truvada,
+    <br>* valaciclovir (Valtrex),
+    <br>* valganciclovir,
+    <br>* vicriviroc,
+    <br>* vidarabine,
+    <br>* viramidine,
+    <br>* zalcitabine,
+    <br>* zanamivir (Relenza),
+    <br>* zidovudine,
+    <br>[https://en.wikipedia.org/wiki/List_of_antiviral_drugs]
+    <a class="clsHide" href="#idMedHmn029str"></a></p>
   </section>
+</section>
+
+<section id="idMedHmn031">
+  <h1 id="idMedHmn031H1">medication.antifungal
+    <a class="clsHide" href="#idMedHmn031H1"></a></h1>
+  <p id="idMedHmn031nam">name::
+    <br>* Mcs.medication.031-antifungal,
+    <br>* Mcs.medication.antifungal-031,
+    <br>* Mcs.antifungal-medication-031,
+    <a class="clsHide" href="#idMedHmn031nam"></a></p>
+  <p id="idMedHmn031dsn">description::
+    <br>"Antifungals are used to kill or prevent further growth of fungi. In medicine, they are used as a treatment for infections such as athlete's foot, ringworm and thrush and work by exploiting differences between mammalian and fungal cells. Unlike bacteria, both fungi and humans are eukaryotes. Thus, fungal and human cells are similar at the molecular level, making it more difficult to find a target for an antifungal drug to attack that does not also exist in the host organism. Consequently, there are often side effects to some of these drugs. Some of these side effects can be life-threatening if the drug is not used properly.
+    <br>As well as their use in medicine, antifungals are frequently sought after to control indoor mold in damp or wet home materials. Sodium bicarbonate (baking soda) blasted on to surfaces acts as an antifungal. Another antifungal solution applied after or without blasting by soda is a mix of hydrogen peroxide and a thin surface coating that neutralizes mold and encapsulates the surface to prevent spore release. Some paints are also manufactured with an added antifungal agent for use in high humidity areas such as bathrooms or kitchens. Other antifungal surface treatments typically contain variants of metals known to suppress mold growth e.g. pigments or solutions containing copper, silver or zinc. These solutions are not usually available to the general public because of their toxicity."
+    <br>[https://en.wikipedia.org/wiki/Antimicrobial {2020-03-09}]
+    <a class="clsHide" href="#idMedHmn031dsn"></a></p>
 </section>
 
 <section id="idMedHmn005">
@@ -1200,10 +1368,10 @@
   <h2 id="idMedHmn028H2">medHomeopathic.psorinum
     <a class="clsHide" href="#idMedHmn028H2"></a></h2>
   <p id="idMedHmn028nam">name::
-    <br>* Mcs.medication.027-psorinum-homeopathic,
-    <br>* Mcs.medication.psorinum-homeopathic-027,
-    <br>* Mcs.medHomeopathic.kali-phosphoricum-027,
-    <br>* Mcs.kali-phosphoricum-medHomeopathic-027,
+    <br>* Mcs.medication.028-psorinum-homeopathic,
+    <br>* Mcs.medication.psorinum-homeopathic-028,
+    <br>* Mcs.medHomeopathic.kali-phosphoricum-028,
+    <br>* Mcs.kali-phosphoricum-medHomeopathic-028,
     <a class="clsHide" href="#idMedHmn028nam"></a></p>
   <p id="idMedHmn028dsn">description::
     <br>"Το Psorinum παράγεται από ψωρϊασικά δερματικά κύτταρα. Ως ομοιοπαθητικό φάρμακο δίνεται σε άτομα πολύ μεγάλη ευαισθησία στο κρύο, δερματολογικά προβλήματα με έντονο κνησμό, ανασφάλεια και άγχος για τα οικονομικά. Χαρακτηριστικό οι εξαιρετικά δύσοσμες εκκρίσεις (ιδίως ο ιδρώτας)."
