@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-12-0.2020-02-19: whole-part-generic-tree,
  * version.0-11-1.2020-02-19: whole-part-generic-tree,
  * version.0-11-0.2020-01-12: versions,
  * version.0-10-0.2019-12-28: generic-whole-trees,
@@ -38,16 +39,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirNtr',
-  sDIR = 'DirNtr',
+  sDir = 'dirOgm',
+  sDIR = 'DirOgm',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'bio-brain',
+  sN = 'organism.mammal',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'brainBio',
+  sNS = 'ogmMammal',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'BrnBio',
+  sNFil = 'OgmMml',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'BrnBio';
+  sNId = 'OgmMml';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -73,9 +74,6 @@ s =
   '<section id="idOverview">\n' +
   '  <h1 id="idOverviewH1">overview of ' + sNS + '\n' +
   '    <a class="clsHide" href="#idOverviewH1"></a></h1>\n' +
-  '  <p id="idDescription">description::\n' +
-  '    <br>· \n' +
-  '    <a class="clsHide" href="#idDescription"></a></p>\n' +
   '  <p id="idName">name::\n' +
   '    <br>* Mcs.filMcs' + sNFil + '.last.html' + '!⇒' + sNS + ',\n' +
   '    <br>* Mcs.' + sDir +'/filMcs' + sNFil + '.last.html' + '!⇒' + sNS + ',\n' +
@@ -83,6 +81,9 @@ s =
   '    <br>* Mcs.' + sN + '!⇒' + sNS + ',\n' +
   '    <br>* Mcs.' + sNS + '\'(' + sN + ')' + '!⇒' + sNS + ',\n' +
   '    <a class="clsHide" href="#idName"></a></p>\n' +
+  '  <p id="idDescription">description::\n' +
+  '    <br>· \n' +
+  '    <a class="clsHide" href="#idDescription"></a></p>\n' +
   '</section>\n' +
   '\n' +
   '<section id="id' + sNId + 'rscF">\n' +
@@ -121,19 +122,19 @@ s = s +
   '  <p id="id' + sNId + 'wptnam">name::\n' +
   '    <br>* Mcs.' + sNS + '\'whole-part-tree,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'wptnam"></a></p>\n' +
-  '  <p id="id' + sNId + 'wtr">whole-tree::\n' +
+  '  <p id="id' + sNId + 'wtr">whole-tree-of-' + sNS + '::\n' +
   '    <br>* \n' +
-  '    <br>...\n';
+  '    <br>* ... ';
 if (sDir === 'dirCor') {
   s = s +
-  '    <br>* <a class="clsPreview" href="filMcsSmpn.last.html#idOverview">Sympan</a>.\n'
+  '<a class="clsPreview" href="filMcsEnt.last.html#idOverview">Sympan</a>.\n'
 } else {
   s = s +
-  '    <br>* <a class="clsPreview" href="../dirCor/filMcsSmpn.last.html#idOverview">Sympan</a>.\n'
+  '<a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">Sympan</a>.\n'
 }
 s = s +
   '    <a class="clsHide" href="#id' + sNId + 'wtr"></a></p>\n' +
-  '  <p id="id' + sNId + 'ptr">part-tree::\n' +
+  '  <p id="id' + sNId + 'ptr">part-tree-of-' + sNS + '::\n' +
   '    <br>*\n' +
   '    <a class="clsHide" href="#id' + sNId + 'ptr"></a></p>\n' +
   '</section>\n' +
@@ -144,29 +145,21 @@ s = s +
   '  <p id="id' + sNId + 'gstnam">name::\n' +
   '    <br>* Mcs.' + sNS + '\'generic-specific-tree,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'gstnam"></a></p>\n' +
-  '  <p id="id' + sNId + 'gtr">generic-tree::\n' +
-  '    <br>* \n' +
-  '    <br>...\n';
+  '  <p id="id' + sNId + 'gtr">generic-tree-of-' + sNS + '::\n' +
+  '    <br>* ,\n' +
+  '    <br>* ... ';
 if (sDir === 'dirCor') {
   s = s +
-  '    <br>* <a class="clsPreview" href="filMcsEnt.last.html#idOverview">entity</a>.\n'
+  '<a class="clsPreview" href="filMcsEnt.last.html#idOverview">entity</a>.\n'
 } else {
   s = s +
-  '    <br>* <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">entity</a>.\n'
+  '<a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">entity</a>.\n'
 }
 s = s +
   '    <a class="clsHide" href="#id' + sNId + 'gtr"></a></p>\n' +
-  '\n' +
-  '  <section id="id' + sNId + 'SpcF">\n' +
-  '  <h2 id="id' + sNId + 'SpcFH2">' + sNS + '.SPECIFIC\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'SpcFH2"></a></h2>\n' +
-  '  <p id="id' + sNId + 'Spcnam">name::\n' +
-  '    <br>* Mcs.' + sNS + '.specific,\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'Spcnam"></a></p>\n' +
-  '  <p id="id' + sNId + 'SpcP1">specific::\n' +
-  '    <br>\n' +
-  '    <a class="clsHide" href="#id' + sNId + 'SpcP1"></a></p>\n' +
-  '  </section>\n' +
+  '  <p id="id' + sNId + 'str">specific-tree-of-' + sNS + '::\n' +
+  '    <br>* ,\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'str"></a></p>\n' +
   '</section>\n' +
   '\n' +
   '<section id="idMeta">\n' +
