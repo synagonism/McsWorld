@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.disease (disease-of-human 0-27-0.2020-03-13 draft)</title>
+  <title>Mcs.disease (disease-of-human 0-29-0.2020-03-15 draft)</title>
   <meta name="keywords" content="disease-of-human, disease, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -470,15 +470,14 @@
   <p id="idDssHmnwptnam">name::
     <br>* Mcs.disease'whole-part-tree,
     <a class="clsHide" href="#idDssHmnwptnam"></a></p>
-  <p id="idDssHmnwptchn">whole-chain::
-    <br>* disease,
+  <p id="idDssHmnwtr">whole-tree-of-disease::
     <br>* <a class="clsPreview" href="../dirHmn/filMcsHmn.last.html#idOverview">human</a>,
     <br>* <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idEntwtr">Sympan</a>,
-    <a class="clsHide" href="#idDssHmnwptchn"></a></p>
-  <p id="idDssHmnwptprt">part::
+    <a class="clsHide" href="#idDssHmnwtr"></a></p>
+  <p id="idDssHmnptr">part-tree-of-disease::
     <br>* symptom-of-disease,
-    <a class="clsHide" href="#idDssHmnwptprt"></a></p>
-  <p id="idDssHmnwptwhlN">wholeNo::
+    <a class="clsHide" href="#idDssHmnptr"></a></p>
+  <p id="idDssHmnwNtr">wholeNo-tree-of-disease::
     <br>* cause-of-disease,
     <br>* diagnosis-of-disease,
     <br>* therapy-of-disease,
@@ -486,7 +485,7 @@
     <br>* diet-of-disease,
     <br>* stats-of-disease,
     <br>* resource-of-disease,
-    <a class="clsHide" href="#idDssHmnwptwhlN"></a></p>
+    <a class="clsHide" href="#idDssHmnwNtr"></a></p>
 </section>
 
 <section id="idDssHmngstF">
@@ -495,13 +494,13 @@
   <p id="idDssHmngstnam">name::
     <br>* Mcs.disease'generic-specific-tree,
     <a class="clsHide" href="#idDssHmngstnam"></a></p>
-  <p id="idDssHmngstchn">generic-chain::
+  <p id="idDssHmngtr">generic-tree-of-disease::
     <br>* disease, wellness,
     <br>* health-of-human,
     <br>* <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idEntevgtmpt">state-of-entity</a>,
     <br>* <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idEntatt">attribute-of-entity</a>,
     <br>* <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">entity</a>,
-    <a class="clsHide" href="#idDssHmngstchn"></a></p>
+    <a class="clsHide" href="#idDssHmngtr"></a></p>
   <p id="idDssHmngstattihf">att-inherited-from::
     <br>* ,
     <a class="clsHide" href="#idDssHmngstattihf"></a></p>
@@ -518,12 +517,12 @@
   <p id="idDssHmnSpcwpa">addressWpg::
     <br>* http://www.who.int/health-topics/international-classification-of-diseases,
     <a class="clsHide" href="#idDssHmnSpcwpa"></a></p>
-  <p id="idDssHmnSpcP1">specific::
+  <p id="idDssHmnstr">specific-tree-of-disease::
     <br>* external-cause--disease,
     <br>* internal-cause--disease,
     <br>* infectious-disease,
     <br>* infectiousNo-disease,
-    <a class="clsHide" href="#idDssHmnSpcP1"></a></p>
+    <a class="clsHide" href="#idDssHmnstr"></a></p>
   </section>
 
   <section id="idDssHmnIcd">
@@ -3392,7 +3391,7 @@
 </section>
 
 <section id="idDssHmn052">
-  <h1 id="idDssHmn052H1">disease.cancer.052
+  <h1 id="idDssHmn052H1">diseaseCancer.052
     <a class="clsHide" href="#idDssHmn052H1"></a></h1>
   <p id="idDssHmn052dsn">description::
     <br>CANCER: a malignat (θανατηφορο) tumor (mass of tissue) that tends to spread in the body.
@@ -3411,8 +3410,32 @@
     <br>* McsEll.καρκίνος,
     <a class="clsHide" href="#idDssHmn052nam"></a></p>
 
+  <section id="idDssHmn052smptm">
+  <h2 id="idDssHmn052smptmH2">symptom of diseaseCancer
+    <a class="clsHide" href="#idDssHmn052smptmH2"></a></h2>
+  <p id="idDssHmn052smptmnam">name::
+    <br>* Mcs.diseaseCancer'symptom,
+    <a class="clsHide" href="#idDssHmn052smptmnam"></a></p>
+  <p id="idDssHmn052smptmP1">σημάδια &amp; συμπτώματα του καρκίνου:
+    <br>όταν μία κακοήθης νεοπλασία αποκτήσει ένα ορισμένο μέγεθος, προκαλεί διάφορες εκδηλώσεις: πιέζει γειτονικούς ιστούς (συνεπώς μπορεί να προκαλεί πόνο), να διηθεί γειτονικά αιμοφόρα αγγεία (μπορεί να προκαλέσει αιμορραγία), να αποκτά τέτοιο μέγεθος που καθίσταται ψηλαφητή, να διαταράσσει την φυσιολογική λειτουργία των οργάνων (με αποτέλεσμα την εμφάνιση δυσκολίας στην κατάποση, μεταβολής στην χροιά της φωνής κ.α.). η αμερικανική αντικαρκινική εταιρία έχει καταρτίσει έναν κατάλογο πρώιμων εκδηλώσεων, που θέτουν υποψίες για την ύπαρξη κακοήθειας:
+    <br>
+    <br>* αλλαγές στην συμπεριφορά του εντέρου ή της κύστης όπως, η μεταβολή στις κενώσεις ή δυσπεπτικά φαινόμενα που επιμένουν.
+    <br>* φλεγμονή του φάρυγγα που δεν υποχωρεί.
+    <br>* ασυνήθεις αιμορραγίες που δεν επουλώνονται ή παθολογικό έκκριμα.
+    <br>* ογκίδιο ή σκληρότητα οπουδήποτε στο δέρμα, όπως η σκλήρυνση ή διόγκωση στον μαστό ή σε άλλο σημείο του σώματος.
+    <br>* δυσπεπτικά ενοχλήματα ή δυσκολία κατάποσης.
+    <br>* εμφανής αλλαγή σε σπίλο ή κρεατοελιά, όπως όταν μεγαλώνει ξαφνικά και πολλαπλασιάζεται.
+    <br>* βήχας που συνεχίζεται για μεγάλο διάστημα ή βράχνιασμα της φωνής.
+    <br>* μεγάλη απώλεια βάρους σε μικρό διάστημα.
+    <br>
+    <br>βέβαια όλα αυτά τα σημεία δεν σημαίνουν πάντα την ύπαρξη καρκίνου. Ωστόσο είναι μερικές από τις εκδηλώσεις του, γι΄ αυτό και η εμφάνιση τους πρέπει να δημιουργήσει υποψίες. όπως και να έχει, οτιδήποτε παρατηρήσετε στον οργανισμό σας πέραν του συνηθισμένου ή φυσιολογικού, μην διστάσετε ούτε λεπτο. Επισκεφτείτε αμέσως τον γιατρό σας. Είναι μια απλή κίνηση που όμως μπορεί να σας σώσει την ζωή!
+    <br>BeStrong.org.gr - 02.04.12
+    <br>[http://www.bestrong.org.gr/el/cancer/basicdetails/cancerdetection/signsandsymptomsofcancer/]
+    <a class="clsHide" href="#idDssHmn052smptmP1"></a></p>
+  </section>
+
   <section id="idDssHmn052cause">
-  <h2 id="idDssHmn052causeH2">cause
+  <h2 id="idDssHmn052causeH2">cause of diseaseCancer
     <a class="clsHide" href="#idDssHmn052causeH2"></a></h2>
   <p id="idDssHmn052causeP1">cause::
     <br>RESEARCHERS IDENTIFY A CANCER-RELATED GENE
@@ -3428,7 +3451,7 @@
   </section>
 
   <section id="idDssHmn052diagnosis">
-  <h2 id="idDssHmn052diagnosisH2">diagnosis
+  <h2 id="idDssHmn052diagnosisH2">diagnosis of diseaseCancer
     <a class="clsHide" href="#idDssHmn052diagnosisH2"></a></h2>
   <p id="idDssHmn052diagnosisdsn">description::
     <br>σήμερα, ο καρκίνος μπορεί να αντιμετωπιστεί στις περισσότερες περιπτώσεις. Για να θεραπευτεί όμως, πρέπει η διάγνωση να γίνει σε πρώιμα στάδια της νόσου. Η διάγνωση των διαφόρων ειδών του καρκίνου δεν είναι εύκολη, τουλάχιστον στα πρώτα στάδια.
@@ -3600,10 +3623,21 @@
     <a class="clsHide" href="#idDssHmn052diagnosismedicaltestP2"></a></p>
   </section>
 
-  <section id="idDssHmn052diagnosiscancerindex">
-  <h3 id="idDssHmn052diagnosiscancerindexH3">cancer-index
+  <section id="idDssHmn052cncrindx">
+  <h3 id="idDssHmn052cncrindxH3">cancer-index
     <a class="clsHide" href="#indexH3"></a></h3>
-  <p id="idDssHmn052diagnosiscancerindexP1">καρκινικοί δείκτες για την ανίχνευση του καρκίνου
+  <p id="idDssHmn052cncrindxnam">name::
+    <br>* Mcs.diseaseCancer'index,
+    <br>* Mcs.diseaseCancer'marker,
+    <br>* Mcs.tumor-marker,
+    <a class="clsHide" href="#idDssHmn052cncrindxnam"></a></p>
+  <p id="idDssHmn052cncrindxdsn">description::
+    <br>"A tumor marker is a biomarker found in blood, urine, or body tissues that can be elevated by the presence of one or more types of cancer. There are many different tumor markers, each indicative of a particular disease process, and they are used in oncology to help detect the presence of cancer. An elevated level of a tumor marker can indicate cancer; however, there can also be other causes of the elevation (false positive values).
+    <br>Tumor markers can be produced directly by the tumor or by non-tumor cells as a response to the presence of a tumor.
+    <br>Although mammography, ultrasonography, computed tomography, magnetic resonance imaging scans, and tumor marker assays help in the staging and treatment of the cancer, they are usually not definitive diagnostic tests. The diagnosis is mostly confirmed by biopsy.[1]"
+    <br>[https://en.wikipedia.org/wiki/Tumor_marker {2020-03-15}]
+    <a class="clsHide" href="#idDssHmn052cncrindxdsn"></a></p>
+  <p id="idDssHmn052cncrindxP1">καρκινικοί δείκτες για την ανίχνευση του καρκίνου
     <br>
     <br>όταν στο σώμα αναπτύσσεται ένας καρκίνος τότε μπορεί τα κύτταρα που τον συνιστούν, τα ίδια ή οι ιστοί του σώματος, να παράγουν ουσίες που είναι δυνατόν να ανιχνευθούν στο αίμα, ή στα ούρα ή στους ιστούς. Οι ουσίες αυτές διαλυτές στο αίμα, ανιχνεύονται συνήθως με μονοκλωνικά αντισώματα και αναγνωρίζονται ως καρκινικοί δείκτες. Σε δύο περιόδους της ζωής μας, το ενδιαφέρον μας επικεντρώνεται στην ανάγκη να ανανγωρίσουμε αν κάποια κύτταρα του σώματός μας δεν υπόκεινται στο ρυθμιστικό σύστημα της αύξησής τους, διηθούν δηλαδή πλησίον ιστούς ή σχηματίζουν μεταστάσεις, οπότε πάσχουμε από καρκίνο:
     <br>
@@ -3648,33 +3682,7 @@
     <br>
     <br>BeStrong.org.gr - 26.04.12
     <br>[http://www.bestrong.org.gr/el/cancer/basicdetails/cancerdetection/cancerbloodtests/]
-    <a class="clsHide" href="#idDssHmn052diagnosiscancerindexP1"></a></p>
-  </section>
-
-  <section id="idDssHmn052diagnosissymptom">
-  <h3 id="idDssHmn052diagnosissymptomH3">symptom
-    <a class="clsHide" href="#idDssHmn052diagnosissymptomH3"></a></h3>
-  <p id="idDssHmn052diagnosissymptomP1">σημάδια &amp; συμπτώματα του καρκίνου
-    <br>
-    <br>
-    <br>
-    <br>όταν μία κακοήθης νεοπλασία αποκτήσει ένα ορισμένο μέγεθος, προκαλεί διάφορες εκδηλώσεις: πιέζει γειτονικούς ιστούς (συνεπώς μπορεί να προκαλεί πόνο), να διηθεί γειτονικά αιμοφόρα αγγεία (μπορεί να προκαλέσει αιμορραγία), να αποκτά τέτοιο μέγεθος που καθίσταται ψηλαφητή, να διαταράσσει την φυσιολογική λειτουργία των οργάνων (με αποτέλεσμα την εμφάνιση δυσκολίας στην κατάποση, μεταβολής στην χροιά της φωνής κ.α.). η αμερικανική αντικαρκινική εταιρία έχει καταρτίσει έναν κατάλογο πρώιμων εκδηλώσεων, που θέτουν υποψίες για την ύπαρξη κακοήθειας:
-    <br>
-    <br>αλλαγές στην συμπεριφορά του εντέρου ή της κύστης όπως, η μεταβολή στις κενώσεις ή δυσπεπτικά φαινόμενα που επιμένουν.
-    <br>φλεγμονή του φάρυγγα που δεν υποχωρεί.
-    <br>ασυνήθεις αιμορραγίες που δεν επουλώνονται ή παθολογικό έκκριμα.
-    <br>ογκίδιο ή σκληρότητα οπουδήποτε στο δέρμα, όπως η σκλήρυνση ή διόγκωση στον μαστό ή σε άλλο σημείο του σώματος.
-    <br>δυσπεπτικά ενοχλήματα ή δυσκολία κατάποσης.
-    <br>εμφανής αλλαγή σε σπίλο ή κρεατοελιά, όπως όταν μεγαλώνει ξαφνικά και πολλαπλασιάζεται.
-    <br>βήχας που συνεχίζεται για μεγάλο διάστημα ή βράχνιασμα της φωνής.
-    <br>μεγάλη απώλεια βάρους σε μικρό διάστημα.
-    <br>
-    <br>βέβαια όλα αυτά τα σημεία δεν σημαίνουν πάντα την ύπαρξη καρκίνου. Ωστόσο είναι μερικές από τις εκδηλώσεις του, γι΄ αυτό και η εμφάνιση τους πρέπει να δημιουργήσει υποψίες. όπως και να έχει, οτιδήποτε παρατηρήσετε στον οργανισμό σας πέραν του συνηθισμένου ή φυσιολογικού, μην διστάσετε ούτε λεπτο. Επισκεφτείτε αμέσως τον γιατρό σας. Είναι μια απλή κίνηση που όμως μπορεί να σας σώσει την ζωή!
-    <br>
-    <br>
-    <br>BeStrong.org.gr - 02.04.12
-    <br>[http://www.bestrong.org.gr/el/cancer/basicdetails/cancerdetection/signsandsymptomsofcancer/]
-    <a class="clsHide" href="#idDssHmn052diagnosissymptomP1"></a></p>
+    <a class="clsHide" href="#idDssHmn052cncrindxP1"></a></p>
   </section>
 
   <section id="idDssHmn052diagnosisphysicaltest">
@@ -3718,7 +3726,7 @@
   </section>
 
   <section id="idDssHmn052therapy">
-  <h2 id="idDssHmn052therapyH2">therapy
+  <h2 id="idDssHmn052therapyH2">therapy of diseaseCancer
     <a class="clsHide" href="#idDssHmn052therapyH2"></a></h2>
   <p id="idDssHmn052therapyP1"><a class="clsPreview" href="filMcsThrpHmn.last.html#idOverview">therapy</a>::
     <br>"την ανακαλυψη μιας πρωτεΐνης που πιθανως αναστελλει την αναπτυξη των καρκινικων ογκων, κυριως στις λευχαιμιες, στον καρκινο του μαστου και στα λεμφωματα, ανακοινωσε χθες στο 5ο παγκοσμιο συνεδριο φλεγμονής στη γενευη, ο ελληνας καθηγητης φαρμακολογιας και πειραματικης στην ιατρικη σχολη του πανεπιστημίου ταφτς στη βοστώνη των ηπα, κ. χαρης θεοχαριδησ"
@@ -3918,7 +3926,7 @@
   </section>
 
   <section id="idDssHmn052protection">
-  <h2 id="idDssHmn052protectionH2">protection
+  <h2 id="idDssHmn052protectionH2">protection of diseaseCancer
     <a class="clsHide" href="#idDssHmn052protectionH2"></a></h2>
   <p id="idDssHmn052protectionP1">μανιταρια:
     <br>* https://www.nooz.gr/health/1557388/to-antikarkiniko-trofimo-poy-energopoiei-to-anosopoiitiko-systima
@@ -4144,17 +4152,17 @@
   </section>
   </section>
 
-  <section id="idDssHmn052deathstats">
-  <h2 id="idDssHmn052deathstatsH2">death-stats
+  <section id="idDssHmn052stats">
+  <h2 id="idDssHmn052statsH2">stats of diseaseCancer
     <a class="clsHide" href="#statsH2"></a></h2>
-  <p id="idDssHmn052deathstatsP1">Cancer death rates in the US fell by 20% from 1991 to 2009.
+  <p id="idDssHmn052statsP1">Cancer death rates in the US fell by 20% from 1991 to 2009.
     <br>Cancer death rates in the US dropped by about 20% from 1991 to 2009. This is estimated to equal about 1.2 million lives that were saved. The increased survival rates are thought to be the result of improved detection and early treatment for lung, colon, prostate and breast cancers -- the four main types of fatal cancers. France and Japan have the next-highest survival rates for these cancers. Overall statistics for cancer death rates worldwide tend to vary widely depending on the country and type of cancer, and they are often difficult to track in underdeveloped countries where people might not have regular access to healthcare.
     <br>[http://www.wisegeek.com/how-have-cancer-death-rates-changed.htm?m, {2013-06-11}]
-    <a class="clsHide" href="#idDssHmn052deathstatsP1"></a></p>
+    <a class="clsHide" href="#idDssHmn052statsP1"></a></p>
   </section>
 
   <section id="idDssHmn052resource">
-  <h2 id="idDssHmn052resourceH2">resource
+  <h2 id="idDssHmn052resourceH2">resource of diseaseCancer
     <a class="clsHide" href="#idDssHmn052resourceH2"></a></h2>
   <p id="idDssHmn052resourcewpa">addressWpg::
     <br>* https://www.quora.com/profile/Gary-Larson-15,
@@ -4177,7 +4185,7 @@
   </section>
 
   <section id="idDssHmn052doing">
-  <h2 id="idDssHmn052doingH2">doing
+  <h2 id="idDssHmn052doingH2">doing of diseaseCancer
     <a class="clsHide" href="#idDssHmn052doingH2"></a></h2>
   <p id="idDssHmn052doingP1">doing::
     <br>έχει την ιδιότητα να μεγαλώνει και να επεκτείνεται λόγω ανώμαλου πολλαπλασιασμού των κυττάρων.
@@ -4186,7 +4194,7 @@
   </section>
 
   <section id="idDssHmn052evoluting">
-  <h2 id="idDssHmn052evolutingH2">evoluting
+  <h2 id="idDssHmn052evolutingH2">evoluting of diseaseCancer
     <a class="clsHide" href="#idDssHmn052evolutingH2"></a></h2>
   <p id="idDssHmn052evolutingP1">{time.2030-forcastfrom-2012}:
     <br>Global cancer rate to surge 75% by 2030
@@ -4225,7 +4233,7 @@
   </section>
 
   <section id="idDssHmn052_1">
-  <h2 id="idDssHmn052_1H2">disease.cancer.aggregate.052_1
+  <h2 id="idDssHmn052_1H2">diseaseCancer.aggregate.052_1
     <a class="clsHide" href="#aggregateH2"></a></h2>
   <p id="idDssHmn052_1P1">Why Are More People Being Diagnosed with Cancer?
     <br>Globally, cancer diagnoses increased by 28% from 2006 to 2016, mainly due to life expectancy and population growth.
@@ -4235,7 +4243,7 @@
   </section>
 
   <section id="idDssHmn052_2">
-  <h2 id="idDssHmn052_2H2">disease.cancer.breast.052_2
+  <h2 id="idDssHmn052_2H2">diseaseCancer.breast.052_2
     <a class="clsHide" href="#idDssHmn052_2H2"></a></h2>
   <p id="idDssHmn052_2nam">name::
     <br>* Mcs.cancer.breast,
@@ -4270,7 +4278,7 @@
   </section>
 
   <section id="idDssHmn052_3">
-  <h2 id="idDssHmn052_3H2">disease.cancer.colon.052_3
+  <h2 id="idDssHmn052_3H2">diseaseCancer.colon.052_3
     <a class="clsHide" href="#idDssHmn052_3H2"></a></h2>
   <p id="idDssHmn052_3dsn">description::
     <br>το σπανάκι προστατεύει από τον καρκίνο του εντέρου
@@ -4297,7 +4305,7 @@
   </section>
 
   <section id="idDssHmn052_4">
-  <h2 id="idDssHmn052_4H2">disease.cancer.lung.052_4
+  <h2 id="idDssHmn052_4H2">diseaseCancer.lung.052_4
     <a class="clsHide" href="#idDssHmn052_4H2"></a></h2>
   <p id="idDssHmn052_4nam">name::
     <br>* Mcs.disease.052_4.cancer.lung,
@@ -4321,7 +4329,7 @@
   </section>
 
   <section id="idDssHmn052_5">
-  <h2 id="idDssHmn052_5H2">disease.cancer.pancreas.052_5
+  <h2 id="idDssHmn052_5H2">diseaseCancer.pancreas.052_5
     <a class="clsHide" href="#idDssHmn052_5H2"></a></h2>
   <p id="idDssHmn052_5crtn">McsHitp-creation:: {2020-01-14} {2013-03-03}
     <a class="clsHide" href="#idDssHmn052_5crtn"></a></p>
@@ -4351,10 +4359,11 @@
   </section>
 
   <section id="idDssHmn052_6">
-  <h2 id="idDssHmn052_6H2">disease.cancer.prostate.052_6
+  <h2 id="idDssHmn052_6H2">diseaseCancer.prostate.052_6
     <a class="clsHide" href="#idDssHmn052_6H2"></a></h2>
   <p id="idDssHmn052_6nam">name::
     <br>* Mcs.disease.052_6.cancer.prostate,
+    <br>* Mcs.disease.prostate-cancer,
     <br>* Mcs.disease.cancer.prostate,
     <br>* Mcs.cancer.prostate,
     <br>====== langoGreek:
@@ -4423,7 +4432,7 @@
   </section>
 
   <section id="idDssHmn052_7">
-  <h2 id="idDssHmn052_7H2">disease.cancer.skin.052_7
+  <h2 id="idDssHmn052_7H2">diseaseCancer.skin.052_7
     <a class="clsHide" href="#idDssHmn052_7H2"></a></h2>
   <p id="idDssHmn052_7nam">name::
     <br>* Mcs.disease.052_7.cancer.skin,
@@ -4485,7 +4494,7 @@
   </section>
 
   <section id="idDssHmn052_8">
-  <h2 id="idDssHmn052_8H2">disease.cancer.urinary-bladder.052_8
+  <h2 id="idDssHmn052_8H2">diseaseCancer.urinary-bladder.052_8
     <a class="clsHide" href="#idDssHmn052_8H2"></a></h2>
   <p id="idDssHmn052_8dsn">description::
     <br>η σακχαρινη/ζαχαρινη έχει ενοχοποιηθεί ως αιτία που προκαλεί τον καρκινο της ουροδόχου κύστης.
@@ -12017,6 +12026,7 @@
     <br>* Mcs.disease.019-hormone!⇒diseaseHormone,
     <br>* Mcs.disease.hormone-019!⇒diseaseHormone,
     <br>* Mcs.hormonal-imbalance!⇒diseaseHormone,
+    <br>* Mcs.imbalance.hormone!⇒diseaseHormone,
     <a class="clsHide" href="#idDssHmn019nam"></a></p>
   <p id="idDssHmn019dsn">description::
     <br>"Hormonal imbalances occur when there is too much or too little of a hormone in the bloodstream. Because of their essential role in the body, even small hormonal imbalances can cause side effects throughout the body."
@@ -12080,6 +12090,34 @@
   <p id="idDssHmn019protectionwpa">addressWpg::
     <br>* 12 Natural Ways to Balance Your Hormones: https://www.healthline.com/nutrition/balance-hormones,
     <a class="clsHide" href="#idDssHmn019protectionwpa"></a></p>
+  </section>
+
+  <section id="idDssHmn034">
+  <h2 id="idDssHmn034H2">diseaseHormone.deficiency
+    <a class="clsHide" href="#idDssHmn034H2"></a></h2>
+  <p id="idDssHmn034nam">name::
+    <br>* Mcs.disease.034-hormone-deficiency,
+    <br>* Mcs.disease.hormone-deficiency-034,
+    <br>* Mcs.hormone-deficiency-disease-034,
+    <br>* Mcs.hypohormonism-034,
+    <a class="clsHide" href="#idDssHmn034nam"></a></p>
+  <p id="idDssHmn034dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn034dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn038">
+  <h2 id="idDssHmn038H2">diseaseHormone.excess
+    <a class="clsHide" href="#idDssHmn038H2"></a></h2>
+  <p id="idDssHmn038nam">name::
+    <br>* Mcs.disease.038-hormone-excess,
+    <br>* Mcs.disease.hormone-excess-038,
+    <br>* Mcs.hormone-excess-disease-038,
+    <br>* Mcs.hyperhormonism-038,
+    <a class="clsHide" href="#idDssHmn038nam"></a></p>
+  <p id="idDssHmn038dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn038dsn"></a></p>
   </section>
 </section>
 
@@ -12248,13 +12286,14 @@
 </section>
 
 <section id="idDssHmn026">
-  <h1 id="idDssHmn026H1">disease.nutrient.026
+  <h1 id="idDssHmn026H1">disease.nutrient-026
     <a class="clsHide" href="#idDssHmn026H1"></a></h1>
   <p id="idDssHmn026nam">name::
     <br>* Mcs.disease.026-nutrient,
     <br>* Mcs.disease.nutrient-026,
     <br>* Mcs.nutrient-disease-026,
     <br>* Mcs.nutritional-disorder-026,
+    <br>* Mcs.imbalance.nutrient-026,
     <a class="clsHide" href="#idDssHmn026nam"></a></p>
   <p id="idDssHmn026dsn">description::
     <br>· inadequete or excess levels of <a class="clsPreview" href="filMcsFoodHmn.last.html#idFoodHmnntrt">a-nutrient</a> lead to disorders.
@@ -12267,7 +12306,7 @@
     <br>* Mcs.disese.028-nutritional-deficiency,
     <br>* Mcs.disese.deficiency-028,
     <br>* Mcs.disese.nutritional-deficiency-028,
-    <br>* Mcs.deficiency,
+    <br>* Mcs.deficiency.nutritional-028,
     <br>* Mcs.nutritional-deficiency-028,
     <br>====== langoGreek:
     <br>* McsEll.διαταραχή-διατροφικού-ελλείμματος,
@@ -12289,6 +12328,7 @@
   <p id="idDssHmn029nam">name::
     <br>* Mcs.disease.029-nutrient-toxicity,
     <br>* Mcs.disease.nutrient-toxicity-029,
+    <br>* Mcs.excess.nutritinal-029,
     <br>* Mcs.nutrient-toxicity-029,
     <br>====== langoGreek:
     <br>* McsEll.διαταραχή-διατροφικού-πλεονάσματος,
@@ -12315,6 +12355,73 @@
     <br>ενδεχόμενη βλάβη αισθητικού εγκεφαλικού κέντρου, σημαίνει ότι καταργείται και η αντίστοιχη αίσθηση παρά τη λειτουργική ακεραιότητα του αισθητηρίου οργάνου και του νεύρου του.
     <br>[Αργύρης, {1994}, 96⧺cptRsc29⧺]
     <a class="clsHide" href="#idDssHmn027dsn"></a></p>
+</section>
+
+<section id="idDssHmn044">
+  <h1 id="idDssHmn044H1">disease.prostate
+    <a class="clsHide" href="#idDssHmn044H1"></a></h1>
+  <p id="idDssHmn044nam">name::
+    <br>* Mcs.diseaseProstate,
+    <br>* Mcs.disease.044-prostate!⇒diseaseProstate,
+    <br>* Mcs.disease.prostate-044!⇒diseaseProstate,
+    <br>* Mcs.prostate-disease-044!⇒diseaseProstate,
+    <br>====== langoGreek:
+    <br>* McsEll.προστάτη-πάθηση!⇒diseaseProstate,
+    <a class="clsHide" href="#idDssHmn044nam"></a></p>
+  <p id="idDssHmn044dsn">description::
+    <br>· disease of <a class="clsPreview" href="filMcsBdyHmn.last.html#idOrgnHmn036">organProstate</a>.
+    <a class="clsHide" href="#idDssHmn044dsn"></a></p>
+
+  <section id="idDssHmn044prtctn">
+  <h2 id="idDssHmn044prtctnH2">protection of diseaseProstate
+    <a class="clsHide" href="#idDssHmn044prtctnH2"></a></h2>
+  <p id="idDssHmn044prtctnnam">name::
+    <br>* Mcs.diseaseProstate'protection,
+    <a class="clsHide" href="#idDssHmn044prtctnnam"></a></p>
+  <p id="idDssHmn044prtctndsn">description::
+    <br>διατροφή για την προστασία του προστάτη!
+    <br>Aν και η προστατίτιδα δεν σχετίζεται με τη διατροφή, ορισμένες τροφές ίσως να είναι ωφέλιμες για τον προστάτη. Xρήσιμες στη διατροφή σας είναι οι <strong>ντομάτες</strong>, επειδή περιέχουν λυκοπένιο, ουσία που θεωρείται ευεργετική για τον προστάτη. Aπαραίτητος για τη λειτουργία του αδένα είναι ο ψευδάργυρος (αποτελεί συστατικό του προστατικού υγρού). πλούσιες πηγές ψευδαργύρου είναι τα <strong>οστρακοειδή</strong> και τα <strong>δημητριακά</strong>. O <strong>μαϊντανός</strong>, επίσης, (ειδικά ο ωμός) είναι ιδιαίτερα ευεργετικός για λοιμώξεις του ανδρικού γεννητικού συστήματος, καθώς διαθέτει διουρητικές και αντιφλεγμονώδεις ιδιότητες.
+    <br>[http://www.vita.gr/html/ent/448/ent.1448.asp]
+    <br>===
+    <br> «τσελεμεντές» κατά του καρκίνου του προστάτη
+    <br>
+    <br>δημοσίευση: 11-9-2009, 10:01 τελευταία ανανέωση: 11-9-2009, 12:43
+    <br>επιμελεια: γιώργος αγγελόπουλος
+    <br>ένα βιβλίο με συνταγές μαγειρικής, οι οποίες περιλαμβάνουν τρόφιμα που ενδείκνυνται για την καταπολέμηση του καρκίνου του προστάτη, κυκλοφορεί στη βρετανία. Γράφτηκε από επιστήμονες, αλλά και από σεφ και απευθύνεται σε άνδρες που πάσχουν από τον συγκεκριμένο καρκίνο ή κινδυνεύουν απ΄ αυτόν.
+    <br>
+    <br>Oρισμένα τρόφιμα πλούσια σε εν δυνάμει αντικαρκινικούς παράγοντες και μαγειρεμένα με συγκεκριμένο τρόπο μπορούν να μειώσουν τον κίνδυνο να παρουσιάσει κανείς καρκίνο του προστάτη, λέει η μάργκαρετ ρέιμαν, καθηγήτρια διατροφικής ιατρικής στο πανεπιστήμιο του σάρεϊ και επικεφαλής των επιστημόνων που συμμετείχαν στη συγγραφή του βιβλίου «ηealthy εating: τhe ρrostate Care Cookbook» (υγιεινή διατροφή: ένα βιβλίο συνταγών για την προστασία του προστάτη, εκδ. Κyle Cathie σε συνεργασία με το ερευνητικό ίδρυμα για τον καρκίνο του προστάτη).
+    <br>
+    <br>«υπάρχουν αυξανόμενες επιστημονικές αποδείξεις ότι δίαιτες πλούσιες σε ορισμένες τροφές μπορεί να βοηθήσουν στην πρόληψη της νόσου ή της επέκτασής της», γράφουν οι συγγραφείς. «γι΄ αυτούς που ζουν με την πάθηση, μία ελεγχόμενη δίαιτα μπορεί να είναι η μοναδική ενεργός θεραπεία».
+    <br>
+    <br>οι επιθετικές θεραπείες για τον καρκίνο του προστάτη είναι συχνά χειρότερες από τη νόσο, επισημαίνει η δρ. ρέιμαν. «ο καρκίνος αυτός συχνά αναπτύσσεται αργά, έτσι μπορείς να κάνεις κάτι με τη δίαιτα», εξηγεί. Τροφές όπως το κρεμμύδι και το σκόρδο, το μπρόκολο και το κουνουπίδι, το ψάρι και η ντομάτα, φαίνεται ότι μειώνουν τον κίνδυνο εμφάνισης του καρκίνου αυτού ή επιβραδύνουν την εξέλιξή του. όμως, προσθέτει η καθηγήτρια ρέιμαν, «δεν είναι μόνο το τι τρως, αλλά και το πώς το μαγειρεύεις».
+    <br>
+    <br>όταν το σκόρδο ή το κρεμμύδι κόβεται, παράγει ένα ένζυμο, την αλιινάση, που παράγει με τη σειρά του αντικαρκινικά συστατικά. όμως αυτά καταστρέφονται αν ζεσταθούν αμέσως. «το μυστικό είναι να αφήνεις τα λαχανικά στην άκρη δέκα λεπτά πριν τα μαγειρέψεις ώστε να επιτρέψεις στην αλιινάση να κάνει τη δουλειά της», δήλωσε η δρ. ρέιμαν μιλώντας στο βρετανικό φεστιβάλ επιστήμης που διεξάγεται φέτος στο πανεπιστήμιο του σάρεϊ.
+    <br>
+    <br>τα σταυρανθή λαχανικά, όπως το μπρόκολο, το κουνουπίδι, η ρόκα και το ραπανάκι, πρέπει επίσης να κόβονται, αλλά όχι να παραψήνονται. «ψήστε τα ελαφρά στον ατμό ή φάτε τα ωμά», συμβουλεύει η ρέιμαν. Οι ντομάτες είναι καλύτερα να κόβονται ή να υφίστανται κάποια επεξεργασία και, σύμφωνα με την καθηγήτρια, «μία σάλτσα φτιαγμένη από ώριμες ντομάτες είναι ιδεώδης».
+    <br>
+    <br>οι συνταγές που προτείνει το βιβλίο έχουν επίσης στόχο να αποφεύγει κανείς να καταναλώνει τρόφιμα τα οποία έχουν αρνητικές επιπτώσεις στον καρκίνο του προστάτη, όπως γαλακτοκομικά προϊόντα, επεξεργασμένα ή υπερβολικά ψημένα κρέατα και κορεσμένα λίπη.
+    <br>
+    <br>το βιβλίο κοστίζει περίπου 12 ευρώ, είναι μόνον στην αγγλική γλώσσα και μπορείτε να το παραγγείλετε online πατώντας εδώ.
+    <br>πηγή : τα νεα
+    <a class="clsHide" href="#idDssHmn044prtctndsn"></a></p>
+  </section>
+
+  <section id="idDssHmn044gst">
+  <h2 id="idDssHmn044gstH2">GENERIC-SPECIFIC-TREE of diseaseProstate
+    <a class="clsHide" href="#idDssHmn044gstH2"></a></h2>
+  <p id="idDssHmn044gstnam">name::
+    <br>* Mcs.diseaseProstate'generic-specific-tree,
+    <a class="clsHide" href="#idDssHmn044gstnam"></a></p>
+  <p id="idDssHmn044gtr">generic-tree-of-diseaseProstate::
+    <br>*
+    <br>* ... <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">entity</a>,
+    <a class="clsHide" href="#idDssHmn044gtr"></a></p>
+  <p id="idDssHmn044str">specific-tree-of-diseaseProstate::
+    <br>* prostate-cancer,
+    <br>* prostatitis,
+    <br>* benign-prostatic-hyperplasia,
+    <a class="clsHide" href="#idDssHmn044str"></a></p>
+  </section>
 </section>
 
 <section id="idMeta">
