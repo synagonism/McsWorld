@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.disease (disease-of-human 0-31-0.2020-03-18 draft)</title>
+  <title>Mcs.disease (disease-of-human 0-32-0.2020-03-19 draft)</title>
   <meta name="keywords" content="disease-of-human, disease, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -557,10 +557,11 @@
     <br>* http://www.who.int/health-topics/international-classification-of-diseases,
     <a class="clsHide" href="#idDssHmnstrwpa"></a></p>
   <p id="idDssHmnspc">specific-of-disease::
-    <br>* external-cause--disease,
-    <br>* internal-cause--disease,
-    <br>* infectious-disease,
-    <br>* infectiousNo-disease,
+    <br>* <a class="clsPreview" href="#idDssHmn003">external-cause--disease</a>,
+    <br>* <a class="clsPreview" href="#idDssHmn004">internal-cause--disease</a>,
+    <br>===
+    <br>* <a class="clsPreview" href="#idDssHmn001">infectious-disease</a>,
+    <br>* <a class="clsPreview" href="#idDssHmn002">infectiousNo-disease</a>,
     <a class="clsHide" href="#idDssHmnspc"></a></p>
 
   <section id="idDssHmnIcd">
@@ -1260,6 +1261,7 @@
     <br>* Mcs.diseaseCauseExternal,
     <br>* Mcs.disease.003-external-cause,
     <br>* Mcs.disease.environment-003,
+    <br>* Mcs.disease.cause.external-003,
     <br>* Mcs.disease.external-cause-003,
     <br>* Mcs.environment-disease, {2012-07-31},
     <br>====== langoGreek:
@@ -1319,8 +1321,10 @@
   <h1 id="idDssHmn004H1">disease.internal-cause-004
     <a class="clsHide" href="#idDssHmn004H1"></a></h1>
   <p id="idDssHmn004nam">name::
+    <br>* Mcs.diseaseCauseInternal,
     <br>* Mcs.disease.004-internal-cause,
     <br>* Mcs.disease.environmentNo-004,
+    <br>* Mcs.disease.cause.internal-004,
     <br>* Mcs.disease.internal-cause-004,
     <br>====== langoGreek:
     <br>* McsEll.πάθηση.εσωτερική,
@@ -1330,9 +1334,58 @@
     <br>πάθηση οργανισμικη ονομάζω κάθε πάθηση που η αιτια της είναι ο οργανισμός σα σύνολο ή τμήμα του.
     <br>[hmnSgm, {1995-03-12}]
     <a class="clsHide" href="#idDssHmn004dsn"></a></p>
-  <p id="idDssHmn004gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idDssHmngtr">disease</a>,
-    <a class="clsHide" href="#idDssHmn004gtr"></a></p>
+
+  <section id="idDssHmn004gst">
+  <h2 id="idDssHmn004gstH2">GENERIC-SPECIFIC-TREE of diseaseCauseInternal
+    <a class="clsHide" href="#idDssHmn004gstH2"></a></h2>
+  <p id="idDssHmn004gstnam">name::
+    <br>* Mcs.diseaseCauseInternal'generic-specific-tree,
+    <a class="clsHide" href="#idDssHmn004gstnam"></a></p>
+
+  <section id="idDssHmn004gtr">
+  <h3 id="idDssHmn004gtrH3">GENERIC-TREE of diseaseCauseInternal
+    <a class="clsHide" href="#idDssHmn004gtrH3"></a></h3>
+  <p id="idDssHmn004gnc">generic-of-diseaseCauseInternal::
+    <br>* Mcs.diseaseCauseInternal'generic-specific-tree,
+    <a class="clsHide" href="#idDssHmn004gnc"></a></p>
+  <p id="idDssHmn004atttr">attribute-tree-of-diseaseCauseInternal::
+    <br>* ,
+    <a class="clsHide" href="#idDssHmn004atttr"></a></p>
+  <p id="idDssHmn004attihf">att-tree-inherited-from::
+    <br>· :
+    <br>* ,
+    <a class="clsHide" href="#idDssHmn004attihf"></a></p>
+  <p id="idDssHmn004attown">att-tree-own-of-diseaseCauseInternal::
+    <br>* ,
+    <a class="clsHide" href="#idDssHmn004attown"></a></p>
+  </section>
+
+  <section id="idDssHmn004str">
+  <h3 id="idDssHmn004strH3">SPECIFIC-TREE of diseaseCauseInternal
+    <a class="clsHide" href="#idDssHmn004strH3"></a></h3>
+  <p id="idDssHmn004spc">specific-of-diseaseCauseInternal::
+    <br>* imbalance,
+    <a class="clsHide" href="#idDssHmn004spc"></a></p>
+  </section>
+  </section>
+
+  <section id="idDssHmn226">
+  <h2 id="idDssHmn226H2">disease.imbalance-226
+    <a class="clsHide" href="#idDssHmn226H2"></a></h2>
+  <p id="idDssHmn226nam">name::
+    <br>* Mcs.diseaseImbalance,
+    <br>* Mcs.disease.226-imbalance,
+    <br>* Mcs.disease.imbalance-226,
+    <br>* Mcs.imbalance-disease-226,
+    <a class="clsHide" href="#idDssHmn226nam"></a></p>
+  <p id="idDssHmn226dsn">description::
+    <br>· imbalances in material-bodies cause diseases.
+    <a class="clsHide" href="#idDssHmn226dsn"></a></p>
+  <p id="idDssHmn226str">specific-tree-of-::
+    <br>* <a class="clsPreview" href="#idDssHmn019">hormone-imbalance</a>,
+    <br>* <a class="clsPreview" href="#idDssHmn026">nutritional-imbalance</a>,
+    <a class="clsHide" href="#idDssHmn226str"></a></p>
+  </section>
 </section>
 
 <section id="idDssHmn005">
@@ -2026,6 +2079,10 @@
   <p id="idDssHmn035nam">name::
     <br>* Mcs.disease.035-coronary-heart-disease,
     <br>* Mcs.disease.coronary-heart-disease-035,
+    <br>* Mcs.disease.coronary-artery-disease,
+    <br>* Mcs.disease.ischemic-heart-disease,
+    <br>* Mcs.disease.atherosclerotic-heart-disease,
+    <br>* Mcs.disease.atherosclerotic-vascular-disease,
     <br>* Mcs.Chd,
     <br>* Mcs.coronary-heart-disease, {2012-07-31},
     <br>* Mcs.disease.chd,
@@ -3536,7 +3593,7 @@
 </section>
 
 <section id="idDssHmn052">
-  <h1 id="idDssHmn052H1">diseaseCancer.052
+  <h1 id="idDssHmn052H1">disease.cancer.052
     <a class="clsHide" href="#idDssHmn052H1"></a></h1>
   <p id="idDssHmn052dsn">description::
     <br>CANCER: a malignat (θανατηφορο) tumor (mass of tissue) that tends to spread in the body.
@@ -3546,6 +3603,7 @@
     <br>[Αργύρης, {1994}, 134⧺cptRsc29⧺]
     <a class="clsHide" href="#idDssHmn052dsn"></a></p>
   <p id="idDssHmn052nam">name::
+    <br>* Mcs.diseaseCancer,
     <br>* Mcs.disease.052-cancer,
     <br>* Mcs.disease.cancer-052, {2012-05-30},
     <br>* Mcs.cancer-disease,
@@ -8610,16 +8668,39 @@
   </section>
   </section>
 
-<section id="idDssHmn213">
-  <h1 id="idDssHmn213H1">disease.food-poisoning-213
-    <a class="clsHide" href="#idDssHmn213H1"></a></h1>
+<section id="idDssHmn244">
+  <h1 id="idDssHmn244H1">disease.food-244
+    <a class="clsHide" href="#idDssHmn244H1"></a></h1>
+  <p id="idDssHmn244nam">name::
+    <br>* Mcs.disease.244-food,
+    <br>* Mcs.disease.food-244,
+    <a class="clsHide" href="#idDssHmn244nam"></a></p>
+  <p id="idDssHmn244dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn244dsn"></a></p>
+
+  <section id="idDssHmn213">
+  <h2 id="idDssHmn213H2">disease.food-poisoning-213
+    <a class="clsHide" href="#idDssHmn213H2"></a></h2>
   <p id="idDssHmn213dsn">description::
     <br>Foodborne illness (also foodborne disease and colloquially referred to as food poisoning)[1] is any illness resulting from the consumption of contaminated food, pathogenic bacteria, viruses, or parasites that contaminate food,[2] as well as chemical or natural toxins such as poisonous mushrooms.
     <br>[http://en.wikipedia.org/wiki/Food_poisoning]
+    <br>===
+    <br>Foodborne illness, commonly called "food poisoning", is caused by bacteria, toxins, viruses, parasites, and prions. Roughly 7 million people die of food poisoning each year, with about 10 times as many suffering from a non-fatal version.[68] The two most common factors leading to cases of bacterial foodborne illness are cross-contamination of ready-to-eat food from other uncooked foods and improper temperature control. Less commonly, acute adverse reactions can also occur if chemical contamination of food occurs, for example from improper storage, or use of non-food grade soaps and disinfectants. Food can also be adulterated by a very wide range of articles (known as "foreign bodies") during farming, manufacture, cooking, packaging, distribution, or sale. These foreign bodies can include pests or their droppings, hairs, cigarette butts, wood chips, and all manner of other contaminants. It is possible for certain types of food to become contaminated if stored or presented in an unsafe container, such as a ceramic pot with lead-based glaze.[68]
+    <br>Food poisoning has been recognized as a disease since as early as Hippocrates.[69] The sale of rancid, contaminated, or adulterated food was commonplace until the introduction of hygiene, refrigeration, and vermin controls in the 19th century. Discovery of techniques for killing bacteria using heat, and other microbiological studies by scientists such as Louis Pasteur, contributed to the modern sanitation standards that are ubiquitous in developed nations today. This was further underpinned by the work of Justus von Liebig, which led to the development of modern food storage and food preservation methods.[70] In more recent years, a greater understanding of the causes of food-borne illnesses has led to the development of more systematic approaches such as the Hazard Analysis and Critical Control Points (HACCP), which can identify and eliminate many risks.[71]
+    <br>Recommended measures for ensuring food safety include maintaining a clean preparation area with foods of different types kept separate, ensuring an adequate cooking temperature, and refrigerating foods promptly after cooking.[72]
+    <br>Foods that spoil easily, such as meats, dairy, and seafood, must be prepared a certain way to avoid contaminating the people for whom they are prepared. As such, the rule of thumb is that cold foods (such as dairy products) should be kept cold and hot foods (such as soup) should be kept hot until storage. Cold meats, such as chicken, that are to be cooked should not be placed at room temperature for thawing, at the risk of dangerous bacterial growth, such as Salmonella or E. coli.[73]
+    <br>[https://en.wikipedia.org/wiki/Food⧺Safety]
+    <br>===
+    <br>"Toxicity is the degree to which a chemical substance or a particular mixture of substances can damage an organism.[1] Toxicity can refer to the effect on a whole organism, such as an animal, bacterium, or plant, as well as the effect on a substructure of the organism, such as a cell (cytotoxicity) or an organ such as the liver (hepatotoxicity). By extension, the word may be metaphorically used to describe toxic effects on larger and more complex groups, such as the family unit or society at large. Sometimes the word is more or less synonymous with poisoning in everyday usage.
+    <br>A central concept of toxicology is that the effects of a toxicant are dose-dependent; even water can lead to water intoxication when taken in too high a dose, whereas for even a very toxic substance such as snake venom there is a dose below which there is no detectable toxic effect. Considering the limitations of this dose-response concept, a novel Drug Toxicity Index (DTI) has been proposed recently.[2] DTI redefines drug toxicity, identifies hepatotoxic drugs, gives mechanistic insights, predicts clinical outcomes and has potential as a screening tool. Toxicity is species-specific, making cross-species analysis problematic. Newer paradigms and metrics are evolving to bypass animal testing, while maintaining the concept of toxicity endpoints.[3]"
+    <br>[https://en.wikipedia.org/wiki/Toxicity {2020-01-17}]
     <a class="clsHide" href="#idDssHmn213dsn"></a></p>
   <p id="idDssHmn213nam">name::
     <br>* Mcs.disease.213-food-poisoning,
     <br>* Mcs.disease.food-poisoning-213,
+    <br>* Mcs.food'poisoning,
+    <br>* Mcs.food'toxicity,
     <br>* Mcs.food-poisoning, {2012-07-31},
     <br>* Mcs.foodborne-disease, {2012-07-31},
     <br>* Mcs.foodborne-illness, {2012-07-31},
@@ -10670,6 +10751,10 @@
     <br>- other tree nuts.
     <br>Allergic reaction can be mild to severe. Mild symptoms include hives, stomach pain, sneezing, diarrhea, and more. People with severe symptoms may have trouble swallowing, experience shortness of breath, lose consciousness, and more. Mild and severe symptoms can occur at the same time.
     <br>[http://www.wisegeek.com/how-many-foods-are-responsible-for-the-majority-of-food-allergies.htm?m, {2014-10-25}]
+    <br>===
+    <br>Some people have allergies or sensitivities to foods which are not problematic to most people. This occurs when a person's immune system mistakes a certain food protein for a harmful foreign agent and attacks it. About 2% of adults and 8% of children have a food allergy.[74] The amount of the food substance required to provoke a reaction in a particularly susceptible individual can be quite small. In some instances, traces of food in the air, too minute to be perceived through smell, have been known to provoke lethal reactions in extremely sensitive individuals. Common food allergens are gluten, corn, shellfish (mollusks), peanuts, and soy.[74] Allergens frequently produce symptoms such as diarrhea, rashes, bloating, vomiting, and regurgitation. The digestive complaints usually develop within half an hour of ingesting the allergen.[74]
+    <br>Rarely, food allergies can lead to a medical emergency, such as anaphylactic shock, hypotension (low blood pressure), and loss of consciousness. An allergen associated with this type of reaction is peanut, although latex products can induce similar reactions.[74] Initial treatment is with epinephrine (adrenaline), often carried by known patients in the form of an Epi-pen or Twinject.[75][76]
+    <br>[https://en.wikipedia.org/wiki/Food⧺Allergies]
     <a class="clsHide" href="#idDssHmn146dsn"></a></p>
   <p id="idDssHmn146nam">name::
     <br>* Mcs.disease.146-allergy.food,
@@ -12485,15 +12570,79 @@
   <h1 id="idDssHmn026H1">disease.nutrient-026
     <a class="clsHide" href="#idDssHmn026H1"></a></h1>
   <p id="idDssHmn026nam">name::
-    <br>* Mcs.disease.026-nutrient,
-    <br>* Mcs.disease.nutrient-026,
-    <br>* Mcs.nutrient-disease-026,
-    <br>* Mcs.nutritional-disorder-026,
-    <br>* Mcs.imbalance.nutrient-026,
+    <br>* Mcs.diseaseNutrient,
+    <br>* Mcs.disease.026-nutrient!⇒diseaseNutrient,
+    <br>* Mcs.disease.nutrient-026!⇒diseaseNutrient,
+    <br>* Mcs.nutrient-disease-026!⇒diseaseNutrient,
+    <br>* Mcs.nutritional-disorder-026!⇒diseaseNutrient,
+    <br>* Mcs.imbalance.nutrient-026!⇒diseaseNutrient,
+    <br>* Mcs.mulnutrition-026!⇒diseaseNutrient,
     <a class="clsHide" href="#idDssHmn026nam"></a></p>
   <p id="idDssHmn026dsn">description::
     <br>· inadequete or excess levels of <a class="clsPreview" href="filMcsFoodHmn.last.html#idFoodHmnntrt">a-nutrient</a> lead to disorders.
+    <br>===
+    <br>"Malnutrition is a condition that results from eating a diet in which one or more nutrients are either not enough or are too much such that the diet causes health problems.[1][3] It may involve calories, protein, carbohydrates, vitamins or minerals.[1] Not enough nutrients is called undernutrition or undernourishment while too much is called overnutrition.[2] Malnutrition is often used to specifically refer to undernutrition where an individual is not getting enough calories, protein, or micronutrients.[2][12] If undernutrition occurs during pregnancy, or before two years of age, it may result in permanent problems with physical and mental development.[1] Extreme undernourishment, known as starvation, may have symptoms that include: a short height, thin body, very poor energy levels, and swollen legs and abdomen.[1][2] People also often get infections and are frequently cold.[2] The symptoms of micronutrient deficiencies depend on the micronutrient that is lacking.[2]
+    <br>Undernourishment is most often due to not enough high-quality food being available to eat.[5] This is often related to high food prices and poverty.[1][5] A lack of breastfeeding may contribute, as may a number of infectious diseases such as: gastroenteritis, pneumonia, malaria, and measles, which increase nutrient requirements.[5] There are two main types of undernutrition: protein-energy malnutrition and dietary deficiencies.[12] Protein-energy malnutrition has two severe forms: marasmus (a lack of protein and calories) and kwashiorkor (a lack of just protein).[2] Common micronutrient deficiencies include: a lack of iron, iodine, and vitamin A.[2] During pregnancy, due to the body's increased need, deficiencies may become more common.[13] In some developing countries, overnutrition in the form of obesity is beginning to present within the same communities as undernutrition.[14] Other causes of malnutrition include anorexia nervosa and bariatric surgery.[15][16]
+    <br>Efforts to improve nutrition are some of the most effective forms of development aid.[6] Breastfeeding can reduce rates of malnutrition and death in children,[1] and efforts to promote the practice increase the rates of breastfeeding.[8] In young children, providing food (in addition to breastmilk) between six months and two years of age improves outcomes.[8] There is also good evidence supporting the supplementation of a number of micronutrients to women during pregnancy and among young children in the developing world.[8] To get food to people who need it most, both delivering food and providing money so people can buy food within local markets are effective.[6][17] Simply feeding students at school is insufficient.[6] Management of severe malnutrition within the person's home with ready-to-use therapeutic foods is possible much of the time.[8] In those who have severe malnutrition complicated by other health problems, treatment in a hospital setting is recommended.[8] This often involves managing low blood sugar and body temperature, addressing dehydration, and gradual feeding.[8][18] Routine antibiotics are usually recommended due to the high risk of infection.[18] Longer-term measures include: improving agricultural practices,[7] reducing poverty, improving sanitation, and the empowerment of women.[6]
+    <br>There were 821 million undernourished people in the world in 2018 (10.8% of the total population).[19] This is a reduction of about 176 million people since 1990 when 23% were undernourished, but an increase of about 36 million since 2015, when 10.6% were undernourished.[10][20] In 2012, it was estimated that another billion people had a lack of vitamins, and minerals.[6] In 2015, protein-energy malnutrition was estimated to have resulted in 323,000 deaths—down from 510,000 deaths in 1990.[11][21] Other nutritional deficiencies, which include iodine deficiency and iron deficiency anemia, result in another 83,000 deaths.[11] In 2010, malnutrition was the cause of 1.4% of all disability adjusted life years.[6][22] About a third of deaths in children are believed to be due to undernutrition, although the deaths are rarely labelled as such.[5] In 2010, it was estimated to have contributed to about 1.5 million deaths in women and children,[23] though some estimate the number may be greater than 3 million.[8] An additional 165 million children were estimated to have stunted growth from malnutrition in 2013.[8] Undernutrition is more common in developing countries.[24] Certain groups have higher rates of undernutrition, including women—in particular while pregnant or breastfeeding—children under five years of age, and the elderly. In the elderly, undernutrition becomes more common due to physical, psychological, and social factors.[25]"
+    <br>[https://en.wikipedia.org/wiki/Malnutrition {2020-03-18}]
     <a class="clsHide" href="#idDssHmn026dsn"></a></p>
+
+  <section id="idDssHmn026nrt">
+  <h2 id="idDssHmn026nrtH2">nutrient (link) of nutritional-imbalance
+    <a class="clsHide" href="#idDssHmn026nrtH2"></a></h2>
+  </section>
+
+  <section id="idDssHmn026gst">
+  <h2 id="idDssHmn026gstH2">GENERIC-SPECIFIC-TREE of nutritional-imbalance
+    <a class="clsHide" href="#idDssHmn026gstH2"></a></h2>
+  <p id="idDssHmn026gstnam">name::
+    <br>* Mcs.nutritional-imbalance'generic-specific-tree,
+    <a class="clsHide" href="#idDssHmn026gstnam"></a></p>
+
+  <section id="idDssHmn026gtr">
+  <h3 id="idDssHmn026gtrH3">GENERIC-TREE of nutritional-imbalance
+    <a class="clsHide" href="#idDssHmn026gtrH3"></a></h3>
+  <p id="idDssHmn026gnc">generic-of-nutritional-imbalance::
+    <br>* <a class="clsPreview" href="#idDssHmn226">diseaseImbalance</a>,
+    <a class="clsHide" href="#idDssHmn026gnc"></a></p>
+  <p id="idDssHmn026atttr">attribute-tree-of-nutritional-imbalance::
+    <br>* ,
+    <a class="clsHide" href="#idDssHmn026atttr"></a></p>
+  <p id="idDssHmn026attihf">att-tree-inherited-from::
+    <br>· :
+    <br>* ,
+    <a class="clsHide" href="#idDssHmn026attihf"></a></p>
+  <p id="idDssHmn026attown">att-tree-own-of-nutritional-imbalance::
+    <br>* ,
+    <a class="clsHide" href="#idDssHmn026attown"></a></p>
+  </section>
+
+  <section id="idDssHmn026str">
+  <h3 id="idDssHmn026strH3">SPECIFIC-TREE of nutritional-imbalance
+    <a class="clsHide" href="#idDssHmn026strH3"></a></h3>
+  <p id="idDssHmn026spc">specific-of-nutritional-imbalance::
+    <br>* mineral-imbalance:
+    <br>** calcium-imbalance,
+    <br>** phosphorus-imbalance,
+    <br>** potassium-imbalance,
+    <br>** sodium-imbalance,
+    <br>** magnesium-imbalance,
+    <br>===
+    <br>* trace-element-imbalance:
+    <br>** sulfur-imbalance,
+    <br>** iron-imbalance,
+    <br>** chlorine-imbalance,
+    <br>** cobalt-imbalance,
+    <br>** copper-imbalance,
+    <br>** zinc-imbalance,
+    <br>** manganese-imbalance,
+    <br>** molybdenum-imbalance,
+    <br>** iodine-imbalance,
+    <br>** selenium-imbalance,
+    <a class="clsHide" href="#idDssHmn026spc"></a></p>
+  </section>
+  </section>
 
   <section id="idDssHmn028">
   <h2 id="idDssHmn028H2">disease.nutritional-deficiency-028
@@ -12514,7 +12663,24 @@
     <br>[https://en.wikipedia.org/wiki/Nutrient#Deficiencies_and_toxicity {2020-03-04}]
     <a class="clsHide" href="#idDssHmn028dsn"></a></p>
   <p id="idDssHmn028str">specific-tree::
-    <br>* iodine-deficiency,
+    <br>* mineral-deficiency:
+    <br>** calcium,
+    <br>** phosphorus,
+    <br>** potassium,
+    <br>** sodium,
+    <br>** magnesium,
+    <br>===
+    <br>* trace-element-deficiency:
+    <br>** sulfur,
+    <br>** iron,
+    <br>** chlorine,
+    <br>** cobalt,
+    <br>** copper,
+    <br>** zinc,
+    <br>** manganese,
+    <br>** molybdenum,
+    <br>** iodine,
+    <br>** selenium,
     <a class="clsHide" href="#idDssHmn028str"></a></p>
   </section>
 
@@ -12531,7 +12697,250 @@
     <a class="clsHide" href="#idDssHmn029nam"></a></p>
   <p id="idDssHmn029dsn">description::
     <br>"Nutrient toxicity occurs when excess consumption of a nutrient does harm to an organism.[31]"
-    <br>[https://en.wikipedia.org/wiki/Nutrient#Deficiencies_and_toxicity {2020-03-04}]    <a class="clsHide" href="#idDssHmn029dsn"></a></p>
+    <br>[https://en.wikipedia.org/wiki/Nutrient#Deficiencies_and_toxicity {2020-03-04}]
+    <a class="clsHide" href="#idDssHmn029dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn222">
+  <h2 id="idDssHmn222H2">disease.starvation-222
+    <a class="clsHide" href="#idDssHmn222H2"></a></h2>
+  <p id="idDssHmn222nam">name::
+    <br>* Mcs.disease.222-starvation,
+    <br>* Mcs.disease.starvation-222,
+    <br>* Mcs.starvation-222,
+    <a class="clsHide" href="#idDssHmn222nam"></a></p>
+  <p id="idDssHmn222dsn">description::
+    <br>"Starvation is a severe deficiency in caloric energy intake, below the level needed to maintain an organism's life. It is the most extreme form of malnutrition. In humans, prolonged starvation can cause permanent organ damage[1] and eventually, death. The term inanition refers to the symptoms and effects of starvation. Starvation may also be used as a means of torture or execution.
+    <br>According to the World Health Organization, hunger is the single gravest threat to the world's public health.[2] The WHO also states that malnutrition is by far the biggest contributor to child mortality, present in half of all cases.[2] Undernutrition is a contributory factor in the death of 3.1 million children under five every year.[3] Figures on actual starvation are difficult to come by, but according to the Food and Agriculture Organization, the less severe condition of undernourishment currently affects about 842 million people, or about one in eight (12.5%) people in the world population.[4]
+    <br>The bloated stomach represents a form of malnutrition called kwashiorkor. The exact pathogenesis of kwashiorkor is not clear, as initially it was thought to relate to diets high in carbohydrates (e.g. maize) but low in protein.[5] While many patients have low albumin, this is thought to be a consequence of the condition. Possible causes such as aflatoxin poisoning, oxidative stress, immune dysregulation and altered gut microbiota have been suggested.[6] Treatment can help mitigate symptoms such as the pictured weight loss and muscle wasting, however prevention is of utmost importance.[5]"
+    <br>[https://en.wikipedia.org/wiki/Starvation {2020-03-18}]
+    <a class="clsHide" href="#idDssHmn222dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn227">
+  <h2 id="idDssHmn227H2">disease.calcium-imbalance-227
+    <a class="clsHide" href="#idDssHmn227H2"></a></h2>
+  <p id="idDssHmn227nam">name::
+    <br>* Mcs.disease.227-calcium-imbalance,
+    <br>* Mcs.disease.calcium-imbalance-227,
+    <br>* Mcs.calcium-imbalance-227,
+    <a class="clsHide" href="#idDssHmn227nam"></a></p>
+  <p id="idDssHmn227dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn227dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn228">
+  <h2 id="idDssHmn228H2">disease.phosphorus-imbalance-228
+    <a class="clsHide" href="#idDssHmn228H2"></a></h2>
+  <p id="idDssHmn228nam">name::
+    <br>* Mcs.disease.228-phosphorus-imbalance,
+    <br>* Mcs.disease.phosphorus-imbalance-228,
+    <br>* Mcs.phosphorus-imbalance-228,
+    <a class="clsHide" href="#idDssHmn228nam"></a></p>
+  <p id="idDssHmn228dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn228dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn229">
+  <h2 id="idDssHmn229H2">disease.potassium-imbalance-229
+    <a class="clsHide" href="#idDssHmn229H2"></a></h2>
+  <p id="idDssHmn229nam">name::
+    <br>* Mcs.disease.229-potassium-imbalance,
+    <br>* Mcs.disease.potassium-imbalance-229,
+    <br>* Mcs.potassium-imbalance-229,
+    <a class="clsHide" href="#idDssHmn229nam"></a></p>
+  <p id="idDssHmn229dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn229dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn230">
+  <h2 id="idDssHmn230H2">disease.sodium-imbalance-230
+    <a class="clsHide" href="#idDssHmn230H2"></a></h2>
+  <p id="idDssHmn230nam">name::
+    <br>* Mcs.disease.230-sodium-imbalance,
+    <br>* Mcs.disease.sodium-imbalance-230,
+    <br>* Mcs.sodium-imbalance-230,
+    <a class="clsHide" href="#idDssHmn230nam"></a></p>
+  <p id="idDssHmn230dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn230dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn231">
+  <h2 id="idDssHmn231H2">disease.magnesium-imbalance-231
+    <a class="clsHide" href="#idDssHmn231H2"></a></h2>
+  <p id="idDssHmn231nam">name::
+    <br>* Mcs.disease.231-magnesium-imbalance,
+    <br>* Mcs.disease.magnesium-imbalance-231,
+    <br>* Mcs.magnesium-imbalance-231,
+    <a class="clsHide" href="#idDssHmn231nam"></a></p>
+  <p id="idDssHmn231dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn231dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn232">
+  <h2 id="idDssHmn232H2">disease.sulfur-imbalance-232
+    <a class="clsHide" href="#idDssHmn232H2"></a></h2>
+  <p id="idDssHmn232nam">name::
+    <br>* Mcs.disease.232-sulfur-imbalance,
+    <br>* Mcs.disease.sulfur-imbalance-232,
+    <br>* Mcs.sulfur-imbalance-232,
+    <a class="clsHide" href="#idDssHmn232nam"></a></p>
+  <p id="idDssHmn232dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn232dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn233">
+  <h2 id="idDssHmn233H2">disease.iron-imbalance-233
+    <a class="clsHide" href="#idDssHmn233H2"></a></h2>
+  <p id="idDssHmn233nam">name::
+    <br>* Mcs.disease.233-iron-imbalance,
+    <br>* Mcs.disease.iron-imbalance-233,
+    <br>* Mcs.iron-imbalance-233,
+    <a class="clsHide" href="#idDssHmn233nam"></a></p>
+  <p id="idDssHmn233dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn233dsn"></a></p>
+
+  <section id="idDssHmn243">
+  <h3 id="idDssHmn243H3">disease.iron-deficiency-243
+    <a class="clsHide" href="#idDssHmn243H3"></a></h3>
+  <p id="idDssHmn243nam">name::
+    <br>* Mcs.disease.243-iron-deficiency,
+    <br>* Mcs.disease.iron-deficiency-243,
+    <br>* Mcs.iron-deficiency-243,
+    <a class="clsHide" href="#idDssHmn243nam"></a></p>
+  <p id="idDssHmn243dsn">description::
+    <br>"Iron deficiency, or sideropenia, is the state in which a body lacks enough iron to supply its needs. Iron is present in all cells in the human body and has several vital functions, such as carrying oxygen to the tissues from the lungs as a key component of the hemoglobin protein, acting as a transport medium for electrons within the cells in the form of cytochromes, and facilitating oxygen enzyme reactions in various tissues. Too little iron can interfere with these vital functions and lead to morbidity and death.[1]
+    <br>Total body iron averages approximately 3.8 g in men and 2.3 g in women. In blood plasma, iron is carried tightly bound to the protein transferrin. There are several mechanisms that control human iron metabolism and safeguard against iron deficiency. The main regulatory mechanism is situated in the gastrointestinal tract. When loss of iron is not sufficiently compensated by intake of iron from the diet, a state of iron deficiency develops over time. When this state is uncorrected, it leads to iron-deficiency anemia. Before anemia occurs, the medical condition of iron deficiency without anemia is called latent iron deficiency (LID) or iron-deficient erythropoiesis (IDE).
+    <br>Untreated iron deficiency can lead to iron-deficiency anemia, a common type of anemia.[1] Anemia is a condition characterized by inadequate red blood cells (erythrocytes) or hemoglobin. When the body lacks sufficient amounts of iron, production of the protein hemoglobin is reduced. Hemoglobin binds to oxygen, enabling red blood cells to supply oxygenated blood throughout the body. Children, pre-menopausal women (women of child-bearing age) and people with poor diet are most susceptible to the disease. Most cases of iron-deficiency anemia are mild, but if not treated it can cause problems like fast or irregular heartbeat, complications during pregnancy, and delayed growth in infants and children that could affect their cognitive development and their behavior.[2]"
+    <a class="clsHide" href="#idDssHmn243dsn"></a></p>
+  </section>
+  </section>
+
+  <section id="idDssHmn234">
+  <h2 id="idDssHmn234H2">disease.calcium-imbalance-234
+    <a class="clsHide" href="#idDssHmn234H2"></a></h2>
+  <p id="idDssHmn234nam">name::
+    <br>* Mcs.disease.234-calcium-imbalance,
+    <br>* Mcs.disease.calcium-imbalance-234,
+    <br>* Mcs.calcium-imbalance-234,
+    <a class="clsHide" href="#idDssHmn234nam"></a></p>
+  <p id="idDssHmn234dsn">description::
+    <br>"Calcium ions (Ca2+) contribute to the physiology and biochemistry of organisms cell. They play an important role in signal transduction pathways,[1][2] where they act as a second messenger, in neurotransmitter release from neurons, in contraction of all muscle cell types, and in fertilization. Many enzymes require calcium ions as a cofactor, including several of the coagulation factors. Extracellular calcium is also important for maintaining the potential difference across excitable cell membranes, as well as proper bone formation.
+    <br>Plasma calcium levels in mammals are tightly regulated,[1][2] with bone acting as the major mineral storage site. Calcium ions, Ca2+, are released from bone into the bloodstream under controlled conditions. Calcium is transported through the bloodstream as dissolved ions or bound to proteins such as serum albumin. Parathyroid hormone secreted by the parathyroid gland regulates the resorption of Ca2+ from bone, reabsorption in the kidney back into circulation, and increases in the activation of vitamin D3 to calcitriol. Calcitriol, the active form of vitamin D3, promotes absorption of calcium from the intestines and bones. Calcitonin secreted from the parafollicular cells of the thyroid gland also affects calcium levels by opposing parathyroid hormone; however, its physiological significance in humans is dubious.
+    <br>Intracellular calcium is stored in organelles which repetitively release and then reaccumulate Ca2+ ions in response to specific cellular events: storage sites include mitochondria and the endoplasmic reticulum.[3]"
+    <br>[https://en.wikipedia.org/wiki/Calcium_in_biology {2020-03-19}]
+    <a class="clsHide" href="#idDssHmn234dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn235">
+  <h2 id="idDssHmn235H2">disease.chlorine-imbalance-235
+    <a class="clsHide" href="#idDssHmn235H2"></a></h2>
+  <p id="idDssHmn235nam">name::
+    <br>* Mcs.disease.235-chlorine-imbalance,
+    <br>* Mcs.disease.chlorine-imbalance-235,
+    <br>* Mcs.chlorine-imbalance-235,
+    <a class="clsHide" href="#idDssHmn235nam"></a></p>
+  <p id="idDssHmn235dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn235dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn236">
+  <h2 id="idDssHmn236H2">disease.cobalt-imbalance-236
+    <a class="clsHide" href="#idDssHmn236H2"></a></h2>
+  <p id="idDssHmn236nam">name::
+    <br>* Mcs.disease.236-cobalt-imbalance,
+    <br>* Mcs.disease.cobalt-imbalance-236,
+    <br>* Mcs.cobalt-imbalance-236,
+    <a class="clsHide" href="#idDssHmn236nam"></a></p>
+  <p id="idDssHmn236dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn236dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn237">
+  <h2 id="idDssHmn237H2">disease.copper-imbalance-237
+    <a class="clsHide" href="#idDssHmn237H2"></a></h2>
+  <p id="idDssHmn237nam">name::
+    <br>* Mcs.disease.237-copper-imbalance,
+    <br>* Mcs.disease.copper-imbalance-237,
+    <br>* Mcs.copper-imbalance-237,
+    <a class="clsHide" href="#idDssHmn237nam"></a></p>
+  <p id="idDssHmn237dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn237dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn238">
+  <h2 id="idDssHmn238H2">disease.zinc-imbalance-238
+    <a class="clsHide" href="#idDssHmn238H2"></a></h2>
+  <p id="idDssHmn238nam">name::
+    <br>* Mcs.disease.238-zinc-imbalance,
+    <br>* Mcs.disease.zinc-imbalance-238,
+    <br>* Mcs.zinc-imbalance-238,
+    <a class="clsHide" href="#idDssHmn238nam"></a></p>
+  <p id="idDssHmn238dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn238dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn239">
+  <h2 id="idDssHmn239H2">disease.manganese-imbalance-239
+    <a class="clsHide" href="#idDssHmn239H2"></a></h2>
+  <p id="idDssHmn239nam">name::
+    <br>* Mcs.disease.239-manganese-imbalance,
+    <br>* Mcs.disease.manganese-imbalance-239,
+    <br>* Mcs.manganese-imbalance-239,
+    <a class="clsHide" href="#idDssHmn239nam"></a></p>
+  <p id="idDssHmn239dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn239dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn240">
+  <h2 id="idDssHmn240H2">disease.molybdenum-imbalance-240
+    <a class="clsHide" href="#idDssHmn240H2"></a></h2>
+  <p id="idDssHmn240nam">name::
+    <br>* Mcs.disease.240-molybdenum-imbalance,
+    <br>* Mcs.disease.molybdenum-imbalance-240,
+    <br>* Mcs.molybdenum-imbalance-240,
+    <a class="clsHide" href="#idDssHmn240nam"></a></p>
+  <p id="idDssHmn240dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn240dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn241">
+  <h2 id="idDssHmn241H2">disease.iodine-imbalance-241
+    <a class="clsHide" href="#idDssHmn241H2"></a></h2>
+  <p id="idDssHmn241nam">name::
+    <br>* Mcs.disease.241-iodine-imbalance,
+    <br>* Mcs.disease.iodine-imbalance-241,
+    <br>* Mcs.iodine-imbalance-241,
+    <a class="clsHide" href="#idDssHmn241nam"></a></p>
+  <p id="idDssHmn241dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn241dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn242">
+  <h2 id="idDssHmn242H2">disease.selenium-imbalance-242
+    <a class="clsHide" href="#idDssHmn242H2"></a></h2>
+  <p id="idDssHmn242nam">name::
+    <br>* Mcs.disease.242-selenium-imbalance,
+    <br>* Mcs.disease.selenium-imbalance-242,
+    <br>* Mcs.selenium-imbalance-242,
+    <a class="clsHide" href="#idDssHmn242nam"></a></p>
+  <p id="idDssHmn242dsn">description::
+    <br>·
+    <a class="clsHide" href="#idDssHmn242dsn"></a></p>
   </section>
 </section>
 
@@ -12683,6 +13092,56 @@
     <br>Syndromes are often named after the physician or group of physicians that discovered them or initially described the full clinical picture. Such eponymous syndrome names are examples of medical eponyms. Recently, there has been a shift towards naming conditions descriptively (by symptoms or underlying cause) rather than eponymously, but the eponymous syndrome names often persist in common usage."
     <br>[https://en.wikipedia.org/wiki/Syndrome {2020-03-18}]
     <a class="clsHide" href="#idDssHmn055dsn"></a></p>
+</section>
+
+<section id="idDssHmn223">
+  <h1 id="idDssHmn223H1">disease.genetic-223
+    <a class="clsHide" href="#idDssHmn223H1"></a></h1>
+  <p id="idDssHmn223nam">name::
+    <br>* Mcs.disease.223-genetic,
+    <br>* Mcs.disease.genetic-223,
+    <br>* Mcs.disease.hereditary-223,
+    <br>* Mcs.genetic-disorder-223,
+    <a class="clsHide" href="#idDssHmn223nam"></a></p>
+  <p id="idDssHmn223dsn">description::
+    <br>"A genetic disorder is a health problem caused by one or more abnormalities in the genome. It can be caused by a mutation in a single gene (monogenic) or multiple genes (polygenic) or by a chromosomal abnormality. Although polygenic disorders are the most common, the term is mostly used when discussing disorders with a single genetic cause, either in a gene or chromosome.[1][2] The mutation responsible can occur spontaneously before embryonic development (a de novo mutation), or it can be inherited from two parents who are carriers of a faulty gene (autosomal recessive inheritance) or from a parent with the disorder (autosomal dominant inheritance). Some disorders are caused by a mutation on the X chromosome and have X-linked inheritance. Very few disorders are inherited on the Y chromosome or mitochondrial DNA.[3]
+    <br>There are well over 6,000 known genetic disorders,[4] and new genetic disorders are constantly being described in medical literature.[5] Around 1 in 50 people are affected by a known single-gene disorder, while around 1 in 263 are affected by a chromosomal disorder.[6] Around 65% of people have some kind of health problem as a result of congenital genetic mutations.[6] Due to the significantly large number of genetic disorders, approximately 1 in 21 people are affected by a genetic disorder classified as "rare" (usually defined as affecting less than 1 in 2,000 people). Most genetic disorders are rare in themselves.[5][7]
+    <br>Cancers are caused by genetic mutations but are generally omitted when referring to genetic disorders, since most are not hereditary (though predispositions and cancer syndromes exist).[8]"
+    <br>[https://en.wikipedia.org/wiki/Genetic_disorder {2020-03-18}]
+    <a class="clsHide" href="#idDssHmn223dsn"></a></p>
+</section>
+
+<section id="idDssHmn224">
+  <h1 id="idDssHmn224H1">disease.lower-respiratory-tract-infection-224
+    <a class="clsHide" href="#idDssHmn224H1"></a></h1>
+  <p id="idDssHmn224nam">name::
+    <br>* Mcs.disease.224-lower-respiratory-tract-infection,
+    <br>* Mcs.disease.lower-respiratory-tract-infection-224,
+    <br>* Mcs.lower-respiratory-tract-infection-224,
+    <a class="clsHide" href="#idDssHmn224nam"></a></p>
+  <p id="idDssHmn224dsn">description::
+    <br>"Lower respiratory tract infection (LRTI) is a term often used as a synonym for pneumonia, but can also be applied to other types of infection including lung abscess and acute bronchitis. Symptoms include shortness of breath, weakness, fever, coughing and fatigue.[3] A routine chest x-ray is not always necessary for people who have symptoms of a lower respiratory tract infection.[4]
+    <br>Influenza affects both the upper and lower respiratory tracts.[citation needed]
+    <br>Antibiotics are the first line treatment for pneumonia; however, they are neither effective nor indicated for parasitic or viral infections. Acute bronchitis typically resolves on its own with time.
+    <br>In 2015 there were about 291 million cases.[1] These resulted in 2.74 million deaths down from 3.4 million deaths in 1990.[5][2] This was 4.8% of all deaths in 2013.[5]"
+    <br>[https://en.wikipedia.org/wiki/Lower_respiratory_tract_infection {2020-03-18}]
+    <a class="clsHide" href="#idDssHmn224dsn"></a></p>
+</section>
+
+<section id="idDssHmn225">
+  <h1 id="idDssHmn225H1">disease.cerebrovascular-225
+    <a class="clsHide" href="#idDssHmn225H1"></a></h1>
+  <p id="idDssHmn225nam">name::
+    <br>* Mcs.disease.225-cerebrovascular,
+    <br>* Mcs.disease.cerebrovascular-225,
+    <br>* Mcs.cerebrovascular-disease-225,
+    <a class="clsHide" href="#idDssHmn225nam"></a></p>
+  <p id="idDssHmn225dsn">description::
+    <br>"Cerebrovascular disease includes a variety of medical conditions that affect the blood vessels of the brain and the cerebral circulation. Arteries supplying oxygen and nutrients to the brain are often damaged or deformed in these disorders.[2] The most common presentation of cerebrovascular disease is an ischemic stroke or mini-stroke and sometimes a hemorrhagic stroke.[2] Hypertension (high blood pressure) is the most important contributing risk factor for stroke and cerebrovascular diseases as it can change the structure of blood vessels and result in atherosclerosis.[5] Atherosclerosis narrows blood vessels in the brain, resulting in decreased cerebral perfusion. Other risk factors that contribute to stroke include smoking and diabetes.[6] Narrowed cerebral arteries can lead to ischemic stroke, but continually elevated blood pressure can also cause tearing of vessels, leading to a hemorrhagic stroke.[4]
+    <br>A stroke usually presents with an abrupt onset of a neurologic deficit – such as hemiplegia (one-sided weakness), numbness, aphasia (language impairment), or ataxia (loss of coordination) – attributable to a focal vascular lesion.[7] The neurologic symptoms manifest within seconds because neurons need a continual supply of nutrients, including glucose and oxygen, that are provided by the blood. Therefore if blood supply to the brain is impeded, injury and energy failure is rapid.[8]
+    <br>Besides hypertension, there are also many less common causes of cerebrovascular disease, including those that are congenital or idiopathic and include CADASIL, aneurysms, amyloid angiopathy, arteriovenous malformations, fistulas, and arterial dissections.[9] Many of these diseases can be asymptomatic until an acute event, such as a stroke, occurs.[9] Cerebrovascular diseases can also present less commonly with headache or seizures.[10] Any of these diseases can result in vascular dementia due to ischemic damage to the brain.[11][12]"
+    <br>[https://en.wikipedia.org/wiki/Cerebrovascular_disease {2020-03-18}]
+    <a class="clsHide" href="#idDssHmn225dsn"></a></p>
 </section>
 
 <section id="idMeta">
