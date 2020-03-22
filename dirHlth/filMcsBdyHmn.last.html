@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.bodyHmn (human-body 0-39-0.2020-03-20 draft)</title>
+  <title>Mcs.bodyHmn (human-body 0-41-0.2020-03-22 draft)</title>
   <meta name="keywords" content="human-body, bodyHmn, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -611,7 +611,7 @@
     <br>* <a class="clsPreview" href="#idGlndHmn004">epiphysis</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn082">esophagus</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn021">gall-bladder</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn073">gland</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn">organGland</a>,
     <br>* <a class="clsPreview" href="#idGlndHmn001">gland.endocrine</a>,
     <br>* <a class="clsPreview" href="#idGlndHmn002">gland.exocrine</a>,
     <br>* <a class="clsPreview" href="#idGlndHmn014">gland.parathyroid</a>,
@@ -666,7 +666,6 @@
     <br>* <a class="clsPreview" href="#idGlndHmn004">επίφυση</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn011">δέρμα</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmn035">δωδεκαδάκτυλο</a>,
-    <br>* <a class="clsPreview" href="#idGlndHmn016">θυμοειδής-αδένας</a>,
     <br>* <a class="clsPreview" href="#idGlndHmn015">θύμος-αδένας</a>,
     <br>* <a class="clsPreview" href="#idGlndHmn012">θυροειδης-αδένας</a>,
     <br>* <a class="clsPreview" href="#idHrtHmn">organHeart</a>,
@@ -7712,8 +7711,8 @@
     <a class="clsHide" href="#idGlndHmn016H2"></a></h2>
   <p id="idGlndHmn016nam">name::
     <br>* Mcs.glandProstate,
-    <br>* Mcs.gland.016-prostate!⇒glandProstate,
-    <br>* Mcs.gland.prostate-016!⇒glandProstate,
+    <br>* Mcs.organGland.016-prostate!⇒glandProstate,
+    <br>* Mcs.organGland.prostate-016!⇒glandProstate,
     <br>* Mcs.organ.036-prostate!⇒glandProstate,
     <br>* Mcs.prostate-gland!⇒glandProstate,
     <br>====== langoGreek:
@@ -10470,43 +10469,46 @@
     <a class="clsHide" href="#idBrnHmndiepndsn"></a></p>
   </section>
 
-  <section id="idBdyHmn408">
-  <h3 id="idBdyHmn408H3">hypothalamus
-    <a class="clsHide" href="#idBdyHmn408H3"></a></h3>
-  <p id="idBdyHmn408nam">name::
-    <br>* Mcs.cptBdyHmn408,
-    <br>* Mcs.hypothalamus,
+  <section id="idGlndHmn021">
+  <h3 id="idGlndHmn021H3">hypothalamus-gland
+    <a class="clsHide" href="#idGlndHmn021H3"></a></h3>
+  <p id="idGlndHmn021nam">name::
+    <br>* Mcs.organGland.021-hypothalamus,
+    <br>* Mcs.organGland.hypothalamus-021,
+    <br>* Mcs.hypothalamus-gland,
     <br>====== langoGreek:
-    <br>* McsEll.υποθάλαμος,
-    <a class="clsHide" href="#idBdyHmn408nam"></a></p>
-  <p id="idBdyHmn408dsn">description::
-    <br>analytic: The hypothalamus links the nervous-system to the endocrine system via the pituitary gland (hypophysis). The hypothalamus, (from Greek ?ποθαλαμος = under the thalamus) is located below the thalamus, just above the brain stem. This gland occupies the major portion of the ventral region of the diencephalon. It is found in all mammalian brains. In humans, it is roughly the size of an almond.
-    <br>[http://en.wikipedia.org/wiki/Hypothalamus]
+    <br>* McsEll.υποθάλαμος-αδένας!=glandHypothalamus,
+    <a class="clsHide" href="#idGlndHmn021nam"></a></p>
+  <p id="idGlndHmn021dsn">description::
+    <br><img src="filMcsBdyHmn.files/gland.head-neck.png">
+    <br>[https://en.wikipedia.org/wiki/Hypothalamus#/media/File:Endocrine_central_nervous_en.svg]
+    <br>"The hypothalamus is a portion of the brain that contains a number of small nuclei with a variety of functions. One of the most important functions of the hypothalamus is to link the nervous system to the endocrine system via the pituitary gland. The hypothalamus is located below the thalamus and is part of the limbic system.[1] In the terminology of neuroanatomy, it forms the ventral part of the diencephalon. All vertebrate brains contain a hypothalamus. In humans, it is the size of an almond. The hypothalamus is responsible for the regulation of certain metabolic processes and other activities of the autonomic nervous system. It synthesizes and secretes certain neurohormones, called releasing hormones or hypothalamic hormones, and these in turn stimulate or inhibit the secretion of hormones from the pituitary gland. The hypothalamus controls body temperature, hunger, important aspects of parenting and attachment behaviours, thirst,[2] fatigue, sleep, and circadian rhythms.[3] The hypothalamus derives its name from Greek ὑπό, under and θάλαμος, chamber."
+    <br>[http://en.wikipedia.org/wiki/Hypothalamus {2020-03-22}]
     <br>===
     <br>ο υποθάλαμος είναι μέρος του <a class="clsPreview" href="#idBdyHmn405">διαμεσου-εγκεφάλου</a>.
     <br>[Αργύρης, {1994}, 255⧺cptRsc31⧺]
     <br><img src="filMcsBdyHmn.files/organ.brain.bmp">
-    <a class="clsHide" href="#idBdyHmn408dsn"></a></p>
-  <p id="idBdyHmn408wtr">whole-tree-of-::
+    <a class="clsHide" href="#idGlndHmn021dsn"></a></p>
+  <p id="idGlndHmn021wtr">whole-tree-of-::
     <br>* <a class="clsPreview" href="#idBdyHmn405wtr">διάμεσος-εγκέφαλος</a>,
-    <a class="clsHide" href="#idBdyHmn408wtr"></a></p>
+    <a class="clsHide" href="#idGlndHmn021wtr"></a></p>
 
-  <section id="idBdyHmn408doing">
-  <h4 id="idBdyHmn408doingH4">doing of hypothalamus
-    <a class="clsHide" href="#idBdyHmn408doingH4"></a></h4>
-  <p id="idBdyHmn408doingP1">doing::
+  <section id="idGlndHmn021doing">
+  <h4 id="idGlndHmn021doingH4">doing of hypothalamus
+    <a class="clsHide" href="#idGlndHmn021doingH4"></a></h4>
+  <p id="idGlndHmn021doingP1">doing::
     <br>* αυτονομου νευρικούς συστήματος ρύθμιση,
     <br>* θερμοκρασίας ρύθμιση,
     <br>* μεταβολισμου ρύθμιση,
     <br>* ορμονικων εκκρίσεων ρύθμιση,
     <br>* ύπνου ρύθμιση,
-    <a class="clsHide" href="#idBdyHmn408doingP1"></a></p>
-  <p id="idBdyHmn408doingP2">ο υποθάλαμος είναι σημαντικός, γιατί ρυθμίζει τις ορμονικές εκκρίσεις, τις λειτουργίες του αυτόνομου νευρικού συτήματος, το μεταβολισμό και περιέχει κέντρα όπως του ύπνου, της θερμοκρασίας κτλ. Στον υποθάλαμο ανήκει επίσης και μέρος της υπόφυσης, που σαν ενδοκρινής αδένας ρυθμίζει τις λειτουργίες των άλλων ανδοκρινών αδένων.
+    <a class="clsHide" href="#idGlndHmn021doingP1"></a></p>
+  <p id="idGlndHmn021doingP2">ο υποθάλαμος είναι σημαντικός, γιατί ρυθμίζει τις ορμονικές εκκρίσεις, τις λειτουργίες του αυτόνομου νευρικού συτήματος, το μεταβολισμό και περιέχει κέντρα όπως του ύπνου, της θερμοκρασίας κτλ. Στον υποθάλαμο ανήκει επίσης και μέρος της υπόφυσης, που σαν ενδοκρινής αδένας ρυθμίζει τις λειτουργίες των άλλων ανδοκρινών αδένων.
     <br>[Αργύρης, {1994}, 254⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn408doingP2"></a></p>
-  <p id="idBdyHmn408doingP3">η έκκριση των ορμονών της αδενοϋπόφυσης ελεγχονται από τον υποθάλαμο. Αυτό γίνεται με ορισμένες χημικές ουσίες που ονομάζονται εκλυτικοί παράγοντες. Οι ουσίες αυτές συντίθενται μέσα σε νευρικά κύτταρα σε ορισμένες περιοχές του υποθάλαμου, από τα οποία περνούν στην αδενουπόφυση μέσα από ένα τοπικό σύστημα κυκλοφορίας (πυλαία κυκλοφορία της υπόφυσης).  στην υπόφυση πλέον, οι εκλυτικοί αυτοί παράγοντες διεγείρουν άμεσα τα ειδικά κύτταρα του αδένα στην παραγωγή και την έκκριση των ορμονών που το χαρακτηρίζουν.
+    <a class="clsHide" href="#idGlndHmn021doingP2"></a></p>
+  <p id="idGlndHmn021doingP3">η έκκριση των ορμονών της αδενοϋπόφυσης ελεγχονται από τον υποθάλαμο. Αυτό γίνεται με ορισμένες χημικές ουσίες που ονομάζονται εκλυτικοί παράγοντες. Οι ουσίες αυτές συντίθενται μέσα σε νευρικά κύτταρα σε ορισμένες περιοχές του υποθάλαμου, από τα οποία περνούν στην αδενουπόφυση μέσα από ένα τοπικό σύστημα κυκλοφορίας (πυλαία κυκλοφορία της υπόφυσης).  στην υπόφυση πλέον, οι εκλυτικοί αυτοί παράγοντες διεγείρουν άμεσα τα ειδικά κύτταρα του αδένα στην παραγωγή και την έκκριση των ορμονών που το χαρακτηρίζουν.
     <br>[Αργύρης, {1994}, 418⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn408doingP3"></a></p>
+    <a class="clsHide" href="#idGlndHmn021doingP3"></a></p>
   </section>
 
   <section id="idBdyMtrHmn016">
@@ -10521,14 +10523,14 @@
     <br>* McsEll.εκλυτικός-παράγοντας,
     <a class="clsHide" href="#idBdyMtrHmn016nam"></a></p>
   <p id="idBdyMtrHmn016dsn">description::
-    <br>analytic: εκλυτικοί παράγοντες είναι ουσίες παραγόμενες από τον <a class="clsPreview" href="#idBdyHmn408">υποθάλαμο</a>.
+    <br>analytic: εκλυτικοί παράγοντες είναι ουσίες παραγόμενες από τον <a class="clsPreview" href="#idGlndHmn021">υποθάλαμο</a>.
     <br>[Αργύρης, {1994}, 418⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyMtrHmn016dsn"></a></p>
   <p id="idBdyMtrHmn016gtr">generic-tree-of-::
     <br>* <a class="clsPreview" href="#idBdyMtrHmn004">productBodyHmn</a>,
     <a class="clsHide" href="#idBdyMtrHmn016gtr"></a></p>
   <p id="idBdyMtrHmn016wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn408wtr">υποθάλαμος</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn021wtr">υποθάλαμος</a>,
     <a class="clsHide" href="#idBdyMtrHmn016wtr"></a></p>
 
   <section id="idBdyMtrHmn016doing">
@@ -10552,17 +10554,17 @@
   </section>
   </section>
 
-  <section id="idBdyHmn408srtr">
-  <h4 id="idBdyHmn408srtrH4">structure
-    <a class="clsHide" href="#idBdyHmn408srtrH4"></a></h4>
-  <p id="idBdyHmn408srtrP1">structure::
+  <section id="idGlndHmn021srtr">
+  <h4 id="idGlndHmn021srtrH4">structure
+    <a class="clsHide" href="#idGlndHmn021srtrH4"></a></h4>
+  <p id="idGlndHmn021srtrP1">structure::
     <br>* <a class="clsPreview" href="#idBdyHmn399">κέντρο-θερμοκρασίας</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn409">κέντρο-ύπνου</a>,
     <br>* <a class="clsPreview" href="#idGlndHmn011">υπόφυση</a>,
-    <a class="clsHide" href="#idBdyHmn408srtrP1"></a></p>
-  <p id="idBdyHmn408srtrP2">περιέχει κέντρα όπως του ύπνου, της θερμοκρασίας κτλ. Στον υποθάλαμο ανήκει επίσης και μέρος της υπόφυσης, που σαν ενδοκρινής αδένας ρυθμίζει τις λειτουργίες των άλλων ενδοκρινών αδένων.
+    <a class="clsHide" href="#idGlndHmn021srtrP1"></a></p>
+  <p id="idGlndHmn021srtrP2">περιέχει κέντρα όπως του ύπνου, της θερμοκρασίας κτλ. Στον υποθάλαμο ανήκει επίσης και μέρος της υπόφυσης, που σαν ενδοκρινής αδένας ρυθμίζει τις λειτουργίες των άλλων ενδοκρινών αδένων.
     <br>[Αργύρης, {1994}, 254⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn408srtrP2"></a></p>
+    <a class="clsHide" href="#idGlndHmn021srtrP2"></a></p>
   </section>
   </section>
   </section>
@@ -10978,7 +10980,7 @@
     <a class="clsHide" href="#idBdyHmn405srtrH4"></a></h4>
   <p id="idBdyHmn405srtrP1">structure::
     <br>* θαλαμοι (2),
-    <br>* <a class="clsPreview" href="#idBdyHmn408">υποθάλαμος</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn021">υποθάλαμος</a>,
     <a class="clsHide" href="#idBdyHmn405srtrP1"></a></p>
   <p id="idBdyHmn405srtrP2">ο διάμεσος εγκέφαλος περιέχει πολλού πυρήνες με σημαντικές λειτουργίες. Οι κυριότεροι είναι οι δυο θαλαμοι, από όπου περνάνε οι κεντρομόλες αισθητικές νευρικές οδοί, και ο υποθάλαμος. Ο υποθάλαμος είναι σημαντικός, γιατί ρυθμίζει τις ορμονικές εκκρίσεις, τις λειτουργίες του αυτόνομου νευρικού συτήματος, το μεταβολισμό και περιέχει κέντρα όπως του ύπνου, της θερμοκρασίας κτλ. Στον υποθάλαμο ανήκει επίσης και μέρος της υπόφυσης, που σαν ενδοκρινής αδένας ρυθμίζει τις λειτουργίες των άλλων ανδοκρινών αδένων.
     <br>[Αργύρης, {1994}, 254⧺cptRsc31⧺]
@@ -11761,14 +11763,13 @@
   <h1 id="idGlndHmnH1">organ.gland-004
     <a class="clsHide" href="#idGlndHmnH1"></a></h1>
   <p id="idGlndHmnnam">name::
-    <br>* Mcs.gland,
-    <br>* Mcs.organ.004-gland!⇒gland,
-    <br>* Mcs.organ.gland-004!⇒gland,
-    <br>* Mcs.organGland!⇒gland, {2012-08-12},
+    <br>* Mcs.organGland,
+    <br>* Mcs.organ.004-gland!⇒organGland,
+    <br>* Mcs.organ.gland-004!⇒organGland,
+    <br>* Mcs.gland!⇒organGland, {2012-08-12},
     <br>====== langoGreek:
-    <br>* McsEll.όργανο.αδένας!=gland,
-    <br>* McsEll.αδένας-ανθρώπου!=gland, {2012-08-12},
-    <br>* McsEll.αδένας!=gland,
+    <br>* McsEll.όργανο.αδένας!=organGland,
+    <br>* McsEll.αδένας-ανθρώπου!=organGland, {2012-08-12},
     <a class="clsHide" href="#idGlndHmnnam"></a></p>
   <p id="idGlndHmndsn">description::
     <br>"A gland is a group of cells[1] in an animal's body that synthesizes substances (such as hormones) for release into the bloodstream (endocrine gland) or into cavities inside the body or its outer surface (exocrine gland)."
@@ -11786,54 +11787,93 @@
     <br>* <a class="clsPreview" href="#idSorgnHmnwtr">sys-of-organs</a>,
     <a class="clsHide" href="#idGlndHmnwtr"></a></p>
 
-  <section id="idGlndHmnatt002">
-  <h2 id="idGlndHmnatt002H2">disease of gland
-    <a class="clsHide" href="#idGlndHmnatt002H2"></a></h2>
-  <p id="idGlndHmnatt002nam">name::
-    <br>* Mcs.gland'disease,
+  <section id="idGlndHmnatt001">
+  <h2 id="idGlndHmnatt001H2">disease of organGland
+    <a class="clsHide" href="#idGlndHmnatt001H2"></a></h2>
+  <p id="idGlndHmnatt001nam">name::
+    <br>* Mcs.organGland'01_disease-001,
+    <br>* Mcs.organGland'att001_disease,
+    <br>* Mcs.organGland'disease-001,
     <br>* Mcs.disease.028-adenosis,
     <br>* Mcs.disease.adenosis-028,
     <br>* Mcs.adenosis-disease, /adenósis/,
-    <a class="clsHide" href="#idGlndHmnatt002nam"></a></p>
-  <p id="idGlndHmnatt002dsn">description::
-    <br>"Adenosis is any disease of a gland. The diseased gland has abnormal formation or development of glandular tissue which is sometimes tumorous.[3]"
-    <br>[https://en.wikipedia.org/wiki/Gland#Clinical_significance {2020-03-14}]
-    <a class="clsHide" href="#idGlndHmnatt002dsn"></a></p>
-  </section>
-
-  <section id="idGlndHmnatt001">
-  <h2 id="idGlndHmnatt001H2">secretory-product of gland
-    <a class="clsHide" href="#idGlndHmnatt001H2"></a></h2>
-  <p id="idGlndHmnatt001nam">name::
-    <br>* Mcs.gland'secretory-product,
     <a class="clsHide" href="#idGlndHmnatt001nam"></a></p>
   <p id="idGlndHmnatt001dsn">description::
-    <br>·
+    <br>"Adenosis is any disease of a gland. The diseased gland has abnormal formation or development of glandular tissue which is sometimes tumorous.[3]"
+    <br>[https://en.wikipedia.org/wiki/Gland#Clinical_significance {2020-03-14}]
     <a class="clsHide" href="#idGlndHmnatt001dsn"></a></p>
   </section>
 
-  <section id="idGlndHmndoing">
-  <h2 id="idGlndHmndoingH2">doing of gland
-    <a class="clsHide" href="#idGlndHmndoingH2"></a></h2>
-  <p id="idGlndHmndoingnam">name::
-    <br>* Mcs.gland'doing,
-    <a class="clsHide" href="#idGlndHmndoingnam"></a></p>
-  <p id="idGlndHmndoingP1">doing::
+  <section id="idGlndHmnatt002">
+  <h2 id="idGlndHmnatt002H2">secretory-product of organGland
+    <a class="clsHide" href="#idGlndHmnatt002H2"></a></h2>
+  <p id="idGlndHmnatt002nam">name::
+    <br>* Mcs.organGland'02_secretory-product-002,
+    <br>* Mcs.organGland'att002-secretory-product,
+    <br>* Mcs.organGland'secreted-product-002,
+    <br>* Mcs.organGland'secretory-product-002,
+    <a class="clsHide" href="#idGlndHmnatt002nam"></a></p>
+  <p id="idGlndHmnatt002dsn">description::
+    <br>"Product secreted
+    <br>* Serous cells secrete proteins, often enzymes. Examples include gastric chief cells and Paneth cells
+    <br>* Mucous cells secrete mucus. Examples include Brunner's glands, esophageal glands, and pyloric glands
+    <br>* Mixed glands secrete both protein and mucus. Examples include the salivary glands: although the parotid gland 20%is predominantly serous, the sublingual gland 5% mainly mucous gland, and the submandibular gland 70%is a mixed, mainly serous gland.
+    <br>* Sebaceous glands secrete sebum, a lipid product. These glands are also known as oil glands, e.g. Fordyce spots and Meibomian glands."
+    <br>[https://en.wikipedia.org/wiki/Exocrine_gland {2020-03-22}]
+    <a class="clsHide" href="#idGlndHmnatt002dsn"></a></p>
+  </section>
+
+  <section id="idGlndHmnatt004">
+  <h2 id="idGlndHmnatt004H2">shape of organGland
+    <a class="clsHide" href="#idGlndHmnatt004H2"></a></h2>
+  <p id="idGlndHmnatt004nam">name::
+    <br>* Mcs.organGland'03_shape-004,
+    <br>* Mcs.organGland'att004-shape,
+    <br>* Mcs.organGland'shape-004,
+    <a class="clsHide" href="#idGlndHmnatt004nam"></a></p>
+  <p id="idGlndHmnatt004dsn">description::
+    <br>* tubular,
+    <br>* alveolar,
+    <a class="clsHide" href="#idGlndHmnatt004dsn"></a></p>
+  </section>
+
+  <section id="idGlndHmnatt003">
+  <h2 id="idGlndHmnatt003H2">doing of organGland
+    <a class="clsHide" href="#idGlndHmnatt003H2"></a></h2>
+  <p id="idGlndHmnatt003nam">name::
+    <br>* Mcs.organGland'04_doing-003,
+    <br>* Mcs.organGland'att003-doing,
+    <br>* Mcs.organGland'doing-003,
+    <a class="clsHide" href="#idGlndHmnatt003nam"></a></p>
+  <p id="idGlndHmnatt003P1">doing::
     <br>οι αδένες παράγουν ουσίες (έκκριμα &amp; ορμόνη).
-    <a class="clsHide" href="#idGlndHmndoingP1"></a></p>
-  <p id="idGlndHmndoingP2">με το ορμονικό και το νευρικό-σύστημα ο οργανισμός μας πετυχαίνει υψηλό βαθμό
+    <a class="clsHide" href="#idGlndHmnatt003P1"></a></p>
+  <p id="idGlndHmnatt003P2">με το ορμονικό και το νευρικό-σύστημα ο οργανισμός μας πετυχαίνει υψηλό βαθμό
     <br>- επικοινωνίας
     <br>- συνεργασίας και
     <br>- συντονισμού μεταξύ των διαφόρων οργάνων του.
     <br>[Αργύρης, {1994}, 123⧺cptRsc29⧺]
-    <a class="clsHide" href="#idGlndHmndoingP2"></a></p>
+    <a class="clsHide" href="#idGlndHmnatt003P2"></a></p>
+
+  <section id="idGlndHmnatt005">
+  <h3 id="idGlndHmnatt005H3">secretion-process of organGland
+    <a class="clsHide" href="#idGlndHmnatt005H3"></a></h3>
+  <p id="idGlndHmnatt005nam">name::
+    <br>* Mcs.organGland'att005-secretion-process,
+    <br>* Mcs.organGland'doing.1_secretion-process-005,
+    <br>* Mcs.organGland'secretion-process-005,
+    <a class="clsHide" href="#idGlndHmnatt005nam"></a></p>
+  <p id="idGlndHmnatt005dsn">description::
+    <br>·
+    <a class="clsHide" href="#idGlndHmnatt005dsn"></a></p>
+  </section>
   </section>
 
   <section id="idGlndHmnwpt">
-  <h2 id="idGlndHmnwptH2">WHOLE-PART-TREE of gland
+  <h2 id="idGlndHmnwptH2">WHOLE-PART-TREE of organGland
     <a class="clsHide" href="#idGlndHmnwptH2"></a></h2>
   <p id="idGlndHmnwptnam">name::
-    <br>* Mcs.gland'whole-part-tree,
+    <br>* Mcs.organGland'whole-part-tree,
     <a class="clsHide" href="#idGlndHmnwptnam"></a></p>
   <p id="idGlndHmnwtr">whole-tree-of-gland::
     <br>* ,
@@ -11847,14 +11887,14 @@
   </section>
 
   <section id="idGlndHmngst">
-  <h2 id="idGlndHmngstH2">GENERIC-SPECIFIC-TREE of gland
+  <h2 id="idGlndHmngstH2">GENERIC-SPECIFIC-TREE of organGland
     <a class="clsHide" href="#idGlndHmngstH2"></a></h2>
   <p id="idGlndHmngstnam">name::
-    <br>* Mcs.gland'generic-specific-tree,
+    <br>* Mcs.organGland'generic-specific-tree,
     <a class="clsHide" href="#idGlndHmngstnam"></a></p>
 
   <section id="idGlndHmngtr">
-  <h3 id="idGlndHmngtrH3">generic-tree of gland
+  <h3 id="idGlndHmngtrH3">generic-tree of organGland
     <a class="clsHide" href="#idGlndHmngtrH3"></a></h3>
   <p id="idGlndHmngnc">generic-of-gland::
     <br>* <a class="clsPreview" href="#idOrgnHmn">organ</a>,
@@ -11869,7 +11909,7 @@
   </section>
 
   <section id="idGlndHmnstr">
-  <h3 id="idGlndHmnstrH3">specific-tree of gland
+  <h3 id="idGlndHmnstrH3">specific-tree of organGland
     <a class="clsHide" href="#idGlndHmnstrH3"></a></h3>
   <p id="idGlndHmnspc">specific-of-gland::
     <br>* <a class="clsPreview" href="#idGlndHmn001">ενδοκρινεις-αδένες</a>,
@@ -11883,7 +11923,6 @@
     <br>* <a class="clsPreview" href="#idGlndHmn002">εξωκρινεις-αδένες</a>,
     <br>* <a class="clsPreview" href="#idGlndHmn013">επινεφριδια/SUPRARENAL</a>,
     <br>* <a class="clsPreview" href="#idGlndHmn004">επίφυση</a>,
-    <br>* <a class="clsPreview" href="#idGlndHmn016">θυμοειδής-αδένας</a>,
     <br>* <a class="clsPreview" href="#idGlndHmn015">θύμος-αδένας</a>,
     <br>* <a class="clsPreview" href="#idGlndHmn012">glandThyroid</a>,
     <br>* <a class="clsPreview" href="#idGlndHmn003">μεικτοί-αδένες</a>,
@@ -11901,12 +11940,12 @@
   </section>
 
   <section id="idGlndHmn001">
-  <h2 id="idGlndHmn001H2">gland.endocrine
+  <h2 id="idGlndHmn001H2">gland.endocrine-001
     <a class="clsHide" href="#idGlndHmn001H2"></a></h2>
   <p id="idGlndHmn001nam">name::
     <br>* Mcs.glandEndocrine,
-    <br>* Mcs.gland.001-endocrine,
-    <br>* Mcs.gland.endocrine-001,
+    <br>* Mcs.organGland.001-endocrine,
+    <br>* Mcs.organGland.endocrine-001,
     <br>* Mcs.human-endocrine-gland, {2012-08-12},
     <br>* Mcs.endocrine-gland.human, {2012-08-12},
     <br>* Mcs.endocrine-gland,
@@ -11915,43 +11954,50 @@
     <br>* McsEll.ενδοκρινής-αδένας, {2012-08-12},
     <a class="clsHide" href="#idGlndHmn001nam"></a></p>
   <p id="idGlndHmn001dsn">description::
+    <br><img src="filMcsBdyHmn.files/gland.endocrine.png">
+    <br>The major endocrine glands: 1-pineal, 2-Pituitary, 3-thyroid, 4-thymus, 5-adrenal, 6-pancreas, 7-ovary-(female), 8-testis-(male),
+    <br>[https://en.wikipedia.org/wiki/Endocrine_gland {2020-03-22}]
     <br>analytic: ενδοκρινής-αδένας είναι ο αδένας που στερείται εκφορητικών σωληναρίων.
     <br>[Αργύρης, {1994}, 119⧺cptRsc29⧺]
     <a class="clsHide" href="#idGlndHmn001dsn"></a></p>
   <p id="idGlndHmn001gtr">generic-tree-of-glandEndocrine::
-    <br>* <a class="clsPreview" href="#idOrgnHmngtr">organ</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmngtr">organGland</a>,
     <a class="clsHide" href="#idGlndHmn001gtr"></a></p>
 
-  <section id="idGlndHmn001substance-produced">
-  <h3 id="idGlndHmn001substance-producedH3">substanceHmn.produced
-    <a class="clsHide" href="#idGlndHmn001substance-producedH3"></a></h3>
-  <p id="idGlndHmn001substance-producedP1">substanceHmn.produced::
-    <br>* <a class="clsPreview" href="#idHrmnHmn">ορμόνες</a>,
-    <a class="clsHide" href="#idGlndHmn001substance-producedP1"></a></p>
+  <section id="idGlndHmn001att002">
+  <h3 id="idGlndHmn001att002H3">secretory-product of glandEndocrine
+    <a class="clsHide" href="#idGlndHmn001att002H3"></a></h3>
+  <p id="idGlndHmn001att002P1">substanceHmn.produced::
+    <br>* <a class="clsPreview" href="#idHrmnHmn">hormone</a>,
+    <a class="clsHide" href="#idGlndHmn001att002P1"></a></p>
   </section>
 
   <section id="idGlndHmn001SPECIFIC">
-  <h3 id="idGlndHmn001SPECIFICH3">SPECIFIC
+  <h3 id="idGlndHmn001SPECIFICH3">glandEndocrine.SPECIFIC
     <a class="clsHide" href="#idGlndHmn001SPECIFICH3"></a></h3>
-  <p id="idGlndHmn001str">specific-tree-of-::
-    <br>* <a class="clsPreview" href="#idGlndHmn001">επινεφριδια/SUPRARENAL</a>,
-    <br>* <a class="clsPreview" href="#idGlndHmn004">επίφυση</a>,
-    <br>* <a class="clsPreview" href="#idGlndHmn016">θυμοειδής-αδένας</a>,
-    <br>* <a class="clsPreview" href="#idGlndHmn015">θύμος-αδένας</a>,
+  <p id="idGlndHmn001str">specific-tree-of-glandEndocrine::
+    <br>* <a class="clsPreview" href="#idGlndHmn013">glandAdrenal</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn004">glandEpiphysis</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn011">glandHypophysis</a>,
+    <br>* glandHypothalamus,
+    <br>* glandOvary,
+    <br>* glandPancreas,
+    <br>* glandPeneal,
+    <br>* <a class="clsPreview" href="#idGlndHmn014">glandParathyroid</a>,
+    <br>* glandTestis,
+    <br>* <a class="clsPreview" href="#idGlndHmn015">glandThymus</a>,
     <br>* <a class="clsPreview" href="#idGlndHmn012">glandThyroid</a>,
-    <br>* <a class="clsPreview" href="#idGlndHmn014">παραθυροειδης-αδένας</a>,
-    <br>* <a class="clsPreview" href="#idGlndHmn011">υπόφυση/HYPOPHYSIS</a>,
     <a class="clsHide" href="#idGlndHmn001str"></a></p>
   </section>
   </section>
 
   <section id="idGlndHmn002">
-  <h2 id="idGlndHmn002H2">gland.exocrine
+  <h2 id="idGlndHmn002H2">gland.exocrine-002
     <a class="clsHide" href="#idGlndHmn002H2"></a></h2>
   <p id="idGlndHmn002nam">name::
     <br>* Mcs.glandExocrine,
-    <br>* Mcs.gland.002-exocrine,
-    <br>* Mcs.gland.exocrine-002,
+    <br>* Mcs.organGland.002-exocrine,
+    <br>* Mcs.organGland.exocrine-002,
     <br>* Mcs.exocrine-gland.human, {2012-08-12},
     <br>* Mcs.human-exocrine-gland, {2012-08-12},
     <br>====== langoGreek:
@@ -12000,12 +12046,12 @@
   </section>
 
   <section id="idGlndHmn003">
-  <h2 id="idGlndHmn003H2">gland.mixed
+  <h2 id="idGlndHmn003H2">gland.mixed-003
     <a class="clsHide" href="#idGlndHmn003H2"></a></h2>
   <p id="idGlndHmn003nam">name::
     <br>* Mcs.glandMixed,
-    <br>* Mcs.gland.003-mixed,
-    <br>* Mcs.gland.mixed-003,
+    <br>* Mcs.organGland.003-mixed,
+    <br>* Mcs.organGland.mixed-003,
     <br>* Mcs.human-mixed-gland, {2012-08-12},
     <br>* Mcs.mixed-gland.human, {2012-08-12},
     <br>====== langoGreek:
@@ -12040,33 +12086,42 @@
   </section>
 
   <section id="idGlndHmn004">
-  <h2 id="idGlndHmn004H2">gland.epiphysis
+  <h2 id="idGlndHmn004H2">gland.epiphysis-004
     <a class="clsHide" href="#idGlndHmn004H2"></a></h2>
   <p id="idGlndHmn004nam">name::
     <br>* Mcs.glandEpiphysis,
-    <br>* Mcs.gland.004-epiphysis,
-    <br>* Mcs.gland.epiphysis-004,
-    <br>* Mcs.epiphysis,
+    <br>* Mcs.organGland.004-epiphysis,
+    <br>* Mcs.organGland.epiphysis-004,
+    <br>* Mcs.organGland.pineal-004,
+    <br>* Mcs.conarium-gland,
+    <br>* Mcs.epiphysis-gland,
+    <br>* Mcs.pineal-gland,
     <br>====== langoGreek:
     <br>* McsEll.επίφυση,
     <a class="clsHide" href="#idGlndHmn004nam"></a></p>
   <p id="idGlndHmn004dsn">description::
+    <br><img src="filMcsBdyHmn.files/gland.head-neck.png">
+    <br>"The pineal gland, conarium, or epiphysis cerebri, is a small endocrine gland in the brain of most vertebrates. The pineal gland produces melatonin, a serotonin-derived hormone which modulates sleep patterns in both circadian and seasonal cycles. The shape of the gland resembles a pine cone from which it derived its name.[1] The pineal gland is located in the epithalamus, near the center of the brain, between the two hemispheres, tucked in a groove where the two halves of the thalamus join.[2][3] The pineal gland is one of the neuroendocrine secretory circumventricular organs in which there does not exist the blood–brain barrier at the capillary level.[4]
+    <br>Nearly all vertebrate species possess a pineal gland. The most important exception is a primitive vertebrate, the hagfish. Even in the hagfish, however, there may be a "pineal equivalent" structure in the dorsal diencephalon.[5] The lancelet Branchiostoma lanceolatum, the nearest existing relative to vertebrates, also lacks a recognizable pineal gland.[6] The lamprey (another primitive vertebrate), however, does possess one.[6] A few more developed vertebrates have lost pineal glands over the course of their evolution.[7]
+    <br>The results of various scientific research in evolutionary biology, comparative neuroanatomy and neurophysiology have explained the evolutionary history (phylogeny) of the pineal gland in different vertebrate species. From the point of view of biological evolution, the pineal gland represents a kind of atrophied photoreceptor. In the epithalamus of some species of amphibians and reptiles, it is linked to a light-sensing organ, known as the parietal eye, which is also called the pineal eye or third eye.[8]
+    <br>René Descartes believed the human pineal gland to be the "principal seat of the soul". Academic philosophy among his contemporaries considered the pineal gland as a neuroanatomical structure without special metaphysical qualities; science studied it as one endocrine gland among many.[9]"
+    <br>[https://en.wikipedia.org/wiki/Pineal_gland {2020-03-22}]
+    <br>===
     <br>analytic: η επίφυση είναι αδένας.
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idGlndHmn004dsn"></a></p>
-  <p id="idGlndHmn004gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn073">nodeBodyHmn.organ.gland</a>,
-    <br>* <a class="clsPreview" href="#idOrgnHmngtr">organ</a>,
+  <p id="idGlndHmn004gtr">generic-tree-of-glandEpiphysis::
+    <br>* <a class="clsPreview" href="#idGlndHmn001gtr">glandEndocrine</a>,
     <a class="clsHide" href="#idGlndHmn004gtr"></a></p>
   </section>
 
   <section id="idGlndHmn005">
-  <h2 id="idGlndHmn005H2">gland.liver
+  <h2 id="idGlndHmn005H2">gland.liver-005
     <a class="clsHide" href="#idGlndHmn005H2"></a></h2>
   <p id="idGlndHmn005nam">name::
     <br>* Mcs.glandLiver,
-    <br>* Mcs.gland.005-liver,
-    <br>* Mcs.gland.liver-005,
+    <br>* Mcs.organGland.005-liver,
+    <br>* Mcs.organGland.liver-005,
     <br>* Mcs.human-liver, {2012-08-13},
     <br>* Mcs.liver.human, {2012-08-13},
     <br>* Mcs.liver,
@@ -12079,7 +12134,7 @@
     <br>[Αργύρης, {1994}, 40⧺cptRsc29⧺]
     <a class="clsHide" href="#idGlndHmn005dsn"></a></p>
   <p id="idGlndHmn005gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn073">nodeBodyHmn.organ.gland</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn">organGland</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmngtr">organ</a>,
     <a class="clsHide" href="#idGlndHmn005gtr"></a></p>
   <p id="idGlndHmn005wtr">whole-tree-of-::
@@ -12185,12 +12240,12 @@
   </section>
 
   <section id="idGlndHmn006">
-  <h2 id="idGlndHmn006H2">gland.ovary
+  <h2 id="idGlndHmn006H2">gland.ovary-006
     <a class="clsHide" href="#idGlndHmn006H2"></a></h2>
   <p id="idGlndHmn006nam">name::
     <br>* Mcs.glandOvary,
-    <br>* Mcs.gland.006-ovary,
-    <br>* Mcs.gland.ovary-006,
+    <br>* Mcs.organGland.006-ovary,
+    <br>* Mcs.organGland.ovary-006,
     <br>* Mcs.ovary,
     <br>====== langoGreek:
     <br>* McsEll.ωοθήκη,
@@ -12219,7 +12274,7 @@
   <h3 id="idGlndHmn006substance-producedH3">substanceHmn.produced
     <a class="clsHide" href="#idGlndHmn006substance-producedH3"></a></h3>
   <p id="idGlndHmn006substance-producedP1">substanceHmn.produced::
-    <br>* <a class="clsPreview" href="#idBdyHmn323">οιστραδιόλη</a>,
+    <br>* <a class="clsPreview" href="#idHrmnHmn038">οιστραδιόλη</a>,
     <br>* οιστρογόνα,
     <br>* <a class="clsPreview" href="#idHrmnHmn021">προγεστερόνη</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn250">ωαρια</a>,
@@ -12248,12 +12303,12 @@
   </section>
 
   <section id="idGlndHmn007">
-  <h2 id="idGlndHmn007H2">gland.pancreas
+  <h2 id="idGlndHmn007H2">gland.pancreas-007
     <a class="clsHide" href="#idGlndHmn007H2"></a></h2>
   <p id="idGlndHmn007nam">name::
     <br>* Mcs.glandPancreas,
-    <br>* Mcs.gland.007-pancreas,
-    <br>* Mcs.gland.pancreas-007,
+    <br>* Mcs.organGland.007-pancreas,
+    <br>* Mcs.organGland.pancreas-007,
     <br>* Mcs.human-pancreas, {2012-08-13},
     <br>* Mcs.pancreas.human, {2012-08-13},
     <br>* Mcs.pancreas,
@@ -12290,12 +12345,12 @@
   </section>
 
   <section id="idGlndHmn008">
-  <h2 id="idGlndHmn008H2">gland.salivary
+  <h2 id="idGlndHmn008H2">gland.salivary-008
     <a class="clsHide" href="#idGlndHmn008H2"></a></h2>
   <p id="idGlndHmn008nam">name::
     <br>* Mcs.glandSalivary,
-    <br>* Mcs.gland.008-salivary,
-    <br>* Mcs.gland.salivary-008,
+    <br>* Mcs.organGland.008-salivary,
+    <br>* Mcs.organGland.salivary-008,
     <br>* Mcs.human-salivary-gland, {2012-08-13},
     <br>* Mcs.salivary-gland.human, {2012-08-13},
     <br>====== langoGreek:
@@ -12305,7 +12360,7 @@
     <br>analytic: σιελογόνοι αδένες είναι αδένες που παράγουν σάλιο.
     <a class="clsHide" href="#idGlndHmn008dsn"></a></p>
   <p id="idGlndHmn008gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn073">nodeBodyHmn.organ.gland</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn">organGland</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmngtr">organ</a>,
     <a class="clsHide" href="#idGlndHmn008gtr"></a></p>
   <p id="idGlndHmn008wtr">whole-tree-of-::
@@ -12342,12 +12397,12 @@
   </section>
 
   <section id="idGlndHmn009">
-  <h2 id="idGlndHmn009H2">gland.skin
+  <h2 id="idGlndHmn009H2">gland.skin-009
     <a class="clsHide" href="#idGlndHmn009H2"></a></h2>
   <p id="idGlndHmn009nam">name::
     <br>* Mcs.glandSkin,
-    <br>* Mcs.gland.009-skin,
-    <br>* Mcs.gland.skin-009,
+    <br>* Mcs.organGland.009-skin,
+    <br>* Mcs.organGland.skin-009,
     <br>* Mcs.skin-gland,
     <br>====== langoGreek:
     <br>* McsEll.αδένας-δέρματος,
@@ -12358,7 +12413,7 @@
     <br>[Αργύρης, {1994}, 288⧺cptRsc31⧺]
     <a class="clsHide" href="#idGlndHmn009dsn"></a></p>
   <p id="idGlndHmn009gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn073">nodeBodyHmn.organ.gland</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn">organGland</a>,
     <a class="clsHide" href="#idGlndHmn009gtr"></a></p>
   <p id="idGlndHmn009wtr">whole-tree-of-::
     <br>* <a class="clsPreview" href="#idBdyHmn458wtr">χόριο</a>,
@@ -12376,12 +12431,12 @@
   </section>
 
   <section id="idGlndHmn010">
-  <h2 id="idGlndHmn010H2">gland.reproductive
+  <h2 id="idGlndHmn010H2">gland.reproductive-010
     <a class="clsHide" href="#idGlndHmn010H2"></a></h2>
   <p id="idGlndHmn010nam">name::
     <br>* Mcs.glandReproductive,
-    <br>* Mcs.gland.010-reproductive,
-    <br>* Mcs.gland.reproductive-010,
+    <br>* Mcs.organGland.010-reproductive,
+    <br>* Mcs.organGland.reproductive-010,
     <br>* Mcs.gonad,
     <br>* Mcs.sex-gland,
     <br>* Mcs.reproductive-gland,
@@ -12395,24 +12450,24 @@
     <br>[Αργύρης, {1994}, 428⧺cptRsc31⧺]
     <a class="clsHide" href="#idGlndHmn010dsn"></a></p>
   <p id="idGlndHmn010gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn073">nodeBodyHmn.organ.gland</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn">organGland</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmngtr">organ</a>,
     <a class="clsHide" href="#idGlndHmn010gtr"></a></p>
   </section>
 
   <section id="idGlndHmn011">
-  <h2 id="idGlndHmn011H2">gland.hypophysis
+  <h2 id="idGlndHmn011H2">gland.hypophysis-011
     <a class="clsHide" href="#idGlndHmn011H2"></a></h2>
   <p id="idGlndHmn011nam">name::
     <br>* Mcs.glandHypophysis,
-    <br>* Mcs.gland.011-hypophysis,
-    <br>* Mcs.gland.hypophysis-011,
+    <br>* Mcs.organGland.011-hypophysis,
+    <br>* Mcs.organGland.hypophysis-011,
     <br>* Mcs.hypophysis,
     <br>====== langoGreek:
     <br>* McsEll.υπόφυση,
     <a class="clsHide" href="#idGlndHmn011nam"></a></p>
   <p id="idGlndHmn011dsn">description::
-    <br>analytic: η υπόφυση είναι ενδοκρινής αδένας που μέρος της βρίσκεται στον <a class="clsPreview" href="#idBdyHmn408">υποθάλαμο</a>.
+    <br>analytic: η υπόφυση είναι ενδοκρινής αδένας που μέρος της βρίσκεται στον <a class="clsPreview" href="#idGlndHmn021">υποθάλαμο</a>.
     <br>[Αργύρης, {1994}, 255⧺cptRsc31⧺]
     <br>===
     <br><img src="filMcsBdyHmn.files/organ.brain.bmp">
@@ -12421,7 +12476,7 @@
     <br>* <a class="clsPreview" href="#idGlndHmn001">endocrine-gland</a>,
     <a class="clsHide" href="#idGlndHmn011gtr"></a></p>
   <p id="idGlndHmn011wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn408wtr">υποθάλαμος</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn021wtr">υποθάλαμος</a>,
     <a class="clsHide" href="#idGlndHmn011wtr"></a></p>
 
   <section id="idGlndHmn011doing">
@@ -12461,7 +12516,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn526">διάμεσος-λοβός</a>,
     <br>* νευροϋπόφυση⧺cptBdyHmn518⧺,
     <a class="clsHide" href="#idGlndHmn011srtrP1"></a></p>
-  <p id="idGlndHmn011srtrP2">βρίσκεται τοποθετημένη στη βάση του εγκεφάλου, κάτω από τον <a class="clsPreview" href="#idBdyHmn408">υποθάλαμο</a>, με τον οποίο συνδέεται άμεσα μέσω ενός μίσχου. Περιλαμβάνει δύο μορφολογικά διάκριτες περιοχές, την αδενουπόφυση και την νευροϋπόφυση, που είναι αντίστοιχα, ο πρόσθιος και ο οπίσθιος λοβός του αδένα.
+  <p id="idGlndHmn011srtrP2">βρίσκεται τοποθετημένη στη βάση του εγκεφάλου, κάτω από τον <a class="clsPreview" href="#idGlndHmn021">υποθάλαμο</a>, με τον οποίο συνδέεται άμεσα μέσω ενός μίσχου. Περιλαμβάνει δύο μορφολογικά διάκριτες περιοχές, την αδενουπόφυση και την νευροϋπόφυση, που είναι αντίστοιχα, ο πρόσθιος και ο οπίσθιος λοβός του αδένα.
     <br>[Αργύρης, {1994}, 418⧺cptRsc31⧺]
     <a class="clsHide" href="#idGlndHmn011srtrP2"></a></p>
   <p id="idGlndHmn011srtrP3">βρίσκεται στη βάση του εγκεφάλου, έχει μεγεθος μπιζελιού και διακρίνεται σε 3 λοβους, από τους οποίους ο πρόσθιος παράγει τις περισσότερες ορμόνες.
@@ -12470,12 +12525,12 @@
   </section>
 
   <section id="idGlndHmn012">
-  <h2 id="idGlndHmn012H2">gland.thyroid
+  <h2 id="idGlndHmn012H2">gland.thyroid-012
     <a class="clsHide" href="#idGlndHmn012H2"></a></h2>
   <p id="idGlndHmn012nam">name::
     <br>* Mcs.glandThyroid,
-    <br>* Mcs.gland.012-thyroid,
-    <br>* Mcs.gland.thyroid-012,
+    <br>* Mcs.organGland.012-thyroid,
+    <br>* Mcs.organGland.thyroid-012,
     <br>* Mcs.thyroid,
     <br>====== langoGreek:
     <br>* McsEll.αδένας.θυρεοειδής,
@@ -12485,7 +12540,7 @@
     <br>analytic: ο θυροειδης-αδένας είναι αδένας
     <a class="clsHide" href="#idGlndHmn012dsn"></a></p>
   <p id="idGlndHmn012gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn073">nodeBodyHmn.organ.gland</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn">organGland</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmngtr">organ</a>,
     <a class="clsHide" href="#idGlndHmn012gtr"></a></p>
 
@@ -12509,14 +12564,14 @@
   </section>
 
   <section id="idGlndHmn013">
-  <h2 id="idGlndHmn013H2">gland.adrenal
+  <h2 id="idGlndHmn013H2">gland.adrenal-013
     <a class="clsHide" href="#idGlndHmn013H2"></a></h2>
   <p id="idGlndHmn013nam">name::
     <br>* Mcs.glandAdrenal,
     <br>* Mcs.glandAdrenal,
-    <br>* Mcs.gland.013-adrenal,
-    <br>* Mcs.gland.adrenal-013,
-    <br>* Mcs.gland.suprarenal,
+    <br>* Mcs.organGland.013-adrenal,
+    <br>* Mcs.organGland.adrenal-013,
+    <br>* Mcs.organGland.suprarenal,
     <br>* Mcs.adrenal-gland,
     <br>* Mcs.suprarenal-gland, /suprarínal/,
     <br>====== langoGreek:
@@ -12633,12 +12688,12 @@
   </section>
 
   <section id="idGlndHmn014">
-  <h2 id="idGlndHmn014H2">gland.parathyroid
+  <h2 id="idGlndHmn014H2">gland.parathyroid-014
     <a class="clsHide" href="#idGlndHmn014H2"></a></h2>
   <p id="idGlndHmn014nam">name::
     <br>* Mcs.glandParathyroid,
-    <br>* Mcs.gland.014-parathyroid,
-    <br>* Mcs.gland.parathyroid-014,
+    <br>* Mcs.organGland.014-parathyroid,
+    <br>* Mcs.organGland.parathyroid-014,
     <br>* Mcs.parathyroid-gland, {2012-08-16},
     <br>====== langoGreek:
     <br>* McsEll.αδένας.παραθυρεοειδής,
@@ -12648,7 +12703,7 @@
     <br>analytic: ο παραθυρεοειδής-αδένας είναι αδένας
     <a class="clsHide" href="#idGlndHmn014dsn"></a></p>
   <p id="idGlndHmn014gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn073">nodeBodyHmn.organ.gland</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn">organGland</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmngtr">organ</a>,
     <a class="clsHide" href="#idGlndHmn014gtr"></a></p>
 
@@ -12674,13 +12729,13 @@
   </section>
 
   <section id="idGlndHmn015">
-  <h2 id="idGlndHmn015H2">gland.thymus
+  <h2 id="idGlndHmn015H2">gland.thymus-015
     <a class="clsHide" href="#idGlndHmn015H2"></a></h2>
   <p id="idGlndHmn015nam">name::
     <br>* Mcs.glandThymus,
-    <br>* Mcs.gland.015-thymus,
-    <br>* Mcs.gland.thymus-015,
-    <br>* Mcs.gland.thymus.human, {2012-08-16},
+    <br>* Mcs.organGland.015-thymus,
+    <br>* Mcs.organGland.thymus-015,
+    <br>* Mcs.organGland.thymus.human, {2012-08-16},
     <br>====== langoGreek:
     <br>* McsEll.θύμος-αδένας,
     <a class="clsHide" href="#idGlndHmn015nam"></a></p>
@@ -12689,7 +12744,7 @@
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idGlndHmn015dsn"></a></p>
   <p id="idGlndHmn015gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn073">nodeBodyHmn.organ.gland</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn">organGland</a>,
     <br>* <a class="clsPreview" href="#idOrgnHmngtr">organ</a>,
     <a class="clsHide" href="#idGlndHmn015gtr"></a></p>
 
@@ -12713,12 +12768,12 @@
   </section>
 
   <section id="idGlndHmn017">
-  <h2 id="idGlndHmn017H2">gland.testicle
+  <h2 id="idGlndHmn017H2">gland.testicle-017
     <a class="clsHide" href="#idGlndHmn017H2"></a></h2>
   <p id="idGlndHmn017nam">name::
     <br>* Mcs.glandTesticle,
-    <br>* Mcs.gland.017-testicle,
-    <br>* Mcs.gland.testicle-017,
+    <br>* Mcs.organGland.017-testicle,
+    <br>* Mcs.organGland.testicle-017,
     <br>* Mcs.testicle,
     <br>====== langoGreek:
     <br>* McsEll.όρχης,
@@ -12787,12 +12842,12 @@
   </section>
 
   <section id="idGlndHmn018">
-  <h2 id="idGlndHmn018H2">gland.sweat
+  <h2 id="idGlndHmn018H2">gland.sweat-018
     <a class="clsHide" href="#idGlndHmn018H2"></a></h2>
   <p id="idGlndHmn018nam">name::
     <br>* Mcs.glandSweat,
-    <br>* Mcs.gland.018-sweat,
-    <br>* Mcs.gland.sweat-018,
+    <br>* Mcs.organGland.018-sweat,
+    <br>* Mcs.organGland.sweat-018,
     <br>* Mcs.sweat-gland,
     <br>====== langoGreek:
     <br>* McsEll.ιδρωτοποιός-αδένας,
@@ -12834,12 +12889,12 @@
   </section>
 
   <section id="idGlndHmn019">
-  <h2 id="idGlndHmn019H2">gland.sebaceous
+  <h2 id="idGlndHmn019H2">gland.sebaceous-019
     <a class="clsHide" href="#idGlndHmn019H2"></a></h2>
   <p id="idGlndHmn019nam">name::
     <br>* Mcs.glandSebaceous,
-    <br>* Mcs.gland.019-sebaceous,
-    <br>* Mcs.gland.sebaceous-019,
+    <br>* Mcs.organGland.019-sebaceous,
+    <br>* Mcs.organGland.sebaceous-019,
     <br>* Mcs.sebaceous-gland,
     <br>====== langoGreek:
     <br>* McsEll.σμηγματογόνος-αδένας,
@@ -12872,12 +12927,12 @@
   </section>
 
   <section id="idGlndHmn020">
-  <h2 id="idGlndHmn020H2">gland.breast
+  <h2 id="idGlndHmn020H2">gland.breast-020
     <a class="clsHide" href="#idGlndHmn020H2"></a></h2>
   <p id="idGlndHmn020nam">name::
     <br>* Mcs.glandBreast,
-    <br>* Mcs.gland.020-breast,
-    <br>* Mcs.gland.breast-020,
+    <br>* Mcs.organGland.020-breast,
+    <br>* Mcs.organGland.breast-020,
     <br>* Mcs.breast-gland,
     <br>====== langoGreek:
     <br>* McsEll.μαστός,
@@ -18491,6 +18546,11 @@
     <br>* Mcs.hormone'node-producing-002,
     <a class="clsHide" href="#idHrmnHmnatt002nam"></a></p>
   <p id="idHrmnHmnatt002dsn">description::
+    <br>* gland,
+    <br>"Other hormone-producing structures
+    <br>Many body organs not normally considered endocrine organs contain isolated cell clusters that secrete hormones. Examples include the heart (atrial natriuretic peptide); gastrointestinal tract organs (gastrin, secretin, and others); the placenta (hormones of pregnancy—estrogen, progesterone, and others); the kidneys (erythropoietin and renin); the thymus; skin (cholecalciferol); and adipose tissue (leptin and resistin)."
+    <br>[https://en.wikipedia.org/wiki/Endocrine_gland {2020-03-22}]
+    <br>===
     <br>μέχρι πρόσφατα, πιστευόταν ότι οι ορμόνες προέρχονταν αποκλειστικά από τους ενδοκρινεις αδένες. Σήμερα πιστεύεται ότι παράγονται από κύτταρα οργάνων και συστημάτων, καθώς και από τα νευρικά κύτταρα του εγκεφάλου.
     <br>[Καθημερινή, {1995-03-12}, 43 Panorama]
     <a class="clsHide" href="#idHrmnHmnatt002dsn"></a></p>
@@ -18698,7 +18758,7 @@
   </section>
 
   <section id="idHrmnHmn029">
-  <h2 id="idHrmnHmn029H2">hormone.anabolic
+  <h2 id="idHrmnHmn029H2">hormone.anabolic-029
     <a class="clsHide" href="#idHrmnHmn029H2"></a></h2>
   <p id="idHrmnHmn029nam">name::
     <br>* Mcs.hormone.anabolic-029,
@@ -18711,7 +18771,7 @@
   </section>
 
   <section id="idHrmnHmn028">
-  <h2 id="idHrmnHmn028H2">hormone.katabolic
+  <h2 id="idHrmnHmn028H2">hormone.katabolic-028
     <a class="clsHide" href="#idHrmnHmn028H2"></a></h2>
   <p id="idHrmnHmn028nam">name::
     <br>* Mcs.hormone.katabolic-028,
@@ -18724,7 +18784,7 @@
   </section>
 
   <section id="idHrmnHmn030">
-  <h2 id="idHrmnHmn030H2">hormone.steroid
+  <h2 id="idHrmnHmn030H2">hormone.steroid-030
     <a class="clsHide" href="#idHrmnHmn030H2"></a></h2>
   <p id="idHrmnHmn030nam">name::
     <br>* Mcs.hormone.030-steroid,
@@ -18779,7 +18839,7 @@
   </section>
 
   <section id="idHrmnHmn032">
-  <h2 id="idHrmnHmn032H2">hormone.peptide
+  <h2 id="idHrmnHmn032H2">hormone.peptide-032
     <a class="clsHide" href="#idHrmnHmn032H2"></a></h2>
   <p id="idHrmnHmn032nam">name::
     <br>* Mcs.hormone.032-peptide,
@@ -18835,7 +18895,7 @@
   </section>
 
   <section id="idHrmnHmn014">
-  <h2 id="idHrmnHmn014H2">hormone.insulin
+  <h2 id="idHrmnHmn014H2">hormone.insulin-014
     <a class="clsHide" href="#idHrmnHmn014H2"></a></h2>
   <p id="idHrmnHmn014nam">name::
     <br>* Mcs.hormone.insulin-014,
@@ -18883,7 +18943,7 @@
   </section>
 
   <section id="idHrmnHmn015">
-  <h2 id="idHrmnHmn015H2">hormone.cortisol
+  <h2 id="idHrmnHmn015H2">hormone.cortisol-015
     <a class="clsHide" href="#idHrmnHmn015H2"></a></h2>
   <p id="idHrmnHmn015nam">name::
     <br>* Mcs.hormone.cortisol-015,
@@ -18921,25 +18981,25 @@
   </section>
 
   <section id="idHrmnHmn001">
-  <h2 id="idHrmnHmn001H2">hormone.aldosterone
+  <h2 id="idHrmnHmn001H2">hormone.aldosterone-001
     <a class="clsHide" href="#idHrmnHmn001H2"></a></h2>
   <p id="idHrmnHmn001nam">name::
+    <br>* Mcs.hormoneAldosterone,
     <br>* Mcs.hormone.aldosterone-001,
     <br>* Mcs.hormone.001-aldosterone,
-    <br>* Mcs.aldosterone,
+    <br>* Mcs.aldosterone-hormone,
     <br>====== langoGreek:
     <br>* McsEll.ορμόνη.αλδοστερόνη,
     <br>* McsEll.αλδοστερόνη,
-    <br>* McsEll.ορμόνη.αλδοστερόνη,
     <a class="clsHide" href="#idHrmnHmn001nam"></a></p>
   <p id="idHrmnHmn001dsn">description::
     <br>analytic: αλδοστερόνη είναι ορμόνες του <a class="clsPreview" href="#idBdyHmn545">φλοιού-των-επινεφριδίων</a>.
     <br>[Αργύρης, {1994}, 416⧺cptRsc31⧺]
     <a class="clsHide" href="#idHrmnHmn001dsn"></a></p>
-  <p id="idHrmnHmn001gtr">generic-tree-of-::
+  <p id="idHrmnHmn001gtr">generic-tree-of-hormoneAldosterone::
     <br>* <a class="clsPreview" href="#idHrmnHmngtr">hormone</a>,
     <a class="clsHide" href="#idHrmnHmn001gtr"></a></p>
-  <p id="idHrmnHmn001wtr">whole-tree-of-::
+  <p id="idHrmnHmn001wtr">whole-tree-of-hormoneAldosterone::
     <br>* <a class="clsPreview" href="#idBdyHmn545wtr">adrenal-cortex</a>,
     <a class="clsHide" href="#idHrmnHmn001wtr"></a></p>
 
@@ -18957,7 +19017,7 @@
   </section>
 
   <section id="idHrmnHmn009">
-  <h2 id="idHrmnHmn009H2">hormone.adrenaline
+  <h2 id="idHrmnHmn009H2">hormone.adrenaline-009
     <a class="clsHide" href="#idHrmnHmn009H2"></a></h2>
   <p id="idHrmnHmn009nam">name::
     <br>* Mcs.hormone.adrenaline-009,
@@ -19004,7 +19064,7 @@
   </section>
 
   <section id="idHrmnHmn018">
-  <h2 id="idHrmnHmn018H2">hormone.norepinephrine
+  <h2 id="idHrmnHmn018H2">hormone.norepinephrine-018
     <a class="clsHide" href="#idHrmnHmn018H2"></a></h2>
   <p id="idHrmnHmn018nam">name::
     <br>* Mcs.hormone.norepinephrine-018,
@@ -19039,7 +19099,7 @@
   </section>
 
   <section id="idHrmnHmn012">
-  <h2 id="idHrmnHmn012H2">hormone.thyroid-calcitonin
+  <h2 id="idHrmnHmn012H2">hormone.thyroid-calcitonin-012
     <a class="clsHide" href="#idHrmnHmn012H2"></a></h2>
   <p id="idHrmnHmn012nam">name::
     <br>* Mcs.hormone.thyroid-calcitonin-012,
@@ -19074,7 +19134,7 @@
   </section>
 
   <section id="idHrmnHmn017">
-  <h2 id="idHrmnHmn017H2">hormone.melatonine
+  <h2 id="idHrmnHmn017H2">hormone.melatonine-017
     <a class="clsHide" href="#idHrmnHmn017H2"></a></h2>
   <p id="idHrmnHmn017nam">name::
     <br>* Mcs.hormone.melatonine-017,
@@ -19088,12 +19148,23 @@
     <br>analytic: η μελατονίνη είναι ορμόνη που ρυθμίζει τον υπνο.
     <br>[Καθημερινή, {1995-03-12}, 43 Panorama]
     <a class="clsHide" href="#idHrmnHmn017dsn"></a></p>
-  <p id="idHrmnHmn017gtr">generic-tree-of-::
+  <p id="idHrmnHmn017gtr">generic-tree-of-hormoneMelatonine::
     <br>* <a class="clsPreview" href="#idHrmnHmngtr">hormone</a>,
     <a class="clsHide" href="#idHrmnHmn017gtr"></a></p>
 
+  <section id="idHrmnHmn017att002">
+  <h3 id="idHrmnHmn017att002H3">node-producing of hormoneMelatonine
+    <a class="clsHide" href="#idHrmnHmn017att002H3"></a></h3>
+  <p id="idHrmnHmn017att002nam">name::
+    <br>* Mcs.homoneMelatonine'node-producing,
+    <a class="clsHide" href="#idHrmnHmn017att002nam"></a></p>
+  <p id="idHrmnHmn017att002dsn">description::
+    <br>* <a class="clsPreview" href="#idGlndHmn004">glandPineal</a>,
+    <a class="clsHide" href="#idHrmnHmn017att002dsn"></a></p>
+  </section>
+
   <section id="idHrmnHmn017doing">
-  <h3 id="idHrmnHmn017doingH3">doing
+  <h3 id="idHrmnHmn017doingH3">doing of hormoneMelatonine
     <a class="clsHide" href="#idHrmnHmn017doingH3"></a></h3>
   <p id="idHrmnHmn017doingP1">κάποτε λεγόταν μορφεας, αλλά τώρα ξέρουμε ότι ο θεός του ύπνου δεν είναι παρά μία ορμόνη, η μελατονίνη. Τα επίπεδά της στον οργανισμό κυμαίνονται ανάλογα με την ένταση του φωτός. Η παραγωγή της εντείνεται στο σκοτάδι και αναστέλλεται στο φως της μέρας. Στην πράξη είναι το χημικό μήνυμα της νύχτας.
     <br>τώρα οι ερευνητές κατάφεραν να την παρασκευάσουν τεχνητά και στις Ηπα πωλείται σε χάπια στα σούπερ μάρκετ.
@@ -19103,7 +19174,7 @@
   </section>
 
   <section id="idHrmnHmn005">
-  <h2 id="idHrmnHmn005H2">hormone.growth-hormone
+  <h2 id="idHrmnHmn005H2">hormone.growth-hormone-005
     <a class="clsHide" href="#idHrmnHmn005H2"></a></h2>
   <p id="idHrmnHmn005nam">name::
     <br>* Mcs.hormone.growth-005,
@@ -19169,7 +19240,7 @@
   </section>
 
   <section id="idHrmnHmn025">
-  <h2 id="idHrmnHmn025H2">hormone.oxytocin
+  <h2 id="idHrmnHmn025H2">hormone.oxytocin-025
     <a class="clsHide" href="#idHrmnHmn025H2"></a></h2>
   <p id="idHrmnHmn025nam">name::
     <br>* Mcs.hormone.oxytocin-025,
@@ -19207,7 +19278,7 @@
   </section>
 
   <section id="idHrmnHmn022">
-  <h2 id="idHrmnHmn022H2">hormone.prolactin
+  <h2 id="idHrmnHmn022H2">hormone.prolactin-022
     <a class="clsHide" href="#idHrmnHmn022H2"></a></h2>
   <p id="idHrmnHmn022nam">name::
     <br>* Mcs.hormone.prolactin-022,
@@ -19243,7 +19314,7 @@
   </section>
 
   <section id="idHrmnHmn006">
-  <h2 id="idHrmnHmn006H2">hormone.basopressin
+  <h2 id="idHrmnHmn006H2">hormone.basopressin-006
     <a class="clsHide" href="#idHrmnHmn006H2"></a></h2>
   <p id="idHrmnHmn006nam">name::
     <br>* Mcs.hormone.basopressin-006,
@@ -19273,7 +19344,7 @@
   </section>
 
   <section id="idHrmnHmn024">
-  <h2 id="idHrmnHmn024H2">hormone.adrenocorticotropic
+  <h2 id="idHrmnHmn024H2">hormone.adrenocorticotropic-024
     <a class="clsHide" href="#idHrmnHmn024H2"></a></h2>
   <p id="idHrmnHmn024nam">name::
     <br>* Mcs.hormone.adrenocorticotropic-024,
@@ -19317,7 +19388,7 @@
   </section>
 
   <section id="idHrmnHmn011">
-  <h2 id="idHrmnHmn011H2">hormone.thyroid-stimulating
+  <h2 id="idHrmnHmn011H2">hormone.thyroid-stimulating-011
     <a class="clsHide" href="#idHrmnHmn011H2"></a></h2>
   <p id="idHrmnHmn011nam">name::
     <br>* Mcs.hormone.thyroid-stimulating-011,
@@ -19352,7 +19423,7 @@
   </section>
 
   <section id="idHrmnHmn010">
-  <h2 id="idHrmnHmn010H2">hormone.follicle-stimulating
+  <h2 id="idHrmnHmn010H2">hormone.follicle-stimulating-010
     <a class="clsHide" href="#idHrmnHmn010H2"></a></h2>
   <p id="idHrmnHmn010nam">name::
     <br>* Mcs.hormone.follicle-stimulating-010,
@@ -19391,7 +19462,7 @@
   </section>
 
   <section id="idHrmnHmn026">
-  <h2 id="idHrmnHmn026H2">hormone.luteinizing
+  <h2 id="idHrmnHmn026H2">hormone.luteinizing-026
     <a class="clsHide" href="#idHrmnHmn026H2"></a></h2>
   <p id="idHrmnHmn026nam">name::
     <br>* Mcs.hormone.luteinizing-026,
@@ -19428,7 +19499,7 @@
   </section>
 
   <section id="idHrmnHmn004">
-  <h2 id="idHrmnHmn004H2">hormone.antidiuretic
+  <h2 id="idHrmnHmn004H2">hormone.antidiuretic-004
     <a class="clsHide" href="#idHrmnHmn004H2"></a></h2>
   <p id="idHrmnHmn004nam">name::
     <br>* Mcs.hormone.antidiuretic-004,
@@ -19471,7 +19542,7 @@
   </section>
 
   <section id="idHrmnHmn016">
-  <h2 id="idHrmnHmn016H2">hormone.melanotropin
+  <h2 id="idHrmnHmn016H2">hormone.melanotropin-016
     <a class="clsHide" href="#idHrmnHmn016H2"></a></h2>
   <p id="idHrmnHmn016nam">name::
     <br>* Mcs.hormone.melanotropin-016,
@@ -19508,7 +19579,7 @@
   </section>
 
   <section id="idHrmnHmn013">
-  <h2 id="idHrmnHmn013H2">hormone.thyroxine
+  <h2 id="idHrmnHmn013H2">hormone.thyroxine-013
     <a class="clsHide" href="#idHrmnHmn013H2"></a></h2>
   <p id="idHrmnHmn013nam">name::
     <br>* Mcs.hormone.thyroxine-013,
@@ -19577,7 +19648,7 @@
   </section>
 
   <section id="idHrmnHmn007">
-  <h2 id="idHrmnHmn007H2">hormone.glucagon
+  <h2 id="idHrmnHmn007H2">hormone.glucagon-007
     <a class="clsHide" href="#idHrmnHmn007H2"></a></h2>
   <p id="idHrmnHmn007nam">name::
     <br>* Mcs.hormone.glucagon-007,
@@ -19615,7 +19686,7 @@
   </section>
 
   <section id="idHrmnHmn020">
-  <h2 id="idHrmnHmn020H2">hormone.parathyroid
+  <h2 id="idHrmnHmn020H2">hormone.parathyroid-020
     <a class="clsHide" href="#idHrmnHmn020H2"></a></h2>
   <p id="idHrmnHmn020nam">name::
     <br>* Mcs.hormone.parathyroid-020,
@@ -19662,40 +19733,40 @@
   </section>
   </section>
 
-  <section id="idBdyHmn323">
-  <h2 id="idBdyHmn323H2">hormone.estradiol
-    <a class="clsHide" href="#idBdyHmn323H2"></a></h2>
-  <p id="idBdyHmn323nam">name::
-    <br>* Mcs.cptBdyHmn323,
-    <br>* Mcs.hormone.estradiol,
-    <br>* Mcs.estradiol, /estradáiol/,
+  <section id="idHrmnHmn038">
+  <h2 id="idHrmnHmn038H2">hormone.estradiol-038
+    <a class="clsHide" href="#idHrmnHmn038H2"></a></h2>
+  <p id="idHrmnHmn038nam">name::
+    <br>* Mcs.hormone.038-estradiol,
+    <br>* Mcs.hormone.estradiol-038,
+    <br>* Mcs.estradiol-hormone, /estradáiol/,
     <br>====== langoGreek:
     <br>* McsEll.ορμόνη.οιστραδιόλη,
     <br>* McsEll.οιστραδιόλη,
-    <a class="clsHide" href="#idBdyHmn323nam"></a></p>
-  <p id="idBdyHmn323dsn">description::
+    <a class="clsHide" href="#idHrmnHmn038nam"></a></p>
+  <p id="idHrmnHmn038dsn">description::
     <br>analytic: η οιστραδιόλη είναι ορμόνη που παράγουν οι ωοθήκες.
     <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn323dsn"></a></p>
-  <p id="idBdyHmn323gtr">generic-tree-of-::
+    <a class="clsHide" href="#idHrmnHmn038dsn"></a></p>
+  <p id="idHrmnHmn038gtr">generic-tree-of-::
     <br>* <a class="clsPreview" href="#idHrmnHmngtr">hormone</a>,
-    <a class="clsHide" href="#idBdyHmn323gtr"></a></p>
-  <p id="idBdyHmn323wtr">whole-tree-of-::
+    <a class="clsHide" href="#idHrmnHmn038gtr"></a></p>
+  <p id="idHrmnHmn038wtr">whole-tree-of-::
     <br>* <a class="clsPreview" href="#idGlndHmn006wtr">ωοθήκες</a>,
-    <a class="clsHide" href="#idBdyHmn323wtr"></a></p>
+    <a class="clsHide" href="#idHrmnHmn038wtr"></a></p>
 
-  <section id="idBdyHmn323doing">
-  <h3 id="idBdyHmn323doingH3">doing
-    <a class="clsHide" href="#idBdyHmn323doingH3"></a></h3>
-  <p id="idBdyHmn323doingP1">doing::
+  <section id="idHrmnHmn038doing">
+  <h3 id="idHrmnHmn038doingH3">doing
+    <a class="clsHide" href="#idHrmnHmn038doingH3"></a></h3>
+  <p id="idHrmnHmn038doingP1">doing::
     <br>τα δευτερεύοντα χαρακτηριστικά του φύλου, όπως οι μαστοί, ο εμμηνος κύκλος της γυναίκας οφείλονται στη δράση της οιστραδιόλης.
     <br>[Αργύρης, {1994}, 113⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn323doingP1"></a></p>
+    <a class="clsHide" href="#idHrmnHmn038doingP1"></a></p>
   </section>
   </section>
 
   <section id="idHrmnHmn008">
-  <h2 id="idHrmnHmn008H2">hormone.female
+  <h2 id="idHrmnHmn008H2">hormone.female-008
     <a class="clsHide" href="#idHrmnHmn008H2"></a></h2>
   <p id="idHrmnHmn008nam">name::
     <br>* Mcs.hormone.female-008,
@@ -19779,7 +19850,7 @@
   </section>
 
   <section id="idHrmnHmn002">
-  <h2 id="idHrmnHmn002H2">hormone.male
+  <h2 id="idHrmnHmn002H2">hormone.male-002
     <a class="clsHide" href="#idHrmnHmn002H2"></a></h2>
   <p id="idHrmnHmn002nam">name::
     <br>* Mcs.hormone.male-002,
@@ -19808,7 +19879,7 @@
   </section>
 
   <section id="idHrmnHmn003">
-  <h2 id="idHrmnHmn003H2">hormone.androgen
+  <h2 id="idHrmnHmn003H2">hormone.androgen-003
     <a class="clsHide" href="#idHrmnHmn003H2"></a></h2>
   <p id="idHrmnHmn003nam">name::
     <br>* Mcs.hrmnAndrogen,
@@ -19830,22 +19901,69 @@
     <br>[Αργύρης, {1994}, 417⧺cptRsc31⧺]
     <a class="clsHide" href="#idHrmnHmn003dsn"></a></p>
 
-  <section id="idHrmnHmn003dss">
-  <h3 id="idHrmnHmn003dssH3">disease of hrmnAndrogen
-    <a class="clsHide" href="#idHrmnHmn003dssH3"></a></h3>
-  <p id="idHrmnHmn003dssnam">name::
+  <section id="idDssHmn040">
+  <h3 id="idDssHmn040H3">disease of hrmnAndrogen
+    <a class="clsHide" href="#idDssHmn040H3"></a></h3>
+  <p id="idDssHmn040nam">name::
     <br>* Mcs.hrmnAndrogen'disease,
     <br>* Mcs.disease.040-androgen,
     <br>* Mcs.disease.androgen-040,
-    <br>* Mcs.hyperandrogenism,
-    <br>* Mcs.hypoandrogenism,
-    <a class="clsHide" href="#idHrmnHmn003dssnam"></a></p>
-  <p id="idHrmnHmn003dssdsn">description::
+    <a class="clsHide" href="#idDssHmn040nam"></a></p>
+  <p id="idDssHmn040dsn">description::
     <br>·
-    <a class="clsHide" href="#idHrmnHmn003dssdsn"></a></p>
-  <p id="idHrmnHmn003dsswpa">addressWpg::
+    <a class="clsHide" href="#idDssHmn040dsn"></a></p>
+  <p id="idDssHmn040wpa">addressWpg::
+    <a class="clsHide" href="#idDssHmn040wpa"></a></p>
+
+  <section id="idDssHmn249">
+  <h4 id="idDssHmn249H4">disease.androgenDeficiency
+    <a class="clsHide" href="#idDssHmn249H4"></a></h4>
+  <p id="idDssHmn249nam">name::
+    <br>* Mcs.disease.249-androgen-deficiency,
+    <br>* Mcs.disease.androgen-deficiency-249,
+    <br>* Mcs.androgen-deficiency-249,
+    <br>* Mcs.hypoandrogenism,
+    <br>* Mcs.androgen-deficiency-syndrome,
+    <br>* Mcs.men-with-hypogonadism,
+    <a class="clsHide" href="#idDssHmn249nam"></a></p>
+  <p id="idDssHmn249dsn">description::
+    <br>"Androgen deficiency is a medical condition characterized by not enough androgenic activity in the body."
+    <br>[https://en.wikipedia.org/wiki/Androgen_deficiency {2020-03-21}]
+    <a class="clsHide" href="#idDssHmn249dsn"></a></p>
+  <p id="idDssHmn249wpa">addressWpg::
     <br>* https://en.wikipedia.org/wiki/Androgen_deficiency,
-    <a class="clsHide" href="#idHrmnHmn003dsswpa"></a></p>
+    <a class="clsHide" href="#idDssHmn249wpa"></a></p>
+
+  <section id="idDssHmn249att002">
+  <h5 id="idDssHmn249att002H5">cause of diseaseAndrogenDeficiency
+    <a class="clsHide" href="#idDssHmn249att002H5"></a></h5>
+  <p id="idDssHmn249att002nam">name::
+    <br>* Mcs.diseaseAndrogenDeficiency'cause,
+    <a class="clsHide" href="#idDssHmn249att002nam"></a></p>
+  <p id="idDssHmn249att002dsn">description::
+    <br>"Hypoandrogenism is caused primarily by either dysfunction, failure, or absence of the gonads (hypergonadotropic) or impairment of the hypothalamus or pituitary gland (hypogonadotropic), which in turn can be caused by a multitude of different stimuli, including genetic conditions (e.g., GnRH/gonadotropin insensitivity and enzymatic defects of steroidogenesis), tumors, trauma, surgery, autoimmunity, radiation, infections, toxins, drugs, and many others. Alternatively, it may be the result of conditions such as androgen insensitivity syndrome or hyperestrogenism. More simply, old age may also be a factor in the development of hypoandrogenism, as androgen levels decline with age.[citation needed]"
+    <br>[https://en.wikipedia.org/wiki/Androgen_deficiency {2020-03-21}]
+    <a class="clsHide" href="#idDssHmn249att002dsn"></a></p>
+  </section>
+  </section>
+
+  <section id="idDssHmn250">
+  <h4 id="idDssHmn250H4">disease.androgenExcess
+    <a class="clsHide" href="#idDssHmn250H4"></a></h4>
+  <p id="idDssHmn250nam">name::
+    <br>* Mcs.disease.250-androgen-excess,
+    <br>* Mcs.disease.androgen-excess-250,
+    <br>* Mcs.androgen-excess-disorder-250,
+    <br>* Mcs.hyperandrogenism,
+    <a class="clsHide" href="#idDssHmn250nam"></a></p>
+  <p id="idDssHmn250dsn">description::
+    <br>"Hyperandrogenism is a medical condition characterized by high levels of androgens in females.[4] Symptoms may include acne, seborrhea (inflamed skin), hair loss on the scalp, increased body or facial hair, and infrequent or absent menstruation.[1][2] Complications may include high blood cholesterol.[4]
+    <br>The cause in about 70% of cases is polycystic ovary syndrome (PCOS).[1] Other causes include adrenal hyperplasia, Cushing's disease, certain types of cancers, and certain medications.[1][3][4] Diagnosis often involves blood tests for testosterone, 17-hydroxyprogesterone, and prolactin as well as a pelvic ultrasound.[1][4]
+    <br>Treatment depends on the underlying cause.[4] Symptoms of hyperandrogenism can be improved with birth control pills or antiandrogens such as cyproterone acetate or spironolactone.[1][4] Other measures may include hair removal techniques.[3] It occurs in about 5% of women of reproductive age.[2]
+    <br>The earliest known descriptions of the condition are by Hippocrates in the 5th century BCE.[5][6] In 2011 the International Association of Athletics Federations ruled that women must have testosterone levels below that of men to compete.[7] There are concerns that these rules are both unscientific and unfair.[7]"
+    <br>[https://en.wikipedia.org/wiki/Hyperandrogenism {2020-03-21}]
+    <a class="clsHide" href="#idDssHmn250dsn"></a></p>
+  </section>
   </section>
 
   <section id="idHrmnHmn003ndpdg">
@@ -20047,7 +20165,7 @@
   </section>
 
   <section id="idHrmnHmn031">
-  <h2 id="idHrmnHmn031H2">hormone.leptin
+  <h2 id="idHrmnHmn031H2">hormone.leptin-031
     <a class="clsHide" href="#idHrmnHmn031H2"></a></h2>
   <p id="idHrmnHmn031nam">name::
     <br>* Mcs.hormone.031-leptin,
@@ -20062,7 +20180,7 @@
   </section>
 
   <section id="idHrmnHmn033">
-  <h2 id="idHrmnHmn033H2">hormone.resistin
+  <h2 id="idHrmnHmn033H2">hormone.resistin-033
     <a class="clsHide" href="#idHrmnHmn033H2"></a></h2>
   <p id="idHrmnHmn033nam">name::
     <br>* Mcs.hormone.033-resistin,
@@ -20078,7 +20196,7 @@
   </section>
 
   <section id="idHrmnHmn036">
-  <h2 id="idHrmnHmn036H2">hormone.progestogen
+  <h2 id="idHrmnHmn036H2">hormone.progestogen-036
     <a class="clsHide" href="#idHrmnHmn036H2"></a></h2>
   <p id="idHrmnHmn036nam">name::
     <br>* Mcs.hormone.036-progestogen,
@@ -20092,6 +20210,22 @@
     <br>In addition to their roles as natural hormones, progestogens are used as medications, for instance in menopausal hormone therapy; for information on progestogens as medications, see the progesterone (medication) and progestogen (medication) articles."
     <br>[https://en.wikipedia.org/wiki/Progestogen {2020-03-11}]
     <a class="clsHide" href="#idHrmnHmn036dsn"></a></p>
+  </section>
+
+  <section id="idHrmnHmn039">
+  <h2 id="idHrmnHmn039H2">hormone.gonadotropin-039
+    <a class="clsHide" href="#idHrmnHmn039H2"></a></h2>
+  <p id="idHrmnHmn039nam">name::
+    <br>* Mcs.hormone.039-gonadotropin, /gonadotrópin/,
+    <br>* Mcs.hormone.gonadotropin-039,
+    <br>* Mcs.gonadotropin-hormone-039,
+    <a class="clsHide" href="#idHrmnHmn039nam"></a></p>
+  <p id="idHrmnHmn039dsn">description::
+    <br>"Gonadotropins are glycoprotein polypeptide hormones secreted by gonadotrope cells of the anterior pituitary of vertebrates.[1][2][3] This family includes the mammalian hormones follicle-stimulating hormone (FSH), luteinizing hormone (LH), and placental/chorionic gonadotropins, human chorionic gonadotropin (hCG) and equine chorionic gonadotropin (eCG),[4] as well as at least two forms of fish gonadotropins. These hormones are central to the complex endocrine system that regulates normal growth, sexual development, and reproductive function.[5] LH and FSH are secreted by the anterior pituitary gland, while hCG and eCG are secreted by the placenta in pregnant humans and mares, respectively.[6] The gonadotropins act on the gonads, controlling gamete and sex hormone production.
+    <br>Gonadotropin is sometimes abbreviated Gn. The alternative spelling gonadotrophin which inaccurately implies a nourishing mechanism[7] is still sporadically used.
+    <br>There are various preparations of gonadotropins for therapeutic use, mainly as fertility medication. There are also fad diet or quack preparations, which are illegal in various countries."
+    <br>[https://en.wikipedia.org/wiki/Gonadotropin {2020-03-21}]
+    <a class="clsHide" href="#idHrmnHmn039dsn"></a></p>
   </section>
 </section>
 
@@ -20610,7 +20744,7 @@
     <br>[Αργύρης, {1994}, 254⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn399dsn"></a></p>
   <p id="idBdyHmn399P1">αντιφαση:
-    <br>το κέντρο θερμοκρασίας βρίσκεται στον <a class="clsPreview" href="#idBdyHmn408">υποθάλαμο</a>.
+    <br>το κέντρο θερμοκρασίας βρίσκεται στον <a class="clsPreview" href="#idGlndHmn021">υποθάλαμο</a>.
     <br>[Αργύρης, {1994}, 255⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn399P1"></a></p>
   <p id="idBdyHmn399gtr">generic-tree-of-::
@@ -20670,14 +20804,14 @@
     <br>* McsEll.κέντρο-ύπνου,
     <a class="clsHide" href="#idBdyHmn409nam"></a></p>
   <p id="idBdyHmn409dsn">description::
-    <br>analytic: το κέντρο ύπνου είναι <a class="clsPreview" href="#idBdyHmn306">κέντρο</a> που βρίσκεται στον <a class="clsPreview" href="#idBdyHmn408">υποθάλαμο</a>.
+    <br>analytic: το κέντρο ύπνου είναι <a class="clsPreview" href="#idBdyHmn306">κέντρο</a> που βρίσκεται στον <a class="clsPreview" href="#idGlndHmn021">υποθάλαμο</a>.
     <br>[Αργύρης, {1994}, 255⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn409dsn"></a></p>
   <p id="idBdyHmn409gtr">generic-tree-of-::
     <br>* <a class="clsPreview" href="#idBdyHmn306">κέντρο</a>,
     <a class="clsHide" href="#idBdyHmn409gtr"></a></p>
   <p id="idBdyHmn409wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn408wtr">υποθάλαμος</a>,
+    <br>* <a class="clsPreview" href="#idGlndHmn021wtr">υποθάλαμος</a>,
     <a class="clsHide" href="#idBdyHmn409wtr"></a></p>
   </section>
 </section>
