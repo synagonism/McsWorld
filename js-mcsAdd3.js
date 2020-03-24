@@ -42,13 +42,13 @@ var
   sDir = 'dirHlth',
   sDIR = 'DirHlth',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'human-cell',
+  sN = 'organism-disease',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'cell',
+  sNS = 'diseaseOgm',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'CellHmn',
+  sNFil = 'DssOgm',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'CellHmn';
+  sNId = 'DssOgm';
 
 s =
   '<!DOCTYPE html>\n' +
