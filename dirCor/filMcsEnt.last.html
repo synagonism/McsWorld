@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.entity (entity|Sympan 0-49-1.2020-03-27 draft)</title>
+  <title>Mcs.entity (entity|Sympan 0-50-0.2020-03-28 draft)</title>
   <meta name="keywords" content="entity, entity, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -170,6 +170,11 @@
   <p id="idEntrscwpa">addressWpg::
     <br>*
     <a class="clsHide" href="#idEntrscwpa"></a></p>
+
+  <section id="idEntsci">
+  <h2 id="idEntsciH2">science (link) of entity
+    <a class="clsHide" href="#idEntsciH2"></a></h2>
+  </section>
 </section>
 
 <section id="idEntprt">
@@ -869,24 +874,25 @@
     <a class="clsHide" href="#idEntBodyNdsn"></a></p>
   <p id="idEntBodyNnam">name::
     <br>* Mcs.bodyNo,
-    <br>* Mcs.doing-or-relation,
-    <br>* Mcs.entity.bodyNo,
-    <br>* Mcs.process-or-relation,
-    <br>* Mcs.relation-or-process,
+    <br>* Mcs.doing-or-relation!⇒bodyNo,
+    <br>* Mcs.entity.bodyNo!⇒bodyNo,
+    <br>* Mcs.process-or-relation!⇒bodyNo,
+    <br>* Mcs.relation-or-process!⇒bodyNo,
     <br>====== langoKomo:
     <br>* McsKmo.o-ruoUgo!=entity.bodyNo,
     <a class="clsHide" href="#idEntBodyNnam"></a></p>
 
   <section id="idEntBodyNarg">
-  <h2 id="idEntBodyNargH2">argument of bodyNo
+  <h2 id="idEntBodyNargH2">01_argument of bodyNo
     <a class="clsHide" href="#idEntBodyNargH2"></a></h2>
   <p id="idEntBodyNargdsn">description::
     <br>· argument of <a class="clsPreview" href="#idEntBodyN">bodyNo[a]</a> is its entities.
     <a class="clsHide" href="#idEntBodyNargdsn"></a></p>
   <p id="idEntBodyNargnam">name::
+    <br>* Mcs.bodyNo'01_argument,
+    <br>* Mcs.bodyNo'argument,
     <br>* Mcs.argBodyNo,
     <br>* Mcs.argument-of-bodyNo,
-    <br>* Mcs.bodyNo.argument,
     <br>====== langoKomo:
     <br>* McsKmo.argo-a-ruoUgo!=argument-of-bodyNo,
     <br>====== langoGreek:
@@ -899,24 +905,26 @@
   </section>
 
   <section id="idEntBodyNvlc">
-  <h2 id="idEntBodyNvlcH2">valence of bodyNo
+  <h2 id="idEntBodyNvlcH2">02_valence of bodyNo
     <a class="clsHide" href="#idEntBodyNvlcH2"></a></h2>
   <p id="idEntBodyNvlcdsn">description::
     <br>· valence of bodyNo is the-number of its arguments.
     <a class="clsHide" href="#idEntBodyNvlcdsn"></a></p>
   <p id="idEntBodyNvlcnam">name::
+    <br>* Mcs.bodyNo'02_valence,
     <br>* Mcs.bodyNo'valence,
     <br>* Mcs.valence-of-bodyNo,
     <a class="clsHide" href="#idEntBodyNvlcnam"></a></p>
   </section>
 
   <section id="idEntBodyNdrn">
-  <h2 id="idEntBodyNdrnH2">direction of bodyNo
+  <h2 id="idEntBodyNdrnH2">03_direction of bodyNo
     <a class="clsHide" href="#idEntBodyNdrnH2"></a></h2>
   <p id="idEntBodyNdrndsn">description::
     <br>· direction of bodyNo is any SEQUENCE in its arguments.
     <a class="clsHide" href="#idEntBodyNdrndsn"></a></p>
   <p id="idEntBodyNdrnnam">name::
+    <br>* Mcs.bodyNo'03_direction,
     <br>* Mcs.bodyNo'direction,
     <br>* Mcs.direction-of-bodyNo,
     <a class="clsHide" href="#idEntBodyNdrnnam"></a></p>
@@ -964,6 +972,11 @@
   </section>
 </section>
 
+<section id="idEntDng">
+  <h1 id="idEntDngH1">entity.doing (<a class="clsPreview" href="filMcsDng.last.html#idOverview">link</a>)
+    <a class="clsHide" href="#idEntDngH1"></a></h1>
+</section>
+
 <section id="idEntDngN">
   <h1 id="idEntDngNH1">entity.doingNo
     <a class="clsHide" href="#idEntDngNH1"></a></h1>
@@ -978,6 +991,11 @@
     <br>* <a class="clsPreview" href="l#idEntBody">body</a>,
     <br>* <a class="clsPreview" href="filMcsRln.last.html#idOverview">relation</a>,
     <a class="clsHide" href="#idEntDngNSpc"></a></p>
+</section>
+
+<section id="idEntGnrc">
+  <h1 id="idEntGnrcH1">entity.generic (<a class="clsPreview" href="filMcsGnrc.last.html#idOverview">link</a>)
+    <a class="clsHide" href="#idEntGnrcH1"></a></h1>
 </section>
 
 <section id="idEntGnrcN">
@@ -1020,6 +1038,11 @@
   </section>
 </section>
 
+<section id="idEntWhole">
+  <h1 id="idEntWholeH1">entity.whole (<a class="clsPreview" href="filMcsWhl.last.html#idOverview">link</a>)
+    <a class="clsHide" href="#idEntWholeH1"></a></h1>
+</section>
+
 <section id="idEntWholeN">
   <h1 id="idEntWholeNH1">entity.wholeNo
     <a class="clsHide" href="#idEntWholeNH1"></a></h1>
@@ -1037,6 +1060,11 @@
     <a class="clsHide" href="#idEntWholeNnam"></a></p>
 </section>
 
+<section id="idEntHmn">
+  <h1 id="idEntHmnH1">entity.human (<a class="clsPreview" href="/dirHmn/filMcsHmn.last.html#idOverview">link</a>)
+    <a class="clsHide" href="#idEntHmnH1"></a></h1>
+</section>
+
 <section id="idEntHmnN">
   <h1 id="idEntHmnNH1">entity.humanNo
     <a class="clsHide" href="#idEntHmnNH1"></a></h1>
@@ -1049,6 +1077,11 @@
     <br>====== langoKomo:
     <br>* McsKmo.hoUgo!=entity.humanNo,
     <a class="clsHide" href="#idEntHmnNnam"></a></p>
+</section>
+
+<section id="idEntMtl">
+  <h1 id="idEntMtlH1">entity.mental (link)
+    <a class="clsHide" href="#idEntMtlH1"></a></h1>
 </section>
 
 <section id="idEntMtlN">
