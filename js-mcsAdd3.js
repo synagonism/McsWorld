@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-13-0.2020-04-06: structure-doing,
  * version.0-12-0.2020-02-19: whole-part-generic-tree,
  * version.0-11-1.2020-02-19: whole-part-generic-tree,
  * version.0-11-0.2020-01-12: versions,
@@ -39,16 +40,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirNtr',
-  sDIR = 'DirNtr',
+  sDir = 'dirOgm',
+  sDIR = 'DirOgm',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'system-of-molecules',
+  sN = 'organism-system-of-molecules',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'sysMolecules',
+  sNS = 'sysMoleculesOgm',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'SysMlcl',
+  sNFil = 'SysMlclOgm',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'SysMlcl';
+  sNId = 'SysMlclOgm';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -90,6 +91,7 @@ s =
   '  <h1 id="id' + sNId + 'rscFH1">resource of ' + sNS + '\n' +
   '    <a class="clsHide" href="#id' + sNId + 'rscFH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'rscnam">name::\n' +
+  '    <br>* Mcs.' + sNS + '\'attResource,\n' +
   '    <br>* Mcs.' + sNS + '\'resource,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'rscnam"></a></p>\n' +
   '  <p id="id' + sNId + 'rscwpa">addressWpg::\n' +
@@ -97,10 +99,35 @@ s =
   '    <a class="clsHide" href="#id' + sNId + 'rscwpa"></a></p>\n' +
   '</section>\n' +
   '\n' +
+  '<section id="id' + sNId + 'srtrF">\n' +
+  '  <h1 id="id' + sNId + 'srtrFH1">structure of ' + sNS + '\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'srtrFH1"></a></h1>\n' +
+  '  <p id="id' + sNId + 'srtrnam">name::\n' +
+  '    <br>* Mcs.' + sNS + '\'attStructure,\n' +
+  '    <br>* Mcs.' + sNS + '\'structure,\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'srtrnam"></a></p>\n' +
+  '  <p id="id' + sNId + 'srtrdsn">description::\n' +
+  '    <br>* \n' +
+  '    <a class="clsHide" href="#id' + sNId + 'srtrdsn"></a></p>\n' +
+  '</section>\n' +
+  '\n' +
+  '<section id="id' + sNId + 'dngF">\n' +
+  '  <h1 id="id' + sNId + 'dngFH1">DOING of ' + sNS + '\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'dngFH1"></a></h1>\n' +
+  '  <p id="id' + sNId + 'dngnam">name::\n' +
+  '    <br>* Mcs.' + sNS + '\'attDoing,\n' +
+  '    <br>* Mcs.' + sNS + '\'doing,\n' +
+  '    <a class="clsHide" href="#id' + sNId + 'dngnam"></a></p>\n' +
+  '  <p id="id' + sNId + 'dngdsn">description::\n' +
+  '    <br>* \n' +
+  '    <a class="clsHide" href="#id' + sNId + 'dngdsn"></a></p>\n' +
+  '</section>\n' +
+  '\n' +
   '<section id="id' + sNId + 'evgF">\n' +
   '  <h1 id="id' + sNId + 'evgFH1">EVOLUTING of ' + sNS + '\n' +
   '    <a class="clsHide" href="#id' + sNId + 'evgFH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'evgnam">name::\n' +
+  '    <br>* Mcs.' + sNS + '\'attEvoluting,\n' +
   '    <br>* Mcs.' + sNS + '\'evoluting,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'evgnam"></a></p>\n' +
   '  <p id="id' + sNId + 'evg' + moUtil.fDateYMD2() + '">{time.' + moUtil.fDateYMD() + '}::\n' +
