@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.whole (entity.whole 0-35-0.2020-03-29 draft)</title>
+  <title>Mcs.whole (entity.whole 0-37-0.2020-04-10 draft)</title>
   <meta name="keywords" content="whole-entity, whole, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -56,31 +56,48 @@
     <a class="clsHide" href="#idName"></a></p>
 </section>
 
+<section id="idWhlatt001">
+  <h1 id="idWhlatt001H1">01_attribute of whole
+    <a class="clsHide" href="#idWhlatt001H1"></a></h1>
+  <p id="idWhlatt001nam">name::
+    <br>* Mcs.whole'01_attribute,
+    <br>* Mcs.whole'attribute,
+    <a class="clsHide" href="#idWhlatt001nam"></a></p>
+  <p id="idWhlatt001dsn">description::
+    <br>· a-whole-entity as entity has attributes.
+    <a class="clsHide" href="#idWhlatt001dsn"></a></p>
+  <p id="idWhlatt001str">specific-tree-of-::
+    <br>* part-att,
+    <br>* partNo-att,
+    <a class="clsHide" href="#idWhlatt001str"></a></p>
+</section>
+
 <section id="idWhlprt">
-  <h1 id="idWhlprtH1">01_part of whole
+  <h1 id="idWhlprtH1">02_part of whole
     <a class="clsHide" href="#idWhlprtH1"></a></h1>
   <p id="idWhlprtdsn">description::
     <br>· part-of-whole is its attributes we consider internal.
     <a class="clsHide" href="#idWhlprtdsn"></a></p>
   <p id="idWhlprtnam">name::
+    <br>* Mcs.whole'01_part,
+    <br>* Mcs.whole'part,
     <br>* Mcs.PART,
     <br>* Mcs.internal-attribute--of-whole,
     <br>* Mcs.part-of-whole,
-    <br>* Mcs.whole'01_part,
-    <br>* Mcs.whole'part,
     <br>====== langoKomo:
     <br>* McsKmo.jo!=part,
     <a class="clsHide" href="#idWhlprtnam"></a></p>
 </section>
 
 <section id="idWhlprtrln">
-  <h1 id="idWhlprtrlnH1">02_whole-part--relation
+  <h1 id="idWhlprtrlnH1">03_part--relation of whole
     <a class="clsHide" href="#idWhlprtrlnH1"></a></h1>
   <p id="idWhlprtrlndsn">description::
     <br>· whole-part--relation is <a class="clsPreview" href="filMcsRln.last.html#idRlnSqcdN">the-sequencedNo-relation</a> between a-whole[a] and a-part of it[a].
     <a class="clsHide" href="#idWhlprtrlndsn"></a></p>
   <p id="idWhlprtrlnnam">name::
-    <br>* Mcs.whole'02_undirected-part-relation,
+    <br>* Mcs.whole'03_undirected-part-relation,
+    <br>* Mcs.whole'part-relation-undirected,
     <br>* Mcs.part-whole--relation,
     <br>* Mcs.relation.part-whole,
     <br>* Mcs.relation.whole-part,
@@ -129,6 +146,7 @@
     <br>· whole-relation is <a class="clsPreview" href="filMcsRln.last.html#idRlnSqcd">the-sequenced-relation</a> between a-part and its <a class="clsPreview" href="#idOverview">whole</a>.
     <a class="clsHide" href="#idWhlprtrln1dsn"></a></p>
   <p id="idWhlprtrln1nam">name::
+    <br>* Mcs.part-whole--directed-relation,
     <br>* Mcs.relation.whole,
     <br>* Mcs.whole-relation,
     <br>====== langoKomo:
@@ -154,9 +172,34 @@
   </section>
 </section>
 
-<section id="idWhlrscFT">
-  <h1 id="idWhlrscFTH1">03_resource of whole
-    <a class="clsHide" href="#idWhlrscFTH1"></a></h1>
+<section id="idWhlprtN">
+  <h1 id="idWhlprtNH1">04_partNo|environment of whole
+    <a class="clsHide" href="#idWhlprtNH1"></a></h1>
+  <p id="idWhlprtNnam">name::
+    <br>* Mcs.whole'04_partNo,
+    <br>* Mcs.environment-of-whole,
+    <br>* Mcs.whole'environment,
+    <br>* Mcs.whole'partNo,
+    <a class="clsHide" href="#idWhlprtNnam"></a></p>
+  <p id="idWhlprtNdsn">description::
+    <br>· environment-of-whole[a] is any <a class="clsPreview" href="#idWhlatt001">attribute</a> of it[a] which is-not <a class="clsPreview" href="#idWhlprt">part</a>.
+    <a class="clsHide" href="#idWhlprtNdsn"></a></p>
+
+  <section id="idWhlprtNrln">
+  <h2 id="idWhlprtNrlnH2">partNo-relation of whole
+    <a class="clsHide" href="#idWhlprtNrlnH2"></a></h2>
+  <p id="idWhlprtNrlnnam">name::
+    <br>* Mcs.whole'partNo-relation,
+    <a class="clsHide" href="#idWhlprtNrlnnam"></a></p>
+  <p id="idWhlprtNrlndsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlprtNrlndsn"></a></p>
+  </section>
+</section>
+
+<section id="idWhlrscF">
+  <h1 id="idWhlrscFH1">05_resource of whole
+    <a class="clsHide" href="#idWhlrscFH1"></a></h1>
   <p id="idWhlrscnam">name::
     <br>* Mcs.whole'03_resource,
     <br>* Mcs.whole'resource,
@@ -166,11 +209,35 @@
     <a class="clsHide" href="#idWhlrscwpa"></a></p>
 </section>
 
-<section id="idWhlevgFT">
-  <h1 id="idWhlevgFTH1">04_EVOLUTING of whole
-    <a class="clsHide" href="#idWhlevgFTH1"></a></h1>
+<section id="idWhlsrtrF">
+  <h1 id="idWhlsrtrFH1">06_structure of whole
+    <a class="clsHide" href="#idWhlsrtrFH1"></a></h1>
+  <p id="idWhlsrtrFnam">name::
+    <br>* Mcs.whole'06_structure,
+    <br>* Mcs.whole'structure,
+    <a class="clsHide" href="#idWhlsrtrFnam"></a></p>
+  <p id="idWhlsrtrFdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhlsrtrFdsn"></a></p>
+</section>
+
+<section id="idWhldngF">
+  <h1 id="idWhldngFH1">07_DOING of whole
+    <a class="clsHide" href="#idWhldngFH1"></a></h1>
+  <p id="idWhldngFnam">name::
+    <br>* Mcs.whole'07_doing,
+    <br>* Mcs.whole'doing,
+    <a class="clsHide" href="#idWhldngFnam"></a></p>
+  <p id="idWhldngFdsn">description::
+    <br>·
+    <a class="clsHide" href="#idWhldngFdsn"></a></p>
+</section>
+
+<section id="idWhlevgF">
+  <h1 id="idWhlevgFH1">08_EVOLUTING of whole
+    <a class="clsHide" href="#idWhlevgFH1"></a></h1>
   <p id="idWhlevgnam">name::
-    <br>* Mcs.whole'04_evoluting,
+    <br>* Mcs.whole'08_evoluting,
     <br>* Mcs.whole'evoluting,
     <a class="clsHide" href="#idWhlevgnam"></a></p>
   <p id="idWhlevg20191022">{time.2019-10-22}::
@@ -206,9 +273,9 @@
     <br>* <a class="clsPreview" href="filMcsEnt.last.html#idOverview">entity</a>,
     <a class="clsHide" href="#idWhlgstgt"></a></p>
 
-  <section id="idWhlSpcFT">
-  <h2 id="idWhlSpcFTH2">whole.SPECIFIC
-    <a class="clsHide" href="#idWhlSpcFTH2"></a></h2>
+  <section id="idWhlSpcF">
+  <h2 id="idWhlSpcFH2">whole.SPECIFIC
+    <a class="clsHide" href="#idWhlSpcFH2"></a></h2>
   <p id="idWhlSpcnam">name::
     <br>* Mcs.whole.specific,
     <a class="clsHide" href="#idWhlSpcnam"></a></p>
@@ -231,29 +298,31 @@
   </section>
 </section>
 
-<section id="idWhlClcn">
-  <h1 id="idWhlClcnH1">whole.collection
-    <a class="clsHide" href="#idWhlClcnH1"></a></h1>
-  <p id="idWhlClcndsn">description::
-    <br>· collection is <a class="clsPreview" href="#idOverview">a-whole-entity</a> without <a class="clsPreview" href="filMcsEnt.last.html#idEntstrr">structure</a>.
+<section id="idWhl001">
+  <h1 id="idWhl001H1">whole.collection-001
+    <a class="clsHide" href="#idWhl001H1"></a></h1>
+  <p id="idWhl001dsn">description::
+    <br>· collection is <a class="clsPreview" href="#idOverview">a-whole-entity</a> without PART <a class="clsPreview" href="filMcsEnt.last.html#idEntstrr">structure</a>.
     <br><img src="filMcsWhl.files/collection.jpg">
-    <a class="clsHide" href="#idWhlClcndsn"></a></p>
-  <p id="idWhlClcnnam">name::
+    <a class="clsHide" href="#idWhl001dsn"></a></p>
+  <p id="idWhl001nam">name::
+    <br>* Mcs.whole.001-collection!⇒collection,
+    <br>* Mcs.whole.collection-001!⇒collection,
+    <br>* Mcs.wholeCollection!⇒collection,
     <br>* Mcs.collection,
-    <br>* Mcs.whole.collection,
     <br>====== langoKomo:
     <br>* McsKmo.co-kolekto!=collection,
     <br>====== langoGreek:
     <br>* McsEll.συλλογή!=collection,
-    <a class="clsHide" href="#idWhlClcnnam"></a></p>
+    <a class="clsHide" href="#idWhl001nam"></a></p>
 
-  <section id="idWhlClcnelt">
-  <h2 id="idWhlClcneltH2">01_element of collection
-    <a class="clsHide" href="#idWhlClcneltH2"></a></h2>
-  <p id="idWhlClcneltdsn">description::
+  <section id="idWhl001elt">
+  <h2 id="idWhl001eltH2">01_element of collection
+    <a class="clsHide" href="#idWhl001eltH2"></a></h2>
+  <p id="idWhl001eltdsn">description::
     <br>· element-of-collection is any part of it.
-    <a class="clsHide" href="#idWhlClcneltdsn"></a></p>
-  <p id="idWhlClcneltnam">name::
+    <a class="clsHide" href="#idWhl001eltdsn"></a></p>
+  <p id="idWhl001eltnam">name::
     <br>* Mcs.collection'01_element,
     <br>* Mcs.collection'element,
     <br>* Mcs.collection'member,
@@ -263,52 +332,52 @@
     <br>====== langoGreek:
     <br>* McsEll.μέλος-συλλογής,
     <br>* McsEll.στοιχείο-συλλογής,
-    <a class="clsHide" href="#idWhlClcneltnam"></a></p>
+    <a class="clsHide" href="#idWhl001eltnam"></a></p>
   </section>
 
-  <section id="idWhlClcnDplt">
-  <h2 id="idWhlClcnDpltH2">collection.duplicate
-    <a class="clsHide" href="#idWhlClcnDpltH2"></a></h2>
-  <p id="idWhlClcnDpltdsn">description::
-    <br>· duplicate-collection is <a class="clsPreview" href="#idWhlClcn">a-collection</a> WITH duplicate <a class="clsPreview" href="#idWhlClcnelt">elements</a>.
-    <a class="clsHide" href="#idWhlClcnDpltdsn"></a></p>
-  <p id="idWhlClcnDpltnam">name::
+  <section id="idWhl001Dplt">
+  <h2 id="idWhl001DpltH2">collection.duplicate
+    <a class="clsHide" href="#idWhl001DpltH2"></a></h2>
+  <p id="idWhl001Dpltdsn">description::
+    <br>· duplicate-collection is <a class="clsPreview" href="#idWhl001">a-collection</a> WITH duplicate <a class="clsPreview" href="#idWhl001elt">elements</a>.
+    <a class="clsHide" href="#idWhl001Dpltdsn"></a></p>
+  <p id="idWhl001Dpltnam">name::
     <br>* Mcs.collection.duplicate,
     <br>* Mcs.duplicate-collection,
-    <a class="clsHide" href="#idWhlClcnDpltnam"></a></p>
+    <a class="clsHide" href="#idWhl001Dpltnam"></a></p>
   </section>
 
-  <section id="idWhlClcnSet">
-  <h2 id="idWhlClcnSetH2">collection.duplicateNo (set)
-    <a class="clsHide" href="#idWhlClcnSetH2"></a></h2>
-  <p id="idWhlClcnSetdsn">description::
-    <br>· set is <a class="clsPreview" href="#idWhlClcn">a-collection</a> WITHOUT duplicate <a class="clsPreview" href="#idWhlClcnelt">elements</a>.
+  <section id="idWhl001Set">
+  <h2 id="idWhl001SetH2">collection.duplicateNo (set)
+    <a class="clsHide" href="#idWhl001SetH2"></a></h2>
+  <p id="idWhl001Setdsn">description::
+    <br>· set is <a class="clsPreview" href="#idWhl001">a-collection</a> WITHOUT duplicate <a class="clsPreview" href="#idWhl001elt">elements</a>.
     <br><img src="filMcsWhl.files/collection.set.jpg">
-    <a class="clsHide" href="#idWhlClcnSetdsn"></a></p>
-  <p id="idWhlClcnSetnam">name::
+    <a class="clsHide" href="#idWhl001Setdsn"></a></p>
+  <p id="idWhl001Setnam">name::
     <br>* Mcs.collection.duplicateNo,
     <br>* Mcs.collection.set,
     <br>* Mcs.set,
     <br>====== langoKomo:
     <br>* McsKmo.seto!=set,
-    <a class="clsHide" href="#idWhlClcnSetnam"></a></p>
+    <a class="clsHide" href="#idWhl001Setnam"></a></p>
 
-  <section id="idWhlClcnSetdng">
-  <h3 id="idWhlClcnSetdngH3">doing of set
-    <a class="clsHide" href="#idWhlClcnSetdngH3"></a></h3>
-  <p id="idWhlClcnSetdngdsn">description::
+  <section id="idWhl001Setdng">
+  <h3 id="idWhl001SetdngH3">doing of set
+    <a class="clsHide" href="#idWhl001SetdngH3"></a></h3>
+  <p id="idWhl001Setdngdsn">description::
     <br>* union,
     <br>* intersection,
-    <a class="clsHide" href="#idWhlClcnSetdngdsn"></a></p>
-  <p id="idWhlClcnSetdngnam">name::
+    <a class="clsHide" href="#idWhl001Setdngdsn"></a></p>
+  <p id="idWhl001Setdngnam">name::
     <br>* Mcs.set'doing,
     <br>* Mcs.set'operation,
-    <a class="clsHide" href="#idWhlClcnSetdngnam"></a></p>
+    <a class="clsHide" href="#idWhl001Setdngnam"></a></p>
 
-  <section id="idWhlClcnSetdngUnn">
-  <h4 id="idWhlClcnSetdngUnnH4">set'doing.union
-    <a class="clsHide" href="#idWhlClcnSetdngUnnH4"></a></h4>
-  <p id="idWhlClcnSetdngUnndsn">description::
+  <section id="idWhl001SetdngUnn">
+  <h4 id="idWhl001SetdngUnnH4">set'doing.union
+    <a class="clsHide" href="#idWhl001SetdngUnnH4"></a></h4>
+  <p id="idWhl001SetdngUnndsn">description::
     <br>"Two sets can be "added" together. The union of A and B, denoted by A ∪ B, is the set of all things that are members of either A or B.
     <br>Examples:
     <br>- {1, 2} ∪ {1, 2} = {1, 2}.
@@ -322,17 +391,18 @@
     <br>- A ∪ ∅ = A.
     <br>- A ⊆ B if and only if A ∪ B = B."
     <br>[https://en.wikipedia.org/wiki/Set_(mathematics)#Unions]
-    <a class="clsHide" href="#idWhlClcnSetdngUnndsn"></a></p>
-  <p id="idWhlClcnSetdngUnnnam">name::
+    <a class="clsHide" href="#idWhl001SetdngUnndsn"></a></p>
+  <p id="idWhl001SetdngUnnnam">name::
+    <br>* Mcs.set'doing.union,
     <br>* Mcs.set'union,
     <br>* Mcs.union-of-set,
-    <a class="clsHide" href="#idWhlClcnSetdngUnnnam"></a></p>
+    <a class="clsHide" href="#idWhl001SetdngUnnnam"></a></p>
   </section>
 
-  <section id="idWhlClcnSetdngIsn">
-  <h4 id="idWhlClcnSetdngIsnH4">set'doing.intersection
-    <a class="clsHide" href="#idWhlClcnSetdngIsnH4"></a></h4>
-  <p id="idWhlClcnSetdngIsndsn">description::
+  <section id="idWhl001SetdngIsn">
+  <h4 id="idWhl001SetdngIsnH4">set'doing.intersection
+    <a class="clsHide" href="#idWhl001SetdngIsnH4"></a></h4>
+  <p id="idWhl001SetdngIsndsn">description::
     <br>"A new set can also be constructed by determining which members two sets have "in common". The intersection of A and B, denoted by A ∩ B, is the set of all things that are members of both A and B. If A ∩ B = ∅, then A and B are said to be disjoint.
     <br>The intersection of A and B, denoted A ∩ B.
     <br>Examples:
@@ -347,1581 +417,45 @@
     <br>- A ∩ ∅ = ∅.
     <br>- A ⊆ B if and only if A ∩ B = A."
     <br>[https://en.wikipedia.org/wiki/Set_(mathematics)#Intersections]
-    <a class="clsHide" href="#idWhlClcnSetdngIsndsn"></a></p>
-  <p id="idWhlClcnSetdngIsnnam">name::
+    <a class="clsHide" href="#idWhl001SetdngIsndsn"></a></p>
+  <p id="idWhl001SetdngIsnnam">name::
     <br>* Mcs.intersection-of-set,
+    <br>* Mcs.set'doing.intersection,
     <br>* Mcs.set'intersection,
-    <a class="clsHide" href="#idWhlClcnSetdngIsnnam"></a></p>
+    <a class="clsHide" href="#idWhl001SetdngIsnnam"></a></p>
   </section>
   </section>
   </section>
 
-  <section id="idWhlClcnBdyMtr">
-  <h2 id="idWhlClcnBdyMtrH2">collection.material-body
-    <a class="clsHide" href="#idWhlClcnBdyMtrH2"></a></h2>
-  <p id="idWhlClcnBdyMtrdsn">description::
-    <br>· a-material-body which is <a class="clsPreview" href="#idWhlClcn">a-collection</a> of <a class="clsPreview" href="../dirNtr/filMcsMtrl.last.html#idOverview">material-bodies</a>.
-    <a class="clsHide" href="#idWhlClcnBdyMtrdsn"></a></p>
-  <p id="idWhlClcnBdyMtrnam">name::
+  <section id="idWhl001BdyMtr">
+  <h2 id="idWhl001BdyMtrH2">collection.material-body
+    <a class="clsHide" href="#idWhl001BdyMtrH2"></a></h2>
+  <p id="idWhl001BdyMtrdsn">description::
+    <br>· a-material-body which is <a class="clsPreview" href="#idWhl001">a-collection</a> of <a class="clsPreview" href="../dirNtr/filMcsMtrl.last.html#idOverview">material-bodies</a>.
+    <a class="clsHide" href="#idWhl001BdyMtrdsn"></a></p>
+  <p id="idWhl001BdyMtrnam">name::
     <br>* Mcs.bodyMtr.collection,
     <br>* Mcs.collection.bodyMtr,
     <br>* Mcs.collection-material-body,
-    <a class="clsHide" href="#idWhlClcnBdyMtrnam"></a></p>
+    <a class="clsHide" href="#idWhl001BdyMtrnam"></a></p>
   </section>
 </section>
 
-<section id="idWhlSys">
-  <h1 id="idWhlSysH1">whole.system
-    <a class="clsHide" href="#idWhlSysH1"></a></h1>
-  <p id="idWhlSysdfn">definition::
-    <br><span id="idWhlSysdfnSpc">specific:
-    <br>· system is a-whole-entity with structure (parts and part-relations).
-    <a class="clsHide" href="#idWhlSysdfnSpc"></a></span>
-    <br>
-    <br><span id="idWhlSysdfnGnc">generic:
-    <br>·
-    <a class="clsHide" href="#idWhlSysdfnGnc"></a></span>
-    <br>
-    <br><span id="idWhlSysdfnPrt">part:
-    <br>·
-    <a class="clsHide" href="#idWhlSysdfnPrt"></a></span>
-    <br>
-    <br><span id="idWhlSysdfnWhl">whole:
-    <br>· nodes and node-relations make-up a-system.
-    <a class="clsHide" href="#idWhlSysdfnWhl"></a></span>
-    <a class="clsHide" href="#idWhlSysdfn"></a></p>
-  <p id="idWhlSysdsn">description::
-    <br>· system is <a class="clsPreview" href="#idOverview">a-whole-entity</a> WITH <a class="clsPreview" href="filMcsEnt.last.html#idEntstrr">structure</a> (= parts AND part-relations).
-    <br><img src="filMcsWhl.files/system.jpg">
-    <a class="clsHide" href="#idWhlSysdsn"></a></p>
-  <p id="idWhlSysnam">name::
-    <br>* Mcs.SYSTEM,
-    <br>* Mcs.system,
-    <br>* Mcs.whole.system,
-    <br>====== langoKomo:
-    <br>* McsKmo.co-sisto!=whole.system,
-    <br>* McsKmo.sisto!=system,
-    <a class="clsHide" href="#idWhlSysnam"></a></p>
-
-  <section id="idWhlSysnodeF">
-  <h2 id="idWhlSysnodeFH2">01_node of system
-    <a class="clsHide" href="#idWhlSysnodeFH2"></a></h2>
-  <p id="idWhlSysnodeFdsn">description::
-    <br>· a-system as <a class="clsPreview" href="#idOverview">a-whole</a>, have parts which are-called 'nodes'.
-    <br>· node could-be any entity, NOT only <a class="clsPreview" href="filMcsEnt.last.html#idEntBody">bodies</a>.
-    <a class="clsHide" href="#idWhlSysnodeFdsn"></a></p>
-  <p id="idWhlSysnodeFnam">name::
-    <br>* Mcs.system'01_node,
-    <br>* Mcs.system'node,
-    <br>* Mcs.node-of-system,
-    <br>====== langoKomo:
-    <br>* McsKmo.jo-ruo-a-sisto,
-    <br>* McsKmo.sistos-jo-ruo,
-    <br>====== langoGreek:
-    <br>* McsEll.κόμβος-συστήματος,
-    <a class="clsHide" href="#idWhlSysnodeFnam"></a></p>
-  </section>
-
-  <section id="idWhlSysndrn">
-  <h2 id="idWhlSysndrnH2">02_node-relation of system
-    <a class="clsHide" href="#idWhlSysndrnH2"></a></h2>
-  <p id="idWhlSysndrndsn">description::
-    <br>· the-thing that differentiates a-system from a-collection, which both are <a class="clsPreview" href="#idOverview">wholes</a>, is that a-system, except its parts, has AND relations among these parts.
-    <a class="clsHide" href="#idWhlSysndrndsn"></a></p>
-  <p id="idWhlSysndrnnam">name::
-    <br>* Mcs.system'02_node-relation,
-    <br>* Mcs.edge-of-system,
-    <br>* Mcs.system'edge,
-    <br>====== langoKomo:
-    <br>* McsKmo.ro-jo--a-sisto,
-    <br>* McsKmo.sistos-ro-jo,
-    <br>====== langoGreek:
-    <br>* McsEll.σχέση-κόμβου--συστήματος,
-    <a class="clsHide" href="#idWhlSysndrnnam"></a></p>
-  </section>
-
-  <section id="idWhlSysstrrT">
-  <h2 id="idWhlSysstrrTH2">03_structure of system
-    <a class="clsHide" href="#idWhlSysstrrTH2"></a></h2>
-  <p id="idWhlSysstrrTdsn">description::
-    <br>· structure of a-system is its <a class="clsPreview" href="#idWhlSysnodeF">nodes</a> AND its <a class="clsPreview" href="#idWhlSysndrn">node-relations</a>.
-    <br><img src="filMcsWhl.files/system'structure.jpg">
-    <a class="clsHide" href="#idWhlSysstrrTdsn"></a></p>
-  <p id="idWhlSysstrrTnam">name::
-    <br>* Mcs.system'03_structure,
-    <br>* Mcs.structure-of-system,
-    <br>====== langoKomo:
-    <br>* McsKmo.sistos-strukto!=system's-structure,
-    <br>* McsKmo.strukto-a-sisto!=structure-of-system,
-    <br>====== langoGreek:
-    <br>* McsEll.δομή-συστήματος!=structure-of-system,
-    <a class="clsHide" href="#idWhlSysstrrTnam"></a></p>
-  </section>
-
-  <section id="idWhlSyssciFT">
-  <h2 id="idWhlSyssciFTH2">science of system
-    <a class="clsHide" href="#idWhlSyssciFTH2"></a></h2>
-  <p id="idWhlSyssciFTdsn">description::
-    <br>· <a class="clsPreview" href="../dirEdu/filMcsSci.last.html#idOverview">the-science</a> on systems.
-    <br>* systems-theory,
-    <a class="clsHide" href="#idWhlSyssciFTdsn"></a></p>
-  <p id="idWhlSyssciFTnam">name::
-    <br>* Mcs.science.system,
-    <br>* Mcs.system'science,
-    <a class="clsHide" href="#idWhlSyssciFTnam"></a></p>
-
-  <section id="idWhlSysscismsthr">
-  <h3 id="idWhlSysscismsthrH3">systems-theory of system
-    <a class="clsHide" href="#idWhlSysscismsthrH3"></a></h3>
-  <p id="idWhlSysscismsthrdsn">description::
-    <br>"Systems theory is the interdisciplinary study of systems. A system is a cohesive conglomeration of interrelated and interdependent parts that is either natural or man-made. Every system is delineated by its spatial and temporal boundaries, surrounded and influenced by its environment, described by its structure and purpose or nature and expressed in its functioning. In terms of its effects, a system can be more than the sum of its parts if it expresses synergy or emergent behavior. Changing one part of the system usually affects other parts and the whole system, with predictable patterns of behavior. For systems that are self-learning and self-adapting, the positive growth and adaptation depend upon how well the system is adjusted with its environment. Some systems function mainly to support other systems by aiding in the maintenance of the other system to prevent failure. The goal of systems theory is systematically discovering a system's dynamics, constraints, conditions and elucidating principles (purpose, measure, methods, tools, etc.) that can be discerned and applied to systems at every level of nesting, and in every field for achieving optimized equifinality.[1]
-    <br>General systems theory is about broadly applicable concepts and principles, as opposed to concepts and principles applicable to one domain of knowledge. It distinguishes dynamic or active systems from static or passive systems. Active systems are activity structures or components that interact in behaviours and processes. Passive systems are structures and components that are being processed. E.g. a program is passive when it is a disc file and active when it runs in memory.[2] The field is related to systems thinking, machine logic and systems engineering."
-    <br>[https://en.wikipedia.org/wiki/Systems_theory {2019-12-22}]
-    <a class="clsHide" href="#idWhlSysscismsthrdsn"></a></p>
-  <p id="idWhlSysscismsthrnam">name::
-    <br>* Mcs.systems-theory,
-    <a class="clsHide" href="#idWhlSysscismsthrnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idWhlSysgnc">
-  <h2 id="idWhlSysgncH2">GENERIC of system
-    <a class="clsHide" href="#idWhlSysgncH2"></a></h2>
-  <p id="idWhlSysgncdsn">description::
-    <br>* <a class="clsPreview" href="#idOverview">whole-entity</a>,
-    <a class="clsHide" href="#idWhlSysgncdsn"></a></p>
-  <p id="idWhlSysgncnam">name::
-    <br>* Mcs.system'generic,
-    <a class="clsHide" href="#idWhlSysgncnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSpc">
-  <h2 id="idWhlSysSpcH2">system.SPECIFIC
-    <a class="clsHide" href="#idWhlSysSpcH2"></a></h2>
-  <p id="idWhlSysSpcdsn">description::
-    <br>* <a class="clsPreview" href="#idWhlSysGrf">graph</a>,
-    <br>* <a class="clsPreview" href="#idWhlSysSqc">sequence</a>,
-    <br>* <a class="clsPreview" href="#idWhlSysTri">tree-system</a>,
-    <br>===
-    <br>* system.structure.complex,
-    <br>* system.structure.medium,
-    <br>* system.structure.simple,
-    <br>===
-    <br>* <a class="clsPreview" href="#idWhlSysBdy">body-system</a>,
-    <br>* doing-system,
-    <br>* relation-system,
-    <br>===
-    <br>* <a class="clsPreview" href="../dirNtr/filMcsBio.last.html#idOverview">bio-system</a>,
-    <br>* <a class="clsPreview" href="../dirNtr/filMcsBioNo.last.html#idOverview">bioNo-system</a>,
-    <br>===
-    <br>* <a class="clsPreview" href="../dirNtr/filMcsSysDnmc.last.html#idOverview">dynamic-system</a>,
-    <br>* <a class="clsPreview" href="#idWhlSysDnmcN">dynamicNo-system</a>,
-    <br>===
-    <br>* open-system,
-    <br>* openNo-system,
-    <a class="clsHide" href="#idWhlSysSpcdsn"></a></p>
-  <p id="idWhlSysSpcnam">name::
-    <br>* Mcs.system.specific,
-    <a class="clsHide" href="#idWhlSysSpcnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqc">
-  <h2 id="idWhlSysSqcH2">system.sequence
-    <a class="clsHide" href="#idWhlSysSqcH2"></a></h2>
-  <p id="idWhlSysSqcdsn">description::
-    <br>· sequence is <a class="clsPreview" href="#idWhlSys">a-system</a>, the-simplest one, with its parts arranged.
-    <br><img src="filMcsWhl.files/system.sequence.jpg">
-    <br>===
-    <br>"(n) ordering, order, ordination (logical or comprehensible arrangement of separate elements) "we shall consider these questions in the inverse order of their presentation""
-    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=order]
-    <br>"(n) series (similar things placed in order or happening one after another) "they were investigating a series of bank robberies""
-    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=series]
-    <br>"(n) sequence (serial arrangement in which things follow in logical order or a recurrent pattern) "the sequence of names was alphabetical"; "he invented a technique to determine the sequence of base pairs in DNA""
-    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=sequence]
-    <a class="clsHide" href="#idWhlSysSqcdsn"></a></p>
-  <p id="idWhlSysSqcnam">name::
-    <br>* Mcs.list,
-    <br>* Mcs.order-system,
-    <br>* Mcs.ordering,
-    <br>* Mcs.ordination,
-    <br>* Mcs.sequence,
-    <br>* Mcs.series,
-    <br>* Mcs.system.ordered,
-    <br>* Mcs.system.sequence,
-    <br>====== langoKomo:
-    <br>* McsKmo.siro!=sequence,
-    <br>* McsKmo.sisto-siro!=sequence,
-    <br>====== langoGreek:
-    <br>* McsEll.ακολουθία,
-    <br>* McsEll.λίστα,
-    <br>* McsEll.σειρά,
-    <a class="clsHide" href="#idWhlSysSqcnam"></a></p>
-
-  <section id="idWhlSysSqcelt">
-  <h3 id="idWhlSysSqceltH3">element of sequence
-    <a class="clsHide" href="#idWhlSysSqceltH3"></a></h3>
-  <p id="idWhlSysSqceltdsn">description::
-    <br>· element-of-sequence is any of its parts.
-    <a class="clsHide" href="#idWhlSysSqceltdsn"></a></p>
-  <p id="idWhlSysSqceltnam">name::
-    <br>* Mcs.sequence'element,
-    <br>====== langoKomo:
-    <br>* McsKmo.jo-ruo-a-sistoSiro!=sequence'element,
-    <br>* McsKmo.saro!=sequence'element,
-    <br>* McsKmo.sistosSiros-jo-ruo!=sequence'element,
-    <a class="clsHide" href="#idWhlSysSqceltnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr">
-  <h3 id="idWhlSysSqcordrH3">abstract-order of sequence
-    <a class="clsHide" href="#idWhlSysSqcordrH3"></a></h3>
-  <p id="idWhlSysSqcordrdsn">description::
-    <br>· abstract-order[a] of sequence is the-position of <a class="clsPreview" href="#idWhlSysSqcelt">an-element</a> WITHOUT the-element.
-    <br>· it[a] is similar to <a class="clsPreview" href="filMcsQnt.last.html#idOverview">abstract-quantity</a>.
-    <a class="clsHide" href="#idWhlSysSqcordrdsn"></a></p>
-  <p id="idWhlSysSqcordrnam">name::
-    <br>* Mcs.abstract-order!⇒order,
-    <br>* Mcs.order,
-    <br>* Mcs.position-of-order!⇒order,
-    <br>* Mcs.sequence'order!⇒order,
-    <br>* Mcs.sequence'position!⇒order,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro!=abstract-order,
-    <a class="clsHide" href="#idWhlSysSqcordrnam"></a></p>
-
-  <section id="idWhlSysSqcordnbr">
-  <h4 id="idWhlSysSqcordnbrH4">ordinal-number of sequence
-    <a class="clsHide" href="#idWhlSysSqcordnbrH4"></a></h4>
-  <p id="idWhlSysSqcordnbrdsn">description::
-    <br>· ordinal-number is a-name of <a class="clsPreview" href="#idWhlSysSqcordr">an-order</a>.
-    <a class="clsHide" href="#idWhlSysSqcordnbrdsn"></a></p>
-  <p id="idWhlSysSqcordnbrnam">name::
-    <br>* Mcs.ordinal-number,
-    <a class="clsHide" href="#idWhlSysSqcordnbrnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordrSpc">
-  <h4 id="idWhlSysSqcordrSpcH4">order.SPECIFIC
-    <a class="clsHide" href="#idWhlSysSqcordrSpcH4"></a></h4>
-  <p id="idWhlSysSqcordrSpcdsn">description::
-    <br>* first-1st,
-    <br>* second-2nd,
-    <br>* third-3rd,
-    <br>* forth-4th,
-    <br>* fifth-6th,
-    <br>...
-    <a class="clsHide" href="#idWhlSysSqcordrSpcdsn"></a></p>
-  <p id="idWhlSysSqcordrSpcnam">name::
-    <br>* Mcs.order.specific,
-    <a class="clsHide" href="#idWhlSysSqcordrSpcnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr1st">
-  <h4 id="idWhlSysSqcordr1stH4">order.1st
-    <a class="clsHide" href="#idWhlSysSqcordr1stH4"></a></h4>
-  <p id="idWhlSysSqcordr1stdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr1stdsn"></a></p>
-  <p id="idWhlSysSqcordr1stnam">name::
-    <br>* Mcs.1st,
-    <br>* Mcs.first,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-fo!=1st,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.unua,
-    <br>====== langoGreek:
-    <br>* McsEll.πρώτος!~adjvEll:πρώτος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr1stnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr2nd">
-  <h4 id="idWhlSysSqcordr2ndH4">order.2nd
-    <a class="clsHide" href="#idWhlSysSqcordr2ndH4"></a></h4>
-  <p id="idWhlSysSqcordr2nddsn">description::
-    <br>"(n) second (following the first in an ordering or series) "he came in a close second""
-    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=second]
-    <a class="clsHide" href="#idWhlSysSqcordr2nddsn"></a></p>
-  <p id="idWhlSysSqcordr2ndnam">name::
-    <br>* Mcs.2nd,
-    <br>* Mcs.second,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-tho!=2nd,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.dua,
-    <br>====== langoGreek:
-    <br>* McsEll.δεύτερος!~adjvEll:δεύτερος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr2ndnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr3rd">
-  <h4 id="idWhlSysSqcordr3rdH4">order.3rd
-    <a class="clsHide" href="#idWhlSysSqcordr3rdH4"></a></h4>
-  <p id="idWhlSysSqcordr3rddsn">description::
-    <br>· abstract-order third.
-    <br>"(n) third (following the second position in an ordering or series) "a distant third"; "he answered the first question willingly, the second reluctantly, and the third with resentment""
-    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=third]
-    <a class="clsHide" href="#idWhlSysSqcordr3rddsn"></a></p>
-  <p id="idWhlSysSqcordr3rdnam">name::
-    <br>* Mcs.3rd,
-    <br>* Mcs.third,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-to!=3rd,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.tria,
-    <br>====== langoGreek:
-    <br>* McsEll.τρίτος!~adjvEll:τρίτος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr3rdnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr4th">
-  <h4 id="idWhlSysSqcordr4thH4">order.4th
-    <a class="clsHide" href="#idWhlSysSqcordr4thH4"></a></h4>
-  <p id="idWhlSysSqcordr4thdsn">description::
-    <br>· abstract-order fourth.
-    <a class="clsHide" href="#idWhlSysSqcordr4thdsn"></a></p>
-  <p id="idWhlSysSqcordr4thnam">name::
-    <br>* Mcs.4th,
-    <br>* Mcs.fourth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-so!=4th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.kvara,
-    <br>====== langoGreek:
-    <br>* McsEll.τέταρτος!~adjvEll:τέταρτος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr4thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr5">
-  <h4 id="idWhlSysSqcordr5H4">order.5th
-    <a class="clsHide" href="#idWhlSysSqcordr5H4"></a></h4>
-  <p id="idWhlSysSqcordr5dsn">description::
-    <br>· abstract-order fifth.
-    <a class="clsHide" href="#idWhlSysSqcordr5dsn"></a></p>
-  <p id="idWhlSysSqcordr5nam">name::
-    <br>* Mcs.5th,
-    <br>* Mcs.fifth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-co!=5th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.kvina,
-    <br>====== langoGreek:
-    <br>* McsEll.πέντε!~το,
-    <a class="clsHide" href="#idWhlSysSqcordr5nam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr6th">
-  <h4 id="idWhlSysSqcordr6thH4">order.6th
-    <a class="clsHide" href="#idWhlSysSqcordr6thH4"></a></h4>
-  <p id="idWhlSysSqcordr6thdsn">description::
-    <br>· abstract-order six.
-    <br>"(n) sixth (position six in a countable series of things)"
-    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=sixth]
-    <a class="clsHide" href="#idWhlSysSqcordr6thdsn"></a></p>
-  <p id="idWhlSysSqcordr6thnam">name::
-    <br>* Mcs.6th,
-    <br>* Mcs.sixth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-ko!=6th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.sesa,
-    <br>====== langoGreek:
-    <br>* McsEll.έκτος!~adjvEll:έκτος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr6thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr7th">
-  <h4 id="idWhlSysSqcordr7thH4">order.7th
-    <a class="clsHide" href="#idWhlSysSqcordr7thH4"></a></h4>
-  <p id="idWhlSysSqcordr7thdsn">description::
-    <br>· abstract-order seventh.
-    <a class="clsHide" href="#idWhlSysSqcordr7thdsn"></a></p>
-  <p id="idWhlSysSqcordr7thnam">name::
-    <br>* Mcs.7th,
-    <br>* Mcs.seventh,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-ho!=7th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.sepa,
-    <br>====== langoGreek:
-    <br>* McsEll.εφτά!~το,
-    <a class="clsHide" href="#idWhlSysSqcordr7thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr8th">
-  <h4 id="idWhlSysSqcordr8thH4">order.8th
-    <a class="clsHide" href="#idWhlSysSqcordr8thH4"></a></h4>
-  <p id="idWhlSysSqcordr8thdsn">description::
-    <br>· abstract-order eighth.
-    <a class="clsHide" href="#idWhlSysSqcordr8thdsn"></a></p>
-  <p id="idWhlSysSqcordr8thnam">name::
-    <br>* Mcs.8th,
-    <br>* Mcs.eighth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-mo!=8th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.oka,
-    <br>====== langoGreek:
-    <br>* McsEll.όγδοος!~adjvEll:όγδοος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr8thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr9th">
-  <h4 id="idWhlSysSqcordr9thH4">order.9th
-    <a class="clsHide" href="#idWhlSysSqcordr9thH4"></a></h4>
-  <p id="idWhlSysSqcordr9thdsn">description::
-    <br>· abstract-order nine.
-    <a class="clsHide" href="#idWhlSysSqcordr9thdsn"></a></p>
-  <p id="idWhlSysSqcordr9thnam">name::
-    <br>* Mcs.9th,
-    <br>* Mcs.ninth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-ro!=9th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.naŭa,
-    <br>====== langoGreek:
-    <br>* McsEll.ένατος!~adjvEll:ένατος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr9thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr10th">
-  <h4 id="idWhlSysSqcordr10thH4">order.10th
-    <a class="clsHide" href="#idWhlSysSqcordr10thH4"></a></h4>
-  <p id="idWhlSysSqcordr10thdsn">description::
-    <br>· abstract-order ten.
-    <a class="clsHide" href="#idWhlSysSqcordr10thdsn"></a></p>
-  <p id="idWhlSysSqcordr10thnam">name::
-    <br>* Mcs.10th,
-    <br>* Mcs.tenth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-foPo!=10th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.deka,
-    <br>====== langoGreek:
-    <br>* McsEll.δέκατος!~adjvEll:δέκατος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr10thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr11th">
-  <h4 id="idWhlSysSqcordr11thH4">order.11th
-    <a class="clsHide" href="#idWhlSysSqcordr11thH4"></a></h4>
-  <p id="idWhlSysSqcordr11thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr11thdsn"></a></p>
-  <p id="idWhlSysSqcordr11thnam">name::
-    <br>* Mcs.11th,
-    <br>* Mcs.eleventh,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-foFo!=11th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.dekunua,
-    <br>====== langoGreek:
-    <br>* McsEll.ενδέκατος!~adjvEll:ενδέκατος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr11thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr12th">
-  <h4 id="idWhlSysSqcordr12thH4">order.12th
-    <a class="clsHide" href="#idWhlSysSqcordr12thH4"></a></h4>
-  <p id="idWhlSysSqcordr12thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr12thdsn"></a></p>
-  <p id="idWhlSysSqcordr12thnam">name::
-    <br>* Mcs.12th,
-    <br>* Mcs.twelfth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-foTho!=12th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.dekdua,
-    <br>====== langoGreek:
-    <br>* McsEll.δωδέκατος!~adjvEll:δωδέκατος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr12thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr13th">
-  <h4 id="idWhlSysSqcordr13thH4">order.13th
-    <a class="clsHide" href="#idWhlSysSqcordr13thH4"></a></h4>
-  <p id="idWhlSysSqcordr13thdsn">description::
-    <br>"(n) thirteenth (position 13 in a countable series of things)"
-    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=thirteenth]
-    <a class="clsHide" href="#idWhlSysSqcordr13thdsn"></a></p>
-  <p id="idWhlSysSqcordr13thnam">name::
-    <br>* Mcs.13th,
-    <br>* Mcs.thirteenth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-foTho!=13th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.dektria,
-    <br>====== langoGreek:
-    <br>* McsEll.δέκατος-τρίτος!~adjvEll:δέκατος-τρίτος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr13thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr20th">
-  <h4 id="idWhlSysSqcordr20thH4">order.20th
-    <a class="clsHide" href="#idWhlSysSqcordr20thH4"></a></h4>
-  <p id="idWhlSysSqcordr20thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr20thdsn"></a></p>
-  <p id="idWhlSysSqcordr20thnam">name::
-    <br>* Mcs.20th,
-    <br>* Mcs.twentieth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-thoPo!=20th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.dudeka,
-    <br>====== langoGreek:
-    <br>* McsEll.εικοσιοστός!~adjvEll:εικοσιοστός-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr20thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr21st">
-  <h4 id="idWhlSysSqcordr21stH4">order.21st
-    <a class="clsHide" href="#idWhlSysSqcordr21stH4"></a></h4>
-  <p id="idWhlSysSqcordr21stdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr21stdsn"></a></p>
-  <p id="idWhlSysSqcordr21stnam">name::
-    <br>* Mcs.21st,
-    <br>* Mcs.twentieth-first,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-thoPo!=21st,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.dudeka-unua,
-    <br>====== langoGreek:
-    <br>* McsEll.εικοσιοστός-πρώτος!~adjvEll:εικοσιοστός-πρώτος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr21stnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr99th">
-  <h4 id="idWhlSysSqcordr99thH4">order.99th
-    <a class="clsHide" href="#idWhlSysSqcordr99thH4"></a></h4>
-  <p id="idWhlSysSqcordr99thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr99thdsn"></a></p>
-  <p id="idWhlSysSqcordr99thnam">name::
-    <br>* Mcs.99th,
-    <br>* Mcs.ninetieth-ninth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-roRo!=99th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.naŭdeka-naŭa,
-    <br>====== langoGreek:
-    <br>* McsEll.ενενηκοστός-ένατος!~adjvEll:ενενηκοστός-ένατος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr99thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr100th">
-  <h4 id="idWhlSysSqcordr100thH4">order.100th
-    <a class="clsHide" href="#idWhlSysSqcordr100thH4"></a></h4>
-  <p id="idWhlSysSqcordr100thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr100thdsn"></a></p>
-  <p id="idWhlSysSqcordr100thnam">name::
-    <br>* Mcs.100th,
-    <br>* Mcs.hundredth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-foPoPo!=100th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.centa,
-    <br>====== langoGreek:
-    <br>* McsEll.εκατοστός!~adjvEll:εκατοστός-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr100thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr101st">
-  <h4 id="idWhlSysSqcordr101stH4">order.101st
-    <a class="clsHide" href="#idWhlSysSqcordr101stH4"></a></h4>
-  <p id="idWhlSysSqcordr101stdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr101stdsn"></a></p>
-  <p id="idWhlSysSqcordr101stnam">name::
-    <br>* Mcs.101st,
-    <br>* Mcs.one-hundredth-first,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-foPoFo!=101st,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.centa-unua,
-    <br>====== langoGreek:
-    <br>* McsEll.εκατοστός-πρώτος!~adjvEll:εκατοστός-πρώτος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr101stnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr200th">
-  <h4 id="idWhlSysSqcordr200thH4">order.200th
-    <a class="clsHide" href="#idWhlSysSqcordr200thH4"></a></h4>
-  <p id="idWhlSysSqcordr200thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr200thdsn"></a></p>
-  <p id="idWhlSysSqcordr200thnam">name::
-    <br>* Mcs.200th,
-    <br>* Mcs.two-hundredth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-thoPoPo!=200th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.ducenta,
-    <br>====== langoGreek:
-    <br>* McsEll.διακοσιοστός!~adjvEll:διακοσιοστός-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr200thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr999st">
-  <h4 id="idWhlSysSqcordr999stH4">order.999th
-    <a class="clsHide" href="#idWhlSysSqcordr999stH4"></a></h4>
-  <p id="idWhlSysSqcordr999stdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr999stdsn"></a></p>
-  <p id="idWhlSysSqcordr999stnam">name::
-    <br>* Mcs.999th,
-    <br>* Mcs.nine-hundredth-ninetieth-ninth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-roRoRo!=999th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.naŭcenta-naŭdeka-naŭa,
-    <br>====== langoGreek:
-    <br>* McsEll.εννιακοσιοστός-ενενηκοστός-ένατος!~adjvEll:ενιακοστός-ενενηκοστός-ένατος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr999stnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr1000th">
-  <h4 id="idWhlSysSqcordr1000thH4">order.1'000th  (1000^1)
-    <a class="clsHide" href="#idWhlSysSqcordr1000thH4"></a></h4>
-  <p id="idWhlSysSqcordr1000thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr1000thdsn"></a></p>
-  <p id="idWhlSysSqcordr1000thnam">name::
-    <br>* Mcs.1'000th,
-    <br>* Mcs.thousandth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-Kilo1Fo!=1'000th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.mila,
-    <br>====== langoGreek:
-    <br>* McsEll.χιλιοστός!~adjvEll:χιλιοστός-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr1000thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr1000st">
-  <h4 id="idWhlSysSqcordr1000stH4">order.1'001st
-    <a class="clsHide" href="#idWhlSysSqcordr1000stH4"></a></h4>
-  <p id="idWhlSysSqcordr1000stdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr1000stdsn"></a></p>
-  <p id="idWhlSysSqcordr1000stnam">name::
-    <br>* Mcs.1001st,
-    <br>* Mcs.one-thousandth-first,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-Kilo1Fo-Kilo0PoPoFo!=1'001st,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.unu-mila-unua,
-    <br>====== langoGreek:
-    <br>* McsEll.χιλιοστός-πρώτος!~adjvEll:χιλιοστός-πρώτος-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr1000stnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr2000th">
-  <h4 id="idWhlSysSqcordr2000thH4">order.2000th
-    <a class="clsHide" href="#idWhlSysSqcordr2000thH4"></a></h4>
-  <p id="idWhlSysSqcordr2000thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr2000thdsn"></a></p>
-  <p id="idWhlSysSqcordr2000thnam">name::
-    <br>* Mcs.2000th,
-    <br>* Mcs.two-thousandth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-Kilo1Tho!=2'000th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.dumila,
-    <br>====== langoGreek:
-    <br>* McsEll.δις-χιλιοστός!~adjvEll:δις-χιλιοστός-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordr2000thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordr999999th">
-  <h4 id="idWhlSysSqcordr999999thH4">order.999'999th
-    <a class="clsHide" href="#idWhlSysSqcordr999999thH4"></a></h4>
-  <p id="idWhlSysSqcordr999999thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordr999999thdsn"></a></p>
-  <p id="idWhlSysSqcordr999999thnam">name::
-    <br>* Mcs.999'999th,
-    <br>* Mcs.nine-hundredth-ninetieth-ninth-thousandth-nine-hundredth-ninetieth-ninth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-Kilo1RoRoRo-Kilo0RoRoRo!=999'999th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.naŭcenta-naŭdeka-naŭa-mila-naŭcenta-naŭdeka-naŭa,
-    <br>====== langoGreek:
-    <br>* McsEll.εννιακοσιοστός-ενενηκοστός-ένατος-χιλιοστός-εννιακοσιοστός-ενενηκοστός-ένατος!~adjvEll:,
-    <a class="clsHide" href="#idWhlSysSqcordr999999thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordrK21th">
-  <h4 id="idWhlSysSqcordrK21thH4">order.1'000'000th  (1000^2)
-    <a class="clsHide" href="#idWhlSysSqcordrK21thH4"></a></h4>
-  <p id="idWhlSysSqcordrK21thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordrK21thdsn"></a></p>
-  <p id="idWhlSysSqcordrK21thnam">name::
-    <br>* Mcs.1'000'000th,
-    <br>* Mcs.millionth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-Kilo2Fo!=1'000'000th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.unu-miliona,
-    <br>====== langoGreek:
-    <br>* McsEll.εκατομμυριοστός!~adjvEll:εκατομμυριοστός-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordrK21thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordrK22th">
-  <h4 id="idWhlSysSqcordrK22thH4">order.2'000'000th
-    <a class="clsHide" href="#idWhlSysSqcordrK22thH4"></a></h4>
-  <p id="idWhlSysSqcordrK22thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordrK22thdsn"></a></p>
-  <p id="idWhlSysSqcordrK22thnam">name::
-    <br>* Mcs.2'000'000th,
-    <br>* Mcs.two-millionth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-Kilo2Tho!=2'000'000th,
-    <br>====== langoGreek:
-    <br>====== langoEsperanto:
-    <br>* McsEpo.du-miliona,
-    <br>* McsEll.δύο-εκατομμυριοστός!~adjvEll:δύο-εκατομμυριοστός-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordrK22thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordrK31th">
-  <h4 id="idWhlSysSqcordrK31thH4">order.1'000'000'000th (1000^3)
-    <a class="clsHide" href="#idWhlSysSqcordrK31thH4"></a></h4>
-  <p id="idWhlSysSqcordrK31thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordrK31thdsn"></a></p>
-  <p id="idWhlSysSqcordrK31thnam">name::
-    <br>* Mcs.1'000'000'000th,
-    <br>* Mcs.billionth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-Kilo3Fo!=1'000'000'000th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.miliarda,
-    <br>====== langoGreek:
-    <br>* McsEll.δισεκατομμυριοστός!~adjvEll:δισεκατομμυριοστός-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordrK31thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordrK41th">
-  <h4 id="idWhlSysSqcordrK41thH4">order.1'000'000'000'000th (1000^4)
-    <a class="clsHide" href="#idWhlSysSqcordrK41thH4"></a></h4>
-  <p id="idWhlSysSqcordrK41thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordrK41thdsn"></a></p>
-  <p id="idWhlSysSqcordrK41thnam">name::
-    <br>* Mcs.1'000'000'000'000th,
-    <br>* Mcs.trillionth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-Kilo4Fo!=1'000'000'000'000th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.duiliona,
-    <br>====== langoGreek:
-    <br>* McsEll.τρισεκατομμυριοστός!~adjvEll:τρισεκατομμυριοστός-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordrK41thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordrK51th">
-  <h4 id="idWhlSysSqcordrK51thH4">order.1'000'000'000'000'000th (1000^5)
-    <a class="clsHide" href="#idWhlSysSqcordrK51thH4"></a></h4>
-  <p id="idWhlSysSqcordrK51thdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordrK51thdsn"></a></p>
-  <p id="idWhlSysSqcordrK51thnam">name::
-    <br>* Mcs.1'000'000'000'000'000th,
-    <br>* Mcs.quadrillionth,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-Kilo5Fo!=1'000'000'000'000'000th,
-    <br>====== langoEsperanto:
-    <br>* McsEpo.kvariliona,
-    <br>====== langoGreek:
-    <br>* McsEll.τετράκις-εκατομμυριοστός!~adjvEll:τετράκις-εκατομμυριοστός-η-ο,
-    <a class="clsHide" href="#idWhlSysSqcordrK51thnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordrRlv">
-  <h4 id="idWhlSysSqcordrRlvH4">order.relative
-    <a class="clsHide" href="#idWhlSysSqcordrRlvH4"></a></h4>
-  <p id="idWhlSysSqcordrRlvdsn">description::
-    <br>· relative-order is <a class="clsPreview" href="#idWhlSysSqcordr">order</a> defined in relation to another order.
-    <a class="clsHide" href="#idWhlSysSqcordrRlvdsn"></a></p>
-  <p id="idWhlSysSqcordrRlvnam">name::
-    <br>* Mcs.order.relative,
-    <br>* Mcs.relative-order,
-    <a class="clsHide" href="#idWhlSysSqcordrRlvnam"></a></p>
-
-  <section id="idWhlSysSqcordrRlvSpc">
-  <h5 id="idWhlSysSqcordrRlvSpcH5">order.relative.SPECIFIC
-    <a class="clsHide" href="#idWhlSysSqcordrRlvSpcH5"></a></h5>
-  <p id="idWhlSysSqcordrRlvSpcdsn">description::
-    <br>* before-order,
-    <br>* same-order,
-    <br>* after-order,
-    <br>===
-    <br>* first-order,
-    <br>* middle-order,
-    <br>* last-order,
-    <a class="clsHide" href="#idWhlSysSqcordrRlvSpcdsn"></a></p>
-  <p id="idWhlSysSqcordrRlvSpcnam">name::
-    <br>* Mcs.order.relative.specific,
-    <a class="clsHide" href="#idWhlSysSqcordrRlvSpcnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordrRlvFst">
-  <h5 id="idWhlSysSqcordrRlvFstH5">order.relative.first
-    <a class="clsHide" href="#idWhlSysSqcordrRlvFstH5"></a></h5>
-  <p id="idWhlSysSqcordrRlvFstdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordrRlvFstdsn"></a></p>
-  <p id="idWhlSysSqcordrRlvFstnam">name::
-    <br>* Mcs.first-order,
-    <br>* Mcs.order.relative.first,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-fo,
-    <a class="clsHide" href="#idWhlSysSqcordrRlvFstnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordrRlvMdl">
-  <h5 id="idWhlSysSqcordrRlvMdlH5">order.relative.middle
-    <a class="clsHide" href="#idWhlSysSqcordrRlvMdlH5"></a></h5>
-  <p id="idWhlSysSqcordrRlvMdldsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordrRlvMdldsn"></a></p>
-  <p id="idWhlSysSqcordrRlvMdlnam">name::
-    <br>* Mcs.middle-order,
-    <br>* Mcs.order.relative.middle,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-mido,
-    <a class="clsHide" href="#idWhlSysSqcordrRlvMdlnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordrRlvLst">
-  <h5 id="idWhlSysSqcordrRlvLstH5">order.relative.last
-    <a class="clsHide" href="#idWhlSysSqcordrRlvLstH5"></a></h5>
-  <p id="idWhlSysSqcordrRlvLstdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysSqcordrRlvLstdsn"></a></p>
-  <p id="idWhlSysSqcordrRlvLstnam">name::
-    <br>* Mcs.last-order,
-    <br>* Mcs.order.relative.last,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-foUno,
-    <a class="clsHide" href="#idWhlSysSqcordrRlvLstnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordrRlvBfr">
-  <h5 id="idWhlSysSqcordrRlvBfrH5">order.relative.before-order
-    <a class="clsHide" href="#idWhlSysSqcordrRlvBfrH5"></a></h5>
-  <p id="idWhlSysSqcordrRlvBfrdsn">description::
-    <br>· order, relative, before order.
-    <a class="clsHide" href="#idWhlSysSqcordrRlvBfrdsn"></a></p>
-  <p id="idWhlSysSqcordrRlvBfrnam">name::
-    <br>* Mcs.before-order,
-    <br>* Mcs.order.relative.before-order,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-ana-ordo,
-    <a class="clsHide" href="#idWhlSysSqcordrRlvBfrnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordrRlvSame">
-  <h5 id="idWhlSysSqcordrRlvSameH5">order.relative.same-order
-    <a class="clsHide" href="#idWhlSysSqcordrRlvSameH5"></a></h5>
-  <p id="idWhlSysSqcordrRlvSamedsn">description::
-    <br>· order, relative, same order.
-    <a class="clsHide" href="#idWhlSysSqcordrRlvSamedsn"></a></p>
-  <p id="idWhlSysSqcordrRlvSamenam">name::
-    <br>* Mcs.same-order,
-    <br>* Mcs.order.relative.same-order,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-ena-ordo,
-    <a class="clsHide" href="#idWhlSysSqcordrRlvSamenam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcordrRlvAft">
-  <h5 id="idWhlSysSqcordrRlvAftH5">order.relative.after-order
-    <a class="clsHide" href="#idWhlSysSqcordrRlvAftH5"></a></h5>
-  <p id="idWhlSysSqcordrRlvAftdsn">description::
-    <br>· order, relative, after order.
-    <a class="clsHide" href="#idWhlSysSqcordrRlvAftdsn"></a></p>
-  <p id="idWhlSysSqcordrRlvAftnam">name::
-    <br>* Mcs.after-order,
-    <br>* Mcs.order.relative.after-order,
-    <br>====== langoKomo:
-    <br>* McsKmo.suro-ina-ordo,
-    <a class="clsHide" href="#idWhlSysSqcordrRlvAftnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idWhlSysSqcordrRlvN">
-  <h4 id="idWhlSysSqcordrRlvNH4">order.relativeNo
-    <a class="clsHide" href="#idWhlSysSqcordrRlvNH4"></a></h4>
-  <p id="idWhlSysSqcordrRlvNdsn">description::
-    <br>· absolute-order is order NOT defined in relation to another order.
-    <a class="clsHide" href="#idWhlSysSqcordrRlvNdsn"></a></p>
-  <p id="idWhlSysSqcordrRlvNnam">name::
-    <br>* Mcs.absolute-order,
-    <br>* Mcs.order.relativeNo,
-    <br>* Mcs.relativeNo-order,
-    <a class="clsHide" href="#idWhlSysSqcordrRlvNnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idWhlSysSqcordrrln">
-  <h3 id="idWhlSysSqcordrrlnH3">order-relation of sequence
-    <a class="clsHide" href="#idWhlSysSqcordrrlnH3"></a></h3>
-  <p id="idWhlSysSqcordrrlndsn">description::
-    <br>· order-relation is the-relation among the-elements of <a class="clsPreview" href="#idWhlSysSqc">a-sequence</a>.
-    <a class="clsHide" href="#idWhlSysSqcordrrlndsn"></a></p>
-  <p id="idWhlSysSqcordrrlnnam">name::
-    <br>* Mcs.order-relation,
-    <br>* Mcs.relation.order,
-    <br>* Mcs.sequence'order-relation,
-    <a class="clsHide" href="#idWhlSysSqcordrrlnnam"></a></p>
-  </section>
-
-  <section id="idWhlSysSqcstrr">
-  <h3 id="idWhlSysSqcstrrH3">structure of sequence
-    <a class="clsHide" href="#idWhlSysSqcstrrH3"></a></h3>
-  <p id="idWhlSysSqcstrrdsn">description::
-    <br>· sequence-structure is the-structure of a-sequence which is an-arrangement of its parts.
-    <a class="clsHide" href="#idWhlSysSqcstrrdsn"></a></p>
-  <p id="idWhlSysSqcstrrnam">name::
-    <br>* Mcs.sequence'structure,
-    <br>* Mcs.sequence-structure,
-    <a class="clsHide" href="#idWhlSysSqcstrrnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idWhlSysTri">
-  <h2 id="idWhlSysTriH2">system.tree
-    <a class="clsHide" href="#idWhlSysTriH2"></a></h2>
-  <p id="idWhlSysTridsn">description::
-    <br>· tree-system is <a class="clsPreview" href="#idWhlSys">a-system</a> with <a class="clsPreview" href="#idWhlSysTristcr">a-tree-structure</a>.
-    <br><img src="filMcsWhl.files/system.tree.jpg">
-    <a class="clsHide" href="#idWhlSysTridsn"></a></p>
-  <p id="idWhlSysTrinam">name::
-    <br>* Mcs.hierarchy!⇒systemTree,
-    <br>* Mcs.system.tree!⇒systemTree,
-    <br>* Mcs.systemTree,
-    <br>* Mcs.tree-system!⇒systemTree,
-    <br>====== langoKomo:
-    <br>* McsKmo.sisto-tro,
-    <br>====== langoGreek:
-    <br>* McsEll.δένδρου-σύστημα,
-    <br>* McsEll.σύστημα-δένδρου,
-    <a class="clsHide" href="#idWhlSysTrinam"></a></p>
-
-  <section id="idWhlSysTrinode">
-  <h3 id="idWhlSysTrinodeH3">node of tree-system
-    <a class="clsHide" href="#idWhlSysTrinodeH3"></a></h3>
-  <p id="idWhlSysTrinodedsn">description::
-    <br>· node of systemTree is its <a class="clsPreview" href="#idWhlSysnodeF">node-of-system</a>, ie its parts as <a class="clsPreview" href="#idOverview">a-whole</a>.
-    <a class="clsHide" href="#idWhlSysTrinodedsn"></a></p>
-  <p id="idWhlSysTrinodenam">name::
-    <br>* Mcs.node-of-systemTree,
-    <br>* Mcs.systemTree'part,
-    <br>* Mcs.systemTree'node,
-    <br>* Mcs.systemTree'vertex,
-    <br>* Mcs.tree-node,
-    <br>====== langoKomo:
-    <br>* McsKmo.jo-ruo-a-sistoTro,
-    <br>* McsKmo.sistosTros-jo-ruo,
-    <br>====== langoGreek:
-    <br>* McsEll.κόμβος--συστήματος-δένδρου,
-    <a class="clsHide" href="#idWhlSysTrinodenam"></a></p>
-
-  <section id="idWhlSysTrinodecnnr">
-  <h4 id="idWhlSysTrinodecnnrH4">children-number of tree-node
-    <a class="clsHide" href="#idWhlSysTrinodecnnrH4"></a></h4>
-  <p id="idWhlSysTrinodecnnrdsn">description::
-    <br>· children-number-of-node is the-number of its <a class="clsPreview" href="#idWhlSysTrinodeChld">children</a>.
-    <a class="clsHide" href="#idWhlSysTrinodecnnrdsn"></a></p>
-  <p id="idWhlSysTrinodecnnrnam">name::
-    <br>* Mcs.tree-node'children-number,
-    <br>* Mcs.tree-node'degree,
-    <a class="clsHide" href="#idWhlSysTrinodecnnrnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodelvnr">
-  <h4 id="idWhlSysTrinodelvnrH4">level-number of tree-node
-    <a class="clsHide" href="#idWhlSysTrinodelvnrH4"></a></h4>
-  <p id="idWhlSysTrinodelvnrdsn">description::
-    <br>· level-number--of--tree-node is a-number that denotes the-number of levels from the-top OR bottom level of the-tree.
-    <a class="clsHide" href="#idWhlSysTrinodelvnrdsn"></a></p>
-  <p id="idWhlSysTrinodelvnrnam">name::
-    <br>* Mcs.tree-node'level-number,
-    <a class="clsHide" href="#idWhlSysTrinodelvnrnam"></a></p>
-
-  <section id="idWhlSysTrinodedpth">
-  <h5 id="idWhlSysTrinodedpthH5">depth of tree-node
-    <a class="clsHide" href="#idWhlSysTrinodedpthH5"></a></h5>
-  <p id="idWhlSysTrinodedpthdsn">description::
-    <br>· depth-of--tree-node[a] is the-number of <a class="clsPreview" href="#idWhlSysTrinodeLvl">levels</a> from <a class="clsPreview" href="#idWhlSysTrinodeRoot">root</a> including the-level of node[a].
-    <a class="clsHide" href="#idWhlSysTrinodedpthdsn"></a></p>
-  <p id="idWhlSysTrinodedpthnam">name::
-    <br>* Mcs.tree-node'depth,
-    <a class="clsHide" href="#idWhlSysTrinodedpthnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodehght">
-  <h5 id="idWhlSysTrinodehghtH5">height of tree-node
-    <a class="clsHide" href="#idWhlSysTrinodehghtH5"></a></h5>
-  <p id="idWhlSysTrinodehghtdsn">description::
-    <br>· height-of--tree-node[a] is the-number of <a class="clsPreview" href="#idWhlSysTrinodeLvl">levels</a> from <a class="clsPreview" href="#idWhlSysTrinodeLvlBtm">bottom-level</a> including the-level of node[a].
-    <a class="clsHide" href="#idWhlSysTrinodehghtdsn"></a></p>
-  <p id="idWhlSysTrinodehghtnam">name::
-    <br>* Mcs.tree-node'height,
-    <a class="clsHide" href="#idWhlSysTrinodehghtnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idWhlSysTrinodepth">
-  <h4 id="idWhlSysTrinodepthH4">path of tree-node
-    <a class="clsHide" href="#idWhlSysTrinodepthH4"></a></h4>
-  <p id="idWhlSysTrinodepthdsn">description::
-    <br>· path-of-node[a] is <a class="clsPreview" href="#idWhlSysSqc">the-sequence</a> of nodes and <a class="clsPreview" href="#idWhlSysTrindrn">edges</a> from node[a] to <a class="clsPreview" href="#idWhlSysTrinodeRoot">root</a> or the-opposite.
-    <a class="clsHide" href="#idWhlSysTrinodepthdsn"></a></p>
-  <p id="idWhlSysTrinodepthnam">name::
-    <br>* Mcs.tree-node'chain,
-    <br>* Mcs.tree-node'path,
-    <a class="clsHide" href="#idWhlSysTrinodepthnam"></a></p>
-  <p id="idWhlSysTrinodepthSpc">specific::
-    <br>* generic-chain,
-    <br>* whole-chain,
-    <a class="clsHide" href="#idWhlSysTrinodepthSpc"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodeSpc">
-  <h4 id="idWhlSysTrinodeSpcH4">tree-node.SPECIFIC
-    <a class="clsHide" href="#idWhlSysTrinodeSpcH4"></a></h4>
-  <p id="idWhlSysTrinodeSpcdsn">description::
-    <br>* anchestor-node,
-    <br>* branch-node,
-    <br>* child-node,
-    <br>* decendant-node,
-    <br>* leaf-node,
-    <br>* leafNo-node,
-    <br>* level-of-tree,
-    <br>* neighbor-node,
-    <br>* parent-node,
-    <br>* root-node,
-    <br>* sibling-node,
-    <br>* subtree,
-    <a class="clsHide" href="#idWhlSysTrinodeSpcdsn"></a></p>
-  <p id="idWhlSysTrinodeSpcnam">name::
-    <br>* Mcs.tree-node.specific,
-    <a class="clsHide" href="#idWhlSysTrinodeSpcnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodeRoot">
-  <h4 id="idWhlSysTrinodeRootH4">tree-node.root
-    <a class="clsHide" href="#idWhlSysTrinodeRootH4"></a></h4>
-  <p id="idWhlSysTrinodeRootdsn">description::
-    <br>· root is the-most higher node.
-    <br>· root-level--of-systemTree is the-most higher level-of-tree.
-    <br>· root-level and root are same entities.
-    <a class="clsHide" href="#idWhlSysTrinodeRootdsn"></a></p>
-  <p id="idWhlSysTrinodeRootnam">name::
-    <br>* Mcs.tree-node.root,
-    <br>* Mcs.root-level--of-systemTree,
-    <br>* Mcs.root-node--of-systemTree,
-    <br>* Mcs.top-level--of-systemTree,
-    <br>* Mcs.systemTree'root-level,
-    <a class="clsHide" href="#idWhlSysTrinodeRootnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodeChld">
-  <h4 id="idWhlSysTrinodeChldH4">tree-node.child
-    <a class="clsHide" href="#idWhlSysTrinodeChldH4"></a></h4>
-  <p id="idWhlSysTrinodeChlddsn">description::
-    <br>· child-node of node[a] is a-node that directly follows node[a].
-    <a class="clsHide" href="#idWhlSysTrinodeChlddsn"></a></p>
-  <p id="idWhlSysTrinodeChldnam">name::
-    <br>* Mcs.child-node--of--tree-system,
-    <br>* Mcs.tree-node.child,
-    <a class="clsHide" href="#idWhlSysTrinodeChldnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodePrnt">
-  <h4 id="idWhlSysTrinodePrntH4">tree-node.parent
-    <a class="clsHide" href="#idWhlSysTrinodePrntH4"></a></h4>
-  <p id="idWhlSysTrinodePrntdsn">description::
-    <br>· parent-node of node[a] is a-node that directly preceds node[a].
-    <br>· all nodes have one parent except root.
-    <a class="clsHide" href="#idWhlSysTrinodePrntdsn"></a></p>
-  <p id="idWhlSysTrinodePrntnam">name::
-    <br>* Mcs.parent-node--of--tree-system,
-    <br>* Mcs.tree-node.parent,
-    <a class="clsHide" href="#idWhlSysTrinodePrntnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodeNbr">
-  <h4 id="idWhlSysTrinodeNbrH4">tree-node.neighbor
-    <a class="clsHide" href="#idWhlSysTrinodeNbrH4"></a></h4>
-  <p id="idWhlSysTrinodeNbrdsn">description::
-    <br>· neighbo-node of node[a] is any node which is <a class="clsPreview" href="#idWhlSysTrinodePrnt">parent</a> or <a class="clsPreview" href="#idWhlSysTrinodeChld">child</a> of node[a].
-    <a class="clsHide" href="#idWhlSysTrinodeNbrdsn"></a></p>
-  <p id="idWhlSysTrinodeNbrnam">name::
-    <br>* Mcs.neighbor-node--of--tree-system,
-    <br>* Mcs.tree-node.neighbor,
-    <a class="clsHide" href="#idWhlSysTrinodeNbrnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodeLeaf">
-  <h4 id="idWhlSysTrinodeLeafH4">tree-node.leaf
-    <a class="clsHide" href="#idWhlSysTrinodeLeafH4"></a></h4>
-  <p id="idWhlSysTrinodeLeafdsn">description::
-    <br>· leaf-node is a-node without children.
-    <a class="clsHide" href="#idWhlSysTrinodeLeafdsn"></a></p>
-  <p id="idWhlSysTrinodeLeafnam">name::
-    <br>* Mcs.leaf-node--of--tree-system,
-    <br>* Mcs.tree-node.external,
-    <br>* Mcs.tree-node.leaf,
-    <a class="clsHide" href="#idWhlSysTrinodeLeafnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodeLeafN">
-  <h4 id="idWhlSysTrinodeLeafNH4">tree-node.leafNo
-    <a class="clsHide" href="#idWhlSysTrinodeLeafNH4"></a></h4>
-  <p id="idWhlSysTrinodeLeafNdsn">description::
-    <br>· leafNo-node is a-node with children.
-    <a class="clsHide" href="#idWhlSysTrinodeLeafNdsn"></a></p>
-  <p id="idWhlSysTrinodeLeafNnam">name::
-    <br>* Mcs.leafNo-node--of--tree-system,
-    <br>* Mcs.tree-node.branch,
-    <br>* Mcs.tree-node.internal,
-    <br>* Mcs.tree-node.leafNo,
-    <a class="clsHide" href="#idWhlSysTrinodeLeafNnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodeAncr">
-  <h4 id="idWhlSysTrinodeAncrH4">tree-node.ancestor
-    <a class="clsHide" href="#idWhlSysTrinodeAncrH4"></a></h4>
-  <p id="idWhlSysTrinodeAncrdsn">description::
-    <br>· ancestor-node of node[a] is any node that preceds node[a].
-    <a class="clsHide" href="#idWhlSysTrinodeAncrdsn"></a></p>
-  <p id="idWhlSysTrinodeAncrnam">name::
-    <br>* Mcs.ancestor-node--of--tree-system,
-    <br>* Mcs.tree-node.ancestor,
-    <a class="clsHide" href="#idWhlSysTrinodeAncrnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodeDsdt">
-  <h4 id="idWhlSysTrinodeDsdtH4">tree-node.descendant
-    <a class="clsHide" href="#idWhlSysTrinodeDsdtH4"></a></h4>
-  <p id="idWhlSysTrinodeDsdtdsn">description::
-    <br>· descendant-node of node[a] is any node that follows node[a].
-    <a class="clsHide" href="#idWhlSysTrinodeDsdtdsn"></a></p>
-  <p id="idWhlSysTrinodeDsdtnam">name::
-    <br>* Mcs.descendant-node--of--tree-system,
-    <br>* Mcs.tree-node.descendant,
-    <a class="clsHide" href="#idWhlSysTrinodeDsdtnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodeSblg">
-  <h4 id="idWhlSysTrinodeSblgH4">tree-node.sibling
-    <a class="clsHide" href="#idWhlSysTrinodeSblgH4"></a></h4>
-  <p id="idWhlSysTrinodeSblgdsn">description::
-    <br>· sibling-node of node[a] is any node which shares same parent with node[a].
-    <a class="clsHide" href="#idWhlSysTrinodeSblgdsn"></a></p>
-  <p id="idWhlSysTrinodeSblgnam">name::
-    <br>* Mcs.sibling-node--of--tree-system,
-    <br>* Mcs.tree-node.sibling,
-    <a class="clsHide" href="#idWhlSysTrinodeSblgnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodeLvl">
-  <h4 id="idWhlSysTrinodeLvlH4">tree-node.level
-    <a class="clsHide" href="#idWhlSysTrinodeLvlH4"></a></h4>
-  <p id="idWhlSysTrinodeLvldsn">description::
-    <br>· level-of--tree-system is the-set of nodes with the-same <a class="clsPreview" href="#idWhlSysTrinodelvnr">level-number</a>.
-    <a class="clsHide" href="#idWhlSysTrinodeLvldsn"></a></p>
-  <p id="idWhlSysTrinodeLvlnam">name::
-    <br>* Mcs.level--of--tree-system!⇒tree-level,
-    <br>* Mcs.systemTree'level!⇒tree-level,
-    <br>* Mcs.tree-level,
-    <br>* Mcs.tree-node.level!⇒tree-level,
-    <a class="clsHide" href="#idWhlSysTrinodeLvlnam"></a></p>
-
-  <section id="idWhlSysTrinodeLvlwdth">
-  <h5 id="idWhlSysTrinodeLvlwdthH5">width of tree-level
-    <a class="clsHide" href="#idWhlSysTrinodeLvlwdthH5"></a></h5>
-  <p id="idWhlSysTrinodeLvlwdthdsn">description::
-    <br>· width-of--tree-level is the-number of nodes of <a class="clsPreview" href="#idWhlSysTrinodeLvl">a-level</a>.
-    <a class="clsHide" href="#idWhlSysTrinodeLvlwdthdsn"></a></p>
-  <p id="idWhlSysTrinodeLvlwdthnam">name::
-    <br>* Mcs.tree-level'width,
-    <a class="clsHide" href="#idWhlSysTrinodeLvlwdthnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrinodeLvlRut">
-  <h5 id="idWhlSysTrinodeLvlRutH5">tree-level.root (<a class="clsPreview" href="#idWhlSysTrinodeRoot">link</a>)
-    <a class="clsHide" href="#idWhlSysTrinodeLvlRutH5"></a></h5>
-  </section>
-
-  <section id="idWhlSysTrinodeLvlBtm">
-  <h5 id="idWhlSysTrinodeLvlBtmH5">tree-level.bottom
-    <a class="clsHide" href="#idWhlSysTrinodeLvlBtmH5"></a></h5>
-  <p id="idWhlSysTrinodeLvlBtmdsn">description::
-    <br>· bottom-level is the-most lower level of a-tree.
-    <a class="clsHide" href="#idWhlSysTrinodeLvlBtmdsn"></a></p>
-  <p id="idWhlSysTrinodeLvlBtmnam">name::
-    <br>* Mcs.bottom-level--of-systemTree,
-    <br>* Mcs.systemTree'bottom-level,
-    <br>* Mcs.tree-level.bottom,
-    <a class="clsHide" href="#idWhlSysTrinodeLvlBtmnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idWhlSysTrinodeSbtr">
-  <h4 id="idWhlSysTrinodeSbtrH4">tree-node.subtree
-    <a class="clsHide" href="#idWhlSysTrinodeSbtrH4"></a></h4>
-  <p id="idWhlSysTrinodeSbtrdsn">description::
-    <br>· subtree of tree[a] is a-node[b] of tree[a] and all its[b] <a class="clsPreview" href="#idWhlSysTrinodeDsdt">descendants</a>.
-    <a class="clsHide" href="#idWhlSysTrinodeSbtrdsn"></a></p>
-  <p id="idWhlSysTrinodeSbtrnam">name::
-    <br>* Mcs.subtree,
-    <br>* Mcs.tree-node.subtree,
-    <a class="clsHide" href="#idWhlSysTrinodeSbtrnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idWhlSysTrindrn">
-  <h3 id="idWhlSysTrindrnH3">node-relation of tree-system
-    <a class="clsHide" href="#idWhlSysTrindrnH3"></a></h3>
-  <p id="idWhlSysTrindrndsn">description::
-    <br>· node-relation--of--tree-system is its <a class="clsPreview" href="#idWhlSysndrn">node-relation--of-system</a>.
-    <a class="clsHide" href="#idWhlSysTrindrndsn"></a></p>
-  <p id="idWhlSysTrindrnnam">name::
-    <br>* Mcs.systemTree'edge,
-    <br>* Mcs.systemTree'node-relation,
-    <a class="clsHide" href="#idWhlSysTrindrnnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrilvl">
-  <h3 id="idWhlSysTrilvlH3">level (<a class="clsPreview" href="#idWhlSysTrinodeLvl">link</a>) of tree-system
-    <a class="clsHide" href="#idWhlSysTrilvlH3"></a></h3>
-  </section>
-
-  <section id="idWhlSysTristcr">
-  <h3 id="idWhlSysTristcrH3">structure of tree-system
-    <a class="clsHide" href="#idWhlSysTristcrH3"></a></h3>
-  <p id="idWhlSysTristcrdsn">description::
-    <br>· tree-structure is the-structure of a-tree-system which looks like an-inverted tree.
-    <a class="clsHide" href="#idWhlSysTristcrdsn"></a></p>
-  <p id="idWhlSysTristcrnam">name::
-    <br>* Mcs.systemTree'structure,
-    <br>* Mcs.tree-structure,
-    <br>* Mcs.tree-system'structure,
-    <br>====== langoKomo:
-    <br>* McsKmo.sistosTros-strukto,
-    <br>* McsKmo.strukto-tro,
-    <br>====== langoGreek:
-    <br>* McsEll.δομή-δένδρου,
-    <a class="clsHide" href="#idWhlSysTristcrnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTridgr">
-  <h3 id="idWhlSysTridgrH3">degree of tree-system
-    <a class="clsHide" href="#idWhlSysTridgrH3"></a></h3>
-  <p id="idWhlSysTridgrdsn">description::
-    <br>· degree-of--tree-system is the-number of children of its <a class="clsPreview" href="#idWhlSysTrinodeRoot">root</a>.
-    <a class="clsHide" href="#idWhlSysTridgrdsn"></a></p>
-  <p id="idWhlSysTridgrnam">name::
-    <br>* Mcs.systemTree'degree,
-    <a class="clsHide" href="#idWhlSysTridgrnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTrisize">
-  <h3 id="idWhlSysTrisizeH3">size of tree-system
-    <a class="clsHide" href="#idWhlSysTrisizeH3"></a></h3>
-  <p id="idWhlSysTrisizedsn">description::
-    <br>· size-of-tree-system is the-number of its <a class="clsPreview" href="#idWhlSysTrinode">nodes</a>.
-    <a class="clsHide" href="#idWhlSysTrisizedsn"></a></p>
-  <p id="idWhlSysTrisizenam">name::
-    <br>* Mcs.systemTree'size,
-    <a class="clsHide" href="#idWhlSysTrisizenam"></a></p>
-  </section>
-
-  <section id="idWhlSysTribdth">
-  <h3 id="idWhlSysTribdthH3">breadth of tree-system
-    <a class="clsHide" href="#idWhlSysTribdthH3"></a></h3>
-  <p id="idWhlSysTribdthdsn">description::
-    <br>· breadth-of--tree-system is the-number of its <a class="clsPreview" href="#idWhlSysTrinodeLeaf">leaves</a>.
-    <a class="clsHide" href="#idWhlSysTribdthdsn"></a></p>
-  <p id="idWhlSysTribdthnam">name::
-    <br>* Mcs.systemTree'breadth,
-    <a class="clsHide" href="#idWhlSysTribdthnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTriSpc">
-  <h3 id="idWhlSysTriSpcH3">tree-system.SPECIFIC
-    <a class="clsHide" href="#idWhlSysTriSpcH3"></a></h3>
-  <p id="idWhlSysTriSpcdsn">description::
-    <br>* generic-specific--tree,
-    <br>* whole-part--tree,
-    <br>===
-    <br>* binary-tree,
-    <br>* ordered-tree,
-    <a class="clsHide" href="#idWhlSysTriSpcdsn"></a></p>
-  <p id="idWhlSysTriSpcnam">name::
-    <br>* Mcs.tree-system.specific,
-    <a class="clsHide" href="#idWhlSysTriSpcnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTriBnr">
-  <h3 id="idWhlSysTriBnrH3">tree-system.binary
-    <a class="clsHide" href="#idWhlSysTriBnrH3"></a></h3>
-  <p id="idWhlSysTriBnrdsn">description::
-    <br>· binary-tree is a-tree-system with 2 children at most.
-    <a class="clsHide" href="#idWhlSysTriBnrdsn"></a></p>
-  <p id="idWhlSysTriBnrnam">name::
-    <br>* Mcs.binary-tree,
-    <br>* Mcs.tree-system.binary,
-    <a class="clsHide" href="#idWhlSysTriBnrnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTriOrd">
-  <h3 id="idWhlSysTriOrdH3">tree-system.ordered
-    <a class="clsHide" href="#idWhlSysTriOrdH3"></a></h3>
-  <p id="idWhlSysTriOrddsn">description::
-    <br>· ordered--tree-system is a-tree-system in which <a class="clsPreview" href="#idWhlSysSqcordrrln">an-ordering</a> is-specified for the-children of each node.
-    <a class="clsHide" href="#idWhlSysTriOrddsn"></a></p>
-  <p id="idWhlSysTriOrdnam">name::
-    <br>* Mcs.ordered-systemTree,
-    <br>* Mcs.systemTree.ordered,
-    <a class="clsHide" href="#idWhlSysTriOrdnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTriGcsc">
-  <h3 id="idWhlSysTriGcscH3">tree-system.generic-specific
-    <a class="clsHide" href="#idWhlSysTriGcscH3"></a></h3>
-  <p id="idWhlSysTriGcscdsn">description::
-    <br>· generic-specific--tree-system is <a class="clsPreview" href="#idWhlSysTri">a-tree-system</a> with <a class="clsPreview" href="filMcsGnrc.last.html#idGnrspcrln">generic-specific</a> <a class="clsPreview" href="#idWhlSysTrindrn">node-relations</a>.
-    <br>===
-    <br>"Taxonomy is the practice and science of classification. The word is also used as a count noun: a taxonomy, or taxonomic scheme, is a particular classification. The word finds its roots in the Greek language τάξις, taxis (meaning 'order', 'arrangement') and νόμος, nomos ('law' or 'science'). Originally, taxonomy referred only to the classification of organisms or a particular classification of organisms. In a wider, more general sense, it may refer to a classification of things or concepts, as well as to the principles underlying such a classification. Taxonomy is different from meronomy, which is dealing with the classification of parts of a whole.
-    <br>Many taxonomies have a hierarchical structure, but this is not a requirement. Taxonomy uses taxonomic units, known as "taxa" (singular "taxon")."
-    <br>[https://en.wikipedia.org/wiki/Taxonomy_(general) {2019-12-24}]
-    <a class="clsHide" href="#idWhlSysTriGcscdsn"></a></p>
-  <p id="idWhlSysTriGcscnam">name::
-    <br>* Mcs.generic-specific--tree-system!⇒treeGncspc,
-    <br>* Mcs.generic-specific--tree!⇒treeGncspc,
-    <br>* Mcs.treeGncspc,
-    <br>* Mcs.tree-system.generic-specific!⇒treeGncspc,
-    <br>* Mcs.taxonomy!⇒treeGncspc,
-    <a class="clsHide" href="#idWhlSysTriGcscnam"></a></p>
-
-  <section id="idWhlSysTriGcsctxn">
-  <h4 id="idWhlSysTriGcsctxnH4">treeGncspc'taxon
-    <a class="clsHide" href="#idWhlSysTriGcsctxnH4"></a></h4>
-  <p id="idWhlSysTriGcsctxndsn">description::
-    <br>· taxon is <a class="clsPreview" href="#idWhlSysTrinode">a-node</a> of <a class="clsPreview" href="#idWhlSysTriGcsc">a-generic-tree</a>.
-    <a class="clsHide" href="#idWhlSysTriGcsctxndsn"></a></p>
-  <p id="idWhlSysTriGcsctxnnam">name::
-    <br>* Mcs.taxa!~plural-of-taxon,
-    <br>* Mcs.taxon,
-    <br>* Mcs.treeGncspc'taxon,
-    <a class="clsHide" href="#idWhlSysTriGcsctxnnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTriGcscGcoc">
-  <h4 id="idWhlSysTriGcscGcocH4">treeGncspc.generic-tree--of-concept
-    <a class="clsHide" href="#idWhlSysTriGcscGcocH4"></a></h4>
-  <p id="idWhlSysTriGcscGcocdsn">description::
-    <br>· generic-tree--of-concept is <a class="clsPreview" href="#idWhlSysTriGcsc">a-generic-specific-tree</a> with the-concept on <a class="clsPreview" href="#idWhlSysTrinodeLvlBtm">the-bottom-level</a>.
-    <a class="clsHide" href="#idWhlSysTriGcscGcocdsn"></a></p>
-  <p id="idWhlSysTriGcscGcocnam">name::
-    <br>* Mcs.generic-tree--of-concept,
-    <br>* Mcs.treeGncspc.generic-of-concept,
-    <a class="clsHide" href="#idWhlSysTriGcscGcocnam"></a></p>
-  </section>
-
-  <section id="idWhlSysTriGcscScoc">
-  <h4 id="idWhlSysTriGcscScocH4">treeGncspc.specific-tree--of-concept
-    <a class="clsHide" href="#idWhlSysTriGcscScocH4"></a></h4>
-  <p id="idWhlSysTriGcscScocdsn">description::
-    <br>· specific-tree--of-concept is <a class="clsPreview" href="#idWhlSysTriGcsc">a-generic-specific-tree</a> with the-concept on <a class="clsPreview" href="#idWhlSysTrinodeRoot">the-root-level</a>.
-    <a class="clsHide" href="#idWhlSysTriGcscScocdsn"></a></p>
-  <p id="idWhlSysTriGcscScocnam">name::
-    <br>* Mcs.specific-tree--of-concept,
-    <br>* Mcs.treeGncspc.specific-of-concept,
-    <a class="clsHide" href="#idWhlSysTriGcscScocnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idWhlSysTriWlpt">
-  <h3 id="idWhlSysTriWlptH3">tree-system.whole-part
-    <a class="clsHide" href="#idWhlSysTriWlptH3"></a></h3>
-  <p id="idWhlSysTriWlptdsn">description::
-    <br>· part-whole--tree-system is <a class="clsPreview" href="#idWhlSysTri">a-tree-system</a> with <a class="clsPreview" href="#idWhlprtrln">whole-part</a> <a class="clsPreview" href="#idWhlSysTrindrn">node-relations</a>.
-    <br>===
-    <br>"A meronomy or partonomy is a type of hierarchy that deals with part–whole relationships, in contrast to a taxonomy whose categorisation is based on discrete sets. Accordingly, the unit of meronomical classification is meron, while the unit of taxonomical classification is taxon. These conceptual structures are used in linguistics and computer science, with applications in biology. The part–whole relationship is sometimes referred to as HAS-A, and corresponds to object composition in object-oriented programming.[1] The study of meronomy is known as mereology, and in linguistics a meronym is the name given to a constituent part of, the substance of, or a member of something. "X" is a meronym of "Y" if an X is a part of a Y.[2]"
-    <br>[https://en.wikipedia.org/wiki/Meronomy {2019-12-24}]
-    <a class="clsHide" href="#idWhlSysTriWlptdsn"></a></p>
-  <p id="idWhlSysTriWlptnam">name::
-    <br>* Mcs.meronomy!⇒treeWhlprt,
-    <br>* Mcs.part-whole--tree-system!⇒treeWhlprt,
-    <br>* Mcs.partonomy!⇒treeWhlprt,
-    <br>* Mcs.treeWhlprt,
-    <br>* Mcs.tree-system.whole-part!⇒treeWhlprt,
-    <br>* Mcs.whole-part--tree-system!⇒treeWhlprt,
-    <br>* Mcs.whole-part--tree!⇒treeWhlprt,
-    <a class="clsHide" href="#idWhlSysTriWlptnam"></a></p>
-
-  <section id="idWhlSysTriWlptmrn">
-  <h4 id="idWhlSysTriWlptmrnH4">treeWhlprt'meron
-    <a class="clsHide" href="#idWhlSysTriWlptmrnH4"></a></h4>
-  <p id="idWhlSysTriWlptmrndsn">description::
-    <br>· meron is <a class="clsPreview" href="#idWhlSysTrinode">a-node</a> of <a class="clsPreview" href="#idWhlSysTriWlpt">a-whole-tree</a>.
-    <a class="clsHide" href="#idWhlSysTriWlptmrndsn"></a></p>
-  <p id="idWhlSysTriWlptmrnnam">name::
-    <br>* Mcs.meron,
-    <br>* Mcs.treeWhlprt'meron,
-    <a class="clsHide" href="#idWhlSysTriWlptmrnnam"></a></p>
-  </section>
-  </section>
-  </section>
-
-  <section id="idWhlSysGrf">
-  <h2 id="idWhlSysGrfH2">system.graph
-    <a class="clsHide" href="#idWhlSysGrfH2"></a></h2>
-  <p id="idWhlSysGrfdsn">description::
-    <br>· graph-system is a-system with nodes abstract-concepts, just dots.
-    <br>===
-    <br>"In mathematics, and more specifically in graph theory, a graph is a structure amounting to a set of objects in which some pairs of the objects are in some sense "related". The objects correspond to mathematical abstractions called vertices (also called nodes or points) and each of the related pairs of vertices is called an edge (also called link or line).[1] Typically, a graph is depicted in diagrammatic form as a set of dots or circles for the vertices, joined by lines or curves for the edges. Graphs are one of the objects of study in discrete mathematics."
-    <br>[https://en.wikipedia.org/wiki/Graph_(discrete_mathematics) {2019-11-07}]
-    <a class="clsHide" href="#idWhlSysGrfdsn"></a></p>
-  <p id="idWhlSysGrfnam">name::
-    <br>* Mcs.abstract-system,
-    <br>* Mcs.graph-system,
-    <br>* Mcs.system.graph,
-    <br>* Mcs.systemGraph,
-    <a class="clsHide" href="#idWhlSysGrfnam"></a></p>
-  </section>
-
-  <section id="idWhlSysBdy">
-  <h2 id="idWhlSysBdyH2">system.body
-    <a class="clsHide" href="#idWhlSysBdyH2"></a></h2>
-  <p id="idWhlSysBdydsn">description::
-    <br>· body-system is <a class="clsPreview" href="#idWhlSys">a-system</a> of <a class="clsPreview" href="filMcsEnt.last.html#idEntBody">bodies</a>.
-    <a class="clsHide" href="#idWhlSysBdydsn"></a></p>
-  <p id="idWhlSysBdynam">name::
-    <br>* Mcs.body-system!⇒sysBody,
-    <br>* Mcs.sysBody,
-    <br>* Mcs.system.body!⇒sysBody,
-    <a class="clsHide" href="#idWhlSysBdynam"></a></p>
-
-  <section id="idWhlSysBdynod">
-  <h3 id="idWhlSysBdynodH3">node of sysBody
-    <a class="clsHide" href="#idWhlSysBdynodH3"></a></h3>
-  <p id="idWhlSysBdynoddsn">description::
-    <br>· <a class="clsPreview" href="#idWhlSysnodeF">the-nodes</a> of <a class="clsPreview" href="#idWhlSysBdy">a-sysBody</a> are <a class="clsPreview" href="filMcsEnt.last.html#idEntBody">bodies</a>.
-    <a class="clsHide" href="#idWhlSysBdynoddsn"></a></p>
-  <p id="idWhlSysBdynodnam">name::
-    <br>* Mcs.sysBody'node,
-    <a class="clsHide" href="#idWhlSysBdynodnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idWhlSysBdyMtr">
-  <h2 id="idWhlSysBdyMtrH2">system.material-body
-    <a class="clsHide" href="#idWhlSysBdyMtrH2"></a></h2>
-  <p id="idWhlSysBdyMtrdsn">description::
-    <br>· a-material-body which is a-system of <a class="clsPreview" href="../dirNtr/filMcsMtrl.last.html#idOverview">material-bodies</a>.
-    <a class="clsHide" href="#idWhlSysBdyMtrdsn"></a></p>
-  <p id="idWhlSysBdyMtrnam">name::
-    <br>* Mcs.bodyMtr.system,
-    <br>* Mcs.system.material-body,
-    <a class="clsHide" href="#idWhlSysBdyMtrnam"></a></p>
-  </section>
-
-  <section id="idWhlSysClx">
-  <h2 id="idWhlSysClxH2">system.complex (<a class="clsPreview" href="../dirNtr/filMcsSysCmlx.last.html#idOverview">link</a>)
-    <a class="clsHide" href="#idWhlSysClxH2"></a></h2>
-  </section>
-
-  <section id="idWhlSysClxM">
-  <h2 id="idWhlSysClxMH2">system.complexMid
-    <a class="clsHide" href="#idWhlSysClxMH2"></a></h2>
-  <p id="idWhlSysClxMdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysClxMdsn"></a></p>
-  <p id="idWhlSysClxMnam">name::
-    <br>* Mcs.complexMid-system,
-    <br>* Mcs.system.complexMid,
-    <a class="clsHide" href="#idWhlSysClxMnam"></a></p>
-  </section>
-
-  <section id="idWhlSysClxN">
-  <h2 id="idWhlSysClxNH2">system.complexNo
-    <a class="clsHide" href="#idWhlSysClxNH2"></a></h2>
-  <p id="idWhlSysClxNdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysClxNdsn"></a></p>
-  <p id="idWhlSysClxNnam">name::
-    <br>* Mcs.complexNo-system,
-    <br>* Mcs.system.complexNo,
-    <a class="clsHide" href="#idWhlSysClxNnam"></a></p>
-  </section>
-
-  <section id="idWhlSysDnmc">
-  <h2 id="idWhlSysDnmcH2">system.dynamic (<a class="clsPreview" href="../dirNtr/filMcsSysDnmc.last.html#idOverview">link</a>)
-    <a class="clsHide" href="#idWhlSysDnmcH2"></a></h2>
-  </section>
-
-  <section id="idWhlSysDnmcN">
-  <h2 id="idWhlSysDnmcNH2">system.dynamicNo
-    <a class="clsHide" href="#idWhlSysDnmcNH2"></a></h2>
-  <p id="idWhlSysDnmcNdsn">description::
-    <br>· static-system is <a class="clsPreview" href="#idWhlSys">a-system</a> without <a class="clsPreview" href="filMcsDng.last.html#idDngFctg">functings</a>.
-    <a class="clsHide" href="#idWhlSysDnmcNdsn"></a></p>
-  <p id="idWhlSysDnmcNnam">name::
-    <br>* Mcs.dynamicNo-system,
-    <br>* Mcs.static-system,
-    <br>* Mcs.system.dynamicNo,
-    <a class="clsHide" href="#idWhlSysDnmcNnam"></a></p>
-  </section>
-
-  <section id="idWhlSysOpn">
-  <h2 id="idWhlSysOpnH2">system.open
-    <a class="clsHide" href="#idWhlSysOpnH2"></a></h2>
-  <p id="idWhlSysOpndsn">description::
-    <br>· open-system is a-system with an-environment.
-    <a class="clsHide" href="#idWhlSysOpndsn"></a></p>
-  <p id="idWhlSysOpnnam">name::
-    <br>* Mcs.open-system,
-    <br>* Mcs.system.open,
-    <a class="clsHide" href="#idWhlSysOpnnam"></a></p>
-  </section>
-
-  <section id="idWhlSysOpnN">
-  <h2 id="idWhlSysOpnNH2">system.openNo
-    <a class="clsHide" href="#idWhlSysOpnNH2"></a></h2>
-  <p id="idWhlSysOpnNdsn">description::
-    <br>·
-    <a class="clsHide" href="#idWhlSysOpnNdsn"></a></p>
-  <p id="idWhlSysOpnNnam">name::
-    <br>* Mcs.openNo-system,
-    <br>* Mcs.system.openNo,
-    <a class="clsHide" href="#idWhlSysOpnNnam"></a></p>
-  </section>
+<section id="idWhl002">
+  <h1 id="idWhl002H1">whole.system-002 (link)
+    <a class="clsHide" href="#idWhl002H1"></a></h1>
 </section>
 
-<section id="idWhlBdy">
-  <h1 id="idWhlBdyH1">whole.body
-    <a class="clsHide" href="#idWhlBdyH1"></a></h1>
-  <p id="idWhlBdydsn">description::
+<section id="idWhl003">
+  <h1 id="idWhl003H1">whole.body-003
+    <a class="clsHide" href="#idWhl003H1"></a></h1>
+  <p id="idWhl003dsn">description::
     <br>· body-whole it is <a class="clsPreview" href="#idOverview">a-whole</a> which is also <a class="clsPreview" href="filMcsEnt.last.html#idEntBody">a-body</a>.
-    <a class="clsHide" href="#idWhlBdydsn"></a></p>
-  <p id="idWhlBdynam">name::
+    <a class="clsHide" href="#idWhl003dsn"></a></p>
+  <p id="idWhl003nam">name::
     <br>* Mcs.body-whole,
     <br>* Mcs.whole.body,
-    <a class="clsHide" href="#idWhlBdynam"></a></p>
+    <a class="clsHide" href="#idWhl003nam"></a></p>
 </section>
 
 <section id="idMeta">
