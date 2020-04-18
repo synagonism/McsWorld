@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.ogmPlant (organism.plant 0-3-0.2020-04-16 draft)</title>
+  <title>Mcs.ogmPlant (organism.plant 0-4-0.2020-04-18 draft)</title>
   <meta name="keywords" content="organism.plant, plant, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -439,10 +439,12 @@
   <h1 id="idPlnt012H1">ogmPlant.flowering-012
     <a class="clsHide" href="#idPlnt012H1"></a></h1>
   <p id="idPlnt012nam">name::
-    <br>* Mcs.ogmPlant.012-flowering!⇒plantFlower,
-    <br>* Mcs.ogmPlant.flowering-012!⇒plantFlower,
-    <br>* Mcs.flowering-plant-012!⇒plantFlower,
-    <br>* Mcs.plantFlower,
+    <br>* Mcs.ogmPlant.012-flowering!⇒plantFlowering,
+    <br>* Mcs.ogmPlant.flowering-012!⇒plantFlowering,
+    <br>* Mcs.angiosperm-plant-012!⇒plantFlowering,
+    <br>* Mcs.flowering-plant-012!⇒plantFlowering,
+    <br>* Mcs.magnoliophyta!⇒plantFlowering,
+    <br>* Mcs.plantFlowering,
     <a class="clsHide" href="#idPlnt012nam"></a></p>
   <p id="idPlnt012dsn">description::
     <br>"The flowering plants, also known as angiosperms, Angiospermae,[6][7] or Magnoliophyta,[8] are the most diverse group of land plants, with 64 orders, 416 families, approximately 13,000 known genera and 300,000 known species.[9] Like gymnosperms, angiosperms are seed-producing plants. They are distinguished from gymnosperms by characteristics including flowers, endosperm within the seeds, and the production of fruits that contain the seeds. Etymologically, angiosperm means a plant that produces seeds within an enclosure; in other words, a fruiting plant. The term comes from the Greek words angeion ("case" or "casing") and sperma ("seed").
@@ -451,13 +453,14 @@
     <a class="clsHide" href="#idPlnt012dsn"></a></p>
 
   <section id="idPlntflr">
-  <h2 id="idPlntflrH2">flower of plantFlower
+  <h2 id="idPlntflrH2">flower of plantFlowering
     <a class="clsHide" href="#idPlntflrH2"></a></h2>
   <p id="idPlntflrnam">name::
-    <br>* Mcs.plantFlower'att001-flower!⇒flowerPlant,
-    <br>* Mcs.plantFlower'flower-att001!⇒flowerPlant,
+    <br>* Mcs.plantFlowering'att001-flower!⇒flowerPlant,
+    <br>* Mcs.plantFlowering'flower-att001!⇒flowerPlant,
+    <br>* Mcs.blossom!⇒flowerPlant,
     <br>* Mcs.flowerPlant,
-    <br>* Mcs.flower-of-plantFlower!⇒flowerPlant,
+    <br>* Mcs.flower-of-plantFlowering!⇒flowerPlant,
     <a class="clsHide" href="#idPlntflrnam"></a></p>
   <p id="idPlntflrdsn">description::
     <br>"A flower, sometimes known as a bloom or blossom, is the reproductive structure found in flowering plants (plants of the division Magnoliophyta, also called angiosperms). The biological function of a flower is to affect reproduction, usually by providing a mechanism for the union of sperm with eggs. Flowers may facilitate outcrossing (fusion of sperm and eggs from different individuals in a population) resulting from cross pollination or allow selfing (fusion of sperm and egg from the same flower) when self pollination occurs. Some flowers produce diaspores without fertilization (parthenocarpy). Flowers contain sporangia and are the site where gametophytes develop. Many flowers have evolved to be attractive to animals, so as to cause them to be vectors for the transfer of pollen. After fertilization, the ovary of the flower develops into fruit containing seeds.
@@ -615,20 +618,104 @@
   </section>
   </section>
 
-  <section id="idPlnt018">
-  <h2 id="idPlnt018H2">ogmPlant.fruit-018
-    <a class="clsHide" href="#idPlnt018H2"></a></h2>
-  <p id="idPlnt018nam">name::
-    <br>* Mcs.ogmPlant.018-fruit!⇒plantFruit,
-    <br>* Mcs.ogmPlant.fruit-018!⇒plantFruit,
-    <br>* Mcs.fruit-ogmPlant-018!⇒plantFruit,
-    <br>* Mcs.plantFruit,
-    <a class="clsHide" href="#idPlnt018nam"></a></p>
-  <p id="idPlnt018dsn">description::
-    <br>"All fruits come from flowers, but not all flowers become fruits. Fruits are typically derived from the ovaries of a flower and contain seeds. This means all parts of a plant that flower (including most culinary nuts and berries) are “fruits” and all non-flowering parts of plants are “vegetables”.
-    <br>How we classify a food often depends on if we are talking botanically, culinarily, and sometimes politically."
-    <br>[{2020-04-17} http://factmyth.com/factoids/all-fruits-come-from-flowers/]
-    <a class="clsHide" href="#idPlnt018dsn"></a></p>
+  <section id="idPlnt012att003">
+  <h2 id="idPlnt012att003H2">planting of plantFlowering
+    <a class="clsHide" href="#idPlnt012att003H2"></a></h2>
+  <p id="idPlnt012att003nam">name::
+    <br>* Mcs.plantFlowering'att003-planting,
+    <br>* Mcs.plantFlowering'planting-att003,
+    <a class="clsHide" href="#idPlnt012att003nam"></a></p>
+  <p id="idPlnt012att003dsn">description::
+    <br>·
+    <a class="clsHide" href="#idPlnt012att003dsn"></a></p>
+  </section>
+
+  <section id="idPlnt012att002">
+  <h2 id="idPlnt012att002H2">blossoming of plantFlowering
+    <a class="clsHide" href="#idPlnt012att002H2"></a></h2>
+  <p id="idPlnt012att002nam">name::
+    <br>* Mcs.plantFlowering'att002-blossoming,
+    <br>* Mcs.plantFlowering'blossoming-att002,
+    <br>====== langoGreek:
+    <br>* McsEll.ανθοφορία!=blossoming,
+    <a class="clsHide" href="#idPlnt012att002nam"></a></p>
+  <p id="idPlnt012att002dsn">description::
+    <br>· the-process of developing flowers, its time etc.
+    <a class="clsHide" href="#idPlnt012att002dsn"></a></p>
+  </section>
+
+  <section id="idPlnt012gst">
+  <h2 id="idPlnt012gstH2">GENERIC-SPECIFIC-TREE of plantFlowering
+    <a class="clsHide" href="#idPlnt012gstH2"></a></h2>
+  <p id="idPlnt012gstnam">name::
+    <br>* Mcs.plantFlowering'generic-specific-tree,
+    <a class="clsHide" href="#idPlnt012gstnam"></a></p>
+
+  <section id="idPlnt012gtr">
+  <h3 id="idPlnt012gtrH3">GENERIC-TREE of plantFlowering
+    <a class="clsHide" href="#idPlnt012gtrH3"></a></h3>
+  <p id="idPlnt012gnc">generic-of-plantFlowering::
+    <br>*
+    <a class="clsHide" href="#idPlnt012gnc"></a></p>
+  <p id="idPlnt012atttr">attribute-tree-of-plantFlowering::
+    <br>* ,
+    <a class="clsHide" href="#idPlnt012atttr"></a></p>
+  <p id="idPlnt012attihf">att-tree-inherited-from::
+    <br>· :
+    <br>* ,
+    <a class="clsHide" href="#idPlnt012attihf"></a></p>
+  <p id="idPlnt012attown">att-tree-own-of-plantFlowering::
+    <br>* ,
+    <a class="clsHide" href="#idPlnt012attown"></a></p>
+  </section>
+
+  <section id="idPlnt012str">
+  <h3 id="idPlnt012strH3">SPECIFIC-TREE of plantFlowering
+    <a class="clsHide" href="#idPlnt012strH3"></a></h3>
+  <p id="idPlnt012spc">specific-of-plantFlowering::
+    <br>* monocot,
+    <br>* dicot,
+    <br>===
+    <br>* flower-plant,
+    <br>* fruit-plant,
+    <a class="clsHide" href="#idPlnt012spc"></a></p>
+  </section>
+
+  <section id="idPlnt012scdnMdc">
+  <h3 id="idPlnt012scdnMdcH3">plantFlowering.specifics-division.mono-di-cot
+    <a class="clsHide" href="#idPlnt012scdnMdcH3"></a></h3>
+  <p id="idPlnt012scdnMdcnam">name::
+    <br>* Mcs.plantFlowering.specifics-division.mono-di-cot,
+    <a class="clsHide" href="#idPlnt012scdnMdcnam"></a></p>
+  <p id="idPlnt012scdnMdcdsn">description::
+    <br>"The history behind the classes.
+    <br>Traditionally, the flowering plants have been divided into two major groups, or classes,: the Dicots (Magnoliopsida) and the Monocots (Liliopsida). Many people take this separation into two classes for granted, because it is "plainly obvious", but botanists have not always recognized these as the two fundamental groups of angiosperms. Although Theophrastus (circa 370 BC) is credited with first recognizing differences between the two groups, classification of plants was based upon overall growth form -- trees, herbs, vines -- until the 1600s.
+    <br>In 1682, John Ray published his Methodus Plantarum Nova, in which Dicotyledones and Monocotyledones were first given formal taxonomic standing. This system was popularized by the French botanist Antoine Laurent de Jussieu in his Genera Plantarum of 1789, a work which improved upon, and gradually replaced, the system of plant classification devised by Linnaeus.
+    <br>The fuzzy distinction between the classes.
+    <br>Even after the general acceptance of Monocots and Dicots as the primary groups of flowering plants, botanists did not always agree upon the placement of families into one or the other class. Even in this century some plants called paleoherbs have left problems for taxonomy of angiosperms. These plants have a mix of characters which do not occur together in most other flowering plants. For instance, the Nymphaeales, or water lilies, have reticulate venation in their leaves, and what may be a single cotyledon in the embryo. It is not clear whether it is a single lobed cotyledon, or two which have been fused. The water lilies also have a vascular arrangement in their stem similar to that of monocots.
+    <br>There are also monocots which posses characters more typical of dicots. The Dioscoreales and Smilacaceae have broad reticulate-veined leaves; the Alismataceae have acropetal leaf development; and Potamogeton is one of several monocots to have floral parts in multiples of four.
+    <br>This "fuzziness" in the definitions of Monocotyledonae and Dicotyledonae is not simply the result of poor botany. Rather, it is a real phenomenon resulting from the shared ancestry of the two groups. It is now believed that some of the dicots are more closely related to monocots than to the other dicots, and that the angiosperms do not all fit neatly into two clades. In other words, the dicots include a basal paraphyletic group from which the monocots evolved. Click here for a cladogram which illustrates our current understanding of basal angiosperm relations.
+    <br>The characters which distinguish the classes.
+    <br>Despite the problems in recognizing basal angiosperm taxa, the standard distinctions between dicots and monocots are still quite useful. It must be pointed out, however, that there are many exceptions to these characters in both groups, and that no single character in the list below will infallibly identify a flowering plant as a monocot or dicot.
+    <br>The table summarizes the major morphological differences between monocots and dicots; each character is dicussed in more detail below. For more information, refer to the page on monocot morphology.
+    <br>MONOCOTS	DICOTS
+    <br>Embryo with single cotyledon	Embryo with two cotyledons
+    <br>Pollen with single furrow or pore	Pollen with three furrows or pores
+    <br>Flower parts in multiples of three	Flower parts in multiples of four or five
+    <br>Major leaf veins parallel	Major leaf veins reticulated
+    <br>Stem vacular bundles scattered	Stem vascular bundles in a ring
+    <br>Roots are adventitious	Roots develop from radicle
+    <br>Secondary growth absent	Secondary growth often present
+    <br>Number of cotyledons -- The number of cotyledons found in the embryo is the actual basis for distinguishing the two classes of angiosperms, and is the source of the names Monocotyledonae ("one cotyledon") and Dicotyledonae ("two cotyledons"). The cotyledons are the "seed leaves" produced by the embryo. They serve to absorb nutrients packaged in the seed, until the seedling is able to produce its first true leaves and begin photosynthesis.
+    <br>Pollen structure -- The first angiosperms had pollen with a single furrow or pore through the outer layer (monosulcate). This feature is retained in the monocots, but most dicots are descended from a plant which developed three furrows or pores in its pollen (triporate).
+    <br>Number of flower parts -- If you count the number of petals, stamens, or other floral parts, you will find that monocot flowers tend to have a number of parts that is divisible by three, usually three or six. Dicot flowers on the other hand, tend to have parts in multiples of four or five (four, five, ten, etc.). This character is not always reliable, however, and is not easy to use in some flowers with reduced or numerous parts.
+    <br>Leaf veins -- In monocots, there are usually a number of major leaf veins which run parallel the length of the leaf; in dicots, there are usually numerous auxillary veins which reticulate between the major ones. As with the number of floral parts, this character is not always reliable, as there are many monocots with reticulate venation, notably the aroids and Dioscoreales.
+    <br>Stem vascular arrangement -- Vascular tissue occurs in long strands called vascular bundles. These bundles are arranged within the stem of dicots to form a cylinder, appearing as a ring of spots when you cut across the stem. In monocots, these bundles appear scattered through the stem, with more of the bundles located toward the stem periphery than in the center. This arrangement is unique to monocots and some of their closest relatives among the dicots.
+    <br>Root development -- In most dicots (and in most seed plants) the root develops from the lower end of the embryo, from a region known as the radicle. The radicle gives rise to an apical meristem which continues to produce root tissue for much of the plant's life. By contrast, the radicle aborts in monocots, and new roots arise adventitiously from nodes in the stem. These roots may be called prop roots when they are clustered near the bottom of the stem.
+    <br>Secondary growth -- Most seed plants increase their diameter through secondary growth, producing wood and bark. Monocots (and some dicots) have lost this ability, and so do not produce wood. Some monocots can produce a substitute however, as in the palms and agaves."
+    <br>[{2020-04-18} https://ucmp.berkeley.edu/glossary/gloss8/monocotdicot.html]
+    <a class="clsHide" href="#idPlnt012scdnMdcdsn"></a></p>
+  </section>
   </section>
 </section>
 
@@ -646,6 +733,38 @@
     <a class="clsHide" href="#idPlnt018dsn"></a></p>
 </section>
 
+<section id="idPlnt019">
+  <h1 id="idPlnt019H1">ogmPlant.flower-019
+    <a class="clsHide" href="#idPlnt019H1"></a></h1>
+  <p id="idPlnt019nam">name::
+    <br>* Mcs.ogmPlant.019-flower!⇒plantFlower,
+    <br>* Mcs.ogmPlant.flower-019!⇒plantFlower,
+    <br>* Mcs.flower-ogmPlant-019!⇒plantFlower,
+    <br>* Mcs.plantFlower,
+    <br>====== langoGreek:
+    <br>* McsEll.λουλούδι!=plantFlower,
+    <a class="clsHide" href="#idPlnt019nam"></a></p>
+  <p id="idPlnt019dsn">description::
+    <br>· plantFlower is a-plantFlowering, not tree, we cultivate for its <a class="clsPreview" href="#idPlntflr">flowers</a>.
+    <a class="clsHide" href="#idPlnt019dsn"></a></p>
+</section>
+
+<section id="idPlnt018">
+  <h1 id="idPlnt018H1">ogmPlant.fruit-018
+    <a class="clsHide" href="#idPlnt018H1"></a></h1>
+  <p id="idPlnt018nam">name::
+    <br>* Mcs.ogmPlant.018-fruit!⇒plantFruit,
+    <br>* Mcs.ogmPlant.fruit-018!⇒plantFruit,
+    <br>* Mcs.fruit-ogmPlant-018!⇒plantFruit,
+    <br>* Mcs.plantFruit,
+    <a class="clsHide" href="#idPlnt018nam"></a></p>
+  <p id="idPlnt018dsn">description::
+    <br>"All fruits come from flowers, but not all flowers become fruits. Fruits are typically derived from the ovaries of a flower and contain seeds. This means all parts of a plant that flower (including most culinary nuts and berries) are “fruits” and all non-flowering parts of plants are “vegetables”.
+    <br>How we classify a food often depends on if we are talking botanically, culinarily, and sometimes politically."
+    <br>[{2020-04-17} http://factmyth.com/factoids/all-fruits-come-from-flowers/]
+    <a class="clsHide" href="#idPlnt018dsn"></a></p>
+</section>
+
 <section id="idPlnt013">
   <h1 id="idPlnt013H1">ogmPlant.evergreen-013
     <a class="clsHide" href="#idPlnt013H1"></a></h1>
@@ -654,6 +773,8 @@
     <br>* Mcs.ogmPlant.evergreen-013!⇒plantEvergreen,
     <br>* Mcs.evergreen-plant-013!⇒plantEvergreen,
     <br>* Mcs.plantEvergreen,
+    <br>====== langoGreek:
+    <br>* McsEll.αειθαλές-φυτό!=plantEvergreen,
     <a class="clsHide" href="#idPlnt013nam"></a></p>
   <p id="idPlnt013dsn">description::
     <br>"In botany, an evergreen is a plant that has leaves throughout the year that are always green. This is true even if the plant retains its foliage only in warm climates, and contrasts with deciduous plants, which completely lose their foliage during the winter or dry season."
@@ -727,6 +848,254 @@
   <h2 id="idPlnt017att001H2">fruit (<a class="clsPreview" href="../dirHlth/filMcsFoodHmn.last.html#idFoodHmn212">link</a>) of plantCucumber
     <a class="clsHide" href="#idPlnt017att001H2"></a></h2>
   </section>
+</section>
+
+<section id="idPlnt020">
+  <h1 id="idPlnt020H1">ogmPlant.herb-020
+    <a class="clsHide" href="#idPlnt020H1"></a></h1>
+  <p id="idPlnt020nam">name::
+    <br>* Mcs.ogmPlant.020-herb!⇒plantHerb,
+    <br>* Mcs.ogmPlant.herb-020!⇒plantHerb,
+    <br>* Mcs.herb-ogmPlant-020!⇒plantHerb,
+    <br>* Mcs.plantHerb,
+    <a class="clsHide" href="#idPlnt020nam"></a></p>
+  <p id="idPlnt020dsn">description::
+    <br>"In general use, herbs are plants with savory or aromatic properties that are used for flavoring and garnishing food, for medicinal purposes, or for fragrances; excluding vegetables and other plants consumed for macronutrients. Culinary use typically distinguishes herbs from spices. Herbs generally refers to the leafy green or flowering parts of a plant (either fresh or dried), while spices are usually dried and produced from other parts of the plant, including seeds, bark, roots and fruits.
+    <br>Herbs have a variety of uses including culinary, medicinal, and in some cases, spiritual. General usage of the term "herb" differs between culinary herbs and medicinal herbs; in medicinal or spiritual use, any parts of the plant might be considered as "herbs", including leaves, roots, flowers, seeds, root bark, inner bark (and cambium), resin and pericarp.
+    <br>The word "herb" is pronounced /hɜːrb/ in Commonwealth English,[1] but /ɜːrb/ is common among North American English speakers and those from other regions where h-dropping occurs. In botany, the word "herb" is used as a synonym for "herbaceous plant"."
+    <br>[{2020-04-18} https://en.wikipedia.org/wiki/Herb]
+    <a class="clsHide" href="#idPlnt020dsn"></a></p>
+</section>
+
+<section id="idPlnt021">
+  <h1 id="idPlnt021H1">ogmPlant.cactus-021
+    <a class="clsHide" href="#idPlnt021H1"></a></h1>
+  <p id="idPlnt021nam">name::
+    <br>* Mcs.ogmPlant.021-cactus!⇒plantCactus,
+    <br>* Mcs.ogmPlant.cactus-021!⇒plantCactus,
+    <br>* Mcs.cactus-ogmPlant-021!⇒plantCactus,
+    <br>* Mcs.plantCactus,
+    <a class="clsHide" href="#idPlnt021nam"></a></p>
+  <p id="idPlnt021dsn">description::
+    <br>"A cactus (plural cacti, cactuses, or less commonly, cactus)[3] is a member of the plant family Cactaceae,[Note 1] a family comprising about 127 genera with some 1750 known species of the order Caryophyllales.[4] The word "cactus" derives, through Latin, from the Ancient Greek κάκτος, kaktos, a name originally used by Theophrastus for a spiny plant whose identity is now not certain.[5] Cacti occur in a wide range of shapes and sizes. Most cacti live in habitats subject to at least some drought. Many live in extremely dry environments, even being found in the Atacama Desert, one of the driest places on earth. Cacti show many adaptations to conserve water. Almost all cacti are succulents, meaning they have thickened, fleshy parts adapted to store water. Unlike many other succulents, the stem is the only part of most cacti where this vital process takes place. Most species of cacti have lost true leaves, retaining only spines, which are highly modified leaves. As well as defending against herbivores, spines help prevent water loss by reducing air flow close to the cactus and providing some shade. In the absence of leaves, enlarged stems carry out photosynthesis. Cacti are native to the Americas, ranging from Patagonia in the south to parts of western Canada in the north—except for Rhipsalis baccifera, which also grows in Africa and Sri Lanka.
+    <br>Cactus spines are produced from specialized structures called areoles, a kind of highly reduced branch. Areoles are an identifying feature of cacti. As well as spines, areoles give rise to flowers, which are usually tubular and multipetaled. Many cacti have short growing seasons and long dormancies, and are able to react quickly to any rainfall, helped by an extensive but relatively shallow root system that quickly absorbs any water reaching the ground surface. Cactus stems are often ribbed or fluted, which allows them to expand and contract easily for quick water absorption after rain, followed by long drought periods. Like other succulent plants, most cacti employ a special mechanism called "crassulacean acid metabolism" (CAM) as part of photosynthesis. Transpiration, during which carbon dioxide enters the plant and water escapes, does not take place during the day at the same time as photosynthesis, but instead occurs at night. The plant stores the carbon dioxide it takes in as malic acid, retaining it until daylight returns, and only then using it in photosynthesis. Because transpiration takes place during the cooler, more humid night hours, water loss is significantly reduced.
+    <br>Many smaller cacti have globe-shaped stems, combining the highest possible volume for water storage, with the lowest possible surface area for water loss from transpiration. The tallest[Note 2] free-standing cactus is Pachycereus pringlei, with a maximum recorded height of 19.2 m (63 ft),[6] and the smallest is Blossfeldia liliputiana, only about 1 cm (0.4 in) in diameter at maturity.[7] A fully grown saguaro (Carnegiea gigantea) is said to be able to absorb as much as 200 U.S. gallons (760 l; 170 imp gal) of water during a rainstorm.[8] A few species differ significantly in appearance from most of the family. At least superficially, plants of the genus Pereskia resemble other trees and shrubs growing around them. They have persistent leaves, and when older, bark-covered stems. Their areoles identify them as cacti, and in spite of their appearance, they, too, have many adaptations for water conservation. Pereskia is considered close to the ancestral species from which all cacti evolved. In tropical regions, other cacti grow as forest climbers and epiphytes (plants that grow on trees). Their stems are typically flattened, almost leaf-like in appearance, with fewer or even no spines, such as the well-known Christmas cactus or Thanksgiving cactus (in the genus Schlumbergera).
+    <br>Cacti have a variety of uses: many species are used as ornamental plants, others are grown for fodder or forage, and others for food (particularly their fruit). Cochineal is the product of an insect that lives on some cacti.
+    <br>Many succulent plants in both the Old and New World – such as some Euphorbiaceae (euphorbias) – bear a striking resemblance to cacti, and may incorrectly be called "cactus" in common usage."
+    <br>[{2020-04-18} https://en.wikipedia.org/wiki/Cactus]
+    <a class="clsHide" href="#idPlnt021dsn"></a></p>
+
+  <section id="idPlnt021rsc">
+  <h2 id="idPlnt021rscH2">resource of plantCactus
+    <a class="clsHide" href="#idPlnt021rscH2"></a></h2>
+  <p id="idPlnt021rscnam">name::
+    <br>* Mcs.plantCactus'resource,
+    <a class="clsHide" href="#idPlnt021rscnam"></a></p>
+  <p id="idPlnt021rscdsn">description::
+    <br>* https://cactusway.com/is-cactus-a-flower-a-plant-or-a-tree/,
+    <a class="clsHide" href="#idPlnt021rscdsn"></a></p>
+  </section>
+</section>
+
+<section id="idPlnt022">
+  <h1 id="idPlnt022H1">ogmPlant.grass-022
+    <a class="clsHide" href="#idPlnt022H1"></a></h1>
+  <p id="idPlnt022nam">name::
+    <br>* Mcs.ogmPlant.022-grass!⇒plantGrass,
+    <br>* Mcs.ogmPlant.grass-022!⇒plantGrass,
+    <br>* Mcs.grass-ogmPlant-022!⇒plantGrass,
+    <br>* Mcs.plantGrass,
+    <a class="clsHide" href="#idPlnt022nam"></a></p>
+  <p id="idPlnt022dsn">description::
+    <br>"Poaceae (/poʊˈeɪsiaɪ/) or Gramineae is a large and nearly ubiquitous family of monocotyledonous flowering plants known as grasses, commonly referred to collectively as grass. Poaceae includes the cereal grasses, bamboos and the grasses of natural grassland and cultivated lawns and pasture.
+    <br>The Poaceae are the most important source of the world's dietary energy supply. They provide, through direct human consumption, just over one-half (51%) of all dietary energy; rice provides 20%, wheat supplies 20%, maize (corn) 5.5%, and other grains 6%.[4]
+    <br>Grasses have stems that are hollow except at the nodes and narrow alternate leaves borne in two ranks. The lower part of each leaf encloses the stem, forming a leaf-sheath. With around 780 genera and around 12,000 species,[5] Poaceae are the fifth-largest plant family, following the Asteraceae, Orchidaceae, Fabaceae and Rubiaceae.[6]
+    <br>Grasslands such as savannah and prairie where grasses are dominant are estimated to constitute 40.5% of the land area of the Earth, excluding Greenland and Antarctica.[7] Grasses are also an important part of the vegetation in many other habitats, including wetlands, forests and tundra.
+    <br>The Poaceae are the most economically important plant family, providing staple foods from domesticated cereal crops such as maize, wheat, rice, barley, and millet as well as feed for meat-producing animals. They are used as building materials (bamboo, thatch, and straw). They are a source of biofuel, primarily via the conversion of maize to ethanol.
+    <br>Though they are commonly called "grasses", seagrasses, rushes, and sedges fall outside this family. The rushes and sedges are related to the Poaceae, being members of the order Poales, but the seagrasses are members of order Alismatales."
+    <br>[{2020-04-18} https://en.wikipedia.org/wiki/Poaceae]
+    <a class="clsHide" href="#idPlnt022dsn"></a></p>
+</section>
+
+<section id="idPlnt023">
+  <h1 id="idPlnt023H1">ogmPlant.climber-023
+    <a class="clsHide" href="#idPlnt023H1"></a></h1>
+  <p id="idPlnt023nam">name::
+    <br>* Mcs.ogmPlant.023-climber!⇒plantClimber,
+    <br>* Mcs.ogmPlant.climber-023!⇒plantClimber,
+    <br>* Mcs.climber-ogmPlant-023!⇒plantClimber,
+    <br>* Mcs.plantClimber,
+    <br>* Mcs.vine-ogmPlant-023!⇒plantClimber,
+    <a class="clsHide" href="#idPlnt023nam"></a></p>
+  <p id="idPlnt023dsn">description::
+    <br>"A vine (Latin vīnea "grapevine", "vineyard", from vīnum "wine") is any plant with a growth habit of trailing or scandent (that is, climbing) stems, lianas or runners. The word vine can also refer to such stems or runners themselves, for instance, when used in wicker work.[1][2]
+    <br>In parts of the world, including the British Isles, the term "vine" usually applies exclusively to grapevines (Vitis),[3] while the term "climber" is used for all climbing plants.[4]"
+    <br>[{2020-04-18} https://en.wikipedia.org/wiki/Vine]
+    <a class="clsHide" href="#idPlnt023dsn"></a></p>
+</section>
+
+<section id="idPlnt024">
+  <h1 id="idPlnt024H1">ogmPlant.bush-024
+    <a class="clsHide" href="#idPlnt024H1"></a></h1>
+  <p id="idPlnt024nam">name::
+    <br>* Mcs.ogmPlant.024-bush!⇒plantBush,
+    <br>* Mcs.ogmPlant.bush-024!⇒plantBush,
+    <br>* Mcs.bush-ogmPlant-024!⇒plantBush,
+    <br>* Mcs.plantBush,
+    <br>* Mcs.shrub-ogmPlant-024!⇒plantBush,
+    <a class="clsHide" href="#idPlnt024nam"></a></p>
+  <p id="idPlnt024dsn">description::
+    <br>"A shrub or bush is a small- to medium-sized perennial woody plant. Unlike herbaceous plants, shrubs have persistent woody stems above the ground. They are distinguished from trees by their multiple stems and shorter height, less than 6 m-10 m (20 ft–33 ft) tall.[1][2] Small shrubs, less than 2 m (6.6 ft) tall are sometimes termed subshrubs.[3]"
+    <br>[{2020-04-18} https://en.wikipedia.org/wiki/Shrub]
+    <a class="clsHide" href="#idPlnt024dsn"></a></p>
+</section>
+
+<section id="idPlnt025">
+  <h1 id="idPlnt025H1">ogmPlant.land-025
+    <a class="clsHide" href="#idPlnt025H1"></a></h1>
+  <p id="idPlnt025nam">name::
+    <br>* Mcs.ogmPlant.025-land!⇒plantLand,
+    <br>* Mcs.ogmPlant.land-025!⇒plantLand,
+    <br>* Mcs.embryophyta-025!⇒plantLand,
+    <br>* Mcs.land-ogmPlant-025!⇒plantLand,
+    <br>* Mcs.plantLand,
+    <a class="clsHide" href="#idPlnt025nam"></a></p>
+  <p id="idPlnt025dsn">description::
+    <br>"The Embryophyta, or land plants, are the most familiar group of green plants that form vegetation on earth. Embryophyta is a clade within the Phragmoplastophyta, a larger clade that also includes several green algae groups (including the Charophyceae and Coleochaetales), and within this large clade the embryophytes are sister to the Zygnematophyceae/Mesotaeniaceae and consist of the bryophytes plus the polysporangiophytes.[12] Living embryophytes therefore include hornworts, liverworts, mosses, ferns, lycophytes, gymnosperms and flowering plants. The Embryophyta are informally called land plants because they live primarily in terrestrial habitats, while the related green algae are primarily aquatic. Embryophytes are complex multicellular eukaryotes with specialized reproductive organs. The name derives from their innovative characteristic of nurturing the young embryo sporophyte during the early stages of its multicellular development within the tissues of the parent gametophyte. With very few exceptions, embryophytes obtain their energy by photosynthesis, that is by using the energy of sunlight to synthesize their food from carbon dioxide and water."
+    <br>[{2020-04-18} https://en.wikipedia.org/wiki/Embryophyte]
+    <a class="clsHide" href="#idPlnt025dsn"></a></p>
+
+  <section id="idPlnt025att001">
+  <h1 id="idPlnt025att001H1">soil of plantLand
+    <a class="clsHide" href="#idPlnt025att001H1"></a></h1>
+  <p id="idPlnt025att001nam">name::
+    <br>* Mcs.plantLand'att001-soil,
+    <br>* Mcs.plantLand'soil-att001,
+    <br>* Mcs.soil-plantLand-att001,
+    <a class="clsHide" href="#idPlnt025att001nam"></a></p>
+  <p id="idPlnt025att001dsn">description::
+    <br>·
+    <a class="clsHide" href="#idPlnt025att001dsn"></a></p>
+  </section>
+</section>
+
+<section id="idPlnt026">
+  <h1 id="idPlnt026H1">ogmPlant.aquatic-026
+    <a class="clsHide" href="#idPlnt026H1"></a></h1>
+  <p id="idPlnt026nam">name::
+    <br>* Mcs.ogmPlant.026-aquatic!⇒plantAquatic,
+    <br>* Mcs.ogmPlant.aquatic-026!⇒plantAquatic,
+    <br>* Mcs.aquatic-ogmPlant-026!⇒plantAquatic,
+    <br>* Mcs.plantAquatic,
+    <a class="clsHide" href="#idPlnt026nam"></a></p>
+  <p id="idPlnt026dsn">description::
+    <br>"Aquatic plants are plants that have adapted to living in aquatic environments (saltwater or freshwater). They are also referred to as hydrophytes or macrophytes to distinguish them from algae and other microphytes. A macrophyte is a plant that grows in or near water and is either emergent, submergent, or floating. In lakes and rivers macrophytes provide cover for fish , substrate for aquatic invertebrates, produce oxygen, and act as food for some fish and wildlife.[1]
+    <br>Macrophytes are primary producers and are the basis of the food web for many organisms.[2] They have a significant effect on soil chemistry and light levels [3] as they slow down the flow of water and capture pollutants and trap sediments. Excess sediment will settle into the benthos aided by the reduction of flow rates caused by the presence of plant stems, leaves and roots. Some plants have the capability of absorbing pollutants into their tissue. [4][5] Seaweeds are multicellular marine algae and, although their ecological impact is similar to other larger water plants, they are not typically referred to as macrophytes[5].
+    <br>Aquatic plants require special adaptations for living submerged in water, or at the water's surface. The most common adaptation is the presence of lightweight internal packing cells, aerenchyma, but floating leaves and finely dissected leaves are also common.[6][7][8] Aquatic plants can only grow in water or in soil that is frequently saturated with water. They are therefore a common component of wetlands.[9]One of the largest aquatic plants in the world is the Amazon water lily; one of the smallest is the minute duckweed. Many small aquatic animals use plants such as duckweed for a home, or for protection from predators. Some other familiar examples of aquatic plants might include floating heart, water lily, lotus, and water hyacinth."
+    <br>[{2020-04-18} https://en.wikipedia.org/wiki/Aquatic_plant]
+    <a class="clsHide" href="#idPlnt026dsn"></a></p>
+</section>
+
+<section id="idPlnt027">
+  <h1 id="idPlnt027H1">ogmPlant.seed-027
+    <a class="clsHide" href="#idPlnt027H1"></a></h1>
+  <p id="idPlnt027nam">name::
+    <br>* Mcs.ogmPlant.027-seed!⇒plantSeed,
+    <br>* Mcs.ogmPlant.seed-027!⇒plantSeed,
+    <br>* Mcs.phanerogam-plant-027!⇒plantSeed,
+    <br>* Mcs.seed-plant-027!⇒plantSeed,
+    <br>* Mcs.spermatophyte-plant-027!⇒plantSeed,
+    <br>* Mcs.plantSeed,
+    <a class="clsHide" href="#idPlnt027nam"></a></p>
+  <p id="idPlnt027dsn">description::
+    <br>"The spermatophytes, also known as phanerogams (taxon Phanerogamae) or phaenogams (taxon Phaenogamae), comprise those plants that produce seeds, hence the alternative name seed plants. They are a subset of the embryophytes or land plants. The term phanerogams or phanerogamae is derived from the Greek φανερός, phanerós meaning "visible", in contrast to the cryptogamae from Greek κρυπτός kryptós = "hidden" together with the suffix γαμέω, gameo, "to marry". These terms distinguished those plants with hidden sexual organs (cryptogamae) from those with visible sexual organs (phanerogamae)."
+    <br>[{2020-04-18} https://en.wikipedia.org/wiki/Spermatophyte]
+    <a class="clsHide" href="#idPlnt027dsn"></a></p>
+
+  <section id="idPlnt027att001">
+  <h2 id="idPlnt027att001H2">seed of plantSeed
+    <a class="clsHide" href="#idPlnt027att001H2"></a></h2>
+  <p id="idPlnt027att001nam">name::
+    <br>* Mcs.plantSeed'att001-seed,
+    <br>* Mcs.plantSeed'seed-att001,
+    <br>* Mcs.seed-of-plantSeed-att001,
+    <a class="clsHide" href="#idPlnt027att001nam"></a></p>
+  <p id="idPlnt027att001dsn">description::
+    <br>"A seed is an embryonic plant enclosed in a protective outer covering. The formation of the seed is part of the process of reproduction in seed plants, the spermatophytes, including the gymnosperm and angiosperm plants.
+    <br>Seeds are the product of the ripened ovule, after fertilization by pollen and some growth within the mother plant. The embryo is developed from the zygote and the seed coat from the integuments of the ovule.
+    <br>Seeds have been an important development in the reproduction and success of gymnosperm and angiosperm plants, relative to more primitive plants such as ferns, mosses and liverworts, which do not have seeds and use water-dependent means to propagate themselves. Seed plants now dominate biological niches on land, from forests to grasslands both in hot and cold climates.
+    <br>The term "seed" also has a general meaning that antedates the above – anything that can be sown, e.g. "seed" potatoes, "seeds" of corn or sunflower "seeds". In the case of sunflower and corn "seeds", what is sown is the seed enclosed in a shell or husk, whereas the potato is a tuber.
+    <br>Many structures commonly referred to as "seeds" are actually dry fruits. Plants producing berries are called baccate. Sunflower seeds are sometimes sold commercially while still enclosed within the hard wall of the fruit, which must be split open to reach the seed. Different groups of plants have other modifications, the so-called stone fruits (such as the peach) have a hardened fruit layer (the endocarp) fused to and surrounding the actual seed. Nuts are the one-seeded, hard-shelled fruit of some plants with an indehiscent seed, such as an acorn or hazelnut."
+    <br>[{2020-04-18} https://en.wikipedia.org/wiki/Seed]
+    <a class="clsHide" href="#idPlnt027att001dsn"></a></p>
+  </section>
+</section>
+
+<section id="idPlnt028">
+  <h1 id="idPlnt028H1">ogmPlant.spore-028
+    <a class="clsHide" href="#idPlnt028H1"></a></h1>
+  <p id="idPlnt028nam">name::
+    <br>* Mcs.ogmPlant.028-spore!⇒plantSpore,
+    <br>* Mcs.ogmPlant.spore-028!⇒plantSpore,
+    <br>* Mcs.cryptogame-ogmPlant-028!⇒plantSpore,
+    <br>* Mcs.plantSpore,
+    <br>* Mcs.spore-ogmPlant-028!⇒plantSpore,
+    <a class="clsHide" href="#idPlnt028nam"></a></p>
+  <p id="idPlnt028dsn">description::
+    <br>"A cryptogam (scientific name Cryptogamae) is a plant (in the wide sense of the word) that reproduces by spores, without flowers or seeds. "Cryptogamae" (Greek κρυπτός kryptos, "hidden" + γαμέω, gameein, "to marry") means "hidden reproduction", referring to the fact that no seed is produced, thus cryptogams represent the non-seed bearing plants. Other names, such as "thallophytes", "lower plants", and "spore plants" are also occasionally used. As a group, Cryptogamae are the opposite of the Phanerogamae (Greek φανερός, phaneros = "visible") or Spermatophyta (Greek σπέρμα, sperma = "seed" and φυτόν, phyton = "plant"), the seed plants. The best-known groups of cryptogams are algae, lichens, mosses and ferns,[1] but it also includes non-photosynthetic organisms traditionally classified as plants, such as fungi, slime molds, and bacteria.[2]The classification is now deprecated in Linnaean taxonomy.
+    <br>At one time, the cryptogams were formally recognised as a group within the plant kingdom. In his system for classification of all known plants and animals, Carl Linnaeus (1707–1778) divided the plant kingdom into 24 classes,[3] one of which was the "Cryptogamia". This included all plants with concealed reproductive organs. He divided Cryptogamia into four orders: Algae, Musci (bryophytes), Filices (ferns), and Fungi.
+    <br>Not all cryptogams are treated as part of the plant kingdom; the fungi, in particular, are regarded as a separate kingdom, more closely related to animals than plants, while blue-green algae are now regarded as a phylum of bacteria. Therefore, in contemporary plant systematics, "Cryptogamae" is not a taxonomically coherent group, but is cladistically polyphyletic. However, all organisms known as cryptogams belong to the field traditionally studied by botanists and the names of all cryptogams are regulated by the International Code of Nomenclature for algae, fungi, and plants.
+    <br>During World War II, the British Government Code and Cypher School recruited Geoffrey Tandy, a marine biologist expert in cryptogams, to Station X, Bletchley Park when someone confused these with cryptograms.[4][5][6]"
+    <br>[{2020-04-18} https://en.wikipedia.org/wiki/Cryptogam]
+    <a class="clsHide" href="#idPlnt028dsn"></a></p>
+
+  <section id="idPlnt028att001">
+  <h2 id="idPlnt028att001H2">spore of plantSpore
+    <a class="clsHide" href="#idPlnt028att001H2"></a></h2>
+  <p id="idPlnt028att001nam">name::
+    <br>* Mcs.plantSpore'att001-spore,
+    <br>* Mcs.plantSpore'spore-att001,
+    <br>* Mcs.spore-of-plantSpore,
+    <a class="clsHide" href="#idPlnt028att001nam"></a></p>
+  <p id="idPlnt028att001dsn">description::
+    <br>"The main difference between spores and seeds as dispersal units is that spores are unicellular, the first cell of a gametophyte, while seeds contain within them a developing embryo (the multicellular sporophyte of the next generation), produced by the fusion of the male gamete of the pollen tube with the female gamete formed by the megagametophyte within the ovule. Spores germinate to give rise to haploid gametophytes, while seeds germinate to give rise to diploid sporophytes."
+    <br>[{2020-04-18} https://en.wikipedia.org/wiki/Spore]
+    <a class="clsHide" href="#idPlnt028att001dsn"></a></p>
+  </section>
+</section>
+
+<section id="idPlnt029">
+  <h1 id="idPlnt029H1">ogmPlant.gymnosperm-029
+    <a class="clsHide" href="#idPlnt029H1"></a></h1>
+  <p id="idPlnt029nam">name::
+    <br>* Mcs.ogmPlant.029-gymnosperm!⇒plantGymnosperm,
+    <br>* Mcs.ogmPlant.gymnosperm-029!⇒plantGymnosperm,
+    <br>* Mcs.gymnosperm-ogmPlant-029!⇒plantGymnosperm,
+    <br>* Mcs.plantGymnosperm,
+    <a class="clsHide" href="#idPlnt029nam"></a></p>
+  <p id="idPlnt029dsn">description::
+    <br>"The gymnosperms, also known as Acrogymnospermae,[1] are a group of seed-producing plants that includes conifers, cycads, Ginkgo, and gnetophytes. The term "gymnosperm" comes from the composite word in Greek: γυμνόσπερμος (γυμνός, gymnos, 'naked' and σπέρμα, sperma, 'seed'), literally meaning "naked seeds". The name is based on the unenclosed condition of their seeds (called ovules in their unfertilized state). The non-encased condition of their seeds contrasts with the seeds and ovules of flowering plants (angiosperms), which are enclosed within an ovary. Gymnosperm seeds develop either on the surface of scales or leaves, which are often modified to form cones, or solitary as in yew, Torreya, Ginkgo.[2]
+    <br>The gymnosperms and angiosperms together compose the spermatophytes or seed plants. The gymnosperms are divided into six phyla. Organisms that belong to the Cycadophyta, Ginkgophyta, Gnetophyta, and Pinophyta (also known as Coniferophyta) phyla are still in existence while those in the Pteridospermales and Cordaitales phyla are now extinct.[3]
+    <br>By far the largest group of living gymnosperms are the conifers (pines, cypresses, and relatives), followed by cycads, gnetophytes (Gnetum, Ephedra and Welwitschia), and Ginkgo biloba (a single living species).
+    <br>Some genera have mycorrhiza, fungal associations with roots(Pinus), while in some others (Cycas) small specialised roots called coralloid roots are associated with nitrogen-fixing cyanobacteria."
+    <br>[{2020-04-18} https://en.wikipedia.org/wiki/Gymnosperm]
+    <a class="clsHide" href="#idPlnt029dsn"></a></p>
+</section>
+
+<section id="idPlnt030">
+  <h1 id="idPlnt030H1">ogmPlant.edible-030
+    <a class="clsHide" href="#idPlnt030H1"></a></h1>
+  <p id="idPlnt030nam">name::
+    <br>* Mcs.ogmPlant.030-edible!⇒plantEdible,
+    <br>* Mcs.ogmPlant.edible-030!⇒plantEdible,
+    <br>* Mcs.edible-ogmPlant-030!⇒plantEdible,
+    <br>* Mcs.plantEdible,
+    <br>* Mcs.vegetable!⇒plantEdible,
+    <a class="clsHide" href="#idPlnt030nam"></a></p>
+  <p id="idPlnt030dsn">description::
+    <br>"The exact definition of "vegetable" may vary simply because of the many parts of a plant consumed as food worldwide—roots, stems, leaves, flowers, fruits, and seeds. The broadest definition is the word's use adjectivally to mean "matter of plant origin". More specifically, a vegetable may be defined as "any plant, part of which is used for food",[5] a secondary meaning then being "the edible part of such a plant".[5] A more precise definition is "any plant part consumed for food that is not a fruit or seed, but including mature fruits that are eaten as part of a main meal"."
+    <br>[{2020-04-18} https://en.wikipedia.org/wiki/Vegetable]
+    <a class="clsHide" href="#idPlnt030dsn"></a></p>
 </section>
 
 <section id="idMeta">
