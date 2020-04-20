@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.disease (human-disease 0-40-0.2020-04-15 draft)</title>
+  <title>Mcs.disease (human-disease 0-42-0.2020-04-20 draft)</title>
   <meta name="keywords" content="disease-of-human, disease, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -38,8 +38,10 @@
     <br>* Mcs.diseaseOgm.001-human!⇒disease,
     <br>* Mcs.diseaseOgm.human-001!⇒disease,
     <br>* Mcs.disease'(disease-of-human)!⇒disease,
+    <br>* Mcs.disease.human!⇒disease,
     <br>* Mcs.disease-of-human!⇒disease,
     <br>* Mcs.disorder.human!⇒disease,
+    <br>* Mcs.dssHmn!⇒disease,
     <br>* Mcs.dysfunction-or-dys-structure-atomic-of-human!⇒disease,
     <br>* Mcs.human'att006-disease!⇒disease,
     <br>* Mcs.human'disease!⇒disease,
@@ -118,38 +120,18 @@
   <h2 id="idDssHmncasPtgnH2">cause.pathogen
     <a class="clsHide" href="#idDssHmncasPtgnH2"></a></h2>
   <p id="idDssHmncasPtgndsn">description::
-    <br>"In biology, a pathogen (Greek: πάθος pathos "suffering", "passion" and -γενής -genēs "producer of") in the oldest and broadest sense, is anything that can produce disease. A pathogen may also be referred to as an infectious agent, or simply a germ.
+    <br>"In biology, a pathogen (Greek: πάθος pathos "suffering", "passion" and -γενής -genēs "producer of") in the oldest and broadest sense, is <span class="clsColorRed">anything</span> that can produce disease. A pathogen may also be referred to as an infectious agent, or simply a germ.
     <br>The term pathogen came into use in the 1880s.[1][2] Typically, the term is used to describe an infectious microorganism or agent, such as a virus, bacterium, protozoan, prion, viroid, or fungus.[3][4][5] Small animals, such as certain kinds of worms and insect larvae, can also produce disease. However, these animals are usually, in common parlance, referred to as parasites rather than pathogens. The scientific study of microscopic organisms, including microscopic pathogenic organisms, is called microbiology, while the study of disease that may include these pathogens is called pathology. Parasitology, meanwhile, is the scientific study of parasites and the organisms that host them.
     <br>There are several pathways through which pathogens can invade a host. The principal pathways have different episodic time frames, but soil has the longest or most persistent potential for harboring a pathogen. Diseases in humans that are caused by infectious agents are known as pathogenic diseases, though not all diseases are caused by pathogens. Some diseases, such as Huntington's disease, are caused by inheritance of abnormal genes."
     <br>[https://en.wikipedia.org/wiki/Pathogen {2020-01-15}]
     <a class="clsHide" href="#idDssHmncasPtgndsn"></a></p>
   <p id="idDssHmncasPtgnnam">name::
     <br>* Mcs.disease'cause.pathogen,
+    <br>* Mcs.diseaseInfectious'cause,
     <br>* Mcs.germ,
     <br>* Mcs.infectious-agent,
     <br>* Mcs.pathogen-of-disease,
     <a class="clsHide" href="#idDssHmncasPtgnnam"></a></p>
-  </section>
-
-  <section id="idDssHmnTrmn">
-  <h2 id="idDssHmnTrmnH2">cause.transmition of disease
-    <a class="clsHide" href="#idDssHmnTrmnH2"></a></h2>
-  <p id="idDssHmnTrmndsn">description::
-    <br>"Infection is the invasion of an organism's body tissues by disease-causing agents, their multiplication, and the reaction of host tissues to the infectious agents and the toxins they produce.[1][2] Infectious disease, also known as transmissible disease or communicable disease, is illness resulting from an infection."
-    <br>[https://en.wikipedia.org/wiki/Infection {2020-01-26}]
-    <a class="clsHide" href="#idDssHmnTrmndsn"></a></p>
-  <p id="idDssHmnTrmnnam">name::
-    <br>* Mcs.disease'infection,
-    <br>* Mcs.disease'transmition,
-    <br>* Mcs.infection-of-disease,
-    <br>====== langoGreek:
-    <br>* McsEll.λοίμωξη-πάθησης!=disease'transmition,
-    <br>* McsEll.πάθησης-μετάδοση!=disease'transmition,
-    <br>* McsEll.πάθησης-μόλυνση!=disease'transmition,
-    <a class="clsHide" href="#idDssHmnTrmnnam"></a></p>
-  <p id="idDssHmnTrmngtr">generic-tree-of-::
-    <br>* doing-of-disease,
-    <a class="clsHide" href="#idDssHmnTrmngtr"></a></p>
   </section>
 </section>
 
@@ -940,7 +922,7 @@
     <a class="clsHide" href="#idDssHmn001H1"></a></h1>
   <p id="idDssHmn001dsn">description::
     <br>"Infection is the invasion of an organism's body tissues by disease-causing agents, their multiplication, and the reaction of host tissues to the infectious agents and the toxins they produce.[1][2]
-    <br><span class="clsColorRed">Infectious disease</span>, also known as transmissible disease or communicable disease, is illness resulting from <a class="clsPreview" href="#idDssHmnTrmn">an infection</a>."
+    <br><span class="clsColorRed">Infectious disease</span>, also known as transmissible disease or communicable disease, is illness resulting from <a class="clsPreview" href="#idDssHmn001infn">an infection</a>."
     <br>[https://en.wikipedia.org/wiki/Infection {2020-01-26}]
     <a class="clsHide" href="#idDssHmn001dsn"></a></p>
   <p id="idDssHmn001nam">name::
@@ -966,16 +948,24 @@
     <br>Infection, injurious contamination of the body or part of the body by <span class="clsU">pathogenic agents</span>, such as fungi, bacteria, protozoa, rickettsiae, or viruses, or by the toxins that these agents may produce. An infection may be local and confined to one area or generalized and spread throughout the body. Once the infectious agent enters the host and begins to proliferate, the defence mechanisms of the body react to the infection, producing the characteristic symptoms of pain, swelling, reddening at the site of infection, functional disorders, rise in body temperature and pulse rates, and an increase in the number of white cells.
     <br>["Infection," Microsoft(R) Encarta(R) 97 Encyclopedia. (c) 1993-1996 Microsoft Corporation. All rights reserved.]
     <br>===
-    <br>μεταδοτικές-παθήσεις ονομάζω τις παθήσεις που έχουν το χαρακτηριστικό <a class="clsPreview" href="#idDssHmnTrmn">της μετάδοσης</a>.
+    <br>μεταδοτικές-παθήσεις ονομάζω τις παθήσεις που έχουν το χαρακτηριστικό <a class="clsPreview" href="#idDssHmn001infn">της μετάδοσης</a>.
     <br>[hmnSgm, {1995-03}]
     <br>===
     <br>λοίμωξη είναι η DEFECT που προήλθε μετά από μόλυνση από μικρόβια.
     <br>[ο-σύμβουλος-των-νέων, 1966, 4-307⧺cptRsc12⧺]
     <a class="clsHide" href="#idDssHmn001P1"></a></p>
 
+  <section id="idDssHmn001cause">
+  <h2 id="idDssHmn001causeH2">02_cause (<a class="clsPreview" href="#idDssHmncasPtgn">link</a>) of diseaseInfectious
+    <a class="clsHide" href="#idDssHmn001causeH2"></a></h2>
+  </section>
+
   <section id="idDssHmn001diagnosis">
-  <h2 id="idDssHmn001diagnosisH2">diagnosis
+  <h2 id="idDssHmn001diagnosisH2">03_diagnosis of diseaseInfectious
     <a class="clsHide" href="#idDssHmn001diagnosisH2"></a></h2>
+  <p id="idDssHmn001diagnosisnam">name::
+    <br>* Mcs.diseaseInfectious'diagnosis,
+    <a class="clsHide" href="#idDssHmn001diagnosisnam"></a></p>
   <p id="idDssHmn001diagnosisP1">τεστ αίματος διακρίνει πού οφείλεται μια λοίμωξη
     <br>Αθήνα {2015-03-21}
     <br>ένα γρήγορο τεστ αίματος, που ανέπτυξαν ισραηλινοί επιστήμονες, μπορεί να βοηθήσει τους γιατρούς να μάθουν μέσα σε δύο μόνο ώρες αν η λοίμωξη ενός ασθενούς οφείλεται σε ιό ή βακτήριο.
@@ -1005,6 +995,27 @@
     <br>"Germ theory of disease (as a scientific theory):[83] physician Girolamo Fracastoro, scholar and poet, in 1546 was the first proposing that epidemic diseases are caused by transferable tiny particles or "spores" that could transmit infection by direct or indirect contact or even without contact over long distances. In his idea the "spores" of diseases may refer to either chemicals or living entities. He appears to have first used the Latin word fomes, meaning tinder, in the sense of infectious agent. He was the one to christen the syphilis disease with this name, from the name of a young boy Syphilius in Greek mythology, who was punished with an horrible disease for he had offended Apollo. Fracastoro also gave the first scientific description of typhus. The lunar crater Fracastorius is named after him."
     <br>[https://en.wikipedia.org/wiki/List_of_Italian_inventions_and_discoveries]
     <a class="clsHide" href="#idDssHmn001rscdsn"></a></p>
+  </section>
+
+  <section id="idDssHmn001infn">
+  <h2 id="idDssHmn001infnH2">infection of diseaseInfectious
+    <a class="clsHide" href="#idDssHmn001infnH2"></a></h2>
+  <p id="idDssHmn001infndsn">description::
+    <br>"Infection is the invasion of an organism's body tissues by disease-causing agents, their multiplication, and the reaction of host tissues to the infectious agents and the toxins they produce.[1][2] Infectious disease, also known as transmissible disease or communicable disease, is illness resulting from an infection."
+    <br>[https://en.wikipedia.org/wiki/Infection {2020-01-26}]
+    <a class="clsHide" href="#idDssHmn001infndsn"></a></p>
+  <p id="idDssHmn001infnnam">name::
+    <br>* Mcs.disease'infection,
+    <br>* Mcs.disease'transmition,
+    <br>* Mcs.infection-of-disease,
+    <br>====== langoGreek:
+    <br>* McsEll.λοίμωξη-πάθησης!=disease'transmition,
+    <br>* McsEll.πάθησης-μετάδοση!=disease'transmition,
+    <br>* McsEll.πάθησης-μόλυνση!=disease'transmition,
+    <a class="clsHide" href="#idDssHmn001infnnam"></a></p>
+  <p id="idDssHmn001infngtr">generic-tree-of-::
+    <br>* doing-of-disease,
+    <a class="clsHide" href="#idDssHmn001infngtr"></a></p>
   </section>
 
   <section id="idDssHmn001specific">
@@ -1189,7 +1200,7 @@
   <h1 id="idDssHmn002H1">disease.infectiousNo-002
     <a class="clsHide" href="#idDssHmn002H1"></a></h1>
   <p id="idDssHmn002dsn">description::
-    <br>μη-μεταδοτικές-παθήσεις ονομάζω τις παθήσεις που δεν έχουν το χαρακτηριστικό <a class="clsPreview" href="#idDssHmnTrmn">της μετάδοσης</a>.
+    <br>μη-μεταδοτικές-παθήσεις ονομάζω τις παθήσεις που δεν έχουν το χαρακτηριστικό <a class="clsPreview" href="#idDssHmn001infn">της μετάδοσης</a>.
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idDssHmn002dsn"></a></p>
   <p id="idDssHmn002nam">name::
@@ -8558,6 +8569,7 @@
   <p id="idDssHmn199nam">name::
     <br>* Mcs.disease.199-obesity,
     <br>* Mcs.disease.obesity-199,
+    <br>* Mcs.diseaseΟbesity,
     <br>* Mcs.human'obesity,
     <br>* Mcs.obesity,
     <br>====== langoGreek:
@@ -8566,12 +8578,12 @@
     <br>* McsEll.παχυσαρκία,
     <br>* McsEll.παxυσαρκία-ανθρώπου, {2012-08-14},
     <a class="clsHide" href="#idDssHmn199nam"></a></p>
-  <p id="idDssHmn199gtr">generic-tree-of-::
+  <p id="idDssHmn199gtr">generic-tree-of-diseaseΟbesity::
     <br>* <a class="clsPreview" href="#idDssHmngtr">disease</a>,
     <a class="clsHide" href="#idDssHmn199gtr"></a></p>
 
   <section id="idDssHmn199protection">
-  <h2 id="idDssHmn199protectionH2">protection
+  <h2 id="idDssHmn199protectionH2">protection of diseaseΟbesity
     <a class="clsHide" href="#idDssHmn199protectionH2"></a></h2>
   <p id="idDssHmn199protectionP1">protection::
     <br>φάτε τη σωστή ώρα και αδυνατίστε!
@@ -8600,6 +8612,21 @@
     <br>A report on adult obesity rates from the Trust for America's Health appears to show that Americans are making some progress in tackling what had become a national health crisis. The report shows that between 2015 and 2016, obesity rates increased in only four states -- Colorado, Minnesota, Washington, and West Virginia -- and actually decreased in one state, Kansas. Although obesity is still a major national concern, the new data is promising, especially when compared to the numbers from 2006, when obesity rates increased in 31 states.
     <br>[http://www.wisegeek.com/is-the-united-states-making-progress-in-tackling-the-obesity-crisis.htm?m {2017-09-09}]
     <a class="clsHide" href="#idDssHmn199protectionP1"></a></p>
+  </section>
+
+  <section id="idDssHmn199rtfw">
+  <h2 id="idDssHmn199rtfwH2">relation-to-food-waste of diseaseΟbesity
+    <a class="clsHide" href="#idDssHmn199rtfwH2"></a></h2>
+  <p id="idDssHmn199rtfwnam">name::
+    <br>* Mcs.diseaseObesity'relation-to-food-waste,
+    <br>* Mcs.food-waste,
+    <a class="clsHide" href="#idDssHmn199rtfwnam"></a></p>
+  <p id="idDssHmn199rtfwdsn">description::
+    <br>"Is Overeating a Type of Food Waste?
+    <br>Data suggests that the extra weight carried by the world’s population is equal to 154 billion tons of food waste.
+    <br>We've all heard about the obesity epidemic, but it can be hard to quantify its extent. So, how's this: The amount of extra weight carried by the world's population is equivalent to 140 billion tonnes (154 billion US tons) of wasted food. The number comes from a 2019 study conducted by researchers in Italy who wanted to see how excess weight compares with the amount of food that is thrown out or lost. It turns out that it's like comparing watermelons to grapes. Direct food waste is estimated at 1.3 billion tonnes (1.4 billion US tons), or less than 1 percent of the extra girth of the world's collective waistband. What's worse, according to the researchers, is that some of the foods that are contributing significantly to the world's obesity problem, including meat and dairy, are typically calorie-dense, so their production requires a lot of land and water. They also generate more greenhouse gases than vegetables, fruits and tubers, which are the most common sources of food wastage. For the record, the research team considered a body mass index over 21.7 -- typically considered the healthy midpoint -- as excess body weight."
+    <br>[{2020-04-20} http://www.wisegeek.com/is-overeating-a-type-of-food-waste.htm?m]
+    <a class="clsHide" href="#idDssHmn199rtfwdsn"></a></p>
   </section>
 </section>
 
