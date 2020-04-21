@@ -43,13 +43,13 @@ var
   sDir = 'dirOgm',
   sDIR = 'DirOgm',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'organism.plant',
+  sN = 'organism.animal',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'plant',
+  sNS = 'ogmAnimal',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'OgmPlnt',
+  sNFil = 'OgmAnml',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'OgmPlnt';
+  sNId = 'OgmAnml';
 
 s =
   '<!DOCTYPE html>\n' +

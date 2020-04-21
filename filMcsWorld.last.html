@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Mws (worldviewMcsSynagonism 6-20-0.2020-02-26)</title>
+  <title>Mcs.Mws (worldviewMcsSynagonism 6-22-0.2020-04-21)</title>
   <meta name="keywords" content="Mcs-worldview, Kaseluris.Nikos.1959, free book, ebook, html5.id.toc.preview, HITP, synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -22,6 +22,8 @@
   <p id="idDescription">description::
     <br>· this page (and its subpages) contains the <a class="clsPreview" href="#idMwssub">SUBJECTIVE</a> <a class="clsPreview" href="dirCor/filMcs.last.html#idMcswhlviwWrld">Mcs-worldview</a> with <a class="clsPreview" href="dirCor/filMcs.last.html#idDescription">sensorial-concepts-(modelConceptSensorial|Mcs)</a> of <a class="clsPreview" href="../index.html#idAboutme">Kaseluris.Nikos.1959</a>.
     <br>· the-goal of this Mcs-worldview is to have ALL its names <a class="clsPreview" href="#idMwsdfn">defined</a>, in other words to be MONOSEMANTIC.
+    <br>· the-uniqueness of the-current work is that is NOT a-system of texts that describe my-worldview, BUT a-system of sensorial-concepts[a] with direct access to anyone of them[a] from any location in the-worldview.
+    <br>· the-worldview is in a-CONSTANT improvement motion and because of that, you will-find inconsistencies because I need better tools to manage it.
     <a class="clsHide" href="#idDescription"></a></p>
   <p id="idName">name::
     <br>* Mcs.filMcsWorld.last.html,
@@ -349,7 +351,8 @@
       if (oXHR.readyState === 4 && oXHR.status === 200) {
         aCpts = JSON.parse(oXHR.responseText)
         document.getElementById('idMwsstatCptEvlgspn').innerHTML =
-          aCpts[0][1].toLocaleString() + ' Mcs'
+          aCpts[0][1].toLocaleString() + ' Mcs on {' +
+          aCpts[0][2] + '}'
       }
     }
 
@@ -357,7 +360,9 @@
       if (oHitp.aNamidxRoot[n][1] === ';letter') {
         sQ = '<li>⊛ SUM: <span class="clsColorRed">'
              + oHitp.aNamidxRoot[n][2].toLocaleString()
-             +' names</span>'
+             +' names on {'
+             + oHitp.aNamidxRoot[n][3]
+             +'}</span>'
       } else if (oHitp.aNamidxRoot[n][1].startsWith(';')) {
         sQ = sQ + '<li>⊛ ' + oHitp.aNamidxRoot[n][1].substring(1)
            + ': ' + oHitp.aNamidxRoot[n][2]
