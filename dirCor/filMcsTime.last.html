@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.time (time.0-20-0.2020-01-01 draft)</title>
+  <title>Mcs.time (time.0-21-0.2020-04-23 draft)</title>
   <meta name="keywords" content="time, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -691,12 +691,13 @@
     <br>· time-Uom is <a class="clsPreview" href="filMcsGnrc.last.html#idGnrcMsrduom">a-Uom</a> for <a class="clsPreview" href="#idOverview">time</a>.
     <a class="clsHide" href="#idTimeUomdsn"></a></p>
   <p id="idTimeUomnam">name::
-    <br>* Mcs.time-Uom,
-    <br>* Mcs.time.unit-of-measurement,
+    <br>* Mcs.UomTime, {2020-04-23},
+    <br>* Mcs.time-Uom!⇒UomTime,
+    <br>* Mcs.time.unit-of-measurement!⇒UomTime,
     <a class="clsHide" href="#idTimeUomnam"></a></p>
 
   <section id="idTimeUomHrlg">
-  <h2 id="idTimeUomHrlgH2">Horology
+  <h2 id="idTimeUomHrlgH2">Horology of UomTime
     <a class="clsHide" href="#idTimeUomHrlgH2"></a></h2>
   <p id="idTimeUomHrlgdsn">description::
     <br>"Horology ("the study of time", related to Latin horologium from Greek ὡρολόγιον, "instrument for telling the hour", from ὥρα hṓra "hour; time" and -o- interfix and suffix -logy)[1][2] is the study of the measurement of time. Clocks, watches, clockwork, sundials, hourglasses, clepsydras, timers, time recorders, marine chronometers, and atomic clocks are all examples of instruments used to measure time. In current usage, horology refers mainly to the study of mechanical time-keeping devices, while chronometry more broadly includes electronic devices that have largely supplanted mechanical clocks for the best accuracy and precision in time-keeping.
@@ -708,27 +709,8 @@
     <a class="clsHide" href="#idTimeUomHrlgnam"></a></p>
   </section>
 
-  <section id="idTimeUomSpc">
-  <h2 id="idTimeUomSpcH2">time-Uom.specific
-    <a class="clsHide" href="#idTimeUomSpcH2"></a></h2>
-  <p id="idTimeUomSpcdsn">description::
-    <br>* millennium,
-    <br>* century,
-    <br>* year,
-    <br>* month,
-    <br>* week,
-    <br>* day,
-    <br>* hour,
-    <br>* minute,
-    <br>* second,
-    <a class="clsHide" href="#idTimeUomSpcdsn"></a></p>
-  <p id="idTimeUomSpcnam">name::
-    <br>* Mcs.time-Uom.specific,
-    <a class="clsHide" href="#idTimeUomSpcnam"></a></p>
-  </section>
-
   <section id="idTimeUomCldr">
-  <h2 id="idTimeUomCldrH2">time-Uom.calendar
+  <h2 id="idTimeUomCldrH2">calendar of UomTime
     <a class="clsHide" href="#idTimeUomCldrH2"></a></h2>
   <p id="idTimeUomCldrdsn">description::
     <br>· calendar is <a class="clsPreview" href="#idTimeUomCldr">a-system-of-measurement</a> of <a class="clsPreview" href="#idTimeUomDay">days</a>.
@@ -742,6 +724,7 @@
     <br>[https://en.wikipedia.org/wiki/Calendar {2019-10-18}]
     <a class="clsHide" href="#idTimeUomCldrdsn"></a></p>
   <p id="idTimeUomCldrnam">name::
+    <br>* Mcs.UomTime'calendar,
     <br>* Mcs.calendar,
     <br>====== langoKomo:
     <br>* McsKmo.to-kio-sistemo!=time.system-of-measurement,
@@ -933,9 +916,49 @@
   </section>
   </section>
 
+  <section id="idTimeUomSpc">
+  <h2 id="idTimeUomSpcH2">UomTime.specific
+    <a class="clsHide" href="#idTimeUomSpcH2"></a></h2>
+  <p id="idTimeUomSpcdsn">description::
+    <br>* millennium,
+    <br>* century,
+    <br>* year,
+    <br>* month,
+    <br>* week,
+    <br>* day,
+    <br>* hour,
+    <br>* minute,
+    <br>* second,
+    <a class="clsHide" href="#idTimeUomSpcdsn"></a></p>
+  <p id="idTimeUomSpcnam">name::
+    <br>* Mcs.UomTime.specific,
+    <a class="clsHide" href="#idTimeUomSpcnam"></a></p>
+  </section>
+
+  <section id="idTimeUom001">
+  <h2 id="idTimeUom001H2">UomTime.geologic-001
+    <a class="clsHide" href="#idTimeUom001H2"></a></h2>
+  <p id="idTimeUom001nam">name::
+    <br>* Mcs.UomTime.001-geologic,
+    <br>* Mcs.UomTime.geologic-001,
+    <br>* Mcs.GTS-geologic-time-scale,
+    <br>* Mcs.geologic-time,
+    <a class="clsHide" href="#idTimeUom001nam"></a></p>
+  <p id="idTimeUom001dsn">description::
+    <br>"The geologic time scale (GTS) is a system of chronological dating that relates geological strata (stratigraphy) to time. It is used by geologists, paleontologists, and other Earth scientists to describe the timing and relationships of events that have occurred during Earth's history. The table of geologic time spans, presented here, agree with the nomenclature, dates and standard color codes set forth by the International Commission on Stratigraphy (ICS)."
+    <br>[{2020-04-23} https://en.wikipedia.org/wiki/Geologic_time_scale]
+    <a class="clsHide" href="#idTimeUom001dsn"></a></p>
+  <p id="idTimeUom001str">specific-tree-of-::
+    <br>* geologic-eon,
+    <br>* geologic-era,
+    <br>* geologic-period,
+    <br>* geologic-epoch,
+    <br>* geologic-age,
+    <a class="clsHide" href="#idTimeUom001str"></a></p>
+
   <section id="idTimeUomEra">
-  <h2 id="idTimeUomEraH2">time-Uom.era
-    <a class="clsHide" href="#idTimeUomEraH2"></a></h2>
+  <h3 id="idTimeUomEraH3">UomTime.geologic-era
+    <a class="clsHide" href="#idTimeUomEraH3"></a></h3>
   <p id="idTimeUomEradsn">description::
     <br>(n) era, epoch (a period marked by distinctive character or reckoned from a fixed point or event)
     <br>(n) era, geological era (a major division of geological time; an era is usually divided into two or more periods)
@@ -953,14 +976,16 @@
     <br>[https://en.wikipedia.org/wiki/Era {2019-10-22}]
     <a class="clsHide" href="#idTimeUomEradsn"></a></p>
   <p id="idTimeUomEranam">name::
-    <br>* Mcs.era,
+    <br>* Mcs.era-UomTime,
+    <br>* Mcs.geologic-era,
     <br>* Mcs.time.era,
-    <br>* Mcs.time-Uom.era,
+    <br>* Mcs.UomTime.era,
     <a class="clsHide" href="#idTimeUomEranam"></a></p>
+  </section>
   </section>
 
   <section id="idTimeUomYear">
-  <h2 id="idTimeUomYearH2">time-Uom.year
+  <h2 id="idTimeUomYearH2">UomTime.year
     <a class="clsHide" href="#idTimeUomYearH2"></a></h2>
   <p id="idTimeUomYeardsn">description::
     <br>"(n) year, twelvemonth, yr (a period of time containing 365 (or 366) days) "she is 4 years old"; "in the year 1920""
@@ -968,7 +993,7 @@
     <a class="clsHide" href="#idTimeUomYeardsn"></a></p>
   <p id="idTimeUomYearnam">name::
     <br>* Mcs.year-time-Uom,
-    <br>* Mcs.time-Uom.year,
+    <br>* Mcs.UomTime.year,
     <br>* Mcs.time.year,
     <br>====== langoKomo:
     <br>* McsKmo.to-yiaro!=year,
@@ -1046,7 +1071,7 @@
     <a class="clsHide" href="#idTimeUomYear10dsn"></a></p>
   <p id="idTimeUomYear10nam">name::
     <br>* Mcs.decade-time-Uom,
-    <br>* Mcs.time-Uom.decade,
+    <br>* Mcs.UomTime.decade,
     <br>* Mcs.time.decade,
     <br>====== langoKomo:
     <br>* McsKmo.to-yiaro-foPo!=decade,
@@ -1066,7 +1091,7 @@
     <a class="clsHide" href="#idTimeUomYear100dsn"></a></p>
   <p id="idTimeUomYear100nam">name::
     <br>* Mcs.century-time-Uom,
-    <br>* Mcs.time-Uom.century,
+    <br>* Mcs.UomTime.century,
     <br>* Mcs.time.century,
     <br>====== langoKomo:
     <br>* McsKmo.to-yiaro-foPoPo!=century,
@@ -1089,7 +1114,7 @@
     <br>* Mcs.kiloannum,
     <br>* Mcs.kyr,
     <br>* Mcs.millennium-time-Uom,
-    <br>* Mcs.time-Uom.millennium,
+    <br>* Mcs.UomTime.millennium,
     <br>* Mcs.time.Ka,
     <br>* Mcs.time.kyr,
     <br>* Mcs.time.millennium,
@@ -1164,7 +1189,7 @@
   </section>
 
   <section id="idTimeUomMnth">
-  <h2 id="idTimeUomMnthH2">time-Uom.month
+  <h2 id="idTimeUomMnthH2">UomTime.month
     <a class="clsHide" href="#idTimeUomMnthH2"></a></h2>
   <p id="idTimeUomMnthdsn">description::
     <br>"(n) calendar month, month (one of the twelve divisions of the calendar year) "he paid the bill last month""
@@ -1172,7 +1197,7 @@
     <a class="clsHide" href="#idTimeUomMnthdsn"></a></p>
   <p id="idTimeUomMnthnam">name::
     <br>* Mcs.month-time-Uom,
-    <br>* Mcs.time-Uom.month,
+    <br>* Mcs.UomTime.month,
     <br>* Mcs.time.month,
     <br>====== langoKomo:
     <br>* McsKmo.to-mino!=month, from Greek 'μήνας',
@@ -1402,7 +1427,7 @@
   </section>
 
   <section id="idTimeUomWeek">
-  <h2 id="idTimeUomWeekH2">time-Uom.week
+  <h2 id="idTimeUomWeekH2">UomTime.week
     <a class="clsHide" href="#idTimeUomWeekH2"></a></h2>
   <p id="idTimeUomWeekdsn">description::
     <br>"(n) week, calendar week (a period of seven consecutive days starting on Sunday)"
@@ -1410,7 +1435,7 @@
     <a class="clsHide" href="#idTimeUomWeekdsn"></a></p>
   <p id="idTimeUomWeeknam">name::
     <br>* Mcs.week-time-Uom,
-    <br>* Mcs.time-Uom.week,
+    <br>* Mcs.UomTime.week,
     <br>* Mcs.time.week,
     <br>====== langoKomo:
     <br>* McsKmo.to-nedelo!=week, from Russina 'неделю',
@@ -1422,7 +1447,7 @@
   </section>
 
   <section id="idTimeUomDay">
-  <h2 id="idTimeUomDayH2">time-Uom.day
+  <h2 id="idTimeUomDayH2">UomTime.day
     <a class="clsHide" href="#idTimeUomDayH2"></a></h2>
   <p id="idTimeUomDaydsn">description::
     <br>"(n) day, twenty-four hours, twenty-four hour period, 24-hour interval, solar day, mean solar day (time for Earth to make a complete rotation on its axis) "two days later they left"; "they put on two performances every day"; "there are 30,000 passengers per day""
@@ -1431,7 +1456,7 @@
   <p id="idTimeUomDaynam">name::
     <br>* Mcs.DAY,
     <br>* Mcs.day-time-Uom,
-    <br>* Mcs.time-Uom.day,
+    <br>* Mcs.UomTime.day,
     <br>* Mcs.time.day,
     <br>====== langoKomo:
     <br>* McsKmo.to-tieno!=day,
@@ -1672,7 +1697,7 @@
   </section>
 
   <section id="idTimeUomHour">
-  <h2 id="idTimeUomHourH2">time-Uom.hour
+  <h2 id="idTimeUomHourH2">UomTime.hour
     <a class="clsHide" href="#idTimeUomHourH2"></a></h2>
   <p id="idTimeUomHourdsn">description::
     <br>"(n) hour, hr, 60 minutes (a period of time equal to 1/24th of a day) "the job will take more than an hour""
@@ -1680,7 +1705,7 @@
     <a class="clsHide" href="#idTimeUomHourdsn"></a></p>
   <p id="idTimeUomHournam">name::
     <br>* Mcs.hour-time-Uom,
-    <br>* Mcs.time-Uom.hour,
+    <br>* Mcs.UomTime.hour,
     <br>* Mcs.time.hour,
     <br>====== langoKomo:
     <br>* McsKmo.to-oro!=hour, from Greek 'ώρα'
@@ -1744,7 +1769,7 @@
   </section>
 
   <section id="idTimeUomMnut">
-  <h2 id="idTimeUomMnutH2">time-Uom.minute
+  <h2 id="idTimeUomMnutH2">UomTime.minute
     <a class="clsHide" href="#idTimeUomMnutH2"></a></h2>
   <p id="idTimeUomMnutdsn">description::
     <br>"(n) minute, min (a unit of time equal to 60 seconds or 1/60th of an hour) "he ran a 4 minute mile""
@@ -1752,7 +1777,7 @@
     <a class="clsHide" href="#idTimeUomMnutdsn"></a></p>
   <p id="idTimeUomMnutnam">name::
     <br>* Mcs.minute-time-Uom,
-    <br>* Mcs.time-Uom.minute,
+    <br>* Mcs.UomTime.minute,
     <br>* Mcs.time.minute,
     <br>====== langoKomo:
     <br>* McsKmo.to-minuto!=minute,
@@ -1762,7 +1787,7 @@
   </section>
 
   <section id="idTimeUomScnd">
-  <h2 id="idTimeUomScndH2">time-Uom.second
+  <h2 id="idTimeUomScndH2">UomTime.second
     <a class="clsHide" href="#idTimeUomScndH2"></a></h2>
   <p id="idTimeUomScnddsn">description::
     <br>"(n) second, sec, s (1/60 of a minute; the basic unit of time adopted under the Systeme International d'Unites)"
@@ -1770,7 +1795,7 @@
     <a class="clsHide" href="#idTimeUomScnddsn"></a></p>
   <p id="idTimeUomScndnam">name::
     <br>* Mcs.second-time-Uom,
-    <br>* Mcs.time-Uom.second,
+    <br>* Mcs.UomTime.second,
     <br>* Mcs.time.second,
     <br>====== langoKomo:
     <br>* McsKmo.to-sekudo!=second,
@@ -1780,7 +1805,7 @@
   </section>
 
   <section id="idTimeUomUnix">
-  <h2 id="idTimeUomUnixH2">time-Uom.Unix
+  <h2 id="idTimeUomUnixH2">UomTime.Unix
     <a class="clsHide" href="#idTimeUomUnixH2"></a></h2>
   <p id="idTimeUomUnixdsn">description::
     <br>"Unix time (also known as Epoch time, POSIX time,[1] seconds since the Epoch,[2] or UNIX Epoch time[3]) is a system for describing a point in time. It is the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970, minus leap seconds. Leap seconds are ignored,[4] with a leap second having the same Unix time as the second before it, and every day is treated as if it contains exactly 86400 seconds.[2] Due to this treatment Unix time is not a true representation of UTC."
@@ -1789,7 +1814,7 @@
   <p id="idTimeUomUnixnam">name::
     <br>* Mcs.POSIX-time,
     <br>* Mcs.Unix-time,
-    <br>* Mcs.time-Uom.Unix,
+    <br>* Mcs.UomTime.Unix,
     <a class="clsHide" href="#idTimeUomUnixnam"></a></p>
   <p id="idTimeUomUnixwpa">addressWpg::
     <br>* https://time.is/Unix_time_now,
