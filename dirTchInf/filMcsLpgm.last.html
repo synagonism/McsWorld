@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagPgm (programing-language 0-19-0.2020-04-30 draft)</title>
+  <title>Mcs.lagPgm (programing-language 0-20-0.2020-05-02 draft)</title>
   <meta name="keywords" content="programing-language, lagPgm, Lpgm, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -14,7 +14,7 @@
   <h1 id="idHeaderH1">programing-language
     <br>sensorial-concept-Mcs (lagPgm)
     </h1>
-  <p id="idHeadercrd">McsHitp-creation:: {2019-06-29}
+  <p id="idHeadercrd">McsHitp-creation:: {2019-06-29},
     <a class="clsHide" href="#idHeadercrd"></a></p>
 </header>
 
@@ -30,7 +30,7 @@
     <br>* Mcs.Lpgm!⇒lagPgm,
     <br>* Mcs.lagCmr.programing!⇒lagPgm,
     <br>* Mcs.lagPgm'(programing-language)!⇒lagPgm,
-    <br>* Mcs.lagPgm, {2019-07-04}
+    <br>* Mcs.lagPgm, {2019-07-04},
     <br>* Mcs.language.programing!⇒lagPgm,
     <br>* Mcs.programing--computer-language!⇒lagPgm,
     <br>* Mcs.programing-language!⇒lagPgm,
@@ -180,7 +180,7 @@
     <br>* Mcs.lagPgm-algo'node!⇒lagPgm-node,
     <br>* Mcs.lagPgm-algo'structure!⇒lagPgm-node,
     <br>* Mcs.lagPgm-algo-structure!⇒lagPgm-node,
-    <br>* Mcs.lagPgm-node, {2019-07-05}
+    <br>* Mcs.lagPgm-node, {2019-07-05},
     <br>* Mcs.lagPgm'output-structure!⇒lagPgm-node,
     <a class="clsHide" href="#idLpgmnodenam"></a></p>
   <p id="idLpgmnodeSpc">specific::
@@ -471,92 +471,337 @@
     <a class="clsHide" href="#idLpgmalgLbrSpc"></a></p>
 </section>
 
-<section id="idLpgpgm">
-  <h1 id="idLpgpgmH1">algo.PROGRAM of lagPgm
-    <a class="clsHide" href="#idLpgpgmH1"></a></h1>
-  <p id="idLpgpgmdsn">description::
+<section id="idCpgm">
+  <h1 id="idCpgmH1">algo.PROGRAM of lagPgm
+    <a class="clsHide" href="#idCpgmH1"></a></h1>
+  <p id="idCpgmdsn">description::
     <br>· a-program of a-lagPgm is <a class="clsPreview" href="#idLpgmalg">an-algo</a> which HAS an-executing-entry-point.
-    <a class="clsHide" href="#idLpgpgmdsn"></a></p>
-  <p id="idLpgpgmnam">name::
-    <br>* Mcs.algo.program!⇒cmr'pgm,
-    <br>* Mcs.cmr'pgm, {2020-04-30},
-    <br>* Mcs.cmr'program!⇒cmr'pgm,
-    <br>* Mcs.cmr-program!⇒cmr'pgm, {2019-07-17}
-    <br>* Mcs.computer-program!⇒cmr'pgm,
-    <br>* Mcs.lagPgm'program!⇒cmr'pgm,
-    <br>* Mcs.lagPgm-program!⇒cmr'pgm,
-    <br>* Mcs.lagPgm-algo.program!⇒cmr'pgm,
-    <br>* Mcs.program-of-lagPgm!⇒cmr'pgm,
-    <br>* Mcs.program.computer!⇒cmr'pgm,
-    <br>* Mcs.software-program!⇒cmr'pgm,
-    <a class="clsHide" href="#idLpgpgmnam"></a></p>
+    <a class="clsHide" href="#idCpgmdsn"></a></p>
+  <p id="idCpgmnam">name::
+    <br>* Mcs.algo.program!⇒Cpgm,
+    <br>* Mcs.Cpgm, {2020-05-02},
+    <br>* Mcs.Cpgm'(computer-program)!⇒Cpgm,
+    <br>* Mcs.cmr'pgm!⇒Cpgm,{2020-04-30},
+    <br>* Mcs.cmr'program!⇒Cpgm,
+    <br>* Mcs.cmr-program!⇒Cpgm, {2019-07-17},
+    <br>* Mcs.computer-program!⇒Cpgm,
+    <br>* Mcs.lagPgm'program!⇒Cpgm,
+    <br>* Mcs.lagPgm-program!⇒Cpgm,
+    <br>* Mcs.lagPgm-algo.program!⇒Cpgm,
+    <br>* Mcs.program-of-lagPgm!⇒Cpgm,
+    <br>* Mcs.program.computer!⇒Cpgm,
+    <br>* Mcs.software-program!⇒Cpgm,
+    <a class="clsHide" href="#idCpgmnam"></a></p>
 
-  <section id="idLpgpgm">
-  <h2 id="idLpgpgmH2">cmr'pgm.SPECIFIC of lagPgm
-    <a class="clsHide" href="#idLpgpgmH2"></a></h2>
-  <p id="idLpgpgmdsn">description::
+  <section id="idCpgmatt003">
+  <h2 id="idCpgmatt003H2">01_machine of Cpgm
+    <a class="clsHide" href="#idCpgmatt003H2"></a></h2>
+  <p id="idCpgmatt003nam">name::
+    <br>* Mcs.Cpgm'01_machine,
+    <br>* Mcs.Cpgm'att001-machine,
+    <br>* Mcs.Cpgm'machine-att001,
+    <br>* Mcs.machine-of-Cpgm,
+    <a class="clsHide" href="#idCpgmatt003nam"></a></p>
+  <p id="idCpgmatt003dsn">description::
+    <br>· the-computer-machine on which this program works.
+    <a class="clsHide" href="#idCpgmatt003dsn"></a></p>
+
+  <section id="idCpgmatt003">
+  <h3 id="idCpgmatt003H3">pgmOs of Cpgm
+    <a class="clsHide" href="#idCpgmatt003H3"></a></h3>
+  <p id="idCpgmatt003nam">name::
+    <br>* Mcs.Cpgm'pgmOs,
+    <a class="clsHide" href="#idCpgmatt003nam"></a></p>
+  <p id="idCpgmatt003dsn">description::
+    <br>· the-operating-system of the-machine the-program works.
+    <a class="clsHide" href="#idCpgmatt003dsn"></a></p>
+  </section>
+  </section>
+
+  <section id="idCpgmatt003">
+  <h2 id="idCpgmatt003H2">02_node of Cpgm
+    <a class="clsHide" href="#idCpgmatt003H2"></a></h2>
+  <p id="idCpgmatt003nam">name::
+    <br>* Mcs.Cpgm'02_node,
+    <br>* Mcs.Cpgm'att003_node,
+    <br>* Mcs.Cpgm'node-att003,
+    <a class="clsHide" href="#idCpgmatt003nam"></a></p>
+  <p id="idCpgmatt003dsn">description::
+    <br>· the-program as-document has a-structure of nodes.
+    <a class="clsHide" href="#idCpgmatt003dsn"></a></p>
+  <p id="idCpgmatt003str">specific-tree-of-::
+    <br>* root-node,
+    <br>* section-node (titled, titledNo),
+    <br>* sentence-node,
+    <br>* phrase-node,
+    <br>* semantic-unit-node,
+    <br>* word-node,
+    <br>* unit-node,
+    <a class="clsHide" href="#idCpgmatt003str"></a></p>
+  </section>
+
+  <section id="idCpgmatt011">
+  <h2 id="idCpgmatt011H2">03_lagPrograming of Cpgm
+    <a class="clsHide" href="#idCpgmatt011H2"></a></h2>
+  <p id="idCpgmatt011nam">name::
+    <br>* Mcs.Cpgm'03_lagPrograming,
+    <br>* Mcs.Cpgm'att011-lagPrograming,
+    <br>* Mcs.Cpgm'lagPrograming-att011,
+    <a class="clsHide" href="#idCpgmatt011nam"></a></p>
+  <p id="idCpgmatt011dsn">description::
+    <br>· the-programing-language used to write the-program
+    <a class="clsHide" href="#idCpgmatt011dsn"></a></p>
+  </section>
+
+  <section id="idCpgmatt012">
+  <h2 id="idCpgmatt012H2">04_license of Cpgm
+    <a class="clsHide" href="#idCpgmatt012H2"></a></h2>
+  <p id="idCpgmatt012nam">name::
+    <br>* Mcs.Cpgm'04_license,
+    <br>* Mcs.Cpgm'att012-license,
+    <br>* Mcs.Cpgm'license-att012,
+    <a class="clsHide" href="#idCpgmatt012nam"></a></p>
+  <p id="idCpgmatt012dsn">description::
+    <br>·
+    <a class="clsHide" href="#idCpgmatt012dsn"></a></p>
+  </section>
+
+  <section id="idCpgmatt010">
+  <h2 id="idCpgmatt010H2">05_human of Cpgm
+    <a class="clsHide" href="#idCpgmatt010H2"></a></h2>
+  <p id="idCpgmatt010nam">name::
+    <br>* Mcs.Cpgm'05_human,
+    <br>* Mcs.Cpgm'att010-human,
+    <br>* Mcs.Cpgm'human-att010,
+    <a class="clsHide" href="#idCpgmatt010nam"></a></p>
+  <p id="idCpgmatt010dsn">description::
+    <br>* user,
+    <br>* developer,
+    <a class="clsHide" href="#idCpgmatt010dsn"></a></p>
+  </section>
+
+  <section id="idCpgmatt013">
+  <h2 id="idCpgmatt013H2">06_evaluation of Cpgm
+    <a class="clsHide" href="#idCpgmatt013H2"></a></h2>
+  <p id="idCpgmatt013nam">name::
+    <br>* Mcs.Cpgm'06_evaluation,
+    <br>* Mcs.Cpgm'att013-evaluation,
+    <br>* Mcs.Cpgm'evaluation-att013,
+    <a class="clsHide" href="#idCpgmatt013nam"></a></p>
+  <p id="idCpgmatt013dsn">description::
+    <br>·
+    <a class="clsHide" href="#idCpgmatt013dsn"></a></p>
+  </section>
+
+  <section id="idCpgmrscF">
+  <h2 id="idCpgmrscFH2">07_resource of Cpgm
+    <a class="clsHide" href="#idCpgmrscFH2"></a></h2>
+  <p id="idCpgmrscFnam">name::
+    <br>* Mcs.Cpgm'07_resource,
+    <br>* Mcs.Cpgm'resource,
+    <a class="clsHide" href="#idCpgmrscFnam"></a></p>
+
+  <section id="idCpgmatt004">
+  <h3 id="idCpgmatt004H3">syntax-tree of Cpgm
+    <a class="clsHide" href="#idCpgmatt004H3"></a></h3>
+  <p id="idCpgmatt004nam">name::
+    <br>* Mcs.Cpgm'documentation,
+    <a class="clsHide" href="#idCpgmatt004nam"></a></p>
+  <p id="idCpgmatt004dsn">description::
+    <br>·
+    <a class="clsHide" href="#idCpgmatt004dsn"></a></p>
+  </section>
+  </section>
+
+  <section id="idCpgmsrtrF">
+  <h2 id="idCpgmsrtrFH2">08_structure of Cpgm
+    <a class="clsHide" href="#idCpgmsrtrFH2"></a></h2>
+  <p id="idCpgmsrtrFnam">name::
+    <br>* Mcs.Cpgm'08_structure,
+    <br>* Mcs.Cpgm'structure,
+    <a class="clsHide" href="#idCpgmsrtrFnam"></a></p>
+  <p id="idCpgmsrtrFdsn">description::
+    <br>·
+    <a class="clsHide" href="#idCpgmsrtrFdsn"></a></p>
+
+  <section id="idCpgmatt005">
+  <h3 id="idCpgmatt005H3">syntax-tree of Cpgm
+    <a class="clsHide" href="#idCpgmatt005H3"></a></h3>
+  <p id="idCpgmatt005nam">name::
+    <br>* Mcs.Cpgm'syntax-tree,
+    <a class="clsHide" href="#idCpgmatt005nam"></a></p>
+  <p id="idCpgmatt005dsn">description::
+    <br>· the-whole-part-tree of its nodes.
+    <a class="clsHide" href="#idCpgmatt005dsn"></a></p>
+  </section>
+  </section>
+
+  <section id="idCpgmattdngF">
+  <h2 id="idCpgmattdngFH2">09_DOING of Cpgm
+    <a class="clsHide" href="#idCpgmattdngFH2"></a></h2>
+  <p id="idCpgmattdngFnam">name::
+    <br>* Mcs.Cpgm'09_doing,
+    <br>* Mcs.Cpgm'doing,
+    <a class="clsHide" href="#idCpgmattdngFnam"></a></p>
+  <p id="idCpgmattdngFdsn">description::
+    <br>·
+    <a class="clsHide" href="#idCpgmattdngFdsn"></a></p>
+  </section>
+
+  <section id="idCpgmatt006">
+  <h2 id="idCpgmatt006H2">10_service of Cpgm
+    <a class="clsHide" href="#idCpgmatt006H2"></a></h2>
+  <p id="idCpgmatt006nam">name::
+    <br>* Mcs.Cpgm'10_service,
+    <br>* Mcs.Cpgm'att006-service,
+    <br>* Mcs.Cpgm'service-att006,
+    <a class="clsHide" href="#idCpgmatt006nam"></a></p>
+  <p id="idCpgmatt006dsn">description::
+    <br>· the-process the-user can-do with this program.
+    <a class="clsHide" href="#idCpgmatt006dsn"></a></p>
+  </section>
+
+  <section id="idCpgmatt007">
+  <h2 id="idCpgmatt007H2">11_installing of Cpgm
+    <a class="clsHide" href="#idCpgmatt007H2"></a></h2>
+  <p id="idCpgmatt007nam">name::
+    <br>* Mcs.Cpgm'11_installing,
+    <br>* Mcs.Cpgm'att007-installing,
+    <br>* Mcs.Cpgm'installing-att007,
+    <a class="clsHide" href="#idCpgmatt007nam"></a></p>
+  <p id="idCpgmatt007dsn">description::
+    <br>· the-process of setting a-Cpgm on a-computer-machine to work.
+    <a class="clsHide" href="#idCpgmatt007dsn"></a></p>
+  </section>
+
+  <section id="idCpgmatt008">
+  <h2 id="idCpgmatt008H2">12_using of Cpgm
+    <a class="clsHide" href="#idCpgmatt008H2"></a></h2>
+  <p id="idCpgmatt008nam">name::
+    <br>* Mcs.Cpgm'12_using,
+    <br>* Mcs.Cpgm'att008-using,
+    <br>* Mcs.Cpgm'using-att008,
+    <a class="clsHide" href="#idCpgmatt008nam"></a></p>
+  <p id="idCpgmatt008dsn">description::
+    <br>·
+    <a class="clsHide" href="#idCpgmatt008dsn"></a></p>
+  </section>
+
+  <section id="idCpgmatt009">
+  <h2 id="idCpgmatt009H2">13_developing of Cpgm
+    <a class="clsHide" href="#idCpgmatt009H2"></a></h2>
+  <p id="idCpgmatt009nam">name::
+    <br>* Mcs.Cpgm'13_developing,
+    <br>* Mcs.Cpgm'att009-developing,
+    <br>* Mcs.Cpgm'developing-att009,
+    <a class="clsHide" href="#idCpgmatt009nam"></a></p>
+  <p id="idCpgmatt009dsn">description::
+    <br>·
+    <a class="clsHide" href="#idCpgmatt009dsn"></a></p>
+  </section>
+
+  <section id="idCpgmevg">
+  <h2 id="idCpgmevgH2">14_evoluting of Cpgm
+    <a class="clsHide" href="#idCpgmevgH2"></a></h2>
+  <p id="idCpgmevgnam">name::
+    <br>* Mcs.Cpgm'14_evoluting,
+    <br>* Mcs.Cpgm'evoluting,
+    <a class="clsHide" href="#idCpgmevgnam"></a></p>
+  <p id="idCpgmevgdsn">description::
+    <br>·
+    <a class="clsHide" href="#idCpgmevgdsn"></a></p>
+  </section>
+
+  <section id="idCpgmgst">
+  <h2 id="idCpgmgstH2">GENERIC-SPECIFIC-TREE of Cpgm
+    <a class="clsHide" href="#idCpgmgstH2"></a></h2>
+  <p id="idCpgmgstnam">name::
+    <br>* Mcs.Cpgm'generic-specific-tree,
+    <a class="clsHide" href="#idCpgmgstnam"></a></p>
+
+  <section id="idCpgmgtr">
+  <h3 id="idCpgmgtrH3">GENERIC-TREE of Cpgm
+    <a class="clsHide" href="#idCpgmgtrH3"></a></h3>
+  <p id="idCpgmgnc">generic-of-Cpgm::
+    <br>*
+    <a class="clsHide" href="#idCpgmgnc"></a></p>
+  <p id="idCpgmatttr">attribute-tree-of-Cpgm::
+    <br>* ,
+    <a class="clsHide" href="#idCpgmatttr"></a></p>
+  <p id="idCpgmattihf">att-tree-inherited-from::
+    <br>· :
+    <br>* ,
+    <a class="clsHide" href="#idCpgmattihf"></a></p>
+  <p id="idCpgmattown">att-tree-own-of-Cpgm::
+    <br>* ,
+    <a class="clsHide" href="#idCpgmattown"></a></p>
+  </section>
+
+  <section id="idCpgmstr">
+  <h3 id="idCpgmstrH3">SPECIFIC-TREE of Cpgm
+    <a class="clsHide" href="#idCpgmstrH3"></a></h3>
+  <p id="idCpgmspc">specific-of-Cpgm::
     <br>· alphabetically:
     <br>* assembly-program,
     <br>* bytecode-program,
     <br>* machine-program,
     <br>* source-program,
-    <a class="clsHide" href="#idLpgpgmdsn"></a></p>
-  <p id="idLpgpgmnam">name::
-    <br>* Mcs.cmr-program.specific,
-    <a class="clsHide" href="#idLpgpgmnam"></a></p>
+    <a class="clsHide" href="#idCpgmspc"></a></p>
   </section>
 
-  <section id="idLpgpgmScdnUsr">
-  <h2 id="idLpgpgmScdnUsrH2">cmr'pgm.specifics-division.user of lagPgm
-    <a class="clsHide" href="#idLpgpgmScdnUsrH2"></a></h2>
-  <p id="idLpgpgmScdnUsrdsn">description::
+  <section id="idCpgmScdnUsr">
+  <h3 id="idCpgmScdnUsrH3">Cpgm.specifics-division.user of lagPgm
+    <a class="clsHide" href="#idCpgmScdnUsrH3"></a></h3>
+  <p id="idCpgmScdnUsrdsn">description::
     <br>· division on usage from a-user or not:
     <br>* application-program,
     <br>* system-program,
-    <a class="clsHide" href="#idLpgpgmScdnUsrdsn"></a></p>
-  <p id="idLpgpgmScdnUsrnam">name::
+    <a class="clsHide" href="#idCpgmScdnUsrdsn"></a></p>
+  <p id="idCpgmScdnUsrnam">name::
     <br>* Mcs.cmr-program.specifics-division.user,
-    <a class="clsHide" href="#idLpgpgmScdnUsrnam"></a></p>
+    <a class="clsHide" href="#idCpgmScdnUsrnam"></a></p>
+  </section>
   </section>
 
-  <section id="idLpgpgmApp">
-  <h2 id="idLpgpgmAppH2">cmr'pgm.application of lagPgm
-    <a class="clsHide" href="#idLpgpgmAppH2"></a></h2>
-  <p id="idLpgpgmAppdsn">description::
-    <br>· application-program is <a class="clsPreview" href="#idLpgpgm">a-program</a> a-user uses.
-    <a class="clsHide" href="#idLpgpgmAppdsn"></a></p>
-  <p id="idLpgpgmAppnam">name::
-    <br>* Mcs.application-program!⇒cmr-app,
-    <br>* Mcs.application-of-computer!⇒cmr-app,
-    <br>* Mcs.cmr-app,
-    <br>* Mcs.cmr-program.application!⇒cmr-app,
-    <br>* Mcs.computer-application!⇒cmr-app,
-    <br>* Mcs.software-application!⇒cmr-app,
-    <a class="clsHide" href="#idLpgpgmAppnam"></a></p>
+  <section id="idCpgmApp">
+  <h2 id="idCpgmAppH2">Cpgm.application of lagPgm
+    <a class="clsHide" href="#idCpgmAppH2"></a></h2>
+  <p id="idCpgmAppdsn">description::
+    <br>· application-program is <a class="clsPreview" href="#idCpgm">a-program</a> a-user uses.
+    <a class="clsHide" href="#idCpgmAppdsn"></a></p>
+  <p id="idCpgmAppnam">name::
+    <br>* Mcs.application-program!⇒Capp,
+    <br>* Mcs.application-of-computer!⇒Capp,
+    <br>* Mcs.Capp,
+    <br>* Mcs.cmr-app!⇒Capp,
+    <br>* Mcs.cmr-program.application!⇒Capp,
+    <br>* Mcs.computer-application!⇒Capp,
+    <br>* Mcs.software-application!⇒Capp,
+    <a class="clsHide" href="#idCpgmAppnam"></a></p>
   </section>
 
-  <section id="idLpgpgmSys">
-  <h2 id="idLpgpgmSysH2">cmr'pgm.system of lagPgm
-    <a class="clsHide" href="#idLpgpgmSysH2"></a></h2>
-  <p id="idLpgpgmSysdsn">description::
-    <br>· system-program is <a class="clsPreview" href="#idLpgpgm">a-program</a> <a class="clsPreview" href="filMcsCmr.last.html#idOverview">a-computer[a]</a> not a-user uses for its[a] operations.
-    <a class="clsHide" href="#idLpgpgmSysdsn"></a></p>
-  <p id="idLpgpgmSysnam">name::
+  <section id="idCpgmSys">
+  <h2 id="idCpgmSysH2">Cpgm.system of lagPgm
+    <a class="clsHide" href="#idCpgmSysH2"></a></h2>
+  <p id="idCpgmSysdsn">description::
+    <br>· system-program is <a class="clsPreview" href="#idCpgm">a-program</a> <a class="clsPreview" href="filMcsCmr.last.html#idOverview">a-computer[a]</a> not a-user uses for its[a] operations.
+    <a class="clsHide" href="#idCpgmSysdsn"></a></p>
+  <p id="idCpgmSysnam">name::
     <br>* Mcs.cmr-program.system!⇒system-program,
     <br>* Mcs.system-program,
     <br>* Mcs.system-software!⇒system-program,
-    <a class="clsHide" href="#idLpgpgmSysnam"></a></p>
-  <p id="idLpgpgmSysSpc">specific::
+    <a class="clsHide" href="#idCpgmSysnam"></a></p>
+  <p id="idCpgmSysSpc">specific::
     <br>* device-driver,
     <br>* operating-system,
-    <a class="clsHide" href="#idLpgpgmSysSpc"></a></p>
+    <a class="clsHide" href="#idCpgmSysSpc"></a></p>
   </section>
 
   <section id="idLpgOs">
-  <h2 id="idLpgOsH2">cmr'pgm.operating-system of lagPgm
+  <h2 id="idLpgOsH2">Cpgm.operating-system of lagPgm
     <a class="clsHide" href="#idLpgOsH2"></a></h2>
   <p id="idLpgOsdsn">description::
-    <br>· operating-system is <a class="clsPreview" href="#idLpgpgmSys">a-system-program</a>, the-most important a-computer[a] needs to work that manages its[a] resources and provides common services for its[a] <a class="clsPreview" href="#idLpgpgmApp">apps</a>.
+    <br>· operating-system is <a class="clsPreview" href="#idCpgmSys">a-system-program</a>, the-most important a-computer[a] needs to work that manages its[a] resources and provides common services for its[a] <a class="clsPreview" href="#idCpgmApp">apps</a>.
     <a class="clsHide" href="#idLpgOsdsn"></a></p>
   <p id="idLpgOsnam">name::
     <br>* Mcs.OS!⇒cmr-Os,
@@ -966,7 +1211,7 @@
     <br>· machine-language is <a class="clsPreview" href="#idOverview">a-programing-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLbnralgcode">machine-code</a> that a-real-machine understands.
     <a class="clsHide" href="#idLmchndsn"></a></p>
   <p id="idLmchnnam">name::
-    <br>* Mcs.Lmchn!⇒lagMchn, {2019-07-02}
+    <br>* Mcs.Lmchn!⇒lagMchn, {2019-07-02},
     <br>* Mcs.lagMchn'(machine-language)!⇒lagMchn,
     <br>* Mcs.lagPgm.machine!⇒lagMchn,
     <br>* Mcs.machine-lagPgm!⇒lagMchn,
@@ -1018,13 +1263,13 @@
     <br>· trinary-language is <a class="clsPreview" href="#idOverview">a-machine-language</a> with <a class="clsPreview" href="#idLpgmalg">output</a> <a class="clsPreview" href="#idLpgmalgcodeTnr">trinary-code</a> that <a class="clsPreview" href="#idLpgmalgmchnReal">a-real-machine</a> understands.
     <a class="clsHide" href="#idLtnrdsn"></a></p>
   <p id="idLtnrnam">name::
-    <br>* Mcs.Ltnr!⇒lagTnr, {2019-07-02}
+    <br>* Mcs.Ltnr!⇒lagTnr, {2019-07-02},
     <br>* Mcs.Ltnr'(trinary-language)!⇒lagTnr,
     <br>* Mcs.trinary-lagPgm!⇒lagTnr,
     <br>* Mcs.trinary-programing-language!⇒lagTnr,
     <br>* Mcs.lagMchn.trinary!⇒lagTnr,
     <br>* Mcs.lagPgm.trinary!⇒lagTnr,
-    <br>* Mcs.lagTnr, {2019-07-16}
+    <br>* Mcs.lagTnr, {2019-07-16},
     <br>* Mcs.language.trinary!⇒lagTnr,
     <br>* Mcs.programing-language.trinary!⇒lagTnr,
     <a class="clsHide" href="#idLtnrnam"></a></p>
