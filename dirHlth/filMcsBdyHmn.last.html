@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.bodyHmn (human-body 0-65-0.2020-05-03 draft)</title>
+  <title>Mcs.bodyHmn (human-body 0-66-0.2020-05-04 draft)</title>
   <meta name="keywords" content="human-body, bodyHmn, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -733,7 +733,7 @@
     <br>* <a class="clsPreview" href="#idOgnHmn027">organUteras</a>,
     <br>* <a class="clsPreview" href="#idMsclHmn">μυς</a>,
     <br>* <a class="clsPreview" href="#idOgnHmn010">μύτη</a>,
-    <br>* <a class="clsPreview" href="#idOgnHmn006">νεύρο</a>,
+    <br>* <a class="clsPreview" href="#idOgnHmn006">nerve</a>,
     <br>* <a class="clsPreview" href="#idOgnHmn026">organKidney</a>,
     <br>* <a class="clsPreview" href="#idOgnHmn019">οισοφάγος</a>,
     <br>* <a class="clsPreview" href="#idGlndHmn017">όρχις</a>,
@@ -968,7 +968,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn056">ερειστικός-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn256">καλυπτηριος-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn057">tissueMuscle</a>,
-    <br>* <a class="clsPreview" href="#idTssHmn002">νευρικός-ιστός</a>,
+    <br>* <a class="clsPreview" href="#idTssHmn002">tissueNervous</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn100">οστιτης-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn098">συνδετικός-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn459">υποδοριος-ιστός</a>,
@@ -4873,6 +4873,9 @@
     <br>* McsEll.σύστημα.νευρικό!=sysNervous, {2012-08-11},
     <a class="clsHide" href="#idSysOgnHmn003nam"></a></p>
   <p id="idSysOgnHmn003dsn">description::
+    <br><img src="filMcsBdyHmn.files/sysNervous.wp.ccbysa40.Nervous_system_diagram-en.svg.png">
+    <br>[https://en.wikipedia.org/wiki/File:Nervous_system_diagram-en.svg]
+    <br>===
     <br>analytic: νευρικό-σύστημα ονομάζω το σύστημα με το οποίο ο οργανισμός <a class="clsPreview" href="#idBdyHmn298">επικοινωνει</a> και <a class="clsPreview" href="#idBdyHmn297">μανατζαρει</a>.
     <br>[hmnSgm, {1995-03}]
     <br>===
@@ -4903,10 +4906,10 @@
     <a class="clsHide" href="#idSysOgnHmn003att001H2"></a></h2>
   </section>
 
-  <section id="idSysOgnHmn003att002">
-  <h2 id="idSysOgnHmn003att002H2">02_central-nervous-system of sysNervous
-    <a class="clsHide" href="#idSysOgnHmn003att002H2"></a></h2>
-  <p id="idSysOgnHmn003att002nam">name::
+  <section id="idSysOgnHmn021">
+  <h2 id="idSysOgnHmn021H2">02_central-nervous-system of sysNervous
+    <a class="clsHide" href="#idSysOgnHmn021H2"></a></h2>
+  <p id="idSysOgnHmn021nam">name::
     <br>* Mcs.sysNervous'02_central-subsystem!⇒sysNervousCentral,
     <br>* Mcs.sysNervous'att002-central-subsystem!⇒sysNervousCentral,
     <br>* Mcs.sysNervous'central-subsystem-att002!⇒sysNervousCentral,
@@ -4914,11 +4917,13 @@
     <br>* Mcs.central-nervous-system!⇒sysNervousCentral,
     <br>* Mcs.sysNervousCentral,
     <br>* Mcs.sysOgnCns!⇒sysNervousCentral,
+    <br>* Mcs.sysOgn.021-central-nervous!⇒sysNervousCentral,
+    <br>* Mcs.sysOgn.central-nervous!⇒sysNervousCentral,
     <br>====== langoGreek:
     <br>* McsEll.εγκεφαλονωτιαίο-νευρικό-σύστημα!=sysNervousCentral,
     <br>* McsEll.κεντρικό-νευρικό-σύστημα!=sysNervousCentral,
-    <a class="clsHide" href="#idSysOgnHmn003att002nam"></a></p>
-  <p id="idSysOgnHmn003att002dsn">description::
+    <a class="clsHide" href="#idSysOgnHmn021nam"></a></p>
+  <p id="idSysOgnHmn021dsn">description::
     <br>"The central nervous system (CNS) is the part of the nervous system consisting of the brain and spinal cord. The CNS is so named because it integrates the received information and coordinates and influences the activity of all parts of the bodies of bilaterally symmetric animals—i.e., all multicellular animals except sponges and radially symmetric animals such as jellyfish—and it contains the majority of the nervous system. Many consider the retina[2] and the optic nerve (cranial nerve II),[3][4] as well as the olfactory nerves (cranial nerve I) and olfactory epithelium[5] as parts of the CNS, synapsing directly on brain tissue without intermediate ganglia. As such, the olfactory epithelium is the only central nervous tissue in direct contact with the environment, which opens up for therapeutic treatments. [5] The CNS is contained within the dorsal body cavity, with the brain housed in the cranial cavity and the spinal cord in the spinal canal. In vertebrates, the brain is protected by the skull, while the spinal cord is protected by the vertebrae.[6] The brain and spinal cord are both enclosed in the meninges.[6] Within the CNS, the interneuronal space is filled with a large amount of supporting non-nervous cells called neuroglia or glia from the Greek for "glue".[7]"
     <br>[https://en.wikipedia.org/wiki/Central_nervous_system {2020-02-22}]
     <br>===
@@ -4927,68 +4932,14 @@
     <br>===
     <br>synthetic: τo εγκεφαλονωτιαίο-νευρικό-σύστημα περιλαμβάνει τον εγκέφαλο και το <a class="clsPreview" href="#idOgnHmn037">νωτιαίο-μυελό</a>.
     <br>[Αργύρης, {1994}, 85⧺cptRsc29⧺]
-    <a class="clsHide" href="#idSysOgnHmn003att002dsn"></a></p>
-  <p id="idSysOgnHmn003att002gtr">generic-tree-of-sysNervousCentral::
+    <a class="clsHide" href="#idSysOgnHmn021dsn"></a></p>
+  <p id="idSysOgnHmn021gtr">generic-tree-of-sysNervousCentral::
     <br>* <a class="clsPreview" href="#idSysOgnHmngtr">sysOgn</a>,
     <br>* <a class="clsPreview" href="#idBdyHmnatt002gtr">nodeBodyHmn</a>,
-    <a class="clsHide" href="#idSysOgnHmn003att002gtr"></a></p>
-  <p id="idSysOgnHmn003att002wtr">whole-tree-of-sysNervousCentral::
+    <a class="clsHide" href="#idSysOgnHmn021gtr"></a></p>
+  <p id="idSysOgnHmn021wtr">whole-tree-of-sysNervousCentral::
     <br>* <a class="clsPreview" href="#idSysOgnHmn003wtr">nervous-sys</a>,
-    <a class="clsHide" href="#idSysOgnHmn003att002wtr"></a></p>
-
-  <section id="idSysOgnHmnatt006">
-  <h3 id="idSysOgnHmnatt006H3">autonomic-nervous-system of sysNervousCentral
-    <a class="clsHide" href="#idSysOgnHmnatt006H3"></a></h3>
-  <p id="idSysOgnHmnatt006nam">name::
-    <br>* Mcs.sysOgnCsn'autonomic-nervous-system,
-    <br>* Mcs.autonomic-nervous-system,
-    <br>* Mcs.sysNervous'att006-autonomic-subsystem,
-    <br>* Mcs.sysNervous'autonomic-subsystem-att006,
-    <br>====== langoGreek:
-    <br>* McsEll.αυτόνομο-νευρικό-σύστημα,
-    <br>* McsEll.φυτικό-νευρικό-σύστημα,
-    <a class="clsHide" href="#idSysOgnHmnatt006nam"></a></p>
-  <p id="idSysOgnHmnatt006dsn">description::
-    <br>analytic: το αυτόνομο ή φυτικό σύστημα είναι μέρος του <a class="clsPreview" href="#idSysOgnHmn003">νευρικού-συστήματος</a>.
-    <br>[Αργύρης, {1994}, 85⧺cptRsc29⧺]
-    <br>===
-    <br>Autonomic Nervous System, in vertebrate anatomy, one of the two main divisions of the nervous-system, supplying impulses to the body's heart muscles, smooth muscles, and glands. The autonomic system controls the action of the glands; the functions of the respiratory, circulatory, digestive, and urogenital systems; and the involuntary muscles in these systems and in the skin. Controlled by nerve centres in the lower part of the brain, the system also has a reciprocal effect on the internal secretions, being controlled to some degree by the hormones and exercising some control, in turn, on hormone production.
-    <br>Two antagonistic divisions make up the autonomic nervous-system. The sympathetic (or thoracicolumbar) division stimulates the heart, dilates the bronchi, contracts the arteries, and inhibits the digestive system, preparing the organism for physical action. The parasympathetic (or craniosacral) division has the opposite effects, and prepares the organism for feeding, digestion, and rest. The sympathetic division consists of a chain of interconnected ganglia (groups of nerve cells) on each side of the vertebral column, which send nerve fibres to several large ganglia, such as the coeliac ganglion. They, in turn, give rise to nerves passing to the internal organs. The ganglia of the sympathetic chains are connected to the central nervous-system by fine branches connecting each ganglion with the spinal cord. Fibres of the parasympathetic system arise in the brain and, with the cranial nerves, especially the vagus and accessory nerves, pass to ganglia and plexuses (networks of nerves) within the various organs. The lower part of the body is innervated by fibres arising from the lowest (sacral) segment of the spinal cord and passing to the pelvic ganglion, which gives rise to nerves for such organs as the rectum, bladder, and genital organs.
-    <br>"Autonomic Nervous System," Microsoft(R) Encarta(R) 97 Encyclopedia. (c) 1993-1996 Microsoft Corporation. All rights reserved.
-    <a class="clsHide" href="#idSysOgnHmnatt006dsn"></a></p>
-  <p id="idSysOgnHmnatt006wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idSysOgnHmn003wtr">nervous-system</a>,
-    <a class="clsHide" href="#idSysOgnHmnatt006wtr"></a></p>
-
-  <section id="idSysOgnHmnatt006srtr">
-  <h4 id="idSysOgnHmnatt006srtrH4">structure
-    <a class="clsHide" href="#idSysOgnHmnatt006srtrH4"></a></h4>
-  <p id="idSysOgnHmnatt006srtrP1">structure::
-    <br>* παρασυμπαθητικο σύστημα,
-    <br>* συμπαθητικο-σύστημα,
-    <a class="clsHide" href="#idSysOgnHmnatt006srtrP1"></a></p>
-  <p id="idSysOgnHmnatt006srtrP2">διακρίνεται σε συμπαθητικο και παρασυμπαθητικο.
-    <br>τα συμπαθητικά νεύρα ξεκινάναι από τη θωρακική και οσφυϊκή μοίρα του νωτιαίου μυελού, ενώ τα παρασυμπαθητικα από τη βάση του εγκεφάλου και την ιερά μοίρα του νωτιαίου μυελού. Νευρώνουν τα ίδια όργανα.
-    <br>[Αργύρης, {1994}, 89⧺cptRsc29⧺]
-    <a class="clsHide" href="#idSysOgnHmnatt006srtrP2"></a></p>
-  <p id="idSysOgnHmnatt006srtrP3">νεύρα:
-    <br>νευρωνει όργανα των οποίων η λειτουργία δεν εξερτάται από τη θέλησή μας, όπως είναι η καρδιά, οι λείοι μύες των αγγείων και των σπλάχνων και οι αδένες.
-    <br>[Αργύρης, {1994}, 264⧺cptRsc31⧺]
-    <a class="clsHide" href="#idSysOgnHmnatt006srtrP3"></a></p>
-  </section>
-
-  <section id="idSysOgnHmnatt006doing">
-  <h4 id="idSysOgnHmnatt006doingH4">doing
-    <a class="clsHide" href="#idSysOgnHmnatt006doingH4"></a></h4>
-  <p id="idSysOgnHmnatt006doingP1">doing::
-    <br>λέγεται αυτόνομο, γιατί λειτουργεί χωρίς τη θέλησή μας.
-    <br>λέγεται φυτικό γιατί νευρώνει όργανα που κάνουν λειτουργίες της φυτικής ζωής, δηλ. Μεταβολισμό της ύλης και αναπαραγωγή.
-    <br>
-    <br>τα συμπαθητικά και παρασυμπαθητικά νεύρα νευρώνουν τα ίδια όργανα και η δράση του ενός ανταγωίζεται τη δράση του άλλου. Ετσι πχ τα συμπαθητικά νεύρα επιταχύνουν τους καρδιακούς παλμούς, ενώ τα παρασυμπαθητικά τους επιβραδύνουν. Τα συμπαθητικά αυξάνουν την αρτηριακή πίεση, ενώ τα παρασυμπαθητικά την ελαττώνουν.
-    <br>[Αργύρης, {1994}, 89⧺cptRsc29⧺]
-    <a class="clsHide" href="#idSysOgnHmnatt006doingP1"></a></p>
-  </section>
-  </section>
+    <a class="clsHide" href="#idSysOgnHmn021wtr"></a></p>
 
   <section id="idBdyHmn306">
   <h3 id="idBdyHmn306H3">nervous-center of sysNervousCentral
@@ -5004,14 +4955,14 @@
     <br>"Although the concept of a nervous center frequently appears in connection with physiological and clinical questions, opinions about the nature of such centers are quite divergent. A good start has been made toward clarification, especially as regards localization, on the one hand, and functional considerations, on the other. The work of von Monakow can be mentioned as an example. Centers are often spoken of although it is quite obvious that each author lends his own meaning to the concept and content of the term. This leads to misunderstandings which make themselves felt in discussions and create confusion in research. Thus, critical considerations on the concept of a nervous center are justified. Such considerations should, however, define what is meant by the term and how it should be used."
     <br>[https://link.springer.com/chapter/10.1007/978-3-642-67948-3_12]
     <br>===
-    <br>analytic: τα νευρικά-κέντρα είναι μέρος του <a class="clsPreview" href="#idSysOgnHmn003att002">εγκεφαλονωτιαιου-συστήματος</a>. εξειδικευμένα για εκτέλεση συγκεκριμένων λειτουργιών.
+    <br>analytic: τα νευρικά-κέντρα είναι μέρος του <a class="clsPreview" href="#idSysOgnHmn021">εγκεφαλονωτιαιου-συστήματος</a>. εξειδικευμένα για εκτέλεση συγκεκριμένων λειτουργιών.
     <br>[hmnSgm, {1995-03}]
     <br>===
     <br>στον εγκέφαλο, όπως και στο νωτιαίο μυελό υπάρχουν περιοχές που αποτελούνται από αθροίσματα (ομάδες) νευρικών κυττάρων, τα οποία κάνουν την ίδια λειτουργία: είναι τα νευρικά κέντρα.
     <br>[Αργύρης, {1994}, 87⧺cptRsc29⧺]
     <a class="clsHide" href="#idBdyHmn306dsn"></a></p>
   <p id="idBdyHmn306wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idSysOgnHmn003att002wtr">central-nervous-system</a>,
+    <br>* <a class="clsPreview" href="#idSysOgnHmn021wtr">sysNervousCentral</a>,
     <a class="clsHide" href="#idBdyHmn306wtr"></a></p>
 
   <section id="idBdyHmn306SPECIFIC">
@@ -5064,11 +5015,11 @@
     <br>* Mcs.cptBdyHmn388,
     <br>* Mcs.cortical-area,
     <br>====== langoGreek:
-    <br>* McsEll.κέντρο-ημισφαιριου-εγκεφάλου,
+    <br>* McsEll.κέντρο-ημισφαιρίου-εγκεφάλου,
     <br>* McsEll.κέντρο-ημισφαιρου,
     <a class="clsHide" href="#idBdyHmn388nam"></a></p>
   <p id="idBdyHmn388dsn">description::
-    <br>analytic: κέντρο ημισφαιριου είναι κάθε <a class="clsPreview" href="#idBdyHmn306">κέντρο</a> που βρίσκεται σε <a class="clsPreview" href="#idBrnHmnatt004">ημισφαίριο-εγκεφάλου</a>.
+    <br>analytic: κέντρο ημισφαιρίου είναι κάθε <a class="clsPreview" href="#idBdyHmn306">κέντρο</a> που βρίσκεται σε <a class="clsPreview" href="#idBrnHmnatt004">ημισφαίριο-εγκεφάλου</a>.
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idBdyHmn388dsn"></a></p>
   <p id="idBdyHmn388gtr">generic-tree-of-::
@@ -5148,7 +5099,7 @@
     <br>* McsEll.κέντρο-ακοής,
     <a class="clsHide" href="#idBdyHmn402nam"></a></p>
   <p id="idBdyHmn402dsn">description::
-    <br>analytic: κέντρο ακοής είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στον <a class="clsPreview" href="#idBdyHmn393">κροταφικό-λοβό</a>.
+    <br>analytic: κέντρο ακοής είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στον <a class="clsPreview" href="#idBrnHmnatt052">κροταφικό-λοβό</a>.
     <br>[Αργύρης, {1994}, 254⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn402dsn"></a></p>
   <p id="idBdyHmn402gtr">generic-tree-of-::
@@ -5171,10 +5122,10 @@
     <br>* McsEll.κέντρο-όρασης,
     <a class="clsHide" href="#idBdyHmn403nam"></a></p>
   <p id="idBdyHmn403dsn">description::
-    <br>analytic: το κέντρο όρασης είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στον <a class="clsPreview" href="#idBdyHmn392">ινιακό-λοβό</a> και επεξεργάζεται τα φωτεινά ερεθίσματα.
+    <br>analytic: το κέντρο όρασης είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στον <a class="clsPreview" href="#idBrnHmnatt051">ινιακό-λοβό</a> και επεξεργάζεται τα φωτεινά ερεθίσματα.
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idBdyHmn403dsn"></a></p>
-  <p id="idBdyHmn403P1">κέντρο όρασης είναι κέντρο ημισφαιριου που βρίσκεται στον ινιακό λοβό.
+  <p id="idBdyHmn403P1">κέντρο όρασης είναι κέντρο ημισφαιρίου που βρίσκεται στον ινιακό λοβό.
     <br>[Αργύρης, {1994}, 254⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn403P1"></a></p>
   <p id="idBdyHmn403gtr">generic-tree-of-::
@@ -5183,7 +5134,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn444">censory-cortex</a>,
     <a class="clsHide" href="#idBdyHmn403gtr"></a></p>
   <p id="idBdyHmn403wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn392wtr">ινιακος-λοβός</a>,
+    <br>* <a class="clsPreview" href="#idBrnHmnatt051wtr">ινιακός-λοβός</a>,
     <br>όρασης σύστημα⧺cptBdyHmn312⧺,
     <a class="clsHide" href="#idBdyHmn403wtr"></a></p>
   </section>
@@ -5255,7 +5206,7 @@
     <br>* McsEll.κέντρο-αφης,
     <a class="clsHide" href="#idBdyHmn397nam"></a></p>
   <p id="idBdyHmn397dsn">description::
-    <br>analytic: κέντρο αφης είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στο <a class="clsPreview" href="#idBdyHmn391">βρεγματικό-λοβό</a>.
+    <br>analytic: κέντρο αφης είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στο <a class="clsPreview" href="#idBrnHmnatt049">βρεγματικό-λοβό</a>.
     <br>[Αργύρης, {1994}, 254⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn397dsn"></a></p>
   <p id="idBdyHmn397gtr">generic-tree-of-::
@@ -5275,7 +5226,7 @@
     <br>* McsEll.κέντρο-γεύσης,
     <a class="clsHide" href="#idBdyHmn398nam"></a></p>
   <p id="idBdyHmn398dsn">description::
-    <br>analytic: κέντρο γεύσης είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στο <a class="clsPreview" href="#idBdyHmn391">βρεγματικό-λοβό</a>.
+    <br>analytic: κέντρο γεύσης είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στο <a class="clsPreview" href="#idBrnHmnatt049">βρεγματικό-λοβό</a>.
     <br>[Αργύρης, {1994}, 254⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn398dsn"></a></p>
   <p id="idBdyHmn398gtr">generic-tree-of-::
@@ -5296,7 +5247,7 @@
     <br>* McsEll.κέντρο'θερμοκρασίας,
     <a class="clsHide" href="#idBdyHmn399nam"></a></p>
   <p id="idBdyHmn399dsn">description::
-    <br>analytic: κέντρο θερμοκρασίας είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στο <a class="clsPreview" href="#idBdyHmn391">βρεγματικό-λοβό</a>.
+    <br>analytic: κέντρο θερμοκρασίας είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στο <a class="clsPreview" href="#idBrnHmnatt049">βρεγματικό-λοβό</a>.
     <br>[Αργύρης, {1994}, 254⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn399dsn"></a></p>
   <p id="idBdyHmn399P1">αντιφαση:
@@ -5320,7 +5271,7 @@
     <br>* McsEll.κέντρο-πίεσης,
     <a class="clsHide" href="#idBdyHmn400nam"></a></p>
   <p id="idBdyHmn400dsn">description::
-    <br>analytic: κέντρο πίεσης είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στο <a class="clsPreview" href="#idBdyHmn391">βρεγματικό-λοβό</a>.
+    <br>analytic: κέντρο πίεσης είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στο <a class="clsPreview" href="#idBrnHmnatt049">βρεγματικό-λοβό</a>.
     <br>[Αργύρης, {1994}, 254⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn400dsn"></a></p>
   <p id="idBdyHmn400gtr">generic-tree-of-::
@@ -5340,7 +5291,7 @@
     <br>* McsEll.κέντρο-πόνου,
     <a class="clsHide" href="#idBdyHmn401nam"></a></p>
   <p id="idBdyHmn401dsn">description::
-    <br>analytic: κέντρο πόνου είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στο <a class="clsPreview" href="#idBdyHmn391">βρεγματικό-λοβό</a>.
+    <br>analytic: κέντρο πόνου είναι <a class="clsPreview" href="#idBdyHmn388">cortical-area</a> που βρίσκεται στο <a class="clsPreview" href="#idBrnHmnatt049">βρεγματικό-λοβό</a>.
     <br>[Αργύρης, {1994}, 254⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn401dsn"></a></p>
   <p id="idBdyHmn401gtr">generic-tree-of-::
@@ -5396,11 +5347,11 @@
     <br>* McsEll.μήνιγκα,
     <a class="clsHide" href="#idBdyHmn300nam"></a></p>
   <p id="idBdyHmn300dsn">description::
-    <br>analytic: μήνιγκα είναι κάθε υμένας που καλύπτει το <a class="clsPreview" href="#idSysOgnHmn003att002">εγκεφαλονωτιαίο-σύστημα</a>.
+    <br>analytic: μήνιγκα είναι κάθε υμένας που καλύπτει το <a class="clsPreview" href="#idSysOgnHmn021">εγκεφαλονωτιαίο-σύστημα</a>.
     <br>[Αργύρης, {1994}, 85⧺cptRsc29⧺]
     <a class="clsHide" href="#idBdyHmn300dsn"></a></p>
   <p id="idBdyHmn300wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idSysOgnHmn003att002wtr">central-nervous-system</a>,
+    <br>* <a class="clsPreview" href="#idSysOgnHmn021wtr">sysNervousCentral</a>,
     <a class="clsHide" href="#idBdyHmn300wtr"></a></p>
 
   <section id="idBdyHmn300doing">
@@ -5441,7 +5392,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn300">μήνιγκα</a>,
     <a class="clsHide" href="#idBdyHmn410gtr"></a></p>
   <p id="idBdyHmn410wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idSysOgnHmn003att002wtr">central-nervous-system</a>,
+    <br>* <a class="clsPreview" href="#idSysOgnHmn021wtr">sysNervousCentral</a>,
     <a class="clsHide" href="#idBdyHmn410wtr"></a></p>
   </section>
 
@@ -5462,7 +5413,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn300">μήνιγκα</a>,
     <a class="clsHide" href="#idBdyHmn411gtr"></a></p>
   <p id="idBdyHmn411wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idSysOgnHmn003att002wtr">central-nervous-system</a>,
+    <br>* <a class="clsPreview" href="#idSysOgnHmn021wtr">sysNervousCentral</a>,
     <a class="clsHide" href="#idBdyHmn411wtr"></a></p>
   </section>
 
@@ -5483,7 +5434,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn300">μήνιγκα</a>,
     <a class="clsHide" href="#idBdyHmn412gtr"></a></p>
   <p id="idBdyHmn412wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idSysOgnHmn003att002wtr">central-nervous-system</a>,
+    <br>* <a class="clsPreview" href="#idSysOgnHmn021wtr">sysNervousCentral</a>,
     <a class="clsHide" href="#idBdyHmn412wtr"></a></p>
   </section>
 
@@ -5501,7 +5452,7 @@
     <br>[Αργύρης, {1994}, 255⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn413dsn"></a></p>
   <p id="idBdyHmn413wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idSysOgnHmn003att002wtr">central-nervous-system</a>,
+    <br>* <a class="clsPreview" href="#idSysOgnHmn021wtr">sysNervousCentral</a>,
     <a class="clsHide" href="#idBdyHmn413wtr"></a></p>
   </section>
   </section>
@@ -5519,11 +5470,11 @@
     <br>analytic: μέσα στις κοιλίες του εγκεφάλου, στον κεντρικό νευρικό σωλήνα του νωτιαίου μυελού και στον  υπαραχνοειδή χώρο κυκλοφορεί το εγκεφαλικό υγρό.
     <br>[Αργύρης, {1994}, 255⧺cptRsc31⧺]
     <br>===
-    <br>το εγκεφαλονωτιαίο υγρό είναι υγρό ανάμεσα στην μεσαία και στην εσωτερική μήνιγγα του <a class="clsPreview" href="#idSysOgnHmn003att002">εγκεφαλονωτιαιου-συστήματος</a>.
+    <br>το εγκεφαλονωτιαίο υγρό είναι υγρό ανάμεσα στην μεσαία και στην εσωτερική μήνιγγα του <a class="clsPreview" href="#idSysOgnHmn021">εγκεφαλονωτιαιου-συστήματος</a>.
     <br>[Αργύρης, {1994}, 86⧺cptRsc29⧺]
     <a class="clsHide" href="#idBdyHmn301dsn"></a></p>
   <p id="idBdyHmn301wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idSysOgnHmn003att002wtr">central-nervous-system</a>,
+    <br>* <a class="clsPreview" href="#idSysOgnHmn021wtr">sysNervousCentral</a>,
     <a class="clsHide" href="#idBdyHmn301wtr"></a></p>
 
   <section id="idBdyHmn301disease">
@@ -5569,48 +5520,48 @@
   </section>
   </section>
 
-  <section id="idSysOgnHmn003att002srtr">
-  <h3 id="idSysOgnHmn003att002srtrH3">structure of sysNervousCentral
-    <a class="clsHide" href="#idSysOgnHmn003att002srtrH3"></a></h3>
-  <p id="idSysOgnHmn003att002srtrP1">structure::
+  <section id="idSysOgnHmn021srtr">
+  <h3 id="idSysOgnHmn021srtrH3">structure of sysNervousCentral
+    <a class="clsHide" href="#idSysOgnHmn021srtrH3"></a></h3>
+  <p id="idSysOgnHmn021srtrP1">structure::
     <br>* <a class="clsPreview" href="#idBdyHmn301">εγκεφαλονωτιαίο-υγρό</a>,
     <br>* <a class="clsPreview" href="#idBrnHmn">εγκεφαλος/BRAIN</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn300">meninx</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn306">νευρικά-κέντρα</a>,
     <br>* <a class="clsPreview" href="#idOgnHmn037">νωτιαίος-μυελός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn413">υπαραχνοειδης-χωρος</a>,
-    <a class="clsHide" href="#idSysOgnHmn003att002srtrP1"></a></p>
-  <p id="idSysOgnHmn003att002srtrP2">το εγκεφαλονωτιαίο νευρικό-σύστημα περιλαμβάνει τον εγκέφαλο και το νωτιαίο μυελό.
+    <a class="clsHide" href="#idSysOgnHmn021srtrP1"></a></p>
+  <p id="idSysOgnHmn021srtrP2">το εγκεφαλονωτιαίο νευρικό-σύστημα περιλαμβάνει τον εγκέφαλο και το νωτιαίο μυελό.
     <br>ο εγκέφαλος και ο νωτιαίος μυελός αποτελούν μία συνεχεια και καλύπτονται εξωτερικά με 3 υμένες, τις μυνιγγες.
     <br>ανάμεσα στη μεσαία και στην εσωτερική μήνιγγα υπάρχει το εγκεφαλονωτιαίο υγρό που μαζί με τις μήνιγγες έχει ρόλο προστατευτικο.
     <br>[Αργύρης, {1994}, 85⧺cptRsc29⧺]
-    <a class="clsHide" href="#idSysOgnHmn003att002srtrP2"></a></p>
-  <p id="idSysOgnHmn003att002srtrP3">στον εγκέφαλο, όπως και στο νωτιαίο μυελό υπάρχουν περιοχές που αποτελούνται από αθροίσματα (ομάδες) νευρικών κυττάρων, τα οποία κάνουν την ίδια λειτουργία: είναι τα νευρικά κέντρα.
+    <a class="clsHide" href="#idSysOgnHmn021srtrP2"></a></p>
+  <p id="idSysOgnHmn021srtrP3">στον εγκέφαλο, όπως και στο νωτιαίο μυελό υπάρχουν περιοχές που αποτελούνται από αθροίσματα (ομάδες) νευρικών κυττάρων, τα οποία κάνουν την ίδια λειτουργία: είναι τα νευρικά κέντρα.
     <br>[Αργύρης, {1994}, 87⧺cptRsc29⧺]
-    <a class="clsHide" href="#idSysOgnHmn003att002srtrP3"></a></p>
-  <p id="idSysOgnHmn003att002partP4">τα νωτιαία και τα εγκεφαλικά νεύρα αποτελούν το περιφερειακό νευρικό-σύστημα
+    <a class="clsHide" href="#idSysOgnHmn021srtrP3"></a></p>
+  <p id="idSysOgnHmn021partP4">τα νωτιαία και τα εγκεφαλικά νεύρα αποτελούν το περιφερειακό νευρικό-σύστημα
     <br>[Αργύρης, {1994}, 88⧺cptRsc29⧺]
-    <a class="clsHide" href="#idSysOgnHmn003att002partP4"></a></p>
+    <a class="clsHide" href="#idSysOgnHmn021partP4"></a></p>
   </section>
 
-  <section id="idSysOgnHmn003att002doing">
-  <h3 id="idSysOgnHmn003att002doingH3">doing of sysNervousCentral
-    <a class="clsHide" href="#idSysOgnHmn003att002doingH3"></a></h3>
-  <p id="idSysOgnHmn003att002doingP1">doing::
+  <section id="idSysOgnHmn021doing">
+  <h3 id="idSysOgnHmn021doingH3">doing of sysNervousCentral
+    <a class="clsHide" href="#idSysOgnHmn021doingH3"></a></h3>
+  <p id="idSysOgnHmn021doingP1">doing::
     <br>το Κνσ, και συγκεκριμένα ο εγκέφαλος, είναι το όργανο των ανώτερων λειτουργιών, όπως
     <br>- η νοημοσύνη,
     <br>- η μνήμη,
     <br>- η εκμάθηση και
     <br>- η συγκίνηση.
     <br>[RAM, επιστημη 21ος αιωνας, νοηση, δεκέμβριος 2002, 4]
-    <a class="clsHide" href="#idSysOgnHmn003att002doingP1"></a></p>
+    <a class="clsHide" href="#idSysOgnHmn021doingP1"></a></p>
   </section>
   </section>
 
-  <section id="idSysOgnHmn003att003">
-  <h2 id="idSysOgnHmn003att003H2">03_peripheral-nervous-system of sysNervous
-    <a class="clsHide" href="#idSysOgnHmn003att003H2"></a></h2>
-  <p id="idSysOgnHmn003att003nam">name::
+  <section id="idSysOgnHmn020">
+  <h2 id="idSysOgnHmn020H2">03_peripheral-nervous-system of sysNervous
+    <a class="clsHide" href="#idSysOgnHmn020H2"></a></h2>
+  <p id="idSysOgnHmn020nam">name::
     <br>* Mcs.sysNervous'03_peripheral-subsystem!⇒sysNervousPeripheral,
     <br>* Mcs.sysNervous'att003-peripheral-subsystem!⇒sysNervousPeripheral,
     <br>* Mcs.sysNervous'peripheral-subsystem!⇒sysNervousPeripheral,
@@ -5618,34 +5569,132 @@
     <br>* Mcs.peripheral-nervous-system!⇒sysNervousPeripheral,
     <br>* Mcs.sysNervousPeripheral,
     <br>* Mcs.sysOgnPns!⇒sysNervousPeripheral,
+    <br>* Mcs.sysOgn.020-peripheral-nervous!⇒sysNervousPeripheral,
+    <br>* Mcs.sysOgn.peripheral-nervous!⇒sysNervousPeripheral,
     <br>====== langoGreek:
     <br>* McsEll.περιφερειακό-νευρικό-σύστημα!=sysNervousPeripheral,
-    <a class="clsHide" href="#idSysOgnHmn003att003nam"></a></p>
-  <p id="idSysOgnHmn003att003dsn">description::
+    <a class="clsHide" href="#idSysOgnHmn020nam"></a></p>
+  <p id="idSysOgnHmn020dsn">description::
     <br>"The peripheral nervous system (PNS) is one of two components that make up the nervous system of bilateral animals, with the other part being the central nervous system (CNS). The PNS consists of the nerves and ganglia outside the brain and spinal cord.[1] The main function of the PNS is to connect the CNS to the limbs and organs, essentially serving as a relay between the brain and spinal cord and the rest of the body.[2] Unlike the CNS, the PNS is not protected by the vertebral column and skull, or by the blood–brain barrier, which leaves it exposed to toxins and mechanical injuries.
     <br>The peripheral nervous system is divided into the somatic nervous system and the autonomic nervous system. In the somatic nervous system, the cranial nerves are part of the PNS with the exception of the optic nerve (cranial nerve II), along with the retina. The second cranial nerve is not a true peripheral nerve but a tract of the diencephalon.[3] Cranial nerve ganglia originated in the CNS. However, the remaining ten cranial nerve axons extend beyond the brain and are therefore considered part of the PNS.[4] The autonomic nervous system exerts involuntary control over smooth muscle and glands. The connection between CNS and organs allows the system to be in two different functional states: sympathetic and parasympathetic."
     <br>[{2020-05-01} https://en.wikipedia.org/wiki/Peripheral_nervous_system]
     <br>===
-    <br>analytic: το περιφερειακό-νευρικό-σύστημα είναι μέρος του <a class="clsPreview" href="#idSysOgnHmn003att002">εγκεφαλονωτιαιου-συστήματος</a>.
-    <br>[hmnSgm, {1995-03}]
-    <br>===
     <br>synthetic: τα νωτιαία και τα εγκεφαλικά νεύρα αποτελούν το περιφερειακό νευρικό-σύστημα
     <br>[Αργύρης, {1994}, 88⧺cptRsc29⧺]
-    <a class="clsHide" href="#idSysOgnHmn003att003dsn"></a></p>
-  <p id="idSysOgnHmn003att003wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idSysOgnHmn003att002wtr">central-nervous-system</a>,
-    <a class="clsHide" href="#idSysOgnHmn003att003wtr"></a></p>
+    <a class="clsHide" href="#idSysOgnHmn020dsn"></a></p>
+  <p id="idSysOgnHmn020wtr">whole-tree-of-::
+    <br>* <a class="clsPreview" href="#idSysOgnHmn021wtr">sysNervousCentral</a>,
+    <a class="clsHide" href="#idSysOgnHmn020wtr"></a></p>
 
-  <section id="idSysOgnHmn003att003srtr">
-  <h3 id="idSysOgnHmn003att003srtrH3">structure
-    <a class="clsHide" href="#idSysOgnHmn003att003srtrH3"></a></h3>
-  <p id="idSysOgnHmn003att003srtrP1">structure::
+  <section id="idSysOgnHmn019">
+  <h3 id="idSysOgnHmn019H3">autonomic-nervous-system of sysNervousPeripheral
+    <a class="clsHide" href="#idSysOgnHmn019H3"></a></h3>
+  <p id="idSysOgnHmn019nam">name::
+    <br>* Mcs.sysNervousPeripheral'autonomic-nervous-sys!⇒sysNervousAutonomic,
+    <br>* Mcs.autonomic-nervous-system!⇒sysNervousAutonomic,
+    <br>* Mcs.ANS-autonomic-nervous-sys!⇒sysNervousAutonomic,
+    <br>* Mcs.sysNervousAutonomic,
+    <br>* Mcs.sysNervous'att006-autonomic-subsystem!⇒sysNervousAutonomic,
+    <br>* Mcs.sysNervous'autonomic-subsystem,!⇒sysNervousAutonomic
+    <br>* Mcs.sysOgn.019-autonomic-nervous-sys,!⇒sysNervousAutonomic
+    <br>* Mcs.sysOgn.autonomic-nervous-sys,!⇒sysNervousAutonomic
+    <br>====== langoGreek:
+    <br>* McsEll.αυτόνομο-νευρικό-σύστημα!=sysNervousAutonomic,
+    <br>* McsEll.φυτικό-νευρικό-σύστημα!=sysNervousAutonomic,
+    <a class="clsHide" href="#idSysOgnHmn019nam"></a></p>
+  <p id="idSysOgnHmn019dsn">description::
+    <br>"The autonomic nervous system (ANS), formerly the vegetative nervous system, is a division of the peripheral nervous system that supplies smooth muscle and glands, and thus influences the function of internal organs.[1] The autonomic nervous system is a control system that acts largely unconsciously and regulates bodily functions, such as the heart rate, digestion, respiratory rate, pupillary response, urination, and sexual arousal.[2] This system is the primary mechanism in control of the fight-or-flight response.
+    <br>The autonomic nervous system is regulated by integrated reflexes through the brainstem to the spinal cord and organs. Autonomic functions include control of respiration, cardiac regulation (the cardiac control center), vasomotor activity (the vasomotor center), and certain reflex actions such as coughing, sneezing, swallowing and vomiting. Those are then subdivided into other areas and are also linked to autonomic subsystems and the peripheral nervous system. The hypothalamus, just above the brain stem, acts as an integrator for autonomic functions, receiving autonomic regulatory input from the limbic system.[3]
+    <br>The autonomic nervous system has three branches: the sympathetic nervous system, the parasympathetic nervous system and the enteric nervous system.[4][5][6][7] Some textbooks do not include the enteric nervous system as part of this system.[8] The sympathetic nervous system is often considered the "fight or flight" system, while the parasympathetic nervous system is often considered the "rest and digest" or "feed and breed" system. In many cases, both of these systems have "opposite" actions where one system activates a physiological response and the other inhibits it. An older simplification of the sympathetic and parasympathetic nervous systems as "excitatory" and "inhibitory" was overturned due to the many exceptions found. A more modern characterization is that the sympathetic nervous system is a "quick response mobilizing system" and the parasympathetic is a "more slowly activated dampening system", but even this has exceptions, such as in sexual arousal and orgasm, wherein both play a role.[3]
+    <br>There are inhibitory and excitatory synapses between neurons. Relatively recently, a third subsystem of neurons that have been named non-noradrenergic, non-cholinergic transmitters (because they use nitric oxide as a neurotransmitter) have been described and found to be integral in autonomic function, in particular in the gut and the lungs.[9]
+    <br>Although the ANS is also known as the visceral nervous system, the ANS is only connected with the motor side.[10] Most autonomous functions are involuntary but they can often work in conjunction with the somatic nervous system which provides voluntary control."
+    <br>[{2020-05-03} https://en.wikipedia.org/wiki/Autonomic_nervous_system]
+    <br>===
+    <br>Autonomic Nervous System, in vertebrate anatomy, one of the two main divisions of the nervous-system, supplying impulses to the body's heart muscles, smooth muscles, and glands. The autonomic system controls the action of the glands; the functions of the respiratory, circulatory, digestive, and urogenital systems; and the involuntary muscles in these systems and in the skin. Controlled by nerve centres in the lower part of the brain, the system also has a reciprocal effect on the internal secretions, being controlled to some degree by the hormones and exercising some control, in turn, on hormone production.
+    <br>Two antagonistic divisions make up the autonomic nervous-system. The sympathetic (or thoracicolumbar) division stimulates the heart, dilates the bronchi, contracts the arteries, and inhibits the digestive system, preparing the organism for physical action. The parasympathetic (or craniosacral) division has the opposite effects, and prepares the organism for feeding, digestion, and rest. The sympathetic division consists of a chain of interconnected ganglia (groups of nerve cells) on each side of the vertebral column, which send nerve fibres to several large ganglia, such as the coeliac ganglion. They, in turn, give rise to nerves passing to the internal organs. The ganglia of the sympathetic chains are connected to the central nervous-system by fine branches connecting each ganglion with the spinal cord. Fibres of the parasympathetic system arise in the brain and, with the cranial nerves, especially the vagus and accessory nerves, pass to ganglia and plexuses (networks of nerves) within the various organs. The lower part of the body is innervated by fibres arising from the lowest (sacral) segment of the spinal cord and passing to the pelvic ganglion, which gives rise to nerves for such organs as the rectum, bladder, and genital organs.
+    <br>"Autonomic Nervous System," Microsoft(R) Encarta(R) 97 Encyclopedia. (c) 1993-1996 Microsoft Corporation. All rights reserved.
+    <a class="clsHide" href="#idSysOgnHmn019dsn"></a></p>
+  <p id="idSysOgnHmn019wtr">whole-tree-of-::
+    <br>* <a class="clsPreview" href="#idSysOgnHmn003wtr">nervous-system</a>,
+    <a class="clsHide" href="#idSysOgnHmn019wtr"></a></p>
+
+  <section id="idSysOgnHmn019srtr">
+  <h4 id="idSysOgnHmn019srtrH4">structure of sysNervousAutonomic
+    <a class="clsHide" href="#idSysOgnHmn019srtrH4"></a></h4>
+  <p id="idSysOgnHmn019srtrP1">structure::
+    <br>* παρασυμπαθητικο σύστημα,
+    <br>* συμπαθητικο-σύστημα,
+    <a class="clsHide" href="#idSysOgnHmn019srtrP1"></a></p>
+  <p id="idSysOgnHmn019srtrP2">διακρίνεται σε συμπαθητικο και παρασυμπαθητικο.
+    <br>τα συμπαθητικά νεύρα ξεκινάναι από τη θωρακική και οσφυϊκή μοίρα του νωτιαίου μυελού, ενώ τα παρασυμπαθητικα από τη βάση του εγκεφάλου και την ιερά μοίρα του νωτιαίου μυελού. Νευρώνουν τα ίδια όργανα.
+    <br>[Αργύρης, {1994}, 89⧺cptRsc29⧺]
+    <a class="clsHide" href="#idSysOgnHmn019srtrP2"></a></p>
+  <p id="idSysOgnHmn019srtrP3">νεύρα:
+    <br>νευρωνει όργανα των οποίων η λειτουργία δεν εξερτάται από τη θέλησή μας, όπως είναι η καρδιά, οι λείοι μύες των αγγείων και των σπλάχνων και οι αδένες.
+    <br>[Αργύρης, {1994}, 264⧺cptRsc31⧺]
+    <a class="clsHide" href="#idSysOgnHmn019srtrP3"></a></p>
+  </section>
+
+  <section id="idSysOgnHmn019doing">
+  <h4 id="idSysOgnHmn019doingH4">doing of sysNervousAutonomic
+    <a class="clsHide" href="#idSysOgnHmn019doingH4"></a></h4>
+  <p id="idSysOgnHmn019doingP1">doing::
+    <br>λέγεται αυτόνομο, γιατί λειτουργεί χωρίς τη θέλησή μας.
+    <br>λέγεται φυτικό γιατί νευρώνει όργανα που κάνουν λειτουργίες της φυτικής ζωής, δηλ. Μεταβολισμό της ύλης και αναπαραγωγή.
+    <br>
+    <br>τα συμπαθητικά και παρασυμπαθητικά νεύρα νευρώνουν τα ίδια όργανα και η δράση του ενός ανταγωίζεται τη δράση του άλλου. Ετσι πχ τα συμπαθητικά νεύρα επιταχύνουν τους καρδιακούς παλμούς, ενώ τα παρασυμπαθητικά τους επιβραδύνουν. Τα συμπαθητικά αυξάνουν την αρτηριακή πίεση, ενώ τα παρασυμπαθητικά την ελαττώνουν.
+    <br>[Αργύρης, {1994}, 89⧺cptRsc29⧺]
+    <a class="clsHide" href="#idSysOgnHmn019doingP1"></a></p>
+  </section>
+
+  <section id="idSysOgnHmn018">
+  <h4 id="idSysOgnHmn018H4">enteric-nervous-system of sysNervousPeripheral
+    <a class="clsHide" href="#idSysOgnHmn018H4"></a></h4>
+  <p id="idSysOgnHmn018nam">name::
+    <br>* Mcs.sysNervousPeripheral'enteric-nervous-sys!⇒sysNervousEnteric,
+    <br>* Mcs.sysNervous'att011-enteric-nervous-sys!⇒sysNervousEnteric,
+    <br>* Mcs.ENS-enteric-nervous-sys!⇒sysNervousEnteric,
+    <br>* Mcs.sysNervousEnteric,
+    <br>* Mcs.sysNervous'enteric-nervous-sys!⇒sysNervousEnteric,
+    <br>* Mcs.sysOgn.018-enteric-nervous-sys!⇒sysNervousEnteric,
+    <br>* Mcs.sysOgn.enteric-nervous-sys!⇒sysNervousEnteric,
+    <a class="clsHide" href="#idSysOgnHmn018nam"></a></p>
+  <p id="idSysOgnHmn018dsn">description::
+    <br>"The enteric nervous system (ENS) or intrinsic nervous system is one of the main divisions of the autonomic nervous system (ANS) and consists of a mesh-like system of neurons that governs the function of the gastrointestinal tract.[1] It is capable of acting independently of the sympathetic and parasympathetic nervous systems, although it may be influenced by them. The ENS is also called the second brain.[2][3]It is derived from neural crest cells.[4][5]
+    <br>The enteric nervous system is capable of operating independently of the brain and spinal cord,[6] but does rely on innervation from the autonomic nervous system via the vagus nerve and prevertebral ganglia in healthy subjects. However, studies have shown that the system is operable with a severed vagus nerve.[7] The neurons of the enteric nervous system control the motor functions of the system, in addition to the secretion of gastrointestinal enzymes. These neurons communicate through many neurotransmitters similar to the CNS, including acetylcholine, dopamine, and serotonin. The large presence of serotonin and dopamine in the gut are key areas of research for neurogastroenterologists.[8][9][10]"
+    <br>[{2020-05-03} https://en.wikipedia.org/wiki/Enteric_nervous_system]
+    <a class="clsHide" href="#idSysOgnHmn018dsn"></a></p>
+  </section>
+  </section>
+
+  <section id="idSysOgnHmn017">
+  <h4 id="idSysOgnHmn017H4">somatic-nervous-system of sysNervousPeripheral
+    <a class="clsHide" href="#idSysOgnHmn017H4"></a></h4>
+  <p id="idSysOgnHmn017nam">name::
+    <br>* Mcs.sysNervousPeripheral'somatic-subsystem!⇒sysNervousSomatic,
+    <br>* Mcs.SNS-somatic-nervous-sys!⇒sysNervousSomatic,
+    <br>* Mcs.somatic-nervous-sys!⇒sysNervousSomatic,
+    <br>* Mcs.sysOgn.017-somatic-nervous!⇒sysNervousSomatic,
+    <br>* Mcs.sysOgn.somatic-nervous!⇒sysNervousSomatic,
+    <br>* Mcs.sysNervousSomatic,
+    <a class="clsHide" href="#idSysOgnHmn017nam"></a></p>
+  <p id="idSysOgnHmn017dsn">description::
+    <br>"The somatic nervous system (SNS or voluntary nervous system) is the part of the peripheral nervous system[1] associated with the voluntary control of body movements via skeletal muscles.
+    <br>The somatic nervous system consists of afferent nerves or sensory nerves, and efferent nerves or motor nerves. Afferent nerves are responsible for relaying sensation from the body to the central nervous system; efferent nerves are responsible for sending out commands from the CNS to the body, stimulating muscle contraction; they include all the non-sensory neurons connected with skeletal muscles and skin. The a- of afferent and the e- of efferent correspond to the prefixes ad- (to, toward) and ex- (out of)."
+    <br>[{2020-05-04} https://en.wikipedia.org/wiki/Somatic_nervous_system]
+    <a class="clsHide" href="#idSysOgnHmn017dsn"></a></p>
+  </section>
+
+  <section id="idSysOgnHmn020srtr">
+  <h3 id="idSysOgnHmn020srtrH3">structure of sysNervousPeripheral
+    <a class="clsHide" href="#idSysOgnHmn020srtrH3"></a></h3>
+  <p id="idSysOgnHmn020srtrP1">structure::
     <br>* <a class="clsPreview" href="#idOgnHmn006Crnl">εγκεφαλικά-νεύρα</a>,
     <br>* <a class="clsPreview" href="#idOgnHmn006Spnl">νωτιαίου-μυελού-νεύρα</a>,
-    <a class="clsHide" href="#idSysOgnHmn003att003srtrP1"></a></p>
-  <p id="idSysOgnHmn003att003srtrP2">εγκεφαλικά και νωτιαια νεύρα
-    <br>γάγγλια τους
-    <a class="clsHide" href="#idSysOgnHmn003att003srtrP2"></a></p>
+    <br>===
+    <br>"The PNS includes motor neurons, mediating voluntary movement; the autonomic nervous system, comprising the sympathetic nervous system and the parasympathetic nervous system and regulating involuntary functions; and the enteric nervous system, a semi-independent part of the nervous system whose function is to control the gastrointestinal system."
+    <br>[{2020-05-03} https://en.wikipedia.org/wiki/Outline_of_the_human_nervous_system]
+    <a class="clsHide" href="#idSysOgnHmn020srtrP1"></a></p>
   </section>
   </section>
 
@@ -6315,7 +6364,7 @@
     <br>The brain is generally defined as the part of the central nervous-system that is contained in the skull. The rest of the central nervous-system -an elongated tube of nerve tissue called the spinal cord- extends from the base of the brain  and is contained within the bony vertebral canal. The brain <strong>controls</strong> the activities of the body and receives information about the body's inner workings and about the outside world by sending and receiving signals via the spinal cord and the peripheral nervous-system. The brain receives the oxygen and food it needs to function by way of a vast network of arteries that carries fresh blood to every part of the brain. (See also Nervous System.)
     <br>[ Copyright 1991 Compton's Learning Company ]
     <br>===
-    <br>analytic: ο εγκέφαλος είναι όργανο του <a class="clsPreview" href="#idSysOgnHmn003att002">εγκεφαλονωτιαιου-νευρικού-συστήματος</a>.
+    <br>analytic: ο εγκέφαλος είναι όργανο του <a class="clsPreview" href="#idSysOgnHmn021">εγκεφαλονωτιαιου-νευρικού-συστήματος</a>.
     <br>[Αργύρης, {1994}, 85⧺cptRsc29⧺]
     <br>===
     <br>synthetic: ο εγκέφαλος αποτελείται από νευρικό ιστό.
@@ -6367,249 +6416,10 @@
     <br>Macroscopically the hemispheres are roughly mirror images of each other, with only subtle differences, such as the Yakovlevian torque seen in the human brain, which is a slight warping of the right side, bringing it just forward of the left side. On a microscopic level, the cytoarchitecture of the cerebral cortex, shows the functions of cells, quantities of neurotransmitter levels and receptor subtypes to be markedly asymmetrical between the hemispheres.[1][2] However, while some of these hemispheric distribution differences are consistent across human beings, or even across some species, many observable distribution differences vary from individual to individual within a given species."
     <br>[{2020-05-02} https://en.wikipedia.org/wiki/Cerebral_hemisphere]
     <a class="clsHide" href="#idBrnHmnatt038dsn"></a></p>
-  </section>
-
-  <section id="idBrnHmnatt044">
-  <h4 id="idBrnHmnatt044H4">longitudinal-fissure of cerebrum
-    <a class="clsHide" href="#idBrnHmnatt044H4"></a></h4>
-  <p id="idBrnHmnatt044nam">name::
-    <br>* Mcs.cerebrum'longitudinal-fissure,
-    <br>* Mcs.ognBrain'att044-longitudinal-fissure,
-    <br>* Mcs.ognBrain'longitudinal-fissure-att044,
-    <br>* Mcs.longitudinal-fissure,
-    <a class="clsHide" href="#idBrnHmnatt044nam"></a></p>
-  <p id="idBrnHmnatt044dsn">description::
-    <br>"The longitudinal fissure (or cerebral fissure, median longitudinal fissure, interhemispheric fissure) is the deep groove that separates the two cerebral hemispheres of the vertebrate brain. Lying within it is a continuation of the dura mater (one of the meninges) called the falx cerebri.[1] The inner surfaces of the two hemispheres are convoluted by gyri and sulci just as is the outer surface of the brain."
-    <br>[{2020-05-02} https://en.wikipedia.org/wiki/Longitudinal_fissure]
-    <a class="clsHide" href="#idBrnHmnatt044dsn"></a></p>
-  </section>
-
-  <section id="idBrnHmnatt045">
-  <h4 id="idBrnHmnatt045H4">corpus-callosum of cerebrum
-    <a class="clsHide" href="#idBrnHmnatt045H4"></a></h4>
-  <p id="idBrnHmnatt045nam">name::
-    <br>* Mcs.cerebrum'corpus-callosum,
-    <br>* Mcs.ognBrain'att045-corpus-callosum,
-    <br>* Mcs.ognBrain'corpus-callosum-att045,
-    <br>* Mcs.corpus-callosum,
-    <a class="clsHide" href="#idBrnHmnatt045nam"></a></p>
-  <p id="idBrnHmnatt045dsn">description::
-    <br>"The corpus callosum (Latin for "tough body"), also callosal commissure, is a wide, thick nerve tract, consisting of a flat bundle of commissural fibers, beneath the cerebral cortex in the brain. The corpus callosum is only found in placental mammals.[1] It spans part of the longitudinal fissure, connecting the left and right cerebral hemispheres, enabling communication between them. It is the largest white matter structure in the human brain, about ten centimetres in length and consisting of 200–300 million axonal projections.[2][3]
-    <br>A number of separate nerve tracts, classed as subregions of the corpus callosum, connect different parts of the hemispheres. The main ones are known as the genu, the rostrum, the trunk or body, and the splenium.[4]"
-    <br>[{2020-05-02} https://en.wikipedia.org/wiki/Corpus_callosum]
-    <a class="clsHide" href="#idBrnHmnatt045dsn"></a></p>
-  </section>
-
-  <section id="idBrnHmnatt037">
-  <h4 id="idBrnHmnatt037H4">lobe of cerebrum
-    <a class="clsHide" href="#idBrnHmnatt037H4"></a></h4>
-  <p id="idBrnHmnatt037nam">name::
-    <br>* Mcs.cerebral-lobe,
-    <br>* Mcs.lobe-of-cerebrum,
-    <br>====== langoGreek:
-    <br>* McsEll.λοβός,
-    <a class="clsHide" href="#idBrnHmnatt037nam"></a></p>
-  <p id="idBrnHmnatt037dsn">description::
-    <br>"The lobes of the brain were originally a purely anatomical classification, but have been shown also to be related to different brain functions. The cerebrum, the largest portion of the human brain, is divided into lobes, but so is the cerebellum. If not specified, the expression "lobes of the brain" refers to the cerebrum.
-    <br>Terminologia Anatomica (1998) and Terminologia Neuroanatomica (2017) divides the cerebrum into 6 lobes.[1][2]"
-    <br>[{2020-05-02} https://en.wikipedia.org/wiki/Lobes_of_the_brain]
-    <br>===
-    <br>analytic: λοβός είναι καθένα από τα 5 μέρη κάθε <a class="clsPreview" href="#idBrnHmnatt004">ημισφαιριου</a> που σχηματίζονται από τις πιό βαθειές αυλακες του.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBrnHmnatt037dsn"></a></p>
-  <p id="idBrnHmnatt037wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBrnHmnatt004wtr">ημισφαίριο</a>,
-    <a class="clsHide" href="#idBrnHmnatt037wtr"></a></p>
-
-  <section id="idBrnHmnatt037SPECIFIC">
-  <h5 id="idBrnHmnatt037SPECIFICH5">SPECIFIC
-    <a class="clsHide" href="#idBrnHmnatt037SPECIFICH5"></a></h5>
-  <p id="idBrnHmnatt037str">specific-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn390">μετωπιαιος-λοβός</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn391">βρεγματικός-λοβός</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn392">ινιακος-λοβός</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn393">κροταφικος-λοβός</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn394">κεντρικος-λοβός</a>,
-    <a class="clsHide" href="#idBrnHmnatt037str"></a></p>
-  </section>
-  </section>
-
-  <section id="idBdyHmn390">
-  <h4 id="idBdyHmn390H4">frontal-lobe
-    <a class="clsHide" href="#idBdyHmn390H4"></a></h4>
-  <p id="idBdyHmn390nam">name::
-    <br>* Mcs.cptBdyHmn390,
-    <br>* Mcs.frontal-lobe,
-    <br>====== langoGreek:
-    <br>* McsEll.μετωπιαιος-λοβός,
-    <a class="clsHide" href="#idBdyHmn390nam"></a></p>
-  <p id="idBdyHmn390dsn">description::
-    <br>analytic: μετωπικος λοβός είναι <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a> ημισφαιριου που βρίσκεται στο μπροστινό μέρος.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn390dsn"></a></p>
-  <p id="idBdyHmn390gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a>,
-    <a class="clsHide" href="#idBdyHmn390gtr"></a></p>
-  <p id="idBdyHmn390wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBrnHmnatt004wtr">ημισφαίριο</a>,
-    <a class="clsHide" href="#idBdyHmn390wtr"></a></p>
-
-  <section id="idBdyHmn390SPECIFIC">
-  <h5 id="idBdyHmn390SPECIFICH5">SPECIFIC
-    <a class="clsHide" href="#idBdyHmn390SPECIFICH5"></a></h5>
-  <p id="idBdyHmn390str">specific-tree-of-::
-    <br>* αριστερου ημισφαιριου,
-    <br>* δεξιου ημισφαιριου,
-    <a class="clsHide" href="#idBdyHmn390str"></a></p>
-  </section>
-  </section>
-
-  <section id="idBdyHmn391">
-  <h4 id="idBdyHmn391H4">parietal-lobe
-    <a class="clsHide" href="#idBdyHmn391H4"></a></h4>
-  <p id="idBdyHmn391nam">name::
-    <br>* Mcs.cptBdyHmn391,
-    <br>* Mcs.parietal-lobe,
-    <br>====== langoGreek:
-    <br>* McsEll.βρεγματικός-λοβός,
-    <a class="clsHide" href="#idBdyHmn391nam"></a></p>
-  <p id="idBdyHmn391dsn">description::
-    <br>analytic: βρεγματικός λοβός είναι <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a> ημισφαιριου που βρίσκεται πίσω από τον μετωπικό.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn391dsn"></a></p>
-  <p id="idBdyHmn391gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a>,
-    <a class="clsHide" href="#idBdyHmn391gtr"></a></p>
-  <p id="idBdyHmn391wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBrnHmnatt004wtr">ημισφαίριο</a>,
-    <a class="clsHide" href="#idBdyHmn391wtr"></a></p>
-
-  <section id="idBdyHmn391SPECIFIC">
-  <h5 id="idBdyHmn391SPECIFICH5">SPECIFIC
-    <a class="clsHide" href="#idBdyHmn391SPECIFICH5"></a></h5>
-  <p id="idBdyHmn391str">specific-tree-of-::
-    <br>* αριστερου ημισφαιριου,
-    <br>* δεξιου ημισφαιριου,
-    <a class="clsHide" href="#idBdyHmn391str"></a></p>
-  </section>
-  </section>
-
-  <section id="idBdyHmn392">
-  <h4 id="idBdyHmn392H4">occipital-lobe
-    <a class="clsHide" href="#idBdyHmn392H4"></a></h4>
-  <p id="idBdyHmn392nam">name::
-    <br>* Mcs.cptBdyHmn392,
-    <br>* Mcs.occipital'lobe,
-    <br>====== langoGreek:
-    <br>* McsEll.ινιακος-λοβός,
-    <br>* McsEll.ινιακος,
-    <a class="clsHide" href="#idBdyHmn392nam"></a></p>
-  <p id="idBdyHmn392dsn">description::
-    <br>analytic: ινιακος λοβός είναι <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a> ημισφαιριου που βρίσκεται στο πίσω μέρος.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn392dsn"></a></p>
-  <p id="idBdyHmn392P1">The occipital lobe is the visual processing center of the mammalian brain, containing most of the anatomical region of the visual cortex. The primary visual cortex is Brodmann area 17, commonly called V1 (visual one). Human V1 is located on the medial side of the occipital lobe within the calcarine sulcus; the full extent of V1 often continues onto the posterior pole of the occipital lobe. V1 is often also called striate cortex because it can be identified by a large stripe of myelin, the Stria of Gennari. Visually driven regions outside V1 are called extrastriate cortex. There are many extrastriate regions, and these are specialized for different visual tasks, such as visuospatial processing, color discrimination and motion perception.
-    <br>[http://en.wikipedia.org/wiki/Occipital_lobe]
-    <a class="clsHide" href="#idBdyHmn392P1"></a></p>
-  <p id="idBdyHmn392gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a>,
-    <a class="clsHide" href="#idBdyHmn392gtr"></a></p>
-  <p id="idBdyHmn392wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBrnHmnatt004wtr">ημισφαίριο</a>,
-    <a class="clsHide" href="#idBdyHmn392wtr"></a></p>
-
-  <section id="idBdyHmn392SPECIFIC">
-  <h5 id="idBdyHmn392SPECIFICH5">SPECIFIC
-    <a class="clsHide" href="#idBdyHmn392SPECIFICH5"></a></h5>
-  <p id="idBdyHmn392str">specific-tree-of-::
-    <br>* αριστερου ημισφαιριου,
-    <br>* δεξιου ημισφαιριου,
-    <a class="clsHide" href="#idBdyHmn392str"></a></p>
-  </section>
-  </section>
-
-  <section id="idBdyHmn393">
-  <h4 id="idBdyHmn393H4">temporal-lobe
-    <a class="clsHide" href="#idBdyHmn393H4"></a></h4>
-  <p id="idBdyHmn393nam">name::
-    <br>* Mcs.cptBdyHmn393,
-    <br>* Mcs.temporal-lobe,
-    <br>====== langoGreek:
-    <br>* McsEll.κροταφικος-λοβός,
-    <a class="clsHide" href="#idBdyHmn393nam"></a></p>
-  <p id="idBdyHmn393dsn">description::
-    <br>analytic: κροταφικος λοβός είναι <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a> ημισφαιριου που βρίσκεται στα πλαγια.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn393dsn"></a></p>
-  <p id="idBdyHmn393gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a>,
-    <a class="clsHide" href="#idBdyHmn393gtr"></a></p>
-  <p id="idBdyHmn393wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBrnHmnatt004wtr">ημισφαίριο</a>,
-    <a class="clsHide" href="#idBdyHmn393wtr"></a></p>
-
-  <section id="idBdyHmn393SPECIFIC">
-  <h5 id="idBdyHmn393SPECIFICH5">SPECIFIC
-    <a class="clsHide" href="#idBdyHmn393SPECIFICH5"></a></h5>
-  <p id="idBdyHmn393str">specific-tree-of-::
-    <br>* αριστερου ημισφαιριου,
-    <br>* δεξιου ημισφαιριου,
-    <a class="clsHide" href="#idBdyHmn393str"></a></p>
-  </section>
-  </section>
-
-  <section id="idBdyHmn394">
-  <h4 id="idBdyHmn394H4">central-lobe
-    <a class="clsHide" href="#idBdyHmn394H4"></a></h4>
-  <p id="idBdyHmn394nam">name::
-    <br>* Mcs.cptBdyHmn394,
-    <br>* Mcs.central-lobe,
-    <br>====== langoGreek:
-    <br>* McsEll.κεντρικος-λοβός,
-    <a class="clsHide" href="#idBdyHmn394nam"></a></p>
-  <p id="idBdyHmn394dsn">description::
-    <br>analytic: κεντρικος λοβός είναι <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a> ημισφαιριου που δεν φαίνεται γιατί οι άλλοι τον καλύπτουν.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn394dsn"></a></p>
-  <p id="idBdyHmn394gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a>,
-    <a class="clsHide" href="#idBdyHmn394gtr"></a></p>
-  <p id="idBdyHmn394wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBrnHmnatt004wtr">ημισφαίριο</a>,
-    <a class="clsHide" href="#idBdyHmn394wtr"></a></p>
-
-  <section id="idBdyHmn394SPECIFIC">
-  <h5 id="idBdyHmn394SPECIFICH5">SPECIFIC
-    <a class="clsHide" href="#idBdyHmn394SPECIFICH5"></a></h5>
-  <p id="idBdyHmn394str">specific-tree-of-::
-    <br>* αριστερου ημισφαιριου,
-    <br>* δεξιου ημισφαιριου,
-    <a class="clsHide" href="#idBdyHmn394str"></a></p>
-  </section>
-  </section>
-
-  <section id="idBrnHmnatt004_1">
-  <h4 id="idBrnHmnatt004_1H4">cortex
-    <a class="clsPreview" href="#idBrnHmnatt004_1H4"></a></h4>
-  <p id="idBrnHmnatt004_1nam">name::
-    <br>* Mcs.cortex,
-    <br>====== langoGreek:
-    <br>* McsEll.φλοιός,
-    <a class="clsHide" href="#idBrnHmnatt004_1nam"></a></p>
-  <p id="idBrnHmnatt004_1dsn">description::
-    <br>ο φλοιός των ημισφαιρίων έχει χρώμα φαιό, φαιά ουσία, ενώ το εσωτερικό λευκό, λευκή ουσία.
-    <br>η επιφάνεια των ημισφαιρίων φέρει προεξοχές που λέγονται ελικες και διάφορα αυλάκια, αυλακες του εγκεφάλου.
-    <br>[Αργύρης, {1994}, 87⧺cptRsc29⧺]
-    <br>===
-    <br>In humans, <span class="clsU">subjective experience</span> is distinguishable from <span class="clsU">higher levels of consciousness</span>, such as self-awareness, which requires a functioning cortex. Subjective experience involves the midbrain rather than the cortex and can continue even after massive damage to the cortex.
-    <br>Insects are a very large and diverse category of beings. Honeybees have about a million neurons, which isn’t many compared to our roughly 20 billion neocortical neurons, let alone the 37 billion recently found in the neocortex of a pilot whale. But it is still enough to be capable of performing and interpreting the famous “waggle dance” that conveys information about the direction and distance of flowers, water, or potential nest sites. Caterpillars, as far as we know, have no such abilities. But they may still be conscious enough to suffer as they starve.
-    <br>[https://www.project-syndicate.org/commentary/are-insects-conscious-by-peter-singer-2016-05]
-    <a class="clsHide" href="#idBrnHmnatt004_1dsn"></a></p>
-  </section>
 
   <section id="idBrnHmnatt008">
-  <h4 id="idBrnHmnatt008H4">left-hemisphere
-    <a class="clsHide" href="#idBrnHmnatt008H4"></a></h4>
+  <h5 id="idBrnHmnatt008H5">left-hemisphere
+    <a class="clsHide" href="#idBrnHmnatt008H5"></a></h5>
   <p id="idBrnHmnatt008nam">name::
     <br>* Mcs.ognBrain'att008-left-brain,
     <br>* Mcs.ognBrain'left-brain-att008,
@@ -6627,8 +6437,8 @@
     <a class="clsHide" href="#idBrnHmnatt008gtr"></a></p>
 
   <section id="idBrnHmnatt008doing">
-  <h5 id="idBrnHmnatt008doingH5">doing
-    <a class="clsHide" href="#idBrnHmnatt008doingH5"></a></h5>
+  <h6 id="idBrnHmnatt008doingH6">doing
+    <a class="clsHide" href="#idBrnHmnatt008doingH6"></a></h6>
   <p id="idBrnHmnatt008doingP1">doing::
     <br>ελέγχει
     <br>το δεξί χέρι,
@@ -6639,8 +6449,8 @@
   </section>
 
   <section id="idBrnHmnatt009">
-  <h4 id="idBrnHmnatt009H4">right-hemisphere
-    <a class="clsHide" href="#idBrnHmnatt009H4"></a></h4>
+  <h5 id="idBrnHmnatt009H5">right-hemisphere
+    <a class="clsHide" href="#idBrnHmnatt009H5"></a></h5>
   <p id="idBrnHmnatt009nam">name::
     <br>* Mcs.ognBrain'att009-right-brain,
     <br>* Mcs.ognBrain'right-brain-att009,
@@ -6657,8 +6467,8 @@
     <a class="clsHide" href="#idBrnHmnatt009gtr"></a></p>
 
   <section id="idBrnHmnatt009doing">
-  <h5 id="idBrnHmnatt009doingH5">doing
-    <a class="clsHide" href="#idBrnHmnatt009doingH5"></a></h5>
+  <h6 id="idBrnHmnatt009doingH6">doing
+    <a class="clsHide" href="#idBrnHmnatt009doingH6"></a></h6>
   <p id="idBrnHmnatt009doingP1">doing::
     <br>ελέγχει
     <br>τον προσανατολισμό
@@ -6669,11 +6479,290 @@
     <a class="clsHide" href="#idBrnHmnatt009doingP1"></a></p>
   </section>
   </section>
+  </section>
 
-  <section id="idBrnHmnatt004srtr">
-  <h4 id="idBrnHmnatt004srtrH4">structure of cerebrum
-    <a class="clsHide" href="#idBrnHmnatt004srtrH4"></a></h4>
-  <p id="idBrnHmnatt004srtrP1">structure::
+  <section id="idBrnHmnatt044">
+  <h4 id="idBrnHmnatt044H4">02_longitudinal-fissure of cerebrum
+    <a class="clsHide" href="#idBrnHmnatt044H4"></a></h4>
+  <p id="idBrnHmnatt044nam">name::
+    <br>* Mcs.cerebrum'02_longitudinal-fissure,
+    <br>* Mcs.cerebrum'longitudinal-fissure,
+    <br>* Mcs.ognBrain'att044-longitudinal-fissure,
+    <br>* Mcs.ognBrain'longitudinal-fissure-att044,
+    <br>* Mcs.longitudinal-fissure,
+    <a class="clsHide" href="#idBrnHmnatt044nam"></a></p>
+  <p id="idBrnHmnatt044dsn">description::
+    <br>"The longitudinal fissure (or cerebral fissure, median longitudinal fissure, interhemispheric fissure) is the deep groove that separates the two cerebral hemispheres of the vertebrate brain. Lying within it is a continuation of the dura mater (one of the meninges) called the falx cerebri.[1] The inner surfaces of the two hemispheres are convoluted by gyri and sulci just as is the outer surface of the brain."
+    <br>[{2020-05-02} https://en.wikipedia.org/wiki/Longitudinal_fissure]
+    <a class="clsHide" href="#idBrnHmnatt044dsn"></a></p>
+  </section>
+
+  <section id="idBrnHmnatt045">
+  <h4 id="idBrnHmnatt045H4">03_corpus-callosum of cerebrum
+    <a class="clsHide" href="#idBrnHmnatt045H4"></a></h4>
+  <p id="idBrnHmnatt045nam">name::
+    <br>* Mcs.cerebrum'03_corpus-callosum,
+    <br>* Mcs.cerebrum'corpus-callosum,
+    <br>* Mcs.ognBrain'att045-corpus-callosum,
+    <br>* Mcs.ognBrain'corpus-callosum-att045,
+    <br>* Mcs.corpus-callosum,
+    <a class="clsHide" href="#idBrnHmnatt045nam"></a></p>
+  <p id="idBrnHmnatt045dsn">description::
+    <br>"The corpus callosum (Latin for "tough body"), also callosal commissure, is a wide, thick nerve tract, consisting of a flat bundle of commissural fibers, beneath the cerebral cortex in the brain. The corpus callosum is only found in placental mammals.[1] It spans part of the longitudinal fissure, connecting the left and right cerebral hemispheres, enabling communication between them. It is the largest white matter structure in the human brain, about ten centimetres in length and consisting of 200–300 million axonal projections.[2][3]
+    <br>A number of separate nerve tracts, classed as subregions of the corpus callosum, connect different parts of the hemispheres. The main ones are known as the genu, the rostrum, the trunk or body, and the splenium.[4]"
+    <br>[{2020-05-02} https://en.wikipedia.org/wiki/Corpus_callosum]
+    <a class="clsHide" href="#idBrnHmnatt045dsn"></a></p>
+  </section>
+
+  <section id="idBrnHmnatt037">
+  <h4 id="idBrnHmnatt037H4">04_lobe of cerebrum
+    <a class="clsHide" href="#idBrnHmnatt037H4"></a></h4>
+  <p id="idBrnHmnatt037nam">name::
+    <br>* Mcs.cerebrum'04_lobe!⇒brain'lobe,
+    <br>* Mcs.cerebrum'lobe!⇒brain'lobe,
+    <br>* Mcs.brain'att037-lobe!⇒brain'lobe,
+    <br>* Mcs.brain'lobe!⇒brain'lobe,
+    <br>* Mcs.cerebral-lobe!⇒brain'lobe,
+    <br>* Mcs.lobe-of-cerebrum!⇒brain'lobe,
+    <br>====== langoGreek:
+    <br>* McsEll.λοβός!=brain'lobe,
+    <a class="clsHide" href="#idBrnHmnatt037nam"></a></p>
+  <p id="idBrnHmnatt037dsn">description::
+    <br>"The lobes of the brain were originally a purely anatomical classification, but have been shown also to be related to different brain functions. The cerebrum, the largest portion of the human brain, is divided into lobes, but so is the cerebellum. If not specified, the expression "lobes of the brain" refers to the cerebrum.
+    <br>Terminologia Anatomica (1998) and Terminologia Neuroanatomica (2017) divides the cerebrum into 6 lobes.[1][2]"
+    <br>[{2020-05-02} https://en.wikipedia.org/wiki/Lobes_of_the_brain]
+    <br>===
+    <br>analytic: λοβός είναι καθένα από τα 5 μέρη κάθε <a class="clsPreview" href="#idBrnHmnatt004">ημισφαιρίου</a> που σχηματίζονται από τις πιό βαθειές αυλακες του.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBrnHmnatt037dsn"></a></p>
+  <p id="idBrnHmnatt037wtr">whole-tree-of-::
+    <br>* <a class="clsPreview" href="#idBrnHmnatt004wtr">ημισφαίριο</a>,
+    <a class="clsHide" href="#idBrnHmnatt037wtr"></a></p>
+
+  <section id="idBrnHmnatt037SPECIFIC">
+  <h5 id="idBrnHmnatt037SPECIFICH5">SPECIFIC
+    <a class="clsHide" href="#idBrnHmnatt037SPECIFICH5"></a></h5>
+  <p id="idBrnHmnatt037str">specific-tree-of-::
+    <br>* <a class="clsPreview" href="#idBrnHmnatt050">μετωπιαίος-λοβός</a>,
+    <br>* <a class="clsPreview" href="#idBrnHmnatt049">βρεγματικός-λοβός</a>,
+    <br>* <a class="clsPreview" href="#idBrnHmnatt051">ινιακός-λοβός</a>,
+    <br>* <a class="clsPreview" href="#idBrnHmnatt052">κροταφικός-λοβός</a>,
+    <br>* <a class="clsPreview" href="#idBrnHmnatt047">κεντρικός-λοβός</a>,
+    <a class="clsHide" href="#idBrnHmnatt037str"></a></p>
+  </section>
+
+  <section id="idBrnHmnatt050">
+  <h5 id="idBrnHmnatt050H5">lobe.frontal of cerebrum
+    <a class="clsHide" href="#idBrnHmnatt050H5"></a></h5>
+  <p id="idBrnHmnatt050nam">name::
+    <br>* Mcs.cerebrum'lobe.frontal,
+    <br>* Mcs.ognBrain'att050-lobe.frontal,
+    <br>* Mcs.ognBrain'lobe.frontal,
+    <br>* Mcs.frontal-lobe,
+    <br>* Mcs.lobeFrontal,
+    <br>====== langoGreek:
+    <br>* McsEll.μετωπιαίος-λοβός,
+    <a class="clsHide" href="#idBrnHmnatt050nam"></a></p>
+  <p id="idBrnHmnatt050dsn">description::
+    <br>analytic: μετωπικος λοβός είναι <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a> ημισφαιρίου που βρίσκεται στο μπροστινό μέρος.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBrnHmnatt050dsn"></a></p>
+  <p id="idBrnHmnatt050gtr">generic-tree-of-::
+    <br>* <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a>,
+    <a class="clsHide" href="#idBrnHmnatt050gtr"></a></p>
+  <p id="idBrnHmnatt050wtr">whole-tree-of-::
+    <br>* <a class="clsPreview" href="#idBrnHmnatt004wtr">ημισφαίριο</a>,
+    <a class="clsHide" href="#idBrnHmnatt050wtr"></a></p>
+
+  <section id="idBrnHmnatt050SPECIFIC">
+  <h6 id="idBrnHmnatt050SPECIFICH6">SPECIFIC
+    <a class="clsHide" href="#idBrnHmnatt050SPECIFICH6"></a></h6>
+  <p id="idBrnHmnatt050str">specific-tree-of-::
+    <br>* αριστερού ημισφαιρίου,
+    <br>* δεξιού ημισφαιρίου,
+    <a class="clsHide" href="#idBrnHmnatt050str"></a></p>
+  </section>
+  </section>
+
+  <section id="idBrnHmnatt049">
+  <h5 id="idBrnHmnatt049H5">lobe.parietal of cerebrum
+    <a class="clsHide" href="#idBrnHmnatt049H5"></a></h5>
+  <p id="idBrnHmnatt049nam">name::
+    <br>* Mcs.cerebrum'lobe.parietal, /paráetal/,
+    <br>* Mcs.ognBrain'att049-lobe.parietal,
+    <br>* Mcs.ognBrain'lobe.parietal,
+    <br>* Mcs.lobeParietal,
+    <br>* Mcs.parietal-lobe,
+    <br>====== langoGreek:
+    <br>* McsEll.βρεγματικός-λοβός,
+    <a class="clsHide" href="#idBrnHmnatt049nam"></a></p>
+  <p id="idBrnHmnatt049dsn">description::
+    <br>analytic: βρεγματικός λοβός είναι <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a> ημισφαιρίου που βρίσκεται πίσω από τον μετωπικό.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBrnHmnatt049dsn"></a></p>
+  <p id="idBrnHmnatt049gtr">generic-tree-of-::
+    <br>* <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a>,
+    <a class="clsHide" href="#idBrnHmnatt049gtr"></a></p>
+  <p id="idBrnHmnatt049wtr">whole-tree-of-::
+    <br>* <a class="clsPreview" href="#idBrnHmnatt004wtr">ημισφαίριο</a>,
+    <a class="clsHide" href="#idBrnHmnatt049wtr"></a></p>
+
+  <section id="idBrnHmnatt049SPECIFIC">
+  <h6 id="idBrnHmnatt049SPECIFICH6">SPECIFIC
+    <a class="clsHide" href="#idBrnHmnatt049SPECIFICH6"></a></h6>
+  <p id="idBrnHmnatt049str">specific-tree-of-::
+    <br>* αριστερού ημισφαιρίου,
+    <br>* δεξιού ημισφαιρίου,
+    <a class="clsHide" href="#idBrnHmnatt049str"></a></p>
+  </section>
+  </section>
+
+  <section id="idBrnHmnatt051">
+  <h5 id="idBrnHmnatt051H5">lobe.occipital of cerebrum
+    <a class="clsHide" href="#idBrnHmnatt051H5"></a></h5>
+  <p id="idBrnHmnatt051nam">name::
+    <br>* Mcs.cerebrum'lobe.occipital,
+    <br>* Mcs.ognBrain'att051-lobe.occipital,
+    <br>* Mcs.ognBrain'lobe.occipital,
+    <br>* Mcs.lobeOccipital,
+    <br>* Mcs.occipital-lobe,
+    <br>====== langoGreek:
+    <br>* McsEll.ινιακός-λοβός,
+    <a class="clsHide" href="#idBrnHmnatt051nam"></a></p>
+  <p id="idBrnHmnatt051dsn">description::
+    <br>analytic: ινιακός λοβός είναι <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a> ημισφαιρίου που βρίσκεται στο πίσω μέρος.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBrnHmnatt051dsn"></a></p>
+  <p id="idBrnHmnatt051P1">The occipital lobe is the visual processing center of the mammalian brain, containing most of the anatomical region of the visual cortex. The primary visual cortex is Brodmann area 17, commonly called V1 (visual one). Human V1 is located on the medial side of the occipital lobe within the calcarine sulcus; the full extent of V1 often continues onto the posterior pole of the occipital lobe. V1 is often also called striate cortex because it can be identified by a large stripe of myelin, the Stria of Gennari. Visually driven regions outside V1 are called extrastriate cortex. There are many extrastriate regions, and these are specialized for different visual tasks, such as visuospatial processing, color discrimination and motion perception.
+    <br>[http://en.wikipedia.org/wiki/Occipital_lobe]
+    <a class="clsHide" href="#idBrnHmnatt051P1"></a></p>
+  <p id="idBrnHmnatt051gtr">generic-tree-of-::
+    <br>* <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a>,
+    <a class="clsHide" href="#idBrnHmnatt051gtr"></a></p>
+  <p id="idBrnHmnatt051wtr">whole-tree-of-::
+    <br>* <a class="clsPreview" href="#idBrnHmnatt004wtr">ημισφαίριο</a>,
+    <a class="clsHide" href="#idBrnHmnatt051wtr"></a></p>
+
+  <section id="idBrnHmnatt051SPECIFIC">
+  <h6 id="idBrnHmnatt051SPECIFICH6">SPECIFIC
+    <a class="clsHide" href="#idBrnHmnatt051SPECIFICH6"></a></h6>
+  <p id="idBrnHmnatt051str">specific-tree-of-::
+    <br>* αριστερού ημισφαιρίου,
+    <br>* δεξιού ημισφαιρίου,
+    <a class="clsHide" href="#idBrnHmnatt051str"></a></p>
+  </section>
+  </section>
+
+  <section id="idBrnHmnatt052">
+  <h5 id="idBrnHmnatt052H5">lobe.temporal of cerebrum
+    <a class="clsHide" href="#idBrnHmnatt052H5"></a></h5>
+  <p id="idBrnHmnatt052nam">name::
+    <br>* Mcs.cerebrum'lobe.temporal,
+    <br>* Mcs.ognBrain'att052-lobe.temporal,
+    <br>* Mcs.ognBrain'lobe.temporal,
+    <br>* Mcs.lobeTemporal,
+    <br>* Mcs.temporal-lobe,
+    <br>====== langoGreek:
+    <br>* McsEll.κροταφικός-λοβός,
+    <a class="clsHide" href="#idBrnHmnatt052nam"></a></p>
+  <p id="idBrnHmnatt052dsn">description::
+    <br>analytic: κροταφικός λοβός είναι <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a> ημισφαιρίου που βρίσκεται στα πλαγια.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBrnHmnatt052dsn"></a></p>
+  <p id="idBrnHmnatt052gtr">generic-tree-of-::
+    <br>* <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a>,
+    <a class="clsHide" href="#idBrnHmnatt052gtr"></a></p>
+  <p id="idBrnHmnatt052wtr">whole-tree-of-::
+    <br>* <a class="clsPreview" href="#idBrnHmnatt004wtr">ημισφαίριο</a>,
+    <a class="clsHide" href="#idBrnHmnatt052wtr"></a></p>
+
+  <section id="idBrnHmnatt052SPECIFIC">
+  <h6 id="idBrnHmnatt052SPECIFICH6">SPECIFIC
+    <a class="clsHide" href="#idBrnHmnatt052SPECIFICH6"></a></h6>
+  <p id="idBrnHmnatt052str">specific-tree-of-::
+    <br>* αριστερού ημισφαιρίου,
+    <br>* δεξιού ημισφαιρίου,
+    <a class="clsHide" href="#idBrnHmnatt052str"></a></p>
+  </section>
+  </section>
+
+  <section id="idBrnHmnatt047">
+  <h5 id="idBrnHmnatt047H5">lobe.central of cerebrum
+    <a class="clsHide" href="#idBrnHmnatt047H5"></a></h5>
+  <p id="idBrnHmnatt047nam">name::
+    <br>* Mcs.cerebrum'lobe.central,
+    <br>* Mcs.ognBrain'att047-lobe.central,
+    <br>* Mcs.ognBrain'lobe.central,
+    <br>* Mcs.central-lobe,
+    <br>====== langoGreek:
+    <br>* McsEll.κεντρικός-λοβός,
+    <a class="clsHide" href="#idBrnHmnatt047nam"></a></p>
+  <p id="idBrnHmnatt047dsn">description::
+    <br>analytic: κεντρικός λοβός είναι <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a> ημισφαιρίου που δεν φαίνεται γιατί οι άλλοι τον καλύπτουν.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBrnHmnatt047dsn"></a></p>
+  <p id="idBrnHmnatt047gtr">generic-tree-of-::
+    <br>* <a class="clsPreview" href="#idBrnHmnatt037">λοβός</a>,
+    <a class="clsHide" href="#idBrnHmnatt047gtr"></a></p>
+  <p id="idBrnHmnatt047wtr">whole-tree-of-::
+    <br>* <a class="clsPreview" href="#idBrnHmnatt004wtr">ημισφαίριο</a>,
+    <a class="clsHide" href="#idBrnHmnatt047wtr"></a></p>
+
+  <section id="idBrnHmnatt047SPECIFIC">
+  <h6 id="idBrnHmnatt047SPECIFICH6">SPECIFIC
+    <a class="clsHide" href="#idBrnHmnatt047SPECIFICH6"></a></h6>
+  <p id="idBrnHmnatt047str">specific-tree-of-::
+    <br>* αριστερού ημισφαιρίου,
+    <br>* δεξιού ημισφαιρίου,
+    <a class="clsHide" href="#idBrnHmnatt047str"></a></p>
+  </section>
+  </section>
+
+  <section id="idBrnHmnatt048">
+  <h5 id="idBrnHmnatt048H5">lobe.limbic of cerebrum
+    <a class="clsHide" href="#idBrnHmnatt048H5"></a></h5>
+  <p id="idBrnHmnatt048nam">name::
+    <br>* Mcs.cerebrum'lobe.limbic,
+    <br>* Mcs.ognBrain'att048-lobe.limbic,
+    <br>* Mcs.ognBrain'lobe.limbic,
+    <br>* Mcs.limbic-lobe,
+    <a class="clsHide" href="#idBrnHmnatt048nam"></a></p>
+  <p id="idBrnHmnatt048dsn">description::
+    <br>"The limbic lobe is an arc-shaped region of cortex on the medial surface of each cerebral hemisphere of the mammalian brain, consisting of parts of the frontal, parietal and temporal lobes. The term is ambiguous, with some authors[who?] including the paraterminal gyrus, the subcallosal area, the cingulate gyrus, the parahippocampal gyrus, the dentate gyrus, the hippocampus and the subiculum;[1] while the Terminologia Anatomica includes the cingulate sulcus, the cingulate gyrus, the isthmus of cingulate gyrus, the fasciolar gyrus, the parahippocampal gyrus, the parahippocampal sulcus, the dentate gyrus, the fimbrodentate sulcus, the fimbria of hippocampus, the collateral sulcus, and the rhinal sulcus, and omits the hippocampus."
+    <br>[{2020-05-03} https://en.wikipedia.org/wiki/Limbic_lobe]
+    <a class="clsHide" href="#idBrnHmnatt048dsn"></a></p>
+  </section>
+  </section>
+
+  <section id="idBrnHmnatt046">
+  <h4 id="idBrnHmnatt046H4">05_cortex of cerebrum
+    <a class="clsPreview" href="#idBrnHmnatt046H4"></a></h4>
+  <p id="idBrnHmnatt046nam">name::
+    <br>* Mcs.cerebrum'05_cortex!⇒brain'cortex,
+    <br>* Mcs.ognBrain'att046-cortex!⇒brain'cortex,
+    <br>* Mcs.brain'cortex,
+    <br>* Mcs.cortex-of-brain!⇒brain'cortex,
+    <br>====== langoGreek:
+    <br>* McsEll.φλοιός,
+    <a class="clsHide" href="#idBrnHmnatt046nam"></a></p>
+  <p id="idBrnHmnatt046dsn">description::
+    <br>ο φλοιός των ημισφαιρίων έχει χρώμα φαιό, φαιά ουσία, ενώ το εσωτερικό λευκό, λευκή ουσία.
+    <br>η επιφάνεια των ημισφαιρίων φέρει προεξοχές που λέγονται ελικες και διάφορα αυλάκια, αυλακες του εγκεφάλου.
+    <br>[Αργύρης, {1994}, 87⧺cptRsc29⧺]
+    <br>===
+    <br>In humans, <span class="clsU">subjective experience</span> is distinguishable from <span class="clsU">higher levels of consciousness</span>, such as self-awareness, which requires a functioning cortex. Subjective experience involves the midbrain rather than the cortex and can continue even after massive damage to the cortex.
+    <br>Insects are a very large and diverse category of beings. Honeybees have about a million neurons, which isn’t many compared to our roughly 20 billion neocortical neurons, let alone the 37 billion recently found in the neocortex of a pilot whale. But it is still enough to be capable of performing and interpreting the famous “waggle dance” that conveys information about the direction and distance of flowers, water, or potential nest sites. Caterpillars, as far as we know, have no such abilities. But they may still be conscious enough to suffer as they starve.
+    <br>[https://www.project-syndicate.org/commentary/are-insects-conscious-by-peter-singer-2016-05]
+    <a class="clsHide" href="#idBrnHmnatt046dsn"></a></p>
+  </section>
+
+  <section id="idBrnHmnatt004srtrF">
+  <h4 id="idBrnHmnatt004srtrFH4">structure of cerebrum
+    <a class="clsHide" href="#idBrnHmnatt004srtrFH4"></a></h4>
+  <p id="idBrnHmnatt004srtrFnam">name::
+    <br>* Mcs.cerebrum'structure,
+    <a class="clsHide" href="#idBrnHmnatt004srtrFnam"></a></p>
+  <p id="idBrnHmnatt004srtrFP1">structure::
     <br>* αυλακες,
     <br>* ελικες,
     <br>* επιμηκης σχισμη,
@@ -6685,13 +6774,16 @@
     <br>** μεσολοβιο,
     <br>* φαιά ουσία,
     <br>* φλοιός,
-    <a class="clsHide" href="#idBrnHmnatt004srtrP1"></a></p>
+    <a class="clsHide" href="#idBrnHmnatt004srtrFP1"></a></p>
   </section>
 
-  <section id="idBrnHmnatt004functing">
-  <h4 id="idBrnHmnatt004functingH4">functing
-    <a class="clsHide" href="#idBrnHmnatt004functingH4"></a></h4>
-  <p id="idBrnHmnatt004functingP1">οι λειτουργίες των ημισφαιρίων συνοπτικά:
+  <section id="idBrnHmnatt004dngF">
+  <h4 id="idBrnHmnatt004dngFH4">doing of cerebrum
+    <a class="clsHide" href="#idBrnHmnatt004dngFH4"></a></h4>
+  <p id="idBrnHmnatt004dngFnam">name::
+    <br>* Mcs.cerebrum'doing,
+    <a class="clsHide" href="#idBrnHmnatt004dngFnam"></a></p>
+  <p id="idBrnHmnatt004dngFP1">οι λειτουργίες των ημισφαιρίων συνοπτικά:
     <br>- δέχονται και ερμηνεύουν όλα τα ερεθίσματα και τα καθιστούν συνειδητά.
     <br>- δίνουν εντολές για όλες τις εκούσιες κινήσεις.
     <br>- κατακρατούν και ταξινομούν όλα τα ερεθίσματα που έρχονται από την περιφέρεια και τα συσχετίζουν με ανάλογα ερεθίσματα που υπάρχουν ως παραστάσεις από το παρελθόν εναποθηκευμένες στη μνήμη.
@@ -6699,13 +6791,13 @@
     <br>- εξασκούν υποσυνείδητο έλεγχο σε πολλές  λειτουργίες του σώματος.
     <br>- εξασκούν έλεγχο σε άλλα μέρη του εγκεφάλου.
     <br>[Αργύρης, {1994}, 254⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBrnHmnatt004functingP1"></a></p>
-  <p id="idBrnHmnatt004functingP2">When Do the Two Sides of the Brain Work Together?
+    <a class="clsHide" href="#idBrnHmnatt004dngFP1"></a></p>
+  <p id="idBrnHmnatt004dngFP2">When Do the Two Sides of the Brain Work Together?
     <br>To understand puns, both hemispheres of the brain must work together because of the unusual nature of the humor.
     <br>
     <br>Research has shown that injuries to the right hemisphere of the brain can affect a person’s sense of humor. To better understand the neuroscience of puns, a type of humor that requires the brain to sort through twists in wordplay, neuroscientists at the University of Windsor in Ontario, Canada, tested the responses of both sides of the brain to puns. They found that getting the joke took cooperation between both hemispheres -- the left side is tasked with linguistic inputs, while the right hemisphere is used to analyze the punchline’s double meaning.
     <br>[http://www.wisegeek.com/when-do-the-two-sides-of-the-brain-work-together.htm?m {2018-04-23}]
-    <a class="clsHide" href="#idBrnHmnatt004functingP2"></a></p>
+    <a class="clsHide" href="#idBrnHmnatt004dngFP2"></a></p>
   </section>
   </section>
 
@@ -7230,6 +7322,22 @@
   <p id="idBrnHmnatt012dsn">description::
     <br>·
     <a class="clsHide" href="#idBrnHmnatt012dsn"></a></p>
+
+  <section id="idBrnHmnatt053">
+  <h4 id="idBrnHmnatt053H4">limbic-system of ognBrain
+    <a class="clsHide" href="#idBrnHmnatt053H4"></a></h4>
+  <p id="idBrnHmnatt053nam">name::
+    <br>* Mcs.ognBrain'limbic-system,
+    <br>* Mcs.ognBrain'att053-limbic-system,
+    <br>* Mcs.limbic-system,
+    <a class="clsHide" href="#idBrnHmnatt053nam"></a></p>
+  <p id="idBrnHmnatt053dsn">description::
+    <br>"The limbic system, also known as the paleomammalian cortex, is a set of brain structures located on both sides of the thalamus, immediately beneath the medial temporal lobe of the cerebrum primarily in the forebrain.[1]
+    <br>It supports a variety of functions including emotion, behavior, motivation, long-term memory, and olfaction.[2] Emotional life is largely housed in the limbic system, and it critically aids the formation of memories.
+    <br>With a primordial structure, the limbic system is involved in lower order emotional processing of input from sensory systems and consists of the amygdaloid nuclear complex (amygdala), mammillary bodies, stria medullaris, central gray and dorsal and ventral nuclei of Gudden.[3] This processed information is often relayed to a collection of structures from the telencephalon, diencephalon, and mesencephalon, including the prefrontal cortex, cingulate gyrus, limbic thalamus, hippocampus including the parahippocampal gyrus and subiculum, nucleus accumbens (limbic striatum), anterior hypothalamus, ventral tegmental area, midbrain raphe nuclei, habenular commissure, entorhinal cortex, and olfactory bulbs.[3][4]"
+    <br>[{2020-05-03} https://en.wikipedia.org/wiki/Limbic_system]
+    <a class="clsHide" href="#idBrnHmnatt053dsn"></a></p>
+  </section>
 
   <section id="idBrnHmnatt013">
   <h4 id="idBrnHmnatt013H4">caudate-nucleus of ognBrain
@@ -8404,7 +8512,7 @@
     <br>* Mcs.ognBrain'whole-part-tree,
     <a class="clsHide" href="#idBrnHmnwptnam"></a></p>
   <p id="idBrnHmnwtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idSysOgnHmn003att002wtr">central-nervous-system</a>,
+    <br>* <a class="clsPreview" href="#idSysOgnHmn021wtr">sysNervousCentral</a>,
     <a class="clsHide" href="#idBrnHmnwtr"></a></p>
   <p id="idBrnHmnptr">part-tree-of-::
     <br>* ,
@@ -8516,7 +8624,7 @@
     <br>* McsEpo.mjelo!=ognSpinal-cord,
     <a class="clsHide" href="#idOgnHmn037nam"></a></p>
   <p id="idOgnHmn037dsn">description::
-    <br>analytic: ο νωτιαίος-μυελός είναι μέρος του <a class="clsPreview" href="#idSysOgnHmn003att002">εγκεφαλονωτιαιου-νευρικού-συστήματος</a>.
+    <br>analytic: ο νωτιαίος-μυελός είναι μέρος του <a class="clsPreview" href="#idSysOgnHmn021">εγκεφαλονωτιαιου-νευρικού-συστήματος</a>.
     <br>[Αργύρης, {1994}, 85⧺cptRsc29⧺]
     <br>===
     <br>synthetic: ο νωτιαίος-μυελός αποτελείται από νευρικό ιστό.
@@ -8526,7 +8634,7 @@
     <br>* SPINAL_CORD⧺cptEpistem84.6.11⧺,
     <a class="clsHide" href="#idOgnHmn037gtr"></a></p>
   <p id="idOgnHmn037wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idSysOgnHmn003att002wtr">central-nervous-system</a>,
+    <br>* <a class="clsPreview" href="#idSysOgnHmn021wtr">sysNervousCentral</a>,
     <a class="clsHide" href="#idOgnHmn037wtr"></a></p>
 
   <section id="idOgnHmn037srtr">
@@ -8534,7 +8642,7 @@
     <a class="clsHide" href="#idOgnHmn037srtrH3"></a></h3>
   <p id="idOgnHmn037srtrP1">structure::
     <br>* βαρος = 26-30 γρ,
-    <br>* κεντρικος νευρικός σωληνας,
+    <br>* κεντρικός νευρικός σωληνας,
     <br>* λευκή ουσία,
     <br>* μηκος = 42-45 εκ,
     <br>* μοιρες,
@@ -8550,8 +8658,8 @@
     <br>ο νωτιαίος μυελός βρίσκεται μέσα στο σωλήνα της <a class="clsPreview" href="#idBdyHmn299">σπονδυλικής-στήλης</a>.
     <br>[Αργύρης, {1994}, 88⧺cptRsc29⧺]
     <a class="clsHide" href="#idOgnHmn037srtrP2"></a></p>
-  <p id="idOgnHmn037srtrP3">κεντρικος νευρικός σωληνας:
-    <br>το κέντρο της φαιάς ουσίας διατρέχει σε όλο το μήκος του νωτιαίου μυελού ο κεντρικος νευρικός σωληνας που περίχει εγκεφαλονωτιαίο υγρό.
+  <p id="idOgnHmn037srtrP3">κεντρικός νευρικός σωληνας:
+    <br>το κέντρο της φαιάς ουσίας διατρέχει σε όλο το μήκος του νωτιαίου μυελού ο κεντρικός νευρικός σωληνας που περίχει εγκεφαλονωτιαίο υγρό.
     <br>[Αργύρης, {1994}, 260⧺cptRsc31⧺]
     <a class="clsHide" href="#idOgnHmn037srtrP3"></a></p>
   <p id="idOgnHmn037partP4">νεύρα:
@@ -8895,6 +9003,31 @@
   </section>
   </section>
 
+  <section id="idSysOgnHmn003att012">
+  <h2 id="idSysOgnHmn003att012H2">12_cell of sysNervous
+    <a class="clsHide" href="#idSysOgnHmn003att012H2"></a></h2>
+  <p id="idSysOgnHmn003att012nam">name::
+    <br>* Mcs.sysNervous'12_cell,
+    <br>* Mcs.sysNervous'att012-cell,
+    <br>* Mcs.sysNervous'cell,
+    <br>* Mcs.cell.sysNervous,
+    <a class="clsHide" href="#idSysOgnHmn003att012nam"></a></p>
+  <p id="idSysOgnHmn003att012dsn">description::
+    <br>"Neurons are the primary components of the nervous system, along with the glial cells that give them structural and metabolic support."
+    <br>[{2020-05-04} https://en.wikipedia.org/wiki/Neuron]
+    <a class="clsHide" href="#idSysOgnHmn003att012dsn"></a></p>
+
+  <section id="idSysOgnHmn003att012">
+  <h3 id="idSysOgnHmn003att012H3">cell.sysNervous.neuron (<a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn004">link</a>)
+    <a class="clsHide" href="#idSysOgnHmn003att012H3"></a></h3>
+  </section>
+
+  <section id="idSysOgnHmn003att012">
+  <h3 id="idSysOgnHmn003att012H3">cell.sysNervous.glial (<a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn005">link</a>)
+    <a class="clsHide" href="#idSysOgnHmn003att012H3"></a></h3>
+  </section>
+  </section>
+
   <section id="idSysOgnHmn003attMsc">
   <h2 id="idSysOgnHmn003attMscH2">MISC-ATTRIBUTE of sysNervous
     <a class="clsHide" href="#idSysOgnHmn003attMscH2"></a></h2>
@@ -8952,10 +9085,9 @@
   </section>
 
   <section id="idSysOgnHmn003rscF">
-  <h2 id="idSysOgnHmn003rscFH2">12_resource of sysNervous
+  <h2 id="idSysOgnHmn003rscFH2">resource of sysNervous
     <a class="clsHide" href="#idSysOgnHmn003rscFH2"></a></h2>
   <p id="idSysOgnHmn003rscFnam">name::
-    <br>* Mcs.sysNervous'12_resource,
     <br>* Mcs.sysNervous'resource,
     <a class="clsHide" href="#idSysOgnHmn003rscFnam"></a></p>
   <p id="idSysOgnHmn003rscFdsn">description::
@@ -8964,19 +9096,18 @@
   </section>
 
   <section id="idSysOgnHmn003srtr">
-  <h2 id="idSysOgnHmn003srtrH2">13_structure of sysNervous
+  <h2 id="idSysOgnHmn003srtrH2">structure of sysNervous
     <a class="clsHide" href="#idSysOgnHmn003srtrH2"></a></h2>
   <p id="idSysOgnHmn003srtrnam">name::
-    <br>* Mcs.sysNervous'13_structure,
     <br>* Mcs.sysNervous'structure,
     <a class="clsHide" href="#idSysOgnHmn003srtrnam"></a></p>
   <p id="idSysOgnHmn003srtrP1">structure::
-    <br>* <a class="clsPreview" href="#idSysOgnHmnatt006">αυτόνομο-νευρικό-σύστημα</a>,
-    <br>* <a class="clsPreview" href="#idSysOgnHmn003att002">central-nervous-system</a>,
+    <br>* <a class="clsPreview" href="#idSysOgnHmn019">sysNervousAutonomic</a>,
+    <br>* <a class="clsPreview" href="#idSysOgnHmn021">sysNervousCentral</a>,
     <br>
     <br>* <a class="clsPreview" href="#idSysOgnHmn011">αισθητηριακα-συστήματα</a>,
-    <br>* <a class="clsPreview" href="#idTssHmn002">νευρικός-ιστός</a>,
-    <br>* <a class="clsPreview" href="#idOgnHmn006">νεύρο</a>,
+    <br>* <a class="clsPreview" href="#idTssHmn002">tissueNervous</a>,
+    <br>* <a class="clsPreview" href="#idOgnHmn006">nerve</a>,
     <a class="clsHide" href="#idSysOgnHmn003srtrP1"></a></p>
   <p id="idSysOgnHmn003srtrP2">The nervous-system has two divisions:
     <br>- the somatic, which allows voluntary control over skeletal muscle, and
@@ -9005,10 +9136,9 @@
   </section>
 
   <section id="idSysOgnHmn003dngF">
-  <h2 id="idSysOgnHmn003dngFH2">14_DOING of sysNervous
+  <h2 id="idSysOgnHmn003dngFH2">DOING of sysNervous
     <a class="clsHide" href="#idSysOgnHmn003dngFH2"></a></h2>
   <p id="idSysOgnHmn003dngFnam">name::
-    <br>* Mcs.sysNervous'14_doing,
     <br>* Mcs.sysNervous'doing,
     <a class="clsHide" href="#idSysOgnHmn003dngFnam"></a></p>
   <p id="idSysOgnHmn003dngFP1">doing::
@@ -9033,10 +9163,9 @@
   </section>
 
   <section id="idSysOgnHmn003evgF">
-  <h2 id="idSysOgnHmn003evgFH2">15_evoluting of sysNervous
+  <h2 id="idSysOgnHmn003evgFH2">evoluting of sysNervous
     <a class="clsHide" href="#idSysOgnHmn003evgFH2"></a></h2>
   <p id="idSysOgnHmn003evgFnam">name::
-    <br>* Mcs.sysNervous'15_evoluting,
     <br>* Mcs.sysNervous'evoluting,
     <a class="clsHide" href="#idSysOgnHmn003evgFnam"></a></p>
   <p id="idSysOgnHmn003evgFwpa">addressWpg::
@@ -15653,7 +15782,7 @@
     <br>
     <br>η επικράνια απονεύρωση συνδέει τους δύο μετωπιαίους μυς μπροστά, με τους δύο ινιακούς μυς πίσω.στα πλάγια καταφύεται, δεξιά και αριστερά, στην κροταφική περιτονία. Συνδέεται στερεά με το υπερκείμενο δέρμα έτσι ώστε σε τραυματισμό του τριχωτού της κεφαλής, τα χείλη του τραύματος δεν απομακρύνονται το ένα από το άλλο. Οταν το τραύμα περιλαμβάνει και την επικράνια απονεύρωση τα χείλη του τραύματος απομακρύνονται.
     <br>
-    <br>μετωπιαιος μυς
+    <br>μετωπιαίος μυς
     <br>ο μετωπίαιος μυς εκφύεται από δέρμα του φρυδιού και του μεσόφρυου και καταφύεται στο πρόσθιο χείλος της επικράνιας απονεύρωσης.
     <br>με τη ενέργειά του ανασηκώνονται τα φρύδια και ρυτιδώνεται το δέρμα του μετώπου.
     <br>
@@ -17948,6 +18077,7 @@
     <br>* zygote,
     <br>* embryo,
     <br>* fetus,
+    <br>* birth,
     <br>* infant,
     <br>* toddler,
     <br>* child,
@@ -17957,6 +18087,7 @@
     <br>** young-adult,
     <br>** middle-adult,
     <br>** old-adult,
+    <br>* death,
     <a class="clsHide" href="#idBdyHmnevgFdsn"></a></p>
   <p id="idBdyHmnevgnam">name::
     <br>* Mcs.bodyHmn'21_evoluting,
@@ -18247,23 +18378,84 @@
   <h2 id="idBdyHmnatt037H2">stage.birth of bodyHmn
     <a class="clsHide" href="#idBdyHmnatt037H2"></a></h2>
   <p id="idBdyHmnatt037nam">name::
-    <br>* Mcs.bodyHmn'stage.birth,
-    <br>* Mcs.bodyHmn'att037-birth,
-    <br>* Mcs.bodyHmn'birth-att037,
-    <br>* Mcs.birth-of-bodyHmn,
-    <br>* Mcs.childbirth,
+    <br>* Mcs.bodyHmn'stage.birth!⇒human'birth,
+    <br>* Mcs.bodyHmn'att037-birth!⇒human'birth,
+    <br>* Mcs.bodyHmn'birth-att037!⇒human'birth,
+    <br>* Mcs.birth-of-bodyHmn!⇒human'birth,
+    <br>* Mcs.childbirth!⇒human'birth,
+    <br>* Mcs.human'birth,
     <br>====== langoGreek:
-    <br>* McsEll.τοκετός,
+    <br>* McsEll.τοκετός!=human'birth,
     <a class="clsHide" href="#idBdyHmnatt037nam"></a></p>
   <p id="idBdyHmnatt037dsn">description::
+    <br>· the-process when the-fetus is-expelled from the-uterus and comming into life of a-human.
+    <br>===
     <br>analytic: τοκετός είναι η φάση της εξέλιξης του ανθρώπινου σώματος που από τη μήτρα της μητέρας βγαίνει στο εξωτερικό περιβάλλον.
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idBdyHmnatt037dsn"></a></p>
+
+  <section id="idBdyHmnatt037time">
+  <h3 id="idBdyHmnatt037timeH3">time of human'birth
+    <a class="clsHide" href="#idBdyHmnatt037timeH3"></a></h3>
+  <p id="idBdyHmnatt037timenam">name::
+    <br>* Mcs.human'birth'time,
+    <a class="clsHide" href="#idBdyHmnatt037timenam"></a></p>
+  <p id="idBdyHmnatt037timedsn">description::
+    <br>· the-time of the-birth-event.
+    <a class="clsHide" href="#idBdyHmnatt037timedsn"></a></p>
+  </section>
+  </section>
+
+  <section id="idBdyHmnatt039">
+  <h2 id="idBdyHmnatt039H2">stage.life
+    <a class="clsHide" href="#idBdyHmnatt039H2"></a></h2>
+  <p id="idBdyHmnatt039nam">name::
+    <br>* Mcs.bodyHmn'stage.life,
+    <br>* Mcs.bodyHmn'att039-life-stage,
+    <br>* Mcs.life-stage-of-human,
+    <br>====== langoGreek:
+    <br>* McsEll.ζωή,
+    <a class="clsHide" href="#idBdyHmnatt039nam"></a></p>
+  <p id="idBdyHmnatt039dsn">description::
+    <br>analytic: ζωή είναι το στάδιο της εξέλιξης του ανθρώπινου σώματος μετά τον <a class="clsPreview" href="#idBdyHmnatt037">τοκετό</a> και πρίν το <a class="clsPreview" href="#idBdyHmnatt038">θάνατο</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmnatt039dsn"></a></p>
+  <p id="idBdyHmnatt039gtr">generic-tree-of-::
+    <br>* stage-of-evolution⧺cptEpistem475.33⧺,
+    <a class="clsHide" href="#idBdyHmnatt039gtr"></a></p>
+
+  <section id="idBdyHmnatt039evoluting">
+  <h3 id="idBdyHmnatt039evolutingH3">evoluting
+    <a class="clsHide" href="#idBdyHmnatt039evolutingH3"></a></h3>
+  <p id="idBdyHmnatt039evolutingP1">* μωρου-στάδιο,
+    <br>* παιδιου-στάδιο,
+    <br>* &nbsp; &nbsp;εφηβου στάδιο,
+    <br> &nbsp;ενηλικα στάδιο
+    <br> &nbsp; &nbsp;ωριμου στάδιο
+    <br> &nbsp; &nbsp;γερου στάδιο
+    <a class="clsHide" href="#idBdyHmnatt039evolutingP1"></a></p>
+  </section>
+
+  <section id="idBdyHmnatt039lifetime">
+  <h3 id="idBdyHmnatt039lifetimeH3">lifetime
+    <a class="clsHide" href="#idBdyHmnatt039lifetimeH3"></a></h3>
+  <p id="idBdyHmnatt039lifetimeP1">χρόνος ζωής έχει καθιερωθεί να λέγεται.
+    <a class="clsHide" href="#idBdyHmnatt039lifetimeP1"></a></p>
+  <p id="idBdyHmnatt039lifetimeP2">ο μέσος ορος ζωής του ανθρώπου
+    <br>- την εποχή του homo sapiens ήταν 18 χρόνια,
+    <br>- επι ρωμαϊκής αυτοκρατορίας ήταν 22,
+    <br>- το μεσαίωνα 33,
+    <br>- το 1800 38,
+    <br>- το 1900 43,
+    <br>- το 2000 εκτιμάται να είναι 86 χρόνια ενώ
+    <br>- το 2020 αισιόδοξα τα 140 χρόνια.
+    <br>[COMPUTER-για-ολους, {1995-03}, 160⧺cptRsc28⧺]
+    <a class="clsHide" href="#idBdyHmnatt039lifetimeP2"></a></p>
   </section>
 
   <section id="idBdyHmnatt001">
-  <h2 id="idBdyHmnatt001H2">stage.puberty
-    <a class="clsHide" href="#idBdyHmnatt001H2"></a></h2>
+  <h3 id="idBdyHmnatt001H3">stage.puberty
+    <a class="clsHide" href="#idBdyHmnatt001H3"></a></h3>
   <p id="idBdyHmnatt001nam">name::
     <br>* Mcs.bodyHmn'stage.puberty,
     <br>* Mcs.bodyHmn'att001-puberty-stage,
@@ -18277,52 +18469,6 @@
     <br>Comprehensive sexuality education can contribute to teenagers' better understanding of this process.[10]"
     <br>[https://en.wikipedia.org/wiki/Puberty {2020-03-14}]
     <a class="clsHide" href="#idBdyHmnatt001dsn"></a></p>
-  </section>
-
-  <section id="idBdyHmn560">
-  <h2 id="idBdyHmn560H2">stage.life
-    <a class="clsHide" href="#idBdyHmn560H2"></a></h2>
-  <p id="idBdyHmn560nam">name::
-    <br>* Mcs.cptBdyHmn560,
-    <br>* Mcs.life,
-    <br>====== langoGreek:
-    <br>* McsEll.ζωή,
-    <a class="clsHide" href="#idBdyHmn560nam"></a></p>
-  <p id="idBdyHmn560dsn">description::
-    <br>analytic: ζωή είναι το στάδιο της εξέλιξης του ανθρώπινου σώματος μετά τον <a class="clsPreview" href="#idBdyHmnatt037">τοκετό</a> και πρίν το <a class="clsPreview" href="#idBdyHmnatt038">θάνατο</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn560dsn"></a></p>
-  <p id="idBdyHmn560gtr">generic-tree-of-::
-    <br>* stage-of-evolution⧺cptEpistem475.33⧺,
-    <a class="clsHide" href="#idBdyHmn560gtr"></a></p>
-
-  <section id="idBdyHmn560evoluting">
-  <h3 id="idBdyHmn560evolutingH3">evoluting
-    <a class="clsHide" href="#idBdyHmn560evolutingH3"></a></h3>
-  <p id="idBdyHmn560evolutingP1">* μωρου-στάδιο,
-    <br>* παιδιου-στάδιο,
-    <br>* &nbsp; &nbsp;εφηβου στάδιο,
-    <br> &nbsp;ενηλικα στάδιο
-    <br> &nbsp; &nbsp;ωριμου στάδιο
-    <br> &nbsp; &nbsp;γερου στάδιο
-    <a class="clsHide" href="#idBdyHmn560evolutingP1"></a></p>
-  </section>
-
-  <section id="idBdyHmn560lifetime">
-  <h3 id="idBdyHmn560lifetimeH3">lifetime
-    <a class="clsHide" href="#idBdyHmn560lifetimeH3"></a></h3>
-  <p id="idBdyHmn560lifetimeP1">χρόνος ζωής έχει καθιερωθεί να λέγεται.
-    <a class="clsHide" href="#idBdyHmn560lifetimeP1"></a></p>
-  <p id="idBdyHmn560lifetimeP2">ο μέσος ορος ζωής του ανθρώπου
-    <br>- την εποχή του homo sapiens ήταν 18 χρόνια,
-    <br>- επι ρωμαϊκής αυτοκρατορίας ήταν 22,
-    <br>- το μεσαίωνα 33,
-    <br>- το 1800 38,
-    <br>- το 1900 43,
-    <br>- το 2000 εκτιμάται να είναι 86 χρόνια ενώ
-    <br>- το 2020 αισιόδοξα τα 140 χρόνια.
-    <br>[COMPUTER-για-ολους, {1995-03}, 160⧺cptRsc28⧺]
-    <a class="clsHide" href="#idBdyHmn560lifetimeP2"></a></p>
   </section>
   </section>
 
