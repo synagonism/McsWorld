@@ -309,7 +309,7 @@
   <p id="idCpgmScdnUsrdsn">description::
     <br>· division on usage from a-user or not:
     <br>* application-program,
-    <br>* system-program,
+    <br>* pgmSys,
     <a class="clsHide" href="#idCpgmScdnUsrdsn"></a></p>
   <p id="idCpgmScdnUsrnam">name::
     <br>* Mcs.cmr-program.specifics-division.user,
@@ -317,61 +317,93 @@
   </section>
 </section>
 
-<section id="idCpgmApp">
-  <h1 id="idCpgmAppH1">Cpgm.application of lagPgm
-    <a class="clsHide" href="#idCpgmAppH1"></a></h1>
-  <p id="idCpgmAppdsn">description::
+<section id="idCpgm001">
+  <h1 id="idCpgm001H1">Cpgm.application of lagPgm
+    <a class="clsHide" href="#idCpgm001H1"></a></h1>
+  <p id="idCpgm001dsn">description::
     <br>· application-program is <a class="clsPreview" href="#idCpgm">a-program</a> a-user uses.
-    <a class="clsHide" href="#idCpgmAppdsn"></a></p>
-  <p id="idCpgmAppnam">name::
-    <br>* Mcs.application-program!⇒Capp,
-    <br>* Mcs.application-of-computer!⇒Capp,
-    <br>* Mcs.Capp,
-    <br>* Mcs.cmr-app!⇒Capp,
-    <br>* Mcs.cmr-program.application!⇒Capp,
-    <br>* Mcs.computer-application!⇒Capp,
-    <br>* Mcs.software-application!⇒Capp,
-    <a class="clsHide" href="#idCpgmAppnam"></a></p>
+    <a class="clsHide" href="#idCpgm001dsn"></a></p>
+  <p id="idCpgm001nam">name::
+    <br>* Mcs.Cpgm.001-application!⇒app,
+    <br>* Mcs.Cpgm.application!⇒app,
+    <br>* Mcs.application-program!⇒app,
+    <br>* Mcs.application-of-computer!⇒app,
+    <br>* Mcs.app, {2020-05-04},
+    <br>* Mcs.cmr-app!⇒app,
+    <br>* Mcs.cmr-program.application!⇒app,
+    <br>* Mcs.computer-application!⇒app,
+    <br>* Mcs.software-application!⇒app,
+    <a class="clsHide" href="#idCpgm001nam"></a></p>
 </section>
 
-<section id="idCpgmSys">
-  <h1 id="idCpgmSysH1">Cpgm.system of lagPgm
-    <a class="clsHide" href="#idCpgmSysH1"></a></h1>
-  <p id="idCpgmSysdsn">description::
-    <br>· system-program is <a class="clsPreview" href="#idCpgm">a-program</a> <a class="clsPreview" href="filMcsCmr.last.html#idOverview">a-computer[a]</a> not a-user uses for its[a] operations.
-    <a class="clsHide" href="#idCpgmSysdsn"></a></p>
-  <p id="idCpgmSysnam">name::
-    <br>* Mcs.cmr-program.system!⇒system-program,
-    <br>* Mcs.system-program,
-    <br>* Mcs.system-software!⇒system-program,
-    <a class="clsHide" href="#idCpgmSysnam"></a></p>
-  <p id="idCpgmSysSpc">specific::
+<section id="idCpgm002">
+  <h1 id="idCpgm002H1">Cpgm.system of lagPgm
+    <a class="clsHide" href="#idCpgm002H1"></a></h1>
+  <p id="idCpgm002dsn">description::
+    <br>· pgmSys is <a class="clsPreview" href="#idCpgm">a-program</a> <a class="clsPreview" href="filMcsCmr.last.html#idOverview">a-computer[a]</a> not a-user uses for its[a] operations.
+    <a class="clsHide" href="#idCpgm002dsn"></a></p>
+  <p id="idCpgm002nam">name::
+    <br>* Mcs.Cpgm.002-system!⇒pgmSys,
+    <br>* Mcs.Cpgm.system!⇒pgmSys,
+    <br>* Mcs.cmr-program.system!⇒pgmSys,
+    <br>* Mcs.pgmSys,
+    <br>* Mcs.system-software!⇒pgmSys,
+    <a class="clsHide" href="#idCpgm002nam"></a></p>
+  <p id="idCpgm002Spc">specific::
     <br>* device-driver,
     <br>* operating-system,
-    <a class="clsHide" href="#idCpgmSysSpc"></a></p>
+    <a class="clsHide" href="#idCpgm002Spc"></a></p>
 </section>
 
-<section id="idLpgOs">
-  <h1 id="idLpgOsH1">Cpgm.operating-system of lagPgm
-    <a class="clsHide" href="#idLpgOsH1"></a></h1>
-  <p id="idLpgOsdsn">description::
-    <br>· operating-system is <a class="clsPreview" href="#idCpgmSys">a-system-program</a>, the-most important a-computer[a] needs to work that manages its[a] resources and provides common services for its[a] <a class="clsPreview" href="#idCpgmApp">apps</a>.
-    <a class="clsHide" href="#idLpgOsdsn"></a></p>
-  <p id="idLpgOsnam">name::
-    <br>* Mcs.OS!⇒cmr-Os,
-    <br>* Mcs.cmr-Os,
-    <br>* Mcs.operating-system!⇒cmr-Os,
-    <a class="clsHide" href="#idLpgOsnam"></a></p>
+<section id="idCpgm003">
+  <h1 id="idCpgm003H1">Cpgm.operating-system of lagPgm
+    <a class="clsHide" href="#idCpgm003H1"></a></h1>
+  <p id="idCpgm003dsn">description::
+    <br>· operating-system is <a class="clsPreview" href="#idCpgm002">a-pgmSys</a>, the-most important a-computer[a] needs to work that manages its[a] resources and provides common services for its[a] <a class="clsPreview" href="#idCpgm001">apps</a>.
+    <a class="clsHide" href="#idCpgm003dsn"></a></p>
+  <p id="idCpgm003nam">name::
+    <br>* Mcs.Cpgm.003-operating-system!⇒pgmOs,
+    <br>* Mcs.Cpgm.operating-system!⇒pgmOs,
+    <br>* Mcs.OS!⇒pgmOs,
+    <br>* Mcs.pgmOs,
+    <br>* Mcs.operating-system!⇒pgmOs,
+    <a class="clsHide" href="#idCpgm003nam"></a></p>
 
-  <section id="idLpgOsrsc">
-  <h2 id="idLpgOsrscH2">resource of Os of lagPgm
-    <a class="clsHide" href="#idLpgOsrscH2"></a></h2>
-  <p id="idLpgOsrscnam">name::
-    <br>* Mcs.cmr-Os'resource,
-    <a class="clsHide" href="#idLpgOsrscnam"></a></p>
-  <p id="idLpgOsrscwpa">addressWpg::
+  <section id="idCpgm003rsc">
+  <h2 id="idCpgm003rscH2">resource of pgmOs
+    <a class="clsHide" href="#idCpgm003rscH2"></a></h2>
+  <p id="idCpgm003rscnam">name::
+    <br>* Mcs.pgmOs'resource,
+    <a class="clsHide" href="#idCpgm003rscnam"></a></p>
+  <p id="idCpgm003rscwpa">addressWpg::
     <br>* https://en.wikipedia.org/wiki/Timeline_of_operating_systems,
-    <a class="clsHide" href="#idLpgOsrscwpa"></a></p>
+    <a class="clsHide" href="#idCpgm003rscwpa"></a></p>
+  </section>
+</section>
+
+<section id="idCpgm004">
+  <h1 id="idCpgm004H1">Cpgm.video of lagPgm
+    <a class="clsHide" href="#idCpgm004H1"></a></h1>
+  <p id="idCpgm004nam">name::
+    <br>* Mcs.Cpgm.004-video!⇒appVideo,
+    <br>* Mcs.Cpgm.video!⇒appVideo,
+    <br>* Mcs.appVideo,
+    <br>* Mcs.video-program!⇒appVideo,
+    <br>* Mcs.video-software!⇒appVideo,
+    <a class="clsHide" href="#idCpgm004nam"></a></p>
+  <p id="idCpgm004dsn">description::
+    <br>· app managing video.
+    <a class="clsHide" href="#idCpgm004dsn"></a></p>
+
+  <section id="idCpgm004rscF">
+  <h2 id="idCpgm004rscFH2">resource of appVideo
+    <a class="clsHide" href="#idCpgm004rscFH2"></a></h2>
+  <p id="idCpgm004rscFnam">name::
+    <br>* Mcs.appVideo'resource,
+    <a class="clsHide" href="#idCpgm004rscFnam"></a></p>
+  <p id="idCpgm004rscFdsn">description::
+    <br>* https://en.wikipedia.org/wiki/Comparison_of_web_conferencing_software,
+    <a class="clsHide" href="#idCpgm004rscFdsn"></a></p>
   </section>
 </section>
 
