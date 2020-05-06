@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.sysMolsOgm (organism--sys-of-molecules 0-10-0.2020-04-27 draft)</title>
+  <title>Mcs.sysMolsOgm (organism--sys-of-molecules 0-11-0.2020-05-06 draft)</title>
   <meta name="keywords" content="organism-system-of-molecules, sysMolsOgm, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -511,10 +511,11 @@
   <h2 id="idSysMolsHmn006H2">sysMolsHmn.organic-compound of bodyHmn
     <a class="clsHide" href="#idSysMolsHmn006H2"></a></h2>
   <p id="idSysMolsHmn006nam">name::
-    <br>* Mcs.sysMolsHmn.006-organic-compound,
-    <br>* Mcs.sysMolsHmn.organic-compound-006,
-    <br>* Mcs.bodyHmn'organic-compound,
-    <br>* Mcs.organic-compoundHmn,
+    <br>* Mcs.sysMolsHmn.006-organic-compound!⇒cpdOgcHmn,
+    <br>* Mcs.sysMolsHmn.organic-compound-006!⇒cpdOgcHmn,
+    <br>* Mcs.bodyHmn'organic-compound!⇒cpdOgcHmn,
+    <br>* Mcs.cpdOgcHmn,
+    <br>* Mcs.organic-compoundHmn!⇒cpdOgcHmn,
     <a class="clsHide" href="#idSysMolsHmn006nam"></a></p>
   <p id="idSysMolsHmn006dsn">description::
     <br>· organic-compound is a-chemical-compound that contains both carbon and hydrogen.
@@ -525,11 +526,12 @@
   <h2 id="idSysMolsHmn007H2">sysMolsHmn.organicNo-compound of bodyHmn
     <a class="clsHide" href="#idSysMolsHmn007H2"></a></h2>
   <p id="idSysMolsHmn007nam">name::
-    <br>* Mcs.sysMolsHmn.007-organicNo-compound,
-    <br>* Mcs.sysMolsHmn.organicNo-compound-007,
-    <br>* Mcs.bodyHmn'organicNo-compound,
-    <br>* Mcs.inorganic-compoundHmn,
-    <br>* Mcs.organicNo-compoundHmn,
+    <br>* Mcs.sysMolsHmn.007-organicNo-compound!⇒cpdOgcNoHmn,
+    <br>* Mcs.sysMolsHmn.organicNo-compound-007!⇒cpdOgcNoHmn,
+    <br>* Mcs.bodyHmn'organicNo-compound!⇒cpdOgcNoHmn,
+    <br>* Mcs.cpdOgcNoHmn,
+    <br>* Mcs.inorganic-compoundHmn!⇒cpdOgcNoHmn,
+    <br>* Mcs.organicNo-compoundHmn!⇒cpdOgcNoHmn,
     <a class="clsHide" href="#idSysMolsHmn007nam"></a></p>
   <p id="idSysMolsHmn007dsn">description::
     <br>· inorganic-compound is chemical-compound that does-not-contain both carbon and hydrogen.
@@ -540,8 +542,8 @@
   <h2 id="idSysMolsHmn008H2">sysMolsHmn.macromolecule of bodyHmn
     <a class="clsHide" href="#idSysMolsHmn008H2"></a></h2>
   <p id="idSysMolsHmn008nam">name::
-    <br>* Mcs.sysMolsHmn.008-macromolecule,
-    <br>* Mcs.sysMolsHmn.macromolecule-008,
+    <br>* Mcs.sysMolsHmn.008-macromolecule!⇒macromoleculeHmn,
+    <br>* Mcs.sysMolsHmn.macromolecule-008!⇒macromoleculeHmn,
     <br>* Mcs.macromoleculeHmn,
     <a class="clsHide" href="#idSysMolsHmn008nam"></a></p>
   <p id="idSysMolsHmn008dsn">description::
@@ -583,13 +585,17 @@
   <h2 id="idSysMolsHmn009H2">sysMolsHmn.acid of bodyHmn
     <a class="clsHide" href="#idSysMolsHmn009H2"></a></h2>
   <p id="idSysMolsHmn009nam">name::
-    <br>* Mcs.sysMolsHmn.009-acid,
-    <br>* Mcs.sysMolsHmn.acid-009,
-    <br>* Mcs.bodyHmn'acid,
+    <br>* Mcs.sysMolsHmn.009-acid!⇒acidHmn,
+    <br>* Mcs.sysMolsHmn.acid-009!⇒acidHmn,
     <br>* Mcs.acidHmn,
+    <br>* Mcs.bodyHmn'acid!⇒acidHmn,
     <a class="clsHide" href="#idSysMolsHmn009nam"></a></p>
   <p id="idSysMolsHmn009dsn">description::
     <br>· acid is a-chemical-compound that releases hydrogen-ions-(H+) in a-solution.
+    <br>===
+    <br>"Acids play important roles in the human body. The hydrochloric acid present in the stomach aids digestion by breaking down large and complex food molecules. Amino acids are required for synthesis of proteins required for growth and repair of body tissues. Fatty acids are also required for growth and repair of body tissues. Nucleic acids are important for the manufacturing of DNA and RNA and transmitting of traits to offspring through genes. Carbonic acid is important for maintenance of pH equilibrium in the body.
+    <br>Human bodies contain a variety of organic and inorganic compounds, among those dicarboxylic acids play an essential role in many biological behaviors. Many of those acids are amino acids which mainly serve as materials for the synthesis of proteins.[17] Other weak acids serve as buffers with their conjugate bases to keep the body's pH from undergoing large scale changes which would be harmful to cells.[18] The rest of the dicarboxylic acids also participate in the synthesis of various biologically important compounds in human bodies."
+    <br>[{2020-05-06} https://en.wikipedia.org/wiki/Acid]
     <a class="clsHide" href="#idSysMolsHmn009dsn"></a></p>
   </section>
 
@@ -597,9 +603,10 @@
   <h2 id="idSysMolsHmn010H2">sysMolsHmn.amino-acid of bodyHmn
     <a class="clsHide" href="#idSysMolsHmn010H2"></a></h2>
   <p id="idSysMolsHmn010nam">name::
-    <br>* Mcs.sysMolsHmn.010-amino-acid,
-    <br>* Mcs.sysMolsHmn.amino-acid-010,
-    <br>* Mcs.amino-acid,
+    <br>* Mcs.sysMolsHmn.010-amino-acid!⇒acidAminoHmn,
+    <br>* Mcs.sysMolsHmn.amino-acid-010!⇒acidAminoHmn,
+    <br>* Mcs.acidAminoHmn,
+    <br>* Mcs.amino-acid!⇒acidAminoHmn,
     <a class="clsHide" href="#idSysMolsHmn010nam"></a></p>
   <p id="idSysMolsHmn010dsn">description::
     <br>"Amino acids are organic compounds that contain amine (-NH2) and carboxyl (-COOH) functional groups, along with a side chain (R group) specific to each amino acid.[1][2] The key elements of an amino acid are carbon (C), hydrogen (H), oxygen (O), and nitrogen (N), although other elements are found in the side chains of certain amino acids. About 500 naturally occurring amino acids are known (though only 20 appear in the genetic code) and can be classified in many ways.[3] They can be classified according to the core structural functional groups' locations as alpha- (α-), beta- (β-), gamma- (γ-) or delta- (δ-) amino acids; other categories relate to polarity, pH level, and side chain group type (aliphatic, acyclic, aromatic, containing hydroxyl or sulfur, etc.). In the form of proteins, amino acid residues form the second-largest component (water is the largest) of human muscles and other tissues.[4] Beyond their role as residues in proteins, amino acids participate in a number of processes such as neurotransmitter transport and biosynthesis.
@@ -822,9 +829,9 @@
   <h2 id="idSysMolsHmn011H2">sysMolsHmn.base of bodyHmn
     <a class="clsHide" href="#idSysMolsHmn011H2"></a></h2>
   <p id="idSysMolsHmn011nam">name::
-    <br>* Mcs.sysMolsHmn.011-base,
-    <br>* Mcs.sysMolsHmn.base-011,
-    <br>* Mcs.bodyHmn'base,
+    <br>* Mcs.sysMolsHmn.011-base!⇒baseHmn,
+    <br>* Mcs.sysMolsHmn.base-011!⇒baseHmn,
+    <br>* Mcs.bodyHmn'base!⇒baseHmn,
     <br>* Mcs.baseHmn,
     <a class="clsHide" href="#idSysMolsHmn011nam"></a></p>
   <p id="idSysMolsHmn011dsn">description::
@@ -836,9 +843,9 @@
   <h2 id="idSysMolsHmn012H2">sysMolsHmn.enzyme of bodyHmn
     <a class="clsHide" href="#idSysMolsHmn012H2"></a></h2>
   <p id="idSysMolsHmn012nam">name::
-    <br>* Mcs.sysMolsHmn.012-enzyme,
-    <br>* Mcs.sysMolsHmn.enzyme-012,
-    <br>* Mcs.bodyHmn'enzyme, /énzaim/,
+    <br>* Mcs.sysMolsHmn.012-enzyme!⇒enzymeHmn,
+    <br>* Mcs.sysMolsHmn.enzyme-012!⇒enzymeHmn,
+    <br>* Mcs.bodyHmn'enzyme!⇒enzymeHmn, /énzaim/,
     <br>* Mcs.enzymeHmn,
     <a class="clsHide" href="#idSysMolsHmn012nam"></a></p>
   <p id="idSysMolsHmn012dsn">description::
@@ -852,9 +859,9 @@
   <h2 id="idSysMolsHmn013H2">sysMolsHmn.lipid of bodyHmn
     <a class="clsHide" href="#idSysMolsHmn013H2"></a></h2>
   <p id="idSysMolsHmn013nam">name::
-    <br>* Mcs.sysMolsHmn.013-lipid,
-    <br>* Mcs.sysMolsHmn.lipid-013,
-    <br>* Mcs.bodyHmn'lipid,
+    <br>* Mcs.sysMolsHmn.013-lipid!⇒lipidHmn,
+    <br>* Mcs.sysMolsHmn.lipid-013!⇒lipidHmn,
+    <br>* Mcs.bodyHmn'lipid!⇒lipidHmn,
     <br>* Mcs.lipidHmn,
     <a class="clsHide" href="#idSysMolsHmn013nam"></a></p>
   <p id="idSysMolsHmn013dsn">description::
@@ -932,9 +939,10 @@
   <h2 id="idSysMolsHmn015H2">sysMolsHmn.water of bodyHmn
     <a class="clsHide" href="#idSysMolsHmn015H2"></a></h2>
   <p id="idSysMolsHmn015nam">name::
-    <br>* Mcs.sysMolsHmn.015-water,
-    <br>* Mcs.sysMolsHmn.water-015,
-    <br>* Mcs.bodyHmn'water,
+    <br>* Mcs.sysMolsHmn.015-water!⇒waterHmn,
+    <br>* Mcs.sysMolsHmn.water-015!⇒waterHmn,
+    <br>* Mcs.bodyHmn'water!⇒waterHmn,
+    <br>* Mcs.waterHmn,
     <a class="clsHide" href="#idSysMolsHmn015nam"></a></p>
   <p id="idSysMolsHmn015dsn">description::
     <br>"In physiology, body water is the water content of an animal body that is contained in the tissues, the blood, the bones and elsewhere. The percentages of body water contained in various fluid compartments add up to total body water (TBW). This water makes up a significant fraction of the human body, both by weight and by volume. Ensuring the right amount of body water is part of fluid balance, an aspect of homeostasis."
@@ -989,13 +997,13 @@
   <h2 id="idSysMolsHmn018H2">sysMolsHmn.saliva
     <a class="clsHide" href="#idSysMolsHmn018H2"></a></h2>
   <p id="idSysMolsHmn018nam">name::
-    <br>* Mcs.sysMolsHmn.018-saliva,
-    <br>* Mcs.sysMolsHmn.saliva-018,
-    <br>* Mcs.productBodyHmn.saliva,
-    <br>* Mcs.saliva,
+    <br>* Mcs.sysMolsHmn.018-saliva!⇒salivaHmn,
+    <br>* Mcs.sysMolsHmn.saliva-018!⇒salivaHmn,
+    <br>* Mcs.productBodyHmn.saliva!⇒salivaHmn,
+    <br>* Mcs.salivaHmn,
     <br>====== langoGreek:
-    <br>* McsEll.σάλιο,
-    <br>* McsEll.σίελος,
+    <br>* McsEll.σάλιο!=salivaHmn,
+    <br>* McsEll.σίελος!=salivaHmn,
     <a class="clsHide" href="#idSysMolsHmn018nam"></a></p>
   <p id="idSysMolsHmn018dsn">description::
     <br>analytic: σάλιο είναι η παραγόμενη ουσία των σιελογόνων αδένων.
@@ -1032,12 +1040,12 @@
   <h2 id="idSysMolsHmn019H2">sysMolsHmn.bile
     <a class="clsHide" href="#idSysMolsHmn019H2"></a></h2>
   <p id="idSysMolsHmn019nam">name::
-    <br>* Mcs.sysMolsHmn.019-bile,
-    <br>* Mcs.sysMolsHmn.bile-019,
-    <br>* Mcs.productBodyHmn.bile,
-    <br>* Mcs.bile, /báil/,
+    <br>* Mcs.sysMolsHmn.019-bile!⇒bileHmn,
+    <br>* Mcs.sysMolsHmn.bile-019!⇒bileHmn,
+    <br>* Mcs.productBodyHmn.bile!⇒bileHmn,
+    <br>* Mcs.bileHmn, /báil/,
     <br>====== langoGreek:
-    <br>* McsEll.χολή,
+    <br>* McsEll.χολή!=bileHmn,
     <a class="clsHide" href="#idSysMolsHmn019nam"></a></p>
   <p id="idSysMolsHmn019dsn">description::
     <br>analytic: χολή είναι παραγόμενη-ουσία του συκωτιου.
@@ -1078,13 +1086,13 @@
   <h2 id="idSysMolsHmn020H2">sysMolsHmn.cholesterol
     <a class="clsHide" href="#idSysMolsHmn020H2"></a></h2>
   <p id="idSysMolsHmn020nam">name::
-    <br>* Mcs.sysMolsHmn.020-cholesterol,
-    <br>* Mcs.sysMolsHmn.cholesterol-020,
-    <br>* Mcs.productBodyHmn.cholesterol,
-    <br>* Mcs.cholesterol,
+    <br>* Mcs.sysMolsHmn.020-cholesterol!⇒cholesterolHmn,
+    <br>* Mcs.sysMolsHmn.cholesterol-020!⇒cholesterolHmn,
+    <br>* Mcs.productBodyHmn.cholesterol!⇒cholesterolHmn,
+    <br>* Mcs.cholesterolHmn,
     <br>====== langoGreek:
-    <br>* McsEll.xοληστερίνη,
-    <br>* McsEll.χοληστερόλη,
+    <br>* McsEll.xοληστερίνη!=cholesterolHmn,
+    <br>* McsEll.χοληστερόλη!=cholesterolHmn,
     <a class="clsHide" href="#idSysMolsHmn020nam"></a></p>
   <p id="idSysMolsHmn020dsn">description::
     <br>analytic: η χοληστερόλη είναι μία λιπαρή ουσία που κυκλοφορεί στο <a class="clsPreview" href="../dirHlth/filMcsBdyHmn.last.html#idFldHmn001">blood</a> και σε μικρές ποσότητες όχι μόνο δεν είναι επικίνδυνη, αλλά αντίθετα είναι απαραίτητη για τον οργανισμο.
@@ -1388,12 +1396,13 @@
   <h2 id="idSysMolsHmn021H2">sysMolsHmn.excrement
     <a class="clsHide" href="#idSysMolsHmn021H2"></a></h2>
   <p id="idSysMolsHmn021nam">name::
-    <br>* Mcs.sysMolsHmn.021-excrement,
-    <br>* Mcs.sysMolsHmn.excrement-021,
-    <br>* Mcs.productBodyHmn.excrement,
-    <br>* Mcs.excrement.human, {2012-08-13},
+    <br>* Mcs.sysMolsHmn.021-excrement!⇒excrementHmn,
+    <br>* Mcs.sysMolsHmn.excrement-021!⇒excrementHmn,
+    <br>* Mcs.productBodyHmn.excrement!⇒excrementHmn,
+    <br>* Mcs.excrementHmn,
+    <br>* Mcs.excrement.human!⇒excrementHmn, {2012-08-13},
     <br>====== langoGreek:
-    <br>* McsEll.έκκριμα,
+    <br>* McsEll.έκκριμα!=excrementHmn,
     <a class="clsHide" href="#idSysMolsHmn021nam"></a></p>
   <p id="idSysMolsHmn021dsn">description::
     <br>analytic: έκκριμα ονομάζουν την παραγόμενη ουσία των εξωκρινών αδένων.
@@ -1408,12 +1417,12 @@
   <h2 id="idSysMolsHmn022H2">sysMolsHmn.urine
     <a class="clsHide" href="#idSysMolsHmn022H2"></a></h2>
   <p id="idSysMolsHmn022nam">name::
-    <br>* Mcs.sysMolsHmn.022-urine,
-    <br>* Mcs.sysMolsHmn.urine-022,
-    <br>* Mcs.productBodyHmn.urine,
-    <br>* Mcs.urine, /yyúrin/,
+    <br>* Mcs.sysMolsHmn.022-urine!⇒urineHmn,
+    <br>* Mcs.sysMolsHmn.urine-022!⇒urineHmn,
+    <br>* Mcs.productBodyHmn.urine!⇒urineHmn,
+    <br>* Mcs.urineHmn, /yyúrin/,
     <br>====== langoGreek:
-    <br>* McsEll.ούρα,
+    <br>* McsEll.ούρα!⇒urineHmn,
     <a class="clsHide" href="#idSysMolsHmn022nam"></a></p>
   <p id="idSysMolsHmn022dsn">description::
     <br>analytic: τα ούρα είναι το προϊόν των νεφρώνων που βρίσκονται στο φλοιό των <a class="clsPreview" href="#idOgnHmn026">νεφρων</a>.
@@ -1498,8 +1507,9 @@
   <h2 id="idSysMolsHmn023H2">sysMolsHmn.antioxidant
     <a class="clsHide" href="#idSysMolsHmn023H2"></a></h2>
   <p id="idSysMolsHmn023nam">name::
-    <br>* Mcs.sysMolsHmn.023-antioxidant,
-    <br>* Mcs.sysMolsHmn.antioxidant-023,
+    <br>* Mcs.sysMolsHmn.023-antioxidant!⇒antioxidantHmn,
+    <br>* Mcs.sysMolsHmn.antioxidant-023!⇒antioxidantHmn,
+    <br>* Mcs.antioxidantHmn,
     <a class="clsHide" href="#idSysMolsHmn023nam"></a></p>
   <p id="idSysMolsHmn023dsn">description::
     <br>"Antioxidants are compounds that inhibit oxidation. Oxidation is a chemical reaction that can produce free radicals, thereby leading to chain reactions that may damage the cells of organisms. Antioxidants such as thiols or ascorbic acid (vitamin C) terminate these chain reactions. To balance the oxidative stress, plants and animals maintain complex systems of overlapping antioxidants, such as glutathione and enzymes (e.g., catalase and superoxide dismutase), produced internally, or the dietary antioxidants vitamin C and vitamin E.
@@ -1530,17 +1540,16 @@
   <h1 id="idHrmnHmnH1">sysMolsHmn.hormone
     <a class="clsHide" href="#idHrmnHmnH1"></a></h1>
   <p id="idHrmnHmnnam">name::
-    <br>* Mcs.sysMolsHmn.017-hormone!⇒hormone,
-    <br>* Mcs.sysMolsHmn.hormone-017!⇒hormone,
-    <br>* Mcs.productBodyHmn.hormone!⇒hormone, {2012-08-13},
-    <br>* Mcs.hormone,
-    <br>* Mcs.hormone'(human-hormone)!⇒hormone,
-    <br>* Mcs.hormoneHmn!⇒hormone,
-    <br>* Mcs.hormone.human!⇒hormone, {2012-08-13},
-    <br>* Mcs.human-hormone!⇒hormone, {2012-08-13},
+    <br>* Mcs.sysMolsHmn.017-hormone!⇒hormoneHmn,
+    <br>* Mcs.sysMolsHmn.hormone-017!⇒hormoneHmn,
+    <br>* Mcs.productBodyHmn.hormone!⇒hormoneHmn, {2012-08-13},
+    <br>* Mcs.hormoneHmn,
+    <br>* Mcs.hormoneHmn'(human-hormone)!⇒hormoneHmn,
+    <br>* Mcs.hormoneHmn.human!⇒hormoneHmn, {2012-08-13},
+    <br>* Mcs.human-hormone!⇒hormoneHmn, {2012-08-13},
     <br>====== langoGreek:
-    <br>* McsEll.ορμόνη!=hormone,
-    <br>* McsEll.ορμόνη-ανθρώπου!=hormone, {2011-08-13},
+    <br>* McsEll.ορμόνη!=hormoneHmn,
+    <br>* McsEll.ορμόνη-ανθρώπου!=hormoneHmn, {2011-08-13},
     <a class="clsHide" href="#idHrmnHmnnam"></a></p>
   <p id="idHrmnHmndsn">description::
     <br>analytic: ορμόνη είναι παραγόμενη-ουσία κυρίως των ενδοκρινών αδένων.
@@ -1562,11 +1571,11 @@
   </section>
 
   <section id="idHrmnHmnatt002">
-  <h2 id="idHrmnHmnatt002H2">node-producing of hormone
+  <h2 id="idHrmnHmnatt002H2">node-producing of hormoneHmn
     <a class="clsHide" href="#idHrmnHmnatt002H2"></a></h2>
   <p id="idHrmnHmnatt002nam">name::
-    <br>* Mcs.hormone'002-node-producing,
-    <br>* Mcs.hormone'node-producing-002,
+    <br>* Mcs.hormoneHmn'002-node-producing,
+    <br>* Mcs.hormoneHmn'node-producing-002,
     <a class="clsHide" href="#idHrmnHmnatt002nam"></a></p>
   <p id="idHrmnHmnatt002dsn">description::
     <br>* gland,
@@ -1580,11 +1589,11 @@
   </section>
 
   <section id="idHrmnHmnatt003">
-  <h2 id="idHrmnHmnatt003H2">receptor of hormone
+  <h2 id="idHrmnHmnatt003H2">receptor of hormoneHmn
     <a class="clsHide" href="#idHrmnHmnatt003H2"></a></h2>
   <p id="idHrmnHmnatt003nam">name::
-    <br>* Mcs.hormone'003-receptor,
-    <br>* Mcs.hormone'receptor-003,
+    <br>* Mcs.hormoneHmn'003-receptor,
+    <br>* Mcs.hormoneHmn'receptor-003,
     <a class="clsHide" href="#idHrmnHmnatt003nam"></a></p>
   <p id="idHrmnHmnatt003dsn">description::
     <br>"A cell protein that binds a specific hormone. The hormone receptor may be on the surface of the cell or inside the cell. Many changes take place in a cell after a hormone binds to its receptor."
@@ -1600,11 +1609,11 @@
   </section>
 
   <section id="idHrmnHmnatt004">
-  <h2 id="idHrmnHmnatt004H2">structure of hormone
+  <h2 id="idHrmnHmnatt004H2">structure of hormoneHmn
     <a class="clsHide" href="#idHrmnHmnatt004H2"></a></h2>
   <p id="idHrmnHmnatt004nam">name::
-    <br>* Mcs.hormone'004-structure,
-    <br>* Mcs.hormone'structure-004,
+    <br>* Mcs.hormoneHmn'004-structure,
+    <br>* Mcs.hormoneHmn'structure-004,
     <a class="clsHide" href="#idHrmnHmnatt004nam"></a></p>
   <p id="idHrmnHmnatt004dsn">description::
     <br>·
@@ -1612,19 +1621,19 @@
   </section>
 
   <section id="idHrmnHmnatt005">
-  <h2 id="idHrmnHmnatt005H2">doing of hormone
+  <h2 id="idHrmnHmnatt005H2">doing of hormoneHmn
     <a class="clsHide" href="#idHrmnHmnatt005H2"></a></h2>
   <p id="idHrmnHmnatt005nam">name::
-    <br>* Mcs.hormone'005-doing,
-    <br>* Mcs.hormone'doing-005,
+    <br>* Mcs.hormoneHmn'005-doing,
+    <br>* Mcs.hormoneHmn'doing-005,
     <a class="clsHide" href="#idHrmnHmnatt005nam"></a></p>
 
   <section id="idHrmnHmnatt005">
-  <h3 id="idHrmnHmnatt005H3">function of hormone
+  <h3 id="idHrmnHmnatt005H3">function of hormoneHmn
     <a class="clsHide" href="#idHrmnHmnatt005H3"></a></h3>
   <p id="idHrmnHmnatt005nam">name::
-    <br>* Mcs.hormone'005-function,
-    <br>* Mcs.hormone'function-005,
+    <br>* Mcs.hormoneHmn'005-function,
+    <br>* Mcs.hormoneHmn'function-005,
     <a class="clsHide" href="#idHrmnHmnatt005nam"></a></p>
   <p id="idHrmnHmnatt005dsn">description::
     <br>οι ορμόνες είναι ένα είδος συνδετικού κρίκου μεταξύ σώματος και πνεύματος, μία και τα μηνύματα που φτάνουν στο σώμα μας, για να γίνουν αντιληπτά από τα κύτταρα, πρέπει να μεταφραστούν σε <span class="clsColorRed">χημικές πληροφορίες, δηλαδή ορμόνες</span>. Για ένα πολυκύτταρο οργανισμό, όπως ο άνθρωπος οι ορμόνες παίζουν ρόλο συντονιστων. Σαν ένα είδος επιστολων, κυκλοφορούν στο αίμα για να καταλήξουν σε συγκεκριμένους παραλήπτες: στα κύτταρα που διαθέτουν τους κατάλληλους για κάθε ορμόνη υποδοχείς.
@@ -1641,11 +1650,11 @@
   </section>
 
   <section id="idHrmnHmnatt006">
-  <h3 id="idHrmnHmnatt006H3">production of hormone
+  <h3 id="idHrmnHmnatt006H3">production of hormoneHmn
     <a class="clsHide" href="#idHrmnHmnatt006H3"></a></h3>
   <p id="idHrmnHmnatt006nam">name::
-    <br>* Mcs.hormone'006-production,
-    <br>* Mcs.hormone'production-006,
+    <br>* Mcs.hormoneHmn'006-production,
+    <br>* Mcs.hormoneHmn'production-006,
     <a class="clsHide" href="#idHrmnHmnatt006nam"></a></p>
   <p id="idHrmnHmnatt006dsn">description::
     <br>·
@@ -1653,11 +1662,11 @@
   </section>
 
   <section id="idHrmnHmnatt007">
-  <h3 id="idHrmnHmnatt007H3">managing of hormone
+  <h3 id="idHrmnHmnatt007H3">managing of hormoneHmn
     <a class="clsHide" href="#idHrmnHmnatt007H3"></a></h3>
   <p id="idHrmnHmnatt007nam">name::
-    <br>* Mcs.hormone'007-managing,
-    <br>* Mcs.hormone'managing-007,
+    <br>* Mcs.hormoneHmn'007-managing,
+    <br>* Mcs.hormoneHmn'managing-007,
     <a class="clsHide" href="#idHrmnHmnatt007nam"></a></p>
   <p id="idHrmnHmnatt007dsn">description::
     <br>· πως γίνεται η ρύθμιση της φυσιολογικής παραγωγής της ορμόνης.
@@ -1666,18 +1675,18 @@
   </section>
 
   <section id="idHrmnHmnwpt">
-  <h2 id="idHrmnHmnwptH2">WHOLE-PART-TREE of hormone
+  <h2 id="idHrmnHmnwptH2">WHOLE-PART-TREE of hormoneHmn
     <a class="clsHide" href="#idHrmnHmnwptH2"></a></h2>
   <p id="idHrmnHmnwptnam">name::
-    <br>* Mcs.hormone'whole-part-tree,
+    <br>* Mcs.hormoneHmn'whole-part-tree,
     <a class="clsHide" href="#idHrmnHmnwptnam"></a></p>
-  <p id="idHrmnHmnwtr">whole-tree-of-hormone::
+  <p id="idHrmnHmnwtr">whole-tree-of-hormoneHmn::
     <br>* <a class="clsPreview" href="#idGlndHmn001">endocrine-gland</a>,
     <br>===
     <br>"The term "hormone" is sometimes extended to include chemicals produced by cells that affect the same cell (autocrine or intracrine signaling) or nearby cells (paracrine signalling)."
     <br>[https://en.wikipedia.org/wiki/Hormone, {2020-02-22}]
     <a class="clsHide" href="#idHrmnHmnwtr"></a></p>
-  <p id="idHrmnHmnptr">part-tree-of-hormone::
+  <p id="idHrmnHmnptr">part-tree-of-hormoneHmn::
     <br>* disease: (hypo|hyper-hormonism),
     <br>* node-producing,
     <br>* receptor,
@@ -1685,22 +1694,22 @@
     <br>* function,
     <br>* production,
     <a class="clsHide" href="#idHrmnHmnptr"></a></p>
-  <p id="idHrmnHmnwNtr">wholeNo-tree-of-hormone::
+  <p id="idHrmnHmnwNtr">wholeNo-tree-of-hormoneHmn::
     <br>* ,
     <a class="clsHide" href="#idHrmnHmnwNtr"></a></p>
   </section>
 
   <section id="idHrmnHmngst">
-  <h2 id="idHrmnHmngstH2">GENERIC-SPECIFIC-TREE of hormone
+  <h2 id="idHrmnHmngstH2">GENERIC-SPECIFIC-TREE of hormoneHmn
     <a class="clsHide" href="#idHrmnHmngstH2"></a></h2>
   <p id="idHrmnHmngstnam">name::
-    <br>* Mcs.hormone'generic-specific-tree,
+    <br>* Mcs.hormoneHmn'generic-specific-tree,
     <a class="clsHide" href="#idHrmnHmngstnam"></a></p>
 
   <section id="idHrmnHmngtr">
-  <h3 id="idHrmnHmngtrH3">generic-tree of hormone
+  <h3 id="idHrmnHmngtrH3">generic-tree of hormoneHmn
     <a class="clsHide" href="#idHrmnHmngtrH3"></a></h3>
-  <p id="idHrmnHmngnc">generic-of-hormone::
+  <p id="idHrmnHmngnc">generic-of-hormoneHmn::
     <br>* animal-hormone,
     <br>* <a class="clsPreview" href="../dirOgm/filMcsOgm-sysMols.last.html#idSysMolsHmn004gnc">productBodyHmn</a>,
     <br>*
@@ -1708,7 +1717,7 @@
   </section>
 
   <section id="idHrmnHmnstr">
-  <h3 id="idHrmnHmnstrH3">specific-tree of hormone
+  <h3 id="idHrmnHmnstrH3">specific-tree of hormoneHmn
     <a class="clsHide" href="#idHrmnHmnstrH3"></a></h3>
   <p id="idHrmnHmnspc">specific-of-hormone::
     <br>* adrenaline-hormone,
@@ -1781,11 +1790,11 @@
   </section>
 
   <section id="idHrmnHmn029">
-  <h2 id="idHrmnHmn029H2">hormone.anabolic-029
+  <h2 id="idHrmnHmn029H2">hormoneHmn.anabolic-029
     <a class="clsHide" href="#idHrmnHmn029H2"></a></h2>
   <p id="idHrmnHmn029nam">name::
-    <br>* Mcs.hormone.anabolic-029,
-    <br>* Mcs.hormone.029-anabolic,
+    <br>* Mcs.hormoneHmn.anabolic-029,
+    <br>* Mcs.hormoneHmn.029-anabolic,
     <a class="clsHide" href="#idHrmnHmn029nam"></a></p>
   <p id="idHrmnHmn029dsn">description::
     <br>"Endocrinologists have traditionally classified hormones as anabolic or catabolic, depending on which part of metabolism they stimulate. The classic anabolic hormones are the anabolic steroids, which stimulate protein synthesis and muscle growth, and insulin."
@@ -1794,11 +1803,11 @@
   </section>
 
   <section id="idHrmnHmn028">
-  <h2 id="idHrmnHmn028H2">hormone.katabolic-028
+  <h2 id="idHrmnHmn028H2">hormoneHmn.katabolic-028
     <a class="clsHide" href="#idHrmnHmn028H2"></a></h2>
   <p id="idHrmnHmn028nam">name::
-    <br>* Mcs.hormone.katabolic-028,
-    <br>* Mcs.hormone.028-katabolic,
+    <br>* Mcs.hormoneHmn.katabolic-028,
+    <br>* Mcs.hormoneHmn.028-katabolic,
     <a class="clsHide" href="#idHrmnHmn028nam"></a></p>
   <p id="idHrmnHmn028dsn">description::
     <br>"Endocrinologists have traditionally classified hormones as anabolic or catabolic, depending on which part of metabolism they stimulate. The classic anabolic hormones are the anabolic steroids, which stimulate protein synthesis and muscle growth, and insulin."
@@ -1807,11 +1816,11 @@
   </section>
 
   <section id="idHrmnHmn030">
-  <h2 id="idHrmnHmn030H2">hormone.steroid-030
+  <h2 id="idHrmnHmn030H2">hormoneHmn.steroid-030
     <a class="clsHide" href="#idHrmnHmn030H2"></a></h2>
   <p id="idHrmnHmn030nam">name::
-    <br>* Mcs.hormone.030-steroid,
-    <br>* Mcs.hormone.steroid-030,
+    <br>* Mcs.hormoneHmn.030-steroid,
+    <br>* Mcs.hormoneHmn.steroid-030,
     <br>* Mcs.steroid-hormone-030,
     <a class="clsHide" href="#idHrmnHmn030nam"></a></p>
   <p id="idHrmnHmn030dsn">description::
@@ -1824,8 +1833,8 @@
   <h3 id="idHrmnHmn034H3">hormoneSteroid.corticosteroid
     <a class="clsHide" href="#idHrmnHmn034H3"></a></h3>
   <p id="idHrmnHmn034nam">name::
-    <br>* Mcs.hormone.034-corticosteroid,
-    <br>* Mcs.hormone.corticosteroid-034,
+    <br>* Mcs.hormoneHmn.034-corticosteroid,
+    <br>* Mcs.hormoneHmn.corticosteroid-034,
     <br>* Mcs.corticosteroid-hormone-034,
     <a class="clsHide" href="#idHrmnHmn034nam"></a></p>
   <p id="idHrmnHmn034dsn">description::
@@ -1843,8 +1852,8 @@
   <h3 id="idHrmnHmn035H3">hormoneSteroid.sex-steroid
     <a class="clsHide" href="#idHrmnHmn035H3"></a></h3>
   <p id="idHrmnHmn035nam">name::
-    <br>* Mcs.hormone.035-sex-steroid,
-    <br>* Mcs.hormone.sex-steroid-035,
+    <br>* Mcs.hormoneHmn.035-sex-steroid,
+    <br>* Mcs.hormoneHmn.sex-steroid-035,
     <br>* Mcs.sex-steroid-hormone-035,
     <br>* Mcs.gonadocorticoid,
     <br>* Mcs.gonadal-steroid,
@@ -1862,11 +1871,11 @@
   </section>
 
   <section id="idHrmnHmn032">
-  <h2 id="idHrmnHmn032H2">hormone.peptide-032
+  <h2 id="idHrmnHmn032H2">hormoneHmn.peptide-032
     <a class="clsHide" href="#idHrmnHmn032H2"></a></h2>
   <p id="idHrmnHmn032nam">name::
-    <br>* Mcs.hormone.032-peptide,
-    <br>* Mcs.hormone.peptide-032,
+    <br>* Mcs.hormoneHmn.032-peptide,
+    <br>* Mcs.hormoneHmn.peptide-032,
     <br>* Mcs.peptide-hormone-032,
     <a class="clsHide" href="#idHrmnHmn032nam"></a></p>
   <p id="idHrmnHmn032dsn">description::
@@ -1918,11 +1927,11 @@
   </section>
 
   <section id="idHrmnHmn014">
-  <h2 id="idHrmnHmn014H2">hormone.insulin-014
+  <h2 id="idHrmnHmn014H2">hormoneHmn.insulin-014
     <a class="clsHide" href="#idHrmnHmn014H2"></a></h2>
   <p id="idHrmnHmn014nam">name::
-    <br>* Mcs.hormone.insulin-014!⇒hrmnInsulin,
-    <br>* Mcs.hormone.014-insulin!⇒hrmnInsulin,
+    <br>* Mcs.hormoneHmn.insulin-014!⇒hrmnInsulin,
+    <br>* Mcs.hormoneHmn.014-insulin!⇒hrmnInsulin,
     <br>* Mcs.hrmnInsulin,
     <br>* Mcs.insulin!⇒hrmnInsulin,
     <br>====== langoGreek:
@@ -1975,11 +1984,11 @@
   </section>
 
   <section id="idHrmnHmn015">
-  <h2 id="idHrmnHmn015H2">hormone.cortisol-015
+  <h2 id="idHrmnHmn015H2">hormoneHmn.cortisol-015
     <a class="clsHide" href="#idHrmnHmn015H2"></a></h2>
   <p id="idHrmnHmn015nam">name::
-    <br>* Mcs.hormone.cortisol-015,
-    <br>* Mcs.hormone.015-cortisol,
+    <br>* Mcs.hormoneHmn.cortisol-015,
+    <br>* Mcs.hormoneHmn.015-cortisol,
     <br>* Mcs.cortisol-hormone,
     <br>====== langoGreek:
     <br>* McsEll.ορμόνη.κορτιζόλη,
@@ -2013,12 +2022,12 @@
   </section>
 
   <section id="idHrmnHmn001">
-  <h2 id="idHrmnHmn001H2">hormone.aldosterone-001
+  <h2 id="idHrmnHmn001H2">hormoneHmn.aldosterone-001
     <a class="clsHide" href="#idHrmnHmn001H2"></a></h2>
   <p id="idHrmnHmn001nam">name::
     <br>* Mcs.hormoneAldosterone,
-    <br>* Mcs.hormone.aldosterone-001,
-    <br>* Mcs.hormone.001-aldosterone,
+    <br>* Mcs.hormoneHmn.aldosterone-001,
+    <br>* Mcs.hormoneHmn.001-aldosterone,
     <br>* Mcs.aldosterone-hormone,
     <br>====== langoGreek:
     <br>* McsEll.ορμόνη.αλδοστερόνη,
@@ -2049,11 +2058,11 @@
   </section>
 
   <section id="idHrmnHmn009">
-  <h2 id="idHrmnHmn009H2">hormone.adrenaline-009
+  <h2 id="idHrmnHmn009H2">hormoneHmn.adrenaline-009
     <a class="clsHide" href="#idHrmnHmn009H2"></a></h2>
   <p id="idHrmnHmn009nam">name::
-    <br>* Mcs.hormone.adrenaline-009,
-    <br>* Mcs.hormone.009-adrenaline,
+    <br>* Mcs.hormoneHmn.adrenaline-009,
+    <br>* Mcs.hormoneHmn.009-adrenaline,
     <br>* Mcs.adrenaline, /adrénalin/,
     <br>* Mcs.epinephrine, /epinéfrin/,
     <br>====== langoGreek:
@@ -2096,11 +2105,11 @@
   </section>
 
   <section id="idHrmnHmn018">
-  <h2 id="idHrmnHmn018H2">hormone.norepinephrine-018
+  <h2 id="idHrmnHmn018H2">hormoneHmn.norepinephrine-018
     <a class="clsHide" href="#idHrmnHmn018H2"></a></h2>
   <p id="idHrmnHmn018nam">name::
-    <br>* Mcs.hormone.norepinephrine-018,
-    <br>* Mcs.hormone.018-norepinephrine,
+    <br>* Mcs.hormoneHmn.norepinephrine-018,
+    <br>* Mcs.hormoneHmn.018-norepinephrine,
     <br>* Mcs.norepinephrine,
     <br>====== langoGreek:
     <br>* McsEll.ορμόνη.νορ-επινεφριδίνη,
@@ -2131,11 +2140,11 @@
   </section>
 
   <section id="idHrmnHmn012">
-  <h2 id="idHrmnHmn012H2">hormone.thyroid-calcitonin-012
+  <h2 id="idHrmnHmn012H2">hormoneHmn.thyroid-calcitonin-012
     <a class="clsHide" href="#idHrmnHmn012H2"></a></h2>
   <p id="idHrmnHmn012nam">name::
-    <br>* Mcs.hormone.thyroid-calcitonin-012,
-    <br>* Mcs.hormone.012-thyroid-calcitonin,
+    <br>* Mcs.hormoneHmn.thyroid-calcitonin-012,
+    <br>* Mcs.hormoneHmn.012-thyroid-calcitonin,
     <br>* Mcs.thyroid-calcitonin,
     <br>====== langoGreek:
     <br>* McsEll.ορμόνη.θυεοκαλτσιτονίνη,
@@ -2166,11 +2175,11 @@
   </section>
 
   <section id="idHrmnHmn017">
-  <h2 id="idHrmnHmn017H2">hormone.melatonine-017
+  <h2 id="idHrmnHmn017H2">hormoneHmn.melatonine-017
     <a class="clsHide" href="#idHrmnHmn017H2"></a></h2>
   <p id="idHrmnHmn017nam">name::
-    <br>* Mcs.hormone.melatonine-017,
-    <br>* Mcs.hormone.017-melatonine,
+    <br>* Mcs.hormoneHmn.melatonine-017,
+    <br>* Mcs.hormoneHmn.017-melatonine,
     <br>* Mcs.melatonine,
     <br>====== langoGreek:
     <br>* McsEll.ορμόνη.μελατονίνη,
@@ -2206,11 +2215,11 @@
   </section>
 
   <section id="idHrmnHmn005">
-  <h2 id="idHrmnHmn005H2">hormone.growth-hormone-005
+  <h2 id="idHrmnHmn005H2">hormoneHmn.growth-hormone-005
     <a class="clsHide" href="#idHrmnHmn005H2"></a></h2>
   <p id="idHrmnHmn005nam">name::
-    <br>* Mcs.hormone.growth-005,
-    <br>* Mcs.hormone.005-growth,
+    <br>* Mcs.hormoneHmn.growth-005,
+    <br>* Mcs.hormoneHmn.005-growth,
     <br>* Mcs.growth-hormone,
     <br>====== langoGreek:
     <br>* McsEll.ορμόνη.αυξητική,
@@ -2272,11 +2281,11 @@
   </section>
 
   <section id="idHrmnHmn025">
-  <h2 id="idHrmnHmn025H2">hormone.oxytocin-025
+  <h2 id="idHrmnHmn025H2">hormoneHmn.oxytocin-025
     <a class="clsHide" href="#idHrmnHmn025H2"></a></h2>
   <p id="idHrmnHmn025nam">name::
-    <br>* Mcs.hormone.oxytocin-025,
-    <br>* Mcs.hormone.025-oxytocin,
+    <br>* Mcs.hormoneHmn.oxytocin-025,
+    <br>* Mcs.hormoneHmn.025-oxytocin,
     <br>* Mcs.oxytocin,
     <br>====== langoGreek:
     <br>* McsEll.ορμόνη.ωκυτοκίνη,
@@ -2310,11 +2319,11 @@
   </section>
 
   <section id="idHrmnHmn022">
-  <h2 id="idHrmnHmn022H2">hormone.prolactin-022
+  <h2 id="idHrmnHmn022H2">hormoneHmn.prolactin-022
     <a class="clsHide" href="#idHrmnHmn022H2"></a></h2>
   <p id="idHrmnHmn022nam">name::
-    <br>* Mcs.hormone.prolactin-022,
-    <br>* Mcs.hormone.022-prolactin,
+    <br>* Mcs.hormoneHmn.prolactin-022,
+    <br>* Mcs.hormoneHmn.022-prolactin,
     <br>* Mcs.prolactin,
     <br>====== langoGreek:
     <br>* McsEll.ορμόνη.προλακτίνη,
@@ -2346,11 +2355,11 @@
   </section>
 
   <section id="idHrmnHmn006">
-  <h2 id="idHrmnHmn006H2">hormone.basopressin-006
+  <h2 id="idHrmnHmn006H2">hormoneHmn.basopressin-006
     <a class="clsHide" href="#idHrmnHmn006H2"></a></h2>
   <p id="idHrmnHmn006nam">name::
-    <br>* Mcs.hormone.basopressin-006,
-    <br>* Mcs.hormone.006-basopressin,
+    <br>* Mcs.hormoneHmn.basopressin-006,
+    <br>* Mcs.hormoneHmn.006-basopressin,
     <br>* Mcs.basopressin,
     <br>====== langoGreek:
     <br>* McsEll.βασοπρεσίνη,
@@ -2376,11 +2385,11 @@
   </section>
 
   <section id="idHrmnHmn024">
-  <h2 id="idHrmnHmn024H2">hormone.adrenocorticotropic-024
+  <h2 id="idHrmnHmn024H2">hormoneHmn.adrenocorticotropic-024
     <a class="clsHide" href="#idHrmnHmn024H2"></a></h2>
   <p id="idHrmnHmn024nam">name::
-    <br>* Mcs.hormone.adrenocorticotropic-024,
-    <br>* Mcs.hormone.024-adrenocorticotropic,
+    <br>* Mcs.hormoneHmn.adrenocorticotropic-024,
+    <br>* Mcs.hormoneHmn.024-adrenocorticotropic,
     <br>* Mcs.https:adrenocorticotropic-hormone,
     <br>====== langoGreek:
     <br>* McsEll.αδρενοκορτικοτρόπος-ορμόνη,
@@ -2420,11 +2429,11 @@
   </section>
 
   <section id="idHrmnHmn011">
-  <h2 id="idHrmnHmn011H2">hormone.thyroid-stimulating-011
+  <h2 id="idHrmnHmn011H2">hormoneHmn.thyroid-stimulating-011
     <a class="clsHide" href="#idHrmnHmn011H2"></a></h2>
   <p id="idHrmnHmn011nam">name::
-    <br>* Mcs.hormone.thyroid-stimulating-011,
-    <br>* Mcs.hormone.011-thyroid-stimulating,
+    <br>* Mcs.hormoneHmn.thyroid-stimulating-011,
+    <br>* Mcs.hormoneHmn.011-thyroid-stimulating,
     <br>* Mcs.thyroid-stimulating-hormone,
     <br>====== langoGreek:
     <br>* McsEll.θυρεοειδοτρόπος-ορμόνη,
@@ -2455,11 +2464,11 @@
   </section>
 
   <section id="idHrmnHmn010">
-  <h2 id="idHrmnHmn010H2">hormone.follicle-stimulating-010
+  <h2 id="idHrmnHmn010H2">hormoneHmn.follicle-stimulating-010
     <a class="clsHide" href="#idHrmnHmn010H2"></a></h2>
   <p id="idHrmnHmn010nam">name::
-    <br>* Mcs.hormone.follicle-stimulating-010,
-    <br>* Mcs.hormone.010-follicle-stimulating,
+    <br>* Mcs.hormoneHmn.follicle-stimulating-010,
+    <br>* Mcs.hormoneHmn.010-follicle-stimulating,
     <br>* Mcs.follicle-stimulating-hormone,
     <br>====== langoGreek:
     <br>* McsEll.θυλακιοτρόπος-ορμόνη,
@@ -2494,11 +2503,11 @@
   </section>
 
   <section id="idHrmnHmn026">
-  <h2 id="idHrmnHmn026H2">hormone.luteinizing-026
+  <h2 id="idHrmnHmn026H2">hormoneHmn.luteinizing-026
     <a class="clsHide" href="#idHrmnHmn026H2"></a></h2>
   <p id="idHrmnHmn026nam">name::
-    <br>* Mcs.hormone.luteinizing-026,
-    <br>* Mcs.hormone.026-luteinizing,
+    <br>* Mcs.hormoneHmn.luteinizing-026,
+    <br>* Mcs.hormoneHmn.026-luteinizing,
     <br>* Mcs.luteinizing-hormone,
     <br>====== langoGreek:
     <br>* McsEll.ωχρινοτρόπος-ορμόνη,
@@ -2531,11 +2540,11 @@
   </section>
 
   <section id="idHrmnHmn004">
-  <h2 id="idHrmnHmn004H2">hormone.antidiuretic-004
+  <h2 id="idHrmnHmn004H2">hormoneHmn.antidiuretic-004
     <a class="clsHide" href="#idHrmnHmn004H2"></a></h2>
   <p id="idHrmnHmn004nam">name::
-    <br>* Mcs.hormone.antidiuretic-004,
-    <br>* Mcs.hormone.004-antidiuretic,
+    <br>* Mcs.hormoneHmn.antidiuretic-004,
+    <br>* Mcs.hormoneHmn.004-antidiuretic,
     <br>* Mcs.antidiuretic-hormone,
     <br>====== langoGreek:
     <br>* McsEll.αντιδιουρητική-ορμόνη,
@@ -2574,11 +2583,11 @@
   </section>
 
   <section id="idHrmnHmn016">
-  <h2 id="idHrmnHmn016H2">hormone.melanotropin-016
+  <h2 id="idHrmnHmn016H2">hormoneHmn.melanotropin-016
     <a class="clsHide" href="#idHrmnHmn016H2"></a></h2>
   <p id="idHrmnHmn016nam">name::
-    <br>* Mcs.hormone.melanotropin-016,
-    <br>* Mcs.hormone.016-melanotropin,
+    <br>* Mcs.hormoneHmn.melanotropin-016,
+    <br>* Mcs.hormoneHmn.016-melanotropin,
     <br>* Mcs.melanotropin,
     <br>====== langoGreek:
     <br>* McsEll.μελανοτροπίνη,
@@ -2611,11 +2620,11 @@
   </section>
 
   <section id="idHrmnHmn013">
-  <h2 id="idHrmnHmn013H2">hormone.thyroxine-013
+  <h2 id="idHrmnHmn013H2">hormoneHmn.thyroxine-013
     <a class="clsHide" href="#idHrmnHmn013H2"></a></h2>
   <p id="idHrmnHmn013nam">name::
-    <br>* Mcs.hormone.thyroxine-013,
-    <br>* Mcs.hormone.013-thyroxine,
+    <br>* Mcs.hormoneHmn.thyroxine-013,
+    <br>* Mcs.hormoneHmn.013-thyroxine,
     <br>* Mcs.thyroxine, /thairóksin/,
     <br>====== langoGreek:
     <br>* McsEll.θυροξίνη,
@@ -2680,11 +2689,11 @@
   </section>
 
   <section id="idHrmnHmn007">
-  <h2 id="idHrmnHmn007H2">hormone.glucagon-007
+  <h2 id="idHrmnHmn007H2">hormoneHmn.glucagon-007
     <a class="clsHide" href="#idHrmnHmn007H2"></a></h2>
   <p id="idHrmnHmn007nam">name::
-    <br>* Mcs.hormone.glucagon-007,
-    <br>* Mcs.hormone.007-glucagon,
+    <br>* Mcs.hormoneHmn.glucagon-007,
+    <br>* Mcs.hormoneHmn.007-glucagon,
     <br>* Mcs.glucagon,
     <br>====== langoGreek:
     <br>* McsEll.γλυκαγόνη,
@@ -2718,11 +2727,11 @@
   </section>
 
   <section id="idHrmnHmn020">
-  <h2 id="idHrmnHmn020H2">hormone.parathyroid-020
+  <h2 id="idHrmnHmn020H2">hormoneHmn.parathyroid-020
     <a class="clsHide" href="#idHrmnHmn020H2"></a></h2>
   <p id="idHrmnHmn020nam">name::
-    <br>* Mcs.hormone.parathyroid-020,
-    <br>* Mcs.hormone.020-parathyroid,
+    <br>* Mcs.hormoneHmn.parathyroid-020,
+    <br>* Mcs.hormoneHmn.020-parathyroid,
     <br>* Mcs.parathyroid-hormone,
     <br>====== langoGreek:
     <br>* McsEll.ορμόνη.παραθορμόνη,
@@ -2766,11 +2775,11 @@
   </section>
 
   <section id="idHrmnHmn038">
-  <h2 id="idHrmnHmn038H2">hormone.estradiol-038
+  <h2 id="idHrmnHmn038H2">hormoneHmn.estradiol-038
     <a class="clsHide" href="#idHrmnHmn038H2"></a></h2>
   <p id="idHrmnHmn038nam">name::
-    <br>* Mcs.hormone.038-estradiol,
-    <br>* Mcs.hormone.estradiol-038,
+    <br>* Mcs.hormoneHmn.038-estradiol,
+    <br>* Mcs.hormoneHmn.estradiol-038,
     <br>* Mcs.estradiol-hormone, /estradáiol/,
     <br>====== langoGreek:
     <br>* McsEll.ορμόνη.οιστραδιόλη,
@@ -2798,11 +2807,11 @@
   </section>
 
   <section id="idHrmnHmn008">
-  <h2 id="idHrmnHmn008H2">hormone.female-008
+  <h2 id="idHrmnHmn008H2">hormoneHmn.female-008
     <a class="clsHide" href="#idHrmnHmn008H2"></a></h2>
   <p id="idHrmnHmn008nam">name::
-    <br>* Mcs.hormone.female-008,
-    <br>* Mcs.hormone.008-female,
+    <br>* Mcs.hormoneHmn.female-008,
+    <br>* Mcs.hormoneHmn.008-female,
     <br>* Mcs.female-hormone,
     <br>====== langoGreek:
     <br>* McsEll.γυναικεία-ορμόνη,
@@ -2817,11 +2826,11 @@
     <a class="clsHide" href="#idHrmnHmn008gtr"></a></p>
 
   <section id="idHrmnHmn019">
-  <h3 id="idHrmnHmn019H3">hormone.estrogen
+  <h3 id="idHrmnHmn019H3">hormoneHmn.estrogen
     <a class="clsHide" href="#idHrmnHmn019H3"></a></h3>
   <p id="idHrmnHmn019nam">name::
-    <br>* Mcs.hormone.estrogen-019,
-    <br>* Mcs.hormone.019-estrogen,
+    <br>* Mcs.hormoneHmn.estrogen-019,
+    <br>* Mcs.hormoneHmn.019-estrogen,
     <br>* Mcs.estrogen,
     <br>====== langoGreek:
     <br>* McsEll.οιστρογόνο,
@@ -2852,11 +2861,11 @@
   </section>
 
   <section id="idHrmnHmn021">
-  <h3 id="idHrmnHmn021H3">hormone.progesterone
+  <h3 id="idHrmnHmn021H3">hormoneHmn.progesterone
     <a class="clsHide" href="#idHrmnHmn021H3"></a></h3>
   <p id="idHrmnHmn021nam">name::
-    <br>* Mcs.hormone.progesterone-021,
-    <br>* Mcs.hormone.021-progesterone,
+    <br>* Mcs.hormoneHmn.progesterone-021,
+    <br>* Mcs.hormoneHmn.021-progesterone,
     <br>* Mcs.progesterone,
     <br>====== langoGreek:
     <br>* McsEll.προγεστερόνη,
@@ -2882,11 +2891,11 @@
   </section>
 
   <section id="idHrmnHmn002">
-  <h2 id="idHrmnHmn002H2">hormone.male-002
+  <h2 id="idHrmnHmn002H2">hormoneHmn.male-002
     <a class="clsHide" href="#idHrmnHmn002H2"></a></h2>
   <p id="idHrmnHmn002nam">name::
-    <br>* Mcs.hormone.male-002,
-    <br>* Mcs.hormone.002-male,
+    <br>* Mcs.hormoneHmn.male-002,
+    <br>* Mcs.hormoneHmn.002-male,
     <br>* Mcs.male-hormone,
     <br>====== langoGreek:
     <br>* McsEll.ορμόνη.αντρική,
@@ -2911,12 +2920,12 @@
   </section>
 
   <section id="idHrmnHmn003">
-  <h2 id="idHrmnHmn003H2">hormone.androgen-003
+  <h2 id="idHrmnHmn003H2">hormoneHmn.androgen-003
     <a class="clsHide" href="#idHrmnHmn003H2"></a></h2>
   <p id="idHrmnHmn003nam">name::
     <br>* Mcs.hrmnAndrogen,
-    <br>* Mcs.hormone.003-androgen!⇒hrmnAndrogen,
-    <br>* Mcs.hormone.androgen-003!⇒hrmnAndrogen,
+    <br>* Mcs.hormoneHmn.003-androgen!⇒hrmnAndrogen,
+    <br>* Mcs.hormoneHmn.androgen-003!⇒hrmnAndrogen,
     <br>* Mcs.androgen-hormone-003!⇒hrmnAndrogen,
     <br>====== langoGreek:
     <br>* McsEll.ανδρογόνο!=hrmnAndrogen,
@@ -3019,12 +3028,12 @@
   </section>
 
   <section id="idHrmnHmn023">
-  <h3 id="idHrmnHmn023H3">hormone.testosterone
+  <h3 id="idHrmnHmn023H3">hormoneHmn.testosterone
     <a class="clsHide" href="#idHrmnHmn023H3"></a></h3>
   <p id="idHrmnHmn023nam">name::
     <br>* Mcs.hrmnTestosterone,
-    <br>* Mcs.hormone.testosterone-023!⇒hrmnTestosterone,
-    <br>* Mcs.hormone.023-testosterone!⇒hrmnTestosterone,
+    <br>* Mcs.hormoneHmn.testosterone-023!⇒hrmnTestosterone,
+    <br>* Mcs.hormoneHmn.023-testosterone!⇒hrmnTestosterone,
     <br>* Mcs.hrmnAndrogen.testosterone!⇒hrmnTestosterone,
     <br>* Mcs.testosterone!⇒hrmnTestosterone,
     <br>====== langoGreek:
@@ -3089,12 +3098,12 @@
   </section>
 
   <section id="idHrmnHmn027">
-  <h3 id="idHrmnHmn027H3">hormone.dihydrotestosterone
+  <h3 id="idHrmnHmn027H3">hormoneHmn.dihydrotestosterone
     <a class="clsHide" href="#idHrmnHmn027H3"></a></h3>
   <p id="idHrmnHmn027nam">name::
     <br>* Mcs.hrmnDihydrotestosterone,
-    <br>* Mcs.hormone.dihydrotestosterone-027,
-    <br>* Mcs.hormone.027-dihydrotestosterone,
+    <br>* Mcs.hormoneHmn.dihydrotestosterone-027,
+    <br>* Mcs.hormoneHmn.027-dihydrotestosterone,
     <br>* Mcs.DHT,
     <br>* Mcs.dihydrotestosterone,
     <br>* Mcs.hrmnAndrogen.dihydrotestosterone,
@@ -3119,11 +3128,11 @@
   </section>
 
   <section id="idHrmnHmn037">
-  <h3 id="idHrmnHmn037H3">hormone.androstenedione
+  <h3 id="idHrmnHmn037H3">hormoneHmn.androstenedione
     <a class="clsHide" href="#idHrmnHmn037H3"></a></h3>
   <p id="idHrmnHmn037nam">name::
-    <br>* Mcs.hormone.037-androstenedione,
-    <br>* Mcs.hormone.androstenedione-037,
+    <br>* Mcs.hormoneHmn.037-androstenedione,
+    <br>* Mcs.hormoneHmn.androstenedione-037,
     <br>* Mcs.androstenedione-hormone-037,
     <a class="clsHide" href="#idHrmnHmn037nam"></a></p>
   <p id="idHrmnHmn037dsn">description::
@@ -3137,11 +3146,11 @@
   </section>
 
   <section id="idHrmnHmn031">
-  <h2 id="idHrmnHmn031H2">hormone.leptin-031
+  <h2 id="idHrmnHmn031H2">hormoneHmn.leptin-031
     <a class="clsHide" href="#idHrmnHmn031H2"></a></h2>
   <p id="idHrmnHmn031nam">name::
-    <br>* Mcs.hormone.031-leptin,
-    <br>* Mcs.hormone.leptin-031,
+    <br>* Mcs.hormoneHmn.031-leptin,
+    <br>* Mcs.hormoneHmn.leptin-031,
     <br>* Mcs.leptin-hormone-031,
     <a class="clsHide" href="#idHrmnHmn031nam"></a></p>
   <p id="idHrmnHmn031dsn">description::
@@ -3152,11 +3161,11 @@
   </section>
 
   <section id="idHrmnHmn033">
-  <h2 id="idHrmnHmn033H2">hormone.resistin-033
+  <h2 id="idHrmnHmn033H2">hormoneHmn.resistin-033
     <a class="clsHide" href="#idHrmnHmn033H2"></a></h2>
   <p id="idHrmnHmn033nam">name::
-    <br>* Mcs.hormone.033-resistin,
-    <br>* Mcs.hormone.resistin-033,
+    <br>* Mcs.hormoneHmn.033-resistin,
+    <br>* Mcs.hormoneHmn.resistin-033,
     <br>* Mcs.resistin-hormone-033,
     <a class="clsHide" href="#idHrmnHmn033nam"></a></p>
   <p id="idHrmnHmn033dsn">description::
@@ -3168,11 +3177,11 @@
   </section>
 
   <section id="idHrmnHmn036">
-  <h2 id="idHrmnHmn036H2">hormone.progestogen-036
+  <h2 id="idHrmnHmn036H2">hormoneHmn.progestogen-036
     <a class="clsHide" href="#idHrmnHmn036H2"></a></h2>
   <p id="idHrmnHmn036nam">name::
-    <br>* Mcs.hormone.036-progestogen,
-    <br>* Mcs.hormone.progestogen-036,
+    <br>* Mcs.hormoneHmn.036-progestogen,
+    <br>* Mcs.hormoneHmn.progestogen-036,
     <br>* Mcs.progestogen-hormone-036,
     <a class="clsHide" href="#idHrmnHmn036nam"></a></p>
   <p id="idHrmnHmn036dsn">description::
@@ -3185,11 +3194,11 @@
   </section>
 
   <section id="idHrmnHmn039">
-  <h2 id="idHrmnHmn039H2">hormone.gonadotropin-039
+  <h2 id="idHrmnHmn039H2">hormoneHmn.gonadotropin-039
     <a class="clsHide" href="#idHrmnHmn039H2"></a></h2>
   <p id="idHrmnHmn039nam">name::
-    <br>* Mcs.hormone.039-gonadotropin, /gonadotrópin/,
-    <br>* Mcs.hormone.gonadotropin-039,
+    <br>* Mcs.hormoneHmn.039-gonadotropin, /gonadotrópin/,
+    <br>* Mcs.hormoneHmn.gonadotropin-039,
     <br>* Mcs.gonadotropin-hormone-039,
     <a class="clsHide" href="#idHrmnHmn039nam"></a></p>
   <p id="idHrmnHmn039dsn">description::
@@ -3201,11 +3210,11 @@
   </section>
 
   <section id="idHrmnHmn040">
-  <h2 id="idHrmnHmn040H2">hormone.ghrelin-040
+  <h2 id="idHrmnHmn040H2">hormoneHmn.ghrelin-040
     <a class="clsHide" href="#idHrmnHmn040H2"></a></h2>
   <p id="idHrmnHmn040nam">name::
-    <br>* Mcs.hormone.040-ghrelin,
-    <br>* Mcs.hormone.ghrelin-040,
+    <br>* Mcs.hormoneHmn.040-ghrelin,
+    <br>* Mcs.hormoneHmn.ghrelin-040,
     <br>* Mcs.ghrelin-hormone-040,
     <a class="clsHide" href="#idHrmnHmn040nam"></a></p>
   <p id="idHrmnHmn040dsn">description::
@@ -3220,14 +3229,14 @@
   <h1 id="idFldHmn001H1">sysMolsHmn.blood
     <a class="clsHide" href="#idFldHmn001H1"></a></h1>
   <p id="idFldHmn001nam">name::
-    <br>* Mcs.sysMolsHmn.blood!⇒blood,
-    <br>* Mcs.fluidHmn.001-blood!⇒blood,
-    <br>* Mcs.fluidHmn.blood-001!⇒blood,
-    <br>* Mcs.blood,
-    <br>* Mcs.blood'(human-blood)!⇒blood,
+    <br>* Mcs.sysMolsHmn.blood!⇒bloodHmn,
+    <br>* Mcs.fluidHmn.001-blood!⇒bloodHmn,
+    <br>* Mcs.fluidHmn.blood-001!⇒bloodHmn,
+    <br>* Mcs.bloodHmn,
+    <br>* Mcs.bloodHmn'(human-blood)!⇒bloodHmn,
     <br>====== langoGreek:
-    <br>* McsEll.αίμα-ανθρώπου!=blood, {2012-08-11},
-    <br>* McsEll.αίμα!=blood,
+    <br>* McsEll.αίμα-ανθρώπου!=bloodHmn, {2012-08-11},
+    <br>* McsEll.αίμα!=bloodHmn,
     <a class="clsHide" href="#idFldHmn001nam"></a></p>
   <p id="idFldHmn001dsn">description::
     <br>analytic: "το αίμα είναι ένα ειδικό είδος συνδετικού ιστού"
@@ -3243,11 +3252,11 @@
   </section>
 
   <section id="idBdyHmn135">
-  <h2 id="idBdyHmn135H2">plasma of blood
+  <h2 id="idBdyHmn135H2">plasma of bloodHmn
     <a class="clsHide" href="#idBdyHmn135H2"></a></h2>
   <p id="idBdyHmn135nam">name::
     <br>* Mcs.cptBdyHmn135,
-    <br>* Mcs.blood'plasma,
+    <br>* Mcs.bloodHmn'plasma,
     <br>* Mcs.plasma,
     <br>====== langoGreek:
     <br>* McsEll.πλάσμα-αίματος,
@@ -3291,10 +3300,10 @@
   </section>
 
   <section id="idFldHmn001serum">
-  <h2 id="idFldHmn001serumH2">serum of blood
+  <h2 id="idFldHmn001serumH2">serum of bloodHmn
     <a class="clsHide" href="#idFldHmn001serumH2"></a></h2>
   <p id="idFldHmn001serumnam">name::
-    <br>* Mcs.blood'serum, /sírum/,
+    <br>* Mcs.bloodHmn'serum, /sírum/,
     <a class="clsHide" href="#idFldHmn001serumnam"></a></p>
   <p id="idFldHmn001serumdsn">description::
     <br>"Serum (/ˈsɪərəm/) is the fluid and solute component of blood which does not play a role in clotting.[1] It may be defined as blood plasma without fibrinogens. Serum includes all proteins not used in blood clotting; all electrolytes, antibodies, antigens, hormones; and any exogenous substances (e.g., drugs or microorganisms). Serum does not contain white blood cells (leukocytes), red blood cells (erythrocytes), platelets, or clotting factors.
@@ -3306,11 +3315,11 @@
   </section>
 
   <section id="idBdyHmn288">
-  <h2 id="idBdyHmn288H2">pressure of blood
+  <h2 id="idBdyHmn288H2">pressure of bloodHmn
     <a class="clsHide" href="#idBdyHmn288H2"></a></h2>
   <p id="idBdyHmn288nam">name::
     <br>* Mcs.cptBdyHmn288,
-    <br>* Mcs.blood'pressure,
+    <br>* Mcs.bloodHmn'pressure,
     <br>====== langoGreek:
     <br>* McsEll.πίεση-αίματος,
     <a class="clsHide" href="#idBdyHmn288nam"></a></p>
@@ -3361,10 +3370,10 @@
   </section>
 
   <section id="idFldHmn001_4">
-  <h2 id="idFldHmn001_4H2">leech of blood
+  <h2 id="idFldHmn001_4H2">leech of bloodHmn
     <a class="clsHide" href="#idFldHmn001_4H2"></a></h2>
   <p id="idFldHmn001_4nam">name::
-    <br>* Mcs.blood'leech,
+    <br>* Mcs.bloodHmn'leech,
     <br>* Mcs.leech,
     <br>====== langoGreek:
     <br>* McsEll.βδέλλα!=leech,
@@ -3378,10 +3387,10 @@
   </section>
 
   <section id="idFldHmn001_5">
-  <h2 id="idFldHmn001_5H2">blood-collection
+  <h2 id="idFldHmn001_5H2">bloodHmn-collection
     <a class="clsHide" href="#idFldHmn001_5H2"></a></h2>
   <p id="idFldHmn001_5nam">name::
-    <br>* Mcs.blood-collection,
+    <br>* Mcs.bloodHmn-collection,
     <a class="clsHide" href="#idFldHmn001_5nam"></a></p>
   <p id="idFldHmn001_5dsn">description::
     <br>αιμοληψία είναι η διαδικασία με την οποία κάποιος δίνει αίμα. Διαρκεί 8 περίπου λεπτά. Το αίμα που δίνει είναι 450 γρ.
@@ -3405,10 +3414,10 @@
   </section>
 
   <section id="idFldHmn001_6">
-  <h2 id="idFldHmn001_6H2">blood-transfusion
+  <h2 id="idFldHmn001_6H2">bloodHmn-transfusion
     <a class="clsHide" href="#idFldHmn001_6H2"></a></h2>
   <p id="idFldHmn001_6nam">name::
-    <br>* Mcs.blood-transfusion,
+    <br>* Mcs.bloodHmn'transfusion,
     <a class="clsHide" href="#idFldHmn001_6nam"></a></p>
   <p id="idFldHmn001_6dsn">description::
     <br>* <a href="https://codepen.io/RominaMartin/full/OJVdvRm">a-codepen-app</a> that shows who gives whom by Romina-Martín.
@@ -3422,7 +3431,7 @@
   </section>
 
   <section id="idFldHmn001srtr">
-  <h2 id="idFldHmn001srtrH2">structure of blood
+  <h2 id="idFldHmn001srtrH2">structure of bloodHmn
     <a class="clsHide" href="#idFldHmn001srtrH2"></a></h2>
   <p id="idFldHmn001srtrP1">structure::
     <br>* <a class="clsPreview" href="../dirOgm/filMcsOgm-sysMols.last.html#idSysMolsHmn020">cholesterol</a>,
@@ -3447,7 +3456,7 @@
   </section>
 
   <section id="idFldHmn001doing">
-  <h2 id="idFldHmn001doingH2">doing of blood
+  <h2 id="idFldHmn001doingH2">doing of bloodHmn
     <a class="clsHide" href="#idFldHmn001doingH2"></a></h2>
 
   <section id="idFldHmn001_2">
@@ -3489,11 +3498,11 @@
   </section>
 
   <section id="idBdyHmn283">
-  <h3 id="idBdyHmn283H3">blood-coagulation
+  <h3 id="idBdyHmn283H3">bloodHmn-coagulation
     <a class="clsHide" href="#idBdyHmn283H3"></a></h3>
   <p id="idBdyHmn283nam">name::
     <br>* Mcs.cptBdyHmn283,
-    <br>* Mcs.blood-coagulation,
+    <br>* Mcs.bloodHmn'coagulation,
     <br>====== langoGreek:
     <br>* McsEll.πήξη-αίματος,
     <a class="clsHide" href="#idBdyHmn283nam"></a></p>
@@ -3507,7 +3516,7 @@
   </section>
 
   <section id="idFldHmn001wpt">
-  <h2 id="idFldHmn001wptH2">WHOLE-PART-TREE of blood
+  <h2 id="idFldHmn001wptH2">WHOLE-PART-TREE of bloodHmn
     <a class="clsHide" href="#idFldHmn001wptH2"></a></h2>
   <p id="idFldHmn001wptnam">name::
     <br>* Mcs.blood'whole-part-tree,
@@ -3515,23 +3524,23 @@
   <p id="idFldHmn001wtr">whole-tree-of-::
     <br>* <a class="clsPreview" href="#idSysOgnHmn002wtr">circulatory-system</a>,
     <a class="clsHide" href="#idFldHmn001wtr"></a></p>
-  <p id="idFldHmn001ptr">part-tree-of-::
+  <p id="idFldHmn001ptr">part-tree-of-bloodHmn::
     <br>* ,
     <a class="clsHide" href="#idFldHmn001ptr"></a></p>
-  <p id="idFldHmn001wNtr">wholeNo-tree-of-::
+  <p id="idFldHmn001wNtr">wholeNo-tree-of-bloodHmn::
     <br>* ,
     <a class="clsHide" href="#idFldHmn001wNtr"></a></p>
   </section>
 
   <section id="idFldHmn001gst">
-  <h2 id="idFldHmn001gstH2">GENERIC-SPECIFIC-TREE of blood
+  <h2 id="idFldHmn001gstH2">GENERIC-SPECIFIC-TREE of bloodHmn
     <a class="clsHide" href="#idFldHmn001gstH2"></a></h2>
   <p id="idFldHmn001gstnam">name::
-    <br>* Mcs.blood'generic-specific-tree,
+    <br>* Mcs.bloodHmn'generic-specific-tree,
     <a class="clsHide" href="#idFldHmn001gstnam"></a></p>
 
   <section id="idFldHmn001gtr">
-  <h3 id="idFldHmn001gtrH3">generic-tree of blood
+  <h3 id="idFldHmn001gtrH3">generic-tree of bloodHmn
     <a class="clsHide" href="#idFldHmn001gtrH3"></a></h3>
   <p id="idFldHmn001gnc">generic-of-blood::
     <br>* <a class="clsPreview" href="#idBdyHmn098">connective-tissue</a>,
@@ -3550,21 +3559,21 @@
   </section>
 
   <section id="idFldHmn001str">
-  <h3 id="idFldHmn001strH3">specific-tree of blood
+  <h3 id="idFldHmn001strH3">specific-tree of bloodHmn
     <a class="clsHide" href="#idFldHmn001strH3"></a></h3>
-  <p id="idFldHmn001spc">specific-of-blood::
+  <p id="idFldHmn001spc">specific-of-bloodHmn::
     <br>* ,
     <a class="clsHide" href="#idFldHmn001spc"></a></p>
   </section>
   </section>
 
   <section id="idFldHmn001_7">
-  <h2 id="idFldHmn001_7H2">blood.type
+  <h2 id="idFldHmn001_7H2">bloodHmn.type
     <a class="clsHide" href="#idFldHmn001_7H2"></a></h2>
   <p id="idFldHmn001_7nam">name::
-    <br>* Mcs.blood.type,
-    <br>* Mcs.blood-group,
-    <br>* Mcs.blood-type,
+    <br>* Mcs.bloodHmn.type,
+    <br>* Mcs.bloodHmn-group,
+    <br>* Mcs.bloodHmn-type,
     <a class="clsHide" href="#idFldHmn001_7nam"></a></p>
   <p id="idFldHmn001_7dsn">description::
     <br>A blood type (also called a blood group) is a classification of blood based on the presence or absence of inherited antigenic substances on the surface of red blood cells (RBCs).

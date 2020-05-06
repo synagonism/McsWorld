@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.chmCpd (chemical-compound 0-5-0.2020-04-21 draft)</title>
+  <title>Mcs.chmCpd (chemical-compound 0-6-0.2020-05-06 draft)</title>
   <meta name="keywords" content="chemical-compound, chmCpd, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -175,8 +175,9 @@
   <h1 id="idChmOgcH1">chmCpd.organic
     <a class="clsHide" href="#idChmOgcH1"></a></h1>
   <p id="idChmOgcnam">name::
-    <br>* Mcs.chmOgc,
     <br>* Mcs.chmCpd.organic!⇒chmOgc,
+    <br>* Mcs.chmCpd.001-organic!⇒chmOgc,
+    <br>* Mcs.chmOgc,
     <br>* Mcs.organic-compound!⇒chmOgc,
     <a class="clsHide" href="#idChmOgcnam"></a></p>
   <p id="idChmOgcdsn">description::
@@ -209,8 +210,8 @@
   <h3 id="idChmOgc001H3">chmOgc.steroid
     <a class="clsHide" href="#idChmOgc001H3"></a></h3>
   <p id="idChmOgc001nam">name::
+    <br>* Mcs.chmOgc.steroid,
     <br>* Mcs.chmOgc.001-steroid,
-    <br>* Mcs.chmOgc.steroid-001,
     <br>* Mcs.steroid-chmOgc-001,
     <a class="clsHide" href="#idChmOgc001nam"></a></p>
   <p id="idChmOgc001dsn">description::
@@ -220,23 +221,125 @@
     <br>[https://en.wikipedia.org/wiki/Steroid {2020-03-11}]
     <a class="clsHide" href="#idChmOgc001dsn"></a></p>
   </section>
+
+  <section id="idChmOgc002">
+  <h3 id="idChmOgc002H3">chmOgc.carboxylic-acid
+    <a class="clsHide" href="#idChmOgc002H3"></a></h3>
+  <p id="idChmOgc002nam">name::
+    <br>* Mcs.chmOgc.carboxylic-acic,
+    <br>* Mcs.chmOgc.002-carboxylic-acic,
+    <br>* Mcs.carboxylic-acic,
+    <a class="clsHide" href="#idChmOgc002nam"></a></p>
+  <p id="idChmOgc002dsn">description::
+    <br>"A carboxylic acid is an organic compound that contains a carboxyl group (C(=O)OH).[1] The general formula of a carboxylic acid is R–COOH, with R referring to the alkyl group. Carboxylic acids occur widely. Important examples include the amino acids and acetic acid. Deprotonation of a carboxyl group gives a carboxylate anion."
+    <br>[{2020-05-06} https://en.wikipedia.org/wiki/Carboxylic_acid]
+    <a class="clsHide" href="#idChmOgc002dsn"></a></p>
+  </section>
+
+  <section id="idChmOgc005">
+  <h3 id="idChmOgc005H3">chmOgc.amino-acid
+    <a class="clsHide" href="#idChmOgc005H3"></a></h3>
+  <p id="idChmOgc005nam">name::
+    <br>* Mcs.chmOgn.amino-acid!⇒acidAmino, /amíno/,
+    <br>* Mcs.chmOgn.005-amino-acid!⇒acidAmino,
+    <br>* Mcs.acidAmino,
+    <br>* Mcs.amino-acid--chmOgn!⇒acidAmino,
+    <a class="clsHide" href="#idChmOgc005nam"></a></p>
+  <p id="idChmOgc005dsn">description::
+    <br>"Amino acids are organic compounds that contain amine (-NH2) and carboxyl (-COOH) functional groups, along with a side chain (R group) specific to each amino acid.[1][2] The key elements of an amino acid are carbon (C), hydrogen (H), oxygen (O), and nitrogen (N), although other elements are found in the side chains of certain amino acids. About 500 naturally occurring amino acids are known (though only 20 appear in the genetic code) and can be classified in many ways.[3] They can be classified according to the core structural functional groups' locations as alpha- (α-), beta- (β-), gamma- (γ-) or delta- (δ-) amino acids; other categories relate to polarity, pH level, and side chain group type (aliphatic, acyclic, aromatic, containing hydroxyl or sulfur, etc.). In the form of proteins, amino acid residues form the second-largest component (water is the largest) of human muscles and other tissues.[4] Beyond their role as residues in proteins, amino acids participate in a number of processes such as neurotransmitter transport and biosynthesis."
+    <br>[{2020-05-06} https://en.wikipedia.org/wiki/Amino_acid]
+    <a class="clsHide" href="#idChmOgc005dsn"></a></p>
+  </section>
+
+  <section id="idChmOgc003">
+  <h3 id="idChmOgc003H3">chmOgc.asetic-acid
+    <a class="clsHide" href="#idChmOgc003H3"></a></h3>
+  <p id="idChmOgc003nam">name::
+    <br>* Mcs.chmOgc.asetic-acid, /a-sí-tik/,
+    <br>* Mcs.chmOgc.003-asetic-acid,
+    <br>* Mcs.asetic-acid-chmOgc,
+    <br>* Mcs.ethanoic-acid-chmOgc,
+    <a class="clsHide" href="#idChmOgc003nam"></a></p>
+  <p id="idChmOgc003dsn">description::
+    <br>"Acetic acid /əˈsiːtɪk/, systematically named ethanoic acid /ˌɛθəˈnoʊɪk/, is a colourless liquid organic compound with the chemical formula CH3COOH (also written as CH3CO2H or C2H4O2). When undiluted, it is sometimes called glacial acetic acid. Vinegar is no less than 4% acetic acid by volume, making acetic acid the main component of vinegar apart from water. Acetic acid has a distinctive sour taste and pungent smell. In addition to household vinegar, it is mainly produced as a precursor to polyvinyl acetate and cellulose acetate. It is classified as a weak acid since it only partially dissociates in solution, but concentrated acetic acid is corrosive and can attack the skin.
+    <br>Acetic acid is the second simplest carboxylic acid (after formic acid). It consists of a methyl group attached to a carboxyl group. It is an important chemical reagent and industrial chemical, used primarily in the production of cellulose acetate for photographic film, polyvinyl acetate for wood glue, and synthetic fibres and fabrics. In households, diluted acetic acid is often used in descaling agents. In the food industry, acetic acid is controlled by the food additive code E260 as an acidity regulator and as a condiment. In biochemistry, the acetyl group, derived from acetic acid, is fundamental to all forms of life. When bound to coenzyme A, it is central to the metabolism of carbohydrates and fats.
+    <br>The global demand for acetic acid is about 6.5 million metric tons per year (Mt/a), of which approximately 1.5 Mt/a is met by recycling; the remainder is manufactured from methanol.[9] Vinegar is mostly dilute acetic acid, often produced by fermentation and subsequent oxidation of ethanol."
+    <br>[{2020-05-06} https://en.wikipedia.org/wiki/Acetic_acid]
+    <a class="clsHide" href="#idChmOgc003dsn"></a></p>
+  </section>
+
+  <section id="idChmOgc004">
+  <h3 id="idChmOgc004H3">chmOgc.fatty-acid
+    <a class="clsHide" href="#idChmOgc004H3"></a></h3>
+  <p id="idChmOgc004nam">name::
+    <br>* Mcs.chmOgc.fatty-acid!⇒acidFatty,
+    <br>* Mcs.chmOgc.004-fatty-acid!⇒acidFatty,
+    <br>* Mcs.acidFatty,
+    <br>* Mcs.fatty-acid-chmOgc!⇒acidFatty,
+    <br>====== langoGreek:
+    <br>* McsEll.λιπαρό-οξύ!=acidFatty,
+    <a class="clsHide" href="#idChmOgc004nam"></a></p>
+  <p id="idChmOgc004dsn">description::
+    <br>"In chemistry, particularly in biochemistry, a fatty acid is a carboxylic acid with a long aliphatic chain, which is either saturated or unsaturated. Most naturally occurring fatty acids have an unbranched chain of an even number of carbon atoms, from 4 to 28.[1] Fatty acids are usually not found in organisms, but instead as three main classes of esters: triglycerides, phospholipids, and cholesteryl esters. In any of these forms, fatty acids are both important dietary sources of fuel for animals and they are important structural components for cells."
+    <br>[{2020-05-06} https://en.wikipedia.org/wiki/Fatty_acid]
+    <a class="clsHide" href="#idChmOgc004dsn"></a></p>
+  <p id="idChmOgc004gtr">generic-tree-of-acidFatty::
+    <br>* <a class="clsPreview" href="#idChmOgc002">acidCarboxylic</a>,
+    <a class="clsHide" href="#idChmOgc004gtr"></a></p>
+
+  <section id="idChmOgc004gst">
+  <h2 id="idChmOgc004gstH2">GENERIC-SPECIFIC-TREE of acidFatty
+    <a class="clsHide" href="#idChmOgc004gstH2"></a></h2>
+  <p id="idChmOgc004gstnam">name::
+    <br>* Mcs.acidFatty'generic-specific-tree,
+    <a class="clsHide" href="#idChmOgc004gstnam"></a></p>
+
+  <section id="idChmOgc004gtr">
+  <h3 id="idChmOgc004gtrH3">GENERIC-TREE of acidFatty
+    <a class="clsHide" href="#idChmOgc004gtrH3"></a></h3>
+  <p id="idChmOgc004gnc">generic-of-acidFatty::
+    <br>*
+    <a class="clsHide" href="#idChmOgc004gnc"></a></p>
+  <p id="idChmOgc004atttr">attribute-tree-of-acidFatty::
+    <br>* ,
+    <a class="clsHide" href="#idChmOgc004atttr"></a></p>
+  <p id="idChmOgc004attihf">att-tree-inherited-from::
+    <br>· :
+    <br>* ,
+    <a class="clsHide" href="#idChmOgc004attihf"></a></p>
+  <p id="idChmOgc004attown">att-tree-own-of-acidFatty::
+    <br>* ,
+    <a class="clsHide" href="#idChmOgc004attown"></a></p>
+  </section>
+
+  <section id="idChmOgc004str">
+  <h3 id="idChmOgc004strH3">SPECIFIC-TREE of acidFatty
+    <a class="clsHide" href="#idChmOgc004strH3"></a></h3>
+  <p id="idChmOgc004spc">specific-of-acidFatty::
+    <br>"Fatty acids are classified in many ways: by length, by saturation vs unsaturation, by even vs odd carbon content, and by linear vs branched."
+    <br>[{2020-05-06} https://en.wikipedia.org/wiki/Fatty_acid]
+    <a class="clsHide" href="#idChmOgc004spc"></a></p>
+  </section>
+  </section>
+  </section>
 </section>
 
-<section id="idChmOgcN">
-  <h1 id="idChmOgcNH1">chmCpd.organicNo
-    <a class="clsHide" href="#idChmOgcNH1"></a></h1>
-  <p id="idChmOgcNnam">name::
-    <br>* Mcs.chmOgcNo,
+<section id="idChmCpd002">
+  <h1 id="idChmCpd002H1">chmCpd.organicNo
+    <a class="clsHide" href="#idChmCpd002H1"></a></h1>
+  <p id="idChmCpd002nam">name::
     <br>* Mcs.chmCpd.organicNo!⇒chmOgcNo,
+    <br>* Mcs.chmCpd.002-organicNo!⇒chmOgcNo,
+    <br>* Mcs.chmOgcNo,
     <br>* Mcs.inorganic-compound!⇒chmOgcNo,
     <br>* Mcs.organicNo-compound!⇒chmOgcNo,
-    <a class="clsHide" href="#idChmOgcNnam"></a></p>
-  <p id="idChmOgcNdsn">description::
+    <a class="clsHide" href="#idChmCpd002nam"></a></p>
+  <p id="idChmCpd002dsn">description::
     <br>"An inorganic compound is typically a chemical compound that lacks carbon–hydrogen bonds, that is, a compound that is not an organic compound. However, the distinction is not clearly defined and agreed upon, and authorities have differing views on the subject.[1][2][3]
     <br>Inorganic compounds comprise most of the Earth's crust, although the compositions of the deep mantle remain active areas of investigation.[4]
     <br>Some simple compounds that contain carbon are often considered inorganic. Examples include carbon monoxide, carbon dioxide, carbonates, carbides, cyanides, cyanates, and thiocyanates. Many of these are normal parts of mostly organic systems, including organisms; describing a chemical as inorganic does not necessarily mean that it does not occur within living things."
     <br>[https://en.wikipedia.org/wiki/Inorganic_compound {2020-03-11}]
-    <a class="clsHide" href="#idChmOgcNdsn"></a></p>
+    <a class="clsHide" href="#idChmCpd002dsn"></a></p>
 
   <section id="idChmOgnNgst">
   <h3 id="idChmOgnNgstH3">GENERIC-SPECIFIC-TREE of chmOgcNo
@@ -255,6 +358,43 @@
     <br>* https://en.wikipedia.org/wiki/List_of_inorganic_compounds,
     <a class="clsHide" href="#idChmOgnNgstwpa"></a></p>
   </section>
+</section>
+
+<section id="idChmCpd003">
+  <h1 id="idChmCpd003H1">chmCpd.acid
+    <a class="clsHide" href="#idChmCpd003H1"></a></h1>
+  <p id="idChmCpd003nam">name::
+    <br>* Mcs.chmCpd.acid,
+    <br>* Mcs.chmCpd.003-acid,
+    <br>* Mcs.acid-chmCpd,
+    <a class="clsHide" href="#idChmCpd003nam"></a></p>
+  <p id="idChmCpd003dsn">description::
+    <br>"acid
+    <br>https://doi.org/10.1351/goldbook.A00071
+    <br>A molecular entity or chemical species capable of donating a hydron (proton) (see Brønsted acid) or capable of forming a covalent bond with an electron pair (see Lewis acid).
+    <br>See also: hard acid, carboxylic acids, oxoacids, sulfonic acids
+    <br>Source: PAC, 1994, 66, 1077. (Glossary of terms used in physical organic chemistry (IUPAC Recommendations 1994)) on page 1081 [Terms] [Paper]
+    <br>Cite as: IUPAC. Compendium of Chemical Terminology, 2nd ed. (the "Gold Book"). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997). Online version (2019-) created by S. J. Chalk. ISBN 0-9678550-9-8. https://doi.org/10.1351/goldbook."
+    <a class="clsHide" href="#idChmCpd003dsn"></a></p>
+</section>
+
+<section id="idChmCpd004">
+  <h1 id="idChmCpd004H1">chmCpd.base
+    <a class="clsHide" href="#idChmCpd004H1"></a></h1>
+  <p id="idChmCpd004nam">name::
+    <br>* Mcs.chmCpd.base,
+    <br>* Mcs.chmCpd.004-base,
+    <br>* Mcs.base-chmCpd,
+    <a class="clsHide" href="#idChmCpd004nam"></a></p>
+  <p id="idChmCpd004dsn">description::
+    <br>"base
+    <br>https://doi.org/10.1351/goldbook.B00601
+    <br>A chemical species or molecular entity having an available pair of electrons capable of forming a covalent bond with a hydron (proton) (see Brønsted base) or with the vacant orbital of some other species (see Lewis base).
+    <br>See also: hard base, superbase
+    <br>Sources: PAC, 1990, 62, 2167. (Glossary of atmospheric chemistry terms (Recommendations 1990)) on page 2176 [Terms] [Paper]
+    <br>PAC, 1994, 66, 1077. (Glossary of terms used in physical organic chemistry (IUPAC Recommendations 1994)) on page 1088 [Terms] [Paper]
+    <br>Cite as: IUPAC. Compendium of Chemical Terminology, 2nd ed. (the "Gold Book"). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997). Online version (2019-) created by S. J. Chalk. ISBN 0-9678550-9-8. https://doi.org/10.1351/goldbook."
+    <a class="clsHide" href="#idChmCpd004dsn"></a></p>
 </section>
 
 <section id="idMeta">
