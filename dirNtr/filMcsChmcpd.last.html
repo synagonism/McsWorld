@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.chmCpd (chemical-compound 0-6-0.2020-05-06 draft)</title>
+  <title>Mcs.chmCpd (chemical-compound 0-7-0.2020-05-07 draft)</title>
   <meta name="keywords" content="chemical-compound, chmCpd, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -172,7 +172,7 @@
 </section>
 
 <section id="idChmOgc">
-  <h1 id="idChmOgcH1">chmCpd.organic
+  <h1 id="idChmOgcH1">chmCpd.organic-001
     <a class="clsHide" href="#idChmOgcH1"></a></h1>
   <p id="idChmOgcnam">name::
     <br>* Mcs.chmCpd.organic!⇒chmOgc,
@@ -325,7 +325,7 @@
 </section>
 
 <section id="idChmCpd002">
-  <h1 id="idChmCpd002H1">chmCpd.organicNo
+  <h1 id="idChmCpd002H1">chmCpd.organicNo-002
     <a class="clsHide" href="#idChmCpd002H1"></a></h1>
   <p id="idChmCpd002nam">name::
     <br>* Mcs.chmCpd.organicNo!⇒chmOgcNo,
@@ -361,12 +361,13 @@
 </section>
 
 <section id="idChmCpd003">
-  <h1 id="idChmCpd003H1">chmCpd.acid
+  <h1 id="idChmCpd003H1">chmCpd.acid-003
     <a class="clsHide" href="#idChmCpd003H1"></a></h1>
   <p id="idChmCpd003nam">name::
-    <br>* Mcs.chmCpd.acid,
-    <br>* Mcs.chmCpd.003-acid,
-    <br>* Mcs.acid-chmCpd,
+    <br>* Mcs.chmCpd.acid!⇒chmAcid,
+    <br>* Mcs.chmCpd.003-acid!⇒chmAcid,
+    <br>* Mcs.acid-chmCpd!⇒chmAcid,
+    <br>* Mcs.chmAcid,
     <a class="clsHide" href="#idChmCpd003nam"></a></p>
   <p id="idChmCpd003dsn">description::
     <br>"acid
@@ -379,12 +380,13 @@
 </section>
 
 <section id="idChmCpd004">
-  <h1 id="idChmCpd004H1">chmCpd.base
+  <h1 id="idChmCpd004H1">chmCpd.base-004
     <a class="clsHide" href="#idChmCpd004H1"></a></h1>
   <p id="idChmCpd004nam">name::
-    <br>* Mcs.chmCpd.base,
-    <br>* Mcs.chmCpd.004-base,
-    <br>* Mcs.base-chmCpd,
+    <br>* Mcs.chmCpd.base!⇒chmBase,
+    <br>* Mcs.chmCpd.004-base!⇒chmBase,
+    <br>* Mcs.base-chmCpd!⇒chmBase,
+    <br>* Mcs.chmBase,
     <a class="clsHide" href="#idChmCpd004nam"></a></p>
   <p id="idChmCpd004dsn">description::
     <br>"base
@@ -395,6 +397,37 @@
     <br>PAC, 1994, 66, 1077. (Glossary of terms used in physical organic chemistry (IUPAC Recommendations 1994)) on page 1088 [Terms] [Paper]
     <br>Cite as: IUPAC. Compendium of Chemical Terminology, 2nd ed. (the "Gold Book"). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997). Online version (2019-) created by S. J. Chalk. ISBN 0-9678550-9-8. https://doi.org/10.1351/goldbook."
     <a class="clsHide" href="#idChmCpd004dsn"></a></p>
+</section>
+
+<section id="idChmCpd005">
+  <h1 id="idChmCpd005H1">chmCpd.salt-005
+    <a class="clsHide" href="#idChmCpd005H1"></a></h1>
+  <p id="idChmCpd005nam">name::
+    <br>* Mcs.chmCpd.salt!⇒chmSalt,
+    <br>* Mcs.chmCpd.005-salt!⇒chmSalt,
+    <br>* Mcs.chmSalt,
+    <br>* Mcs.salt-chmCpd!⇒chmSalt,
+    <a class="clsHide" href="#idChmCpd005nam"></a></p>
+  <p id="idChmCpd005dsn">description::
+    <br>"In chemistry, a salt is a chemical compound consisting of an ionic assembly of cations and anions.[1] Salts are composed of related numbers of cations (positively charged ions) and anions (negatively charged ions) so that the product is electrically neutral (without a net charge). These component ions can be inorganic, such as chloride (Cl−), or organic, such as acetate (CH3CO−2); and can be monatomic, such as fluoride (F−) or polyatomic, such as sulfate (SO2−4)."
+    <br>[{2020-05-07} https://en.wikipedia.org/wiki/Salt_(chemistry)]
+    <a class="clsHide" href="#idChmCpd005dsn"></a></p>
+
+  <section id="idChmCpd005001">
+  <h2 id="idChmCpd005001H2">chmSalt.baking-soda-001
+    <a class="clsHide" href="#idChmCpd005001H2"></a></h2>
+  <p id="idChmCpd005001nam">name::
+    <br>* Mcs.chmSalt.baking-soda!⇒saltSodium-bicarbonate,
+    <br>* Mcs.chmSalt.001-baking-soda!⇒saltSodium-bicarbonate,
+    <br>* Mcs.baking-soda!⇒saltSodium-bicarbonate,
+    <br>* Mcs.sodium-bicarbonate!⇒saltSodium-bicarbonate,
+    <br>* Mcs.sodium-hydrogen-carbonate!⇒saltSodium-bicarbonate,
+    <a class="clsHide" href="#idChmCpd005001nam"></a></p>
+  <p id="idChmCpd005001dsn">description::
+    <br>"Sodium bicarbonate (IUPAC name: sodium hydrogen carbonate), commonly known as baking soda (mainly North America) or bicarbonate of soda, is a chemical compound with the formula NaHCO3. It is a salt composed of a sodium cation (Na+) and a bicarbonate anion (HCO3−). Sodium bicarbonate is a white solid that is crystalline, but often appears as a fine powder. It has a slightly salty, alkaline taste resembling that of washing soda (sodium carbonate). The natural mineral form is nahcolite. It is a component of the mineral natron and is found dissolved in many mineral springs.[citation needed]"
+    <br>[{2020-05-07} https://en.wikipedia.org/wiki/Sodium_bicarbonate]
+    <a class="clsHide" href="#idChmCpd005001dsn"></a></p>
+  </section>
 </section>
 
 <section id="idMeta">

@@ -47,10 +47,11 @@
     <a class="clsHide" href="#idInfHmnatt001H1"></a></h1>
   <p id="idInfHmnatt001nam">name::
     <br>* Mcs.info'att002-referent,
-    <br>* Mcs.info'referent-att002,
+    <br>* Mcs.info'referent,
+    <br>* Mcs.referent-of-info,
     <a class="clsHide" href="#idInfHmnatt001nam"></a></p>
   <p id="idInfHmnatt001dsn">description::
-    <br>·
+    <br>· info'referent is the-entity the-info models.
     <a class="clsHide" href="#idInfHmnatt001dsn"></a></p>
 </section>
 
@@ -241,16 +242,16 @@
 </section>
 
 <section id="idInfHmnBrn001">
-  <h1 id="idInfHmnBrn001H1">infoBrain.brainin
+  <h1 id="idInfHmnBrn001H1">infoBrain.in
     <a class="clsHide" href="#idInfHmnBrn001H1"></a></h1>
   <p id="idInfHmnBrn001nam">name::
-    <br>* Mcs.infoBrain.brainin,
-    <br>* Mcs.infoBrain.001-brainin,
-    <br>* Mcs.brainin-infoBrain,
+    <br>* Mcs.infoBrain.in!⇒infoBrainIn,
+    <br>* Mcs.infoBrain.001-brainin!⇒infoBrainIn,
+    <br>* Mcs.brainin-infoBrain!⇒infoBrainIn,
     <br>* Mcs.infoBrainIn,
-    <br>* Mcs.infoBrainSensorialNo,
-    <br>* Mcs.sensorialNo-brain-info,
-    <br>* Mcs.sensorialNo-infoBrain,
+    <br>* Mcs.infoBrainSensorialNo!⇒infoBrainIn,
+    <br>* Mcs.sensorialNo-brain-info!⇒infoBrainIn,
+    <br>* Mcs.sensorialNo-infoBrain!⇒infoBrainIn,
     <a class="clsHide" href="#idInfHmnBrn001nam"></a></p>
   <p id="idInfHmnBrn001dsn">description::
     <br>· brainin-infoBrain is infoBrain inside the-brain.
@@ -259,13 +260,22 @@
   <p id="idInfHmnBrn001str">specific-tree-of-infoBrainIn::
     <br>* mind-info,
     <br>* semaso-info,
+    <br>===
+    <br>* sensation,
+    <br>* preconcept,
+    <br>* mind-concept,
+    <br>* semaso-concept,
+    <br>* brainIn-concept,
+    <br>* mind-view,
+    <br>* mind-worldview,
+    <br>* semaso-view,
     <a class="clsHide" href="#idInfHmnBrn001str"></a></p>
 
   <section id="idInfHmnBrn001Sstn">
-  <h2 id="idInfHmnBrn001SstnH2">infoBrainin.sensation
+  <h2 id="idInfHmnBrn001SstnH2">infoBrainIn.sensation
     <a class="clsHide" href="#idInfHmnBrn001SstnH2"></a></h2>
   <p id="idInfHmnBrn001Sstnnam">name::
-    <br>* Mcs.infoBrainin.sensation!⇒sensation,
+    <br>* Mcs.infoBrainIn.sensation!⇒sensation,
     <br>* Mcs.sensation,
     <br>* Mcs.sensing'03_sensation!⇒sensation,
     <br>* Mcs.sensing'att003-sensation!⇒sensation,
@@ -275,7 +285,7 @@
     <br>* McsEll.αίσθημα!=sensation,
     <a class="clsHide" href="#idInfHmnBrn001Sstnnam"></a></p>
   <p id="idInfHmnBrn001Sstndsn">description::
-    <br>· the-output of <a class="clsPreview" href="../dirHlth/filMcsBdyHmn.last.html#idBrnHmnsnsg">sensing</a>, the-infoMind, is the-sensation.
+    <br>· the-output of <a class="clsPreview" href="../dirHlth/filMcsBdyHmn.last.html#idBrnHmnsnsg">sensing</a>, is the-sensation.
     <a class="clsHide" href="#idInfHmnBrn001Sstndsn"></a></p>
 
   <section id="idInfHmnBrn001Sstnstml">
@@ -290,10 +300,10 @@
   </section>
 
   <section id="idInfHmnBrn001Pcpt">
-  <h2 id="idInfHmnBrn001PcptH2">infoBrainin.preconcept
+  <h2 id="idInfHmnBrn001PcptH2">infoBrainIn.preconcept
     <a class="clsHide" href="#idInfHmnBrn001PcptH2"></a></h2>
   <p id="idInfHmnBrn001Pcptnam">name::
-    <br>* Mcs.infoBrainin.preconcept,
+    <br>* Mcs.infoBrainIn.preconcept,
     <br>* Mcs.preconcept,
     <a class="clsHide" href="#idInfHmnBrn001Pcptnam"></a></p>
   <p id="idInfHmnBrn001Pcptdsn">description::
@@ -308,18 +318,20 @@
     <br>* Mcs.referent-of-preconcept,
     <a class="clsHide" href="#idInfHmnBrn001Pcptrftnam"></a></p>
   <p id="idInfHmnBrn001Pcptrftdsn">description::
-    <br>· referent-of-preconcept is the-stimulus of its sensations.
+    <br>· referent-of-preconcept is the-stimulus of its <a class="clsPreview" href="#idInfHmnBrn001Sstn">sensations</a>.
     <a class="clsHide" href="#idInfHmnBrn001Pcptrftdsn"></a></p>
   </section>
   </section>
 
   <section id="idInfHmnBrn001Mcpt">
-  <h2 id="idInfHmnBrn001McptH2">infoBrainin.mind-concept
+  <h2 id="idInfHmnBrn001McptH2">infoBrainIn.mind-concept
     <a class="clsHide" href="#idInfHmnBrn001McptH2"></a></h2>
   <p id="idInfHmnBrn001Mcptnam">name::
-    <br>* Mcs.infoBrainin.mind-concept!⇒cptMind,
+    <br>* Mcs.infoBrainIn.mind-concept!⇒cptMind,
     <br>* Mcs.conceptMind!⇒cptMind,
     <br>* Mcs.cptMind, {2020-04-30},
+    <br>* Mcs.infoMind.001-concept!⇒cptMind,
+    <br>* Mcs.mindConcept!⇒cptMind,
     <br>* Mcs.mind-concept!⇒cptMind,
     <a class="clsHide" href="#idInfHmnBrn001Mcptnam"></a></p>
   <p id="idInfHmnBrn001Mcptdsn">description::
@@ -353,54 +365,93 @@
   </section>
 
   <section id="idInfHmnBrn001Scpt">
-  <h2 id="idInfHmnBrn001ScptH2">infoBrainin.semaso-concept (<a class="clsPreview" href="filMcsLhmn.last.html#idLhmnsmscpt">link</a>)
+  <h2 id="idInfHmnBrn001ScptH2">infoBrainIn.semaso-concept (<a class="clsPreview" href="filMcsLhmn.last.html#idLhmnsmscpt">link</a>)
     <a class="clsHide" href="#idInfHmnBrn001ScptH2"></a></h2>
   </section>
 
   <section id="idInfHmnBrn001Cpt">
-  <h2 id="idInfHmnBrn001CptH2">infoBrainin.concept
+  <h2 id="idInfHmnBrn001CptH2">infoBrainIn.concept
     <a class="clsHide" href="#idInfHmnBrn001CptH2"></a></h2>
   <p id="idInfHmnBrn001Cptnam">name::
-    <br>* Mcs.infoBrainin.concept,
+    <br>* Mcs.infoBrainIn.concept,
     <br>* Mcs.brainin-concept,
     <a class="clsHide" href="#idInfHmnBrn001Cptnam"></a></p>
   <p id="idInfHmnBrn001Cptdsn">description::
     <br>· brainin-concept is <a class="clsPreview" href="#idInfHmnBrn001Mcpt">a-mind-concept</a> or <a class="clsPreview" href="filMcsLhmn.last.html#idLhmnsmscpt">a-semaso-concept</a>.
     <a class="clsHide" href="#idInfHmnBrn001Cptdsn"></a></p>
+ </section>
+
+  <section id="idInfHmnBrn001sms">
+  <h2 id="idInfHmnBrn001smsH2">infoBrainIn.semaso-info (<a class="clsPreview" href="filMcsLhmn.last.html#idLhmnsmsinf">link</a>)
+    <a class="clsHide" href="#idInfHmnBrn001smsH2"></a></h2>
   </section>
 
   <section id="idInfHmnMind">
-  <h2 id="idInfHmnMindH2">infoBrainin.mind
+  <h2 id="idInfHmnMindH2">infoBrainIn.mind-info
     <a class="clsHide" href="#idInfHmnMindH2"></a></h2>
   <p id="idInfHmnMindnam">name::
-    <br>* Mcs.infoBrainin.mind,
-    <br>* Mcs.human'att003-mind,
-    <br>* Mcs.human'mind,
-    <br>* Mcs.mind,
-    <br>* Mcs.mindHmn,
-    <br>* Mcs.mind-info,
+    <br>* Mcs.infoBrainIn.mind!⇒infoMind,
+    <br>* Mcs.human'att003-mind!⇒infoMind,
+    <br>* Mcs.human'mind!⇒infoMind,
+    <br>* Mcs.infoMind,
+    <br>* Mcs.mind!⇒infoMind,
+    <br>* Mcs.mindHmn!⇒infoMind,
+    <br>* Mcs.mind-info!⇒infoMind,
     <a class="clsHide" href="#idInfHmnMindnam"></a></p>
   <p id="idInfHmnMinddsn">description::
     <br>· mind-info is ANY <a class="clsPreview" href="#idInfHmnBrn001">brainin-info</a> except <a class="clsPreview" href="filMcsLhmn.last.html#idLhmnsmsinf">semaso-info</a>.
     <a class="clsHide" href="#idInfHmnMinddsn"></a></p>
   <p id="idInfHmnMindstr">specific-tree-of-mindHmn::
-    <br>* sensation,
-    <br>* preconcept,
-    <br>* mind-concept,
-    <br>* mind-view,
-    <br>* mind-worldview,
+    <br>* <a class="clsPreview" href="#idInfHmnBrn001Sstn">sensation</a>,
+    <br>* <a class="clsPreview" href="#idInfHmnBrn001Pcpt">preconcept</a>,
+    <br>* <a class="clsPreview" href="#idInfHmnBrn001Mcpt">mind-concept</a>,
+    <br>* <a class="clsPreview" href="#idInfHmnMind002">mind-view</a>,
+    <br>* <a class="clsPreview" href="#idInfHmnMind003">mind-worldview</a>,
     <a class="clsHide" href="#idInfHmnMindstr"></a></p>
+  </section>
+
+  <section id="idInfHmnMind002">
+  <h2 id="idInfHmnMind002H2">infoBrainIn.mind-view
+    <a class="clsHide" href="#idInfHmnMind002H2"></a></h2>
+  <p id="idInfHmnMind002nam">name::
+    <br>* Mcs.infoBrainIn.mind-view!⇒mindView,
+    <br>* Mcs.infoMind.view!⇒mindView,
+    <br>* Mcs.infoMind.002-view!⇒mindView,
+    <br>* Mcs.mindView,
+    <br>* Mcs.mind-view!⇒mindView,
+    <br>* Mcs.viewMind!⇒mindView,
+    <a class="clsHide" href="#idInfHmnMind002nam"></a></p>
+  <p id="idInfHmnMind002dsn">description::
+    <br>· mind-view is a-system of <a class="clsPreview" href="#idInfHmnBrn001Mcpt">mind-concepts</a>.
+    <a class="clsHide" href="#idInfHmnMind002dsn"></a></p>
+  </section>
+
+  <section id="idInfHmnMind003">
+  <h2 id="idInfHmnMind003H2">infoBrainIn.mind-worldview
+    <a class="clsHide" href="#idInfHmnMind003H2"></a></h2>
+  <p id="idInfHmnMind003nam">name::
+    <br>* Mcs.infoBrainIn.mind-worldview!⇒mindWorldview,
+    <br>* Mcs.infoMind.worldview!⇒mindWorldview,
+    <br>* Mcs.infoMind.002-worldview!⇒mindWorldview,
+    <br>* Mcs.mindWorldview,
+    <br>* Mcs.mind-worldview!⇒mindWorldview,
+    <br>* Mcs.worldviewMind!⇒mindWorldview,
+    <a class="clsHide" href="#idInfHmnMind003nam"></a></p>
+  <p id="idInfHmnMind003dsn">description::
+    <br>· mind-worldview is a-worldview comprised of <a class="clsPreview" href="#idInfHmnBrn001Mcpt">mind-concepts</a>.
+    <a class="clsHide" href="#idInfHmnMind003dsn"></a></p>
   </section>
 </section>
 
 <section id="idInfHmnBrn002">
-  <h1 id="idInfHmnBrn002H1">infoBrain.braininNo
+  <h1 id="idInfHmnBrn002H1">infoBrain.out
     <a class="clsHide" href="#idInfHmnBrn002H1"></a></h1>
   <p id="idInfHmnBrn002nam">name::
-    <br>* Mcs.infoBrain.braininNo,
+    <br>* Mcs.infoBrain.out,
     <br>* Mcs.infoBrain.002-braininNo,
     <br>* Mcs.braininNo-infoBrain,
     <br>* Mcs.infoBrainOut, {2020-05-07},
+    <br>* Mcs.infoBrain.braininNo,
     <br>* Mcs.infoBrainSensorial,
     <br>* Mcs.sensorial-brain-info,
     <br>* Mcs.sensorial-infoBrain,
