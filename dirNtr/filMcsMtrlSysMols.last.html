@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.mtrlSysMols (material.sys-of-molecules 0-6-0.2020-05-06 draft)</title>
+  <title>Mcs.mtrlSysMols (material.sys-of-molecules 0-7-0.2020-05-09 draft)</title>
   <meta name="keywords" content="system-of-molecules, mtrlSysMols, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -362,10 +362,13 @@
   <h1 id="idSysMols012H1">mtrlSysMols.fluid-012
     <a class="clsHide" href="#idSysMols012H1"></a></h1>
   <p id="idSysMols012nam">name::
-    <br>* Mcs.mtrlSysMols.012-fluid,
-    <br>* Mcs.mtrlSysMols.fluid-012,
-    <br>* Mcs.mtrlSysMols.solidNo-012,
-    <br>* Mcs.fluid-mtrlSysMols-012,
+    <br>* Mcs.mtrlSysMols.012-fluid!⇒mtrlFluid,
+    <br>* Mcs.mtrlSysMols.fluid-012!⇒mtrlFluid,
+    <br>* Mcs.mtrlFluid,
+    <br>* Mcs.mtrlSysMols.solidNo-012!⇒mtrlFluid,
+    <br>* Mcs.fluid-mtrlSysMols-012!⇒mtrlFluid,
+    <br>====== langoGreek:
+    <br>* McsEll.ρευστό!=mtrlFluid,
     <a class="clsHide" href="#idSysMols012nam"></a></p>
   <p id="idSysMols012dsn">description::
     <br>"In physics, a fluid is a substance that continually deforms (flows) under an applied shear stress, or external force. Fluids are a phase of matter and include liquids, gases and plasmas. They are substances with zero shear modulus, or, in simpler terms, substances which cannot resist any shear force applied to them.
@@ -376,12 +379,17 @@
 </section>
 
 <section id="idSysMols004">
-  <h1 id="idSysMols004H1">mtrlSysMols.liquid-004
+  <h1 id="idSysMols004H1">mtrlSysMols.fluid.liquid-004
     <a class="clsHide" href="#idSysMols004H1"></a></h1>
   <p id="idSysMols004nam">name::
-    <br>* Mcs.mtrlSysMols.004-liquid!⇒gas,
-    <br>* Mcs.mtrlSysMols.liquid-004!⇒gas,
-    <br>* Mcs.gas--sysMols-material,
+    <br>* Mcs.mtrlSysMols.004-liquid!⇒fluidLiquid,
+    <br>* Mcs.mtrlSysMols.liquid-004!⇒fluidLiquid,
+    <br>* Mcs.fluidLiquid,
+    <br>* Mcs.mtrlFluid.liquid!⇒fluidLiquid,
+    <br>* Mcs.liquid!⇒fluidLiquid,
+    <br>* Mcs.liquid--sysMols-material!⇒fluidLiquid,
+    <br>====== langoGreek:
+    <br>* McsEll.υγρό!=fluidLiquid,
     <a class="clsHide" href="#idSysMols004nam"></a></p>
   <p id="idSysMols004dsn">description::
     <br>"A liquid is a nearly incompressible fluid that conforms to the shape of its container but retains a (nearly) constant volume independent of pressure. As such, it is one of the four fundamental states of matter (the others being solid, gas, and plasma), and is the only state with a definite volume but no fixed shape. A liquid is made up of tiny vibrating particles of matter, such as atoms, held together by intermolecular bonds. Like a gas, a liquid is able to flow and take the shape of a container. Most liquids resist compression, although others can be compressed. Unlike a gas, a liquid does not disperse to fill every space of a container, and maintains a fairly constant density. A distinctive property of the liquid state is surface tension, leading to wetting phenomena. Water is, by far, the most common liquid on Earth.
@@ -391,12 +399,16 @@
 </section>
 
 <section id="idSysMols005">
-  <h1 id="idSysMols005H1">mtrlSysMols.gas-005
+  <h1 id="idSysMols005H1">mtrlSysMols.fluid.gas-005
     <a class="clsHide" href="#idSysMols005H1"></a></h1>
   <p id="idSysMols005nam">name::
-    <br>* Mcs.mtrlSysMols.005-gas!⇒gas,
-    <br>* Mcs.mtrlSysMols.gas-005!⇒gas,
-    <br>* Mcs.gas,
+    <br>* Mcs.mtrlSysMols.005-gas!⇒fluidGas,
+    <br>* Mcs.mtrlSysMols.gas-005!⇒fluidGas,
+    <br>* Mcs.fluidGas,
+    <br>* Mcs.gas!⇒fluidGas,
+    <br>* Mcs.mtrlFluid.gas!⇒fluidGas,
+    <br>====== langoGreek:
+    <br>* McsEll.αέριο!=fluidGas,
     <a class="clsHide" href="#idSysMols005nam"></a></p>
   <p id="idSysMols005dsn">description::
     <br>"Gas is one of the four fundamental states of matter (the others being solid, liquid, and plasma). A pure gas may be made up of individual atoms (e.g. a noble gas like neon), elemental molecules made from one type of atom (e.g. oxygen), or compound molecules made from a variety of atoms (e.g. carbon dioxide). A gas mixture, such as air, contains a variety of pure gases. What distinguishes a gas from liquids and solids is the vast separation of the individual gas particles. This separation usually makes a colorless gas invisible to the human observer. The interaction of gas particles in the presence of electric and gravitational fields are considered[by whom?] negligible, as indicated by the constant velocity vectors in the image.
@@ -406,12 +418,15 @@
 </section>
 
 <section id="idSysMols006">
-  <h1 id="idSysMols006H1">mtrlSysMols.plasma-006
+  <h1 id="idSysMols006H1">mtrlSysMols.fluid.plasma-006
     <a class="clsHide" href="#idSysMols006H1"></a></h1>
   <p id="idSysMols006nam">name::
-    <br>* Mcs.mtrlSysMols.006-plasma!⇒plasma,
-    <br>* Mcs.mtrlSysMols.plasma-006!⇒plasma,
-    <br>* Mcs.plasma--sysMols-material,
+    <br>* Mcs.mtrlSysMols.006-plasma!⇒fluidPlasma,
+    <br>* Mcs.mtrlSysMols.plasma-006!⇒fluidPlasma,
+    <br>* Mcs.fluidPlasma,
+    <br>* Mcs.mtrlFluid.plasma!⇒fluidPlasma,
+    <br>* Mcs.plasma!⇒fluidPlasma,
+    <br>* Mcs.plasma--sysMols-material!⇒fluidPlasma,
     <a class="clsHide" href="#idSysMols006nam"></a></p>
   <p id="idSysMols006dsn">description::
     <br>"Plasma (from Ancient Greek πλάσμα​, meaning 'moldable substance'[1]) is one of the four fundamental states of matter, and was first described by chemist Irving Langmuir[2] in the 1920s.[3] It consists of a gas of ions – atoms which have some of their orbital electrons removed – and free electrons. Plasma can be artificially generated by heating a neutral gas or subjecting it to a strong electromagnetic field to the point where an ionized gaseous substance becomes increasingly electrically conductive. The resulting charged ions and electrons become influenced by long-range electromagnetic fields, making the plasma dynamics more sensitive to these fields than a neutral gas.[4]
@@ -538,6 +553,7 @@
     <br>* Mcs.mtrlSysMols.chemical-010!⇒chemical,
     <br>* Mcs.bodyMtrChm!⇒chemical,
     <br>* Mcs.bodyMtrl.pure!⇒chemical,
+    <br>* Mcs.chm!⇒chemical,
     <br>* Mcs.chemical,
     <br>* Mcs.chemical-body!⇒chemical,
     <br>* Mcs.chemical-substance!⇒chemical,

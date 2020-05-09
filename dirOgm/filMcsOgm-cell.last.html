@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.cellOgm (cell-of-organism 0-18-0.2020-05-08 draft)</title>
+  <title>Mcs.cellOgm (cell-of-organism 0-19-0.2020-05-09 draft)</title>
   <meta name="keywords" content="cell-of-organism, cellOgm, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -654,26 +654,159 @@
   <h3 id="idCellOgmatt040att003H3">signal of cellOgm'signaling
     <a class="clsHide" href="#idCellOgmatt040att003H3"></a></h3>
   <p id="idCellOgmatt040att003nam">name::
-    <br>* Mcs.cellOgm'signaling'signal,
+    <br>* Mcs.cellOgm'signaling'signal!⇒cellOgm'signal,
+    <br>* Mcs.cellOgm'signal,
+    <br>* Mcs.cellOgm'signaling'att003-signal!⇒cellOgm'signal,
+    <br>* Mcs.signal-of-cellOgm'signaling!⇒cellOgm'signal,
     <a class="clsHide" href="#idCellOgmatt040att003nam"></a></p>
   <p id="idCellOgmatt040att003dsn">description::
     <br>"Cell signaling can be classified as either mechanical or biochemical based on the type of the signal. Mechanical signals are the forces exerted on the cell and the forces produced by the cell. These forces can both be sensed and responded to by the cells.[12] Biochemical signals are biochemical molecules such as proteins, lipids, ions, and gases. These signals can be categorized based on the distance between signaling and responder cells."
     <br>[{2020-05-07} https://en.wikipedia.org/wiki/Cell_signaling]
     <a class="clsHide" href="#idCellOgmatt040att003dsn"></a></p>
 
-  <section id="idCellOgmatt040att004">
-  <h4 id="idCellOgmatt040att004H4">signaling-molecule of cellOgm'signaling
-    <a class="clsHide" href="#idCellOgmatt040att004H4"></a></h4>
-  <p id="idCellOgmatt040att004nam">name::
-    <br>* Mcs.cellOgm'signaling'signaling-molecule,
-    <br>* Mcs.cellOgm'signaling'att004-signaling-molecule,
-    <br>* Mcs.cellOgm'signaling'signal,
-    <a class="clsHide" href="#idCellOgmatt040att004nam"></a></p>
-  <p id="idCellOgmatt040att004dsn">description::
+  <section id="idCellOgmatt042">
+  <h4 id="idCellOgmatt042H4">signal.biochemical
+    <a class="clsHide" href="#idCellOgmatt042H4"></a></h4>
+  <p id="idCellOgmatt042nam">name::
+    <br>* Mcs.cellOgm'signal.biochemical,
+    <br>* Mcs.cellOgm'signal.signaling-molecule,
+    <br>* Mcs.cellOgm'signal.001-signaling-molecule,
+    <br>* Mcs.cellOgm'receptor-ligand,
+    <br>* Mcs.cellOgm'att042-receptor-ligand,
+    <br>* Mcs.biochemical-signal-of-cellOgm,
+    <br>* Mcs.receptor-ligand-of-cellOgm,
+    <br>* Mcs.signaling-molecule-of-cellOgm,
+    <a class="clsHide" href="#idCellOgmatt042nam"></a></p>
+  <p id="idCellOgmatt042dsn">description::
     <br>"Each cell is programmed to respond to specific extracellular signal molecules.
-    <br>... Biochemical signals are biochemical molecules such as proteins, lipids, ions, and gases."
+    <br>... Biochemical signals are biochemical molecules such as proteins, lipids, ions, and gases.
+    <br>... Signaling molecules can belong to several chemical classes: lipids, phospholipids, amino acids, monoamines, proteins, glycoproteins, or gases. Signaling molecules binding surface receptors are generally large and hydrophilic (e.g. TRH, Vasopressin, Acetylcholine), while those entering the cell are generally small and hydrophobic (e.g. glucocorticoids, thyroid hormones, cholecalciferol, retinoic acid), but important exceptions to both are numerous, and a same molecule can act both via surface receptor or in an intracrine manner to different effects.[18]
+    <br>...
+    <br>* Hormones are the major signaling molecules of the endocrine system, though they often regulate each other's secretion via local signaling (e.g. islet of Langerhans cells), and most are also expressed in tissues for local purposes (e.g. angiotensin) or failing that, structurally related molecules are (e.g. PTHrP).
+    <br>* Neurotransmitters are signaling molecules of the nervous system, also including neuropeptides and neuromodulators. Neurotransmitters like the catecholamines are also secreted by the endocrine system into the systemic circulation.
+    <br>* Cytokines are signaling molecules of the immune system, with a primary paracrine or juxtacrine role, though they can during significant immune responses have a strong presence in the circulation, with systemic effect (altering iron metabolism or body temperature). Growth factors can be considered as cytokines or a different class.
+    <br>...
+    <br>Molecules that activate (or, in some cases, inhibit) receptors can be classified as hormones, neurotransmitters, cytokines, and growth factors, in general called receptor ligands."
     <br>[{2020-05-07} https://en.wikipedia.org/wiki/Cell_signaling]
-    <a class="clsHide" href="#idCellOgmatt040att004dsn"></a></p>
+    <a class="clsHide" href="#idCellOgmatt042dsn"></a></p>
+  </section>
+
+  <section id="idCellOgmatt040att003002">
+  <h4 id="idCellOgmatt040att003002H4">signal.mechanical
+    <a class="clsHide" href="#idCellOgmatt040att003002H4"></a></h4>
+  <p id="idCellOgmatt040att003002nam">name::
+    <br>* Mcs.cellOgm'signal.mechanical,
+    <br>* Mcs.cellOgm'signal.002-mechanical,
+    <br>* Mcs.mechanical-signal-of-cellOgm,
+    <a class="clsHide" href="#idCellOgmatt040att003002nam"></a></p>
+  <p id="idCellOgmatt040att003002dsn">description::
+    <br>"Cell signaling can be classified as either mechanical or biochemical based on the type of the signal. Mechanical signals are the forces exerted on the cell and the forces produced by the cell. These forces can both be sensed and responded to by the cells.[12] Biochemical signals are biochemical molecules such as proteins, lipids, ions, and gases. These signals can be categorized based on the distance between signaling and responder cells."
+    <br>[{2020-05-07} https://en.wikipedia.org/wiki/Cell_signaling]
+    <a class="clsHide" href="#idCellOgmatt040att003002dsn"></a></p>
+  </section>
+
+  <section id="idCellOgmatt040att003003">
+  <h4 id="idCellOgmatt040att003003H4">signal.hormone (<a class="clsPreview" href="filMcsOgm-sysMols.last.html#idHrmnOgm">link</a>)
+    <a class="clsHide" href="#idCellOgmatt040att003003H4"></a></h4>
+  </section>
+
+  <section id="idCellOgmatt040att003004">
+  <h4 id="idCellOgmatt040att003004H4">signal.neurotransmitter (<a class="clsPreview" href="filMcsOgm-sysMols.last.html#idSysMolsOgm005">link</a>)
+    <a class="clsHide" href="#idCellOgmatt040att003004H4"></a></h4>
+  </section>
+
+  <section id="idCellOgmatt040att003005">
+  <h4 id="idCellOgmatt040att003005H4">signal.cytokine (<a class="clsPreview" href="filMcsOgm-sysMols.last.html#idSysMolsOgm006">link</a>)
+    <a class="clsHide" href="#idCellOgmatt040att003005H4"></a></h4>
+  </section>
+  </section>
+
+  <section id="idCellOgmatt041">
+  <h3 id="idCellOgmatt041H3">receptor of cellOgm'signaling
+    <a class="clsHide" href="#idCellOgmatt041H3"></a></h3>
+  <p id="idCellOgmatt041nam">name::
+    <br>* Mcs.cellOgm'signaling'receptor!⇒cellOgm'receptor,
+    <br>* Mcs.cellOgm'signaling'att005-receptor!⇒cellOgm'receptor,
+    <br>* Mcs.cellOgm'att041-receptor,!⇒cellOgm'receptor
+    <br>* Mcs.cellOgm'receptor,
+    <br>* Mcs.receptor-of-cellOgm'signaling!⇒cellOgm'receptor,
+    <a class="clsHide" href="#idCellOgmatt041nam"></a></p>
+  <p id="idCellOgmatt041dsn">description::
+    <br>"In biochemistry and pharmacology, receptors are chemical structures, composed of protein, that receive and transduce signals that may be integrated into biological systems.[1] These signals are typically[nb 1] chemical messengers which bind to a receptor and cause some form of cellular/tissue response, e.g. a change in the electrical activity of a cell. There are three main ways the action of the receptor can be classified: relay of signal, amplification, or integration.[2] Relaying sends the signal onward, amplification increases the effect of a single ligand, and integration allows the signal to be incorporated into another biochemical pathway.[2] In this sense, a receptor is a protein-molecule that recognizes and responds to endogenous chemical signals. For example, an acetylcholine receptor recognizes and responds to its endogenous ligand, acetylcholine. However, sometimes in pharmacology, the term is also used to include other proteins that are drug targets, such as enzymes, transporters, and ion channels.[citation needed]
+    <br>Receptor proteins can be classified by their location. Transmembrane receptors include ion channel-linked (ionotropic) receptors, G protein-linked (metabotropic) hormone receptors, and enzyme-linked hormone receptors.[1] Intracellular receptors are those found inside the cell, and include cytoplasmic receptors and nuclear receptors.[1] A molecule that binds to a receptor is called a ligand, and can be a protein or peptide (short protein), or another small molecule such as a neurotransmitter, hormone, pharmaceutical drug, toxin, calcium ion or parts of the outside of a virus or microbe. The endogenously designated -molecule for a particular receptor is referred to as its endogenous ligand. E.g. the endogenous ligand for the nicotinic acetylcholine receptor is acetylcholine but the receptor can also be activated by nicotine[3][4] and blocked by curare.[5] Receptors of a particular type are linked to specific cellular biochemical pathways that correspond to the signal. While numerous receptors are found in most cells, each receptor will only bind with ligands of a particular structure. This has been analogously compared to how locks will only accept specifically shaped keys. When a ligand binds to a corresponding receptor, it activates or inhibits the receptor's associated biochemical pathway."
+    <br>[{2020-05-09} https://en.wikipedia.org/wiki/Receptor_(biochemistry)]
+    <a class="clsHide" href="#idCellOgmatt041dsn"></a></p>
+
+  <section id="idCellOgmatt041002">
+  <h4 id="idCellOgmatt041002H4">receptor.surface-002
+    <a class="clsHide" href="#idCellOgmatt041002H4"></a></h4>
+  <p id="idCellOgmatt041002nam">name::
+    <br>* Mcs.cellOgm'receptor.surface-002,
+    <br>* Mcs.cellOgm'receptor.002-surface,
+    <br>* Mcs.cellOgm-surface-receptor,
+    <br>* Mcs.membrane-receptor,
+    <a class="clsHide" href="#idCellOgmatt041002nam"></a></p>
+  <p id="idCellOgmatt041002dsn">description::
+    <br>"Cell surface receptors (membrane receptors, transmembrane receptors) are receptors that are embedded in the plasma membrane of cells. They act in cell signaling by receiving (binding to) extracellular molecules. They are specialized integral membrane proteins that allow communication between the cell and the extracellular space. The extracellular molecules may be hormones, neurotransmitters, cytokines, growth factors, cell adhesion molecules, or nutrients; they react with the receptor to induce changes in the metabolism and activity of a cell. In the process of signal transduction, ligand binding affects a cascading chemical change through the cell membrane."
+    <br>[{2020-05-09} https://en.wikipedia.org/wiki/Cell_surface_receptor]
+    <a class="clsHide" href="#idCellOgmatt041002dsn"></a></p>
+  </section>
+
+  <section id="idCellOgmatt041003">
+  <h4 id="idCellOgmatt041003H4">receptor.intracellular-003
+    <a class="clsHide" href="#idCellOgmatt041003H4"></a></h4>
+  <p id="idCellOgmatt041003nam">name::
+    <br>* Mcs.cellOgm'receptor.intracellular-003,
+    <br>* Mcs.cellOgm'receptor.003-intracellular,
+    <br>* Mcs.intracellular-receptor-of-cellOgm,
+    <a class="clsHide" href="#idCellOgmatt041003nam"></a></p>
+  <p id="idCellOgmatt041003dsn">description::
+    <br>"Intracellular receptors are receptors located inside the cell rather than on its cell membrane. Classic hormones that use intracellular receptors include thyroid and steroid hormones. Examples are the class of nuclear receptors located in the cell nucleus and cytoplasm and the IP3 receptor located on the endoplasmic reticulum. The ligands that bind to them are usually intracellular second messengers like inositol trisphosphate (IP3) and extracellular lipophilic hormones like steroid hormones. Some intracrine peptide hormones also have intracellular receptors."
+    <br>[{2020-05-09} https://en.wikipedia.org/wiki/Intracellular_receptor]
+    <a class="clsHide" href="#idCellOgmatt041003dsn"></a></p>
+  </section>
+
+  <section id="idCellOgmatt041001">
+  <h4 id="idCellOgmatt041001H4">receptor.nuclear-001
+    <a class="clsHide" href="#idCellOgmatt041001H4"></a></h4>
+  <p id="idCellOgmatt041001nam">name::
+    <br>* Mcs.cellOgm'receptor.nuclear,
+    <br>* Mcs.cellOgm'receptor.001-nuclear,
+    <br>* Mcs.nuclear-receptor-of-cellOgm,
+    <a class="clsHide" href="#idCellOgmatt041001nam"></a></p>
+  <p id="idCellOgmatt041001dsn">description::
+    <br>"In the field of molecular biology, nuclear receptors are a class of proteins found within cells that are responsible for sensing steroid and thyroid hormones and certain other molecules. In response, these receptors work with other proteins to regulate the expression of specific genes, thereby controlling the development, homeostasis, and metabolism of the organism.
+    <br>Nuclear receptors have the ability to directly bind to DNA and regulate the expression of adjacent genes, hence these receptors are classified as transcription factors.[2][3] The regulation of gene expression by nuclear receptors generally only happens when a ligand — a molecule that affects the receptor's behavior — is present. More specifically, ligand binding to a nuclear receptor results in a conformational change in the receptor, which, in turn, activates the receptor, resulting in up- or down-regulation of gene expression.
+    <br>A unique property of nuclear receptors that differentiates them from other classes of receptors is their ability to directly interact with and control the expression of genomic DNA. As a consequence, nuclear receptors play key roles in both embryonic development and adult homeostasis. As discussed below, nuclear receptors may be classified according to either mechanism[4][5] or homology.[6][7],"
+    <br>[{2020-05-09} https://en.wikipedia.org/wiki/Nuclear_receptor]
+    <a class="clsHide" href="#idCellOgmatt041001dsn"></a></p>
+  </section>
+
+  <section id="idCellOgmatt041004">
+  <h4 id="idCellOgmatt041004H4">receptor.steroid-hormone-004
+    <a class="clsHide" href="#idCellOgmatt041004H4"></a></h4>
+  <p id="idCellOgmatt041004nam">name::
+    <br>* Mcs.cellOgm'receptor.steroid-hormone-004,
+    <br>* Mcs.cellOgm'receptor.004-steroid-hormone,
+    <br>* Mcs.steroid-hormone-receptor-of-cellOgm,
+    <a class="clsHide" href="#idCellOgmatt041004nam"></a></p>
+  <p id="idCellOgmatt041004dsn">description::
+    <br>"Steroid hormone receptors are found in the nucleus, cytosol, and also on the plasma membrane of target cells. They are generally intracellular receptors (typically cytoplasmic or nuclear) and initiate signal transduction for steroid hormones which lead to changes in gene expression over a time period of hours to days. The best studied steroid hormone receptors are members of the nuclear receptor subfamily 3 (NR3) that include receptors for estrogen (group NR3A)[1] and 3-ketosteroids (group NR3C).[2] In addition to nuclear receptors, several G protein-coupled receptors and ion channels act as cell surface receptors for certain steroid hormones."
+    <a class="clsHide" href="#idCellOgmatt041004dsn"></a></p>
+  </section>
+
+  <section id="idCellOgmatt041005">
+  <h4 id="idCellOgmatt041005H4">receptor.immune-005
+    <a class="clsHide" href="#idCellOgmatt041005H4"></a></h4>
+  <p id="idCellOgmatt041005nam">name::
+    <br>* Mcs.cellOgm'receptor.immune-005,
+    <br>* Mcs.cellOgm'receptor.005-immune,
+    <br>* Mcs.immune-receptor-of-cellOgm,
+    <a class="clsHide" href="#idCellOgmatt041005nam"></a></p>
+  <p id="idCellOgmatt041005dsn">description::
+    <br>"An immune receptor (or immunologic receptor) is a receptor, usually on a cell membrane, which binds to a substance (for example, a cytokine) and causes a response in the immune system."
+    <br>[{2020-05-09} https://en.wikipedia.org/wiki/Immune_receptor]
+    <a class="clsHide" href="#idCellOgmatt041005dsn"></a></p>
   </section>
   </section>
 
@@ -738,12 +871,13 @@
   </section>
 
   <section id="idCellOgmatt040004">
-  <h3 id="idCellOgmatt040004H3">cellOgm'signaling.juxtaacrine-004
+  <h3 id="idCellOgmatt040004H3">cellOgm'signaling.juxtacrine-004
     <a class="clsHide" href="#idCellOgmatt040004H3"></a></h3>
   <p id="idCellOgmatt040004nam">name::
-    <br>* Mcs.cellOgm'signaling.juxtaacrine,
-    <br>* Mcs.cellOgm'signaling.004-juxtaacrine,
-    <br>* Mcs.juxtaacrine-signaling-of-cellOgm,
+    <br>* Mcs.cellOgm'signaling.juxtacrine,
+    <br>* Mcs.cellOgm'signaling.004-juxtacrine,
+    <br>* Mcs.cellOgm'signaling.contact,
+    <br>* Mcs.juxtacrine-signaling-of-cellOgm,
     <a class="clsHide" href="#idCellOgmatt040004nam"></a></p>
   <p id="idCellOgmatt040004dsn">description::
     <br>"In biology, juxtacrine signalling (or contact-dependent signalling) is a type of cell / cell or cell / extracellular matrix signalling in multicellular organisms that requires close contact. Hence, this stands in contrast to releasing a signaling molecule by diffusion into extracellular space, or the use of long-range conduits like membrane nanotubes and cytonemes (akin to 'bridges'), or the use of extracellular vesicles like exosomes or microvesicles (akin to 'boats'). There are three types of juxtacrine signaling:
@@ -754,6 +888,17 @@
     <br>Juxtacrine signaling has been observed for some growth factors, cytokine and chemokine cellular signals, playing an important role in the immune response. It has a critical role in development, particularly of cardiac and neural function. Other types of cell signaling include paracrine signalling and autocrine signalling."
     <br>[{2020-05-08} https://en.wikipedia.org/wiki/Juxtacrine_signalling]
     <a class="clsHide" href="#idCellOgmatt040004dsn"></a></p>
+
+  <section id="idCellOgmatt040004sgnl">
+  <h4 id="idCellOgmatt040004sgnlH4">signal of juxtacrine-signaling
+    <a class="clsHide" href="#idCellOgmatt040004sgnlH4"></a></h4>
+  <p id="idCellOgmatt040004sgnlnam">name::
+    <br>* Mcs.juxtacrine-signaling'signal,
+    <a class="clsHide" href="#idCellOgmatt040004sgnlnam"></a></p>
+  <p id="idCellOgmatt040004sgnldsn">description::
+    <br>·
+    <a class="clsHide" href="#idCellOgmatt040004sgnldsn"></a></p>
+  </section>
   </section>
 
   <section id="idCellOgmatt040005">
@@ -762,6 +907,7 @@
   <p id="idCellOgmatt040005nam">name::
     <br>* Mcs.cellOgm'signaling.paracrine,
     <br>* Mcs.cellOgm'signaling.005-paracrine,
+    <br>* Mcs.cellOgm'signaling.near,
     <br>* Mcs.paracrine-signaling-of-cellOgm,
     <a class="clsHide" href="#idCellOgmatt040005nam"></a></p>
   <p id="idCellOgmatt040005dsn">description::
@@ -769,6 +915,20 @@
     <br>Although paracrine signaling elicits a diverse array of responses in the induced cells, most paracrine factors utilize a relatively streamlined set of receptors and pathways. In fact, different organs in the body - even between different species - are known to utilize a similar sets of paracrine factors in differential development.[1] The highly conserved receptors and pathways can be organized into four major families based on similar structures: fibroblast growth factor (FGF) family, Hedgehog family, Wnt family, and TGF-β superfamily. Binding of a paracrine factor to its respective receptor initiates signal transduction cascades, eliciting different responses."
     <br>[{2020-05-08} https://en.wikipedia.org/wiki/Paracrine_signaling]
     <a class="clsHide" href="#idCellOgmatt040005dsn"></a></p>
+
+  <section id="idCellOgmatt040005sgnl">
+  <h4 id="idCellOgmatt040005sgnlH4">signal of paracrine-signaling
+    <a class="clsHide" href="#idCellOgmatt040005sgnlH4"></a></h4>
+  <p id="idCellOgmatt040005sgnlnam">name::
+    <br>* Mcs.paracrine-signaling'signal,
+    <br>* Mcs.paracrine-signal,
+    <a class="clsHide" href="#idCellOgmatt040005sgnlnam"></a></p>
+  <p id="idCellOgmatt040005sgnldsn">description::
+    <br>"Paracrine signals such as retinoic acid target only cells in the vicinity of the emitting cell.[14] Neurotransmitters represent another example of a paracrine signal. Some signaling molecules can function as both a hormone and a neurotransmitter. For example, epinephrine and norepinephrine can function as hormones when released from the adrenal gland and are transported to the heart by way of the blood stream. Norepinephrine can also be produced by neurons to function as a neurotransmitter within the brain.[15] Estrogen can be released by the ovary and function as a hormone or act locally via paracrine or autocrine signaling.[16]
+    <br>...Synaptic signaling is a special case of paracrine signaling (for chemical synapses) or juxtacrine signaling (for electrical synapses) between neurons and target cells."
+    <br>[{2020-05-08} https://en.wikipedia.org/wiki/Cell_signaling]
+    <a class="clsHide" href="#idCellOgmatt040005sgnldsn"></a></p>
+  </section>
   </section>
 
   <section id="idCellOgmatt040006">
@@ -777,12 +937,26 @@
   <p id="idCellOgmatt040006nam">name::
     <br>* Mcs.cellOgm'signaling.endocrine,
     <br>* Mcs.cellOgm'signaling.006-endocrine,
+    <br>* Mcs.cellOgm'signaling.far,
     <br>* Mcs.endocrine-signaling-of-cellOgm,
     <a class="clsHide" href="#idCellOgmatt040006nam"></a></p>
   <p id="idCellOgmatt040006dsn">description::
     <br>"Endocrine signals target distant cells. Endocrine cells produce hormones that travel through the blood to reach all parts of the body."
     <br>[{2020-05-08} https://en.wikipedia.org/wiki/Cell_signaling]
     <a class="clsHide" href="#idCellOgmatt040006dsn"></a></p>
+
+  <section id="idCellOgmatt040006sgnl">
+  <h4 id="idCellOgmatt040006sgnlH4">signal of endocrine-signaling
+    <a class="clsHide" href="#idCellOgmatt040006sgnlH4"></a></h4>
+  <p id="idCellOgmatt040006sgnlnam">name::
+    <br>* Mcs.endocrine-signaling'signal,
+    <br>* Mcs.endocrine-signal,
+    <a class="clsHide" href="#idCellOgmatt040006sgnlnam"></a></p>
+  <p id="idCellOgmatt040006sgnldsn">description::
+    <br>"Endocrine signals are called hormones. Hormones are produced by endocrine cells and they travel through the blood to reach all parts of the body. Specificity of signaling can be controlled if only some cells can respond to a particular hormone."
+    <br>[{2020-05-08} https://en.wikipedia.org/wiki/Cell_signaling]
+    <a class="clsHide" href="#idCellOgmatt040006sgnldsn"></a></p>
+  </section>
   </section>
   </section>
 </section>
