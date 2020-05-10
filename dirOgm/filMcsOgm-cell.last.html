@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.cellOgm (cell-of-organism 0-19-0.2020-05-09 draft)</title>
+  <title>Mcs.cellOgm (cell-of-organism 0-20-0.2020-05-10 draft)</title>
   <meta name="keywords" content="cell-of-organism, cellOgm, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -671,10 +671,12 @@
     <br>* Mcs.cellOgm'signal.biochemical,
     <br>* Mcs.cellOgm'signal.signaling-molecule,
     <br>* Mcs.cellOgm'signal.001-signaling-molecule,
+    <br>* Mcs.cellOgm'signaling'att004-signaling-molecule,
     <br>* Mcs.cellOgm'receptor-ligand,
     <br>* Mcs.cellOgm'att042-receptor-ligand,
     <br>* Mcs.biochemical-signal-of-cellOgm,
     <br>* Mcs.receptor-ligand-of-cellOgm,
+    <br>* Mcs.signal-molecule-of-cellOgm,
     <br>* Mcs.signaling-molecule-of-cellOgm,
     <a class="clsHide" href="#idCellOgmatt042nam"></a></p>
   <p id="idCellOgmatt042dsn">description::
@@ -750,6 +752,23 @@
     <br>"Cell surface receptors (membrane receptors, transmembrane receptors) are receptors that are embedded in the plasma membrane of cells. They act in cell signaling by receiving (binding to) extracellular molecules. They are specialized integral membrane proteins that allow communication between the cell and the extracellular space. The extracellular molecules may be hormones, neurotransmitters, cytokines, growth factors, cell adhesion molecules, or nutrients; they react with the receptor to induce changes in the metabolism and activity of a cell. In the process of signal transduction, ligand binding affects a cascading chemical change through the cell membrane."
     <br>[{2020-05-09} https://en.wikipedia.org/wiki/Cell_surface_receptor]
     <a class="clsHide" href="#idCellOgmatt041002dsn"></a></p>
+
+  <section id="idCellOgmatt041006">
+  <h5 id="idCellOgmatt041006H5">receptor.co-receptor-002
+    <a class="clsHide" href="#idCellOgmatt041006H5"></a></h5>
+  <p id="idCellOgmatt041006nam">name::
+    <br>* Mcs.cellOgm'receptor.co-receptor,
+    <br>* Mcs.cellOgm'receptor.002-co-receptor,
+    <br>* Mcs.co-receptor-of-cellOgm,
+    <a class="clsHide" href="#idCellOgmatt041006nam"></a></p>
+  <p id="idCellOgmatt041006dsn">description::
+    <br>"A co-receptor is a cell surface receptor that binds a signalling molecule in addition to a primary receptor in order to facilitate ligand recognition and initiate biological processes, such as entry of a pathogen into a host cell."
+    <br>[{2020-05-10} https://en.wikipedia.org/wiki/Co-receptor]
+    <a class="clsHide" href="#idCellOgmatt041006dsn"></a></p>
+  <p id="idCellOgmatt041006gtr">generic-tree-of-co-receptor::
+    <br>· Co-receptors are proteins that maintain a three-dimensional structure.
+    <a class="clsHide" href="#idCellOgmatt041006gtr"></a></p>
+  </section>
   </section>
 
   <section id="idCellOgmatt041003">
@@ -810,6 +829,50 @@
   </section>
   </section>
 
+  <section id="idCellOgmatt040att006">
+  <h3 id="idCellOgmatt040att006H3">receiving of cellOgm'signaling
+    <a class="clsHide" href="#idCellOgmatt040att006H3"></a></h3>
+  <p id="idCellOgmatt040att006nam">name::
+    <br>* Mcs.cellOgm'signaling'receiving,
+    <br>* Mcs.cellOgm'signaling'att006-receiving,
+    <a class="clsHide" href="#idCellOgmatt040att006nam"></a></p>
+  <p id="idCellOgmatt040att006dsn">description::
+    <br>"All cells receive and respond to signals from their surroundings. ... Each cell is programmed to respond to specific extracellular signal molecules."
+    <br>[{2020-05-10} https://en.wikipedia.org/wiki/Cell_signaling]
+    <a class="clsHide" href="#idCellOgmatt040att006dsn"></a></p>
+  </section>
+
+  <section id="idCellOgmatt040att007">
+  <h3 id="idCellOgmatt040att007H3">responding of cellOgm'signaling
+    <a class="clsHide" href="#idCellOgmatt040att007H3"></a></h3>
+  <p id="idCellOgmatt040att007nam">name::
+    <br>* Mcs.cellOgm'signaling'responding,
+    <br>* Mcs.cellOgm'signaling'att007-responding,
+    <br>* Mcs.cellOgm'signaling'receptor-activation,
+    <a class="clsHide" href="#idCellOgmatt040att007nam"></a></p>
+  <p id="idCellOgmatt040att007dsn">description::
+    <br>"All cells receive and respond to signals from their surroundings. ... Each cell is programmed to respond to specific extracellular signal molecules."
+    <br>[{2020-05-10} https://en.wikipedia.org/wiki/Cell_signaling]
+    <a class="clsHide" href="#idCellOgmatt040att007dsn"></a></p>
+  </section>
+
+  <section id="idCellOgmatt040att008">
+  <h3 id="idCellOgmatt040att008H3">signaling-pathway of cellOgm'signaling
+    <a class="clsHide" href="#idCellOgmatt040att008H3"></a></h3>
+  <p id="idCellOgmatt040att008nam">name::
+    <br>* Mcs.cellOgm'signaling'pathway,
+    <br>* Mcs.cellOgm'signaling'att008-pathway,
+    <br>* Mcs.signaling-pathway-of-cellOgm,
+    <a class="clsHide" href="#idCellOgmatt040att008nam"></a></p>
+  <p id="idCellOgmatt040att008dsn">description::
+    <br>"However, for many cell surface receptors, ligand-receptor interactions are not directly linked to the cell's response. The activated receptor must first interact with other proteins inside the cell before the ultimate physiological effect of the ligand on the cell's behavior is produced. Often, the behavior of a chain of several interacting cell proteins is altered following receptor activation. The entire set of cell changes induced by receptor activation is called a signal transduction mechanism or pathway.[28]"
+    <br>[{2020-05-10} https://en.wikipedia.org/wiki/Cell_signaling#Signaling_pathways]
+    <a class="clsHide" href="#idCellOgmatt040att008dsn"></a></p>
+  <p id="idCellOgmatt040att008str">specific-tree-of-::
+    <br>* https://en.wikipedia.org/wiki/List_of_signalling_pathways,
+    <a class="clsHide" href="#idCellOgmatt040att008str"></a></p>
+  </section>
+
   <section id="idCellOgmatt040001">
   <h3 id="idCellOgmatt040001H3">cellOgm'signaling.between-organisms-001
     <a class="clsHide" href="#idCellOgmatt040001H3"></a></h3>
@@ -818,7 +881,8 @@
     <br>* Mcs.cellOgm'signaling.001-between-organisms,
     <a class="clsHide" href="#idCellOgmatt040001nam"></a></p>
   <p id="idCellOgmatt040001dsn">description::
-    <br>"Cell signaling has been most extensively studied in the context of human diseases and signaling between cells of a single organism. However, cell signaling may also occur between the cells of two different organisms. In many mammals, early embryo cells exchange signals with cells of the uterus.[9] In the human gastrointestinal tract, bacteria exchange signals with each other and with human epithelial and immune system cells.[10] For the yeast Saccharomyces cerevisiae during mating, some cells send a peptide signal (mating factor pheromones) into their environment. The mating factor peptide may bind to a cell surface receptor on other yeast cells and induce them to prepare for mating.[11]"
+    <br>"Cell signaling has been most extensively studied in the context of human diseases and signaling between cells of a single organism. However, cell signaling may also occur between the cells of two different organisms. In many mammals, early embryo cells exchange signals with cells of the uterus.[9] In the human gastrointestinal tract, bacteria exchange signals with each other and with human epithelial and immune system cells.[10] For the yeast Saccharomyces cerevisiae during mating, some cells send a peptide signal (mating factor pheromones) into their environment. The mating factor peptide may bind to a cell surface receptor on other yeast cells and induce them to prepare for mating.[11]
+    <br>... Molecular signaling can occur between different organisms, whether unicellular or multicellular. The emitting organism produces the signaling molecule, secretes it into the environment, where it diffuses, and it is sensed or internalized by the receiving organism. In some cases of interspecies signaling, the emitting organism can actually be a host of the receiving organism, or vice versa."
     <br>[{2020-05-07} https://en.wikipedia.org/wiki/Cell_signaling]
     <a class="clsHide" href="#idCellOgmatt040001dsn"></a></p>
   </section>
@@ -833,6 +897,19 @@
   <p id="idCellOgmatt040002dsn">description::
     <br>·
     <a class="clsHide" href="#idCellOgmatt040002dsn"></a></p>
+  </section>
+
+  <section id="idCellOgmatt040008">
+  <h3 id="idCellOgmatt040008H3">cellOgm'signaling.molecular-008
+    <a class="clsHide" href="#idCellOgmatt040008H3"></a></h3>
+  <p id="idCellOgmatt040008nam">name::
+    <br>* Mcs.cellOgm'signaling.molecular,
+    <br>* Mcs.cellOgm'signaling.008-molecular,
+    <br>* Mcs.molecular-signaling,
+    <a class="clsHide" href="#idCellOgmatt040008nam"></a></p>
+  <p id="idCellOgmatt040008dsn">description::
+    <br>·
+    <a class="clsHide" href="#idCellOgmatt040008dsn"></a></p>
   </section>
 
   <section id="idCellOgmatt040007">
