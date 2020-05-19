@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.bodyHmn (human-body 0-73-0.2020-05-18 draft)</title>
+  <title>Mcs.bodyHmn (human-body 0-74-0.2020-05-19 draft)</title>
   <meta name="keywords" content="human-body, bodyHmn, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -1593,7 +1593,7 @@
   <p id="idGlndHmn006srtrP1">structure::
     <br>ωοθυλακια⧺cptBdyHmn547⧺
     <a class="clsHide" href="#idGlndHmn006srtrP1"></a></p>
-  <p id="idGlndHmn006srtrP2">κάθε ωοθήκη έχει σχημα αμυγδάλου και βρίσκεται στο πλάγιο τοίχωμα της μικρής λεκάνης.
+  <p id="idGlndHmn006srtrP2">κάθε ωοθήκη έχει σχήμα αμυγδάλου και βρίσκεται στο πλάγιο τοίχωμα της μικρής λεκάνης.
     <br>στο εσωτερικό της υπάρχουν 200.000 περίπου ωοθυλακια, καθένα από το οποία περιέχει ένα αδιαφοροποίητο ωάριο.
     <br>[Αργύρης, {1994}, 433⧺cptRsc31⧺]
     <a class="clsHide" href="#idGlndHmn006srtrP2"></a></p>
@@ -2151,7 +2151,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn548">σπερματικα-σωληναρια</a>,
     <br>* διαμεσα-κύτταρα,
     <a class="clsHide" href="#idGlndHmn017srtrP1"></a></p>
-  <p id="idGlndHmn017srtrP2">κάθε όρχις έχει σχημα πεπλατυσμένου αυγού και αποτελείται εξωτερικά από μία ινωδη καψα και εσωτερικά από πολυάριθμα περιελεγμένα σωληνάρια, τα σπερματικα σωληναρια. Μεταξύ των σπερματικων σωληναρίων υπάρχουν τα διαμεσα κύτταρα που παράγουν τις αντρικές ορμόνες. Από τα κύτταρα του τοιχώματος των σπερματικών σωληναρίων παράγονται τα σπερματοζωάρια.
+  <p id="idGlndHmn017srtrP2">κάθε όρχις έχει σχήμα πεπλατυσμένου αυγού και αποτελείται εξωτερικά από μία ινωδη καψα και εσωτερικά από πολυάριθμα περιελεγμένα σωληνάρια, τα σπερματικα σωληναρια. Μεταξύ των σπερματικων σωληναρίων υπάρχουν τα διαμεσα κύτταρα που παράγουν τις αντρικές ορμόνες. Από τα κύτταρα του τοιχώματος των σπερματικών σωληναρίων παράγονται τα σπερματοζωάρια.
     <br>[Αργύρης, {1994}, 429⧺cptRsc31⧺]
     <a class="clsHide" href="#idGlndHmn017srtrP2"></a></p>
   </section>
@@ -2437,17 +2437,18 @@
     <a class="clsHide" href="#idTissHmndfnWhl"></a></span>
     <a class="clsHide" href="#idTissHmndfn"></a></p>
   <p id="idTissHmnnam">name::
-    <br>* Mcs.bodyHmn'08_tissue,
-    <br>* Mcs.bodyHmn'att013-tissue,
-    <br>* Mcs.bodyHmn'tissue-att013,
+    <br>* Mcs.bodyHmn'08_tissue!⇒tissue,
+    <br>* Mcs.bodyHmn'att013-tissue!⇒tissue,
+    <br>* Mcs.bodyHmn'tissue-att013!⇒tissue,
     <br>* Mcs.tissue, {2012-08-11},
-    <br>* Mcs.human-tissue,
-    <br>* Mcs.tissue.human,
-    <br>* Mcs.tissueHmn, {2012-08-11},
+    <br>* Mcs.tissue'(human-tissue)!⇒tissue,
+    <br>* Mcs.human-tissue!⇒tissue,
+    <br>* Mcs.tissue.human!⇒tissue,
+    <br>* Mcs.tissueHmn!⇒tissue, {2012-08-11},
     <br>====== langoGreek:
-    <br>* McsEll.ιστός,
-    <br>* McsEll.ανθρώπινος-ιστός,
-    <br>* McsEll.ιστός.ανθρώπινος, {2012-08-11},
+    <br>* McsEll.ιστός!=tissue,
+    <br>* McsEll.ανθρώπινος-ιστός!=tissue,
+    <br>* McsEll.ιστός.ανθρώπινος!=tissue, {2012-08-11},
     <a class="clsHide" href="#idTissHmnnam"></a></p>
   <p id="idTissHmndsn">description::
     <br>analytic: ιστός είναι μέρος οργάνου με ίδια κατασκευή και αυτοτελή  λειτουργία.
@@ -2462,15 +2463,34 @@
     <br>TISSUE: a mass or layer of cells forming a basic structural element of an animal or plant body.
     <br>[FRANKLIN LM-6000]
     <a class="clsHide" href="#idTissHmndsn"></a></p>
-  <p id="idTissHmngtr">generic-tree-of-::
+  <p id="idTissHmngtr">generic-tree-of-tissue::
     <br>* <a class="clsPreview" href="#idBdyHmnatt002">nodeBodyHmn</a>,
     <br>* animal-tissue⧺cptEpistem20.1⧺,
     <a class="clsHide" href="#idTissHmngtr"></a></p>
-  <p id="idTissHmnwtr">whole-tree-of-::
+  <p id="idTissHmnwtr">whole-tree-of-tissue::
     <br>* <a class="clsPreview" href="#idOgnHmnwtr">organ</a>,
     <br>===
     <br>σε κάθε συγκεκριμένο ιστό, εδώ θα καταγράφονται τα όργανα που αποτελούνται από το συγκεκριμένο ιστό.
     <a class="clsHide" href="#idTissHmnwtr"></a></p>
+
+  <section id="idTissHmnatt001">
+  <h2 id="idTissHmnatt001H2">disease of tissue
+    <a class="clsHide" href="#idTissHmnatt001H2"></a></h2>
+  <p id="idTissHmnatt001nam">name::
+    <br>* Mcs.tissue'disease,
+    <br>* Mcs.tissue'att001-disease,
+    <br>* Mcs.disease.tissue,
+    <br>* Mcs.disease.257.tissue,
+    <a class="clsHide" href="#idTissHmnatt001nam"></a></p>
+  <p id="idTissHmnatt001dsn">description::
+    <br>·
+    <a class="clsHide" href="#idTissHmnatt001dsn"></a></p>
+  </section>
+
+  <section id="idTissHmnatt002">
+  <h2 id="idTissHmnatt002H2">cell of tissue
+    <a class="clsHide" href="#idTissHmnatt002H2"></a></h2>
+  </section>
 
   <section id="idTissHmnitlspc">
   <h2 id="idTissHmnitlspcH2">interstitial-space of tissue
@@ -2577,20 +2597,20 @@
     <a class="clsHide" href="#idTissHmnSPECIFICnam"></a></p>
   <p id="idTissHmnstr">specific-tree-of-::
     <br>tissueHmn.alphabetically:
-    <br>* <a class="clsPreview" href="#idBdyHmn098">tissueHmn.connective</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn054">tissueHmn.epithelial</a>,
+    <br>* <a class="clsPreview" href="#idTissHmn005">tissueHmn.connective</a>,
+    <br>* <a class="clsPreview" href="#idTissHmn006">tissueHmn.epithelial</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn052_7">tissueHmn.muscle</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn052_8">tissueHmn.nervous</a>,
     <br>===
     <br>* <a class="clsPreview" href="#idBdyHmn255">αδενικος-ιστός</a>,
     <br>* <a class="clsPreview" href="../dirOgm/filMcsOgm-sysMols.last.html#idFldHmn001">blood</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn054">επιθηλιακός-ιστός</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn056">ερειστικός-ιστός</a>,
+    <br>* <a class="clsPreview" href="#idTissHmn006">επιθηλιακός-ιστός</a>,
+    <br>* <a class="clsPreview" href="#idTissHmn007">ερειστικός-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn256">καλυπτηριος-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn057">tissueMuscle</a>,
     <br>* <a class="clsPreview" href="#idTssHmn002">tissueNervous</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn100">οστιτης-ιστός</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn098">συνδετικός-ιστός</a>,
+    <br>* <a class="clsPreview" href="#idTissHmn004">οστίτης-ιστός</a>,
+    <br>* <a class="clsPreview" href="#idTissHmn005">συνδετικός-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn459">υποδοριος-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn099">χονδρικός-ιστός</a>,
     <a class="clsHide" href="#idTissHmnspc"></a></p>
@@ -2601,21 +2621,23 @@
     <a class="clsHide" href="#idTissHmnSPECIFICP1"></a></p>
   </section>
 
-  <section id="idBdyHmn054">
-  <h2 id="idBdyHmn054H2">tissue.epithelial
-    <a class="clsHide" href="#idBdyHmn054H2"></a></h2>
-  <p id="idBdyHmn054nam">name::
-    <br>* Mcs.cptBdyHmn054,
-    <br>* Mcs.epithelial-tissue.human, {2012-08-11},
-    <br>* Mcs.tissue.epithelial,
-    <br>* Mcs.epithelium,
-    <br>* Mcs.epithelial-tissue, {2012-08-11},
+  <section id="idTissHmn006">
+  <h2 id="idTissHmn006H2">tissue.epithelial-006
+    <a class="clsHide" href="#idTissHmn006H2"></a></h2>
+  <p id="idTissHmn006nam">name::
+    <br>* Mcs.tissue.epithelial!⇒tissueEpithelial,
+    <br>* Mcs.tissue.006-epithelial!⇒tissueEpithelial,
+    <br>* Mcs.epithelial-tissue.human!⇒tissueEpithelial, {2012-08-11},
+    <br>* Mcs.epithelium!⇒tissueEpithelial,
+    <br>* Mcs.epithelial-tissue!⇒tissueEpithelial, {2012-08-11},
+    <br>* Mcs.tissueEpithelial,
+    <br>* Mcs.tissue.epithelial!⇒tissueEpithelial,
     <br>====== langoGreek:
-    <br>* McsEll.επιθηλιακός-ιστός,
-    <br>* McsEll.επιθήλιο,
-    <br>* εν.ιστός.επιθηλιακός,
-    <a class="clsHide" href="#idBdyHmn054nam"></a></p>
-  <p id="idBdyHmn054dsn">description::
+    <br>* McsEll.επιθηλιακός-ιστός!=tissueEpithelial,
+    <br>* McsEll.επιθήλιο!=tissueEpithelial,
+    <br>* εν.ιστός.επιθηλιακός!=tissueEpithelial,
+    <a class="clsHide" href="#idTissHmn006nam"></a></p>
+  <p id="idTissHmn006dsn">description::
     <br>analytic: ο επιθηλιακός ιστός είναι ιστός που καλύπτει την εξωτερική και τις εσωτερικές επιφάνειες του σώματος.
     <br>===
     <br>ο επιθηλιακός ιστός καλύπτει την εξωτερική και τις εσωτερικές επιφάνειες του σώματος και στον οποίο ανήκουν και οι διάφοροι αδένες.
@@ -2624,15 +2646,15 @@
     <br>synthetic: συνθετικος ορισμός:
     <br>EPITHELIUM: a cellular membrane covering a bodily surface or lining a cavity (κοιλότητα)
     <br>[FRANKLIN LM-6000]
-    <a class="clsHide" href="#idBdyHmn054dsn"></a></p>
-  <p id="idBdyHmn054gtr">generic-tree-of-::
+    <a class="clsHide" href="#idTissHmn006dsn"></a></p>
+  <p id="idTissHmn006gtr">generic-tree-of-::
     <br>* <a class="clsPreview" href="#idTissHmn">tissue</a>,
-    <a class="clsHide" href="#idBdyHmn054gtr"></a></p>
+    <a class="clsHide" href="#idTissHmn006gtr"></a></p>
 
-  <section id="idBdyHmn054doing">
-  <h3 id="idBdyHmn054doingH3">doing
-    <a class="clsHide" href="#idBdyHmn054doingH3"></a></h3>
-  <p id="idBdyHmn054doingP1">doing::
+  <section id="idTissHmn006doing">
+  <h3 id="idTissHmn006doingH3">doing
+    <a class="clsHide" href="#idTissHmn006doingH3"></a></h3>
+  <p id="idTissHmn006doingP1">doing::
     <br>το επιθήλιο των εξωτερικών επιφανειών αποτελεί
     <br>- προστατευτικο καλυμμα για τον οργανισμο και συντελεί στο να αποφεύγονται επιβλαβείς επιδράσεις από μυτερά αντικείμενα και μικρόβια. Επίσης
     <br>- εμποδιζει την ξηρανση από αφυδάτωση των εξωτερικών ιστών.
@@ -2643,22 +2665,22 @@
     <br>- εκκριση
     <br>- απέκκριση.
     <br>[Αργύρης, {1994}, 8⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn054doingP1"></a></p>
+    <a class="clsHide" href="#idTissHmn006doingP1"></a></p>
   </section>
 
-  <section id="idBdyHmn054srtr">
-  <h3 id="idBdyHmn054srtrH3">structure
-    <a class="clsHide" href="#idBdyHmn054srtrH3"></a></h3>
-  <p id="idBdyHmn054srtrP1">structure::
+  <section id="idTissHmn006srtr">
+  <h3 id="idTissHmn006srtrH3">structure
+    <a class="clsHide" href="#idTissHmn006srtrH3"></a></h3>
+  <p id="idTissHmn006srtrP1">structure::
     <br>χαρακτηριστικό του επιθηλιακού ιστού είναι ότι τα κύτταρα του είναι κοντά το ένα με το άλλο.
     <br>[Αργύρης, {1994}, 7⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn054srtrP1"></a></p>
+    <a class="clsHide" href="#idTissHmn006srtrP1"></a></p>
   </section>
 
-  <section id="idBdyHmn054SPECIFIC">
-  <h3 id="idBdyHmn054SPECIFICH3">SPECIFIC
-    <a class="clsHide" href="#idBdyHmn054SPECIFICH3"></a></h3>
-  <p id="idBdyHmn054str">specific-tree-of-::
+  <section id="idTissHmn006SPECIFIC">
+  <h3 id="idTissHmn006SPECIFICH3">SPECIFIC
+    <a class="clsHide" href="#idTissHmn006SPECIFICH3"></a></h3>
+  <p id="idTissHmn006str">specific-tree-of-::
     <br>* <a class="clsPreview" href="#idBdyHmn255">αδενικος-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn256">καλυπτηριος-ιστός</a>,
     <br>===
@@ -2666,41 +2688,42 @@
     <br>- καλυπτηριο και τον
     <br>- αδενικό.
     <br>[Αργύρης, {1994}, 7⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn054str"></a></p>
+    <a class="clsHide" href="#idTissHmn006str"></a></p>
   </section>
   </section>
 
-  <section id="idBdyHmn056">
-  <h2 id="idBdyHmn056H2">tissue.skeletal
-    <a class="clsHide" href="#idBdyHmn056H2"></a></h2>
-  <p id="idBdyHmn056nam">name::
-    <br>* Mcs.cptBdyHmn056,
-    <br>* Mcs.tissue.skeletal,
-    <br>* Mcs.skeletal-tissue,
+  <section id="idTissHmn007">
+  <h2 id="idTissHmn007H2">tissue.skeletal-007
+    <a class="clsHide" href="#idTissHmn007H2"></a></h2>
+  <p id="idTissHmn007nam">name::
+    <br>* Mcs.tissue.skeletal!⇒tissueSkeletal,
+    <br>* Mcs.tissue.007-skeletal!⇒tissueSkeletal,
+    <br>* Mcs.tissueSkeletal,
+    <br>* Mcs.skeletal-tissue!⇒tissueSkeletal,
     <br>====== langoGreek:
-    <br>* McsEll.ερειστικός-ιστός, {2012-08-11},
-    <br>* McsEll.ιστός.ερειστικός, {2012-08-11},
-    <a class="clsHide" href="#idBdyHmn056nam"></a></p>
-  <p id="idBdyHmn056dsn">description::
+    <br>* McsEll.ερειστικός-ιστός!=tissueSkeletal, {2012-08-11},
+    <br>* McsEll.ιστός.ερειστικός!=tissueSkeletal, {2012-08-11},
+    <a class="clsHide" href="#idTissHmn007nam"></a></p>
+  <p id="idTissHmn007dsn">description::
     <br>analytic: ερειστικός ιστός είναι ένα ειδος ιστού.
-    <a class="clsHide" href="#idBdyHmn056dsn"></a></p>
-  <p id="idBdyHmn056gtr">generic-tree-of-::
+    <a class="clsHide" href="#idTissHmn007dsn"></a></p>
+  <p id="idTissHmn007gtr">generic-tree-of-tissueSkeletal::
     <br>* <a class="clsPreview" href="#idTissHmn">tissue</a>,
-    <a class="clsHide" href="#idBdyHmn056gtr"></a></p>
+    <a class="clsHide" href="#idTissHmn007gtr"></a></p>
 
-  <section id="idBdyHmn056SPECIFIC">
-  <h3 id="idBdyHmn056SPECIFICH3">SPECIFIC
-    <a class="clsHide" href="#idBdyHmn056SPECIFICH3"></a></h3>
-  <p id="idBdyHmn056str">specific-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn100">οστιτης-ιστός</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn098">συνδετικός-ιστός</a>,
+  <section id="idTissHmn007SPECIFIC">
+  <h3 id="idTissHmn007SPECIFICH3">SPECIFIC
+    <a class="clsHide" href="#idTissHmn007SPECIFICH3"></a></h3>
+  <p id="idTissHmn007str">specific-tree-of-::
+    <br>* <a class="clsPreview" href="#idTissHmn004">οστίτης-ιστός</a>,
+    <br>* <a class="clsPreview" href="#idTissHmn005">συνδετικός-ιστός</a>,
     <br>* <a class="clsPreview" href="#idBdyHmn099">χονδρικός-ιστός</a>,
-    <a class="clsHide" href="#idBdyHmn056str"></a></p>
-  <p id="idBdyHmn056SPECIFICP1">O ερειστικός ιστός περιλαμβάνει
+    <a class="clsHide" href="#idTissHmn007str"></a></p>
+  <p id="idTissHmn007SPECIFICP1">O ερειστικός ιστός περιλαμβάνει
     <br>α) το συνδετικο ιστό που παρουσιάζει πολύ μεγάλη ποικιλία μορφών και λειτουργιών και βρίσκεται ανάμεσα στα κύτταρα όλων των άλλων ιστών είτε για να συνδέει είτε για να γεμίζει τους μεγάλους μεσοκυττάριους χώρους.
     <br>β) το χονδρικό ιστό και
     <br>γ) τον οστιτη ιστό από τον οποίο αποτελούνται τα διάφορα οστά.
-    <a class="clsHide" href="#idBdyHmn056SPECIFICP1"></a></p>
+    <a class="clsHide" href="#idTissHmn007SPECIFICP1"></a></p>
   </section>
   </section>
 
@@ -2715,7 +2738,6 @@
     <br>====== langoGreek:
     <br>* McsEll.ιστός.μυικός, {2012-08-11},
     <br>* McsEll.μυικός-ιστός, {2012-08-11},
-    <br>* McsEll.μυικός-ιστός,
     <a class="clsHide" href="#idBdyHmn057nam"></a></p>
   <p id="idBdyHmn057dsn">description::
     <br>analytic: μυικός ιστός είναι ιστός με τον οποίο συνθέτονται οι μύς.
@@ -2751,62 +2773,106 @@
     <br>[Αργύρης, {1994}, 238⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn057SPECIFICP1"></a></p>
   </section>
+
+  <section id="idBdyHmn381">
+  <h3 id="idBdyHmn381H3">tissue.striated-muscle
+    <a class="clsHide" href="#idBdyHmn381H3"></a></h3>
+  <p id="idBdyHmn381nam">name::
+    <br>* Mcs.cptBdyHmn381,
+    <br>* Mcs.tissue.striated-muscle,
+    <br>* Mcs.striated-muscle-tissue,
+    <br>====== langoGreek:
+    <br>* McsEll.γραμμωτός-μυικός-ιστός,
+    <br>* McsEll.ιστός.γραμμωτός,
+    <a class="clsHide" href="#idBdyHmn381nam"></a></p>
+  <p id="idBdyHmn381dsn">description::
+    <br>analytic: γραμμωτός μυικός ιστός είναι μυικός ιστός.
+    <br>[Αργύρης, {1994}, 238⧺cptRsc31⧺]
+    <a class="clsHide" href="#idBdyHmn381dsn"></a></p>
+  <p id="idBdyHmn381gtr">generic-tree-of-::
+    <br>* <a class="clsPreview" href="#idBdyHmn057">tissueMuscle</a>,
+    <a class="clsHide" href="#idBdyHmn381gtr"></a></p>
   </section>
 
-  <section id="idBdyHmn098">
-  <h2 id="idBdyHmn098H2">tissue.connective
-    <a class="clsHide" href="#idBdyHmn098H2"></a></h2>
-  <p id="idBdyHmn098nam">name::
-    <br>* Mcs.cptBdyHmn098,
-    <br>* Mcs.tissue.connective,
-    <br>* Mcs.connective-tissue.human, {2012-08-04},
+  <section id="idBdyHmn382">
+  <h3 id="idBdyHmn382H3">tissue.smooth-muscle
+    <a class="clsHide" href="#idBdyHmn382H3"></a></h3>
+  <p id="idBdyHmn382nam">name::
+    <br>* Mcs.cptBdyHmn382,
+    <br>* Mcs.tissue.smooth-muscle,
+    <br>* Mcs.smooth-muscle-tissue,
     <br>====== langoGreek:
-    <br>* McsEll.ιστός.συνδετικός,
-    <br>* McsEll.συνδετικός-ιστός,
-    <a class="clsHide" href="#idBdyHmn098nam"></a></p>
-  <p id="idBdyHmn098dsn">description::
-    <br>analytic: ο συνδετικός ιστός είναι είδος ερειστικού ιστού.
-    <br>[Αργύρης, {1994}, 9⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn098dsn"></a></p>
-  <p id="idBdyHmn098gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn056gtr">skeletal-tissue</a>,
-    <a class="clsHide" href="#idBdyHmn098gtr"></a></p>
+    <br>* McsEll.ιστός.λείος,
+    <br>* McsEll.λείος-μυικός-ιστός,
+    <a class="clsHide" href="#idBdyHmn382nam"></a></p>
+  <p id="idBdyHmn382dsn">description::
+    <br>analytic: λείος μυικός ιστός είναι μυικός ιστός.
+    <br>[Αργύρης, {1994}, 238⧺cptRsc31⧺]
+    <br>===
+    <br>synthetic: ο λείος μυικός ιστός αποτελείται από <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn021">λεια-μυικά-κύτταρα</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBdyHmn382dsn"></a></p>
+  <p id="idBdyHmn382gtr">generic-tree-of-::
+    <br>* <a class="clsPreview" href="#idBdyHmn057">tissueMuscle</a>,
+    <a class="clsHide" href="#idBdyHmn382gtr"></a></p>
+  </section>
+  </section>
 
-  <section id="idBdyHmn098doing">
-  <h3 id="idBdyHmn098doingH3">doing
-    <a class="clsHide" href="#idBdyHmn098doingH3"></a></h3>
-  <p id="idBdyHmn098doingP1">doing::
+  <section id="idTissHmn005">
+  <h2 id="idTissHmn005H2">tissue.connective-005
+    <a class="clsHide" href="#idTissHmn005H2"></a></h2>
+  <p id="idTissHmn005nam">name::
+    <br>* Mcs.tissue.connective!⇒tissueConnective,
+    <br>* Mcs.tissue.005-connective!⇒tissueConnective,
+    <br>* Mcs.connective-tissue.human!⇒tissueConnective, {2012-08-04},
+    <br>* Mcs.tissueConnective,
+    <br>====== langoGreek:
+    <br>* McsEll.ιστός.συνδετικός!=tissueConnective,
+    <br>* McsEll.συνδετικός-ιστός!=tissueConnective,
+    <a class="clsHide" href="#idTissHmn005nam"></a></p>
+  <p id="idTissHmn005dsn">description::
+    <br>analytic: ο συνδετικός ιστός είναι είδος <a class="clsPreview" href="#idTissHmn007">ερειστικού ιστού</a>.
+    <br>[Αργύρης, {1994}, 9⧺cptRsc29⧺]
+    <a class="clsHide" href="#idTissHmn005dsn"></a></p>
+  <p id="idTissHmn005gtr">generic-tree-of-::
+    <br>* <a class="clsPreview" href="#idTissHmn007gtr">skeletal-tissue</a>,
+    <a class="clsHide" href="#idTissHmn005gtr"></a></p>
+
+  <section id="idTissHmn005doing">
+  <h3 id="idTissHmn005doingH3">doing
+    <a class="clsHide" href="#idTissHmn005doingH3"></a></h3>
+  <p id="idTissHmn005doingP1">doing::
     <br>βρίσκεται ανάμεσα στα κύτταρα όλων των άλλων ιστών
     <br>- είτε για να συνδέει
     <br>- είτε για να γεμίζει τους μεγάλους μεσοκυττάριους χώρους.
     <br>[Αργύρης, {1994}, 9⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn098doingP1"></a></p>
+    <a class="clsHide" href="#idTissHmn005doingP1"></a></p>
   </section>
 
-  <section id="idBdyHmn098srtr">
-  <h3 id="idBdyHmn098srtrH3">structure
-    <a class="clsHide" href="#idBdyHmn098srtrH3"></a></h3>
-  <p id="idBdyHmn098srtrP1">structure::
+  <section id="idTissHmn005srtr">
+  <h3 id="idTissHmn005srtrH3">structure
+    <a class="clsHide" href="#idTissHmn005srtrH3"></a></h3>
+  <p id="idTissHmn005srtrP1">structure::
     <br>βρίσκεται ανάμεσα στα κύτταρα όλων των άλλων ιστών είτε για να συνδέει είτε για να γεμίζει τους μεγάλους μεσοκυττάριους χώρους.
     <br>[Αργύρης, {1994}, 9⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn098srtrP1"></a></p>
+    <a class="clsHide" href="#idTissHmn005srtrP1"></a></p>
   </section>
 
-  <section id="idBdyHmn098SPECIFIC">
-  <h3 id="idBdyHmn098SPECIFICH3">SPECIFIC
-    <a class="clsHide" href="#idBdyHmn098SPECIFICH3"></a></h3>
-  <p id="idBdyHmn098str">specific-tree-of-::
+  <section id="idTissHmn005SPECIFIC">
+  <h3 id="idTissHmn005SPECIFICH3">SPECIFIC
+    <a class="clsHide" href="#idTissHmn005SPECIFICH3"></a></h3>
+  <p id="idTissHmn005str">specific-tree-of-::
     <br>* <a class="clsPreview" href="../dirOgm/filMcsOgm-sysMols.last.html#idFldHmn001">blood</a>,
     <br>* αρχικος σκελετός,
     <br>* περιόστεο,
     <br>* <a class="clsPreview" href="#idBdyHmn257">χόνδρος</a>,
-    <a class="clsHide" href="#idBdyHmn098str"></a></p>
-  <p id="idBdyHmn098SPECIFICP1">ο συνδετικός ιστός παρουσιάζει πολύ μεγάλη ποικιλία μορφών και λειτουργιών. Τύποι συνδετικού ιστού είναι το
+    <a class="clsHide" href="#idTissHmn005str"></a></p>
+  <p id="idTissHmn005SPECIFICP1">ο συνδετικός ιστός παρουσιάζει πολύ μεγάλη ποικιλία μορφών και λειτουργιών. Τύποι συνδετικού ιστού είναι το
     <br>- αίμα, το
     <br>- περιόστεο, ο
     <br>- αρχικος σκελετός.
     <br>[Αργύρης, {1994}, 9⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn098SPECIFICP1"></a></p>
+    <a class="clsHide" href="#idTissHmn005SPECIFICP1"></a></p>
   </section>
   </section>
 
@@ -2831,28 +2897,30 @@
     <a class="clsHide" href="#idBdyHmn099dsn"></a></p>
   <p id="idBdyHmn099gtr">generic-tree-of-::
     <br>* <a class="clsPreview" href="#idTissHmn">tissue</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn056">ερειστικός-ιστός</a>,
+    <br>* <a class="clsPreview" href="#idTissHmn007">ερειστικός-ιστός</a>,
     <a class="clsHide" href="#idBdyHmn099gtr"></a></p>
   </section>
 
-  <section id="idBdyHmn100">
-  <h2 id="idBdyHmn100H2">tissue.bone
-    <a class="clsHide" href="#idBdyHmn100H2"></a></h2>
-  <p id="idBdyHmn100nam">name::
-    <br>* Mcs.cptBdyHmn100,
-    <br>* Mcs.tissue.bone,
-    <br>* Mcs.bone-tissue.human, {2012-08-11},
-    <br>* Mcs.human-bone-tissue, {2012-08-11},
-    <br>* Mcs.human-osseous-tissue, {2012-08-11},
-    <br>* Mcs.osseous-tissue.human, {2012-08-11},
-    <br>* McsEll.ιστός.οστιτης,
-    <br>* McsEll.οστιτης-ιστός,
-    <a class="clsHide" href="#idBdyHmn100nam"></a></p>
-  <p id="idBdyHmn100dsn">description::
+  <section id="idTissHmn004">
+  <h2 id="idTissHmn004H2">tissue.bone-004
+    <a class="clsHide" href="#idTissHmn004H2"></a></h2>
+  <p id="idTissHmn004nam">name::
+    <br>* Mcs.tissue.bone!⇒tissueBone,
+    <br>* Mcs.tissue.004-bone!⇒tissueBone,
+    <br>* Mcs.bone-tissue.human!⇒tissueBone, {2012-08-11},
+    <br>* Mcs.human-bone-tissue!⇒tissueBone, {2012-08-11},
+    <br>* Mcs.human-osseous-tissue!⇒tissueBone, {2012-08-11},
+    <br>* Mcs.osseous-tissue.human!⇒tissueBone, {2012-08-11},
+    <br>* Mcs.tissueBone,
+    <br>====== langoGreek:
+    <br>* McsEll.ιστός.οστίτης!=tissueBone,
+    <br>* McsEll.οστίτης-ιστός!=tissueBone,
+    <a class="clsHide" href="#idTissHmn004nam"></a></p>
+  <p id="idTissHmn004dsn">description::
     <br>Osseous tissue, or bone tissue, is the major structural and supportive connective tissue of the body. Osseous tissue forms the rigid part of the bone organs that make up the skeletal system.
     <br>[http://en.wikipedia.org/wiki/Bone_tissue]
     <br>===
-    <br>analytic: οστιτης ιστός είναι ένα είδος ερειστικού ιστού από τον οποίο αποτελούνται τα οστά.
+    <br>analytic: οστίτης ιστός είναι ένα είδος ερειστικού ιστού από τον οποίο αποτελούνται τα οστά.
     <br>[Αργύρης, {1994}, 9⧺cptRsc29⧺]
     <br>===
     <br>synthetic: ο οστίτης ιστός αποτελείται από
@@ -2860,71 +2928,29 @@
     <br>- οστεοβλάστες
     <br>- άλατα του ασβεστίου
     <br>[Αργύρης, {1994}, 12⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn100dsn"></a></p>
-  <p id="idBdyHmn100gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn056gtr">skeletal-tissue</a>,
-    <a class="clsHide" href="#idBdyHmn100gtr"></a></p>
-  <p id="idBdyHmn100wtr">whole-tree-of-::
+    <a class="clsHide" href="#idTissHmn004dsn"></a></p>
+  <p id="idTissHmn004gtr">generic-tree-of-tissueBone::
+    <br>* tissueConnective,
+    <br>* <a class="clsPreview" href="#idTissHmn007gtr">skeletal-tissue</a>,
+    <a class="clsHide" href="#idTissHmn004gtr"></a></p>
+  <p id="idTissHmn004wtr">whole-tree-of-tissueBone::
     <br>* <a class="clsPreview" href="#idBoneHmnwtr">οστά</a>,
-    <a class="clsHide" href="#idBdyHmn100wtr"></a></p>
-  <p id="idBdyHmn100P1">τα οστά αποτελούνται από οστίτη ιστό,
+    <a class="clsHide" href="#idTissHmn004wtr"></a></p>
+  <p id="idTissHmn004P1">τα οστά αποτελούνται από οστίτη ιστό,
     <br>[Αργύρης, {1994}, 11⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn100P1"></a></p>
+    <a class="clsHide" href="#idTissHmn004P1"></a></p>
 
-  <section id="idBdyHmn100srtr">
-  <h3 id="idBdyHmn100srtrH3">structure
-    <a class="clsHide" href="#idBdyHmn100srtrH3"></a></h3>
-  <p id="idBdyHmn100srtrP1">structure::
+  <section id="idTissHmn004srtr">
+  <h3 id="idTissHmn004srtrH3">structure
+    <a class="clsHide" href="#idTissHmn004srtrH3"></a></h3>
+  <p id="idTissHmn004srtrP1">structure::
     <br>ο οστίτης ιστός αποτελείται από
     <br>- οστέινη ουσία
     <br>- οστεοβλάστες
     <br>- άλατα του ασβεστίου
     <br>[Αργύρης, {1994}, 12⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn100srtrP1"></a></p>
+    <a class="clsHide" href="#idTissHmn004srtrP1"></a></p>
   </section>
-  </section>
-
-  <section id="idBdyHmn381">
-  <h2 id="idBdyHmn381H2">tissue.striated-muscle
-    <a class="clsHide" href="#idBdyHmn381H2"></a></h2>
-  <p id="idBdyHmn381nam">name::
-    <br>* Mcs.cptBdyHmn381,
-    <br>* Mcs.tissue.striated-muscle,
-    <br>* Mcs.striated-muscle-tissue,
-    <br>====== langoGreek:
-    <br>* McsEll.γραμμωτός-μυικός-ιστός,
-    <br>* McsEll.ιστός.γραμμωτός,
-    <a class="clsHide" href="#idBdyHmn381nam"></a></p>
-  <p id="idBdyHmn381dsn">description::
-    <br>analytic: γραμμωτός μυικός ιστός είναι μυικός ιστός.
-    <br>[Αργύρης, {1994}, 238⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn381dsn"></a></p>
-  <p id="idBdyHmn381gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn057">tissueMuscle</a>,
-    <a class="clsHide" href="#idBdyHmn381gtr"></a></p>
-  </section>
-
-  <section id="idBdyHmn382">
-  <h2 id="idBdyHmn382H2">tissue.smooth-muscle
-    <a class="clsHide" href="#idBdyHmn382H2"></a></h2>
-  <p id="idBdyHmn382nam">name::
-    <br>* Mcs.cptBdyHmn382,
-    <br>* Mcs.tissue.smooth-muscle,
-    <br>* Mcs.smooth-muscle-tissue,
-    <br>====== langoGreek:
-    <br>* McsEll.ιστός.λείος,
-    <br>* McsEll.λείος-μυικός-ιστός,
-    <a class="clsHide" href="#idBdyHmn382nam"></a></p>
-  <p id="idBdyHmn382dsn">description::
-    <br>analytic: λείος μυικός ιστός είναι μυικός ιστός.
-    <br>[Αργύρης, {1994}, 238⧺cptRsc31⧺]
-    <br>===
-    <br>synthetic: ο λείος μυικός ιστός αποτελείται από <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn021">λεια-μυικά-κύτταρα</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBdyHmn382dsn"></a></p>
-  <p id="idBdyHmn382gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn057">tissueMuscle</a>,
-    <a class="clsHide" href="#idBdyHmn382gtr"></a></p>
   </section>
 
   <section id="idBdyHmn255">
@@ -2943,7 +2969,7 @@
     <br>[Αργύρης, {1994}, 8⧺cptRsc29⧺]
     <a class="clsHide" href="#idBdyHmn255dsn"></a></p>
   <p id="idBdyHmn255gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn054gtr">epithelial-tissue</a>,
+    <br>* <a class="clsPreview" href="#idTissHmn006gtr">epithelial-tissue</a>,
     <a class="clsHide" href="#idBdyHmn255gtr"></a></p>
   <p id="idBdyHmn255wtr">whole-tree-of-::
     <br>* <a class="clsPreview" href="#idGlndHmnwtr">gland</a>,
@@ -2968,7 +2994,7 @@
     <br>[Αργύρης, {1994}, 7⧺cptRsc29⧺]
     <a class="clsHide" href="#idBdyHmn256dsn"></a></p>
   <p id="idBdyHmn256gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn054gtr">epithelial-tissue</a>,
+    <br>* <a class="clsPreview" href="#idTissHmn006gtr">epithelial-tissue</a>,
     <a class="clsHide" href="#idBdyHmn256gtr"></a></p>
   </section>
 
@@ -2987,6 +3013,33 @@
     <br>"Adipose tissue, body fat, or simply fat is a loose connective tissue composed mostly of adipocytes.[1] In addition to adipocytes, adipose tissue contains the stromal vascular fraction (SVF) of cells including preadipocytes, fibroblasts, vascular endothelial cells and a variety of immune cells such as adipose tissue macrophages. Adipose tissue is derived from preadipocytes. Its main role is to store energy in the form of lipids, although it also cushions and insulates the body. Far from being hormonally inert, adipose tissue has, in recent years, been recognized as a major endocrine organ,[2] as it produces hormones such as leptin, estrogen, resistin, and cytokine (especially TNFα). The two types of adipose tissue are white adipose tissue (WAT), which stores energy, and brown adipose tissue (BAT), which generates body heat. The formation of adipose tissue appears to be controlled in part by the adipose gene. Adipose tissue – more specifically brown adipose tissue – was first identified by the Swiss naturalist Conrad Gessner in 1551.[3]"
     <br>[https://en.wikipedia.org/wiki/Adipose_tissue {2020-03-10}]
     <a class="clsHide" href="#idTissHmn001dsn"></a></p>
+  </section>
+
+  <section id="idTissHmn002">
+  <h2 id="idTissHmn002H2">tissue.hard
+    <a class="clsHide" href="#idTissHmn002H2"></a></h2>
+  <p id="idTissHmn002nam">name::
+    <br>* Mcs.tissue.hard,
+    <br>* Mcs.tissue.002-hard,
+    <a class="clsHide" href="#idTissHmn002nam"></a></p>
+  <p id="idTissHmn002dsn">description::
+    <br>"Hard tissue (also termed calcified tissue) is tissue which is mineralized and has a firm intercellular matrix.[1] The hard tissues of humans are bone, tooth enamel, dentin, and cementum.[2] The term is in contrast to soft tissue."
+    <br>[{2020-05-19} https://en.wikipedia.org/wiki/Hard_tissue]
+    <a class="clsHide" href="#idTissHmn002dsn"></a></p>
+  </section>
+
+  <section id="idTissHmn003">
+  <h2 id="idTissHmn003H2">tissue.soft
+    <a class="clsHide" href="#idTissHmn003H2"></a></h2>
+  <p id="idTissHmn003nam">name::
+    <br>* Mcs.tissue.soft,
+    <br>* Mcs.tissue.003-soft,
+    <a class="clsHide" href="#idTissHmn003nam"></a></p>
+  <p id="idTissHmn003dsn">description::
+    <br>"In anatomy, soft tissue includes the tissues that connect, support, or surround other structures and organs of the body, not being hard tissue such as bone. Soft tissue includes tendons, ligaments, fascia, skin, fibrous tissues, fat, and synovial membranes (which are connective tissue), and muscles, nerves and blood vessels (which are not connective tissue).[1]
+    <br>It is sometimes defined by what it is not. Soft tissue has been defined as "nonepithelial, extraskeletal mesenchyme exclusive of the reticuloendothelial system and glia".[2]"
+    <br>[{2020-05-19} https://en.wikipedia.org/wiki/Soft_tissue]
+    <a class="clsHide" href="#idTissHmn003dsn"></a></p>
   </section>
 </section>
 
@@ -4464,7 +4517,7 @@
     <br>* Mcs.organ.029-muscle,!⇒ognMuscle
     <br>* Mcs.organ.muscle-029!⇒ognMuscle,
     <br>* Mcs.muscle!⇒ognMuscle,
-    <br>* Mcs.muscle.human!⇒ognMuscle,
+    <br>* Mcs.ognMuscle.human!⇒ognMuscle,
     <br>====== langoGreek:
     <br>* McsEll.όργανο.μυς,
     <br>* McsEll.μυς!=muscle,
@@ -4484,99 +4537,134 @@
     <br>* <a class="clsPreview" href="#idOgnHmn">organ</a>,
     <a class="clsHide" href="#idMsclHmngtr"></a></p>
 
-  <section id="idMsclHmndisease">
-  <h3 id="idMsclHmndiseaseH3">disease of ognMuscle
-    <a class="clsHide" href="#idMsclHmndiseaseH3"></a></h3>
-  <p id="idMsclHmndiseaseP1">disease::
+  <section id="idMsclHmnatt001">
+  <h3 id="idMsclHmnatt001H3">disease of ognMuscle
+    <a class="clsHide" href="#idMsclHmnatt001H3"></a></h3>
+  <p id="idMsclHmnatt001nam">name::
+    <br>* Mcs.ognMuscle'disease,
+    <br>* Mcs.ognMuscle'att001-disease,
+    <br>* Mcs.disease.ognMuscle,
+    <br>* Mcs.disease.256-ognMuscle,
+    <a class="clsHide" href="#idMsclHmnatt001nam"></a></p>
+  <p id="idMsclHmnatt001P1">disease::
     <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn267">muscle-atrophy-disease</a>,
     <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn631">cramp-disease</a>,
-    <a class="clsHide" href="#idMsclHmndiseaseP1"></a></p>
+    <a class="clsHide" href="#idMsclHmnatt001P1"></a></p>
   </section>
 
-  <section id="idMsclHmntss">
-  <h3 id="idMsclHmntssH3">tissueMuscle (<a class="clsPreview" href="#idBdyHmn057">link</a>) of ognMuscle
-    <a class="clsHide" href="#idMsclHmntssH3"></a></h3>
+  <section id="idMsclHmnatt002">
+  <h3 id="idMsclHmnatt002H3">tissue (<a class="clsPreview" href="#idBdyHmn057">link</a>) of ognMuscle
+    <a class="clsHide" href="#idMsclHmnatt002H3"></a></h3>
   </section>
 
-  <section id="idBdyHmn473">
-  <h3 id="idBdyHmn473H3">muscle-tone
-    <a class="clsHide" href="#idBdyHmn473H3"></a></h3>
-  <p id="idBdyHmn473nam">name::
-    <br>* Mcs.cptBdyHmn473,
+  <section id="idMsclHmnatt003">
+  <h3 id="idMsclHmnatt003H3">cell (<a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn013">link</a>) of ognMuscle
+    <a class="clsHide" href="#idMsclHmnatt003H3"></a></h3>
+  </section>
+
+  <section id="idMsclHmnatt005">
+  <h3 id="idMsclHmnatt005H3">shape of ognMuscle
+    <a class="clsHide" href="#idMsclHmnatt005H3"></a></h3>
+  <p id="idMsclHmnatt005nam">name::
+    <br>* Mcs.ognMuscle'shape,
+    <br>* Mcs.ognMuscle'att005-shape,
+    <a class="clsHide" href="#idMsclHmnatt005nam"></a></p>
+  <p id="idMsclHmnatt005dsn">description::
+    <br>·
+    <a class="clsHide" href="#idMsclHmnatt005dsn"></a></p>
+  </section>
+
+  <section id="idMsclHmnatt006">
+  <h3 id="idMsclHmnatt006H3">location of ognMuscle
+    <a class="clsHide" href="#idMsclHmnatt006H3"></a></h3>
+  <p id="idMsclHmnatt006nam">name::
+    <br>* Mcs.ognMuscle'location,
+    <a class="clsHide" href="#idMsclHmnatt006nam"></a></p>
+  <p id="idMsclHmnatt006dsn">description::
+    <br>·
+    <a class="clsHide" href="#idMsclHmnatt006dsn"></a></p>
+  </section>
+
+  <section id="idMsclHmnsrtrF">
+  <h3 id="idMsclHmnsrtrFH3">structure of ognMuscle
+    <a class="clsHide" href="#idMsclHmnsrtrFH3"></a></h3>
+  <p id="idMsclHmnsrtrFnam">name::
+    <br>* Mcs.ognMuscle'structure,
+    <a class="clsHide" href="#idMsclHmnsrtrFnam"></a></p>
+  <p id="idMsclHmnsrtrFP1">structure::
+    <br>* <a class="clsPreview" href="#idBdyHmn057">tissueMuscle</a>,
+    <a class="clsHide" href="#idMsclHmnsrtrFP1"></a></p>
+  <p id="idMsclHmnsrtrFP2">οι βασικές ανατομικές και λειτουργικές μοναδες των μυών είναι τα μυικά κύτταρα.
+    <br>[Αργύρης, {1994}, 29⧺cptRsc29⧺]
+    <a class="clsHide" href="#idMsclHmnsrtrFP2"></a></p>
+  <p id="idMsclHmnsrtrFP3">μυικός τόνος είναι μία συνεχής κατασταση ελαφράς συστολής των μυών. Χαρη στο μυικό τόνο οι μύες δε χαλαρώνουν τελείως, όταν αναπαυόμαστε ή όταν κοιμόμαστε και γενικά διατηρούνται όλοι οι μύες του σώματός μας σε σφριγηλή κατάσταση.
+    <br>[Αργύρης, {1994}, 30⧺cptRsc29⧺]
+    <a class="clsHide" href="#idMsclHmnsrtrFP3"></a></p>
+  </section>
+
+  <section id="idMsclHmndngF">
+  <h3 id="idMsclHmndngFH3">DOING of ognMuscle
+    <a class="clsHide" href="#idMsclHmndngFH3"></a></h3>
+  <p id="idMsclHmndngFnam">name::
+    <br>* Mcs.ognMuscle'doing,
+    <a class="clsHide" href="#idMsclHmndngFnam"></a></p>
+  <p id="idMsclHmndngFP1">doing::
+    <br>* μυική-συστολή,
+    <br> &nbsp;μυικός-καματος (μειωμενη μυική συστολή)
+    <br>* <a class="clsPreview" href="#idMsclHmnatt004">μυικός-τόνος</a>,
+    <br>* τετανικη-συστολή,
+    <a class="clsHide" href="#idMsclHmndngFP1"></a></p>
+  <p id="idMsclHmndngFP2">οι μύες είναι τα ενεργά όργανα που πραγματοποιούν ολες τις κινήσεις στο ανθρώπινο σώμα.
+    <br>[Αργύρης, {1994}, 28⧺cptRsc29⧺]
+    <a class="clsHide" href="#idMsclHmndngFP2"></a></p>
+
+  <section id="idMsclHmnatt004">
+  <h4 id="idMsclHmnatt004H4">tone of ognMuscle
+    <a class="clsHide" href="#idMsclHmnatt004H4"></a></h4>
+  <p id="idMsclHmnatt004nam">name::
+    <br>* Mcs.ognMuscle'tone,
+    <br>* Mcs.ognMuscle'att004-tone,
     <br>* Mcs.muscle-tone,
     <br>====== langoGreek:
     <br>* McsEll.μυικός-τόνος,
-    <a class="clsHide" href="#idBdyHmn473nam"></a></p>
-  <p id="idBdyHmn473dsn">description::
+    <a class="clsHide" href="#idMsclHmnatt004nam"></a></p>
+  <p id="idMsclHmnatt004dsn">description::
     <br>analytic: μυικός τόνος είναι λειτουργία μυος κατά την οποία βρίσκονται σε μερική συστολή λίγες μόνο μυικές ίνες που εναλλάσονται συνεχώς.
     <br>[Αργύρης, {1994}, 322⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn473dsn"></a></p>
-  <p id="idBdyHmn473wtr">whole-tree-of-::
+    <a class="clsHide" href="#idMsclHmnatt004dsn"></a></p>
+  <p id="idMsclHmnatt004wtr">whole-tree-of-::
     <br>* <a class="clsPreview" href="#idMsclHmnwtr">muscle</a>,
-    <a class="clsHide" href="#idBdyHmn473wtr"></a></p>
+    <a class="clsHide" href="#idMsclHmnatt004wtr"></a></p>
 
-  <section id="idBdyHmn473evaluation">
-  <h4 id="idBdyHmn473evaluationH4">evaluation
-    <a class="clsHide" href="#idBdyHmn473evaluationH4"></a></h4>
-  <p id="idBdyHmn473evaluationP1">ενας μύς που έχει μυικό τόνο μπορεί να συστέλλεται πιο γρήγορα από ένα μυ που βρίσκεται σε κατάσταση πλήρους χαλαρωσης.
+  <section id="idMsclHmnatt004evaluation">
+  <h5 id="idMsclHmnatt004evaluationH5">evaluation
+    <a class="clsHide" href="#idMsclHmnatt004evaluationH5"></a></h5>
+  <p id="idMsclHmnatt004evaluationP1">ενας μύς που έχει μυικό τόνο μπορεί να συστέλλεται πιο γρήγορα από ένα μυ που βρίσκεται σε κατάσταση πλήρους χαλαρωσης.
     <br>[Αργύρης, {1994}, 322⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn473evaluationP1"></a></p>
+    <a class="clsHide" href="#idMsclHmnatt004evaluationP1"></a></p>
   </section>
   </section>
-
-  <section id="idMsclHmnsrtr">
-  <h3 id="idMsclHmnsrtrH3">structure of ognMuscle
-    <a class="clsHide" href="#idMsclHmnsrtrH3"></a></h3>
-  <p id="idMsclHmnsrtrnam">name::
-    <br>* Mcs.ognMuscle'structure,
-    <a class="clsHide" href="#idMsclHmnsrtrnam"></a></p>
-  <p id="idMsclHmnsrtrP1">structure::
-    <br>* <a class="clsPreview" href="#idBdyHmn057">tissueMuscle</a>,
-    <a class="clsHide" href="#idMsclHmnsrtrP1"></a></p>
-  <p id="idMsclHmnsrtrP2">οι βασικές ανατομικές και λειτουργικές μοναδες των μυών είναι τα μυικά κύτταρα.
-    <br>[Αργύρης, {1994}, 29⧺cptRsc29⧺]
-    <a class="clsHide" href="#idMsclHmnsrtrP2"></a></p>
-  <p id="idMsclHmnsrtrP3">μυικός τόνος είναι μία συνεχής κατασταση ελαφράς συστολής των μυών. Χαρη στο μυικό τόνο οι μύες δε χαλαρώνουν τελείως, όταν αναπαυόμαστε ή όταν κοιμόμαστε και γενικά διατηρούνται όλοι οι μύες του σώματός μας σε σφριγηλή κατάσταση.
-    <br>[Αργύρης, {1994}, 30⧺cptRsc29⧺]
-    <a class="clsHide" href="#idMsclHmnsrtrP3"></a></p>
-  </section>
-
-  <section id="idMsclHmndoing">
-  <h3 id="idMsclHmndoingH3">doing
-    <a class="clsHide" href="#idMsclHmndoingH3"></a></h3>
-  <p id="idMsclHmndoingnam">name::
-    <br>* Mcs.muscle'doing,
-    <a class="clsHide" href="#idMsclHmndoingnam"></a></p>
-  <p id="idMsclHmndoingP1">doing::
-    <br>* μυική-συστολή,
-    <br> &nbsp;μυικός-καματος (μειωμενη μυική συστολή)
-    <br>* <a class="clsPreview" href="#idBdyHmn473">μυικός-τόνος</a>,
-    <br>* τετανικη-συστολή,
-    <a class="clsHide" href="#idMsclHmndoingP1"></a></p>
-  <p id="idMsclHmndoingP2">οι μύες είναι τα ενεργά όργανα που πραγματοποιούν ολες τις κινήσεις στο ανθρώπινο σώμα.
-    <br>[Αργύρης, {1994}, 28⧺cptRsc29⧺]
-    <a class="clsHide" href="#idMsclHmndoingP2"></a></p>
   </section>
 
   <section id="idMsclHmnSPECIFIC">
-  <h3 id="idMsclHmnSPECIFICH3">muscle.SPECIFIC
+  <h3 id="idMsclHmnSPECIFICH3">ognMuscle.SPECIFIC
     <a class="clsHide" href="#idMsclHmnSPECIFICH3"></a></h3>
   <p id="idMsclHmnSPECIFICnam">name::
-    <br>* Mcs.muscle.specific,
+    <br>* Mcs.ognMuscle.specific,
     <a class="clsHide" href="#idMsclHmnSPECIFICnam"></a></p>
   <p id="idMsclHmnSPECIFICwpa">addressWpg::
     <br>* https://en.wikipedia.org/wiki/List_of_skeletal_muscles_of_the_human_body,
     <a class="clsHide" href="#idMsclHmnSPECIFICwpa"></a></p>
   <p id="idMsclHmnstr">specific-tree-of-::
-    <br>* <a class="clsPreview" href="#idBdyHmn266">γραμμωτοι-μύες</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn472">καρδιακός-μυς</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn471">λείοι-μύες</a>,
-    <br>
-    <br>* αναπνευστικοι μύες,
+    <br>* <a class="clsPreview" href="#idMsclHmn002">muscleSkeletal</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn472">muscleCardiac</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmn471">muscleSmooth</a>,
+    <br>===
+    <br>* αναπνευστικοί-μύες,
     <br>* διάγραγμα,
-    <br>* οφθαλμου μύες,
+    <br>* οφθαλμού-μύες,
     <a class="clsHide" href="#idMsclHmnstr"></a></p>
-  <p id="idMsclHmnSPECIFICP1">οι μύες μπορούν να διακριθούν σε πολλές κατηγορίες, αν λάβουμε υπόψη μας το σχημα, τη θεση, την υφη τους, ή την εξάρτηση της λειτουργίας τους από τη βουληση μας.
+  <p id="idMsclHmnSPECIFICP1">οι μύες μπορούν να διακριθούν σε πολλές κατηγορίες, αν λάβουμε υπόψη μας το σχήμα, τη θέση, την υφή τους, ή την εξάρτηση της λειτουργίας τους από τη βούλησή μας.
     <br>[Αργύρης, {1994}, 28⧺cptRsc29⧺]
     <a class="clsHide" href="#idMsclHmnSPECIFICP1"></a></p>
   <p id="idMsclHmnSPECIFICP2">εκτός από τις χαρακτηριστικές ιστολογικές διαφορες τα 3 είδη των μυών (λείοι, γραμμωτοί, μυοκαρδίου) διαφέρουν και ως προς τη νευρωση δηλ. Οι γραμμωτοί μύες νευρώνονται με νεύρα του εγκεφαλονωτιαίου νευρικού συστήματος και επομένως οι κινήσεις τους υπακούουν στη θέλησή μας, ενώ οι λείοι και το μυοκάρδιο νευρώνονται από νεύρα του αυτόνομου νευρικού συστήματος και οι κινήσεις τους δεν εξαρτώνται από τη θέλησή μας.
@@ -4591,7 +4679,7 @@
     <br>
     <br>στην εικόνα παρατηρούνται:
     <br>Attached Image:
-    <br>
+    <br><img src="filMcsBdyHmn.files/muscle.kefalis.jpg">
     <br>
     <br>η επικράνια απονεύρωση συνδέει τους δύο μετωπιαίους μυς μπροστά, με τους δύο ινιακούς μυς πίσω.στα πλάγια καταφύεται, δεξιά και αριστερά, στην κροταφική περιτονία. Συνδέεται στερεά με το υπερκείμενο δέρμα έτσι ώστε σε τραυματισμό του τριχωτού της κεφαλής, τα χείλη του τραύματος δεν απομακρύνονται το ένα από το άλλο. Οταν το τραύμα περιλαμβάνει και την επικράνια απονεύρωση τα χείλη του τραύματος απομακρύνονται.
     <br>
@@ -4637,21 +4725,21 @@
     <br>
     <br>μυς του τραχήλου
     <br>Attached Image:
-    <br>
+    <br><img src="filMcsBdyHmn.files/muscle.traxilou.jpg">
     <br>
     <br>ο λαιμός του ανθρώπου διακρίνεται στον τράχηλο, που βρίσκεται μπροστά και στον αυχένα, που βρίσκεται πίσω. Οι μυς του τραχήλου διακρίνονται σε πρόσθιους, πλάγιους, προσθιοπλάγιους και οπίσθιους ή παρασπονδυλικούς μυς.
     <br>
     <br>στην εικόνα παρατηρούνται:
     <br>
-    <br>θυρεοΫοειδης μυς
+    <br>θυρεοϋοειδής μυς
     <br>ο θυρεοϋοειδής μυς εκφύεται από τον θυρεοειδή χόνδρο του λάρυγγα και καταφύεται στο υοειδές οστό.
     <br>με την ενέργειά του έλκει το υοειδές οστό προς τα κάτω.
     <br>
-    <br>ωμοΫοειδης μυς
+    <br>ωμοϋοειδής μυς
     <br>ο ωμοϋοειδής μυς εκφύεται από την ωμοπλάτη και καταφύεται στο υοειδές οστό.
     <br>με την ενέργεια του έλκει το υοειδές οστό προς τα κάτω και βοηθά τη ροη του αίματος μέσα στη σφαγίτιδα φλέβα.
     <br>
-    <br>στερνοΫοειδης μυς
+    <br>στερνοϋοειδής μυς
     <br>ο στερνοϋοειδής μυς εκφύεται από τη λαβή του στέρνου και την κλείδα και καταφύεται στο υοειδές οστό.
     <br>
     <br>στερνοκλειδομαστοειδης μυς
@@ -4671,7 +4759,7 @@
     <br>
     <br>στην εικόνα παρατηρούνται:
     <br>Attached Image:
-    <br>
+    <br><img src="filMcsBdyHmn.files/muscle.kormou.jpg">
     <br>
     <br>μεσοπλευριοι μυς
     <br>οι μεσοπλεύριοι μυς καλύπτουν το κενό που υπάρχει ανάμεσα στις πλευρές.
@@ -4720,7 +4808,7 @@
     <br>
     <br>στην εικόνα παρατηρούνται:
     <br>Attached Image:
-    <br>
+    <br><img src="filMcsBdyHmn.files/muscle.raxis.jpg">
     <br>
     <br>τραπεζοειδης μυς
     <br>κάθε τραπεζοειδής μυς έχει σχήμα τριγώνου και καταλαμβάνει το πάνω μισό της ράχης. Συνολικά και οι δύο μυς μαζί έχουν σχήμα τραπεζίου, από όπου πήρε το ονομά του και ο μυς. Κάθε τραπεζοειδής μυς εκφύεται από το ινιακό οστό και από τους αυχενικούς και τους θωρακικούς σπονδύλους και καταφύεται στην κλείδα και στην ωμοπλάτη.
@@ -4732,9 +4820,9 @@
     <br>
     <br>άνω άκρο προσθια και οπισθια επιφανεια
     <br>Attached Image:
-    <br>
+    <br><img src="filMcsBdyHmn.files/muscle.anw_akro_prosthia.jpg">
     <br>Attached Image:
-    <br>
+    <br><img src="filMcsBdyHmn.files/muscle.anw_akro_opisthia.jpg">
     <br>
     <br>δελτοειδης μυς
     <br>ο δελτοειδής μυς καλύπτει τη διάρθρωση του ώμου και το άνω τεταρτημόριο του βραχιόνιου οστού.εκφύεται από τη κλείδα, το ακρώμιο και τη ωμοπλάτη και καταφύεται στο βραχιόνιο οστού.
@@ -4792,7 +4880,7 @@
     <br>ο κερκιδικός καμπτήρας του καρπού μυς εκφύεται από το βραχιόνιο οστό και την περιτονία του πήχη και καταφύεται στη βάση του δεύτερου και τρίτου μετακάρπιου.
     <br>με την ενέργεια του κάμπτει και συγχρόνως απάγει το χέρι.
     <br>
-    <br>μάκρος παλαμικος μυς
+    <br>μακρός παλαμικος μυς
     <br>ο μακρός παλαμικός μυς εκφύεται από την παρατροχίλια απόφυση και την περιτονία του πήχη και καταφύεται στην παλαμιαία απονεύρωση του χέριού.
     <br>με την ενέργεια του τείνει την παλαμιαία απονεύρωση και κάμπτει το χέρι.
     <br>
@@ -4810,7 +4898,7 @@
     <br>
     <br>στην εικόνα παρατηρούνται:
     <br>Attached Image:
-    <br>
+    <br><img src="filMcsBdyHmn.files/muscle.katw_akro_prosthia.jpg">
     <br>
     <br>λαγονοψοιτης μυς
     <br>ο λαγονοψοΐτης μυς αποτελείται από δύο μυς, το μεγάλο ψοΐτη και το λαγόνιο μυς, οι οποίοι συνενώνονται σε έναν. Ο μείζων ψοΐτης μυς εκφύεται από το 12ο θωρακικό και τους πέντε οσφυικούς σπονδύλους και καταφύεται στο μηριαίο οστό. Ο λαγόνιος μυς εκφύεται από τη λαγόνια άκρολοφία, το λαγόνιο βόθρο και τον οσφυολαγόνιο σύνδεσμο και καταφύεται επίσης στο μηριαίο οστό.
@@ -4831,7 +4919,7 @@
     <br>ο κτενίτης μυς εκφύεται από το ηβικό οστό και καταφύεται στο μηριαίο οστό.
     <br>με την ενέργεια του κάμπτει και προσάγει το μηρό.
     <br>
-    <br>μάκρος προσαγωγος μυς
+    <br>μακρός προσαγωγος μυς
     <br>ο μακρός προσαγωγος μυς εκφύεται από το ηβικό οστό και καταφύεται στη τραχεία γραμμή.
     <br>με την ενέργεια του προσάγει και στρέφει προς τα έξω το μηρό.
     <br>
@@ -4859,11 +4947,11 @@
     <br>O πρόσθιος κνημιαίος μυς εκφύεται από το άνω ημιμόριο της έξω επιφάνειας της κνήμης και καταφύεται στα οστάα του ταρσού και στη βάση του πρώτου ματατάρσιου.
     <br>με την ενέργεια του εκτείνει το πόδι και συγχρόνως το υπτιάζει και συμβάλλει στη συγκράτηση της ποδικής καμάρας.
     <br>
-    <br>μάκρος εκτεινων τους δακτυλους μυς
+    <br>μακρός εκτεινων τους δακτυλους μυς
     <br>O μακρός εκτείνων τους δακτύλους μυς εκφύεται από την περόνη, τον έξω κνημιαίο κόνδυλο, το μεσόστεο υμένα και το πρόσθιο περονιαίο μεσομυίκο διάφραγμα και καταφύεται στη ραχιαία επιφάνεια της βάσης της μέσης φάλαγγας και στη βάση της ονυχοφόρας φάλαγγας κάθε δακτύλου.
     <br>με την ενέργεια του εκτείνει τους τέσσερις τελευταίους δακτύλους και γενικά το πόδι.
     <br>
-    <br>μάκρος περονιαιος μυς
+    <br>μακρός περονιαιος μυς
     <br>ο μακρός περονιαίος μυς εκφύεται από την κνήμη και την περόνη και καταφύεται στη βάση του πρώτου μετατάρσιου και στο πρώτο σφηνοειδές.
     <br>με την ενέργεια του κάμπτει πελματιαίως το πόδι και συγχρόνως το πρηνίζει και το σημαντικότερο όμως είναι η συγκράτηση της ποδικής καμάρας σε εγκάρσια φορά.
     <br>
@@ -4873,7 +4961,7 @@
     <br>
     <br>μυς του κάτω άκρου - οπίσθια επιφάνεια
     <br>Attached Image:
-    <br>
+    <br><img src="filMcsBdyHmn.files/muscle.katw_akro_opisthia.jpg">
     <br>
     <br>μεγαλος γλουτιαιος μυς
     <br>ο μεγάλος γλουτιαίος μυς εκφύεται από το λαγόνιο οστό, το ιερό οστό , το κόκκυγα, το μεγάλο ισχιοιερό σύνδεσμο, την απονεύρωση του ιερονωτιαίου μυ και την περιτονία του μέσου γλουτιαίου μυ και καταφύεται στη λαγονοκνημιαία ταινία και στο μηριαίο οστό.
@@ -4895,7 +4983,7 @@
     <br>ο δικέφαλος γαστροκνήμιος μυς εκφύεται με δύο ισχυρές κεφαλές, την έξω και την έσω. Η έξω κεφαλή εκφύεται από τον έξω μηριαίο κόνδυλο και η έσω κεφαλή από την ιγνυακή επιφάνεια του μηριαίου οστού και τον έσω μηριαίο κόνδυλο και καταφύεται μετά την συνένωση με τον υποκνημίδιο μυ και τον σχηματισμό του ισχυρότερου τένοντα του ανθρώπου, τον αχίλλείο τένοντα, στο κάτω ημιμόριο της οπίσθιας επιφάνειας της πτέρνας.
     <br>με την ενέργεια του κάμπτει την κνήμη και μαζί με τους άλλους μυς, κάμπτει πελματιαίως το πόδι.
     <br>
-    <br>μάκρος πελματικος μυς
+    <br>μακρός πελματικός μυς
     <br>ο μακρός πελματικός μυς εκφύεται από το θύλακο της διάρθρωσης του γόνατος και από το έξω χείλος του μηριαίου οστού και καταφύεται στον αχίλλείο τένοντα.
     <br>με την ενέργεια του κάμπτει πελματιαίως το πόδι.
     <br>
@@ -4911,124 +4999,116 @@
     <a class="clsHide" href="#idMsclHmnSPECIFICP3"></a></p>
   </section>
 
-  <section id="idMsclHmn_1">
-  <h3 id="idMsclHmn_1H3">muscle.aggregate
-    <a class="clsHide" href="#idMsclHmn_1H3"></a></h3>
-  <p id="idMsclHmn_1P1">Do Caterpillars Have a Muscular System?
+  <section id="idMsclHmn001">
+  <h3 id="idMsclHmn001H3">ognMuscle.aggregate
+    <a class="clsHide" href="#idMsclHmn001H3"></a></h3>
+  <p id="idMsclHmn001nam">name::
+    <br>* Mcs.ognMuscle.aggregate,
+    <br>* Mcs.ognMuscle.001-aggregate,
+    <a class="clsHide" href="#idMsclHmn001nam"></a></p>
+  <p id="idMsclHmn001P1">Do Caterpillars Have a Muscular System?
     <br>Caterpillars have about 4,000 muscles, roughly seven times more than humans.
-    <br>They may not move very quickly, but it's not because the average caterpillar lacks muscle. Caterpillars have about 4,000 muscles in their tubular bodies, including about 250 in the head segment alone. Compare that to the 629 muscles contained in the human body!
+    <br>They may not move very quickly, but it's not because the average caterpillar lacks muscle. Caterpillars have about 4,000 muscles in their tubular bodies, including about 250 in the head segment alone.
+    <br><strong>Compare that to the 629 muscles contained in the human body</strong>!
     <br>[http://www.wisegeek.com/do-caterpillars-have-a-muscular-system.htm?m, {2015-11-03}]
-    <a class="clsHide" href="#idMsclHmn_1P1"></a></p>
+    <a class="clsHide" href="#idMsclHmn001P1"></a></p>
   </section>
 
-  <section id="idMsclHmn_2">
-  <h3 id="idMsclHmn_2H3">muscle.gastrocnemius
-    <a class="clsHide" href="#idMsclHmn_2H3"></a></h3>
-  <p id="idMsclHmn_2nam">name::
-    <br>* Mcs.muscle.gastrocnemius,
-    <br>====== langoGreek:
-    <br>* McsEll.γαστροκνήμιος,
-    <a class="clsHide" href="#idMsclHmn_2nam"></a></p>
-  <p id="idMsclHmn_2dsn">description::
-    <br>είναι ο μυς στο πόδι, πίσω. Η γάμπα που έχει 2 μυς.
-    <a class="clsHide" href="#idMsclHmn_2dsn"></a></p>
-  </section>
-
-  <section id="idBdyHmn266">
-  <h3 id="idBdyHmn266H3">muscle.skeletal
-    <a class="clsHide" href="#idBdyHmn266H3"></a></h3>
-  <p id="idBdyHmn266nam">name::
-    <br>* Mcs.cptBdyHmn266,
-    <br>* Mcs.muscle.skeletal,
+  <section id="idMsclHmn002">
+  <h3 id="idMsclHmn002H3">ognMuscle.skeletal-002
+    <a class="clsHide" href="#idMsclHmn002H3"></a></h3>
+  <p id="idMsclHmn002nam">name::
+    <br>* Mcs.ognMuscle.skeletal,
+    <br>* Mcs.ognMuscle.002-skeletal,
     <br>* Mcs.skeletal-muscle,
     <br>====== langoGreek:
     <br>* McsEll.γραμμωτός-μυς,
     <br>* McsEll.μυς.γραμμωτός,
-    <br>* McsEll.σκελετικος-μυς,
-    <a class="clsHide" href="#idBdyHmn266nam"></a></p>
-  <p id="idBdyHmn266dsn">description::
+    <br>* McsEll.σκελετικός-μυς,
+    <a class="clsHide" href="#idMsclHmn002nam"></a></p>
+  <p id="idMsclHmn002dsn">description::
     <br>analytic: σκελετικοί/γραμμωτοί λέγονται οι μυς που είναι προσκολλημένοι στα οστά.
     <br>[Αργύρης, {1994}, 28⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn266dsn"></a></p>
-  <p id="idBdyHmn266gtr">generic-tree-of-::
+    <a class="clsHide" href="#idMsclHmn002dsn"></a></p>
+  <p id="idMsclHmn002gtr">generic-tree-of-::
     <br>* <a class="clsPreview" href="#idMsclHmn">muscle</a>,
-    <a class="clsHide" href="#idBdyHmn266gtr"></a></p>
+    <a class="clsHide" href="#idMsclHmn002gtr"></a></p>
 
-  <section id="idBdyHmn266disease">
-  <h4 id="idBdyHmn266diseaseH4">disease
-    <a class="clsHide" href="#idBdyHmn266diseaseH4"></a></h4>
-  <p id="idBdyHmn266diseaseSpc">specific::
+  <section id="idMsclHmn002disease">
+  <h4 id="idMsclHmn002diseaseH4">disease
+    <a class="clsHide" href="#idMsclHmn002diseaseH4"></a></h4>
+  <p id="idMsclHmn002diseaseSpc">specific::
     <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn018">tendonitis</a>,
-    <a class="clsHide" href="#idBdyHmn266diseaseSpc"></a></p>
+    <a class="clsHide" href="#idMsclHmn002diseaseSpc"></a></p>
   </section>
 
-  <section id="idBdyHmn266srtr">
-  <h4 id="idBdyHmn266srtrH4">structure
-    <a class="clsHide" href="#idBdyHmn266srtrH4"></a></h4>
-  <p id="idBdyHmn266srtrP1">structure::
+  <section id="idMsclHmn002srtr">
+  <h4 id="idMsclHmn002srtrH4">structure
+    <a class="clsHide" href="#idMsclHmn002srtrH4"></a></h4>
+  <p id="idMsclHmn002srtrP1">structure::
     <br>* ακρα μυ/προσφυσεις/τενοντες,
     <br> &nbsp;εκφυση
     <br> &nbsp;καταφυση
     <br>* γαστερα μυ,
     <br>* <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn013">μυικες-ίνες</a>,
     <br>* μυικός-καματος,
-    <a class="clsHide" href="#idBdyHmn266srtrP1"></a></p>
-  <p id="idBdyHmn266srtrP2">οι γραμμωτοί μύες, που αποτελούν το 40% του βάρους του σώματος, είναι αυτοτελή όργανα και προσφύονται στα οστά, τα οποία κινούν τις αρθρώσεις (κινητικό σύστημα), γι' αυτό λέγονται και σκελετικοί μύες.
+    <a class="clsHide" href="#idMsclHmn002srtrP1"></a></p>
+  <p id="idMsclHmn002srtrP2">οι γραμμωτοί μύες, που αποτελούν το 40% του βάρους του σώματος, είναι αυτοτελή όργανα και προσφύονται στα οστά, τα οποία κινούν τις αρθρώσεις (κινητικό σύστημα), γι' αυτό λέγονται και σκελετικοί μύες.
     <br>[Αργύρης, {1994}, 316⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn266srtrP2"></a></p>
-  <p id="idBdyHmn266srtrP3">κάθε γραμμωτός μυς εμφανίζει τρία μέρη, τη γαστερα του μυ, και τα δύ ακρα με τα οποία γίνεται η πρόσφυση στα οστά. Το άκρο που προσφύεται στο πιο ακίνητο μέρος του σκελετού λέγεται έκφυση του μυ και το άλλο άκρο λέγεται καταφυση του μυ.  οι προσφύσεις των μυών αποτελούνται συνηθέστατα από συνδετικές στερεές ίνες που αποτελούν τους τενοντες του μυός.
+    <a class="clsHide" href="#idMsclHmn002srtrP2"></a></p>
+  <p id="idMsclHmn002srtrP3">κάθε γραμμωτός μυς εμφανίζει τρία μέρη, τη γαστερα του μυ, και τα δύ ακρα με τα οποία γίνεται η πρόσφυση στα οστά. Το άκρο που προσφύεται στο πιο ακίνητο μέρος του σκελετού λέγεται έκφυση του μυ και το άλλο άκρο λέγεται καταφυση του μυ.  οι προσφύσεις των μυών αποτελούνται συνηθέστατα από συνδετικές στερεές ίνες που αποτελούν τους τενοντες του μυός.
     <br>[Αργύρης, {1994}, 317⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn266srtrP3"></a></p>
-  <p id="idBdyHmn266partP4">ο μυικός καματος των σκελετικών μυών προέρχεται από τη συσσώρευση στους μυς καματογόνων ουσιών, ύστερα από έντονη μυική εργασία.
+    <a class="clsHide" href="#idMsclHmn002srtrP3"></a></p>
+  <p id="idMsclHmn002partP4">ο μυικός καματος των σκελετικών μυών προέρχεται από τη συσσώρευση στους μυς καματογόνων ουσιών, ύστερα από έντονη μυική εργασία.
     <br>[Αργύρης, {1994}, 29⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn266partP4"></a></p>
+    <a class="clsHide" href="#idMsclHmn002partP4"></a></p>
   </section>
 
-  <section id="idBdyHmn266_1">
-  <h4 id="idBdyHmn266_1H4">muscle.tendon
-    <a class="clsHide" href="#idBdyHmn266_1H4"></a></h4>
-  <p id="idBdyHmn266_1nam">name::
+  <section id="idMsclHmn002_1">
+  <h4 id="idMsclHmn002_1H4">ognMuscle.tendon
+    <a class="clsHide" href="#idMsclHmn002_1H4"></a></h4>
+  <p id="idMsclHmn002_1nam">name::
     <br>* Mcs.tendon,
     <br>====== langoGreek:
     <br>* McsEll.τενοντας,
     <br>* McsEll.τένοντας,
-    <a class="clsHide" href="#idBdyHmn266_1nam"></a></p>
-  <p id="idBdyHmn266_1P1">ten·don
+    <a class="clsHide" href="#idMsclHmn002_1nam"></a></p>
+  <p id="idMsclHmn002_1P1">ten·don
     <br>A flexible but inelastic cord of strong fibrous collagen tissue attaching a muscle to a bone
     <br>===
     <br>τένοντας ή τένων είναι μία σκληρή ζώνη ινώδους συνδετικού ιστού που συνδέει συνήθως μύες με οστά και είναι σε θέση έντασης. Οι τένοντες είναι παρόμοιοι με τους συνδέσμους, εκτός από το ότι οι σύνδεσμοι ενώνουν ένα κόκκαλο σε άλλο. Οι τένοντες και οι μύες λειτουργούν μαζί και μπορούν μόνο να ασκήσουν μία δύναμη τραβήγματος.
     <br>κίνδυνοι[επεξεργασία]
     <br>οι συχνές και απότομες κινήσεις των μυών εξασκούν μεγάλη ένταση στους τένοντες, και επειδή οι τένοντες στερούνται ελαστικότητας, μπορεί να ερεθιστούν ή να πάθουν διάρρηξη ή και να αποχωριστούν από τα οστά. Μερικές φορές, μετά από ατύχημα, μπορεί ο τένοντας να κοπεί, με αποτέλεσμα ο μυς να μη μπορεί να λειτουργεί κανονικά.
     <br>[http://el.wikipedia.org/wiki/τένοντας]
-    <a class="clsHide" href="#idBdyHmn266_1P1"></a></p>
+    <a class="clsHide" href="#idMsclHmn002_1P1"></a></p>
   </section>
 
-  <section id="idBdyHmn266SPECIFIC">
-  <h4 id="idBdyHmn266SPECIFICH4">SPECIFIC
-    <a class="clsHide" href="#idBdyHmn266SPECIFICH4"></a></h4>
-  <p id="idBdyHmn266str">specific-tree-of-::
+  <section id="idMsclHmn002SPECIFIC">
+  <h4 id="idMsclHmn002SPECIFICH4">SPECIFIC
+    <a class="clsHide" href="#idMsclHmn002SPECIFICH4"></a></h4>
+  <p id="idMsclHmn002str">specific-tree-of-::
     <br>* <a class="clsPreview" href="#idBdyHmn475">άκρων-γραμμωτοι-μύες</a>,
     <br>* βραχεις γραμμωτοι μύες,
     <br>* <a class="clsPreview" href="#idBdyHmn474">κορμού-γραμμωτοιμύες</a>,
     <br>* μάκροι γραμμωτοι μύες,
     <br>* πλατεις γραμμωτοι μύες,
     <br>* σφιγκτηρες γραμμωτοι μύες,
-    <a class="clsHide" href="#idBdyHmn266str"></a></p>
-  <p id="idBdyHmn266SPECIFICP1">οι γραμμωτοί μύες, ανάλογα με το σχήμα τους διακρίνονται σε μάκρους (πχ δικέφαλος βραχίονος), βραχεις, πλατεις (πχ πλατύς, ραχιαίος), και σε σφιγκτηρες (που περιβάλλουν φυσιολογικές οπές του σώματος πχ σφιγκτήρας του στόματος, σφιγκτήρας του πρωκτού).
+    <a class="clsHide" href="#idMsclHmn002str"></a></p>
+  <p id="idMsclHmn002SPECIFICP1">οι γραμμωτοί μύες, ανάλογα με το σχήμα τους διακρίνονται σε μάκρους (πχ δικέφαλος βραχίονος), βραχεις, πλατεις (πχ πλατύς, ραχιαίος), και σε σφιγκτηρες (που περιβάλλουν φυσιολογικές οπές του σώματος πχ σφιγκτήρας του στόματος, σφιγκτήρας του πρωκτού).
     <br>[Αργύρης, {1994}, 316⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn266SPECIFICP1"></a></p>
-  <p id="idBdyHmn266SPECIFICP2">οι γραμμωτοί μύες ταξινομούνται συνήθως ανάλογα με την περιοχή του σώματος στην οποία ανήκουν σε μυς του κορμού και μυς των άκρων.
+    <a class="clsHide" href="#idMsclHmn002SPECIFICP1"></a></p>
+  <p id="idMsclHmn002SPECIFICP2">οι γραμμωτοί μύες ταξινομούνται συνήθως ανάλογα με την περιοχή του σώματος στην οποία ανήκουν σε μυς του κορμού και μυς των άκρων.
     <br>[Αργύρης, {1994}, 323⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn266SPECIFICP2"></a></p>
+    <a class="clsHide" href="#idMsclHmn002SPECIFICP2"></a></p>
   </section>
   </section>
 
   <section id="idBdyHmn471">
-  <h3 id="idBdyHmn471H3">muscle.smooth
+  <h3 id="idBdyHmn471H3">ognMuscle.smooth
     <a class="clsHide" href="#idBdyHmn471H3"></a></h3>
   <p id="idBdyHmn471nam">name::
     <br>* Mcs.cptBdyHmn471,
-    <br>* Mcs.muscle.smooth,
+    <br>* Mcs.ognMuscle.smooth,
     <br>* Mcs.smooth-muscle,
     <br>====== langoGreek:
     <br>* McsEll.λείος-μυς,
@@ -5064,7 +5144,7 @@
   </section>
 
   <section id="idBdyHmn472">
-  <h3 id="idBdyHmn472H3">muscle.cardiac
+  <h3 id="idBdyHmn472H3">ognMuscle.cardiac
     <a class="clsHide" href="#idBdyHmn472H3"></a></h3>
   <p id="idBdyHmn472nam">name::
     <br>* Mcs.cptBdyHmn472,
@@ -5087,12 +5167,25 @@
     <a class="clsHide" href="#idBdyHmn472gtr"></a></p>
   </section>
 
+  <section id="idMsclHmn_2">
+  <h3 id="idMsclHmn_2H3">ognMuscle.gastrocnemius
+    <a class="clsHide" href="#idMsclHmn_2H3"></a></h3>
+  <p id="idMsclHmn_2nam">name::
+    <br>* Mcs.ognMuscle.gastrocnemius,
+    <br>====== langoGreek:
+    <br>* McsEll.γαστροκνήμιος,
+    <a class="clsHide" href="#idMsclHmn_2nam"></a></p>
+  <p id="idMsclHmn_2dsn">description::
+    <br>είναι ο μυς στο πόδι, πίσω. Η γάμπα που έχει 2 μυς.
+    <a class="clsHide" href="#idMsclHmn_2dsn"></a></p>
+  </section>
+
   <section id="idBdyHmn474">
-  <h3 id="idBdyHmn474H3">muscle.skeletal-torso
+  <h3 id="idBdyHmn474H3">ognMuscle.skeletal-torso
     <a class="clsHide" href="#idBdyHmn474H3"></a></h3>
   <p id="idBdyHmn474nam">name::
     <br>* Mcs.cptBdyHmn474,
-    <br>* Mcs.muscle.skeletal-torso,
+    <br>* Mcs.ognMuscle.skeletal-torso,
     <br>* Mcs.skeletal-torso-muscle,
     <br>* Mcs.skeletal-trunk-muscle,
     <br>====== langoGreek:
@@ -5101,7 +5194,7 @@
     <br>* McsEll.μυς.κορμού,
     <a class="clsHide" href="#idBdyHmn474nam"></a></p>
   <p id="idBdyHmn474dsn">description::
-    <br>analytic: γραμμωτοι μύες κορμού είναι οι <a class="clsPreview" href="#idBdyHmn266">γραμμωτοι-μύες</a> που δέν ανήκουν στα άκρα του σώματος.
+    <br>analytic: γραμμωτοι μύες κορμού είναι οι <a class="clsPreview" href="#idMsclHmn002">muscleSkeletal</a> που δέν ανήκουν στα άκρα του σώματος.
     <br>[Αργύρης, {1994}, 323⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn474dsn"></a></p>
   <p id="idBdyHmn474gtr">generic-tree-of-::
@@ -5123,18 +5216,18 @@
   </section>
 
   <section id="idBdyHmn475">
-  <h3 id="idBdyHmn475H3">muscle.skeletal-limb
+  <h3 id="idBdyHmn475H3">ognMuscle.skeletal-limb
     <a class="clsHide" href="#idBdyHmn475H3"></a></h3>
   <p id="idBdyHmn475nam">name::
     <br>* Mcs.cptBdyHmn475,
-    <br>* Mcs.muscle.skeletal-limb,
+    <br>* Mcs.ognMuscle.skeletal-limb,
     <br>* Mcs.skeletal-limb-muscle,
     <br>====== langoGreek:
     <br>* McsEll.γραμμωτός-μυς-άκρων,
     <br>* McsEll.μυς.άκρων,
     <a class="clsHide" href="#idBdyHmn475nam"></a></p>
   <p id="idBdyHmn475dsn">description::
-    <br>analytic: γραμμωτός μυς άκρων είναι οι <a class="clsPreview" href="#idBdyHmn266">γραμμωτοι-μύες</a> που  ανήκουν στα άκρα του σώματος.
+    <br>analytic: γραμμωτός μυς άκρων είναι οι <a class="clsPreview" href="#idMsclHmn002">muscleSkeletal</a> που  ανήκουν στα άκρα του σώματος.
     <br>[Αργύρης, {1994}, 323⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn475dsn"></a></p>
   <p id="idBdyHmn475gtr">generic-tree-of-::
@@ -5156,11 +5249,11 @@
   </section>
 
   <section id="idBdyHmn476">
-  <h3 id="idBdyHmn476H3">muscle.front-skeletal-torso
+  <h3 id="idBdyHmn476H3">ognMuscle.front-skeletal-torso
     <a class="clsHide" href="#idBdyHmn476H3"></a></h3>
   <p id="idBdyHmn476nam">name::
     <br>* Mcs.cptBdyHmn476,
-    <br>* Mcs.muscle.front-skeletal-torso,
+    <br>* Mcs.ognMuscle.front-skeletal-torso,
     <br>* Mcs.front-skeletal-torso-muscle,
     <br>====== langoGreek:
     <br>* McsEll.μυς-κορμού-προσθιας-επιφανειας,
@@ -5192,11 +5285,11 @@
   </section>
 
   <section id="idBdyHmn477">
-  <h3 id="idBdyHmn477H3">muscle.serratus-posterior-superior
+  <h3 id="idBdyHmn477H3">ognMuscle.serratus-posterior-superior
     <a class="clsHide" href="#idBdyHmn477H3"></a></h3>
   <p id="idBdyHmn477nam">name::
     <br>* Mcs.cptBdyHmn477,
-    <br>* Mcs.muscle.serratus-posterior-superior,
+    <br>* Mcs.ognMuscle.serratus-posterior-superior,
     <br>* Mcs.serratus-posterior-superior-muscle,
     <br>====== langoGreek:
     <br>* McsEll.μυς-κορμού-ραχης,
@@ -5223,11 +5316,11 @@
   </section>
 
   <section id="idBdyHmn478">
-  <h3 id="idBdyHmn478H3">muscle.head
+  <h3 id="idBdyHmn478H3">ognMuscle.head
     <a class="clsHide" href="#idBdyHmn478H3"></a></h3>
   <p id="idBdyHmn478nam">name::
     <br>* Mcs.cptBdyHmn478,
-    <br>* Mcs.muscle.head,
+    <br>* Mcs.ognMuscle.head,
     <br>* Mcs.head-muscle,
     <br>====== langoGreek:
     <br>* McsEll.μυς-κεφαλής,
@@ -5258,11 +5351,11 @@
   </section>
 
   <section id="idBdyHmn479">
-  <h3 id="idBdyHmn479H3">muscle.cervical
+  <h3 id="idBdyHmn479H3">ognMuscle.cervical
     <a class="clsHide" href="#idBdyHmn479H3"></a></h3>
   <p id="idBdyHmn479nam">name::
     <br>* Mcs.cptBdyHmn479,
-    <br>* Mcs.muscle.cervical,
+    <br>* Mcs.ognMuscle.cervical,
     <br>* Mcs.cervical-muscle,
     <br>====== langoGreek:
     <br>* McsEll.μυς-τραχηλου,
@@ -5292,11 +5385,11 @@
   </section>
 
   <section id="idBdyHmn480">
-  <h3 id="idBdyHmn480H3">muscle.thorax
+  <h3 id="idBdyHmn480H3">ognMuscle.thorax
     <a class="clsHide" href="#idBdyHmn480H3"></a></h3>
   <p id="idBdyHmn480nam">name::
     <br>* Mcs.cptBdyHmn480,
-    <br>* Mcs.muscle.thorax,
+    <br>* Mcs.ognMuscle.thorax,
     <br>* Mcs.thorax-muscle,
     <br>====== langoGreek:
     <br>* McsEll.μυς-θώρακα,
@@ -5327,11 +5420,11 @@
   </section>
 
   <section id="idBdyHmn481">
-  <h3 id="idBdyHmn481H3">muscle.abdominal
+  <h3 id="idBdyHmn481H3">ognMuscle.abdominal
     <a class="clsHide" href="#idBdyHmn481H3"></a></h3>
   <p id="idBdyHmn481nam">name::
     <br>* Mcs.cptBdyHmn481,
-    <br>* Mcs.muscle.abdominal,
+    <br>* Mcs.ognMuscle.abdominal,
     <br>* Mcs.abdominal-muscle,
     <br>====== langoGreek:
     <br>* McsEll.μυς.κοιλίας,
@@ -5362,11 +5455,11 @@
   </section>
 
   <section id="idBdyHmn482">
-  <h3 id="idBdyHmn482H3">muscle.skin
+  <h3 id="idBdyHmn482H3">ognMuscle.skin
     <a class="clsHide" href="#idBdyHmn482H3"></a></h3>
   <p id="idBdyHmn482nam">name::
     <br>* Mcs.cptBdyHmn482,
-    <br>* Mcs.muscle.skin,
+    <br>* Mcs.ognMuscle.skin,
     <br>* Mcs.skin-muscle,
     <br>====== langoGreek:
     <br>* McsEll.μυς.δερματικος,
@@ -5387,11 +5480,11 @@
   </section>
 
   <section id="idBdyHmn483">
-  <h3 id="idBdyHmn483H3">muscle.chewing
+  <h3 id="idBdyHmn483H3">ognMuscle.chewing
     <a class="clsHide" href="#idBdyHmn483H3"></a></h3>
   <p id="idBdyHmn483nam">name::
     <br>* Mcs.cptBdyHmn483,
-    <br>* Mcs.muscle.chewing,
+    <br>* Mcs.ognMuscle.chewing,
     <br>* Mcs.chewing-muscle,
     <br>====== langoGreek:
     <br>* McsEll.μυς.μασητηριος,
@@ -5411,11 +5504,11 @@
   </section>
 
   <section id="idBdyHmn484">
-  <h3 id="idBdyHmn484H3">muscle.upper-limb
+  <h3 id="idBdyHmn484H3">ognMuscle.upper-limb
     <a class="clsHide" href="#idBdyHmn484H3"></a></h3>
   <p id="idBdyHmn484nam">name::
     <br>* Mcs.cptBdyHmn484,
-    <br>* Mcs.muscle.upper-limb,
+    <br>* Mcs.ognMuscle.upper-limb,
     <br>* Mcs.upper-limb-muscle,
     <br>====== langoGreek:
     <br>* McsEll.μυς.άνω-άκρου,
@@ -5442,11 +5535,11 @@
   </section>
 
   <section id="idBdyHmn485">
-  <h3 id="idBdyHmn485H3">muscle.lower-limb
+  <h3 id="idBdyHmn485H3">ognMuscle.lower-limb
     <a class="clsHide" href="#idBdyHmn485H3"></a></h3>
   <p id="idBdyHmn485nam">name::
     <br>* Mcs.cptBdyHmn485,
-    <br>* Mcs.muscle.lower-limb,
+    <br>* Mcs.ognMuscle.lower-limb,
     <br>* Mcs.lower-limb-muscle,
     <br>====== langoGreek:
     <br>* McsEll.μυς.κάτω-άκρου,
@@ -7338,7 +7431,7 @@
     <br>κάθε χρόνο την τελευταία κυριακή του σεπτεμβρίου έχει καθιερωθεί από την διεθνή ομοσπονδία καρδιάς να διοργανώνονται ενέργειες ενημέρωσης του κοινού για τις καρδιαγγείακές παθήσεις, τα αίτια και τις δυνατότητες πρόληψης και αντιμετώπισής τους.
     <br>[EFG Eurolife ασφαλιστική info@eurolife.gr, σάββατο 29 σεπτεμβρίου 2012]
     <br>===
-    <br>analytic: η καρδιά είναι όργανο του καρδιαγγειακού συστήματος  σχημα κώνου και σε μέγεθος όσο η γροθιά ενός άνδρα που βρίσκεται ανάμεσα στους πνεύμονες και πλησιέστερα στον αριστερό πνεύμονα.
+    <br>analytic: η καρδιά είναι όργανο του καρδιαγγειακού συστήματος  σχήμα κώνου και σε μέγεθος όσο η γροθιά ενός άνδρα που βρίσκεται ανάμεσα στους πνεύμονες και πλησιέστερα στον αριστερό πνεύμονα.
     <br>[hmnSgm, {1995-02}]
     <br>===
     <br>HEART: a hollow muscular organ that by rhythmic contraction keeps up the circulation of the blood in the body.
@@ -7671,6 +7764,23 @@
     <a class="clsHide" href="#idHrtHmnatt030dsn"></a></p>
   </section>
 
+  <section id="idHrtHmnatt032">
+  <h3 id="idHrtHmnatt032H3">output of ognHeart
+    <a class="clsHide" href="#idHrtHmnatt032H3"></a></h3>
+  <p id="idHrtHmnatt032nam">name::
+    <br>* Mcs.ognHeart'output,
+    <br>* Mcs.ognHeart'att032-output,
+    <br>* Mcs.CO-cardiac-output,
+    <br>* Mcs.cardiac-output,
+    <a class="clsHide" href="#idHrtHmnatt032nam"></a></p>
+  <p id="idHrtHmnatt032dsn">description::
+    <br>"Cardiac output (CO), also known as heart output denoted by the symbols Q, or Qc(Q with dot),[2] is a term used in cardiac physiology that describes the volume of blood being pumped by the heart, by the left and right ventricle, per unit time. Cardiac output (CO) is the product of the heart rate (HR), i.e. the number of heartbeats per minute (bpm), and the stroke volume (SV), which is the volume of blood pumped from the ventricle per beat; thus, CO = HR × SV.[3] Values for cardiac output are usually denoted as L/min. For a healthy person weighing 70 kg, the cardiac output at rest averages about 5 L/min; assuming a heart rate of 70 beats/min, the stroke volume would be approximately 70 ml.
+    <br>Because cardiac output is related to the quantity of blood delivered to various parts of the body, it is an important component of how efficiently the heart can meet the body's demands for the maintenance of adequate tissue perfusion. Body tissues require continuous oxygen delivery which requires the sustained transport of oxygen to the tissues by the systemic circulation of oxygenated blood at an adequate pressure from the left ventricle of the heart via the aorta and arteries. Oxygen delivery (DO2 mls/min) is the resultant of blood flow (cardiac output CO) times the blood oxygen content (CaO2). Mathematically this is calculated as follows: Oxygen delivery = cardiac output × arterial oxygen content DO2 = CO × CaO2.[4] With a resting cardiac output of 5-litre min−1 a 'normal' oxygen delivery is around 997.5 ml min. The amount/percentage of the circulated oxygen consumed (VO2) per minute through metabolism varies depending on the activity level but at rest is circa 25% of the DO2. Physical exercise requires a higher than resting-level of oxygen consumption to support increased muscle activity. In the case of heart failure, actual CO may be insufficient to support even simple activities of daily living; nor can it increase sufficiently to meet the higher metabolic demands stemming from even moderate exercise.
+    <br>Cardiac output is a global blood flow parameter of interest in hæmodynamics, the study of the flow of blood. The factors affecting stroke volume and heart rate also affect cardiac output."
+    <br>[{2020-05-19} https://en.wikipedia.org/wiki/Cardiac_output]
+    <a class="clsHide" href="#idHrtHmnatt032dsn"></a></p>
+  </section>
+
   <section id="idHrtHmnatt019">
   <h3 id="idHrtHmnatt019H3">electrocardiogram of ognHeart
     <a class="clsHide" href="#idHrtHmnatt019H3"></a></h3>
@@ -7694,72 +7804,6 @@
     <br>στην ίδια αρχή της ηλεκτροκαρδιογραφικής καταγραφής στηρίζονται και άλλες εξετάσεις της καρδίας όπως το Holter ρυθμού και το τεστ κοπώσεως με διαφορετικές όμως ενδείξεις ως προς την διενέργεια τους.
     <br>[http://el.wikipedia.org/wiki/ηλεκτροκαρδιογράφημμα]
     <a class="clsHide" href="#idHrtHmnatt019dsn"></a></p>
-  </section>
-
-  <section id="idHrtHmnatt008">
-  <h3 id="idHrtHmnatt008H3">beat of ognHeart
-    <a class="clsHide" href="#idHrtHmnatt008H3"></a></h3>
-  <p id="idHrtHmnatt008nam">name::
-    <br>* Mcs.ognHeart'beat!⇒heart-beat,
-    <br>* Mcs.ognHeart'att008-beat!⇒heart-beat,
-    <br>* Mcs.beat-of-ognHeart!⇒heart-beat,
-    <br>* Mcs.pulse-beat!⇒heart-beat,
-    <br>* Mcs.heart-beat,
-    <br>====== langoGreek:
-    <br>* McsEll.παλμός-καρδιάς!=heart-beat,
-    <br>* McsEll.ρυθμός-καρδιάς!=heart-beat,
-    <br>* McsEll.χτύπος-καρδιάς!=heart-beat,
-    <a class="clsHide" href="#idHrtHmnatt008nam"></a></p>
-  <p id="idHrtHmnatt008dsn">description::
-    <br>analytic: παλμός καρδιάς είναι η διαδικασία της καρδιάς με την επανάληψη της οποίας γίνεται η κυκλοφορία του αίματος.
-    <br>παλμός είναι η συστολή των κόλπων και η καρδιακή παύλα.
-    <br>[Αργύρης, {1994}, 148⧺cptRsc29⧺]
-    <br>===
-    <br>η καρδιά είναι το κεντρικό όργανο που, λειτουργώντας σαν συμπιεστική και μερικά σαν αναρροφητική αντλια, τροφοδοτεί τους ιστούς και τα όργανα με αίμα, αλλά και το ξανασυγκεντρώνει.
-    <br>[Αργύρης, {1994}, 57⧺cptRsc29⧺]
-    <a class="clsHide" href="#idHrtHmnatt008dsn"></a></p>
-  <p id="idHrtHmnatt008cwehb">What Effect Does Cold Water Have on Your Heart?
-    <br>Immersing your face in cold water can slow your heart rate by as much as 25 percent.
-    <br>
-    <br>It turns out that the practice of splashing cold water on your face to refresh yourself actually prompts a physical change. Immediately upon facial contact with cold water, the human heart rate slows by 10 to 25 percent. The phenomenon is called the diving reflex, and it’s the body’s physiological response to submersion in cold water.
-    <br>[http://www.wisegeek.com/what-effect-does-cold-water-have-on-your-heart.htm?m {2016-09-11}]
-    <a class="clsHide" href="#idHrtHmnatt008cwehb"></a></p>
-
-  <section id="idHrtHmnatt008mng">
-  <h4 id="idHrtHmnatt008mngH4">managing of heart-beat
-    <a class="clsHide" href="#idHrtHmnatt008mngH4"></a></h4>
-  <p id="idHrtHmnatt008mngnam">name::
-    <br>* Mcs.ognHeart'beat-managing,
-    <a class="clsHide" href="#idHrtHmnatt008mngnam"></a></p>
-  <p id="idHrtHmnatt008mngdsn">description::
-    <br>η λειτουργία της καρδιάς ρυθμιζεται κυρίως από δικό της κλειστό νευρικό-σύστημα καθώς και από το φυτικό νευρικό-σύστημα.
-    <br>[Αργύρης, {1994}, 59⧺cptRsc29⧺]
-    <a class="clsHide" href="#idHrtHmnatt008mngdsn"></a></p>
-  </section>
-
-  <section id="idHrtHmnatt008evoluting">
-  <h4 id="idHrtHmnatt008evolutingH4">evoluting of heart-beat
-    <a class="clsHide" href="#idHrtHmnatt008evolutingH4"></a></h4>
-  <p id="idHrtHmnatt008evolutingP1">evoluting::
-    <br>ο παλμός της καρδιάς περιλαμβάνει 3 φασεις τις εξής:
-    <br>- συστολή των κόλπων: με τη συστολή των κόλπων, διάρκεια 1/10 δευτ., το αίμα κατεβαίνει προς τις κοιλίες.
-    <br>- συστολή των κοιλιών: με τη συστολή των κοιλιών, διάρκεια 3/10 δευτ, κλείνουν οι κολποκοιλίακές βαλβίδες και στη συνέχεια ανοίγουν οι βαλβίδες -μηνοειδείς ή σιγμοειδείς- που βρίσκονται στην αρχή των δύο μεγάλων αρτηριών, της πνευμονικής στη δεξιά κοιλία και της αορτής στην αριστερή.
-    <br>- γενική ανάπαυλα ή διαστολή: σ' αυτή τη φάση το μυοκάρδιο είναι χαλαρό, οι κολποκοιλίακές βαλβίδες ανοιχτές, οι σιγμοειδείς κλείνουν και το αίμα κατεβαίνει από τους κόλπους στις κοιλίες, ενώ ταυτόχρονα οι κόλποι γεμίζουν με αίμα. Η διάρκεια της διαστολής είναι 4/10 δευτ.
-    <br>[Αργύρης, {1994}, 60⧺cptRsc29⧺]
-    <a class="clsHide" href="#idHrtHmnatt008evolutingP1"></a></p>
-  </section>
-
-  <section id="idHrtHmnatt008rtrt">
-  <h4 id="idHrtHmnatt008rtrtH4">heart-beat.resting-rate
-    <a class="clsHide" href="#idHrtHmnatt008rtrtH4"></a></h4>
-  <p id="idHrtHmnatt008rtrtnam">name::
-    <br>* Mcs.heart-beat.resting-rate,
-    <a class="clsHide" href="#idHrtHmnatt008rtrtnam"></a></p>
-  <p id="idHrtHmnatt008rtrtdsn">description::
-    <br>"The heart beats at a resting rate close to 72 beats per minute.[9] Exercise temporarily increases the rate, but lowers resting heart rate in the long term, and is good for heart health.[10]"
-    <br>[{2020-05-16} https://en.wikipedia.org/wiki/Heart]
-    <a class="clsHide" href="#idHrtHmnatt008rtrtdsn"></a></p>
-  </section>
   </section>
 
   <section id="idHrtHmnatt009">
@@ -7819,7 +7863,7 @@
     <br>* φλέβες,
     <a class="clsHide" href="#idHrtHmnsrtrP1"></a></p>
   <p id="idHrtHmnsrtrP2">η καρδιά είναι ένα μυωδες όργανο σε
-    <br>- σχημα κώνου και σε
+    <br>- σχήμα κώνου και σε
     <br>- μεγεθος όσο η γροθιά ενός άνδρα.
     <br>- βρισκεται ανάμεσα στους πνεύμονες και πλησιέστερα στον αριστερό πνεύμονα.
     <br>- εξωτερικά περιβάλλεται από έναν προστατευτικό υμένα, το <a class="clsPreview" href="#idHrtHmnatt004">περικάρδιο</a>.
@@ -7896,6 +7940,88 @@
     <br>Cardiac systole is the contraction of the cardiac muscle in response to an electrochemical stimulus to the heart's cells (cardiomyocytes).
     <br>Cardiac output (CO) is the volume of blood pumped by the each ventricle in one minute. The ejection fraction (EF) is the volume of blood pumped divided by the total volume of blood in the left ventricle.[3]"
     <a class="clsHide" href="#idHrtHmnatt027dsn"></a></p>
+  </section>
+
+  <section id="idHrtHmnatt008">
+  <h5 id="idHrtHmnatt008H5">beat of ognHeart
+    <a class="clsHide" href="#idHrtHmnatt008H5"></a></h5>
+  <p id="idHrtHmnatt008nam">name::
+    <br>* Mcs.ognHeart'beat!⇒heart-beat,
+    <br>* Mcs.ognHeart'att008-beat!⇒heart-beat,
+    <br>* Mcs.beat-of-ognHeart!⇒heart-beat,
+    <br>* Mcs.pulse-beat!⇒heart-beat,
+    <br>* Mcs.heart-beat,
+    <br>====== langoGreek:
+    <br>* McsEll.παλμός-καρδιάς!=heart-beat,
+    <br>* McsEll.ρυθμός-καρδιάς!=heart-beat,
+    <br>* McsEll.χτύπος-καρδιάς!=heart-beat,
+    <a class="clsHide" href="#idHrtHmnatt008nam"></a></p>
+  <p id="idHrtHmnatt008dsn">description::
+    <br>analytic: παλμός καρδιάς είναι η διαδικασία της καρδιάς με την επανάληψη της οποίας γίνεται η κυκλοφορία του αίματος.
+    <br>παλμός είναι η συστολή των κόλπων και η καρδιακή παύλα.
+    <br>[Αργύρης, {1994}, 148⧺cptRsc29⧺]
+    <br>===
+    <br>η καρδιά είναι το κεντρικό όργανο που, λειτουργώντας σαν συμπιεστική και μερικά σαν αναρροφητική αντλια, τροφοδοτεί τους ιστούς και τα όργανα με αίμα, αλλά και το ξανασυγκεντρώνει.
+    <br>[Αργύρης, {1994}, 57⧺cptRsc29⧺]
+    <a class="clsHide" href="#idHrtHmnatt008dsn"></a></p>
+  <p id="idHrtHmnatt008cwehb">What Effect Does Cold Water Have on Your Heart?
+    <br>Immersing your face in cold water can slow your heart rate by as much as 25 percent.
+    <br>It turns out that the practice of splashing cold water on your face to refresh yourself actually prompts a physical change.
+    <br>Immediately upon facial contact with cold water, the human heart rate slows by 10 to 25 percent.
+    <br>The phenomenon is called the diving reflex, and it’s the body’s physiological response to submersion in cold water.
+    <br>[http://www.wisegeek.com/what-effect-does-cold-water-have-on-your-heart.htm?m {2016-09-11}]
+    <a class="clsHide" href="#idHrtHmnatt008cwehb"></a></p>
+
+  <section id="idHrtHmnatt008mng">
+  <h6 id="idHrtHmnatt008mngH6">managing of heart-beat
+    <a class="clsHide" href="#idHrtHmnatt008mngH6"></a></h6>
+  <p id="idHrtHmnatt008mngnam">name::
+    <br>* Mcs.ognHeart'beat-managing,
+    <a class="clsHide" href="#idHrtHmnatt008mngnam"></a></p>
+  <p id="idHrtHmnatt008mngdsn">description::
+    <br>η λειτουργία της καρδιάς ρυθμίζεται κυρίως από δικό της κλειστό νευρικό-σύστημα καθώς και από το φυτικό νευρικό-σύστημα.
+    <br>[Αργύρης, {1994}, 59⧺cptRsc29⧺]
+    <a class="clsHide" href="#idHrtHmnatt008mngdsn"></a></p>
+  </section>
+
+  <section id="idHrtHmnatt008evoluting">
+  <h6 id="idHrtHmnatt008evolutingH6">evoluting of heart-beat
+    <a class="clsHide" href="#idHrtHmnatt008evolutingH6"></a></h6>
+  <p id="idHrtHmnatt008evolutingP1">evoluting::
+    <br>ο παλμός της καρδιάς περιλαμβάνει 3 φάσεις τις εξής:
+    <br>- συστολή των κόλπων: με τη συστολή των κόλπων, διάρκεια 1/10 δευτ., το αίμα κατεβαίνει προς τις κοιλίες.
+    <br>- συστολή των κοιλιών: με τη συστολή των κοιλιών, διάρκεια 3/10 δευτ, κλείνουν οι κολποκοιλιακές βαλβίδες και στη συνέχεια ανοίγουν οι βαλβίδες -μηνοειδείς ή σιγμοειδείς- που βρίσκονται στην αρχή των δύο μεγάλων αρτηριών, της πνευμονικής στη δεξιά κοιλία και της αορτής στην αριστερή.
+    <br>- γενική ανάπαυλα ή διαστολή: σ' αυτή τη φάση το μυοκάρδιο είναι χαλαρό, οι κολποκοιλιακές βαλβίδες ανοιχτές, οι σιγμοειδείς κλείνουν και το αίμα κατεβαίνει από τους κόλπους στις κοιλίες, ενώ ταυτόχρονα οι κόλποι γεμίζουν με αίμα. Η διάρκεια της διαστολής είναι 4/10 δευτ.
+    <br>[Αργύρης, {1994}, 60⧺cptRsc29⧺]
+    <a class="clsHide" href="#idHrtHmnatt008evolutingP1"></a></p>
+  </section>
+  </section>
+
+  <section id="idHrtHmnatt031">
+  <h5 id="idHrtHmnatt031H5">rate
+    <a class="clsHide" href="#idHrtHmnatt031H5"></a></h5>
+  <p id="idHrtHmnatt031nam">name::
+    <br>* Mcs.ognHeart'rate,
+    <br>* Mcs.ognHeart'att031-rate,
+    <br>* Mcs.heart-rate,
+    <a class="clsHide" href="#idHrtHmnatt031nam"></a></p>
+  <p id="idHrtHmnatt031dsn">description::
+    <br>"Heart rate is the speed of the heartbeat measured by the number of contractions (beats) of the heart per minute (bpm). The heart rate can vary according to the body's physical needs, including the need to absorb oxygen and excrete carbon dioxide. It is usually equal or close to the pulse measured at any peripheral point. Activities that can provoke change include physical exercise, sleep, anxiety, stress, illness, and ingestion of drugs.
+    <br>The American Heart Association states the normal resting adult human heart rate is 60–100 bpm.[1] Tachycardia is a fast heart rate, defined as above 100 bpm at rest.[2] Bradycardia is a slow heart rate, defined as below 60 bpm at rest. During sleep a slow heartbeat with rates around 40–50 bpm is common and is considered normal. When the heart is not beating in a regular pattern, this is referred to as an arrhythmia. Abnormalities of heart rate sometimes indicate disease.[3]"
+    <br>[{2020-05-19} https://en.wikipedia.org/wiki/Heart_rate]
+    <a class="clsHide" href="#idHrtHmnatt031dsn"></a></p>
+
+  <section id="idHrtHmnatt031rtrt">
+  <h6 id="idHrtHmnatt031rtrtH6">heart-rate.resting
+    <a class="clsHide" href="#idHrtHmnatt031rtrtH6"></a></h6>
+  <p id="idHrtHmnatt031rtrtnam">name::
+    <br>* Mcs.heart-beat.resting-rate,
+    <a class="clsHide" href="#idHrtHmnatt031rtrtnam"></a></p>
+  <p id="idHrtHmnatt031rtrtdsn">description::
+    <br>"The heart beats at a resting rate close to 72 beats per minute.[9] Exercise temporarily increases the rate, but lowers resting heart rate in the long term, and is good for heart health.[10]"
+    <br>[{2020-05-16} https://en.wikipedia.org/wiki/Heart]
+    <a class="clsHide" href="#idHrtHmnatt031rtrtdsn"></a></p>
+  </section>
   </section>
   </section>
   </section>
@@ -9600,7 +9726,7 @@
     <br>* Mcs.cptBdyHmn415,
     <br>* Mcs.eye-appendage,
     <br>====== langoGreek:
-    <br>* McsEll.επικουρικό-όργανο-ματιού/οφθαλμου,
+    <br>* McsEll.επικουρικό-όργανο-ματιού/οφθαλμού,
     <a class="clsHide" href="#idBdyHmn415nam"></a></p>
   <p id="idBdyHmn415dsn">description::
     <br>analytic: επικουρικό όργανο ματιού ονομάζουν κάθε μέρος του ματιού πέρα από το κύριο όργανο, τον οφθαλμικο βολβο.
@@ -9634,7 +9760,7 @@
     <br>* McsEll.βλέφαρο,
     <a class="clsHide" href="#idBdyHmn416nam"></a></p>
   <p id="idBdyHmn416dsn">description::
-    <br>analytic: βλέφαρο είναι <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-οφθαλμου</a>, που σκεπάζει τον βολβο.
+    <br>analytic: βλέφαρο είναι <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-οφθαλμού</a>, που σκεπάζει τον βολβο.
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idBdyHmn416dsn"></a></p>
   <p id="idBdyHmn416gtr">generic-tree-of-::
@@ -9684,7 +9810,7 @@
     <br>* McsEll.φρυδι,
     <a class="clsHide" href="#idBdyHmn417nam"></a></p>
   <p id="idBdyHmn417dsn">description::
-    <br>analytic: φρυδι είναι <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-οφθαλμου</a>, δερματινο τριχωτό τόξο που προστατεύουν το μάτι από τη σκόνη και τον ιδρώτα.
+    <br>analytic: φρυδι είναι <a class="clsPreview" href="#idBdyHmn415">επικουρικό-όργανο-οφθαλμού</a>, δερματινο τριχωτό τόξο που προστατεύουν το μάτι από τη σκόνη και τον ιδρώτα.
     <br>[Αργύρης, {1994}, 280⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn417dsn"></a></p>
   <p id="idBdyHmn417gtr">generic-tree-of-::
@@ -10078,7 +10204,7 @@
   <h5 id="idBdyHmn430srtrH5">structure
     <a class="clsHide" href="#idBdyHmn430srtrH5"></a></h5>
   <p id="idBdyHmn430srtrP1">structure::
-    <br>η ίριδα είναι ένας έγχρωμος δίσκος μπροστά από το φακό σαν διάφραγμα με μία στρογγυλή οπή στο κέντρο, την κορη του οφθαλμου. Η ίριδα έχει μυς, με τη βοήθεια των οποίων μεταβάλλεται το εύρος της κόρης ανάλογα με την ένταση του φωτος. Στο πολύ φως η κόρη μικραίνει (συστολή) και σε λίγο φως μεγαλώνει (διαστολή).  οι μεταβολές αυτές γίνονται αυτόματα (αντανακλαστικό της κόρης).
+    <br>η ίριδα είναι ένας έγχρωμος δίσκος μπροστά από το φακό σαν διάφραγμα με μία στρογγυλή οπή στο κέντρο, την κορη του οφθαλμού. Η ίριδα έχει μυς, με τη βοήθεια των οποίων μεταβάλλεται το εύρος της κόρης ανάλογα με την ένταση του φωτος. Στο πολύ φως η κόρη μικραίνει (συστολή) και σε λίγο φως μεγαλώνει (διαστολή).  οι μεταβολές αυτές γίνονται αυτόματα (αντανακλαστικό της κόρης).
     <br>το χρώμα των ματιών (καστανό, πράσινο, κτλ.) οφείλεται στις αντίστοιχες χρωστικές που περιέχουν κύτταρα της ίριδας.
     <br>[Αργύρης, {1994}, 275⧺cptRsc31⧺]
     <a class="clsHide" href="#idBdyHmn430srtrP1"></a></p>
@@ -12511,7 +12637,7 @@
     <br>ο εγκέφαλος αποτελείται από δύο ημισφαίρια που καταλαμβάνουν το μεγαλύτερο χώρο της κρανιακής κοιλότητας, την παρεγκεφαλίδα και το στέλεχος που ενώνει τα ημισφαίρια με το νωτιαίο μυελό. Το τμήμα του στελέχους που είναι προς το μέρος του νωτιαίου μυελού λέγεται προμήκης μυελός.
     <br>[Αργύρης, {1994}, 86⧺cptRsc29⧺]
     <a class="clsHide" href="#idBrnHmnsrtrP2"></a></p>
-  <p id="idBrnHmnsrtrP3">θεση:
+  <p id="idBrnHmnsrtrP3">θέση:
     <br>ο εγκέφαλος βρίσκεται μέσα στην κρανιακη κοιλότητα.
     <br>[Αργύρης, {1994}, 85⧺cptRsc29⧺]
     <a class="clsHide" href="#idBrnHmnsrtrP3"></a></p>
@@ -13668,7 +13794,7 @@
     <br>* <a class="clsPreview" href="#idOgnHmn006Spnl">νεύρα-νωτιαίου-μυελού</a>,
     <br>* φαιά-ουσία,
     <a class="clsHide" href="#idOgnHmn037srtrP1"></a></p>
-  <p id="idOgnHmn037srtrP2">θεση:
+  <p id="idOgnHmn037srtrP2">θέση:
     <br>ο νωτιαίος μυελός βρίσκεται μέσα στο σωλήνα της <a class="clsPreview" href="#idBdyHmn299">σπονδυλικής-στήλης</a>.
     <br>[Αργύρης, {1994}, 88⧺cptRsc29⧺]
     <a class="clsHide" href="#idOgnHmn037srtrP2"></a></p>
@@ -16724,7 +16850,7 @@
     <br>* <a class="clsPreview" href="#idBdyHmn544">αθροιστικα-σωληναρια</a>,
     <br><img src="filMcsBdyHmn.files/organ.kidney.jpg">
     <a class="clsHide" href="#idOgnHmn026srtrP1"></a></p>
-  <p id="idOgnHmn026srtrP2">κάθε νεφρός έχει σχημα φασολιού και βαρος περίπου 150 γρ.  βρίσκεται μέσα στην κοιλιακή κοιλότητα, στο πλάι της σπονδυλικής στήλης, αντίστοιχα με το 12ο θωρακικό και τους δύο πρώτους οσφυικούς σπονδύλους. Ο δεξιός νεφρός βρίσκεται λίγο χαμηλότερα από τον αριστερό γιατί πιέζεται από το συκώτι.
+  <p id="idOgnHmn026srtrP2">κάθε νεφρός έχει σχήμα φασολιού και βαρος περίπου 150 γρ.  βρίσκεται μέσα στην κοιλιακή κοιλότητα, στο πλάι της σπονδυλικής στήλης, αντίστοιχα με το 12ο θωρακικό και τους δύο πρώτους οσφυικούς σπονδύλους. Ο δεξιός νεφρός βρίσκεται λίγο χαμηλότερα από τον αριστερό γιατί πιέζεται από το συκώτι.
     <br>[Αργύρης, {1994}, 404⧺cptRsc31⧺]
     <a class="clsHide" href="#idOgnHmn026srtrP2"></a></p>
   <p id="idOgnHmn026srtrP3">οι δύο νεφροί που βρίσκονται στην οσφυικη περιοχή της σπονδυλικής στήλης, αποτελούνται εξωτερικά από το φλοιο, εσωτερικά από την μυελώδη περιοχή και τη νεφρική πυελο, όπου μαζεύονται τα ούρα και απομακρύνονται στη συνέχεια από τον ουρητήρα προς την ουροδόχο κύστη.
@@ -17075,7 +17201,7 @@
 </section>
 
 <section id="idSysOgnHmn016">
-  <h1 id="idSysOgnHmn016H1">sysOgn.male-reproductive
+  <h1 id="idSysOgnHmn016H1">sysOgn.reproductive.male
     <a class="clsHide" href="#idSysOgnHmn016H1"></a></h1>
   <p id="idSysOgnHmn016nam">name::
     <br>* Mcs.sysReproductiveMale,
@@ -17307,7 +17433,7 @@
 </section>
 
 <section id="idSysOgnHmn015">
-  <h1 id="idSysOgnHmn015H1">sysOgn.female-reproductive
+  <h1 id="idSysOgnHmn015H1">sysOgn.reproductive.female
     <a class="clsHide" href="#idSysOgnHmn015H1"></a></h1>
   <p id="idSysOgnHmn015nam">name::
     <br>* Mcs.sysReproductiveFemale,
@@ -18353,7 +18479,7 @@
     <br>* εισπνοη,
     <br>* εκπνοη,
     <br>===
-    <br>ο μηχανισμός της αναπνοής περιλαμβάνει δύο φασεις, την εισπνοή και την εκπνοή.
+    <br>ο μηχανισμός της αναπνοής περιλαμβάνει δύο φάσεις, την εισπνοή και την εκπνοή.
     <br>η εισπνοη γίνεται ενεργητικά με τη συστολή του διαφράγματος και των μεσοπλευρικών μυών, οπότε διευρύνεται η θωρακική κοιλότητα, γιατί κατεβαίνει το διάφραγμα και ανεβαίνει προς τα πάνω και έξω οι πλευρές. Σύγχρονα όμως διευρύνεται και ο εσωτερικός χώρος, με αποτέλεσμα να προκαλείται εισροή αέρα στις κυψελίδες.
     <br>η εκπνοη περιλαμβάνει τη χαλαρωση των αναπνευστικών μυών, διαφράγματος και μεσοπλευρικών μυών, οπότε στενεύει ο χώρος της θωρακικής κοιλότητας, μυμπιέζεται ο αέρας στους πνεύμονες και βγαίνει στην ατμόσφαιρα από τα αεραγωγά όργανα.
     <br>[Αργύρης, {1994}, 74⧺cptRsc29⧺]
