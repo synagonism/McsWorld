@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.disease (human-disease 0-49-0.2020-05-22 draft)</title>
+  <title>Mcs.disease (human-disease 0-51-0.2020-05-25 draft)</title>
   <meta name="keywords" content="disease-of-human, disease, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -1764,7 +1764,7 @@
   <p id="idDssHmn047specificP1">specific::
     <br>* <a class="clsPreview" href="#idDssHmn48">ανεπάρκεια-καρδιακή</a>,
     <br>* <a class="clsPreview" href="#idDssHmn046">ηχητικές-παθήσεις</a>,
-    <br>* λοιμώδης-(μικροβιακη)-ενδοκαρδίτιδα,
+    <br>* λοιμώδης-(μικροβιακή)-ενδοκαρδίτιδα,
     <br>* μυοκαρδιοπάθειες,
     <br>* περικαρδιτιδα,
     <br>* <a class="clsPreview" href="#idDssHmn035">coronary-heart-disease</a>,
@@ -1839,6 +1839,21 @@
     <br>[εικ, 1994, 13⧺cptRsc33⧺]
     <a class="clsHide" href="#idDssHmn048protectionP1"></a></p>
   </section>
+  </section>
+
+  <section id="idDssHmn259">
+  <h2 id="idDssHmn259H2">dssSysCirculatory.myocardial-bridge-259
+    <a class="clsHide" href="#idDssHmn259H2"></a></h2>
+  <p id="idDssHmn259nam">name::
+    <br>* Mcs.dssSysCirculatory.myocardial-bridge,
+    <br>* Mcs.cardiac-bridge,
+    <br>* Mcs.disease.259-myocardial-bridge,
+    <br>* Mcs.myocardial-bridge,
+    <a class="clsHide" href="#idDssHmn259nam"></a></p>
+  <p id="idDssHmn259dsn">description::
+    <br>"A myocardial bridge (MB) is a congenital heart defect in which one of the coronary arteries tunnels through the heart muscle itself (myocardium). In normal patients, the coronary arteries rest on top of the heart muscle and feed blood down into smaller vessels (ex. septal arteries) which then take blood into the heart muscle itself (i.e. populate throughout the myocardium). However, if a band of muscle forms around one of the coronary arteries during the fetal stage of development, then a myocardial bridge is formed - a "bridge" of heart muscle over the artery. Each time the heart squeezes to pump blood, the band of muscle exerts pressure and constricts the artery, reducing blood flow to the heart. This defect is present from birth. It is important to note that even a very thin ex. &lt; 1 mm and/or short ex. 20 mm MB can cause significant symptoms. MBs can range from a few mm in length to 10 cm or more."
+    <br>[{2020-05-25} https://en.wikipedia.org/wiki/Myocardial_bridge]
+    <a class="clsHide" href="#idDssHmn259dsn"></a></p>
   </section>
 
   <section id="idDssHmn198">
@@ -2219,29 +2234,50 @@
     <br>[εικ, 1994, 27⧺cptRsc33⧺]
     <a class="clsHide" href="#idDssHmn035dsn"></a></p>
   <p id="idDssHmn035nam">name::
-    <br>* Mcs.disease.035-coronary-heart-disease,
-    <br>* Mcs.disease.coronary-heart-disease-035,
-    <br>* Mcs.disease.coronary-artery-disease,
-    <br>* Mcs.disease.ischemic-heart-disease,
-    <br>* Mcs.disease.atherosclerotic-heart-disease,
-    <br>* Mcs.disease.atherosclerotic-vascular-disease,
-    <br>* Mcs.CHD-coronary-heart-disease,
-    <br>* Mcs.coronary-heart-disease, {2012-07-31},
-    <br>* Mcs.disease.chd,
+    <br>* Mcs.disease.035-coronary-heart-disease!⇒diseaseCoronary-artery,
+    <br>* Mcs.disease.coronary-heart-disease-035!⇒diseaseCoronary-artery,
+    <br>* Mcs.disease.coronary-artery-disease!⇒diseaseCoronary-artery,
+    <br>* Mcs.disease.ischemic-heart-disease!⇒diseaseCoronary-artery,
+    <br>* Mcs.disease.atherosclerotic-heart-disease!⇒diseaseCoronary-artery,
+    <br>* Mcs.disease.atherosclerotic-vascular-disease!⇒diseaseCoronary-artery,
+    <br>* Mcs.CAD-coronary-artery-disease!⇒diseaseCoronary-artery,
+    <br>* Mcs.CHD-coronary-heart-disease!⇒diseaseCoronary-artery,
+    <br>* Mcs.IHD-ischemic-heart-disease!⇒diseaseCoronary-artery,
+    <br>* Mcs.diseaseCoronary-artery,
+    <br>* Mcs.coronary-heart-disease!⇒diseaseCoronary-artery, {2012-07-31},
+    <br>* Mcs.disease.CHD!⇒diseaseCoronary-artery,
     <br>====== langoGreek:
-    <br>* McsEll.πάθηση.στεφανιαία-νόσος,
-    <br>* McsEll.στεφανιαία-νόσος,
+    <br>* McsEll.πάθηση.στεφανιαία-νόσος!=diseaseCoronary-artery,
+    <br>* McsEll.στεφανιαία-νόσος!=diseaseCoronary-artery,
     <a class="clsHide" href="#idDssHmn035nam"></a></p>
-  <p id="idDssHmn035gtr">generic-tree-of-::
+  <p id="idDssHmn035gtr">generic-tree-of-diseaseCoronary-artery::
     <br>* <a class="clsPreview" href="#idDssHmn047">diseaseHeart</a>,
     <a class="clsHide" href="#idDssHmn035gtr"></a></p>
-  <p id="idDssHmn035wtr">whole-tree-of-::
+  <p id="idDssHmn035wtr">whole-tree-of-diseaseCoronary-artery::
     <br>* <a class="clsPreview" href="#idDssHmn004">heart</a>,
     <a class="clsHide" href="#idDssHmn035wtr"></a></p>
   <p id="idDssHmn035Spc">specific::
     <br>* <a class="clsPreview" href="#idDssHmn036">myocardial-infarction</a>,
     <br>* angina⧺idDssHmn039⧺,
     <a class="clsHide" href="#idDssHmn035Spc"></a></p>
+
+  <section id="idDssHmn035bpsr">
+  <h3 id="idDssHmn035bpsrH3">bypass-surgery of diseaseCoronary-artery
+    <a class="clsHide" href="#idDssHmn035bpsrH3"></a></h3>
+  <p id="idDssHmn035bpsrnam">name::
+    <br>* Mcs.diseaseCoronary-artery'bypass-surgery,
+    <br>* Mcs.CABG-coronary-artery-bypass-graft-surgery, /kabij/,
+    <br>* Mcs.bypass-surgery,
+    <br>* Mcs.coronary-artery-bypass-surgery,
+    <br>* Mcs.heart-bypass,
+    <a class="clsHide" href="#idDssHmn035bpsrnam"></a></p>
+  <p id="idDssHmn035bpsrdsn">description::
+    <br>"Coronary artery bypass surgery, also known as coronary artery bypass graft (CABG, pronounced "cabbage") surgery, and colloquially heart bypass or bypass surgery, is a surgical procedure to restore normal blood flow to an obstructed coronary artery. A normal coronary artery transports blood to the heart muscle itself, not through the main circulatory system.
+    <br>There are two main approaches. In one, the left internal thoracic artery, LITA (also called left internal mammary artery, LIMA) is diverted to the left anterior descending branch of the left coronary artery. In this method, the artery is "pedicled" which means it is not detached from the origin. In the other, a great saphenous vein is removed from a leg; one end is attached to the aorta or one of its major branches, and the other end is attached to the obstructed artery immediately after the obstruction to restore blood flow.
+    <br>CABG is performed to relieve angina unsatisfactorily controlled by maximum tolerated anti-ischemic medication, prevent or relieve left ventricular dysfunction, and/or reduce the risk of death. CABG does not prevent myocardial infarction (heart attack). This surgery is usually performed with the heart stopped, necessitating the usage of cardiopulmonary bypass. However, two alternative techniques are also available, allowing CABG to be performed on a beating heart either without using the cardiopulmonary bypass, a procedure referred to as "off-pump" surgery, or performing beating surgery using partial assistance of the cardiopulmonary bypass, a procedure referred to as "on-pump beating" surgery. The latter procedure offers the advantages of the on-pump stopped and off-pump while minimizing their respective side-effects.
+    <br>CABG is often indicated when coronary arteries have a 50 to 99 percent obstruction. The obstruction being bypassed is typically due to arteriosclerosis, atherosclerosis, or both. Arteriosclerosis is characterized by thickening, loss of elasticity, and calcification of the arterial wall, most often resulting in a generalized narrowing in the affected coronary artery. Atherosclerosis is characterized by yellowish plaques of cholesterol, lipids, and cellular debris deposited into the inner layer of the wall of a large or medium-sized coronary artery, most often resulting in a partial obstruction in the affected artery. Either condition can limit blood flow if it causes a cross-sectional narrowing of at least 50%."
+    <a class="clsHide" href="#idDssHmn035bpsrdsn"></a></p>
+  </section>
   </section>
 
   <section id="idDssHmn036">
@@ -2261,25 +2297,26 @@
     <br>[εικ, 1994, 29⧺cptRsc33⧺]
     <a class="clsHide" href="#idDssHmn036dsn"></a></p>
   <p id="idDssHmn036nam">name::
-    <br>* Mcs.disease.036-myocardial-infarction,
-    <br>* Mcs.disease.myocardial-infarction-036,
-    <br>* Mcs.myocardial-infarction,
-    <br>* Mcs.heart-attack,
+    <br>* Mcs.disease.036-myocardial-infarction!⇒diseaseMI,
+    <br>* Mcs.disease.myocardial-infarction-036!⇒diseaseMI,
+    <br>* Mcs.MI-myocardial-infarction!⇒diseaseMI,
+    <br>* Mcs.diseaseMI,
+    <br>* Mcs.myocardial-infarction!⇒diseaseMI,
+    <br>* Mcs.heart-attack!⇒diseaseMI,
     <br>====== langoGreek:
-    <br>* McsEll.πάθηση.έμφραγμα-του-μυοκαρδίου,
-    <br>* McsEll.έμφραγμα-του-μυοκαρδίου,
-    <br>* McsEll.έμφραγμα-μυοκαρδίου,
-    <br>* McsEll.έμφραγμα,
+    <br>* McsEll.πάθηση.έμφραγμα-του-μυοκαρδίου!=diseaseMI,
+    <br>* McsEll.έμφραγμα-μυοκαρδίου!=diseaseMI,
+    <br>* McsEll.έμφραγμα!=diseaseMI,
     <a class="clsHide" href="#idDssHmn036nam"></a></p>
-  <p id="idDssHmn036gtr">generic-tree-of-::
+  <p id="idDssHmn036gtr">generic-tree-of-diseaseMI::
     <br>* <a class="clsPreview" href="#idDssHmngtr">disease</a>,
     <a class="clsHide" href="#idDssHmn036gtr"></a></p>
-  <p id="idDssHmn036wtr">whole-tree-of-::
+  <p id="idDssHmn036wtr">whole-tree-of-diseaseMI::
     <br>* <a class="clsPreview" href="#idDssHmn004">heart</a>,
     <a class="clsHide" href="#idDssHmn036wtr"></a></p>
 
   <section id="idDssHmn036protection">
-  <h3 id="idDssHmn036protectionH3">protection
+  <h3 id="idDssHmn036protectionH3">protection of diseaseMI
     <a class="clsHide" href="#idDssHmn036protectionH3"></a></h3>
   <p id="idDssHmn036protectionP1">μαυρη σοκολατα:
     <br>αυστραλιανή μελέτη επιβεβαιώνει τα οφέλη στην πρόληψη του εμφράγματος από την τακτική κατανάλωση της μαύρης σοκολάτας.
@@ -2324,6 +2361,22 @@
     <br>Atherosclerosis generally starts when a person is young and worsens with age.[2] Almost all people are affected to some degree by the age of 65.[6] It is the number one cause of death and disability in the developed world.[9] Though it was first described in 1575,[10] there is evidence that the condition occurred in people more than 5,000 years ago.[10]"
     <br>[{2020-05-13} https://en.wikipedia.org/wiki/Atherosclerosis]
     <a class="clsHide" href="#idDssHmn255dsn"></a></p>
+  </section>
+
+  <section id="idDssHmn260">
+  <h2 id="idDssHmn260H2">dssSysCirculatory.bruit
+    <a class="clsHide" href="#idDssHmn260H2"></a></h2>
+  <p id="idDssHmn260nam">name::
+    <br>* Mcs.dssSysCirculatory.bruit,
+    <br>* Mcs.disease.260-cardiac-bruit,
+    <br>* Mcs.cardiac-bruit,
+    <br>* Mcs.vascular-murmur,
+    <a class="clsHide" href="#idDssHmn260nam"></a></p>
+  <p id="idDssHmn260dsn">description::
+    <br>"Bruit, also called vascular murmur,[3] is the abnormal sound generated by turbulent flow of blood in an artery due to either an area of partial obstruction or a localized high rate of blood flow through an unobstructed artery.[4]
+    <br>The bruit may be heard ("auscultated") by securely placing the head of a stethoscope to the skin over the turbulent flow, and listening. Most bruits occur only in systole, so the bruit is intermittent and its frequency dependent on the heart rate. Anything increasing the blood flow velocity such as fever, anemia, hyperthyroidism, or physical exertion, can increase the amplitude of the bruit."
+    <br>[{2020-05-25} https://en.wikipedia.org/wiki/Bruit]
+    <a class="clsHide" href="#idDssHmn260dsn"></a></p>
   </section>
 </section>
 
@@ -7611,7 +7664,7 @@
     <br>
     <br>οι συχνότεροι ιοί που προκαλούν την ιογενη μηνιγγιτιδα είναι οι εντεροϊοί και οι ιοί της ιλαράς, παρωτίτιδας και ανεμουλογιάς.
     <br>
-    <br>τρια είναι  τα πιό συνηθισμένα μικρόβια που προκαλούν την μικροβιακη μηνιγγιτιδα:
+    <br>τρια είναι  τα πιό συνηθισμένα μικρόβια που προκαλούν την μικροβιακή μηνιγγιτιδα:
     <br>- ο μηνιγγιτιδόκοκκος (Neisseria meningitidis)
     <br>- ο πνευμονιόκοκκος
     <br>- ο αιμόφιλος της ινφλουένζας τύπου b (Hib)
