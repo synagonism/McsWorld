@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.sysMolsOgm (organism--sys-of-molecules 0-18-0.2020-05-22 draft)</title>
+  <title>Mcs.sysMolsOgm (organism--sys-of-molecules 0-19-0.2020-05-26 draft)</title>
   <meta name="keywords" content="organism-system-of-molecules, sysMolsOgm, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -2735,10 +2735,12 @@
   <h1 id="idSysMolsOgm004H1">sysMolsOgm.blood-004
     <a class="clsHide" href="#idSysMolsOgm004H1"></a></h1>
   <p id="idSysMolsOgm004nam">name::
-    <br>* Mcs.sysMolsOgm.blood!⇒fluidBloodOgm,
-    <br>* Mcs.bloodOgm!⇒fluidBloodOgm,
-    <br>* Mcs.fluidBloodOgm,
-    <br>* Mcs.sysMolsOgm.004-blood!⇒fluidBloodOgm,
+    <br>* Mcs.sysMolsOgm.blood!⇒fluidBlood,
+    <br>* Mcs.blood'(organism-blood)!⇒fluidBlood,
+    <br>* Mcs.bloodOgm!⇒fluidBlood,
+    <br>* Mcs.fluidBlood,
+    <br>* Mcs.fluidBlood'(organism-blood)!⇒fluidBlood,
+    <br>* Mcs.sysMolsOgm.004-blood!⇒fluidBlood,
     <a class="clsHide" href="#idSysMolsOgm004nam"></a></p>
   <p id="idSysMolsOgm004dsn">description::
     <br>"Blood is a body fluid in humans and other animals that delivers necessary substances such as nutrients and oxygen to the cells and transports metabolic waste products away from those same cells.[1]
@@ -2777,25 +2779,25 @@
     <a class="clsHide" href="#idFldHmn001diseaseH2"></a></h2>
   </section>
 
-  <section id="idBdyHmn135">
-  <h2 id="idBdyHmn135H2">plasma of bloodHmn
-    <a class="clsHide" href="#idBdyHmn135H2"></a></h2>
-  <p id="idBdyHmn135nam">name::
-    <br>* Mcs.cptBdyHmn135,
-    <br>* Mcs.bloodHmn'plasma,
-    <br>* Mcs.plasma,
+  <section id="idFldHmn001att005">
+  <h2 id="idFldHmn001att005H2">plasma of bloodHmn
+    <a class="clsHide" href="#idFldHmn001att005H2"></a></h2>
+  <p id="idFldHmn001att005nam">name::
+    <br>* Mcs.bloodHmn'plasma!⇒plasmaHmn,
+    <br>* Mcs.bloodHmn'att005-plasma!⇒plasmaHmn,
+    <br>* Mcs.plasmaHmn,
     <br>====== langoGreek:
     <br>* McsEll.πλάσμα-αίματος,
-    <a class="clsHide" href="#idBdyHmn135nam"></a></p>
-  <p id="idBdyHmn135dsn">description::
+    <a class="clsHide" href="#idFldHmn001att005nam"></a></p>
+  <p id="idFldHmn001att005dsn">description::
     <br>analytic: το πλάσμα αποτελεί το υγρό μέρος του <a class="clsPreview" href="#idFldHmn001">αίματος</a> μέσα στο οποίο αιωρούνται τα έμμορφα συστατικά του.
     <br>[Αργύρης, {1994}, 53⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn135dsn"></a></p>
+    <a class="clsHide" href="#idFldHmn001att005dsn"></a></p>
 
-  <section id="idBdyHmn135srtr">
-  <h3 id="idBdyHmn135srtrH3">structure
-    <a class="clsHide" href="#idBdyHmn135srtrH3"></a></h3>
-  <p id="idBdyHmn135srtrP1">structure::
+  <section id="idFldHmn001att005srtr">
+  <h3 id="idFldHmn001att005srtrH3">structure
+    <a class="clsHide" href="#idFldHmn001att005srtrH3"></a></h3>
+  <p id="idFldHmn001att005srtrP1">structure::
     <br>* άλατα,
     <br>* αντισώματα,
     <br>* βιταμίνες,
@@ -2810,63 +2812,91 @@
     <br> &nbsp;λευκωματινες
     <br> &nbsp;σφαιρινες
     <br> &nbsp;ινωδογονιο
-    <a class="clsHide" href="#idBdyHmn135srtrP1"></a></p>
-  <p id="idBdyHmn135srtrP2">H σύσταση του πλάσματος είναι:
+    <a class="clsHide" href="#idFldHmn001att005srtrP1"></a></p>
+  <p id="idFldHmn001att005srtrP2">H σύσταση του πλάσματος είναι:
     <br>- νερό 91%
     <br>- πρωτεΐνες 7%
     <br>- άλατα 0,9%
     <br>- γλυκόζη 0.1%
     <br>- λιπίδια, βιταμίνες, ορμόνες, όπως και άχρηστα προϊόντα από τη διάσπαση αζωτούχων ενώσεων, ουρία, ουρικό οξύ.
     <br>[Αργύρης, {1994}, 53⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn135srtrP2"></a></p>
-  <p id="idBdyHmn135srtrP3">μέσα στο πλάσμα περιέχονται σε διαλυμένη μορφή θρεπτικά στοιχεία όπως γλυκόζη, αμινοξέα, λιπαρά οξέα κτλ, που μεταφέρονται προς τους ιστούς για τη θρέψη των κυττάρων τους, ηλεκτρολύτες, βιταμίνες, αντισώματα, ορμόνες, και πρωτεΐνες ειδικής βιολογικής χρησιμότητας όπως λευκωμανίτες, σφαιρίνες, ινωδογόνιο κτ.
+    <a class="clsHide" href="#idFldHmn001att005srtrP2"></a></p>
+  <p id="idFldHmn001att005srtrP3">μέσα στο πλάσμα περιέχονται σε διαλυμένη μορφή θρεπτικά στοιχεία όπως γλυκόζη, αμινοξέα, λιπαρά οξέα κτλ, που μεταφέρονται προς τους ιστούς για τη θρέψη των κυττάρων τους, ηλεκτρολύτες, βιταμίνες, αντισώματα, ορμόνες, και πρωτεΐνες ειδικής βιολογικής χρησιμότητας όπως λευκωμανίτες, σφαιρίνες, ινωδογόνιο κτ.
     <br>[Αργύρης, {1994}, 379⧺cptRsc31⧺]
-    <a class="clsHide" href="#idBdyHmn135srtrP3"></a></p>
+    <a class="clsHide" href="#idFldHmn001att005srtrP3"></a></p>
   </section>
   </section>
 
-  <section id="idFldHmn001serum">
-  <h2 id="idFldHmn001serumH2">serum of bloodHmn
-    <a class="clsHide" href="#idFldHmn001serumH2"></a></h2>
-  <p id="idFldHmn001serumnam">name::
+  <section id="idFldHmn001att013">
+  <h2 id="idFldHmn001att013H2">glucose of bloodHmn
+    <a class="clsHide" href="#idFldHmn001att013H2"></a></h2>
+  <p id="idFldHmn001att013nam">name::
+    <br>* Mcs.bloodHmn'glucose,
+    <br>* Mcs.bloodHmn'att013-glucose,
+    <a class="clsHide" href="#idFldHmn001att013nam"></a></p>
+  <p id="idFldHmn001att013dsn">description::
+    <br>·
+    <a class="clsHide" href="#idFldHmn001att013dsn"></a></p>
+  </section>
+
+  <section id="idFldHmn001att006">
+  <h2 id="idFldHmn001att006H2">serum of bloodHmn
+    <a class="clsHide" href="#idFldHmn001att006H2"></a></h2>
+  <p id="idFldHmn001att006nam">name::
     <br>* Mcs.bloodHmn'serum, /sírum/,
-    <a class="clsHide" href="#idFldHmn001serumnam"></a></p>
-  <p id="idFldHmn001serumdsn">description::
+    <br>* Mcs.bloodHmn'att006-serum,
+    <a class="clsHide" href="#idFldHmn001att006nam"></a></p>
+  <p id="idFldHmn001att006dsn">description::
     <br>"Serum (/ˈsɪərəm/) is the fluid and solute component of blood which does not play a role in clotting.[1] It may be defined as blood plasma without fibrinogens. Serum includes all proteins not used in blood clotting; all electrolytes, antibodies, antigens, hormones; and any exogenous substances (e.g., drugs or microorganisms). Serum does not contain white blood cells (leukocytes), red blood cells (erythrocytes), platelets, or clotting factors.
     <br>The study of serum is serology. Serum is used in numerous diagnostic tests as well as blood typing. Measuring the concentration of various molecules can be useful for many applications, such as determining the therapeutic index of a drug candidate in a clinical trial.[2]
     <br>To obtain serum, a blood sample is allowed to clot (coagulation). The sample is then centrifuged to remove the clot and blood cells, and the resulting liquid supernatant is serum.[3]
     <br>Serum is an essential factor for the self-renewal of embryonic stem cells in combination with the cytokine leukemia inhibitory factor."
     <br>[https://en.wikipedia.org/wiki/Serum_(blood) {2020-03-19}]
-    <a class="clsHide" href="#idFldHmn001serumdsn"></a></p>
+    <a class="clsHide" href="#idFldHmn001att006dsn"></a></p>
   </section>
 
-  <section id="idBdyHmn288">
-  <h2 id="idBdyHmn288H2">pressure of bloodHmn
-    <a class="clsHide" href="#idBdyHmn288H2"></a></h2>
-  <p id="idBdyHmn288nam">name::
-    <br>* Mcs.cptBdyHmn288,
+  <section id="idFldHmn001att010">
+  <h2 id="idFldHmn001att010H2">hematocrit of bloodHmn
+    <a class="clsHide" href="#idFldHmn001att010H2"></a></h2>
+  <p id="idFldHmn001att010nam">name::
+    <br>* Mcs.bloodHmn'hematocrit,
+    <br>* Mcs.bloodHmn'att010-hematocrit,
+    <br>* Mcs.HCT-hematocrit,
+    <a class="clsHide" href="#idFldHmn001att010nam"></a></p>
+  <p id="idFldHmn001att010dsn">description::
+    <br>"The hematocrit (/hɪˈmætəkrɪt/) (Ht or HCT), also known by several other names, is the volume percentage (vol%) of red blood cells (RBC) in blood, measured as part of a blood test.[1] The measurement depends on the number and size of red blood cells.[2] It is normally 40.7%–50.3% for men and 36.1%–44.3% for women.[3] It is a part of a person's complete blood count results,[4] along with hemoglobin concentration, white blood cell count and platelet count.
+    <br>Because the purpose of red blood cells is to transfer oxygen from the lungs to body tissues, a blood sample's hematocrit—the red blood cell volume percentage—can become a point of reference of its capability of delivering oxygen. Hematocrit levels that are too high or too low can indicate a blood disorder, dehydration, or other medical conditions.[5] An abnormally low hematocrit may suggest anemia, a decrease in the total amount of red blood cells, while an abnormally high hematocrit is called polycythemia.[6] Both are potentially life-threatening disorders."
+    <br>[{2020-05-26} https://en.wikipedia.org/wiki/Hematocrit]
+    <a class="clsHide" href="#idFldHmn001att010dsn"></a></p>
+  </section>
+
+  <section id="idFldHmn001att007">
+  <h2 id="idFldHmn001att007H2">pressure of bloodHmn
+    <a class="clsHide" href="#idFldHmn001att007H2"></a></h2>
+  <p id="idFldHmn001att007nam">name::
     <br>* Mcs.bloodHmn'pressure,
+    <br>* Mcs.bloodHmn'att007-pressure,
     <br>====== langoGreek:
     <br>* McsEll.πίεση-αίματος,
-    <a class="clsHide" href="#idBdyHmn288nam"></a></p>
-  <p id="idBdyHmn288dsn">description::
+    <a class="clsHide" href="#idFldHmn001att007nam"></a></p>
+  <p id="idFldHmn001att007dsn">description::
     <br>analytic: πίεση-αίματος είναι η πίεση με την οποία το αίμα πιέζει τα <a class="clsPreview" href="#idOgnHmn013">αγγεία</a> και ιδιαίτερα τις αρτηρίες.
     <br>[FRANKLIN, LM-6000]
-    <a class="clsHide" href="#idBdyHmn288dsn"></a></p>
+    <a class="clsHide" href="#idFldHmn001att007dsn"></a></p>
 
-  <section id="idBdyHmn288disease">
-  <h3 id="idBdyHmn288diseaseH3">disease
-    <a class="clsHide" href="#idBdyHmn288diseaseH3"></a></h3>
-  <p id="idBdyHmn288diseaseP1">disease::
+  <section id="idFldHmn001att007disease">
+  <h3 id="idFldHmn001att007diseaseH3">disease
+    <a class="clsHide" href="#idFldHmn001att007diseaseH3"></a></h3>
+  <p id="idFldHmn001att007diseaseP1">disease::
     <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn042">hypertension-disease</a>,
     <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn132">hypotension-disease</a>,
-    <a class="clsHide" href="#idBdyHmn288diseaseP1"></a></p>
+    <a class="clsHide" href="#idFldHmn001att007diseaseP1"></a></p>
   </section>
 
-  <section id="idBdyHmn288measuring">
-  <h3 id="idBdyHmn288measuringH3">measuring
-    <a class="clsHide" href="#idBdyHmn288measuringH3"></a></h3>
-  <p id="idBdyHmn288measuringP1"> οδηγιες για τη σωστη μετρηση της πίεσης
+  <section id="idFldHmn001att007measuring">
+  <h3 id="idFldHmn001att007measuringH3">measuring
+    <a class="clsHide" href="#idFldHmn001att007measuringH3"></a></h3>
+  <p id="idFldHmn001att007measuringP1"> οδηγιες για τη σωστη μετρηση της πίεσης
     <br>η μέτρηση της πίεσης είναι μία σχετικά απλή τεχνική χρειάζεται όμως εκπαίδευση, εξάσκηση και προσοχή στη λεπτομέρεια
     <br>
     <br>πιεσόμετρα
@@ -2878,50 +2908,109 @@
     <br>πώς μετράμε την πίεση
     <br>πριν από τη μέτρηση της πίεσης, θα πρέπει να ξεκουράζεστε για τουλάχιστον 5 λεπτά σε καθιστή θέση. Οι μετρήσεις γίνονται σε καθιστή θέση εκτός αν ο γιατρός σας ζητήσει μετρήσεις και σε άλλη θέση. Το χέρι πρέπει βρίσκεται σε σχεδόν οριζόντια θέση και ο βραχίονας να υποστηρίζεται στο ύψος της καρδιάς π.χ. καλά ακουμπισμένο πάνω στο τραπέζι. Δύο μετρήσεις κάθε φορά με μεσοδιάστημα 1-2 λεπτών είναι συνήθως αρκετές. Αν οι μετρήσεις αυτές παρουσιάζουν μεγάλη διαφορά (πάνω από 10 χιλιοστά) τότε είναι σκόπιμο να κάνετε και τρίτη μέτρηση. Οι τελευταίες μετρήσεις είναι πιο "πραγματικές".  η περιχειρίδα τοποθετείται, ώστε να εφαρμόζει καλά κατευθείαν πάνω στον βραχίονα και όχι πάνω από το μανίκι. Αν το μανίκι είναι σφικτό θα πρέπει να το βγάζετε. Το κέντρο του αεροθαλάμου (σημάδι) να βρίσκεται περίπου πάνω από το σημείο που ψηλαφάτε την αρτηρία. Φοράτε τα ακουστικά και τοποθετείτε την άκρη τους στο σημείο που ψηλαφάτε την αρτηρία. Φουσκώνετε το πιεσόμετρο μέχρι το 200-220. ξεφουσκώνετε αργά (περίπου 10 χιλιοστά κάθε 5 δευτερόλεπτα).  το σημείο που ακούτε τον πρώτο σαφή ρυθμικό ήχο είναι η μεγάλη πίεση (συστολική) και το σημείο που ο ρυθμικός ήχος εξαφανίζεται είναι η μικρή πίεση (διαστολική).  η πίεση πρέπει να καταγράφεται σε χιλιοστά, π.χ. μεγάλη πίεση 160 και όχι 16.  το πιεσόμετρο σας έχει ένδειξη (γραμμές) για κάθε 2 χιλιοστά πίεσης π.χ. 100, 102, 104, 106 κλπ. Η πίεση δεν πρέπει να στρογγυλεύεται όπως π.χ. 160/100 αλλά να καταγράφεται στο τελικό ζυγό ψηφείο π.χ. 162/98.
     <br>[http://www.mednet.gr/mudo/metrisi.htm] 2000ιουν13
-    <a class="clsHide" href="#idBdyHmn288measuringP1"></a></p>
-  <p id="idBdyHmn288measuringP2">τοποθετούμε την περιχειρίδα στον αριστερό ή στο δεξιό βραχίονα, περίπου στο ύψος της καρδιάς, λιγο πιο πάνω από τον αγκώνα, και το ακουστικό πάνω στην αρτηρία που βρίσκεται στην εσωτερική πλευρά της άρθρωσης του χέριού. Φουσκώνουμε την περιχειρίδα ώσπου να εξαφανισθούν οι ήχοι του σφυγμού, πράγμα που σημαίνει ότι η πίεση μέσα στην περιχειρίδα ξεπερνά την πίεση της αρτηρίας και η κυκλοφορία του αίματος έχει σταματήσει. Αφήνουμε κατόπιν τον αέρα να φεύγει σιγά σιγά. Οταν ακούσουμε τον πρώτο σφιγμό, η τιμή της πίεσης της περιχειρίδας έχει εξισωθεί με αυτή της αρτηρίας και αντιστοχεί στη συστολικη. Η κυκλοφορία του αίματος στο βραχίονα έχει πια αποκατασταθεί. Συνεχίζουμε να αφήνουμε τον αέρα να διαφεύγει. Οταν ο ήχος του σφυγμού εξαφανίζεται, η τιμή που καταγράφει το σφυγμομανόμετρο αντιστοχεί στη διαστολικη.
-    <a class="clsHide" href="#idBdyHmn288measuringP2"></a></p>
-  <p id="idBdyHmn288measuringP3">το όργανο λέγεται σφυγμομανομετρο και επινοήθηκε το 1891 από τον Riva Rossi.
+    <a class="clsHide" href="#idFldHmn001att007measuringP1"></a></p>
+  <p id="idFldHmn001att007measuringP2">τοποθετούμε την περιχειρίδα στον αριστερό ή στο δεξιό βραχίονα, περίπου στο ύψος της καρδιάς, λιγο πιο πάνω από τον αγκώνα, και το ακουστικό πάνω στην αρτηρία που βρίσκεται στην εσωτερική πλευρά της άρθρωσης του χέριού. Φουσκώνουμε την περιχειρίδα ώσπου να εξαφανισθούν οι ήχοι του σφυγμού, πράγμα που σημαίνει ότι η πίεση μέσα στην περιχειρίδα ξεπερνά την πίεση της αρτηρίας και η κυκλοφορία του αίματος έχει σταματήσει. Αφήνουμε κατόπιν τον αέρα να φεύγει σιγά σιγά. Οταν ακούσουμε τον πρώτο σφιγμό, η τιμή της πίεσης της περιχειρίδας έχει εξισωθεί με αυτή της αρτηρίας και αντιστοχεί στη συστολικη. Η κυκλοφορία του αίματος στο βραχίονα έχει πια αποκατασταθεί. Συνεχίζουμε να αφήνουμε τον αέρα να διαφεύγει. Οταν ο ήχος του σφυγμού εξαφανίζεται, η τιμή που καταγράφει το σφυγμομανόμετρο αντιστοχεί στη διαστολικη.
+    <a class="clsHide" href="#idFldHmn001att007measuringP2"></a></p>
+  <p id="idFldHmn001att007measuringP3">το όργανο λέγεται σφυγμομανομετρο και επινοήθηκε το 1891 από τον Riva Rossi.
     <br>[Εικ, 1994, 49⧺cptRsc33⧺]
-    <a class="clsHide" href="#idBdyHmn288measuringP3"></a></p>
+    <a class="clsHide" href="#idFldHmn001att007measuringP3"></a></p>
 
-  <section id="idBdyHmn288measuringmeasure">
-  <h4 id="idBdyHmn288measuringmeasureH4">measure
-    <a class="clsHide" href="#idBdyHmn288measuringmeasureH4"></a></h4>
-  <p id="idBdyHmn288measuringmeasureP1">οταν ακούμε ότι η πίεσή μας είναι 14, αυτό σημαίνει ότι είναι 140mm Hg.
+  <section id="idFldHmn001att007measuringmeasure">
+  <h4 id="idFldHmn001att007measuringmeasureH4">measure
+    <a class="clsHide" href="#idFldHmn001att007measuringmeasureH4"></a></h4>
+  <p id="idFldHmn001att007measuringmeasureP1">οταν ακούμε ότι η πίεσή μας είναι 14, αυτό σημαίνει ότι είναι 140mm Hg.
     <br>[Αργύρης, {1994}, 64⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn288measuringmeasureP1"></a></p>
+    <a class="clsHide" href="#idFldHmn001att007measuringmeasureP1"></a></p>
   </section>
   </section>
   </section>
 
-  <section id="idFldHmn001_4">
-  <h2 id="idFldHmn001_4H2">leech of bloodHmn
-    <a class="clsHide" href="#idFldHmn001_4H2"></a></h2>
-  <p id="idFldHmn001_4nam">name::
+  <section id="idFldHmn001att009">
+  <h2 id="idFldHmn001att009H2">volume of bloodHmn
+    <a class="clsHide" href="#idFldHmn001att009H2"></a></h2>
+  <p id="idFldHmn001att009nam">name::
+    <br>* Mcs.bloodHmn'volume,
+    <br>* Mcs.bloodHmn'att009-volume,
+    <a class="clsHide" href="#idFldHmn001att009nam"></a></p>
+  <p id="idFldHmn001att009dsn">description::
+    <br>"Blood volume is the volume of blood (red blood cells and plasma) in the circulatory system of any individual.
+    <br>Humans
+    <br>A typical adult has a blood volume of approximately 5 liters. Blood volume is regulated by the kidneys.
+    <br>Blood volume (BV) can be calculated given the hematocrit (HC; the fraction of blood that is red blood cells) and plasma volume (PV), with the hematocrit being regulated via the blood oxygen content regulator:
+    <br>BV=PV/1-HC
+    <br>Blood volume measurement may be used in people with congestive heart failure, chronic hypertension, kidney failure and critical care.
+    <br>The use of relative blood volume changes during dialysis is of questionable utility.[1]
+    <br>Total Blood Volume can be measured manually via the Dual Isotope or Dual Tracer Technique, a classic technique, available since the 1950s.[2] This technique requires double labeling of the blood; that is 2 injections and 2 standards (51Cr-RBC for tagging red blood cells and I-HAS for tagging plasma volume)as well as withdrawing and re-infusing patients with their own blood for blood volume analysis results. This method may take up to 6 hours for accurate results."
+    <br>[{2020-05-26} https://en.wikipedia.org/wiki/Blood_volume]
+    <a class="clsHide" href="#idFldHmn001att009dsn"></a></p>
+  </section>
+
+  <section id="idFldHmn001att008">
+  <h2 id="idFldHmn001att008H2">leech of bloodHmn
+    <a class="clsHide" href="#idFldHmn001att008H2"></a></h2>
+  <p id="idFldHmn001att008nam">name::
     <br>* Mcs.bloodHmn'leech,
+    <br>* Mcs.bloodHmn'att008-leech,
     <br>* Mcs.leech,
     <br>====== langoGreek:
     <br>* McsEll.βδέλλα!=leech,
-    <a class="clsHide" href="#idFldHmn001_4nam"></a></p>
-  <p id="idFldHmn001_4dsn">description::
+    <a class="clsHide" href="#idFldHmn001att008nam"></a></p>
+  <p id="idFldHmn001att008dsn">description::
     <br>Leeches are still used in modern medicine to help heal skin grafts and reattached body parts.
     <br>
     <br>Leeches are still used in modern medicine, although <span class="clsU">the bloodsucking worms</span>' medicinal use has declined since the mid-19th century, when it was thought that removing blood would help cure diseases. In 2004, the United States Food and Drug Administration (FDA) approved leeches for use in recovery treatment of organSkin grafts and other body part attachments. Leeches draw blood from the body when applied, which is thought to prevent blood from building up underneath a skin graft. They also are used to help recirculate blood in the case of blocked veins that sometimes occur after reconstructive reattachment surgery.
     <br>[http://www.wisegeek.com/are-leeches-really-used-in-modern-medicine.htm?m, {2014-06-16}]
-    <a class="clsHide" href="#idFldHmn001_4dsn"></a></p>
+    <a class="clsHide" href="#idFldHmn001att008dsn"></a></p>
   </section>
 
-  <section id="idFldHmn001_5">
-  <h2 id="idFldHmn001_5H2">bloodHmn-collection
-    <a class="clsHide" href="#idFldHmn001_5H2"></a></h2>
-  <p id="idFldHmn001_5nam">name::
-    <br>* Mcs.bloodHmn-collection,
-    <a class="clsHide" href="#idFldHmn001_5nam"></a></p>
-  <p id="idFldHmn001_5dsn">description::
+  <section id="idFldHmn001srtrF">
+  <h2 id="idFldHmn001srtrFH2">structure of bloodHmn
+    <a class="clsHide" href="#idFldHmn001srtrFH2"></a></h2>
+  <p id="idFldHmn001srtrFnam">name::
+    <br>* Mcs.bloodHmn'structure,
+    <a class="clsHide" href="#idFldHmn001srtrFnam"></a></p>
+  <p id="idFldHmn001srtrFP1">structure::
+    <br>* <a class="clsPreview" href="../dirOgm/filMcsOgm-sysMols.last.html#idMolOgm016001">cholesterol</a>,
+    <br>* <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn016">cellPlatelet</a>,
+    <br>* <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn009">cellRed</a>,
+    <br>* <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn019">cellLeucocyte</a>,
+    <br>* <a class="clsPreview" href="#idFldHmn001att005">plasma</a>,
+    <a class="clsHide" href="#idFldHmn001srtrFP1"></a></p>
+  <p id="idFldHmn001srtrFP2">* έμμορφα συστατικά
+    <br>* <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn016">cellPlatelet</a>,
+    <br>* <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn009">cellRed</a>,
+    <br>* <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn019">cellLeucocyte</a>,
+    <br>* <a class="clsPreview" href="#idFldHmn001att005">plasma</a>,
+    <a class="clsHide" href="#idFldHmn001srtrFP2"></a></p>
+  <p id="idFldHmn001srtrFP3">αν φυγοκεντρίσουμε αίμα σε δοκιμαστικό σωλήνα, θα παρατηρήσουμε με μικροσκόπιο ότι προς τον πυθμένα συγκεντρώνονται τα βαρύτερα συστατικά του, τα έμμορφα, ενώ πάνω από αυτά βρίσκεται το πλάσμα σε αναλογια 55%
+    <br>τα έμμορφα συστατικά του που αιωρούνται μέσα στο πλάσμα είναι κύτταρα με πυρήνα ή απύρηνα τα: ερυθρά αιμοσφαίρια, λευκά αιμισφαίρια και τα αιμοπετάλια.
+    <br>[Αργύρης, {1994}, 48⧺cptRsc29⧺]
+    <a class="clsHide" href="#idFldHmn001srtrFP3"></a></p>
+  <p id="idFldHmn001partP4">O όγκος του αίματος σε ένα άτομο με βάρος 70 κιλά είναι 5-6 λίτρα.
+    <br>[Αργύρης, {1994}, 64⧺cptRsc29⧺]
+    <a class="clsHide" href="#idFldHmn001partP4"></a></p>
+  </section>
+
+  <section id="idFldHmn001dngF">
+  <h2 id="idFldHmn001dngFH2">DOING of bloodHmn
+    <a class="clsHide" href="#idFldHmn001dngFH2"></a></h2>
+  <p id="idFldHmn001dngFnam">name::
+    <br>* Mcs.bloodHmn'doing,
+    <a class="clsHide" href="#idFldHmn001dngFnam"></a></p>
+
+  <section id="idFldHmn001att003">
+  <h3 id="idFldHmn001att003H3">collection of bloodHmn
+    <a class="clsHide" href="#idFldHmn001att003H3"></a></h3>
+  <p id="idFldHmn001att003nam">name::
+    <br>* Mcs.bloodHmn'collection,
+    <br>* Mcs.bloodHmn'att003-collection,
+    <br>====== langoGreek:
+    <br>* McsEll.αιμοληψία,
+    <a class="clsHide" href="#idFldHmn001att003nam"></a></p>
+  <p id="idFldHmn001att003dsn">description::
     <br>αιμοληψία είναι η διαδικασία με την οποία κάποιος δίνει αίμα. Διαρκεί 8 περίπου λεπτά. Το αίμα που δίνει είναι 450 γρ.
-    <a class="clsHide" href="#idFldHmn001_5dsn"></a></p>
-  <p id="idFldHmn001_5P1">μετά την αιμοληψία:
+    <a class="clsHide" href="#idFldHmn001att003dsn"></a></p>
+  <p id="idFldHmn001att003P1">μετά την αιμοληψία:
     <br>1. μή καπνίσετε για 1 ώρα.
     <br>2. μήν οδηγήσετε για 1 ώρα.
     <br>3. πιείτε περισσότερα υγρά απ' ότι συνήθως τις 4 επόμενες ώρες.
@@ -2932,20 +3021,23 @@
     <br>8. μπορείτε να ξαναπροσφέρετε αίμα μετά από 3 μήνες.
     <br>9. μπορείτε άφοβα και εντελώς ακίνδυνα να δίνετε αίμα 3-4 φορές το χρόνο.
     <br>[εθνικη υπηρεσια αιμοδοσιας, α' περιφερειακό κέντρο αιμοδοσιας, περιφερειακό γεν. Νοσοκ. Αθηνων, ιπποκρατειο]
-    <a class="clsHide" href="#idFldHmn001_5P1"></a></p>
-  <p id="idFldHmn001_5P2">μία ομαδα αίματος για ολους
+    <a class="clsHide" href="#idFldHmn001att003P1"></a></p>
+  <p id="idFldHmn001att003P2">μία ομαδα αίματος για ολους
     <br>οι ερευνητές στο Albany Medical College κατάφεραν να "καμουφλάρουν" τα ερυθρά αιμοσφαίρια, περιτυλίγοντάς τα με ένα πολυμερές: το πολυαιθυλένιο γλυκόλη (PEG).  ετσι δεν απορίπτεται έστω και άν είναι ασύμβατο. Τα μεταμφιεσμένα αιμοσφαίρια δεν χάνουν την ιδιότητά τους να μεταφέρουν οξυγόνο. Οι ερευνητές διεξάγουν πειράματα σε ποντίκια. Απο τα αποτελέσματα των πειραμάτων θα εξαρτηθεί η δοκιμή της μεθόδου στον άνθρωπο.
     <br>[Βήμα, 1997ιουλ13 το αλλο βημα 24]
-    <a class="clsHide" href="#idFldHmn001_5P2"></a></p>
+    <a class="clsHide" href="#idFldHmn001att003P2"></a></p>
   </section>
 
-  <section id="idFldHmn001_6">
-  <h2 id="idFldHmn001_6H2">bloodHmn-transfusion
-    <a class="clsHide" href="#idFldHmn001_6H2"></a></h2>
-  <p id="idFldHmn001_6nam">name::
+  <section id="idFldHmn001att004">
+  <h3 id="idFldHmn001att004H3">transfusion of bloodHmn
+    <a class="clsHide" href="#idFldHmn001att004H3"></a></h3>
+  <p id="idFldHmn001att004nam">name::
     <br>* Mcs.bloodHmn'transfusion,
-    <a class="clsHide" href="#idFldHmn001_6nam"></a></p>
-  <p id="idFldHmn001_6dsn">description::
+    <br>* Mcs.bloodHmn'att004-transfusion,
+    <br>====== langoGreek:
+    <br>* McsEll.μετάγγιση-αίματος,
+    <a class="clsHide" href="#idFldHmn001att004nam"></a></p>
+  <p id="idFldHmn001att004dsn">description::
     <br>* <a href="https://codepen.io/RominaMartin/full/OJVdvRm">a-codepen-app</a> that shows who gives whom by Romina-Martín.
     <br>κατά τις μεταγγίσεις αίματος σε σοβαρές περιπτώσεις πρέπει να λαβαίνεται υπόψη η ομάδα αίματος του δέκτη και εκείνη του δότη. Η καλύτερη περίπτωση είναι αυτή που τα δύο άτομα έχουν την ίδια ομάδα αίματος. Αν όμως αυτό δεν είναι δυνατό, τότε θα πρέπει να προσέξουμε το αίμα του δοτη να μην έχει συγκολλητινογόνο όμοιο με τη συγκολλητίνη του δεκτη. Ετσι το αίμα μπορεί να μεταγγιστεί:
     <br>ο ---&gt; α, αβ, β,
@@ -2953,44 +3045,15 @@
     <br>β ---&gt; αβ.
     <br>κατά την μετάγγιση αίματος, ιδιαίτερα σε έγκυες γυναίκες, πρέπει να λαβαίνεται υπόψη και ένας άλλος αντιγονικός παράγοντας ο ρέζους (Rhesus).
     <br>[Αργύρης, {1994}, 54⧺cptRsc29⧺]
-    <a class="clsHide" href="#idFldHmn001_6dsn"></a></p>
+    <a class="clsHide" href="#idFldHmn001att004dsn"></a></p>
   </section>
-
-  <section id="idFldHmn001srtr">
-  <h2 id="idFldHmn001srtrH2">structure of bloodHmn
-    <a class="clsHide" href="#idFldHmn001srtrH2"></a></h2>
-  <p id="idFldHmn001srtrP1">structure::
-    <br>* <a class="clsPreview" href="../dirOgm/filMcsOgm-sysMols.last.html#idMolOgm016001">cholesterol</a>,
-    <br>* <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn016">cellPlatelet</a>,
-    <br>* <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn009">cellRed</a>,
-    <br>* <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn019">cellLeucocyte</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn135">plasma</a>,
-    <a class="clsHide" href="#idFldHmn001srtrP1"></a></p>
-  <p id="idFldHmn001srtrP2">* έμμορφα συστατικά
-    <br>* <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn016">cellPlatelet</a>,
-    <br>* <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn009">cellRed</a>,
-    <br>* <a class="clsPreview" href="filMcsCellHmn.last.html#idCellHmn019">cellLeucocyte</a>,
-    <br>* <a class="clsPreview" href="#idBdyHmn135">plasma</a>,
-    <a class="clsHide" href="#idFldHmn001srtrP2"></a></p>
-  <p id="idFldHmn001srtrP3">αν φυγοκεντρίσουμε αίμα σε δοκιμαστικό σωλήνα, θα παρατηρήσουμε με μικροσκόπιο ότι προς τον πυθμένα συγκεντρώνονται τα βαρύτερα συστατικά του, τα έμμορφα, ενώ πάνω από αυτά βρίσκεται το πλάσμα σε αναλογια 55%
-    <br>τα έμμορφα συστατικά του που αιωρούνται μέσα στο πλάσμα είναι κύτταρα με πυρήνα ή απύρηνα τα: ερυθρά αιμοσφαίρια, λευκά αιμισφαίρια και τα αιμοπετάλια.
-    <br>[Αργύρης, {1994}, 48⧺cptRsc29⧺]
-    <a class="clsHide" href="#idFldHmn001srtrP3"></a></p>
-  <p id="idFldHmn001partP4">O όγκος του αίματος σε ένα άτομο με βάρος 70 κιλά είναι 5-6 λίτρα.
-    <br>[Αργύρης, {1994}, 64⧺cptRsc29⧺]
-    <a class="clsHide" href="#idFldHmn001partP4"></a></p>
-  </section>
-
-  <section id="idFldHmn001dngF">
-  <h2 id="idFldHmn001dngFH2">doing of bloodHmn
-    <a class="clsHide" href="#idFldHmn001dngFH2"></a></h2>
 
   <section id="idFldHmn001att001">
   <h3 id="idFldHmn001att001H3">systemic-circulation
     <a class="clsPreview" href="#idFldHmn001att001H3"></a></h3>
   <p id="idFldHmn001att001nam">name::
-    <br>* Mcs.blood'systemic-circulation,
-    <br>* Mcs.blood'att001-systemic-circulation,
+    <br>* Mcs.bloodHmn'systemic-circulation,
+    <br>* Mcs.bloodHmn'att001-systemic-circulation,
     <br>* Mcs.systemic-circulation,
     <br>====== langoGreek:
     <br>* McsEll.γενική-κυκλοφορία-αίματος,
@@ -3033,21 +3096,34 @@
     <a class="clsHide" href="#idFldHmn001att002dsn"></a></p>
   </section>
 
-  <section id="idBdyHmn283">
-  <h3 id="idBdyHmn283H3">bloodHmn-coagulation
-    <a class="clsHide" href="#idBdyHmn283H3"></a></h3>
-  <p id="idBdyHmn283nam">name::
-    <br>* Mcs.cptBdyHmn283,
+  <section id="idFldHmn001att011">
+  <h3 id="idFldHmn001att011H3">coagulation of bloodHmn
+    <a class="clsHide" href="#idFldHmn001att011H3"></a></h3>
+  <p id="idFldHmn001att011nam">name::
     <br>* Mcs.bloodHmn'coagulation,
+    <br>* Mcs.bloodHmn'att011-coagulation,
     <br>====== langoGreek:
     <br>* McsEll.πήξη-αίματος,
-    <a class="clsHide" href="#idBdyHmn283nam"></a></p>
-  <p id="idBdyHmn283dsn">description::
+    <a class="clsHide" href="#idFldHmn001att011nam"></a></p>
+  <p id="idFldHmn001att011dsn">description::
     <br>analytic: πήξη αίματος είναι η διαδικασία (μηχανισμός) θεραπείας με την οποία το αίμα πήζει για τη θεραπεία αιμορραγίας.
-    <a class="clsHide" href="#idBdyHmn283dsn"></a></p>
-  <p id="idBdyHmn283gtr">generic-tree-of-::
+    <a class="clsHide" href="#idFldHmn001att011dsn"></a></p>
+  <p id="idFldHmn001att011gtr">generic-tree-of-::
     <br>* <a class="clsPreview" href="#idDssHmn010">therapy</a>,
-    <a class="clsHide" href="#idBdyHmn283gtr"></a></p>
+    <a class="clsHide" href="#idFldHmn001att011gtr"></a></p>
+  </section>
+
+  <section id="idFldHmn001att012">
+  <h3 id="idFldHmn001att012H3">test of bloodHmn
+    <a class="clsHide" href="#idFldHmn001att012H3"></a></h3>
+  <p id="idFldHmn001att012nam">name::
+    <br>* Mcs.bloodHmn'test,
+    <br>* Mcs.bloodHmn'att012-test,
+    <a class="clsHide" href="#idFldHmn001att012nam"></a></p>
+  <p id="idFldHmn001att012dsn">description::
+    <br>"A blood test is a laboratory analysis performed on a blood sample that is usually extracted from a vein in the arm using a hypodermic needle, or via fingerprick. Multiple tests for specific blood components, such as a glucose test or a cholesterol test, are often grouped together into one test panel called a blood panel or blood work. Blood tests are often used in health care to determine physiological and biochemical states, such as disease, mineral content, pharmaceutical drug effectiveness, and organ function. Typical clinical blood panels include a basic metabolic panel or a complete blood count. Blood tests are also used in drug tests to detect drug abuse."
+    <br>[{2020-05-26} https://en.wikipedia.org/wiki/Blood_test]
+    <a class="clsHide" href="#idFldHmn001att012dsn"></a></p>
   </section>
   </section>
 
@@ -3055,7 +3131,7 @@
   <h2 id="idFldHmn001wptH2">WHOLE-PART-TREE of bloodHmn
     <a class="clsHide" href="#idFldHmn001wptH2"></a></h2>
   <p id="idFldHmn001wptnam">name::
-    <br>* Mcs.blood'whole-part-tree,
+    <br>* Mcs.bloodHmn'whole-part-tree,
     <a class="clsHide" href="#idFldHmn001wptnam"></a></p>
   <p id="idFldHmn001wtr">whole-tree-of-::
     <br>* <a class="clsPreview" href="#idSysOgnHmn002wtr">circulatory-system</a>,
