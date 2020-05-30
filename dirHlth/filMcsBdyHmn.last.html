@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.bodyHmn (human-body 0-82-0.2020-05-29 draft)</title>
+  <title>Mcs.bodyHmn (human-body 0-83-0.2020-05-30 draft)</title>
   <meta name="keywords" content="human-body, bodyHmn, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -5844,7 +5844,7 @@
     <br>* ακρωμιο,
     <br>* άνω γναθοι (2)⧺cptBdyHmn345⧺,
     <br>* <a class="clsPreview" href="#idBoneHmn030">ανώνυμα-οστά</a>,
-    <br>* <a class="clsPreview" href="#idBoneHmn035">αστραγαλος</a>,
+    <br>* <a class="clsPreview" href="#idBoneHmn035">αστράγαλος</a>,
     <br>* αυχενικοι σπόνδυλοι,
     <br>* <a class="clsPreview" href="#idBoneHmn023">βραχιόνιο-οστό</a>,
     <br>* βρεγματικα (2)⧺cptBdyHmn339⧺,
@@ -5882,9 +5882,9 @@
     <br>* στερνο,
     <br>* <a class="clsPreview" href="#idBoneHmn011">σφηνοειδες</a>,
     <br>* σώμα θώρακα,
-    <br>* ταρσου οστά,
+    <br>* ταρσού οστά,
     <br>* <a class="clsPreview" href="#idBoneHmn050">φάλαγγες-άνω-δακτύλων</a>,
-    <br>* <a class="clsPreview" href="#idBoneHmn036">φτέρνα</a>,
+    <br>* <a class="clsPreview" href="#idBoneHmn036">boneHeel</a>,
     <br>* χονδρινο τμημα πλευρας,
     <br>* <a class="clsPreview" href="#idBoneHmn047">ωλένη</a>,
     <br>* <a class="clsPreview" href="#idBoneHmn017">ωμοπλάτη</a>,
@@ -5973,8 +5973,9 @@
   <p id="idBoneHmn004nam">name::
     <br>* Mcs.ognBone.skull!⇒skeletonHead,
     <br>* Mcs.ognBone.004-skull!⇒skeletonHead,
-    <br>* Mcs.skeletonHead,
     <br>* Mcs.cranium!⇒skeletonHead,
+    <br>* Mcs.skeletonHead,
+    <br>* Mcs.skeletonAxialHead!⇒skeletonHead,
     <br>* Mcs.skull!⇒skeletonHead,
     <br>====== langoGreek:
     <br>* McsEll.κρανίο!=skeletonHead,
@@ -6249,6 +6250,8 @@
   <p id="idBoneHmn005nam">name::
     <br>* Mcs.ognBone.trunk-skeleton!⇒skeletonTrunk,
     <br>* Mcs.ognBone.005-trunk-skeleton!⇒skeletonTrunk,
+    <br>* Mcs.skeletonAxialTrunk!⇒skeletonTrunk,
+    <br>* Mcs.skeletonTrunk,
     <br>* Mcs.trunk-skeleton!⇒skeletonTrunk,
     <br>====== langoGreek:
     <br>* McsEll.σκελετός-κορμού!=skeletonTrunk,
@@ -6257,12 +6260,12 @@
     <br>analytic: σκελετός-του-κορμού είναι το μέρος του σκελετού μετά το κρανίο πλήν των 4 άκρων.
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idBoneHmn005dsn"></a></p>
-  <p id="idBoneHmn005wtr">whole-tree-of-::
+  <p id="idBoneHmn005wtr">whole-tree-of-skeletonTrunk::
     <br>* <a class="clsPreview" href="#idBdyHmn102wtr">skeletal-system</a>,
     <a class="clsHide" href="#idBoneHmn005wtr"></a></p>
 
   <section id="idBoneHmn005srtr">
-  <h4 id="idBoneHmn005srtrH4">structure
+  <h4 id="idBoneHmn005srtrH4">structure of skeletonTrunk
     <a class="clsHide" href="#idBoneHmn005srtrH4"></a></h4>
   <p id="idBoneHmn005srtrP1">structure::
     <br>* <a class="clsPreview" href="#idBoneHmn015">θώρακα-σκελετός</a>,
@@ -6281,7 +6284,9 @@
   <p id="idBoneHmn015nam">name::
     <br>* Mcs.ognBone.thorax-skeleton!⇒skeletonThorax,
     <br>* Mcs.ognBone.015-thorax-skeleton!⇒skeletonThorax,
+    <br>* Mcs.skeletonAxialTrunkThorax!⇒skeletonThorax,
     <br>* Mcs.skeletonThorax,
+    <br>* Mcs.skeletonTrunkThorax!⇒skeletonThorax,
     <br>* Mcs.thorax-skeleton!⇒skeletonThorax,
     <br>====== langoGreek:
     <br>* McsEll.σκελετός-θώρακα!=skeletonThorax,
@@ -6295,78 +6300,14 @@
     <a class="clsHide" href="#idBoneHmn015wtr"></a></p>
 
   <section id="idBoneHmn015srtr">
-  <h5 id="idBoneHmn015srtrH5">structure
+  <h5 id="idBoneHmn015srtrH5">structure of skeletonThorax
     <a class="clsHide" href="#idBoneHmn015srtrH5"></a></h5>
   <p id="idBoneHmn015srtrP1">structure::
     <br>* <a class="clsPreview" href="#idBoneHmn016">rimb (12 pair),</a>
     <br>* στερνο,
-    <br>* θωρακικη-κοιλότητα,
+    <br>* θωρακική-κοιλότητα,
     <br>* θωρακικοί-σπόνδυλοι,
     <a class="clsHide" href="#idBoneHmn015srtrP1"></a></p>
-  </section>
-  </section>
-
-  <section id="idBoneHmn002">
-  <h4 id="idBoneHmn002H4">ognBone.vertebral-column-002
-    <a class="clsHide" href="#idBoneHmn002H4"></a></h4>
-  <p id="idBoneHmn002nam">name::
-    <br>* Mcs.ognBone.vertebral-column,
-    <br>* Mcs.ognBone.002-vertebral-column,
-    <br>* Mcs.spine,
-    <br>* Mcs.backbone,
-    <br>* Mcs.spinal-column,
-    <br>* Mcs.vertebral-column,
-    <br>====== langoGreek:
-    <br>* McsEll.σπονδυλική-στήλη,
-    <a class="clsHide" href="#idBoneHmn002nam"></a></p>
-  <p id="idBoneHmn002dsn">description::
-    <br>"The vertebral column, also known as the backbone or spine, is part of the axial skeleton. The vertebral column is the defining characteristic of a vertebrate in which the notochord (a flexible rod of uniform composition) found in all chordates has been replaced by a segmented series of bone: vertebrae separated by intervertebral discs.[1] The vertebral column houses the spinal canal, a cavity that encloses and protects the spinal cord.
-    <br>There are about 50,000 species of animals that have a vertebral column.[2] The human vertebral column is one of the most-studied examples."
-    <br>[https://en.wikipedia.org/wiki/Vertebral_column]
-    <br>===
-    <br>analytic: η σπονδυλική στήλη είναι σύνολο οστών, μέρος του σκελετού-του-κορμού.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBoneHmn002dsn"></a></p>
-  <p id="idBoneHmn002wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBoneHmn005wtr">σκελετός-του-κορμού</a>,
-    <a class="clsHide" href="#idBoneHmn002wtr"></a></p>
-
-  <section id="idBoneHmn002disease">
-  <h5 id="idBoneHmn002diseaseH5">disease (<a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn022">link</a>) of vertebral-column
-    <a class="clsHide" href="#idBoneHmn002diseaseH5"></a></h5>
-  </section>
-
-  <section id="idBoneHmn002ivbldc">
-  <h5 id="idBoneHmn002ivbldcH5">intervertebral-disc of vertebral-column
-    <a class="clsHide" href="#idBoneHmn002ivbldcH5"></a></h5>
-  <p id="idBoneHmn002ivbldcnam">name::
-    <br>* Mcs.intervertebral-disc,
-    <br>* Mcs.vertebral-column'intervertebral-disc,
-    <a class="clsHide" href="#idBoneHmn002ivbldcnam"></a></p>
-  <p id="idBoneHmn002ivbldcdsn">description::
-    <br>"An intervertebral disc (or intervertebral fibrocartilage) lies between adjacent vertebrae in the vertebral column. Each disc forms a fibrocartilaginous joint (a symphysis), to allow slight movement of the vertebrae, to act as a ligament to hold the vertebrae together, and to function as a shock absorber for the spine."
-    <br>[https://en.wikipedia.org/wiki/Intervertebral_disc {2020-02-23}]
-    <br>===
-    <br>"Ο μεσοσπονδύλιος δίσκος (ή μεσοσπονδύλιος ινοχόνδρος) βρίσκεται μεταξύ γειτονικών σπονδύλων της σπονδυλικής στήλης. Κάθε δίσκος συμμετέχει στο σχηματισμό άρθρωσης, η οποία επιτρέπει μία μικρή κίνηση του σπονδύλου και λειτουργεί σαν σύνδεσμος ο οποίος κρατά τους σπονδύλους ενωμένους. Ο ρόλος των δίσκων στην απόσβεση κραδασμών στην σπονδυλική στήλη είναι καθοριστικός."
-    <br>[https://el.wikipedia.org/wiki/Μεσοσπονδύλιος_δίσκος {2020-02-23}]
-    <a class="clsHide" href="#idBoneHmn002ivbldcdsn"></a></p>
-  </section>
-
-  <section id="idBoneHmn002srtr">
-  <h5 id="idBoneHmn002srtrH5">structure of vertebral-column
-    <a class="clsHide" href="#idBoneHmn002srtrH5"></a></h5>
-  <p id="idBoneHmn002srtrP1">structure::
-    <br>* μεσοσπονδύλιοι-δίσκοι,
-    <br>* <a class="clsPreview" href="#idBoneHmn003">σπόνδυλοι</a>,
-    <a class="clsHide" href="#idBoneHmn002srtrP1"></a></p>
-  <p id="idBoneHmn002srtrP2">H σπονδυλική στήλη αποτελείται από 33-34 κοντά οστά, τους σπονδύλους,
-    <br>[Αργύρης, {1994}, 20⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBoneHmn002srtrP2"></a></p>
-  <p id="idBoneHmn002srtrP3">ανάμεσα στους σπονδύλους υπάρχει χόνδρος, σε μορφή δίσκων, μεσοσπονδύλιοι δίσκοι, που διευκολύνουν την κάμψη της σπονδυλικής στήλης, της δίνουν ελαστικότητα και μειώνουν τις τριβές.
-    <br>
-    <br>τα σπονδυλικά τρήματα σχηματίζουν σωλήνα, μέσα στον οποίο υπάρχει ο νωτιαίος μυελός. Η σπονδυλική στήλη φέρνει 4 κυρτώματα, αποτέλεσμα της όρθιας στάσης του ανθρώπου, που της δίνουν το πλεονέκτημα να κρατάει μεγαλύτερο βάρος και να έχει ελαστικότητα.
-    <br>[Αργύρης, {1994}, 22⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBoneHmn002srtrP3"></a></p>
   </section>
   </section>
 
@@ -6424,17 +6365,74 @@
     <a class="clsHide" href="#idBoneHmn003SPECIFICP1"></a></p>
   </section>
 
-  <section id="idBoneHmn003001">
-  <h5 id="idBoneHmn003001H5">boneVertebra.aggregate
-    <a class="clsHide" href="#idBoneHmn003001H5"></a></h5>
-  <p id="idBoneHmn003001nam">name::
+  <section id="idBoneHmn002">
+  <h5 id="idBoneHmn002H5">boneVertebra.aggregate
+    <a class="clsHide" href="#idBoneHmn002H5"></a></h5>
+  <p id="idBoneHmn002nam">name::
+    <br>* Mcs.ognBone.vertebral-column!⇒skeletonVertebra,
+    <br>* Mcs.ognBone.002-vertebral-column!⇒skeletonVertebra,
+    <br>* Mcs.spine!⇒skeletonVertebra,
+    <br>* Mcs.backbone!⇒skeletonVertebra,
+    <br>* Mcs.skeletonAxialTrunkVertebra!⇒skeletonVertebra,
+    <br>* Mcs.skeletonTrunkVertebra!⇒skeletonVertebra,
+    <br>* Mcs.skeletonVertebra,
+    <br>* Mcs.spinal-column!⇒skeletonVertebra,
+    <br>* Mcs.vertebral-column!⇒skeletonVertebra,
     <br>* Mcs.boneVertebra.aggregate,
     <br>* Mcs.boneVertebra.001-aggregate,
     <br>* Mcs.vertebraAggregate,
-    <a class="clsHide" href="#idBoneHmn003001nam"></a></p>
-  <p id="idBoneHmn003001dsn">description::
-    <br>·
-    <a class="clsHide" href="#idBoneHmn003001dsn"></a></p>
+    <br>====== langoGreek:
+    <br>* McsEll.σπονδυλική-στήλη!=skeletonVertebra,
+    <a class="clsHide" href="#idBoneHmn002nam"></a></p>
+  <p id="idBoneHmn002dsn">description::
+    <br>"The vertebral column, also known as the backbone or spine, is part of the axial skeleton. The vertebral column is the defining characteristic of a vertebrate in which the notochord (a flexible rod of uniform composition) found in all chordates has been replaced by a segmented series of bone: vertebrae separated by intervertebral discs.[1] The vertebral column houses the spinal canal, a cavity that encloses and protects the spinal cord.
+    <br>There are about 50,000 species of animals that have a vertebral column.[2] The human vertebral column is one of the most-studied examples."
+    <br>[https://en.wikipedia.org/wiki/Vertebral_column]
+    <br>===
+    <br>analytic: η σπονδυλική στήλη είναι σύνολο οστών, μέρος του σκελετού-του-κορμού.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBoneHmn002dsn"></a></p>
+  <p id="idBoneHmn002wtr">whole-tree-of-::
+    <br>* <a class="clsPreview" href="#idBoneHmn005wtr">σκελετός-του-κορμού</a>,
+    <a class="clsHide" href="#idBoneHmn002wtr"></a></p>
+
+  <section id="idBoneHmn002disease">
+  <h6 id="idBoneHmn002diseaseH6">disease (<a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn022">link</a>) of vertebral-column
+    <a class="clsHide" href="#idBoneHmn002diseaseH6"></a></h6>
+  </section>
+
+  <section id="idBoneHmn002ivbldc">
+  <h6 id="idBoneHmn002ivbldcH6">intervertebral-disc of vertebral-column
+    <a class="clsHide" href="#idBoneHmn002ivbldcH6"></a></h6>
+  <p id="idBoneHmn002ivbldcnam">name::
+    <br>* Mcs.intervertebral-disc,
+    <br>* Mcs.vertebral-column'intervertebral-disc,
+    <a class="clsHide" href="#idBoneHmn002ivbldcnam"></a></p>
+  <p id="idBoneHmn002ivbldcdsn">description::
+    <br>"An intervertebral disc (or intervertebral fibrocartilage) lies between adjacent vertebrae in the vertebral column. Each disc forms a fibrocartilaginous joint (a symphysis), to allow slight movement of the vertebrae, to act as a ligament to hold the vertebrae together, and to function as a shock absorber for the spine."
+    <br>[https://en.wikipedia.org/wiki/Intervertebral_disc {2020-02-23}]
+    <br>===
+    <br>"Ο μεσοσπονδύλιος δίσκος (ή μεσοσπονδύλιος ινοχόνδρος) βρίσκεται μεταξύ γειτονικών σπονδύλων της σπονδυλικής στήλης. Κάθε δίσκος συμμετέχει στο σχηματισμό άρθρωσης, η οποία επιτρέπει μία μικρή κίνηση του σπονδύλου και λειτουργεί σαν σύνδεσμος ο οποίος κρατά τους σπονδύλους ενωμένους. Ο ρόλος των δίσκων στην απόσβεση κραδασμών στην σπονδυλική στήλη είναι καθοριστικός."
+    <br>[https://el.wikipedia.org/wiki/Μεσοσπονδύλιος_δίσκος {2020-02-23}]
+    <a class="clsHide" href="#idBoneHmn002ivbldcdsn"></a></p>
+  </section>
+
+  <section id="idBoneHmn002srtr">
+  <h6 id="idBoneHmn002srtrH6">structure of vertebral-column
+    <a class="clsHide" href="#idBoneHmn002srtrH6"></a></h6>
+  <p id="idBoneHmn002srtrP1">structure::
+    <br>* μεσοσπονδύλιοι-δίσκοι,
+    <br>* <a class="clsPreview" href="#idBoneHmn003">σπόνδυλοι</a>,
+    <a class="clsHide" href="#idBoneHmn002srtrP1"></a></p>
+  <p id="idBoneHmn002srtrP2">H σπονδυλική στήλη αποτελείται από 33-34 κοντά οστά, τους σπονδύλους,
+    <br>[Αργύρης, {1994}, 20⧺cptRsc29⧺]
+    <a class="clsHide" href="#idBoneHmn002srtrP2"></a></p>
+  <p id="idBoneHmn002srtrP3">ανάμεσα στους σπονδύλους υπάρχει χόνδρος, σε μορφή δίσκων, μεσοσπονδύλιοι δίσκοι, που διευκολύνουν την κάμψη της σπονδυλικής στήλης, της δίνουν ελαστικότητα και μειώνουν τις τριβές.
+    <br>
+    <br>τα σπονδυλικά τρήματα σχηματίζουν σωλήνα, μέσα στον οποίο υπάρχει ο νωτιαίος μυελός. Η σπονδυλική στήλη φέρνει 4 κυρτώματα, αποτέλεσμα της όρθιας στάσης του ανθρώπου, που της δίνουν το πλεονέκτημα να κρατάει μεγαλύτερο βάρος και να έχει ελαστικότητα.
+    <br>[Αργύρης, {1994}, 22⧺cptRsc29⧺]
+    <a class="clsHide" href="#idBoneHmn002srtrP3"></a></p>
+  </section>
   </section>
 
   <section id="idBoneHmn003002">
@@ -7092,10 +7090,11 @@
   <h4 id="idBoneHmn025H4">ognBone.pelvic-skeleton-025
     <a class="clsHide" href="#idBoneHmn025H4"></a></h4>
   <p id="idBoneHmn025nam">name::
-    <br>* Mcs.ognBone.pelvis!⇒skeletonPelvic,
-    <br>* Mcs.ognBone.025-pelvis!⇒skeletonPelvic,
-    <br>* Mcs.skeletonPelvic,
+    <br>* Mcs.ognBone.pelvic-skeleton!⇒skeletonPelvic,
+    <br>* Mcs.ognBone.025-pelvic-skeleton!⇒skeletonPelvic,
     <br>* Mcs.pelvis!⇒skeletonPelvic,
+    <br>* Mcs.skeletonLimbLowerPelvic!⇒skeletonPelvic,
+    <br>* Mcs.skeletonPelvic,
     <br>====== langoGreek:
     <br>* McsEll.λεκάνη!=skeletonPelvic,
     <a class="clsHide" href="#idBoneHmn025nam"></a></p>
@@ -7126,33 +7125,115 @@
   <p id="idBoneHmn041nam">name::
     <br>* Mcs.ognBone.leg-skeleton!⇒skeletonLeg,
     <br>* Mcs.ognBone.041-leg-skeleton!⇒skeletonLeg,
-    <br>* Mcs.skeletonLeg,
     <br>* Mcs.leg-skeleton!⇒skeletonLeg,
+    <br>* Mcs.skeletonLeg,
+    <br>* Mcs.skeletonLimbLowerLeg!⇒skeletonLeg,
     <a class="clsHide" href="#idBoneHmn041nam"></a></p>
   <p id="idBoneHmn041dsn">description::
     <br>"The major bones of the leg are the femur (thigh bone), tibia (shin bone), and adjacent fibula, and these are all long bones. The patella (kneecap) is the sesamoid bone in front of the knee."
     <br>[{2020-05-28} https://en.wikipedia.org/wiki/Human_leg#Skeleton]
     <a class="clsHide" href="#idBoneHmn041dsn"></a></p>
+
+  <section id="idBoneHmn028">
+  <h5 id="idBoneHmn028H5">ognBone.lower-leg-skeleton-028
+    <a class="clsHide" href="#idBoneHmn028H5"></a></h5>
+  <p id="idBoneHmn028nam">name::
+    <br>* Mcs.ognBone.tibia-skeleton!⇒skeletonLegLower,
+    <br>* Mcs.ognBone.028-tibia-skeleton!⇒skeletonLegLower,
+    <br>* Mcs.skeletonLegLower,
+    <br>* Mcs.tibia-skeleton!⇒skeletonLegLower,
+    <br>====== langoGreek:
+    <br>* McsEll.κνήμης-σκελετός!=skeletonLegLower,
+    <a class="clsHide" href="#idBoneHmn028nam"></a></p>
+  <p id="idBoneHmn028dsn">description::
+    <br>analytic: κνήμη είναι μέρος των <a class="clsPreview" href="#idBoneHmn024">κάτω-άκρων</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBoneHmn028dsn"></a></p>
+  <p id="idBoneHmn028wtr">whole-tree-of-skeletonLegLower::
+    <br>* <a class="clsPreview" href="#idBoneHmn024wtr">skeletonLimbLower</a>,
+    <a class="clsHide" href="#idBoneHmn028wtr"></a></p>
+
+  <section id="idBoneHmn028srtr">
+  <h6 id="idBoneHmn028srtrH6">structure of skeletonLegLower
+    <a class="clsHide" href="#idBoneHmn028srtrH6"></a></h6>
+  <p id="idBoneHmn028srtrP1">structure::
+    <br>* <a class="clsPreview" href="#idBoneHmn033">κνήμη-οστό</a>,
+    <br>* <a class="clsPreview" href="#idBoneHmn032">περόνη</a>,
+    <a class="clsHide" href="#idBoneHmn028srtrP1"></a></p>
+  <p id="idBoneHmn028srtrP2">H κνήμη αποτελείται από δύο οστά, την κνήμη και την περόνη.
+    <br>[Αργύρης, {1994}, 24⧺cptRsc29⧺]
+    <a class="clsHide" href="#idBoneHmn028srtrP2"></a></p>
+  </section>
+  </section>
+
+  <section id="idBoneHmn032">
+  <h5 id="idBoneHmn032H5">ognBone.fibula-032
+    <a class="clsHide" href="#idBoneHmn032H5"></a></h5>
+  <p id="idBoneHmn032nam">name::
+    <br>* Mcs.ognBone.fibula!⇒boneFibula,
+    <br>* Mcs.ognBone.032-fibula!⇒boneFibula,
+    <br>* Mcs.fibula!⇒boneFibula,
+    <br>====== langoGreek:
+    <br>* McsEll.περόνη!=boneFibula,
+    <a class="clsHide" href="#idBoneHmn032nam"></a></p>
+  <p id="idBoneHmn032dsn">description::
+    <br>analytic: περόνη είναι οστό του <a class="clsPreview" href="#idBoneHmn028">σκελετού-της-κνήμης</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBoneHmn032dsn"></a></p>
+  <p id="idBoneHmn032gtr">generic-tree-of-boneFibula::
+    <br>* <a class="clsPreview" href="#idBoneHmngtr">ognBone</a>,
+    <a class="clsHide" href="#idBoneHmn032gtr"></a></p>
+  <p id="idBoneHmn032wtr">whole-tree-of-boneFibula::
+    <br>* <a class="clsPreview" href="#idBoneHmn028wtr">σκελετός-κνήμης</a>,
+    <a class="clsHide" href="#idBoneHmn032wtr"></a></p>
+  </section>
+
+  <section id="idBoneHmn033">
+  <h5 id="idBoneHmn033H5">ognBone.tibia-033
+    <a class="clsHide" href="#idBoneHmn033H5"></a></h5>
+  <p id="idBoneHmn033nam">name::
+    <br>* Mcs.ognBone.tibia!⇒boneTibia,
+    <br>* Mcs.ognBone.033-tibia!⇒boneTibia,
+    <br>* Mcs.boneTibia,
+    <br>* Mcs.tibia!⇒boneTibia,
+    <br>====== langoGreek:
+    <br>* McsEll.κνήμης-οστό!=boneTibia,
+    <br>* McsEll.οστό.κνήμη!=boneTibia,
+    <a class="clsHide" href="#idBoneHmn033nam"></a></p>
+  <p id="idBoneHmn033dsn">description::
+    <br>analytic: κνήμη είναι οστό του <a class="clsPreview" href="#idBoneHmn028">σκελετού-της-κνήμης</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBoneHmn033dsn"></a></p>
+  <p id="idBoneHmn033P1">The tibia is the larger of the two bones in the leg below the knee in vertebrates.
+    <br>[http://en.wikipedia.org/wiki/Tibia]
+    <a class="clsHide" href="#idBoneHmn033P1"></a></p>
+  <p id="idBoneHmn033gtr">generic-tree-of-::
+    <br>* <a class="clsPreview" href="#idBoneHmngtr">ognBone</a>,
+    <br>* <a class="clsPreview" href="#idOgnHmngtr">organ</a>,
+    <a class="clsHide" href="#idBoneHmn033gtr"></a></p>
+  <p id="idBoneHmn033wtr">whole-tree-of-::
+    <br>* <a class="clsPreview" href="#idBoneHmn028wtr">σκελετός-κνήμης</a>,
+    <a class="clsHide" href="#idBoneHmn033wtr"></a></p>
+  </section>
   </section>
 
   <section id="idBoneHmn029">
   <h4 id="idBoneHmn029H4">ognBone.foot-skeleton-029
     <a class="clsHide" href="#idBoneHmn029H4"></a></h4>
   <p id="idBoneHmn029nam">name::
-    <br>* Mcs.ognBone.foot-skeleton,
-    <br>* Mcs.ognBone.029-foot-skeleton,
-    <br>* Mcs.foot-skeleton,
+    <br>* Mcs.ognBone.foot-skeleton!⇒skeletonFoot,
+    <br>* Mcs.ognBone.029-foot-skeleton!⇒skeletonFoot,
+    <br>* Mcs.foot-skeleton!⇒skeletonFoot,
+    <br>* Mcs.skeletonFoot,
+    <br>* Mcs.skeletonLimbLowerFoot!⇒skeletonFoot,
     <br>====== langoGreek:
-    <br>* McsEll.σκελετός-ποδιού,
+    <br>* McsEll.σκελετός-ποδιού!=skeletonFoot,
     <a class="clsHide" href="#idBoneHmn029nam"></a></p>
   <p id="idBoneHmn029dsn">description::
     <br>analytic: σκελετός ποδιού είναι μέρος των <a class="clsPreview" href="#idBoneHmn024">κάτω-άκρων</a>.
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idBoneHmn029dsn"></a></p>
-  <p id="idBoneHmn029P1">IMAGE:
-    <br>
-    <a class="clsHide" href="#idBoneHmn029P1"></a></p>
-  <p id="idBoneHmn029wtr">whole-tree-of-::
+  <p id="idBoneHmn029wtr">whole-tree-of-skeletonFoot::
     <br>* <a class="clsPreview" href="#idBoneHmn024wtr">skeletonLimbLower</a>,
     <a class="clsHide" href="#idBoneHmn029wtr"></a></p>
 
@@ -7160,16 +7241,113 @@
   <h5 id="idBoneHmn029srtrH5">structure
     <a class="clsHide" href="#idBoneHmn029srtrH5"></a></h5>
   <p id="idBoneHmn029srtrP1">structure::
-    <br>* <a class="clsPreview" href="#idBoneHmn034">ταρσός</a>,
+    <br>* <a class="clsPreview" href="#idBoneHmn034">skeletonTarsus</a>,
     <br>* μετατάρσιο,
     <br>* δάκτυλα,
     <br>* <a class="clsPreview" href="#idBoneHmn037">foot-arch</a>,
     <a class="clsHide" href="#idBoneHmn029srtrP1"></a></p>
-  <p id="idBoneHmn029srtrP2">το άκρο πόδι περιλαμβάνει τον ταρσο, το μετατάρσιο και τα δάκτυλα.
+  <p id="idBoneHmn029srtrP2">το άκρο πόδι περιλαμβάνει τον ταρσό, το μετατάρσιο και τα δάκτυλα.
     <br>
     <br>ανάμεσα στη φτέρνα και στην άκρη του μεταρσιου σχηματίζεται μία κύρτωση στο πέλμα, η ποδικη καμάρα.
     <br>[Αργύρης, {1994}, 24⧺cptRsc29⧺]
     <a class="clsHide" href="#idBoneHmn029srtrP2"></a></p>
+  </section>
+
+  <section id="idBoneHmn034">
+  <h5 id="idBoneHmn034H5">ognBone.tarsus-skeleton-034
+    <a class="clsHide" href="#idBoneHmn034H5"></a></h5>
+  <p id="idBoneHmn034nam">name::
+    <br>* Mcs.ognBone.tarsus!⇒skeletonTarsus,
+    <br>* Mcs.ognBone.034-tarsus!⇒skeletonTarsus,
+    <br>* Mcs.skeletonFootTarsus!⇒skeletonTarsus,
+    <br>* Mcs.skeletonTarsus,
+    <br>* Mcs.tarsus!⇒skeletonTarsus,
+    <br>====== langoGreek:
+    <br>* McsEll.ταρσός!=skeletonTarsus,
+    <a class="clsHide" href="#idBoneHmn034nam"></a></p>
+  <p id="idBoneHmn034dsn">description::
+    <br>"The tarsus is a cluster of seven articulating bones in each foot situated between the lower end of tibia and fibula of the lower leg and the metatarsus. It is made up of the midfoot (cuboid, medial, intermediate, and lateral cuneiform, and navicular) and hindfoot (talus and calcaneus).
+    <br>The tarsus articulates with the bones of the metatarsus, which in turn articulate with the proximal phalanges of the toes. The joint between the tibia and fibula above and the tarsus below is referred to as the ankle joint.
+    <br>In humans the largest bone in the tarsus is the calcaneus, which is the weight-bearing bone within the heel of the foot."
+    <br>[{2020-05-30} https://en.wikipedia.org/wiki/Tarsus_(skeleton)]
+    <br>===
+    <br>analytic: ταρσός είναι μέρος <a class="clsPreview" href="#idBoneHmn029">σκελετού-του-ποδιού</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBoneHmn034dsn"></a></p>
+  <p id="idBoneHmn034wtr">whole-tree-of-::
+    <br>* <a class="clsPreview" href="#idBoneHmn029wtr">σκελετός-του-ποδιού</a>,
+    <a class="clsHide" href="#idBoneHmn034wtr"></a></p>
+
+  <section id="idBoneHmn034srtr">
+  <h6 id="idBoneHmn034srtrH6">structure
+    <a class="clsHide" href="#idBoneHmn034srtrH6"></a></h6>
+  <p id="idBoneHmn034srtrP1">structure::
+    <br>* <a class="clsPreview" href="#idBoneHmn035">boneTalus</a>,
+    <br>* <a class="clsPreview" href="#idBoneHmn036">boneHeel</a>,
+    <a class="clsHide" href="#idBoneHmn034srtrP1"></a></p>
+  <p id="idBoneHmn034srtrP2">τα πιο ισχυρά οστά του ταρσού είναι ο αστράγαλος και η φτέρνα.
+    <br>[Αργύρης, {1994}, 24⧺cptRsc29⧺]
+    <a class="clsHide" href="#idBoneHmn034srtrP2"></a></p>
+  </section>
+
+  <section id="idBoneHmn035">
+  <h6 id="idBoneHmn035H6">ognBone.ankle-035
+    <a class="clsHide" href="#idBoneHmn035H6"></a></h6>
+  <p id="idBoneHmn035nam">name::
+    <br>* Mcs.ognBone.ankle!⇒boneTalus,
+    <br>* Mcs.ognBone.035-ankle!⇒boneTalus,
+    <br>* Mcs.ankle-bone!⇒boneTalus,
+    <br>* Mcs.astragalus!⇒boneTalus,
+    <br>* Mcs.boneTalus, /téilas/,
+    <br>====== langoGreek:
+    <br>* McsEll.αστράγαλος!=boneTalus,
+    <a class="clsHide" href="#idBoneHmn035nam"></a></p>
+  <p id="idBoneHmn035dsn">description::
+    <br><img src="filMcsBdyHmn.files/bone.wp.ccbysa30.Tarsus2.png">
+    <br>7 bones constituting the tarsus. A-Calcaneus. B-Talus. C-Cuboid. D-Navicular. E-F-G-Cuneiform-bones.
+    <br>"The talus (/ˈteɪləs/; Latin for ankle[1]), talus bone, astragalus /əˈstræɡələs/, or ankle bone is one of the group of foot bones known as the tarsus. The tarsus forms the lower part of the ankle joint. It transmits the entire weight of the body from the lower legs to the foot.[2]
+    <br>The talus has joints with the two bones of the lower leg, the tibia and thinner fibula. These leg bones have two prominences (the lateral and medial malleoli) that articulate with the talus. At the foot end, within the tarsus, the talus articulates with the calcaneus (heel bone) below, and with the curved navicular bone in front; together, these foot articulations form the ball-and-socket-shaped talocalcaneonavicular joint.
+    <br>The talus is the second largest of the tarsal bones;[3] it is also one of the bones in the human body with the highest percentage of its surface area covered by articular cartilage. It is also unusual in that it has a retrograde blood supply, i.e. arterial blood enters the bone at the distal end.[citation needed]
+    <br>In humans, no muscles attach to the talus, unlike most bones, and its position therefore depends on the position of the neighbouring bones.[4]"
+    <br>[{2020-05-30} https://en.wikipedia.org/wiki/Talus_bone]
+    <br>===
+    <br>analytic: αστράγαλος είναι οστό του <a class="clsPreview" href="#idBoneHmn034">ταρσού</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBoneHmn035dsn"></a></p>
+  <p id="idBoneHmn035gtr">generic-tree-of-::
+    <br>* <a class="clsPreview" href="#idBoneHmngtr">ognBone</a>,
+    <br>* <a class="clsPreview" href="#idOgnHmngtr">organ</a>,
+    <a class="clsHide" href="#idBoneHmn035gtr"></a></p>
+  <p id="idBoneHmn035wtr">whole-tree-of-::
+    <br>* <a class="clsPreview" href="#idBoneHmn034wtr">skeletonTarsus</a>,
+    <a class="clsHide" href="#idBoneHmn035wtr"></a></p>
+  </section>
+
+  <section id="idBoneHmn036">
+  <h6 id="idBoneHmn036H6">ognBone.heel-036
+    <a class="clsHide" href="#idBoneHmn036H6"></a></h6>
+  <p id="idBoneHmn036nam">name::
+    <br>* Mcs.ognBone.heel!⇒boneHeel,
+    <br>* Mcs.ognBone.036-heel!⇒boneHeel,
+    <br>* Mcs.calcaneus!⇒boneHeel, /kalkéinias/,
+    <br>* Mcs.heel-bone!⇒boneHeel,
+    <br>====== langoGreek:
+    <br>* McsEll.φτέρνα!=boneHeel,
+    <a class="clsHide" href="#idBoneHmn036nam"></a></p>
+  <p id="idBoneHmn036dsn">description::
+    <br>"In humans and many other primates, the calcaneus (/kælˈkeɪniəs/; from the Latin calcaneus or calcaneum, meaning heel[1]) or heel bone is a bone of the tarsus of the foot which constitutes the heel. In some other animals, it is the point of the hock."
+    <br>[{2020-05-30} https://en.wikipedia.org/wiki/Calcaneus]
+    <br>analytic: φτέρνα είναι οστό του <a class="clsPreview" href="#idBoneHmn034">ταρσού</a>.
+    <br>[hmnSgm, {1995-03}]
+    <a class="clsHide" href="#idBoneHmn036dsn"></a></p>
+  <p id="idBoneHmn036gtr">generic-tree-of-::
+    <br>* <a class="clsPreview" href="#idBoneHmngtr">ognBone</a>,
+    <br>* <a class="clsPreview" href="#idOgnHmngtr">organ</a>,
+    <a class="clsHide" href="#idBoneHmn036gtr"></a></p>
+  <p id="idBoneHmn036wtr">whole-tree-of-::
+    <br>* <a class="clsPreview" href="#idBoneHmn034wtr">skeletonTarsus</a>,
+    <a class="clsHide" href="#idBoneHmn036wtr"></a></p>
+  </section>
   </section>
   </section>
 
@@ -7226,36 +7404,6 @@
     <a class="clsHide" href="#idBoneHmn027wtr"></a></p>
   </section>
 
-  <section id="idBoneHmn028">
-  <h4 id="idBoneHmn028H4">ognBone.tibia-skeleton-028
-    <a class="clsHide" href="#idBoneHmn028H4"></a></h4>
-  <p id="idBoneHmn028nam">name::
-    <br>* Mcs.ognBone.tibia-skeleton,
-    <br>* Mcs.ognBone.028-tibia-skeleton,
-    <br>====== langoGreek:
-    <br>* McsEll.κνήμης-σκελετός,
-    <a class="clsHide" href="#idBoneHmn028nam"></a></p>
-  <p id="idBoneHmn028dsn">description::
-    <br>analytic: κνήμη είναι μέρος των <a class="clsPreview" href="#idBoneHmn024">κάτω-άκρων</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBoneHmn028dsn"></a></p>
-  <p id="idBoneHmn028wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBoneHmn024wtr">skeletonLimbLower</a>,
-    <a class="clsHide" href="#idBoneHmn028wtr"></a></p>
-
-  <section id="idBoneHmn028srtr">
-  <h5 id="idBoneHmn028srtrH5">structure
-    <a class="clsHide" href="#idBoneHmn028srtrH5"></a></h5>
-  <p id="idBoneHmn028srtrP1">structure::
-    <br>* <a class="clsPreview" href="#idBoneHmn033">κνήμη-οστό</a>,
-    <br>* <a class="clsPreview" href="#idBoneHmn032">περόνη</a>,
-    <a class="clsHide" href="#idBoneHmn028srtrP1"></a></p>
-  <p id="idBoneHmn028srtrP2">H κνήμη αποτελείται από δύο οστά, την κνήμη και την περόνη.
-    <br>[Αργύρης, {1994}, 24⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBoneHmn028srtrP2"></a></p>
-  </section>
-  </section>
-
   <section id="idBoneHmn030">
   <h4 id="idBoneHmn030H4">ognBone.hip-030
     <a class="clsHide" href="#idBoneHmn030H4"></a></h4>
@@ -7303,132 +7451,6 @@
   <p id="idBoneHmn031wtr">whole-tree-of-::
     <br>* <a class="clsPreview" href="#idBoneHmn026wtr">μηρός</a>,
     <a class="clsHide" href="#idBoneHmn031wtr"></a></p>
-  </section>
-
-  <section id="idBoneHmn032">
-  <h4 id="idBoneHmn032H4">ognBone.fibula-032
-    <a class="clsHide" href="#idBoneHmn032H4"></a></h4>
-  <p id="idBoneHmn032nam">name::
-    <br>* Mcs.ognBone.fibula,
-    <br>* Mcs.ognBone.032-fibula,
-    <br>* Mcs.fibula,
-    <br>====== langoGreek:
-    <br>* McsEll.περόνη,
-    <a class="clsHide" href="#idBoneHmn032nam"></a></p>
-  <p id="idBoneHmn032dsn">description::
-    <br>analytic: περόνη είναι οστό του <a class="clsPreview" href="#idBoneHmn028">σκελετού-της-κνήμης</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBoneHmn032dsn"></a></p>
-  <p id="idBoneHmn032gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBoneHmngtr">ognBone</a>,
-    <br>* <a class="clsPreview" href="#idOgnHmngtr">organ</a>,
-    <a class="clsHide" href="#idBoneHmn032gtr"></a></p>
-  <p id="idBoneHmn032wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBoneHmn028wtr">σκελετός-κνήμης</a>,
-    <a class="clsHide" href="#idBoneHmn032wtr"></a></p>
-  </section>
-
-  <section id="idBoneHmn033">
-  <h4 id="idBoneHmn033H4">ognBone.tibia-033
-    <a class="clsHide" href="#idBoneHmn033H4"></a></h4>
-  <p id="idBoneHmn033nam">name::
-    <br>* Mcs.ognBone.tibia,
-    <br>* Mcs.ognBone.033-tibia,
-    <br>* Mcs.tibia,
-    <br>====== langoGreek:
-    <br>* McsEll.κνήμη-οστό,
-    <a class="clsHide" href="#idBoneHmn033nam"></a></p>
-  <p id="idBoneHmn033dsn">description::
-    <br>analytic: κνήμη είναι οστό του <a class="clsPreview" href="#idBoneHmn028">σκελετού-της-κνήμης</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBoneHmn033dsn"></a></p>
-  <p id="idBoneHmn033P1">The tibia is the larger of the two bones in the leg below the knee in vertebrates.
-    <br>[http://en.wikipedia.org/wiki/Tibia]
-    <a class="clsHide" href="#idBoneHmn033P1"></a></p>
-  <p id="idBoneHmn033gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBoneHmngtr">ognBone</a>,
-    <br>* <a class="clsPreview" href="#idOgnHmngtr">organ</a>,
-    <a class="clsHide" href="#idBoneHmn033gtr"></a></p>
-  <p id="idBoneHmn033wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBoneHmn028wtr">σκελετός-κνήμης</a>,
-    <a class="clsHide" href="#idBoneHmn033wtr"></a></p>
-  </section>
-
-  <section id="idBoneHmn034">
-  <h4 id="idBoneHmn034H4">ognBone.tarsus-034
-    <a class="clsHide" href="#idBoneHmn034H4"></a></h4>
-  <p id="idBoneHmn034nam">name::
-    <br>* Mcs.ognBone.tarsus,
-    <br>* Mcs.ognBone.034-tarsus,
-    <br>* Mcs.tarsus,
-    <br>====== langoGreek:
-    <br>* McsEll.ταρσός,
-    <a class="clsHide" href="#idBoneHmn034nam"></a></p>
-  <p id="idBoneHmn034dsn">description::
-    <br>analytic: ταρσός είναι μέρος <a class="clsPreview" href="#idBoneHmn029">σκελετού-του-ποδιού</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBoneHmn034dsn"></a></p>
-  <p id="idBoneHmn034wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBoneHmn029wtr">σκελετός-του-ποδιού</a>,
-    <a class="clsHide" href="#idBoneHmn034wtr"></a></p>
-
-  <section id="idBoneHmn034srtr">
-  <h5 id="idBoneHmn034srtrH5">structure
-    <a class="clsHide" href="#idBoneHmn034srtrH5"></a></h5>
-  <p id="idBoneHmn034srtrP1">structure::
-    <br>* <a class="clsPreview" href="#idBoneHmn035">αστραγαλος</a>,
-    <br>* <a class="clsPreview" href="#idBoneHmn036">φτέρνα</a>,
-    <a class="clsHide" href="#idBoneHmn034srtrP1"></a></p>
-  <p id="idBoneHmn034srtrP2">τα πιο ισχυρά οστά του ταρσού είναι ο αστραγαλος και η φτέρνα.
-    <br>[Αργύρης, {1994}, 24⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBoneHmn034srtrP2"></a></p>
-  </section>
-  </section>
-
-  <section id="idBoneHmn035">
-  <h4 id="idBoneHmn035H4">ognBone.ankle-035
-    <a class="clsHide" href="#idBoneHmn035H4"></a></h4>
-  <p id="idBoneHmn035nam">name::
-    <br>* Mcs.ognBone.ankle,
-    <br>* Mcs.ognBone.035-ankle,
-    <br>* Mcs.ankle-bone,
-    <br>====== langoGreek:
-    <br>* McsEll.αστραγαλος,
-    <a class="clsHide" href="#idBoneHmn035nam"></a></p>
-  <p id="idBoneHmn035dsn">description::
-    <br>analytic: αστραγαλος είναι οστό του <a class="clsPreview" href="#idBoneHmn034">ταρσου</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBoneHmn035dsn"></a></p>
-  <p id="idBoneHmn035gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBoneHmngtr">ognBone</a>,
-    <br>* <a class="clsPreview" href="#idOgnHmngtr">organ</a>,
-    <a class="clsHide" href="#idBoneHmn035gtr"></a></p>
-  <p id="idBoneHmn035wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBoneHmn034wtr">ταρσός</a>,
-    <a class="clsHide" href="#idBoneHmn035wtr"></a></p>
-  </section>
-
-  <section id="idBoneHmn036">
-  <h4 id="idBoneHmn036H4">ognBone.heel-036
-    <a class="clsHide" href="#idBoneHmn036H4"></a></h4>
-  <p id="idBoneHmn036nam">name::
-    <br>* Mcs.ognBone.heel,
-    <br>* Mcs.ognBone.036-heel,
-    <br>* Mcs.heel,
-    <br>====== langoGreek:
-    <br>* McsEll.φτέρνα,
-    <a class="clsHide" href="#idBoneHmn036nam"></a></p>
-  <p id="idBoneHmn036dsn">description::
-    <br>analytic: φτέρνα είναι οστό του <a class="clsPreview" href="#idBoneHmn034">ταρσου</a>.
-    <br>[hmnSgm, {1995-03}]
-    <a class="clsHide" href="#idBoneHmn036dsn"></a></p>
-  <p id="idBoneHmn036gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idBoneHmngtr">ognBone</a>,
-    <br>* <a class="clsPreview" href="#idOgnHmngtr">organ</a>,
-    <a class="clsHide" href="#idBoneHmn036gtr"></a></p>
-  <p id="idBoneHmn036wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idBoneHmn034wtr">ταρσός</a>,
-    <a class="clsHide" href="#idBoneHmn036wtr"></a></p>
   </section>
 
   <section id="idBoneHmn037">
@@ -14034,7 +14056,7 @@
     <br>* μηκος = 42-45 εκ,
     <br>* μοιρες,
     <br> &nbsp;αυχενικη
-    <br> &nbsp;θωρακικη
+    <br> &nbsp;θωρακική
     <br> &nbsp;οσφυικη
     <br> &nbsp;ιερη
     <br> &nbsp;κοκκυγικη
