@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.bodyHmn (human-body 0-92-0.2020-06-15 draft)</title>
+  <title>Mcs.bodyHmn (human-body 0-93-0.2020-06-16 draft)</title>
   <meta name="keywords" content="human-body, bodyHmn, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -151,11 +151,19 @@
     <a class="clsHide" href="#idBdyHmnatt002rgndsn"></a></p>
   <p id="idBdyHmnatt002rgnnam">name::
     <br>* Mcs.nodeBodyHmn.region!⇒body'region,
+    <br>* Mcs.body'region,
     <br>* Mcs.region-of-BodyHmn!⇒body'region,
+    <br>* Mcs.segment-of-BodyHmn!⇒body'region,
     <br>====== langoGreek:
     <br>* McsEll.μέρος-σώματος-ανθρώπου!=body'region,
     <br>* McsEll.τμήμα-σώματος-ανθρώπου!=body'region,
     <a class="clsHide" href="#idBdyHmnatt002rgnnam"></a></p>
+  <p id="idBdyHmnatt002rgnstr">specific-tree-of-body'region::
+    <br>* <a class="clsPreview" href="#idBdyHmnatt007">head-region</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmnatt008">neck-region</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmnatt009">torso-region</a>,
+    <br>* <a class="clsPreview" href="#idBdyHmnatt010">limbs-region</a>,
+    <a class="clsHide" href="#idBdyHmnatt002rgnstr"></a></p>
   </section>
 </section>
 
@@ -7693,16 +7701,120 @@
   <section id="idBoneHmn003002">
   <h5 id="idBoneHmn003002H5">boneVertebra.cervical
     <a class="clsHide" href="#idBoneHmn003002H5"></a></h5>
+  <p id="idBoneHmn003002dsn">description::
+    <br>"In humans, cervical vertebrae are the smallest of the true vertebrae and can be readily distinguished from those of the thoracic or lumbar regions by the presence of a foramen (hole) in each transverse process, through which the vertebral artery, vertebral veins, and inferior cervical ganglion pass.
+    <br>... It consists of 7 bones, from top to bottom, C1, C2, C3, C4, C5, C6, and C7."
+    <br>[{2020-06-16} https://en.wikipedia.org/wiki/Cervical_vertebrae]
+    <a class="clsHide" href="#idBoneHmn003002dsn"></a></p>
   <p id="idBoneHmn003002nam">name::
-    <br>* Mcs.boneVertebra.cervical,
-    <br>* Mcs.boneVertebra.002-cervical,
+    <br>* Mcs.boneVertebra.cervical!⇒vertebraCervical,
+    <br>* Mcs.boneVertebra.002-cervical!⇒vertebraCervical,
     <br>* Mcs.vertebraCervical,
     <br>====== langoGreek:
     <br>* McsEll.αυχενικός-σπόνδυλος!=vertebraCervical,
     <a class="clsHide" href="#idBoneHmn003002nam"></a></p>
-  <p id="idBoneHmn003002dsn">description::
-    <br>·
-    <a class="clsHide" href="#idBoneHmn003002dsn"></a></p>
+
+  <section id="idBoneHmn003002001">
+  <h6 id="idBoneHmn003002001H6">vertebraCervical.C1
+    <a class="clsHide" href="#idBoneHmn003002001H6"></a></h6>
+  <p id="idBoneHmn003002001dsn">description::
+    <br>"In anatomy, the atlas (C1) is the most superior (first) cervical vertebra of the spine and is located in the neck.
+    <br>It is named for the Atlas of Greek mythology, because it supports the globe of the head which is the skull.[1]
+    <br>The atlas is the topmost vertebra and with the axis forms the joint connecting the skull and spine. The atlas and axis are specialized to allow a greater range of motion than normal vertebrae. They are responsible for the nodding and rotation movements of the head.
+    <br>The atlanto-occipital joint allows the head to nod up and down on the vertebral column. The dens acts as a pivot that allows the atlas and attached head to rotate on the axis, side to side.
+    <br>The atlas's chief peculiarity is that it has no body.[2] It is ring-like and consists of an anterior and a posterior arch and two lateral masses.
+    <br>The atlas and axis are important neurologically because the brain stem extends down to the axis."
+    <br>[{2020-06-16} https://en.wikipedia.org/wiki/Atlas_(anatomy)]
+    <a class="clsHide" href="#idBoneHmn003002001dsn"></a></p>
+  <p id="idBoneHmn003002001nam">name::
+    <br>* Mcs.vertebraCervical.C1!⇒vertebraC1,
+    <br>* Mcs.C1-vertebra!⇒vertebraC1,
+    <br>* Mcs.atlas-vertebra!⇒vertebraC1,
+    <br>* Mcs.vertebraC1,
+    <a class="clsHide" href="#idBoneHmn003002001nam"></a></p>
+  </section>
+
+  <section id="idBoneHmn003002002">
+  <h6 id="idBoneHmn003002002H6">vertebraCervical.C2
+    <a class="clsHide" href="#idBoneHmn003002002H6"></a></h6>
+  <p id="idBoneHmn003002002dsn">description::
+    <br>"In anatomy, the second cervical vertebra (C2) of the spine is named the axis (from Latin axis, "axle") or epistropheus.
+    <br>By the atlanto-axial joint, it forms the pivot upon which the first cervical vertebra (the atlas), which carries the head, rotates.
+    <br>The most distinctive characteristic of this bone is the strong odontoid process known as the dens, which rises perpendicularly from the upper surface of the body. That peculiar feature gives to the vertebra a rarely used third name: vertebra dentata. In some judicial hangings, the odontoid process may break and hit the medulla oblongata, causing death."
+    <br>[{2020-06-16} https://en.wikipedia.org/wiki/Axis_(anatomy)]
+    <a class="clsHide" href="#idBoneHmn003002002dsn"></a></p>
+  <p id="idBoneHmn003002002nam">name::
+    <br>* Mcs.vertebraCervical.C2!⇒vertebraC2,
+    <br>* Mcs.C2-vertebra!⇒vertebraC2,
+    <br>* Mcs.axis-vertebra!⇒vertebraC2,
+    <br>* Mcs.vertebraC2,
+    <a class="clsHide" href="#idBoneHmn003002002nam"></a></p>
+  </section>
+
+  <section id="idBoneHmn003002003">
+  <h6 id="idBoneHmn003002003H6">vertebraCervical.C3
+    <a class="clsHide" href="#idBoneHmn003002003H6"></a></h6>
+  <p id="idBoneHmn003002003dsn">description::
+    <br>· the-third <a class="clsPreview" href="#idBoneHmn003002">cervical-vertebra</a>.
+    <a class="clsHide" href="#idBoneHmn003002003dsn"></a></p>
+  <p id="idBoneHmn003002003nam">name::
+    <br>* Mcs.vertebraCervical.C3!⇒vertebraC3,
+    <br>* Mcs.C3-vertebra!⇒vertebraC3,
+    <br>* Mcs.vertebraC3,
+    <a class="clsHide" href="#idBoneHmn003002003nam"></a></p>
+  </section>
+
+  <section id="idBoneHmn003002004">
+  <h6 id="idBoneHmn003002004H6">vertebraCervical.C4
+    <a class="clsHide" href="#idBoneHmn003002004H6"></a></h6>
+  <p id="idBoneHmn003002004dsn">description::
+    <br>· the-forth <a class="clsPreview" href="#idBoneHmn003002">cervical-vertebra</a>.
+    <a class="clsHide" href="#idBoneHmn003002004dsn"></a></p>
+  <p id="idBoneHmn003002004nam">name::
+    <br>* Mcs.vertebraCervical.C4!⇒vertebraC4,
+    <br>* Mcs.C4-vertebra!⇒vertebraC4,
+    <br>* Mcs.vertebraC4,
+    <a class="clsHide" href="#idBoneHmn003002004nam"></a></p>
+  </section>
+
+  <section id="idBoneHmn003002005">
+  <h6 id="idBoneHmn003002005H6">vertebraCervical.C5
+    <a class="clsHide" href="#idBoneHmn003002005H6"></a></h6>
+  <p id="idBoneHmn003002005dsn">description::
+    <br>· the-fifth <a class="clsPreview" href="#idBoneHmn003002">cervical-vertebra</a>.
+    <a class="clsHide" href="#idBoneHmn003002005dsn"></a></p>
+  <p id="idBoneHmn003002005nam">name::
+    <br>* Mcs.vertebraCervical.C5!⇒vertebraC5,
+    <br>* Mcs.C5-vertebra!⇒vertebraC5,
+    <br>* Mcs.vertebraC5,
+    <a class="clsHide" href="#idBoneHmn003002005nam"></a></p>
+  </section>
+
+  <section id="idBoneHmn003002006">
+  <h6 id="idBoneHmn003002006H6">vertebraCervical.C6
+    <a class="clsHide" href="#idBoneHmn003002006H6"></a></h6>
+  <p id="idBoneHmn003002006dsn">description::
+    <br>· the-sixth <a class="clsPreview" href="#idBoneHmn003002">cervical-vertebra</a>.
+    <a class="clsHide" href="#idBoneHmn003002006dsn"></a></p>
+  <p id="idBoneHmn003002006nam">name::
+    <br>* Mcs.vertebraCervical.C6!⇒vertebraC6,
+    <br>* Mcs.C6-vertebra!⇒vertebraC6,
+    <br>* Mcs.vertebraC6,
+    <a class="clsHide" href="#idBoneHmn003002006nam"></a></p>
+  </section>
+
+  <section id="idBoneHmn003002007">
+  <h6 id="idBoneHmn003002007H6">vertebraCervical.C7
+    <a class="clsHide" href="#idBoneHmn003002007H6"></a></h6>
+  <p id="idBoneHmn003002007dsn">description::
+    <br>· the-seventh <a class="clsPreview" href="#idBoneHmn003002">cervical-vertebra</a>.
+    <a class="clsHide" href="#idBoneHmn003002007dsn"></a></p>
+  <p id="idBoneHmn003002007nam">name::
+    <br>* Mcs.vertebraCervical.C7!⇒vertebraC7,
+    <br>* Mcs.C7-vertebra!⇒vertebraC7,
+    <br>* Mcs.vertebraC7,
+    <a class="clsHide" href="#idBoneHmn003002007nam"></a></p>
+  </section>
   </section>
 
   <section id="idBoneHmn003003">
@@ -8912,6 +9024,26 @@
     <br>The sesamoid is a small nodular bone most often present embedded in tendons in the region of the thumb. Calcification of sesamoid bone is one of the important features of pubertal growth spurt, which is earlier in females than in males. Absence of sesamoid bone indicates delay in reaching puberty."
     <br>[{2020-05-30} https://en.wikipedia.org/wiki/Sesamoid_bone]
     <a class="clsHide" href="#idBoneHmn054dsn"></a></p>
+  </section>
+
+  <section id="idBoneHmn056">
+  <h3 id="idBoneHmn056H3">ognBone.hyoid-056
+    <a class="clsHide" href="#idBoneHmn056H3"></a></h3>
+  <p id="idBoneHmn056dsn">description::
+    <br>"The hyoid bone (lingual bone or tongue-bone) (/ˈhaɪɔɪd/[2][3]) is a horseshoe-shaped bone situated in the anterior midline of the neck between the chin and the thyroid cartilage. At rest, it lies at the level of the base of the mandible in the front and the third cervical vertebra (C3) behind.
+    <br>Unlike other bones, the hyoid is only distantly articulated to other bones by muscles or ligaments. The hyoid is anchored by muscles from the anterior, posterior and inferior directions, and aids in tongue movement and swallowing. The hyoid bone provides attachment to the muscles of the floor of the mouth and the tongue above, the larynx below, and the epiglottis and pharynx behind.
+    <br>Its name is derived from Greek hyoeides, meaning 'shaped like the letter upsilon (υ)'.[4][5]"
+    <br>[{2020-06-16} https://en.wikipedia.org/wiki/Hyoid_bone]
+    <a class="clsHide" href="#idBoneHmn056dsn"></a></p>
+  <p id="idBoneHmn056nam">name::
+    <br>* Mcs.ognBone.hyoid!⇒boneHyoid,
+    <br>* Mcs.boneHyoid,
+    <br>* Mcs.hyoid-bone!⇒boneHyoid,
+    <br>* Mcs.ognBone.056-hyoid!⇒boneHyoid,
+    <br>====== langoGreek:
+    <br>* McsEll.οστό.υοειδές!=boneHyoid,
+    <br>* McsEll.υοειδές-οστό!=boneHyoid,
+    <a class="clsHide" href="#idBoneHmn056nam"></a></p>
   </section>
   </section>
 </section>
@@ -10820,13 +10952,13 @@
   </section>
 
   <section id="idSysOgnHmnatt005">
-  <h3 id="idSysOgnHmnatt005H3">tract of sysNervousCentral
+  <h3 id="idSysOgnHmnatt005H3">nerve-tract of sysNervousCentral
     <a class="clsHide" href="#idSysOgnHmnatt005H3"></a></h3>
   <p id="idSysOgnHmnatt005nam">name::
     <br>* Mcs.sysNervousCentral'nerve-tract,
     <br>* Mcs.sysNervous'att005-nerve-tract,
     <br>* Mcs.sysNervous'nerve-tract-att005,
-    <br>* Mcs.tract-of-sysNervousCentral,
+    <br>* Mcs.nerve-tract-of-sysNervousCentral,
     <a class="clsHide" href="#idSysOgnHmnatt005nam"></a></p>
   <p id="idSysOgnHmnatt005dsn">description::
     <br>"Axons may bundle into fascicles that make up the nerves in the peripheral nervous system (like strands of wire make up cables). Bundles of axons in the central nervous system are called tracts."
@@ -16371,16 +16503,16 @@
   <h1 id="idSysOgnHmn006H1">sysOgn.006-respiratory
     <a class="clsHide" href="#idSysOgnHmn006H1"></a></h1>
   <p id="idSysOgnHmn006nam">name::
-    <br>* Mcs.sysOgn.006-respiratory!⇒sysOgnRespiratory,
-    <br>* Mcs.sysOgn.respiratory-006!⇒sysOgnRespiratory,
-    <br>* Mcs.human-respiratory-system!⇒sysOgnRespiratory, {2012-08-11},
-    <br>* Mcs.respiratory-sysOgn-006!⇒sysOgnRespiratory,
-    <br>* Mcs.respiratory-system.human!⇒sysOgnRespiratory, {2012-08-11},
-    <br>* Mcs.sysOgnRespiratory,
+    <br>* Mcs.sysOgn.006-respiratory!⇒sysRespiratory,
+    <br>* Mcs.sysOgn.respiratory-006!⇒sysRespiratory,
+    <br>* Mcs.human-respiratory-system!⇒sysRespiratory, {2012-08-11},
+    <br>* Mcs.respiratory-sysOgn-006!⇒sysRespiratory,
+    <br>* Mcs.respiratory-system.human!⇒sysRespiratory, {2012-08-11},
+    <br>* Mcs.sysRespiratory,
     <br>====== langoGreek:
-    <br>* McsEll.συσΟργν.αναπνευστικό!=sysOgnRespiratory,
-    <br>* McsEll.αναπνευστικό-σύστημα-ανθρώπου!=sysOgnRespiratory, {2012-08-11},
-    <br>* McsEll.αναπνευστικό-σύστημα!=sysOgnRespiratory,
+    <br>* McsEll.συσΟργν.αναπνευστικό!=sysRespiratory,
+    <br>* McsEll.αναπνευστικό-σύστημα-ανθρώπου!=sysRespiratory, {2012-08-11},
+    <br>* McsEll.αναπνευστικό-σύστημα!=sysRespiratory,
     <a class="clsHide" href="#idSysOgnHmn006nam"></a></p>
   <p id="idSysOgnHmn006dsn">description::
     <br>analytic: αναπνευστικό σύστημα είναι το σύστημα του οργανισμού που εκτελεί τη λειτουργία της <a class="clsPreview" href="#idBdyHmn148">αναπνοής</a>.
@@ -16397,17 +16529,18 @@
     <a class="clsHide" href="#idSysOgnHmn006wtr"></a></p>
 
   <section id="idSysOgnHmn006disease">
-  <h2 id="idSysOgnHmn006diseaseH2">disease (<a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn009">link</a>) of sysOgnRespiratory
+  <h2 id="idSysOgnHmn006diseaseH2">disease (<a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn009">link</a>) of sysRespiratory
     <a class="clsHide" href="#idSysOgnHmn006diseaseH2"></a></h2>
   </section>
 
   <section id="idSysOgnHmn006organ">
-  <h2 id="idSysOgnHmn006organH2">organ of sysOgnRespiratory
+  <h2 id="idSysOgnHmn006organH2">organ of sysRespiratory
     <a class="clsHide" href="#idSysOgnHmn006organH2"></a></h2>
   <p id="idSysOgnHmn006organnam">name::
-    <br>* Mcs.respiratory-sys'organ,
+    <br>* Mcs.sysRespiratory'organ,
     <a class="clsHide" href="#idSysOgnHmn006organnam"></a></p>
   <p id="idSysOgnHmn006organSpc">specific::
+    <br><img src="filMcsBdyHmn.files/sysRespiratory.wp.pd.Illu_conducting_passages.svg.png">
     <br>* nose,
     <br>* nasal-cavity,
     <br>* pharynx,
@@ -16420,7 +16553,7 @@
   </section>
 
   <section id="idOgnHmn010">
-  <h2 id="idOgnHmn010H2">organ.sense-nose.010
+  <h2 id="idOgnHmn010H2">organNose of sysRespiratory
     <a class="clsHide" href="#idOgnHmn010H2"></a></h2>
   <p id="idOgnHmn010nam">name::
     <br>* Mcs.organ.010-nose,
@@ -16431,7 +16564,7 @@
     <br>* McsEll.ρινα,
     <a class="clsHide" href="#idOgnHmn010nam"></a></p>
   <p id="idOgnHmn010dsn">description::
-    <br>analytic: η μύτη είναι το πρώτο αεραγωγό όργανο του <a class="clsPreview" href="#idSysOgnHmn006">αναπνευστικου-συστήματος</a>.
+    <br>analytic: η μύτη είναι το πρώτο αεραγωγό όργανο του <a class="clsPreview" href="#idSysOgnHmn006">αναπνευστικού-συστήματος</a>.
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idOgnHmn010dsn"></a></p>
   <p id="idOgnHmn010gtr">generic-tree-of-::
@@ -16465,9 +16598,10 @@
   </section>
 
   <section id="idOgnHmn032">
-  <h2 id="idOgnHmn032H2">organ.throat-032
+  <h2 id="idOgnHmn032H2">organThroat of sysRespiratory
     <a class="clsHide" href="#idOgnHmn032H2"></a></h2>
   <p id="idOgnHmn032nam">name::
+    <br><img src="filMcsBdyHmn.files/sysRespiratory.wp.pd.Illu_conducting_passages.svg.png">
     <br>* Mcs.organ.032-throat,
     <br>* Mcs.organ.throat-032,
     <br>* Mcs.throat,
@@ -16485,7 +16619,7 @@
     <br>The jugulum is the lower part of the throat, just above the breast.[2] The term is reflected in the external and internal jugular vein, which pass through this region.
     <br>[http://en.wikipedia.org/wiki/Throat]
     <br>===
-    <br>analytic: λαιμο ονομάζω το όργανο του <a class="clsPreview" href="#idSysOgnHmn006">αναπνευστικου-συστήματος</a> μετά τη μύτη.
+    <br>analytic: λαιμο ονομάζω το όργανο του <a class="clsPreview" href="#idSysOgnHmn006">αναπνευστικού-συστήματος</a> μετά τη μύτη.
     <br>[hmnSgm, {1995-03}]
     <br>===
     <br>synthetic: λαιμο ονομάζω τον λαρυγγα και τον φαρυγγα.
@@ -16552,11 +16686,60 @@
     <a class="clsHide" href="#idBdyHmn220therapyP5"></a></p>
   </section>
   </section>
+
+  <section id="idOgnHmn018">
+  <h3 id="idOgnHmn018H3">organ.pharynx-018
+    <a class="clsHide" href="#idOgnHmn018H3"></a></h3>
+  <p id="idOgnHmn018nam">name::
+    <br>* Mcs.organ.018-pharynx!⇒ognPharynx,
+    <br>* Mcs.organ.pharynx-018!⇒ognPharynx,
+    <br>* Mcs.human-pharynx!⇒ognPharynx, {2012-08-13},
+    <br>* Mcs.ognPharynx,
+    <br>* Mcs.pharynx.human!⇒ognPharynx, {2012-08-13},
+    <br>* Mcs.pharynx!⇒ognPharynx,
+    <br>====== langoGreek:
+    <br>* McsEll.όργανο.φάρυγγας!=ognPharynx,
+    <br>* McsEll.φαρυγγας!=ognPharynx,
+    <br>* McsEll.φάρυγγας-ανθρώπου!=ognPharynx, {2012-08-13},
+    <a class="clsHide" href="#idOgnHmn018nam"></a></p>
+  <p id="idOgnHmn018dsn">description::
+    <br><img src="filMcsBdyHmn.files/sysRespiratory.wp.pd.Illu_conducting_passages.svg.png">
+    <br>analytic: φαρυγγα ονομάζω το όργανο που είναι το δεύτερο μέρος του <a class="clsPreview" href="#idOgnHmn032">organThroat</a>.
+    <br>[hmnSgm, μρτ. 1995]
+    <br>===
+    <br>ο φάρυγγας αποτελεί κοινη κοιλότητα του <a class="clsPreview" href="#idSysOgnHmn006">αναπνευστικού</a> και του πεπτικού συστήματος.
+    <br>[Αργύρης, {1994}, 37⧺cptRsc29⧺]
+    <a class="clsHide" href="#idOgnHmn018dsn"></a></p>
+  <p id="idOgnHmn018gtr">generic-tree-of-ognPharynx::
+    <br>* <a class="clsPreview" href="#idOgnHmn">organ</a>,
+    <a class="clsHide" href="#idOgnHmn018gtr"></a></p>
+  <p id="idOgnHmn018wtr">whole-tree-of-ognPharynx::
+    <br>* <a class="clsPreview" href="#idBdyHmn071wtr">sysOrganDigestive</a>,
+    <br>λαιμός⧺cptBdyHmn221⧺,
+    <a class="clsHide" href="#idOgnHmn018wtr"></a></p>
+
+  <section id="idOgnHmn018doing">
+  <h4 id="idOgnHmn018doingH4">DOING of ognPharynx
+    <a class="clsHide" href="#idOgnHmn018doingH4"></a></h4>
+  <p id="idOgnHmn018doingP1">doing::
+    <br>η μπουκιά, όταν φτάσει στην πύλη του φάρυγγα, πιέζει τη σταφυλή, η οποία  κάμπτεται προς τα άνω και φράσει την έξοδο της ρινικής κοιλότητας προς το φάρυγγα. Οταν φτάσει στο κατώτερο άκρο του φάρυγγα, πιέζει και την επιγλωττίδα, η οποία σκεπάζει το στόμιο του λάρυγγα, ο οποίος έχει μετακινηθεί προς τα πάνω και έτσι η μπουκιά προχωρεί μέσω του οισοφάγου και φτάνει στο στομάχι.
+    <br>[Αργύρης, {1994}, 37⧺cptRsc29⧺]
+    <a class="clsHide" href="#idOgnHmn018doingP1"></a></p>
+  </section>
+
+  <section id="idOgnHmn018srtr">
+  <h4 id="idOgnHmn018srtrH4">structure of ognPharynx
+    <a class="clsHide" href="#idOgnHmn018srtrH4"></a></h4>
+  <p id="idOgnHmn018srtrP1">structure::
+    <br>την αρχή του φάρυγγα την αποτελεί η σταφυλή και οι βλεννογονες πτυχες που βρίσκονται στα πλάγια. Ο φάρυγγας και η ρινική κοιλότητα επικοινωνούν με το μέσο αυτί με τις ευσταχιανες σάλπιγγες.
+    <br>[Αργύρης, {1994}, 37⧺cptRsc29⧺]
+    <a class="clsHide" href="#idOgnHmn018srtrP1"></a></p>
+  </section>
   </section>
 
   <section id="idOgnHmn020">
-  <h2 id="idOgnHmn020H2">organ.larynx-020
-    <a class="clsHide" href="#idOgnHmn020H2"></a></h2>
+  <h3 id="idOgnHmn020H3">organ.larynx-020
+    <a class="clsHide" href="#idOgnHmn020H3"></a></h3>
   <p id="idOgnHmn020nam">name::
     <br>* Mcs.organ.020-larynx,
     <br>* Mcs.organ.larynx-020,
@@ -16566,6 +16749,7 @@
     <br>* McsEll.λάρυγγας,
     <a class="clsHide" href="#idOgnHmn020nam"></a></p>
   <p id="idOgnHmn020dsn">description::
+    <br><img src="filMcsBdyHmn.files/sysRespiratory.wp.pd.Illu_conducting_passages.svg.png">
     <br>analytic: λαρυγγα ονομάζω το όργανο που είναι το πρώτο μέρος του <a class="clsPreview" href="#idOgnHmn032">organThroat</a>.
     <br>[hmnSgm, μρτ. 1995]
     <a class="clsHide" href="#idOgnHmn020dsn"></a></p>
@@ -16577,8 +16761,8 @@
     <a class="clsHide" href="#idOgnHmn020wtr"></a></p>
 
   <section id="idOgnHmn020disease">
-  <h3 id="idOgnHmn020diseaseH3">disease
-    <a class="clsHide" href="#idOgnHmn020diseaseH3"></a></h3>
+  <h4 id="idOgnHmn020diseaseH4">disease
+    <a class="clsHide" href="#idOgnHmn020diseaseH4"></a></h4>
   <p id="idOgnHmn020diseaseP1">disease::
     <br>* CANCER,
     <br>* <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn178">diphtheria-disease</a>,
@@ -16590,8 +16774,8 @@
   </section>
 
   <section id="idOgnHmn020doing">
-  <h3 id="idOgnHmn020doingH3">doing
-    <a class="clsHide" href="#idOgnHmn020doingH3"></a></h3>
+  <h4 id="idOgnHmn020doingH4">doing
+    <a class="clsHide" href="#idOgnHmn020doingH4"></a></h4>
   <p id="idOgnHmn020doingP1">doing::
     <br>* <a class="clsPreview" href="../dirLag/filMcsLorl.last.html#idLorlphnm">phoneme</a>,
     <br>===
@@ -16600,8 +16784,8 @@
     <a class="clsHide" href="#idOgnHmn020doingP1"></a></p>
 
   <section id="idOgnHmn020_1">
-  <h4 id="idOgnHmn020_1H4">vocal-fold
-    <a class="clsPreview" href="#idOgnHmn020_1H4"></a></h4>
+  <h5 id="idOgnHmn020_1H5">vocal-fold
+    <a class="clsPreview" href="#idOgnHmn020_1H5"></a></h5>
   <p id="idOgnHmn020_1nam">name::
     <br>* Mcs.vocal-fold,
     <br>* Mcs.vocal-cord,
@@ -16620,20 +16804,23 @@
   </section>
   </section>
   </section>
+  </section>
 
   <section id="idOgnHmn025">
-  <h2 id="idOgnHmn025H2">organ.trachea-025
+  <h2 id="idOgnHmn025H2">organTrachea of sysRespiratory
     <a class="clsHide" href="#idOgnHmn025H2"></a></h2>
   <p id="idOgnHmn025nam">name::
-    <br>* Mcs.organ.025-trachea,
-    <br>* Mcs.organ.trachea-025,
-    <br>* Mcs.trachea,
+    <br>* Mcs.organ.025-trachea!⇒ognTrachea,
+    <br>* Mcs.ognTrachea,
+    <br>* Mcs.organ.trachea-025!⇒ognTrachea,
+    <br>* Mcs.trachea!⇒ognTrachea,
     <br>====== langoGreek:
-    <br>* McsEll.όργανο.τραχεία,
-    <br>* McsEll.τραχεία,
+    <br>* McsEll.όργανο.τραχεία!=ognTrachea,
+    <br>* McsEll.τραχεία!=ognTrachea,
     <a class="clsHide" href="#idOgnHmn025nam"></a></p>
   <p id="idOgnHmn025dsn">description::
-    <br>analytic: η τραχεία είναι όργανο του <a class="clsPreview" href="#idSysOgnHmn006">αναπνευστικου-συστήματος</a> μετά το <a class="clsPreview" href="#idOgnHmn032">organThroat</a>.
+    <br><img src="filMcsBdyHmn.files/sysRespiratory.wp.pd.Illu_conducting_passages.svg.png">
+    <br>analytic: η τραχεία είναι όργανο του <a class="clsPreview" href="#idSysOgnHmn006">αναπνευστικού-συστήματος</a> μετά το <a class="clsPreview" href="#idOgnHmn032">organThroat</a>.
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idOgnHmn025dsn"></a></p>
   <p id="idOgnHmn025gtr">generic-tree-of-::
@@ -16654,18 +16841,19 @@
   </section>
 
   <section id="idOgnHmn005">
-  <h2 id="idOgnHmn005H2">organ.lung-005
+  <h2 id="idOgnHmn005H2">organLung of sysRespiratory
     <a class="clsHide" href="#idOgnHmn005H2"></a></h2>
   <p id="idOgnHmn005nam">name::
-    <br>* Mcs.organ.005-lung,
-    <br>* Mcs.organ.lung-005,
-    <br>* Mcs.lung,
+    <br>* Mcs.organ.lung!⇒ognLung,
+    <br>* Mcs.ognLung,
+    <br>* Mcs.organ.005-lung!⇒ognLung,
+    <br>* Mcs.lung!⇒ognLung,
     <br>====== langoGreek:
-    <br>* McsEll.όργανο.πνεύμονας,
-    <br>* McsEll.πνεύμονας,
+    <br>* McsEll.όργανο.πνεύμονας!=ognLung,
+    <br>* McsEll.πνεύμονας!=ognLung,
     <a class="clsHide" href="#idOgnHmn005nam"></a></p>
   <p id="idOgnHmn005dsn">description::
-    <br>analytic: πνεύμονας είναι όργανο του <a class="clsPreview" href="#idSysOgnHmn006">αναπνευστικου-συστήματος</a> στο οποίο εισέρχονται οι <a class="clsPreview" href="#idBdyHmn294">βρόγχοι</a>.
+    <br>analytic: πνεύμονας είναι όργανο του <a class="clsPreview" href="#idSysOgnHmn006">αναπνευστικού-συστήματος</a> στο οποίο εισέρχονται οι <a class="clsPreview" href="#idBdyHmn294">βρόγχοι</a>.
     <br>[hmnSgm, {1995-03}]
     <br>===
     <br>η καρδιά και οι πνεύμονες είναι από τα σπουδαιότερα όργανα του ανθρώπου.
@@ -16717,6 +16905,44 @@
     <br>η εξέταση αυτή γίνεται με το σπιρόμετρο (σημειώνουμε εδώ ότι υπάρχουν πολλοί τύποι σπιρομέτρων).το σπιρόμετρο διαθέτει συνήθως ένα σωλήνα το ένα άκρο του οποίου είναι συνδεδεμένο με το μηχάνημα και στο άλλο προσαρμόζουμε ένα επιστόμιο μέσω του οποίου ο εξεταζόμενος,όπως δείχνει και η φωτογραφία,εισπνέει και εκπνέει με δύναμη.
     <br>[http://www.pneumonologist.gr/article.php?article_id=32&lang=gr]
     <a class="clsHide" href="#idOgnHmn005spirometrydsn"></a></p>
+  </section>
+
+  <section id="idBdyHmn295">
+  <h3 id="idBdyHmn295H3">alveoli
+    <a class="clsHide" href="#idBdyHmn295H3"></a></h3>
+  <p id="idBdyHmn295nam">name::
+    <br>* Mcs.cptBdyHmn295,
+    <br>* Mcs.alveoli,
+    <br>====== langoGreek:
+    <br>* McsEll.κυψελιδα,
+    <a class="clsHide" href="#idBdyHmn295nam"></a></p>
+  <p id="idBdyHmn295dsn">description::
+    <br>analytic: οι κυψελίδες περιβάλλονται από αιμοφόρα αγγεία και αποτελούν τους ελάχιστους χώρους των <a class="clsPreview" href="#idOgnHmn005">πνευμόνων</a>, όπου ανταλλάσσονται τα αναπνευστικά αέρια: το οξυγόνο προς τα μέσα και το διοξείδιο του άνθρακα προς τα έξω.
+    <br>[Αργύρης, {1994}, 74⧺cptRsc29⧺]
+    <a class="clsHide" href="#idBdyHmn295dsn"></a></p>
+
+  <section id="idBdyHmn295doing">
+  <h4 id="idBdyHmn295doingH4">doing
+    <a class="clsHide" href="#idBdyHmn295doingH4"></a></h4>
+  <p id="idBdyHmn295doingP1">doing::
+    <br>το διοξείδιο του άνθρακα βγαίνει από τα αιμοφόρα τριχοειδή αγγεία που περιβάλλουν τις κυψελίδες και διαπιδύει μέσα σ'αυτές, γιατι είναι πολυ περισσοτερο λόγω των καύσεων που έχουν γίνει στους ιστους.
+    <br>το διοξείδιο του άνθρακα μέσα στο αίμα έρχεται προς τους πνεύμονες δεσμευμένο χημικά, είτε με το κάλιο (KHCO<sub>3</sub>), το νάτριο (NaHCO<sub>3</sub>), είτε με την αιμοσφαιρίνη. Στους πνεύμονες  αποδευσμεύεται το διοξείδιο του άνθρακα από τις προηγούμενες ενώσεις και αποβάλλεται με την εκπνοή.
+    <br>το οξυγόνο του αέρα διαπιδύει από τις κυψελίδες, οπου είναι περισσοτερο, προς τα τριχοειδή αγγεία, ενώνεται με την αιμοσφαιρίνη και όταν φτάσει στους ιστούς, που έχουν λιγότερο οξυγόνο από το αίμα, αποδεσμεύεται και μπαίνει μέσα στα κύτταρά τους.
+    <br>[Αργύρης, {1994}, 77⧺cptRsc29⧺]
+    <a class="clsHide" href="#idBdyHmn295doingP1"></a></p>
+  </section>
+
+  <section id="idBdyHmn295aggregate">
+  <h4 id="idBdyHmn295aggregateH4">aggregate
+    <a class="clsHide" href="#idBdyHmn295aggregateH4"></a></h4>
+  <p id="idBdyHmn295aggregateP1">Smoker's Lung Tissue The lungs are made up of approximately <strong>350 million</strong> tiny sacs called alveoli, where carbon dioxide from the body is exchanged for oxygen from the air. Various diseases that affect the lungs either destroy the alveoli directly, as does emphysema, or impair the alveoli's ability to exchange gases. This picture shows the effects of emphysema (caused by smoking) on lung tissue.
+    <br>London Scientific Films/Oxford Scientific Films
+    <br>"Smoker's Lung Tissue," Microsoft(R) Encarta(R) 97 Encyclopedia. (c) 1993-1996 Microsoft Corporation. All rights reserved.
+    <a class="clsHide" href="#idBdyHmn295aggregateP1"></a></p>
+  <p id="idBdyHmn295aggregateP2">O αριθμός των κυψελίδων και στους δύο πνεύμονες ανέρχεται στα <strong>750.000.000</strong> και η συνολική τους επιφάνεια στα 100 τετρ. Μέτρα.
+    <br>[Αργύρης, {1994}, 74⧺cptRsc29⧺]
+    <a class="clsHide" href="#idBdyHmn295aggregateP2"></a></p>
+  </section>
   </section>
 
   <section id="idOgnHmn005srtr">
@@ -16800,7 +17026,7 @@
   </section>
 
   <section id="idBdyHmn294">
-  <h2 id="idBdyHmn294H2">bronchus
+  <h2 id="idBdyHmn294H2">organBronchus of sysRespiratory
     <a class="clsHide" href="#idBdyHmn294H2"></a></h2>
   <p id="idBdyHmn294nam">name::
     <br>* Mcs.cptBdyHmn294,
@@ -16809,7 +17035,7 @@
     <br>* McsEll.βρόγχος,
     <a class="clsHide" href="#idBdyHmn294nam"></a></p>
   <p id="idBdyHmn294dsn">description::
-    <br>analytic: βρόγχοι είναι τα όργανα του <a class="clsPreview" href="#idSysOgnHmn006">αναπνευστικου-συστήματος</a>, μετά την <a class="clsPreview" href="#idOgnHmn025">τραχεία</a> που εισχωρούν στουν πνεύμονες.
+    <br>analytic: βρόγχοι είναι τα όργανα του <a class="clsPreview" href="#idSysOgnHmn006">αναπνευστικού-συστήματος</a>, μετά την <a class="clsPreview" href="#idOgnHmn025">τραχεία</a> που εισχωρούν στουν πνεύμονες.
     <br>[hmnSgm, {1995-03}]
     <a class="clsHide" href="#idBdyHmn294dsn"></a></p>
 
@@ -16823,46 +17049,8 @@
   </section>
   </section>
 
-  <section id="idBdyHmn295">
-  <h2 id="idBdyHmn295H2">alveoli
-    <a class="clsHide" href="#idBdyHmn295H2"></a></h2>
-  <p id="idBdyHmn295nam">name::
-    <br>* Mcs.cptBdyHmn295,
-    <br>* Mcs.alveoli,
-    <br>====== langoGreek:
-    <br>* McsEll.κυψελιδα,
-    <a class="clsHide" href="#idBdyHmn295nam"></a></p>
-  <p id="idBdyHmn295dsn">description::
-    <br>analytic: οι κυψελίδες περιβάλλονται από αιμοφόρα αγγεία και αποτελούν τους ελάχιστους χώρους των <a class="clsPreview" href="#idOgnHmn005">πνευμόνων</a>, όπου ανταλλάσσονται τα αναπνευστικά αέρια: το οξυγόνο προς τα μέσα και το διοξείδιο του άνθρακα προς τα έξω.
-    <br>[Αργύρης, {1994}, 74⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn295dsn"></a></p>
-
-  <section id="idBdyHmn295doing">
-  <h3 id="idBdyHmn295doingH3">doing
-    <a class="clsHide" href="#idBdyHmn295doingH3"></a></h3>
-  <p id="idBdyHmn295doingP1">doing::
-    <br>το διοξείδιο του άνθρακα βγαίνει από τα αιμοφόρα τριχοειδή αγγεία που περιβάλλουν τις κυψελίδες και διαπιδύει μέσα σ'αυτές, γιατι είναι πολυ περισσοτερο λόγω των καύσεων που έχουν γίνει στους ιστους.
-    <br>το διοξείδιο του άνθρακα μέσα στο αίμα έρχεται προς τους πνεύμονες δεσμευμένο χημικά, είτε με το κάλιο (KHCO<sub>3</sub>), το νάτριο (NaHCO<sub>3</sub>), είτε με την αιμοσφαιρίνη. Στους πνεύμονες  αποδευσμεύεται το διοξείδιο του άνθρακα από τις προηγούμενες ενώσεις και αποβάλλεται με την εκπνοή.
-    <br>το οξυγόνο του αέρα διαπιδύει από τις κυψελίδες, οπου είναι περισσοτερο, προς τα τριχοειδή αγγεία, ενώνεται με την αιμοσφαιρίνη και όταν φτάσει στους ιστούς, που έχουν λιγότερο οξυγόνο από το αίμα, αποδεσμεύεται και μπαίνει μέσα στα κύτταρά τους.
-    <br>[Αργύρης, {1994}, 77⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn295doingP1"></a></p>
-  </section>
-
-  <section id="idBdyHmn295aggregate">
-  <h3 id="idBdyHmn295aggregateH3">aggregate
-    <a class="clsHide" href="#idBdyHmn295aggregateH3"></a></h3>
-  <p id="idBdyHmn295aggregateP1">Smoker's Lung Tissue The lungs are made up of approximately <strong>350 million</strong> tiny sacs called alveoli, where carbon dioxide from the body is exchanged for oxygen from the air. Various diseases that affect the lungs either destroy the alveoli directly, as does emphysema, or impair the alveoli's ability to exchange gases. This picture shows the effects of emphysema (caused by smoking) on lung tissue.
-    <br>London Scientific Films/Oxford Scientific Films
-    <br>"Smoker's Lung Tissue," Microsoft(R) Encarta(R) 97 Encyclopedia. (c) 1993-1996 Microsoft Corporation. All rights reserved.
-    <a class="clsHide" href="#idBdyHmn295aggregateP1"></a></p>
-  <p id="idBdyHmn295aggregateP2">O αριθμός των κυψελίδων και στους δύο πνεύμονες ανέρχεται στα <strong>750.000.000</strong> και η συνολική τους επιφάνεια στα 100 τετρ. Μέτρα.
-    <br>[Αργύρης, {1994}, 74⧺cptRsc29⧺]
-    <a class="clsHide" href="#idBdyHmn295aggregateP2"></a></p>
-  </section>
-  </section>
-
   <section id="idMsclHmn022">
-  <h2 id="idMsclHmn022H2">ognMuscle.diaphragm-022
+  <h2 id="idMsclHmn022H2">organDiaphragm of sysRespiratory
     <a class="clsHide" href="#idMsclHmn022H2"></a></h2>
   <p id="idMsclHmn022nam">name::
     <br>* Mcs.ognMuscle.diaphragm!⇒muscleDiaphragm,
@@ -16892,8 +17080,11 @@
   </section>
 
   <section id="idSysOgnHmn006srtr">
-  <h2 id="idSysOgnHmn006srtrH2">structure of sysOgnRespiratory
+  <h2 id="idSysOgnHmn006srtrH2">structure of sysRespiratory
     <a class="clsHide" href="#idSysOgnHmn006srtrH2"></a></h2>
+  <p id="idSysOgnHmn006srtrnam">name::
+    <br>* Mcs.sysRespiratory'structure,
+    <a class="clsHide" href="#idSysOgnHmn006srtrnam"></a></p>
   <p id="idSysOgnHmn006srtrP1">structure::
     <br>* αναπνεομενος-αέρας,
     <br>* αεραγωγά-όργανα,
@@ -16915,8 +17106,11 @@
   </section>
 
   <section id="idSysOgnHmn006doing">
-  <h2 id="idSysOgnHmn006doingH2">DOING of sysOgnRespiratory
+  <h2 id="idSysOgnHmn006doingH2">DOING of sysRespiratory
     <a class="clsHide" href="#idSysOgnHmn006doingH2"></a></h2>
+  <p id="idSysOgnHmn006doingnam">name::
+    <br>* Mcs.sysRespiratory'doing,
+    <a class="clsHide" href="#idSysOgnHmn006doingnam"></a></p>
   <p id="idSysOgnHmn006doingP1">doing::
     <br>* <a class="clsPreview" href="#idBdyHmn148">αναπνοή</a>,
     <a class="clsHide" href="#idSysOgnHmn006doingP1"></a></p>
@@ -17474,53 +17668,9 @@
   </section>
   </section>
 
-  <section id="idOgnHmn018">
-  <h2 id="idOgnHmn018H2">organ.pharynx-018
-    <a class="clsHide" href="#idOgnHmn018H2"></a></h2>
-  <p id="idOgnHmn018nam">name::
-    <br>* Mcs.organ.018-pharynx!⇒ognPharynx,
-    <br>* Mcs.organ.pharynx-018!⇒ognPharynx,
-    <br>* Mcs.human-pharynx!⇒ognPharynx, {2012-08-13},
-    <br>* Mcs.ognPharynx,
-    <br>* Mcs.pharynx.human!⇒ognPharynx, {2012-08-13},
-    <br>* Mcs.pharynx!⇒ognPharynx,
-    <br>====== langoGreek:
-    <br>* McsEll.όργανο.φάρυγγας!=ognPharynx,
-    <br>* McsEll.φαρυγγας!=ognPharynx,
-    <br>* McsEll.φάρυγγας-ανθρώπου!=ognPharynx, {2012-08-13},
-    <a class="clsHide" href="#idOgnHmn018nam"></a></p>
-  <p id="idOgnHmn018dsn">description::
-    <br>analytic: φαρυγγα ονομάζω το όργανο που είναι το δεύτερο μέρος του <a class="clsPreview" href="#idOgnHmn032">organThroat</a>.
-    <br>[hmnSgm, μρτ. 1995]
-    <br>===
-    <br>ο φάρυγγας αποτελεί κοινη κοιλότητα του <a class="clsPreview" href="#idSysOgnHmn006">αναπνευστικου</a> και του πεπτικού συστήματος.
-    <br>[Αργύρης, {1994}, 37⧺cptRsc29⧺]
-    <a class="clsHide" href="#idOgnHmn018dsn"></a></p>
-  <p id="idOgnHmn018gtr">generic-tree-of-ognPharynx::
-    <br>* <a class="clsPreview" href="#idOgnHmn">organ</a>,
-    <a class="clsHide" href="#idOgnHmn018gtr"></a></p>
-  <p id="idOgnHmn018wtr">whole-tree-of-ognPharynx::
-    <br>* <a class="clsPreview" href="#idBdyHmn071wtr">sysOrganDigestive</a>,
-    <br>λαιμός⧺cptBdyHmn221⧺,
-    <a class="clsHide" href="#idOgnHmn018wtr"></a></p>
-
-  <section id="idOgnHmn018doing">
-  <h3 id="idOgnHmn018doingH3">DOING of ognPharynx
-    <a class="clsHide" href="#idOgnHmn018doingH3"></a></h3>
-  <p id="idOgnHmn018doingP1">doing::
-    <br>η μπουκιά, όταν φτάσει στην πύλη του φάρυγγα, πιέζει τη σταφυλή, η οποία  κάμπτεται προς τα άνω και φράσει την έξοδο της ρινικής κοιλότητας προς το φάρυγγα. Οταν φτάσει στο κατώτερο άκρο του φάρυγγα, πιέζει και την επιγλωττίδα, η οποία σκεπάζει το στόμιο του λάρυγγα, ο οποίος έχει μετακινηθεί προς τα πάνω και έτσι η μπουκιά προχωρεί μέσω του οισοφάγου και φτάνει στο στομάχι.
-    <br>[Αργύρης, {1994}, 37⧺cptRsc29⧺]
-    <a class="clsHide" href="#idOgnHmn018doingP1"></a></p>
-  </section>
-
-  <section id="idOgnHmn018srtr">
-  <h3 id="idOgnHmn018srtrH3">structure of ognPharynx
-    <a class="clsHide" href="#idOgnHmn018srtrH3"></a></h3>
-  <p id="idOgnHmn018srtrP1">structure::
-    <br>την αρχή του φάρυγγα την αποτελεί η σταφυλή και οι βλεννογονες πτυχες που βρίσκονται στα πλάγια. Ο φάρυγγας και η ρινική κοιλότητα επικοινωνούν με το μέσο αυτί με τις ευσταχιανες σάλπιγγες.
-    <br>[Αργύρης, {1994}, 37⧺cptRsc29⧺]
-    <a class="clsHide" href="#idOgnHmn018srtrP1"></a></p>
-  </section>
+  <section id="idOgnHmn012phrx">
+  <h2 id="idOgnHmn012phrxH2">organ.pharynx (<a class="clsPreview" href="#idOgnHmn018">link</a>)
+    <a class="clsHide" href="#idOgnHmn012phrxH2"></a></h2>
   </section>
 
   <section id="idOgnHmn019">
