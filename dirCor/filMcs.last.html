@@ -1802,6 +1802,7 @@
     <br>* Mcs.Mcsm, {2020-06-17},
     <br>* Mcs.Mcswv'manager!⇒Mcsm,
     <br>* Mcs.Mcswvm!⇒Mcsm,
+    <br>* Mcs.worldview-manager.Mcs!⇒Mcsm,
     <br>=== OLD:
     <br>* Mcs.SBC-program-(sensorial-brain-concept-program)!⇒Mcsm,
     <br>* Mcs.SCS-structured-concept-system!⇒Mcsm,
@@ -1827,6 +1828,18 @@
     <a class="clsHide" href="#idMcsmatt006nam"></a></p>
   </section>
 
+  <section id="idMcsmatt013">
+  <h2 id="idMcsmatt013H2">user of Mcsm
+    <a class="clsHide" href="#idMcsmatt013H2"></a></h2>
+  <p id="idMcsmatt013dsn">description::
+    <br>· user is any human or machine that uses <a class="clsPreview" href="#idMcsm">the-system</a>.
+    <a class="clsHide" href="#idMcsmatt013dsn"></a></p>
+  <p id="idMcsmatt013nam">name::
+    <br>* Mcs.Mcsm'user,
+    <br>* Mcs.Mcsm'att013-user,
+    <a class="clsHide" href="#idMcsmatt013nam"></a></p>
+  </section>
+
   <section id="idMcsmdngF">
   <h2 id="idMcsmdngFH2">DOING of Mcsm
     <a class="clsHide" href="#idMcsmdngFH2"></a></h2>
@@ -1839,6 +1852,24 @@
     <a class="clsHide" href="#idMcsmdngSpcH3"></a></h3>
   <p id="idMcsmdngSpcdsn">description::
     <br>* building-baseview,
+    <br>* retrieving-baseview,
+    <br>===
+    <br>* building,
+    <br>* computing,
+    <br>* consistency-checking,
+    <br>* formating,
+    <br>* generic-specific-management,
+    <br>* inferencing,
+    <br>* integrating,
+    <br>* name-management,
+    <br>* navigating,
+    <br>* presenting,
+    <br>* retrieving,
+    <br>* questioning,
+    <br>* storing,
+    <br>* translating,
+    <br>* validating,
+    <br>* whole-part-management,
     <a class="clsHide" href="#idMcsmdngSpcdsn"></a></p>
   <p id="idMcsmdngSpcnam">name::
     <br>* Mcs.Mcsm'doing.specific,
@@ -1907,11 +1938,128 @@
     <a class="clsHide" href="#idMcsmatt009dsn"></a></p>
   <p id="idMcsmatt009nam">name::
     <br>* Mcs.Mcsm'validating,
-    <br>* Mcs.Mcsm'att009-validating,
-    <br>* Mcs.Mcsm'consistency-checking,
-    <br>* Mcs.Mcsm'doing.validating,
-    <br>* Mcs.Mcsm'integrating,
+    <br>* Mcs.Mcsm'att009-validating!⇒Mcsm'validating,
+    <br>* Mcs.Mcsm'consistency-checking!⇒Mcsm'validating,
+    <br>* Mcs.Mcsm'doing.validating!⇒Mcsm'validating,
+    <br>* Mcs.Mcsm'integrating!⇒Mcsm'validating,
     <a class="clsHide" href="#idMcsmatt009nam"></a></p>
+
+  <section id="idMcsmatt015">
+  <h5 id="idMcsmatt015H5">validating.part of Mcsm
+    <a class="clsHide" href="#idMcsmatt015H5"></a></h5>
+  <p id="idMcsmatt015dsn">description::
+    <br>· IF current-cpt has as PART cpt-x,
+    <br>THEN cpt-x has as WHOLE current-cpt.
+    <a class="clsHide" href="#idMcsmatt015dsn"></a></p>
+  <p id="idMcsmatt015nam">name::
+    <br>* Mcs.Mcsm'validating.part,
+    <br>* Mcs.Mcsm'att015-part-validating,
+    <a class="clsHide" href="#idMcsmatt015nam"></a></p>
+  </section>
+
+  <section id="idMcsmatt016">
+  <h5 id="idMcsmatt016H5">validating.whole of Mcsm
+    <a class="clsHide" href="#idMcsmatt016H5"></a></h5>
+  <p id="idMcsmatt016dsn">description::
+    <br>· IF current-cpt has as WHOLE cpt-x,
+    <br>THEN cpt-x has as PART current-cpt.
+    <a class="clsHide" href="#idMcsmatt016dsn"></a></p>
+  <p id="idMcsmatt016nam">name::
+    <br>* Mcs.Mcsm'validating.whole,
+    <br>* Mcs.Mcsm'att016-whole-validating,
+    <a class="clsHide" href="#idMcsmatt016nam"></a></p>
+  </section>
+
+  <section id="idMcsmatt017">
+  <h5 id="idMcsmatt017H5">validating.generic of Mcsm
+    <a class="clsHide" href="#idMcsmatt017H5"></a></h5>
+  <p id="idMcsmatt017dsn">description::
+    <br>· IF current-cpt has as GENERIC cpt-y
+  	<br>THEN the-ATTRIBUTES of cpt-y are attributes of current-cpt. {1999-01-17}.
+  	<br>===
+  	<br>· IF current-cpt has as GENERIC cpt-y
+  	<br>THEN cpt-y has as SPECIFIC current-cpt. {1999-02-28}.
+    <a class="clsHide" href="#idMcsmatt017dsn"></a></p>
+  <p id="idMcsmatt017nam">name::
+    <br>* Mcs.Mcsm'validating.generic,
+    <br>* Mcs.Mcsm'att017-generic-validating,
+    <a class="clsHide" href="#idMcsmatt017nam"></a></p>
+  </section>
+
+  <section id="idMcsmatt018">
+  <h5 id="idMcsmatt018H5">validating.specific of Mcsm
+    <a class="clsHide" href="#idMcsmatt018H5"></a></h5>
+  <p id="idMcsmatt018dsn">description::
+    <br>· IF current-cpt has as SPECIFIC cpt-y
+    <br>THEN the-attributes of current-cpt are attributes of cpt-y. {1999-01-17}.
+    <br>===
+    <br>· IF current-cpt has as SPECIFIC cpt-y
+    br>THEN cpt-y has as GENERIC current-cpt. {1999-02-22}.
+    <a class="clsHide" href="#idMcsmatt018dsn"></a></p>
+  <p id="idMcsmatt018nam">name::
+    <br>* Mcs.Mcsm'validating.specific,
+    <br>* Mcs.Mcsm'att018-specific-validating,
+    <a class="clsHide" href="#idMcsmatt018nam"></a></p>
+  </section>
+
+  <section id="idMcsmatt019">
+  <h5 id="idMcsmatt019H5">validating.sibling of Mcsm
+    <a class="clsHide" href="#idMcsmatt019H5"></a></h5>
+  <p id="idMcsmatt019dsn">description::
+    <br>· IF current-cpt has as SIBLING cpt-y
+    <br>THEN both concepts have a-common generic-concept. {1999-02-09}.
+    <br>===
+    <br>· IF current-cpt has as sibling cpt-y in relation to generic cpt-w
+    <br>AND cpt-y has as sibling cpt-z in relation to generic cpt-w
+    <br>THEN current-cpt has as sibling cpt-z. {1999-03-13}.
+    <br>===
+    <br>· IF current-cpt has as GENERIC cpt-y
+    <br>THEN check if ALL the-specifics of cpt-y are siblings of current-cpt (except current!). {1999-04-17}.
+    <a class="clsHide" href="#idMcsmatt019dsn"></a></p>
+  <p id="idMcsmatt019nam">name::
+    <br>* Mcs.Mcsm'validating.sibling,
+    <br>* Mcs.Mcsm'att019-sibling-validating,
+    <a class="clsHide" href="#idMcsmatt019nam"></a></p>
+  </section>
+
+  <section id="idMcsmatt020">
+  <h5 id="idMcsmatt020H5">validating.complement of Mcsm
+    <a class="clsHide" href="#idMcsmatt020H5"></a></h5>
+  <p id="idMcsmatt020dsn">description::
+    <br>· the-elements of a-specific-division must have its specific-complements.
+    <br>===
+    <br>· the-elements of a-part-division must have its part-complements.
+    <a class="clsHide" href="#idMcsmatt020dsn"></a></p>
+  <p id="idMcsmatt020nam">name::
+    <br>* Mcs.Mcsm'validating.complement,
+    <br>* Mcs.Mcsm'att020-complement-validating,
+    <a class="clsHide" href="#idMcsmatt020nam"></a></p>
+  </section>
+
+  <section id="idMcsmatt021">
+  <h5 id="idMcsmatt021H5">validating.definition of Mcsm
+    <a class="clsHide" href="#idMcsmatt021H5"></a></h5>
+  <p id="idMcsmatt021dsn">description::
+    <br>· every concept must have part, whole, generic, specific definitions.
+    <a class="clsHide" href="#idMcsmatt021dsn"></a></p>
+  <p id="idMcsmatt021nam">name::
+    <br>* Mcs.Mcsm'validating.definition,
+    <br>* Mcs.Mcsm'att021-definition-validating,
+    <a class="clsHide" href="#idMcsmatt021nam"></a></p>
+  </section>
+
+  <section id="idMcsmatt022">
+  <h5 id="idMcsmatt022H5">validating.relation of Mcsm
+    <a class="clsHide" href="#idMcsmatt022H5"></a></h5>
+  <p id="idMcsmatt022dsn">description::
+    <br>· IF current-cpt has a-relation with cpt-y
+    <br>THEN cpt-y must have this relation with current-cpt.
+    <a class="clsHide" href="#idMcsmatt022dsn"></a></p>
+  <p id="idMcsmatt022nam">name::
+    <br>* Mcs.Mcsm'validating.relation,
+    <br>* Mcs.Mcsm'att022-relation-validating,
+    <a class="clsHide" href="#idMcsmatt022nam"></a></p>
+  </section>
   </section>
 
   <section id="idMcsmatt010">
@@ -1921,7 +2069,7 @@
     <br>· <a class="clsPreview" href="../dirLag/filMcsLhmn.last.html#idLhmnname">names</a> help us to communicate our info.
     <br>· bad-names, bad communication.
     <br>· the-manager must have under control the-names used in its info.
-    <br>* it must validate the-naming conventions used in its base-view.
+    <br>* it must validate the-names against the-naming conventions used in its base-view.
     <br>* it must find undefined names.
     <br>* it must can-change a-name in all cases used.
     <br>* ...
@@ -2000,6 +2148,39 @@
     <br>* Mcs.Mcsm'doing.questioning,
     <a class="clsHide" href="#idMcsmatt008nam"></a></p>
   </section>
+  </section>
+
+  <section id="idMcsmatt014">
+  <h3 id="idMcsmatt014H3">computing of Mcsm
+    <a class="clsHide" href="#idMcsmatt014H3"></a></h3>
+  <p id="idMcsmatt014dsn">description::
+    <br>· the-manager must-can-make many computations (building or retrieving) on its <a class="clsPreview" href="#idMcsbv">baseview</a>.
+    <a class="clsHide" href="#idMcsmatt014dsn"></a></p>
+  <p id="idMcsmatt014nam">name::
+    <br>* Mcs.Mcsm'computing,
+    <br>* Mcs.Mcsm'att014-computing,
+    <br>* Mcs.Mcsm'doing.computing,
+    <br>* Mcs.Mcsm'inferencing,
+    <a class="clsHide" href="#idMcsmatt014nam"></a></p>
+  <p id="idMcsmatt014str">specific-tree-of-Mcsm'computing::
+    <br>* name-managing,
+    <br>* questioning,
+    <br>* translating,
+    <br>* validating,
+    <a class="clsHide" href="#idMcsmatt014str"></a></p>
+  </section>
+
+  <section id="idMcsmatt023">
+  <h3 id="idMcsmatt023H3">evoluting-managing of Mcsm
+    <a class="clsHide" href="#idMcsmatt023H3"></a></h3>
+  <p id="idMcsmatt023dsn">description::
+    <br>· the-manager must have the-ability to store and present the-evolution of its <a class="clsPreview" href="#idMcsbv">baseview</a>.
+    <a class="clsHide" href="#idMcsmatt023dsn"></a></p>
+  <p id="idMcsmatt023nam">name::
+    <br>* Mcs.Mcsm'evoluting-managing,
+    <br>* Mcs.Mcsm'att023-evoluting-managing,
+    <br>* Mcs.Mcsm'doing.evoluting-managing,
+    <a class="clsHide" href="#idMcsmatt023nam"></a></p>
   </section>
   </section>
 
