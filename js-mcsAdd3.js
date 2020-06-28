@@ -40,16 +40,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirTchCpgm',
-  sDIR = 'dirTchCpgm',
+  sDir = 'dirHlth',
+  sDIR = 'dirHlth',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'computer-program',
+  sN = 'musculoskeletal-system',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'Cpgm',
+  sNS = 'sysMusculoskeletal',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'Cpgm',
+  sNFil = 'BdyHmn-sysMs',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Cpgm';
+  sNId = 'SysOgnHmn001';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -75,6 +75,9 @@ s =
   '<section id="idOverview">\n' +
   '  <h1 id="idOverviewH1">overview of ' + sNS + '\n' +
   '    <a class="clsHide" href="#idOverviewH1"></a></h1>\n' +
+  '  <p id="idDescription">description::\n' +
+  '    <br>· \n' +
+  '    <a class="clsHide" href="#idDescription"></a></p>\n' +
   '  <p id="idName">name::\n' +
   '    <br>* Mcs.filMcs' + sNFil + '.last.html' + '!⇒' + sNS + ',\n' +
   '    <br>* Mcs.' + sDir +'/filMcs' + sNFil + '.last.html' + '!⇒' + sNS + ',\n' +
@@ -82,9 +85,6 @@ s =
   '    <br>* Mcs.' + sN + '!⇒' + sNS + ',\n' +
   '    <br>* Mcs.' + sNS + '\'(' + sN + ')' + '!⇒' + sNS + ',\n' +
   '    <a class="clsHide" href="#idName"></a></p>\n' +
-  '  <p id="idDescription">description::\n' +
-  '    <br>· \n' +
-  '    <a class="clsHide" href="#idDescription"></a></p>\n' +
   '</section>\n' +
   '\n' +
   '<section id="id' + sNId + 'rscF">\n' +
