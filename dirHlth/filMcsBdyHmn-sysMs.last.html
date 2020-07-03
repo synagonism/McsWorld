@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.sysMusculoskeletal (0-3-0.2020-06-30 draft)</title>
+  <title>Mcs.sysMusculoskeletal (0-4-0.2020-07-03 draft)</title>
   <meta name="keywords" content="musculoskeletal-system, sysMusculoskeletal, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -508,11 +508,12 @@
   <h3 id="idMsclHmn002att002H3">tendon of muscleSkeletal
     <a class="clsHide" href="#idMsclHmn002att002H3"></a></h3>
   <p id="idMsclHmn002att002nam">name::
-    <br>* Mcs.muscleSkeletal'tendon,
-    <br>* Mcs.muscleSkeletal'att002-tendon,
-    <br>* Mcs.tendon,
+    <br>* Mcs.muscleSkeletal'tendon!⇒ognTendon,
+    <br>* Mcs.muscleSkeletal'att002-tendon!⇒ognTendon,
+    <br>* Mcs.ognTendon,
+    <br>* Mcs.tendon!⇒ognTendon,
     <br>====== langoGreek:
-    <br>* McsEll.τένοντας!=tendon,
+    <br>* McsEll.τένοντας!=ognTendon,
     <a class="clsHide" href="#idMsclHmn002att002nam"></a></p>
   <p id="idMsclHmn002att002P1">ten·don
     <br>"A tendon or sinew is a tough band of fibrous connective tissue that connects muscle to bone and is capable of withstanding tension.
@@ -812,12 +813,12 @@
   <h3 id="idMsclHmn020SpcH3">muscleNeck.SPECIFIC
     <a class="clsHide" href="#idMsclHmn020SpcH3"></a></h3>
   <p id="idMsclHmn020Spcdsn">description::
-    <br>* arytenoid-oblique,
-    <br>* arytenoid-transverse,
-    <br>* crico-thyroid,
-    <br>* crico-arytenoid-posterior,
-    <br>* crico-arytenoid-lateral,
-    <br>* digastric,
+    <br>* <a class="clsPreview" href="#idMsclHmn060">arytenoid</a>,
+    <br>* <a class="clsPreview" href="#idMsclHmn062">crico-thyroid</a>,
+    <br>* <a class="clsPreview" href="#idMsclHmn063">crico-arytenoid</a>,
+    <br>** crico-arytenoid-posterior,
+    <br>** crico-arytenoid-lateral,
+    <br>* <a class="clsPreview" href="#idMsclHmn052">digastric</a>,
     <br>* <a class="clsPreview" href="#idMsclHmn048">hyoid</a>,
     <br>** hyoid-genio,
     <br>** hyoid-mylo,
@@ -863,6 +864,40 @@
     <br>* Mcs.muscleNeck.arytenoid!⇒muscleArytenoid,
     <br>* Mcs.ognMuscle.arytenoid!⇒muscleArytenoid,
     <a class="clsHide" href="#idMsclHmn060nam"></a></p>
+  </section>
+
+  <section id="idMsclHmn063">
+  <h3 id="idMsclHmn063H3">ognMuscle.cricoarytenoid-063
+    <a class="clsHide" href="#idMsclHmn063H3"></a></h3>
+  <p id="idMsclHmn063dsn">description::
+    <br>"Cricoarytenoid muscles are muscles that connect the cricoid cartilage and arytenoid cartilage.
+    <br>More specifically, it can refer to:
+    <br>* Posterior cricoarytenoid muscle
+    <br>* Lateral cricoarytenoid muscle"
+    <br>[{2020-07-03} https://en.wikipedia.org/wiki/Cricoarytenoid_muscle]
+    <a class="clsHide" href="#idMsclHmn063dsn"></a></p>
+  <p id="idMsclHmn063nam">name::
+    <br>* Mcs.cricoarytenoid-muscle!⇒muscleCricoarytenoid,
+    <br>* Mcs.muscleCricoarytenoid,
+    <br>* Mcs.ognMuscle.cricoarytenoid!⇒muscleCricoarytenoid,
+    <a class="clsHide" href="#idMsclHmn063nam"></a></p>
+  </section>
+
+  <section id="idMsclHmn062">
+  <h3 id="idMsclHmn062H3">ognMuscle.cricothyroid-062
+    <a class="clsHide" href="#idMsclHmn062H3"></a></h3>
+  <p id="idMsclHmn062dsn">description::
+    <br>tenses vocal-folds to produce high pitched sound.
+    <br>===
+    <br>"The cricothyroid muscle is the only tensor muscle of the larynx aiding with phonation. It attaches to the anterolateral aspect of the cricoid and the inferior cornu and lower lamina of the thyroid cartilage, and its action tilts the thyroid forward to help tense the vocal cords. Not to be confused with the posterior cricoarytenoid muscles, which are the only muscles directly responsible for opening (abducting) the space between the vocal cords to allow for respiration."
+    <br>[{2020-07-03} https://en.wikipedia.org/wiki/Cricothyroid_muscle]
+    <a class="clsHide" href="#idMsclHmn062dsn"></a></p>
+  <p id="idMsclHmn062nam">name::
+    <br>* Mcs.cricothyroid-muscle!⇒muscleCricothyroid,
+    <br>* Mcs.muscleCricothyroid,
+    <br>* Mcs.ognMuscle.062-cricothyroid!⇒muscleCricothyroid,
+    <br>* Mcs.ognMuscle.cricothyroid!⇒muscleCricothyroid,
+    <a class="clsHide" href="#idMsclHmn062nam"></a></p>
   </section>
 
   <section id="idMsclHmn011">
@@ -2135,6 +2170,39 @@
     <br>* Mcs.muscleSurfaceNo,
     <a class="clsHide" href="#idMsclHmn044nam"></a></p>
   </section>
+
+  <section id="idMsclHmn060">
+  <h2 id="idMsclHmn060H2">ognMuscle.agonist-060
+    <a class="clsHide" href="#idMsclHmn060H2"></a></h2>
+  <p id="idMsclHmn060dsn">description::
+    <br>"Agonist muscles cause a movement to occur through their own activation."
+    <br>[{2020-07-03} https://en.wikipedia.org/wiki/Anatomical_terms_of_muscle#Agonist]
+    <a class="clsHide" href="#idMsclHmn060dsn"></a></p>
+  <p id="idMsclHmn060nam">name::
+    <br>* Mcs.agonist-muscle!⇒muscleAgonist,
+    <br>* Mcs.muscleAgonist,
+    <br>* Mcs.ognMuscle.060-agonist!⇒muscleAgonist,
+    <br>* Mcs.ognMuscle.agonist!⇒muscleAgonist,
+    <a class="clsHide" href="#idMsclHmn060nam"></a></p>
+  </section>
+
+  <section id="idMsclHmn061">
+  <h2 id="idMsclHmn061H2">ognMuscle.antagonist-061
+    <a class="clsHide" href="#idMsclHmn061H2"></a></h2>
+  <p id="idMsclHmn061dsn">description::
+    <br>"Antagonist muscles are simply the muscles that produce an opposing joint torque to <a class="clsPreview" href="#idMsclHmn060">the agonist muscles</a>."
+    <br>[{2020-07-03} https://en.wikipedia.org/wiki/Anatomical_terms_of_muscle#Agonist]
+    <a class="clsHide" href="#idMsclHmn061dsn"></a></p>
+  <p id="idMsclHmn061nam">name::
+    <br>* Mcs.ognMuscle.antagonist,
+    <a class="clsHide" href="#idMsclHmn061nam"></a></p>
+  <p id="idMsclHmn061dsnL">descriptionLong::
+    <br>"Η ανταγωνιστική κίνηση πραγματοποιείται από δύο ομάδες μυών, τους αγωνιστές και τους ανταγωνιστές. Οι έννοιες αυτές αναφέρονται σε ομάδες μυών που μπορούν να προκαλέσουν ή να υιοθετή σουν μια κίνηση. Οι αγωνιστές μύες προκαλούν μια κίνηση μέσω της σύσπασης τους. Οι ανταγωνιστές μύες αντιτίθενται σε μια συγκεκριμένη κίνηση. Αυτόσημαίνει πως ελέγχουν την κίνηση, επιβραδύνοντας ή επιταχύνοντας την. Ο ”ανταγωνισμός” δεν είναι μια εγγενής ιδιότητα. Είναι ένας ρόλος, τον οποίο αναλαμβάνει ένας μυς αναλόγως την κίνηση. Εάν η κίνηση αντιστραφεί, οι αγωνιστές και οι ανταγωνιστές μύες θα ανταλλάξουν ρόλους. Ένας καμπτήρας μυς, κατά την κάμψη δρα ως αγωνιστής, ενώ κατά την έκταση ως ανταγωνιστής. Ένας τανύων μυς, αντίθετα, κατά την κάμψη δρα ως ανταγωνιστής ενώ κατά την έκταση ως αγωνιστής.
+    <br>Οι μύες που δρουν με αυτόν τον τρόπο αποτελούν ανταγωνιστικά ζεύγη. Ένα χαρακτηριστικό παράδειγμα ανταγωνιστικούζεύγους μυών είναι οι δικέφαλοι και οι τρικέφαλοι του χεριού. Όταν συσπάται ο δικέφαλος για να σφίξουμε το χέρι μας, ο τρικέφαλος χαλαρώνει. Όταν εκτείνουμε το χέρι μας, ο τρικέφαλος συσπάται ενώ ο δικέφαλος χαλαρώνει. Στην πρώτη περίπτωση ο δικέφαλος είναι ο αγωνιστής ενώο τρικέφαλος ο ανταγωνιστής. Στην δεύτερη περίπτωση οι μύες ανταλλάζουν ρόλους, με τον τρικέφαλο να γίνεται ο αγωνιστής και τον δικέφαλο ο ανταγωνιστής.
+    <br>Η ανταγωνιστική κίνηση προϋποθέτει οι ανταγωνιστικοί μύες να βρίσκονται σε αντίθετες πλευρές μιας άρθρωσης ώστε με τη δράση τους η άρθρωση να κινείται προς τη μια ή την άλλη κατεύθυνση."
+    <br>[{2020-07-03} Διπλωματική Εργασία Καραγεώργου Δημητρίου του Λάμπρου 227004 {2015}]
+    <a class="clsHide" href="#idMsclHmn061dsnL"></a></p>
+  </section>
 </section>
 
 <section id="idBdyHmn102">
@@ -2294,7 +2362,7 @@
 </section>
 
 <section id="idBoneHmn">
-  <h1 id="idBoneHmnH1">organ.bone-001 of sysSkeletal
+  <h1 id="idBoneHmnH1">orgBone of sysSkeletal
     <a class="clsHide" href="#idBoneHmnH1"></a></h1>
   <p id="idBoneHmnnam">name::
     <br>* Mcs.organ.001-bone!⇒ognBone,
@@ -4497,6 +4565,37 @@
     <br>* McsEll.υοειδές-οστό!=boneHyoid,
     <a class="clsHide" href="#idBoneHmn056nam"></a></p>
   </section>
+</section>
+
+<section id="idOgnHmn042">
+  <h1 id="idOgnHmn042H1">ognLigament of sysSkeletal
+    <a class="clsHide" href="#idOgnHmn042H1"></a></h1>
+  <p id="idOgnHmn042dsn">description::
+    <br>"ligaments join one bone to another bone, tendons join muscle to bone, and fasciae surround muscles and other structures."
+    <br>[{2020-07-03} https://en.wikipedia.org/wiki/Fascia]
+    <a class="clsHide" href="#idOgnHmn042dsn"></a></p>
+  <p id="idOgnHmn042nam">name::
+    <br>* Mcs.ligament!⇒ognLigament,
+    <br>* Mcs.ognLigament,
+    <br>* Mcs.organ.042-ligament!⇒ognLigament,
+    <br>* Mcs.organ.ligament!⇒ognLigament,
+    <a class="clsHide" href="#idOgnHmn042nam"></a></p>
+</section>
+
+<section id="idOgnHmn043">
+  <h1 id="idOgnHmn043H1">ognFascia of sysSkeletal
+    <a class="clsHide" href="#idOgnHmn043H1"></a></h1>
+  <p id="idOgnHmn043dsn">description::
+    <br>"Fasciae are similar to ligaments and tendons as they have collagen as their major component.
+    <br>They differ in their location and function: <strong>ligaments join one bone to another bone</strong>, tendons join muscle to bone, and fasciae surround muscles and other structures."
+    <br>[{2020-07-03} https://en.wikipedia.org/wiki/Fascia]
+    <a class="clsHide" href="#idOgnHmn043dsn"></a></p>
+  <p id="idOgnHmn043nam">name::
+    <br>* Mcs.ognFascia,
+    <br>* Mcs.ognFascia,
+    <br>* Mcs.organ.043-fascia!⇒ognFascia,
+    <br>* Mcs.organ.fascia!⇒ognFascia,
+    <a class="clsHide" href="#idOgnHmn043nam"></a></p>
 </section>
 
 <section id="idSysOgnHmn001rscF">
