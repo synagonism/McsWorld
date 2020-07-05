@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-14-0.2020-07-05: hitp-files-local,
  * version.0-13-0.2020-04-06: structure-doing,
  * version.0-12-0.2020-02-19: whole-part-generic-tree,
  * version.0-11-1.2020-02-19: whole-part-generic-tree,
@@ -59,7 +60,7 @@ s =
   '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
   '  <title>Mcs.' + sNS + ' (' + sN + ' 0-1-0.' + moUtil.fDateYMD() + ' draft)</title>\n' +
   '  <meta name="keywords" content="' + sN + ', ' + sNS + ', ModelConceptSensorial, McsHitp, Synagonism">\n' +
-  '  <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">\n' +
+  '  <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">\n' +
   '</head>\n' +
   '\n' +
   '<body>\n' +
@@ -260,7 +261,7 @@ s = s +
   '  ga(\'send\', \'pageview\');\n' +
   '</script>\n' +
   '\n' +
-  '<script src="https://synagonism.github.io/hitp/hitp.js"></script>\n' +
+  '<script src="../dirTchInf/dirHitp/hitp.js"></script>\n' +
   '</body>\n' +
   '</html>';
 

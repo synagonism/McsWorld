@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.sysMusculoskeletal (0-4-0.2020-07-03 draft)</title>
+  <title>Mcs.sysMusculoskeletal (0-6-0.2020-07-05 draft)</title>
   <meta name="keywords" content="musculoskeletal-system, sysMusculoskeletal, ModelConceptSensorial, McsHitp, Synagonism">
-  <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
+  <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
 
 <body>
@@ -813,7 +813,9 @@
   <h3 id="idMsclHmn020SpcH3">muscleNeck.SPECIFIC
     <a class="clsHide" href="#idMsclHmn020SpcH3"></a></h3>
   <p id="idMsclHmn020Spcdsn">description::
-    <br>* <a class="clsPreview" href="#idMsclHmn060">arytenoid</a>,
+    <br>* musculature-of-larynx,
+    <br>* musculature-of-pharynx,
+    <br>* <a class="clsPreview" href="#idMsclHmn068">arytenoid</a>,
     <br>* <a class="clsPreview" href="#idMsclHmn062">crico-thyroid</a>,
     <br>* <a class="clsPreview" href="#idMsclHmn063">crico-arytenoid</a>,
     <br>** crico-arytenoid-posterior,
@@ -826,8 +828,6 @@
     <br>** hyoid-sterno,
     <br>** hyoid-stylo,
     <br>** hyoid-thyro,
-    <br>* musculature-of-larynx,
-    <br>* musculature-of-pharynx,
     <br>* pharyngeal-constrictor-superior,
     <br>* pharyngeal-constrictor-middle,
     <br>* pharyngeus-thyro,
@@ -842,33 +842,35 @@
     <br>* <a class="clsPreview" href="#idMsclHmn011">sternocleidomastoid</a>,
     <br>* <a class="clsPreview" href="#idMsclHmn059">thyroarytenoid</a>,
     <br>* transversus-nuchae,
-    <br>* vocalis,
+    <br>* <a class="clsPreview" href="#idMsclHmn064">vocalis</a>,
     <a class="clsHide" href="#idMsclHmn020Spcdsn"></a></p>
   <p id="idMsclHmn020Spcnam">name::
     <br>* Mcs.muscleNeck.specific,
     <a class="clsHide" href="#idMsclHmn020Spcnam"></a></p>
   </section>
 
-  <section id="idMsclHmn060">
-  <h3 id="idMsclHmn060H3">ognMuscle.arytenoid-060
-    <a class="clsHide" href="#idMsclHmn060H3"></a></h3>
-  <p id="idMsclHmn060dsn">description::
-    <br>"The arytenoid /ærɪˈtiːnɔɪd/ is a single muscle, filling up the posterior concave surfaces of the arytenoid cartilages.
-    <br>It arises from the posterior surface and lateral border of one arytenoid cartilage, and is inserted into the corresponding parts of the opposite cartilage.
-    <br>It consists of oblique and transverse parts."
-    <br>[{2020-06-30} https://en.wikipedia.org/wiki/Arytenoid_muscle]
-    <a class="clsHide" href="#idMsclHmn060dsn"></a></p>
-  <p id="idMsclHmn060nam">name::
-    <br>* Mcs.arytenoid-muscle!⇒muscleArytenoid,
-    <br>* Mcs.muscleArytenoid,
-    <br>* Mcs.muscleNeck.arytenoid!⇒muscleArytenoid,
-    <br>* Mcs.ognMuscle.arytenoid!⇒muscleArytenoid,
-    <a class="clsHide" href="#idMsclHmn060nam"></a></p>
-  </section>
+  <section id="idMsclHmn066">
+  <h3 id="idMsclHmn066H3">ognMuscle.larynx-066
+    <a class="clsHide" href="#idMsclHmn066H3"></a></h3>
+  <p id="idMsclHmn066dsn">description::
+    <br>· any muscle of <a class="clsPreview" href="filMcsBdyHmn.last.html#idOgnHmn020">ognLarynx</a>.
+    <a class="clsHide" href="#idMsclHmn066dsn"></a></p>
+  <p id="idMsclHmn066nam">name::
+    <br>* Mcs.larynx-muscle!⇒muscleLarynx,
+    <br>* Mcs.muscleLarynx,
+    <br>* Mcs.ognMuscle.066-larynx!⇒muscleLarynx,
+    <br>* Mcs.ognMuscle.larynx!⇒muscleLarynx,
+    <a class="clsHide" href="#idMsclHmn066nam"></a></p>
+  <p id="idMsclHmn066str">specific-tree-of-muscleLarynx::
+    <br>* <a class="clsPreview" href="#idMsclHmn062">cricothyroid</a>,
+    <br>* <a class="clsPreview" href="#idMsclHmn063">cricoarytenoid (posterior, lateral)</a>,
+    <br>* arytenoid (oblique arytenoid (aryepiglottic), transverse-arytenoid)
+    <br>* thyroarytenoid (vocal, thyroepiglottic),
+    <a class="clsHide" href="#idMsclHmn066str"></a></p>
 
   <section id="idMsclHmn063">
-  <h3 id="idMsclHmn063H3">ognMuscle.cricoarytenoid-063
-    <a class="clsHide" href="#idMsclHmn063H3"></a></h3>
+  <h4 id="idMsclHmn063H4">ognMuscle.cricoarytenoid-063
+    <a class="clsHide" href="#idMsclHmn063H4"></a></h4>
   <p id="idMsclHmn063dsn">description::
     <br>"Cricoarytenoid muscles are muscles that connect the cricoid cartilage and arytenoid cartilage.
     <br>More specifically, it can refer to:
@@ -879,13 +881,14 @@
   <p id="idMsclHmn063nam">name::
     <br>* Mcs.cricoarytenoid-muscle!⇒muscleCricoarytenoid,
     <br>* Mcs.muscleCricoarytenoid,
+    <br>* Mcs.ognMuscle.063-cricoarytenoid!⇒muscleCricoarytenoid,
     <br>* Mcs.ognMuscle.cricoarytenoid!⇒muscleCricoarytenoid,
     <a class="clsHide" href="#idMsclHmn063nam"></a></p>
   </section>
 
   <section id="idMsclHmn062">
-  <h3 id="idMsclHmn062H3">ognMuscle.cricothyroid-062
-    <a class="clsHide" href="#idMsclHmn062H3"></a></h3>
+  <h4 id="idMsclHmn062H4">ognMuscle.cricothyroid-062
+    <a class="clsHide" href="#idMsclHmn062H4"></a></h4>
   <p id="idMsclHmn062dsn">description::
     <br>tenses vocal-folds to produce high pitched sound.
     <br>===
@@ -898,6 +901,155 @@
     <br>* Mcs.ognMuscle.062-cricothyroid!⇒muscleCricothyroid,
     <br>* Mcs.ognMuscle.cricothyroid!⇒muscleCricothyroid,
     <a class="clsHide" href="#idMsclHmn062nam"></a></p>
+  </section>
+
+  <section id="idMsclHmn068">
+  <h4 id="idMsclHmn068H4">ognMuscle.arytenoid-068
+    <a class="clsHide" href="#idMsclHmn068H4"></a></h4>
+  <p id="idMsclHmn068dsn">description::
+    <br>"The arytenoid /ærɪˈtiːnɔɪd/ is a single muscle, filling up the posterior concave surfaces of the arytenoid cartilages.
+    <br>It arises from the posterior surface and lateral border of one arytenoid cartilage, and is inserted into the corresponding parts of the opposite cartilage.
+    <br>It consists of oblique and transverse parts."
+    <br>[{2020-06-30} https://en.wikipedia.org/wiki/Arytenoid_muscle]
+    <a class="clsHide" href="#idMsclHmn068dsn"></a></p>
+  <p id="idMsclHmn068nam">name::
+    <br>* Mcs.arytenoid-muscle!⇒muscleArytenoid,
+    <br>* Mcs.muscleArytenoid,
+    <br>* Mcs.muscleNeck.arytenoid!⇒muscleArytenoid,
+    <br>* Mcs.ognMuscle.068-arytenoid!⇒muscleArytenoid,
+    <br>* Mcs.ognMuscle.arytenoid!⇒muscleArytenoid,
+    <a class="clsHide" href="#idMsclHmn068nam"></a></p>
+  </section>
+
+  <section id="idMsclHmn059">
+  <h4 id="idMsclHmn059H4">ognMuscle.thyroarytenoid-059
+    <a class="clsHide" href="#idMsclHmn059H4"></a></h4>
+  <p id="idMsclHmn059dsn">description::
+    <br><img src="filMcsBdyHmn.files/muscle.wp.pd.Musculusthyreoarytenoideus.png">
+    <br>"The thyroarytenoid muscle is a broad, thin muscle that forms the body of the vocal fold and that supports the wall of the ventricle and its appendix. It functions to shorten the vocal folds."
+    <br>[{2020-06-29} https://en.wikipedia.org/wiki/Thyroarytenoid_muscle]
+    <a class="clsHide" href="#idMsclHmn059dsn"></a></p>
+  <p id="idMsclHmn059nam">name::
+    <br>* Mcs.muscleThyroarytenoid,
+    <br>* Mcs.ognMuscle.059-thyroarytenoid!⇒muscleThyroarytenoid,
+    <br>* Mcs.ognMuscle.thyroarytenoid!⇒muscleThyroarytenoid,
+    <br>* Mcs.thyroarytenoid-muscle!⇒muscleThyroarytenoid,
+    <a class="clsHide" href="#idMsclHmn059nam"></a></p>
+
+  <section id="idMsclHmn064">
+  <h5 id="idMsclHmn064H5">ognMuscle.vocalis-064
+    <a class="clsHide" href="#idMsclHmn064H5"></a></h5>
+  <p id="idMsclHmn064dsn">description::
+    <br>"The vocalis muscle is a subset of the muscle fibers of the thyroarytenoid muscle which lie directly beneath the true vocal folds. "
+    <br>[{2020-07-04} https://linguistics.ucla.edu/people/ladefoge/manual%20files/chapter8.pdf]
+    <a class="clsHide" href="#idMsclHmn064dsn"></a></p>
+  <p id="idMsclHmn064nam">name::
+    <br>* Mcs.muscleVocalis,
+    <br>* Mcs.ognMuscle.064-vocalis!⇒muscleVocalis,
+    <br>* Mcs.ognMuscle.vocalis!⇒muscleVocalis,
+    <br>* Mcs.vocalis-muscle!⇒muscleVocalis,
+    <a class="clsHide" href="#idMsclHmn064nam"></a></p>
+  </section>
+
+  <section id="idMsclHmn069">
+  <h5 id="idMsclHmn069H5">ognMuscle.thyroepiglottic-069
+    <a class="clsHide" href="#idMsclHmn069H5"></a></h5>
+  <p id="idMsclHmn069dsn">description::
+    <br>"A considerable number of the fibers of the thyroarytenoid muscle are prolonged into the aryepiglottic fold, where some of them become lost, while others continue to the margin of the epiglottis. They have received a distinctive name, thyroepiglotticus or thyroepiglottic muscle, and are sometimes described as a separate muscle. This muscle's function is to widen the laryngeal inlet."
+    <a class="clsHide" href="#idMsclHmn069dsn"></a></p>
+  <p id="idMsclHmn069nam">name::
+    <br>* Mcs.muscleThyroepiglottic,
+    <br>* Mcs.ognMuscle.069-thyroepiglottic!⇒muscleThyroepiglottic,
+    <br>* Mcs.ognMuscle.thyroepiglottic!⇒muscleThyroepiglottic,
+    <br>* Mcs.thyroepiglottic-muscle!⇒muscleThyroepiglottic,
+    <a class="clsHide" href="#idMsclHmn069nam"></a></p>
+  </section>
+  </section>
+  </section>
+
+  <section id="idMsclHmn067">
+  <h3 id="idMsclHmn067H3">ognMuscle.pharynx-067
+    <a class="clsHide" href="#idMsclHmn067H3"></a></h3>
+  <p id="idMsclHmn067dsn">description::
+    <br>· any muscle of <a class="clsPreview" href="filMcsBdyHmn.last.html#idOgnHmn018">ognPharynx</a>.
+    <br><img src="filMcsBdyHmn.files/muscle.wp.pd.Gray1030.png">
+    <a class="clsHide" href="#idMsclHmn067dsn"></a></p>
+  <p id="idMsclHmn067nam">name::
+    <br>* Mcs.musclePharynx,
+    <br>* Mcs.ognMuscle.067-pharynx!⇒musclePharynx,
+    <br>* Mcs.ognMuscle.pharynx!⇒musclePharynx,
+    <br>* Mcs.pharyngeal-muscle!⇒musclePharynx,
+    <br>* Mcs.pharynx-muscle!⇒musclePharynx,
+    <a class="clsHide" href="#idMsclHmn067nam"></a></p>
+  <p id="idMsclHmn067dsnL">descriptionLong::
+    <br>"The pharyngeal muscles are a group of muscles that form the pharynx, which is posterior to the oral cavity, determining the shape of its lumen, and affecting its sound properties as the primary resonating cavity.
+    <br>The pharyngeal muscles (involuntary skeletal) pushing the food into the esophagus. There are two muscular layers of the pharynx: the outer circular layer and the inner longitudinal layer.
+    <br>The outer circular layer includes:
+    <br>* Inferior constrictor muscle
+    <br>* Middle constrictor muscle
+    <br>* Superior constrictor muscle
+    <br>During swallowing, these muscles constrict to propel bolus downwards (an involuntary process).
+    <br>The inner longitudinal layer includes:
+    <br>* Stylopharyngeus muscle
+    <br>* Salpingopharyngeus muscle
+    <br>* Palatopharyngeus muscle
+    <br>During swallowing, these muscles act to shorten and widen the pharynx.
+    <br>They are innervated by the pharyngeal branch of the Vagus nerve (CN X) with the exception of the stylopharyngeus muscle which is innervated by the glossopharyngeal nerve (CN IX).[1]"
+    <br>[{2020-07-05} https://en.wikipedia.org/wiki/Pharyngeal_muscles]
+    <a class="clsHide" href="#idMsclHmn067dsnL"></a></p>
+  <p id="idMsclHmn067str">specific-tree-of-musclePharynx::
+    <br>* pharyngeal-constrictor (superior, middle, inferior),
+    <br>* stylopharyngeus,
+    <br>* salpingopharyngeus,
+    <a class="clsHide" href="#idMsclHmn067str"></a></p>
+
+  <section id="idMsclHmn070">
+  <h4 id="idMsclHmn070H4">ognMuscle.pharyngeal-constrictor-070
+    <a class="clsHide" href="#idMsclHmn070H4"></a></h4>
+  <p id="idMsclHmn070dsn">description::
+    <br>"The pharyngeal muscles (involuntary skeletal) pushing the food into the esophagus. There are two muscular layers of the pharynx: the outer circular layer and the inner longitudinal layer.
+    <br>The outer circular layer includes:
+    <br>* Inferior constrictor muscle
+    <br>* Middle constrictor muscle
+    <br>* Superior constrictor muscle
+    <br>During swallowing, these muscles constrict to propel bolus downwards (an involuntary process).
+    <br>[{2020-07-05} https://en.wikipedia.org/wiki/Pharyngeal_muscles]
+    <a class="clsHide" href="#idMsclHmn070dsn"></a></p>
+  <p id="idMsclHmn070nam">name::
+    <br>* Mcs.musclePharyngeal-constrictor,
+    <br>* Mcs.ognMuscle.070-pharyngeal-constrictor!⇒musclePharyngeal-constrictor,
+    <br>* Mcs.ognMuscle.pharyngeal-constrictor!⇒musclePharyngeal-constrictor,
+    <br>* Mcs.pharyngeal-constrictor-muscle!⇒musclePharyngeal-constrictor,
+    <a class="clsHide" href="#idMsclHmn070nam"></a></p>
+  </section>
+
+  <section id="idMsclHmn071">
+  <h4 id="idMsclHmn071H4">ognMuscle.stylopharyngeus-071
+    <a class="clsHide" href="#idMsclHmn071H4"></a></h4>
+  <p id="idMsclHmn071dsn">description::
+    <br>·
+    <a class="clsHide" href="#idMsclHmn071dsn"></a></p>
+  <p id="idMsclHmn071nam">name::
+    <br>* Mcs.muscleStylopharyngeus,
+    <br>* Mcs.ognMuscle.071-stylopharyngeus!⇒muscleStylopharyngeus,
+    <br>* Mcs.ognMuscle.stylopharyngeus!⇒muscleStylopharyngeus,
+    <br>* Mcs.stylopharyngeus-muscle!⇒muscleStylopharyngeus,
+    <a class="clsHide" href="#idMsclHmn071nam"></a></p>
+  </section>
+
+  <section id="idMsclHmn072">
+  <h4 id="idMsclHmn072H4">ognMuscle.salpingopharyngeus-072
+    <a class="clsHide" href="#idMsclHmn072H4"></a></h4>
+  <p id="idMsclHmn072dsn">description::
+    <br>·
+    <a class="clsHide" href="#idMsclHmn072dsn"></a></p>
+  <p id="idMsclHmn072nam">name::
+    <br>* Mcs.muscleSalpinopharyngeus,
+    <br>* Mcs.ognMuscle.072-salpingopharyngeus!⇒muscleSalpinopharyngeus,
+    <br>* Mcs.ognMuscle.salpingopharyngeus!⇒muscleSalpinopharyngeus,
+    <br>* Mcs.salpingopharyngeus-muscle!⇒muscleSalpinopharyngeus,
+    <a class="clsHide" href="#idMsclHmn072nam"></a></p>
+  </section>
   </section>
 
   <section id="idMsclHmn011">
@@ -1190,20 +1342,22 @@
   </section>
   </section>
 
-  <section id="idMsclHmn059">
-  <h3 id="idMsclHmn059H3">ognMuscle.thyroarytenoid-059
-    <a class="clsHide" href="#idMsclHmn059H3"></a></h3>
-  <p id="idMsclHmn059dsn">description::
-    <br><img src="filMcsBdyHmn.files/muscle.wp.pd.Musculusthyreoarytenoideus.png">
-    <br>"The thyroarytenoid muscle is a broad, thin muscle that forms the body of the vocal fold and that supports the wall of the ventricle and its appendix. It functions to shorten the vocal folds."
-    <br>[{2020-06-29} https://en.wikipedia.org/wiki/Thyroarytenoid_muscle]
-    <a class="clsHide" href="#idMsclHmn059dsn"></a></p>
-  <p id="idMsclHmn059nam">name::
-    <br>* Mcs.muscleThyroarytenoid,
-    <br>* Mcs.ognMuscle.059-thyroarytenoid!⇒muscleThyroarytenoid,
-    <br>* Mcs.ognMuscle.thyroarytenoid!⇒muscleThyroarytenoid,
-    <br>* Mcs.thyroarytenoid-muscle!⇒muscleThyroarytenoid,
-    <a class="clsHide" href="#idMsclHmn059nam"></a></p>
+  <section id="idMsclHmn065">
+  <h3 id="idMsclHmn065H3">ognMuscle.platysma-065
+    <a class="clsHide" href="#idMsclHmn065H3"></a></h3>
+  <p id="idMsclHmn065dsn">description::
+    <br>"The platysma is a superficial muscle that overlaps the sternocleidomastoid.
+    <br>It is a broad sheet arising from the fascia covering the upper parts of the pectoralis major and deltoid; its fibers cross the clavicle, and proceed obliquely upward and medially along the side of the neck.[1]
+    <br>Fibres at the front of the muscle from the left and right sides intermingle together below and behind the symphysis menti;[1] the junction where the two lateral halves of the mandible are fused at an early period of life. It is not a true symphysis as there is no cartilage between the two sides of the mandible. Fibres at the back of the muscle cross the mandible, some being inserted into the bone below the oblique line, others into the skin and subcutaneous tissue of the lower part of the face. Many of these fibers blend with the muscles about the angle and lower part of the mouth.
+    <br>Sometimes fibers can be traced to the zygomaticus, or to the margin of the orbicularis oris. Beneath the platysma, the external jugular vein descends from the angle of the mandible to the clavicle."
+    <br>[{2020-07-04} https://en.wikipedia.org/wiki/Platysma_muscle]
+    <a class="clsHide" href="#idMsclHmn065dsn"></a></p>
+  <p id="idMsclHmn065nam">name::
+    <br>* Mcs.musclePlatysma, /platísma/,
+    <br>* Mcs.ognMuscle.065-platysma!⇒musclePlatysma,
+    <br>* Mcs.ognMuscle.platysma!⇒musclePlatysma,
+    <br>* Mcs.platysma-muscle!⇒musclePlatysma,
+    <a class="clsHide" href="#idMsclHmn065nam"></a></p>
   </section>
   </section>
 
@@ -2194,7 +2348,10 @@
     <br>[{2020-07-03} https://en.wikipedia.org/wiki/Anatomical_terms_of_muscle#Agonist]
     <a class="clsHide" href="#idMsclHmn061dsn"></a></p>
   <p id="idMsclHmn061nam">name::
-    <br>* Mcs.ognMuscle.antagonist,
+    <br>* Mcs.antagonist-muscle!⇒muscleAntagonist,
+    <br>* Mcs.muscleAntagonist,
+    <br>* Mcs.ognMuscle.061-antagonist!⇒muscleAntagonist,
+    <br>* Mcs.ognMuscle.antagonist!⇒muscleAntagonist,
     <a class="clsHide" href="#idMsclHmn061nam"></a></p>
   <p id="idMsclHmn061dsnL">descriptionLong::
     <br>"Η ανταγωνιστική κίνηση πραγματοποιείται από δύο ομάδες μυών, τους αγωνιστές και τους ανταγωνιστές. Οι έννοιες αυτές αναφέρονται σε ομάδες μυών που μπορούν να προκαλέσουν ή να υιοθετή σουν μια κίνηση. Οι αγωνιστές μύες προκαλούν μια κίνηση μέσω της σύσπασης τους. Οι ανταγωνιστές μύες αντιτίθενται σε μια συγκεκριμένη κίνηση. Αυτόσημαίνει πως ελέγχουν την κίνηση, επιβραδύνοντας ή επιταχύνοντας την. Ο ”ανταγωνισμός” δεν είναι μια εγγενής ιδιότητα. Είναι ένας ρόλος, τον οποίο αναλαμβάνει ένας μυς αναλόγως την κίνηση. Εάν η κίνηση αντιστραφεί, οι αγωνιστές και οι ανταγωνιστές μύες θα ανταλλάξουν ρόλους. Ένας καμπτήρας μυς, κατά την κάμψη δρα ως αγωνιστής, ενώ κατά την έκταση ως ανταγωνιστής. Ένας τανύων μυς, αντίθετα, κατά την κάμψη δρα ως ανταγωνιστής ενώ κατά την έκταση ως αγωνιστής.
@@ -4731,6 +4888,6 @@
   ga('send', 'pageview');
 </script>
 
-<script src="https://synagonism.github.io/hitp/hitp.js"></script>
+<script src="../dirTchInf/dirHitp/hitp.js"></script>
 </body>
 </html>
