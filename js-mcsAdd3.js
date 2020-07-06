@@ -41,16 +41,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirHlth',
-  sDIR = 'dirHlth',
+  sDir = 'dirStn',
+  sDIR = 'dirStn',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'musculoskeletal-system',
+  sN = 'law',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'sysMusculoskeletal',
+  sNS = 'law',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'BdyHmn-sysMs',
+  sNFil = 'Law',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'SysOgnHmn001';
+  sNId = 'Law';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -58,7 +58,7 @@ s =
   '<head>\n' +
   '  <meta charset="utf-8">\n' +
   '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-  '  <title>Mcs.' + sNS + ' (' + sN + ' 0-1-0.' + moUtil.fDateYMD() + ' draft)</title>\n' +
+  '  <title>Mcs.' + sNS + ' (0-1-0.' + moUtil.fDateYMD() + ' draft)</title>\n' +
   '  <meta name="keywords" content="' + sN + ', ' + sNS + ', ModelConceptSensorial, McsHitp, Synagonism">\n' +
   '  <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">\n' +
   '</head>\n' +
