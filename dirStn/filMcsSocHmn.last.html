@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.society (human-society 0-6-0.2020-06-19 draft)</title>
+  <title>Mcs.society (0-7-0.2020-07-06 draft)</title>
   <meta name="keywords" content="human-society, society, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -41,27 +41,63 @@
   <h1 id="idSocHmnatt001H1">01_member of society
     <a class="clsHide" href="#idSocHmnatt001H1"></a></h1>
   <p id="idSocHmnatt001nam">name::
-    <br>* Mcs.society'01_member,
-    <br>* Mcs.society'att001-member,
-    <br>* Mcs.society'member-att001,
-    <br>* Mcs.society'human-att001,
+    <br>* Mcs.citizen,
+    <br>* Mcs.society'01_member!⇒citizen,
+    <br>* Mcs.society'att001-member!⇒citizen,
+    <br>* Mcs.society'member-att001!⇒citizen,
+    <br>* Mcs.society'human-att001!⇒citizen,
+    <br>====== langoGreek:
+    <br>* McsEll.πολίτης!=citizen,
     <a class="clsHide" href="#idSocHmnatt001nam"></a></p>
   <p id="idSocHmnatt001dsn">description::
-    <br>· any human PART of this society
+    <br>· any <a class="clsPreview" href="/dirHmn/filMcsHmn.last.html#idOverview">human</a> PART of a-society.
     <a class="clsHide" href="#idSocHmnatt001dsn"></a></p>
+
+  <section id="idSocHmnatt015">
+  <h2 id="idSocHmnatt015H2">citizenship of society
+    <a class="clsHide" href="#idSocHmnatt015H2"></a></h2>
+  <p id="idSocHmnatt015dsn">description::
+    <br>· the-relation of a-member with his|her society.
+    <a class="clsHide" href="#idSocHmnatt015dsn"></a></p>
+  <p id="idSocHmnatt015nam">name::
+    <br>* Mcs.citizenship,
+    <br>* Mcs.society'att015-citizenship!=citizenship,
+    <br>* Mcs.society'citizenship!=citizenship,
+    <br>====== langoGreek:
+    <br>* McsEll.ιθαγένεια!=citizenship,
+    <br>* McsEll.υπηκοότητα!=citizenship, (old),
+    <a class="clsHide" href="#idSocHmnatt015nam"></a></p>
+  </section>
+
+  <section id="idSocHmnatt014">
+  <h2 id="idSocHmnatt014H2">social-stratification of society
+    <a class="clsHide" href="#idSocHmnatt014H2"></a></h2>
+  <p id="idSocHmnatt014dsn">description::
+    <br>"Social stratification refers to a society's categorization of its people into groups based on socioeconomic factors like wealth, income, race, education, gender, occupation, social status, or derived power (social and political). As such, stratification is the relative social position of persons within a social group, category, geographic region, or social unit.[1][2][3]
+    <br>In modern Western societies, social stratification is typically defined in terms of three social classes: the upper class, the middle class, and the lower class; in turn, each class can be subdivided into the upper-stratum, the middle-stratum, and the lower stratum.[4] Moreover, a social stratum can be formed upon the bases of kinship, clan, tribe, or caste, or all four.
+    <br>The categorization of people by social stratum occurs most clearly in complex state-based, polycentric, or feudal societies, the latter being based upon socio-economic relations among classes of nobility and classes of peasants. Historically, whether or not hunter-gatherer, tribal, and band societies can be defined as socially stratified, or if social stratification otherwise began with agriculture and large-scale means of social exchange, remains a debated matter in the social sciences.[5] Determining the structures of social stratification arises from inequalities of status among persons, therefore, the degree of social inequality determines a person's social stratum. Generally, the greater the social complexity of a society, the more social stratification exists, by way of social differentiation.[6]"
+    <br>[{2020-07-06} https://en.wikipedia.org/wiki/Social_stratification]
+    <a class="clsHide" href="#idSocHmnatt014dsn"></a></p>
+  <p id="idSocHmnatt014nam">name::
+    <br>* Mcs.social-stratification,
+    <br>* Mcs.society'att014-stratification,
+    <br>* Mcs.society'stratification,
+    <br>* Mcs.stratification-of-society,
+    <a class="clsHide" href="#idSocHmnatt014nam"></a></p>
+  </section>
 </section>
 
 <section id="idSocHmnatt002">
   <h1 id="idSocHmnatt002H1">02_sociality of society
     <a class="clsHide" href="#idSocHmnatt002H1"></a></h1>
+  <p id="idSocHmnatt002dsn">description::
+    <br>· the-relations of the-citizens of a-society.
+    <a class="clsHide" href="#idSocHmnatt002dsn"></a></p>
   <p id="idSocHmnatt002nam">name::
     <br>* Mcs.society'02_sociality,
     <br>* Mcs.society'att002-sociality,
     <br>* Mcs.society'sociality-att002,
     <a class="clsHide" href="#idSocHmnatt002nam"></a></p>
-  <p id="idSocHmnatt002dsn">description::
-    <br>·
-    <a class="clsHide" href="#idSocHmnatt002dsn"></a></p>
 </section>
 
 <section id="idSocHmnatt003">
@@ -184,11 +220,24 @@
   </section>
 </section>
 
+<section id="idSocHmnatt016">
+  <h1 id="idSocHmnatt016H1">07_law of society
+    <a class="clsHide" href="#idSocHmnatt016H1"></a></h1>
+  <p id="idSocHmnatt016dsn">description::
+    <br>"Law is commonly understood as a system of rules that are created and enforced through social or governmental institutions to regulate conduct,[2] although its precise definition is a matter of longstanding debate.[3][4][5] It has been variously described as a science[6][7] and the art of justice.[8][9][10] State-enforced laws can be made by a collective legislature or by a single legislator, resulting in statutes, by the executive through decrees and regulations, or established by judges through precedent, normally in common law jurisdictions. Private individuals can create legally binding contracts, including arbitration agreements that may elect to accept alternative arbitration to the normal court process. The formation of laws themselves may be influenced by a constitution, written or tacit, and the rights encoded therein. The law shapes politics, economics, history and society in various ways and serves as a mediator of relations between people."
+    <br>[{2020-07-06} https://en.wikipedia.org/wiki/Law]
+    <a class="clsHide" href="#idSocHmnatt016dsn"></a></p>
+  <p id="idSocHmnatt016nam">name::
+    <br>* Mcs.society'att016-law,
+    <br>* Mcs.society'law,
+    <a class="clsHide" href="#idSocHmnatt016nam"></a></p>
+</section>
+
 <section id="idSocHmnatt007">
-  <h1 id="idSocHmnatt007H1">07_satisfier-system of society
+  <h1 id="idSocHmnatt007H1">08_satisfier-system of society
     <a class="clsHide" href="#idSocHmnatt007H1"></a></h1>
   <p id="idSocHmnatt007nam">name::
-    <br>* Mcs.society'07_satisfier-system,
+    <br>* Mcs.society'08_satisfier-system,
     <br>* Mcs.society'att007-satisfier-system,
     <br>* Mcs.society'satisfier-system-att007,
     <a class="clsHide" href="#idSocHmnatt007nam"></a></p>
@@ -198,10 +247,10 @@
 </section>
 
 <section id="idSocHmnatt008">
-  <h1 id="idSocHmnatt008H1">08_food of society
+  <h1 id="idSocHmnatt008H1">09_food of society
     <a class="clsHide" href="#idSocHmnatt008H1"></a></h1>
   <p id="idSocHmnatt008nam">name::
-    <br>* Mcs.society'08_food,
+    <br>* Mcs.society'09_food,
     <br>* Mcs.society'att008-food,
     <br>* Mcs.society'food-att008,
     <a class="clsHide" href="#idSocHmnatt008nam"></a></p>
@@ -211,10 +260,10 @@
 </section>
 
 <section id="idSocHmnatt009">
-  <h1 id="idSocHmnatt009H1">09_language of society
+  <h1 id="idSocHmnatt009H1">10_language of society
     <a class="clsHide" href="#idSocHmnatt009H1"></a></h1>
   <p id="idSocHmnatt009nam">name::
-    <br>* Mcs.society'09_language,
+    <br>* Mcs.society'10_language,
     <br>* Mcs.society'att009-language,
     <br>* Mcs.society'language-att009,
     <a class="clsHide" href="#idSocHmnatt009nam"></a></p>
@@ -224,10 +273,10 @@
 </section>
 
 <section id="idSocHmnatt010">
-  <h1 id="idSocHmnatt010H1">10_technology of society
+  <h1 id="idSocHmnatt010H1">11_technology of society
     <a class="clsHide" href="#idSocHmnatt010H1"></a></h1>
   <p id="idSocHmnatt010nam">name::
-    <br>* Mcs.society'10_technology,
+    <br>* Mcs.society'11_technology,
     <br>* Mcs.society'att010-technology,
     <br>* Mcs.society'technology-att010,
     <a class="clsHide" href="#idSocHmnatt010nam"></a></p>
@@ -237,10 +286,10 @@
 </section>
 
 <section id="idSocHmnrscF">
-  <h1 id="idSocHmnrscFH1">11_resource of society
+  <h1 id="idSocHmnrscFH1">resource of society
     <a class="clsHide" href="#idSocHmnrscFH1"></a></h1>
   <p id="idSocHmnrscnam">name::
-    <br>* Mcs.society'11_resource,
+    <br>* Mcs.society'resource,
     <br>* Mcs.society'attResource,
     <br>* Mcs.society'resource,
     <a class="clsHide" href="#idSocHmnrscnam"></a></p>
@@ -250,10 +299,10 @@
 </section>
 
 <section id="idSocHmnsrtrF">
-  <h1 id="idSocHmnsrtrFH1">12_structure of society
+  <h1 id="idSocHmnsrtrFH1">structure of society
     <a class="clsHide" href="#idSocHmnsrtrFH1"></a></h1>
   <p id="idSocHmnsrtrFnam">name::
-    <br>* Mcs.society'12_structure,
+    <br>* Mcs.society'structure,
     <br>* Mcs.society'attStructure,
     <br>* Mcs.society'structure,
     <a class="clsHide" href="#idSocHmnsrtrFnam"></a></p>
@@ -263,10 +312,10 @@
 </section>
 
 <section id="idSocHmndngF">
-  <h1 id="idSocHmndngFH1">13_DOING of society
+  <h1 id="idSocHmndngFH1">DOING of society
     <a class="clsHide" href="#idSocHmndngFH1"></a></h1>
   <p id="idSocHmndngFnam">name::
-    <br>* Mcs.society'13_doing,
+    <br>* Mcs.society'doing,
     <br>* Mcs.society'attDoing,
     <br>* Mcs.society'doing,
     <a class="clsHide" href="#idSocHmndngFnam"></a></p>
@@ -276,10 +325,10 @@
 </section>
 
 <section id="idSocHmnevgF">
-  <h1 id="idSocHmnevgFH1">14_evoluting of society
+  <h1 id="idSocHmnevgFH1">evoluting of society
     <a class="clsHide" href="#idSocHmnevgFH1"></a></h1>
   <p id="idSocHmnevgnam">name::
-    <br>* Mcs.society'14_evoluting,
+    <br>* Mcs.society'evoluting,
     <br>* Mcs.society'attEvoluting,
     <br>* Mcs.society'evoluting,
     <a class="clsHide" href="#idSocHmnevgnam"></a></p>
