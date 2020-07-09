@@ -41,16 +41,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirStn',
-  sDIR = 'dirStn',
+  sDir = 'dirEdu',
+  sDIR = 'dirEdu',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'law',
+  sN = 'resource.book',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'law',
+  sNS = 'book',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'Law',
+  sNFil = 'Book',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Law';
+  sNId = 'Book';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -58,7 +58,7 @@ s =
   '<head>\n' +
   '  <meta charset="utf-8">\n' +
   '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-  '  <title>Mcs.' + sNS + ' (0-1-0.' + moUtil.fDateYMD() + ' draft)</title>\n' +
+  '  <title>Mcs.' + sNS + '-(0-1-0.' + moUtil.fDateYMD() + ' draft)' + sN + '</title>\n' +
   '  <meta name="keywords" content="' + sN + ', ' + sNS + ', ModelConceptSensorial, McsHitp, Synagonism">\n' +
   '  <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">\n' +
   '</head>\n' +
@@ -67,7 +67,7 @@ s =
   '<header id="idHeader">\n' +
   '  <p></p>\n' +
   '  <h1 id="idHeaderH1">' + sN + '\n' +
-  '    <br>' +  'sensorial-concept-Mcs (' + sNS + ')\n' +
+  '    <br>sensorial-concept-Mcs\n' +
   '    </h1>\n' +
   '  <p id="idHeadercrd">McsHitp-creation:: {' + moUtil.fDateYMD() + '}\n' +
   '    <a class="clsHide" href="#idHeadercrd"></a></p>\n' +
@@ -92,7 +92,6 @@ s =
   '  <h1 id="id' + sNId + 'rscFH1">resource of ' + sNS + '\n' +
   '    <a class="clsHide" href="#id' + sNId + 'rscFH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'rscnam">name::\n' +
-  '    <br>* Mcs.' + sNS + '\'attResource,\n' +
   '    <br>* Mcs.' + sNS + '\'resource,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'rscnam"></a></p>\n' +
   '  <p id="id' + sNId + 'rscwpa">addressWpg::\n' +
@@ -104,7 +103,6 @@ s =
   '  <h1 id="id' + sNId + 'srtrFH1">structure of ' + sNS + '\n' +
   '    <a class="clsHide" href="#id' + sNId + 'srtrFH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'srtrnam">name::\n' +
-  '    <br>* Mcs.' + sNS + '\'attStructure,\n' +
   '    <br>* Mcs.' + sNS + '\'structure,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'srtrnam"></a></p>\n' +
   '  <p id="id' + sNId + 'srtrdsn">description::\n' +
@@ -116,7 +114,6 @@ s =
   '  <h1 id="id' + sNId + 'dngFH1">DOING of ' + sNS + '\n' +
   '    <a class="clsHide" href="#id' + sNId + 'dngFH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'dngnam">name::\n' +
-  '    <br>* Mcs.' + sNS + '\'attDoing,\n' +
   '    <br>* Mcs.' + sNS + '\'doing,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'dngnam"></a></p>\n' +
   '  <p id="id' + sNId + 'dngdsn">description::\n' +
@@ -128,7 +125,6 @@ s =
   '  <h1 id="id' + sNId + 'evgFH1">EVOLUTING of ' + sNS + '\n' +
   '    <a class="clsHide" href="#id' + sNId + 'evgFH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'evgnam">name::\n' +
-  '    <br>* Mcs.' + sNS + '\'attEvoluting,\n' +
   '    <br>* Mcs.' + sNS + '\'evoluting,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'evgnam"></a></p>\n' +
   '  <p id="id' + sNId + 'evg' + moUtil.fDateYMD2() + '">{time.' + moUtil.fDateYMD() + '}::\n' +
