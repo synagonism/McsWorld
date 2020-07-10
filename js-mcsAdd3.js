@@ -58,7 +58,7 @@ s =
   '<head>\n' +
   '  <meta charset="utf-8">\n' +
   '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-  '  <title>Mcs.' + sNS + '-(0-1-0.' + moUtil.fDateYMD() + ' draft)' + sN + '</title>\n' +
+  '  <title>Mcs.' + sNS + '-(0-1-0.' + moUtil.fDateYMD() + ' draft) ' + sN + '</title>\n' +
   '  <meta name="keywords" content="' + sN + ', ' + sNS + ', ModelConceptSensorial, McsHitp, Synagonism">\n' +
   '  <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">\n' +
   '</head>\n' +
