@@ -41,16 +41,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirEdu',
-  sDIR = 'dirEdu',
+  sDir = 'dirStn',
+  sDIR = 'dirEtn',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'resource.book',
+  sN = 'human-economy',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'book',
+  sNS = 'economy',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'Book',
+  sNFil = 'EconHmn',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Book';
+  sNId = 'EconHmn';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -67,7 +67,7 @@ s =
   '<header id="idHeader">\n' +
   '  <p></p>\n' +
   '  <h1 id="idHeaderH1">' + sN + '\n' +
-  '    <br>sensorial-concept-Mcs\n' +
+  '    <br>sensorial-concept-Mcs (' + sNS + ')\n' +
   '    </h1>\n' +
   '  <p id="idHeadercrd">McsHitp-creation:: {' + moUtil.fDateYMD() + '}\n' +
   '    <a class="clsHide" href="#idHeadercrd"></a></p>\n' +
