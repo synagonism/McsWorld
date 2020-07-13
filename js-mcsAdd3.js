@@ -42,15 +42,15 @@ var
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
   sDir = 'dirStn',
-  sDIR = 'dirEtn',
+  sDIR = 'dirStn',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'human-economy',
+  sN = 'human.worker',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'economy',
+  sNS = 'worker',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'EconHmn',
+  sNFil = 'Wkr',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'EconHmn';
+  sNId = 'Wkr';
 
 s =
   '<!DOCTYPE html>\n' +
