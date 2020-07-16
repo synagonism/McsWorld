@@ -41,16 +41,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirStn',
-  sDIR = 'dirStn',
+  sDir = 'dirLag',
+  sDIR = 'dirLag',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'human.worker',
+  sN = 'language-of-entities',
   //4. SHORT-name: ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'worker',
+  sNS = 'lagEnt',
   //5. FILE-name: shows relation of another file: DtcbnetEth, DnLbr,
-  sNFil = 'Wkr',
+  sNFil = 'LagEnt',
   //6. Name for IDs eg Dtc, unique in this file.
-  sNId = 'Wkr';
+  sNId = 'LagEnt';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -122,7 +122,7 @@ s =
   '</section>\n' +
   '\n' +
   '<section id="id' + sNId + 'evgF">\n' +
-  '  <h1 id="id' + sNId + 'evgFH1">EVOLUTING of ' + sNS + '\n' +
+  '  <h1 id="id' + sNId + 'evgFH1">evoluting of ' + sNS + '\n' +
   '    <a class="clsHide" href="#id' + sNId + 'evgFH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'evgnam">name::\n' +
   '    <br>* Mcs.' + sNS + '\'evoluting,\n' +
