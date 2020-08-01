@@ -1894,14 +1894,20 @@
   <section id="idSys009spc001">
   <h2 id="idSys009spc001H2">sysDynamic.self-001
     <a class="clsHide" href="#idSys009spc001H2"></a></h2>
+  <p id="idSys009spc001dsn">description::
+    <br>· self-dynamic-system is <a class="clsPreview" href="#idSys009">a-dynamic-system</a> that evolves by itself.
+    <a class="clsHide" href="#idSys009spc001dsn"></a></p>
   <p id="idSys009spc001nam">name::
     <br>* Mcs.sysDynamic.001-self,
     <br>* Mcs.sysDynamic.self-001,
     <br>* Mcs.self-dynamic-system,
+    <br>* Mcs.self-organized-system,
     <a class="clsHide" href="#idSys009spc001nam"></a></p>
-  <p id="idSys009spc001dsn">description::
-    <br>· self-dynamic-system is <a class="clsPreview" href="#idSys009">a-dynamic-system</a> that evolves by itself.
-    <a class="clsHide" href="#idSys009spc001dsn"></a></p>
+  <p id="idSys009spc001dsnL">descriptionLong::
+    <br>"Self-organization, also called (in the social sciences) spontaneous order, is a process where some form of overall order arises from local interactions between parts of an initially disordered system. The process can be spontaneous when sufficient energy is available, not needing control by any external agent. It is often triggered by seemingly random fluctuations, amplified by positive feedback. The resulting organization is wholly decentralized, distributed over all the components of the system. As such, the organization is typically robust and able to survive or self-repair substantial perturbation. Chaos theory discusses self-organization in terms of islands of predictability in a sea of chaotic unpredictability.
+    <br>Self-organization occurs in many physical, chemical, biological, robotic, and cognitive systems. Examples of self-organization include crystallization, thermal convection of fluids, chemical oscillation, animal swarming, neural circuits."
+    <br>[{2020-08-01} https://en.wikipedia.org/wiki/Self-organization]
+    <a class="clsHide" href="#idSys009spc001dsnL"></a></p>
   </section>
 
   <section id="idSys009spc002">
@@ -1962,6 +1968,9 @@
 <section id="idSysMng">
   <h1 id="idSysMngH1">system.managing-013
     <a class="clsHide" href="#idSysMngH1"></a></h1>
+  <p id="idSysMngdsn">description::
+    <br>· managing-system is <a class="clsPreview" href="../dirCor/filMcsWhl.last.html#idSys">the-system</a> of <a class="clsPreview" href="#idSys009">a-dynamic-system[a]</a> responsible for its[a] direction|evoluting.
+    <a class="clsHide" href="#idSysMngdsn"></a></p>
   <p id="idSysMngnam">name::
     <br>* Mcs.control-system!⇒sysManaging,
     <br>* Mcs.managing-system!⇒sysManaging,
@@ -1973,9 +1982,6 @@
     <br>* Mcs.sysMng!⇒sysManaging,
     <br>* Mcs.sysManaging'(managing-system)!⇒sysManaging,
     <a class="clsHide" href="#idSysMngnam"></a>
-  <p id="idSysMngdsn">description::
-    <br>· managing-system is <a class="clsPreview" href="../dirCor/filMcsWhl.last.html#idSys">the-system</a> of <a class="clsPreview" href="#idSys009">a-dynamic-system[a]</a> responsible for its[a] direction|evoluting.
-    <a class="clsHide" href="#idSysMngdsn"></a></p>
 
   <section id="idSysMngatt001">
   <h2 id="idSysMngatt001H2">dynamic-system of sysManaging
@@ -1988,15 +1994,15 @@
     <a class="clsHide" href="#idSysMngatt001nam"></a></p>
   </section>
 
-  <section id="idSysMngrsc">
-  <h2 id="idSysMngrscH2">resource of sysManaging
-    <a class="clsHide" href="#idSysMngrscH2"></a></h2>
-  <p id="idSysMngrscnam">name::
+  <section id="idSysMngrscF">
+  <h2 id="idSysMngrscFH2">resource of sysManaging
+    <a class="clsHide" href="#idSysMngrscFH2"></a></h2>
+  <p id="idSysMngrscFnam">name::
     <br>* Mcs.sysManaging'resource,
-    <a class="clsHide" href="#idSysMngrscnam"></a></p>
-  <p id="idSysMngrscdsn">description::
+    <a class="clsHide" href="#idSysMngrscFnam"></a></p>
+  <p id="idSysMngrscFdsn">description::
     <br>·
-    <a class="clsHide" href="#idSysMngrscdsn"></a></p>
+    <a class="clsHide" href="#idSysMngrscFdsn"></a></p>
 
   <section id="idSysMngsci">
   <h3 id="idSysMngsciH3">science of sysManaging
@@ -2043,7 +2049,7 @@
   <h3 id="idSysMngstrH3">SPECIFIC-TREE of sysManaging
     <a class="clsHide" href="#idSysMngstrH3"></a></h3>
   <p id="idSysMngspc">specific-of-sysManaging::
-    <br>* internal-sysManaging,
+    <br>* <a class="clsPreview" href="#idSysMngItl">internal-sysManaging</a>,
     <br>* internalNo-sysManaging,
     <br>* internalBoth-sysManaging,
     <br>===
@@ -2090,74 +2096,69 @@
   <section id="idSysMngBio">
   <h2 id="idSysMngBioH2">sysManaging.bio
     <a class="clsHide" href="#idSysMngBioH2"></a></h2>
-  <p id="idSysMngBionam">name::
-    <br>* Mcs.sysManaging.bio!⇒sysGovc,
-    <br>* Mcs.bio'02_sysGovernance!⇒sysGovc,
-    <br>* Mcs.bio'sysGovc!⇒sysGovc,
-    <br>* Mcs.governance-system!⇒sysGovc,
-    <br>* Mcs.sysGovc,
-    <br>* Mcs.sysGovcBio!⇒sysGovc,
-    <br>* Mcs.sysManaging.bio!⇒sysGovc,
-    <a class="clsHide" href="#idSysMngBionam"></a></p>
   <p id="idSysMngBiodsn">description::
-    <br>· governance-system is <a class="clsPreview" href="#idSysMngBiodsn">the-managing-system</a> of <a class="clsPreview" href="filMcsBio.last.html#idOverview">a-bio-system</a>.
+    <br>· managing-system is <a class="clsPreview" href="#idSysMngBiodsn">the-managing-system</a> of <a class="clsPreview" href="../dirOgm/filMcsBio.last.html#idOverview">a-bio</a>.
     <a class="clsHide" href="#idSysMngBiodsn"></a></p>
+  <p id="idSysMngBionam">name::
+    <br>* Mcs.sysManaging.bio!⇒sysMngBio,
+    <br>* Mcs.bio'02_sysManaging!⇒sysMngBio,
+    <br>* Mcs.bio'sysMngBio!⇒sysMngBio,
+    <br>* Mcs.managing-system!⇒sysMngBio,
+    <br>* Mcs.sysMngBio,
+    <br>* Mcs.sysMngBioBio!⇒sysMngBio,
+    <br>* Mcs.sysManaging.bio!⇒sysMngBio,
+    <a class="clsHide" href="#idSysMngBionam"></a></p>
+  <p id="idSysMngBioSpc">specific-tree-of-sysMngBio::
+    <br>* <a class="clsPreview" href="../dirStn/filMcsStn.last.html#idStnatt005">governance-system</a>,
+    <br>* managing-system-of-organism,
+    <a class="clsHide" href="#idSysMngBioSpc"></a></p>
   </section>
 
   <section id="idSysMng001">
   <h2 id="idSysMng001H2">sysManaging.ogm-001
     <a class="clsHide" href="#idSysMng001H2"></a></h2>
-  <p id="idSysMng001nam">name::
-    <br>* Mcs.sysManaging.001-ogm!⇒sysGovcOgm,
-    <br>* Mcs.sysManaging.ogm-001!⇒sysGovcOgm,
-    <br>* Mcs.ogm'02_sysGovc!⇒sysGovcOgm,
-    <br>* Mcs.ogm'governance-system!⇒sysGovcOgm,
-    <br>* Mcs.ogm'sysGovc!⇒sysGovcOgm,
-    <br>* Mcs.sysGovcOgm,
-    <br>* Mcs.sysGovc.ogm!⇒sysGovcOgm,
-    <a class="clsHide" href="#idSysMng001nam"></a></p>
   <p id="idSysMng001dsn">description::
-    <br>·
+    <br>· an
     <a class="clsHide" href="#idSysMng001dsn"></a></p>
-  </section>
-
-  <section id="idSysMng002">
-  <h2 id="idSysMng002H2">sysManaging.human-002
-    <a class="clsHide" href="#idSysMng002H2"></a></h2>
-  <p id="idSysMng002nam">name::
-    <br>* Mcs.sysManaging.002-human!⇒sysGovcHmn,
-    <br>* Mcs.sysManaging.human-002!⇒sysGovcHmn,
-    <br>* Mcs.governance-system-of-human-att019!⇒sysGovcHmn,
-    <br>* Mcs.human'04_governance-system!⇒sysGovcHmn,
-    <br>* Mcs.human'att019-governance-system!⇒sysGovcHmn,
-    <br>* Mcs.sysGovcHmn,
-    <a class="clsHide" href="#idSysMng002nam"></a></p>
-  <p id="idSysMng002dsn">description::
-    <br>·
-    <a class="clsHide" href="#idSysMng002dsn"></a></p>
+  <p id="idSysMng001nam">name::
+    <br>* Mcs.sysManaging.001-ogm!⇒sysMngOgm,
+    <br>* Mcs.sysManaging.ogm-001!⇒sysMngOgm,
+    <br>* Mcs.ogm'02_sysMngBio!⇒sysMngOgm,
+    <br>* Mcs.ogm'managing-system!⇒sysMngOgm,
+    <br>* Mcs.ogm'sysMngBio!⇒sysMngOgm,
+    <br>* Mcs.sysMngOgm,
+    <br>* Mcs.sysMngBio.ogm!⇒sysMngOgm,
+    <a class="clsHide" href="#idSysMng001nam"></a></p>
+  <p id="idSysMng001Spc">specific-tree-of-sysMngOgm::
+    <br>* animal-managing-system,
+    <br>* <a class="clsPreview" href="../dirHlth/filMcsBdyHmn.last.html#idSysOgnHmn003">human-managing-system</a>,
+    <br>* plant-managing-system,
+    <a class="clsHide" href="#idSysMng001Spc"></a></p>
   </section>
 
   <section id="idSysMng003">
   <h2 id="idSysMng003H2">sysManaging.plant-003
     <a class="clsHide" href="#idSysMng003H2"></a></h2>
-  <p id="idSysMng003nam">name::
-    <br>* Mcs.sysManaging.003-plant!⇒sysGovcPlnt,
-    <br>* Mcs.sysManaging.plant-003!⇒sysGovcPlnt,
-    <br>* Mcs.ogmPlant'02_governance-system!⇒sysGovcPlnt,
-    <br>* Mcs.ogmPlant'att002-governance-system!⇒sysGovcPlnt,
-    <br>* Mcs.ogmPlant'governance-system-att002!⇒sysGovcPlnt,
-    <br>* Mcs.sysGovcPlnt,
-    <a class="clsHide" href="#idSysMng003nam"></a></p>
   <p id="idSysMng003dsn">description::
-    <br>·
+    <br>· plant-managing-sys is the-organism-managing-sys of a-plant.
     <a class="clsHide" href="#idSysMng003dsn"></a></p>
+  <p id="idSysMng003nam">name::
+    <br>* Mcs.managing-sys-of-plant!⇒sysMngPlnt,
+    <br>* Mcs.sysManaging.003-plant!⇒sysMngPlnt,
+    <br>* Mcs.sysManaging.plant-003!⇒sysMngPlnt,
+    <br>* Mcs.ogmPlant'02_managing-system!⇒sysMngPlnt,
+    <br>* Mcs.ogmPlant'att002-managing-system!⇒sysMngPlnt,
+    <br>* Mcs.ogmPlant'managing-system-att002!⇒sysMngPlnt,
+    <br>* Mcs.plant-managing-sys!⇒sysMngPlnt,
+    <br>* Mcs.sysMngPlnt,
+    <a class="clsHide" href="#idSysMng003nam"></a></p>
 
   <section id="idSysMng003att001">
-  <h3 id="idSysMng003att001H3">perception of sysGovcPlnt
+  <h3 id="idSysMng003att001H3">perception of sysMngPlnt
     <a class="clsHide" href="#idSysMng003att001H3"></a></h3>
   <p id="idSysMng003att001nam">name::
-    <br>* Mcs.sysGovcPlnt'att001-perception,
-    <br>* Mcs.sysGovcPlnt'perception-att001,
+    <br>* Mcs.sysMngPlnt'att001-perception,
+    <br>* Mcs.sysMngPlnt'perception-att001,
     <br>* Mcs.ogmPlant'att015-perception,
     <br>* Mcs.ogmPlant'perception-att015,
     <a class="clsHide" href="#idSysMng003att001nam"></a></p>
