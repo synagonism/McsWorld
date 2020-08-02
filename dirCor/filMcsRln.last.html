@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.relation (relation.0-32-0.2020-02-16 draft)</title>
+  <title>Mcs.relation-(0-33-0.2020-08-02 draft)</title>
   <meta name="keywords" content="relation, relation, ModelConceptSensorial, McsHitp, Synagonism">
-  <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
+  <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
 
 <body>
 <header id="idHeader">
   <p></p>
-  <h1 id="idHeaderH1">relation sensorial-concept-Mcs
-    <br>(relation)
+  <h1 id="idHeaderH1">relation
+    <br>sensorial-concept-Mcs
     </h1>
   <p id="idHeadercrd">McsHitp-creation:: {2019-09-10},
     <a class="clsHide" href="#idHeadercrd"></a></p>
@@ -51,15 +51,15 @@
     <a class="clsHide" href="#idRlnargdsn"></a></p>
   <p id="idRlnargnam">name::
     <br>* Mcs.argRln,
-    <br>* Mcs.argument-of-relation,
-    <br>* Mcs.node-of-relation,
-    <br>* Mcs.relation'argument,
-    <br>* Mcs.vertex-of-relation~vertices|vertexes,
+    <br>* Mcs.argument-of-relation!⇒argRln,
+    <br>* Mcs.node-of-relation!⇒argRln,
+    <br>* Mcs.relation'argument!⇒argRln,
+    <br>* Mcs.vertex-of-relation~vertices|vertexes!⇒argRln,
     <br>====== langoKomo:
-    <br>* McsKmo.argo-ro!=argument.relation,
-    <br>* McsKmo.ros-argo!=argument.relation,
+    <br>* McsKmo.argo-ro!=argRln,
+    <br>* McsKmo.ros-argo!=argRln,
     <br>====== langoGreek:
-    <br>* McsEll.όρισμα-σχέσης,
+    <br>* McsEll.όρισμα-σχέσης!=argRln,
     <a class="clsHide" href="#idRlnargnam"></a></p>
   <p id="idRlnarggncchn">generic-chain::
     <br>* <a class="clsPreview" href="filMcsEnt.last.html#idEntBodyNarg">argument-of-bodyNo</a>,
@@ -1609,54 +1609,39 @@
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=mapping]
     <a class="clsHide" href="#idRlnMpgdsn"></a></p>
   <p id="idRlnMpgnam">name::
-    <br>* Mcs.mapping-relation,
-    <br>* Mcs.relation.mapping,
-    <br>* Mcs.am-mapped!~verbEng,
+    <br>* Mcs.am-mapped!~verbEng!⇒rlnMapping,
+    <br>* Mcs.mapping-relation!⇒rlnMapping,
+    <br>* Mcs.relation.mapping!⇒rlnMapping,
+    <br>* Mcs.representation-relation!⇒rlnMapping,
+    <br>* Mcs.rlnMapping,
     <br>====== langoKomo:
-    <br>* McsKmo.ro-mapo!=relation.mapping,
+    <br>* McsKmo.ro-mapo!=rlnMapping,
     <br>====== langoGreek:
-    <br>* McsEll.αντιστοιχία!=relation.mapping,
-    <br>* McsEll.σχέση-αντιστοιχίας!=relation.mapping,
-    <br>* McsEll.αντιστοιχούμαι!~verbEll!=relation.mapping,
+    <br>* McsEll.αντιστοιχία!=rlnMapping,
+    <br>* McsEll.σχέση-αντιστοιχίας!=rlnMapping,
+    <br>* McsEll.αντιστοιχούμαι!~verbEll!=rlnMapping,
     <a class="clsHide" href="#idRlnMpgnam"></a></p>
 
   <section id="idRlnMpgarg">
   <h3 id="idRlnMpgargH3">argument of mapping-rel
     <a class="clsHide" href="#idRlnMpgargH3"></a></h3>
   <p id="idRlnMpgargdsn">description::
-    <br>* archetype (primary entity),
+    <br>* <a class="clsPreview" href="#idRlnMpgarch">archetype (primary entity)</a>,
     <br>* model (secondary entity),
     <a class="clsHide" href="#idRlnMpgargdsn"></a></p>
   <p id="idRlnMpgargnam">name::
-    <br>* Mcs.mapping-relation'argument,
+    <br>* Mcs.rlnMapping'argument,
     <a class="clsHide" href="#idRlnMpgargnam"></a></p>
   </section>
 
   <section id="idRlnMpgarch">
-  <h3 id="idRlnMpgarchH3">archetype of mapping-rel
+  <h3 id="idRlnMpgarchH3">archetype (filMcsMdl.last.html#idMdlatt001) of mapping-rel
     <a class="clsHide" href="#idRlnMpgarchH3"></a></h3>
-  <p id="idRlnMpgarchdsn">description::
-    <br>· archetype is the-original entity that <a class="clsPreview" href="#idRlnMpg">a-mapping-relation</a> connects with another entity, <a class="clsPreview" href="#idRlnMpgmdl">the-model</a>.
-    <a class="clsHide" href="#idRlnMpgarchdsn"></a></p>
-  <p id="idRlnMpgarchnam">name::
-    <br>* Mcs.ARCHETYPE,
-    <br>* Mcs.mapping-relation'archetype,
-    <a class="clsHide" href="#idRlnMpgarchnam"></a></p>
   </section>
 
   <section id="idRlnMpgmdl">
-  <h3 id="idRlnMpgmdlH3">model of mapping-rel
+  <h3 id="idRlnMpgmdlH3">model (<a class="clsPreview" href="filMcsMdl.last.html#idOverview">link</a>) of mapping-rel
     <a class="clsHide" href="#idRlnMpgmdlH3"></a></h3>
-  <p id="idRlnMpgmdldsn">description::
-    <br>· model is the-secondary entity that <a class="clsPreview" href="#idRlnMpg">a-mapping-relation</a> connects with an-original-entity, <a class="clsPreview" href="#idRlnMpgarch">the-archetype</a>.
-    <a class="clsHide" href="#idRlnMpgmdldsn"></a></p>
-  <p id="idRlnMpgmdlnam">name::
-    <br>* Mcs.MODEL,
-    <br>* Mcs.mapping-relation'model,
-    <a class="clsHide" href="#idRlnMpgmdlnam"></a></p>
-  <p id="idRlnMpgmdlgncchn">generic-chain::
-    <br>* <a class="clsPreview" href="filMcsEnt.last.html#idOverview">entity</a>,
-    <a class="clsHide" href="#idRlnMpgmdlgncchn"></a></p>
   </section>
   </section>
 
@@ -1793,6 +1778,6 @@
   ga('send', 'pageview');
 </script>
 
-<script src="https://synagonism.github.io/hitp/hitp.js"></script>
+<script src="../dirTchInf/dirHitp/hitp.js"></script>
 </body>
 </html>
