@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.model-(0-1-0.2020-08-02 draft) entity.model</title>
+  <title>Mcs.model-(0-3-0.2020-08-05 draft) system.model</title>
   <meta name="keywords" content="entity.model, model, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -11,7 +11,7 @@
 <body>
 <header id="idHeader">
   <p></p>
-  <h1 id="idHeaderH1">entity.model
+  <h1 id="idHeaderH1">system.model
     <br>sensorial-concept-Mcs (model)
     </h1>
   <p id="idHeadercrd">McsHitp-creation:: {2020-08-02}
@@ -23,15 +23,21 @@
     <a class="clsHide" href="#idOverviewH1"></a></h1>
   <p id="idDescription">description::
     <br>· model is a-secondary-entity which <a class="clsPreview" href="filMcsRln.last.html#idRlnMpg">is-mapped</a> with a-primary-one, the-archetype.
+    <br>· output of methodMapping is the-secondary entity which is a-model of <a class="clsPreview" href="#idDngActgMpgmtdatt001dsn">the-input</a>.
     <a class="clsHide" href="#idDescription"></a></p>
   <p id="idName">name::
     <br>* Mcs.filMcsMdl.last.html!⇒model,
     <br>* Mcs.dirCor/filMcsMdl.last.html!⇒model,
     <br>* Mcs.MODEL,
-    <br>* Mcs.entity.model!⇒model,
+    <br>* Mcs.methodMapping'02_output,
+    <br>* Mcs.methodMapping'att002-output,
+    <br>* Mcs.methodMapping'output-att002,
+    <br>* Mcs.methodMapping'model,
     <br>* Mcs.model,
-    <br>* Mcs.model'(entity.model)!⇒model,
+    <br>* Mcs.model'(system.model)!⇒model,
+    <br>* Mcs.model-of-methodMapping,
     <br>* Mcs.rlnMapping'model!⇒model,
+    <br>* Mcs.system.model!⇒model,
     <a class="clsHide" href="#idName"></a></p>
 </section>
 
@@ -40,13 +46,20 @@
     <a class="clsHide" href="#idMdlatt001H1"></a></h1>
   <p id="idMdlatt001dsn">description::
     <br>· archetype is the-original entity that <a class="clsPreview" href="filMcsRln.last.html#idRlnMpg">a-mapping-relation</a> connects with another entity, <a class="clsPreview" href="#idOverview">the-model</a>.
+    <br>· input of methodMapping is the-primary entity that is-mapped to another one.
     <a class="clsHide" href="#idMdlatt001dsn"></a></p>
   <p id="idMdlatt001nam">name::
+    <br>* Mcs.archetype-of-methodMapping,
     <br>* Mcs.archetype-of-model,
+    <br>* Mcs.methodMapping'01_input,
+    <br>* Mcs.methodMapping'att001-input,
+    <br>* Mcs.methodMapping'archetype,
+    <br>* Mcs.methodMapping'input=att001,
     <br>* Mcs.model'01_archetype,
     <br>* Mcs.model'att001-archetype,
     <br>* Mcs.model'archetype,
     <br>* Mcs.rlnMapping'archetype,
+    <br>* Mcs.subject-of-model,
     <a class="clsHide" href="#idMdlatt001nam"></a></p>
 </section>
 
@@ -72,6 +85,89 @@
     <br>* Mcs.model'att004-medium,
     <br>* Mcs.model'medium,
     <a class="clsHide" href="#idMdlatt004nam"></a></p>
+</section>
+
+<section id="idMdlatt005">
+  <h1 id="idMdlatt005H1">05_node of model
+    <a class="clsHide" href="#idMdlatt005H1"></a></h1>
+  <p id="idMdlatt005dsn">description::
+    <br>·
+    <a class="clsHide" href="#idMdlatt005dsn"></a></p>
+  <p id="idMdlatt005nam">name::
+    <br>* Mcs.model'05_node,
+    <br>* Mcs.model'att005-node,
+    <br>* Mcs.model'node,
+    <a class="clsHide" href="#idMdlatt005nam"></a></p>
+</section>
+
+<section id="idMdlatt006">
+  <h1 id="idMdlatt006H1">06_node-relation of model
+    <a class="clsHide" href="#idMdlatt006H1"></a></h1>
+  <p id="idMdlatt006dsn">description::
+    <br>·
+    <a class="clsHide" href="#idMdlatt006dsn"></a></p>
+  <p id="idMdlatt006nam">name::
+    <br>* Mcs.model'06_node-relation,
+    <br>* Mcs.model'att006-node-relation,
+    <br>* Mcs.model'node-relation,
+    <a class="clsHide" href="#idMdlatt006nam"></a></p>
+</section>
+
+<section id="idMdlatt007">
+  <h1 id="idMdlatt007H1">07_mapping-unit of model
+    <a class="clsHide" href="#idMdlatt007H1"></a></h1>
+  <p id="idMdlatt007dsn">description::
+    <br>·
+    <a class="clsHide" href="#idMdlatt007dsn"></a></p>
+  <p id="idMdlatt007nam">name::
+    <br>* Mcs.model'07_mapping-unit,
+    <br>* Mcs.model'att007-mapping-unit,
+    <br>* Mcs.model'mapping-unit,
+    <a class="clsHide" href="#idMdlatt007nam"></a></p>
+</section>
+
+<section id="idMdlatt008">
+  <h1 id="idMdlatt008H1">08_unit of model
+    <a class="clsHide" href="#idMdlatt008H1"></a></h1>
+  <p id="idMdlatt008dsn">description::
+    <br>·
+    <a class="clsHide" href="#idMdlatt008dsn"></a></p>
+  <p id="idMdlatt008nam">name::
+    <br>* Mcs.model'08_unit,
+    <br>* Mcs.model'att008_unit,
+    <br>* Mcs.model'unit,
+    <a class="clsHide" href="#idMdlatt008nam"></a></p>
+</section>
+
+<section id="idMdlatt009">
+  <h1 id="idMdlatt009H1">09_creator of model
+    <a class="clsHide" href="#idMdlatt009H1"></a></h1>
+  <p id="idMdlatt009dsn">description::
+    <br>· the-entity that creates a-model.
+    <br>· implementor is the-entity that uses the-method and does the-implementation.
+    <a class="clsHide" href="#idMdlatt009dsn"></a></p>
+  <p id="idMdlatt009nam">name::
+    <br>* Mcs.methodMapping'05_implementor,
+    <br>* Mcs.methodMapping'att005-implementor,
+    <br>* Mcs.methodMapping'implementor-att005,
+    <br>* Mcs.model'09_creator,
+    <br>* Mcs.model'att009-creator,
+    <br>* Mcs.model'creator,
+    <br>* Mcs.model'implementor,
+    <a class="clsHide" href="#idMdlatt009nam"></a></p>
+</section>
+
+<section id="idMdlatt010">
+  <h1 id="idMdlatt010H1">10_evaluation of model
+    <a class="clsHide" href="#idMdlatt010H1"></a></h1>
+  <p id="idMdlatt010dsn">description::
+    <br>· degree of correctness of mapping.
+    <a class="clsHide" href="#idMdlatt010dsn"></a></p>
+  <p id="idMdlatt010nam">name::
+    <br>* Mcs.model'10_evaluation,
+    <br>* Mcs.model'att010-evaluation,
+    <br>* Mcs.model'evaluation,
+    <a class="clsHide" href="#idMdlatt010nam"></a></p>
 </section>
 
 <section id="idMdlrscF">
@@ -103,8 +199,26 @@
     <br>* Mcs.model'doing,
     <a class="clsHide" href="#idMdldngnam"></a></p>
   <p id="idMdldngdsn">description::
-    <br>*
+    <br>* creating,
+    <br>* evaluating,
+    <br>* using,
     <a class="clsHide" href="#idMdldngdsn"></a></p>
+
+  <section id="idMdlatt010">
+  <h2 id="idMdlatt010H2">creating of model
+    <a class="clsHide" href="#idMdlatt010H2"></a></h2>
+  <p id="idMdlatt010dsn">description::
+    <br>· implementation of methodMapping is the-mapping-acting of the-method.
+    <a class="clsHide" href="#idMdlatt010dsn"></a></p>
+  <p id="idMdlatt010nam">name::
+    <br>* Mcs.methodMapping'04_implementation,
+    <br>* Mcs.methodMapping'att004-implementation,
+    <br>* Mcs.methodMapping'implementation-att004,
+    <br>* Mcs.model'att010-creating,
+    <br>* Mcs.model'creating,
+    <br>* Mcs.model'implementation,
+    <a class="clsHide" href="#idMdlatt010nam"></a></p>
+  </section>
 </section>
 
 <section id="idMdlevgF">
@@ -139,13 +253,109 @@
     <a class="clsHide" href="#idMdlgstFH1"></a></h1>
   <p id="idMdlgstnam">name::
     <br>* Mcs.model'generic-specific-tree,
+    <br>* Mcs.model.specific,
     <a class="clsHide" href="#idMdlgstnam"></a></p>
   <p id="idMdlgtr">generic-tree-of-model::
+    <br>* <a class="clsPreview" href="filMcsSys.last.html#idSysgtr">system</a>,
     <br>* <a class="clsPreview" href="filMcsEnt.last.html#idOverview">entity</a>,
     <a class="clsHide" href="#idMdlgtr"></a></p>
   <p id="idMdlstr">specific-tree-of-model::
-    <br>* ,
+    <br>* <a class="clsPreview" href="../dirLag/filMcsInfHmn.last.html#idInfHmnBrn004">concept</a>,
+    <br>* <a class="clsPreview" href="../dirLag/filMcsInfHmn.last.html#idInfHmnMind002">conceptual-model</a>,
+    <br>* <a class="clsPreview" href="filMcs.last.html#idMcsv">conceptual-model.sensorial</a>,
     <a class="clsHide" href="#idMdlstr"></a></p>
+</section>
+
+<section id="idMdl005">
+  <h1 id="idMdl005H1">model.scientific-005
+    <a class="clsHide" href="#idMdl005H1"></a></h1>
+  <p id="idMdl005dsn">description::
+    <br>"A scientific model seeks to represent empirical objects, phenomena, and physical processes in a logical and objective way. All models are in simulacra, that is, simplified reflections of reality that, despite being approximations, can be extremely useful.[6] Building and disputing models is fundamental to the scientific enterprise. Complete and true representation may be impossible, but scientific debate often concerns which is the better model for a given task, e.g., which is the more accurate climate model for seasonal forecasting.[7]
+    <br>Attempts to formalize the principles of the empirical sciences use an interpretation to model reality, in the same way logicians axiomatize the principles of logic. The aim of these attempts is to construct a formal system that will not produce theoretical consequences that are contrary to what is found in reality. Predictions or other statements drawn from such a formal system mirror or map the real world only insofar as these scientific models are true.[8][9]
+    <br>For the scientist, a model is also a way in which the human thought processes can be amplified.[10] For instance, models that are rendered in software allow scientists to leverage computational power to simulate, visualize, manipulate and gain intuition about the entity, phenomenon, or process being represented. Such computer models are in silico. Other types of scientific models are in vivo (living models, such as laboratory rats) and in vitro (in glassware, such as tissue culture).[11]"
+    <br>[{2020-08-04} https://en.wikipedia.org/wiki/Scientific_modelling]
+    <a class="clsHide" href="#idMdl005dsn"></a></p>
+  <p id="idMdl005nam">name::
+    <br>* Mcs.modelSci,
+    <br>* Mcs.model.005-scientific!⇒modelSci,
+    <br>* Mcs.model.scientific!⇒modelSci,
+    <a class="clsHide" href="#idMdl005nam"></a></p>
+</section>
+
+<section id="idMdl006">
+  <h1 id="idMdl006H1">model.math-006
+    <a class="clsHide" href="#idMdl006H1"></a></h1>
+  <p id="idMdl006dsn">description::
+    <br>· modelMath quantify <a class="clsPreview" href="#idMdlatt001">the-archetype</a>.
+    <a class="clsHide" href="#idMdl006dsn"></a></p>
+  <p id="idMdl006nam">name::
+    <br>* Mcs.mathematical-model!⇒modelMath,
+    <br>* Mcs.modelMath,
+    <br>* Mcs.model.006-math!⇒modelMath,
+    <br>* Mcs.model.math!⇒modelMath,
+    <a class="clsHide" href="#idMdl006nam"></a></p>
+</section>
+
+<section id="idMdl007">
+  <h1 id="idMdl007H1">model.statistical-007
+    <a class="clsHide" href="#idMdl007H1"></a></h1>
+  <p id="idMdl007dsn">description::
+    <br>"A statistical model is a mathematical model that embodies a set of statistical assumptions concerning the generation of sample data (and similar data from a larger population). A statistical model represents, often in considerably idealized form, the data-generating process.[1]
+    <br>A statistical model is usually specified as a mathematical relationship between one or more random variables and other non-random variables. As such, a statistical model is "a formal representation of a theory" (Herman Adèr quoting Kenneth Bollen).[2]
+    <br>All statistical hypothesis tests and all statistical estimators are derived via statistical models. More generally, statistical models are part of the foundation of statistical inference."
+    <br>[{2020-08-05} https://en.wikipedia.org/wiki/Statistical_model]
+    <a class="clsHide" href="#idMdl007dsn"></a></p>
+  <p id="idMdl007nam">name::
+    <br>* Mcs.modelStats,
+    <br>* Mcs.model.007-statistical!⇒modelStats,
+    <br>* Mcs.probabilistic-model!⇒modelStats,
+    <br>* Mcs.statistical-model!⇒modelStats,
+    <a class="clsHide" href="#idMdl007nam"></a></p>
+
+  <section id="idMdl007att001">
+  <h2 id="idMdl007att001H2">all-models-are-wrong
+    <a class="clsHide" href="#idMdl007att001H2"></a></h2>
+  <p id="idMdl007att001dsn">description::
+    <br>""All models are wrong" is a common aphorism in statistics; it is often expanded as "All models are wrong, but some are useful". It is usually considered to be applicable to not only statistical models, but to scientific models generally. The aphorism recognizes that statistical/scientific models always fall short of the complexities of reality but can still be of use.
+    <br>The aphorism is generally attributed to the statistician George Box, although the underlying concept predates Box's writings."
+    <br>[{2020-08-05} https://en.wikipedia.org/wiki/All_models_are_wrong]
+    <a class="clsHide" href="#idMdl007att001dsn"></a></p>
+  <p id="idMdl007att001nam">name::
+    <br>* Mcs.all-models-are-wrong,
+    <br>* Mcs.modelStats'all-models-are-wrong,
+    <a class="clsHide" href="#idMdl007att001nam"></a></p>
+  </section>
+</section>
+
+<section id="idMdl008">
+  <h1 id="idMdl008H1">model.visual-008
+    <a class="clsHide" href="#idMdl008H1"></a></h1>
+  <p id="idMdl008dsn">description::
+    <br>· modelVisual visualizes the-archetype.
+    <a class="clsHide" href="#idMdl008dsn"></a></p>
+  <p id="idMdl008nam">name::
+    <br>* Mcs.modelVisual,
+    <br>* Mcs.model.008-visual!⇒modelVisual,
+    <br>* Mcs.model.visual!⇒modelVisual,
+    <br>* Mcs.visual-model!⇒modelVisual,
+    <a class="clsHide" href="#idMdl008nam"></a></p>
+</section>
+
+<section id="idMdl009">
+  <h1 id="idMdl009H1">model.simulation-009
+    <a class="clsHide" href="#idMdl009H1"></a></h1>
+  <p id="idMdl009dsn">description::
+    <br>"A simulation is an approximate imitation of the operation of a process or system;[1] that represents its operation over time.
+    <br>Simulation is used in many contexts, such as simulation of technology for performance tuning or optimizing, safety engineering, testing, training, education, and video games. Often, computer experiments are used to study simulation models. Simulation is also used with scientific modelling of natural systems or human systems to gain insight into their functioning,[2] as in economics. Simulation can be used to show the eventual real effects of alternative conditions and courses of action. Simulation is also used when the real system cannot be engaged, because it may not be accessible, or it may be dangerous or unacceptable to engage, or it is being designed but not yet built, or it may simply not exist.[3]
+    <br>Key issues in simulation include the acquisition of valid sources of information about the relevant selection of key characteristics and behaviors, the use of simplifying approximations and assumptions within the simulation, and fidelity and validity of the simulation outcomes. Procedures and protocols for model verification and validation are an ongoing field of academic study, refinement, research and development in simulations technology or practice, particularly in the work of computer simulation."
+    <br>[{2020-08-05} https://en.wikipedia.org/wiki/Simulation]
+    <a class="clsHide" href="#idMdl009dsn"></a></p>
+  <p id="idMdl009nam">name::
+    <br>* Mcs.modelSim,
+    <br>* Mcs.model.009-simulation!⇒modelSim,
+    <br>* Mcs.model.simulation!⇒modelSim,
+    <br>* Mcs.simulation!⇒modelSim,
+    <a class="clsHide" href="#idMdl009nam"></a></p>
 </section>
 
 <section id="idMeta">
