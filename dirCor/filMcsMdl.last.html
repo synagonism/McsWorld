@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.model-(0-4-0.2020-08-07 draft) system.model</title>
+  <title>Mcs.model-(0-6-0.2020-08-09 draft) system.model</title>
   <meta name="keywords" content="entity.model, model, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -49,17 +49,20 @@
     <br>· input of methodMapping is the-primary entity that is-mapped to another one.
     <a class="clsHide" href="#idMdlatt001dsn"></a></p>
   <p id="idMdlatt001nam">name::
-    <br>* Mcs.archetype-of-methodMapping,
-    <br>* Mcs.archetype-of-model,
-    <br>* Mcs.methodMapping'01_input,
-    <br>* Mcs.methodMapping'att001-input,
-    <br>* Mcs.methodMapping'archetype,
-    <br>* Mcs.methodMapping'input=att001,
-    <br>* Mcs.model'01_archetype,
-    <br>* Mcs.model'att001-archetype,
-    <br>* Mcs.model'archetype,
-    <br>* Mcs.rlnMapping'archetype,
-    <br>* Mcs.subject-of-model,
+    <br>* Mcs.archetype-of-methodMapping!⇒archo,
+    <br>* Mcs.archetype-of-model!⇒archo,
+    <br>* Mcs.archo, {2020-08-08},
+    <br>* Mcs.entity-being-modeled!⇒archo,
+    <br>* Mcs.methodMapping'01_input!⇒archo,
+    <br>* Mcs.methodMapping'att001-input!⇒archo,
+    <br>* Mcs.methodMapping'archetype!⇒archo,
+    <br>* Mcs.methodMapping'input=att001!⇒archo,
+    <br>* Mcs.model'01_archetype!⇒archo,
+    <br>* Mcs.model'att001-archetype!⇒archo,
+    <br>* Mcs.model'archetype!⇒archo,
+    <br>* Mcs.original-entity-of-model!⇒archo,
+    <br>* Mcs.rlnMapping'archetype!⇒archo,
+    <br>* Mcs.subject-of-model!⇒archo,
     <a class="clsHide" href="#idMdlatt001nam"></a></p>
 </section>
 
@@ -165,6 +168,7 @@
     <a class="clsHide" href="#idMdlatt018dsn"></a></p>
   <p id="idMdlatt018nam">name::
     <br>* Mcs.model'10_user,
+    <br>* Mcs.model'att018-user,
     <br>* Mcs.model'user,
     <a class="clsHide" href="#idMdlatt018nam"></a></p>
 </section>
@@ -173,7 +177,9 @@
   <h1 id="idMdlatt011H1">11_evaluation of model
     <a class="clsHide" href="#idMdlatt011H1"></a></h1>
   <p id="idMdlatt011dsn">description::
-    <br>· degree of correctness of mapping.
+    <br>· defining what is of "value".
+    <br>· degree of correctness of <a class="clsPreview" href="filMcsRln.last.html#idRlnMpg">mapping-relation</a>.
+    <br>· usage, method, cost-time-reduction, ...
     <a class="clsHide" href="#idMdlatt011dsn"></a></p>
   <p id="idMdlatt011nam">name::
     <br>* Mcs.model'11_evaluation,
@@ -212,8 +218,12 @@
 <section id="idMdldngF">
   <h1 id="idMdldngFH1">DOING of model
     <a class="clsHide" href="#idMdldngFH1"></a></h1>
+  <p id="idMdldngFdsn">description::
+    <br>· modeling is any doing related to models, designing, creating, evaluating, using, ...
+    <a class="clsHide" href="#idMdldngFdsn"></a></p>
   <p id="idMdldngnam">name::
     <br>* Mcs.model'doing,
+    <br>* Mcs.modeling,
     <a class="clsHide" href="#idMdldngnam"></a></p>
   <p id="idMdldngdsn">description::
     <br>* <a class="clsPreview" href="#idMdlatt010">creating</a>,
@@ -354,7 +364,7 @@
   </section>
 
   <section id="idMdlatt014">
-  <h2 id="idMdlatt014H2">model.specs-division-on.mapping-method
+  <h2 id="idMdlatt014H2">model.specs-division-on.<a class="clsPreview" href="filMcsDng.last.html#idDngActgMpgmtd">mapping-method</a>
     <a class="clsHide" href="#idMdlatt014H2"></a></h2>
   <p id="idMdlatt014dsn">description::
     <br>* one-way-model,
@@ -368,6 +378,7 @@
     <br>===
     <br>* math-model,
     <br>* linear-model,
+    <br>* scientific-model,
     <br>* statistical-model,
     <a class="clsHide" href="#idMdlatt014dsn"></a></p>
   <p id="idMdlatt014nam">name::
@@ -394,10 +405,23 @@
     <br>* Mcs.model'att015-specs-division-no.archetype,
     <a class="clsHide" href="#idMdlatt015nam"></a></p>
   </section>
+
+  <section id="idMdlatt019">
+  <h2 id="idMdlatt019H2">model.specs-division-on.creator
+    <a class="clsHide" href="#idMdlatt019H2"></a></h2>
+  <p id="idMdlatt019dsn">description::
+    <br>· human-model,
+    <br>· humanNo-model,
+    <a class="clsHide" href="#idMdlatt019dsn"></a></p>
+  <p id="idMdlatt019nam">name::
+    <br>* Mcs.model'att019-specs-division-on.creator,
+    <br>* Mcs.model'specs-division-on.creator,
+    <a class="clsHide" href="#idMdlatt019nam"></a></p>
+  </section>
 </section>
 
 <section id="idMdl005">
-  <h1 id="idMdl005H1">model.scientific-005
+  <h1 id="idMdl005H1">model.method.scientific-005
     <a class="clsHide" href="#idMdl005H1"></a></h1>
   <p id="idMdl005dsn">description::
     <br>"A scientific model seeks to represent empirical objects, phenomena, and physical processes in a logical and objective way. All models are in simulacra, that is, simplified reflections of reality that, despite being approximations, can be extremely useful.[6] Building and disputing models is fundamental to the scientific enterprise. Complete and true representation may be impossible, but scientific debate often concerns which is the better model for a given task, e.g., which is the more accurate climate model for seasonal forecasting.[7]
@@ -408,12 +432,13 @@
   <p id="idMdl005nam">name::
     <br>* Mcs.modelSci,
     <br>* Mcs.model.005-scientific!⇒modelSci,
+    <br>* Mcs.model.method.scientific!⇒modelSci,
     <br>* Mcs.model.scientific!⇒modelSci,
     <a class="clsHide" href="#idMdl005nam"></a></p>
 </section>
 
 <section id="idMdl006">
-  <h1 id="idMdl006H1">model.math-006
+  <h1 id="idMdl006H1">model.method.math-006
     <a class="clsHide" href="#idMdl006H1"></a></h1>
   <p id="idMdl006dsn">description::
     <br>· modelMath quantify <a class="clsPreview" href="#idMdlatt001">the-archetype</a>.
@@ -423,11 +448,12 @@
     <br>* Mcs.modelMath,
     <br>* Mcs.model.006-math!⇒modelMath,
     <br>* Mcs.model.math!⇒modelMath,
+    <br>* Mcs.model.method.math!⇒modelMath,
     <a class="clsHide" href="#idMdl006nam"></a></p>
 </section>
 
 <section id="idMdl007">
-  <h1 id="idMdl007H1">model.statistical-007
+  <h1 id="idMdl007H1">model.method.statistical-007
     <a class="clsHide" href="#idMdl007H1"></a></h1>
   <p id="idMdl007dsn">description::
     <br>"A statistical model is a mathematical model that embodies a set of statistical assumptions concerning the generation of sample data (and similar data from a larger population). A statistical model represents, often in considerably idealized form, the data-generating process.[1]
@@ -438,6 +464,8 @@
   <p id="idMdl007nam">name::
     <br>* Mcs.modelStats,
     <br>* Mcs.model.007-statistical!⇒modelStats,
+    <br>* Mcs.model.statistical!⇒modelStats,
+    <br>* Mcs.model.method.statistical!⇒modelStats,
     <br>* Mcs.probabilistic-model!⇒modelStats,
     <br>* Mcs.statistical-model!⇒modelStats,
     <a class="clsHide" href="#idMdl007nam"></a></p>
@@ -457,22 +485,8 @@
   </section>
 </section>
 
-<section id="idMdl008">
-  <h1 id="idMdl008H1">model.visual-008
-    <a class="clsHide" href="#idMdl008H1"></a></h1>
-  <p id="idMdl008dsn">description::
-    <br>· modelVisual visualizes the-archetype.
-    <a class="clsHide" href="#idMdl008dsn"></a></p>
-  <p id="idMdl008nam">name::
-    <br>* Mcs.modelVisual,
-    <br>* Mcs.model.008-visual!⇒modelVisual,
-    <br>* Mcs.model.visual!⇒modelVisual,
-    <br>* Mcs.visual-model!⇒modelVisual,
-    <a class="clsHide" href="#idMdl008nam"></a></p>
-</section>
-
 <section id="idMdl009">
-  <h1 id="idMdl009H1">model.abstract-009
+  <h1 id="idMdl009H1">model.method.abstract-009
     <a class="clsHide" href="#idMdl009H1"></a></h1>
   <p id="idMdl009dsn">description::
     <br>· Abstract-model is a model if it misses some attributes of the archetype.
@@ -483,6 +497,8 @@
     <br>* Mcs.abstract-model!⇒modelAbstract,
     <br>* Mcs.modelAbstract,
     <br>* Mcs.model.009-simulation!⇒modelAbstract,
+    <br>* Mcs.model.abstract!⇒modelAbstract,
+    <br>* Mcs.model.method.abstract!⇒modelAbstract,
     <br>* Mcs.model.simulation!⇒modelAbstract,
     <br>* Mcs.simulation!⇒modelAbstract,
     <a class="clsHide" href="#idMdl009nam"></a></p>
@@ -544,7 +560,7 @@
 </section>
 
 <section id="idMdl010">
-  <h1 id="idMdl010H1">model.abstractNo-010
+  <h1 id="idMdl010H1">model.method.abstractNo-010
     <a class="clsHide" href="#idMdl010H1"></a></h1>
   <p id="idMdl010dsn">description::
     <br>· abstractNo-model is a-model identical with its archetype.
@@ -553,16 +569,160 @@
     <br>* Mcs.abstractNo-model!⇒modelAbstractNo,
     <br>* Mcs.modelAbstractNo,
     <br>* Mcs.model.010-abstractNo!⇒modelAbstractNo,
+    <br>* Mcs.model.abstractNo!⇒modelAbstractNo,
+    <br>* Mcs.model.method.abstractNo!⇒modelAbstractNo,
     <a class="clsHide" href="#idMdl010nam"></a></p>
 </section>
 
+<section id="idMdl014">
+  <h1 id="idMdl014H1">model.creator.human-014
+    <a class="clsHide" href="#idMdl014H1"></a></h1>
+  <p id="idMdl014dsn">description::
+    <br>· modelHuman is a-model with creator a-human.
+    <a class="clsHide" href="#idMdl014dsn"></a></p>
+  <p id="idMdl014nam">name::
+    <br>* Mcs.modelHuman,
+    <br>* Mcs.model.014-human!⇒modelHuman,
+    <br>* Mcs.model.creator.human!⇒modelHuman,
+    <br>* Mcs.model.human!⇒modelHuman,
+    <a class="clsHide" href="#idMdl014nam"></a></p>
+</section>
+
+<section id="idMdl015">
+  <h1 id="idMdl015H1">model.creator.humanNo-015
+    <a class="clsHide" href="#idMdl015H1"></a></h1>
+  <p id="idMdl015dsn">description::
+    <br>· modelHumanNo is a-model without creator a-human.
+    <a class="clsHide" href="#idMdl014dsn"></a></p>
+    <a class="clsHide" href="#idMdl015dsn"></a></p>
+  <p id="idMdl015nam">name::
+    <br>* Mcs.modelHumanNo,
+    <br>* Mcs.model.015-humanNo!⇒modelHumanNo,
+    <br>* Mcs.model.creator.humanNo!⇒modelHumanNo,
+    <br>* Mcs.model.humanNo!⇒modelHumanNo,
+    <a class="clsHide" href="#idMdl015nam"></a></p>
+</section>
+
+<section id="idMdl021">
+  <h1 id="idMdl021H1">model.medium.computer-021
+    <a class="clsHide" href="#idMdl021H1"></a></h1>
+  <p id="idMdl021dsn">description::
+    <br>· modelCmr is a-model with <a class="clsPreview" href="#idMdlatt004">medium</a> <a class="clsPreview" href="../dirTchInf/filMcsCmr.last.html#idOverview">a-computer</a>.
+    <a class="clsHide" href="#idMdl021dsn"></a></p>
+  <p id="idMdl021nam">name::
+    <br>* Mcs.computational-model!⇒modelCmr,
+    <br>* Mcs.computer-model!⇒modelCmr,
+    <br>* Mcs.modelCmr,
+    <br>* Mcs.model.021-computer!⇒modelCmr,
+    <br>* Mcs.model.medium.computer!⇒modelCmr,
+    <br>* Mcs.model.computer!⇒modelCmr,
+    <a class="clsHide" href="#idMdl021nam"></a></p>
+
+  <section id="idMdl021arch">
+  <h2 id="idMdl021archH2">archetype of modelCmr
+    <a class="clsHide" href="#idMdl021archH2"></a></h2>
+  <p id="idMdl021archdsn">description::
+    <br>· anything.
+    <a class="clsHide" href="#idMdl021archdsn"></a></p>
+  <p id="idMdl021archnam">name::
+    <br>* Mcs.modelCmr'archetype,
+    <a class="clsHide" href="#idMdl021archnam"></a></p>
+  </section>
+
+  <section id="idMdl021mgmd">
+  <h2 id="idMdl021mgmdH2">mapping-method of modelCmr
+    <a class="clsHide" href="#idMdl021mgmdH2"></a></h2>
+  <p id="idMdl021mgmddsn">description::
+    <br>·
+    <a class="clsHide" href="#idMdl021mgmddsn"></a></p>
+  <p id="idMdl021mgmdnam">name::
+    <br>* Mcs.modelCmr'mapping-method,
+    <a class="clsHide" href="#idMdl021mgmdnam"></a></p>
+
+  <section id="idMdl021lgsm">
+  <h3 id="idMdl021lgsmH3">simulation-language of modelCmr
+    <a class="clsHide" href="#idMdl021lgsmH3"></a></h3>
+  <p id="idMdl021lgsmdsn">description::
+    <br>· simulation-language is a-programing-language used to create computer-models.
+    <a class="clsHide" href="#idMdl021lgsmdsn"></a></p>
+  <p id="idMdl021lgsmnam">name::
+    <br>* Mcs.lagSim,
+    <br>* Mcs.modelCmr'simulation-language!⇒lagSim,
+    <br>* Mcs.simulation-language!⇒lagSim,
+    <a class="clsHide" href="#idMdl021lgsmnam"></a></p>
+  </section>
+
+  <section id="idMdl021smpm">
+  <h3 id="idMdl021smpmH3">simulation-program of modelCmr
+    <a class="clsHide" href="#idMdl021smpmH3"></a></h3>
+  <p id="idMdl021smpmdsn">description::
+    <br>· simulation-program is a-computer-program we use to create computer-models.
+    <a class="clsHide" href="#idMdl021smpmdsn"></a></p>
+  <p id="idMdl021smpmnam">name::
+    <br>* Mcs.modelCmr'simulation-program,
+    <br>* Mcs.simulation-program,
+    <a class="clsHide" href="#idMdl021smpmnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idMdl021cmr">
+  <h2 id="idMdl021cmrH2">computer of modelCmr
+    <a class="clsHide" href="#idMdl021cmrH2"></a></h2>
+  <p id="idMdl021cmrdsn">description::
+    <br>· a-computer is the-medium of a-modelCmr.
+    <a class="clsHide" href="#idMdl021cmrdsn"></a></p>
+  <p id="idMdl021cmrnam">name::
+    <br>* Mcs.modelCmr'computer,
+    <a class="clsHide" href="#idMdl021cmrnam"></a></p>
+  </section>
+
+  <section id="idMdl021evaln">
+  <h2 id="idMdl021evalnH2">evaluation of modelCmr
+    <a class="clsHide" href="#idMdl021evalnH2"></a></h2>
+  <p id="idMdl021evalndsn">description::
+    <br>"... avoids actual experimentation, which can be costly and time-consuming. Instead, mathematical knowledge and computational power is used to solve real-world problems cheaply and in a time efficient manner."
+    <br>[{2020-08-09} https://en.wikipedia.org/wiki/Modeling_and_simulation]
+    <a class="clsHide" href="#idMdl021evalndsn"></a></p>
+  <p id="idMdl021evalnnam">name::
+    <br>* Mcs.modelCmr'evaluation,
+    <a class="clsHide" href="#idMdl021evalnnam"></a></p>
+  </section>
+
+  <section id="idMdl021Spc">
+  <h2 id="idMdl021SpcH2">modelCmr.SPECIFIC
+    <a class="clsHide" href="#idMdl021SpcH2"></a></h2>
+  <p id="idMdl021Spcdsn">description::
+    <br>* <a class="clsPreview" href="filMcs.last.html#idMcsHitp">McsHitp-modelConceptSensorial</a>,
+    <br>* <a class="clsPreview" href="../dirTchCpgm/filMcsCpgm.last.html#idOverview">computer-program</a>,
+    <a class="clsHide" href="#idMdl021Spcdsn"></a></p>
+  <p id="idMdl021Spcnam">name::
+    <br>* Mcs.modelCmr.specific,
+    <a class="clsHide" href="#idMdl021Spcnam"></a></p>
+  </section>
+</section>
+
+<section id="idMdl008">
+  <h1 id="idMdl008H1">model.medium.visual-008
+    <a class="clsHide" href="#idMdl008H1"></a></h1>
+  <p id="idMdl008dsn">description::
+    <br>· modelVisual visualizes the-archetype.
+    <a class="clsHide" href="#idMdl008dsn"></a></p>
+  <p id="idMdl008nam">name::
+    <br>* Mcs.modelVisual,
+    <br>* Mcs.model.008-visual!⇒modelVisual,
+    <br>* Mcs.model.medium.visual!⇒modelVisual,
+    <br>* Mcs.model.visual!⇒modelVisual,
+    <br>* Mcs.visual-model!⇒modelVisual,
+    <a class="clsHide" href="#idMdl008nam"></a></p>
+</section>
+
 <section id="idMdl012">
-  <h1 id="idMdl012H1">model.infoBio-012 (<a class="clsPreview" href="../dirNtr/filMcsInfBio.last.html#idOverview">link</a>)
+  <h1 id="idMdl012H1">model.medium.infoBio-012 (<a class="clsPreview" href="../dirNtr/filMcsInfBio.last.html#idOverview">link</a>)
     <a class="clsHide" href="#idMdl012H1"></a></h1>
 </section>
 
 <section id="idMdl013">
-  <h1 id="idMdl013H1">model.infoBioNo-013
+  <h1 id="idMdl013H1">model.medium.infoBioNo-013
     <a class="clsHide" href="#idMdl013H1"></a></h1>
   <p id="idMdl013dsn">description::
     <br>· modelInfoBioNo is a-model with <a class="clsPreview" href="#idMdlatt004">medium</a> NOT <a class="clsPreview" href="../dirNtr/filMcsInfBio.last.html#idOverview">infoBio</a>.
@@ -571,7 +731,141 @@
     <br>* Mcs.modelInfoBioNo,
     <br>* Mcs.model.013-infoBioNo!⇒modelInfoBioNo,
     <br>* Mcs.model.infoBioNo!⇒modelInfoBioNo,
+    <br>* Mcs.model.medium.infoBioNo!⇒modelInfoBioNo,
     <a class="clsHide" href="#idMdl013nam"></a></p>
+
+  <section id="idMdl020">
+  <h2 id="idMdl020H2">model.medium.physical-020
+    <a class="clsHide" href="#idMdl020H2"></a></h2>
+  <p id="idMdl020dsn">description::
+    <br>· modelPhysical model with medium <a class="clsPreview" href="filMcsEnt.last.html#idEntMtlN">mentalNo</a>, not info.
+    <a class="clsHide" href="#idMdl020dsn"></a></p>
+  <p id="idMdl020nam">name::
+    <br>* Mcs.modelPhysical,
+    <br>* Mcs.model.020-physical!⇒modelPhysical,
+    <br>* Mcs.model.medium.physical!⇒modelPhysical,
+    <br>* Mcs.model.physical!⇒modelPhysical,
+    <a class="clsHide" href="#idMdl020nam"></a></p>
+  </section>
+</section>
+
+<section id="idMdl016">
+  <h1 id="idMdl016H1">model.archo.process-016
+    <a class="clsHide" href="#idMdl016H1"></a></h1>
+  <p id="idMdl016dsn">description::
+    <br>· modelProcess is <a class="clsPreview" href="#idOverview">a-model</a> of <a class="clsPreview" href="filMcsDng.last.html#idOverview">a-process</a>.
+    <a class="clsHide" href="#idMdl016dsn"></a></p>
+  <p id="idMdl016nam">name::
+    <br>* Mcs.modelProcess,
+    <br>* Mcs.model.016-process!⇒modelProcess,
+    <br>* Mcs.model.archo.process!⇒modelProcess,
+    <br>* Mcs.model.process!⇒modelProcess,
+    <a class="clsHide" href="#idMdl016nam"></a></p>
+</section>
+
+<section id="idMdl017">
+  <h1 id="idMdl017H1">model.archo.body-017
+    <a class="clsHide" href="#idMdl017H1"></a></h1>
+  <p id="idMdl017dsn">description::
+    <br>· modelBody is <a class="clsPreview" href="#idOverview">a-model</a> of <a class="clsPreview" href="filMcsEnt.last.html#idEntBody">a-body</a>.
+    <a class="clsHide" href="#idMdl017dsn"></a></p>
+  <p id="idMdl017nam">name::
+    <br>* Mcs.modelBody,
+    <br>* Mcs.model.017-body!⇒modelBody,
+    <br>* Mcs.model.archo.body!⇒modelBody,
+    <br>* Mcs.model.body!⇒modelBody,
+    <a class="clsHide" href="#idMdl017nam"></a></p>
+</section>
+
+<section id="idMdl018">
+  <h1 id="idMdl018H1">model.archo.system-018
+    <a class="clsHide" href="#idMdl018H1"></a></h1>
+  <p id="idMdl018dsn">description::
+    <br>· modelSys is <a class="clsPreview" href="#idOverview">a-model</a> of <a class="clsPreview" href="filMcsSys.last.html#idOverview">a-system</a>.
+    <a class="clsHide" href="#idMdl018dsn"></a></p>
+  <p id="idMdl018nam">name::
+    <br>* Mcs.modelSys,
+    <br>* Mcs.model.018-system!⇒modelSys,
+    <br>* Mcs.model.archo.system!⇒modelSys,
+    <br>* Mcs.model.system!⇒modelSys,
+    <a class="clsHide" href="#idMdl018nam"></a></p>
+</section>
+
+<section id="idMdl019">
+  <h1 id="idMdl019H1">model.archo.sysDynamic-019
+    <a class="clsHide" href="#idMdl019H1"></a></h1>
+  <p id="idMdl019dsn">description::
+    <br>· modelSysDynamic is <a class="clsPreview" href="#idOverview">a-model</a> of <a class="clsPreview" href="filMcsSys.last.html#idSys009">a-sysDynamic</a>.
+    <a class="clsHide" href="#idMdl019dsn"></a></p>
+  <p id="idMdl019nam">name::
+    <br>* Mcs.modelSysDynamic,
+    <br>* Mcs.model.019-sysDynamic!⇒modelSysDynamic,
+    <br>* Mcs.model.archo.sysDynamic!⇒modelSysDynamic,
+    <br>* Mcs.model.sysDynamic!⇒modelSysDynamic,
+    <a class="clsHide" href="#idMdl019nam"></a></p>
+</section>
+
+<section id="idMdl022">
+  <h1 id="idMdl022H1">model.archo.organism-022
+    <a class="clsHide" href="#idMdl022H1"></a></h1>
+  <p id="idMdl022dsn">description::
+    <br>· a-model of <a class="clsPreview" href="../dirOgm/filMcsOgm.last.html#idOverview">an-organism</a>.
+    <a class="clsHide" href="#idMdl022dsn"></a></p>
+  <p id="idMdl022nam">name::
+    <br>* Mcs.modelOgm,
+    <br>* Mcs.model.022-organism!⇒modelOgm,
+    <br>* Mcs.model.archo.organism!⇒modelOgm,
+    <br>* Mcs.model.organism!⇒modelOgm,
+    <br>* Mcs.organism-model!⇒modelOgm,
+    <a class="clsHide" href="#idMdl022nam"></a></p>
+  <p id="idMdl022wpa">addressWpg::
+    <br>* https://www.nytimes.com/2012/07/21/science/in-a-first-an-entire-organism-is-simulated-by-software.html,
+    <a class="clsHide" href="#idMdl022wpa"></a></p>
+</section>
+
+<section id="idMdl023">
+  <h1 id="idMdl023H1">model.archo.organization-023
+    <a class="clsHide" href="#idMdl023H1"></a></h1>
+  <p id="idMdl023dsn">description::
+    <br>· a-model of <a class="clsPreview" href="../dirStn/filMcsOznOgm.last.html#idOzn">an-human-organization</a>.
+    <a class="clsHide" href="#idMdl023dsn"></a></p>
+  <p id="idMdl023nam">name::
+    <br>* Mcs.modelOzn,
+    <br>* Mcs.model.023-organization!⇒modelOzn,
+    <br>* Mcs.model.archo.organization!⇒modelOzn,
+    <br>* Mcs.model.organization!⇒modelOzn,
+    <br>* Mcs.organization-model!⇒modelOzn,
+    <a class="clsHide" href="#idMdl023nam"></a></p>
+</section>
+
+<section id="idMdl024">
+  <h1 id="idMdl024H1">model.archo.society-024
+    <a class="clsHide" href="#idMdl024H1"></a></h1>
+  <p id="idMdl024dsn">description::
+    <br>· a-model of <a class="clsPreview" href="../dirStn/filMcsSocHmn.last.html#idOverview">a-human-society</a>.
+    <a class="clsHide" href="#idMdl024dsn"></a></p>
+  <p id="idMdl024nam">name::
+    <br>* Mcs.modelSoc,
+    <br>* Mcs.model.024-society!⇒modelSoc,
+    <br>* Mcs.model.archo.society!⇒modelSoc,
+    <br>* Mcs.model.society!⇒modelSoc,
+    <br>* Mcs.society-model!⇒modelSoc,
+    <a class="clsHide" href="#idMdl024nam"></a></p>
+</section>
+
+<section id="idMdl025">
+  <h1 id="idMdl025H1">model.archo.economy-025
+    <a class="clsHide" href="#idMdl025H1"></a></h1>
+  <p id="idMdl025dsn">description::
+    <br>· a-model of <a class="clsPreview" href="../dirStn/filMcsEconHmn.last.html#idOverview">a-human-economy</a>.
+    <a class="clsHide" href="#idMdl025dsn"></a></p>
+  <p id="idMdl025nam">name::
+    <br>* Mcs.economy-model!⇒modelEcon,
+    <br>* Mcs.modelEcon,
+    <br>* Mcs.model.025-economy!⇒modelEcon,
+    <br>* Mcs.model.archo.economy!⇒modelEcon,
+    <br>* Mcs.model.economy!⇒modelEcon,
+    <a class="clsHide" href="#idMdl025nam"></a></p>
 </section>
 
 <section id="idMeta">
