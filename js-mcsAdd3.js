@@ -41,16 +41,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirCor',
-  sDIR = 'dirCor',
+  sDir = 'dirStn',
+  sDIR = 'dirStn',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'entity.model',
+  sN = 'organization.human.household',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'model',
+  sNS = 'household',
   //5. FILE-name: shows relation of another file: SysNet, DtcbnetEth, DnLbr,
-  sNFil = 'Mdl',
+  sNFil = 'OznHhd',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNId = 'Mdl';
+  sNId = 'Hhd';
 
 s =
   '<!DOCTYPE html>\n' +
