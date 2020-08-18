@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.therapy-(0-17-0.2020-07-14 draft) human-therapy</title>
+  <title>Mcs.therapy-(0-19-0.2020-08-16 draft) human-therapy</title>
   <meta name="keywords" content="therapy-of-human, therapy, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -27,7 +27,7 @@
     <br>"A therapy or medical treatment (often abbreviated tx, Tx, or T<sub>x</sub>) is the attempted remediation of a health problem, usually following a diagnosis.
     <br>As a rule, each therapy has indications and contraindications. There are many different types of therapy. Not all therapies are effective. Many therapies can produce unwanted adverse effects.
     <br>Treatment and therapy are generally considered synonyms. However, in the context of mental health, the term therapy may refer specifically to psychotherapy."
-    <br>[https://en.wikipedia.org/wiki/Therapy {2020-01-14}]
+    <br>[{2020-01-14} https://en.wikipedia.org/wiki/Therapy]
     <a class="clsHide" href="#idDescription"></a></p>
   <p id="idName">name::
     <br>* Mcs.filMcsThrpHmn.last.html!⇒therapy,
@@ -42,7 +42,7 @@
     <br>* Mcs.therapy'(therapy-of-human)!⇒therapy,
     <br>* Mcs.therapy-of-human!⇒therapy,
     <br>* Mcs.treatment-of-disease!⇒therapy,
-    <br>· "The words care, therapy, treatment, and intervention overlap in a semantic field, and thus they can be synonymous depending on context. Moving rightward through that order, the connotative level of holism decreases and the level of specificity (to concrete instances) increases." [https://en.wikipedia.org/wiki/Therapy#Semantic_field {2020-01-15}]
+    <br>· "The words care, therapy, treatment, and intervention overlap in a semantic field, and thus they can be synonymous depending on context. Moving rightward through that order, the connotative level of holism decreases and the level of specificity (to concrete instances) increases." [{2020-01-15} https://en.wikipedia.org/wiki/Therapy#Semantic_field]
     <br>====== langoGreek:
     <br>* McsEll.αντιμετώπιση-ασθένειας!=therapy,
     <br>* McsEll.ασθένειας-θεραπεία!=therapy,
@@ -58,6 +58,7 @@
     <a class="clsHide" href="#idThrpHmnatt001dsn"></a></p>
   <p id="idThrpHmnatt001nam">name::
     <br>* Mcs.therapy'01_indication,
+    <br>* Mcs.therapy'application,
     <br>* Mcs.therapy'att001-indication,
     <br>* Mcs.therapy'indication,
     <br>====== langoGreek:
@@ -86,7 +87,7 @@
   <p id="idThrpHmnatt003dsn">description::
     <br>"In medicine, a side effect is an effect, whether therapeutic or adverse, that is secondary to the one intended; although the term is predominantly employed to describe adverse effects, it can also apply to beneficial, but unintended, consequences of the use of a drug. Developing drugs is a complicated process, because no two people are exactly the same, so even drugs that have virtually no side effects, might be difficult for some people. Also, it is difficult to make a drug that targets one part of the body but that doesn’t affect other parts,[1] the fact that increases the risk of side effects in the untargeted parts.
     <br>Occasionally, drugs are prescribed or procedures performed specifically for their side effects; in that case, said side effect ceases to be a side effect, and is now an intended effect. For instance, X-rays were historically (and are currently) used as an imaging technique; the discovery of their oncolytic capability led to their employ in radiotherapy (ablation of malignant tumours)."
-    <br>[https://en.wikipedia.org/wiki/Side_effect {2020-01-15}]
+    <br>[{2020-01-15} https://en.wikipedia.org/wiki/Side_effect]
     <a class="clsHide" href="#idThrpHmnatt003dsn"></a></p>
   <p id="idThrpHmnatt003nam">name::
     <br>* Mcs.therapy'03_side-effect,
@@ -136,12 +137,15 @@
     <br>·
     <a class="clsHide" href="#idThrpHmnatt006dsn"></a></p>
   <p id="idThrpHmnatt006nam">name::
-    <br>* Mcs.therapist,
-    <br>* Mcs.therapy'06_therapist,
-    <br>* Mcs.therapy'att006-therapist,
-    <br>* Mcs.therapy'therapist,
+    <br>* Mcs.therapist!⇒wkrTherapist,
+    <br>* Mcs.therapy'06_therapist!⇒wkrTherapist,
+    <br>* Mcs.therapy'att006-therapist!⇒wkrTherapist,
+    <br>* Mcs.therapy'practitioner!⇒wkrTherapist,
+    <br>* Mcs.therapy'therapist!⇒wkrTherapist,
+    <br>* Mcs.wkrTherapist,
+    <br>* Mcs.worker.009-therapist!⇒wkrTherapist,
     <br>====== langoGreek:
-    <br>* McsEll.θεραπευτής!=therapist,
+    <br>* McsEll.θεραπευτής!=wkrTherapist,
     <a class="clsHide" href="#idThrpHmnatt006nam"></a></p>
   <p id="idThrpHmnatt006str">specific-tree-of-therapist::
     <br>* highly-trained,
@@ -153,11 +157,13 @@
   <h1 id="idThrpHmnatt007H1">07_therapy-receiver of therapy
     <a class="clsHide" href="#idThrpHmnatt007H1"></a></h1>
   <p id="idThrpHmnatt007dsn">description::
-    <br>·
+    <br>· <a class="clsPreview" href="filMcsHlthHmn.last.html#idHlthHmnatt001Ptnt">a-patient</a> that gets a-therapy.
     <a class="clsHide" href="#idThrpHmnatt007dsn"></a></p>
   <p id="idThrpHmnatt007nam">name::
     <br>* Mcs.therapy'07_therapy-receiver,
     <br>* Mcs.therapy'att007-therapy-receiver,
+    <br>* Mcs.therapy'client,
+    <br>* Mcs.therapy'patient,
     <br>* Mcs.therapy'therapy-receiver,
     <br>* Mcs.therapy-receiver,
     <br>====== langoGreek:
@@ -187,10 +193,22 @@
   <p id="idThrpHmnrscwpa">addressWpg::
     <br>*
     <a class="clsHide" href="#idThrpHmnrscwpa"></a></p>
+
+  <section id="idThrpHmnatt009">
+  <h2 id="idThrpHmnatt009H2">evaluation of therapy
+    <a class="clsHide" href="#idThrpHmnatt009H2"></a></h2>
+  <p id="idThrpHmnatt009dsn">description::
+    <br>·
+    <a class="clsHide" href="#idThrpHmnatt009dsn"></a></p>
+  <p id="idThrpHmnatt009nam">name::
+    <br>* Mcs.therapy'att009-evaluation,
+    <br>* Mcs.therapy'evaluation,
+    <a class="clsHide" href="#idThrpHmnatt009nam"></a></p>
+  </section>
 </section>
 
 <section id="idThrpHmnevgF">
-  <h1 id="idThrpHmnevgFH1">EVOLUTING of therapy
+  <h1 id="idThrpHmnevgFH1">evoluting of therapy
     <a class="clsHide" href="#idThrpHmnevgFH1"></a></h1>
   <p id="idThrpHmnevgnam">name::
     <br>* Mcs.therapy'evoluting,
@@ -323,7 +341,7 @@
     <br>As pharmacotherapy specialists and pharmacists have responsibility for direct patient care, often functioning as a member of a multidisciplinary team, and acting as the primary source of drug-related information for other healthcare professionals. A pharmacotherapy specialist is an individual who is specialized in administering and prescribing medication, and requires extensive academic knowledge in pharmacotherapy. [3]
     <br>In the US, a pharmacist can gain Board Certification in the area of pharmacotherapy upon fulfilling eligibility requirements and passing a certification examination.[4][5]
     <br>While pharmacists provide valuable information about medications for patients and healthcare professionals, they are not typically considered covered pharmacotherapy providers by insurance companies."
-    <br>[https://en.wikipedia.org/wiki/Pharmacotherapy {2020-01-15}]
+    <br>[{2020-01-15} https://en.wikipedia.org/wiki/Pharmacotherapy]
     <a class="clsHide" href="#idThrpHmnPhrmcdsn"></a></p>
   <p id="idThrpHmnPhrmcnam">name::
     <br>* Mcs.pharmacotherapy,
@@ -339,27 +357,240 @@
   </section>
 </section>
 
-<section id="idThrpHmnPsch">
-  <h1 id="idThrpHmnPschH1">therapy.psycho
-    <a class="clsHide" href="#idThrpHmnPschH1"></a></h1>
-  <p id="idThrpHmnPschdsn">description::
-    <br>· therapyPsycho is a-therapy of <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn108">a-diseaseMental</a>.
-    <a class="clsHide" href="#idThrpHmnPschdsn"></a></p>
-  <p id="idThrpHmnPschnam">name::
-    <br>* Mcs.psychotherapy!⇒therapyPsycho,
-    <br>* Mcs.therapyPsycho,
-    <br>* Mcs.therapy.psycho!⇒therapyPsycho,
-    <a class="clsHide" href="#idThrpHmnPschnam"></a></p>
+<section id="idThrpHmnMnd">
+  <h1 id="idThrpHmnMndH1">therapy.psycho
+    <a class="clsHide" href="#idThrpHmnMndH1"></a></h1>
+  <p id="idThrpHmnMnddsn">description::
+    <br>· therapyMind is a-therapy of <a class="clsPreview" href="filMcsDssHmn.last.html#idDssHmn108">a-diseaseMental</a>.
+    <a class="clsHide" href="#idThrpHmnMnddsn"></a></p>
+  <p id="idThrpHmnMndnam">name::
+    <br>* Mcs.psychotherapy!⇒therapyMind,
+    <br>* Mcs.therapyMind,
+    <br>* Mcs.therapy.psycho!⇒therapyMind,
+    <br>* Mcs.therapyPsycho!⇒therapyMind,
+    <a class="clsHide" href="#idThrpHmnMndnam"></a></p>
 
-  <section id="idThrpHmnPschSpc">
-  <h2 id="idThrpHmnPschSpcH2">therapyPsycho.SPECIFIC
-    <a class="clsHide" href="#idThrpHmnPschSpcH2"></a></h2>
-  <p id="idThrpHmnPschSpcdsn">description::
+  <section id="idThrpHmnMndatt001">
+  <h2 id="idThrpHmnMndatt001H2">EAP of therapyMind
+    <a class="clsHide" href="#idThrpHmnMndatt001H2"></a></h2>
+  <p id="idThrpHmnMndatt001dsn">description::
+    <br>"The European Association of Psychotherapy (EAP)  was founded in 1991 as an organisation to support and promote psychotherapy in Europe. It is the flagship of the profession of psychotherapy and unites 120.000 psychotherapists and 128 psychotherapy organisations from 41 European countries.
+    <br>Based on the “Strasbourg Declaration on Psychotherapy of 1990” the EAP represents and SUSTAINS THE HIGHEST PROFESSIONAL STANDARDS for the free and independent practice of psychotherapy, and upholds rigorous standards of competence and professionalism."
+    <br>[{2020-08-15} https://www.europsyche.org/about-eap/eap/]
+    <a class="clsHide" href="#idThrpHmnMndatt001dsn"></a></p>
+  <p id="idThrpHmnMndatt001nam">name::
+    <br>* Mcs.EAP-European-Association-for-Phychotherapy,
+    <br>* Mcs.therapyMind'att001-EAP-European-Association-for-Phychotherapy,
+    <br>* Mcs.therapyMind'EAP-European-Association-for-Phychotherapy,
+    <a class="clsHide" href="#idThrpHmnMndatt001nam"></a></p>
+  </section>
+
+  <section id="idThrpHmnMndatt002">
+  <h2 id="idThrpHmnMndatt002H2">therapist of therapyMind
+    <a class="clsHide" href="#idThrpHmnMndatt002H2"></a></h2>
+  <p id="idThrpHmnMndatt002dsn">description::
+    <br>·
+    <a class="clsHide" href="#idThrpHmnMndatt002dsn"></a></p>
+  <p id="idThrpHmnMndatt002nam">name::
+    <br>* Mcs.psychotherapist!⇒therapistPsycho,
+    <br>* Mcs.therapistPsycho,
+    <br>* Mcs.therapyMind'att002-therapist!⇒therapistPsycho,
+    <a class="clsHide" href="#idThrpHmnMndatt002nam"></a></p>
+  <p id="idThrpHmnMndatt002wpa">addressWpg::
+    <br>* https://www.europsyche.org/ecp/about-ecp/,
+    <a class="clsHide" href="#idThrpHmnMndatt002wpa"></a></p>
+  </section>
+
+  <section id="idThrpHmnMndSpc">
+  <h2 id="idThrpHmnMndSpcH2">therapyMind.SPECIFIC
+    <a class="clsHide" href="#idThrpHmnMndSpcH2"></a></h2>
+  <p id="idThrpHmnMndSpcdsn">description::
     <br>* https://en.wikipedia.org/wiki/List_of_psychotherapies,
-    <a class="clsHide" href="#idThrpHmnPschSpcdsn"></a></p>
-  <p id="idThrpHmnPschSpcnam">name::
-    <br>* Mcs.therapyPsycho.specific,
-    <a class="clsHide" href="#idThrpHmnPschSpcnam"></a></p>
+    <br>===
+    <br>* Bioenergetic Analysis,
+    <br>* Biosynthesis Therapy,
+    <br>* Body Psychotherapy,
+    <br>* Bonding Psychotherapy,
+    <br>* Gestalt Therapy,
+    <br>* Hypno Psychotherapy,
+    <br>* Integrative Psychotherapy,
+    <br>* Logotherapy,
+    <br>* Multimodal Approach,
+    <br>* Neuro-Linguistic Psychotherapy,
+    <br>* Personcentered Psychotherapy,
+    <br>* Positive Psychotherapy,
+    <br>* Psycho-Organic Analysis,
+    <br>* Psychoanalysis,
+    <br>* Psychodrama,
+    <br>* Psychosynthesis,
+    <br>* Reality Therapy,
+    <br>* Systemic Familytherapy,
+    <br>* Transactional Analysis,
+    <br>===
+    <br>* gestalt,
+    <br>* δραματοθεραπεία,
+    <br>* εικαστική-ψυχοθεραπεία,
+    <br>* μη-κατευθυντική-παρεμβατική-προσέγγιση,
+    <br>* ομαδική-ανάλυση,
+    <br>* παιγνιοθεραπεία,
+    <br>* προσωποκεντρική-προσέγγιση,
+    <br>* προσωποκεντρική-ψυχοθεραπεία,
+    <br>* συνθετική-ψυχοθεραπεία,
+    <br>* συστημική-ψυχοθεραπεία,
+    <br>* συστημική-ψυχοθεραπεία-process-work,
+    <br>* σωματική-ψυχοθεραπεία,
+    <br>* υπαρξιακή-ανάλυση,
+    <br>* ψυχόδραμα-κοινωνικοθεραπεία,
+    <a class="clsHide" href="#idThrpHmnMndSpcdsn"></a></p>
+  <p id="idThrpHmnMndSpcnam">name::
+    <br>* Mcs.therapyMind.specific,
+    <a class="clsHide" href="#idThrpHmnMndSpcnam"></a></p>
+  </section>
+
+  <section id="idThrpHmn009">
+  <h2 id="idThrpHmn009H2">therapy.integrative-psychotherapy-009
+    <a class="clsHide" href="#idThrpHmn009H2"></a></h2>
+  <p id="idThrpHmn009dsn">description::
+    <br>"Integrative psychotherapy is the integration of elements from different schools of psychotherapy in the treatment of a client. Integrative psychotherapy may also refer to the psychotherapeutic process of integrating the personality: uniting the "affective, cognitive, behavioral, and physiological systems within a person".[1]"
+    <br>[{2020-08-16} https://en.wikipedia.org/wiki/Integrative_psychotherapy]
+    <a class="clsHide" href="#idThrpHmn009dsn"></a></p>
+  <p id="idThrpHmn009nam">name::
+    <br>* Mcs.integrative-psychotherapy!⇒therapyMindIntegrative,
+    <br>* Mcs.therapy.009-integrative!⇒therapyMindIntegrative,
+    <br>* Mcs.therapy.integrative!⇒therapyMindIntegrative,
+    <br>* Mcs.therapyMind.integrative!⇒therapyMindIntegrative,
+    <br>* Mcs.therapyMindIntegrative,
+    <a class="clsHide" href="#idThrpHmn009nam"></a></p>
+  </section>
+
+  <section id="idThrpHmn010">
+  <h2 id="idThrpHmn010H2">therapy.eclectic-psychotherapy-010
+    <a class="clsHide" href="#idThrpHmn010H2"></a></h2>
+  <p id="idThrpHmn010dsn">description::
+    <br>"Eclectic psychotherapy is a form of psychotherapy in which the clinician uses more than one theoretical approach, or multiple sets of techniques, to help with clients' needs.[1][2] The use of different therapeutic approaches will be based on the effectiveness in resolving the patient's problems, rather than the theory behind each therapy.
+    <br>... Comparison with integrative psychotherapy
+    <br>The terms integrative psychotherapy and eclectic psychotherapy are sometimes used interchangeably, but the two terms are not synonymous. The American Psychological Association lists the two types of therapies as unique and different types of psychotherapies.[11] Both eclectic and integrative psychotherapy combine the use of multiple psychological theories. Integrative psychotherapy tends to place greater emphasis on the theories being combined, while eclectic therapy tends to be more outcome focused.[1] An eclectic psychotherapist will use whatever theory will help his or her patient and an integrative psychotherapist will use one theory to complement another."
+    <br>[{2020-08-16} https://en.wikipedia.org/wiki/Eclectic_psychotherapy]
+    <a class="clsHide" href="#idThrpHmn010dsn"></a></p>
+  <p id="idThrpHmn010nam">name::
+    <br>* Mcs.eclectic-psychotherapy!⇒therapyMindEclectic,
+    <br>* Mcs.therapy.010-eclectic-psychotherapy!⇒therapyMindEclectic,
+    <br>* Mcs.therapy.eclectic-psychotherapy!⇒therapyMindEclectic,
+    <br>* Mcs.therapyMindEclectic,
+    <a class="clsHide" href="#idThrpHmn010nam"></a></p>
+  </section>
+
+  <section id="idThrpHmn002">
+  <h2 id="idThrpHmn002H2">therapy.cognitive-behavioral-002
+    <a class="clsHide" href="#idThrpHmn002H2"></a></h2>
+  <p id="idThrpHmn002dsn">description::
+    <br>"Cognitive behavioral therapy (CBT) is a psycho-social intervention[1][2] that aims to improve mental health.[3] CBT focuses on challenging and changing unhelpful cognitive distortions (e.g. thoughts, beliefs, and attitudes) and behaviors, improving emotional regulation,[2][4] and the development of personal coping strategies that target solving current problems. Originally, it was designed to treat depression, but its uses have been expanded to include treatment of a number of mental health conditions, including anxiety.[5][6] CBT includes a number of cognitive or behavior psychotherapies that treat defined psychopathologies using evidence-based techniques and strategies.[7][8][9]"
+    <br>[{2020-07-10} https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy]
+    <a class="clsHide" href="#idThrpHmn002dsn"></a></p>
+  <p id="idThrpHmn002nam">name::
+    <br>* Mcs.CBT-Cognitive-Behavioral-Therapy!⇒therapyMindCB,
+    <br>* Mcs.cognitive-behavioral-therapy-CBT!⇒therapyMindCB,
+    <br>* Mcs.therapyMind.cognitive-behavioral!⇒therapyMindCB,
+    <br>* Mcs.therapy.002-cognitive-behavioral!⇒therapyMindCB,
+    <br>* Mcs.therapy.cognitive-behavioral!⇒therapyMindCB,
+    <br>* Mcs.therapyMindCB,
+    <a class="clsHide" href="#idThrpHmn002nam"></a></p>
+
+  <section id="idThrpHmn004">
+  <h3 id="idThrpHmn004H3">therapy.computerized-CBT-004
+    <a class="clsHide" href="#idThrpHmn004H3"></a></h3>
+  <p id="idThrpHmn004dsn">description::
+    <br>"Computerized cognitive behavioral therapy (CCBT) has been described by NICE as a "generic term for delivering CBT via an interactive computer interface delivered by a personal computer, internet, or interactive voice response system",[163] instead of face-to-face with a human therapist. It is also known as internet-delivered cognitive behavioral therapy or ICBT.[164] CCBT has potential to improve access to evidence-based therapies, and to overcome the prohibitive costs and lack of availability sometimes associated with retaining a human therapist.[165] In this context, it is important not to confuse CBT with 'computer-based training', which nowadays is more commonly referred to as e-Learning."
+    <br>[{2020-07-11} https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy#Computerized_or_Internet-delivered]
+    <a class="clsHide" href="#idThrpHmn004dsn"></a></p>
+  <p id="idThrpHmn004nam">name::
+    <br>* Mcs.CCBT-computerized-cognitive-behavioral-therapy!⇒therapyCCB,
+    <br>* Mcs.cCBT-computerized-cognitive-behavioral-therapy!⇒therapyCCB,
+    <br>* Mcs.computerized-CBT!⇒therapyCCB,
+    <br>* Mcs.computerized-cognitive-behavioral-therapy!⇒therapyCCB,
+    <br>* Mcs.therapyCCB,
+    <br>* Mcs.therapy.004-CCBT!⇒therapyCCB,
+    <br>* Mcs.therapy.computerized-cognitive-behavioral!⇒therapyCCB,
+    <a class="clsHide" href="#idThrpHmn004nam"></a></p>
+
+  <section id="idThrpHmn004rscF">
+  <h4 id="idThrpHmn004rscFH4">resource of therapyCCB
+    <a class="clsHide" href="#idThrpHmn004rscFH4"></a></h4>
+  <p id="idThrpHmn004rscFdsn">description::
+    <br>* https://ecouch.anu.edu.au/new_users/welcome01 (free),
+    <br>* https://moodgym.com.au/info/faq (not free),
+    <a class="clsHide" href="#idThrpHmn004rscFdsn"></a></p>
+  <p id="idThrpHmn004rscFnam">name::
+    <br>* Mcs.therapyCCB'resource,
+    <a class="clsHide" href="#idThrpHmn004rscFnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idThrpHmn003">
+  <h3 id="idThrpHmn003H3">therapy.acceptance-and-commitment-003
+    <a class="clsHide" href="#idThrpHmn003H3"></a></h3>
+  <p id="idThrpHmn003dsn">description::
+    <br>"Acceptance and commitment therapy (ACT) is a specialist branch of CBT (sometimes referred to as contextual CBT[74])."
+    <br>[{2020-07-10} https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy]
+    <a class="clsHide" href="#idThrpHmn003dsn"></a></p>
+  <p id="idThrpHmn003nam">name::
+    <br>* Mcs.ACT-acceptance-and-commitment-therapy!⇒therapyAC,
+    <br>* Mcs.acceptance-and-commitment-therapy!⇒therapyAC,
+    <br>* Mcs.therapyAC,
+    <br>* Mcs.therapy.003-acceptance-andcommitment!⇒therapyAC,
+    <br>* Mcs.therapy.acceptance-andcommitment!⇒therapyAC,
+    <a class="clsHide" href="#idThrpHmn003nam"></a></p>
+  </section>
+  </section>
+
+  <section id="idThrpHmn006">
+  <h2 id="idThrpHmn006H2">therapy.psychoanalysis-006
+    <a class="clsHide" href="#idThrpHmn006H2"></a></h2>
+  <p id="idThrpHmn006dsn">description::
+    <br>"Psychoanalysis (from Greek: ψυχή, psykhḗ, 'soul' + ἀνάλυσις, análysis, 'investigate') is a set of theories and therapeutic techniques[i] related to the study of the unconscious mind,[ii] which together form a method of treatment for mental disorders. The discipline was established in the early 1890s by Austrian neurologist Sigmund Freud, who retained the term psychoanalysis for his own school of thought,[1] and stemmed partly from the clinical work of Josef Breuer and others. Psychoanalysis was later developed in different directions, mostly by students of Freud, such as Alfred Adler and his collaborator, Carl Gustav Jung,[iii] as well as by neo-Freudian thinkers, such as Erich Fromm, Karen Horney, and Harry Stack Sullivan.[2]
+    <br>Psychoanalysis has been known to be a controversial discipline, and its validity as a science is often contested. Nonetheless, it remains a strong influence within psychiatry, more so in some quarters than others.[iv][v] Psychoanalytic concepts are also widely used outside the therapeutic arena, in areas such as psychoanalytic literary criticism, as well as in the analysis of film, fairy tales and other cultural phenomena."
+    <br>[{2020-08-15} https://en.wikipedia.org/wiki/Psychoanalysis]
+    <a class="clsHide" href="#idThrpHmn006dsn"></a></p>
+  <p id="idThrpHmn006nam">name::
+    <br>* Mcs.analytic-psychotherapy!⇒therapyMindAnalytic,
+    <br>* Mcs.psychoanalysis!⇒therapyMindAnalytic,
+    <br>* Mcs.therapy.006-psychoanalysis!⇒therapyMindAnalytic,
+    <br>* Mcs.therapy.psychoanalysis!⇒therapyMindAnalytic,
+    <br>* Mcs.therapyMind.psychoanalysis!⇒therapyMindAnalytic,
+    <a class="clsHide" href="#idThrpHmn006nam"></a></p>
+  </section>
+
+  <section id="idThrpHmn007">
+  <h2 id="idThrpHmn007H2">therapy.body-psychotherapy-007
+    <a class="clsHide" href="#idThrpHmn007H2"></a></h2>
+  <p id="idThrpHmn007dsn">description::
+    <br>"Body psychotherapy,[1][2][3][4] also called body-oriented psychotherapy, is an approach to psychotherapy[5] which applies basic principles of somatic psychology. It originated in the work of Pierre Janet, Sigmund Freud and particularly Wilhelm Reich who developed it as vegetotherapy.[6] Branches also were developed by Alexander Lowen and John Pierrakos, both patients and students of Reich, like Reichian body-oriented psychotherapy.[7][8][9] Skeptics consider this form of body psychotherapy to be pseudoscience.[10]"
+    <br>[{2020-08-15} https://en.wikipedia.org/wiki/Body_psychotherapy]
+    <a class="clsHide" href="#idThrpHmn007dsn"></a></p>
+  <p id="idThrpHmn007nam">name::
+    <br>* Mcs.body-psychotherapy!⇒therapyMindBody,
+    <br>* Mcs.therapyMindBody,
+    <br>* Mcs.therapy.007-body-psychotherapy!⇒therapyMindBody,
+    <br>* Mcs.therapy.body-psychotherapy!⇒therapyMindBody,
+    <br>* Mcs.therapyMind.body-psychotherapy!⇒therapyMindBody,
+    <a class="clsHide" href="#idThrpHmn007nam"></a></p>
+  </section>
+
+  <section id="idThrpHmn008">
+  <h2 id="idThrpHmn008H2">therapy.biofeedback-008
+    <a class="clsHide" href="#idThrpHmn008H2"></a></h2>
+  <p id="idThrpHmn008dsn">description::
+    <br>"Biofeedback is the process of gaining greater awareness of many physiological functions of one's own body, commercially by using electronic or other instruments, and with a goal of being able to manipulate the body's systems at will. Humans conduct biofeedback naturally all the time, at varied levels of consciousness and intentionality. Biofeedback and the biofeedback loop can also be thought of as self-regulation.[1][2] Some of the processes that can be controlled include brainwaves, muscle tone, skin conductance, heart rate and pain perception.[3]
+    <br>Biofeedback may be used to improve health, performance, and the physiological changes that often occur in conjunction with changes to thoughts, emotions, and behavior. Recently, technologies have provided assistance with intentional biofeedback. Eventually, these changes may be maintained without the use of extra equipment, for no equipment is necessarily required to practice biofeedback.[2]
+    <br>Biofeedback has been found to be effective for the treatment of headaches and migraines and ADHD - among other issues.[4][5]"
+    <br>[{2020-08-16} https://en.wikipedia.org/wiki/Biofeedback]
+    <a class="clsHide" href="#idThrpHmn008dsn"></a></p>
+  <p id="idThrpHmn008nam">name::
+    <br>* Mcs.therapy.008-biofeedback!⇒therapyMindBiofeedback,
+    <br>* Mcs.therapy.biofeedback!⇒therapyMindBiofeedback,
+    <br>* Mcs.therapyMindBiofeedback,
+    <br>* Mcs.therapyMind.biofeedback!⇒therapyMindBiofeedback,
+    <a class="clsHide" href="#idThrpHmn008nam"></a></p>
   </section>
 </section>
 
@@ -368,7 +599,7 @@
     <a class="clsHide" href="#idThrpHmnAltvH1"></a></h1>
   <p id="idThrpHmnAltvdsn">description::
     <br>"Alternative medicine describes any practice that aims to achieve the healing effects of medicine, but which lacks biological plausibility and is untested, untestable or proven ineffective. Complementary medicine (CM), complementary and alternative medicine (CAM), integrated medicine or integrative medicine (IM), and holistic medicine are among many rebrandings of the same phenomenon. Alternative therapies share in common that they reside outside medical science, and rely on pseudoscience. Traditional practices become "alternative" when used outside their original settings without proper scientific explanation and evidence. Frequently used derogatory terms for the alternative are new-age or pseudo, with little distinction from quackery."
-    <br>[https://en.wikipedia.org/wiki/Alternative_medicine {2020-01-16}]
+    <br>[{2020-01-16} https://en.wikipedia.org/wiki/Alternative_medicine]
     <a class="clsHide" href="#idThrpHmnAltvdsn"></a></p>
   <p id="idThrpHmnAltvnam">name::
     <br>* Mcs.alternative-therapy!⇒therapyAlt, {2012-07-31},
@@ -694,7 +925,7 @@
   <p id="idThrpHmnBctrdsn">description::
     <br>"Bacteriotherapy is the purposeful use of bacteria or their products in treating an illness.[1] Forms of bacteriotherapy include the use of probiotics, microorganisms that provide health benefits when consumed; fecal matter transplants (FMT) [2]/intestinal microbiota transplant (IMT),[3] the transfer of gut microorganisms from the fecal matter of healthy donors to recipient patients to restore microbiota;[1][3] or synbiotics which combine prebiotics, indigestible ingredients that promote growth of beneficial microorganisms, and probiotics.[4] Through these methods, the gut microbiota, the community of 300-500 microorganism species that live in the digestive tract of animals aiding in digestion, energy storage, immune function and protection against pathogens, can be recolonized with favorable bacteria, which in turn has therapeutic effects.[3]
     <br>FMT is being used as a new and effective treatment for C. diff infections, a gastrointestinal disease in which Clostridium difficile colonizes the gut of an organism disrupting microbial balance [3] and causing diarrhea that can potentially be deadly. Bacteriotherapy has also begun to be used in the treatment of mental disorders such as depression, anxiety, and autism spectrum disorder. Recolonization of gut flora can be used effectively in the treatment of mental disorders because of the existence of the gut-brain axis, the bidirectional route of communication between the brain and the gut, specifically the gut microbiota.[5]"
-    <br>[https://en.wikipedia.org/wiki/Bacteriotherapy {2020-01-26}]
+    <br>[{2020-01-26} https://en.wikipedia.org/wiki/Bacteriotherapy]
     <a class="clsHide" href="#idThrpHmnBctrdsn"></a></p>
   <p id="idThrpHmnBctrnam">name::
     <br>* Mcs.bacteriotherapy,
@@ -891,68 +1122,6 @@
     <br>* Mcs.therapy.hormone-001!⇒therapyHormone,
     <br>* Mcs.hormoneHmn-therapy-001!⇒therapyHormone,
     <a class="clsHide" href="#idThrpHmn001nam"></a></p>
-</section>
-
-<section id="idThrpHmn002">
-  <h1 id="idThrpHmn002H1">therapy.cognitive-behavioral-002
-    <a class="clsHide" href="#idThrpHmn002H1"></a></h1>
-  <p id="idThrpHmn002dsn">description::
-    <br>"Cognitive behavioral therapy (CBT) is a psycho-social intervention[1][2] that aims to improve mental health.[3] CBT focuses on challenging and changing unhelpful cognitive distortions (e.g. thoughts, beliefs, and attitudes) and behaviors, improving emotional regulation,[2][4] and the development of personal coping strategies that target solving current problems. Originally, it was designed to treat depression, but its uses have been expanded to include treatment of a number of mental health conditions, including anxiety.[5][6] CBT includes a number of cognitive or behavior psychotherapies that treat defined psychopathologies using evidence-based techniques and strategies.[7][8][9]"
-    <br>[{2020-07-10} https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy]
-    <a class="clsHide" href="#idThrpHmn002dsn"></a></p>
-  <p id="idThrpHmn002nam">name::
-    <br>* Mcs.CBT-Cognitive-Behavioral-Therapy!⇒therapyCB,
-    <br>* Mcs.cognitive-behavioral-therapy-CBT!⇒therapyCB,
-    <br>* Mcs.therapy.002-cognitive-behavioral!⇒therapyCB,
-    <br>* Mcs.therapy.cognitive-behavioral!⇒therapyCB,
-    <br>* Mcs.therapyCB,
-    <a class="clsHide" href="#idThrpHmn002nam"></a></p>
-
-  <section id="idThrpHmn004">
-  <h2 id="idThrpHmn004H2">therapy.computerized-CBT-004
-    <a class="clsHide" href="#idThrpHmn004H2"></a></h2>
-  <p id="idThrpHmn004dsn">description::
-    <br>"Computerized cognitive behavioral therapy (CCBT) has been described by NICE as a "generic term for delivering CBT via an interactive computer interface delivered by a personal computer, internet, or interactive voice response system",[163] instead of face-to-face with a human therapist. It is also known as internet-delivered cognitive behavioral therapy or ICBT.[164] CCBT has potential to improve access to evidence-based therapies, and to overcome the prohibitive costs and lack of availability sometimes associated with retaining a human therapist.[165] In this context, it is important not to confuse CBT with 'computer-based training', which nowadays is more commonly referred to as e-Learning."
-    <br>[{2020-07-11} https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy#Computerized_or_Internet-delivered]
-    <a class="clsHide" href="#idThrpHmn004dsn"></a></p>
-  <p id="idThrpHmn004nam">name::
-    <br>* Mcs.CCBT-computerized-cognitive-behavioral-therapy!⇒therapyCCB,
-    <br>* Mcs.cCBT-computerized-cognitive-behavioral-therapy!⇒therapyCCB,
-    <br>* Mcs.computerized-CBT!⇒therapyCCB,
-    <br>* Mcs.computerized-cognitive-behavioral-therapy!⇒therapyCCB,
-    <br>* Mcs.therapyCCB,
-    <br>* Mcs.therapy.004-CCBT!⇒therapyCCB,
-    <br>* Mcs.therapy.computerized-cognitive-behavioral!⇒therapyCCB,
-    <a class="clsHide" href="#idThrpHmn004nam"></a></p>
-
-  <section id="idThrpHmn004rscF">
-  <h3 id="idThrpHmn004rscFH3">resource of therapyCCB
-    <a class="clsHide" href="#idThrpHmn004rscFH3"></a></h3>
-  <p id="idThrpHmn004rscFdsn">description::
-    <br>* https://ecouch.anu.edu.au/new_users/welcome01 (free),
-    <br>* https://moodgym.com.au/info/faq (not free),
-    <a class="clsHide" href="#idThrpHmn004rscFdsn"></a></p>
-  <p id="idThrpHmn004rscFnam">name::
-    <br>* Mcs.therapyCCB'resource,
-    <a class="clsHide" href="#idThrpHmn004rscFnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idThrpHmn003">
-  <h2 id="idThrpHmn003H2">therapy.acceptance-and-commitment-003
-    <a class="clsHide" href="#idThrpHmn003H2"></a></h2>
-  <p id="idThrpHmn003dsn">description::
-    <br>"Acceptance and commitment therapy (ACT) is a specialist branch of CBT (sometimes referred to as contextual CBT[74])."
-    <br>[{2020-07-10} https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy]
-    <a class="clsHide" href="#idThrpHmn003dsn"></a></p>
-  <p id="idThrpHmn003nam">name::
-    <br>* Mcs.ACT-acceptance-and-commitment-therapy!⇒therapyAC,
-    <br>* Mcs.acceptance-and-commitment-therapy!⇒therapyAC,
-    <br>* Mcs.therapyAC,
-    <br>* Mcs.therapy.003-acceptance-andcommitment!⇒therapyAC,
-    <br>* Mcs.therapy.acceptance-andcommitment!⇒therapyAC,
-    <a class="clsHide" href="#idThrpHmn003nam"></a></p>
-  </section>
 </section>
 
 <section id="idThrpHmn005">
