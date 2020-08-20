@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.worker-(0-6-0.2020-08-16 draft) human.worker</title>
+  <title>Mcs.worker-(0-7-0.2020-08-20 draft) human.worker</title>
   <meta name="keywords" content="human.worker, worker, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -298,7 +298,18 @@
     <br>* ... <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">entity</a>.
     <a class="clsHide" href="#idWkrgtr"></a></p>
   <p id="idWkrstr">specific-tree-of-worker::
-    <br>* ,
+    <br>* counselor-worker,
+    <br>* employed-worker,
+    <br>* employedNo-worker,
+    <br>* employee-worker,
+    <br>* employer-worker,
+    <br>* homemaker-worker,
+    <br>* homemakerNo-worker,
+    <br>* mind-worker,
+    <br>* mindNo-worker,
+    <br>* professional-worker,
+    <br>* professionalNo-worker,
+    <br>* therapist-worker,
     <a class="clsHide" href="#idWkrstr"></a></p>
 </section>
 
@@ -427,7 +438,7 @@
 </section>
 
 <section id="idWkr007">
-  <h1 id="idWkr007H1">worker.qualification.professional-007
+  <h1 id="idWkr007H1">worker.job.professional-007
     <a class="clsHide" href="#idWkr007H1"></a></h1>
   <p id="idWkr007dsn">description::
     <br>"A professional is a member of a profession or any person who earns their living from a specified professional activity. The term also describes the standards of education and training that prepare members of the profession with the particular knowledge and skills necessary to perform their specific role within that profession. In addition, most professionals are subject to strict codes of conduct, enshrining rigorous ethical and moral obligations.[1] Professional standards of practice and ethics for a particular field are typically agreed upon and maintained through widely recognized professional associations, such as the IEEE.[2] Some definitions of "professional" limit this term to those professions that serve some important aspect of public interest[3] and the general good of society.[4][5]
@@ -437,9 +448,100 @@
   <p id="idWkr007nam">name::
     <br>* Mcs.wkrProfessional,
     <br>* Mcs.worker.007-professional!⇒wkrProfessional,
+    <br>* Mcs.worker.job.professional!⇒wkrProfessional,
     <br>* Mcs.worker.professional!⇒wkrProfessional,
-    <br>* Mcs.worker.qualification.professional!⇒wkrProfessional,
     <a class="clsHide" href="#idWkr007nam"></a></p>
+</section>
+
+<section id="idWkr010">
+  <h1 id="idWkr010H1">worker.job.professionalNo-010
+    <a class="clsHide" href="#idWkr010H1"></a></h1>
+  <p id="idWkr010dsn">description::
+    <br>· professionalNo is a-worker who does-not-earn his living from this working.
+    <a class="clsHide" href="#idWkr010dsn"></a></p>
+  <p id="idWkr010nam">name::
+    <br>* Mcs.amateur-worker!⇒wkrProfessionalNo,
+    <br>* Mcs.professionalNo-worker!⇒wkrProfessionalNo,
+    <br>* Mcs.wkrProfessionalNo,
+    <br>* Mcs.worker.010-professionalNo!⇒wkrProfessionalNo,
+    <br>* Mcs.worker.job.professionalNo!⇒wkrProfessionalNo,
+    <br>* Mcs.worker.professionalNo!⇒wkrProfessionalNo,
+    <a class="clsHide" href="#idWkr010nam"></a></p>
+</section>
+
+<section id="idWkr012">
+  <h1 id="idWkr012H1">worker.job.one-012
+    <a class="clsHide" href="#idWkr012H1"></a></h1>
+  <p id="idWkr012dsn">description::
+    <br>·
+    <a class="clsHide" href="#idWkr012dsn"></a></p>
+  <p id="idWkr012nam">name::
+    <br>* Mcs.wkrJobOne,
+    <br>* Mcs.worker.012-job.one!⇒wkrJobOne,
+    <br>* Mcs.worker.job.one!⇒wkrJobOne,
+    <a class="clsHide" href="#idWkr012nam"></a></p>
+</section>
+
+<section id="idWkr013">
+  <h1 id="idWkr013H1">worker.job.many-013
+    <a class="clsHide" href="#idWkr013H1"></a></h1>
+  <p id="idWkr013dsn">description::
+    <br>·
+    <a class="clsHide" href="#idWkr013dsn"></a></p>
+  <p id="idWkr013nam">name::
+    <br>* Mcs.wkrJobMany,
+    <br>* Mcs.worker.013-job.many!⇒wkrJobMany,
+    <br>* Mcs.worker.job.many!⇒wkrJobMany,
+    <a class="clsHide" href="#idWkr013nam"></a></p>
+</section>
+
+<section id="idWkr014">
+  <h1 id="idWkr014H1">worker.skill.skilled-014
+    <a class="clsHide" href="#idWkr014H1"></a></h1>
+  <p id="idWkr014dsn">description::
+    <br>·
+    <a class="clsHide" href="#idWkr014dsn"></a></p>
+  <p id="idWkr014nam">name::
+    <br>* Mcs.skilled-worker!⇒wkrSkilled,
+    <br>* Mcs.wkrSkilled,
+    <br>* Mcs.worker.014-skilled!⇒wkrSkilled,
+    <br>* Mcs.worker.skill.skilled!⇒wkrSkilled,
+    <br>* Mcs.worker.skilled!⇒wkrSkilled,
+    <a class="clsHide" href="#idWkr014nam"></a></p>
+</section>
+
+<section id="idWkr015">
+  <h1 id="idWkr015H1">worker.skill.skilledNo-015
+    <a class="clsHide" href="#idWkr015H1"></a></h1>
+  <p id="idWkr015dsn">description::
+    <br>·
+    <a class="clsHide" href="#idWkr015dsn"></a></p>
+  <p id="idWkr015nam">name::
+    <br>* Mcs.skilledNo-worker!⇒wkrSkilledNo,
+    <br>* Mcs.unskilled-worker!⇒wkrSkilledNo,
+    <br>* Mcs.wkrSkilledNo,
+    <br>* Mcs.worker.014-skilledNo!⇒wkrSkilledNo,
+    <br>* Mcs.worker.skill.skilledNo!⇒wkrSkilledNo,
+    <br>* Mcs.worker.skilledNo!⇒wkrSkilledNo,
+    <a class="clsHide" href="#idWkr015nam"></a></p>
+</section>
+
+<section id="idWkr011">
+  <h1 id="idWkr011H1">worker.satisfier.counselor-011
+    <a class="clsHide" href="#idWkr011H1"></a></h1>
+  <p id="idWkr011dsn">description::
+    <br>"Counseling is the professional guidance of the individual by utilizing psychological methods especially in collecting case history data, using various techniques of the personal interview, and testing interests and aptitudes.[1]"
+    <br>[{2020-08-20} https://en.wikipedia.org/wiki/List_of_counseling_topics]
+    <a class="clsHide" href="#idWkr011dsn"></a></p>
+  <p id="idWkr011nam">name::
+    <br>* Mcs.counselor!⇒wkrCounselor,
+    <br>* Mcs.wkrCounselor,
+    <br>* Mcs.worker.011-counselor!⇒wkrCounselor,
+    <br>* Mcs.worker.counselor!⇒wkrCounselor,
+    <br>* Mcs.worker.satisfier.counselor!⇒wkrCounselor,
+    <br>====== langoGreek:
+    <br>* McsEll.σύμβουλος!=wkrCounselor,
+    <a class="clsHide" href="#idWkr011nam"></a></p>
 </section>
 
 <section id="idWkr008">
