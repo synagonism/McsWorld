@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.cell-(0-20-0.2020-06-29 draft) human-cell</title>
+  <title>Mcs.cell-(0-21-0.2020-08-23 draft) human-cell</title>
   <meta name="keywords" content="human-cell, cell, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -1243,15 +1243,6 @@
 <section id="idCellHmn001">
   <h1 id="idCellHmn001H1">cell.brain-001
     <a class="clsHide" href="#idCellHmn001H1"></a></h1>
-  <p id="idCellHmn001nam">name::
-    <br>* Mcs.cell.001-brain,
-    <br>* Mcs.cell.brain-001,
-    <br>* Mcs.ognBrain'05_cell,
-    <br>* Mcs.ognBrain'att010-cell,
-    <br>* Mcs.ognBrain'cell-att010,
-    <br>* Mcs.brain-cell,
-    <br>* Mcs.human-brain-cell,
-    <a class="clsHide" href="#idCellHmn001nam"></a></p>
   <p id="idCellHmn001dsn">description::
     <br>How the Brain Works:
     <br>The brain is composed of two principal types of cells -neurons, or <strong>nerve cells</strong>, and <strong>glial cells</strong> (also called neuroglia).   The neurons perform the essential tasks of the brain, and the glial cells provide a kind of protective environment for the neurons.
@@ -1260,6 +1251,16 @@
     <br>Glial cells surround the neurons, outnumbering them ten to one. They help regulate the biochemical environment within the brain, provide structural support for neurons, repair the central nervous-system after injury, and supply chemicals and other substances that are essential for healthy functioning of the brain.
     <br>[ Copyright 1991 Compton's Learning Company ]
     <a class="clsHide" href="#idCellHmn001dsn"></a></p>
+  <p id="idCellHmn001nam">name::
+    <br>* Mcs.brain-cell!⇒cellBrain,
+    <br>* Mcs.cell.001-brain!⇒cellBrain,
+    <br>* Mcs.cell.brain!⇒cellBrain,
+    <br>* Mcs.cellBrain,
+    <br>* Mcs.human-brain-cell!⇒cellBrain,
+    <br>* Mcs.ognBrain'05_cell!⇒cellBrain,
+    <br>* Mcs.ognBrain'att010-cell!⇒cellBrain,
+    <br>* Mcs.ognBrain'cell-att010!⇒cellBrain,
+    <a class="clsHide" href="#idCellHmn001nam"></a></p>
   <p id="idCellHmn001P1">γενική:
     <br>* κύτταρο νευρικού-συστήματος,
     <a class="clsHide" href="#idCellHmn001P1"></a></p>
@@ -1267,10 +1268,6 @@
     <br>τα εγκεφαλικά κύτταρα νεκρώνονται 3-6 λεπτά μετά τη διακοπή της οξυγόνωσής τους.
     <br>[Εικ, 1994, 82⧺cptRsc33⧺]
     <a class="clsHide" href="#idCellHmn001P2"></a></p>
-  <p id="idCellHmn001P3">ποσότητα:
-    <br>οι νευρωνες του εγκεφάλου είναι περίπου 100 δισεκατομμύρια.
-    <br>[Καθημερινή, {1995-05-21}, 31 γ. ριζοπουλοσ]
-    <a class="clsHide" href="#idCellHmn001P3"></a></p>
 
   <section id="idCellHmn001genome">
   <h2 id="idCellHmn001genomeH2">genome
@@ -1328,7 +1325,7 @@
     <br>* Mcs.cellNeuron'(human-neuron)!⇒cellNeuron,
     <br>* Mcs.cell.004-neuron!⇒cellNeuron,
     <br>* Mcs.cell.neuron-004!⇒cellNeuron,
-    <br>* Mcs.cell.brain.neuron!⇒cellNeuron,
+    <br>* Mcs.cellΒrain.neuron!⇒cellNeuron,
     <br>* Mcs.nerve-cell!⇒cellNeuron,
     <br>* Mcs.neuron!⇒cellNeuron,
     <br>* Mcs.neurone!⇒cellNeuron,
@@ -1811,6 +1808,9 @@
   <p id="cellNeurondsn">description::
     <br>υπάρχουν περισσότεροι από 20 δισεκατομμύρια <a class="clsPreview" href="#idCellHmn004">νευρώνες</a>.
     <br>[RAM, επιστημη 21ος αιωνας, νοηση, δεκέμβριος 2002, 15]
+    <br>===
+    <br>οι νευρώνες του εγκεφάλου είναι περίπου 100 δισεκατομμύρια.
+    <br>[Καθημερινή, {1995-05-21}, 31 Γ. Ριζόπουλοςcell.neuron-00]
     <a class="clsHide" href="#cellNeurondsn"></a></p>
   </section>
 
@@ -1883,8 +1883,9 @@
   <p id="idCellHmn005nam">name::
     <br>* Mcs.cell.005-neuroglia!⇒cellNeuroglia,
     <br>* Mcs.cell.neuroglia-005!⇒cellNeuroglia,
-    <br>* Mcs.cellNeuroglia,
     <br>* Mcs.cell.glial!⇒cellNeuroglia,
+    <br>* Mcs.cellBrain.glial!⇒cellNeuroglia,
+    <br>* Mcs.cellNeuroglia,
     <br>* Mcs.glial-cell!⇒cellNeuroglia,
     <br>* Mcs.neuroglia!⇒cellNeuroglia,
     <br>====== langoGreek:

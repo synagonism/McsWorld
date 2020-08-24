@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.disease-(0-70-0.2020-08-19 draft) human-disease</title>
+  <title>Mcs.disease-(0-71-0.2020-08-23 draft) human-disease</title>
   <meta name="keywords" content="disease-of-human, disease, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -1694,24 +1694,151 @@
     <br>πάθηση αγγείων είναι κάθε DEFECT των <a class="clsPreview" href="filMcsBdyHmn.html#idOgnHmn013">vessel</a>.
     <a class="clsHide" href="#idDssHmn130dsn"></a></p>
   <p id="idDssHmn130nam">name::
-    <br>* Mcs.disease.130-vessel,
-    <br>* Mcs.disease.vessel-130,
-    <br>* Mcs.vessel'defect,
-    <br>* Mcs.defect-of-vessel,
+    <br>* Mcs.disease.130-vessel!⇒diseaseVessel,
+    <br>* Mcs.disease.vessel-130!⇒diseaseVessel,
+    <br>* Mcs.diseaseVessel,
+    <br>* Mcs.defect-of-vessel!⇒diseaseVessel,
+    <br>* Mcs.vessel'defect!⇒diseaseVessel,
     <br>====== langoGreek:
-    <br>* McsEll.πάθηση.αγγείων,
+    <br>* McsEll.πάθηση.αγγείων!=diseaseVessel,
     <a class="clsHide" href="#idDssHmn130nam"></a></p>
-  <p id="idDssHmn130gtr">generic-tree-of-::
+  <p id="idDssHmn130gtr">generic-tree-of-diseaseVessel::
     <br>* <a class="clsPreview" href="#idDssHmn032">diseaseHeartvessel</a>,
     <a class="clsHide" href="#idDssHmn130gtr"></a></p>
 
   <section id="idDssHmn130specific">
-  <h3 id="idDssHmn130specificH3">SPECIFIC
+  <h3 id="idDssHmn130specificH3">diseaseVessel.SPECIFIC
     <a class="clsHide" href="#idDssHmn130specificH3"></a></h3>
   <p id="idDssHmn130specificP1">specific::
     <br>* <a class="clsPreview" href="#idDssHmn134">αιμορραγία</a>,
     <br>* <a class="clsPreview" href="#idDssHmn033">αρτηριοσκλήρυνση</a>,
     <a class="clsHide" href="#idDssHmn130specificP1"></a></p>
+  </section>
+
+  <section id="idDssHmn134">
+  <h2 id="idDssHmn134H2">disease.hemorrhage-134
+    <a class="clsHide" href="#idDssHmn134H2"></a></h2>
+  <p id="idDssHmn134dsn">description::
+    <br>αιμορραγία είναι πάθηση αγγείων κατά την οποία το αίμα εξέρχεται από σπασμένα αγγεία.
+    <br>===
+    <br>όταν απο οποιαδήποτε αιτία τα αιμοφόρα αγγεία διαρραγουν, το αίμα εξαγγειώνεται (βγαίνει απο τα αγγεία).  το φαινόμενο αυτό αποτελεί την αιμορραγία.
+    <br>[Αργύρης, {1994}, 52⧺cptRsc29⧺]
+    <a class="clsHide" href="#idDssHmn134dsn"></a></p>
+  <p id="idDssHmn134nam">name::
+    <br>* Mcs.bleeding!⇒diseaseBleading,
+    <br>* Mcs.disease.134-hemorrhage!⇒diseaseBleading,
+    <br>* Mcs.disease.hemorrhage-134!⇒diseaseBleading,
+    <br>* Mcs.diseaseBleading,
+    <br>* Mcs.haemorrhage!⇒diseaseBleading,
+    <br>* Mcs.hemorrhage!⇒diseaseBleading,
+    <br>====== langoGreek:
+    <br>* McsEll.πάθηση.αιμορραγία!=diseaseBleading,
+    <br>* McsEll.αιμορραγία!=diseaseBleading,
+    <a class="clsHide" href="#idDssHmn134nam"></a></p>
+  <p id="idDssHmn134gtr">generic-tree-of-diseaseBleading::
+    <br>* <a class="clsPreview" href="#idDssHmn130">diseaseVessel</a>,
+    <a class="clsHide" href="#idDssHmn134gtr"></a></p>
+  <p id="idDssHmn134wtr">whole-tree-of-diseaseBleading::
+    <br>* <a class="clsPreview" href="#idOgnHmn013">ognVessel</a>,
+    <a class="clsHide" href="#idDssHmn134wtr"></a></p>
+
+  <section id="idDssHmn134therapy">
+  <h3 id="idDssHmn134therapyH3">therapy of diseaseBleading
+    <a class="clsHide" href="#idDssHmn134therapyH3"></a></h3>
+  <p id="idDssHmn134therapyP1"><a class="clsPreview" href="filMcsThrpHmn.last.html#idOverview">therapy</a>::
+    <br>πηξη αίματος⧺cptDssHmn283⧺
+    <a class="clsHide" href="#idDssHmn134therapyP1"></a></p>
+  </section>
+
+  <section id="idDssHmn134specific">
+  <h3 id="idDssHmn134specificH3">diseaseBleading.SPECIFIC
+    <a class="clsHide" href="#idDssHmn134specificH3"></a></h3>
+  <p id="idDssHmn134specificP1">specific::
+    <br>* εξωτερικη αιμορραγία,
+    <br>* εσωτερικη αιμορραγία,
+    <a class="clsHide" href="#idDssHmn134specificP1"></a></p>
+  </section>
+  </section>
+
+  <section id="idDssHmn033">
+  <h2 id="idDssHmn033H2">disease.arteriosclerosis-033
+    <a class="clsHide" href="#idDssHmn033H2"></a></h2>
+  <p id="idDssHmn033dsn">description::
+    <br>αρτηριοσκλήρυνση είναι αρρώστια που προσβάλει τις αρτηρίες. Δημιουργείται από την εναπόθεση χοληστερίνης, λίπους, νεκρωμένων μυϊκων κυτταρων, ινώδους ιστού, ασβεστίου.
+    <br>[εικ, 1994, 26⧺cptRsc33⧺]
+    <a class="clsHide" href="#idDssHmn033dsn"></a></p>
+  <p id="idDssHmn033nam">name::
+    <br>* Mcs.arteriosclerosis!⇒diseaseArteriosclerosis,
+    <br>* Mcs.disease.033-arteriosclerosis!⇒diseaseArteriosclerosis,
+    <br>* Mcs.disease.arteriosclerosis-033!⇒diseaseArteriosclerosis,
+    <br>* Mcs.diseaseArteriosclerosis,
+    <br>====== langoGreek:
+    <br>* McsEll.πάθηση.αθηρωματικη-νόσος-των-αρτηριών!=diseaseArteriosclerosis,
+    <br>* McsEll.αθηρωματικη-νόσος-των-αρτηριών!=diseaseArteriosclerosis,
+    <br>* McsEll.αρτηριοσκλήρυνση!=diseaseArteriosclerosis,
+    <a class="clsHide" href="#idDssHmn033nam"></a></p>
+  <p id="idDssHmn033gtr">generic-tree-of-diseaseArteriosclerosis::
+    <br>* <a class="clsPreview" href="#idDssHmn130">diseaseVessel</a>,
+    <a class="clsHide" href="#idDssHmn033gtr"></a></p>
+  <p id="idDssHmn033wtr">whole-tree-of-diseaseArteriosclerosis::
+    <br>* <a class="clsPreview" href="#idDssHmn034">artery</a>,
+    <a class="clsHide" href="#idDssHmn033wtr"></a></p>
+
+  <section id="idDssHmn033symptom">
+  <h3 id="idDssHmn033symptomH3">symptom of diseaseArteriosclerosis
+    <a class="clsHide" href="#idDssHmn033symptomH3"></a></h3>
+  <p id="idDssHmn033symptomP1"><a class="clsPreview" href="#idDssHmn001F">symptom</a>::
+    <br>δεν παρουσιάζει συμπτώματα στην αρχή και όταν αυτά εμφανιστούν η νόσος είναι συνήθως προχωρημένη.
+    <br>[εικ, 1994, 26⧺cptRsc33⧺]
+    <a class="clsHide" href="#idDssHmn033symptomP1"></a></p>
+  </section>
+
+  <section id="idDssHmn033cause">
+  <h3 id="idDssHmn033causeH3">cause of diseaseArteriosclerosis
+    <a class="clsHide" href="#idDssHmn033causeH3"></a></h3>
+  <p id="idDssHmn033causeSpc">cause::
+    <br>* χοληστερίνη,
+    <br>* υπέρταση,
+    <br>* κάπνισμα,
+    <br>===
+    <br>ενεργος πρωτεΐνη C:
+    <br>η φλεγμονή των αρτηριών είναι σημαντικός παράγοντας που δείχνει με μια απλή εξέταση αυτούς που έχουν προδιάθεση, ανακοίνωσαν αμερικανοί επιστήμονες
+    <br>[MEGA 1997apr05]
+    <a class="clsHide" href="#idDssHmn033causeSpc"></a></p>
+  </section>
+
+  <section id="idDssHmn033therapy">
+  <h3 id="idDssHmn033therapyH3">therapy of diseaseArteriosclerosis
+    <a class="clsHide" href="#idDssHmn033therapyH3"></a></h3>
+  <p id="idDssHmn033therapyP1"><a class="clsPreview" href="filMcsThrpHmn.last.html#idOverview">therapy</a>::
+    <br>νεα μέθοδος: από το 1993 στο γενικό λαϊκό με λεϊζερ χωρις εγχείριση.
+    <a class="clsHide" href="#idDssHmn033therapyP1"></a></p>
+  </section>
+
+  <section id="idDssHmn033protection">
+  <h3 id="idDssHmn033protectionH3">protection of diseaseArteriosclerosis
+    <a class="clsHide" href="#idDssHmn033protectionH3"></a></h3>
+  <p id="idDssHmn033protectionP1">protection::
+    <br>το κάπνισμα,
+    <br>τα υψηλα επίπεδα χοληστερινης στο αίμα,
+    <br>η υπέρταση,
+    <br>η παχυσαρκία,
+    <br>ο σακχαρώδης διαβήτης,
+    <br>η έλλειψη σωματικής άσκησης και
+    <br>κληρονομικοί παράγοντες
+    <br>παίζουν σπουδαίο ρόλο στην ανάπτυξη της αρτηριοσκλήρυνσης.
+    <br>[εικ, 1994, 26⧺cptRsc33⧺]
+    <br>===
+    <br>όταν εμφανιστούν οι κλινικές εκδηλώσεις, δεν υπάρχει οριστική θεραπεία. Γιαυτό πρέπει να επιδιώκεται προληψη της νόσου. Αυτό μπορεί να επιτευχθεί σε μεγάλο βαθμο, εφόσον αρχίσει συστηματικός έλεγχος απο την παιδική ηλικία των παραγοντων που προδιαθέτουν στην εμφάνιση της νόσου.
+    <br>[εικ, 1994, 36⧺cptRsc33⧺]
+    <br>===
+    <br>παράγοντες που προκαλούν αρτηριοσκήρυνση είναι:
+    <br>- χοληστερίνη
+    <br>- κάπνισμα
+    <br>- αρτηριακή υπέρταση
+    <br>[εικ, 1994, 37⧺cptRsc33⧺]
+    <a class="clsHide" href="#idDssHmn033protectionP1"></a></p>
+  </section>
   </section>
   </section>
 
@@ -3459,86 +3586,6 @@
     <br>[Νέα, {1992-11-16}]
     <a class="clsHide" href="#idDssHmn069genedsn"></a></p>
   </section>
-  </section>
-</section>
-
-<section id="idDssHmn033">
-  <h1 id="idDssHmn033H1">disease.arteriosclerosis-033
-    <a class="clsHide" href="#idDssHmn033H1"></a></h1>
-  <p id="idDssHmn033dsn">description::
-    <br>αρτηριοσκλήρυνση είναι αρρώστια που προσβάλει τις αρτηρίες. Δημιουργείται από την εναπόθεση χοληστερίνης, λίπους, νεκρωμένων μυϊκων κυτταρων, ινώδους ιστού, ασβεστίου.
-    <br>[εικ, 1994, 26⧺cptRsc33⧺]
-    <a class="clsHide" href="#idDssHmn033dsn"></a></p>
-  <p id="idDssHmn033nam">name::
-    <br>* Mcs.disease.033-arteriosclerosis,
-    <br>* Mcs.disease.arteriosclerosis-033,
-    <br>* Mcs.arteriosclerosis,
-    <br>====== langoGreek:
-    <br>* McsEll.πάθηση.αθηρωματικη-νόσος-των-αρτηριών,
-    <br>* McsEll.αθηρωματικη-νόσος-των-αρτηριών,
-    <br>* McsEll.αρτηριοσκλήρυνση,
-    <a class="clsHide" href="#idDssHmn033nam"></a></p>
-  <p id="idDssHmn033gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idDssHmn130">diseaseVessel</a>,
-    <a class="clsHide" href="#idDssHmn033gtr"></a></p>
-  <p id="idDssHmn033wtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idDssHmn034">artery</a>,
-    <a class="clsHide" href="#idDssHmn033wtr"></a></p>
-
-  <section id="idDssHmn033symptom">
-  <h2 id="idDssHmn033symptomH2">symptom
-    <a class="clsHide" href="#idDssHmn033symptomH2"></a></h2>
-  <p id="idDssHmn033symptomP1"><a class="clsPreview" href="#idDssHmn001F">symptom</a>::
-    <br>δεν παρουσιάζει συμπτώματα στην αρχή και όταν αυτά εμφανιστούν η νόσος είναι συνήθως προχωρημένη.
-    <br>[εικ, 1994, 26⧺cptRsc33⧺]
-    <a class="clsHide" href="#idDssHmn033symptomP1"></a></p>
-  </section>
-
-  <section id="idDssHmn033cause">
-  <h2 id="idDssHmn033causeH2">cause
-    <a class="clsHide" href="#idDssHmn033causeH2"></a></h2>
-  <p id="idDssHmn033causeSpc">cause::
-    <br>* χοληστερίνη,
-    <br>* υπέρταση,
-    <br>* κάπνισμα,
-    <br>===
-    <br>ενεργος πρωτεΐνη C:
-    <br>η φλεγμονή των αρτηριών είναι σημαντικός παράγοντας που δείχνει με μια απλή εξέταση αυτούς που έχουν προδιάθεση, ανακοίνωσαν αμερικανοί επιστήμονες
-    <br>[MEGA 1997apr05]
-    <a class="clsHide" href="#idDssHmn033causeSpc"></a></p>
-  </section>
-
-  <section id="idDssHmn033therapy">
-  <h2 id="idDssHmn033therapyH2">therapy
-    <a class="clsHide" href="#idDssHmn033therapyH2"></a></h2>
-  <p id="idDssHmn033therapyP1"><a class="clsPreview" href="filMcsThrpHmn.last.html#idOverview">therapy</a>::
-    <br>νεα μέθοδος: από το 1993 στο γενικό λαϊκό με λεϊζερ χωρις εγχείριση.
-    <a class="clsHide" href="#idDssHmn033therapyP1"></a></p>
-  </section>
-
-  <section id="idDssHmn033protection">
-  <h2 id="idDssHmn033protectionH2">protection
-    <a class="clsHide" href="#idDssHmn033protectionH2"></a></h2>
-  <p id="idDssHmn033protectionP1">protection::
-    <br>το κάπνισμα,
-    <br>τα υψηλα επίπεδα χοληστερινης στο αίμα,
-    <br>η υπέρταση,
-    <br>η παχυσαρκία,
-    <br>ο σακχαρώδης διαβήτης,
-    <br>η έλλειψη σωματικής άσκησης και
-    <br>κληρονομικοί παράγοντες
-    <br>παίζουν σπουδαίο ρόλο στην ανάπτυξη της αρτηριοσκλήρυνσης.
-    <br>[εικ, 1994, 26⧺cptRsc33⧺]
-    <br>===
-    <br>όταν εμφανιστούν οι κλινικές εκδηλώσεις, δεν υπάρχει οριστική θεραπεία. Γιαυτό πρέπει να επιδιώκεται προληψη της νόσου. Αυτό μπορεί να επιτευχθεί σε μεγάλο βαθμο, εφόσον αρχίσει συστηματικός έλεγχος απο την παιδική ηλικία των παραγοντων που προδιαθέτουν στην εμφάνιση της νόσου.
-    <br>[εικ, 1994, 36⧺cptRsc33⧺]
-    <br>===
-    <br>παραγοντες που προκαλούν αρτηριοσκήρυνση είναι:
-    <br>- χοληστερίνη
-    <br>- κάπνισμα
-    <br>- αρτηριακή υπέρταση
-    <br>[εικ, 1994, 37⧺cptRsc33⧺]
-    <a class="clsHide" href="#idDssHmn033protectionP1"></a></p>
   </section>
 </section>
 
@@ -7477,50 +7524,6 @@
     <br>* https://eody.gov.gr/wp-content/uploads/2019/05/Travellers-diarrhea_2017_en.pdf,
     <a class="clsHide" href="#idDssHmn139resourcewpa"></a></p>
   </section>
-  </section>
-</section>
-
-<section id="idDssHmn134">
-  <h1 id="idDssHmn134H1">disease.hemorrhage-134
-    <a class="clsHide" href="#idDssHmn134H1"></a></h1>
-  <p id="idDssHmn134dsn">description::
-    <br>αιμορραγία είναι πάθηση αγγείων κατά την οποία το αίμα εξέρχεται από σπασμένα αγγεία.
-    <br>===
-    <br>όταν απο οποιαδήποτε αιτία τα αιμοφόρα αγγεία διαρραγουν, το αίμα εξαγγειώνεται (βγαίνει απο τα αγγεία).  το φαινόμενο αυτό αποτελεί την αιμορραγία.
-    <br>[Αργύρης, {1994}, 52⧺cptRsc29⧺]
-    <a class="clsHide" href="#idDssHmn134dsn"></a></p>
-  <p id="idDssHmn134nam">name::
-    <br>* Mcs.disease.134-hemorrhage,
-    <br>* Mcs.disease.hemorrhage-134,
-    <br>* Mcs.bleeding,
-    <br>* Mcs.haemorrhage,
-    <br>* Mcs.hemorrhage,
-    <br>====== langoGreek:
-    <br>* McsEll.πάθηση.αιμορραγία,
-    <br>* McsEll.αιμορραγία,
-    <a class="clsHide" href="#idDssHmn134nam"></a></p>
-  <p id="idDssHmn134gtr">generic-tree-of-::
-    <br>* <a class="clsPreview" href="#idDssHmn130">diseaseVessel</a>,
-    <a class="clsHide" href="#idDssHmn134gtr"></a></p>
-  <p id="idDssHmn134wtr">whole-tree-of-::
-    <br>* vessel⧺cptBdyHmn029⧺⧺,
-    <a class="clsHide" href="#idDssHmn134wtr"></a></p>
-
-  <section id="idDssHmn134therapy">
-  <h2 id="idDssHmn134therapyH2">therapy
-    <a class="clsHide" href="#idDssHmn134therapyH2"></a></h2>
-  <p id="idDssHmn134therapyP1"><a class="clsPreview" href="filMcsThrpHmn.last.html#idOverview">therapy</a>::
-    <br>πηξη αίματος⧺cptDssHmn283⧺
-    <a class="clsHide" href="#idDssHmn134therapyP1"></a></p>
-  </section>
-
-  <section id="idDssHmn134specific">
-  <h2 id="idDssHmn134specificH2">SPECIFIC
-    <a class="clsHide" href="#idDssHmn134specificH2"></a></h2>
-  <p id="idDssHmn134specificP1">specific::
-    <br>* εξωτερικη αιμορραγία,
-    <br>* εσωτερικη αιμορραγία,
-    <a class="clsHide" href="#idDssHmn134specificP1"></a></p>
   </section>
 </section>
 
