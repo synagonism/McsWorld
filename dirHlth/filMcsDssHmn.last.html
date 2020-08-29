@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.disease-(0-71-0.2020-08-23 draft) human-disease</title>
+  <title>Mcs.disease-(0-72-0.2020-08-29 draft) human-disease</title>
   <meta name="keywords" content="disease-of-human, disease, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -442,16 +442,34 @@
 </section>
 
 <section id="idDssHmnatt009">
-  <h1 id="idDssHmnatt009H1">patient of disease
+  <h1 id="idDssHmnatt009H1">08_patient of disease
     <a class="clsHide" href="#idDssHmnatt009H1"></a></h1>
   <p id="idDssHmnatt009dsn">description::
     <br>· the-human with the-disease.
     <a class="clsHide" href="#idDssHmnatt009dsn"></a></p>
   <p id="idDssHmnatt009nam">name::
-    <br>* Mcs.disease'att009-patient,
-    <br>* Mcs.disease'patient,
-    <br>* Mcs.patient-of-disease,
+    <br>* Mcs.disease'08_patient!⇒hmnPatient,
+    <br>* Mcs.disease'att009-patient!⇒hmnPatient,
+    <br>* Mcs.disease'patient!⇒hmnPatient,
+    <br>* Mcs.hmnPatient,
+    <br>* Mcs.human.014-patient!⇒hmnPatient,
+    <br>* Mcs.human.patient!⇒hmnPatient,
+    <br>* Mcs.patient-of-disease!⇒hmnPatient,
     <a class="clsHide" href="#idDssHmnatt009nam"></a></p>
+</section>
+
+<section id="idDssHmnatt010">
+  <h1 id="idDssHmnatt010H1">09_worker of disease
+    <a class="clsHide" href="#idDssHmnatt010H1"></a></h1>
+  <p id="idDssHmnatt010dsn">description::
+    <br>· any <a class="clsPreview" href="../dirStn/filMcsWkr.last.html#idOverview">worker</a> of disease.
+    <a class="clsHide" href="#idDssHmnatt010dsn"></a></p>
+  <p id="idDssHmnatt010nam">name::
+    <br>* Mcs.disease'att010-worker!⇒wkrDisease,
+    <br>* Mcs.disease'worker!⇒wkrDisease,
+    <br>* Mcs.hmnWorker.016-disease!⇒wkrDisease,
+    <br>* Mcs.hmnWorker.disease!⇒wkrDisease,
+    <a class="clsHide" href="#idDssHmnatt010nam"></a></p>
 </section>
 
 <section id="idDssHmnrscF">
@@ -464,6 +482,26 @@
   <p id="idDssHmnrscwpa">addressWpg::
     <br>* https://www.hygeia.gr/hygeia/arthra-ygeias/,
     <a class="clsHide" href="#idDssHmnrscwpa"></a></p>
+
+  <section id="idDssHmnSci">
+  <h2 id="idDssHmnSciH2">science of disease
+    <a class="clsHide" href="#idDssHmnSciH2"></a></h2>
+  <p id="idDssHmnScidsn">description::
+    <br>· <a class="clsPreview" href="../dirEdu/filMcsSci.last.html#idOverview">the-science</a> of disease.
+    <a class="clsHide" href="#idDssHmnScidsn"></a></p>
+  <p id="idDssHmnScinam">name::
+    <br>* Mcs.disease'science!⇒sciDisease,
+    <br>* Mcs.medicine!⇒sciDisease,
+    <br>* Mcs.sciDisease,
+    <br>* Mcs.science-of-disease!⇒sciDisease,
+    <a class="clsHide" href="#idDssHmnScinam"></a></p>
+  <p id="idDssHmnScidsnL">descriptionLong::
+    <br>"Medicine is the science and practice of establishing the diagnosis, prognosis, treatment, and prevention of disease. Medicine encompasses a variety of health care practices evolved to maintain and restore health by the prevention and treatment of illness. Contemporary medicine applies biomedical sciences, biomedical research, genetics, and medical technology to diagnose, treat, and prevent injury and disease, typically through pharmaceuticals or surgery, but also through therapies as diverse as psychotherapy, external splints and traction, medical devices, biologics, and ionizing radiation, amongst others.[1]
+    <br>Medicine has been practiced since prehistoric times, during most of which it was an art (an area of skill and knowledge) frequently having connections to the religious and philosophical beliefs of local culture. For example, a medicine man would apply herbs and say prayers for healing, or an ancient philosopher and physician would apply bloodletting according to the theories of humorism. In recent centuries, since the advent of modern science, most medicine has become a combination of art and science (both basic and applied, under the umbrella of medical science). While stitching technique for sutures is an art learned through practice, the knowledge of what happens at the cellular and molecular level in the tissues being stitched arises through science.
+    <br>Prescientific forms of medicine are now known as traditional medicine and folk medicine. They remain commonly used with, or instead of, scientific medicine and are thus called alternative medicine. As an example, evidence on the effectiveness of acupuncture is "variable and inconsistent" for any condition,[2] but is generally safe when done by an appropriately trained practitioner.[3] In contrast, alternative treatments outside the bounds not just of scientific medicine, but also outside the bounds of safety and efficacy are termed quackery. This can encompass an array of practices and practitioners, irrespective of whether they are prescientific (traditional medicine and folk medicine) or modern pseudo-scientific, including chiropractic which rejects modern scientific germ theory of disease (instead believing without evidence that human diseases are caused by invisible subluxation of the bones, predominantly of the spine and less so of other bones), with just over half of chiropractors also rejecting the science of immunization."
+    <br>[{2020-08-29} https://en.wikipedia.org/wiki/Medicine]
+    <a class="clsHide" href="#idDssHmnScidsnL"></a></p>
+  </section>
 
   <section id="idDssHmnptlg">
   <h2 id="idDssHmnptlgH2">pathology of disease
@@ -5368,7 +5406,7 @@
     <br>* Mcs.disease.079-anxiety-disorder!⇒diseaseAnxiety,
     <br>* Mcs.disease.anxiety-disorder-079!⇒diseaseAnxiety,
     <br>* Mcs.diseaseAnxiety,
-    <br>* Mcs.diseaseMentalAnxiety!⇒diseaseAnxiety,
+    <br>* Mcs.diseaseMental.anxiety!⇒diseaseAnxiety,
     <br>* Mcs.anxiety-disorder!⇒diseaseAnxiety,
     <br>* Mcs.stress-disorder!⇒diseaseAnxiety,
     <br>====== langoGreek:
@@ -6268,7 +6306,7 @@
     <br>* Mcs.disease.080-depression!⇒diseaseDepression,
     <br>* Mcs.disease.depression-080!⇒diseaseDepression,
     <br>* Mcs.diseaseDepression,
-    <br>* Mcs.diseaseMentalDepression!⇒diseaseDepression,
+    <br>* Mcs.diseaseMental.depression!⇒diseaseDepression,
     <br>* Mcs.depression!⇒diseaseDepression,
     <br>====== langoGreek:
     <br>* McsEll.πάθηση.κατάθλιψη!=diseaseDepression,
@@ -6303,6 +6341,24 @@
   </section>
   </section>
 
+  <section id="idDssHmn277">
+  <h2 id="idDssHmn277H2">dssMental.personality-disorder-277
+    <a class="clsHide" href="#idDssHmn277H2"></a></h2>
+  <p id="idDssHmn277dsn">description::
+    <br>"Personality disorders (PD) are a class of mental disorders characterized by enduring maladaptive patterns of behavior, cognition, and inner experience, exhibited across many contexts and deviating from those accepted by the individual's culture. These patterns develop early, are inflexible, and are associated with significant distress or disability. The definitions may vary somewhat, according to source.[2][3][4] Official criteria for diagnosing personality disorders are listed in the Diagnostic and Statistical Manual of Mental Disorders (DSM) and the fifth chapter of the International Classification of Diseases (ICD).
+    <br>Personality, defined psychologically, is the set of enduring behavioral and mental traits that distinguish individual humans. Hence, personality disorders are defined by experiences and behaviors that differ from social norms and expectations. Those diagnosed with a personality disorder may experience difficulties in cognition, emotiveness, interpersonal functioning, or impulse control. In general, personality disorders are diagnosed in 40–60% of psychiatric patients, making them the most frequent of psychiatric diagnoses.[5]
+    <br>Personality disorders are characterized by an enduring collection of behavioral patterns often associated with considerable personal, social, and occupational disruption. Personality disorders are also inflexible and pervasive across many situations, largely due to the fact that such behavior may be ego-syntonic (i.e. the patterns are consistent with the ego integrity of the individual) and are therefore perceived to be appropriate by that individual. This behavior can result in maladaptive coping skills and may lead to personal problems that induce extreme anxiety, distress, or depression. These behavior patterns are typically recognized in adolescence, the beginning of adulthood or sometimes even childhood and often have a pervasive negative impact on the quality of life.[2][6][7]
+    <br>Many issues occur with classifying a personality disorder because the theory and diagnosis of such disorders occur within prevailing cultural expectations, thus their validity is contested by some experts on the basis of inevitable subjectivity. They argue that the theory and diagnosis of personality disorders are based strictly on social, or even sociopolitical and economic considerations.[8]"
+    <br>[{2020-08-29} https://en.wikipedia.org/wiki/Personality_disorder]
+    <a class="clsHide" href="#idDssHmn277dsn"></a></p>
+  <p id="idDssHmn277nam">name::
+    <br>* Mcs.disease.277-personality-disorder!⇒diseasePersonality,
+    <br>* Mcs.diseaseMental.personality!⇒diseasePersonality,
+    <br>* Mcs.diseasePersonality,
+    <br>* Mcs.personality-disorder!⇒diseasePersonality,
+    <a class="clsHide" href="#idDssHmn277nam"></a></p>
+  </section>
+
   <section id="idDssHmn270">
   <h2 id="idDssHmn270H2">dssMental.bipolar-270
     <a class="clsHide" href="#idDssHmn270H2"></a></h2>
@@ -6315,7 +6371,7 @@
     <br>* Mcs.disease.270-bipolar-disorder!⇒diseaseBipolar,
     <br>* Mcs.disease.bipolar-disorder!⇒diseaseBipolar,
     <br>* Mcs.diseaseBipolar,
-    <br>* Mcs.diseaseMentalBipolar!⇒diseaseBipolar,
+    <br>* Mcs.diseaseMental.bipolar!⇒diseaseBipolar,
     <br>====== langoGreek:
     <br>* McsEll.διπολική-διαταραχή!=diseaseBipolar,
     <a class="clsHide" href="#idDssHmn270nam"></a></p>
@@ -6332,7 +6388,7 @@
     <br>* Mcs.disease.081-insanity!⇒diseaseInsanity,
     <br>* Mcs.disease.insanity-081!⇒diseaseInsanity,
     <br>* Mcs.diseaseInsanity,
-    <br>* Mcs.diseaseMentalInsanity!⇒diseaseInsanity,
+    <br>* Mcs.diseaseMental.insanity!⇒diseaseInsanity,
     <br>* Mcs.insanity!⇒diseaseInsanity,
     <br>* Mcs.madness!⇒diseaseInsanity,
     <br>====== langoGreek:
@@ -6361,7 +6417,7 @@
   <p id="idDssHmn082nam">name::
     <br>* Mcs.disease.082-psychopathy!⇒diseasePsychopathy,
     <br>* Mcs.disease.psychopathy!⇒diseasePsychopathy,
-    <br>* Mcs.diseaseMentalPsychopathy!⇒diseasePsychopathy,
+    <br>* Mcs.diseaseMental.psychopathy!⇒diseasePsychopathy,
     <br>* Mcs.diseasePsychopathy,
     <br>* Mcs.psychopathy!⇒diseasePsychopathy,
     <a class="clsHide" href="#idDssHmn082nam"></a></p>
@@ -6374,7 +6430,7 @@
     <br>* Mcs.disease.083-hypochondriasis!⇒diseaseHypochondriasis,
     <br>* Mcs.disease.hypochondriasis!⇒diseaseHypochondriasis,
     <br>* Mcs.diseaseHypochondriasis,
-    <br>* Mcs.diseaseMentalHypochondriasis!⇒diseaseHypochondriasis,
+    <br>* Mcs.diseaseMental.hypochondriasis!⇒diseaseHypochondriasis,
     <br>* Mcs.hypochondriasis!⇒diseaseHypochondriasis, /haipokodráiasis/,
     <a class="clsHide" href="#idDssHmn083nam"></a></p>
   <p id="idDssHmn083dsn">description::
@@ -6398,7 +6454,7 @@
   <p id="idDssHmn084nam">name::
     <br>* Mcs.disease.084.mood!⇒diseaseMood,
     <br>* Mcs.disease.mood!⇒diseaseMood,
-    <br>* Mcs.diseaseMentalMood!⇒diseaseMood,
+    <br>* Mcs.diseaseMental.mood!⇒diseaseMood,
     <br>* Mcs.diseaseMood,
     <br>* Mcs.mood-disorder!⇒diseaseMood,
     <a class="clsHide" href="#idDssHmn084nam"></a></p>
@@ -6431,6 +6487,8 @@
     <br>* Mcs.diseaseMentalSomatic,
     <br>* Mcs.disease.273-somatic-symptom-disorder!⇒diseaseMentalSomatic,
     <br>* Mcs.disease.somatic-symptom-disorder!⇒diseaseMentalSomatic,
+    <br>* Mcs.diseaseMental.somatic-symptom-disorder!⇒diseaseMentalSomatic,
+    <br>* Mcs.!⇒diseaseMentalSomatic,
     <br>* Mcs.somatic-symptom-disorder!⇒diseaseMentalSomatic,
     <a class="clsHide" href="#idDssHmn273nam"></a></p>
   <p id="idDssHmn273dsnL">descriptionLong::
@@ -6449,7 +6507,7 @@
     <br>* Mcs.disease.274-addiction!⇒diseaseAddiction,
     <br>* Mcs.disease.addiction!⇒diseaseAddiction,
     <br>* Mcs.diseaseAddiction,
-    <br>* Mcs.diseaseMentalAddiction!⇒diseaseAddiction,
+    <br>* Mcs.diseaseMental.addiction!⇒diseaseAddiction,
     <br>====== langoGreek:
     <br>* McsEll.εθισμός-πάθηση!=diseaseAddiction,
     <br>* McsEll.πάθηση.εθισμός!=diseaseAddiction,
@@ -6467,7 +6525,7 @@
   <p id="idDssHmn275nam">name::
     <br>* Mcs.disease.275-substance-dependence!⇒diseaseSubstance-dependence,
     <br>* Mcs.disease.substance-dependence!⇒diseaseSubstance-dependence,
-    <br>* Mcs.diseaseMentalSubstance-dependence!⇒diseaseSubstance-dependence,
+    <br>* Mcs.diseaseMental.substance-dependence!⇒diseaseSubstance-dependence,
     <br>* Mcs.diseaseSubstance-dependence,
     <br>* Mcs.drug-dependence!⇒diseaseSubstance-dependence,
     <br>* Mcs.substance-dependence!⇒diseaseSubstance-dependence,
@@ -6488,7 +6546,7 @@
     <br>* Mcs.body-dysmorphic-disorder!⇒diseaseBody-dysmorphic,
     <br>* Mcs.diseae.277-body-dysmorphic-disorder!⇒diseaseBody-dysmorphic,
     <br>* Mcs.diseae.body-dysmorphic-disorder!⇒diseaseBody-dysmorphic,
-    <br>* Mcs.diseaeMentalBody-dysmorphic!⇒diseaseBody-dysmorphic,
+    <br>* Mcs.diseaeMental.body-dysmorphic!⇒diseaseBody-dysmorphic,
     <a class="clsHide" href="#idDssHmn277nam"></a></p>
   </section>
 </section>
