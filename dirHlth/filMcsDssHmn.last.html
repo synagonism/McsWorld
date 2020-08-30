@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.disease-(0-72-0.2020-08-29 draft) human-disease</title>
+  <title>Mcs.disease-(0-73-0.2020-08-30 draft) human-disease</title>
   <meta name="keywords" content="disease-of-human, disease, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -68,17 +68,38 @@
     <br>· symptom-of-disease is an-effect of the-disease.
     <a class="clsHide" href="#idDssHmn001Fdsn"></a></p>
   <p id="idDssHmn001Fnam">name::
-    <br>* Mcs.disease'01_symptom,
-    <br>* Mcs.disease'att001-symptom,
-    <br>* Mcs.disease'symptom-001,
-    <br>* Mcs.disease'effect,
-    <br>* Mcs.symptom-of-disease,
+    <br>* Mcs.disease'01_symptom!⇒symptom,
+    <br>* Mcs.disease'att001-symptom!⇒symptom,
+    <br>* Mcs.disease'symptom-001!⇒symptom,
+    <br>* Mcs.disease'effect!⇒symptom,
+    <br>* Mcs.symptom,
+    <br>* Mcs.symptom-of-disease!⇒symptom,
     <br>====== langoGreek:
     <br>* McsEll.σύμπτωμα-ασθένειας!=symptom,
     <a class="clsHide" href="#idDssHmn001Fnam"></a></p>
   <p id="idDssHmn001Fstr">specific-tree-of-disease'symptom::
     <br>* https://en.wikipedia.org/wiki/List_of_medical_symptoms,
     <a class="clsHide" href="#idDssHmn001Fstr"></a></p>
+
+  <section id="idDssHmn001FMufs">
+  <h2 id="idDssHmn001FMufsH2">symptom.medically-unexplained
+    <a class="clsHide" href="#idDssHmn001FMufsH2"></a></h2>
+  <p id="idDssHmn001FMufsdsn">description::
+    <br>"Medically unexplained physical symptoms (MUPS or MUS) are symptoms for which a treating physician or other healthcare providers have found no medical cause, or whose cause remains contested.[1] In its strictest sense, the term simply means that the cause for the symptoms is unknown or disputed—there is no scientific consensus. Not all medically unexplained symptoms are influenced by identifiable psychological factors.[2] However, in practice, most physicians and authors who use the term consider that the symptoms most likely arise from psychological causes. Typically, the possibility that MUPS are caused by prescription drugs or other drugs is ignored.[3] It is estimated that between 15% and 30% of all primary care consultations are for medically unexplained symptoms.[4] A large Canadian community survey revealed that the most common medically unexplained symptoms are musculoskeletal pain, ear, nose, and throat symptoms, abdominal pain and gastrointestinal symptoms, fatigue, and dizziness.[4] The term MUPS can also be used to refer to syndromes whose etiology remains contested, including chronic fatigue syndrome, fibromyalgia, multiple chemical sensitivity and Gulf War illness.[5]
+    <br>The term medically unexplained symptoms is in some cases treated as synonymous to older terms such as psychosomatic symptoms, conversion disorders, somatic symptoms, somatisations or somatoform disorders; as well as contemporary terms such as functional disorders, bodily distress, and persistent physical symptoms. The plethora of terms reflects imprecision and uncertainty in their definition, controversy, and care taken to avoid stigmatising sufferers.[6] Risk factors for medically unexplained symptoms are complex and include both psychological and organic features, and such symptoms are often accompanied by other somatic symptoms attributable to organic disease.[7] As such it is recognised that the boundary defining symptoms as medically unexplained is increasingly becoming blurred.[7]
+    <br>Women are significantly more likely than men to be diagnosed with Medically Unexplained Symptoms.[8][9] Childhood adversity and/or abuse, and the death or serious illness of a close family member are significant risk factors.[9]
+    <br>Many patients presenting with medically unexplained symptoms also meet the diagnostic criteria for anxiety and/or depression.[10] The likelihood of meeting such criteria increases with the number of unexplained symptoms reported.[11][12] However, anxiety and depression are also very common in individuals with medically explained illnesses, and again, the likelihood of a person receiving one of these diagnoses increases with the number of symptoms reported.[13][14] Consequently, on the current evidence, we cannot infer that anxiety or depression are causes of medically unexplained physical symptoms.
+    <br>Physical symptoms have been associated with adverse psychosocial and functional outcome across different cultures, irrespective of etiology (either explained or unexplained).[15]"
+    <br>[{2020-08-30} https://en.wikipedia.org/wiki/Medically_unexplained_physical_symptoms]
+    <a class="clsHide" href="#idDssHmn001FMufsdsn"></a></p>
+  <p id="idDssHmn001FMufsnam">name::
+    <br>* Mcs.MUPS-medically-unexplained-physical-symptom!⇒symptomMup,
+    <br>* Mcs.MUS-medically-unexplained-physical-symptom!⇒symptomMup,
+    <br>* Mcs.medically-unexplained-physical-symptom!⇒symptomMup,
+    <br>* Mcs.symptom.medically-unexplained!⇒symptomMup,
+    <br>* Mcs.symptomMup,
+    <a class="clsHide" href="#idDssHmn001FMufsnam"></a></p>
+  </section>
 </section>
 
 <section id="idDssHmn002F">
@@ -491,6 +512,7 @@
     <a class="clsHide" href="#idDssHmnScidsn"></a></p>
   <p id="idDssHmnScinam">name::
     <br>* Mcs.disease'science!⇒sciDisease,
+    <br>* Mcs.medical-science!⇒sciDisease,
     <br>* Mcs.medicine!⇒sciDisease,
     <br>* Mcs.sciDisease,
     <br>* Mcs.science-of-disease!⇒sciDisease,
@@ -622,10 +644,11 @@
     <br>* <a class="clsPreview" href="#idDssHmn001">infectious-disease</a>,
     <br>* <a class="clsPreview" href="#idDssHmn002">infectiousNo-disease</a>,
     <a class="clsHide" href="#idDssHmnspc"></a></p>
+  </section>
 
   <section id="idDssHmnIcd">
-  <h3 id="idDssHmnIcdH3">disease.ICD-classification
-    <a class="clsHide" href="#idDssHmnIcdH3"></a></h3>
+  <h2 id="idDssHmnIcdH2">disease.ICD-classification
+    <a class="clsHide" href="#idDssHmnIcdH2"></a></h2>
   <p id="idDssHmnIcddsn">description::
     <br>"The International Classification of Diseases (ICD) is the international "standard diagnostic tool for epidemiology, health management and clinical purposes." Its full official name is International Statistical Classification of Diseases and Related Health Problems.[1]
     <br>The ICD is maintained by the World Health Organization (WHO), which is the directing and coordinating authority for health within the United Nations System.[2] The ICD is originally designed as a health care classification system, providing a system of diagnostic codes for classifying diseases, including nuanced classifications of a wide variety of signs, symptoms, abnormal findings, complaints, social circumstances, and external causes of injury or disease. This system is designed to map health conditions to corresponding generic categories together with specific variations, assigning for these a designated code, up to six characters long. Thus, major categories are designed to include a set of similar diseases. ICD-11 is a major step forward, because it has the necessary terminological and ontological elements for seamless use in digital health.
@@ -645,8 +668,8 @@
   </section>
 
   <section id="idDssHmnScdnCaus">
-  <h3 id="idDssHmnScdnCausH3">disease.specs-div.cause
-    <a class="clsHide" href="#idDssHmnScdnCausH3"></a></h3>
+  <h2 id="idDssHmnScdnCausH2">disease.specs-div.cause
+    <a class="clsHide" href="#idDssHmnScdnCausH2"></a></h2>
   <p id="idDssHmnScdnCausdsn">description::
     <br>* external-cause--disease,
     <br>* internal-cause--disease,
@@ -660,8 +683,8 @@
   </section>
 
   <section id="idDssHmnScdnMntl">
-  <h3 id="idDssHmnScdnMntlH3">disease.specs-div.mental-part
-    <a class="clsHide" href="#idDssHmnScdnMntlH3"></a></h3>
+  <h2 id="idDssHmnScdnMntlH2">disease.specs-div.mental-part
+    <a class="clsHide" href="#idDssHmnScdnMntlH2"></a></h2>
   <p id="idDssHmnScdnMntlnam">name::
     <br>* Mcs.disease.specific-division.mental-part,
     <a class="clsHide" href="#idDssHmnScdnMntlnam"></a></p>
@@ -673,8 +696,8 @@
   </section>
 
   <section id="idDssHmnScdnSptm">
-  <h3 id="idDssHmnScdnSptmH3">disease.specs-div.symptom
-    <a class="clsHide" href="#idDssHmnScdnSptmH3"></a></h3>
+  <h2 id="idDssHmnScdnSptmH2">disease.specs-div.symptom
+    <a class="clsHide" href="#idDssHmnScdnSptmH2"></a></h2>
   <p id="idDssHmnScdnSptmnam">name::
     <br>* Mcs.disease.specifics-division.symptom,
     <a class="clsHide" href="#idDssHmnScdnSptmnam"></a></p>
@@ -683,9 +706,21 @@
     <a class="clsHide" href="#idDssHmnScdnSptmdsn"></a></p>
   </section>
 
+  <section id="idDssHmnScdnBddg">
+  <h2 id="idDssHmnScdnBddgH2">disease.specs-div.body'doing
+    <a class="clsHide" href="#idDssHmnScdnBddgH2"></a></h2>
+  <p id="idDssHmnScdnBddgdsn">description::
+    <br>* <a class="clsPreview" href="#idDssHmn279">diseaseDoing</a>,
+    <br>* <a class="clsPreview" href="#idDssHmn280">diseaseDoingNo</a>,
+    <a class="clsHide" href="#idDssHmnScdnBddgdsn"></a></p>
+  <p id="idDssHmnScdnBddgnam">name::
+    <br>* Mcs.disease.specifics-division.body'doing,
+    <a class="clsHide" href="#idDssHmnScdnBddgnam"></a></p>
+  </section>
+
   <section id="idDssHmnAlfEng">
-  <h3 id="idDssHmnAlfEngH3">disease.alphabetically.English
-    <a class="clsHide" href="#idDssHmnAlfEngH3"></a></h3>
+  <h2 id="idDssHmnAlfEngH2">disease.alphabetically.English
+    <a class="clsHide" href="#idDssHmnAlfEngH2"></a></h2>
   <p id="idDssHmnAlfEngdsn">description::
     <br>* <a class="clsPreview" href="#idDssHmn113">aerophagia</a>,
     <br>* <a class="clsPreview" href="#idDssHmn114">aids</a>,
@@ -834,8 +869,8 @@
   </section>
 
   <section id="idDssHmnAlfEll">
-  <h3 id="idDssHmnAlfEllH3">disease.alphabetically.Greek
-    <a class="clsHide" href="#idDssHmnAlfEllH3"></a></h3>
+  <h2 id="idDssHmnAlfEllH2">disease.alphabetically.Greek
+    <a class="clsHide" href="#idDssHmnAlfEllH2"></a></h2>
   <p id="idDssHmnAlfElldsn">description::
     <br>* <a class="clsPreview" href="#idDssHmn172">αβιταμινωσεις</a>,
     <br>* <a class="clsPreview" href="#idDssHmn130">αγγείων-πάθηση</a>,
@@ -976,7 +1011,6 @@
   <p id="idDssHmnAlfEllnam">name::
     <br>* Mcs.disease.alphabetically.Greek,
     <a class="clsHide" href="#idDssHmnAlfEllnam"></a></p>
-  </section>
   </section>
 </section>
 
@@ -1579,7 +1613,7 @@
   <h3 id="idDssHmn005_1protectionH3">protection
     <a class="clsHide" href="#idDssHmn005_1protectionH3"></a></h3>
   <p id="idDssHmn005_1protectionP1">protection::
-    <br>για την καλή ανάπτυξη του σκελετου χρειάζονται:
+    <br>για την καλή ανάπτυξη του σκελετού χρειάζονται:
     <br>- τροφιμα πλουσια σε ασβεστιο: ψάρια (ιδιαίτερα ο μπακαλιάρος, οστρακοειδή, γάλα, τυριά, όσπρια, ελιές, ξηροί καρποι, αποξηραμένα φρούτα.
     <br>- τροφιμα πλουσια σε φωσφορο: κρέας, συκώτι, ψάρια, οστρακοειδή, αυγά, γάλα, τυριά, όσπρια, ξηροί καρποί.
     <br>- βιταμινη D.
@@ -1600,21 +1634,178 @@
     <a class="clsHide" href="#idDssHmn005_1specificH3"></a></h3>
   <p id="idDssHmn005_1specificP1">specific::
     <br>παθήσεις διατροφης:
-    <br>* ραχιτιδα⧺cptDssHmn263⧺,
-    <br>* οστεοπορωση⧺cptDssHmn262⧺,
+    <br>* <a class="clsPreview" href="#idDssHmn192">ραχίτιδα</a>,
+    <br>* <a class="clsPreview" href="#idDssHmn191">οστεοπόρωση</a>,
     <br>
-    <br>παραμορφωσεις σκελετου απο μηχανικες αιτιες:
-    <br>* σκολιωση,
-    <br>* κυφωση,
-    <br>* λορδωση,
+    <br>παραμορφώσεις σκελετού απο μηχανικές αιτίες:
+    <br>* σκολίωση,
+    <br>* κύφωση,
+    <br>* λόρδωση,
     <br>
-    <br>σκελετικα ατυχηματα:
-    <br>* καταγματα⧺cptDssHmn264⧺,
-    <br>* εξαρθρηματα,
-    <br>* διαστρεμματα⧺cptDssHmn265⧺,
+    <br>σκελετικά ατυχήματα:
+    <br>* <a class="clsPreview" href="#idDssHmn193">κατάγματα</a>,
+    <br>* εξαρθρήματα,
+    <br>* διαστρέμματα⧺cptDssHmn265⧺,
     <br>[Αργύρης, {1994}, 25⧺cptRsc29⧺]
     <a class="clsHide" href="#idDssHmn005_1specificP1"></a></p>
   </section>
+  </section>
+
+  <section id="idDssHmn191">
+  <h2 id="idDssHmn191H2">disease.osteoporosis-191
+    <a class="clsHide" href="#idDssHmn191H2"></a></h2>
+  <p id="idDssHmn191dsn">description::
+    <br>οστεοπόρωση είναι πάθηση των οστών στους ενήλικες λόγω έλλειψης βηταμίνης D.
+    <br>[Αργύρης, {1994}, 25⧺cptRsc29⧺]
+    <a class="clsHide" href="#idDssHmn191dsn"></a></p>
+  <p id="idDssHmn191nam">name::
+    <br>* Mcs.disease.191-osteoporosis!⇒diseaseOsteoporosis,
+    <br>* Mcs.disease.osteoporosis!⇒diseaseOsteoporosis,
+    <br>* Mcs.diseaseOsteoporosis,
+    <br>* Mcs.osteoporosis!⇒diseaseOsteoporosis,
+    <br>====== langoGreek:
+    <br>* McsEll.πάθηση.οστεοπόρωση!=diseaseOsteoporosis,
+    <br>* McsEll.οστεοπόρωση!=diseaseOsteoporosis,
+    <a class="clsHide" href="#idDssHmn191nam"></a></p>
+
+  <section id="idDssHmn191cause">
+  <h3 id="idDssHmn191causeH3">cause of diseaseOsteoporosis
+    <a class="clsHide" href="#idDssHmn191causeH3"></a></h3>
+  <p id="idDssHmn191causeP1">cause::
+    <br>Women who are depressed are more likely to develop brittle bones late in life, a new study says.
+    <br>The National Institutes of Health has found a link between depression and osteoporosis, a bone-thinning condition caused by a lack of calcium.
+    <br>[http://www.cnn.com/HEALTH/index.html, 17 OKT. 1996]
+    <a class="clsHide" href="#idDssHmn191causeP1"></a></p>
+  </section>
+
+  <section id="idDssHmn191therapy">
+  <h3 id="idDssHmn191therapyH3">therapy of diseaseOsteoporosis
+    <a class="clsHide" href="#idDssHmn191therapyH3"></a></h3>
+  <p id="idDssHmn191therapyP1"><a class="clsPreview" href="filMcsThrpHmn.last.html#idOverview">therapy</a>::
+    <br>FDA panel votes to expand use of osteoporosis drug
+    <br>An advisory panel to the FDA recommended Thursday to expand the usage of the drug <span class="clsU">Fosamax</span>, a non-hormonal therapy that builds bone mass in the body, to help prevent osteoporosis. The committee voted to approve the drug for women likely to develop osteoporosis who are not taking estrogen and recommended further study to see if it should be prescribed for women taking estrogen.
+    <br>[CNN 1997feb21]
+    <a class="clsHide" href="#idDssHmn191therapyP1"></a></p>
+  <p id="idDssHmn191therapyP2">φθοριουχο χαπι βραδείας απελευθέρωσης δυναμώνει τα οστά ανακοίνωσε ο Charles Pak, του ιατρικού κέντρου του πανεπιστημίου του τέξας, στο  συνέδριο της αμερικανικής εταιρίας για την έρευνα των οστών και των ανόργανων συστατικων τους στη βαλτιμόρη.
+    <br>[Καθημερινή, 1 οκτ. 1995, 28]
+    <a class="clsHide" href="#idDssHmn191therapyP2"></a></p>
+  <p id="idDssHmn191therapyP3">το FOSAMAX της εταιρείας Merck, ενέκρινε η υπηρεσία τροφών και φαρμάκων της αμερικής.
+    <br>[Καθημερινή, {1995-10-22}, 26]
+    <a class="clsHide" href="#idDssHmn191therapyP3"></a></p>
+  <p id="idDssHmn191therapyP5">CALCIUM, VITAMIN D CAN CUT RISK OF BROKEN BONES
+    <br>Calcium and vitamin D supplements can cut in half older people's risk of broken bones, according to researchers at Tufts University. The study, published in the New England Journal of Medicine, found that men and women taking the supplements at age 65 or older slowed bone deterioration and maintained or slightly increased their bone density. And when elderly people taking the supplements fell, they were only half as likely to break a bone as those not taking them.
+    <br>[cnn 1997sep04]
+    <a class="clsHide" href="#idDssHmn191therapyP5"></a></p>
+  <p id="idDssHmn191therapyP6">Monday September 15 2:41 PM EDT
+    <br>Two New Drugs Combat Osteoporosis
+    <br>NEW YORK (Reuters) -- Two new drugs, raloxifene and risedronate, appear to increase bone mineral density in older women with osteoporosis, according to research presented during the closing hours of The American Society for Bone and Mineral Research's 19th Annual Meeting in Cincinnati.
+    <br>Preliminary research shows that an estrogen-like drug, raloxifene, counteracts the hormone's effect in breast and endometrial tissue but acts like estrogen in the skeletal and cardiovascular systems, according to Dr. Edward G. Lufkin of the Mayo Clinic in Rochester, Minnesota. Taking estrogen after menopause lowers the risk of osteoporosis and heart disease, but increases the risk of cancer of the endometrium or uterine lining. Women on hormone replacement therapy take a second hormone, progestin, to counter that effect. Some studies suggest that estrogen can also cause a small increase in breast cancer risk.
+    <br>After a year of treatment with raloxifene, women had an increase in bone density in the hip and forearm, a reduction in total cholesterol level as well as reduction in the chemical signs of bone metabolism. Unlike estrogen, raloxifene had no adverse effects on breast or uterine tissue, no stimulation of the endometrium and caused no uterine bleeding.
+    <br>Lufkin and colleagues from the Mayo Clinic in Scottsdale, Arizona; the Gunderson Clinic in LaCrosse, Wisconsin; and Eli Lilly in Indianapolis, Indiana, looked at 143 postmenopausal women with osteoporosis. All the women took 750 milligrams of calcium and 400 units of vitamin D daily. In addition, one-third received 60 milligrams of raloxifene; one-third received 120 milligrams; and one-third received a placebo, or inactive medication.
+    <br>According to a second report presented at the Cincinnati meeting, another drug, called risedronate, can also increase bone mineral density in older women.
+    <br>The study included 648 postmenopausal women who were not taking estrogen and who were in good health, despite having a low bone mineral density. One-third of study subjects received 2.5 milligrams of risedronate daily; one-third received 5 milligrams risedronate; and the rest were given a placebo. The women also took 1000 milligram calcium supplements daily, according to Dr. M.R. McClung, of Portland, Oregon.
+    <br>After treatment for up to 18 months, women who received the higher dose of risedronate showed a 3% to 5% increase in bone mineral density of the hip and spine, while patients on the lower dose showed a lesser degree of improvement. Bone mineral density in the women on placebo did not change significantly.
+    <br>For every 10% to 12% decrease of bone mineral density, risk of fracture increases 1.5- to 3-fold. Risedronate was well tolerated and, most notably, the investigators said, did not cause adverse gastrointestinal side effects.
+    <br>Copyright © 1997 Reuters Limited. All rights reserved. Republication or redistribution of Reuters content is expressly prohibited without the prior written consent of Reuters. Reuters shall not be liable for any errors or delays in the content, or for any actions taken in reliance thereon  Questions or Comments
+    <a class="clsHide" href="#idDssHmn191therapyP6"></a></p>
+  <p id="idDssHmn191therapyP7">Tibolone, a synthetic hormone, can boost bone density in postmenopausal women who have osteoporosis, according to a Scandinavian study.
+    <br>[http://dailynews.yahoo.com/headlines/hl/] 1998oct12
+    <a class="clsHide" href="#idDssHmn191therapyP7"></a></p>
+  </section>
+  </section>
+
+  <section id="idDssHmn192">
+  <h2 id="idDssHmn192H2">disease.rachitis-192
+    <a class="clsHide" href="#idDssHmn192H2"></a></h2>
+  <p id="idDssHmn192dsn">description::
+    <br>ραχίτιδα είναι πάθηση των οστών της παιδικής ηλικίας λόγω έλειψης της βιταμίνης D.
+    <br>[Αργύρης, {1994}, 25⧺cptRsc29⧺]
+    <a class="clsHide" href="#idDssHmn192dsn"></a></p>
+  <p id="idDssHmn192nam">name::
+    <br>* Mcs.disease.192-rachitis!⇒diseaseRachitis,
+    <br>* Mcs.disease.rachitis!⇒diseaseRachitis,
+    <br>* Mcs.diseaseRachitis,
+    <br>* Mcs.rachitis!⇒diseaseRachitis,
+    <br>====== langoGreek:
+    <br>* McsEll.πάθηση.ραχίτιδα!=diseaseRachitis,
+    <br>* McsEll.ραχίτιδα!=diseaseRachitis,
+    <a class="clsHide" href="#idDssHmn192nam"></a></p>
+  <p id="idDssHmn192gtr">generic-tree-of-::
+    <br>* disease.skeletal-system⧺cptDssHmn104⧺,
+    <a class="clsHide" href="#idDssHmn192gtr"></a></p>
+  </section>
+
+  <section id="idDssHmn193">
+  <h2 id="idDssHmn193H2">disease.fracture-193
+    <a class="clsHide" href="#idDssHmn193H2"></a></h2>
+  <p id="idDssHmn193dsn">description::
+    <br>κάταγμα είναι πάθηση οστών, όταν ένα κόκαλο σπάσει.
+    <br>[Αργύρης, {1994}, 26⧺cptRsc29⧺]
+    <a class="clsHide" href="#idDssHmn193dsn"></a></p>
+  <p id="idDssHmn193nam">name::
+    <br>* Mcs.disease.193-fracture!⇒diseaseFracture,
+    <br>* Mcs.disease.fracture!⇒diseaseFracture,
+    <br>* Mcs.diseaseFracture,
+    <br>* Mcs.fracture!⇒diseaseFracture,
+    <br>====== langoGreek:
+    <br>* McsEll.πάθηση.κάταγμα!=diseaseFracture,
+    <br>* McsEll.κάταγμα!=diseaseFracture,
+    <a class="clsHide" href="#idDssHmn193nam"></a></p>
+  <p id="idDssHmn193gtr">generic-tree-of-::
+    <br>* disease.skeletal-system⧺cptDssHmn104⧺,
+    <a class="clsHide" href="#idDssHmn193gtr"></a></p>
+  </section>
+
+  <section id="idDssHmn194">
+  <h2 id="idDssHmn194H2">disease.sprain-194
+    <a class="clsHide" href="#idDssHmn194H2"></a></h2>
+  <p id="idDssHmn194dsn">description::
+    <br>"A sprain, also known as a torn ligament, is a partial or complete rupture of ligaments in a joint, often caused by trauma or the joint being taken beyond its functional range of motion. The severity of sprain ranges from a minor injury which resolves in a few days to a severe rupture of one or more ligaments requiring surgical fixation and a period of immobilization. Sprains can occur in any joint but are most common in the ankle and wrist.[1] An equivalent injury to a muscle or a tendon is known as a strain."
+    <br>[{2020-01-28} https://en.wikipedia.org/wiki/Sprain]
+    <br>===
+    <br>"Θλάση ονομάζεται η ρήξη ή υπερβολική διάταση ενός μυός ή τένοντα (του ιστού που ενώνει έναν μυ με ένα οστό). Είναι πιο συχνή χαμηλά στη μέση (οσφυϊκή μοίρα) ή στον ιγνυακό τένοντα (εικόνα).
+    <br>Από την άλλη, διάστρεμμα ονομάζεται η ρήξη ή υπερβολική διάταση ενός συνδέσμου (του ιστού που ενώνει δύο οστά και σταθεροποιεί μια άρθρωση). Είναι πιο συχνό στον αστράγαλο, στο γόνατο ή στον καρπό."
+    <br>[https://www.onmed.gr/ygeia/story/351390/thlasi-vs-diastremma-diafores-symptomata]
+    <a class="clsHide" href="#idDssHmn194dsn"></a></p>
+  <p id="idDssHmn194nam">name::
+    <br>* Mcs.disease.194-sprain!⇒diseaseSprain,
+    <br>* Mcs.disease.sprain!⇒diseaseSprain,
+    <br>* Mcs.diseaseSprain,
+    <br>* Mcs.sprain!⇒diseaseSprain,
+    <br>====== langoGreek:
+    <br>* McsEll.πάθηση.διάστρεμμα!=diseaseSprain,
+    <br>* McsEll.διάστρεμμα!=diseaseSprain,
+    <a class="clsHide" href="#idDssHmn194nam"></a></p>
+  <p id="idDssHmn194gtr">generic-tree-of-diseaseSprain::
+    <br>* disease.skeletal-system⧺cptDssHmn104⧺,
+    <a class="clsHide" href="#idDssHmn194gtr"></a></p>
+
+  <section id="idDssHmn194rsc">
+  <h3 id="idDssHmn194rscH3">resource of diseaseSprain
+    <a class="clsHide" href="#idDssHmn194rscH3"></a></h3>
+  <p id="idDssHmn194rscP1">description::
+    <br>διάστρεμμα είναι πάθηση οστών κατά την οποία έχουμε προσωρινή μετατόπιση των οστών που βρίσκονται στο σημείο της άρθρωσης. Οι αρθρικές επιφανειες επανέρχονται στην κανονική θέση, αλλά η άρθρωση δε λειτουργεί κανονικά.
+    <br>[Αργύρης, {1994}, 27⧺cptRsc29⧺]
+    <a class="clsHide" href="#idDssHmn194rscP1"></a></p>
+  </section>
+  </section>
+
+  <section id="idDssHmn278">
+  <h2 id="idDssHmn278H2">disease.low-back-pain-278
+    <a class="clsHide" href="#idDssHmn278H2"></a></h2>
+  <p id="idDssHmn278dsn">description::
+    <br>"Low back pain (LBP) is a common disorder involving the muscles, nerves, and bones of the back.[4] Pain can vary from a dull constant ache to a sudden sharp feeling.[4] Low back pain may be classified by duration as acute (pain lasting less than 6 weeks), sub-chronic (6 to 12 weeks), or chronic (more than 12 weeks).[3] The condition may be further classified by the underlying cause as either mechanical, non-mechanical, or referred pain.[5] The symptoms of low back pain usually improve within a few weeks from the time they start, with 40–90% of people completely better by six weeks.[2]"
+    <br>[{2020-08-29} https://en.wikipedia.org/wiki/Low_back_pain]
+    <a class="clsHide" href="#idDssHmn278dsn"></a></p>
+  <p id="idDssHmn278nam">name::
+    <br>* Mcs.LBP-low-back-pain-disease!⇒diseaseLbp,
+    <br>* Mcs.disease.278-low-back-pain!⇒diseaseLbp,
+    <br>* Mcs.disease.low-back-pain!⇒diseaseLbp,
+    <br>* Mcs.diseaseLbp,
+    <br>* Mcs.low-back-pain!⇒diseaseLbp,
+    <br>====== langoGreek:
+    <br>* McsEll.πόνος-μέσης!=diseaseLbp,
+    <a class="clsHide" href="#idDssHmn278nam"></a></p>
   </section>
 </section>
 
@@ -3841,7 +4032,7 @@
   <h2 id="idDssHmn048protectioncauseH2">cause
     <a class="clsHide" href="#idDssHmn048protectioncauseH2"></a></h2>
   <p id="idDssHmn048protectioncauseP1">cause::
-    <br>αιφνίδιο θάνατο μπορεί να προκαλέσουν πολλές αιτίες, τόσο παθολογικές όσο και ατυχήματα. Ενδεικτικά αναφέρουμε παθολογικές αιτιες απο την καρδιά (οξύ έμφραγμα του μυοκαρδίου ή μια σοβαρη καρδιακή αρρυθμία, πχ μυοκαρδιοπάθεια), αιτίες απο τους πνεύμονες (όπως μια εκτεταμένη πνευμονική εμβολή), άλλες παθολογικές αιτίες (όπως μια ραγδαία αιμορραγία) ή ατυχήματα (όπως πνιγμός, ένας βαρύς τραυματισμός, μια οξεία απόφραξη των αεροφάγων οδών πχ λαρυγγα ή βρόγχων με ξένο σώμα).
+    <br>αιφνίδιο θάνατο μπορεί να προκαλέσουν πολλές αιτίες, τόσο παθολογικές όσο και ατυχήματα. Ενδεικτικά αναφέρουμε παθολογικές αιτίες απο την καρδιά (οξύ έμφραγμα του μυοκαρδίου ή μια σοβαρη καρδιακή αρρυθμία, πχ μυοκαρδιοπάθεια), αιτίες απο τους πνεύμονες (όπως μια εκτεταμένη πνευμονική εμβολή), άλλες παθολογικές αιτίες (όπως μια ραγδαία αιμορραγία) ή ατυχήματα (όπως πνιγμός, ένας βαρύς τραυματισμός, μια οξεία απόφραξη των αεροφάγων οδών πχ λαρυγγα ή βρόγχων με ξένο σώμα).
     <br>[εικ, 1994, 82⧺cptRsc33⧺]
     <a class="clsHide" href="#idDssHmn048protectioncauseP1"></a></p>
   </section>
@@ -6504,6 +6695,7 @@
     <br>"Addiction is a brain disorder characterized by compulsive engagement in rewarding stimuli despite adverse consequences.[3][5][2][6][7][8] Despite the involvement of a number of psychosocial factors, a biological process—one that is induced by repeated exposure to an addictive stimulus—is the core pathology that drives the development and maintenance of an addiction, according to the "brain disease model" of addiction.[3] However, many scholars who study addiction argue that the brain disease model is incomplete and misleading."
     <a class="clsHide" href="#idDssHmn274dsn"></a></p>
   <p id="idDssHmn274nam">name::
+    <br>* Mcs.addiction!⇒diseaseAddiction,
     <br>* Mcs.disease.274-addiction!⇒diseaseAddiction,
     <br>* Mcs.disease.addiction!⇒diseaseAddiction,
     <br>* Mcs.diseaseAddiction,
@@ -6512,6 +6704,20 @@
     <br>* McsEll.εθισμός-πάθηση!=diseaseAddiction,
     <br>* McsEll.πάθηση.εθισμός!=diseaseAddiction,
     <a class="clsHide" href="#idDssHmn274nam"></a></p>
+
+  <section id="idDssHmn274thrp">
+  <h3 id="idDssHmn274thrpH3">therapy of diseaseAddiction
+    <a class="clsHide" href="#idDssHmn274thrpH3"></a></h3>
+  <p id="idDssHmn274thrpdsn">description::
+    <br>* community-reinforcement-approach-and-family-training,
+    <br>===
+    <br>"Community reinforcement approach and family training (CRAFT) is a behavior therapy approach in psychotherapy for treating addiction developed by Robert J. Meyers in the late 1970s."
+    <br>[{2020-08-30} https://en.wikipedia.org/wiki/Community_reinforcement_approach_and_family_training]
+    <a class="clsHide" href="#idDssHmn274thrpdsn"></a></p>
+  <p id="idDssHmn274thrpnam">name::
+    <br>* Mcs.diseaseAddiction'therapy,
+    <a class="clsHide" href="#idDssHmn274thrpnam"></a></p>
+  </section>
   </section>
 
   <section id="idDssHmn275">
@@ -10096,141 +10302,6 @@
   <p id="idDssHmn206therapyP1"><a class="clsPreview" href="filMcsThrpHmn.last.html#idOverview">therapy</a>::
     <br>ζιρτέκ. 1 χαπι την ημερα.
     <a class="clsHide" href="#idDssHmn206therapyP1"></a></p>
-  </section>
-</section>
-
-<section id="idDssHmn191">
-  <h1 id="idDssHmn191H1">disease.osteoporosis-191
-    <a class="clsHide" href="#idDssHmn191H1"></a></h1>
-  <p id="idDssHmn191dsn">description::
-    <br>οστεοπόρωση είναι πάθηση των οστών στους ενήλικες λόγω έλλειψης βηταμίνης D.
-    <br>[Αργύρης, {1994}, 25⧺cptRsc29⧺]
-    <a class="clsHide" href="#idDssHmn191dsn"></a></p>
-  <p id="idDssHmn191nam">name::
-    <br>* Mcs.disease.191-osteoporosis,
-    <br>* Mcs.disease.osteoporosis-191,
-    <br>* Mcs.osteoporosis,
-    <br>====== langoGreek:
-    <br>* McsEll.πάθηση.οστεοπόρωση,
-    <br>* McsEll.οστεοπόρωση
-    <a class="clsHide" href="#idDssHmn191nam"></a></p>
-
-  <section id="idDssHmn191cause">
-  <h2 id="idDssHmn191causeH2">cause
-    <a class="clsHide" href="#idDssHmn191causeH2"></a></h2>
-  <p id="idDssHmn191causeP1">cause::
-    <br>Women who are depressed are more likely to develop brittle bones late in life, a new study says.
-    <br>The National Institutes of Health has found a link between depression and osteoporosis, a bone-thinning condition caused by a lack of calcium.
-    <br>[http://www.cnn.com/HEALTH/index.html, 17 OKT. 1996]
-    <a class="clsHide" href="#idDssHmn191causeP1"></a></p>
-  </section>
-
-  <section id="idDssHmn191therapy">
-  <h2 id="idDssHmn191therapyH2">therapy
-    <a class="clsHide" href="#idDssHmn191therapyH2"></a></h2>
-  <p id="idDssHmn191therapyP1"><a class="clsPreview" href="filMcsThrpHmn.last.html#idOverview">therapy</a>::
-    <br>FDA panel votes to expand use of osteoporosis drug
-    <br>An advisory panel to the FDA recommended Thursday to expand the usage of the drug <span class="clsU">Fosamax</span>, a non-hormonal therapy that builds bone mass in the body, to help prevent osteoporosis. The committee voted to approve the drug for women likely to develop osteoporosis who are not taking estrogen and recommended further study to see if it should be prescribed for women taking estrogen.
-    <br>[CNN 1997feb21]
-    <a class="clsHide" href="#idDssHmn191therapyP1"></a></p>
-  <p id="idDssHmn191therapyP2">φθοριουχο χαπι βραδείας απελευθέρωσης δυναμώνει τα οστά ανακοίνωσε ο Charles Pak, του ιατρικού κέντρου του πανεπιστημίου του τέξας, στο  συνέδριο της αμερικανικής εταιρίας για την έρευνα των οστών και των ανόργανων συστατικων τους στη βαλτιμόρη.
-    <br>[Καθημερινή, 1 οκτ. 1995, 28]
-    <a class="clsHide" href="#idDssHmn191therapyP2"></a></p>
-  <p id="idDssHmn191therapyP3">το FOSAMAX της εταιρείας Merck, ενέκρινε η υπηρεσία τροφών και φαρμάκων της αμερικής.
-    <br>[Καθημερινή, {1995-10-22}, 26]
-    <a class="clsHide" href="#idDssHmn191therapyP3"></a></p>
-  <p id="idDssHmn191therapyP5">CALCIUM, VITAMIN D CAN CUT RISK OF BROKEN BONES
-    <br>Calcium and vitamin D supplements can cut in half older people's risk of broken bones, according to researchers at Tufts University. The study, published in the New England Journal of Medicine, found that men and women taking the supplements at age 65 or older slowed bone deterioration and maintained or slightly increased their bone density. And when elderly people taking the supplements fell, they were only half as likely to break a bone as those not taking them.
-    <br>[cnn 1997sep04]
-    <a class="clsHide" href="#idDssHmn191therapyP5"></a></p>
-  <p id="idDssHmn191therapyP6">Monday September 15 2:41 PM EDT
-    <br>Two New Drugs Combat Osteoporosis
-    <br>NEW YORK (Reuters) -- Two new drugs, raloxifene and risedronate, appear to increase bone mineral density in older women with osteoporosis, according to research presented during the closing hours of The American Society for Bone and Mineral Research's 19th Annual Meeting in Cincinnati.
-    <br>Preliminary research shows that an estrogen-like drug, raloxifene, counteracts the hormone's effect in breast and endometrial tissue but acts like estrogen in the skeletal and cardiovascular systems, according to Dr. Edward G. Lufkin of the Mayo Clinic in Rochester, Minnesota. Taking estrogen after menopause lowers the risk of osteoporosis and heart disease, but increases the risk of cancer of the endometrium or uterine lining. Women on hormone replacement therapy take a second hormone, progestin, to counter that effect. Some studies suggest that estrogen can also cause a small increase in breast cancer risk.
-    <br>After a year of treatment with raloxifene, women had an increase in bone density in the hip and forearm, a reduction in total cholesterol level as well as reduction in the chemical signs of bone metabolism. Unlike estrogen, raloxifene had no adverse effects on breast or uterine tissue, no stimulation of the endometrium and caused no uterine bleeding.
-    <br>Lufkin and colleagues from the Mayo Clinic in Scottsdale, Arizona; the Gunderson Clinic in LaCrosse, Wisconsin; and Eli Lilly in Indianapolis, Indiana, looked at 143 postmenopausal women with osteoporosis. All the women took 750 milligrams of calcium and 400 units of vitamin D daily. In addition, one-third received 60 milligrams of raloxifene; one-third received 120 milligrams; and one-third received a placebo, or inactive medication.
-    <br>According to a second report presented at the Cincinnati meeting, another drug, called risedronate, can also increase bone mineral density in older women.
-    <br>The study included 648 postmenopausal women who were not taking estrogen and who were in good health, despite having a low bone mineral density. One-third of study subjects received 2.5 milligrams of risedronate daily; one-third received 5 milligrams risedronate; and the rest were given a placebo. The women also took 1000 milligram calcium supplements daily, according to Dr. M.R. McClung, of Portland, Oregon.
-    <br>After treatment for up to 18 months, women who received the higher dose of risedronate showed a 3% to 5% increase in bone mineral density of the hip and spine, while patients on the lower dose showed a lesser degree of improvement. Bone mineral density in the women on placebo did not change significantly.
-    <br>For every 10% to 12% decrease of bone mineral density, risk of fracture increases 1.5- to 3-fold. Risedronate was well tolerated and, most notably, the investigators said, did not cause adverse gastrointestinal side effects.
-    <br>Copyright © 1997 Reuters Limited. All rights reserved. Republication or redistribution of Reuters content is expressly prohibited without the prior written consent of Reuters. Reuters shall not be liable for any errors or delays in the content, or for any actions taken in reliance thereon  Questions or Comments
-    <a class="clsHide" href="#idDssHmn191therapyP6"></a></p>
-  <p id="idDssHmn191therapyP7">Tibolone, a synthetic hormone, can boost bone density in postmenopausal women who have osteoporosis, according to a Scandinavian study.
-    <br>[http://dailynews.yahoo.com/headlines/hl/] 1998oct12
-    <a class="clsHide" href="#idDssHmn191therapyP7"></a></p>
-  </section>
-</section>
-
-<section id="idDssHmn192">
-  <h1 id="idDssHmn192H1">disease.rachitis-192
-    <a class="clsHide" href="#idDssHmn192H1"></a></h1>
-  <p id="idDssHmn192dsn">description::
-    <br>ραχίτιδα είναι πάθηση των οστών της παιδικής ηλικίας λόγω έλειψης της βιταμίνης D.
-    <br>[Αργύρης, {1994}, 25⧺cptRsc29⧺]
-    <a class="clsHide" href="#idDssHmn192dsn"></a></p>
-  <p id="idDssHmn192nam">name::
-    <br>* Mcs.disease.192-rachitis,
-    <br>* Mcs.disease.rachitis-192,
-    <br>* Mcs.rachitis,
-    <br>====== langoGreek:
-    <br>* McsEll.πάθηση.ραχίτιδα,
-    <br>* McsEll.ραχίτιδα,
-    <a class="clsHide" href="#idDssHmn192nam"></a></p>
-  <p id="idDssHmn192gtr">generic-tree-of-::
-    <br>* disease.skeletal-system⧺cptDssHmn104⧺,
-    <a class="clsHide" href="#idDssHmn192gtr"></a></p>
-</section>
-
-<section id="idDssHmn193">
-  <h1 id="idDssHmn193H1">disease.fracture-193
-    <a class="clsHide" href="#idDssHmn193H1"></a></h1>
-  <p id="idDssHmn193dsn">description::
-    <br>κάταγμα είναι πάθηση οστών, όταν ένα κόκαλο σπάσει.
-    <br>[Αργύρης, {1994}, 26⧺cptRsc29⧺]
-    <a class="clsHide" href="#idDssHmn193dsn"></a></p>
-  <p id="idDssHmn193nam">name::
-    <br>* Mcs.disease.193-fracture,
-    <br>* Mcs.disease.fracture-193,
-    <br>* Mcs.fracture,
-    <br>====== langoGreek:
-    <br>* McsEll.πάθηση.κάταγμα,
-    <br>* McsEll.κάταγμα,
-    <a class="clsHide" href="#idDssHmn193nam"></a></p>
-  <p id="idDssHmn193gtr">generic-tree-of-::
-    <br>* disease.skeletal-system⧺cptDssHmn104⧺,
-    <a class="clsHide" href="#idDssHmn193gtr"></a></p>
-</section>
-
-<section id="idDssHmn194">
-  <h1 id="idDssHmn194H1">disease.sprain-194
-    <a class="clsHide" href="#idDssHmn194H1"></a></h1>
-  <p id="idDssHmn194dsn">description::
-    <br>"A sprain, also known as a torn ligament, is a partial or complete rupture of ligaments in a joint, often caused by trauma or the joint being taken beyond its functional range of motion. The severity of sprain ranges from a minor injury which resolves in a few days to a severe rupture of one or more ligaments requiring surgical fixation and a period of immobilization. Sprains can occur in any joint but are most common in the ankle and wrist.[1] An equivalent injury to a muscle or a tendon is known as a strain."
-    <br>[{2020-01-28} https://en.wikipedia.org/wiki/Sprain]
-    <br>===
-    <br>"Θλάση ονομάζεται η ρήξη ή υπερβολική διάταση ενός μυός ή τένοντα (του ιστού που ενώνει έναν μυ με ένα οστό). Είναι πιο συχνή χαμηλά στη μέση (οσφυϊκή μοίρα) ή στον ιγνυακό τένοντα (εικόνα).
-    <br>Από την άλλη, διάστρεμμα ονομάζεται η ρήξη ή υπερβολική διάταση ενός συνδέσμου (του ιστού που ενώνει δύο οστά και σταθεροποιεί μια άρθρωση). Είναι πιο συχνό στον αστράγαλο, στο γόνατο ή στον καρπό."
-    <br>[https://www.onmed.gr/ygeia/story/351390/thlasi-vs-diastremma-diafores-symptomata]
-    <a class="clsHide" href="#idDssHmn194dsn"></a></p>
-  <p id="idDssHmn194nam">name::
-    <br>* Mcs.disease.194-sprain,
-    <br>* Mcs.disease.sprain-194,
-    <br>* Mcs.sprain,
-    <br>====== langoGreek:
-    <br>* McsEll.πάθηση.διάστρεμμα,
-    <br>* McsEll.διάστρεμμα,
-    <a class="clsHide" href="#idDssHmn194nam"></a></p>
-  <p id="idDssHmn194gtr">generic-tree-of-::
-    <br>* disease.skeletal-system⧺cptDssHmn104⧺,
-    <a class="clsHide" href="#idDssHmn194gtr"></a></p>
-
-  <section id="idDssHmn194rsc">
-  <h2 id="idDssHmn194rscH2">resource of sprain
-    <a class="clsHide" href="#idDssHmn194rscH2"></a></h2>
-  <p id="idDssHmn194rscP1">description::
-    <br>διάστρεμμα είναι πάθηση οστών κατά την οποία έχουμε προσωρινή μετατόπιση των οστών που βρίσκονται στο σημείο της άρθρωσης. Οι αρθρικές επιφανειες επανέρχονται στην κανονική θέση, αλλά η άρθρωση δε λειτουργεί κανονικά.
-    <br>[Αργύρης, {1994}, 27⧺cptRsc29⧺]
-    <a class="clsHide" href="#idDssHmn194rscP1"></a></p>
   </section>
 </section>
 
@@ -14153,6 +14224,37 @@
     <br>* Mcs.diseasePain'protection,
     <a class="clsHide" href="#idDssHmn272prtcnnam"></a></p>
   </section>
+</section>
+
+<section id="idDssHmn279">
+  <h1 id="idDssHmn279H1">disease.doing-279
+    <a class="clsHide" href="#idDssHmn279H1"></a></h1>
+  <p id="idDssHmn279dsn">description::
+    <br>· diseaseDoing is <a class="clsPreview" href="#idOverview">a-disease</a> that impairs normal <a class="clsPreview" href="filMcsBdyHmn.last.html#idBdyHmndngF">bodily-doings</a>.
+    <a class="clsHide" href="#idDssHmn279dsn"></a></p>
+  <p id="idDssHmn279nam">name::
+    <br>* Mcs.disease.279-doing!⇒diseaseDoing,
+    <br>* Mcs.disease.doing!⇒diseaseDoing,
+    <br>* Mcs.functional-disorder!⇒diseaseDoing,
+    <a class="clsHide" href="#idDssHmn279nam"></a></p>
+  <p id="idDssHmn279dsnL">descriptionLong::
+    <br>"A functional disorder is a medical condition that impairs normal functioning of bodily processes that remains largely undetected under examination, dissection or even under a microscope. At the exterior, there is no appearance of abnormality. This stands in contrast to a structural disorder (in which some part of the body can be seen to be abnormal) or a psychosomatic disorder (in which symptoms are caused by psychological or psychiatric illness). Definitions vary somewhat between fields of medicine.
+    <br>Generally, the mechanism that causes a functional disorder is unknown, poorly understood, or occasionally unimportant for treatment purposes. The brain or nerves are often believed to be involved. It is common that a person with one functional disorder will have others."
+    <br>[{2020-08-30} https://en.wikipedia.org/wiki/Functional_disorder]
+    <a class="clsHide" href="#idDssHmn279dsnL"></a></p>
+</section>
+
+<section id="idDssHmn280">
+  <h1 id="idDssHmn280H1">disease.doingNo-280
+    <a class="clsHide" href="#idDssHmn280H1"></a></h1>
+  <p id="idDssHmn280dsn">description::
+    <br>· diseaseDoingNo is <a class="clsPreview" href="#idOverview">a-disease</a> that impairs normal <a class="clsPreview" href="filMcsBdyHmn.last.html#idBdyHmnsrtrF">body's-structure</a>.
+    <a class="clsHide" href="#idDssHmn280dsn"></a></p>
+  <p id="idDssHmn280nam">name::
+    <br>* Mcs.disease.280-doingNO!⇒diseaseDoingNO,
+    <br>* Mcs.disease.doingNO!⇒diseaseDoingNO,
+    <br>* Mcs.structural-disorder!⇒diseaseDoingNO,
+    <a class="clsHide" href="#idDssHmn280nam"></a></p>
 </section>
 
 <section id="idMeta">
