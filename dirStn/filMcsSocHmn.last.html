@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.society-(0-11-0.2020-09-05 draft) human-society</title>
+  <title>Mcs.society-(0-12-0.2020-09-12 draft) human-society</title>
   <meta name="keywords" content="human-society, society, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -139,14 +139,37 @@
 <section id="idSocHmnatt004">
   <h1 id="idSocHmnatt004H1">04_organization of society
     <a class="clsHide" href="#idSocHmnatt004H1"></a></h1>
+  <p id="idSocHmnatt004dsn">description::
+    <br>· an-organization of a-society.
+    <a class="clsHide" href="#idSocHmnatt004dsn"></a></p>
   <p id="idSocHmnatt004nam">name::
+    <br>* Mcs.oznSociety,
     <br>* Mcs.society'04_organization,
     <br>* Mcs.society'att004-organization,
     <br>* Mcs.society'organization-att004,
     <a class="clsHide" href="#idSocHmnatt004nam"></a></p>
-  <p id="idSocHmnatt004dsn">description::
-    <br>·
-    <a class="clsHide" href="#idSocHmnatt004dsn"></a></p>
+  <p id="idSocHmnatt004str">specific-tree-of-::
+    <br>* <a class="clsPreview" href="filMcsOznHhd.last.html#idOverview">oznHousehold</a>,
+    <br>* <a class="clsPreview" href="#idSocHmnatt004001">oznHouseholdNo</a>,
+    <br>** <a class="clsPreview" href="filMcsSocHmn.last.html#idSocHmnatt017">oznGovernance</a>,
+    <br>** <a class="clsPreview" href="filMcsOznEcon.last.html#idOverview">oznSatisfier</a>,
+    <a class="clsHide" href="#idSocHmnatt004str"></a></p>
+
+  <section id="idSocHmnatt004001">
+  <h2 id="idSocHmnatt004001H2">oznSociety.householdNo
+    <a class="clsHide" href="#idSocHmnatt004001H2"></a></h2>
+  <p id="idSocHmnatt004001dsn">description::
+    <br>· an-oznSociety which is not household.
+    <a class="clsHide" href="#idSocHmnatt004001dsn"></a></p>
+  <p id="idSocHmnatt004001nam">name::
+    <br>* Mcs.oznHouseholdNo,
+    <br>* Mcs.oznSociety.householdNo!⇒oznHouseholdNo,
+    <a class="clsHide" href="#idSocHmnatt004001nam"></a></p>
+  <p id="idSocHmnatt004001str">specific-tree-of-oznHouseholdNo::
+    <br>* <a class="clsPreview" href="filMcsSocHmn.last.html#idSocHmnatt017">oznGovernance</a>,
+    <br>* <a class="clsPreview" href="filMcsOznEcon.last.html#idOverview">oznSatisfier</a>,
+    <a class="clsHide" href="#idSocHmnatt004001str"></a></p>
+  </section>
 </section>
 
 <section id="idSocHmnatt005">
@@ -181,8 +204,23 @@
     <br>* <a class="clsPreview" href="filMcsSocOgm.last.html#idSocOgmatt006gtr">sysGvcOgm</a>,
     <a class="clsHide" href="#idSocHmnatt006gtr"></a></p>
 
+  <section id="idSocHmnatt017">
+  <h2 id="idSocHmnatt017H2">organization of sysGvc
+    <a class="clsHide" href="#idSocHmnatt017H2"></a></h2>
+  <p id="idSocHmnatt017dsn">description::
+    <br>· any ozn of the-sysGovernance.
+    <a class="clsHide" href="#idSocHmnatt017dsn"></a></p>
+  <p id="idSocHmnatt017nam">name::
+    <br>* Mcs.oznGovernance!⇒oznGvc,
+    <br>* Mcs.oznGvc,
+    <br>* Mcs.society'att017-oznGvc!⇒oznGvc,
+    <br>* Mcs.society'oznGvc!⇒oznGvc,
+    <br>* Mcs.sysGvc'oznGvc!⇒oznGvc,
+    <a class="clsHide" href="#idSocHmnatt017nam"></a></p>
+  </section>
+
   <section id="idSocHmnatt013">
-  <h2 id="idSocHmnatt013H2">control-of-thouth of society
+  <h2 id="idSocHmnatt013H2">control-of-thouth of sysGvc
     <a class="clsHide" href="#idSocHmnatt013H2"></a></h2>
   <p id="idSocHmnatt013dsn">description::
     <br>"Control of thought is more important for governments that are free and popular than for despotic and militarty states.
@@ -191,9 +229,10 @@
     <br>[Noam Chomsky https://twitter.com/noamchomskyT/status/1273901033849270272]
     <a class="clsHide" href="#idSocHmnatt013dsn"></a></p>
   <p id="idSocHmnatt013nam">name::
-    <br>* Mcs.society'control-of-thought,
-    <br>* Mcs.control-of-thought-of-society,
     <br>* Mcs.society'att013-control-of-thought,
+    <br>* Mcs.society'control-of-thought,
+    <br>* Mcs.sysGvc'control-of-thought,
+    <br>* Mcs.control-of-thought-of-society,
     <a class="clsHide" href="#idSocHmnatt013nam"></a></p>
   <p id="idSocHmnatt013dsnL">descriptionLong::
     <br>"The key element of social control is the strategy of distraction that is to divert public attention from important issues and changes decided by political and economic elites through the technique of flood or flooding continuous distractions and insignificant information. Chomsky"
@@ -202,12 +241,13 @@
   </section>
 
   <section id="idSocHmnatt011">
-  <h2 id="idSocHmnatt011H2">rule-of-law of society
+  <h2 id="idSocHmnatt011H2">rule-of-law of sysGvc
     <a class="clsHide" href="#idSocHmnatt011H2"></a></h2>
   <p id="idSocHmnatt011nam">name::
-    <br>* Mcs.society'rule-of-law,
-    <br>* Mcs.society'att011-rule-of-law,
     <br>* Mcs.rule-of-law,
+    <br>* Mcs.society'att011-rule-of-law,
+    <br>* Mcs.society'rule-of-law,
+    <br>* Mcs.sysGvc'rule-of-law,
     <a class="clsHide" href="#idSocHmnatt011nam"></a></p>
   <p id="idSocHmnatt011dsn">description::
     <br>"What is the Rule of Law?
@@ -292,6 +332,19 @@
   <p id="idSocHmnatt010dsn">description::
     <br>·
     <a class="clsHide" href="#idSocHmnatt010dsn"></a></p>
+</section>
+
+<section id="idSocHmnatt018">
+  <h1 id="idSocHmnatt018H1">12_place of society
+    <a class="clsHide" href="#idSocHmnatt018H1"></a></h1>
+  <p id="idSocHmnatt018dsn">description::
+    <br>· <a class="clsPreview" href="../dirCor/filMcsSpace.last.html#idSpcPlc">a-place</a> associated with a-society.
+    <a class="clsHide" href="#idSocHmnatt018dsn"></a></p>
+  <p id="idSocHmnatt018nam">name::
+    <br>* Mcs.society'12_place,
+    <br>* Mcs.society'att012-place,
+    <br>* Mcs.society'place,
+    <a class="clsHide" href="#idSocHmnatt018nam"></a></p>
 </section>
 
 <section id="idSocHmnrscF">
