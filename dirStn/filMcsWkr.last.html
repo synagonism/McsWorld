@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.worker-(0-14-0.2020-09-26 draft) human.worker</title>
+  <title>Mcs.worker-(0-16-0.2020-10-11 draft) human.worker</title>
   <meta name="keywords" content="human.worker, worker, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -31,6 +31,7 @@
     <br>* Mcs.economy'att002-worker!⇒hmnWorker,
     <br>* Mcs.hmnWorker,
     <br>* Mcs.hmnWorker'(human-worker)!⇒hmnWorker,
+    <br>* Mcs.hmnWorker'(wkr)!⇒hmnWorker,
     <br>* Mcs.human.015-worker!⇒hmnWorker,
     <br>* Mcs.human.worker!⇒hmnWorker,
     <br>* Mcs.wkr!⇒hmnWorker,
@@ -490,7 +491,7 @@
   <h1 id="idWkr005H1">hmnWorker.employed-005
     <a class="clsHide" href="#idWkr005H1"></a></h1>
   <p id="idWkr005dsn">description::
-    <br>·
+    <br>· wkrEmployed is a-worker who is working for self or other.
     <a class="clsHide" href="#idWkr005dsn"></a></p>
   <p id="idWkr005nam">name::
     <br>* Mcs.employed-worker!⇒wkrEmployed,
@@ -498,41 +499,10 @@
     <br>* Mcs.hmnWorker.005-employed!⇒wkrEmployed,
     <br>* Mcs.hmnWorker.employed!⇒wkrEmployed,
     <a class="clsHide" href="#idWkr005nam"></a></p>
-</section>
-
-<section id="idWkr001">
-  <h1 id="idWkr001H1">hmnWorker.employed.employer-001
-    <a class="clsHide" href="#idWkr001H1"></a></h1>
-  <p id="idWkr001dsn">description::
-    <br>· employer is a-worker who uses other workers|employees to do the-job under a-contract-of-employment.
-    <br>===
-    <br>"In an employer-employee relationship, the payer is considered an employer and the worker an employee."
-    <br>[{2020-08-11} https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/rc4110/employee-self-employed.html]
-    <a class="clsHide" href="#idWkr001dsn"></a></p>
-  <p id="idWkr001nam">name::
-    <br>* Mcs.employer!⇒wkrEmployer,
-    <br>* Mcs.wkrEmployer,
-    <br>* Mcs.hmnWorker.001-employer!⇒wkrEmployer,
-    <br>* Mcs.hmnWorker.employed.employer!⇒wkrEmployer,
-    <br>* Mcs.hmnWorker.employer!⇒wkrEmployer,
-    <br>====== langoGreek:
-    <br>* McsEll.εργοδότης!=wkrEmployer,
-    <a class="clsHide" href="#idWkr001nam"></a></p>
-
-  <section id="idWkr001att001">
-  <h2 id="idWkr001att001H2">contract-of-employment of wkrEmployer
-    <a class="clsHide" href="#idWkr001att001H2"></a></h2>
-  <p id="idWkr001att001dsn">description::
-    <br>"Oral or written, express or implied, agreement specifying terms and conditions under which a person consents to perform certain duties as directed and controlled by an employer in return for an agreed upon wage or salary. Whether stated or not in the contract, both the employee and the employer owe the duty of mutual confidence and trust, and to make only lawful and reasonable demands on each other. Every employee is under the obligation to carry assigned duties, or the employer's instructions to the best of his or her abilities. The employer is under the obligation to protect the employee from harm or injury, and make fair compensation for any loss or damage resulting from any job-related accident.
-    <br>Also called contract of service, it generally details the conditions under which it can be lawfully terminated by either party, and the correct procedure to be followed in its termination. See also conditions of employment and implied contract of employment.
-    <br>[{2020-08-11} http://www.businessdictionary.com/definition/contract-of-employment.html]
-    <a class="clsHide" href="#idWkr001att001dsn"></a></p>
-  <p id="idWkr001att001nam">name::
-    <br>* Mcs.contract-of-employment,
-    <br>* Mcs.contract-of-service,
-    <br>* Mcs.wkrEmployer'contract-of-employment,
-    <a class="clsHide" href="#idWkr001att001nam"></a></p>
-  </section>
+  <p id="idWkr005str">specific-tree-of-wkrEmployed::
+    <br>* hmnWorker.employed.self,
+    <br>* hmnWorker.employed.other,
+    <a class="clsHide" href="#idWkr005str"></a></p>
 </section>
 
 <section id="idWkr002">
@@ -553,25 +523,77 @@
     <br>====== langoGreek:
     <br>* McsEll.απασχολούμενος!=wkrEmployee,
     <a class="clsHide" href="#idWkr002nam"></a></p>
+
+  <section id="idWkr002att001">
+  <h2 id="idWkr002att001H2">contract-of-employment of wkrEmployee
+    <a class="clsHide" href="#idWkr002att001H2"></a></h2>
+  <p id="idWkr002att001dsn">description::
+    <br>"Oral or written, express or implied, agreement specifying terms and conditions under which a person consents to perform certain duties as directed and controlled by an employer in return for an agreed upon wage or salary. Whether stated or not in the contract, both the employee and the employer owe the duty of mutual confidence and trust, and to make only lawful and reasonable demands on each other. Every employee is under the obligation to carry assigned duties, or the employer's instructions to the best of his or her abilities. The employer is under the obligation to protect the employee from harm or injury, and make fair compensation for any loss or damage resulting from any job-related accident.
+    <br>Also called contract of service, it generally details the conditions under which it can be lawfully terminated by either party, and the correct procedure to be followed in its termination. See also conditions of employment and implied contract of employment.
+    <br>[{2020-08-11} http://www.businessdictionary.com/definition/contract-of-employment.html]
+    <a class="clsHide" href="#idWkr002att001dsn"></a></p>
+  <p id="idWkr002att001nam">name::
+    <br>* Mcs.contract-of-employment,
+    <br>* Mcs.contract-of-service,
+    <br>* Mcs.wkrEmployee'contract-of-employment,
+    <br>* Mcs.wkrEmployer'contract-of-employment,
+    <a class="clsHide" href="#idWkr002att001nam"></a></p>
+  </section>
 </section>
 
 <section id="idWkr003">
-  <h1 id="idWkr003H1">hmnWorker.employed.self-employed-003
+  <h1 id="idWkr003H1">hmnWorker.employed.employeeNo-003
     <a class="clsHide" href="#idWkr003H1"></a></h1>
   <p id="idWkr003dsn">description::
-    <br>· self-employed-worker is a-worker who is not employer or employee.
+    <br>· employeeNo-worker is a-worker who is not <a class="clsPreview" href="#idWkr002">employee</a>.
     <a class="clsHide" href="#idWkr003dsn"></a></p>
   <p id="idWkr003nam">name::
-    <br>* Mcs.self-employed-worker!⇒wkrSelfemployed,
-    <br>* Mcs.wkrSelfemployed,
-    <br>* Mcs.hmnWorker.003-self-employed!⇒wkrSelfemployed,
-    <br>* Mcs.hmnWorker.employed.self-employed!⇒wkrSelfemployed,
-    <br>* Mcs.hmnWorker.self-employed!⇒wkrSelfemployed,
+    <br>* Mcs.hmnWorker.003-self-employed!⇒wkrEmployeeNo,
+    <br>* Mcs.hmnWorker.employed.self-employed!⇒wkrEmployeeNo,
+    <br>* Mcs.hmnWorker.self-employed!⇒wkrEmployeeNo,
+    <br>* Mcs.wkrEmployeeNo,
+    <br>* Mcs.wkrSelfemployed!⇒wkrEmployeeNo,
+    <br>* Mcs.self-employed-worker!⇒wkrEmployeeNo,
     <a class="clsHide" href="#idWkr003nam"></a></p>
 
+  <section id="idWkr001">
+  <h2 id="idWkr001H2">hmnWorker.employeeNo.employer-001
+    <a class="clsHide" href="#idWkr001H2"></a></h2>
+  <p id="idWkr001dsn">description::
+    <br>· employer is <a class="clsPreview" href="#idWkr003">an-employeeNo</a> who uses other workers|employees to do the-job under a-contract-of-employment.
+    <br>===
+    <br>"In an employer-employee relationship, the payer is considered an employer and the worker an employee."
+    <br>[{2020-08-11} https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/rc4110/employee-self-employed.html]
+    <a class="clsHide" href="#idWkr001dsn"></a></p>
+  <p id="idWkr001nam">name::
+    <br>* Mcs.employer!⇒wkrEmployer,
+    <br>* Mcs.wkrEmployer,
+    <br>* Mcs.hmnWorker.001-employer!⇒wkrEmployer,
+    <br>* Mcs.hmnWorker.employed.self.employer!⇒wkrEmployer,
+    <br>* Mcs.hmnWorker.employer!⇒wkrEmployer,
+    <br>====== langoGreek:
+    <br>* McsEll.εργοδότης!=wkrEmployer,
+    <a class="clsHide" href="#idWkr001nam"></a></p>
+  </section>
+
+  <section id="idWkr017">
+  <h2 id="idWkr017H2">hmnWorker.employeeNo.employerNo-017
+    <a class="clsHide" href="#idWkr017H2"></a></h2>
+  <p id="idWkr017dsn">description::
+    <br>· employerNo is <a class="clsPreview" href="#idWkr003">employeeNo</a> who does-not-uses other workers to create his satisfiers.
+    <br>· employerNo sells the created satisfiers by himself.
+    <a class="clsHide" href="#idWkr017dsn"></a></p>
+  <p id="idWkr017nam">name::
+    <br>* Mcs.employerNo!⇒wkrEmployerNo,
+    <br>* Mcs.hmnWorker.017-employerNo!⇒wkrEmployerNo,
+    <br>* Mcs.hmnWorker.employeeNo.employerNo!⇒wkrEmployerNo,
+    <br>* Mcs.hmnWorker.employerNo!⇒wkrEmployerNo,
+    <br>* Mcs.wkrEmployerNo,
+    <a class="clsHide" href="#idWkr017nam"></a></p>
+
   <section id="idWkr003att001">
-  <h2 id="idWkr003att001H2">contract-for-service is wkrSelfemployed
-    <a class="clsHide" href="#idWkr003att001H2"></a></h2>
+  <h3 id="idWkr003att001H3">contract-for-service is wkrEmployerNo
+    <a class="clsHide" href="#idWkr003att001H3"></a></h3>
   <p id="idWkr003att001dsn">description::
     <br>· the-contract to offer work to another entity.
     <a class="clsHide" href="#idWkr003att001dsn"></a></p>
@@ -580,13 +602,15 @@
     <br>* Mcs.wkrSelfemployed'contract-for-service,
     <a class="clsHide" href="#idWkr003att001nam"></a></p>
   </section>
+  </section>
 </section>
 
 <section id="idWkr006">
   <h1 id="idWkr006H1">hmnWorker.employedNo-006
     <a class="clsHide" href="#idWkr006H1"></a></h1>
   <p id="idWkr006dsn">description::
-    <br>·
+    <br>"Unemployment, according to the OECD (Organisation for Economic Co-operation and Development), if persons above a specified age (usually 15)[2] not being in paid employment or self-employment but currently available for work during the reference period.[3]"
+    <br>[{2020-10-10} https://en.wikipedia.org/wiki/Unemployment]
     <a class="clsHide" href="#idWkr006dsn"></a></p>
   <p id="idWkr006nam">name::
     <br>* Mcs.employedNo-worker!⇒wkrEmployedNo,
