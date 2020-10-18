@@ -13,6 +13,7 @@
  * - on lagALL, store all files in one dir dirEll eg
  * - to compute the-number of concepts, we must set new DIRS at cptqnt.root.json. 
  *
+ * modified: {2020-10-18} 'McsP.'
  * modified: {2019-12-11} 'cptqnt.root.json'
  * modified: {2019-09-05} 'lagKmo'
  * modified: {2018-10-25} 'cptqnt.json'
@@ -159,6 +160,8 @@ for (n = 0; n < aFilMcsIn.length; n++) {
     //READ Mcs-file and ADD its name-Urls on oNamidxAnu{lagEng01ei:[[name,Url]]}
     var
       sUrl, //The-url of the-name, is the-url of the-section-element is in.
+      sUrlP, //The-url of a-paragraph. it may-contain a-paragraph-Mcs.
+      sUrlPPrev, //the-sUrl of previous-paragraph
       oReadlines = new mfReadlines(sFile)
 
     while (oNextln = oReadlines.next()) {
@@ -170,20 +173,36 @@ for (n = 0; n < aFilMcsIn.length; n++) {
         //names are-stored inside a-section
         sUrl = sLn.substring(sLn.indexOf('"')+1,sLn.lastIndexOf('"'))
         sUrl = aFilMcsIn[n] + '#' + sUrl
-      } else if (sLn.indexOf('name::') >= 0 || sLn.indexOf('name::') >= 0) {
-        nCptqnt = nCptqnt + 1
+      } else if (sLn.indexOf('<p id="') >= 0) {
+        sUrlPPrev = sUrlP
+        sUrlP = sLn.substring(sLn.indexOf('"')+1,sLn.lastIndexOf('"'))
+        sUrlP = aFilMcsIn[n] + '#' + sUrlP
+        if (sLn.indexOf('name::') >= 0) {
+          nCptqnt = nCptqnt + 1
+        }
       } else {
         if (aLag[nL] === 'lagEng') {
           if (sLn.startsWith('    <br>* cpt.') ||
-              sLn.startsWith('    <br>* Mcs.')) {
+              sLn.startsWith('    <br>* Mcs.') ||
+              sLn.startsWith('    <br>* McsP.')) {
             if (sLn.indexOf('* cpt.') > 0) {
               aNU = [sLn.substring(sLn.indexOf('* cpt.')+6, sLn.indexOf(',')), sUrl]
               sChar = sLn.charAt(sLn.indexOf('* cpt.')+6).toUpperCase() //char at cpt.X
               fStoreNULetter(aNU, sChar, aLag[nL])
-            } else {
+            } else if (sLn.indexOf('* Mcs.') > 0) {
               aNU = [sLn.substring(sLn.indexOf('* Mcs.')+6, sLn.indexOf(',')), sUrl]
-              sChar = sLn.charAt(sLn.indexOf('* Mcs.')+6).toUpperCase() //char at cpt.X
+              sChar = sLn.charAt(sLn.indexOf('* Mcs.')+6).toUpperCase() //char at Mcs.X
               fStoreNULetter(aNU, sChar, aLag[nL])
+            } else {
+              aNU = [sLn.substring(sLn.indexOf('* McsP.')+7, sLn.indexOf(',')), sUrlP]
+              sChar = sLn.charAt(sLn.indexOf('* McsP.')+7).toUpperCase() //char at McsP.X
+              fStoreNULetter(aNU, sChar, aLag[nL])
+              //if previous-id different for current
+              //we have a-new-paragraph-cpt
+              if (sUrlPPrev !== sUrlP) {
+                nCptqnt = nCptqnt + 1
+              }
+              sUrlPPrev = sUrlP
             }
           }
         } else if (aLag[nL] === 'lagKmo') {
