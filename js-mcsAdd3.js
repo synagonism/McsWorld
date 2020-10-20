@@ -44,13 +44,13 @@ var
   sDir = 'dirStn',
   sDIR = 'dirStn',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'oznOgm.human',
+  sN = 'socialitation&#39;governance-system',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'ozn',
+  sNS = 'gvcStn',
   //5. FILE-name: shows relation of another file: SysNet, DtcbnetEth, DnLbr,
-  sNFil = 'Ozn',
+  sNFil = 'Stn-gvc',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNId = 'Ozn';
+  sNId = 'GvcStn';
 
 s =
   '<!DOCTYPE html>\n' +
