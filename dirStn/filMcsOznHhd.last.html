@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.oznHousehold-(0-8-0.2020-10-26 draft) organization.human.household</title>
+  <title>Mcs.oznHousehold-(0-10-0.2020-10-31 draft) organization.human.household</title>
   <meta name="keywords" content="organization.human.household, household, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -47,7 +47,9 @@
     <br>[{2020-10-15} https://synagonism.net/standard/economy/un.sna.2008.html#idPara4-4]
     <br>===
     <br>"A household consists of one or more people who live in the same dwelling and share meals. It may also consist of a single family or another group of people.[1] A dwelling is considered[by whom?] to contain multiple households if meals or living spaces are not shared. The household is the basic unit of analysis in many social, microeconomic and government models, and is important to economics and inheritance.[2]
-    <br>Household models include families, blended families, shared housing, group homes, boarding houses, houses of multiple occupancy (UK), and single room occupancy (US). In feudal societies, the Royal Household and medieval households of the wealthy included servants and other retainers."
+    <br>Household models include families, blended families, shared housing, group homes, boarding houses, houses of multiple occupancy (UK), and single room occupancy (US). In feudal societies, the Royal Household and medieval households of the wealthy included servants and other retainers.
+    <br>... Economic definition
+    <br>Although a one-income-stream economic theory simplifies modeling, it does not necessarily reflect reality. Many, if not most, households have several income-earning members. Most economic models do not equate households and traditional families, and there is not always a one-to-one relationship between households and families."
     <br>[{2020-10-26} https://en.wikipedia.org/wiki/Household]
     <a class="clsHide" href="#idOverviewdsnL"></a></p>
 </section>
@@ -78,6 +80,7 @@
     <br>· any human, part of a-household.
     <a class="clsHide" href="#idHhdatt002dsn"></a></p>
   <p id="idHhdatt002nam">name::
+    <br>* Mcs.householder,
     <br>* Mcs.oznHousehold'02_member,
     <br>* Mcs.oznHousehold'att002-member,
     <br>* Mcs.oznHousehold'housemate,
@@ -139,7 +142,7 @@
     <a class="clsHide" href="#idHhdatt005dsn"></a></p>
   <p id="idHhdatt005nam">name::
     <br>* Mcs.gvcHousehold,
-    <br>* Mcs.oznHousehold'05_governance-system!⇒gvcHousehold,
+    <br>* Mcs.oznHousehold'05_governance-node!⇒gvcHousehold,
     <br>* Mcs.oznHousehold'att005-governance-system!⇒gvcHousehold,
     <br>* Mcs.oznHousehold'governance-system!⇒gvcHousehold,
     <a class="clsHide" href="#idHhdatt005nam"></a></p>
@@ -191,10 +194,37 @@
     <br>·
     <a class="clsHide" href="#idHhdatt013dsn"></a></p>
   <p id="idHhdatt013nam">name::
+    <br>* Mcs.consumance-node--of-oznHousehold!⇒cscHousehold,
     <br>* Mcs.oznHousehold'06_consumance-node!⇒cscHousehold,
     <br>* Mcs.oznHousehold'att013-consumance-node!⇒cscHousehold,
     <br>* Mcs.oznHousehold'consumance-node!⇒cscHousehold,
     <a class="clsHide" href="#idHhdatt013nam"></a></p>
+
+  <section id="idHhdatt013dng">
+  <h2 id="idHhdatt013dngH2">DOING of cscHousehold
+    <a class="clsHide" href="#idHhdatt013dngH2"></a></h2>
+  <p id="idHhdatt013dngdsn">description::
+    <br>* cleaning,
+    <br>* fooding,
+    <br>* maintenance,
+    <a class="clsHide" href="#idHhdatt013dngdsn"></a></p>
+  <p id="idHhdatt013dngnam">name::
+    <br>* Mcs.cscHousehold'doing,
+    <a class="clsHide" href="#idHhdatt013dngnam"></a></p>
+  </section>
+</section>
+
+<section id="idHhdatt016">
+  <h1 id="idHhdatt016H1">07_production-node of oznHousehold
+    <a class="clsHide" href="#idHhdatt016H1"></a></h1>
+  <p id="idHhdatt016dsn">description::
+    <br>·
+    <a class="clsHide" href="#idHhdatt016dsn"></a></p>
+  <p id="idHhdatt016nam">name::
+    <br>* Mcs.individual-production,
+    <br>* Mcs.oznHousehold'att016-production-node,
+    <br>* Mcs.oznHousehold'production-node,
+    <a class="clsHide" href="#idHhdatt016nam"></a></p>
 </section>
 
 <section id="idHhdatt006">
@@ -251,6 +281,7 @@
     <br>* Mcs.oznHousehold'resource,
     <a class="clsHide" href="#idHhdrscnam"></a></p>
   <p id="idHhdrscwpa">addressWpg::
+    <br>* https://en.wikipedia.org/wiki/Household_economics,
     <br>* http://www.onthecommons.org/household-commons,
     <a class="clsHide" href="#idHhdrscwpa"></a></p>
 </section>
