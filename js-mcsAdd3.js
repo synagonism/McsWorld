@@ -127,7 +127,7 @@ s =
   '  <p id="id' + sNId + 'evgnam">name::\n' +
   '    <br>* Mcs.' + sNS + '\'evoluting,\n' +
   '    <a class="clsHide" href="#id' + sNId + 'evgnam"></a></p>\n' +
-  '  <p id="id' + sNId + 'evg' + moUtil.fDateYMD2() + '">{time.' + moUtil.fDateYMD() + '}::\n' +
+  '  <p id="id' + sNId + 'evg' + moUtil.fDateYMD2() + '">{' + moUtil.fDateYMD() + '}::\n' +
   '    <br>=== McsHitp-creation:\n';
 if (sDir === 'dirCor') {
   s = s +

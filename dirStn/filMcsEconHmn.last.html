@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.economy-(0-9-0.2020-11-08 draft) human-economy</title>
+  <title>Mcs.economy-(0-10-0.2020-11-09 draft) human-economy</title>
   <meta name="keywords" content="human-economy, economy, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -30,22 +30,24 @@
   <p id="idName">name::
     <br>* Mcs.filMcsEconHmn.last.html!⇒economy,
     <br>* Mcs.dirStn/filMcsEconHmn.last.html!⇒economy,
+    <br>* Mcs.Socnd.satisfiers!⇒economy,
+    <br>* Mcs.SocndSfrs!⇒economy,
     <br>* Mcs.economic-system-of-society!⇒economy,
     <br>* Mcs.economy,
     <br>* Mcs.economy'(human-economy)!⇒economy,
     <br>* Mcs.human-economy!⇒economy,
-    <br>* Mcs.nodeSatisfier!⇒economy, {2020-10-23},
-    <br>* Mcs.nodeSatisfier'(human-economy)!⇒economy,
     <br>* Mcs.nodeSocSatisfier!⇒economy,
     <br>* Mcs.node.society.economy!⇒economy,
-    <br>* Mcs.satisfier-system!⇒economy,
-    <br>* Mcs.society'06_satisfier-system!⇒economy,
-    <br>* Mcs.society'att007-satisfier-system!⇒economy,
+    <br>* Mcs.satisfiers-system!⇒economy,
+    <br>* Mcs.society'03_satisfiers-node!⇒economy,
+    <br>* Mcs.society'att007-satisfiers-system!⇒economy,
     <br>* Mcs.society'economy!⇒economy,
-    <br>* Mcs.society'satisfier-node!⇒economy,
-    <br>* Mcs.society'satisfier-system!⇒economy,
-    <br>* Mcs.sysSatisfier!⇒economy,
-    <br>* Mcs.sysSfr!⇒economy,
+    <br>* Mcs.society'satisfiers-node!⇒economy,
+    <br>* Mcs.society'satisfiers-system!⇒economy,
+    <br>* Mcs.sysSatisfiers!⇒economy,
+    <br>* Mcs.sysSfrs!⇒economy,
+    <br>* nodeSatisfier!⇒economy, {2020-10-23},
+    <br>* nodeSatisfier'(human-economy)!⇒economy,
     <a class="clsHide" href="#idName"></a></p>
   <p id="idOverviewdsnL">descriptionLong::
     <br>"An economy (from Greek οίκος – "household" and νέμoμαι – "manage") is an area of the production, distribution and trade, as well as consumption of goods and services by different agents. Understood in its broadest sense, 'The economy is defined as a social domain that emphasize the practices, discourses, and material expressions associated with the production, use, and management of resources'.[1] A given economy is the result of a set of processes that involves its culture, values, education, technological evolution, history, social organization, political structure and legal systems, as well as its geography, natural resource endowment, and ecology, as main factors. These factors give context, content, and set the conditions and parameters in which an economy functions. In other words, the economic domain is a social domain of human practices and transactions. It does not stand alone.
@@ -66,11 +68,6 @@
     <a class="clsHide" href="#idEconHmnatt003H1"></a></h1>
 </section>
 
-<section id="idEconHmnatt002">
-  <h1 id="idEconHmnatt002H1">03_worker (<a class="clsPreview" href="filMcsWkr.last.html#idOverview">link</a>) of economy
-    <a class="clsHide" href="#idEconHmnatt002H1"></a></h1>
-</section>
-
 <section id="idEconHmnatt004">
   <h1 id="idEconHmnatt004H1">04_production-node of economy
     <a class="clsHide" href="#idEconHmnatt004H1"></a></h1>
@@ -78,11 +75,17 @@
     <br>·
     <a class="clsHide" href="#idEconHmnatt004dsn"></a></p>
   <p id="idEconHmnatt004nam">name::
-    <br>* Mcs.economy'04_production-node,
-    <br>* Mcs.economy'att004-production-node,
-    <br>* Mcs.economy'production-node,
-    <br>* Mcs.production-node--of-economy,
+    <br>* Mcs.economy'04_production-node!⇒nodeProduction,
+    <br>* Mcs.economy'att004-production-node!⇒nodeProduction,
+    <br>* Mcs.economy'production-node!⇒nodeProduction,
+    <br>* Mcs.nodeProduction,
+    <br>* Mcs.production-node--of-economy!⇒nodeProduction,
     <a class="clsHide" href="#idEconHmnatt004nam"></a></p>
+
+  <section id="idEconHmnatt002">
+  <h2 id="idEconHmnatt002H2">03_worker (<a class="clsPreview" href="filMcsWkr.last.html#idOverview">link</a>) of economy
+    <a class="clsHide" href="#idEconHmnatt002H2"></a></h2>
+  </section>
 </section>
 
 <section id="idEconHmnatt006">
@@ -92,25 +95,23 @@
     <br>·
     <a class="clsHide" href="#idEconHmnatt006dsn"></a></p>
   <p id="idEconHmnatt006nam">name::
-    <br>* Mcs.consumption-node--of-economy,
-    <br>* Mcs.economy'05_consumption-node,
-    <br>* Mcs.economy'att006-consumption-node,
-    <br>* Mcs.economy'consumption-node,
+    <br>* Mcs.consumption-node--of-economy!⇒nodeConsumption,
+    <br>* Mcs.economy'05_consumption-node!⇒nodeConsumption,
+    <br>* Mcs.economy'att006-consumption-node!⇒nodeConsumption,
+    <br>* Mcs.economy'consumption-node!⇒nodeConsumption,
+    <br>* Mcs.economy'node.consumption!⇒nodeConsumption,
+    <br>* Mcs.household-node--of-society!⇒nodeConsumption,
+    <br>* Mcs.nodeConsumption,
+    <br>* Mcs.nodeHousehold!⇒nodeConsumption,
+    <br>* Mcs.society'att018-household-node!⇒nodeConsumption,
+    <br>* Mcs.society'household-node!⇒nodeConsumption,
+    <br>* Mcs.society'node.household!⇒nodeConsumption,
     <a class="clsHide" href="#idEconHmnatt006nam"></a></p>
-</section>
 
-<section id="idEconHmnatt005">
-  <h1 id="idEconHmnatt005H1">06_transaction-node of economy
-    <a class="clsHide" href="#idEconHmnatt005H1"></a></h1>
-  <p id="idEconHmnatt005dsn">description::
-    <br>·
-    <a class="clsHide" href="#idEconHmnatt005dsn"></a></p>
-  <p id="idEconHmnatt005nam">name::
-    <br>* Mcs.economy'06_transaction-node,
-    <br>* Mcs.economy'att005-transaction-node,
-    <br>* Mcs.economy'transaction-node,
-    <br>* Mcs.transaction-node--of-economy,
-    <a class="clsHide" href="#idEconHmnatt005nam"></a></p>
+  <section id="idEconHmnatt006att001">
+  <h2 id="idEconHmnatt006att001H2">oznHousehold (link) of nodeConsumption
+    <a class="clsHide" href="#idEconHmnatt006att001H2"></a></h2>
+  </section>
 </section>
 
 <section id="idEconHmnatt007">
@@ -176,26 +177,67 @@
   <p id="idEconHmnatt007snaevgFnam">name::
     <br>* Mcs.Sna'evoluting,
     <a class="clsHide" href="#idEconHmnatt007snaevgFnam"></a></p>
-  <p id="idEconHmnatt007sna2008">{2008}-Sna-version::
+  <p id="idEconHmnatt007snaevg2008">{2008}-Sna-version::
     <br>* Mcs.{2008}-Sna-version,
     <br>"The 2008 SNA, which is an update of the 1993 SNA, addresses issues brought about by changes in the economic environment, advances in methodological research and the needs of users."
     <br>[https://unstats.un.org/unsd/nationalaccount/hsna.asp]
-    <a class="clsHide" href="#idEconHmnatt007sna2008"></a></p>
-  <p id="idEconHmnatt007sna1993">{1993}-Sna-version::
+    <a class="clsHide" href="#idEconHmnatt007snaevg2008"></a></p>
+  <p id="idEconHmnatt007snaevg1993">{1993}-Sna-version::
     <br>* Mcs.{1993}-Sna-version,
     <br>"The 1993 SNA represents a major advance in national accounting and embodies the result of harmonizing the SNA and other international statistical standards more completely than in previous versions."
     <br>[https://unstats.un.org/unsd/nationalaccount/hsna.asp]
-    <a class="clsHide" href="#idEconHmnatt007sna1993"></a></p>
-  <p id="idEconHmnatt007sna1968">{1968}-Sna-version::
+    <a class="clsHide" href="#idEconHmnatt007snaevg1993"></a></p>
+  <p id="idEconHmnatt007snaevg1968">{1968}-Sna-version::
     <br>* Mcs.{1968}-Sna-version,
     <br>"The 1968 SNA extended the scope of the national accounts substantially by; adding input-output accounts and balance sheets; giving more attention to estimates at constant prices; and making a comprehensive effort to bring the SNA and the Material Product System (MPS) closer together."
     <br>[https://unstats.un.org/unsd/nationalaccount/hsna.asp]
-    <a class="clsHide" href="#idEconHmnatt007sna1968"></a></p>
-  <p id="idEconHmnatt007sna1953">{1953}-Sna-version::
+    <a class="clsHide" href="#idEconHmnatt007snaevg1968"></a></p>
+  <p id="idEconHmnatt007snaevg1953">{1953}-Sna-version::
     <br>* Mcs.{1953}-Sna-version,
     <br>"The 1953 SNA was published under the auspices of the UNSC. It consisted of a set of six standard accounts and a set of 12 standard tables presenting detail and alternative classifications of the flows in the economy. The concepts and definitions of the accounts were widely applicable for most countries, including developing countries. Two slightly modified editions of the 1953 SNA were published."
     <br>[https://unstats.un.org/unsd/nationalaccount/hsna.asp]
-    <a class="clsHide" href="#idEconHmnatt007sna1953"></a></p>
+    <a class="clsHide" href="#idEconHmnatt007snaevg1953"></a></p>
+  </section>
+
+  <section id="idEconHmnatt007sna2008">
+  <h4 id="idEconHmnatt007sna2008H4">Sna.{2008}-version
+    <a class="clsHide" href="#idEconHmnatt007sna2008H4"></a></h4>
+  <p id="idEconHmnatt007sna2008dsn">description::
+    <br>"The 2008 SNA, which is an update of the 1993 SNA, addresses issues brought about by changes in the economic environment, advances in methodological research and the needs of users."
+    <br>[https://unstats.un.org/unsd/nationalaccount/hsna.asp]
+    <a class="clsHide" href="#idEconHmnatt007sna2008dsn"></a></p>
+  <p id="idEconHmnatt007sna2008nam">name::
+    <br>* Mcs.2008-SNA-version!⇒Sna2008,
+    <br>* Mcs.Sna.{2008}-version!⇒Sna2008,
+    <br>* Mcs.Sna2008,
+    <a class="clsHide" href="#idEconHmnatt007sna2008nam"></a></p>
+
+  <section id="idEconHmnatt007sna2008rscF">
+  <h5 id="idEconHmnatt007sna2008rscFH5">resource of Sna2008
+    <a class="clsHide" href="#idEconHmnatt007sna2008rscFH5"></a></h5>
+  <p id="idEconHmnatt007sna2008rscFdsn">description::
+    <br>* manual-lagHitp: https://synagonism.net/standard/economy/un.sna.2008.html#idForeword,
+    <br>* manual-Pdf: https://unstats.un.org/unsd/nationalaccount/docs/SNA2008.pdf,
+    <br>* compilation in brief: https://unstats.un.org/unsd/nationalaccount/docs/2008SNA-CompilationBrief.pdf,
+    <a class="clsHide" href="#idEconHmnatt007sna2008rscFdsn"></a></p>
+  <p id="idEconHmnatt007sna2008rscFnam">name::
+    <br>* Mcs.Sna2008'resource,
+    <a class="clsHide" href="#idEconHmnatt007sna2008rscFnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idEconHmnatt007sna1993">
+  <h4 id="idEconHmnatt007sna1993H4">Sna.{1993}-version
+    <a class="clsHide" href="#idEconHmnatt007sna1993H4"></a></h4>
+  <p id="idEconHmnatt007sna1993dsn">description::
+    <br>"The 1993 SNA represents a major advance in national accounting and embodies the result of harmonizing the SNA and other international statistical standards more completely than in previous versions."
+    <br>[https://unstats.un.org/unsd/nationalaccount/hsna.asp]
+    <a class="clsHide" href="#idEconHmnatt007sna1993dsn"></a></p>
+  <p id="idEconHmnatt007sna1993nam">name::
+    <br>* Mcs.1993-SNA-version!⇒Sna1993,
+    <br>* Mcs.Sna.{1993}-version!⇒Sna1993,
+    <br>* Mcs.Sna1993,
+    <a class="clsHide" href="#idEconHmnatt007sna1993nam"></a></p>
   </section>
   </section>
 
@@ -247,7 +289,7 @@
     <br>* Mcs.Esa'evoluting,
     <a class="clsHide" href="#idEconHmnatt007esaevgFnam"></a></p>
   <p id="idEconHmnatt007esa2014">{2014-09}-Esa2010-compalsory::
-    <br>* {2014-09}-Esa2010-compalsory,
+    <br>* Mcs.{2014-09}-Esa2010-compalsory,
     <br>"The European System of Regional and National Accounts (ESA 2010) was published in the Official Journal on 26 June 2013 and compulsory for data transmissions from September 2014 onwards.
     <br>It is complemented by an implementing decision granting temporary derogations and an implementing regulation specifying the interchange standard for the transmission of data required (SDMX) as well as an implementing regulation on the modalities, structure, periodicity and assessment indicators of the quality reports on data transmitted under the ESA 2010 Transmission Programme."
     <br>[{2020-11-08} https://ec.europa.eu/eurostat/web/national-accounts/legislation]
@@ -324,12 +366,12 @@
 </section>
 
 <section id="idEconHmnevgF">
-  <h1 id="idEconHmnevgFH1">EVOLUTING of economy
+  <h1 id="idEconHmnevgFH1">evoluting of economy
     <a class="clsHide" href="#idEconHmnevgFH1"></a></h1>
   <p id="idEconHmnevgnam">name::
     <br>* Mcs.economy'evoluting,
     <a class="clsHide" href="#idEconHmnevgnam"></a></p>
-  <p id="idEconHmnevg20200711">{time.2020-07-11}::
+  <p id="idEconHmnevg20200711">{2020-07-11}::
     <br>=== McsHitp-creation:
     <br>· creation of current <a class="clsPreview" href="../dirCor/filMcs.last.html#idOverview">concept</a>.
     <a class="clsHide" href="#idEconHmnevg20200711"></a></p>
