@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.economy-(0-11-0.2020-11-10 draft) human-economy</title>
+  <title>Mcs.economy-(0-12-0.2020-11-13 draft) human-economy</title>
   <meta name="keywords" content="human-economy, economy, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -23,7 +23,7 @@
     <a class="clsHide" href="#idOverviewH1"></a></h1>
   <p id="idDescription">description::
     <br>· the-system of a-society that manages its <a class="clsPreview" href="filMcsSfr.last.html#idOverview">satisfiers</a>.
-    [<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>-{2020-09-02}]
+    <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>-{2020-09-02}]
     <br>· The-economy contains ALL the-organizations (the-households, the-companies and the-state) of a-society, but see only the-production and consumption of <a class="clsPreview" href="filMcsSfr.last.html#idOverview">satisfiers</a> among them.
     <br>[hmnSgm-{2015-09-18}]
     <a class="clsHide" href="#idDescription"></a></p>
@@ -58,6 +58,18 @@
     <a class="clsHide" href="#idOverviewdsnL"></a></p>
 </section>
 
+<section id="idEconHmnatt005">
+  <h1 id="idEconHmnatt005H1">01_node of economy
+    <a class="clsHide" href="#idEconHmnatt005H1"></a></h1>
+  <p id="idEconHmnatt005dsn">description::
+    <br>· any subsystem of economy.
+    <a class="clsHide" href="#idEconHmnatt005dsn"></a></p>
+  <p id="idEconHmnatt005nam">name::
+    <br>* Mcs.economy'01_node,
+    <br>* Mcs.economy'att005-node,
+    <a class="clsHide" href="#idEconHmnatt005nam"></a></p>
+</section>
+
 <section id="idEconHmnatt001">
   <h1 id="idEconHmnatt001H1">01_satisfier (<a class="clsPreview" href="filMcsSfr.last.html#idOverview">link</a>) of economy
     <a class="clsHide" href="#idEconHmnatt001H1"></a></h1>
@@ -72,7 +84,7 @@
   <h1 id="idEconHmnatt004H1">04_producing-node of economy
     <a class="clsHide" href="#idEconHmnatt004H1"></a></h1>
   <p id="idEconHmnatt004dsn">description::
-    <br>·
+    <br>· the-node with the-producing-satisfiers-nodes.
     <a class="clsHide" href="#idEconHmnatt004dsn"></a></p>
   <p id="idEconHmnatt004nam">name::
     <br>* Mcs.economy'04_production-node!⇒nodeProduction,
@@ -403,8 +415,96 @@
     <br>* ... <a class="clsPreview" href="../dirCor/filMcsEnt.last.html#idOverview">entity</a>.
     <a class="clsHide" href="#idEconHmngtr"></a></p>
   <p id="idEconHmnstr">specific-tree-of-economy::
-    <br>* ,
+    <br>* economy.specific,
     <a class="clsHide" href="#idEconHmnstr"></a></p>
+</section>
+
+<section id="idEconHmn001">
+  <h1 id="idEconHmn001H1">economy.eco-001
+    <a class="clsHide" href="#idEconHmn001H1"></a></h1>
+  <p id="idEconHmn001dsn">description::
+    <br>· an-economy that incorporates and its ecosystem.
+    <a class="clsHide" href="#idEconHmn001dsn"></a></p>
+  <p id="idEconHmn001nam">name::
+    <br>* Mcs.eco-economy!⇒econEco,
+    <br>* Mcs.econEco,
+    <br>* Mcs.economy.001-eco!⇒econEco,
+    <br>* Mcs.economy.eco!⇒econEco,
+    <a class="clsHide" href="#idEconHmn001nam"></a></p>
+
+  <section id="idEconHmnrscF">
+  <h2 id="idEconHmnrscFH2">resource of econEco
+    <a class="clsHide" href="#idEconHmnrscFH2"></a></h2>
+  <p id="idEconHmnrscFdsn">description::
+    <br>* https://en.wikipedia.org/wiki/Ecology,
+    <br>* https://en.wikipedia.org/wiki/Eco-industrial_development,
+    <br>* https://www.theblueeconomy.org/,
+    <br>* https://en.wikipedia.org/wiki/Green_economy,
+    <br>* https://en.wikipedia.org/wiki/Environmental_economics,
+    <a class="clsHide" href="#idEconHmnrscFdsn"></a></p>
+  <p id="idEconHmnrscFnam">name::
+    <br>* Mcs.econEco'resource,
+    <a class="clsHide" href="#idEconHmnrscFnam"></a></p>
+  </section>
+
+  <section id="idEconHmn003">
+  <h2 id="idEconHmn003H2">econEco.circular-003
+    <a class="clsHide" href="#idEconHmn003H2"></a></h2>
+  <p id="idEconHmn003dsn">description::
+    <br>"The circular economy is a way of building a world with no waste."
+    <br>[{2020-11-13} https://www.weforum.org/agenda/2020/11/4-lessons-from-nature-to-build-a-circular-economy]
+    <br>===
+    <br>"A circular economy (often referred to simply as "circularity"[1]) is an economic system aimed at eliminating waste and the continual use of resources. Circular systems employ reuse, sharing, repair, refurbishment, remanufacturing and recycling to create a closed-loop system, minimising the use of resource inputs and the creation of waste, pollution and carbon emissions.[2] The circular economy aims to keep products, equipment and infrastructure[3] in use for longer, thus improving the productivity of these resources. All "waste" should become "food" for another process: either a by-product or recovered resource for another industrial process or as regenerative resources for nature (e.g., compost). This regenerative approach is in contrast to the traditional linear economy, which has a "take, make, dispose" model of production.[4]"
+    <br>[{2020-11-13} https://en.wikipedia.org/wiki/Circular_economy]
+    <a class="clsHide" href="#idEconHmn003dsn"></a></p>
+  <p id="idEconHmn003nam">name::
+    <br>* Mcs.circular-economy!⇒econCircular,
+    <br>* Mcs.econCircular,
+    <br>* Mcs.econEcon.circular!⇒econCircular,
+    <br>* Mcs.economy.003-circular!⇒econCircular,
+    <br>* Mcs.economy.circular!⇒econCircular,
+    <a class="clsHide" href="#idEconHmn003nam"></a></p>
+
+  <section id="idEconHmn003rscF">
+  <h3 id="idEconHmn003rscFH3">resource of econCircular
+    <a class="clsHide" href="#idEconHmn003rscFH3"></a></h3>
+  <p id="idEconHmn003rscFdsn">description::
+    <br>* https://en.wikipedia.org/wiki/Circular_economy,
+    <br>* https://www.weforum.org/agenda/2020/11/4-lessons-from-nature-to-build-a-circular-economy,
+    <a class="clsHide" href="#idEconHmn003rscFdsn"></a></p>
+  <p id="idEconHmn003rscFnam">name::
+    <br>* Mcs.econCircular'resource,
+    <a class="clsHide" href="#idEconHmn003rscFnam"></a></p>
+  </section>
+
+  <section id="idEconHmn004">
+  <h2 id="idEconHmn004H2">econEco.regenerative-004
+    <a class="clsHide" href="#idEconHmn004H2"></a></h2>
+  <p id="idEconHmn004dsn">description::
+    <br>"Nature provides us with resources, we should give back to nature in our business models."
+    <br>[{2020-11-13} https://medium.com/swlh/business-models-from-linear-to-circular-to-regenerative-9f10c19f337]
+    <a class="clsHide" href="#idEconHmn004dsn"></a></p>
+  <p id="idEconHmn004nam">name::
+    <br>* Mcs.econRegenerative,
+    <br>* Mcs.econEco.regenerative!⇒econRegenerative,
+    <br>* Mcs.economy.004-regenerative!⇒econRegenerative,
+    <br>* Mcs.economy.regenerative!⇒econRegenerative,
+    <br>* Mcs.regenerative-economy!⇒econRegenerative,
+    <a class="clsHide" href="#idEconHmn004nam"></a></p>
+  </section>
+  </section>
+</section>
+
+<section id="idEconHmn002">
+  <h1 id="idEconHmn002H1">economy.ecoNo-002
+    <a class="clsHide" href="#idEconHmn002H1"></a></h1>
+  <p id="idEconHmn002dsn">description::
+    <br>· an-economy that does-not-incorporate its ecosystem.
+    <a class="clsHide" href="#idEconHmn002dsn"></a></p>
+  <p id="idEconHmn002nam">name::
+    <br>* Mcs.economy.002-ecoNo,
+    <br>* Mcs.economy.ecoNo,
+    <a class="clsHide" href="#idEconHmn002nam"></a></p>
 </section>
 
 <section id="idMeta">
