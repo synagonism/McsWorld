@@ -41,16 +41,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirStn',
-  sDIR = 'dirStn',
+  sDir = 'dirStnLaw',
+  sDIR = 'dirStnLaw',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'European-Union',
+  sN = 'international-law',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'socEu',
+  sNS = 'lawWorld',
   //5. FILE-name: shows relation of another file: SysNet, DtcbnetEth, DnLbr,
-  sNFil = 'SocEu',
+  sNFil = 'LawWrld',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNId = 'SocEu';
+  sNId = 'LawWrld';
 
 s =
   '<!DOCTYPE html>\n' +
