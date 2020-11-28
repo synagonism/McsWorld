@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-14-1.2020-11-28: Infrsc,
  * version.0-14-0.2020-07-05: hitp-files-local,
  * version.0-13-0.2020-04-06: structure-doing,
  * version.0-12-0.2020-02-19: whole-part-generic-tree,
@@ -41,16 +42,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirStnLaw',
-  sDIR = 'dirStnLaw',
+  sDir = 'dirLag',
+  sDIR = 'dirLag',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'international-law',
+  sN = 'info\'resource',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'lawWorld',
+  sNS = 'Infrsc',
   //5. FILE-name: shows relation of another file: SysNet, DtcbnetEth, DnLbr,
-  sNFil = 'LawWrld',
+  sNFil = 'Infrsc',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNId = 'LawWrld';
+  sNId = 'Infrsc';
 
 s =
   '<!DOCTYPE html>\n' +
@@ -89,7 +90,7 @@ s =
   '</section>\n' +
   '\n' +
   '<section id="id' + sNId + 'rscF">\n' +
-  '  <h1 id="id' + sNId + 'rscFH1">resource of ' + sNS + '\n' +
+  '  <h1 id="id' + sNId + 'rscFH1">Infrsc of ' + sNS + '\n' +
   '    <a class="clsHide" href="#id' + sNId + 'rscFH1"></a></h1>\n' +
   '  <p id="id' + sNId + 'rscnam">name::\n' +
   '    <br>* Mcs.' + sNS + '\'resource,\n' +
