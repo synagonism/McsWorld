@@ -42,16 +42,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirLag',
-  sDIR = 'dirLag',
+  sDir = 'dirStn',
+  sDIR = 'dirStn',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'info\'resource',
+  sN = 'international-organization',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'Infrsc',
+  sNS = 'oznInl',
   //5. FILE-name: shows relation of another file: SysNet, DtcbnetEth, DnLbr,
-  sNFil = 'Infrsc',
+  sNFil = 'OznInl',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNId = 'Infrsc';
+  sNId = 'OznInl';
 
 s =
   '<!DOCTYPE html>\n' +
