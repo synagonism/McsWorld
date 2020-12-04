@@ -5,6 +5,7 @@
  * Output: filMcsName.last.html file.
  * run: node js-mcsAdd3.js
  *
+ * version.0-14-2.2020-12-04: no-steemit,
  * version.0-14-1.2020-11-28: Infrsc,
  * version.0-14-0.2020-07-05: hitp-files-local,
  * version.0-13-0.2020-04-06: structure-doing,
@@ -223,7 +224,6 @@ s = s +
   '    <br>• edit on github: https://github.com/synagonism/Mcsw/blob/master/' + sDir +'/filMcs' + sNFil + '.last.html,\n' +
   '    <br>• comments on <a class="clsPreview" href="filMcs' + sDIR + '.last.html#idComment">Disqus</a>,\n' +
   '    <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>,\n' +
-  '    <br>• steemit: <a href="https://steemit.com/synagonism">https://steemit.com/@synagonism</a>,\n' +
   '    <a class="clsHide" href="#idFooterP1"></a></p>\n' +
   '  <!--                              -->\n' +
   '  <p id="idMetaVersion">webpage-versions::\n' +
