@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.time-(0-22-0.2020-08-25 draft)</title>
+  <title>Mcs.time-(0-23-0.2020-12-09 draft)</title>
   <meta name="keywords" content="time, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -226,6 +226,7 @@
     <br>· time-interval is time between <a class="clsPreview" href="#idTimePnt">time-points</a>.
     <a class="clsHide" href="#idTimePntNdsn"></a></p>
   <p id="idTimePntNnam">name::
+    <br>* Mcs.{i...}'(timeInterval),
     <br>* Mcs.time-interval,
     <br>* Mcs.time-period,
     <br>* Mcs.time.interval,
@@ -843,12 +844,15 @@
     <br>[{2019-10-21} https://en.wikipedia.org/wiki/Anno_Domini]
     <a class="clsHide" href="#idTimeUomCldrBcedsn"></a></p>
   <p id="idTimeUomCldrBcenam">name::
-    <br>* Mcs.AD-(anno-Domini=CE),
-    <br>* Mcs.BC-(before-Christ=BCE),
-    <br>* Mcs.BCE-(before-current-era=BC),
-    <br>* Mcs.CE-(current|common-era=AD)
-    <br>* Mcs.anno-Domini-(AD=CE),
-    <br>* Mcs.before-Christ-(BC=BCE),
+    <br>* Mcs.AD'(anno-Domini=CE),
+    <br>* Mcs.BC'(before-Christ=BCE),
+    <br>* Mcs.BCE'(before-current-era=BC),
+    <br>* Mcs.CE'(current|common-era=AD),
+    <br>* Mcs.Anno-Domini-(AD=CE),
+    <br>* Mcs.Before-Christ-(BC=BCE),
+    <br>* Mcs.Before-current-era,
+    <br>* Mcs.Common-era,
+    <br>* Mcs.Current-era,
     <a class="clsHide" href="#idTimeUomCldrBcenam"></a></p>
   </section>
 
@@ -1076,9 +1080,11 @@
     <br>· this is in-contrast-to naming of centuries which we name with its last year.
     <a class="clsHide" href="#idTimeUomYear10dsn"></a></p>
   <p id="idTimeUomYear10nam">name::
-    <br>* Mcs.decade-time-Uom,
+    <br>* Mcs.{i10}'(timeIvlYear10),
+    <br>* Mcs.decade'(timeIvlYear1000),
     <br>* Mcs.UomTime.decade,
     <br>* Mcs.time.decade,
+    <br>* Mcs.timeIvlYear10,
     <br>====== langoKomo:
     <br>* McsKmo.to-yiaro-foPo!=decade,
     <br>====== langoEsperanto:
@@ -1096,9 +1102,11 @@
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=century]
     <a class="clsHide" href="#idTimeUomYear100dsn"></a></p>
   <p id="idTimeUomYear100nam">name::
-    <br>* Mcs.century-time-Uom,
+    <br>* Mcs.{i100}'(timeIvlYear100),
+    <br>* Mcs.century'(timeIvlYear100),
     <br>* Mcs.UomTime.century,
     <br>* Mcs.time.century,
+    <br>* Mcs.timeIvlYear100,
     <br>====== langoKomo:
     <br>* McsKmo.to-yiaro-foPoPo!=century,
     <br>====== langoEsperanto:
@@ -1116,14 +1124,16 @@
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=millennium]
     <a class="clsHide" href="#idTimeUomYearKdsn"></a></p>
   <p id="idTimeUomYearKnam">name::
-    <br>* Mcs.Ka,
+    <br>* Mcs.{iK1}'(timeIvlYear1000),
+    <br>* Mcs.Ka'(timeIvlYear1000),
     <br>* Mcs.kiloannum,
-    <br>* Mcs.kyr,
-    <br>* Mcs.millennium-time-Uom,
+    <br>* Mcs.kyr'(timeIvlYear1000),
+    <br>* Mcs.millennium'(timeIvlYear1000),
     <br>* Mcs.UomTime.millennium,
     <br>* Mcs.time.Ka,
     <br>* Mcs.time.kyr,
     <br>* Mcs.time.millennium,
+    <br>* Mcs.timeIvlYear1000,
     <br>====== langoKomo:
     <br>* McsKmo.to-yiaro-kilo!=millennium,
     <br>====== langoEsperanto:
@@ -1140,12 +1150,14 @@
     <br>·
     <a class="clsHide" href="#idTimeUomYearK2dsn"></a></p>
   <p id="idTimeUomYearK2nam">name::
-    <br>* Mcs.Ma,
+    <br>* Mcs.{iK2}'(timeIvlYear1000^2),
+    <br>* Mcs.Ma'(timeIvlYear1000^2),
     <br>* Mcs.megaannum,
-    <br>* Mcs.myr,
+    <br>* Mcs.myr'(timeIvlYear1000^2),
     <br>* Mcs.time.Ma,
     <br>* Mcs.time.myr,
     <br>* Mcs.time.year.1000^2,
+    <br>* Mcs.timeIvlYear1000^2,
     <a class="clsHide" href="#idTimeUomYearK2nam"></a></p>
   </section>
 
@@ -1156,12 +1168,14 @@
     <br>·
     <a class="clsHide" href="#idTimeUomYearK3dsn"></a></p>
   <p id="idTimeUomYearK3nam">name::
-    <br>* Mcs.Ga,
-    <br>* Mcs.byr,
-    <br>* Mcs.gigaannum,
-    <br>* Mcs.time.Ga,
-    <br>* Mcs.time.byr,
+    <br>* Mcs.{iK3}'(timeIvlYear1000^3),
+    <br>* Mcs.Ga'(timeIvlYear1000^3),
+    <br>* Mcs.byr'(timeIvlYear1000^3),
+    <br>* Mcs.gigaannum'(timeIvlYear1000^3),
+    <br>* Mcs.time.Ga'(timeIvlYear1000^3),
+    <br>* Mcs.time.byr'(timeIvlYear1000^3),
     <br>* Mcs.time.year.1000^3,
+    <br>* Mcs.timeIvlYear1000^3,
     <a class="clsHide" href="#idTimeUomYearK3nam"></a></p>
   </section>
 
@@ -1172,7 +1186,8 @@
     <br>·
     <a class="clsHide" href="#idTimeUomYearK4dsn"></a></p>
   <p id="idTimeUomYearK4nam">name::
-    <br>* Mcs.Ta,
+    <br>* Mcs.{iK4}'(timeIvlYear1000^4),
+    <br>* Mcs.Ta'(timeIvlYear1000^4),
     <br>* Mcs.teraannum,
     <br>* Mcs.time.Ta,
     <br>* Mcs.time.year.1000^4,
@@ -1186,6 +1201,7 @@
     <br>·
     <a class="clsHide" href="#idTimeUomYearK5dsn"></a></p>
   <p id="idTimeUomYearK5nam">name::
+    <br>* Mcs.{iK5}'(timeIvlYear1000^5),
     <br>* Mcs.Pa,
     <br>* Mcs.petaannum,
     <br>* Mcs.time.Pa,
