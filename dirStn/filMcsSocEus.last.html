@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.socEus-(0-15-0.2020-12-18 draft) European-Union</title>
+  <title>Mcs.socEus-(0-16-0.2020-12-19 draft) European-Union</title>
   <meta name="keywords" content="European-Union, socEus, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -498,7 +498,7 @@
   <h3 id="idSocEusatt040SpcH3">Euozn.SPECIFIC
     <a class="clsHide" href="#idSocEusatt040SpcH3"></a></h3>
   <p id="idSocEusatt040Spcdsn">description::
-    <br>· <a class="clsPreview" href="#idEugvcozn">governance-Euozn</a>,
+    <br>· <a class="clsPreview" href="#idEuoGvc">governance-Euozn</a>,
     <a class="clsHide" href="#idSocEusatt040Spcdsn"></a></p>
   <p id="idSocEusatt040Spcnam">name::
     <br>* Mcs.Euozn.specific,
@@ -534,6 +534,19 @@
     <br>* Mcs.socEus'economy!⇒Euecon,
     <br>* Mcs.socEus'node-of-satisfiers!⇒Euecon,
     <a class="clsHide" href="#idEueconnam"></a></p>
+
+  <section id="idEueconGdp">
+  <h2 id="idEueconGdpH2">Gdp of Euecon
+    <a class="clsHide" href="#idEueconGdpH2"></a></h2>
+  <p id="idEueconGdpdsn">description::
+    <br>"How big is the EU economy?
+    <br>In terms of the total value of all goods and services produced, EU gross domestic product (GDP) in 2019, when the UK was still part of the EU, was €16.4 trillion."
+    <br>[{2020-12-19} https://europa.eu/european-union/about-eu/figures/economy_en]
+    <a class="clsHide" href="#idEueconGdpdsn"></a></p>
+  <p id="idEueconGdpnam">name::
+    <br>* Mcs.Euecon'Gdp,
+    <a class="clsHide" href="#idEueconGdpnam"></a></p>
+  </section>
 
   <section id="idEueconSRat">
   <h2 id="idEueconSRatH2">sectorResearch-and-tech of Euecon
@@ -614,6 +627,17 @@
     <br>* Mcs.Euworker'Infrsc,
     <a class="clsHide" href="#idEuwkrrscFnam"></a></p>
   </section>
+  </section>
+
+  <section id="idEueconrscF">
+  <h2 id="idEueconrscFH2">Infrsc of Euecon
+    <a class="clsHide" href="#idEueconrscFH2"></a></h2>
+  <p id="idEueconrscFdsn">description::
+    <br>* https://europa.eu/european-union/about-eu/figures/economy_en,
+    <a class="clsHide" href="#idEueconrscFdsn"></a></p>
+  <p id="idEueconrscFnam">name::
+    <br>* Mcs.Euecon'Infrsc,
+    <a class="clsHide" href="#idEueconrscFnam"></a></p>
   </section>
 </section>
 
@@ -1406,7 +1430,7 @@
     <br>* Mcs.Internal-Audit-Service|IAS|service-dep-EuoCom,
     <br>* Mcs.Legal-Service|SJ|service-dep-EuoCom,
     <br>* Mcs.Library-and-e-Resources-Centre|-|service-dep-EuoCom,
-    <br>* Mcs.Publications-Office|OP|service-dep-EuoCom,
+    <br>* <a class="clsPreview" href="#idSocEusatt032">Publications-Office|OP|service-dep-EuoCom</a>,
     <br>* Mcs.Recovery-and-Resilience-Task-Force|RECOVER|service-dep-EuoCom,
     <br>* Mcs.Secretariat-General|SG|service-dep-EuoCom,
     <br>* Mcs.Task-Force-for-Relations-with-the-United-Kingdom|UKTF|service-dep-EuoCom,
@@ -1424,7 +1448,6 @@
     <br>* Mcs.EuoCom'Internal-Audit-Service|IAS|service-dep,
     <br>* Mcs.EuoCom'Legal-Service|SJ|service-dep,
     <br>* Mcs.EuoCom'Library-and-e-Resources-Centre|-|service-dep,
-    <br>* Mcs.EuoCom'Publications-Office|OP|service-dep,
     <br>* Mcs.EuoCom'Recovery-and-Resilience-Task-Force|RECOVER|service-dep,
     <br>* Mcs.EuoCom'Secretariat-General|SG|service-dep,
     <br>* Mcs.EuoCom'Task-Force-for-Relations-with-the-United-Kingdom|UKTF|service-dep,
@@ -1438,7 +1461,6 @@
     <br>* Mcs.OIB|Infrastructure-and-Logistics-in-Brussels|service-dep-EuoCom,
     <br>* Mcs.OIL|Infrastructure-and-Logistics-in-Luxembourg|service-dep-EuoCom,
     <br>* Mcs.OLAF|European-Anti-Fraud-Office|service-dep-EuoCom,
-    <br>* Mcs.OP|Publications-Office|service-dep-EuoCom,
     <br>* Mcs.PMO|Administration-and-Payment-of-Individual-Entitlements|service-dep-EuoCom,
     <br>* Mcs.RECOVER|Recovery-and-Resilience-Task-Force|service-dep-EuoCom,
     <br>* Mcs.SG|Secretariat-General|service-dep-EuoCom,
@@ -1479,6 +1501,47 @@
     <br>* Mcs.executive-agency,
     <a class="clsHide" href="#idEuoComoznEanam"></a></p>
   </section>
+
+  <section id="idEuoStat">
+  <h4 id="idEuoStatH4">EuoComozn.Eurostat
+    <a class="clsHide" href="#idEuoStatH4"></a></h4>
+  <p id="idEuoStatdsn">description::
+    <br>"Our mandate
+    <br>Eurostat is the statistical office of the European Union.
+    <br>Our mission
+    <br>Our mission is to provide high quality statistics and data on Europe.
+    <br>Our values
+    <br>* Show respect for our staff, partners and users
+    <br>* Strive for excellence in everything we do
+    <br>* Drive innovation in official statistics
+    <br>* Promote service orientation
+    <br>* Uphold professional independence
+    <br>ESS partnership
+    <br>Eurostat produces European statistics in partnership with National Statistical Institutes and other national authorities in the EU Member States. This partnership is known as the European Statistical System (ESS). It also includes the statistical authorities of the European Economic Area (EEA) countries and Switzerland."
+    <br>[{2020-12-19} https://ec.europa.eu/eurostat/web/main/about/who-we-are]
+    <a class="clsHide" href="#idEuoStatdsn"></a></p>
+  <p id="idEuoStatnam">name::
+    <br>* Mcs.EuoComozn.Eurostat!⇒EuoStat,
+    <br>* Mcs.EuoStat,
+    <br>* Mcs.EuoStat'(Eurostat)!⇒EuoStat,
+    <br>* Mcs.Eurostat!⇒EuoStat,
+    <a class="clsHide" href="#idEuoStatnam"></a></p>
+
+  <section id="idEuoStatrscF">
+  <h5 id="idEuoStatrscFH5">Infrsc of EuoStat
+    <a class="clsHide" href="#idEuoStatrscFH5"></a></h5>
+  <p id="idEuoStatrscFdsn">description::
+    <br>* https://ec.europa.eu/eurostat/web/main/,
+    <br>* https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Thematic_glossaries,
+    <br>* https://ec.europa.eu/eurostat/web/main/data/statistics-a-z/abc,
+    <br>* https://ec.europa.eu/eurostat/data/database,
+    <br>* https://json-stat.org/,
+    <a class="clsHide" href="#idEuoStatrscFdsn"></a></p>
+  <p id="idEuoStatrscFnam">name::
+    <br>* Mcs.EuoStat'Infrsc,
+    <a class="clsHide" href="#idEuoStatrscFnam"></a></p>
+  </section>
+  </section>
   </section>
 
   <section id="idEuoComplc">
@@ -1512,13 +1575,13 @@
   </section>
   </section>
 
-  <section id="idEugvcozn">
-  <h2 id="idEugvcoznH2">organization of gvcEus
-    <a class="clsHide" href="#idEugvcoznH2"></a></h2>
-  <p id="idEugvcozndsn">description::
+  <section id="idEuoGvc">
+  <h2 id="idEuoGvcH2">organization of gvcEus
+    <a class="clsHide" href="#idEuoGvcH2"></a></h2>
+  <p id="idEuoGvcdsn">description::
     <br>·
-    <a class="clsHide" href="#idEugvcozndsn"></a></p>
-  <p id="idEugvcoznnam">name::
+    <a class="clsHide" href="#idEuoGvcdsn"></a></p>
+  <p id="idEuoGvcnam">name::
     <br>* Mcs.EuoGvc, {2020-12-03},
     <br>* Mcs.EuoGvc'(governance-organization-of-Eu)!⇒EuoGvc,
     <br>* Mcs.Euozn.governance!⇒EuoGvc,
@@ -1526,8 +1589,8 @@
     <br>* Mcs.gvcEus'ozn!⇒EuoGvc,
     <br>* Mcs.oznGvcEus!⇒EuoGvc,
     <br>* Mcs.socEus'oznGvc!⇒EuoGvc,
-    <a class="clsHide" href="#idEugvcoznnam"></a></p>
-  <p id="idEugvcoznstr">specific-tree-of-oznGvcEus::
+    <a class="clsHide" href="#idEuoGvcnam"></a></p>
+  <p id="idEuoGvcstr">specific-tree-of-oznGvcEus::
     <br>* Court-of-Justice-of-the-European-Union,
     <br>* Council-of-EU,
     <br>* EU-Agency-for-Fundamental-Rights,
@@ -1546,7 +1609,18 @@
     <br>* body,
     <br>* office,
     <br>* institution,
-    <a class="clsHide" href="#idEugvcoznstr"></a></p>
+    <a class="clsHide" href="#idEuoGvcstr"></a></p>
+
+  <section id="idEuoGvcrscF">
+  <h2 id="idEuoGvcrscFH2">Infrsc of EuoGvc
+    <a class="clsHide" href="#idEuoGvcrscFH2"></a></h2>
+  <p id="idEuoGvcrscFdsn">description::
+    <br>* https://europa.eu/european-union/contact/institutions-bodies_en,
+    <a class="clsHide" href="#idEuoGvcrscFdsn"></a></p>
+  <p id="idEuoGvcrscFnam">name::
+    <br>* Mcs.EuoGvc'Infrsc,
+    <a class="clsHide" href="#idEuoGvcrscFnam"></a></p>
+  </section>
 
   <section id="idSocEusatt024">
   <h3 id="idSocEusatt024H3">EuoGvc.institution
@@ -1594,25 +1668,136 @@
   </section>
   </section>
 
-  <section id="idSocEusatt033">
-  <h3 id="idSocEusatt033H3">EuoGvc.agency
-    <a class="clsHide" href="#idSocEusatt033H3"></a></h3>
-  <p id="idSocEusatt033dsn">description::
+  <section id="idEuoAgncy">
+  <h3 id="idEuoAgncyH3">EuoGvc.agency
+    <a class="clsHide" href="#idEuoAgncyH3"></a></h3>
+  <p id="idEuoAgncydsn">description::
     <br>"EU agencies are distinct bodies from the EU institutions – separate legal entities set up to perform specific tasks under EU law."
     <br>[{2020-12-03} https://europa.eu/european-union/about-eu/agencies_en]
-    <a class="clsHide" href="#idSocEusatt033dsn"></a></p>
-  <p id="idSocEusatt033nam">name::
+    <a class="clsHide" href="#idEuoAgncydsn"></a></p>
+  <p id="idEuoAgncynam">name::
     <br>* Mcs.EuoAgency,
     <br>* Mcs.EuoGvc.agency!⇒EuoAgency,
     <br>* Mcs.agency-of-Eu!⇒EuoAgency,
     <br>* Mcs.socEus'att033-agency-of-Eu!⇒EuoAgency,
     <br>* Mcs.socEus'agency-of-Eu!⇒EuoAgency,
-    <a class="clsHide" href="#idSocEusatt033nam"></a></p>
+    <a class="clsHide" href="#idEuoAgncynam"></a></p>
 
-  <section id="idSocEusatt033Dcd">
-  <h4 id="idSocEusatt033DcdH4">EuoAgency.decentralized
-    <a class="clsHide" href="#idSocEusatt033DcdH4"></a></h4>
-  <p id="idSocEusatt033Dcddsn">description::
+  <section id="idEuoAgncySpc">
+  <h4 id="idEuoAgncySpcH4">EuoAgency.SPECIFIC
+    <a class="clsHide" href="#idEuoAgncySpcH4"></a></h4>
+  <p id="idEuoAgncySpcdsn">description::
+    <br>* Mcs.Agency-for-the-Cooperation-of-Energy-Regulators|ACER-EuoAgency,
+    <br>* Mcs.BBI-Joint-Undertaking-EuoAgency,
+    <br>* Mcs.Clean-Sky-2-Joint-Undertaking-EuoAgency,
+    <br>* Mcs.Community-Plant-Variety-Office|CPVO-EuoAgency,
+    <br>* Mcs.Consumers--Health--Agriculture-and-Food-Executive-Agency|Chafea-EuoAgency,
+    <br>* Mcs.ECSEL-Joint-Undertaking-EuoAgency,
+    <br>* Mcs.Education--Audiovisual-and-Culture-Executive-Agency|EACEA-EuoAgency,
+    <br>* Mcs.European-Agency-for-Safety-and-Health-at-Work|EU-OSHA-EuoAgency,
+    <br>* Mcs.European-Asylum-Support-Office|EASO-EuoAgency,
+    <br>* Mcs.European-Aviation-Safety-Agency|EASA-EuoAgency,
+    <br>* Mcs.European-Banking-Authority|EBA-EuoAgency,
+    <br>* Mcs.European-Border-and-Coast-Guard-Agency|Frontex-EuoAgency,
+    <br>* Mcs.European-Centre-for-Disease-Prevention-and-Control|ECDC-EuoAgency,
+    <br>* Mcs.European-Centre-for-the-Development-of-Vocational-Training|Cedefop-EuoAgency,
+    <br>* Mcs.European-Chemicals-Agency|ECHA-EuoAgency,
+    <br>* Mcs.European-Defence-Agency|EDA-EuoAgency,
+    <br>* Mcs.European-Environment-Agency|EEA-EuoAgency,
+    <br>* Mcs.European-Fisheries-Control-Agency|EFCA-EuoAgency,
+    <br>* Mcs.European-Food-Safety-Authority|EFSA-EuoAgency,
+    <br>* Mcs.European-Foundation-for-the-Improvement-of-Living-and-Working-Conditions|Eurofound-EuoAgency,
+    <br>* Mcs.European-GNSS-Agency|GSA-EuoAgency,
+    <br>* Mcs.European-Institute-for-Gender-Equality|EIGE-EuoAgency,
+    <br>* Mcs.European-Institute-of-Innovation-and-Technology|EIT-EuoAgency,
+    <br>* Mcs.European-Insurance-and-Occupational-Pensions-Authority|EIOPA-EuoAgency,
+    <br>* Mcs.European-Labour-Authority|ELA-EuoAgency,
+    <br>* Mcs.European-Maritime-Safety-Agency|EMSA-EuoAgency,
+    <br>* Mcs.European-Medicines-Agency|EMA-EuoAgency,
+    <br>* Mcs.European-Monitoring-Centre-for-Drugs-and-Drug-Addiction|EMCDDA-EuoAgency,
+    <br>* Mcs.European-Monitoring-Centre-for-Drugs-and-Addiction|EMCDDA-EuoAgency,
+    <br>* Mcs.European-Police-Office|Europol-EuoAgency,
+    <br>* Mcs.European-Research-Council-Executive-Agency|ERCEA-EuoAgency,
+    <br>* Mcs.European-Securities-and-Markets-Authority|ESMA-EuoAgency,
+    <br>* Mcs.European-Training-Foundation|ETF-EuoAgency,
+    <br>* Mcs.European-Union-Agency-for-Criminal-Justice-Cooperation|Eurojust-EuoAgency,
+    <br>* Mcs.European-Union-Agency-for-Cybersecurity|ENISA-EuoAgency,
+    <br>* Mcs.European-Union-Agency-for-Fundamental-Rights|FRA-EuoAgency,
+    <br>* Mcs.European-Union-Agency-for-large-scale-IT-systems|eu-LISA-EuoAgency,
+    <br>* Mcs.European-Union-Agency-for-Law-Enforcement-Training|CEPOL-EuoAgency,
+    <br>* Mcs.European-Union-Agency-for-Railways|ERA-EuoAgency,
+    <br>* Mcs.European-Union-Institute-for-Security-Studies|EUISS-EuoAgency,
+    <br>* Mcs.European-Union-Intellectual-Property-Office|EUIPO-EuoAgency,
+    <br>* Mcs.European-Union-Satellite-Centre|Satcen-EuoAgency,
+    <br>* Mcs.Executive-Agency-for-Small-and-Medium-sized-enterprises|EASME-EuoAgency,
+    <br>* Mcs.Fuel-Cells-and-Hydrogen-2-Joint-Undertaking-EuoAgency,
+    <br>* Mcs.Fusion-for-Energy-EuoAgency,
+    <br>* Mcs.IMI-2-Joint-Undertaking|IMI-2-JU-EuoAgency,
+    <br>* Mcs.Innovation-&amp;-Networks-Executive-Agency|INEA-EuoAgency,
+    <br>* Mcs.Office-of-the-Body-of-European-Regulators-for-Electronic-Communications|BEREC-Office-EuoAgency,
+    <br>* Mcs.Research-Executive-Agency|REA-EuoAgency,
+    <br>* Mcs.SESAR-Joint-Undertaking-EuoAgency,
+    <br>* Mcs.The-Single-Resolution-Board|SRB-EuoAgency,
+    <br>* Mcs.Translation-Centre-for-the-Bodies-of-the-European-Union|CdT-EuoAgency,
+    <br>===
+    <br>* Mcs.ACER'(Agency-for-the-Cooperation-of-Energy-Regulators-EuoAgency),
+    <br>* Mcs.BEREC-Office'(Office-of-the-Body-of-European-Regulators-for-Electronic-Communications-EuoAgency),
+    <br>* Mcs.CEPOL'(European-Union-Agency-for-Law-Enforcement-Training-EuoAgency),
+    <br>* Mcs.CPVO'(Community-Plant-Variety-Office-EuoAgency),
+    <br>* Mcs.CdT'(Translation-Centre-for-the-Bodies-of-the-European-Union-EuoAgency),
+    <br>* Mcs.Cedefop'(European-Centre-for-the-Development-of-Vocational-Training-EuoAgency),
+    <br>* Mcs.Chafea'(Consumers--Health--Agriculture-and-Food-Executive-Agency-EuoAgency),
+    <br>* Mcs.EACEA'(Education--Audiovisual-and-Culture-Executive-Agency-EuoAgency),
+    <br>* Mcs.EASA'(European-Aviation-Safety-Agency-EuoAgency),
+    <br>* Mcs.EASME'(Executive-Agency-for-Small-and-Medium-sized-enterprises-EuoAgency),
+    <br>* Mcs.EASO'(European-Asylum-Support-Office-EuoAgency),
+    <br>* Mcs.EBA'(European-Banking-Authority-EuoAgency),
+    <br>* Mcs.ECDC'(European-Centre-for-Disease-Prevention-and-Control-EuoAgency),
+    <br>* Mcs.ECHA'(European-Chemicals-Agency-EuoAgency),
+    <br>* Mcs.ECSEL-Joint-Undertaking,
+    <br>* Mcs.EDA'(European-Defence-Agency-EuoAgency),
+    <br>* Mcs.EEA'(European-Environment-Agency-EuoAgency),
+    <br>* Mcs.EFCA'(European-Fisheries-Control-Agency-EuoAgency),
+    <br>* Mcs.EFSA'(European-Food-Safety-Authority-EuoAgency),
+    <br>* Mcs.EIGE'(European-Institute-for-Gender-Equality-EuoAgency),
+    <br>* Mcs.EIOPA'(European-Insurance-and-Occupational-Pensions-Authority-EuoAgency),
+    <br>* Mcs.EIT'(European-Institute-of-Innovation-and-Technology-EuoAgency),
+    <br>* Mcs.ELA'(European-Labour-Authority-EuoAgency),
+    <br>* Mcs.EMA'(European-Medicines-Agency-EuoAgency),
+    <br>* Mcs.EMCDDA'(European-Monitoring-Centre-for-Drugs-and-Addiction-EuoAgency),
+    <br>* Mcs.EMCDDA'(European-Monitoring-Centre-for-Drugs-and-Drug-Addiction-EuoAgency),
+    <br>* Mcs.EMSA'(European-Maritime-Safety-Agency-EuoAgency),
+    <br>* Mcs.ENISA'(European-Union-Agency-for-Cybersecurity-EuoAgency),
+    <br>* Mcs.ERA'(European-Union-Agency-for-Railways-EuoAgency),
+    <br>* Mcs.ERCEA'(European-Research-Council-Executive-Agency-EuoAgency),
+    <br>* Mcs.ESMA'(European-Securities-and-Markets-Authority-EuoAgency),
+    <br>* Mcs.ETF'(European-Training-Foundation-EuoAgency),
+    <br>* Mcs.EU-OSHA'(European-Agency-for-Safety-and-Health-at-Work-EuoAgency),
+    <br>* Mcs.EUIPO'(European-Union-Intellectual-Property-Office-EuoAgency),
+    <br>* Mcs.EUISS'(European-Union-Institute-for-Security-Studies-EuoAgency),
+    <br>* Mcs.Eurofound'(European-Foundation-for-the-Improvement-of-Living-and-Working-Conditions-EuoAgency),
+    <br>* Mcs.Eurojust'(European-Union-Agency-for-Criminal-Justice-Cooperation-EuoAgency),
+    <br>* Mcs.Europol'(European-Police-Office-EuoAgency),
+    <br>* Mcs.FRA'(European-Union-Agency-for-Fundamental-Rights-EuoAgency),
+    <br>* Mcs.Frontex'(European-Border-and-Coast-Guard-Agency-EuoAgency),
+    <br>* Mcs.GSA'(European-GNSS-Agency-EuoAgency),
+    <br>* Mcs.IMI-2-JU'(IMI-2-Joint-Undertaking-EuoAgency),
+    <br>* Mcs.INEA'(Innovation-&-Networks-Executive-Agency-EuoAgency),
+    <br>* Mcs.REA'(Research-Executive-Agency-EuoAgency),
+    <br>* Mcs.SRB'(The-Single-Resolution-Board-EuoAgency),
+    <br>* Mcs.Satcen'(European-Union-Satellite-Centre-EuoAgency),
+    <br>* Mcs.eu-LISA'(European-Union-Agency-for-large-scale-IT-systems-EuoAgency),
+    <br>[{2020-12-19} https://europa.eu/european-union/contact/institutions-bodies_en#agencies]
+    <a class="clsHide" href="#idEuoAgncySpcdsn"></a></p>
+  <p id="idEuoAgncySpcnam">name::
+    <br>* Mcs.EuoAgency.specific,
+    <a class="clsHide" href="#idEuoAgncySpcnam"></a></p>
+  </section>
+
+  <section id="idEuoAgncyDcd">
+  <h4 id="idEuoAgncyDcdH4">EuoAgency.decentralized
+    <a class="clsHide" href="#idEuoAgncyDcdH4"></a></h4>
+  <p id="idEuoAgncyDcddsn">description::
     <br>"Decentralised EU agencies play an important role in the European Union (EU). They help make Europe more competitive and a better place to live and work, thus serving the interests of EU residents as a whole.
     <br>What are the decentralised agencies?
     <br>These agencies have been set up by the EU to perform technical and scientific tasks that help the EU institutions implement policies and take decisions. They are spread across the EU.
@@ -1629,13 +1814,13 @@
     <br>* our fundamental rights
     <br>* knowledge
     <br>* provide services to members of the public and industry."
-    <a class="clsHide" href="#idSocEusatt033Dcddsn"></a></p>
-  <p id="idSocEusatt033Dcdnam">name::
+    <a class="clsHide" href="#idEuoAgncyDcddsn"></a></p>
+  <p id="idEuoAgncyDcdnam">name::
     <br>* Mcs.EuoAgency.decentralized!⇒EuoAdc,
     <br>* Mcs.EuoAdc,
     <br>* Mcs.EuoAdc'(decentralized-agency-of-Eu)!⇒EuoAdc,
-    <a class="clsHide" href="#idSocEusatt033Dcdnam"></a></p>
-  <p id="idSocEusatt033Dcdstr">specific-tree-of-EuoAdc::
+    <a class="clsHide" href="#idEuoAgncyDcdnam"></a></p>
+  <p id="idEuoAgncyDcdstr">specific-tree-of-EuoAdc::
     <br>* Mcs.ACER'(Agency-for-the-Cooperation-of-Energy-Regulators),
     <br>* Mcs.BEREC-Office'(Agency-for-Support-for-BEREC),
     <br>* Mcs.CEPOL'(European-Union-Agency-for-Law-Enforcement-Training),
@@ -1705,7 +1890,7 @@
     <br>* Single Resolution Board (SRB),
     <br>* European Union Agency for Criminal Justice Cooperation (Eurojust),
     <br>* Translation Centre for the Bodies of the European Union (CdT),
-    <a class="clsHide" href="#idSocEusatt033Dcdstr"></a></p>
+    <a class="clsHide" href="#idEuoAgncyDcdstr"></a></p>
   </section>
   </section>
 
@@ -2496,18 +2681,6 @@
     <br>* Mcs.gvcEus'doing,
     <a class="clsHide" href="#idEugvcdngFnam"></a></p>
 
-  <section id="idEugvcdmp">
-  <h3 id="idEugvcdmpH3">decision-making-process of gvcEus
-    <a class="clsHide" href="#idEugvcdmpH3"></a></h3>
-  <p id="idEugvcdmpdsn">description::
-    <br>·
-    <a class="clsHide" href="#idEugvcdmpdsn"></a></p>
-  <p id="idEugvcdmpnam">name::
-    <br>* Mcs.decision-making-process-of-Eu,
-    <br>* Mcs.gvcEus'decision-making-process,
-    <a class="clsHide" href="#idEugvcdmpnam"></a></p>
-  </section>
-
   <section id="idEugvcrtmd">
   <h3 id="idEugvcrtmdH3">relation-to-member-doing of gvcEus
     <a class="clsHide" href="#idEugvcrtmdH3"></a></h3>
@@ -2521,6 +2694,83 @@
   <p id="idEugvcrtmdnam">name::
     <br>* Mcs.gvcEus'doing'relation-to-member-doing,
     <a class="clsHide" href="#idEugvcrtmdnam"></a></p>
+  </section>
+
+  <section id="idEugvcdmp">
+  <h3 id="idEugvcdmpH3">doing.decision-making of gvcEus
+    <a class="clsHide" href="#idEugvcdmpH3"></a></h3>
+  <p id="idEugvcdmpdsn">description::
+    <br>·
+    <a class="clsHide" href="#idEugvcdmpdsn"></a></p>
+  <p id="idEugvcdmpnam">name::
+    <br>* Mcs.decision-making-process-of-Eu,
+    <br>* Mcs.gvcEus'decision-making-process,
+    <a class="clsHide" href="#idEugvcdmpnam"></a></p>
+  </section>
+
+  <section id="idEugvclbg">
+  <h3 id="idEugvclbgH3">doing.lobbying of gvcEus
+    <a class="clsHide" href="#idEugvclbgH3"></a></h3>
+  <p id="idEugvclbgdsn">description::
+    <br>"Lobbying in the European Union, also referred to officially as European interest representation, is the activity of representatives of diverse interest groups or lobbies who attempt to influence the executive and legislative authorities of the European Union through public relations or public affairs work.
+    <br>The Treaty of Lisbon introduced a new dimension of lobbying at the European level that is different from most national lobbying.
+    <br>At the national level, lobbying is more a matter of personal and informal relations between the officials of national authorities, but lobbying at the European Union level is increasingly a part of the political decision-making process and thus part of the legislative process.
+    <br>'European interest representation' is part of a new participatory democracy within the European Union.
+    <br>The first step towards specialised regulation of lobbying in the European Union was a Written Question tabled by Alman Metten, in 1989.
+    <br>In 1991, Marc Galle, Chairman of the Committee on the Rules of Procedure, the Verification of Credentials and Immunities, was appointed to submit proposals for a Code of conduct and a register of lobbyists.
+    <br>Today lobbying in the European Union is an integral and important part of decision-making in the EU.
+    <br>From year to year lobbying regulation in the EU is constantly improving and the number of lobbyists is increasing.[1]"
+    <br>[{2020-12-19} https://en.wikipedia.org/wiki/European_Union_lobbying]
+    <a class="clsHide" href="#idEugvclbgdsn"></a></p>
+  <p id="idEugvclbgnam">name::
+    <br>* Mcs.Eulobbying,
+    <br>* Mcs.European-interest-representation!⇒Eulobbying,
+    <br>* Mcs.gvcEus'doing.Eulobbying!⇒Eulobbying,
+    <br>* Mcs.lobbying-in-Eu!⇒Eulobbying,
+    <a class="clsHide" href="#idEugvclbgnam"></a></p>
+
+  <section id="idEugvclbglb">
+  <h4 id="idEugvclbglbH4">lobby of Eulobbying
+    <a class="clsHide" href="#idEugvclbglbH4"></a></h4>
+  <p id="idEugvclbglbdsn">description::
+    <br>"Interest representation, or lobbying, is either a part of the work of institutions with a different main focus or it is the main focus of organisations whose 'raison-d'être' is lobbying itself. The main actors in European interest representation are national, European, and international associations from all sectors of economic and social life, private enterprise, law firms, public affairs consultants (political consultants) and non-governmental organisations and think tanks."
+    <br>[{2020-12-19} https://en.wikipedia.org/wiki/European_Union_lobbying]
+    <a class="clsHide" href="#idEugvclbglbdsn"></a></p>
+  <p id="idEugvclbglbnam">name::
+    <br>* Mcs.Eulobbying'interest-group,
+    <br>* Mcs.Eulobbying'lobby,
+    <br>* Mcs.Eulobbying'representative-association,
+    <a class="clsHide" href="#idEugvclbglbnam"></a></p>
+  </section>
+
+  <section id="idEugvclblaw">
+  <h4 id="idEugvclblawH4">law of Eulobbying
+    <a class="clsHide" href="#idEugvclblawH4"></a></h4>
+  <p id="idEugvclblawdsn">description::
+    <br>"When the Treaty of Lisbon came into force on 1 December 2009, it provided a legal framework for interest representation in the form of <a class="clsPreview" href="../dirStnlaw/Eult.2010.cns.eu.html#idA11">Article 11 of the Treaty on European Union</a>. This article regulates the details of participative democracy within the EU in the following sections: horizontal civil dialogue (Article 11(1) TEU), vertical civil dialogue (Article 11(2) TEU), the Commission's existing consultation practices (Article 11(3) TEU), and the new European Citizens' Initiative (Article 11(4) TEU)."
+    <br>[{2020-12-19} https://en.wikipedia.org/wiki/European_Union_lobbying]
+    <a class="clsHide" href="#idEugvclblawdsn"></a></p>
+  <p id="idEugvclblawnam">name::
+    <br>* Mcs.EulLobbying,
+    <br>* Mcs.Eulobbying'law!⇒EulLobbying,
+    <br>* Mcs.lawEus.035-lobbying!⇒EulLobbying,
+    <br>* Mcs.lawEus.lobbying!⇒EulLobbying,
+    <a class="clsHide" href="#idEugvclblawnam"></a></p>
+  </section>
+
+  <section id="idEugvclbgSpc">
+  <h4 id="idEugvclbgSpcH4">Eulobbying.SPECIFIC
+    <a class="clsHide" href="#idEugvclbgSpcH4"></a></h4>
+  <p id="idEugvclbgSpcdsn">description::
+    <br>"There are two types of European interest representation:
+    <br>* action taken by interest representatives (lobbyists) at the European level in Brussels (the "Brussels Route"[4])
+    <br>* action taken by interest representatives, associations and companies at the national level, focusing on European issues (the "national route"[5])"
+    <br>[{2020-12-19} https://en.wikipedia.org/wiki/European_Union_lobbying]
+    <a class="clsHide" href="#idEugvclbgSpcdsn"></a></p>
+  <p id="idEugvclbgSpcnam">name::
+    <br>* Mcs.Eulobbing.specific,
+    <a class="clsHide" href="#idEugvclbgSpcnam"></a></p>
+  </section>
   </section>
   </section>
 </section>
@@ -2639,9 +2889,10 @@
     <br><img src="filMcsSocEus.files/flags.jpg">
     <a class="clsHide" href="#idSocEusatt009dsn"></a></p>
   <p id="idSocEusatt009nam">name::
-    <br>* Mcs.flagEu,
-    <br>* Mcs.socEus'att009-flag!⇒flagEu,
-    <br>* Mcs.socEus'flag!⇒flagEu,
+    <br>* Mcs.Euflag,
+    <br>* Mcs.flagEu!⇒Euflag,
+    <br>* Mcs.socEus'att009-flag!⇒Euflag,
+    <br>* Mcs.socEus'flag!⇒Euflag,
     <a class="clsHide" href="#idSocEusatt009nam"></a></p>
 </section>
 
@@ -2715,15 +2966,18 @@
     <br>[{2020-12-02} https://op.europa.eu/en/web/about-us/who-we-are]
     <a class="clsHide" href="#idSocEusatt032dsn"></a></p>
   <p id="idSocEusatt032nam">name::
+    <br>* Mcs.EuoCom'Publications-Office|OP|service-dep!⇒EuoPbo,
     <br>* Mcs.EuoPbo,
     <br>* Mcs.EuoPbo'(Publications-Office-of-Eu)!⇒EuoPbo,
+    <br>* Mcs.OP'(Publications-Office|service-dep-EuoCom)!⇒EuoPbo,
     <br>* Mcs.Publications-Office-of-the-European-Union!⇒EuoPbo,
     <br>* Mcs.socEus'Infrsc'Publications-Office!⇒EuoPbo,
     <br>* Mcs.socEus'att032-Publications-Office!⇒EuoPbo,
     <br>* Mcs.socEus'Publications-Office!⇒EuoPbo,
     <a class="clsHide" href="#idSocEusatt032nam"></a></p>
   <p id="idSocEusatt032gtr">generic-tree-of-EuoPbo::
-    <br>* <a class="clsPreview" href="#idEugvcozn">governance-organization-of-Eu</a>,
+    <br>* <a class="clsPreview" href="#idEuoComoznSd">service-department-of-EuoCom</a>,
+    <br>* <a class="clsPreview" href="#idEuoGvc">governance-organization-of-Eu</a>,
     <a class="clsHide" href="#idSocEusatt032gtr"></a></p>
   </section>
 
@@ -2746,6 +3000,23 @@
     <br>* Mcs.socEus'att016-europa.eu,
     <br>* Mcs.socEus'europa.eu,
     <a class="clsHide" href="#idSocEusatt016nam"></a></p>
+  </section>
+
+  <section id="idSocEusatt042">
+  <h2 id="idSocEusatt042H2">Eu-vocabularies of socEus
+    <a class="clsHide" href="#idSocEusatt042H2"></a></h2>
+  <p id="idSocEusatt042dsn">description::
+    <br>"The EU Vocabularies website provides access to vocabularies managed by the EU institutions and bodies. This includes controlled vocabularies, schemas, ontologies, data models, etc.
+    <br>As part of the EU open data initiative, the EU Vocabularies website offers free public access to all of its content. The assets, information and documentation in this site are meant for a wide range of interests and user profiles. The occasional user can find metadata from a large number of controlled vocabularies. Specialised users, such as indexers, can access the multilingual thesaurus EuroVoc. Frequent and tech-savvy users will surely appreciate multiple formats available for download, alignments with other controlled vocabularies, versioning information and descriptive and release-related documentation. All types of users can choose to create their profile for a personalised interaction with the website.
+    <br>The EU Vocabularies website replaces the EuroVoc and the Metadata Registry (MDR) sites and is managed by the Publications Office of the EU."
+    <br>[{2020-12-19} https://op.europa.eu/en/web/eu-vocabularies/about]
+    <a class="clsHide" href="#idSocEusatt042dsn"></a></p>
+  <p id="idSocEusatt042nam">name::
+    <br>* Mcs.Eu-vocabularies!⇒Euvoc,
+    <br>* Mcs.Euvoc,
+    <br>* Mcs.socEus'att042-vocabularies!⇒Euvoc,
+    <br>* Mcs.socEus'vocabularies!⇒Euvoc,
+    <a class="clsHide" href="#idSocEusatt042nam"></a></p>
   </section>
 
   <section id="idSocEusatt031">
@@ -2838,9 +3109,57 @@
   </section>
   </section>
 
-  <section id="idSocEusrscevg">
-  <h2 id="idSocEusrscevgH2">Europeana of socEus'Infrsc
-    <a class="clsHide" href="#idSocEusrscevgH2"></a></h2>
+  <section id="idSocEusrscErpna">
+  <h2 id="idSocEusrscErpnaH2">Europeana of socEus'Infrsc
+    <a class="clsHide" href="#idSocEusrscErpnaH2"></a></h2>
+  <p id="idSocEusrscErpnadsn">description::
+    <br>"Europeana is a web portal created by the European Union containing digitalised museum collections of more than 3,000 institutions across Europe. It includes records of over 10 million cultural and scientific artefacts, brought together on a single platform and presented in a variety of ways relevant to modern users. The prototype for Europeana was the European Digital Library Network (EDLnet), launched in 2008.
+    <br>The Europeana Foundation is the governing body of the service, and is incorporated under Dutch law as Stichting Europeana."
+    <br>[{2020-12-19} https://en.wikipedia.org/wiki/Europeana]
+    <a class="clsHide" href="#idSocEusrscErpnadsn"></a></p>
+  <p id="idSocEusrscErpnanam">name::
+    <br>* Mcs.Europeana,
+    <br>* Mcs.socEus'Infrsc'Europeana,
+    <a class="clsHide" href="#idSocEusrscErpnanam"></a></p>
+  </section>
+
+  <section id="idSocEusrscEdcc">
+  <h2 id="idSocEusrscEdccH2">Europe-direct-contanct-centre of socEus'Infrsc
+    <a class="clsHide" href="#idSocEusrscEdccH2"></a></h2>
+  <p id="idSocEusrscEdccdsn">description::
+    <br>"The Europe Direct Contact Centre is run by the European Commission. We answer any question from the public about the European Union, via phone or email. Our staff includes native speakers of all the EU's 24 official languages."
+    <br>[{2020-12-19} https://europa.eu/european-union/contact/europe-direct-answering-your-questions-about-eu_en]
+    <a class="clsHide" href="#idSocEusrscEdccdsn"></a></p>
+  <p id="idSocEusrscEdccnam">name::
+    <br>* Mcs.Euozn.Europe-direct-contanct-centre,
+    <br>* Mcs.Europe-direct-contanct-centre,
+    <a class="clsHide" href="#idSocEusrscEdccnam"></a></p>
+  <p id="idSocEusrscEdccdsnL">descriptionLong::
+    <br>"Europe Direct - answering your questions about the EU
+    <br>How do I get a job in another European country? My flight has been cancelled – what are my rights? What EU grants can my organisation apply for? Is it safe to shop online in another EU country? Are there any EU rules that guarantee the quality of our food?
+    <br>These are some typical questions people have about the EU. We can answer them.
+    <br>What we do
+    <br>The Europe Direct Contact Centre is run by the European Commission. We answer any question from the public about the European Union, via phone or email. Our staff includes native speakers of all the EU's 24 official languages.
+    <br>We can
+    <br>* give you an immediate answer to general questions about the EU
+    <br>* help you navigate on the webpages published by the EU institutions
+    <br>* find more specialised information. If needed, we ask an expert in the European Commission on your behalf
+    <br>* give you the contact details for the best sources of further information and advice
+    <br>* give you information that is factually correct and updated, according to the standards of public civil service. However, our answers are never legally binding.
+    <br>What we can't do
+    <br>Unfortunately, Europe Direct is not able to do any of the following:
+    <br>* register or forward complaints/problems (but we can tell you who to contact)
+    <br>* comment on EU policies
+    <br>* give legal advice or interpret EU laws for you
+    <br>* deal with any matters that are not in the remit of the EU
+    <br>* help make your political opinions about EU matters known. However, you can comment on specific EU proposals at this website or you can follow us and comment on social media. You can also influence EU policy via the public political debate with your elected representatives at national and European level.
+    <br>How to use Europe Direct
+    <br>Our services do not cost you anything. You can call us from anywhere in the EU, for free at 00 800 6 7 8 9 10 11. In a very few cases some tele operators do not allow access or charge for this. That is why you can also reach us via alternative numbers in each country.
+    <br>You can write or call us from anywhere in the world. If calling from outside the EU, you pay the standard network rate. You can also make internet phone calls.
+    <br>Outside our opening hours – working days 9 a.m. to 6 p.m. Central European Time – you can leave a message, or ask us to phone back using this form.
+    <br>For written enquiries, we normally answer within 3 days. More complex enquiries may take longer. On the average we answer phone calls within 15 seconds."
+    <br>[{2020-12-19} https://europa.eu/european-union/contact/europe-direct-answering-your-questions-about-eu_en]
+    <a class="clsHide" href="#idSocEusrscEdccdsnL"></a></p>
   </section>
 
   <section id="idSocEusrscevg">
@@ -3025,7 +3344,7 @@
   <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-wholepath</span>:
     <a class="clsPreview" href="../../#idOverview">synagonism.net</a> /
     <a class="clsPreview" href="../filMcsWorld.last.html#idOverview">Mcs-worldview</a> /
-    <a class="clsPreview" href="filMcsdirStn.last.html#idOverview">dirStn</a> /
+    <a class="clsPreview" href="filMcsDirStn.last.html#idOverview">dirStn</a> /
     socEus
     </p>
   <p id="idMetaP1">SEARCH::
@@ -3042,7 +3361,7 @@
     <br>• email:
     <br> &nbsp;<img src="../../misc/img/mail.png" alt="imgMail">
     <br>• edit on github: https://github.com/synagonism/Mcsw/blob/master/dirStn/filMcsSocEus.last.html,
-    <br>• comments on <a class="clsPreview" href="filMcsdirStn.last.html#idComment">Disqus</a>,
+    <br>• comments on <a class="clsPreview" href="filMcsDirStn.last.html#idComment">Disqus</a>,
     <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>,
     <br>• steemit: <a href="https://steemit.com/synagonism">https://steemit.com/@synagonism</a>,
     <a class="clsHide" href="#idFooterP1"></a></p>
