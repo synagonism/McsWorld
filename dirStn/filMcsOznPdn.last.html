@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.oznProduction-(0-25-0.2020-12-13 draft) organization.human.production</title>
+  <title>Mcs.oznProduction-(0-26-0.2020-12-20 draft) organization.human.production</title>
   <meta name="keywords" content="organization.economic, oznProduction, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -748,28 +748,192 @@
   </section>
 </section>
 
-<section id="idOznPdn009">
-  <h1 id="idOznPdn009H1">oznProduction.sectorPublic-009
-    <a class="clsHide" href="#idOznPdn009H1"></a></h1>
-  <p id="idOznPdn009dsn">description::
+<section id="idSctrGvc">
+  <h1 id="idSctrGvcH1">oznProduction.sectorGvc-009
+    <a class="clsHide" href="#idSctrGvcH1"></a></h1>
+  <p id="idSctrGvcdsn">description::
     <br>"The public sector (also called the state sector) is the part of the economy composed of both public services and public enterprises.
     <br>Public sectors include public goods and governmental services such as the military, law enforcement, infrastructure (public roads, bridges, tunnels, water supply, sewers, electrical grids, telecommunications, etc.), public transit, public education, along with health care and those working for the government itself, such as elected officials. The public sector might provide services that a non-payer cannot be excluded from (such as street lighting), services which benefit all of society rather than just the individual who uses the service.[1] Public enterprises, or state-owned enterprises, are self-financing commercial enterprises that are under public ownership which provide various private goods and services for sale and usually operate on a commercial basis.
     <br>Organizations that are not part of the public sector are either a part of the private sector or voluntary sector. The private sector is composed of the economic sectors that are intended to earn a profit for the owners of the enterprise. The voluntary, civic or social sector concerns a diverse array of non-profit organizations emphasizing civil society."
     <br>[{2020-12-13} https://en.wikipedia.org/wiki/Public_sector]
-    <a class="clsHide" href="#idOznPdn009dsn"></a></p>
-  <p id="idOznPdn009nam">name::
-    <br>* Mcs.oznProduction.009-sectorPublic!⇒sectorPublic,
-    <br>* Mcs.oznProduction.sectorPublic!⇒sectorPublic,
-    <br>* Mcs.public-sector!⇒sectorPublic,
-    <br>* Mcs.sectorPublic,
-    <a class="clsHide" href="#idOznPdn009nam"></a></p>
+    <a class="clsHide" href="#idSctrGvcdsn"></a></p>
+  <p id="idSctrGvcnam">name::
+    <br>* Mcs.oznProduction.009-sectorGvc!⇒sectorGvc,
+    <br>* Mcs.oznProduction.sectorGvc!⇒sectorGvc,
+    <br>* Mcs.public-sector!⇒sectorGvc,
+    <br>* Mcs.sectorGvc,
+    <br>* Mcs.state-sector!⇒sectorGvc,
+    <br>====== langoGreek:
+    <br>* McsEll.τομέας-διακυβέρνησης!=sectorGvc,
+    <a class="clsHide" href="#idSctrGvcnam"></a></p>
+
+  <section id="idSctrGvcsfr">
+  <h2 id="idSctrGvcsfrH2">satisfier of sectorGvc
+    <a class="clsHide" href="#idSctrGvcsfrH2"></a></h2>
+  <p id="idSctrGvcsfrdsn">description::
+    <br>· sfrProperty owned by a-governance-system.
+    <br>· a-PUBLIC-domain-software is-not-owned by governance.
+    <a class="clsHide" href="#idSctrGvcsfrdsn"></a></p>
+  <p id="idSctrGvcsfrnam">name::
+    <br>* Mcs.public-satisfier!⇒sfrGvcsctr,
+    <br>* Mcs.satisfier.007-sectorGvc!⇒sfrGvcsctr,
+    <br>* Mcs.satisfier.sectorGvc!⇒sfrGvcsctr,
+    <br>* Mcs.sfrGvcsctr,
+    <br>* Mcs.sfrProperty.sectorGvc!⇒sfrGvcsctr,
+    <br>* Mcs.state-property!⇒sfrGvcsctr,
+    <br>====== langoGreek:
+    <br>* McsEll.ικανοποιητής-τομέα-διακυβέρνησης!=sfrGvcsctr,
+    <a class="clsHide" href="#idSctrGvcsfrnam"></a></p>
+
+  <section id="idSctrGvcsfrSpc">
+  <h3 id="idSctrGvcsfrSpcH3">sfrGvcsctr.SPECIFIC
+    <a class="clsHide" href="#idSctrGvcsfrSpcH3"></a></h3>
+  <p id="idSctrGvcsfrSpcdsn">description::
+    <br>* governance-service,
+    <br>* governance-serviceNo,
+    <br>===
+    <br>* Courts,
+    <br>* Electricity,
+    <br>* Education,
+    <br>* Emergency-services,
+    <br>* Environmental-protection,
+    <br>* Healthcare,
+    <br>* Military,
+    <br>* Public-transportation,
+    <br>* Public-buildings,
+    <br>* Social-services,
+    <br>* Telecommunications,
+    <br>* Urban-planning,
+    <br>* Transportation-infrastructure,
+    <br>* Waste-management,
+    <br>* Water-supply-network,
+    <a class="clsHide" href="#idSctrGvcsfrSpcdsn"></a></p>
+  <p id="idSctrGvcsfrSpcnam">name::
+    <br>* Mcs.sfrGvcsctr.specific,
+    <a class="clsHide" href="#idSctrGvcsfrSpcnam"></a></p>
+  </section>
+
+  <section id="idSctrGvcmil">
+  <h2 id="idSctrGvcmilH2">armed-forces of sectorGvc
+    <a class="clsHide" href="#idSctrGvcmilH2"></a></h2>
+  <p id="idSctrGvcmildsn">description::
+    <br>"A military, also known collectively as armed forces, is a heavily armed, highly organized force primarily intended for warfare. It is typically officially authorized and maintained by a sovereign state, with its members identifiable by their distinct military uniform. It may consist of one or more military branches such as an army, navy, air force, space force, marines, or coast guard. The main task of the military is usually defined as defence of the state and its interests against external armed threats.
+    <br>In broad usage, the terms "armed forces" and "military" are often treated as synonymous, although in technical usage a distinction is sometimes made in which a country's armed forces may include both its military and other paramilitary forces. There are various forms of irregular military forces, not belonging to a recognized state; though they share many attributes with regular military forces, they are less often referred to as simply "military"."
+    <br>[{2020-12-20} https://en.wikipedia.org/wiki/Military]
+    <a class="clsHide" href="#idSctrGvcmildsn"></a></p>
+  <p id="idSctrGvcmilnam">name::
+    <br>* Mcs.armed-forces!⇒oznMili,
+    <br>* Mcs.military!⇒oznMili,
+    <br>* Mcs.sectorGvc'armed-forces!⇒oznMili,
+    <br>* Mcs.oznMili,
+    <br>====== langoGreek:
+    <br>* McsEll.ένοπλες-δυνάμεις!=oznMili,
+    <a class="clsHide" href="#idSctrGvcmilnam"></a></p>
+  </section>
+
+  <section id="idSctrGvcplc">
+  <h2 id="idSctrGvcplcH2">police-forces of sectorGvc
+    <a class="clsHide" href="#idSctrGvcplcH2"></a></h2>
+  <p id="idSctrGvcplcdsn">description::
+    <br>"The police are a constituted body of persons empowered by a state, with the aim to enforce the law, to ensure the safety, health and possessions of citizens, and to prevent crime and civil disorder.[1][2] Their lawful powers include arrest and the use of force legitimized by the state via the monopoly on violence. The term is most commonly associated with the police forces of a sovereign state that are authorized to exercise the police power of that state within a defined legal or territorial area of responsibility. Police forces are often defined as being separate from the military and other organizations involved in the defense of the state against foreign aggressors; however, gendarmerie are military units charged with civil policing.[3] Police forces are usually public sector services, funded through taxes."
+    <br>[{2020-12-20} https://en.wikipedia.org/wiki/Police]
+    <a class="clsHide" href="#idSctrGvcplcdsn"></a></p>
+  <p id="idSctrGvcplcnam">name::
+    <br>* Mcs.oznPoli,
+    <br>* Mcs.police!⇒oznPoli,
+    <br>* Mcs.police-forces!⇒oznPoli,
+    <br>* Mcs.sectorGvc'police-forces!⇒oznPoli,
+    <br>====== langoGreek:
+    <br>* McsEll.αστυνομία!=oznPoli,
+    <a class="clsHide" href="#idSctrGvcplcnam"></a></p>
+  </section>
+
+  <section id="idSctrGvcfire">
+  <h2 id="idSctrGvcfireH2">fire-forces of sectorGvc
+    <a class="clsHide" href="#idSctrGvcfireH2"></a></h2>
+  <p id="idSctrGvcfiredsn">description::
+    <br>"A fire department (American English) or fire brigade (British English),[note 1] also known as a fire authority or fire service, is an organization that provides firefighting services. In some areas, they may also provide technical rescue, fire protection, fire investigation, and emergency medical services.
+    <br>Fire departments are most commonly a public sector organization that operate within a municipality, county, state, nation, or special district. Private and specialist firefighting organizations also exist, such as those for aircraft rescue and firefighting.[1]
+    <br>A fire department contains one or more fire stations within its boundaries, and may be staffed by firefighters, who may be professional, volunteers, conscripts, or on-call. Combination fire departments employ a mix of professional and volunteer firefighters.[2]"
+    <br>[{2020-12-20} https://en.wikipedia.org/wiki/Fire_department]
+    <a class="clsHide" href="#idSctrGvcfiredsn"></a></p>
+  <p id="idSctrGvcfirenam">name::
+    <br>* Mcs.fire-authority!⇒oznFire,
+    <br>* Mcs.fire-brigate!⇒oznFire,
+    <br>* Mcs.fire-department!⇒oznFire,
+    <br>* Mcs.fire-forces!⇒oznFire,
+    <br>* Mcs.fire-service!⇒oznFire,
+    <br>* Mcs.oznFireGvc,
+    <br>* Mcs.sectorGvc'fire-forces!⇒oznFire,
+    <br>====== langoGreek:
+    <br>* McsEll.πυροσβεστική-υπηρεσία!=oznFire,
+    <a class="clsHide" href="#idSctrGvcfirenam"></a></p>
+  </section>
+
+  <section id="idSctrGvchlth">
+  <h2 id="idSctrGvchlthH2">health-sys of sectorGvc
+    <a class="clsHide" href="#idSctrGvchlthH2"></a></h2>
+  <p id="idSctrGvchlthdsn">description::
+    <br>·
+    <a class="clsHide" href="#idSctrGvchlthdsn"></a></p>
+  <p id="idSctrGvchlthnam">name::
+    <br>* Mcs.oznHlthGvc,
+    <br>* Mcs.sectorGvc'health-sys!⇒oznHlthGvc,
+    <br>====== langoGreek:
+    <br>* McsEll.δημόσιο-σύστημα-υγείας!oznHlthGvc,
+    <a class="clsHide" href="#idSctrGvchlthnam"></a></p>
+  </section>
+
+  <section id="idSctrGvcedu">
+  <h2 id="idSctrGvceduH2">education-sys of sectorGvc
+    <a class="clsHide" href="#idSctrGvceduH2"></a></h2>
+  <p id="idSctrGvcedudsn">description::
+    <br>·
+    <a class="clsHide" href="#idSctrGvcedudsn"></a></p>
+  <p id="idSctrGvcedunam">name::
+    <br>* Mcs.oznEduGvc,
+    <br>* Mcs.sectorGvc'education-sys!⇒oznEduGvc,
+    <a class="clsHide" href="#idSctrGvcedunam"></a></p>
+  </section>
+
+  <section id="idSctrGvcwkr">
+  <h2 id="idSctrGvcwkrH2">worker of sectorGvc
+    <a class="clsHide" href="#idSctrGvcwkrH2"></a></h2>
+  <p id="idSctrGvcwkrdsn">description::
+    <br>· any <a class="clsPreview" href="filMcsWkr.last.html#idOverview">worker</a> on sectorGvc.
+    <br>===
+    <br>"A civil servant or public servant is a person employed in the public sector by a government department or agency."
+    <br>[{2020-12-20} https://en.wikipedia.org/wiki/Civil_service]
+    <a class="clsHide" href="#idSctrGvcwkrdsn"></a></p>
+  <p id="idSctrGvcwkrnam">name::
+    <br>* Mcs.civil-servant!⇒wkrGvcsctr,
+    <br>* Mcs.public-servant!⇒wkrGvcsctr,
+    <br>* Mcs.sectorGvc'worker!⇒wkrGvcsctr,
+    <br>* Mcs.wkrGvcsctr,
+    <br>* Mcs.worker.sectorGvc!⇒wkrGvcsctr,
+    <br>====== langoGreek:
+    <br>* McsEll.δημόσιος-λειτουργός!=wkrGvcsctr,
+    <a class="clsHide" href="#idSctrGvcwkrnam"></a></p>
+
+  <section id="idSctrGvcwkr">
+  <h3 id="idSctrGvcwkrH3">wkrGvcsctr.SPECIFIC
+    <a class="clsHide" href="#idSctrGvcwkrH3"></a></h3>
+  <p id="idSctrGvcwkrdsn">description::
+    <br>* administrator,
+    <br>* police-officer,
+    <a class="clsHide" href="#idSctrGvcwkrdsn"></a></p>
+  <p id="idSctrGvcwkrnam">name::
+    <br>* Mcs.wkrGvcsctr.specific,
+    <a class="clsHide" href="#idSctrGvcwkrnam"></a></p>
+  </section>
+  </section>
 </section>
 
 <section id="idOznPdn010">
   <h1 id="idOznPdn010H1">oznProduction.sectorPrivate-010
     <a class="clsHide" href="#idOznPdn010H1"></a></h1>
   <p id="idOznPdn010dsn">description::
-    <br>· the NON <a class="clsPreview" href="#idOznPdn009">public-sector</a>.
+    <br>· the NON <a class="clsPreview" href="#idSctrGvc">public-sector</a>.
     <a class="clsHide" href="#idOznPdn010dsn"></a></p>
   <p id="idOznPdn010nam">name::
     <br>* Mcs.oznProduction.010-sectorPrivate!⇒sectorPrivate,

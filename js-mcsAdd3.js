@@ -44,7 +44,7 @@ var
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
   sDir = 'dirStn',
-  sDIR = 'dirStn',
+  sDIR = 'DirStn',
   //3. Name of the-title: Ethereum--blockchain-net
   sN = 'international-organization',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagKmo,
