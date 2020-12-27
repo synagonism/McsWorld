@@ -65,32 +65,51 @@
     <br>· any subsystem of a-household.
     <a class="clsHide" href="#idOznCsnatt011dsn"></a></p>
   <p id="idOznCsnatt011nam">name::
-    <br>* Mcs.oznConsumption'01_node,
-    <br>* Mcs.oznConsumption'att011-node,
-    <br>* Mcs.oznConsumption'node,
+    <br>* Mcs.Hhdnode,
+    <br>* Mcs.household-node!⇒Hhdnode,
+    <br>* Mcs.oznConsumption'01_node!⇒Hhdnode,
+    <br>* Mcs.oznConsumption'att011-node!⇒Hhdnode,
+    <br>* Mcs.oznConsumption'node!⇒Hhdnode,
     <a class="clsHide" href="#idOznCsnatt011nam"></a></p>
   <p id="idOznCsnatt011str">specific-tree-of-oznConsumption'node::
+    <br>* human-node,
+    <br>* satisfier-node,
+    <br>===
     <br>* member,
     <br>* stakeholder,
     <br>* governance-node,
     <br>* consuming-node,
+    <br>* producing-node,
     <a class="clsHide" href="#idOznCsnatt011str"></a></p>
 </section>
 
-<section id="idOznCsnatt002">
-  <h1 id="idOznCsnatt002H1">02_member of oznConsumption
-    <a class="clsHide" href="#idOznCsnatt002H1"></a></h1>
+<section id="idOznCsnatt018">
+  <h1 id="idOznCsnatt018H1">02_sys-human of oznConsumption
+    <a class="clsHide" href="#idOznCsnatt018H1"></a></h1>
+  <p id="idOznCsnatt018dsn">description::
+    <br>· any subsystem of humans.
+    <a class="clsHide" href="#idOznCsnatt018dsn"></a></p>
+  <p id="idOznCsnatt018nam">name::
+    <br>* Mcs.Hhdhmnsys,
+    <br>* Mcs.oznConsumption'att018-sys-human!⇒Hhdhmnsys,
+    <br>* Mcs.oznConsumption'sys-human!⇒Hhdhmnsys,
+    <a class="clsHide" href="#idOznCsnatt018nam"></a></p>
+
+  <section id="idOznCsnatt002">
+  <h2 id="idOznCsnatt002H2">member of oznConsumption
+    <a class="clsHide" href="#idOznCsnatt002H2"></a></h2>
   <p id="idOznCsnatt002dsn">description::
     <br>· any human, part of a-household.
     <a class="clsHide" href="#idOznCsnatt002dsn"></a></p>
   <p id="idOznCsnatt002nam">name::
-    <br>* Mcs.householder,
-    <br>* Mcs.oznConsumption'02_member,
-    <br>* Mcs.oznConsumption'att002-member,
-    <br>* Mcs.oznConsumption'housemate,
-    <br>* Mcs.oznConsumption'member,
-    <br>* Mcs.oznConsumption'participant,
+    <br>* Mcs.Hhdmbr,
+    <br>* Mcs.householder!⇒Hhdmbr,
+    <br>* Mcs.oznConsumption'att002-member!⇒Hhdmbr,
+    <br>* Mcs.oznConsumption'housemate!⇒Hhdmbr,
+    <br>* Mcs.oznConsumption'member!⇒Hhdmbr,
+    <br>* Mcs.oznConsumption'participant!⇒Hhdmbr,
     <a class="clsHide" href="#idOznCsnatt002nam"></a></p>
+  </section>
 
   <section id="idOznCsnatt003">
   <h2 id="idOznCsnatt003H2">sociality of oznConsumption
@@ -106,47 +125,31 @@
   </section>
 </section>
 
-<section id="idOznCsnatt012">
-  <h1 id="idOznCsnatt012H1">03_stakeholder of oznConsumption
-    <a class="clsHide" href="#idOznCsnatt012H1"></a></h1>
-  <p id="idOznCsnatt012dsn">description::
-    <br>· a-stakeholder is <a class="clsPreview" href="/dirCor/filMcsSys.last.html#idSysnodeF">a-node</a> (internal or external) that has an-interest in the-household and can either affect or be-affected by the-household.
-    <a class="clsHide" href="#idOznCsnatt012dsn"></a></p>
-  <p id="idOznCsnatt012nam">name::
-    <br>* Mcs.oznConsumption'03_stakeholder,
-    <br>* Mcs.oznConsumption'att012-stakeholder,
-    <br>* Mcs.oznConsumption'stakeholder,
-    <a class="clsHide" href="#idOznCsnatt012nam"></a></p>
-  <p id="idOznCsnatt012str">specific-tree-of-oznConsumption'stakeholder::
-    <br>* member,
-    <br>* governanceLocal-node,
-    <br>* governance-node,
-    <br>* consuming-node,
-    <a class="clsHide" href="#idOznCsnatt012str"></a></p>
-</section>
-
-<section id="idOznCsnatt004">
-  <h1 id="idOznCsnatt004H1">04_health of oznConsumption
-    <a class="clsHide" href="#idOznCsnatt004H1"></a></h1>
-  <p id="idOznCsnatt004dsn">description::
-    <br>· the-good|bad-state of the-household.
-    <a class="clsHide" href="#idOznCsnatt004dsn"></a></p>
-  <p id="idOznCsnatt004nam">name::
-    <br>* Mcs.oznConsumption'04_health,
-    <br>* Mcs.oznConsumption'att004-health,
-    <br>* Mcs.oznConsumption'health,
-    <a class="clsHide" href="#idOznCsnatt004nam"></a></p>
+<section id="idOznCsnatt019">
+  <h1 id="idOznCsnatt019H1">03_sys-satisfier of oznConsumption
+    <a class="clsHide" href="#idOznCsnatt019H1"></a></h1>
+  <p id="idOznCsnatt019dsn">description::
+    <br>· any subsystem of satisfiers.
+    <br>· the-consuming-system.
+    <br>· the-producing-system.
+    <a class="clsHide" href="#idOznCsnatt019dsn"></a></p>
+  <p id="idOznCsnatt019nam">name::
+    <br>* Mcs.Hhdsfrsys,
+    <br>* Mcs.oznConsumption'att019-sys-satisfier!⇒Hhdsfrsys,
+    <br>* Mcs.oznConsumption'sys-satisfier!⇒Hhdsfrsys,
+    <a class="clsHide" href="#idOznCsnatt019nam"></a></p>
 </section>
 
 <section id="idOznCsnatt005">
-  <h1 id="idOznCsnatt005H1">05_governance-node of oznConsumption
+  <h1 id="idOznCsnatt005H1">04_governance-node of oznConsumption
     <a class="clsHide" href="#idOznCsnatt005H1"></a></h1>
   <p id="idOznCsnatt005dsn">description::
-    <br>·
+    <br>· in-order to exist must have a-governance-sys.
+    <br>· it is part of production-sys.
     <a class="clsHide" href="#idOznCsnatt005dsn"></a></p>
   <p id="idOznCsnatt005nam">name::
     <br>* Mcs.gvcHousehold,
-    <br>* Mcs.oznConsumption'05_governance-node!⇒gvcHousehold,
+    <br>* Mcs.oznConsumption'04_governance-node!⇒gvcHousehold,
     <br>* Mcs.oznConsumption'att005-governance-system!⇒gvcHousehold,
     <br>* Mcs.oznConsumption'governance-system!⇒gvcHousehold,
     <a class="clsHide" href="#idOznCsnatt005nam"></a></p>
@@ -192,16 +195,16 @@
 </section>
 
 <section id="idOznCsnatt013">
-  <h1 id="idOznCsnatt013H1">06_consumance-node of oznConsumption
+  <h1 id="idOznCsnatt013H1">05_consuming-node of oznConsumption
     <a class="clsHide" href="#idOznCsnatt013H1"></a></h1>
   <p id="idOznCsnatt013dsn">description::
-    <br>·
+    <br>· the-subsystem of satisfier-consumption.
     <a class="clsHide" href="#idOznCsnatt013dsn"></a></p>
   <p id="idOznCsnatt013nam">name::
     <br>* Mcs.consumance-node--of-oznConsumption!⇒cscHousehold,
-    <br>* Mcs.oznConsumption'06_consumance-node!⇒cscHousehold,
-    <br>* Mcs.oznConsumption'att013-consumance-node!⇒cscHousehold,
-    <br>* Mcs.oznConsumption'consumance-node!⇒cscHousehold,
+    <br>* Mcs.oznConsumption'05_consuming-node!⇒cscHousehold,
+    <br>* Mcs.oznConsumption'att013-consuming-node!⇒cscHousehold,
+    <br>* Mcs.oznConsumption'consuming-node!⇒cscHousehold,
     <a class="clsHide" href="#idOznCsnatt013nam"></a></p>
 
   <section id="idOznCsnatt013dng">
@@ -219,29 +222,47 @@
 </section>
 
 <section id="idOznCsnatt016">
-  <h1 id="idOznCsnatt016H1">07_production-node of oznConsumption
+  <h1 id="idOznCsnatt016H1">06_producing-node of oznConsumption
     <a class="clsHide" href="#idOznCsnatt016H1"></a></h1>
   <p id="idOznCsnatt016dsn">description::
-    <br>·
+    <br>· the-subsystem of-satisfier-producing.
     <a class="clsHide" href="#idOznCsnatt016dsn"></a></p>
   <p id="idOznCsnatt016nam">name::
     <br>* Mcs.individual-production,
-    <br>* Mcs.oznConsumption'att016-production-node,
-    <br>* Mcs.oznConsumption'production-node,
+    <br>* Mcs.oznConsumption'06_producing-node,
+    <br>* Mcs.oznConsumption'att016-producing-node,
+    <br>* Mcs.oznConsumption'producing-node,
     <a class="clsHide" href="#idOznCsnatt016nam"></a></p>
 </section>
 
 <section id="idOznCsnatt006">
-  <h1 id="idOznCsnatt006H1">08_satisfier of oznConsumption
+  <h1 id="idOznCsnatt006H1">07_satisfier of oznConsumption
     <a class="clsHide" href="#idOznCsnatt006H1"></a></h1>
   <p id="idOznCsnatt006dsn">description::
     <br>·
     <a class="clsHide" href="#idOznCsnatt006dsn"></a></p>
   <p id="idOznCsnatt006nam">name::
-    <br>* Mcs.oznConsumption'08_satisfier,
+    <br>* Mcs.oznConsumption'07_satisfier,
     <br>* Mcs.oznConsumption'att006-satisfier,
     <br>* Mcs.oznConsumption'satisfier,
     <a class="clsHide" href="#idOznCsnatt006nam"></a></p>
+
+  <section id="idOznCsnatt020">
+  <h2 id="idOznCsnatt020H2">income of oznConsumption
+    <a class="clsHide" href="#idOznCsnatt020H2"></a></h2>
+  <p id="idOznCsnatt020dsn">description::
+    <br>· any input of satisfiers.
+    <a class="clsHide" href="#idOznCsnatt020dsn"></a></p>
+  <p id="idOznCsnatt020nam">name::
+    <br>* Mcs.Hhdincome,
+    <br>* Mcs.income-of-household!⇒Hhdincome,
+    <br>* Mcs.oznConsumption'att020-income!⇒Hhdincome,
+    <br>* Mcs.oznConsumption'income!⇒Hhdincome,
+    <a class="clsHide" href="#idOznCsnatt020nam"></a></p>
+  <p id="idOznCsnatt020wpa">addressWpg::
+    <br>* https://www.rand.org/pubs/working_papers/WRA516-1.html,
+    <a class="clsHide" href="#idOznCsnatt020wpa"></a></p>
+  </section>
 
   <section id="idOznCsnatt007">
   <h2 id="idOznCsnatt007H2">house (<a class="clsPreview" href="filMcsSfrHouse.last.html#idOverview">link</a>) of oznConsumption
@@ -272,6 +293,36 @@
     <br>* Mcs.oznConsumption'att017-budget,
     <br>* Mcs.oznConsumption'budget,
     <a class="clsHide" href="#idOznCsnatt017nam"></a></p>
+</section>
+
+<section id="idOznCsnatt012">
+  <h1 id="idOznCsnatt012H1">stakeholder of oznConsumption
+    <a class="clsHide" href="#idOznCsnatt012H1"></a></h1>
+  <p id="idOznCsnatt012dsn">description::
+    <br>· a-stakeholder is <a class="clsPreview" href="/dirCor/filMcsSys.last.html#idSysnodeF">a-node</a> (internal or external) that has an-interest in the-household and can either affect or be-affected by the-household.
+    <a class="clsHide" href="#idOznCsnatt012dsn"></a></p>
+  <p id="idOznCsnatt012nam">name::
+    <br>* Mcs.oznConsumption'att012-stakeholder,
+    <br>* Mcs.oznConsumption'stakeholder,
+    <a class="clsHide" href="#idOznCsnatt012nam"></a></p>
+  <p id="idOznCsnatt012str">specific-tree-of-oznConsumption'stakeholder::
+    <br>* member,
+    <br>* governanceLocal-node,
+    <br>* governance-node,
+    <br>* consuming-node,
+    <a class="clsHide" href="#idOznCsnatt012str"></a></p>
+</section>
+
+<section id="idOznCsnatt004">
+  <h1 id="idOznCsnatt004H1">health of oznConsumption
+    <a class="clsHide" href="#idOznCsnatt004H1"></a></h1>
+  <p id="idOznCsnatt004dsn">description::
+    <br>· the-good|bad-state of the-household.
+    <a class="clsHide" href="#idOznCsnatt004dsn"></a></p>
+  <p id="idOznCsnatt004nam">name::
+    <br>* Mcs.oznConsumption'att004-health,
+    <br>* Mcs.oznConsumption'health,
+    <a class="clsHide" href="#idOznCsnatt004nam"></a></p>
 </section>
 
 <section id="idOznCsnatt009">
