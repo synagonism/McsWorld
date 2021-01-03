@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagKnlg-(0-2-0.2021-01-02 draft) knowledge-language</title>
+  <title>Mcs.lagKnlg-(0-3-0.2021-01-03 draft) knowledge-language</title>
   <meta name="keywords" content="knowledge-representation-language, lagKnlg, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -239,6 +239,217 @@
     <br>* Mcs.processing-and-representation--knowledge-language!⇒lagKnBo,
     <br>* Mcs.representation-and-processing--knowledge-language!⇒lagKnBo,
     <a class="clsHide" href="#idLknlg003nam"></a></p>
+</section>
+
+<section id="idLknlg004">
+  <h1 id="idLknlg004H1">lagKnlg.semantic-web-004
+    <a class="clsHide" href="#idLknlg004H1"></a></h1>
+  <p id="idLknlg004dsn">description::
+    <br>· semantic-web-language is a-language use to make the-web readable by machines.
+    <br>· from web-of-documents-(HTML) to web-of-data-(RDF) to web-of-knowledge-(McsHitp).
+    <a class="clsHide" href="#idLknlg004dsn"></a></p>
+  <p id="idLknlg004nam">name::
+    <br>* Mcs.lagKnlg.004-semantic-web!⇒lagSweb,
+    <br>* Mcs.lagKnlg.semantic-web!⇒lagSweb,
+    <br>* Mcs.lagSweb,
+    <br>* Mcs.semantic-web-language!⇒lagSweb,
+    <a class="clsHide" href="#idLknlg004nam"></a></p>
+  <p id="idLknlg004dsnL">descriptionLong::
+    <br>"In addition to the classic “Web of documents” W3C is helping to build a technology stack to support a “Web of data,” the sort of data you find in databases. The ultimate goal of the Web of data is to enable computers to do more useful work and to develop systems that can support trusted interactions over the network. The term “Semantic Web” refers to W3C’s vision of the Web of linked data. Semantic Web technologies enable people to create data stores on the Web, build vocabularies, and write rules for handling data. Linked data are empowered by technologies such as RDF, SPARQL, OWL, and SKOS."
+    <br>[{2021-01-03} https://www.w3.org/standards/semanticweb/]
+    <br>===
+    <a class="clsHide" href="#idLknlg004dsnL"></a></p>
+
+  <section id="idLknlg004lkdt">
+  <h2 id="idLknlg004lkdtH2">linked-data of lagSweb
+    <a class="clsHide" href="#idLknlg004lkdtH2"></a></h2>
+  <p id="idLknlg004lkdtdsn">description::
+    <br>"The Semantic Web is a Web of Data — of dates and titles and part numbers and chemical properties and any other data one might conceive of. The collection of Semantic Web technologies (RDF, OWL, SKOS, SPARQL, etc.) provides an environment where application can query that data, draw inferences using vocabularies, etc.
+    <br>However, to make the Web of Data a reality, it is important to have the huge amount of data on the Web available in a standard format, reachable and manageable by Semantic Web tools. Furthermore, not only does the Semantic Web need access to data, but relationships among data should be made available, too, to create a Web of Data (as opposed to a sheer collection of datasets). This collection of interrelated datasets on the Web can also be referred to as Linked Data.
+    <br>To achieve and create Linked Data, technologies should be available for a common format (RDF), to make either conversion or on-the-fly access to existing databases (relational, XML, HTML, etc). It is also important to be able to setup query endpoints to access that data more conveniently. W3C provides a palette of technologies (RDF, GRDDL, POWDER, RDFa, the upcoming R2RML, RIF, SPARQL) to get access to the data."
+    <br>[{2021-01-03} https://www.w3.org/standards/semanticweb/data.html]
+    <a class="clsHide" href="#idLknlg004lkdtdsn"></a></p>
+  <p id="idLknlg004lkdtnam">name::
+    <br>* Mcs.lagSweb'linked-data,
+    <br>* Mcs.linked-data-of-lagSweb,
+    <a class="clsHide" href="#idLknlg004lkdtnam"></a></p>
+  <p id="idLknlg004lkdtdsnL">descriptionLong::
+    <br>"The term Linked Data refers to a set of best practices for publishing structured data on the Web. These principles have been coined by Tim Berners-Lee in the design issue note Linked Data. The principles are:
+    <br>* Use URIs as names for things
+    <br>* Use HTTP URIs so that people can look up those names.
+    <br>* When someone looks up a URI, provide useful information.
+    <br>* Include links to other URIs. so that they can discover more things.
+    <br>The idea behind these principles is on the one hand side, to use standards for the representation and the access to data on the Web. On the other hand, the principles propagate to set hyperlinks between data from different sources. These hyperlinks connect all Linked Data into a single global data graph, similar as the hyperlinks on the classic Web connect all HTML documents into a single global information space. Thus, LinkedData is to spreadsheets and databases what the Web of hypertext documents is to word processor files. The Linked Open Data cloud diagramms give an overview of the linked data sets that are available on the Web."
+    <br>[{2021-01-03} https://www.w3.org/wiki/LinkedData]
+    <a class="clsHide" href="#idLknlg004lkdtdsnL"></a></p>
+  </section>
+
+  <section id="idLknlg004ontg">
+  <h2 id="idLknlg004ontgH2">ontology of lagSweb
+    <a class="clsHide" href="#idLknlg004ontgH2"></a></h2>
+  <p id="idLknlg004ontgdsn">description::
+    <br>"On the Semantic Web, vocabularies define the concepts and relationships (also referred to as “terms”) used to describe and represent an area of concern. Vocabularies are used to classify the terms that can be used in a particular application, characterize possible relationships, and define possible constraints on using those terms. In practice, vocabularies can be very complex (with several thousands of terms) or very simple (describing one or two concepts only).
+    <br>There is no clear division between what is referred to as “vocabularies” and “ontologies”. The trend is to use the word “ontology” for more complex, and possibly quite formal collection of terms, whereas “vocabulary” is used when such strict formalism is not necessarily used or only in a very loose sense. Vocabularies are the basic building blocks for inference techniques on the Semantic Web."
+    <br>[{2021-01-03} https://www.w3.org/standards/semanticweb/ontology]
+    <a class="clsHide" href="#idLknlg004ontgdsn"></a></p>
+  <p id="idLknlg004ontgnam">name::
+    <br>* Mcs.lagSweb'ontology,
+    <br>* Mcs.lagSweb'vocabulary,
+    <br>* Mcs.ontology!⇨lagSweb,
+    <br>* Mcs.vocabulary!⇨lagSweb,
+    <a class="clsHide" href="#idLknlg004ontgnam"></a></p>
+  </section>
+
+  <section id="idLknlg004qry">
+  <h2 id="idLknlg004qryH2">query of lagSweb
+    <a class="clsHide" href="#idLknlg004qryH2"></a></h2>
+  <p id="idLknlg004qrydsn">description::
+    <br>"“Query” in the Semantic Web context means technologies and protocols that can programmatically retrieve information from the Web of Data.
+    <br>What is Query Used For?
+    <br>The Semantic Web is a Web of data — of dates and titles and part numbers and chemical properties and any other data one might conceive of. RDF provides the foundation for publishing and linking your data. Various technologies allow you to embed data in documents (RDFa, GRDDL) or expose what you have in SQL databases, or make it available as RDF files.
+    <br>However, just as relational databases or XML need specific query languages (SQL and XQuery, respectively), the Web of Data, typically represented using RDF as a data format, needs its own, RDF-specific query language and facilities. This is provided by the SPARQLquery language and the accompanying protocols. SPARQL makes it possible to send queries and receive results, e.g., through HTTP or SOAP.
+    <br>Technically, SPARQL queries are based on (triple) patterns. RDF can be seen as a set of relationships among resources (i.e., RDF triples); SPARQL queries provide one or more patterns against such relationships. These triple patterns are similar to RDF triples, except that one or more of the constituent resource references are variables. A SPARQL engine would returns the resources for all triples that match these patterns.
+    <br>Using SPARQL consumers of the Web of Data can extract possibly complex information (i.e., existing resource references and their relationships) which are returned, for example, in a table format. This table can be incorporated into another Web page; using this approach SPARQL provides a powerful tool to build, for example, complex mash-up sites or search engines that include data stemming from the Semantic Web."
+    <br>[{2021-01-03} https://www.w3.org/standards/semanticweb/query]
+    <a class="clsHide" href="#idLknlg004qrydsn"></a></p>
+  <p id="idLknlg004qrynam">name::
+    <br>* Mcs.lagSweb'query,
+    <a class="clsHide" href="#idLknlg004qrynam"></a></p>
+  </section>
+
+  <section id="idLknlg004ifrc">
+  <h2 id="idLknlg004ifrcH2">inference of lagSweb
+    <a class="clsHide" href="#idLknlg004ifrcH2"></a></h2>
+  <p id="idLknlg004ifrcdsn">description::
+    <br>"Broadly speaking, inference on the Semantic Web can be characterized by discovering new relationships. On the Semantic Web, data is modeled as a set of (named) relationships between resources. “Inference” means that automatic procedures can generate new relationships based on the data and based on some additional information in the form of a vocabulary, e.g., a set of rules. Whether the new relationships are explicitly added to the set of data, or are returned at query time, is an implementation issue.
+    <br>On the Semantic Web, the source of such extra information can be defined via vocabularies or rule sets. Both of these approaches draw upon knowledge representation techniques. In general, ontologies concentrate on classification methods, putting an emphasis on defining 'classes', 'subclasses', on how individual resources can be associated to such classes, and characterizing the relationships among classes and their instances. Rules, on the other hand, concentrate on defining a general mechanism on discovering and generating new relationships based on existing ones, much like logic programs, like Prolog, do. In the family of Semantic Web related W3C Recommendations RDFS, OWL, or SKOS are the tools of choice to define ontologies, whereas RIF has been developed to cover rule based approaches."
+    <br>[{2021-01-03} https://www.w3.org/standards/semanticweb/inference.html]
+    <a class="clsHide" href="#idLknlg004ifrcdsn"></a></p>
+  <p id="idLknlg004ifrcnam">name::
+    <br>* Mcs.lagSweb'inference,
+    <a class="clsHide" href="#idLknlg004ifrcnam"></a></p>
+  </section>
+</section>
+
+<section id="idLknlg005">
+  <h1 id="idLknlg005H1">lagKnlg.OWL-005
+    <a class="clsHide" href="#idLknlg005H1"></a></h1>
+  <p id="idLknlg005dsn">description::
+    <br>"Ontologies are formalized vocabularies of terms, often covering a specific domain and shared by a community of users.
+    <br>They specify the definitions of terms by describing their relationships with other terms in the ontology."
+    <br>[{2021-01-03} https://www.w3.org/TR/owl2-overview/]
+    <a class="clsHide" href="#idLknlg005dsn"></a></p>
+  <p id="idLknlg005nam">name::
+    <br>* Mcs.OWL'(web-ontology-language)!⇒lagWebo,
+    <br>* Mcs.lagKnlg.OWL!⇒lagWebo,
+    <br>* Mcs.web-ontology-language!⇒lagWebo,
+    <a class="clsHide" href="#idLknlg005nam"></a></p>
+  <p id="idLknlg005dsnL">descriptionLong::
+    <br>"The Web Ontology Language (OWL) is a family of knowledge representation languages for authoring ontologies. Ontologies are a formal way to describe taxonomies and classification networks, essentially defining the structure of knowledge for various domains: the nouns representing classes of objects and the verbs representing relations between the objects.
+    <br>Ontologies resemble class hierarchies in object-oriented programming but there are several critical differences. Class hierarchies are meant to represent structures used in source code that evolve fairly slowly (perhaps with monthly revisions) whereas ontologies are meant to represent information on the Internet and are expected to be evolving almost constantly. Similarly, ontologies are typically far more flexible as they are meant to represent information on the Internet coming from all sorts of heterogeneous data sources. Class hierarchies on the other hand tend to be fairly static and rely on far less diverse and more structured sources of data such as corporate databases.[1]
+    <br>The OWL languages are characterized by formal semantics. They are built upon the World Wide Web Consortium's (W3C) XML standard for objects called the Resource Description Framework (RDF).[2] OWL and RDF have attracted significant academic, medical and commercial interest.
+    <br>In October 2007,[3] a new W3C working group[4] was started to extend OWL with several new features as proposed in the OWL 1.1 member submission.[5] W3C announced the new version of OWL on 27 October 2009.[6] This new version, called OWL 2, soon found its way into semantic editors such as Protégé and semantic reasoners such as Pellet,[7] RacerPro,[8] FaCT++[9][10] and HermiT.[11]
+    <br>The OWL family contains many species, serializations, syntaxes and specifications with similar names. OWL and OWL2 are used to refer to the 2004 and 2009 specifications, respectively. Full species names will be used, including specification version (for example, OWL2 EL). When referring more generally, OWL Family will be used.[12][13][14]"
+    <br>[{2021-01-03} https://en.wikipedia.org/wiki/Web_Ontology_Language]
+    <a class="clsHide" href="#idLknlg005dsnL"></a></p>
+
+  <section id="idLknlg005rscF">
+  <h2 id="idLknlg005rscFH2">Infrsc of lagWebo
+    <a class="clsHide" href="#idLknlg005rscFH2"></a></h2>
+  <p id="idLknlg005rscFdsn">description::
+    <br>* https://en.wikipedia.org/wiki/Web_Ontology_Language,
+    <a class="clsHide" href="#idLknlg005rscFdsn"></a></p>
+  <p id="idLknlg005rscFnam">name::
+    <br>* Mcs.lagWebo'Infrsc,
+    <a class="clsHide" href="#idLknlg005rscFnam"></a></p>
+  </section>
+</section>
+
+<section id="idLknlg006">
+  <h1 id="idLknlg006H1">lagKnlg.RDF-006
+    <a class="clsHide" href="#idLknlg006H1"></a></h1>
+  <p id="idLknlg006dsn">description::
+    <br>"The Resource Description Framework (RDF) is a family of World Wide Web Consortium (W3C) specifications[1] originally designed as a metadata data model. It has come to be used as a general method for conceptual description or modeling of information that is implemented in web resources, using a variety of syntax notations and data serialization formats. It is also used in knowledge management applications.
+    <br>RDF was adopted as a W3C recommendation in 1999. The RDF 1.0 specification was published in 2004, the RDF 1.1 specification in 2014."
+    <br>[{2021-01-03} https://en.wikipedia.org/wiki/Resource_Description_Framework]
+    <a class="clsHide" href="#idLknlg006dsn"></a></p>
+  <p id="idLknlg006nam">name::
+    <br>* Mcs.RDF'(resource-description-framework)!⇒lagRdf,
+    <br>* Mcs.lagKnlg.006-RDF!⇒lagRdf,
+    <br>* Mcs.lagKnlg.RDF!⇒lagRdf,
+    <br>* Mcs.resource-description-framework!⇒lagRdf,
+    <a class="clsHide" href="#idLknlg006nam"></a></p>
+
+  <section id="idLknlg006ipt">
+  <h2 id="idLknlg006iptH2">input of lagRdf
+    <a class="clsHide" href="#idLknlg006iptH2"></a></h2>
+  <p id="idLknlg006iptdsn">description::
+    <br>"The Resource Description Framework (RDF) is a framework for expressing information about resources. Resources can be anything, including documents, people, physical objects, and abstract concepts.
+    <br>RDF is intended for situations in which information on the Web needs to be processed by applications, rather than being only displayed to people. RDF provides a common framework for expressing this information so it can be exchanged between applications without loss of meaning. Since it is a common framework, application designers can leverage the availability of common RDF parsers and processing tools. The ability to exchange information between different applications means that the information may be made available to applications other than those for which it was originally created."
+    <br>[{2021-01-03}  https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/]
+    <a class="clsHide" href="#idLknlg006iptdsn"></a></p>
+  <p id="idLknlg006iptnam">name::
+    <br>* Mcs.lagRdf'input,
+    <a class="clsHide" href="#idLknlg006iptnam"></a></p>
+  </section>
+
+  <section id="idLknlg006opt">
+  <h2 id="idLknlg006optH2">output of lagRdf
+    <a class="clsHide" href="#idLknlg006optH2"></a></h2>
+  <p id="idLknlg006optdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLknlg006optdsn"></a></p>
+  <p id="idLknlg006optnam">name::
+    <br>* Mcs.lagRdf'output,
+    <a class="clsHide" href="#idLknlg006optnam"></a></p>
+
+  <section id="idLknlg006dtst">
+  <h3 id="idLknlg006dtstH3">dataset of lagRdf
+    <a class="clsHide" href="#idLknlg006dtstH3"></a></h3>
+  <p id="idLknlg006dtstdsn">description::
+    <br>· RDF-datasets are collections of RDF-graphs, comprised of a-default-graph and zero or more named-graphs.
+    <br>[{2021-01-03} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/]
+    <a class="clsHide" href="#idLknlg006dtstdsn"></a></p>
+  <p id="idLknlg006dtstnam">name::
+    <br>* Mcs.lagRdf'dataset,
+    <a class="clsHide" href="#idLknlg006dtstnam"></a></p>
+  </section>
+
+  <section id="idLknlg006grf">
+  <h3 id="idLknlg006grfH3">graph of lagRdf
+    <a class="clsHide" href="#idLknlg006grfH3"></a></h3>
+  <p id="idLknlg006grfdsn">description::
+    <br>· RDF-graphs are sets of subject-predicate-object triples.
+    <br>[{2021-01-03} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/]
+    <a class="clsHide" href="#idLknlg006grfdsn"></a></p>
+  <p id="idLknlg006grfnam">name::
+    <br>* Mcs.lagRdf'graf,
+    <a class="clsHide" href="#idLknlg006grfnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLknlg006rscF">
+  <h2 id="idLknlg006rscFH2">Infrsc of lagRdf
+    <a class="clsHide" href="#idLknlg006rscFH2"></a></h2>
+  <p id="idLknlg006rscFdsn">description::
+    <br>* RDF 1.1 Concepts and Abstract Syntax, W3C Recommendation 25 February 2014, https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/,
+    <br>* RDF 1.1 Semantics, W3C Recommendation 25 February 2014, https://www.w3.org/TR/rdf11-mt/,
+    <br>* RDF Schema 1.1, W3C Recommendation 25 February 2014, https://www.w3.org/TR/rdf-schema/,
+    <a class="clsHide" href="#idLknlg006rscFdsn"></a></p>
+  <p id="idLknlg006rscFnam">name::
+    <br>* Mcs.lagRdf'Infrsc,
+    <a class="clsHide" href="#idLknlg006rscFnam"></a></p>
+  </section>
+
+  <section id="idLknlg006evgF">
+  <h2 id="idLknlg006evgFH2">evoluting of lagRdf
+    <a class="clsHide" href="#idLknlg006evgFH2"></a></h2>
+  </section>
+
+  <section id="idLknlg006Spc">
+  <h2 id="idLknlg006SpcH2">lagRdf.SPECIFIC
+    <a class="clsHide" href="#idLknlg006SpcH2"></a></h2>
+  </section>
 </section>
 
 <section id="idMeta">
