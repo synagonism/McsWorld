@@ -432,7 +432,7 @@
     <a class="clsHide" href="#idJsonrtjsH1"></a></h1>
   <p id="idJsonrtjsdsn">description::
     <br>· <a class="clsPreview" href="filMcsLjs.last.html#idOverview">Javascript</a> is a-programing-language.
-    <br>· Json is <a class="clsPreview" href="filMcsLcmr.last.html#idLcmr006">a-data-representation-language</a> with no data-processing functionality.
+    <br>· Json is <a class="clsPreview" href="filMcsLcmpr.last.html#idLcmpr006">a-data-representation-language</a> with no data-processing functionality.
     <br>· but <a class="clsPreview" href="#idJsonsut">the-semantic-units-of-Json</a> much that of Javascript.
     <a class="clsHide" href="#idJsonrtjsdsn"></a></p>
   <p id="idJsonrtjsnam">name::
@@ -556,6 +556,10 @@
     <br>* Mcs.Jnld,
     <br>* Mcs.Jnld'(JSON-LD)!⇒Jnld,
     <a class="clsHide" href="#idJnldnam"></a></p>
+  <p id="idJnlddsnL">descriptionLong::
+    <br>"JSON-LD [JSON-LD] provides a JSON syntax for RDF graphs and datasets. JSON-LD can be used to transform JSON documents to RDF with minimal changes. JSON-LD offers universal identifiers for JSON objects, a mechanism in which a JSON document can refer to an object described in another JSON document elsewhere on the Web, as well as datatype and language handling. JSON-LD also provides a way to serialize RDF datasets through the use of the @graph keyword."
+    <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-json-ld]
+    <a class="clsHide" href="#idJnlddsnL"></a></p>
 
   <section id="idJnldarch">
   <h2 id="idJnldarchH2">archetype|input of Jnld
@@ -584,6 +588,37 @@
     <br>* Mcs.Jnld'output-info!⇒Jnlddoc,
     <br>* Mcs.Jnlddoc,
     <a class="clsHide" href="#idJnlddocnam"></a></p>
+
+  <section id="idJnlddocexpl">
+  <h3 id="idJnlddocexplH3">Jnlddoc.example
+    <a class="clsHide" href="#idJnlddocexplH3"></a></h3>
+  <p id="idJnlddocexpldsn">description::<pre><code>
+    <br>1    {
+    <br>02      "@context": "example-context.json",
+    <br>03      "@id": "http://example.org/bob#me",
+    <br>04      "@type": "Person",
+    <br>05      "birthdate": "1990-07-04",
+    <br>06      "knows": "http://example.org/alice#me",
+    <br>07      "interest": {
+    <br>08        "@id": "http://www.wikidata.org/entity/Q12418",
+    <br>09        "title": "Mona Lisa",
+    <br>10        "subject_of": "http://data.europeana.eu/item/04802/243FA8618938F4117025F17A8B813C5F9AA4D619",
+    <br>11        "creator": "http://dbpedia.org/resource/Leonardo_da_Vinci"
+    <br>12      }
+    <br>13    }
+    <br>encodes the-graph:
+    <br>&lt;Bob> &lt;is a> &lt;person>.
+    <br>&lt;Bob> &lt;is a friend of> &lt;Alice>.
+    <br>&lt;Bob> &lt;is born on> &lt;the 4th of July 1990>.
+    <br>&lt;Bob> &lt;is interested in> &lt;the Mona Lisa>.
+    <br>&lt;Leonardo da Vinci> &lt;is the creator of> &lt;the Mona Lisa>.
+    <br>&lt;The video 'La Joconde à Washington'> &lt;is about> &lt;the Mona Lisa></pre></code>
+    <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-json-ld]
+    <a class="clsHide" href="#idJnlddocexpldsn"></a></p>
+  <p id="idJnlddocexplnam">name::
+    <br>* Mcs.Jnlddoc.example,
+    <a class="clsHide" href="#idJnlddocexplnam"></a></p>
+  </section>
   </section>
 
   <section id="idJnldrscF">
