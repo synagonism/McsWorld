@@ -13,6 +13,7 @@
  * - on lagALL, store all files in one dir dirEll eg
  * - to compute the-number of concepts, we must set new DIRS at cptqnt.root.json. 
  *
+ * modified: {2021-01-04} '* McsSngo'
  * modified: {2020-10-19} '* Mcs. for section and paragraph-Mcs'
  * modified: {2020-10-18} 'McsP.'
  * modified: {2019-12-11} 'cptqnt.root.json'
@@ -33,8 +34,8 @@ var
   //array with names of filMcsName.html to remove|add
   aFilMcsIn = [],
   aLag = [], //array of languages ['lagALL'] or ['lagEll','lagEng',...]
-  aLagAll = ['lagKmo','lagEng','lagEll'],
-  //aLagAll = ['lagKmo','lagAlb','lagBel','lagBos','lagBul','lagCes','lagDan','lagDeu','lagEll','lagEng','lagEst',
+  aLagAll = ['lagSngo','lagEng','lagEll'],
+  //aLagAll = ['lagSngo','lagAlb','lagBel','lagBos','lagBul','lagCes','lagDan','lagDeu','lagEll','lagEng','lagEst',
   //  'lagFin','lagFra','lagHrv','lagHun','lagIta','lagLav','lagLit','lagMlt','lagMol','lagNld','lagNor',
   //  'lagPol','lagPor','lagRom','lagRus','lagSlk','lagSlv','lagSrp','lagSpa','lagSwe','lagTur','lagUkr',
   //  'lagArb','lagHin','lagJpn','lagZho'
@@ -56,7 +57,7 @@ var
   sLn
 
 // if run with arguments, skip namidx.txt
-// node namidx dirLag/filMcsName.html lagKmo
+// node namidx dirLag/filMcsName.html lagSngo
 if (process.argv[2]) {
   aFilMcsIn = [process.argv[2]]
   if (process.argv[3]) {
@@ -210,10 +211,10 @@ for (n = 0; n < aFilMcsIn.length; n++) {
               }
             }
           }
-        } else if (aLag[nL] === 'lagKmo') {
-          if (sLn.startsWith('    <br>* McsKmo.')) {
-            aNU = [sLn.substring(sLn.indexOf('* McsKmo.')+9, sLn.indexOf(',')), sUrl]
-            sChar = sLn.charAt(sLn.indexOf('* McsKmo.')+9).toUpperCase()
+        } else if (aLag[nL] === 'lagSngo') {
+          if (sLn.startsWith('    <br>* McsSngo.')) {
+            aNU = [sLn.substring(sLn.indexOf('* McsSngo.')+10, sLn.indexOf(',')), sUrl]
+            sChar = sLn.charAt(sLn.indexOf('* McsSngo.')+10).toUpperCase()
             fStoreNULetter(aNU, sChar, aLag[nL])
           }
         } else if (aLag[nL] === 'lagEll') {
@@ -310,7 +311,7 @@ for (n = 0; n < aFilMcsIn.length; n++) {
  *   - sLagIn: the-lag whose names will-be-removed
  */
 function fRemoveNames(oNamidxFIIn, sFilRmvIn, sLagIn) {
-  //oNamidxFIIn = { lagEll00: 'lagEllREST', lagEll01alfa: 'Α', ... lagKmo25u: 'U' }
+  //oNamidxFIIn = { lagEll00: 'lagEllREST', lagEll01alfa: 'Α', ... lagSngo25u: 'U' }
   //sFilRmvIn = dirLag/filMcsLhmn.last.html
   //sLagIn = lagEll
   //for ALL namidx-files remove names with Url sFilRmvIn

@@ -33,6 +33,7 @@ var oHitp = (function () {
   var oHitp = {
     /** contains the-versions of hitp.js */
     aVersion: [
+      'hitp.js.17-7-3.2021-01-04: langoSinago',
       'hitp.js.17-7-2.2020-05-24: Greek search accents',
       'hitp.js.17-7-1.2020-05-05: F2, ctrl+F2',
       'hitp.js.17-6-2.2019-12-14: site-search',
@@ -539,8 +540,8 @@ var oHitp = (function () {
       oEltTabCntSrchOpn3.text = 'Greek (Ell)'
       oEltTabCntSrchSlt.add(oEltTabCntSrchOpn3)
       var oEltTabCntSrchOpn4 = document.createElement('option')
-      oEltTabCntSrchOpn4.value = 'lagKmo'
-      oEltTabCntSrchOpn4.text = 'Komo (Kmo)'
+      oEltTabCntSrchOpn4.value = 'lagSngo'
+      oEltTabCntSrchOpn4.text = 'Sinago (Sngo)'
       oEltTabCntSrchSlt.add(oEltTabCntSrchOpn4)
       oEltTabCntSrchSlt.options[0].selected = true
       oEltTabCntSrchP.id = 'idTabCntSrchP'
