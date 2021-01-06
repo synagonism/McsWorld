@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCnpt-(0-5-0.2021-01-05 draft) concept-language</title>
+  <title>Mcs.lagCnpt-(0-6-0.2021-01-06 draft) concept-language</title>
   <meta name="keywords" content="concept-language, lagCnpt, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -378,6 +378,7 @@
     <br>* Mcs.Rdfinput'resource,
     <br>* Mcs.Rdfiresource,
     <br>* Mcs.lagRdf0'resource!⇒Rdfiresource,
+    <br>* Mcs.resource!⇨RDF,
     <a class="clsHide" href="#idLcnpt005irscnam"></a></p>
 
   <section id="idLcnpt005irscSjt">
@@ -404,24 +405,9 @@
     <a class="clsHide" href="#idLcnpt005irscOjtnam"></a></p>
   </section>
 
-  <section id="idLcnpt005irscBknd">
-  <h4 id="idLcnpt005irscBkndH4">Rdfiresource.blank-node
-    <a class="clsHide" href="#idLcnpt005irscBkndH4"></a></h4>
-  <p id="idLcnpt005irscBknddsn">description::
-    <br>· blank-node is an-Rdfiresource known but NOT identifiable.
-    <br>"Blank nodes are treated as simply indicating the existence of a thing, without using an IRI to identify any particular thing. This is not the same as assuming that the blank node indicates an 'unknown' IRI."
-    <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf11-mt-20140225/#blank-nodes]
-    <a class="clsHide" href="#idLcnpt005irscBknddsn"></a></p>
-  <p id="idLcnpt005irscBkndnam">name::
-    <br>* Mcs.blank-node-Rdfiresource,
-    <br>* Mcs.Rdfiresource.blank-node,
-    <a class="clsHide" href="#idLcnpt005irscBkndnam"></a></p>
-  </section>
-  </section>
-
   <section id="idLcnpt005icls">
-  <h3 id="idLcnpt005iclsH3">class of Rdfinput
-    <a class="clsHide" href="#idLcnpt005iclsH3"></a></h3>
+  <h4 id="idLcnpt005iclsH4">Rdfiresource.class
+    <a class="clsHide" href="#idLcnpt005iclsH4"></a></h4>
   <p id="idLcnpt005iclsdsn">description::
     <br>· <a class="clsPreview" href="../dirCor/filMcs.last.html#idMcsattGnc">a-generic</a> Rdfiresource is-called Rdficlass.
     <br>===
@@ -433,15 +419,16 @@
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_classes]
     <a class="clsHide" href="#idLcnpt005iclsdsn"></a></p>
   <p id="idLcnpt005iclsnam">name::
-    <br>* Mcs.lagRdf0'class!⇒Rdficlass,
     <br>* Mcs.Rdficlass,
     <br>* Mcs.Rdfinput'class!⇒Rdficlass,
     <br>* Mcs.Rdfiresource.class!⇒Rdficlass,
+    <br>* Mcs.class!⇨RDF,
+    <br>* Mcs.lagRdf0'class!⇒Rdficlass,
     <a class="clsHide" href="#idLcnpt005iclsnam"></a></p>
 
   <section id="idLcnpt005iclsIstc">
-  <h4 id="idLcnpt005iclsIstcH4">Rdficlass.instance
-    <a class="clsHide" href="#idLcnpt005iclsIstcH4"></a></h4>
+  <h5 id="idLcnpt005iclsIstcH5">Rdficlass.instance
+    <a class="clsHide" href="#idLcnpt005iclsIstcH5"></a></h5>
   <p id="idLcnpt005iclsIstcdsn">description::
     <br>· <a class="clsPreview" href="../dirCor/filMcs.last.html#idMcsattWhlNSpc">a-specific</a> Rdficlass is-called Rdfiinstance.
     <br>===
@@ -456,8 +443,8 @@
   </section>
 
   <section id="idLcnpt005iclsExtn">
-  <h4 id="idLcnpt005iclsExtnH4">Rdficlass.extension
-    <a class="clsHide" href="#idLcnpt005iclsExtnH4"></a></h4>
+  <h5 id="idLcnpt005iclsExtnH5">Rdficlass.extension
+    <a class="clsHide" href="#idLcnpt005iclsExtnH5"></a></h5>
   <p id="idLcnpt005iclsExtndsn">description::
     <br>· the-set of all Rdfiinstances of an-Rdficlass.
     <a class="clsHide" href="#idLcnpt005iclsExtndsn"></a></p>
@@ -473,8 +460,8 @@
   </section>
 
   <section id="idLcnpt005iclsSbcs">
-  <h4 id="idLcnpt005iclsSbcsH4">Rdficlass.subclass
-    <a class="clsHide" href="#idLcnpt005iclsSbcsH4"></a></h4>
+  <h5 id="idLcnpt005iclsSbcsH5">Rdficlass.subclass
+    <a class="clsHide" href="#idLcnpt005iclsSbcsH5"></a></h5>
   <p id="idLcnpt005iclsSbcsdsn">description::
     <br>· a-specific but not <a class="clsPreview" href="../dirCor/filMcs.last.html#idMcsattIdvl">individual</a> of an-Rdficlass.
     <br>===
@@ -488,8 +475,8 @@
   </section>
 
   <section id="idLcnpt005iclsRsc">
-  <h4 id="idLcnpt005iclsRscH4">Rdficlass.rdfs:Resource
-    <a class="clsHide" href="#idLcnpt005iclsRscH4"></a></h4>
+  <h5 id="idLcnpt005iclsRscH5">Rdficlass.rdfs:Resource
+    <a class="clsHide" href="#idLcnpt005iclsRscH5"></a></h5>
   <p id="idLcnpt005iclsRscdsn">description::
     <br>"All things described by RDF are called resources, and are instances of the class rdfs:Resource. This is the class of everything. All other classes are subclasses of this class. rdfs:Resource is an instance of rdfs:Class."
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_classes]
@@ -501,8 +488,8 @@
   </section>
 
   <section id="idLcnpt005iclsCls">
-  <h4 id="idLcnpt005iclsClsH4">Rdficlass.rdfs:Class
-    <a class="clsHide" href="#idLcnpt005iclsClsH4"></a></h4>
+  <h5 id="idLcnpt005iclsClsH5">Rdficlass.rdfs:Class
+    <a class="clsHide" href="#idLcnpt005iclsClsH5"></a></h5>
   <p id="idLcnpt005iclsClsdsn">description::
     <br>"This is the class of resources that are RDF classes. rdfs:Class is an instance of rdfs:Class."
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_classes]
@@ -514,8 +501,8 @@
   </section>
 
   <section id="idLcnpt005iclsLtl">
-  <h4 id="idLcnpt005iclsLtlH4">Rdficlass.rdfs:Literal
-    <a class="clsHide" href="#idLcnpt005iclsLtlH4"></a></h4>
+  <h5 id="idLcnpt005iclsLtlH5">Rdficlass.rdfs:Literal
+    <a class="clsHide" href="#idLcnpt005iclsLtlH5"></a></h5>
   <p id="idLcnpt005iclsLtldsn">description::
     <br>"The class rdfs:Literal is the class of literal values such as strings and integers. Property values such as textual strings are examples of RDF literals.
     <br>rdfs:Literal is an instance of rdfs:Class. rdfs:Literal is a subclass of rdfs:Resource."
@@ -528,8 +515,8 @@
   </section>
 
   <section id="idLcnpt005iclsDtp">
-  <h4 id="idLcnpt005iclsDtpH4">Rdficlass.rdfs:Datatype
-    <a class="clsHide" href="#idLcnpt005iclsDtpH4"></a></h4>
+  <h5 id="idLcnpt005iclsDtpH5">Rdficlass.rdfs:Datatype
+    <a class="clsHide" href="#idLcnpt005iclsDtpH5"></a></h5>
   <p id="idLcnpt005iclsDtpdsn">description::
     <br>"rdfs:Datatype is the class of datatypes. All instances of rdfs:Datatype correspond to the RDF model of a datatype described in the RDF Concepts specification [RDF11-CONCEPTS]. rdfs:Datatype is both an instance of and a subclass of rdfs:Class. Each instance of rdfs:Datatype is a subclass of rdfs:Literal."
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_classes]
@@ -541,8 +528,8 @@
   </section>
 
   <section id="idLcnpt005iclsLgsg">
-  <h4 id="idLcnpt005iclsLgsgH4">Rdficlass.rdf:lagString
-    <a class="clsHide" href="#idLcnpt005iclsLgsgH4"></a></h4>
+  <h5 id="idLcnpt005iclsLgsgH5">Rdficlass.rdf:lagString
+    <a class="clsHide" href="#idLcnpt005iclsLgsgH5"></a></h5>
   <p id="idLcnpt005iclsLgsgdsn">description::
     <br>"The class rdf:langString is the class of language-tagged string values. rdf:langString is an instance of rdfs:Datatype and a subclass of rdfs:Literal."
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_classes]
@@ -554,8 +541,8 @@
   </section>
 
   <section id="idLcnpt005iclsHtml">
-  <h4 id="idLcnpt005iclsHtmlH4">Rdficlass.rdf:HTML
-    <a class="clsHide" href="#idLcnpt005iclsHtmlH4"></a></h4>
+  <h5 id="idLcnpt005iclsHtmlH5">Rdficlass.rdf:HTML
+    <a class="clsHide" href="#idLcnpt005iclsHtmlH5"></a></h5>
   <p id="idLcnpt005iclsHtmldsn">description::
     <br>"The class rdf:HTML is the class of HTML literal values. rdf:HTML is an instance of rdfs:Datatype and a subclass of rdfs:Literal."
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_classes]
@@ -567,8 +554,8 @@
   </section>
 
   <section id="idLcnpt005iclsXmll">
-  <h4 id="idLcnpt005iclsXmllH4">Rdficlass.rdf:XMLLiteral
-    <a class="clsHide" href="#idLcnpt005iclsXmllH4"></a></h4>
+  <h5 id="idLcnpt005iclsXmllH5">Rdficlass.rdf:XMLLiteral
+    <a class="clsHide" href="#idLcnpt005iclsXmllH5"></a></h5>
   <p id="idLcnpt005iclsXmlldsn">description::
     <br>"The class rdf:XMLLiteral is the class of XML literal values. rdf:XMLLiteral is an instance of rdfs:Datatype and a subclass of rdfs:Literal."
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_classes]
@@ -580,8 +567,8 @@
   </section>
 
   <section id="idLcnpt005iclsPrpt">
-  <h4 id="idLcnpt005iclsPrptH4">Rdficlass.rdf:Property
-    <a class="clsHide" href="#idLcnpt005iclsPrptH4"></a></h4>
+  <h5 id="idLcnpt005iclsPrptH5">Rdficlass.rdf:Property
+    <a class="clsHide" href="#idLcnpt005iclsPrptH5"></a></h5>
   <p id="idLcnpt005iclsPrptdsn">description::
     <br>"rdf:Property is the class of RDF properties. rdf:Property is an instance of rdfs:Class."
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_classes]
@@ -593,8 +580,8 @@
   </section>
 
   <section id="idLcnpt005iclsStmt">
-  <h4 id="idLcnpt005iclsStmtH4">Rdficlass.rdf:Statement
-    <a class="clsHide" href="#idLcnpt005iclsStmtH4"></a></h4>
+  <h5 id="idLcnpt005iclsStmtH5">Rdficlass.rdf:Statement
+    <a class="clsHide" href="#idLcnpt005iclsStmtH5"></a></h5>
   <p id="idLcnpt005iclsStmtdsn">description::
     <br>"The class of RDF statements."
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/]
@@ -606,8 +593,8 @@
   </section>
 
   <section id="idLcnpt005iclsBag">
-  <h4 id="idLcnpt005iclsBagH4">Rdficlass.rdf:Bag
-    <a class="clsHide" href="#idLcnpt005iclsBagH4"></a></h4>
+  <h5 id="idLcnpt005iclsBagH5">Rdficlass.rdf:Bag
+    <a class="clsHide" href="#idLcnpt005iclsBagH5"></a></h5>
   <p id="idLcnpt005iclsBagdsn">description::
     <br>"The class of unordered containers."
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/]
@@ -619,8 +606,8 @@
   </section>
 
   <section id="idLcnpt005iclsSeq">
-  <h4 id="idLcnpt005iclsSeqH4">Rdficlass.rdf:Seq
-    <a class="clsHide" href="#idLcnpt005iclsSeqH4"></a></h4>
+  <h5 id="idLcnpt005iclsSeqH5">Rdficlass.rdf:Seq
+    <a class="clsHide" href="#idLcnpt005iclsSeqH5"></a></h5>
   <p id="idLcnpt005iclsSeqdsn">description::
     <br>"The class of ordered containers."
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/]
@@ -632,8 +619,8 @@
   </section>
 
   <section id="idLcnpt005iclsAlt">
-  <h4 id="idLcnpt005iclsAltH4">Rdficlass.rdf:Alt
-    <a class="clsHide" href="#idLcnpt005iclsAltH4"></a></h4>
+  <h5 id="idLcnpt005iclsAltH5">Rdficlass.rdf:Alt
+    <a class="clsHide" href="#idLcnpt005iclsAltH5"></a></h5>
   <p id="idLcnpt005iclsAltdsn">description::
     <br>"The rdf:Alt class is the class of RDF 'Alternative' containers. It is a subclass of rdfs:Container. Whilst formally it is no different from an rdf:Seq or an rdf:Bag, the rdf:Alt class is used conventionally to indicate to a human reader that typical processing will be to select one of the members of the container. The first member of the container, i.e. the value of the rdf:_1 property, is the default choice.
     <br>...The class of containers of alternatives."
@@ -646,8 +633,8 @@
   </section>
 
   <section id="idLcnpt005iclsCtnr">
-  <h4 id="idLcnpt005iclsCtnrH4">Rdficlass.rdfs:Container
-    <a class="clsHide" href="#idLcnpt005iclsCtnrH4"></a></h4>
+  <h5 id="idLcnpt005iclsCtnrH5">Rdficlass.rdfs:Container
+    <a class="clsHide" href="#idLcnpt005iclsCtnrH5"></a></h5>
   <p id="idLcnpt005iclsCtnrdsn">description::
     <br>"The rdfs:Container class is a super-class of the RDF Container classes, i.e. rdf:Bag, rdf:Seq, rdf:Alt.
     <br>...The class of RDF containers."
@@ -660,8 +647,8 @@
   </section>
 
   <section id="idLcnpt005iclsCrmp">
-  <h4 id="idLcnpt005iclsCrmpH4">Rdficlass.rdfs:ContainerMembershipProperty
-    <a class="clsHide" href="#idLcnpt005iclsCrmpH4"></a></h4>
+  <h5 id="idLcnpt005iclsCrmpH5">Rdficlass.rdfs:ContainerMembershipProperty
+    <a class="clsHide" href="#idLcnpt005iclsCrmpH5"></a></h5>
   <p id="idLcnpt005iclsCrmpdsn">description::
     <br>"The rdfs:ContainerMembershipProperty class has as instances the properties rdf:_1, rdf:_2, rdf:_3 ... that are used to state that a resource is a member of a container. rdfs:ContainerMembershipProperty is a subclass of rdf:Property. Each instance of rdfs:ContainerMembershipProperty is an rdfs:subPropertyOf the rdfs:member property.
     <br>Given a container C, a triple of the form:
@@ -678,8 +665,8 @@
   </section>
 
   <section id="idLcnpt005iclsLst">
-  <h4 id="idLcnpt005iclsLstH4">Rdficlass.rdf:List
-    <a class="clsHide" href="#idLcnpt005iclsLstH4"></a></h4>
+  <h5 id="idLcnpt005iclsLstH5">Rdficlass.rdf:List
+    <a class="clsHide" href="#idLcnpt005iclsLstH5"></a></h5>
   <p id="idLcnpt005iclsLstdsn">description::
     <br>"The class of RDF Lists."
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/]
@@ -691,8 +678,8 @@
     <a class="clsHide" href="#idLcnpt005iclsLstnam"></a></p>
 
   <section id="idLcnpt005iclsLstNil">
-  <h5 id="idLcnpt005iclsLstNilH5">Rdfilist.rdf:nil
-    <a class="clsHide" href="#idLcnpt005iclsLstNilH5"></a></h5>
+  <h6 id="idLcnpt005iclsLstNilH6">Rdfilist.rdf:nil
+    <a class="clsHide" href="#idLcnpt005iclsLstNilH6"></a></h6>
   <p id="idLcnpt005iclsLstNildsn">description::
     <br>"The resource rdf:nil is an instance of rdf:List that can be used to represent an empty list or other list-like structure.
     <br>A triple of the form:
@@ -708,44 +695,86 @@
   </section>
   </section>
 
+  <section id="idLcnpt005irscNode">
+  <h4 id="idLcnpt005irscNodeH4">Rdfiresource.node
+    <a class="clsHide" href="#idLcnpt005irscNodeH4"></a></h4>
+  <p id="idLcnpt005irscNodedsn">description::
+    <br>"The set of nodes of an RDF graph is the set of subjects and objects of triples in the graph.
+    <br>It is possible for a predicate IRI to also occur as a node in the same graph."
+    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-triple]
+    <br>===
+    <br>"In Semantic Web languages, such as RDF and OWL, a property is a binary relation: instances of properties link two individuals. Often we refer to the second individual as the "value" or to both both individuals as "arguments" [See note on vocabulary]."
+    <br>[{2021-01-06} https://www.w3.org/TR/2006/NOTE-swbp-n-aryRelations-20060412/#general]
+    <a class="clsHide" href="#idLcnpt005irscNodedsn"></a></p>
+  <p id="idLcnpt005irscNodenam">name::
+    <br>* Mcs.Rdfinode,
+    <br>* Mcs.Rdfiresource.node!⇒Rdfinode,
+    <br>* Mcs.argument!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005irscNodenam"></a></p>
+
+  <section id="idLcnpt005irscBknd">
+  <h5 id="idLcnpt005irscBkndH5">Rdfiresource.blank-node
+    <a class="clsHide" href="#idLcnpt005irscBkndH5"></a></h5>
+  <p id="idLcnpt005irscBknddsn">description::
+    <br>· blank-node is an-Rdfiresource known but NOT identifiable.
+    <br>"Blank nodes are treated as simply indicating the existence of a thing, without using an IRI to identify any particular thing. This is not the same as assuming that the blank node indicates an 'unknown' IRI."
+    <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf11-mt-20140225/#blank-nodes]
+    <a class="clsHide" href="#idLcnpt005irscBknddsn"></a></p>
+  <p id="idLcnpt005irscBkndnam">name::
+    <br>* Mcs.blank-node-Rdfiresource,
+    <br>* Mcs.Rdfiresource.blank-node,
+    <a class="clsHide" href="#idLcnpt005irscBkndnam"></a></p>
+  </section>
+  </section>
+
   <section id="idLcnpt005ippt">
-  <h3 id="idLcnpt005ipptH3">property of Rdfinput
-    <a class="clsHide" href="#idLcnpt005ipptH3"></a></h3>
+  <h4 id="idLcnpt005ipptH4">Rdfiresource.property
+    <a class="clsHide" href="#idLcnpt005ipptH4"></a></h4>
   <p id="idLcnpt005ipptdsn">description::
+    <br>"The predicate itself is an IRI and denotes a property, that is, a resource that can be thought of as a binary relation."
+    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-property]
     <br>"The RDF Concepts and Abstract Syntax specification [RDF11-CONCEPTS] describes the concept of an RDF property as a relation between subject resources and object resources."
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_properties]
     <a class="clsHide" href="#idLcnpt005ipptdsn"></a></p>
   <p id="idLcnpt005ipptnam">name::
     <br>* Mcs.Rdfinput'property,
     <br>* Mcs.Rdfiproperty,
+    <br>* Mcs.Rdfiresource.property!⇒Rdfiproperty,
     <br>* Mcs.lagRdf0'property!⇒Rdfiproperty,
+    <br>* Mcs.property!⇨RDF,
     <a class="clsHide" href="#idLcnpt005ipptnam"></a></p>
 
   <section id="idLcnpt005ipptsjt">
-  <h4 id="idLcnpt005ipptsjtH4">subject of Rdfiproperty
-    <a class="clsHide" href="#idLcnpt005ipptsjtH4"></a></h4>
+  <h5 id="idLcnpt005ipptsjtH5">subject of Rdfiproperty
+    <a class="clsHide" href="#idLcnpt005ipptsjtH5"></a></h5>
   <p id="idLcnpt005ipptsjtdsn">description::
     <br>· subject-of-Rdfiproperty is the-Rdfiresource on its left.
     <a class="clsHide" href="#idLcnpt005ipptsjtdsn"></a></p>
   <p id="idLcnpt005ipptsjtnam">name::
     <br>* Mcs.Rdfiproperty'subject,
+    <br>* Mcs.subject!⇨RDF,
     <a class="clsHide" href="#idLcnpt005ipptsjtnam"></a></p>
   </section>
 
   <section id="idLcnpt005ipptojt">
-  <h4 id="idLcnpt005ipptojtH4">object of Rdfiproperty
-    <a class="clsHide" href="#idLcnpt005ipptojtH4"></a></h4>
+  <h5 id="idLcnpt005ipptojtH5">object of Rdfiproperty
+    <a class="clsHide" href="#idLcnpt005ipptojtH5"></a></h5>
   <p id="idLcnpt005ipptojtdsn">description::
     <br>· object-of-Rdfiproperty is the-Rdfiresource on its right.
+    <br>===
+    <br>"In Semantic Web languages, such as RDF and OWL, a property is a binary relation: instances of properties link two individuals. Often we refer to the second individual as the "value" or to both both individuals as "arguments" [See note on vocabulary]."
+    <br>[{2021-01-06} https://www.w3.org/TR/2006/NOTE-swbp-n-aryRelations-20060412/#general]
     <a class="clsHide" href="#idLcnpt005ipptojtdsn"></a></p>
   <p id="idLcnpt005ipptojtnam">name::
     <br>* Mcs.Rdfiproperty'object,
+    <br>* Mcs.object!⇨RDF,
+    <br>* Mcs.value!⇨RDF,
     <a class="clsHide" href="#idLcnpt005ipptojtnam"></a></p>
   </section>
 
   <section id="idLcnpt005ipptdomain">
-  <h4 id="idLcnpt005ipptdomainH4">domain of Rdfiproperty
-    <a class="clsHide" href="#idLcnpt005ipptdomainH4"></a></h4>
+  <h5 id="idLcnpt005ipptdomainH5">domain of Rdfiproperty
+    <a class="clsHide" href="#idLcnpt005ipptdomainH5"></a></h5>
   <p id="idLcnpt005ipptdomaindsn">description::
     <br>· domain-of-Rdfiproperty is its generic subject.
     <a class="clsHide" href="#idLcnpt005ipptdomaindsn"></a></p>
@@ -755,8 +784,8 @@
   </section>
 
   <section id="idLcnpt005ipptrange">
-  <h4 id="idLcnpt005ipptrangeH4">range of Rdfiproperty
-    <a class="clsHide" href="#idLcnpt005ipptrangeH4"></a></h4>
+  <h5 id="idLcnpt005ipptrangeH5">range of Rdfiproperty
+    <a class="clsHide" href="#idLcnpt005ipptrangeH5"></a></h5>
   <p id="idLcnpt005ipptrangedsn">description::
     <br>· range-of-Rdfiproperty it its generic object.
     <a class="clsHide" href="#idLcnpt005ipptrangedsn"></a></p>
@@ -766,8 +795,8 @@
   </section>
 
   <section id="idLcnpt005ipptRng">
-  <h4 id="idLcnpt005ipptRngH4">Rdfiproperty.rdfs:range
-    <a class="clsHide" href="#idLcnpt005ipptRngH4"></a></h4>
+  <h5 id="idLcnpt005ipptRngH5">Rdfiproperty.rdfs:range
+    <a class="clsHide" href="#idLcnpt005ipptRngH5"></a></h5>
   <p id="idLcnpt005ipptRngdsn">description::
     <br>"rdfs:range is an instance of rdf:Property that is used to state that the values of a property are instances of one or more classes.
     <br>The triple
@@ -785,8 +814,8 @@
   </section>
 
   <section id="idLcnpt005ipptDmn">
-  <h4 id="idLcnpt005ipptDmnH4">Rdfiproperty.rdfs:domain
-    <a class="clsHide" href="#idLcnpt005ipptDmnH4"></a></h4>
+  <h5 id="idLcnpt005ipptDmnH5">Rdfiproperty.rdfs:domain
+    <a class="clsHide" href="#idLcnpt005ipptDmnH5"></a></h5>
   <p id="idLcnpt005ipptDmndsn">description::
     <br>"rdfs:domain is an instance of rdf:Property that is used to state that any resource that has a given property is an instance of one or more classes.
     <br>A triple of the form:
@@ -804,8 +833,8 @@
   </section>
 
   <section id="idLcnpt005ipptTyp">
-  <h4 id="idLcnpt005ipptTypH4">Rdfiproperty.rdf:type
-    <a class="clsHide" href="#idLcnpt005ipptTypH4"></a></h4>
+  <h5 id="idLcnpt005ipptTypH5">Rdfiproperty.rdf:type
+    <a class="clsHide" href="#idLcnpt005ipptTypH5"></a></h5>
   <p id="idLcnpt005ipptTypdsn">description::
     <br>"rdf:type is an instance of rdf:Property that is used to state that a resource is an instance of a class.
     <br>A triple of the form:
@@ -821,8 +850,8 @@
   </section>
 
   <section id="idLcnpt005ipptScso">
-  <h4 id="idLcnpt005ipptScsoH4">Rdfiproperty.rdfs:subClassOf
-    <a class="clsHide" href="#idLcnpt005ipptScsoH4"></a></h4>
+  <h5 id="idLcnpt005ipptScsoH5">Rdfiproperty.rdfs:subClassOf
+    <a class="clsHide" href="#idLcnpt005ipptScsoH5"></a></h5>
   <p id="idLcnpt005ipptScsodsn">description::
     <br>"The property rdfs:subClassOf is an instance of rdf:Property that is used to state that all the instances of one class are instances of another.
     <br>A triple of the form:
@@ -838,8 +867,8 @@
   </section>
 
   <section id="idLcnpt005ipptSpto">
-  <h4 id="idLcnpt005ipptSptoH4">Rdfiproperty.rdfs:subPropertyOf
-    <a class="clsHide" href="#idLcnpt005ipptSptoH4"></a></h4>
+  <h5 id="idLcnpt005ipptSptoH5">Rdfiproperty.rdfs:subPropertyOf
+    <a class="clsHide" href="#idLcnpt005ipptSptoH5"></a></h5>
   <p id="idLcnpt005ipptSptodsn">description::
     <br>"The property rdfs:subPropertyOf is an instance of rdf:Property that is used to state that all resources related by one property are also related by another.
     <br>A triple of the form:
@@ -855,8 +884,8 @@
   </section>
 
   <section id="idLcnpt005ipptLbl">
-  <h4 id="idLcnpt005ipptLblH4">Rdfiproperty.rdfs:label
-    <a class="clsHide" href="#idLcnpt005ipptLblH4"></a></h4>
+  <h5 id="idLcnpt005ipptLblH5">Rdfiproperty.rdfs:label
+    <a class="clsHide" href="#idLcnpt005ipptLblH5"></a></h5>
   <p id="idLcnpt005ipptLbldsn">description::
     <br>"rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource's name.
     <br>A triple of the form:
@@ -873,8 +902,8 @@
   </section>
 
   <section id="idLcnpt005ipptCmt">
-  <h4 id="idLcnpt005ipptCmtH4">Rdfiproperty.rdfs:comment
-    <a class="clsHide" href="#idLcnpt005ipptCmtH4"></a></h4>
+  <h5 id="idLcnpt005ipptCmtH5">Rdfiproperty.rdfs:comment
+    <a class="clsHide" href="#idLcnpt005ipptCmtH5"></a></h5>
   <p id="idLcnpt005ipptCmtdsn">description::
     <br>"rdfs:comment is an instance of rdf:Property that may be used to provide a human-readable description of a resource.
     <br>A triple of the form:
@@ -892,8 +921,8 @@
   </section>
 
   <section id="idLcnpt005ipptMbr">
-  <h4 id="idLcnpt005ipptMbrH4">Rdfiproperty.rdfs:member
-    <a class="clsHide" href="#idLcnpt005ipptMbrH4"></a></h4>
+  <h5 id="idLcnpt005ipptMbrH5">Rdfiproperty.rdfs:member
+    <a class="clsHide" href="#idLcnpt005ipptMbrH5"></a></h5>
   <p id="idLcnpt005ipptMbrdsn">description::
     <br>"rdfs:member is an instance of rdf:Property that is a super-property of all the container membership properties i.e. each container membership property has an rdfs:subPropertyOf relationship to the property rdfs:member.
     <br>The rdfs:domain of rdfs:member is rdfs:Resource. The rdfs:range of rdfs:member is rdfs:Resource.
@@ -907,8 +936,8 @@
   </section>
 
   <section id="idLcnpt005ipptFrst">
-  <h4 id="idLcnpt005ipptFrstH4">Rdfiproperty.rdf:first
-    <a class="clsHide" href="#idLcnpt005ipptFrstH4"></a></h4>
+  <h5 id="idLcnpt005ipptFrstH5">Rdfiproperty.rdf:first
+    <a class="clsHide" href="#idLcnpt005ipptFrstH5"></a></h5>
   <p id="idLcnpt005ipptFrstdsn">description::
     <br>"The first item in the subject RDF list.	rdf:List	rdfs:Resource"
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_sumproperties]
@@ -920,8 +949,8 @@
   </section>
 
   <section id="idLcnpt005ipptRst">
-  <h4 id="idLcnpt005ipptRstH4">Rdfiproperty.rdf:rest
-    <a class="clsHide" href="#idLcnpt005ipptRstH4"></a></h4>
+  <h5 id="idLcnpt005ipptRstH5">Rdfiproperty.rdf:rest
+    <a class="clsHide" href="#idLcnpt005ipptRstH5"></a></h5>
   <p id="idLcnpt005ipptRstdsn">description::
     <br>"The rest of the subject RDF list after the first item.	rdf:List	rdf:List"
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_sumproperties]
@@ -933,8 +962,8 @@
   </section>
 
   <section id="idLcnpt005ipptSals">
-  <h4 id="idLcnpt005ipptSalsH4">Rdfiproperty.rdfs:seeAlso
-    <a class="clsHide" href="#idLcnpt005ipptSalsH4"></a></h4>
+  <h5 id="idLcnpt005ipptSalsH5">Rdfiproperty.rdfs:seeAlso
+    <a class="clsHide" href="#idLcnpt005ipptSalsH5"></a></h5>
   <p id="idLcnpt005ipptSalsdsn">description::
     <br>"Further information about the subject resource.	rdfs:Resource	rdfs:Resource"
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_sumproperties]
@@ -946,8 +975,8 @@
   </section>
 
   <section id="idLcnpt005ipptIddb">
-  <h4 id="idLcnpt005ipptIddbH4">Rdfiproperty.rdfs:isDefinedBy
-    <a class="clsHide" href="#idLcnpt005ipptIddbH4"></a></h4>
+  <h5 id="idLcnpt005ipptIddbH5">Rdfiproperty.rdfs:isDefinedBy
+    <a class="clsHide" href="#idLcnpt005ipptIddbH5"></a></h5>
   <p id="idLcnpt005ipptIddbdsn">description::
     <br>"The definition of the subject resource.	rdfs:Resource	rdfs:Resource"
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_sumproperties]
@@ -959,8 +988,8 @@
   </section>
 
   <section id="idLcnpt005ipptVal">
-  <h4 id="idLcnpt005ipptValH4">Rdfiproperty.rdf:value
-    <a class="clsHide" href="#idLcnpt005ipptValH4"></a></h4>
+  <h5 id="idLcnpt005ipptValH5">Rdfiproperty.rdf:value
+    <a class="clsHide" href="#idLcnpt005ipptValH5"></a></h5>
   <p id="idLcnpt005ipptValdsn">description::
     <br>"Idiomatic property used for structured values.	rdfs:Resource	rdfs:Resource"
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_sumproperties]
@@ -972,8 +1001,8 @@
   </section>
 
   <section id="idLcnpt005ipptSjt">
-  <h4 id="idLcnpt005ipptSjtH4">Rdfiproperty.rdf:subject
-    <a class="clsHide" href="#idLcnpt005ipptSjtH4"></a></h4>
+  <h5 id="idLcnpt005ipptSjtH5">Rdfiproperty.rdf:subject
+    <a class="clsHide" href="#idLcnpt005ipptSjtH5"></a></h5>
   <p id="idLcnpt005ipptSjtdsn">description::
     <br>"The subject of the subject RDF statement.	rdf:Statement	rdfs:Resource"
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_sumproperties]
@@ -985,8 +1014,8 @@
   </section>
 
   <section id="idLcnpt005ipptPdt">
-  <h4 id="idLcnpt005ipptPdtH4">Rdfiproperty.rdf:predicate
-    <a class="clsHide" href="#idLcnpt005ipptPdtH4"></a></h4>
+  <h5 id="idLcnpt005ipptPdtH5">Rdfiproperty.rdf:predicate
+    <a class="clsHide" href="#idLcnpt005ipptPdtH5"></a></h5>
   <p id="idLcnpt005ipptPdtdsn">description::
     <br>"The predicate of the subject RDF statement.	rdf:Statement	rdfs:Resource"
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_sumproperties]
@@ -998,8 +1027,8 @@
   </section>
 
   <section id="idLcnpt005ipptOjt">
-  <h4 id="idLcnpt005ipptOjtH4">Rdfiproperty.rdf:object
-    <a class="clsHide" href="#idLcnpt005ipptOjtH4"></a></h4>
+  <h5 id="idLcnpt005ipptOjtH5">Rdfiproperty.rdf:object
+    <a class="clsHide" href="#idLcnpt005ipptOjtH5"></a></h5>
   <p id="idLcnpt005ipptOjtdsn">description::
     <br>"The object of the subject RDF statement.	rdf:Statement	rdfs:Resource"
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_sumproperties]
@@ -1011,8 +1040,8 @@
   </section>
 
   <section id="idLcnpt005ippt_1">
-  <h4 id="idLcnpt005ippt_1H4">Rdfiproperty.rdf:_1
-    <a class="clsHide" href="#idLcnpt005ippt_1H4"></a></h4>
+  <h5 id="idLcnpt005ippt_1H5">Rdfiproperty.rdf:_1
+    <a class="clsHide" href="#idLcnpt005ippt_1H5"></a></h5>
   <p id="idLcnpt005ippt_1dsn">description::
     <br>"RDF also uses properties called rdf:_1, rdf:_2, rdf:_3... etc., each of which is both a sub-property of rdfs:member and an instance of the class rdfs:ContainerMembershipProperty. "
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_sumproperties]
@@ -1024,8 +1053,8 @@
   </section>
 
   <section id="idLcnpt005ippt_2">
-  <h4 id="idLcnpt005ippt_2H4">Rdfiproperty.rdf:_2
-    <a class="clsHide" href="#idLcnpt005ippt_2H4"></a></h4>
+  <h5 id="idLcnpt005ippt_2H5">Rdfiproperty.rdf:_2
+    <a class="clsHide" href="#idLcnpt005ippt_2H5"></a></h5>
   <p id="idLcnpt005ippt_2dsn">description::
     <br>"RDF also uses properties called rdf:_1, rdf:_2, rdf:_3... etc., each of which is both a sub-property of rdfs:member and an instance of the class rdfs:ContainerMembershipProperty. "
     <br>[{2021-01-05} https://www.w3.org/TR/2014/REC-rdf-schema-20140225/#ch_sumproperties]
@@ -1034,6 +1063,89 @@
     <br>* Mcs.Rdfiproperty.rdf:_2,
     <br>* Mcs.rdf:_2,
     <a class="clsHide" href="#idLcnpt005ippt_2nam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLcnpt005irfrt">
+  <h4 id="idLcnpt005irfrtH4">Rdfiresource.referent
+    <a class="clsHide" href="#idLcnpt005irfrtH4"></a></h4>
+  <p id="idLcnpt005irfrtdsn">description::
+    <br>"The resource denoted by an IRI is also called its referent."
+    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-referent]
+    <a class="clsHide" href="#idLcnpt005irfrtdsn"></a></p>
+  <p id="idLcnpt005irfrtnam">name::
+    <br>* Mcs.Rdfireferent,
+    <br>* Mcs.Rdfiresource.referent!⇒Rdfireferent,
+    <br>* Mcs.referent!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005irfrtnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLcnpt005iterm">
+  <h3 id="idLcnpt005itermH3">term of Rdfinput
+    <a class="clsHide" href="#idLcnpt005itermH3"></a></h3>
+  <p id="idLcnpt005itermdsn">description::
+    <br>"IRIs, literals and blank nodes are collectively known as RDF terms.
+    <br>IRIs, literals and blank nodes are distinct and distinguishable.
+    <br>For example, http://example.org/ as a string literal is neither equal to http://example.org/ as an IRI, nor to a blank node with the blank node identifier http://example.org/."
+    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-triple]
+    <a class="clsHide" href="#idLcnpt005itermdsn"></a></p>
+  <p id="idLcnpt005itermnam">name::
+    <br>* Mcs.Rdfinput'term!⇒Rdfiterm,
+    <br>* Mcs.Rdfiterm,
+    <br>* Mcs.term!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermnam"></a></p>
+
+  <section id="idLcnpt005itermIri">
+  <h4 id="idLcnpt005itermIriH4">Rdfiterm.IRI
+    <a class="clsHide" href="#idLcnpt005itermIriH4"></a></h4>
+  <p id="idLcnpt005itermIridsn">description::
+    <br>"An IRI (Internationalized Resource Identifier) within an RDF graph is a Unicode string [UNICODE] that conforms to the syntax defined in RFC 3987 [RFC3987].
+    <br>IRIs in the RDF abstract syntax must be absolute, and may contain a fragment identifier.
+    <br>IRI equality: Two IRIs are equal if and only if they are equivalent under Simple String Comparison according to section 5.1 of [RFC3987]. Further normalization must not be performed when comparing IRIs for equality."
+    <a class="clsHide" href="#idLcnpt005itermIridsn"></a></p>
+  <p id="idLcnpt005itermIrinam">name::
+    <br>* Mcs.IRI'(internationalized-resource-identifier)!⇒Rdfiiri,
+    <br>* Mcs.Rdfiterm.IRI!⇒Rdfiiri,
+    <br>* Mcs.internationalized-resource-identifier!⇒Rdfiiri,
+    <a class="clsHide" href="#idLcnpt005itermIrinam"></a></p>
+
+  <section id="idLcnpt005itermIrirturl">
+  <h5 id="idLcnpt005itermIrirturlH5">relation-to-URL of Rdfiiri
+    <a class="clsHide" href="#idLcnpt005itermIrirturlH5"></a></h5>
+  <p id="idLcnpt005itermIrirturldsn">description::
+    <br>"URIs and IRIs: IRIs are a generalization of URIs [RFC3986] that permits a wider range of Unicode characters.
+    <br>Every absolute URI and URL is an IRI, but not every IRI is an URI.
+    <br>When IRIs are used in operations that are only defined for URIs, they must first be converted according to the mapping defined in section 3.1 of [RFC3987].
+    <br>A notable example is retrieval over the HTTP protocol.
+    <br>The mapping involves UTF-8 encoding of non-ASCII characters, %-encoding of octets not allowed in URIs, and Punycode-encoding of domain names."
+    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#section-IRIs]
+    <a class="clsHide" href="#idLcnpt005itermIrirturldsn"></a></p>
+  <p id="idLcnpt005itermIrirturlnam">name::
+    <br>* Mcs.IRI-relation-to-URL,
+    <br>* Mcs.Rdfiiri'relation-to-URL,
+    <br>* Mcs.URL-relation-to-IRI,
+    <a class="clsHide" href="#idLcnpt005itermIrirturlnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLcnpt005itermLtrl">
+  <h4 id="idLcnpt005itermLtrlH4">Rdfiterm.literal
+    <a class="clsHide" href="#idLcnpt005itermLtrlH4"></a></h4>
+  <p id="idLcnpt005itermLtrldsn">description::
+    <br>"Literals are used for values such as strings, numbers, and dates.
+    <br>A literal in an RDF graph consists of two or three elements:
+    <br>* a lexical form, being a Unicode [UNICODE] string, which should be in Normal Form C [NFC],
+    <br>* a datatype IRI, being an IRI identifying a datatype that determines how the lexical form maps to a literal value, and
+    <br>if and only if the datatype IRI is http://www.w3.org/1999/02/22-rdf-syntax-ns#langString, a non-empty language tag as defined by [BCP47]. The language tag must be well-formed according to section 2.2.9 of [BCP47].
+    <br>A literal is a language-tagged string if the third element is present. Lexical representations of language tags may be converted to lower case. The value space of language tags is always in lower case.
+    <br>Please note that concrete syntaxes may support simple literals consisting of only a lexical form without any datatype IRI or language tag. Simple literals are syntactic sugar for abstract syntax literals with the datatype IRI http://www.w3.org/2001/XMLSchema#string. Similarly, most concrete syntaxes represent language-tagged strings without the datatype IRI because it always equals http://www.w3.org/1999/02/22-rdf-syntax-ns#langString."
+    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#section-Graph-Literal]
+    <a class="clsHide" href="#idLcnpt005itermLtrldsn"></a></p>
+  <p id="idLcnpt005itermLtrlnam">name::
+    <br>* Mcs.Rdfiliteral,
+    <br>* Mcs.Rdfiterm.literal!⇒Rdfiliteral,
+    <a class="clsHide" href="#idLcnpt005itermLtrlnam"></a></p>
   </section>
   </section>
 
@@ -1058,7 +1170,8 @@
   <h3 id="idLcnpt005igrphH3">graph of Rdfinput
     <a class="clsHide" href="#idLcnpt005igrphH3"></a></h3>
   <p id="idLcnpt005igrphdsn">description::
-    <br>·
+    <br>"An RDF graph is a set of <a class="clsPreview" href="#idLcnpt005itrpl">RDF triples</a>."
+    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-graph]
     <a class="clsHide" href="#idLcnpt005igrphdsn"></a></p>
   <p id="idLcnpt005igrphnam">name::
     <br>* Mcs.Rdfigraph,
@@ -1084,10 +1197,13 @@
   <h2 id="idLcnpt005optH2">output of lagRdf0
     <a class="clsHide" href="#idLcnpt005optH2"></a></h2>
   <p id="idLcnpt005optdsn">description::
+    <br>"An RDF document is a document that encodes an RDF graph or RDF dataset in a concrete RDF syntax, such as Turtle [TURTLE], RDFa [RDFA-PRIMER], JSON-LD [JSON-LD], or TriG [TRIG]. RDF documents enable the exchange of RDF graphs and RDF datasets between systems."
+    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-document]
     <a class="clsHide" href="#idLcnpt005optdsn"></a></p>
   <p id="idLcnpt005optnam">name::
-    <br>* Mcs.Rdfoutput,
-    <br>* Mcs.lagRdf0'output!⇒Rdfoutput,
+    <br>* Mcs.Rdfdoc,
+    <br>* Mcs.lagRdf0'document!⇒Rdfdoc,
+    <br>* Mcs.lagRdf0'output!⇒Rdfdoc,
     <a class="clsHide" href="#idLcnpt005optnam"></a></p>
 
   <section id="idLcnpt005odtst">
@@ -1337,6 +1453,21 @@
   <p id="idLcnpt005Spcnam">name::
     <br>* Mcs.lagRdf0.specific,
     <a class="clsHide" href="#idLcnpt005Spcnam"></a></p>
+  </section>
+
+  <section id="idLcnpt005Crdfs">
+  <h2 id="idLcnpt005CrdfsH2">lagRdf0.concrete-RDF-syntax
+    <a class="clsHide" href="#idLcnpt005CrdfsH2"></a></h2>
+  <p id="idLcnpt005Crdfsdsn">description::
+    <br>"An RDF document is a document that encodes an RDF graph or RDF dataset in a concrete RDF syntax, such as Turtle [TURTLE], RDFa [RDFA-PRIMER], JSON-LD [JSON-LD], or TriG [TRIG]. RDF documents enable the exchange of RDF graphs and RDF datasets between systems.
+    <br>A concrete RDF syntax may offer many different ways to encode the same RDF graph or RDF dataset, for example through the use of namespace prefixes, relative IRIs, blank node identifiers, and different ordering of statements. While these aspects can have great effect on the convenience of working with the RDF document, they are not significant for its meaning."
+    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-concrete-rdf-syntax]
+    <a class="clsHide" href="#idLcnpt005Crdfsdsn"></a></p>
+  <p id="idLcnpt005Crdfsnam">name::
+    <br>* Mcs.lagRdf0.concrete-RDF-syntax,
+    <br>* Mcs.lagRdf0.instance,
+    <br>* Mcs.concrete-RDF-syntax!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005Crdfsnam"></a></p>
   </section>
 
   <section id="idLcnpt005Jnld">
