@@ -46,13 +46,13 @@ var
   sDir = 'dirStn',
   sDIR = 'DirStn',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'standards-organization',
+  sN = 'RFC-standard',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'oznStd',
+  sNS = 'stdRfc',
   //5. FILE-name: shows relation of another file: SysNet, DtcbnetEth, DnLbr,
-  sNFil = 'OznStd',
+  sNFil = 'StdRfc',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNId = 'OznStd';
+  sNId = 'StdRfc';
 
 s =
   '<!DOCTYPE html>\n' +

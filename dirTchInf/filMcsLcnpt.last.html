@@ -1103,6 +1103,17 @@
     <br>"An IRI (Internationalized Resource Identifier) within an RDF graph is a Unicode string [UNICODE] that conforms to the syntax defined in RFC 3987 [RFC3987].
     <br>IRIs in the RDF abstract syntax must be absolute, and may contain a fragment identifier.
     <br>IRI equality: Two IRIs are equal if and only if they are equivalent under Simple String Comparison according to section 5.1 of [RFC3987]. Further normalization must not be performed when comparing IRIs for equality."
+    <br>===
+    <br>"The abbreviation IRI is short for "International Resource Identifier". An IRI identifies a resource. The URLs (Uniform Resource Locators) that people use as Web addresses are one form of IRI. Other forms of IRI provide an identifier for a resource without implying its location or how to access it. The notion of IRI is a generalization of URI (Uniform Resource Identifier), allowing non-ASCII characters to be used in the IRI character string. IRIs are specified in RFC 3987 [RFC3987].
+    <br>IRIs can appear in all three positions of a triple.
+    <br>As mentioned, IRIs are used to identify resources such as documents, people, physical objects, and abstract concepts. For example, the IRI for Leonardo da Vinci in DBpedia is:
+    <br>http://dbpedia.org/resource/Leonardo_da_Vinci
+    <br>The IRI for an INA video about the Mona Lisa entitled 'La Joconde à Washington' in Europeana is:
+    <br>http://data.europeana.eu/item/04802/243FA8618938F4117025F17A8B813C5F9AA4D619
+    <br>IRIs are global identifiers, so other people can re-use this IRI to identify the same thing. For example, the following IRI is used by many people as an RDF property to state an acquaintance relationship between people:
+    <br>http://xmlns.com/foaf/0.1/knows
+    <br>RDF is agnostic about what the IRI represents. However, IRIs may be given meaning by particular vocabularies or conventions. For example, DBpedia uses IRIs of the form http://dbpedia.org/resource/Name to denote the thing described by the corresponding Wikipedia article."
+    <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-IRI]
     <a class="clsHide" href="#idLcnpt005itermIridsn"></a></p>
   <p id="idLcnpt005itermIrinam">name::
     <br>* Mcs.IRI'(internationalized-resource-identifier)!⇒Rdfiiri,
@@ -1294,30 +1305,18 @@
   </section>
 
   <section id="idLcnpt005iri">
-  <h3 id="idLcnpt005iriH3">IRI of lagRdf0
+  <h3 id="idLcnpt005iriH3">output-IRI of lagRdf0
     <a class="clsHide" href="#idLcnpt005iriH3"></a></h3>
   <p id="idLcnpt005iridsn">description::
-    <br>"The abbreviation IRI is short for "International Resource Identifier". An IRI identifies a resource. The URLs (Uniform Resource Locators) that people use as Web addresses are one form of IRI. Other forms of IRI provide an identifier for a resource without implying its location or how to access it. The notion of IRI is a generalization of URI (Uniform Resource Identifier), allowing non-ASCII characters to be used in the IRI character string. IRIs are specified in RFC 3987 [RFC3987].
-    <br>IRIs can appear in all three positions of a triple.
-    <br>As mentioned, IRIs are used to identify resources such as documents, people, physical objects, and abstract concepts. For example, the IRI for Leonardo da Vinci in DBpedia is:
-    <br>http://dbpedia.org/resource/Leonardo_da_Vinci
-    <br>The IRI for an INA video about the Mona Lisa entitled 'La Joconde à Washington' in Europeana is:
-    <br>http://data.europeana.eu/item/04802/243FA8618938F4117025F17A8B813C5F9AA4D619
-    <br>IRIs are global identifiers, so other people can re-use this IRI to identify the same thing. For example, the following IRI is used by many people as an RDF property to state an acquaintance relationship between people:
-    <br>http://xmlns.com/foaf/0.1/knows
-    <br>RDF is agnostic about what the IRI represents. However, IRIs may be given meaning by particular vocabularies or conventions. For example, DBpedia uses IRIs of the form http://dbpedia.org/resource/Name to denote the thing described by the corresponding Wikipedia article."
-    <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-IRI]
     <a class="clsHide" href="#idLcnpt005iridsn"></a></p>
   <p id="idLcnpt005irinam">name::
-    <br>* Mcs.IRI'(international-resource-identifier)-of-lagRdf0!⇒Rdfiri,
-    <br>* Mcs.international-resource-identifier-of-lagRdf0!⇒Rdfiri,
-    <br>* Mcs.Rdfiri,
-    <br>* Mcs.lagRdf0'IRI!⇒Rdfiri,
+    <br>* Mcs.Rdfoiri,
+    <br>* Mcs.lagRdf0'output-IRI!⇒Rdfoiri,
     <a class="clsHide" href="#idLcnpt005irinam"></a></p>
   </section>
 
   <section id="idLcnpt005ltrl">
-  <h3 id="idLcnpt005ltrlH3">literal of lagRdf0
+  <h3 id="idLcnpt005ltrlH3">output-literal of lagRdf0
     <a class="clsHide" href="#idLcnpt005ltrlH3"></a></h3>
   <p id="idLcnpt005ltrldsn">description::
     <br>"Literals are basic values that are not IRIs. Examples of literals include strings such as "La Joconde", dates such as "the 4th of July, 1990" and numbers such as "3.14159". Literals are associated with a datatype enabling such values to be parsed and interpreted correctly. String literals can optionally be associated with a language tag. For example, "Léonard de Vinci" could be associated with the "fr" language tag and "李奥纳多·达·文西" with the "zh" language tag.
@@ -1326,12 +1325,12 @@
     <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-literal]
     <a class="clsHide" href="#idLcnpt005ltrldsn"></a></p>
   <p id="idLcnpt005ltrlnam">name::
-    <br>* Mcs.lagRdf0'literal,
+    <br>* Mcs.lagRdf0'output-literal,
     <a class="clsHide" href="#idLcnpt005ltrlnam"></a></p>
   </section>
 
   <section id="idLcnpt005bknd">
-  <h3 id="idLcnpt005bkndH3">blank-node of lagRdf0
+  <h3 id="idLcnpt005bkndH3">output-blank-node of lagRdf0
     <a class="clsHide" href="#idLcnpt005bkndH3"></a></h3>
   <p id="idLcnpt005bknddsn">description::
     <br>"IRIs and literals together provide the basic material for writing down RDF statements. In addition, it is sometimes handy to be able to talk about resources without bothering to use a global identifier. For example, we might want to state that the Mona Lisa painting has in its background an unidentified tree which we know to be a cypress tree. A resource without a global identifier, such as the painting's cypress tree, can be represented in RDF by a blank node. Blank nodes are like simple variables in algebra; they represent some thing without saying what their value is.
@@ -1339,7 +1338,7 @@
     <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-blank-node]
     <a class="clsHide" href="#idLcnpt005bknddsn"></a></p>
   <p id="idLcnpt005bkndnam">name::
-    <br>* Mcs.lagRdf0'blank-node,
+    <br>* Mcs.lagRdf0'output-blank-node,
     <a class="clsHide" href="#idLcnpt005bkndnam"></a></p>
   </section>
   </section>
@@ -1348,12 +1347,42 @@
   <h2 id="idLcnpt005vocH2">vocabulary of lagRdf0
     <a class="clsHide" href="#idLcnpt005vocH2"></a></h2>
   <p id="idLcnpt005vocdsn">description::
-    <br>· a-SET of IRI.
+    <br>"An RDF vocabulary is a collection of IRIs intended for use in RDF graphs.
+    <br>For example, the IRIs documented in [RDF11-SCHEMA] are the RDF Schema vocabulary.
+    <br>RDF Schema can itself be used to define and document additional RDF vocabularies."
+    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-vocabulary]
     <a class="clsHide" href="#idLcnpt005vocdsn"></a></p>
   <p id="idLcnpt005vocnam">name::
     <br>* Mcs.Rdfvoc,
     <br>* Mcs.lagRdf0'vocabulary!⇒Rdfvoc,
+    <br>* Mcs.vocabulary!⇨RDF,
     <a class="clsHide" href="#idLcnpt005vocnam"></a></p>
+
+  <section id="idLcnpt005vocnsiri">
+  <h3 id="idLcnpt005vocnsiriH3">namespace-IRI of Rdfvoc
+    <a class="clsHide" href="#idLcnpt005vocnsiriH3"></a></h3>
+  <p id="idLcnpt005vocnsiridsn">description::
+    <br>"The IRIs in an RDF vocabulary often begin with a common substring known as a namespace IRI."
+    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-vocabulary]
+    <a class="clsHide" href="#idLcnpt005vocnsiridsn"></a></p>
+  <p id="idLcnpt005vocnsirinam">name::
+    <br>* Mcs.Rdfvoc'namespace-IRI,
+    <br>* Mcs.namespace-IRI!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005vocnsirinam"></a></p>
+  </section>
+
+  <section id="idLcnpt005vocnspx">
+  <h3 id="idLcnpt005vocnspxH3">namespace-prefix of Rdfvoc
+    <a class="clsHide" href="#idLcnpt005vocnspxH3"></a></h3>
+  <p id="idLcnpt005vocnspxdsn">description::
+    <br>""
+    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-vocabulary]
+    <a class="clsHide" href="#idLcnpt005vocnspxdsn"></a></p>
+  <p id="idLcnpt005vocnspxnam">name::
+    <br>* Mcs.Rdfvoc'namespace-prefix,
+    <br>* Mcs.namespace-prefix!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005vocnspxnam"></a></p>
+  </section>
 
   <section id="idLcnpt005vocSpc">
   <h3 id="idLcnpt005vocSpcH3">Rdfvoc.SPECIFIC
