@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCnpt-(0-6-0.2021-01-06 draft) concept-language</title>
+  <title>Mcs.lagCnpt-(0-7-0.2021-01-07 draft) concept-language</title>
   <meta name="keywords" content="concept-language, lagCnpt, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -1079,6 +1079,23 @@
     <br>* Mcs.referent!⇨RDF,
     <a class="clsHide" href="#idLcnpt005irfrtnam"></a></p>
   </section>
+
+  <section id="idLcnpt005irfsc">
+  <h4 id="idLcnpt005irfscH4">Rdfiresource.RDF-source
+    <a class="clsHide" href="#idLcnpt005irfscH4"></a></h4>
+  <p id="idLcnpt005irfscdsn">description::
+    <br>"We informally use the term RDF source to refer to a persistent yet mutable source or container of RDF graphs.
+    <br>An RDF source is a resource that may be said to have a state that can change over time.
+    <br>A snapshot of the state can be expressed as an RDF graph.
+    <br>For example, any web document that has an RDF-bearing representation may be considered an RDF source.
+    <br>Like all resources, RDF sources may be named with IRIs and therefore described in other RDF graphs."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-source]
+    <a class="clsHide" href="#idLcnpt005irfscdsn"></a></p>
+  <p id="idLcnpt005irfscnam">name::
+    <br>* Mcs.Rdfiresource.RDF-source,
+    <br>* Mcs.RDF-source!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005irfscnam"></a></p>
+  </section>
   </section>
 
   <section id="idLcnpt005iterm">
@@ -1117,6 +1134,8 @@
     <a class="clsHide" href="#idLcnpt005itermIridsn"></a></p>
   <p id="idLcnpt005itermIrinam">name::
     <br>* Mcs.IRI'(internationalized-resource-identifier)!⇒Rdfiiri,
+    <br>* Mcs.IRI!⇨RDF,
+    <br>* Mcs.Rdfiiri,
     <br>* Mcs.Rdfiterm.IRI!⇒Rdfiiri,
     <br>* Mcs.internationalized-resource-identifier!⇒Rdfiiri,
     <a class="clsHide" href="#idLcnpt005itermIrinam"></a></p>
@@ -1138,6 +1157,16 @@
     <br>* Mcs.URL-relation-to-IRI,
     <a class="clsHide" href="#idLcnpt005itermIrirturlnam"></a></p>
   </section>
+
+  <section id="idLcnpt005itermIriDttp">
+  <h5 id="idLcnpt005itermIriDttpH5">Rdfiiri.datatype (<a class="clsPreview" href="#idLcnpt005itermLtrldi">link</a>)
+    <a class="clsHide" href="#idLcnpt005itermIriDttpH5"></a></h5>
+  </section>
+
+  <section id="idLcnpt005itermIriNmsc">
+  <h5 id="idLcnpt005itermIriNmscH5">Rdfiiri.namespace (<a class="clsPreview" href="#idLcnpt005vocnsiri">link</a>)
+    <a class="clsHide" href="#idLcnpt005itermIriNmscH5"></a></h5>
+  </section>
   </section>
 
   <section id="idLcnpt005itermLtrl">
@@ -1156,7 +1185,459 @@
   <p id="idLcnpt005itermLtrlnam">name::
     <br>* Mcs.Rdfiliteral,
     <br>* Mcs.Rdfiterm.literal!⇒Rdfiliteral,
+    <br>* Mcs.literal!⇨RDF,
     <a class="clsHide" href="#idLcnpt005itermLtrlnam"></a></p>
+
+  <section id="idLcnpt005itermLtrllf">
+  <h5 id="idLcnpt005itermLtrllfH5">lexical-form of Rdfiliteral
+    <a class="clsHide" href="#idLcnpt005itermLtrllfH5"></a></h5>
+  <p id="idLcnpt005itermLtrllfdsn">description::
+    <br>"A literal in an RDF graph consists of two or three elements:
+    <br>* a lexical form, being a Unicode [UNICODE] string, which should be in Normal Form C [NFC],
+    <br>* a datatype IRI, being an IRI identifying a datatype that determines how the lexical form maps to a literal value, and
+    <br>* if and only if the datatype IRI is http://www.w3.org/1999/02/22-rdf-syntax-ns#langString, a non-empty language tag as defined by [BCP47]. The language tag must be well-formed according to section 2.2.9 of [BCP47]."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-literal]
+    <a class="clsHide" href="#idLcnpt005itermLtrllfdsn"></a></p>
+  <p id="idLcnpt005itermLtrllfnam">name::
+    <br>* Mcs.Rdfiliteral'lexical-form,
+    <br>* Mcs.lexical-form!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermLtrllfnam"></a></p>
+  </section>
+
+  <section id="idLcnpt005itermLtrldi">
+  <h5 id="idLcnpt005itermLtrldiH5">datatype-IRI of Rdfiliteral
+    <a class="clsHide" href="#idLcnpt005itermLtrldiH5"></a></h5>
+  <p id="idLcnpt005itermLtrldidsn">description::
+    <br>"A literal in an RDF graph consists of two or three elements:
+    <br>* a lexical form, being a Unicode [UNICODE] string, which should be in Normal Form C [NFC],
+    <br>* a datatype IRI, being an IRI identifying a datatype that determines how the lexical form maps to a literal value, and
+    <br>* if and only if the datatype IRI is http://www.w3.org/1999/02/22-rdf-syntax-ns#langString, a non-empty language tag as defined by [BCP47]. The language tag must be well-formed according to section 2.2.9 of [BCP47]."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-literal]
+    <a class="clsHide" href="#idLcnpt005itermLtrldidsn"></a></p>
+  <p id="idLcnpt005itermLtrldinam">name::
+    <br>* Mcs.Rdfiliteral'datatype-IRI,
+    <br>* Mcs.datatype-IRI!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermLtrldinam"></a></p>
+
+  <section id="idLcnpt005itermLtrldidt">
+  <h6 id="idLcnpt005itermLtrldidtH6">datatype of datatype-IRI
+    <a class="clsHide" href="#idLcnpt005itermLtrldidtH6"></a></h6>
+  <p id="idLcnpt005itermLtrldidtdsn">description::
+    <br>"Datatypes are used with RDF literals to represent values such as strings, numbers and dates.
+    <br>The datatype abstraction used in RDF is compatible with XML Schema [XMLSCHEMA11-2].
+    <br>Any datatype definition that conforms to this abstraction may be used in RDF, even if not defined in terms of XML Schema.
+    <br>RDF re-uses many of the XML Schema built-in datatypes, and defines two additional non-normative datatypes, rdf:HTML and rdf:XMLLiteral.
+    <br>The list of datatypes supported by an implementation is determined by its recognized datatype IRIs."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#section-Datatypes]
+    <a class="clsHide" href="#idLcnpt005itermLtrldidtdsn"></a></p>
+  <p id="idLcnpt005itermLtrldidtnam">name::
+    <br>* Mcs.Rdfiliteral'datatype-IRI'datatype,
+    <br>* Mcs.datatype!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermLtrldidtnam"></a></p>
+
+  <section id="idLcnpt005itermLtrldidtls">
+  <h7 id="idLcnpt005itermLtrldidtlsH7">lexical-space of datatype of datatype-IRI
+    <a class="clsHide" href="#idLcnpt005itermLtrldidtlsH7"></a></h7>
+  <p id="idLcnpt005itermLtrldidtlsdsn">description::
+    <br>"The lexical space of a datatype is a set of Unicode [UNICODE] strings."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-lexical-space]
+    <a class="clsHide" href="#idLcnpt005itermLtrldidtlsdsn"></a></p>
+  <p id="idLcnpt005itermLtrldidtlsnam">name::
+    <br>* Mcs.datatype!⇨RDF'lexical-space,
+    <br>* Mcs.lexical-space!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermLtrldidtlsnam"></a></p>
+  </section>
+
+  <section id="idLcnpt005itermLtrldidtvs">
+  <h7 id="idLcnpt005itermLtrldidtvsH7">value-space of datatype of datatype-IRI
+    <a class="clsHide" href="#idLcnpt005itermLtrldidtvsH7"></a></h7>
+  <p id="idLcnpt005itermLtrldidtvsdsn">description::
+    <br>"The lexical-to-value mapping of a datatype is a set of pairs whose first element belongs to the lexical space, and the second element belongs to the value space of the datatype.
+    <br>Each member of the lexical space is paired with exactly one value, and is a lexical representation of that value.
+    <br>The mapping can be seen as a function from the lexical space to the value space."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-lexical-to-value-mapping]
+    <a class="clsHide" href="#idLcnpt005itermLtrldidtvsdsn"></a></p>
+  <p id="idLcnpt005itermLtrldidtvsnam">name::
+    <br>* Mcs.datatype!⇨RDF'value-space,
+    <br>* Mcs.value-space!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermLtrldidtvsnam"></a></p>
+  </section>
+
+  <section id="idLcnpt005itermLtrldidtlvm">
+  <h7 id="idLcnpt005itermLtrldidtlvmH7">lexical-to-value-mapping of datatype of datatype-IRI
+    <a class="clsHide" href="#idLcnpt005itermLtrldidtlvmH7"></a></h7>
+  <p id="idLcnpt005itermLtrldidtlvmdsn">description::
+    <br>"The lexical-to-value mapping of a datatype is a set of pairs whose first element belongs to the lexical space, and the second element belongs to the value space of the datatype.
+    <br>Each member of the lexical space is paired with exactly one value, and is a lexical representation of that value.
+    <br>The mapping can be seen as a function from the lexical space to the value space."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-lexical-to-value-mapping]
+    <a class="clsHide" href="#idLcnpt005itermLtrldidtlvmdsn"></a></p>
+  <p id="idLcnpt005itermLtrldidtlvmnam">name::
+    <br>* Mcs.datatype!⇨RDF'lexical-to-value-mapping,
+    <br>* Mcs.lexical-to-value-mapping!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermLtrldidtlvmnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLcnpt005itermLtrldiRgd">
+  <h6 id="idLcnpt005itermLtrldiRgdH6">datatype-IRI.recognized
+    <a class="clsHide" href="#idLcnpt005itermLtrldiRgdH6"></a></h6>
+  <p id="idLcnpt005itermLtrldiRgddsn">description::
+    <br>"Datatypes are identified by IRIs.
+    <br>If D is a set of IRIs which are used to refer to datatypes, then the elements of D are called recognized datatype IRIs.
+    <br>Recognized IRIs have fixed referents.
+    <br>If any IRI of the form http://www.w3.org/2001/XMLSchema#xxx is recognized, it must refer to the RDF-compatible XSD type named xsd:xxx for every XSD type listed in section 5.1.
+    <br>Furthermore, the following IRIs are allocated for non-normative datatypes:
+    <br>- The IRI http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral refers to the datatype rdf:XMLLiteral
+    <br>- The IRI http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML refers to the datatype rdf:HTML"
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-recognized-datatype-iris]
+    <a class="clsHide" href="#idLcnpt005itermLtrldiRgddsn"></a></p>
+  <p id="idLcnpt005itermLtrldiRgdnam">name::
+    <br>* Mcs.Rdfiliteral'datatype-IRI.recognized,
+    <br>* Mcs.recognized-datatype-IRI!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermLtrldiRgdnam"></a></p>
+  </section>
+
+  <section id="idLcnpt005itermLtrldiXsd">
+  <h6 id="idLcnpt005itermLtrldiXsdH6">datatype-IRI.XML-Schema
+    <a class="clsHide" href="#idLcnpt005itermLtrldiXsdH6"></a></h6>
+  <p id="idLcnpt005itermLtrldiXsddsn">description::
+    <br>"IRIs of the form http://www.w3.org/2001/XMLSchema#xxx, where xxx is the name of a datatype, denote the built-in datatypes defined in XML Schema 1.1 Part 2: Datatypes [XMLSCHEMA11-2].
+    <br>The XML Schema built-in types listed in the following table are the RDF-compatible XSD types.
+    <br>Their use is recommended."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#xsd-datatypes]
+    <a class="clsHide" href="#idLcnpt005itermLtrldiXsddsn"></a></p>
+  <p id="idLcnpt005itermLtrldiXsdnam">name::
+    <br>* Mcs.datatype-IRI.XML-Schema,
+    <br>* Mcs.datatype-IRI.xsd,
+    <a class="clsHide" href="#idLcnpt005itermLtrldiXsdnam"></a></p>
+  <p id="idDttpXsdstring">xsd:string::
+    <br>× sDescription: Character strings (but not all Unicode character strings)
+    <br>× sType: Core type
+    <br>* Mcs.xsd:string!⇨RDF,
+    <br>* Mcs.string!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdstring"></a></p>
+  <p id="idDttpXsdboolean">xsd:boolean::
+    <br>× sValue: true, false
+    <br>× sType: Core type
+    <br>* Mcs.xsd:boolean!⇨RDF,
+    <br>* Mcs.boolean!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdboolean"></a></p>
+  <p id="idDttpXsddecimal">xsd:decimal::
+    <br>× sValue: Arbitrary-precision decimal numbers
+    <br>× sType: Core type
+    <br>* Mcs.xsd:decimal!⇨RDF,
+    <br>* Mcs.decimal!⇨xsd,
+    <a class="clsHide" href="#idDttpXsddecimal"></a></p>
+  <p id="idDttpXsdinteger">xsd:integer::
+    <br>× sValue: Arbitrary-size integer numbers
+    <br>× sType: Core type
+    <br>* Mcs.xsd:integer!⇨RDF,
+    <br>* Mcs.integer!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdinteger"></a></p>
+  <p id="idDttpXsddouble">xsd:double::
+    <br>× sValue: 64-bit floating point numbers incl. ±Inf, ±0, NaN
+    <br>× sType: IEEE floating-point number
+    <br>* Mcs.xsd:double!⇨RDF,
+    <br>* Mcs.double!⇨xsd,
+    <a class="clsHide" href="#idDttpXsddouble"></a></p>
+  <p id="idDttpXsdfloat">xsd:float::
+    <br>× sValue: 32-bit floating point numbers incl. ±Inf, ±0, NaN
+    <br>× sType: IEEE floating-point number
+    <br>* Mcs.xsd:float!⇨RDF,
+    <br>* Mcs.float!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdfloat"></a></p>
+  <p id="idDttpXsddate">xsd:date::
+    <br>× sValue: Dates (yyyy-mm-dd) with or without timezone
+    <br>× sType: Time and date
+    <br>* Mcs.xsd:date!⇨RDF,
+    <br>* Mcs.date!⇨xsd,
+    <a class="clsHide" href="#idDttpXsddate"></a></p>
+  <p id="idDttpXsdtime">xsd:time::
+    <br>× sValue: Times (hh:mm:ss.sss…) with or without timezone
+    <br>× sType: Time and date
+    <br>* Mcs.xsd:time!⇨RDF,
+    <br>* Mcs.time!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdtime"></a></p>
+  <p id="idDttpXsddateTime">xsd:dateTime::
+    <br>× sValue: Date and time with or without timezone
+    <br>× sType: Time and date
+    <br>* Mcs.xsd:dateTime!⇨RDF,
+    <br>* Mcs.dateTime!⇨xsd,
+    <a class="clsHide" href="#idDttpXsddateTime"></a></p>
+  <p id="idDttpXsddateTimeStamp">xsd:dateTimeStamp::
+    <br>× sValue: Date and time with required timezone
+    <br>× sType: Time and date
+    <br>* Mcs.xsd:dateTimeStamp!⇨RDF,
+    <br>* Mcs.dateTimeStamp!⇨xsd,
+    <a class="clsHide" href="#idDttpXsddateTimeStamp"></a></p>
+  <p id="idDttpXsdgYear">xsd:gYear::
+    <br>× sValue: Gregorian calendar year
+    <br>× sType: Recurring and partial date
+    <br>* Mcs.xsd:gYear!⇨RDF,
+    <br>* Mcs.gYear!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdgYear"></a></p>
+  <p id="idDttpXsdgMonth">xsd:gMonth::
+    <br>× sValue: Gregorian calendar month
+    <br>× sType: Recurring and partial date
+    <br>* Mcs.xsd:gMonth!⇨RDF,
+    <br>* Mcs.gMonth!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdgMonth"></a></p>
+  <p id="idDttpXsdgDay">xsd:gDay::
+    <br>× sValue: Gregorian calendar day of the month
+    <br>× sType: Recurring and partial date
+    <br>* Mcs.xsd:gDay!⇨RDF,
+    <br>* Mcs.gDay!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdgDay"></a></p>
+  <p id="idDttpXsdgYearMonth">xsd:gYearMonth::
+    <br>× sValue: Gregorian calendar year and month
+    <br>× sType: Recurring and partial date
+    <br>* Mcs.xsd:gYearMonth!⇨RDF,
+    <br>* Mcs.gYearMonth!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdgYearMonth"></a></p>
+  <p id="idDttpXsdgMonthDay">xsd:gMonthDay::
+    <br>× sValue: Gregorian calendar month and day
+    <br>× sType: Recurring and partial date
+    <br>* Mcs.xsd:gMonthDay!⇨RDF,
+    <br>* Mcs.gMonthDay!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdgMonthDay"></a></p>
+  <p id="idDttpXsdduration">xsd:duration::
+    <br>× sValue: Duration of time
+    <br>× sType: Recurring and partial date
+    <br>* Mcs.xsd:duration!⇨RDF,
+    <br>* Mcs.duration!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdduration"></a></p>
+  <p id="idDttpXsdyearMonthDuration">xsd:yearMonthDuration::
+    <br>× sValue: Duration of time (months and years only)
+    <br>× sType: Recurring and partial date
+    <br>* Mcs.xsd:yearMonthDuration!⇨RDF,
+    <br>* Mcs.yearMonthDuration!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdyearMonthDuration"></a></p>
+  <p id="idDttpXsddayTimeDuration">xsd:dayTimeDuration::
+    <br>× sValue: Duration of time (days, hours, minutes, seconds only)
+    <br>× sType: Recurring and partial date
+    <br>* Mcs.xsd:dayTimeDuration!⇨RDF,
+    <br>* Mcs.dayTimeDuration!⇨xsd,
+    <a class="clsHide" href="#idDttpXsddayTimeDuration"></a></p>
+  <p id="idDttpXsdbyte">xsd:byte::
+    <br>× sValue: -128…+127 (8 bit)
+    <br>× sType: Limited-range integer number
+    <br>* Mcs.xsd:byte!⇨RDF,
+    <br>* Mcs.byte!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdbyte"></a></p>
+  <p id="idDttpXsdshort">xsd:short::
+    <br>× sValue: -32768…+32767 (16 bit)
+    <br>× sType: Limited-range integer number
+    <br>* Mcs.xsd:short!⇨RDF,
+    <br>* Mcs.short!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdshort"></a></p>
+  <p id="idDttpXsdint">xsd:int::
+    <br>× sValue: -2147483648…+2147483647 (32 bit)
+    <br>× sType: Limited-range integer number
+    <br>* Mcs.xsd:int!⇨RDF,
+    <br>* Mcs.int!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdint"></a></p>
+  <p id="idDttpXsdlong">xsd:long::
+    <br>× sValue: -9223372036854775808…+9223372036854775807 (64 bit)
+    <br>× sType: Limited-range integer number
+    <br>* Mcs.xsd:long!⇨RDF,
+    <br>* Mcs.long!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdlong"></a></p>
+  <p id="idDttpXsdunsignedByte">xsd:unsignedByte::
+    <br>× sValue: 0…255 (8 bit)
+    <br>× sType: Limited-range integer number
+    <br>* Mcs.xsd:unsignedByte!⇨RDF,
+    <br>* Mcs.unsignedByte!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdunsignedByte"></a></p>
+  <p id="idDttpXsdunsignedShort">xsd:unsignedShort::
+    <br>× sValue: 0…65535 (16 bit)
+    <br>× sType: Limited-range integer number
+    <br>* Mcs.xsd:unsignedShort!⇨RDF,
+    <br>* Mcs.unsignedShort!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdunsignedShort"></a></p>
+  <p id="idDttpXsdunsignedInt">xsd:unsignedInt::
+    <br>× sValue: 0…4294967295 (32 bit)
+    <br>× sType: Limited-range integer number
+    <br>* Mcs.xsd:unsignedInt!⇨RDF,
+    <br>* Mcs.unsignedInt!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdunsignedInt"></a></p>
+  <p id="idDttpXsdunsignedLong">xsd:unsignedLong::
+    <br>× sValue: 0…18446744073709551615 (64 bit)
+    <br>× sType: Limited-range integer number
+    <br>* Mcs.xsd:unsignedLong!⇨RDF,
+    <br>* Mcs.unsignedLong!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdunsignedLong"></a></p>
+  <p id="idDttpXsdpositiveInteger">xsd:positiveInteger::
+    <br>× sValue: Integer numbers >0
+    <br>× sType: Limited-range integer number
+    <br>* Mcs.xsd:positiveInteger!⇨RDF,
+    <br>* Mcs.positiveInteger!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdpositiveInteger"></a></p>
+  <p id="idDttpXsdnonNegativeInteger">xsd:nonNegativeInteger::
+    <br>× sValue: Integer numbers ≥0
+    <br>× sType: Limited-range integer number
+    <br>* Mcs.xsd:nonNegativeInteger!⇨RDF,
+    <br>* Mcs.nonNegativeInteger!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdnonNegativeInteger"></a></p>
+  <p id="idDttpXsdnegativeInteger">xsd:negativeInteger::
+    <br>× sValue: Integer numbers &lt;0
+    <br>× sType: Limited-range integer number
+    <br>* Mcs.xsd:negativeInteger!⇨RDF,
+    <br>* Mcs.negativeInteger!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdnegativeInteger"></a></p>
+  <p id="idDttpXsdnonPositiveInteger">xsd:nonPositiveInteger::
+    <br>× sValue: Integer numbers ≤0
+    <br>× sType: Limited-range integer number
+    <br>* Mcs.xsd:nonPositiveInteger!⇨RDF,
+    <br>* Mcs.nonPositiveInteger!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdnonPositiveInteger"></a></p>
+  <p id="idDttpXsdhexBinary">xsd:hexBinary::
+    <br>× sValue: Hex-encoded binary data
+    <br>× sType: Encoded binary data
+    <br>* Mcs.xsd:hexBinary!⇨RDF,
+    <br>* Mcs.hexBinary!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdhexBinary"></a></p>
+  <p id="idDttpXsdbase64Binary">xsd:base64Binary::
+    <br>× sValue: Base64-encoded binary data
+    <br>× sType: Encoded binary data
+    <br>* Mcs.xsd:base64Binary!⇨RDF,
+    <br>* Mcs.base64Binary!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdbase64Binary"></a></p>
+  <p id="idDttpXsdanyURI">xsd:anyURI::
+    <br>× sValue: Absolute or relative URIs and IRIs
+    <br>× sType: Miscellaneous XSD type
+    <br>* Mcs.xsd:anyURI!⇨RDF,
+    <br>* Mcs.anyURI!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdanyURI"></a></p>
+  <p id="idDttpXsdlanguage">xsd:language::
+    <br>× sValue: Language tags per [BCP47]
+    <br>× sType: Miscellaneous XSD type
+    <br>* Mcs.xsd:language!⇨RDF,
+    <br>* Mcs.language!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdlanguage"></a></p>
+  <p id="idDttpXsdnormalizedString">xsd:normalizedString::
+    <br>× sValue: Whitespace-normalized strings
+    <br>× sType: Miscellaneous XSD type
+    <br>* Mcs.xsd:normalizedString!⇨RDF,
+    <br>* Mcs.normalizedString!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdnormalizedString"></a></p>
+  <p id="idDttpXsdtoken">xsd:token::
+    <br>× sValue: Tokenized strings
+    <br>× sType: Miscellaneous XSD type
+    <br>* Mcs.xsd:token!⇨RDF,
+    <br>* Mcs.token!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdtoken"></a></p>
+  <p id="idDttpXsdNMTOKEN">xsd:NMTOKEN::
+    <br>× sValue: XML NMTOKENs
+    <br>× sType: Miscellaneous XSD type
+    <br>* Mcs.xsd:NMTOKEN!⇨RDF,
+    <br>* Mcs.NMTOKEN!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdNMTOKEN"></a></p>
+  <p id="idDttpXsdName">xsd:Name::
+    <br>× sValue: XML Names
+    <br>× sType: Miscellaneous XSD type
+    <br>* Mcs.xsd:Name!⇨RDF,
+    <br>* Mcs.Name!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdName"></a></p>
+  <p id="idDttpXsdNCName">xsd:NCName::
+    <br>× sValue: XML NCNames
+    <br>× sType: Miscellaneous XSD type
+    <br>* Mcs.xsd:NCName!⇨RDF,
+    <br>* Mcs.NCName!⇨xsd,
+    <a class="clsHide" href="#idDttpXsdNCName"></a></p>
+  </section>
+
+  <section id="idLcnpt005itermLtrldiRfhl">
+  <h6 id="idLcnpt005itermLtrldiRfhlH6">datatype-IRI.rdf:HTML
+    <a class="clsHide" href="#idLcnpt005itermLtrldiRfhlH6"></a></h6>
+  <p id="idLcnpt005itermLtrldiRfhldsn">description::
+    <br>"RDF provides for HTML content as a possible literal value. This allows markup in literal values. Such content is indicated in an RDF graph using a literal whose datatype is set to rdf:HTML. This datatype is defined as non-normative because it depends on [DOM4], a specification that has not yet reached W3C Recommendation status."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#section-html]
+    <a class="clsHide" href="#idLcnpt005itermLtrldiRfhldsn"></a></p>
+  <p id="idLcnpt005itermLtrldiRfhlnam">name::
+    <br>* Mcs.datatype-IRI.rdf:HTML,
+    <br>* Mcs.rdf:HTML!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermLtrldiRfhlnam"></a></p>
+  </section>
+
+  <section id="idLcnpt005itermLtrldiRfxl">
+  <h6 id="idLcnpt005itermLtrldiRfxlH6">datatype-IRI.rdf:XMLLiteral
+    <a class="clsHide" href="#idLcnpt005itermLtrldiRfxlH6"></a></h6>
+  <p id="idLcnpt005itermLtrldiRfxldsn">description::
+    <br>"RDF provides for XML content as a possible literal value. Such content is indicated in an RDF graph using a literal whose datatype is set to rdf:XMLLiteral. This datatype is defined as non-normative because it depends on [DOM4], a specification that has not yet reached W3C Recommendation status."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#section-XMLLiteral]
+    <a class="clsHide" href="#idLcnpt005itermLtrldiRfxldsn"></a></p>
+  <p id="idLcnpt005itermLtrldiRfxlnam">name::
+    <br>* Mcs.datatype-IRI.rdf:XMLLiteral,
+    <br>* Mcs.rdf:XMLLiteral!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermLtrldiRfxlnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLcnpt005itermLtrllt">
+  <h5 id="idLcnpt005itermLtrlltH5">language-tag of Rdfiliteral
+    <a class="clsHide" href="#idLcnpt005itermLtrlltH5"></a></h5>
+  <p id="idLcnpt005itermLtrlltdsn">description::
+    <br>"A literal in an RDF graph consists of two or three elements:
+    <br>* a lexical form, being a Unicode [UNICODE] string, which should be in Normal Form C [NFC],
+    <br>* a datatype IRI, being an IRI identifying a datatype that determines how the lexical form maps to a literal value, and
+    <br>* if and only if the datatype IRI is http://www.w3.org/1999/02/22-rdf-syntax-ns#langString, a non-empty language tag as defined by [BCP47]. The language tag must be well-formed according to section 2.2.9 of [BCP47]."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-literal]
+    <a class="clsHide" href="#idLcnpt005itermLtrlltdsn"></a></p>
+  <p id="idLcnpt005itermLtrlltnam">name::
+    <br>* Mcs.Rdfiliteral'language-tag,
+    <br>* Mcs.language-tag!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermLtrlltnam"></a></p>
+  </section>
+
+  <section id="idLcnpt005itermLtrlval">
+  <h5 id="idLcnpt005itermLtrlvalH5">value of Rdfiliteral
+    <a class="clsHide" href="#idLcnpt005itermLtrlvalH5"></a></h5>
+  <p id="idLcnpt005itermLtrlvaldsn">description::
+    <br>"The literal value associated with a literal is:
+    <br>* If the literal is a language-tagged string, then the literal value is a pair consisting of its lexical form and its language tag, in that order.
+    <br>* If the literal's datatype IRI is in the set of recognized datatype IRIs, let d be the referent of the datatype IRI.
+    <br>** If the literal's lexical form is in the lexical space of d, then the literal value is the result of applying the lexical-to-value mapping of d to the lexical form.
+    <br>** Otherwise, the literal is ill-typed and no literal value can be associated with the literal. Such a case produces a semantic inconsistency but is not syntactically ill-formed. Implementations must accept ill-typed literals and produce RDF graphs from them. Implementations may produce warnings when encountering ill-typed literals.
+    <br>* If the literal's datatype IRI is not in the set of recognized datatype IRIs, then the literal value is not defined by this specification."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-literal-value]
+    <a class="clsHide" href="#idLcnpt005itermLtrlvaldsn"></a></p>
+  <p id="idLcnpt005itermLtrlvalnam">name::
+    <br>* Mcs.Rdfiliteral'value,
+    <br>* Mcs.literal-value!⇨RDF,
+    <br>* Mcs.value-of-literal!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermLtrlvalnam"></a></p>
+  </section>
+
+  <section id="idLcnpt005itermLtrlLts">
+  <h5 id="idLcnpt005itermLtrlLtsH5">Rdfiliteral.language-tagged-string
+    <a class="clsHide" href="#idLcnpt005itermLtrlLtsH5"></a></h5>
+  <p id="idLcnpt005itermLtrlLtsdsn">description::
+    <br>"A literal is a language-tagged string if the third element is present.
+    <br>Lexical representations of language tags may be converted to lower case.
+    <br>The value space of language tags is always in lower case."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-language-tagged-string]
+    <a class="clsHide" href="#idLcnpt005itermLtrlLtsdsn"></a></p>
+  <p id="idLcnpt005itermLtrlLtsnam">name::
+    <br>* Mcs.Rdfiliteral.language-tagged-string,
+    <br>* Mcs.language-tagged-string!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermLtrlLtsnam"></a></p>
+  </section>
+
+  <section id="idLcnpt005itermLtrlSpl">
+  <h5 id="idLcnpt005itermLtrlSplH5">Rdfiliteral.simple
+    <a class="clsHide" href="#idLcnpt005itermLtrlSplH5"></a></h5>
+  <p id="idLcnpt005itermLtrlSpldsn">description::
+    <br>"Please note that concrete syntaxes may support simple literals consisting of only a lexical form without any datatype IRI or language tag.
+    <br>Simple literals are syntactic sugar for abstract syntax literals with the datatype IRI http://www.w3.org/2001/XMLSchema#string.
+    <br>Similarly, most concrete syntaxes represent language-tagged strings without the datatype IRI because it always equals http://www.w3.org/1999/02/22-rdf-syntax-ns#langString."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-simple-literal]
+    <a class="clsHide" href="#idLcnpt005itermLtrlSpldsn"></a></p>
+  <p id="idLcnpt005itermLtrlSplnam">name::
+    <br>* Mcs.Rdfiliteral.simple,
+    <br>* Mcs.simple-literal!⇨RDF,
+    <a class="clsHide" href="#idLcnpt005itermLtrlSplnam"></a></p>
+  </section>
   </section>
   </section>
 
@@ -1174,6 +1655,7 @@
   <p id="idLcnpt005itrplnam">name::
     <br>* Mcs.Rdfinput'triple!⇒Rdfitriple,
     <br>* Mcs.Rdfinput'statement!⇒Rdfitriple,
+    <br>* Mcs.statement!⇨RDF,
     <a class="clsHide" href="#idLcnpt005itrplnam"></a></p>
   </section>
 
@@ -1187,6 +1669,7 @@
   <p id="idLcnpt005igrphnam">name::
     <br>* Mcs.Rdfigraph,
     <br>* Mcs.Rdfinput'graph!⇒Rdfigraph,
+    <br>* Mcs.graph!⇨RDF,
     <a class="clsHide" href="#idLcnpt005igrphnam"></a></p>
   </section>
 
@@ -1200,6 +1683,7 @@
   <p id="idLcnpt005idtstnam">name::
     <br>* Mcs.Rdfidataset,
     <br>* Mcs.Rdfinput'dataset!⇒Rdfidataset,
+    <br>* Mcs.dataset!⇨RDF,
     <a class="clsHide" href="#idLcnpt005idtstnam"></a></p>
   </section>
   </section>
@@ -1351,32 +1835,98 @@
     <br>For example, the IRIs documented in [RDF11-SCHEMA] are the RDF Schema vocabulary.
     <br>RDF Schema can itself be used to define and document additional RDF vocabularies."
     <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-vocabulary]
+    <br>===
+    <br>"The term “namespace” on its own does not have a well-defined meaning in the context of RDF, but is sometimes informally used to mean “namespace IRI” or “RDF vocabulary”."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-namespace]
     <a class="clsHide" href="#idLcnpt005vocdsn"></a></p>
   <p id="idLcnpt005vocnam">name::
+    <br>* Mcs.RDF-vocabulary!⇒Rdfvoc,
     <br>* Mcs.Rdfvoc,
     <br>* Mcs.lagRdf0'vocabulary!⇒Rdfvoc,
+    <br>* Mcs.namespace!⇨RDF,
     <br>* Mcs.vocabulary!⇨RDF,
     <a class="clsHide" href="#idLcnpt005vocnam"></a></p>
 
   <section id="idLcnpt005vocnsiri">
   <h3 id="idLcnpt005vocnsiriH3">namespace-IRI of Rdfvoc
     <a class="clsHide" href="#idLcnpt005vocnsiriH3"></a></h3>
-  <p id="idLcnpt005vocnsiridsn">description::
-    <br>"The IRIs in an RDF vocabulary often begin with a common substring known as a namespace IRI."
-    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-vocabulary]
-    <a class="clsHide" href="#idLcnpt005vocnsiridsn"></a></p>
+  <div id="idLcnpt005vocnsiridsn">
+    <p>description::
+    <br>"The IRIs in an RDF vocabulary often begin with a common substring known as a namespace IRI.
+    <br>Some namespace IRIs are associated by convention with a short name known as a namespace prefix.
+    <br>Some examples:"
+    </p>
+    <table>
+      <tr>
+        <th>Namespace prefix
+        <th>Namespace IRI
+        <th>RDF vocabulary
+      <tr>
+        <td>rdf
+        <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#
+        <td>The RDF built-in vocabulary [RDF11-SCHEMA]
+      <tr>
+        <td>rdfs
+        <td>http://www.w3.org/2000/01/rdf-schema#
+        <td>The RDF Schema vocabulary [RDF11-SCHEMA]
+      <tr>
+        <td>xsd
+        <td>http://www.w3.org/2001/XMLSchema#
+        <td>The RDF-compatible XSD types
+    </table>
+    <p class="clsIndent">[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-vocabulary]
+    </p>
+    <a class="clsHide" href="#idLcnpt005vocnsiridsn"></a></div>
   <p id="idLcnpt005vocnsirinam">name::
     <br>* Mcs.Rdfvoc'namespace-IRI,
     <br>* Mcs.namespace-IRI!⇨RDF,
     <a class="clsHide" href="#idLcnpt005vocnsirinam"></a></p>
+
+  <section id="idLcnpt005vocnsiriabr">
+  <h4 id="idLcnpt005vocnsiriabrH4">abbreviation of namespace-IRI
+    <a class="clsHide" href="#idLcnpt005vocnsiriabrH4"></a></h4>
+  <p id="idLcnpt005vocnsiriabrdsn">description::
+    <br>"In some serialization formats it is common to abbreviate IRIs that start with namespace IRIs by using a namespace prefix in order to assist readability.
+    <br>For example, the IRI http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral would be abbreviated as rdf:XMLLiteral.
+    <br>Note however that these abbreviations are not valid IRIs, and must not be used in contexts where IRIs are expected.
+    <br>Namespace IRIs and namespace prefixes are not a formal part of the RDF data model.
+    <br>They are merely a syntactic convenience for abbreviating IRIs."
+    <br>[{2021-01-07} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-vocabulary]
+    <a class="clsHide" href="#idLcnpt005vocnsiriabrdsn"></a></p>
+  <p id="idLcnpt005vocnsiriabrnam">name::
+    <br>* Mcs.Rdfvoc'namespace-IRI'abbreviation,
+    <a class="clsHide" href="#idLcnpt005vocnsiriabrnam"></a></p>
+  </section>
   </section>
 
   <section id="idLcnpt005vocnspx">
   <h3 id="idLcnpt005vocnspxH3">namespace-prefix of Rdfvoc
     <a class="clsHide" href="#idLcnpt005vocnspxH3"></a></h3>
-  <p id="idLcnpt005vocnspxdsn">description::
-    <br>""
-    <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-vocabulary]
+  <div id="idLcnpt005vocnspxdsn">
+    <p>description::
+    <br>"Some namespace IRIs are associated by convention with a short name known as a namespace prefix.
+    <br>Some examples:"
+    </p>
+    <table>
+      <tr>
+        <th>Namespace prefix
+        <th>Namespace IRI
+        <th>RDF vocabulary
+      <tr>
+        <td>rdf
+        <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#
+        <td>The RDF built-in vocabulary [RDF11-SCHEMA]
+      <tr>
+        <td>rdfs
+        <td>http://www.w3.org/2000/01/rdf-schema#
+        <td>The RDF Schema vocabulary [RDF11-SCHEMA]
+      <tr>
+        <td>xsd
+        <td>http://www.w3.org/2001/XMLSchema#
+        <td>The RDF-compatible XSD types
+    </table>
+    <p class="clsIndent">[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-rdf-vocabulary]
+    </p>
     <a class="clsHide" href="#idLcnpt005vocnspxdsn"></a></p>
   <p id="idLcnpt005vocnspxnam">name::
     <br>* Mcs.Rdfvoc'namespace-prefix,
