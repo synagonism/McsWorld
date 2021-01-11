@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCmpr-(0-10-0.2021-01-04 draft) computer-language</title>
+  <title>Mcs.lagCmpr-(0-12-0.2021-01-11 draft) computer-language</title>
   <meta name="keywords" content="computer-language, lagCmpr, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="dirHitp/hitp.css">
 </head>
@@ -455,6 +455,7 @@
     <br>[{2021-01-01} https://en.wikipedia.org/wiki/Serialization]
     <a class="clsHide" href="#idLcmpr008dsn"></a></p>
   <p id="idLcmpr008nam">name::
+    <br>* Mcs.data-serialization-format,
     <br>* Mcs.lagCmpr.008-data-serialization,
     <a class="clsHide" href="#idLcmpr008nam"></a></p>
   </section>
@@ -490,6 +491,7 @@
     <br>* Mcs.lagCmpr.document-representation!⇒lagTdoc,
     <br>* Mcs.lagDoc!⇒lagTdoc,
     <br>* Mcs.lagTdoc, {2021-01-04},
+    <br>* Mcs.text-document-representation-language!⇒lagTdoc,
     <a class="clsHide" href="#idLtdocnam"></a></p>
   <p id="idLtdocdsnL">descriptionLong::
     <br>"A document file format is a text or binary file format for storing documents on a storage media, especially for use by computers. There currently exist a multitude of incompatible document file formats.
@@ -644,40 +646,6 @@
     <a class="clsHide" href="#idLtdocHitpH2"></a></h2>
   </section>
 
-  <section id="idLtdocMrkp">
-  <h2 id="idLtdocMrkpH2">lagTdoc.markup-language
-    <a class="clsHide" href="#idLtdocMrkpH2"></a></h2>
-  <p id="idLtdocMrkpdsn">description::
-    <br>· a-markup-language places codes in the-input-doc and the-machine
-    displays the-doc the-way have-instructed.
-    <a class="clsHide" href="#idLtdocMrkpdsn"></a></p>
-  <p id="idLtdocMrkpnam">name::
-    <br>* Mcs.lagMrkp,
-    <br>* Mcs.lagTdoc.markup-language!⇒lagMrkp,
-    <br>* Mcs.markup-language!⇒lagMrkp,
-    <a class="clsHide" href="#idLtdocMrkpnam"></a></p>
-  <p id="idLtdocMrkpdsnL">descriptionLong::
-    <br>"In computer text processing, a markup language is a system for annotating a document in a way that is syntactically distinguishable from the text,[1] meaning when the document is processed for display, the markup language is not shown, and is only used to format the text.[2] The idea and terminology evolved from the "marking up" of paper manuscripts (i.e., the revision instructions by editors), which is traditionally written with a red pen or blue pencil on authors' manuscripts.[3] Such "markup" typically includes both content corrections (such as spelling, punctuation, or movement of content), and also typographic instructions, such as to make a heading larger or boldface.
-    <br>In digital media, this "blue pencil instruction text" was replaced by tags which ideally indicate what the parts of the document are, rather than details of how they might be shown on some display. This lets authors avoid formatting every instance of the same kind of thing redundantly (and possibly inconsistently). It also avoids the specification of fonts and dimensions which may not apply to many users (such as those with different-size displays, impaired vision and screen-reading software).
-    <br>Early markup systems typically included typesetting instructions, as troff, TeX and LaTeX do, while Scribe and most modern markup systems name components, and later process those names to apply formatting or other processing, as in the case of XML.
-    <br>Some markup languages, such as the widely used HTML, have pre-defined presentation semantics—meaning that their specification prescribes some aspects of how to present the structured data on particular media. HTML, like DocBook, Open eBook, JATS and countless others, is a specific application of the markup meta-languages SGML and XML. That is, SGML and XML enable users to specify particular schemas, which determine just what elements, attributes, and other features are permitted, and where.
-    <br>One extremely important characteristic of most markup languages is that they allow mixing markup directly into text streams. This happens all the time in documents: A few words in a sentence must be emphasized, or identified as a proper name, defined term, or other special item. This is quite different structurally from traditional databases, where it is by definition impossible to have data that is (for example) within a record, but not within any field. Likewise, markup for natural language texts must maintain ordering: it would not suffice to make each paragraph of a book into a "paragraph" record, where those records do not maintain order."
-    <br>[{2021-01-04} https://en.wikipedia.org/wiki/Markup_language]
-    <a class="clsHide" href="#idLtdocMrkpdsnL"></a></p>
-
-  <section id="idLtdocMrkprscF">
-  <h3 id="idLtdocMrkprscFH3">Infrsc of lagMrkp
-    <a class="clsHide" href="#idLtdocMrkprscFH3"></a></h3>
-  <p id="idLtdocMrkprscFdsn">description::
-    <br>* https://en.wikipedia.org/wiki/List_of_document_markup_languages,
-    <br>* https://en.wikipedia.org/wiki/Comparison_of_document-markup_languages,
-    <a class="clsHide" href="#idLtdocMrkprscFdsn"></a></p>
-  <p id="idLtdocMrkprscFnam">name::
-    <br>* Mcs.lagMrkp'Infrsc,
-    <a class="clsHide" href="#idLtdocMrkprscFnam"></a></p>
-  </section>
-  </section>
-
   <section id="idLtdocPdf">
   <h2 id="idLtdocPdfH2">lagTdoc.PDF
     <a class="clsHide" href="#idLtdocPdfH2"></a></h2>
@@ -693,6 +661,53 @@
     <br>* Mcs.lagDpdf,
     <br>* Mcs.portable-document-format!⇒lagDpdf,
     <a class="clsHide" href="#idLtdocPdfnam"></a></p>
+  </section>
+</section>
+
+<section id="idLmrkp">
+  <h2 id="idLmrkpH2">lagCmpr.markup-language
+    <a class="clsHide" href="#idLmrkpH2"></a></h2>
+  <p id="idLmrkpdsn">description::
+    <br>· a-markup-language places codes in the-input-doc and the-machine
+    displays the-doc the-way have-instructed.
+    <a class="clsHide" href="#idLmrkpdsn"></a></p>
+  <p id="idLmrkpnam">name::
+    <br>* Mcs.lagMrkp,
+    <br>* Mcs.lagCmpr.011-markup-language!⇒lagMrkp,
+    <br>* Mcs.lagCmpr.markup-language!⇒lagMrkp,
+    <br>* Mcs.markup-language!⇒lagMrkp,
+    <a class="clsHide" href="#idLmrkpnam"></a></p>
+  <p id="idLmrkpdsnL">descriptionLong::
+    <br>"In computer text processing, a markup language is a system for annotating a document in a way that is syntactically distinguishable from the text,[1] meaning when the document is processed for display, the markup language is not shown, and is only used to format the text.[2] The idea and terminology evolved from the "marking up" of paper manuscripts (i.e., the revision instructions by editors), which is traditionally written with a red pen or blue pencil on authors' manuscripts.[3] Such "markup" typically includes both content corrections (such as spelling, punctuation, or movement of content), and also typographic instructions, such as to make a heading larger or boldface.
+    <br>In digital media, this "blue pencil instruction text" was replaced by tags which ideally indicate what the parts of the document are, rather than details of how they might be shown on some display. This lets authors avoid formatting every instance of the same kind of thing redundantly (and possibly inconsistently). It also avoids the specification of fonts and dimensions which may not apply to many users (such as those with different-size displays, impaired vision and screen-reading software).
+    <br>Early markup systems typically included typesetting instructions, as troff, TeX and LaTeX do, while Scribe and most modern markup systems name components, and later process those names to apply formatting or other processing, as in the case of XML.
+    <br>Some markup languages, such as the widely used HTML, have pre-defined presentation semantics—meaning that their specification prescribes some aspects of how to present the structured data on particular media. HTML, like DocBook, Open eBook, JATS and countless others, is a specific application of the markup meta-languages SGML and XML. That is, SGML and XML enable users to specify particular schemas, which determine just what elements, attributes, and other features are permitted, and where.
+    <br>One extremely important characteristic of most markup languages is that they allow mixing markup directly into text streams. This happens all the time in documents: A few words in a sentence must be emphasized, or identified as a proper name, defined term, or other special item. This is quite different structurally from traditional databases, where it is by definition impossible to have data that is (for example) within a record, but not within any field. Likewise, markup for natural language texts must maintain ordering: it would not suffice to make each paragraph of a book into a "paragraph" record, where those records do not maintain order."
+    <br>[{2021-01-04} https://en.wikipedia.org/wiki/Markup_language]
+    <a class="clsHide" href="#idLmrkpdsnL"></a></p>
+
+  <section id="idLmrkprscF">
+  <h3 id="idLmrkprscFH3">Infrsc of lagMrkp
+    <a class="clsHide" href="#idLmrkprscFH3"></a></h3>
+  <p id="idLmrkprscFdsn">description::
+    <br>* https://en.wikipedia.org/wiki/List_of_document_markup_languages,
+    <br>* https://en.wikipedia.org/wiki/Comparison_of_document-markup_languages,
+    <a class="clsHide" href="#idLmrkprscFdsn"></a></p>
+  <p id="idLmrkprscFnam">name::
+    <br>* Mcs.lagMrkp'Infrsc,
+    <a class="clsHide" href="#idLmrkprscFnam"></a></p>
+  </section>
+
+  <section id="idLmrkpSpc">
+  <h3 id="idLmrkpSpcH3">lagMrkp.SPECIFIC
+    <a class="clsHide" href="#idLmrkpSpcH3"></a></h3>
+  <p id="idLmrkpSpcdsn">description::
+    <br>* text-document-lagMrkp,
+    <br>* concept-lagMrkp,
+    <a class="clsHide" href="#idLmrkpSpcdsn"></a></p>
+  <p id="idLmrkpSpcnam">name::
+    <br>* Mcs.lagMrkp.specific,
+    <a class="clsHide" href="#idLmrkpSpcnam"></a></p>
   </section>
 </section>
 

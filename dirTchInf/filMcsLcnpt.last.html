@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCnpt-(0-9-0.2021-01-09 draft) concept-language</title>
+  <title>Mcs.lagCnpt-(0-11-0.2021-01-11 draft) concept-language</title>
   <meta name="keywords" content="concept-language, lagCnpt, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -57,19 +57,43 @@
   <h1 id="idLcnptiptH1">02_input of lagCnpt
     <a class="clsHide" href="#idLcnptiptH1"></a></h1>
   <p id="idLcnptiptdsn">description::
-    <br>· the-input knowledge we want to map for a-machine.
+    <br>· the-input conceptual-view-(system of concepts) we want to map for a-machine.
     <a class="clsHide" href="#idLcnptiptdsn"></a></p>
   <p id="idLcnptiptnam">name::
     <br>* Mcs.lagCnpt'02_input,
     <br>* Mcs.lagCnpt'input,
+    <br>* Mcs.lagCnpt'input-view,
     <a class="clsHide" href="#idLcnptiptnam"></a></p>
+
+  <section id="idLcnptidmn">
+  <h2 id="idLcnptidmnH2">domain of lagCnpt
+    <a class="clsHide" href="#idLcnptidmnH2"></a></h2>
+  <p id="idLcnptidmndsn">description::
+    <br>· the-set of input-views we want to map.
+    <a class="clsHide" href="#idLcnptidmndsn"></a></p>
+  <p id="idLcnptidmnnam">name::
+    <br>* Mcs.lagCnpt'domain,
+    <a class="clsHide" href="#idLcnptidmnnam"></a></p>
+  </section>
+
+  <section id="idLcnptischm">
+  <h2 id="idLcnptischmH2">schema of lagCnpt
+    <a class="clsHide" href="#idLcnptischmH2"></a></h2>
+  <p id="idLcnptischmdsn">description::
+    <br>· schema is the-structure of the-input-view expressed in a-lagCnpt.
+    <a class="clsHide" href="#idLcnptischmdsn"></a></p>
+  <p id="idLcnptischmnam">name::
+    <br>* Mcs.lagCnpt'schema,
+    <br>* Mcs.schema-of-lagCnpt,
+    <a class="clsHide" href="#idLcnptischmnam"></a></p>
+  </section>
 </section>
 
 <section id="idLcnptopt">
   <h1 id="idLcnptoptH1">03_output of lagCnpt
     <a class="clsHide" href="#idLcnptoptH1"></a></h1>
   <p id="idLcnptoptdsn">description::
-    <br>· the-output knowledge a-machine understands.
+    <br>· the-output document a-machine understands.
     <a class="clsHide" href="#idLcnptoptdsn"></a></p>
   <p id="idLcnptoptnam">name::
     <br>* Mcs.lagCnpt'03_output,
@@ -105,11 +129,57 @@
   <h1 id="idLcnptrscFH1">Infrsc of lagCnpt
     <a class="clsHide" href="#idLcnptrscFH1"></a></h1>
   <p id="idLcnptrscnam">name::
-    <br>* Mcs.lagCnpt'resource,
+    <br>* Mcs.lagCnpt'Infrsc,
     <a class="clsHide" href="#idLcnptrscnam"></a></p>
   <p id="idLcnptrscwpa">addressWpg::
     <br>*
     <a class="clsHide" href="#idLcnptrscwpa"></a></p>
+
+  <section id="idLcnpspec">
+  <h2 id="idLcnpspecH2">specification of lagCnpt'Infrsc
+    <a class="clsHide" href="#idLcnpspecH2"></a></h2>
+  <p id="idLcnpspecdsn">description::
+    <br>· official formal documentation of the-language.
+    <a class="clsHide" href="#idLcnpspecdsn"></a></p>
+  <p id="idLcnpspecnam">name::
+    <br>* Mcs.lagCnpt'specification,
+    <a class="clsHide" href="#idLcnpspecnam"></a></p>
+  </section>
+
+  <section id="idLcnpDteg">
+  <h2 id="idLcnpDtegH2">data-exchange-language of lagCnpt'Infrsc
+    <a class="clsHide" href="#idLcnpDtegH2"></a></h2>
+  <p id="idLcnpDtegdsn">description::
+    <br>"A data interchange (or exchange) language/format is a language that is domain-independent and can be used for data from any kind of discipline.[9] They have "evolved from being markup and display-oriented to further support the encoding of metadata that describes the structural attributes of the information."[10]
+    <br>Practice has shown that certain types of formal languages are better suited for this task than others, since their specification is driven by a formal process instead of particular software implementation needs. For example, XML is a markup language that was designed to enable the creation of dialects (the definition of domain-specific sublanguages).[11] However, it does not contain domain-specific dictionaries or fact types. Beneficial to a reliable data exchange is the availability of standard dictionaries-taxonomies and tools libraries such as parsers, schema validators, and transformation tools.[citation needed]
+    <br>Popular languages used for data exchange
+    <br>* RDF,
+    <br>* XML,
+    <br>* Atom,
+    <br>* JSON,
+    <br>* YAML,
+    <br>* REBOL,
+    <br>* Gellish"
+    <br>[{2021-01-11} https://en.wikipedia.org/wiki/Data_exchange]
+    <a class="clsHide" href="#idLcnpDtegdsn"></a></p>
+  <p id="idLcnpDtegnam">name::
+    <br>* Mcs.data-exchange-language,
+    <br>* Mcs.lagCnpt'data-exchange-language,
+    <a class="clsHide" href="#idLcnpDtegnam"></a></p>
+  </section>
+
+  <section id="idLcnpMdlg">
+  <h2 id="idLcnpMdlgH2">modeling-language of lagCnpt'Infrsc
+    <a class="clsHide" href="#idLcnpMdlgH2"></a></h2>
+  <p id="idLcnpMdlgdsn">description::
+    <br>"A modeling language is any artificial language that can be used to express information or knowledge or systems in a structure that is defined by a consistent set of rules. The rules are used for interpretation of the meaning of components in the structure."
+    <br>[{2021-01-11} https://en.wikipedia.org/wiki/Modeling_language]
+    <a class="clsHide" href="#idLcnpMdlgdsn"></a></p>
+  <p id="idLcnpMdlgnam">name::
+    <br>* Mcs.lagCnpt'modeling-language,
+    <br>* Mcs.modeling-language,
+    <a class="clsHide" href="#idLcnpMdlgnam"></a></p>
+  </section>
 </section>
 
 <section id="idLcnptsrtrF">
@@ -2280,14 +2350,39 @@
     <br>[{2021-01-08} https://www.w3.org/TR/2012/REC-owl2-primer-20121211/#What_is_OWL_2.3F]
     <a class="clsHide" href="#idLcnpt006inptdsn"></a></p>
   <p id="idLcnpt006inptnam">name::
-    <br>* Mcs.Owlinput,
-    <br>* Mcs.domain-of-inerest!⇨OWL!⇒Owlinput,
-    <br>* Mcs.lagOwl0'input!⇒Owlinput,
-    <br>* Mcs.subject-matter!⇨OWL!⇒Owlinput,
+    <br>* Mcs.Owlontology,
+    <br>* Mcs.domain-of-inerest!⇨OWL!⇒Owlontology,
+    <br>* Mcs.lagOwl0'input!⇒Owlontology,
+    <br>* Mcs.ontology!⇨OWL!⇒Owlontology,
+    <br>* Mcs.subject-matter!⇨OWL!⇒Owlontology,
     <a class="clsHide" href="#idLcnpt006inptnam"></a></p>
 
+  <section id="idLcnpt006iIri">
+  <h3 id="idLcnpt006iIriH3">IRI of Owlontology
+    <a class="clsHide" href="#idLcnpt006iIriH3"></a></h3>
+  <p id="idLcnpt006iIridsn">description::
+    <br>"Each ontology may have an ontology IRI, which is used to identify an ontology. If an ontology has an ontology IRI, the ontology may additionally have a version IRI, which is used to identify the version of the ontology. The version IRI may be, but need not be, equal to the ontology IRI. An ontology without an ontology IRI must not contain a version IRI."
+    <br>[{2021-01-10} https://www.w3.org/TR/2012/REC-owl2-syntax-20121211/#Ontologies]
+    <a class="clsHide" href="#idLcnpt006iIridsn"></a></p>
+  <p id="idLcnpt006iIrinam">name::
+    <br>* Mcs.Owlontology'IRI,
+    <a class="clsHide" href="#idLcnpt006iIrinam"></a></p>
+  </section>
+
+  <section id="idLcnpt006ivrsn">
+  <h3 id="idLcnpt006ivrsnH3">version of Owlontology
+    <a class="clsHide" href="#idLcnpt006ivrsnH3"></a></h3>
+  <p id="idLcnpt006ivrsndsn">description::
+    <br>"Each ontology may have an ontology IRI, which is used to identify an ontology. If an ontology has an ontology IRI, the ontology may additionally have a version IRI, which is used to identify the version of the ontology. The version IRI may be, but need not be, equal to the ontology IRI. An ontology without an ontology IRI must not contain a version IRI."
+    <br>[{2021-01-10} https://www.w3.org/TR/2012/REC-owl2-syntax-20121211/#Ontologies]
+    <a class="clsHide" href="#idLcnpt006ivrsndsn"></a></p>
+  <p id="idLcnpt006ivrsnnam">name::
+    <br>* Mcs.Owlontology'version,
+    <a class="clsHide" href="#idLcnpt006ivrsnnam"></a></p>
+  </section>
+
   <section id="idLcnpt006ientt">
-  <h3 id="idLcnpt006ienttH3">entity of Owlinput
+  <h3 id="idLcnpt006ienttH3">entity of Owlontology
     <a class="clsHide" href="#idLcnpt006ienttH3"></a></h3>
   <p id="idLcnpt006ienttdsn">description::
     <br>"Entities: elements used to refer to real-world objects
@@ -2296,7 +2391,7 @@
     <a class="clsHide" href="#idLcnpt006ienttdsn"></a></p>
   <p id="idLcnpt006ienttnam">name::
     <br>* Mcs.Owlentity,
-    <br>* Mcs.Owlinput'entity!⇒Owlentity,
+    <br>* Mcs.Owlontology'entity!⇒Owlentity,
     <br>* Mcs.entity!⇨OWL,
     <a class="clsHide" href="#idLcnpt006ienttnam"></a></p>
 
@@ -2368,6 +2463,9 @@
   <h5 id="idLcnpt006iprptDttpH5">Owlproperty.datatype
     <a class="clsHide" href="#idLcnpt006iprptDttpH5"></a></h5>
   <p id="idLcnpt006iprptDttpdsn">description::
+    <br>"Data properties connect individuals with literals."
+    <br>[{2021-01-10} https://www.w3.org/TR/2012/REC-owl2-syntax-20121211/#Data_Properties]
+    <br>===
     <br>"Properties in OWL 2 are further subdivided.
     <br>Object properties relate objects to objects (like a person to their spouse), while datatype properties assign data values to objects (like an age to a person).
     <br>Annotation properties are used to encode information about (parts of) the ontology itself (like the author and creation date of an axiom) instead of the domain of interest."
@@ -2395,8 +2493,37 @@
   </section>
   </section>
 
+  <section id="idLcnpt006ivoc">
+  <h3 id="idLcnpt006ivocH3">vocabulary of Owlontology
+    <a class="clsHide" href="#idLcnpt006ivocH3"></a></h3>
+  <p id="idLcnpt006ivocdsn">description::
+    <br>"Entities are the fundamental building blocks of OWL 2 ontologies, and they define the vocabulary — the named terms — of an ontology.
+    <br>In logic, the set of entities is usually said to constitute the signature of an ontology.
+    <br>Apart from entities, OWL 2 ontologies typically also contain literals, such as strings or integers."
+    <br>[{2021-01-10} https://www.w3.org/TR/2012/REC-owl2-syntax-20121211/#Entities.2C_Literals.2C_and_Anonymous_Individuals]
+    <a class="clsHide" href="#idLcnpt006ivocdsn"></a></p>
+  <p id="idLcnpt006ivocnam">name::
+    <br>* Mcs.Owlontology'vocabulary,
+    <br>* Mcs.vocabulary!⇨OWL,
+    <a class="clsHide" href="#idLcnpt006ivocnam"></a></p>
+  </section>
+
+  <section id="idLcnpt006iltrl">
+  <h3 id="idLcnpt006iltrlH3">literal of Owlontology
+    <a class="clsHide" href="#idLcnpt006iltrlH3"></a></h3>
+  <p id="idLcnpt006iltrldsn">description::
+    <br>"Literals represent data values such as particular strings or integers.
+    <br>They are analogous to typed RDF literals [RDF Concepts] and can also be understood as individuals denoting data values."
+    <br>[{2021-01-10} https://www.w3.org/TR/2012/REC-owl2-syntax-20121211/#Literals]
+    <a class="clsHide" href="#idLcnpt006iltrldsn"></a></p>
+  <p id="idLcnpt006iltrlnam">name::
+    <br>* Mcs.Owlliteral,
+    <br>* Mcs.Owlontology'literal!⇒Owlliteral,
+    <a class="clsHide" href="#idLcnpt006iltrlnam"></a></p>
+  </section>
+
   <section id="idLcnpt006iaxom">
-  <h3 id="idLcnpt006iaxomH3">axiom of Owlinput
+  <h3 id="idLcnpt006iaxomH3">axiom of Owlontology
     <a class="clsHide" href="#idLcnpt006iaxomH3"></a></h3>
   <p id="idLcnpt006iaxomdsn">description::
     <br>"Now, in order to formulate knowledge explicitly, it is useful to assume that it consists of elementary pieces that are often referred to as statements or propositions. Statements like “it is raining” or “every man is mortal” are typical examples for such basic propositions. Indeed, every OWL 2 ontology is essentially just a collection of such basic “pieces of knowledge.” Statements that are made in an ontology are called axioms in OWL 2, and the ontology asserts that its axioms are true. In general, OWL statements might be either true or false given a certain state of affairs. This distinguishes them from entities and expressions as described further below."
@@ -2404,20 +2531,34 @@
     <a class="clsHide" href="#idLcnpt006iaxomdsn"></a></p>
   <p id="idLcnpt006iaxomnam">name::
     <br>* Mcs.Owlaxiom,
-    <br>* Mcs.Owlinput'axiom!⇒Owlaxiom,
+    <br>* Mcs.Owlontology'axiom!⇒Owlaxiom,
     <br>* Mcs.axiom!⇨OWL,
     <a class="clsHide" href="#idLcnpt006iaxomnam"></a></p>
   </section>
 
+  <section id="idLcnpt006iantn">
+  <h3 id="idLcnpt006iantnH3">annotation of Owlontology
+    <a class="clsHide" href="#idLcnpt006iantnH3"></a></h3>
+  <p id="idLcnpt006iantndsn">description::
+    <br>"OWL 2 applications often need ways to associate additional information with ontologies, entities, and axioms. To this end, OWL 2 provides for annotations on ontologies, axioms, and entities.
+    <br>eample: One might want to associate human-readable labels with IRIs and use them when visualizing an ontology. To this end, one might use the rdfs:label annotation property to associate such labels with ontology IRIs."
+    <br>[{2021-01-10} https://www.w3.org/TR/2012/REC-owl2-syntax-20121211/#Annotations]
+    <a class="clsHide" href="#idLcnpt006iantndsn"></a></p>
+  <p id="idLcnpt006iantnnam">name::
+    <br>* Mcs.Owlannotation,
+    <br>* Mcs.Owlontology'annotation!⇒Owlannotation,
+    <a class="clsHide" href="#idLcnpt006iantnnam"></a></p>
+  </section>
+
   <section id="idLcnpt006owan">
-  <h3 id="idLcnpt006owanH3">open-world-assumption of Owlinput
+  <h3 id="idLcnpt006owanH3">open-world-assumption of Owlontology
     <a class="clsHide" href="#idLcnpt006owanH3"></a></h3>
   <p id="idLcnpt006owandsn">description::
     <br>"If some fact is not present in a database, it is usually considered false (the so-called closed-world assumption) whereas in the case of an OWL 2 document it may simply be missing (but possibly true), following the open-world assumption."
     <br>[{2021-01-08} https://www.w3.org/TR/2012/REC-owl2-primer-20121211/#What_is_OWL_2.3F]
     <a class="clsHide" href="#idLcnpt006owandsn"></a></p>
   <p id="idLcnpt006owannam">name::
-    <br>* Mcs.Owlinput'open-world-assumption,
+    <br>* Mcs.Owlontology'open-world-assumption,
     <br>* Mcs.lagOwl0'open-world-assumption,
     <br>* Mcs.open-world-assumption!⇨OWL,
     <a class="clsHide" href="#idLcnpt006owannam"></a></p>
@@ -2433,10 +2574,14 @@
   <h2 id="idLcnpt006otptH2">output of lagOwl0
     <a class="clsHide" href="#idLcnpt006otptH2"></a></h2>
   <p id="idLcnpt006otptdsn">description::
-    <br>·
+    <br>· the-output of the-mapping.
+    <br>===
+    <br>"An OWL 2 ontology is an abstract notion defined in terms of the structural specification. Each ontology is associated with an ontology document, which physically contains the ontology stored in a particular way. The name "ontology document" reflects the expectation that a large number of ontologies will be stored in physical text documents written in one of the syntaxes of OWL 2. OWL 2 tools, however, are free to devise other types of ontology documents — that is, to introduce other ways of physically storing ontologies."
+    <br>[{2021-01-10} https://www.w3.org/TR/2012/REC-owl2-syntax-20121211/#Ontologies]
     <a class="clsHide" href="#idLcnpt006otptdsn"></a></p>
   <p id="idLcnpt006otptnam">name::
-    <br>* Mcs.lagOwl0'output,
+    <br>* Mcs.lagOwl0'document!⇒Owldoc,
+    <br>* Mcs.lagOwl0'output!⇒Owldoc,
     <a class="clsHide" href="#idLcnpt006otptnam"></a></p>
   </section>
 
@@ -2542,6 +2687,149 @@
     <br>* Mcs.lagCnpt.SPARQL!⇒lagSprq,
     <br>* Mcs.lagSprq,
     <a class="clsHide" href="#idLcnpt009nam"></a></p>
+</section>
+
+<section id="idLcnpt010">
+  <h1 id="idLcnpt010H1">lagCnpt.XML-010
+    <a class="clsHide" href="#idLcnpt010H1"></a></h1>
+  <p id="idLcnpt010dsn">description::
+    <br>· XML is a-markup-language that can-model conceptual-views human and machine-readable.
+    <a class="clsHide" href="#idLcnpt010dsn"></a></p>
+  <p id="idLcnpt010nam">name::
+    <br>* Mcs.XML'(extensible-markup-language)!⇒lagXml0,
+    <br>* Mcs.lagCnpt.010-XML!⇒lagXml0,
+    <br>* Mcs.lagCnpt.XML!⇒lagXml0,
+    <a class="clsHide" href="#idLcnpt010nam"></a></p>
+  <p id="idLcnpt010dsnL">descriptionLong::
+    <br>"The Extensible Markup Language (XML) is a subset of SGML that is completely described in this document.
+    <br>Its goal is to enable generic SGML to be served, received, and processed on the Web in the way that is now possible with HTML.
+    <br>XML has been designed for ease of implementation and for interoperability with both SGML and HTML."
+    <br>[{2021-01-11} https://www.w3.org/TR/2006/REC-xml11-20060816/]
+    <br>===
+    <br>"Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. The World Wide Web Consortium's XML 1.0 Specification[2] of 1998[3] and several other related specifications[4]—all of them free open standards—define XML.[5]
+    <br>The design goals of XML emphasize simplicity, generality, and usability across the Internet.[6] It is a textual data format with strong support via Unicode for different human languages. Although the design of XML focuses on documents, the language is widely used for the representation of arbitrary data structures[7] such as those used in web services.
+    <br>Several schema systems exist to aid in the definition of XML-based languages, while programmers have developed many application programming interfaces (APIs) to aid the processing of XML data."
+    <a class="clsHide" href="#idLcnpt010dsnL"></a></p>
+
+  <section id="idLcnpt010mchn">
+  <h2 id="idLcnpt010mchnH2">machine of lagXml0
+    <a class="clsHide" href="#idLcnpt010mchnH2"></a></h2>
+  <p id="idLcnpt010mchndsn">description::
+    <br>· any computer.
+    <a class="clsHide" href="#idLcnpt010mchndsn"></a></p>
+  <p id="idLcnpt010mchnnam">name::
+    <br>* Mcs.lagXml0'machine,
+    <a class="clsHide" href="#idLcnpt010mchnnam"></a></p>
+  </section>
+
+  <section id="idLcnpt010inpt">
+  <h2 id="idLcnpt010inptH2">input of lagXml0
+    <a class="clsHide" href="#idLcnpt010inptH2"></a></h2>
+  <p id="idLcnpt010inptdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLcnpt010inptdsn"></a></p>
+  <p id="idLcnpt010inptnam">name::
+    <br>* Mcs.lagXml0'input,
+    <a class="clsHide" href="#idLcnpt010inptnam"></a></p>
+  </section>
+
+  <section id="idLcnpt010otpt">
+  <h2 id="idLcnpt010otptH2">output of lagXml0
+    <a class="clsHide" href="#idLcnpt010otptH2"></a></h2>
+  <p id="idLcnpt010otptdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLcnpt010otptdsn"></a></p>
+  <p id="idLcnpt010otptnam">name::
+    <br>* Mcs.Xmldoc,
+    <br>* Mcs.lagXml0'output!⇒Xmldoc,
+    <a class="clsHide" href="#idLcnpt010otptnam"></a></p>
+
+  <section id="idLcnpt010otptentt">
+  <h3 id="idLcnpt010otptenttH3">entity of Xmldoc
+    <a class="clsHide" href="#idLcnpt010otptenttH3"></a></h3>
+  <p id="idLcnpt010otptenttdsn">description::
+    <br>"Physically, the document is composed of units called entities. An entity may refer to other entities to cause their inclusion in the document. A document begins in a "root" or document entity."
+    <br>[{2021-01-11} https://www.w3.org/TR/2006/REC-xml11-20060816/#sec-documents]
+    <a class="clsHide" href="#idLcnpt010otptenttdsn"></a></p>
+  <p id="idLcnpt010otptenttnam">name::
+    <br>* Mcs.Xmldoc'entity!⇒Xmlentity,
+    <a class="clsHide" href="#idLcnpt010otptenttnam"></a></p>
+
+  <section id="idLcnpt010otptenttDoc">
+  <h4 id="idLcnpt010otptenttDocH4">Xmlentity.document of Xmldoc
+    <a class="clsHide" href="#idLcnpt010otptenttDocH4"></a></h4>
+  <p id="idLcnpt010otptenttDocdsn">description::
+    <br>"[Definition: The document entity serves as the root of the entity tree and a starting-point for an XML processor.] This specification does not specify how the document entity is to be located by an XML processor; unlike other entities, the document entity has no name and might well appear on a processor input stream without any identification at all."
+    <br>[{2021-01-11} https://www.w3.org/TR/2006/REC-xml11-20060816/#dt-docent]
+    <a class="clsHide" href="#idLcnpt010otptenttDocdsn"></a></p>
+  <p id="idLcnpt010otptenttDocnam">name::
+    <br>* Mcs.Xmldoc'document-entity,
+    <br>* Mcs.Xmldocument-entity,
+    <br>* Mcs.Xmlentity.document,
+    <a class="clsHide" href="#idLcnpt010otptenttDocnam"></a></p>
+  </section>
+  </section>
+  </section>
+
+  <section id="idLcnpt010eval">
+  <h2 id="idLcnpt010evalH2">evaluation of lagXml0
+    <a class="clsHide" href="#idLcnpt010evalH2"></a></h2>
+  <p id="idLcnpt010evaldsn">description::
+    <br>·
+    <a class="clsHide" href="#idLcnpt010evaldsn"></a></p>
+  <p id="idLcnpt010evalnam">name::
+    <br>* Mcs.lagXml0'evaluation,
+    <a class="clsHide" href="#idLcnpt010evalnam"></a></p>
+
+  <section id="idLcnpt010eval">
+  <h3 id="idLcnpt010evalH3">relation-to-lagJson (<a class="clsPreview" href="filMcsLjson.last.html#idJsonrtxml">link</a>) of lagXml0
+    <a class="clsHide" href="#idLcnpt010evalH3"></a></h3>
+  </section>
+  </section>
+
+  <section id="idLcnpt010tool">
+  <h2 id="idLcnpt010toolH2">tool of lagXml0
+    <a class="clsHide" href="#idLcnpt010toolH2"></a></h2>
+  <p id="idLcnpt010tooldsn">description::
+    <br>·
+    <a class="clsHide" href="#idLcnpt010tooldsn"></a></p>
+  <p id="idLcnpt010toolnam">name::
+    <br>* Mcs.lagXml0'tool,
+    <a class="clsHide" href="#idLcnpt010toolnam"></a></p>
+  </section>
+
+  <section id="idLcnpt010rscF">
+  <h2 id="idLcnpt010rscFH2">Infrsc of lagXml0
+    <a class="clsHide" href="#idLcnpt010rscFH2"></a></h2>
+  <p id="idLcnpt010rscFdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLcnpt010rscFdsn"></a></p>
+  <p id="idLcnpt010rscFnam">name::
+    <br>* Mcs.lagXml0'Infrsc,
+    <a class="clsHide" href="#idLcnpt010rscFnam"></a></p>
+
+  <section id="idLcnpt010spec">
+  <h3 id="idLcnpt010specH3">specification of lagXml0
+    <a class="clsHide" href="#idLcnpt010specH3"></a></h3>
+  <p id="idLcnpt010specdsn">description::
+    <br>* Extensible Markup Language (XML) 1.1 (Second Edition), W3C Recommendation 16 August 2006, edited in place 29 September 2006, https://www.w3.org/TR/xml11/,
+    <a class="clsHide" href="#idLcnpt010specdsn"></a></p>
+  <p id="idLcnpt010specnam">name::
+    <br>* Mcs.lagXml0'specification,
+    <a class="clsHide" href="#idLcnpt010specnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLcnpt010evgF">
+  <h2 id="idLcnpt010evgFH2">evoluting of lagXml0
+    <a class="clsHide" href="#idLcnpt010evgFH2"></a></h2>
+  <p id="idLcnpt010evgFdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLcnpt010evgFdsn"></a></p>
+  <p id="idLcnpt010evgFnam">name::
+    <br>* Mcs.lagXml0'evoluting,
+    <a class="clsHide" href="#idLcnpt010evgFnam"></a></p>
+  </section>
 </section>
 
 <section id="idMeta">
