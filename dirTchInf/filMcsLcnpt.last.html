@@ -2748,7 +2748,7 @@
   <h2 id="idLxml0inptH2">input of lagXml0
     <a class="clsHide" href="#idLxml0inptH2"></a></h2>
   <p id="idLxml0inptdsn">description::
-    <br>·
+    <br>· lagXml0 maps simple conceptual-views eg a-person[a] with some attributes of it[a].
     <a class="clsHide" href="#idLxml0inptdsn"></a></p>
   <p id="idLxml0inptnam">name::
     <br>* Mcs.lagXml0'input,
@@ -2759,7 +2759,7 @@
   <h2 id="idLxml0otptH2">output of lagXml0
     <a class="clsHide" href="#idLxml0otptH2"></a></h2>
   <p id="idLxml0otptdsn">description::
-    <br>·
+    <br>· the-output is a-markup-document with Xmlelements denoting concepts or attributes of concepts.
     <a class="clsHide" href="#idLxml0otptdsn"></a></p>
   <p id="idLxml0otptnam">name::
     <br>* Mcs.Xmldoc,
@@ -3064,6 +3064,19 @@
     <br>* Mcs.Xmlelement'attribute,
     <a class="clsHide" href="#idLxml0oelmtattrnam"></a></p>
   </section>
+
+  <section id="idLxml0oelmtctnt">
+  <h4 id="idLxml0oelmtctntH4">content of Xmlelement
+    <a class="clsHide" href="#idLxml0oelmtctntH4"></a></h4>
+  <p id="idLxml0oelmtctntdsn">description::
+    <br>"[Definition: The text between the start-tag and end-tag is called the element's content:]
+    <br>Content of Elements
+    <br><code id="idLxmlntcontent">[43]   	content	   ::=   	CharData? ((element | Reference | CDSect | PI | Comment) CharData?)*"</code>
+    <a class="clsHide" href="#idLxml0oelmtctntdsn"></a></p>
+  <p id="idLxml0oelmtctntnam">name::
+    <br>* Mcs.Xmlelement'content,
+    <a class="clsHide" href="#idLxml0oelmtctntnam"></a></p>
+  </section>
   </section>
 
   <section id="idLxml0oschm">
@@ -3093,6 +3106,22 @@
     <br>* Mcs.XmlDtd,
     <br>* Mcs.lagXml0'DTD!⇒XmlDtd,
     <a class="clsHide" href="#idLxml0Dtdnam"></a></p>
+  <p id="idLxml0Dtdwpa">addressWpg::
+    <br>* https://en.wikipedia.org/wiki/Document_type_definition,
+    <a class="clsHide" href="#idLxml0Dtdwpa"></a></p>
+
+  <section id="idLxml0Dtdscrt">
+  <h4 id="idLxml0DtdscrtH4">security of XmlDtd
+    <a class="clsHide" href="#idLxml0DtdscrtH4"></a></h4>
+  <p id="idLxml0Dtdscrtdsn">description::
+    <br>"An XML DTD can be used to create a denial of service (DoS) attack by defining nested entities that expand exponentially, or by sending the XML parser to an external resource that never returns.[10]
+    <br>For this reason, .NET Framework provides a property that allows prohibiting or skipping DTD parsing,[10] and recent versions of Microsoft Office applications (Microsoft Office 2010 and higher) refuse to open XML files that contain DTD declarations."
+    <br>[{2021-01-12} https://en.wikipedia.org/wiki/Document_type_definition#Security]
+    <a class="clsHide" href="#idLxml0Dtdscrtdsn"></a></p>
+  <p id="idLxml0Dtdscrtnam">name::
+    <br>* Mcs.XmlDtd'security,
+    <a class="clsHide" href="#idLxml0Dtdscrtnam"></a></p>
+  </section>
   </section>
   </section>
   </section>
