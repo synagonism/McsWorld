@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCnpt-(0-12-0.2021-01-12 draft) concept-language</title>
+  <title>Mcs.lagCnpt-(0-13-0.2021-01-13 draft) concept-language</title>
   <meta name="keywords" content="concept-language, lagCnpt, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -2763,32 +2763,59 @@
     <a class="clsHide" href="#idLxml0otptdsn"></a></p>
   <p id="idLxml0otptnam">name::
     <br>* Mcs.Xmldoc,
+    <br>* Mcs.lagXml0'instance-document!⇒Xmldoc,
     <br>* Mcs.lagXml0'output!⇒Xmldoc,
     <a class="clsHide" href="#idLxml0otptnam"></a></p>
 
-  <section id="idLxml0otptentt">
-  <h3 id="idLxml0otptenttH3">entity of Xmldoc
-    <a class="clsHide" href="#idLxml0otptenttH3"></a></h3>
-  <p id="idLxml0otptenttdsn">description::
+  <section id="idLxml0oentt">
+  <h3 id="idLxml0oenttH3">entity of Xmldoc
+    <a class="clsHide" href="#idLxml0oenttH3"></a></h3>
+  <p id="idLxml0oenttdsn">description::
     <br>"Physically, the document is composed of units called entities. An entity may refer to other entities to cause their inclusion in the document. A document begins in a "root" or document entity."
     <br>[{2021-01-11} https://www.w3.org/TR/2006/REC-xml11-20060816/#sec-documents]
-    <a class="clsHide" href="#idLxml0otptenttdsn"></a></p>
-  <p id="idLxml0otptenttnam">name::
+    <a class="clsHide" href="#idLxml0oenttdsn"></a></p>
+  <p id="idLxml0oenttnam">name::
     <br>* Mcs.Xmldoc'entity!⇒Xmlentity,
-    <a class="clsHide" href="#idLxml0otptenttnam"></a></p>
+    <a class="clsHide" href="#idLxml0oenttnam"></a></p>
 
-  <section id="idLxml0otptenttDoc">
-  <h4 id="idLxml0otptenttDocH4">Xmlentity.document of Xmldoc
-    <a class="clsHide" href="#idLxml0otptenttDocH4"></a></h4>
-  <p id="idLxml0otptenttDocdsn">description::
+  <section id="idLxml0oenttDoc">
+  <h4 id="idLxml0oenttDocH4">Xmlentity.root of Xmldoc
+    <a class="clsHide" href="#idLxml0oenttDocH4"></a></h4>
+  <p id="idLxml0oenttDocdsn">description::
     <br>"[Definition: The document entity serves as the root of the entity tree and a starting-point for an XML processor.] This specification does not specify how the document entity is to be located by an XML processor; unlike other entities, the document entity has no name and might well appear on a processor input stream without any identification at all."
     <br>[{2021-01-11} https://www.w3.org/TR/2006/REC-xml11-20060816/#dt-docent]
-    <a class="clsHide" href="#idLxml0otptenttDocdsn"></a></p>
-  <p id="idLxml0otptenttDocnam">name::
+    <a class="clsHide" href="#idLxml0oenttDocdsn"></a></p>
+  <p id="idLxml0oenttDocnam">name::
     <br>* Mcs.Xmldoc'document-entity,
     <br>* Mcs.Xmldocument-entity,
     <br>* Mcs.Xmlentity.document,
-    <a class="clsHide" href="#idLxml0otptenttDocnam"></a></p>
+    <br>* Mcs.Xmlentity.root,
+    <a class="clsHide" href="#idLxml0oenttDocnam"></a></p>
+  </section>
+
+  <section id="idLxml0oenttPrsd">
+  <h4 id="idLxml0oenttPrsdH4">Xmlentity.parsed of Xmldoc
+    <a class="clsHide" href="#idLxml0oenttPrsdH4"></a></h4>
+  <p id="idLxml0oenttPrsddsn">description::
+    <br>"Entities may be either parsed or unparsed.
+    <br>[Definition: The contents of a parsed entity are referred to as its replacement text; this text is considered an integral part of the document.]"
+    <br>[{2021-01-13} https://www.w3.org/TR/2006/REC-xml11-20060816/#dt-parsedent]
+    <a class="clsHide" href="#idLxml0oenttPrsddsn"></a></p>
+  <p id="idLxml0oenttPrsdnam">name::
+    <br>* Mcs.Xmlentity.parsed,
+    <a class="clsHide" href="#idLxml0oenttPrsdnam"></a></p>
+  </section>
+
+  <section id="idLxml0oenttPrsdN">
+  <h4 id="idLxml0oenttPrsdNH4">Xmlentity.unparsed of Xmldoc
+    <a class="clsHide" href="#idLxml0oenttPrsdNH4"></a></h4>
+  <p id="idLxml0oenttPrsdNdsn">description::
+    <br>"[Definition: An unparsed entity is a resource whose contents may or may not be text, and if text, may be other than XML. Each unparsed entity has an associated notation, identified by name. Beyond a requirement that an XML processor make the identifiers for the entity and notation available to the application, XML places no constraints on the contents of unparsed entities.]"
+    <br>[{2021-01-13} https://www.w3.org/TR/2006/REC-xml11-20060816/#dt-unparsed]
+    <a class="clsHide" href="#idLxml0oenttPrsdNdsn"></a></p>
+  <p id="idLxml0oenttPrsdNnam">name::
+    <br>* Mcs.Xmlentity.unparsed,
+    <a class="clsHide" href="#idLxml0oenttPrsdNnam"></a></p>
   </section>
   </section>
 
@@ -2796,7 +2823,7 @@
   <h3 id="idLxml0otextH3">text of Xmldoc
     <a class="clsHide" href="#idLxml0otextH3"></a></h3>
   <p id="idLxml0otextdsn">description::
-    <br>"Definition: A parsed entity contains text, a sequence of characters, which may represent <a class="clsPreview" href="idLxml0omrkp">markup</a> or <a class="clsPreview" href="idLxml0ochdt">character data</a>."
+    <br>"Definition: A parsed entity contains text, a sequence of characters, which may represent <a class="clsPreview" href="#idLxml0omrkp">markup</a> or <a class="clsPreview" href="#idLxml0ochdt">character data</a>."
     <br>[{2021-01-12} https://www.w3.org/TR/2006/REC-xml11-20060816/#dt-text]
     <a class="clsHide" href="#idLxml0otextdsn"></a></p>
   <p id="idLxml0otextnam">name::
@@ -2809,14 +2836,144 @@
     <a class="clsHide" href="#idLxml0ocharH4"></a></h4>
   <p id="idLxml0ochardsn">description::
     <br>"Definition: A character is an atomic unit of text as specified by ISO/IEC 10646 [ISO/IEC 10646].
-    <br>Legal characters are tab, carriage return, line feed, and the legal characters of Unicode and ISO/IEC 10646."
+    <br>Legal characters are tab, carriage return, line feed, and the legal characters of Unicode and ISO/IEC 10646.
+    ..Character Range
+    <br><code id="idLxmlntChar">[2]   	Char	   ::=   	[#x1-#xD7FF] | [#xE000-#xFFFD] | [#x10000-#x10FFFF]	/* any Unicode character, excluding the surrogate blocks, FFFE, and FFFF. */</code>
+    <br><code id="idLxmlntRestrictedChar">[2a]   	RestrictedChar	   ::=   	[#x1-#x8] | [#xB-#xC] | [#xE-#x1F] | [#x7F-#x84] | [#x86-#x9F]</code>
+    <br>The mechanism for encoding character code points into bit patterns may vary from entity to entity. "
     <br>[{2021-01-12} https://www.w3.org/TR/2006/REC-xml11-20060816/#dt-character]
     <a class="clsHide" href="#idLxml0ochardsn"></a></p>
   <p id="idLxml0ocharnam">name::
-    <br>* Mcs.Xmldoc'character,
-    <br>* Mcs.Xmltext'character,
-    <br>* Mcs.character!⇨XML,
+    <br>* Mcs.Xmlchar,
+    <br>* Mcs.Xmldoc'character!⇒Xmlchar,
+    <br>* Mcs.Xmltext'character!⇒Xmlchar,
+    <br>* Mcs.character!⇨XML!⇒Xmlchar,
     <a class="clsHide" href="#idLxml0ocharnam"></a></p>
+  </section>
+
+  <section id="idLxml0ocharWhsp">
+  <h4 id="idLxml0ocharWhspH4">Xmlchar.whitespace
+    <a class="clsHide" href="#idLxml0ocharWhspH4"></a></h4>
+  <p id="idLxml0ocharWhspdsn">description::
+    <br>"S (white space) consists of one or more space (#x20) characters, carriage returns, line feeds, or tabs.
+    <br>White Space
+    <br><code id="idLxmlntS">[3]   	S	   ::=   	(#x20 | #x9 | #xD | #xA)+</code>
+    <br>Note:
+    <br>The presence of #xD in the above production is maintained purely for backward compatibility with the First Edition. As explained in 2.11 End-of-Line Handling, all #xD characters literally present in an XML document are either removed or replaced by #xA characters before any other processing is done. The only way to get a #xD character to match this production is to use a character reference in an entity value literal."
+    <br>[{2021-01-13} https://www.w3.org/TR/2006/REC-xml11-20060816/#sec-common-syn]
+    <a class="clsHide" href="#idLxml0ocharWhspdsn"></a></p>
+  <p id="idLxml0ocharWhspnam">name::
+    <br>* Mcs.Xmlchar.whitespace,
+    <a class="clsHide" href="#idLxml0ocharWhspnam"></a></p>
+  </section>
+
+  <section id="idLxml0ocharName">
+  <h4 id="idLxml0ocharNameH4">Xmlchar.name
+    <a class="clsHide" href="#idLxml0ocharNameH4"></a></h4>
+  <p id="idLxml0ocharNamedsn">description::
+    <br>"[Definition: A Name is a token beginning with a letter or one of a few punctuation characters, and continuing with letters, digits, hyphens, underscores, colons, or full stops, together known as name characters.] Names beginning with the string "xml", or with any string which would match (('X'|'x') ('M'|'m') ('L'|'l')), are reserved for standardization in this or future versions of this specification.
+    <br>Note:
+    <br>The Namespaces in XML Recommendation [XML Names] assigns a meaning to names containing colon characters. Therefore, authors should not use the colon in XML names except for namespace purposes, but XML processors must accept the colon as a name character.
+    <br>... Names and Tokens
+    <br><code id="idLxmlntNameStartChar">[4]   	NameStartChar	   ::=   	":" | [A-Z] | "_" | [a-z] | [#xC0-#xD6] | [#xD8-#xF6] | [#xF8-#x2FF] | [#x370-#x37D] | [#x37F-#x1FFF] | [#x200C-#x200D] | [#x2070-#x218F] | [#x2C00-#x2FEF] | [#x3001-#xD7FF] | [#xF900-#xFDCF] | [#xFDF0-#xFFFD] | [#x10000-#xEFFFF]</code>
+    <br><code id="idLxmlntNameChar">[4a]   	NameChar	   ::=   	NameStartChar | "-" | "." | [0-9] | #xB7 | [#x0300-#x036F] | [#x203F-#x2040]</code>
+    <br><code id="idLxmlntName">[5]   	Name	   ::=   	NameStartChar (NameChar)*</code>
+    <br><code id="idLxmlntNames">[6]   	Names	   ::=   	Name (#x20 Name)*</code>
+    <br><code id="idLxmlntNmtoken">[7]   	Nmtoken	   ::=   	(NameChar)+</code>
+    <br><code id="idLxmlntNmtokens">[8]   	Nmtokens	   ::=   	Nmtoken (#x20 Nmtoken)*"</code>
+    <br>[{2021-01-13} https://www.w3.org/TR/2006/REC-xml11-20060816/#dt-name]
+    <a class="clsHide" href="#idLxml0ocharNamedsn"></a></p>
+  <p id="idLxml0ocharNamenam">name::
+    <br>* Mcs.Xmlchar.name!⇒Xmlname,
+    <br>* Mcs.Xmlname,
+    <a class="clsHide" href="#idLxml0ocharNamenam"></a></p>
+  </section>
+
+  <section id="idLxml0ocharNmsc">
+  <h4 id="idLxml0ocharNmscH4">Xmlchar.namespace
+    <a class="clsHide" href="#idLxml0ocharNmscH4"></a></h4>
+  <p id="idLxml0ocharNmscdsn">description::
+    <br>"Definition: An XML namespace is identified by a URI reference [RFC3986]; element and attribute names may be placed in an XML namespace using the mechanisms described in this specification."
+    <br>[{2021-01-13} https://www.w3.org/TR/2009/REC-xml-names-20091208/#dt-namespace]
+    <a class="clsHide" href="#idLxml0ocharNmscdsn"></a></p>
+  <p id="idLxml0ocharNmscnam">name::
+    <br>* Mcs.Xmlchar.namespace!⇒Xmlnamespace,
+    <br>* Mcs.Xmlnamespace,
+    <br>* Mcs.namespace!⇨XML,
+    <a class="clsHide" href="#idLxml0ocharNmscnam"></a></p>
+
+  <section id="idLxml0ocharNmscname">
+  <h5 id="idLxml0ocharNmscnameH5">Xmlnamespace'name
+    <a class="clsHide" href="#idLxml0ocharNmscnameH5"></a></h5>
+  <p id="idLxml0ocharNmscnamedsn">description::
+    <br>"[Definition: An expanded name is a pair consisting of a namespace name and a local name. ]
+    <br>[Definition: For a name N in a namespace identified by a URI I, the namespace name is I. For a name N that is not in a namespace, the namespace name has no value. ]
+    <br>[Definition: In either case the local name is N. ]
+    <br>It is this combination of the universally managed URI namespace with the vocabulary's local names that is effective in avoiding name clashes."
+    <br>[{2021-01-13} https://www.w3.org/TR/2009/REC-xml-names-20091208/#dt-namespace]
+    <a class="clsHide" href="#idLxml0ocharNmscnamedsn"></a></p>
+  <p id="idLxml0ocharNmscnamenam">name::
+    <br>* Mcs.Xmlnamespace'name,
+    <br>* Mcs.namespace-name!⇨XML,
+    <a class="clsHide" href="#idLxml0ocharNmscnamenam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLxml0ocharNmExd">
+  <h4 id="idLxml0ocharNmExdH4">Xmlchar.expanded-name
+    <a class="clsHide" href="#idLxml0ocharNmExdH4"></a></h4>
+  <p id="idLxml0ocharNmExddsn">description::
+    <br>"[Definition: An expanded name is a pair consisting of a namespace name and a local name. ]
+    <br>[Definition: For a name N in a namespace identified by a URI I, the namespace name is I. For a name N that is not in a namespace, the namespace name has no value. ]
+    <br>[Definition: In either case the local name is N. ]
+    <br>It is this combination of the universally managed URI namespace with the vocabulary's local names that is effective in avoiding name clashes."
+    <br>[{2021-01-13} https://www.w3.org/TR/2009/REC-xml-names-20091208/#dt-namespace]
+    <a class="clsHide" href="#idLxml0ocharNmExddsn"></a></p>
+  <p id="idLxml0ocharNmExdnam">name::
+    <br>* Mcs.Xmlchar.expanded-name,
+    <br>* Mcs.expanded-name!⇨XML,
+    <a class="clsHide" href="#idLxml0ocharNmExdnam"></a></p>
+  </section>
+
+  <section id="idLxml0ocharNmLcl">
+  <h4 id="idLxml0ocharNmLclH4">Xmlchar.local-name
+    <a class="clsHide" href="#idLxml0ocharNmLclH4"></a></h4>
+  <p id="idLxml0ocharNmLcldsn">description::
+    <br>"[Definition: An expanded name is a pair consisting of a namespace name and a local name. ]
+    <br>[Definition: For a name N in a namespace identified by a URI I, the namespace name is I. For a name N that is not in a namespace, the namespace name has no value. ]
+    <br>[Definition: In either case the local name is N. ]
+    <br>It is this combination of the universally managed URI namespace with the vocabulary's local names that is effective in avoiding name clashes."
+    <br>[{2021-01-13} https://www.w3.org/TR/2009/REC-xml-names-20091208/#dt-namespace]
+    <a class="clsHide" href="#idLxml0ocharNmLcldsn"></a></p>
+  <p id="idLxml0ocharNmLclnam">name::
+    <br>* Mcs.Xmlchar.local-name,
+    <br>* Mcs.local-name!⇨XML,
+    <a class="clsHide" href="#idLxml0ocharNmLclnam"></a></p>
+  </section>
+
+  <section id="idLxml0ocharNmQfd">
+  <h4 id="idLxml0ocharNmQfdH4">Xmlchar.qualified-name
+    <a class="clsHide" href="#idLxml0ocharNmQfdH4"></a></h4>
+  <p id="idLxml0ocharNmQfddsn">description::
+    <br>"URI references can contain characters not allowed in names, and are often inconveniently long, so expanded names are not used directly to name elements and attributes in XML documents. Instead qualified names are used.
+    <br>[Definition: A qualified name is a name subject to namespace interpretation. ]
+    <br>In documents conforming to this specification, element and attribute names appear as qualified names. Syntactically, they are either prefixed names or unprefixed names. An attribute-based declaration syntax is provided to bind prefixes to namespace names and to bind a default namespace that applies to unprefixed element names; these declarations are scoped by the elements on which they appear so that different bindings may apply in different parts of a document. Processors conforming to this specification MUST recognize and act on these declarations and prefixes.
+    <br>... In XML documents conforming to this specification, some names (constructs corresponding to the nonterminal Name) MUST be given as qualified names, defined as follows:
+    <br>
+    <br>Qualified Name
+    <br><code id="idLxmlntQName">[7]   	QName	   ::=   	PrefixedName | UnprefixedName</code>
+    <br><code id="idLxmlntPrefixedName">[8]   	PrefixedName	   ::=   	Prefix ':' LocalPart</code>
+    <br><code id="idLxmlntUnprefixedName">[9]   	UnprefixedName	   ::=   	LocalPart</code>
+    <br><code id="idLxmlntPrefix">[10]   	Prefix	   ::=   	NCName</code>
+    <br><code id="idLxmlntLocalPart">[11]   	LocalPart	   ::=   	NCName</code>
+    <br>The Prefix provides the namespace prefix part of the qualified name, and MUST be associated with a namespace URI reference in a namespace declaration. [Definition: The LocalPart provides the local part of the qualified name.]
+    <br>Note that the prefix functions only as a placeholder for a namespace name. Applications SHOULD use the namespace name, not the prefix, in constructing names whose scope extends beyond the containing document.
+    <br>[{2021-01-13} https://www.w3.org/TR/2009/REC-xml-names-20091208/#dt-qualname]
+    <a class="clsHide" href="#idLxml0ocharNmQfddsn"></a></p>
+  <p id="idLxml0ocharNmQfdnam">name::
+    <br>* Mcs.Xmlcha.qualified-name,
+    <br>* Mcs.qualified-name!⇨XML,
+    <a class="clsHide" href="#idLxml0ocharNmQfdnam"></a></p>
   </section>
   </section>
 
@@ -3072,10 +3229,48 @@
     <br>"[Definition: The text between the start-tag and end-tag is called the element's content:]
     <br>Content of Elements
     <br><code id="idLxmlntcontent">[43]   	content	   ::=   	CharData? ((element | Reference | CDSect | PI | Comment) CharData?)*"</code>
+    <br>[{2021-01-13} https://www.w3.org/TR/2006/REC-xml11-20060816/#dt-content]
     <a class="clsHide" href="#idLxml0oelmtctntdsn"></a></p>
   <p id="idLxml0oelmtctntnam">name::
     <br>* Mcs.Xmlelement'content,
     <a class="clsHide" href="#idLxml0oelmtctntnam"></a></p>
+  </section>
+
+  <section id="idLxml0oelmtRoot">
+  <h4 id="idLxml0oelmtRootH4">Xmlelement.root
+    <a class="clsHide" href="#idLxml0oelmtRootH4"></a></h4>
+  <p id="idLxml0oelmtRootdsn">description::
+    <br>"[Definition: There is exactly one element, called the root, or document element, no part of which appears in the content of any other element.] For all other elements, if the start-tag is in the content of another element, the end-tag is in the content of the same element. More simply stated, the elements, delimited by start- and end-tags, nest properly within each other."
+    <br>[{2021-01-13} https://www.w3.org/TR/2006/REC-xml11-20060816/#dt-root]
+    <a class="clsHide" href="#idLxml0oelmtRootdsn"></a></p>
+  <p id="idLxml0oelmtRootnam">name::
+    <br>* Mcs.Xmlelement.document,
+    <br>* Mcs.Xmlelement.root,
+    <a class="clsHide" href="#idLxml0oelmtRootnam"></a></p>
+  </section>
+
+  <section id="idLxml0oelmtPrnt">
+  <h4 id="idLxml0oelmtPrntH4">Xmlelement.parent-of-e
+    <a class="clsHide" href="#idLxml0oelmtPrntH4"></a></h4>
+  <p id="idLxml0oelmtPrntdsn">description::
+    <br>"[Definition: As a consequence of this, for each non-root element C in the document, there is one other element P in the document such that C is in the content of P, but is not in the content of any other element that is in the content of P. P is referred to as the parent of C, and C as a child of P.]"
+    <br>[{2021-01-13} https://www.w3.org/TR/2006/REC-xml11-20060816/#dt-parentchild]
+    <a class="clsHide" href="#idLxml0oelmtPrntdsn"></a></p>
+  <p id="idLxml0oelmtPrntnam">name::
+    <br>* Mcs.Xmlelement.parent-of-e,
+    <a class="clsHide" href="#idLxml0oelmtPrntnam"></a></p>
+  </section>
+
+  <section id="idLxml0oelmtChld">
+  <h4 id="idLxml0oelmtChldH4">Xmlelement.child-of-e
+    <a class="clsHide" href="#idLxml0oelmtChldH4"></a></h4>
+  <p id="idLxml0oelmtChlddsn">description::
+    <br>"[Definition: As a consequence of this, for each non-root element C in the document, there is one other element P in the document such that C is in the content of P, but is not in the content of any other element that is in the content of P. P is referred to as the parent of C, and C as a child of P.]"
+    <br>[{2021-01-13} https://www.w3.org/TR/2006/REC-xml11-20060816/#dt-parentchild]
+    <a class="clsHide" href="#idLxml0oelmtChlddsn"></a></p>
+  <p id="idLxml0oelmtChldnam">name::
+    <br>* Mcs.Xmlelement.child-of-e,
+    <a class="clsHide" href="#idLxml0oelmtChldnam"></a></p>
   </section>
   </section>
 
@@ -3083,14 +3278,19 @@
   <h3 id="idLxml0oschmH3">schema of Xmldoc
     <a class="clsHide" href="#idLxml0oschmH3"></a></h3>
   <p id="idLxml0oschmdsn">description::
-    <br>· the-structure of an-Xmldoc expressed in a-lagCnpt.
+    <br>· Xmlschema is a-document that describes the-structure of an-Xmldoc expressed in a-lagCnpt.
     <a class="clsHide" href="#idLxml0oschmdsn"></a></p>
   <p id="idLxml0oschmnam">name::
-    <br>* Mcs.Xmldoc'schema,
+    <br>* Mcs.Xmldoc'schema!⇒Xmlschema,
+    <br>* Mcs.Xmlschema,
     <a class="clsHide" href="#idLxml0oschmnam"></a></p>
+  <p id="idLxml0oschmdsnL">descriptionLong::
+    <br>"The purpose of a schema is to define a class of XML documents, and so the term "instance document" is often used to describe an XML document that conforms to a particular schema."
+    <br>[{2021-01-13} https://www.w3.org/TR/xmlschema-0/#PO]
+    <a class="clsHide" href="#idLxml0oschmdsnL"></a></p>
 
   <section id="idLxml0Dtd">
-  <h4 id="idLxml0DtdH4">DTD of Xmldoc
+  <h4 id="idLxml0DtdH4">Xmlschema.DTD
     <a class="clsHide" href="#idLxml0DtdH4"></a></h4>
   <p id="idLxml0Dtddsn">description::
     <br>"A DTD defines the valid building blocks of an XML document.
@@ -3184,9 +3384,14 @@
     <a class="clsHide" href="#idLxml0specH3"></a></h3>
   <p id="idLxml0specdsn">description::
     <br>* Extensible Markup Language (XML) 1.1 (Second Edition), W3C Recommendation 16 August 2006, edited in place 29 September 2006, https://www.w3.org/TR/xml11/,
+    <br>* Namespaces in XML 1.0 (Third Edition), W3C Recommendation 8 December 2009, https://www.w3.org/TR/REC-xml-names/,
+    <br>* XML Schema Part 0: Primer Second Edition, W3C Recommendation 28 October 2004, https://www.w3.org/TR/xmlschema-0/,
+    <br>* W3C XML Schema Definition Language (XSD) 1.1 Part 1: Structures, W3C Recommendation 5 April 2012, https://www.w3.org/TR/xmlschema11-1/,
+    <br>* W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes, W3C Recommendation 5 April 2012, https://www.w3.org/TR/xmlschema11-2/,
     <a class="clsHide" href="#idLxml0specdsn"></a></p>
   <p id="idLxml0specnam">name::
-    <br>* Mcs.lagXml0'specification,
+    <br>* Mcs.Xmlspec,
+    <br>* Mcs.lagXml0'specification!⇒Xmlspec,
     <a class="clsHide" href="#idLxml0specnam"></a></p>
   </section>
   </section>
@@ -3194,9 +3399,11 @@
   <section id="idLxml0evgF">
   <h2 id="idLxml0evgFH2">evoluting of lagXml0
     <a class="clsHide" href="#idLxml0evgFH2"></a></h2>
-  <p id="idLxml0evgFdsn">description::
-    <br>·
-    <a class="clsHide" href="#idLxml0evgFdsn"></a></p>
+  <p id="idLxml0evg1996">{lagCnpt-1996}-XML-creation::
+    <br>"XML was developed by an XML Working Group (originally known as the SGML Editorial Review Board) formed under the auspices of the World Wide Web Consortium (W3C) in 1996. It was chaired by Jon Bosak of Sun Microsystems with the active participation of an XML Special Interest Group (previously known as the SGML Working Group) also organized by the W3C. The membership of the XML Working Group is given in an appendix. Dan Connolly served as the Working Group's contact with the W3C."
+    <br>* Mcs.{lagCnpt-1996}-XML-creation,
+    <br>[{2021-01-12} https://www.w3.org/TR/2006/REC-xml11-20060816/#sec-origin-goals]
+    <a class="clsHide" href="#idLxml0evg1996"></a></p>
   <p id="idLxml0evgFnam">name::
     <br>* Mcs.lagXml0'evoluting,
     <a class="clsHide" href="#idLxml0evgFnam"></a></p>
