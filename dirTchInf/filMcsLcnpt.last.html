@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCnpt-(0-14-0.2021-01-14 draft) concept-language</title>
+  <title>Mcs.lagCnpt-(0-15-0.2021-01-15 draft) concept-language</title>
   <meta name="keywords" content="concept-language, lagCnpt, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -2075,9 +2075,1140 @@
     <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-vocabulary]
     <a class="clsHide" href="#idLcnpt005vocFoafdsn"></a></p>
   <p id="idLcnpt005vocFoafnam">name::
-    <br>* Mcs.FOAFRdfvoc,
-    <br>* Mcs.Rdfvoc.FOAF,
+    <br>* Mcs.FOAF-Rdfvoc!⇒foaf,
+    <br>* Mcs.Rdfvoc.FOAF!⇒foaf,
+    <br>* Mcs.foaf,
+    <br>* Mcs.foaf'(friend-of-a-friend-vocabulary)!⇒foaf,
     <a class="clsHide" href="#idLcnpt005vocFoafnam"></a></p>
+
+  <section id="idLcnpt005vocFoafcls">
+  <h4 id="idLcnpt005vocFoafclsH4">class of foaf
+    <a class="clsHide" href="#idLcnpt005vocFoafclsH4"></a></h4>
+  <p id="idLcnpt005vocFoafclsdsn">description::
+    <br>· <a class="clsPreview" href="#idLcnpt005icls">RDF-classes</a>.
+    <a class="clsHide" href="#idLcnpt005vocFoafclsdsn"></a></p>
+  <p id="idLcnpt005vocFoafclsnam">name::
+    <br>* Mcs.foaf'class,
+    <a class="clsHide" href="#idLcnpt005vocFoafclsnam"></a></p>
+  <p id="idFoafAgent">foaf:Agent-class::
+    <br>× sDescription: Agent - An agent (eg. person, group, software or physical artifact).
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_Agent
+    <br>× sStatus: stable
+    <br>* aProperties-include: [<a class="clsPreview" href="#idFoafgender">gender</a>, <a class="clsPreview" href="#idFoafyahooChatID">yahooChatID</a>, <a class="clsPreview" href="#idFoafaccount">account</a>, <a class="clsPreview" href="#idFoafbirthday">birthday</a>, <a class="clsPreview" href="#idFoaficqChatID">icqChatID</a>, <a class="clsPreview" href="#idFoafaimChatID">aimChatID</a>, <a class="clsPreview" href="#idFoafjabberID">jabberID</a>, <a class="clsPreview" href="#idFoafmade">made</a>, <a class="clsPreview" href="#idFoafmbox">mbox</a>, <a class="clsPreview" href="#idFoafinterest">interest</a>, <a class="clsPreview" href="#idFoaftipjar">tipjar</a>, <a class="clsPreview" href="#idFoafskypeID">skypeID</a>, <a class="clsPreview" href="#idFoaftopic_interest">topic_interest</a>, <a class="clsPreview" href="#idFoafage">age</a>, <a class="clsPreview" href="#idFoafmbox_sha1sum">mbox_sha1sum</a>, <a class="clsPreview" href="#idFoafstatus">status</a>, <a class="clsPreview" href="#idFoafmsnChatID">msnChatID</a>, <a class="clsPreview" href="#idFoafopenid">openid</a>, <a class="clsPreview" href="#idFoafholdsAccount">holdsAccount</a>, <a class="clsPreview" href="#idFoafweblog">weblog</a>]
+    <br>* aUsed-with: [<a class="clsPreview" href="#idFoafmaker">maker</a>, <a class="clsPreview" href="#idFoafmember">member</a>]
+    <br>* aHas-subclass: [<a class="clsPreview" href="#idFoafGroup">Group</a>, <a class="clsPreview" href="#idFoafPerson">Person</a>, <a class="clsPreview" href="#idFoafOrganization">Organization</a>]
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> class is the class of agents; things that do stuff. A well known sub-class is <code><a class="clsPreview" href="#idFoafPerson">Person</a></code>, representing people. Other kinds of agents include <code><a class="clsPreview" href="#idFoafOrganization">Organization</a></code> and <code><a class="clsPreview" href="#idFoafGroup">Group</a></code>.
+    <br>The <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> class is useful in a few places in FOAF where <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> would have been overly specific. For example, the IM chat ID properties such as <code>jabberID</code> are typically associated with people, but sometimes belong to software bots.
+    <br>* Mcs.foaf:Agent,
+    <br>* Mcs.Agent!:foaf,
+    <a class="clsHide" href="#idFoafAgent"></a></p>
+  <p id="idFoafDocument">foaf:Document-class::
+    <br>× sDescription: Document - A document.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_Document
+    <br>× sStatus: stable
+    <br>* aProperties-include: [<a class="clsPreview" href="#idFoaftopic">topic</a>, <a class="clsPreview" href="#idFoafprimaryTopic">primaryTopic</a>, <a class="clsPreview" href="#idFoafsha1">sha1</a>]
+    <br>* aUsed-with: [<a class="clsPreview" href="#idFoafworkInfoHomepage">workInfoHomepage</a>, <a class="clsPreview" href="#idFoafworkplaceHomepage">workplaceHomepage</a>, <a class="clsPreview" href="#idFoafpage">page</a>, <a class="clsPreview" href="#idFoafaccountServiceHomepage">accountServiceHomepage</a>, <a class="clsPreview" href="#idFoafopenid">openid</a>, <a class="clsPreview" href="#idFoaftipjar">tipjar</a>, <a class="clsPreview" href="#idFoafschoolHomepage">schoolHomepage</a>, <a class="clsPreview" href="#idFoafpublications">publications</a>, <a class="clsPreview" href="#idFoafisPrimaryTopicOf">isPrimaryTopicOf</a>, <a class="clsPreview" href="#idFoafinterest">interest</a>, <a class="clsPreview" href="#idFoafhomepage">homepage</a>, <a class="clsPreview" href="#idFoafweblog">weblog</a>]
+    <br>* aHas-subclass: [<a class="clsPreview" href="#idFoafImage">Image</a>, <a class="clsPreview" href="#idFoafPersonalProfileDocument">PersonalProfileDocument</a>]
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>* aDisjoint-with: [<a class="clsPreview" href="#idFoafProject">Project</a>, <a class="clsPreview" href="#idFoafOrganization">Organization</a>]
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafDocument">Document</a></code> class represents those things which are, broadly conceived, 'documents'.
+    <br>The <code><a class="clsPreview" href="#idFoafImage">Image</a></code> class is a sub-class of <code><a class="clsPreview" href="#idFoafDocument">Document</a></code>, since all images are documents.
+    <br>× editorial: We do not (currently) distinguish precisely between physical and electronic documents, or between copies of a work and the abstraction those copies embody. The relationship between documents and their byte-stream representation needs clarification (see <code><a class="clsPreview" href="#idFoafsha1">sha1</a></code> for related issues).
+    <br>* Mcs.foaf:Document,
+    <br>* Mcs.Document!:foaf,
+    <a class="clsHide" href="#idFoafDocument"></a></p>
+  <p id="idFoafGroup">foaf:Group-class::
+    <br>× sDescription: Group - A class of Agents.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_Group
+    <br>× sStatus: stable
+    <br>* aProperties-include: [<a class="clsPreview" href="#idFoafmember">member</a>]
+    <br>* aSubclass-of: [<a class="clsPreview" href="#idFoafAgent">Agent</a>]
+    <br>* Mcs.foaf:Group,
+    <br>* Mcs.Group!:foaf,
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafGroup">Group</a></code> class represents a collection of individual agents (and may itself play the role of a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code>, ie. something that can perform actions).
+    <br>This concept is intentionally quite broad, covering informal and ad-hoc groups, long-lived communities, organizational groups within a workplace, etc. Some such groups may have associated characteristics which could be captured in RDF (perhaps a <code><a class="clsPreview" href="#idFoafhomepage">homepage</a></code>, <code><a class="clsPreview" href="#idFoafname">name</a></code>, mailing list etc.).
+    <br>While a <code><a class="clsPreview" href="#idFoafGroup">Group</a></code> has the characteristics of a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code>, it is also associated with a number of other <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code>s (typically people) who constitute the <code><a class="clsPreview" href="#idFoafGroup">Group</a></code>. FOAF provides a mechanism, the <code><a class="clsPreview" href="#idFoafmembershipClass">membershipClass</a></code> property, which relates a <code><a class="clsPreview" href="#idFoafGroup">Group</a></code> to a sub-class of the class <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> who are members of the group. This is a little complicated, but allows us to make group membership rules explicit.
+    <br>The markup (shown below) for defining a group is both complex and powerful. It allows group membership rules to match against any RDF-describable characteristics of the potential group members. As FOAF and similar vocabularies become more expressive in their ability to describe individuals, the <code><a class="clsPreview" href="#idFoafGroup">Group</a></code> mechanism for categorising them into groups also becomes more powerful.
+    <br>While the formal description of membership criteria for a <code><a class="clsPreview" href="#idFoafGroup">Group</a></code> may be complex, the basic mechanism for saying that someone is in a <code><a class="clsPreview" href="#idFoafGroup">Group</a></code> is very simple. We simply use a <code><a class="clsPreview" href="#idFoafmember">member</a></code> property of the <code><a class="clsPreview" href="#idFoafGroup">Group</a></code> to indicate the agents that are members of the group. For example:
+    <a class="clsHide" href="#idFoafGroup"></a></p>
+    <pre>
+    &lt;foaf:Group&gt;
+     &lt;foaf:name&gt;ILRT staff&lt;/foaf:name&gt;
+     &lt;foaf:member&gt;
+      &lt;foaf:Person&gt;
+       &lt;foaf:name&gt;Martin Poulter&lt;/foaf:name&gt;
+       &lt;foaf:homepage rdf:resource="http://www.ilrt.bris.ac.uk/aboutus/staff/staffprofile/?search=plmlp"/&gt;
+       &lt;foaf:workplaceHomepage rdf:resource="http://www.ilrt.bris.ac.uk/"/&gt;
+      &lt;/foaf:Person&gt;
+     &lt;/foaf:member&gt;
+    &lt;/foaf:Group&gt;
+    </pre>
+    <p class="clsIndent">Behind the scenes, further RDF statements can be used to express the rules for being a member of this group. End-users of FOAF need not pay attention to these details.
+    <br>Here is an example. We define a <code><a class="clsPreview" href="#idFoafGroup">Group</a></code> representing those people who are ILRT staff members (ILRT is a department at the University of Bristol). The <code><a class="clsPreview" href="#idFoafmembershipClass">membershipClass</a></code> property connects the group (conceived of as a social entity and agent in its own right) with the class definition for those people who constitute it. In this case, the rule is that all group members are in the ILRTStaffPerson class, which is in turn populated by all those things that are a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> and which have a <code><a class="clsPreview" href="#idFoafworkplaceHomepage">workplaceHomepage</a></code> of http://www.ilrt.bris.ac.uk/. This is typical: FOAF groups are created by specifying a sub-class of <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> (in fact usually this will be a sub-class of <code><a class="clsPreview" href="#idFoafPerson">Person</a></code>), and giving criteria for which things fall in or out of the sub-class. For this, we use the <code>owl:onProperty</code> and <code>owl:hasValue</code> properties, indicating the property/value pairs which must be true of matching agents.
+    </p>
+    <pre>
+    &lt;!-- here we see a FOAF group described.
+         each foaf group may be associated with an OWL definition
+         specifying the class of agents that constitute the group's membership --&gt;
+    &lt;foaf:Group&gt;
+     &lt;foaf:name&gt;ILRT staff&lt;/foaf:name&gt;
+     &lt;foaf:membershipClass&gt;
+        &lt;owl:Class rdf:about="http://ilrt.example.com/groups#ILRTStaffPerson"&gt;
+         &lt;rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/&gt;
+         &lt;rdfs:subClassOf&gt;
+           &lt;owl:Restriction&gt;
+             &lt;owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/workplaceHomepage"/&gt;
+             &lt;owl:hasValue rdf:resource="http://www.ilrt.bris.ac.uk/"/&gt;
+           &lt;/owl:Restriction&gt;
+         &lt;/rdfs:subClassOf&gt;
+       &lt;/owl:Class&gt;
+     &lt;/foaf:membershipClass&gt;
+    &lt;/foaf:Group&gt;
+    </pre>
+    <p class="clsIndent">Note that while these example OWL rules for being in the eg:ILRTStaffPerson class are based on a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> having a particular <code><a class="clsPreview" href="#idFoafworkplaceHomepage">workplaceHomepage</a></code>, this places no obligations on the authors of actual FOAF documents to include this information. If the information <em>is</em> included, then generic OWL tools may infer that some person is an eg:ILRTStaffPerson. To go the extra step and infer that some eg:ILRTStaffPerson is a <code><a class="clsPreview" href="#idFoafmember">member</a></code> of the group whose <code><a class="clsPreview" href="#idFoafname">name</a></code> is "ILRT staff", tools will need some knowledge of the way FOAF deals with groups. In other words, generic OWL technology gets us most of the way, but the full <code><a class="clsPreview" href="#idFoafGroup">Group</a></code> machinery requires extra work for implimentors.
+    <br>The current design names the relationship as pointing <em>from</em> the group, to the member. This is convenient when writing XML/RDF that encloses the members within markup that describes the group. Alternate representations of the same content are allowed in RDF, so you can write claims about the Person and the Group without having to nest either description inside the other. For (brief) example:
+    </p>
+    <pre>
+    &lt;foaf:Group&gt;
+     &lt;foaf:member rdf:nodeID="martin"/&gt;
+     &lt;!-- more about the group here --&gt;
+    &lt;/foaf:Group&gt;
+    &lt;foaf:Person rdf:nodeID="martin"&gt;
+      &lt;!-- more about martin here --&gt;
+    &lt;/foaf:Person&gt;
+    </pre>
+    <p class="clsIndent">There is a FOAF <a href="http://wiki.foaf-project.org/w/IssueTracker">issue tracker</a> associated with this FOAF term. A design goal is to make the most of W3C's <a href="http://www.w3.org/2001/sw/WebOnt">OWL</a> language for representing group-membership criteria, while also making it easy to leverage existing groups and datasets available online (eg. buddylists, mailing list membership lists etc). Feedback on the current design is solicited! Should we consider using SPARQL queries instead, for example?
+    </p>
+  <p id="idFoafImage">foaf:Image-class::
+    <br>× sDescription: Image - An image.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_Image
+    <br>× sStatus: stable
+    <br>* aProperties-include: [<a class="clsPreview" href="#idFoafdepicts">depicts</a>, <a class="clsPreview" href="#idFoafthumbnail">thumbnail</a>]
+    <br>* aUsed-with: [<a class="clsPreview" href="#idFoafimg">img</a>, <a class="clsPreview" href="#idFoafthumbnail">thumbnail</a>, <a class="clsPreview" href="#idFoafdepiction">depiction</a>]
+    <br>* aSubclass-of: [<a class="clsPreview" href="#idFoafDocument">Document</a>]
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The class <code><a class="clsPreview" href="#idFoafImage">Image</a></code> is a sub-class of <code><a class="clsPreview" href="#idFoafDocument">Document</a></code> corresponding to those documents which are images.
+    <br>Digital images (such as JPEG, PNG, GIF bitmaps, SVG diagrams etc.) are examples of <code><a class="clsPreview" href="#idFoafImage">Image</a></code>.
+    <br>* Mcs.foaf:Image,
+    <br>* Mcs.Image!:foaf,
+    <a class="clsHide" href="#idFoafImage"></a></p>
+  <p id="idFoafOrganization">foaf:Organization-class::
+    <br>× sDescription: Organization - An organization.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_Organization
+    <br>× sStatus: stable
+    <br>* aSubclass-of: [<a class="clsPreview" href="#idFoafAgent">Agent</a>]
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>* aDisjoint-with: [<a class="clsPreview" href="#idFoafDocument">Document</a>, <a class="clsPreview" href="#idFoafPerson">Person</a>]
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafOrganization">Organization</a></code> class represents a kind of <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> corresponding to social instititutions such as companies, societies etc.
+    <br>× editorial: This is a more 'solid' class than <code><a class="clsPreview" href="#idFoafGroup">Group</a></code>, which allows for more ad-hoc collections of individuals. These terms, like the corresponding natural language concepts, have some overlap, but different emphasis.
+    <br>* Mcs.foaf:Organization,
+    <br>* Mcs.Organization!:foaf,
+    <a class="clsHide" href="#idFoafOrganization"></a></p>
+  <p id="idFoafPerson">foaf:Person-class::
+    <br>× sDescription: Person - A person.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_Person
+    <br>× sStatus: stable
+    <br>* aProperties-include: [<a class="clsPreview" href="#idFoafplan">plan</a>, <a class="clsPreview" href="#idFoafsurname">surname</a>, <a class="clsPreview" href="#idFoafgeekcode">geekcode</a>, <a class="clsPreview" href="#idFoafpastProject">pastProject</a>, <a class="clsPreview" href="#idFoaflastName">lastName</a>, <a class="clsPreview" href="#idFoaffamily_name">family_name</a>, <a class="clsPreview" href="#idFoafpublications">publications</a>, <a class="clsPreview" href="#idFoafcurrentProject">currentProject</a>, <a class="clsPreview" href="#idFoaffamilyName">familyName</a>, <a class="clsPreview" href="#idFoaffirstName">firstName</a>, <a class="clsPreview" href="#idFoafworkInfoHomepage">workInfoHomepage</a>, <a class="clsPreview" href="#idFoafmyersBriggs">myersBriggs</a>, <a class="clsPreview" href="#idFoafschoolHomepage">schoolHomepage</a>, <a class="clsPreview" href="#idFoafimg">img</a>, <a class="clsPreview" href="#idFoafworkplaceHomepage">workplaceHomepage</a>, <a class="clsPreview" href="#idFoafknows">knows</a>]
+    <br>* aUsed-with: [<a class="clsPreview" href="#idFoafknows">knows</a>]
+    <br>* aSubclass-of: [<a class="clsPreview" href="#idFoafAgent">Agent</a>, <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial Thing</a>]
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>* aDisjoint-with: [<a class="clsPreview" href="#idFoafProject">Project</a>, <a class="clsPreview" href="#idFoafOrganization">Organization</a>]
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> class represents people. Something is a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. The <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> class is a sub-class of the <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> class, since all people are considered 'agents' in FOAF.
+    <br>* Mcs.foaf:Person,
+    <br>* Mcs.Person!:foaf,
+    <a class="clsHide" href="#idFoafPerson"></a></p>
+  <p id="idFoafOnlineAccount">foaf:OnlineAccount-class::
+    <br>× sDescription: Online Account - An online account.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_OnlineAccount
+    <br>× sStatus: testing
+    <br>* aProperties-include: [<a class="clsPreview" href="#idFoafaccountName">accountName</a>, <a class="clsPreview" href="#idFoafaccountServiceHomepage">accountServiceHomepage</a>]
+    <br>* aUsed-with: [<a class="clsPreview" href="#idFoafaccount">account</a>, <a class="clsPreview" href="#idFoafholdsAccount">holdsAccount</a>]
+    <br>* aSubclass-of: [<a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>]
+    <br>* aHas-subclass: [<a class="clsPreview" href="#idFoafOnlineEcommerceAccount">Online E-commerce Account</a>, <a class="clsPreview" href="#idFoafOnlineGamingAccount">Online Gaming Account</a>, <a class="clsPreview" href="#idFoafOnlineChatAccount">Online Chat Account</a>]
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> class represents the provision of some form of online service, by some party (indicated indirectly via a <code><a class="clsPreview" href="#idFoafaccountServiceHomepage">accountServiceHomepage</a></code>) to some <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code>. The <code><a class="clsPreview" href="#idFoafaccount">account</a></code> property of the agent is used to indicate accounts that are associated with the agent.
+    <br>See <code><a class="clsPreview" href="#idFoafOnlineChatAccount">OnlineChatAccount</a></code> for an example. Other sub-classes include <code><a class="clsPreview" href="#idFoafOnlineEcommerceAccount">OnlineEcommerceAccount</a></code> and <code><a class="clsPreview" href="#idFoafOnlineGamingAccount">OnlineGamingAccount</a></code>.
+    <br>One deployment style for this construct is to use URIs for well-known documents (or other entities) that strongly embody the account-holding relationship; for example, user profile pages on social network sites. This has the advantage of providing URIs that are likely to be easy to link with other information, but means that the instances of this class should not be considered 'accounts' in the abstract or business sense of a 'contract'.
+    <br>* Mcs.foaf:OnlineAccount,
+    <br>* Mcs.OnlineAccount!:foaf,
+    <a class="clsHide" href="#idFoafOnlineAccount"></a></p>
+  <p id="idFoafPersonalProfileDocument">foaf:PersonalProfileDocument-class::
+    <br>× sDescription: PersonalProfileDocument - A personal profile RDF document.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_PersonalProfileDocument
+    <br>× sStatus: testing
+    <br>* aSubclass-of: [<a class="clsPreview" href="#idFoafDocument">Document</a>]
+    <br>* Mcs.foaf:PersonalProfileDocument,
+    <br>* Mcs.PersonalProfileDocument!:foaf,
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafPersonalProfileDocument">PersonalProfileDocument</a></code> class represents those things that are a <code><a class="clsPreview" href="#idFoafDocument">Document</a></code>, and that use RDF to describe properties of the person who is the <code><a class="clsPreview" href="#idFoafmaker">maker</a></code> of the document. There is just one <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> described in the document, ie. the person who <code><a class="clsPreview" href="#idFoafmade">made</a></code> it and who will be its <code><a class="clsPreview" href="#idFoafprimaryTopic">primaryTopic</a></code>.
+    <br>The <code><a class="clsPreview" href="#idFoafPersonalProfileDocument">PersonalProfileDocument</a></code> class, and FOAF's associated conventions for describing it, captures an important deployment pattern for the FOAF vocabulary. FOAF is very often used in public RDF documents made available through the Web. There is a colloquial notion that these "FOAF files" are often <em>somebody's</em> FOAF file. Through <code><a class="clsPreview" href="#idFoafPersonalProfileDocument">PersonalProfileDocument</a></code> we provide a machine-readable expression of this concept, providing a basis for FOAF documents to make claims about their maker and topic.
+    <br>When describing a <code><a class="clsPreview" href="#idFoafPersonalProfileDocument">PersonalProfileDocument</a></code> it is typical (and useful) to describe its associated <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> using the <code><a class="clsPreview" href="#idFoafmaker">maker</a></code> property. Anything that is a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> and that is the <code><a class="clsPreview" href="#idFoafmaker">maker</a></code> of some <code><a class="clsPreview" href="#idFoafPersonalProfileDocument">PersonalProfileDocument</a></code> will be the <code><a class="clsPreview" href="#idFoafprimaryTopic">primaryTopic</a></code> of that <code><a class="clsPreview" href="#idFoafDocument">Document</a></code>. Although this can be inferred, it is often helpful to include this information explicitly within the <code><a class="clsPreview" href="#idFoafPersonalProfileDocument">PersonalProfileDocument</a></code>.
+    <br>For example, here is a fragment of a personal profile document which describes its author explicitly:
+    <a class="clsHide" href="#idFoafPersonalProfileDocument"></a></p>
+    <pre>
+    &lt;foaf:Person rdf:nodeID="p1"&gt;
+     &lt;foaf:name&gt;Dan Brickley&lt;/foaf:name&gt;
+     &lt;foaf:homepage rdf:resource="http://danbri.org/"/&gt;
+     &lt;!-- etc... --&gt;
+    &lt;/foaf:Person&gt;
+
+    &lt;foaf:PersonalProfileDocument rdf:about=""&gt;
+       &lt;foaf:maker rdf:nodeID="p1"/&gt;
+       &lt;foaf:primaryTopic rdf:nodeID="p1"/&gt;
+    &lt;/foaf:PersonalProfileDocument&gt;
+    </pre>
+    <p class="clsIndent">Note that a <code><a class="clsPreview" href="#idFoafPersonalProfileDocument">PersonalProfileDocument</a></code> will have some representation as RDF. Typically this will be in W3C's RDF/XML syntax, however we leave open the possibility for the use of other notations, or representational conventions including automated transformations from HTML (<a href="http://www.w3.org/2004/01/rdxh/spec">GRDDL</a> spec for one such technique).
+    </p>
+  <p id="idFoafProject">foaf:Project-class::
+    <br>× sDescription: Project - A project (a collective endeavour of some kind).
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_Project
+    <br>× sStatus: testing
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>* aDisjoint-with: [<a class="clsPreview" href="#idFoafDocument">Document</a>, <a class="clsPreview" href="#idFoafPerson">Person</a>]
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafProject">Project</a></code> class represents the class of things that are 'projects'. These may be formal or informal, collective or individual. It is often useful to indicate the <code><a class="clsPreview" href="#idFoafhomepage">homepage</a></code> of a <code><a class="clsPreview" href="#idFoafProject">Project</a></code>.
+    <br>× editorial: Further work is needed to specify the connections between this class and the FOAF properties <code><a class="clsPreview" href="#idFoafcurrentProject">currentProject</a></code> and <code><a class="clsPreview" href="#idFoafpastProject">pastProject</a></code>.
+    <br>* Mcs.foaf:Project,
+    <br>* Mcs.Project!:foaf,
+    <a class="clsHide" href="#idFoafProject"></a></p>
+  </section>
+
+  <section id="idLcnpt005vocFoafprt">
+  <h4 id="idLcnpt005vocFoafprtH4">property of foaf
+    <a class="clsHide" href="#idLcnpt005vocFoafprtH4"></a></h4>
+  <p id="idLcnpt005vocFoafprtdsn">description::
+    <br>· <a class="clsPreview" href="#idLcnpt005ippt">RDF-properties</a>.
+    <a class="clsHide" href="#idLcnpt005vocFoafprtdsn"></a></p>
+  <p id="idLcnpt005vocFoafprtnam">name::
+    <br>* Mcs.foaf'property,
+    <a class="clsHide" href="#idLcnpt005vocFoafprtnam"></a></p>
+  <p id="idFoafLabelProperty">foaf:LabelProperty-class::
+    <br>× sDescription: Label Property - A foaf:LabelProperty is any RDF property with texual values that serve as labels.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_LabelProperty
+    <br>× sStatus: unstable
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: A <code><a class="clsPreview" href="#idFoafLabelProperty">LabelProperty</a></code> is any RDF property with texual values that serve as labels.
+    <br>Any property that is a <code><a class="clsPreview" href="#idFoafLabelProperty">LabelProperty</a></code> is effectively a sub-property of rdfs:label. This utility class provides an alternate means of expressing this idea, in a way that may help with OWL 2.0 DL compatibility.
+    <br>* Mcs.foaf:LabelProperty,
+    <br>* Mcs.LabelProperty!:foaf,
+    <a class="clsHide" href="#idFoafLabelProperty"></a></p>
+  <p id="idFoafOnlineChatAccount">foaf:OnlineChatAccount-class::
+    <br>× sDescription: Online Chat Account - An online chat account.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_OnlineChatAccount
+    <br>× sStatus: unstable
+    <br>* aSubclass-of: [<a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a>]
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>* Mcs.foaf:OnlineChatAccount,
+    <br>* Mcs.OnlineChatAccount!:foaf,
+    <br>
+    <br>× sDescriptionLong: A <code><a class="clsPreview" href="#idFoafOnlineChatAccount">OnlineChatAccount</a></code> is a <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> devoted to chat / instant messaging. The account may offer other services too; FOAF's sub-classes of <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> are not mutually disjoint.
+    <br>This is a generalization of the FOAF Chat ID properties, <code><a class="clsPreview" href="#idFoafjabberID">jabberID</a></code>, <code><a class="clsPreview" href="#idFoafaimChatID">aimChatID</a></code>, <code><a class="clsPreview" href="#idFoafskypeID">skypeID</a></code>, <code><a class="clsPreview" href="#idFoafmsnChatID">msnChatID</a></code>, <code><a class="clsPreview" href="#idFoaficqChatID">icqChatID</a></code> and <code><a class="clsPreview" href="#idFoafyahooChatID">yahooChatID</a></code>.
+    <br>Unlike those simple properties, <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> and associated FOAF terms allows us to describe a great variety of online accounts, without having to anticipate them in the FOAF vocabulary.
+    <br>For example, here is a description of an IRC chat account, specific to the Freenode IRC network:
+    <a class="clsHide" href="#idFoafOnlineChatAccount"></a></p>
+    <pre>
+    &lt;foaf:Person&gt;
+      &lt;foaf:name&gt;Dan Brickley&lt;/foaf:name&gt;
+      &lt;foaf:account&gt;
+        &lt;foaf:OnlineAccount&gt;
+          &lt;rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineChatAccount"/&gt;
+          &lt;foaf:accountServiceHomepage
+                   rdf:resource="http://www.freenode.net/"/&gt;
+          &lt;foaf:accountName&gt;danbri&lt;/foaf:accountName&gt;
+        &lt;/foaf:OnlineAccount&gt;
+      &lt;/foaf:account&gt;
+    &lt;/foaf:Person&gt;
+    </pre>
+    <p class="clsIndent">Note that it may be impolite to carelessly reveal someone else's chat identifier (which might also serve as an indicate of email address) As with email,  there are privacy and anti-SPAM considerations. FOAF does not currently provide a way to  represent an obfuscated chat ID (ie. there is no parallel to the <code><a class="clsPreview" href="#idFoafmbox">mbox</a></code> / <code><a class="clsPreview" href="#idFoafmbox_sha1sum">mbox_sha1sum</a></code> mapping).
+    <br>In addition to the generic <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> and <code><a class="clsPreview" href="#idFoafOnlineChatAccount">OnlineChatAccount</a></code> mechanisms, FOAF also provides several convenience chat ID properties (<code><a class="clsPreview" href="#idFoafjabberID">jabberID</a></code>, <code><a class="clsPreview" href="#idFoafaimChatID">aimChatID</a></code>, <code><a class="clsPreview" href="#idFoaficqChatID">icqChatID</a></code>, <code><a class="clsPreview" href="#idFoafmsnChatID">msnChatID</a></code>,<code><a class="clsPreview" href="#idFoafyahooChatID">yahooChatID</a></code>, <code><a class="clsPreview" href="#idFoafskypeID">skypeID</a></code>).  These serve as as a shorthand for some common cases; their use may not always be appropriate.
+    <br>× editorial: We should specify some mappings between the abbreviated and full representations of <a href="http://www.jabber.org/">Jabber</a>, <a href="http://www.aim.com/">AIM</a>, <a href="http://chat.msn.com/">MSN</a>, <a href="http://web.icq.com/icqchat/">ICQ</a>, <a href="http://chat.yahoo.com/">Yahoo!</a> and <a href="http://chat.msn.com/">MSN</a> chat accounts. This has been done for <code><a class="clsPreview" href="#idFoafskypeID">skypeID</a></code>. This requires us to identify an appropriate <code><a class="clsPreview" href="#idFoafaccountServiceHomepage">accountServiceHomepage</a></code> for each. If we wanted to make the <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> mechanism even more generic, we could invent a relationship that holds between a <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> instance and a convenience property. To continue the example above, we could describe how <a href="http://www.freenode.net/">Freenode</a> could define a property 'fn:freenodeChatID' corresponding to Freenode online accounts.
+    </p>
+  <p id="idFoafOnlineEcommerceAccount">foaf:OnlineEcommerceAccount-class::
+    <br>× sDescription: Online E-commerce Account - An online e-commerce account.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_OnlineEcommerceAccount
+    <br>× sStatus: unstable
+    <br>* aSubclass-of: [<a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a>]
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: A <code><a class="clsPreview" href="#idFoafOnlineEcommerceAccount">OnlineEcommerceAccount</a></code> is a <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> devoted to buying and/or selling of goods, services etc. Examples include <a href="http://www.amazon.com/">Amazon</a>, <a href="http://www.ebay.com/">eBay</a>, <a href="http://www.paypal.com/">PayPal</a>, <a href="http://www.thinkgeek.com/">thinkgeek</a>, etc.
+    <br>* Mcs.foaf:OnlineEcommerceAccount,
+    <br>* Mcs.OnlineEcommerceAccount!:foaf,
+    <a class="clsHide" href="#idFoafOnlineEcommerceAccount"></a></p>
+  <p id="idFoafOnlineGamingAccount">foaf:OnlineGamingAccount-class::
+    <br>× sDescription: Online Gaming Account - An online gaming account.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_OnlineGamingAccount
+    <br>× sStatus: unstable
+    <br>* aSubclass-of: [<a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a>]
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: A <code><a class="clsPreview" href="#idFoafOnlineGamingAccount">OnlineGamingAccount</a></code> is a <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> devoted to online gaming.
+    <br>Examples might include <a href="http://everquest.station.sony.com/">EverQuest</a>, <a href="http://www.xbox.com/live/">Xbox live</a>, <a href="http://nwn.bioware.com/">Neverwinter Nights</a>, etc., as well as older text-based systems (MOOs, MUDs and suchlike).
+    <br>* Mcs.foaf:OnlineGamingAccount,
+    <br>* Mcs.OnlineGamingAccount!:foaf,
+    <a class="clsHide" href="#idFoafOnlineGamingAccount"></a></p>
+  <p id="idFoafhomepage">foaf:homepage-property::
+    <br>× sDescription: homepage - A homepage for some thing.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_homepage
+    <br>× sStatus: stable
+    <br>× sDomain: having this property implies being a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: http://www.w3.org/2002/07/owl#InverseFunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafhomepage">homepage</a></code> property relates something to a homepage about it.
+    <br>Many kinds of things have homepages. FOAF allows a thing to have multiple homepages, but constrains <code><a class="clsPreview" href="#idFoafhomepage">homepage</a></code> so that there can be only one thing that has any particular homepage.
+    <br>A 'homepage' in this sense is a public Web document, typically but not necessarily available in HTML format. The page has as a <code><a class="clsPreview" href="#idFoaftopic">topic</a></code> the thing whose homepage it is. The homepage is usually controlled, edited or published by the thing whose homepage it is; as such one might look to a homepage for information on its owner from its owner. This works for people, companies, organisations etc.
+    <br>The <code><a class="clsPreview" href="#idFoafhomepage">homepage</a></code> property is a sub-property of the more general <code><a class="clsPreview" href="#idFoafpage">page</a></code> property for relating a thing to a page about that thing. See also <code><a class="clsPreview" href="#idFoaftopic">topic</a></code>, the inverse of the <code><a class="clsPreview" href="#idFoafpage">page</a></code> property.
+    <br>* Mcs.foaf:homepage,
+    <br>* Mcs.homepage!:foaf,
+    <a class="clsHide" href="#idFoafhomepage"></a></p>
+  <p id="idFoafisPrimaryTopicOf">foaf:isPrimaryTopicOf-property::
+    <br>× sDescription: is primary topic of - A document that this thing is the primary topic of.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_isPrimaryTopicOf
+    <br>× sStatus: stable
+    <br>× sDomain: having this property implies being a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: http://www.w3.org/2002/07/owl#InverseFunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafisPrimaryTopicOf">isPrimaryTopicOf</a></code> property relates something to a document that is mainly about it.
+    <br>The <code><a class="clsPreview" href="#idFoafisPrimaryTopicOf">isPrimaryTopicOf</a></code> property is <em>inverse functional</em>: for any document that is the value of this property, there is at most one thing in the world that is the primary topic of that document. This is useful, as it allows for data merging, as described in the documentation for its inverse, <code><a class="clsPreview" href="#idFoafprimaryTopic">primaryTopic</a></code>.
+    <br><code><a class="clsPreview" href="#idFoafpage">page</a></code> is a super-property of <code><a class="clsPreview" href="#idFoafisPrimaryTopicOf">isPrimaryTopicOf</a></code>. The change of terminology between the two property names reflects the utility of 'primaryTopic' and its inverse when identifying things. Anything that has an <code>isPrimaryTopicOf</code> relation to some document X, also has a <code><a class="clsPreview" href="#idFoafpage">page</a></code> relationship to it.
+    <br>Note that <code><a class="clsPreview" href="#idFoafhomepage">homepage</a></code>, is a sub-property of both <code><a class="clsPreview" href="#idFoafpage">page</a></code> and <code><a class="clsPreview" href="#idFoafisPrimaryTopicOf">isPrimaryTopicOf</a></code>. The awkwardly named <code><a class="clsPreview" href="#idFoafisPrimaryTopicOf">isPrimaryTopicOf</a></code> is less specific, and can be used with any document that is primarily about the thing of interest (ie. not just on homepages).
+    <br>* Mcs.foaf:isPrimaryTopicOf,
+    <br>* Mcs.isPrimaryTopicOf!:foaf,
+    <a class="clsHide" href="#idFoafisPrimaryTopicOf"></a></p>
+  <p id="idFoafknows">foaf:knows-property::
+    <br>× sDescription: knows - A person known by this person (indicating some level of reciprocated interaction between the parties).
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_knows
+    <br>× sStatus: stable
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafknows">knows</a></code> property relates a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> to another <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> that he or she knows.
+    <br>We take a broad view of 'knows', but do require some form of reciprocated interaction (ie. stalkers need not apply). Since social attitudes and conventions on this topic vary greatly between communities, counties and cultures, it is not appropriate for FOAF to be overly-specific here.
+    <br>If someone <code><a class="clsPreview" href="#idFoafknows">knows</a></code> a person, it would be usual for the relation to be reciprocated. However this doesn't mean that there is any obligation for either party to publish FOAF describing this relationship. A <code><a class="clsPreview" href="#idFoafknows">knows</a></code> relationship does not imply friendship, endorsement, or that a face-to-face meeting has taken place: phone, fax, email, and smoke signals are all perfectly acceptable ways of communicating with people you know.
+    <br>You probably know hundreds of people, yet might only list a few in your public FOAF file.  That's OK. Or you might list them all. It is perfectly fine to have a FOAF file and not list anyone else in it at all.  This illustrates the Semantic Web principle of partial description: RDF documents rarely describe the entire picture. There is always more to be said, more information living elsewhere in the Web (or in our heads...).
+    <br>Since <code><a class="clsPreview" href="#idFoafknows">knows</a></code> is vague by design, it may be suprising that it has uses.  Typically these involve combining other RDF properties. For example, an application might look at properties of each <code><a class="clsPreview" href="#idFoafweblog">weblog</a></code> that was <code><a class="clsPreview" href="#idFoafmade">made</a></code> by someone you "<code><a class="clsPreview" href="#idFoafknows">knows</a></code>". Or check the newsfeed of the online photo archive for each of these people, to show you recent photos taken by people you know.
+    <br>To provide additional levels of representation beyond mere 'knows', FOAF applications can do several things.
+    <br>They can use more precise relationships than <code><a class="clsPreview" href="#idFoafknows">knows</a></code> to relate people to people. The original FOAF design included two of these ('knowsWell','friend') which we removed because they were somewhat <em>awkward</em> to actually use, bringing an inappopriate air of precision to an intrinsically vague concept. Other extensions have been proposed, including Eric Vitiello's <a href="http://www.perceive.net/schemas/20021119/relationship/">Relationship module</a> for FOAF.
+    <br>In addition to using more specialised inter-personal relationship types (eg rel:acquaintanceOf etc) it is often just as good to use RDF descriptions of the states of affairs which imply particular kinds of relationship. So for example, two people who have the same value for their <code><a class="clsPreview" href="#idFoafworkplaceHomepage">workplaceHomepage</a></code> property are typically colleagues. We don't (currently) clutter FOAF up with these extra relationships, but the facts can be written in FOAF nevertheless. Similarly, if there exists a <code><a class="clsPreview" href="#idFoafDocument">Document</a></code> that has two people listed as its <code><a class="clsPreview" href="#idFoafmaker">maker</a></code>s, then they are probably collaborators of some kind. Or if two people appear in 100s of digital photos together, there's a good chance they're friends and/or colleagues.
+    <br>So FOAF is quite pluralistic in its approach to representing relationships between people.  FOAF is built on top of a general purpose machine language for representing relationships (ie. RDF), so is quite capable of representing any kinds of relationship we care to add.  The problems are generally social rather than technical; deciding on appropriate ways of describing these interconnections is a subtle art.
+    <br>Perhaps the most important use of <code><a class="clsPreview" href="#idFoafknows">knows</a></code> is, alongside the <code>rdfs:seeAlso</code> property, to connect FOAF files together. Taken alone, a FOAF file is somewhat dull. But linked in with 1000s of other FOAF files it becomes more interesting, with each FOAF file saying a little more about people, places, documents, things...  By mentioning other people (via <code><a class="clsPreview" href="#idFoafknows">knows</a></code> or other relationships), and by providing an <code>rdfs:seeAlso</code> link to their FOAF file, you can make it easy for FOAF indexing tools ('<a href="http://wiki.foaf-project.org/w/ScutterSpec">scutters</a>') to find your FOAF and the FOAF of the people you've mentioned. And the FOAF of the people they mention, and so on. This makes it possible to build FOAF aggregators without the need for a centrally managed directory of FOAF files...
+    <br>* Mcs.foaf:knows,
+    <br>* Mcs.knows!:foaf,
+    <a class="clsHide" href="#idFoafknows"></a></p>
+  <p id="idFoafmade">foaf:made-property::
+    <br>× sDescription: made - Something that was made by this agent.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_made
+    <br>× sStatus: stable
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× sRange: every value of this property is a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafmade">made</a></code> property relates a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> to something <code><a class="clsPreview" href="#idFoafmade">made</a></code> by it. As such it is an inverse of the <code><a class="clsPreview" href="#idFoafmaker">maker</a></code> property, which relates a thing to something that made it. See <code><a class="clsPreview" href="#idFoafmade">made</a></code> for more details on the relationship between these FOAF terms and related Dublin Core vocabulary.
+    <br>* Mcs.foaf:made,
+    <br>* Mcs.made!:foaf,
+    <a class="clsHide" href="#idFoafmade"></a></p>
+  <p id="idFoafmaker">foaf:maker-property::
+    <br>× sDescription: maker - An agent that  made this thing.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_maker
+    <br>× sStatus: stable
+    <br>× sDomain: having this property implies being a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafmaker">maker</a></code> property relates something to a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> that <code><a class="clsPreview" href="#idFoafmade">made</a></code> it. As such it is an inverse of the <code><a class="clsPreview" href="#idFoafmade">made</a></code> property.
+    <br>The <code><a class="clsPreview" href="#idFoafname">name</a></code> (or other <code>rdfs:label</code>) of the <code><a class="clsPreview" href="#idFoafmaker">maker</a></code> of something can be described as the <code>dc:creator</code> of that thing.
+    <br>For example, if the thing named by the URI http://danbri.org/ has a <code><a class="clsPreview" href="#idFoafmaker">maker</a></code> that is a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> whose <code><a class="clsPreview" href="#idFoafname">name</a></code> is 'Dan Brickley', we can conclude that http://danbri.org/ has a <code>dc:creator</code> of 'Dan Brickley'.
+    <br>FOAF descriptions are encouraged to use <code>dc:creator</code> only for simple textual names, and to use <code><a class="clsPreview" href="#idFoafmaker">maker</a></code> to indicate creators, rather than risk confusing creators with their names. This follows most Dublin Core usage. See <a href="http://wiki.foaf-project.org/w/UsingDublinCoreCreator">UsingDublinCoreCreator</a> for details.
+    <br>* Mcs.foaf:maker,
+    <br>* Mcs.maker!:foaf,
+    <a class="clsHide" href="#idFoafmaker"></a></p>
+  <p id="idFoafmbox">foaf:mbox-property::
+    <br>× sDescription: personal mailbox - A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_mbox
+    <br>× sStatus: stable
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× sRange: every value of this property is a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: http://www.w3.org/2002/07/owl#InverseFunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafmbox">mbox</a></code> property is a relationship between the owner of a mailbox and a mailbox. These are typically identified using the mailto: URI scheme (see <a href="http://ftp.ics.uci.edu/pub/ietf/uri/rfc2368.txt">RFC 2368</a>).
+    <br>Note that there are many mailboxes (eg. shared ones) which are not the <code><a class="clsPreview" href="#idFoafmbox">mbox</a></code> of anyone. Furthermore, a person can have multiple <code><a class="clsPreview" href="#idFoafmbox">mbox</a></code> properties.
+    <br>In FOAF, we often see <code><a class="clsPreview" href="#idFoafmbox">mbox</a></code> used as an indirect way of identifying its owner. This works even if the mailbox is itself out of service (eg. 10 years old), since the property is defined in terms of its primary owner, and doesn't require the mailbox to actually be being used for anything.
+    <br>Many people are wary of sharing information about their mailbox addresses in public. To address such concerns whilst continuing the FOAF convention of indirectly identifying people by referring to widely known properties, FOAF also provides the <code><a class="clsPreview" href="#idFoafmbox_sha1sum">mbox_sha1sum</a></code> mechanism, which is a relationship between a person and the value you get from passing a mailbox URI to the SHA1 mathematical function.
+    <br>* Mcs.foaf:mbox,
+    <br>* Mcs.mbox!:foaf,
+    <a class="clsHide" href="#idFoafmbox"></a></p>
+  <p id="idFoafmember">foaf:member-property::
+    <br>× sDescription: member - Indicates a member of a Group
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_member
+    <br>× sStatus: stable
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafGroup">Group</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafmember">member</a></code> property relates a <code><a class="clsPreview" href="#idFoafGroup">Group</a></code> to a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> that is a member of that group.
+    <br>See <code><a class="clsPreview" href="#idFoafGroup">Group</a></code> for details and examples.
+    <br>* Mcs.foaf:member,
+    <br>* Mcs.member!:foaf,
+    <a class="clsHide" href="#idFoafmember"></a></p>
+  <p id="idFoafpage">foaf:page-property::
+    <br>× sDescription: page - A page or document about this thing.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_page
+    <br>× sStatus: stable
+    <br>× sDomain: having this property implies being a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafpage">page</a></code> property relates a thing to a document about that thing.
+    <br>As such it is an inverse of the <code><a class="clsPreview" href="#idFoaftopic">topic</a></code> property, which relates a document to a thing that the document is about.
+    <br>* Mcs.foaf:page,
+    <br>* Mcs.page!:foaf,
+    <a class="clsHide" href="#idFoafpage"></a></p>
+  <p id="idFoafprimaryTopic">foaf:primaryTopic-property::
+    <br>× sDescription: primary topic - The primary topic of some page or document.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_primaryTopic
+    <br>× sStatus: stable
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× sRange: every value of this property is a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: http://www.w3.org/2002/07/owl#FunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafprimaryTopic">primaryTopic</a></code> property relates a document to the main thing that the document is about.
+    <br>The <code><a class="clsPreview" href="#idFoafprimaryTopic">primaryTopic</a></code> property is <em>functional</em>: for any document it applies to, it can have at most one value. This is useful, as it allows for data merging. In many cases it may be difficult for third parties to determine the primary topic of a document, but in a useful number of cases (eg. descriptions of movies, restaurants, politicians, ...) it should be reasonably obvious. Documents are very often the most authoritative source of information about their own primary topics, although this cannot be guaranteed since documents cannot be assumed to be accurate, honest etc.
+    <br>It is an inverse of the <code><a class="clsPreview" href="#idFoafisPrimaryTopicOf">isPrimaryTopicOf</a></code> property, which relates a thing to  a document <em>primarily</em> about that thing. The choice between these two properties is purely pragmatic. When describing documents, we use <code><a class="clsPreview" href="#idFoafprimaryTopic">primaryTopic</a></code> former to point to the things they're about. When describing things (people etc.), it is useful to be able to directly cite documents which have those things as their main topic - so we use <code><a class="clsPreview" href="#idFoafisPrimaryTopicOf">isPrimaryTopicOf</a></code>. In this way, Web sites such as <a href="http://www.wikipedia.org/">Wikipedia</a> or <a href="http://www.nndb.com/">NNDB</a> can provide indirect identification for the things they have descriptions of.
+    <br>* Mcs.foaf:primaryTopic,
+    <br>* Mcs.primaryTopic!:foaf,
+    <a class="clsHide" href="#idFoafprimaryTopic"></a></p>
+  <p id="idFoafweblog">foaf:weblog-property::
+    <br>× sDescription: weblog - A weblog of some thing (whether person, group, company etc.).
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_weblog
+    <br>× sStatus: stable
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: http://www.w3.org/2002/07/owl#InverseFunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafweblog">weblog</a></code> property relates a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> to a weblog of that agent.
+    <br>* Mcs.foaf:weblog,
+    <br>* Mcs.weblog!:foaf,
+    <a class="clsHide" href="#idFoafweblog"></a></p>
+  <p id="idFoafaccount">foaf:account-property::
+    <br>× sDescription: account - Indicates an account held by this agent.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_account
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafaccount">account</a></code> property relates a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> to an <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> for which they are the sole account holder. See <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> for usage details.
+    <br>* Mcs.foaf:account,
+    <br>* Mcs.account!:foaf,
+    <a class="clsHide" href="#idFoafaccount"></a></p>
+  <p id="idFoafaccountName">foaf:accountName-property::
+    <br>× sDescription: account name - Indicates the name (identifier) associated with this online account.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_accountName
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafaccountName">accountName</a></code> property of a <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> is a textual representation of the account name (unique ID) associated with that account.
+    <br>* Mcs.foaf:accountName,
+    <br>* Mcs.accountName!:foaf,
+    <a class="clsHide" href="#idFoafaccountName"></a></p>
+  <p id="idFoafaccountServiceHomepage">foaf:accountServiceHomepage-property::
+    <br>× sDescription: account service homepage - Indicates a homepage of the service provide for this online account.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_accountServiceHomepage
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafaccountServiceHomepage">accountServiceHomepage</a></code> property indicates a relationship between a <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> and the homepage of the supporting service provider.
+    <br>* Mcs.foaf:accountServiceHomepage,
+    <br>* Mcs.accountServiceHomepage!:foaf,
+    <a class="clsHide" href="#idFoafaccountServiceHomepage"></a></p>
+  <p id="idFoafaimChatID">foaf:aimChatID-property::
+    <br>× sDescription: AIM chat ID - An AIM chat ID
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_aimChatID
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: http://www.w3.org/2002/07/owl#InverseFunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafaimChatID">aimChatID</a></code> property relates a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> to a textual identifier ('screenname') assigned to them in the AOL Instant Messanger (AIM) system.  See AOL's <a href="http://www.aim.com/">AIM</a> site for more details of AIM and AIM screennames. The <a href="http://www.apple.com/macosx/what-is-macosx/ichat.html">iChat</a> tools from <a href="http://www.apple.com/">Apple</a> also make use of AIM identifiers.
+    <br>See <code><a class="clsPreview" href="#idFoafOnlineChatAccount">OnlineChatAccount</a></code> (and <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code>) for a more general (and verbose) mechanism for describing IM and chat accounts.
+    <br>* Mcs.foaf:aimChatID,
+    <br>* Mcs.aimChatID!:foaf,
+    <a class="clsHide" href="#idFoafaimChatID"></a></p>
+  <p id="idFoafbased_near">foaf:based_near-property::
+    <br>× sDescription: based near - A location that something is based near, for some broadly human notion of near.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_based_near
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial Thing</a>
+    <br>× sRange: every value of this property is a <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafbased_near">based_near</a></code> relationship relates two "spatial things" (anything that can <em>be somewhere</em>), the latter typically described using the geo:lat / geo:long <a href="http://www.w3.org/2003/01/geo/wgs84_pos#">geo-positioning vocabulary</a> (See <a href="http://esw.w3.org/topic/GeoInfo">GeoInfo</a> in the W3C semweb wiki for details). This allows us to say describe the typical latitute and longitude of, say, a Person (people are spatial things - they can be places) without implying that a precise location has been given.
+    <br>We do not say much about what 'near' means in this context; it is a 'rough and ready' concept. For a more precise treatment, see <a href="http://esw.w3.org/topic/GeoOnion">GeoOnion vocab</a> design discussions, which are aiming to produce a more sophisticated vocabulary for such purposes.
+    <br> FOAF files often make use of the <code>contact:nearestAirport</code> property. This illustrates the distinction between FOAF documents (which may make claims using <em>any</em> RDF vocabulary) and the core FOAF vocabulary defined by this specification. For further reading on the use of <code>nearestAirport</code> see <a href="http://wiki.foaf-project.org/w/UsingContactNearestAirport">UsingContactNearestAirport</a> in the FOAF wiki.
+    <br>* Mcs.foaf:based_near,
+    <br>* Mcs.based_near!:foaf,
+    <a class="clsHide" href="#idFoafbased_near"></a></p>
+  <p id="idFoafcurrentProject">foaf:currentProject-property::
+    <br>× sDescription: current project - A current project this person works on.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_currentProject
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× sRange: every value of this property is a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: A <code><a class="clsPreview" href="#idFoafcurrentProject">currentProject</a></code> relates a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> to a <code><a class="clsPreview" href="#idFoafDocument">Document</a></code> indicating some collaborative or individual undertaking.  This relationship indicates that the <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> has some active role in the project, such as development, coordination, or support.
+    <br>When a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> is no longer involved with a project, or perhaps is inactive for some time, the relationship becomes a <code><a class="clsPreview" href="#idFoafpastProject">pastProject</a></code>.
+    <br>If the <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> has stopped working on a project because it has been completed (successfully or otherwise), <code><a class="clsPreview" href="#idFoafpastProject">pastProject</a></code> is applicable. In general, <code><a class="clsPreview" href="#idFoafcurrentProject">currentProject</a></code> is used to indicate someone's current efforts (and implied interests, concerns etc.), while <code><a class="clsPreview" href="#idFoafpastProject">pastProject</a></code> describes what they've previously been doing.
+    <br>× editorial: Note that this property requires further work. There has been confusion about whether it points to a thing (eg. something you've made; a homepage for a project, ie. a <code><a class="clsPreview" href="#idFoafDocument">Document</a></code> or to instances of the class <code><a class="clsPreview" href="#idFoafProject">Project</a></code>, which might themselves have a <code><a class="clsPreview" href="#idFoafhomepage">homepage</a></code>. In practice, it seems to have been used in a similar way to <code><a class="clsPreview" href="#idFoafinterest">interest</a></code>, referencing homepages of ongoing projects.
+    <br>* Mcs.foaf:currentProject,
+    <br>* Mcs.currentProject!:foaf,
+    <a class="clsHide" href="#idFoafcurrentProject"></a></p>
+  <p id="idFoafdepiction">foaf:depiction-property::
+    <br>× sDescription: depiction - A depiction of some thing.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_depiction
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafImage">Image</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafdepiction">depiction</a></code> property is a relationship between a thing and an <code><a class="clsPreview" href="#idFoafImage">Image</a></code> that depicts it. As such it is an inverse of the <code><a class="clsPreview" href="#idFoafdepicts">depicts</a></code> relationship.
+    <br>A common use of <code><a class="clsPreview" href="#idFoafdepiction">depiction</a></code> (and <code><a class="clsPreview" href="#idFoafdepicts">depicts</a></code>) is to indicate the contents of a digital image, for example the people or objects represented in an online photo gallery.
+    <br>Extensions to this basic idea include '<a href="http://rdfweb.org/2002/01/photo/">Co-Depiction</a>' (social networks as evidenced in photos), as well as richer photo metadata through the mechanism  of using SVG paths to indicate the <em>regions</em> of an image which depict some particular thing. See <a href="http://www.jibbering.com/svg/AnnotateImage.html">'Annotating Images With SVG'</a> for tools and details.
+    <br>The basic notion of 'depiction' could also be extended to deal with multimedia content (video clips, audio), or refined to deal with corner cases, such as pictures of pictures etc.
+    <br>The <code><a class="clsPreview" href="#idFoafdepiction">depiction</a></code> property is a super-property of the more specific property <code><a class="clsPreview" href="#idFoafimg">img</a></code>, which is used more sparingly. You stand in a <code><a class="clsPreview" href="#idFoafdepiction">depiction</a></code> relation to <em>any</em> <code><a class="clsPreview" href="#idFoafImage">Image</a></code> that depicts you, whereas <code><a class="clsPreview" href="#idFoafimg">img</a></code> is typically used to indicate a few images that are particularly representative.
+    <br>* Mcs.foaf:depiction,
+    <br>* Mcs.depiction!:foaf,
+    <a class="clsHide" href="#idFoafdepiction"></a></p>
+  <p id="idFoafdepicts">foaf:depicts-property::
+    <br>× sDescription: depicts - A thing depicted in this representation.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_depicts
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafImage">Image</a>
+    <br>× sRange: every value of this property is a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafdepicts">depicts</a></code> property is a relationship between a <code><a class="clsPreview" href="#idFoafImage">Image</a></code> and something that the image depicts. As such it is an inverse of the <code><a class="clsPreview" href="#idFoafdepiction">depiction</a></code> relationship. See <code><a class="clsPreview" href="#idFoafdepiction">depiction</a></code> for further notes.
+    <br>* Mcs.foaf:depicts,
+    <br>* Mcs.depicts!:foaf,
+    <a class="clsHide" href="#idFoafdepicts"></a></p>
+  <p id="idFoaffamilyName">foaf:familyName-property::
+    <br>× sDescription: familyName - The family name of some person.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_familyName
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoaffamilyName">familyName</a></code> property is provided (alongside <code><a class="clsPreview" href="#idFoafgivenName">givenName</a></code>) for use when describing parts of people's names. Although these concepts do not capture the full range of personal naming styles found world-wide, they are commonly used and have some value.
+    <br>There is also a simple <code><a class="clsPreview" href="#idFoafname">name</a></code> property.
+    <br>Support is also provided for the more archaic and culturally varying terminology of <code><a class="clsPreview" href="#idFoaffirstName">firstName</a></code> and <code><a class="clsPreview" href="#idFoaflastName">lastName</a></code>.
+    <br>See the <a href="http://wiki.foaf-project.org/w/NameVocabIssue">issue tracker</a> for design discussions, status and ongoing work on rationalising the FOAF naming machinery.
+    <br>* Mcs.foaf:familyName,
+    <br>* Mcs.familyName!:foaf,
+    <a class="clsHide" href="#idFoaffamilyName"></a></p>
+  <p id="idFoaffirstName">foaf:firstName-property::
+    <br>× sDescription: firstName - The first name of a person.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_firstName
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoaffirstName">firstName</a></code> property is provided (alongside <code><a class="clsPreview" href="#idFoaflastName">lastName</a></code>) as a mechanism to support legacy data that cannot be easily interpreted in terms of the (otherwise preferred) <code><a class="clsPreview" href="#idFoaffamilyName">familyName</a></code> and <code><a class="clsPreview" href="#idFoafgivenName">givenName</a></code> properties. The concepts of 'first' and 'last' names do not work well across cultural and linguistic boundaries; however they are widely used in addressbooks and databases.
+    <br>See the <a href="http://wiki.foaf-project.org/w/NameVocabIssue">issue tracker</a> for design discussions, status and ongoing work on rationalising the FOAF naming machinery.
+    <br>There is also a simple <code><a class="clsPreview" href="#idFoafname">name</a></code> property.
+    <br>* Mcs.foaf:firstName,
+    <br>* Mcs.firstName!:foaf,
+    <a class="clsHide" href="#idFoaffirstName"></a></p>
+  <p id="idFoaffocus">foaf:focus-property::
+    <br>× sDescription: focus - The underlying or 'focal' entity associated with some SKOS-described concept.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_focus
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+    <br>× sRange: every value of this property is a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoaffocus">focus</a></code> property relates a conceptualisation of something to the thing itself.  Specifically, it is designed for use with W3C's <a href="http://www.w3.org/2004/02/skos/">SKOS</a> vocabulary, to help indicate specific individual things (typically people, places, artifacts) that are mentioned in different SKOS schemes (eg. thesauri).
+    <br>W3C SKOS is based around collections of linked 'concepts', which indicate topics, subject areas and categories. <a href="http://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20050510/#secmodellingrdf">In SKOS</a>, properties of a skos:Concept are properties of the conceptualization (see <a href="http://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20051102/#secopen">2005 discussion</a> for details); for example administrative and record-keeping metadata. Two schemes might have an entry for the same individual; the foaf:focus property can be used to indicate the thing in they world that they both focus on. Many SKOS concepts don't work this way; broad topical areas and subject categories don't typically correspond to some particular entity. However, in cases when they do, it is useful to link both subject-oriented and thing-oriented information via foaf:focus.
+    <br>FOAF's focus property works alongside its other topic-oriented constructs: <code><a class="clsPreview" href="#idFoaftopic">topic</a></code>, <code><a class="clsPreview" href="#idFoafprimaryTopic">primaryTopic</a></code> are used when talking about the topical emphasis of a document. The notion of <code><a class="clsPreview" href="#idFoafprimaryTopic">primaryTopic</a></code> is particularly important in FOAF as it provides an indirect mechanism for identifying things indirectly. A similar approach is explored by the <a href="http://larry.masinter.net/duri.html">TDB URI scheme</a>. FOAF includes topic-oriented functionality to address its <a href="http://www.foaf-project.org/original-intro">original goals</a> of linking people to information, as well as to other people, through the use of linked information.
+    <br>* Mcs.foaf:focus,
+    <br>* Mcs.focus!:foaf,
+    <a class="clsHide" href="#idFoaffocus"></a></p>
+  <p id="idFoafgender">foaf:gender-property::
+    <br>× sDescription: gender - The gender of this Agent (typically but not necessarily 'male' or 'female').
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_gender
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: href="http://www.w3.org/2002/07/owl#FunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafgender">gender</a></code> property relates a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> (typically a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code>) to a string representing its gender. In most cases the value will be the string 'female' or 'male' (in lowercase without surrounding quotes or spaces).  Like all FOAF properties, there is in general no requirement to use <code><a class="clsPreview" href="#idFoafgender">gender</a></code> in any particular document or description. Values other than 'male' and 'female' may be used, but are not enumerated here. The <code><a class="clsPreview" href="#idFoafgender">gender</a></code> mechanism is not intended to capture the full variety of biological, social and sexual concepts associated with the word 'gender'.
+    <br>Anything that has a <code><a class="clsPreview" href="#idFoafgender">gender</a></code> property will be some kind of <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code>. However there are kinds of <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> to which the concept of gender isn't applicable (eg. a <code><a class="clsPreview" href="#idFoafGroup">Group</a></code>). FOAF does not currently include a class corresponding directly to "the type of thing that has a gender".  At any point in time, a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> has at most one value for <code><a class="clsPreview" href="#idFoafgender">gender</a></code>. FOAF does not treat <code><a class="clsPreview" href="#idFoafgender">gender</a></code> as a <em>static</em> property; the same individual may have different values for this property at different times.
+    <br>Note that FOAF's notion of gender isn't defined biologically or anatomically - this would be tricky since we have a broad notion that applies to all <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code>s (including robots - eg. Bender from Futurama is 'male'). As stressed above, FOAF's notion of gender doesn't attempt to encompass the full range of concepts associated with human gender, biology and sexuality. As such it is a (perhaps awkward) compromise between the clinical and the social/psychological. In general, a person will be the best authority on their <code><a class="clsPreview" href="#idFoafgender">gender</a></code>. Feedback on this design is particularly welcome (via the FOAF mailing list, <a href="http://lists.foaf-project.org/mailman/listinfo/foaf-dev">foaf-dev</a>). We have tried to be respectful of diversity without attempting to catalogue or enumerate that diversity.
+    <br>This may also be a good point for a periodic reminder: as with all FOAF properties, documents that use '<code><a class="clsPreview" href="#idFoafgender">gender</a></code>' will on occassion be innacurate, misleading or outright false. FOAF, like all open means of communication, supports <em>lying</em>. Application authors using FOAF data should always be cautious in their presentation of unverified information, but be particularly sensitive to issues and risks surrounding sex and gender (including privacy and personal safety concerns). Designers of FOAF-based user interfaces should be careful to allow users to omit <code><a class="clsPreview" href="#idFoafgender">gender</a></code> when describing themselves and others, and to allow at least for values other than 'male' and 'female' as options. Users of information conveyed via FOAF (as via information conveyed through mobile phone text messages, email, Internet chat, HTML pages etc.) should be skeptical of unverified information.
+    <br>* Mcs.foaf:gender,
+    <br>* Mcs.gender!:foaf,
+    <a class="clsHide" href="#idFoafgender"></a></p>
+  <p id="idFoafgivenName">foaf:givenName-property::
+    <br>× sDescription: Given name - The given name of some person.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_givenName
+    <br>× sStatus: testing
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafgivenName">givenName</a></code> property is provided (alongside <code><a class="clsPreview" href="#idFoaffamilyName">familyName</a></code>) for use when describing parts of people's names. Although these concepts do not capture the full range of personal naming styles found world-wide, they are commonly used and have some value.
+    <br>There is also a simple <code><a class="clsPreview" href="#idFoafname">name</a></code> property.
+    <br>Support is also provided for the more archaic and culturally varying terminology of <code><a class="clsPreview" href="#idFoaffirstName">firstName</a></code> and <code><a class="clsPreview" href="#idFoaflastName">lastName</a></code>.
+    <br>See the <a href="http://wiki.foaf-project.org/w/NameVocabIssue">issue tracker</a> for design discussions, status and ongoing work on rationalising the FOAF naming machinery.
+    <br>* Mcs.foaf:givenName,
+    <br>* Mcs.givenName!:foaf,
+    <a class="clsHide" href="#idFoafgivenName"></a></p>
+  <p id="idFoaficqChatID">foaf:icqChatID-property::
+    <br>× sDescription: ICQ chat ID - An ICQ chat ID
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_icqChatID
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: http://www.w3.org/2002/07/owl#InverseFunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoaficqChatID">icqChatID</a></code> property relates a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> to a textual identifier assigned to them in the ICQ Chat system.  See the <a href="http://web.icq.com/icqchat/">icq chat</a> site for more details of the 'icq' service. Their "<a href="http://www.icq.com/products/whatisicq.html">What is ICQ?</a>" document provides a basic overview, while their "<a href="http://company.icq.com/info/">About Us</a> page notes that ICQ has been acquired by AOL. Despite the relationship with AOL, ICQ is at the time of writing maintained as a separate identity from the AIM brand (see <code><a class="clsPreview" href="#idFoafaimChatID">aimChatID</a></code>).
+    <br>See <code><a class="clsPreview" href="#idFoafOnlineChatAccount">OnlineChatAccount</a></code> (and <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code>) for a more general (and verbose) mechanism for describing IM and chat accounts.
+    <br>* Mcs.foaf:icqChatID,
+    <br>* Mcs.icqChatID!:foaf,
+    <a class="clsHide" href="#idFoaficqChatID"></a></p>
+  <p id="idFoafimg">foaf:img-property::
+    <br>× sDescription: image - An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage).
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_img
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafImage">Image</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafimg">img</a></code> property relates a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> to a <code><a class="clsPreview" href="#idFoafImage">Image</a></code> that represents them. Unlike its super-property <code><a class="clsPreview" href="#idFoafdepiction">depiction</a></code>, we only use <code><a class="clsPreview" href="#idFoafimg">img</a></code> when an image is particularly representative of some person. The analogy is with the image(s) that might appear on someone's homepage, rather than happen to appear somewhere in their photo album.
+    <br>Unlike the more general <code><a class="clsPreview" href="#idFoafdepiction">depiction</a></code> property (and its inverse, <code><a class="clsPreview" href="#idFoafdepicts">depicts</a></code>), the <code><a class="clsPreview" href="#idFoafimg">img</a></code> property is only used with representations of people (ie. instances of <code><a class="clsPreview" href="#idFoafPerson">Person</a></code>). So you can't use it to find pictures of cats, dogs etc. The basic idea is to have a term whose use is more restricted than <code><a class="clsPreview" href="#idFoafdepiction">depiction</a></code> so we can have a useful way of picking out a reasonable image to represent someone. FOAF defines <code><a class="clsPreview" href="#idFoafimg">img</a></code> as a sub-property of <code><a class="clsPreview" href="#idFoafdepiction">depiction</a></code>, which means that the latter relationship is implied whenever two things are related by the former.
+    <br>Note that <code><a class="clsPreview" href="#idFoafimg">img</a></code> does not have any restrictions on the dimensions, colour depth, format etc of the <code><a class="clsPreview" href="#idFoafImage">Image</a></code> it references.
+    <br>Terminology: note that <code><a class="clsPreview" href="#idFoafimg">img</a></code> is a property (ie. relationship), and that <code>code:Image</code> is a similarly named class (ie. category, a type of thing). It might have been more helpful to call <code><a class="clsPreview" href="#idFoafimg">img</a></code> 'mugshot' or similar; instead it is named by analogy to the HTML IMG element.
+    <br>* Mcs.foaf:img,
+    <br>* Mcs.img!:foaf,
+    <a class="clsHide" href="#idFoafimg"></a></p>
+  <p id="idFoafinterest">foaf:interest-property::
+    <br>× sDescription: interest - A page about a topic of interest to this person.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_interest
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafinterest">interest</a></code> property represents an interest of a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code>, through indicating a <code><a class="clsPreview" href="#idFoafDocument">Document</a></code> whose <code><a class="clsPreview" href="#idFoaftopic">topic</a></code>(s) broadly characterises that interest.
+    <br>example: For example, we might claim that a person or group has an interest in RDF by saying they stand in a <code><a class="clsPreview" href="#idFoafinterest">interest</a></code> relationship to the <a href="http://www.w3.org/RDF/">RDF</a> home page. Loosly, such RDF would be saying <em>"this agent is interested in the topic of this page"</em>.
+    <br>example: Uses of <code><a class="clsPreview" href="#idFoafinterest">interest</a></code> include a variety of filtering and resource discovery applications. It could be used, for example, to help find answers to questions such as "Find me members of this organisation with an interest in XML who have also contributed to <a href="http://www.cpan.org/">CPAN</a>)".
+    <br>This approach to characterising interests is intended to compliment other mechanisms (such as the use of controlled vocabulary). It allows us to use a widely known set of unique identifiers (Web page URIs) with minimal pre-coordination. Since URIs have a controlled syntax, this makes data merging much easier than the use of free-text characterisations of interest.
+    <br>Note that interest does not imply expertise, and that this FOAF term provides no support for characterising levels of interest: passing fads and lifelong quests are both examples of someone's <code><a class="clsPreview" href="#idFoafinterest">interest</a></code>. Describing interests in full is a complex undertaking; <code><a class="clsPreview" href="#idFoafinterest">interest</a></code> provides one basic component of FOAF's approach to these problems.
+    <br>* Mcs.foaf:interest,
+    <br>* Mcs.interest!:foaf,
+    <a class="clsHide" href="#idFoafinterest"></a></p>
+  <p id="idFoafjabberID">foaf:jabberID-property::
+    <br>× sDescription: jabber ID - A jabber ID for something.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_jabberID
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: http://www.w3.org/2002/07/owl#InverseFunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafjabberID">jabberID</a></code> property relates a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> to a textual identifier assigned to them in the <a href="http://www.jabber.org/">Jabber</a> messaging system.  See the <a href="http://www.jabber.org/">Jabber</a> site for more information about the Jabber protocols and tools.
+    <br>Jabber, unlike several other online messaging systems, is based on an open, publically documented protocol specification, and has a variety of open source implementations. Jabber IDs can be assigned to a variety of kinds of thing, including software 'bots', chat rooms etc. For the purposes of FOAF, these are all considered to be kinds of <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> (ie. things that <em>do</em> stuff). The uses of Jabber go beyond simple IM chat applications. The <code><a class="clsPreview" href="#idFoafjabberID">jabberID</a></code> property is provided as a basic hook to help support RDF description of Jabber users and services.
+    <br>See <code><a class="clsPreview" href="#idFoafOnlineChatAccount">OnlineChatAccount</a></code> (and <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code>) for a more general (and verbose) mechanism for describing IM and chat accounts.
+    <br>* Mcs.foaf:jabberID,
+    <br>* Mcs.jabberID!:foaf,
+    <a class="clsHide" href="#idFoafjabberID"></a></p>
+  <p id="idFoaflastName">foaf:lastName-property::
+    <br>× sDescription: lastName - The last name of a person.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_lastName
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoaflastName">lastName</a></code> property is provided (alongside <code><a class="clsPreview" href="#idFoaffirstName">firstName</a></code>) as a mechanism to support legacy data that cannot be easily interpreted in terms of the (otherwise preferred) <code><a class="clsPreview" href="#idFoaffamilyName">familyName</a></code> and <code><a class="clsPreview" href="#idFoafgivenName">givenName</a></code> properties. The concepts of 'first' and 'last' names do not work well across cultural and linguistic boundaries; however they are widely used in addressbooks and databases.
+    <br>See the <a href="http://wiki.foaf-project.org/w/NameVocabIssue">issue tracker</a> for design discussions, status and ongoing work on rationalising the FOAF naming machinery.
+    <br>There is also a simple <code><a class="clsPreview" href="#idFoafname">name</a></code> property.
+    <br>* Mcs.foaf:lastName,
+    <br>* Mcs.lastName!:foaf,
+    <a class="clsHide" href="#idFoaflastName"></a></p>
+  <p id="idFoaflogo">foaf:logo-property::
+    <br>× sDescription: logo - A logo representing some thing.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_logo
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× sRange: every value of this property is a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: http://www.w3.org/2002/07/owl#InverseFunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoaflogo">logo</a></code> property is used to indicate a graphical logo of some kind. <em>It is probably underspecified...</em>
+    <br>* Mcs.foaf:logo,
+    <br>* Mcs.logo!:foaf,
+    <a class="clsHide" href="#idFoaflogo"></a></p>
+  <p id="idFoafmbox_sha1sum">foaf:mbox_sha1sum-property::
+    <br>× sDescription: sha1sum of a personal mailbox URI name - The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_mbox_sha1sum
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: http://www.w3.org/2002/07/owl#InverseFunctionalProperty
+    <br>
+    <br>× sDescriptionLong: A <code><a class="clsPreview" href="#idFoafmbox_sha1sum">mbox_sha1sum</a></code> of a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> is a textual representation of the result of applying the SHA1 mathematical functional to a 'mailto:' identifier (URI) for an Internet mailbox that they stand in a <code><a class="clsPreview" href="#idFoafmbox">mbox</a></code> relationship to.
+    <br>In other words, if you have a mailbox (<code><a class="clsPreview" href="#idFoafmbox">mbox</a></code>) but don't want to reveal its address, you can take that address and generate a <code><a class="clsPreview" href="#idFoafmbox_sha1sum">mbox_sha1sum</a></code> representation of it. Just as a <code><a class="clsPreview" href="#idFoafmbox">mbox</a></code> can be used as an indirect identifier for its owner, we can do the same with <code><a class="clsPreview" href="#idFoafmbox_sha1sum">mbox_sha1sum</a></code> since there is only one <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> with any particular value for that property.
+    <br>Many FOAF tools use <code><a class="clsPreview" href="#idFoafmbox_sha1sum">mbox_sha1sum</a></code> in preference to exposing mailbox information. This is usually for privacy and SPAM-avoidance reasons. Other relevant techniques include the use of PGP encryption (see <a href="http://usefulinc.com/foaf/">Edd Dumbill's documentation</a>) and the use of <a href="http://www.w3.org/2001/12/rubyrdf/util/foafwhite/intro.html">FOAF-based whitelists</a> for mail filtering.
+    <br>Code examples for SHA1 in C#, Java, PHP, Perl and Python can be found <a href="http://www.intertwingly.net/blog/1545.html">in Sam Ruby's weblog entry</a>. Remember to include the 'mailto:' prefix, but no trailing whitespace, when computing a <code><a class="clsPreview" href="#idFoafmbox_sha1sum">mbox_sha1sum</a></code> property.
+    <br>* Mcs.foaf:mbox_sha1sum,
+    <br>* Mcs.mbox_sha1sum!:foaf,
+    <a class="clsHide" href="#idFoafmbox_sha1sum"></a></p>
+  <p id="idFoafmsnChatID">foaf:msnChatID-property::
+    <br>× sDescription: MSN chat ID - An MSN chat ID
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_msnChatID
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: http://www.w3.org/2002/07/owl#InverseFunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafmsnChatID">msnChatID</a></code> property relates a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> to a textual identifier assigned to them in the Microsoft online chat system originally known as 'MSN', and now <a href="http://en.wikipedia.org/wiki/Windows_Live_Messenger">Windows Live Messenger</a>.  See the <a href="http://download.live.com/messenger">Microsoft mesenger</a> and <a href="http://en.wikipedia.org/wiki/Windows_Live_ID">Windows Live ID</a> sites for more details.
+    <br>See <code><a class="clsPreview" href="#idFoafOnlineChatAccount">OnlineChatAccount</a></code> (and <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code>) for a more general (and verbose) mechanism for describing IM and chat accounts.
+    <br>* Mcs.foaf:msnChatID,
+    <br>* Mcs.msnChatID!:foaf,
+    <a class="clsHide" href="#idFoafmsnChatID"></a></p>
+  <p id="idFoafmyersBriggs">foaf:myersBriggs-property::
+    <br>× sDescription: myersBriggs - A Myers Briggs (MBTI) personality classification.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_myersBriggs
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafmyersBriggs">myersBriggs</a></code> property represents the Myers Briggs (MBTI) approach to personality taxonomy. It is included in FOAF as an example of a property that takes certain constrained values, and to give some additional detail to the FOAF files of those who choose to include it. The <code><a class="clsPreview" href="#idFoafmyersBriggs">myersBriggs</a></code> property applies only to the <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> class; wherever you see it, you can infer it is being applied to a person.
+    <br>The <code><a class="clsPreview" href="#idFoafmyersBriggs">myersBriggs</a></code> property is interesting in that it illustrates how FOAF can serve as a carrier for various kinds of information, without necessarily being commited to any associated worldview. Not everyone will find myersBriggs (or star signs, or blood types, or the four humours) a useful perspective on human behaviour and personality. The inclusion of a Myers Briggs property doesn't indicate that FOAF endorses the underlying theory, any more than the existence of <code><a class="clsPreview" href="#idFoafweblog">weblog</a></code> is an endorsement of soapboxes.
+    <br>The values for <code><a class="clsPreview" href="#idFoafmyersBriggs">myersBriggs</a></code> are the following 16 4-letter textual codes: ESTJ, INFP, ESFP, INTJ, ESFJ, INTP, ENFP, ISTJ, ESTP, INFJ, ENFJ, ISTP, ENTJ, ISFP, ENTP, ISFJ. If multiple of these properties are applicable, they are represented by applying multiple properties to a person.
+    <br>For further reading on MBTI, see various online sources (eg. <a href="http://www.teamtechnology.co.uk/tt/t-articl/mb-simpl.htm">this article</a>). There are various online sites which offer quiz-based tools for determining a person's MBTI classification. The owners of the MBTI trademark have probably not approved of these.
+    <br>This FOAF property suggests some interesting uses, some of which could perhaps be used to test the claims made by proponents of the MBTI (eg. an analysis of weblog postings filtered by MBTI type). However it should be noted that MBTI FOAF descriptions are self-selecting; MBTI categories may not be uniformly appealing to the people they describe. Further, there is probably a degree of cultural specificity implicit in the assumptions made by many questionaire-based MBTI tools; the MBTI system may not make sense in cultural settings beyond those it was created for.
+    <br>See also <a href="http://webspace.webring.com/people/cl/lifexplore/mbintro.htm">Cory Caplinger's summary table</a> or the RDFWeb article, <a href="http://web.archive.org/web/20080802184922/http://rdfweb.org/mt/foaflog/archives/000004.html">FOAF Myers Briggs addition</a> for further background and examples.
+    <br>Note: Myers Briggs Type Indicator and MBTI are registered trademarks of Consulting Psychologists Press Inc. Oxford Psycholgists Press Ltd has exclusive rights to the trademark in the UK.
+    <br>* Mcs.foaf:myersBriggs,
+    <br>* Mcs.myersBriggs!:foaf,
+    <a class="clsHide" href="#idFoafmyersBriggs"></a></p>
+  <p id="idFoafname">foaf:name-property::
+    <br>× sDescription: name - A name for some thing.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_name
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafname">name</a></code> of something is a simple textual string.
+    <br>XML language tagging may be used to indicate the language of the name. For example:
+    <br><code>&lt;foaf:name xml:lang="en"&gt;Dan Brickley&lt;/foaf:name&gt;</code>
+    <br>FOAF provides some other naming constructs.  While foaf:name does not explicitly represent name substructure (family vs given etc.) it does provide a basic level of interoperability. See the <a href="http://wiki.foaf-project.org/w/IssueTracker">issue tracker</a> for status of work on this issue.
+    <br>The <code><a class="clsPreview" href="#idFoafname">name</a></code> property, like all RDF properties with a range of rdfs:Literal, may be used with XMLLiteral datatyped values (multiple <code><a class="clsPreview" href="#idFoafname">name</a></code>s are acceptable whether they are in the same langauge or not). XMLLiteral usage is not yet widely adopted. Feedback on this aspect of the FOAF design is particularly welcomed.
+    <br>* Mcs.foaf:name,
+    <br>* Mcs.name!:foaf,
+    <a class="clsHide" href="#idFoafname"></a></p>
+  <p id="idFoafnick">foaf:nick-property::
+    <br>× sDescription: nickname - A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames).
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_nick
+    <br>× sStatus: testing
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafnick">nick</a></code> property relates a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> to a short (often abbreviated) nickname, such as those use in IRC chat, online accounts, and computer logins.
+    <br>This property is necessarily vague, because it does not indicate any particular naming control authority, and so cannot distinguish a person's login from their (possibly various) IRC nicknames or other similar identifiers. However it has some utility, since many people use the same string (or slight variants) across a variety of such environments.
+    <br>For specific controlled sets of names (relating primarily to Instant Messanger accounts), FOAF provides some convenience properties: <code><a class="clsPreview" href="#idFoafjabberID">jabberID</a></code>, <code><a class="clsPreview" href="#idFoafaimChatID">aimChatID</a></code>, <code><a class="clsPreview" href="#idFoafmsnChatID">msnChatID</a></code> and <code><a class="clsPreview" href="#idFoaficqChatID">icqChatID</a></code>. Beyond this, the problem of representing such accounts is not peculiar to Instant Messanging, and it is not scaleable to attempt to enumerate each naming database as a distinct FOAF property. The <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> term (and supporting vocabulary) are provided as a more verbose and more expressive generalisation of these properties.
+    <br>* Mcs.foaf:nick,
+    <br>* Mcs.nick!:foaf,
+    <a class="clsHide" href="#idFoafnick"></a></p>
+  <p id="idFoafopenid">foaf:openid-property::
+    <br>× sDescription: openid - An OpenID for an Agent.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_openid
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: http://www.w3.org/2002/07/owl#InverseFunctionalProperty
+    <br>
+    <br>× sDescriptionLong: A <code><a class="clsPreview" href="#idFoafopenid">openid</a></code> is a property of a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> that associates it with a document that can be used as an <a href="http://www.w3.org/TR/webarch/#indirect-identification">indirect identifier</a> in the manner of the <a href="http://openid.net/specs/openid-authentication-1_1.html">OpenID</a> "Identity URL". As the OpenID 1.1 specification notes, OpenID itself"<em>does not provide any mechanism to exchange profile information, though Consumers of an Identity can learn more about an End User from any public, semantically interesting documents linked thereunder (FOAF, RSS, Atom, vCARD, etc.)</em>". In this way, FOAF and OpenID complement each other; neither provides a stand-alone approach to online "trust", but combined they can address interesting parts of this larger problem space.
+    <br>The <code><a class="clsPreview" href="#idFoafopenid">openid</a></code> property is "inverse functional", meaning that anything that is the foaf:openid of something, is the <code><a class="clsPreview" href="#idFoafopenid">openid</a></code> of no more than one thing. FOAF is agnostic as to whether there are (according to the relevant OpenID specifications) OpenID URIs that are equally associated with multiple Agents. FOAF offers sub-classes of Agent, ie. <code><a class="clsPreview" href="#idFoafOrganization">Organization</a></code> and <code><a class="clsPreview" href="#idFoafGroup">Group</a></code>, that allow for such scenarios to be consistent with the notion that any foaf:openid is the foaf:openid of just one <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code>.
+    <br>FOAF does not mandate any particular URI scheme for use as <code><a class="clsPreview" href="#idFoafopenid">openid</a></code> values. The OpenID 1.1 specification includes a <a href="http://openid.net/specs/openid-authentication-1_1.html#delegating_authentication">delegation model</a> that is often used to allow a weblog or homepage document to also serve in OpenID authentication via "link rel" HTML markup. This deployment model provides a convenient connection to FOAF, since a similar <a href="http://xmlns.com/foaf/spec/#sec-autodesc">technique</a> is used for FOAF autodiscovery in HTML. A single document can, for example, serve both as a homepage and an OpenID identity URL.
+    <br>* Mcs.foaf:openid,
+    <br>* Mcs.openid!:foaf,
+    <a class="clsHide" href="#idFoafopenid"></a></p>
+  <p id="idFoafpastProject">foaf:pastProject-property::
+    <br>× sDescription: past project - A project this person has previously worked on.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_pastProject
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× sRange: every value of this property is a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: After a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> is no longer involved with a <code><a class="clsPreview" href="#idFoafcurrentProject">currentProject</a></code>, or has been inactive for some time, a <code><a class="clsPreview" href="#idFoafpastProject">pastProject</a></code> relationship can be used. This indicates that the <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> was involved with the described project at one point.
+    <br>If the <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> has stopped working on a project because it has been completed (successfully or otherwise), <code><a class="clsPreview" href="#idFoafpastProject">pastProject</a></code> is applicable. In general, <code><a class="clsPreview" href="#idFoafcurrentProject">currentProject</a></code> is used to indicate someone's current efforts (and implied interests, concerns etc.), while <code><a class="clsPreview" href="#idFoafpastProject">pastProject</a></code> describes what they've previously been doing.
+    <br>* Mcs.foaf:pastProject,
+    <br>* Mcs.pastProject!:foaf,
+    <a class="clsHide" href="#idFoafpastProject"></a></p>
+  <p id="idFoafphone">foaf:phone-property::
+    <br>× sDescription: phone - A phone,  specified using fully qualified tel: URI scheme (refs: http://www.w3.org/Addressing/schemes.html#tel).
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_phone
+    <br>× sStatus: testing
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafphone">phone</a></code> of something is a phone, typically identified using the tel: URI scheme.
+    <br>* Mcs.foaf:phone,
+    <br>* Mcs.phone!:foaf,
+    <a class="clsHide" href="#idFoafphone"></a></p>
+  <p id="idFoafplan">foaf:plan-property::
+    <br>× sDescription: plan - A .plan comment, in the tradition of finger and '.plan' files.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_plan
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafplan">plan</a></code> property provides a space for a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> to hold some arbitrary content that would appear in a traditional '.plan' file.  The plan file was stored in a user's home directory on a UNIX machine, and displayed to people when the user was queried with the finger utility.
+    <br>A plan file could contain anything.  Typical uses included brief comments, thoughts, or remarks on what a person had been doing lately.  Plan files were also prone to being witty or simply osbscure.  Others may be more creative, writing any number of seemingly random compositions in their plan file for people to stumble upon.
+    <br>See <a href="http://www.rajivshah.com/Case_Studies/Finger/Finger.htm">History of the Finger Protocol</a> by Rajiv Shah for more on this piece of Internet history. The <code><a class="clsPreview" href="#idFoafgeekcode">geekcode</a></code> property may also be of interest.
+    <br>* Mcs.foaf:plan,
+    <br>* Mcs.plan!:foaf,
+    <a class="clsHide" href="#idFoafplan"></a></p>
+  <p id="idFoafpublications">foaf:publications-property::
+    <br>× sDescription: publications - A link to the publications of this person.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_publications
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafpublications">publications</a></code> property indicates a <code><a class="clsPreview" href="#idFoafDocument">Document</a></code> listing (primarily in human-readable form) some publications associated with the <code><a class="clsPreview" href="#idFoafPerson">Person</a></code>. Such documents are typically published alongside one's <code><a class="clsPreview" href="#idFoafhomepage">homepage</a></code>.
+    <br>* Mcs.foaf:publications,
+    <br>* Mcs.publications!:foaf,
+    <a class="clsHide" href="#idFoafpublications"></a></p>
+  <p id="idFoafschoolHomepage">foaf:schoolHomepage-property::
+    <br>× sDescription: schoolHomepage - A homepage of a school attended by the person.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_schoolHomepage
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code>schoolHomepage</code> property relates a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> to a <code><a class="clsPreview" href="#idFoafDocument">Document</a></code> that is the <code><a class="clsPreview" href="#idFoafhomepage">homepage</a></code> of a School that the person attended.
+    <br>FOAF does not (currently) define a class for 'School' (if it did, it would probably be as a sub-class of <code><a class="clsPreview" href="#idFoafOrganization">Organization</a></code>). The original application area for <code><a class="clsPreview" href="#idFoafschoolHomepage">schoolHomepage</a></code> was for 'schools' in the British-English sense; however American-English usage has dominated, and it is now perfectly reasonable to describe Universities, Colleges and post-graduate study using <code><a class="clsPreview" href="#idFoafschoolHomepage">schoolHomepage</a></code>.
+    <br>This very basic facility provides a basis for a low-cost, decentralised approach to classmate-reunion and suchlike. Instead of requiring a central database, we can use FOAF to express claims such as 'I studied <em>here</em>' simply by mentioning a school's homepage within FOAF files. Given the homepage of a school, it is easy for FOAF aggregators to lookup this property in search of people who attended that school.
+    <br>* Mcs.foaf:schoolHomepage,
+    <br>* Mcs.schoolHomepage!:foaf,
+    <a class="clsHide" href="#idFoafschoolHomepage"></a></p>
+  <p id="idFoafskypeID">foaf:skypeID-property::
+    <br>× sDescription: Skype ID - A Skype ID
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_skypeID
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafskype">skype</a></code> property relates a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> to an account name of a Skype account of theirs.
+    <br>See <code><a class="clsPreview" href="#idFoafOnlineChatAccount">OnlineChatAccount</a></code> (and <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code>) for a more general (and verbose) mechanism for describing IM and chat accounts.
+    <br>* Mcs.foaf:skypeID,
+    <br>* Mcs.skypeID!:foaf,
+    <a class="clsHide" href="#idFoafskypeID"></a></p>
+  <p id="idFoafthumbnail">foaf:thumbnail-property::
+    <br>× sDescription: thumbnail - A derived thumbnail image.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_thumbnail
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafImage">Image</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafImage">Image</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafthumbnail">thumbnail</a></code> property is a relationship between a full-size <code><a class="clsPreview" href="#idFoafImage">Image</a></code> and a smaller, representative <code><a class="clsPreview" href="#idFoafImage">Image</a></code> that has been derrived from it.
+    <br>It is typical in FOAF to express <code><a class="clsPreview" href="#idFoafimg">img</a></code> and <code><a class="clsPreview" href="#idFoafdepiction">depiction</a></code> relationships in terms of the larger, 'main' (in some sense) image, rather than its thumbnail(s).  A <code><a class="clsPreview" href="#idFoafthumbnail">thumbnail</a></code> might be clipped or otherwise reduced such that it does not depict everything that the full image depicts. Therefore FOAF does not specify that a thumbnail <code><a class="clsPreview" href="#idFoafdepicts">depicts</a></code> everything that the image it is derrived from depicts.  However, FOAF does expect that anything depicted in the thumbnail will also be depicted in the source image.
+    <br>A <code><a class="clsPreview" href="#idFoafthumbnail">thumbnail</a></code> is typically small enough that it can be loaded and viewed quickly before a viewer decides to download the larger version. They are often used in online photo gallery applications.
+    <br>* Mcs.foaf:thumbnail,
+    <br>* Mcs.thumbnail!:foaf,
+    <a class="clsHide" href="#idFoafthumbnail"></a></p>
+  <p id="idFoaftipjar">foaf:tipjar-property::
+    <br>× sDescription: tipjar - A tipjar document for this agent, describing means for payment and reward.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_tipjar
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoaftipjar">tipjar</a></code> property relates an <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> to a <code><a class="clsPreview" href="#idFoafDocument">Document</a></code> that describes some mechanisms for paying or otherwise rewarding that agent.
+    <br>The <code><a class="clsPreview" href="#idFoaftipjar">tipjar</a></code> property was created following <a href="http://rdfweb.org/mt/foaflog/archives/2004/02/12/20.07.32/">discussions</a> about simple, lightweight mechanisms that could be used to encourage rewards and payment for content exchanged online. An agent's <code><a class="clsPreview" href="#idFoaftipjar">tipjar</a></code> page(s) could describe informal ("Send me a postcard!", "here's my book, music and movie wishlist") or formal (machine-readable micropayment information) information about how that agent can be paid or rewarded. The reward is not associated with any particular action or content from the agent concerned. A link to a service such as <a href="http://www.paypal.com/">PayPal</a> is the sort of thing we might expect to find in a tipjar document.
+    <br>Note that the value of a <code><a class="clsPreview" href="#idFoaftipjar">tipjar</a></code> property is just a document (which can include anchors into HTML pages). We expect, but do not currently specify, that this will evolve into a hook for finding more machine-readable information to support payments, rewards. The <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> machinery is also relevant, although the information requirements for automating payments are not currently clear.
+    <br>* Mcs.foaf:tipjar,
+    <br>* Mcs.tipjar!:foaf,
+    <a class="clsHide" href="#idFoaftipjar"></a></p>
+  <p id="idFoaftitle">foaf:title-property::
+    <br>× sDescription: title - Title (Mr, Mrs, Ms, Dr. etc)
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_title
+    <br>× sStatus: testing
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong:
+    <br>× editorial: This property is a candidate for deprecation in favour of 'honorificPrefix' following Portable Contacts usage. See the <a href="http://wiki.foaf-project.org/w/IssueTracker">FOAF Issue Tracker</a>.
+    <br>The approriate values for <code><a class="clsPreview" href="#idFoaftitle">title</a></code> are not formally constrained, and will vary across community and context. Values such as 'Mr', 'Mrs', 'Ms', 'Dr' etc. are expected.
+    <br>* Mcs.foaf:title,
+    <br>* Mcs.title!:foaf,
+    <a class="clsHide" href="#idFoaftitle"></a></p>
+  <p id="idFoaftopic">foaf:topic-property::
+    <br>× sDescription: topic - A topic of some page or document.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_topic
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× sRange: every value of this property is a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoaftopic">topic</a></code> property relates a document to a thing that the document is about.
+    <br>As such it is an inverse of the <code><a class="clsPreview" href="#idFoafpage">page</a></code> property, which relates a thing to a document about that thing.
+    <br>* Mcs.foaf:topic,
+    <br>* Mcs.topic!:foaf,
+    <a class="clsHide" href="#idFoaftopic"></a></p>
+  <p id="idFoaftopic_interest">foaf:topic_interest-property::
+    <br>× sDescription: topic_interest - A thing of interest to this person.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_topic_interest
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× sRange: every value of this property is a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoaftopic_interest">topic_interest</a></code> property links a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> to a thing that they're interested in.  Unlike <code><a class="clsPreview" href="#idFoaftopic">topic</a></code> it is not indirected through a document, but links the thing directly.
+    <br>* Mcs.foaf:topic_interest,
+    <br>* Mcs.topic_interest!:foaf,
+    <a class="clsHide" href="#idFoaftopic_interest"></a></p>
+  <p id="idFoafworkInfoHomepage">foaf:workInfoHomepage-property::
+    <br>× sDescription: work info homepage - A work info homepage of some person; a page about their work for some organization.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_workInfoHomepage
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafworkInfoHomepage">workInfoHomepage</a></code> of a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> is a <code><a class="clsPreview" href="#idFoafDocument">Document</a></code> that describes their work. It is generally (but not necessarily) a different document from their <code><a class="clsPreview" href="#idFoafhomepage">homepage</a></code>, and from any <code><a class="clsPreview" href="#idFoafworkplaceHomepage">workplaceHomepage</a></code>(s) they may have.
+    <br>The purpose of this property is to distinguish those pages you often see, which describe someone's professional role within an organisation or project. These aren't really homepages, although they share some characterstics.
+    <br>* Mcs.foaf:workInfoHomepage,
+    <br>* Mcs.workInfoHomepage!:foaf,
+    <a class="clsHide" href="#idFoafworkInfoHomepage"></a></p>
+  <p id="idFoafworkplaceHomepage">foaf:workplaceHomepage-property::
+    <br>× sDescription: workplace homepage - A workplace homepage of some person; the homepage of an organization they work for.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_workplaceHomepage
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>* Mcs.foaf:workplaceHomepage,
+    <br>* Mcs.workplaceHomepage!:foaf,
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafworkplaceHomepage">workplaceHomepage</a></code> of a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> is a <code><a class="clsPreview" href="#idFoafDocument">Document</a></code> that is the <code><a class="clsPreview" href="#idFoafhomepage">homepage</a></code> of a <code><a class="clsPreview" href="#idFoafOrganization">Organization</a></code> that they work for.
+    <br>By directly relating people to the homepages of their workplace, we have a simple convention that takes advantage of a set of widely known identifiers, while taking care not to confuse the things those identifiers identify (ie. organizational homepages) with the actual organizations those homepages describe.
+    <a class="clsHide" href="#idFoafworkplaceHomepage"></a></p>
+    <p class="clsIndent">For example, Dan Brickley works at W3C. Dan is a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> with a <code><a class="clsPreview" href="#idFoafhomepage">homepage</a></code> of http://danbri.org/; W3C is a <code><a class="clsPreview" href="#idFoafOrganization">Organization</a></code> with a <code><a class="clsPreview" href="#idFoafhomepage">homepage</a></code> of http://www.w3.org/. This allows us to say that Dan has a <code><a class="clsPreview" href="#idFoafworkplaceHomepage">workplaceHomepage</a></code> of http://www.w3.org/.
+    </p>
+    <pre>
+    &lt;foaf:Person&gt;
+     &lt;foaf:name>Dan Brickley&lt;/foaf:name&gt;
+     &lt;foaf:workplaceHomepage rdf:resource="http://www.w3.org/"/&gt;
+    &lt;/foaf:Person&gt;
+    </pre>
+    <p class="clsIndent">Note that several other FOAF properties work this way; <code><a
+    class="clsPreview" href="#idFoafschoolHomepage">schoolHomepage</a></code> is the most similar. In general, FOAF often indirectly identifies things via Web page identifiers where possible, since these identifiers are widely used and known. FOAF does not currently have a term for the name of the relation (eg. "workplace") that holds between a <code><a class="clsPreview" href="#idFoafPerson">Person</a></code> and an <code><a class="clsPreview" href="#idFoafOrganization">Organization</a></code> that they work for.
+    </p>
+  <p id="idFoafyahooChatID">foaf:yahooChatID-property::
+    <br>× sDescription: Yahoo chat ID - A Yahoo chat ID
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_yahooChatID
+    <br>× sStatus: testing
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: http://www.w3.org/2002/07/owl#InverseFunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafyahooChatID">yahooChatID</a></code> property relates a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> to a textual identifier assigned to them in the Yahoo online Chat system.  See Yahoo's the <a href="http://chat.yahoo.com/">Yahoo! Chat</a> site for more details of their service. Yahoo chat IDs are also used across several other Yahoo services, including email and <a href="http://www.yahoogroups.com/">Yahoo! Groups</a>.
+    <br>See <code><a class="clsPreview" href="#idFoafOnlineChatAccount">OnlineChatAccount</a></code> (and <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code>) for a more general (and verbose) mechanism for describing IM and chat accounts.
+    <br>* Mcs.foaf:yahooChatID,
+    <br>* Mcs.yahooChatID!:foaf,
+    <a class="clsHide" href="#idFoafyahooChatID"></a></p>
+  <p id="idFoafage">foaf:age-property::
+    <br>× sDescription: age - The age in years of some agent.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_age
+    <br>× sStatus: unstable
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: href="http://www.w3.org/2002/07/owl#FunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafage">age</a></code> property is a relationship between a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> and an integer string representing their age in years. See also <code><a class="clsPreview" href="#idFoafbirthday">birthday</a></code>.
+    <br>* Mcs.foaf:age,
+    <br>* Mcs.age!:foaf,
+    <a class="clsHide" href="#idFoafage"></a></p>
+  <p id="idFoafbirthday">foaf:birthday-property::
+    <br>× sDescription: birthday - The birthday of this Agent, represented in mm-dd string form, eg. '12-31'.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_birthday
+    <br>× sStatus: unstable
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>× rdf:type: href="http://www.w3.org/2002/07/owl#FunctionalProperty
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafbirthday">birthday</a></code> property is a relationship between a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> and a string representing the month and day in which they were born (Gregorian calendar).  See <a href="http://wiki.foaf-project.org/w/BirthdayIssue">BirthdayIssue</a> for details of related properties that can be used to describe such things in more flexible ways.
+    <br>See also <code><a class="clsPreview" href="#idFoafage">age</a></code>.
+    <br>* Mcs.foaf:birthday,
+    <br>* Mcs.birthday!:foaf,
+    <a class="clsHide" href="#idFoafbirthday"></a></p>
+  <p id="idFoafmembershipClass">foaf:membershipClass-property::
+    <br>× sDescription: membershipClass - Indicates the class of individuals that are a member of a Group
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_membershipClass
+    <br>× sStatus: unstable
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafmembershipClass">membershipClass</a></code> property relates a <code><a class="clsPreview" href="#idFoafGroup">Group</a></code> to an RDF class representing a sub-class of <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> whose instances are all the agents that are a <code><a class="clsPreview" href="#idFoafmember">member</a></code> of the <code><a class="clsPreview" href="#idFoafGroup">Group</a></code>.
+    <br>See <code><a class="clsPreview" href="#idFoafGroup">Group</a></code> for details and examples.
+    <br>* Mcs.foaf:membershipClass,
+    <br>* Mcs.membershipClass!:foaf,
+    <a class="clsHide" href="#idFoafmembershipClass"></a></p>
+  <p id="idFoafsha1">foaf:sha1-property::
+    <br>× sDescription: sha1sum (hex) - A sha1sum hash, in hex.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_sha1
+    <br>× sStatus: unstable
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafDocument">Document</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafsha1">sha1</a></code> property relates a <code><a class="clsPreview" href="#idFoafDocument">Document</a></code> to the textual form of a SHA1 hash of (some representation of) its contents.
+    <br>× editorial: The design for this property is neither complete nor coherent. The <code><a class="clsPreview" href="#idFoafDocument">Document</a></code> class is currently used in a way that allows multiple instances at different URIs to have the 'same' contents (and hence hash). If <code><a class="clsPreview" href="#idFoafsha1">sha1</a></code> is an owl:InverseFunctionalProperty, we could deduce that several such documents were the self-same thing. A more careful design is needed, which distinguishes documents in a broad sense from byte sequences.
+    <br>* Mcs.foaf:sha1,
+    <br>* Mcs.sha1!:foaf,
+    <a class="clsHide" href="#idFoafsha1"></a></p>
+  <p id="idFoafstatus">foaf:status-property::
+    <br>× sDescription: status - A string expressing what the user is happy for the general public (normally) to know about their current activity.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_status
+    <br>× sStatus: unstable
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: <code><a class="clsPreview" href="#idFoafstatus">status</a></code> is a short textual string expressing what the user is happy for the general public (normally) to know about their current activity. mood, location, etc.
+    <br>* Mcs.foaf:status,
+    <br>* Mcs.status!:foaf,
+    <a class="clsHide" href="#idFoafstatus"></a></p>
+  <p id="idFoafdnaChecksum">foaf:dnaChecksum-property::
+    <br>× sDescription: DNA checksum - A checksum for the DNA of some thing. Joke.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_dnaChecksum
+    <br>× sStatus: archaic
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafdnaChecksum">dnaChecksum</a></code> property is mostly a joke, but also a reminder that there will be lots of different identifying properties for people, some of which we might find disturbing.
+    <br>* Mcs.foaf:dnaChecksum,
+    <br>* Mcs.dnaChecksum!:foaf,
+    <a class="clsHide" href="#idFoafdnaChecksum"></a></p>
+  <p id="idFoaffamily_name">foaf:family_name-property::
+    <br>× sDescription: family_name - The family name of some person.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_family_name
+    <br>× sStatus: archaic
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: This property is considered an <em>archaic</em> spelling of <code><a class="clsPreview" href="#idFoaffamilyName">familyName</a></code>.
+    <br>* Mcs.foaf:family_name,
+    <br>* Mcs.family_name!:foaf,
+    <a class="clsHide" href="#idFoaffamily_name"></a></p>
+  <p id="idFoaffundedBy">foaf:fundedBy-property::
+    <br>× sDescription: funded by - An organization funding a project or person.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_fundedBy
+    <br>× sStatus: archaic
+    <br>× sDomain: having this property implies being a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× sRange: every value of this property is a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoaffundedBy">fundedBy</a></code> property relates something to something else that has provided funding for it.
+    <br>× editorial: This property is tentatively considered <em>archaic usage</em>, unless we hear about positive implementation experience.
+    <br>* Mcs.foaf:fundedBy,
+    <br>* Mcs.fundedBy!:foaf,
+    <a class="clsHide" href="#idFoaffundedBy"></a></p>
+  <p id="idFoafgeekcode">foaf:geekcode-property::
+    <br>× sDescription: geekcode - A textual geekcode for this person, see http://www.geekcode.com/geek.html
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_geekcode
+    <br>× sStatus: archaic
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafgeekcode">geekcode</a></code> property is used to represent a 'Geek Code' for some <code><a class="clsPreview" href="#idFoafPerson">Person</a></code>.
+    <br>See the <a href="http://en.wikipedia.org/wiki/Geek_Code">Wikipedia entry</a> for details of the code, which provides a somewhat frivolous and willfully obscure mechanism for characterising technical expertise, interests and habits. The <code><a class="clsPreview" href="#idFoafgeekcode">geekcode</a></code> property is not bound to any particular version of the code.
+    <br>* Mcs.foaf:geekcode,
+    <br>* Mcs.geekcode!:foaf,
+    <a class="clsHide" href="#idFoafgeekcode"></a></p>
+  <p id="idFoafgivenname">foaf:givenname-property::
+    <br>× sDescription: Given name - The given name of some person.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_givenname
+    <br>× sStatus: archaic
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: The <code><a class="clsPreview" href="#idFoafgivenName">givenName</a></code> property is provided (alongside <code><a class="clsPreview" href="#idFoaffamilyName">familyName</a></code>) for use when describing parts of people's names. Although these concepts do not capture the full range of personal naming styles found world-wide, they are commonly used and have some value.
+    <br>There is also a simple <code><a class="clsPreview" href="#idFoafname">name</a></code> property.
+    <br>Support is also provided for the more archaic and culturally varying terminology of <code><a class="clsPreview" href="#idFoaffirstName">firstName</a></code> and <code><a class="clsPreview" href="#idFoaflastName">lastName</a></code>.
+    <br>See the <a href="http://wiki.foaf-project.org/w/NameVocabIssue">issue tracker</a> for design discussions, status and ongoing work on rationalising the FOAF naming machinery.
+    <br>* Mcs.foaf:givenname,
+    <br>* Mcs.givenname!:foaf,
+    <a class="clsHide" href="#idFoafgivenname"></a></p>
+  <p id="idFoafholdsAccount">foaf:holdsAccount-property::
+    <br>× sDescription: account - Indicates an account held by this agent.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_holdsAccount
+    <br>× sStatus: archaic
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafAgent">Agent</a>
+    <br>× sRange: every value of this property is a <a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong:
+    <br>× editorial: This property is considered <em>archaic usage</em>. It is generally better to use <code><a class="clsPreview" href="#idFoafaccount">account</a></code> instead.
+    <br>The <code><a class="clsPreview" href="#idFoafholdsAccount">holdsAccount</a></code> property relates a <code><a class="clsPreview" href="#idFoafAgent">Agent</a></code> to an <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> for which they are the sole account holder. See <code><a class="clsPreview" href="#idFoafOnlineAccount">OnlineAccount</a></code> for usage details.
+    <br>This property is equivalent to the <code><a class="clsPreview" href="#idFoafaccount">account</a></code> property, which was introduced primarily to provide simpler naming for the same idea.
+    <br>* Mcs.foaf:holdsAccount,
+    <br>* Mcs.holdsAccount!:foaf,
+    <a class="clsHide" href="#idFoafholdsAccount"></a></p>
+  <p id="idFoafsurname">foaf:surname-property::
+    <br>× sDescription: Surname - The surname of some person.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_surname
+    <br>× sStatus: archaic
+    <br>× sDomain: having this property implies being a <a class="clsPreview" href="#idFoafPerson">Person</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong: A number of naming constructs are under development to provide naming substructure; draft properties include <code><a class="clsPreview" href="#idFoaffirstName">firstName</a></code>, <code><a class="clsPreview" href="#idFoafgivenName">givenName</a></code>, and <code><a class="clsPreview" href="#idFoafsurname">surname</a></code>. These are not currently stable or consistent; see the <a href="http://wiki.foaf-project.org/w/IssueTracker">issue tracker</a> for design discussions, status and ongoing work on rationalising the FOAF naming machinery.
+    <br>There is also a simple <code><a class="clsPreview" href="#idFoafname">name</a></code> property.
+    <br>* Mcs.foaf:surname,
+    <br>* Mcs.surname!:foaf,
+    <a class="clsHide" href="#idFoafsurname"></a></p>
+  <p id="idFoaftheme">foaf:theme-property::
+    <br>× sDescription: theme - A theme.
+    <br>× sSource-url: http://xmlns.com/foaf/spec/20140114.html#term_theme
+    <br>× sStatus: archaic
+    <br>× sDomain: having this property implies being a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× sRange: every value of this property is a <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+    <br>× rdfs:isDefinedBy: http://xmlns.com/foaf/0.1/
+    <br>
+    <br>× sDescriptionLong:
+    <br>× editorial: This property is considered <em>archaic usage</em>, and is not currently recommended for usage.
+    <br>The <code><a class="clsPreview" href="#idFoaftheme">theme</a></code> property is rarely used and under-specified. The intention was to use it to characterise interest / themes associated with projects and groups. Further work is needed to meet these goals.
+    <br>* Mcs.foaf:theme,
+    <br>* Mcs.theme!:foaf,
+    <a class="clsHide" href="#idFoaftheme"></a></p>
+  </section>
+
+  <section id="idLcnpt005vocFoafrscF">
+  <h4 id="idLcnpt005vocFoafrscFH4">Infrsc of foaf
+    <a class="clsHide" href="#idLcnpt005vocFoafrscFH4"></a></h4>
+  <p id="idLcnpt005vocFoafrscFdsn">description::
+    <br>* http://xmlns.com/foaf/spec/, FOAF Vocabulary Specification 0.99, Namespace Document 14 January 2014 - Paddington Edition,
+    <a class="clsHide" href="#idLcnpt005vocFoafrscFdsn"></a></p>
+  <p id="idLcnpt005vocFoafrscFnam">name::
+    <br>* Mcs.foaf'Infrsc,
+    <a class="clsHide" href="#idLcnpt005vocFoafrscFnam"></a></p>
+  </section>
   </section>
 
   <section id="idLcnpt005vocSchmorg">
@@ -2706,6 +3837,7 @@
     <br>* Mcs.SPARQL!⇒lagSprq,
     <br>* Mcs.lagCnpt.SPARQL!⇒lagSprq,
     <br>* Mcs.lagSprq,
+    <br>* Mcs.lagSprg'(SPARQL)!⇒lagSprq,
     <a class="clsHide" href="#idLcnpt009nam"></a></p>
 </section>
 
@@ -3289,11 +4421,23 @@
     <br>[{2021-01-13} https://www.w3.org/TR/xmlschema-0/#PO]
     <a class="clsHide" href="#idLxml0oschmdsnL"></a></p>
 
+  <section id="idLxml0oschmSpc">
+  <h4 id="idLxml0oschmSpcH4">Xmlschema.SPECIFIC
+    <a class="clsHide" href="#idLxml0oschmSpcH4"></a></h4>
+  <p id="idLxml0oschmSpcdsn">description::
+    <br>"There are languages developed specifically to express XML schemas. The document type definition (DTD) language, which is native to the XML specification, is a schema language that is of relatively limited capability, but that also has other uses in XML aside from the expression of schemas. Two more expressive XML schema languages in widespread use are XML Schema (with a capital S) and RELAX NG."
+    <br>[{2021-01-14} https://en.wikipedia.org/wiki/XML_schema]
+    <a class="clsHide" href="#idLxml0oschmSpcdsn"></a></p>
+  <p id="idLxml0oschmSpcnam">name::
+    <br>* Mcs.Xmlschema.specific,
+    <a class="clsHide" href="#idLxml0oschmSpcnam"></a></p>
+  </section>
+
   <section id="idLxml0Xsd">
   <h4 id="idLxml0XsdH4">Xmlschema.XML-Schema
     <a class="clsHide" href="#idLxml0XsdH4"></a></h4>
   <p id="idLxml0Xsddsn">description::
-    <br>· XML-Schema is
+    <br>· XML-Schema is an-Xmlschema created by W3C after DTD.
     <a class="clsHide" href="#idLxml0Xsddsn"></a></p>
   <p id="idLxml0Xsdnam">name::
     <br>* Mcs.XML-Schema!⇒xsd,
@@ -3301,6 +4445,110 @@
     <br>* Mcs.xsd'(XML-Schema)!⇒xsd,
     <br>* Mcs.Xmlschema.XML-Schema!⇒xsd,
     <a class="clsHide" href="#idLxml0Xsdnam"></a></p>
+
+  <section id="idLxml0Xsdlag">
+  <h5 id="idLxml0XsdlagH5">XML-Schema-language of xsd
+    <a class="clsHide" href="#idLxml0XsdlagH5"></a></h5>
+  <p id="idLxml0Xsdlagdsn">description::
+    <br>· the-language in which <a class="clsPreview" href="#idLxml0Xsd">an-xsd</a> is-written.
+    <br>· it is an-XML-language.
+    <br>===
+    <br>"There are several different languages available for specifying an XML schema. Each language has its strengths and weaknesses.
+    <br>The primary purpose of a schema language is to specify what the structure of an XML document can be. This means which elements can reside in which other elements, which attributes are and are not legal to have on a particular element, and so forth. A schema is analogous to a grammar for a language; a schema defines what the vocabulary for the language may be and what a valid "sentence" is."
+    <br>[{2021-01-14} https://en.wikipedia.org/wiki/XML_schema]
+    <a class="clsHide" href="#idLxml0Xsdlagdsn"></a></p>
+  <p id="idLxml0Xsdlagnam">name::
+    <br>* Mcs.XML-Schema-language!⇒lagXsdl,
+    <br>* Mcs.lagXsdl,
+    <br>* Mcs.lagXsdl'(XML-Schema-language)!⇒lagXsdl,
+    <br>* Mcs.xsd'language!⇒lagXsdl,
+    <a class="clsHide" href="#idLxml0Xsdlagnam"></a></p>
+  <p id="idLxml0Xsdlagwpa">addressWpg::
+    <br>* https://www.w3.org/TR/xmlschema11-1/,
+    <br>* https://www.w3.org/TR/xmlschema11-2/,
+    <a class="clsHide" href="#idLxml0Xsdlagwpa"></a></p>
+  </section>
+
+  <section id="idLxml0XsdeltSchm">
+  <h5 id="idLxml0XsdeltSchmH5">schema-element of xsd
+    <a class="clsHide" href="#idLxml0XsdeltSchmH5"></a></h5>
+  <p id="idLxml0XsdeltSchmdsn">description::
+    <br>· example:
+    <br><code>&lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <br>...
+    <br>&lt;/xsd:schema></code>
+    <a class="clsHide" href="#idLxml0XsdeltSchmdsn"></a></p>
+  <p id="idLxml0XsdeltSchmnam">name::
+    <br>* Mcs.xsd'schema-element!⇒xsd:schema,
+    <br>* Mcs.xsd:schema,
+    <a class="clsHide" href="#idLxml0XsdeltSchmnam"></a></p>
+  </section>
+
+  <section id="idLxml0XsdeltElmt">
+  <h5 id="idLxml0XsdeltElmtH5">element-element of xsd
+    <a class="clsHide" href="#idLxml0XsdeltElmtH5"></a></h5>
+  <p id="idLxml0XsdeltElmtdsn">description::
+    <br>· example:
+    <br><code>&lt;xsd:element name="street" type="xsd:string"/></code>
+    <a class="clsHide" href="#idLxml0XsdeltElmtdsn"></a></p>
+  <p id="idLxml0XsdeltElmtnam">name::
+    <br>* Mcs.xsd:element-element,
+    <a class="clsHide" href="#idLxml0XsdeltElmtnam"></a></p>
+  </section>
+
+  <section id="idLxml0XsdeltAttr">
+  <h5 id="idLxml0XsdeltAttrH5">attribute-element of xsd
+    <a class="clsHide" href="#idLxml0XsdeltAttrH5"></a></h5>
+  <p id="idLxml0XsdeltAttrdsn">description::
+    <br>· example:
+    <br><code>&lt;xsd:attribute name="country" type="xsd:NMTOKEN" fixed="US"/></code>
+    <a class="clsHide" href="#idLxml0XsdeltAttrdsn"></a></p>
+  <p id="idLxml0XsdeltAttrnam">name::
+    <br>* Mcs.xsd:attribute-element,
+    <a class="clsHide" href="#idLxml0XsdeltAttrnam"></a></p>
+  </section>
+
+  <section id="idLxml0XsdeltCxtp">
+  <h5 id="idLxml0XsdeltCxtpH5">complexType-element of xsd
+    <a class="clsHide" href="#idLxml0XsdeltCxtpH5"></a></h5>
+  <p id="idLxml0XsdeltCxtpdsn">description::
+    <br>· example:
+    <br><code>"&lt;xsd:complexType name="USAddress" >
+    <br> &nbsp;&lt;xsd:sequence>
+    <br> &nbsp; &nbsp;&lt;xsd:element name="name"   type="xsd:string"/>
+    <br> &nbsp; &nbsp;&lt;xsd:element name="street" type="xsd:string"/>
+    <br> &nbsp; &nbsp;&lt;xsd:element name="city"   type="xsd:string"/>
+    <br> &nbsp; &nbsp;&lt;xsd:element name="state"  type="xsd:string"/>
+    <br> &nbsp; &nbsp;&lt;xsd:element name="zip"    type="xsd:decimal"/>
+    <br> &nbsp;&lt;/xsd:sequence>
+    <br> &nbsp;&lt;xsd:attribute name="country" type="xsd:NMTOKEN" fixed="US"/>
+    <br>&lt;/xsd:complexType></code>
+    <br>The consequence of this definition is that any element appearing in an instance whose type is declared to be USAddress (e.g. shipTo in po.xml) must consist of five elements and one attribute. These elements must be called name, street, city, state and zip as specified by the values of the declarations' name attributes, and the elements must appear in the same sequence (order) in which they are declared. The first four of these elements will each contain a string, and the fifth will contain a number. The element whose type is declared to be USAddress may appear with an attribute called country which must contain the string US.
+    <br>... In XML Schema, there is a basic difference between complex types which allow elements in their content and may carry attributes, and simple types which cannot have element content and cannot carry attributes."
+    <br>[{2021-01-14} https://www.w3.org/TR/xmlschema-0/#DefnDeclars]
+    <a class="clsHide" href="#idLxml0XsdeltCxtpdsn"></a></p>
+  <p id="idLxml0XsdeltCxtpnam">name::
+    <br>* Mcs.xsd-compleType-element,
+    <a class="clsHide" href="#idLxml0XsdeltCxtpnam"></a></p>
+  </section>
+
+  <section id="idLxml0XsdeltSltp">
+  <h5 id="idLxml0XsdeltSltpH5">simpleType-element of xsd
+    <a class="clsHide" href="#idLxml0XsdeltSltpH5"></a></h5>
+  <p id="idLxml0XsdeltSltpdsn">description::
+    <br>· example:
+    <br><code>&lt;xsd:simpleType name="SKU">
+    <br> &nbsp;&lt;xsd:restriction base="xsd:string">
+    <br> &nbsp; &nbsp;&lt;xsd:pattern value="\d{3}-[A-Z]{2}"/>
+    <br> &nbsp;&lt;/xsd:restriction>
+    <br>&lt;/xsd:simpleType></code>
+    <br>"simple types which cannot have element content and cannot carry attributes."
+    <br>[{2021-01-14} https://www.w3.org/TR/xmlschema-0/#DefnDeclars]
+    <a class="clsHide" href="#idLxml0XsdeltSltpdsn"></a></p>
+  <p id="idLxml0XsdeltSltpnam">name::
+    <br>* Mcs.xsd:simpleType-element,
+    <a class="clsHide" href="#idLxml0XsdeltSltpnam"></a></p>
+  </section>
 
   <section id="idLxml0XsdExpl">
   <h5 id="idLxml0XsdExplH5">xsd.example
@@ -3445,8 +4693,8 @@
     <a class="clsHide" href="#idLxml0Dtdwpa"></a></p>
 
   <section id="idLxml0Dtdscrt">
-  <h4 id="idLxml0DtdscrtH4">security of XmlDtd
-    <a class="clsHide" href="#idLxml0DtdscrtH4"></a></h4>
+  <h5 id="idLxml0DtdscrtH5">security of XmlDtd
+    <a class="clsHide" href="#idLxml0DtdscrtH5"></a></h5>
   <p id="idLxml0Dtdscrtdsn">description::
     <br>"An XML DTD can be used to create a denial of service (DoS) attack by defining nested entities that expand exponentially, or by sending the XML parser to an external resource that never returns.[10]
     <br>For this reason, .NET Framework provides a property that allows prohibiting or skipping DTD parsing,[10] and recent versions of Microsoft Office applications (Microsoft Office 2010 and higher) refuse to open XML files that contain DTD declarations."
@@ -3530,10 +4778,44 @@
   </section>
   </section>
 
+  <section id="idLxml0dngF">
+  <h2 id="idLxml0dngFH2">DOING of lagXml0
+    <a class="clsHide" href="#idLxml0dngFH2"></a></h2>
+  <p id="idLxml0dngFdsn">description::
+    <br>* parsing,
+    <br>* validating,
+    <a class="clsHide" href="#idLxml0dngFdsn"></a></p>
+  <p id="idLxml0dngFnam">name::
+    <br>* Mcs.lagXml0'doing,
+    <a class="clsHide" href="#idLxml0dngFnam"></a></p>
+
+  <section id="idLxml0vldg">
+  <h3 id="idLxml0vldgH3">validating of lagXml0
+    <a class="clsHide" href="#idLxml0vldgH3"></a></h3>
+  <p id="idLxml0vldgdsn">description::
+    <br>"The process of checking to see if a XML document conforms to a schema is called validation, which is separate from XML's core concept of syntactic well-formedness. All XML documents must be well-formed, but it is not required that a document be valid unless the XML parser is "validating", in which case the document is also checked for conformance with its associated schema. DTD-validating parsers are most common, but some support XML Schema or RELAX NG as well.
+    <br>Validation of an instance document against a schema can be regarded as a conceptually separate operation from XML parsing. In practice, however, many schema validators are integrated with an XML parser."
+    <br>[{2021-01-14} https://en.wikipedia.org/wiki/XML_schema#Validation]
+    <a class="clsHide" href="#idLxml0vldgdsn"></a></p>
+  <p id="idLxml0vldgnam">name::
+    <br>* Mcs.lagXml0'validating,
+    <a class="clsHide" href="#idLxml0vldgnam"></a></p>
+  </section>
+  </section>
+
   <section id="idLxml0evgF">
   <h2 id="idLxml0evgFH2">evoluting of lagXml0
     <a class="clsHide" href="#idLxml0evgFH2"></a></h2>
-  <p id="idLxml0evg1996">{lagCnpt-1996}-XML-creation::
+  <p id="idLxml0evg201204">{2012-04}-XML-Schema-1.1::
+    <br>"XSD 1.1 became a W3C Recommendation in April 2012, which means it is an approved W3C specification."
+    <br>[{2021-01-14} https://en.wikipedia.org/wiki/XML_Schema_(W3C)]
+    <a class="clsHide" href="#idLxml0evg201204"></a></p>
+  <p id="idLxml0evg200105">{2001-05}-XML-Schema::
+    <br>"XML Schema, published as a W3C recommendation in May 2001,[2] is one of several XML schema languages. It was the first separate schema language for XML to achieve Recommendation status by the W3C. Because of confusion between XML Schema as a specific W3C specification, and the use of the same term to describe schema languages in general, some parts of the user community referred to this language as WXS, an initialism for W3C XML Schema, while others referred to it as XSD, an initialism for XML Schema Definition.[3][4] In Version 1.1 the W3C has chosen to adopt XSD as the preferred name, and that is the name used in this article."
+    <br>* Mcs.{lagCnpt-2001-05}-XML-Schema,
+    <br>[{2021-01-14} https://en.wikipedia.org/wiki/XML_Schema_(W3C)]
+    <a class="clsHide" href="#idLxml0evg200105"></a></p>
+  <p id="idLxml0evg1996">{1996}-XML-creation::
     <br>"XML was developed by an XML Working Group (originally known as the SGML Editorial Review Board) formed under the auspices of the World Wide Web Consortium (W3C) in 1996. It was chaired by Jon Bosak of Sun Microsystems with the active participation of an XML Special Interest Group (previously known as the SGML Working Group) also organized by the W3C. The membership of the XML Working Group is given in an appendix. Dan Connolly served as the Working Group's contact with the W3C."
     <br>* Mcs.{lagCnpt-1996}-XML-creation,
     <br>[{2021-01-12} https://www.w3.org/TR/2006/REC-xml11-20060816/#sec-origin-goals]
