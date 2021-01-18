@@ -43,16 +43,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirStn',
-  sDIR = 'DirStn',
+  sDir = 'dirHmn',
+  sDIR = 'DirHmn',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'schema.org-vocabulary',
+  sN = 'Kaseluris.Nikos.1959',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'scmo',
+  sNS = 'hmnSngo',
   //5. FILE-name: shows relation of another file: SysNet, DtcbnetEth, DnLbr,
-  sNFil = 'Scmo',
+  sNFil = 'HmnSngo',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNId = 'Scmo';
+  sNId = 'HmnSngo';
 
 s =
   '<!DOCTYPE html>\n' +
