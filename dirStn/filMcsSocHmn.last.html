@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.society-(0-49-0.2021-01-18 draft) human-society</title>
+  <title>Mcs.society-(0-51-0.2021-01-21 draft) human-society</title>
   <meta name="keywords" content="human-society, society, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -104,7 +104,7 @@
     <br>* Mcs.society'member!⇒Socmbr,
     <br>* Mcs.society'att001-member!⇒Socmbr,
     <br>* Mcs.society'member-att001!⇒Socmbr,
-    <br>* Mcs.society'human!⇒Socmbr,
+    <br>* Mcs.society'human-member!⇒Socmbr,
     <br>====== langoGreek:
     <br>* McsEll.πολίτης!=Socmbr,
     <a class="clsHide" href="#idSocmbrnam"></a></p>
@@ -113,12 +113,13 @@
   <h3 id="idSocmbrcznshpH3">citizenship of Socmbr
     <a class="clsHide" href="#idSocmbrcznshpH3"></a></h3>
   <p id="idSocmbrcznshpdsn">description::
-    <br>· the-relation of a-member with his|her society.
+    <br>· the-relation of <a class="clsPreview" href="#idSocmbr">a-member</a> with his|her society.
     <a class="clsHide" href="#idSocmbrcznshpdsn"></a></p>
   <p id="idSocmbrcznshpnam">name::
     <br>* Mcs.citizenship,
-    <br>* Mcs.society'att015-citizenship!=citizenship,
-    <br>* Mcs.society'citizenship!=citizenship,
+    <br>* Mcs.human'citizenship!⇒citizenship,
+    <br>* Mcs.society'att015-citizenship!⇒citizenship,
+    <br>* Mcs.society'citizenship!⇒citizenship,
     <br>====== langoGreek:
     <br>* McsEll.ιθαγένεια!=citizenship,
     <br>* McsEll.υπηκοότητα!=citizenship, (old),
@@ -128,6 +129,40 @@
   <section id="idSocmbrrght">
   <h3 id="idSocmbrrghtH3">right (<a class="clsPreview" href="../dirHmn/filMcsHmn.last.html#idHmnatt033">link</a>) of Socmbr
     <a class="clsHide" href="#idSocmbrrghtH3"></a></h3>
+  </section>
+
+  <section id="idSocmbrSpc">
+  <h3 id="idSocmbrSpcH3">Socmbr.SPECIFIC
+    <a class="clsHide" href="#idSocmbrSpcH3"></a></h3>
+  <p id="idSocmbrSpcdsn">description::
+    <br>·
+    <a class="clsHide" href="#idSocmbrSpcdsn"></a></p>
+  <p id="idSocmbrSpcnam">name::
+    <br>* Mcs.Socmbr.specific,
+    <a class="clsHide" href="#idSocmbrSpcnam"></a></p>
+  </section>
+
+  <section id="idSocmbrRsdt">
+  <h3 id="idSocmbrRsdtH3">Socmbr.resident
+    <a class="clsHide" href="#idSocmbrRsdtH3"></a></h3>
+  <p id="idSocmbrRsdtdsn">description::
+    <br>· a-member who lives in this society.
+    <a class="clsHide" href="#idSocmbrRsdtdsn"></a></p>
+  <p id="idSocmbrRsdtnam">name::
+    <br>* Mcs.Socmbr.resident,
+    <br>* Mcs.resident-citizent,
+    <a class="clsHide" href="#idSocmbrRsdtnam"></a></p>
+  </section>
+
+  <section id="idSocmbrRsdtN">
+  <h3 id="idSocmbrRsdtNH3">Socmbr.residentNo
+    <a class="clsHide" href="#idSocmbrRsdtNH3"></a></h3>
+  <p id="idSocmbrRsdtNdsn">description::
+    <br>· a-member who lives in another society.
+    <a class="clsHide" href="#idSocmbrRsdtNdsn"></a></p>
+  <p id="idSocmbrRsdtNnam">name::
+    <br>* Mcs.Socmber.residentNo,
+    <a class="clsHide" href="#idSocmbrRsdtNnam"></a></p>
   </section>
 
   <section id="idSocmbrSngl">
@@ -169,15 +204,15 @@
     <br>· humans of society but non-members.
     <a class="clsHide" href="#idSocHmnatt030dsn"></a></p>
   <p id="idSocHmnatt030nam">name::
-    <br>* Mcs.Socforeinger,
-    <br>* Mcs.foreigner-of-society!⇒Socforeinger,
-    <br>* Mcs.hmnMemberNo-of-society!⇒Socforeinger,
-    <br>* Mcs.society'att030-hmnMemberNo!⇒Socforeinger,
-    <br>* Mcs.society'hmnMemberNo!⇒Socforeinger,
+    <br>* Mcs.Socforeigner,
+    <br>* Mcs.foreigner-of-society!⇒Socforeigner,
+    <br>* Mcs.hmnMemberNo-of-society!⇒Socforeigner,
+    <br>* Mcs.society'att030-hmnMemberNo!⇒Socforeigner,
+    <br>* Mcs.society'hmnMemberNo!⇒Socforeigner,
     <a class="clsHide" href="#idSocHmnatt030nam"></a></p>
 
   <section id="idSocHmnatt031">
-  <h3 id="idSocHmnatt031H3">Socforeinger.refugee of society
+  <h3 id="idSocHmnatt031H3">Socforeigner.refugee of society
     <a class="clsHide" href="#idSocHmnatt031H3"></a></h3>
   <p id="idSocHmnatt031dsn">description::
     <br>"a person who has been forced to leave their country in order to escape war, persecution, or natural disaster.
@@ -186,7 +221,7 @@
     <a class="clsHide" href="#idSocHmnatt031dsn"></a></p>
   <p id="idSocHmnatt031nam">name::
     <br>* Mcs.Socrefugee,
-    <br>* Mcs.Socforeinger.refugge!⇒Socrefugee,
+    <br>* Mcs.Socforeigner.refugge!⇒Socrefugee,
     <br>* Mcs.refugge-of-society!⇒Socrefugee,
     <br>* Mcs.society'att031-refugge!⇒Socrefugee,
     <br>* Mcs.society'att031-refugge!⇒Socrefugee,
@@ -196,13 +231,13 @@
   </section>
 
   <section id="idSocHmnatt032">
-  <h3 id="idSocHmnatt032H3">Socforeinger.immigrant of society
+  <h3 id="idSocHmnatt032H3">Socforeigner.immigrant of society
     <a class="clsHide" href="#idSocHmnatt032H3"></a></h3>
   <p id="idSocHmnatt032dsn">description::
     <br>· a-foreigner for work.
     <a class="clsHide" href="#idSocHmnatt032dsn"></a></p>
   <p id="idSocHmnatt032nam">name::
-    <br>* Mcs.Socforeinger.immigrant!⇒Socimmigrant,
+    <br>* Mcs.Socforeigner.immigrant!⇒Socimmigrant,
     <br>* Mcs.Socimmigrant,
     <br>* Mcs.immigrant-of-society!⇒Socimmigrant,
     <br>* Mcs.society'att032-immigrant!⇒Socimmigrant,
@@ -212,8 +247,51 @@
     <a class="clsHide" href="#idSocHmnatt032nam"></a></p>
   </section>
 
+  <section id="idSocHmnatt037">
+  <h3 id="idSocHmnatt037H3">Socforeigner.resident of society
+    <a class="clsHide" href="#idSocHmnatt037H3"></a></h3>
+  <p id="idSocHmnatt037dsn">description::
+    <br>· foreigner-resident is a-non-member that lives in a-society with more rights than a-tourist.
+    <a class="clsHide" href="#idSocHmnatt037dsn"></a></p>
+  <p id="idSocHmnatt037nam">name::
+    <br>* Mcs.SocForeinger.resident!⇒hmnResidentForeigner,
+    <br>* Mcs.hmnResidentForeigner,
+    <br>* Mcs.memberNo.resident-foreigner!⇒hmnResidentForeigner,
+    <br>* Mcs.society'att037-resident-foreigner!⇒hmnResidentForeigner,
+    <br>* Mcs.society'resident-foreigner!⇒hmnResidentForeigner,
+    <br>* Mcs.foreigner-resident!⇒hmnResidentForeigner,
+    <a class="clsHide" href="#idSocHmnatt037nam"></a></p>
+
+  <section id="idSocHmnatt037Temp">
+  <h4 id="idSocHmnatt037TempH4">hmnResidentForeigner.temporary
+    <a class="clsHide" href="#idSocHmnatt037TempH4"></a></h4>
+  <p id="idSocHmnatt037Tempdsn">description::
+    <br>"A temporary resident is a foreign national granted the right to stay in a country for a certain length of time (e.g. with a visa or residency permit), without full citizenship. This may be for study, business, or other reasons."
+    <br>[{2021-01-21} https://en.wikipedia.org/wiki/Temporary_resident]
+    <a class="clsHide" href="#idSocHmnatt037Tempdsn"></a></p>
+  <p id="idSocHmnatt037Tempnam">name::
+    <br>* Mcs.hmnResidentForeigner.temporary,
+    <br>* Mcs.temporary-foreigner-resident,
+    <a class="clsHide" href="#idSocHmnatt037Tempnam"></a></p>
+  </section>
+
+  <section id="idSocHmnatt037Prmt">
+  <h4 id="idSocHmnatt037PrmtH4">hmnResidentForeigner.permanent
+    <a class="clsHide" href="#idSocHmnatt037PrmtH4"></a></h4>
+  <p id="idSocHmnatt037Prmtdsn">description::
+    <br>"Permanent residency is a person's resident status in a country of which they are not citizen but where they have the right to reside on a permanent basis. This is usually for a permanent period; a person with such status is known as a permanent resident. In the United States, such a person is officially referred to as a Lawful Permanent Resident (LPR).[1]
+    <br>Permanent residency itself is distinct from right of abode, which waives immigration control for such persons. Persons having permanent residency still require immigration control if they do not have right of abode. However, a right of abode automatically grants people permanent residency. This status also gives work permit in most cases.[1] In many western countries, the status of permanent resident confers a right of abode upon the holder despite not being a citizen of the particular country."
+    <br>[{2021-01-21} https://en.wikipedia.org/wiki/Permanent_residency]
+    <a class="clsHide" href="#idSocHmnatt037Prmtdsn"></a></p>
+  <p id="idSocHmnatt037Prmtnam">name::
+    <br>* Mcs.hmnResidentForeigner.permanent,
+    <br>* Mcs.permanent-foreigner-resident,
+    <a class="clsHide" href="#idSocHmnatt037Prmtnam"></a></p>
+  </section>
+  </section>
+
   <section id="idSocHmnatt033">
-  <h3 id="idSocHmnatt033H3">Socforeinger.turist of society
+  <h3 id="idSocHmnatt033H3">Socforeigner.turist of society
     <a class="clsHide" href="#idSocHmnatt033H3"></a></h3>
   <p id="idSocHmnatt033dsn">description::
     <br>· a-foreigner to see current-society.
@@ -223,6 +301,34 @@
     <br>* Mcs.society'att033-turist!⇒Socturist,
     <br>* Mcs.society'turist!⇒Socturist,
     <a class="clsHide" href="#idSocHmnatt033nam"></a></p>
+  </section>
+  </section>
+
+  <section id="idSocHmnatt038">
+  <h2 id="idSocHmnatt038H2">resident of society
+    <a class="clsHide" href="#idSocHmnatt038H2"></a></h2>
+  <p id="idSocHmnatt038dsn">description::
+    <br>· hmnResident is <a class="clsPreview" href="#idSocmbrRsdt">a-member-resident</a> or <a class="clsPreview" href="#idSocHmnatt037">a-memberNo-resident</a>.
+    <a class="clsHide" href="#idSocHmnatt038dsn"></a></p>
+  <p id="idSocHmnatt038nam">name::
+    <br>* Mcs.hmnResident,
+    <br>* Mcs.resident-of-society!⇒hmnResident,
+    <br>* Mcs.society'resident!⇒hmnResident,
+    <a class="clsHide" href="#idSocHmnatt038nam"></a></p>
+
+  <section id="idSocHmnatt038rln">
+  <h3 id="idSocHmnatt038rlnH3">residency of society
+    <a class="clsHide" href="#idSocHmnatt038rlnH3"></a></h3>
+  <p id="idSocHmnatt038rlndsn">description::
+    <br>· the-relation of society with <a class="clsPreview" href="#idSocHmnatt038">a-resident</a>.
+    <br>===
+    <br>"Residency is the act of establishing or maintaining a residence in a given place. Residency is a concept which heavily affects the legal rights and responsibilities that are available to a person, including eligibility to vote, eligibility to stand for political office, eligibility to access government services, responsibility to pay taxes, and on and so forth."
+    <br>[{2021-01-21} https://en.wikipedia.org/wiki/Domicile_(law)]
+    <a class="clsHide" href="#idSocHmnatt038rlndsn"></a></p>
+  <p id="idSocHmnatt038rlnnam">name::
+    <br>* Mcs.residency-society,
+    <br>* Mcs.society'residency,
+    <a class="clsHide" href="#idSocHmnatt038rlnnam"></a></p>
   </section>
   </section>
 
@@ -536,21 +642,21 @@
   </section>
   </section>
 
-  <section id="idSocHmnatt022">
-  <h2 id="idSocHmnatt022H2">citizen-info of Socgvc
-    <a class="clsHide" href="#idSocHmnatt022H2"></a></h2>
-  <p id="idSocHmnatt022dsn">description::
+  <section id="idSocHmnatt039">
+  <h2 id="idSocHmnatt039H2">citizen-info of Socgvc
+    <a class="clsHide" href="#idSocHmnatt039H2"></a></h2>
+  <p id="idSocHmnatt039dsn">description::
     <br>· any info about a-citizen the-Socgvc has.
-    <a class="clsHide" href="#idSocHmnatt022dsn"></a></p>
-  <p id="idSocHmnatt022nam">name::
+    <a class="clsHide" href="#idSocHmnatt039dsn"></a></p>
+  <p id="idSocHmnatt039nam">name::
     <br>* Mcs.Socgvc'citizen-info,
     <br>* Mcs.citizen-info-of-Socgvc,
-    <br>* Mcs.society'att018-citizen-info,
+    <br>* Mcs.society'att039-citizen-info,
     <br>* Mcs.society'citizen-info,
-    <a class="clsHide" href="#idSocHmnatt022nam"></a></p>
-  <p id="idSocHmnatt022wpa">addressWpg::
+    <a class="clsHide" href="#idSocHmnatt039nam"></a></p>
+  <p id="idSocHmnatt039wpa">addressWpg::
     <br>* https://joinup.ec.europa.eu/solution/citizens-folder/about: a one-stop service where citizens can access and browse all their information the administration possesses,
-    <a class="clsHide" href="#idSocHmnatt022wpa"></a></p>
+    <a class="clsHide" href="#idSocHmnatt039wpa"></a></p>
   </section>
 
   <section id="idSocHmnatt013">
@@ -583,7 +689,7 @@
   <h2 id="idSocHmngvcwkrH2">worker of Socgvc
     <a class="clsHide" href="#idSocHmngvcwkrH2"></a></h2>
   <p id="idSocHmngvcwkrdsn">description::
-    <br>· any <a class="clsPreview" href="filMcsWkr.last.html#idOverview">worker</a> on sectorGvc.
+    <br>· any <a class="clsPreview" href="filMcsHmnWkr.last.html#idOverview">worker</a> on sectorGvc.
     <br>===
     <br>"A civil servant or public servant is a person employed in the public sector by a government department or agency."
     <br>[{2020-12-20} https://en.wikipedia.org/wiki/Civil_service]
