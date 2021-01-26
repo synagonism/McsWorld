@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCnpt-(0-19-0.2021-01-25 draft) concept-language</title>
+  <title>Mcs.lagCnpt-(0-20-0.2021-01-26 draft) concept-language</title>
   <meta name="keywords" content="concept-language, lagCnpt, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -232,6 +232,22 @@
     <br>=== McsHitp-creation:
     <br>· creation of current <a class="clsPreview" href="../dirCor/filMcs.last.html#idOverview">concept</a>.
     <a class="clsHide" href="#idLcnptevg20210101"></a></p>
+  <p id="idLcnptevg20141106">{2014-11-06}-Microsoft-Cortana::
+    <br>· initial release.
+    <br>"Cortana is a virtual assistant developed by Microsoft, which uses the Bing search engine to perform tasks such as setting reminders and answering questions for the user."
+    <br>[{2021-01-26} https://en.wikipedia.org/wiki/Cortana]
+    <a class="clsHide" href="#idLcnptevg20141106"></a></p>
+  <p id="idLcnptevg20141106">{2014-04-02}-Amazon-Alexa::
+    <br>· initial release.
+    <br>· Alexa-voice-service-(AVS) provides cloud-based automatic-speech-recognition-(ASR) and natural-language-understanding-(NLU).
+    <br>[{2021-01-26} https://en.wikipedia.org/wiki/Amazon_Alexa#Alexa_Voice_Service]
+    <a class="clsHide" href="#idLcnptevg20141106"></a></p>
+  <p id="idLcnptevg20090518">{2009-05-18}-WolframAlpha::
+    <br>· WolframAlpha was-released.
+    <br>· it is a-computational-knowledge-engine or answer-engine developed by WolframAlpha-LLC, a-subsidiary of Wolfram-Research.
+    <br>· it is an-online-service that answers factual-queries directly by computing the-answer from externally sourced "curated-data", rather than providing a-list of documents or webpages that might contain the-answer, as a-search-engine might.
+    <br>[{2021-01-26} https://en.wikipedia.org/wiki/WolframAlpha]
+    <a class="clsHide" href="#idLcnptevg20090518"></a></p>
   <p id="idLcnptevg20040210">{2004-02-10}-OWL::
     <br>"The World Wide Web Consortium created the "Web Ontology Working Group" which began work on 2001-11-01 chaired by James Hendler and Guus Schreiber. The first working drafts of the abstract syntax, reference and synopsis were published in July 2002. The OWL documents became a formal W3C recommendation on 2004-02-10 and the working group was disbanded on 2004-05-31.[4]"
     <br>[http://en.wikipedia.org/wiki/Web_Ontology_Language]
@@ -388,6 +404,7 @@
   <p id="idLcnpt011cncptnam">name::
     <br>* Mcs.Ppslconcept,
     <br>* Mcs.lagPpsl'concept!⇒Ppslconcept,
+    <br>* item!/lagWkdt,
     <a class="clsHide" href="#idLcnpt011cncptnam"></a></p>
 
   <section id="idLcnpt011cptGnc">
@@ -400,6 +417,9 @@
     <br>* Mcs.Ppslgeneric,
     <br>* Mcs.lagPpsl'concept.generic!⇒Ppslgeneric,
     <br>* Mcs.lagPpsl'generic-concept!⇒Ppslgeneric,
+    <br>* class!/lagRdfw!/lagOwlg,
+    <br>* concept!/lagDlgc,
+    <br>* unary-predicate!/lagFolc,
     <a class="clsHide" href="#idLcnpt011cptGncnam"></a></p>
   </section>
 
@@ -413,6 +433,8 @@
     <br>* Mcs.Ppslinstance,
     <br>* Mcs.lagPpsl'concept.instance!⇒Ppslinstance,
     <br>* Mcs.lagPpsl'instance-concept!⇒Ppslinstance,
+    <br>* constant!/lagFolc,
+    <br>* individual!/lagOwlg!/lagDlgc,
     <a class="clsHide" href="#idLcnpt011cptIstcnam"></a></p>
   </section>
 
@@ -426,6 +448,8 @@
     <br>* Mcs.lagPpsl'concept.relation-or-doing!⇒Ppslrord,
     <br>* Mcs.lagPpsl'doing-or-relation,
     <br>* Mcs.lagPpsl'relation-or-doing,
+    <br>* binary-predicate!/lagFolc,
+    <br>* property!/lagOwlg,
     <a class="clsHide" href="#idLcnpt011cptRnodgnam"></a></p>
   </section>
   </section>
@@ -522,7 +546,7 @@
   <h2 id="idLcnpt017H2">lagPpsl.wikidata
     <a class="clsHide" href="#idLcnpt017H2"></a></h2>
   <p id="idLcnpt017dsn">description::
-    <br>· wikidata-language is <a class="clsPreview" href="#idLcnpt005">an-RDF-language</a> that manages the-data collaborativelly.
+    <br>· wikidata-language is <a class="clsPreview" href="#idLcnpt011">a-propositional-language</a> that manages the-data collaborativelly.
     <a class="clsHide" href="#idLcnpt017dsn"></a></p>
   <p id="idLcnpt017nam">name::
     <br>* Mcs.lagCnpt.017-wikidata!⇒lagWkdt,
@@ -995,6 +1019,8 @@
     <br>"In addition to the classic “Web of documents” W3C is helping to build a technology stack to support a “Web of data,” the sort of data you find in databases. The ultimate goal of the Web of data is to enable computers to do more useful work and to develop systems that can support trusted interactions over the network. The term “Semantic Web” refers to W3C’s vision of the Web of linked data. Semantic Web technologies enable people to create data stores on the Web, build vocabularies, and write rules for handling data. Linked data are empowered by technologies such as RDF, SPARQL, OWL, and SKOS."
     <br>[{2021-01-03} https://www.w3.org/standards/semanticweb/]
     <br>===
+    <br>"In the original concept of the Semantic Web, software agents would have processed contents, found information from different sources, reasoned about data, and produced output."
+    <br>[{2021-01-26} https://www.isko.org/cyclo/ontologies]
     <a class="clsHide" href="#idLcnpt004dsnL"></a></p>
 
   <section id="idLcnpt004lkdt">
@@ -1077,17 +1103,17 @@
     <br>[{2021-01-03} https://en.wikipedia.org/wiki/Resource_Description_Framework]
     <a class="clsHide" href="#idLcnpt005dsn"></a></p>
   <p id="idLcnpt005nam">name::
-    <br>* Mcs.RDF'(resource-description-framework)!⇒lagRdf0,
-    <br>* Mcs.lagCnpt.005-RDF!⇒lagRdf0,
-    <br>* Mcs.lagCnpt.RDF!⇒lagRdf0,
-    <br>* Mcs.lagRdf!⇒lagRdf0,
-    <br>* Mcs.lagRdf0, {2021-01-05},
-    <br>* Mcs.lagRdf0'(resource-description-framework)!⇒lagRdf0,
-    <br>* Mcs.resource-description-framework!⇒lagRdf0,
+    <br>* Mcs.RDF'(resource-description-framework)!⇒lagRdfw,
+    <br>* Mcs.lagCnpt.005-RDF!⇒lagRdfw,
+    <br>* Mcs.lagCnpt.RDF!⇒lagRdfw,
+    <br>* Mcs.lagRdf!⇒lagRdfw,
+    <br>* Mcs.lagRdfw, {2021-01-05},
+    <br>* Mcs.lagRdfw'(resource-description-framework)!⇒lagRdfw,
+    <br>* Mcs.resource-description-framework!⇒lagRdfw,
     <a class="clsHide" href="#idLcnpt005nam"></a></p>
 
   <section id="idLcnpt005ipt">
-  <h2 id="idLcnpt005iptH2">input of lagRdf0
+  <h2 id="idLcnpt005iptH2">input of lagRdfw
     <a class="clsHide" href="#idLcnpt005iptH2"></a></h2>
   <p id="idLcnpt005iptdsn">description::
     <br>"The Resource Description Framework (RDF) is a framework for expressing information about resources. Resources can be anything, including documents, people, physical objects, and abstract concepts.
@@ -1096,7 +1122,7 @@
     <a class="clsHide" href="#idLcnpt005iptdsn"></a></p>
   <p id="idLcnpt005iptnam">name::
     <br>* Mcs.Rdfinput,
-    <br>* Mcs.lagRdf0'input!⇒Rdfinput,
+    <br>* Mcs.lagRdfw'input!⇒Rdfinput,
     <a class="clsHide" href="#idLcnpt005iptnam"></a></p>
 
   <section id="idLcnpt005irsc">
@@ -1109,7 +1135,7 @@
   <p id="idLcnpt005irscnam">name::
     <br>* Mcs.Rdfinput'resource,
     <br>* Mcs.Rdfiresource,
-    <br>* Mcs.lagRdf0'resource!⇒Rdfiresource,
+    <br>* Mcs.lagRdfw'resource!⇒Rdfiresource,
     <br>* Mcs.resource!/RDF,
     <a class="clsHide" href="#idLcnpt005irscnam"></a></p>
 
@@ -1155,7 +1181,7 @@
     <br>* Mcs.Rdfinput'class!⇒Rdficlass,
     <br>* Mcs.Rdfiresource.class!⇒Rdficlass,
     <br>* Mcs.class!/RDF,
-    <br>* Mcs.lagRdf0'class!⇒Rdficlass,
+    <br>* Mcs.lagRdfw'class!⇒Rdficlass,
     <a class="clsHide" href="#idLcnpt005iclsnam"></a></p>
 
   <section id="idLcnpt005iclsIstc">
@@ -1472,7 +1498,7 @@
     <br>* Mcs.Rdfinput'property,
     <br>* Mcs.Rdfiproperty,
     <br>* Mcs.Rdfiresource.property!⇒Rdfiproperty,
-    <br>* Mcs.lagRdf0'property!⇒Rdfiproperty,
+    <br>* Mcs.lagRdfw'property!⇒Rdfiproperty,
     <br>* Mcs.property!/RDF,
     <a class="clsHide" href="#idLcnpt005ipptnam"></a></p>
 
@@ -2421,7 +2447,7 @@
   </section>
 
   <section id="idLcnpt005opt">
-  <h2 id="idLcnpt005optH2">output of lagRdf0
+  <h2 id="idLcnpt005optH2">output of lagRdfw
     <a class="clsHide" href="#idLcnpt005optH2"></a></h2>
   <p id="idLcnpt005optdsn">description::
     <br>"An RDF document is a document that encodes an RDF graph or RDF dataset in a concrete RDF syntax, such as Turtle [TURTLE], RDFa [RDFA-PRIMER], JSON-LD [JSON-LD], or TriG [TRIG]. RDF documents enable the exchange of RDF graphs and RDF datasets between systems."
@@ -2429,24 +2455,24 @@
     <a class="clsHide" href="#idLcnpt005optdsn"></a></p>
   <p id="idLcnpt005optnam">name::
     <br>* Mcs.Rdfdoc,
-    <br>* Mcs.lagRdf0'document!⇒Rdfdoc,
-    <br>* Mcs.lagRdf0'output!⇒Rdfdoc,
+    <br>* Mcs.lagRdfw'document!⇒Rdfdoc,
+    <br>* Mcs.lagRdfw'output!⇒Rdfdoc,
     <a class="clsHide" href="#idLcnpt005optnam"></a></p>
 
   <section id="idLcnpt005odtst">
-  <h3 id="idLcnpt005odtstH3">output-dataset of lagRdf0
+  <h3 id="idLcnpt005odtstH3">output-dataset of lagRdfw
     <a class="clsHide" href="#idLcnpt005odtstH3"></a></h3>
   <p id="idLcnpt005odtstdsn">description::
     <br>· RDF-datasets are collections of RDF-graphs, comprised of a-default-graph and zero or more named-graphs.
     <br>[{2021-01-03} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/]
     <a class="clsHide" href="#idLcnpt005odtstdsn"></a></p>
   <p id="idLcnpt005odtstnam">name::
-    <br>* Mcs.lagRdf0'output-dataset,
+    <br>* Mcs.lagRdfw'output-dataset,
     <a class="clsHide" href="#idLcnpt005odtstnam"></a></p>
   </section>
 
   <section id="idLcnpt005ogrf">
-  <h3 id="idLcnpt005ogrfH3">output-graph of lagRdf0
+  <h3 id="idLcnpt005ogrfH3">output-graph of lagRdfw
     <a class="clsHide" href="#idLcnpt005ogrfH3"></a></h3>
   <p id="idLcnpt005ogrfdsn">description::
     <br>· RDF-graphs are SETS of subject-predicate-object triples.
@@ -2454,7 +2480,7 @@
     <a class="clsHide" href="#idLcnpt005ogrfdsn"></a></p>
   <p id="idLcnpt005ogrfnam">name::
     <br>* Mcs.Rdfograph,
-    <br>* Mcs.lagRdf0'graph!⇒Rdfograph,
+    <br>* Mcs.lagRdfw'graph!⇒Rdfograph,
     <a class="clsHide" href="#idLcnpt005ogrfnam"></a></p>
 
   <section id="idLcnpt005ogrfname">
@@ -2471,7 +2497,7 @@
   </section>
 
   <section id="idLcnpt005otrpl">
-  <h3 id="idLcnpt005otrplH3">output-triple of lagRdf0
+  <h3 id="idLcnpt005otrplH3">output-triple of lagRdfw
     <a class="clsHide" href="#idLcnpt005otrplH3"></a></h3>
   <p id="idLcnpt005otrpldsn">description::
     <br>"RDF allows us to make statements about resources. The format of these statements is simple. A statement always has the following structure:
@@ -2481,58 +2507,58 @@
     <a class="clsHide" href="#idLcnpt005otrpldsn"></a></p>
   <p id="idLcnpt005otrplnam">name::
     <br>* Mcs.Rdfotriple,
-    <br>* Mcs.lagRdf0'output-statement!⇒Rdfotriple,
-    <br>* Mcs.lagRdf0'output-triple!⇒Rdfotriple,
+    <br>* Mcs.lagRdfw'output-statement!⇒Rdfotriple,
+    <br>* Mcs.lagRdfw'output-triple!⇒Rdfotriple,
     <a class="clsHide" href="#idLcnpt005otrplnam"></a></p>
 
   <section id="idLcnpt005osbjt">
-  <h4 id="idLcnpt005osbjtH4">output-subject of lagRdf0
+  <h4 id="idLcnpt005osbjtH4">output-subject of lagRdfw
     <a class="clsHide" href="#idLcnpt005osbjtH4"></a></h4>
   <p id="idLcnpt005osbjtdsn">description::
     <br>·
     <a class="clsHide" href="#idLcnpt005osbjtdsn"></a></p>
   <p id="idLcnpt005osbjtnam">name::
-    <br>* Mcs.lagRdf0'output-subject,
+    <br>* Mcs.lagRdfw'output-subject,
     <a class="clsHide" href="#idLcnpt005osbjtnam"></a></p>
   </section>
 
   <section id="idLcnpt005pdct">
-  <h4 id="idLcnpt005pdctH4">predicate of lagRdf0
+  <h4 id="idLcnpt005pdctH4">predicate of lagRdfw
     <a class="clsHide" href="#idLcnpt005pdctH4"></a></h4>
   <p id="idLcnpt005pdctdsn">description::
     <br>·
     <a class="clsHide" href="#idLcnpt005pdctdsn"></a></p>
   <p id="idLcnpt005pdctnam">name::
-    <br>* Mcs.lagRdf0'output-predicate,
-    <br>* Mcs.lagRdf0'output-property,
+    <br>* Mcs.lagRdfw'output-predicate,
+    <br>* Mcs.lagRdfw'output-property,
     <a class="clsHide" href="#idLcnpt005pdctnam"></a></p>
   </section>
 
   <section id="idLcnpt005objt">
-  <h4 id="idLcnpt005objtH4">object of lagRdf0
+  <h4 id="idLcnpt005objtH4">object of lagRdfw
     <a class="clsHide" href="#idLcnpt005objtH4"></a></h4>
   <p id="idLcnpt005objtdsn">description::
     <br>·
     <a class="clsHide" href="#idLcnpt005objtdsn"></a></p>
   <p id="idLcnpt005objtnam">name::
-    <br>* Mcs.lagRdf0'output-object,
+    <br>* Mcs.lagRdfw'output-object,
     <a class="clsHide" href="#idLcnpt005objtnam"></a></p>
   </section>
   </section>
 
   <section id="idLcnpt005iri">
-  <h3 id="idLcnpt005iriH3">output-IRI of lagRdf0
+  <h3 id="idLcnpt005iriH3">output-IRI of lagRdfw
     <a class="clsHide" href="#idLcnpt005iriH3"></a></h3>
   <p id="idLcnpt005iridsn">description::
     <a class="clsHide" href="#idLcnpt005iridsn"></a></p>
   <p id="idLcnpt005irinam">name::
     <br>* Mcs.Rdfoiri,
-    <br>* Mcs.lagRdf0'output-IRI!⇒Rdfoiri,
+    <br>* Mcs.lagRdfw'output-IRI!⇒Rdfoiri,
     <a class="clsHide" href="#idLcnpt005irinam"></a></p>
   </section>
 
   <section id="idLcnpt005ltrl">
-  <h3 id="idLcnpt005ltrlH3">output-literal of lagRdf0
+  <h3 id="idLcnpt005ltrlH3">output-literal of lagRdfw
     <a class="clsHide" href="#idLcnpt005ltrlH3"></a></h3>
   <p id="idLcnpt005ltrldsn">description::
     <br>"Literals are basic values that are not IRIs. Examples of literals include strings such as "La Joconde", dates such as "the 4th of July, 1990" and numbers such as "3.14159". Literals are associated with a datatype enabling such values to be parsed and interpreted correctly. String literals can optionally be associated with a language tag. For example, "Léonard de Vinci" could be associated with the "fr" language tag and "李奥纳多·达·文西" with the "zh" language tag.
@@ -2541,12 +2567,12 @@
     <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-literal]
     <a class="clsHide" href="#idLcnpt005ltrldsn"></a></p>
   <p id="idLcnpt005ltrlnam">name::
-    <br>* Mcs.lagRdf0'output-literal,
+    <br>* Mcs.lagRdfw'output-literal,
     <a class="clsHide" href="#idLcnpt005ltrlnam"></a></p>
   </section>
 
   <section id="idLcnpt005bknd">
-  <h3 id="idLcnpt005bkndH3">output-blank-node of lagRdf0
+  <h3 id="idLcnpt005bkndH3">output-blank-node of lagRdfw
     <a class="clsHide" href="#idLcnpt005bkndH3"></a></h3>
   <p id="idLcnpt005bknddsn">description::
     <br>"IRIs and literals together provide the basic material for writing down RDF statements. In addition, it is sometimes handy to be able to talk about resources without bothering to use a global identifier. For example, we might want to state that the Mona Lisa painting has in its background an unidentified tree which we know to be a cypress tree. A resource without a global identifier, such as the painting's cypress tree, can be represented in RDF by a blank node. Blank nodes are like simple variables in algebra; they represent some thing without saying what their value is.
@@ -2554,13 +2580,13 @@
     <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-blank-node]
     <a class="clsHide" href="#idLcnpt005bknddsn"></a></p>
   <p id="idLcnpt005bkndnam">name::
-    <br>* Mcs.lagRdf0'output-blank-node,
+    <br>* Mcs.lagRdfw'output-blank-node,
     <a class="clsHide" href="#idLcnpt005bkndnam"></a></p>
   </section>
   </section>
 
   <section id="idLcnpt005voc">
-  <h2 id="idLcnpt005vocH2">vocabulary of lagRdf0
+  <h2 id="idLcnpt005vocH2">vocabulary of lagRdfw
     <a class="clsHide" href="#idLcnpt005vocH2"></a></h2>
   <p id="idLcnpt005vocdsn">description::
     <br>"An RDF vocabulary is a collection of IRIs intended for use in RDF graphs.
@@ -2574,7 +2600,7 @@
   <p id="idLcnpt005vocnam">name::
     <br>* Mcs.RDF-vocabulary!⇒Rdfvoc,
     <br>* Mcs.Rdfvoc,
-    <br>* Mcs.lagRdf0'vocabulary!⇒Rdfvoc,
+    <br>* Mcs.lagRdfw'vocabulary!⇒Rdfvoc,
     <br>* Mcs.namespace!/RDF,
     <br>* Mcs.vocabulary!/RDF,
     <a class="clsHide" href="#idLcnpt005vocnam"></a></p>
@@ -3862,7 +3888,7 @@
   </section>
 
   <section id="idLcnpt005rscF">
-  <h2 id="idLcnpt005rscFH2">Infrsc of lagRdf0
+  <h2 id="idLcnpt005rscFH2">Infrsc of lagRdfw
     <a class="clsHide" href="#idLcnpt005rscFH2"></a></h2>
   <p id="idLcnpt005rscFdsn">description::
     <br>* RDF 1.1 Primer, W3C Working Group Note 24 June 2014, https://www.w3.org/TR/rdf11-primer/,
@@ -3871,17 +3897,17 @@
     <br>* RDF Schema 1.1, W3C Recommendation 25 February 2014, https://www.w3.org/TR/rdf-schema/,
     <a class="clsHide" href="#idLcnpt005rscFdsn"></a></p>
   <p id="idLcnpt005rscFnam">name::
-    <br>* Mcs.lagRdf0'Infrsc,
+    <br>* Mcs.lagRdfw'Infrsc,
     <a class="clsHide" href="#idLcnpt005rscFnam"></a></p>
   </section>
 
   <section id="idLcnpt005evgF">
-  <h2 id="idLcnpt005evgFH2">evoluting of lagRdf0
+  <h2 id="idLcnpt005evgFH2">evoluting of lagRdfw
     <a class="clsHide" href="#idLcnpt005evgFH2"></a></h2>
   </section>
 
   <section id="idLcnpt005Spc">
-  <h2 id="idLcnpt005SpcH2">lagRdf0.SPECIFIC
+  <h2 id="idLcnpt005SpcH2">lagRdfw.SPECIFIC
     <a class="clsHide" href="#idLcnpt005SpcH2"></a></h2>
   <p id="idLcnpt005Spcdsn">description::
     <br>* Turtle family of RDF languages (N-Triples, Turtle, TriG and N-Quads),
@@ -3890,12 +3916,12 @@
     <br>* RDF/XML (XML syntax for RDF),
     <a class="clsHide" href="#idLcnpt005Spcdsn"></a></p>
   <p id="idLcnpt005Spcnam">name::
-    <br>* Mcs.lagRdf0.specific,
+    <br>* Mcs.lagRdfw.specific,
     <a class="clsHide" href="#idLcnpt005Spcnam"></a></p>
   </section>
 
   <section id="idLcnpt005Crdfs">
-  <h2 id="idLcnpt005CrdfsH2">lagRdf0.concrete-RDF-syntax
+  <h2 id="idLcnpt005CrdfsH2">lagRdfw.concrete-RDF-syntax
     <a class="clsHide" href="#idLcnpt005CrdfsH2"></a></h2>
   <p id="idLcnpt005Crdfsdsn">description::
     <br>"An RDF document is a document that encodes an RDF graph or RDF dataset in a concrete RDF syntax, such as Turtle [TURTLE], RDFa [RDFA-PRIMER], JSON-LD [JSON-LD], or TriG [TRIG]. RDF documents enable the exchange of RDF graphs and RDF datasets between systems.
@@ -3903,19 +3929,19 @@
     <br>[{2021-01-06} https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/#dfn-concrete-rdf-syntax]
     <a class="clsHide" href="#idLcnpt005Crdfsdsn"></a></p>
   <p id="idLcnpt005Crdfsnam">name::
-    <br>* Mcs.lagRdf0.concrete-RDF-syntax,
-    <br>* Mcs.lagRdf0.instance,
+    <br>* Mcs.lagRdfw.concrete-RDF-syntax,
+    <br>* Mcs.lagRdfw.instance,
     <br>* Mcs.concrete-RDF-syntax!/RDF,
     <a class="clsHide" href="#idLcnpt005Crdfsnam"></a></p>
   </section>
 
   <section id="idLcnpt005Jnld">
-  <h2 id="idLcnpt005JnldH2">lagRdf0.JSON-LD (<a class="clsPreview" href="filMcsLjson.last.html#idJnld">link</a>)
+  <h2 id="idLcnpt005JnldH2">lagRdfw.JSON-LD (<a class="clsPreview" href="filMcsLjson.last.html#idJnld">link</a>)
     <a class="clsHide" href="#idLcnpt005JnldH2"></a></h2>
   </section>
 
   <section id="idLcnpt005Ntrpl">
-  <h2 id="idLcnpt005NtrplH2">lagRdf0.N-Triples
+  <h2 id="idLcnpt005NtrplH2">lagRdfw.N-Triples
     <a class="clsHide" href="#idLcnpt005NtrplH2"></a></h2>
   <p id="idLcnpt005Ntrpldsn">description::
     <br>· example:<code>
@@ -3929,13 +3955,13 @@
     <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-n-triples]
     <a class="clsHide" href="#idLcnpt005Ntrpldsn"></a></p>
   <p id="idLcnpt005Ntrplnam">name::
-    <br>* Mcs.N-Triple-lagRdf0,
-    <br>* Mcs.lagRdf0.N-Triple,
+    <br>* Mcs.N-Triple-lagRdfw,
+    <br>* Mcs.lagRdfw.N-Triple,
     <a class="clsHide" href="#idLcnpt005Ntrplnam"></a></p>
   </section>
 
   <section id="idLcnpt005Trtl">
-  <h2 id="idLcnpt005TrtlH2">lagRdf0.Turtle
+  <h2 id="idLcnpt005TrtlH2">lagRdfw.Turtle
     <a class="clsHide" href="#idLcnpt005TrtlH2"></a></h2>
   <p id="idLcnpt005Trtldsn">description::
     <br>· example:
@@ -3961,13 +3987,13 @@
     <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-turtle]
     <a class="clsHide" href="#idLcnpt005Trtldsn"></a></p>
   <p id="idLcnpt005Trtlnam">name::
-    <br>* Mcs.Turtle-lagRdf0,
-    <br>* Mcs.lagRdf0.Turtle,
+    <br>* Mcs.Turtle-lagRdfw,
+    <br>* Mcs.lagRdfw.Turtle,
     <a class="clsHide" href="#idLcnpt005Trtlnam"></a></p>
   </section>
 
   <section id="idLcnpt005Trig">
-  <h2 id="idLcnpt005TrigH2">lagRdf0.TriG
+  <h2 id="idLcnpt005TrigH2">lagRdfw.TriG
     <a class="clsHide" href="#idLcnpt005TrigH2"></a></h2>
   <p id="idLcnpt005Trigdsn">description::
     <br>· The syntax of Turtle supports only the specification of single graphs without a means for "naming" them. TriG [TRIG] is an extension of Turtle enabling the specification of multiple graphs in the form of an RDF dataset.
@@ -4004,26 +4030,26 @@
     <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-trig]
     <a class="clsHide" href="#idLcnpt005Trigdsn"></a></p>
   <p id="idLcnpt005Trignam">name::
-    <br>* Mcs.TriG-lagRdf0,
-    <br>* Mcs.lagRdf0.TriG,
+    <br>* Mcs.TriG-lagRdfw,
+    <br>* Mcs.lagRdfw.TriG,
     <a class="clsHide" href="#idLcnpt005Trignam"></a></p>
   </section>
 
   <section id="idLcnpt005Nqds">
-  <h2 id="idLcnpt005NqdsH2">lagRdf0.N-Quads
+  <h2 id="idLcnpt005NqdsH2">lagRdfw.N-Quads
     <a class="clsHide" href="#idLcnpt005NqdsH2"></a></h2>
   <p id="idLcnpt005Nqdsdsn">description::
     <br>"N-Quads [N-QUADS] is a simple extension to N-Triples to enable the exchange of RDF datasets. N-Quads allows one to add a fourth element to a line, capturing the graph IRI of the triple described on that line."
     <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-n-quads]
     <a class="clsHide" href="#idLcnpt005Nqdsdsn"></a></p>
   <p id="idLcnpt005Nqdsnam">name::
-    <br>* Mcs.N-Quads-lagRdf0,
-    <br>* Mcs.lagRdf0.N-Quads,
+    <br>* Mcs.N-Quads-lagRdfw,
+    <br>* Mcs.lagRdfw.N-Quads,
     <a class="clsHide" href="#idLcnpt005Nqdsnam"></a></p>
   </section>
 
   <section id="idLcnpt005Rdfa">
-  <h2 id="idLcnpt005RdfaH2">lagRdf0.RDFa
+  <h2 id="idLcnpt005RdfaH2">lagRdfw.RDFa
     <a class="clsHide" href="#idLcnpt005RdfaH2"></a></h2>
   <p id="idLcnpt005Rdfadsn">description::
     <br>""RDFa [RDFA-PRIMER] is an RDF syntax that can be used to embed RDF data within HTML and XML documents. This enables, for example, search engines to aggregate this data when crawling the Web and use it to enrich search results (see, e.g., schema.org and Rich Snippets).
@@ -4057,13 +4083,13 @@
     <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-rdfa]
     <a class="clsHide" href="#idLcnpt005Rdfadsn"></a></p>
   <p id="idLcnpt005Rdfanam">name::
-    <br>* Mcs.RDFa-lagRdf0,
-    <br>* Mcs.lagRdf0.RDFa,
+    <br>* Mcs.RDFa-lagRdfw,
+    <br>* Mcs.lagRdfw.RDFa,
     <a class="clsHide" href="#idLcnpt005Rdfanam"></a></p>
   </section>
 
   <section id="idLcnpt005Rdfxml">
-  <h2 id="idLcnpt005RdfxmlH2">lagRdf0.RDF/XML
+  <h2 id="idLcnpt005RdfxmlH2">lagRdfw.RDF/XML
     <a class="clsHide" href="#idLcnpt005RdfxmlH2"></a></h2>
   <p id="idLcnpt005Rdfxmldsn">description::
     <br>"RDF/XML [RDF-SYNTAX-GRAMMAR] provides an XML syntax for RDF graphs. When RDF was originally developed in the late 1990s, this was its only syntax, and some people still call this syntax "RDF". In 2001, a precursor to Turtle called "N3" was proposed, and gradually the other languages listed here have been adopted and standardized."
@@ -4091,8 +4117,8 @@
     <br>[{2021-01-03} https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/#section-rdfxml]
     <a class="clsHide" href="#idLcnpt005Rdfxmldsn"></a></p>
   <p id="idLcnpt005Rdfxmlnam">name::
-    <br>* Mcs.RDF/XML-lagRdf0,
-    <br>* Mcs.lagRdf0.RDF/XML,
+    <br>* Mcs.RDF/XML-lagRdfw,
+    <br>* Mcs.lagRdfw.RDF/XML,
     <a class="clsHide" href="#idLcnpt005Rdfxmlnam"></a></p>
   </section>
 </section>
@@ -4106,11 +4132,11 @@
     <br>[{2021-01-03} https://www.w3.org/TR/owl2-overview/]
     <a class="clsHide" href="#idLcnpt006dsn"></a></p>
   <p id="idLcnpt006nam">name::
-    <br>* Mcs.OWL'(web-ontology-language)!⇒lagOwl0,
-    <br>* Mcs.lagCnpt.006-OWL!⇒lagOwl0,
-    <br>* Mcs.lagCnpt.OWL!⇒lagOwl0,
-    <br>* Mcs.lagOwl0,
-    <br>* Mcs.web-ontology-language!⇒lagOwl0,
+    <br>* Mcs.OWL'(web-ontology-language)!⇒lagOwlg,
+    <br>* Mcs.lagCnpt.006-OWL!⇒lagOwlg,
+    <br>* Mcs.lagCnpt.OWL!⇒lagOwlg,
+    <br>* Mcs.lagOwlg,
+    <br>* Mcs.web-ontology-language!⇒lagOwlg,
     <a class="clsHide" href="#idLcnpt006nam"></a></p>
   <p id="idLcnpt006dsnL">descriptionLong::
     <br>"The Web Ontology Language (OWL) is a family of knowledge representation languages for authoring ontologies. Ontologies are a formal way to describe taxonomies and classification networks, essentially defining the structure of knowledge for various domains: the nouns representing classes of objects and the verbs representing relations between the objects.
@@ -4122,7 +4148,7 @@
     <a class="clsHide" href="#idLcnpt006dsnL"></a></p>
 
   <section id="idLcnpt006inpt">
-  <h2 id="idLcnpt006inptH2">input of lagOwl0
+  <h2 id="idLcnpt006inptH2">input of lagOwlg
     <a class="clsHide" href="#idLcnpt006inptH2"></a></h2>
   <p id="idLcnpt006inptdsn">description::
     <br>"The W3C OWL 2 Web Ontology Language (OWL) is a Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things."
@@ -4134,7 +4160,7 @@
   <p id="idLcnpt006inptnam">name::
     <br>* Mcs.Owlontology,
     <br>* Mcs.domain-of-inerest!/OWL!⇒Owlontology,
-    <br>* Mcs.lagOwl0'input!⇒Owlontology,
+    <br>* Mcs.lagOwlg'input!⇒Owlontology,
     <br>* Mcs.ontology!/OWL!⇒Owlontology,
     <br>* Mcs.subject-matter!/OWL!⇒Owlontology,
     <a class="clsHide" href="#idLcnpt006inptnam"></a></p>
@@ -4341,7 +4367,7 @@
     <a class="clsHide" href="#idLcnpt006owandsn"></a></p>
   <p id="idLcnpt006owannam">name::
     <br>* Mcs.Owlontology'open-world-assumption,
-    <br>* Mcs.lagOwl0'open-world-assumption,
+    <br>* Mcs.lagOwlg'open-world-assumption,
     <br>* Mcs.open-world-assumption!/OWL,
     <a class="clsHide" href="#idLcnpt006owannam"></a></p>
   <p id="idLcnpt006owandsnL">descriptionLong::
@@ -4353,7 +4379,7 @@
   </section>
 
   <section id="idLcnpt006otpt">
-  <h2 id="idLcnpt006otptH2">output of lagOwl0
+  <h2 id="idLcnpt006otptH2">output of lagOwlg
     <a class="clsHide" href="#idLcnpt006otptH2"></a></h2>
   <p id="idLcnpt006otptdsn">description::
     <br>· the-output of the-mapping.
@@ -4362,20 +4388,20 @@
     <br>[{2021-01-10} https://www.w3.org/TR/2012/REC-owl2-syntax-20121211/#Ontologies]
     <a class="clsHide" href="#idLcnpt006otptdsn"></a></p>
   <p id="idLcnpt006otptnam">name::
-    <br>* Mcs.lagOwl0'document!⇒Owldoc,
-    <br>* Mcs.lagOwl0'output!⇒Owldoc,
+    <br>* Mcs.lagOwlg'document!⇒Owldoc,
+    <br>* Mcs.lagOwlg'output!⇒Owldoc,
     <a class="clsHide" href="#idLcnpt006otptnam"></a></p>
   </section>
 
   <section id="idLcnpt006tool">
-  <h2 id="idLcnpt006toolH2">tool of lagOwl0
+  <h2 id="idLcnpt006toolH2">tool of lagOwlg
     <a class="clsHide" href="#idLcnpt006toolH2"></a></h2>
   <p id="idLcnpt006tooldsn">description::
     <br>* editor,
     <br>* reasoner,
     <a class="clsHide" href="#idLcnpt006tooldsn"></a></p>
   <p id="idLcnpt006toolnam">name::
-    <br>* Mcs.lagOwl0'tool,
+    <br>* Mcs.lagOwlg'tool,
     <a class="clsHide" href="#idLcnpt006toolnam"></a></p>
   <p id="idLcnpt006toolwpa">addressWpg::
     <br>* https://www.w3.org/2001/sw/wiki/Tools,
@@ -4383,7 +4409,7 @@
   </section>
 
   <section id="idLcnpt006rscF">
-  <h2 id="idLcnpt006rscFH2">Infrsc of lagOwl0
+  <h2 id="idLcnpt006rscFH2">Infrsc of lagOwlg
     <a class="clsHide" href="#idLcnpt006rscFH2"></a></h2>
   <p id="idLcnpt006rscFdsn">description::
     <br>* https://www.w3.org/TR/owl2-overview/,
@@ -4391,19 +4417,19 @@
     <br>* https://en.wikipedia.org/wiki/Web_Ontology_Language,
     <a class="clsHide" href="#idLcnpt006rscFdsn"></a></p>
   <p id="idLcnpt006rscFnam">name::
-    <br>* Mcs.lagOwl0'Infrsc,
+    <br>* Mcs.lagOwlg'Infrsc,
     <a class="clsHide" href="#idLcnpt006rscFnam"></a></p>
   </section>
 
   <section id="idLcnpt006dngF">
-  <h2 id="idLcnpt006dngFH2">DOING of lagOwl0
+  <h2 id="idLcnpt006dngFH2">DOING of lagOwlg
     <a class="clsHide" href="#idLcnpt006dngFH2"></a></h2>
   <p id="idLcnpt006dngFdsn">description::
     <br>"... with the ultimate goal of making Web content more accessible to machines."
     <br>[{2021-01-08} https://www.w3.org/TR/2012/REC-owl2-overview-20121211/#Introduction]
     <a class="clsHide" href="#idLcnpt006dngFdsn"></a></p>
   <p id="idLcnpt006dngFnam">name::
-    <br>* Mcs.lagOwl0'doing,
+    <br>* Mcs.lagOwlg'doing,
     <a class="clsHide" href="#idLcnpt006dngFnam"></a></p>
   </section>
 </section>
@@ -5451,6 +5477,37 @@
     <br>* https://en.wikipedia.org/wiki/List_of_XML_markup_languages,
     <br>* https://en.wikipedia.org/wiki/List_of_types_of_XML_schemas,
     <a class="clsHide" href="#idLxml0Spcwpa"></a></p>
+  </section>
+</section>
+
+<section id="idLwlfm">
+  <h1 id="idLwlfmH1">lagCnpt.Wolfram-language-018
+    <a class="clsHide" href="#idLwlfmH1"></a></h1>
+  <p id="idLwlfmdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLwlfmdsn"></a></p>
+  <p id="idLwlfmnam">name::
+    <br>* Mcs.Wolfram-language!⇒lagWlfm,
+    <br>* Mcs.lagWlfm,
+    <br>* Mcs.lagWlfm'(Wolfram-language)!⇒lagWlfm,
+    <a class="clsHide" href="#idLwlfmnam"></a></p>
+  <p id="idLwlfmdsnL">descriptionLong::
+    <br>"The Wolfram Language is a computer language. It gives you a way to communicate with computers, in particular so you can tell them what to do.
+    <br>There are many computer languages, such as C++, Java, Python and JavaScript. The Wolfram Language is unique in that it’s knowledge based. That means that it already knows a lot—so you have to tell it much less to get it to do things you want."
+    <br>[{2021-01-26} https://www.wolfram.com/language/elementary-introduction/2nd-ed/what-is-the-wolfram-language.html]
+    <a class="clsHide" href="#idLwlfmdsnL"></a></p>
+
+  <section id="idLwlfmrscF">
+  <h2 id="idLwlfmrscFH2">Infrsc of lagWlfm
+    <a class="clsHide" href="#idLwlfmrscFH2"></a></h2>
+  <p id="idLwlfmrscFdsn">description::
+    <br>* https://reference.wolfram.com/language/,
+    <br>* https://www.wolfram.com/language/elementary-introduction/2nd-ed/,
+    <br>* https://en.wikipedia.org/wiki/Wolfram_Language,
+    <a class="clsHide" href="#idLwlfmrscFdsn"></a></p>
+  <p id="idLwlfmrscFnam">name::
+    <br>* Mcs.lagWlfm'Infrsc,
+    <a class="clsHide" href="#idLwlfmrscFnam"></a></p>
   </section>
 </section>
 
