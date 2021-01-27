@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.human-(0-43-0.2021-01-23 draft)</title>
+  <title>Mcs.human-(0-44-0.2021-01-27 draft)</title>
   <meta name="keywords" content="human, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -154,13 +154,14 @@
     <a class="clsHide" href="#idHmnatt101dsn"></a></p>
   <p id="idHmnatt101nam">name::
     <br>* Mcs.Hmnid,
+    <br>* Mcs.Hmnid'(human-identifier)!⇒Hmnid,
     <br>* Mcs.human'att101-identifier!⇒Hmnid,
     <br>* Mcs.human'ID!⇒Hmnid,
     <br>* Mcs.human'identifier!⇒Hmnid,
     <a class="clsHide" href="#idHmnatt101nam"></a></p>
 
   <section id="idHmnatt102">
-  <h3 id="idHmnatt102H3">national-identifier of human
+  <h3 id="idHmnatt102H3">Hmnid.national-identifier of human
     <a class="clsHide" href="#idHmnatt102H3"></a></h3>
   <p id="idHmnatt102dsn">description::
     <br>"A national identification number, national identity number, or national insurance number is used by the governments of many countries as a means of tracking their citizens, permanent residents, and temporary residents for the purposes of work, taxation, government benefits, health care, and other governmentally-related functions. The number appears on identity documents issued by several countries.
@@ -168,6 +169,7 @@
     <br>[{2021-01-21} https://en.wikipedia.org/wiki/National_identification_number]
     <a class="clsHide" href="#idHmnatt102dsn"></a></p>
   <p id="idHmnatt102nam">name::
+    <br>* Mcs.Hmnid.Hmnnid,
     <br>* Mcs.Hmnnid,
     <br>* Mcs.Hmnnid'(human-national-identifier)!⇒Hmnnid,
     <br>* Mcs.human'att103-national-identifier!⇒Hmnnid,
@@ -178,12 +180,13 @@
   </section>
 
   <section id="idHmnatt103">
-  <h3 id="idHmnatt103H3">global-identifier of human
+  <h3 id="idHmnatt103H3">Hmnid.global-identifier of human
     <a class="clsHide" href="#idHmnatt103H3"></a></h3>
   <p id="idHmnatt103dsn">description::
     <br>· a-human-identifier for all countries of the-world.
     <a class="clsHide" href="#idHmnatt103dsn"></a></p>
   <p id="idHmnatt103nam">name::
+    <br>* Mcs.Hmnid.Hmngid,
     <br>* Mcs.Hmngid,
     <br>* Mcs.Hmngid'(human-global-identifier)!⇒Hmngid,
     <br>* Mcs.global-human-identifier!⇒Hmngid,
@@ -193,7 +196,7 @@
   </section>
 
   <section id="idHmnatt101Gln">
-  <h3 id="idHmnatt101GlnH3">global-location-number of human
+  <h3 id="idHmnatt101GlnH3">Hmnid.global-location-number of human
     <a class="clsHide" href="#idHmnatt101GlnH3"></a></h3>
   <p id="idHmnatt101Glndsn">description::
     <br>"The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations."
@@ -201,6 +204,7 @@
     <a class="clsHide" href="#idHmnatt101Glndsn"></a></p>
   <p id="idHmnatt101Glnnam">name::
     <br>* Mcs.GLN'(global-location-number)!⇒Hmngln,
+    <br>* Mcs.Hmnid.Hmngln,
     <br>* Mcs.Hmngln,
     <br>* Mcs.ILN'(international-location-number)!⇒Hmngln,
     <br>* Mcs.human'Gln!⇒Hmngln,
@@ -209,19 +213,39 @@
   </section>
 
   <section id="idHmnatt125">
-  <h3 id="idHmnatt125H3">TIN of human
+  <h3 id="idHmnatt125H3">Hmnid.TIN of human
     <a class="clsHide" href="#idHmnatt125H3"></a></h3>
   <p id="idHmnatt125dsn">description::
     <br>"A Taxpayer Identification Number (TIN) is an identifying number used for tax purposes in the United States and in other countries under the Common Reporting Standard. In the United States it is also known as a Tax Identification Number or Federal Taxpayer Identification Number. A TIN may be assigned by the Social Security Administration or by the Internal Revenue Service (IRS)."
     <br>[{2021-01-22} https://en.wikipedia.org/wiki/Taxpayer_Identification_Number]
     <a class="clsHide" href="#idHmnatt125dsn"></a></p>
   <p id="idHmnatt125nam">name::
+    <br>* Mcs.Hmnid.Tin,
     <br>* Mcs.TIN'(taxpayer-identification-number),
     <br>* Mcs.human'Tin,
     <br>* Mcs.human'att125-Tin,
     <br>* Mcs.tax-identification-number,
     <br>* Mcs.taxpayer-identification-number,
     <a class="clsHide" href="#idHmnatt125nam"></a></p>
+  </section>
+
+  <section id="idHmnatt101Cnrd">
+  <h3 id="idHmnatt101CnrdH3">Hmnid.centralized
+    <a class="clsHide" href="#idHmnatt101CnrdH3"></a></h3>
+  <p id="idHmnatt101Cnrddsn">description::
+    <br>"Unlike centralized identifiers commonly used today (email addresses, usernames, etc.), DIDs are generated, owned, and controlled by individuals, not companies or other centralized entities."
+    <br>[{2021-01-27} https://techcommunity.microsoft.com/t5/identity-standards-blog/ion-booting-up-the-network/ba-p/1441552]
+    <a class="clsHide" href="#idHmnatt101Cnrddsn"></a></p>
+  <p id="idHmnatt101Cnrdnam">name::
+    <br>* Mcs.Hmncid,
+    <br>* Mcs.Hmnid.centralized!⇒Hmncid,
+    <br>* Mcs.centralized-identifier!⇒Hmncid,
+    <a class="clsHide" href="#idHmnatt101Cnrdnam"></a></p>
+  </section>
+
+  <section id="idHmndid">
+  <h3 id="idHmndidH3">Hmnid.decentralized (<a class="clsPreview" href="../dirTchInf/filMcsDtcnet.last.html#idDtcsvcIdn">link</a>)
+    <a class="clsHide" href="#idHmndidH3"></a></h3>
   </section>
   </section>
 
