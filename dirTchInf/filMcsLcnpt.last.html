@@ -70,6 +70,7 @@
     <br>* Mcs.lagCnpt'domain!⇒Lcnptinput,
     <br>* Mcs.lagCnpt'input!⇒Lcnptinput,
     <br>* Mcs.lagCnpt'input-view!⇒Lcnptinput,
+    <br>* problem-domain,
     <a class="clsHide" href="#idLcnptiptnam"></a></p>
 
   <section id="idLcnptidmn">
@@ -252,6 +253,10 @@
     <br>"The World Wide Web Consortium created the "Web Ontology Working Group" which began work on 2001-11-01 chaired by James Hendler and Guus Schreiber. The first working drafts of the abstract syntax, reference and synopsis were published in July 2002. The OWL documents became a formal W3C recommendation on 2004-02-10 and the working group was disbanded on 2004-05-31.[4]"
     <br>[http://en.wikipedia.org/wiki/Web_Ontology_Language]
     <a class="clsHide" href="#idLcnptevg20040210"></a></p>
+  <p id="idLcnptevgi101990">{i10-1990}-expert-system::
+    <br>"Rule systems have been implemented and studied since the mid-1970s and saw significant uptake in the 1980s during the height of so-called Expert Systems."
+    <br>[{2007-12-02} https://en.wikipedia.org/wiki/Rule_Interchange_Format]
+    <a class="clsHide" href="#idLcnptevgi101990"></a></p>
   <p id="idLcnptevg1984">{1984}-Cyc-project::
     <br>"In 1984, Doug Lenat started the Cyc Project with the objective of codify, in machine-usable form, millions of pieces of knowledge that comprise human common sense.
     <br>CycL presented a proprietary knowledge representation schema that utilized first-order relationships."
@@ -264,6 +269,14 @@
     <br>Frames are thus a machine-usable formalization of concepts or schemata."
     <br>[http://en.wikipedia.org/wiki/Frame_language]
     <a class="clsHide" href="#idLcnptevgi101980"></a></p>
+  <p id="idLcnptevg1972">{1972}-Prolog::
+    <br>"[Prolog]  was developed and implemented in Marseille, France, in 1972 by Alain Colmerauer with Philippe Roussel, based on Robert Kowalski's procedural interpretation of Horn clauses.[5][6]"
+    <br>[{2021-01-30} https://en.wikipedia.org/wiki/Prolog]
+    <a class="clsHide" href="#idLcnptevg1972"></a></p>
+  <p id="idLcnptevg1969">{1969}-logic-programing::
+    <br>"However, the first proposal to use the clausal form of logic for representing computer programs was made by Cordell Green (1969). This used an axiomatization of a subset of LISP, together with a representation of an input-output relation, to compute the relation by simulating the execution of the program in LISP."
+    <br>[http://en.wikipedia.org/wiki/Logic_programming]
+    <a class="clsHide" href="#idLcnptevg1969"></a></p>
   <p id="idLcnptevgnam">name::
     <br>* Mcs.lagCnpt'evoluting,
     <a class="clsHide" href="#idLcnptevgnam"></a></p>
@@ -361,6 +374,7 @@
   <p id="idLcnpt002nam">name::
     <br>* Mcs.lagCnpt.002-processing!⇒lagKnPr,
     <br>* Mcs.lagCnpt.processing!⇒lagKnPr,
+    <br>* Mcs.procedural-concept-language!⇒lagKnPr,
     <br>* Mcs.processing-knowledge-language!⇒lagKnPr,
     <a class="clsHide" href="#idLcnpt002nam"></a></p>
 </section>
@@ -386,6 +400,7 @@
     <br>· McsHitp-lag is <a class="clsPreview" href="#idOverview">a-concept-language</a> that maps <a class="clsPreview" href="../dirLag/filMcsInfHmn.last.html#idInfHmnBrn001Mcpt">mind-concepts</a> to <a class="clsPreview" href="../dirCor/filMcs.last.html#idMcsHitp">McsHitp</a>.
     <a class="clsHide" href="#idLcnpt007dsn"></a></p>
   <p id="idLcnpt007nam">name::
+    <br>* Mcs.Hitp-concept--language!⇒lagHcpt,
     <br>* Mcs.McsHitp--concept-language!⇒lagHcpt,
     <br>* Mcs.McsHitp-format!⇒lagHcpt,
     <br>* Mcs.McsHitp-lag!⇒lagHcpt,
@@ -393,9 +408,53 @@
     <br>* Mcs.McsHitp-lagCnpt!⇒lagHcpt,
     <br>* Mcs.lagCnpt.007-McsHitp!⇒lagHcpt,
     <br>* Mcs.lagCnpt.McsHitp!⇒lagHcpt,
+    <br>* Mcs.lagHcpt,
+    <br>* Mcs.lagHcpt'(McsHitp-concept)!⇒lagHcpt,
     <br>* Mcs.lagHmcs!⇒lagHcpt,
     <br>* Mcs.lagMcsHitp!⇒lagHcpt,
     <a class="clsHide" href="#idLcnpt007nam"></a></p>
+
+  <section id="idLcnpt007mchn">
+  <h2 id="idLcnpt007mchnH2">machine of lagHcpt
+    <a class="clsHide" href="#idLcnpt007mchnH2"></a></h2>
+  <p id="idLcnpt007mchndsn">description::
+    <br>· any machine connected to internet.
+    <a class="clsHide" href="#idLcnpt007mchndsn"></a></p>
+  <p id="idLcnpt007mchnnam">name::
+    <br>* Mcs.lagHcpt'machine,
+    <a class="clsHide" href="#idLcnpt007mchnnam"></a></p>
+  </section>
+
+  <section id="idLcnpt007inpt">
+  <h2 id="idLcnpt007inptH2">input of lagHcpt
+    <a class="clsHide" href="#idLcnpt007inptH2"></a></h2>
+  <p id="idLcnpt007inptdsn">description::
+    <br>· mind-concepts[a] are subjective models of humans environment, constructed by the-mind.
+    <br>· anything we perceive is a-mind-concept.
+    <br>· mind-concepts have attributes which are also mind-concepts.
+    <br>· systems of mind-concepts are mind-concepts.
+    <br>· mind-concepts are-NOT the-units of information.
+    <br>· information|knowledge is mind-concepts.
+    <br>· human-languages have rules to give them[a] names.
+    <br>· human-languages map mind-concepts into logo-(text|speech).
+    <br>· logos are whole-part-systems of sentences which map relations or doings of mind-concepts and describe attributes of mind-concepts.
+    <br>· the-semantic-units of sentences are names of <a class="clsPreview" href="../dirLag/filMcsLhmn.last.html#idLhmnsmscpt">semaso-concepts</a>.
+    <a class="clsHide" href="#idLcnpt007inptdsn"></a></p>
+  <p id="idLcnpt007inptnam">name::
+    <br>* Mcs.lagHcpt'input,
+    <a class="clsHide" href="#idLcnpt007inptnam"></a></p>
+  </section>
+
+  <section id="idLcnpt007otpt">
+  <h2 id="idLcnpt007otptH2">output of lagHcpt
+    <a class="clsHide" href="#idLcnpt007otptH2"></a></h2>
+  <p id="idLcnpt007otptdsn">description::
+    <br>· <a class="clsPreview" href="../dirCor/filMcs.last.html#idMcsHitp">McsHitp</a> is a-model of a-mind-concept.
+    <a class="clsHide" href="#idLcnpt007otptdsn"></a></p>
+  <p id="idLcnpt007otptnam">name::
+    <br>* Mcs.lagHcpt'output,
+    <a class="clsHide" href="#idLcnpt007otptnam"></a></p>
+  </section>
 </section>
 
 <section id="idLcnpt011">
@@ -2548,6 +2607,18 @@
     <br>* Mcs.ontology.CIDOC-CRM,
     <a class="clsHide" href="#idLcnpt016otptCidcrmnam"></a></p>
   </section>
+
+  <section id="idLcnpt016otptDbpd">
+  <h3 id="idLcnpt016otptDbpdH3">ontology.DBpedia
+    <a class="clsHide" href="#idLcnpt016otptDbpdH3"></a></h3>
+  <p id="idLcnpt016otptDbpddsn">description::
+    <br>"The English version of the DBpedia knowledge base describes 4.58 million things, out of which 4.22 million are classified in a consistent ontology, including 1,445,000 persons, 735,000 places (including 478,000 populated places), 411,000 creative works (including 123,000 music albums, 87,000 films and 19,000 video games), 241,000 organizations (including 58,000 companies and 49,000 educational institutions), 251,000 species and 6,000 diseases."
+    <br>[{2021-01-30} https://wiki.dbpedia.org/about]
+    <a class="clsHide" href="#idLcnpt016otptDbpddsn"></a></p>
+  <p id="idLcnpt016otptDbpdnam">name::
+    <br>* Mcs.ontology.DBpedia,
+    <a class="clsHide" href="#idLcnpt016otptDbpdnam"></a></p>
+  </section>
   </section>
 
   <section id="idLcnpt016tool">
@@ -2985,9 +3056,179 @@
   </section>
   </section>
 
+  <section id="idLcnpt016Owl2">
+  <h2 id="idLcnpt016Owl2H2">lagOntg.OWL2
+    <a class="clsHide" href="#idLcnpt016Owl2H2"></a></h2>
+  <p id="idLcnpt016Owl2dsn">description::
+    <br>"Relationship to OWL 1
+    <br>OWL 2 has a very similar overall structure to OWL 1. Looking at Figure 1, almost all the building blocks of OWL 2 were present in OWL 1, albeit possibly under different names.
+    <br>The central role of RDF/XML, the role of other syntaxes, and the relationships between the Direct and RDF-Based semantics (i.e., the correspondence theorem) have not changed. More importantly, backwards compatibility with OWL 1 is, to all intents and purposes, complete: all OWL 1 Ontologies remain valid OWL 2 Ontologies, with identical inferences in all practical cases (see Section 4.2 of OWL 2 New Features and Rationale [OWL 2 New Features and Rationale]).
+    <br>OWL 2 adds new functionality with respect to OWL 1. Some of the new features are syntactic sugar (e.g., disjoint union of classes) while others offer new expressivity, including:
+    <br>* keys;
+    <br>* property chains;
+    <br>* richer datatypes, data ranges;
+    <br>* qualified cardinality restrictions;
+    <br>* asymmetric, reflexive, and disjoint properties; and
+    <br>* enhanced annotation capabilities
+    <br>OWL 2 also defines three new profiles [OWL 2 Profiles] and a new syntax [OWL 2 Manchester Syntax]. In addition, some of the restrictions applicable to OWL DL have been relaxed; as a result, the set of RDF Graphs that can be handled by Description Logics reasoners is slightly larger in OWL 2.
+    <br>All of the above is documented in detail in the OWL 2 New Features and Rationale document [OWL 2 New Features and Rationale]. The OWL 2 Quick Reference Guide [OWL 2 Quick Guide] also provides an overview of the features of OWL 2, clearly indicating those that are new."
+    <br>[{2021-01-30} https://www.w3.org/TR/2012/REC-owl2-overview-20121211/#Relationship_to_OWL_1]
+    <a class="clsHide" href="#idLcnpt016Owl2dsn"></a></p>
+  <p id="idLcnpt016Owl2nam">name::
+    <br>* Mcs.OWL2!⇒lagOwl2,
+    <br>* Mcs.lagOntl.OWL2!⇒lagOwl2,
+    <br>* Mcs.lagOwl2,
+    <a class="clsHide" href="#idLcnpt016Owl2nam"></a></p>
+  </section>
+
   <section id="idLcnpt016Swrl">
   <h2 id="idLcnpt016SwrlH2">lagOntg.SWRL (<a class="clsPreview" href="idLcnpt020Swrl">link</a>)
     <a class="clsHide" href="#idLcnpt016SwrlH2"></a></h2>
+  </section>
+</section>
+
+<section id="idLcnpt020">
+  <h1 id="idLcnpt020H1">lagCnpt.rule-020
+    <a class="clsHide" href="#idLcnpt020H1"></a></h1>
+  <p id="idLcnpt020dsn">description::
+    <br>· rule-language is a-propositional-language that uses if-then-propositions.
+    <a class="clsHide" href="#idLcnpt020dsn"></a></p>
+  <p id="idLcnpt020nam">name::
+    <br>* Mcs.lagCnpt.020-rule!⇒lagRule,
+    <br>* Mcs.lagCnpt.rule!⇒lagRule,
+    <br>* Mcs.lagPpsl.rule!⇒lagRule,
+    <br>* Mcs.lagRule,
+    <br>* Mcs.rule-language!⇒lagRule,
+    <a class="clsHide" href="#idLcnpt020nam"></a></p>
+  <p id="idLcnpt020dsnL">descriptionLong::
+    <br>"Rules are a simple way of encoding knowledge, and are a drastic simplification of first order logic, for which it is relatively easy to implement inference engines that can process the conditions and draw the right conclusions. A rule system is an implementation of a particular syntax and semantics of rules, which may extend the simple notion described above to include existential quantification, disjunction, logical conjunction, negation, functions, non monotonicity, and many other features. Rule systems have been implemented and studied since the mid-1970s and saw significant uptake in the 1980s during the height of so-called Expert Systems."
+    <br>[{2021-01-30} https://en.wikipedia.org/wiki/Rule_Interchange_Format]
+    <a class="clsHide" href="#idLcnpt020dsnL"></a></p>
+
+  <section id="idLcnpt020Spc">
+  <h2 id="idLcnpt020SpcH2">lagRule.specific
+    <a class="clsHide" href="#idLcnpt020SpcH2"></a></h2>
+  <p id="idLcnpt020Spcdsn">description::
+    <br>* RIF,
+    <br>* RuleML,
+    <br>* SWRL,
+    <a class="clsHide" href="#idLcnpt020Spcdsn"></a></p>
+  <p id="idLcnpt020Spcnam">name::
+    <br>* Mcs.lagRule.specific,
+    <a class="clsHide" href="#idLcnpt020Spcnam"></a></p>
+  </section>
+
+  <section id="idLcnpt020Rlml">
+  <h2 id="idLcnpt020RlmlH2">lagRule.RuleML
+    <a class="clsHide" href="#idLcnpt020RlmlH2"></a></h2>
+  <p id="idLcnpt020Rlmldsn">description::
+    <br>"Rules have many uses, coming in a multitude of forms. RuleML is a unifying system of families of languages for Web rules over Web documents and data. RuleML is specified syntactically through schema languages (normatively, in Relax NG), originally developed for XML and transferable to other formats such as JSON. Since Version 1.02, rather than assuming predefined default semantics, RuleML allows partially constrained semantic profiles and fully-specified semantics. PSOA RuleML employs model-theoretic semantics and transformational realizations, bridges between (deductive) graph and relational databases and other data paradigms, formalizes Cypher-like labeled property graphs, and is illustrated via (blockchain, ...) examples and (air traffic control, ...) use cases."
+    <br>[{2021-01-30} http://wiki.ruleml.org/index.php/Introducing_RuleML]
+    <a class="clsHide" href="#idLcnpt020Rlmldsn"></a></p>
+  <p id="idLcnpt020Rlmlnam">name::
+    <br>* Mcs.RuleML!⇒lagRlml,
+    <br>* Mcs.lagRlml,
+    <br>* Mcs.lagRule.RuleML!⇒lagRlml,
+    <a class="clsHide" href="#idLcnpt020Rlmlnam"></a></p>
+  <p id="idLcnpt020RlmldsnL">descriptionLong::
+    <br>"RuleML is a global initiative, led by a non-profit organization RuleML Inc., that is devoted to advancing research and industry standards design activities in the technical area of rules that are semantic and highly inter-operable. The standards design takes the form primarily of a markup language, also known as RuleML. The research activities include an annual research conference, the RuleML Symposium, also known as RuleML for short. Founded in fall 2000 by Harold Boley, Benjamin Grosof, and Said Tabet, RuleML was originally devoted purely to standards design, but then quickly branched out into the related activities of coordinating research and organizing an annual research conference starting in 2002. The M in RuleML is sometimes interpreted as standing for Markup and Modeling. The markup language was developed to express both forward (bottom-up) and backward (top-down) rules in XML for deduction, rewriting, and further inferential-transformational tasks. It is defined by the Rule Markup Initiative, an open network of individuals and groups from both industry and academia[1] that was formed to develop a canonical Web language for rules using XML markup and transformations from and to other rule standards/systems."
+    <br>[{2021-01-30} https://en.wikipedia.org/wiki/RuleML]
+    <a class="clsHide" href="#idLcnpt020RlmldsnL"></a></p>
+  </section>
+
+  <section id="idLcnpt008">
+  <h2 id="idLcnpt008H2">lagRule.RIF
+    <a class="clsHide" href="#idLcnpt008H2"></a></h2>
+  <p id="idLcnpt008dsn">description::
+    <br>"The Rule Interchange Format (RIF) is a W3C Recommendation. RIF is part of the infrastructure for the semantic web, along with (principally) SPARQL, RDF and OWL. Although originally envisioned by many as a "rules layer" for the semantic web, in reality the design of RIF is based on the observation that there are many "rules languages" in existence, and what is needed is to exchange rules between them.[1]
+    <br>RIF includes three dialects, a Core dialect which is extended into a Basic Logic Dialect (BLD) and Production Rule Dialect (PRD).[2]"
+    <br>[{2021-01-05} https://en.wikipedia.org/wiki/Rule_Interchange_Format]
+    <a class="clsHide" href="#idLcnpt008dsn"></a></p>
+  <p id="idLcnpt008nam">name::
+    <br>* Mcs.RIF'(rule-interchange-format)!⇒lagRift,
+    <br>* Mcs.lagCnpt.008-RIF!⇒lagRift,
+    <br>* Mcs.lagCnpt.RIF!⇒lagRift,
+    <br>* Mcs.lagRift,
+    <br>* Mcs.lagRule.RIF!⇒lagRift,
+    <br>* Mcs.rule-interchange-format!⇒lagRift,
+    <a class="clsHide" href="#idLcnpt008nam"></a></p>
+
+  <section id="idLcnpt008rtrlml">
+  <h3 id="idLcnpt008rtrlmlH3">relation-to-RuleML of lagRift
+    <a class="clsHide" href="#idLcnpt008rtrlmlH3"></a></h3>
+  <p id="idLcnpt008rtrlmldsn">description::
+    <br>"3.4 What is the relationship between RuleML and RIF?
+    <br>RuleML has provided input for RIF on several levels, including the use of 'striped' XML as well as the structuring of rule classes into a family of sublanguages with, e.g., Datalog RuleML partially mappable to the RIF Core Dialect, Derivation RuleML to the RIF Basic Logic Dialect, and the production-rule sublanguage of Reaction RuleML to the RIF Production Rule Dialect. Conversely, RuleML adopted some features that were developed as part of the RIF Working Group such as role tags &lt;if> ... &lt;then> instead of &lt;body> ... &lt;head>. Shared RIF RuleML implementations and use cases are projected to lead to further convergence."
+    <br>[{2021-01-30} https://www.w3.org/2005/rules/wiki/RIF_FAQ]
+    <a class="clsHide" href="#idLcnpt008rtrlmldsn"></a></p>
+  <p id="idLcnpt008rtrlmlnam">name::
+    <br>* Mcs.lagRift'relation-to-RullML,
+    <a class="clsHide" href="#idLcnpt008rtrlmlnam"></a></p>
+  </section>
+
+  <section id="idLcnpt008rscF">
+  <h3 id="idLcnpt008rscFH3">Infrsc of lagRift
+    <a class="clsHide" href="#idLcnpt008rscFH3"></a></h3>
+  <p id="idLcnpt008rscFdsn">description::
+    <br>* https://www.w3.org/TR/rif-overview/,
+    <a class="clsHide" href="#idLcnpt008rscFdsn"></a></p>
+  <p id="idLcnpt008rscFnam">name::
+    <br>* Mcs.lagRift'Infrsc,
+    <a class="clsHide" href="#idLcnpt008rscFnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLcnpt020Swrl">
+  <h2 id="idLcnpt020SwrlH2">lagOntg.SWRL
+    <a class="clsHide" href="#idLcnpt020SwrlH2"></a></h2>
+  <p id="idLcnpt020Swrldsn">description::
+    <br>"The Semantic Web Rule Language (SWRL) is a proposed language for the Semantic Web that can be used to express rules as well as logic, combining OWL DL or OWL Lite with a subset of the Rule Markup Language (itself a subset of Datalog).[1]
+    <br>The specification was submitted in May 2004 to the W3C by the National Research Council of Canada, Network Inference (since acquired by webMethods), and Stanford University in association with the Joint US/EU ad hoc Agent Markup Language Committee. The specification was based on an earlier proposal for an OWL rules language.[2][3]
+    <br>SWRL has the full power of OWL DL, but at the price of decidability and practical implementations.[4] However, decidability can be regained by restricting the form of admissible rules, typically by imposing a suitable safety condition.[5]
+    <br>Rules are of the form of an implication between an antecedent (body) and consequent (head). The intended meaning can be read as: whenever the conditions specified in the antecedent hold, then the conditions specified in the consequent must also hold."
+    <br>[{2021-01-28} https://en.wikipedia.org/wiki/Semantic_Web_Rule_Language]
+    <a class="clsHide" href="#idLcnpt020Swrldsn"></a></p>
+  <p id="idLcnpt020Swrlnam">name::
+    <br>* Mcs.SWRL'(semantic-web-rule-language)!⇒lagSwrl,
+    <br>* Mcs.lagOntg.Swrl!⇒lagSwrl,
+    <br>* Mcs.lagSwrl,
+    <br>* Mcs.semantic-web-rule-language!⇒lagSwrl,
+    <a class="clsHide" href="#idLcnpt020Swrlnam"></a></p>
+  </section>
+</section>
+
+<section id="idLcnpt022">
+  <h1 id="idLcnpt022H1">lagCnpt.semantic-network-018
+    <a class="clsHide" href="#idLcnpt022H1"></a></h1>
+  <p id="idLcnpt022dsn">description::
+    <br>· semantic-network-lang is a-concept-language that that models mind-concepts as a-NETWORK.
+    <a class="clsHide" href="#idLcnpt022dsn"></a></p>
+  <p id="idLcnpt022nam">name::
+    <br>* Mcs.graph-lagCnpt!⇒lagGrph,
+    <br>* Mcs.lagCnpt.022-semantic-network!⇒lagGrph,
+    <br>* Mcs.lagCnpt.semantic-network!⇒lagGrph,
+    <br>* Mcs.lagGrph,
+    <br>* Mcs.lagNtwk!⇒lagGrph,
+    <br>* Mcs.semantic-network!⇒lagGrph,
+    <a class="clsHide" href="#idLcnpt022nam"></a></p>
+  <p id="idLcnpt022dsnL">descriptionLong::
+    <br>"A semantic network, or frame network is a knowledge base that represents semantic relations between concepts in a network. This is often used as a form of knowledge representation. It is a directed or undirected graph consisting of vertices, which represent concepts, and edges, which represent semantic relations between concepts,[1] mapping or connecting semantic fields. A semantic network may be instantiated as, for example, a graph database or a concept map.
+    <br>Typical standardized semantic networks are expressed as semantic triples.
+    <br>Semantic networks are used in natural language processing applications such as semantic parsing[2] and word-sense disambiguation.[3]"
+    <br>[{2021-01-30} https://en.wikipedia.org/wiki/Semantic_network]
+    <a class="clsHide" href="#idLcnpt022dsnL"></a></p>
+
+  <section id="idLcnpt022otpt">
+  <h2 id="idLcnpt022otptH2">output of lagGrph
+    <a class="clsHide" href="#idLcnpt022otptH2"></a></h2>
+  <p id="idLcnpt022otptdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLcnpt022otptdsn"></a></p>
+  <p id="idLcnpt022otptnam">name::
+    <br>* Mcs.knowledge-graph,
+    <br>* Mcs.lagGrph'output,
+    <br>* knowledge-base,
+    <a class="clsHide" href="#idLcnpt022otptnam"></a></p>
   </section>
 </section>
 
@@ -3120,77 +3361,19 @@
   </section>
 </section>
 
-<section id="idLcnpt020">
-  <h1 id="idLcnpt020H1">lagCnpt.rule-020
-    <a class="clsHide" href="#idLcnpt020H1"></a></h1>
-  <p id="idLcnpt020dsn">description::
-    <br>· rule-language is a-propositional-language that uses if-then-propositions.
-    <a class="clsHide" href="#idLcnpt020dsn"></a></p>
-  <p id="idLcnpt020nam">name::
-    <br>* Mcs.lagCnpt.020-rule!⇒lagRule,
-    <br>* Mcs.lagCnpt.rule!⇒lagRule,
-    <br>* Mcs.lagPpsl.rule!⇒lagRule,
-    <br>* Mcs.lagRule,
-    <br>* Mcs.rule-language!⇒lagRule,
-    <a class="clsHide" href="#idLcnpt020nam"></a></p>
-
-  <section id="idLcnpt020Spc">
-  <h2 id="idLcnpt020SpcH2">lagRule.specific
-    <a class="clsHide" href="#idLcnpt020SpcH2"></a></h2>
-  <p id="idLcnpt020Spcdsn">description::
-    <br>* RIF,
-    <a class="clsHide" href="#idLcnpt020Spcdsn"></a></p>
-  <p id="idLcnpt020Spcnam">name::
-    <br>* Mcs.lagRule.specific,
-    <a class="clsHide" href="#idLcnpt020Spcnam"></a></p>
-  </section>
-
-  <section id="idLcnpt008">
-  <h2 id="idLcnpt008H2">lagRule.RIF
-    <a class="clsHide" href="#idLcnpt008H2"></a></h2>
-  <p id="idLcnpt008dsn">description::
-    <br>"The Rule Interchange Format (RIF) is a W3C Recommendation. RIF is part of the infrastructure for the semantic web, along with (principally) SPARQL, RDF and OWL. Although originally envisioned by many as a "rules layer" for the semantic web, in reality the design of RIF is based on the observation that there are many "rules languages" in existence, and what is needed is to exchange rules between them.[1]
-    <br>RIF includes three dialects, a Core dialect which is extended into a Basic Logic Dialect (BLD) and Production Rule Dialect (PRD).[2]"
-    <br>[{2021-01-05} https://en.wikipedia.org/wiki/Rule_Interchange_Format]
-    <a class="clsHide" href="#idLcnpt008dsn"></a></p>
-  <p id="idLcnpt008nam">name::
-    <br>* Mcs.RIF'(rule-interchange-format)!⇒lagRift,
-    <br>* Mcs.lagCnpt.008-RIF!⇒lagRift,
-    <br>* Mcs.lagCnpt.RIF!⇒lagRift,
-    <br>* Mcs.lagRift,
-    <br>* Mcs.lagRule.RIF!⇒lagRift,
-    <br>* Mcs.rule-interchange-format!⇒lagRift,
-    <a class="clsHide" href="#idLcnpt008nam"></a></p>
-
-  <section id="idLcnpt008rscF">
-  <h3 id="idLcnpt008rscFH3">Infrsc of lagRift
-    <a class="clsHide" href="#idLcnpt008rscFH3"></a></h3>
-  <p id="idLcnpt008rscFdsn">description::
-    <br>* https://www.w3.org/TR/rif-overview/,
-    <a class="clsHide" href="#idLcnpt008rscFdsn"></a></p>
-  <p id="idLcnpt008rscFnam">name::
-    <br>* Mcs.lagRift'Infrsc,
-    <a class="clsHide" href="#idLcnpt008rscFnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idLcnpt020Swrl">
-  <h2 id="idLcnpt020SwrlH2">lagOntg.SWRL
-    <a class="clsHide" href="#idLcnpt020SwrlH2"></a></h2>
-  <p id="idLcnpt020Swrldsn">description::
-    <br>"The Semantic Web Rule Language (SWRL) is a proposed language for the Semantic Web that can be used to express rules as well as logic, combining OWL DL or OWL Lite with a subset of the Rule Markup Language (itself a subset of Datalog).[1]
-    <br>The specification was submitted in May 2004 to the W3C by the National Research Council of Canada, Network Inference (since acquired by webMethods), and Stanford University in association with the Joint US/EU ad hoc Agent Markup Language Committee. The specification was based on an earlier proposal for an OWL rules language.[2][3]
-    <br>SWRL has the full power of OWL DL, but at the price of decidability and practical implementations.[4] However, decidability can be regained by restricting the form of admissible rules, typically by imposing a suitable safety condition.[5]
-    <br>Rules are of the form of an implication between an antecedent (body) and consequent (head). The intended meaning can be read as: whenever the conditions specified in the antecedent hold, then the conditions specified in the consequent must also hold."
-    <br>[{2021-01-28} https://en.wikipedia.org/wiki/Semantic_Web_Rule_Language]
-    <a class="clsHide" href="#idLcnpt020Swrldsn"></a></p>
-  <p id="idLcnpt020Swrlnam">name::
-    <br>* Mcs.SWRL'(semantic-web-rule-language)!⇒lagSwrl,
-    <br>* Mcs.lagOntg.Swrl!⇒lagSwrl,
-    <br>* Mcs.lagSwrl,
-    <br>* Mcs.semantic-web-rule-language!⇒lagSwrl,
-    <a class="clsHide" href="#idLcnpt020Swrlnam"></a></p>
-  </section>
+<section id="idLcnpt021">
+  <h1 id="idLcnpt021H1">lagCnpt.logic-programing-021
+    <a class="clsHide" href="#idLcnpt021H1"></a></h1>
+  <p id="idLcnpt021dsn">description::
+    <br>"Logic programming is a programming paradigm which is largely based on formal logic. Any program written in a logic programming language is a set of sentences in logical form, expressing facts and rules about some problem domain. Major logic programming language families include Prolog, answer set programming (ASP) and Datalog."
+    <br>[{2021-01-30} https://en.wikipedia.org/wiki/Logic_programming]
+    <a class="clsHide" href="#idLcnpt021dsn"></a></p>
+  <p id="idLcnpt021nam">name::
+    <br>* Mcs.lagCnpt.021-logic-programing!⇒lagLgcp,
+    <br>* Mcs.lagCnpt.logic-programing!⇒lagLgcp,
+    <br>* Mcs.lagLgcp,
+    <br>* Mcs.logic-programing!⇒lagLgcp,
+    <a class="clsHide" href="#idLcnpt021nam"></a></p>
 </section>
 
 <section id="idLcnpt004">
@@ -3285,7 +3468,7 @@
   </section>
 
   <section id="idLcnpt005">
-  <h2 id="idLcnpt005H2">lagCnpt.RDF-005
+  <h2 id="idLcnpt005H2">lagSweb.RDF
     <a class="clsHide" href="#idLcnpt005H2"></a></h2>
   <p id="idLcnpt005dsn">description::
     <br>"The Resource Description Framework (RDF) is a family of World Wide Web Consortium (W3C) specifications[1] originally designed as a metadata data model. It has come to be used as a general method for conceptual description or modeling of information that is implemented in web resources, using a variety of syntax notations and data serialization formats. It is also used in knowledge management applications.
@@ -4773,11 +4956,10 @@
     <br>* Mcs.lagRdfw'output-blank-node,
     <a class="clsHide" href="#idLcnpt005bkndnam"></a></p>
   </section>
-  </section>
 
   <section id="idLcnpt005voc">
-  <h3 id="idLcnpt005vocH3">vocabulary of lagRdfw
-    <a class="clsHide" href="#idLcnpt005vocH3"></a></h3>
+  <h4 id="idLcnpt005vocH4">vocabulary of lagRdfw
+    <a class="clsHide" href="#idLcnpt005vocH4"></a></h4>
   <p id="idLcnpt005vocdsn">description::
     <br>"An RDF vocabulary is a collection of IRIs intended for use in RDF graphs.
     <br>For example, the IRIs documented in [RDF11-SCHEMA] are the RDF Schema vocabulary.
@@ -4796,8 +4978,8 @@
     <a class="clsHide" href="#idLcnpt005vocnam"></a></p>
 
   <section id="idLcnpt005vocnsiri">
-  <h4 id="idLcnpt005vocnsiriH4">namespace-IRI of Rdfvoc
-    <a class="clsHide" href="#idLcnpt005vocnsiriH4"></a></h4>
+  <h5 id="idLcnpt005vocnsiriH5">namespace-IRI of Rdfvoc
+    <a class="clsHide" href="#idLcnpt005vocnsiriH5"></a></h5>
   <div id="idLcnpt005vocnsiridsn">
     <p>description::
     <br>"The IRIs in an RDF vocabulary often begin with a common substring known as a namespace IRI.
@@ -4831,8 +5013,8 @@
     <a class="clsHide" href="#idLcnpt005vocnsirinam"></a></p>
 
   <section id="idLcnpt005vocnsiriabr">
-  <h5 id="idLcnpt005vocnsiriabrH5">abbreviation of namespace-IRI
-    <a class="clsHide" href="#idLcnpt005vocnsiriabrH5"></a></h5>
+  <h6 id="idLcnpt005vocnsiriabrH6">abbreviation of namespace-IRI
+    <a class="clsHide" href="#idLcnpt005vocnsiriabrH6"></a></h6>
   <p id="idLcnpt005vocnsiriabrdsn">description::
     <br>"In some serialization formats it is common to abbreviate IRIs that start with namespace IRIs by using a namespace prefix in order to assist readability.
     <br>For example, the IRI http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral would be abbreviated as rdf:XMLLiteral.
@@ -4848,8 +5030,8 @@
   </section>
 
   <section id="idLcnpt005vocnspx">
-  <h4 id="idLcnpt005vocnspxH4">namespace-prefix of Rdfvoc
-    <a class="clsHide" href="#idLcnpt005vocnspxH4"></a></h4>
+  <h5 id="idLcnpt005vocnspxH5">namespace-prefix of Rdfvoc
+    <a class="clsHide" href="#idLcnpt005vocnspxH5"></a></h5>
   <div id="idLcnpt005vocnspxdsn">
     <p>description::
     <br>"Some namespace IRIs are associated by convention with a short name known as a namespace prefix.
@@ -4883,8 +5065,8 @@
   </section>
 
   <section id="idLcnpt005vocSpc">
-  <h4 id="idLcnpt005vocSpcH4">Rdfvoc.SPECIFIC
-    <a class="clsHide" href="#idLcnpt005vocSpcH4"></a></h4>
+  <h5 id="idLcnpt005vocSpcH5">Rdfvoc.SPECIFIC
+    <a class="clsHide" href="#idLcnpt005vocSpcH5"></a></h5>
   <p id="idLcnpt005vocSpcdsn">description::
     <br>* Dublin-core,
     <br>* FOAF,
@@ -4897,23 +5079,38 @@
   </section>
 
   <section id="idLcnpt005vocDncr">
-  <h4 id="idLcnpt005vocDncrH4">Rdfvoc.Dublin-core (<a class="clsPreview" href="#idLcnpt016otptDc">link</a>)
-    <a class="clsHide" href="#idLcnpt005vocDncrH4"></a></h4>
+  <h5 id="idLcnpt005vocDncrH5">Rdfvoc.Dublin-core (<a class="clsPreview" href="#idLcnpt016otptDc">link</a>)
+    <a class="clsHide" href="#idLcnpt005vocDncrH5"></a></h5>
   </section>
 
   <section id="idLcnpt005vocFoaf">
-  <h4 id="idLcnpt005vocFoafH4">Rdfvoc.FOAF (<a class="clsPreview" href="#idLcnpt016otptFoaf">link</a>)
-    <a class="clsHide" href="#idLcnpt005vocFoafH4"></a></h4>
+  <h5 id="idLcnpt005vocFoafH5">Rdfvoc.FOAF (<a class="clsPreview" href="#idLcnpt016otptFoaf">link</a>)
+    <a class="clsHide" href="#idLcnpt005vocFoafH5"></a></h5>
   </section>
 
   <section id="idLcnpt005vocSchmorg">
-  <h4 id="idLcnpt005vocSchmorgH4">Rdfvoc.schema.org (<a class="clsPreview" href="https://synagonism.net/dirMiwMcs/filMcsWorld.last.html#idOverview">link</a>)
-    <a class="clsHide" href="#idLcnpt005vocSchmorgH4"></a></h4>
+  <h5 id="idLcnpt005vocSchmorgH5">Rdfvoc.schema.org (<a class="clsPreview" href="https://synagonism.net/dirMiwMcs/filMcsWorld.last.html#idOverview">link</a>)
+    <a class="clsHide" href="#idLcnpt005vocSchmorgH5"></a></h5>
   </section>
 
   <section id="idLcnpt005vocSkos">
-  <h4 id="idLcnpt005vocSkosH4">Rdfvoc.SKOS (<a class="clsPreview" href="#idLcnpt016otptSkos">link</a>)
-    <a class="clsHide" href="#idLcnpt005vocSkosH4"></a></h4>
+  <h5 id="idLcnpt005vocSkosH5">Rdfvoc.SKOS (<a class="clsPreview" href="#idLcnpt016otptSkos">link</a>)
+    <a class="clsHide" href="#idLcnpt005vocSkosH5"></a></h5>
+  </section>
+  </section>
+
+  <section id="idLcnpt005optYago">
+  <h4 id="idLcnpt005optYagoH4">output.YAGO of lagRdfw
+    <a class="clsHide" href="#idLcnpt005optYagoH4"></a></h4>
+  <p id="idLcnpt005optYagodsn">description::
+    <br>· YAGO is-stored in RDF.
+    <br>· combines wikidata and schema.org
+    <br>"YAGO is a knowledge base, i.e., a database with knowledge about the real world. YAGO contains both entities (such as movies, people, cities, countries, etc.) and relations between these entities (who played in which movie, which city is located in which country, etc.). All in all, YAGO contains more than 50 million entities and 2 billion facts."
+    <br>[{2021-01-30} https://yago-knowledge.org/getting-started]
+    <a class="clsHide" href="#idLcnpt005optYagodsn"></a></p>
+  <p id="idLcnpt005optYagonam">name::
+    <br>* Mcs.YAGO,
+    <a class="clsHide" href="#idLcnpt005optYagonam"></a></p>
   </section>
   </section>
 
