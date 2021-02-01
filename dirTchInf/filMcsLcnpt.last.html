@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCnpt-(0-24-0.2021-01-31 draft) concept-language</title>
+  <title>Mcs.lagCnpt-(0-25-0.2021-02-01 draft) concept-language</title>
   <meta name="keywords" content="concept-language, lagCnpt, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -68,11 +68,11 @@
     <br>· the-input conceptual-view-(system of concepts) we want to map for a-machine.
     <a class="clsHide" href="#idLcnptiptdsn"></a></p>
   <p id="idLcnptiptnam">name::
-    <br>* Mcs.Lcnptinput,
-    <br>* Mcs.lagCnpt'02_input!⇒Lcnptinput,
-    <br>* Mcs.lagCnpt'domain!⇒Lcnptinput,
-    <br>* Mcs.lagCnpt'input!⇒Lcnptinput,
-    <br>* Mcs.lagCnpt'input-view!⇒Lcnptinput,
+    <br>* Mcs.Cnptinput,
+    <br>* Mcs.lagCnpt'02_input!⇒Cnptinput,
+    <br>* Mcs.lagCnpt'domain!⇒Cnptinput,
+    <br>* Mcs.lagCnpt'input!⇒Cnptinput,
+    <br>* Mcs.lagCnpt'input-view!⇒Cnptinput,
     <br>* problem-domain,
     <a class="clsHide" href="#idLcnptiptnam"></a></p>
 
@@ -88,13 +88,13 @@
   </section>
 
   <section id="idLcnptischm">
-  <h2 id="idLcnptischmH2">schema of !⇒Lcnptinput
+  <h2 id="idLcnptischmH2">schema of Cnptinput
     <a class="clsHide" href="#idLcnptischmH2"></a></h2>
   <p id="idLcnptischmdsn">description::
     <br>· input-schema is the-structure of the-input-view expressed in a-lagCnpt.
     <a class="clsHide" href="#idLcnptischmdsn"></a></p>
   <p id="idLcnptischmnam">name::
-    <br>* Mcs.Lcnptinput'schema,
+    <br>* Mcs.Cnptinput'schema,
     <br>* Mcs.lagCnpt'input-schema,
     <br>* Mcs.input-schema-of-lagCnpt,
     <a class="clsHide" href="#idLcnptischmnam"></a></p>
@@ -108,11 +108,12 @@
     <br>· the-output document a-machine understands.
     <a class="clsHide" href="#idLcnptoptdsn"></a></p>
   <p id="idLcnptoptnam">name::
-    <br>* Mcs.Lcnptoutput,
-    <br>* Mcs.lagCnpt'03_output,
-    <br>* Mcs.lagCnpt'coodomain,
-    <br>* Mcs.lagCnpt'output,
-    <br>* Mcs.output-view-of-lagCnpt,
+    <br>* Mcs.Cnptoutput,
+    <br>* Mcs.knowledge-base!⇒Cnptoutput,
+    <br>* Mcs.lagCnpt'03_output!⇒Cnptoutput,
+    <br>* Mcs.lagCnpt'coodomain!⇒Cnptoutput,
+    <br>* Mcs.lagCnpt'output!⇒Cnptoutput,
+    <br>* Mcs.output-view-of-lagCnpt!⇒Cnptoutput,
     <a class="clsHide" href="#idLcnptoptnam"></a></p>
 
   <section id="idLcnptoptschm">
@@ -122,7 +123,7 @@
     <br>· output-schema is the-structure of the-output-view written in a-lagCnpt.
     <a class="clsHide" href="#idLcnptoptschmdsn"></a></p>
   <p id="idLcnptoptschmnam">name::
-    <br>* Mcs.Lcnptoutput'schema,
+    <br>* Mcs.Cnptoutput'schema,
     <br>* Mcs.lagCnpt'schema,
     <br>* Mcs.output-schema-of-lagCnpt,
     <a class="clsHide" href="#idLcnptoptschmnam"></a></p>
@@ -1327,6 +1328,44 @@
     <br>* Mcs.biomedical-ontology,
     <br>* Mcs.ontology.biomedical,
     <a class="clsHide" href="#idLcnpt016otptBiomednam"></a></p>
+
+  <section id="idLcnpt016otptBiomedprtl">
+  <h4 id="idLcnpt016otptBiomedprtlH4">BioPortal of ontology.biomedical
+    <a class="clsHide" href="#idLcnpt016otptBiomedprtlH4"></a></h4>
+  <p id="idLcnpt016otptBiomedprtldsn">description::
+    <br>* https://bioportal.bioontology.org/,
+    <br>* http://data.bioontology.org/property_search?q=has%20dimension,
+    <br>===
+    <br>"BioPortal provides access to commonly used biomedical ontologies and to tools for working with them. BioPortal allows you to
+    <br>* browse the library of ontologies
+    <br>* search for a term across multiple ontologies
+    <br>* browse mappings between terms in different ontologies
+    <br>* receive recommendations on which ontologies are most relevant for a corpus
+    <br>* annotate text with terms from ontologies
+    <br>* search biomedical resources for a term
+    <br>* browse a selection of projects that use BioPortal resources
+    <br>All information available through the BioPortal Web site is also available through the NCBO Web service REST API."
+    <br>[{2021-02-01} https://www.bioontology.org/wiki/BioPortal_Help]
+    <a class="clsHide" href="#idLcnpt016otptBiomedprtldsn"></a></p>
+  <p id="idLcnpt016otptBiomedprtlnam">name::
+    <br>* Mcs.BioPortal,
+    <a class="clsHide" href="#idLcnpt016otptBiomedprtlnam"></a></p>
+
+  <section id="idLcnpt016otptBiomedprtlstat">
+  <h5 id="idLcnpt016otptBiomedprtlstatH5">statistics of BioPortal
+    <a class="clsHide" href="#idLcnpt016otptBiomedprtlstatH5"></a></h5>
+  <p id="idLcnpt016otptBiomedprtlstatdsn">description::
+    <br>× Ontologies, 838
+    <br>× Classes, 9,708,407
+    <br>× Properties, 36,286
+    <br>× Mappings, 78,104,619
+    <br>[{2021-02-01} https://bioportal.bioontology.org/]
+    <a class="clsHide" href="#idLcnpt016otptBiomedprtlstatdsn"></a></p>
+  <p id="idLcnpt016otptBiomedprtlstatnam">name::
+    <br>* Mcs.BioPortal'statistics,
+    <a class="clsHide" href="#idLcnpt016otptBiomedprtlstatnam"></a></p>
+  </section>
+  </section>
   </section>
 
   <section id="idLcnpt016otptDc">
@@ -3116,6 +3155,21 @@
     <br>* RIF,
     <br>* RuleML,
     <br>* SWRL,
+    <br>===
+    <br>"Rule-based languages instantiate rules when activated by conditions in a set of data. Of all possible activations, some set is selected and the statements belonging to those rules execute. Rule-based languages include:[citation needed]
+    <br>* awk,
+    <br>* CLIPS,
+    <br>* Constraint Handling Rules,
+    <br>* Drools,
+    <br>* GOAL agent programming language,
+    <br>* Jess,
+    <br>* OPS5,
+    <br>* Prolog,
+    <br>* ToonTalk – robots are rules,
+    <br>* Mathematica,
+    <br>* XSLT[citation needed],
+    <br>* Wolfram Language",
+    <br>[{2021-02-01} https://en.wikipedia.org/wiki/List_of_programming_languages_by_type#Rule-based_languages]
     <a class="clsHide" href="#idLcnpt020Spcdsn"></a></p>
   <p id="idLcnpt020Spcnam">name::
     <br>* Mcs.lagRule.specific,
@@ -3226,16 +3280,22 @@
   <h2 id="idLcnpt022otptH2">output of lagGrph
     <a class="clsHide" href="#idLcnpt022otptH2"></a></h2>
   <p id="idLcnpt022otptdsn">description::
-    <br>·
+    <br>"A knowledge graph is a knowledge base that uses a graph-structured data model or topology to integrate data. Knowledge graphs are often used to store interlinked descriptions of entities – objects, events, situations or abstract concepts – with free-form semantics.[1]
+    <br>Since the development of the Semantic Web, knowledge graphs are often associated with linked open data projects, focusing on the connections between concepts and entities.[2][3] They are also prominently associated with and used by search engines such as Google, Bing, and Yahoo; knowledge-engines and question-answering services such as WolframAlpha, Apple's Siri, and Amazon Alexa; and social networks such as LinkedIn and Facebook."
+    <br>[{2021-01-31} https://en.wikipedia.org/wiki/Knowledge_graph]
     <a class="clsHide" href="#idLcnpt022otptdsn"></a></p>
   <p id="idLcnpt022otptnam">name::
-    <br>* Mcs.knowledge-graph,
-    <br>* Mcs.lagGrph'output,
+    <br>* Mcs.Grphoutput,
+    <br>* Mcs.knowledge-graph!⇒Grphoutput,
+    <br>* Mcs.lagGrph'output!⇒Grphoutput,
     <br>* knowledge-base,
     <a class="clsHide" href="#idLcnpt022otptnam"></a></p>
+  <p id="idLcnpt022otptwpa">addressWpg::
+    <br>* https://www.stardog.com/blog/what-is-a-knowledge-graph/, and its relation with database-graph,
+    <a class="clsHide" href="#idLcnpt022otptwpa"></a></p>
 
   <section id="idLcnpt022otptGkg">
-  <h3 id="idLcnpt022otptGkgH3">output.Google-knowledge-graph of lagGrph
+  <h3 id="idLcnpt022otptGkgH3">Grphoutput.Google-knowledge-graph
     <a class="clsHide" href="#idLcnpt022otptGkgH3"></a></h3>
   <p id="idLcnpt022otptGkgdsn">description::
     <br>"The Google Knowledge Graph is a knowledge base used by Google and its services to enhance its search engine's results with information gathered from a variety of sources. The information is presented to users in an infobox next to the search results. These infoboxes were added to Google's search engine in May 2012, starting in the United States, with international expansion by the end of the year.[1] Google has referred to these infoboxes, which appear to the right (top on mobile) of search results, as "knowledge panels".[2]
@@ -3245,7 +3305,21 @@
     <a class="clsHide" href="#idLcnpt022otptGkgdsn"></a></p>
   <p id="idLcnpt022otptGkgnam">name::
     <br>* Mcs.Google-knowledge-graph,
+    <br>* Mcs.Grphoutput.Google-knowledge-graph,
     <a class="clsHide" href="#idLcnpt022otptGkgnam"></a></p>
+  </section>
+
+  <section id="idLcnpt022otptWdnt">
+  <h3 id="idLcnpt022otptWdntH3">Grphoutput.Wordnet
+    <a class="clsHide" href="#idLcnpt022otptWdntH3"></a></h3>
+  <p id="idLcnpt022otptWdntdsn">description::
+    <br>"Some early knowledge graphs were topic-specific. In 1985, Wordnet was founded, capturing semantic relationships between words and meanings – an application of this idea to language itself."
+    <br>[{2021-01-31} https://en.wikipedia.org/wiki/Knowledge_graph]
+    <a class="clsHide" href="#idLcnpt022otptWdntdsn"></a></p>
+  <p id="idLcnpt022otptWdntnam">name::
+    <br>* Mcs.Grphoutput.Wordnet,
+    <br>* Mcs.Wordnet,
+    <a class="clsHide" href="#idLcnpt022otptWdntnam"></a></p>
   </section>
   </section>
 </section>
