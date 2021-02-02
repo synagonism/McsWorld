@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.oznProduction-(0-33-0.2021-02-01 draft) organization.human.production</title>
+  <title>Mcs.oznProduction-(0-34-0.2021-02-02 draft) organization.human.production</title>
   <meta name="keywords" content="organization.economic, oznProduction, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -385,13 +385,15 @@
   <p id="idOznPdnatt015nam">name::
     <br>* Mcs.oznProduction'att015-satisfier-producing,
     <br>* Mcs.oznProduction'satisfier-producing,
+    <br>* Mcs.production-activity-of-oznProduction,
     <br>* Mcs.production-of-satisfier,
     <a class="clsHide" href="#idOznPdnatt015nam"></a></p>
   <p id="idOznPdnatt015str">specific-tree-of-::
-    <br>* creating,
-    <br>* transacting,
-    <br>* transit-satisfier,
-    <br>* advertising-satisfier,
+    <br>* <a class="clsPreview" href="#idOznPdnatt030">creating</a>,
+    <br>* <a class="clsPreview" href="#idOznPdnatt027">transacting</a>,
+    <br>** exchanging
+    <br>** transiting-satisfiers,
+    <br>** advertising-satisfiers,
     <a class="clsHide" href="#idOznPdnatt015str"></a></p>
   </section>
 
@@ -418,6 +420,11 @@
     <br>* Mcs.oznProduction'transacting-node,
     <br>* Mcs.oznProduction'node.transacting,
     <a class="clsHide" href="#idOznPdnatt027nam"></a></p>
+  <p id="idOznPdnatt027str">specific-tree-of-::
+    <br>** exchanging
+    <br>** transiting-satisfiers,
+    <br>** advertising-satisfiers,
+    <a class="clsHide" href="#idOznPdnatt027str"></a></p>
   </section>
 
   <section id="idOznPdnatt014">
@@ -486,11 +493,36 @@
     <br>· <a class="clsPreview" href="../dirCor/filMcsSpace.last.html#idSpcPlc">the-place</a> associated with the-organization.
     <a class="clsHide" href="#idOznPdnatt011dsn"></a></p>
   <p id="idOznPdnatt011nam">name::
-    <br>* Mcs.oznProduction'08_place,
-    <br>* Mcs.oznProduction'att011-place,
-    <br>* Mcs.oznProduction'location,
-    <br>* Mcs.oznProduction'place,
+    <br>* Mcs.Pdnplace,
+    <br>* Mcs.oznProduction'08_place!⇒Pdnplace,
+    <br>* Mcs.oznProduction'att011-place!⇒Pdnplace,
+    <br>* Mcs.oznProduction'location!⇒Pdnplace,
+    <br>* Mcs.oznProduction'place!⇒Pdnplace,
     <a class="clsHide" href="#idOznPdnatt011nam"></a></p>
+
+  <section id="idOznPdnatt011Crtg">Pdnplace.creating
+  <h2 id="idOznPdnatt011CrtgH2">residence of oznProduction
+    <a class="clsHide" href="#idOznPdnatt011CrtgH2"></a></h2>
+  <p id="idOznPdnatt011Crtgdsn">description::
+    <br>· the-place where it produces its satisfiers.
+    <a class="clsHide" href="#idOznPdnatt011Crtgdsn"></a></p>
+  <p id="idOznPdnatt011Crtgnam">name::
+    <br>* Mcs.Pdnplace.creating,
+    <br>* Mcs.creating-place-of-oznProduction,
+    <a class="clsHide" href="#idOznPdnatt011Crtgnam"></a></p>
+  </section>
+
+  <section id="idOznPdnatt011Tstg">Pdnplace.transacting
+  <h2 id="idOznPdnatt011TstgH2">residence of oznProduction
+    <a class="clsHide" href="#idOznPdnatt011TstgH2"></a></h2>
+  <p id="idOznPdnatt011Tstgdsn">description::
+    <br>· the-place where it transacts its satisfiers
+    <a class="clsHide" href="#idOznPdnatt011Tstgdsn"></a></p>
+  <p id="idOznPdnatt011Tstgnam">name::
+    <br>* Mcs.Pdnplace.transacting,
+    <br>* Mcs.transacting-place-of-oznProduction,
+    <a class="clsHide" href="#idOznPdnatt011Tstgnam"></a></p>
+  </section>
 
   <section id="idOznPdnatt023">
   <h2 id="idOznPdnatt023H2">residence of oznProduction
@@ -607,7 +639,9 @@
     <a class="clsHide" href="#idOznPdndngnam"></a></p>
   <p id="idOznPdndngdsn">description::
     <br>* <a class="clsPreview" href="#idOznPdnatt015">satisfier-producing</a>,
-    <br>* satisfier-exchanging,
+    <br>* <a class="clsPreview" href="#idOznPdnatt016">satisfier-producingNo</a>,
+    <br>** satisfier-consuming,
+    <br>** satisfier-exchanging,
     <br>===
     <br>* goal,
     <br>* mission,
@@ -815,6 +849,23 @@
     <br>* Mcs.international-standard-industrial-classification,
     <br>* Mcs.oznProduction.Isic-classification,
     <a class="clsHide" href="#idOznPdnIsicnam"></a></p>
+  </section>
+
+  <section id="idOznPdnNace">
+  <h2 id="idOznPdnNaceH2">oznProduction.NACE
+    <a class="clsHide" href="#idOznPdnNaceH2"></a></h2>
+  <p id="idOznPdnNacedsn">description::
+    <br>"in economic or social surveys collecting data on enterprises, the observation unit can be:
+    <br>* an enterprise: a legally recognised organisational unit carrying out one or more activities at one or more locations; enterprises are classified into sectors (by NACE) according to their main activity;
+    <br>* a local unit: an enterprise or part of an enterprise (factory, warehouse, office) situated in one geographically identified place; local units are classified into sectors (by NACE) according to their main activity;
+    <br>* a kind-of-activity unit: abbreviated as KAU: an enterprise or part of an enterprise which in its entirety can be classified within one activity sector (by NACE);
+    <br>* a Local kind-of-activity unit: a combination of the previous two: an enterprise or part of an enterprise situated in one geographically identified place which in its entirety can be classified within one activity sector (by NACE);
+    <br>One enterprise can have a number of local units and/or kind-of-activity units. One local unit can comprise several local kind-of-activity units. It is possible that the main activity of a local unit is not the same as the one of the enterprise to which it belongs."
+    <br>[{2021-02-02} https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Kind-of-activity_unit_(KAU)]
+    <a class="clsHide" href="#idOznPdnNacedsn"></a></p>
+  <p id="idOznPdnNacenam">name::
+    <br>* Mcs.oznProduction.NACE-classification,
+    <a class="clsHide" href="#idOznPdnNacenam"></a></p>
   </section>
 
   <section id="idOznPdnNaics">
@@ -1088,6 +1139,32 @@
     <br>* Mcs.oznSfrIncorporatedNo,
     <br>* Mcs.unincorporated-economic-organization!⇒oznSfrIncorporatedNo,
     <a class="clsHide" href="#idOznPdn008nam"></a></p>
+</section>
+
+<section id="idOznPdn013">
+  <h1 id="idOznPdn013H1">oznProduction.local-013
+    <a class="clsHide" href="#idOznPdn013H1"></a></h1>
+  <p id="idOznPdn013dsn">description::
+    <br>· local-oznProduction is an-oznProduction carrying out one or more <a class="clsPreview" href="#idOznPdnatt015">activities</a> at ONE <a class="clsPreview" href="#idOznPdnatt011Crtg">creation-place</a>.
+    <a class="clsHide" href="#idOznPdn013dsn"></a></p>
+  <p id="idOznPdn013nam">name::
+    <br>* Mcs.local-oznProduction!⇒oznPdnLocal,
+    <br>* Mcs.oznProduction.013-local!⇒oznPdnLocal,
+    <br>* Mcs.oznProduction.local!⇒oznPdnLocal,
+    <a class="clsHide" href="#idOznPdn013nam"></a></p>
+</section>
+
+<section id="idOznPdn014">
+  <h1 id="idOznPdn014H1">oznProduction.localNo-014
+    <a class="clsHide" href="#idOznPdn014H1"></a></h1>
+  <p id="idOznPdn014dsn">description::
+    <br>· localNo-oznProduction is an-oznProduction carrying out one or more <a class="clsPreview" href="#idOznPdnatt015">activities</a> at MORE THAN ONE <a class="clsPreview" href="#idOznPdnatt011Crtg">creation-place</a>.
+    <a class="clsHide" href="#idOznPdn014dsn"></a></p>
+  <p id="idOznPdn014nam">name::
+    <br>* Mcs.localNo-oznProduction!⇒oznPdnLocalNo,
+    <br>* Mcs.oznProduction.013-localNo!⇒oznPdnLocalNo,
+    <br>* Mcs.oznProduction.localNo!⇒oznPdnLocalNo,
+    <a class="clsHide" href="#idOznPdn014nam"></a></p>
 </section>
 
 <section id="idOznPdn001">
