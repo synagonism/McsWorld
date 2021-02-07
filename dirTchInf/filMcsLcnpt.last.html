@@ -456,7 +456,7 @@
     <br>· human-languages have rules to give them[a] names.
     <br>· human-languages map mind-concepts into logo-(text|speech).
     <br>· logos are whole-part-systems of sentences which map relations or doings of mind-concepts and describe attributes of mind-concepts.
-    <br>· the-semantic-units of sentences are names of <a class="clsPreview" href="../dirLag/filMcsLhmn.last.html#idLhmnsmscpt">semaso-concepts</a>.
+    <br>· the-semantic-units of sentences are names of <a class="clsPreview" href="../dirLag/filMcsLagHnmd.last.html#idLhnmdsmscpt">semaso-concepts</a>.
     <a class="clsHide" href="#idLcnpt007inptdsn"></a></p>
   <p id="idLcnpt007inptnam">name::
     <br>* Mcs.lagHcpt'input-worldview,
@@ -915,7 +915,7 @@
   <h6 id="idLcnpt017oqlfrH6">qualifier of Wkdtstatement
     <a class="clsHide" href="#idLcnpt017oqlfrH6"></a></h6>
   <p id="idLcnpt017oqlfrdsn">description::
-    <br>· the-other verb-arguments of <a class="clsPreview" href="../dirLag/filMcsLhmn.last.html#idLhmnsmssntc">a-sentence</a> except <a class="clsPreview" href="../dirLag/filMcsLhmn.last.html#idLhmnsmssttt">subject-target</a>.
+    <br>· the-other verb-arguments of <a class="clsPreview" href="../dirLag/filMcsLagHnmd.last.html#idLhnmdsmssntc">a-sentence</a> except <a class="clsPreview" href="../dirLag/filMcsLagHnmd.last.html#idLhnmdsmssttt">subject-target</a>.
     <a class="clsHide" href="#idLcnpt017oqlfrdsn"></a></p>
   <p id="idLcnpt017oqlfrnam">name::
     <br>* Mcs.Wkdtstatement'qualifier,
@@ -3425,6 +3425,22 @@
     <br>[{2021-01-30} https://en.wikipedia.org/wiki/Logic_programming]
     <a class="clsHide" href="#idLcnpt021dsnL"></a></p>
 
+  <section id="idLcnpt021rtnl">
+  <h2 id="idLcnpt021rtnlH2">relation-to-natural-language of lagLogic
+    <a class="clsHide" href="#idLcnpt021rtnlH2"></a></h2>
+  <p id="idLcnpt021rtnldsn">description::
+    <br>"Natural languages are highly expressive systems that can state anything that has ever been stated in any formal language or logic.
+    <br>They can even express metalevel statements about themselves, their relationships to other languages, and the truth of any such statements.
+    <br>Such enormous expressive power can easily generate contradictions and paradoxes, such as the statement This sentence is false.
+    <br>Most formal languages avoid such paradoxes by imposing restrictions on the expressive power."
+    <br>[{2021-02-07} http://www.jfsowa.com/cg/cg_hbook.pdf]
+    <a class="clsHide" href="#idLcnpt021rtnldsn"></a></p>
+  <p id="idLcnpt021rtnlnam">name::
+    <br>* Mcs.lagHnmd'relation-to-lagLogic,
+    <br>* Mcs.lagLogic'relation-to-natural-language,
+    <a class="clsHide" href="#idLcnpt021rtnlnam"></a></p>
+  </section>
+
   <section id="idLcnpt021Spc">
   <h2 id="idLcnpt021SpcH2">lagLogic.SPECIFIC
     <a class="clsHide" href="#idLcnpt021SpcH2"></a></h2>
@@ -3686,6 +3702,17 @@
     <br>* Mcs.Cgafoutput'conceptual-graph!⇒Cgafogrph,
     <a class="clsHide" href="#idLcnpt031ogrfnam"></a></p>
 
+  <section id="idLcnpt031ogrfSpc">
+  <h5 id="idLcnpt031ogrfSpcH5">Cgafogrph.SPECIFIC
+    <a class="clsHide" href="#idLcnpt031ogrfSpcH5"></a></h5>
+  <p id="idLcnpt031ogrfSpcdsn">description::
+    <br>* http://www.jfsowa.com/cg/cgexampw.htm,
+    <a class="clsHide" href="#idLcnpt031ogrfSpcdsn"></a></p>
+  <p id="idLcnpt031ogrfSpcnam">name::
+    <br>* Mcs.Cgafograph.specific,
+    <a class="clsHide" href="#idLcnpt031ogrfSpcnam"></a></p>
+  </section>
+
   <section id="idLcnpt031ogrfExpl">
   <h5 id="idLcnpt031ogrfExplH5">Cgafogrph.example
     <a class="clsHide" href="#idLcnpt031ogrfExplH5"></a></h5>
@@ -3718,23 +3745,128 @@
     <a class="clsHide" href="#idLcnpt031evalnam"></a></p>
   </section>
 
+  <section id="idLcnpt031rteg">
+  <h3 id="idLcnpt031rtegH3">relation-to-existential-graphs of lagCgaf
+    <a class="clsHide" href="#idLcnpt031rtegH3"></a></h3>
+  <p id="idLcnpt031rtegdsn">description::
+    <br>"The differences between EGs and CGs result from differences in their origin and motivation.
+    <br>In formulating EGs, Peirce was trying to find the simplest possible primitives for representing logic and operating on logical statements.
+    <br>In formulating CGs, Sowa was trying to find the most direct mapping from natural languages to logic.
+    <br>Since ordinary language has a much richer variety of expressive forms than Peirce's primitives, the CG notation includes many notational extensions that are designed to represent the major semantic forms of natural languages. To balance expressive power with simplicity, CGs provide both a basic and an extended notation.
+    <br>The basic CG notation is essentially a typed version of Peirce's EGs with the same logical primitives: negation, conjunction, and the existential quantifier.
+    <br>The extended CG notation, however, provides mechanisms for defining an open-ended range of new forms of expression, each of which has a direct mapping to some natural language expression and a formally defined expansion into the basic primitives. Following are the ways in which the extended CGs differ from EGs:
+    <br>
+    <br>In the basic CGs, Peirce's line of identity is represented by one or more concept nodes linked by dotted lines called coreference links. As an alternate notation, the dotted lines may be replaced by symbols, called coreference labels, such as *x and ?x. One label marked with * is called the defining node, and the others marked with ? are called bound nodes. The labels are sanctioned by one of Peirce's observations that any line of identity could be cut with the two ends labeled to show how they could be reconnected.
+    <br>
+    <br>In the extended CGs, generalized quantifiers can be introduced, including the universal, plurals, and various kinds of indexicals. Each of the extended forms, however, is defined by a formal mapping to the basic notation.
+    <br>
+    <br>Each concept includes a type label inside the concept box. That label corresponds to a monadic predicate that could be attached to an EG line of identity. In the extended notation, the type labels may be replaced by lambda expressions that define them. The term lambda expression is taken from Alonzo Church, but the idea was anticipated by Peirce, who used labeled hooks instead of the Greek letter lambda.
+    <br>
+    <br>In CGs, Peirce's ovals for negation are represented by concept boxes with the type label Proposition and an attached negation relation Neg (or its abbreviation by a ^ symbol). Instead of Peirce's tinctures for representing modalities, other relations can be attached to the concept box, such as Psbl for possibility or Necs for necessity.
+    <br>
+    <br>Besides a type label, a concept box includes a referent field that identifies or partially identifies the referent of the concept. Following Peirce, the three kinds of referents are icons (represented by a diagram or picture), indexes (represented by a name or other indexical), and symbols (represented by a nested conceptual graph that describes the entity).
+    <br>
+    <br>The linguistic work on thematic roles or case relations has been adopted for the basic types of conceptual relations. New types of relations can be defined in terms of them by lambda expressions, which like the lambda expressions for concept types can be written in place of the relation labels.
+    <br>
+    <br>Except for notation, the basic CGs are minimal variants of EGs. The extended CGs provide a richer notation that maps almost one-to-one to the semantic structures of natural languages. The formal mapping from the extended to the basic CGs helps to bridge the gap between language and logic.
+    <br>[Fulfilling Peirce's Dream: Conceptual Structures and Communities of Inquiry, Leroy Searle, Mary Keeler, John Sowa, Harry Deluagch, and Dickson Lukose, ICCS'97]
+    <a class="clsHide" href="#idLcnpt031rtegdsn"></a></p>
+  <p id="idLcnpt031rtegnam">name::
+    <br>* Mcs.lagCgaf'relation-to-existential-graphs,
+    <a class="clsHide" href="#idLcnpt031rtegnam"></a></p>
+  </section>
+
+  <section id="idLcnpt031rtdrs">
+  <h3 id="idLcnpt031rtdrsH3">relation-to-discourse-representation-structures of lagCgaf
+    <a class="clsHide" href="#idLcnpt031rtdrsH3"></a></h3>
+  <p id="idLcnpt031rtdrsdsn">description::
+    <br>"When Conceptual Structures appeared at the end of 1983, it did not include recent work by Hans Kamp [8] on discourse representation theory. After spending some time translating English to logic, Kamp had realized that the mapping to predicate calculus involved convoluted distortions of the sentence structure of English and other natural languages. In order to simplify the mapping, Kamp designed his discourse representation structures (DRSs) and formulated rules for representing and resolving indexicals in the DRS notation. Although Kamp's motivation was very different from Peirce's and he had no awareness of Peirce's graphs, Kamp's DRS notation happened to be isomorphic to Peirce's EGs. Since CGs are based on EGs, they are also isomorphic to DRSs; therefore, Kamp's rules for resolving indexicals in the DRS notation can be applied directly to EGs and CGs. A century after Peirce's pioneering work on both graph logic and indexicals, the former proved to be ideally suited for representing the latter.
+    <br>[8]Kamp, Hans, Events, Discourse Representations, and Temporal References, Langages, vol. 64, 1981, pp. 39-64.
+    <br>[Fulfilling Peirce's Dream: Conceptual Structures and Communities of Inquiry, Leroy Searle, Mary Keeler, John Sowa, Harry Deluagch, and Dickson Lukose, ICCS'97]
+    <a class="clsHide" href="#idLcnpt031rtdrsdsn"></a></p>
+  <p id="idLcnpt031rtdrsnam">name::
+    <br>* Mcs.lagCgaf'relation-to-discourse-representation-structures,
+    <a class="clsHide" href="#idLcnpt031rtdrsnam"></a></p>
+  </section>
+
   <section id="idLcnpt031rscF">
   <h3 id="idLcnpt031rscFH3">Infrsc of lagCgaf
     <a class="clsHide" href="#idLcnpt031rscFH3"></a></h3>
   <p id="idLcnpt031rscFdsn">description::
-    <br>·
+    <br>* http://www.jfsowa.com/cg/cg_hbook.pdf,
+    <br>* ISO-standard: http://www.jfsowa.com/cg/cgstand.htm,
+    <br>* existential-graphs: http://www.jfsowa.com/peirce/ms514.htm,
     <a class="clsHide" href="#idLcnpt031rscFdsn"></a></p>
   <p id="idLcnpt031rscFnam">name::
     <br>* Mcs.lagCgaf'Infrsc,
     <a class="clsHide" href="#idLcnpt031rscFnam"></a></p>
+
+  <section id="idLcnpt031bibl">
+  <h4 id="idLcnpt031biblH4">bibliography of lagCgaf
+    <a class="clsHide" href="#idLcnpt031biblH4"></a></h4>
+  <p id="idLcnpt0311995Ellis">1995 Ellis et al.::
+    <br>Gerard Ellis and Robert A. Levinson and William Rich and John F. Sowa (Eds.) (1995) "Conceptual Graphs: Structure-based Knowledge Representation", Proceedings of the Third International Conference on Conceptual Structures ICCS'95, August 14-18, University of California, Santa Cruz, USA, Lecture Notes in Artificial Intelligence, Springer-Verlag, Number 954, Berlin.
+    <a class="clsHide" href="#idLcnpt0311995Ellis"></a></p>
+  <p id="idLcnpt0311994Tephenhart">1994 Tephenhart et al.::
+    <br>William M. Tepfenhart and Judith P. Dick and John F. Sowa (Eds.) (1994) "Conceptual Structures: Current Practices", Second International Conference on Conceptual Structures, ICCS'94, College Park, Maryland, USA, August, Lecture Notes in Artifical Intelligence, Number 835, Springer-Verlag, Berlin.
+    <a class="clsHide" href="#idLcnpt0311994Tephenhart"></a></p>
+  <p id="idLcnpt0311993Mineau">1993 Mineau et al.::
+    <br>Guy W. Mineau and Bernard Moulin and John F. Sowa (Eds.) (1993) "Conceptual Graphs for Knowledge Representation", Lecture Notes in Artificial Intelligence, Springer-Verlag, Berlin, Number 699, Proceedings of the 1st International Conference on Conceptual Structures, Quebec City, Canada, August 4-7.
+    <a class="clsHide" href="#idLcnpt0311993Mineau"></a></p>
+  <p id="idLcnpt0311993Pfeiffer">1993 Pfeiffer et al.::
+    <br>Heather D. Pfeiffer and Timothy E. Nagle (Eds.) (1993) "Conceptual Structures: Theory and Implementation", Springer-Verlag, Number 754, Lecture Notes in Artificial Intelligence, Proceedings of the Seventh Annual Workshop on Conceptual Graphs, Las Cruces, New Mexico, July 8-10, 1992.
+    <a class="clsHide" href="#idLcnpt0311993Pfeiffer"></a></p>
+  <p id="idLcnpt0311993Sowa">1993 Sowa::
+    <br>John F. Sowa (1993) "Relating Diagrams to Logic", Guy W. Mineau and Bernard Moulin and John F. Sowa (Eds.), Conceptual Graphs for Knowledge Representation, Lecture Notes in Artificial Intelligence, Springer-Verlag, Berlin, Number 699, Proceedings of the 1st International Conference on Conceptual Structures, Quebec City, Canada, August 4-7.
+    <a class="clsHide" href="#idLcnpt0311993Sowa"></a></p>
+  <p id="idLcnpt0311993Sowab">1993 Sowa::
+    <br>John F. Sowa (1993) "Logical Foundations for Representing Object-Oriented Systems", Journal of Experimental & Theoretical Artificial Intelligence, volume 5.
+    <a class="clsHide" href="#idLcnpt0311993Sowab"></a></p>
+  <p id="idLcnpt0311992Nagle">1992 Nagle et al.::
+    <br>Tim Nagle and Jan Nagle and Laurie Gerholz and Peter Eklund (Eds.) (1992) "Conceptual Structures: Current Research and Practice", Ellis Horwood.
+    <a class="clsHide" href="#idLcnpt0311992Nagle"></a></p>
+  <p id="idLcnpt0311992Sowa">1992 Sowa::
+    <br>John F. Sowa (1992) "Conceptual Graphs Summary", T. E. Nagle and J. A. Nagle and L. L. Gerholz and P. W. Eklund (Eds.), Conceptual Structures: Current Research and Practice, Ellis Horwood, p. 3-51.
+    <a class="clsHide" href="#idLcnpt0311992Sowa"></a></p>
+  <p id="idLcnpt0311991Sowa">1991 Sowa::
+    <br>John F. Sowa (1991) "Toward the Expressive Power of Natural Language," J.F. Sowa (Ed.), Principles of Semantic Networks: Explorations in the Representation of Knowledge, Morgan Kaufmann, San Mateo, CA, p. 157-189.
+    <a class="clsHide" href="#idLcnpt0311991Sowa"></a></p>
+  <p id="idLcnpt0311990Ketner">1990 Ketner::
+    <br>Kenneth Laine Ketner (1990) "Elements of Logic: An Introduction to Peirce's Existential Graphs," Texas Tech University Press, Lubbock, Texas.
+    <a class="clsHide" href="#idLcnpt0311990Ketner"></a></p>
+  <p id="idLcnpt0311984Sowa">1984 Sowa::
+    <br>John F. Sowa (1984) "Conceptual Structures: Information Processing in Mind and Machine", Addison-Wesley, Reading, MA.
+    <a class="clsHide" href="#idLcnpt0311984Sowa"></a></p>
+  <p id="idLcnpt0311976Sowa">1976 Sowa::
+    <br>Sowa, John F., Conceptual Graphs for a Data Base Interface, IBM Journal of Research and Development, vol. 20, 1976, pp. 336-357.
+    <a class="clsHide" href="#idLcnpt0311976Sowa"></a></p>
+  <p id="idLcnpt0311973Roberts">1973 Roberts::
+    <br>Don D. Roberts (1973) "The Existential Graphs of Charles S. Peirce", Mouton, The Hague, 1973.  Collected papers of Charles Sanders Peirce Charles (1931-58) Hartshorne and Paul Weiss (Eds.) Harvard University Press, Cambridge.
+    <a class="clsHide" href="#idLcnpt0311973Roberts"></a></p>
+  <p id="idLcnpt0311964Zeeman">1964 Zeeman::
+    <br>Zeeman, Jay. "The Graphical Logic of C. S. Peirce." Ph.D. diss., University of Chicago, 1964.
+    <a class="clsHide" href="#idLcnpt0311964Zeeman"></a></p>
+  <p id="idLcnpt031biblnam">name::
+    <br>* Mcs.lagCgaf'bibliography,
+    <a class="clsHide" href="#idLcnpt031biblnam"></a></p>
+  </section>
   </section>
 
   <section id="idLcnpt031evgF">
   <h3 id="idLcnpt031evgFH3">evoluting of lagCgaf
     <a class="clsHide" href="#idLcnpt031evgFH3"></a></h3>
-  <p id="idLcnpt031evgFdsn">description::
-    <br>
-    <a class="clsHide" href="#idLcnpt031evgFdsn"></a></p>
+  <p id="idLcnpt031evg1984">{1984}-Sowa-Conceptual-Structures::
+    <br>John F. Sowa (1984) "Conceptual Structures: Information Processing in Mind and Machine", Addison-Wesley, Reading, MA.
+    <a class="clsHide" href="#idLcnpt031evg1984"></a></p>
+  <p id="idLcnpt031evg1976">{1976}-Sowa-Conceptual-Graphs::
+    <br>Sowa, John F., Conceptual Graphs for a Data Base Interface, IBM Journal of Research and Development, vol. 20, 1976, pp. 336-357.
+    <br>"Sowa (1976) developed a version of conceptual graphs (CGs) as an intermediate language for mapping natural language questions and assertions to a relational database."
+    <br>* Mcs.{lagCnpt-1976}-Sowa-Conceptual-graphs,
+    <br>[{2021-02-07} http://www.jfsowa.com/cg/cg_hbook.pdf]
+    <a class="clsHide" href="#idLcnpt031evg1984"></a></p>
+  <p id="idLcnpt031evg1896">{1896}-Existential-Graphs::
+    <br>Charles-Sanders-Peirce developed the logic of Existential Graphs.
+    <a class="clsHide" href="#idLcnpt031evg1896"></a></p>
   <p id="idLcnpt031evgFnam">name::
     <br>* Mcs.lagCgaf'evoluting,
     <a class="clsHide" href="#idLcnpt031evgFnam"></a></p>
