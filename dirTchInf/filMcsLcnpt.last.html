@@ -7441,16 +7441,61 @@
     <br>[{2021-02-11} https://www.cyc.com/products]
     <a class="clsHide" href="#idLcyclappdsnL"></a></p>
 
-  <section id="idLcycldngF">
-  <h4 id="idLcycldngFH4">DOING of Cycapp
-    <a class="clsHide" href="#idLcycldngFH4"></a></h4>
-  <p id="idLcycldngFdsn">description::
+  <section id="idLcyclappui">
+  <h4 id="idLcyclappuiH4">user-interface of Cycapp
+    <a class="clsHide" href="#idLcyclappuiH4"></a></h4>
+  </section>
+
+  <section id="idLcyclappbrsr">
+  <h4 id="idLcyclappbrsrH4">browser of Cycapp
+    <a class="clsHide" href="#idLcyclappbrsrH4"></a></h4>
+  </section>
+
+  <section id="idLcyclappsrvr">
+  <h4 id="idLcyclappsrvrH4">server of Cycapp
+    <a class="clsHide" href="#idLcyclappsrvrH4"></a></h4>
+  </section>
+
+  <section id="idLcyclappappdngF">
+  <h4 id="idLcyclappappdngFH4">DOING of Cycapp
+    <a class="clsHide" href="#idLcyclappappdngFH4"></a></h4>
+  <p id="idLcyclappappdngFdsn">description::
     <br>"There have been over 100 successful applications of Cyc;[17]"
     <br>[{2021-02-11} https://en.wikipedia.org/wiki/Cyc#Applications]
-    <a class="clsHide" href="#idLcycldngFdsn"></a></p>
-  <p id="idLcycldngFnam">name::
-    <br>* Mcs.Cycapp'doing,
-    <a class="clsHide" href="#idLcycldngFnam"></a></p>
+    <a class="clsHide" href="#idLcyclappappdngFdsn"></a></p>
+  <p id="idLcyclappappdngFnam">name::
+    <br>* Mcs.Cycapp'doing!⇒Cycdoing,
+    <br>* Mcs.Cycdoing,
+    <a class="clsHide" href="#idLcyclappappdngFnam"></a></p>
+
+  <section id="idLcyclappdngAsk">
+  <h5 id="idLcyclappdngAskH5">Cycdoing.ASK of Cycapp
+    <a class="clsHide" href="#idLcyclappdngAskH5"></a></h5>
+  <p id="idLcyclappdngAskdsn">description::
+    <br>"The purpose of an ASK operation is to query a CYC® Server about the truth of a formula.
+    <br>The details of an ASK operation vary from interface to interface. However, in most interfaces you will be asked to supply:
+    <br>* A CycL formula, which may or may not contain free variables. If the formula contains variables, then you are asking CYC® to supply bindings to those variables which make the formula true; otherwise, you are simply asking whether the formula is true.
+    <br>* A microtheory within which to look. In other words, each binding returned must come from a formula which is known to be true in, or can be inferred from assertions in, the specified microtheory and its baseMts.
+    <br>* Optionally, a direction (or access level). If the direction is forward, no expensive inferencing is performed, and the only bindings returned are ones which can be found through a simple KB lookup. If the direction is backward, inferencing is performed.
+    <br>* Optionally, a number of bindings requested. Once this number of bindings has been found, the ASK operation will terminate, even if more bindings exist. The default value varies among interfaces; if no value is passed by the interface on to the underlying code, the operation will continue until one of the other resource limits has been reached or until the KB has been exhaustively searched, which could take a long time.
+    <br>* Optionally, a time limit. No more than this many seconds will be spent on the ASK operation. Again, a particular interface may provide a default time limit, but if none is passed to the underlying code, the ASK operation will continue until one of the other resource limits has been reached or until the KB has been exhaustively searched.
+    <br>* Optionally, a inference depth cutoff. The search for bindings will go no deeper than this number of levels. In the search for bindings, each time the inference engine tries to satisfy a literal, the search is extended by one depth level. Currently, this is true whether literals are satisified by firing rules or by simple KB lookup. If no inference-depth cutoff is passed by your interface on to the underlying code, the ASK operation will continue until one of the other resource limits has been reached or until the KB has been exhaustively searched.
+    <br>* Optionally, an axiom depth cutoff. No more than this many rules will be used in the search for bindings. If no axiom-depth cutoff is passed by your interface on to the underlying code, the ASK operation will continue until one of the other resource limits has been reached or until the KB has been exhaustively searched.
+    <br>For example, if you wanted to find some people who have served as head of state of a European country, you might execute an ASK with the following parameters:
+    <br>Formula: (#$and (#$geographicalSubRegions #$ContinentOfEurope ?X) (#$headOfStateOf ?X ?Y))
+    <br>   Microtheory:     #$BaseKB
+    <br>   Direction:       backward
+    <br>   Number:          5
+    <br>   Time:            10
+    <br>   Inference Depth: 10
+    <br>   Axiom Depth:     3
+    <br>This asks CYC® to find no more than 5 bindings for ?X and ?Y, satisfiable in the #$BaseKB, that can be found in 10 seconds of processor time or less. CYC® can use rules in the search, since the direction is backward, and can stop pursuing any search path as soon as it requires using a 4th rule or satisfying an 11th literal."
+    <br>[{2021-02-12} http://web.archive.org/web/20121219042246/http://www.cyc.com:80/cycdoc/ref/glossary.html#ASK]
+    <a class="clsHide" href="#idLcyclappdngAskdsn"></a></p>
+  <p id="idLcyclappdngAsknam">name::
+    <br>* Mcs.Cycdoing.ASK,
+    <a class="clsHide" href="#idLcyclappdngAsknam"></a></p>
+  </section>
   </section>
 
   <section id="idLcyclapp10">
@@ -7495,8 +7540,8 @@
     <a class="clsHide" href="#idLcyclappOpennam"></a></p>
 
   <section id="idLcyclappOpenrscF">
-  <h4 id="idLcyclappOpenrscFH4">Infrsc OpenCyc
-    <a class="clsHide" href="#idLcyclappOpenrscFH4"></a></h4>
+  <h5 id="idLcyclappOpenrscFH5">Infrsc OpenCyc
+    <a class="clsHide" href="#idLcyclappOpenrscFH5"></a></h5>
   <p id="idLcyclappOpenrscFdsn">description::
     <br>* {2017-04-04} https://www.mkbergman.com/2034/fare-thee-well-opencyc/,
     <a class="clsHide" href="#idLcyclappOpenrscFdsn"></a></p>
@@ -7560,9 +7605,23 @@
     <a class="clsHide" href="#idLcyclNlsdsn"></a></p>
   <p id="idLcyclNlsnam">name::
     <br>* Mcs.Cyc-NL!⇒Cycnls,
+    <br>* Mcs.Cycapp'NLS!⇒Cycnls,
     <br>* Mcs.Cycnls,
     <br>* Mcs.lagCycl'natural-language-system!⇒Cycnls,
     <a class="clsHide" href="#idLcyclNlsnam"></a></p>
+  </section>
+
+  <section id="idLcyclappTms">
+  <h3 id="idLcyclappTmsH3">truth-maintenance-system of Cycapp
+    <a class="clsHide" href="#idLcyclappTmsH3"></a></h3>
+  <p id="idLcyclappTmsdsn">description::
+    <br>"A truth maintenance system is a mechanism whereby a knowledge based system can keep reasonably consistent and truthful as its knowledge changes. For example, if facts have been added to the KB through inference based on a set of premises, and one of the premises is later removed from the KB, any conclusion that depends on that premise should also be removed from the KB. The CYC® TMS relies on the fact that each assertion has all of its arguments recorded in the datastructure."
+    <br>[{2021-02-12} http://web.archive.org/web/20121219042246/http://www.cyc.com:80/cycdoc/ref/glossary.html#TMS]
+    <a class="clsHide" href="#idLcyclappTmsdsn"></a></p>
+  <p id="idLcyclappTmsnam">name::
+    <br>* Mcs.Cycapp'TMS'(truth-maintenance-system),
+    <br>* Mcs.Cycapp'truth-maintenance-system,
+    <a class="clsHide" href="#idLcyclappTmsnam"></a></p>
   </section>
   </section>
 
@@ -7706,11 +7765,31 @@
     <br>* Mcs.relation-denoting-term!/lagCycl!⇒Cyclrelation,
     <a class="clsHide" href="#idLcycltermRlnnam"></a></p>
 
+  <section id="idLcycltermRlnart">
+  <h5 id="idLcycltermRlnartH5">arity of Cyclrelation
+    <a class="clsHide" href="#idLcycltermRlnartH5"></a></h5>
+  <p id="idLcycltermRlnartdsn">description::
+    <br>"The arity of a CycL predicate or function is the number of arguments it takes.
+    <br>* Unary predicates and functions take just 1 argument.
+    <br>* Binary predicates and functions take 2 arguments.
+    <br>* Ternary predicates and functions take 3 arguments.
+    <br>* Quaternary predicates and functions take 4 arguments.
+    <br>* Quintary predicates and functions take 5 arguments.
+    <br>No CycL predicate or function currently takes more than 5 arguments."
+    <br>[{2021-02-12} http://web.archive.org/web/20121219042246/http://www.cyc.com:80/cycdoc/ref/glossary.html#arity]
+    <a class="clsHide" href="#idLcycltermRlnartdsn"></a></p>
+  <p id="idLcycltermRlnartnam">name::
+    <br>* Mcs.Cyclrelation'arity,
+    <a class="clsHide" href="#idLcycltermRlnartnam"></a></p>
+  </section>
+
   <section id="idLcycltermFncn">
   <h5 id="idLcycltermFncnH5">Cyclrelation.function
     <a class="clsHide" href="#idLcycltermFncnH5"></a></h5>
   <p id="idLcycltermFncndsn">description::
-    <br>·
+    <br>"A function (in the mathematical sense) is a relation such that for each thing in its domain (the universe of things it can be applied to), there is a single thing in its range (the universe of results it can have) such that the relation holds between them. In CycL, functions are denoted by certain constants. These constants are referred to as "function-denoting constants, "CycL functions," or sometimes just "functions."
+    <br>CycL functions can be applied to arguments to form non-atomic terms, which can serve as arguments to a predicate just as other terms can. There are more details about CycL functions in the Functions section of "The Syntax of Cycl"."
+    <br>[{2021-02-12} http://web.archive.org/web/20121219042246/http://www.cyc.com:80/cycdoc/ref/glossary.html#function]
     <a class="clsHide" href="#idLcycltermFncndsn"></a></p>
   <p id="idLcycltermFncnnam">name::
     <br>* Mcs.Cyclfunction,
@@ -7724,18 +7803,20 @@
   <h5 id="idLcycltermTtfnH5">Cyclrelation.truth-function
     <a class="clsHide" href="#idLcycltermTtfnH5"></a></h5>
   <p id="idLcycltermTtfndsn">description::
-    <br>"Truth functions, which can apply to one or more other concepts and return either true or false. For example, #$siblings is the sibling relationship, true if the two arguments are siblings. By convention, truth function constants start with a lower-case letter. Truth functions may be broken down into logical connectives (such as #$and, #$or, #$not, #$implies), quantifiers (#$forAll, #$thereExists, etc.) and predicates."
+    <br>"Truth functions, which can apply to one or more other concepts and return either true or false. For example, #$siblings is the sibling relationship, true if the two arguments are siblings.
+    <br>By convention, truth function constants start with a lower-case letter.
+    <br>Truth functions may be broken down into logical connectives (such as #$and, #$or, #$not, #$implies), quantifiers (#$forAll, #$thereExists, etc.) and predicates."
     <br>[{2021-02-10} https://en.wikipedia.org/wiki/Cyc]
     <a class="clsHide" href="#idLcycltermTtfndsn"></a></p>
   <p id="idLcycltermTtfnnam">name::
     <br>* Mcs.Cyclrelation.truth-function,
     <br>* Mcs.Cyclterm.truth-function,
     <a class="clsHide" href="#idLcycltermTtfnnam"></a></p>
-  </section>
 
   <section id="idLcycltermRlnPrdt">
-  <h5 id="idLcycltermRlnPrdtH5">Cyclrelation.predicate (<a class="clsPreview" href="#idLcyclpredicate">link</a>)
-    <a class="clsHide" href="#idLcycltermRlnPrdtH5"></a></h5>
+  <h6 id="idLcycltermRlnPrdtH6">Cyclrelation.predicate (<a class="clsPreview" href="#idLcyclpredicate">link</a>)
+    <a class="clsHide" href="#idLcycltermRlnPrdtH6"></a></h6>
+  </section>
   </section>
   </section>
 
@@ -7854,7 +7935,9 @@
   <h5 id="idLcycltermLlcvImpliesH5">Cycllogcon.#$implies
     <a class="clsHide" href="#idLcycltermLlcvImpliesH5"></a></h5>
   <p id="idLcycltermLlcvImpliesdsn">description::
-    <br>·
+    <br>"Newcomers to formal logic may misinterpret #$implies as implying a causal relationship.
+    <br>But, strictly speaking, a #$implies assertion says only that either the first argument is false, or the second argument is true.
+    <br>[{1998-03-01} http://www.cyc.com/cyc-2-1/ref/cycl-syntax.html,-{1997-08-08}]
     <a class="clsHide" href="#idLcycltermLlcvImpliesdsn"></a></p>
   <p id="idLcycltermLlcvImpliesnam">name::
     <br>* Mcs.Cycllogcon.#$implies,
@@ -7970,7 +8053,9 @@
   <p id="idLcyclformulanam">name::
     <br>* Mcs.Cyclassertion'formula!⇒Cyclformula,
     <br>* Mcs.Cyclformula,
+    <br>* Mcs.Cyclsentence!⇒Cyclformula,
     <br>* Mcs.lagCycl'formula!⇒Cyclformula,
+    <br>* Mcs.lagCycl'sentence!⇒Cyclformula,
     <a class="clsHide" href="#idLcyclformulanam"></a></p>
 
   <section id="idLcyclCnf">
@@ -7990,6 +8075,19 @@
     <br>* Mcs.lagCycl'CNF-(conjunctive-normal-form),
     <br>* Mcs.lagCycl'conjunctive-normal-form,
     <a class="clsHide" href="#idLcyclCnfnam"></a></p>
+  </section>
+
+  <section id="idLcyclformulaWlfd">
+  <h5 id="idLcyclformulaWlfdH5">Cyclformula.well-formed
+    <a class="clsHide" href="#idLcyclformulaWlfdH5"></a></h5>
+  <p id="idLcyclformulaWlfddsn">description::
+    <br>"A formula in CycL is well-formed if it conforms to the syntax of CycL and passes all the restrictions on arity and argument types of the relations that are used in it."
+    <br>[{2021-02-12} http://web.archive.org/web/20121219042246/http://www.cyc.com:80/cycdoc/ref/glossary.html#well-formed]
+    <a class="clsHide" href="#idLcyclformulaWlfddsn"></a></p>
+  <p id="idLcyclformulaWlfdnam">name::
+    <br>* Mcs.Cyclformula.well-formed,
+    <a class="clsHide" href="#idLcyclformulaWlfdnam"></a></p>
+  </section>
   </section>
 
   <section id="idLcycltrthval">
@@ -8013,26 +8111,33 @@
     <a class="clsHide" href="#idLcycltrthvalnam"></a></p>
   </section>
 
-  <section id="idLcyclmrth">
-  <h4 id="idLcyclmrthH4">microtheory of Cyclassertion
-    <a class="clsHide" href="#idLcyclmrthH4"></a></h4>
-  <p id="idLcyclmrthdsn">description::
-    <br>·
-    <a class="clsHide" href="#idLcyclmrthdsn"></a></p>
-  <p id="idLcyclmrthnam">name::
+  <section id="idLcyclastnmrth">
+  <h4 id="idLcyclastnmrthH4">microtheory of Cyclassertion
+    <a class="clsHide" href="#idLcyclastnmrthH4"></a></h4>
+  <p id="idLcyclastnmrthdsn">description::
+    <br>"a microtheory of which the assertion is part"
+    <a class="clsHide" href="#idLcyclastnmrthdsn"></a></p>
+  <p id="idLcyclastnmrthnam">name::
     <br>* Mcs.Cyclassertion'microtheory,
-    <a class="clsHide" href="#idLcyclmrthnam"></a></p>
+    <a class="clsHide" href="#idLcyclastnmrthnam"></a></p>
   </section>
 
   <section id="idLcycldrcn">
   <h4 id="idLcycldrcnH4">direction of Cyclassertion
     <a class="clsHide" href="#idLcycldrcnH4"></a></h4>
   <p id="idLcycldrcndsn">description::
-    <br>·
+    <br>"Direction is a value attached to every assertion which determines whether inferencing involving the assertion is done at assert time or at ask time. There are three possible values for direction: :forward (inferencing done at assert time), :backward (inferencing done at ask time), and :code (HL module performs reasoning, assertion not used in regular inference). Most interfaces enforce the following default: GAFs have direction :forward and rules have direction :backward. Direction is new in Cyc-10; it replaces access level."
+    <br>[{2021-02-12} http://web.archive.org/web/20121219042246/http://www.cyc.com:80/cycdoc/ref/glossary.html#direction]
     <a class="clsHide" href="#idLcycldrcndsn"></a></p>
   <p id="idLcycldrcnnam">name::
     <br>* Mcs.Cyclassertion'direction,
     <a class="clsHide" href="#idLcycldrcnnam"></a></p>
+  <p id="idLcycldrcndsnL">descriptionLong::
+    <br>"access level (AL)
+    <br>(obs.) In Cyc-9, the access level of an assertion determines whether inferencing involving that assertion occurs at assert time or at ask time. Access level is replaced in Cyc-10 by direction.
+    <br>Only two access level values were commonly used in Cyc-9: 0, which corresponds to the Cyc-10 direction forward, and 4, which corresponds to the Cyc-10 direction backward."
+    <br>[{2021-02-12} http://web.archive.org/web/20121219042246/http://www.cyc.com:80/cycdoc/ref/glossary.html#access%20level]
+    <a class="clsHide" href="#idLcycldrcndsnL"></a></p>
   </section>
 
   <section id="idLcycljtfcn">
@@ -8047,15 +8152,83 @@
   </section>
   </section>
 
+  <section id="idLcyclastnCplxN">
+  <h4 id="idLcyclastnCplxNH4">Cyclassertion.complexNo
+    <a class="clsHide" href="#idLcyclastnCplxNH4"></a></h4>
+  <p id="idLcyclastnCplxNdsn">description::
+    <br>· assertion without logical-connective.
+    <a class="clsHide" href="#idLcyclastnCplxNdsn"></a></p>
+  <p id="idLcyclastnCplxNnam">name::
+    <br>* Mcs.Cyclassertion.complexNo,
+    <a class="clsHide" href="#idLcyclastnCplxNnam"></a></p>
+
   <section id="idLcyclgaf">
-  <h4 id="idLcyclgafH4">Cyclassertion.GAF
-    <a class="clsHide" href="#idLcyclgafH4"></a></h4>
+  <h5 id="idLcyclgafH5">Cyclassertion.complexNo.variableNo (Gaf)
+    <a class="clsHide" href="#idLcyclgafH5"></a></h5>
   <p id="idLcyclgafdsn">description::
-    <br>·
+    <br>· assertion without <a class="clsPreview" href="#idLcycltermLlcv">logical-connectives</a> and <a class="clsPreview" href="#idLcycltermVar">variables</a>.
     <a class="clsHide" href="#idLcyclgafdsn"></a></p>
   <p id="idLcyclgafnam">name::
     <br>* Mcs.Cyclassertion.GAF,
+    <br>* Mcs.Cyclassertion.complexNo.variableNo,
+    <br>* Mcs.Cyclassertion.ground-atotim-formula,
     <a class="clsHide" href="#idLcyclgafnam"></a></p>
+  <p id="idLcyclgafdsnL">descriptionLong::
+    <br>"gaf: An acronym for Ground Atomic Formula which is an assertion without any variables. Gafs form the great majority of KB assertions. The Arg0 term in a gaf is <a class="clsPreview" href="#idLcyclpredicate">the predicate</a>."
+    <br>[http://www.cyc.com/cyc-api.html,-v0.3-{1999-03-11}]
+    <a class="clsHide" href="#idLcyclgafdsnL"></a></p>
+  </section>
+
+  <section id="idLcyclastnCplxNVar">
+  <h5 id="idLcyclastnCplxNVarH5">Cyclassertion.complexNo.variable
+    <a class="clsHide" href="#idLcyclastnCplxNVarH5"></a></h5>
+  <p id="idLcyclastnCplxNVardsn">description::
+    <br>·
+    <a class="clsHide" href="#idLcyclastnCplxNVardsn"></a></p>
+  <p id="idLcyclastnCplxNVarnam">name::
+    <br>* Mcs.Cyclassertion.complexNo.variable,
+    <a class="clsHide" href="#idLcyclastnCplxNVarnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLcyclastnCplx">
+  <h4 id="idLcyclastnCplxH4">Cyclassertion.complex
+    <a class="clsHide" href="#idLcyclastnCplxH4"></a></h4>
+  <p id="idLcyclastnCplxdsn">description::
+    <br>"Complex sentences can be built up out of atomic sentences or other complex sentences by using logical connectives, which are special constants analogous to the logical operators of formal logic. The most important logical connectives in CycL are #$not, #$and, #$or, and #$implies."
+    <br>[{2007-09-21} http://www.cyc.com/doc/handbook/oe/02-the-syntax-of-cycl.html]
+    <a class="clsHide" href="#idLcyclastnCplxdsn"></a></p>
+  <p id="idLcyclastnCplxnam">name::
+    <br>* Mcs.Cyclassertion.complex,
+    <a class="clsHide" href="#idLcyclastnCplxnam"></a></p>
+  </section>
+
+  <section id="idLcyclastnLocal">
+  <h4 id="idLcyclastnLocalH4">Cyclassertion.local
+    <a class="clsHide" href="#idLcyclastnLocalH4"></a></h4>
+  <p id="idLcyclastnLocaldsn">description::
+    <br>"A local assertion is one which was added to the KB from an outside source (most commonly, a human KEer), rather than inferred from other assertions.
+    <br>Local assertions have at least one local justification among their supports."
+    <br>[{1998-02-27} http://www.cyc.com/cyc-2-1/ref/glossary.html,{1997-08-08}]
+    <a class="clsHide" href="#idLcyclastnLocaldsn"></a></p>
+  <p id="idLcyclastnLocalnam">name::
+    <br>* Mcs.Cyclassertion.local,
+    <a class="clsHide" href="#idLcyclastnLocalnam"></a></p>
+  </section>
+
+  <section id="idLcyclastnLocalN">
+  <h4 id="idLcyclastnLocalNH4">Cyclassertion.localNo
+    <a class="clsHide" href="#idLcyclastnLocalNH4"></a></h4>
+  <p id="idLcyclastnLocalNdsn">description::
+    <br>"A local assertion is one which was added to the KB from an outside source (most commonly, a human KEer), rather than inferred from other assertions.
+    <br>Local assertions have at least one local justification among their supports."
+    <br>[{1998-02-27} http://www.cyc.com/cyc-2-1/ref/glossary.html,{1997-08-08}]
+    <a class="clsHide" href="#idLcyclastnLocalNdsn"></a></p>
+  <p id="idLcyclastnLocalNnam">name::
+    <br>* Mcs.Cyclassertion.localNo,
+    <br>* Mcs.Cyclassertion.inferred,
+    <br>* Mcs.Cyclassertion.remote,
+    <a class="clsHide" href="#idLcyclastnLocalNnam"></a></p>
   </section>
 
   <section id="idLcyclfact">
@@ -8097,11 +8270,17 @@
   <h3 id="idLcyclmrthH3">microtheory of lagCycl
     <a class="clsHide" href="#idLcyclmrthH3"></a></h3>
   <p id="idLcyclmrthdsn">description::
-    <br>"The knowledge base is divided into microtheories (Mt), collections of concepts and facts typically pertaining to one particular realm of knowledge. Unlike the knowledge base as a whole, each microtheory must be free from monotonic contradictions. Each microtheory is a first-class object in the Cyc ontology; it has a name that is a regular constant; microtheory constants contain the string "Mt" by convention. An example is #$MathMt, the microtheory containing mathematical knowledge. The microtheories can inherit from each other and are organized in a hierarchy: one specialization of #$MathMt is #$GeometryGMt, the microtheory about geometry."
+    <br>"The knowledge base is divided into microtheories (Mt), collections of concepts and facts typically pertaining to one particular realm of knowledge.
+    <br>Unlike the knowledge base as a whole, each microtheory must be free from monotonic contradictions.
+    <br>Each microtheory is a first-class object in the Cyc ontology; it has a name that is a regular constant; microtheory constants contain the string "Mt" by convention.
+    <br>An example is #$MathMt, the microtheory containing mathematical knowledge.
+    <br>The microtheories can inherit from each other and are organized in a hierarchy: one specialization of #$MathMt is #$GeometryGMt, the microtheory about geometry."
     <br>[{2021-02-10} https://en.wikipedia.org/wiki/Cyc]
     <a class="clsHide" href="#idLcyclmrthdsn"></a></p>
   <p id="idLcyclmrthnam">name::
-    <br>* Mcs.lagCycl'microtheory,
+    <br>* Mcs.Cyclmt,
+    <br>* Mcs.Cyclmt'(lagCycl'microtheory)!⇒Cyclmt,
+    <br>* Mcs.lagCycl'microtheory!⇒Cyclmt,
     <a class="clsHide" href="#idLcyclmrthnam"></a></p>
   </section>
 
@@ -8334,6 +8513,68 @@
     <br>* Mcs.lagCycl'evoluting,
     <a class="clsHide" href="#idLcyclevgFnam"></a></p>
   </section>
+
+  <section id="idLcyclSpc">
+  <h2 id="idLcyclSpcH2">lagCycl.SPECIFIC
+    <a class="clsHide" href="#idLcyclSpcH2"></a></h2>
+  <p id="idLcyclSpcdsn">description::
+    <br>"Every representation is a trade-off between expressiveness (how easily you can say complicated things) and efficiency (how easily the machine can reason with what you've told it).
+    <br>English is very expressive but not very efficient.
+    <br>Most computer languages, such as Basic, C, and Fortran, are efficient but not very expressive.
+    <br>To get both qualities, we separated the epistemological problem (what should the system know?) from the heuristic problem (how can it effectively reason with what it knows?) and developed two separate languages, respectively EL and HL.
+    <br>Our knowledge enterers talk to CYC in the clean, expressive language (EL).
+    <br>Their input is then converted into the heuristic language (HL), which is efficient for dealing with many sorts of frequently recurring inference problems, such as reasoning about time, causality, containment, and so forth."
+    <br>[{2021-02-12} http://web.archive.org/web/20001208155800/http://www.cyc.com/halslegacy.html]
+    <a class="clsHide" href="#idLcyclSpcdsn"></a></p>
+  <p id="idLcyclSpcnam">name::
+    <br>* Mcs.lagCycl.specific,
+    <a class="clsHide" href="#idLcyclSpcnam"></a></p>
+  </section>
+
+  <section id="idLcyclErsv">
+  <h2 id="idLcyclErsvH2">lagCycl.expressive
+    <a class="clsHide" href="#idLcyclErsvH2"></a></h2>
+  <p id="idLcyclErsvdsn">description::
+    <br>"Every representation is a trade-off between expressiveness (how easily you can say complicated things) and efficiency (how easily the machine can reason with what you've told it).
+    <br>English is very expressive but not very efficient.
+    <br>Most computer languages, such as Basic, C, and Fortran, are efficient but not very expressive.
+    <br>To get both qualities, we separated the epistemological problem (what should the system know?) from the heuristic problem (how can it effectively reason with what it knows?) and developed two separate languages, respectively EL and HL.
+    <br>Our knowledge enterers talk to CYC in the clean, expressive language (EL).
+    <br>Their input is then converted into the heuristic language (HL), which is efficient for dealing with many sorts of frequently recurring inference problems, such as reasoning about time, causality, containment, and so forth."
+    <br>[{2021-02-12} http://web.archive.org/web/20001208155800/http://www.cyc.com/halslegacy.html]
+    <a class="clsHide" href="#idLcyclErsvdsn"></a></p>
+  <p id="idLcyclErsvnam">name::
+    <br>* Mcs.lagCycl.EL'(expressive-language),
+    <br>* Mcs.lagCycl.expressive,
+    <a class="clsHide" href="#idLcyclErsvnam"></a></p>
+  <p id="idLcyclErsvdsnL">descriptionLong::
+    <br>"Epistemological level refers to the way knowledge is expressed when CYC® communicates with users or external programs. This stands in contrast with heuristic level, which refers to the way knowledge is actually stored, and inference implemented, in CYC®."
+    <br>[{2021-02-12} http://web.archive.org/web/20121219042246/http://www.cyc.com:80/cycdoc/ref/glossary.html#EL]
+    <a class="clsHide" href="#idLcyclErsvdsnL"></a></p>
+  </section>
+
+  <section id="idLcyclHrtc">
+  <h2 id="idLcyclHrtcH2">lagCycl.heuristic
+    <a class="clsHide" href="#idLcyclHrtcH2"></a></h2>
+  <p id="idLcyclHrtcdsn">description::
+    <br>"Every representation is a trade-off between expressiveness (how easily you can say complicated things) and efficiency (how easily the machine can reason with what you've told it).
+    <br>English is very expressive but not very efficient.
+    <br>Most computer languages, such as Basic, C, and Fortran, are efficient but not very expressive.
+    <br>To get both qualities, we separated the epistemological problem (what should the system know?) from the heuristic problem (how can it effectively reason with what it knows?) and developed two separate languages, respectively EL and HL.
+    <br>Our knowledge enterers talk to CYC in the clean, expressive language (EL).
+    <br>Their input is then converted into the heuristic language (HL), which is efficient for dealing with many sorts of frequently recurring inference problems, such as reasoning about time, causality, containment, and so forth."
+    <br>[{2021-02-12} http://web.archive.org/web/20001208155800/http://www.cyc.com/halslegacy.html]
+    <a class="clsHide" href="#idLcyclHrtcdsn"></a></p>
+  <p id="idLcyclHrtcnam">name::
+    <br>* Mcs.lagCycl.HL'(heuristic-language),
+    <br>* Mcs.lagCycl.heuristic,
+    <a class="clsHide" href="#idLcyclHrtcnam"></a></p>
+  <p id="idLcyclHrtcdsnL">descriptionLong::
+    <br>"heuristic level (HL)
+    <br>Another name for this might be "implementation level". Heuristic level refers to the way knowledge is actually stored, and inference implemented, in CYC®. This stands in contrast to the Epistemological Level (EL), which refers to the way knowledge is expressed when CYC® communicates with users or external programs."
+    <br>[{2021-02-12} http://web.archive.org/web/20121219042246/http://www.cyc.com:80/cycdoc/ref/glossary.html#HL]
+    <a class="clsHide" href="#idLcyclHrtcdsnL"></a></p>
+  </section>
 </section>
 
 <section id="idLwlfm">
@@ -8365,8 +8606,8 @@
     <a class="clsHide" href="#idLwlfmtechnam"></a></p>
 
   <section id="idLwlfmalpha">
-  <h2 id="idLwlfmalphaH2">Wolfram|Alpha of Wlfmtech
-    <a class="clsHide" href="#idLwlfmalphaH2"></a></h2>
+  <h3 id="idLwlfmalphaH3">Wolfram|Alpha of Wlfmtech
+    <a class="clsHide" href="#idLwlfmalphaH3"></a></h3>
   <p id="idLwlfmalphadsn">description::
     <br>"Wolfram|Alpha is a unique engine for computing answers and providing knowledge.
     <br>It works by using its vast store of expert-level knowledge and algorithms to automatically answer questions, do analysis and generate reports."
