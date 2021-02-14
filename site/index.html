@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>synagonism-site (7-24-0.2021-02-07)</title>
+  <title>synagonism-site (7-25-0.2021-02-13)</title>
   <meta name="keywords" content="sensorial-concept-Mcs, free book, title-value-pair, lagHitp-webpage, html5.id.toc.preview, synagonism">
   <link rel="stylesheet" href="dirMiwMcs/dirTchInf/dirHitp/hitp.css">
   <link rel="icon" href="favicon.ico">
@@ -426,7 +426,7 @@
     <span id="idStcntrSpn" class="clsColorRed">...</span>
     times since {2013-05-30}
     <button type="button" id="idStcntrBtn">press to compute</button>
-    <br>(and around <span class="clsColorRed">125,000</span> times until {2013})
+    <br>(and around <span class="clsColorRed">125,000</span> times until {2013}, total = <span id="idStcntrSpnAll" class="clsColorRed">...</span>) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
     <a class="clsHide" href="#idStcntrP"></a></p>
 
   <!-- the content of page-path paragraph is displayed as it is on top of toc -->
@@ -706,6 +706,8 @@
             nSum = nSum + parseInt(n)
             document.getElementById('idStcntrSpn').innerHTML =
               nSum.toLocaleString()
+            document.getElementById('idStcntrSpnAll').innerHTML =
+              (nSum + 125000).toLocaleString()
           }
         }
       }
