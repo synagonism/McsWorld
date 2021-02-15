@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCnpt-(0-35-0.2021-02-14 draft) concept-language</title>
+  <title>Mcs.lagCnpt-(0-36-0.2021-02-15 draft) concept-language</title>
   <meta name="keywords" content="concept-language, lagCnpt, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -8975,10 +8975,253 @@
     <br>* Mcs.lagWlfm'output!⇒Wlfmloutput,
     <a class="clsHide" href="#idLwlfmotptnam"></a></p>
 
-  <section id="idLwlfmoao">
-  <h3 id="idLwlfmoaoH3">atomic-object-(ao) of Wlfmloutput
-    <a class="clsHide" href="#idLwlfmoaoH3"></a></h3>
-  <p id="idLwlfmoaodsn">description::
+  <section id="idLwlfmoexn">
+  <h3 id="idLwlfmoexnH3">expression-(en) of Wlfmloutput
+    <a class="clsHide" href="#idLwlfmoexnH3"></a></h3>
+  <p id="idLwlfmoexndsn">description::
+    <br>"Everything Is an Expression
+    <br>The Wolfram Language handles many different kinds of things: mathematical formulas, lists, and graphics, to name a few. Although they often look very different, the Wolfram Language represents all of these things in one uniform way. They are all expressions."
+    <br>[{2021-02-15} https://reference.wolfram.com/language/tutorial/Expressions.html#4715]
+    <a class="clsHide" href="#idLwlfmoexndsn"></a></p>
+  <p id="idLwlfmoexnnam">name::
+    <br>* Mcs.Wlfmlen,
+    <br>* Mcs.Wlfmlen'(expression-of-lagWlfm)!⇒Wlfmlen,
+    <br>* Mcs.Wlfmloutput'expression!⇒Wlfmlen,
+    <br>* Mcs.expression!/lagWlfm!⇒Wlfmlen,
+    <br>* Mcs.lagWlfm'expression!⇒Wlfmlen,
+    <br>* Mcs.lagWlfm'symbolic-expression!⇒Wlfmlen,
+    <br>* Mcs.symbolic-expression!/lagWlfm!⇒Wlfmlen,
+    <a class="clsHide" href="#idLwlfmoexnnam"></a></p>
+  <p id="idLwlfmoexndsnL">descriptionLong::
+    <br>"At the core of the Wolfram Language is the foundational idea that everything—data, programs, formulas, graphics, documents—can be represented as symbolic expressions.
+    <br>And it is this unifying concept that underlies the Wolfram Language's symbolic programming paradigm, and makes possible much of the unique power of the Wolfram Language and the Wolfram System."
+    <br>[{2021-02-15} https://reference.wolfram.com/language/guide/Expressions.html]
+    <br>"We’ve now seen all sorts of things that exist in the Wolfram Language: lists, graphics, pure functions and much more. And now we’re ready to discuss a very fundamental fact about the Wolfram Language: that each of these things—and in fact everything the language deals with—is ultimately constructed in the same basic kind of way. Everything is what’s called a symbolic expression.
+    <br>Symbolic expressions are a very general way to represent structure, potentially with meaning associated with that structure. f[x,y] is a simple example of a symbolic expression."
+    <br>[{2021-02-14} https://www.wolfram.com/language/elementary-introduction/2nd-ed/33-expressions-and-their-structure.html]
+    <a class="clsHide" href="#idLwlfmoexndsnL"></a></p>
+
+  <section id="idLwlfmoexnpart">
+  <h4 id="idLwlfmoexnpartH4">part of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnpartH4"></a></h4>
+  <p id="idLwlfmoexnpartdsn">description::
+    <br>* head,
+    <br>* element,
+    <a class="clsHide" href="#idLwlfmoexnpartdsn"></a></p>
+  <p id="idLwlfmoexnpartnam">name::
+    <br>* Mcs.Wlfmlen'part,
+    <a class="clsHide" href="#idLwlfmoexnpartnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnhead">
+  <h4 id="idLwlfmoexnheadH4">head of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnheadH4"></a></h4>
+  <p id="idLwlfmoexnheaddsn">description::
+    <br>"In f[x,y], f is called the head of the expression. x and y are called arguments. The function Head extracts the head of an expression.
+    <br>... Every part of an expression has a head, even its atoms."
+    <br>[{2021-02-14} https://www.wolfram.com/language/elementary-introduction/2nd-ed/33-expressions-and-their-structure.html]
+    <a class="clsHide" href="#idLwlfmoexnheaddsn"></a></p>
+  <p id="idLwlfmoexnheadnam">name::
+    <br>* Mcs.Wlfmlen'head,
+    <a class="clsHide" href="#idLwlfmoexnheadnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnelmt">
+  <h4 id="idLwlfmoexnelmtH4">element of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnelmtH4"></a></h4>
+  <p id="idLwlfmoexnelmtdsn">description::
+    <br>"A Wolfram Language expression internally consists of a contiguous array of pointers, the first to the head, and the rest to its successive elements.
+    <br>[http://reference.wolfram.com/language/tutorial/SomeNotesOnInternalImplementation.html]"
+    <a class="clsHide" href="#idLwlfmoexnelmtdsn"></a></p>
+  <p id="idLwlfmoexnelmtnam">name::
+    <br>* Mcs.Wlfmlen'element,
+    <a class="clsHide" href="#idLwlfmoexnelmtnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnlevl">
+  <h4 id="idLwlfmoexnlevlH4">level of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnlevlH4"></a></h4>
+  <p id="idLwlfmoexnlevldsn">description::
+    <br>"Levels provide a general way of specifying collections of parts in Wolfram Language expressions. Many Wolfram Language functions allow you to specify the levels in an expression on which they should act.
+    <br>... You can think of levels in expressions in terms of trees. The level of a particular part in an expression is simply the distance down the tree at which that part appears, with the top of the tree considered as level 0."
+    <br>[http://reference.wolfram.com/language/tutorial/LevelsInExpressions.html]
+    <a class="clsHide" href="#idLwlfmoexnlevldsn"></a></p>
+  <p id="idLwlfmoexnlevlnam">name::
+    <br>* Mcs.Wlfmlen'level,
+    <a class="clsHide" href="#idLwlfmoexnlevlnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnfmit">
+  <h4 id="idLwlfmoexnfmitH4">input-form of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmitH4"></a></h4>
+  <p id="idLwlfmoexnfmitdsn">description::
+    <br>"The Wolfram Language allows you to use special notation for many common operators. For example, although internally the Wolfram System represents a sum of two terms as Plus[x,y], you can enter this expression in the much more convenient form x+y.
+    <br>... The Wolfram Language has a definite grammar that specifies how your input should be converted to internal form."
+    <br>[http://reference.wolfram.com/language/tutorial/SpecialWaysToInputExpressions.html]
+    <br>===
+    <br>* f[x,y]	standard form for f
+    <br>* f@x	prefix form for f[x]
+    <br>* x//f 	postfix form for f[x]
+    <br>* x~f~y	infix form for f
+    <br>Four ways to write expressions in the Wolfram Language.
+    <br>[http://reference.wolfram.com/language/tutorial/SpecialWaysToInputExpressions.html]
+    <a class="clsHide" href="#idLwlfmoexnfmitdsn"></a></p>
+  <p id="idLwlfmoexnfmitnam">name::
+    <br>* Mcs.Wlfmlen'input-form,
+    <a class="clsHide" href="#idLwlfmoexnfmitnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnfminl">
+  <h4 id="idLwlfmoexnfminlH4">internal-form of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfminlH4"></a></h4>
+  <p id="idLwlfmoexnfminldsn">description::
+    <br>"The Wolfram Language allows you to use special notation for many common operators. For example, although internally the Wolfram System represents a sum of two terms as Plus[x,y], you can enter this expression in the much more convenient form x+y.
+    <br>... The Wolfram Language has a definite grammar that specifies how your input should be converted to internal form."
+    <br>[http://reference.wolfram.com/language/tutorial/SpecialWaysToInputExpressions.html]
+    <a class="clsHide" href="#idLwlfmoexnfminldsn"></a></p>
+  <p id="idLwlfmoexnfminlnam">name::
+    <br>* Mcs.Wlfmlen'internal-form,
+    <a class="clsHide" href="#idLwlfmoexnfminlnam"></a></p>
+
+  <section id="idLwlfmoexnfmbnr">
+  <h5 id="idLwlfmoexnfmbnrH5">binary-form of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmbnrH5"></a></h5>
+  <p id="idLwlfmoexnfmbnrdsn">description::
+    <br>"A Wolfram Language expression internally consists of a contiguous array of pointers, the first to the head, and the rest to its successive elements.
+    <br>Each expression contains a special form of hash code that is used both in pattern matching and evaluation."
+    <br>[http://reference.wolfram.com/language/tutorial/SomeNotesOnInternalImplementation.html]
+    <br>===
+    <br>general expressions	sequences of pointers to the head and elements
+    <br>[http://reference.wolfram.com/language/tutorial/BasicInternalArchitecture.html]
+    <a class="clsHide" href="#idLwlfmoexnfmbnrdsn"></a></p>
+  <p id="idLwlfmoexnfmbnrnam">name::
+    <br>* Mcs.Wlfmlen'binary-form,
+    <a class="clsHide" href="#idLwlfmoexnfmbnrnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLwlfmoexnfmful">
+  <h4 id="idLwlfmoexnfmfulH4">full-form of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmfulH4"></a></h4>
+  <p id="idLwlfmoexnfmfuldsn">description::
+    <br>·
+    <a class="clsHide" href="#idLwlfmoexnfmfuldsn"></a></p>
+  <p id="idLwlfmoexnfmfulnam">name::
+    <br>* Mcs.Wlfmlen'full-form,
+    <a class="clsHide" href="#idLwlfmoexnfmfulnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnfmtre">
+  <h4 id="idLwlfmoexnfmtreH4">tree-form of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmtreH4"></a></h4>
+  <p id="idLwlfmoexnfmtredsn">description::
+    <br>"You can think of any Wolfram Language expression as a tree."
+    <br>[http://reference.wolfram.com/language/tutorial/ExpressionsAsTrees.html]
+    <a class="clsHide" href="#idLwlfmoexnfmtredsn"></a></p>
+  <p id="idLwlfmoexnfmtrenam">name::
+    <br>* Mcs.Wlfmlen'tree-form,
+    <a class="clsHide" href="#idLwlfmoexnfmtrenam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnrscF">
+  <h4 id="idLwlfmoexnrscFH4">Infrsc of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnrscFH4"></a></h4>
+  <p id="idLwlfmoexnrscFdsn">description::
+    <br>* https://reference.wolfram.com/language/tutorial/Expressions.html,
+    <a class="clsHide" href="#idLwlfmoexnrscFdsn"></a></p>
+  <p id="idLwlfmoexnrscFnam">name::
+    <br>* Mcs.Wlfmlen'Infrsc,
+    <a class="clsHide" href="#idLwlfmoexnrscFnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnsrtr">
+  <h4 id="idLwlfmoexnsrtrH4">structure of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnsrtrH4"></a></h4>
+  <p id="idLwlfmoexnsrtrdsn">description::
+    <br>"You can think of any Wolfram Language expression as a tree."
+    <br>[http://reference.wolfram.com/language/tutorial/ExpressionsAsTrees.html]
+    <br>===
+    <br>"Expression Structure
+    <br>A foundational idea in the Wolfram Language is that all expressions—whatever they may represent—ultimately have a uniform tree-like structure."
+    <br>[http://reference.wolfram.com/language/guide/ExpressionStructure.html]
+    <br>===
+    <br>"Thus, for example, the pattern (1+x_)^2 can stand for expressions like (1+a)^2 or (1+b^3)^2 that have the same structure. However, it cannot stand for the expression 1+2a+a^2. Although this expression is mathematically equal to (1+a)^2, it does not have the same structure as the pattern (1+x_)^2.
+    <br>The fact that patterns in the Wolfram Language specify the structure of expressions is crucial in making it possible to set up transformation rules which change the structure of expressions, while leaving them mathematically equal.
+    <br>It is worth realizing that in general it would be quite impossible for the Wolfram Language to match patterns by mathematical, rather than structural, equivalence."
+    <br>[http://reference.wolfram.com/language/tutorial/Introduction-Patterns.html]
+    <a class="clsHide" href="#idLwlfmoexnsrtrdsn"></a></p>
+  <p id="idLwlfmoexnsrtrnam">name::
+    <br>* Mcs.Wlfmlen'structure,
+    <a class="clsHide" href="#idLwlfmoexnsrtrnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexndngF">
+  <h4 id="idLwlfmoexndngFH4">DOING of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexndngFH4"></a></h4>
+
+  <section id="idLwlfmoexnusg">
+  <h5 id="idLwlfmoexnusgH5">usage of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnusgH5"></a></h5>
+  <p id="idLwlfmoexnusgdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLwlfmoexnusgdsn"></a></p>
+  <p id="idLwlfmoexnusgnam">name::
+    <br>* Mcs.Wlfmlen'usage,
+    <a class="clsHide" href="#idLwlfmoexnusgnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexntstg">
+  <h5 id="idLwlfmoexntstgH5">testing of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexntstgH5"></a></h5>
+  <p id="idLwlfmoexntstgdsn">description::
+    <br>"Wolfram Language symbolic expressions can represent an immense range of types of objects.
+    <br>The Wolfram Language provides a rich collection of functions to test expressions. Functions that "ask a question" have names that end in Q. They return True for an explicit true answer, and False otherwise."
+    <br>[http://reference.wolfram.com/language/guide/TestingExpressions.html]
+    <a class="clsHide" href="#idLwlfmoexntstgdsn"></a></p>
+  <p id="idLwlfmoexntstgnam">name::
+    <br>* Mcs.Wlfmlen'testing,
+    <a class="clsHide" href="#idLwlfmoexntstgnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLwlfmoexnSpc">
+  <h4 id="idLwlfmoexnSpcH4">Wlfmlen.SPECIFIC
+    <a class="clsHide" href="#idLwlfmoexnSpcH4"></a></h4>
+  <p id="idLwlfmoexnSpcdsn">description::
+    <br>* assignment,
+    <br>* association,
+    <br>* atom,
+    <br>* function,
+    <br>* list,
+    <br>* number,
+    <br>* operation,
+    <br>* operationNo,
+    <br>* rule,
+    <br>* string,
+    <br>* symbol,
+    <br>===
+    <br>"Wolfram Language symbolic expressions can represent an immense range of types of objects."
+    <br>[http://reference.wolfram.com/language/guide/TestingExpressions.html]
+    <br>===
+    <br>* x+y+z	Plus[x,y,z]
+    <br>* xyz	Times[x,y,z]
+    <br>* x^n	Power[x,n]
+    <br>* {a,b,c}	List[a,b,c]
+    <br>* a->b	Rule[a,b]
+    <br>* a=b	Set[a,b]
+    <br>Some examples of Wolfram Language expressions.
+    <br>[{2021-02-15} https://reference.wolfram.com/language/tutorial/Expressions.html#4715]
+    <a class="clsHide" href="#idLwlfmoexnSpcdsn"></a></p>
+  <p id="idLwlfmoexnSpcnam">name::
+    <br>* Mcs.Wlfmlen.specific,
+    <a class="clsHide" href="#idLwlfmoexnSpcnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLwlfmoatm">
+  <h3 id="idLwlfmoatmH3">atom-(am) of Wlfmloutput
+    <a class="clsHide" href="#idLwlfmoatmH3"></a></h3>
+  <p id="idLwlfmoatmdsn">description::
     <br>"All expressions in the Wolfram Language are ultimately made up from a small number of basic or atomic types of objects.
     <br>These objects have heads that are symbols that can be thought of as "tagging" their types. The objects contain "raw data", which can usually be accessed only by functions specific to the particular type of object. You can extract the head of the object using Head, but you cannot directly extract any of its other parts.
     <br>* Symbol	symbol (extract name using SymbolName )
@@ -8990,135 +9233,53 @@
     <br>Atomic objects.
     <br>Atomic objects in the Wolfram Language are considered to have depth 0 and yield True when tested with AtomQ."
     <br>[{2021-02-14} https://reference.wolfram.com/language/tutorial/BasicObjects.html#15871]
-    <a class="clsHide" href="#idLwlfmoaodsn"></a></p>
-  <p id="idLwlfmoaonam">name::
-    <br>* Mcs.Wlfmlao,
-    <br>* Mcs.Wlfmloutput'atomic-object!⇒Wlfmlao,
-    <br>* Mcs.Wlfmloutput'basic-object!⇒Wlfmlao,
-    <a class="clsHide" href="#idLwlfmoaonam"></a></p>
-  </section>
+    <a class="clsHide" href="#idLwlfmoatmdsn"></a></p>
+  <p id="idLwlfmoatmnam">name::
+    <br>* Mcs.Wlfmlam,
+    <br>* Mcs.Wlfmlam'(atomic-object-of-lagWlfm)!⇒Wlfmlam,
+    <br>* Mcs.Wlfmloutput'atomic-object!⇒Wlfmlam,
+    <br>* Mcs.Wlfmloutput'basic-object!⇒Wlfmlam,
+    <br>* Mcs.atomic-object!/lagWlfm!⇒Wlfmlam,
+    <br>* Mcs.lagWlfm'atom!⇒Wlfmlam,
+    <a class="clsHide" href="#idLwlfmoatmnam"></a></p>
+  <p id="idLwlfmoatmstr">specific-tree-of-Wlfmlam::
+    <br>* number,
+    <br>* string,
+    <br>* symbol,
+    <br>"What are the ultimate building blocks of symbolic expressions? They’re called atoms (after the building blocks of physical materials). The main kinds of atoms are numbers, strings and symbols."
+    <br>[{2021-02-14} https://www.wolfram.com/language/elementary-introduction/2nd-ed/33-expressions-and-their-structure.html]
+    <a class="clsHide" href="#idLwlfmoatmstr"></a></p>
 
-  <section id="idLwlfmofn">
-  <h3 id="idLwlfmofnH3">function-(fn) of Wlfmloutput
-    <a class="clsHide" href="#idLwlfmofnH3"></a></h3>
-  <p id="idLwlfmofndsn">description::
-    <br>"When you type 2+2, the Wolfram Language understands it as Plus[2,2]. Plus is a function. There are more than 5000 functions built into the Wolfram Language. Arithmetic uses just a very few of these."
-    <br>[{2021-02-14} https://www.wolfram.com/language/elementary-introduction/2nd-ed/02-introducing-functions.html]
-    <a class="clsHide" href="#idLwlfmofndsn"></a></p>
-  <p id="idLwlfmofnnam">name::
-    <br>* Mcs.Wlfmlfn,
-    <br>* Mcs.Wlfmfunction!⇒Wlfmlfn,
-    <br>* Mcs.Wlfmloutput'function!⇒Wlfmlfn,
-    <br>* Mcs.lagWlfm'function!⇒Wlfmlfn,
-    <a class="clsHide" href="#idLwlfmofnnam"></a></p>
-
-  <section id="idLwlfmofnname">
-  <h4 id="idLwlfmofnnameH4">Wlfmlfn'name
-    <a class="clsHide" href="#idLwlfmofnnameH4"></a></h4>
-  <p id="idLwlfmofnnamedsn">description::
-    <br>"The names of built‐in functions follow some general guidelines.
-    <br>* The name consists of complete English words, or standard mathematical abbreviations. American spelling is used.
-    <br>* The first letter of each word is capitalized.
-    <br>* Functions whose names end with Q usually "ask a question", and return either True or False.
-    <br>* Mathematical functions that are named after people usually have names in the Wolfram Language of the form PersonSymbol."
-    <br>[{2021-02-14} https://reference.wolfram.com/language/tutorial/SomeGeneralNotationsAndConventions.html]
-    <a class="clsHide" href="#idLwlfmofnnamedsn"></a></p>
-  <p id="idLwlfmofnnamenam">name::
-    <br>* Mcs.Wlfmlfn'name,
-    <a class="clsHide" href="#idLwlfmofnnamenam"></a></p>
-  </section>
-
-  <section id="idLwlfmofnarg">
-  <h4 id="idLwlfmofnargH4">Wlfmlfn'argument
-    <a class="clsHide" href="#idLwlfmofnargH4"></a></h4>
-  <p id="idLwlfmofnargdsn">description::
-    <br>"The main expression or object on which a built‐in function acts is usually given as the first argument to the function. Subsidiary parameters appear as subsequent arguments.
-    <br>The following are exceptions:
-    <br>* In functions like Map and Apply, the function to apply comes before the expression it is to be applied to.
-    <br>* In scoping constructs such as Module and Function, local variables and parameter names come before bodies.
-    <br>* In functions like Write and Export, the name of the file is given before the objects to be written to it.
-    <br>For mathematical functions, arguments that are written as subscripts in standard mathematical notation are given before those that are written as superscripts."
-    <br>[{2021-02-14} https://reference.wolfram.com/language/tutorial/SomeGeneralNotationsAndConventions.html#25128]
-    <a class="clsHide" href="#idLwlfmofnargdsn"></a></p>
-  <p id="idLwlfmofnargnam">name::
-    <br>* Mcs.Wlfmlfn'argument,
-    <br>* Mcs.Wlfmlfn'parameter,
-    <a class="clsHide" href="#idLwlfmofnargnam"></a></p>
-  </section>
-
-  <section id="idLwlfmofnSpc">
-  <h4 id="idLwlfmofnSpcH4">Wlfmlfn.SPECIFIC
-    <a class="clsHide" href="#idLwlfmofnSpcH4"></a></h4>
-  <p id="idLwlfmofnSpcdsn">description::
-    <br>* https://reference.wolfram.com/language/ref/[name].html
-    <br>===
-    <br>* built-in,
-    <br>* built-inNo,
-    <br>====
-    <br>* list-function,
-    <br>* mathematical-function,
-    <br>* string-function,
-    <a class="clsHide" href="#idLwlfmofnSpcdsn"></a></p>
-  <p id="idLwlfmofnSpcnam">name::
-    <br>* Mcs.Wlfmlfn.specific,
-    <a class="clsHide" href="#idLwlfmofnSpcnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idLwlfmolt">
-  <h3 id="idLwlfmoltH3">list-(lt) of Wlfmloutput
-    <a class="clsHide" href="#idLwlfmoltH3"></a></h3>
-  <p id="idLwlfmoltdsn">description::
-    <br>"Lists are a basic way to collect things together in the Wolfram Language. {1,2,3} is a list of numbers. On their own, lists don’t do anything; they’re just a way to store things."
-    <br>[{2021-02-14} https://www.wolfram.com/language/elementary-introduction/2nd-ed/03-first-look-at-lists.html]
-    <a class="clsHide" href="#idLwlfmoltdsn"></a></p>
-  <p id="idLwlfmoltnam">name::
-    <br>* Mcs.Wlfmllt,
-    <br>* Mcs.Wlfmllt(list-of-lagWlfm)!⇒Wlfmllt,
-    <br>* Mcs.Wlfmloutput'list!⇒Wlfmllt,
-    <br>* Mcs.lagWlfm'list!⇒Wlfmllt,
-    <a class="clsHide" href="#idLwlfmoltnam"></a></p>
-
-  <section id="idLwlfmoltfn">
-  <h4 id="idLwlfmoltfnH4">functions of Wlfmllt
-    <a class="clsHide" href="#idLwlfmoltfnH4"></a></h4>
-  <p id="idLwlfmoltfndsn">description::
-    <br>· functions on lists:
-    <br>* {2,3,4}+{5,6,2}		arithmetic on lists
-    <br>* Sort[{5,7,1}]		sort a list into order
-    <br>* Length[{3,3}]		length of a list (number of elements)
-    <br>* Total[{1,1,2}]		total of all elements in a list
-    <br>* Count[{3,2,3},3]		count occurrences of an element
-    <br>* First[{2,3}]		first element in a list
-    <br>* Last[{6,7,8}]		last element in a list
-    <br>* Part[{3,1,4},2]		particular part of a list, also written as {3, 1, 4}[[2]]
-    <br>* Take[{6,4,3,1},2]		take elements from the beginning of a list
-    <br>* Drop[{6,4,3,1},2]		drop elements from the beginning of a list
-    <br>* IntegerDigits[1234]		list of digits in a number
-    <br>[{2021-02-14} https://www.wolfram.com/language/elementary-introduction/2nd-ed/05-operations-on-lists.html]
-    <a class="clsHide" href="#idLwlfmoltfndsn"></a></p>
-  <p id="idLwlfmoltfnnam">name::
-    <br>* Mcs.Wlfmlfn.list,
-    <br>* Mcs.Wlfmllt'function,
-    <a class="clsHide" href="#idLwlfmoltfnnam"></a></p>
-  </section>
+  <section id="idLwlfmonbr">
+  <h4 id="idLwlfmonbrH4">number-(nr) of Wlfmloutput
+    <a class="clsHide" href="#idLwlfmonbrH4"></a></h4>
+  <p id="idLwlfmonbrdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLwlfmonbrdsn"></a></p>
+  <p id="idLwlfmonbrnam">name::
+    <br>* Mcs.Wlfmlnr,
+    <br>* Mcs.Wlfmlnr'(number-of-lagWlfm)!⇒Wlfmlnr,
+    <br>* Mcs.Wlfmloutput'number!⇒Wlfmlnr,
+    <br>* Mcs.lagWlfm'number!⇒Wlfmlnr,
+    <a class="clsHide" href="#idLwlfmonbrnam"></a></p>
   </section>
 
   <section id="idLwlfmostrg">
-  <h3 id="idLwlfmostrgH3">string-(sg) of Wlfmloutput
-    <a class="clsHide" href="#idLwlfmostrgH3"></a></h3>
+  <h4 id="idLwlfmostrgH4">string-(sg) of Wlfmloutput
+    <a class="clsHide" href="#idLwlfmostrgH4"></a></h4>
   <p id="idLwlfmostrgdsn">description::
     <br>· a-sequence of characters: "string"
     <a class="clsHide" href="#idLwlfmostrgdsn"></a></p>
   <p id="idLwlfmostrgnam">name::
     <br>* Mcs.Wlfmloutput'string!⇒Wlfmlsg,
     <br>* Mcs.Wlfmlsg,
+    <br>* Mcs.Wlfmlsg'(string-of-lagWlfm)!⇒Wlfmlsg,
     <br>* Mcs.lagWlfm'string!⇒Wlfmlsg,
     <a class="clsHide" href="#idLwlfmostrgnam"></a></p>
 
   <section id="idLwlfmostrgfn">
-  <h4 id="idLwlfmostrgfnH4">functions of Wlfmlsg
-    <a class="clsHide" href="#idLwlfmostrgfnH4"></a></h4>
+  <h5 id="idLwlfmostrgfnH5">functions of Wlfmlsg
+    <a class="clsHide" href="#idLwlfmostrgfnH5"></a></h5>
   <p id="idLwlfmostrgfndsn">description::
     <br>· functions of strings:
     <br>* StringLength["string"]		length of a string
@@ -9151,17 +9312,186 @@
   </section>
   </section>
 
-  <section id="idLwlfmoexpn">
-  <h3 id="idLwlfmoexpnH3">expression of Wlfmloutput
-    <a class="clsHide" href="#idLwlfmoexpnH3"></a></h3>
-  <p id="idLwlfmoexpndsn">description::
-    <br>"different, the Wolfram Language represents all of these things in one uniform way. They are all expressions."
-    <br>[{2021-02-10} https://reference.wolfram.com/language/tutorial/Expressions.html]
-    <a class="clsHide" href="#idLwlfmoexpndsn"></a></p>
-  <p id="idLwlfmoexpnnam">name::
-    <br>* Mcs.Wlfmloutput'expression,
-    <br>* Mcs.lagWlfm'expression,
-    <a class="clsHide" href="#idLwlfmoexpnnam"></a></p>
+  <section id="idLwlfmosbl">
+  <h4 id="idLwlfmosblH4">symbol-(sl) of Wlfmloutput
+    <a class="clsHide" href="#idLwlfmosblH4"></a></h4>
+  <p id="idLwlfmosbldsn">description::
+    <br>"Things like x, y, f, Plus, Graphics and Table are all symbols. Every symbol has a unique name. Sometimes it’ll also have a meaning attached. Sometimes it’ll be associated with evaluation. Sometimes it’ll just be part of defining a structure that other functions can use. But it doesn’t have to have any of those things; it just has to have a name.
+    <br>A crucial defining feature of the Wolfram Language is that it can handle symbols purely as symbols—“symbolically”—without them having to evaluate, say to numbers."
+    <br>[{2021-02-14} https://www.wolfram.com/language/elementary-introduction/2nd-ed/33-expressions-and-their-structure.html]
+    <a class="clsHide" href="#idLwlfmosbldsn"></a></p>
+  <p id="idLwlfmosblnam">name::
+    <br>* Mcs.Wlfmloutput'symbol!⇒Wlfmlsl,
+    <br>* Mcs.Wlfmlsl,
+    <br>* Mcs.Wlfmlsl'(symbol-of-lagWlfm)!⇒Wlfmlsl,
+    <br>* Mcs.lagWlfm'symbol!⇒Wlfmlsl,
+    <br>* Mcs.symbol!/lagWlfm!⇒Wlfmlsl,
+    <a class="clsHide" href="#idLwlfmosblnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLwlfmofn">
+  <h3 id="idLwlfmofnH3">function-(fn) of Wlfmloutput
+    <a class="clsHide" href="#idLwlfmofnH3"></a></h3>
+  <p id="idLwlfmofndsn">description::
+    <br>"When you type 2+2, the Wolfram Language understands it as Plus[2,2]. Plus is a function. There are more than 5000 functions built into the Wolfram Language. Arithmetic uses just a very few of these."
+    <br>[{2021-02-14} https://www.wolfram.com/language/elementary-introduction/2nd-ed/02-introducing-functions.html]
+    <a class="clsHide" href="#idLwlfmofndsn"></a></p>
+  <p id="idLwlfmofnnam">name::
+    <br>* Mcs.Wlfmlfn,
+    <br>* Mcs.Wlfmfunction!⇒Wlfmlfn,
+    <br>* Mcs.Wlfmloutput'function!⇒Wlfmlfn,
+    <br>* Mcs.lagWlfm'function!⇒Wlfmlfn,
+    <a class="clsHide" href="#idLwlfmofnnam"></a></p>
+
+  <section id="idLwlfmofnname">
+  <h4 id="idLwlfmofnnameH4">name of Wlfmlfn
+    <a class="clsHide" href="#idLwlfmofnnameH4"></a></h4>
+  <p id="idLwlfmofnnamedsn">description::
+    <br>"The names of built‐in functions follow some general guidelines.
+    <br>* The name consists of complete English words, or standard mathematical abbreviations. American spelling is used.
+    <br>* The first letter of each word is capitalized.
+    <br>* Functions whose names end with Q usually "ask a question", and return either True or False.
+    <br>* Mathematical functions that are named after people usually have names in the Wolfram Language of the form PersonSymbol."
+    <br>[{2021-02-14} https://reference.wolfram.com/language/tutorial/SomeGeneralNotationsAndConventions.html]
+    <a class="clsHide" href="#idLwlfmofnnamedsn"></a></p>
+  <p id="idLwlfmofnnamenam">name::
+    <br>* Mcs.Wlfmlfn'name,
+    <a class="clsHide" href="#idLwlfmofnnamenam"></a></p>
+  </section>
+
+  <section id="idLwlfmofnarg">
+  <h4 id="idLwlfmofnargH4">argument of Wlfmlfn
+    <a class="clsHide" href="#idLwlfmofnargH4"></a></h4>
+  <p id="idLwlfmofnargdsn">description::
+    <br>"The main expression or object on which a built‐in function acts is usually given as the first argument to the function. Subsidiary parameters appear as subsequent arguments.
+    <br>The following are exceptions:
+    <br>* In functions like Map and Apply, the function to apply comes before the expression it is to be applied to.
+    <br>* In scoping constructs such as Module and Function, local variables and parameter names come before bodies.
+    <br>* In functions like Write and Export, the name of the file is given before the objects to be written to it.
+    <br>For mathematical functions, arguments that are written as subscripts in standard mathematical notation are given before those that are written as superscripts."
+    <br>[{2021-02-14} https://reference.wolfram.com/language/tutorial/SomeGeneralNotationsAndConventions.html#25128]
+    <a class="clsHide" href="#idLwlfmofnargdsn"></a></p>
+  <p id="idLwlfmofnargnam">name::
+    <br>* Mcs.Wlfmlfn'argument,
+    <br>* Mcs.Wlfmlfn'parameter,
+    <a class="clsHide" href="#idLwlfmofnargnam"></a></p>
+  </section>
+
+  <section id="idLwlfmofndngF">
+  <h4 id="idLwlfmofndngFH4">DOING of Wlfmlfn
+    <a class="clsHide" href="#idLwlfmofndngFH4"></a></h4>
+  <p id="idLwlfmofndngFdsn">description::
+    <br>* creating,
+    <br>* calling,
+    <a class="clsHide" href="#idLwlfmofndngFdsn"></a></p>
+  <p id="idLwlfmofndngFnam">name::
+    <br>* Mcs.Wlfmlfn'doing,
+    <a class="clsHide" href="#idLwlfmofndngFnam"></a></p>
+
+  <section id="idLwlfmofncrtg">
+  <h5 id="idLwlfmofncrtgH5">creating of Wlfmlfn
+    <a class="clsHide" href="#idLwlfmofncrtgH5"></a></h5>
+  <p id="idLwlfmofncrtgdsn">description::
+    <br>· f[x_] := x^2
+    <a class="clsHide" href="#idLwlfmofncrtgdsn"></a></p>
+  <p id="idLwlfmofncrtgnam">name::
+    <br>* Mcs.Wlfmlfn'creating,
+    <br>* Mcs.Wlfmlfn'defining,
+    <a class="clsHide" href="#idLwlfmofncrtgnam"></a></p>
+  </section>
+
+  <section id="idLwlfmofnclng">
+  <h5 id="idLwlfmofnclngH5">calling of Wlfmlfn
+    <a class="clsHide" href="#idLwlfmofnclngH5"></a></h5>
+  <p id="idLwlfmofnclngdsn">description::
+    <br>· apply the-function f to 4:
+    <br>· f[4]
+    <br>· f@4
+    <br>· 4//f
+    <br>· f/@{2,3} //apply f to EACH element of the-list {2,3}
+    <br>[{2021-02-14} https://www.wolfram.com/language/elementary-introduction/2nd-ed/25-ways-to-apply-functions.html]
+    <a class="clsHide" href="#idLwlfmofnclngdsn"></a></p>
+  <p id="idLwlfmofnclngnam">name::
+    <br>* Mcs.Wlfmlfn'applying,
+    <br>* Mcs.Wlfmlfn'calling,
+    <a class="clsHide" href="#idLwlfmofnclngnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLwlfmofnSpc">
+  <h4 id="idLwlfmofnSpcH4">Wlfmlfn.SPECIFIC
+    <a class="clsHide" href="#idLwlfmofnSpcH4"></a></h4>
+  <p id="idLwlfmofnSpcdsn">description::
+    <br>* https://reference.wolfram.com/language/ref/[name].html
+    <br>===
+    <br>* built-in,
+    <br>* built-inNo,
+    <br>====
+    <br>* list-function,
+    <br>* mathematical-function,
+    <br>* string-function,
+    <a class="clsHide" href="#idLwlfmofnSpcdsn"></a></p>
+  <p id="idLwlfmofnSpcnam">name::
+    <br>* Mcs.Wlfmlfn.specific,
+    <a class="clsHide" href="#idLwlfmofnSpcnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLwlfmolst">
+  <h3 id="idLwlfmolstH3">list-(lt) of Wlfmloutput
+    <a class="clsHide" href="#idLwlfmolstH3"></a></h3>
+  <p id="idLwlfmolstdsn">description::
+    <br>"Lists are a basic way to collect things together in the Wolfram Language. {1,2,3} is a list of numbers. On their own, lists don’t do anything; they’re just a way to store things."
+    <br>[{2021-02-14} https://www.wolfram.com/language/elementary-introduction/2nd-ed/03-first-look-at-lists.html]
+    <a class="clsHide" href="#idLwlfmolstdsn"></a></p>
+  <p id="idLwlfmolstnam">name::
+    <br>* Mcs.Wlfmllt,
+    <br>* Mcs.Wlfmllt(list-of-lagWlfm)!⇒Wlfmllt,
+    <br>* Mcs.Wlfmloutput'list!⇒Wlfmllt,
+    <br>* Mcs.lagWlfm'list!⇒Wlfmllt,
+    <a class="clsHide" href="#idLwlfmolstnam"></a></p>
+
+  <section id="idLwlfmolstfn">
+  <h4 id="idLwlfmolstfnH4">functions of Wlfmllt
+    <a class="clsHide" href="#idLwlfmolstfnH4"></a></h4>
+  <p id="idLwlfmolstfndsn">description::
+    <br>· functions on lists:
+    <br>* {2,3,4}+{5,6,2}		arithmetic on lists
+    <br>* Sort[{5,7,1}]		sort a list into order
+    <br>* Length[{3,3}]		length of a list (number of elements)
+    <br>* Total[{1,1,2}]		total of all elements in a list
+    <br>* Count[{3,2,3},3]		count occurrences of an element
+    <br>* First[{2,3}]		first element in a list
+    <br>* Last[{6,7,8}]		last element in a list
+    <br>* Part[{3,1,4},2]		particular part of a list, also written as {3, 1, 4}[[2]]
+    <br>* Take[{6,4,3,1},2]		take elements from the beginning of a list
+    <br>* Drop[{6,4,3,1},2]		drop elements from the beginning of a list
+    <br>* IntegerDigits[1234]		list of digits in a number
+    <br>[{2021-02-14} https://www.wolfram.com/language/elementary-introduction/2nd-ed/05-operations-on-lists.html]
+    <a class="clsHide" href="#idLwlfmolstfndsn"></a></p>
+  <p id="idLwlfmolstfnnam">name::
+    <br>* Mcs.Wlfmlfn.list,
+    <br>* Mcs.Wlfmllt'function,
+    <a class="clsHide" href="#idLwlfmolstfnnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLwlfmoasn">
+  <h3 id="idLwlfmoasnH3">association-(an) of Wlfmloutput
+    <a class="clsHide" href="#idLwlfmoasnH3"></a></h3>
+  <p id="idLwlfmoasndsn">description::
+    <br>"Associations are a kind of generalization of lists, in which every element has a key as well as a value."
+    <br>[{2021-02-14} https://www.wolfram.com/language/elementary-introduction/2nd-ed/34-associations.html]
+    <br>· example: &lt;|a->3,n->2,s->2,i->2,y->2,d->2|>
+    <a class="clsHide" href="#idLwlfmoasndsn"></a></p>
+  <p id="idLwlfmoasnnam">name::
+    <br>* Mcs.Wlfmlan,
+    <br>* Mcs.Wlfmlan'(association-of-lagWlfm)!⇒Wlfmlan,
+    <br>* Mcs.Wlfmloutput'association!⇒Wlfmlan,
+    <br>* Mcs.association!/lagWlfm!⇒Wlfmlan,
+    <br>* Mcs.lagWlfm'association!⇒Wlfmlan,
+    <a class="clsHide" href="#idLwlfmoasnnam"></a></p>
   </section>
 
   <section id="idLwlfmokb">
@@ -9233,6 +9563,19 @@
     <a class="clsHide" href="#idLwlfmevalH2"></a></h2>
   </section>
 
+  <section id="idLwlfmWmrch">
+  <h2 id="idLwlfmWmrchH2">Wolfram-Research of lagWlfm
+    <a class="clsHide" href="#idLwlfmWmrchH2"></a></h2>
+  <p id="idLwlfmWmrchdsn">description::
+    <br>"Wolfram Research is an American multinational company that creates computational technology. Wolfram's flagship product is the technical computing program Wolfram Mathematica, first released on June 23, 1988. Other products include Wolfram Alpha, Wolfram SystemModeler, Wolfram Workbench,[2] gridMathematica, Wolfram Finance Platform,[3] webMathematica, the Wolfram Development Platform,[4] and the Wolfram Programming Lab.[5] Wolfram Research founder Stephen Wolfram is the CEO. The company is headquartered in Champaign, Illinois, United States."
+    <br>[{2021-02-14} https://en.wikipedia.org/wiki/Wolfram_Research]
+    <a class="clsHide" href="#idLwlfmWmrchdsn"></a></p>
+  <p id="idLwlfmWmrchnam">name::
+    <br>* Mcs.Wolfram-Research,
+    <br>* Mcs.lagWlfm'Wolfram-Research,
+    <a class="clsHide" href="#idLwlfmWmrchnam"></a></p>
+  </section>
+
   <section id="idLwlfmrscF">
   <h2 id="idLwlfmrscFH2">Infrsc of lagWlfm
     <a class="clsHide" href="#idLwlfmrscFH2"></a></h2>
@@ -9254,6 +9597,17 @@
     <br>"The Wolfram Language is first and foremost an evolution of the symbolic language developed for Mathematica over the course of more than 25 years. But it's considerably more than that—adding the knowledge, knowledge representation and natural language abilities of Wolfram|Alpha, as well as a new symbolic deployment mechanism created with the Wolfram Cloud."
     <br>[http://www.wolfram.com/language/for-experts/]
     <a class="clsHide" href="#idLwlfmevgFdsn"></a></p>
+  <p id="idLwlfmevg1988">{2014}-lagWlfm-multi-paradigm::
+    <br>"In June 2014, Wolfram Research officially introduced the Wolfram Language as a new general multi-paradigm programming language.[11] It is the primary programming language used in Mathematica.[12]"
+    <br>[{2021-02-14} https://en.wikipedia.org/wiki/Wolfram_Research]
+  <p id="idLwlfmevg1988">{2009}-lagWlfm-WolframAlpha::
+    <br>"An online frontend for the language, WolframAlpha, was released in 2009. Wolfram implemented this website by translating natural language statements into Wolfram-language queries that link to its database. This frontend greatly enlarged the audience of the language, and the work leading to Wolfram Alpha also means that Wolfram's implementation of the language now has built-in access to a knowledge-base as well as natural language processing functions. Wolfram also added features for more complex tasks, such as 3D modeling.[13]"
+    <br>[{2021-02-14} https://en.wikipedia.org/wiki/Wolfram_Language]
+    <a class="clsHide" href="#idLwlfmevg1988"></a></p>
+  <p id="idLwlfmevg1988">{1988}-lagWlfm-publication::
+    <br>"The Wolfram Language was a part of the initial version of Mathematica in 1988."
+    <br>[{2021-02-14} https://en.wikipedia.org/wiki/Wolfram_Language]
+    <a class="clsHide" href="#idLwlfmevg1988"></a></p>
   <p id="idLwlfmevgFnam">name::
     <br>* Mcs.lagWlfm'evoluting,
     <a class="clsHide" href="#idLwlfmevgFnam"></a></p>
