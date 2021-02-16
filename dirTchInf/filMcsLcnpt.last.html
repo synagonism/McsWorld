@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCnpt-(0-36-0.2021-02-15 draft) concept-language</title>
+  <title>Mcs.lagCnpt-(0-37-0.2021-02-16 draft) concept-language</title>
   <meta name="keywords" content="concept-language, lagCnpt, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -8874,30 +8874,159 @@
     <br>* Mcs.lagWlfm'tech!⇒Wlfmlltech,
     <a class="clsHide" href="#idLwlfmtechnam"></a></p>
 
-  <section id="idLwlfmsys">
-  <h3 id="idLwlfmsysH3">Wolfram-system of Wlfmlltech
-    <a class="clsHide" href="#idLwlfmsysH3"></a></h3>
-  <p id="idLwlfmsysdsn">description::
+  <section id="idLwlfmapp">
+  <h3 id="idLwlfmappH3">Wolfram-system of Wlfmlltech
+    <a class="clsHide" href="#idLwlfmappH3"></a></h3>
+  <p id="idLwlfmappdsn">description::
     <br>"The Wolfram System is one of the more complex software systems ever constructed.
     <br>It is built from several million lines of source code, written in C/C++, Java, and the Wolfram Language."
     <br>[http://reference.wolfram.com/language/tutorial/TheSoftwareEngineeringOfTheWolframSystem.html]
-    <a class="clsHide" href="#idLwlfmsysdsn"></a></p>
-  <p id="idLwlfmsysnam">name::
+    <a class="clsHide" href="#idLwlfmappdsn"></a></p>
+  <p id="idLwlfmappnam">name::
     <br>* Mcs.Wlfmlapp,
     <br>* Mcs.Wlfmlltech'Wolfram-system!⇒Wlfmlapp,
+    <br>* Mcs.Wolfram-language-application!⇒Wlfmlapp,
     <br>* Mcs.Wolfram-system!⇒Wlfmlapp,
-    <a class="clsHide" href="#idLwlfmsysnam"></a></p>
+    <a class="clsHide" href="#idLwlfmappnam"></a></p>
+
+  <section id="idLwlfmkrnl">
+  <h4 id="idLwlfmkrnlH4">kernel of Wlfmlapp
+    <a class="clsHide" href="#idLwlfmkrnlH4"></a></h4>
+  <p id="idLwlfmkrnldsn">description::
+    <br>"The Wolfram Language kernel is a process that runs under the operating system on your computer. Within the Wolfram Language there are several global variables that allow you to find the characteristics of this process and its environment.
+    <br>[http://reference.wolfram.com/language/tutorial/GlobalSystemInformation.html]
+    <br>===
+    <br>In the Wolfram Language kernel the breakdown of different parts of the code is roughly as follows: language and system: 30%; numerical computation: 20%; algebraic computation: 20%; graphics and kernel output: 30%.
+    <br>... The source code for the kernel, save a fraction of a percent, is identical for all computer systems on which the Wolfram System runs.
+    <br>[http://reference.wolfram.com/language/tutorial/TheSoftwareEngineeringOfTheWolframSystem.html]
+    <a class="clsHide" href="#idLwlfmkrnldsn"></a></p>
+  <p id="idLwlfmkrnlnam">name::
+    <br>* Mcs.Wlfmlapp'kernel,
+    <a class="clsHide" href="#idLwlfmkrnlnam"></a></p>
   </section>
 
   <section id="idLwlfmui">
-  <h3 id="idLwlfmuiH3">user-interface of Wlfmlapp
-    <a class="clsHide" href="#idLwlfmuiH3"></a></h3>
+  <h4 id="idLwlfmuiH4">user-interface of Wlfmlapp
+    <a class="clsHide" href="#idLwlfmuiH4"></a></h4>
   <p id="idLwlfmuidsn">description::
-    <br>·
+    <br>· the-part of Wlfmlapp[a] with which a-user interacts with it[a].
     <a class="clsHide" href="#idLwlfmuidsn"></a></p>
   <p id="idLwlfmuinam">name::
-    <br>* Mcs.Wlfmlapp'user-interface!⇒Wlfmui,
+    <br>* Mcs.Wlfmlapp'front-end!⇒Wlfmlui,
+    <br>* Mcs.Wlfmlapp'user-interface!⇒Wlfmlui,
+    <br>* Mcs.Wlfmlui,
+    <br>* Mcs.Wlfmlui'(user-interface-of-Wlfmlapp)!⇒Wlfmlui,
     <a class="clsHide" href="#idLwlfmuinam"></a></p>
+
+  <section id="idLwlfmuicode">
+  <h5 id="idLwlfmuicodeH5">code of Wlfmlui
+    <a class="clsHide" href="#idLwlfmuicodeH5"></a></h5>
+  <p id="idLwlfmuicodedsn">description::
+    <br>"For the front end, however, a significant amount of specialized code is needed to support each different type of user interface environment. The front end contains about 700,000 lines of system-independent C++ source code, of which roughly 200,000 lines are concerned with expression formatting. Then there are between 50,000 and 100,000 lines of specific code customized for each user interface environment."
+    <br>[http://reference.wolfram.com/language/tutorial/TheSoftwareEngineeringOfTheWolframSystem.html]
+    <a class="clsHide" href="#idLwlfmuicodedsn"></a></p>
+  <p id="idLwlfmuicodenam">name::
+    <br>* Mcs.Wlfmlui'code,
+    <a class="clsHide" href="#idLwlfmuicodenam"></a></p>
+  </section>
+
+  <section id="idLwlfmuiSpc">
+  <h5 id="idLwlfmuiSpcH5">Wlfmlui.SPECIFIC
+    <a class="clsHide" href="#idLwlfmuiSpcH5"></a></h5>
+  <p id="idLwlfmuiSpcdsn">description::
+    <br>* batch-interface,
+    <br>* notebook-interface,
+    <br>* Wolfram|Alpha,
+    <br>* Wolfram-Cloud,
+    <a class="clsHide" href="#idLwlfmuiSpcdsn"></a></p>
+  <p id="idLwlfmuiSpcnam">name::
+    <br>* Mcs.Wlfmlui.specific,
+    <a class="clsHide" href="#idLwlfmuiSpcnam"></a></p>
+  </section>
+
+  <section id="idLwlfmuiBatch">
+  <h5 id="idLwlfmuiBatchH5">Wlfmlui.batch-mode
+    <a class="clsHide" href="#idLwlfmuiBatchH5"></a></h5>
+  <p id="idLwlfmuiBatchdsn">description::
+    <br>"The Wolfram System is usually used interactively, but it can also operate in a batch mode—say taking input from a file and writing output to a file. In such a case, a program cannot for example expect to get interactive input from the user."
+    <br>[http://reference.wolfram.com/language/tutorial/GlobalSystemInformation.html]
+    <a class="clsHide" href="#idLwlfmuiBatchdsn"></a></p>
+  <p id="idLwlfmuiBatchnam">name::
+    <br>* Mcs.Wlfmlui.batch-mode,
+    <a class="clsHide" href="#idLwlfmuiBatchnam"></a></p>
+  </section>
+
+  <section id="idLwlfmuiTtbd">
+  <h5 id="idLwlfmuiTtbdH5">Wlfmlui.text-based
+    <a class="clsHide" href="#idLwlfmuiTtbdH5"></a></h5>
+  <p id="idLwlfmuiTtbddsn">description::
+    <br>"The standard front end interface, as discussed in "Using a Notebook Interface", is appropriate for most users' purposes.
+    <br>In some cases, however, you may not need to use the notebook front end, and you may want instead to interact more directly with the Wolfram Language kernel. You can do this by using a text‐based interface, in which text you type on the keyboard goes straight to the kernel.
+    <br>It is important to note that while the text-based interface provides access to most of the capabilities of the Wolfram Language kernel, the graphics functionality and dynamic interactivity of the Wolfram System front end are not available.
+    <a class="clsHide" href="#idLwlfmuiTtbddsn"></a></p>
+  <p id="idLwlfmuiTtbdnam">name::
+    <br>* Mcs.Wlfmlui.text-based,
+    <a class="clsHide" href="#idLwlfmuiTtbdnam"></a></p>
+  </section>
+
+  <section id="idLwlfmuiNtbk">
+  <h5 id="idLwlfmuiNtbkH5">Wlfmlui.notebook
+    <a class="clsHide" href="#idLwlfmuiNtbkH5"></a></h5>
+  <p id="idLwlfmuiNtbkdsn">description::
+    <br>"In a "notebook" interface, you interact with the Wolfram System by creating interactive documents.
+    <br>The notebook front end includes many menus and graphical tools for creating and reading notebook documents and for sending and receiving material from the Wolfram Language kernel."
+    <br>[{2021-02-16} https://reference.wolfram.com/language/tutorial/UsingANotebookInterface.html]
+    <a class="clsHide" href="#idLwlfmuiNtbkdsn"></a></p>
+  <p id="idLwlfmuiNtbknam">name::
+    <br>* Mcs.Wlfmlnbi,
+    <br>* Mcs.Wlfmlnbi'(notebook-interface-of-lagWlfm)!⇒Wlfmlnbi,
+    <br>* Mcs.Wlfmlui.notebook!⇒Wlfmlnbi,
+    <br>* Mcs.lagWlfm'notebook-interface!⇒Wlfmlnbi,
+    <br>* Mcs.notebook-front-end-of-lagWlfm!⇒Wlfmlnbi,
+    <a class="clsHide" href="#idLwlfmuiNtbknam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLwlfmitpr">
+  <h4 id="idLwlfmitprH4">interpreter of Wlfmlapp
+    <a class="clsHide" href="#idLwlfmitprH4"></a></h4>
+  <p id="idLwlfmitprdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLwlfmitprdsn"></a></p>
+  <p id="idLwlfmitprnam">name::
+    <br>* Mcs.Wlfmlapp'interpreter, /intérpiter/,
+    <a class="clsHide" href="#idLwlfmitprnam"></a></p>
+  </section>
+
+  <section id="idLwlfmappSpc">
+  <h4 id="idLwlfmappSpcH4">Wlfmlapp.SPECIFIC
+    <a class="clsHide" href="#idLwlfmappSpcH4"></a></h4>
+  <p id="idLwlfmappSpcdsn">description::
+    <br>* Wolfram|Alpha,
+    <br>* Wolfram-Cloud,
+    <br>* Wolfram-Mathematica,
+    <a class="clsHide" href="#idLwlfmappSpcdsn"></a></p>
+  <p id="idLwlfmappSpcnam">name::
+    <br>* Mcs.Wlfmlapp.specific,
+    <a class="clsHide" href="#idLwlfmappSpcnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLwlfmmath">
+  <h3 id="idLwlfmmathH3">Mathematica of Wlfmlltech
+    <a class="clsHide" href="#idLwlfmmathH3"></a></h3>
+  <p id="idLwlfmmathdsn">description::
+    <br>"WOLFRAM MATHEMATICA
+    <br>The world's definitive system for modern technical computing
+    <br>For three decades, Mathematica has defined the state of the art in technical computing—and provided the principal computation environment for millions of innovators, educators, students, and others around the world.
+    <br>Widely admired for both its technical prowess and elegant ease of use, Mathematica provides a single integrated, continually expanding system that covers the breadth and depth of technical computing—and seamlessly available in the cloud through any web browser, as well as natively on all modern desktop systems."
+    <br>[{2021-02-16} https://www.wolfram.com/mathematica/]
+    <a class="clsHide" href="#idLwlfmmathdsn"></a></p>
+  <p id="idLwlfmmathnam">name::
+    <br>* Mcs.Wlfmlmath,
+    <br>* Mcs.Wlfmlmath'(Wolfram-Mathematica)!⇒Wlfmlmath,
+    <br>* Mcs.Wlfmltech.Mathematica!⇒Wlfmlmath,
+    <a class="clsHide" href="#idLwlfmmathnam"></a></p>
   </section>
 
   <section id="idLwlfmalpha">
@@ -8941,19 +9070,19 @@
     <br>[{2021-02-14} https://www.wolfram.com/cloud/]
     <a class="clsHide" href="#idLwlfmclouddsn"></a></p>
   <p id="idLwlfmcloudnam">name::
-    <br>* Mcs.Wlfmcloud,
-    <br>* Mcs.Wlfmltech'Wolfram-cloud!⇒Wlfmcloud,
-    <br>* Mcs.Wolfram-cloud!⇒Wlfmcloud,
+    <br>* Mcs.Wlfmlcloud,
+    <br>* Mcs.Wlfmltech'Wolfram-cloud!⇒Wlfmlcloud,
+    <br>* Mcs.Wolfram-cloud!⇒Wlfmlcloud,
     <a class="clsHide" href="#idLwlfmcloudnam"></a></p>
 
   <section id="idLwlfmcloudrscF">
-  <h4 id="idLwlfmcloudrscFH4">Infrsc of Wlfmcloud
+  <h4 id="idLwlfmcloudrscFH4">Infrsc of Wlfmlcloud
     <a class="clsHide" href="#idLwlfmcloudrscFH4"></a></h4>
   <p id="idLwlfmcloudrscFdsn">description::
     <br>* https://www.wolframcloud.com/,
     <a class="clsHide" href="#idLwlfmcloudrscFdsn"></a></p>
   <p id="idLwlfmcloudrscFnam">name::
-    <br>* Mcs.Wlfmcloud'Infrsc,
+    <br>* Mcs.Wlfmlcloud'Infrsc,
     <a class="clsHide" href="#idLwlfmcloudrscFnam"></a></p>
   </section>
   </section>
@@ -9128,6 +9257,8 @@
     <a class="clsHide" href="#idLwlfmoexnrscFH4"></a></h4>
   <p id="idLwlfmoexnrscFdsn">description::
     <br>* https://reference.wolfram.com/language/tutorial/Expressions.html,
+    <br>* https://reference.wolfram.com/language/tutorial/EvaluationOfExpressions.html,
+    <br>* https://reference.wolfram.com/language/guide/Expressions.html,
     <a class="clsHide" href="#idLwlfmoexnrscFdsn"></a></p>
   <p id="idLwlfmoexnrscFnam">name::
     <br>* Mcs.Wlfmlen'Infrsc,
@@ -9163,7 +9294,15 @@
   <h5 id="idLwlfmoexnusgH5">usage of Wlfmlen
     <a class="clsHide" href="#idLwlfmoexnusgH5"></a></h5>
   <p id="idLwlfmoexnusgdsn">description::
-    <br>·
+    <br>"Although all expressions have the same basic structure, there are many different ways that expressions can be used."
+    <br>[http://reference.wolfram.com/language/tutorial/TheMeaningOfExpressions.html]
+    <br>===
+    <br>"Expressions in the Wolfram System are often used to specify <strong>operations</strong>. So, for example, typing in 2+3 causes 2 and 3 to be added together, while Factor[x^6-1] performs factorization.
+    <br>Perhaps an even more important use of expressions in the Wolfram System, however, is to <strong>maintain a structure</strong>, which can then be acted on by other functions. An expression like {a,b,c} does not specify an operation. It merely maintains a list structure, which contains a collection of three elements. Other functions, such as Reverse or Dot, can act on this structure.
+    <br>The full form of the expression {a,b,c} is List[a,b,c]. The head List performs no operations. Instead, its purpose is to serve as a "tag" to specify the "type" of the structure.
+    <br>You can use expressions in the Wolfram System to create your own structures. For example, you might want to represent points in three‐dimensional space, specified by three coordinates. You could give each point as point[x,y,z]. The "function" point again performs no operation. It serves merely to collect the three coordinates together, and to label the resulting object as a point.
+    <br>You can think of expressions like point[x,y,z] as being "packets of data", tagged with a particular head. Even though all expressions have the same basic structure, you can distinguish different "types" of expressions by giving them different heads. You can then set up transformation rules and programs which treat different types of expressions in different ways.
+    <br>[{2021-02-15} https://reference.wolfram.com/language/tutorial/Expressions.html#20284]
     <a class="clsHide" href="#idLwlfmoexnusgdsn"></a></p>
   <p id="idLwlfmoexnusgnam">name::
     <br>* Mcs.Wlfmlen'usage,
@@ -9339,7 +9478,7 @@
     <a class="clsHide" href="#idLwlfmofndsn"></a></p>
   <p id="idLwlfmofnnam">name::
     <br>* Mcs.Wlfmlfn,
-    <br>* Mcs.Wlfmfunction!⇒Wlfmlfn,
+    <br>* Mcs.Wlfmlfunction!⇒Wlfmlfn,
     <br>* Mcs.Wlfmloutput'function!⇒Wlfmlfn,
     <br>* Mcs.lagWlfm'function!⇒Wlfmlfn,
     <a class="clsHide" href="#idLwlfmofnnam"></a></p>
@@ -9492,6 +9631,79 @@
     <br>* Mcs.association!/lagWlfm!⇒Wlfmlan,
     <br>* Mcs.lagWlfm'association!⇒Wlfmlan,
     <a class="clsHide" href="#idLwlfmoasnnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoptn">
+  <h3 id="idLwlfmoptnH3">pattern-(pn) of Wlfmloutput
+    <a class="clsHide" href="#idLwlfmoptnH3"></a></h3>
+  <p id="idLwlfmoptndsn">description::
+    <br>"Patterns stand for classes of expressions.
+    <br>They contain pattern objects that represent sets of possible expressions."
+    <br>[{2021-02-15} https://reference.wolfram.com/language/tutorial/PatternsAndTransformationRules.html]
+    <a class="clsHide" href="#idLwlfmoptndsn"></a></p>
+  <p id="idLwlfmoptnnam">name::
+    <br>* Mcs.Wlfmloutput!⇒Wlfmlpn,
+    <br>* Mcs.Wlfmlpn,
+    <br>* Mcs.Wlfmlpn'(pattern-of-lagWlfm)!⇒Wlfmlpn,
+    <br>* Mcs.lagWlfm'pattern!⇒Wlfmlpn,
+    <br>* Mcs.pattern!/lagWlfm!⇒Wlfmlpn,
+    <a class="clsHide" href="#idLwlfmoptnnam"></a></p>
+  <p id="idLwlfmoptndsnL">descriptionLong::
+    <br>"One of the unique strengths of the Wolfram Language is its powerful and succinct—yet highly readable—symbolic pattern language. Convenient both for immediate use in individual functions, and for systematic large-scale programming, the Wolfram Language's pattern language generalizes concepts like regular expressions to describe general patterns for arbitrary symbolic structures."
+    <br>[{2021-02-15} https://reference.wolfram.com/language/guide/Patterns.html]
+    <a class="clsHide" href="#idLwlfmoptndsnL"></a></p>
+
+  <section id="idLwlfmoptnpnot">
+  <h4 id="idLwlfmoptnpnotH4">pattern-object of Wlfmlpn
+    <a class="clsHide" href="#idLwlfmoptnpnotH4"></a></h4>
+  <p id="idLwlfmoptnpnotdsn">description::
+    <br>· the-parts of a-pattern.
+    <br>[{2021-02-15} https://reference.wolfram.com/language/tutorial/PatternsAndTransformationRules.html#8519]
+    <a class="clsHide" href="#idLwlfmoptnpnotdsn"></a></p>
+  <p id="idLwlfmoptnpnotnam">name::
+    <br>* Mcs.Wlfmlpn'pattern-object,
+    <a class="clsHide" href="#idLwlfmoptnpnotnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoptnrscF">
+  <h4 id="idLwlfmoptnrscFH4">Infrsc of Wlfmlpn
+    <a class="clsHide" href="#idLwlfmoptnrscFH4"></a></h4>
+  <p id="idLwlfmoptnrscFdsn">description::
+    <br>* https://reference.wolfram.com/language/tutorial/Patterns.html,
+    <br>* https://reference.wolfram.com/language/guide/Patterns.html,
+    <br>* https://reference.wolfram.com/language/guide/RulesAndPatterns.html,
+    <a class="clsHide" href="#idLwlfmoptnrscFdsn"></a></p>
+  <p id="idLwlfmoptnrscFnam">name::
+    <br>* Mcs.Wlfmlpn'Infrsc,
+    <a class="clsHide" href="#idLwlfmoptnrscFnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoptdngF">
+  <h4 id="idLwlfmoptdngFH4">DOING of Wlfmlpn
+    <a class="clsHide" href="#idLwlfmoptdngFH4"></a></h4>
+
+  <section id="idLwlfmoptnusg">
+  <h5 id="idLwlfmoptnusgH5">usage of Wlfmlpn
+    <a class="clsHide" href="#idLwlfmoptnusgH5"></a></h5>
+  <p id="idLwlfmoptnusgdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLwlfmoptnusgdsn"></a></p>
+  <p id="idLwlfmoptnusgnam">name::
+    <br>* Mcs.Wlfmlpn'usage,
+    <a class="clsHide" href="#idLwlfmoptnusgnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLwlfmoptnSpc">
+  <h4 id="idLwlfmoptnSpcH4">Wlfmlpn.SPECIFIC
+    <a class="clsHide" href="#idLwlfmoptnSpcH4"></a></h4>
+  <p id="idLwlfmoptnSpcdsn">description::
+    <br>* string-pattern,
+    <a class="clsHide" href="#idLwlfmoptnSpcdsn"></a></p>
+  <p id="idLwlfmoptnSpcnam">name::
+    <br>* Mcs.Wlfmlpn.specific,
+    <a class="clsHide" href="#idLwlfmoptnSpcnam"></a></p>
+  </section>
   </section>
 
   <section id="idLwlfmokb">
