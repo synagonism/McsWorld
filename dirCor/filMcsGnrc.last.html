@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.generic-(0-30-0.2021-02-14 draft) entity.generic</title>
+  <title>Mcs.generic-(0-31-0.2021-02-18 draft) entity.generic</title>
   <meta name="keywords" content="generic-entity, generic, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="https://synagonism.github.io/hitp/hitp.css">
 </head>
@@ -57,9 +57,9 @@
     <br>· generic-specific--relation is <a class="clsPreview" href="filMcsRln.last.html#idRlnSqcdN">the-sequencedNo-relation</a> between <a class="clsPreview" href="#idOverview">a-generic[a]</a> and a-specific of it[a].
     <a class="clsHide" href="#idGnrspcrlndsn"></a></p>
   <p id="idGnrspcrlnnam">name::
-    <br>* Mcs.generic-specific--relation,
+    <br>* Mcs.generic-specific-undirected-relation,
     <br>* Mcs.relation.generic-specific,
-    <br>* Mcs.specific-generic--relation,
+    <br>* Mcs.specific-generic-undirected-relation,
     <br>====== langoSinago:
     <br>* McsSngo.ro-ko-go!⇒relation.generic-specific,
     <a class="clsHide" href="#idGnrspcrlnnam"></a></p>
@@ -71,11 +71,13 @@
     <br>· generic-relation is <a class="clsPreview" href="filMcsRln.last.html#idRlnSqcd">the-sequenced-relation</a> between a-specific[a] and <a class="clsPreview" href="#idOverview">a-generic</a> of it[a].
     <a class="clsHide" href="#idGnrspcrln1dsn"></a></p>
   <p id="idGnrspcrln1nam">name::
-    <br>* Mcs.generic-relation,
-    <br>* Mcs.relation.generic,
+    <br>* Mcs.generic-relation!⇒specific:generic,
+    <br>* Mcs.relation.generic!⇒specific:generic,
+    <br>* Mcs.specific-generic-directed-relation!⇒specific:generic,
+    <br>* Mcs.specific:generic,
     <br>====== langoSinago:
-    <br>* McsSngo.ro-ko!⇒relation.generic,
-    <br>* McsSngo.ka!~conjSngo!⇒relation.generic,
+    <br>* McsSngo.ro-ko!=specific:generic,
+    <br>* McsSngo.ka!~conjSngo!=specific:generic,
     <a class="clsHide" href="#idGnrspcrln1nam"></a></p>
   </section>
 
@@ -86,11 +88,13 @@
     <br>· specific-relation is <a class="clsPreview" href="filMcsRln.last.html#idRlnSqcd">the-sequenced-relation</a> between <a class="clsPreview" href="#idOverview">a-generic[a]</a> and a-specific of it[a].
     <a class="clsHide" href="#idGnrspcrln2dsn"></a></p>
   <p id="idGnrspcrln2nam">name::
-    <br>* Mcs.relation.specific-of-generic,
-    <br>* Mcs.specific-relation,
+    <br>* Mcs.generic-specific-directed-relation!⇒generic.specific,
+    <br>* Mcs.generic.specific,
+    <br>* Mcs.relation.specific-of-generic!⇒generic.specific,
+    <br>* Mcs.specific-relation!⇒generic.specific
     <br>====== langoSinago:
-    <br>* McsSngo.ro-go!⇒relation.specific,
-    <br>* McsSngo.ga!~conjSngo!⇒relation.specific,
+    <br>* McsSngo.ro-go!=generic.specific,
+    <br>* McsSngo.ga!~conjSngo!=generic.specific,
     <a class="clsHide" href="#idGnrspcrln2nam"></a></p>
   </section>
 </section>
