@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCnpt-(0-37-0.2021-02-16 draft) concept-language</title>
+  <title>Mcs.lagCnpt-(0-39-0.2021-02-19 draft) concept-language</title>
   <meta name="keywords" content="concept-language, lagCnpt, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -9001,6 +9001,24 @@
     <br>* Mcs.lagWlfm'notebook-interface!⇒Wlfmlnbi,
     <br>* Mcs.notebook-front-end-of-lagWlfm!⇒Wlfmlnbi,
     <a class="clsHide" href="#idLwlfmuiNtbknam"></a></p>
+  <p id="idLwlfmuiNtbkdsnL">descriptionLong::
+    <br>"Like everything else in the Wolfram Language, notebooks are ultimately symbolic expressions. When you edit notebooks—or apply high-level programmatic functions—the Wolfram Language automatically updates these expressions. But if you look at the lowest level—say by opening a notebook file as text—you will see the underlying expressions, in which formatting constructs are represented as a hierarchy of low-level symbolic "boxes"."
+    <br>[{2021-02-18} https://reference.wolfram.com/language/guide/LowLevelNotebookStructure.html]
+    <a class="clsHide" href="#idLwlfmuiNtbkdsnL"></a></p>
+
+  <section id="idLwlfmuiNtbkshct">
+  <h6 id="idLwlfmuiNtbkshctH6">shortcut of Wlfmlnbi
+    <a class="clsHide" href="#idLwlfmuiNtbkshctH6"></a></h6>
+  <p id="idLwlfmuiNtbkshctdsn">description::
+    <br>* = — at beginning of input: specify a complete computation using natural language.
+    <br>* Ctrl+= — translate from natural language anywhere in Wolfram Language input.
+    <br>* Ctrl+Shift+e — toggle between formatted display and underlying symbolic expression
+    <a class="clsHide" href="#idLwlfmuiNtbkshctdsn"></a></p>
+  <p id="idLwlfmuiNtbkshctnam">name::
+    <br>* Mcs.Wlfmlapp'shortcut,
+    <br>* Mcs.Wlfmlnbi'shortcut,
+    <a class="clsHide" href="#idLwlfmuiNtbkshctnam"></a></p>
+  </section>
 
   <section id="idLwlfmuiNtbkcell">
   <h6 id="idLwlfmuiNtbkcellH6">cell of Wlfmlnbi
@@ -9472,9 +9490,20 @@
     <a class="clsHide" href="#idLwlfmoexnlevlnam"></a></p>
   </section>
 
+  <section id="idLwlfmoexnform">
+  <h4 id="idLwlfmoexnformH4">form of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnformH4"></a></h4>
+  <p id="idLwlfmoexnformdsn">description::
+    <br>· syntax of an-expression
+    <a class="clsHide" href="#idLwlfmoexnformdsn"></a></p>
+  <p id="idLwlfmoexnformnam">name::
+    <br>* Mcs.Wlfmlen'form,
+    <br>* Mcs.lagWlfm'form-of-expression,
+    <a class="clsHide" href="#idLwlfmoexnformnam"></a></p>
+
   <section id="idLwlfmoexnfmit">
-  <h4 id="idLwlfmoexnfmitH4">input-form of Wlfmlen
-    <a class="clsHide" href="#idLwlfmoexnfmitH4"></a></h4>
+  <h5 id="idLwlfmoexnfmitH5">input-form of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmitH5"></a></h5>
   <p id="idLwlfmoexnfmitdsn">description::
     <br>"The Wolfram Language allows you to use special notation for many common operators. For example, although internally the Wolfram System represents a sum of two terms as Plus[x,y], you can enter this expression in the much more convenient form x+y.
     <br>... The Wolfram Language has a definite grammar that specifies how your input should be converted to internal form."
@@ -9488,13 +9517,32 @@
     <br>[http://reference.wolfram.com/language/tutorial/SpecialWaysToInputExpressions.html]
     <a class="clsHide" href="#idLwlfmoexnfmitdsn"></a></p>
   <p id="idLwlfmoexnfmitnam">name::
+    <br>* Mcs.Wlfmlapp'input-form-of-expression,
     <br>* Mcs.Wlfmlen'input-form,
     <a class="clsHide" href="#idLwlfmoexnfmitnam"></a></p>
   </section>
 
+  <section id="idLwlfmoexnfmOut">
+  <h5 id="idLwlfmoexnfmOutH5">output-form of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmOutH5"></a></h5>
+  <p id="idLwlfmoexnfmOutdsn">description::
+    <br>"OutputForm[expr]
+    <br>prints as a two-dimensional representation of expr using only keyboard characters.
+    <br>OutputForm is an approximation to StandardForm which uses only ordinary keyboard characters.
+    <br>* The OutputForm of many kinds of expressions is quite different from their internal representation.
+    <br>* When an input evaluates to OutputForm[expr], OutputForm does not appear in the output. »
+    <br>* OutputForm cannot be used directly for input to the Wolfram Language.
+    <br>* When possible, OutputForm uses approximations to special characters. Thus ≥ is given as >= and é as e'. »"
+    <br>[{2021-02-18} https://reference.wolfram.com/language/ref/OutputForm.html]
+    <a class="clsHide" href="#idLwlfmoexnfmOutdsn"></a></p>
+  <p id="idLwlfmoexnfmOutnam">name::
+    <br>* Mcs.Wlfmlen'output-form,
+    <a class="clsHide" href="#idLwlfmoexnfmOutnam"></a></p>
+  </section>
+
   <section id="idLwlfmoexnfminl">
-  <h4 id="idLwlfmoexnfminlH4">internal-form of Wlfmlen
-    <a class="clsHide" href="#idLwlfmoexnfminlH4"></a></h4>
+  <h5 id="idLwlfmoexnfminlH5">internal-form of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfminlH5"></a></h5>
   <p id="idLwlfmoexnfminldsn">description::
     <br>"The Wolfram Language allows you to use special notation for many common operators. For example, although internally the Wolfram System represents a sum of two terms as Plus[x,y], you can enter this expression in the much more convenient form x+y.
     <br>... The Wolfram Language has a definite grammar that specifies how your input should be converted to internal form."
@@ -9505,8 +9553,8 @@
     <a class="clsHide" href="#idLwlfmoexnfminlnam"></a></p>
 
   <section id="idLwlfmoexnfmbnr">
-  <h5 id="idLwlfmoexnfmbnrH5">binary-form of Wlfmlen
-    <a class="clsHide" href="#idLwlfmoexnfmbnrH5"></a></h5>
+  <h6 id="idLwlfmoexnfmbnrH6">binary-form of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmbnrH6"></a></h6>
   <p id="idLwlfmoexnfmbnrdsn">description::
     <br>"A Wolfram Language expression internally consists of a contiguous array of pointers, the first to the head, and the rest to its successive elements.
     <br>Each expression contains a special form of hash code that is used both in pattern matching and evaluation."
@@ -9521,9 +9569,24 @@
   </section>
   </section>
 
+  <section id="idLwlfmoexnfmTdnl">
+  <h5 id="idLwlfmoexnfmTdnlH5">TraditionalForm of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmTdnlH5"></a></h5>
+  <p id="idLwlfmoexnfmTdnldsn">description::
+    <br>"TraditionalForm differs from StandardForm, the default format for input and output. It is important to understand that TraditionalForm expressions cannot always be provided as unambiguous input to the Wolfram System. Therefore, while StandardForm is an input format and an output format, TraditionalForm is primarily intended as an output format.
+    <br>In general, the TraditionalForm representation of a mathematical function differs from its StandardForm representation in two ways: function arguments are enclosed in parentheses rather than square brackets, and one-character variable and function names are set in italics rather than plain text.
+    <br>In addition to these general differences, TraditionalForm transforms a large group of expressions into their conventionally used mathematical notation."
+    <br>[{2021-02-18} https://reference.wolfram.com/language/tutorial/TraditionalFormReferenceInformation.html]
+    <a class="clsHide" href="#idLwlfmoexnfmTdnldsn"></a></p>
+  <p id="idLwlfmoexnfmTdnlnam">name::
+    <br>* Mcs.Wlfmlen'TraditionalForm,
+    <br>* Mcs.lagWlfm'TraditionalForm,
+    <a class="clsHide" href="#idLwlfmoexnfmTdnlnam"></a></p>
+  </section>
+
   <section id="idLwlfmoexnfmful">
-  <h4 id="idLwlfmoexnfmfulH4">full-form of Wlfmlen
-    <a class="clsHide" href="#idLwlfmoexnfmfulH4"></a></h4>
+  <h5 id="idLwlfmoexnfmfulH5">full-form of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmfulH5"></a></h5>
   <p id="idLwlfmoexnfmfuldsn">description::
     <br>·
     <a class="clsHide" href="#idLwlfmoexnfmfuldsn"></a></p>
@@ -9533,8 +9596,8 @@
   </section>
 
   <section id="idLwlfmoexnfmtre">
-  <h4 id="idLwlfmoexnfmtreH4">tree-form of Wlfmlen
-    <a class="clsHide" href="#idLwlfmoexnfmtreH4"></a></h4>
+  <h5 id="idLwlfmoexnfmtreH5">tree-form of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmtreH5"></a></h5>
   <p id="idLwlfmoexnfmtredsn">description::
     <br>"You can think of any Wolfram Language expression as a tree."
     <br>[http://reference.wolfram.com/language/tutorial/ExpressionsAsTrees.html]
@@ -9542,6 +9605,77 @@
   <p id="idLwlfmoexnfmtrenam">name::
     <br>* Mcs.Wlfmlen'tree-form,
     <a class="clsHide" href="#idLwlfmoexnfmtrenam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnfmTex">
+  <h5 id="idLwlfmoexnfmTexH5">TeXForm of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmTexH5"></a></h5>
+  <p id="idLwlfmoexnfmTexdsn">description::
+    <br>TeXForm[x^2 + Sqrt[y]] >> x^2+\sqrt{y}
+    <a class="clsHide" href="#idLwlfmoexnfmTexdsn"></a></p>
+  <p id="idLwlfmoexnfmTexnam">name::
+    <br>* Mcs.Wlfmlen'TeXForm,
+    <br>* Mcs.lagWlfm'TeXForm,
+    <a class="clsHide" href="#idLwlfmoexnfmTexnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnfmMtml">
+  <h5 id="idLwlfmoexnfmMtmlH5">MathMLForm of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmMtmlH5"></a></h5>
+  <p id="idLwlfmoexnfmMtmldsn">description::
+    <br>·
+    <a class="clsHide" href="#idLwlfmoexnfmMtmldsn"></a></p>
+  <p id="idLwlfmoexnfmMtmlnam">name::
+    <br>* Mcs.Wlfmlen'MathMLForm,
+    <br>* Mcs.lagWlfm'MathMLForm,
+    <a class="clsHide" href="#idLwlfmoexnfmMtmlnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnfmGrid">
+  <h5 id="idLwlfmoexnfmGridH5">Grid of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmGridH5"></a></h5>
+  <p id="idLwlfmoexnfmGriddsn">description::
+    <br>· Grid[{{1,2,3},{4,5,6}}], output like table.
+    <a class="clsHide" href="#idLwlfmoexnfmGriddsn"></a></p>
+  <p id="idLwlfmoexnfmGridnam">name::
+    <br>* Mcs.Wlfmlen'Grid,
+    <a class="clsHide" href="#idLwlfmoexnfmGridnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnfmTbl">
+  <h5 id="idLwlfmoexnfmTblH5">TableForm of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmTblH5"></a></h5>
+  <p id="idLwlfmoexnfmTbldsn">description::
+    <br>· TableForm[{{1,2,3},{4,5,6}}]
+    <a class="clsHide" href="#idLwlfmoexnfmTbldsn"></a></p>
+  <p id="idLwlfmoexnfmTblnam">name::
+    <br>* Mcs.Wlfmlen'TableForm,
+    <a class="clsHide" href="#idLwlfmoexnfmTblnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnfmC">
+  <h5 id="idLwlfmoexnfmCH5">CForm of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmCH5"></a></h5>
+  <p id="idLwlfmoexnfmCdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLwlfmoexnfmCdsn"></a></p>
+  <p id="idLwlfmoexnfmCnam">name::
+    <br>* Mcs.Wlfmlen'CForm,
+    <br>* Mcs.lagWlfm'CForm,
+    <a class="clsHide" href="#idLwlfmoexnfmCnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoexnfmFrtn">
+  <h5 id="idLwlfmoexnfmFrtnH5">FortranForm of Wlfmlen
+    <a class="clsHide" href="#idLwlfmoexnfmFrtnH5"></a></h5>
+  <p id="idLwlfmoexnfmFrtndsn">description::
+    <br>·
+    <a class="clsHide" href="#idLwlfmoexnfmFrtndsn"></a></p>
+  <p id="idLwlfmoexnfmFrtnnam">name::
+    <br>* Mcs.Wlfmlen'FortranForm,
+    <br>* Mcs.lagWlfm'FortranForm,
+    <a class="clsHide" href="#idLwlfmoexnfmFrtnnam"></a></p>
+  </section>
   </section>
 
   <section id="idLwlfmoexnrscF">
@@ -9886,6 +10020,45 @@
   </section>
   </section>
 
+  <section id="idLwlfmmdl">
+  <h3 id="idLwlfmmdlH3">module of Wlfmloutput
+    <a class="clsHide" href="#idLwlfmmdlH3"></a></h3>
+  <p id="idLwlfmmdldsn">description::
+    <br>"The Wolfram Language normally assumes that all your variables are global. This means that every time you use a name like x, the Wolfram Language normally assumes that you are referring to the same object.
+    <br>Particularly when you write programs, however, you may not want all your variables to be global. You may, for example, want to use the name x to refer to two quite different variables in two different programs. In this case, you need the x in each program to be treated as a local variable.
+    <br>You can set up local variables in the Wolfram Language using modules. Within each module, you can give a list of variables which are to be treated as local to the module."
+    <br>[{2021-02-19} https://reference.wolfram.com/language/tutorial/ModularityAndTheNamingOfThings.html#7693]
+    <a class="clsHide" href="#idLwlfmmdldsn"></a></p>
+  <p id="idLwlfmmdlnam">name::
+    <br>* Mcs.Wlfmloutput'module,
+    <br>* Mcs.lagWlfm'module,
+    <a class="clsHide" href="#idLwlfmmdlnam"></a></p>
+  </section>
+
+  <section id="idLwlfmblk">
+  <h3 id="idLwlfmblkH3">block of Wlfmloutput
+    <a class="clsHide" href="#idLwlfmblkH3"></a></h3>
+  <p id="idLwlfmblkdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLwlfmblkdsn"></a></p>
+  <p id="idLwlfmblknam">name::
+    <br>* Mcs.Wlfmloutput'block,
+    <br>* Mcs.lagWlfm'block,
+    <a class="clsHide" href="#idLwlfmblknam"></a></p>
+  </section>
+
+  <section id="idLwlfmpkg">
+  <h3 id="idLwlfmpkgH3">package of Wlfmloutput
+    <a class="clsHide" href="#idLwlfmpkgH3"></a></h3>
+  <p id="idLwlfmpkgdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLwlfmpkgdsn"></a></p>
+  <p id="idLwlfmpkgnam">name::
+    <br>* Mcs.Wlfmloutput'package,
+    <br>* Mcs.lagWlfm'package,
+    <a class="clsHide" href="#idLwlfmpkgnam"></a></p>
+  </section>
+
   <section id="idLwlfmokb">
   <h3 id="idLwlfmokbH3">knowledge-base of Wlfmloutput
     <a class="clsHide" href="#idLwlfmokbH3"></a></h3>
@@ -9950,9 +10123,42 @@
   </section>
   </section>
 
+  <section id="idLwlfmhmn">
+  <h2 id="idLwlfmhmnH2">human of lagWlfm
+    <a class="clsHide" href="#idLwlfmhmnH2"></a></h2>
+  <p id="idLwlfmhmndsn">description::
+    <br>· any human related to lagWlfm.
+    <a class="clsHide" href="#idLwlfmhmndsn"></a></p>
+  <p id="idLwlfmhmnnam">name::
+    <br>* Mcs.Wlfmlhmn,
+    <br>* Mcs.lagWlfm'human!⇒Wlfmlhmn,
+    <a class="clsHide" href="#idLwlfmhmnnam"></a></p>
+
+  <section id="idLwlfmhmnWmSn1959">
+  <h3 id="idLwlfmhmnWmSn1959H3">Wlfmlhmn.Wolfram.Stephen.1959
+    <a class="clsHide" href="#idLwlfmhmnWmSn1959H3"></a></h3>
+  <p id="idLwlfmhmnWmSn1959dsn">description::
+    <br>"Stephen Wolfram (/ˈwʊlfrəm/; born 29 August 1959) is a British-American[6] computer scientist, physicist, and businessman. He is known for his work in computer science, mathematics, and in theoretical physics.[7][8] In 2012, he was named an inaugural fellow of the American Mathematical Society.[9]
+    <br>As a businessman, he is the founder and CEO of the software company Wolfram Research where he worked as chief designer of Mathematica and the Wolfram Alpha answer engine. His recent work has been on knowledge-based programming, expanding and refining the Wolfram Language, which is the programming language of the mathematical symbolic computation program Mathematica."
+    <br>[{2021-02-18} https://en.wikipedia.org/wiki/Stephen_Wolfram]
+    <a class="clsHide" href="#idLwlfmhmnWmSn1959dsn"></a></p>
+  <p id="idLwlfmhmnWmSn1959nam">name::
+    <br>* Mcs.Stephen-Wolfram.1959,
+    <br>* Mcs.Wolfram.Stephen.1959,
+    <br>* Mcs.human.Wolfram.Stephen.1959,
+    <a class="clsHide" href="#idLwlfmhmnWmSn1959nam"></a></p>
+  </section>
+  </section>
+
   <section id="idLwlfmeval">
   <h2 id="idLwlfmevalH2">evaluation of lagWlfm
     <a class="clsHide" href="#idLwlfmevalH2"></a></h2>
+  <p id="idLwlfmevaldsn">description::
+    <br>·
+    <a class="clsHide" href="#idLwlfmevaldsn"></a></p>
+  <p id="idLwlfmevalnam">name::
+    <br>* Mcs.lagWlfm'evaluation,
+    <a class="clsHide" href="#idLwlfmevalnam"></a></p>
   </section>
 
   <section id="idLwlfmWmrch">
@@ -10038,9 +10244,14 @@
     <br>"The Wolfram Language is first and foremost an evolution of the symbolic language developed for Mathematica over the course of more than 25 years. But it's considerably more than that—adding the knowledge, knowledge representation and natural language abilities of Wolfram|Alpha, as well as a new symbolic deployment mechanism created with the Wolfram Cloud."
     <br>[http://www.wolfram.com/language/for-experts/]
     <a class="clsHide" href="#idLwlfmevgFdsn"></a></p>
+  <p id="idLwlfmevg20201216">{2020-12-16}-lagWlfm-12.2::
+    <br>"When we released Version 12.1 in March of this year, I was pleased to be able to say that with its 182 new functions it was the biggest .1 release we’d ever had. But just nine months later, we’ve got an even bigger .1 release! Version 12.2, launching today, has 228 completely new functions!"
+    <br>[{2021-02-14} https://writings.stephenwolfram.com/2020/12/launching-version-12-2-of-wolfram-language-mathematica-228-new-functions-and-much-more/]
+    <a class="clsHide" href="#idLwlfmevg20201216"></a></p>
   <p id="idLwlfmevg1988">{2014}-lagWlfm-multi-paradigm::
     <br>"In June 2014, Wolfram Research officially introduced the Wolfram Language as a new general multi-paradigm programming language.[11] It is the primary programming language used in Mathematica.[12]"
     <br>[{2021-02-14} https://en.wikipedia.org/wiki/Wolfram_Research]
+    <a class="clsHide" href="#idLwlfmevg1988"></a></p>
   <p id="idLwlfmevg1988">{2009}-lagWlfm-WolframAlpha::
     <br>"An online frontend for the language, WolframAlpha, was released in 2009. Wolfram implemented this website by translating natural language statements into Wolfram-language queries that link to its database. This frontend greatly enlarged the audience of the language, and the work leading to Wolfram Alpha also means that Wolfram's implementation of the language now has built-in access to a knowledge-base as well as natural language processing functions. Wolfram also added features for more complex tasks, such as 3D modeling.[13]"
     <br>[{2021-02-14} https://en.wikipedia.org/wiki/Wolfram_Language]
