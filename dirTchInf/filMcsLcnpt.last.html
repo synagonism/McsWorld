@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCnpt-(0-41-0.2021-02-21 draft) concept-language</title>
+  <title>Mcs.lagCnpt-(0-43-0.2021-02-23 draft) concept-language</title>
   <meta name="keywords" content="concept-language, lagCnpt, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -9016,6 +9016,7 @@
   <p id="idLwlfmuiNtbkshctdsn">description::
     <br>* = — at beginning of input: specify a complete computation using natural language.
     <br>* Ctrl+= — translate from natural language anywhere in Wolfram Language input.
+    <br> — specify an entity using natural language.
     <br>* Ctrl+Shift+e — toggle between formatted display and underlying symbolic expression
     <a class="clsHide" href="#idLwlfmuiNtbkshctdsn"></a></p>
   <p id="idLwlfmuiNtbkshctnam">name::
@@ -9067,6 +9068,7 @@
     <br>* https://reference.wolfram.com/language/guide/SpecialCharacters.html,
     <br>* https://www.wolfram.com/wolfram-u/introduction-to-notebooks/,
     <br>* https://reference.wolfram.com/language/guide/NotebookShortcuts.html,
+    <br>* embed in webpages: https://reference.wolfram.com/language/WolframNotebookEmbedder/,
     <a class="clsHide" href="#idLwlfmuiNtbkrscFdsn"></a></p>
   <p id="idLwlfmuiNtbkrscFnam">name::
     <br>* Mcs.Wlfmlnbi'Infrsc,
@@ -10235,6 +10237,20 @@
     <br>* Mcs.lagWlfm'list!⇒Wlfmllt,
     <a class="clsHide" href="#idLwlfmolstnam"></a></p>
 
+  <section id="idLwlfmolstprt">
+  <h4 id="idLwlfmolstprtH4">part of Wlfmllt
+    <a class="clsHide" href="#idLwlfmolstprtH4"></a></h4>
+  <p id="idLwlfmolstprtdsn">description::
+    <br>"Parts of lists are indexed starting at 1, and can be extracted using [[ ... ]]"
+    <br>[{2021-02-21} https://www.wolfram.com/language/fast-introduction-for-programmers/en/lists/]
+    <br>· {a,b,c}[[1]] » a
+    <br>· {a,b,c}[[3]] » c
+    <a class="clsHide" href="#idLwlfmolstprtdsn"></a></p>
+  <p id="idLwlfmolstprtnam">name::
+    <br>* Mcs.Wlfmllt'part,
+    <a class="clsHide" href="#idLwlfmolstprtnam"></a></p>
+  </section>
+
   <section id="idLwlfmolstfn">
   <h4 id="idLwlfmolstfnH4">functions of Wlfmllt
     <a class="clsHide" href="#idLwlfmolstfnH4"></a></h4>
@@ -10275,6 +10291,47 @@
     <br>* Mcs.association!/lagWlfm!⇒Wlfmlan,
     <br>* Mcs.lagWlfm'association!⇒Wlfmlan,
     <a class="clsHide" href="#idLwlfmoasnnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoEntt">
+  <h3 id="idLwlfmoEnttH3">Entity of Wlfmloutput
+    <a class="clsHide" href="#idLwlfmoEnttH3"></a></h3>
+  <p id="idLwlfmoEnttdsn">description::
+    <br>· Entity["Country", "Greece"]
+    <br>"The Wolfram Language provides access to curated, computable data about millions of entities across hundreds of entity types.
+    <br>Wolfram Language entities represent physical entities as well as mathematical and other scientific concepts, and can be accessed via natural language input or programmatically retrieved and incorporated into complex computations.
+    <br>Custom and dynamic entity types can also be introduced, from external entity stores, relational databases, etc.
+    Entity — symbolic representation of an entity"
+    <br>[{2021-02-22} https://reference.wolfram.com/language/guide/EntityTypes.html]
+    <a class="clsHide" href="#idLwlfmoEnttdsn"></a></p>
+  <p id="idLwlfmoEnttnam">name::
+    <br>* Mcs.Entity!/lagWlfm!⇒WlfmlEntity,
+    <br>* Mcs.WlfmlEntity,
+    <br>* Mcs.Wlfmloutput'Entity!⇒WlfmlEntity,
+    <a class="clsHide" href="#idLwlfmoEnttnam"></a></p>
+
+  <section id="idLwlfmoEntt">
+  <h4 id="idLwlfmoEnttH4">attribute of WlfmlEntity
+    <a class="clsHide" href="#idLwlfmoEnttH4"></a></h4>
+  <p id="idLwlfmoEnttdsn">description::
+    <br>· Entity["Country","Greece"]["Population"] » 10473452 people
+    <br>· EntityValue[Entity["Country","Greece"],"Population"] » 10473452 people
+    <a class="clsHide" href="#idLwlfmoEnttdsn"></a></p>
+  <p id="idLwlfmoEnttnam">name::
+    <br>* Mcs.WlfmlEntity'attribute,
+    <a class="clsHide" href="#idLwlfmoEnttnam"></a></p>
+  </section>
+
+  <section id="idLwlfmoEnttSpc">
+  <h4 id="idLwlfmoEnttSpcH4">WlfmlEntity.SPECIFIC
+    <a class="clsHide" href="#idLwlfmoEnttSpcH4"></a></h4>
+  <p id="idLwlfmoEnttSpcdsn">description::
+    <br>* https://reference.wolfram.com/language/guide/EntityTypes.html,
+    <a class="clsHide" href="#idLwlfmoEnttSpcdsn"></a></p>
+  <p id="idLwlfmoEnttSpcnam">name::
+    <br>* Mcs.WlfmlEntity.specific,
+    <a class="clsHide" href="#idLwlfmoEnttSpcnam"></a></p>
+  </section>
   </section>
 
   <section id="idLwlfmoptn">

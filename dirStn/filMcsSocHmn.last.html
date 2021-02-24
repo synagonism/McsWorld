@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.society-(0-53-0.2021-02-03 draft) human-society</title>
+  <title>Mcs.society-(0-54-0.2021-02-23 draft) human-society</title>
   <meta name="keywords" content="human-society, society, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -27,6 +27,7 @@
   <p id="idName">name::
     <br>* Mcs.filMcsSocHmn.last.html!⇒society,
     <br>* Mcs.dirStn/filMcsSocHmn.last.html!⇒society,
+    <br>* Mcs.country!⇒society,
     <br>* Mcs.human-society!⇒society,
     <br>* Mcs.nation!⇒society,
     <br>* Mcs.state!⇒society,
@@ -103,7 +104,8 @@
     <br>* Mcs.member-of-society!⇒Socmbr,
     <br>* Mcs.society'member!⇒Socmbr,
     <br>* Mcs.society'att001-member!⇒Socmbr,
-    <br>* Mcs.society'member-att001!⇒Socmbr,
+    <br>* Mcs.society'member!⇒Socmbr,
+    <br>* Mcs.society/member!⇒Socmbr,
     <br>* Mcs.society'human-member!⇒Socmbr,
     <br>====== langoGreek:
     <br>* McsEll.πολίτης!=Socmbr,
@@ -121,6 +123,7 @@
     <br>* Mcs.human'citizenship!⇒citizenship,
     <br>* Mcs.society'att015-citizenship!⇒citizenship,
     <br>* Mcs.society'citizenship!⇒citizenship,
+    <br>* Mcs.society/citizenship!⇒citizenship,
     <br>====== langoGreek:
     <br>* McsEll.ιθαγένεια!=citizenship,
     <br>* McsEll.υπηκοότητα!=citizenship, (old),
@@ -132,6 +135,41 @@
     <a class="clsHide" href="#idSocmbrrghtH3"></a></h3>
   </section>
 
+  <section id="idSocmbrAggrdst">
+  <h3 id="idSocmbrAggrdstH3">population-density of Socmbr
+    <a class="clsHide" href="#idSocmbrAggrdstH3"></a></h3>
+  <p id="idSocmbrAggrdstdsn">description::
+    <br>· people per square-kilometer.
+    <a class="clsHide" href="#idSocmbrAggrdstdsn"></a></p>
+  <p id="idSocmbrAggrdstnam">name::
+    <br>* Mcs.Socmbr'population-density,
+    <br>* Mcs.society/population-density,
+    <a class="clsHide" href="#idSocmbrAggrdstnam"></a></p>
+  </section>
+
+  <section id="idSocmbrlfepc">
+  <h3 id="idSocmbrlfepcH3">life-expectancy of Socmbr
+    <a class="clsHide" href="#idSocmbrlfepcH3"></a></h3>
+  <p id="idSocmbrlfepcdsn">description::
+    <br>·
+    <a class="clsHide" href="#idSocmbrlfepcdsn"></a></p>
+  <p id="idSocmbrlfepcnam">name::
+    <br>* Mcs.Socmbr'life-expectancy,
+    <a class="clsHide" href="#idSocmbrlfepcnam"></a></p>
+  </section>
+
+  <section id="idSocmbrmdnag">
+  <h3 id="idSocmbrmdnagH3">median-age of Socmbr
+    <a class="clsHide" href="#idSocmbrmdnagH3"></a></h3>
+  <p id="idSocmbrmdnagdsn">description::
+    <br>"Median age is the age that divides a population into two numerically equally sized groups - that is, half the people are younger than this age and half are older. It is a single index that summarizes the age distribution of a population."
+    <br>[{2021-02-23} https://en.wikipedia.org/wiki/List_of_countries_by_median_age]
+    <a class="clsHide" href="#idSocmbrmdnagdsn"></a></p>
+  <p id="idSocmbrmdnagnam">name::
+    <br>* Mcs.Socmbr'median-age,
+    <a class="clsHide" href="#idSocmbrmdnagnam"></a></p>
+  </section>
+
   <section id="idSocmbrSpc">
   <h3 id="idSocmbrSpcH3">Socmbr.SPECIFIC
     <a class="clsHide" href="#idSocmbrSpcH3"></a></h3>
@@ -141,6 +179,31 @@
   <p id="idSocmbrSpcnam">name::
     <br>* Mcs.Socmbr.specific,
     <a class="clsHide" href="#idSocmbrSpcnam"></a></p>
+  </section>
+
+  <section id="idSocmbrAggr">
+  <h3 id="idSocmbrAggrH3">Socmbr.aggregate
+    <a class="clsHide" href="#idSocmbrAggrH3"></a></h3>
+  <p id="idSocmbrAggrdsn">description::
+    <br>·
+    <a class="clsHide" href="#idSocmbrAggrdsn"></a></p>
+  <p id="idSocmbrAggrnam">name::
+    <br>* Mcs.population//society!⇒society/population,
+    <br>* Mcs.society'aggregate-member!⇒society/population,
+    <br>* Mcs.society'population!⇒society/population,
+    <br>* Mcs.society/population,
+    <a class="clsHide" href="#idSocmbrAggrnam"></a></p>
+
+  <section id="idSocmbrAggrgrt">
+  <h4 id="idSocmbrAggrgrtH4">growth of society/population
+    <a class="clsHide" href="#idSocmbrAggrgrtH4"></a></h4>
+  <p id="idSocmbrAggrgrtdsn">description::
+    <br>· increase/decrease per year.
+    <a class="clsHide" href="#idSocmbrAggrgrtdsn"></a></p>
+  <p id="idSocmbrAggrgrtnam">name::
+    <br>* Mcs.society/population/growth,
+    <a class="clsHide" href="#idSocmbrAggrgrtnam"></a></p>
+  </section>
   </section>
 
   <section id="idSocmbrRsdt">
@@ -393,10 +456,52 @@
     <br>· without <a class="clsPreview" href="../dirLag/filMcsLagHnmd.last.html#idOverview">a-language</a>, there is no society.
     <a class="clsHide" href="#idSocHmnatt009dsn"></a></p>
   <p id="idSocHmnatt009nam">name::
-    <br>* Mcs.society'language,
     <br>* Mcs.society'att009-language,
-    <br>* Mcs.society'language-att009,
+    <br>* Mcs.society'language,
+    <br>* Mcs.society/language,
     <a class="clsHide" href="#idSocHmnatt009nam"></a></p>
+  </section>
+
+  <section id="idSocHmnatt041">
+  <h2 id="idSocHmnatt041H2">ethnic-group of society
+    <a class="clsHide" href="#idSocHmnatt041H2"></a></h2>
+  <p id="idSocHmnatt041dsn">description::
+    <br>"An ethnic group or ethnicity is a grouping of people who identify with each other on the basis of shared attributes that distinguish them from other groups such as a common set of traditions, ancestry, language, history, society, culture, nation, religion, or social treatment within their residing area.[1][2][3] Ethnicity is sometimes used interchangeably with the term nation, particularly in cases of ethnic nationalism, and is separate from, but related to the concept of races.
+    <br>Ethnicity can be an inherited status or based on the society within which one lives. Membership of an ethnic group tends to be defined by a shared cultural heritage, ancestry, origin myth, history, homeland, language or dialect, symbolic systems such as religion, mythology and ritual, cuisine, dressing style, art or physical appearance. Ethnic groups often continue to speak related languages and share a similar gene pool."
+    <br>[{2021-02-23} https://en.wikipedia.org/wiki/Ethnic_group]
+    <a class="clsHide" href="#idSocHmnatt041dsn"></a></p>
+  <p id="idSocHmnatt041nam">name::
+    <br>* Mcs.ethnic-group//society,
+    <br>* Mcs.society'att041-ethnic-group,
+    <br>* Mcs.society'ethnic-group,
+    <a class="clsHide" href="#idSocHmnatt041nam"></a></p>
+  </section>
+
+  <section id="idSocHmnatt040">
+  <h2 id="idSocHmnatt040H2">religion of society
+    <a class="clsHide" href="#idSocHmnatt040H2"></a></h2>
+  <p id="idSocHmnatt040dsn">description::
+    <br>·
+    <a class="clsHide" href="#idSocHmnatt040dsn"></a></p>
+  <p id="idSocHmnatt040nam">name::
+    <br>* Mcs.society'att040-religion,
+    <br>* Mcs.society'religion,
+    <br>* Mcs.society/religion,
+    <a class="clsHide" href="#idSocHmnatt040nam"></a></p>
+  </section>
+
+  <section id="idSocHmnatt042">
+  <h2 id="idSocHmnatt042H2">literacy of society
+    <a class="clsHide" href="#idSocHmnatt042H2"></a></h2>
+  <p id="idSocHmnatt042dsn">description::
+    <br>"Literacy is popularly understood as an ability to read and write in at least one method of writing, an understanding reflected by mainstream dictionaries."
+    <br>[{2021-02-23} https://en.wikipedia.org/wiki/Literacy]
+    <a class="clsHide" href="#idSocHmnatt042dsn"></a></p>
+  <p id="idSocHmnatt042nam">name::
+    <br>* Mcs.literacy//society,
+    <br>* Mcs.society'att042-literacy,
+    <br>* Mcs.society'literacy,
+    <a class="clsHide" href="#idSocHmnatt042nam"></a></p>
   </section>
 </section>
 
@@ -1143,6 +1248,87 @@
     <br>* Mcs.society'att012-place,
     <br>* Mcs.society'place,
     <a class="clsHide" href="#idSocHmnatt018nam"></a></p>
+
+  <section id="idSocHmnatt018tlar">
+  <h2 id="idSocHmnatt018tlarH2">total-area of society
+    <a class="clsHide" href="#idSocHmnatt018tlarH2"></a></h2>
+  <p id="idSocHmnatt018tlardsn">description::
+    <br>·
+    <a class="clsHide" href="#idSocHmnatt018tlardsn"></a></p>
+  <p id="idSocHmnatt018tlarnam">name::
+    <br>* Mcs.society'total-area,
+    <a class="clsHide" href="#idSocHmnatt018tlarnam"></a></p>
+  </section>
+
+  <section id="idSocHmnatt018ldar">
+  <h2 id="idSocHmnatt018ldarH2">land-area of society
+    <a class="clsHide" href="#idSocHmnatt018ldarH2"></a></h2>
+  <p id="idSocHmnatt018ldardsn">description::
+    <br>·
+    <a class="clsHide" href="#idSocHmnatt018ldardsn"></a></p>
+  <p id="idSocHmnatt018ldarnam">name::
+    <br>* Mcs.society'land-area,
+    <a class="clsHide" href="#idSocHmnatt018ldarnam"></a></p>
+  </section>
+
+  <section id="idSocHmnatt018ctnt">
+  <h2 id="idSocHmnatt018ctntH2">continent of society
+    <a class="clsHide" href="#idSocHmnatt018ctntH2"></a></h2>
+  <p id="idSocHmnatt018ctntdsn">description::
+    <br>·
+    <a class="clsHide" href="#idSocHmnatt018ctntdsn"></a></p>
+  <p id="idSocHmnatt018ctntnam">name::
+    <br>* Mcs.society'continent,
+    <a class="clsHide" href="#idSocHmnatt018ctntnam"></a></p>
+  </section>
+
+  <section id="idSocHmnatt018brst">
+  <h2 id="idSocHmnatt018brstH2">bordering-society of society
+    <a class="clsHide" href="#idSocHmnatt018brstH2"></a></h2>
+  <p id="idSocHmnatt018brstdsn">description::
+    <br>·
+    <a class="clsHide" href="#idSocHmnatt018brstdsn"></a></p>
+  <p id="idSocHmnatt018brstnam">name::
+    <br>* Mcs.society'bordering-society,
+    <a class="clsHide" href="#idSocHmnatt018brstnam"></a></p>
+
+  <section id="idSocHmnatt018brlth">
+  <h3 id="idSocHmnatt018brlthH3">border-length of society
+    <a class="clsHide" href="#idSocHmnatt018brlthH3"></a></h3>
+  <p id="idSocHmnatt018brlthdsn">description::
+    <br>·
+    <a class="clsHide" href="#idSocHmnatt018brlthdsn"></a></p>
+  <p id="idSocHmnatt018brlthnam">name::
+    <br>* Mcs.society'border-length,
+    <a class="clsHide" href="#idSocHmnatt018brlthnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idSocHmnatt043">
+  <h2 id="idSocHmnatt043H2">city of society
+    <a class="clsHide" href="#idSocHmnatt043H2"></a></h2>
+  <p id="idSocHmnatt043dsn">description::
+    <br>·
+    <a class="clsHide" href="#idSocHmnatt043dsn"></a></p>
+  <p id="idSocHmnatt043nam">name::
+    <br>* Mcs.city//society,
+    <br>* Mcs.society'att043-city,
+    <br>* Mcs.society'city,
+    <a class="clsHide" href="#idSocHmnatt043nam"></a></p>
+
+  <section id="idSocHmnatt044">
+  <h3 id="idSocHmnatt044H3">capital-city of society
+    <a class="clsHide" href="#idSocHmnatt044H3"></a></h3>
+  <p id="idSocHmnatt044dsn">description::
+    <br>·
+    <a class="clsHide" href="#idSocHmnatt044dsn"></a></p>
+  <p id="idSocHmnatt044nam">name::
+    <br>* Mcs.capital-city//society,
+    <br>* Mcs.society'att044-capital-city,
+    <br>* Mcs.society'capital-city,
+    <a class="clsHide" href="#idSocHmnatt044nam"></a></p>
+  </section>
+  </section>
 </section>
 
 <section id="idSocHmnatt022">

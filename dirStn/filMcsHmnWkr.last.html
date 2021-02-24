@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.hmnWorker-(0-20-0.2021-01-21 draft) human.worker</title>
+  <title>Mcs.hmnWorker-(0-21-0.2021-02-24 draft) human.worker</title>
   <meta name="keywords" content="human.worker, worker, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -29,6 +29,7 @@
     <br>* Mcs.dirStn/filMcsHmnWkr.last.html!⇒hmnWorker,
     <br>* Mcs.Socecon'03_worker!⇒hmnWorker,
     <br>* Mcs.Socecon'att002-worker!⇒hmnWorker,
+    <br>* Mcs.economy/worker!⇒hmnWorker,
     <br>* Mcs.hmnWorker,
     <br>* Mcs.hmnWorker'(human-worker)!⇒hmnWorker,
     <br>* Mcs.hmnWorker'(wkr)!⇒hmnWorker,
@@ -37,7 +38,8 @@
     <br>* Mcs.wkr!⇒hmnWorker,
     <br>* Mcs.worker!⇒hmnWorker,
     <br>* Mcs.worker.human!⇒hmnWorker,
-    <br>* Mcs.worker-of-economy!⇒hmnWorker,
+    <br>* Mcs.worker//economy!⇒hmnWorker,
+    <br>* Mcs.society/*worker!⇒hmnWorker,
     <a class="clsHide" href="#idName"></a></p>
 </section>
 
@@ -638,11 +640,14 @@
   <h1 id="idWkr004H1">hmnWorker.aggregate-004
     <a class="clsHide" href="#idWkr004H1"></a></h1>
   <p id="idWkr004dsn">description::
-    <br>·
+    <br>"labor force: People ages 15 and older who meet the International Labour Organization definition of the economically active population: those who supply labor for the production of goods and services during a specified period. This includes both the employed and the unemployed. While national practices vary in the treatment of such groups as the armed forces and seasonal or part-time workers, in general the labor force includes the armed forces, the unemployed, and first-time job-seekers, but excludes homemakers and other unpaid caregivers and workers in the informal sector."
+    <br>[{2021-02-24} wolframalpha.com]
     <a class="clsHide" href="#idWkr004dsn"></a></p>
   <p id="idWkr004nam">name::
-    <br>* Mcs.wkrAgg,
     <br>* Mcs.hmnWorker.004-aggregate!⇒wkrAgg,
+    <br>* Mcs.hmnWorker.aggregate!⇒wkrAgg,
+    <br>* Mcs.labor-force!⇒wkrAgg,
+    <br>* Mcs.wkrAgg,
     <br>* Mcs.workforce!⇒wkrAgg,
     <a class="clsHide" href="#idWkr004nam"></a></p>
 </section>
@@ -765,6 +770,20 @@
   </section>
 </section>
 
+<section id="idWkr021">
+  <h1 id="idWkr021H1">hmnWorker.employed.child-021
+    <a class="clsHide" href="#idWkr021H1"></a></h1>
+  <p id="idWkr021dsn">description::
+    <br>"economically active children: Children involved in economic activity for at least one hour in the reference week of the survey."
+    <br>[{2021-02-24} wolframalpha.com]
+    <a class="clsHide" href="#idWkr021dsn"></a></p>
+  <p id="idWkr021nam">name::
+    <br>* Mcs.economically-active-child//economy,
+    <br>* Mcs.wkrEmployed.021-child,
+    <br>* Mcs.wkrEmployed.child,
+    <a class="clsHide" href="#idWkr021nam"></a></p>
+</section>
+
 <section id="idWkr006">
   <h1 id="idWkr006H1">hmnWorker.employedNo-006
     <a class="clsHide" href="#idWkr006H1"></a></h1>
@@ -779,6 +798,29 @@
     <br>* Mcs.hmnWorker.006-employedNo!⇒wkrEmployedNo,
     <br>* Mcs.hmnWorker.employedNo!⇒wkrEmployedNo,
     <a class="clsHide" href="#idWkr006nam"></a></p>
+
+  <section id="idWkr006Agg">
+  <h2 id="idWkr006AggH2">wkrEmployedNo.aggregate
+    <a class="clsHide" href="#idWkr006AggH2"></a></h2>
+  <p id="idWkr006Aggdsn">description::
+    <br>"unemployment rate: The share of the labor force that is without work but available for and seeking employment. Definitions of labor force and unemployment differ by country."
+    <a class="clsHide" href="#idWkr006Aggdsn"></a></p>
+  <p id="idWkr006Aggnam">name::
+    <br>* Mcs.unemployment//economy,
+    <br>* Mcs.wkrEmployedNo.aggregate,
+    <a class="clsHide" href="#idWkr006Aggnam"></a></p>
+
+  <section id="idWkr006Aggltup">
+  <h3 id="idWkr006AggltupH3">long-term-uneployment-percentange
+    <a class="clsHide" href="#idWkr006AggltupH3"></a></h3>
+  <p id="idWkr006Aggltupdsn">description::
+    <br>"long-term unemployment rate: Long-term unemployment refers to the number of people with continuous periods of unemployment extending for a year or longer."
+    <a class="clsHide" href="#idWkr006Aggltupdsn"></a></p>
+  <p id="idWkr006Aggltupnam">name::
+    <br>* Mcs.long-term-unemployment-percentange,
+    <a class="clsHide" href="#idWkr006Aggltupnam"></a></p>
+  </section>
+  </section>
 
   <section id="idWkr018">
   <h2 id="idWkr018H2">wkrEmployedNo.jobseeker
