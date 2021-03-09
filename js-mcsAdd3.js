@@ -43,16 +43,16 @@ var
   bCounter = true,
   bDisqus = false, //on meta-info on dir-pages
   //2. Directory of the-concept (dirCor or else)
-  sDir = 'dirEdu',
-  sDIR = 'DirEud',
+  sDir = 'dirTchInf',
+  sDIR = 'DirTchInf',
   //3. Name of the-title: Ethereum--blockchain-net
-  sN = 'graph-theory',
+  sN = 'Hitp-concept--language',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNS = 'thrGrph',
+  sNS = 'lagHcpt',
   //5. FILE-name: shows relation of another file: SysNet, DtcbnetEth, DnLbr,
-  sNFil = 'ThrGrph',
+  sNFil = 'LagHcpt',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNId = 'ThrGrph';
+  sNId = 'LagHcpt';
 
 s =
   '<!DOCTYPE html>\n' +
