@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagHmcs-(0-2-0.2021-03-10 draft) Hmcs--language</title>
+  <title>Mcs.lagHmcs-(0-3-0.2021-03-12 draft) Hmcs--language</title>
   <meta name="keywords" content="Hmcs-language, lagHmcs, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -99,24 +99,28 @@
     <br>· McsHitp-manager is the-programs we need to manage McsHitp.
     <a class="clsHide" href="#idLagHmcsmngrdsn"></a></p>
   <p id="idLagHmcsmngrnam">name::
-    <br>* Mcs.McsHitp'manager!⇒Hmcsmanager,
-    <br>* Mcs.McsHitp-manager!⇒Hmcsmanager,
-    <br>* Mcs.Hmcsmanager,
-    <br>* Mcs.lagHmcs'manager!⇒Hmcsmanager,
+    <br>* Mcs.McsHitp'manager!⇒Hmcsmgr,
+    <br>* Mcs.McsHitp-manager!⇒Hmcsmgr,
+    <br>* Mcs.Hmcs'manager!⇒Hmcsmgr,
+    <br>* Mcs.Hmcsmanager!⇒Hmcsmgr,
+    <br>* Mcs.Hmcsmgr,
+    <br>* Mcs.Hmcsmngr!⇒Hmcsmgr,
+    <br>* Mcs.Hmcsmgr'(Hmcs-manager)!⇒Hmcsmgr,
+    <br>* Mcs.lagHmcs'manager!⇒Hmcsmgr,
     <a class="clsHide" href="#idLagHmcsmngrnam"></a></p>
-  <p id="idLagHmcsmngrgtr">generic-tree-of-::
+  <p id="idLagHmcsmngrgtr">generic-tree-of-Hmcsmgr::
     <br>* <a class="clsPreview" href="filMcsLagHitp.last.html#idLhitpmgr">Hitp-manager</a>,
     <a class="clsHide" href="#idLagHmcsmngrgtr"></a></p>
 
   <section id="idLagHmcsmngrnijs">
-  <h3 id="idLagHmcsmngrnijsH3">namidx.js of Hmcsmanager
+  <h3 id="idLagHmcsmngrnijsH3">namidx.js of Hmcsmgr
     <a class="clsHide" href="#idLagHmcsmngrnijsH3"></a></h3>
   <p id="idLagHmcsmngrnijsdsn">description::
     <br>· namidx.js is <a class="clsPreview" href="../dirTchInf/filMcsLjn.last.html#idLjnpgm">a-Node.js-program</a> that creates <a class="clsPreview" href="../dirTchInf/filMcsLagHitp.last.html#idLhitpscgnif">the-name-index-files</a> of an-McsHitp-worldview.
     <a class="clsHide" href="#idLagHmcsmngrnijsdsn"></a></p>
   <p id="idLagHmcsmngrnijsnam">name::
-    <br>* Mcs.Hmcsmanager'namidx.js,
-    <br>* Mcs.namidx.js-of-Hmcsmanager,
+    <br>* Mcs.Hmcsmgr'namidx.js,
+    <br>* Mcs.namidx.js-of-Hmcsmgr,
     <a class="clsHide" href="#idLagHmcsmngrnijsnam"></a></p>
   <p id="idLagHmcsmngrnijswpa">addressWpg::
     <br>* https://github.com/synagonism/Mcsw/blob/master/namidx.js,
@@ -131,15 +135,15 @@
   </section>
 
   <section id="idLagHmcsmngrsfjs">
-  <h3 id="idLagHmcsmngrsfjsH3">sftp.js of Hmcsmanager
+  <h3 id="idLagHmcsmngrsfjsH3">sftp.js of Hmcsmgr
     <a class="clsHide" href="#idLagHmcsmngrsfjsH3"></a></h3>
   <p id="idLagHmcsmngrsfjsdsn">description::
     <br>· sftp.js is <a class="clsPreview" href="../dirTchInf/filMcsLjn.last.html#idLjnpgm">a-Node.js-program</a> that sftp the modified local-files to a-remote-site.
     <br>· <a class="clsPreview" href="#idMcsHitpmgrnijs">namidx.js</a> outputs the-sftp.txt-file with the modified local-files.
     <a class="clsHide" href="#idLagHmcsmngrsfjsdsn"></a></p>
   <p id="idLagHmcsmngrsfjsnam">name::
-    <br>* Mcs.Hmcsmanager'sftp.js,
-    <br>* Mcs.sftp.js-of-Hmcsmanager,
+    <br>* Mcs.Hmcsmgr'sftp.js,
+    <br>* Mcs.sftp.js-of-Hmcsmgr,
     <a class="clsHide" href="#idLagHmcsmngrsfjsnam"></a></p>
   <p id="idLagHmcsmngrsfjswpa">addressWpg::
     <br>* https://github.com/synagonism/Mcsw/blob/master/sftp.js,
@@ -506,10 +510,15 @@
     <br>· the-outermost and generic-most Hmcs of ONE user.
     <a class="clsHide" href="#idLagHmcsowdvwdsn"></a></p>
   <p id="idLagHmcsowdvwnam">name::
-    <br>* Mcs.Hmcs-worldview,
-    <br>* Mcs.lagHmcs'output-worldview,
-    <br>* Mcs.worldview.Hmcs,
+    <br>* Mcs.Hmcs'worldview!⇒Hmcswview,
+    <br>* Mcs.Hmcs-worldview!⇒Hmcswview,
+    <br>* Mcs.Hmcswview,
+    <br>* Mcs.lagHmcs'output-worldview!⇒Hmcswview,
+    <br>* Mcs.worldview.Hmcs!⇒Hmcswview,
     <a class="clsHide" href="#idLagHmcsowdvwnam"></a></p>
+  <p id="idLagHmcsowdvwstr">specific-tree-of-Hmcswview::
+    <br>* <a class="clsPreview" href="../filMcsWorld.last.html#idOverview">modelWorldSynagonism</a>,
+    <a class="clsHide" href="#idLagHmcsowdvwstr"></a></p>
   </section>
 
   <section id="idLagHmcsokb">
@@ -519,9 +528,11 @@
     <br>· the-set of Hmcs-worldviews mapped.
     <a class="clsHide" href="#idLagHmcsokbdsn"></a></p>
   <p id="idLagHmcsokbnam">name::
-    <br>* Mcs.Hmcs-baseview,
-    <br>* Mcs.baseview.Hmcs,
-    <br>* Mcs.lagHmcs'output-baseview,
+    <br>* Mcs.Hmcs'baseview!⇒Hmcsbview,
+    <br>* Mcs.Hmcs-baseview!⇒Hmcsbview,
+    <br>* Mcs.Hmcsbview,
+    <br>* Mcs.baseview.Hmcs!⇒Hmcsbview,
+    <br>* Mcs.lagHmcs'output-baseview!⇒Hmcsbview,
     <a class="clsHide" href="#idLagHmcsokbnam"></a></p>
   </section>
 </section>
