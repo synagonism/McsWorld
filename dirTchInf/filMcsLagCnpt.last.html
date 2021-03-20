@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCnpt-(0-48-0.2021-03-18 draft) concept-language</title>
+  <title>Mcs.lagCnpt-(0-50-0.2021-03-20 draft) concept-language</title>
   <meta name="keywords" content="concept-language, lagCnpt, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -22,8 +22,8 @@
   <h1 id="idOverviewH1">overview of lagCnpt
     <a class="clsHide" href="#idOverviewH1"></a></h1>
   <p id="idDescription">description::
-    <br>· concept-language is <a class="clsPreview" href="filMcsLcmpr.last.html#idOverview">a-computer-language</a> that maps structure and doing of <a class="clsPreview" href="../dirLag/filMcsInfHmn.last.html#idInfHmnBrn001Mcpt">mind-concepts</a>.
-    <br>· it is similar with a-human-language on the-input, but it has a-different output which is-understood by computers.
+    <br>· concept-language is <a class="clsPreview" href="../dirLag/filMcsLagHnmd.last.html#idLntrlN">a-constructed-human-language</a> that maps structure and doing of <a class="clsPreview" href="../dirLag/filMcsInfHmn.last.html#idInfHmnBrn001Mcpt">mind-concepts</a>.
+    <br>· it is similar with a-human-language on the-input, but it has a-different output which is-understood by humans and computers today.
     <a class="clsHide" href="#idDescription"></a></p>
   <p id="idName">name::
     <br>* Mcs.filMcsLagCnpt.last.html!⇒lagCnpt,
@@ -263,6 +263,7 @@
     <a class="clsHide" href="#idLagCnptobasedsn"></a></p>
   <p id="idLagCnptobasenam">name::
     <br>* Mcs.Cnptlbase,
+    <br>* Mcs.knowledge-base-of-Cnptlmgr!⇒Cnptlbase,
     <br>* Mcs.lagCnpt'output-base!⇒Cnptlbase,
     <a class="clsHide" href="#idLagCnptobasenam"></a></p>
   </section>
@@ -283,6 +284,7 @@
     <br>* Mcs.Cnptlmanager!⇒Cnptlmgr,
     <br>* Mcs.KRS'(knowledge-representation-system)!⇒Cnptlmgr,
     <br>* Mcs.KnowledgeBased-system!⇒Cnptlmgr,
+    <br>* Mcs.concept-language-manager!⇒Cnptlmgr,
     <br>* Mcs.concept-tech!⇒Cnptlmgr,
     <br>* Mcs.lagCnpt'04_manager!⇒Cnptlmgr,
     <br>* Mcs.lagCnpt'manager!⇒Cnptlmgr,
@@ -339,9 +341,9 @@
     <br>· any program used, part of Cnptlapp.
     <a class="clsHide" href="#idLagCnpttuldsn"></a></p>
   <p id="idLagCnpttulnam">name::
-    <br>* Mcs.Cnpttool,
-    <br>* Mcs.lagCnpt'01_03_tool!⇒Cnpttool,
-    <br>* Mcs.lagCnpt'tool!⇒Cnpttool,
+    <br>* Mcs.Cnptltool,
+    <br>* Mcs.lagCnpt'01_03_tool!⇒Cnptltool,
+    <br>* Mcs.lagCnpt'tool!⇒Cnptltool,
     <br>* Mcs.Cnptlmgr.tool,
     <a class="clsHide" href="#idLagCnpttulnam"></a></p>
   <p id="idLagCnpttulstr">specific-tree-of-::
@@ -366,12 +368,25 @@
     <a class="clsHide" href="#idLagCnptmgrrscFnam"></a></p>
   </section>
 
+  <section id="idLagCnptmgrsrtrF">
+  <h2 id="idLagCnptmgrsrtrFH2">structure of Cnptlmgr
+    <a class="clsHide" href="#idLagCnptmgrsrtrFH2"></a></h2>
+  <p id="idLagCnptmgrsrtrFdsn">description::
+    <br>* <a class="clsPreview" href="#idLagCnpttchsys">tech-system</a>,
+    <br>* <a class="clsPreview" href="#idLagCnptapp">application</a>,
+    <br>* <a class="clsPreview" href="#idLagCnptobase">base</a>,
+    <a class="clsHide" href="#idLagCnptmgrsrtrFdsn"></a></p>
+  <p id="idLagCnptmgrsrtrFnam">name::
+    <br>* Mcs.Cnptlmgr'structure,
+    <a class="clsHide" href="#idLagCnptmgrsrtrFnam"></a></p>
+  </section>
+
   <section id="idLagCnptmgrdngF">
   <h2 id="idLagCnptmgrdngFH2">DOING of Cnptlmgr
     <a class="clsHide" href="#idLagCnptmgrdngFH2"></a></h2>
   <p id="idLagCnptmgrdngFdsn">description::
-    <br>* building-info,
-    <br>* retrieving-info,
+    <br>* building-base,
+    <br>* retrieving-base,
     <br>===
     <br>* development,
     <br>* encoding,
@@ -384,18 +399,162 @@
     <br>* Mcs.Cnptlmgr'doing,
     <a class="clsHide" href="#idLagCnptmgrdngFnam"></a></p>
 
+  <section id="idLagCnptmgrbldg">
+  <h3 id="idLagCnptmgrbldgH3">doing.building-base of Cnptlmgr
+    <a class="clsHide" href="#idLagCnptmgrbldgH3"></a></h3>
+  <p id="idLagCnptmgrbldgdsn">description::
+    <br>· info is subjective, then the-manager must-support the-construction of many worldviews.
+    <br>· info must-be monosemantic and consistent; the-manager must-integrate additions to base and find inconsistencies.
+    <a class="clsHide" href="#idLagCnptmgrbldgdsn"></a></p>
+  <p id="idLagCnptmgrbldgnam">name::
+    <br>* Mcs.Cnptlmgr'building-base,
+    <br>* Mcs.Cnptlmgr'doing.building-base,
+    <br>* Mcs.Cnptlmgr'storing-base,
+    <a class="clsHide" href="#idLagCnptmgrbldgnam"></a></p>
+  <p id="idLagCnptmgrbldgstr">specific-tree-of-Cnptlmgr'building::
+    <br>* acquiring-base,
+    <br>* validating-base,
+    <br>* name-managing,
+    <br>* evoluting-storage,
+    <a class="clsHide" href="#idLagCnptmgrbldgstr"></a></p>
+
+  <section id="idLagCnptmgraqrg">
+  <h4 id="idLagCnptmgraqrgH4">acquiring-info of Cnptlmgr
+    <a class="clsHide" href="#idLagCnptmgraqrgH4"></a></h4>
+  <p id="idLagCnptmgraqrgdsn">description::
+    <br>· the-methods used to qcquire info.
+    <br>* directly by the-authors.
+    <br>* machine-learning: reading|understanding natural-language-texts (law, science) is the-most needed function because to the-unmanaged quantity of texts today.
+    <a class="clsHide" href="#idLagCnptmgraqrgdsn"></a></p>
+  <p id="idLagCnptmgraqrgnam">name::
+    <br>* Mcs.Cnptlmgr'acquiring-base,
+    <br>* Mcs.Cnptlmgr'doing.acquiring-info,
+    <a class="clsHide" href="#idLagCnptmgraqrgnam"></a></p>
+  </section>
+
+  <section id="idLagCnptmgrvldg">
+  <h4 id="idLagCnptmgrvldgH4">validating-base of Cnptlmgr
+    <a class="clsHide" href="#idLagCnptmgrvldgH4"></a></h4>
+  <p id="idLagCnptmgrvldgdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLagCnptmgrvldgdsn"></a></p>
+  <p id="idLagCnptmgrvldgnam">name::
+    <br>* Mcs.Cnptlmgr'validating-base,
+    <a class="clsHide" href="#idLagCnptmgrvldgnam"></a></p>
+  </section>
+
+  <section id="idLagCnptmgrnmng">
+  <h4 id="idLagCnptmgrnmngH4">name-managing of Cnptlmgr
+    <a class="clsHide" href="#idLagCnptmgrnmngH4"></a></h4>
+  <p id="idLagCnptmgrnmngdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLagCnptmgrnmngdsn"></a></p>
+  <p id="idLagCnptmgrnmngnam">name::
+    <br>* Mcs.Cnptlmgr'name-managing,
+    <a class="clsHide" href="#idLagCnptmgrnmngnam"></a></p>
+  </section>
+
+  <section id="idLagCnptmgrevsg">
+  <h4 id="idLagCnptmgrevsgH4">evoluting-storage of Cnptlmgr
+    <a class="clsHide" href="#idLagCnptmgrevsgH4"></a></h4>
+  <p id="idLagCnptmgrevsgdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLagCnptmgrevsgdsn"></a></p>
+  <p id="idLagCnptmgrevsgnam">name::
+    <br>* Mcs.Cnptlmgr'evoluting-storage,
+    <a class="clsHide" href="#idLagCnptmgrevsgnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLagCnptmgrrtrg">
+  <h3 id="idLagCnptmgrrtrgH3">doing.retreiving-base of Cnptlmgr
+    <a class="clsHide" href="#idLagCnptmgrrtrgH3"></a></h3>
+  <p id="idLagCnptmgrrtrgdsn">description::
+    <br>· info retreival must-be easy and intuitive.
+    <a class="clsHide" href="#idLagCnptmgrrtrgdsn"></a></p>
+  <p id="idLagCnptmgrrtrgnam">name::
+    <br>* Mcs.Cnptlmgr'doing.retreiving-base,
+    <br>* Mcs.Cnptlmgr'retreiving-base,
+    <a class="clsHide" href="#idLagCnptmgrrtrgnam"></a></p>
+
+  <section id="idLagCnptmgracsg">
+  <h4 id="idLagCnptmgracsgH4">retreiving.accessing of Cnptlmgr
+    <a class="clsHide" href="#idLagCnptmgracsgH4"></a></h4>
+  <p id="idLagCnptmgracsgdsn">description::
+    <br>· the-manager must-be an-online|internet-system that anyone can-access.
+    <a class="clsHide" href="#idLagCnptmgracsgdsn"></a></p>
+  <p id="idLagCnptmgracsgnam">name::
+    <br>* Mcs.Cnptlmgr'accessing,
+    <br>* Mcs.Cnptlmgr'doing.accessing,
+    <a class="clsHide" href="#idLagCnptmgracsgnam"></a></p>
+  </section>
+
+  <section id="idLagCnptmgrpstg">
+  <h4 id="idLagCnptmgrpstgH4">retreiving.presenting of Cnptlmgr
+    <a class="clsHide" href="#idLagCnptmgrpstgH4"></a></h4>
+  <p id="idLagCnptmgrpstgdsn">description::
+    <br>· the-manager must-present the-base in any-natural-language.
+    <br>· also written and spoken languages must-supported.
+    <br>· evolution of the-base and its referent must-supported.
+    <br>· levels of abstraction also.
+    <a class="clsHide" href="#idLagCnptmgrpstgdsn"></a></p>
+  <p id="idLagCnptmgrpstgnam">name::
+    <br>* Mcs.Cnptlmgr'doing.presenting,
+    <br>* Mcs.Cnptlmgr'presenting,
+    <a class="clsHide" href="#idLagCnptmgrpstgnam"></a></p>
+  </section>
+
+  <section id="idLagCnptmgrnvgg">
+  <h4 id="idLagCnptmgrnvggH4">retreiving.navigating of Cnptlmgr
+    <a class="clsHide" href="#idLagCnptmgrnvggH4"></a></h4>
+  <p id="idLagCnptmgrnvggdsn">description::
+    <br>· intuitive, graphical, textual and spoken user-interface.
+    <br>· quering the-system.
+    <br>· question answering.
+    <br>· table of contents.
+    <a class="clsHide" href="#idLagCnptmgrnvggdsn"></a></p>
+  <p id="idLagCnptmgrnvggnam">name::
+    <br>* Mcs.Cnptlmgr'doing.navigating,
+    <br>* Mcs.Cnptlmgr'navigating,
+    <a class="clsHide" href="#idLagCnptmgrnvggnam"></a></p>
+
   <section id="idLagCnptmgrqrg">
-  <h3 id="idLagCnptmgrqrgH3">doing.quering
-    <a class="clsHide" href="#idLagCnptmgrqrgH3"></a></h3>
+  <h5 id="idLagCnptmgrqrgH5">navigating.quering of Cnptlmgr
+    <a class="clsHide" href="#idLagCnptmgrqrgH5"></a></h5>
+  <p id="idLagCnptmgrqrgdsn">description::
+    <br>· quering in any language written or spoken.
+    <br>· the-manager must-can-search RELATED concepts and not only the-entire base; for example <a class="clsPreview" href="../dirCor/filMcs.last.html#idMcsmAajschg">AAj's-smart-search</a>.
+    <a class="clsHide" href="#idLagCnptmgrqrgdsn"></a></p>
+  <p id="idLagCnptmgrqrgnam">name::
+    <br>* Mcs.Cnptlmgr'doing.quering,
+    <br>* Mcs.Cnptlmgr'finding,
+    <br>* Mcs.Cnptlmgr'quering,
+    <br>* Mcs.Cnptlmgr'searching,
+    <a class="clsHide" href="#idLagCnptmgrqrgnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLagCnptmgrtrlg">
+  <h4 id="idLagCnptmgrtrlgH4">retreiving.translating of Cnptlmgr
+    <a class="clsHide" href="#idLagCnptmgrtrlgH4"></a></h4>
+  <p id="idLagCnptmgrtrlgdsn">description::
+    <br>· the-manager must-can-COMPUTE the-translation of the-base in any natural-language and not just store the-translation.
+    <a class="clsHide" href="#idLagCnptmgrtrlgdsn"></a></p>
+  <p id="idLagCnptmgrtrlgnam">name::
+    <br>* Mcs.Cnptlmgr'doing.translating,
+    <br>* Mcs.Cnptlmgr'translating,
+    <a class="clsHide" href="#idLagCnptmgrtrlgnam"></a></p>
+  </section>
   </section>
 
   <section id="idLagCnptmgrthkg">
-  <h3 id="idLagCnptmgrthkgH3">doing.thinking
+  <h3 id="idLagCnptmgrthkgH3">doing.thinking of Cnptlmgr
     <a class="clsHide" href="#idLagCnptmgrthkgH3"></a></h3>
   <p id="idLagCnptmgrthkgdsn">description::
     <br>· any <a class="clsPreview" href="../dirHlth/filMcsBdyHmn-brn.last.html#idBrnHmndng002">human-thinking</a> done by Cnptlmgr.
     <a class="clsHide" href="#idLagCnptmgrthkgdsn"></a></p>
   <p id="idLagCnptmgrthkgnam">name::
+    <br>* Mcs.Cnptlmgr'computing!⇒Cnptlmgr'thinking,
     <br>* Mcs.Cnptlmgr'doing.thinking!⇒Cnptlmgr'thinking,
     <br>* Mcs.Cnptlmgr'inferencing!⇒Cnptlmgr'thinking,
     <br>* Mcs.Cnptlmgr'reasoning!⇒Cnptlmgr'thinking,
@@ -410,6 +569,7 @@
     <br>* instantiating,
     <br>* integrating,
     <br>* specializing,
+    <br>* <a class="clsPreview" href="#idLagCnptmgrtrlg">translating</a>,
     <a class="clsHide" href="#idLagCnptmgrthkgSpcdsn"></a></p>
   <p id="idLagCnptmgrthkgSpcnam">name::
     <br>* Mcs.Cnptlmgr'thinking.specific,
@@ -467,12 +627,99 @@
   <p id="idLagCnptmgrSpcdsn">description::
     <br>* <a class="clsPreview" href="../dirCor/filMcs.last.html#idMcsm">Mcsmgr</a>,
     <br>** <a class="clsPreview" href="filMcsLagHmcs.last.html#idLagHmcsmngr">Hmcsmgr</a>,
-    <br>===
+    <br>=== generic:
     <br>* artificial-intelligence-system,
+    <br>* collaborative-system,
+    <br>* conceptual-graphs-system,
+    <br>* decision-support-system,
+    <br>* Description-logic-system,
+    <br>* Design-system,
+    <br>* Diagnosis-system,
+    <br>* Expert-system,
+    <br>* Frame-based-system,
+    <br>* Java-system,
+    <br>* Lisp-system,
+    <br>* logic-system,
+    <br>* Mcsmgr,
+    <br>* ontology-system,
+    <br>* planning/scheduling-system,
+    <br>* process-control-system,
+    <br>* rule-based-system,
+    <br>* Smalltalk-system,
+    <br>* web-system,
+    <br>=== individual:
+    <br>* CODE4,
+    <br>* ConceptBase,
+    <br>* Cyc,
+    <br>* McsmgrAAj,
+    <br>* McsmgrHitp,
+    <br>* McsmgrFv,
+    <br>* Protege,
+    <br>* WolframAlpha,
+    <br>* WordNet,
     <a class="clsHide" href="#idLagCnptmgrSpcdsn"></a></p>
   <p id="idLagCnptmgrSpcnam">name::
     <br>* Mcs.Cnptlmgr.specific,
     <a class="clsHide" href="#idLagCnptmgrSpcnam"></a></p>
+
+  <section id="idLagCnptmgrSdLcpt">
+  <h3 id="idLagCnptmgrSdLcptH3">Cnptlmgr.specs-division.on-lagConcept
+    <a class="clsHide" href="#idLagCnptmgrSdLcptH3"></a></h3>
+  <p id="idLagCnptmgrSdLcptdsn">description::
+    <br>· controlled-natural-language,
+    <br>· frame-based,
+    <br>· logic-based,
+    <br>· rule-based,
+    <br>· semantic-network,
+    <a class="clsHide" href="#idLagCnptmgrSdLcptdsn"></a></p>
+  <p id="idLagCnptmgrSdLcptnam">name::
+    <br>* Mcs.Cnptlmgr.specs-division.on-lagConcept,
+    <a class="clsHide" href="#idLagCnptmgrSdLcptnam"></a></p>
+  </section>
+
+  <section id="idLagCnptmgrSdLprg">
+  <h3 id="idLagCnptmgrSdLprgH3">Cnptlmgr.specs-division.on-lagPrograming
+    <a class="clsHide" href="#idLagCnptmgrSdLprgH3"></a></h3>
+  <p id="idLagCnptmgrSdLprgdsn">description::
+    <br>* C++-system,
+    <br>* Java-system,
+    <br>* Lisp-system,
+    <br>* Prolog-system,
+    <br>* Smalltalk-system,
+    <a class="clsHide" href="#idLagCnptmgrSdLprgdsn"></a></p>
+  <p id="idLagCnptmgrSdLprgnam">name::
+    <br>* Mcs.Cnptlmgr.specs-division.on-lagPrograming,
+    <a class="clsHide" href="#idLagCnptmgrSdLprgnam"></a></p>
+  </section>
+
+  <section id="idLagCnptmgrSdInpt">
+  <h3 id="idLagCnptmgrSdInptH3">Cnptlmgr.specs-division.on-input-info
+    <a class="clsHide" href="#idLagCnptmgrSdInptH3"></a></h3>
+  <p id="idLagCnptmgrSdInptdsn">description::
+    <br>* geography-system,
+    <br>* history-system,
+    <br>* infotech-system,
+    <br>* med-system,
+    <br>* physics-system,
+    <br>* worldview-system,
+    <a class="clsHide" href="#idLagCnptmgrSdInptdsn"></a></p>
+  <p id="idLagCnptmgrSdInptnam">name::
+    <br>* Mcs.Cnptlmgr.specs-division.on-input-info,
+    <a class="clsHide" href="#idLagCnptmgrSdInptnam"></a></p>
+  </section>
+
+  <section id="idLagCnptmgrSdCntr">
+  <h3 id="idLagCnptmgrSdCntrH3">Cnptlmgr.specs-division.on-country
+    <a class="clsHide" href="#idLagCnptmgrSdCntrH3"></a></h3>
+  <p id="idLagCnptmgrSdCntrdsn">description::
+    <br>* Canada-system,
+    <br>* Eu-system,
+    <br>* Usa-system,
+    <a class="clsHide" href="#idLagCnptmgrSdCntrdsn"></a></p>
+  <p id="idLagCnptmgrSdCntrnam">name::
+    <br>* Mcs.Cnptlmgr.specs-division.on-country,
+    <a class="clsHide" href="#idLagCnptmgrSdCntrnam"></a></p>
+  </section>
   </section>
 </section>
 
@@ -486,33 +733,46 @@
     <br>* Mcs.lagCnpt'05_evaluation,
     <br>* Mcs.lagCnpt'evaluation,
     <a class="clsHide" href="#idLagCnptevalnam"></a></p>
+
+  <section id="idLagCnptexpveff">
+  <h2 id="idLagCnptexpveffH2">expressiveness-vs-efficiency of lagCnpt
+    <a class="clsHide" href="#idLagCnptexpveffH2"></a></h2>
+  <p id="idLagCnptexpveffdsn">description::
+    <br>"Expressiveness in a representation language is the ability to express facts, rules, and relationships quickly, easily, and in a principled and factored way.
+    <br>Efficiency in a representation language is the ability to conclude new facts from existing facts as quickly and easily as possible, with as much coverage as possible...
+    <br>Most natural languages, for example English, would have a high expressiveness but a low efficiency if used as a knowledge representation language". <br>[http://www.cyc.com/doc/handbook/oe/06-el-hl-and-the-canonicalizer.html]
+    <a class="clsHide" href="#idLagCnptexpveffdsn"></a></p>
+  <p id="idLagCnptexpveffnam">name::
+    <br>* Mcs.lagCnpt'expressiveness-vs-efficiency,
+    <a class="clsHide" href="#idLagCnptexpveffnam"></a></p>
+  </section>
 </section>
 
-<section id="idLagCnptrscF">
-  <h1 id="idLagCnptrscFH1">Infrsc of lagCnpt
-    <a class="clsHide" href="#idLagCnptrscFH1"></a></h1>
-  <p id="idLagCnptrscnam">name::
-    <br>* Mcs.Cnptrsc,
-    <br>* Mcs.lagCnpt'Infrsc!⇒Cnptrsc,
-    <a class="clsHide" href="#idLagCnptrscnam"></a></p>
-  <p id="idLagCnptrscwpa">addressWpg::
+<section id="idLagCnptlrscF">
+  <h1 id="idLagCnptlrscFH1">Infrsc of lagCnpt
+    <a class="clsHide" href="#idLagCnptlrscFH1"></a></h1>
+  <p id="idLagCnptlrscnam">name::
+    <br>* Mcs.Cnptlrsc,
+    <br>* Mcs.lagCnpt'Infrsc!⇒Cnptlrsc,
+    <a class="clsHide" href="#idLagCnptlrscnam"></a></p>
+  <p id="idLagCnptlrscwpa">addressWpg::
     <br>*
-    <a class="clsHide" href="#idLagCnptrscwpa"></a></p>
+    <a class="clsHide" href="#idLagCnptlrscwpa"></a></p>
 
   <section id="idLcnpspec">
-  <h2 id="idLcnpspecH2">specification of Cnptrsc
+  <h2 id="idLcnpspecH2">specification of Cnptlrsc
     <a class="clsHide" href="#idLcnpspecH2"></a></h2>
   <p id="idLcnpspecdsn">description::
     <br>· official formal documentation of the-language.
     <a class="clsHide" href="#idLcnpspecdsn"></a></p>
   <p id="idLcnpspecnam">name::
-    <br>* Mcs.Cnptrsc'specification,
+    <br>* Mcs.Cnptlrsc'specification,
     <br>* Mcs.lagCnpt'specification,
     <a class="clsHide" href="#idLcnpspecnam"></a></p>
   </section>
 
   <section id="idLcnpDteg">
-  <h2 id="idLcnpDtegH2">data-exchange-language of Cnptrsc
+  <h2 id="idLcnpDtegH2">data-exchange-language of Cnptlrsc
     <a class="clsHide" href="#idLcnpDtegH2"></a></h2>
   <p id="idLcnpDtegdsn">description::
     <br>"A data interchange (or exchange) language/format is a language that is domain-independent and can be used for data from any kind of discipline.[9] They have "evolved from being markup and display-oriented to further support the encoding of metadata that describes the structural attributes of the information."[10]
@@ -528,35 +788,35 @@
     <br>[{2021-01-11} https://en.wikipedia.org/wiki/Data_exchange]
     <a class="clsHide" href="#idLcnpDtegdsn"></a></p>
   <p id="idLcnpDtegnam">name::
-    <br>* Mcs.Cnptrsc'data-exchange-language,
+    <br>* Mcs.Cnptlrsc'data-exchange-language,
     <br>* Mcs.data-exchange-language,
     <br>* Mcs.lagCnpt'data-exchange-language,
     <a class="clsHide" href="#idLcnpDtegnam"></a></p>
   </section>
 
   <section id="idLcnpMdlg">
-  <h2 id="idLcnpMdlgH2">modeling-language of Cnptrsc
+  <h2 id="idLcnpMdlgH2">modeling-language of Cnptlrsc
     <a class="clsHide" href="#idLcnpMdlgH2"></a></h2>
   <p id="idLcnpMdlgdsn">description::
     <br>"A modeling language is any artificial language that can be used to express information or knowledge or systems in a structure that is defined by a consistent set of rules. The rules are used for interpretation of the meaning of components in the structure."
     <br>[{2021-01-11} https://en.wikipedia.org/wiki/Modeling_language]
     <a class="clsHide" href="#idLcnpMdlgdsn"></a></p>
   <p id="idLcnpMdlgnam">name::
-    <br>* Mcs.Cnptrsc'modeling-language,
+    <br>* Mcs.Cnptlrsc'modeling-language,
     <br>* Mcs.lagCnpt'modeling-language,
     <br>* Mcs.modeling-language,
     <a class="clsHide" href="#idLcnpMdlgnam"></a></p>
   </section>
 
   <section id="idLcnpFcar">
-  <h2 id="idLcnpFcarH2">formal-concept-analysis of Cnptrsc
+  <h2 id="idLcnpFcarH2">formal-concept-analysis of Cnptlrsc
     <a class="clsHide" href="#idLcnpFcarH2"></a></h2>
   <p id="idLcnpFcardsn">description::
     <br>"Formal Concept Analysis (FCA) is a method for data analysis, knowledge representation and information management that is widely unknown among information scientists in the USA even though this technology has a significant potential for applications. FCA was invented by Rudolf Wille in the early 80s (Wille, 1982). For the first 10 years, FCA was developed mainly by a small group of researchers and Wille’s students in Germany. Because of the mathematical nature of most of the publications of that time, knowledge of FCA remained restricted to a group of “insiders”. Through funded research projects, FCA was implemented in several larger-scale applications, most notably an implementation of a knowledge exploration system for civil engineering in cooperation with the Ministry for Civil Engineering of North-Rhine Westfalia (cf. Eschenfelder et al. (2000)). But these applications were not publicized widely beyond Germany."
     <br>[{2021-02-06} https://www.upriss.org.uk/papers/arist.pdf]
     <a class="clsHide" href="#idLcnpFcardsn"></a></p>
   <p id="idLcnpFcarnam">name::
-    <br>* Mcs.Cnptrsc'formal-concept-analysis,
+    <br>* Mcs.Cnptlrsc'formal-concept-analysis,
     <br>* Mcs.FCA'(formal-concept-analysis),
     <br>* Mcs.formal-concept-analysis,
     <a class="clsHide" href="#idLcnpFcarnam"></a></p>
@@ -590,56 +850,78 @@
     <br>=== McsHitp-creation:
     <br>· creation of current <a class="clsPreview" href="../dirCor/filMcs.last.html#idOverview">concept</a>.
     <a class="clsHide" href="#idLagCnptevg20210101"></a></p>
-  <p id="idLagCnptevg20141106">{2014-11-06}-Microsoft-Cortana::
-    <br>· initial release.
-    <br>"Cortana is a virtual assistant developed by Microsoft, which uses the Bing search engine to perform tasks such as setting reminders and answering questions for the user."
-    <br>[{2021-01-26} https://en.wikipedia.org/wiki/Cortana]
-    <a class="clsHide" href="#idLagCnptevg20141106"></a></p>
-  <p id="idLagCnptevg202005">{2020-05}-Google-knowledge-graph::
+  <p id="idLagCnptevg202005">{2020-05}-lagCnpt'Google-knowledge-graph::
     <br>"The information covered by Google's Knowledge Graph grew quickly after launch, tripling its size within seven months (covering 570 million entities and 18 billion facts[3]).
     <br>By mid-2016, Google reported that it held 70 billion facts[4] and answered "roughly one-third" of the 100 billion monthly searches they handled.
     <br>By May 2020, this had grown to 500 billion facts on 5 billion entities.[5]"
     <br>[{2021-01-31} https://en.wikipedia.org/wiki/Google_Knowledge_Graph]
+    <br>* Mcs.{lagCnpt'2020-05}-Google-knowledge-graph,
     <a class="clsHide" href="#idLagCnptevg202005"></a></p>
-  <p id="idLagCnptevg20141106">{2014-04-02}-Amazon-Alexa::
+  <p id="idLagCnptevg20141106">{2014-11-06}-lagCnpt'Microsoft-Cortana::
+    <br>· initial release.
+    <br>"Cortana is a virtual assistant developed by Microsoft, which uses the Bing search engine to perform tasks such as setting reminders and answering questions for the user."
+    <br>[{2021-01-26} https://en.wikipedia.org/wiki/Cortana]
+    <br>* Mcs.{lagCnpt'2014-11-06}-Microsoft-Cortana,
+    <a class="clsHide" href="#idLagCnptevg20141106"></a></p>
+  <p id="idLagCnptevg20141106">{2014-04-02}-lagCnpt'Amazon-Alexa::
     <br>· initial release.
     <br>· Alexa-voice-service-(AVS) provides cloud-based automatic-speech-recognition-(ASR) and natural-language-understanding-(NLU).
     <br>[{2021-01-26} https://en.wikipedia.org/wiki/Amazon_Alexa#Alexa_Voice_Service]
+    <br>* Mcs.{lagCnpt'2014-04-02}-Amazon-Alexa,
     <a class="clsHide" href="#idLagCnptevg20141106"></a></p>
-  <p id="idLagCnptevg20090518">{2009-05-18}-WolframAlpha::
+  <p id="idLagCnptevg20090518">{2009-05-18}-lagCnpt'WolframAlpha::
     <br>· WolframAlpha was-released.
     <br>· it is a-computational-knowledge-engine or answer-engine developed by WolframAlpha-LLC, a-subsidiary of Wolfram-Research.
     <br>· it is an-online-service that answers factual-queries directly by computing the-answer from externally sourced "curated-data", rather than providing a-list of documents or webpages that might contain the-answer, as a-search-engine might.
     <br>[{2021-01-26} https://en.wikipedia.org/wiki/WolframAlpha]
+    <br>* Mcs.{lagCnpt'2009-05-18}-WolframAlpha,
     <a class="clsHide" href="#idLagCnptevg20090518"></a></p>
-  <p id="idLagCnptevg20040210">{2004-02-10}-OWL::
+  <p id="idLagCnptevg20040210">{2004-02-10}-lagCnpt'OWL::
     <br>"The World Wide Web Consortium created the "Web Ontology Working Group" which began work on 2001-11-01 chaired by James Hendler and Guus Schreiber. The first working drafts of the abstract syntax, reference and synopsis were published in July 2002. The OWL documents became a formal W3C recommendation on 2004-02-10 and the working group was disbanded on 2004-05-31.[4]"
     <br>[http://en.wikipedia.org/wiki/Web_Ontology_Language]
+    <br>* Mcs.{lagCnpt'2004-02-10}-OWL,
     <a class="clsHide" href="#idLagCnptevg20040210"></a></p>
-  <p id="idLagCnptevgi101990">{i10-1990}-expert-system::
+  <p id="idLagCnptevgi102000">{i10-2000}-lagCnpt'www::
+    <br>"A number of research efforts during the mid to late 1990s explored how the idea of knowledge representation (KR) from AI could be made useful on the World Wide Web. These included languages based on HTML (called SHOE), XML (called XOL, later OIL), and various frame-based KR languages and knowledge acquisition approaches."
+    <br>[http://en.wikipedia.org/wiki/Web_Ontology_Language]
+    <br>* Mcs.{lagCnpt'i10-2000}-www,
+    <a class="clsHide" href="#idLagCnptevgi102000"></a></p>
+  <p id="idLagCnptevgi101990">{i10-1990}-lagCnpt'expert-system::
     <br>"Rule systems have been implemented and studied since the mid-1970s and saw significant uptake in the 1980s during the height of so-called Expert Systems."
     <br>[{2007-12-02} https://en.wikipedia.org/wiki/Rule_Interchange_Format]
+    <br>"An expert system, also known as a knowledge based system, is a computer program that contains the knowledge and analytical skills of one or more human experts, related to a specific subject. This class of program was first developed by researchers in artificial intelligence during the 1960s and 1970s and applied commercially throughout the 1980s."
+    <br>[http://en.wikipedia.org/wiki/Expert_systems]
+    <br>* Mcs.{lagCnpt'i10-1990}-expert-system,
     <a class="clsHide" href="#idLagCnptevgi101990"></a></p>
-  <p id="idLagCnptevg1984">{1984}-Cyc-project::
+  <p id="idLagCnptevg1984">{1984}-lagCnpt'Cyc-project::
     <br>"In 1984, Doug Lenat started the Cyc Project with the objective of codify, in machine-usable form, millions of pieces of knowledge that comprise human common sense.
     <br>CycL presented a proprietary knowledge representation schema that utilized first-order relationships."
     <br>[{2007-12-02} http://en.wikipedia.org/wiki/Knowledge_Science]
+    <br>* Mcs.{lagCnpt'1984}-Cyc-project,
     <a class="clsHide" href="#idLagCnptevg1984"></a></p>
-  <p id="idLagCnptevgi101980">{i10-1980}-frame-based-representation::
+  <p id="idLagCnptevgi101980">{i10-1980}-lagCnpt'frame-based-representation::
     <br>"In the field of Artificial Intelligence, a frame is a data structure introduced by Marvin Minsky in the 1970s that can be used for knowledge representation.
     <br>Roughly similar to the object-oriented paradigm, they represent classes (called frames) with certain properties called attributes or slots.
     <br>Slots may contain values, refer to other frames (relations) or contain methods.
     <br>Frames are thus a machine-usable formalization of concepts or schemata."
     <br>[http://en.wikipedia.org/wiki/Frame_language]
+    <br>* Mcs.{lagCnpt'i10-1980}-frame-based-representation,
     <a class="clsHide" href="#idLagCnptevgi101980"></a></p>
-  <p id="idLagCnptevg1972">{1972}-Prolog::
+  <p id="idLagCnptevg1972">{1972}-lagCnpt'Prolog::
     <br>"[Prolog]  was developed and implemented in Marseille, France, in 1972 by Alain Colmerauer with Philippe Roussel, based on Robert Kowalski's procedural interpretation of Horn clauses.[5][6]"
     <br>[{2021-01-30} https://en.wikipedia.org/wiki/Prolog]
+    <br>* Mcs.{lagCnpt'1972}-Prolog,
     <a class="clsHide" href="#idLagCnptevg1972"></a></p>
-  <p id="idLagCnptevg1969">{1969}-logic-programing::
+  <p id="idLagCnptevg1969">{1969}-lagCnpt'logic-programing::
     <br>"However, the first proposal to use the clausal form of logic for representing computer programs was made by Cordell Green (1969). This used an axiomatization of a subset of LISP, together with a representation of an input-output relation, to compute the relation by simulating the execution of the program in LISP."
     <br>[http://en.wikipedia.org/wiki/Logic_programming]
+    <br>* Mcs.{lagCnpt'1969}-logic-programing,
     <a class="clsHide" href="#idLagCnptevg1969"></a></p>
+  <p id="idLagCnptevgi101970">{i10-1970}-lagCnpt'frames::
+    <br>"From the 1960s, the knowledge frame or just frame has been used. Each frame has its own name and a set of attributes, or slots which contain values; for instance, the frame for house might contain a color slot, number of floors slot, etc."
+    <br>[http://en.wikipedia.org/wiki/Knowledge_representation]
+    <br>* Mcs.{lagCnpt'i10-1970}-frames,
+    <a class="clsHide" href="#idLagCnptevgi101970"></a></p>
   <p id="idLagCnptevgnam">name::
     <br>* Mcs.lagCnpt'evoluting,
     <a class="clsHide" href="#idLagCnptevgnam"></a></p>
@@ -811,6 +1093,22 @@
     <br>* Mcs.lagCnpt.UML!⇒lagUmlg,
     <br>* Mcs.lagCvsl.UML!⇒lagUmlg,
     <a class="clsHide" href="#idLagCnpt035nam"></a></p>
+  </section>
+
+  <section id="idLagCnpt038">
+  <h2 id="idLagCnpt038H2">lagCvsl.concept-mapping
+    <a class="clsHide" href="#idLagCnpt038H2"></a></h2>
+  <p id="idLagCnpt038dsn">description::
+    <br>"A concept map or conceptual diagram is a diagram that depicts suggested relationships between concepts.[1] Concept maps may be used by instructional designers, engineers, technical writers, and others to organize and structure knowledge.
+    <br>A concept map typically represents ideas and information as boxes or circles, which it connects with labeled arrows, often in a downward-branching hierarchical structure. The relationship between concepts can be articulated in linking phrases such as "causes", "requires", "such as" or "contributes to".[2]
+    <br>The technique for visualizing these relationships among different concepts is called concept mapping. Concept maps have been used to define the ontology of computer systems, for example with the object-role modeling or Unified Modeling Language formalism."
+    <br>[{2021-03-19} https://en.wikipedia.org/wiki/Concept_map]
+    <a class="clsHide" href="#idLagCnpt038dsn"></a></p>
+  <p id="idLagCnpt038nam">name::
+    <br>* Mcs.concept-mapping,
+    <br>* Mcs.lagCnpt.038-concept-mapping,
+    <br>* Mcs.lagCnpt.concept-mapping,
+    <a class="clsHide" href="#idLagCnpt038nam"></a></p>
   </section>
 </section>
 
@@ -4356,7 +4654,7 @@
   <p id="idLagCnpt031evg1976">{1976}-Sowa-Conceptual-Graphs::
     <br>Sowa, John F., Conceptual Graphs for a Data Base Interface, IBM Journal of Research and Development, vol. 20, 1976, pp. 336-357.
     <br>"Sowa (1976) developed a version of conceptual graphs (CGs) as an intermediate language for mapping natural language questions and assertions to a relational database."
-    <br>* Mcs.{lagCnpt-1976}-Sowa-Conceptual-graphs,
+    <br>* Mcs.{lagCnpt'1976}-Sowa-Conceptual-graphs,
     <br>[{2021-02-07} http://www.jfsowa.com/cg/cg_hbook.pdf]
     <a class="clsHide" href="#idLagCnpt031evg1984"></a></p>
   <p id="idLagCnpt031evg1896">{1896}-Existential-Graphs::
@@ -4430,6 +4728,10 @@
     <br>* Mcs.lagPpsl.description-logic!⇒lagDlgc,
     <br>* Mcs.lagPpsl.description-logic!⇒lagDlgc,
     <a class="clsHide" href="#idLagCnpt015nam"></a></p>
+  <p id="idLagCnpt015dsnL">descriptionLong::
+    <br>"Description logic was designed as an extension to frames and semantic networks, which were not equipped with formal logic-based semantics".
+    <br>[http://en.wikipedia.org/wiki/Description_logic]
+    <a class="clsHide" href="#idLagCnpt015dsnL"></a></p>
   </section>
 
   <section id="idLagCnpt026">
@@ -7640,12 +7942,12 @@
     <a class="clsHide" href="#idLxmlgevg201204"></a></p>
   <p id="idLxmlgevg200105">{2001-05}-XML-Schema::
     <br>"XML Schema, published as a W3C recommendation in May 2001,[2] is one of several XML schema languages. It was the first separate schema language for XML to achieve Recommendation status by the W3C. Because of confusion between XML Schema as a specific W3C specification, and the use of the same term to describe schema languages in general, some parts of the user community referred to this language as WXS, an initialism for W3C XML Schema, while others referred to it as XSD, an initialism for XML Schema Definition.[3][4] In Version 1.1 the W3C has chosen to adopt XSD as the preferred name, and that is the name used in this article."
-    <br>* Mcs.{lagCnpt-2001-05}-XML-Schema,
+    <br>* Mcs.{lagCnpt'2001-05}-XML-Schema,
     <br>[{2021-01-14} https://en.wikipedia.org/wiki/XML_Schema_(W3C)]
     <a class="clsHide" href="#idLxmlgevg200105"></a></p>
   <p id="idLxmlgevg1996">{1996}-XML-creation::
     <br>"XML was developed by an XML Working Group (originally known as the SGML Editorial Review Board) formed under the auspices of the World Wide Web Consortium (W3C) in 1996. It was chaired by Jon Bosak of Sun Microsystems with the active participation of an XML Special Interest Group (previously known as the SGML Working Group) also organized by the W3C. The membership of the XML Working Group is given in an appendix. Dan Connolly served as the Working Group's contact with the W3C."
-    <br>* Mcs.{lagCnpt-1996}-XML-creation,
+    <br>* Mcs.{lagCnpt'1996}-XML-creation,
     <br>[{2021-01-12} https://www.w3.org/TR/2006/REC-xml11-20060816/#sec-origin-goals]
     <a class="clsHide" href="#idLxmlgevg1996"></a></p>
   <p id="idLxmlgevgFnam">name::
@@ -9042,7 +9344,7 @@
     <a class="clsHide" href="#idLcyclevg2002"></a></p>
   <p id="idLcyclevg1995">{1995}-CYC-project-Cycorp::
     <br>"Douglas Lenat began the project in July 1984 at MCC, where he was Principal Scientist 1984–1994, and then, since January 1995, has been under active development by the Cycorp company, where he is the CEO."
-    <br>* Mcs.{lagCnpt-1995}-Cyc-project-at-Cycorp,
+    <br>* Mcs.{lagCnpt'1995}-Cyc-project-at-Cycorp,
     <br>[{2021-02-10} https://en.wikipedia.org/wiki/Cyc]
     <a class="clsHide" href="#idLcyclevg1995"></a></p>
   <p id="idLcyclevg1989">{1989}-lagCycl-HOL::
