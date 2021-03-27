@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagMcsh-(0-8-0.2021-03-24 draft) McsHitp-language</title>
+  <title>Mcs.lagMcsh-(0-11-0.2021-03-27 draft) McsHitp-language</title>
   <meta name="keywords" content="Mcsh-language, lagMcsh, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../dirTchInf/dirHitp/hitp.css">
 </head>
@@ -36,6 +36,7 @@
     <br>* Mcs.Mcsh-lag!⇒lagMcsh,
     <br>* Mcs.Mcsh-language!⇒lagMcsh,
     <br>* Mcs.Mcsh-lagCnpt!⇒lagMcsh,
+    <br>* Mcs.Mcshl!⇒lagMcsh,
     <br>* Mcs.lagCnpt.007-McsHitp!⇒lagMcsh,
     <br>* Mcs.lagCnpt.McsHitp!⇒lagMcsh,
     <br>* Mcs.lagHcpt!⇒lagMcsh,
@@ -223,10 +224,11 @@
     <br>[<a class="clsPreview" href="../../#idAboutme">hmnSgm</a>.{2020-12-28}]
     <a class="clsHide" href="#idMcsHitpdtNmvldsn"></a></p>
   <p id="idMcsHitpdtNmvlnam">name::
+    <br>* Mcs.Hmcsnvd!⇒Mcshnvd,
     <br>* Mcs.Mcshnvd,
-    <br>* Mcs.Mcshnvd'(name-value-data)!⇒Hmcsnvd,
-    <br>* Mcs.Mcsh'data.name-value!⇒Hmcsnvd,
-    <br>* Mcs.Mcsh'name-value-data!⇒Hmcsnvd,
+    <br>* Mcs.Mcshnvd'(name-value-data)!⇒Mcshnvd,
+    <br>* Mcs.Mcsh'data.name-value!⇒Mcshnvd,
+    <br>* Mcs.Mcsh'name-value-data!⇒Mcshnvd,
     <a class="clsHide" href="#idMcsHitpdtNmvlnam"></a></p>
   </section>
 
@@ -480,6 +482,7 @@
     <br>* Mcs.Hmcsmngr!⇒McsmgrHitp,
     <br>* Mcs.Mcsh'manager!⇒McsmgrHitp,
     <br>* Mcs.Mcsh-manager!⇒McsmgrHitp,
+    <br>* Mcs.Mcshmgr!⇒McsmgrHitp,
     <br>* Mcs.Mcsmgr.Hitp!⇒McsmgrHitp,
     <br>* Mcs.McsmgrHitp!⇒McsmgrHitp,
     <br>* Mcs.Mcsh'manager!⇒McsmgrHitp,
@@ -489,22 +492,230 @@
     <br>* Mcs.lagMcsh'tech!⇒McsmgrHitp,
     <a class="clsHide" href="#idLagMcshmngrnam"></a></p>
   <p id="idLagMcshmngrgtr">generic-tree-of-McsmgrHitp::
-    <br>* <a class="clsPreview" href="filMcsLagHitp.last.html#idLhitpmgr">Hitp-manager</a>,
+    <br>* <a class="clsPreview" href="filMcsLagHitp.last.html#idLagHitpmgr">Hitp-manager</a>,
     <a class="clsHide" href="#idLagMcshmngrgtr"></a></p>
 
+  <section id="idLagMcshmngrdir">
+  <h2 id="idLagMcshmngrdirH2">dir of McsmgrHitp
+    <a class="clsHide" href="#idLagMcshmngrdirH2"></a></h2>
+  <p id="idLagMcshmngrdirdsn">description::
+    <br>* dirMcs:
+    <br>** cptqnt.root.json,
+    <br>** McsWorld.last.html,
+    <br>** dirVIEW:
+    <br>*** cptqnt.json,
+    <br>*** McsSPECIFIC.last.html,
+    <br>** dirNamidx:
+    <br>*** dirLang:
+    <br>**** namidx.lagSPEC.json,
+    <br>*** abbreviation.html,
+    <br>*** namidx.lagRoot.json,
+    <br>** dirView:
+    <br>** filMcsWorld.last.html,
+    <br>** namdix.js,
+    <br>** namdix.txt,
+    <br>** sftp.js,
+    <a class="clsHide" href="#idLagMcshmngrdirdsn"></a></p>
+  <p id="idLagMcshmngrdirnam">name::
+    <br>* Mcs.McsmgrHitp'dir!⇒Mcshldir,
+    <br>* Mcs.Mcshldir,
+    <a class="clsHide" href="#idLagMcshmngrdirnam"></a></p>
+  </section>
+
+  <section id="idLagMcshmngrfile">
+  <h2 id="idLagMcshmngrfileH2">file of McsmgrHitp
+    <a class="clsHide" href="#idLagMcshmngrfileH2"></a></h2>
+  <p id="idLagMcshmngrfiledsn">description::
+    <br>· any file the-system uses
+    <a class="clsHide" href="#idLagMcshmngrfiledsn"></a></p>
+  <p id="idLagMcshmngrfilenam">name::
+    <br>* Mcs.McsmgrHitp'file!⇒Mcshlfile,
+    <br>* Mcs.Mcshlfile,
+    <a class="clsHide" href="#idLagMcshmngrfilenam"></a></p>
+  <p id="idLagMcshmngrfilestr">specific-tree-of-Mcshlfile::
+    <br>* <a class="clsPreview" href="#idMcsHitpFil">McshFile</a>,
+    <br>* abbreviation.html//dirNamidx//dirMcs,
+    <br>* namidx.lagRoot.json//dirNamidx//dirMcs,
+    <br>* filMcsWorld.last.html//dirMcs,
+    <br>* <a class="clsPreview" href="#idLagMcshmngrnijs">namdix.js//dirMcs</a>,
+    <br>* namdix.txt//dirMcs,
+    <br>* <a class="clsPreview" href="#idLagMcshmngrsfjs">sftp.js//dirMcs</a>,
+    <a class="clsHide" href="#idLagMcshmngrfilestr"></a></p>
+
+  <section id="idLagMcshmngrfileMcshFile">
+  <h3 id="idLagMcshmngrfileMcshFileH3">Mcshlfile.McshFile (<a class="clsPreview" href="#idMcsHitpFil">link</a>)
+    <a class="clsHide" href="#idLagMcshmngrfileMcshFileH3"></a></h3>
+  </section>
+
+  <section id="idLagMcshmngrfileNilagjn">
+  <h3 id="idLagMcshmngrfileNilagjnH3">Mcshlfile.namidx.lag.json
+    <a class="clsHide" href="#idLagMcshmngrfileNilagjnH3"></a></h3>
+  <p id="idLagMcshmngrfileNilagjndsn">description::
+    <br>· name-index-lag-files are the-json-files that contain the-names of sensorial-concepts, orderd per <a class="clsPreview" href="../dirLag/filMcsChar.last.html#idCharUcdstdcp">code-point</a>, per language.
+    <a class="clsHide" href="#idLagMcshmngrfileNilagjndsn"></a></p>
+  <p id="idLagMcshmngrfileNilagjnnam">name::
+    <br>* Mcs.Mcshlfile.namidx.lag.json,
+    <br>* Mcs.name-index-lag-file,
+    <br>* Mcs.name-index-lag-json-Mcshlfile,
+    <br>* Mcs.namidx.lag.json-Mcshlfile,
+    <a class="clsHide" href="#idLagMcshmngrfileNilagjnnam"></a></p>
+
+  <section id="idLagMcshmngrfileNirjn">
+  <h4 id="idLagMcshmngrfileNirjnH4">Mcshlfile.namidx.lagRoot.json
+    <a class="clsHide" href="#idLagMcshmngrfileNirjnH4"></a></h4>
+  <p id="idLagMcshmngrfileNirjndsn">description::
+    <br>· the-names of concepts are-indexed.
+    <br>· they are-stored in files hierarchically.
+    <br>· <code>namidx.lagRoot.json</code> contains the-root-files from ALL languages.
+    <br>· for each language, the-root files are its letter files.
+    <br>· also all languages have and the-<code>namidx.lagLang00.json</code> file which contains the-names that begin without a-letter of that language.
+    <br>· as time passes, these files are-divided into smaller easily
+    downloaded files, creating a-tree-structure by creating one reference and two or more referenceNo namidx.lag-files.
+    <br>· also contains the-quantity of names per letter, per language.
+    <br>× sPath: namidx.lagRoot.json//dirNamidx//dirMcs.
+    <br>× sContent:
+    <pre>
+    [
+      [";lagAGGR",";letter",256492,"2021-03-25","per letter"],
+      ["lagElln",";Greek",4256],
+      ["lagElln00","letterNo",0],
+      ["lagElln01alfa","Α",527],
+      ["lagElln02vita","Β",51],
+      ["lagElln03yama","Γ",99],
+      ...
+      ["lagEngl",";English",252236],
+      ["lagEngl00","letterNo",489],
+      ["lagEngl01ei","A",1723],
+      ["lagEngl02bi","B",1881],
+      ...
+      ["lagSngo",";Sinago",403],
+      ["lagSngo00","letterNo",0],
+      ["lagSngo01po","P",0],
+      ["lagSngo02fo","F",0],
+      ["lagSngo03tho","Θ",0],
+      ...
+    ]
+    </pre>
+    <a class="clsHide" href="#idLagMcshmngrfileNirjndsn"></a></p>
+  <p id="idLagMcshmngrfileNirjnnam">name::
+    <br>* Mcs.Mcshlfile.namidx.lagRoot.json,
+    <br>* Mcs.namidx.lagRoot.json-Mcshlfile,
+    <a class="clsHide" href="#idLagMcshmngrfileNirjnnam"></a></p>
+  </section>
+
+  <section id="idLagMcshmngrfileNilgsjn">
+  <h4 id="idLagMcshmngrfileNilgsjnH4">Mcshlfile.namidx.lagSPEC.json
+    <a class="clsHide" href="#idLagMcshmngrfileNilgsjnH4"></a></h4>
+  <p id="idLagMcshmngrfileNilgsjndsn">description::
+    <br>· contain alphabetically the-names of concepts with their addresses OR references to other namidx-files that contain the-names.
+    <a class="clsHide" href="#idLagMcshmngrfileNilgsjndsn"></a></p>
+  <p id="idLagMcshmngrfileNilgsjnnam">name::
+    <br>* Mcs.Mcshlfile.namidx.lagSPEC.json,
+    <br>* Mcs.namidx.lagSPEC.json-Mcshlfile,
+    <br>* Mcs.namidx.lag-Mcshlfile,
+    <a class="clsHide" href="#idLagMcshmngrfileNilgsjnnam"></a></p>
+  <p id="idLagMcshmngrfileNilgsjnstr">specific-tree-of-::
+    <br>* reference--namidx.lag-Mcshlfile,
+    <br>* referenceNo--namidx.lag-Mcshlfile,
+    <a class="clsHide" href="#idLagMcshmngrfileNilgsjnstr"></a></p>
+
+  <section id="idLagMcshmngrfileNilgRf">
+  <h5 id="idLagMcshmngrfileNilgRfH5">Mcshlfile.namidx.lagSPEC.reference
+    <a class="clsHide" href="#idLagMcshmngrfileNilgRfH5"></a></h5>
+  <p id="idLagMcshmngrfileNilgRfdsn">description::
+    <br>· a-reference-namidx.lag-file does-not-contain names-of-Mcs but references to other namind-files.
+    <br>· when a-namind-file is too big, takes long time to be-downloaded.
+    <br>· then we divide it to smaller easily downloaded files and the-original file is-becoming a-reference-file.
+    <br>· the-name of a-reference-namind-file ends in '<code>namidx.lag..._0.json</code>'.
+    <pre>
+    [
+      [";lagEngl03si_2_0",";char..chas",163141,"2021-03-25","codepoint order"],
+      ["lagEng03si_2_1","char..char.2",11366],
+      ["lagEng03si_2_2","char.2..char.7",11973],
+      ["lagEng03si_2_3","char.7..char.Α",8939],
+      ...
+      ["lagEng03si_2_14","char.n..chas",18303]
+    ]
+    </pre>
+    <a class="clsHide" href="#idLagMcshmngrfileNilgRfdsn"></a></p>
+  <p id="idLagMcshmngrfileNilgRfnam">name::
+    <br>* Mcs.lagHitp'namidx.lag-file.reference,
+    <br>* Mcs.lagHitp'reference-namind.lag-file,
+    <br>* Mcs.Mcshlfile.namidx.lagSPEC.reference,
+    <br>* Mcs.namidx.lagSPEC.reference-Mcshlfile,
+    <br>* Mcs.reference-namidx.lag-Mcshlfile,
+    <a class="clsHide" href="#idLagMcshmngrfileNilgRfnam"></a></p>
+  </section>
+
+  <section id="idLagMcshmngrfileNilgRfN">
+  <h5 id="idLagMcshmngrfileNilgRfNH5">Mcshlfile.namidx.lagSPEC.referenceNo
+    <a class="clsHide" href="#idLagMcshmngrfileNilgRfNH5"></a></h5>
+  <p id="idLagMcshmngrfileNilgRfNdsn">description::
+    <br>· a-referenceNo-namidx.lag-file is a-json-file that contains ordered names-of-Mcs, per codepoint, and their addresses.
+    <br>· all languages have and the-<code>namidx.lagLang00.json</code> file which contains the-names that begin without a-letter of that language.
+    <pre>
+    [
+      [";lagEngl01ei",";A..B",1723,"2021-03-25"],
+      ["AA!/EuvocStat","dirStn/filMcsSocEus.last.html#idEuoStatglsrAA"],
+      ["AAj!⇒McsmgrAAj","dirCor/filMcs.last.html#idMcsmAaj"],
+      ...
+    ]
+    </pre>
+    <a class="clsHide" href="#idLagMcshmngrfileNilgRfNdsn"></a></p>
+  <p id="idLagMcshmngrfileNilgRfNnam">name::
+    <br>* Mcs.lagHitp'namidx.lag-file.referenceNo,
+    <br>* Mcs.lagHitp'referenceNo-namind.lag-file,
+    <br>* Mcs.Mcshlfile.namidx.lagSPEC.referenceNo,
+    <br>* Mcs.namidx.lagSPEC.referenceNo-Mcshlfile,
+    <br>* Mcs.referenceNo-namidx.lag-Mcshlfile,
+    <a class="clsHide" href="#idLagMcshmngrfileNilgRfNnam"></a></p>
+  </section>
+  </section>
+  </section>
+
+  <section id="idLagMcshmngrfileNitxt">
+  <h3 id="idLagMcshmngrfileNitxtH3">Mcshlfile.namidx.txt
+    <a class="clsHide" href="#idLagMcshmngrfileNitxtH3"></a></h3>
+  <p id="idLagMcshmngrfileNitxtdsn">description::
+    <br>· contains the-concept-files to be indexed and the-language on which to work.
+    <br>· in the-future this must-be automated: on any change, these files must-be-reidexed.
+    <pre>
+    // COMMENT the-lines with '//'
+    //lagAGGR;all-languages
+    lagEngl;English
+    //lagElln;Greek
+    //lagSngo;Sinago
+    //
+    //dirCor/filMcsDirCor.last.html
+    //dirCor/filMcsDirCorMisc.last.html
+    dirCor/filMcs.last.html
+    </pre>
+    <a class="clsHide" href="#idLagMcshmngrfileNitxtdsn"></a></p>
+  <p id="idLagMcshmngrfileNitxtnam">name::
+    <br>* Mcs.Mcshlfile.namidx.txt,
+    <br>* Mcs.namidx.txt-Mcshlfile,
+    <a class="clsHide" href="#idLagMcshmngrfileNitxtnam"></a></p>
+  </section>
+
   <section id="idLagMcshmngrnijs">
-  <h2 id="idLagMcshmngrnijsH2">namidx.js of McsmgrHitp
-    <a class="clsHide" href="#idLagMcshmngrnijsH2"></a></h2>
+  <h3 id="idLagMcshmngrnijsH3">Mcshlfile.namidx.js
+    <a class="clsHide" href="#idLagMcshmngrnijsH3"></a></h3>
   <p id="idLagMcshmngrnijsdsn">description::
-    <br>· namidx.js is <a class="clsPreview" href="../dirTchInf/filMcsLjn.last.html#idLagJsndpgm">a-Node.js-program</a> that creates <a class="clsPreview" href="../dirTchInf/filMcsLagHitp.last.html#idLhitpscgnif">the-name-index-files</a> of an-McsHitp-worldview.
+    <br>· <code>namidx.js</code> is <a class="clsPreview" href="../dirTchInf/filMcsLagJsnd.last.html#idLagJsndpgm">a-Node.js-program</a> that creates <a class="clsPreview" href="../dirTchInf/filMcsLagHitp.last.html#idLagHitpscgnif">the-name-index-files</a> of an-McsHitp-worldview.
+    <br>× sPath: namidx.js//dirMcs.
     <a class="clsHide" href="#idLagMcshmngrnijsdsn"></a></p>
   <p id="idLagMcshmngrnijsnam">name::
+    <br>* Mcs.Mcshlfile.namidx.js,
     <br>* Mcs.McsmgrHitp'namidx.js,
-    <br>* Mcs.namidx.js-of-McsmgrHitp,
+    <br>* Mcs.namidx.js-Mcshlfile,
     <a class="clsHide" href="#idLagMcshmngrnijsnam"></a></p>
   <p id="idLagMcshmngrnijswpa">addressWpg::
     <br>* https://github.com/synagonism/Mcsw/blob/master/namidx.js,
     <a class="clsHide" href="#idLagMcshmngrnijswpa"></a></p>
+  <p id="idLagMcshmngrnijsalg">algo::
+    <br>* reads the-McshFiles to be-indexed and the-languages to work-with from <a class="clsPreview" href="#idLagMcshmngrfileNitxt">namidx.txt</a>,
+    <br>* reads the-quantity of names of concepts from <a class="clsPreview" href="#idLagMcshmngrfileNirjn">namidx.lagRoot.json</a>.
+    <a class="clsHide" href="#idLagMcshmngrnijsalg"></a></p>
   <p id="idLagMcshmngrnijsisu">issue::
     <br>* names:
     <br>- they must not contain the-chars " \, we use &#34; &#92; instead.
@@ -515,11 +726,12 @@
   </section>
 
   <section id="idLagMcshmngrsfjs">
-  <h2 id="idLagMcshmngrsfjsH2">sftp.js of McsmgrHitp
-    <a class="clsHide" href="#idLagMcshmngrsfjsH2"></a></h2>
+  <h3 id="idLagMcshmngrsfjsH3">Mcshlfile.sftp.js
+    <a class="clsHide" href="#idLagMcshmngrsfjsH3"></a></h3>
   <p id="idLagMcshmngrsfjsdsn">description::
-    <br>· sftp.js is <a class="clsPreview" href="../dirTchInf/filMcsLjn.last.html#idLagJsndpgm">a-Node.js-program</a> that sftp the modified local-files to a-remote-site.
+    <br>· sftp.js is <a class="clsPreview" href="../dirTchInf/filMcsLagJsnd.last.html#idLagJsndpgm">a-Node.js-program</a> that sftp the modified local-files to a-remote-site.
     <br>· <a class="clsPreview" href="#idMcsHitpmgrnijs">namidx.js</a> outputs the-sftp.txt-file with the modified local-files.
+    <br>× sPath: sftp.js//dirMcs.
     <a class="clsHide" href="#idLagMcshmngrsfjsdsn"></a></p>
   <p id="idLagMcshmngrsfjsnam">name::
     <br>* Mcs.McsmgrHitp'sftp.js,
@@ -528,6 +740,19 @@
   <p id="idLagMcshmngrsfjswpa">addressWpg::
     <br>* https://github.com/synagonism/Mcsw/blob/master/sftp.js,
     <a class="clsHide" href="#idLagMcshmngrsfjswpa"></a></p>
+  </section>
+
+  <section id="idLagMcshfileCtqt">
+  <h3 id="idLagMcshfileCtqtH3">Mcshlfile.cptqnt
+    <a class="clsHide" href="#idLagMcshfileCtqtH3"></a></h3>
+  <p id="idLagMcshfileCtqtdsn">description::
+    <br>· cptqnt-Mcshlfiles are files that contain the-quantity of sensorial-concepts of a-worldview.
+    <a class="clsHide" href="#idLagMcshfileCtqtdsn"></a></p>
+  <p id="idLagMcshfileCtqtnam">name::
+    <br>* Mcs.Mcshlfile.cptqnt,
+    <br>* Mcs.cptqnt-Mcshlfile,
+    <a class="clsHide" href="#idLagMcshfileCtqtnam"></a></p>
+  </section>
   </section>
 
   <section id="idLagMcshtch">
@@ -546,14 +771,46 @@
   <h2 id="idLagMcshmgrdngFH2">DOING of McsmgrHitp
     <a class="clsHide" href="#idLagMcshmgrdngFH2"></a></h2>
   <p id="idLagMcshmgrdngFdsn">description::
-    <br>· <a class="clsPreview" href="filMcsLagHitp.last.html#idLhitpscg">searching</a>,
+    <br>· searching,
     <a class="clsHide" href="#idLagMcshmgrdngFdsn"></a></p>
   <p id="idLagMcshmgrdngFnam">name::
-    <br>* Mcs.McsmgrHitp,
+    <br>* Mcs.McsmgrHitp'doing,
     <a class="clsHide" href="#idLagMcshmgrdngFnam"></a></p>
-  <p id="idLagMcshmgrdngFgtr">generic-tree-of-::
+  <p id="idLagMcshmgrdngFgtr">generic-tree-of-McsmgrHitp'doing::
     <br>* <a class="clsPreview" href="../dirCor/filMcs.last.html#idMcsmdngF">Mcsmgr'doing</a>,
     <a class="clsHide" href="#idLagMcshmgrdngFgtr"></a></p>
+
+  <section id="idLagMcshmgrsrcg">
+  <h3 id="idLagMcshmgrsrcgH3">doing.searching of McsmgrHitp
+    <a class="clsHide" href="#idLagMcshmgrsrcgH3"></a></h3>
+  <p id="idLagMcshmgrsrcgdsn">description::
+    <br>· searching for ANY McsHitp from anywhere in the-base, is the-notable function of my McsmgrHitp.
+    <br>· the-manager creates indexes of the-names of the-concepts with its related addresses with <a class="clsPreview" href="#idLagMcshmngrnijs">the-namidx.js-program</a>.
+    <br>· these <a class="clsPreview" href="#idLagMcshmngrfileNilgsjn">namidx.lag-files</a> are-stored in dirLANG//dirNamidx//dirMcs.
+    <a class="clsHide" href="#idLagMcshmgrsrcgdsn"></a></p>
+  <p id="idLagMcshmgrsrcgnam">name::
+    <br>* Mcs.Mcshlsearching,
+    <br>* Mcs.McsmgrHitp'searching,
+    <br>* Mcs.searching-of-McsmgrHitp,
+    <a class="clsHide" href="#idLagMcshmgrsrcgnam"></a></p>
+
+  <section id="idLagMcshmgrsrcgevgF">
+  <h4 id="idLagMcshmgrsrcgevgFH4">evoluting of McsmgrHitp'searching
+    <a class="clsHide" href="#idLagMcshmgrsrcgevgFH4"></a></h4>
+  <p id="idLagMcshmgrsrcg20210102">{2021-01-02}-McsmgrHitp-search-exact::
+    <br>· TODO: typing space to display only the-exact name AND the ones with !: !⇒ != !~ after it.
+    <a class="clsHide" href="#idLagMcshmgrsrcg20210102"></a></p>
+  <p id="idLagMcshmgrsrcg20190305">{2019-03-05}-McsmgrHitp-search-mainname::
+    <br>· DONE: automatically search for the-concept's main-name, the-name after (!⇒).
+    <a class="clsHide" href="#idLagMcshmgrsrcg20190305"></a></p>
+  <p id="idLagMcshmgrsrcg20190202">{2019-02-02}-McsmgrHitp-search-mainname::
+    <br>· TODO: automatically to search for the-concept's main-name, the-name after (!⇒).
+    <a class="clsHide" href="#idLagMcshmgrsrcg20190202"></a></p>
+  <p id="idLagMcshmgrsrcgevgFnam">name::
+    <br>* Mcs.McsmgrHitp'searching'evoluting,
+    <a class="clsHide" href="#idLagMcshmgrsrcgevgFnam"></a></p>
+  </section>
+  </section>
   </section>
 </section>
 
@@ -597,7 +854,7 @@
     <br>* Mcs.lagMcsh'evoluting,
     <a class="clsHide" href="#idLagMcshevgnam"></a></p>
   <p id="idLagMcshevgFgtr">generic-tree-of-lagMcsh'evoluting::
-    <br>* <a class="clsPreview" href="filMcsLagHitp.last.html#idLhitpevg">lagHitp-evoluting</a>,
+    <br>* <a class="clsPreview" href="filMcsLagHitp.last.html#idLagHitpevg">lagHitp-evoluting</a>,
     <a class="clsHide" href="#idLagMcshevgFgtr"></a></p>
   <p id="idLagMcsh20201018">{2020-10-18}::
     <br>* Mcs.{2020-10-18}-Mcsh'indexes-paragraph-Mcs,
