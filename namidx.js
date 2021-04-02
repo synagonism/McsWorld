@@ -42,7 +42,7 @@ var
   //],
   //[['lagEng01ei','A',1111]} with quantity of names
   aNamidxRootSum = JSON.parse(moFs.readFileSync('dirNamidx/namidx.root.json')),
-  aMcsQnt = [],
+  aMcsFileQnt = [],
   n,
   //hold the-names of namidx-files and the related capital-letters
   //we want the-names of files to be only english.
@@ -51,7 +51,7 @@ var
   //object to hold the-Αrrays with the-Νame-Urls
   //after reading filMcsName.html files.
   //{lagEng01ei:[['name','Url']]}
-  oNamidxArrNamUrl = {},
+  oNamidxjsonNamUrl = {},
   //{lagEng01ei:222} the-quantities of names of namidx-files
   oNamidxQntnam = {},
   sLn
@@ -129,7 +129,10 @@ for (n = 0; n < aFileMcsIn.length; n++) {
 
   oSetFileUp.add(sFile)
   //if sFile ../index.html dirNamidx/abbreviation.html do nothing nnn
-  if (!sFile.startsWith('../') && !sFile.startsWith("dirNamidx/")) {
+  if (!sFile.startsWith('../')
+      && !sFile.startsWith("dirNamidx/")
+      && !sFile.startsWith("filMcsWorld.last.html")
+     ) {
     oSetFileUp.add(sFile.substring(0, sFile.lastIndexOf('/')) + '/cptqnt.json')
   }
   //for EACH language
@@ -140,7 +143,7 @@ for (n = 0; n < aFileMcsIn.length; n++) {
       sL = aLag[nL].substring(3) //Kmo
 
     //REMOVE name-Urls
-    fRemoveNames(oNamidxRootFileLtr, sFile, aLag[nL])
+    fRemoveNamUrl(oNamidxRootFileLtr, sFile, aLag[nL])
     // remove name-Urls and for the-extra-files in this lag
     if (bExtra) {
       var aNamidxExtr = JSON.parse(moFs.readFileSync('dirNamidx/dirLag' +sL
@@ -155,11 +158,11 @@ for (n = 0; n < aFileMcsIn.length; n++) {
       aExtra_files = Array.from(oSetExtra_files)
       //console.log(aExtra_files)
       for (n = 0; n <aExtra_files.length; n++) {
-        fRemoveNames(oNamidxRootFileLtr, aExtra_files[n], aLag[nL])
+        fRemoveNamUrl(oNamidxRootFileLtr, aExtra_files[n], aLag[nL])
       }  
     }
 
-    //READ Mcs-file and ADD its name-Urls on oNamidxArrNamUrl{lagEng01ei:[[name,Url]]}
+    //READ Mcs-file and ADD its name-Urls on oNamidxjsonNamUrl{lagEng01ei:[[name,Url]]}
     var
       bMcsSection = true,
       sUrl, //The-url of the-name, is the-url of the-section-element is in.
@@ -254,7 +257,7 @@ for (n = 0; n < aFileMcsIn.length; n++) {
     }
 
     if (bExtra) {
-      //ADD extra name-Urls on oNamidxArrNamUrl for current language
+      //ADD extra name-Urls on oNamidxjsonNamUrl for current language
       var aNamidxExtr = JSON.parse(moFs.readFileSync('dirNamidx/dirLag' +sL
         +'/namidx.' +aLag[nL] +'Extra.json'))
       for (var nE = 0; nE < aNamidxExtr.length; nE++) {
@@ -263,22 +266,22 @@ for (n = 0; n < aFileMcsIn.length; n++) {
       }
     }
 
-    //WRITE arrays in oNamidxArrNamUrl ({lagEng01ei:[[name,Url]]})
+    //WRITE arrays in oNamidxjsonNamUrl ({lagEng01ei:[[name,Url]]})
     //in namidx-files
-    for (var sNmix in oNamidxArrNamUrl) {
+    for (var sNmix in oNamidxjsonNamUrl) {
       var
-        aNew = oNamidxArrNamUrl[sNmix], //the-array with name-Urls
+        aNew = oNamidxjsonNamUrl[sNmix], //the-array with name-Urls
         //the-name of the existing file with names-urls
-        sNamidxExistFull = 'dirNamidx/dirLag' +sL +'/namidx.' +sNmix +'.json',
+        sNamidxjsonFullExist = 'dirNamidx/dirLag' +sL +'/namidx.' +sNmix +'.json',
         sMeta
 
-      oSetFileUp.add(sNamidxExistFull)
+      oSetFileUp.add(sNamidxjsonFullExist)
       aNew.sort(fCompare)
 
       //if namidx-file exists, put new names and write
-      if (moFs.existsSync(sNamidxExistFull)) {
+      if (moFs.existsSync(sNamidxjsonFullExist)) {
         var
-          aEx = JSON.parse(moFs.readFileSync(sNamidxExistFull))
+          aEx = JSON.parse(moFs.readFileSync(sNamidxjsonFullExist))
 
         sMeta = aEx.shift() // [";namidx",";char..char.2"
         //add on existed-names the new names,
@@ -289,18 +292,21 @@ for (n = 0; n < aFileMcsIn.length; n++) {
         aEx.sort(fCompare)
         oNamidxQntnam[sNmix] = aEx.length
         aEx.unshift(sMeta)
-        fWriteJsonDateSync(sNamidxExistFull, aEx)
+        fWriteJsonDateSync(sNamidxjsonFullExist, aEx)
       } else {
         oNamidxQntnam[sNmix] = aNew.length
         aNew.unshift(sMeta)
         //if namidx-file does not exist, write new-array of names.
-        fWriteJsonDateSync(sNamidxExistFull, aNew)
+        fWriteJsonDateSync(sNamidxjsonFullExist, aNew)
       }
     }
   }
 
   //update cptqnt.json
-  aMcsQnt.push([sFile, nCptqnt])
+  //only on Mcs-files measure Mcs
+  if (sFile.indexOf('filMcs') >= 0)  {
+    aMcsFileQnt.push([sFile, nCptqnt])
+  }
 }
 
 /**
@@ -310,7 +316,7 @@ for (n = 0; n < aFileMcsIn.length; n++) {
  *   - sFilRmvIn: the-file whose names will-be-removed
  *   - sLagIn: the-lag whose names will-be-removed
  */
-function fRemoveNames(oNamidxFIIn, sFilRmvIn, sLagIn) {
+function fRemoveNamUrl(oNamidxFIIn, sFilRmvIn, sLagIn) {
   //oNamidxFIIn = { lagEll00: 'lagEllREST', lagEll01alfa: 'Α', ... lagSngo25u: 'U' }
   //sFilRmvIn = dirLag/filMcsLhmn.last.html
   //sLagIn = lagEll
@@ -343,7 +349,7 @@ function fRemoveNames(oNamidxFIIn, sFilRmvIn, sLagIn) {
         //read it, make oNamidxFIIn, and remove names
         if (sNamidxFull.endsWith('_0.json')) {
           var oIN = fCreateONamidxjsonIdx(aNamExist)
-          fRemoveNames(oIN, sFilRmvIn, sLagIn)
+          fRemoveNamUrl(oIN, sFilRmvIn, sLagIn)
           oSetFileUp.add(sNamidxFull)
         } else {
           //ELSE remove names
@@ -374,7 +380,7 @@ function fRemoveNames(oNamidxFIIn, sFilRmvIn, sLagIn) {
 }
 
 /**
- * DOING: store one name-Url in oNamidxArrNamUrl
+ * DOING: store one name-Url in oNamidxjsonNamUrl
  *   using first capital-letter of name
  */
 function fStoreNULetter(aNUIn, sLtrIn, sLagIn) {
@@ -396,11 +402,11 @@ function fStoreNULetter(aNUIn, sLtrIn, sLagIn) {
     //console.log(sNifIn+', '+aNUIn[0])
     if (!sNifIn.endsWith('_0')) {
       // namidx is not a-reference
-      if (oNamidxArrNamUrl[sNifIn]) {
-        oNamidxArrNamUrl[sNifIn].push(aNUIn)
+      if (oNamidxjsonNamUrl[sNifIn]) {
+        oNamidxjsonNamUrl[sNifIn].push(aNUIn)
       } else {
-        oNamidxArrNamUrl[sNifIn] = []
-        oNamidxArrNamUrl[sNifIn].push(aNUIn)
+        oNamidxjsonNamUrl[sNifIn] = []
+        oNamidxjsonNamUrl[sNifIn].push(aNUIn)
       }
     } else {
       //lagNam03si_0 is a-reference
@@ -429,11 +435,11 @@ function fStoreNUCodepoint(aNamidxIn, aNUIn, sLagIn) {
       //if namidx-file is not a-reference, store name-Url
       if (!aNamidxIn[n-1][0].endsWith('_0')) {
         //store
-        if (oNamidxArrNamUrl[aNamidxIn[n-1][0]]) {
-          oNamidxArrNamUrl[aNamidxIn[n-1][0]].push(aNUIn)
+        if (oNamidxjsonNamUrl[aNamidxIn[n-1][0]]) {
+          oNamidxjsonNamUrl[aNamidxIn[n-1][0]].push(aNUIn)
         } else {
-          oNamidxArrNamUrl[aNamidxIn[n-1][0]] = []
-          oNamidxArrNamUrl[aNamidxIn[n-1][0]].push(aNUIn)
+          oNamidxjsonNamUrl[aNamidxIn[n-1][0]] = []
+          oNamidxjsonNamUrl[aNamidxIn[n-1][0]].push(aNUIn)
         }
       } else {
         //namidx-file is a-reference
@@ -447,11 +453,11 @@ function fStoreNUCodepoint(aNamidxIn, aNUIn, sLagIn) {
                n === aNamidxIn.length - 1) {
       //console.log(aNUIn[0]+', '+aNamidxIn[n])
       if (!aNamidxIn[n][0].endsWith('_0')) {
-        if (oNamidxArrNamUrl[aNamidxIn[n][0]]) {
-          oNamidxArrNamUrl[aNamidxIn[n][0]].push(aNUIn)
+        if (oNamidxjsonNamUrl[aNamidxIn[n][0]]) {
+          oNamidxjsonNamUrl[aNamidxIn[n][0]].push(aNUIn)
         } else {
-          oNamidxArrNamUrl[aNamidxIn[n][0]] = []
-          oNamidxArrNamUrl[aNamidxIn[n][0]].push(aNUIn)
+          oNamidxjsonNamUrl[aNamidxIn[n][0]] = []
+          oNamidxjsonNamUrl[aNamidxIn[n][0]].push(aNUIn)
         }
       } else {
         //namidx-file is a-reference
@@ -575,7 +581,7 @@ function fObjvalRKey(oIn, sLtrIn, sLagIn) {
 /**
  * DOING: it computes quantities of names
  */
-function fComputeQName() {
+function fComputeQntName() {
   //oNamidxQntnam={lagEng00: 1101,lagEng01ei: 419,lagEng03si_1: 1038,lagEng03si_2_1: 6959}
   //the-set of namidx-files we computed
   var oSetNamidxComputed = new Set()
@@ -730,7 +736,7 @@ function fComputeQName() {
   }
 }
 
-fComputeQName()
+fComputeQntName()
 
 var aSftp = Array.from(oSetFileUp)
 aSftp.sort()
@@ -739,43 +745,58 @@ fWriteJsonSync('sftp.json', aSftp)
 
 /**
  * DOING: computes the-quantity of Mcs of a-Mcs and updates the-cptqnt.json files with it
- * INPUT: the-name of a-Mcs[a] and the-quantity of Mcs of this[a] file.
+ * INPUT: the-name of a-filMcs[a] and the-quantity of Mcs of this[a] file.
  * OUTPUT: the-cptqnt-files affected 
  */
-function fComputeQMcs(sMcsIn, nCptqntIn) {
+function fUpdateQntMcs(sFilMcsIn, nMcsqntIn) {
   var
-    aCptqnt,
+    aMcsqnt,
     bMcs = false,
-    nCptqntSum = 0,
-    sDir = sMcsIn.substring(0, sMcsIn.lastIndexOf('/'))
-    sCptqnt = sDir + '/cptqnt.json'
+    nMcsqntSum = 0,
+    sDir = sFilMcsIn.substring(0, sFilMcsIn.lastIndexOf('/')),
+    sMcsqnt
 
-  aCptqnt = JSON.parse(moFs.readFileSync(sCptqnt))
-  for (n = 1; n < aCptqnt.length; n++) {
+  if (sFilMcsIn.startsWith('filMcs')) {
+    sMcsqnt = 'cptqnt.root.json'
+  } else {
+    sMcsqnt = sDir + '/cptqnt.json'
+  }
+
+  aMcsqnt = JSON.parse(moFs.readFileSync(sMcsqnt))
+  for (n = 1; n < aMcsqnt.length; n++) {
     // [";dirLag",115,"2018-10-06"],
     // ["dirLag/filMcsChar.last.html",112],
-    if (aCptqnt[n][0] === sMcsIn) {
-      aCptqnt[n][1] = nCptqntIn
-      nCptqntSum = nCptqntSum + nCptqntIn
+    if (aMcsqnt[n][1] === 0) {
+      //remove files with 0 Mcs
+      aMcsqnt.splice(n, 1)
+    } else if (aMcsqnt[n][0] === sFilMcsIn) {
+      aMcsqnt[n][1] = nMcsqntIn
+      nMcsqntSum = nMcsqntSum + nMcsqntIn
       bMcs = true
     } else {
-      nCptqntSum = nCptqntSum + aCptqnt[n][1]
+      nMcsqntSum = nMcsqntSum + aMcsqnt[n][1]
     }
   }
   if (!bMcs) {
-    aCptqnt.push([sMcsIn, nCptqntIn])
-    nCptqntSum = nCptqntSum + nCptqntIn
+    aMcsqnt.push([sFilMcsIn, nMcsqntIn])
+    nMcsqntSum = nMcsqntSum + nMcsqntIn
   }
-  aCptqnt[0] = [';'+sDir, nCptqntSum, fDateYMD()]
-  aCptqnt.sort()
-  fWriteJsonSync(sCptqnt, aCptqnt)
+  if (sDir === '') {
+    aMcsqnt[0] = [';qntAGG', nMcsqntSum, fDateYMD()]
+  } else {
+    aMcsqnt[0] = [';'+sDir, nMcsqntSum, fDateYMD()]
+  }
+  aMcsqnt.sort()
+  fWriteJsonSync(sMcsqnt, aMcsqnt)
 
   // update parents
-  if (sDir.indexOf('/') === -1) {
+  if (sDir === '') {
+    // do nothing, root is ok
+  } else if (sDir.indexOf('/') === -1) {
     // parent = root
-    fUpdate_root(sDir, nCptqntSum)
+    fUpdate_root(sDir, nMcsqntSum)
   } else {
-    fComputeQMcs(sDir, nCptqntSum)
+    fUpdateQntMcs(sDir, nMcsqntSum)
   }
 
   // update root file
@@ -787,7 +808,7 @@ function fComputeQMcs(sMcsIn, nCptqntIn) {
 
     aCptqntRt = JSON.parse(moFs.readFileSync(sCptqntRt))
     for (n = 1; n < aCptqntRt.length; n++) {
-      // [";qntALL",179925,"2018-10-05"],
+      // [";qntAGG",179925,"2018-10-05"],
       // ["dirCor",10],
       if (aCptqntRt[n][0] === sDfIn) {
         aCptqntRt[n][1] = nQIn
@@ -796,16 +817,17 @@ function fComputeQMcs(sMcsIn, nCptqntIn) {
         nCptqntRtSum = nCptqntRtSum + aCptqntRt[n][1]
       }
     }
-    aCptqntRt[0] = [';qntALL', nCptqntRtSum, fDateYMD()]
+    aCptqntRt[0] = [';qntAGG', nCptqntRtSum, fDateYMD()]
     fWriteJsonSync(sCptqntRt, aCptqntRt)
   }
 }
-console.log('>>> Mcs-file indexed:')
-console.log(aMcsQnt)
 
-async function fQMcs(aIn) {
+console.log('>>> Mcs-file indexed:')
+console.log(aMcsFileQnt)
+
+async function fUpdateALLQntMcs(aIn) {
   for (const item of aIn) {
-   await fComputeQMcs(item[0], item[1])
+   await fUpdateQntMcs(item[0], item[1])
   }
 }
-fQMcs(aMcsQnt)
+fUpdateALLQntMcs(aMcsFileQnt)
