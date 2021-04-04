@@ -13,6 +13,7 @@
  * - on lagAGGR, store all files in one dir dirEll eg
  * - to compute the-number of concepts, we must set new DIRS at cptqnt.root.json. 
  *
+ * modified: {2021-04-04} lagAGGR
  * modified: {2021-04-03} oSetFileUp
  * modified: {2021-03-25} * lagEngl, lagElln,
  * modified: {2021-01-04} * McsSngo
@@ -53,10 +54,6 @@ var
   //we want the-names of files to be only english.
   //{lagEngl01ei:'A'}
   oNamidxRootLtr = {},
-  //object to hold the-Αrrays with the-Νame-Urls
-  //after reading filMcsName.html files.
-  //{lagEngl01ei:[['name','Url']]}
-  oNamidxjsonNamUrl = {},
   //{lagEngl01ei:222} the-quantities of names of namidxjson-files
   oNamidxQntnam = {},
   sLn,
@@ -96,9 +93,9 @@ if (process.argv[2]) {
 /**
  * DOING: creates object {namidxjson: index} from [[namidxjson,idx,quantity]]
  * INPUT: aIn = [['lagEngl01ei','A',1234]]
- * OUTPUT: oNamidxRootFileLtr = {lagEngl01ei:'A'}
+ * OUTPUT: oFileNijRoot_Letter = {lagEngl01ei:'A'}
  */
-function fCreateONamidxjsonIdx(aIn) {
+function fCreateOFileNij_Index(aIn) {
   var oOut = {}
   for (var n = 0; n < aIn.length; n++) {
     if (!aIn[n][1].startsWith(';')) {
@@ -107,7 +104,7 @@ function fCreateONamidxjsonIdx(aIn) {
   }
   return oOut
 }
-oNamidxRootFileLtr = fCreateONamidxjsonIdx(aNamidxRootSum)
+oFileNijRoot_Letter = fCreateOFileNij_Index(aNamidxRootSum)
 
 //find the-array of languages to work with
 if (aLag[0] === 'lagAGGR') {
@@ -148,14 +145,17 @@ for (n = 0; n < aFileMcsIn.length; n++) {
     var
       aNU, // array with a-name and its-Url
       sChar,
-      sL = aLag[nL].substring(3) //lagSngo->Sngo
+      //object to hold the-Αrrays with the-Νame-Urls
+      //after reading filMcsName.html files.
+      //{lagEngl01ei:[['name','Url']]}
+      oFileNij_NamUrl = {}
 
     //REMOVE name-Urls
-    fRemoveNamUrl(oNamidxRootFileLtr, sFileMcs, aLag[nL])
+    fRemoveNamUrl(oFileNijRoot_Letter, sFileMcs, aLag[nL])
 
     // remove name-Urls and for the-extra-files in this lag
     if (bExtra) {
-      var aNamidxExtr = JSON.parse(moFs.readFileSync('dirNamidx/dirLag' +sL
+      var aNamidxExtr = JSON.parse(moFs.readFileSync('dirNamidx/dirLag' +aLag[nL].substring(3)
         +'/namidx.' +aLag[nL] +'Extra.json')),
         oSetExtra_files = new Set(),
         aExtra_files,
@@ -167,11 +167,11 @@ for (n = 0; n < aFileMcsIn.length; n++) {
       aExtra_files = Array.from(oSetExtra_files)
       //console.log(aExtra_files)
       for (n = 0; n <aExtra_files.length; n++) {
-        fRemoveNamUrl(oNamidxRootFileLtr, aExtra_files[n], aLag[nL])
+        fRemoveNamUrl(oFileNijRoot_Letter, aExtra_files[n], aLag[nL])
       }  
     }
 
-    //READ Mcs-file and ADD its name-Urls on oNamidxjsonNamUrl{lagEngl01ei:[[name,Url]]}
+    //READ Mcs-file and ADD its name-Urls on oFileNij_NamUrl{lagEngl01ei:[[name,Url]]}
     var
       bMcsSection = true,
       sUrl, //The-url of the-name, is the-url of the-section-element is in.
@@ -194,50 +194,23 @@ for (n = 0; n < aFileMcsIn.length; n++) {
         sUrlP = sLn.substring(sLn.indexOf('"')+1,sLn.lastIndexOf('">'))
         sUrlP = aFileMcsIn[n] + '#' + sUrlP
         if (sLn.indexOf('>name::') >= 0) {
-          nMcsqnt = nMcsqnt + 1
+          if (aLag[nL] === 'lagEngl') {
+            nMcsqnt = nMcsqnt + 1
+          }
           bMcsSection = true;
         }
       } else {
-        if (aLag[nL] === 'lagEngl') {
-          if (sLn.startsWith('    <br>* McsEngl.')) {
-            if (bMcsSection) {
-              aNU = [sLn.substring(18, sLn.indexOf(',')), sUrl]
-              sChar = sLn.charAt(18).toUpperCase() //char at Mcs.X
-              fStoreNULetter(aNU, sChar, aLag[nL])
-            } else {
-              aNU = [sLn.substring(18, sLn.indexOf(',')), sUrlP]
-              sChar = sLn.charAt(18).toUpperCase() //char at Mcs.X
-              fStoreNULetter(aNU, sChar, aLag[nL])
-              //if previous-id different for current
-              //we have a-new-paragraph-cpt
-              //because in one paragraph we can-have many Mcs.
-              if (sUrlPPrev !== sUrlP) {
-                nMcsqnt = nMcsqnt + 1
-              }
-              sUrlPPrev = sUrlP
-            }
-          }
-        } else if (aLag[nL] === 'lagSngo') {
-          if (sLn.startsWith('    <br>* McsSngo.')) {
-            aNU = [sLn.substring(sLn.indexOf('* McsSngo.')+10, sLn.indexOf(',')), sUrl]
-            sChar = sLn.charAt(sLn.indexOf('* McsSngo.')+10).toUpperCase()
-            fStoreNULetter(aNU, sChar, aLag[nL])
-          }
-        } else if (aLag[nL] === 'lagElln') {
+        if (aLag[nL] === 'lagElln') {
           if (sLn.startsWith('    <br>* ενν.')
-           || sLn.startsWith('    <br>* McsEll.')
-           || sLn.startsWith('    <br>* cptEll.')
+           || sLn.startsWith('    <br>* McsElln.')
            || sLn.startsWith('    <br> &nbsp; &nbsp;* ενν.') //σύνταγμα.2008 ειδική περίπτωση!
            || sLn.startsWith('    <br> &nbsp; &nbsp; &nbsp; &nbsp;* ενν.')) {
             if (sLn.indexOf('* ενν.') > 0) {
               aNU = [sLn.substring(sLn.indexOf('* ενν.')+6, sLn.indexOf(',')), sUrl]
               sChar = sLn.charAt(sLn.indexOf('* ενν.')+6).toUpperCase() //char at ενν.X
-            } else if (sLn.indexOf('* cptEll.') > 0) {
-              aNU = [sLn.substring(sLn.indexOf('* cptEll.')+9, sLn.indexOf(',')), sUrl]
-              sChar = sLn.charAt(sLn.indexOf('* cptEll.')+9).toUpperCase()
             } else  {
-              aNU = [sLn.substring(sLn.indexOf('* McsEll.')+9, sLn.indexOf(',')), sUrl]
-              sChar = sLn.charAt(sLn.indexOf('* McsEll.')+9).toUpperCase()
+              aNU = [sLn.substring(18, sLn.indexOf(',')), sUrl]
+              sChar = sLn.charAt(18).toUpperCase() //char at McsLang.X
             }
             //GREEK INDEX CHANGES
             if (sChar === 'Ά') {sChar = 'Α'}
@@ -250,18 +223,33 @@ for (n = 0; n < aFileMcsIn.length; n++) {
             fStoreNULetter(aNU, sChar, aLag[nL])
           }
         } else {
-          if (sLn.startsWith('    <br>* Mcs'+sL+'.')) {
-            aNU = [sLn.substring(18, sLn.indexOf(',')), sUrl]
-            sChar = sLn.charAt(18).toUpperCase() //char at McsLang.X
-            fStoreNULetter(aNU, sChar, aLag[nL])
+          if (sLn.startsWith('    <br>* Mcs'+aLag[nL].substring(3)+'.')) {
+            if (bMcsSection) {
+              aNU = [sLn.substring(18, sLn.indexOf(',')), sUrl]
+              sChar = sLn.charAt(18).toUpperCase() //char at McsLang.X
+              fStoreNULetter(aNU, sChar, aLag[nL])
+            } else {
+              aNU = [sLn.substring(18, sLn.indexOf(',')), sUrlP]
+              sChar = sLn.charAt(18).toUpperCase() //char at McsLang.X
+              fStoreNULetter(aNU, sChar, aLag[nL])
+              //if previous-id different for current
+              //we have a-new-paragraph-cpt
+              //because in one paragraph we can-have many Mcs.
+              if (sUrlPPrev !== sUrlP) {
+                if (aLag[nL] === 'lagEngl') {
+                  nMcsqnt = nMcsqnt + 1
+                }
+              }
+              sUrlPPrev = sUrlP
+            }
           }
         }
       }
     }
 
     if (bExtra) {
-      //ADD extra name-Urls on oNamidxjsonNamUrl for current language
-      var aNamidxExtr = JSON.parse(moFs.readFileSync('dirNamidx/dirLag' +sL
+      //ADD extra name-Urls on oFileNij_NamUrl for current language
+      var aNamidxExtr = JSON.parse(moFs.readFileSync('dirNamidx/dirLag' +aLag[nL].substring(3)
         +'/namidx.' +aLag[nL] +'Extra.json'))
       for (var nE = 0; nE < aNamidxExtr.length; nE++) {
         sChar = aNamidxExtr[nE][0].substring(0,1).toUpperCase()
@@ -269,13 +257,14 @@ for (n = 0; n < aFileMcsIn.length; n++) {
       }
     }
 
-    //WRITE arrays in oNamidxjsonNamUrl ({lagEngl01ei:[[name,Url]]})
+    //WRITE arrays in oFileNij_NamUrl ({lagEngl01ei:[[name,Url]]})
     //in namidxjson-files
-    for (var sNmix in oNamidxjsonNamUrl) {
+    for (var sNmix in oFileNij_NamUrl) {
+      //console.log(aLag[nL]+", "+sNmix)
       var
-        aNew = oNamidxjsonNamUrl[sNmix], //the-array with name-Urls
+        aNew = oFileNij_NamUrl[sNmix], //the-array with name-Urls
         //the-name of the existing file with names-urls
-        sNamidxjsonFullExist = 'dirNamidx/dirLag' +sL +'/namidx.' +sNmix +'.json',
+        sNamidxjsonFullExist = 'dirNamidx/dirLag' +aLag[nL].substring(3) +'/namidx.' +sNmix +'.json',
         sMeta
 
       oSetFileUp.add(sNamidxjsonFullExist)
@@ -327,31 +316,31 @@ function fRemoveNamUrl(oFilenijIndexIn, sFilRmvIn, sLagIn) {
   //TODO: IF we have a-file for each Mcs-file[a]
   // with ALL the-namidx-json-files in which it[a] is-used
   // THEN we can-iterate ONLY in these files. {2018-07-23}
-  for (var sFilenijShort in oFilenijIndexIn) {
+  for (var sFileNijShort in oFilenijIndexIn) {
     //ALL namidxjson-files in sLagIn
-    if (sFilenijShort.startsWith(sLagIn)) { //sFilenijShort: lagEngl01ei, sLagIn: lagEngl
+    if (sFileNijShort.startsWith(sLagIn)) { //sFileNijShort: lagEngl01ei, sLagIn: lagEngl
       var
         aNamDif = [],
-        sFilenijFull = 'dirNamidx/dirLag' + sLagIn.substring(3) +
-                  '/namidx.' + sFilenijShort + '.json',
+        sFileNijFull = 'dirNamidx/dirLag' + sLagIn.substring(3) +
+                  '/namidx.' + sFileNijShort + '.json',
         sUrl
 
-      if (moFs.existsSync(sFilenijFull)) {
+      if (moFs.existsSync(sFileNijFull)) {
         var
           //read existing namidx.X
           aNamExist,
           bRemoved = false
 
         try {
-          aNamExist = JSON.parse(moFs.readFileSync(sFilenijFull))
+          aNamExist = JSON.parse(moFs.readFileSync(sFileNijFull))
         } catch(e) {
-          console.log('>> json problem:' + sFilenijFull)
+          console.log('>> json problem:' + sFileNijFull)
         }
           
         //IF namidx is reference (endsWith('_0.json'))
         //read it, make oFilenijIndexIn, and remove names
-        if (sFilenijFull.endsWith('_0.json')) {
-          var oIN = fCreateONamidxjsonIdx(aNamExist)
+        if (sFileNijFull.endsWith('_0.json')) {
+          var oIN = fCreateOFileNij_Index(aNamExist)
           fRemoveNamUrl(oIN, sFilRmvIn, sLagIn)
         } else {
           //ELSE remove names
@@ -366,18 +355,18 @@ function fRemoveNamUrl(oFilenijIndexIn, sFilRmvIn, sLagIn) {
               aNamDif.push(aNamExist[nE])
             } else if (sUrl.startsWith(sFilRmvIn)) {
               bRemoved = true
-              oSetFileUp.add(sFilenijFull)
-              if (sFilenijFull.indexOf('_') > 0) {
+              oSetFileUp.add(sFileNijFull)
+              if (sFileNijFull.indexOf('_') > 0) {
                 // IF removed child, add and parent-reference
-                oSetFileUp.add(sFilenijFull.substring(0, sFilenijFull.lastIndexOf('_')) +'_0.json')
+                oSetFileUp.add(sFileNijFull.substring(0, sFileNijFull.lastIndexOf('_')) +'_0.json')
               }
             }
           }
           //store namidx length
           if (bRemoved) {
-            oNamidxQntnam[sFilenijShort] = aNamDif.length - 1
-            // sFilenijShort changed, store it
-            fWriteJsonQntDate(sFilenijFull, aNamDif)
+            oNamidxQntnam[sFileNijShort] = aNamDif.length - 1
+            // sFileNijShort changed, store it
+            fWriteJsonQntDate(sFileNijFull, aNamDif)
           }
         }
       }
@@ -386,20 +375,20 @@ function fRemoveNamUrl(oFilenijIndexIn, sFilRmvIn, sLagIn) {
 }
 
 /**
- * DOING: store one name-Url in oNamidxjsonNamUrl
+ * DOING: store one name-Url in oFileNij_NamUrl
  *   using first capital-letter of name
  */
 function fStoreNULetter(aNUIn, sLtrIn, sLagIn) {
   var sNif // name of namidxjson-file
 
   // choose lag-letter or rest
-  if (Object.values(oNamidxRootFileLtr).includes(sLtrIn)) {
+  if (Object.values(oFileNijRoot_Letter).includes(sLtrIn)) {
     //find namidxjson-file for sLtrIn
-    sNif = fObjvalRKey(oNamidxRootFileLtr, sLtrIn, sLagIn)
+    sNif = fObjvalRKey(oFileNijRoot_Letter, sLtrIn, sLagIn)
     fStoreNULetter_root_or_child(sNif)
   } else {
     //if sLtrIn is REST-char
-    sNif = fObjvalRKey(oNamidxRootFileLtr, 'LetterNo', sLagIn)
+    sNif = fObjvalRKey(oFileNijRoot_Letter, 'LetterNo', sLagIn)
     fStoreNULetter_root_or_child(sNif)
   }
 
@@ -408,11 +397,11 @@ function fStoreNULetter(aNUIn, sLtrIn, sLagIn) {
     //console.log(sNifIn+', '+aNUIn[0])
     if (!sNifIn.endsWith('_0')) {
       // namidx is not a-reference
-      if (oNamidxjsonNamUrl[sNifIn]) {
-        oNamidxjsonNamUrl[sNifIn].push(aNUIn)
+      if (oFileNij_NamUrl[sNifIn]) {
+        oFileNij_NamUrl[sNifIn].push(aNUIn)
       } else {
-        oNamidxjsonNamUrl[sNifIn] = []
-        oNamidxjsonNamUrl[sNifIn].push(aNUIn)
+        oFileNij_NamUrl[sNifIn] = []
+        oFileNij_NamUrl[sNifIn].push(aNUIn)
       }
     } else {
       //lagNam03si_0 is a-reference
@@ -441,11 +430,11 @@ function fStoreNUCodepoint(aNamidxIn, aNUIn, sLagIn) {
       //if namidxjson-file is not a-reference, store name-Url
       if (!aNamidxIn[n-1][0].endsWith('_0')) {
         //store
-        if (oNamidxjsonNamUrl[aNamidxIn[n-1][0]]) {
-          oNamidxjsonNamUrl[aNamidxIn[n-1][0]].push(aNUIn)
+        if (oFileNij_NamUrl[aNamidxIn[n-1][0]]) {
+          oFileNij_NamUrl[aNamidxIn[n-1][0]].push(aNUIn)
         } else {
-          oNamidxjsonNamUrl[aNamidxIn[n-1][0]] = []
-          oNamidxjsonNamUrl[aNamidxIn[n-1][0]].push(aNUIn)
+          oFileNij_NamUrl[aNamidxIn[n-1][0]] = []
+          oFileNij_NamUrl[aNamidxIn[n-1][0]].push(aNUIn)
         }
       } else {
         //namidxjson-file is a-reference
@@ -459,11 +448,11 @@ function fStoreNUCodepoint(aNamidxIn, aNUIn, sLagIn) {
                n === aNamidxIn.length - 1) {
       //console.log(aNUIn[0]+', '+aNamidxIn[n])
       if (!aNamidxIn[n][0].endsWith('_0')) {
-        if (oNamidxjsonNamUrl[aNamidxIn[n][0]]) {
-          oNamidxjsonNamUrl[aNamidxIn[n][0]].push(aNUIn)
+        if (oFileNij_NamUrl[aNamidxIn[n][0]]) {
+          oFileNij_NamUrl[aNamidxIn[n][0]].push(aNUIn)
         } else {
-          oNamidxjsonNamUrl[aNamidxIn[n][0]] = []
-          oNamidxjsonNamUrl[aNamidxIn[n][0]].push(aNUIn)
+          oFileNij_NamUrl[aNamidxIn[n][0]] = []
+          oFileNij_NamUrl[aNamidxIn[n][0]].push(aNUIn)
         }
       } else {
         //namidxjson-file is a-reference
@@ -593,24 +582,24 @@ function fComputeQntName() {
   //the-set of namidxjson-files we computed
   var oSetNamidxComputed = new Set()
 
-  for (var sFilenij in oNamidxQntnam) {
-    //console.log('>>> compute: '+sFilenij)
+  for (var sFileNij in oNamidxQntnam) {
+    //console.log('>>> compute: '+sFileNij)
     var sNamidxRef //the-reference-file lagEngl03si_2_0
 
     // if namidx is a-child, we find its reference-parent
-    if (sFilenij.indexOf('_') > 0) {
+    if (sFileNij.indexOf('_') > 0) {
       // lagEngl03si_1 >> lagEngl03si_0
-      sNamidxRef = sFilenij.substring(0, sFilenij.lastIndexOf('_')) +'_0'
+      sNamidxRef = sFileNij.substring(0, sFileNij.lastIndexOf('_')) +'_0'
     }
 
-    if (sFilenij.indexOf('_') === -1 && !oSetNamidxComputed.has('lagRoot')) {
+    if (sFileNij.indexOf('_') === -1 && !oSetNamidxComputed.has('lagRoot')) {
       //a namidx.lagRoot.json element
       oSetNamidxComputed.add('lagRoot')
       fUpdate_from_oNamidxQ('dirNamidx/namidx.lagRoot.json')
-    } else if (sFilenij.indexOf('_') > 0 && !oSetNamidxComputed.has(sNamidxRef)) {
+    } else if (sFileNij.indexOf('_') > 0 && !oSetNamidxComputed.has(sNamidxRef)) {
       //sNamidxRef=lagEngl03si_2_0
       oSetNamidxComputed.add(sNamidxRef)
-      fUpdate_from_oNamidxQ('dirNamidx/dirLag' + sFilenij.substring(3,7)
+      fUpdate_from_oNamidxQ('dirNamidx/dirLag' + sFileNij.substring(3,7)
         + '/namidx.' + sNamidxRef + '.json')
     }
   }
@@ -760,15 +749,15 @@ console.log(aMcsFileQnt)
  * INPUT: the-name of an-Mcs-file[a] and the-new quantity of Mcs in this[a] file.
  * OUTPUT: the-Mcsqnt-files affected 
  */
-function fUpdateQntMcs(sFilMcsIn, nMcsqntIn) {
+function fUpdateQntMcs(sFileMcsIn, nMcsqntIn) {
   var
     aMcsqnt,
     bMcs = false,
     nMcsqntSum = 0,
-    sDir = sFilMcsIn.substring(0, sFilMcsIn.lastIndexOf('/')),
+    sDir = sFileMcsIn.substring(0, sFileMcsIn.lastIndexOf('/')),
     sMcsqnt
 
-  if (sFilMcsIn.startsWith('filMcs')) {
+  if (sFileMcsIn.startsWith('filMcs')) {
     sMcsqnt = 'Mcsqnt.root.json'
   } else {
     sMcsqnt = sDir + '/Mcsqnt.json'
@@ -783,7 +772,7 @@ function fUpdateQntMcs(sFilMcsIn, nMcsqntIn) {
     if (aMcsqnt[n][1] === 0) {
       //remove files with 0 Mcs
       aMcsqnt.splice(n, 1)
-    } else if (aMcsqnt[n][0] === sFilMcsIn) {
+    } else if (aMcsqnt[n][0] === sFileMcsIn) {
       aMcsqnt[n][1] = nMcsqntIn
       nMcsqntSum = nMcsqntSum + nMcsqntIn
       bMcs = true
@@ -794,7 +783,7 @@ function fUpdateQntMcs(sFilMcsIn, nMcsqntIn) {
   //if Mcsfile is new, add it
   //we have to remove old!!! or qnt=0
   if (!bMcs) {
-    aMcsqnt.push([sFilMcsIn, nMcsqntIn])
+    aMcsqnt.push([sFileMcsIn, nMcsqntIn])
     nMcsqntSum = nMcsqntSum + nMcsqntIn
   }
   //on root
