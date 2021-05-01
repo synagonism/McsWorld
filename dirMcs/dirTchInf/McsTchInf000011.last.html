@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagJsbr-(6-2-0.2021-04-30) browser-Javascript-language</title>
+  <title>Mcs.lagJsbr-(6-3-0.2021-05-01) browser-Javascript-language</title>
   <meta name="keywords" content="Javascript, js, lagJsbr, Javascript-tutorial, browser-js, ljb,  title-content-tree, hitp-webpage">
   <link rel="stylesheet" href="../Mcsmgr/hitp.css">
 </head>
@@ -26,6 +26,7 @@
     <br>* McsEngl.McsTchInf000011.last.html//dirTchInf//dirMcs!⇒lagJsbr,
     <br>* McsEngl.dirMcs/dirTchInf/McsTchInf000011.last.html!⇒lagJsbr,
     <br>* McsEngl.Javascript.browser!⇒lagJsbr,
+    <br>* McsEngl.Jsbr!⇒lagJsbr,
     <br>* McsEngl.Ljb!⇒lagJsbr, {2019-03-05},
     <br>* McsEngl.browser-Javascript-language!⇒lagJsbr,
     <br>* McsEngl.browser-Javascript-programing-language!⇒lagJsbr,
@@ -924,30 +925,118 @@
     <br>* McsEngl.Jsbrmmbr,
     <br>* McsEngl.Jsbrmmbr'(member-of-Jsbr-module)!⇒Jsbrmmbr,
     <a class="clsHide" href="#idLagJsbrmmbrnam"></a></p>
+  </section>
 
   <section id="idLagJsbrmmbrExr">
-  <h5 id="idLagJsbrmmbrExrH5">Jsbrmmbr.export
-    <a class="clsHide" href="#idLagJsbrmmbrExrH5"></a></h5>
+  <h4 id="idLagJsbrmmbrExrH4">member.export
+    <a class="clsHide" href="#idLagJsbrmmbrExrH4"></a></h4>
   <p id="idLagJsbrmmbrExrdsn">description::
-    <br>·
+    <br>· a-member exported to another module.
     <a class="clsHide" href="#idLagJsbrmmbrExrdsn"></a></p>
   <p id="idLagJsbrmmbrExrnam">name::
     <br>* McsEngl.Jsbrm'export-member,
     <br>* McsEngl.Jsbrmmbr.export,
     <a class="clsHide" href="#idLagJsbrmmbrExrnam"></a></p>
+
+  <section id="idLagJsbrmextsmt">
+  <h5 id="idLagJsbrmextsmtH5">export-statement
+    <a class="clsHide" href="#idLagJsbrmextsmtH5"></a></h5>
+  <p id="idLagJsbrmextsmtdsn">description::
+    <br>· an-export can-imported in another module:
+    <br> <code>export function fMisc(){..}</code>
+    <br> <code>import fMisc from './moduleIn.js'</code>
+    <br>
+    <br>· default-export can-import with any name:
+    <br> <code>export default function(){..}</code>
+    <br> <code>import fName from './moduleIn.js'</code>
+    <a class="clsHide" href="#idLagJsbrmextsmtdsn"></a></p>
+  <p id="idLagJsbrmextsmtnam">name::
+    <br>* McsEngl.Jsbrm'exprot-statement,
+    <a class="clsHide" href="#idLagJsbrmextsmtnam"></a></p>
+  </section>
   </section>
 
   <section id="idLagJsbrmmbrImr">
-  <h5 id="idLagJsbrmmbrImrH5">Jsbrmmbr.import
-    <a class="clsHide" href="#idLagJsbrmmbrImrH5"></a></h5>
+  <h4 id="idLagJsbrmmbrImrH4">member.import
+    <a class="clsHide" href="#idLagJsbrmmbrImrH4"></a></h4>
   <p id="idLagJsbrmmbrImrdsn">description::
-    <br>·
+    <br>· a-member imported from another module.
     <a class="clsHide" href="#idLagJsbrmmbrImrdsn"></a></p>
   <p id="idLagJsbrmmbrImrnam">name::
     <br>* McsEngl.Jsbrm'import-member,
     <br>* McsEngl.Jsbrmmbr.import,
     <a class="clsHide" href="#idLagJsbrmmbrImrnam"></a></p>
+
+  <section id="idLagJsbrmimptsmt">
+  <h5 id="idLagJsbrmimptsmtH5">import-statement
+    <a class="clsHide" href="#idLagJsbrmimptsmtH5"></a></h5>
+  <p id="idLagJsbrmimptsmtdsn">description::
+    <br>· the-statement that imports members from other modules:
+    <br> <code>import { name, reportArea } from './modules/square.js'</code>
+    <a class="clsHide" href="#idLagJsbrmimptsmtdsn"></a></p>
+  <p id="idLagJsbrmimptsmtnam">name::
+    <br>* McsEngl.Jsbrm'import-statement,
+    <a class="clsHide" href="#idLagJsbrmimptsmtnam"></a></p>
   </section>
+
+  <section id="idLagJsbrmmscfr">
+  <h5 id="idLagJsbrmmscfrH5">import-specifier
+    <a class="clsHide" href="#idLagJsbrmmscfrH5"></a></h5>
+  <p id="idLagJsbrmmscfrdsn">description::
+    <br>· the-part of <a class="clsPreview" href="#idLagJsbrmimptsmt">import-statement</a> that denotes the-imported-module, eg <code>'./modules/square.js'</code>
+    <br>import {shout} from './lib.mjs';
+    <br>import {shout} from '../lib.mjs';
+    <br>import {shout} from '/modules/lib.mjs';
+    <br>import {shout} from 'https://simple.example/modules/lib.mjs';
+    <br>For now, module specifiers must be full URLs, or relative URLs starting with /, ./, or ../.
+    <br>[https://v8.dev/features/modules#specifiers]
+    <a class="clsHide" href="#idLagJsbrmmscfrdsn"></a></p>
+  <p id="idLagJsbrmmscfrnam">name::
+    <br>* McsEngl.Jsbrm'import-specifier,
+    <br>* McsEngl.Jsbrm'module-specifier,
+    <a class="clsHide" href="#idLagJsbrmmscfrnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idLagJsbrmHtmlldg">
+  <h4 id="idLagJsbrmHtmlldgH4">Html-loading of Jsbrm
+    <a class="clsHide" href="#idLagJsbrmHtmlldgH4"></a></h4>
+  <p id="idLagJsbrmHtmlldgdsn">description::
+    <br>· with script-element: <code>&lt;script type="module" src="main.js">&lt;/script></code>
+    <a class="clsHide" href="#idLagJsbrmHtmlldgdsn"></a></p>
+  <p id="idLagJsbrmHtmlldgnam">name::
+    <br>* McsEngl.Jsbrm'Html-loading,
+    <a class="clsHide" href="#idLagJsbrmHtmlldgnam"></a></p>
+  </section>
+
+  <section id="idLagJsbrmrtsrpt">
+  <h4 id="idLagJsbrmrtsrptH4">Jsbrm'relation-to-classic-script
+    <a class="clsHide" href="#idLagJsbrmrtsrptH4"></a></h4>
+  <p id="idLagJsbrmrtsrptdsn">description::
+    <br>· modules have strict-mode enabled by default.
+    <br>· they have a-lexical top-level scope, their members are not global.
+    <br>· <code>this</code> within modules does not refer to the global this, and instead is undefined. (Use globalThis if you need access to the global this.)
+    <br>· Top-level await is available in modules, but not in classic scripts.
+    <br>"Because of these differences, the same JavaScript code might behave differently when treated as a module vs. a classic script. As such, the JavaScript runtime needs to know which scripts are modules."
+    <br>[https://v8.dev/features/modules]
+    <a class="clsHide" href="#idLagJsbrmrtsrptdsn"></a></p>
+  <p id="idLagJsbrmrtsrptnam">name::
+    <br>* McsEngl.Jsbrm'relation-to-classic-script,
+    <br>* McsEngl.classic-script'relation-to-Jsbrm,
+    <a class="clsHide" href="#idLagJsbrmrtsrptnam"></a></p>
+  </section>
+
+  <section id="idLagJsbrmflexn">
+  <h4 id="idLagJsbrmflexnH4">file-extention of Jsbrm
+    <a class="clsHide" href="#idLagJsbrmflexnH4"></a></h4>
+  <p id="idLagJsbrmflexndsn">description::
+    <br>· in browser, no matter because <code>type="module"</code> denotes the-module.
+    <br>· on other platforms '.mjs' makes crystal clear the-use of modules.
+    <br>[https://v8.dev/features/modules#mjs]
+    <a class="clsHide" href="#idLagJsbrmflexndsn"></a></p>
+  <p id="idLagJsbrmflexnnam">name::
+    <br>* McsEngl.Jsbrm'file-extention,
+    <a class="clsHide" href="#idLagJsbrmflexnnam"></a></p>
   </section>
 
   <section id="idLagJsbrmrsc">
