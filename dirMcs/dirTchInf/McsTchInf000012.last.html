@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagJsnd-(7-3-0.2021-04-30) Node--Javascript-language</title>
+  <title>Mcs.lagJsnd-(7-4-0.2021-04-02) Node--Javascript-language</title>
   <meta name="keywords" content="JavaScript, Js, lagJsnd, Node.js, Ljn, Hitp-webpage">
   <link rel="stylesheet" href="../Mcsmgr/hitp.css">
 </head>
@@ -242,7 +242,7 @@
     <br>02) <a class="clsPreview" href="McsTchInf000010.last.html#idLjsb">b - Boolean</a>,
     <br>03) <a class="clsPreview" href="#idLagJsndf">f - Function</a>,
     <br>04) <a class="clsPreview" href="McsTchInf000010.last.html#idLjsl">null</a>,
-    <br>05) <a class="clsPreview" href="#idLagJsndm">m - Module</a>,
+    <br>05) <a class="clsPreview" href="#idLagJsndmc">m - Module</a>,
     <br>06) <a class="clsPreview" href="McsTchInf000010.last.html#idLjsn">n - Number</a>,
     <br>07) <a class="clsPreview" href="#idLagJsndo">o - Object</a>,
     <br>08) <a class="clsPreview" href="McsTchInf000010.last.html#idLjsr">r - Regexp</a>,
@@ -321,10 +321,44 @@
 <section id="idLagJsndm">
   <h1 id="idLagJsndmH1">algo'sut.MODULE (Jsndm)
     <a class="clsHide" href="#idLagJsndmH1"></a></h1>
+  <p id="idLagJsndmdsn">description::
+    <br>·
+    <a class="clsHide" href="#idLagJsndmdsn"></a></p>
+  <p id="idLagJsndmnam">name::
+    <br>* McsEngl.lagJsnd'mdl!⇒Jsndm,
+    <br>* McsEngl.lagJsnd'module!⇒Jsndm,
+    <br>* McsEngl.lagJsnd'module--semantic-unit!⇒Jsndm,
+    <br>* McsEngl.lagJsnd-Sut.module!⇒Jsndm,
+    <br>* McsEngl.lagJsnd-m!⇒Jsndm,
+    <br>* McsEngl.Node.js-module!⇒Jsndm,
+    <a class="clsHide" href="#idLagJsndmnam"></a></p>
+</section>
 
-  <section id="idLagJsndmoverview">
-  <h2 id="idLagJsndmoverviewH2">Jsndm'overview
-    <a class="clsHide" href="#idLagJsndmoverviewH2"></a></h2>
+<section id="idLagJsndmEsm">
+  <h1 id="idLagJsndmEsmH1">module.ECMAScript
+    <a class="clsHide" href="#idLagJsndmEsmH1"></a></h1>
+  <p id="idLagJsndmEsmdsn">description::
+    <br>"ECMAScript (ES6) modules have been supported in Node.js since v8.5, with the --experimental-modules flag, and since at least Node.js v13.8.0 without the flag.
+    <br>To enable "ESM" (vs. Node.js's previous CommonJS-style module system ["CJS"]) you either use <code>"type": "module"</code> in package.json or give the files the extension <code>.mjs</code>.
+    <br>(Similarly, modules written with Node.js's previous CJS module can be named <code>.cjs</code> if your default is ESM.)"
+    <br>[{2021-04-04} https://stackoverflow.com/questions/950087/how-do-i-include-a-javascript-file-in-another-javascript-file]
+    <a class="clsHide" href="#idLagJsndmEsmdsn"></a></p>
+  <p id="idLagJsndmEsmnam">name::
+    <br>* McsEngl.Jsndm.ECMAScript!⇒Jsndme,
+    <br>* McsEngl.Jsndm.ESM!⇒Jsndme,
+    <br>* McsEngl.Jsndme,
+    <br>* McsEngl.Jsndme'(ECMAScript-modules-in-Jsnd)!⇒Jsndme,
+    <br>* McsEngl.lagJsnd'ECMAScript-module!⇒Jsndme,
+    <a class="clsHide" href="#idLagJsndmEsmnam"></a></p>
+</section>
+
+<section id="idLagJsndmc">
+  <h1 id="idLagJsndmcH1">module.CommonJS (Jsndmc)
+    <a class="clsHide" href="#idLagJsndmcH1"></a></h1>
+
+  <section id="idLagJsndmcoverview">
+  <h2 id="idLagJsndmcoverviewH2">Jsndmc'overview
+    <a class="clsHide" href="#idLagJsndmcoverviewH2"></a></h2>
   <p id="idLagJsndmdsn">description::
     <br>Module is <a class="clsPreview" href="McsTchInf000010.last.html#idLjssut">a-semantic-unit</a> which
     <br>- can-be PART OF other modules and
@@ -333,23 +367,24 @@
     <br>Like 'the-prototype-inheritance' mechanism which manages the GENERIC-SPECIFIC relations of <a class="clsPreview" href="McsTchInf000010.last.html#idLjssut">the-semantic-units</a> of an-API, modules is the-mechanism needed to manage the WHOLE-PART relations of the-semantic-units.
     <br>In contrast to <a class="clsPreview" href="McsTchInf000010.last.html#idLjso">objects</a>, modules HAVE scope, ie its members see each other.
     <br>===
+    <br><a class="clsPreview" href="#idLagJsndmc">Modules</a> actually are (implemented as) <a class="clsPreview" href="McsTchInf000010.last.html#idLjsfSex">self-executing-functions</a> that RETURN <a class="clsPreview" href="McsTchInf000010.last.html#idLjssut">the-semantic-unit</a> which contains <a class="clsPreview" href="#idLagJsndmcmbrPbc">the-public-members</a> of the-module.
+    <br>[HmnSgm.2016-07-25]
+    <br>===
     <br>Do-NOT-confuse the-module-semantic-unit (this-concept), with <a class="clsPreview" href="#idLagJsndmodule">the-module-object</a>, which is <a class="clsPreview" href="#idLagJsndmodule">a-member</a> of any module-semantic-unit.
     <br>[HmnSgm.2016-07-23]
     <a class="clsHide" href="#idLagJsndmdsn"></a></p>
   <p id="idLagJsndmdsnnam">name::
-    <br>* McsEngl.CJS-module!⇒Jsndm,
-    <br>* McsEngl.CommonJS-module!⇒Jsndm,
-    <br>* McsEngl.Jsndm, {2021-04-01},
-    <br>* McsEngl.Jsndm'(Node.js-module)!⇒Jsndm,
-    <br>* McsEngl.lagJsnd'module--semantic-unit!⇒Jsndm,
-    <br>* McsEngl.lagJsnd-m, {2019-03-17},
-    <br>* McsEngl.lagJsnd'mdl!⇒Jsndm, {2016.06.14}
-    <br>* McsEngl.lagJsnd'module!⇒Jsndm,
-    <br>* McsEngl.lagJsnd-Sut.module!⇒Jsndm,
-    <br>* McsEngl.Node.js-module!⇒Jsndm,
+    <br>* McsEngl.CJS-module!⇒Jsndmc,
+    <br>* McsEngl.CommonJS-module!⇒Jsndmc,
+    <br>* McsEngl.Jsndm.CommonJS!⇒Jsndmc,
+    <br>* McsEngl.Jsndmc, {2021-05-02},
+    <br>* McsEngl.Jsndmc'(Node.js-CommonJS-module)!⇒Jsndmc,
+    <br>* McsEngl.lagJsnd'CommonJS-module--semantic-unit!⇒Jsndmc,
+    <br>* McsEngl.Node.js-CommonJS-module!⇒Jsndmc,
+    <br>* McsEngl.Node.js-module!⇒Jsndmc,
     <br>===
     <br>NOTATION:
-    <br>I name the-modules as 'm?Name' where ? = a,b,f,n,o,r,s denotes the-type of <a class="clsPreview" href="#idLagJsndmmbrPbc">the-semantic-unit-they-export (public-member)</a>.
+    <br>I name the-modules as 'm?Name' where ? = a,b,f,n,o,r,s denotes the-type of <a class="clsPreview" href="#idLagJsndmcmbrPbc">the-semantic-unit-they-export (public-member)</a>.
     [HmnSgm.2016-12-01]
     <br>I name the-modules as 'mName' if they export objects and 'm?Name' where ? = a,b,f,n,r,s if they export other <a class="clsPreview" href="McsTchInf000010.last.html#idLjssut">semantic-units</a>.
     [HmnSgm.2016-07-25]
@@ -385,23 +420,10 @@
     <a class="clsHide" href="#idLagJsndmdsnP2"></a></p>
   </section>
 
-  <section id="idLagJsndmEsm">
-  <h2 id="idLagJsndmEsmH2">Jsndm'support-for-ECMAScript-modeules
-    <a class="clsHide" href="#idLagJsndmEsmH2"></a></h2>
-  <p id="idLagJsndmEsmdsn">description::
-    <br>"ECMAScript (ES6) modules have been supported in Node.js since v8.5, with the --experimental-modules flag, and since at least Node.js v13.8.0 without the flag. To enable "ESM" (vs. Node.js's previous CommonJS-style module system ["CJS"]) you either use "type": "module" in package.json or give the files the extension .mjs. (Similarly, modules written with Node.js's previous CJS module can be named .cjs if your default is ESM.)"
-    <br>[{2021-04-04} https://stackoverflow.com/questions/950087/how-do-i-include-a-javascript-file-in-another-javascript-file]
-    <a class="clsHide" href="#idLagJsndmEsmdsn"></a></p>
-  <p id="idLagJsndmEsmnam">name::
-    <br>* McsEngl.Jsndm'ESM,
-    <br>* McsEngl.Jsndm'support-for-ECMAScript-modeules,
-    <a class="clsHide" href="#idLagJsndmEsmnam"></a></p>
-  </section>
-
-  <section id="idLagJsndmcach">
-  <h2 id="idLagJsndmcachH2">Jsndm'Caching
-    <a class="clsHide" href="#idLagJsndmcachH2"></a></h2>
-  <p id="idLagJsndmcachdsn">description::
+  <section id="idLagJsndmccach">
+  <h2 id="idLagJsndmccachH2">Jsndmc'caching
+    <a class="clsHide" href="#idLagJsndmccachH2"></a></h2>
+  <p id="idLagJsndmccachdsn">description::
     <br><span class="clsQuote">Caching
     <br>Modules are cached after the first time they are loaded.
     <br>This means (among other things) that every call to require('foo') will get exactly the same object returned, if it would resolve to the same file.
@@ -416,32 +438,32 @@
     <br>Modules are cached based on their resolved filename.
     <br>Since modules may resolve to a different filename based on the location of the calling module (loading from <a class="clsPreview" href="#idLagJsndnode_modules">node_modules</a> folders), it is not a guarantee that require('foo') will always return the exact same object, if it would resolve to different files.</span>
     <br>[<a href="http://nodejs.org/api/modules.html#modules_caching">http://nodejs.org/api/modules.html#modules_caching</a>]
-    <a class="clsHide" href="#idLagJsndmcachdsn"></a></p>
-  <p id="idLagJsndmcachnam">name::
-    <br>* McsEngl.Jsndm'caching,
-    <a class="clsHide" href="#idLagJsndmcachnam"></a></p>
+    <a class="clsHide" href="#idLagJsndmccachdsn"></a></p>
+  <p id="idLagJsndmccachnam">name::
+    <br>* McsEngl.Jsndmc'caching,
+    <a class="clsHide" href="#idLagJsndmccachnam"></a></p>
   </section>
 
-  <section id="idLagJsndmmbr">
-  <h2 id="idLagJsndmmbrH2">Jsndm'member
-    <a class="clsHide" href="#idLagJsndmmbrH2"></a></h2>
-  <p id="idLagJsndmmbrdsn">description::
+  <section id="idLagJsndmcmbr">
+  <h2 id="idLagJsndmcmbrH2">Jsndmc'member
+    <a class="clsHide" href="#idLagJsndmcmbrH2"></a></h2>
+  <p id="idLagJsndmcmbrdsn">description::
     <br>Member-of-module is <a class="clsPreview" href="McsTchInf000010.last.html#idLjssut">a-semantic-unit</a> CONTAINED by the-module.
-    <a class="clsHide" href="#idLagJsndmmbrdsn"></a></p>
-  <p id="idLagJsndmmbrnam">name::
-    <br>* McsEngl.Jsndm'member!⇒Jsndmmbr,
+    <a class="clsHide" href="#idLagJsndmcmbrdsn"></a></p>
+  <p id="idLagJsndmcmbrnam">name::
+    <br>* McsEngl.Jsndmc'member!⇒Jsndmmbr,
     <br>* McsEngl.Jsndmmbr,
-    <a class="clsHide" href="#idLagJsndmmbrnam"></a></p>
+    <a class="clsHide" href="#idLagJsndmcmbrnam"></a></p>
 
   <section id="idLagJsndmexp">
   <h4 id="idLagJsndmexpH3">Jsndmmbr'exporting
     <a class="clsHide" href="#idLagJsndmexpH4"></a></h4>
   <p id="idLagJsndmexpdsn">description::
-    <br><a class="clsPreview" href="McsTchInf000010.last.html#idLjso">The-object</a> <code><a class="clsPreview" href="#idLagJsndmodule_exports">module.exports</a></code> is <a class="clsPreview" href="McsTchInf000010.last.html#idLjssut">the-semantic-unit</a> <a class="clsPreview" href="#idLagJsndm">a-module</a> exports, <a class="clsPreview" href="#idLagJsndmmbrPbc">the-public</a> semantic-unit of a-module.
+    <br><a class="clsPreview" href="McsTchInf000010.last.html#idLjso">The-object</a> <code><a class="clsPreview" href="#idLagJsndmodule_exports">module.exports</a></code> is <a class="clsPreview" href="McsTchInf000010.last.html#idLjssut">the-semantic-unit</a> <a class="clsPreview" href="#idLagJsndmc">a-module</a> exports, <a class="clsPreview" href="#idLagJsndmcmbrPbc">the-public</a> semantic-unit of a-module.
     <a class="clsHide" href="#idLagJsndmexpdsn"></a></p>
   <p id="idLagJsndmexpnam">name::
-    <br>* McsEngl.Jsndm'exporting,
-    <br>* McsEngl.Jsndm'exposing,
+    <br>* McsEngl.Jsndmc'exporting,
+    <br>* McsEngl.Jsndmc'exposing,
     <a class="clsHide" href="#idLagJsndmexpnam"></a></p>
   </section>
 
@@ -449,53 +471,53 @@
   <h3 id="idLagJsndmimpH3">Jsndmmbr'importing
     <a class="clsHide" href="#idLagJsndmimpH3"></a></h3>
   <p id="idLagJsndmimpdsn">description::
-    <br>We can-import <a class="clsPreview" href="#idLagJsndmmbrPbc">the-public-semantic-unit of a-module</a>, in any other <a class="clsPreview" href="#idLagJsndm">module</a>.
+    <br>We can-import <a class="clsPreview" href="#idLagJsndmcmbrPbc">the-public-semantic-unit of a-module</a>, in any other <a class="clsPreview" href="#idLagJsndmc">module</a>.
     <br>To do it, we use the-function <code><a class="clsPreview" href="#idLagJsndrequire">require()</a></code>.
     <a class="clsHide" href="#idLagJsndmimpdsn"></a></p>
   <p id="idLagJsndmimpnam">name::
-    <br>* McsEngl.Jsndm'importing,
-    <br>* McsEngl.Jsndm'loading,
-    <br>* McsEngl.Jsndm'requiring,
-    <br>* McsEngl.Jsndm'using,
+    <br>* McsEngl.Jsndmc'importing,
+    <br>* McsEngl.Jsndmc'loading,
+    <br>* McsEngl.Jsndmc'requiring,
+    <br>* McsEngl.Jsndmc'using,
     <a class="clsHide" href="#idLagJsndmimpnam"></a></p>
   </section>
 
-  <section id="idLagJsndmmbrSpc">
-  <h3 id="idLagJsndmmbrSpcH3">Jsndmmbr.SPECIFIC
-    <a class="clsHide" href="#idLagJsndmmbrSpcH3"></a></h3>
-  <p id="idLagJsndmmbrSpcP1">specific::
-    <br>* <a class="clsPreview" href="#idLagJsndmmbrPbc">public-member</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmmbrPbcNo">publicNo-member</a>,
+  <section id="idLagJsndmcmbrSpc">
+  <h3 id="idLagJsndmcmbrSpcH3">Jsndmmbr.SPECIFIC
+    <a class="clsHide" href="#idLagJsndmcmbrSpcH3"></a></h3>
+  <p id="idLagJsndmcmbrSpcP1">specific::
+    <br>* <a class="clsPreview" href="#idLagJsndmcmbrPbc">public-member</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcmbrPbcNo">publicNo-member</a>,
     <br>===
-    <br>* <a class="clsPreview" href="#idLagJsndmmbr__dirname">__dirname-string-member</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmmbr_filename">__filename-string-member</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcmbr__dirname">__dirname-string-member</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcmbr_filename">__filename-string-member</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmodule">module-object-member</a>,
     <br>* <a class="clsPreview" href="#idLagJsndrequire">require-function-member</a>,
-    <a class="clsHide" href="#idLagJsndmmbrSpcP1"></a></p>
+    <a class="clsHide" href="#idLagJsndmcmbrSpcP1"></a></p>
   </section>
 
-  <section id="idLagJsndmmbrPbc">
-  <h3 id="idLagJsndmmbrPbcH3">Jsndmmbr.PUBLIC
-    <a class="clsHide" href="#idLagJsndmmbrPbcH3"></a></h3>
-  <p id="idLagJsndmmbrPbcdsn">description::
-    <br>Public-member-of-module is <a class="clsPreview" href="#idLagJsndmmbrexp">an-exported</a> <a class="clsPreview" href="#idLagJsndmmbr">member</a>, that we have access outside of <a class="clsPreview" href="#idLagJsndm">the-module</a>.
-    <br>A-module, <a class="clsPreview" href="#idLagJsndmrpr">as a-self-executing-function</a>, <strong>returns|exports</strong> ONLY ONE <a class="clsPreview" href="McsTchInf000010.last.html#idLjssut">semantic-unit</a>.
+  <section id="idLagJsndmcmbrPbc">
+  <h3 id="idLagJsndmcmbrPbcH3">Jsndmmbr.PUBLIC
+    <a class="clsHide" href="#idLagJsndmcmbrPbcH3"></a></h3>
+  <p id="idLagJsndmcmbrPbcdsn">description::
+    <br>Public-member-of-module is <a class="clsPreview" href="#idLagJsndmcmbrexp">an-exported</a> <a class="clsPreview" href="#idLagJsndmcmbr">member</a>, that we have access outside of <a class="clsPreview" href="#idLagJsndmc">the-module</a>.
+    <br>A-module, <a class="clsPreview" href="#idLagJsndmcrpr">as a-self-executing-function</a>, <strong>returns|exports</strong> ONLY ONE <a class="clsPreview" href="McsTchInf000010.last.html#idLjssut">semantic-unit</a>.
     <br>When we export many members like <code>exports.member = value</code>, we export one <a class="clsPreview" href="McsTchInf000010.last.html#idLjso">object</a> with members the-ones we denote in <code>exports</code>.
-    <a class="clsHide" href="#idLagJsndmmbrPbcdsn"></a></p>
-  <p id="idLagJsndmmbrPbcnam">name::
-    <br>* McsEngl.Jsndm'exported-member,
-    <br>* McsEngl.Jsndm'public-member,
-    <br>* McsEngl.Jsndm'member.public,
-    <br>* McsEngl.Jsndm'member.localNo,
-    <br>* McsEngl.Jsndm'member.privateNo,
+    <a class="clsHide" href="#idLagJsndmcmbrPbcdsn"></a></p>
+  <p id="idLagJsndmcmbrPbcnam">name::
+    <br>* McsEngl.Jsndmc'exported-member,
+    <br>* McsEngl.Jsndmc'public-member,
+    <br>* McsEngl.Jsndmc'member.public,
+    <br>* McsEngl.Jsndmc'member.localNo,
+    <br>* McsEngl.Jsndmc'member.privateNo,
     <br>* McsEngl.lagJsnd'mmbr.public,
-    <a class="clsHide" href="#idLagJsndmmbrPbcnam"></a></p>
+    <a class="clsHide" href="#idLagJsndmcmbrPbcnam"></a></p>
   </section>
 
-  <section id="idLagJsndmmbrPbcNo">
-  <h3 id="idLagJsndmmbrPbcNoH3">Jsndmmbr.PUBLIC.NO
-    <a class="clsHide" href="#idLagJsndmmbrPbcNoH3"></a></h3>
-  <p id="idLagJsndmmbrPbcNodsn">description::
+  <section id="idLagJsndmcmbrPbcNo">
+  <h3 id="idLagJsndmcmbrPbcNoH3">Jsndmmbr.PUBLIC.NO
+    <a class="clsHide" href="#idLagJsndmcmbrPbcNoH3"></a></h3>
+  <p id="idLagJsndmcmbrPbcNodsn">description::
     <br>If module-a is importing in module-b, the-public-member of module-a is publicNo-member in module-b.
     <br>===
     <br>Defining <code>var something</code> in a-module, is publicNo-member of it.
@@ -504,26 +526,26 @@
     <br>In Node.js this is different.
     <br>The top-level scope is not the global scope; <code>var something</code> inside an Node.js module <strong>will be local</strong> to that module.</span>
     <br>[<a href="https://nodejs.org/api/globals.html#globals_global">https://nodejs.org/api/globals.html#globals_global</a>]
-    <a class="clsHide" href="#idLagJsndmmbrPbcNodsn"></a></p>
-  <p id="idLagJsndmmbrPbcNonam">name::
-    <br>* McsEngl.Jsndm'private-member,
-    <br>* McsEngl.Jsndm'member.private,
-    <br>* McsEngl.Jsndm'member.publicNo,
-    <br>* McsEngl.Jsndm'member.local,
-    <a class="clsHide" href="#idLagJsndmmbrPbcNonam"></a></p>
-  <p id="idLagJsndmmbrPbcNoSpc">specific::
+    <a class="clsHide" href="#idLagJsndmcmbrPbcNodsn"></a></p>
+  <p id="idLagJsndmcmbrPbcNonam">name::
+    <br>* McsEngl.Jsndmc'private-member,
+    <br>* McsEngl.Jsndmc'member.private,
+    <br>* McsEngl.Jsndmc'member.publicNo,
+    <br>* McsEngl.Jsndmc'member.local,
+    <a class="clsHide" href="#idLagJsndmcmbrPbcNonam"></a></p>
+  <p id="idLagJsndmcmbrPbcNoSpc">specific::
     <br>* any defined non-exporting member,
-    <br>* <a class="clsPreview" href="#idLagJsndmmbr__dirname">__dirname-string-member</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmmbr_filename">__filename-string-member</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcmbr__dirname">__dirname-string-member</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcmbr_filename">__filename-string-member</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmodule">module-object-member</a>,
     <br>* <a class="clsPreview" href="#idLagJsndrequire">require-function-member</a>,
-    <a class="clsHide" href="#idLagJsndmmbrPbcNoSpc"></a></p>
+    <a class="clsHide" href="#idLagJsndmcmbrPbcNoSpc"></a></p>
   </section>
 
-  <section id="idLagJsndmmbr__dirname">
-  <h3 id="idLagJsndmmbr__dirnameH3">Jsndmmbr.__dirname-string
-    <a class="clsHide" href="#idLagJsndmmbr__dirnameH3"></a></h3>
-  <p id="idLagJsndmmbr__dirnamedsn">description::
+  <section id="idLagJsndmcmbr__dirname">
+  <h3 id="idLagJsndmcmbr__dirnameH3">Jsndmmbr.__dirname-string
+    <a class="clsHide" href="#idLagJsndmcmbr__dirnameH3"></a></h3>
+  <p id="idLagJsndmcmbr__dirnamedsn">description::
     <br><span class="clsQuote"><code>__dirname</code>
     <br>String
     <br>The name of the directory that the currently executing script resides in.
@@ -532,17 +554,17 @@
     <br>// /Users/mjr
     <br><code>__dirname</code> isn't actually <a class="clsPreview" href="#idLagJsndmwombr">a global</a> but rather local to each module.</span>
     <br>[<a href="https://nodejs.org/api/globals.html#globals_dirname">https://nodejs.org/api/globals.html#globals_dirname</a>]
-    <a class="clsHide" href="#idLagJsndmmbr__dirnamedsn"></a></p>
-  <p id="idLagJsndmmbr__dirnamenam">name::
+    <a class="clsHide" href="#idLagJsndmcmbr__dirnamedsn"></a></p>
+  <p id="idLagJsndmcmbr__dirnamenam">name::
     <br>* McsEngl.__dirname-string-of-Node.js,
     <br>* McsEngl.Ljn__dirname-string,
-    <a class="clsHide" href="#idLagJsndmmbr__dirnamenam"></a></p>
+    <a class="clsHide" href="#idLagJsndmcmbr__dirnamenam"></a></p>
   </section>
 
-  <section id="idLagJsndmmbr_filename">
-  <h3 id="idLagJsndmmbr_filenameH3">Jsndmmbr.__filename-string
-    <a class="clsHide" href="#idLagJsndmmbr_filenameH3"></a></h3>
-  <p id="idLagJsndmmbr_filenamedsn">description::
+  <section id="idLagJsndmcmbr_filename">
+  <h3 id="idLagJsndmcmbr_filenameH3">Jsndmmbr.__filename-string
+    <a class="clsHide" href="#idLagJsndmcmbr_filenameH3"></a></h3>
+  <p id="idLagJsndmcmbr_filenamedsn">description::
     <br><span class="clsQuote"><code>__filename</code>
     <br>String
     <br>The filename of the code being executed.
@@ -556,11 +578,11 @@
     <br>
     <br>__filename isn't actually <a class="clsPreview" href="#idLagJsndmwombr">a global</a> but rather local to each module.</span>
     <br>[<a href="https://nodejs.org/api/globals.html#globals_filename">https://nodejs.org/api/globals.html#globals_filename</a>]
-    <a class="clsHide" href="#idLagJsndmmbr_filenamedsn"></a></p>
-  <p id="idLagJsndmmbr_filenamenam">name::
+    <a class="clsHide" href="#idLagJsndmcmbr_filenamedsn"></a></p>
+  <p id="idLagJsndmcmbr_filenamenam">name::
     <br>* McsEngl.__filename-of-Node.js,
     <br>* McsEngl.Ljn__filename-string,
-    <a class="clsHide" href="#idLagJsndmmbr_filenamenam"></a></p>
+    <a class="clsHide" href="#idLagJsndmcmbr_filenamenam"></a></p>
   </section>
 
   <section id="idLagJsndmodule">
@@ -575,23 +597,23 @@
     <br>[<a href="https://nodejs.org/api/modules.html#modules_the_module_object">https://nodejs.org/api/modules.html#modules_the_module_object</a>]
     <a class="clsHide" href="#idLagJsndmoduledsn"></a></p>
   <p id="idLagJsndmodulenam">name::
-    <br>* McsEngl.Jsndm'module-object,
+    <br>* McsEngl.Jsndmc'module-object,
     <br>* McsEngl.lagJsnd'mobt-(module-object), {2016.07.26}
     <br>* McsEngl.module-object-of-Node.js,
     <br>===
     <br>The-name 'module' is ambiguous.
     <br>a) denotes the-<code>module</code> object, this concept.
-    <br>b) denotes any <a class="clsPreview" href="#idLagJsndm">module</a> semantic-unit (ljnm).
+    <br>b) denotes any <a class="clsPreview" href="#idLagJsndmc">module</a> semantic-unit (ljnm).
     <a class="clsHide" href="#idLagJsndmodulenam"></a></p>
   <p id="idLagJsndmodulewhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-sut</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-sut</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
     <a class="clsHide" href="#idLagJsndmodulewhl"></a></p>
   <p id="idLagJsndmodulegnc">generic-chain::
     <br>* ?(Module.prototype) (<code>module.__proto__ === Object.prototype //false</code>),
     <br>* <a class="clsPreview" href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a> (<code>module.__proto__.__proto__ === Object.prototype //true</code>),
     <br>===
-    <br>* <a class="clsPreview" href="#idLagJsndmmbr">module-sut-member</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcmbr">module-sut-member</a>,
     <a class="clsHide" href="#idLagJsndmodulewhl"></a></p>
 
   <section id="idLagJsndmodule_member">
@@ -618,7 +640,7 @@
     <br>[<a href="https://nodejs.org/api/modules.html#modules_module_children">https://nodejs.org/api/modules.html#modules_module_children</a>]
     <a class="clsHide" href="#idLagJsndmodule_childrendsn"></a></p>
   <p id="idLagJsndmodule_childrennam">name::
-    <br>* McsEngl.Jsndm.children-array,
+    <br>* McsEngl.Jsndmc.children-array,
     <br>* McsEngl.module.children-array-of-Node.js,
     <a class="clsHide" href="#idLagJsndmodule_childrennam"></a></p>
   </section>
@@ -627,7 +649,7 @@
   <h4 id="idLagJsndmodule_exportsH4">Jsndmobt'member.module.exports-object
     <a class="clsHide" href="#idLagJsndmodule_exportsH4"></a></h4>
   <p id="idLagJsndmodule_exportsdsn">description::
-    <br><code>module.exports</code> holds <a class="clsPreview" href="#idLagJsndmmbrPbc">the-public-member (exported)</a> of <a class="clsPreview" href="#idLagJsndm">a-module</a>.
+    <br><code>module.exports</code> holds <a class="clsPreview" href="#idLagJsndmcmbrPbc">the-public-member (exported)</a> of <a class="clsPreview" href="#idLagJsndmc">a-module</a>.
     <br>===
     <br><span class="clsQuote">module.exports
     <br>Object
@@ -642,7 +664,7 @@
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/modules.html#modules_module_exports">https://nodejs.org/docs/v6.3.1/api/modules.html#modules_module_exports</a>]
     <a class="clsHide" href="#idLagJsndmodule_exportsdsn"></a></p>
   <p id="idLagJsndmodule_exportsnam">name::
-    <br>* McsEngl.Jsndm'module.exports-object,
+    <br>* McsEngl.Jsndmc'module.exports-object,
     <a class="clsHide" href="#idLagJsndmodule_exportsnam"></a></p>
 
   <section id="idLagJsndmodule_exportsSingle">
@@ -656,9 +678,9 @@
     <br>[<a href="https://nodejs.org/api/modules.html#modules_modules">https://nodejs.org/api/modules.html#modules_modules</a>]
     <a class="clsHide" href="#idLagJsndmodule_exportsSingledsn"></a></p>
   <p id="idLagJsndmodule_exportsSinglenam">name::
-    <br>* McsEngl.Jsndm'exporting-single-member,
-    <br>* McsEngl.Jsndm'exporting-single-semantic-unit,
-    <br>* McsEngl.Jsndm'module.exports,
+    <br>* McsEngl.Jsndmc'exporting-single-member,
+    <br>* McsEngl.Jsndmc'exporting-single-semantic-unit,
+    <br>* McsEngl.Jsndmc'module.exports,
     <br>* McsEngl.module.exports-of-Node.js,
     <a class="clsHide" href="#idLagJsndmodule_exportsSinglenam"></a></p>
   </section>
@@ -680,8 +702,8 @@
     <br>* McsEngl.exports.member-of-Node.js,
     <br>* McsEngl.lagJsnd'exporting-many-members,
     <br>* McsEngl.lagJsnd'exports.member,
-    <br>* McsEngl.Jsndm'exporting-many-members,
-    <br>* McsEngl.Jsndm'module.exports.member,
+    <br>* McsEngl.Jsndmc'exporting-many-members,
+    <br>* McsEngl.Jsndmc'module.exports.member,
     <a class="clsHide" href="#idLagJsndmodule_exportsManynam"></a></p>
   </section>
   </section>
@@ -696,7 +718,7 @@
     <br>[<a href="https://nodejs.org/api/modules.html#modules_module_filename">https://nodejs.org/api/modules.html#modules_module_filename</a>]
     <a class="clsHide" href="#idLagJsndmodule_filenamedsn"></a></p>
   <p id="idLagJsndmodule_filenamenam">name::
-    <br>* McsEngl.Jsndm.filename,
+    <br>* McsEngl.Jsndmc.filename,
     <br>* McsEngl.module.filename-of-Node.js,
     <a class="clsHide" href="#idLagJsndmodule_filenamenam"></a></p>
   </section>
@@ -709,7 +731,7 @@
     <br>[<a href="https://nodejs.org/api/modules.html#modules_module_id">https://nodejs.org/api/modules.html#modules_module_id</a>]
     <a class="clsHide" href="#idLagJsndmodule_iddsn"></a></p>
   <p id="idLagJsndmodule_idnam">name::
-    <br>* McsEngl.Jsndm.id,
+    <br>* McsEngl.Jsndmc.id,
     <br>* McsEngl.module.id-of-Node.js,
     <a class="clsHide" href="#idLagJsndmodule_idnam"></a></p>
   </section>
@@ -722,7 +744,7 @@
     <br>[<a href="https://nodejs.org/api/modules.html#modules_module_loaded">https://nodejs.org/api/modules.html#modules_module_loaded</a>]
     <a class="clsHide" href="#idLagJsndmodule_loadeddsn"></a></p>
   <p id="idLagJsndmodule_loadednam">name::
-    <br>* McsEngl.Jsndm.loaded,
+    <br>* McsEngl.Jsndmc.loaded,
     <br>* McsEngl.module.loaded-of-Node.js,
     <a class="clsHide" href="#idLagJsndmodule_loadednam"></a></p>
   </section>
@@ -735,7 +757,7 @@
     <br>[<a href="https://nodejs.org/api/modules.html#modules_module_parent">https://nodejs.org/api/modules.html#modules_module_parent</a>]
     <a class="clsHide" href="#idLagJsndmodule_parentdsn"></a></p>
   <p id="idLagJsndmodule_parentnam">name::
-    <br>* McsEngl.Jsndm.parent,
+    <br>* McsEngl.Jsndmc.parent,
     <br>* McsEngl.module.parent-of-Node.js,
     <a class="clsHide" href="#idLagJsndmodule_parentnam"></a></p>
   </section>
@@ -749,7 +771,7 @@
     <br>[ 'D:\\Ljn\\node_modules' ]</code>
     <a class="clsHide" href="#idLagJsndmodule_pathsdsn"></a></p>
   <p id="idLagJsndmodule_pathsnam">name::
-    <br>* McsEngl.Jsndm.paths,
+    <br>* McsEngl.Jsndmc.paths,
     <br>* McsEngl.module.paths-of-Node.js,
     <a class="clsHide" href="#idLagJsndmodule_pathsnam"></a></p>
   </section>
@@ -759,15 +781,15 @@
   <h3 id="idLagJsndrequireH3">Jsndmmbr.require-function
     <a class="clsHide" href="#idLagJsndrequireH3"></a></h3>
   <p id="idLagJsndrequiredsn">description::
-    <br>The-require-function IMPORTS <a class="clsPreview" href="#idLagJsndm">modules</a> into other modules.
-    <br>When we import <a class="clsPreview" href="#idLagJsndm">a-module</a>, we import <a class="clsPreview" href="#idLagJsndmmbrPbc">the-public-member</a>[1] of the-module OR a-member of it[1] AND we execute the-code of the-module which could eg add <a class="clsPreview" href="#idLagJsndmwombr">a-global-member</a>.
+    <br>The-require-function IMPORTS <a class="clsPreview" href="#idLagJsndmc">modules</a> into other modules.
+    <br>When we import <a class="clsPreview" href="#idLagJsndmc">a-module</a>, we import <a class="clsPreview" href="#idLagJsndmcmbrPbc">the-public-member</a>[1] of the-module OR a-member of it[1] AND we execute the-code of the-module which could eg add <a class="clsPreview" href="#idLagJsndmwombr">a-global-member</a>.
     <a class="clsHide" href="#idLagJsndrequiredsn"></a></p>
   <p id="idLagJsndrequirenam">name::
     <br>* McsEngl.lagJsnd'require-function,
     <br>* McsEngl.lagJsnd-f.require,
     <a class="clsHide" href="#idLagJsndrequirenam"></a></p>
   <p id="idLagJsndrequirewhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-semantic-unit</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-semantic-unit</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">lagJsnd-most-whole-object (global)</a>,
     <a class="clsHide" href="#idLagJsndrequirewhl"></a></p>
   <p id="idLagJsndrequiregnc">generic-chain::
@@ -804,7 +826,7 @@
     <a class="clsHide" href="#idLagJsndrequirecoredsn"></a></p>
   <p id="idLagJsndrequirecorenam">name::
     <br>* McsEngl.lagJsnd'import-core-module,
-    <br>* McsEngl.Jsndm'import-core-module,
+    <br>* McsEngl.Jsndmc'import-core-module,
     <a class="clsHide" href="#idLagJsndrequirecorenam"></a></p>
   </section>
 
@@ -847,7 +869,7 @@
     <a class="clsHide" href="#idLagJsndrequireabsdsn"></a></p>
   <p id="idLagJsndrequireabsnam">name::
     <br>* McsEngl.lagJsnd'import-module-from-absolute-path,
-    <br>* McsEngl.Jsndm'import-module-from-absolute-path,
+    <br>* McsEngl.Jsndmc'import-module-from-absolute-path,
     <a class="clsHide" href="#idLagJsndrequireabsnam"></a></p>
   </section>
 
@@ -867,8 +889,8 @@
   <p id="idLagJsndrequiresrchnam">name::
     <br>* McsEngl.lagJsnd'import-by-searching,
     <br>* McsEngl.lagJsnd'import-from-node-modules,
-    <br>* McsEngl.Jsndm'import-by-searching,
-    <br>* McsEngl.Jsndm'import-from-node-modules,
+    <br>* McsEngl.Jsndmc'import-by-searching,
+    <br>* McsEngl.Jsndmc'import-from-node-modules,
     <a class="clsHide" href="#idLagJsndrequiresrchnam"></a></p>
   </section>
 
@@ -881,7 +903,7 @@
     <a class="clsHide" href="#idLagJsndrequirejsondsn"></a></p>
   <p id="idLagJsndrequirejsonnam">name::
     <br>* McsEngl.lagJsnd'import-JSON-file,
-    <br>* McsEngl.Jsndm'import-JSON-file,
+    <br>* McsEngl.Jsndmc'import-JSON-file,
     <a class="clsHide" href="#idLagJsndrequirejsonnam"></a></p>
   </section>
 
@@ -971,29 +993,29 @@
   </section>
   </section>
 
-  <section id="idLagJsndmnpm">
-  <h2 id="idLagJsndmnpmH2">Jsndm'npm-tool (<a class="clsPreview" href="#idLagJsndnpm">link</a>)
-    <a class="clsHide" href="#idLagJsndmnpmH2"></a></h2>
+  <section id="idLagJsndmcnpm">
+  <h2 id="idLagJsndmcnpmH2">Jsndmc'npm-tool (<a class="clsPreview" href="#idLagJsndnpm">link</a>)
+    <a class="clsHide" href="#idLagJsndmcnpmH2"></a></h2>
   </section>
 
-  <section id="idLagJsndmrepo">
-  <h2 id="idLagJsndmrepoH2">Jsndm'Repository
-    <a class="clsHide" href="#idLagJsndmrepoH2"></a></h2>
-  <p id="idLagJsndmreponam">name::
-    <br>* McsEngl.Jsndm'repository,
-    <br>* McsEngl.Jsndm'storage,
-    <a class="clsHide" href="#idLagJsndmreponam"></a></p>
-  <p id="idLagJsndmrepoSpc">specific::
+  <section id="idLagJsndmcrepo">
+  <h2 id="idLagJsndmcrepoH2">Jsndmc'repository
+    <a class="clsHide" href="#idLagJsndmcrepoH2"></a></h2>
+  <p id="idLagJsndmcreponam">name::
+    <br>* McsEngl.Jsndmc'repository,
+    <br>* McsEngl.Jsndmc'storage,
+    <a class="clsHide" href="#idLagJsndmcreponam"></a></p>
+  <p id="idLagJsndmcrepoSpc">specific::
     <br>* public-repository,
     <br>* publicNo-repository,
     <br>===
     <br>* <a class="clsPreview" href="#idLagJsndnpmjs_org/">npmjs.org</a>/
     <br>* <a class="clsPreview" href="#idLagJsndnode-modules_com">node-modules.com</a>/
     <br>* <a href="http://eirikb.github.io/nipster/">http://eirikb.github.io/nipster</a>/
-    <a class="clsHide" href="#idLagJsndmrepoSpc"></a></p>
+    <a class="clsHide" href="#idLagJsndmcrepoSpc"></a></p>
 
   <section id="idLagJsndnpmjs_org">
-  <h3 id="idLagJsndnpmjs_orgH3">Jsndm'npm-registry (npmjs.org)
+  <h3 id="idLagJsndnpmjs_orgH3">Jsndmc'npm-registry (npmjs.org)
     <a class="clsHide" href="#idLagJsndnpmjs_orgH3"></a></h3>
   <p id="idLagJsndnpmjs_orgdsn">description::
     <br><span class="clsQuote">Join the modular development revolution
@@ -1017,7 +1039,7 @@
   </section>
 
   <section id="idLagJsndnode_modules">
-  <h3 id="idLagJsndnode_modulesH3">Jsndm'node_modules-directory
+  <h3 id="idLagJsndnode_modulesH3">Jsndmc'node_modules-directory
     <a class="clsHide" href="#idLagJsndnode_modulesH3"></a></h3>
   <p id="idLagJsndnode_modulesdsn">description::
     <br><span class="clsQuote">Without a leading <code>'/'</code> or <code>'./'</code> to indicate a file, the module is either a "core module" or is loaded from a <code>node_modules</code> folder.</span>
@@ -1045,7 +1067,7 @@
   </section>
 
   <section id="idLagJsndnode-modules_com">
-  <h3 id="idLagJsndnode-modules_comH3">Jsndm'node-modules.com
+  <h3 id="idLagJsndnode-modules_comH3">Jsndmc'node-modules.com
     <a class="clsHide" href="#idLagJsndnode-modules_comH3"></a></h3>
   <p id="idLagJsndnode-modules_comP1">addressWpg::
     <br>* <a href="http://node-modules.com/">http://node-modules.com</a>/
@@ -1053,26 +1075,26 @@
   </section>
   </section>
 
-  <section id="idLagJsndmrsc">
-  <h2 id="idLagJsndmrscH2">Jsndm'Resource
-    <a class="clsHide" href="#idLagJsndmrscH2"></a></h2>
-  <p id="idLagJsndmrscnam">name::
-    <br>* McsEngl.Jsndm'Infrsc,
-    <a class="clsHide" href="#idLagJsndmrscnam"></a></p>
-  <p id="idLagJsndmrscP1">addressWpg::
+  <section id="idLagJsndmcrsc">
+  <h2 id="idLagJsndmcrscH2">Jsndmc'Infrsc
+    <a class="clsHide" href="#idLagJsndmcrscH2"></a></h2>
+  <p id="idLagJsndmcrscnam">name::
+    <br>* McsEngl.Jsndmc'Infrsc,
+    <a class="clsHide" href="#idLagJsndmcrscnam"></a></p>
+  <p id="idLagJsndmcrscP1">addressWpg::
     <br>* {2021-04-27} https://dmitripavlutin.com/ecmascript-modules-nodejs/,
     <br>* <a href="https://www.nczonline.net/blog/2016/04/es6-module-loading-more-complicated-than-you-think/">https://www.nczonline.net/blog/2016/04/es6-module-loading-more-complicated-than-you-think/</a>: modules vs scripts,
     <br>* <a href="http://book.mixu.net/node/ch8.html">http://book.mixu.net/node/ch8.html</a>,
     <br>* <a href="https://quickleft.com/blog/creating-and-publishing-a-node-js-module/">https://quickleft.com/blog/creating-and-publishing-a-node-js-module/</a>,
     <br>* <a href="http://www.hacksparrow.com/how-to-write-node-js-modules.html">http://www.hacksparrow.com/how-to-write-node-js-modules.html</a>,
     <br>* <a href="http://openmymind.net/2012/2/3/Node-Require-and-Exports/">http://openmymind.net/2012/2/3/Node-Require-and-Exports</a>/
-    <a class="clsHide" href="#idLagJsndmrscP1"></a></p>
+    <a class="clsHide" href="#idLagJsndmcrscP1"></a></p>
 
   <section id="idLagJsndmfrmamd">
-  <h3 id="idLagJsndmfrmamdH3">Jsndm'Converting-AMD-to-NodeJs-modules
+  <h3 id="idLagJsndmfrmamdH3">Jsndmc'Converting-AMD-to-NodeJs-modules
     <a class="clsHide" href="#idLagJsndmfrmamdH3"></a></h3>
   <p id="idLagJsndmfrmamdnam">name::
-    <br>* McsEngl.Jsndm'converting-AMD-to-NodeJs-modules,
+    <br>* McsEngl.Jsndmc'converting-AMD-to-NodeJs-modules,
     <br>* McsEngl.lagJsnd'converting-AMD-to-NodeJs-modules,
     <a class="clsHide" href="#idLagJsndmfrmamdnam"></a></p>
   <p id="idLagJsndmfrmamdP1">addressWpg::
@@ -1083,13 +1105,13 @@
   </section>
   </section>
 
-  <section id="idLagJsndmstblt">
-  <h2 id="idLagJsndmstbltH2">Jsndm'Stability-index (0 - 3)
-    <a class="clsHide" href="#idLagJsndmstbltH2"></a></h2>
-  <p id="idLagJsndmstbltnam">name::
+  <section id="idLagJsndmcstblt">
+  <h2 id="idLagJsndmcstbltH2">Jsndmc'stability-index (0 - 3)
+    <a class="clsHide" href="#idLagJsndmcstbltH2"></a></h2>
+  <p id="idLagJsndmcstbltnam">name::
     <br>* McsEngl.lagJsnd'stability-index,
-    <a class="clsHide" href="#idLagJsndmstbltnam"></a></p>
-  <p id="idLagJsndmstbltdsn">description::
+    <a class="clsHide" href="#idLagJsndmcstbltnam"></a></p>
+  <p id="idLagJsndmcstbltdsn">description::
     <br><strong>lagJsndstability0.Deprecated</strong>
     <br>This feature is known to be problematic, and changes are
     <br>planned.  Do not rely on it.  Use of the feature may cause warnings.  Backwards
@@ -1136,14 +1158,14 @@
     <br>Unless serious bugs are found, this code will not ever
     <br>change.  Please do not suggest changes in this area; they will be refused.</span>
     <br>[<a href="https://nodejs.org/docs/latest-v0.10.x/doc/api/documentation.html#documentation_stability_index">https://nodejs.org/docs/latest-v0.10.x/doc/api/documentation.html#documentation_stability_index</a>]
-    <a class="clsHide" href="#idLagJsndmstbltdsn"></a></p>
+    <a class="clsHide" href="#idLagJsndmcstbltdsn"></a></p>
   </section>
 
-  <section id="idLagJsndmrpr">
-  <h2 id="idLagJsndmrprH2">Jsndm'Wraper
-    <a class="clsHide" href="#idLagJsndmrprH2"></a></h2>
-  <p id="idLagJsndmrprdsn">description::
-    <br><a class="clsPreview" href="#idLagJsndm">Modules</a> actually are (implemented as) <a class="clsPreview" href="McsTchInf000010.last.html#idLjsfSex">self-executing-functions</a> that RETURN <a class="clsPreview" href="McsTchInf000010.last.html#idLjssut">the-semantic-unit</a> which contains <a class="clsPreview" href="#idLagJsndmmbrPbc">the-public-members</a> of the-module.
+  <section id="idLagJsndmcrpr">
+  <h2 id="idLagJsndmcrprH2">Jsndmc'wraper
+    <a class="clsHide" href="#idLagJsndmcrprH2"></a></h2>
+  <p id="idLagJsndmcrprdsn">description::
+    <br><a class="clsPreview" href="#idLagJsndmc">Modules</a> actually are (implemented as) <a class="clsPreview" href="McsTchInf000010.last.html#idLjsfSex">self-executing-functions</a> that RETURN <a class="clsPreview" href="McsTchInf000010.last.html#idLjssut">the-semantic-unit</a> which contains <a class="clsPreview" href="#idLagJsndmcmbrPbc">the-public-members</a> of the-module.
     <br>[HmnSgm.2016-07-25]
     <br>===
     <br><span class="clsQuote">The module wrapper
@@ -1157,40 +1179,40 @@
     <br>-- The module and exports objects that the implementor can use to export values from the module.
     <br>-- The convenience variables __filename and __dirname, containing the module's absolute filename and directory path.</span>
     <br>[<a href="https://nodejs.org/api/modules.html#modules_the_module_wrapper">https://nodejs.org/api/modules.html#modules_the_module_wrapper</a>]
-    <a class="clsHide" href="#idLagJsndmrprdsn"></a></p>
-  <p id="idLagJsndmrprnam">name::
-    <br>* McsEngl.Jsndm'wrapper,
-    <a class="clsHide" href="#idLagJsndmrprnam"></a></p>
+    <a class="clsHide" href="#idLagJsndmcrprdsn"></a></p>
+  <p id="idLagJsndmcrprnam">name::
+    <br>* McsEngl.Jsndmc'wrapper,
+    <a class="clsHide" href="#idLagJsndmcrprnam"></a></p>
   </section>
 
-  <section id="idLagJsndmSpc">
-  <h2 id="idLagJsndmSpcH2">SPECIFIC
-    <a class="clsHide" href="#idLagJsndmSpcH2"></a></h2>
-  <p id="idLagJsndmSpcnam">name::
-    <br>* McsEngl.Jsndm.specific,
-    <a class="clsHide" href="#idLagJsndmSpcnam"></a></p>
-  <p id="idLagJsndmSpcP2">specific::
-    <br>* <a class="clsPreview" href="#idLagJsndmCor">core-module</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmCorNo">coreNo-module</a>,
+  <section id="idLagJsndmcSpc">
+  <h2 id="idLagJsndmcSpcH2">SPECIFIC
+    <a class="clsHide" href="#idLagJsndmcSpcH2"></a></h2>
+  <p id="idLagJsndmcSpcnam">name::
+    <br>* McsEngl.Jsndmc.specific,
+    <a class="clsHide" href="#idLagJsndmcSpcnam"></a></p>
+  <p id="idLagJsndmcSpcP2">specific::
+    <br>* <a class="clsPreview" href="#idLagJsndmcCor">core-module</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcCorNo">coreNo-module</a>,
     <br>===
-    <br>* <a class="clsPreview" href="#idLagJsndmMain">main-module</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmMainNo">mainNo-module</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcMain">main-module</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcMainNo">mainNo-module</a>,
     <br>===
-    <br>* <a class="clsPreview" href="#idLagJsndmDir">directory-module</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmFil">file-module</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcDir">directory-module</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcFil">file-module</a>,
     <br>===
     <br><span class="clsQuote">There are three types of modules in Node.js:
     <br>    internal modules (parts of Node API)
     <br>    3rd party modules written in Javascript
     <br>    3rd party modules with C/C++ addons</span>
     <br>[<a href="https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules">https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules</a>]
-    <a class="clsHide" href="#idLagJsndmSpcP2"></a></p>
+    <a class="clsHide" href="#idLagJsndmcSpcP2"></a></p>
   </section>
 
-  <section id="idLagJsndmOnpsu">
-  <h2 id="idLagJsndmOnpsuH2">Jsndm.SPECIFIC-DIVISION.public--semantic-unit
-    <a class="clsHide" href="#idLagJsndmOnpsuH2"></a></h2>
-  <p id="idLagJsndmOnpsudsn">description::
+  <section id="idLagJsndmcOnpsu">
+  <h2 id="idLagJsndmcOnpsuH2">Jsndmc.SPECIFIC-DIVISION.public--semantic-unit
+    <a class="clsHide" href="#idLagJsndmcOnpsuH2"></a></h2>
+  <p id="idLagJsndmcOnpsudsn">description::
     <br>Every module exports (has a-public) a-semantic-unit.
     <br>Usually it is an-object or a-function.
     <br>We can-classify modules on this attribute as:
@@ -1198,20 +1220,20 @@
     <br>* function-module,
     <br>...
     <br>[<a class="clsPreview" href="../dirHmn/McsHmn000003.last.html#idOverview">HmnSgm</a>.2017-10-25]
-    <a class="clsHide" href="#idLagJsndmOnpsudsn"></a></p>
-  <p id="idLagJsndmOnpsunam">name::
+    <a class="clsHide" href="#idLagJsndmcOnpsudsn"></a></p>
+  <p id="idLagJsndmcOnpsunam">name::
     <br>* McsEngl.lagJsnd'function-module,
     <br>* McsEngl.lagJsnd'object-module,
-    <br>* McsEngl.Jsndm.specifics-division--on--public-semantic-unit,
-    <br>* McsEngl.Jsndm.function,
-    <br>* McsEngl.Jsndm.object,
-    <a class="clsHide" href="#idLagJsndmOnpsunam"></a></p>
+    <br>* McsEngl.Jsndmc.specifics-division--on--public-semantic-unit,
+    <br>* McsEngl.Jsndmc.function,
+    <br>* McsEngl.Jsndmc.object,
+    <a class="clsHide" href="#idLagJsndmcOnpsunam"></a></p>
    </section>
 
-  <section id="idLagJsndmCor">
-  <h2 id="idLagJsndmCorH2">Jsndm.CORE
-    <a class="clsHide" href="#idLagJsndmCorH2"></a></h2>
-  <p id="idLagJsndmCordsn">description::
+  <section id="idLagJsndmcCor">
+  <h2 id="idLagJsndmcCorH2">Jsndmc.CORE
+    <a class="clsHide" href="#idLagJsndmcCorH2"></a></h2>
+  <p id="idLagJsndmcCordsn">description::
     <br><span class="clsQuote">Core Modules
     <br>Node has several modules compiled into the binary.
     <br>These modules are described in greater detail elsewhere in this documentation.
@@ -1221,83 +1243,83 @@
     <br>Core modules are always <strong>preferentially loaded</strong> if their identifier is passed to require().
     <br>For instance, require('http') will always return the built in HTTP module, even if there is a file by that name.</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/modules.html#modules_core_modules">https://nodejs.org/docs/v6.3.1/api/modules.html#modules_core_modules</a>]
-    <a class="clsHide" href="#idLagJsndmCordsn"></a></p>
-  <p id="idLagJsndmCornam">name::
+    <a class="clsHide" href="#idLagJsndmcCordsn"></a></p>
+  <p id="idLagJsndmcCornam">name::
     <br>* McsEngl.lagJsnd'builtIn-module,
     <br>* McsEngl.lagJsnd'core-module,
     <br>* McsEngl.lagJsnd'customNo-module,
     <br>* McsEngl.lagJsnd'internal-module,
     <br>* McsEngl.lagJsnd'native-module,
-    <br>* McsEngl.Jsndm.builtIn,
-    <br>* McsEngl.Jsndm.customNo,
-    <br>* McsEngl.Jsndm.internal,
-    <br>* McsEngl.Jsndm.native,
-    <a class="clsHide" href="#idLagJsndmCornam"></a></p>
-  <p id="idLagJsndmCorSpc">specific::
-    <br>* <a class="clsPreview" href="#idLagJsndmfAssert">Jsndm.assert</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoChild_process">Jsndm.child_process</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoCluster">Jsndm.cluster</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoCrypto">Jsndm.crypto</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoDns">Jsndm.dns</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmfEvents">Jsndm.events</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoFs">Jsndm.fs</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoHttp">Jsndm.http</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoHttps">Jsndm.https</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoNet">Jsndm.net</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoOs">Jsndm.os</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoPath">Jsndm.path</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoReadline">Jsndm.readline</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoRepl">Jsndm.repl</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmfStream">Jsndm.stream</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoString_decoder">Jsndm.string_decoder</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoTls">Jsndm.tls</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmTTy">Jsndm.tty</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoUrl">Jsndm.url</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoUtil">Jsndm.util</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoVm">Jsndm.vm</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoZlib">Jsndm.zlib</a>,
+    <br>* McsEngl.Jsndmc.builtIn,
+    <br>* McsEngl.Jsndmc.customNo,
+    <br>* McsEngl.Jsndmc.internal,
+    <br>* McsEngl.Jsndmc.native,
+    <a class="clsHide" href="#idLagJsndmcCornam"></a></p>
+  <p id="idLagJsndmcCorSpc">specific::
+    <br>* <a class="clsPreview" href="#idLagJsndmcfAssert">Jsndmc.assert</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoChild_process">Jsndmc.child_process</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoCluster">Jsndmc.cluster</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoCrypto">Jsndmc.crypto</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoDns">Jsndmc.dns</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcfEvents">Jsndmc.events</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoFs">Jsndmc.fs</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoHttp">Jsndmc.http</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoHttps">Jsndmc.https</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoNet">Jsndmc.net</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoOs">Jsndmc.os</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoPath">Jsndmc.path</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoReadline">Jsndmc.readline</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoRepl">Jsndmc.repl</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcfStream">Jsndmc.stream</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoString_decoder">Jsndmc.string_decoder</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoTls">Jsndmc.tls</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmTTy">Jsndmc.tty</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoUrl">Jsndmc.url</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoUtil">Jsndmc.util</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoVm">Jsndmc.vm</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoZlib">Jsndmc.zlib</a>,
     <br>===
     <br>// Ljn.6-3-1
     <br><code>repl> repl._builtinLibs
     <br>[ 'assert', 'buffer', 'child_process', 'cluster', 'crypto', 'dgram', 'dns', 'domain', 'events', 'fs', 'http', 'https', 'net', 'os', 'path', 'punycode', 'querystring', 'readline', 'repl', 'stream', 'string_decoder', 'tls', 'tty', 'url', 'util', 'v8', 'vm', 'zlib' ]</code>
-    <a class="clsHide" href="#idLagJsndmCorSpc"></a></p>
+    <a class="clsHide" href="#idLagJsndmcCorSpc"></a></p>
   </section>
 
-  <section id="idLagJsndmfAssert">
-  <h2 id="idLagJsndmfAssertH2">Jsndm.core.assert-function (core 3.locked)
-    <a class="clsHide" href="#idLagJsndmfAssertH2"></a></h2>
-  <p id="idLagJsndmfAssertdsn">description::
+  <section id="idLagJsndmcfAssert">
+  <h2 id="idLagJsndmcfAssertH2">Jsndmc.core.assert-function (core 3.locked)
+    <a class="clsHide" href="#idLagJsndmcfAssertH2"></a></h2>
+  <p id="idLagJsndmcfAssertdsn">description::
     <br><span class="clsQuote">The assert module provides a simple set of assertion tests that can be used to test invariants.
     <br>The module is intended for internal use by Node.js, but can be used in application code via <code>require('assert')</code>.
     <br>However, assert is not a testing framework, and is not intended to be used as a general purpose assertion library.
     <br>The API for the assert module is Locked.
     <br>This means that there will be no additions or changes to any of the methods implemented and exposed by the module.</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/assert.html#assert_assert">https://nodejs.org/docs/v6.3.1/api/assert.html#assert_assert</a>]
-    <a class="clsHide" href="#idLagJsndmfAssertdsn"></a></p>
-  <p id="idLagJsndmfAssertnam">name::
+    <a class="clsHide" href="#idLagJsndmcfAssertdsn"></a></p>
+  <p id="idLagJsndmcfAssertnam">name::
     <br>* McsEngl.assert--Node.js-core-function-module,
     <br>* McsEngl.lagJsnd'assert-core-function-module,
-    <br>* McsEngl.Jsndm.assert-function,
-    <a class="clsHide" href="#idLagJsndmfAssertnam"></a></p>
-  <p id="idLagJsndmfAssertwhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <br>* McsEngl.Jsndmc.assert-function,
+    <a class="clsHide" href="#idLagJsndmcfAssertnam"></a></p>
+  <p id="idLagJsndmcfAssertwhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmfAssertwhl"></a></p>
-  <p id="idLagJsndmfAssertgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcfAssertwhl"></a></p>
+  <p id="idLagJsndmcfAssertgnc">generic-chain::
     <br>* <a class="clsPreview" href="McsTchInf000010.last.html#idLjsFunctionp">Function.prototype</a> (mfAssert.__proto__ === Function.prototype //true)
     <br>* <a class="clsPreview" href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>,
-    <a class="clsHide" href="#idLagJsndmfAssertgnc"></a></p>
-  <p id="idLagJsndmfAssertmbr">member::
+    <a class="clsHide" href="#idLagJsndmcfAssertgnc"></a></p>
+  <p id="idLagJsndmcfAssertmbr">member::
     <br>// Ljn.6-3-1
     <br>// Object.getOwnPropertyNames(mfAssert).sort()
     <br>[ 'AssertionError', 'deepEqual', 'deepStrictEqual', 'doesNotThrow', 'equal', 'fail', 'ifError', 'length', 'name', 'notDeepEqual', 'notDeepStrictEqual', 'notEqual', 'notStrictEqual', 'ok', 'prototype', 'strictEqual', 'throws' ]
-    <a class="clsHide" href="#idLagJsndmfAssertmbr"></a></p>
+    <a class="clsHide" href="#idLagJsndmcfAssertmbr"></a></p>
   </section>
 
-  <section id="idLagJsndmfEvents">
-  <h2 id="idLagJsndmfEventsH2">Jsndm.core.events-function (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmfEventsH2"></a></h2>
-  <p id="idLagJsndmfEventsdsn">description::
+  <section id="idLagJsndmcfEvents">
+  <h2 id="idLagJsndmcfEventsH2">Jsndmc.core.events-function (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcfEventsH2"></a></h2>
+  <p id="idLagJsndmcfEventsdsn">description::
     <br><span class="clsQuote">Much of the Node.js core API is built around an idiomatic asynchronous event-driven architecture in which certain kinds of objects (called "emitters") periodically emit named events that cause Function objects ("listeners") to be called.
     <br>
     <br>For instance: a <code>net.Server</code> object emits an event each time a peer connects to it; a <code>fs.ReadStream</code> emits an event when the file is opened; a stream emits an event whenever data is available to be read.
@@ -1309,23 +1331,23 @@
     <br>When the EventEmitter object emits an event, all of the functions attached to that specific event are called synchronously.
     <br>Any values returned by the called listeners are ignored and will be discarded.</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/events.html#events_events">https://nodejs.org/docs/v6.3.1/api/events.html#events_events</a>]
-    <a class="clsHide" href="#idLagJsndmfEventsdsn"></a></p>
-  <p id="idLagJsndmfEventsnam">name::
+    <a class="clsHide" href="#idLagJsndmcfEventsdsn"></a></p>
+  <p id="idLagJsndmcfEventsnam">name::
     <br>* McsEngl.events--Node.js-core-function-module,
     <br>* McsEngl.lagJsnd'events-core-function-module,
     <br>* McsEngl.lagJsnd'mfEvents,
     <br>* McsEngl.lagJsnd'events-core-function-module,
-    <br>* McsEngl.Jsndm.events,
+    <br>* McsEngl.Jsndmc.events,
     <br>* McsEngl.lagJsnd'mfEvents,
-    <a class="clsHide" href="#idLagJsndmfEventsnam"></a></p>
-  <p id="idLagJsndmfEventswhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcfEventsnam"></a></p>
+  <p id="idLagJsndmcfEventswhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmfEventswhl"></a></p>
-  <p id="idLagJsndmfEventsgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcfEventswhl"></a></p>
+  <p id="idLagJsndmcfEventsgnc">generic-chain::
     <br>* <a class="clsPreview" href="McsTchInf000010.last.html#idLjsFunctionp">Function.prototype</a>, (mfEvents.__proto__ === Function.prototype //true)
     <br>* <a class="clsPreview" href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (mfEvents.__proto__.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmfEventsgnc"></a></p>
+    <a class="clsHide" href="#idLagJsndmcfEventsgnc"></a></p>
 
   <section id="idLagJsndevents'member">
   <h3 id="idLagJsndevents'memberH3">mfEvents'member
@@ -1392,18 +1414,18 @@
   </section>
   </section>
 
-  <section id="idLagJsndmfEventsp">
-  <h3 id="idLagJsndmfEventspH3">mfEvents.prototype-object
-    <a class="clsHide" href="#idLagJsndmfEventspH3"></a></h3>
-  <p id="idLagJsndmfEventspdsn">member::
+  <section id="idLagJsndmcfEventsp">
+  <h3 id="idLagJsndmcfEventspH3">mfEvents.prototype-object
+    <a class="clsHide" href="#idLagJsndmcfEventspH3"></a></h3>
+  <p id="idLagJsndmcfEventspdsn">member::
     <br>// Ljn.6-3-1
     <br>// Object.getOwnPropertyNames(mfEvents.prototype).sort()
     <br>[ '_events', '_maxListeners', 'addListener', 'constructor', 'domain', 'emit', 'eventNames', 'getMaxListeners', 'listenerCount', 'listeners', 'on', 'once', 'prependListener', 'prependOnceListener', 'removeAllListeners', 'removeListener', 'setMaxListeners' ]
-    <a class="clsHide" href="#idLagJsndmfEventspdsn"></a></p>
-  <p id="idLagJsndmfEventspnam">name::
+    <a class="clsHide" href="#idLagJsndmcfEventspdsn"></a></p>
+  <p id="idLagJsndmcfEventspnam">name::
     <br>* McsEngl.lagJsnd'events.prototype,
     <br>* McsEngl.lagJsnd'mfEvents.prototype,
-    <a class="clsHide" href="#idLagJsndmfEventspnam"></a></p>
+    <a class="clsHide" href="#idLagJsndmcfEventspnam"></a></p>
   </section>
 
   <section id="idLagJsndevtlistener">
@@ -1421,10 +1443,10 @@
   </section>
   </section>
 
-  <section id="idLagJsndmfStream">
-  <h2 id="idLagJsndmfStreamH2">Jsndm.core.stream-function (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmfStreamH2"></a></h2>
-  <p id="idLagJsndmfStreamdsn">description::
+  <section id="idLagJsndmcfStream">
+  <h2 id="idLagJsndmcfStreamH2">Jsndmc.core.stream-function (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcfStreamH2"></a></h2>
+  <p id="idLagJsndmcfStreamdsn">description::
     <br><span class="clsQuote">A stream is an abstract interface for working with streaming data in Node.js.
     <br>The stream module provides a base API that makes it easy to build objects that implement the stream interface.
     <br>
@@ -1440,23 +1462,23 @@
     <br>While it is important for all Node.js users to understand how streams works, the stream module itself is most useful for developer's that are creating new types of stream instances.
     <br>Developer's who are primarily consuming stream objects will rarely (if ever) have need to use the stream module directly.</span>
     <br>[<a href="https://nodejs.org/api/stream.html#stream_stream">https://nodejs.org/api/stream.html#stream_stream</a>]
-    <a class="clsHide" href="#idLagJsndmfStreamdsn"></a></p>
-  <p id="idLagJsndmfStreamnam">name::
+    <a class="clsHide" href="#idLagJsndmcfStreamdsn"></a></p>
+  <p id="idLagJsndmcfStreamnam">name::
     <br>* McsEngl.lagJsnd'mfStream,
     <br>* McsEngl.lagJsnd'stream-core-function-module,
-    <br>* McsEngl.Jsndm.stream,
+    <br>* McsEngl.Jsndmc.stream,
     <br>* McsEngl.lagJsnd'mfStream,
     <br>* McsEngl.stream--Node.js-core-function-module,
-    <a class="clsHide" href="#idLagJsndmfStreamnam"></a></p>
-  <p id="idLagJsndmfStreamwhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcfStreamnam"></a></p>
+  <p id="idLagJsndmcfStreamwhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmfStreamwhl"></a></p>
-  <p id="idLagJsndmfStreamgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcfStreamwhl"></a></p>
+  <p id="idLagJsndmcfStreamgnc">generic-chain::
     <br>* <a class="clsPreview" href="McsTchInf000010.last.html#idLjsFunctionp">Function.prototype</a>, (mfStream.__proto__ === Function.prototype //true)
     <br>* <a class="clsPreview" href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a> (mfStream.__proto__.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmfStreamgnc"></a></p>
-  <p id="idLagJsndmfStreamP3">member::
+    <a class="clsHide" href="#idLagJsndmcfStreamgnc"></a></p>
+  <p id="idLagJsndmcfStreamP3">member::
     <br>// Ljn.6-2-2
     <br>// Object.getOwnPropertyNames(mfStream).sort()
     <br>[ 'Duplex', 'PassThrough', 'Readable', 'Stream', 'Transform', 'Writable', 'length', 'name', 'prototype', 'super_' ]
@@ -1486,7 +1508,7 @@
     <br>  Transform: { [Function: Transform] super_: { [Function: Duplex] super_: [Object] } },
     <br>  PassThrough: { [Function: PassThrough] super_: { [Function: Transform] super_: [Object] } },
     <br>  Stream: [Circular] }
-    <a class="clsHide" href="#idLagJsndmfStreamP3"></a></p>
+    <a class="clsHide" href="#idLagJsndmcfStreamP3"></a></p>
 
   <section id="idLagJsndoStream">
   <h3 id="idLagJsndoStreamH3">lagJsnd'stream-object
@@ -1523,7 +1545,7 @@
     <br>[__defineGetter__, __defineSetter__, __lookupGetter__, __lookupSetter__, __proto__, constructor, hasOwnProperty, isPrototypeOf, propertyIsEnumerable, toLocaleString, toString, valueOf]
     <a class="clsHide" href="#idLagJsndoStreammbr"></a></p>
   <p id="idLagJsndoStreamgnc">Generic:
-    <br>The-objects of <a class="clsPreview" href="#idLagJsndoStream">mfStream</a> are instances of <code><a class="clsPreview" href="#idLagJsndmfEventsp">mfEvents.prototype</a></code>.
+    <br>The-objects of <a class="clsPreview" href="#idLagJsndoStream">mfStream</a> are instances of <code><a class="clsPreview" href="#idLagJsndmcfEventsp">mfEvents.prototype</a></code>.
     <br><code>var oStream = new mfStream();
     <br>oStream.__proto__ === mfStream.prototype //true
     <br>oStream.__proto__.__proto__ === mfEvents.prototype //true
@@ -1540,39 +1562,39 @@
   </section>
   </section>
 
-  <section id="idLagJsndmoBuffer">
-  <h2 id="idLagJsndmoBufferH2">Jsndm.core.buffer-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoBufferH2"></a></h2>
-  <p id="idLagJsndmoBufferdsn">description::
+  <section id="idLagJsndmcoBuffer">
+  <h2 id="idLagJsndmcoBufferH2">Jsndmc.core.buffer-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoBufferH2"></a></h2>
+  <p id="idLagJsndmcoBufferdsn">description::
     <br>The-buffer-module contains <a class="clsPreview" href="#idLagJsndBuffer">the-Buffer-function</a>, which is and <a class="clsPreview" href="#idLagJsndmwombr">global-member</a>.
     <br>===
     <br><span class="clsQuote">The Buffer class is a global within Node.js, making it unlikely that one would need to ever use <code>require('buffer').Buffer</code>.</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/buffer.html#buffer_buffer">https://nodejs.org/docs/v6.3.1/api/buffer.html#buffer_buffer</a>]
-    <a class="clsHide" href="#idLagJsndmoBufferdsn"></a></p>
-  <p id="idLagJsndmoBuffernam">name::
+    <a class="clsHide" href="#idLagJsndmcoBufferdsn"></a></p>
+  <p id="idLagJsndmcoBuffernam">name::
     <br>* McsEngl.buffer--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'buffer-core-object-module,
     <br>* McsEngl.lagJsnd'moBuffer,
-    <br>* McsEngl.Jsndm.buffer,
-    <a class="clsHide" href="#idLagJsndmoBuffernam"></a></p>
-  <p id="idLagJsndmoBufferwhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <br>* McsEngl.Jsndmc.buffer,
+    <a class="clsHide" href="#idLagJsndmcoBuffernam"></a></p>
+  <p id="idLagJsndmcoBufferwhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoBufferwhl"></a></p>
-  <p id="idLagJsndmoBuffergnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoBufferwhl"></a></p>
+  <p id="idLagJsndmcoBuffergnc">generic-chain::
     <br>* <a class="clsPreview" href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moBuffer.__proto__ === Object.prototype)
-    <a class="clsHide" href="#idLagJsndmoBuffergnc"></a></p>
-  <p id="idLagJsndmoBuffermbr">member::
+    <a class="clsHide" href="#idLagJsndmcoBuffergnc"></a></p>
+  <p id="idLagJsndmcoBuffermbr">member::
     <br>// Ljn.6-3-1
     <br>// Object.getOwnPropertyNames(moBuffer).sort()
     <br>[ 'Buffer', 'INSPECT_MAX_BYTES', 'SlowBuffer', 'kMaxLength' ]
-    <a class="clsHide" href="#idLagJsndmoBuffermbr"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoBuffermbr"></a></p>
   </section>
 
-  <section id="idLagJsndmoChild_process">
-  <h2 id="idLagJsndmoChild_processH2">Jsndm.core.child_process-object (core 2=stable)
-    <a class="clsHide" href="#idLagJsndmoChild_processH2"></a></h2>
-  <p id="idLagJsndmoChild_processdsn">description::
+  <section id="idLagJsndmcoChild_process">
+  <h2 id="idLagJsndmcoChild_processH2">Jsndmc.core.child_process-object (core 2=stable)
+    <a class="clsHide" href="#idLagJsndmcoChild_processH2"></a></h2>
+  <p id="idLagJsndmcoChild_processdsn">description::
     <br><span class="clsQuote">Node provides a tri-directional popen(3) facility through the child_process module.
     <br>
     <br>It is possible to stream data through a child's stdin, stdout, and stderr in a fully non-blocking way. (Note that some programs use line-buffered I/O internally.
@@ -1581,82 +1603,82 @@
     <br>To create a child process use <code>require('child_process').spawn()</code> or <code>require('child_process').fork()</code>.
     <br>The semantics of each are slightly different, and explained below.</span>
     <br>[<a href="https://nodejs.org/docs/v0.12.0/api/child_process.html#child_process_child_process">https://nodejs.org/docs/v0.12.0/api/child_process.html#child_process_child_process</a>]
-    <a class="clsHide" href="#idLagJsndmoChild_processdsn"></a></p>
-  <p id="idLagJsndmoChild_processnam">name::
+    <a class="clsHide" href="#idLagJsndmcoChild_processdsn"></a></p>
+  <p id="idLagJsndmcoChild_processnam">name::
     <br>* McsEngl.child-process--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'child-process-core-object-module,
-    <br>* McsEngl.Jsndm.child-process,
+    <br>* McsEngl.Jsndmc.child-process,
     <br>* McsEngl.lagJsnd'moChild-process,
-    <a class="clsHide" href="#idLagJsndmoChild_processnam"></a></p>
-  <p id="idLagJsndmoChild_processwhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoChild_processnam"></a></p>
+  <p id="idLagJsndmcoChild_processwhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndChild_processmwo">most-whole-object (global)</a>,
     <a class="clsHide" href="#idLagJsndmwhl"></a></p>
-  <p id="idLagJsndmoChild_processgnc">generic-chain::
+  <p id="idLagJsndmcoChild_processgnc">generic-chain::
     <br>* <a class="clsPreview" href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moChild_process.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoChild_processgwhl"></a></p>
-  <p id="idLagJsndmoChild_processapi">API:
+    <a class="clsHide" href="#idLagJsndmcoChild_processgwhl"></a></p>
+  <p id="idLagJsndmcoChild_processapi">API:
     <br>* Ljn.last: <a href="https://nodejs.org/api/child_process.html">https://nodejs.org/api/child_process.html</a>,
-    <a class="clsHide" href="#idLagJsndmoChild_processapi"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoChild_processapi"></a></p>
   </section>
 
-  <section id="idLagJsndmoCluster">
-  <h2 id="idLagJsndmoClusterH2">Jsndm.core.cluster-object (core 2=stable)
-    <a class="clsHide" href="#idLagJsndmoClusterH2"></a></h2>
-  <p id="idLagJsndmoClusterdsn">description::
+  <section id="idLagJsndmcoCluster">
+  <h2 id="idLagJsndmcoClusterH2">Jsndmc.core.cluster-object (core 2=stable)
+    <a class="clsHide" href="#idLagJsndmcoClusterH2"></a></h2>
+  <p id="idLagJsndmcoClusterdsn">description::
     <br><span class="clsQuote">A single instance of Node.js runs in a single thread.
     <br>To take advantage of multi-core systems the user will sometimes want to launch a cluster of Node.js processes to handle the load.</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/cluster.html#cluster_cluster">https://nodejs.org/docs/v6.3.1/api/cluster.html#cluster_cluster</a>]
-    <a class="clsHide" href="#idLagJsndmoClusterdsn"></a></p>
-  <p id="idLagJsndmoClusternam">name::
+    <a class="clsHide" href="#idLagJsndmcoClusterdsn"></a></p>
+  <p id="idLagJsndmcoClusternam">name::
     <br>* McsEngl.cluster-module.Ljn,
     <br>* McsEngl.cluster--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'cluster-core-object-module,
     <br>* McsEngl.lagJsnd'moCluster,
-    <br>* McsEngl.Jsndm.cluster,
-    <a class="clsHide" href="#idLagJsndmoClusternam"></a></p>
-  <p id="idLagJsndmoClusterwhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <br>* McsEngl.Jsndmc.cluster,
+    <a class="clsHide" href="#idLagJsndmcoClusternam"></a></p>
+  <p id="idLagJsndmcoClusterwhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
     <a class="clsHide" href="#idLagJsndmCusterwhl"></a></p>
-  <p id="idLagJsndmoClustergnc">generic-chain::
+  <p id="idLagJsndmcoClustergnc">generic-chain::
     <br>* events.prototype (moCluster.__proto__ === mfEvents.prototype //true)
     <br>* <a class="clsPreview" href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a> (moCluster.__proto__.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoClustergnc"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoClustergnc"></a></p>
   </section>
 
-  <section id="idLagJsndmoCrypto">
-  <h2 id="idLagJsndmoCryptoH2">Jsndm.core.crypto-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoCryptoH2"></a></h2>
-  <p id="idLagJsndmoCryptodsn">description::
+  <section id="idLagJsndmcoCrypto">
+  <h2 id="idLagJsndmcoCryptoH2">Jsndmc.core.crypto-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoCryptoH2"></a></h2>
+  <p id="idLagJsndmcoCryptodsn">description::
     <br><span class="clsQuote">The crypto module provides cryptographic functionality that includes a set of wrappers for OpenSSL's hash, HMAC, cipher, decipher, sign and verify functions.
     <br>Use <code>require('crypto')</code> to access this module.</span>
     <br>[<a href="https://nodejs.org/api/crypto.html#crypto_crypto">https://nodejs.org/api/crypto.html#crypto_crypto</a>]
-    <a class="clsHide" href="#idLagJsndmoCryptodsn"></a></p>
-  <p id="idLagJsndmoCryptonam">name::
+    <a class="clsHide" href="#idLagJsndmcoCryptodsn"></a></p>
+  <p id="idLagJsndmcoCryptonam">name::
     <br>* McsEngl.crypto--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'crypto-core-object-module,
-    <br>* McsEngl.Jsndm.crypto,
+    <br>* McsEngl.Jsndmc.crypto,
     <br>* McsEngl.lagJsnd'moCrypto,
-    <a class="clsHide" href="#idLagJsndmoCryptonam"></a></p>
-  <p id="idLagJsndmoCryptowhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoCryptonam"></a></p>
+  <p id="idLagJsndmcoCryptowhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoCryptowhl"></a></p>
-  <p id="idLagJsndmoCryptognc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoCryptowhl"></a></p>
+  <p id="idLagJsndmcoCryptognc">generic-chain::
     <br>* <a class="clsPreview" href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a> (moCrypto.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoCryptognc"></a></p>
-  <p id="idLagJsndmoCryptombr">member::
+    <a class="clsHide" href="#idLagJsndmcoCryptognc"></a></p>
+  <p id="idLagJsndmcoCryptombr">member::
     <br>// Ljn.6-3-1
     <br>// Object.getOwnPropertyNames(moCrypto).sort()
     <br>[ 'Certificate', 'Cipher', 'Cipheriv', 'Credentials', 'DEFAULT_ENCODING', 'Decipher', 'Decipheriv', 'DiffieHellman', 'DiffieHellmanGroup', 'Hash', 'Hmac', 'Sign', 'Verify', '_toBuf', 'constants', 'createCipher', 'createCipheriv', 'createCredentials', 'createDecipher', 'createDecipheriv', 'createDiffieHellman', 'createDiffieHellmanGroup', 'createECDH', 'createHash', 'createHmac', 'createSign', 'createVerify', 'fips', 'getCiphers', 'getCurves', 'getDiffieHellman', 'getHashes', 'pbkdf2', 'pbkdf2Sync', 'privateDecrypt', 'privateEncrypt', 'prng', 'pseudoRandomBytes', 'publicDecrypt', 'publicEncrypt', 'randomBytes', 'rng', 'setEngine' ]
-    <a class="clsHide" href="#idLagJsndmoCryptombr"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoCryptombr"></a></p>
   </section>
 
-  <section id="idLagJsndmoDns">
-  <h2 id="idLagJsndmoDnsH2">Jsndm.core.dns-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoDnsH2"></a></h2>
-  <p id="idLagJsndmoDnsdsn">description::
+  <section id="idLagJsndmcoDns">
+  <h2 id="idLagJsndmcoDnsH2">Jsndmc.core.dns-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoDnsH2"></a></h2>
+  <p id="idLagJsndmcoDnsdsn">description::
     <br><span class="clsQuote">The dns module contains functions belonging to two different categories:
     <br>1) Functions that use the underlying operating system facilities to perform name resolution, and that do not necessarily perform any network communication. This category contains only one function: dns.lookup().
     <br>Developers looking to perform name resolution in the same way that other applications on the same operating system behave should use dns.lookup().
@@ -1666,22 +1688,22 @@
     <br>These functions do not use the same set of configuration files used by dns.lookup() (e.g. /etc/hosts).
     <br>These functions should be used by developers who do not want to use the underlying operating system's facilities for name resolution, and instead want to always perform DNS queries.</span>
     <br>[<a href="https://nodejs.org/api/dns.html#dns_dns">https://nodejs.org/api/dns.html#dns_dns</a>]
-    <a class="clsHide" href="#idLagJsndmoDnsdsn"></a></p>
-  <p id="idLagJsndmoDnsnam">name::
+    <a class="clsHide" href="#idLagJsndmcoDnsdsn"></a></p>
+  <p id="idLagJsndmcoDnsnam">name::
     <br>* McsEngl.dns--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'dns-core-object-module,
     <br>* McsEngl.lagJsnd'dns-core-object-module,
-    <br>* McsEngl.Jsndm.dns,
+    <br>* McsEngl.Jsndmc.dns,
     <br>* McsEngl.lagJsnd'moDns,
-    <a class="clsHide" href="#idLagJsndmoDnsnam"></a></p>
-  <p id="idLagJsndmoDnswhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoDnsnam"></a></p>
+  <p id="idLagJsndmcoDnswhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoDnswhl"></a></p>
-  <p id="idLagJsndmoDnsgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoDnswhl"></a></p>
+  <p id="idLagJsndmcoDnsgnc">generic-chain::
     <br>* <a class="clsPreview" href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a> (moDns.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoDnsgnc"></a></p>
-  <p id="idLagJsndmoDnsP4">lagJsnddns'Member::
+    <a class="clsHide" href="#idLagJsndmcoDnsgnc"></a></p>
+  <p id="idLagJsndmcoDnsP4">lagJsnddns'Member::
     <br>// Ljn.6-2-2
     <br>// Object.getOwnPropertyNames(moDns).sort()
     <br>[ 'ADDRCONFIG', 'ADDRGETNETWORKPARAMS', 'BADFAMILY', 'BADFLAGS', 'BADHINTS', 'BADNAME', 'BADQUERY', 'BADRESP', 'BADSTR', 'CANCELLED', 'CONNREFUSED', 'DESTRUCTION', 'EOF', 'FILE', 'FORMERR', 'LOADIPHLPAPI', 'NODATA', 'NOMEM', 'NONAME', 'NOTFOUND', 'NOTIMP', 'NOTINITIALIZED', 'REFUSED', 'SERVFAIL', 'TIMEOUT', 'V4MAPPED', 'getServers', 'lookup', 'lookupService', 'resolve', 'resolve4', 'resolve6', 'resolveCname', 'resolveMx', 'resolveNaptr', 'resolveNs', 'resolvePtr', 'resolveSoa', 'resolveSrv', 'resolveTxt', 'reverse', 'setServers' ]
@@ -1729,13 +1751,13 @@
     <br>  LOADIPHLPAPI: 'ELOADIPHLPAPI',
     <br>  ADDRGETNETWORKPARAMS: 'EADDRGETNETWORKPARAMS',
     <br>  CANCELLED: 'ECANCELLED' }
-    <a class="clsHide" href="#idLagJsndmoDnsP4"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoDnsP4"></a></p>
   </section>
 
-  <section id="idLagJsndmoFs">
-  <h2 id="idLagJsndmoFsH2">Jsndm.core.fs-object (core 3=stable)
-    <a class="clsHide" href="#idLagJsndmoFsH2"></a></h2>
-  <p id="idLagJsndmoFsdsn">description::
+  <section id="idLagJsndmcoFs">
+  <h2 id="idLagJsndmcoFsH2">Jsndmc.core.fs-object (core 3=stable)
+    <a class="clsHide" href="#idLagJsndmcoFsH2"></a></h2>
+  <p id="idLagJsndmcoFsdsn">description::
     <br><span class="clsQuote">File I/O is provided by simple wrappers around standard POSIX functions.
     <br>To use this module do <code>require('fs')</code>.
     <br>All the methods have asynchronous and synchronous forms.
@@ -1747,27 +1769,27 @@
     <br>When using the synchronous form any exceptions are immediately thrown.
     <br>You can use try/catch to handle exceptions or allow them to bubble up.</span>
     <br>[<a href="https://nodejs.org/api/fs.html">https://nodejs.org/api/fs.html</a>]
-    <a class="clsHide" href="#idLagJsndmoFsdsn"></a></p>
-  <p id="idLagJsndmoFsnam">name::
+    <a class="clsHide" href="#idLagJsndmcoFsdsn"></a></p>
+  <p id="idLagJsndmcoFsnam">name::
     <br>* McsEngl.fs--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'file-system-core-object-module,
     <br>* McsEngl.lagJsnd'fs-core-object-module,
     <br>* McsEngl.lagJsnd'file-system-core-object-module,
     <br>* McsEngl.lagJsnd'fs-core-object-module,
-    <br>* McsEngl.Jsndm.fs,
+    <br>* McsEngl.Jsndmc.fs,
     <br>* McsEngl.lagJsnd'moFs,
-    <a class="clsHide" href="#idLagJsndmoFsnam"></a></p>
-  <p id="idLagJsndmoFswhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoFsnam"></a></p>
+  <p id="idLagJsndmcoFswhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoFswhl"></a></p>
-  <p id="idLagJsndmoFsgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoFswhl"></a></p>
+  <p id="idLagJsndmcoFsgnc">generic-chain::
     <br>* <a class="clsPreview" href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moFs.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoFsgnc"></a></p>
-  <p id="idLagJsndmoFsP4">addressWpg::
+    <a class="clsHide" href="#idLagJsndmcoFsgnc"></a></p>
+  <p id="idLagJsndmcoFsP4">addressWpg::
     <br>* <a href="https://nodejs.org/api/fs.html">https://nodejs.org/api/fs.html</a>,
-    <a class="clsHide" href="#idLagJsndmoFsP4"></a></p>
-  <p id="idLagJsndmoFsmbr">moFs'Member::
+    <a class="clsHide" href="#idLagJsndmcoFsP4"></a></p>
+  <p id="idLagJsndmcoFsmbr">moFs'Member::
     <br>// Ljn.6-3-1
     <br>// Object.getOwnPropertyNames(moFs).sort()
     <br>[ 'F_OK', 'FileWriteStream', 'ReadStream', 'SyncWriteStream', 'WriteStream', '_stringToFlags', 'access', 'appendFile', 'chmod', 'chown', 'close', 'constants', 'createWriteStream', 'existsSync', 'fchmodSync', 'fchownSync', 'fdatasync', 'fdatasyncSync', 'fstat', 'fstatSync', 'fsync', 'fsyncSync', 'ftruncate', 'ftruncateSync', 'futimes', 'futimesSync', 'link', 'linkSync', 'lstat', 'lstatSync', 'mkdir', 'mkdirSync', 'mkdtemp', 'mkdtempSync', 'open', 'openSync', 'read', 'readFile', 'readFileSync', 'readSync', 'readdir', 'readdirSync', 'readlink', 'readlinkSync', 'realpath', 'realpathSync', 'rename', 'renameSync', 'rmdir', 'rmdirSync', 'stat', 'statSync', 'symlink', 'symlinkSync', 'truncate', 'truncateSync', 'unlink', 'unlinkSync', 'unwatchFile', 'utimes', 'utimesSync', 'watch', 'watchFile', 'write', 'writeFile', 'writeFileSync', 'writeSync' ]
@@ -1843,13 +1865,13 @@
     <br>moFs.writeFileSync(filename, data, [options])
     <br>moFs.writeSync(fd, buffer, offset, length, position)
     <br>
-    <a class="clsHide" href="#idLagJsndmoFsP5"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoFsP5"></a></p>
   </section>
 
-  <section id="idLagJsndmoHttp">
-  <h2 id="idLagJsndmoHttpH2">Jsndm.core.http-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoHttpH2"></a></h2>
-  <p id="idLagJsndmoHttpdsn">description::
+  <section id="idLagJsndmcoHttp">
+  <h2 id="idLagJsndmcoHttpH2">Jsndmc.core.http-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoHttpH2"></a></h2>
+  <p id="idLagJsndmcoHttpdsn">description::
     <br><span class="clsQuote">To use the HTTP server and client one must <code>require('http')</code>.
     <br>
     <br>The HTTP interfaces in Node are designed to support many features of the protocol which have been traditionally difficult to use.
@@ -1869,21 +1891,21 @@
     <br>It deals with stream handling and message parsing only.
     <br>It parses a message into headers and body but it does not parse the actual headers or the body...</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/http.html#http_http">https://nodejs.org/docs/v6.3.1/api/http.html#http_http</a>]
-    <a class="clsHide" href="#idLagJsndmoHttpdsn"></a></p>
-  <p id="idLagJsndmoHttpnam">name::
+    <a class="clsHide" href="#idLagJsndmcoHttpdsn"></a></p>
+  <p id="idLagJsndmcoHttpnam">name::
     <br>* McsEngl.http--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'http-core-object-module,
     <br>* McsEngl.lagJsnd'http-core-object-module,
-    <br>* McsEngl.Jsndm.http,
+    <br>* McsEngl.Jsndmc.http,
     <br>* McsEngl.lagJsnd'moHttp,
-    <a class="clsHide" href="#idLagJsndmoHttpnam"></a></p>
-  <p id="idLagJsndmoHttpwhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoHttpnam"></a></p>
+  <p id="idLagJsndmcoHttpwhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoHttpwhl"></a></p>
-  <p id="idLagJsndmoHttpgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoHttpwhl"></a></p>
+  <p id="idLagJsndmcoHttpgnc">generic-chain::
     <br>* <a href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moHttp.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoHttpgnc"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoHttpgnc"></a></p>
 
   <section id="idLagJsndhttp'member">
   <h3 id="idLagJsndhttp'memberH3">moHttp'member
@@ -2131,28 +2153,28 @@
   </section>
   </section>
 
-  <section id="idLagJsndmoHttps">
-  <h2 id="idLagJsndmoHttpsH2">Jsndm.core.https-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoHttpsH2"></a></h2>
-  <p id="idLagJsndmoHttpsdsn">description::
+  <section id="idLagJsndmcoHttps">
+  <h2 id="idLagJsndmcoHttpsH2">Jsndmc.core.https-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoHttpsH2"></a></h2>
+  <p id="idLagJsndmcoHttpsdsn">description::
     <br><span class="clsQuote">HTTPS is the HTTP protocol over TLS/SSL.
     <br>In Node.js this is implemented as a separate module.</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/https.html#https_https">https://nodejs.org/docs/v6.3.1/api/https.html#https_https</a>]
-    <a class="clsHide" href="#idLagJsndmoHttpsdsn"></a></p>
-  <p id="idLagJsndmoHttpsnam">name::
+    <a class="clsHide" href="#idLagJsndmcoHttpsdsn"></a></p>
+  <p id="idLagJsndmcoHttpsnam">name::
     <br>* McsEngl.https--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'https-core-object-module,
     <br>* McsEngl.lagJsnd'moHttps,
-    <br>* McsEngl.Jsndm.https,
-    <a class="clsHide" href="#idLagJsndmoHttpsnam"></a></p>
-  <p id="idLagJsndmoHttpswhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <br>* McsEngl.Jsndmc.https,
+    <a class="clsHide" href="#idLagJsndmcoHttpsnam"></a></p>
+  <p id="idLagJsndmcoHttpswhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoHttpswhl"></a></p>
-  <p id="idLagJsndmoHttpsgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoHttpswhl"></a></p>
+  <p id="idLagJsndmcoHttpsgnc">generic-chain::
     <br>* <a href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moHttps.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoHttpsgnc"></a></p>
-  <p id="idLagJsndmoHttpsP4">moHttps'Member::
+    <a class="clsHide" href="#idLagJsndmcoHttpsgnc"></a></p>
+  <p id="idLagJsndmcoHttpsP4">moHttps'Member::
     <br>// Ljn.6-2-2
     <br>// Object.getOwnPropertyNames(moHttps).sort()
     <br>[ 'Agent',
@@ -2194,33 +2216,33 @@
     <br>     super_: { [Function: Agent] super_: [Object], defaultMaxSockets: Infinity } },
     <br>  request: [Function],
     <br>  get: [Function] }
-    <a class="clsHide" href="#idLagJsndmoHttpsP4"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoHttpsP4"></a></p>
   </section>
 
-  <section id="idLagJsndmoNet">
-  <h2 id="idLagJsndmoNetH2">Jsndm.core.net-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoNetH2"></a></h2>
-  <p id="idLagJsndmoNetdsn">description::
+  <section id="idLagJsndmcoNet">
+  <h2 id="idLagJsndmcoNetH2">Jsndmc.core.net-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoNetH2"></a></h2>
+  <p id="idLagJsndmcoNetdsn">description::
     <br><span class="clsQuote">The net module provides you with an asynchronous network wrapper.
     <br>It contains functions for creating both servers and clients (called streams).
     <br>You can include this module with <code>require('net');</code>.</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/net.html#net_net">https://nodejs.org/docs/v6.3.1/api/net.html#net_net</a>]
-    <a class="clsHide" href="#idLagJsndmoNetdsn"></a></p>
-  <p id="idLagJsndmoNetnam">name::
+    <a class="clsHide" href="#idLagJsndmcoNetdsn"></a></p>
+  <p id="idLagJsndmcoNetnam">name::
     <br>* McsEngl.net--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'net-core-object-module,
     <br>* McsEngl.lagJsnd'net-core-object-module,
-    <br>* McsEngl.Jsndm.net,
+    <br>* McsEngl.Jsndmc.net,
     <br>* McsEngl.lagJsnd'moNet,
-    <a class="clsHide" href="#idLagJsndmoNetnam"></a></p>
-  <p id="idLagJsndmoNetwhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoNetnam"></a></p>
+  <p id="idLagJsndmcoNetwhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoNetwhl"></a></p>
-  <p id="idLagJsndmoNetgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoNetwhl"></a></p>
+  <p id="idLagJsndmcoNetgnc">generic-chain::
     <br>* <a href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moNet.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoNetgnc"></a></p>
-  <p id="idLagJsndmoNetP4">lagJsndnet'Member::
+    <a class="clsHide" href="#idLagJsndmcoNetgnc"></a></p>
+  <p id="idLagJsndmcoNetP4">lagJsndnet'Member::
     <br>// Ljn.6-2-2
     <br>// Object.getOwnPropertyNames(moNet).sort()
     <br>[ 'Server', 'Socket', 'Stream', '_createServerHandle', '_normalizeConnectArgs', '_setSimultaneousAccepts', 'connect', 'createConnection', 'createServer', 'isIP', 'isIPv4', 'isIPv6' ]
@@ -2246,33 +2268,33 @@
     <br>  isIPv4: [Function],
     <br>  isIPv6: [Function],
     <br>  _setSimultaneousAccepts: [Function] }
-    <a class="clsHide" href="#idLagJsndmoNetP4"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoNetP4"></a></p>
   </section>
 
-  <section id="idLagJsndmoOs">
-  <h2 id="idLagJsndmoOsH2">Jsndm.core.os-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoOsH2"></a></h2>
-  <p id="idLagJsndmoOsdsn">description::
+  <section id="idLagJsndmcoOs">
+  <h2 id="idLagJsndmcoOsH2">Jsndmc.core.os-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoOsH2"></a></h2>
+  <p id="idLagJsndmcoOsdsn">description::
     <br><span class="clsQuote">The os module provides a number of operating system-related utility methods.
     <br>It can be accessed using:
     <br><code>const os = require('os');</code></span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/os.html#os_os">https://nodejs.org/docs/v6.3.1/api/os.html#os_os</a>]
-    <a class="clsHide" href="#idLagJsndmoOsdsn"></a></p>
-  <p id="idLagJsndmoOsnam">name::
+    <a class="clsHide" href="#idLagJsndmcoOsdsn"></a></p>
+  <p id="idLagJsndmcoOsnam">name::
     <br>* McsEngl.os--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'os-core-object-module,
     <br>* McsEngl.lagJsnd'os-core-object-module,
-    <br>* McsEngl.Jsndm.os,
+    <br>* McsEngl.Jsndmc.os,
     <br>* McsEngl.lagJsnd'moOs,
-    <a class="clsHide" href="#idLagJsndmoOsnam"></a></p>
-  <p id="idLagJsndmoOswhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoOsnam"></a></p>
+  <p id="idLagJsndmcoOswhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoOswhl"></a></p>
-  <p id="idLagJsndmoOsgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoOswhl"></a></p>
+  <p id="idLagJsndmcoOsgnc">generic-chain::
     <br>* <a href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moOs.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoOsgnc"></a></p>
-  <p id="idLagJsndmoOsP3">lagJsndos'Member::
+    <a class="clsHide" href="#idLagJsndmcoOsgnc"></a></p>
+  <p id="idLagJsndmcoOsP3">lagJsndos'Member::
     <br>// Ljn.6-2-2
     <br>// Object.getOwnPropertyNames(moOs).sort()
     <br>[ 'EOL', 'arch', 'cpus', 'endianness', 'freemem', 'getNetworkInterfaces', 'homedir', 'hostname', 'loadavg', 'networkInterfaces', 'platform', 'release', 'tmpDir', 'tmpdir', 'totalmem', 'type', 'uptime', 'userInfo' ]
@@ -2296,31 +2318,31 @@
     <br>  getNetworkInterfaces: [Function: deprecated],
     <br>  EOL: '\r\n',
     <br>  endianness: [Function] }
-    <a class="clsHide" href="#idLagJsndmoOsP3"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoOsP3"></a></p>
   </section>
 
-  <section id="idLagJsndmoPath">
-  <h2 id="idLagJsndmoPathH2">Jsndm.core.path-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoPathH2"></a></h2>
-  <p id="idLagJsndmoPathdsn">description::
+  <section id="idLagJsndmcoPath">
+  <h2 id="idLagJsndmcoPathH2">Jsndmc.core.path-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoPathH2"></a></h2>
+  <p id="idLagJsndmcoPathdsn">description::
     <br><span class="clsQuote">The path module provides utilities for working with file and directory paths.
     <br>It can be accessed using:
     <br><code>const path = require('path');</code></span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/path.html#path_path">https://nodejs.org/docs/v6.3.1/api/path.html#path_path</a>]
-    <a class="clsHide" href="#idLagJsndmoPathdsn"></a></p>
-  <p id="idLagJsndmoPathnam">name::
+    <a class="clsHide" href="#idLagJsndmcoPathdsn"></a></p>
+  <p id="idLagJsndmcoPathnam">name::
     <br>* McsEngl.path--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'path-core-object-module,
-    <br>* McsEngl.Jsndm.path,
+    <br>* McsEngl.Jsndmc.path,
     <br>* McsEngl.lagJsnd'moPath,
-    <a class="clsHide" href="#idLagJsndmoPathnam"></a></p>
-  <p id="idLagJsndmoPathwhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoPathnam"></a></p>
+  <p id="idLagJsndmcoPathwhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoPathwhl"></a></p>
-  <p id="idLagJsndmoPathgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoPathwhl"></a></p>
+  <p id="idLagJsndmcoPathgnc">generic-chain::
     <br>* <a href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moPath.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoPathgnc"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoPathgnc"></a></p>
   <p id="idLagJsndpathmbr">member::
     <br>// Ljn.6-2-2
     <br>// Object.getOwnPropertyNames(moPath).sort()
@@ -2328,10 +2350,10 @@
     <a class="clsHide" href="#idLagJsndpathmbr"></a></p>
   </section>
 
-  <section id="idLagJsndmoReadline">
-  <h2 id="idLagJsndmoReadlineH2">Jsndm.core.readline-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoReadlineH2"></a></h2>
-  <p id="idLagJsndmoReadlinedsn">description::
+  <section id="idLagJsndmcoReadline">
+  <h2 id="idLagJsndmcoReadlineH2">Jsndmc.core.readline-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoReadlineH2"></a></h2>
+  <p id="idLagJsndmcoReadlinedsn">description::
     <br><span class="clsQuote">The readline module provides an interface for reading data from a Readable stream (such as <code>process.stdin</code>) one line at a time.
     <br>It can be accessed using:
     <br><code>const readline = require('readline')</code>;
@@ -2351,36 +2373,36 @@
     <br>});</code>
     <br>Note Once this code is invoked, the Node.js application will not terminate until the readline.Interface is closed because the interface waits for data to be received on the input stream.</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/readline.html#readline_readline">https://nodejs.org/docs/v6.3.1/api/readline.html#readline_readline</a>]
-    <a class="clsHide" href="#idLagJsndmoReadlinedsn"></a></p>
-  <p id="idLagJsndmoReadlinenam">name::
+    <a class="clsHide" href="#idLagJsndmcoReadlinedsn"></a></p>
+  <p id="idLagJsndmcoReadlinenam">name::
     <br>* McsEngl.readline--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'readline-core-object-module,
-    <br>* McsEngl.Jsndm.readline,
+    <br>* McsEngl.Jsndmc.readline,
     <br>* McsEngl.lagJsnd'moReadline,
-    <a class="clsHide" href="#idLagJsndmoReadlinenam"></a></p>
-  <p id="idLagJsndmoReadlinewhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoReadlinenam"></a></p>
+  <p id="idLagJsndmcoReadlinewhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoReadlinewhl"></a></p>
-  <p id="idLagJsndmoReadlinegnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoReadlinewhl"></a></p>
+  <p id="idLagJsndmcoReadlinegnc">generic-chain::
     <br>* <a href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moReadline.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoReadlinegnc"></a></p>
-  <p id="idLagJsndmoReadlinembr">member::
+    <a class="clsHide" href="#idLagJsndmcoReadlinegnc"></a></p>
+  <p id="idLagJsndmcoReadlinembr">member::
     <br>// Ljn.6-2-2
     <br>// Object.getOwnPropertyNames(moReadline).sort()
     <br>[ 'Interface', 'clearLine', 'clearScreenDown', 'codePointAt', 'createInterface', 'cursorTo', 'emitKeypressEvents', 'getStringWidth', 'isFullWidthCodePoint', 'moveCursor', 'stripVTControlCharacters' ]
-    <a class="clsHide" href="#idLagJsndmoReadlinembr"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoReadlinembr"></a></p>
   </section>
 
-  <section id="idLagJsndmoRepl">
-  <h2 id="idLagJsndmoReplH2">Jsndm.core.repl-object (core 2.stable) <a href="#idLagJsndrplmdl">link</a>,
-    <a class="clsHide" href="#idLagJsndmoReplH2"></a></h2>
+  <section id="idLagJsndmcoRepl">
+  <h2 id="idLagJsndmcoReplH2">Jsndmc.core.repl-object (core 2.stable) <a href="#idLagJsndrplmdl">link</a>,
+    <a class="clsHide" href="#idLagJsndmcoReplH2"></a></h2>
   </section>
 
-  <section id="idLagJsndmoString_decoder">
-  <h2 id="idLagJsndmoString_decoderH2">Jsndm.core.string_decoder-object (2.stable)
-    <a class="clsHide" href="#idLagJsndmoString_decoderH2"></a></h2>
-  <p id="idLagJsndmoString_decoderdsn">description::
+  <section id="idLagJsndmcoString_decoder">
+  <h2 id="idLagJsndmcoString_decoderH2">Jsndmc.core.string_decoder-object (2.stable)
+    <a class="clsHide" href="#idLagJsndmcoString_decoderH2"></a></h2>
+  <p id="idLagJsndmcoString_decoderdsn">description::
     <br><span class="clsQuote">The string_decoder module provides an API for decoding Buffer objects into strings in a manner that preserves encoded multi-byte UTF-8 and UTF-16 characters.
     <br>It can be accessed using:
     <br><code>const StringDecoder = require('string_decoder').StringDecoder;</code>
@@ -2394,79 +2416,79 @@
     <br>const euro = Buffer.from([0xE2, 0x82, 0xAC]);</code>
     <br>console.log(decoder.write(euro));</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/string_decoder.html#string_decoder_stringdecoder">https://nodejs.org/docs/v6.3.1/api/string_decoder.html#string_decoder_stringdecoder</a>]
-    <a class="clsHide" href="#idLagJsndmoString_decoderdsn"></a></p>
-  <p id="idLagJsndmoString_decodernam">name::
+    <a class="clsHide" href="#idLagJsndmcoString_decoderdsn"></a></p>
+  <p id="idLagJsndmcoString_decodernam">name::
     <br>* McsEngl.string-decoder--Node.js--core-object-module,
     <br>* McsEngl.lagJsnd'string-decoder--core-object-module,
-    <br>* McsEngl.Jsndm.string-decoder,
+    <br>* McsEngl.Jsndmc.string-decoder,
     <br>* McsEngl.lagJsnd'moString-decoder,
-    <a class="clsHide" href="#idLagJsndmoString_decodernam"></a></p>
-  <p id="idLagJsndmoString_decoderwhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoString_decodernam"></a></p>
+  <p id="idLagJsndmcoString_decoderwhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoString_decoderwhl"></a></p>
-  <p id="idLagJsndmoString_decodergnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoString_decoderwhl"></a></p>
+  <p id="idLagJsndmcoString_decodergnc">generic-chain::
     <br>* <a href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moString_decoder.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoString_decodergnc"></a></p>
-  <p id="idLagJsndmoString_decodermbr">member::
+    <a class="clsHide" href="#idLagJsndmcoString_decodergnc"></a></p>
+  <p id="idLagJsndmcoString_decodermbr">member::
     <br>// Ljn.6-2-2
     <br>// Object.getOwnPropertyNames(moString_decoder).sort()
     <br>[ 'StringDecoder' ]
-    <a class="clsHide" href="#idLagJsndmoString_decodermbr"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoString_decodermbr"></a></p>
   </section>
 
-  <section id="idLagJsndmoTls">
-  <h2 id="idLagJsndmoTlsH2">Jsndm.core.tls-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoTlsH2"></a></h2>
-  <p id="idLagJsndmoTlsdsn">description::
+  <section id="idLagJsndmcoTls">
+  <h2 id="idLagJsndmcoTlsH2">Jsndmc.core.tls-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoTlsH2"></a></h2>
+  <p id="idLagJsndmcoTlsdsn">description::
     <br><span class="clsQuote">The tls module provides an implementation of the Transport Layer Security (TLS) and Secure Socket Layer (SSL) protocols that is built on top of OpenSSL.
     <br>The module can be accessed using:
     <br><code>const tls = require('tls');</code></span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/tls.html#tls_tls_ssl">https://nodejs.org/docs/v6.3.1/api/tls.html#tls_tls_ssl</a>]
-    <a class="clsHide" href="#idLagJsndmoTlsdsn"></a></p>
-  <p id="idLagJsndmoTlsnam">name::
+    <a class="clsHide" href="#idLagJsndmcoTlsdsn"></a></p>
+  <p id="idLagJsndmcoTlsnam">name::
     <br>* McsEngl.tls--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'tls-core-object-module,
-    <br>* McsEngl.Jsndm.tls,
+    <br>* McsEngl.Jsndmc.tls,
     <br>* McsEngl.lagJsnd'moTls,
-    <a class="clsHide" href="#idLagJsndmoTlsnam"></a></p>
-  <p id="idLagJsndmoTlswhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoTlsnam"></a></p>
+  <p id="idLagJsndmcoTlswhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoTlswhl"></a></p>
-  <p id="idLagJsndmoTlsgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoTlswhl"></a></p>
+  <p id="idLagJsndmcoTlsgnc">generic-chain::
     <br>* <a href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moTls.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoTlsgnc"></a></p>
-  <p id="idLagJsndmoTlsP4">member::
+    <a class="clsHide" href="#idLagJsndmcoTlsgnc"></a></p>
+  <p id="idLagJsndmcoTlsP4">member::
     <br>// Ljn.6-2-2
     <br>// Object.getOwnPropertyNames(moTls).sort()
     <br>[ 'CLIENT_RENEG_LIMIT', 'CLIENT_RENEG_WINDOW', 'DEFAULT_CIPHERS', 'DEFAULT_ECDH_CURVE', 'SLAB_BUFFER_SIZE', 'SecureContext', 'Server', 'TLSSocket', 'checkServerIdentity', 'connect', 'convertALPNProtocols', 'convertNPNProtocols', 'createSecureContext', 'createSecurePair', 'createServer', 'getCiphers', 'parseCertString' ]
-    <a class="clsHide" href="#idLagJsndmoTlsP4"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoTlsP4"></a></p>
   </section>
 
-  <section id="idLagJsndmoUrl">
-  <h2 id="idLagJsndmoUrlH2">Jsndm.core.url-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoUrlH2"></a></h2>
-  <p id="idLagJsndmoUrldsn">description::
+  <section id="idLagJsndmcoUrl">
+  <h2 id="idLagJsndmcoUrlH2">Jsndmc.core.url-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoUrlH2"></a></h2>
+  <p id="idLagJsndmcoUrldsn">description::
     <br><span class="clsQuote">The url module provides utilities for URL resolution and parsing.
     <br>It can be accessed using:
     <br>const url = require('url');</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/url.html#url_url">https://nodejs.org/docs/v6.3.1/api/url.html#url_url</a>]
-    <a class="clsHide" href="#idLagJsndmoUrldsn"></a></p>
-  <p id="idLagJsndmoUrlnam">name::
+    <a class="clsHide" href="#idLagJsndmcoUrldsn"></a></p>
+  <p id="idLagJsndmcoUrlnam">name::
     <br>* McsEngl.url--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'url-core-object-module,
-    <br>* McsEngl.Jsndm.url,
+    <br>* McsEngl.Jsndmc.url,
     <br>* McsEngl.lagJsnd'moUrl,
-    <a class="clsHide" href="#idLagJsndmoUrlnam"></a></p>
-  <p id="idLagJsndmoUrlwhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoUrlnam"></a></p>
+  <p id="idLagJsndmcoUrlwhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoUrlwhl"></a></p>
-  <p id="idLagJsndmoUrlgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoUrlwhl"></a></p>
+  <p id="idLagJsndmcoUrlgnc">generic-chain::
     <br>* <a href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moUrl.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoUrlgnc"></a></p>
-  <p id="idLagJsndmoUrlmbr">member::
+    <a class="clsHide" href="#idLagJsndmcoUrlgnc"></a></p>
+  <p id="idLagJsndmcoUrlmbr">member::
     <br>// 7.9.0 Object.getOwnPropertyNames(moUrl).sort()).join(', '))
     <br>[URL, URLSearchParams, Url, domainToASCII, domainToUnicode, format, parse, resolve, resolveObject]
     <br>// Object.getOwnPropertyNames(moUrl.__proto__).sort()).join(', '))
@@ -2475,38 +2497,38 @@
     <br>// Ljn.6-2-2
     <br>// Object.getOwnPropertyNames(moUrl).sort()
     <br>[ 'Url', 'format', 'parse', 'resolve', 'resolveObject' ]
-    <a class="clsHide" href="#idLagJsndmoUrlmbr"></a></p>
-  <p id="idLagJsndmoUrlexpl">Example::
+    <a class="clsHide" href="#idLagJsndmcoUrlmbr"></a></p>
+  <p id="idLagJsndmcoUrlexpl">Example::
     <br><code>//const moUrl = require('url');
     <br>moUrl.resolve('/one/two/', 'four'); //'/one/two/four'
     <br>moUrl.resolve('/one/two/three', 'four'); //'/one/two/four'</code>
-    <a class="clsHide" href="#idLagJsndmoUrlexpl"></a></p>
-  <p id="idLagJsndmoUrlwpa">addressWpg::
+    <a class="clsHide" href="#idLagJsndmcoUrlexpl"></a></p>
+  <p id="idLagJsndmcoUrlwpa">addressWpg::
     <br>* Official-doc: <a href="https://nodejs.org/docs/latest/api/url.html">https://nodejs.org/docs/latest/api/url.html</a>,
-    <a class="clsHide" href="#idLagJsndmoUrlwpa"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoUrlwpa"></a></p>
   </section>
 
-  <section id="idLagJsndmoUtil">
-  <h2 id="idLagJsndmoUtilH2">Jsndm.core.util-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoUtilH2"></a></h2>
-  <p id="idLagJsndmoUtildsn">description::
+  <section id="idLagJsndmcoUtil">
+  <h2 id="idLagJsndmcoUtilH2">Jsndmc.core.util-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoUtilH2"></a></h2>
+  <p id="idLagJsndmcoUtildsn">description::
     <br><span class="clsQuote">These functions are in the module 'util'.
     <br>Use <code>require('util')</code> to access them.</span>
     <br>[<a href="https://nodejs.org/api/util.html">https://nodejs.org/api/util.html</a>]
-    <a class="clsHide" href="#idLagJsndmoUtildsn"></a></p>
-  <p id="idLagJsndmoUtilnam">name::
+    <a class="clsHide" href="#idLagJsndmcoUtildsn"></a></p>
+  <p id="idLagJsndmcoUtilnam">name::
     <br>* McsEngl.util--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'util-core-object-module,
-    <br>* McsEngl.Jsndm.util,
+    <br>* McsEngl.Jsndmc.util,
     <br>* McsEngl.lagJsnd'moUtil,
-    <a class="clsHide" href="#idLagJsndmoUtilnam"></a></p>
-  <p id="idLagJsndmoUtilwhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoUtilnam"></a></p>
+  <p id="idLagJsndmcoUtilwhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoUtilwhl"></a></p>
-  <p id="idLagJsndmoUtilgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoUtilwhl"></a></p>
+  <p id="idLagJsndmcoUtilgnc">generic-chain::
     <br>* <a href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moUtil.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoUtilgnc"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoUtilgnc"></a></p>
 
   <section id="idLagJsndutil'member">
   <h3 id="idLagJsndutil'memberH3">lagJsndutil'member
@@ -2533,101 +2555,101 @@
   </section>
   </section>
 
-  <section id="idLagJsndmoVm">
-  <h2 id="idLagJsndmoVmH2">Jsndm.core.vm-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoVmH2"></a></h2>
-  <p id="idLagJsndmoVmdsn">description::
+  <section id="idLagJsndmcoVm">
+  <h2 id="idLagJsndmcoVmH2">Jsndmc.core.vm-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoVmH2"></a></h2>
+  <p id="idLagJsndmcoVmdsn">description::
     <br><span class="clsQuote">The vm module provides APIs for compiling and running code within V8 Virtual Machine contexts.
     <br>It can be accessed using:
     <br><code>const vm = require('vm');</code>
     <br>Javascript code can be compiled and run immediately or compiled, saved, and run later.</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/vm.html#vm_executing_Javascript">https://nodejs.org/docs/v6.3.1/api/vm.html#vm_executing_Javascript</a>]
-    <a class="clsHide" href="#idLagJsndmoVmdsn"></a></p>
-  <p id="idLagJsndmoVmnam">name::
+    <a class="clsHide" href="#idLagJsndmcoVmdsn"></a></p>
+  <p id="idLagJsndmcoVmnam">name::
     <br>* McsEngl.vm--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'vm-core-object-module,
-    <br>* McsEngl.Jsndm.vm,
+    <br>* McsEngl.Jsndmc.vm,
     <br>* McsEngl.lagJsnd'moVm,
-    <a class="clsHide" href="#idLagJsndmoVmnam"></a></p>
-  <p id="idLagJsndmoVmwhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoVmnam"></a></p>
+  <p id="idLagJsndmcoVmwhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoVmwhl"></a></p>
-  <p id="idLagJsndmoVmgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoVmwhl"></a></p>
+  <p id="idLagJsndmcoVmgnc">generic-chain::
     <br>* <a href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moVm.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoVmgnc"></a></p>
-  <p id="idLagJsndmoVmP4">lagJsnd-moVm'Member::
+    <a class="clsHide" href="#idLagJsndmcoVmgnc"></a></p>
+  <p id="idLagJsndmcoVmP4">lagJsnd-moVm'Member::
     <br>// Ljn.6-2-2
     <br>// Object.getOwnPropertyNames(moVm).sort()
     <br>[ 'Script', 'createContext', 'createScript', 'isContext', 'runInContext', 'runInDebugContext', 'runInNewContext', 'runInThisContext' ]
-    <a class="clsHide" href="#idLagJsndmoVmP4"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoVmP4"></a></p>
   </section>
 
-  <section id="idLagJsndmoZlib">
-  <h2 id="idLagJsndmoZlibH2">Jsndm.core.zlib-object (core 2.stable)
-    <a class="clsHide" href="#idLagJsndmoZlibH2"></a></h2>
-  <p id="idLagJsndmoZlibdsn">description::
+  <section id="idLagJsndmcoZlib">
+  <h2 id="idLagJsndmcoZlibH2">Jsndmc.core.zlib-object (core 2.stable)
+    <a class="clsHide" href="#idLagJsndmcoZlibH2"></a></h2>
+  <p id="idLagJsndmcoZlibdsn">description::
     <br><span class="clsQuote">The zlib module provides compression functionality implemented using Gzip and Deflate/Inflate.
     <br>It can be accessed using:
     <br><code>const zlib = require('zlib');</code></span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/zlib.html#zlib_zlib">https://nodejs.org/docs/v6.3.1/api/zlib.html#zlib_zlib</a>]
-    <a class="clsHide" href="#idLagJsndmoZlibdsn"></a></p>
-  <p id="idLagJsndmoZlibnam">name::
+    <a class="clsHide" href="#idLagJsndmcoZlibdsn"></a></p>
+  <p id="idLagJsndmcoZlibnam">name::
     <br>* McsEngl.zlib--Node.js-core-object-module,
     <br>* McsEngl.lagJsnd'zlib-core-object-module,
-    <br>* McsEngl.Jsndm.zlib,
+    <br>* McsEngl.Jsndmc.zlib,
     <br>* McsEngl.lagJsnd'moZlib,
-    <a class="clsHide" href="#idLagJsndmoZlibnam"></a></p>
-  <p id="idLagJsndmoZlibwhl">whole-chain::
-    <br>* <a class="clsPreview" href="#idLagJsndm">module-instance</a>,
+    <a class="clsHide" href="#idLagJsndmcoZlibnam"></a></p>
+  <p id="idLagJsndmcoZlibwhl">whole-chain::
+    <br>* <a class="clsPreview" href="#idLagJsndmc">module-instance</a>,
     <br>* <a class="clsPreview" href="#idLagJsndmwo">most-whole-object (global)</a>,
-    <a class="clsHide" href="#idLagJsndmoZlibwhl"></a></p>
-  <p id="idLagJsndmoZlibgnc">generic-chain::
+    <a class="clsHide" href="#idLagJsndmcoZlibwhl"></a></p>
+  <p id="idLagJsndmcoZlibgnc">generic-chain::
     <br>* <a href="McsTchInf000010.last.html#idLjsmgo">Object.prototype</a>, (moZlib.__proto__ === Object.prototype //true)
-    <a class="clsHide" href="#idLagJsndmoZlibgnc"></a></p>
-  <p id="idLagJsndmoZlibmbr">member::
+    <a class="clsHide" href="#idLagJsndmcoZlibgnc"></a></p>
+  <p id="idLagJsndmcoZlibmbr">member::
     <br>// Ljn.6-3-1
     <br>// Object.getOwnPropertyNames(moZlib).sort()
     <br>[ 'Deflate', 'Gunzip', 'Inflate', 'Unzip', 'ZLIB_VERSION', 'Z_BEST_SPEED', 'Z_BUF_ERROR', 'Z_DEFAULT_CHUNK', 'Z_DEFAULT_LEVEL', 'Z_DEFAULT_STRATEGY', 'Z_ERRNO', 'Z_FINISH', 'Z_FULL_FLUSH', 'Z_MAX_CHUNK', 'Z_MAX_MEMLEVEL', 'Z_MEM_ERROR', 'Z_MIN_LEVEL', 'Z_MIN_WINDOWBITS', 'Z_NO_COMPRESSION', 'Z_OK', 'Z_RLE', 'Z_STREAM_ERROR', 'Z_VERSION_ERROR', 'codes', 'createDeflateRaw', 'createGzip', 'createInflateRaw', 'deflate', 'deflateRawSync', 'gunzip', 'gzip', 'inflate', 'inflateRawSync', 'unzip', 'unzipSync' ]
-    <a class="clsHide" href="#idLagJsndmoZlibmbr"></a></p>
+    <a class="clsHide" href="#idLagJsndmcoZlibmbr"></a></p>
   </section>
 
-  <section id="idLagJsndmCorNo">
-  <h2 id="idLagJsndmCorNoH2">Jsndm.CORE.NO
-    <a class="clsHide" href="#idLagJsndmCorNoH2"></a></h2>
-  <p id="idLagJsndmCorNodsn">description::
-    <br>CoreNo-module is <a class="clsPreview" href="#idLagJsndm">a-module</a> created by <a class="clsPreview" href="McsTchInf000010.last.html#idLjshmnCtr">the-language-creator|s</a>.
-    <a class="clsHide" href="#idLagJsndmCorNodsn"></a></p>
-  <p id="idLagJsndmCorNonam">name::
+  <section id="idLagJsndmcCorNo">
+  <h2 id="idLagJsndmcCorNoH2">Jsndmc.CORE.NO
+    <a class="clsHide" href="#idLagJsndmcCorNoH2"></a></h2>
+  <p id="idLagJsndmcCorNodsn">description::
+    <br>CoreNo-module is <a class="clsPreview" href="#idLagJsndmc">a-module</a> created by <a class="clsPreview" href="McsTchInf000010.last.html#idLjshmnCtr">the-language-creator|s</a>.
+    <a class="clsHide" href="#idLagJsndmcCorNodsn"></a></p>
+  <p id="idLagJsndmcCorNonam">name::
     <br>* McsEngl.lagJsnd'coreNo-module,
     <br>* McsEngl.lagJsnd'non-native-module,
-    <br>* McsEngl.Jsndm.3rd-party,
-    <br>* McsEngl.Jsndm.non-builtIn,
-    <br>* McsEngl.Jsndm.custom,
-    <br>* McsEngl.Jsndm.internalNo,
-    <br>* McsEngl.Jsndm.nativeNo,
-    <a class="clsHide" href="#idLagJsndmCorNonam"></a></p>
-  <p id="idLagJsndmCorNoP2">specific::
+    <br>* McsEngl.Jsndmc.3rd-party,
+    <br>* McsEngl.Jsndmc.non-builtIn,
+    <br>* McsEngl.Jsndmc.custom,
+    <br>* McsEngl.Jsndmc.internalNo,
+    <br>* McsEngl.Jsndmc.nativeNo,
+    <a class="clsHide" href="#idLagJsndmcCorNonam"></a></p>
+  <p id="idLagJsndmcCorNoP2">specific::
     <br>* 3rd party modules written in Javascript
     <br>* 3rd party modules with C/C++ addons
     <br>[<a href="https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules">https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules</a>]
-    <a class="clsHide" href="#idLagJsndmCorNoP2"></a></p>
+    <a class="clsHide" href="#idLagJsndmcCorNoP2"></a></p>
   </section>
 
-  <section id="idLagJsndmDir">
-  <h2 id="idLagJsndmDirH2">Jsndm.DIRECTORY
-    <a class="clsHide" href="#idLagJsndmDirH2"></a></h2>
-  <p id="idLagJsndmDirdsn">description::
+  <section id="idLagJsndmcDir">
+  <h2 id="idLagJsndmcDirH2">Jsndmc.DIRECTORY
+    <a class="clsHide" href="#idLagJsndmcDirH2"></a></h2>
+  <p id="idLagJsndmcDirdsn">description::
     <br><span class="clsQuote">It is convenient to organize <span class="clsBU">programs and libraries</span> into self-contained directories, and then provide a single entry point to that library.</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/modules.html#modules_folders_as_modules">https://nodejs.org/docs/v6.3.1/api/modules.html#modules_folders_as_modules</a>]
-    <a class="clsHide" href="#idLagJsndmDirdsn"></a></p>
-  <p id="idLagJsndmDirnam">name::
+    <a class="clsHide" href="#idLagJsndmcDirdsn"></a></p>
+  <p id="idLagJsndmcDirnam">name::
     <br>* McsEngl.lagJsnd'directory-module,
     <br>* McsEngl.lagJsnd'folder-module,
-    <br>* McsEngl.Jsndm.directory,
-    <br>* McsEngl.Jsndm.folder,
-    <a class="clsHide" href="#idLagJsndmDirnam"></a></p>
-  <p id="idLagJsndmDirdsnP1">description::
+    <br>* McsEngl.Jsndmc.directory,
+    <br>* McsEngl.Jsndmc.folder,
+    <a class="clsHide" href="#idLagJsndmcDirnam"></a></p>
+  <p id="idLagJsndmcDirdsnP1">description::
     <br><span class="clsQuote"><strong>Folders as Modules</strong>
     <br>It is convenient to organize programs and libraries into self-contained directories, and then provide a single entry point to that library. <strong>There are three ways in which a folder may be passed to require() as an argument</strong>.
     <br>
@@ -2663,17 +2685,17 @@
     <br>You can install new modules by adding files or directories to ./node_modules.
     <br>The best way to manage these modules is to use <a class="clsPreview" href="#idLagJsndnpm">npm</a>, which is covered briefly in the next section.</span>
     <br>[<a href="http://book.mixu.net/node/single.html">http://book.mixu.net/node/single.html</a>]
-    <a class="clsHide" href="#idLagJsndmDirdsnP1"></a></p>
+    <a class="clsHide" href="#idLagJsndmcDirdsnP1"></a></p>
   </section>
 
-  <section id="idLagJsndmFil">
-  <h2 id="idLagJsndmFilH2">Jsndm.FILE
-    <a class="clsHide" href="#idLagJsndmFilH2"></a></h2>
-  <p id="idLagJsndmFilnam">name::
+  <section id="idLagJsndmcFil">
+  <h2 id="idLagJsndmcFilH2">Jsndmc.FILE
+    <a class="clsHide" href="#idLagJsndmcFilH2"></a></h2>
+  <p id="idLagJsndmcFilnam">name::
     <br>* McsEngl.lagJsnd'file-module,
-    <br>* McsEngl.Jsndm.file,
-    <a class="clsHide" href="#idLagJsndmFilnam"></a></p>
-  <p id="idLagJsndmFildsn">description::
+    <br>* McsEngl.Jsndmc.file,
+    <a class="clsHide" href="#idLagJsndmcFilnam"></a></p>
+  <p id="idLagJsndmcFildsn">description::
     <br><span class="clsQuote"><strong>File Modules</strong>
     <br>If the exact filename is not found, then node will attempt to load the required filename with the added extension of .js, .json, and then .node.
     <br>
@@ -2690,36 +2712,36 @@
     <br>
     <br>If the given path does not exist, require() will throw an <a class="clsPreview" href="McsTchInf000010.last.html#idLjsError">Error</a> with its code property set to '<code>MODULE_NOT_FOUND</code>'.</span>
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/modules.html#modules_file_modules">https://nodejs.org/docs/v6.3.1/api/modules.html#modules_file_modules</a>]
-    <a class="clsHide" href="#idLagJsndmFildsn"></a></p>
+    <a class="clsHide" href="#idLagJsndmcFildsn"></a></p>
   </section>
 
-  <section id="idLagJsndmMain">
-  <h2 id="idLagJsndmMainH2">Jsndm.MAIN
-    <a class="clsHide" href="#idLagJsndmMainH2"></a></h2>
-  <p id="idLagJsndmMaindsn">description::
-    <br>Main-module is <a class="clsPreview" href="#idLagJsndm">a-module</a> from which STARTS <a class="clsPreview" href="McsTchInf000010.last.html#idLjspgm">a-program</a> or <a class="clsPreview" href="McsTchInf000010.last.html#idLjslbr">a-library</a>.
-    <a class="clsHide" href="#idLagJsndmMaindsn"></a></p>
-  <p id="idLagJsndmMainnam">name::
+  <section id="idLagJsndmcMain">
+  <h2 id="idLagJsndmcMainH2">Jsndmc.MAIN
+    <a class="clsHide" href="#idLagJsndmcMainH2"></a></h2>
+  <p id="idLagJsndmcMaindsn">description::
+    <br>Main-module is <a class="clsPreview" href="#idLagJsndmc">a-module</a> from which STARTS <a class="clsPreview" href="McsTchInf000010.last.html#idLjspgm">a-program</a> or <a class="clsPreview" href="McsTchInf000010.last.html#idLjslbr">a-library</a>.
+    <a class="clsHide" href="#idLagJsndmcMaindsn"></a></p>
+  <p id="idLagJsndmcMainnam">name::
     <br>* McsEngl.lagJsnd'entry-point-module,
     <br>* McsEngl.lagJsnd'main-module,
-    <br>* McsEngl.Jsndm.main,
-    <a class="clsHide" href="#idLagJsndmMainnam"></a></p>
-  <p id="idLagJsndmMainacs">Accessing the-main-module:
+    <br>* McsEngl.Jsndmc.main,
+    <a class="clsHide" href="#idLagJsndmcMainnam"></a></p>
+  <p id="idLagJsndmcMainacs">Accessing the-main-module:
     <br>(<a class="clsPreview" href="#idLagJsndrequire_main">link</a>)
-    <a class="clsHide" href="#idLagJsndmMainacs"></a></p>
+    <a class="clsHide" href="#idLagJsndmcMainacs"></a></p>
   </section>
 
-  <section id="idLagJsndmMainNo">
-  <h2 id="idLagJsndmMainNoH2">Jsndm.MAIN.NO
-    <a class="clsHide" href="#idLagJsndmMainNoH2"></a></h2>
-  <p id="idLagJsndmMainNodsn">description::
-    <br>Dependent-module is any <a class="clsPreview" href="#idLagJsndm">module</a> <a class="clsPreview" href="#idLagJsndmimp">importing</a> in another.
-    <a class="clsHide" href="#idLagJsndmMainNodsn"></a></p>
-  <p id="idLagJsndmMainNonam">name::
+  <section id="idLagJsndmcMainNo">
+  <h2 id="idLagJsndmcMainNoH2">Jsndmc.MAIN.NO
+    <a class="clsHide" href="#idLagJsndmcMainNoH2"></a></h2>
+  <p id="idLagJsndmcMainNodsn">description::
+    <br>Dependent-module is any <a class="clsPreview" href="#idLagJsndmc">module</a> <a class="clsPreview" href="#idLagJsndmimp">importing</a> in another.
+    <a class="clsHide" href="#idLagJsndmcMainNodsn"></a></p>
+  <p id="idLagJsndmcMainNonam">name::
     <br>* McsEngl.lagJsnd'dependent-module,
     <br>* McsEngl.lagJsnd'mainNo-module,
-    <br>* McsEngl.Jsndm.mainNo,
-    <a class="clsHide" href="#idLagJsndmMainNonam"></a></p>
+    <br>* McsEngl.Jsndmc.mainNo,
+    <a class="clsHide" href="#idLagJsndmcMainNonam"></a></p>
   </section>
 </section>
 
@@ -2832,13 +2854,13 @@
           <li>setTimeout,</li>
           <li>undefined,</li>
           <li>unescape,</li>
-          <li><a class="clsPreview" href="#idLagJsndmMain">MAIN-MODULE</a>,
+          <li><a class="clsPreview" href="#idLagJsndmcMain">MAIN-MODULE</a>,
             <ul>
               <li>part-modules,</li>
-              <li><a class="clsPreview" href="#idLagJsndmmbrPbc">public-member</a>,</li>
-              <li><a class="clsPreview" href="#idLagJsndmmbrPbcNo">publicNo-member</a>,</li>
-              <li><a class="clsPreview" href="#idLagJsndmmbr__dirname">__dirname-string-member</a>,</li>
-              <li><a class="clsPreview" href="#idLagJsndmmbr_filename">__filename-string-member</a>,</li>
+              <li><a class="clsPreview" href="#idLagJsndmcmbrPbc">public-member</a>,</li>
+              <li><a class="clsPreview" href="#idLagJsndmcmbrPbcNo">publicNo-member</a>,</li>
+              <li><a class="clsPreview" href="#idLagJsndmcmbr__dirname">__dirname-string-member</a>,</li>
+              <li><a class="clsPreview" href="#idLagJsndmcmbr_filename">__filename-string-member</a>,</li>
               <li><a class="clsPreview" href="#idLagJsndmodule">module-object-member</a>,
                 <ul>
                   <li><a class="clsPreview" href="#idLagJsndmodule_children">children</a>,</li>
@@ -2909,31 +2931,31 @@
             <ul><li>mfStream.prototype,</li></ul>
           </li>
           <li>mfEvents.prototype,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoBuffer">moBuffer</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoChild_process">moChild_process</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoCluster">moCluster</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoCrypto">moCrypto</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoDgram">moDgram</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoDns">moDns</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoDomain">moDomain</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoFs">moFs</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoHttp">moHttp</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoHttps">moHttps</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoNet">moNet</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoOs">moOs</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoPath">moPath</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoPunycode">moPunycode</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoQuerystring">moQuerystring</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoReadline">moReadline</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoBuffer">moBuffer</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoChild_process">moChild_process</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoCluster">moCluster</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoCrypto">moCrypto</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoDgram">moDgram</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoDns">moDns</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoDomain">moDomain</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoFs">moFs</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoHttp">moHttp</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoHttps">moHttps</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoNet">moNet</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoOs">moOs</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoPath">moPath</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoPunycode">moPunycode</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoQuerystring">moQuerystring</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoReadline">moReadline</a>,</li>
           <li><a class="clsPreview" href="#idLagJsndrplmdl">moRepl</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoString_decoder">moString_decoder</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoTls">moTls</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoTty">moTty</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoUrl">moUrl</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoUtil">moUtil</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoV8">moV8</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoVm">moVm</a>,</li>
-          <li><a class="clsPreview" href="#idLagJsndmoZlib">moZlib</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoString_decoder">moString_decoder</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoTls">moTls</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoTty">moTty</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoUrl">moUrl</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoUtil">moUtil</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoV8">moV8</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoVm">moVm</a>,</li>
+          <li><a class="clsPreview" href="#idLagJsndmcoZlib">moZlib</a>,</li>
         </ul>
       </li>
     </ul>
@@ -3175,7 +3197,7 @@
     <a class="clsHide" href="#idLagJsndprocessdsn"></a></p>
   <p id="idLagJsndprocessnam">name::
     <br>* McsEngl.lagJsnd'process-object,
-    <br>* McsEngl.Jsndm.process,
+    <br>* McsEngl.Jsndmc.process,
     <br>* McsEngl.lagJsnd'global.process,
     <br>* McsEngl.lagJsnd'process,
     <a class="clsHide" href="#idLagJsndprocessnam"></a></p>
@@ -3268,7 +3290,7 @@
   </section>
 
   <section id="idLagJsndgblCormdl">
-  <h2 id="idLagJsndgblCormdlH2">lagJsnd-API'CORE-MODULES <a class="clsPreview" href="#idLagJsndmCor">link</a>
+  <h2 id="idLagJsndgblCormdlH2">lagJsnd-API'CORE-MODULES <a class="clsPreview" href="#idLagJsndmcCor">link</a>
     <a class="clsHide" href="#idLagJsndgblCormdlH2"></a></h2>
   </section>
 
@@ -3348,7 +3370,7 @@
     <br>* McsEngl.lagJsnd'algo-root,
     <a class="clsHide" href="#idLagJsndrotnam"></a></p>
   <p id="idLagJsndrotdsn">description::
-    <br>The-root-tree is <a class="clsPreview" href="#idLagJsndmMain">the-main-module</a>.
+    <br>The-root-tree is <a class="clsPreview" href="#idLagJsndmcMain">the-main-module</a>.
     <a class="clsHide" href="#idLagJsndrotdsn"></a></p>
 </section>
 
@@ -3443,8 +3465,8 @@
     <br>* <a href="https://www.npmjs.org/package/delivery">https://www.npmjs.org/package/delivery</a>,
     <a class="clsHide" href="#idLagJsndalgFsP2"></a></p>
   <p id="idLagJsndalgFsP4">module::
-    <br>* <a class="clsPreview" href="#idLagJsndmoFs">fs-module</a>,
-    <br>* <a class="clsPreview" href="#idLagJsndmoPath">path-module</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoFs">fs-module</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoPath">path-module</a>,
     <a class="clsHide" href="#idLagJsndalgFsP4"></a></p>
 
   <section id="idLagJsndalgFilRdg">
@@ -3668,12 +3690,12 @@
     <br>* McsEngl.lagJsnd'processing.NETWORKING,
     <a class="clsHide" href="#idLagJsndalgNetnam"></a></p>
   <p id="idLagJsndalgNetP3">module::
-    <br>* <a class="clsPreview" href="#idLagJsndmoDgram">dgram</a>: receive and send UDP packets,
-    <br>* <a class="clsPreview" href="#idLagJsndmoDns">dns</a>: asynchronous DNS resolution,
-    <br>* <a class="clsPreview" href="#idLagJsndmoHttp">http</a>: create an HTTP server or client,
-    <br>* <a class="clsPreview" href="#idLagJsndmoHttps">https</a>: implements http over TLS/SSL,
-    <br>* <a class="clsPreview" href="#idLagJsndmoNet">net</a>: create a TCP server client
-    <br>* <a class="clsPreview" href="#idLagJsndmoTls">tls</a> (ssl): uses OpenSSL to provide Transport Layer Security and/or Secure Socket Layer: encrypted stream communication,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoDgram">dgram</a>: receive and send UDP packets,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoDns">dns</a>: asynchronous DNS resolution,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoHttp">http</a>: create an HTTP server or client,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoHttps">https</a>: implements http over TLS/SSL,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoNet">net</a>: create a TCP server client
+    <br>* <a class="clsPreview" href="#idLagJsndmcoTls">tls</a> (ssl): uses OpenSSL to provide Transport Layer Security and/or Secure Socket Layer: encrypted stream communication,
     <a class="clsHide" href="#idLagJsndalgNetP3"></a></p>
   </section>
 
@@ -3699,7 +3721,7 @@
     <br>* McsEngl.lagJsnd-code.processes,
     <a class="clsHide" href="#idLagJsndalgProcessesnam"></a></p>
   <p id="idLagJsndalgProcessesP2">API:
-    <br>* <a class="clsPreview" href="#idLagJsndmoChild_process">child-process--module</a>,
+    <br>* <a class="clsPreview" href="#idLagJsndmcoChild_process">child-process--module</a>,
     <br>* process-object <a href="#nodejs'api'process_object">link</a>,
     <a class="clsHide" href="#idLagJsndalgProcessesP2"></a></p>
   </section>
@@ -3779,7 +3801,7 @@
     <a class="clsHide" href="#idLagJsndalgStreamP3"></a></p>
 
   <section id="idLagJsndalgstreamfm">
-  <h3 id="idLagJsndalgstreamfmH3">stream-core--function-module (<a class="clsPreview" href="#idLagJsndmfStream">link</a>)
+  <h3 id="idLagJsndalgstreamfmH3">stream-core--function-module (<a class="clsPreview" href="#idLagJsndmcfStream">link</a>)
     <a class="clsHide" href="#idLagJsndalgstreamfmH3"></a></h3>
   </section>
 
@@ -5248,7 +5270,7 @@
   <p id="idLagJsndpkgBrowserifynam">name::
     <br>* McsEngl.Browserify,
     <br>* McsEngl.lagJsnd'browserify-module,
-    <br>* McsEngl.Jsndm.browserify,
+    <br>* McsEngl.Jsndmc.browserify,
     <a class="clsHide" href="#idLagJsndpkgBrowserifynam"></a></p>
   <p id="idLagJsndpkgBrowserifyP2">addressWpg::
     <br>* <a href="http://browserify.org/">http://browserify.org</a>/
@@ -6582,7 +6604,7 @@
     <br>* McsEngl.Expressjs,
     <br>* McsEngl.lagJsnd'express,
     <br>* McsEngl.lagJsnd'lbr.express,
-    <br>* McsEngl.Jsndm.express,
+    <br>* McsEngl.Jsndmc.express,
     <a class="clsHide" href="#idLagJsndpkgexpressnam"></a></p>
   <p id="idLagJsndpkgexpressP3">Code.Ljn:
     <br><code>var express = require('express');
