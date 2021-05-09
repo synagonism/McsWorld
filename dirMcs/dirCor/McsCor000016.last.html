@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.McsTest-(0-1-0.2021-04-03 draft) test-Mcs</title>
+  <title>Mcs.McsTest-(0-3-0.2021-05-09 draft) test-Mcs</title>
   <meta name="keywords" content="example-Mcs, McsTest, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/hitp.css">
 </head>
@@ -33,11 +33,11 @@
   <p id="idName">name::
     <br>* McsEngl.McsTest,
     <br>* McsEngl.McsTest'(McsCor000016)!⇒McsTest,
-    <br>* McsEngl.AAA,
+    <br>* McsEngl.AAAtest,
     <br>====== langoSinago:
-    <br>* McsSngo.AAA!=McsTest,
+    <br>* McsSngo.AAAtest!=McsTest,
     <br>====== langoGreek:
-    <br>* McsElln.ΑΑΑ!=McsTest,
+    <br>* McsElln.ΑΑΑτέστ!=McsTest,
     <a class="clsHide" href="#idName"></a></p>
   <p id="idOverviewdsnL">descriptionLong::
     <br>· a-long-description of Mcs.
@@ -163,6 +163,10 @@
   ga('send', 'pageview');
 </script>
 
-<script src="../Mcsmgr/hitp.js"></script>
+<script type="module">
+  import * as oHitp from '../Mcsmgr/mHitp-plain.js'
+  console.log(oHitp.sCfgHomeLocal)
+  console.log(Object.getOwnPropertyNames(oHitp).sort().join(', '))
+</script>
 </body>
 </html>
