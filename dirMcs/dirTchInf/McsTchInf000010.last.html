@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagJsgn-(6-5-0.2021-05-05) Javascript-language</title>
-  <meta name="keywords" content="JavaScript, js, lagJsgn, Javascript-tutorial, browser-js, Node.js, Jsgn, ljb, ljn, Mcs, structured-concept">
+  <title>Mcs.lagJsgn-(6-7-0.2021-05-10) Javascript-language</title>
+  <meta name="keywords" content="JavaScript, js, lagJsgn, Javascript-tutorial, browser-js, Node.js, Jsgn, Jsbr, Jsnd, Mcs, sensorial-concept">
   <link rel="stylesheet" href="../Mcsmgr/hitp.css">
 </head>
 
@@ -201,7 +201,7 @@
   <p id="idLjssutgnc">generic-chain::
     <br>* <a class="clsPreview" href="#idLjso">object</a>,
     <br>or
-    <br>* <a class="clsPreview" href="#idLjsoNo">objectNo</a>,
+    <br>* <a class="clsPreview" href="#idLjsopmN">object-pmNo</a>,
     <a class="clsHide" href="#idLjssutgnc"></a></p>
   <p id="idLjssutprt">part::
     <br>* <a class="clsPreview" href="#idLjswrd">lagJsgn-word</a>,
@@ -311,6 +311,20 @@
   </section>
   </section>
 
+  <section id="idLjssutmbr">
+  <h2 id="idLjssutmbrH2">member of Jsgnsut
+    <a class="clsHide" href="#idLjssutmbrH2"></a></h2>
+  <p id="idLjssutmbrdsn">description::
+    <br>· member-of-semantic-unit is a-part of it.
+    <br><code>&gt; let a = [1,2] &lt; undefined
+    <br>&gt; a.m = "member" &lt; "member"
+    <br>&gt; a.m &lt; "member"</code>
+    <a class="clsHide" href="#idLjssutmbrdsn"></a></p>
+  <p id="idLjssutmbrnam">name::
+    <br>* McsEngl.Jsgnsut'member,
+    <a class="clsHide" href="#idLjssutmbrnam"></a></p>
+  </section>
+
   <section id="idLjssutscp">
   <h2 id="idLjssutscpH2">scope of Jsgnsut
     <a class="clsHide" href="#idLjssutscpH2"></a></h2>
@@ -367,7 +381,7 @@
     <br>* <a class="clsPreview" href="#idLjsl">null--semantic-unit</a>,
     <br>* <a class="clsPreview" href="#idLjsn">number--semantic-unit</a>,
     <br>* <a class="clsPreview" href="#idLjso">object--semantic-unit</a>,
-    <br>* <a class="clsPreview" href="#idLjsoNo">objectNo--semantic-unit</a>,
+    <br>* <a class="clsPreview" href="#idLjsopmN">object-pmNo--semantic-unit</a>,
     <br>* <a class="clsPreview" href="#idLjsr">regexp--semantic-unit</a>,
     <br>* <a class="clsPreview" href="#idLjss">string--semantic-unit</a>,
     <br>* <a class="clsPreview" href="#idLjsu">undefined--semantic-unit</a>,
@@ -397,25 +411,12 @@
   </section>
 
   <section id="idLjssutSpcObt">
-  <h2 id="idLjssutSpcObtH2">Jsgnsut.SPECIFIC-DIVISION.object
+  <h2 id="idLjssutSpcObtH2">Jsgnsut.SPECIFIC-DIVISION.object-pm
     <a class="clsHide" href="#idLjssutSpcObtH2"></a></h2>
   <p id="idLjssutSpcObtP1">specific::
-    <br>* <a class="clsPreview" href="#idLjso">object-semantic-unit</a>,
-    <br>* <a class="clsPreview" href="#idLjsoNo">objectNo-semantic-unit</a>,
+    <br>* <a class="clsPreview" href="#idLjsopm">object-pm-semantic-unit</a>,
+    <br>* <a class="clsPreview" href="#idLjsopmN">object-pmNo-semantic-unit</a>,
     <a class="clsHide" href="#idLjssutSpcObtP1"></a></p>
-
-  <section id="idLjsoNo">
-  <h3 id="idLjsoNoH3">Jsgnsut.objectNo
-    <a class="clsHide" href="#idLjsoNoH3"></a></h3>
-  <p id="idLjsoNodsn">description::
-    <br>objectNo is <a class="clsPreview" href="#idLjssut">a-semantic-unit</a> which is NOT <a class="clsPreview" href="#idLjso">object</a>, it is NOT specific of <a class="clsPreview" href="#idLjsmgo">Object.prototype</a>.
-    <br>Only 2 semantic-units are not objects: <code><a class="clsPreview" href="#idLjsl">null</a></code>, <code><a class="clsPreview" href="#idLjsu">undefined</a></code>.
-    <a class="clsHide" href="#idLjsoNodsn"></a></p>
-  <p id="idLjsoNonam">name::
-    <br>* McsEngl.lagJsgn'objectNo-semantic-unit,
-    <br>* McsEngl.Jsgnsut.objectNo,
-    <a class="clsHide" href="#idLjsoNonam"></a></p>
-  </section>
   </section>
 
   <section id="idLjssutSpcCsm">
@@ -527,6 +528,51 @@
     <br>* <a class="clsPreview" href="#idLjssutRfrd">referenced--semantic-unit</a>,
     <br>* <a class="clsPreview" href="#idLjssutSnamN">referencedNo--semantic-unit</a>,
     <a class="clsHide" href="#idLjssutSnamP1"></a></p>
+  </section>
+
+  <section id="idLjsopm">
+  <h2 id="idLjsopmH2">Jsgnsut.OBJECT-PM
+    <a class="clsHide" href="#idLjsopmH2"></a></h2>
+  <p id="idLjsopmdsn">description::
+    <br>· object-pm (prototype|member) is <a class="clsPreview" href="#idLjssut">a-semantic-unit</a> which:
+    <br>a) it is specific (= inherits the-members) of <a class="clsPreview" href="#idLjsmgo">Object.prototype</a>
+    <br><code>&gt; let a = [1,2] &lt; undefined
+    <br>&gt; a.__proto__ === Array.prototype &lt; true</code>
+    <br>AND
+    <br>b) have members:
+    <br><code>&gt; let a = [1,2] &lt; undefined
+    <br>&gt; a.m = "member" &lt; "member"
+    <br>&gt; a.m &lt; "member"</code>
+    <br>· 'object-pm' is a-name I USE in-order-to distinguish it from '<a class="clsPreview" href="#idLjso">object-semantic-unit</a>'
+    <a class="clsHide" href="#idLjsopmdsn"></a></p>
+  <p id="idLjsopmnam">name::
+    <br>* McsEngl.Jsgnsut.object-pm,
+    <br>* McsEngl.object-pm//lagJsgn,
+    <br>* McsEngl.object-pm:Jsgnsut,
+    <br>* McsEngl.objectpm//lagJsgn,
+    <a class="clsHide" href="#idLjsopmnam"></a></p>
+  </section>
+
+  <section id="idLjsopmN">
+  <h2 id="idLjsopmNH2">Jsgnsut.OBJECT-PM.NO
+    <a class="clsHide" href="#idLjsopmNH2"></a></h2>
+  <p id="idLjsopmNdsn">description::
+    <br>· objectpmNo is <a class="clsPreview" href="#idLjssut">a-semantic-unit</a> which is-NOT <a class="clsPreview" href="#idLjso">object-pm</a>:
+    <br>a) it is-NOT specific of <a class="clsPreview" href="#idLjsmgo">Object.prototype</a>
+    <br>OR
+    <br>b) it has-NO members.
+    <br>· 2 semantic-units are-not specifics of Object.prototype: <code><a class="clsPreview" href="#idLjsl">null</a></code>, <code><a class="clsPreview" href="#idLjsu">undefined</a></code>, then are-not objects.
+    <a class="clsHide" href="#idLjsopmNdsn"></a></p>
+    <br>· and numbers, strings, and booleans LITERALS have-no members, and THEN these are-NOT objects-pm using the-above definition of object-pm.
+    <br>· the-famous statement 'EVERYTHING IS AN OBJECT[a]' is wrong, meaning by 'object[a]' either '<a class="clsPreview" href="#idLjsopm">object-pm</a>' or '<a class="clsPreview" href="#idLjso">object</a>'.
+  <p id="idLjsopmNnam">name::
+    <br>* McsEngl.Jsgnsut.object-pmNo,
+    <br>* McsEngl.Jsgnsut.objectpmNo,
+    <br>* McsEngl.everything-is-an-object//lagJsgn,
+    <br>* McsEngl.lagJsgn'objectpmNo-semantic-unit,
+    <br>* McsEngl.object-pmNo-Jsgnsut,
+    <br>* McsEngl.objectpmNo-Jsgnsut,
+    <a class="clsHide" href="#idLjsopmNnam"></a></p>
   </section>
 
   <section id="idLjssutRfrd">
@@ -690,6 +736,94 @@
     <a class="clsHide" href="#idLjssutSnamNnam"></a></p>
   </section>
 
+  <section id="idLjssutFcs">
+  <h2 id="idLjssutFcsH2">Jsgnsut.FIRST-CLASS
+    <a class="clsHide" href="#idLjssutFcsH2"></a></h2>
+  <p id="idLjssutFcsdsn">description::
+    <br>· first-class--semantic-unit is <a class="clsPreview" href="#idLjssut">a-semantic-unit</a> which can-have <a class="clsPreview" href="#idLjssutmbr">members</a>.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/Javascript/Reference/Functions">https://developer.mozilla.org/en-US/docs/Web/Javascript/Reference/Functions</a>]
+    <a class="clsHide" href="#idLjssutFcsdsn"></a></p>
+  <p id="idLjssutFcsnam">name::
+    <br>* McsEngl.Jsgnsut.first-class,
+    <br>* McsEngl.lagJsgn'first-class--semantic-unit,
+    <br>* McsEngl.lagJsgn'firstclass--semantic-unit,
+    <br>* McsEngl.lagJsgn'first-class-object,
+    <br>* McsEngl.lagJsgn'firstclass-object,
+    <a class="clsHide" href="#idLjssutFcsnam"></a></p>
+  <p id="idLjssutFcsSpc">specific::
+    <br>* <a class="clsPreview" href="#idLjsa">array</a>,
+    <br>* <a class="clsPreview" href="#idLjsf">function</a>,
+    <br>* <a class="clsPreview" href="#idLjsr">regexp</a>,
+    <br>* number-non-literal, (<code>var n = new Number(2)</code>)
+    <br>* string-non-literal, (<code>var s = new String('string')</code>)
+    <a class="clsHide" href="#idLjssutFcsSpc"></a></p>
+  </section>
+
+  <section id="idLjssutFcsNo">
+  <h2 id="idLjssutFcsNoH2">Jsgnsut.FIRST-CLASS.NO
+    <a class="clsHide" href="#idLjssutFcsNoH2"></a></h2>
+  <p id="idLjssutFcsNodsn">description::
+    <br>· first-class-no--semantic-unit is <a class="clsPreview" href="#idLjssut">a-semantic-unit</a> which has-no <a class="clsPreview" href="#idLjssutmbr">members</a>.
+    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/Javascript/Reference/Functions">https://developer.mozilla.org/en-US/docs/Web/Javascript/Reference/Functions</a>]
+    <a class="clsHide" href="#idLjssutFcsNodsn"></a></p>
+  <p id="idLjssutFcsNonam">name::
+    <br>* McsEngl.Jsgnsut.first-class-no,
+    <br>* McsEngl.first-class-no-semantic-unit//lagJsgn,
+    <br>* McsEngl.lagJsgn'first-class-no-semantic-unit,
+    <br>* McsEngl.lagJsgn'firstclass-no-semantic-unit,
+    <a class="clsHide" href="#idLjssutFcsNonam"></a></p>
+  <p id="idLjssutFcsNoSpc">specific::
+    <br>* <a class="clsPreview" href="#idLjsb">boolean</a>,
+    <br>* number-literal, (<code>var n = 2</code>)
+    <br>* string-literal, (<code>var s = 'string'</code>)
+    <a class="clsHide" href="#idLjssutFcsNoSpc"></a></p>
+  </section>
+
+  <section id="idLjssutLtl">
+  <h2 id="idLjssutLtlH2">Jsgnsut.LITERAL
+    <a class="clsHide" href="#idLjssutLtlH2"></a></h2>
+  <p id="idLjssutLtldsn">description::
+    <br>· literal-semantic-unit is <a class="clsPreview" href="#idLjssut">a-semantic-unit</a> created directly by <a class="clsPreview" href="#idLjshmnPmr">the-programer</a>.
+    <br>Jsgncode:
+    <br><code>var o = {
+    <br> &nbsp;a: [1, 's'],
+    <br> &nbsp;b: true,
+    <br> &nbsp;f: function(){},
+    <br> &nbsp;n: 2,
+    <br> &nbsp;o2: {n:1, s:'s'},
+    <br> &nbsp;r: /d/,
+    <br> &nbsp;s: 'string',
+    <br>}</code>
+    <a class="clsHide" href="#idLjssutLtldsn"></a></p>
+  <p id="idLjssutLtlnam">name::
+    <br>* McsEngl.Jsgnsut.literal,
+    <br>* McsEngl.lagJsgn'literal--semantic-unit,
+    <br>* McsEngl.literal--semantic-unit//lagJsgn,
+    <a class="clsHide" href="#idLjssutLtlnam"></a></p>
+  <p id="idLjssutLtlgnc">generic-chain::
+    <br>* <a class="clsPreview" href="#idLjsmgo">Object.prototype</a>,
+    <a class="clsHide" href="#idLjssutLtlgnc"></a></p>
+  </section>
+
+  <section id="idLjssutLtlNo">
+  <h2 id="idLjssutLtlNoH2">Jsgnsut.LITERAL.NO
+    <a class="clsHide" href="#idLjssutLtlNoH2"></a></h2>
+  <p id="idLjssutLtlNodsn">description::
+    <br>· literalNo-semantic-unit is <a class="clsPreview" href="#idLjssut">a-semantic-unit</a> created directly by <a class="clsPreview" href="#idLjshmnPmr">the-programer</a>.
+    <a class="clsHide" href="#idLjssutLtlNodsn"></a></p>
+  <p id="idLjssutLtlNonam">name::
+    <br>* McsEngl.Jsgnsut.literalNo,
+    <br>* McsEngl.lagJsgn'literalNo--semantic-unit,
+    <br>* McsEngl.lagJsgn'non-literal--semantic-unit,
+    <br>* McsEngl.literalNo--semantic-unit//lagJsgn,
+    <a class="clsHide" href="#idLjssutLtlNonam"></a></p>
+  <p id="idLjssutLtlNoSpc">specific::
+    <br>* <a class="clsPreview" href="#idLjsoCsr">constructor-object</a>,
+    <br>* <code>var o = Object.create(o2);</code>
+    <br>* object created as a return of a-function,
+    <a class="clsHide" href="#idLjssutLtlNoSpc"></a></p>
+  </section>
+
   <section id="idLjsa">
   <h2 id="idLjsaH2">Jsgnsut.array (Jsgna)
     <a class="clsHide" href="#idLjsaH2"></a></h2>
@@ -718,7 +852,7 @@
   <h3 id="idLjsacrtH3">Jsgna'creating
     <a class="clsHide" href="#idLjsacrtH3"></a></h3>
   <p id="idLjsacrtdsn">description::
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>:
+    <br>Jsgncode:
     <br><code>var a1 = [1, 's'];
     <br>//===
     <br>var a2 = new Array(1, 's');</code>
@@ -760,7 +894,7 @@
     <br>· arrays are-considered <a class="clsPreview" href="#idLjsoCsr">objects</a> of <a class="clsPreview" href="#idLjsArray">the-Array-constructor-function</a>, with <a class="clsPreview" href="#idLjsognc">generic</a> <a class="clsPreview" href="#idLjsArrayp">the-Array.prototype-object</a>.
     <br>In other words, <a class="clsPreview" href="#idLjsArraypmbr">the-members-of-the-Array.prototype-object</a> are-inherited by all <a class="clsPreview" href="#idLjsa">arrays</a>.
     <br>Also, any array[1] can-have extra <a class="clsPreview" href="#idLjsombr">members</a> in addition to its[1] inherited members and to its[1] <a class="clsPreview" href="#idLjsaelt">elements</a>.
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>:
+    <br>Jsgncode:
     <br><code>a.n = 3;</code>
     <a class="clsHide" href="#idLjsambrdsn"></a></p>
   <p id="idLjsambrnam">name::
@@ -815,7 +949,7 @@
     <a class="clsHide" href="#idLjsArraypmbrH4"></a></h4>
   <p id="idLjsArraypmbrspc"><a class="clsPreview" href="#idLjsombr">member</a>::
     <br><a class="clsPreview" href="#idLjsalg">Code</a>
-    <br>(ljn.622):
+    <br>(Jsnd.6-2-2):
     <br><code>> Object.getOwnPropertyNames(Array.prototype).sort()
     <br>[ 'concat', 'constructor', 'copyWithin', 'entries', 'every', 'fill', 'filter', 'find', 'findIndex', 'forEach', 'includes', 'indexOf', 'join', 'keys', 'lastIndexOf', 'length', 'map', 'pop', 'push', 'reduce', 'reduceRight', 'reverse', 'shift', 'slice', 'some', 'sort', 'splice', 'toLocaleString', 'toString', 'unshift' ]</code>
     <br>(Chrome.50):
@@ -1492,7 +1626,7 @@
     <br>* <a class="clsPreview" href="#idLjsmgo">Object.prototype</a> (<code>Boolean.prototype.__proto__ === Object.prototype //true</code>),
     <a class="clsHide" href="#idLjsBooleanpnam"></a></p>
   <p id="idLjsBooleanpmbr"><a class="clsPreview" href="#idLjsombr">member</a>::
-    <br>(ljn.630):
+    <br>(Jsnd.6-3-0):
     <br><code>> Object.getOwnPropertyNames(Boolean.prototype).sort()
     <br>[ 'constructor', 'toString', 'valueOf' ]</code>
     <br>(Chrome.50):
@@ -1545,7 +1679,7 @@
   <p id="idLjsfdfndsn">description::
     <br>With a-compound-sentence, we define|create a-function.
     <br>We define its input, output and what info-processing will-do.
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>:
+    <br>Jsgncode:
     <br><code>function fName() { // inside parentheses we write the input <a class="clsPreview" href="#idLjssutname">identifiers</a>
     <br> &nbsp;//what to do
     <br> &nbsp;//last, what to return
@@ -1570,7 +1704,7 @@
     <br>Function-call is the-process of setting a-function to work.
     <br>We define a-function once, we call it as many times as we wish.
     <br>We use the next <a class="clsPreview" href="#idLjsfrs">phrase</a>, to call a-function.
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>:
+    <br>Jsgncode:
     <br><code>fName()</code>
     <br>Inside the-parentheses we put <a class="clsPreview" href="#idLjssutRfrdval">the-values</a> of <a class="clsPreview" href="#idLjssutname">the-identifiers</a> used in <a class="clsPreview" href="#idLjsfdfn">the-definition</a>.
     <a class="clsHide" href="#idLjsfclldsn"></a></p>
@@ -1611,7 +1745,7 @@
     <a class="clsHide" href="#idLjsfotpnam"></a></p>
   <p id="idLjsfotprtn">return-sentence:
     <br>The last sentence in the-definition-of-a-function is the-return-sentence, the-sentence that denotes what the-function will return.
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>: <code>return o;</code>
+    <br>Jsgncode: <code>return o;</code>
     <br>
     <br>name::
     <br>* McsEngl.lagJsgn'return-sentence,
@@ -1839,7 +1973,7 @@
     <a class="clsHide" href="#idLjsfCsrH3"></a></h3>
   <p id="idLjsfCsrdsn">description::
     <br>Constructor is any <a class="clsPreview" href="#idLjsf">function</a> used to create <a class="clsPreview" href="#idLjsoCsr">objects</a> using the-new keyword.
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>:
+    <br>Jsgncode:
     <br><code>var oName = new fName();</code>
     <a class="clsHide" href="#idLjsfCsrdsn"></a></p>
   <p id="idLjsfCsrnam">name::
@@ -1909,7 +2043,7 @@
   <p id="idLjsfOrndsn">description::
     <br><a class="clsPreview" href="#idLjso">Objects</a> have no <a class="clsPreview" href="#idLjselnConOsp">scope</a>.
     <br>To overcome this, we create objects by creating functions[1], which have scope, that[1] return the-object we want.
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>:
+    <br>Jsgncode:
     <br><code>function f() {
     <br> &nbsp;var n = 1;
     <br> &nbsp;function f1(){var n2 = n;}
@@ -2171,7 +2305,7 @@
     <a class="clsHide" href="#idLjsfSexH3"></a></h3>
   <p id="idLjsfSexdsn">description::
     <br>Self-executing-function is <a class="clsPreview" href="#idLjsf">a-function</a> which <a class="clsPreview" href="#idLjsfdfn">defined</a> and <a class="clsPreview" href="#idLjsfcll">called</a> at the same time.
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>:
+    <br>Jsgncode:
     <br><code>(function() {
     <br> &nbsp;//what to do
     <br> &nbsp;//last, what to return
@@ -2262,7 +2396,7 @@
     <br>* McsEngl.null--semantic-unit--of-Javascript,
     <a class="clsHide" href="#idLjslnam"></a></p>
   <p id="idLjslgnc">generic-chain::
-    <br>* <a class="clsPreview" href="#idLjsoNo">objectNo</a>,
+    <br>* <a class="clsPreview" href="#idLjsopmN">object-pmNo</a>,
     <br>* <a class="clsPreview" href="#idLjssut">semantic-unit</a>,
     <br>===
     <br>'<code>null</code> is not an object'.
@@ -2365,10 +2499,9 @@
   <h2 id="idLjsoH2">Jsgnsut.object (Jsgno)
     <a class="clsHide" href="#idLjsoH2"></a></h2>
   <p id="idLjsodsn">description::
-    <br>· object is a-collection of <a class="clsPreview" href="#idLjssutRfrd">name-value-pairs</a>, which inherits <a class="clsPreview" href="#idLjsombr">the-members</a> of the-<code><a class="clsPreview" href="#idLjsmgo">Object.prototype</a></code>, in other words it is SPECIFIC of the-<code>Object.prototype</code>.
+    <br>· object[a] is a-collection of <a class="clsPreview" href="#idLjssutRfrd">name-value-pairs</a> (its[a] <a class="clsPreview" href="#idLjsombr">members</a>).
+    <br>· object inherits <a class="clsPreview" href="#idLjsombr">the-members</a> of the-<code><a class="clsPreview" href="#idLjsmgo">Object.prototype</a></code>, in other words it is SPECIFIC of the-<code>Object.prototype</code>.
     <br>· objects are <a class="clsPreview" href="#idLjssut">semantic-units</a> that map concepts.
-    <br>· the famous sentence '<span class="clsColorGreen">everything is an object</span>', is wrong because there are and <a class="clsPreview" href="#idLjsoNo">non-objects</a>.
-    <br>· the correct sentence is: 'almost everything is an-Object.prototype'.
     <a class="clsHide" href="#idLjsodsn"></a></p>
   <p id="idLjsonam">name::
     <br>* McsEngl.lagJsgn'object!⇒Jsgno,
@@ -2509,10 +2642,10 @@
     <br>* <a class="clsPreview" href="#idLjsoCsrNo">constructorNo-object</a>,
     <br>* <a class="clsPreview" href="#idLjssutCsm">custom-object</a>,
     <br>* <a class="clsPreview" href="#idLjssutCsmNo">customNo-object</a>,
-    <br>* <a class="clsPreview" href="#idLjsoFcs">first-class-object</a>,
-    <br>* <a class="clsPreview" href="#idLjsoFcsNo">first-class-no-object</a>,
-    <br>* <a class="clsPreview" href="#idLjsoLtl">literal-object</a>,
-    <br>* <a class="clsPreview" href="#idLjsoLtlNo">literalNo-object</a>,
+    <br>* <a class="clsPreview" href="#idLjssutFcs">first-class-object</a>,
+    <br>* <a class="clsPreview" href="#idLjssutFcsNo">first-class-no-object</a>,
+    <br>* <a class="clsPreview" href="#idLjssutLtl">literal-object</a>,
+    <br>* <a class="clsPreview" href="#idLjssutLtlNo">literalNo-object</a>,
     <br>* <a class="clsPreview" href="#idLjsmgo">most-generic-object</a>,
     <br>* <a class="clsPreview" href="#idLjsmwo">most-whole-object</a>,
     <a class="clsHide" href="#idLjsoSpcP1"></a></p>
@@ -2552,7 +2685,7 @@
   <p id="idLjsoCsrNodsn">description::
     <br>ConstructorNo-object is <a class="clsPreview" href="#idLjso">an-object</a> NOT-CREATED with <a class="clsPreview" href="#idLjsfCsr">a-constructor-function</a>: <code>var o = new Constructor();</code>
     <br>There are 3 cases:
-    <br>a) <a class="clsPreview" href="#idLjsoLtl">a-literal-object</a>.
+    <br>a) <a class="clsPreview" href="#idLjssutLtl">a-literal-object</a>.
     <br>b) <code>var o = Object.create(o2);</code>
     <br>Here, o2 is <a class="clsPreview" href="#idLjsognc">a-generic</a> of o.
     <br>c) object created as a return of a-function.
@@ -2564,100 +2697,6 @@
     <br>* McsEngl.lagJsgn'object-not-created-by-a-constructor,
     <br>* McsEngl.Jsgno.constructorNo,
     <a class="clsHide" href="#idLjsoCsrNonam"></a></p>
-  </section>
-
-  <section id="idLjsoFcs">
-  <h3 id="idLjsoFcsH3">Jsgno.FIRST-CLASS
-    <a class="clsHide" href="#idLjsoFcsH3"></a></h3>
-  <p id="idLjsoFcsdsn">description::
-    <br><span class="clsQuote">First-class-object is <a class="clsPreview" href="#idLjso">an-object</a> which can-have <a class="clsPreview" href="#idLjsombr">members</a>.</span>
-    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/Javascript/Reference/Functions">https://developer.mozilla.org/en-US/docs/Web/Javascript/Reference/Functions</a>]
-    <a class="clsHide" href="#idLjsoFcsdsn"></a></p>
-  <p id="idLjsoFcsnam">name::
-    <br>* McsEngl.lagJsgn'first-class-object,
-    <br>* McsEngl.lagJsgn'firstclass-object,
-    <br>* McsEngl.lagJsgn'object.first-class,
-    <br>* McsEngl.lagJsgn'first-class-object,
-    <br>* McsEngl.lagJsgn'firstclass-object,
-    <br>* McsEngl.Jsgno.first-class,
-    <a class="clsHide" href="#idLjsoFcsnam"></a></p>
-  <p id="idLjsoFcsSpc">specific::
-    <br>* <a class="clsPreview" href="#idLjsa">array</a>,
-    <br>* <a class="clsPreview" href="#idLjsf">function</a>,
-    <br>* <a class="clsPreview" href="#idLjsr">regexp</a>,
-    <br>* number-non-literal, (<code>var n = new Number(2)</code>)
-    <br>* string-non-literal, (<code>var s = new String('string')</code>)
-    <a class="clsHide" href="#idLjsoFcsSpc"></a></p>
-  </section>
-
-  <section id="idLjsoFcsNo">
-  <h3 id="idLjsoFcsNoH3">Jsgno.FIRST-CLASS.NO
-    <a class="clsHide" href="#idLjsoFcsNoH3"></a></h3>
-  <p id="idLjsoFcsNodsn">description::
-    <br><span class="clsQuote">First-class-no- object is <a class="clsPreview" href="#idLjso">an-object</a> which can-NOT-have <a class="clsPreview" href="#idLjsombr">members</a>.</span>
-    <br>[<a href="https://developer.mozilla.org/en-US/docs/Web/Javascript/Reference/Functions">https://developer.mozilla.org/en-US/docs/Web/Javascript/Reference/Functions</a>]
-    <a class="clsHide" href="#idLjsoFcsNodsn"></a></p>
-  <p id="idLjsoFcsNonam">name::
-    <br>* McsEngl.lagJsgn'first-class-object.no,
-    <br>* McsEngl.lagJsgn'first-class-object.no,
-    <br>* McsEngl.lagJsgn'firstclass-object.no,
-    <br>* McsEngl.lagJsgn'firstclass-object.no,
-    <br>* McsEngl.lagJsgn'object.first-class.no,
-    <br>* McsEngl.lagJsgn'object.first-class.no,
-    <br>* McsEngl.Jsgno.first-class.no,
-    <a class="clsHide" href="#idLjsoFcsNonam"></a></p>
-  <p id="idLjsoFcsNoSpc">specific::
-    <br>* <a class="clsPreview" href="#idLjsb">boolean</a>,
-    <br>* number-literal, (<code>var n = 2</code>)
-    <br>* string-literal, (<code>var s = 'string'</code>)
-    <a class="clsHide" href="#idLjsoFcsNoSpc"></a></p>
-  </section>
-
-  <section id="idLjsoLtl">
-  <h3 id="idLjsoLtlH3">Jsgno.LITERAL
-    <a class="clsHide" href="#idLjsoLtlH3"></a></h3>
-  <p id="idLjsoLtldsn">description::
-    <br>Literal-object is <a class="clsPreview" href="#idLjso">an-object</a> created directly by <a class="clsPreview" href="#idLjshmnPmr">the-programer</a>.
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>:
-    <br><code>var o = {
-    <br> &nbsp;a: [1, 's'],
-    <br> &nbsp;b: true,
-    <br> &nbsp;f: function(){},
-    <br> &nbsp;n: 2,
-    <br> &nbsp;o2: {n:1, s:'s'},
-    <br> &nbsp;r: /d/,
-    <br> &nbsp;s: 'string',
-    <br>}</code>
-    <a class="clsHide" href="#idLjsoLtldsn"></a></p>
-  <p id="idLjsoLtlnam">name::
-    <br>* McsEngl.lagJsgn'literal-object,
-    <br>* McsEngl.lagJsgn'object.literal,
-    <br>* McsEngl.lagJsgn'literal-object,
-    <br>* McsEngl.Jsgno.literal,
-    <a class="clsHide" href="#idLjsoLtlnam"></a></p>
-  <p id="idLjsoLtlgnc">generic-chain::
-    <br>* <a class="clsPreview" href="#idLjsmgo">Object.prototype</a>,
-    <a class="clsHide" href="#idLjsoLtlgnc"></a></p>
-  </section>
-
-  <section id="idLjsoLtlNo">
-  <h3 id="idLjsoLtlNoH3">Jsgno.LITERAL.NO
-    <a class="clsHide" href="#idLjsoLtlNoH3"></a></h3>
-  <p id="idLjsoLtlNodsn">description::
-    <br>LiteralNo-object is <a class="clsPreview" href="#idLjso">an-object</a> NOT created directly by <a class="clsPreview" href="#idLjshmnPmr">the-programer</a>.
-    <a class="clsHide" href="#idLjsoLtlNodsn"></a></p>
-  <p id="idLjsoLtlNonam">name::
-    <br>* McsEngl.lagJsgn'literalNo-object,
-    <br>* McsEngl.lagJsgn'non-literal-object,
-    <br>* McsEngl.lagJsgn'object.literalNo,
-    <br>* McsEngl.lagJsgn'literalNo-object,
-    <br>* McsEngl.Jsgno.literalNo,
-    <a class="clsHide" href="#idLjsoLtlNonam"></a></p>
-  <p id="idLjsoLtlNoSpc">specific::
-    <br>* <a class="clsPreview" href="#idLjsoCsr">constructor-object</a>,
-    <br>* <code>var o = Object.create(o2);</code>
-    <br>* object created as a return of a-function,
-    <a class="clsHide" href="#idLjsoLtlNoSpc"></a></p>
   </section>
   </section>
 
@@ -3054,7 +3093,7 @@
   <p id="idLjsudsn">description::
     <br><code>undefined</code> is <a class="clsPreview" href="#idLjssut">a-semantic-unit</a> that denotes <a class="clsPreview" href="#idLjssutRfrd">a-name-value-pair</a> without value assigned (initialized).
     <br>Also it is-used to denote that <a class="clsPreview" href="#idLjsf">a-function</a> has no <a class="clsPreview" href="#idLjsfotp">output</a>.
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>: <code>undefined</code>
+    <br>Jsgncode: <code>undefined</code>
     <a class="clsHide" href="#idLjsudsn"></a></p>
   <p id="idLjsunam">name::
     <br>* McsEngl.lagJsgn'undefined--semantic-unit,
@@ -3063,7 +3102,7 @@
     <br>* McsEngl.undefined--semantic-unit--of-Javascript,
     <a class="clsHide" href="#idLjsunam"></a></p>
   <p id="idLjsugnc">generic-chain::
-    <br>* <a class="clsPreview" href="#idLjsoNo">objectNo</a>,
+    <br>* <a class="clsPreview" href="#idLjsopmN">object-pmNo</a>,
     <br>* <a class="clsPreview" href="#idLjssut">semantic-unit</a>,
     <a class="clsHide" href="#idLjsugnc"></a></p>
   </section>
@@ -3128,7 +3167,7 @@
     <br>* McsEngl.lagJsgn'member-of-most-whole-object,
     <a class="clsHide" href="#idLjsmwombrnam"></a></p>
   <p id="idLjsmwombrSpc">specific::
-    <br>* ljb-global-member,
+    <br>* Jsbr-global-member,
     <br>* <a class="clsPreview" href="McsTchInf000012.last.html#idLagJsndmwombr">Jsnd-global-member</a>,
     <a class="clsHide" href="#idLjsmwombrSpc"></a></p>
   </section>
@@ -3158,7 +3197,7 @@
     <br>* none,
     <a class="clsHide" href="#idLjsmgognc"></a></p>
   <p id="idLjsmgombr"><a class="clsPreview" href="#idLjsombr">member</a>::
-    <br>(ljn.6-3-1)
+    <br>(Jsnd.6-3-1)
     <br><code>> Object.getOwnPropertyNames(Object.prototype).sort()
     <br>[ '__defineGetter__', '__defineSetter__', '__lookupGetter__', '__lookupSetter__', '__proto__', 'constructor', 'hasOwnProperty', 'isPrototypeOf', 'propertyIsEnumerable', 'toLocaleString', 'toString', 'valueOf' ]</code>
     <br>(Chrome.50):
@@ -3305,8 +3344,8 @@
   <h2 id="idLjsapiSpcH2">API.SPECIFIC
     <a class="clsHide" href="#idLjsapiSpcH2"></a></h2>
   <p id="idLjsapiSpcP1">specific::
-    <br>* ljb-API,
-    <br>* ljn-API,
+    <br>* Jsbr-API,
+    <br>* Jsnd-API,
     <br>===
     <br>* <a class="clsPreview" href="#idLjsapiNtv">native-API</a>,
     <br>* nativeNo-API,
@@ -3361,7 +3400,7 @@
     <br>[<a href="https://nodejs.org/docs/v6.3.1/api/errors.html#errors_errors">https://nodejs.org/docs/v6.3.1/api/errors.html#errors_errors</a>]
     <a class="clsHide" href="#idLjsErrorP1"></a></p>
   <p id="idLjsErrormbr">member::
-    <br>// ljn.6-3-1
+    <br>// Jsnd.6-3-1
     <br>// Object.getOwnPropertyNames(Error).sort()
     <br>[ 'arguments', 'caller', 'captureStackTrace', 'length', 'name', 'prototype', 'stackTraceLimit' ]
     <br>===
@@ -3455,7 +3494,7 @@
     <br>* <a class="clsPreview" href="#idLjsmwo">lagJsgn-most-whole-object (global)</a>,
     <a class="clsHide" href="#idLjsoMathwhl"></a></p>
   <p id="idLjsoMathmbr">lagJsMath'member::
-    <br>(ljn.6-2-2)
+    <br>(Jsnd.6-2-2)
     <br><code>> Object.getOwnPropertyNames(Math).sort()
     <br>[ 'E', 'LN10', 'LN2', 'LOG10E', 'LOG2E', 'PI', 'SQRT1_2', 'SQRT2', 'abs', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'cbrt', 'ceil', 'clz32', 'cos', 'cosh', 'exp', 'expm1', 'floor', 'fround', 'hypot', 'imul', 'log', 'log10', 'log1p', 'log2', 'max', 'min', 'pow', 'random', 'round', 'sign', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'trunc' ]</code>
     <br>(Firefox.47)
@@ -3483,7 +3522,7 @@
     <br>* McsEngl.Promise-function.Javascript,
     <a class="clsHide" href="#idLjsPromisenam"></a></p>
   <p id="idLjsPromisembr">member::
-    <br>// ljn.6-3-1
+    <br>// Jsnd.6-3-1
     <br>// Object.getOwnPropertyNames(Promise).sort()
     <br>[ 'accept', 'all', 'defer', 'length', 'name', 'prototype', 'race', 'reject', 'resolve' ]
     <br>// Object.getOwnPropertyNames(Promise.prototype).sort()
@@ -3792,7 +3831,7 @@
     <a class="clsHide" href="#idLjsstcAstH2"></a></h2>
   <p id="idLjsstcAstdsn">description::
     <br>Assignment-sentence is <a class="clsPreview" href="#idLjsstc">a-sentence</a> that puts|assigns a-value in <a class="clsPreview" href="#idLjssutRfrd">a-name-value-pair</a>.
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>:
+    <br>Jsgncode:
     <br><code>n = 3;
     <br>s = "text";</code>
     <a class="clsHide" href="#idLjsstcAstdsn"></a></p>
@@ -3808,7 +3847,7 @@
     <a class="clsHide" href="#idLjsstcBlkH2"></a></h2>
   <p id="idLjsstcBlkdsn">description::
     <br>Block-sentence is <a class="clsPreview" href="#idLjsstc">a-sentence</a> that contains an-order-set of other sentences.
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>:
+    <br>Jsgncode:
     <br><code>{
     <br> &nbsp;sentence1;
     <br> &nbsp;sentence2;
@@ -3850,7 +3889,7 @@
     <a class="clsHide" href="#idLjsstcDfnFH3"></a></h3>
   <p id="idLjsstcDfnFdsn">description::
     <br><a class="clsPreview" href="#idLjsstc">A-sentence</a> that creates <a class="clsPreview" href="#idLjsf">function</a> instance.
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>:
+    <br>Jsgncode:
     <br><code>function fName(input-variables) {
     <br> &nbsp;//function body
     <br>}</code>
@@ -3868,7 +3907,7 @@
     <a class="clsHide" href="#idLjsdefRefH3"></a></h3>
   <p id="idLjsdefRefdsn">description::
     <br>· <a class="clsPreview" href="#idLjsstc">a-sentence</a> that creates <a class="clsPreview" href="#idLjssut">a-semantic-unit</a> with <a class="clsPreview" href="#idLjssutname">a-reference-name</a>.
-    <br><a class="clsPreview" href="#idLjsalg">Code</a>:
+    <br>Jsgncode:
     <br><code>var n;
     <br>var n = 3;
     <br>const n = 3;
@@ -4520,8 +4559,8 @@
   <p id="idLjslpgmexcdsn">description::
     <br>lagJsgn-program-execution is the-process of commanding it to work.
     <br><a class="clsPreview" href="McsTchInf000011.last.html#idLagJsbrpgmexc">Jsbr</a> and <a class="clsPreview" href="McsTchInf000012.last.html#idLagJsndpgmexc">Jsnd programs</a> are-executed very differently.
-    <br>An-ljb-program is just opened on the-browser.
-    <br>An-ljn-program is executing on command-line: <code>node file-of-pgm</code>
+    <br>An-Jsbr-program is just opened on the-browser.
+    <br>An-Jsnd-program is executing on command-line: <code>node file-of-pgm</code>
     <a class="clsHide" href="#idLjslpgmexcdsn"></a></p>
   <p id="idLjslpgmexcnam">name::
     <br>* McsEngl.Jsgnpgm'call,
@@ -4562,8 +4601,8 @@
     <br>(<a class="clsPreview" href="#idLjstolPkg">linkL</a>)
     <a class="clsHide" href="#idLjspkgmgr"></a></p>
   <p id="idLjspkgSpc">specific::
-    <br>* ljb-package,
-    <br>* ljn-ljspackage,
+    <br>* Jsbr-package,
+    <br>* Jsnd-ljspackage,
     <br>===
     <br>* bower-package,
     <br>* <a class="clsPreview" href="McsTchInf000012.last.html#idLagJsndpkg">npm-package</a>,
@@ -4668,7 +4707,7 @@
     <br>1) <a class="clsPreview" href="#idLjselnConNaming">Valuenames</a>.
     <br>2) <a class="clsPreview" href="#idLjselnConOsp">Object-scope</a>.
     <br>3) <a class="clsPreview" href="#idLjselnProInheritance">No constructors</a>.
-    <br>Objects could-be-created by 1) functions like <a class="clsPreview" href="#idLjsObjectCreate">Object.create()</a>, 2) <a class="clsPreview" href="#idLjsfOrn">functions returning objects (factories)</a>, and 3) <a class="clsPreview" href="#idLjsoLtl">literal-objects</a>.
+    <br>Objects could-be-created by 1) functions like <a class="clsPreview" href="#idLjsObjectCreate">Object.create()</a>, 2) <a class="clsPreview" href="#idLjsfOrn">functions returning objects (factories)</a>, and 3) <a class="clsPreview" href="#idLjssutLtl">literal-objects</a>.
     <br><a class="clsPreview" href="#idLjsapigst">The-generic-chain</a> to be: object > objectSpc > objectSpc > ...
     <br>And NOT: Object.prototype > Constructor.prototype > Constructor.prototype ...
     <a class="clsHide" href="#idLjselnTodoP1"></a></p>
@@ -5646,11 +5685,11 @@
     <br>• version.5-0-0.2017-11-26.last: <a href="../../dirMiwMcs/dirTchInf/FilMcsLjs.5-0-0.2017-11-26.html">../../dirMiwMcs/dirTchInf/McsTchInf000010.5-0-0.2017-11-26.html</a>,
     <br>• version.4.2017-07-11: <a href="../../dirMiwMcs/dirTchInf/McsTchInf000010.4.2017-07-11.html">../../dirMiwMcs/dirTchInf/McsTchInf000010.4.2017-07-11.html</a>,
     <br>• version.3.2016-08-22 (2-4): <a href="../../dirMiwMcs/dirTchInf/McsTchInf000010.3.2016-08-22.html">../../dirMiwMcs/dirTchInf/McsTchInf000010.3.2016-08-22.html</a>,
-    <br>• version.2.2016-08-04.Jsgn-ljn (1-33): <a href="../../dirMiwMcs/dirTchInf/filCptLjs.2.2016-08-04.html">../../dirMiwMcs/dirTchInf/filCptLjs.2.2016-08-04.html</a>,
+    <br>• version.2.2016-08-04.Jsgn-Jsnd (1-33): <a href="../../dirMiwMcs/dirTchInf/filCptLjs.2.2016-08-04.html">../../dirMiwMcs/dirTchInf/filCptLjs.2.2016-08-04.html</a>,
     <br>• version.1-21.2016-05-26: <a href="../../dirMiwMcs/dirTchInf/lngJs.1-21.2016-05-27.html">../../dirMiwMcs/dirTchInf/lngJs.1-21.2016-05-26.html</a>,
     <br>• version.1-17.2016-05-23: <a href="../../dirMiwMcs/dirTchInf/lngJs.1-17.2016-05-23.html">../../dirMiwMcs/dirTchInf/lngJs.1-17.2016-05-23.html</a>,
     <br>• version.1-11.2016-05-18: <a href="../../dirMiwMcs/dirTchInf/lngJs.1-11.2016-05-18.html">../../dirMiwMcs/dirTchInf/lngJs.1-11.2016-05-18.html</a>,
-    <br>• version.1.2016-05-10.ljb.created: <a href="lngJs.1.2016-05-10.html">../../dirMiwMcs/dirTchInf/lngJs.1.2016-05-10.html</a>,
+    <br>• version.1.2016-05-10.Jsbr.created: <a href="lngJs.1.2016-05-10.html">../../dirMiwMcs/dirTchInf/lngJs.1.2016-05-10.html</a>,
     <a class="clsHide" href="#idMetaVersion"></a></p>
 </section>
 
