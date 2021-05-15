@@ -30,11 +30,14 @@
  * SOFTWARE.
  */
 
-let
-  aNamidxRoot = [],
+var
+  // contains the-array of the-indexes of all languages of the-names
+  // of sensorial-concepts
+  aNamidxRoot = null,
   /** contains the-versions of hitp.js */
   aSuggestions = [],
   aVersion = [
+    'mHitp.js.18-0-0.2021-05-00: module',
     'hitp.js.17-7-7.2021-04-28: dirMcs',
     'hitp.js.17-7-6.2021-04-02: dirMcs',
     'hitp.js.17-7-5.2021-04-02: lagLang',
@@ -85,7 +88,8 @@ let
   ],
 
   /** config variables */
-  nCfgPageinfoWidth = 30, // % of window width
+  // % of window width
+  nCfgPageinfoWidth = 30, 
 
   /**
    * filSite-structure contains absolute urls, because we see it from many pages.
@@ -127,12 +131,15 @@ let fContainersInsert = function () {
     oEltBody = document.body,
     // top-container with site, home, title, search and width subcontainers,
     oEltCnrTopDiv = document.createElement('div'),
-    oEltTopTitleP = document.createElement('p'),
-    oEltTopWidthIcnI = document.createElement('i'),
+    oEltCnrTopTitleP = document.createElement('p'),
+    oEltCnrTopWidthIcnI = document.createElement('i'),
+    oEltCnrTopHomeIcnI,
+    oEltCnrTopSearchIcnI,
+    oEltCnrTopSiteIcnI,
     // main-container with page-content and page-info sub-containers,
     oEltCnrMainDiv = document.createElement('div'),
-    oEltCnrMainPgcntDiv = document.createElement('div'),
-    oEltCnrMainPginfDiv = document.createElement('div'),
+    oEltCnrMainContentDiv = document.createElement('div'),
+    oEltCnrMainInfoDiv = document.createElement('div'),
     // extra containers,
     oEltCnrWidthDiv = document.createElement('div'),
     oEltCnrPreviewDiv = document.createElement('div'),
@@ -146,32 +153,42 @@ let fContainersInsert = function () {
     oEltTabCntTocCpsBtn = document.createElement('input'),
     oEltTabCntTocPrfDiv = document.createElement('div'),
     oEltTabCntTocNotP = document.createElement('p'),
-    oEltTabCntSrchDiv = undefined,
-    oEltTabCntSrchLbl = undefined,
-    oEltTabCntSrchSlt = undefined,
-    oEltTabCntSrchP = undefined,
-    oEltTabCntSrchLblChk = undefined,
-    oEltTabCntSrchIpt = undefined,
-    oEltTabCntSrchOl = undefined,
-    oEltTopHomeIcnI = undefined,
-    oEltTopSearchIcnI = undefined,
-    oEltTopSitemenuIcnI = undefined,
-    oEltCnrSiteDiv = undefined,
+    oEltTabCntSrchDiv,
+    oEltTabCntSrchLbl,
+    oEltTabCntSrchSlt,
+    oEltTabCntSrchP,
+    oEltTabCntSrchLblChk,
+    oEltTabCntSrchIpt,
+    oEltTabCntSrchOl,
+    oEltCnrSiteDiv,
     oXHR,
     sContentOriginal = oEltBody.innerHTML,
     sIdTabActive,
+    sPathNames,
     sTabCntSrchOl = ''
 
   if (oEltSitemenuUl) {
     oEltCnrSiteDiv = document.createElement('div')
-    oEltTopHomeIcnI = document.createElement('i')
-    oEltTopSitemenuIcnI = document.createElement('i')
+    oEltCnrTopHomeIcnI = document.createElement('i')
+    oEltCnrTopSiteIcnI = document.createElement('i')
+  }
+
+  function fCnrSearchShow() {
+    // Remove active-class from first-child-elt of PginfTabHeaders
+    document.getElementById('idPginfTabHeadersUl')
+      .firstElementChild.classList.remove('clsTabActive')
+    // Add active-class on second-child-element of PginfTabHeaders
+    document.getElementById('idPginfTabHeadersUl')
+      .childNodes[1].classList.add('clsTabActive')
+    // Hide tab-content from TabCntToc
+    document.getElementById('idTabCntTocDiv').style.display = 'none'
+    // Show tab-content on TabCntSrch
+    document.getElementById('idTabCntSrchDiv').style.display = 'block'
+    // on TabCntSrch focus input-element
+    oEltTabCntSrchIpt.focus()
   }
 
   if (aNamidxRoot) {
-    let
-      sPathNames
-
     // localhost or online,
     sTabCntSrchOl =
       '<li>SEE ' +
@@ -191,7 +208,7 @@ let fContainersInsert = function () {
         '<br>- word--page-search by hitting Ctrl+F and' +
         '<br>- sensorial-concept--search here.</li>'
 
-    oEltTopSearchIcnI = document.createElement('i')
+    oEltCnrTopSearchIcnI = document.createElement('i')
     oEltTabCntSrchDiv = document.createElement('div'),
     oEltTabCntSrchLbl = document.createElement('label'),
     oEltTabCntSrchSlt = document.createElement('select'),
@@ -204,27 +221,12 @@ let fContainersInsert = function () {
     sSrchCrnt = '' // current search-index
     sSrchNext = '' // next search-index
     sPathNames = sPathSite + 'dirMcs/dirNamidx/'
-    oEltTopTitleP.setAttribute('title', 'clicking GREEN-BAR shows search-tab, clicking CONTENT shows Toc-tab')
-    oEltTopSearchIcnI.setAttribute('class', 'clsFa clsFaSearch clsTopIcn clsColorWhite clsFloatRight clsPosRight')
-    oEltTopSearchIcnI.addEventListener('click', function () {
+    oEltCnrTopTitleP.setAttribute('title', 'clicking GREEN-BAR shows search-tab, clicking CONTENT shows Toc-tab')
+    oEltCnrTopSearchIcnI.setAttribute('class', 'clsFa clsFaSearch clsTopIcn clsColorWhite clsFloatRight clsPosRight')
+    oEltCnrTopSearchIcnI.addEventListener('click', function () {
       fCnrOntopRemove()
       fCnrSearchShow()
     })
-
-    function fCnrSearchShow() {
-      // Remove active-class from first-child-elt of PginfTabHeaders
-      document.getElementById('idPginfTabHeadersUl')
-        .firstElementChild.classList.remove('clsTabActive')
-      // Add active-class on second-child-element of PginfTabHeaders
-      document.getElementById('idPginfTabHeadersUl')
-        .childNodes[1].classList.add('clsTabActive')
-      // Hide tab-content from TabCntToc
-      document.getElementById('idTabCntTocDiv').style.display = 'none'
-      // Show tab-content on TabCntSrch
-      document.getElementById('idTabCntSrchDiv').style.display = 'block'
-      // on TabCntSrch focus input-element
-      oEltTabCntSrchIpt.focus()
-    }
 
     window.addEventListener('keyup', function (oEvtIn) {
       if (oEvtIn.ctrlKey && oEvtIn.key === 'F2') {
@@ -248,23 +250,23 @@ let fContainersInsert = function () {
   oEltCnrMainDiv.id = 'idCnrMainDiv'
 
   // top-title-text
-  oEltTopTitleP.innerHTML = document.getElementsByTagName('title')[0].innerHTML
-  oEltTopTitleP.id = 'idTopTitleP'
+  oEltCnrTopTitleP.innerHTML = document.getElementsByTagName('title')[0].innerHTML
+  oEltCnrTopTitleP.id = 'idTopTitleP'
   // width-icon
-  oEltTopWidthIcnI.setAttribute('class', 'clsFa clsFaArrowsH clsTopIcn clsColorWhite clsFloatRight clsTtp clsPosRight')
+  oEltCnrTopWidthIcnI.setAttribute('class', 'clsFa clsFaArrowsH clsTopIcn clsColorWhite clsFloatRight clsTtp clsPosRight')
   // to show a-tooltip on an-element:
   // - set clsTtp on element
   // - set tooltip (<span class="clsTtp">Width of Page-Info</span>) inside the-element
   // - on element click add clsClicked and clsTtpShow
-  oEltTopWidthIcnI.innerHTML = '<span class="clsTtp">width of page-info</span>'
-  oEltTopWidthIcnI.addEventListener('click', function () {
-    if (oEltTopWidthIcnI.className.indexOf('clsClicked') > -1) {
+  oEltCnrTopWidthIcnI.innerHTML = '<span class="clsTtp">width of page-info</span>'
+  oEltCnrTopWidthIcnI.addEventListener('click', function () {
+    if (oEltCnrTopWidthIcnI.className.indexOf('clsClicked') > -1) {
       oEltCnrWidthDiv.style.display = 'block'
       oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
     } else {
       oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
-      oEltClicked = oEltTopWidthIcnI
-      oEltTopWidthIcnI.classList.add('clsClicked', 'clsTtpShow')
+      oEltClicked = oEltCnrTopWidthIcnI
+      oEltCnrTopWidthIcnI.classList.add('clsClicked', 'clsTtpShow')
     }
   })
   // width-content
@@ -280,19 +282,20 @@ let fContainersInsert = function () {
     '<input type="radio" id="idRdbWidth50" name="nameRdbWidth">50 %<br>' +
     '<input type="radio" id="idRdbWidth100" name="nameRdbWidth">100 %<br>' +
     '</fieldset>'
-  oEltCnrTopDiv.appendChild(oEltTopTitleP)
-  oEltCnrTopDiv.appendChild(oEltTopWidthIcnI)
+  oEltCnrTopDiv.appendChild(oEltCnrTopTitleP)
+  oEltCnrTopDiv.appendChild(oEltCnrTopWidthIcnI)
   if (aNamidxRoot) {
-    oEltCnrTopDiv.appendChild(oEltTopSearchIcnI)
-    oEltTopTitleP.addEventListener('click', function () {
+    oEltCnrTopDiv.appendChild(oEltCnrTopSearchIcnI)
+    oEltCnrTopTitleP.addEventListener('click', function () {
       fCnrOntopRemove()
       fCnrSearchShow()
     })
   } else {
-    oEltTopTitleP.addEventListener('click', function () {
+    oEltCnrTopTitleP.addEventListener('click', function () {
       fCnrOntopRemove()
     })
   }
+  
   function fCnrOntopRemove() {
     oEltCnrPreviewDiv.style.display = 'none' // remove popup-cnr
     oEltCnrWidthDiv.style.display = 'none' // remove width-cnr
@@ -301,6 +304,7 @@ let fContainersInsert = function () {
     }
     oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked') // remove tooltip clicks
   }
+
   function fCnrTocShow() {
     // Remove active-class from second-child-elt of PginfTabHeaders
     document.getElementById('idPginfTabHeadersUl')
@@ -373,7 +377,7 @@ let fContainersInsert = function () {
     document.getElementById('idRdbWidth100').checked = true
   }
 
-  // adds click event on input link elements
+  // adds click event, other than default, on input link-elements
   fEvtLink = function (oEltIn) {
     oEltIn.addEventListener('click', function (oEvtIn) {
       oEvtIn.preventDefault()
@@ -397,30 +401,30 @@ let fContainersInsert = function () {
     oEltSitemenuUl.setAttribute('id', 'idSitemenuUl')
 
     // site-icn
-    oEltTopSitemenuIcnI.setAttribute('class', 'clsFa clsFaMenu clsTopIcn clsColorWhite clsFloatLeft clsTtp')
-    oEltTopSitemenuIcnI.innerHTML = '<span class="clsTtp">Site-structure</span>'
-    oEltTopSitemenuIcnI.addEventListener('click', function () {
-      if (oEltTopSitemenuIcnI.className.indexOf('clsClicked') > -1) {
+    oEltCnrTopSiteIcnI.setAttribute('class', 'clsFa clsFaMenu clsTopIcn clsColorWhite clsFloatLeft clsTtp')
+    oEltCnrTopSiteIcnI.innerHTML = '<span class="clsTtp">Site-structure</span>'
+    oEltCnrTopSiteIcnI.addEventListener('click', function () {
+      if (oEltCnrTopSiteIcnI.className.indexOf('clsClicked') > -1) {
         oEltCnrSiteDiv.style.display = 'block'
         oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
       } else {
         oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
-        oEltClicked = oEltTopSitemenuIcnI
-        oEltTopSitemenuIcnI.classList.add('clsClicked', 'clsTtpShow')
+        oEltClicked = oEltCnrTopSiteIcnI
+        oEltCnrTopSiteIcnI.classList.add('clsClicked', 'clsTtpShow')
       }
     })
     // home-icn
-    oEltTopHomeIcnI.setAttribute('class', 'clsFa clsFaHome clsTopIcn clsColorWhite clsFloatLeft clsTtp')
-    oEltTopHomeIcnI.innerHTML = '<span class="clsTtp">Home-webpage</span>'
-    oEltTopHomeIcnI.addEventListener('click', function () {
-      if (oEltTopHomeIcnI.className.indexOf('clsClicked') > -1) {
-        oEltTopHomeIcnI.classList.remove('clsClicked')
+    oEltCnrTopHomeIcnI.setAttribute('class', 'clsFa clsFaHome clsTopIcn clsColorWhite clsFloatLeft clsTtp')
+    oEltCnrTopHomeIcnI.innerHTML = '<span class="clsTtp">Home-webpage</span>'
+    oEltCnrTopHomeIcnI.addEventListener('click', function () {
+      if (oEltCnrTopHomeIcnI.className.indexOf('clsClicked') > -1) {
+        oEltCnrTopHomeIcnI.classList.remove('clsClicked')
         oEltClicked.classList.remove('clsTtpShow')
         location.href = sPathSite
       } else {
         oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
-        oEltClicked = oEltTopHomeIcnI
-        oEltTopHomeIcnI.classList.add('clsClicked', 'clsTtpShow')
+        oEltClicked = oEltCnrTopHomeIcnI
+        oEltCnrTopHomeIcnI.classList.add('clsClicked', 'clsTtpShow')
       }
     })
     // site-content
@@ -429,8 +433,8 @@ let fContainersInsert = function () {
       '<p id="idSiteCntP1" class="clsCenter">close <i class="clsFa clsFaClose clsFloatRight clsColorWhite clsTopIcn"></i></p>' +
       '<p id="idSiteCntP2" class="clsCenter">Site-structure</p>'
     oEltCnrSiteDiv.appendChild(oEltSitemenuUl)
-    oEltCnrTopDiv.insertBefore(oEltTopHomeIcnI, oEltCnrTopDiv.firstChild)
-    oEltCnrTopDiv.insertBefore(oEltTopSitemenuIcnI, oEltCnrTopDiv.firstChild)
+    oEltCnrTopDiv.insertBefore(oEltCnrTopHomeIcnI, oEltCnrTopDiv.firstChild)
+    oEltCnrTopDiv.insertBefore(oEltCnrTopSiteIcnI, oEltCnrTopDiv.firstChild)
     oEltBody.appendChild(oEltCnrSiteDiv)
     document.getElementById('idSiteCntP1').addEventListener('click', function () {
       oEltCnrSiteDiv.style.display = 'none'
@@ -443,12 +447,12 @@ let fContainersInsert = function () {
   }
 
   // set on page-content-cnr the original-body content
-  oEltCnrMainPgcntDiv.id = 'idCnrMainPgcntDiv'
-  oEltCnrMainPgcntDiv.innerHTML = sContentOriginal
-  oEltCnrMainDiv.appendChild(oEltCnrMainPgcntDiv)
+  oEltCnrMainContentDiv.id = 'idCnrMainPgcntDiv'
+  oEltCnrMainContentDiv.innerHTML = sContentOriginal
+  oEltCnrMainDiv.appendChild(oEltCnrMainContentDiv)
 
   // insert page-info-cnr
-  oEltCnrMainPginfDiv.id = 'idCnrMainPginfDiv'
+  oEltCnrMainInfoDiv.id = 'idCnrMainPginfDiv'
   // insert content on TabCntToc
   oEltTabCntTocDiv.id = 'idTabCntTocDiv'
   oEltTabCntTocDiv.setAttribute('class', 'clsTabCnt')
@@ -507,7 +511,7 @@ let fContainersInsert = function () {
   oEltPginfTabCntDiv.appendChild(oEltTabCntTocDiv)
 
   // insert tab-cnr IN page-info-cnr
-  oEltCnrMainPginfDiv.appendChild(oEltPginfTabCntDiv)
+  oEltCnrMainInfoDiv.appendChild(oEltPginfTabCntDiv)
 
   // insert TabHeaders IN page-info-cnr
   oEltPginfTabHeadersUl.id = 'idPginfTabHeadersUl'
@@ -520,7 +524,7 @@ let fContainersInsert = function () {
     oEltPginfTabHeadersUl.innerHTML =
       '<li class="clsTabActive"><a href="#idTabCntTocDiv">page-Toc</a></li>'
   }
-  oEltCnrMainPginfDiv.insertBefore(oEltPginfTabHeadersUl, oEltCnrMainPginfDiv.firstChild)
+  oEltCnrMainInfoDiv.insertBefore(oEltPginfTabHeadersUl, oEltCnrMainInfoDiv.firstChild)
 
   // insert page-path-elt IN page-info-cnr
   oEltPginfPathP.id = 'idPginfPathP'
@@ -530,7 +534,7 @@ let fContainersInsert = function () {
   } else {
     oEltPginfPathP.innerHTML = document.getElementById('idMetaWebpage_path').innerHTML
   }
-  oEltCnrMainPginfDiv.insertBefore(oEltPginfPathP, oEltCnrMainPginfDiv.firstChild)
+  oEltCnrMainInfoDiv.insertBefore(oEltPginfPathP, oEltCnrMainInfoDiv.firstChild)
 
   if (aNamidxRoot) {
     // TabCntSrch
@@ -1144,7 +1148,7 @@ let fContainersInsert = function () {
   })
 
   // insert MainPginf-cnr in Main-cnr */
-  oEltCnrMainDiv.insertBefore(oEltCnrMainPginfDiv, oEltCnrMainDiv.firstChild)
+  oEltCnrMainDiv.insertBefore(oEltCnrMainInfoDiv, oEltCnrMainDiv.firstChild)
 
   // Sets width of MainPginf-cnr
   function fWidthPginf(nPercentIn) {
@@ -1154,9 +1158,9 @@ let fContainersInsert = function () {
 
     nWidthPginf = parseInt(window.outerWidth * (nPercentIn / 100))
     nWidthPgcnt = oEltCnrMainDiv.offsetWidth - nWidthPginf
-    oEltCnrMainPginfDiv.style.width = nWidthPginf + 'px'
-    oEltCnrMainPgcntDiv.style.width = nWidthPgcnt + 'px'
-    oEltCnrMainPgcntDiv.style.left = nWidthPginf + 'px'
+    oEltCnrMainInfoDiv.style.width = nWidthPginf + 'px'
+    oEltCnrMainContentDiv.style.width = nWidthPgcnt + 'px'
+    oEltCnrMainContentDiv.style.left = nWidthPginf + 'px'
   }
   fWidthPginf(nCfgPageinfoWidth)
   // needed for proper zoom
@@ -1164,7 +1168,7 @@ let fContainersInsert = function () {
     fWidthPginf(nCfgPageinfoWidth)
   })
 
-  // on MainPgcnt-cnr get-id, highlight toc, highlight links, remove popup, remove clicked link */
+  // on MainPgcnt-cnr get-id, highlight toc, highlight links, remove popup, remove clicked link 
   fEvtClickContent = function (oEvtIn) {
     let sIdScn = '',
       oEltScn = oEvtIn.target
@@ -1207,7 +1211,7 @@ let fContainersInsert = function () {
     Array.prototype.slice.call(document.querySelectorAll('#idTocTri a')).forEach(function (oEltAIn) {
       if (oEltAIn.getAttribute('href') === sIdScn) {
         oTreeUl.fTruExpandParent(oEltAIn)
-        fTocTriHighlightNode(oEltCnrMainPginfDiv, oEltAIn)
+        fTocTriHighlightNode(oEltCnrMainInfoDiv, oEltAIn)
         if (oEltAIn.scrollIntoViewIfNeeded) {
           oEltAIn.scrollIntoViewIfNeeded(true)
         } else {
@@ -1246,7 +1250,7 @@ let fContainersInsert = function () {
       if (!oEltScn.tagName) {
         break
       } else if (oEltScn.tagName.match(/^HEADER/i) ||
-              oEltScn.tagName.match(/^FOOTER/i)) {
+                 oEltScn.tagName.match(/^FOOTER/i)) {
         break
       }
     }
@@ -1264,7 +1268,7 @@ let fContainersInsert = function () {
     Array.prototype.slice.call(document.querySelectorAll('#idTocTri a')).forEach(function (oEltAIn) {
       if (oEltAIn.getAttribute('href') === sIdScn) {
         oTreeUl.fTruExpandParent(oEltAIn)
-        fTocTriHighlightNode(oEltCnrMainPginfDiv, oEltAIn)
+        fTocTriHighlightNode(oEltCnrMainInfoDiv, oEltAIn)
         if (oEltAIn.scrollIntoViewIfNeeded) {
           oEltAIn.scrollIntoViewIfNeeded(true)
         } else {
@@ -1407,7 +1411,7 @@ let fContainersInsert = function () {
           oEltIn.classList.remove('clsClicked')
           oEltCnrPreviewDiv.style.display = 'none'
           location.href = '#' + oEvtIn.target.href.split('#')[1]
-          fTocTriHighlightNode(oEltCnrMainPginfDiv, oEltIn)
+          fTocTriHighlightNode(oEltCnrMainInfoDiv, oEltIn)
         } else {
           oEltClicked.classList.remove('clsClicked')
           oEltClicked = oEltIn
@@ -1417,7 +1421,7 @@ let fContainersInsert = function () {
       } else {
         oEltCnrPreviewDiv.style.display = 'none'
         location.href = '#' + oEvtIn.target.href.split('#')[1]
-        fTocTriHighlightNode(oEltCnrMainPginfDiv, oEltIn)
+        fTocTriHighlightNode(oEltCnrMainInfoDiv, oEltIn)
       }
     })
   })
@@ -1531,10 +1535,10 @@ let fTocTriCreate = function () {
 /**
  * Highlights ONE item in toc-list
  */
-let fTocTriHighlightNode = function (oEltCnrMainPginfDiv, oElm) {
+let fTocTriHighlightNode = function (oEltCnrMainInfoDiv, oElm) {
   // removes existing highlighting
   let
-    aTocTriA = oEltCnrMainPginfDiv.getElementsByTagName('a'),
+    aTocTriA = oEltCnrMainInfoDiv.getElementsByTagName('a'),
     n
 
   for (n = 0; n < aTocTriA.length; n += 1) {
@@ -1751,7 +1755,7 @@ let oTreeUl = (function () {
  * WITHOUGHT waiting for stylesheets, images, and subframes to finish loading.
  * A different event, load, should be used only to detect a fully-loaded page.
  */
-document.addEventListener('DOMContentLoaded', function () {
+addEventListener('DOMContentLoaded', function () {
   // read aNamidxRoot
   let
     oConfig,
@@ -1882,5 +1886,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 })
+
 
 export {aNamidxRoot, aSuggestions, aVersion, bEdge, bFirefox, nCfgPageinfoWidth, fContainersInsert, fTocTriCreate, fTocTriHighlightNode, oEltClicked, oEltSitemenuUl, oTreeUl, sCfgHomeLocal, sNamidx, sSrchNext, sPathSite, sPathSitemenu, sSrchCrnt, sQrslrAClk, sQrslrAClkLast}

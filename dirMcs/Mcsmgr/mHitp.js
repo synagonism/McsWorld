@@ -160,6 +160,21 @@ oHitp.fContainersInsert = function () {
       oEltTopSitemenuIcnI = document.createElement('i'),
       oEltTopHomeIcnI = document.createElement('i')
   }
+  
+  function fCnrSearchShow() {
+    // Remove active-class from first-child-elt of PginfTabHeaders
+    document.getElementById('idPginfTabHeadersUl')
+      .firstElementChild.classList.remove('clsTabActive')
+    // Add active-class on second-child-element of PginfTabHeaders
+    document.getElementById('idPginfTabHeadersUl')
+      .childNodes[1].classList.add('clsTabActive')
+    // Hide tab-content from TabCntToc
+    document.getElementById('idTabCntTocDiv').style.display = 'none'
+    // Show tab-content on TabCntSrch
+    document.getElementById('idTabCntSrchDiv').style.display = 'block'
+    // on TabCntSrch focus input-element
+    oEltTabCntSrchIpt.focus()
+  }
 
   if (oHitp.aNamidxRoot) {
     let
@@ -203,20 +218,6 @@ oHitp.fContainersInsert = function () {
       fCnrSearchShow()
     })
 
-    function fCnrSearchShow() {
-      // Remove active-class from first-child-elt of PginfTabHeaders
-      document.getElementById('idPginfTabHeadersUl')
-        .firstElementChild.classList.remove('clsTabActive')
-      // Add active-class on second-child-element of PginfTabHeaders
-      document.getElementById('idPginfTabHeadersUl')
-        .childNodes[1].classList.add('clsTabActive')
-      // Hide tab-content from TabCntToc
-      document.getElementById('idTabCntTocDiv').style.display = 'none'
-      // Show tab-content on TabCntSrch
-      document.getElementById('idTabCntSrchDiv').style.display = 'block'
-      // on TabCntSrch focus input-element
-      oEltTabCntSrchIpt.focus()
-    }
 
     window.addEventListener('keyup', function (oEvtIn) {
       if (oEvtIn.ctrlKey && oEvtIn.key === 'F2') {

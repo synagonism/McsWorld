@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.McsTest-(0-3-0.2021-05-09 draft) test-Mcs</title>
+  <title>Mcs.McsTest-(0-4-0.2021-05-15 draft) test-Mcs</title>
   <meta name="keywords" content="example-Mcs, McsTest, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/hitp.css">
 </head>
@@ -119,7 +119,7 @@
     </span>
     times since {2020-02-04}</p>
   <!-- the content of page-path paragraph is displayed as it is on top of toc -->
-  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-partpath</span>:
+  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-wholepath</span>:
     <a class="clsPreview" href="../../#idOverview">synagonism.net</a> /
     <a class="clsPreview" href="../Mcs000000.last.html#idOverview">worldviewSngo</a> /
     <a class="clsPreview" href="McsCor000000.last.html#idOverview">dirCor</a> /
@@ -163,10 +163,23 @@
   ga('send', 'pageview');
 </script>
 
+<!--
+<script src="../Mcsmgr/hitp.js"></script>
+-->
 <script type="module">
   import * as oHitp from '../Mcsmgr/mHitp-plain.js'
-  console.log(oHitp.sCfgHomeLocal)
+  console.log('hitp-plain5.js')
+  //aNamidxRoot, aSuggestions, aVersion, bEdge, bFirefox, fContainersInsert,
+  //fTocTriCreate, fTocTriHighlightNode, nCfgPageinfoWidth, oEltClicked,
+  //oEltSitemenuUl, oTreeUl, sCfgHomeLocal, sNamidx, sPathSite, sPathSitemenu,
+  //sQrslrAClk, sQrslrAClkLast, sSrchCrnt, sSrchNext
+//  document.addEventListener('DOMContentLoaded', function () {
   console.log(Object.getOwnPropertyNames(oHitp).sort().join(', '))
+  setTimeout(() => console.log(oHitp.aNamidxRoot), 500)
+  console.log(oHitp.sCfgHomeLocal)
+  console.log(oHitp.sNamidx)
+  console.log(oHitp.sPathSite)
+//  console.log(Object.getOwnPropertyNames(oHitp.oEltSitemenuUl).sort().join(', '))
 </script>
 </body>
 </html>

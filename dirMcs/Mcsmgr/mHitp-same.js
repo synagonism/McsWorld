@@ -31,7 +31,7 @@
  */
 var oHitp = (function () {
   var oHitp = {
-    aNamidxRoot: null,
+    aNamidxRoot: [],
     /** contains the-versions of hitp.js */
     aVersion: [
       'hitp.js.17-7-7.2021-04-28: dirMcs',
@@ -162,6 +162,21 @@ var oHitp = (function () {
         oEltTopHomeIcnI = document.createElement('i')
     }
 
+    function fCnrSearchShow() {
+      // Remove active-class from first-child-elt of PginfTabHeaders
+      document.getElementById('idPginfTabHeadersUl')
+        .firstElementChild.classList.remove('clsTabActive')
+      // Add active-class on second-child-element of PginfTabHeaders
+      document.getElementById('idPginfTabHeadersUl')
+        .childNodes[1].classList.add('clsTabActive')
+      // Hide tab-content from TabCntToc
+      document.getElementById('idTabCntTocDiv').style.display = 'none'
+      // Show tab-content on TabCntSrch
+      document.getElementById('idTabCntSrchDiv').style.display = 'block'
+      // on TabCntSrch focus input-element
+      oEltTabCntSrchIpt.focus()
+    }
+
     if (oHitp.aNamidxRoot) {
       var
         oEltTopSearchIcnI = document.createElement('i'),
@@ -203,21 +218,6 @@ var oHitp = (function () {
         fCnrOntopRemove()
         fCnrSearchShow()
       })
-
-      function fCnrSearchShow() {
-        // Remove active-class from first-child-elt of PginfTabHeaders
-        document.getElementById('idPginfTabHeadersUl')
-          .firstElementChild.classList.remove('clsTabActive')
-        // Add active-class on second-child-element of PginfTabHeaders
-        document.getElementById('idPginfTabHeadersUl')
-          .childNodes[1].classList.add('clsTabActive')
-        // Hide tab-content from TabCntToc
-        document.getElementById('idTabCntTocDiv').style.display = 'none'
-        // Show tab-content on TabCntSrch
-        document.getElementById('idTabCntSrchDiv').style.display = 'block'
-        // on TabCntSrch focus input-element
-        oEltTabCntSrchIpt.focus()
-      }
 
       window.addEventListener('keyup', function (oEvtIn) {
         if (oEvtIn.ctrlKey && oEvtIn.key === 'F2') {
@@ -1878,3 +1878,5 @@ var oHitp = (function () {
 
   return oHitp
 })()
+
+export {oHitp}
