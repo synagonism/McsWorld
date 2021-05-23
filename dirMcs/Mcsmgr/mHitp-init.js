@@ -30,12 +30,7 @@
  * SOFTWARE.
  */
 
-var
-  // contains the-array of the-indexes of all languages of the-names
-  // of sensorial-concepts
-  aNamidxRoot = null,
-  /** contains the-versions of hitp.js */
-  aSuggestions = [],
+const
   aVersion = [
     'mHitp.js.18-0-0.2021-05-00: module',
     'hitp.js.17-7-7.2021-04-28: dirMcs',
@@ -86,32 +81,36 @@ var
     'hitp.js.previous: toc.2013.04.01.js (toc on any browser)',
     'hitp.js.previous: 2010.12.06 (toc on chrome)'
   ],
+  bEdge = navigator.userAgent.indexOf('Edge/') > -1,
+  bFirefox = navigator.userAgent.indexOf('Firefox/') > -1
 
+let
+  // contains the-array of the-indexes of all languages of the-names
+  // of sensorial-concepts
+  aNamidxRoot,
+  /** contains the-versions of hitp.js */
+  aSuggestions = [],
   /** config variables */
   // % of window width
   nCfgPageinfoWidth = 30, 
+
+  /** holds the-object of the-Html-element a-user clicks on */
+  oEltClicked =  document.body,
+  oEltSitemenuUl,
 
   /**
    * filSite-structure contains absolute urls, because we see it from many pages.
    * Then we must-know the-homepage of the-site and create different menus.
    */
-  sCfgHomeLocal = '/dWstSgm/',
-
-  bEdge = navigator.userAgent.indexOf('Edge/') > -1,
-  bFirefox = navigator.userAgent.indexOf('Firefox/') > -1,
-
-  /** holds the-object of the-Html-element a-user clicks on */
-  oEltClicked =  document.body,
-  oEltSitemenuUl = undefined,
-
-  sNamidx = '',
-  sPathSite = '',
-  sPathSitemenu = '',
-  sSrchCrnt = '',
-  sSrchNext = '',
+  sCfgHomeLocal,
+  sNamidx,
+  sPathSite,
+  sPathStmenu,
+  sSrchCrnt,
+  sSrchNext,
   /** selector for a-elements with clsClickCnt */
-  sQrslrAClk = 'idFoo',
-  sQrslrAClkLast = ''
+  sQrslrAClk,
+  sQrslrAClkLast
 
 
 /**
@@ -1755,29 +1754,25 @@ let oTreeUl = (function () {
  * WITHOUGHT waiting for stylesheets, images, and subframes to finish loading.
  * A different event, load, should be used only to detect a fully-loaded page.
  */
-document.addEventListener('DOMContentLoaded', async function () {
+document.addEventListener('DOMContentLoaded', function () {
   // read aNamidxRoot
-  let
-    oConfig,
-    oXHR,
-    sNiRoot
 
   if (location.hostname === '') {
     // no server, display only Toc
     sPathSite = ''
-    sPathSitemenu = ''
+    sPathStmenu = ''
   } else if (location.hostname === 'localhost') {
-    sPathSite = location.origin + sCfgHomeLocal
-    sPathSitemenu = sPathSite + 'filSite-structureLocal.html'
+    sPathSite = location.origin + '/'
+    sPathStmenu = sPathSite + 'filSite-structureLocal.html'
   } else {
     sPathSite = location.origin + '/'
-    sPathSitemenu = sPathSite + 'filSite-structure.html'
+    sPathStmenu = sPathSite + 'filSite-structure.html'
   }
 
-  if (sPathSitemenu) {
+  if (sPathStmenu) {
     // server found
     // read config
-    await fetch(sPathSite + 'config.json')
+    fetch(sPathSite + 'configMcs.json')
     .then(response => response.json())
     .then(oConfig => {
       if (oConfig.nCfgPageinfoWidth) {
@@ -1787,10 +1782,10 @@ document.addEventListener('DOMContentLoaded', async function () {
         sCfgHomeLocal = oConfig.sCfgHomeLocal
         if (location.hostname === 'localhost') {
           sPathSite = location.origin + sCfgHomeLocal
-          sPathSitemenu = sPathSite + 'filSite-structureLocal.html'
+          sPathStmenu = sPathSite + 'filSite-structureLocal.html'
         } else if (location.hostname.length > 1) {
           sPathSite = location.origin + '/'
-          sPathSitemenu = sPathSite + 'filSite-structure.html'
+          sPathStmenu = sPathSite + 'filSite-structure.html'
         }
       }
       fSitemenu()
@@ -1811,68 +1806,101 @@ document.addEventListener('DOMContentLoaded', async function () {
       }
     }
   }
-
-  /**
-   * doing: reads the-site-menu, if exists, and creates the-containers of the-page.
-   */
-  async function fSitemenu() {
-    // site-menu
-    if (sPathSitemenu) {
-      await fetch(sPathSitemenu)
-      .then(response => response.text())
-      .then(sHtml => {
-        oEltSitemenuUl = (new DOMParser()).parseFromString(sHtml, 'text/html')
-        oEltSitemenuUl = oEltSitemenuUl.querySelector('ul')
-        fNamidx()
-      })
-      .catch((error) => {
-        // no site-menu
-        fNamidx()
-      })
-    }
-  }
-
-  /**
-   * doing: reads the-namidx.lagRoot-file, if exists, and creates the-containers of the-page.
-   */
-  async function fNamidx() {
-    // find aNamidxRoot
-    sNiRoot = sPathSite + 'dirMcs/dirNamidx/namidx.lagRoot.json'
-    await fetch(sNiRoot)
-    .then(response => response.json())
-    .then(aLagRoot => {
-      // aNamidxRoot contains namidx.lagRoot.json if exists
-      aNamidxRoot = aLagRoot
-      fContainersInsert()
-      oTreeUl.fTruCreate()
-      // IF on idMetaWebpage_path paragraph we have and the clsTocExpand
-      // then the toc expands-all
-      if (document.getElementById('idMetaWebpage_path')) {
-        if (document.getElementById('idMetaWebpage_path').getAttribute('class') === 'clsTocExpand') {
-          oTreeUl.fTruTocExpandAll()
-        }
-      }
-      if (location.hash) {
-        location.href = location.hash
-      }
-    })
-    .catch((error) => {
-      // no Mcs-search, file not found
-      fContainersInsert()
-      oTreeUl.fTruCreate()
-      // IF on idMetaWebpage_path paragraph we have and the clsTocExpand
-      // then the toc expands-all
-      if (document.getElementById('idMetaWebpage_path')) {
-        if (document.getElementById('idMetaWebpage_path').getAttribute('class') === 'clsTocExpand') {
-          oTreeUl.fTruTocExpandAll()
-        }
-      }
-      if (location.hash) {
-        location.href = location.hash
-      }
-    })
-  }
 })
 
+/**
+ * doing: reads the-site-menu, if exists, and creates the-containers of the-page.
+ */
+function fSitemenu() {
+  // site-menu
+  if (sPathStmenu) {
+    fetch(sPathStmenu)
+    .then(response => response.text())
+    .then(sHtml => {
+      oEltSitemenuUl = (new DOMParser()).parseFromString(sHtml, 'text/html')
+      oEltSitemenuUl = oEltSitemenuUl.querySelector('ul')
+      fNamidx()
+    })
+    .catch((error) => {
+      // no site-menu
+      fNamidx()
+    })
+  }
+}
 
-export {aNamidxRoot, aSuggestions, aVersion, bEdge, bFirefox, nCfgPageinfoWidth, fContainersInsert, fTocTriCreate, fTocTriHighlightNode, oEltClicked, oEltSitemenuUl, oTreeUl, sCfgHomeLocal, sNamidx, sSrchNext, sPathSite, sPathSitemenu, sSrchCrnt, sQrslrAClk, sQrslrAClkLast}
+/**
+ * doing: reads the-namidx.lagRoot-file, if exists, and creates the-containers of the-page.
+ */
+function fNamidx() {
+  // find aNamidxRoot
+  let sNiRoot = sPathSite + 'dirMcs/dirNamidx/namidx.lagRoot.json'
+  fetch(sNiRoot)
+  .then(response => response.json())
+  .then(aLagRoot => {
+    // aNamidxRoot contains namidx.lagRoot.json if exists
+    aNamidxRoot = aLagRoot
+    fContainersInsert()
+    oTreeUl.fTruCreate()
+    // IF on idMetaWebpage_path paragraph we have and the clsTocExpand
+    // then the toc expands-all
+    if (document.getElementById('idMetaWebpage_path')) {
+      if (document.getElementById('idMetaWebpage_path').getAttribute('class') === 'clsTocExpand') {
+        oTreeUl.fTruTocExpandAll()
+      }
+    }
+    if (location.hash) {
+      location.href = location.hash
+    }
+  })
+  .catch((error) => {
+    // no Mcs-search, file not found
+    fContainersInsert()
+    oTreeUl.fTruCreate()
+    // IF on idMetaWebpage_path paragraph we have and the clsTocExpand
+    // then the toc expands-all
+    if (document.getElementById('idMetaWebpage_path')) {
+      if (document.getElementById('idMetaWebpage_path').getAttribute('class') === 'clsTocExpand') {
+        oTreeUl.fTruTocExpandAll()
+      }
+    }
+    if (location.hash) {
+      location.href = location.hash
+    }
+  })
+}
+
+if (location.hostname === '') {
+  // no server, display only Toc
+  sPathSite = ''
+  sPathStmenu = ''
+} else {
+  sPathSite = location.origin + '/'
+}
+if (sPathSite) {
+  await fetch(sPathSite + 'configMcs.json')
+  .then(response => response.json())
+  .then(oConfig => {
+    if (oConfig.nCfgPageinfoWidth) {
+      nCfgPageinfoWidth = oConfig.nCfgPageinfoWidth
+    }
+    if (oConfig.sCfgHomeLocal) {
+      sCfgHomeLocal = oConfig.sCfgHomeLocal
+      if (location.hostname === 'localhost') {
+        sPathSite = location.origin + sCfgHomeLocal
+        sPathStmenu = sPathSite + 'filSite-structureLocal.html'
+      } else if (location.hostname.length > 1) {
+        sPathSite = location.origin + '/'
+        sPathStmenu = sPathSite + 'filSite-structure.html'
+      }
+    }
+  })
+  .catch(sPathSite="error")
+}
+
+
+await fetch(sPathSite + 'dirMcs/dirNamidx/namidx.lagRoot.json')
+.then(response => response.json())
+.then(data => aNamidxRoot=data)
+.catch(er => aNamidxRoot=[error])
+
+export {aNamidxRoot, aSuggestions, aVersion, bEdge, bFirefox, nCfgPageinfoWidth, fContainersInsert, fTocTriCreate, fTocTriHighlightNode, oEltClicked, oEltSitemenuUl, oTreeUl, sCfgHomeLocal, sNamidx, sSrchNext, sPathSite, sPathStmenu, sSrchCrnt, sQrslrAClk, sQrslrAClkLast}
