@@ -1,10 +1,5 @@
 /*
- * hitp.js - html5.id.toc.preview webpage-format code.
- * This code is the result of the evolution of my
- * a) TableOfContents chrome extention (https:// chrome.google.com/webstore/detail/tableofcontents/eeknhipceeelbgdbcmchicoaoalfdnhi)
- * and
- * b) synagonism-mw MediaWiki skin (http:// synagonism-mw.sourceforge.net/)
- *
+ * mHitp.js - module html5.id.toc.preview webpage-format code.
  * The MIT License (MIT)
  *
  * Copyright (c) 2010-2021 Kaseluris.Nikos.1959 (synagonism)
@@ -30,9 +25,10 @@
  * SOFTWARE.
  */
 
-let oHitp = {
-  /** contains the-versions of hitp.js */
-  aVersion: [
+const
+  // contains the-versions of mHitp.js 
+  aVersion = [
+    'mHitp.js.18-0-0.2021-05-25: module',
     'hitp.js.17-7-7.2021-04-28: dirMcs',
     'hitp.js.17-7-6.2021-04-02: dirMcs',
     'hitp.js.17-7-5.2021-04-02: lagLang',
@@ -81,38 +77,38 @@ let oHitp = {
     'hitp.js.previous: toc.2013.04.01.js (toc on any browser)',
     'hitp.js.previous: 2010.12.06 (toc on chrome)'
   ],
-  /** config variables */
-  nCfgPageinfoWidth: 30, // % of window width
-  /**
-   * filSite-structure contains absolute urls, because we see it from many pages.
-   * Then we must-know the-homepage of the-site and create different menus.
-   */
-  sCfgHomeLocal: '/dWstSgm/',
+  bEdge = navigator.userAgent.indexOf('Edg/') > -1,
+  bFirefox = navigator.userAgent.indexOf('Firefox/') > -1
 
-  bEdge: navigator.userAgent.indexOf('Edge/') > -1,
-  bFirefox: navigator.userAgent.indexOf('Firefox/') > -1,
+let
+  // contains the-array of the-indexes of all languages of the-names
+  // of sensorial-concepts
+  aNamidxRoot,
+  aSuggestions = [[]],
+  
+  // % of window width of pageinfo-container
+  nCfgPageinfoWidth = 30, 
 
-  /**
-   * Find key of object given value
-   */
-  fObjvalRKey: function (oIn, valIn) {
-    return Object.keys(oIn).find(
-      function (key) {
-        return oIn[key] === valIn
-      }
-    )
-  },
+  // holds the-object of the-Html-element a-user clicks on
+  oEltClicked =  document.body,
+  // holds the-site-structure
+  oEltSitemenuUl,
 
-  /** holds the-object of the-Html-element a-user clicks on */
-  oEltClicked: document.body,
-  oEltSitemenuUl: undefined,
+  // filSite-structure contains absolute urls, because we see it from many pages.
+  // Then we must-know the-homepage of the-site and create different menus.
+  sCfgHomeLocal,
+  // the-namidx-file to search first
+  sNamidx,
+  sPathSite,
+  sPathStmenu,
+  // current search-index
+  sSrchCrnt,
+  // next search-index
+  sSrchNext,
+  // selector for a-elements with clsClickCnt
+  sQrslrAClk,
+  sQrslrAClkLast
 
-  sPathSite: '',
-  sPathSitemenu: '',
-  /** selector for a-elements with clsClickCnt */
-  sQrslrAClk: 'idFoo',
-  sQrslrAClkLast: ''
-}
 
 /**
  * Creates new containers and inserts them in the-body-element:
@@ -122,7 +118,7 @@ let oHitp = {
  * - Site-cnr for containing the-site-strucute.
  * - Preview-cnr to display link-previews.
  */
-oHitp.fContainersInsert = function () {
+let fContainersInsert = function () {
   let
     fEvtLink,
     fEvtPreview,
@@ -131,12 +127,15 @@ oHitp.fContainersInsert = function () {
     oEltBody = document.body,
     // top-container with site, home, title, search and width subcontainers,
     oEltCnrTopDiv = document.createElement('div'),
-    oEltTopTitleP = document.createElement('p'),
-    oEltTopWidthIcnI = document.createElement('i'),
+    oEltCnrTopTitleP = document.createElement('p'),
+    oEltCnrTopWidthIcnI = document.createElement('i'),
+    oEltCnrTopHomeIcnI,
+    oEltCnrTopSearchIcnI,
+    oEltCnrTopSiteIcnI,
     // main-container with page-content and page-info sub-containers,
     oEltCnrMainDiv = document.createElement('div'),
-    oEltCnrMainPgcntDiv = document.createElement('div'),
-    oEltCnrMainPginfDiv = document.createElement('div'),
+    oEltCnrMainContentDiv = document.createElement('div'),
+    oEltCnrMainInfoDiv = document.createElement('div'),
     // extra containers,
     oEltCnrWidthDiv = document.createElement('div'),
     oEltCnrPreviewDiv = document.createElement('div'),
@@ -150,17 +149,25 @@ oHitp.fContainersInsert = function () {
     oEltTabCntTocCpsBtn = document.createElement('input'),
     oEltTabCntTocPrfDiv = document.createElement('div'),
     oEltTabCntTocNotP = document.createElement('p'),
-    oXHR,
+    oEltTabCntSrchDiv,
+    oEltTabCntSrchLbl,
+    oEltTabCntSrchSlt,
+    oEltTabCntSrchP,
+    oEltTabCntSrchLblChk,
+    oEltTabCntSrchIpt,
+    oEltTabCntSrchOl,
+    oEltCnrSiteDiv,
     sContentOriginal = oEltBody.innerHTML,
-    sIdTabActive
+    sIdTabActive,
+    sPathNames,
+    sTabCntSrchOl = ''
 
-  if (oHitp.oEltSitemenuUl) {
-    let
-      oEltCnrSiteDiv = document.createElement('div'),
-      oEltTopSitemenuIcnI = document.createElement('i'),
-      oEltTopHomeIcnI = document.createElement('i')
+  if (oEltSitemenuUl) {
+    oEltCnrSiteDiv = document.createElement('div')
+    oEltCnrTopHomeIcnI = document.createElement('i')
+    oEltCnrTopSiteIcnI = document.createElement('i')
   }
-  
+
   function fCnrSearchShow() {
     // Remove active-class from first-child-elt of PginfTabHeaders
     document.getElementById('idPginfTabHeadersUl')
@@ -176,50 +183,46 @@ oHitp.fContainersInsert = function () {
     oEltTabCntSrchIpt.focus()
   }
 
-  if (oHitp.aNamidxRoot) {
-    let
-      oEltTopSearchIcnI = document.createElement('i'),
-      oEltTabCntSrchDiv = document.createElement('div'),
-      oEltTabCntSrchLbl = document.createElement('label'),
-      oEltTabCntSrchSlt = document.createElement('select'),
-      oEltTabCntSrchP = document.createElement('p'),
-      oEltTabCntSrchLblChk = document.createElement('label'),
-      oEltTabCntSrchIpt = document.createElement('input'),
-      oEltTabCntSrchOl = document.createElement('ol'),
-      sPathNames,
-      // localhost or online,
-      sTabCntSrchOl =
-        '<li>SEE ' +
-          '<a class="clsPreview" href="' + oHitp.sPathSite + 'dirMcs/dirCor/McsCor000002.last.html#idMcsattNamcvn">name-notation--of-Mcs</a>.</li>' +
-        '<li>TYPE a-name of ' +
-          '<a class="clsPreview" href="' + oHitp.sPathSite + 'dirMcs/dirCor/McsCor000002.last.html#idOverview">a-sensorial-concept-Mcs</a> of ' +
-          '<a class="clsPreview" href="' + oHitp.sPathSite + 'dirMcs/dirHmn/McsHmn000003.last.html#idOverview">Kaseluris.Nikos.1959-WORLDVIEW</a>.</li>' +
-        '<li>some important concepts are: "<strong>char</strong>", ' +
-          '"<strong>javascript</strong>", "<strong>human-language</strong>", ' +
-          '"<strong>chain-net</strong>", ...</li>' +
-        '<li>sensorial-concept-searching demonstrates THE-POWER of sensorial-concepts.' +
-          '<br>· compare them with Google-WORD-search and Wikipedia-TEXT-entries.</li>' +
-        '<li><a class="clsPreview" href="' + oHitp.sPathSite + 'dirMcs/dirHmn/McsHmn000003.last.html#idOverview">Kaseluris.Nikos.1959</a> works more than 30 years on sensorial-concepts. ' +
-          '<br>· <a class="clsPreview" href="' + oHitp.sPathSite + '#idSupport">support him</a> to continue publishing.</li>' +
-        '<li>this site uses 3 types of searching:' +
-          '<br>- word--site-search from site-Menu,' +
-          '<br>- word--page-search by hitting Ctrl+F and' +
-          '<br>- sensorial-concept--search here.</li>'
+  if (aNamidxRoot) {
+    // localhost or online,
+    sTabCntSrchOl =
+      '<li>SEE ' +
+        '<a class="clsPreview" href="' + sPathSite + 'dirMcs/dirCor/McsCor000002.last.html#idMcsattNamcvn">name-notation--of-Mcs</a>.</li>' +
+      '<li>TYPE a-name of ' +
+        '<a class="clsPreview" href="' + sPathSite + 'dirMcs/dirCor/McsCor000002.last.html#idOverview">a-sensorial-concept-Mcs</a> of ' +
+        '<a class="clsPreview" href="' + sPathSite + 'dirMcs/dirHmn/McsHmn000003.last.html#idOverview">Kaseluris.Nikos.1959-WORLDVIEW</a>.</li>' +
+      '<li>some important concepts are: "<strong>char</strong>", ' +
+        '"<strong>javascript</strong>", "<strong>human-language</strong>", ' +
+        '"<strong>chain-net</strong>", ...</li>' +
+      '<li>sensorial-concept-searching demonstrates THE-POWER of sensorial-concepts.' +
+        '<br>· compare them with Google-WORD-search and Wikipedia-TEXT-entries.</li>' +
+      '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/dirHmn/McsHmn000003.last.html#idOverview">Kaseluris.Nikos.1959</a> works more than 30 years on sensorial-concepts. ' +
+        '<br>· <a class="clsPreview" href="' + sPathSite + '#idSupport">support him</a> to continue publishing.</li>' +
+      '<li>this site uses 3 types of searching:' +
+        '<br>- word--site-search from site-Menu,' +
+        '<br>- word--page-search by hitting Ctrl+F and' +
+        '<br>- sensorial-concept--search here.</li>'
 
-    oHitp.aSuggestions = [[]]
-    oHitp.sNamidx = 'lagRoot' // the-namidx-file to search first
-    oHitp.sSrchCrnt = '' // current search-index
-    oHitp.sSrchNext = '' // next search-index
-    sPathNames = oHitp.sPathSite + 'dirMcs/dirNamidx/'
-    oEltTopTitleP.setAttribute('title', 'clicking GREEN-BAR shows search-tab, clicking CONTENT shows Toc-tab')
-    oEltTopSearchIcnI.setAttribute('class', 'clsFa clsFaSearch clsTopIcn clsColorWhite clsFloatRight clsPosRight')
-    oEltTopSearchIcnI.addEventListener('click', function () {
+    oEltCnrTopSearchIcnI = document.createElement('i')
+    oEltTabCntSrchDiv = document.createElement('div')
+    oEltTabCntSrchLbl = document.createElement('label')
+    oEltTabCntSrchSlt = document.createElement('select')
+    oEltTabCntSrchP = document.createElement('p')
+    oEltTabCntSrchLblChk = document.createElement('label')
+    oEltTabCntSrchIpt = document.createElement('input')
+    oEltTabCntSrchOl = document.createElement('ol')
+    sNamidx = 'lagRoot' // the-namidx-file to search first
+    sSrchCrnt = '' // current search-index
+    sSrchNext = '' // next search-index
+    sPathNames = sPathSite + 'dirMcs/dirNamidx/'
+    oEltCnrTopTitleP.setAttribute('title', 'clicking GREEN-BAR shows search-tab, clicking CONTENT shows Toc-tab')
+    oEltCnrTopSearchIcnI.setAttribute('class', 'clsFa clsFaSearch clsTopIcn clsColorWhite clsFloatRight clsPosRight')
+    oEltCnrTopSearchIcnI.addEventListener('click', function () {
       fCnrOntopRemove()
       fCnrSearchShow()
     })
 
-
-    window.addEventListener('keyup', function (oEvtIn) {
+    addEventListener('keyup', function (oEvtIn) {
       if (oEvtIn.ctrlKey && oEvtIn.key === 'F2') {
         fCnrOntopRemove()
         fCnrSearchShow()
@@ -228,7 +231,7 @@ oHitp.fContainersInsert = function () {
       }
     })
 
-    window.addEventListener('keydown', function (oEvtIn) {
+    addEventListener('keydown', function (oEvtIn) {
       if (oEvtIn.key === 'F2') {
         fCnrOntopRemove()
         fCnrSearchShow()
@@ -241,23 +244,23 @@ oHitp.fContainersInsert = function () {
   oEltCnrMainDiv.id = 'idCnrMainDiv'
 
   // top-title-text
-  oEltTopTitleP.innerHTML = document.getElementsByTagName('title')[0].innerHTML
-  oEltTopTitleP.id = 'idTopTitleP'
+  oEltCnrTopTitleP.innerHTML = document.getElementsByTagName('title')[0].innerHTML
+  oEltCnrTopTitleP.id = 'idTopTitleP'
   // width-icon
-  oEltTopWidthIcnI.setAttribute('class', 'clsFa clsFaArrowsH clsTopIcn clsColorWhite clsFloatRight clsTtp clsPosRight')
+  oEltCnrTopWidthIcnI.setAttribute('class', 'clsFa clsFaArrowsH clsTopIcn clsColorWhite clsFloatRight clsTtp clsPosRight')
   // to show a-tooltip on an-element:
   // - set clsTtp on element
   // - set tooltip (<span class="clsTtp">Width of Page-Info</span>) inside the-element
   // - on element click add clsClicked and clsTtpShow
-  oEltTopWidthIcnI.innerHTML = '<span class="clsTtp">width of page-info</span>'
-  oEltTopWidthIcnI.addEventListener('click', function () {
-    if (oEltTopWidthIcnI.className.indexOf('clsClicked') > -1) {
+  oEltCnrTopWidthIcnI.innerHTML = '<span class="clsTtp">width of page-info</span>'
+  oEltCnrTopWidthIcnI.addEventListener('click', function () {
+    if (oEltCnrTopWidthIcnI.className.indexOf('clsClicked') > -1) {
       oEltCnrWidthDiv.style.display = 'block'
-      oHitp.oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
+      oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
     } else {
-      oHitp.oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
-      oHitp.oEltClicked = oEltTopWidthIcnI
-      oEltTopWidthIcnI.classList.add('clsClicked', 'clsTtpShow')
+      oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
+      oEltClicked = oEltCnrTopWidthIcnI
+      oEltCnrTopWidthIcnI.classList.add('clsClicked', 'clsTtpShow')
     }
   })
   // width-content
@@ -273,27 +276,29 @@ oHitp.fContainersInsert = function () {
     '<input type="radio" id="idRdbWidth50" name="nameRdbWidth">50 %<br>' +
     '<input type="radio" id="idRdbWidth100" name="nameRdbWidth">100 %<br>' +
     '</fieldset>'
-  oEltCnrTopDiv.appendChild(oEltTopTitleP)
-  oEltCnrTopDiv.appendChild(oEltTopWidthIcnI)
-  if (oHitp.aNamidxRoot) {
-    oEltCnrTopDiv.appendChild(oEltTopSearchIcnI)
-    oEltTopTitleP.addEventListener('click', function () {
+  oEltCnrTopDiv.appendChild(oEltCnrTopTitleP)
+  oEltCnrTopDiv.appendChild(oEltCnrTopWidthIcnI)
+  if (aNamidxRoot) {
+    oEltCnrTopDiv.appendChild(oEltCnrTopSearchIcnI)
+    oEltCnrTopTitleP.addEventListener('click', function () {
       fCnrOntopRemove()
       fCnrSearchShow()
     })
   } else {
-    oEltTopTitleP.addEventListener('click', function () {
+    oEltCnrTopTitleP.addEventListener('click', function () {
       fCnrOntopRemove()
     })
   }
+  
   function fCnrOntopRemove() {
     oEltCnrPreviewDiv.style.display = 'none' // remove popup-cnr
     oEltCnrWidthDiv.style.display = 'none' // remove width-cnr
-    if (oHitp.oEltSitemenuUl) {
+    if (oEltSitemenuUl) {
       oEltCnrSiteDiv.style.display = 'none' // remove site-cnr
     }
-    oHitp.oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked') // remove tooltip clicks
+    oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked') // remove tooltip clicks
   }
+
   function fCnrTocShow() {
     // Remove active-class from second-child-elt of PginfTabHeaders
     document.getElementById('idPginfTabHeadersUl')
@@ -301,7 +306,7 @@ oHitp.fContainersInsert = function () {
     // Add active-class on second-child-element of PginfTabHeaders
     document.getElementById('idPginfTabHeadersUl')
       .childNodes[0].classList.add('clsTabActive')
-    if (oHitp.aNamidxRoot) {
+    if (aNamidxRoot) {
       // Hide tab-content from TabCntSrch
       document.getElementById('idTabCntSrchDiv').style.display = 'none'
     }
@@ -318,55 +323,55 @@ oHitp.fContainersInsert = function () {
   })
   document.getElementById('idRdbWidth0').addEventListener('click', function () {
     fWidthPginf(0)
-    oHitp.nCfgPageinfoWidth = 0
+    nCfgPageinfoWidth = 0
   })
   document.getElementById('idRdbWidth10').addEventListener('click', function () {
     fWidthPginf(10)
-    oHitp.nCfgPageinfoWidth = 10
+    nCfgPageinfoWidth = 10
   })
   document.getElementById('idRdbWidth20').addEventListener('click', function () {
     fWidthPginf(20)
-    oHitp.nCfgPageinfoWidth = 20
+    nCfgPageinfoWidth = 20
   })
   document.getElementById('idRdbWidth25').addEventListener('click', function () {
     fWidthPginf(25)
-    oHitp.nCfgPageinfoWidth = 25
+    nCfgPageinfoWidth = 25
   })
   document.getElementById('idRdbWidth30').addEventListener('click', function () {
     fWidthPginf(30)
-    oHitp.nCfgPageinfoWidth = 30
+    nCfgPageinfoWidth = 30
   })
   document.getElementById('idRdbWidth40').addEventListener('click', function () {
     fWidthPginf(40)
-    oHitp.nCfgPageinfoWidth = 40
+    nCfgPageinfoWidth = 40
   })
   document.getElementById('idRdbWidth50').addEventListener('click', function () {
     fWidthPginf(50)
-    oHitp.nCfgPageinfoWidth = 50
+    nCfgPageinfoWidth = 50
   })
   document.getElementById('idRdbWidth100').addEventListener('click', function () {
     fWidthPginf(100)
-    oHitp.nCfgPageinfoWidth = 100
+    nCfgPageinfoWidth = 100
   })
-  if (oHitp.nCfgPageinfoWidth === 0) {
+  if (nCfgPageinfoWidth === 0) {
     document.getElementById('idRdbWidth0').checked = true
-  } else if (oHitp.nCfgPageinfoWidth === 10) {
+  } else if (nCfgPageinfoWidth === 10) {
     document.getElementById('idRdbWidth10').checked = true
-  } else if (oHitp.nCfgPageinfoWidth === 20) {
+  } else if (nCfgPageinfoWidth === 20) {
     document.getElementById('idRdbWidth20').checked = true
-  } else if (oHitp.nCfgPageinfoWidth === 25) {
+  } else if (nCfgPageinfoWidth === 25) {
     document.getElementById('idRdbWidth25').checked = true
-  } else if (oHitp.nCfgPageinfoWidth === 30) {
+  } else if (nCfgPageinfoWidth === 30) {
     document.getElementById('idRdbWidth30').checked = true
-  } else if (oHitp.nCfgPageinfoWidth === 40) {
+  } else if (nCfgPageinfoWidth === 40) {
     document.getElementById('idRdbWidth40').checked = true
-  } else if (oHitp.nCfgPageinfoWidth === 50) {
+  } else if (nCfgPageinfoWidth === 50) {
     document.getElementById('idRdbWidth50').checked = true
-  } else if (oHitp.nCfgPageinfoWidth === 100) {
+  } else if (nCfgPageinfoWidth === 100) {
     document.getElementById('idRdbWidth100').checked = true
   }
 
-  // adds click event on input link elements
+  // adds click event, other than default, on input link-elements
   fEvtLink = function (oEltIn) {
     oEltIn.addEventListener('click', function (oEvtIn) {
       oEvtIn.preventDefault()
@@ -376,9 +381,9 @@ oHitp.fContainersInsert = function () {
         fCnrOntopRemove()
         location.href = oEltIn.href
       } else {
-        oHitp.oEltClicked.classList.remove('clsClicked',
+        oEltClicked.classList.remove('clsClicked',
           'clsTtpShow', 'clsTriClicked')
-        oHitp.oEltClicked = oEltIn
+        oEltClicked = oEltIn
         oEltIn.classList.add('clsClicked')
         fEvtPreview(oEvtIn)
       }
@@ -386,34 +391,34 @@ oHitp.fContainersInsert = function () {
   }
 
   // site-structure menu
-  if (oHitp.oEltSitemenuUl) {
-    oHitp.oEltSitemenuUl.setAttribute('id', 'idSitemenuUl')
+  if (oEltSitemenuUl) {
+    oEltSitemenuUl.setAttribute('id', 'idSitemenuUl')
 
     // site-icn
-    oEltTopSitemenuIcnI.setAttribute('class', 'clsFa clsFaMenu clsTopIcn clsColorWhite clsFloatLeft clsTtp')
-    oEltTopSitemenuIcnI.innerHTML = '<span class="clsTtp">Site-structure</span>'
-    oEltTopSitemenuIcnI.addEventListener('click', function () {
-      if (oEltTopSitemenuIcnI.className.indexOf('clsClicked') > -1) {
+    oEltCnrTopSiteIcnI.setAttribute('class', 'clsFa clsFaMenu clsTopIcn clsColorWhite clsFloatLeft clsTtp')
+    oEltCnrTopSiteIcnI.innerHTML = '<span class="clsTtp">Site-structure</span>'
+    oEltCnrTopSiteIcnI.addEventListener('click', function () {
+      if (oEltCnrTopSiteIcnI.className.indexOf('clsClicked') > -1) {
         oEltCnrSiteDiv.style.display = 'block'
-        oHitp.oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
+        oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
       } else {
-        oHitp.oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
-        oHitp.oEltClicked = oEltTopSitemenuIcnI
-        oEltTopSitemenuIcnI.classList.add('clsClicked', 'clsTtpShow')
+        oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
+        oEltClicked = oEltCnrTopSiteIcnI
+        oEltCnrTopSiteIcnI.classList.add('clsClicked', 'clsTtpShow')
       }
     })
     // home-icn
-    oEltTopHomeIcnI.setAttribute('class', 'clsFa clsFaHome clsTopIcn clsColorWhite clsFloatLeft clsTtp')
-    oEltTopHomeIcnI.innerHTML = '<span class="clsTtp">Home-webpage</span>'
-    oEltTopHomeIcnI.addEventListener('click', function () {
-      if (oEltTopHomeIcnI.className.indexOf('clsClicked') > -1) {
-        oEltTopHomeIcnI.classList.remove('clsClicked')
-        oHitp.oEltClicked.classList.remove('clsTtpShow')
-        location.href = oHitp.sPathSite
+    oEltCnrTopHomeIcnI.setAttribute('class', 'clsFa clsFaHome clsTopIcn clsColorWhite clsFloatLeft clsTtp')
+    oEltCnrTopHomeIcnI.innerHTML = '<span class="clsTtp">Home-webpage</span>'
+    oEltCnrTopHomeIcnI.addEventListener('click', function () {
+      if (oEltCnrTopHomeIcnI.className.indexOf('clsClicked') > -1) {
+        oEltCnrTopHomeIcnI.classList.remove('clsClicked')
+        oEltClicked.classList.remove('clsTtpShow')
+        location.href = sPathSite
       } else {
-        oHitp.oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
-        oHitp.oEltClicked = oEltTopHomeIcnI
-        oEltTopHomeIcnI.classList.add('clsClicked', 'clsTtpShow')
+        oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
+        oEltClicked = oEltCnrTopHomeIcnI
+        oEltCnrTopHomeIcnI.classList.add('clsClicked', 'clsTtpShow')
       }
     })
     // site-content
@@ -421,14 +426,14 @@ oHitp.fContainersInsert = function () {
     oEltCnrSiteDiv.innerHTML =
       '<p id="idSiteCntP1" class="clsCenter">close <i class="clsFa clsFaClose clsFloatRight clsColorWhite clsTopIcn"></i></p>' +
       '<p id="idSiteCntP2" class="clsCenter">Site-structure</p>'
-    oEltCnrSiteDiv.appendChild(oHitp.oEltSitemenuUl)
-    oEltCnrTopDiv.insertBefore(oEltTopHomeIcnI, oEltCnrTopDiv.firstChild)
-    oEltCnrTopDiv.insertBefore(oEltTopSitemenuIcnI, oEltCnrTopDiv.firstChild)
+    oEltCnrSiteDiv.appendChild(oEltSitemenuUl)
+    oEltCnrTopDiv.insertBefore(oEltCnrTopHomeIcnI, oEltCnrTopDiv.firstChild)
+    oEltCnrTopDiv.insertBefore(oEltCnrTopSiteIcnI, oEltCnrTopDiv.firstChild)
     oEltBody.appendChild(oEltCnrSiteDiv)
     document.getElementById('idSiteCntP1').addEventListener('click', function () {
       oEltCnrSiteDiv.style.display = 'none'
     })
-    // oHitp.oTreeUl.fTruCreate(oHitp.oEltSitemenuUl);
+    // oTreeUl.fTruCreate(oEltSitemenuUl);
     // on a-links, first highlight
     Array.prototype.slice.call(document.querySelectorAll('#idSitemenuUl a')).forEach(function (oEltIn) {
       fEvtLink(oEltIn)
@@ -436,16 +441,16 @@ oHitp.fContainersInsert = function () {
   }
 
   // set on page-content-cnr the original-body content
-  oEltCnrMainPgcntDiv.id = 'idCnrMainPgcntDiv'
-  oEltCnrMainPgcntDiv.innerHTML = sContentOriginal
-  oEltCnrMainDiv.appendChild(oEltCnrMainPgcntDiv)
+  oEltCnrMainContentDiv.id = 'idCnrMainPgcntDiv'
+  oEltCnrMainContentDiv.innerHTML = sContentOriginal
+  oEltCnrMainDiv.appendChild(oEltCnrMainContentDiv)
 
   // insert page-info-cnr
-  oEltCnrMainPginfDiv.id = 'idCnrMainPginfDiv'
+  oEltCnrMainInfoDiv.id = 'idCnrMainPginfDiv'
   // insert content on TabCntToc
   oEltTabCntTocDiv.id = 'idTabCntTocDiv'
   oEltTabCntTocDiv.setAttribute('class', 'clsTabCnt')
-  oEltTabCntTocDiv.innerHTML = oHitp.fTocTriCreate()
+  oEltTabCntTocDiv.innerHTML = fTocTriCreate()
   // insert collaplse-button
   oEltTabCntTocCpsBtn.setAttribute('id', 'idBtnCollapse_All')
   oEltTabCntTocCpsBtn.setAttribute('type', 'button')
@@ -453,11 +458,11 @@ oHitp.fContainersInsert = function () {
   oEltTabCntTocCpsBtn.setAttribute('class', 'clsBtn')
   oEltTabCntTocCpsBtn.addEventListener('click', function () {
     if (oEltTabCntTocCpsBtn.className.indexOf('clsClicked') > -1) {
-      oHitp.oTreeUl.fTruTocCollapseAll()
-      oHitp.oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
+      oTreeUl.fTruTocCollapseAll()
+      oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
     } else {
-      oHitp.oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
-      oHitp.oEltClicked = oEltTabCntTocCpsBtn
+      oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
+      oEltClicked = oEltTabCntTocCpsBtn
       oEltTabCntTocCpsBtn.classList.add('clsClicked', 'clsTtpShow')
     }
   })
@@ -469,11 +474,11 @@ oHitp.fContainersInsert = function () {
   oEltTabCntTocExpBtn.setAttribute('class', 'clsBtn')
   oEltTabCntTocExpBtn.addEventListener('click', function () {
     if (oEltTabCntTocExpBtn.className.indexOf('clsClicked') > -1) {
-      oHitp.oTreeUl.fTruTocExpandAll()
-      oHitp.oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
+      oTreeUl.fTruTocExpandAll()
+      oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
     } else {
-      oHitp.oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
-      oHitp.oEltClicked = oEltTabCntTocExpBtn
+      oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
+      oEltClicked = oEltTabCntTocExpBtn
       oEltTabCntTocExpBtn.classList.add('clsClicked', 'clsTtpShow')
     }
   })
@@ -500,12 +505,12 @@ oHitp.fContainersInsert = function () {
   oEltPginfTabCntDiv.appendChild(oEltTabCntTocDiv)
 
   // insert tab-cnr IN page-info-cnr
-  oEltCnrMainPginfDiv.appendChild(oEltPginfTabCntDiv)
+  oEltCnrMainInfoDiv.appendChild(oEltPginfTabCntDiv)
 
   // insert TabHeaders IN page-info-cnr
   oEltPginfTabHeadersUl.id = 'idPginfTabHeadersUl'
   // if aNamidxRoot, search
-  if (oHitp.aNamidxRoot) {
+  if (aNamidxRoot) {
     oEltPginfTabHeadersUl.innerHTML =
       '<li class="clsTabActive"><a href="#idTabCntTocDiv">page-Toc</a></li>' +
       '<li><a href="#idTabCntSrchDiv">site-search</a></li>'
@@ -513,7 +518,7 @@ oHitp.fContainersInsert = function () {
     oEltPginfTabHeadersUl.innerHTML =
       '<li class="clsTabActive"><a href="#idTabCntTocDiv">page-Toc</a></li>'
   }
-  oEltCnrMainPginfDiv.insertBefore(oEltPginfTabHeadersUl, oEltCnrMainPginfDiv.firstChild)
+  oEltCnrMainInfoDiv.insertBefore(oEltPginfTabHeadersUl, oEltCnrMainInfoDiv.firstChild)
 
   // insert page-path-elt IN page-info-cnr
   oEltPginfPathP.id = 'idPginfPathP'
@@ -523,9 +528,9 @@ oHitp.fContainersInsert = function () {
   } else {
     oEltPginfPathP.innerHTML = document.getElementById('idMetaWebpage_path').innerHTML
   }
-  oEltCnrMainPginfDiv.insertBefore(oEltPginfPathP, oEltCnrMainPginfDiv.firstChild)
+  oEltCnrMainInfoDiv.insertBefore(oEltPginfPathP, oEltCnrMainInfoDiv.firstChild)
 
-  if (oHitp.aNamidxRoot) {
+  if (aNamidxRoot) {
     // TabCntSrch
     oEltTabCntSrchDiv.id = 'idTabCntSrchDiv'
     oEltTabCntSrchDiv.setAttribute('class', 'clsTabCnt')
@@ -560,7 +565,7 @@ oHitp.fContainersInsert = function () {
     oEltTabCntSrchSlt.addEventListener('change', function () {
       oEltTabCntSrchP.innerHTML = fTabCntSrchPSetText()
       oEltTabCntSrchOl.innerHTML = sTabCntSrchOl
-      oHitp.sNamidx = 'lagRoot'
+      sNamidx = 'lagRoot'
       fSearchSuggest()
     })
     // on enter, go to concept
@@ -616,7 +621,7 @@ oHitp.fContainersInsert = function () {
           if (oLi.innerHTML.indexOf(' (lag') > 0) {
             if (oLi.className.indexOf('clsClicked') >= 0 && n + 1 < aLi.length) {
               oLi.classList.remove('clsClicked')
-              oHitp.oEltClicked = aLi[n + 1]
+              oEltClicked = aLi[n + 1]
               aLi[n + 1].classList.add('clsClicked')
               break
             }
@@ -624,7 +629,7 @@ oHitp.fContainersInsert = function () {
               n + 1 < aLi.length) {
             oLi.children[0].classList.remove('clsClicked')
             oEltCnrPreviewDiv.style.display = 'none'
-            oHitp.oEltClicked = aLi[n + 1].children[0]
+            oEltClicked = aLi[n + 1].children[0]
             aLi[n + 1].children[0].classList.add('clsClicked')
             break
           }
@@ -636,7 +641,7 @@ oHitp.fContainersInsert = function () {
           if (oLi.innerHTML.indexOf(' (lag') > 0) {
             if (oLi.className.indexOf('clsClicked') >= 0 && n - 1 >= 0) {
               oLi.classList.remove('clsClicked')
-              oHitp.oEltClicked = aLi[n - 1]
+              oEltClicked = aLi[n - 1]
               aLi[n - 1].classList.add('clsClicked')
               break
             }
@@ -644,7 +649,7 @@ oHitp.fContainersInsert = function () {
               n - 1 >= 0) {
             oLi.children[0].classList.remove('clsClicked')
             oEltCnrPreviewDiv.style.display = 'none'
-            oHitp.oEltClicked = aLi[n - 1].children[0]
+            oEltClicked = aLi[n - 1].children[0]
             aLi[n - 1].children[0].classList.add('clsClicked')
             break
           }
@@ -669,9 +674,9 @@ oHitp.fContainersInsert = function () {
         sSrchLtr = sSrchInpt.charAt(0).toUpperCase(),
         sSuggestions = ''
 
-      oHitp.sNamidx = ''
-      oHitp.sSrchCrnt = ''
-      oHitp.sSrchNext = ''
+      sNamidx = ''
+      sSrchCrnt = ''
+      sSrchNext = ''
       //in Greek lag
       if (sSrchLtr === 'Ά') {sSrchLtr = 'Α'}
       if (sSrchLtr === 'Έ') {sSrchLtr = 'Ε'}
@@ -683,33 +688,33 @@ oHitp.fContainersInsert = function () {
       if (sSSNamidxIn) {
         fSSNamidxDisplay(sSSNamidxIn)
       } else if (sSrchInpt.length > 0) {
-        // console.log('>>> start: ' + sSrchInpt + ', ' + oHitp.sNamidx + ', ' + oHitp.sSrchCrnt + '..' + oHitp.sSrchNext)
+        // console.log('>>> start: ' + sSrchInpt + ', ' + sNamidx + ', ' + sSrchCrnt + '..' + sSrchNext)
         let bRest = true
-        for (let n = 1; n < oHitp.aNamidxRoot.length; n++) {
+        for (let n = 1; n < aNamidxRoot.length; n++) {
           // display quantities, for the-lag
           if (sLag === 'lagAGGR') {
             // search only letter not letterNo on all languages
 
-          } else if (oHitp.aNamidxRoot[n][0].startsWith(sLag)) {
+          } else if (aNamidxRoot[n][0].startsWith(sLag)) {
             // only selected language
-            if (oHitp.aNamidxRoot[n][0] === sLag) {
+            if (aNamidxRoot[n][0] === sLag) {
               nLag = n // index of lag in aNamidxRoot ["lagEngl",";English",143707],
-            } else if (oHitp.aNamidxRoot[n][1] === sSrchLtr) {
+            } else if (aNamidxRoot[n][1] === sSrchLtr) {
               // found search-letter
-              oHitp.sSrchCrnt = oHitp.aNamidxRoot[n][1]
-              if (!oHitp.aNamidxRoot[n + 1] || oHitp.aNamidxRoot[n + 1][1].startsWith(';')) {
+              sSrchCrnt = aNamidxRoot[n][1]
+              if (!aNamidxRoot[n + 1] || aNamidxRoot[n + 1][1].startsWith(';')) {
                 // last letter, if n+1 does not exist or is the-name of another lag
-                oHitp.sSrchNext = oHitp.aNamidxRoot[n][1]
+                sSrchNext = aNamidxRoot[n][1]
               } else {
-                oHitp.sSrchNext = oHitp.aNamidxRoot[n + 1][1]
+                sSrchNext = aNamidxRoot[n + 1][1]
               }
 
-              if (oHitp.aNamidxRoot[n][0].endsWith('_0')) {
+              if (aNamidxRoot[n][0].endsWith('_0')) {
                 // namidx is a-referenceNo
-                fSSNamidxRefManage(oHitp.aNamidxRoot[n][0])
+                fSSNamidxRefManage(aNamidxRoot[n][0])
               } else {
                 // namidx is a-referenceNo
-                fSSNamidxDisplay(oHitp.aNamidxRoot[n][0])
+                fSSNamidxDisplay(aNamidxRoot[n][0])
               }
               bRest = false
               break
@@ -717,14 +722,14 @@ oHitp.fContainersInsert = function () {
           }
         }
         if (bRest) {
-          fSSNamidxDisplay(oHitp.aNamidxRoot[nLag + 1][0])
+          fSSNamidxDisplay(aNamidxRoot[nLag + 1][0])
         }
       } else {
         // sSrchInpt.length < 0
         // no input value, display this:
         oEltTabCntSrchOl.innerHTML = sTabCntSrchOl
         oEltTabCntSrchP.innerHTML = fTabCntSrchPSetText()
-        oHitp.sNamidx = 'lagRoot'
+        sNamidx = 'lagRoot'
       }
 
       /**
@@ -734,30 +739,27 @@ oHitp.fContainersInsert = function () {
       function fSSNamidxRefManage(sNamidxRefIn) {
         // console.log(sNamidxRefIn + ': RefManage')
 
-        if (oHitp.aSuggestions.length === 1 || oHitp.aSuggestions[0][0] !== ';' + sNamidxRefIn) {
+        if (aSuggestions.length === 1 || aSuggestions[0][0] !== ';' + sNamidxRefIn) {
           // read it
-          oHitp.sNamidx = sNamidxRefIn
+          sNamidx = sNamidxRefIn
           sNamidx_path = fSSNamidx_pathFind(sNamidxRefIn)
           sSuggestions = ''
-          oXHR = new XMLHttpRequest()
-          oXHR.open('GET', sNamidx_path, true)
-          oXHR.send(null)
-          oXHR.onreadystatechange = function () {
-            if (oXHR.readyState === 4 && oXHR.status === 200) {
-              oHitp.aSuggestions = JSON.parse(oXHR.responseText)
-              let a = oHitp.aSuggestions[0][1].split('..')
-              oHitp.sSrchCrnt = a[0].substring(1)
-              oHitp.sSrchNext = a[1]
+          fetch(sNamidx_path)
+          .then(response => response.json())
+          .then(data => {
+            aSuggestions = data
+            let a = aSuggestions[0][1].split('..')
+            sSrchCrnt = a[0].substring(1)
+            sSrchNext = a[1]
 
-              if (oHitp.sSrchCrnt.toUpperCase() === sSrchInpt.toUpperCase()) {
-                fSSNamidxRefDisplay(sNamidxRefIn)
-              } else {
-                fSSFindIdxinref()
-              }
+            if (sSrchCrnt.toUpperCase() === sSrchInpt.toUpperCase()) {
+              fSSNamidxRefDisplay(sNamidxRefIn)
+            } else {
+              fSSFindIdxinref()
             }
-          }
-        } else if (oHitp.aSuggestions[0][0] === ';' + sNamidxRefIn) {
-          if (oHitp.aSuggestions[0][1].split('..')[0].substring(1).toUpperCase() === sSrchInpt.toUpperCase()) {
+          })
+        } else if (aSuggestions[0][0] === ';' + sNamidxRefIn) {
+          if (aSuggestions[0][1].split('..')[0].substring(1).toUpperCase() === sSrchInpt.toUpperCase()) {
             fSSNamidxRefDisplay(sNamidxRefIn)
           } else {
             fSSFindIdxinref()
@@ -766,25 +768,25 @@ oHitp.fContainersInsert = function () {
 
         function fSSFindIdxinref() {
           // we have the-suggestions, find the-namidx of input-search
-          for (let n = 2; n < oHitp.aSuggestions.length; n++) {
+          for (let n = 2; n < aSuggestions.length; n++) {
             // ["lagEngl03si_2_0","char..chas",126924],
             // IF sSrchInpt < index, THEN previous is our namidx
-            if (sSrchInpt < oHitp.aSuggestions[n][1].split('..')[0]) {
-              oHitp.sNamidx = oHitp.aSuggestions[n - 1][0]
-              if (oHitp.sNamidx.endsWith('_0')) {
-                fSSNamidxRefManage(oHitp.sNamidx)
+            if (sSrchInpt < aSuggestions[n][1].split('..')[0]) {
+              sNamidx = aSuggestions[n - 1][0]
+              if (sNamidx.endsWith('_0')) {
+                fSSNamidxRefManage(sNamidx)
               } else {
                 // found namidx, display it
-                fSSNamidxDisplay(oHitp.sNamidx)
+                fSSNamidxDisplay(sNamidx)
               }
               break
-            } else if (n + 1 === oHitp.aSuggestions.length) {
-              oHitp.sNamidx = oHitp.aSuggestions[n][0]
-              if (oHitp.sNamidx.endsWith('_0')) {
-                fSSNamidxRefManage(oHitp.sNamidx)
+            } else if (n + 1 === aSuggestions.length) {
+              sNamidx = aSuggestions[n][0]
+              if (sNamidx.endsWith('_0')) {
+                fSSNamidxRefManage(sNamidx)
               } else {
                 // found namidx, display it
-                fSSNamidxDisplay(oHitp.sNamidx)
+                fSSNamidxDisplay(sNamidx)
               }
               break
             }
@@ -799,35 +801,32 @@ oHitp.fContainersInsert = function () {
        * input: sNamidxRefIn: lagEngl03si_0, ..
        */
       function fSSNamidxRefDisplay(sNamidxRefIn) {
-        oHitp.sNamidx = sNamidxRefIn
-        if (oHitp.aSuggestions[0][0] === ';' + sNamidxRefIn) {
+        sNamidx = sNamidxRefIn
+        if (aSuggestions[0][0] === ';' + sNamidxRefIn) {
           fSSNamidxRefDisplayRead()
         } else {
           sNamidx_path = fSSNamidx_pathFind(sNamidxRefIn)
           sSuggestions = ''
-          oXHR = new XMLHttpRequest()
-          oXHR.open('GET', sNamidx_path, true)
-          oXHR.send(null)
-          oXHR.onreadystatechange = function () {
-            if (oXHR.readyState === 4 && oXHR.status === 200) {
-              oHitp.aSuggestions = JSON.parse(oXHR.responseText)
-              let a = oHitp.aSuggestions[0][1].split('..')
-              oHitp.sSrchCrnt = a[0].substring(1)
-              oHitp.sSrchNext = a[1]
-              sSrchInpt = fSSEscapeRs(sSrchInpt)
-              fSSNamidxRefDisplayRead()
-            }
-          }
+          fetch(sNamidx_path)
+          .then(response => response.json())
+          .then(data => {
+            aSuggestions = data
+            let a = aSuggestions[0][1].split('..')
+            sSrchCrnt = a[0].substring(1)
+            sSrchNext = a[1]
+            sSrchInpt = fSSEscapeRs(sSrchInpt)
+            fSSNamidxRefDisplayRead()
+          })
         }
 
         function fSSNamidxRefDisplayRead() {
-          for (let i = 1; i < oHitp.aSuggestions.length; i++) {
+          for (let i = 1; i < aSuggestions.length; i++) {
             sSuggestions = sSuggestions +
-              '<li>' + oHitp.aSuggestions[i][1] + ' : ' + oHitp.aSuggestions[i][2] +
-              '  (' + oHitp.aSuggestions[i][0] + ')'
+              '<li>' + aSuggestions[i][1] + ' : ' + aSuggestions[i][2] +
+              '  (' + aSuggestions[i][0] + ')'
           }
-          oEltTabCntSrchP.innerHTML = oHitp.aSuggestions[0][2].toLocaleString() +
-            ' ' + oHitp.sSrchCrnt + '..' + oHitp.sSrchNext +
+          oEltTabCntSrchP.innerHTML = aSuggestions[0][2].toLocaleString() +
+            ' ' + sSrchCrnt + '..' + sSrchNext +
             ' / ' + fTabCntSrchPSetText()
           oEltTabCntSrchOl.innerHTML = sSuggestions
           Array.prototype.slice.call(document.querySelectorAll('#idTabCntSrchOl li')).forEach(function (oEltIn) {
@@ -845,10 +844,10 @@ oHitp.fContainersInsert = function () {
               fSSNamidxDisplay(sNif)
             })
           })
-          if (oHitp.aSuggestions.length > 0) {
+          if (aSuggestions.length > 0) {
             let oLi = oEltTabCntSrchOl.getElementsByTagName('li')[0]
             oLi.classList.add('clsClicked')
-            oHitp.oEltClicked = oLi
+            oEltClicked = oLi
           }
         }
       }
@@ -858,7 +857,7 @@ oHitp.fContainersInsert = function () {
        * input: sNamidxIn: lagElln01alfa, lagEngl02bi, lagEngl03si_0
        */
       function fSSNamidxDisplay(sNamidxIn) {
-        oHitp.sNamidx = sNamidxIn
+        sNamidx = sNamidxIn
 
         if (sNamidxIn.endsWith('_0')) {
           // case: ref-namidx
@@ -866,22 +865,19 @@ oHitp.fContainersInsert = function () {
         } else {
           // case: refNo-namidx
           // IF sNamidxIn is different from last-read, get it
-          if (!oHitp.aSuggestions || (oHitp.aSuggestions[0][0] !== ';' + sNamidxIn)) {
+          if (!aSuggestions || (aSuggestions[0][0] !== ';' + sNamidxIn)) {
             sNamidx_path = fSSNamidx_pathFind(sNamidxIn)
             sSuggestions = ''
-            oXHR = new XMLHttpRequest()
-            oXHR.open('GET', sNamidx_path, true)
-            oXHR.send(null)
-            oXHR.onreadystatechange = function () {
-              if (oXHR.readyState === 4 && oXHR.status === 200) {
-                oHitp.aSuggestions = JSON.parse(oXHR.responseText)
-                let a = oHitp.aSuggestions[0][1].split('..')
-                oHitp.sSrchCrnt = a[0].substring(1)
-                oHitp.sSrchNext = a[1]
-                fSSNamidxDisplayRead()
-              }
-            }
-          } else if (oHitp.aSuggestions[0][0] === ';' + sNamidxIn) {
+            fetch(sNamidx_path)
+            .then(response => response.json())
+            .then(data => {
+              aSuggestions = data
+              let a = aSuggestions[0][1].split('..')
+              sSrchCrnt = a[0].substring(1)
+              sSrchNext = a[1]
+              fSSNamidxDisplayRead()
+            })
+          } else if (aSuggestions[0][0] === ';' + sNamidxIn) {
             // we have-read the-namidx, loop
             fSSNamidxDisplayRead()
           }
@@ -895,15 +891,15 @@ oHitp.fContainersInsert = function () {
          */
         function fSSNamidxDisplayRead() {
           let n, i
-          if (sSrchInpt.toUpperCase() === oHitp.sSrchCrnt.toUpperCase()) {
+          if (sSrchInpt.toUpperCase() === sSrchCrnt.toUpperCase()) {
             // if sSrchInpt === sSrchCrnt, display all
             n = 0
-            for (i = 1; i < oHitp.aSuggestions.length; i++) {
+            for (i = 1; i < aSuggestions.length; i++) {
               n = n + 1
               sSuggestions = sSuggestions +
-                '<li><a class="clsPreview" href="' + oHitp.sPathSite + 'dirMcs/' +
-                oHitp.aSuggestions[i][1] + '">' +
-                oHitp.aSuggestions[i][0]
+                '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/' +
+                aSuggestions[i][1] + '">' +
+                aSuggestions[i][0]
               if (!document.getElementById('idTabCntSrchChk').checked) {
                 if (n > 998) {
                   sSuggestions = sSuggestions + '<li>...'
@@ -912,29 +908,29 @@ oHitp.fContainersInsert = function () {
               }
             }
             oEltTabCntSrchP.innerHTML =
-              oHitp.aSuggestions[0][2].toLocaleString() +
-              ' ' + oHitp.sSrchCrnt + '..' + oHitp.sSrchNext +
+              aSuggestions[0][2].toLocaleString() +
+              ' ' + sSrchCrnt + '..' + sSrchNext +
               ' / ' + fTabCntSrchPSetText()
             oEltTabCntSrchOl.innerHTML = sSuggestions
             fSSEvtPreview()
-            if (oHitp.aSuggestions.length > 0) {
+            if (aSuggestions.length > 0) {
               sLi = oEltTabCntSrchOl.getElementsByTagName('li')[0]
               sLi.children[0].classList.add('clsClicked')
-              oHitp.oEltClicked = sLi.children[0]
+              oEltClicked = sLi.children[0]
             }
           } else {
             // else display part
             n = 0
             // console.log(new RegExp('^u\\+','i').test('U+0011')) // true
             sSrchInpt = fSSEscapeRs(sSrchInpt)
-            for (i = 1; i < oHitp.aSuggestions.length; i++) {
-              if (new RegExp('^' + sSrchInpt, 'i').test(oHitp.aSuggestions[i][0])) {
+            for (i = 1; i < aSuggestions.length; i++) {
+              if (new RegExp('^' + sSrchInpt, 'i').test(aSuggestions[i][0])) {
                 // IF n > 999 stop ?
                 n = n + 1
                 sSuggestions = sSuggestions +
-                  '<li><a class="clsPreview" href="' + oHitp.sPathSite + 'dirMcs/' +
-                  oHitp.aSuggestions[i][1] + '">' +
-                  oHitp.aSuggestions[i][0]
+                  '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/' +
+                  aSuggestions[i][1] + '">' +
+                  aSuggestions[i][0]
                 if (!document.getElementById('idTabCntSrchChk').checked) {
                   if (n > 998) {
                     sSuggestions = sSuggestions + '<li>...'
@@ -946,19 +942,19 @@ oHitp.fContainersInsert = function () {
             if (!document.getElementById('idTabCntSrchChk').checked) {
               if (n > 998) {
                 oEltTabCntSrchP.innerHTML = n.toLocaleString() +
-                  'plus / ' + oHitp.aSuggestions[0][2].toLocaleString() +
-                  ' ' + oHitp.sSrchCrnt + '..' + oHitp.sSrchNext +
+                  'plus / ' + aSuggestions[0][2].toLocaleString() +
+                  ' ' + sSrchCrnt + '..' + sSrchNext +
                   ' / ' + fTabCntSrchPSetText()
               } else {
                 oEltTabCntSrchP.innerHTML = n.toLocaleString() +
-                  ' / ' + oHitp.aSuggestions[0][2].toLocaleString() +
-                  ' ' + oHitp.sSrchCrnt + '..' + oHitp.sSrchNext +
+                  ' / ' + aSuggestions[0][2].toLocaleString() +
+                  ' ' + sSrchCrnt + '..' + sSrchNext +
                   ' / ' + fTabCntSrchPSetText()
               }
             } else {
               oEltTabCntSrchP.innerHTML = n.toLocaleString() +
-                ' / ' + oHitp.aSuggestions[0][2].toLocaleString() +
-                ' ' + oHitp.sSrchCrnt + '..' + oHitp.sSrchNext +
+                ' / ' + aSuggestions[0][2].toLocaleString() +
+                ' ' + sSrchCrnt + '..' + sSrchNext +
                 ' / ' + fTabCntSrchPSetText()
             }
             oEltTabCntSrchOl.innerHTML = sSuggestions
@@ -966,7 +962,7 @@ oHitp.fContainersInsert = function () {
             if (sSuggestions.length > 0) {
               sLi = oEltTabCntSrchOl.getElementsByTagName('li')[0]
               sLi.children[0].classList.add('clsClicked')
-              oHitp.oEltClicked = sLi.children[0]
+              oEltClicked = sLi.children[0]
             }
           }
         }
@@ -1042,7 +1038,7 @@ oHitp.fContainersInsert = function () {
               n + 1 < aLi.length) {
             oLi.children[0].classList.remove('clsClicked')
             oEltCnrPreviewDiv.style.display = 'none'
-            oHitp.oEltClicked = aLi[n + 1].children[0]
+            oEltClicked = aLi[n + 1].children[0]
             aLi[n + 1].children[0].classList.add('clsClicked')
             break
           }
@@ -1055,7 +1051,7 @@ oHitp.fContainersInsert = function () {
               n - 1 >= 0) {
             oLi.children[0].classList.remove('clsClicked')
             oEltCnrPreviewDiv.style.display = 'none'
-            oHitp.oEltClicked = aLi[n - 1].children[0]
+            oEltClicked = aLi[n - 1].children[0]
             aLi[n - 1].children[0].classList.add('clsClicked')
             break
           }
@@ -1081,16 +1077,16 @@ oHitp.fContainersInsert = function () {
       nLag,
       sLag = oEltTabCntSrchSlt.options[oEltTabCntSrchSlt.selectedIndex].value
     if (sLag === 'lagAGGR') {
-      return oHitp.aNamidxRoot[0][2].toLocaleString() + ' total NAMES'
+      return aNamidxRoot[0][2].toLocaleString() + ' total NAMES'
     } else {
-      for (let n = 1; n < oHitp.aNamidxRoot.length; n++) {
-        if (oHitp.aNamidxRoot[n][0] === sLag) {
+      for (let n = 1; n < aNamidxRoot.length; n++) {
+        if (aNamidxRoot[n][0] === sLag) {
           nLag = n
           break
         }
       }
-      return oHitp.aNamidxRoot[nLag][2].toLocaleString() + ' ' + oHitp.aNamidxRoot[nLag][1].substring(1) +
-        ' / ' + oHitp.aNamidxRoot[0][2].toLocaleString() + ' total NAMES'
+      return aNamidxRoot[nLag][2].toLocaleString() + ' ' + aNamidxRoot[nLag][1].substring(1) +
+        ' / ' + aNamidxRoot[0][2].toLocaleString() + ' total NAMES'
     }
   }
 
@@ -1125,8 +1121,8 @@ oHitp.fContainersInsert = function () {
         fGo_where_clicked()
         location.href = oEltIn.href
       } else {
-        oHitp.oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
-        oHitp.oEltClicked = oEltIn
+        oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
+        oEltClicked = oEltIn
         oEltIn.classList.add('clsClicked')
         if (oEltIn.className.indexOf('clsPreview') > -1) {
           fEvtClickContent(oEvtIn)
@@ -1137,7 +1133,7 @@ oHitp.fContainersInsert = function () {
   })
 
   // insert MainPginf-cnr in Main-cnr */
-  oEltCnrMainDiv.insertBefore(oEltCnrMainPginfDiv, oEltCnrMainDiv.firstChild)
+  oEltCnrMainDiv.insertBefore(oEltCnrMainInfoDiv, oEltCnrMainDiv.firstChild)
 
   // Sets width of MainPginf-cnr
   function fWidthPginf(nPercentIn) {
@@ -1147,31 +1143,31 @@ oHitp.fContainersInsert = function () {
 
     nWidthPginf = parseInt(window.outerWidth * (nPercentIn / 100))
     nWidthPgcnt = oEltCnrMainDiv.offsetWidth - nWidthPginf
-    oEltCnrMainPginfDiv.style.width = nWidthPginf + 'px'
-    oEltCnrMainPgcntDiv.style.width = nWidthPgcnt + 'px'
-    oEltCnrMainPgcntDiv.style.left = nWidthPginf + 'px'
+    oEltCnrMainInfoDiv.style.width = nWidthPginf + 'px'
+    oEltCnrMainContentDiv.style.width = nWidthPgcnt + 'px'
+    oEltCnrMainContentDiv.style.left = nWidthPginf + 'px'
   }
-  fWidthPginf(oHitp.nCfgPageinfoWidth)
+  fWidthPginf(nCfgPageinfoWidth)
   // needed for proper zoom
   window.addEventListener('resize', function () {
-    fWidthPginf(oHitp.nCfgPageinfoWidth)
+    fWidthPginf(nCfgPageinfoWidth)
   })
 
-  // on MainPgcnt-cnr get-id, highlight toc, highlight links, remove popup, remove clicked link */
+  // on MainPgcnt-cnr get-id, highlight toc, highlight links, remove popup, remove clicked link 
   fEvtClickContent = function (oEvtIn) {
     let sIdScn = '',
       oEltScn = oEvtIn.target
 
     if (oEvtIn.target.nodeName !== 'A') {
-      oHitp.oEltClicked.classList.remove('clsClicked', 'clsTtpShow')
+      oEltClicked.classList.remove('clsClicked', 'clsTtpShow')
     }
 
     oEltCnrPreviewDiv.style.display = 'none' // remove popup
-    if (oHitp.oEltSitemenuUl) {
+    if (oEltSitemenuUl) {
       oEltCnrSiteDiv.style.display = 'none' // remove site-content
     }
     oEltCnrWidthDiv.style.display = 'none' // remove width-content
-    if (oHitp.aNamidxRoot) {
+    if (aNamidxRoot) {
       fCnrTocShow()
     }
 
@@ -1199,8 +1195,8 @@ oHitp.fContainersInsert = function () {
     /* on toc highlight the-found-id */
     Array.prototype.slice.call(document.querySelectorAll('#idTocTri a')).forEach(function (oEltAIn) {
       if (oEltAIn.getAttribute('href') === sIdScn) {
-        oHitp.oTreeUl.fTruExpandParent(oEltAIn)
-        oHitp.fTocTriHighlightNode(oEltCnrMainPginfDiv, oEltAIn)
+        oTreeUl.fTruExpandParent(oEltAIn)
+        fTocTriHighlightNode(oEltCnrMainInfoDiv, oEltAIn)
         if (oEltAIn.scrollIntoViewIfNeeded) {
           oEltAIn.scrollIntoViewIfNeeded(true)
         } else {
@@ -1211,18 +1207,18 @@ oHitp.fContainersInsert = function () {
     })
 
     // on found-id on a-elt add clsClickCnt
-    oHitp.sQrslrAClkLast = oHitp.sQrslrAClk
+    sQrslrAClkLast = sQrslrAClk
     let oElt = oEvtIn.target
-    oHitp.sQrslrAClk = '#' + oElt.id + ' a'
-    while (oHitp.sQrslrAClk === '# a') {
+    sQrslrAClk = '#' + oElt.id + ' a'
+    while (sQrslrAClk === '# a') {
       oElt = oElt.parentNode
-      oHitp.sQrslrAClk = '#' + oElt.id + ' a'
+      sQrslrAClk = '#' + oElt.id + ' a'
     }
-    if (oHitp.sQrslrAClkLast !== oHitp.sQrslrAClk) {
-      Array.prototype.slice.call(document.querySelectorAll(oHitp.sQrslrAClkLast)).forEach(function (oEltAIn) {
+    if (sQrslrAClkLast !== sQrslrAClk) {
+      Array.prototype.slice.call(document.querySelectorAll(sQrslrAClkLast)).forEach(function (oEltAIn) {
         oEltAIn.classList.remove('clsClickCnt')
       })
-      Array.prototype.slice.call(document.querySelectorAll(oHitp.sQrslrAClk)).forEach(function (oEltAIn) {
+      Array.prototype.slice.call(document.querySelectorAll(sQrslrAClk)).forEach(function (oEltAIn) {
         oEltAIn.classList.add('clsClickCnt')
       })
     }
@@ -1239,7 +1235,7 @@ oHitp.fContainersInsert = function () {
       if (!oEltScn.tagName) {
         break
       } else if (oEltScn.tagName.match(/^HEADER/i) ||
-              oEltScn.tagName.match(/^FOOTER/i)) {
+                 oEltScn.tagName.match(/^FOOTER/i)) {
         break
       }
     }
@@ -1256,8 +1252,8 @@ oHitp.fContainersInsert = function () {
     // on toc highlight the-found-id
     Array.prototype.slice.call(document.querySelectorAll('#idTocTri a')).forEach(function (oEltAIn) {
       if (oEltAIn.getAttribute('href') === sIdScn) {
-        oHitp.oTreeUl.fTruExpandParent(oEltAIn)
-        oHitp.fTocTriHighlightNode(oEltCnrMainPginfDiv, oEltAIn)
+        oTreeUl.fTruExpandParent(oEltAIn)
+        fTocTriHighlightNode(oEltCnrMainInfoDiv, oEltAIn)
         if (oEltAIn.scrollIntoViewIfNeeded) {
           oEltAIn.scrollIntoViewIfNeeded(true)
         } else {
@@ -1295,7 +1291,7 @@ oHitp.fContainersInsert = function () {
       // return false;
     })
   })
-  if (oHitp.aNamidxRoot) {
+  if (aNamidxRoot) {
     document.getElementById('idTabCntSrchDiv').style.display = 'none'
   }
 
@@ -1333,40 +1329,37 @@ oHitp.fContainersInsert = function () {
       oEltCnrPreviewDiv.innerHTML = '<section>' + document.getElementById(sId2).innerHTML + '</section>'
     } else {
       oEltCnrPreviewDiv.innerHTML = ''
-      oXHR = new XMLHttpRequest()
-      oXHR.open('GET', sId1, true)
-      oXHR.send(null)
-      oXHR.onreadystatechange = function () {
-        if (oXHR.readyState === 4 && oXHR.status === 200) { // DONE, OK
-          if (sId2) {
-            // IF #fragment url, display only this element.
-            oDoc = (new DOMParser()).parseFromString(oXHR.responseText, 'text/html')
-            oEltCnrPreviewDiv.innerHTML = '<section>' + oDoc.getElementById(sId2).innerHTML + '</section>'
+      fetch(sId1)
+      .then(response => response.text())
+      .then(data => {
+        if (sId2) {
+          // IF #fragment url, display only this element.
+          oDoc = (new DOMParser()).parseFromString(data, 'text/html')
+          oEltCnrPreviewDiv.innerHTML = '<section>' + oDoc.getElementById(sId2).innerHTML + '</section>'
+        } else {
+          // IF link to a picture, display it, not its code.
+          if (sId1.match(/(png|jpg|gif)$/)) {
+            let oImg = new Image()
+            let nIW, nIH, nPW, nPH
+            nPW = nWw / 2.2
+            nPH = nWh * 0.4
+            oImg.src = sId1
+            oImg.addEventListener('load', function () {
+              nIW = oImg.width
+              nIH = oImg.height
+              if (nIH > nPH) {
+                nIW = (nIW * nPH) / nIH
+                nIH = nPH
+              }
+              oEltCnrPreviewDiv.innerHTML = '<p class="clsCenter"><img src="' + sId1 +
+                '" width="' + nIW +
+                '" height="' + nIH + '" /></p>'
+            })
           } else {
-            // IF link to a picture, display it, not its code.
-            if (sId1.match(/(png|jpg|gif)$/)) {
-              let oImg = new Image()
-              let nIW, nIH, nPW, nPH
-              nPW = nWw / 2.2
-              nPH = nWh * 0.4
-              oImg.src = sId1
-              oImg.addEventListener('load', function () {
-                nIW = oImg.width
-                nIH = oImg.height
-                if (nIH > nPH) {
-                  nIW = (nIW * nPH) / nIH
-                  nIH = nPH
-                }
-                oEltCnrPreviewDiv.innerHTML = '<p class="clsCenter"><img src="' + sId1 +
-                  '" width="' + nIW +
-                  '" height="' + nIH + '" /></p>'
-              })
-            } else {
-              document.getElementById('idCnrPreviewDiv').innerHTML = oXHR.responseText
-            }
+            document.getElementById('idCnrPreviewDiv').innerHTML = data
           }
         }
-      }
+      })
     }
 
     oEltCnrPreviewDiv.style.top = (nWh / 2) - (nWh * 0.44 / 2) + 'px' // the height of popup is 44% of window
@@ -1394,23 +1387,23 @@ oHitp.fContainersInsert = function () {
   Array.prototype.slice.call(document.querySelectorAll('#idTocTri li > a')).forEach(function (oEltIn) {
     oEltIn.addEventListener('click', function (oEvtIn) {
       oEvtIn.preventDefault()
-      oHitp.oEltClicked.classList.remove('clsTtpShow')
+      oEltClicked.classList.remove('clsTtpShow')
       if (oEltIn.className.indexOf('clsPreview') > -1) {
         if (oEltIn.className.indexOf('clsClicked') > -1) {
           oEltIn.classList.remove('clsClicked')
           oEltCnrPreviewDiv.style.display = 'none'
           location.href = '#' + oEvtIn.target.href.split('#')[1]
-          oHitp.fTocTriHighlightNode(oEltCnrMainPginfDiv, oEltIn)
+          fTocTriHighlightNode(oEltCnrMainInfoDiv, oEltIn)
         } else {
-          oHitp.oEltClicked.classList.remove('clsClicked')
-          oHitp.oEltClicked = oEltIn
+          oEltClicked.classList.remove('clsClicked')
+          oEltClicked = oEltIn
           oEltIn.classList.add('clsClicked')
           fEvtPreview(oEvtIn)
         }
       } else {
         oEltCnrPreviewDiv.style.display = 'none'
         location.href = '#' + oEvtIn.target.href.split('#')[1]
-        oHitp.fTocTriHighlightNode(oEltCnrMainPginfDiv, oEltIn)
+        fTocTriHighlightNode(oEltCnrMainInfoDiv, oEltIn)
       }
     })
   })
@@ -1442,7 +1435,7 @@ oHitp.fContainersInsert = function () {
  *   <li>
  * </ul>
  */
-oHitp.fTocTriCreate = function () {
+let fTocTriCreate = function () {
   let
     aElm = document.body.getElementsByTagName('*'),
     aHdng = [],
@@ -1524,10 +1517,10 @@ oHitp.fTocTriCreate = function () {
 /**
  * Highlights ONE item in toc-list
  */
-oHitp.fTocTriHighlightNode = function (oEltCnrMainPginfDiv, oElm) {
+let fTocTriHighlightNode = function (oEltCnrMainInfoDiv, oElm) {
   // removes existing highlighting
   let
-    aTocTriA = oEltCnrMainPginfDiv.getElementsByTagName('a'),
+    aTocTriA = oEltCnrMainInfoDiv.getElementsByTagName('a'),
     n
 
   for (n = 0; n < aTocTriA.length; n += 1) {
@@ -1540,7 +1533,7 @@ oHitp.fTocTriHighlightNode = function (oEltCnrMainPginfDiv, oElm) {
  * Created: {2016-07-20}
  * Makes collapsible-trees, unordered-lists with clsTreeUl.
  */
-oHitp.oTreeUl = (function () {
+let oTreeUl = (function () {
   let oTreeUl = {}
 
   /**
@@ -1646,7 +1639,7 @@ oHitp.oTreeUl = (function () {
     for (n = 0; n < aTocTriLI.length; n += 1) {
       aSubnodes = aTocTriLI[n].getElementsByTagName('ul')
       if (aSubnodes.length > 0 && aSubnodes[0].style.display === 'block') {
-        oHitp.oTreeUl.fTruToggleLi(aTocTriLI[n])
+        oTreeUl.fTruToggleLi(aTocTriLI[n])
       }
     }
   }
@@ -1661,7 +1654,7 @@ oHitp.oTreeUl = (function () {
     for (n = 0; n < aTocTriLI.length; n += 1) {
       aSubnodes = aTocTriLI[n].getElementsByTagName('ul')
       if (aSubnodes.length > 0 && aSubnodes[0].style.display === 'none') {
-        oHitp.oTreeUl.fTruToggleLi(aTocTriLI[n])
+        oTreeUl.fTruToggleLi(aTocTriLI[n])
       }
     }
   }
@@ -1674,7 +1667,7 @@ oHitp.oTreeUl = (function () {
     /* expand the first ul-element */
     aSubnodes = aTocTriLI[0].getElementsByTagName('ul')
     if (aSubnodes.length > 0 && aSubnodes[0].style.display === 'none') {
-      oHitp.oTreeUl.fTruToggleLi(aTocTriLI[0])
+      oTreeUl.fTruToggleLi(aTocTriLI[0])
     }
   }
 
@@ -1684,7 +1677,7 @@ oHitp.oTreeUl = (function () {
   oTreeUl.fTruExpandParent = function (oEltAIn) {
     let oEltI, oEltUl
 
-    oHitp.oTreeUl.fTruTocCollapseAll()
+    oTreeUl.fTruTocCollapseAll()
     // the parent of a-link-elm is li-elm with parent a ul-elm.
     oEltUl = oEltAIn.parentNode.parentNode
     while (oEltUl.tagName === 'UL') {
@@ -1712,7 +1705,7 @@ oHitp.oTreeUl = (function () {
         sIcls = oEltI.className
 
       if (sIcls.indexOf('clsTriClicked') > -1) {
-        oHitp.oEltClicked.classList.remove('clsTriClicked')
+        oEltClicked.classList.remove('clsTriClicked')
         oEltI.classList.remove('clsTriClicked')
         if (oEltLi === oEltLiIn) {
           oTreeUl.fTruToggleLi(oEltLiIn)
@@ -1725,8 +1718,8 @@ oHitp.oTreeUl = (function () {
           oEltI.classList.add('clsFaCrcExp')
         }
       } else {
-        oHitp.oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
-        oHitp.oEltClicked = oEltI
+        oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
+        oEltClicked = oEltI
         oEltI.classList.add('clsTriClicked')
       }
     }
@@ -1738,143 +1731,60 @@ oHitp.oTreeUl = (function () {
 /**
  * doing: reads the-config, site-menu, namidx.lagRoot files, if exist,
  * and creates the-containers of the-page.
- *
- * The DOMContentLoaded event fires when the initial HTML document 
- * has been completely loaded and parsed,
- * WITHOUGHT waiting for stylesheets, images, and subframes to finish loading.
- * A different event, load, should be used only to detect a fully-loaded page.
  */
-document.addEventListener('DOMContentLoaded', function () {
-  // read aNamidxRoot
-  let
-    oConfig,
-    oXHR,
-    sNiRoot
+if (location.hostname !== '') {
+  // no server, display only Toc
+  sPathSite = location.origin + '/'
+}
 
-  if (location.hostname === '') {
-    // no server, display only Toc
-    oHitp.sPathSite = ''
-    oHitp.sPathSitemenu = ''
-  } else if (location.hostname === 'localhost') {
-    oHitp.sPathSite = location.origin + oHitp.sCfgHomeLocal
-    oHitp.sPathSitemenu = oHitp.sPathSite + 'filSite-structureLocal.html'
-  } else {
-    oHitp.sPathSite = location.origin + '/'
-    oHitp.sPathSitemenu = oHitp.sPathSite + 'filSite-structure.html'
-  }
-
-  if (oHitp.sPathSitemenu) {
-    // server found
-    // read config
-    oXHR = new XMLHttpRequest()
-    oXHR.open('GET', oHitp.sPathSite + 'config.json', true)
-    oXHR.send(null)
-    oXHR.onreadystatechange = function () {
-      if (oXHR.readyState === 4) {
-        if (oXHR.status === 404) {
-          // no config
-          fSitemenu()
-        } else if (oXHR.status === 200) {
-          oConfig = JSON.parse(oXHR.responseText)
-          if (oConfig.nCfgPageinfoWidth) {
-            oHitp.nCfgPageinfoWidth = oConfig.nCfgPageinfoWidth
-          }
-          if (oConfig.sCfgHomeLocal) {
-            oHitp.sCfgHomeLocal = oConfig.sCfgHomeLocal
-            if (location.hostname === 'localhost') {
-              oHitp.sPathSite = location.origin + oHitp.sCfgHomeLocal
-              oHitp.sPathSitemenu = oHitp.sPathSite + 'filSite-structureLocal.html'
-            } else if (location.hostname.length > 1) {
-              oHitp.sPathSite = location.origin + '/'
-              oHitp.sPathSitemenu = oHitp.sPathSite + 'filSite-structure.html'
-            }
-          }
-          fSitemenu()
-        }
+if (sPathSite) {
+  //read configMcs
+  await fetch(sPathSite + 'configMcs.json')
+  .then(response => response.json())
+  .then(oConfig => {
+    if (oConfig.nCfgPageinfoWidth) {
+      nCfgPageinfoWidth = oConfig.nCfgPageinfoWidth
+    }
+    if (oConfig.sCfgHomeLocal) {
+      sCfgHomeLocal = oConfig.sCfgHomeLocal
+      if (location.hostname === 'localhost') {
+        sPathSite = location.origin + sCfgHomeLocal
+        sPathStmenu = sPathSite + 'filSite-structureLocal.html'
+      } else if (location.hostname.length > 1) {
+        sPathSite = location.origin + '/'
+        sPathStmenu = sPathSite + 'filSite-structure.html'
       }
     }
-  } else {
-    // no server, display only Toc
-    oHitp.fContainersInsert()
-    oHitp.oTreeUl.fTruCreate()
-    // IF on idMetaWebpage_path paragraph we have and the clsTocExpand
-    // then the toc expands-all
-    if (document.getElementById('idMetaWebpage_path')) {
-      if (document.getElementById('idMetaWebpage_path').getAttribute('class') === 'clsTocExpand') {
-        oHitp.oTreeUl.fTruTocExpandAll()
-      }
-    }
+  })
+  .catch(sPathSite="error")
+
+  //read site-structure
+  await fetch(sPathStmenu)
+  .then(response => response.text())
+  .then(sHtml => {
+    oEltSitemenuUl = (new DOMParser()).parseFromString(sHtml, 'text/html')
+    oEltSitemenuUl = oEltSitemenuUl.querySelector('ul')
+  })
+
+  //read lagRoot
+  await fetch(sPathSite + 'dirMcs/dirNamidx/namidx.lagRoot.json')
+  .then(response => response.json())
+  .then(data => aNamidxRoot=data)
+}
+
+fContainersInsert()
+oTreeUl.fTruCreate()
+// IF on idMetaWebpage_path paragraph we have and the clsTocExpand
+// then the toc expands-all
+if (document.getElementById('idMetaWebpage_path')) {
+  if (document.getElementById('idMetaWebpage_path').getAttribute('class') === 'clsTocExpand') {
+    oTreeUl.fTruTocExpandAll()
   }
+}
+if (location.hash) {
+  location.href = location.hash
+}
 
-  /**
-   * doing: reads the-site-menu, if exists, and creates the-containers of the-page.
-   */
-  function fSitemenu() {
-    // site-menu
-    if (oHitp.sPathSitemenu) {
-      oXHR = new XMLHttpRequest()
-      oXHR.open('GET', oHitp.sPathSitemenu, true)
-      oXHR.send(null)
-      oXHR.onreadystatechange = function () {
-        if (oXHR.readyState === 4) {
-          if (oXHR.status === 404) {
-            // no site-menu
-            fNamidx()
-          } else if (oXHR.status === 200) {
-            oHitp.oEltSitemenuUl = (new DOMParser()).parseFromString(oXHR.responseText, 'text/html')
-            oHitp.oEltSitemenuUl = oHitp.oEltSitemenuUl.querySelector('ul')
-            fNamidx()
-          }
-        }
-      }
-    }
-  }
 
-  /**
-   * doing: reads the-namidx.lagRoot-file, if exists, and creates the-containers of the-page.
-   */
-  function fNamidx() {
-    // find aNamidxRoot
-    sNiRoot = oHitp.sPathSite + 'dirMcs/dirNamidx/namidx.lagRoot.json'
-    oXHR = new XMLHttpRequest()
-    oXHR.open('GET', sNiRoot, true)
-    oXHR.send(null)
-    oXHR.onreadystatechange = function () {
-      if (oXHR.readyState === 4) {
-        if (oXHR.status === 404) {
-          // no Mcs-search, file not found
-          oHitp.fContainersInsert()
-          oHitp.oTreeUl.fTruCreate()
-          // IF on idMetaWebpage_path paragraph we have and the clsTocExpand
-          // then the toc expands-all
-          if (document.getElementById('idMetaWebpage_path')) {
-            if (document.getElementById('idMetaWebpage_path').getAttribute('class') === 'clsTocExpand') {
-              oHitp.oTreeUl.fTruTocExpandAll()
-            }
-          }
-          if (location.hash) {
-            location.href = location.hash
-          }
-        } else if (oXHR.status === 200) {
-          // oHitp.aNamidxRoot contains namidx.lagRoot.json if exists
-          oHitp.aNamidxRoot = JSON.parse(oXHR.responseText)
-          oHitp.fContainersInsert()
-          oHitp.oTreeUl.fTruCreate()
-          // IF on idMetaWebpage_path paragraph we have and the clsTocExpand
-          // then the toc expands-all
-          if (document.getElementById('idMetaWebpage_path')) {
-            if (document.getElementById('idMetaWebpage_path').getAttribute('class') === 'clsTocExpand') {
-              oHitp.oTreeUl.fTruTocExpandAll()
-            }
-          }
-          if (location.hash) {
-            location.href = location.hash
-          }
-        }
-      }
-    }
-  }
-})
-
-export {oHitp}
-
+//oEltClicked, sNamidx, sSrchNext,  sSrchCrnt, sQrslrAClk, sQrslrAClkLast
+export {aNamidxRoot, aSuggestions, aVersion, bEdge, bFirefox, nCfgPageinfoWidth, fContainersInsert, fTocTriCreate, fTocTriHighlightNode, oEltSitemenuUl, oTreeUl, sCfgHomeLocal, sPathSite, sPathStmenu}

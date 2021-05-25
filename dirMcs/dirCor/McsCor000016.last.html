@@ -167,21 +167,20 @@
 <script src="../Mcsmgr/hitp.js"></script>
 -->
 <script type="module">
-  import * as oHitp from '../Mcsmgr/mHitp-await.js'
-//  let oHitp = await import('../Mcsmgr/mHitp-init.js')
-  console.log('hitp-await.js')
-//  await oHitp.fInit()
+  import * as oHitp from '../Mcsmgr/mHitp.js'
+  console.log('mHitp.js')
   //aNamidxRoot, aSuggestions, aVersion, bEdge, bFirefox, fContainersInsert,
-  //fTocTriCreate, fTocTriHighlightNode, nCfgPageinfoWidth, oEltClicked,
+  //fTocTriCreate, fTocTriHighlightNode, nCfgPageinfoWidth,
   //oEltSitemenuUl, oTreeUl, sCfgHomeLocal, sNamidx, sPathSite, sPathSitemenu,
   //sQrslrAClk, sQrslrAClkLast, sSrchCrnt, sSrchNext
-//  document.addEventListener('DOMContentLoaded', function () {
   console.log(Object.getOwnPropertyNames(oHitp).sort().join(', '))
 //  setTimeout(() => console.log(oHitp.aNamidxRoot), 500)
-  console.log(await oHitp.aNamidxRoot)
-  console.log(oHitp.sCfgHomeLocal)
+//  console.log(oHitp.aNamidxRoot)
+//  console.log(oHitp.sCfgHomeLocal)
 //  console.log(oHitp.sNamidx)
+  console.log(oHitp.bEdge)
   console.log(oHitp.sPathSite)
+  console.log(oHitp.oEltSitemenuUl)
 //  console.log(Object.getOwnPropertyNames(oHitp.oEltSitemenuUl).sort().join(', '))
 </script>
 </body>
