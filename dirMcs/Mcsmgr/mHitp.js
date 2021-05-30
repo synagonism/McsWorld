@@ -28,6 +28,7 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mHitp.js.18-1-0.2021-05-30: ctrl+F3',
     'mHitp.js.18-0-0.2021-05-25: module',
     'hitp.js.17-7-7.2021-04-28: dirMcs',
     'hitp.js.17-7-6.2021-04-02: dirMcs',
@@ -228,6 +229,15 @@ let fContainersInsert = function () {
         fCnrSearchShow()
         //select Greek-lag, BUT needs to clear the-input-field to show stats
         oEltTabCntSrchSlt.options[1].selected = true
+      }
+    })
+
+    addEventListener('keyup', function (oEvtIn) {
+      if (oEvtIn.ctrlKey && oEvtIn.key === 'F3') {
+        fCnrOntopRemove()
+        fCnrSearchShow()
+        //select Sinago-lag, BUT needs to clear the-input-field to show stats
+        oEltTabCntSrchSlt.options[2].selected = true
       }
     })
 
@@ -1784,7 +1794,6 @@ if (document.getElementById('idMetaWebpage_path')) {
 if (location.hash) {
   location.href = location.hash
 }
-
 
 //oEltClicked, sNamidx, sSrchNext,  sSrchCrnt, sQrslrAClk, sQrslrAClkLast
 export {aNamidxRoot, aSuggestions, aVersion, bEdge, bFirefox, nCfgPageinfoWidth, fContainersInsert, fTocTriCreate, fTocTriHighlightNode, oEltSitemenuUl, oTreeUl, sCfgHomeLocal, sPathSite, sPathStmenu}
