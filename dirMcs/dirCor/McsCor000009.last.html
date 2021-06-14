@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.generic-(1-1-0.2021-04-06) entity.generic</title>
+  <title>Mcs.generic-(1-2-0.2021-06-13) entity.generic</title>
   <meta name="keywords" content="generic-entity, generic, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/hitp.css">
 </head>
@@ -218,7 +218,7 @@
 </section>
 
 <section id="idGnrcMsrd">
-  <h1 id="idGnrcMsrdH1">generic.measured (measure-of-entity)
+  <h1 id="idGnrcMsrdH1">generic.measured (measure)
     <a class="clsHide" href="#idGnrcMsrdH1"></a></h1>
   <p id="idGnrcMsrddsn">description::
     <br>· <span class="clsColorRed">measure of generic-entity[a]</span> is a-specific of it[a] on which we have-done <a class="clsPreview" href="#idGnrcmsrg">measuring</a>.
@@ -238,18 +238,17 @@
     <br>====== langoSinago:
     <br>* McsSngo.kao!=measure,
     <br>====== langoGreek:
-    <br>* McsElln.μετρημένο-μέγεθος,
-    <br>* McsElln.ποσό-μεγέθους,
-    <br>* McsElln.ποσότητα-μεγέθους,
+    <br>* McsElln.μετρημένο-μέγεθος!=measure,
+    <br>* McsElln.μέτρο!=measure,
     <a class="clsHide" href="#idGnrcMsrdnam"></a></p>
 
   <section id="idGnrcMsrddng">
-  <h2 id="idGnrcMsrddngH2">01_measuring (<a class="clsPreview" href="#idGnrcmsrg">link</a>) of measure-of-entity
+  <h2 id="idGnrcMsrddngH2">01_measuring (<a class="clsPreview" href="#idGnrcmsrg">link</a>) of measure
     <a class="clsHide" href="#idGnrcMsrddngH2"></a></h2>
   </section>
 
   <section id="idGnrcMsrduom">
-  <h2 id="idGnrcMsrduomH2">02_unit-of-measurement of measure-of-entity
+  <h2 id="idGnrcMsrduomH2">02_unit-of-measurement of measure
     <a class="clsHide" href="#idGnrcMsrduomH2"></a></h2>
   <p id="idGnrcMsrduomdsn">description::
     <br>· <span class="clsColorRed">unit-of-measurement</span> of <a class="clsPreview" href="#idGnrcMsrdN">amount</a> is a-specific[a] of the-amount's generic-entity, known to all, which[a] we COMPARE with the-amount to find its relationship.
@@ -284,7 +283,7 @@
   </section>
 
   <section id="idGnrcMsrdsom">
-  <h2 id="idGnrcMsrdsomH2">03_system-of-measurement of measure-of-entity
+  <h2 id="idGnrcMsrdsomH2">03_system-of-measurement of measure
     <a class="clsHide" href="#idGnrcMsrdsomH2"></a></h2>
   <p id="idGnrcMsrdsomdsn">description::
     <br>"A system of measurement is a collection of units of measurement and rules relating them to each other.
@@ -336,12 +335,12 @@
   </section>
 
   <section id="idGnrcMsrdaqnt">
-  <h2 id="idGnrcMsrdaqntH2">04_abstract-quantity (<a class="clsPreview" href="McsCor000010.last.html#idOverview">link</a>) of measure-of-entity
+  <h2 id="idGnrcMsrdaqntH2">04_abstract-quantity (<a class="clsPreview" href="McsCor000010.last.html#idOverview">link</a>) of measure
     <a class="clsHide" href="#idGnrcMsrdaqntH2"></a></h2>
   </section>
 
   <section id="idGnrcMsrdmsr">
-  <h2 id="idGnrcMsrdmsrH2">05_measurer of measure-of-entity
+  <h2 id="idGnrcMsrdmsrH2">05_measurer of measure
     <a class="clsHide" href="#idGnrcMsrdmsrH2"></a></h2>
   <p id="idGnrcMsrdmsrdsn">description::
     <br>· measurer is the-entity that does <a class="clsPreview" href="#idGnrcmsrg">the-measuring</a>.
@@ -354,7 +353,7 @@
   </section>
 
   <section id="idGnrcMsrdrln">
-  <h2 id="idGnrcMsrdrlnH2">06_quantity-relation of measure-of-entity
+  <h2 id="idGnrcMsrdrlnH2">06_quantity-relation of measure
     <a class="clsHide" href="#idGnrcMsrdrlnH2"></a></h2>
   <p id="idGnrcMsrdrlndsn">description::
     <br>· quantity-relation is <a class="clsPreview" href="McsCor000005.last.html#idOverview">a-relation</a> among the-entities:
@@ -373,7 +372,7 @@
   </section>
 
   <section id="idGnrcMsrdrto">
-  <h2 id="idGnrcMsrdrtoH2">07-ratio of measure-of-entity
+  <h2 id="idGnrcMsrdrtoH2">07-ratio of measure
     <a class="clsHide" href="#idGnrcMsrdrtoH2"></a></h2>
   <p id="idGnrcMsrdrtodsn">description::
     <br>· ratio of a-measure-of-entity is its relation to another measure-of-entity2.
@@ -397,10 +396,15 @@
     <a class="clsHide" href="#idGnrcMsrdNdsn"></a></p>
   <p id="idGnrcMsrdNnam">name::
     <br>* McsEngl.amount,
-    <br>* McsEngl.generic.measuredNo,
-    <br>* McsEngl.measuredNo-generic,
-    <br>* McsEngl.unmeasured-generic,
-    <br>* McsEngl.unmeasured-quantity,
+    <br>* McsEngl.generic.measuredNo!⇒amount,
+    <br>* McsEngl.measuredNo-generic!⇒amount,
+    <br>* McsEngl.measuredNo-quantity!⇒amount,
+    <br>* McsEngl.unmeasured-generic!⇒amount,
+    <br>* McsEngl.unmeasured-quantity!⇒amount,
+    <br>====== langoGreek:
+    <br>* McsElln.ποσό!=amount,
+    <br>* McsElln.ποσό-μεγέθους!=amount,
+    <br>* McsElln.ποσότητα-μεγέθους!=amount,
     <a class="clsHide" href="#idGnrcMsrdNnam"></a></p>
 </section>
 
