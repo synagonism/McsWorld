@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.entity-(1-4-0.2021-06-11)</title>
+  <title>Mcs.entity-(1-6-0.2021-06-16)</title>
   <meta name="keywords" content="entity, ModelConceptSensorial, McsHitp, Synagonism">
-  <link rel="stylesheet" href="../Mcsmgr/hitp.css">
+  <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
 
 <body>
 <header id="idHeader">
   <p></p>
   <h1 id="idHeaderH1">entity|Sympan
-    <br>sensorial-concept-Mcs
+    <br>senso-concept-Mcs
     </h1>
   <p id="idHeadercrd">McsHitp-creation:: {2019-09-06},
     <a class="clsHide" href="#idHeadercrd"></a></p>
@@ -1712,7 +1712,7 @@
   <p id="idEntSmsIrgvnam">name::
     <br>* McsEngl.entity.interrogative,
     <br>* McsEngl.entitySms.interrogative,
-    <br>====== langoKmo:
+    <br>====== langoSngo:
     <br>* McsSngo.o-cio!=entity.interrogative,
     <a class="clsHide" href="#idEntSmsIrgvnam"></a></p>
   </section>
@@ -1886,7 +1886,8 @@
     <br>* McsEngl.entity.body!⇒BODY,
     <br>* McsEngl.non-relation-or-process!⇒BODY,
     <br>====== langoSinago:
-    <br>* McsSngo.o-ruo!=entity.body, from ro=relation, rio=doing,
+    <br>* McsSngo.o-roUgo!=entity.body, {2021-06-16},
+    <br>* McsSngo.roUgo!=entity.body,
     <br>====== langoGreek:
     <br>* McsElln.σώμα!=body,
     <a class="clsHide" href="#idEntBodynam"></a></p>
@@ -1914,7 +1915,8 @@
     <br>* McsEngl.process-or-relation!⇒bodyNo,
     <br>* McsEngl.relation-or-process!⇒bodyNo,
     <br>====== langoSinago:
-    <br>* McsSngo.o-ruoUgo!=entity.bodyNo,
+    <br>* McsSngo.o-ro!=entity.bodyNo,
+    <br>* McsSngo.ro!=entity.bodyNo, {2021-06-16} rao=relation rio=doing,
     <a class="clsHide" href="#idEntBodyNnam"></a></p>
 
   <section id="idEntBodyNarg">
@@ -1965,9 +1967,30 @@
     <a class="clsHide" href="#idEntBodyNdrnnam"></a></p>
   </section>
 
+  <section id="idEntBodyNsmsln">
+  <h2 id="idEntBodyNsmslnH2">semaso-relation of bodyNo
+    <a class="clsHide" href="#idEntBodyNsmslnH2"></a></h2>
+  <p id="idEntBodyNsmslndsn">description::
+    <br>× bodyNo: <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLHmnmsmsvrb">verbSms</a>.
+    <a class="clsHide" href="#idEntBodyNsmslndsn"></a></p>
+  <p id="idEntBodyNsmslnnam">name::
+    <br>* McsEngl.bodyNo'semaso-relation,
+    <a class="clsHide" href="#idEntBodyNsmslnnam"></a></p>
+  </section>
+
+  <section id="idEntBodyNlgln">
+  <h2 id="idEntBodyNlglnH2">logo-relation of bodyNo
+    <a class="clsHide" href="#idEntBodyNlglnH2"></a></h2>
+  <p id="idEntBodyNlglndsn">description::
+    <br>× bodyNo: <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLHmnmvrb">verb</a>.
+    <a class="clsHide" href="#idEntBodyNlglndsn"></a></p>
+  <p id="idEntBodyNlglnnam">name::
+    <br>* McsEngl.bodyNo'logo-relation,
+    <a class="clsHide" href="#idEntBodyNlglnnam"></a></p>
+
   <section id="idEntBodyNstx">
-  <h2 id="idEntBodyNstxH2">04_syntax of bodyNo
-    <a class="clsHide" href="#idEntBodyNstxH2"></a></h2>
+  <h3 id="idEntBodyNstxH3">04_syntax of bodyNo
+    <a class="clsHide" href="#idEntBodyNstxH3"></a></h3>
   <p id="idEntBodyNstxdsn">description::
     <br>· on every bodyNo, each lagHmnm, applies <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLHmnmsxtr">a-syntax</a> which is language dependable.
     <a class="clsHide" href="#idEntBodyNstxdsn"></a></p>
@@ -1976,6 +1999,7 @@
     <br>* McsEngl.bodyNo'syntax,
     <br>* McsEngl.syntax-of-bodyNo,
     <a class="clsHide" href="#idEntBodyNstxnam"></a></p>
+  </section>
   </section>
 
   <section id="idEntBodyNSpc">
@@ -2201,6 +2225,9 @@
   <p></p>
 </section>
 
+<script type="module">
+  import * as oHitp from '../Mcsmgr/mHitp.js'
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -2210,6 +2237,5 @@
   ga('send', 'pageview');
 </script>
 
-<script src="../Mcsmgr/hitp.js"></script>
 </body>
 </html>
