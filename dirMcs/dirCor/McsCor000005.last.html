@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.relation-(1-9-0.2021-07-15)</title>
+  <title>Mcs.relation-(1-10-0.2021-07-17)</title>
   <meta name="keywords" content="relation, relation, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -325,7 +325,7 @@
     <br>* McsEngl.addition-relation.multiplication,
     <br>* McsEngl.multiplication-relation,
     <br>* McsEngl.relation.multiplication,
-    <br>* McsEngl.times!~conj,
+    <br>* McsEngl.times!~conjEngl:multiplication-relation,
     <br>====== langoGreek:
     <br>* McsElln.σχέση-πολλαπλασιασμού!=relation.multiplication,
     <br>* McsElln.επί!~conjElln!=times,
@@ -358,7 +358,8 @@
     <a class="clsHide" href="#idRlnAdtnNbrdsn"></a></p>
   <p id="idRlnAdtnNbrnam">name::
     <br>* McsEngl.addition-relation.number,
-    <br>* McsEngl.plus!~conj,
+    <br>* McsEngl.plus!~conjEngl:addition.number,
+    <br>* McsEngl.conjEngl.plus:addition.number,
     <br>====== langoGreek:
     <br>* McsElln.συν!~conjElln!=plus,
     <a class="clsHide" href="#idRlnAdtnNbrnam"></a></p>
@@ -368,9 +369,9 @@
     <a class="clsHide" href="#idRlnAdtnNbrstxH3"></a></h3>
   <p id="idRlnAdtnNbrstxdsn">description::
     <br>* English:
-    <br>_stxEngl: _stxSbj:[[3] [(<span class="clsColorRed">plus</span>) 7]] _stxVrb:(equals) _stxSbjc:[10].
+    <br>_stxEngl: _stxSbj:[[3] [<span class="clsColorRed">(plus)</span> 7]] _stxVrb:(equals) _stxSbjc:[10].
     <br>* Greek:
-    <br>_txtEll: _stxSbj:[[διακόσια] [(<span class="clsColorRed">συν</span>) τέσσερα]] _stxVrb:(ισούται) _stxSbjc:[(με) 204].
+    <br>_txtEll: _stxSbj:[[διακόσια] [<span class="clsColorRed">(συν)</span> τέσσερα]] _stxVrb:(ισούται) _stxSbjc:[(με) 204].
     <a class="clsHide" href="#idRlnAdtnNbrstxdsn"></a></p>
   <p id="idRlnAdtnNbrstxnam">name::
     <br>* McsEngl.addition-relation.number'syntax,
@@ -389,7 +390,8 @@
     <a class="clsHide" href="#idRlnAdtnTwodsn"></a></p>
   <p id="idRlnAdtnTwonam">name::
     <br>* McsEngl.addition-relation.two-arguments,
-    <br>* McsEngl.both..and!~conj,
+    <br>* McsEngl.both..and!~conjEngl:addition.two,
+    <br>* McsEngl.conjEngl.both..and:addition.two,
     <a class="clsHide" href="#idRlnAdtnTwonam"></a></p>
 
   <section id="idRlnAdtnTwostx">
@@ -436,7 +438,8 @@
   <p id="idRlnDjcnExnam">name::
     <br>* McsEngl.disjunction-relation.exclusive,
     <br>* McsEngl.exclusive-disjunction-relation,
-    <br>* McsEngl.either..or!~conj,
+    <br>* McsEngl.either..or!~conjEngl:disjunction.exclusive,
+    <br>* McsEngl.conjEngl.either..or:disjunction.exclusive,
     <br>====== langoGreek:
     <br>* McsElln.αποκλειστική-διάξευξη!=exclusive-disjunction,
     <br>* McsElln.αποκλείουσα-διάξευξη!=exclusive-disjunction,
@@ -447,13 +450,13 @@
     <a class="clsHide" href="#idRlnDjcnExstxH3"></a></h3>
   <p id="idRlnDjcnExstxdsn">description::
     <br>* English:
-    <br>_stxEngl: _stxVrb:(Bring) _stxObj:[[(either) a Jello salad] [(or) a potato scallop]].
+    <br>_stxEngl: _stxVrb:(Bring) _stxObj:[[<span class="clsColorRed">(either)</span> a Jello salad] [<span class="clsColorRed">(or)</span> a potato scallop]].
     <a class="clsHide" href="#idRlnDjcnExstxdsn"></a></p>
   <p id="idRlnDjcnExstxnam">name::
-    <br>* McsEngl.disjunction.exlusive'syntax,
-    <br>* McsEngl.syntax.disjunction.exlusive,
+    <br>* McsEngl.conjEngl.either..or:disjunction.exclusive,
+    <br>* McsEngl.disjunction.exclusive'syntax,
+    <br>* McsEngl.syntax.disjunction.exclusive,
     <br>* McsEngl.syntax.conjEngl.either..or:disjunction,
-    <br>* McsEngl.conjEngl.either..or:disjunction,
     <a class="clsHide" href="#idRlnDjcnExstxnam"></a></p>
   </section>
   </section>
@@ -467,7 +470,8 @@
   <p id="idRlnDjcnInnam">name::
     <br>* McsEngl.disjunction-relation.inclusive,
     <br>* McsEngl.inclusive-disjunction-relation,
-    <br>* McsEngl.or!~conj,
+    <br>* McsEngl.or!~conjEngl:disjunction.inclusise,
+    <br>* McsEngl.conjEngl.or:disjunction.inclusise,
     <br>====== langoGreek:
     <br>* McsElln.εγκλείουσα-διάξευξη!=inclusive-disjunction,
     <br>* McsElln.περιεκτική-διάξευξη!=inclusive-disjunction,
@@ -478,9 +482,10 @@
   <h3 id="idRlnDjcnInstxH3">syntax of disjunction.inclusive
     <a class="clsHide" href="#idRlnDjcnInstxH3"></a></h3>
   <p id="idRlnDjcnInstxdsn">description::
-    <br>_stxEngl: _stxVrb:(Bring) _stxObj:[[a Jello salad] [(or) a potato scallop]].
+    <br>_stxEngl: _stxVrb:(Bring) _stxObj:[[a Jello salad] [<span class="clsColorRed">(or)</span> a potato scallop]].
     <a class="clsHide" href="#idRlnDjcnInstxdsn"></a></p>
   <p id="idRlnDjcnInstxnam">name::
+    <br>* McsEngl.conjEngl.or:disjunction.inclusive,
     <br>* McsEngl.disjunction.inclusive'syntax,
     <br>* McsEngl.syntax.disjunction.inclusive,
     <a class="clsHide" href="#idRlnDjcnInstxnam"></a></p>
@@ -497,7 +502,8 @@
   <p id="idRlnSbrnnam">name::
     <br>* McsEngl.relation.subtraction,
     <br>* McsEngl.subtraction-relation,
-    <br>* McsEngl.minus!~conj,
+    <br>* McsEngl.minus!~conjEngl:subtraction,
+    <br>* McsEngl.conjEngl.minus:subtraction,
     <br>====== langoGreek:
     <br>* McsElln.σχέση-αφαίρεσης!=relation.subtraction,
     <br>* McsEngl.από!~conjElln!=minus,
@@ -587,7 +593,8 @@
   <p id="idRlnAbscnam">name::
     <br>* McsEngl.absence-relation,
     <br>* McsEngl.relation.absence,
-    <br>* McsEngl.without!~conj,
+    <br>* McsEngl.without!~conjEngl:absence,
+    <br>* McsEngl.conjEngl.without:absence,
     <br>====== langoGreek:
     <br>* McsElln.χωρίς!~conjElln!=without,
     <a class="clsHide" href="#idRlnAbscnam"></a></p>
@@ -719,16 +726,21 @@
   <h2 id="idRlnExpnH2">relation.exception
     <a class="clsHide" href="#idRlnExpnH2"></a></h2>
   <p id="idRlnExpndsn">description::
-    <br>· exception-relation is a-relation in which an-entity is-missing from a-whole.
+    <br>· <span class="clsColorRed">exception-relation</span> is a-relation in which an-entity is-missing from a-whole.
     <a class="clsHide" href="#idRlnExpndsn"></a></p>
   <p id="idRlnExpnnam">name::
     <br>* McsEngl.exception-relation,
     <br>* McsEngl.relation.exception,
-    <br>* McsEngl.besides!~conj,
-    <br>* McsEngl.except!~conj,
-    <br>* McsEngl.except-for!~conj,
-    <br>* McsEngl.other-than!~conj,
-    <br>* McsEngl.outside-of!~conj,
+    <br>* McsEngl.besides!~conjEngl:exception,
+    <br>* McsEngl.conjEngl.besides:exception,
+    <br>* McsEngl.except!~conjEngl:exception,
+    <br>* McsEngl.conjEngl.except:exception,
+    <br>* McsEngl.except-for!~conjEngl:exception,
+    <br>* McsEngl.conjEngl.except-for:exception,
+    <br>* McsEngl.other-than!~conjEngl:exception,
+    <br>* McsEngl.conjEngl.other-than:exception,
+    <br>* McsEngl.outside-of!~conjEngl:exception,
+    <br>* McsEngl.conjEngl.outside-of:exception,
     <br>====== langoGreek:
     <br>* McsElln.σχέση-εξαίρεσης!=relation.exception,
     <a class="clsHide" href="#idRlnExpnnam"></a></p>
@@ -981,14 +993,14 @@
     <a class="clsHide" href="#idRlnCausestxH3"></a></h3>
   <p id="idRlnCausestxdsn">description::
     <br>* English:
-    <br>_stxEngl: _stxSbj:[it] _stxVrb:(<span class="clsColorRed">is implyed</span>) _stxCause:[from this].
-    <br>_stxEngl: _stxSbj:[we] _stxVrb:(left) _stxTime:[early] _stxCause:[(<span class="clsColorRed">because</span>) [we were worried about our sick cat]].
-    <br>_stxEngl: _stxTime:[(In) recent years] _stxSbj:[the economy] _stxVrb:(has benefited) _stxCause:[<span class="clsColorRed">from</span> a boom in tourism].
-    <br>_stxEngl: _stxSbj:[Short-term prospects] _stxVrb:(remain) _stxObj:[solid] _stxCause:[<span class="clsColorRed">so long as</span> major trading partners continue to be prosperous].
-    <br>_stxEngl: _stxCause:[<span class="clsColorRed">As</span> Ghana obtains concessional loans and pays off high-interest debt], (however), _stxSbj:[debt service] _stxVrb:(is expected) _stxSbc:[to fall below 30% of export earnings in the early 1990s].
-    <br>_stxEngl: _stxSbj:[The boss] _stxVrb:(retains) _stxSbjc:[enormous influence] _stxCause:[<span class="clsColorRed">by reason of</span> his position]. [HarperCollins]
-    <br>_stxEngl: _stxCause:[<span class="clsColorRed">on account of</span> darkness], _stxSbj:[his aim] _stxVrb:(was) _stxSbjc:[poor].
-    <br>_stxEngl: _stxSbj:[[Any man] [(proud) _stxCause:[<span class="clsColorRed">of</span> his country]]] _stxVrb:(will defend) _stxObj:[it].
+    <br>_stxEngl: _stxSbj:[it] _stxVrb:<span class="clsColorRed">(is implyed)</span> _stxCause:[from this].
+    <br>_stxEngl: _stxSbj:[we] _stxVrb:(left) _stxTime:[early] _stxCause:[<span class="clsColorRed">(because)</span> [we were worried about our sick cat]].
+    <br>_stxEngl: _stxTime:[(In) recent years] _stxSbj:[the economy] _stxVrb:(has benefited) _stxCause:[<span class="clsColorRed">(from)</span> a boom in tourism].
+    <br>_stxEngl: _stxSbj:[Short-term prospects] _stxVrb:(remain) _stxObj:[solid] _stxCause:[<span class="clsColorRed">(so long as)</span> major trading partners continue to be prosperous].
+    <br>_stxEngl: _stxCause:[<span class="clsColorRed">(As)</span> Ghana obtains concessional loans and pays off high-interest debt], (however), _stxSbj:[debt service] _stxVrb:(is expected) _stxSbc:[to fall below 30% of export earnings in the early 1990s].
+    <br>_stxEngl: _stxSbj:[The boss] _stxVrb:(retains) _stxSbjc:[enormous influence] _stxCause:[<span class="clsColorRed">(by reason of)</span> his position]. [HarperCollins]
+    <br>_stxEngl: _stxCause:[<span class="clsColorRed">(on account of)</span> darkness], _stxSbj:[his aim] _stxVrb:(was) _stxSbjc:[poor].
+    <br>_stxEngl: _stxSbj:[[Any man] [(proud) _stxCause:[<span class="clsColorRed">(of)</span> his country]]] _stxVrb:(will defend) _stxObj:[it].
     <a class="clsHide" href="#idRlnCausestxdsn"></a></p>
   <p id="idRlnCausestxnam">name::
     <br>* McsEngl.cause-relation'syntax,
@@ -1030,15 +1042,15 @@
     <a class="clsHide" href="#idRlnEfctstxH3"></a></h3>
   <p id="idRlnEfctstxdsn">description::
     <br>* English:
-    <br>_stxEngl: _stxSbj:[sleepiness] _stxVrb:(<span class="clsColorRed">causes</span>) _stxObj:[many driving accidents]. [WordNet 2.0]
-    <br>_stxEngl: _stxSbj:[The statements of earlier rabbinic scholars] _stxVrb:(<span class="clsColorRed">imply</span>) _stxSbjc:[such a belief]. [HarperCollins]
-    <br>_stxEngl: _stxSbj=cause:[The water shortage] _stxVrb:(<span class="clsColorRed">means</span>) _stxSbjc=effect:[that we have to stop taking long showers].
-    <br>_stxEngl: _stxCause:[The elephant had eaten all the hay] _stxEffect:[(<span class="clsColorRed">so</span>) we fed it oats for a week].
+    <br>_stxEngl: _stxSbj:[sleepiness] _stxVrb:<span class="clsColorRed">(causes)</span> _stxObj:[many driving accidents]. [WordNet 2.0]
+    <br>_stxEngl: _stxSbj:[The statements of earlier rabbinic scholars] _stxVrb:<span class="clsColorRed">(imply)</span> _stxSbjc:[such a belief]. [HarperCollins]
+    <br>_stxEngl: _stxSbj=cause:[The water shortage] _stxVrb:<span class="clsColorRed">(means)</span> _stxSbjc=effect:[that we have to stop taking long showers].
+    <br>_stxEngl: _stxCause:[The elephant had eaten all the hay] _stxEffect:[<span class="clsColorRed">(so)</span> we fed it oats for a week].
     <br>_stxEngl: _stxSbj:[Leap seconds] _stxVrb:(are introduced) _stxManner:[as needed] _stxObj:[(into) UTC] _stxEffect:[<span class="clsColorRed">(so as)</span> to keep UTC within 0.9 seconds of UT1, which is a version of UT with certain corrections applied].
     <br>_stxEngl: _stxManner:[Unfortunately], _stxSbj:[most modern democracies] _stxVrb:(are) _stxSbjc:[stxCause:[<span class="clsColorRed">(so)</span> large] _stxEffect:[<span class="clsColorRed">(that)</span> accountability is often difficult to achieve]].
-    <br>_stxEngl: _stxCause:[The government has cut university budgets]; _stxEffect:[(<span class="clsColorRed">consequently</span>), class sizes have been increased].
-    <br>_stxEngl: _stxCause:[Grandfather Dingsdale had sustained a broken back while working in the mines]. _stxEffect:[(<span class="clsColorRed">Consequently</span>), he spent the rest of his life in a wheelchair]. [HarperCollins]
-    <br>_stxEngl: _stxCause:[He did not have all the ingredients the recipe called for]; _stxEffect:[(<span class="clsColorRed">therefore</span>), he decided to make something else].
+    <br>_stxEngl: _stxCause:[The government has cut university budgets]; _stxEffect:[<span class="clsColorRed">(consequently)</span>, class sizes have been increased].
+    <br>_stxEngl: _stxCause:[Grandfather Dingsdale had sustained a broken back while working in the mines]. _stxEffect:[<span class="clsColorRed">(Consequently)</span>, he spent the rest of his life in a wheelchair]. [HarperCollins]
+    <br>_stxEngl: _stxCause:[He did not have all the ingredients the recipe called for]; _stxEffect:[<span class="clsColorRed">(therefore)</span>, he decided to make something else].
     <br>_stxEngl: _stxCause:[sentence.] _stxEffect:[(Thus), before a machine of any kind is intorduced into mass production, it is tested in practice.]
     <a class="clsHide" href="#idRlnEfctstxdsn"></a></p>
   <p id="idRlnEfctstxnam">name::
@@ -1084,9 +1096,9 @@
     <a class="clsHide" href="#idRlnCdnstxH3"></a></h3>
   <p id="idRlnCdnstxdsn">description::
     <br>* English:
-    <br>_stxEngl: _stxCondition:[(<span class="clsColorRed">If</span>) the supplliers deliver the parts on time], _stxEffect:[(<span class="clsColorRed">then</span>) the factory will fulfil its production plan].
-    <br>_stxEngl: _stxCondition:[(<span class="clsColorRed">When</span>) bad weather sets in], _stxSbj:[there] _stxVrb:(occurs) _stxObj:[a growth in the number of cardiovascular illnesses].
-    <br>_stxEngl: [_stxCondition:[(<span class="clsColorRed">As soon as</span>) the force on a tensed spring is released], _stxEffect:[(<span class="clsColorRed">then</span>) it returns to its original shape].]
+    <br>_stxEngl: _stxCondition:[<span class="clsColorRed">(If)</span> the supplliers deliver the parts on time], _stxEffect:[<span class="clsColorRed">(then)</span> the factory will fulfil its production plan].
+    <br>_stxEngl: _stxCondition:[<span class="clsColorRed">(When)</span> bad weather sets in], _stxSbj:[there] _stxVrb:(occurs) _stxObj:[a growth in the number of cardiovascular illnesses].
+    <br>_stxEngl: [_stxCondition:[<span class="clsColorRed">(As soon as)</span> the force on a tensed spring is released], _stxEffect:[<span class="clsColorRed">(then)</span> it returns to its original shape].]
     <a class="clsHide" href="#idRlnCdnstxdsn"></a></p>
   <p id="idRlnCdnstxnam">name::
     <br>* McsEngl.condition-relation'syntax,
@@ -1122,7 +1134,7 @@
   <p id="idRlnGoalstxdsn">description::
     <br>* English:
     <br>_stxEngl: _stxSbj:[Birds] _stxVrb:(have) _stxSbjc:[wings] _stxGoal:[<span class="clsColorRed">(in order to)</span> [fly]].
-    <br>_stxEngl: _stxGoal:[<span class="clsColorRed">to</span> make a gerund], _stxSbj:[you] _stxVrb:(add) _stxObj:["-ing''] _stxObj2:[(to) [the verb]], _stxArg:[just as with a present participle].
+    <br>_stxEngl: _stxGoal:[<span class="clsColorRed">(to)</span> make a gerund], _stxSbj:[you] _stxVrb:(add) _stxObj:["-ing''] _stxObj2:[(to) [the verb]], _stxArg:[just as with a present participle].
     <a class="clsHide" href="#idRlnGoalstxdsn"></a></p>
   <p id="idRlnGoalstxnam">name::
     <br>* McsEngl.goal-relation'syntax,
@@ -1720,7 +1732,8 @@
     <br>* McsEngl.relation.resemblance,
     <br>* McsEngl.resemblance-relation,
     <br>* McsEngl.resemble!~verbEnglB1,
-    <br>* McsEngl.like!~conj,
+    <br>* McsEngl.like!~conjEngl:resemblance,
+    <br>* McsEngl.conjEngl.like:resemblance,
     <br>====== langoGreek:
     <br>* McsElln.παρομοίωση!~η!=resemblance,
     <br>* McsElln.μοιάζω!~verbEll!=resemble,
