@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.time-(1-2-0.2021-07-04)</title>
+  <title>Mcs.time-(1-3-0.2021-07-27)</title>
   <meta name="keywords" content="time, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -77,11 +77,12 @@
     <a class="clsHide" href="#idTimerlndsn"></a></p>
   <p id="idTimerlnnam">name::
     <br>* McsEngl.relation.time,
+    <br>* McsEngl.rlnTime,
     <br>* McsEngl.time-relation,
     <br>* McsEngl.time'relation,
     <br>====== langoSinago:
     <br>* McsSngo.ro-to!=time-relation,
-    <br>* McsSngo.ta!~conjSngo!=time-relation,
+    <br>* McsSngo.ta!~conjSngo!=rlnTime,
     <a class="clsHide" href="#idTimerlnnam"></a></p>
 </section>
 
@@ -250,8 +251,8 @@
     <br>_stxEngl: _stxSbj:[we] _stxVrb:{had} _stxSbjc:[a discussion] _stxTime:[(over) lunch].
     <a class="clsHide" href="#idTimePntNstxdsn"></a></p>
   <p id="idTimePntNstxnam">name::
-    <br>* McsEngl.syntax.conjEngl.during:time,
-    <br>* McsEngl.syntax.conjEngl.over:time,
+    <br>* McsEngl.syntax.conjEngl.during:rlnTime,
+    <br>* McsEngl.syntax.conjEngl.over:rlnTime,
     <br>* McsEngl.syntax.time.interval,
     <a class="clsHide" href="#idTimePntNstxnam"></a></p>
   </section>
@@ -513,7 +514,7 @@
   <p id="idTimeRltvBfrnam">name::
     <br>* McsEngl.time.relative.before-time,
     <br>--- conjunction:
-    <br>* McsEngl.before!~conjEngl:time.before,
+    <br>* McsEngl.before!~conjEngl:rlnTimeBefore,
     <br>====== langoSinago:
     <br>* McsSngo.to-ana-to,
     <br>--- conjunction:
@@ -550,11 +551,11 @@
   <p id="idTimeRltvAftnam">name::
     <br>* McsEngl.time.relative.after-time,
     <br>--- conjunction:
-    <br>* McsEngl.after!~conjEngl:time.after,
+    <br>* McsEngl.after!~conjEngl:rlnTimeAfter,
     <br>====== langoSinago:
     <br>* McsSngo.to-ina-to,
     <br>--- conjunction:
-    <br>* McsSngo.ina!~conjSngo,
+    <br>* McsSngo.ina!~conjSngo!=rlnTimeAfter,
     <a class="clsHide" href="#idTimeRltvAftnam"></a></p>
 
   <section id="idTimeRltvAftstx">
@@ -565,7 +566,7 @@
     <br>_stxEngl: _stxTime:[(after) the launch] _stxSbj:[the commander] _stxVrb:{will give} _stxObj:[additional instructions] _stxTowhom:[to the astronaut].
     <a class="clsHide" href="#idTimeRltvAftstxdsn"></a></p>
   <p id="idTimeRltvAftstxnam">name::
-    <br>* McsEngl.syntax.conjEngl.after:time,
+    <br>* McsEngl.syntax.conjEngl.after:rlnTime,
     <br>* McsEngl.syntax.time.relative.after-time,
     <a class="clsHide" href="#idTimeRltvAftstxnam"></a></p>
   </section>
@@ -623,7 +624,7 @@
     <br>* McsEngl.around-time,
     <br>* McsEngl.time.around-time,
     <br>* McsEngl.time.relative.around-time,
-    <br>* McsEngl.around!~conjEngl:time.around,
+    <br>* McsEngl.around!~conjEngl:rlnTimeAround,
     <br>====== langoGreek:
     <br>* McsElln.γύρω-στο!~conjElln!=around,
     <br>* McsElln.περί!~conjElln!=around,
@@ -641,8 +642,8 @@
     <br>* McsEngl.time.between-time,
     <br>* McsEngl.time.relative.between-time,
     <br>--- conjunction:
-    <br>* McsEngl.between..and!~conjEngl:time.between,
-    <br>* McsEngl.until!~conjEngl:time.between,
+    <br>* McsEngl.between..and!~conjEngl:rlnTimeBetween,
+    <br>* McsEngl.until!~conjEngl:rlnTimeBetween,
     <a class="clsHide" href="#idTimeRltvBtnnam"></a></p>
 
   <section id="idTimeRltvBtnstx">
@@ -654,9 +655,9 @@
     <br>_stxEngl: _stxSbj:[they] _stxVrb:{will continue} _stxWhat:[_stxVrb:{to do} _stxManner:[so] _stxTime:[(until) 1998]].
     <a class="clsHide" href="#idTimeRltvBtnstxdsn"></a></p>
   <p id="idTimeRltvBtnstxnam">name::
-    <br>* McsEngl.syntax.conjEngl.between..and:time,
+    <br>* McsEngl.syntax.conjEngl.between..and:rlnTime,
+    <br>* McsEngl.syntax.conjEngl.until:rlnTime,
     <br>* McsEngl.syntax.time.relative.between-time,
-    <br>* McsEngl.syntax.conjEngl.until:time,
     <a class="clsHide" href="#idTimeRltvBtnstxnam"></a></p>
   </section>
   </section>
@@ -671,6 +672,45 @@
     <br>* McsEngl.time-line,
     <br>* McsEngl.time.relative.sequence,
     <a class="clsHide" href="#idTimeRltvSqcnam"></a></p>
+
+  <section id="idTimeRltvSqcstx">
+  <h3 id="idTimeRltvSqcstxH3">syntax of time.relative.sequence
+    <a class="clsHide" href="#idTimeRltvSqcstxH3"></a></h3>
+  <p id="idTimeRltvSqcstxdsn">description::
+    <br>_stxEngl: [Pat _stxVrb:{works} hard] [<span class="clsColorRed">(and then)</span> _stxVrb:{plays} squash].
+    <br>_stxEngl: [The crowd _stxVrb:{waited} patiently for three hours]; [<span class="clsColorRed">(finally)</span>, the doors to the stadium were opened].
+    <br>_stxEngl: <span class="clsColorRed">(Then)</span> _stxSbj:[a special committee] _stxVrb:{is appointed} by the chairman.
+    <br>
+    <br>_stxEngl: _stxTime:[<span class="clsColorRed">(After)</span> she had learned to drive], _stxSbj:[Alice] _stxVrb:{felt} _stxSbjc:[more independent].
+    <br>_stxEngl: _stxTime:[<span class="clsColorRed">(First)</span>] _stxSbj:[we] _stxVrb:{ask} _stxObj:[whether there is any item on the list which is a necessary condition for calling a thing a "lemon"].
+    <br>_stxEngl: _stxTime:[<span class="clsColorRed">(before)</span> a machine of any kind is introduced into mass production], _stxSbj:[it] _stxVrb:{is tested} _stxSpace:[(in) practice].
+    <a class="clsHide" href="#idTimeRltvSqcstxdsn"></a></p>
+  <p id="idTimeRltvSqcstxnam">name::
+    <br>* McsEngl.syntax.conjElln.αφού-πρώτα:rlnTime.sequence,
+    <br>* McsEngl.syntax.conjElln.εν-συνεχεία:rlnTime.sequence,
+    <br>* McsEngl.syntax.conjElln.έπειτα:rlnTime.sequence,
+    <br>* McsEngl.syntax.conjElln.μετά:rlnTime.sequence,
+    <br>* McsEngl.syntax.conjElln.προτού:rlnTime.sequence,
+    <br>* McsEngl.syntax.conjEngl.after:rlnTime.sequence,
+    <br>* McsEngl.syntax.conjEngl.and-then:rlnTime.sequence,
+    <br>* McsEngl.syntax.conjEngl.before:rlnTime.sequence,
+    <br>* McsEngl.syntax.conjEngl.finally:rlnTime.sequence,
+    <br>* McsEngl.syntax.conjEngl.first:rlnTime.sequence,
+    <br>* McsEngl.syntax.conjEngl.then:rlnTime.sequence,
+    <br>* McsEngl.syntax.time.relative.sequence,
+    <a class="clsHide" href="#idTimeRltvSqcstxnam"></a></p>
+  </section>
+
+  <section id="idTimeRltvRptg">
+  <h3 id="idTimeRltvRptgH3">time.relative.repeating
+    <a class="clsHide" href="#idTimeRltvRptgH3"></a></h3>
+  <p id="idTimeRltvRptgdsn">description::
+    <br>· time, relative, regular sequence.
+    <a class="clsHide" href="#idTimeRltvRptgdsn"></a></p>
+  <p id="idTimeRltvRptgnam">name::
+    <br>* McsEngl.time.relative.repeating,
+    <a class="clsHide" href="#idTimeRltvRptgnam"></a></p>
+  </section>
   </section>
 
   <section id="idTimeRltvSnhn">
