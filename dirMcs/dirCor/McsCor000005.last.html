@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.relation-(1-16-0.2021-08-01)</title>
+  <title>Mcs.relation-(1-19-0.2021-08-04)</title>
   <meta name="keywords" content="relation, relation, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -165,13 +165,22 @@
     <br>* McsEngl.relation.specific,
     <a class="clsHide" href="#idRlnSpcnam"></a></p>
   <p id="idRlnSpcP1">specific::
-    <br>* semaso-relation,
-    <br>* sequenced-relation,
-    <br>* sequencedNo-relation,
+    <br>* <a class="clsPreview" href="#idRlnSms">semaso-relation</a>,
+    <br>===
+    <br>* <a class="clsPreview" href="#idRlnSqcd">sequenced-relation</a>,
+    <br>* <a class="clsPreview" href="#idRlnSqcdN">sequencedNo-relation</a>,
+    <br>===
+    <br>* <a class="clsPreview" href="#idRlnArg2">argument-two--relation</a>,
+    <br>* <a class="clsPreview" href="#idRlnArg3">argument-tree--relation</a>,
+    <br>* <a class="clsPreview" href="#idRlnArgN">argument-n--relation</a>,
+    <br>===
+    <br>* <a class="clsPreview" href="#idRlnUnn">union-relation</a>,
+    <br>* <a class="clsPreview" href="#idRlnDjcn">disunion-relation</a>,
     <br>===
     <br>* <a class="clsPreview" href="#idRlnCslt">cause-effect--relation</a>,
     <br>* <a class="clsPreview" href="McsCor000009.last.html#idGnrcMsrdrln">quantity-relation</a>,
     <br>* <a class="clsPreview" href="McsCor000007.last.html#idSpcrln">space-relation</a>,
+    <br>* <a class="clsPreview" href="#idRlnSbrn">subtracting-relation</a>,
     <br>* <a class="clsPreview" href="McsCor000006.last.html#idTimerln">time-relation</a>,
     <a class="clsHide" href="#idRlnSpcP1"></a></p>
 </section>
@@ -188,9 +197,9 @@
     <br>* McsEngl.semaso-relation!⇒rlnSemaso,
     <a class="clsHide" href="#idRlnSmsnam"></a></p>
   <p id="idRlnSmsSpc">specific::
-    <br>* <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLHmnmsmsnunRln">relation.semaso.noun</a>,
-    <br>* <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLHmnmsmsvrbRltn">relation.semaso.verb</a>,
-    <br>* <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLHmnmsmscnj">relation.semaso.conjunction</a>,
+    <br>* <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLHmnmsmsnunRnet">relation-entity--semaso-noun</a>,
+    <br>* <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLHmnmsmsvrbRltn">relation-entity--semaso-verb</a>,
+    <br>* <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLHmnmsmscnj">semaso-conjunction</a>,
     <a class="clsHide" href="#idRlnSmsSpc"></a></p>
 </section>
 
@@ -350,6 +359,7 @@
     <br>* McsEngl.addition-relation.multiplication!⇒rlnMultiplication,
     <br>* McsEngl.multiplication-relation!⇒rlnMultiplication,
     <br>* McsEngl.relation.multiplication!⇒rlnMultiplication,
+    <br>* McsEngl.rlnAdditionMultiplication!⇒rlnMultiplication,
     <br>* McsEngl.rlnMultiplication,
     <br>* McsEngl.times!~conjEngl:rlnMultiplication,
     <br>====== langoGreek:
@@ -451,6 +461,11 @@
     <br>====== langoGreek:
     <br>* McsElln.συμπληρωματική-σχέση!=rlnComplement,
     <a class="clsHide" href="#idRlnCpltnam"></a></p>
+  <p id="idRlnCpltstr">specific-tree-of-rlnComplement::
+    <br>* entity-rlnComplement,
+    <br>* generic-rlnComplement,
+    <br>* whole-rlnComplement,
+    <a class="clsHide" href="#idRlnCpltstr"></a></p>
   </section>
 </section>
 
@@ -543,13 +558,12 @@
     <a class="clsHide" href="#idRlnDjcnInstxnam"></a></p>
   </section>
   </section>
-</section>
 
-<section id="idRlnSbrn">
-  <h1 id="idRlnSbrnH1">relation.subtraction
-    <a class="clsHide" href="#idRlnSbrnH1"></a></h1>
+  <section id="idRlnSbrn">
+  <h2 id="idRlnSbrnH2">relation.subtracting
+    <a class="clsHide" href="#idRlnSbrnH2"></a></h2>
   <p id="idRlnSbrndsn">description::
-    <br>· <span class="clsColorRed">subtraction-relation</span> is the-relation among the-arguments of a-subtraction-action (= removing attribute of entity).
+    <br>· <span class="clsColorRed">subtraction-relation</span> is the-relation among the-arguments of <a class="clsPreview" href="McsCor000004.last.html#idDngSbrt">a-subtraction-action (= removing attribute of entity)</a>.
     <a class="clsHide" href="#idRlnSbrndsn"></a></p>
   <p id="idRlnSbrnnam">name::
     <br>* McsEngl.relation.subtraction!⇒rlnSubtraction,
@@ -564,8 +578,8 @@
     <a class="clsHide" href="#idRlnSbrnnam"></a></p>
 
   <section id="idRlnSbrnarg">
-  <h2 id="idRlnSbrnargH2">argument of rlnSubtraction
-    <a class="clsHide" href="#idRlnSbrnargH2"></a></h2>
+  <h3 id="idRlnSbrnargH3">argument of rlnSubtraction
+    <a class="clsHide" href="#idRlnSbrnargH3"></a></h3>
   <p id="idRlnSbrnargdsn">description::
     <br>* minuend = the-number from which the-subtrahend is subtracted,
     <br>* subtrahend = the-number to be-subtracted from the-minuend,
@@ -579,8 +593,8 @@
     <a class="clsHide" href="#idRlnSbrnargnam"></a></p>
 
   <section id="idRlnSbrnmnd">
-  <h3 id="idRlnSbrnmndH3">argRlnSubtraction.minuend
-    <a class="clsHide" href="#idRlnSbrnmndH3"></a></h3>
+  <h4 id="idRlnSbrnmndH4">argRlnSubtraction.minuend
+    <a class="clsHide" href="#idRlnSbrnmndH4"></a></h4>
   <p id="idRlnSbrnmnddsn">description::
     <br>· minuend = the-number from which the-subtrahend is subtracted.
     <a class="clsHide" href="#idRlnSbrnmnddsn"></a></p>
@@ -593,8 +607,8 @@
   </section>
 
   <section id="idRlnSbrnsbhd">
-  <h3 id="idRlnSbrnsbhdH3">argRlnSubtraction.subtrahend
-    <a class="clsHide" href="#idRlnSbrnsbhdH3"></a></h3>
+  <h4 id="idRlnSbrnsbhdH4">argRlnSubtraction.subtrahend
+    <a class="clsHide" href="#idRlnSbrnsbhdH4"></a></h4>
   <p id="idRlnSbrnsbhddsn">description::
     <br>· subtrahend = the-number to be-subtracted from the-minuend.
     <a class="clsHide" href="#idRlnSbrnsbhddsn"></a></p>
@@ -607,8 +621,8 @@
   </section>
 
   <section id="idRlnSbrndfrc">
-  <h3 id="idRlnSbrndfrcH3">argRlnSubtraction.difference
-    <a class="clsHide" href="#idRlnSbrndfrcH3"></a></h3>
+  <h4 id="idRlnSbrndfrcH4">argRlnSubtraction.difference
+    <a class="clsHide" href="#idRlnSbrndfrcH4"></a></h4>
   <p id="idRlnSbrndfrcdsn">description::
     <br>· difference | remainder = the number that remains after subtraction; the number that when added to the subtrahend gives the minuend.
     <a class="clsHide" href="#idRlnSbrndfrcdsn"></a></p>
@@ -623,8 +637,8 @@
   </section>
 
   <section id="idRlnSbrnsbtr">
-  <h3 id="idRlnSbrnsbtrH3">argRlnSubtraction.subtracter
-    <a class="clsHide" href="#idRlnSbrnsbtrH3"></a></h3>
+  <h4 id="idRlnSbrnsbtrH4">argRlnSubtraction.subtracter
+    <a class="clsHide" href="#idRlnSbrnsbtrH4"></a></h4>
   <p id="idRlnSbrnsbtrdsn">description::
     <br>· subtracter = the-entity that does the-subtraction.
     <a class="clsHide" href="#idRlnSbrnsbtrdsn"></a></p>
@@ -634,6 +648,7 @@
     <br>====== langoGreek:
     <br>* McsElln.αφαιρέτης!=subtracter,
     <a class="clsHide" href="#idRlnSbrnsbtrnam"></a></p>
+  </section>
   </section>
   </section>
 
@@ -704,7 +719,7 @@
     <br>· dividend = a number to be divided by another number.
     <a class="clsHide" href="#idRlnDvsndvddsn"></a></p>
   <p id="idRlnDvsndvdnam">name::
-    <br>* McsEngl.dividend-of-division, /dívident/
+    <br>* McsEngl.dividend-of-division, /dνvident/
     <br>* McsEngl.argRlnDivision.dividend,
     <br>====== langoGreek:
     <br>* McsElln.διαιρετέος!=dividend,
@@ -764,7 +779,7 @@
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=divider]
     <a class="clsHide" href="#idRlnDvsnddrdsn"></a></p>
   <p id="idRlnDvsnddrnam">name::
-    <br>* McsEngl.divider, /diváider/
+    <br>* McsEngl.divider, /divαider/
     <br>* McsEngl.argRlnDivision.divider,
     <br>====== langoGreek:
     <br>* McsElln.διαιρών!~ο!=divider,
@@ -859,19 +874,20 @@
     <br>[WordNet 1.6]
     <a class="clsHide" href="#idRlnCsltdsn"></a></p>
   <p id="idRlnCsltnam">name::
-    <br>* McsEngl.causal-link,
-    <br>* McsEngl.causality,
-    <br>* McsEngl.cause-effect-undirected-relation,
-    <br>* McsEngl.condition-relation,
-    <br>* McsEngl.relation.cause-effect-sequencedNo,
-    <br>* McsEngl.relation.condition,
+    <br>* McsEngl.causal-link!⇒rlnCausality,
+    <br>* McsEngl.causality!⇒rlnCausality,
+    <br>* McsEngl.cause-effect-undirected-relation!⇒rlnCausality,
+    <br>* McsEngl.condition-relation!⇒rlnCausality,
+    <br>* McsEngl.relation.cause-effect-sequencedNo!⇒rlnCausality,
+    <br>* McsEngl.relation.condition!⇒rlnCausality,
+    <br>* McsEngl.rlnCausality,
     <br>====== langoSinago:
-    <br>* McsSngo.ro-kozo!=causality,
+    <br>* McsSngo.ro-kozo!=rlnCausality,
     <br>====== langoGreek:
-    <br>* McsElln.αιτιακή-κατάσταση,
-    <br>* McsElln.αιτιώδης-σχέση,
-    <br>* McsElln.σχέση.αιτιακή,
-    <br>* McsElln.σχέση-αιτίας-αποτελέσματος,
+    <br>* McsElln.αιτιακή-κατάσταση!=rlnCausality,
+    <br>* McsElln.αιτιώδης-σχέση!=rlnCausality,
+    <br>* McsElln.σχέση.αιτιακή!=rlnCausality,
+    <br>* McsElln.σχέση-αιτίας-αποτελέσματος!=rlnCausality,
     <a class="clsHide" href="#idRlnCsltnam"></a></p>
 
   <section id="idRlnCsltkoz">
@@ -888,7 +904,7 @@
     <br>====== langoSinago:
     <br>* McsSngo.kozo!=cause,
     <br>====== langoGreek:
-    <br>* McsElln.αιτία!~η!=cause,
+    <br>* McsElln.αιτία!ῆ!=cause,
     <br>* McsElln.παράγοντας!~ο!=cause,
     <a class="clsHide" href="#idRlnCsltkoznam"></a></p>
 
@@ -1080,8 +1096,10 @@
   <h3 id="idRlnCausestxH3">syntax of rlnCuase
     <a class="clsHide" href="#idRlnCausestxH3"></a></h3>
   <p id="idRlnCausestxdsn">description::
-    <br>* English:
-    <br>_stxEngl: _stxSbj:[it] _stxVrb:<span class="clsColorRed">(is implyed)</span> _stxCause:[from this].
+    <br>* caseDative:
+    <br>_stxElla: _stxCause:<span class="clsColorRed">[λιμῷ]</span> _stxVrb:{ἀπέθανον}.
+    <br>
+    <br>* conjunction:
     <br>_stxEngl: _stxSbj:[we] _stxVrb:{left} _stxTime:[early] _stxCause:[<span class="clsColorRed">(because)</span> [we were worried about our sick cat]].
     <br>_stxEngl: _stxTime:[(In) recent years] _stxSbj:[the economy] _stxVrb:{has benefited} _stxCause:[<span class="clsColorRed">(from)</span> a boom in tourism].
     <br>_stxEngl: _stxSbj:[Short-term prospects] _stxVrb:{remain} _stxObj:[solid] _stxCause:[<span class="clsColorRed">(so long as)</span> major trading partners continue to be prosperous].
@@ -1089,13 +1107,15 @@
     <br>_stxEngl: _stxSbj:[The boss] _stxVrb:{retains} _stxSbjc:[enormous influence] _stxCause:[<span class="clsColorRed">(by reason of)</span> his position]. [HarperCollins]
     <br>_stxEngl: _stxCause:[<span class="clsColorRed">(on account of)</span> darkness], _stxSbj:[his aim] _stxVrb:{was} _stxSbjc:[poor].
     <br>_stxEngl: _stxSbj:[[Any man] [(proud) _stxCause:[<span class="clsColorRed">(of)</span> his country]]] _stxVrb:{will defend} _stxObj:[it].
+    <br>
+    <br>* verb:
+    <br>_stxEngl: _stxSbj:[it] _stxVrb:<span class="clsColorRed">{is implyed}</span> _stxCause:[from this].
     <a class="clsHide" href="#idRlnCausestxdsn"></a></p>
   <p id="idRlnCausestxnam">name::
     <br>* McsEngl._stxCause,
     <br>* McsEngl.cause-relation'syntax,
     <br>* McsEngl.rlnCause'syntax,
-    <br>* McsEngl.syntax.rlnCause,
-    <br>* McsEngl.syntax.verbEngl.am-implyed:rlnCause,
+    <br>* McsEngl.syntax.caseDativeElla:rlnCause,
     <br>* McsEngl.syntax.conjEngl.as:rlnCause,
     <br>* McsEngl.syntax.conjEngl.because:rlnCause,
     <br>* McsEngl.syntax.conjEngl.by-reason-of:rlnCause,
@@ -1103,6 +1123,8 @@
     <br>* McsEngl.syntax.conjEngl.of:rlnCause,
     <br>* McsEngl.syntax.conjEngl.on-account-of:rlnCause,
     <br>* McsEngl.syntax.conjEngl.so-long-as:rlnCause,
+    <br>* McsEngl.syntax.rlnCause,
+    <br>* McsEngl.syntax.verbEngl.am-implyed:rlnCause,
     <a class="clsHide" href="#idRlnCausestxnam"></a></p>
   </section>
   </section>
@@ -1249,8 +1271,8 @@
     <br>====== langoSinago:
     <br>* McsSngo.ro-anto!=relation.dialectic-antithesis,
     <br>====== langoGreek:
-    <br>* McsElln.αντίθεση-διαλεκτική!~η,
-    <br>* McsElln.διαλεκτική-αντίθεση!~η,
+    <br>* McsElln.αντίθεση-διαλεκτική!ῆ,
+    <br>* McsElln.διαλεκτική-αντίθεση!ῆ,
     <a class="clsHide" href="#idRlnDcasnam"></a></p>
 
   <section id="idRlnDcascpltarg">
@@ -1497,106 +1519,6 @@
   </section>
 </section>
 
-<section id="idRlnOpsn">
-  <h1 id="idRlnOpsnH1">relation.opposition
-    <a class="clsHide" href="#idRlnOpsnH1"></a></h1>
-  <p id="idRlnOpsndsn">description::
-    <br>· opposition is <a class="clsPreview" href="#idRlnArg2">a-binary-relation</a> with <a class="clsPreview" href="#idRlnarg">arguments</a> we consider with contrary|reverse|opposite attributes.
-    <br>===
-    <br>"(n) opposition, oppositeness (the relation between opposed entities)"
-    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=opposition]
-    <br>"(n) reverse, contrary, opposite (a relation of direct opposition) "we thought Sue was older than Bill but just the reverse was true""
-    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=opposite]
-    <a class="clsHide" href="#idRlnOpsndsn"></a></p>
-  <p id="idRlnOpsnnam">name::
-    <br>* McsEngl.opposition-relation!⇒rlnOpposition,
-    <br>* McsEngl.relation.opposition!⇒rlnOpposition,
-    <br>* McsEngl.rlnOpposition,
-    <br>====== langoSinago:
-    <br>* McsSngo.ro-no!=rlnOpposition,
-    <a class="clsHide" href="#idRlnOpsnnam"></a></p>
-
-  <section id="idRlnOpsnarg">
-  <h2 id="idRlnOpsnargH2">argument of relation.opposition
-    <a class="clsHide" href="#idRlnOpsnargH2"></a></h2>
-  <p id="idRlnOpsnargdsn">description::
-    <br>· opposite is an-argument of <a class="clsPreview" href="#idRlnOpsn">opposition-relation</a>.
-    <br>* entity1,
-    <br>* entity2,
-    <br>* ..,
-    <br>* entityN,
-    <a class="clsHide" href="#idRlnOpsnargdsn"></a></p>
-  <p id="idRlnOpsnargnam">name::
-    <br>* McsEngl.opposite,
-    <a class="clsHide" href="#idRlnOpsnargnam"></a></p>
-  </section>
-
-  <section id="idRlnOpsncplt">
-  <h2 id="idRlnOpsncpltH2">complement of arg of relation.opposition
-    <a class="clsHide" href="#idRlnOpsncpltH2"></a></h2>
-  <p id="idRlnOpsncpltdsn">description::
-    <br>· opposite-complement is the-arguments-complement of an-argument of opposition-relation.
-    <a class="clsHide" href="#idRlnOpsncpltdsn"></a></p>
-  <p id="idRlnOpsncpltnam">name::
-    <br>* McsEngl.complement.opposite,
-    <br>* McsEngl.opposite-complement,
-    <br>====== langoSinago:
-    <br>* McsSngo.uno!=complement.opposite,
-    <a class="clsHide" href="#idRlnOpsncpltnam"></a></p>
-  </section>
-
-  <section id="idRlnOpsnstx">
-  <h2 id="idRlnOpsnstxH2">syntax of relation.opposition
-    <a class="clsHide" href="#idRlnOpsnstxH2"></a></h2>
-  <p id="idRlnOpsnstxdsn">description::
-    <br>_stxEngl: [<span class="clsColorRed">(Although)</span> she _stxVrb:{gave} hundreds of zucchini away], [the enormous mound left over _stxVrb:{frightened} her].
-    <br>_stxEngl: [the path was dark], [<span class="clsColorRed">(yet)</span> [I] [slowly] (found) [my way]].
-    <br>_stxEngl: [(In) World War II] [the Japanese] (launched) [balloon bombs] [(against) North America]. [WordNet 2.0]
-    <br>_stxEngl: [He] (survived) [the cancer] [<span class="clsColorRed">(against)</span> all odds].
-    <br>_stxEngl: [(Although) [[the play] (was [nearly] finished)]], [_stxSbj:[we] _stxVrb:{left} _stxTime:[early] _stxCause:[(because) [we (were worried) about our sick cat]]].
-    <br>_stxEngl: [We (would like) to stay longer], [<span class="clsColorRed">(but)</span> we must leave].
-    <br>_stxEngl: [<span class="clsColorRed">(Despite)</span> these constraints], [real GDP] (averaged) [about 3.8%] [annually] [during 1985-88].
-    <br>_stxEngl: [<span class="clsColorRed">(Even so)</span>, [[the economy] _stxVrb:{grew} [rapidly] [(during) the late 1970s and early 1980s]].]
-    <br>_stxEngl:[ A majority of the population still depends on agriculture and livestock for a livelihood,] [<span class="clsColorRed">(even though)</span> most of the nomads and many subsistence farmers were forced into the cities by recurrent drought in 1983].
-    <br>_stxEngl: [My roommate usually _stxVrb:{listens} to rock music;] [<span class="clsColorRed">(however)</span>, he also _stxVrb:{likes} John Coltrane and several other jazz musicians].
-    <br>_stxEngl: [[Coastal climate], [<span class="clsColorRed">(though)</span> temperate],] _stxVrb:{is} [damp].
-    <br>
-    <br>_stxEngl: [statements] [[which], [although literally true], (are) [nevertheless] [misleading]]
-    <br>_stxEngl: _stxSbj=entity1:[The symbol V], _stxArg:[(for) example], _stxVrb:{could have been replaced} _stxArg=entity2:[(by) [saw [<span class="clsColorRed">(instead of)</span> chased]]].
-    <a class="clsHide" href="#idRlnOpsnstxdsn"></a></p>
-  <p id="idRlnOpsnstxnam">name::
-    <br>* McsEngl._stxOpposition,
-    <br>* McsEngl.relation.opposition'syntax,
-    <br>* McsEngl.syntax.rlnOpposition,
-    <br>* McsEngl.syntax.conjEngl.against:rlnOpposition,
-    <br>* McsEngl.syntax.conjEngl.although:rlnOpposition,
-    <br>* McsEngl.syntax.conjEngl.but:rlnOpposition,
-    <br>* McsEngl.syntax.conjEngl.despite:rlnOpposition,
-    <br>* McsEngl.syntax.conjEngl.even-so:rlnOpposition,
-    <br>* McsEngl.syntax.conjEngl.even-though:rlnOpposition,
-    <br>* McsEngl.syntax.conjEngl.however:rlnOpposition,
-    <br>* McsEngl.syntax.conjEngl.instead-of:rlnOpposition,
-    <br>* McsEngl.syntax.conjEngl.though:rlnOpposition,
-    <br>* McsEngl.syntax.conjEngl.yet:rlnOpposition,
-    <a class="clsHide" href="#idRlnOpsnstxnam"></a></p>
-  </section>
-
-  <section id="idRlnOpsnSpc">
-  <h2 id="idRlnOpsnSpcH2">relation.opposition.SPECIFIC
-    <a class="clsHide" href="#idRlnOpsnSpcH2"></a></h2>
-  <p id="idRlnOpsnSpcdsn">description::
-    <br>* high, middle, low,
-    <br>* complex, middle, simple,
-    <br>* strong, middle, weak,
-    <br>* start, middle, end,
-    <br>* past, present, future,
-    <a class="clsHide" href="#idRlnOpsnSpcdsn"></a></p>
-  <p id="idRlnOpsnSpcnam">name::
-    <br>* McsEngl.relation.opposition.specific,
-    <a class="clsHide" href="#idRlnOpsnSpcnam"></a></p>
-  </section>
-</section>
-
 <section id="idRlnPssn">
   <h1 id="idRlnPssnH1">relation.possession
     <a class="clsHide" href="#idRlnPssnH1"></a></h1>
@@ -1742,6 +1664,21 @@
     <br>* McsEngl.syntax.conjEngl.and-so-on:rlnSameness,
     <br>* McsEngl.syntax.rlnSameness,
     <a class="clsHide" href="#idRlnSmnsstxnam"></a></p>
+  </section>
+
+  <section id="idRlnAfmn">
+  <h2 id="idRlnAfmnH2">rlnSameness.affirmation
+    <a class="clsHide" href="#idRlnAfmnH2"></a></h2>
+  <p id="idRlnAfmndsn">description::
+    <br>· agreeing or consenting.
+    <a class="clsHide" href="#idRlnAfmndsn"></a></p>
+  <p id="idRlnAfmnnam">name::
+    <br>* McsEngl.affirmation!⇒rlnAffirmation,
+    <br>* McsEngl.affirmative-relation!⇒rlnAffirmation,
+    <br>* McsEngl.relation.affirmation!⇒rlnAffirmation,
+    <br>* McsEngl.rlnAffirmation,
+    <br>* McsEngl.rlnSameness.affirmation!⇒rlnAffirmation,
+    <a class="clsHide" href="#idRlnAfmnnam"></a></p>
   </section>
 
   <section id="idRlnTtlg">
@@ -1900,7 +1837,7 @@
     <br>* McsEngl.rlnImitating,
     <br>* McsEngl.rlnSameness.imitation!⇒rlnImitating,
     <br>====== langoGreek:
-    <br>* McsElln.μίμηση!~η!=imitation,
+    <br>* McsElln.μίμηση!ῆ!=imitation,
     <a class="clsHide" href="#idRlnImtnnam"></a></p>
   </section>
 
@@ -1919,7 +1856,7 @@
     <br>* McsEngl.resemble!~verbEnglB1:rlnResemblance,
     <br>* McsEngl.like!~conjEngl:rlnResemblance,
     <br>====== langoGreek:
-    <br>* McsElln.παρομοίωση!~η!=rlnResemblance,
+    <br>* McsElln.παρομοίωση!ῆ!=rlnResemblance,
     <br>* McsElln.μοιάζω!~verbElln!=rlnResemblance,
     <br>* McsElln.σαν!~conjElln!=like,
     <br>* McsElln.ως!~conjElln!=like,
@@ -1968,6 +1905,132 @@
     <br>* McsEngl.relation.samenessNo,
     <br>* McsEngl.samenessNo-relation,
     <a class="clsHide" href="#idRlnSmnsNnam"></a></p>
+
+  <section id="idRlnInqt">
+  <h2 id="idRlnInqtH2">relation.inequality
+    <a class="clsHide" href="#idRlnInqtH2"></a></h2>
+  <p id="idRlnInqtdsn">description::
+    <br>· the-negation of <a class="clsPreview" href="#idRlnEqlt">equality</a>.
+    <a class="clsHide" href="#idRlnInqtdsn"></a></p>
+  <p id="idRlnInqtnam">name::
+    <br>* McsEngl.inequality!⇒rlnInequality,
+    <br>* McsEngl.relation.inequality!⇒rlnInequality,
+    <br>* McsEngl.rlnInequality,
+    <a class="clsHide" href="#idRlnInqtnam"></a></p>
+  </section>
+
+  <section id="idRlnNgtn">
+  <h2 id="idRlnNgtnH2">relation.negation
+    <a class="clsHide" href="#idRlnNgtnH2"></a></h2>
+  <p id="idRlnNgtndsn">description::
+    <br>· not affirmation.
+    <a class="clsHide" href="#idRlnNgtndsn"></a></p>
+  <p id="idRlnNgtnnam">name::
+    <br>* McsEngl.negation!⇒rlnNegation,
+    <br>* McsEngl.relation.negation!⇒rlnNegation,
+    <br>* McsEngl.rlnNegation,
+    <a class="clsHide" href="#idRlnNgtnnam"></a></p>
+  </section>
+
+  <section id="idRlnOpsn">
+  <h2 id="idRlnOpsnH2">relation.opposition
+    <a class="clsHide" href="#idRlnOpsnH2"></a></h2>
+  <p id="idRlnOpsndsn">description::
+    <br>· opposition is <a class="clsPreview" href="#idRlnArg2">a-binary-relation</a> with <a class="clsPreview" href="#idRlnarg">arguments</a> we consider with contrary|reverse|opposite attributes.
+    <br>===
+    <br>"(n) opposition, oppositeness (the relation between opposed entities)"
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=opposition]
+    <br>"(n) reverse, contrary, opposite (a relation of direct opposition) "we thought Sue was older than Bill but just the reverse was true""
+    <br>[http://wordnetweb.princeton.edu/perl/webwn?s=opposite]
+    <a class="clsHide" href="#idRlnOpsndsn"></a></p>
+  <p id="idRlnOpsnnam">name::
+    <br>* McsEngl.opposition-relation!⇒rlnOpposition,
+    <br>* McsEngl.relation.opposition!⇒rlnOpposition,
+    <br>* McsEngl.rlnOpposition,
+    <br>====== langoSinago:
+    <br>* McsSngo.ro-no!=rlnOpposition,
+    <a class="clsHide" href="#idRlnOpsnnam"></a></p>
+
+  <section id="idRlnOpsnarg">
+  <h3 id="idRlnOpsnargH3">argument of relation.opposition
+    <a class="clsHide" href="#idRlnOpsnargH3"></a></h3>
+  <p id="idRlnOpsnargdsn">description::
+    <br>· opposite is an-argument of <a class="clsPreview" href="#idRlnOpsn">opposition-relation</a>.
+    <br>* entity1,
+    <br>* entity2,
+    <br>* ..,
+    <br>* entityN,
+    <a class="clsHide" href="#idRlnOpsnargdsn"></a></p>
+  <p id="idRlnOpsnargnam">name::
+    <br>* McsEngl.opposite,
+    <a class="clsHide" href="#idRlnOpsnargnam"></a></p>
+  </section>
+
+  <section id="idRlnOpsncplt">
+  <h3 id="idRlnOpsncpltH3">complement of arg of relation.opposition
+    <a class="clsHide" href="#idRlnOpsncpltH3"></a></h3>
+  <p id="idRlnOpsncpltdsn">description::
+    <br>· opposite-complement is the-arguments-complement of an-argument of opposition-relation.
+    <a class="clsHide" href="#idRlnOpsncpltdsn"></a></p>
+  <p id="idRlnOpsncpltnam">name::
+    <br>* McsEngl.complement.opposite,
+    <br>* McsEngl.opposite-complement,
+    <br>====== langoSinago:
+    <br>* McsSngo.uno!=complement.opposite,
+    <a class="clsHide" href="#idRlnOpsncpltnam"></a></p>
+  </section>
+
+  <section id="idRlnOpsnstx">
+  <h3 id="idRlnOpsnstxH3">syntax of relation.opposition
+    <a class="clsHide" href="#idRlnOpsnstxH3"></a></h3>
+  <p id="idRlnOpsnstxdsn">description::
+    <br>_stxEngl: [<span class="clsColorRed">(Although)</span> she _stxVrb:{gave} hundreds of zucchini away], [the enormous mound left over _stxVrb:{frightened} her].
+    <br>_stxEngl: [the path was dark], [<span class="clsColorRed">(yet)</span> [I] [slowly] (found) [my way]].
+    <br>_stxEngl: [(In) World War II] [the Japanese] (launched) [balloon bombs] [(against) North America]. [WordNet 2.0]
+    <br>_stxEngl: [He] (survived) [the cancer] [<span class="clsColorRed">(against)</span> all odds].
+    <br>_stxEngl: [(Although) [[the play] (was [nearly] finished)]], [_stxSbj:[we] _stxVrb:{left} _stxTime:[early] _stxCause:[(because) [we (were worried) about our sick cat]]].
+    <br>_stxEngl: [We (would like) to stay longer], [<span class="clsColorRed">(but)</span> we must leave].
+    <br>_stxEngl: [<span class="clsColorRed">(Despite)</span> these constraints], [real GDP] (averaged) [about 3.8%] [annually] [during 1985-88].
+    <br>_stxEngl: [<span class="clsColorRed">(Even so)</span>, [[the economy] _stxVrb:{grew} [rapidly] [(during) the late 1970s and early 1980s]].]
+    <br>_stxEngl:[ A majority of the population still depends on agriculture and livestock for a livelihood,] [<span class="clsColorRed">(even though)</span> most of the nomads and many subsistence farmers were forced into the cities by recurrent drought in 1983].
+    <br>_stxEngl: [My roommate usually _stxVrb:{listens} to rock music;] [<span class="clsColorRed">(however)</span>, he also _stxVrb:{likes} John Coltrane and several other jazz musicians].
+    <br>_stxEngl: [[Coastal climate], [<span class="clsColorRed">(though)</span> temperate],] _stxVrb:{is} [damp].
+    <br>
+    <br>_stxEngl: [statements] [[which], [although literally true], (are) [nevertheless] [misleading]]
+    <br>_stxEngl: _stxSbj=entity1:[The symbol V], _stxArg:[(for) example], _stxVrb:{could have been replaced} _stxArg=entity2:[(by) [saw [<span class="clsColorRed">(instead of)</span> chased]]].
+    <a class="clsHide" href="#idRlnOpsnstxdsn"></a></p>
+  <p id="idRlnOpsnstxnam">name::
+    <br>* McsEngl._stxOpposition,
+    <br>* McsEngl.relation.opposition'syntax,
+    <br>* McsEngl.syntax.rlnOpposition,
+    <br>* McsEngl.syntax.conjEngl.against:rlnOpposition,
+    <br>* McsEngl.syntax.conjEngl.although:rlnOpposition,
+    <br>* McsEngl.syntax.conjEngl.but:rlnOpposition,
+    <br>* McsEngl.syntax.conjEngl.despite:rlnOpposition,
+    <br>* McsEngl.syntax.conjEngl.even-so:rlnOpposition,
+    <br>* McsEngl.syntax.conjEngl.even-though:rlnOpposition,
+    <br>* McsEngl.syntax.conjEngl.however:rlnOpposition,
+    <br>* McsEngl.syntax.conjEngl.instead-of:rlnOpposition,
+    <br>* McsEngl.syntax.conjEngl.though:rlnOpposition,
+    <br>* McsEngl.syntax.conjEngl.yet:rlnOpposition,
+    <a class="clsHide" href="#idRlnOpsnstxnam"></a></p>
+  </section>
+
+  <section id="idRlnOpsnSpc">
+  <h3 id="idRlnOpsnSpcH3">relation.opposition.SPECIFIC
+    <a class="clsHide" href="#idRlnOpsnSpcH3"></a></h3>
+  <p id="idRlnOpsnSpcdsn">description::
+    <br>* high, middle, low,
+    <br>* complex, middle, simple,
+    <br>* strong, middle, weak,
+    <br>* start, middle, end,
+    <br>* past, present, future,
+    <a class="clsHide" href="#idRlnOpsnSpcdsn"></a></p>
+  <p id="idRlnOpsnSpcnam">name::
+    <br>* McsEngl.relation.opposition.specific,
+    <a class="clsHide" href="#idRlnOpsnSpcnam"></a></p>
+  </section>
+  </section>
 </section>
 
 <section id="idMeta">

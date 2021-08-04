@@ -1053,7 +1053,7 @@ let fContainersInsert = function () {
             break
           }
         }
-      } else if (oEvtIn.code === 'ArrowUp' || oEvtIn.key === 'ArrowUp' || oEvtIn.keyCode === 38) {
+      } else if (oEvtIn.code === 'ArrowUp' || oEvtIn.keyCode === 38) {
         aLi = oEltTabCntSrchOl.getElementsByTagName('li')
         for (n = 0; n < aLi.length; n++) {
           oLi = aLi[n]
