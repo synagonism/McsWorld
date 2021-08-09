@@ -49,14 +49,14 @@ var
   sDir = 'dirCor',
   sDirNaked = 'Cor',
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'human-braining',
+  sName = 'doing.referenting',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNmShort = 'braining',
+  sNmShort = 'referenting',
 
   //5. FILE-name: 
-  sNmFile = '000018',
+  sNmFile = '000020',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNmId = 'BrngHmn';
+  sNmId = 'Rfrtg';
 
 s =
   '<!DOCTYPE html>\n' +
