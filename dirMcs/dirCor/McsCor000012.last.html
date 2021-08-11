@@ -92,7 +92,7 @@
     <a class="clsHide" href="#idMdlatt004H1"></a></h1>
   <p id="idMdlatt004dsn">description::
     <br>· The entity we use to construct a model: information, matter, both.
-    <br>[hmnSgm-{2012-11-23}]
+    <br>[hmnSngo-{2012-11-23}]
     <a class="clsHide" href="#idMdlatt004dsn"></a></p>
   <p id="idMdlatt004nam">name::
     <br>* McsEngl.model'04_medium,
@@ -161,13 +161,15 @@
     <br>· implementor is the-entity that uses the-method and does the-implementation.
     <a class="clsHide" href="#idMdlatt009dsn"></a></p>
   <p id="idMdlatt009nam">name::
-    <br>* McsEngl.methodMapping'05_implementor,
-    <br>* McsEngl.methodMapping'att005-implementor,
-    <br>* McsEngl.methodMapping'implementor-att005,
-    <br>* McsEngl.model'09_creator,
-    <br>* McsEngl.model'att009-creator,
-    <br>* McsEngl.model'creator,
-    <br>* McsEngl.model'implementor,
+    <br>* McsEngl.methodMapping'05_implementor!⇒modeler,
+    <br>* McsEngl.methodMapping'att005-implementor!⇒modeler,
+    <br>* McsEngl.methodMapping'implementor!⇒modeler,
+    <br>* McsEngl.model'09_creator!⇒modeler,
+    <br>* McsEngl.model'att009-creator!⇒modeler,
+    <br>* McsEngl.model'builder!⇒modeler,
+    <br>* McsEngl.model'creator!⇒modeler,
+    <br>* McsEngl.model'implementor!⇒modeler,
+    <br>* McsEngl.modeler,
     <a class="clsHide" href="#idMdlatt009nam"></a></p>
 </section>
 
@@ -260,13 +262,15 @@
     <br>* McsEngl.acting.mapping!⇒mapping,
     <br>* McsEngl.mapping,
     <br>* McsEngl.mapping-action!⇒mapping,
-    <br>* McsEngl.map!~verbEnglA2,
+    <br>* McsEngl.map!~verbEnglA2:map-s-ped-ping-ped,
     <br>* McsEngl.methodMapping'04_implementation!⇒mapping,
     <br>* McsEngl.methodMapping'att004-implementation!⇒mapping,
     <br>* McsEngl.methodMapping'implementation!⇒mapping,
     <br>* McsEngl.model'att010-creating!⇒mapping,
-    <br>* McsEngl.model'creating!⇒mapping,
     <br>* McsEngl.model'building!⇒mapping,
+    <br>* McsEngl.model'construction!⇒mapping,
+    <br>* McsEngl.model'creating!⇒mapping,
+    <br>* McsEngl.model'development!⇒mapping,
     <br>* McsEngl.model'implementation!⇒mapping,
     <br>====== langoGreek:
     <br>* McsElln.αντιστοίχιση!=mapping,
@@ -316,11 +320,16 @@
   <p id="idMdlatt016nam">name::
     <br>* McsEngl.model'att016-evaluating,
     <br>* McsEngl.model'evaluating,
+    <br>* McsEngl.model'validation,
     <a class="clsHide" href="#idMdlatt016nam"></a></p>
   <p id="idMdlatt016wpa">addressWpg::
+    <br>* model evaluation: https://www.nap.edu/read/11972/chapter/6,
     <br>* https://en.wikipedia.org/wiki/Verification_and_validation_of_computer_simulation_models,
     <br>* https://en.wikipedia.org/wiki/Software_verification,
     <a class="clsHide" href="#idMdlatt016wpa"></a></p>
+  <p id="idMdlatt016str">specific-tree-of-model'evaluating::
+    <br>* <a class="clsPreview" href="McsCor000020.last.html#idOverview">referenting</a>,
+    <a class="clsHide" href="#idMdlatt016str"></a></p>
   </section>
 
   <section id="idMdlatt017">
@@ -332,6 +341,7 @@
     <a class="clsHide" href="#idMdlatt017dsn"></a></p>
   <p id="idMdlatt017nam">name::
     <br>* McsEngl.model'att017-using,
+    <br>* McsEngl.model'application,
     <br>* McsEngl.model'using,
     <a class="clsHide" href="#idMdlatt017nam"></a></p>
 
@@ -361,6 +371,20 @@
     <br>=== McsHitp-creation:
     <br>· creation of current <a class="clsPreview" href="McsCor000002.last.html#idOverview">concept</a>.
     <a class="clsHide" href="#idMdlevg20200802"></a></p>
+
+  <section id="idMdlevglfcl">
+  <h2 id="idMdlevglfclH2">life-cycle of model
+    <a class="clsHide" href="#idMdlevglfclH2"></a></h2>
+  <p id="idMdlevglfcldsn">description::
+    <br>* proble-identification,
+    <br>* conceptual-model,
+    <br>* constructed-model,
+    <br>* model-use,
+    <a class="clsHide" href="#idMdlevglfcldsn"></a></p>
+  <p id="idMdlevglfclnam">name::
+    <br>* McsEngl.model'life-cycle,
+    <a class="clsHide" href="#idMdlevglfclnam"></a></p>
+  </section>
 </section>
 
 <section id="idMdlwptF">
@@ -518,6 +542,119 @@
   </section>
 </section>
 
+<section id="idMdl027">
+  <h1 id="idMdl027H1">model.evaluating.accurate-027
+    <a class="clsHide" href="#idMdl027H1"></a></h1>
+  <p id="idMdl027dsn">description::
+    <br>· accurate-model is a-model that maps correctly its archetype.
+    <a class="clsHide" href="#idMdl027dsn"></a></p>
+  <p id="idMdl027nam">name::
+    <br>* McsEngl.accurate-model!⇒modelAccurate,
+    <br>* McsEngl.model.027-accurate!⇒modelAccurate,
+    <br>* McsEngl.model.accurate!⇒modelAccurate,
+    <br>* McsEngl.model.evaluating.accurate!⇒modelAccurate,
+    <br>* McsEngl.modelAccurate,
+    <br>* McsEngl.true-model!⇒modelAccurate,
+    <br>* McsEngl.valid-model!⇒modelAccurate,
+    <a class="clsHide" href="#idMdl027nam"></a></p>
+</section>
+
+<section id="idMdl028">
+  <h1 id="idMdl028H1">model.evaluating.accurateStrong-028
+    <a class="clsHide" href="#idMdl028H1"></a></h1>
+  <p id="idMdl028dsn">description::
+    <br>·
+    <a class="clsHide" href="#idMdl028dsn"></a></p>
+  <p id="idMdl028nam">name::
+    <br>* McsEngl.model.028-accurateStrong!⇒modelAccurateStrong,
+    <br>* McsEngl.model.accurateStrong!⇒modelAccurateStrong,
+    <br>* McsEngl.model.evaluating.accurateStrong!⇒modelAccurateStrong,
+    <br>* McsEngl.modelAccurateStrong,
+    <br>* McsEngl.trueStrong-model!⇒modelAccurateStrong,
+    <br>* McsEngl.validStrong-model!⇒modelAccurateStrong,
+    <a class="clsHide" href="#idMdl028nam"></a></p>
+</section>
+
+<section id="idMdl029">
+  <h1 id="idMdl029H1">model.evaluating.accurateWeak-029
+    <a class="clsHide" href="#idMdl029H1"></a></h1>
+  <p id="idMdl029dsn">description::
+    <br>·
+    <a class="clsHide" href="#idMdl029dsn"></a></p>
+  <p id="idMdl029nam">name::
+    <br>* McsEngl.model.029-accurateWeak!⇒modelAccurateWeak,
+    <br>* McsEngl.model.accurateWeak!⇒modelAccurateWeak,
+    <br>* McsEngl.model.evaluating.accurateWeak!⇒modelAccurateWeak,
+    <br>* McsEngl.modelAccurateWeak,
+    <br>* McsEngl.trueWeak-model!⇒modelAccurateWeak,
+    <br>* McsEngl.validWeak-model!⇒modelAccurateWeak,
+    <a class="clsHide" href="#idMdl029nam"></a></p>
+</section>
+
+<section id="idMdl030">
+  <h1 id="idMdl030H1">model.evaluating.accurateAccurateNo-030
+    <a class="clsHide" href="#idMdl030H1"></a></h1>
+  <p id="idMdl030dsn">description::
+    <br>·
+    <a class="clsHide" href="#idMdl030dsn"></a></p>
+  <p id="idMdl030nam">name::
+    <br>* McsEngl.model.030-accurateAccurateNo!⇒modelAccurateAccurateNo,
+    <br>* McsEngl.model.accurateAccurateNo!⇒modelAccurateAccurateNo,
+    <br>* McsEngl.model.evaluating.accurateAccurateNo!⇒modelAccurateAccurateNo,
+    <br>* McsEngl.modelAccurateAccurateNo,
+    <a class="clsHide" href="#idMdl030nam"></a></p>
+</section>
+
+<section id="idMdl031">
+  <h1 id="idMdl031H1">model.evaluating.accurateNoWeak-031
+    <a class="clsHide" href="#idMdl031H1"></a></h1>
+  <p id="idMdl031dsn">description::
+    <br>·
+    <a class="clsHide" href="#idMdl031dsn"></a></p>
+  <p id="idMdl031nam">name::
+    <br>* McsEngl.falseWeak-model!⇒modelAccurateNoWeak,
+    <br>* McsEngl.invalidWeak-model!⇒modelAccurateNoWeak,
+    <br>* McsEngl.model.031-accurateNoWeak!⇒modelAccurateNoWeak,
+    <br>* McsEngl.model.accurateNoWeak!⇒modelAccurateNoWeak,
+    <br>* McsEngl.model.evaluating.accurateNoWeak!⇒modelAccurateNoWeak,
+    <br>* McsEngl.modelAccurateNoWeak,
+    <a class="clsHide" href="#idMdl031nam"></a></p>
+</section>
+
+<section id="idMdl032">
+  <h1 id="idMdl032H1">model.evaluating.accurateNoStrong-032
+    <a class="clsHide" href="#idMdl032H1"></a></h1>
+  <p id="idMdl032dsn">description::
+    <br>·
+    <a class="clsHide" href="#idMdl032dsn"></a></p>
+  <p id="idMdl032nam">name::
+    <br>* McsEngl.falseStrong-model!⇒modelAccurateNoStrong,
+    <br>* McsEngl.invalidStrong-model!⇒modelAccurateNoStrong,
+    <br>* McsEngl.model.032-accurateNoStrong!⇒modelAccurateNoStrong,
+    <br>* McsEngl.model.accurateNoStrong!⇒modelAccurateNoStrong,
+    <br>* McsEngl.model.evaluating.accurateNoStrong!⇒modelAccurateNoStrong,
+    <br>* McsEngl.modelAccurateNoStrong,
+    <a class="clsHide" href="#idMdl032nam"></a></p>
+</section>
+
+<section id="idMdl033">
+  <h1 id="idMdl033H1">model.evaluating.accurateNo-033
+    <a class="clsHide" href="#idMdl033H1"></a></h1>
+  <p id="idMdl033dsn">description::
+    <br>· inaccurate-model is a-model that does-not-map correctly its
+    archetype.
+    <a class="clsHide" href="#idMdl033dsn"></a></p>
+  <p id="idMdl033nam">name::
+    <br>* McsEngl.false-model!⇒modelAccurateNo,
+    <br>* McsEngl.inaccurate-model!⇒modelAccurateNo,
+    <br>* McsEngl.invalid-model!⇒modelAccurateNo,
+    <br>* McsEngl.model.033-accurateNo!⇒modelAccurateNo,
+    <br>* McsEngl.model.accurateNo!⇒modelAccurateNo,
+    <br>* McsEngl.model.evaluating.accurateNo!⇒modelAccurateNo,
+    <br>* McsEngl.modelAccurateNo,
+    <a class="clsHide" href="#idMdl033nam"></a></p>
+</section>
+
 <section id="idMdl005">
   <h1 id="idMdl005H1">model.method.scientific-005
     <a class="clsHide" href="#idMdl005H1"></a></h1>
@@ -604,7 +741,7 @@
   <p id="idMdl009dsn">description::
     <br>· Abstract-model is a model if it misses some attributes of the archetype.
     <br>Every generic-concept is an abstract-model of its referents.
-    <br>[hmnSgm-{2014-02-27}]
+    <br>[hmnSngo-{2014-02-27}]
     <a class="clsHide" href="#idMdl009dsn"></a></p>
   <p id="idMdl009nam">name::
     <br>* McsEngl.abstract-model!⇒modelAbstract,
