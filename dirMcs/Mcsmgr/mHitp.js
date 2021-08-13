@@ -28,6 +28,7 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mHitp.js.18-1-1.2021-08-13: // total NAMES',
     'mHitp.js.18-1-0.2021-05-30: ctrl+F3',
     'mHitp.js.18-0-0.2021-05-25: module',
     'hitp.js.17-7-7.2021-04-28: dirMcs',
@@ -837,7 +838,7 @@ let fContainersInsert = function () {
           }
           oEltTabCntSrchP.innerHTML = aSuggestions[0][2].toLocaleString() +
             ' ' + sSrchCrnt + '..' + sSrchNext +
-            ' / ' + fTabCntSrchPSetText()
+            ' // ' + fTabCntSrchPSetText()
           oEltTabCntSrchOl.innerHTML = sSuggestions
           Array.prototype.slice.call(document.querySelectorAll('#idTabCntSrchOl li')).forEach(function (oEltIn) {
             oEltIn.style.cursor = 'pointer'
@@ -920,7 +921,7 @@ let fContainersInsert = function () {
             oEltTabCntSrchP.innerHTML =
               aSuggestions[0][2].toLocaleString() +
               ' ' + sSrchCrnt + '..' + sSrchNext +
-              ' / ' + fTabCntSrchPSetText()
+              ' // ' + fTabCntSrchPSetText()
             oEltTabCntSrchOl.innerHTML = sSuggestions
             fSSEvtPreview()
             if (aSuggestions.length > 0) {
@@ -954,18 +955,18 @@ let fContainersInsert = function () {
                 oEltTabCntSrchP.innerHTML = n.toLocaleString() +
                   'plus / ' + aSuggestions[0][2].toLocaleString() +
                   ' ' + sSrchCrnt + '..' + sSrchNext +
-                  ' / ' + fTabCntSrchPSetText()
+                  ' // ' + fTabCntSrchPSetText()
               } else {
                 oEltTabCntSrchP.innerHTML = n.toLocaleString() +
-                  ' / ' + aSuggestions[0][2].toLocaleString() +
+                  ' // ' + aSuggestions[0][2].toLocaleString() +
                   ' ' + sSrchCrnt + '..' + sSrchNext +
-                  ' / ' + fTabCntSrchPSetText()
+                  ' // ' + fTabCntSrchPSetText()
               }
             } else {
               oEltTabCntSrchP.innerHTML = n.toLocaleString() +
-                ' / ' + aSuggestions[0][2].toLocaleString() +
+                ' // ' + aSuggestions[0][2].toLocaleString() +
                 ' ' + sSrchCrnt + '..' + sSrchNext +
-                ' / ' + fTabCntSrchPSetText()
+                ' // ' + fTabCntSrchPSetText()
             }
             oEltTabCntSrchOl.innerHTML = sSuggestions
             fSSEvtPreview()
@@ -1096,7 +1097,7 @@ let fContainersInsert = function () {
         }
       }
       return aNamidxRoot[nLag][2].toLocaleString() + ' ' + aNamidxRoot[nLag][1].substring(1) +
-        ' / ' + aNamidxRoot[0][2].toLocaleString() + ' total NAMES'
+        ' // ' + aNamidxRoot[0][2].toLocaleString() + ' total NAMES'
     }
   }
 
