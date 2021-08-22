@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.satisfier-(1-8-0.2021-08-20)</title>
+  <title>Mcs.satisfier-(1-10-0.2021-08-22)</title>
   <meta name="keywords" content="satisfier, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -569,7 +569,7 @@
   <h3 id="idSfrHmntrsgGivgH3">Sfrtransacting.giving
     <a class="clsHide" href="#idSfrHmntrsgGivgH3"></a></h3>
   <p id="idSfrHmntrsgGivgdsn">description::
-    <br>· Sfrgiving is <a class="clsPreview" href="#idSfrHmntrsg">the-Sfrtransacting</a> in which <a class="clsPreview" href="../dirCor/McsCor000004.last.html#idDngActgargActr">the-actor</a> transfers a-possessed satisfier to <a class="clsPreview" href="../dirCor/McsCor000004.last.html#idDngActgargActn">acton</a> AND <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLHmnmsmssbt">the-subject</a> is the-actor.
+    <br>· Sfrgiving is <a class="clsPreview" href="#idSfrHmntrsg">the-Sfrtransacting</a> in which <a class="clsPreview" href="../dirCor/McsCor000004.last.html#idDngActgargActr">the-actor</a> transfers a-possessed satisfier to <a class="clsPreview" href="../dirCor/McsCor000004.last.html#idDngActgargActn">acton</a>.
     <br>
     <br>* actor: giver.
     <br>* acton: receiver.
@@ -593,10 +593,10 @@
   <h3 id="idSfrHmntrsgRcvgH3">Sfrtransacting.receiving
     <a class="clsHide" href="#idSfrHmntrsgRcvgH3"></a></h3>
   <p id="idSfrHmntrsgRcvgdsn">description::
-    <br>· Sfrreceiving is <a class="clsPreview" href="#idSfrHmntrsg">the-Sfrtransacting</a> in which <a class="clsPreview" href="../dirCor/McsCor000004.last.html#idDngActgargActr">the-actor</a> transfers a-possessed satisfier to <a class="clsPreview" href="../dirCor/McsCor000004.last.html#idDngActgargActn">acton</a>.
+    <br>· Sfrreceiving is <a class="clsPreview" href="#idSfrHmntrsg">the-Sfrtransacting</a> in which <a class="clsPreview" href="../dirCor/McsCor000004.last.html#idDngActgargActr">the-actor</a> gets a-satisfier from <a class="clsPreview" href="../dirCor/McsCor000004.last.html#idDngActgargActn">acton</a>.
     <br>
-    <br>* actor: giver.
-    <br>* acton: receiver.
+    <br>* actor: receiver.
+    <br>* from: giver.
     <br>* satisfier.
     <br>
     <br>* verb:
@@ -739,13 +739,15 @@
     <br>* commodity[b]: satisfier: acton,
     <br>
     <br>* verb:
-    <br>_stxEngl: _stxSbj=actor:[I] _stxVrb:{will buy} _stxObj=commodity[a]:[a coat and a hat].
+    <br>_stxEngl: _stxSbj=actor:[I] _stxVrb:<span class="clsColorRed">{will buy}</span> _stxObj=commodity[a]:[a coat and a hat].
+    <br>_stxEngl: _stxSbj:[The family] _stxVrb:{purchased} _stxObj:[a new car].
     <a class="clsHide" href="#idSfrHmnexcgBuygdsn"></a></p>
   <p id="idSfrHmnexcgBuygnam">name::
     <br>* McsEngl.Sfrbuying,
     <br>* McsEngl.Sfrexchanging.buying-commodity!⇒Sfrbuying,
     <br>* McsEngl.buy!~verbEnglC:buy-buys-bought-buying-bought!⇒Sfrbuying,
     <br>* McsEngl.buying-commodity!⇒Sfrbuying,
+    <br>* McsEngl.purchase!~verbEnglB1:purchas-e-es-ed-ing-ed!⇒Sfrbuying,
     <br>====== langoGreek:
     <br>* McsElln.αγορά!~η!=Sfrbuyin,
     <br>* McsElln.αγοράζ-ω-ομαι!~VerbEll!=Sfrbuyin,
@@ -754,6 +756,19 @@
     <br>* barter-buying,
     <br>* monetary-buying,
     <a class="clsHide" href="#idSfrHmnexcgBuygstr"></a></p>
+
+  <section id="idSfrHmnexcgBuygbidg">
+  <h3 id="idSfrHmnexcgBuygbidgH3">bidding of Sfrbuying
+    <a class="clsHide" href="#idSfrHmnexcgBuygbidgH3"></a></h3>
+  <p id="idSfrHmnexcgBuygbidgdsn">description::
+    <br>"(v) offer, bid, tender (propose a payment) "The Swiss dealer offered $2 million for the painting""
+    <br>[{2021-08-20 retrieved} http://wordnetweb.princeton.edu/perl/webwn?s=bid]
+    <a class="clsHide" href="#idSfrHmnexcgBuygbidgdsn"></a></p>
+  <p id="idSfrHmnexcgBuygbidgnam">name::
+    <br>* McsEngl.Sfrbuying'bidding,
+    <br>* McsEngl.bid!~verbEnglC:bid-bids-bid|bade-bidding-bid|bidden,
+    <a class="clsHide" href="#idSfrHmnexcgBuygbidgnam"></a></p>
+  </section>
   </section>
 
   <section id="idSfrHmnexcgSelg">
@@ -837,10 +852,47 @@
     <br>· exchanging for time-interval.
     <a class="clsHide" href="#idSfrHmnexgftidsn"></a></p>
   <p id="idSfrHmnexgftinam">name::
-    <br>* McsEngl.Sfrcreditodebiting,
-    <br>* McsEngl.creditodebiting!⇒Sfrcreditodebiting,
-    <br>* McsEngl.sfrtrading.for-time-interval!⇒Sfrcreditodebiting,
+    <br>* McsEngl.Sfrlendoborrowing,
+    <br>* McsEngl.Sfrexchanging.for-time-interval!⇒Sfrlendoborrowing,
+    <br>* McsEngl.lendoborrowing!⇒Sfrlendoborrowing,
+    <br>* McsEngl.sfrtrading.for-time-interval!⇒Sfrlendoborrowing,
+    <br>====== langoGreek:
+    <br>* McsElln.δανεισμός!~ο!=Sfrlendoborrowing,
     <a class="clsHide" href="#idSfrHmnexgftinam"></a></p>
+
+  <section id="idSfrHmnexgftiLndg">
+  <h3 id="idSfrHmnexgftiLndgH3">Sfrlendoborrowing.lending
+    <a class="clsHide" href="#idSfrHmnexgftiLndgH3"></a></h3>
+  <p id="idSfrHmnexgftiLndgdsn">description::
+    <br>· the-actor sells a-commodity for time-interval.
+    <a class="clsHide" href="#idSfrHmnexgftiLndgdsn"></a></p>
+  <p id="idSfrHmnexgftiLndgnam">name::
+    <br>* McsEngl.Sfrlendoborrowing.lending!⇒lending,
+    <br>* McsEngl.lend!~verbEnglC:lend-lends-lent-lending-lent!⇒lending,
+    <br>* McsEngl.lending,
+    <br>* McsEngl.lending-commodity!⇒lending,
+    <br>====== langoGreek:
+    <br>* McsElln.δανείζω!~verbElln!=lending,
+    <br>* McsElln.δίνω-δάνειο!~verbElln!=lending,
+    <a class="clsHide" href="#idSfrHmnexgftiLndgnam"></a></p>
+  </section>
+
+  <section id="idSfrHmnexgftiBrwg">
+  <h3 id="idSfrHmnexgftiBrwgH3">Sfrlendoborrowing.borrowing
+    <a class="clsHide" href="#idSfrHmnexgftiBrwgH3"></a></h3>
+  <p id="idSfrHmnexgftiBrwgdsn">description::
+    <br>· the-actor buys a-commodity for time-interval.
+    <a class="clsHide" href="#idSfrHmnexgftiBrwgdsn"></a></p>
+  <p id="idSfrHmnexgftiBrwgnam">name::
+    <br>* McsEngl.Sfrlendoborrowing.borrowing!⇒borrowing,
+    <br>* McsEngl.borrow!~verbEnglA1:borrow--s-ed-ing-ed!⇒borrowing,
+    <br>* McsEngl.borrowing,
+    <br>* McsEngl.borrowing-commodity!⇒borrowing,
+    <br>====== langoGreek:
+    <br>* McsElln.δανείζομαι!~verbElln!=borrowing,
+    <br>* McsElln.παίρνω-δάνειο!~verbElln!=borrowing,
+    <a class="clsHide" href="#idSfrHmnexgftiBrwgnam"></a></p>
+  </section>
   </section>
 
   <section id="idSfrHmntrfg">
