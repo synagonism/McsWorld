@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.generic-(1-10-0.2021-08-07) entity.generic</title>
+  <title>Mcs.generic-(1-11-0.2021-09-26) entity.generic</title>
   <meta name="keywords" content="generic-entity, generic, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -58,11 +58,12 @@
     <br>· generic-specific--relation is <a class="clsPreview" href="McsCor000005.last.html#idRlnSqcdN">the-sequencedNo-relation</a> between <a class="clsPreview" href="#idOverview">a-generic[a]</a> and a-specific of it[a].
     <a class="clsHide" href="#idGnrspcrlndsn"></a></p>
   <p id="idGnrspcrlnnam">name::
-    <br>* McsEngl.generic-specific-undirected-relation,
-    <br>* McsEngl.relation.generic-specific,
-    <br>* McsEngl.specific-generic-undirected-relation,
+    <br>* McsEngl.generic-specific-unsequenced-relation!⇒rlnGenericSpecificU,
+    <br>* McsEngl.relation.generic-specific!⇒rlnGenericSpecificU,
+    <br>* McsEngl.rlnGenericSpecificU,
+    <br>* McsEngl.specific-generic-unsequenced-relation!⇒rlnGenericSpecificU,
     <br>====== langoSinago:
-    <br>* McsSngo.ro-ko-go!⇒relation.generic-specific,
+    <br>* McsSngo.ro-ko-go!=rlnGenericSpecificU,
     <a class="clsHide" href="#idGnrspcrlnnam"></a></p>
 
   <section id="idGnrspcrln1">
@@ -72,43 +73,22 @@
     <br>· <span class="clsColorRed">generic-of-entity--relation</span> is <a class="clsPreview" href="McsCor000005.last.html#idRlnSqcd">the-sequenced-relation</a> between a-specific[a] and <a class="clsPreview" href="#idOverview">a-generic</a> of it[a].
     <a class="clsHide" href="#idGnrspcrln1dsn"></a></p>
   <p id="idGnrspcrln1nam">name::
-    <br>* McsEngl.am!~verbEngl:specific-generic--relation!⇒rlnGeneric,
-    <br>* McsEngl.generic-of-entity--relation!⇒rlnGeneric,
-    <br>* McsEngl.generic-relation!⇒rlnGeneric,
-    <br>* McsEngl.relation.generic!⇒rlnGeneric,
-    <br>* McsEngl.rlnGeneric,
-    <br>* McsEngl.rlnSpecificGeneric!⇒rlnGeneric,
-    <br>* McsEngl.specific-generic-directed-relation!⇒rlnGeneric,
-    <br>* McsEngl.specific:generic!⇒rlnGeneric,
+    <br>* McsEngl.am!~verbEngl:specific-generic--relation!⇒rlnGenericSpecific,
+    <br>* McsEngl.generic-of-entity--relation!⇒rlnGenericSpecific,
+    <br>* McsEngl.generic-relation!⇒rlnGenericSpecific,
+    <br>* McsEngl.generic.specific!⇒rlnGenericSpecific,
+    <br>* McsEngl.relation.generic!⇒rlnGenericSpecific,
+    <br>* McsEngl.rlnGenericSpecific,
+    <br>* McsEngl.specific-generic-sequenced-relation!⇒rlnGenericSpecific,
     <br>====== langoSinago:
-    <br>* McsSngo.ro-ko!=rlnGeneric,
-    <br>* McsSngo.ka!~conjSngo!=rlnGeneric,
+    <br>* McsSngo.ro-ko!=rlnGenericSpecific,
+    <br>* McsSngo.ka!~conjSngo!=rlnGenericSpecific,
     <a class="clsHide" href="#idGnrspcrln1nam"></a></p>
-  </section>
 
-  <section id="idGnrspcrln2">
-  <h2 id="idGnrspcrln2H2">specific-of-entity--relation
-    <a class="clsHide" href="#idGnrspcrln2H2"></a></h2>
-  <p id="idGnrspcrln2dsn">description::
-    <br>· <span class="clsColorRed">specific-of-entity--relation</span> is <a class="clsPreview" href="McsCor000005.last.html#idRlnSqcd">the-sequenced-relation</a> between <a class="clsPreview" href="#idOverview">a-generic[a]</a> and a-specific of it[a].
-    <a class="clsHide" href="#idGnrspcrln2dsn"></a></p>
-  <p id="idGnrspcrln2nam">name::
-    <br>* McsEngl.generic-specific-directed-relation!⇒rlnSpecific,
-    <br>* McsEngl.generic.specific!⇒rlnSpecific,
-    <br>* McsEngl.relation.specific-of-generic!⇒rlnSpecific,
-    <br>* McsEngl.rlnGenericSpecific!⇒rlnSpecific,
-    <br>* McsEngl.rlnSpecific,
-    <br>* McsEngl.specific-of-entity--relation!⇒rlnSpecific,
-    <br>* McsEngl.specific-relation!⇒rlnSpecific,
-    <br>====== langoSinago:
-    <br>* McsSngo.ro-go!=rlnSpecific,
-    <br>* McsSngo.ga!~conjSngo!=rlnSpecific,
-    <a class="clsHide" href="#idGnrspcrln2nam"></a></p>
-
-  <section id="idGnrspcrln2stx">
-  <h3 id="idGnrspcrln2stxH3">syntax of specific-of-generic--relation
-    <a class="clsHide" href="#idGnrspcrln2stxH3"></a></h3>
-  <p id="idGnrspcrln2stxdsn">description::
+  <section id="idGnrspcrln1stx">
+  <h3 id="idGnrspcrln1stxH3">syntax of rlnGenericSpecific
+    <a class="clsHide" href="#idGnrspcrln1stxH3"></a></h3>
+  <p id="idGnrspcrln1stxdsn">description::
     <br>* with '.':
     <br>_stxEngl: [generic.specific]
     <br>
@@ -121,16 +101,36 @@
     <br>_stxEngl: _stxSbj:[Consumer durables _stxSpecific[<span class="clsColorRed">(such as)</span> refrigerators, television sets, bicycles and so on]] _stxVrb:{were produced} in large quantities. [HarperCollins]
     <br>_stxEngl: _stxSbj:[Frege] _stxVrb:{argued} _stxObj:[<span class="clsColorRed">(that)</span> intension _stxVrb:{determines} extension].
     <br>_stxEngl: _stxSbj:[The candidate _stxSpecific:[who gets the majority of votes]] _stxVrb:{is elected}.
-    <a class="clsHide" href="#idGnrspcrln2stxdsn"></a></p>
-  <p id="idGnrspcrln2stxnam">name::
-    <br>* McsEngl.rlnSpecific'syntax,
-    <br>* McsEngl.syntax.conjEngl.as:rlnSpecific,
-    <br>* McsEngl.syntax.conjEngl.for-example:rlnSpecific,
-    <br>* McsEngl.syntax.conjEngl.that:rlnSpecific,
-    <br>* McsEngl.syntax.conjEngl.who:rlnSpecific,
-    <br>* McsEngl.syntax.rlnSpecific,
-    <a class="clsHide" href="#idGnrspcrln2stxnam"></a></p>
+    <a class="clsHide" href="#idGnrspcrln1stxdsn"></a></p>
+  <p id="idGnrspcrln1stxnam">name::
+    <br>* McsEngl.rlnGenericSpecific'syntax,
+    <br>* McsEngl.syntax.conjEngl.as:rlnGenericSpecific,
+    <br>* McsEngl.syntax.conjEngl.for-example:rlnGenericSpecific,
+    <br>* McsEngl.syntax.conjEngl.that:rlnGenericSpecific,
+    <br>* McsEngl.syntax.conjEngl.who:rlnGenericSpecific,
+    <br>* McsEngl.syntax.rlnGenericSpecific,
+    <a class="clsHide" href="#idGnrspcrln1stxnam"></a></p>
   </section>
+  </section>
+
+  <section id="idGnrspcrln2">
+  <h2 id="idGnrspcrln2H2">specific-of-entity--relation
+    <a class="clsHide" href="#idGnrspcrln2H2"></a></h2>
+  <p id="idGnrspcrln2dsn">description::
+    <br>· <span class="clsColorRed">specific-of-entity--relation</span> is <a class="clsPreview" href="McsCor000005.last.html#idRlnSqcd">the-sequenced-relation</a> between <a class="clsPreview" href="#idOverview">a-generic[a]</a> and a-specific of it[a].
+    <a class="clsHide" href="#idGnrspcrln2dsn"></a></p>
+  <p id="idGnrspcrln2nam">name::
+    <br>* McsEngl.relation.specific-of-generic!⇒rlnSpecificGeneric,
+    <br>* McsEngl.rlnGenericSpecific!⇒rlnSpecificGeneric,
+    <br>* McsEngl.rlnSpecificGeneric,
+    <br>* McsEngl.specific:generic!⇒rlnSpecificGeneric,
+    <br>* McsEngl.specific-generic--sequenced-relation!⇒rlnSpecificGeneric,
+    <br>* McsEngl.specific-of-entity--relation!⇒rlnSpecificGeneric,
+    <br>* McsEngl.specific-relation!⇒rlnSpecificGeneric,
+    <br>====== langoSinago:
+    <br>* McsSngo.ro-go!=rlnSpecificGeneric,
+    <br>* McsSngo.ga!~conjSngo!=rlnSpecificGeneric,
+    <a class="clsHide" href="#idGnrspcrln2nam"></a></p>
   </section>
 </section>
 

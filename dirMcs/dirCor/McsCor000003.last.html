@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.entity-(1-16-0.2021-09-21)</title>
+  <title>Mcs.entity-(1-17-0.2021-09-26)</title>
   <meta name="keywords" content="entity, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -117,37 +117,70 @@
     <br>· entity-attribute--sequencedNo-relation is <a class="clsPreview" href="McsCor000005.last.html#idRlnSqcdN">a-sequencedNo-relation</a> between <a class="clsPreview" href="#idOverview">an-entity[a]</a> and <a class="clsPreview" href="#idEntatt">an-attribute</a> of it[a].
     <a class="clsHide" href="#idEntatrrlndsn"></a></p>
   <p id="idEntatrrlnnam">name::
-    <br>* McsEngl.entity'02_attribute--sequencedNo-relation,
-    <br>* McsEngl.entity'attribute--sequencedNo-relation,
-    <br>* McsEngl.attribute-entity--sequencedNo-relation,
-    <br>* McsEngl.entity-attribute--sequencedNo-relation,
-    <br>* McsEngl.relation.entity-attribute-sequencedNo,
+    <br>* McsEngl.entity'02_attribute--sequencedNo-relation!⇒rlnEntityAttributeU,
+    <br>* McsEngl.entity'attribute--sequencedNo-relation!⇒rlnEntityAttributeU,
+    <br>* McsEngl.attribute-entity--sequencedNo-relation!⇒rlnEntityAttributeU,
+    <br>* McsEngl.entity-attribute--sequencedNo-relation!⇒rlnEntityAttributeU,
+    <br>* McsEngl.relation.entity-attribute-sequencedNo!⇒rlnEntityAttributeU,
+    <br>* McsEngl.rlnEntityAttributeU,
     <br>====== langoSinago:
-    <br>* McsSngo.ro-o-atro!=relation.entity-att,
+    <br>* McsSngo.ro-o-atro!=rlnEntityAttributeU,
     <a class="clsHide" href="#idEntatrrlnnam"></a></p>
+
+  <section id="idEntatrrln1">
+  <h2 id="idEntatrrln1H2">relation.entity-of-attribute
+    <a class="clsHide" href="#idEntatrrln1H2"></a></h2>
+  <p id="idEntatrrln1dsn">description::
+    <br>· <span class="clsColorRed">entity-attribute--sequenced-relation</span> is <a class="clsPreview" href="McsCor000005.last.html#idRlnSqcd">a-sequenced-relation</a> between <a class="clsPreview" href="#idOverview">an-entity[a]</a> and <a class="clsPreview" href="#idEntatt">an-attribute</a> of it[a].
+    <a class="clsHide" href="#idEntatrrln1dsn"></a></p>
+  <p id="idEntatrrln1nam">name::
+    <br>* McsEngl.entity-attribute--sequenced-relation!⇒rlnEntityAttribute,
+    <br>* McsEngl.entity-relation!⇒rlnEntityAttribute,
+    <br>* McsEngl.relation.entity-of-attribute!⇒rlnEntityAttribute,
+    <br>* McsEngl.rlnAttributeEntity!⇒rlnEntityAttribute,
+    <br>* McsEngl.rlnEntityAttribute,
+    <br>====== langoSinago:
+    <br>* McsSngo.ro-o-a-atro!=rlnEntityAttribute,
+    <a class="clsHide" href="#idEntatrrln1nam"></a></p>
+
+  <section id="idEntatrrln1stx">
+  <h3 id="idEntatrrln1stxH3">syntax of rlnEntityAttribute
+    <a class="clsHide" href="#idEntatrrln1stxH3"></a></h3>
+  <p id="idEntatrrln1stxdsn">description::
+    <br>* with conjunction:
+    <br>_stxEngl: [<span class="clsColorRed">[entity]</span> [(of) attribute]]
+    <br>* with case:
+    <br>_stxEngl: [<span class="clsColorRed">[the car's]</span> [wheels]]
+    <a class="clsHide" href="#idEntatrrln1stxdsn"></a></p>
+  <p id="idEntatrrln1stxnam">name::
+    <br>* McsEngl.rlnEntityAttribute'syntax,
+    <br>* McsEngl.syntax.rlnEntityAttribute,
+    <a class="clsHide" href="#idEntatrrln1stxnam"></a></p>
+  </section>
+  </section>
 
   <section id="idEntatrrln2">
   <h2 id="idEntatrrln2H2">relation.attribute-of-entity
     <a class="clsHide" href="#idEntatrrln2H2"></a></h2>
   <p id="idEntatrrln2dsn">description::
-    <br>· <span class="clsColorRed">attribute-of-entity--relation</span> is <a class="clsPreview" href="McsCor000005.last.html#idRlnSqcdN">a-sequenced-relation</a> between <a class="clsPreview" href="#idEntatt">an-attribute[a]</a> and <a class="clsPreview" href="#idOverview">the-entity</a> of it[a].
+    <br>· <span class="clsColorRed">attribute-entity--sequenced-relation</span> is <a class="clsPreview" href="McsCor000005.last.html#idRlnSqcdN">a-sequenced-relation</a> between <a class="clsPreview" href="#idEntatt">an-attribute[a]</a> and <a class="clsPreview" href="#idOverview">the-entity</a> of it[a].
     <a class="clsHide" href="#idEntatrrln2dsn"></a></p>
   <p id="idEntatrrln2nam">name::
-    <br>* McsEngl.attribute-of-entity--relation!⇒rlnAttribute,
-    <br>* McsEngl.attribute-relation!⇒rlnAttribute,
-    <br>* McsEngl.relation.attribute-of-entity!⇒rlnAttribute,
-    <br>* McsEngl.relation.of-entity!⇒rlnAttribute,
-    <br>* McsEngl.rlnAttribute,
-    <br>* McsEngl.rlnEntityAttribute!⇒rlnAttribute,
-    <br>* McsEngl.of!~conjEngl:rlnAttribute,
+    <br>* McsEngl.attribute-entity--sequenced--relation!⇒rlnAttributeEntity,
+    <br>* McsEngl.attribute-relation!⇒rlnAttributeEntity,
+    <br>* McsEngl.relation.attribute-of-entity!⇒rlnAttributeEntity,
+    <br>* McsEngl.relation.of-entity!⇒rlnAttributeEntity,
+    <br>* McsEngl.rlnAttributeEntity,
+    <br>* McsEngl.rlnEntityAttribute!⇒rlnAttributeEntity,
+    <br>* McsEngl.of!~conjEngl:rlnAttributeEntity,
     <br>====== langoSinago:
-    <br>* McsSngo.ro-atro-a-o!=rlnAttribute,
+    <br>* McsSngo.ro-atro-a-o!=rlnAttributeEntity,
     <br>* McsSngo.a!~conjSngo!=of,
     <br>====== langoGreek:
-    <br>* McsElln.σχέση-χαρακτηριστικού-οντότητας!=rlnAttribute,
+    <br>* McsElln.σχέση-χαρακτηριστικού-οντότητας!=rlnAttributeEntity,
     <a class="clsHide" href="#idEntatrrln2nam"></a></p>
   <p id="idEntatrrln2Spc">specific::
-    <br>* <a class="clsPreview" href="McsCor000008.last.html#idWhlprtrln2">part-relation--of-entity</a>,
+    <br>* <a class="clsPreview" href="McsCor000008.last.html#idWhlprtrln1">part-relation--of-entity</a>,
     <br>* <a class="clsPreview" href="#idEntprtNrln">partNo-relation--of-entity</a>,
     <br>* whole-relation--of-entity,
     <br>* wholeNo-relation--of-entity,
@@ -159,7 +192,7 @@
     <a class="clsHide" href="#idEntatrrln2Spc"></a></p>
 
   <section id="idEntatrrln2stx">
-  <h3 id="idEntatrrln2stxH3">syntax of rlnAttribute
+  <h3 id="idEntatrrln2stxH3">syntax of rlnAttributeEntity
     <a class="clsHide" href="#idEntatrrln2stxH3"></a></h3>
   <p id="idEntatrrln2stxdsn">description::
     <br>* with conjunction:
@@ -177,43 +210,12 @@
     <br>_stxEngl: [[My brother] <span class="clsColorRed">[the research associate]</span>] _stxVrb:{works} _stxSpace:[(at) a large polling firm].
     <a class="clsHide" href="#idEntatrrln2stxdsn"></a></p>
   <p id="idEntatrrln2stxnam">name::
-    <br>* McsEngl.rlnAttribute'syntax,
-    <br>* McsEngl.syntax.adjective:rlnAttribute,
-    <br>* McsEngl.syntax.conjEngl.of:rlnAttribute,
-    <br>* McsEngl.syntax.conjEngl.with:rlnAttribute,
-    <br>* McsEngl.syntax.rlnAttribute,
+    <br>* McsEngl.rlnAttributeEntity'syntax,
+    <br>* McsEngl.syntax.adjective:rlnAttributeEntity,
+    <br>* McsEngl.syntax.conjEngl.of:rlnAttributeEntity,
+    <br>* McsEngl.syntax.conjEngl.with:rlnAttributeEntity,
+    <br>* McsEngl.syntax.rlnAttributeEntity,
     <a class="clsHide" href="#idEntatrrln2stxnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idEntatrrln1">
-  <h2 id="idEntatrrln1H2">relation.entity-of-attribute
-    <a class="clsHide" href="#idEntatrrln1H2"></a></h2>
-  <p id="idEntatrrln1dsn">description::
-    <br>· entity-attribute--relation is <a class="clsPreview" href="McsCor000005.last.html#idRlnSqcd">a-sequenced-relation</a> between <a class="clsPreview" href="#idOverview">an-entity[a]</a> and <a class="clsPreview" href="#idEntatt">an-attribute</a> of it[a].
-    <a class="clsHide" href="#idEntatrrln1dsn"></a></p>
-  <p id="idEntatrrln1nam">name::
-    <br>* McsEngl.entity-relation!⇒rlnEntity,
-    <br>* McsEngl.relation.entity-of-attribute!⇒rlnEntity,
-    <br>* McsEngl.rlnAttributeEntity!⇒rlnEntity,
-    <br>* McsEngl.rlnEntity,
-    <br>====== langoSinago:
-    <br>* McsSngo.ro-o-a-atro!=rlnEntity,
-    <a class="clsHide" href="#idEntatrrln1nam"></a></p>
-
-  <section id="idEntatrrln1stx">
-  <h3 id="idEntatrrln1stxH3">syntax of rlnEntity
-    <a class="clsHide" href="#idEntatrrln1stxH3"></a></h3>
-  <p id="idEntatrrln1stxdsn">description::
-    <br>* with conjunction:
-    <br>_stxEngl: [<span class="clsColorRed">[entity]</span> [(of) attribute]]
-    <br>* with case:
-    <br>_stxEngl: [<span class="clsColorRed">[the car's]</span> [wheels]]
-    <a class="clsHide" href="#idEntatrrln1stxdsn"></a></p>
-  <p id="idEntatrrln1stxnam">name::
-    <br>* McsEngl.rlnEntity'syntax,
-    <br>* McsEngl.syntax.rlnEntity,
-    <a class="clsHide" href="#idEntatrrln1stxnam"></a></p>
   </section>
   </section>
 </section>
