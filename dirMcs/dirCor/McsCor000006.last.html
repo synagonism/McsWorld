@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.time-(1-6-0.2021-10-08)</title>
+  <title>Mcs.time-(1-7-0.2021-10-17)</title>
   <meta name="keywords" content="time, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -443,8 +443,11 @@
     <br>* McsEngl.time.definite.quantity.none,
     <br>====== langoSinago:
     <br>* McsSngo.to-po!=time.none,
+    <br>====== langoChinese:
+    <br>* McsZhon.cóngbù-从不!=never,
+    <br>* McsZhon.从不-cóngbù!=never,
     <br>====== langoGreek:
-    <br>* McsElln.ποτέ,
+    <br>* McsElln.ποτέ!=never,
     <a class="clsHide" href="#idTimeSmsDftNonenam"></a></p>
   </section>
 </section>
@@ -526,6 +529,40 @@
     <br>====== langoGreek:
     <br>* McsElln.οποτεδήποτε,
     <a class="clsHide" href="#idTimeSmsDftNAnynam"></a></p>
+  </section>
+
+  <section id="idTimeSmsDftNSoon">
+  <h2 id="idTimeSmsDftNSoonH2">time.definiteNo.quantity.soon
+    <a class="clsHide" href="#idTimeSmsDftNSoonH2"></a></h2>
+  <p id="idTimeSmsDftNSoondsn">description::
+    <br>_stxEngl: I will be there soon.
+    <a class="clsHide" href="#idTimeSmsDftNSoondsn"></a></p>
+  <p id="idTimeSmsDftNSoonnam">name::
+    <br>* McsEngl.time.definiteNo.quantity.soon,
+    <br>* McsEngl.soon,
+    <br>====== langoChinese:
+    <br>* McsZhon.mǎshàng-马上!=soon,
+    <br>* McsZhon.马上-mǎshàng!=soon,
+    <br>====== langoGreek:
+    <br>* McsElln.σύντομα!=soon,
+    <a class="clsHide" href="#idTimeSmsDftNSoonnam"></a></p>
+  </section>
+
+  <section id="idTimeSmsDftNLate">
+  <h2 id="idTimeSmsDftNLateH2">time.definiteNo.quantity.late
+    <a class="clsHide" href="#idTimeSmsDftNLateH2"></a></h2>
+  <p id="idTimeSmsDftNLatedsn">description::
+    <br>_stxEngl: Sorry, I came late.
+    <a class="clsHide" href="#idTimeSmsDftNLatedsn"></a></p>
+  <p id="idTimeSmsDftNLatenam">name::
+    <br>* McsEngl.late,
+    <br>* McsEngl.time.definiteNo.quantity.late,
+    <br>====== langoChinese:
+    <br>* McsZhon.chí-迟!=late,
+    <br>* McsZhon.迟-chí!=late,
+    <br>====== langoGreek:
+    <br>* McsElln.αργά!=late,
+    <a class="clsHide" href="#idTimeSmsDftNLatenam"></a></p>
   </section>
 </section>
 
@@ -622,13 +659,12 @@
     <br>· time, relative, after time.
     <a class="clsHide" href="#idTimeRltvAftdsn"></a></p>
   <p id="idTimeRltvAftnam">name::
-    <br>* McsEngl.rlnTimeAfter,
-    <br>* McsEngl.time.relative.after-time,
-    <br>--- conjunction:
     <br>* McsEngl.after!~conjEngl:rlnTimeAfter,
+    <br>* McsEngl.rlnTimeAfter,
+    <br>* McsEngl.then!~advbEngl:timeAfter-time,
+    <br>* McsEngl.time.relative.after-time,
     <br>====== langoSinago:
     <br>* McsSngo.to-ina-to,
-    <br>--- conjunction:
     <br>* McsSngo.ina!~conjSngo!=rlnTimeAfter,
     <a class="clsHide" href="#idTimeRltvAftnam"></a></p>
 
@@ -874,6 +910,33 @@
     <br>* McsEngl.syntax.rlnTimeAfterCurrent,
     <a class="clsHide" href="#idTimeRltvAfrcstxnam"></a></p>
   </section>
+  </section>
+
+  <section id="idTimeRltvStart">
+  <h2 id="idTimeRltvStartH2">time.relative.start
+    <a class="clsHide" href="#idTimeRltvStartH2"></a></h2>
+  <p id="idTimeRltvStartdsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeRltvStartdsn"></a></p>
+  <p id="idTimeRltvStartnam">name::
+    <br>* McsEngl.time.relative.start,
+    <br>* McsEngl.timeRelativeStart,
+    <a class="clsHide" href="#idTimeRltvStartnam"></a></p>
+  </section>
+
+  <section id="idTimeRltvEnd">
+  <h2 id="idTimeRltvEndH2">time.relative.end
+    <a class="clsHide" href="#idTimeRltvEndH2"></a></h2>
+  <p id="idTimeRltvEnddsn">description::
+    <br>_stxEngl: Lastly, he decided to go study abroad.
+    <br>_stxEngl: We finally got to see the Aurora.
+    <a class="clsHide" href="#idTimeRltvEnddsn"></a></p>
+  <p id="idTimeRltvEndnam">name::
+    <br>* McsEngl.finally!~advbEngl:timeRelativeEnd,
+    <br>* McsEngl.lastly!~advbEngl:timeRelativeEnd,
+    <br>* McsEngl.time.relative.end,
+    <br>* McsEngl.timeRelativeEnd,
+    <a class="clsHide" href="#idTimeRltvEndnam"></a></p>
   </section>
 </section>
 
@@ -1258,6 +1321,53 @@
     <a class="clsHide" href="#idTimeUomYearLeapnam"></a></p>
   </section>
 
+  <section id="idTimeUomYearLast">
+  <h3 id="idTimeUomYearLastH3">year.last
+    <a class="clsHide" href="#idTimeUomYearLastH3"></a></h3>
+  <p id="idTimeUomYearLastdsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomYearLastdsn"></a></p>
+  <p id="idTimeUomYearLastnam">name::
+    <br>* McsEngl.year.last,
+    <br>* McsEngl.yearLast,
+    <br>====== langoChinese:
+    <br>* McsZhon.qùnián-去年!=yearLast,
+    <br>* McsZhon.去年-qùnián!=yearLast,
+    <br>====== langoGreek:
+    <br>* McsElln.πέρυσι!=yearLast,
+    <a class="clsHide" href="#idTimeUomYearLastnam"></a></p>
+  </section>
+
+  <section id="idTimeUomYearCrnt">
+  <h3 id="idTimeUomYearCrntH3">year.current
+    <a class="clsHide" href="#idTimeUomYearCrntH3"></a></h3>
+  <p id="idTimeUomYearCrntdsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomYearCrntdsn"></a></p>
+  <p id="idTimeUomYearCrntnam">name::
+    <br>* McsEngl.this-year,
+    <br>* McsEngl.year.current,
+    <br>* McsEngl.yearCurrent,
+    <br>====== langoGreek:
+    <br>* McsElln.φέτος!=yearCurrent,
+    <a class="clsHide" href="#idTimeUomYearCrntnam"></a></p>
+  </section>
+
+  <section id="idTimeUomYearNext">
+  <h3 id="idTimeUomYearNextH3">year.next
+    <a class="clsHide" href="#idTimeUomYearNextH3"></a></h3>
+  <p id="idTimeUomYearNextdsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomYearNextdsn"></a></p>
+  <p id="idTimeUomYearNextnam">name::
+    <br>* McsEngl.next-year,
+    <br>* McsEngl.year.next,
+    <br>* McsEngl.yearNext,
+    <br>====== langoGreek:
+    <br>* McsElln.του-χρόνου!=yearNext,
+    <a class="clsHide" href="#idTimeUomYearNextnam"></a></p>
+  </section>
+
   <section id="idTimeUomYearCmn">
   <h3 id="idTimeUomYearCmnH3">year.common
     <a class="clsHide" href="#idTimeUomYearCmnH3"></a></h3>
@@ -1427,6 +1537,92 @@
   </section>
   </section>
 
+  <section id="idTimeUomSizon">
+  <h2 id="idTimeUomSizonH2">UomTime.season
+    <a class="clsHide" href="#idTimeUomSizonH2"></a></h2>
+  <p id="idTimeUomSizondsn">description::
+    <br>"each of the four divisions of the year (spring, summer, autumn, and winter) marked by particular weather patterns and daylight hours, resulting from the earth's changing position with regard to the sun."
+    <br>[{2021-10-17 retrieved} Google-dict]
+    <a class="clsHide" href="#idTimeUomSizondsn"></a></p>
+  <p id="idTimeUomSizonnam">name::
+    <br>* McsEngl.UomTime.season,
+    <br>* McsEngl.year'season,
+    <br>====== langoChinese:
+    <br>* McsZhon.suìshí-岁时-(歲時)!=year'season,
+    <br>* McsZhon.岁时-(歲時)-suìshí!=year'season,
+    <br>====== langoGreek:
+    <br>* McsElln.εποχή!=year'season,
+    <a class="clsHide" href="#idTimeUomSizonnam"></a></p>
+
+  <section id="idTimeUomSizonSprg">
+  <h3 id="idTimeUomSizonSprgH3">season.spring
+    <a class="clsHide" href="#idTimeUomSizonSprgH3"></a></h3>
+  <p id="idTimeUomSizonSprgdsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomSizonSprgdsn"></a></p>
+  <p id="idTimeUomSizonSprgnam">name::
+    <br>* McsEngl.season.spring,
+    <br>* McsEngl.spring-season,
+    <br>====== langoChinese:
+    <br>* McsZhon.chūntiān-春天!=spring-season,
+    <br>* McsZhon.春天-chūntiān!=spring-season,
+    <br>====== langoGreek:
+    <br>* McsElln.άνοιξη!=spring-season,
+    <a class="clsHide" href="#idTimeUomSizonSprgnam"></a></p>
+  </section>
+
+  <section id="idTimeUomSizonSmmr">
+  <h3 id="idTimeUomSizonSmmrH3">season.summer
+    <a class="clsHide" href="#idTimeUomSizonSmmrH3"></a></h3>
+  <p id="idTimeUomSizonSmmrdsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomSizonSmmrdsn"></a></p>
+  <p id="idTimeUomSizonSmmrnam">name::
+    <br>* McsEngl.season.summer,
+    <br>* McsEngl.summer-season,
+    <br>====== langoChinese:
+    <br>* McsZhon.xiàtiān-夏天!=summer,
+    <br>* McsZhon.夏天-xiàtiān!=summer,
+    <br>====== langoGreek:
+    <br>* McsElln.καλοκαίρι!=summer,
+    <a class="clsHide" href="#idTimeUomSizonSmmrnam"></a></p>
+  </section>
+
+  <section id="idTimeUomSizonAtmn">
+  <h3 id="idTimeUomSizonAtmnH3">season.autumn
+    <a class="clsHide" href="#idTimeUomSizonAtmnH3"></a></h3>
+  <p id="idTimeUomSizonAtmndsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomSizonAtmndsn"></a></p>
+  <p id="idTimeUomSizonAtmnnam">name::
+    <br>* McsEngl.autumn-season,
+    <br>* McsEngl.season.autumn,
+    <br>====== langoChinese:
+    <br>* McsZhon.qiūtiān-秋天!=autumn,
+    <br>* McsZhon.秋天-qiūtiān!=autumn,
+    <br>====== langoGreek:
+    <br>* McsElln.φθινόπωρο!=autumn,
+    <a class="clsHide" href="#idTimeUomSizonAtmnnam"></a></p>
+  </section>
+
+  <section id="idTimeUomSizonWntr">
+  <h3 id="idTimeUomSizonWntrH3">season.winter
+    <a class="clsHide" href="#idTimeUomSizonWntrH3"></a></h3>
+  <p id="idTimeUomSizonWntrdsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomSizonWntrdsn"></a></p>
+  <p id="idTimeUomSizonWntrnam">name::
+    <br>* McsEngl.season.winter,
+    <br>* McsEngl.winter-season,
+    <br>====== langoChinese:
+    <br>* McsZhon.dōngtiān-冬天!=winter,
+    <br>* McsZhon.冬天-dōngtiān!=winter,
+    <br>====== langoGreek:
+    <br>* McsElln.χειμώνας!=winter,
+    <a class="clsHide" href="#idTimeUomSizonWntrnam"></a></p>
+  </section>
+  </section>
+
   <section id="idTimeUomMnth">
   <h2 id="idTimeUomMnthH2">UomTime.month
     <a class="clsHide" href="#idTimeUomMnthH2"></a></h2>
@@ -1442,6 +1638,9 @@
     <br>* McsSngo.to-mino!=month, from Greek 'μήνας',
     <br>====== langoEsperanto:
     <br>* McsEspo.monato!=month,
+    <br>====== langoChinese:
+    <br>* McsZhon.yuèfèn-月份!=month,
+    <br>* McsZhon.月份-yuèfèn!=month,
     <br>====== langoGreek:
     <br>* McsElln.μήνας!=month,
     <a class="clsHide" href="#idTimeUomMnthnam"></a></p>
@@ -1950,6 +2149,23 @@
     <a class="clsHide" href="#idTimeUomDaySndnam"></a></p>
   </section>
 
+  <section id="idTimeUomDayPst2">
+  <h3 id="idTimeUomDayPst2H3">day.relative.before-yesterday
+    <a class="clsHide" href="#idTimeUomDayPst2H3"></a></h3>
+  <p id="idTimeUomDayPst2dsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomDayPst2dsn"></a></p>
+  <p id="idTimeUomDayPst2nam">name::
+    <br>* McsEngl.day-before-yesterday,
+    <br>* McsEngl.day.relative.before-yesterday,
+    <br>====== langoChinese:
+    <br>* McsZhon.qiántiān-前天!=day-before-yesterday,
+    <br>* McsZhon.前天-qiántiān!=day-before-yesterday,
+    <br>====== langoGreek:
+    <br>* McsElln.προχθές!=day-before-yesterday,
+    <a class="clsHide" href="#idTimeUomDayPst2nam"></a></p>
+  </section>
+
   <section id="idTimeUomDayPst">
   <h3 id="idTimeUomDayPstH3">day.relative.before
     <a class="clsHide" href="#idTimeUomDayPstH3"></a></h3>
@@ -1961,6 +2177,11 @@
     <br>* McsEngl.yesterday,
     <br>====== langoSinago:
     <br>* McsSngo.to-tieno-ano!=yersterday,
+    <br>====== langoChinese:
+    <br>* McsZhon.zuótiān-昨天!=yersterday,
+    <br>* McsZhon.昨天-zuótiān!=yersterday,
+    <br>====== langoGreek:
+    <br>* McsElln.χθες!=yersterday,
     <a class="clsHide" href="#idTimeUomDayPstnam"></a></p>
   </section>
 
@@ -1975,6 +2196,10 @@
     <br>* McsEngl.today,
     <br>====== langoSinago:
     <br>* McsSngo.to-tieno-eno!=today,
+    <br>====== langoChinese:
+    <br>* McsZhon.今天-jīn-tiān!=today,
+    <br>====== langoGreek:
+    <br>* McsElln.σήμερα!=today,
     <a class="clsHide" href="#idTimeUomDayPrtnam"></a></p>
   </section>
 
@@ -1989,7 +2214,43 @@
     <br>* McsEngl.tomorrow,
     <br>====== langoSinago:
     <br>* McsSngo.to-tieno-ino!=tomorrow,
+    <br>====== langoChinese:
+    <br>* McsZhon.míngtiān-明天!=tomorrow,
+    <br>* McsZhon.明天-míngtiān!=tomorrow,
+    <br>====== langoGreek:
+    <br>* McsElln.αύριο!=tomorrow,
     <a class="clsHide" href="#idTimeUomDayFtrnam"></a></p>
+  </section>
+
+  <section id="idTimeUomDayFtr2">
+  <h3 id="idTimeUomDayFtr2H3">day.relative.after-tomorrow
+    <a class="clsHide" href="#idTimeUomDayFtr2H3"></a></h3>
+  <p id="idTimeUomDayFtr2dsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomDayFtr2dsn"></a></p>
+  <p id="idTimeUomDayFtr2nam">name::
+    <br>* McsEngl.day-after-tomorrow,
+    <br>* McsEngl.day.relative.after-tomorrow,
+    <br>====== langoChinese:
+    <br>* McsZhon.hòutiān-后天!=day-after-tomorrow,
+    <br>* McsZhon.后天-hòutiān!=day-after-tomorrow,
+    <br>====== langoGreek:
+    <br>* McsElln.μεθαύριο!=day-after-tomorrow,
+    <a class="clsHide" href="#idTimeUomDayFtr2nam"></a></p>
+  </section>
+
+  <section id="idTimeUomDayFtr3">
+  <h3 id="idTimeUomDayFtr3H3">day.relative.after-after-tomorrow
+    <a class="clsHide" href="#idTimeUomDayFtr3H3"></a></h3>
+  <p id="idTimeUomDayFtr3dsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomDayFtr3dsn"></a></p>
+  <p id="idTimeUomDayFtr3nam">name::
+    <br>* McsEngl.day-after-after-tomorrow,
+    <br>* McsEngl.day.relative.after-after-tomorrow,
+    <br>====== langoGreek:
+    <br>* McsElln.παραμεθαύριο!=day-after-after-tomorrow,
+    <a class="clsHide" href="#idTimeUomDayFtr3nam"></a></p>
   </section>
   </section>
 
