@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char-(1-1-0.2021-10-06)</title>
+  <title>Mcs.char-(1-4-0.2021-10-30)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -1428,9 +1428,12 @@
     <br>· the-chars assigned are 137,439 in version'11-0-0.2018.
     <a class="clsHide" href="#idCharUcdstdcpdsn"></a></p>
   <p id="idCharUcdstdcpnam">name::
-    <br>* McsEngl.Unicode'code-point!⇒Unicode--code-point,
-    <br>* McsEngl.Unicode--code-point,
-    <br>* McsEngl.code-point--of-Unicode-standard!⇒Unicode--code-point,
+    <br>* McsEngl.Ucp,
+    <br>* McsEngl.Ucp'(Unicode--code-point)!⇒Ucp,
+    <br>* McsEngl.Unicode'code-point!⇒Ucp,
+    <br>* McsEngl.Unicode--code-point!⇒Ucp,
+    <br>* McsEngl.Unicode-code-point!⇒Ucp,
+    <br>* McsEngl.code-point--of-Unicode-standard!⇒Ucp,
     <a class="clsHide" href="#idCharUcdstdcpnam"></a></p>
 
   <section id="idCharUcdstdcpchr">
@@ -1439,7 +1442,7 @@
   </section>
 
   <section id="idCharUcdstdcpAgg">
-  <h4 id="idCharUcdstdcpAggH4">code-point.aggregate
+  <h4 id="idCharUcdstdcpAggH4">Ucp.aggregate
     <a class="clsHide" href="#idCharUcdstdcpAggH4"></a></h4>
   <p id="idCharUcdstdcpAggdsn">description::
     <br>· Unicode--code-space is the aggregate code-points of <a class="clsPreview" href="#idCharUcdstrd">the-standard</a>, 65,536 x 17 = 1,114,112, that are-reserved to assign chars or reserved for surrogates, internal-use or private-use..
@@ -1452,7 +1455,7 @@
   </section>
 
   <section id="idCharUcdstdcpPln">
-  <h4 id="idCharUcdstdcpPlnH4">code-point.plane of Unicode
+  <h4 id="idCharUcdstdcpPlnH4">Ucp.plane of Unicode
     <a class="clsHide" href="#idCharUcdstdcpPlnH4"></a></h4>
   <p id="idCharUcdstdcpPlndsn">description::
     <br>In the Unicode standard, a plane is a continuous group of 65,536 (2<sup>16</sup>) code points.
@@ -1577,7 +1580,7 @@
   </section>
 
   <section id="idCharUcdstdcpBlk">
-  <h4 id="idCharUcdstdcpBlkH4">code-point.block of Unicode
+  <h4 id="idCharUcdstdcpBlkH4">Ucp.block of Unicode
     <a class="clsHide" href="#idCharUcdstdcpBlkH4"></a></h4>
   <p id="idCharUcdstdcpBlkdsn">description::
     <br>A block is a uniquely named, contiguous range of code points.
@@ -1638,7 +1641,16 @@
     <br>* McsEngl.Unicode-block.specific,
     <a class="clsHide" href="#idCharUcdstdcpBlkSpcnam"></a></p>
   <div id="idCharUcdstdcpBlkP1">specific::
-    <br>* 291,
+    <br>* 320 blocks in Unicode-14.0:
+    <br>- 164 in plane-0|BMP
+    <br>- 145 in plane-1|SMP
+    <br>- 6 in plane-2|SIP
+    <br>- 1 in plane-3|TIP
+    <br>- 2 in plane-14|SSP
+    <br>- 1 in plane-15|PUA-A
+    <br>- 1 in plane-16|PUA-B
+    <br>[{2021-10-27 retrieved} https://en.wikipedia.org/wiki/Unicode_block#List_of_blocks]
+    <br>* 291 blocks in Unicode-11,
     <br>(code-points/chars)
     <ol>
       <li><a class="clsPreview" href="../dirTchInf/dirUcd/McsUcdU0000.last.html#idOverview">U+0000|0..U+007F|127</a>, Basic-Latin, 128/128
@@ -1938,76 +1950,126 @@
   </section>
 
   <section id="idCharUcdstdcpUsd">
-  <h4 id="idCharUcdstdcpUsdH4">code-point.used
+  <h4 id="idCharUcdstdcpUsdH4">Ucp.used
     <a class="clsHide" href="#idCharUcdstdcpUsdH4"></a></h4>
   <p id="idCharUcdstdcpUsddsn">description::
     <br>· used-code-point of Unicode is <a class="clsPreview" href="#idCharUcdstdcp">a-code-point</a> with an assigned <a class="clsPreview" href="#idCharUcd">char</a>, or reserved for surrogates, internal-use or private-use.
     <br>[<a class="clsPreview" href="../dirHmn/McsHmn000003.last.html#idOverview">hmnSngo</a>.2018-06-26]
+    <br>===
+    <br>· As of Unicode 14.0, released in September 2021,
+    <br>* <strong>288,512 (26%) of these code points are allocated</strong>, including
+    <br>- 144,762 (13%) assigned characters,
+    <br>- 137,468 (12.3%) reserved for private use,
+    <br>- 2,048 for surrogates, and
+    <br>- 66 designated non-characters,
+    <br>* <strong>leaving 825,600 (74%) unallocated</strong>.
+    <br>[{2021-10-27 retrieved} https://en.wikipedia.org/wiki/Universal_Character_Set_characters]
     <a class="clsHide" href="#idCharUcdstdcpUsddsn"></a></p>
   <p id="idCharUcdstdcpUsdnam">name::
-    <br>* McsEngl.Unicode--code-point.used,
+    <br>* McsEngl.Ucp.allocated,
+    <br>* McsEngl.Ucp.used,
     <br>* McsEngl.used-code-point--of-Unicode,
     <a class="clsHide" href="#idCharUcdstdcpUsdnam"></a></p>
 
   <section id="idCharUcdstdcpAsgd">
-  <h5 id="idCharUcdstdcpAsgdH5">code-point.char-assigned
+  <h5 id="idCharUcdstdcpAsgdH5">Ucp.char-assigned
     <a class="clsHide" href="#idCharUcdstdcpAsgdH5"></a></h5>
   <p id="idCharUcdstdcpAsgddsn">description::
     <br>· assigned--Unicode--code-point is <a class="clsPreview" href="#idCharUcdstdcpUsd">a-used-code-point</a> with an assigned char.
     <br>· the-Unicode-standard[a] uses 137,439 from its[a] 1,114,112 code-points to assign chars in version'11-0-0.2018.
+    <br>===
+    <br>· As of Unicode 14.0, released in September 2021,
+    <br>* <strong>288,512 (26%) of these code points are allocated</strong>, including
+    <br>- 144,762 (13%) assigned characters,
+    <br>- 137,468 (12.3%) reserved for private use,
+    <br>- 2,048 for surrogates, and
+    <br>- 66 designated non-characters,
+    <br>* <strong>leaving 825,600 (74%) unallocated</strong>.
+    <br>[{2021-10-27 retrieved} https://en.wikipedia.org/wiki/Universal_Character_Set_characters]
     <a class="clsHide" href="#idCharUcdstdcpAsgddsn"></a></p>
   <p id="idCharUcdstdcpAsgdnam">name::
-    <br>* McsEngl.Unicode--code-point.assigned-char,
-    <br>* McsEngl.assigned-char---Unicode--code-point,
+    <br>* McsEngl.Ucp.assigned-char,
+    <br>* McsEngl.Ucp.character,
+    <br>* McsEngl.assigned-char--Ucp,
     <a class="clsHide" href="#idCharUcdstdcpAsgdnam"></a></p>
   </section>
 
   <section id="idCharUcdstdcpPtus">
-  <h5 id="idCharUcdstdcpPtusH5">code-point.private-use
+  <h5 id="idCharUcdstdcpPtusH5">Ucp.private-use
     <a class="clsHide" href="#idCharUcdstdcpPtusH5"></a></h5>
   <p id="idCharUcdstdcpPtusdsn">description::
     <br>Private-use characters <span class="clsColorRed">are code points</span> whose interpretation is not specified by a character encoding standard and whose use and interpretation may be determined by private agreement among cooperating users. Private-use characters are sometimes also referred to as user-defined characters (UDC) or vendor-defined characters (VDC).
     <br>[http://www.unicode.org/faq/private_use.html#pua1]
+    <br>===
+    <br>· As of Unicode 14.0, released in September 2021,
+    <br>* <strong>288,512 (26%) of these code points are allocated</strong>, including
+    <br>- 144,762 (13%) assigned characters,
+    <br>- 137,468 (12.3%) reserved for private use,
+    <br>- 2,048 for surrogates, and
+    <br>- 66 designated non-characters,
+    <br>* <strong>leaving 825,600 (74%) unallocated</strong>.
+    <br>[{2021-10-27 retrieved} https://en.wikipedia.org/wiki/Universal_Character_Set_characters]
     <a class="clsHide" href="#idCharUcdstdcpPtusdsn"></a></p>
   <p id="idCharUcdstdcpPtusnam">name::
     <br>* McsEngl.charUni.private-use-character,
-    <br>* McsEngl.Unicode--code-point.private-use-character,
-    <br>* McsEngl.Unicode--code-point.user-defined-character,
-    <br>* McsEngl.Unicode--code-point.vendor-defined-character,
-    <br>* McsEngl.private-use-character---Unicode--code-point,
+    <br>* McsEngl.Ucp.private-use-character,
+    <br>* McsEngl.Ucp.user-defined-character,
+    <br>* McsEngl.Ucp.vendor-defined-character,
+    <br>* McsEngl.private-use-character--Ucp,
     <a class="clsHide" href="#idCharUcdstdcpPtusnam"></a></p>
   </section>
 
   <section id="idCharUcdstdcpIlus">
-  <h5 id="idCharUcdstdcpIlusH5">code-point.internal-use
+  <h5 id="idCharUcdstdcpIlusH5">Ucp.internal-use
     <a class="clsHide" href="#idCharUcdstdcpIlusH5"></a></h5>
   <p id="idCharUcdstdcpIlusdsn">description::
     <br>A "noncharacter" is a code point that is permanently reserved in the Unicode Standard for internal use.
     <br>[http://www.unicode.org/faq/private_use.html#noncharacters]
+    <br>===
+    <br>· As of Unicode 14.0, released in September 2021,
+    <br>* <strong>288,512 (26%) of these code points are allocated</strong>, including
+    <br>- 144,762 (13%) assigned characters,
+    <br>- 137,468 (12.3%) reserved for private use,
+    <br>- 2,048 for surrogates, and
+    <br>- 66 designated non-characters,
+    <br>* <strong>leaving 825,600 (74%) unallocated</strong>.
+    <br>[{2021-10-27 retrieved} https://en.wikipedia.org/wiki/Universal_Character_Set_characters]
     <a class="clsHide" href="#idCharUcdstdcpIlusdsn"></a></p>
   <p id="idCharUcdstdcpIlusnam">name::
-    <br>* McsEngl.noncharacter---Unicode--code-point,
-    <br>* McsEngl.Unicode--code-point.internal-use,
-    <br>* McsEngl.Unicode--code-point.noncharacter,
+    <br>* McsEngl.noncharacter-Ucp,
+    <br>* McsEngl.Ucp.characterNo,
+    <br>* McsEngl.Ucp.internal-use,
+    <br>* McsEngl.Ucp.noncharacter,
     <a class="clsHide" href="#idCharUcdstdcpIlusnam"></a></p>
   </section>
   </section>
 
   <section id="idCharUcdstdcpUsdN">
-  <h4 id="idCharUcdstdcpUsdNH4">code-point.usedNo
+  <h4 id="idCharUcdstdcpUsdNH4">Ucp.usedNo
     <a class="clsHide" href="#idCharUcdstdcpUsdNH4"></a></h4>
   <p id="idCharUcdstdcpUsdNdsn">description::
     <br>· usedNo-code-point of Unicode is <a class="clsPreview" href="#idCharUcdstdcp">a-code-point</a> with NOT an assigned <a class="clsPreview" href="#idCharUcd">char</a>, or reserved for surrogates, internal-use or private-use.
     <br>[<a class="clsPreview" href="../dirHmn/McsHmn000003.last.html#idOverview">hmnSngo</a>.2018-06-26]
+    <br>===
+    <br>· As of Unicode 14.0, released in September 2021,
+    <br>* <strong>288,512 (26%) of these code points are allocated</strong>, including
+    <br>- 144,762 (13%) assigned characters,
+    <br>- 137,468 (12.3%) reserved for private use,
+    <br>- 2,048 for surrogates, and
+    <br>- 66 designated non-characters,
+    <br>* <strong>leaving 825,600 (74%) unallocated</strong>.
+    <br>[{2021-10-27 retrieved} https://en.wikipedia.org/wiki/Universal_Character_Set_characters]
     <a class="clsHide" href="#idCharUcdstdcpUsdNdsn"></a></p>
   <p id="idCharUcdstdcpUsdNnam">name::
-    <br>* McsEngl.Unicode--code-point.usedNo,
+    <br>* McsEngl.Ucp.allocatedNo,
+    <br>* McsEngl.Ucp.unallocated,
+    <br>* McsEngl.Ucp.usedNo,
     <br>* McsEngl.usedNo-code-point--of-Unicode,
     <a class="clsHide" href="#idCharUcdstdcpUsdNnam"></a></p>
   </section>
 
   <section id="idCharUcdstdcpStUn">
-  <h4 id="idCharUcdstdcpStUnH4">code-point.unknown-script
+  <h4 id="idCharUcdstdcpStUnH4">Ucp.unknown-script
     <a class="clsHide" href="#idCharUcdstdcpStUnH4"></a></h4>
   <p id="idCharUcdstdcpStUndsn">description::
     <br>The value of <strong>"unknown" script</strong> (ISO 15924 code Zzzz) is given to unassigned, private use, <a class="clsPreview" href="#idCharUcdstdcpIlus">noncharacter</a>, and surrogate code points.
@@ -2015,13 +2077,13 @@
     <a class="clsHide" href="#idCharUcdstdcpStUndsn"></a></p>
   <p id="idCharUcdstdcpStUnnam">name::
     <br>* McsEngl.unknown-script-code-point--of-Unicode,
-    <br>* McsEngl.unknown-script---Unicode--code-point,
-    <br>* McsEngl.Unicode--code-point.unknown-script,
+    <br>* McsEngl.unknown-script--Ucp,
+    <br>* McsEngl.Ucp.unknown-script,
     <a class="clsHide" href="#idCharUcdstdcpStUnnam"></a></p>
   </section>
 
   <section id="idCharUcdstdcpStUnN">
-  <h4 id="idCharUcdstdcpStUnNH4">code-point.unknown-script.no
+  <h4 id="idCharUcdstdcpStUnNH4">Ucp.unknown-script.no
     <a class="clsHide" href="#idCharUcdstdcpStUnNH4"></a></h4>
   <p id="idCharUcdstdcpStUnNdsn">description::
     <br>· known-script--code-points are Unicode--code-points with assigned characters[a] which[a] are part of <a class="clsPreview" href="#idCharUcdScrpt">a-script</a>.
@@ -2030,14 +2092,14 @@
   <p id="idCharUcdstdcpStUnNnam">name::
     <br>* McsEngl.known-script-code-point--of-Unicode,
     <br>* McsEngl.unknown-scriptNo-code-point--of-Unicode,
-    <br>* McsEngl.unknown-scriptNo---Unicode--code-point,
+    <br>* McsEngl.unknown-scriptNo--Ucp,
     <br>* McsEngl.charUni'known-script,
-    <br>* McsEngl.Unicode--code-point.unknown-scriptNo,
+    <br>* McsEngl.Ucp.unknown-scriptNo,
     <a class="clsHide" href="#idCharUcdstdcpStUnNnam"></a></p>
   </section>
 
   <section id="idCharUcdstdcpSrvl">
-  <h4 id="idCharUcdstdcpSrvlH4">code-point.scalar-value
+  <h4 id="idCharUcdstdcpSrvlH4">Ucp.scalar-value
     <a class="clsHide" href="#idCharUcdstdcpSrvlH4"></a></h4>
   <p id="idCharUcdstdcpSrvldsn">description::
     <br>· Unicode-scalar-value is any <a class="clsPreview" href="#idCharUcdstdcp">Unicode--code-point</a> EXCEPT <a class="clsPreview" href="#idCharUcdstdcpSrgt">the-surrogates</a>.
@@ -2050,17 +2112,23 @@
   </section>
 
   <section id="idCharUcdstdcpSrgt">
-  <h4 id="idCharUcdstdcpSrgtH4">code-point.surrogate
+  <h4 id="idCharUcdstdcpSrgtH4">Ucp.surrogate
     <a class="clsHide" href="#idCharUcdstdcpSrgtH4"></a></h4>
   <p id="idCharUcdstdcpSrgtdsn">description::
-    <br>"The High Surrogates (U+D800–U+DBFF) and Low Surrogate (U+DC00–U+DFFF) codes are reserved for encoding non-BMP characters in <a class="clsPreview" href="#idCharencdgUtf16">UTF-16</a> by using a pair of 16-bit codes: one High Surrogate and one Low Surrogate. A single surrogate code point will never be assigned a character.
+    <br>"The High Surrogates (U+D800|55296–U+DBFF|56319) and Low Surrogate (U+DC00|56320–U+DFFF|57343) codes are reserved for encoding non-BMP characters in <a class="clsPreview" href="#idCharencdgUtf16">UTF-16</a> by using a pair of 16-bit codes: one High Surrogate and one Low Surrogate. A single surrogate code point will never be assigned a character.
     <br>[{2018-06-26} https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane]"
     <br>===
     <a class="clsHide" href="#idCharUcdstdcpSrgtdsn"></a></p>
   <p id="idCharUcdstdcpSrgtnam">name::
-    <br>* McsEngl.Unicode--code-point.surrogate,
+    <br>* McsEngl.Ucp.surrogate,
+    <br>* McsEngl.surrogate-Ucp,
     <br>* McsEngl.surrogate--code-point---of-Unicode,
     <a class="clsHide" href="#idCharUcdstdcpSrgtnam"></a></p>
+  <p id="idCharUcdstdcpSrgtwpa">addressWpg::
+    <br>* http://www.russellcottrell.com/greek/utilities/surrogatepaircalculator.htm,
+    <br>* https://www.unicode.org/versions/Unicode3.0.0/ch03.pdf (contains the-code supplement &lt;=> surrogate-pair),
+    <br>* https://unicodelookup.com/,
+    <a class="clsHide" href="#idCharUcdstdcpSrgtwpa"></a></p>
   </section>
   </section>
 
@@ -2317,9 +2385,21 @@
     <a class="clsHide" href="#idCharUcdstdSpcwpa"></a></p>
   </section>
 
+  <section id="idCharUcdstd14002021">
+  <h3 id="idCharUcdstd14002021H3">Unicode'14-0-0.2021
+    <a class="clsHide" href="#idCharUcdstd14002021H3"></a></h3>
+  <p id="idCharUcdstd14002021dsn">description::
+    <br>"As of Unicode 14.0, released in September 2021, 288,512 (26%) of these code points are allocated, including 144,762 (13%) assigned characters, 137,468 (12.3%) reserved for private use, 2,048 for surrogates, and 66 designated non-characters, leaving 825,600 (74%) unallocated."
+    <br>[{2021-10-27 retrieved} https://en.wikipedia.org/wiki/Universal_Character_Set_characters]
+    <a class="clsHide" href="#idCharUcdstd14002021dsn"></a></p>
+  <p id="idCharUcdstd14002021nam">name::
+    <br>* McsEngl.Unicode'14-0-0.2021,
+    <a class="clsHide" href="#idCharUcdstd14002021nam"></a></p>
+  </section>
+
   <section id="idCharUcdstd11002018">
   <h3 id="idCharUcdstd11002018H3">Unicode'11-0-0.2018
-    <a class="clsHide" href="#idCharUcsstd11002018H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd11002018H3"></a></h3>
   <p id="idCharUcdstd11002018dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 11.0.0, (Mountain View, CA: The Unicode Consortium, 2018. ISBN 978-1-936213-19-1)
     <br>http://www.unicode.org/versions/Unicode11.0.0/
@@ -2335,7 +2415,7 @@
 
   <section id="idCharUcdstd10002017">
   <h3 id="idCharUcdstd10002017H3">Unicode'10-0-0.2017
-    <a class="clsHide" href="#idCharUcsstd10002017H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd10002017H3"></a></h3>
   <p id="idCharUcdstd10002017dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 10.0.0, (Mountain View, CA: The Unicode Consortium, 2017. ISBN 978-1-936213-16-0)
     <br>http://www.unicode.org/versions/Unicode10.0.0/
@@ -2351,7 +2431,7 @@
 
   <section id="idCharUcdstd9002016">
   <h3 id="idCharUcdstd9002016H3">Unicode'9-0-0.2016
-    <a class="clsHide" href="#idCharUcsstd9002016H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd9002016H3"></a></h3>
   <p id="idCharUcdstd9002016dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 9.0.0, (Mountain View, CA: The Unicode Consortium, 2016. ISBN 978-1-936213-13-9)
     <br>http://www.unicode.org/versions/Unicode9.0.0/
@@ -2367,7 +2447,7 @@
 
   <section id="idCharUcdstd8002015">
   <h3 id="idCharUcdstd8002015H3">Unicode'8-0-0.2015
-    <a class="clsHide" href="#idCharUcsstd8002015H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd8002015H3"></a></h3>
   <p id="idCharUcdstd8002015dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 8.0.0, (Mountain View, CA: The Unicode Consortium, 2015. ISBN 978-1-936213-10-8)
     <br>http://www.unicode.org/versions/Unicode8.0.0/
@@ -2383,7 +2463,7 @@
 
   <section id="idCharUcdstd7002014">
   <h3 id="idCharUcdstd7002014H3">Unicode'7-0-0.2014
-    <a class="clsHide" href="#idCharUcsstd7002014H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd7002014H3"></a></h3>
   <p id="idCharUcdstd7002014dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 7.0.0, (Mountain View, CA: The Unicode Consortium, 2014. ISBN 978-1-936213-09-2)
     <br>http://www.unicode.org/versions/Unicode7.0.0/
@@ -2399,7 +2479,7 @@
 
   <section id="idCharUcdstd6302013">
   <h3 id="idCharUcdstd6302013H3">Unicode'6-3-0.2013
-    <a class="clsHide" href="#idCharUcsstd6302013H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd6302013H3"></a></h3>
   <p id="idCharUcdstd6302013dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 6.3.0, (Mountain View, CA: The Unicode Consortium, 2013. ISBN 978-1-936213-08-5)
     <br>http://www.unicode.org/versions/Unicode6.3.0/
@@ -2415,7 +2495,7 @@
 
   <section id="idCharUcdstd6202012">
   <h3 id="idCharUcdstd6202012H3">Unicode'6-2-0.2012
-    <a class="clsHide" href="#idCharUcsstd6202012H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd6202012H3"></a></h3>
   <p id="idCharUcdstd6202012dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 6.2.0, (Mountain View, CA: The Unicode Consortium, 2012. ISBN 978-1-936213-07-8)
     <br>http://www.unicode.org/versions/Unicode6.2.0/
@@ -2431,7 +2511,7 @@
 
   <section id="idCharUcdstd6102012">
   <h3 id="idCharUcdstd6102012H3">Unicode'6-1-0.2012
-    <a class="clsHide" href="#idCharUcsstd6102012H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd6102012H3"></a></h3>
   <p id="idCharUcdstd6102012dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 6.1.0, (Mountain View, CA: The Unicode Consortium, 2012. ISBN 978-1-936213-02-3)
     <br>http://www.unicode.org/versions/Unicode6.1.0/
@@ -2447,7 +2527,7 @@
 
   <section id="idCharUcdstd6002011">
   <h3 id="idCharUcdstd6002011H3">Unicode'6-0-0.2011
-    <a class="clsHide" href="#idCharUcsstd6002011H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd6002011H3"></a></h3>
   <p id="idCharUcdstd6002011dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 6.0.0, (Mountain View, CA: The Unicode Consortium, 2011. ISBN 978-1-936213-01-6)
     <br>http://www.unicode.org/versions/Unicode6.0.0/
@@ -2463,7 +2543,7 @@
 
   <section id="idCharUcdstd5202009">
   <h3 id="idCharUcdstd5202009H3">Unicode'5-2-0.2009
-    <a class="clsHide" href="#idCharUcsstd5202009H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd5202009H3"></a></h3>
   <p id="idCharUcdstd5202009dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 5.2.0 (Mountain View, CA: The Unicode Consortium, 2009. ISBN 978-1-936213-00-9)
     <br>http://www.unicode.org/versions/Unicode5.2.0/
@@ -2479,7 +2559,7 @@
 
   <section id="idCharUcdstd5102007">
   <h3 id="idCharUcdstd5102007H3">Unicode'5-1-0.2007
-    <a class="clsHide" href="#idCharUcsstd5102007H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd5102007H3"></a></h3>
   <p id="idCharUcdstd5102007dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 5.1.0, defined by: The Unicode Standard, Version 5.0 (Boston, MA, Addison-Wesley, 2007. ISBN 0-321-48091-0), as amended by Unicode 5.1.0
     <br>http://www.unicode.org/versions/Unicode5.1.0/
@@ -2495,7 +2575,7 @@
 
   <section id="idCharUcdstd5002007">
   <h3 id="idCharUcdstd5002007H3">Unicode'5-0-0.2007
-    <a class="clsHide" href="#idCharUcsstd5002007H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd5002007H3"></a></h3>
   <p id="idCharUcdstd5002007dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 5.0.0, defined by: The Unicode Standard, Version 5.0 (Boston, MA, Addison-Wesley, 2007. ISBN 0-321-48091-0)
     <br>===
@@ -2510,7 +2590,7 @@
 
   <section id="idCharUcdstd4102005">
   <h3 id="idCharUcdstd4102005H3">Unicode'4-1-0.2005
-    <a class="clsHide" href="#idCharUcsstd4012003H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd4012003H3"></a></h3>
   <p id="idCharUcdstd4102005dsn">description::
     <br>· date= March 2005
     <br>· ISO= ISO/IEC 10646:2003 plus Amendment 1
@@ -2525,7 +2605,7 @@
 
   <section id="idCharUcdstd4012003">
   <h3 id="idCharUcdstd4012003H3">Unicode'4-0-1.2003
-    <a class="clsHide" href="#idCharUcsstd4012003H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd4012003H3"></a></h3>
   <p id="idCharUcdstd4012003dsn">description::
     <br>The Unicode Consortium. The Unicode Standard, Version 4.0.1, defined by: The Unicode Standard, Version 4.0 (Boston, MA, Addison-Wesley, 2003. ISBN 0-321-18578-1), as amended by Unicode 4.0.1
     <br>http://www.unicode.org/versions/Unicode4.0.1/
@@ -2537,7 +2617,7 @@
 
   <section id="idCharUcdstd4002003">
   <h3 id="idCharUcdstd4002003H3">Unicode'4-0-0.2003
-    <a class="clsHide" href="#idCharUcsstd4012003H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd4012003H3"></a></h3>
   <p id="idCharUcdstd4002003dsn">description::
     <br>· date= April 2003
     <br>· book= ISBN 0-321-18578-1
@@ -2553,7 +2633,7 @@
 
   <section id="idCharUcdstd3202000">
   <h3 id="idCharUcdstd3202000H3">Unicode'3-2-0.2000
-    <a class="clsHide" href="#idCharUcsstd3202000H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd3202000H3"></a></h3>
   <p id="idCharUcdstd3202000dsn">description::
     <br>The Unicode Consortium, The Unicode Standard, Version 3.2.0,
     <br>defined by: The Unicode Standard, Version 3.0 (Reading, MA: Addison-Wesley, 2000. ISBN 0-201-61633-5),
@@ -2571,7 +2651,7 @@
 
   <section id="idCharUcdstd3102000">
   <h3 id="idCharUcdstd3102000H3">Unicode'3-1-0.2000
-    <a class="clsHide" href="#idCharUcsstd3102000H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd3102000H3"></a></h3>
   <p id="idCharUcdstd3102000dsn">description::
     <br>The Unicode Consortium, The Unicode Standard, Version 3.1.0,
     <br>defined by: The Unicode Standard, Version 3.0 (Reading, MA: Addison-Wesley, 2000. ISBN 0-201-61633-5),
@@ -2589,7 +2669,7 @@
 
   <section id="idCharUcdstd3002000">
   <h3 id="idCharUcdstd3002000H3">Unicode'3-0-0.2000
-    <a class="clsHide" href="#idCharUcsstd3002000H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd3002000H3"></a></h3>
   <p id="idCharUcdstd3002000dsn">description::
     <br>The Unicode Consortium, The Unicode Standard, Version 3.0.0
     <br>defined by: The Unicode Standard, Version 3.0 (Reading, MA: Addison-Wesley, 2000. ISBN 0-201-61633-5),
@@ -2606,7 +2686,7 @@
 
   <section id="idCharUcdstd2101998">
   <h3 id="idCharUcdstd2101998H3">Unicode'2-1-0.1998
-    <a class="clsHide" href="#idCharUcsstd2101998H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd2101998H3"></a></h3>
   <p id="idCharUcdstd2101998dsn">description::
     <br>· date= May 1998
     <br>· ISO= ISO/IEC 10646-1:1993 plus Amendments 5, 6 and 7, and two characters from Amendment 18
@@ -2621,7 +2701,7 @@
 
   <section id="idCharUcdstd2001996">
   <h3 id="idCharUcdstd2001996H3">Unicode'2-0-0.1996
-    <a class="clsHide" href="#idCharUcsstd2001996H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd2001996H3"></a></h3>
   <p id="idCharUcdstd2001996dsn">description::
     <br>· date= July 1996
     <br>· book= ISBN 0-201-48345-9
@@ -2637,7 +2717,7 @@
 
   <section id="idCharUcdstd1101993">
   <h3 id="idCharUcdstd1101993H3">Unicode'1-1-0.1993
-    <a class="clsHide" href="#idCharUcsstd1101993H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd1101993H3"></a></h3>
   <p id="idCharUcdstd1101993dsn">description::
     <br>· date= June 1993
     <br>· ISO= ISO/IEC 10646-1:1993
@@ -2652,7 +2732,7 @@
 
   <section id="idCharUcdstd1011992">
   <h3 id="idCharUcdstd1011992H3">Unicode'1-0-1.1992
-    <a class="clsHide" href="#idCharUcsstd1011992H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd1011992H3"></a></h3>
   <p id="idCharUcdstd1011992dsn">description::
     <br>· date= June 1992
     <br>· book= ISBN 0-201-60845-6 (Vol.2)
@@ -2667,7 +2747,7 @@
 
   <section id="idCharUcdstd1001991">
   <h3 id="idCharUcdstd1001991H3">Unicode'1-0-0.1991
-    <a class="clsHide" href="#idCharUcsstd1001991H3"></a></h3>
+    <a class="clsHide" href="#idCharUcdstd1001991H3"></a></h3>
   <p id="idCharUcdstd1001991dsn">description::
     <br>· date= October 1991
     <br>· book= ISBN 0-201-56788-1 (Vol.1)
@@ -2913,6 +2993,7 @@
   <h2 id="idCharUcdAgrtH2">charUni.aggregate
     <a class="clsHide" href="#idCharUcdAgrtH2"></a></h2>
   <p id="idCharUcdAgrtdsn">description::
+    <br>· 144,762 v.14-0-0.2021
     <br>· 137,439 v.11-0-0.2018
     <br>· 136,755 v.10-0-0.2017
     <br>· 128,237 v.9-0-0.2016
@@ -3062,6 +3143,20 @@
     <br>* McsEngl.graphic-Unicode-char,
     <br>* McsEngl.charUni.graphic,
     <a class="clsHide" href="#idCharUcdGrfcnam"></a></p>
+  </section>
+
+  <section id="idCharUcdSlmr">
+  <h2 id="idCharUcdSlmrH2">charUni.supplementary
+    <a class="clsHide" href="#idCharUcdSlmrH2"></a></h2>
+  <p id="idCharUcdSlmrdsn">description::&#131073;𠣕𠀁
+    <br>"In the Unicode Character Standard, Supplementary Characters are the characters assigned code points from U+10000|65536 to U+10FFFF|1114111."
+    <br>[{2021-10-29 retrieved} http://www.i18nguy.com/unicode/supplementary-test.html]
+    <a class="clsHide" href="#idCharUcdSlmrdsn"></a></p>
+  <p id="idCharUcdSlmrnam">name::
+    <br>* McsEngl.charUni.non-BMP,
+    <br>* McsEngl.charUni.supplementary,
+    <a class="clsHide" href="#idCharUcdSlmrnam"></a></p>
+    <a class="clsHide" href="#idCharUcdSlmrwpa"></a></p>
   </section>
 </section>
 

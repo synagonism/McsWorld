@@ -696,6 +696,19 @@ let fContainersInsert = function () {
       if (sSrchLtr === 'Ί') {sSrchLtr = 'Ι'}
       if (sSrchLtr === 'Ή') {sSrchLtr = 'Η'}
       if (sSrchLtr === 'Ύ') {sSrchLtr = 'Υ'}
+      //in Chinese lag
+      if (sSrchLtr === 'à') {sSrchLtr = 'a'}
+      if (sSrchLtr === 'á') {sSrchLtr = 'a'}
+      if (sSrchLtr === 'ā') {sSrchLtr = 'a'}
+      if (sSrchLtr === 'ǎ') {sSrchLtr = 'a'}
+      if (sSrchLtr === 'è') {sSrchLtr = 'e'}
+      if (sSrchLtr === 'é') {sSrchLtr = 'e'}
+      if (sSrchLtr === 'ē') {sSrchLtr = 'e'}
+      if (sSrchLtr === 'ě') {sSrchLtr = 'e'}
+      if (sSrchLtr === 'ò') {sSrchLtr = 'o'}
+      if (sSrchLtr === 'ó') {sSrchLtr = 'o'}
+      if (sSrchLtr === 'ō') {sSrchLtr = 'o'}
+      if (sSrchLtr === 'ǒ') {sSrchLtr = 'o'}
       if (sSSNamidxIn) {
         fSSNamidxDisplay(sSSNamidxIn)
       } else if (sSrchInpt.length > 0) {

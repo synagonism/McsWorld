@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.relation-(1-28-0.2021-10-23)</title>
+  <title>Mcs.relation-(1-29-0.2021-10-28)</title>
   <meta name="keywords" content="relation, relation, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -589,20 +589,25 @@
     <br>_stxEngl: _stxVrb:{Bring} _stxObj:[[a Jello salad] [<span class="clsColorRed">(or)</span> a potato scallop]].
     <br>_stxEngl: _stxSbj:[Pat] [[<span class="clsColorRed">(neither)</span> _stxVrb:{works} hard] [<span class="clsColorRed">(nor)</span> _stxVrb:{plays} squash]].
     <br>_stxEngl: _stxSbj:[Such languages] _stxVrb:{allow}, _stxObj:[[(among) other things], [<span class="clsColorRed">(no)</span> embedded phrases <span class="clsColorRed">(nor)</span> any couplings between separated parts of a sentence]].
+    <br>
+    <br>_stxZhon: _stxSbj:[她] _stxSbjc:[(不)胖(也不)瘦]。Tā bù pàng yě bù shòu. != She is neither fat nor thin.
     <a class="clsHide" href="#idRlnDjcnInstxdsn"></a></p>
   <p id="idRlnDjcnInstxnam">name::
     <br>* McsEngl._stxDisunionInclusise,
-    <br>* McsEngl.rlnDisunionInclusise'syntax,
     <br>* McsEngl.neither..nor!~conjEngl:rlnDisunionInclusise,
+    <br>* McsEngl.no..nor!~conjEngl:rlnDisunionInclusise,
+    <br>* McsEngl.or!~conjEngl:rlnDisunionInclusise,
+    <br>* McsEngl.rlnDisunionInclusise'syntax,
     <br>* McsEngl.syntax.neither..nor!~conjEngl:rlnDisunionInclusise,
     <br>* McsEngl.syntax.conjEngl.neither..nor:rlnDisunionInclusise,
-    <br>* McsEngl.no..nor!~conjEngl:rlnDisunionInclusise,
     <br>* McsEngl.syntax.no..nor!~conjEngl:rlnDisunionInclusise,
     <br>* McsEngl.syntax.conjEngl.no..nor:rlnDisunionInclusise,
-    <br>* McsEngl.or!~conjEngl:rlnDisunionInclusise,
     <br>* McsEngl.syntax.or!~conjEngl:rlnDisunionInclusise,
     <br>* McsEngl.syntax.conjEngl.or:rlnDisunionInclusise,
     <br>* McsEngl.syntax.rlnDisunionInclusise,
+    <br>====== langoChinese:
+    <br>* McsZhon.bù..yěbù-不..也不!~conjZhon:rlnDisunionInclusise,
+    <br>* McsZhon.不..也不-bù..yěbù!~conjZhon:rlnDisunionInclusise,
     <a class="clsHide" href="#idRlnDjcnInstxnam"></a></p>
   </section>
   </section>
@@ -620,9 +625,9 @@
     <br>* McsEngl.rlnSubtraction,
     <br>====== langoGreek:
     <br>* McsElln.σχέση-αφαίρεσης!=rlnSubtraction,
-    <br>* McsEngl.από!~conjElln!=minus,
-    <br>* McsEngl.μείον!~conjElln!=minus,
-    <br>* McsEngl.πλην!~conjElln!=minus,
+    <br>* McsElln.από!~conjElln!=minus,
+    <br>* McsElln.μείον!~conjElln!=minus,
+    <br>* McsElln.πλην!~conjElln!=minus,
     <a class="clsHide" href="#idRlnSbrnnam"></a></p>
 
   <section id="idRlnSbrnarg">
@@ -1274,11 +1279,40 @@
     <a class="clsHide" href="#idRlnSmnsNdsn"></a></p>
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=difference]
   <p id="idRlnSmnsNnam">name::
-    <br>* McsEngl.difference,
-    <br>* McsEngl.relation.difference,
-    <br>* McsEngl.relation.samenessNo,
-    <br>* McsEngl.samenessNo-relation,
+    <br>* McsEngl.difference!⇒rlnDifference,
+    <br>* McsEngl.relation.difference!⇒rlnDifference,
+    <br>* McsEngl.relation.samenessNo!⇒rlnDifference,
+    <br>* McsEngl.rlnDifference,
+    <br>* McsEngl.otherwise!⇒rlnDifference,
+    <br>* McsEngl.samenessNo-relation!⇒rlnDifference,
+    <br>====== langoGreek:
+    <br>* McsElln.διαφορά!=rlnDifference,
+    <br>* McsElln.σχέση-διαφοράς!=rlnDifference,
     <a class="clsHide" href="#idRlnSmnsNnam"></a></p>
+
+  <section id="idRlnSmnsNstx">
+  <h2 id="idRlnSmnsNstxH2">rlnDifference'syntax
+    <a class="clsHide" href="#idRlnSmnsNstxH2"></a></h2>
+  <p id="idRlnSmnsNstxdsn">description::
+    <br>_stxEngl: Most Chinese consonants come in pairs, too, but the pairs are differently defined.
+    <br>
+    <br>_stxZhon: 快起床吧，(否则)你会迟到！ Kuài qǐchuáng ba, fǒuzé nǐ huì chídào! != Get up quickly, otherwise you will be late!
+    <br>_stxZhon: 我妈妈想睡觉，(可是)她要去上班。 Wǒ māmā xiǎng shuìjiào, kěshì tā yào qù shàngbān.
+    <a class="clsHide" href="#idRlnSmnsNstxdsn"></a></p>
+  <p id="idRlnSmnsNstxnam">name::
+    <br>* McsEngl.different!~adjvEngl!⇒rlnDifference,
+    <br>* McsEngl.differently!~advbEngl!⇒rlnDifference,
+    <br>* McsEngl.rlnDifference'syntax,
+    <br>* McsEngl.syntax.rlnDifference,
+    <br>====== langoChinese:
+    <br>* McsZhon.fǒuzé-否则!=rlnDifference,
+    <br>* McsZhon.kěshì-可是!=rlnDifference,
+    <br>* McsZhon.否则-fǒuzé!=rlnDifference,
+    <br>* McsZhon.可是-kěshì!=rlnDifference,
+    <br>====== langoGreek:
+    <br>* McsElln.διαφορετικά!~advbElln!=rlnDifference,
+    <a class="clsHide" href="#idRlnSmnsNstxnam"></a></p>
+  </section>
 
   <section id="idRlnInqt">
   <h2 id="idRlnInqtH2">relation.inequality
@@ -1372,6 +1406,8 @@
     <br>
     <br>_stxEngl: [statements] [[which], [although literally true], (are) [nevertheless] [misleading]]
     <br>_stxEngl: _stxSbj=entity1:[The symbol V], _stxArg:[(for) example], _stxVrb:{could have been replaced} _stxArg=entity2:[(by) [saw [<span class="clsColorRed">(instead of)</span> chased]]].
+    <br>
+    <br>_stxZhon: 他想吃披萨，(但是)要减肥。 Tā xiǎng chī pīsà, dànshì yào jiǎnféi.
     <a class="clsHide" href="#idRlnOpsnstxdsn"></a></p>
   <p id="idRlnOpsnstxnam">name::
     <br>* McsEngl._stxOpposition,
@@ -1408,6 +1444,9 @@
     <br>* McsEngl.syntax.conjEngl.yet:rlnOpposition,
     <br>* McsEngl.though!~conjEngl:rlnOpposition,
     <br>* McsEngl.yet!~conjEngl:rlnOpposition,
+    <br>====== langoChinese:
+    <br>* McsZhon.dànshì-但是!~conjZhon:rlnOpposition,
+    <br>* McsZhon.但是-dànshì!~conjZhon:rlnOpposition,
     <a class="clsHide" href="#idRlnOpsnstxnam"></a></p>
   </section>
 
