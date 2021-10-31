@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char-(1-4-0.2021-10-30)</title>
+  <title>Mcs.char-(1-5-0.2021-10-31)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -1428,12 +1428,12 @@
     <br>· the-chars assigned are 137,439 in version'11-0-0.2018.
     <a class="clsHide" href="#idCharUcdstdcpdsn"></a></p>
   <p id="idCharUcdstdcpnam">name::
-    <br>* McsEngl.Ucp,
-    <br>* McsEngl.Ucp'(Unicode--code-point)!⇒Ucp,
-    <br>* McsEngl.Unicode'code-point!⇒Ucp,
-    <br>* McsEngl.Unicode--code-point!⇒Ucp,
-    <br>* McsEngl.Unicode-code-point!⇒Ucp,
-    <br>* McsEngl.code-point--of-Unicode-standard!⇒Ucp,
+    <br>* McsEngl.Uccp,
+    <br>* McsEngl.Uccp'(Unicode--code-point)!⇒Uccp,
+    <br>* McsEngl.Unicode'code-point!⇒Uccp,
+    <br>* McsEngl.Unicode--code-point!⇒Uccp,
+    <br>* McsEngl.Unicode-code-point!⇒Uccp,
+    <br>* McsEngl.code-point--of-Unicode-standard!⇒Uccp,
     <a class="clsHide" href="#idCharUcdstdcpnam"></a></p>
 
   <section id="idCharUcdstdcpchr">
@@ -1442,7 +1442,7 @@
   </section>
 
   <section id="idCharUcdstdcpAgg">
-  <h4 id="idCharUcdstdcpAggH4">Ucp.aggregate
+  <h4 id="idCharUcdstdcpAggH4">Uccp.aggregate
     <a class="clsHide" href="#idCharUcdstdcpAggH4"></a></h4>
   <p id="idCharUcdstdcpAggdsn">description::
     <br>· Unicode--code-space is the aggregate code-points of <a class="clsPreview" href="#idCharUcdstrd">the-standard</a>, 65,536 x 17 = 1,114,112, that are-reserved to assign chars or reserved for surrogates, internal-use or private-use..
@@ -1455,7 +1455,7 @@
   </section>
 
   <section id="idCharUcdstdcpPln">
-  <h4 id="idCharUcdstdcpPlnH4">Ucp.plane of Unicode
+  <h4 id="idCharUcdstdcpPlnH4">Uccp.plane of Unicode
     <a class="clsHide" href="#idCharUcdstdcpPlnH4"></a></h4>
   <p id="idCharUcdstdcpPlndsn">description::
     <br>In the Unicode standard, a plane is a continuous group of 65,536 (2<sup>16</sup>) code points.
@@ -1580,7 +1580,7 @@
   </section>
 
   <section id="idCharUcdstdcpBlk">
-  <h4 id="idCharUcdstdcpBlkH4">Ucp.block of Unicode
+  <h4 id="idCharUcdstdcpBlkH4">Uccp.block of Unicode
     <a class="clsHide" href="#idCharUcdstdcpBlkH4"></a></h4>
   <p id="idCharUcdstdcpBlkdsn">description::
     <br>A block is a uniquely named, contiguous range of code points.
@@ -1592,10 +1592,12 @@
     <br>[https://en.wikipedia.org/wiki/Unicode_character_property#Block]
     <a class="clsHide" href="#idCharUcdstdcpBlkdsn"></a></p>
   <p id="idCharUcdstdcpBlknam">name::
-    <br>* McsEngl.Unicode'block!⇒Unicode-block,
-    <br>* McsEngl.charUni'block!⇒Unicode-block,
-    <br>* McsEngl.Unicode-block,
-    <br>* McsEngl.block-of-Unicode!⇒Unicode-block,
+    <br>* McsEngl.Ucbk,
+    <br>* McsEngl.Ucbk'(Unicode-block)!⇒Ucbk,
+    <br>* McsEngl.Unicode'block!⇒Ucbk,
+    <br>* McsEngl.Unicode-block!⇒Ucbk,
+    <br>* McsEngl.block-of-Unicode!⇒Ucbk,
+    <br>* McsEngl.charUni'block!⇒Ucbk,
     <a class="clsHide" href="#idCharUcdstdcpBlknam"></a></p>
 
   <section id="idCharUcdstdcpBlkpln">
@@ -1638,7 +1640,7 @@
   <h5 id="idCharUcdstdcpBlkSpcH5">Unicode-block.SPECIFIC
     <a class="clsHide" href="#idCharUcdstdcpBlkSpcH5"></a></h5>
   <p id="idCharUcdstdcpBlkSpcnam">name::
-    <br>* McsEngl.Unicode-block.specific,
+    <br>* McsEngl.Ucbk.specific,
     <a class="clsHide" href="#idCharUcdstdcpBlkSpcnam"></a></p>
   <div id="idCharUcdstdcpBlkP1">specific::
     <br>* 320 blocks in Unicode-14.0:
@@ -1950,7 +1952,7 @@
   </section>
 
   <section id="idCharUcdstdcpUsd">
-  <h4 id="idCharUcdstdcpUsdH4">Ucp.used
+  <h4 id="idCharUcdstdcpUsdH4">Uccp.used
     <a class="clsHide" href="#idCharUcdstdcpUsdH4"></a></h4>
   <p id="idCharUcdstdcpUsddsn">description::
     <br>· used-code-point of Unicode is <a class="clsPreview" href="#idCharUcdstdcp">a-code-point</a> with an assigned <a class="clsPreview" href="#idCharUcd">char</a>, or reserved for surrogates, internal-use or private-use.
@@ -1966,13 +1968,13 @@
     <br>[{2021-10-27 retrieved} https://en.wikipedia.org/wiki/Universal_Character_Set_characters]
     <a class="clsHide" href="#idCharUcdstdcpUsddsn"></a></p>
   <p id="idCharUcdstdcpUsdnam">name::
-    <br>* McsEngl.Ucp.allocated,
-    <br>* McsEngl.Ucp.used,
+    <br>* McsEngl.Uccp.allocated,
+    <br>* McsEngl.Uccp.used,
     <br>* McsEngl.used-code-point--of-Unicode,
     <a class="clsHide" href="#idCharUcdstdcpUsdnam"></a></p>
 
   <section id="idCharUcdstdcpAsgd">
-  <h5 id="idCharUcdstdcpAsgdH5">Ucp.char-assigned
+  <h5 id="idCharUcdstdcpAsgdH5">Uccp.char-assigned
     <a class="clsHide" href="#idCharUcdstdcpAsgdH5"></a></h5>
   <p id="idCharUcdstdcpAsgddsn">description::
     <br>· assigned--Unicode--code-point is <a class="clsPreview" href="#idCharUcdstdcpUsd">a-used-code-point</a> with an assigned char.
@@ -1988,14 +1990,14 @@
     <br>[{2021-10-27 retrieved} https://en.wikipedia.org/wiki/Universal_Character_Set_characters]
     <a class="clsHide" href="#idCharUcdstdcpAsgddsn"></a></p>
   <p id="idCharUcdstdcpAsgdnam">name::
-    <br>* McsEngl.Ucp.assigned-char,
-    <br>* McsEngl.Ucp.character,
-    <br>* McsEngl.assigned-char--Ucp,
+    <br>* McsEngl.Uccp.assigned-char,
+    <br>* McsEngl.Uccp.character,
+    <br>* McsEngl.assigned-char--Uccp,
     <a class="clsHide" href="#idCharUcdstdcpAsgdnam"></a></p>
   </section>
 
   <section id="idCharUcdstdcpPtus">
-  <h5 id="idCharUcdstdcpPtusH5">Ucp.private-use
+  <h5 id="idCharUcdstdcpPtusH5">Uccp.private-use
     <a class="clsHide" href="#idCharUcdstdcpPtusH5"></a></h5>
   <p id="idCharUcdstdcpPtusdsn">description::
     <br>Private-use characters <span class="clsColorRed">are code points</span> whose interpretation is not specified by a character encoding standard and whose use and interpretation may be determined by private agreement among cooperating users. Private-use characters are sometimes also referred to as user-defined characters (UDC) or vendor-defined characters (VDC).
@@ -2012,15 +2014,15 @@
     <a class="clsHide" href="#idCharUcdstdcpPtusdsn"></a></p>
   <p id="idCharUcdstdcpPtusnam">name::
     <br>* McsEngl.charUni.private-use-character,
-    <br>* McsEngl.Ucp.private-use-character,
-    <br>* McsEngl.Ucp.user-defined-character,
-    <br>* McsEngl.Ucp.vendor-defined-character,
-    <br>* McsEngl.private-use-character--Ucp,
+    <br>* McsEngl.Uccp.private-use-character,
+    <br>* McsEngl.Uccp.user-defined-character,
+    <br>* McsEngl.Uccp.vendor-defined-character,
+    <br>* McsEngl.private-use-character--Uccp,
     <a class="clsHide" href="#idCharUcdstdcpPtusnam"></a></p>
   </section>
 
   <section id="idCharUcdstdcpIlus">
-  <h5 id="idCharUcdstdcpIlusH5">Ucp.internal-use
+  <h5 id="idCharUcdstdcpIlusH5">Uccp.internal-use
     <a class="clsHide" href="#idCharUcdstdcpIlusH5"></a></h5>
   <p id="idCharUcdstdcpIlusdsn">description::
     <br>A "noncharacter" is a code point that is permanently reserved in the Unicode Standard for internal use.
@@ -2036,16 +2038,16 @@
     <br>[{2021-10-27 retrieved} https://en.wikipedia.org/wiki/Universal_Character_Set_characters]
     <a class="clsHide" href="#idCharUcdstdcpIlusdsn"></a></p>
   <p id="idCharUcdstdcpIlusnam">name::
-    <br>* McsEngl.noncharacter-Ucp,
-    <br>* McsEngl.Ucp.characterNo,
-    <br>* McsEngl.Ucp.internal-use,
-    <br>* McsEngl.Ucp.noncharacter,
+    <br>* McsEngl.noncharacter-Uccp,
+    <br>* McsEngl.Uccp.characterNo,
+    <br>* McsEngl.Uccp.internal-use,
+    <br>* McsEngl.Uccp.noncharacter,
     <a class="clsHide" href="#idCharUcdstdcpIlusnam"></a></p>
   </section>
   </section>
 
   <section id="idCharUcdstdcpUsdN">
-  <h4 id="idCharUcdstdcpUsdNH4">Ucp.usedNo
+  <h4 id="idCharUcdstdcpUsdNH4">Uccp.usedNo
     <a class="clsHide" href="#idCharUcdstdcpUsdNH4"></a></h4>
   <p id="idCharUcdstdcpUsdNdsn">description::
     <br>· usedNo-code-point of Unicode is <a class="clsPreview" href="#idCharUcdstdcp">a-code-point</a> with NOT an assigned <a class="clsPreview" href="#idCharUcd">char</a>, or reserved for surrogates, internal-use or private-use.
@@ -2061,15 +2063,15 @@
     <br>[{2021-10-27 retrieved} https://en.wikipedia.org/wiki/Universal_Character_Set_characters]
     <a class="clsHide" href="#idCharUcdstdcpUsdNdsn"></a></p>
   <p id="idCharUcdstdcpUsdNnam">name::
-    <br>* McsEngl.Ucp.allocatedNo,
-    <br>* McsEngl.Ucp.unallocated,
-    <br>* McsEngl.Ucp.usedNo,
+    <br>* McsEngl.Uccp.allocatedNo,
+    <br>* McsEngl.Uccp.unallocated,
+    <br>* McsEngl.Uccp.usedNo,
     <br>* McsEngl.usedNo-code-point--of-Unicode,
     <a class="clsHide" href="#idCharUcdstdcpUsdNnam"></a></p>
   </section>
 
   <section id="idCharUcdstdcpStUn">
-  <h4 id="idCharUcdstdcpStUnH4">Ucp.unknown-script
+  <h4 id="idCharUcdstdcpStUnH4">Uccp.unknown-script
     <a class="clsHide" href="#idCharUcdstdcpStUnH4"></a></h4>
   <p id="idCharUcdstdcpStUndsn">description::
     <br>The value of <strong>"unknown" script</strong> (ISO 15924 code Zzzz) is given to unassigned, private use, <a class="clsPreview" href="#idCharUcdstdcpIlus">noncharacter</a>, and surrogate code points.
@@ -2077,13 +2079,13 @@
     <a class="clsHide" href="#idCharUcdstdcpStUndsn"></a></p>
   <p id="idCharUcdstdcpStUnnam">name::
     <br>* McsEngl.unknown-script-code-point--of-Unicode,
-    <br>* McsEngl.unknown-script--Ucp,
-    <br>* McsEngl.Ucp.unknown-script,
+    <br>* McsEngl.unknown-script--Uccp,
+    <br>* McsEngl.Uccp.unknown-script,
     <a class="clsHide" href="#idCharUcdstdcpStUnnam"></a></p>
   </section>
 
   <section id="idCharUcdstdcpStUnN">
-  <h4 id="idCharUcdstdcpStUnNH4">Ucp.unknown-script.no
+  <h4 id="idCharUcdstdcpStUnNH4">Uccp.unknown-script.no
     <a class="clsHide" href="#idCharUcdstdcpStUnNH4"></a></h4>
   <p id="idCharUcdstdcpStUnNdsn">description::
     <br>· known-script--code-points are Unicode--code-points with assigned characters[a] which[a] are part of <a class="clsPreview" href="#idCharUcdScrpt">a-script</a>.
@@ -2092,14 +2094,14 @@
   <p id="idCharUcdstdcpStUnNnam">name::
     <br>* McsEngl.known-script-code-point--of-Unicode,
     <br>* McsEngl.unknown-scriptNo-code-point--of-Unicode,
-    <br>* McsEngl.unknown-scriptNo--Ucp,
+    <br>* McsEngl.unknown-scriptNo--Uccp,
     <br>* McsEngl.charUni'known-script,
-    <br>* McsEngl.Ucp.unknown-scriptNo,
+    <br>* McsEngl.Uccp.unknown-scriptNo,
     <a class="clsHide" href="#idCharUcdstdcpStUnNnam"></a></p>
   </section>
 
   <section id="idCharUcdstdcpSrvl">
-  <h4 id="idCharUcdstdcpSrvlH4">Ucp.scalar-value
+  <h4 id="idCharUcdstdcpSrvlH4">Uccp.scalar-value
     <a class="clsHide" href="#idCharUcdstdcpSrvlH4"></a></h4>
   <p id="idCharUcdstdcpSrvldsn">description::
     <br>· Unicode-scalar-value is any <a class="clsPreview" href="#idCharUcdstdcp">Unicode--code-point</a> EXCEPT <a class="clsPreview" href="#idCharUcdstdcpSrgt">the-surrogates</a>.
@@ -2112,7 +2114,7 @@
   </section>
 
   <section id="idCharUcdstdcpSrgt">
-  <h4 id="idCharUcdstdcpSrgtH4">Ucp.surrogate
+  <h4 id="idCharUcdstdcpSrgtH4">Uccp.surrogate
     <a class="clsHide" href="#idCharUcdstdcpSrgtH4"></a></h4>
   <p id="idCharUcdstdcpSrgtdsn">description::
     <br>"The High Surrogates (U+D800|55296–U+DBFF|56319) and Low Surrogate (U+DC00|56320–U+DFFF|57343) codes are reserved for encoding non-BMP characters in <a class="clsPreview" href="#idCharencdgUtf16">UTF-16</a> by using a pair of 16-bit codes: one High Surrogate and one Low Surrogate. A single surrogate code point will never be assigned a character.
@@ -2120,8 +2122,8 @@
     <br>===
     <a class="clsHide" href="#idCharUcdstdcpSrgtdsn"></a></p>
   <p id="idCharUcdstdcpSrgtnam">name::
-    <br>* McsEngl.Ucp.surrogate,
-    <br>* McsEngl.surrogate-Ucp,
+    <br>* McsEngl.Uccp.surrogate,
+    <br>* McsEngl.surrogate-Uccp,
     <br>* McsEngl.surrogate--code-point---of-Unicode,
     <a class="clsHide" href="#idCharUcdstdcpSrgtnam"></a></p>
   <p id="idCharUcdstdcpSrgtwpa">addressWpg::

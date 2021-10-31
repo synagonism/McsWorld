@@ -5,7 +5,7 @@
  *   3) it computes the-number of names.
  *   4) it computes the-number of concepts.
  * INPUT: namidx.txt
- * OUTPUT: dirLang/nameidx.lagLangX.json
+ * OUTPUT: dirLang/namidx.lagLangX.json, namidx.lagRoot.json, Mcsqnt.json, sftp.json,
  * RUN: node Mcsmgr/namidx.mjs
  *
  * PROBLEM:
@@ -46,12 +46,12 @@ var
   // 'lagMol','lagNld','lagNor','lagPol','lagPor','lagRom','lagRus','lagSlk',
   // 'lagSlv','lagSrp','lagSpa','lagSwe','lagTur','lagUkr',
   // 'lagArb','lagHin','lagJpn','lagZho'
-  aNamidxRootSum = JSON.parse(moFs.readFileSync('dirNamidx/namidx.lagRoot.json')),
+  aRootNamidx_Char_Qntnam = JSON.parse(moFs.readFileSync('dirNamidx/namidx.lagRoot.json')),
   // [['lagEngl01ei','A',1111]} with quantity of names
-  aMcsFileQnt = [],
+  aFilMcs_QntMcs = [],
   // array with the-file-Mcs and the-quantity of Mcs they include
-  // [ 'dirTchInf/filMcsLagMcsh.last.html', 51 ]
-  oFilNamidxRoot_Char = {},
+  // [ 'dirTchInf/McsTchInf999999.last.html', 51 ]
+  aRootNamidx_Char = {},
   // hold the-names of namidx-files and the related capital-letters
   // we want the-names of files to be only english.
   // {lagEngl01ei:'A'}
@@ -94,18 +94,19 @@ if (process.argv[2]) {
 /**
  * DOING: creates object {namidx: index} from [[namidx,idx,quantity]]
  * INPUT: aIn = [['lagEngl01ei','A',1234]]
- * OUTPUT: oFilNamidxRoot_Char = {lagEngl01ei:'A'}
+ * OUTPUT: {lagEngl01ei:'A'}
  */
 function fCreateOFileNamidx_Index(aIn) {
   var oOut = {}
   for (var n = 0; n < aIn.length; n++) {
     if (!aIn[n][1].startsWith(';')) {
+      // remove non namidx info
       oOut[aIn[n][0]] = aIn[n][1]
     }
   }
   return oOut
 }
-oFilNamidxRoot_Char = fCreateOFileNamidx_Index(aNamidxRootSum)
+aRootNamidx_Char = fCreateOFileNamidx_Index(aRootNamidx_Char_Qntnam)
 
 // find the-array of languages to work with
 if (aLag[0] === 'lagAGGR') {
@@ -152,7 +153,7 @@ for (n = 0; n < aFileMcsIn.length; n++) {
       // {lagEngl01ei:[['name1','Url1'],['name2','Url2']]}
 
     // REMOVE name-Urls
-    fRemoveNamUrl(oFilNamidxRoot_Char, sFileMcs, aLag[nL])
+    fRemoveNamUrl(aRootNamidx_Char, sFileMcs, aLag[nL])
 
     // remove name-Urls and for the-extra-files in this lag
     if (bExtra) {
@@ -168,7 +169,7 @@ for (n = 0; n < aFileMcsIn.length; n++) {
       aExtra_files = Array.from(oSetExtra_files)
       // console.log(aExtra_files)
       for (n = 0; n <aExtra_files.length; n++) {
-        fRemoveNamUrl(oFilNamidxRoot_Char, aExtra_files[n], aLag[nL])
+        fRemoveNamUrl(aRootNamidx_Char, aExtra_files[n], aLag[nL])
       }  
     }
 
@@ -300,7 +301,7 @@ for (n = 0; n < aFileMcsIn.length; n++) {
   if (sFileMcs.indexOf('filMcs') >= 0
      || sFileMcs.indexOf('Mcs') >= 0 
      || sFileMcs.indexOf('Hitp') >= 0 )  {
-    aMcsFileQnt.push([sFileMcs, nMcsqnt])
+    aFilMcs_QntMcs.push([sFileMcs, nMcsqnt])
   }
 }
 
@@ -312,7 +313,7 @@ for (n = 0; n < aFileMcsIn.length; n++) {
  *   - sLagIn: the-lag whose names will-be-removed
  */
 function fRemoveNamUrl(oFilenamidxIndexIn, sFilMcsRmvIn, sLagIn) {
-  // oFilenamidxIndexIn = { lagElln00: 'LetterNo', lagElln01alfa: 'Α', ... lagSngo25u: 'U' }
+  // oFilenamidxIndexIn = { lagElln00: 'charREST', lagElln01alfa: 'Α', ... lagSngo25u: 'U' }
   // sFilMcsRmvIn = dirCor/McsCor999999.last.html
   // sLagIn = lagElln
   // for ALL namidx-files remove names with Url sFilMcsRmvIn
@@ -389,9 +390,9 @@ function fStoreNULetter(aNUIn, sLtrIn, sLagIn) {
   var sFilNamidx // name of namidx-file
 
   // choose lag-letter or rest
-  if (Object.values(oFilNamidxRoot_Char).includes(sLtrIn)) {
+  if (Object.values(aRootNamidx_Char).includes(sLtrIn)) {
     // find namidx-file for sLtrIn
-    sFilNamidx = fObjvalRKey(oFilNamidxRoot_Char, sLtrIn, sLagIn)
+    sFilNamidx = fObjvalRKey(aRootNamidx_Char, sLtrIn, sLagIn)
     fStoreNULetter_root_or_child(sFilNamidx)
   } else {
     // if sLtrIn is REST-char
@@ -752,10 +753,11 @@ console.log(aSftp)
 fWriteJsonArray('sftp.json', aSftp)
 
 console.log('>>> Mcs-file indexed:')
-console.log(aMcsFileQnt)
+console.log(aFilMcs_QntMcs)
 
 /**
- * DOING: updates the-quantity of Mcs of ONE Mcs-file[a] in Mcsqnt.json-files AND all wholes of it[a]
+ * DOING: updates the-quantity of Mcs of ONE Mcs-file[a] in Mcsqnt.json-files 
+ *    AND all wholes of it[a]
  * INPUT: the-name of an-Mcs-file[a] and the-new quantity of Mcs in this[a] file.
  * OUTPUT: the-Mcsqnt-files affected 
  */
@@ -846,4 +848,4 @@ async function fUpdateALLQntMcs(aIn) {
    await fUpdateQntMcs(item[0], item[1])
   }
 }
-fUpdateALLQntMcs(aMcsFileQnt)
+fUpdateALLQntMcs(aFilMcs_QntMcs)
