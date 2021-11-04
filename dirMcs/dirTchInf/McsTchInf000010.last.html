@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagJsgn-(6-24-0.2021-06-04) Javascript-language</title>
+  <title>Mcs.lagJsgn-(6-26-0.2021-11-03) Javascript-language</title>
   <meta name="keywords" content="JavaScript, js, lagJsgn, Javascript-tutorial, browser-js, Node.js, Jsgn, Jsbr, Jsnd, Mcs, sensorial-concept">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -4443,6 +4443,33 @@
   </section>
   </section>
 
+  <section id="idLjsalgBln">
+  <h2 id="idLjsalgBlnH2">Jsalgo.BOOLEAN
+    <a class="clsHide" href="#idLjsalgBlnH2"></a></h2>
+  <p id="idLjsalgBlndsn">description::
+    <br><code>
+    <br>Boolean('string') //true
+    <br>Boolean(123) //true
+    <br>Boolean(false) //false
+    <br>Boolean(undefined) //false
+    <br>Boolean(null) //false
+    <br>Boolean(NaN) //false
+    <br>Boolean(0) //false
+    <br>Boolean('') //false
+    <br>!!'string' //true
+    <br>!!123 //true
+    <br>!!false //false
+    <br>!false //true
+    <br>'' == false //true
+    <br>'' == true //false
+    <br></code>
+    <a class="clsHide" href="#idLjsalgBlndsn"></a></p>
+  <p id="idLjsalgBlnnam">name::
+    <br>* McsEngl.Jsalgo.boolean,
+    <br>* McsEngl.boolean-Jsalgo,
+    <a class="clsHide" href="#idLjsalgBlnnam"></a></p>
+  </section>
+
   <section id="idLjsalgChar">
   <h2 id="idLjsalgCharH2">Jsalgo.CHARACTER
     <a class="clsHide" href="#idLjsalgCharH2"></a></h2>
@@ -4455,14 +4482,27 @@
     <br>* McsEngl.Jsalgo.character,
     <a class="clsHide" href="#idLjsalgCharnam"></a></p>
   <p id="idLjsalgCharexpl">example::
-    <br><code>//surrogates of a-char above U+FFFF
+    <br><code>//surrogates of a-char above U+FFFF|65535
     <br>"&#119558;".charCodeAt(0).toString(16); //"d834"
     <br>"&#119558;".charCodeAt(1).toString(16); //"df06"
+    <br>"&#119558;".charCodeAt(0) //'55348'
+    <br>"&#119558;".charCodeAt(1) //'57094'
     <br>String.fromCodePoint(0xd834,0xdf06) //"&#119558;"
+    <br>String.fromCharCode(0xd834,0xdf06) //"&#119558;"
+    <br>String.fromCodePoint(55348,57094) //"&#119558;"
+    <br>String.fromCharCode(55348,57094) //"&#119558;"
+    <br>String.fromCodePoint(119558) //"&#119558;"
+    <br>String.fromCodePoint(0x1d306) //"&#119558;"
+    <br>===
+    <br>"&#119558;".codePointAt() //119558
+    <br>"&#119558;".codePointAt().toString(16) //'1d306'
+    <br>===
     <br>'\ud834\udf06}' //"&#119558;"
-    <br>"&#119558;".codePointAt(0) //119558
+    <br>'\u{1d306}' //"&#119558;"
+    <br>===
     <br>(119558).toString(16) //"1d306"
-    <br>'\u{1d306}' //"&#119558;"</code>
+    <br>parseInt("ffff", 16) //65535
+    <br></code>
     <a class="clsHide" href="#idLjsalgCharexpl"></a></p>
   </section>
 
@@ -4557,11 +4597,27 @@
     <br>* McsEngl.lagJsgn'math-managing,
     <br>* McsEngl.Jsalgo.math-managing,
     <br>* McsEngl.math-managing//Javascript,
-    <br>* McsEngl.number-managing//Javascript,
     <a class="clsHide" href="#idLjsalgMthnam"></a></p>
   <p id="idLjsalgMthSpc">specific::
     <br>* A 218b spreadsheet app in HTML/JS: <a href="http://xem.github.io/sheet/">http://xem.github.io/sheet/</a>,
     <a class="clsHide" href="#idLjsalgMthSpc"></a></p>
+
+  <section id="idLjsalgNmbr">
+  <h3 id="idLjsalgNmbrH3">Jsalgo.NUMBER
+    <a class="clsHide" href="#idLjsalgNmbrH3"></a></h3>
+  <p id="idLjsalgNmbrdsn">description::
+    <br><code>
+    <br>Number.isInteger(123) //true
+    <br>Number.isInteger('123') //false
+    <br>Number('123') //123
+    <br>Number.isInteger(Number('123')) //true
+    <br></code>
+    <a class="clsHide" href="#idLjsalgNmbrdsn"></a></p>
+  <p id="idLjsalgNmbrnam">name::
+    <br>* McsEngl.Jsaglo.number,
+    <br>* McsEngl.number-managing//Javascript,
+    <a class="clsHide" href="#idLjsalgNmbrnam"></a></p>
+  </section>
 
   <section id="idLjsalgMthHti">
   <h3 id="idLjsalgMthHtiH3">Jsalgo.HEX-TO-INT
@@ -6003,6 +6059,8 @@
   ga('send', 'pageview');
 </script>
 
-<script src="../Mcsmgr/hitp.js"></script>
+<script type="module">
+  import * as oHitp from '../Mcsmgr/mHitp.js'
+</script>
 </body>
 </html>

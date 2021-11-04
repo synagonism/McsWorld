@@ -11,6 +11,7 @@
  * PROBLEM:
  * - to compute the-number of concepts, we must set new DIRS at cptqnt.root.json. 
  *
+ * modified: {2021-11-01} solved char on other-lags but not on denoted
  * modified: {2021-05-02} .mjs
  * modified: {2021-04-04} lagAGGR
  * modified: {2021-04-03} oSetFileUp
@@ -134,6 +135,7 @@ for (n = 0; n < aFileMcsIn.length; n++) {
 
   // add the-file to upload-list
   oSetFileUp.add(sFileMcs)
+  // add Mcsqnt-file to upload-list
   // if sFileMcs ../index.html dirNamidx/abbreviation.html do nothing nnn
   if (!sFileMcs.startsWith('../')
       && !sFileMcs.startsWith("dirNamidx/")
@@ -148,8 +150,8 @@ for (n = 0; n < aFileMcsIn.length; n++) {
       aNU, // array with a-name and its-Url
       sChar,
       oFilNamidx_NamUrl = {}
-      // object to hold the-Αrrays with the-Νame-Urls
-      // after reading filMcsName.html files.
+      // object to hold the-Αrrays with the-Νame-Urls per namidx-file
+      // after reading Mcs-files.
       // {lagEngl01ei:[['name1','Url1'],['name2','Url2']]}
 
     // REMOVE name-Urls
@@ -276,6 +278,7 @@ for (n = 0; n < aFileMcsIn.length; n++) {
       if (moFs.existsSync(sFilNamidxFullExist)) {
         var
           aEx = JSON.parse(moFs.readFileSync(sFilNamidxFullExist))
+          //the-existing-array
 
         sMeta = aEx.shift() // [";namidx",";char..char.2"
         // add on existed-names the new names,
@@ -288,9 +291,9 @@ for (n = 0; n < aFileMcsIn.length; n++) {
         aEx.unshift(sMeta)
         fWriteJsonQntDate(sFilNamidxFullExist, aEx)
       } else {
+        // namidx-file does not exist, write new-array of names.
         oNamidxQntnam[sNmix] = aNew.length
-        aNew.unshift(sMeta)
-        // if namidx-file does not exist, write new-array of names.
+        aNew.unshift(sMeta) //PROBLEM sMeta is the-last meta of existing namidx
         fWriteJsonQntDate(sFilNamidxFullExist, aNew)
       }
     }
@@ -387,15 +390,22 @@ function fRemoveNamUrl(oFilenamidxIndexIn, sFilMcsRmvIn, sLagIn) {
  *  - sLagIn: 'lagSngo','lagEngl','lagElln'
  */
 function fStoreNULetter(aNUIn, sLtrIn, sLagIn) {
-  var sFilNamidx // name of namidx-file
+  var sFilNamidx // name of namidx-file on which to store the-nameurl
 
+  // FIND namidx-file
   // choose lag-letter or rest
   if (Object.values(aRootNamidx_Char).includes(sLtrIn)) {
     // find namidx-file for sLtrIn
     sFilNamidx = fObjvalRKey(aRootNamidx_Char, sLtrIn, sLagIn)
-    fStoreNULetter_root_or_child(sFilNamidx)
+    //if letter in other-lang, then no namidx in this lang
+    if (sFilNamidx) {
+      fStoreNULetter_root_or_child(sFilNamidx)
+    } else {
+      sFilNamidx = sLagIn + '00'
+      fStoreNULetter_root_or_child(sFilNamidx)
+    }
   } else {
-    // if sLtrIn is REST-char
+    // if sLtrIn is not found, choose REST-char
     sFilNamidx = sLagIn + '00'
     fStoreNULetter_root_or_child(sFilNamidx)
   }
@@ -405,7 +415,7 @@ function fStoreNULetter(aNUIn, sLtrIn, sLagIn) {
   function fStoreNULetter_root_or_child(sFilNamidxIn) {
     // console.log(sFilNamidxIn+', '+aNUIn[0])
     if (!sFilNamidxIn.endsWith('_0')) {
-      // namidx is not a-reference
+      // namidx is NOT a-reference
       if (oFilNamidx_NamUrl[sFilNamidxIn]) {
         oFilNamidx_NamUrl[sFilNamidxIn].push(aNUIn)
       } else {

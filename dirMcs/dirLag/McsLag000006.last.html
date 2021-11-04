@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char-(1-5-0.2021-10-31)</title>
+  <title>Mcs.char-(1-6-0.2021-11-03)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -134,7 +134,7 @@
   <h2 id="idCharencdgH2">encoding of computer-char
     <a class="clsHide" href="#idCharencdgH2"></a></h2>
   <p id="idCharencdgdsn">description::
-    <br>· char-encoding is a-code of bits|bytes, computers use to represent chars.
+    <br>· <span class="clsColorRed">char-encoding</span> is a-code of bits|bytes, computers use to represent chars.
     <br>· do not confuse <a class="clsPreview" href="#idCharUcdcp">the-code-points-of-chars</a>, which are numbers, with the-encodings-of-chars which are codes of bits, especially when BOTH are-represented with hexadecimal-numbers.
     <br>[<a class="clsPreview" href="../dirHmn/McsHmn000003.last.html#idOverview">hmnSngo</a>.2018-06-26]
     <a class="clsHide" href="#idCharencdgdsn"></a></p>
@@ -143,6 +143,11 @@
     <br>* McsEngl.char-encoding,
     <br>* McsEngl.character-encoding!⇒char-encoding,
     <br>* McsEngl.encoding-of-char!⇒char-encoding,
+    <br>====== langoChinese:
+    <br>* McsZhon.zìfúbiānmǎ-字符编码!=char-encoding,
+    <br>* McsZhon.字符编码-zìfúbiānmǎ!=char-encoding,
+    <br>====== langoGreek:
+    <br>* McsElln.κωδικοποίηση-χαρακτήρων!=char-encoding,
     <a class="clsHide" href="#idCharencdgnam"></a></p>
 
   <section id="idCharencdgrsc">
@@ -204,10 +209,12 @@
   <h3 id="idCharencdgUtf8H3">char-encoding.UTF-8
     <a class="clsHide" href="#idCharencdgUtf8H3"></a></h3>
   <p id="idCharencdgUtf8dsn">description::
-    <br>· UTF-8 is <a class="clsPreview" href="#idCharencdgVrlg">a-variable-length-encoding</a> that uses 1 to 4 <a class="clsPreview" href="../dirTchInf/McsTchInf000005.last.html#idLbnrwrdByt">bytes</a> to represent chars.
+    <br>· <span class="clsColorRed">UTF-8</span> is <a class="clsPreview" href="#idCharencdgVrlg">a-variable-length-encoding</a> that uses 1 to 4 <a class="clsPreview" href="../dirTchInf/McsTchInf000005.last.html#idLbnrwrdByt">bytes</a> to represent chars.
     <a class="clsHide" href="#idCharencdgUtf8dsn"></a></p>
   <p id="idCharencdgUtf8nam">name::
     <br>* McsEngl.UTF-8--char-encoding,
+    <br>* McsEngl.Unicode-Transformation-Format–8-bit,
+    <br>* McsEngl.Universal-Coded-Character-Set-Transformation-Format–8-bit,
     <br>* McsEngl.char-encoding.UTF-8,
     <a class="clsHide" href="#idCharencdgUtf8nam"></a></p>
   <p id="idCharencdgUtf8wpa">addressWpg::
@@ -1423,7 +1430,7 @@
   <h3 id="idCharUcdstdcpH3">code-point of Unicode
     <a class="clsHide" href="#idCharUcdstdcpH3"></a></h3>
   <p id="idCharUcdstdcpdsn">description::
-    <br>· code-point of Unicode is a-UNIQUE number, from a-sequence of numbers, reserved by the-standard, used to assign chars and other usefull entities for the-standard, written in hexadecimal-format (U+FFFF with 4 to 6 digits) or decimal-format.
+    <br>· <span class="clsColorRed">Unicode-code-point</span> is a-UNIQUE number, from a-sequence of numbers, reserved by the-standard, used to assign chars and other usefull entities for the-standard, written in hexadecimal-format (U+FFFF with 4 to 6 digits) or decimal-format.
     <br>· the-Unicode-standard reserves 65,536 x 17 = 1,114,112 code-points.
     <br>· the-chars assigned are 137,439 in version'11-0-0.2018.
     <a class="clsHide" href="#idCharUcdstdcpdsn"></a></p>
@@ -3150,13 +3157,17 @@
   <section id="idCharUcdSlmr">
   <h2 id="idCharUcdSlmrH2">charUni.supplementary
     <a class="clsHide" href="#idCharUcdSlmrH2"></a></h2>
-  <p id="idCharUcdSlmrdsn">description::&#131073;𠣕𠀁
+  <p id="idCharUcdSlmrdsn">description::
     <br>"In the Unicode Character Standard, Supplementary Characters are the characters assigned code points from U+10000|65536 to U+10FFFF|1114111."
     <br>[{2021-10-29 retrieved} http://www.i18nguy.com/unicode/supplementary-test.html]
+    <br>===
+    <br>* <a class="clsPreview" href="../dirTchInf/McsTchInf000010.last.html#idLjsalgChar">surrogate-codepoints of supplementary-character in javascript</a>,
+    <br>* <a class="clsPreview" href="../dirTchInf/McsTchInf000010.last.html#idLjsalgChar">codepoint of supplementary-character in javascript</a>,
     <a class="clsHide" href="#idCharUcdSlmrdsn"></a></p>
   <p id="idCharUcdSlmrnam">name::
     <br>* McsEngl.charUni.non-BMP,
     <br>* McsEngl.charUni.supplementary,
+    <br>* McsEngl.supplementary-charUni,
     <a class="clsHide" href="#idCharUcdSlmrnam"></a></p>
     <a class="clsHide" href="#idCharUcdSlmrwpa"></a></p>
   </section>
@@ -6198,7 +6209,7 @@
   <h1 id="idCommentH1">comments
     <a class="clsHide" href="#idCommentH1"></a></h1>
   <p id="idCommentSpc">specific::
-    <br>* <a class="clsPreview" href="Disqus-dirLag.html#idDescription">on Disqus</a>,
+    <br>* <a class="clsPreview" href="McsLag000015.last.html#idOverview">on Disqus</a>,
     <a class="clsHide" href="#idCommentSpc"></a></p>
 </section>
 
@@ -6211,6 +6222,8 @@
   ga('send', 'pageview');
 </script>
 
-<script src="../Mcsmgr/hitp.js"></script>
+<script type="module">
+  import * as oHitp from '../Mcsmgr/mHitp.js'
+</script>
 </body>
 </html>

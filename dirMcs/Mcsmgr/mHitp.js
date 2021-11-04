@@ -83,33 +83,33 @@ const
   bFirefox = navigator.userAgent.indexOf('Firefox/') > -1
 
 let
+  aNamidxRoot,
   // contains the-array of the-indexes of all languages of the-names
   // of sensorial-concepts
-  aNamidxRoot,
   aSuggestions = [[]],
   
-  // % of window width of pageinfo-container
   nCfgPageinfoWidth = 30, 
+  // % of window width of pageinfo-container
 
-  // holds the-object of the-Html-element a-user clicks on
   oEltClicked =  document.body,
-  // holds the-site-structure
+  // holds the-object of the-Html-element a-user clicks on
   oEltSitemenuUl,
+  // holds the-site-structure
 
+  sCfgHomeLocal,
   // filSite-structure contains absolute urls, because we see it from many pages.
   // Then we must-know the-homepage of the-site and create different menus.
-  sCfgHomeLocal,
-  // the-namidx-file to search first
   sNamidx,
+  // the-namidx-file to search first
   sPathSite,
   sPathStmenu,
-  // current search-index
   sSrchCrnt,
-  // next search-index
+  // current search-index
   sSrchNext,
-  // selector for a-elements with clsClickCnt
+  // next search-index
   sQrslrAClk,
   sQrslrAClkLast
+  // selector for a-elements with clsClickCnt
 
 
 /**
@@ -669,16 +669,16 @@ let fContainersInsert = function () {
     })
 
     /**
-     * doing: suggests names of sensorial-concepts,
+     * DOING: suggests names of sensorial-concepts,
      *   that BEGIN with input-search-string.
-     * input: nothing string of namidx to search: lagEngl03si_2_0, lagRoot, ...
+     * INPUT: nothing or string of namidx-file to search: lagEngl03si_2_0, lagRoot, ...
      */
     function fSearchSuggest(sSSNamidxIn) {
       let
-        // number of lag name in lagRoot-namidx,
         nLag,
-        // text of first suggestion,
+        // number of lag name in lagRoot-namidx,
         sLi,
+        // text of first suggestion,
         sLag = oEltTabCntSrchSlt.options[oEltTabCntSrchSlt.selectedIndex].value,
         sNamidx_path,
         sSrchInpt = oEltTabCntSrchIpt.value,
@@ -714,6 +714,7 @@ let fContainersInsert = function () {
       } else if (sSrchInpt.length > 0) {
         // console.log('>>> start: ' + sSrchInpt + ', ' + sNamidx + ', ' + sSrchCrnt + '..' + sSrchNext)
         let bRest = true
+        // display rest-chars if main-char will-not-find
         for (let n = 1; n < aNamidxRoot.length; n++) {
           // display quantities, for the-lag
           if (sLag === 'lagAGGR') {
@@ -734,12 +735,13 @@ let fContainersInsert = function () {
               }
 
               if (aNamidxRoot[n][0].endsWith('_0')) {
-                // namidx is a-referenceNo
+                // namidx is a-reference
                 fSSNamidxRefManage(aNamidxRoot[n][0])
               } else {
                 // namidx is a-referenceNo
                 fSSNamidxDisplay(aNamidxRoot[n][0])
               }
+              // found main-char 
               bRest = false
               break
             }
@@ -757,8 +759,8 @@ let fContainersInsert = function () {
       }
 
       /**
-       * doing: decide what to do with a-reference-namidx
-       * input: lagEngl03si_0, lagEngl03si_2_0
+       * DOING: decide what to do with a-reference-namidx
+       * INPUT: lagEngl03si_0, lagEngl03si_2_0
        */
       function fSSNamidxRefManage(sNamidxRefIn) {
         // console.log(sNamidxRefIn + ': RefManage')
@@ -772,11 +774,17 @@ let fContainersInsert = function () {
           .then(response => response.json())
           .then(data => {
             aSuggestions = data
-            let a = aSuggestions[0][1].split('..')
-            sSrchCrnt = a[0].substring(1)
-            sSrchNext = a[1]
+            if (aSuggestions[0][1].indexOf('..') > 0) {
+              let a = aSuggestions[0][1].split('..')
+              sSrchCrnt = a[0].substring(1)
+              sSrchNext = a[1]
+            } else {
+              sSrchCrnt = aSuggestions[0][1].substring(1)
+              sSrchNext = ''
+            }
 
             if (sSrchCrnt.toUpperCase() === sSrchInpt.toUpperCase()) {
+              // sSrchCrnt.indexOf(sSrchInpt) >= 0
               fSSNamidxRefDisplay(sNamidxRefIn)
             } else {
               fSSFindIdxinref()
@@ -819,10 +827,10 @@ let fContainersInsert = function () {
       }
 
       /**
-       * doing: display names of a-reference-namidx,
+       * DOING: display names of a-reference-namidx,
        *   make them clickable,
        *   highligts first.
-       * input: sNamidxRefIn: lagEngl03si_0, ..
+       * INPUT: sNamidxRefIn: lagEngl03si_0, ..
        */
       function fSSNamidxRefDisplay(sNamidxRefIn) {
         sNamidx = sNamidxRefIn
@@ -835,9 +843,14 @@ let fContainersInsert = function () {
           .then(response => response.json())
           .then(data => {
             aSuggestions = data
-            let a = aSuggestions[0][1].split('..')
-            sSrchCrnt = a[0].substring(1)
-            sSrchNext = a[1]
+            if (aSuggestions[0][1].indexOf('..') > 0) {
+              let a = aSuggestions[0][1].split('..')
+              sSrchCrnt = a[0].substring(1)
+              sSrchNext = a[1]
+            } else {
+              sSrchCrnt = aSuggestions[0][1].substring(1)
+              sSrchNext = ''
+            }
             sSrchInpt = fSSEscapeRs(sSrchInpt)
             fSSNamidxRefDisplayRead()
           })
@@ -877,17 +890,17 @@ let fContainersInsert = function () {
       }
 
       /**
-       * doing: display names of a-namidx
-       * input: sNamidxIn: lagElln01alfa, lagEngl02bi, lagEngl03si_0
+       * DOING: display names of a-namidx
+       * INPUT: sNamidxIn: lagElln01alfa, lagEngl03si_0
        */
       function fSSNamidxDisplay(sNamidxIn) {
         sNamidx = sNamidxIn
 
         if (sNamidxIn.endsWith('_0')) {
-          // case: ref-namidx
+          // case: reference-namidx
           fSSNamidxRefDisplay(sNamidxIn)
         } else {
-          // case: refNo-namidx
+          // case: referenceNo-namidx
           // IF sNamidxIn is different from last-read, get it
           if (!aSuggestions || (aSuggestions[0][0] !== ';' + sNamidxIn)) {
             sNamidx_path = fSSNamidx_pathFind(sNamidxIn)
@@ -896,19 +909,25 @@ let fContainersInsert = function () {
             .then(response => response.json())
             .then(data => {
               aSuggestions = data
-              let a = aSuggestions[0][1].split('..')
-              sSrchCrnt = a[0].substring(1)
-              sSrchNext = a[1]
+              //   [";lagEngl02bi",";B..C",2276,"2021-11-03"],
+              if (aSuggestions[0][1].indexOf('..') > 0) {
+                let a = aSuggestions[0][1].split('..')
+                sSrchCrnt = a[0].substring(1)
+                sSrchNext = a[1]
+              } else {
+                sSrchCrnt = aSuggestions[0][1].substring(1)
+                sSrchNext = ''
+              }
               fSSNamidxDisplayRead()
             })
           } else if (aSuggestions[0][0] === ';' + sNamidxIn) {
-            // we have-read the-namidx, loop
+            // we have-read the-namidx, display it
             fSSNamidxDisplayRead()
           }
-        } // refNo-namidx
+        } // referenceNo-namidx
 
         /**
-         * doing: reads from aSuggestions the-names that match the-search-name,
+         * DOING: reads from aSuggestions the-names that match the-search-name,
          *   formats them as preview-links,
          *   adds the-eventlistener 'link-preview' on them and
          *   highlights the-first.
@@ -931,10 +950,18 @@ let fContainersInsert = function () {
                 }
               }
             }
-            oEltTabCntSrchP.innerHTML =
-              aSuggestions[0][2].toLocaleString() +
-              ' ' + sSrchCrnt + '..' + sSrchNext +
-              ' // ' + fTabCntSrchPSetText()
+            if (sSrchNext) {
+              oEltTabCntSrchP.innerHTML =
+                aSuggestions[0][2].toLocaleString() +
+                ' ' + sSrchCrnt + '..' + sSrchNext +
+                ' // ' + fTabCntSrchPSetText()
+            } else {
+              oEltTabCntSrchP.innerHTML =
+                aSuggestions[0][2].toLocaleString() +
+                ' ' + sSrchCrnt +
+                ' // ' + fTabCntSrchPSetText()
+
+            }
             oEltTabCntSrchOl.innerHTML = sSuggestions
             fSSEvtPreview()
             if (aSuggestions.length > 0) {
@@ -965,21 +992,42 @@ let fContainersInsert = function () {
             }
             if (!document.getElementById('idTabCntSrchChk').checked) {
               if (n > 998) {
+                if (sSrchNext) {
+                  oEltTabCntSrchP.innerHTML = n.toLocaleString() +
+                    'plus // ' + aSuggestions[0][2].toLocaleString() +
+                    ' ' + sSrchCrnt + '..' + sSrchNext +
+                    ' // ' + fTabCntSrchPSetText()
+                } else {
+                  oEltTabCntSrchP.innerHTML = n.toLocaleString() +
+                    'plus // ' + aSuggestions[0][2].toLocaleString() +
+                    ' ' + sSrchCrnt +
+                    ' // ' + fTabCntSrchPSetText()
+                }
+              } else {
+                if (sSrchNext) {
+                  oEltTabCntSrchP.innerHTML = n.toLocaleString() +
+                    ' // ' + aSuggestions[0][2].toLocaleString() +
+                    ' ' + sSrchCrnt + '..' + sSrchNext +
+                    ' // ' + fTabCntSrchPSetText()
+                } else {
+                  oEltTabCntSrchP.innerHTML = n.toLocaleString() +
+                    ' // ' + aSuggestions[0][2].toLocaleString() +
+                    ' ' + sSrchCrnt +
+                    ' // ' + fTabCntSrchPSetText()
+                }
+              }
+            } else {
+              if (sSrchNext) {
                 oEltTabCntSrchP.innerHTML = n.toLocaleString() +
-                  'plus / ' + aSuggestions[0][2].toLocaleString() +
+                  ' // ' + aSuggestions[0][2].toLocaleString() +
                   ' ' + sSrchCrnt + '..' + sSrchNext +
                   ' // ' + fTabCntSrchPSetText()
               } else {
                 oEltTabCntSrchP.innerHTML = n.toLocaleString() +
                   ' // ' + aSuggestions[0][2].toLocaleString() +
-                  ' ' + sSrchCrnt + '..' + sSrchNext +
+                  ' ' + sSrchCrnt +
                   ' // ' + fTabCntSrchPSetText()
               }
-            } else {
-              oEltTabCntSrchP.innerHTML = n.toLocaleString() +
-                ' // ' + aSuggestions[0][2].toLocaleString() +
-                ' ' + sSrchCrnt + '..' + sSrchNext +
-                ' // ' + fTabCntSrchPSetText()
             }
             oEltTabCntSrchOl.innerHTML = sSuggestions
             fSSEvtPreview()
@@ -993,8 +1041,8 @@ let fContainersInsert = function () {
       }
 
       /**
-       * input: lagEngl01ei, lagElln01alfa
-       * output: site/dirMcs/dirNamidx/dirLagEng/namidx.lagEngl01ei.json
+       * INPUT: lagEngl01ei, lagElln01alfa
+       * OUTPUT: site/dirMcs/dirNamidx/dirLagEngl/namidx.lagEngl01ei.json
        */
       function fSSNamidx_pathFind(sNamidxIn) {
         return sPathNames + 'dirL' + sNamidxIn.substring(1, 7) +
@@ -1002,7 +1050,7 @@ let fContainersInsert = function () {
       }
 
       /**
-       * doing: adds preview-event on links in search-sugestions and
+       * DOING: adds preview-event on links in search-sugestions and
        *   adds its text on search-input
        */
       function fSSEvtPreview() {
@@ -1027,8 +1075,8 @@ let fContainersInsert = function () {
       }
 
       /**
-       * input: a-search-name string
-       * output: the same string escaped (for '+' '.' '|' '(' '*')
+       * INPUT: a-search-name string
+       * OUTPUT: the same string escaped (for '+' '.' '|' '(' '*')
        *   to use it as a-regexp without special chars.
        */
       function fSSEscapeRs(sIn) {
@@ -1094,7 +1142,7 @@ let fContainersInsert = function () {
   }
 
   /**
-   * doing: returns the-text with the-number of names found in search-tab
+   * DOING: returns the-text with the-number of names found in search-tab
    */
   function fTabCntSrchPSetText() {
     let
@@ -1753,7 +1801,7 @@ let oTreeUl = (function () {
 })()
 
 /**
- * doing: reads the-config, site-menu, namidx.lagRoot files, if exist,
+ * DOING: reads the-config, site-menu, namidx.lagRoot files, if exist,
  * and creates the-containers of the-page.
  */
 if (location.hostname !== '') {

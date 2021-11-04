@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.Mws-(7-3-0.2021-04-20) McsWorldSynagonism</title>
   <meta name="keywords" content="Mcs-worldview, Kaseluris.Nikos.1959, free book, ebook, html5.id.toc.preview, HITP, synagonism">
-  <link rel="stylesheet" href="Mcsmgr/hitp.css">
+  <link rel="stylesheet" href="Mcsmgr/mHitp.css">
 </head>
 
 <body>
@@ -410,7 +410,27 @@
   ga('send', 'pageview');
 </script>
 
-<script src="Mcsmgr/hitp.js"></script>
+<script type="module">
+  import * as oHitp from './Mcsmgr/mHitp.js'
+
+  let sQ = ''
+  for (var n = 0; n < oHitp.aNamidxRoot.length; n++) {
+    if (oHitp.aNamidxRoot[n][1] === 'char') {
+      sQ = '<li>⊛ SUM: <span class="clsColorRed">'
+           + oHitp.aNamidxRoot[n][2].toLocaleString()
+           +' names on {'
+           + oHitp.aNamidxRoot[n][3]
+           +'}</span>'
+    } else if (oHitp.aNamidxRoot[n][1].startsWith(';')) {
+      sQ = sQ + '<li>⊛ ' + oHitp.aNamidxRoot[n][1].substring(1)
+         + ': ' + oHitp.aNamidxRoot[n][2]
+    } else {
+      sQ = sQ + '<li>' + oHitp.aNamidxRoot[n][1]
+         + ': ' + oHitp.aNamidxRoot[n][2]
+    }
+  }
+  document.getElementById('idMwsstatQntNamOl').innerHTML = sQ
+</script>
 <script>
   window.addEventListener('load', function () {
     var
@@ -428,23 +448,6 @@
           aCpts[0][2] + '}'
       }
     }
-
-    for (var n = 0; n < oHitp.aNamidxRoot.length; n++) {
-      if (oHitp.aNamidxRoot[n][1] === ';letter') {
-        sQ = '<li>⊛ SUM: <span class="clsColorRed">'
-             + oHitp.aNamidxRoot[n][2].toLocaleString()
-             +' names on {'
-             + oHitp.aNamidxRoot[n][3]
-             +'}</span>'
-      } else if (oHitp.aNamidxRoot[n][1].startsWith(';')) {
-        sQ = sQ + '<li>⊛ ' + oHitp.aNamidxRoot[n][1].substring(1)
-           + ': ' + oHitp.aNamidxRoot[n][2]
-      } else {
-        sQ = sQ + '<li>' + oHitp.aNamidxRoot[n][1]
-           + ': ' + oHitp.aNamidxRoot[n][2]
-      }
-    }
-    document.getElementById('idMwsstatQntNamOl').innerHTML = sQ
   });
 </script>
 </body>
