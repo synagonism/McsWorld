@@ -675,10 +675,8 @@ let fContainersInsert = function () {
      */
     function fSearchSuggest(sSSNamidxIn) {
       let
-        nLag,
-        // number of lag name in lagRoot-namidx,
-        sLi,
-        // text of first suggestion,
+        nLag, // number of lag name in lagRoot-namidx,
+        sLi, // text of first suggestion,
         sLag = oEltTabCntSrchSlt.options[oEltTabCntSrchSlt.selectedIndex].value,
         sNamidx_path,
         sSrchInpt = oEltTabCntSrchIpt.value,
@@ -696,25 +694,11 @@ let fContainersInsert = function () {
       if (sSrchLtr === 'Ί') {sSrchLtr = 'Ι'}
       if (sSrchLtr === 'Ή') {sSrchLtr = 'Η'}
       if (sSrchLtr === 'Ύ') {sSrchLtr = 'Υ'}
-      //in Chinese lag
-      if (sSrchLtr === 'à') {sSrchLtr = 'a'}
-      if (sSrchLtr === 'á') {sSrchLtr = 'a'}
-      if (sSrchLtr === 'ā') {sSrchLtr = 'a'}
-      if (sSrchLtr === 'ǎ') {sSrchLtr = 'a'}
-      if (sSrchLtr === 'è') {sSrchLtr = 'e'}
-      if (sSrchLtr === 'é') {sSrchLtr = 'e'}
-      if (sSrchLtr === 'ē') {sSrchLtr = 'e'}
-      if (sSrchLtr === 'ě') {sSrchLtr = 'e'}
-      if (sSrchLtr === 'ò') {sSrchLtr = 'o'}
-      if (sSrchLtr === 'ó') {sSrchLtr = 'o'}
-      if (sSrchLtr === 'ō') {sSrchLtr = 'o'}
-      if (sSrchLtr === 'ǒ') {sSrchLtr = 'o'}
       if (sSSNamidxIn) {
         fSSNamidxDisplay(sSSNamidxIn)
       } else if (sSrchInpt.length > 0) {
         // console.log('>>> start: ' + sSrchInpt + ', ' + sNamidx + ', ' + sSrchCrnt + '..' + sSrchNext)
-        let bRest = true
-        // display rest-chars if main-char will-not-find
+        let bRest = true // display rest-chars if main-char will-not-find
         for (let n = 1; n < aNamidxRoot.length; n++) {
           // display quantities, for the-lag
           if (sLag === 'lagAGGR') {
@@ -724,26 +708,41 @@ let fContainersInsert = function () {
             // only selected language
             if (aNamidxRoot[n][0] === sLag) {
               nLag = n // index of lag in aNamidxRoot ["lagEngl",";English",143707],
-            } else if (aNamidxRoot[n][1] === sSrchLtr) {
-              // found search-letter
-              sSrchCrnt = aNamidxRoot[n][1]
-              if (!aNamidxRoot[n + 1] || aNamidxRoot[n + 1][1].startsWith(';')) {
-                // last letter, if n+1 does not exist or is the-name of another lag
-                sSrchNext = aNamidxRoot[n][1]
-              } else {
-                sSrchNext = aNamidxRoot[n + 1][1]
+            }
+            if (aNamidxRoot[n][1].indexOf('..') < 0) {
+              // root-char "Ά|Α|ά|α"
+              if (aNamidxRoot[n][1].indexOf(sSrchLtr) >=0) {
+                // found search-char
+                sSrchCrnt = aNamidxRoot[n][1]
+                sSrchNext = ''
+                if (aNamidxRoot[n][0].endsWith('_0')) {
+                  // namidx is a-reference
+                  fSSNamidxRefManage(aNamidxRoot[n][0])
+                } else {
+                  // namidx is a-referenceNo
+                  fSSNamidxDisplay(aNamidxRoot[n][0])
+                }
+                // found main-char 
+                bRest = false
+                break
               }
-
-              if (aNamidxRoot[n][0].endsWith('_0')) {
-                // namidx is a-reference
-                fSSNamidxRefManage(aNamidxRoot[n][0])
-              } else {
-                // namidx is a-referenceNo
-                fSSNamidxDisplay(aNamidxRoot[n][0])
+            } else {
+              // root-char a-sequence of chars
+              let a = aNamidxRoot[n][1].split('..')
+              sSrchCrnt = a[0]
+              sSrchNext = a[1]
+              if (sSrchLtr >= sSrchCrnt && sSrchCrnt < sSrchNext) {
+                if (aNamidxRoot[n][0].endsWith('_0')) {
+                  // namidx is a-reference
+                  fSSNamidxRefManage(aNamidxRoot[n][0])
+                } else {
+                  // namidx is a-referenceNo
+                  fSSNamidxDisplay(aNamidxRoot[n][0])
+                }
+                // found main-char 
+                bRest = false
+                break
               }
-              // found main-char 
-              bRest = false
-              break
             }
           }
         }

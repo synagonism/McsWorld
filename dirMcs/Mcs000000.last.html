@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Mws-(7-3-0.2021-04-20) McsWorldSynagonism</title>
+  <title>Mcs.Mws-(7-4-0.2021-11-05) McsWorldSynagonism</title>
   <meta name="keywords" content="Mcs-worldview, Kaseluris.Nikos.1959, free book, ebook, html5.id.toc.preview, HITP, synagonism">
   <link rel="stylesheet" href="Mcsmgr/mHitp.css">
 </head>
@@ -401,15 +401,6 @@
     </p>
 </section>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-19285371-5', 'synagonism.net');
-  ga('send', 'pageview');
-</script>
-
 <script type="module">
   import * as oHitp from './Mcsmgr/mHitp.js'
 
@@ -430,25 +421,29 @@
     }
   }
   document.getElementById('idMwsstatQntNamOl').innerHTML = sQ
+
+  var
+    aCpts,
+    oXHR = new XMLHttpRequest()
+
+  oXHR.open('GET', 'Mcsqnt.root.json', true)
+  oXHR.send(null)
+  oXHR.onreadystatechange = function () {
+    if (oXHR.readyState === 4 && oXHR.status === 200) {
+      aCpts = JSON.parse(oXHR.responseText)
+      document.getElementById('idMwsstatCptEvlgspn').innerHTML =
+        aCpts[0][1].toLocaleString() + ' Mcs on {' +
+        aCpts[0][2] + '}'
+    }
+  }
 </script>
 <script>
-  window.addEventListener('load', function () {
-    var
-      aCpts,
-      oXHR = new XMLHttpRequest(),
-      sQ = ''
-
-    oXHR.open('GET', 'Mcsqnt.root.json', true)
-    oXHR.send(null)
-    oXHR.onreadystatechange = function () {
-      if (oXHR.readyState === 4 && oXHR.status === 200) {
-        aCpts = JSON.parse(oXHR.responseText)
-        document.getElementById('idMwsstatCptEvlgspn').innerHTML =
-          aCpts[0][1].toLocaleString() + ' Mcs on {' +
-          aCpts[0][2] + '}'
-      }
-    }
-  });
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-19285371-5', 'synagonism.net');
+  ga('send', 'pageview');
 </script>
 </body>
 </html>
