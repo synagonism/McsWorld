@@ -28,6 +28,7 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mHitp.js.18-1-1.2021-11-07: root-char sequence or not',
     'mHitp.js.18-1-1.2021-08-13: // total NAMES',
     'mHitp.js.18-1-0.2021-05-30: ctrl+F3',
     'mHitp.js.18-0-0.2021-05-25: module',
@@ -694,24 +695,25 @@ let fContainersInsert = function () {
       if (sSrchLtr === 'Ί') {sSrchLtr = 'Ι'}
       if (sSrchLtr === 'Ή') {sSrchLtr = 'Η'}
       if (sSrchLtr === 'Ύ') {sSrchLtr = 'Υ'}
+
       if (sSSNamidxIn) {
         fSSNamidxDisplay(sSSNamidxIn)
-      } else if (sSrchInpt.length > 0) {
+      }
+
+      if (sSrchInpt.length > 0) {
         // console.log('>>> start: ' + sSrchInpt + ', ' + sNamidx + ', ' + sSrchCrnt + '..' + sSrchNext)
-        let bRest = true // display rest-chars if main-char will-not-find
+        let bRest = true
+        // display rest-chars if main-char will-not-find
+
         for (let n = 1; n < aNamidxRoot.length; n++) {
           // display quantities, for the-lag
-          if (sLag === 'lagAGGR') {
-            // search only letter not letterNo on all languages
-
-          } else if (aNamidxRoot[n][0].startsWith(sLag)) {
-            // only selected language
-            if (aNamidxRoot[n][0] === sLag) {
-              nLag = n // index of lag in aNamidxRoot ["lagEngl",";English",143707],
-            }
+          if (aNamidxRoot[n][0] === ';'+sLag) {
+              nLag = n // index of lag in aNamidxRoot [";lagEngl","English",143707],
+          } else if (aNamidxRoot[n][0].startsWith(sLag) && aNamidxRoot[n][1] != 'charREST') {
+            // only   selected language
             if (aNamidxRoot[n][1].indexOf('..') < 0) {
               // root-char "Ά|Α|ά|α"
-              if (aNamidxRoot[n][1].indexOf(sSrchLtr) >=0) {
+              if (aNamidxRoot[n][1].indexOf(sSrchLtr) >= 0) {
                 // found search-char
                 sSrchCrnt = aNamidxRoot[n][1]
                 sSrchNext = ''
@@ -727,11 +729,11 @@ let fContainersInsert = function () {
                 break
               }
             } else {
-              // root-char a-sequence of chars
+              // root-char A..C a-sequence of chars
               let a = aNamidxRoot[n][1].split('..')
               sSrchCrnt = a[0]
               sSrchNext = a[1]
-              if (sSrchLtr >= sSrchCrnt && sSrchCrnt < sSrchNext) {
+              if (sSrchLtr >= sSrchCrnt && sSrchLtr < sSrchNext) {
                 if (aNamidxRoot[n][0].endsWith('_0')) {
                   // namidx is a-reference
                   fSSNamidxRefManage(aNamidxRoot[n][0])
@@ -933,6 +935,14 @@ let fContainersInsert = function () {
          */
         function fSSNamidxDisplayRead() {
           let n, i
+          if (aSuggestions[0][1].indexOf('..') > 0) {
+            let a = aSuggestions[0][1].split('..')
+            sSrchCrnt = a[0].substring(1)
+            sSrchNext = a[1]
+          } else {
+            sSrchCrnt = aSuggestions[0][1].substring(1)
+            sSrchNext = ''
+          }
           if (sSrchInpt.toUpperCase() === sSrchCrnt.toUpperCase()) {
             // if sSrchInpt === sSrchCrnt, display all
             n = 0
@@ -964,6 +974,36 @@ let fContainersInsert = function () {
             oEltTabCntSrchOl.innerHTML = sSuggestions
             fSSEvtPreview()
             if (aSuggestions.length > 0) {
+              sLi = oEltTabCntSrchOl.getElementsByTagName('li')[0]
+              sLi.children[0].classList.add('clsClicked')
+              oEltClicked = sLi.children[0]
+            }
+          } else if (sSrchInpt.endsWith(' ')) {
+            // display exactly sSrchInput
+            n = 0
+            for (i = 1; i < aSuggestions.length; i++) {
+              if (sSrchInpt.substring(0, sSrchInpt.length-1) == aSuggestions[i][0]) {
+                n = n + 1
+                sSuggestions = sSuggestions +
+                  '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/' +
+                  aSuggestions[i][1] + '">' +
+                  aSuggestions[i][0]
+              }
+            }
+            if (sSrchNext) {
+              oEltTabCntSrchP.innerHTML = n.toLocaleString() +
+                ' // ' + aSuggestions[0][2].toLocaleString() +
+                ' ' + sSrchCrnt + '..' + sSrchNext +
+                ' // ' + fTabCntSrchPSetText()
+            } else {
+              oEltTabCntSrchP.innerHTML = n.toLocaleString() +
+                ' // ' + aSuggestions[0][2].toLocaleString() +
+                ' ' + sSrchCrnt +
+                ' // ' + fTabCntSrchPSetText()
+            }
+            oEltTabCntSrchOl.innerHTML = sSuggestions
+            fSSEvtPreview()
+            if (sSuggestions.length > 0) {
               sLi = oEltTabCntSrchOl.getElementsByTagName('li')[0]
               sLi.children[0].classList.add('clsClicked')
               oEltClicked = sLi.children[0]
@@ -1151,12 +1191,12 @@ let fContainersInsert = function () {
       return aNamidxRoot[0][2].toLocaleString() + ' total NAMES'
     } else {
       for (let n = 1; n < aNamidxRoot.length; n++) {
-        if (aNamidxRoot[n][0] === sLag) {
+        if (aNamidxRoot[n][0] === ';'+sLag) {
           nLag = n
           break
         }
       }
-      return aNamidxRoot[nLag][2].toLocaleString() + ' ' + aNamidxRoot[nLag][1].substring(1) +
+      return aNamidxRoot[nLag][2].toLocaleString() + ' ' + aNamidxRoot[nLag][1] +
         ' // ' + aNamidxRoot[0][2].toLocaleString() + ' total NAMES'
     }
   }
