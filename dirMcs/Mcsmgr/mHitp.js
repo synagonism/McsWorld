@@ -28,7 +28,8 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
-    'mHitp.js.18-1-1.2021-11-07: root-char sequence or not',
+    'mHitp.js.18-2-1.2021-11-10: index without ;',
+    'mHitp.js.18-2-0.2021-11-07: root-char sequence or not',
     'mHitp.js.18-1-1.2021-08-13: // total NAMES',
     'mHitp.js.18-1-0.2021-05-30: ctrl+F3',
     'mHitp.js.18-0-0.2021-05-25: module',
@@ -777,10 +778,10 @@ let fContainersInsert = function () {
             aSuggestions = data
             if (aSuggestions[0][1].indexOf('..') > 0) {
               let a = aSuggestions[0][1].split('..')
-              sSrchCrnt = a[0].substring(1)
+              sSrchCrnt = a[0]
               sSrchNext = a[1]
             } else {
-              sSrchCrnt = aSuggestions[0][1].substring(1)
+              sSrchCrnt = aSuggestions[0][1]
               sSrchNext = ''
             }
 
@@ -792,7 +793,7 @@ let fContainersInsert = function () {
             }
           })
         } else if (aSuggestions[0][0] === ';' + sNamidxRefIn) {
-          if (aSuggestions[0][1].split('..')[0].substring(1).toUpperCase() === sSrchInpt.toUpperCase()) {
+          if (aSuggestions[0][1].split('..')[0].toUpperCase() === sSrchInpt.toUpperCase()) {
             fSSNamidxRefDisplay(sNamidxRefIn)
           } else {
             fSSFindIdxinref()
@@ -846,10 +847,10 @@ let fContainersInsert = function () {
             aSuggestions = data
             if (aSuggestions[0][1].indexOf('..') > 0) {
               let a = aSuggestions[0][1].split('..')
-              sSrchCrnt = a[0].substring(1)
+              sSrchCrnt = a[0]
               sSrchNext = a[1]
             } else {
-              sSrchCrnt = aSuggestions[0][1].substring(1)
+              sSrchCrnt = aSuggestions[0][1]
               sSrchNext = ''
             }
             sSrchInpt = fSSEscapeRs(sSrchInpt)
@@ -913,10 +914,10 @@ let fContainersInsert = function () {
               //   [";lagEngl02bi",";B..C",2276,"2021-11-03"],
               if (aSuggestions[0][1].indexOf('..') > 0) {
                 let a = aSuggestions[0][1].split('..')
-                sSrchCrnt = a[0].substring(1)
+                sSrchCrnt = a[0]
                 sSrchNext = a[1]
               } else {
-                sSrchCrnt = aSuggestions[0][1].substring(1)
+                sSrchCrnt = aSuggestions[0][1]
                 sSrchNext = ''
               }
               fSSNamidxDisplayRead()
@@ -937,10 +938,10 @@ let fContainersInsert = function () {
           let n, i
           if (aSuggestions[0][1].indexOf('..') > 0) {
             let a = aSuggestions[0][1].split('..')
-            sSrchCrnt = a[0].substring(1)
+            sSrchCrnt = a[0]
             sSrchNext = a[1]
           } else {
-            sSrchCrnt = aSuggestions[0][1].substring(1)
+            sSrchCrnt = aSuggestions[0][1]
             sSrchNext = ''
           }
           if (sSrchInpt.toUpperCase() === sSrchCrnt.toUpperCase()) {
