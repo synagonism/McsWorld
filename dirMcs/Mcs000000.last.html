@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Mws-(7-4-0.2021-11-05) McsWorldSynagonism</title>
+  <title>Mcs.Mws-(7-6-0.2021-11-14) McsWorldSynagonism</title>
   <meta name="keywords" content="Mcs-worldview, Kaseluris.Nikos.1959, free book, ebook, html5.id.toc.preview, HITP, synagonism">
   <link rel="stylesheet" href="Mcsmgr/mHitp.css">
 </head>
@@ -405,19 +405,22 @@
   import * as oHitp from './Mcsmgr/mHitp.js'
 
   let sQ = ''
-  for (var n = 0; n < oHitp.aNamidxRoot.length; n++) {
-    if (oHitp.aNamidxRoot[n][1] === 'char') {
+  for (var n = 0; n < oHitp.aIdxfilRoot.length; n++) {
+    if (oHitp.aIdxfilRoot[n][0] === ';AGGR') {
       sQ = '<li>⊛ SUM: <span class="clsColorRed">'
-           + oHitp.aNamidxRoot[n][2].toLocaleString()
-           +' names on {'
-           + oHitp.aNamidxRoot[n][3]
-           +'}</span>'
-    } else if (oHitp.aNamidxRoot[n][1].startsWith(';')) {
-      sQ = sQ + '<li>⊛ ' + oHitp.aNamidxRoot[n][1].substring(1)
-         + ': ' + oHitp.aNamidxRoot[n][2]
+           + oHitp.aIdxfilRoot[n][2].toLocaleString()
+           + ' names on {'
+           + oHitp.aIdxfilRoot[n][3]
+           + '}</span>'
+    } else if (oHitp.aIdxfilRoot[n][0].startsWith(';lag')) {
+      sQ = sQ + '<li>⊛ <span class="clsColorRed">' + oHitp.aIdxfilRoot[n][1]
+         + ': ' + oHitp.aIdxfilRoot[n][2].toLocaleString()
+         + '</span>'
+    } else if (oHitp.aIdxfilRoot[n][1] === '') {
+      sQ = sQ + '<li> charREST: ' + oHitp.aIdxfilRoot[n][2]
     } else {
-      sQ = sQ + '<li>' + oHitp.aNamidxRoot[n][1]
-         + ': ' + oHitp.aNamidxRoot[n][2]
+      sQ = sQ + '<li>' + oHitp.aIdxfilRoot[n][1]
+         + ': ' + oHitp.aIdxfilRoot[n][2]
     }
   }
   document.getElementById('idMwsstatQntNamOl').innerHTML = sQ

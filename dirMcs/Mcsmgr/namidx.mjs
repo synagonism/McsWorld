@@ -631,7 +631,7 @@ function fComputeQntName() {
     // read array of namidx of file
     // iterate over array and update oNamidxQntnam items
     // store new file
-    // [";lagEngl03si_2_0",";char",129181,"2018-07-29","codepoint order"],
+    // [";lagEngl03si_2_0","char",129181,"2018-07-29","codepoint order"],
     // ["lagEngl03si_2_1","char",6959],
     var
       aNi = JSON.parse(moFs.readFileSync(sNamidxRefIn)),
@@ -644,8 +644,8 @@ function fComputeQntName() {
         // aNi=[["lagEngl03si_2_1","char",1000]]
         // oNamidxQntnam= [lagEngl03si_2_1:1000]]
         // if oNamidxQntnam contains info of aNi[n]
-        if (!aNi[n][1].startsWith(';')) {
-          // don't compute lag-sums twice ["lagEngl",";English",145191],
+        if (!aNi[n][0].startsWith(';')) {
+          // don't compute lag-sums twice [";lagEngl","English",145191],
           if (oNamidxQntnam[aNi[n][0]]) {
             aNi[n][2] = oNamidxQntnam[aNi[n][0]]
             nSum = nSum + aNi[n][2]
@@ -665,11 +665,11 @@ function fComputeQntName() {
         nLag = 1, // first lang index
         nSumAGGR = 0
 
-      // [";lagAGGR",";letter",0,"2018-09-11","per letter"],
-      // ["lagElln",";Greek",1848],
+      // [";lagAGGR","letter",0,"2018-09-11","per letter"],
+      // [";lagElln","Greek",1848],
       for (n = 2; n < aNi.length; n++) {
         // ["lagElln01alfa","Α",258],
-        if (new RegExp('^lag....$').test(aNi[n][0])) {
+        if (new RegExp('^;lag....$').test(aNi[n][0])) {
           // on new lag reset nSum
           nSumAGGR = nSumAGGR + nSum
           aNi[nLag][2] = nSum
