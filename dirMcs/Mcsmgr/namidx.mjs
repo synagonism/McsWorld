@@ -11,6 +11,7 @@
  * PROBLEM:
  * - to compute the-number of concepts, we must set new DIRS at cptqnt.root.json. 
  *
+ * modified: {2021-11-15} reference-index-file
  * modified: {2021-11-14} Chinese-indices
  * modified: {2021-11-01} solved char on other-lags but not on denoted
  * modified: {2021-05-02} .mjs
@@ -35,7 +36,7 @@ let
   bExtra = false, // extra names, added manually on namidx.lagLagoExtra.json to-be removed!
   oNextln,
   oSetFileUp = new Set, 
-  // files to upload, namidx, Mcs, Mcsqnt
+  // files to upload, index, Mcs, Mcsqnt
   // we use a-set, because we add same files and want unique.
   aFileMcsInComments = moFs.readFileSync('namidx.txt').toString().split('\n'),
   aFileMcsIn = [],
@@ -48,7 +49,7 @@ let
   // 'lagMol','lagNld','lagNor','lagPol','lagPor','lagRom','lagRus','lagSlk',
   // 'lagSlv','lagSrp','lagSpa','lagSwe','lagTur','lagUkr',
   // 'lagArb','lagHin','lagJpn'
-  aRootNamidx_Char_Qntnam = JSON.parse(moFs.readFileSync('dirNamidx/namidx.lagRoot.json')),
+  aRootFileIdx_Idx_Qntnam = JSON.parse(moFs.readFileSync('dirNamidx/namidx.lagRoot.json')),
   // [['lagEngl01ei','A',1111]} with quantity of names
   aFileMcs_QntMcs = [],
   // array with the-file-Mcs and the-quantity of Mcs they include
@@ -62,7 +63,7 @@ let
   n
 
 // if run with arguments, skip namidx.txt
-// node namidx.mjs dirCor/McsCor000006.last.html lagSngo
+// node Mcsmgr/namidx.mjs dirCor/McsCor000006.last.html lagSngo
 if (process.argv[2]) {
   aFileMcsIn = [process.argv[2]]
   if (process.argv[3]) {
@@ -93,7 +94,7 @@ if (process.argv[2]) {
 }
 
 /**
- * DOING: creates object {namidx: index} from [[namidx,idx,quantity]]
+ * DOING: creates object {fileIdx: index} from [[fileIdx,idx,quantity]]
  * INPUT: aIn = [['lagEngl01ei','A',1234]]
  * OUTPUT: {lagEngl01ei:'A'}
  */
@@ -101,13 +102,13 @@ function fCreateOFileIdx_Index(aIn) {
   let oOut = {}
   for (n = 0; n < aIn.length; n++) {
     if (!aIn[n][1].startsWith(';')) {
-      // remove non namidx info
+      // remove non index info
       oOut[aIn[n][0]] = aIn[n][1]
     }
   }
   return oOut
 }
-oRootFileIdx_Idx = fCreateOFileIdx_Index(aRootNamidx_Char_Qntnam)
+oRootFileIdx_Idx = fCreateOFileIdx_Index(aRootFileIdx_Idx_Qntnam)
 
 // find the-array of languages to work with
 if (aLag[0] === 'lagALLL') {
@@ -158,13 +159,13 @@ for (let n = 0; n < aFileMcsIn.length; n++) {
 
     // remove name-Urls and for the-extra-files in this lag
     if (bExtra) {
-      let aNamidxExtr = JSON.parse(moFs.readFileSync('dirNamidx/dirLag' +aLag[nL].substring(3)
+      let aFileIdxExtr = JSON.parse(moFs.readFileSync('dirNamidx/dirLag' +aLag[nL].substring(3)
         +'/namidx.' +aLag[nL] +'Extra.json')),
         oSetExtra_files = new Set(),
         aExtra_files
 
-      for (n = 0; n < aNamidxExtr.length; n++) {
-        oSetExtra_files.add(aNamidxExtr[n][1].substring(0, aNamidxExtr[n][1].indexOf('#')))
+      for (n = 0; n < aFileIdxExtr.length; n++) {
+        oSetExtra_files.add(aFileIdxExtr[n][1].substring(0, aFileIdxExtr[n][1].indexOf('#')))
       }
       aExtra_files = Array.from(oSetExtra_files)
       //console.log(aExtra_files)
@@ -239,10 +240,10 @@ for (let n = 0; n < aFileMcsIn.length; n++) {
 
     if (bExtra) {
       // ADD extra name-Urls on oFileIdx_ANamUrl for current language
-      let aNamidxExtr = JSON.parse(moFs.readFileSync('dirNamidx/dirLag' +aLag[nL].substring(3)
+      let aFileIdxExtr = JSON.parse(moFs.readFileSync('dirNamidx/dirLag' +aLag[nL].substring(3)
         +'/namidx.' +aLag[nL] +'Extra.json'))
-      for (let nE = 0; nE < aNamidxExtr.length; nE++) {
-        fStoreNamUrlLag(aNamidxExtr[nE], aLag[nL])
+      for (let nE = 0; nE < aFileIdxExtr.length; nE++) {
+        fStoreNamUrlLag(aFileIdxExtr[nE], aLag[nL])
       }
     }
 
@@ -265,7 +266,7 @@ for (let n = 0; n < aFileMcsIn.length; n++) {
           aEx = JSON.parse(moFs.readFileSync(sFileIdxFullExist))
           //the-existing-array
 
-        sMeta = aEx.shift() // [";namidx",";char..char.2"
+        sMeta = aEx.shift() // [";fileIdx",";char..char.2"
         // add on existed-names the new names,
         for (let nN = 0; nN < aNew.length; nN++) {
           aEx.push(aNew[nN])
@@ -310,7 +311,7 @@ function fRemoveNamUrl(oFileIdx_IdxIn, sFileMcsRmvIn, sLagIn) {
   // sLagIn = lagElln
   // for ALL index-files remove names with Url sFileMcsRmvIn
   // TODO: IF we have a-file for each Mcs-file[a]
-  // with ALL the-namidx-json-files in which it[a] is-used
+  // with ALL the-index-files in which it[a] is-used
   // THEN we can-iterate ONLY in these files. {2018-07-23}
   for (let sFileIdxShort in oFileIdx_IdxIn) {
     // ALL index-files in sLagIn
@@ -333,7 +334,7 @@ function fRemoveNamUrl(oFileIdx_IdxIn, sFileMcsRmvIn, sLagIn) {
           console.log('>> json problem:' + sFileIdxFull)
         }
           
-        // IF namidx is reference (endsWith('_0.json'))
+        // IF fileIdx is reference (endsWith('_0.json'))
         // read it, make oFileIdx_IdxIn, and remove names
         if (sFileIdxFull.endsWith('_0.json')) {
           let oIN = fCreateOFileIdx_Index(aNamExist)
@@ -358,7 +359,7 @@ function fRemoveNamUrl(oFileIdx_IdxIn, sFileMcsRmvIn, sLagIn) {
               }
             }
           }
-          // store namidx length
+          // store fileIdx length
           if (bRemoved) {
             oFileIdx_Qntnam[sFileIdxShort] = aNamDif.length - 1
             // sFileIdxShort changed, store it
@@ -383,64 +384,64 @@ function fStoreNamUrlLag(aNUIn, sLagIn) {
     bRest = true,
     // if first-char of name NOT in an-index in the-lag, then it is a-charREST in this lag
     sCharName,    // the-first char of name
-    sCharIdx,     // the-chars in the-index-file
-    sCharIdxStart,
-    sCharIdxEnd,
-    sFileIdxe      // name of index-file on which to store the-name-Url
+    sIndex,       // the-chars-of-index in the-index-file
+    sIdxCrnt,
+    sIdxNext,
+    sFileIdx      // name of index-file on which to store the-name-Url
 
   // FIND index-file
   // choose root-char or rest
   sCharName = aNUIn[0].substring(0,1)
-  for (sFileIdxe in oRootFileIdx_Idx) {
-    if (sFileIdxe.startsWith(sLagIn)) {
-      sCharIdx = oRootFileIdx_Idx[sFileIdxe]
+  for (sFileIdx in oRootFileIdx_Idx) {
+    if (sFileIdx.startsWith(sLagIn)) {
+      sIndex = oRootFileIdx_Idx[sFileIdx]
 
-      if (sCharIdx.indexOf('..') < 0) {
+      if (sIndex.indexOf('..') < 0) {
         // index is a-set of chars 'B|b|'
-        if (sCharIdx.indexOf(sCharName) >= 0) {
+        if (sIndex.indexOf(sCharName) >= 0) {
           // found index-file
           bRest = false 
-          fStoreNamUrlNamidx(sFileIdxe, aNUIn, sLagIn)
+          fStoreNamUrlNamidx(sFileIdx, aNUIn, sLagIn)
           break
         }
       } else {
         // index is a-sequence of chars 'C..D'
-        let a = sCharIdx.split('..')
-        sCharIdxStart = a[0]
-        sCharIdxEnd = a[1]
-        if (sCharName >= sCharIdxStart && sCharName < sCharIdxEnd) {
+        let a = sIndex.split('..')
+        sIdxCrnt = a[0]
+        sIdxNext = a[1]
+        if (sCharName >= sIdxCrnt && sCharName < sIdxNext) {
           // found index-file
           bRest = false 
-          fStoreNamUrlNamidx(sFileIdxe, aNUIn, sLagIn)
+          fStoreNamUrlNamidx(sFileIdx, aNUIn, sLagIn)
           break
         }
       }
     }
   }
   if (bRest) {
-    sFileIdxe = sLagIn + '00'
-    fStoreNamUrlNamidx(sFileIdxe, aNUIn, sLagIn)
+    sFileIdx = sLagIn + '00'
+    fStoreNamUrlNamidx(sFileIdx, aNUIn, sLagIn)
   }
 }
 
 /**
  * DOING: it stores a-name-Url in oFileIdx_ANamUrl in a-index-file
- * INPUT: sNamidxIn: lagSngo24i, lagZhon05, lagEngl19es_0
+ * INPUT: sFileIdxIn: lagSngo24i, lagZhon05, lagEngl19es_0
  */
-function fStoreNamUrlNamidx(sNamidxIn, aNUIn, sLagIn) {
-  //console.log(sNamidxIn+', '+aNUIn[0])
-  if (!sNamidxIn.endsWith('_0')) {
-    // namidx is NOT a-reference
-    if (oFileIdx_ANamUrl[sNamidxIn]) {
-      oFileIdx_ANamUrl[sNamidxIn].push(aNUIn)
+function fStoreNamUrlNamidx(sFileIdxIn, aNUIn, sLagIn) {
+  //console.log(sFileIdxIn+', '+aNUIn[0])
+  if (!sFileIdxIn.endsWith('_0')) {
+    // fileIdx is NOT a-reference
+    if (oFileIdx_ANamUrl[sFileIdxIn]) {
+      oFileIdx_ANamUrl[sFileIdxIn].push(aNUIn)
     } else {
-      oFileIdx_ANamUrl[sNamidxIn] = []
-      oFileIdx_ANamUrl[sNamidxIn].push(aNUIn)
+      oFileIdx_ANamUrl[sFileIdxIn] = []
+      oFileIdx_ANamUrl[sFileIdxIn].push(aNUIn)
     }
   } else {
     // lagNam03si_0 is a-reference
     let aNi = JSON.parse(moFs.readFileSync('dirNamidx/dirLag' + sLagIn.substring(3)
-      +'/namidx.' +sNamidxIn +'.json'))
+      +'/namidx.' +sFileIdxIn +'.json'))
     fStoreNamUrlReference(aNi, aNUIn, sLagIn)
   }
 }
@@ -450,7 +451,7 @@ function fStoreNamUrlNamidx(sNamidxIn, aNUIn, sLagIn) {
  *   stores one name-Url in oFileIdx_ANamUrl
  *   using Unicode-code-points order
  * INPUT:
- * - aNamidxRefIn: an-array of a-reference-namidx
+ * - aFileIdxRefIn: an-array of a-reference-index-file
  * [
  *   [";lagEngl03si_0","C|c",167556,"2021-11-07","codepoint order"],
  *   ["lagEngl03si_1","C..char",2178],
@@ -459,26 +460,28 @@ function fStoreNamUrlNamidx(sNamidxIn, aNUIn, sLagIn) {
  * ]
  * - aNUIn: ['name','Url']
  */
-function fStoreNamUrlReference(aNamidxRefIn, aNUIn, sLagIn) {
-  // a-reference-namidx ALWAYS contains sequencies (..) of indecies
-  //console.log(aNUIn[0]+':   '+aNamidxRefIn[0])
-  for (n = 1; n < aNamidxRefIn.length; n++) {
-    //console.log(aNUIn[0]+':   '+aNamidxRefIn[n])
-    if (aNUIn[0] >= aNamidxRefIn[n][1].split('..')[0] &&
-        aNUIn[0] < aNamidxRefIn[n][1].split('..')[1]) {
-      //console.log(aNUIn[0]+', '+aNamidxRefIn[n])
-      // if previous index-file is not a-reference, store name-Url
-      if (!aNamidxRefIn[n][0].endsWith('_0')) {
-        if (oFileIdx_ANamUrl[aNamidxRefIn[n][0]]) {
-          oFileIdx_ANamUrl[aNamidxRefIn[n][0]].push(aNUIn)
+function fStoreNamUrlReference(aFileIdxRefIn, aNUIn, sLagIn) {
+  // a-reference-index-file ALWAYS contains sequencies (..) of indecies
+  //console.log(aNUIn[0]+':   '+aFileIdxRefIn[0])
+  for (n = 1; n < aFileIdxRefIn.length; n++) {
+    //console.log(aNUIn[0]+':   '+aFileIdxRefIn[n][1])
+    let
+      sIdxCrnt = aFileIdxRefIn[n][1].split('..')[0],
+      sIdxNext = aFileIdxRefIn[n][1].split('..')[1] 
+    if (aNUIn[0] >= sIdxCrnt && aNUIn[0] < sIdxNext) {
+      //console.log(aNUIn[0]+', '+aFileIdxRefIn[n][1])
+      // if index-file is NOT a-reference, store name-Url
+      if (!aFileIdxRefIn[n][0].endsWith('_0')) {
+        if (oFileIdx_ANamUrl[aFileIdxRefIn[n][0]]) {
+          oFileIdx_ANamUrl[aFileIdxRefIn[n][0]].push(aNUIn)
         } else {
-          oFileIdx_ANamUrl[aNamidxRefIn[n][0]] = []
-          oFileIdx_ANamUrl[aNamidxRefIn[n][0]].push(aNUIn)
+          oFileIdx_ANamUrl[aFileIdxRefIn[n][0]] = []
+          oFileIdx_ANamUrl[aFileIdxRefIn[n][0]].push(aNUIn)
         }
       } else {
         // index-file is a-reference
         let aNi = JSON.parse(moFs.readFileSync('dirNamidx/dirLag' + sLagIn.substring(3)
-            +'/namidx.' +aNamidxRefIn[n][0] +'.json'))
+            +'/namidx.' +aFileIdxRefIn[n][0] +'.json'))
         fStoreNamUrlReference(aNi, aNUIn, sLagIn)
       }
       break
@@ -499,13 +502,13 @@ function fFindIndex(sFileIdxIn) {
 
   if (sFileIdxIn.indexOf('_') < 0) {
     // search root
-    sIdx = fFindIdxArray(aRootNamidx_Char_Qntnam)
+    sIdx = fFindIdxArray(aRootFileIdx_Idx_Qntnam)
   } else if (sFileIdxIn.endsWith('_0')) {
     // lagEngl03si_0 search lagEngl03si
     // lagEngl03si_2_0 search lagEngl03si_0
     sFile = sFileIdxIn.substring(0, sFileIdxIn.lastIndexOf('_'))
     if (sFile.indexOf('_') < 0) {
-      sIdx = fFindIdxArray(aRootNamidx_Char_Qntnam)
+      sIdx = fFindIdxArray(aRootFileIdx_Idx_Qntnam)
     } else {
       sFile = sFile.substring(0, sFile.lastIndexOf('_'))
       sFileIdxFull = 'dirNamidx/dirLag'+sLag +'/namidx.' +sFile +'_0.json'
@@ -558,7 +561,7 @@ function fRemoveArrayDupl(aIn) {
  *   with name and url elements.
  *   on the-first element updates the-quantity of names and the-date.
  * INPUT:
- *   - sFilIn the-namidx-json-file we want to create
+ *   - sFilIn the-index-file we want to create
  *   - aIn the-array of the-name-Url-arrays to include,
  */
 function fWriteJsonQntDate(sFilIn, aIn) {
@@ -637,30 +640,30 @@ function fComputeQntName() {
 
   for (let sFileIdx in oFileIdx_Qntnam) {
     //console.log('>>> compute: '+sFileIdx)
-    let sNamidxRef // the-reference-file lagEngl03si_2_0
+    let sFileIdxRef // the-reference-file lagEngl03si_2_0
 
-    // if namidx is a-child, we find its reference-parent
+    // if fileIdx is a-child, we find its reference-parent
     if (sFileIdx.indexOf('_') > 0) {
       // lagEngl03si_1 >> lagEngl03si_0
-      sNamidxRef = sFileIdx.substring(0, sFileIdx.lastIndexOf('_')) +'_0'
+      sFileIdxRef = sFileIdx.substring(0, sFileIdx.lastIndexOf('_')) +'_0'
     }
 
     if (sFileIdx.indexOf('_') === -1 && !oSetNamidxComputed.has('lagRoot')) {
       // a namidx.lagRoot.json element
       oSetNamidxComputed.add('lagRoot')
       fUpdate_from_oFileIdxQ('dirNamidx/namidx.lagRoot.json')
-    } else if (sFileIdx.indexOf('_') > 0 && !oSetNamidxComputed.has(sNamidxRef)) {
-      // sNamidxRef=lagEngl03si_2_0
-      oSetNamidxComputed.add(sNamidxRef)
+    } else if (sFileIdx.indexOf('_') > 0 && !oSetNamidxComputed.has(sFileIdxRef)) {
+      // sFileIdxRef=lagEngl03si_2_0
+      oSetNamidxComputed.add(sFileIdxRef)
       fUpdate_from_oFileIdxQ('dirNamidx/dirLag' + sFileIdx.substring(3,7)
-        + '/namidx.' + sNamidxRef + '.json')
+        + '/namidx.' + sFileIdxRef + '.json')
     }
   }
 
   // update quantities in a-reference-index-file
   // and computes new sums
   function fUpdate_from_oFileIdxQ(sFileIdxRefIn) {
-    // read array of namidx of file
+    // read array of index-file
     // iterate over array and update oFileIdx_Qntnam items
     // store new file
     // [";lagEngl03si_2_0",";char",129181,"2018-07-29","codepoint order"],
