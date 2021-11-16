@@ -387,7 +387,10 @@ function fStoreNamUrlLag(aNUIn, sLagIn) {
     sIndex,       // the-chars-of-index in the-index-file
     sIdxCrnt,
     sIdxNext,
-    sFileIdx      // name of index-file on which to store the-name-Url
+    sFileIdx,      // name of index-file on which to store the-name-Url
+    nCharName,
+    nIdxCrnt,
+    nIdxNext
 
   // FIND index-file
   // choose root-char or rest
@@ -409,7 +412,28 @@ function fStoreNamUrlLag(aNUIn, sLagIn) {
         let a = sIndex.split('..')
         sIdxCrnt = a[0]
         sIdxNext = a[1]
-        if (sCharName >= sIdxCrnt && sCharName < sIdxNext) {
+        //compare codepoints
+        nCharName = sCharName.codePointAt()
+        // if srch-char is a-supplement with surrogates (high 55296–56319), find it
+        if (nCharName >= 55296 || nCharName <= 56319) {
+          let sSupplement = String.fromCodePoint(aNUIn[0].charAt(0).charCodeAt(0),
+                                                 aNUIn[0].charAt(1).charCodeAt(0))
+          nCharName = sSupplement.codePointAt()
+        }
+        if (!Number.isInteger(Number(sIdxCrnt))) {
+          // it is char
+          nIdxCrnt = sIdxCrnt.codePointAt()
+        } else {
+          // it is number
+          nIdxCrnt = Number(sIdxCrnt)
+        }
+        if (!Number.isInteger(Number(sIdxNext))) {
+          nIdxNext = sIdxNext.codePointAt()
+        } else {
+          nIdxNext = Number(sIdxNext)
+        }
+        //console.log(nIdxCrnt+', '+nIdxNext)
+        if (nCharName >= nIdxCrnt && nCharName < nIdxNext) {
           // found index-file
           bRest = false 
           fStoreNamUrlNamidx(sFileIdx, aNUIn, sLagIn)
@@ -467,7 +491,9 @@ function fStoreNamUrlReference(aFileIdxRefIn, aNUIn, sLagIn) {
     //console.log(aNUIn[0]+':   '+aFileIdxRefIn[n][1])
     let
       sIdxCrnt = aFileIdxRefIn[n][1].split('..')[0],
-      sIdxNext = aFileIdxRefIn[n][1].split('..')[1] 
+      sIdxNext = aFileIdxRefIn[n][1].split('..')[1]
+
+    // PROBLEM with supplementary-chars on reference-index-files 
     if (aNUIn[0] >= sIdxCrnt && aNUIn[0] < sIdxNext) {
       //console.log(aNUIn[0]+', '+aFileIdxRefIn[n][1])
       // if index-file is NOT a-reference, store name-Url
