@@ -5,4 +5,4 @@ of [Kaseluris.Nikos.1959 | synagonism](http://synagonism.net/index.html#idAboutm
 written with [MCS | Structured-Concepts](https://synagonism.net/dirMiwMcs/dirCor/filMcs.last.html#idOverview).
 
 AddressWpg::
-[http://synagonism.net/dirMiwMcs/](https://synagonism.net/dirMiwMcs/filMcsWorld.last.html#idOverview)
+[https://synagonism.net/dirMcs/Mcs000000.last.html](https://synagonism.net/dirMcs/Mcs000000.last.html)
