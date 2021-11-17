@@ -415,7 +415,7 @@ function fStoreNamUrlLag(aNUIn, sLagIn) {
         //compare codepoints
         nCharName = sCharName.codePointAt()
         // if srch-char is a-supplement with surrogates (high 55296–56319), find it
-        if (nCharName >= 55296 || nCharName <= 56319) {
+        if (nCharName >= 55296 && nCharName <= 56319) {
           let sSupplement = String.fromCodePoint(aNUIn[0].charAt(0).charCodeAt(0),
                                                  aNUIn[0].charAt(1).charCodeAt(0))
           nCharName = sSupplement.codePointAt()

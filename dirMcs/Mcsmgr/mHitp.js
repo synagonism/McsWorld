@@ -28,6 +28,8 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mHitp.js.18-4-0.2021-11-17: Shift+1 codepoint',
+    'mHitp.js.18-3-1.2021-11-16: supplementary-chars',
     'mHitp.js.18-3-0.2021-11-14: Chinese codepoints',
     'mHitp.js.18-2-1.2021-11-10: index without ;',
     'mHitp.js.18-2-0.2021-11-07: root-char sequence or not',
@@ -225,6 +227,30 @@ let fContainersInsert = function () {
     oEltCnrTopSearchIcnI.addEventListener('click', function () {
       fCnrOntopRemove()
       fCnrSearchShow()
+    })
+
+    let
+      sKeycode = '',
+      nTimeCurrent,
+      nTimeKeyLast = Date.now()
+
+    // Shift+1 displays the-codepoint of selected char
+    addEventListener('keyup', function (oEvtIn) {
+      nTimeCurrent = Date.now()
+      if (nTimeCurrent - nTimeKeyLast > 1000) {
+        sKeycode = ''
+      }
+      sKeycode = sKeycode +'+' +oEvtIn.code
+      nTimeKeyLast = nTimeCurrent
+      if (sKeycode === '+Digit1+ShiftLeft') {
+        let
+          s = getSelection().toString(),
+          n = s.codePointAt(0)
+        oEltCnrPreviewDiv.innerHTML = '► char: '+s +'<br>► codepoint: ' +n
+        oEltCnrPreviewDiv.style.display = 'block'
+        oEltCnrPreviewDiv.style.top = 59 + 'px'
+        oEltCnrPreviewDiv.style.left = 59 + 'px' 
+      }
     })
 
     addEventListener('keyup', function (oEvtIn) {
@@ -746,8 +772,9 @@ let fContainersInsert = function () {
                 nIdxCrnt = 0,
                 nIdxNext = 0,
                 nSrchChar = sSrchChar.codePointAt()
+              //console.log(sSrchChar+', '+nSrchChar)
               // if srch-char is a-supplement with surrogates (high 55296–56319), find it
-              if (nSrchChar >= 55296 || nSrchChar <= 56319) {
+              if (nSrchChar >= 55296 && nSrchChar <= 56319) {
                 let sSupplement = String.fromCodePoint(sSrchInpt.charAt(0).charCodeAt(0),
                                                        sSrchInpt.charAt(1).charCodeAt(0))
                 nSrchChar = sSupplement.codePointAt()
