@@ -1048,7 +1048,17 @@ let fContainersInsert = function () {
             // display exactly sSrchInput
             n = 0
             for (i = 1; i < aSuggestions.length; i++) {
-              if (sSrchInpt.substring(0, sSrchInpt.length-1) == aSuggestions[i][0]) {
+              // name
+              // name'xxx
+              // name.xxx
+              // name!...
+              let
+                sSgn = aSuggestions[i][0],
+                sInput = sSrchInpt.substring(0, sSrchInpt.length-1) 
+              if (sInput === sSgn ||
+                  new RegExp("^"+sInput+"'.*").test(sSgn) ||
+                  new RegExp("^"+sInput+"\\..*").test(sSgn) ||
+                  new RegExp("^"+sInput+"!.*").test(sSgn) ) {
                 n = n + 1
                 sSuggestions = sSuggestions +
                   '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/' +

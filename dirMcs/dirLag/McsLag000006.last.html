@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char-(1-6-0.2021-11-03)</title>
+  <title>Mcs.char-(1-7-0.2021-11-18)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -1441,7 +1441,31 @@
     <br>* McsEngl.Unicode--code-point!⇒Uccp,
     <br>* McsEngl.Unicode-code-point!⇒Uccp,
     <br>* McsEngl.code-point--of-Unicode-standard!⇒Uccp,
+    <br>* McsEngl.codepoint-of-Unicode-standard!⇒Uccp,
     <a class="clsHide" href="#idCharUcdstdcpnam"></a></p>
+
+  <section id="idCharUcdstdcpfdr">
+  <h4 id="idCharUcdstdcpfdrH4">finder of Uccp
+    <a class="clsHide" href="#idCharUcdstdcpfdrH4"></a></h4>
+  <p id="idCharUcdstdcpfdrdsn">description::
+    <br>· on this site, selecting any character and hitting <code>Shift+1</code>, it FINDS the-Unicode-codepoint of this character.
+    <br>· also here you can-write or paste any character and see its codepoint:
+    <br><input type="text" id="idIptUccp" value="𡜨">
+    <button type="button" id="idBtnUccp">FIND codepoint</button>
+    <br>codepoint: <span id="idSpnUccp"></span>
+    <br>
+    <br>AND the-opposite:
+    <br>· write a-codepoint and see its character:
+    <br><input type="text" id="idIptUchr" value="137000">
+    <button type="button" id="idBtnUchr">FIND character</button>
+    <br>character: <span id="idSpnUchr"></span>
+    <a class="clsHide" href="#idCharUcdstdcpfdrdsn"></a></p>
+  <p id="idCharUcdstdcpfdrnam">name::
+    <br>* McsEngl.Uccp'finder,
+    <br>* McsEngl.finder.character-from-codepoint,
+    <br>* McsEngl.finder.codepoint-from-character,
+    <a class="clsHide" href="#idCharUcdstdcpfdrnam"></a></p>
+  </section>
 
   <section id="idCharUcdstdcpchr">
   <h4 id="idCharUcdstdcpchrH4">char of code-point (<a class="clsPreview" href="#idCharUcd">link</a>)
@@ -6224,6 +6248,22 @@
 
 <script type="module">
   import * as oHitp from '../Mcsmgr/mHitp.js'
+
+  // finds codepoint, given char
+  document.getElementById('idBtnUccp').addEventListener('click', function(e) {
+    let
+      sIn = document.getElementById('idIptUccp').value,
+      nUccp = sIn.codePointAt(0)
+    document.getElementById('idSpnUccp').innerHTML = nUccp
+  })
+
+  // finds char, given codepoint
+  document.getElementById('idBtnUchr').addEventListener('click', function(e) {
+    let
+      nIn = Number(document.getElementById('idIptUchr').value),
+      sChr = String.fromCodePoint(nIn)
+    document.getElementById('idSpnUchr').innerHTML = sChr
+  })
 </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.time-(1-10-0.2021-11-15)</title>
+  <title>Mcs.time-(1-11-0.2021-11-16)</title>
   <meta name="keywords" content="time, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -449,20 +449,24 @@
     <a class="clsHide" href="#idTimeSmsDftNoneH2"></a></h2>
   <p id="idTimeSmsDftNonedsn">description::
     <br>· time definite, quantity none.
+    <br>
+    <br>_stxZhon: _stxSbj:[他] _stxTime:[从不] _stxVrb:{喝} _stxObj:[啤酒]。 != [he] [never] {drinks} [bear].
     <a class="clsHide" href="#idTimeSmsDftNonedsn"></a></p>
   <p id="idTimeSmsDftNonenam">name::
-    <br>* McsEngl.advbElln.ποτέ:rlnTimeNever,
-    <br>* McsEngl.advbEngl.never:rlnTimeNever,
-    <br>* McsEngl.never!~advbEngl:rlnTimeNever,
+    <br>* McsEngl.advbElln.ποτέ:timeNever,
+    <br>* McsEngl.advbEngl.never:timeNever,
+    <br>* McsEngl.frequency.never,
+    <br>* McsEngl.never!~advbEngl:timeNever,
     <br>* McsEngl.rlnTimeNever,
     <br>* McsEngl.time.definite.quantity.none,
+    <br>* McsEngl.timeNever,
     <br>====== langoSinago:
     <br>* McsSngo.to-po!=time.none,
     <br>====== langoChinese:
-    <br>* McsZhon.cóngbù-从不!=never,
-    <br>* McsZhon.从不-cóngbù!=never,
+    <br>* McsZhon.cóngbù-从不!=timeNever,
+    <br>* McsZhon.从不-cóngbù!=timeNever,
     <br>====== langoGreek:
-    <br>* McsElln.ποτέ!=never,
+    <br>* McsElln.ποτέ!=timeNever,
     <a class="clsHide" href="#idTimeSmsDftNonenam"></a></p>
   </section>
 
@@ -470,10 +474,13 @@
   <h2 id="idTimeSmsDftAllH2">time.definite.quantity.all
     <a class="clsHide" href="#idTimeSmsDftAllH2"></a></h2>
   <p id="idTimeSmsDftAlldsn">description::
-    <br>·
+    <br>· time definite quantity all.
+    <br>
+    <br>_stxZhon:
     <a class="clsHide" href="#idTimeSmsDftAlldsn"></a></p>
   <p id="idTimeSmsDftAllnam">name::
     <br>* McsEngl.always,
+    <br>* McsEngl.frequency.always,
     <br>* McsEngl.time.all,
     <br>* McsEngl.time.definite.quantity.all,
     <br>====== langoChinese:
@@ -2207,18 +2214,19 @@
   <h3 id="idTimeUomDayPstH3">day.relative.before
     <a class="clsHide" href="#idTimeUomDayPstH3"></a></h3>
   <p id="idTimeUomDayPstdsn">description::
-    <br>·
+    <br>· day relative before current.
     <a class="clsHide" href="#idTimeUomDayPstdsn"></a></p>
   <p id="idTimeUomDayPstnam">name::
+    <br>* McsEngl.advbEngl.yesterday:timeDayPrevious,
     <br>* McsEngl.day.relative.previous,
-    <br>* McsEngl.yesterday,
+    <br>* McsEngl.yesterday!~advbEngl:timeDayPrevious,
     <br>====== langoSinago:
     <br>* McsSngo.to-tieno-ano!=yersterday,
     <br>====== langoChinese:
     <br>* McsZhon.zuótiān-昨天!=yersterday,
     <br>* McsZhon.昨天-zuótiān!=yersterday,
     <br>====== langoGreek:
-    <br>* McsElln.χθες!=yersterday,
+    <br>* McsElln.χθες!~advbElln!=yersterday,
     <a class="clsHide" href="#idTimeUomDayPstnam"></a></p>
   </section>
 
@@ -2226,17 +2234,18 @@
   <h3 id="idTimeUomDayPrtH3">day.relative.current
     <a class="clsHide" href="#idTimeUomDayPrtH3"></a></h3>
   <p id="idTimeUomDayPrtdsn">description::
-    <br>·
+    <br>· day current.
     <a class="clsHide" href="#idTimeUomDayPrtdsn"></a></p>
   <p id="idTimeUomDayPrtnam">name::
+    <br>* McsEngl.advbEngl.today:timeDayCurrent,
     <br>* McsEngl.day.relative.current,
-    <br>* McsEngl.today,
+    <br>* McsEngl.today!~advbEngl:timeDayCurrent,
     <br>====== langoSinago:
     <br>* McsSngo.to-tieno-eno!=today,
     <br>====== langoChinese:
     <br>* McsZhon.今天-jīn-tiān!=today,
     <br>====== langoGreek:
-    <br>* McsElln.σήμερα!=today,
+    <br>* McsElln.σήμερα!~advbElln!=today,
     <a class="clsHide" href="#idTimeUomDayPrtnam"></a></p>
   </section>
 
@@ -2244,18 +2253,19 @@
   <h3 id="idTimeUomDayFtrH3">day.relative.after
     <a class="clsHide" href="#idTimeUomDayFtrH3"></a></h3>
   <p id="idTimeUomDayFtrdsn">description::
-    <br>·
+    <br>· day after current.
     <a class="clsHide" href="#idTimeUomDayFtrdsn"></a></p>
   <p id="idTimeUomDayFtrnam">name::
+    <br>* McsEngl.advbEngl.tomorrow:timeDayNext,
     <br>* McsEngl.day.relative.next,
-    <br>* McsEngl.tomorrow,
+    <br>* McsEngl.tomorrow!~advbEngl:time,
     <br>====== langoSinago:
     <br>* McsSngo.to-tieno-ino!=tomorrow,
     <br>====== langoChinese:
     <br>* McsZhon.míngtiān-明天!=tomorrow,
     <br>* McsZhon.明天-míngtiān!=tomorrow,
     <br>====== langoGreek:
-    <br>* McsElln.αύριο!=tomorrow,
+    <br>* McsElln.αύριο!~advbElln!=tomorrow,
     <a class="clsHide" href="#idTimeUomDayFtrnam"></a></p>
   </section>
 
