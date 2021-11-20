@@ -28,6 +28,7 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mHitp.js.18-5-0.2021-11-19: create treeUl on preview',
     'mHitp.js.18-4-0.2021-11-17: Shift+1 codepoint',
     'mHitp.js.18-3-1.2021-11-16: supplementary-chars',
     'mHitp.js.18-3-0.2021-11-14: Chinese codepoints',
@@ -100,6 +101,7 @@ let
   // holds the-object of the-Html-element a-user clicks on
   oEltSitemenuUl,
   // holds the-site-structure
+  oEltCnrPreviewDiv = document.createElement('div'),
 
   sCfgHomeLocal,
   // filSite-structure contains absolute urls, because we see it from many pages.
@@ -145,7 +147,6 @@ let fContainersInsert = function () {
     oEltCnrMainInfoDiv = document.createElement('div'),
     // extra containers,
     oEltCnrWidthDiv = document.createElement('div'),
-    oEltCnrPreviewDiv = document.createElement('div'),
     // Page-info-cnr: PathP, TabHeadersUl, TabCntDiv,
     oEltPginfPathP = document.createElement('p'),
     oEltPginfTabHeadersUl = document.createElement('ul'),
@@ -1455,6 +1456,16 @@ let fContainersInsert = function () {
     oEltIn.addEventListener('click', fEvtClickContent)
     oEltIn.addEventListener('mouseover', fEvtMouseoverContent)
   })
+  Array.prototype.slice.call(document.querySelectorAll('#idCnrMainPginfDiv *[id]')).forEach(function (oEltIn) {
+    oEltIn.addEventListener('click', function () {
+      oEltCnrPreviewDiv.style.display = 'none' // remove popup
+      if (oEltSitemenuUl) {
+        oEltCnrSiteDiv.style.display = 'none' // remove site-content
+      }
+      oEltCnrWidthDiv.style.display = 'none' // remove width-content
+    })
+  })
+
 
   // event click on TAB-Headers
   Array.prototype.slice.call(document.querySelectorAll('ul#idPginfTabHeadersUl li')).forEach(function (oEltIn) {
@@ -1724,8 +1735,9 @@ let oTreeUl = (function () {
   let oTreeUl = {}
 
   /**
-   * Creates one-clsTreeUl-list tree.
+   * DOING: it creates one-clsTreeUl-list tree.
    * If no input, creates ALL lists of the-doc, trees.
+   * PROBLEM: it does-not-work for one tree {2021-11-20}
    */
   oTreeUl.fTruCreate = function (oUlIn) {
     // find all clsTreeUl-lists
@@ -1743,33 +1755,37 @@ let oTreeUl = (function () {
     }
 
     for (n = 0; n < aUl.length; n++) {
+      //if (!aUl[n].getElementsByClassName('clsFa')) {
       // add the-clsTreeUl to the-sub-lists
       let aSubul = aUl[n].getElementsByTagName('ul')
-      for (n2 = 0; n2 < aSubul.length; n2++) {
-        aSubul[n2].className = 'clsTreeUl'
-      }
-
-      // on first li:
-      // add node-image
-      // add event-listener
-      aLi = aUl[n].getElementsByTagName('li')
-      for (n2 = 0; n2 < aLi.length; n2++) {
-        aUlSub = aLi[n2].getElementsByTagName('ul')
-        oEltI = document.createElement('i')
-        oEltI.setAttribute('class', 'clsFa clsFaCrcCol')
-        if (aUlSub.length === 0) {
-          oEltI.setAttribute('class', 'clsFa clsFaCrc')
-        } else {
-          oEltI.addEventListener('click', fTruListenerClickCreate(aLi[n2]))
+      if (aSubul.length >0 && !aSubul[0].className) {
+        for (n2 = 0; n2 < aSubul.length; n2++) {
+          aSubul[n2].className = 'clsTreeUl'
         }
-        aLi[n2].insertBefore(oEltI, aLi[n2].firstChild)
 
-        // collapse the-lists within this listitem
-        oTreeUl.fTruToggleLi(aLi[n2])
+        // on first li:
+        // add node-image
+        // add event-listener
+        aLi = aUl[n].getElementsByTagName('li')
+        for (n2 = 0; n2 < aLi.length; n2++) {
+          aUlSub = aLi[n2].getElementsByTagName('ul')
 
-        // first-level expand
-        if (aLi[n2].parentNode.parentNode.nodeName !== 'LI') {
+          oEltI = document.createElement('i')
+          oEltI.setAttribute('class', 'clsFa clsFaCrcCol')
+          if (aUlSub.length === 0) {
+            oEltI.setAttribute('class', 'clsFa clsFaCrc')
+          } else {
+            oEltI.addEventListener('click', fTruListenerClickCreate(aLi[n2]))
+          }
+          aLi[n2].insertBefore(oEltI, aLi[n2].firstChild)
+
+          // collapse the-lists within this listitem
           oTreeUl.fTruToggleLi(aLi[n2])
+
+          // first-level expand
+          if (aLi[n2].parentNode.parentNode.nodeName !== 'LI') {
+            oTreeUl.fTruToggleLi(aLi[n2])
+          }
         }
       }
     }
@@ -1884,7 +1900,7 @@ let oTreeUl = (function () {
    *
    * @input {object} oEltLiIn The-listitem to toggle
    */
-  function fTruListenerClickCreate(oEltLiIn) {
+  function fTruListenerClickCreate (oEltLiIn) {
     return function (oEvtIn) {
       let
         oEltI = oEvtIn.target,
@@ -1973,4 +1989,4 @@ if (location.hash) {
 }
 
 //oEltClicked, sIdxfil, sIdxNext,  sIdxCrnt, sQrslrAClk, sQrslrAClkLast
-export {aIdxfilRoot, aSuggestions, aVersion, bEdge, bFirefox, nCfgPageinfoWidth, fContainersInsert, fTocTriCreate, fTocTriHighlightNode, oEltSitemenuUl, oTreeUl, sCfgHomeLocal, sPathSite, sPathStmenu}
+export {aIdxfilRoot, aSuggestions, aVersion, bEdge, bFirefox, nCfgPageinfoWidth, fContainersInsert, fTocTriCreate, fTocTriHighlightNode, oEltCnrPreviewDiv, oEltSitemenuUl, oTreeUl, sCfgHomeLocal, sPathSite, sPathStmenu}

@@ -11,6 +11,7 @@
  * PROBLEM:
  * - to compute the-number of concepts, we must set new DIRS at cptqnt.root.json. 
  *
+ * modified: {2021-11-19} index-files-comments
  * modified: {2021-11-15} reference-index-file
  * modified: {2021-11-14} Chinese-indices
  * modified: {2021-11-01} solved char on other-lags but not on denoted
@@ -87,7 +88,12 @@ if (process.argv[2]) {
       } else if (sLn.startsWith('bExtra')) {
         bExtra = true
       } else {
-        aFileMcsIn.push(sLn)
+        // remove comments after ;
+        if (sLn.indexOf(';') > 0) {
+          aFileMcsIn.push(sLn.substring(0,sLn.lastIndexOf(';')))
+        } else {
+          aFileMcsIn.push(sLn)
+        }
       }
     }
   }

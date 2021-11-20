@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagEngl-(1-27-0.2021-11-16) English-language</title>
+  <title>Mcs.lagEngl-(1-28-0.2021-11-19) English-language</title>
   <meta name="keywords" content="English--human-language, lagEngl, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -4289,9 +4289,62 @@
   <section id="idLEnglvrbmbr">
   <h3 id="idLEnglvrbmbrH3">member of verbEngl
     <a class="clsHide" href="#idLEnglvrbmbrH3"></a></h3>
-  <p id="idLEnglvrbmbrdsn">description::
+  <div id="idLEnglvrbmbrdsn">
+    <p>description::
     <br>· a-verb\a\ is a-set of terms, its\a\ <span class="clsColorRed">members</span>.
-    <a class="clsHide" href="#idLEnglvrbmbrdsn"></a></p>
+    </p>
+    <ul class="clsTreeUl">
+    <li>verb-members:
+      <ul>
+      <li>present:
+        <ul>
+        <li>active:
+          <ul>
+          <li>perfectNo:
+            <ul>
+            <li>instant (present-simple):
+              <ul>
+              <table>
+              <tr>
+                <td>(I) write
+                <td>(I) do not write
+                <td>do (I) write?
+                <td>do (I) not write?
+              <tr>
+                <td>(you) write
+                <td>(you) do not write
+                <td>do (you) write?
+                <td>do (you) not write?
+              </table>
+              </ul>
+            <li>instantNo (present-progressive):
+              <ul>
+              <table>
+                <tr>
+                <td>I am writing
+                <td>I am not writing
+                <td>am I writing?
+                <td>am I not writing?
+              </table>
+              </ul>
+            </ul>
+          <li>perfect:
+          </ul>
+        <li>activeNo:
+        </ul>
+      <li>past:
+        <ul>
+        <li>active:
+        <li>activeNo:
+        </ul>
+      <li>future:
+        <ul>
+        <li>active:
+        <li>activeNo:
+        </ul>
+    </li>
+    </ul>
+    <a class="clsHide" href="#idLEnglvrbmbrdsn"></a></div>
   <p id="idLEnglvrbmbrnam">name::
     <br>* McsEngl.VerbmbrEngl,
     <br>* McsEngl.verbEngl'member!⇒VerbmbrEngl,
@@ -4563,7 +4616,6 @@
         <td><span class="clsColorRed">(I) will-being-written</span><br>[future-progressive-passive]
         <td><span class="clsColorRed">(I) will-have-being-written</span><br>[future-perfect-progressive-passive]
       </tr>
-    </table>
     <a class="clsHide" href="#idLEnglvrbmbrAtmdsn"></a></div>
   <p id="idLEnglvrbmbrAtmnam">name::
     <br>* McsEngl.English-verb-form!⇒VerbatmEngl, (literature)
@@ -9474,12 +9526,15 @@
   <section id="idLEnglvrbcjgr">
   <h3 id="idLEnglvrbcjgrH3">member-finder of verbEngl
     <a class="clsHide" href="#idLEnglvrbcjgrH3"></a></h3>
-  <p id="idLEnglvrbcjgrdsn">description::
+  <div id="idLEnglvrbcjgrdsn">
+    <p>description::
     <br>· <span class="clsColorRed">member-finder-of-verbEngl</span> is an-entity (human or machine) that finds the-members of a-verbEngl.
     <br>· write <a class="clsPreview" href="#idLEnglvrbmbrBase">the-base-member</a> of a-verbEngl eg write, play, to find its individuals.
-    <br><input type="text" id="idIptCjgr">
-    <button type="button" id="idBtnCjgr">GO (not yet working)</button>
-    <a class="clsHide" href="#idLEnglvrbcjgrdsn"></a></p>
+    <br><input type="text" id="idIptVrbr">
+    <button type="button" id="idBtnVrbr">GO (not yet working)</button>
+    </p>
+    <span id="idSpnVrbr"></span>
+    <a class="clsHide" href="#idLEnglvrbcjgrdsn"></a></div>
   <p id="idLEnglvrbcjgrnam">name::
     <br>* McsEngl.Englconjugator!⇒verberEngl,
     <br>* McsEngl.English-conjugator!⇒verberEngl,
@@ -10480,7 +10535,7 @@
     <a class="clsHide" href="#idLEnglvrbA1dsn"></a></p>
   <p id="idLEnglvrbA1nam">name::
     <br>* McsEngl.verbEngl.A1!⇒verbEnglA1,
-    <br>* McsEngl.verbEnglA1:climb--s-ed-ing-ed,
+    <br>* McsEngl.verbEngl.1!=climb--s-ed-ing-ed,
     <a class="clsHide" href="#idLEnglvrbA1nam"></a></p>
   </section>
 
@@ -10493,7 +10548,7 @@
     <a class="clsHide" href="#idLEnglvrbA2dsn"></a></p>
   <p id="idLEnglvrbA2nam">name::
     <br>* McsEngl.verbEngl.A2!⇒verbEnglA2,
-    <br>* McsEngl.verbEnglA2:stop--s-ped-ping-ped,
+    <br>* McsEngl.verbEngl.2!=stop--s-ped-ping-ped,
     <a class="clsHide" href="#idLEnglvrbA2nam"></a></p>
   </section>
 
@@ -10506,7 +10561,7 @@
     <a class="clsHide" href="#idLEnglvrbA3dsn"></a></p>
   <p id="idLEnglvrbA3nam">name::
     <br>* McsEngl.verbEngl.A3!⇒verbEnglA3,
-    <br>* McsEngl.verbEnglA3:travel--s-ed|led-ing|ling-ed|led,
+    <br>* McsEngl.verbEngl.3!=travel--s-ed|led-ing|ling-ed|led,
     <a class="clsHide" href="#idLEnglvrbA3nam"></a></p>
   </section>
 
@@ -10519,7 +10574,7 @@
     <a class="clsHide" href="#idLEnglvrbA4dsn"></a></p>
   <p id="idLEnglvrbA4nam">name::
     <br>* McsEngl.verbEngl.A4!⇒verbEnglA4,
-    <br>* McsEngl.verbEnglA4:miss--es-ed-ing-ed,
+    <br>* McsEngl.verbEngl.4!=miss--es-ed-ing-ed,
     <a class="clsHide" href="#idLEnglvrbA4nam"></a></p>
   </section>
 
@@ -10532,7 +10587,7 @@
     <a class="clsHide" href="#idLEnglvrbB1dsn"></a></p>
   <p id="idLEnglvrbB1nam">name::
     <br>* McsEngl.verbEngl.B1!⇒verbEnglB1,
-    <br>* McsEngl.verbEnglB1:lik-e-es-ed-ing-ed,
+    <br>* McsEngl.verbEngl.1!=lik-e-es-ed-ing-ed,
     <a class="clsHide" href="#idLEnglvrbB1nam"></a></p>
   </section>
 
@@ -10545,7 +10600,7 @@
     <a class="clsHide" href="#idLEnglvrbB2dsn"></a></p>
   <p id="idLEnglvrbB2nam">name::
     <br>* McsEngl.verbEngl.B2!⇒verbEnglB2,
-    <br>* McsEngl.verbEnglB2:stud-y-ies-ied-ying-ied,
+    <br>* McsEngl.verbEngl.2!=stud-y-ies-ied-ying-ied,
     <a class="clsHide" href="#idLEnglvrbB2nam"></a></p>
   </section>
 
@@ -13138,9 +13193,6 @@
   <p></p>
 </section>
 
-<script type="module">
-  import * as oHitp from '../Mcsmgr/mHitp.js'
-</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -13148,6 +13200,28 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-19285371-5', 'synagonism.net');
   ga('send', 'pageview');
+</script>
+<script type="module">
+  import * as oHitp from '../Mcsmgr/mHitp.js'
+
+  // finds members of verb
+  document.getElementById('idBtnVrbr').addEventListener('click', function(e) {
+//    console.log(Object.getOwnPropertyNames(oHitp).sort().join(', '))
+//    console.log(e.target.parentNode)
+    let sIn = document.getElementById('idIptVrbr').value
+    document.getElementById('idSpnVrbr').innerHTML = '<ul class="clsTreeUl" id="idTreePreview">    <li>'+sIn+'-members:      <ul>      <li>present:        <ul>        <li>active:          <ul>          <li>perfectNo:            <ul>            <li>instant (present-simple):              <ul>              <table>              <tr>                <td>(I) write                <td>(I) do not write                <td>do (I) write?                <td>do (I) not write?              <tr>                <td>(you) write                <td>(you) do not write                <td>do (you) write?                <td>do (you) not write?              </table>              </ul>            <li>instantNo (present-progressive):              <ul>              <table>                <tr>                <td>I am writing                <td>I am not writing                <td>am I writing?                <td>am I not writing?              </table>              </ul>            </ul>          <li>perfect:          </ul>        <li>activeNo:        </ul>      <li>past:        <ul>        <li>active:        <li>activeNo:        </ul>      <li>future:        <ul>        <li>active:        <li>activeNo:        </ul>    </li>    </ul>'
+    oHitp.oTreeUl.fTruCreate()
+    let
+      aSubnodes,
+      aTocTriLI = document.getElementById('idTreePreview').getElementsByTagName('li'),
+      n
+    for (n = 0; n < 5; n++) {
+      aSubnodes = aTocTriLI[n].getElementsByTagName('ul')
+      if (aSubnodes.length > 0 && aSubnodes[0].style.display === 'none') {
+        oHitp.oTreeUl.fTruToggleLi(aTocTriLI[n])
+      }
+    }
+  })
 </script>
 </body>
 </html>
