@@ -22,7 +22,8 @@
   <h1 id="idOverviewH1">overview of McsTest
     <a class="clsHide" href="#idOverviewH1"></a></h1>
   <p id="idDescription">description::
-    <br>· a-short-description of Mcs.
+    <br>· <input type="text" id="idIpt">
+    <br>· <button type="button" id="idBtn">GO</button>
     <a class="clsHide" href="#idDescription"></a></p>
   <p id="idDefinition">definition::
     <br><span id="idDefinitionSpc">specific-definition:
@@ -182,24 +183,31 @@
 //  console.log(oHitp.sPathSite)
 //  console.log(oHitp.oEltTPUl)
 
-  oHitp.oEltCnrPreviewDiv.innerHTML = '<ul class="clsTreeUl" id="idTreePreview">    <li>verb-members:      <ul>      <li>present:        <ul>        <li>active:          <ul>          <li>perfectNo:            <ul>            <li>instant (present-simple):              <ul>              <table>              <tr>                <td>(I) write                <td>(I) do not write                <td>do (I) write?                <td>do (I) not write?              <tr>                <td>(you) write                <td>(you) do not write                <td>do (you) write?                <td>do (you) not write?              </table>              </ul>            <li>instantNo (present-progressive):              <ul>              <table>                <tr>                <td>I am writing                <td>I am not writing                <td>am I writing?                <td>am I not writing?              </table>              </ul>            </ul>          <li>perfect:          </ul>        <li>activeNo:        </ul>      <li>past:        <ul>        <li>active:        <li>activeNo:        </ul>      <li>future:        <ul>        <li>active:        <li>activeNo:        </ul>    </li>    </ul>'
-  oHitp.oEltCnrPreviewDiv.style.display = 'block'
-  oHitp.oEltCnrPreviewDiv.style.top = 59 + 'px'
-  oHitp.oEltCnrPreviewDiv.style.left = 26 + 'px'
-  oHitp.oEltCnrPreviewDiv.style.maxHeight = '100%'
-  oHitp.oEltCnrPreviewDiv.style.width = 'auto'
-  oHitp.oEltCnrPreviewDiv.style.overflow = 'auto'
-  oHitp.oTreeUl.fTruCreate()
-  let
-    aSubnodes,
-    aTocTriLI = document.getElementById('idTreePreview').getElementsByTagName('li'),
-    n
-  for (n = 0; n < 5; n++) {
-    aSubnodes = aTocTriLI[n].getElementsByTagName('ul')
-    if (aSubnodes.length > 0 && aSubnodes[0].style.display === 'none') {
-      oHitp.oTreeUl.fTruToggleLi(aTocTriLI[n])
+
+  document.getElementById('idBtn').addEventListener('click', function(e) {
+    let sTree = '<ul class="clsTreeUl" id="idTreePreview">    <li>verb-members:      <ul>      <li>present:        <ul>        <li>active:          <ul>          <li>perfectNo:            <ul>            <li>instant (present-simple):              <ul>              <table>              <tr>                <td>(I) write                <td>(I) do not write                <td>do (I) write?                <td>do (I) not write?              <tr>                <td>(you) write                <td>(you) do not write                <td>do (you) write?                <td>do (you) not write?              </table>              </ul>            <li>instantNo (present-progressive):              <ul>              <table>                <tr>                <td>I am writing                <td>I am not writing                <td>am I writing?                <td>am I not writing?              </table>              </ul>            </ul>          <li>perfect:          </ul>        <li>activeNo:        </ul>      <li>past:        <ul>        <li>active:        <li>activeNo:        </ul>      <li>future:        <ul>        <li>active:        <li>activeNo:        </ul>    </li>    </ul>'
+
+    oHitp.oEltCnrPreviewDiv.innerHTML = sTree
+    setTimeout(() => oHitp.oEltCnrPreviewDiv.style.display = 'block', 100)
+
+    console.log(oHitp.oEltCnrPreviewDiv.style.display)
+    oHitp.oEltCnrPreviewDiv.style.top = 59 + 'px'
+    oHitp.oEltCnrPreviewDiv.style.left = 26 + 'px'
+    oHitp.oEltCnrPreviewDiv.style.maxHeight = '70%'
+    oHitp.oEltCnrPreviewDiv.style.width = 'auto'
+    oHitp.oEltCnrPreviewDiv.style.overflow = 'auto'
+    oHitp.oTreeUl.fTruCreate()
+    let
+      aSubnodes,
+      aTocTriLI = document.getElementById('idTreePreview').getElementsByTagName('li'),
+      n
+    for (n = 0; n < 5; n++) {
+      aSubnodes = aTocTriLI[n].getElementsByTagName('ul')
+      if (aSubnodes.length > 0 && aSubnodes[0].style.display === 'none') {
+        oHitp.oTreeUl.fTruToggleLi(aTocTriLI[n])
+      }
     }
-  }
+  })
 </script>
 </body>
 </html>

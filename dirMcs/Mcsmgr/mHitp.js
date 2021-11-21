@@ -1987,6 +1987,7 @@ if (document.getElementById('idMetaWebpage_path')) {
 if (location.hash) {
   location.href = location.hash
 }
+document.getElementById('idCnrMainPgcntDiv').focus()
 
 //oEltClicked, sIdxfil, sIdxNext,  sIdxCrnt, sQrslrAClk, sQrslrAClkLast
 export {aIdxfilRoot, aSuggestions, aVersion, bEdge, bFirefox, nCfgPageinfoWidth, fContainersInsert, fTocTriCreate, fTocTriHighlightNode, oEltCnrPreviewDiv, oEltSitemenuUl, oTreeUl, sCfgHomeLocal, sPathSite, sPathStmenu}
