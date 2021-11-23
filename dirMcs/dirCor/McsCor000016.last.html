@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.McsTest-(0-4-0.2021-05-15 draft) test-Mcs</title>
+  <title>Mcs.McsTest-(0-5-0.2021-11-23 draft) test-Mcs</title>
   <meta name="keywords" content="example-Mcs, McsTest, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -33,8 +33,9 @@
     <a class="clsHide" href="#idDefinition"></a></p>
   <p id="idName">name::
     <br>* McsEngl.McsTest,
-    <br>* McsEngl.McsTest'(McsCor000016)!⇒McsTest,
-    <br>* McsEngl.AAAtest,
+    <br>* McsEngl.testMcs,
+    <br>* <span>McsEngl.dress!~verbEnglA4:dress--es-ed-ing-ed, <button type="button" id="idBtnTerm">FIND terms</button></span>
+    <br>* <span>McsEngl.react!~verbEnglA1, <button type="button" id="idBtnTerm">FIND terms</button></span>
     <br>====== langoSinago:
     <br>* McsSngo.AAAtest!=McsTest,
     <br>====== langoChinese:
@@ -42,6 +43,7 @@
     <br>* McsZhon.考-kǎo!=test,
     <br>====== langoGreek:
     <br>* McsElln.ΆΆΆτέστ!=McsTest,
+    <br>* <span>McsElln.γράφω!~verbElln, <button type="button" id="idBtnTerm">FIND terms</button></span>
     <a class="clsHide" href="#idName"></a></p>
   <p id="idOverviewdsnL">descriptionLong::
     <br>· a-long-description of Mcs.
@@ -169,12 +171,13 @@
 
 <script type="module">
   import * as oHitp from '../Mcsmgr/mHitp.js'
+  import '../Mcsmgr/mLag.js'
 
   //aNamidxRoot, aSuggestions, aVersion, bEdge, bFirefox, fContainersInsert,
   //fTocTriCreate, fTocTriHighlightNode, nCfgPageinfoWidth,
   //oEltTPUl, oTreeUl, sCfgHomeLocal, sNamidx, sPathSite, sPathSitemenu,
   //sQrslrAClk, sQrslrAClkLast, sSrchCrnt, sSrchNext
-  console.log(Object.getOwnPropertyNames(oHitp).sort().join(', '))
+//  console.log(Object.getOwnPropertyNames(oHitp).sort().join(', '))
 //  setTimeout(() => console.log(oHitp.aNamidxRoot), 500)
 //  console.log(oHitp.aNamidxRoot)
 //  console.log(oHitp.sCfgHomeLocal)
@@ -183,31 +186,6 @@
 //  console.log(oHitp.sPathSite)
 //  console.log(oHitp.oEltTPUl)
 
-
-  document.getElementById('idBtn').addEventListener('click', function(e) {
-    let sTree = '<ul class="clsTreeUl" id="idTreePreview">    <li>verb-members:      <ul>      <li>present:        <ul>        <li>active:          <ul>          <li>perfectNo:            <ul>            <li>instant (present-simple):              <ul>              <table>              <tr>                <td>(I) write                <td>(I) do not write                <td>do (I) write?                <td>do (I) not write?              <tr>                <td>(you) write                <td>(you) do not write                <td>do (you) write?                <td>do (you) not write?              </table>              </ul>            <li>instantNo (present-progressive):              <ul>              <table>                <tr>                <td>I am writing                <td>I am not writing                <td>am I writing?                <td>am I not writing?              </table>              </ul>            </ul>          <li>perfect:          </ul>        <li>activeNo:        </ul>      <li>past:        <ul>        <li>active:        <li>activeNo:        </ul>      <li>future:        <ul>        <li>active:        <li>activeNo:        </ul>    </li>    </ul>'
-
-    oHitp.oEltCnrPreviewDiv.innerHTML = sTree
-    setTimeout(() => oHitp.oEltCnrPreviewDiv.style.display = 'block', 100)
-
-    console.log(oHitp.oEltCnrPreviewDiv.style.display)
-    oHitp.oEltCnrPreviewDiv.style.top = 59 + 'px'
-    oHitp.oEltCnrPreviewDiv.style.left = 26 + 'px'
-    oHitp.oEltCnrPreviewDiv.style.maxHeight = '70%'
-    oHitp.oEltCnrPreviewDiv.style.width = 'auto'
-    oHitp.oEltCnrPreviewDiv.style.overflow = 'auto'
-    oHitp.oTreeUl.fTruCreate()
-    let
-      aSubnodes,
-      aTocTriLI = document.getElementById('idTreePreview').getElementsByTagName('li'),
-      n
-    for (n = 0; n < 5; n++) {
-      aSubnodes = aTocTriLI[n].getElementsByTagName('ul')
-      if (aSubnodes.length > 0 && aSubnodes[0].style.display === 'none') {
-        oHitp.oTreeUl.fTruToggleLi(aTocTriLI[n])
-      }
-    }
-  })
 </script>
 </body>
 </html>

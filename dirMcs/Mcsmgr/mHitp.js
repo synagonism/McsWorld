@@ -1560,13 +1560,12 @@ let fContainersInsert = function () {
       })
     }
 
-    oEltCnrPreviewDiv.style.top = (nWh / 2) - (nWh * 0.44 / 2) + 'px' // the height of popup is 44% of window
+    oEltCnrPreviewDiv.style.top = (nWh / 2) - (nWh * 0.74 / 2) + 'px' // the height of popup is 74% of window
     if (nPx < nWw / 2) {
-      oEltCnrPreviewDiv.style.left = (nWw / 2) + 9 + 'px'
+      oEltCnrPreviewDiv.style.left = (nWw / 3) + 'px'
     } else {
       oEltCnrPreviewDiv.style.left = 26 + 'px'
     }
-    oEltCnrPreviewDiv.style.overflow = 'auto'
     oEltCnrPreviewDiv.style.display = 'block'
   }
 

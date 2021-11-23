@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagEngl-(1-28-0.2021-11-19) English-language</title>
+  <title>Mcs.lagEngl-(1-29-0.2021-11-21) English-language</title>
   <meta name="keywords" content="English--human-language, lagEngl, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -9526,15 +9526,12 @@
   <section id="idLEnglvrbcjgr">
   <h3 id="idLEnglvrbcjgrH3">member-finder of verbEngl
     <a class="clsHide" href="#idLEnglvrbcjgrH3"></a></h3>
-  <div id="idLEnglvrbcjgrdsn">
-    <p>description::
+  <p id="idLEnglvrbcjgrdsn">description::
     <br>· <span class="clsColorRed">member-finder-of-verbEngl</span> is an-entity (human or machine) that finds the-members of a-verbEngl.
     <br>· write <a class="clsPreview" href="#idLEnglvrbmbrBase">the-base-member</a> of a-verbEngl eg write, play, to find its individuals.
     <br><input type="text" id="idIptVrbr">
     <button type="button" id="idBtnVrbr">GO (not yet working)</button>
-    </p>
-    <span id="idSpnVrbr"></span>
-    <a class="clsHide" href="#idLEnglvrbcjgrdsn"></a></div>
+    <a class="clsHide" href="#idLEnglvrbcjgrdsn"></a></p>
   <p id="idLEnglvrbcjgrnam">name::
     <br>* McsEngl.Englconjugator!⇒verberEngl,
     <br>* McsEngl.English-conjugator!⇒verberEngl,
@@ -10620,7 +10617,8 @@
   <section id="idLEnglvrbC1Spc">
   <h4 id="idLEnglvrbC1SpcH4">verbEnglC.SPECIFIC
     <a class="clsHide" href="#idLEnglvrbC1SpcH4"></a></h4>
-  <ol id="idLEnglvrbC1Spcdsn">
+  <div id="idLEnglvrbC1Spcdsn">
+    <ol>
     <li><strong>am-are-is-was-were-been-be</strong>,
     <li>arise-arises-arose-arising-arisen,
     <li>awake-awakes-awoke|awaked-awaking-awoken|awaked,
@@ -10763,7 +10761,8 @@
     <li>wind-winds-wound-winding-wound,
     <li>wring-wrings-wring-wringing-wrung,
     <li>write-writes-wrote-writing-written,
-    <a class="clsHide" href="#idLEnglvrbC1Spcdsn"></a></ol>
+    </ol>
+    <a class="clsHide" href="#idLEnglvrbC1Spcdsn"></a></div>
   <p id="idLEnglvrbC1Spcnam">name::
     <br>* McsEngl.verbEnglC.specific,
     <a class="clsHide" href="#idLEnglvrbC1Spcnam"></a></p>
@@ -13206,10 +13205,14 @@
 
   // finds members of verb
   document.getElementById('idBtnVrbr').addEventListener('click', function(e) {
-//    console.log(Object.getOwnPropertyNames(oHitp).sort().join(', '))
-//    console.log(e.target.parentNode)
-    let sIn = document.getElementById('idIptVrbr').value
-    document.getElementById('idSpnVrbr').innerHTML = '<ul class="clsTreeUl" id="idTreePreview">    <li>'+sIn+'-members:      <ul>      <li>present:        <ul>        <li>active:          <ul>          <li>perfectNo:            <ul>            <li>instant (present-simple):              <ul>              <table>              <tr>                <td>(I) write                <td>(I) do not write                <td>do (I) write?                <td>do (I) not write?              <tr>                <td>(you) write                <td>(you) do not write                <td>do (you) write?                <td>do (you) not write?              </table>              </ul>            <li>instantNo (present-progressive):              <ul>              <table>                <tr>                <td>I am writing                <td>I am not writing                <td>am I writing?                <td>am I not writing?              </table>              </ul>            </ul>          <li>perfect:          </ul>        <li>activeNo:        </ul>      <li>past:        <ul>        <li>active:        <li>activeNo:        </ul>      <li>future:        <ul>        <li>active:        <li>activeNo:        </ul>    </li>    </ul>'
+    let sIn = document.getElementById('idIptVrbr').value,
+      sTree = '<ul class="clsTreeUl" id="idTreePreview">    <li>'
+        +sIn +'-members:    <ul>      <li>present:        <ul>        <li>active:          <ul>          <li>perfectNo:            <ul>            <li>instant (present-simple):              <ul>              <table>              <tr>                <td>(I) write                <td>(I) do not write                <td>do (I) write?                <td>do (I) not write?              <tr>                <td>(you) write                <td>(you) do not write                <td>do (you) write?                <td>do (you) not write?              </table>              </ul>            <li>instantNo (present-progressive):              <ul>              <table>                <tr>                <td>I am writing                <td>I am not writing                <td>am I writing?                <td>am I not writing?              </table>              </ul>            </ul>          <li>perfect:          </ul>        <li>activeNo:        </ul>      <li>past:        <ul>        <li>active:        <li>activeNo:        </ul>      <li>future:        <ul>        <li>active:        <li>activeNo:        </ul>    </li>    </ul>'
+
+    oHitp.oEltCnrPreviewDiv.innerHTML = sTree
+    setTimeout(() => oHitp.oEltCnrPreviewDiv.style.display = 'block', 100)
+    oHitp.oEltCnrPreviewDiv.style.top = 59 + 'px'
+    oHitp.oEltCnrPreviewDiv.style.left = 26 + 'px'
     oHitp.oTreeUl.fTruCreate()
     let
       aSubnodes,
