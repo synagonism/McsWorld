@@ -28,6 +28,7 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mHitp.js.18-5-1.2021-11-19: popup left',
     'mHitp.js.18-5-0.2021-11-19: create treeUl on preview',
     'mHitp.js.18-4-0.2021-11-17: Shift+1 codepoint',
     'mHitp.js.18-3-1.2021-11-16: supplementary-chars',
@@ -1561,11 +1562,7 @@ let fContainersInsert = function () {
     }
 
     oEltCnrPreviewDiv.style.top = (nWh / 2) - (nWh * 0.74 / 2) + 'px' // the height of popup is 74% of window
-    if (nPx < nWw / 2) {
-      oEltCnrPreviewDiv.style.left = (nWw / 3) + 'px'
-    } else {
-      oEltCnrPreviewDiv.style.left = 26 + 'px'
-    }
+    oEltCnrPreviewDiv.style.left = (nWw / 3) + 'px'
     oEltCnrPreviewDiv.style.display = 'block'
   }
 
