@@ -28,6 +28,7 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mHitp.js.18-6-0.2021-11-25: popup on content',
     'mHitp.js.18-5-1.2021-11-19: popup left',
     'mHitp.js.18-5-0.2021-11-19: create treeUl on preview',
     'mHitp.js.18-4-0.2021-11-17: Shift+1 codepoint',
@@ -1315,9 +1316,10 @@ let fContainersInsert = function () {
         oEltIn.classList.add('clsClicked')
         if (oEltIn.className.indexOf('clsPreview') > -1) {
           fEvtClickContent(oEvtIn)
-          fEvtPreview(oEvtIn)
+          fEvtPreview(oEvtIn, 'sContent')
         }
       }
+
     })
   })
 
@@ -1499,7 +1501,7 @@ let fContainersInsert = function () {
   oEltBody.appendChild(oEltCnrPreviewDiv)
 
   // on clsPreview-links add this event-listener
-  fEvtPreview = function (oEvtIn) {
+  fEvtPreview = function (oEvtIn, sContent) {
     let sLoc, sId1, sId2,
       nPy, nPx, nWh, nWw,
       oDoc
@@ -1561,8 +1563,17 @@ let fContainersInsert = function () {
       })
     }
 
-    oEltCnrPreviewDiv.style.top = (nWh / 2) - (nWh * 0.74 / 2) + 'px' // the height of popup is 74% of window
-    oEltCnrPreviewDiv.style.left = (nWw / 3) + 'px'
+    if (sContent) {
+      oEltCnrPreviewDiv.style.top = (nWh / 2) - (nWh * 0.44 / 2) + 'px' // the height of popup is 44% of window
+      if (nPx < nWw / 2) {
+        oEltCnrPreviewDiv.style.left = (nWw / 2) + 9 + 'px'
+      } else {
+        oEltCnrPreviewDiv.style.left = 26 + 'px'
+      }
+    } else {
+      oEltCnrPreviewDiv.style.top = (nWh / 2) - (nWh * 0.74 / 2) + 'px' // the height of popup is 74% of window
+      oEltCnrPreviewDiv.style.left = (nWw / 3) + 'px'
+    }
     oEltCnrPreviewDiv.style.display = 'block'
   }
 

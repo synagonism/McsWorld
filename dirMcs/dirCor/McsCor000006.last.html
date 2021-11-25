@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.time-(1-13-0.2021-11-23)</title>
+  <title>Mcs.time-(1-14-0.2021-11-24)</title>
   <meta name="keywords" content="time, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -222,6 +222,23 @@
   <p id="idTimeSmsDftDtcPastnam">name::
     <br>* McsEngl.time.definite.deictic.past,
     <a class="clsHide" href="#idTimeSmsDftDtcPastnam"></a></p>
+
+  <section id="idTimeSmsDftDtcPastRecent">
+  <h4 id="idTimeSmsDftDtcPastRecentH4">time.deictic.past.recent
+    <a class="clsHide" href="#idTimeSmsDftDtcPastRecentH4"></a></h4>
+  <p id="idTimeSmsDftDtcPastRecentdsn">description::
+    <br>"(adv) recently, late, lately, of late, latterly (in the recent past) "he was in Paris recently"; "lately the rules have been enforced"; "as late as yesterday she was fine"; "feeling better of late"; "the spelling was first affected, but latterly the meaning also""
+    <br>[{2021-11-24 retrieved} http://wordnetweb.princeton.edu/perl/webwn?s=recently]
+    <a class="clsHide" href="#idTimeSmsDftDtcPastRecentdsn"></a></p>
+  <p id="idTimeSmsDftDtcPastRecentnam">name::
+    <br>* McsEngl.advbEngl.recently!=timeRecent,
+    <br>* McsEngl.timeRecent,
+    <br>* McsEngl.recently!~advbEngl!=timeRecent,
+    <br>====== langoChinese:
+    <br>* McsZhon.zuìjìn-最近!=timeRecent,
+    <br>* McsZhon.最近-zuìjìn!=timeRecent,
+    <a class="clsHide" href="#idTimeSmsDftDtcPastRecentnam"></a></p>
+  </section>
   </section>
 
   <section id="idTimeSmsDftDtcCrt">
@@ -237,13 +254,16 @@
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=now]
     <a class="clsHide" href="#idTimeSmsDftDtcCrtdsn"></a></p>
   <p id="idTimeSmsDftDtcCrtnam">name::
-    <br>* McsEngl.current-time,
-    <br>* McsEngl.now!~pronEngl,
-    <br>* McsEngl.present,
+    <br>* McsEngl.advbEngl.now!⇒timeNow,
+    <br>* McsEngl.current-time!⇒timeNow,
+    <br>* McsEngl.now!~advbEngl!=timeNow,
+    <br>* McsEngl.now!~pronEngl!⇒timeNow,
+    <br>* McsEngl.present!⇒timeNow,
     <br>* McsEngl.timeNow,
-    <br>* McsEngl.time.current.deictic,
-    <br>* McsEngl.time.definite.deictic.current,
-    <br>* McsEngl.time.definite.deictic.present,
+    <br>* McsEngl.time.current.deictic!⇒timeNow,
+    <br>* McsEngl.time.deictic.current!⇒timeNow,
+    <br>* McsEngl.time.definite.deictic.current!⇒timeNow,
+    <br>* McsEngl.time.definite.deictic.present!⇒timeNow,
     <br>====== langoSinago:
     <br>* McsSngo.to-dhio!=timeNow,
     <br>====== langoChinese:
@@ -469,21 +489,22 @@
     <br>_stxZhon: _stxSbj:[他] _stxTime:[从不] _stxVrb:{喝} _stxObj:[啤酒]。 != [he] [never] {drinks} [bear].
     <a class="clsHide" href="#idTimeSmsDftNonedsn"></a></p>
   <p id="idTimeSmsDftNonenam">name::
-    <br>* McsEngl.advbElln.ποτέ:timeNever,
-    <br>* McsEngl.advbEngl.timeNever.never,
-    <br>* McsEngl.advbEngl.never:timeNever,
+    <br>* McsEngl.advbElln.ποτέ:timeNone,
+    <br>* McsEngl.advbEngl.timeNone.never,
+    <br>* McsEngl.advbEngl.never:timeNone,
     <br>* McsEngl.frequency.never,
-    <br>* McsEngl.never!~advbEngl:timeNever,
+    <br>* McsEngl.never!~advbEngl!=timeNone,
     <br>* McsEngl.rlnTimeNever,
     <br>* McsEngl.time.definite.quantity.none,
-    <br>* McsEngl.timeNever,
+    <br>* McsEngl.timeNever!⇒timeNone,
+    <br>* McsEngl.timeNone,
     <br>====== langoSinago:
-    <br>* McsSngo.to-po!=time.none,
+    <br>* McsSngo.to-po!=timeNone,
     <br>====== langoChinese:
-    <br>* McsZhon.cóngbù-从不!=timeNever,
-    <br>* McsZhon.从不-cóngbù!=timeNever,
+    <br>* McsZhon.cóngbù-从不!=timeNone,
+    <br>* McsZhon.从不-cóngbù!=timeNone,
     <br>====== langoGreek:
-    <br>* McsElln.ποτέ!=timeNever,
+    <br>* McsElln.ποτέ!=timeNone,
     <a class="clsHide" href="#idTimeSmsDftNonenam"></a></p>
   </section>
 
@@ -559,15 +580,16 @@
     <br>· time definiteNo, quantity all.
     <a class="clsHide" href="#idTimeSmsDftNAlldsn"></a></p>
   <p id="idTimeSmsDftNAllnam">name::
-    <br>* McsEngl.allways,
-    <br>* McsEngl.everytime,
+    <br>* McsEngl.allways!~advbEngl!=timeAll,
+    <br>* McsEngl.everytime!~advbEngl!=timeAll,
     <br>* McsEngl.time.definiteNo.quantity.all,
+    <br>* McsEngl.timeAll,
     <br>* McsEngl.timeSms.definiteNo.quantity.all,
     <br>====== langoSinago:
-    <br>* McsSngo.to-bo!=time.all,
+    <br>* McsSngo.to-bo!=timeAll,
     <br>====== langoGreek:
-    <br>* McsElln.πάντα,
-    <br>* McsElln.πάντοτε,
+    <br>* McsElln.πάντα!=timeAll,
+    <br>* McsElln.πάντοτε!=timeAll,
     <a class="clsHide" href="#idTimeSmsDftNAllnam"></a></p>
   </section>
 
@@ -578,13 +600,17 @@
     <br>· time definiteNo, quantity any.
     <a class="clsHide" href="#idTimeSmsDftNAnydsn"></a></p>
   <p id="idTimeSmsDftNAnynam">name::
-    <br>* McsEngl.anytime,
+    <br>* McsEngl.anytime!~advbEngl!=timeAny,
     <br>* McsEngl.time.definiteNo.quantity.any,
+    <br>* McsEngl.timeAny,
     <br>* McsEngl.whenever,
     <br>====== langoSinago:
-    <br>* McsSngo.to-nio!=time.any,
+    <br>* McsSngo.to-nio!=timeAny,
+    <br>====== langoChinese:
+    <br>* McsZhon.rènhéshíjiān-任何时间-(任何時間)!=timeAny,
+    <br>* McsZhon.任何时间-(任何時間)-rènhéshíjiān!=timeAny,
     <br>====== langoGreek:
-    <br>* McsElln.οποτεδήποτε,
+    <br>* McsElln.οποτεδήποτε!=timeAny,
     <a class="clsHide" href="#idTimeSmsDftNAnynam"></a></p>
   </section>
 
@@ -621,6 +647,25 @@
     <br>* McsElln.αργά!=late,
     <a class="clsHide" href="#idTimeSmsDftNLatenam"></a></p>
   </section>
+
+  <section id="idTimeSmsDftNStil">
+  <h2 id="idTimeSmsDftNStilH2">time.definiteNo.quantity.still
+    <a class="clsHide" href="#idTimeSmsDftNStilH2"></a></h2>
+  <p id="idTimeSmsDftNStildsn">description::
+    <br>· time definiteNo quantity from past to present.
+    <br>
+    <br>_stxZhon:
+    <a class="clsHide" href="#idTimeSmsDftNStildsn"></a></p>
+  <p id="idTimeSmsDftNStilnam">name::
+    <br>* McsEngl.time.definiteNo.quantity.still!⇒timeStill,
+    <br>* McsEngl.timeStill,
+    <br>* McsEngl.still!~advbEngl!=timeStill,
+    <br>* McsEngl.yet!~advbEngl!=timeStill,
+    <br>====== langoChinese:
+    <br>* McsZhon.hái-还!=timeStill,
+    <br>* McsZhon.还-hái!=timeStill,
+    <a class="clsHide" href="#idTimeSmsDftNStilnam"></a></p>
+  </section>
 </section>
 
 <section id="idTimeRltv">
@@ -644,16 +689,25 @@
     <a class="clsHide" href="#idTimeRltvBfrH2"></a></h2>
   <p id="idTimeRltvBfrdsn">description::
     <br>· time, relative, before time.
+    <br>"(adv) previously, antecedently (at an earlier time or formerly) "she had previously lived in Chicago"; "he was previously president of a bank"; "better than anything previously proposed"; "a previously unquestioned attitude"; "antecedently arranged""
+    <br>[{2021-11-24 retrieved} http://wordnetweb.princeton.edu/perl/webwn?s=previously]
+    <br>
+    <br>_stxZhon: _stxTime:[以前] _stxSbj:[我] _stxFrequency:[从不] _stxVrb:{看} _stxObj:[电视]。Yǐqián wǒ cóng bù kàn diànshì. != previously I never watched TV.
     <a class="clsHide" href="#idTimeRltvBfrdsn"></a></p>
   <p id="idTimeRltvBfrnam">name::
     <br>* McsEngl.rlnTimeBefore,
     <br>* McsEngl.time.relative.before-time,
-    <br>--- conjunction:
+    <br>* McsEngl.timeBefore,
     <br>* McsEngl.before!~conjEngl!=rlnTimeBefore,
+    <br>* McsEngl.previously!~advbEngl!=timeBefore,
     <br>====== langoSinago:
     <br>* McsSngo.to-ana-to,
-    <br>--- conjunction:
     <br>* McsSngo.ana!~conjSngo!=before,
+    <br>====== langoChinese:
+    <br>* McsZhon.yǐqián-以前!=before,
+    <br>* McsZhon.以前-yǐqián!=before,
+    <br>====== langoGreek:
+    <br>* McsElln.πριν!~advbElln!=before,
     <a class="clsHide" href="#idTimeRltvBfrnam"></a></p>
 
   <section id="idTimeRltvBfrstx">
@@ -722,14 +776,14 @@
     <br>* McsEngl.advbEngl.later:timeAfterTime,
     <br>* McsEngl.advbEngl.then:timeAfterTime,
     <br>* McsEngl.advbEngl.timeAfterTime.then,
-    <br>* McsEngl.after!~advbEngl:timeAfterTime,
+    <br>* McsEngl.after!~advbEngl!=timeAfterTime,
     <br>* McsEngl.after!~conjEngl!=rlnTimeAfter,
-    <br>* McsEngl.afterward!~advbEngl:timeAfterTime,
-    <br>* McsEngl.later!~advbEngl:timeAfterTime,
-    <br>* McsEngl.later-on!~advbEngl:timeAfterTime,
+    <br>* McsEngl.afterward!~advbEngl!=timeAfterTime,
+    <br>* McsEngl.later!~advbEngl!=timeAfterTime,
+    <br>* McsEngl.later-on!~advbEngl!=timeAfterTime,
     <br>* McsEngl.rlnTimeAfter,
     <br>* McsEngl.since!~conjEngl!=rlnTimeAfter,
-    <br>* McsEngl.then!~advbEngl:timeAfterTime,
+    <br>* McsEngl.then!~advbEngl!=timeAfterTime,
     <br>* McsEngl.timeAfterTime,
     <br>* McsEngl.time.relative.after-time,
     <br>====== langoChinese:
@@ -768,7 +822,7 @@
     <a class="clsHide" href="#idTimeRltvAftImdldsn"></a></p>
   <p id="idTimeRltvAftImdlnam">name::
     <br>* McsEngl.advbEngl.immediately!⇒timeRelativeImmediate,
-    <br>* McsEngl.immediately!~advbEngl!⇒timeRelativeImmediate,
+    <br>* McsEngl.immediately!~advbEngl!=timeRelativeImmediate,
     <br>* McsEngl.time.relative.after-time.immediately!⇒timeRelativeImmediate,
     <br>====== langoChinese:
     <br>* McsZhon.mǎshàng-马上!=timeRelativeImmediate,
@@ -818,7 +872,6 @@
     <br>* McsEngl.rlnTimeBetween,
     <br>* McsEngl.time.between-time,
     <br>* McsEngl.time.relative.between-time,
-    <br>--- conjunction:
     <br>* McsEngl.between..and!~conjEngl!=rlnTimeBetween,
     <br>* McsEngl.until!~conjEngl!=rlnTimeBetween,
     <a class="clsHide" href="#idTimeRltvBtnnam"></a></p>
@@ -926,6 +979,8 @@
     <br>* McsEngl.time.relative.before-current-time,
     <br>====== langoSinago:
     <br>* McsSngo.to-ano!=time.past,
+    <br>====== langoGreek:
+    <br>* McsElln.παρελθόν!~το!=past,
     <a class="clsHide" href="#idTimeRltvBfrcnam"></a></p>
 
   <section id="idTimeRltvBfrcstx">
@@ -963,6 +1018,8 @@
     <br>* McsEngl.time.relative.same-current-time,
     <br>====== langoSinago:
     <br>* McsSngo.to-eno!=time.present,
+    <br>====== langoGreek:
+    <br>* McsElln.παρόν!~το!=present,
     <a class="clsHide" href="#idTimeRltvSamecnam"></a></p>
 
   <section id="idTimeRltvSamecstx">
@@ -989,6 +1046,8 @@
     <br>* McsEngl.time.relative.after-current-time,
     <br>====== langoSinago:
     <br>* McsSngo.to-ino!=time.future,
+    <br>====== langoGreek:
+    <br>* McsElln.μέλλον!~το!=future,
     <a class="clsHide" href="#idTimeRltvAfrcnam"></a></p>
 
   <section id="idTimeRltvAfrcstx">
@@ -1026,8 +1085,8 @@
     <br>* McsEngl.advbEngl.timeRelativeEnd.finally,
     <br>* McsEngl.advbEngl.finally:timeRelativeEnd,
     <br>* McsEngl.advbEngl.lastly:timeRelativeEnd,
-    <br>* McsEngl.finally!~advbEngl:timeRelativeEnd,
-    <br>* McsEngl.lastly!~advbEngl:timeRelativeEnd,
+    <br>* McsEngl.finally!~advbEngl!=timeRelativeEnd,
+    <br>* McsEngl.lastly!~advbEngl!=timeRelativeEnd,
     <br>* McsEngl.time.relative.end,
     <br>* McsEngl.timeRelativeEnd,
     <a class="clsHide" href="#idTimeRltvEndnam"></a></p>
@@ -2270,7 +2329,7 @@
     <br>* McsEngl.advbEngl.timeDayPrevious.yesterday,
     <br>* McsEngl.advbEngl.yesterday:timeDayPrevious,
     <br>* McsEngl.day.relative.previous,
-    <br>* McsEngl.yesterday!~advbEngl:timeDayPrevious,
+    <br>* McsEngl.yesterday!~advbEngl!=timeDayPrevious,
     <br>====== langoSinago:
     <br>* McsSngo.to-tieno-ano!=yersterday,
     <br>====== langoChinese:
@@ -2291,7 +2350,7 @@
     <br>* McsEngl.advbEngl.timeDayCurrent.today,
     <br>* McsEngl.advbEngl.today:timeDayCurrent,
     <br>* McsEngl.day.relative.current,
-    <br>* McsEngl.today!~advbEngl:timeDayCurrent,
+    <br>* McsEngl.today!~advbEngl!=timeDayCurrent,
     <br>====== langoSinago:
     <br>* McsSngo.to-tieno-eno!=today,
     <br>====== langoChinese:
@@ -2311,7 +2370,7 @@
     <br>* McsEngl.advbEngl.timeDayNext.tomorrow,
     <br>* McsEngl.advbEngl.tomorrow:timeDayNext,
     <br>* McsEngl.day.relative.next,
-    <br>* McsEngl.tomorrow!~advbEngl:timeDayNext,
+    <br>* McsEngl.tomorrow!~advbEngl!=timeDayNext,
     <br>====== langoSinago:
     <br>* McsSngo.to-tieno-ino!=tomorrow,
     <br>====== langoChinese:
