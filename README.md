@@ -8,3 +8,5 @@ AddressWpg::
 [https://synagonism.net/dirMcs/Mcs000000.last.html](https://synagonism.net/dirMcs/Mcs000000.last.html)
 
 IF this project\a\ will-succeed, THEN it\a\ will-prove that we must-move from TEXTS to CONCEPTS in-order-to manage our knowledge. {2021-11-25}
+
+I am-working on this project since {1985}
