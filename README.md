@@ -1,8 +1,8 @@
 # synagonism/McsWorld (Mws) GitHub Repository
 
-This repo contains [the-Mcs-worldview](https://synagonism.net/dirMiwMcs/dirCor/filMcs.last.html#idMcswv),
-of [Kaseluris.Nikos.1959 | synagonism](http://synagonism.net/index.html#idAboutme)
-written with [MCS | sensorial-concepts](https://synagonism.net/dirMiwMcs/dirCor/filMcs.last.html#idOverview).
+This repo contains [the-Mcs-worldview](https://synagonism.net/dirMcs/Mcs000000.last.html#idOverview),
+of [Kaseluris.Nikos.1959 | synagonism](https://synagonism.net/dirMcs/dirHmn/McsHmn000003.last.html#idOverview)
+written with [MCS | sensorial-concepts](https://synagonism.net/dirMcs/dirCor/McsCor000002.last.html#idOverview).
 
 AddressWpg::
 [https://synagonism.net/dirMcs/Mcs000000.last.html](https://synagonism.net/dirMcs/Mcs000000.last.html)
