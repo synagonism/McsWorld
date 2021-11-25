@@ -1,4 +1,4 @@
-# synagonism/Mcsw (Mws) GitHub Repository
+# synagonism/McsWorld (Mws) GitHub Repository
 
 This repo contains [the-Mcs-worldview](https://synagonism.net/dirMiwMcs/dirCor/filMcs.last.html#idMcswv),
 of [Kaseluris.Nikos.1959 | synagonism](http://synagonism.net/index.html#idAboutme)
