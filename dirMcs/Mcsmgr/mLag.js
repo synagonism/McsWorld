@@ -64,6 +64,7 @@ function fFindMembers () {
       setTimeout(() => oEltCnrPreviewDiv.style.display = 'block', 100)
       oEltCnrPreviewDiv.style.top = 59 + 'px'
       oEltCnrPreviewDiv.style.left = 26 + 'px'
+      oEltCnrPreviewDiv.style.width = 'auto'
       oTreeUl.fTruCreate()
       let
         aSubnodes,

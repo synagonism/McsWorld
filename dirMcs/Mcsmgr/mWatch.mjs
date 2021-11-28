@@ -21,11 +21,11 @@ let
     port: 2234,
     username: 'kaseluri160933'
   },
-  bFsWait = false,
   oHash = {},
   aFileMcsIn = [],
-  sCwd = process.cwd()
+  sCwd = process.cwd() + moPath.sep
 
+sCwd = sCwd.replace(/\\/g, '/')
 if (process.argv[2]) {
   oConfig.password = process.argv[2]
 } else {
@@ -35,15 +35,13 @@ if (process.argv[2]) {
 
 moFs.watch(sCwd, {recursive: true}, (eventType, filename) => {
   
-  if (eventType === 'change' && filename.endsWith('.last.html')) {
-    /*
-    if (bFsWait) return
-    bFsWait = setTimeout(() => {
-      bFsWait = false
-    }, 9)
-    */
-    const fileBuffer = moFs.readFileSync(sCwd+filename)
-    const hashSum = moCrypto.createHash('sha256');
+  if (filename && eventType === 'change' && filename.endsWith('.last.html')) {
+    filename = filename.replace(/\\/g, '/')
+    let sFileResolved = moPath.resolve(sCwd+filename)
+    console.log(filename)
+    console.log('>>>RESOLVED: '+sFileResolved)
+    const fileBuffer = moFs.readFileSync(sFileResolved)
+    const hashSum = moCrypto.createHash('sha256')
     hashSum.update(fileBuffer);
     const sHashCurrent = hashSum.digest('hex');
 
@@ -54,17 +52,15 @@ moFs.watch(sCwd, {recursive: true}, (eventType, filename) => {
     }
     oHash[filename] = sHashCurrent;
 
-    console.log(filename)
-    console.log(moPath.resolve(filename))
-    aFileMcsIn.push(filename)
+    //aFileMcsIn.push(filename)
     //setTimeout(() => console.log(aFileMcsIn), 1000)
 
-    //fNamidx(filename)
+    fNamidx(filename, fSftp)
     //fSftp()
   } 
 })
 
-function fNamidx(sFIIn) {
+function fNamidx(sFIIn, fSftpIn) {
   let
     bExtra = false, // extra names, added manually on namidx.lagLagoExtra.json to-be removed!
     oNextln,
@@ -915,6 +911,9 @@ function fNamidx(sFIIn) {
     }
   }
   fUpdateALLQntMcs(aFileMcs_QntMcs)
+
+  //call
+  fSftpIn()
 }
 
 function fSftp () {

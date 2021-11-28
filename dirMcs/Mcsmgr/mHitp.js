@@ -1569,10 +1569,12 @@ let fContainersInsert = function () {
         oEltCnrPreviewDiv.style.left = (nWw / 2) + 9 + 'px'
       } else {
         oEltCnrPreviewDiv.style.left = 26 + 'px'
+        oEltCnrPreviewDiv.style.width = (nWw / 2) + 'px'
       }
     } else {
       oEltCnrPreviewDiv.style.top = (nWh / 2) - (nWh * 0.74 / 2) + 'px' // the height of popup is 74% of window
       oEltCnrPreviewDiv.style.left = (nWw / 3) + 'px'
+      oEltCnrPreviewDiv.style.width = 'auto'
     }
     oEltCnrPreviewDiv.style.display = 'block'
   }
