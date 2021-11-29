@@ -2,7 +2,7 @@
  * mHitp.js - module html5.id.toc.preview webpage-format code.
  * The MIT License (MIT)
  *
- * Copyright (c) 2010-2021 Kaseluris.Nikos.1959 (synagonism)
+ * Copyright (c) 2010-2021 Kaseluris.Nikos.1959 (hmnSngo)
  * kaseluris.nikos@gmail.com
  * https:// synagonism.net/
  *
@@ -1999,4 +1999,11 @@ if (location.hash) {
 document.getElementById('idCnrMainPgcntDiv').focus()
 
 //oEltClicked, sIdxfil, sIdxNext,  sIdxCrnt, sQrslrAClk, sQrslrAClkLast
-export {aIdxfilRoot, aSuggestions, aVersion, bEdge, bFirefox, nCfgPageinfoWidth, fContainersInsert, fTocTriCreate, fTocTriHighlightNode, oEltCnrPreviewDiv, oEltSitemenuUl, oTreeUl, sCfgHomeLocal, sPathSite, sPathStmenu}
+export {
+  aIdxfilRoot, aSuggestions, aVersion,
+  bEdge, bFirefox,
+  nCfgPageinfoWidth,
+  fContainersInsert, fTocTriCreate, fTocTriHighlightNode,
+  oEltCnrPreviewDiv, oEltSitemenuUl, oTreeUl,
+  sCfgHomeLocal, sPathSite, sPathStmenu
+}
