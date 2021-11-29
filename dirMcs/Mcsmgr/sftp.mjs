@@ -12,17 +12,19 @@ import moFs from 'fs'
 import mfClient from 'ssh2-sftp-client'
 import mfEs6_promise_pool from 'es6-promise-pool'
 
-var oConfig = {
+var oSftp = {
   host: 'ftp.synagonism.net',
   port: 2234,
   username: 'kaseluri160933'
 }
+
 if (process.argv[2]) {
-  oConfig.password = process.argv[2]
+  oSftp.password = process.argv[2]
 } else {
   console.log('type password as 3rd argument')
   process.exit()
 }
+
 var aFil = JSON.parse(moFs.readFileSync('sftp.json'))
 console.log(aFil)
 
@@ -50,7 +52,7 @@ var fSend_file_producer = function () {
   console.log("count= " + nCount);
   if (nCount < aFil.length) {
     nCount++;
-    return(fSend_file(oConfig, aFil[nCount-1]));
+    return(fSend_file(oSftp, aFil[nCount-1]));
   } else {
     return null;
   }

@@ -5,7 +5,10 @@
  * RUN: node Mcsmgr/watch.mjs pwd
  *
  * modified: 
- * created: {}
+ * created: {2021-11-28}
+ *
+ * TODO:
+ * 1) store hash of Mcs, so when we read the-file do nothing.
  */
 
 import moFs from 'fs'
@@ -14,49 +17,43 @@ import moPath from 'path'
 import mfReadlines from 'n-readlines'; // npm install n-readlines
 import mfClient from 'ssh2-sftp-client'
 import mfEs6_promise_pool from 'es6-promise-pool'
+import {oSftp, fSftp} from './mSftp.mjs'
 
 let
-  oConfig = {
-    host: 'ftp.synagonism.net',
-    port: 2234,
-    username: 'kaseluri160933'
-  },
   oHash = {},
   aFileMcsIn = [],
   sCwd = process.cwd() + moPath.sep
 
 sCwd = sCwd.replace(/\\/g, '/')
 if (process.argv[2]) {
-  oConfig.password = process.argv[2]
+  oSftp.password = process.argv[2]
 } else {
   console.log('type password as 3rd argument')
   process.exit()
 }
 
-moFs.watch(sCwd, {recursive: true}, (eventType, filename) => {
-  
-  if (filename && eventType === 'change' && filename.endsWith('.last.html')) {
-    filename = filename.replace(/\\/g, '/')
-    let sFileResolved = moPath.resolve(sCwd+filename)
-    console.log(filename)
+moFs.watch(sCwd, {recursive: true}, (eventType, sFilename) => {
+  if (sFilename && eventType === 'change' && sFilename.endsWith('.last.html')) {
+    sFilename = sFilename.replace(/\\/g, '/')
+    let sFileResolved = moPath.resolve(sCwd+sFilename)
+    console.log(sFilename)
     console.log('>>>RESOLVED: '+sFileResolved)
     const fileBuffer = moFs.readFileSync(sFileResolved)
     const hashSum = moCrypto.createHash('sha256')
     hashSum.update(fileBuffer);
     const sHashCurrent = hashSum.digest('hex');
 
-    if (oHash[filename]) {
-      if (sHashCurrent === oHash[filename]) {
+    if (oHash[sFilename]) {
+      if (sHashCurrent === oHash[sFilename]) {
         return
       }
     }
-    oHash[filename] = sHashCurrent;
+    oHash[sFilename] = sHashCurrent;
 
-    //aFileMcsIn.push(filename)
+    //aFileMcsIn.push(sFilename)
     //setTimeout(() => console.log(aFileMcsIn), 1000)
 
-    fNamidx(filename, fSftp)
-    //fSftp()
+    fNamidx(sFilename, fSftp)
   } 
 })
 
@@ -624,23 +621,6 @@ function fNamidx(sFIIn, fSftpIn) {
   }
 
   /**
-   * DOING: create json from array of arrays ONLY, not extra info
-   */
-  function fWriteJsonArray(sFilIn, aIn) {
-    let
-      s
-
-    // aIn length more than 1
-    s = '[\n'
-    for (n = 0; n < aIn.length-1; n++) {
-      s = s +'  ' + JSON.stringify(aIn[n]) + ',\n'
-    }
-    s = s + '  ' + JSON.stringify(aIn[aIn.length-1]) + '\n'
-    s = s + ']'
-    moFs.writeFileSync(sFilIn, s)
-  }
-
-  /**
    * Compares elements of arrays
    * Used in: aNew.sort(fCompare)
    * to sort arrays of arrays.
@@ -916,47 +896,21 @@ function fNamidx(sFIIn, fSftpIn) {
   fSftpIn()
 }
 
-function fSftp () {
-  var aFil = JSON.parse(moFs.readFileSync('sftp.json'))
-  console.log(aFil)
+/**
+ * DOING: create json from array of arrays ONLY, not extra info
+ */
+function fWriteJsonArray(sFilIn, aIn) {
+  let
+    s
 
-  const fSend_file = (oConfigIn, sFileIn) => {
-      return new Promise(function (resolve, reject) {
-      let sftp = new mfClient();
-      console.log(sFileIn);
-      sftp.on('keyboard-interactive', (name, instructions, instructionsLang, prompts, finish) => { finish([oConfigIn.password]); });
-      sftp.connect(oConfigIn).then(() => {
-        // SPECIFIC INFO
-        return sftp.put("D:/xampp/htdocs/dWstSgm/dirMcs/" + sFileIn,
-          "/var/www/vhosts/synagonism.net/httpdocs/dirMcs/" + sFileIn);
-      }).then(() => {
-        console.log('finish '+sFileIn);
-        sftp.end();
-        resolve(sFileIn);
-      }).catch((err) => {
-        console.log(err, 'catch error');
-      });
-    });
-  };
-
-  var nCount = 0;
-  var fSend_file_producer = function () {
-    console.log("count= " + nCount);
-    if (nCount < aFil.length) {
-      nCount++;
-      return(fSend_file(oConfig, aFil[nCount-1]));
-    } else {
-      return null;
-    }
+  // aIn length more than 1
+  s = '[\n'
+  for (let n = 0; n < aIn.length-1; n++) {
+    s = s +'  ' + JSON.stringify(aIn[n]) + ',\n'
   }
-
-  // The number of promises to process simultaneously.
-  var nConcurrency = 10;
-
-  // Create a pool.
-  var oPool = new mfEs6_promise_pool(fSend_file_producer, nConcurrency)
-
-  oPool.start().then(function () {
-    console.log({"message":"OK"}); // res.send('{"message":"OK"}');
-  });
+  s = s + '  ' + JSON.stringify(aIn[aIn.length-1]) + '\n'
+  s = s + ']'
+  moFs.writeFileSync(sFilIn, s)
 }
+
+

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.relation-(1-31-0.2021-11-27)</title>
+  <title>Mcs.relation-(1-32-0.2021-11-28)</title>
   <meta name="keywords" content="relation, relation, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -1071,7 +1071,7 @@
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=mapping]
     <a class="clsHide" href="#idRlnMpgdsn"></a></p>
   <p id="idRlnMpgnam">name::
-    <br>* McsEngl.am-mapped!~verbEngl!⇒rlnMapping,
+    <br>* McsEngl.am-mapped!~verbEngl!=rlnMapping,
     <br>* McsEngl.mapping-relation!⇒rlnMapping,
     <br>* McsEngl.methodMapping'03_relation-input-output!⇒rlnMapping,
     <br>* McsEngl.methodMapping'att003-relation-input-output!⇒rlnMapping,
@@ -1119,11 +1119,11 @@
     <br>· <span class="clsColorRed">true</span> is a-mapping-relation that correctly maps the-archetype.
     <a class="clsHide" href="#idRlnMpgTruedsn"></a></p>
   <p id="idRlnMpgTruenam">name::
-    <br>* McsEngl.rlnMapping.true,
-    <br>* McsEngl.true,
+    <br>* McsEngl.rlnMapping.true!=rlnTrue,
+    <br>* McsEngl.rlnTrue,
+    <br>* McsEngl.true!~adjvEngl!=rlnTrue,
     <br>====== langoGreek:
-    <br>* McsElln.αλήθεια!=true,
-    <br>* McsElln.σωστός-ή-ό!~adjvElln!=correct,
+    <br>* McsElln.αλήθεια!~η!=rlnTrue,
     <a class="clsHide" href="#idRlnMpgTruenam"></a></p>
   </section>
 
@@ -1135,11 +1135,13 @@
     <br>· <span class="clsColorRed">false</span> is a-mapping-relation that does-not-correctly-maps the-archetype.
     <a class="clsHide" href="#idRlnMpgFalsdsn"></a></p>
   <p id="idRlnMpgFalsnam">name::
-    <br>* McsEngl.false,
-    <br>* McsEngl.incorrect,
+    <br>* McsEngl.false!~adjvEngl!=rlnFalse,
+    <br>* McsEngl.incorrect!~adjvEngl!=rlnFalse,
+    <br>* McsEngl.rlnFalse,
     <br>* McsEngl.rlnMapping.false,
     <br>====== langoGreek:
-    <br>* McsElln.λάθος!=false,
+    <br>* McsElln.λάθος!~adjvElln:-ος-ος-ος!=rlnFalse,
+    <br>* McsElln.σφάλμα!~το!=rlnFalse,
     <a class="clsHide" href="#idRlnMpgFalsnam"></a></p>
 
   <section id="idRlnMpgFalsLie">
@@ -1164,14 +1166,15 @@
     <br>· correct mapping in relation to social-norms.
     <a class="clsHide" href="#idRlnMpgRghtdsn"></a></p>
   <p id="idRlnMpgRghtnam">name::
-    <br>* McsEngl.correct,
-    <br>* McsEngl.right,
+    <br>* McsEngl.correct!~adjvEngl!=rlnRight,
+    <br>* McsEngl.right!~adjvEngl!=rlnRight,
     <br>* McsEngl.rlnMapping.right,
+    <br>* McsEngl.rlnRight,
     <br>====== langoChinese:
-    <br>* McsZhon.zhèngquè-正确!=correct,
-    <br>* McsZhon.正确-zhèngquè!=correct,
+    <br>* McsZhon.zhèngquè-正确!=rlnRight,
+    <br>* McsZhon.正确-zhèngquè!=rlnRight,
     <br>====== langoGreek:
-    <br>* McsElln.σωστό!~το!=correct,
+    <br>* McsElln.σωστός!~adjvElln:-ός-ή-ό!=rlnRight,
     <a class="clsHide" href="#idRlnMpgRghtnam"></a></p>
   </section>
 
@@ -1185,15 +1188,16 @@
     <br>_stxEngl: Telling lies is wrong.
     <a class="clsHide" href="#idRlnMpgWrngdsn"></a></p>
   <p id="idRlnMpgWrngnam">name::
-    <br>* McsEngl.error,
-    <br>* McsEngl.mistake,
+    <br>* McsEngl.error!=rlnWrong,
+    <br>* McsEngl.mistake!=rlnWrong,
     <br>* McsEngl.rlnMapping.wrong,
-    <br>* McsEngl.wrong,
+    <br>* McsEngl.rlnWrong,
+    <br>* McsEngl.wrong!~adjvEngl!=rlnWrong,
     <br>====== langoChinese:
-    <br>* McsZhon.cuòwù-错误!=wrong,
-    <br>* McsZhon.错误-cuòwù!=wrong,
+    <br>* McsZhon.cuòwù-错误!=rlnWrong,
+    <br>* McsZhon.错误-cuòwù!=rlnWrong,
     <br>====== langoGreek:
-    <br>* McsElln.λάθος!=wrong,
+    <br>* McsElln.λάθος!~adjvElln:-ος-ος-ος!=rlnWrong,
     <a class="clsHide" href="#idRlnMpgWrngnam"></a></p>
   </section>
   </section>
@@ -2095,8 +2099,8 @@
     <br>* McsEngl.relation.info-possession-of-entity!⇒rlnInfoPossessor,
     <br>* McsEngl.have-the-opinion!⇒rlnInfoPossessor,
     <br>* McsEngl.rlnInfoPossessor,
-    <br>* McsEngl.expect!~verbEnglA1!⇒rlnInfoPossessor,
-    <br>* McsEngl.think!~verbEnglC-think-thinks-thought-thinking-thought!⇒rlnInfoPossessor,
+    <br>* McsEngl.expect!~verbEnglA1!=rlnInfoPossessor,
+    <br>* McsEngl.think!~verbEnglC-think-thinks-thought-thinking-thought!=rlnInfoPossessor,
     <br>====== langoChinese:
     <br>* McsZhon.rènwéi-认为!=rlnInfoPossessor,
     <br>* McsZhon.认为-rènwéi!=rlnInfoPossessor,
@@ -2377,8 +2381,8 @@
     <br>* McsEngl.rlnPossession.of-possessor!⇒rlnPossessorPossesion,
     <br>* McsEngl.possessor-of-possession--relation!⇒rlnPossessorPossesion,
     <br>* McsEngl.rlnPossessorPossesion,
-    <br>* McsEngl.have!~verbEnglC:have-haves-had-having-had!⇒rlnPossessorPossesion,
-    <br>* McsEngl.possess!~verbEnglA4:possess--es-ed-ing-ed!⇒rlnPossessorPossesion,
+    <br>* McsEngl.have!~verbEnglC:have-haves-had-having-had!=rlnPossessorPossesion,
+    <br>* McsEngl.possess!~verbEnglA4:possess--es-ed-ing-ed!=rlnPossessorPossesion,
     <br>====== langoChinese:
     <br>* McsZhon.yǒu-有!=rlnPossessorPossesion,
     <br>* McsZhon.有-yǒu!=rlnPossessorPossesion,
@@ -2430,7 +2434,7 @@
     <a class="clsHide" href="#idRlnLosgdsn"></a></p>
   <p id="idRlnLosgnam">name::
     <br>* McsEngl.cease-to-have!⇒rlnLosing,
-    <br>* McsEngl.lose!~verbEnglC:lose-loses-lost-losing-lost!⇒rlnLosing,
+    <br>* McsEngl.lose!~verbEnglC:lose-loses-lost-losing-lost!=rlnLosing,
     <br>* McsEngl.relation.losing!⇒rlnLosing,
     <br>====== langoGreek:
     <br>* McsElln.χάν-ω-ομαι!~verbElln!=rlnLosing,
