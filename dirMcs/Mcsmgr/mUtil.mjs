@@ -1,5 +1,5 @@
 /*
- * mUtil.js - module with utility code
+ * mUtil.mjs - module with utility code
  * The MIT License (MIT)
  *
  * Copyright (c) 2021 Kaseluris.Nikos.1959 (hmnSngo)
