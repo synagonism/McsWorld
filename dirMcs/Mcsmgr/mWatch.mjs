@@ -45,6 +45,7 @@ import {fWriteJsonArray} from './mUtil.mjs'
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mWatch.mjs.0-3-0.2021-12-01: setTimeout solves file reading',
     'mWatch.mjs.0-2-0.2021-11-29: imports mNamidx, mSftp, stores hashes of Mcs',
     'mWatch.mjs.0-1-0.2021-11-28: creation'
   ]
@@ -64,26 +65,29 @@ if (process.argv[2]) {
 
 moFs.watch(sCwd, {recursive: true}, (eventType, sFilename) => {
   if (sFilename && eventType === 'change' && sFilename.endsWith('.last.html')) {
+
     sFilename = sFilename.replace(/\\/g, '/')
-    let sFileResolved = moPath.resolve(sCwd+sFilename)
+    let sFileResolved = moPath.join(sCwd, sFilename)
     console.log(sFilename)
     console.log('>>>RESOLVED: '+sFileResolved)
-    const fileBuffer = moFs.readFileSync(sFileResolved)
-    const hashSum = moCrypto.createHash('sha256')
-    hashSum.update(fileBuffer);
-    const sHashCurrent = hashSum.digest('hex');
-
-    if (oMcs_Hash[sFilename]) {
-      if (sHashCurrent === oMcs_Hash[sFilename]) {
-        return
+    setTimeout(() => {
+      const fileBuffer = moFs.readFileSync(sFileResolved)
+      const hashSum = moCrypto.createHash('sha256')
+      hashSum.update(fileBuffer)
+      const sHashCurrent = hashSum.digest('hex')
+      if (oMcs_Hash[sFilename]) {
+        if (sHashCurrent === oMcs_Hash[sFilename]) {
+          return
+        }
       }
-    }
-    oMcs_Hash[sFilename] = sHashCurrent
-    moFs.writeFileSync('oMcs_Hash.json', JSON.stringify(oMcs_Hash))
+      oMcs_Hash[sFilename] = sHashCurrent
+      moFs.writeFileSync('oMcs_Hash.json', JSON.stringify(oMcs_Hash))
 
-    //aFileMcsIn.push(sFilename)
-    //setTimeout(() => console.log(aFileMcsIn), 1000)
+      //aFileMcsIn.push(sFilename)
+      //setTimeout(() => console.log(aFileMcsIn), 1000)
 
-    fNamidx(sFilename, fSftp)
+      fNamidx(sFilename, fSftp)
+    }, 500)
+
   } 
 })
