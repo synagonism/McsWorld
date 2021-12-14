@@ -89,4 +89,21 @@ function fWriteJsonArray(sFilIn, aIn) {
   moFs.writeFileSync(sFilIn, s)
 }
 
-export {fDateYMD, fDateYMD2, fWriteJsonArray}
+/**
+ * DOING:
+ *  it creates a-json-object-file from a-Javascript-object.
+ */
+function fWriteJsonObject(sFilIn, oIn) {
+  let
+    k,
+    s
+
+  s = '{\n'
+  for (k in oIn) {
+    s = s +'  "' + k + '":"' +oIn[k] + '",\n'
+  }
+  s = s.substring(0, s.length-2) + '\n}'
+  moFs.writeFileSync(sFilIn, s)
+}
+
+export {fDateYMD, fDateYMD2, fWriteJsonArray, fWriteJsonObject}

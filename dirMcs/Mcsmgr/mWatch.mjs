@@ -40,11 +40,12 @@ import {fNamidx} from './mNamidx.mjs'
 import mfClient from 'ssh2-sftp-client'
 import mfEs6_promise_pool from 'es6-promise-pool'
 import {oSftp, fSftp} from './mSftp.mjs'
-import {fWriteJsonArray} from './mUtil.mjs'
+import {fWriteJsonObject} from './mUtil.mjs'
 
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mWatch.mjs.0-4-0.2021-12-14: save ordered oMcs_Hash',
     'mWatch.mjs.0-3-0.2021-12-01: setTimeout solves file reading',
     'mWatch.mjs.0-2-0.2021-11-29: imports mNamidx, mSftp, stores hashes of Mcs',
     'mWatch.mjs.0-1-0.2021-11-28: creation'
@@ -81,7 +82,12 @@ moFs.watch(sCwd, {recursive: true}, (eventType, sFilename) => {
         }
       }
       oMcs_Hash[sFilename] = sHashCurrent
-      moFs.writeFileSync('oMcs_Hash.json', JSON.stringify(oMcs_Hash))
+      const oMHOrdered = {}
+      Object.keys(oMcs_Hash).sort().forEach(function(key) {
+        oMHOrdered[key] = oMcs_Hash[key];
+      })
+      //moFs.writeFileSync('oMcs_Hash.json', JSON.stringify(oMHOrdered))
+      fWriteJsonObject('oMcs_Hash.json', oMHOrdered)
 
       //aFileMcsIn.push(sFilename)
       //setTimeout(() => console.log(aFileMcsIn), 1000)
