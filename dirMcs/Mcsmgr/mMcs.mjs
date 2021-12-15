@@ -86,15 +86,15 @@ let
   sDirShort = 'Stn',
   
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'service-oznProduction',
+  sName = 'satisfier.building',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNameShort = 'oznService',
+  sNameShort = 'sfrBuilding',
 
   //5. FILE-name: 
   sNameFile = '',
   sNameFileNaked = '',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNameId = 'OznSvc',
+  sNameId = 'SfrBldg',
   aPages,
   nFile = 0
 
@@ -200,6 +200,8 @@ s = s +
   '  <h1 id="id' + sNameId + 'wptFH1">WHOLE-PART-TREE of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'whlFH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'wptnam">name::\n' +
+  '    <br>* Mcs.' + sNameShort + '\'part-whole-tree,\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'wptnam"></a></p>\n' +
   '    <br>* Mcs.' + sNameShort + '\'whole-part-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'wptnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'wtr">whole-tree-of-' + sNameShort + '::\n' +
@@ -224,6 +226,8 @@ s = s +
   '    <a class="clsHide" href="#id' + sNameId + 'gstFH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'gstnam">name::\n' +
   '    <br>* Mcs.' + sNameShort + '\'generic-specific-tree,\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'gstnam"></a></p>\n' +
+  '    <br>* Mcs.' + sNameShort + '\'specific-generic-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'gstnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'gtr">generic-tree-of-' + sNameShort + '::\n' +
   '    <br>* ,\n' +
