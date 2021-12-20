@@ -82,21 +82,23 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirStn',
-  sDirShort = 'Stn',
+  sDir = 'dirHlth',
   
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'satisfier.building',
-  //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagKmo,
-  sNameShort = 'sfrBuilding',
+  sName = 'bodyHmn\'exercising',
+  //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
+  sNameShort = 'exercisingD',
 
   //5. FILE-name: 
   sNameFile = '',
   sNameFileNaked = '',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNameId = 'SfrBldg',
+  sNameId = 'ExcsD',
+  //
   aPages,
-  nFile = 0
+  nFile = 0,
+  sDirShort = sDir.substring(3)
+
 
 aPages = JSON.parse(moFs.readFileSync('../aPages.json'))
 
@@ -169,12 +171,12 @@ s =
   '<section id="id' + sNameId + 'dngF">\n' +
   '  <h1 id="id' + sNameId + 'dngFH1">DOING of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'dngFH1"></a></h1>\n' +
-  '  <p id="id' + sNameId + 'dngnam">name::\n' +
-  '    <br>* Mcs.' + sNameShort + '\'doing,\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'dngnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'dngdsn">description::\n' +
   '    <br>* \n' +
   '    <a class="clsHide" href="#id' + sNameId + 'dngdsn"></a></p>\n' +
+  '  <p id="id' + sNameId + 'dngnam">name::\n' +
+  '    <br>* Mcs.' + sNameShort + '\'doing,\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'dngnam"></a></p>\n' +
   '</section>\n' +
   '\n' +
   '<section id="id' + sNameId + 'evgF">\n' +
@@ -201,7 +203,6 @@ s = s +
   '    <a class="clsHide" href="#id' + sNameId + 'whlFH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'wptnam">name::\n' +
   '    <br>* Mcs.' + sNameShort + '\'part-whole-tree,\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'wptnam"></a></p>\n' +
   '    <br>* Mcs.' + sNameShort + '\'whole-part-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'wptnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'wtr">whole-tree-of-' + sNameShort + '::\n' +
@@ -226,7 +227,6 @@ s = s +
   '    <a class="clsHide" href="#id' + sNameId + 'gstFH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'gstnam">name::\n' +
   '    <br>* Mcs.' + sNameShort + '\'generic-specific-tree,\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'gstnam"></a></p>\n' +
   '    <br>* Mcs.' + sNameShort + '\'specific-generic-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'gstnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'gtr">generic-tree-of-' + sNameShort + '::\n' +
