@@ -82,18 +82,18 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirHlth',
+  sDir = 'dirStn',
   
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'bodyHmn\'exercising',
+  sName = 'financial-organization',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'exercisingD',
+  sNameShort = 'oznFin',
 
   //5. FILE-name: 
   sNameFile = '',
   sNameFileNaked = '',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNameId = 'ExcsD',
+  sNameId = 'OznFin',
   //
   aPages,
   nFile = 0,
