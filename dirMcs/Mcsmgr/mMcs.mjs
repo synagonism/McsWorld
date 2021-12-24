@@ -124,8 +124,8 @@ s =
   '<body>\n' +
   '<header id="idHeader">\n' +
   '  <p></p>\n' +
-  '  <h1 id="idHeaderH1">' + sName + ' senso-concept-Mcs\n' +
-  '    <br>(' + sNameShort + ')\n' +
+  '  <h1 id="idHeaderH1">' + sName + '\n' +
+  '    <br>senso-concept-Mcs (' + sNameShort + ')\n' +
   '    </h1>\n' +
   '  <p id="idHeadercrd">McsHitp-creation:: {' + moUtil.fDateYMD() + '}\n' +
   '    <a class="clsHide" href="#idHeadercrd"></a></p>\n' +
