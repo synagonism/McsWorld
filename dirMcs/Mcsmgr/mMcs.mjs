@@ -85,15 +85,15 @@ let
   sDir = 'dirStn',
   
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'financial-organization',
+  sName = 'financial-satisfier',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'oznFin',
+  sNameShort = 'sfrFin',
 
   //5. FILE-name: 
   sNameFile = '',
   sNameFileNaked = '',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNameId = 'OznFin',
+  sNameId = 'SfrFin',
   //
   aPages,
   nFile = 0,
