@@ -28,6 +28,7 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mHitp.js.18-7-0.2021-12-31: lagEspo',
     'mHitp.js.18-6-0.2021-11-25: popup on content',
     'mHitp.js.18-5-1.2021-11-19: popup left',
     'mHitp.js.18-5-0.2021-11-19: create treeUl on preview',
@@ -261,7 +262,7 @@ let fContainersInsert = function () {
         fCnrOntopRemove()
         fCnrSearchShow()
         //select Greek-lag, BUT needs to clear the-input-field to show stats
-        oEltTabCntSrchSlt.options[3].selected = true
+        oEltTabCntSrchSlt.options[4].selected = true
       }
     })
 
@@ -287,8 +288,17 @@ let fContainersInsert = function () {
       if (oEvtIn.shiftKey && oEvtIn.key === 'F2') {
         fCnrOntopRemove()
         fCnrSearchShow()
-        //
+        // Sinago
         oEltTabCntSrchSlt.options[1].selected = true
+      }
+    })
+
+    addEventListener('keydown', function (oEvtIn) {
+      if (oEvtIn.shiftKey && oEvtIn.key === 'F3') {
+        fCnrOntopRemove()
+        fCnrSearchShow()
+        // Esperanto
+        oEltTabCntSrchSlt.options[3].selected = true
       }
     })
   }
@@ -607,9 +617,13 @@ let fContainersInsert = function () {
     oEltTabCntSrchOpn4.text = 'Chinese (Zhon - Ctrl+F3)'
     oEltTabCntSrchSlt.add(oEltTabCntSrchOpn4)
     let oEltTabCntSrchOpn5 = document.createElement('option')
-    oEltTabCntSrchOpn5.value = 'lagElln'
-    oEltTabCntSrchOpn5.text = 'Greek (Elln - Ctrl+F2)'
+    oEltTabCntSrchOpn5.value = 'lagEspo'
+    oEltTabCntSrchOpn5.text = 'Esperanto (Espo - Shift+F3)'
     oEltTabCntSrchSlt.add(oEltTabCntSrchOpn5)
+    let oEltTabCntSrchOpn6 = document.createElement('option')
+    oEltTabCntSrchOpn6.value = 'lagElln'
+    oEltTabCntSrchOpn6.text = 'Greek (Elln - Ctrl+F2)'
+    oEltTabCntSrchSlt.add(oEltTabCntSrchOpn6)
     oEltTabCntSrchSlt.options[0].selected = true
     oEltTabCntSrchP.id = 'idTabCntSrchP'
     oEltTabCntSrchP.setAttribute('class', 'clsCenter')

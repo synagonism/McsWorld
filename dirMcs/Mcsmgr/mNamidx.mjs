@@ -51,6 +51,7 @@ import {fWriteJsonArray} from './mUtil.mjs'
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mNamidx.mjs.0-2-0.2021-12-31: lagEspo',
     'mNamidx.mjs.0-1-0.2021-11-29: creation',
     'namidx: {2021-11-19} index-files-comments',
     'namidx: {2021-11-15} reference-index-file',
@@ -127,7 +128,7 @@ function fNamidx(fileIn, fSftpIn) {
     // array with names of dirCor/McsCor000010.last.html to remove|add its names
     aLag,
     // array of languages ['lagALLL'] or ['lagElln','lagEngl',...]
-    aLagALL = ['lagSngo','lagEngl','lagElln','lagZhon'],
+    aLagALL = ['lagEngl','lagSngo','lagZhon','lagEspo','lagElln'],
     // 'lagAlb','lagBel','lagBos','lagBul','lagCes','lagDan','lagDeu','lagEst',
     // 'lagFin','lagFra','lagHrv','lagHun','lagIta','lagLav','lagLit','lagMlt',
     // 'lagMol','lagNld','lagNor','lagPol','lagPor','lagRom','lagRus','lagSlk',
