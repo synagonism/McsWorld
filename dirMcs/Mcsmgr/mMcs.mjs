@@ -82,18 +82,18 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirStn',
+  sDir = 'dirLag',
   
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'financial-satisfier',
+  sName = 'Greek-language',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'sfrFin',
+  sNameShort = 'lagElln',
 
   //5. FILE-name: 
   sNameFile = '',
   sNameFileNaked = '',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNameId = 'SfrFin',
+  sNameId = 'LElln',
   //
   aPages,
   nFile = 0,
@@ -109,6 +109,8 @@ for (n = 0; n < aPages.length; n++) {
 // first file-number 000000
 sNameFileNaked = 'Mcs' + sDirShort + nFile.toString().padStart(6, '0')
 sNameFile = sNameFileNaked + '.last.html'
+
+//if file exist exit
 
 s =
   '<!DOCTYPE html>\n' +
