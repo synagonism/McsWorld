@@ -2,7 +2,7 @@
  * mHitp.js - module html5.id.toc.preview webpage-format code.
  * The MIT License (MIT)
  *
- * Copyright (c) 2010-2021 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2010-2022 Kaseluris.Nikos.1959 (hmnSngo)
  * kaseluris.nikos@gmail.com
  * https:// synagonism.net/
  *
@@ -28,6 +28,7 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mHitp.js.18-8-0.2022-01-07: lagElla',
     'mHitp.js.18-7-0.2021-12-31: lagEspo',
     'mHitp.js.18-6-0.2021-11-25: popup on content',
     'mHitp.js.18-5-1.2021-11-19: popup left',
@@ -624,6 +625,10 @@ let fContainersInsert = function () {
     oEltTabCntSrchOpn6.value = 'lagElln'
     oEltTabCntSrchOpn6.text = 'Greek (Elln - Ctrl+F2)'
     oEltTabCntSrchSlt.add(oEltTabCntSrchOpn6)
+    let oEltTabCntSrchOpn7 = document.createElement('option')
+    oEltTabCntSrchOpn7.value = 'lagElla'
+    oEltTabCntSrchOpn7.text = 'GreekAncient (Ella)'
+    oEltTabCntSrchSlt.add(oEltTabCntSrchOpn7)
     oEltTabCntSrchSlt.options[0].selected = true
     oEltTabCntSrchP.id = 'idTabCntSrchP'
     oEltTabCntSrchP.setAttribute('class', 'clsCenter')

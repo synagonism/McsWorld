@@ -2,7 +2,7 @@
  * mMcs.mjs - it creates a-new file McsHitp-senso-concept
  * The MIT License (MIT)
  *
- * Copyright (c) 2017-2021 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2017-2022 Kaseluris.Nikos.1959 (hmnSngo)
  * kaseluris.nikos@gmail.com
  * https://synagonism.net/
  *
@@ -85,15 +85,15 @@ let
   sDir = 'dirLag',
   
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'unit-system-of-logoZhon',
+  sName = 'wordary-of-Ancient-Greek',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'systUnitZhon',
+  sNameShort = 'wordaryElla',
 
   //5. FILE-name: 
   sNameFile = '',
   sNameFileNaked = '',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNameId = 'LZhonunsm',
+  sNameId = 'WrdrElla',
   //
   aPages,
   nFile = 0,
@@ -152,7 +152,7 @@ s =
   '  <h1 id="id' + sNameId + 'rscFH1">info-resource of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'rscFH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'rscnam">name::\n' +
-  '    <br>* Mcs.' + sNameShort + '\'Infrsc,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'Infrsc,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'rscnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'rscwpa">addressWpg::\n' +
   '    <br>* \n' +
@@ -163,7 +163,7 @@ s =
   //'  <h1 id="id' + sNameId + 'srtrFH1">structure of ' + sNameShort + '\n' +
   //'    <a class="clsHide" href="#id' + sNameId + 'srtrFH1"></a></h1>\n' +
   //'  <p id="id' + sNameId + 'srtrnam">name::\n' +
-  //'    <br>* Mcs.' + sNameShort + '\'structure,\n' +
+  //'    <br>* McsEngl.' + sNameShort + '\'structure,\n' +
   //'    <a class="clsHide" href="#id' + sNameId + 'srtrnam"></a></p>\n' +
   //'  <p id="id' + sNameId + 'srtrdsn">description::\n' +
   //'    <br>* \n' +
@@ -177,7 +177,7 @@ s =
   '    <br>* \n' +
   '    <a class="clsHide" href="#id' + sNameId + 'dngdsn"></a></p>\n' +
   '  <p id="id' + sNameId + 'dngnam">name::\n' +
-  '    <br>* Mcs.' + sNameShort + '\'doing,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'doing,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'dngnam"></a></p>\n' +
   '</section>\n' +
   '\n' +
@@ -185,7 +185,7 @@ s =
   '  <h1 id="id' + sNameId + 'evgFH1">evoluting of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'evgFH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'evgnam">name::\n' +
-  '    <br>* Mcs.' + sNameShort + '\'evoluting,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'evoluting,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'evgnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'evg' + moUtil.fDateYMD2() + '">{' + moUtil.fDateYMD() + '}::\n' +
   '    <br>=== McsHitp-creation:\n';
@@ -204,8 +204,8 @@ s = s +
   '  <h1 id="id' + sNameId + 'wptFH1">WHOLE-PART-TREE of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'whlFH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'wptnam">name::\n' +
-  '    <br>* Mcs.' + sNameShort + '\'part-whole-tree,\n' +
-  '    <br>* Mcs.' + sNameShort + '\'whole-part-tree,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'part-whole-tree,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'whole-part-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'wptnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'wtr">whole-tree-of-' + sNameShort + '::\n' +
   '    <br>* \n' +
@@ -228,8 +228,8 @@ s = s +
   '  <h1 id="id' + sNameId + 'gstFH1">GENERIC-SPECIFIC-TREE of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'gstFH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'gstnam">name::\n' +
-  '    <br>* Mcs.' + sNameShort + '\'generic-specific-tree,\n' +
-  '    <br>* Mcs.' + sNameShort + '\'specific-generic-tree,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'generic-specific-tree,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'specific-generic-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'gstnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'gtr">generic-tree-of-' + sNameShort + '::\n' +
   '    <br>* ,\n' +

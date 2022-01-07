@@ -2,7 +2,7 @@
  * mUtil.mjs - module with utility code
  * The MIT License (MIT)
  *
- * Copyright (c) 2021 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2021-2022 Kaseluris.Nikos.1959 (hmnSngo)
  * kaseluris.nikos@gmail.com
  * https:// synagonism.net/
  *

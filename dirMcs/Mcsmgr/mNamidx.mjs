@@ -2,7 +2,7 @@
  * mNamidx.mjs - module that creates name-indecies and uploads the-files
  * The MIT License (MIT)
  *
- * Copyright (c) 2017 - 2021 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2017 - 2022 Kaseluris.Nikos.1959 (hmnSngo)
  * kaseluris.nikos@gmail.com
  * https:// synagonism.net/
  *
@@ -51,6 +51,7 @@ import {fWriteJsonArray} from './mUtil.mjs'
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mNamidx.mjs.0-3-0.2022-01-07: lagElla',
     'mNamidx.mjs.0-2-0.2021-12-31: lagEspo',
     'mNamidx.mjs.0-1-0.2021-11-29: creation',
     'namidx: {2021-11-19} index-files-comments',
@@ -128,7 +129,7 @@ function fNamidx(fileIn, fSftpIn) {
     // array with names of dirCor/McsCor000010.last.html to remove|add its names
     aLag,
     // array of languages ['lagALLL'] or ['lagElln','lagEngl',...]
-    aLagALL = ['lagEngl','lagSngo','lagZhon','lagEspo','lagElln'],
+    aLagALL = ['lagEngl','lagSngo','lagZhon','lagEspo','lagElln','lagElla'],
     // 'lagAlb','lagBel','lagBos','lagBul','lagCes','lagDan','lagDeu','lagEst',
     // 'lagFin','lagFra','lagHrv','lagHun','lagIta','lagLav','lagLit','lagMlt',
     // 'lagMol','lagNld','lagNor','lagPol','lagPor','lagRom','lagRus','lagSlk',

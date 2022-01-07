@@ -2,7 +2,7 @@
  * mLag.js - module language.
  * The MIT License (MIT)
  *
- * Copyright (c) 2010-2021 Kaseluris.Nikos.1959 (synagonism)
+ * Copyright (c) 2010-2022 Kaseluris.Nikos.1959 (synagonism)
  * kaseluris.nikos@gmail.com
  * https:// synagonism.net/
  *
