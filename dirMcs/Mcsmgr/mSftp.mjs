@@ -13,7 +13,7 @@ import mfClient from 'ssh2-sftp-client'
 import mfEs6_promise_pool from 'es6-promise-pool'
 
 var oSftp = {
-  host: 'ftp.synagonism.net',
+  host: 'linux1087.grserver.gr',
   port: 2234,
   username: 'kaseluri160933'
 }

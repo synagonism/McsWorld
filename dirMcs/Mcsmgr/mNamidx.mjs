@@ -253,7 +253,7 @@ function fNamidx(fileIn, fSftpIn) {
         } else if (sLn.indexOf('<p id="') >= 0) {
           bMcsSection = false;
           sUrlPPrev = sUrlP
-          sUrlP = sLn.substring(sLn.indexOf('"')+1,sLn.lastIndexOf('">'))
+          sUrlP = sLn.substring(sLn.indexOf('"')+1,sLn.indexOf('>')-1)
           sUrlP = sFileMcs + '#' + sUrlP
           if (sLn.indexOf('>name::') >= 0) {
             if (aLag[nL] === 'lagEngl') {
