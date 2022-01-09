@@ -44,6 +44,7 @@ import {fSftp} from './mSftp.mjs'
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mMcs.mjs.1-1-0.2022-01-09: filMcs to McsCor000002',
     'mMcs.mjs.1-0-0.2021-12-12: ',
     'version.0-15-0.2021-08-04: module rename from js-mcsAdd3.js',
     'version.0-14-2.2020-12-04: no-steemit',
@@ -85,15 +86,15 @@ let
   sDir = 'dirLag',
   
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'wordary-of-Ancient-Greek',
+  sName = 'wordary-of-Greek-language',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'wordaryElla',
+  sNameShort = 'wordaryElln',
 
   //5. FILE-name: 
   sNameFile = '',
   sNameFileNaked = '',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNameId = 'WrdrElla',
+  sNameId = 'WrdrElln',
   //
   aPages,
   nFile = 0,
@@ -104,7 +105,8 @@ aPages = JSON.parse(moFs.readFileSync('../aPages.json'))
 
 // find file-name
 for (n = 0; n < aPages.length; n++) {
-  if (new RegExp('^Mcs'+sDirShort+'[0-9]').test(aPages[n][0])) nFile = nFile + 1
+  //aPages contains the-counter files
+  if (new RegExp('^Mcs'+sDirShort+'[0-9]+.txt').test(aPages[n][0])) nFile = nFile + 1
 }
 // first file-number 000000
 sNameFileNaked = 'Mcs' + sDirShort + nFile.toString().padStart(6, '0')
@@ -151,12 +153,12 @@ s =
   '<section id="id' + sNameId + 'rscF">\n' +
   '  <h1 id="id' + sNameId + 'rscFH1">info-resource of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'rscFH1"></a></h1>\n' +
-  '  <p id="id' + sNameId + 'rscnam">name::\n' +
-  '    <br>* McsEngl.' + sNameShort + '\'Infrsc,\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'rscnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'rscwpa">addressWpg::\n' +
   '    <br>* \n' +
   '    <a class="clsHide" href="#id' + sNameId + 'rscwpa"></a></p>\n' +
+  '  <p id="id' + sNameId + 'rscnam">name::\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'Infrsc,\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'rscnam"></a></p>\n' +
   '</section>\n' +
   //'\n' +
   //'<section id="id' + sNameId + 'srtrF">\n' +
@@ -272,7 +274,7 @@ s = s +
   '    <br>· this page uses \'<span class="clsColorRed">locator-names</span>\', names that when you find them, you find the-LOCATION of the-concept they denote.\n' +
   '    <br>⊛ <strong>GLOBAL-SEARCH</strong>:\n' +
   '    <br>· clicking on <span class="clsColorGreenBg">the-green-BAR of a-page</span> you have access to the-global--locator-names of my-site.\n' +
-  '    <br>· use the-prefix \'<span class="clsColorRed">' + sNameShort + '</span>\' for <a class="clsPreview" href="../dirCor/filMcs.last.html#idOverview">sensorial-concepts</a> related to current concept \'' + sName + '\'.\n' +
+  '    <br>· use the-prefix \'<span class="clsColorRed">' + sNameShort + '</span>\' for <a class="clsPreview" href="../dirCor/McsCor000002.last.html#idOverview">senso-concepts</a> related to current concept \'' + sName + '\'.\n' +
   '    <br>⊛ <strong>LOCAL-SEARCH</strong>:\n' +
   '    <br>· TYPE <span class="clsColorRed">CTRL+F "McsLang.words-of-concept\'s-name"</span>, to go to the-LOCATION of the-concept.\n' +
   '    <br>· a-preview of the-description of a-global-name makes reading fast.\n' +
