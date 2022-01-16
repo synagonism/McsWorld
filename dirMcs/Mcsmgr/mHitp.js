@@ -28,6 +28,7 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mHitp.js.18-8-1.2022-01-15: name-language',
     'mHitp.js.18-8-0.2022-01-07: lagElla',
     'mHitp.js.18-7-0.2021-12-31: lagEspo',
     'mHitp.js.18-6-0.2021-11-25: popup on content',
@@ -598,7 +599,7 @@ let fContainersInsert = function () {
     // TabCntSrch
     oEltTabCntSrchDiv.id = 'idTabCntSrchDiv'
     oEltTabCntSrchDiv.setAttribute('class', 'clsTabCnt')
-    oEltTabCntSrchLbl.innerHTML = 'language:'
+    oEltTabCntSrchLbl.innerHTML = 'name-language:'
     oEltTabCntSrchLbl.for = 'idTabCntSrchSlt'
     oEltTabCntSrchSlt.id = 'idTabCntSrchSlt'
     //let oEltTabCntSrchOpn1 = document.createElement('option')
