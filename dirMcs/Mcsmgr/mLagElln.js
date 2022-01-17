@@ -1,8 +1,8 @@
 /*
- * mLagEngl.js - module of English-language.
+ * mLagElln.js - module of Greek-language.
  * The MIT License (MIT)
  *
- * Copyright (c) 2021 Kaseluris.Nikos.1959 (synagonism)
+ * Copyright (c) 2022 Kaseluris.Nikos.1959 (synagonism)
  * kaseluris.nikos@gmail.com
  * https:// synagonism.net/
  *
@@ -26,9 +26,9 @@
  */
 
 const
-  // contains the-versions of mLagEngl.js
+  // contains the-versions of mLagElln.js
   aVersion = [
-    'mLagEngl.js.0-1-0.2021-11-22: creation'
+    'mLagElln.js.0-1-0.2022-01-15: creation'
   ],
   aIrregulars = []
 
