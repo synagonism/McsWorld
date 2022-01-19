@@ -4,7 +4,7 @@
  *
  * Copyright (c) 2010-2022 Kaseluris.Nikos.1959 (synagonism)
  * kaseluris.nikos@gmail.com
- * https:// synagonism.net/
+ * https://synagonism.net/
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -79,6 +79,7 @@ function fFindMembers () {
     })
   })
 }
+
 
 fFindMembers()
 export {fFindMembers}
