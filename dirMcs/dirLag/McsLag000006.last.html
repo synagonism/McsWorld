@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char-(1-9-0.2022-01-24)</title>
+  <title>Mcs.char-(1-10-0.2022-01-29)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -1449,20 +1449,21 @@
     <a class="clsHide" href="#idCharUcdstdcpfdrH4"></a></h4>
   <p id="idCharUcdstdcpfdrdsn">description::
     <br>· on this site, selecting any character and hitting <code>Shift+1</code>, it FINDS the-Unicode-codepoint of this character.
-    <br>· also here you can-write or paste any character and see its codepoint:
-    <br><input type="text" id="idIptUccp" value="𡜨">
+    <br>· also here you can-write or paste any TEXT and see its codepoints separated with '-':
+    <br><input type="text" id="idIptUccp" value="𨱡a𡜨">
     <button type="button" id="idBtnUccp">FIND codepoint</button>
     <br>codepoint: <span id="idSpnUccp"></span>
     <br>
     <br>AND the-opposite:
-    <br>· write a-codepoint and see its character:
-    <br><input type="text" id="idIptUchr" value="10048">
+    <br>· write codepoints separated with '-' and see its characters:
+    <br><input type="text" id="idIptUchr" value="10048-97-137000">
     <button type="button" id="idBtnUchr">FIND character</button>
     <br>character: <span id="idSpnUchr"></span>
     <a class="clsHide" href="#idCharUcdstdcpfdrdsn"></a></p>
   <p id="idCharUcdstdcpfdrnam">name::
     <br>* McsEngl.Uccp'finder,
     <br>* McsEngl.char'codepoint-finder,
+    <br>* McsEngl.codepoint-finder,
     <br>* McsEngl.finder.character-from-codepoint,
     <br>* McsEngl.finder.codepoint-from-character,
     <a class="clsHide" href="#idCharUcdstdcpfdrnam"></a></p>
@@ -6217,7 +6218,7 @@
     <br> &nbsp;<img src="../../dirRsc/dirImg/mail.png" alt="imgMail">
     <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>
     <a class="clsHide" href="#idFooterP1"></a></p>
-  <!--                              -->
+  <!--                            -->
   <p id="idMetaVersion">webpage-versions::
     <br>• version.last.dynamic: <a class="clsPreview" href="McsLag000006.last.html">McsLag000006.last.html</a>,
     <br>• version.1-0-0.2021-04-11: (0-27) <a href="../../dirMiwMcs/dirLag/filMcsChar.1-0-0.2021-04-11.html">../../dirMiwMcs/dirLag/filMcsChar.1-0-0.2021-04-11.html</a>,
@@ -6250,20 +6251,38 @@
 <script type="module">
   import * as oHitp from '../Mcsmgr/mHitp.js'
 
-  // finds codepoint, given char
+  // finds codepoints, given chars
   document.getElementById('idBtnUccp').addEventListener('click', function(e) {
     let
       sIn = document.getElementById('idIptUccp').value,
-      nUccp = sIn.codePointAt(0)
-    document.getElementById('idSpnUccp').innerHTML = nUccp
+      n,
+      sOut = ''
+
+    for (n = 0; n < sIn.length; n++) {
+      if (sIn.charCodeAt(n) >= 55296 && sIn.charCodeAt(n) <= 56319) {
+        //on high-surrogates do not count the low-surrogate
+        sOut = sOut + sIn.codePointAt(n) + '-'
+        n = n+1
+      } else {
+        sOut = sOut + sIn.codePointAt(n) + '-'
+      }
+    }
+    document.getElementById('idSpnUccp').innerHTML = sOut.substring(0, sOut.length-1)
   })
 
-  // finds char, given codepoint
+  // finds chars, given codepoints
   document.getElementById('idBtnUchr').addEventListener('click', function(e) {
     let
-      nIn = Number(document.getElementById('idIptUchr').value),
-      sChr = String.fromCodePoint(nIn)
-    document.getElementById('idSpnUchr').innerHTML = sChr
+      aIn = (document.getElementById('idIptUchr').value).split('-'),
+      n,
+      nIn,
+      sOut = ''
+
+    for (n = 0; n < aIn.length; n++) {
+      nIn = Number(aIn[n])
+      sOut = sOut + String.fromCodePoint(nIn)
+    }
+    document.getElementById('idSpnUchr').innerHTML = sOut
   })
 </script>
 </body>
