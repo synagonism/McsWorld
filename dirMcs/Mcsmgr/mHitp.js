@@ -28,6 +28,7 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mHitp.js.18-9-0.2022-01-30: codepoints',
     'mHitp.js.18-8-1.2022-01-15: name-language',
     'mHitp.js.18-8-0.2022-01-07: lagElla',
     'mHitp.js.18-7-0.2021-12-31: lagEspo',
@@ -251,8 +252,18 @@ let fContainersInsert = function () {
       if (sKeycode === '+Digit1+ShiftLeft') {
         let
           s = getSelection().toString(),
-          n = s.codePointAt(0)
-        oEltCnrPreviewDiv.innerHTML = '► char: '+s +'<br>► codepoint: ' +n
+          sOut = '',
+          n
+        for (n = 0; n < s.length; n++) {
+          if (s.charCodeAt(n) >= 55296 && s.charCodeAt(n) <= 56319) {
+            //on high-surrogates do not count the low-surrogate
+            sOut = sOut + s.codePointAt(n) + '-'
+            n = n+1
+          } else {
+            sOut = sOut + s.codePointAt(n) + '-'
+          }
+        }
+        oEltCnrPreviewDiv.innerHTML = '► chars: '+s +'<br>► codepoints: ' + sOut.substring(0, sOut.length-1)
         oEltCnrPreviewDiv.style.display = 'block'
         oEltCnrPreviewDiv.style.top = 59 + 'px'
         oEltCnrPreviewDiv.style.left = 59 + 'px' 
