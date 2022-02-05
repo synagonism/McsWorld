@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.socEus-(1-5-0.2022-01-22) European-Union</title>
+  <title>Mcs.socEus-(1-6-0.2022-02-05) European-Union</title>
   <meta name="keywords" content="European-Union, socEus, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -549,13 +549,40 @@
     <br>[{2021-01-23} https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Euro]
     <a class="clsHide" href="#idEueconEurevudsn"></a></p>
   <p id="idEueconEurevunam">name::
-    <br>* McsEngl.EUR'(Euro-Member-Countries-currency)!⇒EvuEur,
-    <br>* McsEngl.Euecon'EUR-currency!⇒EvuEur,
-    <br>* McsEngl.Euro-Member-Countries-currency-(EUR)!⇒EvuEur,
-    <br>* McsEngl.EvuEUR'(Euro-Member-Countries-currency)!⇒EvuEur,
-    <br>* McsEngl.EvuEur,
-    <br>* McsEngl.euro-currency!⇒EvuEur,
+    <br>* McsEngl.EUR'(Euro-Member-Countries-currency)!⇒EvuEUR,
+    <br>* McsEngl.Euecon'EUR-currency!⇒EvuEUR,
+    <br>* McsEngl.Euro-Member-Countries-currency-(EUR)!⇒EvuEUR,
+    <br>* McsEngl.EvuEUR'(Euro-Member-Countries-currency)!⇒EvuEUR,
+    <br>* McsEngl.EvuEUR,
+    <br>* McsEngl.euro-currency!⇒EvuEUR,
+    <br>* McsEngl.€-EUR!⇒EvuEUR,
+    <br>====== langoGreek:
+    <br>* McsElln.Ευρώ!=EvuEUR,
     <a class="clsHide" href="#idEueconEurevunam"></a></p>
+
+  <section id="idEueconEurevuapp">
+  <h3 id="idEueconEurevuappH3">converter.EUR⇔Drachmas
+    <a class="clsHide" href="#idEueconEurevuappH3"></a></h3>
+  <p id="idEueconEurevuappdsn">description::
+    <br>· Drachma-₯ was the-previous currency of Greece that replaced by the euro in 2001 (at the rate of 340.75 drachmae to the euro). The euro did not begin circulating until 2001 but the exchange rate was fixed on 19 June 2000, with legal introduction of the euro taking place in January 2002.
+    <br>[{2022-02-05 retrieved} https://en.wikipedia.org/wiki/Greek_drachma]
+    <br>· type Euros or drachmas and hit <code>Enter</code>:
+    <br>
+    <br><strong>· &nbsp; &nbsp; Euros-€</strong>: <input type="text" id="idIptEuro" value="1" class="clsSizeLarge">
+    <br>
+    <br><strong>· Drachmas-₯</strong>: <input type="text" id="idIptDrhm" value="340.75" class="clsSizeLarge">
+    <a class="clsHide" href="#idEueconEurevuappdsn"></a></p>
+  <p id="idEueconEurevuappnam">name::
+    <br>* McsEngl.EUR⇔Drachmas,
+    <br>* McsEngl.Euros⇔Drachmas,
+    <br>* McsEngl.Webapp.converter.EUR⇔Drachmas,
+    <br>====== langoGreek:
+    <br>* McsElln.Δραχμές⇔Ευρώ,
+    <br>* McsElln.Ευρώ⇔Δραχμές,
+    <br>* McsElln.ιστοεφαρμογή.Δραχμές⇔Ευρώ,
+    <br>* McsElln.ιστοεφαρμογή.Ευρώ⇔Δραχμές,
+    <a class="clsHide" href="#idEueconEurevuappnam"></a></p>
+  </section>
   </section>
 
   <section id="idEueconeurarea">
@@ -16536,6 +16563,20 @@
 
 <script type="module">
   import * as oHitp from '../Mcsmgr/mHitp.js'
+
+  // finds drachmas, given euros
+  document.getElementById('idIptEuro').addEventListener('keyup', function(oEvtIn) {
+    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
+      document.getElementById('idIptDrhm').value = (document.getElementById('idIptEuro').value * 340.75).toFixed(2)
+    }
+  })
+
+  // finds euros, given drachmas
+  document.getElementById('idIptDrhm').addEventListener('keyup', function(oEvtIn) {
+    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
+      document.getElementById('idIptEuro').value = (document.getElementById('idIptDrhm').value / 340.75).toFixed(2)
+    }
+  })
 </script>
 </body>
 </html>
