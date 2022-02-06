@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.quantο-(1-25-0.2022-02-05) abstract-quantity</title>
+  <title>Mcs.quantο-(1-26-0.2022-02-06) abstract-quantity</title>
   <meta name="keywords" content="abstract-quantity, quantity, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -303,13 +303,14 @@
     <br>· in literature, 'number' also call only <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLHmnmname">the-name</a> we use for this concept.
     <a class="clsHide" href="#idQntNbrdsn"></a></p>
   <p id="idQntNbrnam">name::
-    <br>* McsEngl.NUMBER,
+    <br>* McsEngl.cardinal-number!⇒number,
     <br>* McsEngl.definite-deicticNo-quantity!⇒number,
     <br>* McsEngl.number,
     <br>* McsEngl.quanto.definite.deicticNo!⇒number,
     <br>====== langoSinago:
     <br>* McsSngo.kuo-numero!=number,
     <br>=== langoGreek:
+    <br>* McsElln.απόλυτο-αριθμητικό!=number,
     <br>* McsElln.αριθμός!=number,
     <a class="clsHide" href="#idQntNbrnam"></a></p>
   </section>
@@ -339,23 +340,35 @@
     <a class="clsHide" href="#idQntNbrnmrlsysnam"></a></p>
 
   <section id="idQntNbrnmrlsysdthc">
-  <h3 id="idQntNbrnmrlsysdthcH3">converter.decimal⇔hexadecimal
+  <h3 id="idQntNbrnmrlsysdthcH3">converter.numeral-systems
     <a class="clsHide" href="#idQntNbrnmrlsysdthcH3"></a></h3>
   <p id="idQntNbrnmrlsysdthcdsn">description::
-    <br>· type a-decimal or hexadecimal-number and hit <code>Enter</code>:
+    <br>· type a-number in any numeral-system and hit <code>Enter</code>:
     <br>
     <br><strong>· &nbsp; &nbsp; decimal-number</strong>: <input type="text" id="idIptDcml" value="10" class="clsSizeLarge">
     <br>
     <br><strong>· hexadecimal-number</strong>: <input type="text" id="idIptHxdl" value="a" class="clsSizeLarge">
+    <br>
+    <br><strong>· &nbsp; &nbsp; &nbsp; octal-number</strong>: <input type="text" id="idIptOctl" value="12" class="clsSizeLarge">
+    <br>
+    <br><strong>· &nbsp; &nbsp; &nbsp;binary-number</strong>: <input type="text" id="idIptBnry" value="1010" class="clsSizeLarge">
     <a class="clsHide" href="#idQntNbrnmrlsysdthcdsn"></a></p>
   <p id="idQntNbrnmrlsysdthcnam">name::
-    <br>* McsEngl.converter.decimal⇔hexadecimal,
-    <br>* McsEngl.decimal⇔hexadecimal--converter,
-    <br>* McsEngl.hexadecimal⇔decimal--converter,
-    <br>* McsEngl.Webapp.converter.decimal⇔hexadecimal,
+    <br>* McsEngl.converter.decimal⇔hexadecimal|octal|binary,
+    <br>* McsEngl.binary⇔decimal|hexadecimal|octal--converter,
+    <br>* McsEngl.decimal⇔hexadecimal|octal|binary--converter,
+    <br>* McsEngl.hexadecimal⇔decimal|octal|binary--converter,
+    <br>* McsEngl.octal⇔decimal|hexadecimal|binary--converter,
+    <br>* McsEngl.numeral-systems-converter--Webapp,
+    <br>* McsEngl.Webapp.converter.decimal⇔hexadecimal|octal|binary,
+    <br>* McsEngl.Webapp.converter.numeral-systems,
+    <br>* McsEngl.Webapp.numeral-systems-converter,
     <br>====== langoGreek:
-    <br>* McsElln.δεκαεξαδικός⇔δεκαδικός,
-    <br>* McsElln.ιστοεφαρμογή.δεκαεξαδικός⇔δεκαδικός,
+    <br>* McsElln.δεκαδικός⇔δεκαεξαδικός|οχταδικός|δυαδικός,
+    <br>* McsElln.δεκαεξαδικός⇔δεκαδικός|οχταδικός|δυαδικός,
+    <br>* McsElln.οχταδικός⇔δεκαδικός|δεκαεξαδικός|δυαδικός,
+    <br>* McsElln.δυαδικός⇔δεκαδικός|δεκαεξαδικός|οχταδικός,
+    <br>* McsElln.ιστοεφαρμογή.δεκαεξαδικός⇔δεκαδικός|οχταδικός|δυαδικός,
     <a class="clsHide" href="#idQntNbrnmrlsysdthcnam"></a></p>
   </section>
 
@@ -2495,17 +2508,61 @@
 <script type="module">
   import * as oHitp from '../Mcsmgr/mHitp.js'
 
-  // finds hexadecimals, given decimals
-  document.getElementById('idIptDcml').addEventListener('keyup', function(oEvtIn) {
+  let
+    oIptDcml = document.getElementById('idIptDcml'),
+    oIptHxdl = document.getElementById('idIptHxdl'),
+    oIptOctl = document.getElementById('idIptOctl'),
+    oIptBnry = document.getElementById('idIptBnry')
+
+  // converts from decimals
+  oIptDcml.addEventListener('keyup', function(oEvtIn) {
     if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
-      document.getElementById('idIptHxdl').value = Number(document.getElementById('idIptDcml').value).toString(16)
+      if (!/^[0-9]+$/.test(oIptDcml.value)) {
+        oIptHxdl.value = 'this is NOT a decimal-number'
+      } else {
+        oIptHxdl.value = Number(oIptDcml.value).toString(16)
+        oIptOctl.value = Number(oIptDcml.value).toString(8)
+        oIptBnry.value = Number(oIptDcml.value).toString(2)
+      }
     }
   })
 
-  // finds decimals, given hexadecimals
-  document.getElementById('idIptHxdl').addEventListener('keyup', function(oEvtIn) {
+  // converts from hexadecimals
+  oIptHxdl.addEventListener('keyup', function(oEvtIn) {
     if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
-      document.getElementById('idIptDcml').value = parseInt(document.getElementById('idIptHxdl').value, 16).toLocaleString()
+      if (!/^[0-9A-Fa-f]+$/.test(oIptHxdl.value)) {
+        oIptDcml.value = 'this is NOT a hex-number'
+      } else {
+        oIptDcml.value = parseInt(oIptHxdl.value, 16).toLocaleString()
+        oIptOctl.value = parseInt(oIptHxdl.value, 16).toString(8)
+        oIptBnry.value = parseInt(oIptHxdl.value, 16).toString(2)
+      }
+    }
+  })
+
+  // converts from octals
+  oIptOctl.addEventListener('keyup', function(oEvtIn) {
+    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
+      if (!/^[0-7]+$/.test(oIptOctl.value)) {
+        oIptDcml.value = 'this is NOT a octal-number'
+      } else {
+        oIptDcml.value = parseInt(oIptOctl.value, 8).toLocaleString()
+        oIptHxdl.value = parseInt(oIptOctl.value, 8).toString(16)
+        oIptBnry.value = parseInt(oIptOctl.value, 8).toString(2)
+      }
+    }
+  })
+
+  // converts from binaries
+  oIptBnry.addEventListener('keyup', function(oEvtIn) {
+    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
+      if (!/^[0-1]+$/.test(oIptBnry.value)) {
+        oIptDcml.value = 'this is NOT a binary-number'
+      } else {
+        oIptDcml.value = parseInt(oIptBnry.value, 2).toLocaleString()
+        oIptHxdl.value = parseInt(oIptBnry.value, 2).toString(16)
+        oIptOctl.value = parseInt(oIptBnry.value, 2).toString(8)
+      }
     }
   })
 </script>
