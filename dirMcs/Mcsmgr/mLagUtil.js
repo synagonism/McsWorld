@@ -33,22 +33,68 @@ const
   ]
 
 /**
- * DOING: it returns the-first letters of a-word.
+ * DOING: it returns the-chars of codepoints.
  * INPUT:
- *    sWordIn = the-input word.
- *    nPrefixIn = the-number of first letters we want.
+ *    sCpIn = a-string of codepoints separated with '-'.
+ * OUTPUT:
+ *    denoted chars.
  */
-function fFindFirstLettersIfPrefix (sWordIn, nPrefixIn) {
-  return sWordIn.substring(0, nPrefixIn)
+function fFindCharsIfCodepoints (sCpIn) {
+  let
+    aIn = sCpIn.split('-'),
+    n,
+    nIn,
+    sOut = ''
+
+  for (n = 0; n < aIn.length; n++) {
+    nIn = Number(aIn[n])
+    sOut = sOut + String.fromCodePoint(nIn)
+  }
+  return = sOut
+}
+
+/**
+ * DOING: it returns the-codepoints of chars
+ * INPUT:
+ *    sCharsIn = the-input chars.
+ * OUTPUT:
+ *    a-string of codepoints separated with '-'
+ */
+function fFindCodepointsIfChars (sCharsIn) {
+  let
+    sIn = sCharsIn,
+    n,
+    sOut = ''
+
+  for (n = 0; n < sIn.length; n++) {
+    if (sIn.charCodeAt(n) >= 55296 && sIn.charCodeAt(n) <= 56319) {
+      //on high-surrogates do not count the low-surrogate
+      sOut = sOut + sIn.codePointAt(n) + '-'
+      n = n+1
+    } else {
+      sOut = sOut + sIn.codePointAt(n) + '-'
+    }
+  }
+  return = sOut.substring(0, sOut.length-1)
 }
 
 /**
  * DOING: it returns the-first letters of a-word.
  * INPUT:
  *    sWordIn = the-input word.
- *    nSuffixIn = the-number of last letters we want.
+ *    nPrefixIn = the-number of first letters we want.
  */
-function fFindFirstLettersIfSuffix (sWordIn, nSuffixIn) {
+function fFindLettersFirstIfPrefix (sWordIn, nPrefixIn) {
+  return sWordIn.substring(0, nPrefixIn)
+}
+
+/**
+ * DOING: it returns the-first letters of a-word, given suffix.
+ * INPUT:
+ *    sWordIn = the-input word.
+ *    nSuffixIn = the-number of last letters given.
+ */
+function fFindLettersFirstIfSuffix (sWordIn, nSuffixIn) {
   return sWordIn.substring(0, sWordIn.length - nSuffixIn)
 }
 
@@ -57,9 +103,9 @@ function fFindFirstLettersIfSuffix (sWordIn, nSuffixIn) {
  * DOING: it returns the-last letters of a-word.
  * INPUT:
  *    sWordIn = the-input word.
- *    nPrefixIn = the-number of first letters we want.
+ *    nPrefixIn = the-number of first letters given.
  */
-function fFindLastLettersIfPrefix (sWordIn, nPrefixIn) {
+function fFindLettersLastIfPrefix (sWordIn, nPrefixIn) {
   return sWordIn.substring(nPrefixIn, sWordIn.length)
 }
 
@@ -67,7 +113,7 @@ function fFindLastLettersIfPrefix (sWordIn, nPrefixIn) {
  * DOING: it returns the-last letters of a-word.
  * INPUT:
  *    sWordIn = the-input word.
- *    nSuffixIn = the-number of last letters we want.
+ *    nSuffixIn = the-number of last letters given.
  */
 function fFindLaststLettersIfSuffix (sWordIn, nSuffixIn) {
   return sWordIn.substring(sWordIn.length - nSuffixIn, sWordIn.length)
@@ -772,8 +818,9 @@ function fIsLetterVowelGreek(sCharIn)
     return false
 }
 
-export {fFindFirstLettersIfPrefix, fFindFirstLettersIfSuffix, fFindLastLettersIfPrefix,
-        fFindLastLettersIfSuffix, fGreek_tonosFindSyllable, fGreek_tonosRemove,
+export {fFindCharsIfCodepoints, fFindCodepointsIfChars,
+        fFindLettersFirstIfPrefix, fFindLettersFirstIfSuffix, fFindLettersLastIfPrefix,
+        fFindLettersLastIfSuffix, fGreek_tonosFindSyllable, fGreek_tonosRemove,
         fGreek_tonosRemoveFirst, fGreek_tonosSetOnIndex, fGreek_tonosSetOnLiyusa,
         fGreek_tonosSetOnParaliyusa, fGreek_tonosDecrease, fGreek_vowel_indexFindFirst,
         fGreek_vowel_indexFindLast, fGreek_vowel_numberFind, fIsLetterConsonantEnglish,

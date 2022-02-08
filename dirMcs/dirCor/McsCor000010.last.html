@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.quantο-(1-26-0.2022-02-06) abstract-quantity</title>
+  <title>Mcs.quantο-(1-28-0.2022-02-08) abstract-quantity</title>
   <meta name="keywords" content="abstract-quantity, quantity, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -344,14 +344,15 @@
     <a class="clsHide" href="#idQntNbrnmrlsysdthcH3"></a></h3>
   <p id="idQntNbrnmrlsysdthcdsn">description::
     <br>· type a-number in any numeral-system and hit <code>Enter</code>:
-    <br>
-    <br><strong>· &nbsp; &nbsp; decimal-number</strong>: <input type="text" id="idIptDcml" value="10" class="clsSizeLarge">
-    <br>
+    <br><span id="idSpnErr" class="clsSizeLarge clsColorRed"></span>
+    <br><strong>· decimal-number&nbsp; &nbsp; </strong>: <input type="text" id="idIptDcml" value="10" class="clsSizeLarge">
+    <br> &nbsp; digits: 0123456789
     <br><strong>· hexadecimal-number</strong>: <input type="text" id="idIptHxdl" value="a" class="clsSizeLarge">
-    <br>
-    <br><strong>· &nbsp; &nbsp; &nbsp; octal-number</strong>: <input type="text" id="idIptOctl" value="12" class="clsSizeLarge">
-    <br>
-    <br><strong>· &nbsp; &nbsp; &nbsp;binary-number</strong>: <input type="text" id="idIptBnry" value="1010" class="clsSizeLarge">
+    <br> &nbsp; digits: 0123456789abcdef
+    <br><strong>· octal-number&nbsp; &nbsp; &nbsp; </strong>: <input type="text" id="idIptOctl" value="12" class="clsSizeLarge">
+    <br> &nbsp; digits: 01234567
+    <br><strong>· binary-number&nbsp; &nbsp; &nbsp;</strong>: <input type="text" id="idIptBnry" value="1010" class="clsSizeLarge">
+    <br> &nbsp; digits: 01
     <a class="clsHide" href="#idQntNbrnmrlsysdthcdsn"></a></p>
   <p id="idQntNbrnmrlsysdthcnam">name::
     <br>* McsEngl.converter.decimal⇔hexadecimal|octal|binary,
@@ -1303,6 +1304,8 @@
     <br>"Paucal number, for a few (as opposed to many) instances of the referent (e.g. in Hopi, Warlpiri, Lower Sepik-Ramu languages,[21] some Oceanic languages including Fijian,[22] Motuna,[23] Serbo-Croatian,[24] and in Arabic for some nouns). Paucal number has also been documented in some Cushitic languages of Ethiopia, including Baiso, which marks singular, paucal, plural.[25] When paucal number is used in Arabic, it generally refers to ten or fewer instances.
     <br>Of the Indo-European languages, Northern Kurdish or Kurmanji is one of the few known languages with paucal number. For instance: "car-IN-an" (sometimes), cf. "gelek car-an" (many times).[clarification needed] In Russian, the genitive singular is also applied to three or four items (2, 3, 4 ка́мня – stones, gen. sg.; but 5...20 камне́й – stones, gen. pl.), making it effectively paucal (cf. э́тот ка́мень – this stone, nom. sg.; э́ти ка́мни – these stones, nom. pl.). Polish functions similarly: 'one dog' is jeden pies', while (2, 3, 4 psy – dogs, pl.; but 5+ psσw - dogs, gen. pl.). Slovene has one more distinction. With its use of dual ('one dog' is en pes, 'two dogs' is dva psa), paucal is only used for counting 3 and 4 (3, 4 psi – dogs, pl.; but 5+ psov – dogs, gen.pl.)."
     <br>[{2019-08-25} https://en.wikipedia.org/wiki/Grammatical_number#Paucal]
+    <br>
+    <br>_stxZhon:_stxSbj:[商店] _stxSbjc:[不少] Shāngdiàn bù shǎo != [shops] [not few].
     <a class="clsHide" href="#idQntDftNFewdsn"></a></p>
   <p id="idQntDftNFewnam">name::
     <br>* McsEngl.attSmsNumber.few,
@@ -1310,6 +1313,11 @@
     <br>* McsEngl.few,
     <br>* McsEngl.quantoDefiniteNo.few,
     <br>* McsEngl.quanto.few,
+    <br>====== langoChinese:
+    <br>* McsZhon.shǎo-少!=few,
+    <br>* McsZhon.少-shǎo!=few,
+    <br>====== langoGreek:
+    <br>* McsElln.λίγος-λίγη-λίγο!=few,
     <a class="clsHide" href="#idQntDftNFewnam"></a></p>
   </section>
 
@@ -1318,12 +1326,17 @@
     <a class="clsHide" href="#idQntDftNFewNH2"></a></h2>
   <p id="idQntDftNFewNdsn">description::
     <br>· definiteNo, fewNo.
+    <br>
+    <br>_stxZhon: _stxSbj:[汽车] _stxSbjc:[很多]。 Qìchē hěnduō. != [car] [many]
     <a class="clsHide" href="#idQntDftNFewNdsn"></a></p>
   <p id="idQntDftNFewNnam">name::
     <br>* McsEngl.fewNo,
     <br>* McsEngl.many,
     <br>* McsEngl.quantoDefiniteNo.fewNo,
     <br>* McsEngl.quanto.fewNo,
+    <br>====== langoChinese:
+    <br>* McsZhon.duō-多!=fewNo,
+    <br>* McsZhon.多-duō!=fewNo,
     <a class="clsHide" href="#idQntDftNFewNnam"></a></p>
   </section>
 
@@ -2516,14 +2529,16 @@
     oIptDcml = document.getElementById('idIptDcml'),
     oIptHxdl = document.getElementById('idIptHxdl'),
     oIptOctl = document.getElementById('idIptOctl'),
-    oIptBnry = document.getElementById('idIptBnry')
+    oIptBnry = document.getElementById('idIptBnry'),
+    oSpnErr = document.getElementById('idSpnErr')
 
   // converts from decimals
   oIptDcml.addEventListener('keyup', function(oEvtIn) {
     if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
       if (!/^[0-9]+$/.test(oIptDcml.value)) {
-        oIptHxdl.value = 'this is NOT a decimal-number'
+        oSpnErr.innerHTML = ' &nbsp; &nbsp; ERROR: "' +oIptDcml.value +'" is NOT a decimal-number'
       } else {
+        oSpnErr.innerHTML = ''
         oIptHxdl.value = Number(oIptDcml.value).toString(16)
         oIptOctl.value = Number(oIptDcml.value).toString(8)
         oIptBnry.value = Number(oIptDcml.value).toString(2)
@@ -2535,8 +2550,9 @@
   oIptHxdl.addEventListener('keyup', function(oEvtIn) {
     if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
       if (!/^[0-9A-Fa-f]+$/.test(oIptHxdl.value)) {
-        oIptDcml.value = 'this is NOT a hex-number'
+        oSpnErr.innerHTML = ' &nbsp; &nbsp; ERROR: "' +oIptHxdl.value +'" is NOT a hex-number'
       } else {
+        oSpnErr.innerHTML = ''
         oIptDcml.value = parseInt(oIptHxdl.value, 16).toLocaleString()
         oIptOctl.value = parseInt(oIptHxdl.value, 16).toString(8)
         oIptBnry.value = parseInt(oIptHxdl.value, 16).toString(2)
@@ -2548,8 +2564,9 @@
   oIptOctl.addEventListener('keyup', function(oEvtIn) {
     if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
       if (!/^[0-7]+$/.test(oIptOctl.value)) {
-        oIptDcml.value = 'this is NOT a octal-number'
+        oSpnErr.innerHTML = ' &nbsp; &nbsp; ERROR: "' +oIptOctl.value +'" is NOT a octal-number'
       } else {
+        oSpnErr.innerHTML = ''
         oIptDcml.value = parseInt(oIptOctl.value, 8).toLocaleString()
         oIptHxdl.value = parseInt(oIptOctl.value, 8).toString(16)
         oIptBnry.value = parseInt(oIptOctl.value, 8).toString(2)
@@ -2561,8 +2578,9 @@
   oIptBnry.addEventListener('keyup', function(oEvtIn) {
     if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
       if (!/^[0-1]+$/.test(oIptBnry.value)) {
-        oIptDcml.value = 'this is NOT a binary-number'
+        oSpnErr.innerHTML = ' &nbsp; &nbsp; ERROR: "' +oIptBnry.value +'" is NOT a binary-number'
       } else {
+        oSpnErr.innerHTML = ''
         oIptDcml.value = parseInt(oIptBnry.value, 2).toLocaleString()
         oIptHxdl.value = parseInt(oIptBnry.value, 2).toString(16)
         oIptOctl.value = parseInt(oIptBnry.value, 2).toString(8)
