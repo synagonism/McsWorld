@@ -51,7 +51,7 @@ import {fWriteJsonArray} from './mUtil.mjs'
 const
   // contains the-versions of mHitp.js 
   aVersion = [
-    'mNamidx.mjs.0-3-0.2022-01-07: lagElla',
+    'mNamidx.mjs.0-4-0.2022-02-09: p-Mcs',
     'mNamidx.mjs.0-2-0.2021-12-31: lagEspo',
     'mNamidx.mjs.0-1-0.2021-11-29: creation',
     'namidx: {2021-11-19} index-files-comments',
@@ -264,7 +264,6 @@ function fNamidx(fileIn, fSftpIn) {
         } else {
           if (aLag[nL] === 'lagElln') {
             if (sLn.startsWith('    <br>* ενν.')
-             || sLn.startsWith('    <br>* McsElln.')
              || sLn.startsWith('    <br> &nbsp; &nbsp;* ενν.') // σύνταγμα.2008 ειδική περίπτωση!
              || sLn.startsWith('    <br> &nbsp; &nbsp; &nbsp; &nbsp;* ενν.')) {
               if (sLn.indexOf('* ενν.') > 0) {
@@ -274,24 +273,23 @@ function fNamidx(fileIn, fSftpIn) {
               }
               fStoreNamUrlLag(aNU, aLag[nL])
             }
-          } else {
-            if (sLn.startsWith('    <br>* Mcs'+aLag[nL].substring(3)+'.')) {
-              if (bMcsSection) {
-                aNU = [sLn.substring(18, sLn.indexOf(',')), sUrl]
-                fStoreNamUrlLag(aNU, aLag[nL])
-              } else {
-                aNU = [sLn.substring(18, sLn.indexOf(',')), sUrlP]
-                fStoreNamUrlLag(aNU, aLag[nL])
-                // if previous-id different for current
-                // we have a-new-paragraph-cpt
-                // because in one paragraph we can-have many Mcs.
-                if (sUrlPPrev !== sUrlP) {
-                  if (aLag[nL] === 'lagEngl') {
-                    nMcsqnt = nMcsqnt + 1
-                  }
+          }
+          if (sLn.startsWith('    <br>* Mcs'+aLag[nL].substring(3)+'.')) {
+            if (bMcsSection) {
+              aNU = [sLn.substring(18, sLn.indexOf(',')), sUrl]
+              fStoreNamUrlLag(aNU, aLag[nL])
+            } else {
+              aNU = [sLn.substring(18, sLn.indexOf(',')), sUrlP]
+              fStoreNamUrlLag(aNU, aLag[nL])
+              // if previous-id different for current
+              // we have a-new-paragraph-cpt
+              // because in one paragraph we can-have many Mcs.
+              if (sUrlPPrev !== sUrlP) {
+                if (aLag[nL] === 'lagEngl') {
+                  nMcsqnt = nMcsqnt + 1
                 }
-                sUrlPPrev = sUrlP
               }
+              sUrlPPrev = sUrlP
             }
           }
         }
