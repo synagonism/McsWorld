@@ -285,6 +285,8 @@ function fNamidx(fileIn, fSftpIn) {
               // we have a-new-paragraph-cpt
               // because in one paragraph we can-have many Mcs.
               if (sUrlPPrev !== sUrlP) {
+                //we count a-concept in ONE language and try all concepts
+                //to have at least and English name
                 if (aLag[nL] === 'lagEngl') {
                   nMcsqnt = nMcsqnt + 1
                 }
