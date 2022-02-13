@@ -1,10 +1,10 @@
 /*
- * mSortFileReverse.mjs - module that sorts the-lines of text-file in reverse order
+ * mEllnTtfm.mjs - module that converts Greek text to phonemic-notation
  * The MIT License (MIT)
  *
  * Copyright (c) 2022 Kaseluris.Nikos.1959 (hmnSngo)
  * kaseluris.nikos@gmail.com
- * https:// synagonism.net/
+ * https://synagonism.net/
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -26,45 +26,44 @@
  *
  * DOING:
  *   it works as a-module AND stand-alone.
- * INPUT: a-text file
- * OUTPUT: this file after reverse sorting
+ *   1) it reads the-wrdidx.txt, and creates the-word-concepts for the-words in.
+ *   2) it creates the-file 'sftp.json' that contains the-changed files we have to upload.
+ *   3) it computes the-number of names.
+ *   4) it computes the-number of concepts.
+ *   5) it uploads the-files
+ * INPUT: wrdidx.txt
+ * OUTPUT: dirWrdidx/dirLang/wrdidx.lagLangX.last.html, wrdidx.lagRoot.json, Mcsqnt.json, sftp.json,
  *
- * RUN: node Mcsmgr/mSortFileReverse.mjs sFileIn sFileOut
+ * RUN: node Mcsmgr/mEllnTtfm.mjs pwd ALONE|ANYTHING
+ *
+ * PROBLEM:
+ * - 
+ *
  */
 
 import moFs from 'fs';
 import mfReadlines from 'n-readlines'; // npm install n-readlines
-import {fWriteJsonArray} from './mUtil.mjs'
+//import mfClient from 'ssh2-sftp-client'
+//import mfEs6_promise_pool from 'es6-promise-pool'
+//import {oSftp, fSftp} from './mSftp.mjs'
+//import {fWriteJsonArray} from './mUtil.mjs'
+import {fGreekwordFindPhonemic} from './mLagUtil.mjs'
 
 const
-  // contains the-versions of mSortFileReverse.mjs 
+  // contains the-versions of mHitp.js 
   aVersion = [
-    'mSortFileReverse.mjs: {2022-01-26} created'
+    'mEllnTtfm.mjs.0-1-0.2022-02-11: created'
   ]
 
 let
-  sFileIn,
-  sFileOut
-
-if (process.argv[2]) {
-  sFileIn = process.argv[2]
-} else {
-  console.log('type sFileIn after mSortFileReverse.mjs')
-  process.exit()
-}
-
-if (process.argv[3]) {
-  sFileOut = process.argv[3]
-} else {
-  console.log('type sFileOut after sFileIn')
-  process.exit()
-}
+  sFileIn = 'wrd.txt',
+  sFileOut = 'wrdidx.txt'
 
 
 /**
- * DOING: it sorts the-lines by suffix
+ * DOING: it finds the-phonemic-notation of Greek-words
  */
-function mSortFileReverse(sFileIn, sFileOut) {
+function mEllnTtfm(sFileIn, sFileOut) {
   let
     aFileIn,
     aFile = [],
@@ -76,20 +75,8 @@ function mSortFileReverse(sFileIn, sFileOut) {
 
   for (n = 0; n < aFileIn.length; n++) {
     sLn = aFileIn[n]
-    //reverse line
-    sLn = sLn.split('').reverse().join('')
-    //add on new array
-    aFile[n] = sLn
-  }
-
-  //sort new array
-  aFile = aFile.sort()
-
-  //reverse the-new array
-  for (n = 0; n < aFile.length; n++) {
-    sLn = aFile[n]
-    //reverse line
-    sLn = sLn.split('').reverse().join('')
+    //finds pronunciation
+    sLn = sLn + fGreekwordFindPhonemic(sLn)
     //add on new array
     aFile[n] = sLn
   }
@@ -103,6 +90,6 @@ function mSortFileReverse(sFileIn, sFileOut) {
   //write new file
   moFs.writeFileSync(sFileOut, s)
 }
-mSortFileReverse(sFileIn, sFileOut)
+mEllnTtfm(sFileIn, sFileOut)
 
-export {mSortFileReverse}
+export {mEllnTtfm}
