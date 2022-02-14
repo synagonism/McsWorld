@@ -47,7 +47,7 @@ import mfReadlines from 'n-readlines'; // npm install n-readlines
 //import mfEs6_promise_pool from 'es6-promise-pool'
 //import {oSftp, fSftp} from './mSftp.mjs'
 //import {fWriteJsonArray} from './mUtil.mjs'
-import {fGreekwordFindPhonemic} from './mLagUtil.mjs'
+import * as moLagUtil from './mLagUtil.js'
 
 const
   // contains the-versions of mHitp.js 
@@ -76,7 +76,7 @@ function mEllnTtfm(sFileIn, sFileOut) {
   for (n = 0; n < aFileIn.length; n++) {
     sLn = aFileIn[n]
     //finds pronunciation
-    sLn = sLn + fGreekwordFindPhonemic(sLn)
+    sLn = sLn + moLagUtil.fGreekwordFindPhonemic(sLn)
     //add on new array
     aFile[n] = sLn
   }

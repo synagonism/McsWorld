@@ -1,5 +1,5 @@
 /*
- * mWrdidx.mjs - module that creates word-indecies and uploads the-files
+ * mWrdidx.mjs - module that creates word-indecies index and uploads the-files
  * The MIT License (MIT)
  *
  * Copyright (c) 2022 Kaseluris.Nikos.1959 (hmnSngo)
@@ -95,27 +95,29 @@ if (bAlone) {
 }
 
 /**
- * we can call this method to index words
+ * DOING: we can call this method as module
+ * INPUT:
+ *     - asWordsIn: an array-of-words OR one word to index.
  */
 function fWrdidx(asWordsIn, sMethodIn, fSftpIn) {
   let
     oNextln,
-    oSetFileUp = new Set, 
     // files to upload, index, Mcs, Mcsqnt
     // we use a-set, because we add same files and want unique.
-    aWordsIn,
+    oSetFileUp = new Set, 
     // array with words to index
+    aWordsIn,
     aLag,
-    aRootWordIdx_Idx_Qntwrd = JSON.parse(moFs.readFileSync('dirWrdidx/wrdidx.lagRoot.json')),
     // [['lagEngl01ei','A',1111]} with quantity of words
+    aRootWordIdx_Idx_Qntwrd = JSON.parse(moFs.readFileSync('dirWrdidx/wrdidx.lagRoot.json')),
+    // array with the-Wrdidx-file and the-quantity of words they include
+    // [ 'dirWrdidx/McsWrdidxElln01alfa.last.html', 51 ]
     aWords_QntMcs = [],
-    // array with the-file-Mcs and the-quantity of Mcs they include
-    // [ 'dirTchInf/McsTchInf999999.last.html', 51 ]
-    aRootWordIdx_Idx = {},
     // holds the-names of index-files and the related chars
     // {lagEngl01ei:'A|a', lagZhon024:'13312..14000'}
-    aWordIdx_Qntwrd = {},
-    // {lagEngl01ei:222} the-quantities of names of index-files
+    aRootWordIdx_Idx = {},
+    // {lagEngl01ei:222} the-quantities of word of Wrdidx-files
+    oWordIdx_Qntwrd = {},
     sLn,
     n
 
@@ -276,12 +278,12 @@ function fWrdidx(asWordsIn, sMethodIn, fSftpIn) {
           }
           aEx = fRemoveArrayDupl(aEx) // remove duplicates
           aEx.sort(fCompare)
-          aWordIdx_Qntwrd[sFilIdx] = aEx.length
+          oWordIdx_Qntwrd[sFilIdx] = aEx.length
           aEx.unshift(sMeta)
           fWriteJsonQntDate(sFileIdxFullExist, aEx)
         } else {
           // index-file does not exist, write new-array of names.
-          aWordIdx_Qntwrd[sFilIdx] = aNew.length
+          oWordIdx_Qntwrd[sFilIdx] = aNew.length
           let
             aMeta = []
           aMeta[0] = ';' +sFilIdx
@@ -364,7 +366,7 @@ function fWrdidx(asWordsIn, sMethodIn, fSftpIn) {
             }
             // store fileIdx length
             if (bRemoved) {
-              aWordIdx_Qntwrd[sFileIdxShort] = aNamDif.length - 1
+              oWordIdx_Qntwrd[sFileIdxShort] = aNamDif.length - 1
               // sFileIdxShort changed, store it
               fWriteJsonQntDate(sFileIdxFull, aNamDif)
             }
@@ -646,11 +648,11 @@ function fWrdidx(asWordsIn, sMethodIn, fSftpIn) {
    * DOING: it computes quantities of names
    */
   function fComputeQntName() {
-    // aWordIdx_Qntwrd={lagEngl00: 1101,lagEngl01ei: 419,lagEngl03si_1: 1038,lagEngl03si_2_1: 6959}
+    // oWordIdx_Qntwrd={lagEngl00: 1101,lagEngl01ei: 419,lagEngl03si_1: 1038,lagEngl03si_2_1: 6959}
     // the-set of index-files we computed
     let oSetNamidxComputed = new Set()
 
-    for (let sFileIdx in aWordIdx_Qntwrd) {
+    for (let sFileIdx in oWordIdx_Qntwrd) {
       //console.log('>>> compute: '+sFileIdx)
       let sFileIdxRef // the-reference-file lagEngl03si_2_0
 
@@ -676,7 +678,7 @@ function fWrdidx(asWordsIn, sMethodIn, fSftpIn) {
     // and computes new sums
     function fUpdate_from_oFileIdxQ(sFileIdxRefIn) {
       // read array of index-file
-      // iterate over array and update aWordIdx_Qntwrd items
+      // iterate over array and update oWordIdx_Qntwrd items
       // store new file
       // [";lagEngl03si_2_0",";char",129181,"2018-07-29","codepoint order"],
       // ["lagEngl03si_2_1","char",6959],
@@ -689,12 +691,12 @@ function fWrdidx(asWordsIn, sMethodIn, fSftpIn) {
         //console.log("update: " +sFileIdxRefIn)
         for (n = 1; n < aNi.length; n++) {
           // aNi=[["lagEngl03si_2_1","char",1000]]
-          // aWordIdx_Qntwrd= [lagEngl03si_2_1:1000]]
-          // if aWordIdx_Qntwrd contains info of aNi[n]
+          // oWordIdx_Qntwrd= [lagEngl03si_2_1:1000]]
+          // if oWordIdx_Qntwrd contains info of aNi[n]
           if (!aNi[n][0].startsWith(';')) {
             // don't compute lag-sums twice [";lagEngl","English",145191],
-            if (aWordIdx_Qntwrd[aNi[n][0]]) {
-              aNi[n][2] = aWordIdx_Qntwrd[aNi[n][0]]
+            if (oWordIdx_Qntwrd[aNi[n][0]]) {
+              aNi[n][2] = oWordIdx_Qntwrd[aNi[n][0]]
               nSum = nSum + aNi[n][2]
               oSetNamidxComputed.add(aNi[n][0])
             } else {
@@ -723,11 +725,11 @@ function fWrdidx(asWordsIn, sMethodIn, fSftpIn) {
             aNi[nLag][2] = nSum
             nSum = 0
             nLag = n
-          } else if (aWordIdx_Qntwrd[aNi[n][0]] >= 0) {
-            aNi[n][2] = aWordIdx_Qntwrd[aNi[n][0]]
+          } else if (oWordIdx_Qntwrd[aNi[n][0]] >= 0) {
+            aNi[n][2] = oWordIdx_Qntwrd[aNi[n][0]]
             nSum = nSum + aNi[n][2]
             oSetNamidxComputed.add(aNi[n][0])
-          } else if (!aWordIdx_Qntwrd[aNi[n][0]]) {
+          } else if (!oWordIdx_Qntwrd[aNi[n][0]]) {
             nSum = nSum + aNi[n][2]
           }
         }

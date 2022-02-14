@@ -50,7 +50,7 @@ function fFindCharsIfCodepoints (sCpIn) {
     nIn = Number(aIn[n])
     sOut = sOut + String.fromCodePoint(nIn)
   }
-  return = sOut
+  return sOut
 }
 
 /**
@@ -75,7 +75,7 @@ function fFindCodepointsIfChars (sCharsIn) {
       sOut = sOut + sIn.codePointAt(n) + '-'
     }
   }
-  return = sOut.substring(0, sOut.length-1)
+  return sOut.substring(0, sOut.length-1)
 }
 
 /**
@@ -98,7 +98,6 @@ function fFindLettersFirstIfSuffix (sWordIn, nSuffixIn) {
   return sWordIn.substring(0, sWordIn.length - nSuffixIn)
 }
 
-
 /**
  * DOING: it returns the-last letters of a-word.
  * INPUT:
@@ -115,7 +114,7 @@ function fFindLettersLastIfPrefix (sWordIn, nPrefixIn) {
  *    sWordIn = the-input word.
  *    nSuffixIn = the-number of last letters given.
  */
-function fFindLaststLettersIfSuffix (sWordIn, nSuffixIn) {
+function fFindLettersLastIfSuffix (sWordIn, nSuffixIn) {
   return sWordIn.substring(sWordIn.length - nSuffixIn, sWordIn.length)
 }
 
@@ -139,7 +138,7 @@ function fFindLaststLettersIfSuffix (sWordIn, nSuffixIn) {
  *            οι  ρόι-δι
  *            οη  βόη-θα
  */
-function fGreek_tonosFindIndex(sWordIn) {
+function fGreektonosFindIndex(sWordIn) {
   let
     nTonos = -1
 
@@ -216,7 +215,7 @@ function fGreek_tonosFindIndex(sWordIn) {
 /*
  * DOING: it removes the-tonos from a-word.
  */
-function fGreek_tonosRemove (sWordIn) {
+function fGreektonosRemove (sWordIn) {
   if (sWordIn.indexOf("ά") != -1)
     return sWordIn.replace('ά','α')
   else if (sWordIn.indexOf("έ") != -1)
@@ -244,7 +243,7 @@ function fGreek_tonosRemove (sWordIn) {
  *    we need this method in cases where we create a-word-member, and the-word
  *    has 2 tonos the-old (from stem) and the-new (from suffix).
  */
-function fGreek_tonosRemoveFirst (sWordIn) {
+function fGreektonosRemoveFirst (sWordIn) {
   let
     nIndexFirst,
     nIndexOne=-1,
@@ -292,39 +291,39 @@ function fGreek_tonosRemoveFirst (sWordIn) {
   if (sChar == 'ά')
     return  sWordIn.substring(0, sWordIn.indexOf(nIndexFirst))
             +"α"
-            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length())
+            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length)
   else if (sChar == 'έ')
     return  sWordIn.substring(0, sWordIn.indexOf(nIndexFirst))
             +"ε"
-            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length())
+            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length)
   else if (sChar == 'ή')
     return  sWordIn.substring(0, sWordIn.indexOf(nIndexFirst))
             +"η"
-            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length())
+            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length)
   else if (sChar == 'ί')
     return  sWordIn.substring(0, sWordIn.indexOf(nIndexFirst))
             +"ι"
-            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length())
+            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length)
   else if (sChar == 'ό')
     return  sWordIn.substring(0, sWordIn.indexOf(nIndexFirst))
             +"ο"
-            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length())
+            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length)
   else if (sChar == 'ύ')
     return  sWordIn.substring(0, sWordIn.indexOf(nIndexFirst))
             +"υ"
-            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length())
+            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length)
   else if (sChar == 'ώ')
     return  sWordIn.substring(0, sWordIn.indexOf(nIndexFirst))
             +"ω"
-            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length())
+            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length)
   else if (sChar == 'ΰ')
     return  sWordIn.substring(0, sWordIn.indexOf(nIndexFirst))
             +"υ"
-            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length())
+            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length)
   else if (sChar == 'ΐ')
     return  sWordIn.substring(0, sWordIn.indexOf(nIndexFirst))
             +"ι"
-            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length())
+            +sWordIn.substring(sWordIn.indexOf(nIndexFirst)+1, sWordIn.length)
   else
     return sWordIn
 }
@@ -337,20 +336,20 @@ function fGreek_tonosRemoveFirst (sWordIn) {
  *       3 for proparaligousa
  *       -1 for a mistake
  */
-function fGreek_tonosFindSyllable (sWordIn) {
+function fGreektonosFindSyllable (sWordIn) {
   sWordIn = sWordIn.toLowerCase()
   let
-    nTonos = fGreek_tonosFindIndex(sWordIn),
+    nTonos = fGreektonosFindIndex(sWordIn),
     nLiyusa =-1,
     nParaliyusa =-1,
     nProparaliyusa =-1
 
-  sWordIn = fGreek_tonosRemove(sWordIn)
-  nLiyusa = fGreek_vowel_indexFindLast(sWordIn)
+  sWordIn = fGreektonosRemove(sWordIn)
+  nLiyusa = fGreekvowelindexFindLast(sWordIn)
   if (nLiyusa != -1)
-    nParaliyusa = fGreek_vowel_indexFindLast(sWordIn.substring(0, nLiyusa))
+    nParaliyusa = fGreekvowelindexFindLast(sWordIn.substring(0, nLiyusa))
   if (nParaliyusa != -1)
-    nProparaliyusa = fGreek_vowel_indexFindLast(sWordIn.substring(0, nParaliyusa))
+    nProparaliyusa = fGreekvowelindexFindLast(sWordIn.substring(0, nParaliyusa))
 
   if (nTonos == nLiyusa)
     return 1
@@ -366,38 +365,38 @@ function fGreek_tonosFindSyllable (sWordIn) {
  * DOING: it sets the-tonos on liyusa.
  * INPUT: the-word has no tonos.
  */
-function fGreek_tonosSetOnLiyusa (sWordIn) {
+function fGreektonosSetOnLiyusa (sWordIn) {
   let
     nVowelLast
 
   sWordIn = sWordIn.toLowerCase()
   //find the MAX index of vowels.
-  nVowelLast = greekVowel_IndexFindLast(sWordIn)
+  nVowelLast = fGreekvowelindexFindLast(sWordIn)
 
-  return fGreek_tonosSetOnIndex(sWordIn, nVowelLast)
+  return fGreektonosSetOnIndex(sWordIn, nVowelLast)
 }
 
 /*
  * DOING: it set the-tonos on paraliyusa.
  * INPUT: the-word has no tonos.
  */
-function fGreek_tonosSetOnParaliyusa (sWordIn) {
+function fGreektonosSetOnParaliyusa (sWordIn) {
   let
     nVowelLast,
     sWord2
 
   sWordIn = sWordIn.toLowerCase()
-  nVowelLast = greekVowel_IndexFindLast(sWordIn)
+  nVowelLast = fGreekvowelindexFindLast(sWordIn)
   sWord2 = sWordIn.substring(0, nVowelLast)
-  nVowelLast = greekVowel_IndexFindLast(sWord2)
-  return fGreek_tonosSetOnIndex(sWordIn, nVowelLast)
+  nVowelLast = fGreekvowelindexFindLast(sWord2)
+  return fGreektonosSetOnIndex(sWordIn, nVowelLast)
 }
 
 /*
  * DOING: it set the-tonos on index.
  * INPUT: the-word has no tonos.
  */
-function fGreek_tonosSetOnIndex (sWordIn, nVowelLast) {
+function fGreektonosSetOnIndex (sWordIn, nVowelLast) {
   let
     sChar
 
@@ -406,60 +405,60 @@ function fGreek_tonosSetOnIndex (sWordIn, nVowelLast) {
   if (sChar == 'α')
   {
     //if α is **NOT** the last-vowel
-    if (nVowelLast != sWordIn.length()-1)
+    if (nVowelLast != sWordIn.length-1)
     {
       if (sWordIn.charAt(nVowelLast+1) == 'ι')
-        return sWordIn.substring(0, nVowelLast+1) +"ί" +sWordIn.substring(nVowelLast+2, sWordIn.length())
+        return sWordIn.substring(0, nVowelLast+1) +"ί" +sWordIn.substring(nVowelLast+2, sWordIn.length)
       else if (sWordIn.charAt(nVowelLast+1) == 'υ')
-        return sWordIn.substring(0, nVowelLast+1) +"ύ" +sWordIn.substring(nVowelLast+2, sWordIn.length())
+        return sWordIn.substring(0, nVowelLast+1) +"ύ" +sWordIn.substring(nVowelLast+2, sWordIn.length)
       else
-        return sWordIn.substring(0, nVowelLast) +"ά" +sWordIn.substring(nVowelLast+1, sWordIn.length())
+        return sWordIn.substring(0, nVowelLast) +"ά" +sWordIn.substring(nVowelLast+1, sWordIn.length)
     }
     else
-      return sWordIn.substring(0, nVowelLast) +"ά" +sWordIn.substring(nVowelLast+1, sWordIn.length())
+      return sWordIn.substring(0, nVowelLast) +"ά" +sWordIn.substring(nVowelLast+1, sWordIn.length)
   }
   else if (sChar == 'ε')
   {
     //if ε is **NOT** the last-vowel
-    if (nVowelLast != sWordIn.length()-1)
+    if (nVowelLast != sWordIn.length-1)
     {
       if (sWordIn.charAt(nVowelLast+1) == 'ι')
-        return sWordIn.substring(0, nVowelLast+1) +"ί" +sWordIn.substring(nVowelLast+2, sWordIn.length())
+        return sWordIn.substring(0, nVowelLast+1) +"ί" +sWordIn.substring(nVowelLast+2, sWordIn.length)
       else if (sWordIn.charAt(nVowelLast+1) == 'υ')
-        return sWordIn.substring(0, nVowelLast+1) +"ύ" +sWordIn.substring(nVowelLast+2, sWordIn.length())
+        return sWordIn.substring(0, nVowelLast+1) +"ύ" +sWordIn.substring(nVowelLast+2, sWordIn.length)
       else
-        return sWordIn.substring(0, nVowelLast) +"έ" +sWordIn.substring(nVowelLast+1, sWordIn.length())
+        return sWordIn.substring(0, nVowelLast) +"έ" +sWordIn.substring(nVowelLast+1, sWordIn.length)
     }
     else
-      return sWordIn.substring(0, nVowelLast) +"έ" +sWordIn.substring(nVowelLast+1, sWordIn.length())
+      return sWordIn.substring(0, nVowelLast) +"έ" +sWordIn.substring(nVowelLast+1, sWordIn.length)
   }
   else if (sChar == 'ο')
   {
     //if ο is **NOT** the last-vowel
-    if (nVowelLast != sWordIn.length()-1)
+    if (nVowelLast != sWordIn.length-1)
     {
       if (sWordIn.charAt(nVowelLast+1) == 'ι')
-        return sWordIn.substring(0, nVowelLast+1) +"ί" +sWordIn.substring(nVowelLast+2, sWordIn.length())
+        return sWordIn.substring(0, nVowelLast+1) +"ί" +sWordIn.substring(nVowelLast+2, sWordIn.length)
       else if (sWordIn.charAt(nVowelLast+1) == 'υ')
-        return sWordIn.substring(0, nVowelLast+1) +"ύ" +sWordIn.substring(nVowelLast+2, sWordIn.length())
+        return sWordIn.substring(0, nVowelLast+1) +"ύ" +sWordIn.substring(nVowelLast+2, sWordIn.length)
       else
-        return sWordIn.substring(0, nVowelLast) +"ό" +sWordIn.substring(nVowelLast+1, sWordIn.length())
+        return sWordIn.substring(0, nVowelLast) +"ό" +sWordIn.substring(nVowelLast+1, sWordIn.length)
     }
     else
-      return sWordIn.substring(0, nVowelLast) +"ό" +sWordIn.substring(nVowelLast+1, sWordIn.length())
+      return sWordIn.substring(0, nVowelLast) +"ό" +sWordIn.substring(nVowelLast+1, sWordIn.length)
   }
   else if (sChar == 'η')
-    return  sWordIn.substring(0, nVowelLast) +"ή" +sWordIn.substring(nVowelLast+1, sWordIn.length())
+    return  sWordIn.substring(0, nVowelLast) +"ή" +sWordIn.substring(nVowelLast+1, sWordIn.length)
   else if (sChar == 'ι')
-    return  sWordIn.substring(0, nVowelLast) +"ί" +sWordIn.substring(nVowelLast+1, sWordIn.length())
+    return  sWordIn.substring(0, nVowelLast) +"ί" +sWordIn.substring(nVowelLast+1, sWordIn.length)
   else if (sChar == 'υ')
-    return  sWordIn.substring(0, nVowelLast) +"ύ" +sWordIn.substring(nVowelLast+1, sWordIn.length())
+    return  sWordIn.substring(0, nVowelLast) +"ύ" +sWordIn.substring(nVowelLast+1, sWordIn.length)
   else if (sChar == 'ω')
-    return  sWordIn.substring(0, nVowelLast) +"ώ" +sWordIn.substring(nVowelLast+1, sWordIn.length())
+    return  sWordIn.substring(0, nVowelLast) +"ώ" +sWordIn.substring(nVowelLast+1, sWordIn.length)
   else if (sChar == 'ϋ')
-    return  sWordIn.substring(0, nVowelLast) +"ΰ" +sWordIn.substring(nVowelLast+1, sWordIn.length())
+    return  sWordIn.substring(0, nVowelLast) +"ΰ" +sWordIn.substring(nVowelLast+1, sWordIn.length)
   else if (sChar == 'ϊ')
-    return  sWordIn.substring(0, nVowelLast) +"ΐ" +sWordIn.substring(nVowelLast+1, sWordIn.length())
+    return  sWordIn.substring(0, nVowelLast) +"ΐ" +sWordIn.substring(nVowelLast+1, sWordIn.length)
   else
     return sWordIn
 }
@@ -467,82 +466,86 @@ function fGreek_tonosSetOnIndex (sWordIn, nVowelLast) {
 /*
  * DOING: it decrease the-tonos: υποκόσμου = >  υπόκοσμου
  */
-function fGreek_tonosDecrease (sWordIn) {
+function fGreektonosDecrease (sWordIn) {
   let
     nIndexTonos,
     nVowelLast,
     sWord2 = ''
 
   sWordIn = sWordIn.toLowerCase()
-  nIndexTonos = fGreek_tonosFindIndex(sWordIn)
-  sWordIn = fGreek_tonosRemove(sWordIn)
+  nIndexTonos = fGreektonosFindIndex(sWordIn)
+  sWordIn = fGreektonosRemove(sWordIn)
 
   try {sWord2 = sWordIn.substring(0, nIndexTonos)}
-  catch (error){console.error('fGreek_tonosDecrease')}
-  nVowelLast = fGreek_vowel_indexFindLast(sWord2)
-  sWordIn = fGreek_tonosSetOnIndex(sWordIn, nVowelLast)
+  catch (error){console.error('fGreektonosDecrease')}
+  nVowelLast = fGreekvowelindexFindLast(sWord2)
+  sWordIn = fGreektonosSetOnIndex(sWordIn, nVowelLast)
 
   return sWordIn
 }
 
 /*
  * DOING: it finds the-index of the-first vowel of a-word without tonos.
+ *    IF ει,οι,αι,ου,αυ,ευ, returns the-index of the-first vowel.
  */
-function fGreek_vowel_indexFindFirst (sWordIn) {
+function fGreekvowelindexFindFirst (sWordIn) {
   let
-    minVowel = 1000
+    nVowelMin = 1000
 
-  sWordIn = greekTonosRemove(sWordIn)
-  if (sWordIn.indexOf("α") < minVowel && sWordIn.indexOf("α") != -1)
-    minVowel = sWordIn.indexOf("α")
-  if (sWordIn.indexOf("ε") < minVowel && sWordIn.indexOf("ε") != -1)
-    minVowel = sWordIn.indexOf("ε")
-  if (sWordIn.indexOf("ο") < minVowel && sWordIn.indexOf("ο") != -1)
-    minVowel = sWordIn.indexOf("ο")
-  if (sWordIn.indexOf("η") < minVowel && sWordIn.indexOf("η") != -1)
-    minVowel = sWordIn.indexOf("η")
-  if (sWordIn.indexOf("ω") < minVowel && sWordIn.indexOf("ω") != -1)
-    minVowel = sWordIn.indexOf("ω")
-  if (sWordIn.indexOf("ι") < minVowel && sWordIn.indexOf("ι") != -1) {
+  sWordIn = sWordIn.toLowerCase()
+  sWordIn = fGreektonosRemove(sWordIn)
+  if (sWordIn.indexOf("α") < nVowelMin && sWordIn.indexOf("α") != -1)
+    nVowelMin = sWordIn.indexOf("α")
+  if (sWordIn.indexOf("ε") < nVowelMin && sWordIn.indexOf("ε") != -1)
+    nVowelMin = sWordIn.indexOf("ε")
+  if (sWordIn.indexOf("ο") < nVowelMin && sWordIn.indexOf("ο") != -1)
+    nVowelMin = sWordIn.indexOf("ο")
+  if (sWordIn.indexOf("η") < nVowelMin && sWordIn.indexOf("η") != -1)
+    nVowelMin = sWordIn.indexOf("η")
+  if (sWordIn.indexOf("ω") < nVowelMin && sWordIn.indexOf("ω") != -1)
+    nVowelMin = sWordIn.indexOf("ω")
+  if (sWordIn.indexOf("ι") < nVowelMin && sWordIn.indexOf("ι") != -1) {
     if (sWordIn.indexOf("ι") != 0) {
       if (  sWordIn.charAt(sWordIn.indexOf("ι")-1) == 'ε'   //ει
           ||sWordIn.charAt(sWordIn.indexOf("ι")-1) == 'ο'   //οι
           ||sWordIn.charAt(sWordIn.indexOf("ι")-1) == 'α' ) //αι
-        minVowel = sWordIn.indexOf("ι")-1
+        nVowelMin = sWordIn.indexOf("ι")-1
       else
-        minVowel = sWordIn.indexOf("ι")
+        nVowelMin = sWordIn.indexOf("ι")
     }
     else
-      minVowel = sWordIn.indexOf("ι")
+      nVowelMin = sWordIn.indexOf("ι")
   }
-  if (sWordIn.indexOf("υ") < minVowel && sWordIn.indexOf("υ") != -1) {
+  if (sWordIn.indexOf("υ") < nVowelMin && sWordIn.indexOf("υ") != -1) {
     if (sWordIn.indexOf("υ") != 0) {
       if (  sWordIn.charAt(sWordIn.indexOf("υ")-1) == 'ο'   //ού
           ||sWordIn.charAt(sWordIn.indexOf("υ")-1) == 'α'   //αύ
           ||sWordIn.charAt(sWordIn.indexOf("υ")-1) == 'ε' ) //εύ, απαγορεύεται
-        minVowel = sWordIn.indexOf("υ")-1
+        nVowelMin = sWordIn.indexOf("υ")-1
       else
-        minVowel = sWordIn.indexOf("υ")
+        nVowelMin = sWordIn.indexOf("υ")
     }
     else
-      minVowel = sWordIn.indexOf("υ")
+      nVowelMin = sWordIn.indexOf("υ")
   }
-  if (sWordIn.indexOf("ϋ") < minVowel && sWordIn.indexOf("ϋ") != -1)
-    minVowel = sWordIn.indexOf("ϋ")
-  if (sWordIn.indexOf("ϊ") < minVowel && sWordIn.indexOf("ϊ") != -1)
-    minVowel = sWordIn.indexOf("ϊ")
+  if (sWordIn.indexOf("ϋ") < nVowelMin && sWordIn.indexOf("ϋ") != -1)
+    nVowelMin = sWordIn.indexOf("ϋ")
+  if (sWordIn.indexOf("ϊ") < nVowelMin && sWordIn.indexOf("ϊ") != -1)
+    nVowelMin = sWordIn.indexOf("ϊ")
 
-  return minVowel
+  return nVowelMin
 }
 
 /*
- * DOING: it finds the-index of the-last vowel of a-sWordIn without tonos.
+ * DOING: it finds the-index of the-LAST vowel of a-sWordIn without tonos.
+ *    IF ει,οι,αι,ου,αυ,ευ, returns the-index of the-first vowel.
  */
-function fGreek_vowel_indexFindLast (sWordIn) {
+function fGreekvowelindexFindLast (sWordIn) {
   let
     nVowelLast = -1
 
-  sWordIn = fGreek_tonosRemove(sWordIn)
+  sWordIn = sWordIn.toLowerCase()
+  sWordIn = fGreektonosRemove(sWordIn)
 
   if (sWordIn.lastIndexOf("α")  >  nVowelLast)
     nVowelLast = sWordIn.lastIndexOf("α")
@@ -587,70 +590,19 @@ function fGreek_vowel_indexFindLast (sWordIn) {
     nVowelLast = sWordIn.lastIndexOf("ϊ")
 
   return nVowelLast
-  sWordIn = greekTonosRemove(sWordIn)
-  int nVowelLast=-1
-
-  if (sWordIn.lastIndexOf("α") > nVowelLast)
-    nVowelLast = sWordIn.lastIndexOf("α")
-  if (sWordIn.lastIndexOf("ε") > nVowelLast)
-    nVowelLast = sWordIn.lastIndexOf("ε")
-  if (sWordIn.lastIndexOf("ο") > nVowelLast)
-    nVowelLast = sWordIn.lastIndexOf("ο")
-
-  if (sWordIn.lastIndexOf("η") > nVowelLast)
-    nVowelLast = sWordIn.lastIndexOf("η")
-  if (sWordIn.lastIndexOf("ω") > nVowelLast)
-    nVowelLast = sWordIn.lastIndexOf("ω")
-
-  if (sWordIn.lastIndexOf("ι") > nVowelLast)
-  {
-    if (sWordIn.lastIndexOf("ι") > 0)
-    {
-      if (  (sWordIn.charAt(sWordIn.lastIndexOf("ι")-1) == 'ε')   //ει
-          ||(sWordIn.charAt(sWordIn.lastIndexOf("ι")-1) == 'ο')   //οι
-          ||(sWordIn.charAt(sWordIn.lastIndexOf("ι")-1) == 'α') ) //αι
-        nVowelLast = sWordIn.lastIndexOf("ι")-1
-      else
-        nVowelLast = sWordIn.lastIndexOf("ι")
-    }
-    else
-      nVowelLast = sWordIn.lastIndexOf("ι")
-  }
-
-  if (sWordIn.lastIndexOf("υ") > nVowelLast)
-  {
-    if (sWordIn.lastIndexOf("υ") != 0)
-    {
-      if (  sWordIn.charAt(sWordIn.lastIndexOf("υ")-1) == 'ο'   //ού
-          ||sWordIn.charAt(sWordIn.lastIndexOf("υ")-1) == 'α'   //αύ
-          ||sWordIn.charAt(sWordIn.lastIndexOf("υ")-1) == 'ε' ) //εύ, απαγορεύεται
-        nVowelLast = sWordIn.lastIndexOf("υ")-1
-      else
-        nVowelLast = sWordIn.lastIndexOf("υ")
-    }
-    else
-      nVowelLast = sWordIn.lastIndexOf("υ")
-  }
-
-  if (sWordIn.lastIndexOf("ϋ") > nVowelLast)
-    nVowelLast = sWordIn.lastIndexOf("ϋ")
-  if (sWordIn.lastIndexOf("ϊ") > nVowelLast)
-    nVowelLast = sWordIn.lastIndexOf("ϊ")
-
-  return nVowelLast
 }
 
 /*
  * DOING: it finds the-number of vowels (αι,ει,οι,ου,αυ,ευ counts one)
  *    of a-word, ie its syllables.
  */
-function fGreek_vowel_numberFind (sWordIn) {
+function fGreekvowelnumberFind (sWordIn) {
   let
     nSyllable = 0,
     nIndex = -1
 
-  while (sWordIn.length() > 0) {
-    nIndex = greekVowel_IndexFindLast(sWordIn)
+  while (sWordIn.length > 0) {
+    nIndex = fGreekvowelindexFindLast(sWordIn)
     if (nIndex != -1) {
       nSyllable++
       sWordIn = sWordIn.substring(0, nIndex)
@@ -659,6 +611,165 @@ function fGreek_vowel_numberFind (sWordIn) {
   }
 
   return nSyllable
+}
+
+/*
+ * DOING: it finds the-phonemic-notation of a-Greek-text-word.
+ * OUTPUT: /aftarhikós/
+ */
+function fGreekwordFindPhonemic (sWordIn) {
+  let
+    nIndex,
+    sOut = sWordIn
+
+  sOut = sOut.replaceAll('γιου', 'yyu') 
+  sOut = sOut.replaceAll('γιω', 'yyo')
+  sOut = sOut.replaceAll('νιου', 'nnu') //καπετάνιους|καπετάνιων
+  sOut = sOut.replaceAll('νιω', 'nno')
+
+  if (sOut.indexOf('ειά') != -1) //παντρειά, δουλειά
+    sOut = sOut.replaceAll('ειά', '111')
+  if (sOut.indexOf('εια') != -1) //άδεια, ακρίβεια
+    sOut = sOut.replaceAll('εια', '111')
+  if (sOut.indexOf('ειό') != -1) //
+    sOut = sOut.replaceAll('ειό', '111')
+  if (sOut.indexOf('ειο') != -1) //,άδειος
+    sOut = sOut.replaceAll('ειο', '111')
+  if (sOut.indexOf('οιά') != -1) //χροιά,
+    sOut = sOut.replaceAll('οιά', '111')
+  if (sOut.indexOf('οια') != -1) //έννοια, έγνοια
+    sOut = sOut.replaceAll('οια', '111')
+  if (sOut.indexOf('οιo') != -1) //,τέτοιος
+    sOut = sOut.replaceAll('οιο', '111')
+  if (sOut.indexOf('ιο') != -1) //βιολί, βιολογία
+    sOut = sOut.replaceAll('ιο', '111')
+  if (sOut.indexOf('ιό') != -1) //,πιόσιμο
+    sOut = sOut.replaceAll('ιό', '111')
+  if (sOut.indexOf('ια') != -1) //κάμπια, Ολυμπιακός
+    sOut = sOut.replaceAll('ια', '111')
+  if (sOut.indexOf('ιά') != -1) //,πιάσιμο
+    sOut = sOut.replaceAll('ιά', '111')
+  if (sOut.indexOf('υά') != -1) //,πιάσιμο
+    sOut = sOut.replaceAll('υά', '111')
+
+  sOut = sOut.replaceAll('ού', 'ú')
+  sOut = sOut.replaceAll('αί', 'é')
+  sOut = sOut.replaceAll('εί', 'í')
+  sOut = sOut.replaceAll('οί', 'í')
+  sOut = sOut.replaceAll('οί', 'í')
+  sOut = sOut.replaceAll('αύα', 'áva') //ναύαρχος
+  sOut = sOut.replaceAll('αύγ', 'ávy') //αύγουστος
+  sOut = sOut.replaceAll('αύδ', 'ávdh') //Κλαύδιος
+  sOut = sOut.replaceAll('αύε', 'áve') //αύε
+  sOut = sOut.replaceAll('αύλ', 'ávl') //ναύλος
+  sOut = sOut.replaceAll('αύμ', 'ávm') //θαύμα
+  sOut = sOut.replaceAll('αύν', 'ávn') //αύν
+  sOut = sOut.replaceAll('αύρ', 'ávr') //Σταύρος
+  sOut = sOut.replaceAll('αύθ', 'áfth') //αύθ
+  sOut = sOut.replaceAll('αύκ', 'áfk') //καύκασος
+  sOut = sOut.replaceAll('αύξ', 'áfks') //αύξ
+  sOut = sOut.replaceAll('αύσ', 'áfs') //ναύσταθμος
+  sOut = sOut.replaceAll('αυσ', 'afs') //καυστήρας
+  sOut = sOut.replaceAll('αύτ', 'áft') //ναύτης
+  sOut = sOut.replaceAll('αύχ', 'áfh') //αύχ
+  sOut = sOut.replaceAll('εύα', 'éva') //εύα
+  sOut = sOut.replaceAll('εύγ', 'évy') //εύγ
+  sOut = sOut.replaceAll('εύδ', 'évdh') //εύδ
+  sOut = sOut.replaceAll('εύε', 'éve') //εύε
+  sOut = sOut.replaceAll('εύλ', 'évl') //εύλ
+  sOut = sOut.replaceAll('εύμ', 'évm') //εύμ
+  sOut = sOut.replaceAll('εύν', 'évn') //εύν
+  sOut = sOut.replaceAll('εύρ', 'évr') //εύρ
+  sOut = sOut.replaceAll('εύθ', 'éfth') //εύθ
+  sOut = sOut.replaceAll('εύκ', 'éfk') //εύκ
+  sOut = sOut.replaceAll('εύξ', 'éfks') //εύξ
+  sOut = sOut.replaceAll('εύσ', 'éfs') //εύσ
+  sOut = sOut.replaceAll('ευσ', 'efs') //ευσ
+  sOut = sOut.replaceAll('εύτ', 'éft') //εύτ
+  sOut = sOut.replaceAll('ευτ', 'eft') //ευτ
+  sOut = sOut.replaceAll('έ', 'é')
+  sOut = sOut.replaceAll('ή', 'í')
+  sOut = sOut.replaceAll('ί', 'í')
+  sOut = sOut.replaceAll('ΐ', 'í')
+  sOut = sOut.replaceAll('ύ', 'í')
+  sOut = sOut.replaceAll('ΰ', 'í')
+  sOut = sOut.replaceAll('ό', 'ó')
+  sOut = sOut.replaceAll('ώ', 'ó')
+  sOut = sOut.replaceAll('ά', 'á')
+
+  sOut = sOut.replaceAll('ντζ', 'nj')
+  sOut = sOut.replaceAll('μπ', 'b')
+  sOut = sOut.replaceAll('ντ', 'd')
+  sOut = sOut.replaceAll('γκ', 'g')
+  sOut = sOut.replaceAll('γγ', 'g')
+  sOut = sOut.replaceAll('τζ', 'j')
+  sOut = sOut.replaceAll('τσ', 'c')
+  sOut = sOut.replaceAll('β', 'v')
+  sOut = sOut.replaceAll('Β', 'v')
+  sOut = sOut.replaceAll('γ', 'y')
+  sOut = sOut.replaceAll('Γ', 'y')
+  sOut = sOut.replaceAll('δ', 'dh')
+  sOut = sOut.replaceAll('Δ', 'dh')
+  sOut = sOut.replaceAll('ζ', 'z')
+  sOut = sOut.replaceAll('Ζ', 'z')
+  sOut = sOut.replaceAll('θ', 'th')
+  sOut = sOut.replaceAll('Θ', 'th')
+  sOut = sOut.replaceAll('κκ', 'k')
+  sOut = sOut.replaceAll('κ', 'k')
+  sOut = sOut.replaceAll('Κ', 'k')
+  sOut = sOut.replaceAll('λλ', 'l')
+  sOut = sOut.replaceAll('λ', 'l')
+  sOut = sOut.replaceAll('Λ', 'l')
+  sOut = sOut.replaceAll('μμ', 'm')
+  sOut = sOut.replaceAll('μ', 'm')
+  sOut = sOut.replaceAll('Μ', 'm')
+  sOut = sOut.replaceAll('νν', 'n')
+  sOut = sOut.replaceAll('ν', 'n')
+  sOut = sOut.replaceAll('Ν', 'n')
+  sOut = sOut.replaceAll('ξ', 'ks')
+  sOut = sOut.replaceAll('Ξ', 'ks')
+  sOut = sOut.replaceAll('π', 'p')
+  sOut = sOut.replaceAll('Π', 'p')
+  sOut = sOut.replaceAll('ρ', 'r')
+  sOut = sOut.replaceAll('Ρ', 'r')
+  sOut = sOut.replaceAll('σ', 's')
+  sOut = sOut.replaceAll('Σ', 's')
+  sOut = sOut.replaceAll('ς', 's')
+  sOut = sOut.replaceAll('τ', 't')
+  sOut = sOut.replaceAll('Τ', 't')
+  sOut = sOut.replaceAll('φ', 'f')
+  sOut = sOut.replaceAll('Φ', 'f')
+  sOut = sOut.replaceAll('χ', 'h')
+  sOut = sOut.replaceAll('Χ', 'h')
+  sOut = sOut.replaceAll('ψ', 'ps')
+  sOut = sOut.replaceAll('Ψ', 'ps')
+
+  sOut = sOut.replaceAll('ου', 'u')
+  sOut = sOut.replaceAll('αι', 'e')
+  sOut = sOut.replaceAll('ει', 'i')
+  sOut = sOut.replaceAll('οι', 'i')
+  sOut = sOut.replaceAll('ε', 'e')
+  sOut = sOut.replaceAll('Ε', 'e')
+  sOut = sOut.replaceAll('η', 'i')
+  sOut = sOut.replaceAll('Η', 'i')
+  sOut = sOut.replaceAll('ι', 'i')
+  sOut = sOut.replaceAll('Ι', 'i')
+  sOut = sOut.replaceAll('ϊ', 'i')
+  sOut = sOut.replaceAll('υ', 'i')
+  sOut = sOut.replaceAll('Υ', 'i')
+  sOut = sOut.replaceAll('ϋ', 'i')
+  sOut = sOut.replaceAll('ο', 'o')
+  sOut = sOut.replaceAll('Ο', 'o')
+  sOut = sOut.replaceAll('ω', 'o')
+  sOut = sOut.replaceAll('Ω', 'o')
+  sOut = sOut.replaceAll('α', 'a')
+  sOut = sOut.replaceAll('Α', 'a')
+
+  if (sOut.indexOf('111') != -1) {
+    return '//' +sOut +'//'
+  } else {
+    return '/' +sOut +'/'
+  }
 }
 
 /*
@@ -777,8 +888,7 @@ function fIsLetterVowelEnglish(sCharIn) {
  * @author nikkas
  *
  */
-function fIsLetterVowelGreek(sCharIn)
-{
+function fIsLetterVowelGreek(sCharIn) {
   if (sCharIn == 'α' ||
       sCharIn == 'ά' ||
       sCharIn == 'A' ||
@@ -818,10 +928,13 @@ function fIsLetterVowelGreek(sCharIn)
     return false
 }
 
-export {fFindCharsIfCodepoints, fFindCodepointsIfChars,
-        fFindLettersFirstIfPrefix, fFindLettersFirstIfSuffix, fFindLettersLastIfPrefix,
-        fFindLettersLastIfSuffix, fGreek_tonosFindSyllable, fGreek_tonosRemove,
-        fGreek_tonosRemoveFirst, fGreek_tonosSetOnIndex, fGreek_tonosSetOnLiyusa,
-        fGreek_tonosSetOnParaliyusa, fGreek_tonosDecrease, fGreek_vowel_indexFindFirst,
-        fGreek_vowel_indexFindLast, fGreek_vowel_numberFind, fIsLetterConsonantEnglish,
-        fIsLetterVowelEnglish, fIsLetterVowelGreek}
+export {
+  fFindCharsIfCodepoints, fFindCodepointsIfChars,
+  fFindLettersFirstIfPrefix, fFindLettersFirstIfSuffix,
+  fFindLettersLastIfPrefix, fFindLettersLastIfSuffix,
+  fGreektonosFindSyllable, fGreektonosRemove,
+  fGreektonosRemoveFirst, fGreektonosSetOnIndex, fGreektonosSetOnLiyusa,
+  fGreektonosSetOnParaliyusa, fGreektonosDecrease, fGreekvowelindexFindFirst,
+  fGreekvowelindexFindLast, fGreekvowelnumberFind, fGreekwordFindPhonemic,
+  fIsLetterConsonantEnglish, fIsLetterVowelEnglish, fIsLetterVowelGreek
+}

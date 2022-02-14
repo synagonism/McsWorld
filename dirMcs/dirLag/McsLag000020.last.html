@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagElln-(0-33-0.2022-02-13 draft) Greek-language</title>
+  <title>Mcs.lagElln-(0-34-0.2022-02-14 draft) Greek-language</title>
   <meta name="keywords" content="Greek-language, lagElln, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -303,9 +303,16 @@
   <h4 id="idLEllnwrdspchH4">02-pronunciation of wordElln
     <a class="clsHide" href="#idLEllnwrdspchH4"></a></h4>
   <p id="idLEllnwrdspchdsn">description::
-    <br>· βιολί-/vyyolí/
+    <br>· there is no one to one relation between a-text-wordElln and its corresponding speech-wordElln.
+    <br>· βιολί/vyyolí/
+    <br>· βιολογία/violoyía/
+    <br>· write a-Greek-word and hit ENTER: <input type="text" id="idIptWrd" class="clsSizeLarge">
+    <br>· <strong>phonemic-notation</strong>:<span id="idSpnWrd" class="clsSizeLarge"></span>
+    <br>· '111' means one to many relation.
+    <br>· search for /phoneme/ to see phonemic-notation.
     <a class="clsHide" href="#idLEllnwrdspchdsn"></a></p>
   <p id="idLEllnwrdspchnam">name::
+    <br>* McsEngl.Webapp.Greek-word-to--phonemic-notation,
     <br>* McsEngl.pronunciation-of-wordElln,
     <br>* McsEngl.wordElln'02-pronunciation,
     <br>* McsEngl.wordElln'pronunciation,
@@ -6755,7 +6762,22 @@
 </section>
 
 <script type="module">
-  import * as oHitp from '../Mcsmgr/mHitp.js'</script>
+  import * as oHitp from '../Mcsmgr/mHitp.js'
+  import {fGreekwordFindPhonemic} from '../Mcsmgr/mLagUtil.js'
+
+  // phonemic-notation
+  document.getElementById('idIptWrd').addEventListener('keyup', function(oEvtIn) {
+    let
+      sIn,
+      sOut
+
+    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
+      sIn = document.getElementById('idIptWrd').value
+      sOut = fGreekwordFindPhonemic(sIn)
+      document.getElementById('idSpnWrd').innerHTML = sOut
+    }
+  })
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
