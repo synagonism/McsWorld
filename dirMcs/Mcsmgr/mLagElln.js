@@ -34,7 +34,7 @@ const
   aVersion = [
     'mLagElln.js.0-1-0.2022-01-15: creation'
   ],
-  sFileElln = 'https://synagonism.net/dirMcs/dirLag/McsLag000020.last.html'
+  sFileElln = 'dirLag/McsLag000020.last.html'
 
 let
   aVerbEllnRegularNo = [],
@@ -64,7 +64,7 @@ function fFindVerbEllnRegularNo () {
 /**
  * DOING: it finds the-members of a-Greek-case.
  *
-function fFindCasembrElln (sBaseIn, sTypeIn) {
+function fFindCasembrElln (sBaseIn, sMethodIn) {
   sMembers = ''
 
   //ΑΡΣΕΝΙΚΑ
@@ -1044,20 +1044,44 @@ function fFindCasembrElln (sBaseIn, sTypeIn) {
 
 /**
  * DOING: it finds info of a-Greek-case.
+ * INPUT:
+ *  - sWordIn = ξαδέρφη-η/ksadhérfi-i/
+ *  - sMethodIn = caseEllnMnG2XiT2SeuNucF2Bo
  */
-async function fFindCaseinfoElln (sBaseIn, sTypeIn) {
+function fFindCaseinfoElln (sWordIn, sMethodIn) {
   let
+    oCase = {}, //the output info
     aInfo = [],
     aMcs,
-    n
-  const response = await fetch(sFileElln);
-  const body = await response.text()
-  aMcs = body.split('\n')
+    n,
+    sStemM, //stem nominativeSingular of method
+    sStemMRem, //remove
+    sStemMInc, //increase
+    sStemMDec, //decrease
+    sStemW, //stem nominativeSingular of word
+    sStemWRem,
+    sStemW3,
+    sStemMx, //
+    sSufxM,
+    sSufxMx,
+    sWord = sWordIn.substr(0, sWordIn.indexOf('-')), //ξαδέρφη
+    sWordArt = sWordIn.substr(0, sWordIn.indexOf('/')), //ξαδέρφη-η
+    sWordArtSpch = sWordIn.substr(sWordIn.indexOf('/')), ///ksadhérfi-i/
+    sWordGS, //genitiveSingular
+    sWordAS, //accusativeSingular
+    sWordVS, //vocativeSingular
+    sWordNP, //nominativePlural
+    sWordGP, //genitivePlural
+    sWordAP, //accusativePlurl
+    sWordVP, //vocativePlural
+    sWordX
+
+  aMcs = moFs.readFileSync(sFileElln).toString().split('\n')
 
   n = aMcs.findIndex(function(sLn){
-    return sLn.indexOf('"idLEllncase' +sTypeIn.substring(8) +'dsn"') > 1
+    return sLn.indexOf('"idLEllncase' +sMethodIn.substring(8) +'dsn"') > 1
   })
-  //we found type
+  //we found method
   sLn = aMcs[n+1] //<p>description::
   sLn = aMcs[n+2] //<br>× caseEllnMnG2Xi
   aInfo.push(sLn.substring(10))
@@ -1079,13 +1103,130 @@ async function fFindCaseinfoElln (sBaseIn, sTypeIn) {
   aInfo.push(sLn.substring(21))
   sLn = aMcs[n+12] //<tr><td><td>νύφ-ες|νυφ-άδες
   aInfo.push(sLn.substring(18))
-  return aInfo
+  console.log(aInfo)
+
+  //find stems
+  sStemM = aInfo[1].substr(0, aInfo[1].indexOf('-'))
+  sStemMRem = moLagUtil.fGreektonosRemove(sStemM)
+  sSufxM = aInfo[1].substr(aInfo[1].lastIndexOf('-')+1)
+  sStemW = sWord.substr(0, sWord.length-sSufxM.length) //ξαδέρφ
+  sStemWRem = moLagUtil.fGreektonosRemove(sStemW)
+
+  //γενι-ενικ gs
+  if (aInfo[2].indexOf('|') != -1) {
+    //we have many forms
+    const aExl = aInfo[2].split('|')
+    sWordGS = fFindWordX(aExl[0]) 
+    for (n=1; n<aExl.length; n++) {
+      sWordGS = sWordGS +'|' +fFindWordX(aExl[n]) 
+    }
+  } else {
+    sWordGS = fFindWordX(aInfo[2])
+  }
+  //console.log(sWordGS)
+
+  /** it returns an-inflection */
+  function fFindWordX(sMethexlIn) {
+    sStemMx = sMethexlIn.substr(0, sMethexlIn.indexOf('-'))
+    sSufxMx = sMethexlIn.substr(sMethexlIn.indexOf('-')+1)
+    if (sStemMx === sStemM) sWordX = sStemW + sSufxMx
+    else if (sStemMx === sStemMRem) sWordX = sStemWRem + sSufxMx
+    sWordX = sWordX + moLagUtil.fGreekwordFindPhonemic(sWordX)
+    if (sWordX.indexOf('111') != -1) console.log(sWordX)
+    return sWordX
+  }
+  
+  oCase.McsElln1 = '.λέξηΕλλν.' + sWordIn +'@wordElln,'
+  oCase.McsElln2 = '.ουσιαστικό.' + sWordIn +'@wordElln,'
+  oCase.nomSin = sWord + sWordArtSpch.substr(0, sWordArtSpch.indexOf('-')) + '/'
+  oCase.genSin = sWordGS
+
+  //αιτ-ενικ as
+  if (aInfo[3].indexOf('|') != -1) {
+    //we have many forms
+    const aExl = aInfo[3].split('|')
+    sWordAS = fFindWordX(aExl[0]) 
+    for (n=1; n<aExl.length; n++) {
+      sWordAS = sWordAS +'|' +fFindWordX(aExl[n]) 
+    }
+  } else {
+    sWordAS = fFindWordX(aInfo[3])
+  }
+  oCase.accSin = sWordAS
+
+  //κλητ-ενικ vs
+  if (aInfo[4].indexOf('|') != -1) {
+    //we have many forms
+    const aExl = aInfo[4].split('|')
+    sWordVS = fFindWordX(aExl[0]) 
+    for (n=1; n<aExl.length; n++) {
+      sWordVS = sWordVS +'|' +fFindWordX(aExl[n]) 
+    }
+  } else {
+    sWordVS = fFindWordX(aInfo[3])
+  }
+  oCase.vocSin = sWordVS
+
+  //ονομ-πληθ np
+  if (aInfo[5].indexOf('|') != -1) {
+    //we have many forms
+    const aExl = aInfo[5].split('|')
+    sWordNP = fFindWordX(aExl[0]) 
+    for (n=1; n<aExl.length; n++) {
+      sWordNP = sWordNP +'|' +fFindWordX(aExl[n]) 
+    }
+  } else {
+    sWordNP = fFindWordX(aInfo[4])
+  }
+  oCase.nomPlu = sWordNP
+
+  //γενι-πληθ gp
+  if (aInfo[6].indexOf('|') != -1) {
+    //we have many forms
+    const aExl = aInfo[6].split('|')
+    sWordGP = fFindWordX(aExl[0]) 
+    for (n=1; n<aExl.length; n++) {
+      sWordGP = sWordGP +'|' +fFindWordX(aExl[n]) 
+    }
+  } else {
+    sWordGP = fFindWordX(aInfo[6])
+  }
+  oCase.genPlu = sWordGP
+
+  //αιτ-πληθ ap
+  if (aInfo[7].indexOf('|') != -1) {
+    //we have many forms
+    const aExl = aInfo[7].split('|')
+    sWordAP = fFindWordX(aExl[0]) 
+    for (n=1; n<aExl.length; n++) {
+      sWordAP = sWordAP +'|' +fFindWordX(aExl[n]) 
+    }
+  } else {
+    sWordAP = fFindWordX(aInfo[7])
+  }
+  oCase.accPlu = sWordAP
+
+  //κλητ-πληθ vp
+  if (aInfo[8].indexOf('|') != -1) {
+    //we have many forms
+    const aExl = aInfo[8].split('|')
+    sWordVP = fFindWordX(aExl[0]) 
+    for (n=1; n<aExl.length; n++) {
+      sWordVP = sWordVP +'|' +fFindWordX(aExl[n]) 
+    }
+  } else {
+    sWordVP = fFindWordX(aInfo[8])
+  }
+  oCase.vocPlu = sWordNP
+
+
+  return oCase
 }
 
 /**
  * DOING: it finds the-members of a-Greek-adjective.
  */
-function fFindAdjvmbrElln (sBaseIn, sTypeIn) {
+function fFindAdjvmbrElln (sBaseIn, sMethodIn) {
   sMembers = sBaseIn
   return sMembers
 }
@@ -1093,7 +1234,7 @@ function fFindAdjvmbrElln (sBaseIn, sTypeIn) {
 /**
  * DOING: it finds the-members of a-Greek-verb.
  */
-function fFindVerbmbrElln (sBaseIn, sTypeIn) {
+function fFindVerbmbrElln (sBaseIn, sMethodIn) {
   sMembers = sBaseIn
   return sMembers
 }

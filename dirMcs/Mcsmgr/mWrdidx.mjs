@@ -182,7 +182,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
       sMethod = sMethodIn,
       sLag = sMethod.substring(4, 8), //Elln
       sInfo,
-      s
+      oCase
 
     aWordinfo[0] = sWord
     sInfo = '  p id="idWrd' + sLag + sSpeech + '">' +
@@ -190,11 +190,8 @@ function fWrdidx(asWordsIn, sMethodIn) {
       '    <br>* McsEngl.word' + sLag + '.' + sWordIn + '@word' + sLag + ',\n' +
       '    <br>* Mcs' + sLag + '.' + sWordIn + '@word' + sLag + ',\n'
 
-    moLagElln.fFindCaseinfoElln(sWord, sMethod).then(
-     function (res) {
-       console.log(res)
-     }
-    )
+    oCase = moLagElln.fFindCaseinfoElln(sWordIn, sMethod)
+    console.log(oCase)
 
     aWordinfo[1] = sInfo
     return aWordinfo
