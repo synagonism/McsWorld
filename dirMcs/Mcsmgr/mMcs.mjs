@@ -316,7 +316,7 @@ s = s +
 moFs.writeFileSync(sDir + '/' + sNameFile, s)
 
 if (bCounter) {
-  moFs.writeFileSync('../dirPgm/dirCntr/dirCntrfiles/' + sNameFileNaked + '.txt', '1');
+  moFs.writeFileSync('../dirPgm/dirCntr/dirCntrfiles/' + sNameFileNaked + '.txt', '1')
 }
 
 // add file to aPages

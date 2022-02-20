@@ -25,31 +25,30 @@
  * SOFTWARE.
  */
 
-import './mLagUtil.js'
+import moFs from 'fs'
+import * as moLagUtil from './mLagUtil.js'
+import fetch from 'node-fetch'
 
 const
   // contains the-versions of mLagElln.js
   aVersion = [
     'mLagElln.js.0-1-0.2022-01-15: creation'
   ],
-  aVerbEllnRegularNo = [],
-  sMembers
+  sFileElln = 'https://synagonism.net/dirMcs/dirLag/McsLag000020.last.html'
 
+let
+  aVerbEllnRegularNo = [],
+  sMembers,
+  oReadlines,
+  oNextln,
+  sLn
 
 function fFindVerbEllnRegularNo () {
-  let
-    sFileEngl = '../dirLag/McsLag000011.last.html'
-
-  fetch(sFileEngl)
-  .then(response => response.text())
-  .then(data => {
-    let
-      oDoc,
-      oOl,
-      aLi
-    oDoc = (new DOMParser()).parseFromString(data, 'text/html')
-    oOl = oDoc.getElementById('idLEnglvrbC1Spcdsn').children[0]
-    aLi = oOl.getElementsByTagName('li')
+  oReadlines = new mfReadlines(sFileElln)
+  while (oNextln = oReadlines.next()) {
+    sLn = oNextln.toString()
+    /*
+    oOl = oDoc.getElementById('idLEnglvrbC1Spcdsn')
     for (let n = 0; n < aLi.length; n++) {
       let s = aLi[n].innerHTML
       if (s.indexOf('<strong>') >= 0)
@@ -57,17 +56,18 @@ function fFindVerbEllnRegularNo () {
       else
         aVerbEllnRegularNo.push(s.substring(0, s.lastIndexOf(',')))
     }
-  })
+    */
+  }
 }
-fFindVerbEllnRegularNo()
+//fFindVerbEllnRegularNo()
 
 /**
  * DOING: it finds the-members of a-Greek-case.
- */
+ *
 function fFindCasembrElln (sBaseIn, sTypeIn) {
   sMembers = ''
 
-//ΑΡΣΕΝΙΚΑ
+  //ΑΡΣΕΝΙΚΑ
     if (subtype.equalsIgnoreCase("eln1a1")) {
       if (greekTonosFind(fform)==1) {
           //ο σφουγγαράς,σφουγγαρά,σφουγγαράδες,σφουγγαράδων
@@ -415,8 +415,8 @@ function fFindCasembrElln (sBaseIn, sTypeIn) {
               +stem +"ούδες";
     }
 
-//*********************************************************************
-//ΘΗΛΥΚΑ
+  //*********************************************************************
+  //ΘΗΛΥΚΑ
     else if (subtype.equalsIgnoreCase("eln2a1")) {
           //η καρδιά,καρδιάς,καρδιές,καρδιών
           stem=getFirstLettersIfSuffix(fform, 1);
@@ -625,7 +625,7 @@ function fFindCasembrElln (sBaseIn, sTypeIn) {
               +stem +"ες";
     }
 
-//θηλυκά σε -ς:
+  //θηλυκά σε -ς:
     else if (subtype.equalsIgnoreCase("eln2c1")) {
       if (greekTonosFind(fform)==3) {
         //αρχαιόκλιτο: η διάμετρος,διαμέτρου,διάμετρο,διάμετροι,διαμέτρων,διαμέτρους
@@ -748,8 +748,8 @@ function fFindCasembrElln (sBaseIn, sTypeIn) {
       }
     }
 
-//*********************************************************************
-//ΟΥΔΕΤΕΡΑ
+  //*********************************************************************
+  //ΟΥΔΕΤΕΡΑ
 
     else if (subtype.equalsIgnoreCase("eln3a1")) {
         if (greekTonosFind(fform)==2) {
@@ -892,7 +892,7 @@ function fFindCasembrElln (sBaseIn, sTypeIn) {
               +stem +"α";
     }
 
-//επίθετα σε -ς:
+  //επίθετα σε -ς:
     else if (subtype.equalsIgnoreCase("eln3d1")) {
         //το κρέας,κρέατος,κρέατα,κρεάτων
         stem=getFirstLettersIfSuffix(fform, 2);
@@ -1028,7 +1028,7 @@ function fFindCasembrElln (sBaseIn, sTypeIn) {
               +stem +"ιά";
     }
 
-//ΑΝΩΜΑΛΑ
+  //ΑΝΩΜΑΛΑ
     else if (subtype.equalsIgnoreCase("eln4a1")) //2001.05.13 {
       forms=getFormsIfIrregular();
     }
@@ -1039,6 +1039,47 @@ function fFindCasembrElln (sBaseIn, sTypeIn) {
     }
 
   return sMembers
+}
+*/
+
+/**
+ * DOING: it finds info of a-Greek-case.
+ */
+async function fFindCaseinfoElln (sBaseIn, sTypeIn) {
+  let
+    aInfo = [],
+    aMcs,
+    n
+  const response = await fetch(sFileElln);
+  const body = await response.text()
+  aMcs = body.split('\n')
+
+  n = aMcs.findIndex(function(sLn){
+    return sLn.indexOf('"idLEllncase' +sTypeIn.substring(8) +'dsn"') > 1
+  })
+  //we found type
+  sLn = aMcs[n+1] //<p>description::
+  sLn = aMcs[n+2] //<br>× caseEllnMnG2Xi
+  aInfo.push(sLn.substring(10))
+  sLn = aMcs[n+3] //</p>
+  sLn = aMcs[n+4] //<table class="clsTblBorderNo">
+  sLn = aMcs[n+5] //<tr><td>η<td>νύφ-η
+  aInfo.push(sLn.substring(19))
+  sLn = aMcs[n+6] //<tr><td>της<td>νύφ-ης
+  aInfo.push(sLn.substring(21))
+  sLn = aMcs[n+7] //<tr><td>την<td>νύφ-η
+  aInfo.push(sLn.substring(21))
+  sLn = aMcs[n+8] //<tr><td><td>νύφ-η
+  aInfo.push(sLn.substring(18))
+  sLn = aMcs[n+9] //<tr><td>οι<td>νύφ-ες|νυφ-άδες
+  aInfo.push(sLn.substring(20))
+  sLn = aMcs[n+10] //<tr><td>των<td>νυφ-άδων
+  aInfo.push(sLn.substring(21))
+  sLn = aMcs[n+11] //<tr><td>τις<td>νύφ-ες|νυφ-άδες
+  aInfo.push(sLn.substring(21))
+  sLn = aMcs[n+12] //<tr><td><td>νύφ-ες|νυφ-άδες
+  aInfo.push(sLn.substring(18))
+  return aInfo
 }
 
 /**
@@ -1057,4 +1098,7 @@ function fFindVerbmbrElln (sBaseIn, sTypeIn) {
   return sMembers
 }
 
-export {aVerbEllnRegularNo}
+export {
+  aVerbEllnRegularNo,
+  fFindCaseinfoElln
+}

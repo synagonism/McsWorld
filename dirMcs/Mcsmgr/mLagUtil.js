@@ -28,6 +28,7 @@
 const
   // contains the-versions of mLagUtil.js
   aVersion = [
+    'mLagUtil.js.0-3-0.2022-02-15: fGreekwordFindPhonemic',
     'mLagUtil.js.0-2-0.2022-01-18: translated from java',
     'mLagUtil.js.0-1-0.2022-01-17: creation'
   ]
@@ -658,31 +659,55 @@ function fGreekwordFindPhonemic (sWordIn) {
   sOut = sOut.replaceAll('οί', 'í')
   sOut = sOut.replaceAll('οί', 'í')
   sOut = sOut.replaceAll('αύα', 'áva') //ναύαρχος
+  sOut = sOut.replaceAll('αυα', 'ava') //
   sOut = sOut.replaceAll('αύγ', 'ávy') //αύγουστος
+  sOut = sOut.replaceAll('αυγ', 'avy') //
   sOut = sOut.replaceAll('αύδ', 'ávdh') //Κλαύδιος
+  sOut = sOut.replaceAll('αυδ', 'avdh') //
   sOut = sOut.replaceAll('αύε', 'áve') //αύε
+  sOut = sOut.replaceAll('αυε', 'ave') //
   sOut = sOut.replaceAll('αύλ', 'ávl') //ναύλος
+  sOut = sOut.replaceAll('αυλ', 'avl') //
   sOut = sOut.replaceAll('αύμ', 'ávm') //θαύμα
+  sOut = sOut.replaceAll('αυμ', 'avm') //
   sOut = sOut.replaceAll('αύν', 'ávn') //αύν
+  sOut = sOut.replaceAll('αυν', 'avn') //
   sOut = sOut.replaceAll('αύρ', 'ávr') //Σταύρος
+  sOut = sOut.replaceAll('αυρ', 'avr') //
   sOut = sOut.replaceAll('αύθ', 'áfth') //αύθ
+  sOut = sOut.replaceAll('αυθ', 'afth') //
   sOut = sOut.replaceAll('αύκ', 'áfk') //καύκασος
+  sOut = sOut.replaceAll('αυκ', 'afk') //
   sOut = sOut.replaceAll('αύξ', 'áfks') //αύξ
+  sOut = sOut.replaceAll('αυξ', 'afks') //
   sOut = sOut.replaceAll('αύσ', 'áfs') //ναύσταθμος
   sOut = sOut.replaceAll('αυσ', 'afs') //καυστήρας
   sOut = sOut.replaceAll('αύτ', 'áft') //ναύτης
+  sOut = sOut.replaceAll('αυτ', 'aft') //
   sOut = sOut.replaceAll('αύχ', 'áfh') //αύχ
+  sOut = sOut.replaceAll('αυχ', 'afh') //
   sOut = sOut.replaceAll('εύα', 'éva') //εύα
+  sOut = sOut.replaceAll('ευα', 'eva') //
   sOut = sOut.replaceAll('εύγ', 'évy') //εύγ
+  sOut = sOut.replaceAll('ευγ', 'evy') //
   sOut = sOut.replaceAll('εύδ', 'évdh') //εύδ
+  sOut = sOut.replaceAll('ευδ', 'evdh') //
   sOut = sOut.replaceAll('εύε', 'éve') //εύε
+  sOut = sOut.replaceAll('ευε', 'eve') //
   sOut = sOut.replaceAll('εύλ', 'évl') //εύλ
+  sOut = sOut.replaceAll('ευλ', 'avl') //
   sOut = sOut.replaceAll('εύμ', 'évm') //εύμ
+  sOut = sOut.replaceAll('ευμ', 'evm') //
   sOut = sOut.replaceAll('εύν', 'évn') //εύν
+  sOut = sOut.replaceAll('ευν', 'evn') //
   sOut = sOut.replaceAll('εύρ', 'évr') //εύρ
+  sOut = sOut.replaceAll('ευρ', 'evr') //
   sOut = sOut.replaceAll('εύθ', 'éfth') //εύθ
+  sOut = sOut.replaceAll('ευθ', 'efth') //
   sOut = sOut.replaceAll('εύκ', 'éfk') //εύκ
+  sOut = sOut.replaceAll('ευκ', 'efk') //
   sOut = sOut.replaceAll('εύξ', 'éfks') //εύξ
+  sOut = sOut.replaceAll('ευξ', 'efks') //
   sOut = sOut.replaceAll('εύσ', 'éfs') //εύσ
   sOut = sOut.replaceAll('ευσ', 'efs') //ευσ
   sOut = sOut.replaceAll('εύτ', 'éft') //εύτ

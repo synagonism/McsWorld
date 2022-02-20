@@ -41,8 +41,8 @@
  *
  */
 
-import moFs from 'fs';
-import mfReadlines from 'n-readlines'; // npm install n-readlines
+import moFs from 'fs'
+import mfReadlines from 'n-readlines' // npm install n-readlines
 import mfClient from 'ssh2-sftp-client'
 import mfEs6_promise_pool from 'es6-promise-pool'
 import {oSftp, fSftp} from './mSftp.mjs'
