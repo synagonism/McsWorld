@@ -1237,6 +1237,7 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
                   oCase.pluGen + '-' +
                   oCase.pluAcc + '-' +
                   oCase.pluVoc
+  //console.log(oCase)
 
   return oCase
 }

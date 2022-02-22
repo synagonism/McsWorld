@@ -99,9 +99,8 @@ if (bAlone) {
  */
 function fWrdidx(asWordsIn, sMethodIn) {
   let
-    oNextln,
     oSetFileUp = new Set, 
-    // files to upload, index, Mcs,
+    // files to upload, 
     // we use a-set, because we add same files and want unique.
     aWordsIn,
     // array with words to index
@@ -117,6 +116,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
     sLn,
     n
 
+  // one wordIn or an array of words
   if (typeof asWordsIn === 'string') {
     aWordsIn = [asWordsIn]
   } else {
@@ -124,7 +124,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
   }
 
   if (aWordsIn.length > 0) {
-    // first file we want to upload
+    // first file we want to upload, IF contain and quantity of words
     oSetFileUp.add('dirWrdidx/McsWrdidx_0.json');
   }
 
@@ -138,31 +138,33 @@ function fWrdidx(asWordsIn, sMethodIn) {
     let
       aWordinfo,
       sWord,
-      aWrdidx,
+      aWrdidxMcs_Idx, //["McsWrdidxElln02vita","Β|β"]
       sWrdidxMcs,
       sWrdidxMcsFull,
       sIndex
 
     sWord = sWordIn
-    console.log(sWord)
-    aWrdidx = fFindWrdidxMcs(sWord, sLag, aRootWrdidx_Idx_Qntwrd)
-    sWrdidxMcs = aWrdidx[0]
-    sIndex = aWrdidx[1]
-    console.log(sWrdidxMcs)
+    //console.log(sWord)
+    aWrdidxMcs_Idx = fFindWrdidxMcs(sWord, sLag, aRootWrdidx_Idx_Qntwrd)
+    sWrdidxMcs = aWrdidxMcs_Idx[0]
+    sIndex = aWrdidxMcs_Idx[1]
+    //console.log(sWrdidxMcs)
 
     sWrdidxMcsFull = 'dirWrdidx/dirLag' + sLag + '/' + sWrdidxMcs
 
     //create word-info
     //["ξαδέρφη-η","  <p id=="idWrdEllnksadhérfi-i"><span class="clsColorRed">ξαδέρφη-η/ksadhérfi-i/..."]
     aWordinfo = fCreateWordinfo(sWord, sMethod)
-    console.log(aWordinfo)
+    //console.log(aWordinfo)
 
     //add word-info
     if (moFs.existsSync(sWrdidxMcsFull)) {
       //add word-info
+      fStoreWordinfo(sWrdidxMcsFull, aWordinfo)
     } else {
       //create file and add word-info
-      //fCreateWrdidxMcs(sWrdidxMcsFull, sIndex)
+      fCreateWrdidxMcs(sWrdidxMcsFull, sIndex)
+      fStoreWordinfo(sWrdidxMcsFull, aWordinfo)
     }
 
     oSetFileUp.add(sWrdidxMcsFull)
@@ -186,8 +188,8 @@ function fWrdidx(asWordsIn, sMethodIn) {
       oCase
 
     aWordinfo[0] = sWord
-    sInfo = '  p id="idWrd' + sLag + sSpeech + '">' +
-      '<span classColorRed">' + sWordIn + '</span>::\n' +
+    sInfo = '  <p id="idWrd' + sLag + sSpeech + '">' +
+      '<span class="clsColorRed">' + sWordIn + '</span>::\n' +
       '    <br>* McsEngl.word' + sLag + '.' + sWordIn + '@word' + sLag + ',\n' +
       '    <br>* Mcs' + sLag + '.' + sWordIn + '@word' + sLag + ',\n'
 
@@ -452,6 +454,17 @@ function fWrdidx(asWordsIn, sMethodIn) {
 
     }
 
+    sInfo = sInfo +
+      '    <br>\n' +
+      '    <br>× base-form: ' + oCase.Baseform + '\n' +
+      '    <br>× base-pronunciation: ' + oCase.Basespch + '\n' +
+      '    <br>× functionality: ' + oCase.functionality + '\n' +
+      '    <br>× pos: ' + oCase.pos + '\n' +
+      '    <br>× gender: ' + oCase.gender + '\n' +
+      '    <br>× inflection-method: ' + oCase.method + '\n' +
+      '    <br>× members: ' + oCase.members + '\n' +
+      '    <a class="clsHide" href="#idWrd' +sLag + sSpeech + '"></a></p>'
+
     aWordinfo[1] = sInfo
     return aWordinfo
   }
@@ -585,312 +598,105 @@ function fWrdidx(asWordsIn, sMethodIn) {
   }
 
   /**
-   * DOING: it stores a-word in a-Wrdidx-file
+   * DOING: it stores a-word-info in a-Wrdidx-file
    * INPUT:
-   *    - sWrdidxIn: McsWrdidxZhon05, McsWrdidxEngl19es_0
-   *    - sWordIn: 'νύφη/nífi/'
-   *    - sLagIn: 'Elln'
+   *    - sWrdidxMcsFullIn: dirWrdinf/dirLagElln/McsWrdidxElln02vita.last.html
+   *    - aWrdinfIn: ['βουνό-το','  p id="idWrdEllnvunó-to"><span...']
    */
-  function fStoreNamUrlNamidx(sWrdidxIn, sWordIn, sLagIn) {
-    //console.log(sWrdidxIn+', '+sWordIn[0])
-    if (!sWrdidxIn.endsWith('_0')) {
-      // Wrdidx is NOT a-reference
-      if (oFileIdx_ANamUrl[sWrdidxIn]) {
-        oFileIdx_ANamUrl[sWrdidxIn].push(sWordIn)
+  function fStoreWordinfo(sWrdidxMcsFullIn, aWrdinfIn) {
+    //1. reads the-file
+    //2. stores the-array
+    //3. sorts the-array
+    //4. stores the-new file
+    let
+      aFile = aWordsInComments = moFs.readFileSync(sWrdidxMcsFullIn).toString().split('\n'),
+      aFile1 = [],  //the-lines BEFORE words
+      aWords = [],  //[['βουνό-το','  p id="idWrdEllnvunó-to"><span...']]
+      aFile2 = [],  //['  p id="idWrdEllnvunó-to"><span...']
+      aFile3 = [], //the-lines AFTER words
+      n,
+      n2,//word lines
+      n3 //meta lines
+
+    for (n=0; n<aFile.length; n++) {
+      if (aFile[n].indexOf('id="idWrd') === -1) {
+        aFile1.push(aFile[n])
       } else {
-        oFileIdx_ANamUrl[sWrdidxIn] = []
-        oFileIdx_ANamUrl[sWrdidxIn].push(sWordIn)
-      }
-    } else {
-      // McsWrdidxEngl19es_0 is a-reference
-      let aNi = JSON.parse(moFs.readFileSync('dirWrdidx/dirLag' + sLagIn
-        +'/' +sWrdidxIn +'.json'))
-      fStoreNamUrlReference(aNi, sWordIn, sLagIn)
-    }
-  }
-
-  /**
-   * DOING:
-   *   stores one name-Url in oFileIdx_ANamUrl
-   *   using Unicode-code-points order
-   * INPUT:
-   * - aWrdidxRefIn: an-array of a-reference-Wrdidx-file
-   * [
-   *   [";McsWrdidxEngl03si_0","C|c",167556,"2021-11-07","codepoint order"],
-   *   ["McsWrdidxEngl03si_1","C..char",2178],
-   *   ["McsWrdidxEngl03si_2_0","char..chas",163164],
-   *   ["McsWrdidxEngl03si_3","chas..D",2214]
-   * ]
-   * - sWordIn: 'name'
-   */
-  function fStoreNamUrlReference(aWrdidxRefIn, sWordIn, sLagIn) {
-    // a-reference-Wrdidx-file ALWAYS contains sequencies (..) of indexes
-    //console.log(sWordIn[0]+':   '+aWrdidxRefIn[0])
-    for (n = 1; n < aWrdidxRefIn.length; n++) {
-      //console.log(sWordIn[0]+':   '+aWrdidxRefIn[n][1])
-      let
-        sIdxCrnt = aWrdidxRefIn[n][1].split('..')[0],
-        sIdxNext = aWrdidxRefIn[n][1].split('..')[1]
-
-      // PROBLEM with supplementary-chars on reference-Wrdidx-files 
-      if (sWordIn[0] >= sIdxCrnt && sWordIn[0] < sIdxNext) {
-        //console.log(sWordIn[0]+', '+aWrdidxRefIn[n][1])
-        // if Wrdidx-file is NOT a-reference, store name-Url
-        if (!aWrdidxRefIn[n][0].endsWith('_0')) {
-          if (oFileIdx_ANamUrl[aWrdidxRefIn[n][0]]) {
-            oFileIdx_ANamUrl[aWrdidxRefIn[n][0]].push(sWordIn)
-          } else {
-            oFileIdx_ANamUrl[aWrdidxRefIn[n][0]] = []
-            oFileIdx_ANamUrl[aWrdidxRefIn[n][0]].push(sWordIn)
-          }
-        } else {
-          // Wrdidx-file is a-reference
-          let aNi = JSON.parse(moFs.readFileSync('dirWrdidx/dirLag' + sLagIn
-              +'/' +aWrdidxRefIn[n][0] +'.json'))
-          fStoreNamUrlReference(aNi, sWordIn, sLagIn)
-        }
+        aFile1.push(aFile[n])   //<section id="idWrd
+        aFile1.push(aFile[n+1]) //  <h1 id="idWrd
+        aFile1.push(aFile[n+2]) //    <a class="clsHide
+        if (aFile[n+3].indexOf('</section>') === 0) {
+          n2 = 0
+          n3 = n + 3
+        } else n2 = n+3
         break
       }
     }
-  }
 
-  /**
-   * DOING: it finds the-index of a-given Wrdidx-file.
-   */
-  function fFindIndex(sWrdidxIn) {
-    let
-      sIdx = '',
-      sFileIdxFull,
-      sLag = sWrdidxIn.substring(3, 7),
-      sFile,
-      aRef
-
-    if (sWrdidxIn.indexOf('_') < 0) {
-      // search root
-      sIdx = fFindIdxArray(aRootWrdidx_Idx_Qntwrd)
-    } else if (sWrdidxIn.endsWith('_0')) {
-      // McsWrdidxEngl03si_0 search McsWrdidxEngl03si
-      // McsWrdidxEngl03si_2_0 search McsWrdidxEngl03si_0
-      sFile = sWrdidxIn.substring(0, sWrdidxIn.lastIndexOf('_'))
-      if (sFile.indexOf('_') < 0) {
-        sIdx = fFindIdxArray(aRootWrdidx_Idx_Qntwrd)
-      } else {
-        sFile = sFile.substring(0, sFile.lastIndexOf('_'))
-        sFileIdxFull = 'dirWrdidx/dirLag'+sLag +'/namidx.' +sFile +'_0.json'
-        aRef = JSON.parse(moFs.readFileSync(sFileIdxFull))
-        sIdx = fFindIdxArray(aRef)
-      }
-    } else {
-      // McsWrdidxEngl03si_2_14 search McsWrdidxEngl03si_2_0
-      sFile = sWrdidxIn.substring(0, sWrdidxIn.lastIndexOf('_'))
-      sFileIdxFull = 'dirWrdidx/dirLag'+sLag +'/namidx.' +sFile +'_0.json'
-      aRef = JSON.parse(moFs.readFileSync(sFileIdxFull))
-      sIdx = fFindIdxArray(aRef)
-    }
-
-    function fFindIdxArray (aFileIdx) {
-      for (n = 1; n < aFileIdx.length; n++) {
-        if (aFileIdx[n][0] === sWrdidxIn) {
-          // we found idxfile
-          sIdx = aFileIdx[n][1]
+    if (n2 !== 0) {
+      let
+        sName,
+        sHtml
+      for (n=n2; n<aFile.length; n++) {
+        if (aFile[n].indexOf('<p id="idWrd') !== -1) {
+          //<p id="idWrdEllnálas-to"><span class="clsColorRed">άλας-το/álas-to/
+          sName = aFile[n].substring(aFile[n].indexOf('ColorRed')+10, aFile[n].indexOf('/'))
+          sHtml = aFile[n]
+        } else if (aFile[n].indexOf('</section>') === 0) {
+          n3 = n 
           break
+        } else if (aFile[n].indexOf('    <a class="clsHide') === 0) {
+          sHtml = sHtml +'\n' + aFile[n]
+          aWords.push([sName, sHtml])
+        } else {
+          sHtml = sHtml +'\n' + aFile[n]
         }
       }
-      return sIdx
     }
-    return sIdx
-  }
 
-  /**
-   * DOING: creates json-file from array.
-   *   Each element in the-array is another array
-   *   with name and url elements.
-   *   on the-first element updates the-quantity of names and the-date.
-   * INPUT:
-   *   - sFilIn the-Wrdidx-file we want to create
-   *   - aIn the-array of the-name-Url-arrays to include,
-   */
-  function fWriteJsonQntDate(sFilIn, aIn) {
+    for (n=n3; n<aFile.length; n++) {
+      aFile3.push(aFile[n])
+    }
+
+    //add new word-info
+    aWords.push(aWrdinfIn)
+    aWords.sort()
+    console.log(aWords)
+
+    //create html of words
+    for (let aElm of aWords) {
+      aFile2.push(aElm[1])
+    }
+
+    //set the-quantity of names
+
+    aFile1[24] = '    <br>× quantity of words: ' + aWords.length
+    //set version
+    //  <title>Mcs.McsWrdidxElln14ksi-(0-1-0.2022-02-19) Ξ|ξ</title>
     let
-      s
+      sT1 = aFile1[5].substring(0, aFile1[5].indexOf('(')+1),
+      sT2 = aFile1[5].substring(aFile1[5].indexOf('(')+1, aFile1[5].lastIndexOf('.')),
+      sT3 = aFile1[5].substring(aFile1[5].indexOf(')'))
+    sT2 = sT2.substring(0, sT2.indexOf('-')+1) +
+      (Number(sT2.substring(sT2.indexOf('-')+1, sT2.lastIndexOf('-'))) + 1) +
+      '-0.' + moUtil.fDateYMD()
+    aFile1[5] = sT1 + sT2 + sT3
 
-    // aIn[0] = [";McsWrdidxEngl01ei",";A..B",419,"2018-08-04"],
-    if (aIn.length === 1) {
-      s = '[\n  ["' + aIn[0][0] + '","' + aIn[0][1] + '",0,"' + fDateYMD() + '"]\n'
-    } else {
-      s = '[\n  ["' + aIn[0][0] + '","' + aIn[0][1] + '",' +
-        (aIn.length-1) + ',"' + fDateYMD() + '"],\n'
-      for (let n = 1; n < aIn.length-1; n++) {
-        s = s +'  ["' + aIn[n][0] + '","' + aIn[n][1] + '"],\n'
-      }
-      // last element no-comma at the-end
-      s = s + '  ["' + aIn[aIn.length-1][0] + '","' + aIn[aIn.length-1][1] + '"]\n'
+    //write file with new word
+    let s = ''
+    for (n=0; n<aFile1.length; n++) {
+      s = s + aFile1[n] + '\n'
     }
-
-    s = s + ']'
-    moFs.writeFileSync(sFilIn, s)
+    for (n=0; n<aFile2.length; n++) {
+      s = s + aFile2[n] + '\n'
+    }
+    for (n=0; n<aFile3.length; n++) {
+      s = s + aFile3[n] + '\n'
+    }
+    moFs.writeFileSync(sWrdidxMcsFullIn, s)
   }
 
-  /**
-   * DOING: it computes quantities of names
-   */
-  function fComputeQntName() {
-    // oWrdidx_Qntwrd={McsWrdidxEngl00: 1101,McsWrdidxEngl01ei: 419,McsWrdidxEngl03si_1: 1038,McsWrdidxEngl03si_2_1: 6959}
-    // the-set of Wrdidx-files we computed
-    let oSetNamidxComputed = new Set()
-
-    for (let sWrdidx in oWrdidx_Qntwrd) {
-      //console.log('>>> compute: '+sWrdidx)
-      let sFileIdxRef // the-reference-file McsWrdidxEngl03si_2_0
-
-      // if Wrdidx is a-child, we find its reference-parent
-      if (sWrdidx.indexOf('_') > 0) {
-        // McsWrdidxEngl03si_1 >> McsWrdidxEngl03si_0
-        sFileIdxRef = sWrdidx.substring(0, sWrdidx.lastIndexOf('_')) +'_0'
-      }
-
-      if (sWrdidx.indexOf('_') === -1 && !oSetNamidxComputed.has('lagRoot')) {
-        // a namidx.lagRoot.json element
-        oSetNamidxComputed.add('lagRoot')
-        fUpdate_from_oFileIdxQ('dirWrdidx/McsWrdidx_0.json')
-      } else if (sWrdidx.indexOf('_') > 0 && !oSetNamidxComputed.has(sFileIdxRef)) {
-        // sFileIdxRef=McsWrdidxEngl03si_2_0
-        oSetNamidxComputed.add(sFileIdxRef)
-        fUpdate_from_oFileIdxQ('dirWrdidx/dirLag' + sWrdidx.substring(3,7)
-          + '/namidx.' + sFileIdxRef + '.json')
-      }
-    }
-
-    // update quantities in a-reference-Wrdidx-file
-    // and computes new sums
-    function fUpdate_from_oFileIdxQ(sFileIdxRefIn) {
-      // read array of Wrdidx-file
-      // iterate over array and update oWrdidx_Qntwrd items
-      // store new file
-      // [";McsWrdidxEngl03si_2_0",";char",129181,"2018-07-29","codepoint order"],
-      // ["McsWrdidxEngl03si_2_1","char",6959],
-      let
-        aNi = JSON.parse(moFs.readFileSync(sFileIdxRefIn)),
-        n,
-        nSum = 0
-
-      if (sFileIdxRefIn.indexOf('.lagRoot.json') === -1) {
-        //console.log("update: " +sFileIdxRefIn)
-        for (n = 1; n < aNi.length; n++) {
-          // aNi=[["McsWrdidxEngl03si_2_1","char",1000]]
-          // oWrdidx_Qntwrd= [McsWrdidxEngl03si_2_1:1000]]
-          // if oWrdidx_Qntwrd contains info of aNi[n]
-          if (!aNi[n][0].startsWith(';')) {
-            // don't compute lag-sums twice [";McsWrdidxEngl","English",145191],
-            if (oWrdidx_Qntwrd[aNi[n][0]]) {
-              aNi[n][2] = oWrdidx_Qntwrd[aNi[n][0]]
-              nSum = nSum + aNi[n][2]
-              oSetNamidxComputed.add(aNi[n][0])
-            } else {
-              nSum = nSum + aNi[n][2]
-            }
-          }
-        }
-        aNi[0][2] = nSum
-        aNi[0][3] = fDateYMD()
-        moUtil.fWriteJsonArray(sFileIdxRefIn, aNi)
-        fUpdate_from_child(sFileIdxRefIn, nSum)
-      } else {
-        // lagRoot Wrdidx-file
-        let
-          nLag = 1, // first lang index
-          nSumAGGR = 0
-
-        nSum = 0
-        // [";AGGR","char",0,"2018-09-11","root chars"],
-        // [";McsWrdidxElln","Greek",1848],
-        for (n = 2; n < aNi.length; n++) {
-          // ["McsWrdidxElln01alfa","Α",258],
-          if (new RegExp('^;lag....$').test(aNi[n][0])) {
-            // on new lag reset nSum
-            nSumAGGR = nSumAGGR + nSum
-            aNi[nLag][2] = nSum
-            nSum = 0
-            nLag = n
-          } else if (oWrdidx_Qntwrd[aNi[n][0]] >= 0) {
-            aNi[n][2] = oWrdidx_Qntwrd[aNi[n][0]]
-            nSum = nSum + aNi[n][2]
-            oSetNamidxComputed.add(aNi[n][0])
-          } else if (!oWrdidx_Qntwrd[aNi[n][0]]) {
-            nSum = nSum + aNi[n][2]
-          }
-        }
-        nSumAGGR = nSumAGGR + nSum
-        aNi[nLag][2] = nSum
-        aNi[0][2] = nSumAGGR
-        aNi[0][3] = fDateYMD()
-        moUtil.fWriteJsonArray(sFileIdxRefIn, aNi)
-      }
-    }
-
-    // update sum in parent files
-    function fUpdate_from_child(sChld_pathIn, nChld_sumIn) {
-      // double
-      let
-        sPrnt_path,
-        aPrnt_nmix,
-        n,
-        nPrnt_sum = 0,
-        sChld_path_only = sChld_pathIn.substring(0, sChld_pathIn.lastIndexOf('_')),
-        sChld_nmix = sChld_pathIn.substring(sChld_pathIn.indexOf('namidx.')+7, sChld_pathIn.lastIndexOf('.'))
-
-      if (sChld_path_only.indexOf('_') > 0) {
-        // parent is NOT the-root-reference
-        sPrnt_path = sChld_path_only.substring(0, sChld_path_only.lastIndexOf('_')) + '_0.json'
-        //console.log('update-child: ' +sPrnt_path +', ' +nChld_sumIn)
-        aPrnt_nmix = JSON.parse(moFs.readFileSync(sPrnt_path))
-        for (n = 1; n < aPrnt_nmix.length; n++) {
-          // ["McsWrdidxEngl03si_0","C",130313],
-          if (aPrnt_nmix[n][0] === sChld_nmix) {
-            nPrnt_sum = nPrnt_sum + nChld_sumIn
-            aPrnt_nmix[n][2] = nChld_sumIn
-          } else {
-            nPrnt_sum = nPrnt_sum + aPrnt_nmix[n][2]
-          }
-        }
-        aPrnt_nmix[0][2] = nPrnt_sum // all sum
-        aPrnt_nmix[0][3] = fDateYMD()
-        moUtil.fWriteJsonArray(sPrnt_path, aPrnt_nmix)
-        fUpdate_from_child(sPrnt_path, nPrnt_sum)
-      } else {
-        // parent is the-root-reference
-        //console.log('update-child: root, ' +nChld_sumIn)
-        let
-          nAllSum = 0,
-          nLagSum = 0, // sum of lag
-          nLagIdx = 1 // index of lag
-
-        sPrnt_path = 'dirWrdidx/McsWrdidx_0.json'
-        aPrnt_nmix = JSON.parse(moFs.readFileSync(sPrnt_path))
-        for (n = 2; n < aPrnt_nmix.length; n++) {
-          if (new RegExp('^;lag....$').test(aPrnt_nmix[n][0])) {
-            nAllSum = nAllSum + nLagSum
-            aPrnt_nmix[nLagIdx][2] = nLagSum
-            nLagSum = 0
-            nLagIdx = n
-          } else if (aPrnt_nmix[n][0] === sChld_nmix) {
-            nLagSum = nLagSum + nChld_sumIn
-            aPrnt_nmix[n][2] = nChld_sumIn
-          } else if (aPrnt_nmix[n][0] !== sChld_nmix) {
-            nLagSum = nLagSum + aPrnt_nmix[n][2]
-          }
-        }
-        nAllSum = nAllSum + nLagSum
-        aPrnt_nmix[nLagIdx][2] = nLagSum
-        aPrnt_nmix[0][2] = nAllSum
-        aPrnt_nmix[0][3] = fDateYMD()
-        moUtil.fWriteJsonArray(sPrnt_path, aPrnt_nmix)
-      }
-    }
-  }
   /*
-  fComputeQntName()
-
   // write the-files to upload
   let aSftp = Array.from(oSetFileUp)
   aSftp.sort()
