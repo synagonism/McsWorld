@@ -28,10 +28,41 @@
 const
   // contains the-versions of mLagUtil.js
   aVersion = [
+    'mLagUtil.js.0-4-0.2022-02-23: fPhonemaRemoveTonos',
     'mLagUtil.js.0-3-0.2022-02-15: fGreekwordFindPhonemic',
     'mLagUtil.js.0-2-0.2022-01-18: translated from java',
     'mLagUtil.js.0-1-0.2022-01-17: creation'
   ]
+
+/*
+ * DOING: it removes the-tonos from a-phonema
+ * INPUT: nífi
+ * OUTPUT: nifi
+ */
+function fPhonemaRemoveTonos (sPhonemaIn) {
+  if (sPhonemaIn.indexOf('á') != -1)
+    return sPhonemaIn.replace('á','a')
+  else if (sPhonemaIn.indexOf('é') != -1)
+    return sPhonemaIn.replace('é','e')
+  else if (sPhonemaIn.indexOf('í') != -1)
+    return sPhonemaIn.replace('í','i')
+  else if (sPhonemaIn.indexOf('ó') != -1)
+    return sPhonemaIn.replace('ó','ο')
+  else if (sPhonemaIn.indexOf('ú') != -1)
+    return sPhonemaIn.replace('ú','u')
+  else if (sPhonemaIn.indexOf('à') != -1)
+    return sPhonemaIn.replace('à','a')
+  else if (sPhonemaIn.indexOf('è') != -1)
+    return sPhonemaIn.replace('è','e')
+  else if (sPhonemaIn.indexOf('ì') != -1)
+    return sPhonemaIn.replace('ì','i')
+  else if (sPhonemaIn.indexOf('ò') != -1)
+    return sPhonemaIn.replace('ò','ο')
+  else if (sPhonemaIn.indexOf('ù') != -1)
+    return sPhonemaIn.replace('ù','u')
+  else
+    return sPhonemaIn
+}
 
 /**
  * DOING: it returns the-chars of codepoints.
@@ -954,6 +985,7 @@ function fIsLetterVowelGreek(sCharIn) {
 }
 
 export {
+  fPhonemaRemoveTonos,
   fFindCharsIfCodepoints, fFindCodepointsIfChars,
   fFindLettersFirstIfPrefix, fFindLettersFirstIfSuffix,
   fFindLettersLastIfPrefix, fFindLettersLastIfSuffix,

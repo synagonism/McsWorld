@@ -39,9 +39,9 @@
  */
 
 import moFs from 'fs';
-import mfReadlines from 'n-readlines'; // npm install n-readlines
 import {oSftp, fSftp} from './mSftp.mjs'
 import * as moUtil from './mUtil.mjs'
+import * as moLagUtil from './mLagUtil.js'
 import * as moLagElln from './mLagElln.mjs'
 
 const
@@ -181,14 +181,15 @@ function fWrdidx(asWordsIn, sMethodIn) {
     let
       aWordinfo = [],
       sWord = sWordIn.substring(0, sWordIn.indexOf('/')), //ξαδέρφη-η
-      sSpeech = sWordIn.substring(sWordIn.indexOf('/')+1, sWordIn.length-1), //ksadhérfi-i
+      sPhonema = sWordIn.substring(sWordIn.indexOf('/')+1, sWordIn.length-1), //ksadhérfi-i
+      sPhonemaNaked = moLagUtil.fPhonemaRemoveTonos(sPhonema), //no tonos to have previews
       sMethod = sMethodIn,
       sLag = sMethod.substring(4, 8), //Elln
       sInfo,
       oCase
 
     aWordinfo[0] = sWord
-    sInfo = '  <p id="idWrd' + sLag + sSpeech + '">' +
+    sInfo = '  <p id="idWrd' + sLag + sPhonemaNaked + '">' +
       '<span class="clsColorRed">' + sWordIn + '</span>::\n' +
       '    <br>* McsEngl.word' + sLag + '.' + sWordIn + '@word' + sLag + ',\n' +
       '    <br>* Mcs' + sLag + '.' + sWordIn + '@word' + sLag + ',\n'
@@ -463,7 +464,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
       '    <br>× gender: ' + oCase.gender + '\n' +
       '    <br>× inflection-method: ' + oCase.method + '\n' +
       '    <br>× members: ' + oCase.members + '\n' +
-      '    <a class="clsHide" href="#idWrd' +sLag + sSpeech + '"></a></p>'
+      '    <a class="clsHide" href="#idWrd' +sLag + sPhonemaNaked + '"></a></p>'
 
     aWordinfo[1] = sInfo
     return aWordinfo
@@ -614,6 +615,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
       aWords = [],  //[['βουνό-το','  p id="idWrdEllnvunó-to"><span...']]
       aFile2 = [],  //['  p id="idWrdEllnvunó-to"><span...']
       aFile3 = [], //the-lines AFTER words
+      bSameword = false,
       n,
       n2,//word lines
       n3 //meta lines
@@ -642,6 +644,11 @@ function fWrdidx(asWordsIn, sMethodIn) {
           //<p id="idWrdEllnálas-to"><span class="clsColorRed">άλας-το/álas-to/
           sName = aFile[n].substring(aFile[n].indexOf('ColorRed')+10, aFile[n].indexOf('/'))
           sHtml = aFile[n]
+          if (sName === aWrdinfIn[0]) {
+            bSameword = true
+            console.log(sName + ' is-stored ALREADY: did nothing')
+            break
+          }
         } else if (aFile[n].indexOf('</section>') === 0) {
           n3 = n 
           break
@@ -654,46 +661,49 @@ function fWrdidx(asWordsIn, sMethodIn) {
       }
     }
 
-    for (n=n3; n<aFile.length; n++) {
-      aFile3.push(aFile[n])
-    }
+    //IF contains new word, DO nothing
+    if (!bSameword) {
+      for (n=n3; n<aFile.length; n++) {
+        aFile3.push(aFile[n])
+      }
 
-    //add new word-info
-    aWords.push(aWrdinfIn)
-    aWords.sort()
-    console.log(aWords)
+      //add new word-info
+      aWords.push(aWrdinfIn)
+      aWords.sort()
+      
 
-    //create html of words
-    for (let aElm of aWords) {
-      aFile2.push(aElm[1])
-    }
+      //create html of words
+      for (let aElm of aWords) {
+        aFile2.push(aElm[1])
+      }
 
-    //set the-quantity of names
+      //set the-quantity of names
 
-    aFile1[24] = '    <br>× quantity of words: ' + aWords.length
-    //set version
-    //  <title>Mcs.McsWrdidxElln14ksi-(0-1-0.2022-02-19) Ξ|ξ</title>
-    let
-      sT1 = aFile1[5].substring(0, aFile1[5].indexOf('(')+1),
-      sT2 = aFile1[5].substring(aFile1[5].indexOf('(')+1, aFile1[5].lastIndexOf('.')),
-      sT3 = aFile1[5].substring(aFile1[5].indexOf(')'))
-    sT2 = sT2.substring(0, sT2.indexOf('-')+1) +
-      (Number(sT2.substring(sT2.indexOf('-')+1, sT2.lastIndexOf('-'))) + 1) +
-      '-0.' + moUtil.fDateYMD()
-    aFile1[5] = sT1 + sT2 + sT3
+      aFile1[24] = '    <br>× quantity of words: ' + aWords.length
+      //set version
+      //  <title>Mcs.McsWrdidxElln14ksi-(0-1-0.2022-02-19) Ξ|ξ</title>
+      let
+        sT1 = aFile1[5].substring(0, aFile1[5].indexOf('(')+1),
+        sT2 = aFile1[5].substring(aFile1[5].indexOf('(')+1, aFile1[5].lastIndexOf('.')),
+        sT3 = aFile1[5].substring(aFile1[5].indexOf(')'))
+      sT2 = sT2.substring(0, sT2.indexOf('-')+1) +
+        (Number(sT2.substring(sT2.indexOf('-')+1, sT2.lastIndexOf('-'))) + 1) +
+        '-0.' + moUtil.fDateYMD()
+      aFile1[5] = sT1 + sT2 + sT3
 
-    //write file with new word
-    let s = ''
-    for (n=0; n<aFile1.length; n++) {
-      s = s + aFile1[n] + '\n'
+      //write file with new word
+      let s = ''
+      for (n=0; n<aFile1.length; n++) {
+        s = s + aFile1[n] + '\n'
+      }
+      for (n=0; n<aFile2.length; n++) {
+        s = s + aFile2[n] + '\n'
+      }
+      for (n=0; n<aFile3.length; n++) {
+        s = s + aFile3[n] + '\n'
+      }
+      moFs.writeFileSync(sWrdidxMcsFullIn, s)
     }
-    for (n=0; n<aFile2.length; n++) {
-      s = s + aFile2[n] + '\n'
-    }
-    for (n=0; n<aFile3.length; n++) {
-      s = s + aFile3[n] + '\n'
-    }
-    moFs.writeFileSync(sWrdidxMcsFullIn, s)
   }
 
   /*
