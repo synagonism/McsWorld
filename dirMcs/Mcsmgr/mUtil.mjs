@@ -33,6 +33,53 @@ const
     'mUtil.mjs.0-1-0.2021-11-29: creation'
   ]
 
+/**
+ * DOING: it checks if a-string is-included in array-elements [["a","b"],["c","d"]]
+ */
+function fAArrayIncludes(aIn, sIn) {
+  let
+    bOut = false,
+    aElm
+
+  for (aElm of aIn) {
+    if (aElm.includes(sIn)) {
+      bOut = true
+      break
+    }
+  }
+  return bOut
+}
+
+/**
+ * Remove duplicates of an-array-of-arrays [["a","b"],["a","c"],["a","b"],["c","d"]]
+ */
+function fAArrayRemoveDupl(aIn) {
+  let
+    aHelp = [],
+    aOut = [],
+    sElt
+
+  for (n = 0; n < aIn.length; n++) {
+    sElt = aIn[n].join('JJ')
+    if (!aHelp.includes(sElt)) {
+      aHelp.push(sElt)
+      aOut.push(aIn[n])
+    }
+  }
+  return aOut
+}
+
+/**
+ * DOING: it sorts an-array-of-arrays [["a","c"],["c","d"],["a","b"]]
+ */
+function fAArraySort(aIn) {
+  aIn = aIn.sort(fCompare)
+  function fCompare(aA, aB) {
+    return aA[0] > aB[0] ? 1 : -1
+  }
+  return aIn
+}
+
 /*
  * OUTPUT: current-date in format: 2017-10-17
  */
@@ -72,36 +119,6 @@ function fDateYMD2 () {
 }
 
 /**
- * Remove duplicates of an-array-of-arrays [["a","b"],["a","c"],["a","b"],["c","d"]]
- */
-function fRemoveAArrayDupl(aIn) {
-  let
-    aHelp = [],
-    aOut = [],
-    sElt
-
-  for (n = 0; n < aIn.length; n++) {
-    sElt = aIn[n].join('JJ')
-    if (!aHelp.includes(sElt)) {
-      aHelp.push(sElt)
-      aOut.push(aIn[n])
-    }
-  }
-  return aOut
-}
-
-/**
- * DOING: it sorts an-array-of-arrays [["a","c"],["c","d"],["a","b"]]
- */
-function fSortAArray(aIn) {
-  aIn = aIn.sort(fCompare)
-  function fCompare(aA, aB) {
-    return aA[0] > aB[0] ? 1 : -1
-  }
-  return aIn
-}
-
-/**
  * DOING:
  *  it creates a-json-file from array of arrays ONLY, with no extra info.
  */
@@ -137,8 +154,7 @@ function fWriteJsonObject(sFilIn, oIn) {
 }
 
 export {
+  fAArrayIncludes, fAArrayRemoveDupl, fAArraySort,
   fDateYMD, fDateYMD2,
-  fRemoveAArrayDupl,
-  fSortAArray,
   fWriteJsonArray, fWriteJsonObject
 }

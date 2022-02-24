@@ -39,6 +39,7 @@
  */
 
 import moFs from 'fs';
+import {fNamidx} from './mNamidx.mjs'
 import {oSftp, fSftp} from './mSftp.mjs'
 import * as moUtil from './mUtil.mjs'
 import * as moLagUtil from './mLagUtil.js'
@@ -55,20 +56,17 @@ let
   aWordsInComments,
   aWordsIn = [],
   sMethod,
-  bAlone = false
+  bWrdidx = false
 
 if (process.argv[2]) {
   oSftp.password = process.argv[2]
+  bWrdidx = true
 } else {
   console.log('type password after mWrdidx.mjs')
   process.exit()
 }
 
-if (process.argv[3]) {
-  bAlone = true
-} 
-
-if (bAlone) {
+if (bWrdidx) {
   aWordsInComments = moFs.readFileSync('Wrdidx.txt').toString().split('\n')
 
   /**
@@ -106,8 +104,8 @@ function fWrdidx(asWordsIn, sMethodIn) {
     // array with words to index
     sMethod = sMethodIn,
     sLag = sMethod.substring(4, 8),
-    aRootWrdidx_Idx_Qntwrd = JSON.parse(moFs.readFileSync('dirWrdidx/McsWrdidx_0.json')),
-    // [['McsWrdidxEngl01ei','A',1111]} with quantity of words
+    aRootWrdidx_Idx = JSON.parse(moFs.readFileSync('dirWrdidx/McsWrdidx_0.json')),
+    // [['McsWrdidxEngl01ei','A']} with quantity of words
     oWrdidxMcs_Idx = {},
     // holds the-names of Wrdidx-files and the related indexes
     // {McsWrdidxEngl01ei:'A|a', McsWrdidxZhon024:'13312..14000'}
@@ -121,11 +119,6 @@ function fWrdidx(asWordsIn, sMethodIn) {
     aWordsIn = [asWordsIn]
   } else {
     aWordsIn = asWordsIn
-  }
-
-  if (aWordsIn.length > 0) {
-    // first file we want to upload, IF contain and quantity of words
-    oSetFileUp.add('dirWrdidx/McsWrdidx_0.json');
   }
 
   /**
@@ -145,7 +138,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
 
     sWord = sWordIn
     //console.log(sWord)
-    aWrdidxMcs_Idx = fFindWrdidxMcs(sWord, sLag, aRootWrdidx_Idx_Qntwrd)
+    aWrdidxMcs_Idx = fFindWrdidxMcs(sWord, sLag, aRootWrdidx_Idx)
     sWrdidxMcs = aWrdidxMcs_Idx[0]
     sIndex = aWrdidxMcs_Idx[1]
     //console.log(sWrdidxMcs)
@@ -167,7 +160,6 @@ function fWrdidx(asWordsIn, sMethodIn) {
       fStoreWordinfo(sWrdidxMcsFull, aWordinfo)
     }
 
-    oSetFileUp.add(sWrdidxMcsFull)
   })
 
   /**
@@ -591,11 +583,16 @@ function fWrdidx(asWordsIn, sMethodIn) {
       '</html>'
     moFs.writeFileSync(sWiMcsFullIn, s)
     moFs.writeFileSync('../dirPgm/dirCntr/dirCntrfiles/' + sName + '.txt', '1')
-    aPages.push([sName+'.txt', sIndexIn])
-    moUtil.fSortAArray(aPages)
-    moUtil.fWriteJsonArray('../aPages.json', aPages)
+    //
+    if (!moUtil.fAArrayIncludes(aPages, sName+'.txt')){
+      aPages.push([sName+'.txt', sIndexIn])
+      moUtil.fAArraySort(aPages)
+      moUtil.fWriteJsonArray('../aPages.json', aPages)
+      oSetFileUp.add('../aPages.json')
+    } else {
+      console.log('aPages already includes ' + sName+'.txt')
+    }
     oSetFileUp.add('../dirPgm/dirCntr/dirCntrfiles/' + sName + '.txt')
-    oSetFileUp.add('../aPages.json')
   }
 
   /**
@@ -661,7 +658,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
       }
     }
 
-    //IF contains new word, DO nothing
+    //IF new word not-included, add it
     if (!bSameword) {
       for (n=n3; n<aFile.length; n++) {
         aFile3.push(aFile[n])
@@ -678,7 +675,6 @@ function fWrdidx(asWordsIn, sMethodIn) {
       }
 
       //set the-quantity of names
-
       aFile1[24] = '    <br>× quantity of words: ' + aWords.length
       //set version
       //  <title>Mcs.McsWrdidxElln14ksi-(0-1-0.2022-02-19) Ξ|ξ</title>
@@ -703,19 +699,23 @@ function fWrdidx(asWordsIn, sMethodIn) {
         s = s + aFile3[n] + '\n'
       }
       moFs.writeFileSync(sWrdidxMcsFullIn, s)
+      oSetFileUp.add(sWrdidxMcsFullIn)
+
+      //name-index the-file
+      fNamidx(sWrdidxMcsFullIn)
     }
   }
 
-  /*
   // write the-files to upload
-  let aSftp = Array.from(oSetFileUp)
+  let
+    aSftp = JSON.parse(moFs.readFileSync('sftp.json'))
+  for (let sFile of aSftp) {
+     oSetFileUp.add(sFile)
+  }
+  aSftp = Array.from(oSetFileUp)
   aSftp.sort()
-  console.log(aSftp)
   moUtil.fWriteJsonArray('sftp.json', aSftp)
-
-  //call
-  if (fSftpIn) fSftpIn()
-  */
+  fSftp()
 }
 fWrdidx(aWordsIn, sMethod)
 

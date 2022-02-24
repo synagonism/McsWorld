@@ -1,7 +1,7 @@
-import * as oUtil from './mUtil.mjs'
+import * as moUtil from './mUtil.mjs'
 
 let
-  a = [["a","c"],["c","d"],["a","b"]]
+  a = [["a","b"],["c","d"]]
 
-a= oUtil.fSortAArray(a)
-console.log(a)
+
+console.log(moUtil.fAArrayIncludes(a,'b'))
