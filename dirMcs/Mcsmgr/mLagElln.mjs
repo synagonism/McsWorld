@@ -1043,7 +1043,7 @@ function fFindCasembrElln (sBaseIn, sMethodIn) {
 */
 
 /**
- * DOING: it finds info of a-Greek-case.
+ * DOING: it finds info of a-Greek-case FROM example in dirLag/McsLag000020.last.html
  * INPUT:
  *  - sWordIn = ξαδέρφη-η/ksadhérfi-i/
  *  - sMethodIn = caseEllnMnG2XiT2SeuNucF2Bo
@@ -1066,8 +1066,8 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
     sSufxM,
     sSufxMx,
     sWord = sWordIn.substr(0, sWordIn.indexOf('-')), //ξαδέρφη
-    sWordArt = sWordIn.substr(0, sWordIn.indexOf('/')), //ξαδέρφη-η
-    sWordArtSpch = sWordIn.substr(sWordIn.indexOf('/')), ///ksadhérfi-i/
+    sWordArti = sWordIn.substr(0, sWordIn.indexOf('/')), //ξαδέρφη-η
+    sWordArtiPhnm = sWordIn.substr(sWordIn.indexOf('/')), ///ksadhérfi-i/
     sWordGS, //genitiveSingular
     sWordAS, //accusativeSingular
     sWordVS, //vocativeSingular
@@ -1079,6 +1079,7 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
 
   aMcs = moFs.readFileSync(sFileElln).toString().split('\n')
 
+  //find the-index of method
   n = aMcs.findIndex(function(sLn){
     return sLn.indexOf('"idLEllncase' +sMethodIn.substring(8) +'dsn"') > 1
   })
@@ -1089,21 +1090,21 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
   sLn = aMcs[n+3] //</p>
   sLn = aMcs[n+4] //<table class="clsTblBorderNo">
   sLn = aMcs[n+5] //<tr><td>η<td>νύφ-η
-  aInfo.push(sLn.substring(19))
+  aInfo.push(sLn.substring(sLn.lastIndexOf('>')+1))
   sLn = aMcs[n+6] //<tr><td>της<td>νύφ-ης
-  aInfo.push(sLn.substring(21))
+  aInfo.push(sLn.substring(sLn.lastIndexOf('>')+1))
   sLn = aMcs[n+7] //<tr><td>την<td>νύφ-η
-  aInfo.push(sLn.substring(21))
+  aInfo.push(sLn.substring(sLn.lastIndexOf('>')+1))
   sLn = aMcs[n+8] //<tr><td><td>νύφ-η
-  aInfo.push(sLn.substring(18))
+  aInfo.push(sLn.substring(sLn.lastIndexOf('>')+1))
   sLn = aMcs[n+9] //<tr><td>οι<td>νύφ-ες|νυφ-άδες
-  aInfo.push(sLn.substring(20))
+  aInfo.push(sLn.substring(sLn.lastIndexOf('>')+1))
   sLn = aMcs[n+10] //<tr><td>των<td>νυφ-άδων
-  aInfo.push(sLn.substring(21))
+  aInfo.push(sLn.substring(sLn.lastIndexOf('>')+1))
   sLn = aMcs[n+11] //<tr><td>τις<td>νύφ-ες|νυφ-άδες
-  aInfo.push(sLn.substring(21))
+  aInfo.push(sLn.substring(sLn.lastIndexOf('>')+1))
   sLn = aMcs[n+12] //<tr><td><td>νύφ-ες|νυφ-άδες
-  aInfo.push(sLn.substring(18))
+  aInfo.push(sLn.substring(sLn.lastIndexOf('>')+1))
   //console.log(aInfo)
 
   //find stems
@@ -1126,20 +1127,22 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
   }
   //console.log(sWordGS)
 
-  /** it returns an-inflection */
+  /** it returns an-inflection, given example method*/
   function fFindWordX(sMethexlIn) {
     sStemMx = sMethexlIn.substr(0, sMethexlIn.indexOf('-'))
     sSufxMx = sMethexlIn.substr(sMethexlIn.indexOf('-')+1)
     if (sStemMx === sStemM) sWordX = sStemW + sSufxMx
     else if (sStemMx === sStemMRem) sWordX = sStemWRem + sSufxMx
+    //TODO: other cases
     sWordX = sWordX + moLagUtil.fGreekwordFindPhonemic(sWordX)
     if (sWordX.indexOf('111') != -1) console.log(sWordX)
+    //TODO: fix it from base-form
     return sWordX
   }
   
   oCase.McsElln1 = '.λέξηΕλλν.' + sWordIn +'@wordElln,'
   oCase.McsElln2 = '.ουσιαστικό.' + sWordIn +'@wordElln,'
-  oCase.sinNom = sWord + sWordArtSpch.substr(0, sWordArtSpch.indexOf('-')) + '/'
+  oCase.sinNom = sWord + sWordArtiPhnm.substr(0, sWordArtiPhnm.indexOf('-')) + '/'
   oCase.sinGen = sWordGS
 
   //αιτ-ενικ as
@@ -1164,7 +1167,7 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
       sWordVS = sWordVS +'|' +fFindWordX(aExl[n]) 
     }
   } else {
-    sWordVS = fFindWordX(aInfo[3])
+    sWordVS = fFindWordX(aInfo[4])
   }
   oCase.sinVoc = sWordVS
 
@@ -1177,7 +1180,7 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
       sWordNP = sWordNP +'|' +fFindWordX(aExl[n]) 
     }
   } else {
-    sWordNP = fFindWordX(aInfo[4])
+    sWordNP = fFindWordX(aInfo[5])
   }
   oCase.pluNom = sWordNP
 
@@ -1224,10 +1227,10 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
   oCase.Basespch = oCase.sinNom.substr(oCase.sinNom.indexOf('/'))
   oCase.functionality = 'μορφή'
   oCase.pos = 'ουσιαστικό'
-  if (sWordArt.endsWith('-ο')) oCase.gender = 'αρσενικό'
-  if (sWordArt.endsWith('-ο|η')) oCase.gender = 'αρσενικό|θηλυκό'
-  if (sWordArt.endsWith('-η')) oCase.gender = 'θηλυκό'
-  if (sWordArt.endsWith('-το')) oCase.gender = 'ουδέτερο'
+  if (sWordArti.endsWith('-ο')) oCase.gender = 'αρσενικό'
+  if (sWordArti.endsWith('-ο|η')) oCase.gender = 'αρσενικό|θηλυκό'
+  if (sWordArti.endsWith('-η')) oCase.gender = 'θηλυκό'
+  if (sWordArti.endsWith('-το')) oCase.gender = 'ουδέτερο'
   oCase.method = aInfo[0].substr(0, aInfo[0].indexOf(':'))
   oCase.members = oCase.sinNom + '-' +
                   oCase.sinGen + '-' +

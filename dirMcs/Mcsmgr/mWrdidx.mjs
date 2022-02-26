@@ -29,9 +29,9 @@
  *   1) it reads the-Wrdidx.txt, and creates the-word-concepts for the-words in.
  *   2) it name-indexes the-new files.
  * INPUT: Wrdidx.txt
- * OUTPUT: dirWrdidx/dirLang/McsWrdidxLangX.last.html, McsWrdidx_0.json, sftp.json,
+ * OUTPUT: dirWrdidx/dirLang/McsWrdidxLangX.last.html, sftp.json,
  *
- * RUN: node Mcsmgr/mWrdidx.mjs pwd ALONE|ANYTHING
+ * RUN: node Mcsmgr/mWrdidx.mjs pwd 
  *
  * PROBLEM:
  * - 
@@ -48,6 +48,7 @@ import * as moLagElln from './mLagElln.mjs'
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mWrdidx.mjs.0-3-0.2022-02-26: version of WrdidxMcs',
     'mWrdidx.mjs.0-2-0.2022-02-21: fCreateWordinfo',
     'mWrdidx.mjs.0-1-0.2022-02-08: created'
   ]
@@ -100,6 +101,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
     oSetFileUp = new Set, 
     // files to upload, 
     // we use a-set, because we add same files and want unique.
+    aSftp,
     aWordsIn,
     // array with words to index
     sMethod = sMethodIn,
@@ -159,7 +161,6 @@ function fWrdidx(asWordsIn, sMethodIn) {
       fCreateWrdidxMcs(sWrdidxMcsFull, sIndex)
       fStoreWordinfo(sWrdidxMcsFull, aWordinfo)
     }
-
   })
 
   /**
@@ -603,14 +604,14 @@ function fWrdidx(asWordsIn, sMethodIn) {
    */
   function fStoreWordinfo(sWrdidxMcsFullIn, aWrdinfIn) {
     //1. reads the-file
-    //2. stores the-array
+    //2. stores new-array
     //3. sorts the-array
     //4. stores the-new file
     let
-      aFile = aWordsInComments = moFs.readFileSync(sWrdidxMcsFullIn).toString().split('\n'),
-      aFile1 = [],  //the-lines BEFORE words
-      aWords = [],  //[['βουνό-το','  p id="idWrdEllnvunó-to"><span...']]
-      aFile2 = [],  //['  p id="idWrdEllnvunó-to"><span...']
+      aFile = moFs.readFileSync(sWrdidxMcsFullIn).toString().split('\n'),
+      aFile1 = [], //the-lines BEFORE words
+      aWords = [], //[['βουνό-το','  p id="idWrdEllnvunó-to"><span...']]
+      aFile2 = [], //the-lines of words: ['  p id="idWrdEllnvunó-to"><span...']
       aFile3 = [], //the-lines AFTER words
       bSameword = false,
       n,
@@ -625,9 +626,9 @@ function fWrdidx(asWordsIn, sMethodIn) {
         aFile1.push(aFile[n+1]) //  <h1 id="idWrd
         aFile1.push(aFile[n+2]) //    <a class="clsHide
         if (aFile[n+3].indexOf('</section>') === 0) {
-          n2 = 0
+          n2 = 0  // no words added yet
           n3 = n + 3
-        } else n2 = n+3
+        } else n2 = n + 3
         break
       }
     }
@@ -676,16 +677,20 @@ function fWrdidx(asWordsIn, sMethodIn) {
 
       //set the-quantity of names
       aFile1[24] = '    <br>× quantity of words: ' + aWords.length
-      //set version
-      //  <title>Mcs.McsWrdidxElln14ksi-(0-1-0.2022-02-19) Ξ|ξ</title>
-      let
-        sT1 = aFile1[5].substring(0, aFile1[5].indexOf('(')+1),
-        sT2 = aFile1[5].substring(aFile1[5].indexOf('(')+1, aFile1[5].lastIndexOf('.')),
-        sT3 = aFile1[5].substring(aFile1[5].indexOf(')'))
-      sT2 = sT2.substring(0, sT2.indexOf('-')+1) +
-        (Number(sT2.substring(sT2.indexOf('-')+1, sT2.lastIndexOf('-'))) + 1) +
-        '-0.' + moUtil.fDateYMD()
-      aFile1[5] = sT1 + sT2 + sT3
+      //set version ONCE per process
+      if (!oSetFileUp.has(sWrdidxMcsFullIn)) {
+        //  <title>Mcs.McsWrdidxElln01alfa_2-(0-1-0.2022-02-26) α..αμ</title>
+        let
+          s5 = aFile1[5],
+          sT1 = s5.substring(0, s5.indexOf('(')+1),
+          sT2 = s5.substring(s5.indexOf('(')+1, s5.indexOf(')')-11), 
+          sV = sT2.substring(sT2.indexOf('-')+1, sT2.lastIndexOf('-')),
+          sT3 = s5.substring(s5.indexOf(')'))
+        sT2 = sT2.substring(0, sT2.indexOf('-')+1) +
+          (Number(sV) + 1) +
+          '-0.' + moUtil.fDateYMD()
+        aFile1[5] = sT1 + sT2 + sT3
+      }
 
       //write file with new word
       let s = ''
@@ -695,27 +700,30 @@ function fWrdidx(asWordsIn, sMethodIn) {
       for (n=0; n<aFile2.length; n++) {
         s = s + aFile2[n] + '\n'
       }
-      for (n=0; n<aFile3.length; n++) {
-        s = s + aFile3[n] + '\n'
+      s = s + aFile3[0]
+      for (n=1; n<aFile3.length; n++) {
+        s = s + '\n' + aFile3[n]
       }
       moFs.writeFileSync(sWrdidxMcsFullIn, s)
       oSetFileUp.add(sWrdidxMcsFullIn)
 
       //name-index the-file
       fNamidx(sWrdidxMcsFullIn)
+
+      // write the-files to upload
+      aSftp = JSON.parse(moFs.readFileSync('sftp.json'))
+      for (let sFile of aSftp) {
+         oSetFileUp.add(sFile)
+      }
     }
   }
 
-  // write the-files to upload
-  let
-    aSftp = JSON.parse(moFs.readFileSync('sftp.json'))
-  for (let sFile of aSftp) {
-     oSetFileUp.add(sFile)
-  }
   aSftp = Array.from(oSetFileUp)
   aSftp.sort()
-  moUtil.fWriteJsonArray('sftp.json', aSftp)
-  fSftp()
+  if (aSftp.length > 0) {
+    moUtil.fWriteJsonArray('sftp.json', aSftp)
+    fSftp()
+  }
 }
 fWrdidx(aWordsIn, sMethod)
 
@@ -738,7 +746,7 @@ function fCreateOWrdidxMcs_Index(aIn) {
 }
 
 /**
- * DOING: it finds the-Wrdidx-file to store a-word
+ * DOING: it finds the-Wrdidx-html-file to store a-word
  * INPUT:
  *  - sWordIn: 'νύφη/nífi/'
  *  - sLagIn: 'Elln'
@@ -752,13 +760,13 @@ function fFindWrdidxMcs(sWordIn, sLagIn, aWrdidxIdxIn) {
     // if first-char of name NOT in an-index in the-lag, then it is a-charREST in this lag
     sCharWord,    // the-first char of name
     sIndex,       // the-chars-of-index in the-Wrdidx-file
-    sIdxCrnt,
-    sIdxNext,
+    sIdxFrom,
+    sIdxTo,
     sWrdidx,      // name of Wrdidx-file on which to store the-word
     sWrdidxOut,
     nCharWord,
-    nIdxCrnt,
-    nIdxNext,
+    nIdxFrom,
+    nIdxTo,
     oWrdidxMcs_Idx,
     sWrdidxRefFull,
     aRef
@@ -777,42 +785,54 @@ function fFindWrdidxMcs(sWordIn, sLagIn, aWrdidxIdxIn) {
         if (sIndex.indexOf(sCharWord) >= 0) {
           // found Wrdidx-file
           bRest = false 
-          sWrdidxOut = sWrdidx +'.last.html'
+          sWrdidxOut = sWrdidx
           aWrdidxMcs_Idx = [sWrdidxOut, sIndex]
           break
         }
       } else {
-        // index is a-sequence of chars 'C..D'
+        // index is a-sequence of chars 'C..D' or "26000..27000" or "αμ..β"
+        // we are on a-reference or Chinese root reference
         let a = sIndex.split('..')
-        sIdxCrnt = a[0]
-        sIdxNext = a[1]
-        //compare codepoints
-        nCharWord = sCharWord.codePointAt()
-        // if srch-char is a-supplement with surrogates (high 55296–56319), find it
-        if (nCharWord >= 55296 && nCharWord <= 56319) {
-          let sSupplement = String.fromCodePoint(sWordIn[0].charAt(0).charCodeAt(0),
-                                                 sWordIn[0].charAt(1).charCodeAt(0))
-          nCharWord = sSupplement.codePointAt()
-        }
-        if (!Number.isInteger(Number(sIdxCrnt))) {
-          // it is char
-          nIdxCrnt = sIdxCrnt.codePointAt()
+        sIdxFrom = a[0]
+        sIdxTo = a[1]
+        //IF indexes more than one, compare word, ELSE codepoints and first-word-char
+        if (sIdxFrom.length > 1 || sIdxTo.length > 1) {
+          if (sWordIn >= sIdxFrom && sWordIn < sIdxTo) {
+            // found Wrdidx-file
+            bRest = false 
+            sWrdidxOut = sWrdidx
+            aWrdidxMcs_Idx = [sWrdidxOut, sIndex]
+            break
+          }
         } else {
-          // it is number
-          nIdxCrnt = Number(sIdxCrnt)
-        }
-        if (!Number.isInteger(Number(sIdxNext))) {
-          nIdxNext = sIdxNext.codePointAt()
-        } else {
-          nIdxNext = Number(sIdxNext)
-        }
-        //console.log(nIdxCrnt+', '+nIdxNext)
-        if (nCharWord >= nIdxCrnt && nCharWord < nIdxNext) {
-          // found Wrdidx-file
-          bRest = false 
-          sWrdidxOut = sWrdidx +'.last.html'
-          aWrdidxMcs_Idx = [sWrdidxOut, sIndex]
-          break
+          //compare codepoints
+          nCharWord = sCharWord.codePointAt()
+          // if srch-char is a-supplement with surrogates (high 55296–56319), find it
+          if (nCharWord >= 55296 && nCharWord <= 56319) {
+            let sSupplement = String.fromCodePoint(sWordIn[0].charAt(0).charCodeAt(0),
+                                                   sWordIn[0].charAt(1).charCodeAt(0))
+            nCharWord = sSupplement.codePointAt()
+          }
+          if (!Number.isInteger(Number(sIdxFrom))) {
+            // it is char
+            nIdxFrom = sIdxFrom.codePointAt()
+          } else {
+            // it is number
+            nIdxFrom = Number(sIdxFrom)
+          }
+          if (!Number.isInteger(Number(sIdxTo))) {
+            nIdxTo = sIdxTo.codePointAt()
+          } else {
+            nIdxTo = Number(sIdxTo)
+          }
+          //console.log(nIdxFrom+', '+nIdxTo)
+          if (nCharWord >= nIdxFrom && nCharWord < nIdxTo) {
+            // found Wrdidx-file
+            bRest = false 
+            sWrdidxOut = sWrdidx
+            aWrdidxMcs_Idx = [sWrdidxOut, sIndex]
+            break
+          }
         }
       }
     }
@@ -823,6 +843,9 @@ function fFindWrdidxMcs(sWordIn, sLagIn, aWrdidxIdxIn) {
   }
 
   if (!sWrdidxOut.endsWith('_0')) {
+    sWrdidxOut = sWrdidxOut +'.last.html'
+    aWrdidxMcs_Idx = [sWrdidxOut, sIndex]
+    console.log(aWrdidxMcs_Idx)
     return aWrdidxMcs_Idx 
   } else {
     sWrdidxRefFull = 'dirWrdidx/dirLag'+sLagIn +'/' +sWrdidxOut +'.json'
@@ -830,15 +853,5 @@ function fFindWrdidxMcs(sWordIn, sLagIn, aWrdidxIdxIn) {
     return fFindWrdidxMcs(sWordIn, sLagIn, aRef)
   }
 }
-
-/*
-// IF run alone
-if (bAlone) {
-  // create name-indices 
-  fWrdidx(aWordsIn)
-  //upload files
-  fSftp()
-}
-*/
 
 export {fWrdidx}

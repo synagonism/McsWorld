@@ -28,6 +28,7 @@
 const
   // contains the-versions of mLagUtil.js
   aVersion = [
+    'mLagUtil.js.0-4-1.2022-02-24: fGreekwordFindPhonemic',
     'mLagUtil.js.0-4-0.2022-02-23: fPhonemaRemoveTonos',
     'mLagUtil.js.0-3-0.2022-02-15: fGreekwordFindPhonemic',
     'mLagUtil.js.0-2-0.2022-01-18: translated from java',
@@ -656,8 +657,11 @@ function fGreekwordFindPhonemic (sWordIn) {
 
   sOut = sOut.replaceAll('γιου', 'yyu') 
   sOut = sOut.replaceAll('γιω', 'yyo')
+  sOut = sOut.replaceAll('γυα', 'yya') //γυαλιάς
   sOut = sOut.replaceAll('νιου', 'nnu') //καπετάνιους|καπετάνιων
   sOut = sOut.replaceAll('νιω', 'nno')
+  sOut = sOut.replaceAll('αιά', 'eá') //Πειραιάς
+  sOut = sOut.replaceAll('ουά', 'uá') //Μπουρζουάς
 
   if (sOut.indexOf('ειά') != -1) //παντρειά, δουλειά
     sOut = sOut.replaceAll('ειά', '111')
@@ -719,6 +723,7 @@ function fGreekwordFindPhonemic (sWordIn) {
   sOut = sOut.replaceAll('αυχ', 'afh') //
   sOut = sOut.replaceAll('εύα', 'éva') //εύα
   sOut = sOut.replaceAll('ευα', 'eva') //
+  sOut = sOut.replaceAll('ευά', 'evá') //
   sOut = sOut.replaceAll('εύγ', 'évy') //εύγ
   sOut = sOut.replaceAll('ευγ', 'evy') //
   sOut = sOut.replaceAll('εύδ', 'évdh') //εύδ
@@ -743,6 +748,8 @@ function fGreekwordFindPhonemic (sWordIn) {
   sOut = sOut.replaceAll('ευσ', 'efs') //ευσ
   sOut = sOut.replaceAll('εύτ', 'éft') //εύτ
   sOut = sOut.replaceAll('ευτ', 'eft') //ευτ
+  sOut = sOut.replaceAll('Ευω', 'evo') //
+  sOut = sOut.replaceAll('ευω', 'evo') //
   sOut = sOut.replaceAll('έ', 'é')
   sOut = sOut.replaceAll('ή', 'í')
   sOut = sOut.replaceAll('ί', 'í')
@@ -755,11 +762,16 @@ function fGreekwordFindPhonemic (sWordIn) {
 
   sOut = sOut.replaceAll('ντζ', 'nj')
   sOut = sOut.replaceAll('μπ', 'b')
+  sOut = sOut.replaceAll('Μπ', 'b')
   sOut = sOut.replaceAll('ντ', 'd')
+  sOut = sOut.replaceAll('Ντ', 'd')
   sOut = sOut.replaceAll('γκ', 'g')
+  sOut = sOut.replaceAll('Γκ', 'g')
   sOut = sOut.replaceAll('γγ', 'g')
   sOut = sOut.replaceAll('τζ', 'j')
+  sOut = sOut.replaceAll('Τζ', 'j')
   sOut = sOut.replaceAll('τσ', 'c')
+  sOut = sOut.replaceAll('Τσ', 'c')
   sOut = sOut.replaceAll('β', 'v')
   sOut = sOut.replaceAll('Β', 'v')
   sOut = sOut.replaceAll('γ', 'y')
@@ -787,11 +799,13 @@ function fGreekwordFindPhonemic (sWordIn) {
   sOut = sOut.replaceAll('π', 'p')
   sOut = sOut.replaceAll('Π', 'p')
   sOut = sOut.replaceAll('ρ', 'r')
-  sOut = sOut.replaceAll('Ρ', 'r')
+  sOut = sOut.replaceAll('ρρ', 'r')
   sOut = sOut.replaceAll('σ', 's')
+  sOut = sOut.replaceAll('σσ', 's')
   sOut = sOut.replaceAll('Σ', 's')
   sOut = sOut.replaceAll('ς', 's')
   sOut = sOut.replaceAll('τ', 't')
+  sOut = sOut.replaceAll('ττ', 't')
   sOut = sOut.replaceAll('Τ', 't')
   sOut = sOut.replaceAll('φ', 'f')
   sOut = sOut.replaceAll('Φ', 'f')

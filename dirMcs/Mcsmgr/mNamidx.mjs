@@ -82,7 +82,7 @@ let
 if (process.argv[2]) {
   oSftp.password = process.argv[2]
 } else {
-  console.log('type password after mWatch.mjs')
+  console.log('type password after mNamidx.mjs')
   process.exit()
 }
 
