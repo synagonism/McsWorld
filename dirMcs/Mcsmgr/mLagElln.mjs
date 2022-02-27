@@ -32,6 +32,7 @@ import * as moLagUtil from './mLagUtil.js'
 const
   // contains the-versions of mLagElln.js
   aVersion = [
+    'mLagElln.js.0-2-0.2022-02-26: member-phonema'
     'mLagElln.js.0-1-0.2022-01-15: creation'
   ],
   sFileElln = 'dirLag/McsLag000020.last.html'
@@ -1134,9 +1135,12 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
     if (sStemMx === sStemM) sWordX = sStemW + sSufxMx
     else if (sStemMx === sStemMRem) sWordX = sStemWRem + sSufxMx
     //TODO: other cases
-    sWordX = sWordX + moLagUtil.fGreekwordFindPhonemic(sWordX)
-    if (sWordX.indexOf('111') != -1) console.log(sWordX)
-    //TODO: fix it from base-form
+    let sPhnm = moLagUtil.fGreekwordFindPhonemic(sWordX, moLagUtil.fGreekwordHasSinizisi(sWordArtiPhnm))
+    if (sPhnm.indexOf('111') !== -1){
+      //TODO: fix it from base-form
+      console.log(sPhnm +'/' +sWordArtiPhnm)
+    }
+    sWordX = sWordX + sPhnm
     return sWordX
   }
   

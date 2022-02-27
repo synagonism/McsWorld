@@ -29,13 +29,12 @@
  *   1) it reads the-Wrdidx.txt, and creates the-word-concepts for the-words in.
  *   2) it name-indexes the-new files.
  * INPUT: Wrdidx.txt
- * OUTPUT: dirWrdidx/dirLang/McsWrdidxLangX.last.html, sftp.json,
+ * OUTPUT: dirWrdidx/dirLang/McsWrdidxLangX.last.html, McsWrdidxLangX.txt aPages, name-idx-files, sftp.json,
  *
  * RUN: node Mcsmgr/mWrdidx.mjs pwd 
  *
  * PROBLEM:
- * - 
- *
+ * - ambigous phonemic-notation
  */
 
 import moFs from 'fs';
@@ -457,6 +456,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
       '    <br>× gender: ' + oCase.gender + '\n' +
       '    <br>× inflection-method: ' + oCase.method + '\n' +
       '    <br>× members: ' + oCase.members + '\n' +
+      '    <br>× el.wiktionary.org: <a href="https://el.wiktionary.org/wiki/' + oCase.Baseform + '">' + oCase.Baseform + '</a>\n' +
       '    <a class="clsHide" href="#idWrd' +sLag + sPhonemaNaked + '"></a></p>'
 
     aWordinfo[1] = sInfo
