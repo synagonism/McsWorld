@@ -1111,9 +1111,11 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
   //find stems
   sStemM = aInfo[1].substr(0, aInfo[1].indexOf('-'))
   sStemMRem = moLagUtil.fGreektonosRemove(sStemM)
+  sStemMInc = moLagUtil.fGreektonosIncrease(sStemM)
   sSufxM = aInfo[1].substr(aInfo[1].lastIndexOf('-')+1)
   sStemW = sWord.substr(0, sWord.length-sSufxM.length) //ξαδέρφ
   sStemWRem = moLagUtil.fGreektonosRemove(sStemW)
+  sStemWInc = moLagUtil.fGreektonosIncrease(sStemW)
 
   //γενι-ενικ gs
   if (aInfo[2].indexOf('|') != -1) {
@@ -1134,6 +1136,7 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
     sSufxMx = sMethexlIn.substr(sMethexlIn.indexOf('-')+1)
     if (sStemMx === sStemM) sWordX = sStemW + sSufxMx
     else if (sStemMx === sStemMRem) sWordX = sStemWRem + sSufxMx
+    else if (sStemMx === sStemMInc) sWordX = sStemWInc + sSufxMx
     //TODO: other cases
     let sPhnm = moLagUtil.fGreekwordFindPhonemic(sWordX, moLagUtil.fGreekwordHasSinizisi(sWordArtiPhnm))
     if (sPhnm.indexOf('111') !== -1){
