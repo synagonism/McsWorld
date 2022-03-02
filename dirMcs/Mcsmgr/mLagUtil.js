@@ -690,6 +690,7 @@ function fGreekwordFindPhonemic (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('αια', 'ea') //Παιανιώτης
   sOut = sOut.replaceAll('αιου', 'eu') //ελαιουργός
   sOut = sOut.replaceAll('αιο', 'eo') //ελαιοπυρήνας
+  sOut = sOut.replaceAll('αιό', 'eó') //αρχαιόφιλος
 
   //εια
   if (sOut.indexOf('βεια') != -1 && bSinizisi)
@@ -702,14 +703,12 @@ function fGreekwordFindPhonemic (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('ειά', '111') //παντρειά, δουλειά
 
   //ειο
-  sOut = sOut.replaceAll('γγειο', 'gio') //αγγειοχειρουργός
-  sOut = sOut.replaceAll('γειο', 'yio') //αγειορίτης
+  if (sOut.indexOf('γειο') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('γειο', 'yyo') //αγειορίτης
   if (sOut.indexOf('δειο') != -1 && bSinizisi)
     sOut = sOut.replaceAll('δειο', 'dhyyo') //άδειος
-  sOut = sOut.replaceAll('δειο', 'dhio') //δειο
-  sOut = sOut.replaceAll('χειο', 'hio')
-  sOut = sOut.replaceAll('ειο', '111') //βόρειο, άδειος
-  sOut = sOut.replaceAll('ειό', '111') //
+  sOut = sOut.replaceAll('ειο', 'io') //βόρειο,αγγειοχειρουργός
+  sOut = sOut.replaceAll('ειό', 'ió') //
 
   //οια
   if (sOut.indexOf('νοια') != -1 && bSinizisi) //έγνοια
@@ -719,8 +718,13 @@ function fGreekwordFindPhonemic (sWordIn, bSinizisi) {
 
   //οιο
   if (sOut.indexOf('τοιο') != -1 && bSinizisi)
-    sOut = sOut.replaceAll('οιο', 'tyyo') //τέτοιος
+    sOut = sOut.replaceAll('τοιο', 'tyyo') //τέτοιος
+  sOut = sOut.replaceAll('οιό', 'ió') //επιπλοποιός
   sOut = sOut.replaceAll('οιο', 'io')
+  
+  //οιου
+  sOut = sOut.replaceAll('οιού', 'iú')
+  sOut = sOut.replaceAll('οιου', 'iu')
 
   //ιαι
   sOut = sOut.replaceAll('ιαι', 'ie')
@@ -794,47 +798,59 @@ function fGreekwordFindPhonemic (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('ιει', 'ii') // υγιεινιστής
 
   //ιε
+  sOut = sOut.replaceAll('ιεύθ', 'iéfth') //διεύθυνση
+  sOut = sOut.replaceAll('ιευθ', 'iefth') //διευθυνσιογράφος
   if (sOut.startsWith('ιε'))
     sOut = sOut.replace('ιε', 'ie') //ιερέας
   if (sOut.indexOf('βιέ') != -1 && bSinizisi)
     sOut = sOut.replaceAll('βιέ', 'vyyé') //λεβιές
-  sOut = sOut.replaceAll('βιέ', 'vié') //Βιένη
-  sOut = sOut.replaceAll('ζιέ', 'zé') //μπουλντοζιέρης
-  sOut = sOut.replaceAll('κιέ', 'ké') //περουκιέρης
-  sOut = sOut.replaceAll('μπιέ', 'byyé') //κουραμπιές
-  sOut = sOut.replaceAll('μπιε', 'bie') //
-  sOut = sOut.replaceAll('πιέ', 'pyyé') //κουτουπιές
-  sOut = sOut.replaceAll('πιε', 'pie') //πιεστής
-  sOut = sOut.replaceAll('τσιέ', 'cé') //σπετσιέρης
+  if (sOut.indexOf('πιέ') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('πιέ', 'pyyé') //κουτουπιές
+  if (sOut.indexOf('ριε') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('ριε', 'ryye') //καριερίστας
   if (sOut.indexOf('φιέ') != -1 && bSinizisi)
     sOut = sOut.replaceAll('φιέ', 'fhhé') //χαφιές
-  sOut = sOut.replaceAll('φιέ', 'fié') //
-  sOut = sOut.replaceAll('ιε', '111') //ταμιευτήρας, καριερίστας
+  sOut = sOut.replaceAll('ζιέ', 'zé') //μπουλντοζιέρης
+  sOut = sOut.replaceAll('ιευν', 'ievn') //αρχιευνούχος
+  sOut = sOut.replaceAll('κιέ', 'ké') //περουκιέρης
+  sOut = sOut.replaceAll('μπιέ', 'byyé') //κουραμπιές
+  sOut = sOut.replaceAll('τσιέ', 'cé') //σπετσιέρης
+  sOut = sOut.replaceAll('ιε', 'ie') //Βιένη, πιεστής, ταμιευτήρας,
 
   //ιου
   if (sOut.startsWith('ιου'))
     sOut = sOut.replace('ιου', 'iu') //
   sOut = sOut.replaceAll('γιου', 'yyu') 
+  sOut = sOut.replaceAll('Γιου', 'yyu') //Γιουγκοσλάβος
+  sOut = sOut.replaceAll('γιού', 'yyú') //Γιούκος
+  sOut = sOut.replaceAll('κιού', 'kkú') //κιούρτος
+  sOut = sOut.replaceAll('νιου', 'nnu') //καπετάνιους|καπετάνιων
+  sOut = sOut.replaceAll('σιού', 'ssú') //
+  sOut = sOut.replaceAll('τσιού', 'ccú') //
   if (sOut.indexOf('μπιού') != -1 && bSinizisi)
     sOut = sOut.replaceAll('μπιού', 'byyú') //κομπιούτερ
-  sOut = sOut.replaceAll('μπιού', 'biú') //
   if (sOut.indexOf('μπιου') != -1 && bSinizisi)
     sOut = sOut.replaceAll('μπιου', 'byyu') //κομπιουτεράκιας
-  sOut = sOut.replaceAll('νιου', 'nnu') //καπετάνιους|καπετάνιων
-  sOut = sOut.replaceAll('σιού', 'ssú ') //
-  sOut = sOut.replaceAll('τσιού', 'ccú ') //
+  sOut = sOut.replaceAll('ιού', 'iú') //
+  sOut = sOut.replaceAll('ιου', 'iu') //
 
   //ιο
+  if (sOut.startsWith('ιο'))
+    sOut = sOut.replace('ιο', 'io') //
   sOut = sOut.replaceAll('γκιο', 'ggó') //καραγκιοζοπαίκτης
   sOut = sOut.replaceAll('γιό', 'yyó') //
   sOut = sOut.replaceAll('Γιό', 'yyó') //
   sOut = sOut.replaceAll('γιο', 'yyo') //
+  sOut = sOut.replaceAll('νιό', 'nnó') //
+  sOut = sOut.replaceAll('Νιό', 'nnó') //
+  if (sOut.indexOf('νιο') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('νιο', 'nno') //νιόνιος, Αντώνιος
   if (sOut.indexOf('λιό') != -1 && bSinizisi)
     sOut = sOut.replaceAll('λιό', 'lló') //βουρλιόγκας
-  sOut = sOut.replaceAll('λιό', 'lió') //
-  sOut = sOut.replaceAll('ριο', 'rio') //άγριος
-  sOut = sOut.replaceAll('ιό', '111') //, πιόσιμο
-  sOut = sOut.replaceAll('ιο', '111') //βιολί, βιολογία
+  if (sOut.indexOf('τσιό') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('τσιό', 'ccó') //βυτσιόζος
+  sOut = sOut.replaceAll('ιό', 'ió') //πιόσιμο
+  sOut = sOut.replaceAll('ιο', 'io') //άγριος, βιολογία
 
   //ιω
   if (sOut.startsWith('ιω'))
@@ -843,13 +859,13 @@ function fGreekwordFindPhonemic (sWordIn, bSinizisi) {
     sOut = sOut.replace('Ιω', 'io') //Ιωάννινα
   sOut = sOut.replaceAll('βιώ', 'vyyó')
   sOut = sOut.replaceAll('γιώ', 'yyó')
+  sOut = sOut.replaceAll('Γιώ', 'yyó')
   sOut = sOut.replaceAll('γιω', 'yyo')
   sOut = sOut.replaceAll('διώ', 'dhyyó')
   sOut = sOut.replaceAll('ζιώ', 'zzó')
   sOut = sOut.replaceAll('κιώ', 'kkó') //Αμπελακιώτης
   sOut = sOut.replaceAll('λλιώ', 'lló') //Βρυξελλιώτης
   sOut = sOut.replaceAll('λιώ', 'lló') //αμυγδαλιώνας
-  sOut = sOut.replaceAll('μιώ', 'mnnó') //καλαμιώνας
   sOut = sOut.replaceAll('ννιώ', 'nnó') //Γιαννιώτης
   sOut = sOut.replaceAll('ντζιώ', 'njjó') //Καλεντζιώτης
   sOut = sOut.replaceAll('νιώ', 'nnó') //λιμνιώνας
@@ -857,9 +873,16 @@ function fGreekwordFindPhonemic (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('πιώ', 'pyyó') //Αμπελοκιπιώτης
   sOut = sOut.replaceAll('ριώ', 'ryyó') // Αλιβεριώτης
   sOut = sOut.replaceAll('τιώ', 'tyyó') // Αετιώτης
+  if (sOut.indexOf('μιώ') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('μιώ', 'mnnó') //καλαμιώνας, ημιώροφος
+  sOut = sOut.replaceAll('ιώ', 'ió') // 
 
   //υα
   sOut = sOut.replaceAll('μυα', 'mnna') //μυαλό
+
+  //υο
+  if (sOut.indexOf('δυό') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('δυό', 'dhyyó') //δυόσμος
 
   sOut = sOut.replaceAll('ού', 'ú')
   sOut = sOut.replaceAll('Ού', 'ú')
@@ -873,6 +896,7 @@ function fGreekwordFindPhonemic (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('αυα', 'ava') //
   sOut = sOut.replaceAll('αύγ', 'ávy') //αύγουστος
   sOut = sOut.replaceAll('Αύγ', 'ávy') //αύγουστος
+  sOut = sOut.replaceAll('Αυγ', 'avy') //Αυγουστίνος
   sOut = sOut.replaceAll('αυγ', 'avy') //
   sOut = sOut.replaceAll('αύδ', 'ávdh') //Κλαύδιος
   sOut = sOut.replaceAll('αυδ', 'avdh') //
@@ -909,6 +933,7 @@ function fGreekwordFindPhonemic (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('ευα', 'eva') //
   sOut = sOut.replaceAll('Ευα', 'eva') //Ευαγγελισμός
   sOut = sOut.replaceAll('ευά', 'evá') //
+  sOut = sOut.replaceAll('Ευά', 'evá') //Ευάγγελος
   sOut = sOut.replaceAll('εύγ', 'évy') //εύγ
   sOut = sOut.replaceAll('ευγ', 'evy') //
   sOut = sOut.replaceAll('Ευγ', 'evy') //
@@ -933,16 +958,20 @@ function fGreekwordFindPhonemic (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('ευξ', 'efks') //
   sOut = sOut.replaceAll('εύου', 'évu') //καθαρεύουσα
   sOut = sOut.replaceAll('εύο', 'évo') //
+  sOut = sOut.replaceAll('ευό', 'evó') //προστατευόμενος
   sOut = sOut.replaceAll('ευου', 'evu') //καθαρευουσιάνος
   sOut = sOut.replaceAll('ευπ', 'efp') //ευπατρίδης
   sOut = sOut.replaceAll('εύρ', 'évr') //εύρ
+  sOut = sOut.replaceAll('Εύρ', 'évr') //εύρ
   sOut = sOut.replaceAll('ευρ', 'evr') //
   sOut = sOut.replaceAll('Ευρ', 'evr') //Ευριπίδης
   sOut = sOut.replaceAll('εύσ', 'éfs') //εύσ
   sOut = sOut.replaceAll('ευσ', 'efs') //ευσ
+  sOut = sOut.replaceAll('Ευσ', 'efs') //ευσ
   sOut = sOut.replaceAll('εύτ', 'éft') //εύτ
   sOut = sOut.replaceAll('ευτ', 'eft') //ευτ
   sOut = sOut.replaceAll('ευφ', 'ef') //ευφημισμός
+  sOut = sOut.replaceAll('Εύφ', 'éf') //
   sOut = sOut.replaceAll('ευχ', 'efh') //ευχέτης
   sOut = sOut.replaceAll('Ευω', 'evo') //
   sOut = sOut.replaceAll('ευω', 'evo') //
@@ -1059,16 +1088,16 @@ function fGreekwordFindPhonemic (sWordIn, bSinizisi) {
  * OUTPUT: boolean
  */
 function fGreekwordHasSinizisi(sPhonemaIn) {
-  if (sPhonemaIn.indexOf('yy') ||
-      sPhonemaIn.indexOf('gg') || //γκια
-      sPhonemaIn.indexOf('zz') ||
-      sPhonemaIn.indexOf('hh') ||
-      sPhonemaIn.indexOf('kk') ||
-      sPhonemaIn.indexOf('ll') ||
-      sPhonemaIn.indexOf('nn') ||
-      sPhonemaIn.indexOf('ss') ||
-      sPhonemaIn.indexOf('jj') ||
-      sPhonemaIn.indexOf('cc')
+  if (sPhonemaIn.indexOf('yy')!=-1 ||
+      sPhonemaIn.indexOf('gg')!=-1 || //γκια
+      sPhonemaIn.indexOf('zz')!=-1 ||
+      sPhonemaIn.indexOf('hh')!=-1 ||
+      sPhonemaIn.indexOf('kk')!=-1 ||
+      sPhonemaIn.indexOf('ll')!=-1 ||
+      sPhonemaIn.indexOf('nn')!=-1 ||
+      sPhonemaIn.indexOf('ss')!=-1 ||
+      sPhonemaIn.indexOf('jj')!=-1 ||
+      sPhonemaIn.indexOf('cc')!=-1
      ) return true
   else return false
 }
