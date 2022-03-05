@@ -32,6 +32,7 @@ import * as moLagUtil from './mLagUtil.js'
 const
   // contains the-versions of mLagElln.js
   aVersion = [
+    'mLagElln.js.0-2-1.2022-03-05: fFindCaseinfoElln',
     'mLagElln.js.0-2-0.2022-02-26: member-phonema',
     'mLagElln.js.0-1-0.2022-01-15: creation'
   ],
@@ -1133,20 +1134,23 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
 
   /** it returns an-inflection, given example method*/
   function fFindWordX(sMethexlIn) {
-    sStemMx = sMethexlIn.substr(0, sMethexlIn.indexOf('-'))
-    sSufxMx = sMethexlIn.substr(sMethexlIn.indexOf('-')+1)
-    if (sStemMx === sStemM) sWordX = sStemW + sSufxMx
-    else if (sStemMx === sStemMRem) sWordX = sStemWRem + sSufxMx
-    else if (sStemMx === sStemMInc) sWordX = sStemWInc + sSufxMx
-    //TODO: other cases
-    let
-      bSinizisi = moLagUtil.fGreekwordHasSinizisi(sWordArtiPhnm),
-      sPhnm = moLagUtil.fGreekwordFindPhonema(sWordX, bSinizisi)
-    if (sPhnm.indexOf('111') !== -1){
-      //TODO: fix it from base-form
-      console.log(sPhnm +'/' +sWordArtiPhnm)
-    }
-    sWordX = sWordX + sPhnm
+    if (sMethexlIn !== '∅') { //empty-set
+      sStemMx = sMethexlIn.substr(0, sMethexlIn.indexOf('-'))
+      sSufxMx = sMethexlIn.substr(sMethexlIn.indexOf('-')+1)
+      if (sStemMx === sStemM) sWordX = sStemW + sSufxMx
+      else if (sStemMx === sStemMRem) sWordX = sStemWRem + sSufxMx
+      else if (sStemMx === sStemMInc) sWordX = sStemWInc + sSufxMx
+      //TODO: other cases
+      let
+        bSinizisi = moLagUtil.fGreekwordHasSinizisi(sWordArtiPhnm),
+        sPhnm = moLagUtil.fGreekwordFindPhonema(sWordX, bSinizisi)
+      if (sPhnm.indexOf('111') !== -1){
+        //TODO: fix it from base-form
+        console.log(sPhnm +'/' +sWordArtiPhnm)
+      }
+      sWordX = sWordX + sPhnm
+    } else
+      sWordX = '-'
     return sWordX
   }
   
