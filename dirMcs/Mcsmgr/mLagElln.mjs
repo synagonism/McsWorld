@@ -1141,7 +1141,7 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
     //TODO: other cases
     let
       bSinizisi = moLagUtil.fGreekwordHasSinizisi(sWordArtiPhnm),
-      sPhnm = moLagUtil.fGreekwordFindPhonemic(sWordX, bSinizisi)
+      sPhnm = moLagUtil.fGreekwordFindPhonema(sWordX, bSinizisi)
     if (sPhnm.indexOf('111') !== -1){
       //TODO: fix it from base-form
       console.log(sPhnm +'/' +sWordArtiPhnm)

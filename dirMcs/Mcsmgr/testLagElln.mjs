@@ -4,4 +4,4 @@ let
   a = [["a","b"],["c","d"]]
 
 
-console.log(moLagElln.fFindCaseinfoElln('ψησταριά-η/psistaryyá-i/','caseEllnMnG2XaT1SeNuF1Ba'))
+console.log(moLagElln.fFindCaseinfoElln('φωτοευαισθησία-η/fotoevesthisía-i/','caseEllnMnG2XaT2SeNcF1Ba'))

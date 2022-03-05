@@ -76,7 +76,7 @@ function mEllnTtfm(sFileIn, sFileOut) {
   for (n = 0; n < aFileIn.length; n++) {
     sLn = aFileIn[n]
     //finds pronunciation
-    sLn = sLn + moLagUtil.fGreekwordFindPhonemic(sLn)
+    sLn = sLn + moLagUtil.fGreekwordFindPhonema(sLn)
     //add on new array
     aFile[n] = sLn
   }
