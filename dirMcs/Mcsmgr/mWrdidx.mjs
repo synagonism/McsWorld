@@ -174,14 +174,14 @@ function fWrdidx(asWordsIn, sMethodIn) {
       aWordinfo = [],
       sWord = sWordIn.substring(0, sWordIn.indexOf('/')), //ξαδέρφη-η
       sPhonema = sWordIn.substring(sWordIn.indexOf('/')+1, sWordIn.length-1), //ksadhérfi-i
-      sPhonemaNaked = moLagUtil.fPhonemaRemoveTonos(sPhonema), //no tonos to have previews
+      sPhonemaPreview = moLagUtil.fPhonemaTonosReplace(sPhonema), //no tonos to have previews
       sMethod = sMethodIn,
       sLag = sMethod.substring(4, 8), //Elln
       sInfo,
       oCase
 
     aWordinfo[0] = sWord
-    sInfo = '  <p id="idWrd' + sLag + sPhonemaNaked + '">' +
+    sInfo = '  <p id="idWrd' + sLag + sPhonemaPreview + '">' +
       '<span class="clsColorRed">' + sWordIn + '</span>::\n' +
       '    <br>* McsEngl.word' + sLag + '.' + sWordIn + '@word' + sLag + ',\n' +
       '    <br>* Mcs' + sLag + '.' + sWordIn + '@word' + sLag + ',\n'
@@ -457,7 +457,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
       '    <br>× inflection-method: ' + oCase.method + '\n' +
       '    <br>× members: ' + oCase.members + '\n' +
       '    <br>× el.wiktionary.org: <a href="https://el.wiktionary.org/wiki/' + oCase.Baseform + '">' + oCase.Baseform + '</a>\n' +
-      '    <a class="clsHide" href="#idWrd' +sLag + sPhonemaNaked + '"></a></p>'
+      '    <a class="clsHide" href="#idWrd' +sLag + sPhonemaPreview + '"></a></p>'
 
     aWordinfo[1] = sInfo
     return aWordinfo

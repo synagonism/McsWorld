@@ -43,7 +43,7 @@ const
  * INPUT: nífi
  * OUTPUT: nifi
  */
-function fPhonemaRemoveTonos (sPhonemaIn) {
+function fPhonemaTonosRemove (sPhonemaIn) {
   if (sPhonemaIn.indexOf('á') != -1)
     return sPhonemaIn.replace('á','a')
   else if (sPhonemaIn.indexOf('é') != -1)
@@ -64,6 +64,35 @@ function fPhonemaRemoveTonos (sPhonemaIn) {
     return sPhonemaIn.replace('ò','ο')
   else if (sPhonemaIn.indexOf('ù') != -1)
     return sPhonemaIn.replace('ù','u')
+  else
+    return sPhonemaIn
+}
+/*
+ * DOING: it replaces the-tonos from a-phonema
+ * INPUT: nífi
+ * OUTPUT: ni9fi
+ */
+function fPhonemaTonosReplace (sPhonemaIn) {
+  if (sPhonemaIn.indexOf('á') != -1)
+    return sPhonemaIn.replace('á','a9')
+  else if (sPhonemaIn.indexOf('é') != -1)
+    return sPhonemaIn.replace('é','e9')
+  else if (sPhonemaIn.indexOf('í') != -1)
+    return sPhonemaIn.replace('í','i9')
+  else if (sPhonemaIn.indexOf('ó') != -1)
+    return sPhonemaIn.replace('ó','ο9')
+  else if (sPhonemaIn.indexOf('ú') != -1)
+    return sPhonemaIn.replace('ú','u9')
+  else if (sPhonemaIn.indexOf('à') != -1)
+    return sPhonemaIn.replace('à','a8')
+  else if (sPhonemaIn.indexOf('è') != -1)
+    return sPhonemaIn.replace('è','e8')
+  else if (sPhonemaIn.indexOf('ì') != -1)
+    return sPhonemaIn.replace('ì','i8')
+  else if (sPhonemaIn.indexOf('ò') != -1)
+    return sPhonemaIn.replace('ò','ο8')
+  else if (sPhonemaIn.indexOf('ù') != -1)
+    return sPhonemaIn.replace('ù','u8')
   else
     return sPhonemaIn
 }
@@ -803,8 +832,10 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
 
   //ουα
   sOut = sOut.replaceAll('ουά', 'uá') //Μπουρζουάς
+  sOut = sOut.replaceAll('ουα', 'ua') //
 
   //ιαι
+  sOut = sOut.replaceAll('ιαί', 'ié')
   sOut = sOut.replaceAll('ιαι', 'ie')
 
   //ια
@@ -867,6 +898,8 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('Γιά', 'yyá') //γιαγιά
   sOut = sOut.replaceAll('Για', 'yya') //Γιαννιώτης
   sOut = sOut.replaceAll('ιαύγ', 'iávy') //διαύγεια
+  sOut = sOut.replaceAll('ιαυγ', 'iavy') //
+  sOut = sOut.replaceAll('ιαυλ', 'iavl') //
   sOut = sOut.replaceAll('ιαυσ', 'iafs') //ενιαυσιότητα
   sOut = sOut.replaceAll('ιαυτ', 'iaft') //περιαυτολογία
   if (sOut.indexOf('για') != -1 && bSinizisi)
@@ -917,6 +950,9 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('αυίε', 'avíe') //Νοτιοσλαυίες
   sOut = sOut.replaceAll('ιεύθ', 'iéfth') //διεύθυνση
   sOut = sOut.replaceAll('ιευθ', 'iefth') //διευθυνσιογράφος
+  sOut = sOut.replaceAll('ιευκ', 'iefk') //
+  sOut = sOut.replaceAll('ιεύρ', 'iévr') //διεύρυνση
+  sOut = sOut.replaceAll('ιευρ', 'ievr') //
   sOut = sOut.replaceAll('ιεύτ', 'iéft') //αποταμιεύτρια
   sOut = sOut.replaceAll('ιευτ', 'ieft') //αποταμιευτήρας
   if (sOut.startsWith('ιε'))
@@ -1104,6 +1140,7 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('ευε', 'eve') //
   sOut = sOut.replaceAll('εύζ', 'évz') //εύζωνας
   sOut = sOut.replaceAll('ευζ', 'evz') //
+  sOut = sOut.replaceAll('εύη', 'évi') //χλεύη
   sOut = sOut.replaceAll('ευή', 'eví') //ευήθεια
   sOut = sOut.replaceAll('ευη', 'evi') //ευηκοΐα
   sOut = sOut.replaceAll('εύθ', 'éfth') //εύθ
@@ -1433,7 +1470,7 @@ function fIsLetterVowelGreek(sCharIn) {
 }
 
 export {
-  fPhonemaRemoveTonos,
+  fPhonemaTonosRemove, fPhonemaTonosReplace,
   fFindCharsIfCodepoints, fFindCodepointsIfChars,
   fFindLettersFirstIfPrefix, fFindLettersFirstIfSuffix,
   fFindLettersLastIfPrefix, fFindLettersLastIfSuffix,
