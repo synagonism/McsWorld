@@ -328,6 +328,55 @@ function fGreektonosFindIndex(sWordIn) {
   return nTonos
 }
 
+/**
+ * DOING: it returns the-index of Greek-tonos.
+ *    if a-phoneme has 2 letters, it returns the-index of LAST-LETTER.
+ */
+function fGreektonosFindIndexLast(sWordIn) {
+  let
+    nTonos = -1
+
+  sWordIn = sWordIn.toLowerCase() 
+
+  if (sWordIn.indexOf("ά") != -1) {
+    nTonos = sWordIn.indexOf("ά")
+  }
+  else if (sWordIn.indexOf("έ") != -1) {
+    nTonos = sWordIn.indexOf("έ")
+  }
+  else if (sWordIn.indexOf("ή") != -1) {
+    nTonos = sWordIn.indexOf("ή")
+  }
+  else if (sWordIn.indexOf("ί") != -1)  {
+      nTonos = sWordIn.indexOf("ί")
+  }
+  else if (sWordIn.indexOf("ό") != -1) {
+    nTonos = sWordIn.indexOf("ό")
+  }
+  else if (sWordIn.indexOf("ύ") != -1) {
+    if (sWordIn.indexOf("ύ") != 0) {
+      //if previous letter o, decrease tonos.
+      if (  sWordIn.charAt(sWordIn.indexOf("ύ")-1) == 'α'   //αύ
+          ||sWordIn.charAt(sWordIn.indexOf("ύ")-1) == 'ε' ) //εύ, απαγορεύεται
+        nTonos = sWordIn.indexOf("ύ")-1
+      else
+        nTonos = sWordIn.indexOf("ύ")
+    }
+    else
+      nTonos = sWordIn.indexOf("ύ")
+  }
+  else if (sWordIn.indexOf("ώ") != -1) {
+    nTonos = sWordIn.indexOf("ώ")
+  }
+  else if (sWordIn.indexOf("ΰ") != -1) {
+    nTonos = sWordIn.indexOf("ΰ")
+  }
+  else if (sWordIn.indexOf("ΐ") != -1) {
+    nTonos = sWordIn.indexOf("ΐ")
+  }
+  return nTonos
+}
+
 /*
  * DOING: it removes the-tonos from a-word.
  */
@@ -611,12 +660,13 @@ function fGreektonosIncrease (sWordIn) {
     sWord2 = ''
 
   sWordIn = sWordIn.toLowerCase()
-  nIndexTonos = fGreektonosFindIndex(sWordIn)
+  nIndexTonos = fGreektonosFindIndexLast(sWordIn)
   sWordIn = fGreektonosRemove(sWordIn)
 
   sWord1 = sWordIn.substring(0, nIndexTonos+1)
   try {sWord2 = sWordIn.substring(nIndexTonos+1)}
   catch (error){console.error('fGreektonosIncrease')}
+  console.log(sWord2)
   nVowelFirst = fGreekvowelindexFindFirst(sWord2)
   sWord2 = fGreektonosSetOnIndex(sWord2, nVowelFirst)
 
@@ -1474,6 +1524,7 @@ export {
   fFindCharsIfCodepoints, fFindCodepointsIfChars,
   fFindLettersFirstIfPrefix, fFindLettersFirstIfSuffix,
   fFindLettersLastIfPrefix, fFindLettersLastIfSuffix,
+  fGreektonosFindIndex, fGreektonosFindIndexLast,
   fGreektonosFindSyllable, fGreektonosRemove,
   fGreektonosRemoveFirst, fGreektonosSetOnIndex, fGreektonosSetOnLiyusa,
   fGreektonosSetOnParaliyusa, 

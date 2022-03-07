@@ -4,4 +4,4 @@ let
   a = [["a","b"],["c","d"]]
 
 
-console.log(moUtil.fGreektonosIncrease('νόμισμα'))
+console.log(moUtil.fGreektonosIncrease('παγκοσμιοποίηση'))

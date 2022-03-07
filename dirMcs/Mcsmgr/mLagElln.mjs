@@ -32,6 +32,7 @@ import * as moLagUtil from './mLagUtil.js'
 const
   // contains the-versions of mLagElln.js
   aVersion = [
+    'mLagElln.js.0-4-0.2022-03-07: fFindCaseinfoElln-sinizisi',
     'mLagElln.js.0-3-0.2022-03-06: fFindCaseinfoElln',
     'mLagElln.js.0-2-1.2022-03-05: fFindCaseinfoElln',
     'mLagElln.js.0-2-0.2022-02-26: member-phonema',
@@ -67,7 +68,7 @@ function fFindVerbEllnRegularNo () {
 /**
  * DOING: it finds info of a-Greek-case FROM example in dirLag/McsLag000020.last.html
  * INPUT:
- *  - sWordIn = ξαδέρφη-η/ksadhérfi-i/
+ *  - sWordIn = ξαδέρφη-η/ksadhérfi-i/, Ανθοχώρι-το/anthohóri-to-s/(sinizisi on members)
  *  - sMethodIn = caseEllnMnG2XiT2SeuNucF2Bo
  * OUPUT: an-object
  */
@@ -89,9 +90,9 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
     sStemMx, //
     sSufxM,
     sSufxMx,
-    sWord = sWordIn.substr(0, sWordIn.indexOf('-')), //ξαδέρφη
-    sWordArti = sWordIn.substr(0, sWordIn.indexOf('/')), //ξαδέρφη-η
-    sWordArtiPhnm = sWordIn.substr(sWordIn.indexOf('/')), ///ksadhérfi-i/
+    sWord = sWordIn.substr(0, sWordIn.indexOf('-')), // ξαδέρφη
+    sWordArti = sWordIn.substr(0, sWordIn.indexOf('/')), // ξαδέρφη-η
+    sWordArtiPhnm = sWordIn.substr(sWordIn.indexOf('/')), // /ksadhérfi-i/
     sWordGS, //genitiveSingular
     sWordAS, //accusativeSingular
     sWordVS, //vocativeSingular
@@ -155,19 +156,24 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
   }
   //console.log(sWordGS)
 
-  /** it returns an-inflection, given example method*/
+  /** it returns a-member, given example method*/
   function fFindWordX(sMethexlIn) {
     if (sMethexlIn !== '∅') { //empty-set
       sStemMx = sMethexlIn.substr(0, sMethexlIn.indexOf('-'))
       sSufxMx = sMethexlIn.substr(sMethexlIn.indexOf('-')+1)
+      //we do on wordIn, the-same function with methodX
       if (sStemMx === sStemM) sWordX = sStemW + sSufxMx
       else if (sStemMx === sStemMRem) sWordX = sStemWRem + sSufxMx
       else if (sStemMx === sStemMInc) sWordX = sStemWInc + sSufxMx
       else if (sStemMx === sStemMDec) sWordX = sStemWDec + sSufxMx
-      //TODO: other cases
       let
-        bSinizisi = moLagUtil.fGreekwordHasSinizisi(sWordArtiPhnm),
-        sPhnm = moLagUtil.fGreekwordFindPhonema(sWordX, bSinizisi)
+        bSinizisi,
+        sPhnm
+      if (sWordArtiPhnm.endsWith('-s/'))
+        bSinizisi = true
+      else
+        bSinizisi = moLagUtil.fGreekwordHasSinizisi(sWordArtiPhnm)
+      sPhnm = moLagUtil.fGreekwordFindPhonema(sWordX, bSinizisi)
       if (sPhnm.indexOf('111') !== -1){
         //TODO: fix it from base-form
         console.log(sPhnm +'/' +sWordArtiPhnm)
