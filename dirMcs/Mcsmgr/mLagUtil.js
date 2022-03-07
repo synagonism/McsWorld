@@ -819,6 +819,7 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('αιου', 'eu') //ελαιουργός
   sOut = sOut.replaceAll('αιο', 'eo') //ελαιοπυρήνας
   sOut = sOut.replaceAll('αιό', 'eó') //αρχαιόφιλος
+  sOut = sOut.replaceAll('αιώ', 'eó') //αιών
 
   //εια
   if (sOut.endsWith('δειά-η'))
@@ -863,10 +864,14 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   //οια
   if (sOut.indexOf('νοια') != -1 && bSinizisi) //έγνοια
     sOut = sOut.replaceAll('νοια', 'nna')
+  if (sOut.indexOf('όια') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('όια', 'óyya') // κομπολόια
   sOut = sOut.replaceAll('οια', 'ia') //έννοια, έγνοια
   sOut = sOut.replaceAll('οιά', 'iá') //χροιά,
   
   //οιου
+  if (sOut.indexOf('οϊού') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('οϊού', 'oyyú') // κομπολοϊού
   sOut = sOut.replaceAll('οιού', 'iú')
   sOut = sOut.replaceAll('οιου', 'iu')
 
@@ -877,6 +882,8 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('οιο', 'io')
 
   //οιω
+  if (sOut.indexOf('οϊώ') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('οϊώ', 'oyyó') // κομπολοϊών
   sOut = sOut.replaceAll('οιώ', 'ió') //Ευβοιώτισσα
   sOut = sOut.replaceAll('οιω', 'io')
 
@@ -986,6 +993,8 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
     sOut = sOut.replaceAll('σια', 'ssa') //
   if (sOut.indexOf('τζια') != -1 && bSinizisi)
     sOut = sOut.replaceAll('τζια', 'jja') //
+  if (sOut.indexOf('τια') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('τια', 'tyya') //καράτια
   sOut = sOut.replaceAll('ια', 'ia') //Ολυμπιακός,
   sOut = sOut.replaceAll('ιά', 'iá') //γαβριάς,
 
@@ -1041,6 +1050,7 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('νιου', 'nnu') //καπετάνιους|καπετάνιων
   sOut = sOut.replaceAll('σιού', 'ssú') //
   sOut = sOut.replaceAll('τσιού', 'ccú') //
+  sOut = sOut.replaceAll('τιού', 'tyyú') //καρατιού
   if (sOut.indexOf('μπιού') != -1 && bSinizisi)
     sOut = sOut.replaceAll('μπιού', 'byyú') //κομπιούτερ
   if (sOut.indexOf('μπιου') != -1 && bSinizisi)
