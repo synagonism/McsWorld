@@ -32,6 +32,7 @@ import * as moLagUtil from './mLagUtil.js'
 const
   // contains the-versions of mLagElln.js
   aVersion = [
+    'mLagElln.js.0-4-1.2022-03-08: fFindCaseinfoElln-sinizisi',
     'mLagElln.js.0-4-0.2022-03-07: fFindCaseinfoElln-sinizisi',
     'mLagElln.js.0-3-0.2022-03-06: fFindCaseinfoElln',
     'mLagElln.js.0-2-1.2022-03-05: fFindCaseinfoElln',
@@ -100,8 +101,13 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
     sWordGP, //genitivePlural
     sWordAP, //accusativePlurl
     sWordVP, //vocativePlural
-    sWordX
-
+    sWordX,
+    bSinizisi
+    
+  if (sWordArtiPhnm.endsWith('-s/'))
+    bSinizisi = true
+  else
+    bSinizisi = moLagUtil.fGreekwordHasSinizisi(sWordArtiPhnm)
   aMcs = moFs.readFileSync(sFileElln).toString().split('\n')
 
   //find the-index of method
@@ -135,13 +141,13 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
   //find stems
   sStemM = aInfo[1].substr(0, aInfo[1].indexOf('-'))
   sStemMRem = moLagUtil.fGreektonosRemove(sStemM)
-  sStemMInc = moLagUtil.fGreektonosIncrease(sStemM)
-  sStemMDec = moLagUtil.fGreektonosDecrease(sStemM)
+  sStemMInc = moLagUtil.fGreektonosIncrease(sStemM, bSinizisi)
+  sStemMDec = moLagUtil.fGreektonosDecrease(sStemM, bSinizisi)
   sSufxM = aInfo[1].substr(aInfo[1].lastIndexOf('-')+1)
   sStemW = sWord.substr(0, sWord.length-sSufxM.length) //ξαδέρφ
   sStemWRem = moLagUtil.fGreektonosRemove(sStemW)
-  sStemWInc = moLagUtil.fGreektonosIncrease(sStemW)
-  sStemWDec = moLagUtil.fGreektonosDecrease(sStemW)
+  sStemWInc = moLagUtil.fGreektonosIncrease(sStemW, bSinizisi)
+  sStemWDec = moLagUtil.fGreektonosDecrease(sStemW, bSinizisi)
 
   //γενι-ενικ gs
   if (aInfo[2].indexOf('|') != -1) {
@@ -166,14 +172,7 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
       else if (sStemMx === sStemMRem) sWordX = sStemWRem + sSufxMx
       else if (sStemMx === sStemMInc) sWordX = sStemWInc + sSufxMx
       else if (sStemMx === sStemMDec) sWordX = sStemWDec + sSufxMx
-      let
-        bSinizisi,
-        sPhnm
-      if (sWordArtiPhnm.endsWith('-s/'))
-        bSinizisi = true
-      else
-        bSinizisi = moLagUtil.fGreekwordHasSinizisi(sWordArtiPhnm)
-      sPhnm = moLagUtil.fGreekwordFindPhonema(sWordX, bSinizisi)
+      let sPhnm = moLagUtil.fGreekwordFindPhonema(sWordX, bSinizisi)
       if (sPhnm.indexOf('111') !== -1){
         //TODO: fix it from base-form
         console.log(sPhnm +'/' +sWordArtiPhnm)
