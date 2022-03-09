@@ -179,7 +179,7 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
       }
       sWordX = sWordX + sPhnm
     } else
-      sWordX = '-'
+      sWordX = '∅'
     return sWordX
   }
   
