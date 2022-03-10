@@ -833,10 +833,16 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
     sOut = sOut.replace('τειά-η', 'tyyá-i') //γητειά
   if (sOut.indexOf('βεια') != -1 && bSinizisi)
     sOut = sOut.replaceAll('βεια', 'vyya') //ακρίβεια
+  if (sOut.indexOf('γειά') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('γειά', 'yyá') //υγειά
+  if (sOut.indexOf('θειά') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('θειά', 'thhhá') //θειάφισμα
   if (sOut.indexOf('θεια') != -1 && bSinizisi)
     sOut = sOut.replaceAll('θεια', 'thhha') //βοήθεια
   if (sOut.indexOf('λειά') != -1 && bSinizisi)
     sOut = sOut.replaceAll('λειά', 'llá') //δουλειά
+  if (sOut.indexOf('ρειά') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('ρειά', 'ryyá') //χηρειά
   sOut = sOut.replaceAll('εια', 'ia') //άδεια, 
   sOut = sOut.replaceAll('ειά', 'iá') //παντρειά,
   sOut = sOut.replaceAll('ιεία', 'iía') //αλιεία
@@ -854,14 +860,34 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('ειου', 'iu')
 
   //ειο
+  if (sOut.indexOf('βειό') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('βειό', 'vyyó') //λιοτριβειό
   if (sOut.indexOf('γειο') != -1 && bSinizisi)
     sOut = sOut.replaceAll('γειο', 'yyo') //αγειορίτης
   if (sOut.indexOf('δειο') != -1 && bSinizisi)
     sOut = sOut.replaceAll('δειο', 'dhyyo') //άδειος
+  if (sOut.indexOf('λειό') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('λειό', 'lló') //αργαλειός
+  if (sOut.indexOf('πειό') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('πειό', 'pyyó')
+  if (sOut.indexOf('ρειό') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('ρειό', 'ryyó')
+  if (sOut.indexOf('τειό') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('τειό', 'tyyó')
+  if (sOut.indexOf('χειό') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('χειό', 'hhó')
   sOut = sOut.replaceAll('ειο', 'io') //βόρειο,αγγειοχειρουργός
   sOut = sOut.replaceAll('ειό', 'ió')
 
   //ειω
+  if (sOut.indexOf('θειώ') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('θειώ', 'thhhó')
+  if (sOut.indexOf('λειώ') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('λειώ', 'lló')
+  if (sOut.indexOf('νειώ') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('νειώ', 'nnó')
+  if (sOut.indexOf('φειώ') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('φειώ', 'fhhó')
   sOut = sOut.replaceAll('ειώ', 'ió') //αληθειών
 
   //οια
@@ -887,6 +913,8 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   //οιω
   if (sOut.indexOf('οϊώ') != -1 && bSinizisi)
     sOut = sOut.replaceAll('οϊώ', 'oyyó') // κομπολοϊών
+  if (sOut.indexOf('ροιώ') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('ροιώ', 'ryyó') // Βεροιώτης
   sOut = sOut.replaceAll('οιώ', 'ió') //Ευβοιώτισσα
   sOut = sOut.replaceAll('οιω', 'io')
 

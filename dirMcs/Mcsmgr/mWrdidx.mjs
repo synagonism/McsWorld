@@ -100,18 +100,19 @@ function fWrdidx(asWordsIn, sMethodIn) {
     oSetFileUp = new Set, 
     // files to upload, 
     // we use a-set, because we add same files and want unique.
+    oSetFileIndex = new Set,
+    // files to name-index,
     aSftp,
+    aIndex,
     aWordsIn,
     // array with words to index
     sMethod = sMethodIn,
     sLag = sMethod.substring(4, 8),
     aRootWrdidx_Idx = JSON.parse(moFs.readFileSync('dirWrdidx/McsWrdidx_0.json')),
-    // [['McsWrdidxEngl01ei','A']} with quantity of words
+    // [['McsWrdidxEngl01ei','A']}
     oWrdidxMcs_Idx = {},
     // holds the-names of Wrdidx-files and the related indexes
     // {McsWrdidxEngl01ei:'A|a', McsWrdidxZhon024:'13312..14000'}
-    oWrdidx_Qntwrd = {},
-    // {McsWrdidxEngl01ei:222} the-quantities of word of Wrdidx-files
     sLn,
     n
 
@@ -123,9 +124,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
   }
 
   /**
-   * for EACH word in aWordsIn,
-   * FINDS its Wrdidx-file
-   * ADDS word-info
+   * for EACH word in aWordsIn, FINDS its Wrdidx-file, ADDS word-info
    * INPUT: sWordIn = 'ξαδέρφη-η/ksadhérfi-i/'
    */
   aWordsIn.forEach((sWordIn) => {
@@ -167,7 +166,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
    * INPUT:
    *  - sWordIn = 'ξαδέρφη-η/ksadhérfi-i/'
    *  - sMethodIn = caseEllnMnG2XiT2SeuNucF2Bo
-   * OUTPUT: ["ξαδέρφη-η","  <p id="idWrdEllnksadhérfi-i"><span class="clsColorRed">ξαδέρφη-η/ksadhérfi-i/..."]
+   * OUTPUT: ["ξαδέρφη-η","  <p id="idWrdEllnksadhe9rfi-i"><span class="clsColorRed">ξαδέρφη-η/ksadhérfi-i/..."]
    */
   function fCreateWordinfo(sWordIn, sMethodIn) {
     let
@@ -613,6 +612,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
       aWords = [], //[['βουνό-το','  p id="idWrdEllnvunó-to"><span...']]
       aFile2 = [], //the-lines of words: ['  p id="idWrdEllnvunó-to"><span...']
       aFile3 = [], //the-lines AFTER words
+      aIdExisted = [],
       bSameword = false,
       n,
       n2,//word lines
@@ -636,11 +636,14 @@ function fWrdidx(asWordsIn, sMethodIn) {
     if (n2 !== 0) {
       let
         sName,
+        sId,
         sHtml
       for (n=n2; n<aFile.length; n++) {
         if (aFile[n].indexOf('<p id="idWrd') !== -1) {
           //<p id="idWrdEllnálas-to"><span class="clsColorRed">άλας-το/álas-to/
           sName = aFile[n].substring(aFile[n].indexOf('ColorRed')+10, aFile[n].indexOf('/'))
+          sId = aFile[n].substring(aFile[n].indexOf('"')+1, aFile[n].indexOf('">'))
+          aIdExisted.push(sId)
           sHtml = aFile[n]
           if (sName === aWrdinfIn[0]) {
             bSameword = true
@@ -707,8 +710,8 @@ function fWrdidx(asWordsIn, sMethodIn) {
       moFs.writeFileSync(sWrdidxMcsFullIn, s)
       oSetFileUp.add(sWrdidxMcsFullIn)
 
-      //name-index the-file
-      fNamidx(sWrdidxMcsFullIn)
+      //add the-file for name-index
+      oSetFileIndex.add(sWrdidxMcsFullIn)
 
       // write the-files to upload
       aSftp = JSON.parse(moFs.readFileSync('sftp.json'))
@@ -716,8 +719,18 @@ function fWrdidx(asWordsIn, sMethodIn) {
          oSetFileUp.add(sFile)
       }
     }
+
+    //check of Id collision
+    let sIdNew = aWrdinfIn[1].substring(aWrdinfIn[1].indexOf('"')+1, aWrdinfIn[1].indexOf('">'))
+    if (aIdExisted.includes(sIdNew) && !bSameword)
+      console.log('ID COLLISION: ' + sIdNew)
   }
 
+  //name-index the-files
+  aIndex = Array.from(oSetFileIndex)
+  if (aIndex.length > 0) fNamidx(aIndex)
+
+  //sftp the-files
   aSftp = Array.from(oSetFileUp)
   aSftp.sort()
   if (aSftp.length > 0) {
@@ -845,7 +858,7 @@ function fFindWrdidxMcs(sWordIn, sLagIn, aWrdidxIdxIn) {
   if (!sWrdidxOut.endsWith('_0')) {
     sWrdidxOut = sWrdidxOut +'.last.html'
     aWrdidxMcs_Idx = [sWrdidxOut, sIndex]
-    console.log(aWrdidxMcs_Idx)
+    //console.log(aWrdidxMcs_Idx)
     return aWrdidxMcs_Idx 
   } else {
     sWrdidxRefFull = 'dirWrdidx/dirLag'+sLagIn +'/' +sWrdidxOut +'.json'
