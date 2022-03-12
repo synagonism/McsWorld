@@ -32,6 +32,7 @@ import * as moLagUtil from './mLagUtil.js'
 const
   // contains the-versions of mLagElln.js
   aVersion = [
+    'mLagElln.js.0-5-0.2022-03-12: fFindCaseinfoElln-(δύσχρηστο-μέλος)',
     'mLagElln.js.0-4-1.2022-03-08: fFindCaseinfoElln-sinizisi',
     'mLagElln.js.0-4-0.2022-03-07: fFindCaseinfoElln-sinizisi',
     'mLagElln.js.0-3-0.2022-03-06: fFindCaseinfoElln',
@@ -110,7 +111,7 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
     bSinizisi = moLagUtil.fGreekwordHasSinizisi(sWordArtiPhnm)
   aMcs = moFs.readFileSync(sFileElln).toString().split('\n')
 
-  //find the-index of method
+  //find the-index of method in McsLagElln
   n = aMcs.findIndex(function(sLn){
     return sLn.indexOf('"idLEllncase' +sMethodIn.substring(8) +'dsn"') > 1
   })
@@ -162,7 +163,10 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
   }
   //console.log(sWordGS)
 
-  /** it returns a-member, given example method*/
+  /**
+   * it returns a-member, given example method
+   * INPUT: νότ-α, (νοτ-ών)
+   */
   function fFindWordX(sMethexlIn) {
     if (sMethexlIn !== '∅') { //empty-set
       sStemMx = sMethexlIn.substr(0, sMethexlIn.indexOf('-'))
@@ -172,12 +176,21 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
       else if (sStemMx === sStemMRem) sWordX = sStemWRem + sSufxMx
       else if (sStemMx === sStemMInc) sWordX = sStemWInc + sSufxMx
       else if (sStemMx === sStemMDec) sWordX = sStemWDec + sSufxMx
+      //δύσχρηστο μέλος σε παρένθεση
+      else if (sStemMx.substring(1) === sStemM) sWordX = '(' + sStemW + sSufxMx
+      else if (sStemMx.substring(1) === sStemMRem) sWordX = '(' + sStemWRem + sSufxMx
+      else if (sStemMx.substring(1) === sStemMInc) sWordX = '(' + sStemWInc + sSufxMx
+      else if (sStemMx.substring(1) === sStemMDec) sWordX = '(' + sStemWDec + sSufxMx
       let sPhnm = moLagUtil.fGreekwordFindPhonema(sWordX, bSinizisi)
       if (sPhnm.indexOf('111') !== -1){
         //TODO: fix it from base-form
         console.log(sPhnm +'/' +sWordArtiPhnm)
       }
       sWordX = sWordX + sPhnm
+      if (moLagUtil.fGreekwordHasSyllableOne(sWordX) == 1) {
+        sWordX = moLagUtil.fGreektonosRemove(sWordX)
+        sWordX = moLagUtil.fPhonemaTonosRemove(sWordX)
+      }
     } else
       sWordX = '∅'
     return sWordX

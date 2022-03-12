@@ -28,6 +28,7 @@
 const
   // contains the-versions of mLagUtil.js
   aVersion = [
+    'mLagUtil.js.0-7-0.2022-03-11: fGreekwordHasSyllableOne',
     'mLagUtil.js.0-6-0.2022-03-08: fGreekwordSinizisiAdd',
     'mLagUtil.js.0-5-2.2022-03-01: fGreekwordFindPhonema',
     'mLagUtil.js.0-5-0.2022-02-27: fGreektonosIncrease',
@@ -1378,6 +1379,7 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('ευί', 'eví') //λευίτης
   sOut = sOut.replaceAll('εύκ', 'éfk') //εύκ
   sOut = sOut.replaceAll('ευκ', 'efk')
+  sOut = sOut.replaceAll('ευk', 'efk')
   sOut = sOut.replaceAll('Ευκ', 'efk')
   sOut = sOut.replaceAll('εύλ', 'évl') //εύλ
   sOut = sOut.replaceAll('ευλ', 'evl')
@@ -1562,6 +1564,19 @@ function fGreekwordSinizisiAdd(sWordIn) {
 }
 
 /*
+ * test if a-Greek-word has one syllable.
+ * INPUT: 'νοια/nna/'
+ */
+function fGreekwordHasSyllableOne(sWordIn) {
+  if ((sWordIn.match(/[aeiouáéíóú]/g)||[]).length == 1)
+    return true
+  else
+    return false
+
+  //if (fGreekvowelindexFindFirst(sWordIn) == fGreekvowelindexFindLast(sWordIn))
+}
+
+/*
  * DOING: it finids if a-character is English.
  * OUTPUT: boolean.
  */
@@ -1729,5 +1744,6 @@ export {
   fGreektonosDecrease, fGreektonosIncrease,
   fGreekvowelindexFindFirst, fGreekvowelindexFindLast, fGreekvowelnumberFind,
   fGreekwordFindPhonema, fGreekwordHasSinizisi, fGreekwordSinizisiAdd,
+  fGreekwordHasSyllableOne,
   fIsLetterConsonantEnglish, fIsLetterVowelEnglish, fIsLetterVowelGreek
 }

@@ -4,4 +4,5 @@ let
   a = [["a","b"],["c","d"]]
 
 
-console.log(moUtil.fGreektonosIncrease('παγκοσμιοποίηση'))
+//console.log(moUtil.fGreektonosIncrease('παγκοσμιοποίηση'))
+console.log(moUtil.fGreekwordHasSyllableOne('θεια-η/thhho-i/'))
