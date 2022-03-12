@@ -216,230 +216,246 @@ function fWrdidx(asWordsIn, sMethodIn) {
         sElm,
         sMember
       //ενικός-ονομαστική
-      oSetMember.add(oCase.sinNom)
-      sMember = oCase.sinNom + '!~ονομ-ενικ'
-      if (oCase.sinGen.indexOf(oCase.sinNom) != -1)
-        sMember = sMember + '|γενι-ενικ'
-      if (oCase.sinAcc.indexOf(oCase.sinNom) != -1)
-        sMember = sMember + '|αιτι-ενικ'
-      if (oCase.sinVoc.indexOf(oCase.sinNom) != -1)
-        sMember = sMember + '|κλητ-ενικ'
-      if (oCase.pluNom.indexOf(oCase.sinNom) != -1)
-        sMember = sMember + '|ονομ-πληθ'
-      if (oCase.pluGen.indexOf(oCase.sinNom) != -1)
-        sMember = sMember + '|γενι-πληθ'
-      if (oCase.pluAcc.indexOf(oCase.sinNom) != -1)
-        sMember = sMember + '|αιτι-πληθ'
-      if (oCase.pluVoc.indexOf(oCase.sinNom) != -1)
-        sMember = sMember + '|κλητ-πληθ'
-      sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+      if (oCase.sinNom != '∅') {
+        oSetMember.add(oCase.sinNom)
+        sMember = oCase.sinNom + '!~ονομ-ενικ'
+        if (oCase.sinGen.indexOf(oCase.sinNom) != -1)
+          sMember = sMember + '|γενι-ενικ'
+        if (oCase.sinAcc.indexOf(oCase.sinNom) != -1)
+          sMember = sMember + '|αιτι-ενικ'
+        if (oCase.sinVoc.indexOf(oCase.sinNom) != -1)
+          sMember = sMember + '|κλητ-ενικ'
+        if (oCase.pluNom.indexOf(oCase.sinNom) != -1)
+          sMember = sMember + '|ονομ-πληθ'
+        if (oCase.pluGen.indexOf(oCase.sinNom) != -1)
+          sMember = sMember + '|γενι-πληθ'
+        if (oCase.pluAcc.indexOf(oCase.sinNom) != -1)
+          sMember = sMember + '|αιτι-πληθ'
+        if (oCase.pluVoc.indexOf(oCase.sinNom) != -1)
+          sMember = sMember + '|κλητ-πληθ'
+        sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+      }
       //ενικός-γενική
-      if (oCase.sinGen.indexOf('|') === -1) {
-        // if not stored
-        if (!oSetMember.has(oCase.sinGen)) {
-          oSetMember.add(oCase.sinGen)
-          sMember = oCase.sinGen + '!~γενι-ενικ'
-          if (oCase.sinAcc.indexOf(oCase.sinGen) != -1)
-            sMember = sMember + '|αιτι-ενικ'
-          if (oCase.sinVoc.indexOf(oCase.sinGen) != -1)
-            sMember = sMember + '|κλητ-ενικ'
-          if (oCase.pluNom.indexOf(oCase.sinGen) != -1)
-            sMember = sMember + '|ονομ-πληθ'
-          if (oCase.pluGen.indexOf(oCase.sinGen) != -1)
-            sMember = sMember + '|γενι-πληθ'
-          if (oCase.pluAcc.indexOf(oCase.sinGen) != -1)
-            sMember = sMember + '|αιτι-πληθ'
-          if (oCase.pluVoc.indexOf(oCase.sinGen) != -1)
-            sMember = sMember + '|κλητ-πληθ'
-          sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
-        }
-      } else {
-        aMember = oCase.sinGen.split('|')
-        for (sElm of aMember) {
-          if (!oSetMember.has(sElm)) {
-            oSetMember.add(sElm)
-            sMember = sElm + '!~γενι-ενικ'
-            if (oCase.sinAcc.indexOf(sElm) != -1)
+      if (oCase.sinGen != '∅') {
+        if (oCase.sinGen.indexOf('|') === -1) {
+          // if not stored
+          if (!oSetMember.has(oCase.sinGen)) {
+            oSetMember.add(oCase.sinGen)
+            sMember = oCase.sinGen + '!~γενι-ενικ'
+            if (oCase.sinAcc.indexOf(oCase.sinGen) != -1)
               sMember = sMember + '|αιτι-ενικ'
-            if (oCase.sinVoc.indexOf(sElm) != -1)
+            if (oCase.sinVoc.indexOf(oCase.sinGen) != -1)
               sMember = sMember + '|κλητ-ενικ'
-            if (oCase.pluNom.indexOf(sElm) != -1)
+            if (oCase.pluNom.indexOf(oCase.sinGen) != -1)
               sMember = sMember + '|ονομ-πληθ'
-            if (oCase.pluGen.indexOf(sElm) != -1)
+            if (oCase.pluGen.indexOf(oCase.sinGen) != -1)
               sMember = sMember + '|γενι-πληθ'
-            if (oCase.pluAcc.indexOf(sElm) != -1)
+            if (oCase.pluAcc.indexOf(oCase.sinGen) != -1)
               sMember = sMember + '|αιτι-πληθ'
-            if (oCase.pluVoc.indexOf(sElm) != -1)
+            if (oCase.pluVoc.indexOf(oCase.sinGen) != -1)
               sMember = sMember + '|κλητ-πληθ'
             sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+          }
+        } else {
+          aMember = oCase.sinGen.split('|')
+          for (sElm of aMember) {
+            if (!oSetMember.has(sElm)) {
+              oSetMember.add(sElm)
+              sMember = sElm + '!~γενι-ενικ'
+              if (oCase.sinAcc.indexOf(sElm) != -1)
+                sMember = sMember + '|αιτι-ενικ'
+              if (oCase.sinVoc.indexOf(sElm) != -1)
+                sMember = sMember + '|κλητ-ενικ'
+              if (oCase.pluNom.indexOf(sElm) != -1)
+                sMember = sMember + '|ονομ-πληθ'
+              if (oCase.pluGen.indexOf(sElm) != -1)
+                sMember = sMember + '|γενι-πληθ'
+              if (oCase.pluAcc.indexOf(sElm) != -1)
+                sMember = sMember + '|αιτι-πληθ'
+              if (oCase.pluVoc.indexOf(sElm) != -1)
+                sMember = sMember + '|κλητ-πληθ'
+              sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+            }
           }
         }
       }
       //ενικός-αιτιατική
-      if (oCase.sinAcc.indexOf('|') === -1) {
-        // if not stored
-        if (!oSetMember.has(oCase.sinAcc)) {
-          oSetMember.add(oCase.sinAcc)
-          sMember = oCase.sinAcc + '!~αιτι-ενικ'
-          if (oCase.sinVoc.indexOf(oCase.sinAcc) != -1)
-            sMember = sMember + '|κλητ-ενικ'
-          if (oCase.pluNom.indexOf(oCase.sinAcc) != -1)
-            sMember = sMember + '|ονομ-πληθ'
-          if (oCase.pluGen.indexOf(oCase.sinAcc) != -1)
-            sMember = sMember + '|γενι-πληθ'
-          if (oCase.pluAcc.indexOf(oCase.sinAcc) != -1)
-            sMember = sMember + '|αιτι-πληθ'
-          if (oCase.pluVoc.indexOf(oCase.sinAcc) != -1)
-            sMember = sMember + '|κλητ-πληθ'
-          sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
-        }
-      } else {
-        aMember = oCase.sinAcc.split('|')
-        for (sElm of aMember) {
-          if (!oSetMember.has(sElm)) {
-            oSetMember.add(sElm)
-            sMember = sElm + '!~αιτι-ενικ'
-            if (oCase.sinVoc.indexOf(sElm) != -1)
+      if (oCase.sinAcc != '∅') {
+        if (oCase.sinAcc.indexOf('|') === -1) {
+          // if not stored
+          if (!oSetMember.has(oCase.sinAcc)) {
+            oSetMember.add(oCase.sinAcc)
+            sMember = oCase.sinAcc + '!~αιτι-ενικ'
+            if (oCase.sinVoc.indexOf(oCase.sinAcc) != -1)
               sMember = sMember + '|κλητ-ενικ'
-            if (oCase.pluNom.indexOf(sElm) != -1)
+            if (oCase.pluNom.indexOf(oCase.sinAcc) != -1)
               sMember = sMember + '|ονομ-πληθ'
-            if (oCase.pluGen.indexOf(sElm) != -1)
+            if (oCase.pluGen.indexOf(oCase.sinAcc) != -1)
               sMember = sMember + '|γενι-πληθ'
-            if (oCase.pluAcc.indexOf(sElm) != -1)
+            if (oCase.pluAcc.indexOf(oCase.sinAcc) != -1)
               sMember = sMember + '|αιτι-πληθ'
-            if (oCase.pluVoc.indexOf(sElm) != -1)
+            if (oCase.pluVoc.indexOf(oCase.sinAcc) != -1)
               sMember = sMember + '|κλητ-πληθ'
             sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+          }
+        } else {
+          aMember = oCase.sinAcc.split('|')
+          for (sElm of aMember) {
+            if (!oSetMember.has(sElm)) {
+              oSetMember.add(sElm)
+              sMember = sElm + '!~αιτι-ενικ'
+              if (oCase.sinVoc.indexOf(sElm) != -1)
+                sMember = sMember + '|κλητ-ενικ'
+              if (oCase.pluNom.indexOf(sElm) != -1)
+                sMember = sMember + '|ονομ-πληθ'
+              if (oCase.pluGen.indexOf(sElm) != -1)
+                sMember = sMember + '|γενι-πληθ'
+              if (oCase.pluAcc.indexOf(sElm) != -1)
+                sMember = sMember + '|αιτι-πληθ'
+              if (oCase.pluVoc.indexOf(sElm) != -1)
+                sMember = sMember + '|κλητ-πληθ'
+              sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+            }
           }
         }
       }
       //ενικός-κλητική
-      if (oCase.sinVoc.indexOf('|') === -1) {
-        // if not stored
-        if (!oSetMember.has(oCase.sinVoc)) {
-          oSetMember.add(oCase.sinVoc)
-          sMember = oCase.sinVoc + '!~κλητ-ενικ'
-          if (oCase.pluNom.indexOf(oCase.sinVoc) != -1)
-            sMember = sMember + '|ονομ-πληθ'
-          if (oCase.pluGen.indexOf(oCase.sinVoc) != -1)
-            sMember = sMember + '|γενι-πληθ'
-          if (oCase.pluAcc.indexOf(oCase.sinVoc) != -1)
-            sMember = sMember + '|αιτι-πληθ'
-          if (oCase.pluVoc.indexOf(oCase.sinVoc) != -1)
-            sMember = sMember + '|κλητ-πληθ'
-          sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
-        }
-      } else {
-        aMember = oCase.sinVoc.split('|')
-        for (sElm of aMember) {
-          if (!oSetMember.has(sElm)) {
-            oSetMember.add(sElm)
-            sMember = sElm + '!~κλητ-ενικ'
-            if (oCase.pluNom.indexOf(sElm) != -1)
+      if (oCase.sinVoc != '∅') {
+        if (oCase.sinVoc.indexOf('|') === -1) {
+          // if not stored
+          if (!oSetMember.has(oCase.sinVoc)) {
+            oSetMember.add(oCase.sinVoc)
+            sMember = oCase.sinVoc + '!~κλητ-ενικ'
+            if (oCase.pluNom.indexOf(oCase.sinVoc) != -1)
               sMember = sMember + '|ονομ-πληθ'
-            if (oCase.pluGen.indexOf(sElm) != -1)
+            if (oCase.pluGen.indexOf(oCase.sinVoc) != -1)
               sMember = sMember + '|γενι-πληθ'
-            if (oCase.pluAcc.indexOf(sElm) != -1)
+            if (oCase.pluAcc.indexOf(oCase.sinVoc) != -1)
               sMember = sMember + '|αιτι-πληθ'
-            if (oCase.pluVoc.indexOf(sElm) != -1)
+            if (oCase.pluVoc.indexOf(oCase.sinVoc) != -1)
               sMember = sMember + '|κλητ-πληθ'
             sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+          }
+        } else {
+          aMember = oCase.sinVoc.split('|')
+          for (sElm of aMember) {
+            if (!oSetMember.has(sElm)) {
+              oSetMember.add(sElm)
+              sMember = sElm + '!~κλητ-ενικ'
+              if (oCase.pluNom.indexOf(sElm) != -1)
+                sMember = sMember + '|ονομ-πληθ'
+              if (oCase.pluGen.indexOf(sElm) != -1)
+                sMember = sMember + '|γενι-πληθ'
+              if (oCase.pluAcc.indexOf(sElm) != -1)
+                sMember = sMember + '|αιτι-πληθ'
+              if (oCase.pluVoc.indexOf(sElm) != -1)
+                sMember = sMember + '|κλητ-πληθ'
+              sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+            }
           }
         }
       }
       //πληθυντικός-ονομαστική
-      if (oCase.pluNom.indexOf('|') === -1) {
-        // if not stored
-        if (!oSetMember.has(oCase.pluNom)) {
-          oSetMember.add(oCase.pluNom)
-          sMember = oCase.pluNom + '!~ονομ-πληθ'
-          if (oCase.pluGen.indexOf(oCase.pluNom) != -1)
-            sMember = sMember + '|γενι-πληθ'
-          if (oCase.pluAcc.indexOf(oCase.pluNom) != -1)
-            sMember = sMember + '|αιτι-πληθ'
-          if (oCase.pluVoc.indexOf(oCase.pluNom) != -1)
-            sMember = sMember + '|κλητ-πληθ'
-          sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
-        }
-      } else {
-        aMember = oCase.pluNom.split('|')
-        for (sElm of aMember) {
-          if (!oSetMember.has(sElm)) {
-            oSetMember.add(sElm)
-            sMember = sElm + '!~ονομ-πληθ'
-            if (oCase.pluGen.indexOf(sElm) != -1)
+      if (oCase.pluNom != '∅') {
+        if (oCase.pluNom.indexOf('|') === -1) {
+          // if not stored
+          if (!oSetMember.has(oCase.pluNom)) {
+            oSetMember.add(oCase.pluNom)
+            sMember = oCase.pluNom + '!~ονομ-πληθ'
+            if (oCase.pluGen.indexOf(oCase.pluNom) != -1)
               sMember = sMember + '|γενι-πληθ'
-            if (oCase.pluAcc.indexOf(sElm) != -1)
+            if (oCase.pluAcc.indexOf(oCase.pluNom) != -1)
               sMember = sMember + '|αιτι-πληθ'
-            if (oCase.pluVoc.indexOf(sElm) != -1)
+            if (oCase.pluVoc.indexOf(oCase.pluNom) != -1)
               sMember = sMember + '|κλητ-πληθ'
             sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+          }
+        } else {
+          aMember = oCase.pluNom.split('|')
+          for (sElm of aMember) {
+            if (!oSetMember.has(sElm)) {
+              oSetMember.add(sElm)
+              sMember = sElm + '!~ονομ-πληθ'
+              if (oCase.pluGen.indexOf(sElm) != -1)
+                sMember = sMember + '|γενι-πληθ'
+              if (oCase.pluAcc.indexOf(sElm) != -1)
+                sMember = sMember + '|αιτι-πληθ'
+              if (oCase.pluVoc.indexOf(sElm) != -1)
+                sMember = sMember + '|κλητ-πληθ'
+              sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+            }
           }
         }
       }
       //πληθυντικός-γενική
-      if (oCase.pluGen.indexOf('|') === -1) {
-        // if not stored
-        if (!oSetMember.has(oCase.pluGen)) {
-          oSetMember.add(oCase.pluGen)
-          sMember = oCase.pluGen + '!~γενι-πληθ'
-          if (oCase.pluAcc.indexOf(oCase.pluGen) != -1)
-            sMember = sMember + '|αιτι-πληθ'
-          if (oCase.pluVoc.indexOf(oCase.pluGen) != -1)
-            sMember = sMember + '|κλητ-πληθ'
-          sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
-        }
-      } else {
-        aMember = oCase.pluGen.split('|')
-        for (sElm of aMember) {
-          if (!oSetMember.has(sElm)) {
-            oSetMember.add(sElm)
-            sMember = sElm + '!~γενι-πληθ'
-            if (oCase.pluAcc.indexOf(sElm) != -1)
+      if (oCase.pluGen != '∅') {
+        if (oCase.pluGen.indexOf('|') === -1) {
+          // if not stored
+          if (!oSetMember.has(oCase.pluGen)) {
+            oSetMember.add(oCase.pluGen)
+            sMember = oCase.pluGen + '!~γενι-πληθ'
+            if (oCase.pluAcc.indexOf(oCase.pluGen) != -1)
               sMember = sMember + '|αιτι-πληθ'
-            if (oCase.pluVoc.indexOf(sElm) != -1)
+            if (oCase.pluVoc.indexOf(oCase.pluGen) != -1)
               sMember = sMember + '|κλητ-πληθ'
             sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+          }
+        } else {
+          aMember = oCase.pluGen.split('|')
+          for (sElm of aMember) {
+            if (!oSetMember.has(sElm)) {
+              oSetMember.add(sElm)
+              sMember = sElm + '!~γενι-πληθ'
+              if (oCase.pluAcc.indexOf(sElm) != -1)
+                sMember = sMember + '|αιτι-πληθ'
+              if (oCase.pluVoc.indexOf(sElm) != -1)
+                sMember = sMember + '|κλητ-πληθ'
+              sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+            }
           }
         }
       }
       //πληθυντικός-αιτιατική
-      if (oCase.pluAcc.indexOf('|') === -1) {
-        // if not stored
-        if (!oSetMember.has(oCase.pluAcc)) {
-          oSetMember.add(oCase.pluAcc)
-          sMember = oCase.pluAcc + '!~αιτι-πληθ'
-          if (oCase.pluVoc.indexOf(oCase.pluAcc) != -1)
-            sMember = sMember + '|κλητ-πληθ'
-          sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
-        }
-      } else {
-        aMember = oCase.pluAcc.split('|')
-        for (sElm of aMember) {
-          if (!oSetMember.has(sElm)) {
-            oSetMember.add(sElm)
-            sMember = sElm + '!~αιτι-πληθ'
-            if (oCase.pluVoc.indexOf(sElm) != -1)
+      if (oCase.pluAcc != '∅') {
+        if (oCase.pluAcc.indexOf('|') === -1) {
+          // if not stored
+          if (!oSetMember.has(oCase.pluAcc)) {
+            oSetMember.add(oCase.pluAcc)
+            sMember = oCase.pluAcc + '!~αιτι-πληθ'
+            if (oCase.pluVoc.indexOf(oCase.pluAcc) != -1)
               sMember = sMember + '|κλητ-πληθ'
             sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+          }
+        } else {
+          aMember = oCase.pluAcc.split('|')
+          for (sElm of aMember) {
+            if (!oSetMember.has(sElm)) {
+              oSetMember.add(sElm)
+              sMember = sElm + '!~αιτι-πληθ'
+              if (oCase.pluVoc.indexOf(sElm) != -1)
+                sMember = sMember + '|κλητ-πληθ'
+              sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+            }
           }
         }
       }
       //πληθυντικός-κλητική
-      if (oCase.pluVoc.indexOf('|') === -1) {
-        // if not stored
-        if (!oSetMember.has(oCase.pluVoc)) {
-          oSetMember.add(oCase.pluVoc)
-          sMember = oCase.pluVoc + '!~κλητ-πληθ'
-          sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
-        }
-      } else {
-        aMember = oCase.pluVoc.split('|')
-        for (sElm of aMember) {
-          if (!oSetMember.has(sElm)) {
-            oSetMember.add(sElm)
-            sMember = sElm + '!~κλητ-πληθ'
+      if (oCase.pluVoc != '∅') {
+        if (oCase.pluVoc.indexOf('|') === -1) {
+          // if not stored
+          if (!oSetMember.has(oCase.pluVoc)) {
+            oSetMember.add(oCase.pluVoc)
+            sMember = oCase.pluVoc + '!~κλητ-πληθ'
             sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+          }
+        } else {
+          aMember = oCase.pluVoc.split('|')
+          for (sElm of aMember) {
+            if (!oSetMember.has(sElm)) {
+              oSetMember.add(sElm)
+              sMember = sElm + '!~κλητ-πληθ'
+              sInfo = sInfo + '    <br>* McsElln.' + sMember + ':' + sWord + '@wordElln,\n'
+            }
           }
         }
       }
@@ -453,7 +469,8 @@ function fWrdidx(asWordsIn, sMethodIn) {
       '    <br>× functionality: ' + oCase.functionality + '\n' +
       '    <br>× pos: ' + oCase.pos + '\n' +
       '    <br>× gender: ' + oCase.gender + '\n' +
-      '    <br>× inflection-method: ' + oCase.method + '\n' +
+      '    <br>× inflection-method: <a class="clsPreview" href="../../dirLag/McsLag000020.last.html#idLEllncase' 
+              + oCase.method.substring(8, oCase.method.indexOf('-')) + '">' + oCase.method + '</a>\n' +
       '    <br>× members: ' + oCase.members + '\n' +
       '    <br>× el.wiktionary.org: <a href="https://el.wiktionary.org/wiki/' + oCase.Baseform + '">' + oCase.Baseform + '</a>\n' +
       '    <a class="clsHide" href="#idWrd' +sLag + sPhonemaPreview + '"></a></p>'
@@ -723,7 +740,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
     //check of Id collision
     let sIdNew = aWrdinfIn[1].substring(aWrdinfIn[1].indexOf('"')+1, aWrdinfIn[1].indexOf('">'))
     if (aIdExisted.includes(sIdNew) && !bSameword)
-      console.log('ID COLLISION: ' + sIdNew)
+      console.log('ID COLLISION: ' + sIdNew +' => ' +sWrdidxMcsFullIn.substring(30))
   }
 
   //name-index the-files

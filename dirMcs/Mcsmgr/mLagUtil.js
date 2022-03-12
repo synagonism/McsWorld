@@ -657,6 +657,7 @@ function fGreektonosDecrease (sWordIn, bSinizisi) {
  */
 function fGreektonosIncrease (sWordIn, bSinizisi) {
   let
+    bFV = false, //εύ|αύ
     nIndexTonos,
     nVowelFirst,
     sWord1 = '',
@@ -664,11 +665,13 @@ function fGreektonosIncrease (sWordIn, bSinizisi) {
 
   sWordIn = sWordIn.toLowerCase()
   nIndexTonos = fGreektonosFindIndexLast(sWordIn)
+  if (sWordIn.charAt(nIndexTonos+1) == 'ύ') bFV = true
   sWordIn = fGreektonosRemove(sWordIn)
 
-  sWord1 = sWordIn.substring(0, nIndexTonos+1)
-  try {sWord2 = sWordIn.substring(nIndexTonos+1)}
-  catch (error){console.error('fGreektonosIncrease')}
+  if(!bFV) sWord1 = sWordIn.substring(0, nIndexTonos+1)
+  else sWord1 = sWordIn.substring(0, nIndexTonos+2)
+  if(!bFV) sWord2 = sWordIn.substring(nIndexTonos+1)
+  else sWord2 = sWordIn.substring(nIndexTonos+2)
   if (bSinizisi) sWord2 = fGreekwordSinizisiAdd(sWord2)
   nVowelFirst = fGreekvowelindexFindFirst(sWord2)
   sWord2 = sWord2.replaceAll('j', 'ι')
@@ -1367,6 +1370,7 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('ευδ', 'evdh')
   sOut = sOut.replaceAll('Ευδ', 'evdh')
   sOut = sOut.replaceAll('εύε', 'éve') //εύε
+  sOut = sOut.replaceAll('ευέ', 'evé') //ευέλπιδες
   sOut = sOut.replaceAll('ευε', 'eve')
   sOut = sOut.replaceAll('εύζ', 'évz') //εύζωνας
   sOut = sOut.replaceAll('ευζ', 'evz')

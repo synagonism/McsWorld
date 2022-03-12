@@ -140,11 +140,20 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
   //console.log(aInfo)
 
   //find stems
-  sStemM = aInfo[1].substr(0, aInfo[1].indexOf('-'))
-  sStemMRem = moLagUtil.fGreektonosRemove(sStemM)
-  sStemMInc = moLagUtil.fGreektonosIncrease(sStemM, bSinizisi)
-  sStemMDec = moLagUtil.fGreektonosDecrease(sStemM, bSinizisi)
-  sSufxM = aInfo[1].substr(aInfo[1].lastIndexOf('-')+1)
+  if (!sMethodIn.endsWith('Bns')) {
+    sStemM = aInfo[1].substr(0, aInfo[1].indexOf('-'))
+    sStemMRem = moLagUtil.fGreektonosRemove(sStemM)
+    sStemMInc = moLagUtil.fGreektonosIncrease(sStemM, bSinizisi)
+    sStemMDec = moLagUtil.fGreektonosDecrease(sStemM, bSinizisi)
+    sSufxM = aInfo[1].substr(aInfo[1].lastIndexOf('-')+1)
+  } else {
+    // no singular
+    sStemM = aInfo[5].substr(0, aInfo[5].indexOf('-'))
+    sStemMRem = moLagUtil.fGreektonosRemove(sStemM)
+    sStemMInc = moLagUtil.fGreektonosIncrease(sStemM, bSinizisi)
+    sStemMDec = moLagUtil.fGreektonosDecrease(sStemM, bSinizisi)
+    sSufxM = aInfo[5].substr(aInfo[5].lastIndexOf('-')+1)
+  }
   sStemW = sWord.substr(0, sWord.length-sSufxM.length) //ξαδέρφ
   sStemWRem = moLagUtil.fGreektonosRemove(sStemW)
   sStemWInc = moLagUtil.fGreektonosIncrease(sStemW, bSinizisi)
@@ -198,7 +207,11 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
   
   oCase.McsElln1 = '.λέξηΕλλν.' + sWordIn +'@wordElln,'
   oCase.McsElln2 = '.ουσιαστικό.' + sWordIn +'@wordElln,'
-  oCase.sinNom = sWord + sWordArtiPhnm.substr(0, sWordArtiPhnm.indexOf('-')) + '/'
+  if (!sMethodIn.endsWith('Bns')) {
+    oCase.sinNom = sWord + sWordArtiPhnm.substr(0, sWordArtiPhnm.indexOf('-')) + '/'
+  } else {
+    oCase.sinNom = '∅'
+  }
   oCase.sinGen = sWordGS
 
   //αιτ-ενικ as
@@ -280,7 +293,7 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
   oCase.pluVoc = sWordNP
 
   oCase.Baseform = sWord
-  oCase.Basespch = oCase.sinNom.substr(oCase.sinNom.indexOf('/'))
+  oCase.Basespch = sWordArtiPhnm.substr(0, sWordArtiPhnm.indexOf('-')) + '/'
   oCase.functionality = 'μορφή'
   oCase.pos = 'ουσιαστικό'
   if (sWordArti.endsWith('-ο')) oCase.gender = 'αρσενικό'
