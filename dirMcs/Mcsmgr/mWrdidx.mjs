@@ -47,6 +47,7 @@ import * as moLagElln from './mLagElln.mjs'
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mWrdidx.mjs.0-4-0.2022-03-13: index-phonema',
     'mWrdidx.mjs.0-3-0.2022-02-26: version of WrdidxMcs',
     'mWrdidx.mjs.0-2-0.2022-02-21: fCreateWordinfo',
     'mWrdidx.mjs.0-1-0.2022-02-08: created'
@@ -183,7 +184,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
     sInfo = '  <p id="idWrd' + sLag + sPhonemaPreview + '">' +
       '<span class="clsColorRed">' + sWordIn + '</span>::\n' +
       '    <br>* McsEngl.word' + sLag + '.' + sWordIn + '@word' + sLag + ',\n' +
-      '    <br>* Mcs' + sLag + '.' + sWordIn + '@word' + sLag + ',\n'
+      '    <br>* Mcs' + sLag + './' + sPhonema + '/' + sWord + '@word' + sLag + ',\n'
 
     oCase = moLagElln.fFindCaseinfoElln(sWordIn, sMethod)
     //console.log(oCase)

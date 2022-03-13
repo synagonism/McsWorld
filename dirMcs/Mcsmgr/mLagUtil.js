@@ -536,7 +536,6 @@ function fGreektonosSetOnLiyusa (sWordIn) {
   let
     nVowelLast
 
-  sWordIn = sWordIn.toLowerCase()
   //find the MAX index of vowels.
   nVowelLast = fGreekvowelindexFindLast(sWordIn)
 
@@ -552,7 +551,6 @@ function fGreektonosSetOnParaliyusa (sWordIn) {
     nVowelLast,
     sWord2
 
-  sWordIn = sWordIn.toLowerCase()
   nVowelLast = fGreekvowelindexFindLast(sWordIn)
   sWord2 = sWordIn.substring(0, nVowelLast)
   nVowelLast = fGreekvowelindexFindLast(sWord2)
@@ -639,7 +637,6 @@ function fGreektonosDecrease (sWordIn, bSinizisi) {
     nVowelLast,
     sWord2 = ''
 
-  sWordIn = sWordIn.toLowerCase()
   nIndexTonos = fGreektonosFindIndex(sWordIn)
   sWordIn = fGreektonosRemove(sWordIn)
 
@@ -663,7 +660,6 @@ function fGreektonosIncrease (sWordIn, bSinizisi) {
     sWord1 = '',
     sWord2 = ''
 
-  sWordIn = sWordIn.toLowerCase()
   nIndexTonos = fGreektonosFindIndexLast(sWordIn)
   if (sWordIn.charAt(nIndexTonos+1) == 'ύ') bFV = true
   sWordIn = fGreektonosRemove(sWordIn)
@@ -855,6 +851,8 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   //ειε
   if (sOut.indexOf('θειε') != -1 && bSinizisi)
     sOut = sOut.replaceAll('θειε', 'thhhe') //αλήθειες
+  if (sOut.indexOf('θειέ') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('θειέ', 'thhhé') // θειες
   sOut = sOut.replaceAll('ειε', 'ie') //αγγειεκτασία
   sOut = sOut.replaceAll('ειέ', 'ié')
   sOut = sOut.replaceAll('είε', 'íe') // αλιείες
@@ -1072,6 +1070,8 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('ιά', 'iá') //γαβριάς,
 
   //ιοι
+  if (sOut.indexOf('νιοι') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('νιοι', 'nni')
   sOut = sOut.replaceAll('ιοι', 'ii') // αντιοικονομία
 
   //ιει
