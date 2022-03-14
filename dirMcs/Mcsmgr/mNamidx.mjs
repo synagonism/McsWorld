@@ -544,7 +544,7 @@ function fNamidx(fileIn, fSftpIn) {
    * - aNUIn: ['name','Url']
    */
   function fStoreNamUrlReference(aFileIdxRefIn, aNUIn, sLagIn) {
-    // a-reference-index-file ALWAYS contains sequencies (..) of indecies
+    //PROBLEM a-reference-index-file ALWAYS contains sequencies (..) of indecies
     //console.log(aNUIn[0]+':   '+aFileIdxRefIn[0])
     for (n = 1; n < aFileIdxRefIn.length; n++) {
       //console.log(aNUIn[0]+':   '+aFileIdxRefIn[n][1])

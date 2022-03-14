@@ -4,6 +4,5 @@ let
   a = [["a","b"],["c","d"]]
 
 
-console.log(moLagElln.fFindCaseinfoElln('ωοθήκη-η/oothíki-i/','caseEllnMnG2XiT2SeNcF1Ba'))
+console.log(moLagElln.fFindCaseinfoElln('αγάπη-η/ayápi-i/','caseEllnMnG2XiT2SeNcF1Bn6'))
 
-ID COLLISION: idWrdEllnpalikarosi9ni => Elln16pi.last.html

@@ -28,6 +28,7 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mHitp.js.18-9-1.2022-03-14: phonemes',
     'mHitp.js.18-9-0.2022-01-30: codepoints',
     'mHitp.js.18-8-1.2022-01-15: name-language',
     'mHitp.js.18-8-0.2022-01-07: lagElla',
@@ -646,7 +647,8 @@ let fContainersInsert = function () {
     oEltTabCntSrchP.setAttribute('class', 'clsCenter')
     oEltTabCntSrchP.innerHTML = fTabCntSrchPSetText()
     oEltTabCntSrchLblChk.innerHTML =
-      '<input type="checkbox" id="idTabCntSrchChk">show All, not 999 (slow)'
+      '<input type="checkbox" id="idTabCntSrchChk">show All, not 999 (slow)<br>'+
+      ' á à ā ǎ é è ē ě í ì ī ǐ ó ò ō ǒ ú ù ū ǔ '
     oEltTabCntSrchLblChk.id = 'idTabCntSrchLblChk'
     oEltTabCntSrchIpt.id = 'idTabCntSrchIpt'
 
