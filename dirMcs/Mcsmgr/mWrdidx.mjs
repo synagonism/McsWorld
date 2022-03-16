@@ -47,6 +47,7 @@ import * as moLagElln from './mLagElln.mjs'
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mWrdidx.mjs.0-4-1.2022-03-16: same-name',
     'mWrdidx.mjs.0-4-0.2022-03-13: index-phonema',
     'mWrdidx.mjs.0-3-0.2022-02-26: version of WrdidxMcs',
     'mWrdidx.mjs.0-2-0.2022-02-21: fCreateWordinfo',
@@ -312,6 +313,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
       aWords = [], //[['βουνό-το','  p id="idWrdEllnvunó-to"><span...']]
       aFile2 = [], //the-lines of words: ['  p id="idWrdEllnvunó-to"><span...']
       aFile3 = [], //the-lines AFTER words
+      sName, //name of word existed
       aIdExisted = [],
       bSameword = false,
       n,
@@ -335,7 +337,6 @@ function fWrdidx(asWordsIn, sMethodIn) {
 
     if (n2 !== 0) {
       let
-        sName,
         sId,
         sHtml
       for (n=n2; n<aFile.length; n++) {
@@ -347,9 +348,10 @@ function fWrdidx(asWordsIn, sMethodIn) {
           sHtml = aFile[n]
           if (sName === aWrdinfIn[0]) {
             bSameword = true
-            console.log(sName + ' is-stored ALREADY: did nothing')
+            console.log(sName + ' is-stored ALREADY: did nothing => ' +sWrdidxMcsFullIn.substring(30))
             break
-          }
+          } else if (sName.toLowerCase() == aWrdinfIn[0].toLowerCase())
+            console.log('ID COLLISION - SAME NAME: ' + sName +' => ' +sWrdidxMcsFullIn.substring(30))
         } else if (aFile[n].indexOf('</section>') === 0) {
           n3 = n 
           break
@@ -412,12 +414,6 @@ function fWrdidx(asWordsIn, sMethodIn) {
 
       //add the-file for name-index
       oSetFileIndex.add(sWrdidxMcsFullIn)
-
-      // write the-files to upload
-      aSftp = JSON.parse(moFs.readFileSync('sftp.json'))
-      for (let sFile of aSftp) {
-         oSetFileUp.add(sFile)
-      }
     }
 
     //check of Id collision
@@ -428,8 +424,14 @@ function fWrdidx(asWordsIn, sMethodIn) {
 
   //name-index the-files
   aIndex = Array.from(oSetFileIndex)
-  if (aIndex.length > 0) fNamidx(aIndex)
+  if (aIndex.length > 0)
+    fNamidx(aIndex)
 
+  // write the-indexed-files to upload
+  aSftp = JSON.parse(moFs.readFileSync('sftp.json'))
+  for (let sFile of aSftp) {
+     oSetFileUp.add(sFile)
+  }
   //sftp the-files
   aSftp = Array.from(oSetFileUp)
   aSftp.sort()
@@ -869,7 +871,7 @@ function fFindWrdidxMcs(sWordIn, sLagIn, aWrdidxIdxIn) {
     }
   }
   if (bRest) {
-    sWrdidxOut = 'McsWrdidx' + sLagIn + '00.last.html'
+    sWrdidxOut = 'McsWrdidx' + sLagIn + '00'
     aWrdidxMcs_Idx = [sWrdidxOut, '']
   }
 

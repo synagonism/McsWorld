@@ -1,11 +1,7 @@
 import * as moLagUtil from './mLagUtil.js'
 import * as moLagElln from './mLagElln.mjs'
 
-console.log(fCreateWordinfo('ψοφίμι-το/psofími-to-s/','caseEllnMnG3XiT2SeNcF1Ba')[1])
-
-
-
-
+console.log(fCreateWordinfo('ψάξιμο-το/psáksimo-to/','caseEllnMnG3XoT3SuNcF1Ba')[1])
 
 
 

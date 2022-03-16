@@ -158,6 +158,7 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
   sStemWRem = moLagUtil.fGreektonosRemove(sStemW)
   sStemWInc = moLagUtil.fGreektonosIncrease(sStemW, bSinizisi)
   sStemWDec = moLagUtil.fGreektonosDecrease(sStemW, bSinizisi)
+  //console.log(sStemWRem+', '+sStemWInc+', '+sStemWDec)
 
   //γενι-ενικ gs
   if (aInfo[2].indexOf('|') != -1) {

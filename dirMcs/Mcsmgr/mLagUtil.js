@@ -28,6 +28,7 @@
 const
   // contains the-versions of mLagUtil.js
   aVersion = [
+    'mLagUtil.js.0-7-1.2022-03-16: phonema',
     'mLagUtil.js.0-7-0.2022-03-11: fGreekwordHasSyllableOne',
     'mLagUtil.js.0-6-0.2022-03-08: fGreekwordSinizisiAdd',
     'mLagUtil.js.0-5-2.2022-03-01: fGreekwordFindPhonema',
@@ -383,26 +384,25 @@ function fGreektonosFindIndexLast(sWordIn) {
  * DOING: it removes the-tonos from a-word.
  */
 function fGreektonosRemove (sWordIn) {
-  if (sWordIn.indexOf("ά") != -1)
-    return sWordIn.replace('ά','α')
-  else if (sWordIn.indexOf("έ") != -1)
-    return sWordIn.replace('έ','ε')
-  else if (sWordIn.indexOf("ή") != -1)
-    return sWordIn.replace('ή','η')
-  else if (sWordIn.indexOf("ί") != -1)
-    return sWordIn.replace('ί','ι')
-  else if (sWordIn.indexOf("ό") != -1)
-    return sWordIn.replace('ό','ο')
-  else if (sWordIn.indexOf("ύ") != -1)
-    return sWordIn.replace('ύ','υ')
-  else if (sWordIn.indexOf("ώ") != -1)
-    return sWordIn.replace('ώ','ω')
-  else if (sWordIn.indexOf("ΰ") != -1)
-    return sWordIn.replace('ΰ','ϋ')
-  else if (sWordIn.indexOf("ΐ") != -1)
-    return sWordIn.replace('ΐ','ϊ')
-  else
-    return sWordIn
+  let sOut = sWordIn
+  sOut = sOut.replace('ά','α')
+  sOut = sOut.replace('Ά','Α')
+  sOut = sOut.replace('έ','ε')
+  sOut = sOut.replace('Έ','Ε')
+  sOut = sOut.replace('ή','η')
+  sOut = sOut.replace('Ή','Η')
+  sOut = sOut.replace('ί','ι')
+  sOut = sOut.replace('Ί','Ι')
+  sOut = sOut.replace('ό','ο')
+  sOut = sOut.replace('Ό','Ο')
+  sOut = sOut.replace('ύ','υ')
+  sOut = sOut.replace('Ύ','Υ')
+  sOut = sOut.replace('ώ','ω')
+  sOut = sOut.replace('Ώ','Ω')
+  sOut = sOut.replace('ΰ','ϋ')
+  sOut = sOut.replace('ΐ','ϊ')
+
+  return sOut
 }
 
 /*
@@ -1217,6 +1217,10 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
     sOut = sOut.replaceAll('γιό', 'yyó')
   if (sOut.indexOf('γιο') != -1 && bSinizisi)
     sOut = sOut.replaceAll('γιο', 'yyo')
+  if (sOut.indexOf('διο') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('διο', 'dhyyo')
+  if (sOut.indexOf('διό') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('διό', 'dhyyó')
   if (sOut.indexOf('νιό') != -1 && bSinizisi)
     sOut = sOut.replaceAll('νιό', 'nnó')
   if (sOut.indexOf('νιο') != -1 && bSinizisi)
