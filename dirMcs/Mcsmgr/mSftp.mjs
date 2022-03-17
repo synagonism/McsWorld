@@ -26,7 +26,9 @@ if (process.argv[2]) {
 }
 
 function fSftp () {
-  var aFil = JSON.parse(moFs.readFileSync('sftp.json'))
+  var aFil = JSON.parse(moFs.readFileSync('mSftpAgg.json'))
+  //empty files to upload
+  moFs.writeFileSync('mSftpAgg.json', '')
   console.log(aFil)
 
   const fSend_file = (oConfigIn, sFileIn) => {
