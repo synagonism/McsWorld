@@ -28,6 +28,7 @@
 const
   // contains the-versions of mHitp.js 
   aVersion = [
+    'mHitp.js.18-10-0.2022-03-19: phoneme-events',
     'mHitp.js.18-9-1.2022-03-14: phonemes',
     'mHitp.js.18-9-0.2022-01-30: codepoints',
     'mHitp.js.18-8-1.2022-01-15: name-language',
@@ -169,6 +170,7 @@ let fContainersInsert = function () {
     oEltTabCntSrchSlt,
     oEltTabCntSrchP,
     oEltTabCntSrchLblChk,
+    oEltTabCntSrchPPnm,
     oEltTabCntSrchIpt,
     oEltTabCntSrchOl,
     oEltCnrSiteDiv,
@@ -224,6 +226,7 @@ let fContainersInsert = function () {
     oEltTabCntSrchSlt = document.createElement('select')
     oEltTabCntSrchP = document.createElement('p')
     oEltTabCntSrchLblChk = document.createElement('label')
+    oEltTabCntSrchPPnm = document.createElement('p')
     oEltTabCntSrchIpt = document.createElement('input')
     oEltTabCntSrchOl = document.createElement('ol')
     sIdxfil = 'lagRoot' // the-index-file to search first
@@ -647,8 +650,14 @@ let fContainersInsert = function () {
     oEltTabCntSrchP.setAttribute('class', 'clsCenter')
     oEltTabCntSrchP.innerHTML = fTabCntSrchPSetText()
     oEltTabCntSrchLblChk.innerHTML =
-      '<input type="checkbox" id="idTabCntSrchChk">show All, not 999 (slow)<br>'+
-      ' á à ā ǎ é è ē ě í ì ī ǐ ó ò ō ǒ ú ù ū ǔ '
+      '<input type="checkbox" id="idTabCntSrchChk">show All, not 999 (slow)'
+    oEltTabCntSrchPPnm.id = 'idTabCntSrchPPnm'
+    oEltTabCntSrchPPnm.innerHTML = 'phnm:' +
+      '<span id="idSrchpnm"> á </span><span id="idSrchpnm"> à </span><span id="idSrchpnm"> ā </span><span id="idSrchpnm"> ǎ </span>' +
+      '<span id="idSrchpnm"> é </span><span id="idSrchpnm"> è </span><span id="idSrchpnm"> ē </span><span id="idSrchpnm"> ě </span>' +
+      '<span id="idSrchpnm"> í </span><span id="idSrchpnm"> ì </span><span id="idSrchpnm"> ī </span><span id="idSrchpnm"> ǐ </span>' +
+      '<span id="idSrchpnm"> ó </span><span id="idSrchpnm"> ò </span><span id="idSrchpnm"> ō </span><span id="idSrchpnm"> ǒ </span>' +
+      '<span id="idSrchpnm"> ú </span><span id="idSrchpnm"> ù </span><span id="idSrchpnm"> ū </span><span id="idSrchpnm"> ǔ </span>'
     oEltTabCntSrchLblChk.id = 'idTabCntSrchLblChk'
     oEltTabCntSrchIpt.id = 'idTabCntSrchIpt'
 
@@ -1287,6 +1296,7 @@ let fContainersInsert = function () {
     oEltTabCntSrchDiv.appendChild(oEltTabCntSrchSlt)
     oEltTabCntSrchDiv.appendChild(oEltTabCntSrchP)
     oEltTabCntSrchDiv.appendChild(oEltTabCntSrchLblChk)
+    oEltTabCntSrchDiv.appendChild(oEltTabCntSrchPPnm)
     oEltTabCntSrchDiv.appendChild(oEltTabCntSrchIpt)
     oEltTabCntSrchDiv.appendChild(oEltTabCntSrchOl)
     oEltPginfTabCntDiv.appendChild(oEltTabCntSrchDiv)
@@ -1502,7 +1512,6 @@ let fContainersInsert = function () {
     })
   })
 
-
   // event click on TAB-Headers
   Array.prototype.slice.call(document.querySelectorAll('ul#idPginfTabHeadersUl li')).forEach(function (oEltIn) {
     oEltIn.addEventListener('click', function (oEvtIn) {
@@ -1645,6 +1654,17 @@ let fContainersInsert = function () {
         location.href = '#' + oEvtIn.target.href.split('#')[1]
         fTocTriHighlightNode(oEltCnrMainInfoDiv, oEltIn)
       }
+    })
+  })
+
+  // event on clicking phonemes
+  Array.prototype.slice.call(document.querySelectorAll('#idSrchpnm')).forEach(function (oEltIn) {
+    let sPnm = oEltIn.innerHTML.trim()
+    oEltIn.style.cursor = 'pointer'
+    oEltIn.addEventListener('click', function (oEvtIn) {
+      oEvtIn.preventDefault()
+      let sSrchInpt = oEltTabCntSrchIpt.value + sPnm
+      oEltTabCntSrchIpt.value = sSrchInpt
     })
   })
 
