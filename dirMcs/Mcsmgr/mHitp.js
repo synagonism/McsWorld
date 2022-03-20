@@ -602,7 +602,7 @@ let fContainersInsert = function () {
 
   // insert page-path-elt IN page-info-cnr
   oEltPginfPathP.id = 'idPginfPathP'
-  oEltPginfPathP.setAttribute('title', '© 2010-2019 Kaseluris.Nikos.1959') // nnn
+  oEltPginfPathP.setAttribute('title', '© 2010-2022 Kaseluris.Nikos.1959') // nnn
   if (!document.getElementById('idMetaWebpage_path')) {
     oEltPginfPathP.innerHTML = 'Toc: ' + document.title
   } else {
@@ -652,12 +652,12 @@ let fContainersInsert = function () {
     oEltTabCntSrchLblChk.innerHTML =
       '<input type="checkbox" id="idTabCntSrchChk">show All, not 999 (slow)'
     oEltTabCntSrchPPnm.id = 'idTabCntSrchPPnm'
-    oEltTabCntSrchPPnm.innerHTML = 'phnm:' +
-      '<span id="idSrchpnm"> á </span><span id="idSrchpnm"> à </span><span id="idSrchpnm"> ā </span><span id="idSrchpnm"> ǎ </span>' +
-      '<span id="idSrchpnm"> é </span><span id="idSrchpnm"> è </span><span id="idSrchpnm"> ē </span><span id="idSrchpnm"> ě </span>' +
-      '<span id="idSrchpnm"> í </span><span id="idSrchpnm"> ì </span><span id="idSrchpnm"> ī </span><span id="idSrchpnm"> ǐ </span>' +
-      '<span id="idSrchpnm"> ó </span><span id="idSrchpnm"> ò </span><span id="idSrchpnm"> ō </span><span id="idSrchpnm"> ǒ </span>' +
-      '<span id="idSrchpnm"> ú </span><span id="idSrchpnm"> ù </span><span id="idSrchpnm"> ū </span><span id="idSrchpnm"> ǔ </span>'
+    oEltTabCntSrchPPnm.innerHTML = 'char: ' +
+      '<span id="idSrchpnm">á </span><span id="idSrchpnm">à </span><span id="idSrchpnm">ā </span><span id="idSrchpnm">ǎ </span>' +
+      '<span id="idSrchpnm">é </span><span id="idSrchpnm">è </span><span id="idSrchpnm">ē </span><span id="idSrchpnm">ě </span>' +
+      '<span id="idSrchpnm">í </span><span id="idSrchpnm">ì </span><span id="idSrchpnm">ī </span><span id="idSrchpnm">ǐ </span>' +
+      '<span id="idSrchpnm">ó </span><span id="idSrchpnm">ò </span><span id="idSrchpnm">ō </span><span id="idSrchpnm">ǒ </span>' +
+      '<span id="idSrchpnm">ú </span><span id="idSrchpnm">ù </span><span id="idSrchpnm">ū </span><span id="idSrchpnm">ǔ </span>'
     oEltTabCntSrchLblChk.id = 'idTabCntSrchLblChk'
     oEltTabCntSrchIpt.id = 'idTabCntSrchIpt'
 
@@ -667,6 +667,11 @@ let fContainersInsert = function () {
       sIdxfil = 'lagRoot'
       fSearchSuggest()
     })
+    /*
+    oEltTabCntSrchIpt.addEventListener('input', function () {
+      fSearchSuggest()
+    })
+    */
     // on enter, go to concept
     // on typing, suggest
     oEltTabCntSrchIpt.addEventListener('keyup', function (oEvtIn) {
@@ -757,7 +762,7 @@ let fContainersInsert = function () {
     })
 
     /**
-     * DOING: suggests names of sensorial-concepts,
+     * DOING: suggests names of senso-concepts,
      *   that BEGIN with input-search-string.
      * INPUT: nothing or string of index-file to search: lagEngl03si_2_0, lagRoot, ...
      */
@@ -765,7 +770,7 @@ let fContainersInsert = function () {
       let
         nLag, // number of lag name in lagRoot-index-file,
         sLi,  // text of first suggestion,
-        sLag = oEltTabCntSrchSlt.options[oEltTabCntSrchSlt.selectedIndex].value,
+        sLag = oEltTabCntSrchSlt.options[oEltTabCntSrchSlt.selectedIndex].value, // lagElln
         sIdxfilFull,
         sSrchInpt = oEltTabCntSrchIpt.value,
         sSrchChar = sSrchInpt.charAt(0),
@@ -780,7 +785,7 @@ let fContainersInsert = function () {
       }
 
       if (sSrchInpt.length > 0) {
-        //console.log('>>> start: ' + sSrchInpt + ', ' + sIdxfil + ', ' + sIdxCrnt + '..' + sIdxNext)
+        //console.log('>>> start: ' + sSrchInpt + ', ' + sLag)
         let bRest = true
         // display rest-chars if main-char will-not-find
 
@@ -789,7 +794,7 @@ let fContainersInsert = function () {
           if (aIdxfilRoot[n][0] === ';' + sLag) {
               nLag = n // index of lag in aIdxfilRoot [";lagEngl","English",143707],
           } else if (aIdxfilRoot[n][0].startsWith(sLag) && aIdxfilRoot[n][1] !== '') {
-            // only   selected language
+            // only selected language
             if (aIdxfilRoot[n][1].indexOf('..') < 0) {
               // root-char "Ά|Α|ά|α"
               if (aIdxfilRoot[n][1].indexOf(sSrchChar) >= 0) {
@@ -853,7 +858,15 @@ let fContainersInsert = function () {
           }
         }
         if (bRest) {
-          fSSIdxfilDisplay(aIdxfilRoot[nLag + 1][0])
+          sIdxCrnt = 'charRest'
+          sIdxNext = ''          
+          if (aIdxfilRoot[nLag + 1][0].endsWith('_0')) {
+            // index-file is a-reference
+            fSSIdxfilRefManage(aIdxfilRoot[nLag + 1][0])
+          } else {
+            // index-file is a-referenceNo
+            fSSIdxfilDisplay(aIdxfilRoot[nLag + 1][0])
+          }
         }
       } else {
         // sSrchInpt.length < 0
@@ -868,7 +881,7 @@ let fContainersInsert = function () {
        * INPUT: lagEngl03si_0, lagEngl03si_2_0
        */
       function fSSIdxfilRefManage(sIdxfilRefIn) {
-        //console.log(sIdxfilRefIn + ': RefManage')
+        console.log(sIdxfilRefIn + ': RefManage')
 
         if (aSuggestions.length === 1 || aSuggestions[0][0] !== ';' + sIdxfilRefIn) {
           // read it
@@ -1010,6 +1023,7 @@ let fContainersInsert = function () {
           // case: reference-index-file
           fSSIdxfilRefDisplay(sIdxfilIn)
         } else {
+          console.log(sIdxfilIn)
           // case: referenceNo-index-file
           // IF sIdxfilIn is different from last-read, get it
 
@@ -1665,6 +1679,7 @@ let fContainersInsert = function () {
       oEvtIn.preventDefault()
       let sSrchInpt = oEltTabCntSrchIpt.value + sPnm
       oEltTabCntSrchIpt.value = sSrchInpt
+      //fSearchSuggest()
     })
   })
 

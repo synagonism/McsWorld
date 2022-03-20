@@ -30,10 +30,10 @@
     <br>* McsEngl.Mcs000000.last.html//dirMcs!⇒Mws,
     <br>* McsEngl.dirMcs/Mcs000000.last.html!⇒Mws,
     <br>* McsEngl.Hitp-worldview.Synagonism!⇒Mws,
-    <br>* McsEngl.McsHitp-worldview.Synagonism!⇒Mws,
+    <br>* McsEngl.Mcsh-worldview.Synagonism!⇒Mws,
     <br>* McsEngl.Mcs-worldview.Synagonism!⇒Mws,
     <br>* McsEngl.Mcs.worldview.Synagonism!⇒Mws,
-    <br>* McsEngl.McsHitpWorldviewSynagonism!⇒Mws,
+    <br>* McsEngl.McshWorldviewSynagonism!⇒Mws,
     <br>* McsEngl.McsWorldSynagonism!⇒Mws,
     <br>* McsEngl.Mcsws!⇒Mws,
     <br>* McsEngl.Mcsws-(modelConceptStructuredWorldviewSynagonism)!⇒Mws,
@@ -416,25 +416,25 @@
 </section>
 
 <script type="module">
-  import * as oHitp from './Mcsmgr/mHitp.js'
+  import * as oMcsh from './Mcsmgr/mMcsh.js'
 
   let sQ = ''
-  for (var n = 0; n < oHitp.aIdxfilRoot.length; n++) {
-    if (oHitp.aIdxfilRoot[n][0] === ';AGGR') {
+  for (var n = 0; n < oMcsh.aaIdxfilRoot.length; n++) {
+    if (oMcsh.aaIdxfilRoot[n][0] === ';AGGR') {
       sQ = '<li>⊛ SUM: <span class="clsColorRed">'
-           + oHitp.aIdxfilRoot[n][2].toLocaleString()
+           + oMcsh.aaIdxfilRoot[n][2].toLocaleString()
            + ' names on {'
-           + oHitp.aIdxfilRoot[n][3]
+           + oMcsh.aaIdxfilRoot[n][3]
            + '}</span>'
-    } else if (oHitp.aIdxfilRoot[n][0].startsWith(';lag')) {
-      sQ = sQ + '<li>⊛ <span class="clsColorRed">' + oHitp.aIdxfilRoot[n][1]
-         + ': ' + oHitp.aIdxfilRoot[n][2].toLocaleString()
+    } else if (oMcsh.aaIdxfilRoot[n][0].startsWith(';lag')) {
+      sQ = sQ + '<li>⊛ <span class="clsColorRed">' + oMcsh.aaIdxfilRoot[n][1]
+         + ': ' + oMcsh.aaIdxfilRoot[n][2].toLocaleString()
          + '</span>'
-    } else if (oHitp.aIdxfilRoot[n][1] === '') {
-      sQ = sQ + '<li> charREST: ' + oHitp.aIdxfilRoot[n][2]
+    } else if (oMcsh.aaIdxfilRoot[n][1] === '') {
+      sQ = sQ + '<li> charREST: ' + oMcsh.aaIdxfilRoot[n][2]
     } else {
-      sQ = sQ + '<li>' + oHitp.aIdxfilRoot[n][1]
-         + ': ' + oHitp.aIdxfilRoot[n][2]
+      sQ = sQ + '<li>' + oMcsh.aaIdxfilRoot[n][1]
+         + ': ' + oMcsh.aaIdxfilRoot[n][2]
     }
   }
   document.getElementById('idMwsstatQntNamOl').innerHTML = sQ

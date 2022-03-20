@@ -114,7 +114,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
     // array with words to index
     sMethod = sMethodIn,
     sLag = sMethod.substring(4, 8),
-    aRootWrdidx_Idx = JSON.parse(moFs.readFileSync('dirWrdidx/McsWrdidx_0.json')),
+    aaRootWrdidx_Idx = JSON.parse(moFs.readFileSync('dirWrdidx/McsWrdidx_0.json')),
     // [['McsWrdidxEngl01ei','A']}
     oWrdidxMcs_Idx = {},
     // holds the-names of Wrdidx-files and the related indexes
@@ -144,7 +144,7 @@ function fWrdidx(asWordsIn, sMethodIn) {
 
     sWord = sWordIn
     //console.log(sWord)
-    aWrdidxMcs_Idx = fFindWrdidxMcs(sWord, sLag, aRootWrdidx_Idx)
+    aWrdidxMcs_Idx = fFindWrdidxMcs(sWord, sLag, aaRootWrdidx_Idx)
     sWrdidxMcs = aWrdidxMcs_Idx[0]
     sIndex = aWrdidxMcs_Idx[1]
     //console.log(sWrdidxMcs)
@@ -797,31 +797,33 @@ function fCreateOWrdidxMcs_Index(aIn) {
  * INPUT:
  *  - sWordIn: 'νύφη/nífi/'
  *  - sLagIn: 'Elln'
- *  - aWrdidxIdxIn: [['McsWrdidxX','X']]
+ *  - aaWrdidxIdxIn: [['McsWrdidxX','X']]
  * OUTPUT: ['McsWrdidxEngl18ar.last.html', 'R|r']
  */
-function fFindWrdidxMcs(sWordIn, sLagIn, aWrdidxIdxIn) {
+function fFindWrdidxMcs(sWordIn, sLagIn, aaWrdidxIdxIn) {
   let
     aWrdidxMcs_Idx, // the-output WrdidxMcs-index info
+    oWrdidxMcs_Idx,
     bRest = true,
-    // if first-char of name NOT in an-index in the-lag, then it is a-charREST in this lag
-    sCharWord,    // the-first char of name
+    // if first-char of wordIn NOT in an-index in the-lag, then it is a-charREST in this lag
+    sCharWord,    // the-first char of wordIn
     sIndex,       // the-chars-of-index in the-Wrdidx-file
     sIdxFrom,
     sIdxTo,
     sWrdidx,      // name of Wrdidx-file on which to store the-word
     sWrdidxOut,
+    sWrdidxRest,  // name of Wrdidx-file with rest words on input-lag
     nCharWord,
     nIdxFrom,
     nIdxTo,
-    oWrdidxMcs_Idx,
     sWrdidxRefFull,
-    aRef
+    aaRef
 
   // FIND Wrdidx-file
   // choose root-char or rest
   sCharWord = sWordIn[0].substring(0,1)
-  oWrdidxMcs_Idx = fCreateOWrdidxMcs_Index(aWrdidxIdxIn)
+  oWrdidxMcs_Idx = fCreateOWrdidxMcs_Index(aaWrdidxIdxIn)
+  // {McsWrdidxEngl01ei:'A'}
 
   for (sWrdidx in oWrdidxMcs_Idx) {
     if (sWrdidx.startsWith('McsWrdidx'+sLagIn)) {
@@ -883,9 +885,12 @@ function fFindWrdidxMcs(sWordIn, sLagIn, aWrdidxIdxIn) {
         }
       }
     }
+    // in case where rest-file is reference ('_0')
+    if (sWrdidx.startsWith('McsWrdidx' + sLagIn + '00'))
+      sWrdidxRest = sWrdidx
   }
   if (bRest) {
-    sWrdidxOut = 'McsWrdidx' + sLagIn + '00'
+    sWrdidxOut = sWrdidxRest
     aWrdidxMcs_Idx = [sWrdidxOut, '']
   }
 
@@ -896,8 +901,8 @@ function fFindWrdidxMcs(sWordIn, sLagIn, aWrdidxIdxIn) {
     return aWrdidxMcs_Idx 
   } else {
     sWrdidxRefFull = 'dirWrdidx/dirLag'+sLagIn +'/' +sWrdidxOut +'.json'
-    aRef = JSON.parse(moFs.readFileSync(sWrdidxRefFull))
-    return fFindWrdidxMcs(sWordIn, sLagIn, aRef)
+    aaRef = JSON.parse(moFs.readFileSync(sWrdidxRefFull))
+    return fFindWrdidxMcs(sWordIn, sLagIn, aaRef)
   }
 }
 
