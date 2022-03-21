@@ -13570,7 +13570,7 @@
   ga('send', 'pageview');
 </script>
 <script type="module">
-  import * as oHitp from '../Mcsmgr/mHitp.js'
+  import * as oMcsh from '../Mcsmgr/mMcsh.js'
 
   // finds members of verb
   document.getElementById('idBtnVrbr').addEventListener('click', function(e) {
@@ -13578,11 +13578,11 @@
       sTree = '<ul class="clsTreeUl" id="idTreePreview">    <li>'
         +sIn +'-members:    <ul>      <li>present:        <ul>        <li>active:          <ul>          <li>perfectNo:            <ul>            <li>instant (present-simple):              <ul>              <table>              <tr>                <td>(I) write                <td>(I) do not write                <td>do (I) write?                <td>do (I) not write?              <tr>                <td>(you) write                <td>(you) do not write                <td>do (you) write?                <td>do (you) not write?              </table>              </ul>            <li>instantNo (present-progressive):              <ul>              <table>                <tr>                <td>I am writing                <td>I am not writing                <td>am I writing?                <td>am I not writing?              </table>              </ul>            </ul>          <li>perfect:          </ul>        <li>activeNo:        </ul>      <li>past:        <ul>        <li>active:        <li>activeNo:        </ul>      <li>future:        <ul>        <li>active:        <li>activeNo:        </ul>    </li>    </ul>'
 
-    oHitp.oEltCnrPreviewDiv.innerHTML = sTree
-    setTimeout(() => oHitp.oEltCnrPreviewDiv.style.display = 'block', 100)
-    oHitp.oEltCnrPreviewDiv.style.top = 59 + 'px'
-    oHitp.oEltCnrPreviewDiv.style.left = 26 + 'px'
-    oHitp.oTreeUl.fTruCreate()
+    oMcsh.oEltCnrPreviewDiv.innerHTML = sTree
+    setTimeout(() => oMcsh.oEltCnrPreviewDiv.style.display = 'block', 100)
+    oMcsh.oEltCnrPreviewDiv.style.top = 59 + 'px'
+    oMcsh.oEltCnrPreviewDiv.style.left = 26 + 'px'
+    oMcsh.oTreeUl.fTruCreate()
     let
       aSubnodes,
       aTocTriLI = document.getElementById('idTreePreview').getElementsByTagName('li'),
@@ -13590,7 +13590,7 @@
     for (n = 0; n < 5; n++) {
       aSubnodes = aTocTriLI[n].getElementsByTagName('ul')
       if (aSubnodes.length > 0 && aSubnodes[0].style.display === 'none') {
-        oHitp.oTreeUl.fTruToggleLi(aTocTriLI[n])
+        oMcsh.oTreeUl.fTruToggleLi(aTocTriLI[n])
       }
     }
   })

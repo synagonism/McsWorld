@@ -1070,6 +1070,8 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('ιά', 'iá') //γαβριάς,
 
   //ιοι
+  if (sOut.indexOf('γιοι') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('γιοι', 'yi')
   if (sOut.indexOf('λιοι') != -1 && bSinizisi)
     sOut = sOut.replaceAll('λιοι', 'lli') //Μήλιοι
   if (sOut.indexOf('νιοι') != -1 && bSinizisi)
@@ -1121,8 +1123,6 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
     sOut = sOut.replace('ιου', 'iu')
   sOut = sOut.replaceAll('βιού', 'vyyú') 
   sOut = sOut.replaceAll('βιου', 'vyyu') 
-  sOut = sOut.replaceAll('γιου', 'yyu') 
-  sOut = sOut.replaceAll('Γιου', 'yyu') //Γιουγκοσλάβος
   sOut = sOut.replaceAll('γιού', 'yyú') //Γιούκος
   sOut = sOut.replaceAll('Γιού', 'yyú') //Γιούκος
   sOut = sOut.replaceAll('γκιού', 'ggú')
@@ -1140,6 +1140,10 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('σιού', 'ssú')
   sOut = sOut.replaceAll('τιού', 'tyyú') //καρατιού
   sOut = sOut.replaceAll('ωιού', 'oyyú') //ανωιού
+  if (sOut.indexOf('γιου') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('γιου', 'yyu')
+  if (sOut.indexOf('Γιου') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('Γιου', 'yyu') //Γιουγκοσλάβος
   if (sOut.indexOf('διού') != -1 && bSinizisi)
     sOut = sOut.replaceAll('διού', 'dhyyú')
   if (sOut.indexOf('διου') != -1 && bSinizisi)
@@ -1267,8 +1271,6 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('αιώ', 'eó') //αιώρα
   sOut = sOut.replaceAll('βιώ', 'vyyó')
   sOut = sOut.replaceAll('Γιώ', 'yyó')
-  sOut = sOut.replaceAll('γιω', 'yyo')
-  sOut = sOut.replaceAll('Γιω', 'yyo') //Γιωργούλα
   sOut = sOut.replaceAll('διώ', 'dhyyó')
   sOut = sOut.replaceAll('γκιώ', 'ggó') //
   sOut = sOut.replaceAll('κιώ', 'kkó') //Αμπελακιώτης
@@ -1285,6 +1287,10 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('σσιώ', 'ssó')
   sOut = sOut.replaceAll('σιώ', 'ssó')
   sOut = sOut.replaceAll('ωιώ', 'oyyó') //ανωιών
+  if (sOut.indexOf('γιω') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('γιω', 'yyo')
+  if (sOut.indexOf('Γιω') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('Γιω', 'yyo')
   if (sOut.indexOf('γιώ') != -1 && bSinizisi)
     sOut = sOut.replaceAll('γιώ', 'yyó') // Αιγιώτισα
   if (sOut.indexOf('θιώ') != -1 && bSinizisi)

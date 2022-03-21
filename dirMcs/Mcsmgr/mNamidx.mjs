@@ -447,6 +447,7 @@ function fNamidx(fileIn, fSftpIn) {
       sIdxCrnt,
       sIdxNext,
       sFileIdx,      // name of index-file on which to store the-name-Url
+      sFileIdxRest,
       nCharName,
       nIdxCrnt,
       nIdxNext
@@ -455,6 +456,8 @@ function fNamidx(fileIn, fSftpIn) {
     // choose root-char or rest
     sCharName = aNUIn[0].substring(0,1)
     for (sFileIdx in oRootFileIdx_Idx) {
+      if (sFileIdx.startsWith(sLagIn + '00'))
+        sFileIdxRest = sFileIdx 
       if (sFileIdx.startsWith(sLagIn)) {
         sIndex = oRootFileIdx_Idx[sFileIdx]
 
@@ -502,7 +505,7 @@ function fNamidx(fileIn, fSftpIn) {
       }
     }
     if (bRest) {
-      sFileIdx = sLagIn + '00'
+      sFileIdx = sFileIdxRest
       fStoreNamUrlNamidx(sFileIdx, aNUIn, sLagIn)
     }
   }
