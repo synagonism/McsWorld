@@ -599,7 +599,7 @@ let fContainersInsert = function () {
   // TabCntSrch
   oEltTabCntSrchDiv.id = 'idTabCntSrchDiv'
   oEltTabCntSrchDiv.setAttribute('class', 'clsTabCnt')
-  oEltTabCntSrchLbl.innerHTML = 'name-language:'
+  oEltTabCntSrchLbl.innerHTML = 'name-lang:'
   oEltTabCntSrchLbl.for = 'idTabCntSrchSlt'
   oEltTabCntSrchSlt.id = 'idTabCntSrchSlt'
   //let oEltTabCntSrchOpn1 = document.createElement('option')
@@ -637,8 +637,8 @@ let fContainersInsert = function () {
   oEltTabCntSrchLblChk.innerHTML =
     '<input type="checkbox" id="idTabCntSrchChk">show All, not 999 (slow)'
   oEltTabCntSrchPPnm.id = 'idTabCntSrchPPnm'
-  oEltTabCntSrchPPnm.innerHTML = 'char: ' +
-    '<span id="idSrchpnm">á </span><span id="idSrchpnm">à </span><span id="idSrchpnm">ā </span><span id="idSrchpnm">ǎ </span>' +
+  oEltTabCntSrchPPnm.innerHTML =
+    '<span id="idSrchpnm"> á </span><span id="idSrchpnm">à </span><span id="idSrchpnm">ā </span><span id="idSrchpnm">ǎ </span>' +
     '<span id="idSrchpnm">é </span><span id="idSrchpnm">è </span><span id="idSrchpnm">ē </span><span id="idSrchpnm">ě </span>' +
     '<span id="idSrchpnm">í </span><span id="idSrchpnm">ì </span><span id="idSrchpnm">ī </span><span id="idSrchpnm">ǐ </span>' +
     '<span id="idSrchpnm">ó </span><span id="idSrchpnm">ò </span><span id="idSrchpnm">ō </span><span id="idSrchpnm">ǒ </span>' +
