@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagJsgn-(6-34-0.2022-02-21) Javascript-language</title>
+  <title>Mcs.lagJsgn-(6-36-0.2022-04-04) Javascript-language</title>
   <meta name="keywords" content="JavaScript, js, lagJsgn, Javascript-tutorial, browser-js, Node.js, Jsgn, Jsbr, Jsnd, Mcs, sensorial-concept">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -2073,6 +2073,32 @@
     <br>* {2017-11-07} Brandon-Morelli, JavaScript ES 2017: Learn Async/Await by Example, <a href="https://codeburst.io/Javascript-es-2017-learn-async-await-by-example-48acc58bad65">https://codeburst.io/</a>,
     <br>* {2017-08-31} Diogo-Spínola, JavaScript — from callbacks to async/await, <a href="https://medium.freecodecamp.org/Javascript-from-callbacks-to-async-await-1cc090ddad99">https://medium.freecodecamp.org/</a>,
     <a class="clsHide" href="#idLjsfAsncwpa"></a></p>
+
+  <section id="idLjsfAsncawt">
+  <h4 id="idLjsfAsncawtH4">Jsf.async-await
+    <a class="clsHide" href="#idLjsfAsncawtH4"></a></h4>
+  <p id="idLjsfAsncawtdsn">description::
+    <br>· by prepending <code>await</code> on a-promise inside an-async-function, the-code will-stop until the-promise is-resolved or rejected.
+    <br><code>const getFirstUserData = async () => {
+    <br> &nbsp;const response = await fetch('/users.json') // get users list
+    <br> &nbsp;const users = await response.json() // parse JSON
+    <br> &nbsp;const user = users[0] // pick first user
+    <br> &nbsp;const userResponse = await fetch(`/users/${user.name}`) // get user data
+    <br> &nbsp;const userData = await userResponse.json() // parse JSON
+    <br> &nbsp;return userData
+    <br>}
+    <br>getFirstUserData()</code>
+    <br>[{2022-04-04 retrieved} https://nodejs.dev/learn/modern-asynchronous-javascript-with-async-and-await]
+    <br>===
+    <br>"Top level await
+    <br>You can use the await keyword on its own (outside of an async
+    function) within a JavaScript module. This means modules, with child modules that use await, wait for the child module to execute before they themselves run. All while not blocking other child modules from loading."
+    <br>[{2022-04-04 retrieved} https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await]
+    <a class="clsHide" href="#idLjsfAsncawtdsn"></a></p>
+  <p id="idLjsfAsncawtnam">name::
+    <br>* McsEngl.async-await--Javascript-function,
+    <a class="clsHide" href="#idLjsfAsncawtnam"></a></p>
+  </section>
   </section>
 
   <section id="idLjsfClbk">
@@ -2960,13 +2986,15 @@
     <br>[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test]
     <a class="clsHide" href="#idLjsRegExpptestdsn"></a></p>
   <p id="idLjsRegExpptestnam">name::
+    <br>* McsEngl.Jsr'test-function,
     <br>* McsEngl.RegExp.prototype.test-function,
     <a class="clsHide" href="#idLjsRegExpptestnam"></a></p>
   <p id="idLjsRegExpptestexpl">example::
-    <br><code>/\* Mcs...\./.test('&lt;br>* cptItalake')
-    <br>//false
-    <br>/\* Mcs...\./.test('&lt;br>* cptIta.lake')
-    <br>//true</code>
+    <br><code>/\* Mcs...\./.test('&lt;br>* cptItalake') //false
+    <br>/\* Mcs...\./.test('&lt;br>* cptIta.lake') //true
+    <br>/a/i.test('123Abc') //true
+    <br>new RegExp('a','i').test('123Abc') //true
+    <br>new RegExp('a').test('123Abc') //false</code>
     <a class="clsHide" href="#idLjsRegExpptestexpl"></a></p>
   </section>
 

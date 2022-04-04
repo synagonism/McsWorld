@@ -99,9 +99,9 @@ const
   bFirefox = navigator.userAgent.indexOf('Firefox/') > -1
 
 let
-  aaIdxfilRoot,
-  // contains the-array of the-indexes of all languages of the-names
-  // of sensorial-concepts
+  aaNamidxfileRoot,
+  // contains the-array of the-array of the-name-index-files of all languages of the-names
+  // of senso-concepts [["lagEngl01ei","A|a"]]
   aSuggestions = [[]],
   
   nCfgPageinfoWidth = 30, 
@@ -177,7 +177,6 @@ let fContainersInsert = function () {
     oEltCnrSiteDiv,
     sContentOriginal = oEltBody.innerHTML,
     sIdTabActive,
-    sPathNames,
     sTabCntSrchOl = ''
 
   if (oEltSitemenuUl) {
@@ -206,19 +205,19 @@ let fContainersInsert = function () {
     '<li>SEE ' +
       '<a class="clsPreview" href="' + sPathSite + 'dirMcs/dirCor/McsCor000002.last.html#idMcsattNamcvn">name-notation--of-Mcs</a>.</li>' +
     '<li>TYPE a-name of ' +
-      '<a class="clsPreview" href="' + sPathSite + 'dirMcs/dirCor/McsCor000002.last.html#idOverview">a-sensorial-concept-Mcs</a> of ' +
+      '<a class="clsPreview" href="' + sPathSite + 'dirMcs/dirCor/McsCor000002.last.html#idOverview">a-senso-concept-Mcs</a> of ' +
       '<a class="clsPreview" href="' + sPathSite + 'dirMcs/dirHmn/McsHmn000003.last.html#idOverview">Kaseluris.Nikos.1959-WORLDVIEW</a>.</li>' +
     '<li>some important concepts are: "<strong>char</strong>", ' +
       '"<strong>javascript</strong>", "<strong>human-language</strong>", ' +
       '"<strong>chain-net</strong>", ...</li>' +
-    '<li>sensorial-concept-searching demonstrates THE-POWER of sensorial-concepts.' +
+    '<li>senso-concept-searching demonstrates THE-POWER of senso-concepts.' +
       '<br>· compare them with Google-WORD-search and Wikipedia-TEXT-entries.</li>' +
-    '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/dirHmn/McsHmn000003.last.html#idOverview">Kaseluris.Nikos.1959</a> works more than 30 years on sensorial-concepts. ' +
+    '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/dirHmn/McsHmn000003.last.html#idOverview">Kaseluris.Nikos.1959</a> works more than 30 years on senso-concepts. ' +
       '<br>· <a class="clsPreview" href="' + sPathSite + '#idSupport">support him</a> to continue publishing.</li>' +
     '<li>this site uses 3 types of searching:' +
       '<br>- word--site-search from site-Menu,' +
       '<br>- word--page-search by hitting Ctrl+F and' +
-      '<br>- sensorial-concept--search here.</li>'
+      '<br>- senso-concept--search here.</li>'
 
   oEltCnrTopSearchIcnI = document.createElement('i')
   oEltTabCntSrchDiv = document.createElement('div')
@@ -232,7 +231,6 @@ let fContainersInsert = function () {
   sIdxfile = 'lagRoot' // the-index-file to search first
   sIdxFrom = '' // current search-index
   sIdxTo = '' // next search-index
-  sPathNames = sPathSite + 'dirMcs/dirNamidx/'
   oEltCnrTopTitleP.setAttribute('title', 'clicking GREEN-BAR shows search-tab, clicking CONTENT shows Toc-tab')
   oEltCnrTopSearchIcnI.setAttribute('class', 'clsFa clsFaSearch clsTopIcn clsColorWhite clsFloatRight clsPosRight')
   oEltCnrTopSearchIcnI.addEventListener('click', function () {
@@ -773,24 +771,24 @@ let fContainersInsert = function () {
       let bRest = true
       // display rest-chars if main-char will-not-find
 
-      for (let n = 1; n < aaIdxfilRoot.length; n++) {
+      for (let n = 1; n < aaNamidxfileRoot.length; n++) {
         // display quantities, for the-lag
-        if (aaIdxfilRoot[n][0] === ';' + sLag) {
-            nLag = n // index of lag in aaIdxfilRoot [";lagEngl","English",143707],
-        } else if (aaIdxfilRoot[n][0].startsWith(sLag) && aaIdxfilRoot[n][1] !== '') {
+        if (aaNamidxfileRoot[n][0] === ';' + sLag) {
+            nLag = n // index of lag in aaNamidxfileRoot [";lagEngl","English",143707],
+        } else if (aaNamidxfileRoot[n][0].startsWith(sLag) && aaNamidxfileRoot[n][1] !== '') {
           // only selected language
-          if (aaIdxfilRoot[n][1].indexOf('..') < 0) {
+          if (aaNamidxfileRoot[n][1].indexOf('..') < 0) {
             // root-char "Ά|Α|ά|α"
-            if (aaIdxfilRoot[n][1].indexOf(sSearchChar) >= 0) {
+            if (aaNamidxfileRoot[n][1].indexOf(sSearchChar) >= 0) {
               // found search-char
-              sIdxFrom = aaIdxfilRoot[n][1]
+              sIdxFrom = aaNamidxfileRoot[n][1]
               sIdxTo = ''
-              if (aaIdxfilRoot[n][0].endsWith('_0')) {
+              if (aaNamidxfileRoot[n][0].endsWith('_0')) {
                 // index-file is a-reference
-                fSSIdxfileReferenceManage(aaIdxfilRoot[n][0])
+                fSSIdxfileReferenceManage(aaNamidxfileRoot[n][0])
               } else {
                 // index-file is a-referenceNo
-                fSSIdxfilDisplay(aaIdxfilRoot[n][0])
+                fSSIdxfilDisplay(aaNamidxfileRoot[n][0])
               }
               // found main-char 
               bRest = false
@@ -798,7 +796,7 @@ let fContainersInsert = function () {
             }
           } else {
             // root-char A..C a-sequence of chars
-            let a = aaIdxfilRoot[n][1].split('..')
+            let a = aaNamidxfileRoot[n][1].split('..')
             sIdxFrom = a[0]
             sIdxTo = a[1]
             // some Chinese are codepoints, then compare numbers
@@ -827,12 +825,12 @@ let fContainersInsert = function () {
             }
             //console.log(sIdxFrom+', '+sIdxTo)
             if (nSearchChar >= nIdxFrom && nSearchChar < nIdxTo) {
-              if (aaIdxfilRoot[n][0].endsWith('_0')) {
+              if (aaNamidxfileRoot[n][0].endsWith('_0')) {
                 // index-file is a-reference
-                fSSIdxfileReferenceManage(aaIdxfilRoot[n][0])
+                fSSIdxfileReferenceManage(aaNamidxfileRoot[n][0])
               } else {
                 // index-file is a-referenceNo
-                fSSIdxfilDisplay(aaIdxfilRoot[n][0])
+                fSSIdxfilDisplay(aaNamidxfileRoot[n][0])
               }
               // found main-char 
               bRest = false
@@ -844,12 +842,12 @@ let fContainersInsert = function () {
       if (bRest) {
         sIdxFrom = 'charRest'
         sIdxTo = ''          
-        if (aaIdxfilRoot[nLag + 1][0].endsWith('_0')) {
+        if (aaNamidxfileRoot[nLag + 1][0].endsWith('_0')) {
           // index-file is a-reference
-          fSSIdxfileReferenceManage(aaIdxfilRoot[nLag + 1][0])
+          fSSIdxfileReferenceManage(aaNamidxfileRoot[nLag + 1][0])
         } else {
           // index-file is a-referenceNo
-          fSSIdxfilDisplay(aaIdxfilRoot[nLag + 1][0])
+          fSSIdxfilDisplay(aaNamidxfileRoot[nLag + 1][0])
         }
       }
     } else {
@@ -870,7 +868,7 @@ let fContainersInsert = function () {
       if (aSuggestions.length === 1 || aSuggestions[0][0] !== ';' + sIdxfileReferenceIn) {
         // read it
         sIdxfile = sIdxfileReferenceIn
-        sIdxfileFull = fSSFindIdxfilFull(sIdxfileReferenceIn)
+        sIdxfileFull = fFindNamidxfileFull(sIdxfileReferenceIn)
         sSuggestions = ''
         fetch(sIdxfileFull)
         .then(response => response.json())
@@ -940,7 +938,7 @@ let fContainersInsert = function () {
       if (aSuggestions[0][0] === ';' + sIdxfileReferenceIn) {
         fSSIdxfilRefDisplayRead()
       } else {
-        sIdxfileFull = fSSFindIdxfilFull(sIdxfileReferenceIn)
+        sIdxfileFull = fFindNamidxfileFull(sIdxfileReferenceIn)
         sSuggestions = ''
         fetch(sIdxfileFull)
         .then(response => response.json())
@@ -1013,9 +1011,9 @@ let fContainersInsert = function () {
         // IF sIdxfilIn is different from last-read, get it
 
         if (!aSuggestions || (aSuggestions[0][0] !== ';' + sIdxfilIn)) {
-          sIdxfileFull = fSSFindIdxfilFull(sIdxfilIn)
+          sIdxfileFull = fFindNamidxfileFull(sIdxfilIn)
           sSuggestions = ''
-          fetch(sIdxfileFull) //PROBLEM fetch if not exists
+          fetch(sIdxfileFull)
           .then(response => response.json())
           .then(data => {
             aSuggestions = data
@@ -1030,6 +1028,7 @@ let fContainersInsert = function () {
             }
             fSSIdxfilDisplayRead()
           })
+          .catch(error => console.warn(error))
         } else if (aSuggestions[0][0] === ';' + sIdxfilIn) {
           // we have-read the-index-file, display it
           fSSIdxfilDisplayRead()
@@ -1200,15 +1199,6 @@ let fContainersInsert = function () {
     }
 
     /**
-     * INPUT: lagEngl01ei, lagElln01alfa
-     * OUTPUT: site/dirMcs/dirNamidx/dirLagEngl/namidx.lagEngl01ei.json
-     */
-    function fSSFindIdxfilFull(sIdxfilIn) {
-      return sPathNames + 'dirL' + sIdxfilIn.substring(1, 7) +
-             '/namidx.' + sIdxfilIn + '.json'
-    }
-
-    /**
      * DOING: adds preview-event on links in search-sugestions and
      *   adds its text on search-input
      */
@@ -1308,16 +1298,16 @@ let fContainersInsert = function () {
       nLag,
       sLag = oEltTabCntSrchSlt.options[oEltTabCntSrchSlt.selectedIndex].value
     if (sLag === 'lagALL') {
-      return aaIdxfilRoot[0][2].toLocaleString() + ' total NAMES'
+      return aaNamidxfileRoot[0][2].toLocaleString() + ' total NAMES'
     } else {
-      for (let n = 1; n < aaIdxfilRoot.length; n++) {
-        if (aaIdxfilRoot[n][0] === ';'+sLag) {
+      for (let n = 1; n < aaNamidxfileRoot.length; n++) {
+        if (aaNamidxfileRoot[n][0] === ';'+sLag) {
           nLag = n
           break
         }
       }
-      return aaIdxfilRoot[nLag][2].toLocaleString() + ' ' + aaIdxfilRoot[nLag][1] +
-        ' // ' + aaIdxfilRoot[0][2].toLocaleString() + ' total NAMES'
+      return aaNamidxfileRoot[nLag][2].toLocaleString() + ' ' + aaNamidxfileRoot[nLag][1] +
+        ' // ' + aaNamidxfileRoot[0][2].toLocaleString() + ' total NAMES'
     }
   }
 
@@ -2029,7 +2019,7 @@ if (sPathSite) {
   // read lagRoot
   await fetch(sPathSite + 'dirMcs/dirNamidx/namidx.lagRoot.json')
   .then(response => response.json())
-  .then(data => aaIdxfilRoot=data)
+  .then(data => aaNamidxfileRoot=data)
 }
 
 fContainersInsert()
@@ -2046,12 +2036,181 @@ if (location.hash) {
 }
 document.getElementById('idCnrMainPgcntDiv').focus()
 
+/**
+ * DOING: creates object {file: index} from [[file,idx,quantity]]
+ * INPUT: aIn = [['lagEngl01ei','A',1234]]
+ * OUTPUT: {laEngl01ei:'A'}
+ */
+function fCreateOFile_Index(aIn) {
+  let
+    n,
+    oOut = {}
+  for (n = 0; n < aIn.length; n++) {
+    if (!aIn[n][1].startsWith(';')) {
+      // remove non index info
+      oOut[aIn[n][0]] = aIn[n][1]
+    }
+  }
+  return oOut
+}
+
+/**
+ * INPUT: lagEngl01ei, lagElln01alfa
+ * OUTPUT: site/dirMcs/dirNamidx/dirLagEngl/namidx.lagEngl01ei.json
+ */
+function fFindNamidxfileFull(sIdxfilIn) {
+  return sPathSite + 'dirMcs/dirNamidx/dirL' + sIdxfilIn.substring(1, 7) +
+         '/namidx.' + sIdxfilIn + '.json'
+}
+
+/**
+ * DOING: it searches for a-name of a-language
+ * INPUT: sNameIn, sLagIn=lagElln, aaNamidxIdxIn
+ * OUTPUT: promise of array of name-link-array [[name, link]]
+ */
+async function fSearch(sNameIn, sLagIn) {
+  let
+    sFile,
+    aaOut = [],
+    i
+
+  sFile = await fFindNamidxfile(sNameIn, sLagIn, aaNamidxfileRoot)
+
+  const response = await fetch(fFindNamidxfileFull(sFile[0]))
+  const json = await response.json()
+  for (i = 1; i < json.length; i++) {
+    if (new RegExp('^' + sNameIn + '.*@wordElln$', 'i').test(json[i][0])){
+      aaOut.push(json[i])
+    }
+  }
+  return aaOut
+  /*
+  return fetch(fFindNamidxfileFull(sFile))
+  .then(response => response.json())
+  .then(json => {return json})
+  */
+
+  /**
+   * DOING: it finds the-namidx-json-file to search a-name
+   * INPUT:
+   *  - sNameIn: 'νύφη'
+   *  - sLagIn: 'lagElln'
+   *  - aaNamidxIdxIn: [["lagEngl01ei","A|a"]]
+   * OUTPUT: ["lagElln15omikron_0","Ό|Ο|ο|ό"]
+   */
+  async function fFindNamidxfile(sNameIn, sLagIn, aaNamidxIdxIn) {
+    let
+      aNamidxfile_IdxOut, // the-output Namidxfile-index info
+      oNamidxfile_Idx,
+      bRest = true,
+      // if first-char of nameIn NOT in an-index in the-lag, then it is a-charREST in this lag
+      sCharName,    // the-first char of nameIn
+      sIndex,       // the-chars-of-index in the-Namidx-file
+      sIdxFrom,
+      sIdxTo,
+      sNamidx,      // name of Namidx-file on which to store the-word
+      sNamidxOut,
+      sNamidxRest,  // name of Namidx-file with rest words on input-lag
+      nCharName,
+      nIdxFrom,
+      nIdxTo,
+      sNamidxRefFull
+
+    // FIND Namidx-file
+    // choose root-char or rest
+    sCharName = sNameIn[0].substring(0,1)
+    oNamidxfile_Idx = fCreateOFile_Index(aaNamidxIdxIn)
+    // {lagEngl01ei:'A|a'}
+
+    for (sNamidx in oNamidxfile_Idx) {
+      if (sNamidx.startsWith(sLagIn)) {
+        sIndex = oNamidxfile_Idx[sNamidx]
+
+        if (sIndex.indexOf('..') < 0) {
+          // index is a-set of chars 'B|b|'
+          if (sIndex.indexOf(sCharName) >= 0) {
+            // found Namidx-file
+            bRest = false 
+            sNamidxOut = sNamidx
+            aNamidxfile_IdxOut = [sNamidxOut, sIndex]
+            break
+          }
+        } else {
+          // index is a-sequence of chars 'C..D' or "26000..27000" or "αμ..β"
+          // we are on a-reference or Chinese root reference
+          let a = sIndex.split('..')
+          sIdxFrom = a[0]
+          sIdxTo = a[1]
+          //IF indexes more than one, compare word, ELSE codepoints and first-word-char
+          if (sIdxFrom.length > 1 || sIdxTo.length > 1) {
+            if (sNameIn >= sIdxFrom && sNameIn < sIdxTo) {
+              // found Namidx-file
+              bRest = false 
+              sNamidxOut = sNamidx
+              aNamidxfile_IdxOut = [sNamidxOut, sIndex]
+              break
+            }
+          } else {
+            //compare codepoints
+            nCharName = sCharName.codePointAt()
+            // if srch-char is a-supplement with surrogates (high 55296–56319), find it
+            if (nCharName >= 55296 && nCharName <= 56319) {
+              let sSupplement = String.fromCodePoint(sNameIn[0].charAt(0).charCodeAt(0),
+                                                     sNameIn[0].charAt(1).charCodeAt(0))
+              nCharName = sSupplement.codePointAt()
+            }
+            if (!Number.isInteger(Number(sIdxFrom))) {
+              // it is char
+              nIdxFrom = sIdxFrom.codePointAt()
+            } else {
+              // it is number
+              nIdxFrom = Number(sIdxFrom)
+            }
+            if (!Number.isInteger(Number(sIdxTo))) {
+              nIdxTo = sIdxTo.codePointAt()
+            } else {
+              nIdxTo = Number(sIdxTo)
+            }
+            //console.log(nIdxFrom+', '+nIdxTo)
+            if (nCharName >= nIdxFrom && nCharName < nIdxTo) {
+              // found Namidx-file
+              bRest = false 
+              sNamidxOut = sNamidx
+              aNamidxfile_IdxOut = [sNamidxOut, sIndex]
+              break
+            }
+          }
+        }
+      }
+      // in case where rest-file is reference ('_0')
+      if (sNamidx.startsWith(sLagIn + '00'))
+        sNamidxRest = sNamidx
+    }
+    if (bRest) {
+      sNamidxOut = sNamidxRest
+      aNamidxfile_IdxOut = [sNamidxOut, '']
+    }
+
+    if (!sNamidxOut.endsWith('_0')) {
+      aNamidxfile_IdxOut = [sNamidxOut, sIndex]
+      //console.log(aNamidxfile_IdxOut)
+      return aNamidxfile_IdxOut 
+    } else {
+      sNamidxRefFull = fFindNamidxfileFull(sNamidxOut)
+      let response = await fetch(sNamidxRefFull)
+      let json = await response.json()
+      console.log(json)
+      return fFindNamidxfile(sNameIn, sLagIn, json)
+    }
+  }
+}
+
 // oEltClicked, sIdxfile, sIdxTo,  sIdxFrom, sQrslrAClk, sQrslrAClkLast
 export {
-  aaIdxfilRoot, aSuggestions, aVersion,
+  aaNamidxfileRoot, aSuggestions, aVersion,
   bEdge, bFirefox,
   nCfgPageinfoWidth,
-  fContainersInsert, fTocTriCreate, fTocTriHighlightNode,
+  fContainersInsert, fTocTriCreate, fTocTriHighlightNode, fSearch,
   oEltCnrPreviewDiv, oEltSitemenuUl, oTreeUl,
   sCfgHomeLocal, sPathSite, sPathStmenu
 }

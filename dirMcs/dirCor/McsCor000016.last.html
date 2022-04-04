@@ -22,8 +22,9 @@
   <h1 id="idOverviewH1">overview of McsTest
     <a class="clsHide" href="#idOverviewH1"></a></h1>
   <p id="idDescription">description::
-    <br>· <input type="text" id="idIpt">
+    <br>· <input type="text" id="idNounIpt" value="βουνό">
     <br>· <button type="button" id="idBtn">GO</button>
+    <br><div id="idNounDiv"></div>
     <a class="clsHide" href="#idDescription"></a></p>
   <p id="idDefinition">definition::
     <br><span id="idDefinitionSpc">specific-definition:
@@ -161,26 +162,32 @@
   <p></p>
 </section>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-19285371-5', 'synagonism.net');
-  ga('send', 'pageview');
-</script>
-
 <script type="module">
-  import * as oMcsh from '../Mcsmgr/mMcsh.js'
-  import '../Mcsmgr/mLag.js'
+  import * as oMcsh from '../Mcsmgr/mMcshSearch.js'
+  //import '../Mcsmgr/mLag.js'
 
-  //aNamidxRoot, aSuggestions, aVersion, bEdge, bFirefox, fContainersInsert,
+  document.getElementById('idNounIpt').addEventListener('keyup', function(oEvtIn) {
+    let
+      sIn,
+      aaOut=[],
+      i
+
+    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
+      sIn = document.getElementById('idNounIpt').value
+      oMcsh.fSearch(sIn, 'lagElln').then(json =>{
+        document.getElementById('idNounDiv').innerHTML = json
+      })
+    }
+  })
+
+
+  //aaNamidxfileRoot, aSuggestions, aVersion, bEdge, bFirefox, fContainersInsert,
   //fTocTriCreate, fTocTriHighlightNode, nCfgPageinfoWidth,
   //oEltTPUl, oTreeUl, sCfgHomeLocal, sNamidx, sPathSite, sPathSitemenu,
   //sQrslrAClk, sQrslrAClkLast, sSrchCrnt, sSrchNext
-//  console.log(Object.getOwnPropertyNames(oMcsh).sort().join(', '))
-//  setTimeout(() => console.log(oMcsh.aNamidxRoot), 500)
-//  console.log(oMcsh.aNamidxRoot)
+  //console.log(Object.getOwnPropertyNames(oMcsh).sort().join(', '))
+//  setTimeout(() => console.log(oMcsh.aaNamidxfileRoot), 500)
+//  console.log(oMcsh.aaNamidxfileRoot)
 //  console.log(oMcsh.sCfgHomeLocal)
 //  console.log(oMcsh.sNamidx)
 //  console.log(oMcsh.bEdge)

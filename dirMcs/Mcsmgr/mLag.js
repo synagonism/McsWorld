@@ -26,7 +26,7 @@
  */
 
 import './mLagEngl.js'
-import {oEltCnrPreviewDiv, oTreeUl} from './mHitp.js'
+import {oEltCnrPreviewDiv, oTreeUl} from './mMcshSearch.js'
 
 const
   // contains the-versions of mLag.js
