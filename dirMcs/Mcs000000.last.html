@@ -419,22 +419,22 @@
   import * as oMcsh from './Mcsmgr/mMcsh.js'
 
   let sQ = ''
-  for (var n = 0; n < oMcsh.aaIdxfilRoot.length; n++) {
-    if (oMcsh.aaIdxfilRoot[n][0] === ';AGGR') {
+  for (var n = 0; n < oMcsh.aaNamidxfileRoot.length; n++) {
+    if (oMcsh.aaNamidxfileRoot[n][0] === ';AGGR') {
       sQ = '<li>⊛ SUM: <span class="clsColorRed">'
-           + oMcsh.aaIdxfilRoot[n][2].toLocaleString()
+           + oMcsh.aaNamidxfileRoot[n][2].toLocaleString()
            + ' names on {'
-           + oMcsh.aaIdxfilRoot[n][3]
+           + oMcsh.aaNamidxfileRoot[n][3]
            + '}</span>'
-    } else if (oMcsh.aaIdxfilRoot[n][0].startsWith(';lag')) {
-      sQ = sQ + '<li>⊛ <span class="clsColorRed">' + oMcsh.aaIdxfilRoot[n][1]
-         + ': ' + oMcsh.aaIdxfilRoot[n][2].toLocaleString()
+    } else if (oMcsh.aaNamidxfileRoot[n][0].startsWith(';lag')) {
+      sQ = sQ + '<li>⊛ <span class="clsColorRed">' + oMcsh.aaNamidxfileRoot[n][1]
+         + ': ' + oMcsh.aaNamidxfileRoot[n][2].toLocaleString()
          + '</span>'
-    } else if (oMcsh.aaIdxfilRoot[n][1] === '') {
-      sQ = sQ + '<li> charREST: ' + oMcsh.aaIdxfilRoot[n][2]
+    } else if (oMcsh.aaNamidxfileRoot[n][1] === '') {
+      sQ = sQ + '<li> charREST: ' + oMcsh.aaNamidxfileRoot[n][2]
     } else {
-      sQ = sQ + '<li>' + oMcsh.aaIdxfilRoot[n][1]
-         + ': ' + oMcsh.aaIdxfilRoot[n][2]
+      sQ = sQ + '<li>' + oMcsh.aaNamidxfileRoot[n][1]
+         + ': ' + oMcsh.aaNamidxfileRoot[n][2]
     }
   }
   document.getElementById('idMwsstatQntNamOl').innerHTML = sQ

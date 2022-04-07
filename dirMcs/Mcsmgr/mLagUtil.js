@@ -899,7 +899,10 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
     sOut = sOut.replaceAll('όια', 'óyya') // κομπολόια
   sOut = sOut.replaceAll('οια', 'ia') //έννοια, έγνοια
   sOut = sOut.replaceAll('οιά', 'iá') //χροιά,
-  
+
+  //οιεί
+  sOut = sOut.replaceAll('οιεί', 'ií') // αρτοποιείο
+
   //οιου
   if (sOut.indexOf('οϊού') != -1 && bSinizisi)
     sOut = sOut.replaceAll('οϊού', 'oyyú') // κομπολοϊού

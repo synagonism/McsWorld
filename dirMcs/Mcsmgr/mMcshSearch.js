@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js 
   aVersion = [
+    'mMcsh.js.19-2-0.2022-04-04: fSearchname',
     'mMcsh.js.19-1-0.2022-03-21: charRest-reference',
     'mMcsh.js.19-0-0.2022-03-20: Mcsh',
     'mHitp.js.18-10-0.2022-03-19: phoneme-events',
@@ -2064,11 +2065,124 @@ function fFindNamidxfileFull(sIdxfilIn) {
 }
 
 /**
+ * DOING: it finds the-namidx-json-file to search a-name-link
+ * INPUT:
+ *  - sNameIn: 'νύφη'
+ *  - sLagIn: 'lagElln'
+ *  - aaNamidxIdxIn: [["lagEngl01ei","A|a"]]
+ * OUTPUT: ["lagElln15omikron_0","Ό|Ο|ο|ό"]
+ */
+async function fFindNamidxfile(sNameIn, sLagIn, aaNamidxIdxIn) {
+  let
+    aNamidxfile_IdxOut, // the-output Namidxfile-index info
+    oNamidxfile_Idx,
+    bRest = true,
+    // if first-char of nameIn NOT in an-index in the-lag, then it is a-charREST in this lag
+    sCharName,    // the-first char of nameIn
+    sIndex,       // the-chars-of-index in the-Namidx-file
+    sIdxFrom,
+    sIdxTo,
+    sNamidx,      // name of Namidx-file on which to store the-word
+    sNamidxOut,
+    sNamidxRest,  // name of Namidx-file with rest words on input-lag
+    nCharName,
+    nIdxFrom,
+    nIdxTo,
+    sNamidxRefFull
+
+  // FIND Namidx-file
+  // choose root-char or rest
+  sCharName = sNameIn[0].substring(0,1)
+  oNamidxfile_Idx = fCreateOFile_Index(aaNamidxIdxIn)
+  // {lagEngl01ei:'A|a'}
+
+  for (sNamidx in oNamidxfile_Idx) {
+    if (sNamidx.startsWith(sLagIn)) {
+      sIndex = oNamidxfile_Idx[sNamidx]
+
+      if (sIndex.indexOf('..') < 0) {
+        // index is a-set of chars 'B|b|'
+        if (sIndex.indexOf(sCharName) >= 0) {
+          // found Namidx-file
+          bRest = false 
+          sNamidxOut = sNamidx
+          aNamidxfile_IdxOut = [sNamidxOut, sIndex]
+          break
+        }
+      } else {
+        // index is a-sequence of chars 'C..D' or "26000..27000" or "αμ..β"
+        // we are on a-reference or Chinese root reference
+        let a = sIndex.split('..')
+        sIdxFrom = a[0]
+        sIdxTo = a[1]
+        //IF indexes more than one, compare word, ELSE codepoints and first-word-char
+        if (sIdxFrom.length > 1 || sIdxTo.length > 1) {
+          if (sNameIn >= sIdxFrom && sNameIn < sIdxTo) {
+            // found Namidx-file
+            bRest = false 
+            sNamidxOut = sNamidx
+            aNamidxfile_IdxOut = [sNamidxOut, sIndex]
+            break
+          }
+        } else {
+          //compare codepoints
+          nCharName = sCharName.codePointAt()
+          // if srch-char is a-supplement with surrogates (high 55296–56319), find it
+          if (nCharName >= 55296 && nCharName <= 56319) {
+            let sSupplement = String.fromCodePoint(sNameIn[0].charAt(0).charCodeAt(0),
+                                                   sNameIn[0].charAt(1).charCodeAt(0))
+            nCharName = sSupplement.codePointAt()
+          }
+          if (!Number.isInteger(Number(sIdxFrom))) {
+            // it is char
+            nIdxFrom = sIdxFrom.codePointAt()
+          } else {
+            // it is number
+            nIdxFrom = Number(sIdxFrom)
+          }
+          if (!Number.isInteger(Number(sIdxTo))) {
+            nIdxTo = sIdxTo.codePointAt()
+          } else {
+            nIdxTo = Number(sIdxTo)
+          }
+          //console.log(nIdxFrom+', '+nIdxTo)
+          if (nCharName >= nIdxFrom && nCharName < nIdxTo) {
+            // found Namidx-file
+            bRest = false 
+            sNamidxOut = sNamidx
+            aNamidxfile_IdxOut = [sNamidxOut, sIndex]
+            break
+          }
+        }
+      }
+    }
+    // in case where rest-file is reference ('_0')
+    if (sNamidx.startsWith(sLagIn + '00'))
+      sNamidxRest = sNamidx
+  }
+  if (bRest) {
+    sNamidxOut = sNamidxRest
+    aNamidxfile_IdxOut = [sNamidxOut, '']
+  }
+
+  if (!sNamidxOut.endsWith('_0')) {
+    aNamidxfile_IdxOut = [sNamidxOut, sIndex]
+    //console.log(aNamidxfile_IdxOut)
+    return aNamidxfile_IdxOut 
+  } else {
+    sNamidxRefFull = fFindNamidxfileFull(sNamidxOut)
+    const response = await fetch(sNamidxRefFull)
+    const json = await response.json()
+    return fFindNamidxfile(sNameIn, sLagIn, json)
+  }
+}
+
+/**
  * DOING: it searches for a-name of a-language
  * INPUT: sNameIn, sLagIn=lagElln, aaNamidxIdxIn
  * OUTPUT: promise of array of name-link-array [[name, link]]
  */
-async function fSearch(sNameIn, sLagIn) {
+async function fSearchname(sNameIn, sLagIn) {
   let
     sFile,
     aaOut = [],
@@ -2079,130 +2193,12 @@ async function fSearch(sNameIn, sLagIn) {
   const response = await fetch(fFindNamidxfileFull(sFile[0]))
   const json = await response.json()
   for (i = 1; i < json.length; i++) {
-    if (new RegExp('^' + sNameIn + '.*@wordElln$', 'i').test(json[i][0])){
+    // it searches for names that begin win nameIn, case insensitive
+    if (new RegExp('^' + sNameIn, 'i').test(json[i][0])){
       aaOut.push(json[i])
     }
   }
   return aaOut
-  /*
-  return fetch(fFindNamidxfileFull(sFile))
-  .then(response => response.json())
-  .then(json => {return json})
-  */
-
-  /**
-   * DOING: it finds the-namidx-json-file to search a-name
-   * INPUT:
-   *  - sNameIn: 'νύφη'
-   *  - sLagIn: 'lagElln'
-   *  - aaNamidxIdxIn: [["lagEngl01ei","A|a"]]
-   * OUTPUT: ["lagElln15omikron_0","Ό|Ο|ο|ό"]
-   */
-  async function fFindNamidxfile(sNameIn, sLagIn, aaNamidxIdxIn) {
-    let
-      aNamidxfile_IdxOut, // the-output Namidxfile-index info
-      oNamidxfile_Idx,
-      bRest = true,
-      // if first-char of nameIn NOT in an-index in the-lag, then it is a-charREST in this lag
-      sCharName,    // the-first char of nameIn
-      sIndex,       // the-chars-of-index in the-Namidx-file
-      sIdxFrom,
-      sIdxTo,
-      sNamidx,      // name of Namidx-file on which to store the-word
-      sNamidxOut,
-      sNamidxRest,  // name of Namidx-file with rest words on input-lag
-      nCharName,
-      nIdxFrom,
-      nIdxTo,
-      sNamidxRefFull
-
-    // FIND Namidx-file
-    // choose root-char or rest
-    sCharName = sNameIn[0].substring(0,1)
-    oNamidxfile_Idx = fCreateOFile_Index(aaNamidxIdxIn)
-    // {lagEngl01ei:'A|a'}
-
-    for (sNamidx in oNamidxfile_Idx) {
-      if (sNamidx.startsWith(sLagIn)) {
-        sIndex = oNamidxfile_Idx[sNamidx]
-
-        if (sIndex.indexOf('..') < 0) {
-          // index is a-set of chars 'B|b|'
-          if (sIndex.indexOf(sCharName) >= 0) {
-            // found Namidx-file
-            bRest = false 
-            sNamidxOut = sNamidx
-            aNamidxfile_IdxOut = [sNamidxOut, sIndex]
-            break
-          }
-        } else {
-          // index is a-sequence of chars 'C..D' or "26000..27000" or "αμ..β"
-          // we are on a-reference or Chinese root reference
-          let a = sIndex.split('..')
-          sIdxFrom = a[0]
-          sIdxTo = a[1]
-          //IF indexes more than one, compare word, ELSE codepoints and first-word-char
-          if (sIdxFrom.length > 1 || sIdxTo.length > 1) {
-            if (sNameIn >= sIdxFrom && sNameIn < sIdxTo) {
-              // found Namidx-file
-              bRest = false 
-              sNamidxOut = sNamidx
-              aNamidxfile_IdxOut = [sNamidxOut, sIndex]
-              break
-            }
-          } else {
-            //compare codepoints
-            nCharName = sCharName.codePointAt()
-            // if srch-char is a-supplement with surrogates (high 55296–56319), find it
-            if (nCharName >= 55296 && nCharName <= 56319) {
-              let sSupplement = String.fromCodePoint(sNameIn[0].charAt(0).charCodeAt(0),
-                                                     sNameIn[0].charAt(1).charCodeAt(0))
-              nCharName = sSupplement.codePointAt()
-            }
-            if (!Number.isInteger(Number(sIdxFrom))) {
-              // it is char
-              nIdxFrom = sIdxFrom.codePointAt()
-            } else {
-              // it is number
-              nIdxFrom = Number(sIdxFrom)
-            }
-            if (!Number.isInteger(Number(sIdxTo))) {
-              nIdxTo = sIdxTo.codePointAt()
-            } else {
-              nIdxTo = Number(sIdxTo)
-            }
-            //console.log(nIdxFrom+', '+nIdxTo)
-            if (nCharName >= nIdxFrom && nCharName < nIdxTo) {
-              // found Namidx-file
-              bRest = false 
-              sNamidxOut = sNamidx
-              aNamidxfile_IdxOut = [sNamidxOut, sIndex]
-              break
-            }
-          }
-        }
-      }
-      // in case where rest-file is reference ('_0')
-      if (sNamidx.startsWith(sLagIn + '00'))
-        sNamidxRest = sNamidx
-    }
-    if (bRest) {
-      sNamidxOut = sNamidxRest
-      aNamidxfile_IdxOut = [sNamidxOut, '']
-    }
-
-    if (!sNamidxOut.endsWith('_0')) {
-      aNamidxfile_IdxOut = [sNamidxOut, sIndex]
-      //console.log(aNamidxfile_IdxOut)
-      return aNamidxfile_IdxOut 
-    } else {
-      sNamidxRefFull = fFindNamidxfileFull(sNamidxOut)
-      let response = await fetch(sNamidxRefFull)
-      let json = await response.json()
-      console.log(json)
-      return fFindNamidxfile(sNameIn, sLagIn, json)
-    }
-  }
 }
 
 // oEltClicked, sIdxfile, sIdxTo,  sIdxFrom, sQrslrAClk, sQrslrAClkLast
@@ -2210,7 +2206,7 @@ export {
   aaNamidxfileRoot, aSuggestions, aVersion,
   bEdge, bFirefox,
   nCfgPageinfoWidth,
-  fContainersInsert, fTocTriCreate, fTocTriHighlightNode, fSearch,
+  fContainersInsert, fTocTriCreate, fTocTriHighlightNode, fSearchname,
   oEltCnrPreviewDiv, oEltSitemenuUl, oTreeUl,
   sCfgHomeLocal, sPathSite, sPathStmenu
 }

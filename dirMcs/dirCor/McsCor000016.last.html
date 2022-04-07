@@ -163,8 +163,8 @@
 </section>
 
 <script type="module">
-  import * as oMcsh from '../Mcsmgr/mMcshSearch.js'
-  //import '../Mcsmgr/mLag.js'
+  import * as oMcsh from '../Mcsmgr/mMcsh.js'
+  import '../Mcsmgr/mLag.js'
 
   document.getElementById('idNounIpt').addEventListener('keyup', function(oEvtIn) {
     let
@@ -174,7 +174,7 @@
 
     if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
       sIn = document.getElementById('idNounIpt').value
-      oMcsh.fSearch(sIn, 'lagElln').then(json =>{
+      oMcsh.fSearchname(sIn, 'lagElln').then(json =>{
         document.getElementById('idNounDiv').innerHTML = json
       })
     }
