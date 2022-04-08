@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.socEus-(1-6-0.2022-02-05) European-Union</title>
+  <title>Mcs.socEus-(1-7-0.2022-04-07) European-Union</title>
   <meta name="keywords" content="European-Union, socEus, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -566,7 +566,6 @@
   <p id="idEueconEurevuappdsn">description::
     <br>· Drachma-₯ was the-previous currency of Greece that replaced by the euro in 2001 (at the rate of 340.75 drachmae to the euro). The euro did not begin circulating until 2001 but the exchange rate was fixed on 19 June 2000, with legal introduction of the euro taking place in January 2002.
     <br>[{2022-02-05 retrieved} https://en.wikipedia.org/wiki/Greek_drachma]
-    <br>· type Euros or drachmas and hit <code>Enter</code>:
     <br>
     <br><strong>· &nbsp; &nbsp; Euros-€</strong>: <input type="text" id="idIptEuro" value="1" class="clsSizeLarge">
     <br>
@@ -16565,17 +16564,13 @@
   import * as oMcsh from '../Mcsmgr/mMcsh.js'
 
   // finds drachmas, given euros
-  document.getElementById('idIptEuro').addEventListener('keyup', function(oEvtIn) {
-    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
-      document.getElementById('idIptDrhm').value = (document.getElementById('idIptEuro').value * 340.75).toFixed(2)
-    }
+  document.getElementById('idIptEuro').addEventListener('input', function(oEvtIn) {
+    document.getElementById('idIptDrhm').value = (document.getElementById('idIptEuro').value * 340.75).toFixed(2)
   })
 
   // finds euros, given drachmas
-  document.getElementById('idIptDrhm').addEventListener('keyup', function(oEvtIn) {
-    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
-      document.getElementById('idIptEuro').value = (document.getElementById('idIptDrhm').value / 340.75).toFixed(2)
-    }
+  document.getElementById('idIptDrhm').addEventListener('input', function(oEvtIn) {
+    document.getElementById('idIptEuro').value = (document.getElementById('idIptDrhm').value / 340.75).toFixed(2)
   })
 </script>
 </body>

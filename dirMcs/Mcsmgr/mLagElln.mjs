@@ -291,7 +291,7 @@ function fFindCaseinfoElln (sWordIn, sMethodIn) {
   } else {
     sWordVP = fFindWordX(aInfo[8])
   }
-  oCase.pluVoc = sWordNP
+  oCase.pluVoc = sWordVP
 
   oCase.Baseform = sWord
   oCase.Basespch = sWordArtiPhnm.substr(0, sWordArtiPhnm.indexOf('-')) + '/'

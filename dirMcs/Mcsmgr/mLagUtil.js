@@ -33,7 +33,7 @@ const
     'mLagUtil.js.0-6-0.2022-03-08: fGreekwordSinizisiAdd',
     'mLagUtil.js.0-5-2.2022-03-01: fGreekwordFindPhonema',
     'mLagUtil.js.0-5-0.2022-02-27: fGreektonosIncrease',
-    'mLagUtil.js.0-5-0.2022-02-26: fGreekwordHasSinizisi',
+    'mLagUtil.js.0-5-0.2022-02-26: fGreekphonemaHasSinizisi',
     'mLagUtil.js.0-4-1.2022-02-24: fGreekwordFindPhonema',
     'mLagUtil.js.0-4-0.2022-02-23: fPhonemaRemoveTonos',
     'mLagUtil.js.0-3-0.2022-02-15: fGreekwordFindPhonema',
@@ -239,7 +239,7 @@ function fFindLettersLastIfSuffix (sWordIn, nSuffixIn) {
 
 /**
  * DOING: it returns the-index of Greek-tonos.
- *    if a-phoneme has 2 letters, it returns the-index of first.
+ *    if a-phoneme has 2 letters, it returns the-index of FIRST.
  *    to express that consequitive-vowels constitute one syllable
  *    we use 'j': βjά-ζο-μαι, βι-ο-λο-γί-α
  *
@@ -497,19 +497,23 @@ function fGreektonosRemoveFirst (sWordIn) {
 
 /*
  * DOING: it finds the-syllable of tonos and returns it.
+ * INPUT: bSinizisi=true if the-word has sinizisi
  * OUTPUT: 
  *       1 for ligousa
  *       2 for paraligousa
  *       3 for proparaligousa
  *       -1 for a mistake
  */
-function fGreektonosFindSyllable (sWordIn) {
+function fGreektonosFindSyllable (sWordIn, bSinizisi) {
   sWordIn = sWordIn.toLowerCase()
   let
     nTonos = fGreektonosFindIndex(sWordIn),
     nLiyusa =-1,
     nParaliyusa =-1,
     nProparaliyusa =-1
+
+  if (bSinizisi)
+    sWordIn = fGreekwordSinizisiAdd(sWordIn)
 
   sWordIn = fGreektonosRemove(sWordIn)
   nLiyusa = fGreekvowelindexFindLast(sWordIn)
@@ -1562,7 +1566,7 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
  * INPUT: /aftarhikós/
  * OUTPUT: boolean
  */
-function fGreekwordHasSinizisi(sPhonemaIn) {
+function fGreekphonemaHasSinizisi(sPhonemaIn) {
   if (sPhonemaIn.indexOf('yy')!=-1 ||
       sPhonemaIn.indexOf('gg')!=-1 || //γκια
       sPhonemaIn.indexOf('zz')!=-1 ||
@@ -1776,7 +1780,7 @@ export {
   fGreektonosSetOnParaliyusa, 
   fGreektonosDecrease, fGreektonosIncrease,
   fGreekvowelindexFindFirst, fGreekvowelindexFindLast, fGreekvowelnumberFind,
-  fGreekwordFindPhonema, fGreekwordHasSinizisi, fGreekwordSinizisiAdd,
+  fGreekwordFindPhonema, fGreekphonemaHasSinizisi, fGreekwordSinizisiAdd,
   fGreekwordHasSyllableOne,
   fIsLetterConsonantEnglish, fIsLetterVowelEnglish, fIsLetterVowelGreek
 }

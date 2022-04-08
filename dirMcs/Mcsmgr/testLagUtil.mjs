@@ -1,8 +1,9 @@
-import * as moUtil from './mLagUtil.js'
+import * as omLagUtil from './mLagUtil.js'
 
 let
   a = [["a","b"],["c","d"]]
 
 
-console.log(moUtil.fGreektonosIncrease('εύελπις'))
-//console.log(moUtil.fGreekwordHasSyllableOne('θεια-η/thhho-i/'))
+//console.log(omLagUtil.fGreektonosIncrease('εύελπις'))
+//console.log(omLagUtil.fGreekwordHasSyllableOne('θεια-η/thhho-i/'))
+console.log('γιαλάκιας = ' + omLagUtil.fGreektonosFindSyllable('γιαλάκιας',true))
