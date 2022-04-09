@@ -32,7 +32,7 @@ import * as omMcsh from './mMcsh.js'
 const
   // contains the-versions of mLagElln.js
   aVersion = [
-    'mLagElln.js.0-2-0.2022-04-09: fFindVerbEllnRegularNo'
+    'mLagElln.js.0-2-0.2022-04-09: fFindVerbEllnRegularNo',
     'mLagElln.js.0-1-0.2022-04-06: creation'
   ],
   sFileElln = omMcsh.sPathSite + 'dirMcs/dirLag/McsLag000020.last.html'
@@ -85,42 +85,26 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
     nSyllable = omLagUtil.fGreektonosFindSyllable(sWord)
 
   // endsWith /a/
-  // nounEllnMaG3XarT2SuNcF1Ba-ουδέτερο-αρ-παρ-ήπ-αρ-ατος-ατα-άτων,
   if (sWord.endsWith('αρ'))
     aOut = ["nounEllnMaG3XarT2SuNcF1Ba-ουδέτερο-αρ-παρ-ήπ-αρ-ατος-ατα-άτων"]
-  // nounEllnMnG1XasT1SuNcF1Ba-αρσενικό-ας-οξυ-ψαρ-άς-ά-άδες-άδων,
-  // nounEllnMnG1XasT1SuNcF1Bnp-αρσενικό-ας-οξυ-ψαρ-άς-ά,
   else if (sWord.endsWith('άς'))
     aOut = [
       "nounEllnMnG1XasT1SuNcF1Ba-αρσενικό-ας-οξυ-ψαρ-άς-ά-άδες-άδων",
       "nounEllnMnG1XasT1SuNcF1Bnp-αρσενικό-ας-οξυ-ψαρ-άς-ά"]
-  // nounEllnMnG1XasT1SuNcF1Bns-αρσενικό-ας-οξυ-ψαρ-άδες-άδων,
   else if (sWord.endsWith('άδες'))
     aOut = ["nounEllnMnG1XasT1SuNcF1Bns-αρσενικό-ας-οξυ-ψαρ-άδες-άδων"]
-  // nounEllnMnaG1XasT2SeuNucF2Ba-αρσενικό-ας-παρ-πατ-έρας-έρα|ρός-έρα|ερ-εράδες|έρες-εράδων|έρων,
   else if (sWord.endsWith('πατέρας'))
     aOut = ["nounEllnMnaG1XasT2SeuNucF2Ba-αρσενικό-ας-παρ-πατ-έρας-έρα|ρός-έρα|ερ-εράδες|έρες-εράδων|έρων"]
-  // nounEllnMnG1Xas2T2SuNuF1Ba-αρσενικό-ας-παρ-γιαλάκ-ιας-ια-ηδες-ηδων,
   else if (sWord.endsWith('κιας'))
     aOut = ["nounEllnMnG1Xas2T2SuNuF1Ba-αρσενικό-ας-παρ-γιαλάκ-ιας-ια-ηδες-ηδων"]
-  // nounEllnMnaG1XasT2SuNcF2Ba-αρσενικό-ας-παρ-αμφορ-έας-α|έως-είς-έων,
-  // nounEllnMnG1XasT2SuNuF1Ba-αρσενικό-ας-παρ-Αντρέ-ας-α-ηδες-ηδων,
   else if (sWord.endsWith('έας') && sGender !== 'neut')
     aOut = [
       "nounEllnMnaG1XasT2SuNcF2Ba-αρσενικό-ας-παρ-αμφορ-έας-α|έως-είς-έων",
       "nounEllnMnG1XasT2SuNuF1Ba-αρσενικό-ας-παρ-Αντρέ-ας-α-ηδες-ηδων",
       "nounEllnMnG3XasT2SuNcF1Ba-ουδέτερο-ας-παρ-κρέ-ας-ατος-ατα-άτων"]
-
-  // nounEllnMnG3XasT2SuNcF1Ba-ουδέτερο-ας-παρ-κρέ-ας-ατος-ατα-άτων,
-  // nounEllnMnG1XasT2SeNuF1Ba-αρσενικό-ας-παρ-αγών-ας-α-ες-ων,
-  // nounEllnMnG1XasT2SeNcF1Ba-αρσενικό-ας-παρ-ταμί-ας-α-ες-ών,
-  // nounEllnMnaG1XasT2SeNucF2Ba-αρσενικό-ας-παρ-μήν-ας-α|ός-ες-ών,
-  // nounEllnMnG1XasT2SuNcF1Ba-αρσενικό-ας-παρ-ρήγ-ας-α-άδες-άδων,
-  // nounEllnMnG1XasT2SeuNuF2Ba-αρσενικό-ας-παρ-αέρ-ας-α-ες|ηδες-ων|ηδων,
-  // nounEllnMnG1XasT2SuNucF2Ba-αρσενικό-ας-παρ-Γρίβ-ας-α-ηδες|αίοι-ηδων|αίων-ηδες|αίους,
-  else if (sWord.endsWith('ας') && nSyllable === 2 && sGender === 'neut')
+  else if (sWord.endsWith('ας') && nSyllable===2 && sGender==='neut')
     aOut = ["nounEllnMnG3XasT2SuNcF1Ba-ουδέτερο-ας-παρ-κρέ-ας-ατος-ατα-άτων"]
-  else if (sWord.endsWith('ας') && nSyllable === 2 && sGender === 'masc')
+  else if (sWord.endsWith('ας') && nSyllable===2 && sGender==='masc')
     aOut = [
       "nounEllnMnG1XasT2SeNuF1Ba-αρσενικό-ας-παρ-αγών-ας-α-ες-ων",
       "nounEllnMnG1XasT2SeNcF1Ba-αρσενικό-ας-παρ-ταμί-ας-α-ες-ών",
@@ -128,7 +112,7 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG1XasT2SuNcF1Ba-αρσενικό-ας-παρ-ρήγ-ας-α-άδες-άδων",
       "nounEllnMnG1XasT2SeuNuF2Ba-αρσενικό-ας-παρ-αέρ-ας-α-ες|ηδες-ων|ηδων",
       "nounEllnMnG1XasT2SuNucF2Ba-αρσενικό-ας-παρ-Γρίβ-ας-α-ηδες|αίοι-ηδων|αίων-ηδες|αίους"]
-  else if (sWord.endsWith('ας') && nSyllable === 2 )
+  else if (sWord.endsWith('ας') && nSyllable===2 )
     aOut = [
       "nounEllnMnG1XasT2SeNuF1Ba-αρσενικό-ας-παρ-αγών-ας-α-ες-ων",
       "nounEllnMnG1XasT2SeNcF1Ba-αρσενικό-ας-παρ-ταμί-ας-α-ες-ών",
@@ -137,66 +121,59 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG1XasT2SeuNuF2Ba-αρσενικό-ας-παρ-αέρ-ας-α-ες|ηδες-ων|ηδων",
       "nounEllnMnG1XasT2SuNucF2Ba-αρσενικό-ας-παρ-Γρίβ-ας-α-ηδες|αίοι-ηδων|αίων-ηδες|αίους",
       "nounEllnMnG3XasT2SuNcF1Ba-ουδέτερο-ας-παρ-κρέ-ας-ατος-ατα-άτων"]
-
-  // nounEllnMnG1XasT3SeNcF1Ba-αρσενικό-ας-προ-φύλακ-ας-α-ες-'ων,
-  // nounEllnMnG1XasT3SeNuF1Ba-αρσενικό-ας-προ-βαρύμαγκ-ας-α-ες-ων,
-  // nounEllnMnG1XasT3SuNcF1Ba-αρσενικό-ας-προ-Μπούκουρ-ας-α-αίοι-αίων-αίους,
-  // nounEllnMnG1XasT3SeuNucF2Ba-αρσενικό-ας-προ-τσέλιγκ-ας-α-ες|άδες-άδων,
-  else if (sWord.endsWith('ας') && nSyllable === 3 )
+  else if (sWord.endsWith('ας') && nSyllable===3 )
     aOut = [
       "nounEllnMnG1XasT3SeNcF1Ba-αρσενικό-ας-προ-φύλακ-ας-α-ες-'ων",
       "nounEllnMnG1XasT3SeNuF1Ba-αρσενικό-ας-προ-βαρύμαγκ-ας-α-ες-ων",
       "nounEllnMnG1XasT3SuNcF1Ba-αρσενικό-ας-προ-Μπούκουρ-ας-α-αίοι-αίων-αίους",
       "nounEllnMnG1XasT3SeuNucF2Ba-αρσενικό-ας-προ-τσέλιγκ-ας-α-ες|άδες-άδων"]
 
-  // nounEllnMnG2XaT1SeNuF1Ba-θηλυκό-α-οξυ-καρδι-ά-άς-ές-ών,
-  // nounEllnMnG2XaT1SuNcF1Ba-θηλυκό-α-οξυ-μαμ-ά-άς-άδες-άδων,
-  // nounEllnMnG2XaT1SeuNucF2Ba-θηλυκό-α-οξυ-γιαγι-ά-άς-ές|άδες-άδων,
   else if (sWord.endsWith('ά'))
     aOut = [
       "nounEllnMnG2XaT1SeNuF1Ba-θηλυκό-α-οξυ-καρδι-ά-άς-ές-ών",
       "nounEllnMnG2XaT1SuNcF1Ba-θηλυκό-α-οξυ-μαμ-ά-άς-άδες-άδων",
       "nounEllnMnG2XaT1SeuNucF2Ba-θηλυκό-α-οξυ-γιαγι-ά-άς-ές|άδες-άδων"]
-
-  // nounEllnMnG2XaT2SeNuF1Ba-θηλυκό-α-παρ-ελπίδ-α-ας-ες-δων,
-  // nounEllnMnG2XaT2SeNcF1Ba-θηλυκό-α-παρ-σοφί-α-ας-ες-ών,
-  // nounEllnMnG2XaT2SeNcF1Bu6-θηλυκό-α-παρ-νότ-α-ας-ες-(ών),
-  // nounEllnMnG2XaT2SeNcF1Bn6-θηλυκό-α-παρ-πείν-α-ας-ες,
-  // nounEllnMnG2XaT3SeNuF1Ba-θηλυκό-α-παρ-αρθρίτιδ-α-ας-ες-ων,
-  else if (sWord.endsWith('α') && nSyllable === 2 )
+  else if (sWord.endsWith('α') && nSyllable===2 && sGender==='femi')
     aOut = [
       "nounEllnMnG2XaT2SeNuF1Ba-θηλυκό-α-παρ-ελπίδ-α-ας-ες-δων",
       "nounEllnMnG2XaT2SeNcF1Ba-θηλυκό-α-παρ-σοφί-α-ας-ες-ών",
       "nounEllnMnG2XaT2SeNcF1Bu6-θηλυκό-α-παρ-νότ-α-ας-ες-(ών)",
       "nounEllnMnG2XaT2SeNcF1Bn6-θηλυκό-α-παρ-πείν-α-ας-ες",
       "nounEllnMnG2XaT3SeNuF1Ba-θηλυκό-α-παρ-αρθρίτιδ-α-ας-ες-ων"]
-  
-  // nounEllnMnG2XaT3SeNcF1Ba-θηλυκό-α-προ-θάλασσ-α-ας-ες-ών,
-  // nounEllnMnG2XaT3SeNc2F1Ba-θηλυκό-α-προ-σάλπιγγ-α-ας-ες-'ων,
-  // nounEllnMnG3XaT2SuNcF1Ba-ουδέτερο-α-παρ-κύμ-α-ατος-ατα-άτων,
-  // nounEllnMnG3XaT3SuNcF1Ba-ουδέτερο-α-προ-όνομ-α-'ατος-'ατα-άτων,
-  else if (sWord.endsWith('α') && nSyllable === 3 )
+  else if (sWord.endsWith('α') && nSyllable===2 && sGender==='neut')
+    aOut = [
+      "nounEllnMnG3XaT2SuNcF1Ba-ουδέτερο-α-παρ-κύμ-α-ατος-ατα-άτων"]
+  else if (sWord.endsWith('α') && nSyllable===2 && sGender==='')
+    aOut = [
+      "nounEllnMnG2XaT2SeNuF1Ba-θηλυκό-α-παρ-ελπίδ-α-ας-ες-δων",
+      "nounEllnMnG2XaT2SeNcF1Ba-θηλυκό-α-παρ-σοφί-α-ας-ες-ών",
+      "nounEllnMnG2XaT2SeNcF1Bu6-θηλυκό-α-παρ-νότ-α-ας-ες-(ών)",
+      "nounEllnMnG2XaT2SeNcF1Bn6-θηλυκό-α-παρ-πείν-α-ας-ες",
+      "nounEllnMnG2XaT3SeNuF1Ba-θηλυκό-α-παρ-αρθρίτιδ-α-ας-ες-ων",
+      "nounEllnMnG3XaT2SuNcF1Ba-ουδέτερο-α-παρ-κύμ-α-ατος-ατα-άτων"]
+  else if (sWord.endsWith('α') && nSyllable===3 && sGender==='femi')
+    aOut = [
+      "nounEllnMnG2XaT3SeNcF1Ba-θηλυκό-α-προ-θάλασσ-α-ας-ες-ών",
+      "nounEllnMnG2XaT3SeNc2F1Ba-θηλυκό-α-προ-σάλπιγγ-α-ας-ες-'ων"]
+  else if (sWord.endsWith('α') && nSyllable===3 && sGender==='neut')
+    aOut = [
+      "nounEllnMnG3XaT3SuNcF1Ba-ουδέτερο-α-προ-όνομ-α-'ατος-'ατα-άτων"]
+  else if (sWord.endsWith('α') && nSyllable===3 && sGender==='')
     aOut = [
       "nounEllnMnG2XaT3SeNcF1Ba-θηλυκό-α-προ-θάλασσ-α-ας-ες-ών",
       "nounEllnMnG2XaT3SeNc2F1Ba-θηλυκό-α-προ-σάλπιγγ-α-ας-ες-'ων",
-      "nounEllnMnG3XaT2SuNcF1Ba-ουδέτερο-α-παρ-κύμ-α-ατος-ατα-άτων",
       "nounEllnMnG3XaT3SuNcF1Ba-ουδέτερο-α-προ-όνομ-α-'ατος-'ατα-άτων"]
   
 
   // endsWith /e/
-  // nounEllnMnG1XesT1SuNuF1Ba-αρσενικό-ες-οξυ-καφ-ές-έ-έδες-έδων,
-  // nounEllnMaG3XesT1SeNuF1Ba-ουδέτερο-ες-οξυ-αιλουροειδ-ές-ούς-ή-ών,
-  else if (sWord.endsWith('ές') && sGender === 'masc' )
+  else if (sWord.endsWith('ές') && sGender==='masc' )
     aOut = ["nounEllnMnG1XesT1SuNuF1Ba-αρσενικό-ες-οξυ-καφ-ές-έ-έδες-έδων"]
-  else if (sWord.endsWith('ές') && sGender === 'neut' )
+  else if (sWord.endsWith('ές') && sGender==='neut' )
     aOut = ["nounEllnMaG3XesT1SeNuF1Ba-ουδέτερο-ες-οξυ-αιλουροειδ-ές-ούς-ή-ών"]
-  else if (sWord.endsWith('ές') )
+  else if (sWord.endsWith('ές') && sGender==='')
     aOut = [
       "nounEllnMnG1XesT1SuNuF1Ba-αρσενικό-ες-οξυ-καφ-ές-έ-έδες-έδων",
       "nounEllnMaG3XesT1SeNuF1Ba-ουδέτερο-ες-οξυ-αιλουροειδ-ές-ούς-ή-ών"]
-
-  // nounEllnMnG1XesT2SuNuF1Ba-αρσενικό-ες-παρ-κόντ-ες-ε-ηδες-ηδων,
-  // nounEllnMaG3XesT2SeNcF1Ba-ουδέτερο-ες-παρ-ιδεώδ-ες-ους-ή-ών,
   else if (sWord.endsWith('ες') )
     aOut = [
       "nounEllnMnG1XesT2SuNuF1Ba-αρσενικό-ες-παρ-κόντ-ες-ε-ηδες-ηδων",
@@ -204,13 +181,6 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
 
 
   // endsWith /i/
-  // nounEllnMnG1XisT1SeNuF1Ba-αρσενικό-ης-οξυ-νικητ-ής-ή-ές-ών,
-  // nounEllnMnG1Xis2T1SeNuF1Ba-αρσενικό-ης-οξυ-συγγεν-ής-ή-είς-ών,
-  // nounEllnMnG1XisT1SuNuF1Ba-αρσενικό-ης-οξυ-καφετζ-ής-ή-ήδες-ήδων,
-  // nounEllnMnaG1XisT1SuNuF2Ba-αρσενικό-ης-οξυ-Περικλ-ής-ή|έους-ή-είς|ήδες-έων|ήδων,
-  // nounEllnMnG1XisT1SeuNuF2Ba-αρσενικό-ης-οξυ-πραματευτ-ής-ή-ές|άδες-ών|άδων,
-  // nounEllnMnaG1XisT1SeuNuF2Ba-αρσενικό-ης-οξυ-καθηγητ-ής-ή|ού-ή|ά-ές|άδες-ών|άδων,
-  // nounEllnMnG1XisT1SuNuF2Ba-αρσενικό-ης-οξυ-Σαρρ-ής-ή-ήδες|αίοι-ήδων|αίων-ήδες|αίους,
   else if (sWord.endsWith('ής') )
     aOut = [
       "nounEllnMnG1XisT1SeNuF1Ba-αρσενικό-ης-οξυ-νικητ-ής-ή-ές-ών",
@@ -220,14 +190,7 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG1XisT1SeuNuF2Ba-αρσενικό-ης-οξυ-πραματευτ-ής-ή-ές|άδες-ών|άδων",
       "nounEllnMnaG1XisT1SeuNuF2Ba-αρσενικό-ης-οξυ-καθηγητ-ής-ή|ού-ή|ά-ές|άδες-ών|άδων",
       "nounEllnMnG1XisT1SuNuF2Ba-αρσενικό-ης-οξυ-Σαρρ-ής-ή-ήδες|αίοι-ήδων|αίων-ήδες|αίους"]
-
-  // nounEllnMnG1XisT2SeNcF1Ba-αρσενικό-ης-παρ-ναύτ-ης-η-ες-ών,
-  // nounEllnMnG1XisT2SuNuF1Ba-αρσενικό-ης-παρ-μανάβ-ης-η-ηδες-ηδων,
-  // nounEllnMnG1XisT2SeuNcuF2Ba-αρσενικό-ης-παρ-λαχειοπώλ-ης-η-ες|ηδες-ών|ηδων,
-  // nounEllnMnG1XisT2SeuuNcucF3Ba-αρσενικό-ης-παρ-ράφτ-ης-η-ες|ηδες|άδες-ών|ηδων|άδων,
-  // nounEllnMnG1XisT2SuNucF2Ba-αρσενικό-ης-παρ-νοικοκύρ-ης-η-ηδες|αίοι-ηδων|αίων-ηδες|αίους,
-  // nounEllnMnG1XisT2Su2NucF2Ba-αρσενικό-ης-παρ-τσοπάν-ης-η-ηδες|αραίοι-ηδων|αραίων-ηδες|αραίους,
-  else if (sWord.endsWith('ης') && nSyllable === 2 )
+  else if (sWord.endsWith('ης') && nSyllable===2 )
     aOut = [
       "nounEllnMnG1XisT2SeNcF1Ba-αρσενικό-ης-παρ-ναύτ-ης-η-ες-ών",
       "nounEllnMnG1XisT2SuNuF1Ba-αρσενικό-ης-παρ-μανάβ-ης-η-ηδες-ηδων",
@@ -235,26 +198,15 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG1XisT2SeuuNcucF3Ba-αρσενικό-ης-παρ-ράφτ-ης-η-ες|ηδες|άδες-ών|ηδων|άδων",
       "nounEllnMnG1XisT2SuNucF2Ba-αρσενικό-ης-παρ-νοικοκύρ-ης-η-ηδες|αίοι-ηδων|αίων-ηδες|αίους",
       "nounEllnMnG1XisT2Su2NucF2Ba-αρσενικό-ης-παρ-τσοπάν-ης-η-ηδες|αραίοι-ηδων|αραίων-ηδες|αραίους"]
-  
-  // nounEllnMnG1XisT3SuNcF1Ba-αρσενικό-ης-προ-Μπότσαρ-ης-η-αίοι-αίων-αίους,
-  else if (sWord.endsWith('ης') && nSyllable === 3 )
+  else if (sWord.endsWith('ης') && nSyllable===3 )
     aOut = [
       "nounEllnMnG1XisT3SuNcF1Ba-αρσενικό-ης-προ-Μπότσαρ-ης-η-αίοι-αίων-αίους"]
 
-  // nounEllnMnG2XiT1SeNuF1Ba-θηλυκό-ή-οξυ-ψυχ-ή-ής-ές-ών,
-  // nounEllnMnG2XiT1SeuNucF2Ba-θηλυκό-η-οξυ-αδερφ-ή-ής-ές|άδες-ών|άδων,
   else if (sWord.endsWith('ή') )
     aOut = [
       "nounEllnMnG2XiT1SeNuF1Ba-θηλυκό-ή-οξυ-ψυχ-ή-ής-ές-ών",
       "nounEllnMnG2XiT1SeuNucF2Ba-θηλυκό-η-οξυ-αδερφ-ή-ής-ές|άδες-ών|άδων"]
-  
-  // nounEllnMnG2XiT2SeNcF1Ba-θηλυκό-η-παρ-νίκ-η-ης-ες-ών,
-  // nounEllnMnG2XiT2SeNcF1Bn6-θηλυκό-η-παρ-ζέστ-η-ης-ες,
-  // nounEllnMnG2XiT2SeNuF1Ba-θηλυκό-η-παρ-ερωμέν-η-ης-ες-ων,
-  // nounEllnMnG2XiT2SeNdF1Ba-θηλυκό-η-παρ-κατηγορουμέν-η-ης-ες-ων,
-  // nounEllnMnaG2XiT2SuNcF2Ba-θηλυκό-η-παρ-λύσ-η-ης|εως-εις-εων,
-  // nounEllnMnG2XiT2SeuNucF2Ba-θηλυκό-η-παρ-νύφ-η-ης-ες|άδες-άδων,
-  else if (sWord.endsWith('η') && nSyllable === 2 )
+  else if (sWord.endsWith('η') && nSyllable===2 )
     aOut = [
       "nounEllnMnG2XiT2SeNcF1Ba-θηλυκό-η-παρ-νίκ-η-ης-ες-ών",
       "nounEllnMnG2XiT2SeNcF1Bn6-θηλυκό-η-παρ-ζέστ-η-ης-ες",
@@ -262,13 +214,7 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG2XiT2SeNdF1Ba-θηλυκό-η-παρ-κατηγορουμέν-η-ης-ες-ων",
       "nounEllnMnaG2XiT2SuNcF2Ba-θηλυκό-η-παρ-λύσ-η-ης|εως-εις-εων",
       "nounEllnMnG2XiT2SeuNucF2Ba-θηλυκό-η-παρ-νύφ-η-ης-ες|άδες-άδων"]
-  
-  // nounEllnMnG2XiT3SeNuF1Ba-θηλυκό-η-προ-ασημόσκον-η-ης-ες-ων,
-  // nounEllnMnG2XiT3SeNuF1Bn6-θηλυκό-η-προ-ρίγαν-η-ης-ες,
-  // nounEllnMnG2XiT3SeNucF2Ba-θηλυκό-η-προ-διανοούμεν-η-ης-ες-ων|'ων,
-  // nounEllnMnG2XiT3SeaNucF2Ba-θηλυκό-η-προ-δύναμ-η-ης|'εως-'εις-'εων,
-  // nounEllnMnG2XiT3SeuNucF1Ba-θηλυκό-η-προ-αγανάχτησ-η-ης-'εις-'εων,
-  else if (sWord.endsWith('ης') && nSyllable === 3 )
+  else if (sWord.endsWith('η') && nSyllable===3 )
     aOut = [
       "nounEllnMnG2XiT3SeNuF1Ba-θηλυκό-η-προ-ασημόσκον-η-ης-ες-ων",
       "nounEllnMnG2XiT3SeNuF1Bn6-θηλυκό-η-προ-ρίγαν-η-ης-ες",
@@ -276,31 +222,21 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG2XiT3SeaNucF2Ba-θηλυκό-η-προ-δύναμ-η-ης|'εως-'εις-'εων",
       "nounEllnMnG2XiT3SeuNucF1Ba-θηλυκό-η-προ-αγανάχτησ-η-ης-'εις-'εων"]
 
-  // nounEllnMaG1XisT3SuNcF2Ba-αρσενικό-ις-προ-ρίψασπ-ις-'ιδος-ι|ιν-'ιδες-ίδων|'ιδων,
-  else if (sWord.endsWith('ις') && sGender === 'masc' )
+  else if (sWord.endsWith('ις') && sGender==='masc' )
     aOut = [
       "nounEllnMaG1XisT3SuNcF2Ba-αρσενικό-ις-προ-ρίψασπ-ις-'ιδος-ι|ιν-'ιδες-ίδων|'ιδων"]
-  // nounEllnManG2XisT2SuNucF1Ba-θηλυκό-ις-παρ-συνεργάτ-ις-ιδος|ιδας-ιδα-ι-ιδες-ίδων|ιδων,
-  else if (sWord.endsWith('ις') && sGender === 'femi' )
+  else if (sWord.endsWith('ις') && sGender==='femi' )
     aOut = [
       "nounEllnManG2XisT2SuNucF1Ba-θηλυκό-ις-παρ-συνεργάτ-ις-ιδος|ιδας-ιδα-ι-ιδες-ίδων|ιδων"]
-  else if (sWord.endsWith('ις'))
+  else if (sWord.endsWith('ις') && sGender==='')
     aOut = [
       "nounEllnMaG1XisT3SuNcF2Ba-αρσενικό-ις-προ-ρίψασπ-ις-'ιδος-ι|ιν-'ιδες-ίδων|'ιδων",
       "nounEllnManG2XisT2SuNucF1Ba-θηλυκό-ις-παρ-συνεργάτ-ις-ιδος|ιδας-ιδα-ι-ιδες-ίδων|ιδων"]
   
-  // nounEllnMnG3XiT1SeNuF1Ba-ουδέτερο-ι-οξυ-παιδ-ί-ιού-ιά-ιών,
   else if (sWord.endsWith('ί'))
     aOut = [
       "nounEllnMnG3XiT1SeNuF1Ba-ουδέτερο-ι-οξυ-παιδ-ί-ιού-ιά-ιών"]
-  
-  // nounEllnMnG3XiT2SeNcF1Ba-ουδέτερο-ι-παρ-τραγούδ-ι-ιού-ια-ιών,
-  // nounEllnMaG3XiT2SuNcF1Ba-ουδέτερο-ι-παρ-μίλ-ι-ίου-ια-ίων,
-  // nounEllnMnaG3XiT2SeuNcF2Ba-ουδέτερο-ι-παρ-καράτ-ι-ιού|ίου-ια-ιών|ίων,
-  // nounEllnMnG3XiT2SeNuF1Bn26-ουδέτερο-ι-παρ-παιδάκ-ι-ια,
-  // nounEllnMnG3XiT2Se2NcF1Ba-ουδέτερο-ι-παρ-τσά-ι-γιού-για-γιών,
-  // nounEllnMn2G3XiT2SeNcF1Ba-ουδέτερο-ι-παρ-ρολό-ι-ϊού-ια-ϊών,
-  else if (sWord.endsWith('ι') && nSyllable === 2 )
+  else if (sWord.endsWith('ι') && nSyllable===2 )
     aOut = [
       "nounEllnMnG3XiT2SeNcF1Ba-ουδέτερο-ι-παρ-τραγούδ-ι-ιού-ια-ιών",
       "nounEllnMaG3XiT2SuNcF1Ba-ουδέτερο-ι-παρ-μίλ-ι-ίου-ια-ίων",
@@ -308,38 +244,27 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG3XiT2SeNuF1Bn26-ουδέτερο-ι-παρ-παιδάκ-ι-ια",
       "nounEllnMnG3XiT2Se2NcF1Ba-ουδέτερο-ι-παρ-τσά-ι-γιού-για-γιών",
       "nounEllnMn2G3XiT2SeNcF1Ba-ουδέτερο-ι-παρ-ρολό-ι-ϊού-ια-ϊών"]
-  
-  // nounEllnMnG3XiT3SeNcF1Bnp-ουδέτερο-ι-προ-φίλντισ-ι-ιού,
-  else if (sWord.endsWith('ι') && nSyllable === 3 )
+  else if (sWord.endsWith('ι') && nSyllable===3 )
     aOut = [
       "nounEllnMnG3XiT3SeNcF1Bnp-ουδέτερο-ι-προ-φίλντισ-ι-ιού"]
 
+
   // endsWith /o/
-  // nounEllnMnG1XosT1SeNuF1Ba-αρσενικό-ος-οξυ-να-ός-ού-ό-έ-οί-ών-ούς,
-  else if (sWord.endsWith('ός') && sGender === 'masc' )
+  else if (sWord.endsWith('ός') && sGender==='masc' )
     aOut = [
       "nounEllnMnG1XosT1SeNuF1Ba-αρσενικό-ος-οξυ-να-ός-ού-ό-έ-οί-ών-ούς"]
-  // nounEllnMnG2XosT1SeNuF1Ba-θηλυκό-ός-οξυ-οδ-ός-ού-ο-ε-οί-ών-ούς,
-  else if (sWord.endsWith('ός') && sGender === 'femi' )
+  else if (sWord.endsWith('ός') && sGender==='femi' )
     aOut = [
       "nounEllnMnG2XosT1SeNuF1Ba-θηλυκό-ός-οξυ-οδ-ός-ού-ο-ε-οί-ών-ούς"]
-  // nounEllnMnG3XosT1SuNcF1Ba-ουδέτερο-ος-οξυ-γεγον-ός-ότος-ότα-ότων,
-  else if (sWord.endsWith('ός') && sGender === 'neut' )
+  else if (sWord.endsWith('ός') && sGender==='neut' )
     aOut = [
       "nounEllnMnG3XosT1SuNcF1Ba-ουδέτερο-ος-οξυ-γεγον-ός-ότος-ότα-ότων"]
-  else if (sWord.endsWith('ός') && sGender === '' )
+  else if (sWord.endsWith('ός') && sGender==='' )
     aOut = [
       "nounEllnMnG1XosT1SeNuF1Ba-αρσενικό-ος-οξυ-να-ός-ού-ό-έ-οί-ών-ούς",
       "nounEllnMnG2XosT1SeNuF1Ba-θηλυκό-ός-οξυ-οδ-ός-ού-ο-ε-οί-ών-ούς",
       "nounEllnMnG3XosT1SuNcF1Ba-ουδέτερο-ος-οξυ-γεγον-ός-ότος-ότα-ότων"]
-
-  // nounEllnMnG1XosT2SeNuF1Ba-αρσενικό-ος-παρ-δρόμ-ος-ου-ο-ε-οι-ων-ους,
-  // nounEllnMnG1XosT2Se2NuF1Ba-αρσενικό-ος-παρ-υπνάκ-ος-ου-ο-οι-ων-ους,
-  // nounEllnMnG1XosT2SeNuF2Ba-αρσενικό-ος-παρ-μούτσ-ος-ου-ο-ε|ο-οι-ων-ους,
-  // nounEllnMnG1XosT2SuNuF1Ba-αρσενικό-ος-παρ-Γιώργ-ος-ου-ο-ηδες-ηδων,
-  // nounEllnMnG1XosT2SeuNucuF3Ba-αρσενικό-ος-παρ-Σαρακατσάν-ος-ου-ο-ε-οι|αίοι|ηδες-ων|αίων|ηδων-ους|αίους|ηδες,
-  // nounEllnMnG1XosT2SeuNucF2Ba-αρσενικό-ος-παρ-καπετάν-ιος-ιου-ιο-ιε-ιοι|αίων-ιων|αίων-ιους|αίους,
-  else if (sWord.endsWith('ος') && nSyllable === 2 && sGender === 'masc')
+  else if (sWord.endsWith('ος') && nSyllable===2 && sGender==='masc')
     aOut = [
       "nounEllnMnG1XosT2SeNuF1Ba-αρσενικό-ος-παρ-δρόμ-ος-ου-ο-ε-οι-ων-ους",
       "nounEllnMnG1XosT2Se2NuF1Ba-αρσενικό-ος-παρ-υπνάκ-ος-ου-ο-οι-ων-ους",
@@ -347,15 +272,7 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG1XosT2SuNuF1Ba-αρσενικό-ος-παρ-Γιώργ-ος-ου-ο-ηδες-ηδων",
       "nounEllnMnG1XosT2SeuNucuF3Ba-αρσενικό-ος-παρ-Σαρακατσάν-ος-ου-ο-ε-οι|αίοι|ηδες-ων|αίων|ηδων-ους|αίους|ηδες",
       "nounEllnMnG1XosT2SeuNucF2Ba-αρσενικό-ος-παρ-καπετάν-ιος-ιου-ιο-ιε-ιοι|αίων-ιων|αίων-ιους|αίους"]
-
-  // nounEllnMnG1XosT3SeNuF1Ba-αρσενικό-ος-προ-αντίλαλ-ος-ου-ο-ε-οι-ων-ους,
-  // nounEllnMnG1XosT3SeNcF1Ba-αρσενικό-ος-προ-χοντράνθρωπ-ος-ου-ο-ε-οι-'ων-ους,
-  // nounEllnMnG1XosT3SeNc2F1Ba-αρσενικό-ος-προ-άνθρωπ-ος-'ου-ο-ε-οι-'ων-ους,
-  // nounEllnManG1XosT3SeNcF2Ba-αρσενικό-ος-προ-όροφ-ος-'ου|ου-ο-ε-οι-'ων-ους,
-  // nounEllnManG1XosT3SeNc2F2Ba-αρσενικό-ος-προ-δάσκαλ-ος-'ου|ου-ο-ε-οι-'ων-'ους|ους,
-  // nounEllnMnaG1XosT3SeNucF2Ba-αρσενικό-ος-προ-καρδινάλι-ος-ου|'ου-ο-ε-οι-ων|'ων-ους|'ους,
-  // nounEllnMnG1XosT3SeuNucF2Ba-αρσενικό-ος-προ-Παπαδόπουλ-ος-ου|'ου-ο-ε-οι|αίοι-ων|αίων-ους|αίους,
-  else if (sWord.endsWith('ος') && nSyllable === 3 && sGender === 'masc')
+  else if (sWord.endsWith('ος') && nSyllable===3 && sGender==='masc')
     aOut = [
       "nounEllnMnG1XosT3SeNuF1Ba-αρσενικό-ος-προ-αντίλαλ-ος-ου-ο-ε-οι-ων-ους",
       "nounEllnMnG1XosT3SeNcF1Ba-αρσενικό-ος-προ-χοντράνθρωπ-ος-ου-ο-ε-οι-'ων-ους",
@@ -364,38 +281,25 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnManG1XosT3SeNc2F2Ba-αρσενικό-ος-προ-δάσκαλ-ος-'ου|ου-ο-ε-οι-'ων-'ους|ους",
       "nounEllnMnaG1XosT3SeNucF2Ba-αρσενικό-ος-προ-καρδινάλι-ος-ου|'ου-ο-ε-οι-ων|'ων-ους|'ους",
       "nounEllnMnG1XosT3SeuNucF2Ba-αρσενικό-ος-προ-Παπαδόπουλ-ος-ου|'ου-ο-ε-οι|αίοι-ων|αίων-ους|αίους"]
-
-  // nounEllnMnG2XosT2SeNuF2Ba-θηλυκό-ος-παρ-διχοτόμ-ος-ου-ο-ε|ο-οι-ων-ους,
-  // nounEllnMnG2XosT2SeNuF1Ba-θηλυκό-ος-παρ-νόσ-ος-ου-ο-ε-οι-ων-ους,
-  else if (sWord.endsWith('ος') && nSyllable === 2 && sGender === 'femi')
+  else if (sWord.endsWith('ος') && nSyllable===2 && sGender==='femi')
     aOut = [
       "nounEllnMnG2XosT2SeNuF2Ba-θηλυκό-ος-παρ-διχοτόμ-ος-ου-ο-ε|ο-οι-ων-ους",
       "nounEllnMnG2XosT2SeNuF1Ba-θηλυκό-ος-παρ-νόσ-ος-ου-ο-ε-οι-ων-ους"]
-  // nounEllnMnG2XosT3SeNcF1Ba-θηλυκό-ος-προ-άμπελ-ος-'ου-ο-ε-οι-'ων-'ους,
-  // nounEllnMnG2XosT3SeNcF2Ba-θηλυκό-ος-προ-ήπειρ-ος-'ου-ο-ε|ο-οι-'ων-'ους,
-  // nounEllnMnG2XosT3SeNcF2bBa-θηλυκό-ος-προ-διάμετρ-ος-'ου-ο-ε|ο-οι|ες-'ων-'ους|ες,
-  // nounEllnMnaG2XosT3SeNucF2Ba-θηλυκό-ος-προ-πανσέλην-ος-ου|'ου-ο-ε|ο-οι-ων|'ων-ους|'ους,
-  else if (sWord.endsWith('ος') && nSyllable === 3 && sGender === 'femi')
+  else if (sWord.endsWith('ος') && nSyllable===3 && sGender==='femi')
     aOut = [
       "nounEllnMnG2XosT3SeNcF1Ba-θηλυκό-ος-προ-άμπελ-ος-'ου-ο-ε-οι-'ων-'ους",
       "nounEllnMnG2XosT3SeNcF2Ba-θηλυκό-ος-προ-ήπειρ-ος-'ου-ο-ε|ο-οι-'ων-'ους",
       "nounEllnMnG2XosT3SeNcF2bBa-θηλυκό-ος-προ-διάμετρ-ος-'ου-ο-ε|ο-οι|ες-'ων-'ους|ες",
       "nounEllnMnaG2XosT3SeNucF2Ba-θηλυκό-ος-προ-πανσέλην-ος-ου|'ου-ο-ε|ο-οι-ων|'ων-ους|'ους"]
-
-  // nounEllnMnG3XosT2SeNcF1Ba-ουδέτερο-ος-παρ-δάσ-ος-ους-η-ών,
-  // nounEllnMaG3XosT2SuNcF1Ba-ουδέτερο-ος-παρ-άνθ-ος-ους-η-έων,
-  else if (sWord.endsWith('ος') && nSyllable === 2 && sGender === 'neut')
+  else if (sWord.endsWith('ος') && nSyllable===2 && sGender==='neut')
     aOut = [
       "nounEllnMnG3XosT2SeNcF1Ba-ουδέτερο-ος-παρ-δάσ-ος-ους-η-ών",
       "nounEllnMaG3XosT2SuNcF1Ba-ουδέτερο-ος-παρ-άνθ-ος-ους-η-έων"]
-  // nounEllnMnG3XosT3SeNcF1Ba-ουδέτερο-ος-προ-έδαφ-ος-'ους-'η-ών,
-  // nounEllnMnG3XosT3SuNcF1Ba-ουδέτερο-ος-προ-αεριόφ-ως-ωτος-ωτα-ώτων,
-  else if (sWord.endsWith('ος') && nSyllable === 3 && sGender === 'neut')
+  else if (sWord.endsWith('ος') && nSyllable===3 && sGender==='neut')
     aOut = [
       "nounEllnMnG3XosT3SeNcF1Ba-ουδέτερο-ος-προ-έδαφ-ος-'ους-'η-ών",
       "nounEllnMnG3XosT3SuNcF1Ba-ουδέτερο-ος-προ-αεριόφ-ως-ωτος-ωτα-ώτων"]
-
-  else if (sWord.endsWith('ος') && nSyllable === 2 && sGender === '')
+  else if (sWord.endsWith('ος') && nSyllable===2 && sGender==='')
     aOut = [
       "nounEllnMnG1XosT2SeNuF1Ba-αρσενικό-ος-παρ-δρόμ-ος-ου-ο-ε-οι-ων-ους",
       "nounEllnMnG1XosT2Se2NuF1Ba-αρσενικό-ος-παρ-υπνάκ-ος-ου-ο-οι-ων-ους",
@@ -407,7 +311,7 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG2XosT2SeNuF1Ba-θηλυκό-ος-παρ-νόσ-ος-ου-ο-ε-οι-ων-ους",
       "nounEllnMnG3XosT2SeNcF1Ba-ουδέτερο-ος-παρ-δάσ-ος-ους-η-ών",
       "nounEllnMaG3XosT2SuNcF1Ba-ουδέτερο-ος-παρ-άνθ-ος-ους-η-έων"]
-  else if (sWord.endsWith('ος') && nSyllable === 3 && sGender === '')
+  else if (sWord.endsWith('ος') && nSyllable===3 && sGender==='')
     aOut = [
       "nounEllnMnG1XosT3SeNuF1Ba-αρσενικό-ος-προ-αντίλαλ-ος-ου-ο-ε-οι-ων-ους",
       "nounEllnMnG1XosT3SeNcF1Ba-αρσενικό-ος-προ-χοντράνθρωπ-ος-ου-ο-ε-οι-'ων-ους",
@@ -426,10 +330,10 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
   else if (sWord.endsWith('ό') )
     aOut = [
       "nounEllnMnG3XoT1SeNuF1Ba-ουδέτερο-ο-οξυ-βουν-ό-ού-ά-ών"]
-  else if (sWord.endsWith('ο') && nSyllable === 2 )
+  else if (sWord.endsWith('ο') && nSyllable===2 )
     aOut = [
       "nounEllnMnG3XoT2SeNuF1Ba-ουδέτερο-ο-παρ-πεύκ-ο-ου-α-ων"]
-  else if (sWord.endsWith('ο') && nSyllable === 3 )
+  else if (sWord.endsWith('ο') && nSyllable===3 )
     aOut = [
       "nounEllnMnG3XoT3SeNuF1Ba-ουδέτερο-ο-προ-σίδερ-ο-ου-α-ων",
       "nounEllnMaG3XoT3SeNcF1Ba-ουδέτερο-ο-προ-άτομ-ο-'ου-α-'ων",
@@ -437,11 +341,10 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnaG3XoT3SeNucF2Ba-ουδέτερο-ο-προ-βούτυρ-ο-ου|'ου-α-ων|'ων",
       "nounEllnMnG3XoT3SuNcF1Ba-ουδέτερο-ο-προ-δέσιμ-ο-'ατος-'ατα-άτων"]
 
-
   else if (sWord.endsWith('ώ') )
     aOut = [
       "nounEllnMnG2XoT1SeNuF1Bnp-θηλυκό-ω-οξυ-Ρηνι-ώ-ώς"]
-  else if (sWord.endsWith('ω') && nSyllable === 2 )
+  else if (sWord.endsWith('ω') && nSyllable===2 )
     aOut = [
       "nounEllnMnG2XoT2SeNuF1Ba-θηλυκό-ω-παρ-τρελέγκ-ω-ως-ες-ων"]
 
@@ -450,10 +353,10 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
   else if (sWord.endsWith('ούς') )
     aOut = [
       "nounEllnMnG1XusT1SuNuF1Ba-αρσενικό-ους-οξυ-παππ-ούς-ού-ούδες-ούδων"]
-  else if (sWord.endsWith('ους') && nSyllable === 1 )
+  else if (sWord.endsWith('ους') && nSyllable===1 )
     aOut = [
       "nounEllnMaG1XusT1SeuNucF2Ba-αρσενικό-ους-οξυ-ν-ους-ου|οός-ου-όες-όων"]
-  else if (sWord.endsWith('ους') && nSyllable === 2 )
+  else if (sWord.endsWith('ους') && nSyllable===2 )
     aOut = [
       "nounEllnMnG1XusT2SeNuF1Ba-αρσενικό-ους-παρ-απόπλ-ους-ου-οι-ων-ους"]
   else if (sWord.endsWith('ού') )
