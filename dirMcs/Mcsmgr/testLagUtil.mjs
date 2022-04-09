@@ -6,4 +6,5 @@ let
 
 //console.log(omLagUtil.fGreektonosIncrease('εύελπις'))
 //console.log(omLagUtil.fGreekwordHasSyllableOne('θεια-η/thhho-i/'))
-console.log('γιαλάκιας = ' + omLagUtil.fGreektonosFindSyllable('γιαλάκιας',true))
+console.log('θεια = ' + omLagUtil.fGreektonosFindSyllable('θα',true))
+console.log('νους = ' + omLagUtil.fGreektonosFindSyllable('νους'))

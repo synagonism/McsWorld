@@ -28,8 +28,9 @@
 const
   // contains the-versions of mLagUtil.js
   aVersion = [
+    'mLagUtil.js.0-7-2.2022-04-09: one-syllable',
     'mLagUtil.js.0-7-1.2022-03-16: phonema',
-    'mLagUtil.js.0-7-0.2022-03-11: fGreekwordHasSyllableOne',
+    'mLagUtil.js.0-7-0.2022-03-11: fGreekphonemaHasSyllableOne',
     'mLagUtil.js.0-6-0.2022-03-08: fGreekwordSinizisiAdd',
     'mLagUtil.js.0-5-2.2022-03-01: fGreekwordFindPhonema',
     'mLagUtil.js.0-5-0.2022-02-27: fGreektonosIncrease',
@@ -521,8 +522,7 @@ function fGreektonosFindSyllable (sWordIn, bSinizisi) {
     nParaliyusa = fGreekvowelindexFindLast(sWordIn.substring(0, nLiyusa))
   if (nParaliyusa != -1)
     nProparaliyusa = fGreekvowelindexFindLast(sWordIn.substring(0, nParaliyusa))
-
-  if (nTonos == nLiyusa)
+  if (nTonos == nLiyusa || nTonos==-1) // no tonos = one syllable
     return 1
   else if (nTonos == nParaliyusa)
     return 2
@@ -734,7 +734,7 @@ function fGreekvowelindexFindFirst (sWordIn) {
 
 /*
  * DOING: it finds the-index of the-LAST vowel of a-sWordIn without tonos.
- *    IF ει,οι,αι,ου,αυ,ευ, returns the-index of the-first vowel.
+ *    IF ει,οι,αι,ου,αυ,ευ, returns the-index of the-FIRST vowel.
  */
 function fGreekvowelindexFindLast (sWordIn) {
   let
@@ -1604,7 +1604,7 @@ function fGreekwordSinizisiAdd(sWordIn) {
  * test if a-Greek-word has one syllable.
  * INPUT: 'νοια/nna/'
  */
-function fGreekwordHasSyllableOne(sWordIn) {
+function fGreekphonemaHasSyllableOne(sWordIn) {
   if ((sWordIn.match(/[aeiouáéíóú]/g)||[]).length == 1)
     return true
   else
@@ -1781,6 +1781,6 @@ export {
   fGreektonosDecrease, fGreektonosIncrease,
   fGreekvowelindexFindFirst, fGreekvowelindexFindLast, fGreekvowelnumberFind,
   fGreekwordFindPhonema, fGreekphonemaHasSinizisi, fGreekwordSinizisiAdd,
-  fGreekwordHasSyllableOne,
+  fGreekphonemaHasSyllableOne,
   fIsLetterConsonantEnglish, fIsLetterVowelEnglish, fIsLetterVowelGreek
 }
