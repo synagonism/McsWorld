@@ -86,15 +86,15 @@ let
   sDir = 'dirLag',
   
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'sign-language',
+  sName = 'Ancient-Greek-language',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'lagSign',
+  sNameShort = 'lagElla',
 
   //5. FILE-name: 
   sNameFile = '',
   sNameFileNaked = '',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNameId = 'LSign',
+  sNameId = 'LElla',
   //
   aPages,
   nFile = 0,
@@ -287,7 +287,6 @@ s = s +
   '    <br>• comments on <a class="clsPreview" href="Mcs' + sDirShort + '000000.last.html#idComment">Disqus</a>,\n' +
   '    <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>,\n' +
   '    <a class="clsHide" href="#idFooterP1"></a></p>\n' +
-  '  <!--                              -->\n' +
   '  <p id="idMetaVersion">webpage-versions::\n' +
   '    <br>• version.last.dynamic: <a lass="clsPreview" href="' + sNameFile + '">' + sNameFile + '</a>,\n' +
   '    <br>• version.draft.creation: ' + sNameFileNaked + '.0-1-0.' + moUtil.fDateYMD() + '.last.html,\n' +
@@ -300,18 +299,18 @@ s = s +
   '</section>\n' +
   '\n' +
   '<script type="module">\n' +
-  '  import * as oHitp from \'../Mcsmgr/mHitp.js\'' +
+  '  import * as omMcsh from \'../Mcsmgr/mMcsh.js\'' +
   '</script>\n' +
+  '<!-- Global site tag (gtag.js) - Google Analytics -->\n' +
+  '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-19285371-5"></script>\n' +
   '<script>\n' +
-  '  (function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){\n' +
-  '  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n' +
-  '  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n' +
-  '  })(window,document,\'script\',\'//www.google-analytics.com/analytics.js\',\'ga\');\n' +
-  '  ga(\'create\', \'UA-19285371-5\', \'synagonism.net\');\n' +
-  '  ga(\'send\', \'pageview\');\n' +
+  '  window.dataLayer = window.dataLayer || [];\n' +
+  '  function gtag(){dataLayer.push(arguments);}\n' +
+  '  gtag(\'js\', new Date());\n' +
+  '  gtag(\'config\', \'UA-19285371-5\');\n' +
   '</script>\n' +
   '</body>\n' +
-  '</html>';
+  '</html>'
 
 moFs.writeFileSync(sDir + '/' + sNameFile, s)
 

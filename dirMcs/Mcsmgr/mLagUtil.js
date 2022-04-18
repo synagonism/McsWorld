@@ -1100,6 +1100,7 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
   sOut = sOut.replaceAll('ιευρ', 'ievr')
   sOut = sOut.replaceAll('ιεύτ', 'iéft') //αποταμιεύτρια
   sOut = sOut.replaceAll('ιευτ', 'ieft') //αποταμιευτήρας
+  sOut = sOut.replaceAll('λιέ', 'llé')   //αγκαλιές
   if (sOut.startsWith('ιε'))
     sOut = sOut.replace('ιε', 'ie') //ιερέας
   if (sOut.indexOf('βιέ') != -1 && bSinizisi)

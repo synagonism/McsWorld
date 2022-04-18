@@ -32,6 +32,7 @@ import * as omMcsh from './mMcsh.js'
 const
   // contains the-versions of mLagElln.js
   aVersion = [
+    'mLagElln.js.0-3-0.2022-04-18: το-παρόν',
     'mLagElln.js.0-2-0.2022-04-09: fFindVerbEllnRegularNo',
     'mLagElln.js.0-1-0.2022-04-06: creation'
   ],
@@ -135,7 +136,7 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG2XaT1SeuNucF2Ba-θηλυκό-α-οξυ-γιαγι-ά-άς-ές|άδες-άδων"]
   else if (sWord.endsWith('α') && nSyllable===2 && sGender==='femi')
     aOut = [
-      "nounEllnMnG2XaT2SeNuF1Ba-θηλυκό-α-παρ-ελπίδ-α-ας-ες-δων",
+      "nounEllnMnG2XaT2SeNuF1Ba-θηλυκό-α-παρ-ελπίδ-α-ας-ες-ων",
       "nounEllnMnG2XaT2SeNcF1Ba-θηλυκό-α-παρ-σοφί-α-ας-ες-ών",
       "nounEllnMnG2XaT2SeNcF1Bu6-θηλυκό-α-παρ-νότ-α-ας-ες-(ών)",
       "nounEllnMnG2XaT2SeNcF1Bn6-θηλυκό-α-παρ-πείν-α-ας-ες",
@@ -145,7 +146,7 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG3XaT2SuNcF1Ba-ουδέτερο-α-παρ-κύμ-α-ατος-ατα-άτων"]
   else if (sWord.endsWith('α') && nSyllable===2 && sGender==='')
     aOut = [
-      "nounEllnMnG2XaT2SeNuF1Ba-θηλυκό-α-παρ-ελπίδ-α-ας-ες-δων",
+      "nounEllnMnG2XaT2SeNuF1Ba-θηλυκό-α-παρ-ελπίδ-α-ας-ες-ων",
       "nounEllnMnG2XaT2SeNcF1Ba-θηλυκό-α-παρ-σοφί-α-ας-ες-ών",
       "nounEllnMnG2XaT2SeNcF1Bu6-θηλυκό-α-παρ-νότ-α-ας-ες-(ών)",
       "nounEllnMnG2XaT2SeNcF1Bn6-θηλυκό-α-παρ-πείν-α-ας-ες",
@@ -250,6 +251,9 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
 
 
   // endsWith /o/
+  else if (sWord.endsWith('όν') )
+    aOut = [
+      "nounEllnMaG3XonT1SuNcF1Ba-ουδέτερο-ον-οξυ-παρ-όν-όντος-όντα-όντων"]
   else if (sWord.endsWith('ός') && sGender==='masc' )
     aOut = [
       "nounEllnMnG1XosT1SeNuF1Ba-αρσενικό-ος-οξυ-να-ός-ού-ό-έ-οί-ών-ούς"]
