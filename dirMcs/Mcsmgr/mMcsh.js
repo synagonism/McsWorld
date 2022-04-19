@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js 
   aVersion = [
+    'mMcsh.js.19-3-0.2022-04-19: Ella-Alt+F2',
     'mMcsh.js.19-2-0.2022-04-04: fSearchname',
     'mMcsh.js.19-1-0.2022-03-21: charRest-reference',
     'mMcsh.js.19-0-0.2022-03-20: Mcsh',
@@ -269,6 +270,15 @@ let fContainersInsert = function () {
       oEltCnrPreviewDiv.style.display = 'block'
       oEltCnrPreviewDiv.style.top = 59 + 'px'
       oEltCnrPreviewDiv.style.left = 59 + 'px' 
+    }
+  })
+
+  addEventListener('keyup', function (oEvtIn) {
+    if (oEvtIn.altKey && oEvtIn.key === 'F2') {
+      fCnrOntopRemove()
+      fCnrSearchShow()
+      //select Greek-Ancient
+      oEltTabCntSrchSlt.options[5].selected = true
     }
   })
 
@@ -625,7 +635,7 @@ let fContainersInsert = function () {
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn6)
   let oEltTabCntSrchOpn7 = document.createElement('option')
   oEltTabCntSrchOpn7.value = 'lagElla'
-  oEltTabCntSrchOpn7.text = 'GreekAncient (Ella)'
+  oEltTabCntSrchOpn7.text = 'GreekAncient (Ella - Alt+F2)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn7)
   oEltTabCntSrchSlt.options[0].selected = true
   oEltTabCntSrchP.id = 'idTabCntSrchP'
