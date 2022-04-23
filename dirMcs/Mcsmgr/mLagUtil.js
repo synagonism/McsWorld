@@ -43,6 +43,69 @@ const
   ]
 
 /*
+ * DOING: it finds the-phonemic-notation of a-Greek-text-word.
+ * INPUT: βῆ
+ * OUTPUT: /béè/
+ */
+function fEllawordFindPhonema (sWordIn) {
+  let
+    nIndex,
+    sOut = sWordIn
+
+  //φωνήεντα
+  sOut = sOut.replaceAll('αῖ', 'áì') //
+  sOut = sOut.replaceAll('α', 'a') //
+  sOut = sOut.replaceAll('ε', 'e') //
+  sOut = sOut.replaceAll('ῆ', 'éè') //
+  sOut = sOut.replaceAll('ή', 'eé') //
+  sOut = sOut.replaceAll('η', 'ee') //
+  sOut = sOut.replaceAll('ι', 'i') //
+  sOut = sOut.replaceAll('ο', 'o') //
+  sOut = sOut.replaceAll('υ', 'u') //
+  sOut = sOut.replaceAll('ῶ', 'óò') //
+  sOut = sOut.replaceAll('ώ', 'oó') //
+  sOut = sOut.replaceAll('ω', 'oo') //
+
+  //σύμφωνα
+  sOut = sOut.replaceAll('Β', 'b') //
+  sOut = sOut.replaceAll('β', 'b') //
+  sOut = sOut.replaceAll('Γ', 'g') //
+  sOut = sOut.replaceAll('γ', 'g') //
+  sOut = sOut.replaceAll('Δ', 'd') //
+  sOut = sOut.replaceAll('δ', 'd') //
+  sOut = sOut.replaceAll('Ζ', 'zd') //
+  sOut = sOut.replaceAll('ζ', 'zd') //
+  sOut = sOut.replaceAll('Θ', 'tʰ') //
+  sOut = sOut.replaceAll('θ', 'tʰ') //
+  sOut = sOut.replaceAll('Κ', 'k') //
+  sOut = sOut.replaceAll('κ', 'k') //
+  sOut = sOut.replaceAll('Λ', 'l') //
+  sOut = sOut.replaceAll('λ', 'l') //
+  sOut = sOut.replaceAll('Μ', 'm') //
+  sOut = sOut.replaceAll('μ', 'm') //
+  sOut = sOut.replaceAll('Ν', 'n') //
+  sOut = sOut.replaceAll('ν', 'n') //
+  sOut = sOut.replaceAll('Ξ', 'ks') //
+  sOut = sOut.replaceAll('ξ', 'ks') //
+  sOut = sOut.replaceAll('Π', 'p') //
+  sOut = sOut.replaceAll('π', 'p') //
+  sOut = sOut.replaceAll('Ρ', 'r') //
+  sOut = sOut.replaceAll('ρ', 'r') //
+  sOut = sOut.replaceAll('Σ', 's') //
+  sOut = sOut.replaceAll('σ', 's') //
+  sOut = sOut.replaceAll('Τ', 't') //
+  sOut = sOut.replaceAll('τ', 't') //
+  sOut = sOut.replaceAll('Φ', 'pʰ') //
+  sOut = sOut.replaceAll('φ', 'pʰ') //
+  sOut = sOut.replaceAll('Χ', 'kʰ') //
+  sOut = sOut.replaceAll('χ', 'kʰ') //
+  sOut = sOut.replaceAll('Ψ', 'ps') //
+  sOut = sOut.replaceAll('ψ', 'ps') //
+
+  return sOut
+}
+
+/*
  * DOING: it removes the-tonos from a-phonema
  * INPUT: nífi
  * OUTPUT: nifi
@@ -1771,6 +1834,7 @@ function fIsLetterVowelGreek(sCharIn) {
 }
 
 export {
+  fEllawordFindPhonema,
   fPhonemaTonosRemove, fPhonemaTonosReplace,
   fFindCharsIfCodepoints, fFindCodepointsIfChars,
   fFindLettersFirstIfPrefix, fFindLettersFirstIfSuffix,
