@@ -32,6 +32,7 @@ import * as omMcsh from './mMcsh.js'
 const
   // contains the-versions of mLagElln.js
   aVersion = [
+    'mLagElln.js.0-4-0.2022-04-24: αθρίτιδα',
     'mLagElln.js.0-3-0.2022-04-18: το-παρόν',
     'mLagElln.js.0-2-0.2022-04-09: fFindVerbEllnRegularNo',
     'mLagElln.js.0-1-0.2022-04-06: creation'
@@ -139,8 +140,7 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG2XaT2SeNuF1Ba-θηλυκό-α-παρ-ελπίδ-α-ας-ες-ων",
       "nounEllnMnG2XaT2SeNcF1Ba-θηλυκό-α-παρ-σοφί-α-ας-ες-ών",
       "nounEllnMnG2XaT2SeNcF1Bu6-θηλυκό-α-παρ-νότ-α-ας-ες-(ών)",
-      "nounEllnMnG2XaT2SeNcF1Bn6-θηλυκό-α-παρ-πείν-α-ας-ες",
-      "nounEllnMnG2XaT3SeNuF1Ba-θηλυκό-α-παρ-αρθρίτιδ-α-ας-ες-ων"]
+      "nounEllnMnG2XaT2SeNcF1Bn6-θηλυκό-α-παρ-πείν-α-ας-ες"]
   else if (sWord.endsWith('α') && nSyllable===2 && sGender==='neut')
     aOut = [
       "nounEllnMnG3XaT2SuNcF1Ba-ουδέτερο-α-παρ-κύμ-α-ατος-ατα-άτων"]
@@ -150,10 +150,10 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG2XaT2SeNcF1Ba-θηλυκό-α-παρ-σοφί-α-ας-ες-ών",
       "nounEllnMnG2XaT2SeNcF1Bu6-θηλυκό-α-παρ-νότ-α-ας-ες-(ών)",
       "nounEllnMnG2XaT2SeNcF1Bn6-θηλυκό-α-παρ-πείν-α-ας-ες",
-      "nounEllnMnG2XaT3SeNuF1Ba-θηλυκό-α-παρ-αρθρίτιδ-α-ας-ες-ων",
       "nounEllnMnG3XaT2SuNcF1Ba-ουδέτερο-α-παρ-κύμ-α-ατος-ατα-άτων"]
   else if (sWord.endsWith('α') && nSyllable===3 && sGender==='femi')
     aOut = [
+      "nounEllnMnG2XaT3SeNuF1Ba-θηλυκό-α-προ-αρθρίτιδ-α-ας-ες-ων",
       "nounEllnMnG2XaT3SeNcF1Ba-θηλυκό-α-προ-θάλασσ-α-ας-ες-ών",
       "nounEllnMnG2XaT3SeNc2F1Ba-θηλυκό-α-προ-σάλπιγγ-α-ας-ες-'ων"]
   else if (sWord.endsWith('α') && nSyllable===3 && sGender==='neut')
@@ -161,6 +161,7 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG3XaT3SuNcF1Ba-ουδέτερο-α-προ-όνομ-α-'ατος-'ατα-άτων"]
   else if (sWord.endsWith('α') && nSyllable===3 && sGender==='')
     aOut = [
+      "nounEllnMnG2XaT3SeNuF1Ba-θηλυκό-α-προ-αρθρίτιδ-α-ας-ες-ων",
       "nounEllnMnG2XaT3SeNcF1Ba-θηλυκό-α-προ-θάλασσ-α-ας-ες-ών",
       "nounEllnMnG2XaT3SeNc2F1Ba-θηλυκό-α-προ-σάλπιγγ-α-ας-ες-'ων",
       "nounEllnMnG3XaT3SuNcF1Ba-ουδέτερο-α-προ-όνομ-α-'ατος-'ατα-άτων"]

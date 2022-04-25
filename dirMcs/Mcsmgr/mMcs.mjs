@@ -299,7 +299,7 @@ s = s +
   '</section>\n' +
   '\n' +
   '<script type="module">\n' +
-  '  import * as omMcsh from \'../Mcsmgr/mMcsh.js\'' +
+  '  import * as omMcsh from \'../Mcsmgr/mMcsh.js\'\n' +
   '</script>\n' +
   '<!-- Global site tag (gtag.js) - Google Analytics -->\n' +
   '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-19285371-5"></script>\n' +
