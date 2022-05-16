@@ -1130,6 +1130,8 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
     sOut = sOut.replaceAll('τζια', 'jja')
   if (sOut.indexOf('τια') != -1 && bSinizisi)
     sOut = sOut.replaceAll('τια', 'tyya') //καράτια
+  if (sOut.indexOf('τιά') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('τια', 'tyyá') //καράτια
   if (sOut.indexOf('φια') != -1 && bSinizisi)
     sOut = sOut.replaceAll('φια', 'fhha')
   if (sOut.indexOf('χια') != -1 && bSinizisi)
@@ -1178,6 +1180,8 @@ function fGreekwordFindPhonema (sWordIn, bSinizisi) {
     sOut = sOut.replaceAll('ριέ', 'ryé') //ψησταριές
   if (sOut.indexOf('ριε') != -1 && bSinizisi)
     sOut = sOut.replaceAll('ριε', 'rye') //καριερίστας
+  if (sOut.indexOf('τιέ') != -1 && bSinizisi)
+    sOut = sOut.replaceAll('τιέ', 'tyyé') //στρατιές
   if (sOut.indexOf('φιέ') != -1 && bSinizisi)
     sOut = sOut.replaceAll('φιέ', 'fhhé') //χαφιές
   if (sOut.indexOf('Χιέ') != -1 && bSinizisi)

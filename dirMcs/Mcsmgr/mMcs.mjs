@@ -86,15 +86,15 @@ let
   sDir = 'dirLag',
   
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Ancient-Greek-language',
+  sName = 'Greek-family-language',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'lagElla',
+  sNameShort = 'lagEll0',
 
   //5. FILE-name: 
   sNameFile = '',
   sNameFileNaked = '',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNameId = 'LElla',
+  sNameId = 'LEll0',
   //
   aPages,
   nFile = 0,
@@ -204,7 +204,7 @@ s = s +
   '\n' +
   '<section id="id' + sNameId + 'wptF">\n' +
   '  <h1 id="id' + sNameId + 'wptFH1">WHOLE-PART-TREE of ' + sNameShort + '\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'whlFH1"></a></h1>\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'wptFH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'wptnam">name::\n' +
   '    <br>* McsEngl.' + sNameShort + '\'part-whole-tree,\n' +
   '    <br>* McsEngl.' + sNameShort + '\'whole-part-tree,\n' +
