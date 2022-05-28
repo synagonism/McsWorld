@@ -28,6 +28,7 @@
 const
   // contains the-versions of mLagElla.js
   aVersion = [
+    'mLagElla.js.0-2-0.2022-05-18: u-/i3/',
     'mLagElla.js.0-1-0.2022-04-23: creation'
   ]
 
@@ -260,31 +261,31 @@ function fEllawordFindPhonema (sWordIn) {
   sOut = sOut.replaceAll('ο', 'o') //
   sOut = sOut.replaceAll('Ο', 'o') //
   //Ύ|Υ|υ|ύ|ὐ|ὑ|ὒ|ὓ|ὔ|ὕ|ὖ|ὗ|Ὑ|Ὓ|Ὕ|Ὗ|ὺ|ύ|ῠ|ῡ|ῢ|ΰ|ῦ|ῧ|Ῠ|Ῡ|Ὺ|Ύ
-  sOut = sOut.replaceAll('ὖ', 'úù') //
-  sOut = sOut.replaceAll('ὗ', 'húù') //
-  sOut = sOut.replaceAll('Ὗ', 'húù') //
-  sOut = sOut.replaceAll('ῧ', 'úù') //
-  sOut = sOut.replaceAll('ῦ', 'úù') //
-  sOut = sOut.replaceAll('ὔ', 'ú') //
-  sOut = sOut.replaceAll('ὕ', 'hú') //
-  sOut = sOut.replaceAll('Ὕ', 'hú') //
-  sOut = sOut.replaceAll('ὒ', 'ù') //
-  sOut = sOut.replaceAll('ὓ', 'hù') //
-  sOut = sOut.replaceAll('Ὓ', 'hù') //
-  sOut = sOut.replaceAll('ύ', 'ú') //
-  sOut = sOut.replaceAll('Ύ', 'ú') //
-  sOut = sOut.replaceAll('ὺ', 'ù') //
-  sOut = sOut.replaceAll('Ὺ', 'ù') //
-  sOut = sOut.replaceAll('ΰ', 'ú') //
-  sOut = sOut.replaceAll('ῢ', 'ù') //
-  sOut = sOut.replaceAll('ὐ', 'u') //
-  sOut = sOut.replaceAll('ὑ', 'hu') //
-  sOut = sOut.replaceAll('Ὑ', 'hu') //
-  sOut = sOut.replaceAll('ῠ', 'u') //
-  sOut = sOut.replaceAll('Ῠ', 'u') //
-  sOut = sOut.replaceAll('ῡ', 'uu') //
-  sOut = sOut.replaceAll('Ῡ', 'uu') //
-  sOut = sOut.replaceAll('υ', 'u') //
+  sOut = sOut.replaceAll('ὖ', 'í3ì3') //
+  sOut = sOut.replaceAll('ὗ', 'hí3ì3') //
+  sOut = sOut.replaceAll('Ὗ', 'hí3ì3') //
+  sOut = sOut.replaceAll('ῧ', 'í3ì3') //
+  sOut = sOut.replaceAll('ῦ', 'í3ì3') //
+  sOut = sOut.replaceAll('ὔ', 'í3') //
+  sOut = sOut.replaceAll('ὕ', 'hí3') //
+  sOut = sOut.replaceAll('Ὕ', 'hí3') //
+  sOut = sOut.replaceAll('ὒ', 'ì3') //
+  sOut = sOut.replaceAll('ὓ', 'hì3') //
+  sOut = sOut.replaceAll('Ὓ', 'hì3') //
+  sOut = sOut.replaceAll('ύ', 'í3') //
+  sOut = sOut.replaceAll('Ύ', 'í3') //
+  sOut = sOut.replaceAll('ὺ', 'ì3') //
+  sOut = sOut.replaceAll('Ὺ', 'ì3') //
+  sOut = sOut.replaceAll('ΰ', 'í3') //
+  sOut = sOut.replaceAll('ῢ', 'ì3') //
+  sOut = sOut.replaceAll('ὐ', 'i3') //
+  sOi3t = sOut.replaceAll('ὑ', 'hi3') //
+  sOut = sOut.replaceAll('Ὑ', 'hi3') //
+  sOut = sOut.replaceAll('ῠ', 'i3') //
+  sOut = sOut.replaceAll('Ῠ', 'i3') //
+  sOut = sOut.replaceAll('ῡ', 'i3i3') //
+  sOut = sOut.replaceAll('Ῡ', 'i3') //
+  sOut = sOut.replaceAll('υ', 'i3') //
   // Ώ|Ω|ω|ώ|ὠ|ὡ|ὢ|ὣ|ὤ|ὥ|ὦ|ὧ|Ὠ|Ὡ|Ὢ|Ὣ|Ὤ|Ὥ|Ὦ|Ὧ|ὼ|ώ|ᾠ|ᾡ|ᾢ|ᾣ|ᾤ|ᾥ|ᾦ|ᾧ|
   // ᾨ|ᾩ|ᾪ|ᾫ|ᾬ|ᾭ|ᾮ|ᾯ|ῲ|ῳ|ῴ|ῶ|ῷ|Ὼ|Ώ|ῼ
   sOut = sOut.replaceAll('ῷ', 'óì') //

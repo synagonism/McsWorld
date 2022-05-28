@@ -961,6 +961,8 @@
     <br>* McsEngl.sector-of-oznProduction!⇒sectorPdn,
     <br>* McsEngl.sectorPdn!⇒sectorPdn,
     <br>* McsEngl.sectorProduction!⇒sectorPdn,
+    <br>====== langoGreek:
+    <br>* McsElln.βιομηχανία-η/viomihanía-i/!=sectorPdn,
     <a class="clsHide" href="#idOznPdn004nam"></a></p>
   <p id="idOznPdn004dsnL">descriptionLong::
     <br>"2.39 Establishments that have the same principal activity are grouped into industries according to the International Standard Industrial Classification of All Economic Activities Revision 4 (ISIC, Rev.4) (United Nations, 2008a)."
@@ -1055,12 +1057,12 @@
     <br>[{2020-12-20} https://en.wikipedia.org/wiki/Military]
     <a class="clsHide" href="#idOznPdn009mildsn"></a></p>
   <p id="idOznPdn009milnam">name::
-    <br>* McsEngl.armed-forces!⇒oznMili,
-    <br>* McsEngl.military!⇒oznMili,
-    <br>* McsEngl.sectorGvcOwned'armed-forces!⇒oznMili,
-    <br>* McsEngl.oznMili,
+    <br>* McsEngl.armed-forces!⇒sectorGvcMili,
+    <br>* McsEngl.military!⇒sectorGvcMili,
+    <br>* McsEngl.sectorGvcOwned'armed-forces!⇒sectorGvcMili,
+    <br>* McsEngl.sectorGvcMili,
     <br>====== langoGreek:
-    <br>* McsElln.ένοπλες-δυνάμεις!=oznMili,
+    <br>* McsElln.ένοπλες-δυνάμεις!=sectorGvcMili,
     <a class="clsHide" href="#idOznPdn009milnam"></a></p>
   </section>
 
@@ -2110,6 +2112,41 @@
     <br>====== langoGreek:
     <br>* McsElln.πανεπιστήμιο-το!=university,
     <a class="clsHide" href="#idOznPdn022Unvtnam"></a></p>
+  </section>
+</section>
+
+<section id="idOznPdn027">
+  <h1 id="idOznPdn027H1">oznProduction.military-027
+    <a class="clsHide" href="#idOznPdn027H1"></a></h1>
+  <p id="idOznPdn027dsn">description::
+    <br>· any oznProduction involved in military.
+    <a class="clsHide" href="#idOznPdn027dsn"></a></p>
+  <p id="idOznPdn027nam">name::
+    <br>* McsEngl.military-oznProduction!⇒oznMili,
+    <br>* McsEngl.oznMili,
+    <br>* McsEngl.oznProduction.military!⇒oznMili,
+    <a class="clsHide" href="#idOznPdn027nam"></a></p>
+
+  <section id="idOznPdn027Agg">
+  <h2 id="idOznPdn027AggH2">oznMili.aggregate
+    <a class="clsHide" href="#idOznPdn027AggH2"></a></h2>
+  <p id="idOznPdn027Aggdsn">description::
+    <br>·
+    <a class="clsHide" href="#idOznPdn027Aggdsn"></a></p>
+  <p id="idOznPdn027Aggnam">name::
+    <br>* McsEngl.defence-industry!⇒sectorPdnMili,
+    <br>* McsEngl.military-industry!⇒sectorPdnMili,
+    <br>* McsEngl.military-sector!⇒sectorPdnMili,
+    <br>* McsEngl.sectorPdnMili,
+    <br>====== langoGreek:
+    <br>* McsElln.αμυντική-βιομηχανία!⇒sectorPdnMili,
+    <br>* McsElln.στρατιωτική-βιομηχανία!⇒sectorPdnMili,
+    <a class="clsHide" href="#idOznPdn027Aggnam"></a></p>
+  </section>
+
+  <section id="idOznPdn027AggGvc">
+  <h2 id="idOznPdn027AggGvcH2">oznMili.aggregate.governance (<a class="clsPreview" href="#idOznPdn009mil">link</a>)
+    <a class="clsHide" href="#idOznPdn027AggGvcH2"></a></h2>
   </section>
 </section>
 

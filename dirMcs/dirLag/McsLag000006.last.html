@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.char-(1-15-0.2022-02-08)</title>
+  <title>Mcs.char-(1-16-0.2022-05-25)</title>
   <meta name="keywords" content="char, ModelConceptStructured, Mcs, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -1449,7 +1449,7 @@
     <a class="clsHide" href="#idCharUcdstdcpfdrH4"></a></h4>
   <p id="idCharUcdstdcpfdrdsn">description::
     <br>· on this site, selecting any TEXT and hitting <code>Shift+1</code>, it FINDS the-Unicode-codepoints of this text.
-    <br>· also here you can-write or paste any TEXT, hit <code>ENTER</code> and see its codepoints separated with '-', AND the-opposite:
+    <br>· also here you can-write or paste any TEXT, and see its codepoints separated with '-', AND the-opposite:
     <br><strong>· characters</strong>: <input type="text" id="idIptUchr" value="❀a𡜨 🐞𝓐" class="clsSizeLargeX" size="29">
     <br>
     <br><strong>· codepoints</strong>: <input type="text" id="idIptUcdp" value="10048-97-137000-32-128030-120016" class="clsSizeLargeX" size="29">
@@ -6254,43 +6254,37 @@
   import * as oMcsh from '../Mcsmgr/mMcsh.js'
 
   // finds codepoints, given chars
-  document.getElementById('idIptUchr').addEventListener('keyup', function(oEvtIn) {
+  document.getElementById('idIptUchr').addEventListener('input', function(oEvtIn) {
     let
       sIn,
       n,
       sOut = ''
-
-    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
-      sIn = document.getElementById('idIptUchr').value
-      for (n = 0; n < sIn.length; n++) {
-        if (sIn.charCodeAt(n) >= 55296 && sIn.charCodeAt(n) <= 56319) {
-          //on high-surrogates do not count the low-surrogate
-          sOut = sOut + sIn.codePointAt(n) + '-'
-          n = n+1
-        } else {
-          sOut = sOut + sIn.codePointAt(n) + '-'
-        }
+    sIn = document.getElementById('idIptUchr').value
+    for (n = 0; n < sIn.length; n++) {
+      if (sIn.charCodeAt(n) >= 55296 && sIn.charCodeAt(n) <= 56319) {
+        //on high-surrogates do not count the low-surrogate
+        sOut = sOut + sIn.codePointAt(n) + '-'
+        n = n+1
+      } else {
+        sOut = sOut + sIn.codePointAt(n) + '-'
       }
-      document.getElementById('idIptUcdp').value = sOut.substring(0, sOut.length-1)
     }
+    document.getElementById('idIptUcdp').value = sOut.substring(0, sOut.length-1)
   })
 
   // finds chars, given codepoints
-  document.getElementById('idIptUcdp').addEventListener('keyup', function(oEvtIn) {
+  document.getElementById('idIptUcdp').addEventListener('input', function(oEvtIn) {
     let
       aIn,
       n,
       nIn,
       sOut = ''
-
-    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
-      aIn = (document.getElementById('idIptUcdp').value).split('-')
-      for (n = 0; n < aIn.length; n++) {
-        nIn = Number(aIn[n])
-        sOut = sOut + String.fromCodePoint(nIn)
-      }
-      document.getElementById('idIptUchr').value = sOut
+    aIn = (document.getElementById('idIptUcdp').value).split('-')
+    for (n = 0; n < aIn.length; n++) {
+      nIn = Number(aIn[n])
+      sOut = sOut + String.fromCodePoint(nIn)
     }
+    document.getElementById('idIptUchr').value = sOut
   })
 </script>
 </body>

@@ -86,15 +86,15 @@ let
   sDir = 'dirLag',
   
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Greek-family-language',
+  sName = 'English-family-language',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'lagEll0',
+  sNameShort = 'lagEng0',
 
   //5. FILE-name: 
   sNameFile = '',
   sNameFileNaked = '',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNameId = 'LEll0',
+  sNameId = 'LEng0',
   //
   aPages,
   nFile = 0,
