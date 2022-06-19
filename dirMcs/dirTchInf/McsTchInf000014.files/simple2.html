@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wasm simple-demo-program</title>
+  </head>
+  <body>
+    <h1>Wasm simple-demo-program</h1>
+    <p>· hit F12 to see console's output.</p>
+    <p>· <a href="../filMcsLwasm.last.html#idWasmpgmSmpl2">link to program-description</a>.</p>
+    <script>
+      WebAssembly.instantiateStreaming(fetch('simple2.wasm'))
+      .then(oModule => console.log(oModule.instance.exports.f59()))
+    </script>
+  </body>
+</html>

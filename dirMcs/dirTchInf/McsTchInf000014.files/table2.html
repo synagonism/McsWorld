@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wasm Table2 test</title>
+  </head>
+  <body>
+    <h1>Wasm Table2 test</h1>
+    <h2>example from <a href="https://github.com/mdn/webassembly-examples/tree/master/js-api-examples">Mdn-examples</a></h2>
+    <p>· hit F12 to see console's output.
+    <script>
+      var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+      console.log(tbl.length);
+      console.log(tbl.get(0));
+      console.log(tbl.get(1));
+      var importObject = {
+        js: {
+          tbl:tbl
+        }
+      };
+      WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
+      .then(function(obj) {
+        console.log(tbl.length);
+        console.log(tbl.get(0)());
+        console.log(tbl.get(1)());
+      });
+    </script>
+  </body>
+</html>

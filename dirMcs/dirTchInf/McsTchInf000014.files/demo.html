@@ -1,0 +1,15 @@
+<html>
+<body>
+  <h1>hello-world example</h1>
+  <p>· example from spec's <a href="https://webassembly.github.io/spec/js-api/index.html">WebAssembly JavaScript Interface</a>
+  <p>· hit F12 to see console's output.
+  <script>
+    var oImport = {oJs: {
+      fImport1: () => console.log("hello,"),
+      fImport2: () => console.log("world!")
+    }};
+    WebAssembly.instantiateStreaming(fetch('demo.wasm'), oImport)
+    .then(oModule => oModule.instance.exports.f());
+  </script>
+</body>
+</html>

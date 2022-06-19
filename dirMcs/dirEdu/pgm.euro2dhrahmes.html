@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>euro2dhrahmes</title>
+</head>
+<body>
+  <h1>ΕΥΡΩ &lt;==&gt; ΔΡΑΧΜΕΣ</h1>
+  <p><span style="color:green">Ευρώ</span>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="idEuro" value="1"/></p>
+  <p><span style="color:green">Δραχμές</span>: <input type="text" id="idDhraxmes" value="340.75"/></p>
+  <p><span style="color:red">Γράψε</span> στο αντίστοιχο κουτάκι τι θέλεις να μετατρέψεις και πάτα ENTER.</p>
+  <p>Με <span style="color:red">ctrl + U</span> βλέπεις τον JavaScript κώδικα που κάνει τη μετατροπή.
+  <script>
+    var tfE = document.getElementById('idEuro'),
+      tfD = document.getElementById('idDhraxmes');
+
+    tfE.onkeydown = function (e) {
+      if (e.keyCode == 13) {
+        tfD.value = (tfE.value * 340.75).toFixed(2);
+      }
+    };
+
+    tfD.onkeydown = function (e) {
+      if (e.keyCode == 13) {
+        tfE.value = (tfD.value / 340.75).toFixed(2);
+      }
+    };
+  </script>
+  <p style="font-size:small"><a href="https://synagonism.net">Kaseluris.Nikos.1959</a>, 2014.02.05</p>
+</body>
+</html>

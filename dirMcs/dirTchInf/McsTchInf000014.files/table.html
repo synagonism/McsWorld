@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wasm Table test</title>
+  </head>
+  <body>
+    <h1>Wasm Table test</h1>
+    <h2>example from <a href="https://github.com/mdn/webassembly-examples/tree/master/js-api-examples">Mdn-examples</a></h2>
+    <p>· hit F12 to see console's output.
+    <script>
+      WebAssembly.instantiateStreaming(fetch('table.wasm'))
+      .then(function(oModule) {
+        var oTbl = oModule.instance.exports.tbl;
+        console.log(oTbl.get(0)());  // 13
+        console.log(oTbl.get(1)());  // 42
+        console.log(oTbl.length);    // 2
+      });
+    </script>
+  </body>
+</html>

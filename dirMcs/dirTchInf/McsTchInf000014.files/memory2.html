@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wasm-memory demo</title>
+  </head>
+  <body>
+    <h1>Wasm-memory demo</h1>
+    <p>· <a href="..//filMcsLwasm.last.html#idWasmpgmMmr">description of the-program</a>.
+    <p>· hit F12 to see console's output.
+    <script>
+      WebAssembly.instantiateStreaming(fetch('memory2.wasm'))
+      .then(oModule => {
+        function fUint8_to_string(aIn) {
+          let s = "";
+          for (let i = 0; i < 11; i++) {
+            s += String.fromCharCode(aIn[i]);
+          }
+          return s;
+        }
+        let a = new Uint8Array(oModule.instance.exports.mem.buffer);
+        console.log(fUint8_to_string(a));
+      });
+    </script>
+  </body>
+</html>

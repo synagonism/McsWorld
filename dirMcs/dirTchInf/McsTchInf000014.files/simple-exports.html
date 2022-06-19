@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wasm Module.exports test</title>
+  </head>
+  <body>
+    <h1>simple example from <a href="https://github.com/mdn/webassembly-examples/tree/master/js-api-examples">Mdn-examples</a></h1>
+    <p>· hit F12 to see console's output.
+    <script>
+      WebAssembly.compileStreaming(fetch('simple.wasm'))
+      .then(function(mod) {
+        var aExports = WebAssembly.Module.exports(mod);
+        console.log(aExports);
+      });
+    </script>
+  </body>
+</html>

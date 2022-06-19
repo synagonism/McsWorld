@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wasm test</title>
+  </head>
+  <body>
+    <h1>Wasm test</h1>
+    <p>· hit F12 to see console's output.
+    <script>
+      WebAssembly.instantiateStreaming(fetch('test2.wasm'))
+      .then(oModule => {
+        let f = oModule.instance.exports.f;
+        console.log(f(3,2));
+      });
+    </script>
+  </body>
+</html>

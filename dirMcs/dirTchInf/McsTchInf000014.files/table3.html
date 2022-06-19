@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wasm Table3 test</title>
+  </head>
+  <body>
+    <h1>Wasm Table3 test</h1>
+    <p>· <a href="..//filMcsLwasm.last.html#idWasmpgmTbl">description of the-program</a>.
+    <p>· hit F12 to see console's output.
+    <script>
+      WebAssembly.instantiateStreaming(fetch('table3.wasm'))
+      .then(function(oModule) {
+        var oTbl = oModule.instance.exports.tbl;
+        console.log(oTbl.get(0)());  // 42
+        console.log(oTbl.length);    // 1
+      });
+    </script>
+  </body>
+</html>
