@@ -36,7 +36,7 @@ function fSftp () {
       sftp.on('keyboard-interactive', (name, instructions, instructionsLang, prompts, finish) => { finish([oConfigIn.password]); });
       sftp.connect(oConfigIn).then(() => {
         // SPECIFIC INFO
-        return sftp.put("D:/xampp/htdocs/dWstSgm/dirMcs/" + sFileIn,
+        return sftp.put("C:/xampp/htdocs/dWstSgm/dirMcs/" + sFileIn,
           "/var/www/vhosts/synagonism.net/httpdocs/dirMcs/" + sFileIn);
       }).then(() => {
         console.log('finish '+sFileIn);
