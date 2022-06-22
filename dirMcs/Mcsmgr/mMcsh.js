@@ -1,5 +1,5 @@
 /*
- * mMcsh.js - module html5.id.toc.preview webpage-format code.
+ * mMcsh.js - module McsHitp webpage-format code.
  * The MIT License (MIT)
  *
  * Copyright (c) 2010-2022 Kaseluris.Nikos.1959 (hmnSngo)
