@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.cmr-(1-3-0.2021-10-20) computer-machine</title>
+  <title>Mcs.cmr-(1-4-0.2022-06-26) computer-machine</title>
   <meta name="keywords" content="computer-machine, cmr, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -49,15 +49,18 @@
     <br>· hardware of computer\a\ is any physical, tangible part of it\a\.
     <a class="clsHide" href="#idCmratt001dsn"></a></p>
   <p id="idCmratt001nam">name::
-    <br>* McsEngl.cmr'01_hardware!⇒cmr-hardware,
-    <br>* McsEngl.cmr'att001-hardware!⇒cmr-hardware,
-    <br>* McsEngl.cmr'hardware-att001!⇒cmr-hardware,
-    <br>* McsEngl.cmr-hardware,
-    <br>* McsEngl.computer-hardware!⇒cmr-hardware,
-    <br>* McsEngl.hardware-of-computer!⇒cmr-hardware,
+    <br>* McsEngl.Cmrhardware,
+    <br>* McsEngl.cmr'01_hardware!⇒Cmrhardware,
+    <br>* McsEngl.cmr'att001-hardware!⇒Cmrhardware,
+    <br>* McsEngl.cmr'hardware-att001!⇒Cmrhardware,
+    <br>* McsEngl.cmr-hardware!⇒Cmrhardware,
+    <br>* McsEngl.computer-hardware!⇒Cmrhardware,
+    <br>* McsEngl.hardware-of-computer!⇒Cmrhardware,
     <br>====== langoChinese:
-    <br>* McsZhon.yìngtǐ-硬体-(硬體)!=cmr-hardware,
-    <br>* McsZhon.硬体-(硬體)-yìngtǐ!=cmr-hardware,
+    <br>* McsZhon.yìngtǐ-硬体-(硬體)!=Cmrhardware,
+    <br>* McsZhon.硬体-(硬體)-yìngtǐ!=Cmrhardware,
+    <br>====== langoGreek:
+    <br>* McsElln.υλικό-υπολογιστή!=Cmrhardware,
     <a class="clsHide" href="#idCmratt001nam"></a></p>
 
   <section id="idCmratt001Spc">
@@ -70,7 +73,7 @@
     <br>* output-unit,
     <a class="clsHide" href="#idCmratt001Spcdsn"></a></p>
   <p id="idCmratt001Spcnam">name::
-    <br>* McsEngl.cmr-hardware.specific,
+    <br>* McsEngl.Cmrhardware.specific,
     <a class="clsHide" href="#idCmratt001Spcnam"></a></p>
   </section>
 
@@ -82,7 +85,7 @@
     <a class="clsHide" href="#idCmrpcsrdsn"></a></p>
   <p id="idCmrpcsrnam">name::
     <br>* McsEngl.cmr'processor!⇒cmr-processor,
-    <br>* McsEngl.cmr-hardware.processor!⇒cmr-processor,
+    <br>* McsEngl.Cmrhardware.processor!⇒cmr-processor,
     <br>* McsEngl.cmr-processor,
     <br>* McsEngl.computer-processor!⇒cmr-processor,
     <br>* McsEngl.processor-of-computer!⇒cmr-processor,
@@ -131,7 +134,7 @@
     <br>* McsEngl.central-processing-unit--of-computer!⇒cmr-Cpu,
     <br>* McsEngl.cmr'CPU!⇒cmr-Cpu,
     <br>* McsEngl.cmr-Cpu,
-    <br>* McsEngl.cmr-hardware.CPU!⇒cmr-Cpu,
+    <br>* McsEngl.Cmrhardware.CPU!⇒cmr-Cpu,
     <br>* McsEngl.cmr-processor.CPU!⇒cmr-Cpu,
     <br>* McsEngl.computer-CPU!⇒cmr-Cpu,
     <a class="clsHide" href="#idCmrpcsrCpunam"></a></p>
@@ -157,116 +160,130 @@
   </section>
   </section>
 
+  <section id="idCmrmmr">
+  <h2 id="idCmrmmrH2">hardware.memory of cmr
+    <a class="clsHide" href="#idCmrmmrH2"></a></h2>
+  <p id="idCmrmmrdsn">description::
+    <br>· <span class="clsColorRed">cmr-memory</span> is hardware that stores software\a\ TEMPORARILY for processing and the-Cpu access it\a\ directly.
+    <br>· you will-see to call it 'PRIMARY STORAGE'.
+    <br><img src="McsTchInf000003.files/computer_storage_types.svg" style="width:70%">
+    <br>[https://upload.wikimedia.org/wikipedia/commons/3/3e/Computer_storage_types.svg]
+    <a class="clsHide" href="#idCmrmmrdsn"></a></p>
+  <p id="idCmrmmrnam">name::
+    <br>* McsEngl.Cpu-accessible--computer-storage!⇒Cmrmemory,
+    <br>* McsEngl.Cmrmemory,
+    <br>* McsEngl.cmr'memory!⇒Cmrmemory,
+    <br>* McsEngl.cmr-memory!⇒Cmrmemory,
+    <br>* McsEngl.computer-memory!⇒Cmrmemory,
+    <br>* McsEngl.memory-of-computer!⇒Cmrmemory,
+    <br>* McsEngl.primary-storage-of-computer!⇒Cmrmemory,
+    <br>====== langoGreek:
+    <br>* McsElln.μνήμη-υπολογιστή!=Cmrmemory,
+    <a class="clsHide" href="#idCmrmmrnam"></a></p>
+
+  <section id="idCmrmmrScdnCpu">
+  <h3 id="idCmrmmrScdnCpuH3">memory.specifics-division.Cpu
+    <a class="clsHide" href="#idCmrmmrScdnCpuH3"></a></h3>
+  <p id="idCmrmmrScdnCpudsn">description::
+    <br>· division on location: inside Cpu or not:
+    <br>* <a class="clsPreview" href="#idCmrmmrInl">internal-memory</a>,
+    <br>* <a class="clsPreview" href="#idCmrmmrInlN">internalNo-memory</a>,
+    <a class="clsHide" href="#idCmrmmrScdnCpudsn"></a></p>
+  <p id="idCmrmmrScdnCpunam">name::
+    <br>* McsEngl.Cmrmemory.specifics-division.Cpu,
+    <a class="clsHide" href="#idCmrmmrScdnCpunam"></a></p>
+  </section>
+
+  <section id="idCmrmmrInl">
+  <h3 id="idCmrmmrInlH3">memory.internal of cmr
+    <a class="clsHide" href="#idCmrmmrInlH3"></a></h3>
+  <p id="idCmrmmrInldsn">description::
+    <br>· internal-memory is <a class="clsPreview" href="#idCmrmmr">memory</a> inside <a class="clsPreview" href="#idCmrpcsrCpu">the-Cpu</a>.
+    <a class="clsHide" href="#idCmrmmrInldsn"></a></p>
+  <p id="idCmrmmrInlnam">name::
+    <br>* McsEngl.cmr-internal-memory,
+    <br>* McsEngl.Cmrmemory.internal!⇒cmr-internal-memory,
+    <a class="clsHide" href="#idCmrmmrInlnam"></a></p>
+
+  <section id="idCmrmmrInlCch">
+  <h4 id="idCmrmmrInlCchH4">interal--Cpu-storage.cache of cmr
+    <a class="clsHide" href="#idCmrmmrInlCchH4"></a></h4>
+  <p id="idCmrmmrInlCchdsn">description::
+    <br>"Processor cache is an intermediate stage between ultra-fast registers and much slower main memory. It was introduced solely to improve the performance of computers. Most actively used information in the main memory is just duplicated in the cache memory, which is faster, but of much lesser capacity. On the other hand, main memory is much slower, but has a much greater storage capacity than processor registers. Multi-level hierarchical cache setup is also commonly used—primary cache being smallest, fastest and located inside the processor; secondary cache being somewhat larger and slower."
+    <br>[{2020-04-04} https://en.wikipedia.org/wiki/Computer_data_storage#Primary_storage]
+    <a class="clsHide" href="#idCmrmmrInlCchdsn"></a></p>
+  <p id="idCmrmmrInlCchnam">name::
+    <br>* McsEngl.Cmrcache,
+    <br>* McsEngl.cache-of-computer!⇒Cmrcache,
+    <br>* McsEngl.cmr'cache!⇒Cmrcache,
+    <br>* McsEngl.cmr-Cpu-cache!⇒Cmrcache,
+    <br>* McsEngl.cmr-cache!⇒Cmrcache,
+    <br>* McsEngl.cmr-internal-memory.cache!⇒Cmrcache,
+    <br>* McsEngl.processor-cache!⇒Cmrcache,
+    <a class="clsHide" href="#idCmrmmrInlCchnam"></a></p>
+  </section>
+
+  <section id="idCmrmmrInlRgr">
+  <h4 id="idCmrmmrInlRgrH4">interal--Cpu-storage.register of cmr
+    <a class="clsHide" href="#idCmrmmrInlRgrH4"></a></h4>
+  <p id="idCmrmmrInlRgrdsn">description::
+    <br>"Processor registers are located inside the processor. Each register typically holds a word of data (often 32 or 64 bits). CPU instructions instruct the arithmetic logic unit to perform various calculations or other operations on this data (or with the help of it). Registers are the fastest of all forms of computer data storage."
+    <br>[https://en.wikipedia.org/wiki/Computer_data_storage#Primary_storage]
+    <a class="clsHide" href="#idCmrmmrInlRgrdsn"></a></p>
+  <p id="idCmrmmrInlRgrnam">name::
+    <br>* McsEngl.Cmrregister,
+    <br>* McsEngl.cmr'register!⇒Cmrregister,
+    <br>* McsEngl.cmr-Cpu-register!⇒Cmrregister,
+    <br>* McsEngl.cmr-register!⇒Cmrregister,
+    <br>* McsEngl.cmr-internal-memory.register!⇒Cmrregister,
+    <br>* McsEngl.processor-register!⇒Cmrregister,
+    <a class="clsHide" href="#idCmrmmrInlRgrnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idCmrmmrInlN">
+  <h3 id="idCmrmmrInlNH3">memory.internalNo of cmr
+    <a class="clsHide" href="#idCmrmmrInlNH3"></a></h3>
+  <p id="idCmrmmrInlNdsn">description::
+    <br>· internalNo-memory is <a class="clsPreview" href="#idCmrmmr">memory</a> external to <a class="clsPreview" href="#idCmrpcsrCpu">Cpu</a>.
+    <a class="clsHide" href="#idCmrmmrInlNdsn"></a></p>
+  <p id="idCmrmmrInlNnam">name::
+    <br>* McsEngl.CmrRam,
+    <br>* McsEngl.RAM!⇒CmrRam,
+    <br>* McsEngl.cmr'RAM!⇒CmrRam,
+    <br>* McsEngl.cmr-RAM!⇒CmrRam,
+    <br>* McsEngl.cmr-internalNo-memory!⇒CmrRam,
+    <br>* McsEngl.Cmrmemory.internalNo!⇒CmrRam,
+    <br>* McsEngl.main-memory-of-computer!⇒CmrRam,
+    <a class="clsHide" href="#idCmrmmrInlNnam"></a></p>
+  </section>
+  </section>
+
   <section id="idCmrstrg">
   <h2 id="idCmrstrgH2">hardware.storage of cmr
     <a class="clsHide" href="#idCmrstrgH2"></a></h2>
   <p id="idCmrstrgdsn">description::
-    <br>· storage of computer\a\ is <a class="clsPreview" href="#idCmratt001">hardware</a> that stores its\a\ <a class="clsPreview" href="#idCmratt002">software</a>.
+    <br>· storage of computer\a\ is <a class="clsPreview" href="#idCmratt001">hardware</a> that stores its\a\ <a class="clsPreview" href="#idCmratt002">software</a> PERMANENTLY.
+    <br>"Secondary storage (also known as external memory or auxiliary storage), differs from primary storage in that it is not directly accessible by the CPU. The computer usually uses its input/output channels to access secondary storage and transfer the desired data to primary storage. Secondary storage is non-volatile (retaining data when power is shut off)."
+    <br>[https://en.wikipedia.org/wiki/Computer_data_storage#Secondary_storage]
     <br><img src="McsTchInf000003.files/computer_storage_types.svg" style="width:70%">
     <br>[https://upload.wikimedia.org/wikipedia/commons/3/3e/Computer_storage_types.svg]
     <a class="clsHide" href="#idCmrstrgdsn"></a></p>
   <p id="idCmrstrgnam">name::
-    <br>* McsEngl.cmr-hardware.storage!⇒cmr-storage,
-    <br>* McsEngl.cmr-storage,
-    <br>* McsEngl.storage-of-computer!⇒cmr-storage,
+    <br>* McsEngl.Cmrstorage,
+    <br>* McsEngl.cmr'storage!⇒Cmrstorage,
+    <br>* McsEngl.Cmrhardware.storage!⇒Cmrstorage,
+    <br>* McsEngl.cmr-storage!⇒Cmrstorage,
+    <br>* McsEngl.primaryNo-storage-of-computer!⇒Cmrstorage,
+    <br>* McsEngl.storage-of-computer!⇒Cmrstorage,
+    <br>====== langoGreek:
+    <br>* McsElln.αποθήκη-υπολογιστή!=Cmrstorage,
     <a class="clsHide" href="#idCmrstrgnam"></a></p>
 
-  <section id="idCmrstrgCpuacc">
-  <h3 id="idCmrstrgCpuaccH3">storage.Cpu-accessible of cmr
-    <a class="clsHide" href="#idCmrstrgCpuaccH3"></a></h3>
-  <p id="idCmrstrgCpuaccdsn">description::
-    <br>· Cpu-accessible--computer-storage is computer-storage that the-Cpu access directly.
-    <a class="clsHide" href="#idCmrstrgCpuaccdsn"></a></p>
-  <p id="idCmrstrgCpuaccnam">name::
-    <br>* McsEngl.Cpu-accessible--computer-storage!⇒cmr-Cpu-storage,
-    <br>* McsEngl.cmr-storage.Cpu-accessible!⇒cmr-Cpu-storage,
-    <br>* McsEngl.cmr-Cpu-storage,
-    <br>* McsEngl.computer-memory!⇒cmr-Cpu-storage,
-    <br>* McsEngl.memory-of-computer!⇒cmr-Cpu-storage,
-    <a class="clsHide" href="#idCmrstrgCpuaccnam"></a></p>
-
-  <section id="idCmrstrgCpuaccScdnCpu">
-  <h4 id="idCmrstrgCpuaccScdnCpuH4">Cpu-storage.specifics-division.Cpu
-    <a class="clsHide" href="#idCmrstrgCpuaccScdnCpuH4"></a></h4>
-  <p id="idCmrstrgCpuaccScdnCpudsn">description::
-    <br>· division on location: inside Cpu or not:
-    <br>* <a class="clsPreview" href="#idCmrstrgCpuaccInl">internal--Cpu-storage</a>,
-    <br>* <a class="clsPreview" href="#idCmrstrgCpuaccInlN">internalNo--Cpu-storage</a>,
-    <a class="clsHide" href="#idCmrstrgCpuaccScdnCpudsn"></a></p>
-  <p id="idCmrstrgCpuaccScdnCpunam">name::
-    <br>* McsEngl.cmr-Cpu-storage.specifics-division.Cpu,
-    <a class="clsHide" href="#idCmrstrgCpuaccScdnCpunam"></a></p>
-
-  <section id="idCmrstrgCpuaccInl">
-  <h4 id="idCmrstrgCpuaccInlH4">Cpu-storage.internal of cmr
-    <a class="clsHide" href="#idCmrstrgCpuaccInlH4"></a></h4>
-  <p id="idCmrstrgCpuaccInldsn">description::
-    <br>· internal--Cpu-storage is <a class="clsPreview" href="#idCmrstrgCpuacc">Cpu-storage</a> inside <a class="clsPreview" href="#idCmrpcsrCpu">the-Cpu</a>.
-    <a class="clsHide" href="#idCmrstrgCpuaccInldsn"></a></p>
-  <p id="idCmrstrgCpuaccInlnam">name::
-    <br>* McsEngl.cmr-internal--Cpu-storage,
-    <br>* McsEngl.cmr-Cpu-storage.internal!⇒cmr-internal--Cpu-storage,
-    <a class="clsHide" href="#idCmrstrgCpuaccInlnam"></a></p>
-
-  <section id="idCmrstrgCpuaccInlCch">
-  <h5 id="idCmrstrgCpuaccInlCchH5">interal--Cpu-storage.cache of cmr
-    <a class="clsHide" href="#idCmrstrgCpuaccInlCchH5"></a></h5>
-  <p id="idCmrstrgCpuaccInlCchdsn">description::
-    <br>"Processor cache is an intermediate stage between ultra-fast registers and much slower main memory. It was introduced solely to improve the performance of computers. Most actively used information in the main memory is just duplicated in the cache memory, which is faster, but of much lesser capacity. On the other hand, main memory is much slower, but has a much greater storage capacity than processor registers. Multi-level hierarchical cache setup is also commonly used—primary cache being smallest, fastest and located inside the processor; secondary cache being somewhat larger and slower."
-    <br>[{2020-04-04} https://en.wikipedia.org/wiki/Computer_data_storage#Primary_storage]
-    <a class="clsHide" href="#idCmrstrgCpuaccInlCchdsn"></a></p>
-  <p id="idCmrstrgCpuaccInlCchnam">name::
-    <br>* McsEngl.cmr-Cpu-cache,
-    <br>* McsEngl.cmr-internal--Cpu-storage.cache!⇒cmr-Cpu-cache,
-    <a class="clsHide" href="#idCmrstrgCpuaccInlCchnam"></a></p>
-  </section>
-
-  <section id="idCmrstrgCpuaccInlRgr">
-  <h5 id="idCmrstrgCpuaccInlRgrH5">interal--Cpu-storage.register of cmr
-    <a class="clsHide" href="#idCmrstrgCpuaccInlRgrH5"></a></h5>
-  <p id="idCmrstrgCpuaccInlRgrdsn">description::
-    <br>"Processor registers are located inside the processor. Each register typically holds a word of data (often 32 or 64 bits). CPU instructions instruct the arithmetic logic unit to perform various calculations or other operations on this data (or with the help of it). Registers are the fastest of all forms of computer data storage."
-    <br>[https://en.wikipedia.org/wiki/Computer_data_storage#Primary_storage]
-    <a class="clsHide" href="#idCmrstrgCpuaccInlRgrdsn"></a></p>
-  <p id="idCmrstrgCpuaccInlRgrnam">name::
-    <br>* McsEngl.cmr-Cpu-register,
-    <br>* McsEngl.cmr-internal--Cpu-storage.register!⇒cmr-Cpu-register,
-    <a class="clsHide" href="#idCmrstrgCpuaccInlRgrnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idCmrstrgCpuaccInlN">
-  <h4 id="idCmrstrgCpuaccInlNH4">Cpu-storage.internalNo of cmr
-    <a class="clsHide" href="#idCmrstrgCpuaccInlNH4"></a></h4>
-  <p id="idCmrstrgCpuaccInlNdsn">description::
-    <br>· internalNo--Cpu-storage is <a class="clsPreview" href="#idCmrstrgCpuacc">Cpu-storage</a> external to <a class="clsPreview" href="#idCmrpcsrCpu">Cpu</a>.
-    <a class="clsHide" href="#idCmrstrgCpuaccInlNdsn"></a></p>
-  <p id="idCmrstrgCpuaccInlNnam">name::
-    <br>* McsEngl.cmr-internalNo--Cpu-storage,
-    <br>* McsEngl.cmr-Cpu-storage.internalNo!⇒cmr-internalNo--Cpu-storage,
-    <br>* McsEngl.main-memory-of-computer!⇒cmr-internalNo--Cpu-storage,
-    <a class="clsHide" href="#idCmrstrgCpuaccInlNnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idCmrstrgCpuaccN">
-  <h3 id="idCmrstrgCpuaccNH3">storage.Cpu-accessible.no of cmr
-    <a class="clsHide" href="#idCmrstrgCpuaccNH3"></a></h3>
-  <p id="idCmrstrgCpuaccNdsn">description::
-    <br>"Secondary storage (also known as external memory or auxiliary storage), differs from primary storage in that it is not directly accessible by the CPU. The computer usually uses its input/output channels to access secondary storage and transfer the desired data to primary storage. Secondary storage is non-volatile (retaining data when power is shut off)."
-    <br>[https://en.wikipedia.org/wiki/Computer_data_storage#Secondary_storage]
-    <a class="clsHide" href="#idCmrstrgCpuaccNdsn"></a></p>
-  <p id="idCmrstrgCpuaccNnam">name::
-    <br>* McsEngl.Cpu-accessible.no--computer-storage.!⇒cmr-CpuNo-storage,
-    <br>* McsEngl.cmr-storage.Cpu-accessible.no!⇒cmr-CpuNo-storage,
-    <br>* McsEngl.cmr-CpuNo-storage,
-    <br>* McsEngl.secondary-storage-of-computer!⇒cmr-CpuNo-storage,
-    <a class="clsHide" href="#idCmrstrgCpuaccNnam"></a></p>
-
-  <section id="idCmrstrgCpuaccN">
-  <h4 id="idCmrstrgCpuaccNH4">CpuNo-storage.SPECIFIC of cmr
-    <a class="clsHide" href="#idCmrstrgCpuaccNH4"></a></h4>
-  <p id="idCmrstrgCpuaccNdsn">description::
+  <section id="idCmrstrgSpc">
+  <h3 id="idCmrstrgSpcH3">storage.SPECIFIC of cmr
+    <a class="clsHide" href="#idCmrstrgSpcH3"></a></h3>
+  <p id="idCmrstrgSpcdsn">description::
     <br>· alphabetically:
     <br>* CD-drive,
     <br>* DVD-drive,
@@ -276,14 +293,13 @@
     <br>* magnetic-tape,
     <br>* optical-storage,
     <br>* solid-state-drive-(SSD),
-    <a class="clsHide" href="#idCmrstrgCpuaccNdsn"></a></p>
-  <p id="idCmrstrgCpuaccNnam">name::
+    <a class="clsHide" href="#idCmrstrgSpcdsn"></a></p>
+  <p id="idCmrstrgSpcnam">name::
     <br>* McsEngl.cmr-CpuNo-storage.specific,
-    <a class="clsHide" href="#idCmrstrgCpuaccNnam"></a></p>
-  <p id="idCmrstrgCpuaccNwpa">addressWpg::
+    <a class="clsHide" href="#idCmrstrgSpcnam"></a></p>
+  <p id="idCmrstrgSpcwpa">addressWpg::
     <br>* https://twitter.com/historylvrsclub/status/1167893075126931460,
-    <a class="clsHide" href="#idCmrstrgCpuaccNwpa"></a></p>
-  </section>
+    <a class="clsHide" href="#idCmrstrgSpcwpa"></a></p>
   </section>
   </section>
 
@@ -294,7 +310,7 @@
     <br>·
     <a class="clsHide" href="#idCmrhdwrIndsn"></a></p>
   <p id="idCmrhdwrInnam">name::
-    <br>* McsEngl.cmr-hardware.input!⇒cmr-input-hardware,
+    <br>* McsEngl.Cmrhardware.input!⇒cmr-input-hardware,
     <br>* McsEngl.cmr-input-hardware,
     <br>* McsEngl.input-hardware-of-computer!⇒cmr-input-hardware,
     <a class="clsHide" href="#idCmrhdwrInnam"></a></p>
@@ -307,7 +323,7 @@
     <br>·
     <a class="clsHide" href="#idCmrhdwrOutdsn"></a></p>
   <p id="idCmrhdwrOutnam">name::
-    <br>* McsEngl.cmr-hardware.output!⇒cmr-output-hardware,
+    <br>* McsEngl.Cmrhardware.output!⇒cmr-output-hardware,
     <br>* McsEngl.cmr-output-hardware,
     <br>* McsEngl.output-hardware-of-computer!⇒cmr-output-hardware,
     <a class="clsHide" href="#idCmrhdwrOutnam"></a></p>
@@ -323,7 +339,7 @@
   <p id="idCmratt002nam">name::
     <br>* McsEngl.cmr'02_software!⇒cmr-software,
     <br>* McsEngl.cmr'att002-software!⇒cmr-software,
-    <br>* McsEngl.cmr'software-att002!⇒cmr-software,
+    <br>* McsEngl.cmr'software!⇒cmr-software,
     <br>* McsEngl.cmr-software,
     <br>* McsEngl.computer-software!⇒cmr-software,
     <br>* McsEngl.information-of-computer!⇒cmr-software,
