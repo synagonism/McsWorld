@@ -28,6 +28,8 @@
 const
   // contains the-versions of mLagElla.js
   aVersion = [
+    'mLagElla.js.0-2-2.2022-08-25: αύ',
+    'mLagElla.js.0-2-1.2022-08-21: sOut',
     'mLagElla.js.0-2-0.2022-05-18: u-/i3/',
     'mLagElla.js.0-1-0.2022-04-23: creation'
   ]
@@ -62,6 +64,7 @@ function fEllawordFindPhonema (sWordIn) {
   sOut = sOut.replaceAll('αι', 'ai') //
   sOut = sOut.replaceAll('Αι', 'ai') //
   sOut = sOut.replaceAll('αυ', 'au') //
+  sOut = sOut.replaceAll('αύ', 'aú') //
   sOut = sOut.replaceAll('Αυ', 'au') //
   sOut = sOut.replaceAll('εῖ', 'éì') //
   sOut = sOut.replaceAll('Εῖ', 'éì') //
@@ -279,7 +282,7 @@ function fEllawordFindPhonema (sWordIn) {
   sOut = sOut.replaceAll('ΰ', 'í3') //
   sOut = sOut.replaceAll('ῢ', 'ì3') //
   sOut = sOut.replaceAll('ὐ', 'i3') //
-  sOi3t = sOut.replaceAll('ὑ', 'hi3') //
+  sOut = sOut.replaceAll('ὑ', 'hi3') //
   sOut = sOut.replaceAll('Ὑ', 'hi3') //
   sOut = sOut.replaceAll('ῠ', 'i3') //
   sOut = sOut.replaceAll('Ῠ', 'i3') //
