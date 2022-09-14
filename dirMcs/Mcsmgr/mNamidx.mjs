@@ -37,7 +37,7 @@
  * RUN: node Mcsmgr/mNamidx.mjs pwd ALONE|ANYTHING
  *
  * PROBLEM:
- * - to compute the-number of concepts, we must set new DIRS at cptqnt.root.json. 
+ * - to compute the-number of concepts, we must set new DIRS at cptqnt.root.json.
  *
  */
 
@@ -49,8 +49,9 @@ import {oSftp, fSftp} from './mSftp.mjs'
 import {fWriteJsonArray} from './mUtil.mjs'
 
 const
-  // contains the-versions of mHitp.js 
+  // contains the-versions of mHitp.js
   aVersion = [
+    'mNamidx.mjs.0-5-0.2022-09-13: meta-info::',
     'mNamidx.mjs.0-4-0.2022-02-09: p-Mcs',
     'mNamidx.mjs.0-2-0.2021-12-31: lagEspo',
     'mNamidx.mjs.0-1-0.2021-11-29: creation',
@@ -88,7 +89,7 @@ if (process.argv[2]) {
 
 if (process.argv[3]) {
   bAlone = true
-} 
+}
 
 if (bAlone) {
   aFileMcsInComments = moFs.readFileSync('namidx.txt').toString().split('\n')
@@ -122,7 +123,7 @@ function fNamidx(fileIn, fSftpIn) {
   let
     bExtra = false, // extra names, added manually on namidx.lagLagoExtra.json to-be removed!
     oNextln,
-    oSetFileUp = new Set, 
+    oSetFileUp = new Set,
     // files to upload, index, Mcs, Mcsqnt
     // we use a-set, because we add same files and want unique.
     aFileMcsIn,
@@ -230,7 +231,7 @@ function fNamidx(fileIn, fSftpIn) {
         //console.log(aExtra_files)
         for (n = 0; n <aExtra_files.length; n++) {
           fRemoveNamUrl(oRootFileIdx_Idx, aExtra_files[n], aLag[nL])
-        }  
+        }
       }
 
       // READ Mcs-file and ADD its name-Urls on oFileIdx_ANamUrl{lagEngl01ei:[[name,Url]]}
@@ -255,7 +256,8 @@ function fNamidx(fileIn, fSftpIn) {
           sUrlPPrev = sUrlP
           sUrlP = sLn.substring(sLn.indexOf('"')+1,sLn.indexOf('>')-1)
           sUrlP = sFileMcs + '#' + sUrlP
-          if (sLn.indexOf('>name::') >= 0) {
+          if (sLn.indexOf('>name::') >= 0 ||
+              sLn.indexOf('>meta-info::') >= 0) {
             if (aLag[nL] === 'lagEngl') {
               nMcsqnt = nMcsqnt + 1
             }
@@ -351,7 +353,7 @@ function fNamidx(fileIn, fSftpIn) {
     // update Mcsqnt.json
     // only on Mcs-files measure Mcs
     if (sFileMcs.indexOf('filMcs') >= 0
-       || sFileMcs.indexOf('Mcs') >= 0 
+       || sFileMcs.indexOf('Mcs') >= 0
        || sFileMcs.indexOf('Hitp') >= 0 )  {
       aFileMcs_QntMcs.push([sFileMcs, nMcsqnt])
     }
@@ -392,7 +394,7 @@ function fNamidx(fileIn, fSftpIn) {
           } catch(e) {
             console.log('>> json problem:' + sFileIdxFull)
           }
-            
+
           // IF fileIdx is reference (endsWith('_0.json'))
           // read it, make oFileIdx_IdxIn, and remove names
           if (sFileIdxFull.endsWith('_0.json')) {
@@ -457,7 +459,7 @@ function fNamidx(fileIn, fSftpIn) {
     sCharName = aNUIn[0].substring(0,1)
     for (sFileIdx in oRootFileIdx_Idx) {
       if (sFileIdx.startsWith(sLagIn + '00'))
-        sFileIdxRest = sFileIdx 
+        sFileIdxRest = sFileIdx
       if (sFileIdx.startsWith(sLagIn)) {
         sIndex = oRootFileIdx_Idx[sFileIdx]
 
@@ -465,7 +467,7 @@ function fNamidx(fileIn, fSftpIn) {
           // index is a-set of chars 'B|b|'
           if (sIndex.indexOf(sCharName) >= 0) {
             // found index-file
-            bRest = false 
+            bRest = false
             fStoreNamUrlNamidx(sFileIdx, aNUIn, sLagIn)
             break
           }
@@ -497,7 +499,7 @@ function fNamidx(fileIn, fSftpIn) {
           //console.log(nIdxCrnt+', '+nIdxNext)
           if (nCharName >= nIdxCrnt && nCharName < nIdxNext) {
             // found index-file
-            bRest = false 
+            bRest = false
             fStoreNamUrlNamidx(sFileIdx, aNUIn, sLagIn)
             break
           }
@@ -555,7 +557,7 @@ function fNamidx(fileIn, fSftpIn) {
         sIdxCrnt = aFileIdxRefIn[n][1].split('..')[0],
         sIdxNext = aFileIdxRefIn[n][1].split('..')[1]
 
-      // PROBLEM with supplementary-chars on reference-index-files 
+      // PROBLEM with supplementary-chars on reference-index-files
       if (aNUIn[0] >= sIdxCrnt && aNUIn[0] < sIdxNext) {
         //console.log(aNUIn[0]+', '+aFileIdxRefIn[n][1])
         // if index-file is NOT a-reference, store name-Url
@@ -870,10 +872,10 @@ function fNamidx(fileIn, fSftpIn) {
   console.log(aFileMcs_QntMcs)
 
   /**
-   * DOING: updates the-quantity of Mcs of ONE Mcs-file[a] in Mcsqnt.json-files 
+   * DOING: updates the-quantity of Mcs of ONE Mcs-file[a] in Mcsqnt.json-files
    *    AND all wholes of it[a]
    * INPUT: the-name of an-Mcs-file[a] and the-new quantity of Mcs in this[a] file.
-   * OUTPUT: the-Mcsqnt-files affected 
+   * OUTPUT: the-Mcsqnt-files affected
    */
   function fUpdateQntMcs(sFileMcsIn, nMcsqntIn) {
     let
@@ -970,7 +972,7 @@ function fNamidx(fileIn, fSftpIn) {
 
 // IF run alone
 if (bAlone) {
-  // create name-indices 
+  // create name-indices
   fNamidx(aFileMcsTxt)
   //upload files
   fSftp()
