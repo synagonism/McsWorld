@@ -42,7 +42,7 @@ import {fNamidx} from './mNamidx.mjs'
 import {fSftp} from './mSftp.mjs'
 
 const
-  // contains the-versions of mHitp.js 
+  // contains the-versions of mHitp.js
   aVersion = [
     'mMcsNew.mjs.1-1-1.2022-06-22: renamed to mMcsNew',
     'mMcs.mjs.1-1-0.2022-01-09: filMcs to McsCor000002',
@@ -84,18 +84,18 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirTchCpgm',
-  
-  //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Microsoft-Windows--operating-system',
-  //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'osWin',
+  sDir = 'dirHmn',
 
-  //5. FILE-name: 
+  //3. Name of the-title: Ethereum--blockchain-net
+  sName = 'human.Aristotle',
+  //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
+  sNameShort = 'hmnArst',
+
+  //5. FILE-name:
   sNameFile = '',
   sNameFileNaked = '',
   //6. Name for IDs eg Dtc, unique in this file: Net,
-  sNameId = 'Winos',
+  sNameId = 'HmnArst',
   //
   aPages,
   nFile = 0,
