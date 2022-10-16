@@ -26,8 +26,9 @@
  */
 
 const
-  // contains the-versions of mMcsh.js 
+  // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-4-0.2022-10-16: lagTurk',
     'mMcsh.js.19-3-0.2022-04-19: Ella-Alt+F2',
     'mMcsh.js.19-2-0.2022-04-04: fSearchname',
     'mMcsh.js.19-1-0.2022-03-21: charRest-reference',
@@ -105,8 +106,8 @@ let
   // contains the-array of the-array of the-name-index-files of all languages of the-names
   // of senso-concepts [["lagEngl01ei","A|a"]]
   aSuggestions = [[]],
-  
-  nCfgPageinfoWidth = 30, 
+
+  nCfgPageinfoWidth = 30,
   // % of window width of pageinfo-container
 
   oEltClicked =  document.body,
@@ -269,7 +270,7 @@ let fContainersInsert = function () {
       oEltCnrPreviewDiv.innerHTML = '► chars: '+s +'<br>► codepoints: ' + sOut.substring(0, sOut.length-1)
       oEltCnrPreviewDiv.style.display = 'block'
       oEltCnrPreviewDiv.style.top = 59 + 'px'
-      oEltCnrPreviewDiv.style.left = 59 + 'px' 
+      oEltCnrPreviewDiv.style.left = 59 + 'px'
     }
   })
 
@@ -370,7 +371,7 @@ let fContainersInsert = function () {
     fCnrOntopRemove()
     fCnrSearchShow()
   })
-  
+
   function fCnrOntopRemove() {
     oEltCnrPreviewDiv.style.display = 'none' // remove popup-cnr
     oEltCnrWidthDiv.style.display = 'none' // remove width-cnr
@@ -637,6 +638,10 @@ let fContainersInsert = function () {
   oEltTabCntSrchOpn7.value = 'lagElla'
   oEltTabCntSrchOpn7.text = 'GreekAncient (Ella - Alt+F2)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn7)
+  let oEltTabCntSrchOpn8 = document.createElement('option')
+  oEltTabCntSrchOpn8.value = 'lagTurk'
+  oEltTabCntSrchOpn8.text = 'Turkish'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn8)
   oEltTabCntSrchSlt.options[0].selected = true
   oEltTabCntSrchP.id = 'idTabCntSrchP'
   oEltTabCntSrchP.setAttribute('class', 'clsCenter')
@@ -649,7 +654,8 @@ let fContainersInsert = function () {
     '<span id="idSrchpnm">é </span><span id="idSrchpnm">è </span><span id="idSrchpnm">ē </span><span id="idSrchpnm">ě </span>' +
     '<span id="idSrchpnm">í </span><span id="idSrchpnm">ì </span><span id="idSrchpnm">ī </span><span id="idSrchpnm">ǐ </span>' +
     '<span id="idSrchpnm">ó </span><span id="idSrchpnm">ò </span><span id="idSrchpnm">ō </span><span id="idSrchpnm">ǒ </span>' +
-    '<span id="idSrchpnm">ú </span><span id="idSrchpnm">ù </span><span id="idSrchpnm">ū </span><span id="idSrchpnm">ǔ </span>'
+    '<span id="idSrchpnm">ú </span><span id="idSrchpnm">ù </span><span id="idSrchpnm">ū </span><span id="idSrchpnm">ǔ </span>' +
+    '<span id="idSrchpnm">ç </span><span id="idSrchpnm">ğ </span><span id="idSrchpnm">ı </span><span id="idSrchpnm">ö </span><span id="idSrchpnm">ş </span><span id="idSrchpnm">ü </span>'
   oEltTabCntSrchLblChk.id = 'idTabCntSrchLblChk'
   oEltTabCntSrchIpt.id = 'idTabCntSrchIpt'
 
@@ -800,7 +806,7 @@ let fContainersInsert = function () {
                 // index-file is a-referenceNo
                 fSSIdxfilDisplay(aaNamidxfileRoot[n][0])
               }
-              // found main-char 
+              // found main-char
               bRest = false
               break
             }
@@ -842,7 +848,7 @@ let fContainersInsert = function () {
                 // index-file is a-referenceNo
                 fSSIdxfilDisplay(aaNamidxfileRoot[n][0])
               }
-              // found main-char 
+              // found main-char
               bRest = false
               break
             }
@@ -851,7 +857,7 @@ let fContainersInsert = function () {
       }
       if (bRest) {
         sIdxFrom = 'charRest'
-        sIdxTo = ''          
+        sIdxTo = ''
         if (aaNamidxfileRoot[nLag + 1][0].endsWith('_0')) {
           // index-file is a-reference
           fSSIdxfileReferenceManage(aaNamidxfileRoot[nLag + 1][0])
@@ -1107,7 +1113,7 @@ let fContainersInsert = function () {
             // name!...
             let
               sSgn = aSuggestions[i][0],
-              sInput = sSearchInput.substring(0, sSearchInput.length-1) 
+              sInput = sSearchInput.substring(0, sSearchInput.length-1)
             if (sInput === sSgn ||
                 new RegExp("^"+sInput+"'.*").test(sSgn) ||
                 new RegExp("^"+sInput+"\\..*").test(sSgn) ||
@@ -1385,7 +1391,7 @@ let fContainersInsert = function () {
     fWidthPginf(nCfgPageinfoWidth)
   })
 
-  // on MainPgcnt-cnr get-id, highlight toc, highlight links, remove popup, remove clicked link 
+  // on MainPgcnt-cnr get-id, highlight toc, highlight links, remove popup, remove clicked link
   fEvtClickContent = function (oEvtIn) {
     let sIdScn = '',
       oEltScn = oEvtIn.target
@@ -2113,7 +2119,7 @@ async function fFindNamidxfile(sNameIn, sLagIn, aaNamidxIdxIn) {
         // index is a-set of chars 'B|b|'
         if (sIndex.indexOf(sCharName) >= 0) {
           // found Namidx-file
-          bRest = false 
+          bRest = false
           sNamidxOut = sNamidx
           aNamidxfile_IdxOut = [sNamidxOut, sIndex]
           break
@@ -2128,7 +2134,7 @@ async function fFindNamidxfile(sNameIn, sLagIn, aaNamidxIdxIn) {
         if (sIdxFrom.length > 1 || sIdxTo.length > 1) {
           if (sNameIn >= sIdxFrom && sNameIn < sIdxTo) {
             // found Namidx-file
-            bRest = false 
+            bRest = false
             sNamidxOut = sNamidx
             aNamidxfile_IdxOut = [sNamidxOut, sIndex]
             break
@@ -2157,7 +2163,7 @@ async function fFindNamidxfile(sNameIn, sLagIn, aaNamidxIdxIn) {
           //console.log(nIdxFrom+', '+nIdxTo)
           if (nCharName >= nIdxFrom && nCharName < nIdxTo) {
             // found Namidx-file
-            bRest = false 
+            bRest = false
             sNamidxOut = sNamidx
             aNamidxfile_IdxOut = [sNamidxOut, sIndex]
             break
@@ -2177,7 +2183,7 @@ async function fFindNamidxfile(sNameIn, sLagIn, aaNamidxIdxIn) {
   if (!sNamidxOut.endsWith('_0')) {
     aNamidxfile_IdxOut = [sNamidxOut, sIndex]
     //console.log(aNamidxfile_IdxOut)
-    return aNamidxfile_IdxOut 
+    return aNamidxfile_IdxOut
   } else {
     sNamidxRefFull = fFindNamidxfileFull(sNamidxOut)
     const response = await fetch(sNamidxRefFull)
