@@ -130,7 +130,8 @@ function fNamidx(fileIn, fSftpIn) {
     // array with names of dirCor/McsCor000010.last.html to remove|add its names
     aLag,
     // array of languages ['lagALLL'] or ['lagElln','lagEngl',...]
-    aLagALL = ['lagEngl','lagSngo','lagZhon','lagEspo','lagElln','lagElla'],
+    aLagALL = ['lagEngl','lagElln','lagTurk'],
+    //aLagALL = ['lagEngl','lagSngo','lagZhon','lagEspo','lagElln','lagElla','lagTurk'],
     // 'lagAlb','lagBel','lagBos','lagBul','lagCes','lagDan','lagDeu','lagEst',
     // 'lagFin','lagFra','lagHrv','lagHun','lagIta','lagLav','lagLit','lagMlt',
     // 'lagMol','lagNld','lagNor','lagPol','lagPor','lagRom','lagRus','lagSlk',
@@ -541,15 +542,16 @@ function fNamidx(fileIn, fSftpIn) {
    * INPUT:
    * - aFileIdxRefIn: an-array of a-reference-index-file
    * [
-   *   [";lagEngl03si_0","C|c",167556,"2021-11-07","codepoint order"],
+   *   [";lagEngl03si_0","C..D",167556,"2021-11-07","codepoint order"],
    *   ["lagEngl03si_1","C..char",2178],
    *   ["lagEngl03si_2_0","char..chas",163164],
-   *   ["lagEngl03si_3","chas..D",2214]
+   *   ["lagEngl03si_3","chas..d",2214]
    * ]
    * - aNUIn: ['name','Url']
    */
   function fStoreNamUrlReference(aFileIdxRefIn, aNUIn, sLagIn) {
     //PROBLEM a-reference-index-file ALWAYS contains sequencies (..) of indecies
+    //PROBLEM: on new language, we must create its directory first, local and online.
     //console.log(aNUIn[0]+':   '+aFileIdxRefIn[0])
     for (n = 1; n < aFileIdxRefIn.length; n++) {
       //console.log(aNUIn[0]+':   '+aFileIdxRefIn[n][1])

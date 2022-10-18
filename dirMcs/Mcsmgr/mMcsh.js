@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-5-0.2022-10-17: lagEspo',
     'mMcsh.js.19-4-0.2022-10-16: lagTurk',
     'mMcsh.js.19-3-0.2022-04-19: Ella-Alt+F2',
     'mMcsh.js.19-2-0.2022-04-04: fSearchname',
@@ -655,7 +656,8 @@ let fContainersInsert = function () {
     '<span id="idSrchpnm">í </span><span id="idSrchpnm">ì </span><span id="idSrchpnm">ī </span><span id="idSrchpnm">ǐ </span>' +
     '<span id="idSrchpnm">ó </span><span id="idSrchpnm">ò </span><span id="idSrchpnm">ō </span><span id="idSrchpnm">ǒ </span>' +
     '<span id="idSrchpnm">ú </span><span id="idSrchpnm">ù </span><span id="idSrchpnm">ū </span><span id="idSrchpnm">ǔ </span>' +
-    '<span id="idSrchpnm">ç </span><span id="idSrchpnm">ğ </span><span id="idSrchpnm">ı </span><span id="idSrchpnm">ö </span><span id="idSrchpnm">ş </span><span id="idSrchpnm">ü </span>'
+    '<span id="idSrchpnm">ç </span><span id="idSrchpnm">ğ </span><span id="idSrchpnm">ı </span><span id="idSrchpnm">ö </span><span id="idSrchpnm">ş </span><span id="idSrchpnm">ü </span>' +
+    '<span id="idSrchpnm">ĉ </span><span id="idSrchpnm">ĝ </span><span id="idSrchpnm">ĥ </span><span id="idSrchpnm">ĵ </span><span id="idSrchpnm">ŝ </span><span id="idSrchpnm">ŭ </span>'
   oEltTabCntSrchLblChk.id = 'idTabCntSrchLblChk'
   oEltTabCntSrchIpt.id = 'idTabCntSrchIpt'
 
