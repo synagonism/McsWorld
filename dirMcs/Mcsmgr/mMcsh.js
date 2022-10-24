@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-6-0.2022-10-24: Turk-Alt+F3',
     'mMcsh.js.19-5-0.2022-10-17: lagEspo',
     'mMcsh.js.19-4-0.2022-10-16: lagTurk',
     'mMcsh.js.19-3-0.2022-04-19: Ella-Alt+F2',
@@ -281,6 +282,15 @@ let fContainersInsert = function () {
       fCnrSearchShow()
       //select Greek-Ancient
       oEltTabCntSrchSlt.options[5].selected = true
+    }
+  })
+
+  addEventListener('keyup', function (oEvtIn) {
+    if (oEvtIn.altKey && oEvtIn.key === 'F3') {
+      fCnrOntopRemove()
+      fCnrSearchShow()
+      //select Turkish
+      oEltTabCntSrchSlt.options[6].selected = true
     }
   })
 
@@ -641,7 +651,7 @@ let fContainersInsert = function () {
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn7)
   let oEltTabCntSrchOpn8 = document.createElement('option')
   oEltTabCntSrchOpn8.value = 'lagTurk'
-  oEltTabCntSrchOpn8.text = 'Turkish'
+  oEltTabCntSrchOpn8.text = 'Turkish (Turk - Alt+F3)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn8)
   oEltTabCntSrchSlt.options[0].selected = true
   oEltTabCntSrchP.id = 'idTabCntSrchP'

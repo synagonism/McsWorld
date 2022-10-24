@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagTurk-(0-7-0.2022-10-23 draft) Turkish-language</title>
+  <title>Mcs.lagTurk-(0-8-0.2022-10-24 draft) Turkish-language</title>
   <meta name="keywords" content="Turkish-language, lagTurk, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -516,6 +516,18 @@
     <br>* McsEngl.letterTurk.29-z-/ze/,
     <a class="clsHide" href="#idLTurkltr29nam"></a></p>
   </section>
+  </section>
+
+  <section id="idLTurkpctn">
+  <h3 id="idLTurkpctnH3">unitTurk.punctuation of textTurk
+    <a class="clsHide" href="#idLTurkpctnH3"></a></h3>
+  <p id="idLTurkpctndsn">description::
+    <br>· The apostrophe in Turkish is used before suffixes attached to proper nouns.
+    <br>[{2022-10-24 retrieved} https://en.wikipedia.org/wiki/Turkish_grammar#Nouns]
+    <a class="clsHide" href="#idLTurkpctndsn"></a></p>
+  <p id="idLTurkpctnnam">name::
+    <br>* McsEngl.unitTurk.punctuation,
+    <a class="clsHide" href="#idLTurkpctnnam"></a></p>
   </section>
   </section>
 
@@ -1571,9 +1583,18 @@
   <section id="idLTurknounmbr">
   <h4 id="idLTurknounmbrH4">member of nounTurk
     <a class="clsHide" href="#idLTurknounmbrH4"></a></h4>
-  <p id="idLTurknounmbrdsn">description::
-    <br>·
-    <a class="clsHide" href="#idLTurknounmbrdsn"></a></p>
+  <div id="idLTurknounmbrdsn">description::
+    <table>
+      <tr><td>Case<td>Ending<td>Example1<td>Example2<td>Translation1<td>Translation2
+      <tr><td>Absolute<td>-∅-<td>ev<td>adam<td>house<td>man
+      <tr><td>Accusative<td>-(y)ı-, -(y)i-, -(y)u-, -(y)ü-<td>evi<td>adamı<td>"the house"<td>"the man"
+      <tr><td>Dative<td>-(y)a-, -(y)e-<td>eve<td>adama<td>"to the house"<td>"to the man"
+      <tr><td>Locative<td>-da-, -de-, -ta-, -te-<td>evde<td>adamda<td>"at home"<td>"in/on the man"
+      <tr><td>Ablative<td>-dan-, -den-, -tan-, -ten-<td>evden<td>adamdan<td>"from the house"<td>"from the man"
+      <tr><td>Genitive<td>-(n)ın-, -(n)in-, -(n)un-, -(n)ün-<td>evin<td>adamın<td>"the house's"<td>"the man's"
+      <tr><td>Instrumental<td>-(y)le-, -(y)la-<td>evle<td>adamla<td>"with the house"<td>"with the man"
+    </table>
+    <a class="clsHide" href="#idLTurknounmbrdsn"></a></div>
   <p id="idLTurknounmbrnam">name::
     <br>* McsEngl.NounmbrTurk,
     <br>* McsEngl.nounTurk'member!⇒NounmbrTurk,
@@ -1584,13 +1605,23 @@
   <h4 id="idLTurknounmbrNomH4">absolute-case of nounTurk
     <a class="clsHide" href="#idLTurknounmbrNomH4"></a></h4>
   <p id="idLTurknounmbrNomdsn">description::
-    <br>× suffix: —, -ler.
-    <br>× denotes: subject, mind-concept.
+    <br>× suffix: ∅, -ler.
+    <br>× denotes: subject, indefinite-concept, mind-concept.
+    <br>"The absolute case combines the uses of the nominative, vocative, and (in part) accusative cases. It is for subjects, and for names of people being addressed. It is also used for indefinite direct objects. Definite direct objects are in the definite-accusative case:
+    <br>şiir "poem" (absolute case)
+    <br>_stxTurk: Şiir okur. "S/he reads a poem/poetry." (absolute case, indefinite direct object)
+    <br>_stxTurk: Şiiri okur. "S/he reads the poem." (accusative case, definite direct object)"
+    <br>[{2022-10-23 retrieved} https://en.wikipedia.org/wiki/Turkish_grammar#Nouns]
     <a class="clsHide" href="#idLTurknounmbrNomdsn"></a></p>
   <p id="idLTurknounmbrNomnam">name::
     <br>* McsEngl.NounmbrTurk.absolute-case,
     <br>* McsEngl.NounmbrTurk.nominative-case,
+    <br>* McsEngl.nounTurk'absolute-case,
     <br>* McsEngl.nounTurk'nominative-case,
+    <br>====== langoTurkish:
+    <br>* McsTurk.yalın-durum!=absolute-case,
+    <br>* McsTurk.-ler-absolute-case.plural,
+    <br>* McsTurk.yalın-durum!=absolute-case-(bare),
     <a class="clsHide" href="#idLTurknounmbrNomnam"></a></p>
   </section>
 
@@ -1599,11 +1630,18 @@
     <a class="clsHide" href="#idLTurknounmbrAccH4"></a></h4>
   <p id="idLTurknounmbrAccdsn">description::
     <br>× suffix: -(y)i, -leri.
-    <br>× denotes: direct object.
+    <br>× denotes: direct-object, definite-attribute.
     <a class="clsHide" href="#idLTurknounmbrAccdsn"></a></p>
   <p id="idLTurknounmbrAccnam">name::
     <br>* McsEngl.NounmbrTurk.accusative-case,
     <br>* McsEngl.nounTurk'accusative-case,
+    <br>====== langoTurkish:
+    <br>* McsTurk.-(y)i-accusative-case.singular,
+    <br>* McsTurk.-(y)ı-accusative-case.singular,
+    <br>* McsTurk.-(y)u-accusative-case.singular,
+    <br>* McsTurk.-(y)ü-accusative-case.singular,
+    <br>* McsTurk.-leri-accusative-case.plural,
+    <br>* McsTurk.belirtme-durumu!=definite-accusative-(clarifying),
     <a class="clsHide" href="#idLTurknounmbrAccnam"></a></p>
   </section>
 
@@ -1613,10 +1651,19 @@
   <p id="idLTurknounmbrGendsn">description::
     <br>× suffix: -(n)in, -lerin.
     <br>× denotes: owner-of, of-X.
+    <br>""
+    <br>[{2022-10-24 retrieved} https://en.wikipedia.org/wiki/Turkish_grammar#Nouns]
     <a class="clsHide" href="#idLTurknounmbrGendsn"></a></p>
   <p id="idLTurknounmbrGennam">name::
     <br>* McsEngl.NounmbrTurk.genitive-case,
     <br>* McsEngl.nounTurk'genitive-case,
+    <br>====== langoTurkish:
+    <br>* McsTurk.-(n)in-genitive-case.singular,
+    <br>* McsTurk.-(n)ın-genitive-case.singular,
+    <br>* McsTurk.-(n)un-genitive-case.singular,
+    <br>* McsTurk.-(n)ün-genitive-case.singular,
+    <br>* McsTurk.-lerin-genitive-case.plural,
+    <br>* McsTurk.tamlayan-eki!=genitive-case-(compounding),
     <a class="clsHide" href="#idLTurknounmbrGennam"></a></p>
   </section>
 
@@ -1626,23 +1673,53 @@
   <p id="idLTurknounmbrDatdsn">description::
     <br>× suffix: -(y)e, -lere.
     <br>× denotes: indirect object, motion toward.
+    <br>"The dative case tells the place to which. Thus it has roughly the meaning of the English prepositions "to" and "into", and also "in" when it can be replaced with "into":
+    <br>_stxTurk: Birayı buzdolabına koy.
+    <br>the-beer into-icebox put
+    <br>"Put the beer in(to) the fridge."
+    <br>The dative also is for objects, usually indirect objects, but sometimes objects that in English would be considered direct:
+    <br>_stxTurk: Güneşin batışına bak.
+    <br>sun's at-its-sinking look
+    <br>"Look at the sunset."
+    <br>_stxTurk: Hükümete güven.
+    <br>in-government trust
+    <br>"Trust the government.""
+    <br>[{2022-10-24 retrieved} https://en.wikipedia.org/wiki/Turkish_grammar#Nouns]
     <a class="clsHide" href="#idLTurknounmbrDatdsn"></a></p>
   <p id="idLTurknounmbrDatnam">name::
     <br>* McsEngl.NounmbrTurk.dative-case,
     <br>* McsEngl.nounTurk'dative-case,
+    <br>====== langoTurkish:
+    <br>* McsTurk.-(y)a-dative-case.singular,
+    <br>* McsTurk.-(y)e-dative-case.singular,
+    <br>* McsTurk.-lere-dative-case.plural,
+    <br>* McsTurk.yönelme-durumu!=dative-case-(facing-towards),
     <a class="clsHide" href="#idLTurknounmbrDatnam"></a></p>
   </section>
 
   <section id="idLTurknounmbrLoc">
-  <h3 id="idLTurknounmbrLocH3">locative-case of nounTurk
-    <a class="clsHide" href="#idLTurknounmbrLocH3"></a></h3>
+  <h4 id="idLTurknounmbrLocH4">locative-case of nounTurk
+    <a class="clsHide" href="#idLTurknounmbrLocH4"></a></h4>
   <p id="idLTurknounmbrLocdsn">description::
     <br>× suffix: -de, -lerde.
     <br>× denotes: in a place.
+    <br>"The locative case tells where, hence corresponds to the English prepositions "at", "on", and "in" (when it does not mean "into").
+    <br>ev "house" → evde "at home"
+    <br>_stxTurk: Buzdolabında dört bira var
+    <br>in-icebox four beer exist
+    <br>"There are four beers in the fridge.""
+    <br>[{2022-10-24 retrieved} https://en.wikipedia.org/wiki/Turkish_grammar#Nouns]
     <a class="clsHide" href="#idLTurknounmbrLocdsn"></a></p>
   <p id="idLTurknounmbrLocnam">name::
     <br>* McsEngl.NounmbrTurk.locative-case,
     <br>* McsEngl.nounTurk'locative-case,
+    <br>====== langoTurkish:
+    <br>* McsTurk.-da-locative-case.singular,
+    <br>* McsTurk.-de-locative-case.singular,
+    <br>* McsTurk.-ta-locative-case.singular,
+    <br>* McsTurk.-te-locative-case.singular,
+    <br>* McsTurk.-lerde-locative-case.plural,
+    <br>* McsTurk.bulunma-durumu!=locative-case-(being-present),
     <a class="clsHide" href="#idLTurknounmbrLocnam"></a></p>
   </section>
 
@@ -1652,11 +1729,46 @@
   <p id="idLTurknounmbrAbldsn">description::
     <br>× suffix: -den, -lerden.
     <br>× denotes: motion from.
+    <br>"The ablative case tells whence, that is, the place from which (or through which), hence:
+    <br>* material out of which something is made;
+    <br>kumdan	yapılmış	kale
+    <br>of-sand	made	castle
+    <br>"castle made of sand"
+    <br>* a cause by which something is effected;
+    <br>açlıktan	öl
+    <br>of-hunger	die
+    <br>"die of hunger"
+    <br>* that to which other things are being compared"
+    <br>[{2022-10-24 retrieved} https://en.wikipedia.org/wiki/Turkish_grammar#Nouns]
     <a class="clsHide" href="#idLTurknounmbrAbldsn"></a></p>
   <p id="idLTurknounmbrAblnam">name::
     <br>* McsEngl.NounmbrTurk.ablative-case,
     <br>* McsEngl.nounTurk'ablative-case,
+    <br>====== langoTurkish:
+    <br>* McsTurk.-dan-ablative-case.singular,
+    <br>* McsTurk.-den-ablative-case.singular,
+    <br>* McsTurk.-tan-ablative-case.singular,
+    <br>* McsTurk.-ten-ablative-case.singular,
+    <br>* McsTurk.-lerden-ablative-case.plural,
+    <br>* McsTurk.çıkma-durumu!=ablative-case-(going-out),
     <a class="clsHide" href="#idLTurknounmbrAblnam"></a></p>
+  </section>
+
+  <section id="idLTurknounmbrIns">
+  <h4 id="idLTurknounmbrInsH4">instrumental-case of nounTurk
+    <a class="clsHide" href="#idLTurknounmbrInsH4"></a></h4>
+  <p id="idLTurknounmbrInsdsn">description::
+    <br>"The postposition ile is often absorbed onto the noun as -(y)le, and some authors analyse this as an instrumental and comitative case.[8] As it differs from the other case markers in several ways,[9] it may be considered as an "inflectional marker" but not a case marker.[10] In particular, unlike the other case endings, -(y)le is never accentuated.[11] Also, when combined with the personal pronouns, the demonstratives, or the interrogative kim, they are used in the genitive, e.g., kiminle 'with whom', not *kimle."
+    <br>[{2022-10-23 retrieved} https://en.wikipedia.org/wiki/Turkish_grammar#Nouns]
+    <a class="clsHide" href="#idLTurknounmbrInsdsn"></a></p>
+  <p id="idLTurknounmbrInsnam">name::
+    <br>* McsEngl.NounmbrTurk.instrumental-case,
+    <br>* McsEngl.nounTurk'instrumental-case,
+    <br>====== langoTurkish:
+    <br>* McsTurk.-(y)le-instrumental-case,
+    <br>* McsTurk.-(y)la-instrumental-case,
+    <br>* McsTurk.aracılık-halı!=instrumental-case-(mediation),
+    <a class="clsHide" href="#idLTurknounmbrInsnam"></a></p>
   </section>
 
   <section id="idLTurknounsfx">
@@ -1752,6 +1864,9 @@
     <a class="clsHide" href="#idLTurkadjvH3"></a></h3>
   <p id="idLTurkadjvdsn">description::
     <br>· adjective is <a class="clsPreview" href="McsLag000007.last.html#idLHmnmondombr">an-ondo-member</a> that has an-attribute-relation with another noun.
+    <br>· güzel kız != beautiful girl,
+    <br>· güzel bir kız != a beautiful girl,
+    <br>· Bu kız güzel. != this girl is beautiful.
     <a class="clsHide" href="#idLTurkadjvdsn"></a></p>
   <p id="idLTurkadjvnam">name::
     <br>* McsEngl.adjvTurk,
@@ -1819,6 +1934,10 @@
   <div id="idLTurkpronPrsndsn">description::
     <p class="clsIndent">· pronTurkPersonal is <a class="clsPreview" href="McsLag000007.last.html#idLHmnmpron">a-pronoun</a> that denotes <a class="clsPreview" href="McsLag000007.last.html#idLHmnmprsn">a-person-of-language</a>.
     </p>
+    <p class="clsIndent">· interrogative: kim!=who,
+    </p>
+    <p class="clsIndent">· deictic:
+    </p>
     <table>
       <tr class="clsCenter"><td><td colspan="3">singular<td colspan="3">plural
       <tr><td><td>1st<td>2nd<td>3rd<td>1st<td>2nd<td>3rd
@@ -1830,13 +1949,64 @@
       <tr><td>genitive<td>benim<td>senin<td>onun<td>bizim<td>sizin<td>onların
       <tr><td>instrumental<td>benimle<td>seninle<td>onunla<td>bizimle<td>sizinle<td>onlarla
     </table>
-    <p class="clsIndent">· interrogative: kim!=who,
-    </p>
+    <br>
+    <table>
+      <tr><td><td>anne - mother<td>ev - house
+      <tr><td>my<td>annem<td>evim
+      <tr><td>your<td>annen<td>evin
+      <tr><td>his|her|its<td>annesi<td>evi
+      <tr><td>our<td>annemiz<td>evimiz
+      <tr><td>your<td>anneniz<td>eviniz
+      <tr><td>their<td>anneleri<td>evleri
+    </table>
     <a class="clsHide" href="#idLTurkpronPrsndsn"></a></div>
   <p id="idLTurkpronPrsnnam">name::
     <br>* McsEngl.pronPersonalTurk!⇒pronTurkPersonal,
     <br>* McsEngl.pronTurkPersonal,
     <br>* McsEngl.pronTurk.personal!⇒pronTurkPersonal,
+    <br>====== langoTurkish:
+    <br>* McsTurk.ben!=I-absolute,
+    <br>* McsTurk.beni!=I-accusative,
+    <br>* McsTurk.bana!=I-dative,
+    <br>* McsTurk.bende!=I-locative,
+    <br>* McsTurk.benden!=I-ablative,
+    <br>* McsTurk.benim!=I-genitive,
+    <br>* McsTurk.benimle!=I-instrumental,
+    <br>* McsTurk.biz!=we-absolute-plural,
+    <br>* McsTurk.bizi!=we-accusative-plural,
+    <br>* McsTurk.bize!=we-dative-plural,
+    <br>* McsTurk.bizde!=we-locative-plural,
+    <br>* McsTurk.bizden!=we-ablative-plural,
+    <br>* McsTurk.bizim!=we-genitive-plural,
+    <br>* McsTurk.bizimle!=we-instrumental-plural,
+    <br>* McsTurk.sen!=you-absolute,
+    <br>* McsTurk.seni!=you-accusative,
+    <br>* McsTurk.sana!=you-dative,
+    <br>* McsTurk.sende!=you-locative,
+    <br>* McsTurk.senden!=you-ablative,
+    <br>* McsTurk.senin!=you-genitive,
+    <br>* McsTurk.seninle!=you-instrumental,
+    <br>* McsTurk.siz!=you-absolute-plural,
+    <br>* McsTurk.sizi!=you-accusative-plural,
+    <br>* McsTurk.size!=you-dative-plural,
+    <br>* McsTurk.sizde!=you-locative-plural,
+    <br>* McsTurk.sizden!=you-ablative-plural,
+    <br>* McsTurk.sizin!=you-genitive-plural,
+    <br>* McsTurk.sizinle!=you-instrumental-plural,
+    <br>* McsTurk.o!=he-she-it-absolute,
+    <br>* McsTurk.onu!=he-she-it-accusative,
+    <br>* McsTurk.ona!=he-she-it-dative,
+    <br>* McsTurk.onda!=he-she-it-locative,
+    <br>* McsTurk.ondan!=he-she-it-ablative,
+    <br>* McsTurk.onun!=he-she-it-genitive,
+    <br>* McsTurk.onunla!=he-she-it-instrumental,
+    <br>* McsTurk.onlar!=they-absolute-plural,
+    <br>* McsTurk.onları!=they-accusative-plural,
+    <br>* McsTurk.onlara!=they-dative-plural,
+    <br>* McsTurk.onlarda!=they-locative-plural,
+    <br>* McsTurk.onlardan!=they-ablative-plural,
+    <br>* McsTurk.onların!=they-genitive-plural,
+    <br>* McsTurk.onlarla!=they-instrumental-plural,
     <a class="clsHide" href="#idLTurkpronPrsnnam"></a></p>
   </section>
 
@@ -1855,6 +2025,8 @@
   <p id="idLTurkpronHmnnam">name::
     <br>* McsEngl.pronTurkHuman,
     <br>* McsEngl.pronTurk.human!⇒pronTurkHuman,
+    <br>====== langoTurkish:
+    <br>* McsTurk.kim!=who,
     <a class="clsHide" href="#idLTurkpronHmnnam"></a></p>
   </section>
 
@@ -1866,11 +2038,14 @@
     <br>* ne!=what,
     <br>
     <br>· deictic:
-    <br>* bu, o,
+    <br>* bu!=this, o!=that,
     <a class="clsHide" href="#idLTurkpronHmnNdsn"></a></p>
   <p id="idLTurkpronHmnNnam">name::
     <br>* McsEngl.pronTurkHumanNo,
     <br>* McsEngl.pronTurk.humanNo!⇒pronTurkHumanNo,
+    <br>====== langoTurkish:
+    <br>* McsTurk.bu!=this,
+    <br>* McsTurk.o!=that,
     <a class="clsHide" href="#idLTurkpronHmnNnam"></a></p>
   </section>
 
@@ -2879,6 +3054,7 @@
   <h3 id="idLTurkverbcjgrH3">member-finder of verbTurk
     <a class="clsHide" href="#idLTurkverbcjgrH3"></a></h3>
   <p id="idLTurkverbcjgrdsn">description::
+    <br>* https://cooljugator.com/tr,
     <br>* https://www.verbix.com/languages/turkish,
     <a class="clsHide" href="#idLTurkverbcjgrdsn"></a></p>
   <p id="idLTurkverbcjgrnam">name::
