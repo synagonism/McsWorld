@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagTurk-(0-30-0.2022-11-22 draft) Turkish-language</title>
+  <title>Mcs.lagTurk-(0-33-0.2022-11-26 draft) Turkish-language</title>
   <meta name="keywords" content="Turkish-language, lagTurk, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -1187,6 +1187,39 @@
     <br>* person1-plur: koyun-umuz, kız-ımız, gün-ümüz, asansör-ümüz,
     <br>* person2-plur: koyun-unuz, kız-ınız, gün-ünüz, asansör-ünüz,
     <br>* person3-plur: koyun-lari, kız-lari, gün-leri, asansör-leri,
+    <br>
+    <br>· ending in ç, k, p, t that change:
+    <br>* person1-sing: ağa-cım, yazlı-ğım, çora-büm, yur-dum,
+    <br>* person2-sing: ağa-cın, yazlı-ğın, çora-bün, yur-dun,
+    <br>* person3-sing: ağa-cı, yazlı-ğı, çora-bü, yur-du,
+    <br>* person1-plur: ağa-cımız, yazlı-ğımız, çora-bümüz, yur-dumuz,
+    <br>* person2-plur: ağa-cınız, yazlı-ğınız, çora-bünüz, yur-dunuz,
+    <br>* person3-plur: ağa-çlari, yazlı-klari, çora-plari, yur-tlari,
+    <br>* Exception to the above are some words ending in nk. Example: renk(color). In that case the letter k changes to g.
+    <br>
+    <br>· ending in ç, k, p, t that DO-NOT change:
+    <br>* person1-sing: saç-ım, ok-ım, ...p-üm, ot-um,
+    <br>* person2-sing: saç-ın, ok-ın, ...p-ün, ot-un,
+    <br>* person3-sing: saç-ı, ok-ı, ...p-ü, ot-u,
+    <br>* person1-plur: saç-ımız, ok-ımız, ...p-ümüz, ot-umuz,
+    <br>* person2-plur: saç-ınız, ok-ınız, ...p-ünüz, ot-unuz,
+    <br>* person3-plur: saç-lari, ok-lari, ...p-lari, ot-lari,
+    <br>
+    <br>· words that loose last vowel:
+    <br>* person1-sing: şeh-rim,
+    <br>* person2-sing: şeh-rin,
+    <br>* person3-sing: şeh-ri,
+    <br>* person1-plur: şeh-rimiz,
+    <br>* person2-plur: şeh-riniz,
+    <br>* person3-plur: şeh-irlari,
+    <br>
+    <br>· words non Turkish origin without vowel harmony:
+    <br>* person1-sing: hayal-im,
+    <br>* person2-sing: hayal-in,
+    <br>* person3-sing: hayal-i,
+    <br>* person1-plur: hayal-imiz,
+    <br>* person2-plur: hayal-iniz,
+    <br>* person3-plur: hayal-leri,
     <a class="clsHide" href="#idLTurknounmbrPossdsn"></a></p>
   <p id="idLTurknounmbrPossnam">name::
     <br>* McsEngl.mNTurk.possession,
@@ -1264,7 +1297,7 @@
     <br>* h:
     <br>* ı: kapı != door,
     <br>* i: silgi != eraser,
-    <br>* j:
+    <br>* j: makyaj != make-up,
     <br>* k: sağlık != health,
     <br>* l: okul != school,
     <br>* m: adam != man,
@@ -1443,7 +1476,7 @@
     <br>* ş: Boş != Empty
     <br>* t:
     <br>* u: Dolu != Full
-    <br>* ü:
+    <br>* ü: kötü != bad,
     <br>* v:
     <br>* y: Kolay != Easy
     <br>* z: Ucuz != Cheap
@@ -1875,6 +1908,7 @@
   <h5 id="idLTurkverbmbrPresGeneH5">mVTurkPres.general
     <a class="clsHide" href="#idLTurkverbmbrPresGeneH5"></a></h5>
   <p id="idLTurkverbmbrPresGenedsn">description::
+    <br>· != I do something.
     <br>"Things are habitually done are expressed by using the present tense in English. In contrast in Turkish, habitual things are expressed using aorist (tr. Geniş zaman)."
     <br>[{2022-11-09 retrieved} https://fluentinturkish.com/grammar/present-tense]
     <br>* -irim: verb, present general posi (1-pers-sing),
@@ -2039,9 +2073,11 @@
     <br>[{2022-10-17 retrieved} https://cromwell-intl.com/turkish/turkish-suffixes.html]
     <a class="clsHide" href="#idLTurkverbmbrPresGenedsn"></a></p>
   <p id="idLTurkverbmbrPresGenenam">name::
+    <br>* McsEngl.mVTurkPres.aorist,
     <br>* McsEngl.mVTurkPres.general,
     <br>* McsEngl.aorist-tense-lagTurk,
     <br>* McsEngl.general-present-lagTurk,
+    <br>* McsEngl.present-simple-lagTurk,
     <br>* McsEngl.simple-present-lagTurk,
     <br>====== langoTurkish:
     <br>* McsTurk.geniş-zaman!=broad-tense!=simple-present-lagTurk,
@@ -2052,6 +2088,7 @@
   <h5 id="idLTurkverbmbrPresProgH5">mVTurkPres.progressive
     <a class="clsHide" href="#idLTurkverbmbrPresProgH5"></a></h5>
   <p id="idLTurkverbmbrPresProgdsn">description::
+    <br>· != I am-doing something.
     <br>* -iyorum: verb, present progressive (1-pers-sing),
     <br>* -ıyorum: verb, present progressive (1-pers-sing),
     <br>* -uyorum: verb, present progressive (1-pers-sing),
@@ -2123,8 +2160,12 @@
     <br>[{2022-10-17 retrieved} https://cromwell-intl.com/turkish/turkish-suffixes.html]
     <a class="clsHide" href="#idLTurkverbmbrPresProgdsn"></a></p>
   <p id="idLTurkverbmbrPresPrognam">name::
+    <br>* McsEngl.present-continuous-lagTurk,
+    <br>* McsEngl.mVTurkPresCont,
     <br>* McsEngl.mVTurkPres.continuous,
     <br>* McsEngl.mVTurkPres.progressive,
+    <br>====== langoTurkish:
+    <br>* McsTurk.şimdiki-zaman!=mVTurkPresCont,
     <a class="clsHide" href="#idLTurkverbmbrPresPrognam"></a></p>
   </section>
   </section>
@@ -2711,6 +2752,7 @@
   <h5 id="idLTurkverbmbrFutrGnrlH5">mVTurkFutu.general
     <a class="clsHide" href="#idLTurkverbmbrFutrGnrlH5"></a></h5>
   <p id="idLTurkverbmbrFutrGnrldsn">description::
+    <br>· != I will-do something.
     <br>* -acagım-ecegim-yacagım-yecegim: verb, future general (1-pers-singular),
     <br>* -acaksın-eceksin-yacaksın-yeceksin: verb, future general (2-pers-singular),
     <br>* -acaktır-ecektir-yecektir-yacaktır: verb, future general (3-pers-singular),
@@ -3076,9 +3118,19 @@
     <br>* -se-: verb, cond mood,
     <br>* -sem-: verb, cond mood,
     <br>[{2022-10-17 retrieved} https://cromwell-intl.com/turkish/turkish-suffixes.html]
+    <br>
+    <br>Conditional infinitive - Dilek koşul(mastar): (If I do something)
+    <br>Conditional Present - Şimdiki zamanın koşulu: (If I am doing)
+    <br>Conditional Future - Gelecek zamanın koşulu: (If I do something in the future)
+    <br>Conditional Past (couldn't realize) - Dilek koşul kipinin hikâyesi: (If I did something that didn't happen)
+    <br>Conditional Past (could realize) - Belirli geçmiş zamanın koşulu: (If I did something that happened)
+    <br>Conditional Aorist - Geniş zamanın koşulu: (If I do something)
+    <br>Necessitive conditional - Gereklik kipinin koşulu: (If I must do something)
+    <br>[{2022-11-26 retrieved} http://learnturkish.pgeorgalas.gr/TensesSetEn.asp]
     <a class="clsHide" href="#idLTurkverbmbrConddsn"></a></p>
   <p id="idLTurkverbmbrCondnam">name::
     <br>* McsEngl.mVTurk.conditional,
+    <br>* McsEngl.conditional-moodTurk,
     <br>====== langoTurkish:
     <br>* McsTurk.-sa-verb-conditional,
     <br>* McsTurk.-sam-verb-conditional,
@@ -3087,10 +3139,23 @@
     <a class="clsHide" href="#idLTurkverbmbrCondnam"></a></p>
   </section>
 
-  <section id="idLTurkverbmbrMust">
-  <h4 id="idLTurkverbmbrMustH4">mVTurk.must
-    <a class="clsHide" href="#idLTurkverbmbrMustH4"></a></h4>
-  <p id="idLTurkverbmbrMustdsn">description::
+  <section id="idLTurkverbmbrNece">
+  <h4 id="idLTurkverbmbrNeceH4">mVTurk.necessitive
+    <a class="clsHide" href="#idLTurkverbmbrNeceH4"></a></h4>
+  <p id="idLTurkverbmbrNecedsn">description::
+    <br>Necessitive - Gereklik kipi: (I must do something)
+    <br>Necessitive conditional - Gereklik kipinin koşulu: (If I must do something)
+    <br>
+    <br>* -meli-: verb, necessity,
+    <br>* -malı *?: verb, necessity, posi inter verb,
+    <br>* -malılar *?: verb, necessity, posi inter verb,
+    <br>* -meli *?: verb, necessity, posi inter verb,
+    <br>* -meliler *?: verb, necessity, posi inter verb,
+    <br>* -mamalı *?: verb, necessity, nega inter verb,
+    <br>* -mamalılar *?: verb, necessity, nega inter verb,
+    <br>* -memeli *?: verb, necessity, nega inter verb,
+    <br>* -memeliler *?: verb, necessity, nega inter verb,
+    <br>[{2022-10-17 retrieved} https://cromwell-intl.com/turkish/turkish-suffixes.html]
     <br>* -malıyım: verb, must (1-pers-sing),
     <br>* -meliyim: verb, must (1-pers-sing),
     <br>* -malısın: verb, must (2-pers-sing),
@@ -3117,28 +3182,9 @@
     <br>* -mamalılar: verb, must not (3-pers-plur),
     <br>* -memeliler: verb, must not (3-pers-plur),
     <br>[{2022-10-17 retrieved} https://cromwell-intl.com/turkish/turkish-suffixes.html]
-    <a class="clsHide" href="#idLTurkverbmbrMustdsn"></a></p>
-  <p id="idLTurkverbmbrMustnam">name::
-    <br>* McsEngl.mVTurk.must,
-    <a class="clsHide" href="#idLTurkverbmbrMustnam"></a></p>
-  </section>
-
-  <section id="idLTurkverbmbrNece">
-  <h4 id="idLTurkverbmbrNeceH4">mVTurk.necessity
-    <a class="clsHide" href="#idLTurkverbmbrNeceH4"></a></h4>
-  <p id="idLTurkverbmbrNecedsn">description::
-    <br>* -meli-: verb, necessity,
-    <br>* -malı *?: verb, necessity, posi inter verb,
-    <br>* -malılar *?: verb, necessity, posi inter verb,
-    <br>* -meli *?: verb, necessity, posi inter verb,
-    <br>* -meliler *?: verb, necessity, posi inter verb,
-    <br>* -mamalı *?: verb, necessity, nega inter verb,
-    <br>* -mamalılar *?: verb, necessity, nega inter verb,
-    <br>* -memeli *?: verb, necessity, nega inter verb,
-    <br>* -memeliler *?: verb, necessity, nega inter verb,
-    <br>[{2022-10-17 retrieved} https://cromwell-intl.com/turkish/turkish-suffixes.html]
     <a class="clsHide" href="#idLTurkverbmbrNecedsn"></a></p>
   <p id="idLTurkverbmbrNecenam">name::
+    <br>* McsEngl.mVTurk.must,
     <br>* McsEngl.mVTurk.necessity,
     <br>* McsEngl.necessative-moodTurk,
     <br>====== langoTurkish:
@@ -3226,10 +3272,16 @@
   <h4 id="idLTurkverbmbrInfeH4">mVTurk.inferential
     <a class="clsHide" href="#idLTurkverbmbrInfeH4"></a></h4>
   <p id="idLTurkverbmbrInfedsn">description::
-    <br>·
+    <br>Present dubitative - Şimdiki zamanın rivayeti: (It is said that something happens)
+    <br>Past Dubitative - Belirsiz geçmiş zaman: (It is said that something happened)
+    <br>Past Perfect Dubitative - Belirsiz geçmiş zamanın hikâyesi: (It is said that something had happened - Nowadays it is also used as Past perfect tense)
+    <br>Future Dubitative - Gelecek zamanın rivayeti: (It is said that will happen)
+    <br>Past Strongly Dubitative - Belirsiz geçmiş zamanın rivayeti: (It is said that something happened, but we doubt.)
+    <br>Aorist Dubitative - Geniş zamanın rivayeti: (It is said that something keeps happening or used to happen)    <br>[{2022-11-26 retrieved} http://learnturkish.pgeorgalas.gr/TensesSetEn.asp]
     <a class="clsHide" href="#idLTurkverbmbrInfedsn"></a></p>
   <p id="idLTurkverbmbrInfenam">name::
     <br>* McsEngl.mVTurk.inferential,
+    <br>* McsEngl.dubitative-moodTurk,
     <br>* McsEngl.inferential-moodTurk,
     <a class="clsHide" href="#idLTurkverbmbrInfenam"></a></p>
   </section>
