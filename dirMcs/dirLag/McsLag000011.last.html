@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagEngl-(1-66-0.2022-12-08) International-English-language</title>
+  <title>Mcs.lagEngl-(1-67-0.2022-12-11) International-English-language</title>
   <meta name="keywords" content="English--human-language, lagEngl, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -18431,7 +18431,7 @@
     setTimeout(() => oMcsh.oEltCnrPreviewDiv.style.display = 'block', 100)
     oMcsh.oEltCnrPreviewDiv.style.top = 59 + 'px'
     oMcsh.oEltCnrPreviewDiv.style.left = 26 + 'px'
-    oMcsh.oTreeUl.fTruCreate()
+    oMcsh.oTriUl.fTriUlCreate()
     let
       aSubnodes,
       aTocTriLI = document.getElementById('idTreePreview').getElementsByTagName('li'),
@@ -18439,7 +18439,7 @@
     for (n = 0; n < 5; n++) {
       aSubnodes = aTocTriLI[n].getElementsByTagName('ul')
       if (aSubnodes.length > 0 && aSubnodes[0].style.display === 'none') {
-        oMcsh.oTreeUl.fTruToggleLi(aTocTriLI[n])
+        oMcsh.oTriUl.fTriUlToggleLi(aTocTriLI[n])
       }
     }
   })

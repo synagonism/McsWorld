@@ -28,6 +28,8 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-8-0.2022-12-11: TriUl',
+    'mMcsh.js.19-7-0.2022-12-10: fTriUlExpandLevel1',
     'mMcsh.js.19-6-0.2022-10-24: Turk-Alt+F3',
     'mMcsh.js.19-5-0.2022-10-17: lagEspo',
     'mMcsh.js.19-4-0.2022-10-16: lagTurk',
@@ -524,7 +526,7 @@ let fContainersInsert = function () {
     document.getElementById('idSiteCntP1').addEventListener('click', function () {
       oEltCnrSiteDiv.style.display = 'none'
     })
-    // oTreeUl.fTruCreate(oEltSitemenuUl);
+    // oTriUl.fTriUlCreate(oEltSitemenuUl);
     // on a-links, first highlight
     Array.prototype.slice.call(document.querySelectorAll('#idSitemenuUl a')).forEach(function (oEltIn) {
       fEvtLink(oEltIn)
@@ -549,7 +551,7 @@ let fContainersInsert = function () {
   oEltTabCntTocCpsBtn.setAttribute('class', 'clsBtn')
   oEltTabCntTocCpsBtn.addEventListener('click', function () {
     if (oEltTabCntTocCpsBtn.className.indexOf('clsClicked') > -1) {
-      oTreeUl.fTruTocCollapseAll()
+      oTriUl.fTriUlCollapseAll('idTocTri')
       oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
     } else {
       oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
@@ -565,7 +567,7 @@ let fContainersInsert = function () {
   oEltTabCntTocExpBtn.setAttribute('class', 'clsBtn')
   oEltTabCntTocExpBtn.addEventListener('click', function () {
     if (oEltTabCntTocExpBtn.className.indexOf('clsClicked') > -1) {
-      oTreeUl.fTruTocExpandAll()
+      oTriUl.fTriUlExpandAll('idTocTri')
       oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
     } else {
       oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
@@ -602,7 +604,7 @@ let fContainersInsert = function () {
   oEltPginfTabHeadersUl.id = 'idPginfTabHeadersUl'
   oEltPginfTabHeadersUl.innerHTML =
     '<li class="clsTabActive"><a href="#idTabCntTocDiv">page-Toc</a></li>' +
-    '<li><a href="#idTabCntSrchDiv">site-search</a></li>'
+    '<li><a href="#idTabCntSrchDiv">name-search</a></li>'
   oEltCnrMainInfoDiv.insertBefore(oEltPginfTabHeadersUl, oEltCnrMainInfoDiv.firstChild)
 
   // insert page-path-elt IN page-info-cnr
@@ -1443,7 +1445,7 @@ let fContainersInsert = function () {
     /* on toc highlight the-found-id */
     Array.prototype.slice.call(document.querySelectorAll('#idTocTri a')).forEach(function (oEltAIn) {
       if (oEltAIn.getAttribute('href') === sIdScn) {
-        oTreeUl.fTruExpandParent(oEltAIn)
+        oTriUl.fTriUlExpandParent(oEltAIn)
         fTocTriHighlightNode(oEltCnrMainInfoDiv, oEltAIn)
         if (oEltAIn.scrollIntoViewIfNeeded) {
           oEltAIn.scrollIntoViewIfNeeded(true)
@@ -1500,7 +1502,7 @@ let fContainersInsert = function () {
     // on toc highlight the-found-id
     Array.prototype.slice.call(document.querySelectorAll('#idTocTri a')).forEach(function (oEltAIn) {
       if (oEltAIn.getAttribute('href') === sIdScn) {
-        oTreeUl.fTruExpandParent(oEltAIn)
+        oTriUl.fTriUlExpandParent(oEltAIn)
         fTocTriHighlightNode(oEltCnrMainInfoDiv, oEltAIn)
         if (oEltAIn.scrollIntoViewIfNeeded) {
           oEltAIn.scrollIntoViewIfNeeded(true)
@@ -1806,15 +1808,15 @@ let fTocTriHighlightNode = function (oEltCnrMainInfoDiv, oElm) {
  * Created: {2016-07-20}
  * Makes collapsible-trees, unordered-lists with clsTreeUl.
  */
-let oTreeUl = (function () {
-  let oTreeUl = {}
+let oTriUl = (function () {
+  let oTriUl = {}
 
   /**
    * DOING: it creates one-clsTreeUl-list tree.
    * If no input, creates ALL lists of the-doc, trees.
    * PROBLEM: it does-not-work for one tree {2021-11-20}
    */
-  oTreeUl.fTruCreate = function (oUlIn) {
+  oTriUl.fTriUlCreate = function (oUlIn) {
     // find all clsTreeUl-lists
     let
       aLi,
@@ -1850,16 +1852,16 @@ let oTreeUl = (function () {
           if (aUlSub.length === 0) {
             oEltI.setAttribute('class', 'clsFa clsFaCrc')
           } else {
-            oEltI.addEventListener('click', fTruListenerClickCreate(aLi[n2]))
+            oEltI.addEventListener('click', fTriUlListenerClickCreate(aLi[n2]))
           }
           aLi[n2].insertBefore(oEltI, aLi[n2].firstChild)
 
           // collapse the-lists within this listitem
-          oTreeUl.fTruToggleLi(aLi[n2])
+          oTriUl.fTriUlToggleLi(aLi[n2])
 
           // first-level expand
           if (aLi[n2].parentNode.parentNode.nodeName !== 'LI') {
-            oTreeUl.fTruToggleLi(aLi[n2])
+            oTriUl.fTriUlToggleLi(aLi[n2])
           }
         }
       }
@@ -1871,7 +1873,7 @@ let oTreeUl = (function () {
    *
    * @input {object} oEltLiIn The-listitem to toggle
    */
-  oTreeUl.fTruToggleLi = function (oEltLiIn) {
+  oTriUl.fTriUlToggleLi = function (oEltLiIn) {
     let
       aUl,
       // determine whether to expand or collaple,
@@ -1908,54 +1910,110 @@ let oTreeUl = (function () {
   }
 
   /** Makes the display-style: none. */
-  oTreeUl.fTruTocCollapseAll = function () {
+  oTriUl.fTriUlCollapseAll = function (sIdTriIn) {
     let
       aSubnodes,
-      aTocTriLI = document.getElementById('idTocTri').getElementsByTagName('li'),
+      aTriLi = document.getElementById(sIdTriIn).getElementsByTagName('li'),
       n
 
-    for (n = 0; n < aTocTriLI.length; n += 1) {
-      aSubnodes = aTocTriLI[n].getElementsByTagName('ul')
+    for (n = 0; n < aTriLi.length; n += 1) {
+      aSubnodes = aTriLi[n].getElementsByTagName('ul')
       if (aSubnodes.length > 0 && aSubnodes[0].style.display === 'block') {
-        oTreeUl.fTruToggleLi(aTocTriLI[n])
+        oTriUl.fTriUlToggleLi(aTriLi[n])
       }
     }
   }
 
   /** Makes the display-style: block. */
-  oTreeUl.fTruTocExpandAll = function () {
+  oTriUl.fTriUlExpandAll = function (sIdTriIn) {
     let
       aSubnodes,
-      aTocTriLI = document.getElementById('idTocTri').getElementsByTagName('li'),
+      aTriLi = document.getElementById(sIdTriIn).getElementsByTagName('li'),
       n
 
-    for (n = 0; n < aTocTriLI.length; n += 1) {
-      aSubnodes = aTocTriLI[n].getElementsByTagName('ul')
+    for (n = 0; n < aTriLi.length; n += 1) {
+      aSubnodes = aTriLi[n].getElementsByTagName('ul')
       if (aSubnodes.length > 0 && aSubnodes[0].style.display === 'none') {
-        oTreeUl.fTruToggleLi(aTocTriLI[n])
+        oTriUl.fTriUlToggleLi(aTriLi[n])
       }
     }
   }
 
-  /** Expands the first children. */
-  oTreeUl.fTruTocExpandFirst = function () {
-    let aTocTriLI, aSubnodes
+  /** Expands Level-1 of treeUl with given id. */
+  oTriUl.fTriUlExpandLevel1 = function (sIdTriIn) {
+    let oTriLi, oTriLiUl
 
-    aTocTriLI = document.getElementById('idTocTri').getElementsByTagName('li')
+    oTriLi = document.getElementById(sIdTriIn).getElementsByTagName('li')[0]
     /* expand the first ul-element */
-    aSubnodes = aTocTriLI[0].getElementsByTagName('ul')
-    if (aSubnodes.length > 0 && aSubnodes[0].style.display === 'none') {
-      oTreeUl.fTruToggleLi(aTocTriLI[0])
+    oTriLiUl = oTriLi.getElementsByTagName('ul')[0]
+    if (oTriLiUl.style.display === 'none') oTriUl.fTriUlToggleLi(oTriLi)
+  }
+
+  /** Expands to Level-2 of treeUl with given id. */
+  oTriUl.fTriUlExpandLevel2 = function (sIdTriIn) {
+    let
+      oTriLi,
+      oTriLiUl
+
+    // ul-trees have one li with 'title'
+    oTriLi = document.getElementById(sIdTriIn).getElementsByTagName('li')[0]
+    // expand the first ul-element
+    oTriLiUl = oTriLi.getElementsByTagName('ul')[0]
+    if (oTriLiUl && oTriLiUl.style.display === 'none') oTriUl.fTriUlToggleLi(oTriLi)
+    // find sibling-li of ul
+    oTriLi = oTriLiUl.getElementsByTagName('li')[0]
+    while (oTriLi) {
+      oTriLiUl = oTriLi.getElementsByTagName('ul')[0]
+      if (oTriLiUl && oTriLiUl.style.display === 'none') oTriUl.fTriUlToggleLi(oTriLi)
+      oTriLi = oTriLi.nextElementSibling 
+    }
+  }
+
+  /** Expands to Level-3 of treeUl with given id. */
+  oTriUl.fTriUlExpandLevel3 = function (sIdTriIn) {
+    let
+      oTriLi,
+      oTriLi2,
+      oTriLi3,
+      oTriLiUl,
+      oTriLiUl2,
+      aTriLiUl2 = [],
+      oTriLiUl3,
+      n
+
+    // ul-trees have one li with 'title'
+    oTriLi = document.getElementById(sIdTriIn).getElementsByTagName('li')[0]
+    // expand the first ul-element
+    oTriLiUl = oTriLi.getElementsByTagName('ul')[0]
+    if (oTriLiUl.style.display === 'none') oTriUl.fTriUlToggleLi(oTriLi)
+
+    // find sibling-li of level-2
+    oTriLi2 = oTriLiUl.getElementsByTagName('li')[0]
+    while (oTriLi2) {
+      oTriLiUl2 = oTriLi2.getElementsByTagName('ul')[0]
+      aTriLiUl2.push(oTriLiUl2)
+      if (oTriLiUl2 && oTriLiUl2.style.display === 'none') {oTriUl.fTriUlToggleLi(oTriLi2)}
+      oTriLi2 = oTriLi2.nextElementSibling 
+    }
+
+    for (n = 0; n < aTriLiUl2.length; n += 1) {
+      // find sibling-li of level-3
+      oTriLi3 = aTriLiUl2[n].getElementsByTagName('li')[0]
+      while (oTriLi3) {
+        oTriLiUl3 = oTriLi3.getElementsByTagName('ul')[0]
+        if (oTriLiUl3 && oTriLiUl3.style.display === 'none') oTriUl.fTriUlToggleLi(oTriLi3)
+        oTriLi3 = oTriLi3.nextElementSibling 
+      }
     }
   }
 
   /**
    * Expands all the parents ONLY, of an element with link to a heading.
    */
-  oTreeUl.fTruExpandParent = function (oEltAIn) {
+  oTriUl.fTriUlExpandParent = function (oEltAIn) {
     let oEltI, oEltUl
 
-    oTreeUl.fTruTocCollapseAll()
+    oTriUl.fTriUlCollapseAll('idTocTri')
     // the parent of a-link-elm is li-elm with parent a ul-elm.
     oEltUl = oEltAIn.parentNode.parentNode
     while (oEltUl.tagName === 'UL') {
@@ -1975,7 +2033,7 @@ let oTreeUl = (function () {
    *
    * @input {object} oEltLiIn The-listitem to toggle
    */
-  function fTruListenerClickCreate (oEltLiIn) {
+  function fTriUlListenerClickCreate (oEltLiIn) {
     return function (oEvtIn) {
       let
         oEltI = oEvtIn.target,
@@ -1986,7 +2044,7 @@ let oTreeUl = (function () {
         oEltClicked.classList.remove('clsTriClicked')
         oEltI.classList.remove('clsTriClicked')
         if (oEltLi === oEltLiIn) {
-          oTreeUl.fTruToggleLi(oEltLiIn)
+          oTriUl.fTriUlToggleLi(oEltLiIn)
         }
         if (sIcls.indexOf('clsFaCrcExp') > -1) {
           oEltI.classList.remove('clsFaCrcExp')
@@ -2003,7 +2061,7 @@ let oTreeUl = (function () {
     }
   }
 
-  return oTreeUl
+  return oTriUl
 })()
 
 /**
@@ -2051,12 +2109,12 @@ if (sPathSite) {
 }
 
 fContainersInsert()
-oTreeUl.fTruCreate()
+oTriUl.fTriUlCreate()
 // IF on idMetaWebpage_path paragraph we have and the clsTocExpand
 // then the toc expands-all
 if (document.getElementById('idMetaWebpage_path')) {
   if (document.getElementById('idMetaWebpage_path').getAttribute('class') === 'clsTocExpand') {
-    oTreeUl.fTruTocExpandAll()
+    oTriUl.fTriUlExpandAll('idTocTri')
   }
 }
 if (location.hash) {
@@ -2234,6 +2292,6 @@ export {
   bEdge, bFirefox,
   nCfgPageinfoWidth,
   fContainersInsert, fEvtPreview, fTocTriCreate, fTocTriHighlightNode, fSearchname,
-  oEltCnrPreviewDiv, oEltSitemenuUl, oTreeUl,
+  oEltCnrPreviewDiv, oEltSitemenuUl, oTriUl,
   sCfgHomeLocal, sPathSite, sPathStmenu
 }
