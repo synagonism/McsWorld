@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.cellOgm-(1-4-0.2021-04-29) cell-of-organism</title>
+  <title>Mcs.cellOgm-(1-6-0.2023-04-08) cell-of-organism</title>
   <meta name="keywords" content="cell-of-organism, cellOgm, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -36,6 +36,8 @@
     <br>* McsEngl.cell-of-organism!⇒cellOgm, /sel/,
     <br>* McsEngl.cellOgm'(McsOgm000007)!⇒cellOgm,
     <br>* McsEngl.cellOgm'(cell-of-organism)!⇒cellOgm,
+    <br>* McsEngl.ogm'att030-cell!⇒cellOgm,
+    <br>* McsEngl.ogm'cell!⇒cellOgm,
     <br>====== langoChinese:
     <br>* McsZhon.xìbāo-细胞-(細胞)!=cellOgm,
     <br>* McsZhon.细胞-(細胞)-xìbāo!=cellOgm,
@@ -1415,9 +1417,11 @@
     <a class="clsHide" href="#idCellOgmwhlFH1"></a></h1>
   <p id="idCellOgmwptnam">name::
     <br>* McsEngl.cellOgm'whole-part-tree,
+    <br>* McsEngl.cellOgm'organism,
     <a class="clsHide" href="#idCellOgmwptnam"></a></p>
   <p id="idCellOgmwtr">whole-tree-of-cellOgm::
-    <br>*
+    <br>* <a class="clsPreview" href="McsOgm000003.last.html#idOgm012att004">tissue</a>,
+    <br>* <a class="clsPreview" href="McsOgm000003.last.html#idOverview">organism</a>,
     <br>* ... <a class="clsPreview" href="../dirCor/McsCor000003.last.html#idOverview">Sympan</a>.
     <a class="clsHide" href="#idCellOgmwtr"></a></p>
   <p id="idCellOgmptr">part-tree-of-cellOgm::
@@ -1816,31 +1820,45 @@
 <section id="idCellOgm009">
   <h1 id="idCellOgm009H1">cellOgm.neuron-009
     <a class="clsHide" href="#idCellOgm009H1"></a></h1>
-  <p id="idCellOgm009nam">name::
-    <br>* McsEngl.cellOgm.009-neuron!⇒cellNeuronOgm,
-    <br>* McsEngl.cellOgm.neuron-009!⇒cellNeuronOgm,
-    <br>* McsEngl.cellNeuronOgm,
-    <br>* McsEngl.neuronOgm!⇒cellNeuronOgm,
-    <br>* McsEngl.neuron-cellOgm!⇒cellNeuronOgm,
-    <a class="clsHide" href="#idCellOgm009nam"></a></p>
   <p id="idCellOgm009dsn">description::
-    <br>"A neuron, neurone (old British spelling) or nerve cell, is an electrically excitable cell[1] that communicates with other cells via specialized connections called synapses. It is the main component of nervous tissue in all animals except sponges and placozoa. Plants and fungi do not have nerve cells.
-    <br>Neurons are typically classified into three types based on their function. Sensory neurons respond to stimuli such as touch, sound, or light that affect the cells of the sensory organs, and they send signals to the spinal cord or brain. Motor neurons receive signals from the brain and spinal cord to control everything from muscle contractions to glandular output. Interneurons connect neurons to other neurons within the same region of the brain or spinal cord. A group of connected neurons is called a neural circuit.
-    <br>A typical neuron consists of a cell body (soma), dendrites, and a single axon. The soma is usually compact. The axon and dendrites are filaments that extrude from it. Dendrites typically branch profusely and extend a few hundred micrometers from the soma. The axon leaves the soma at a swelling called the axon hillock, and travels for as far as 1 meter in humans or more in other species. It branches but usually maintains a constant diameter. At the farthest tip of the axon's branches are axon terminals, where the neuron can transmit a signal across the synapse to another cell. Neurons may lack dendrites or have no axon. The term neurite is used to describe either a dendrite or an axon, particularly when the cell is undifferentiated.
+    <br>· natural-neuron is a-neuronBio created by nature.
+    <br>"A neuron, neurone, or nerve cell is an electrically excitable cell that fires electric signals called action potentials. Neurons communicate with other cells via synapses - specialized connections that commonly use minute amounts of chemical neurotransmitters to pass the electric signal from the presynaptic neuron to the target cell through the synaptic gap. The neuron is the main component of nervous tissue in all animals except sponges and placozoa. Non-animals like plants and fungi do not have nerve cells.
+    <br>Neurons are typically classified into three types based on their function. Sensory neurons respond to stimuli such as touch, sound, or light that affect the cells of the sensory organs, and they send signals to the spinal cord or brain. Motor neurons receive signals from the brain and spinal cord to control everything from muscle contractions to glandular output. Interneurons connect neurons to other neurons within the same region of the brain or spinal cord. When multiple neurons are functionally connected together, they form what is called a neural circuit.
+    <br>A typical neuron consists of a cell body (soma), dendrites, and a single axon. The soma is a compact structure, and the axon and dendrites are filaments extruding from the soma. Dendrites typically branch profusely and extend a few hundred micrometers from the soma. The axon leaves the soma at a swelling called the axon hillock and travels for as far as 1 meter in humans or more in other species. It branches but usually maintains a constant diameter. At the farthest tip of the axon's branches are axon terminals, where the neuron can transmit a signal across the synapse to another cell. Neurons may lack dendrites or have no axon. The term neurite is used to describe either a dendrite or an axon, particularly when the cell is undifferentiated.
     <br>Most neurons receive signals via the dendrites and soma and send out signals down the axon. At the majority of synapses, signals cross from the axon of one neuron to a dendrite of another. However, synapses can connect an axon to another axon or a dendrite to another dendrite.
-    <br>The signaling process is partly electrical and partly chemical. Neurons are electrically excitable, due to maintenance of voltage gradients across their membranes. If the voltage changes by a large enough amount over a short interval, the neuron generates an all-or-nothing electrochemical pulse called an action potential. This potential travels rapidly along the axon, and activates synaptic connections as it reaches them. Synaptic signals may be excitatory or inhibitory, increasing or reducing the net voltage that reaches the soma.
-    <br>In most cases, neurons are generated by neural stem cells during brain development and childhood. Neurogenesis largely ceases during adulthood in most areas of the brain. However, strong evidence supports generation of substantial numbers of new neurons in the hippocampus and olfactory bulb.[2][3]"
+    <br>The signaling process is partly electrical and partly chemical. Neurons are electrically excitable, due to maintenance of voltage gradients across their membranes. If the voltage changes by a large enough amount over a short interval, the neuron generates an all-or-nothing electrochemical pulse called an action potential. This potential travels rapidly along the axon and activates synaptic connections as it reaches them. Synaptic signals may be excitatory or inhibitory, increasing or reducing the net voltage that reaches the soma.
+    <br>In most cases, neurons are generated by neural stem cells during brain development and childhood. Neurogenesis largely ceases during adulthood in most areas of the brain."
+    <br>[{2023-04-06 retrieved} https://en.wikipedia.org/wiki/Neuron]
     <a class="clsHide" href="#idCellOgm009dsn"></a></p>
+  <p id="idCellOgm009nam">name::
+    <br>* McsEngl.brainNatural'att005-neuron!⇒neuronOgm,
+    <br>* McsEngl.brainNatural'neuron!⇒neuronOgm,
+    <br>* McsEngl.biological-neuron!⇒neuronOgm,
+    <br>* McsEngl.cellNeuronOgm!⇒neuronOgm,
+    <br>* McsEngl.cellOgm.009-neuron!⇒neuronOgm,
+    <br>* McsEngl.cellOgm.neuron-009!⇒neuronOgm,
+    <br>* McsEngl.neuronOgm,
+    <br>* McsEngl.neuron-cellOgm!⇒neuronOgm,
+    <br>* McsEngl.natural-neuron!⇒neuronOgm,
+    <br>* McsEngl.nerve-cell!⇒neuronOgm,
+    <br>* McsEngl.neuronBio.natural!⇒neuronOgm,
+    <br>* McsEngl.neurone!⇒neuronOgm,
+    <a class="clsHide" href="#idCellOgm009nam"></a></p>
+  <p id="idCellOgm009etmg">etymology::
+    <br>"The German anatomist Heinrich Wilhelm Waldeyer introduced the term neuron in 1891,[40] based on the ancient Greek νεῦρον neuron 'sinew, cord, nerve'.[41]
+    <br>The word was adopted in French with the spelling neurone. That spelling was also used by many writers in English,[42] but has now become rare in American usage and uncommon in British usage.[43][41]"
+    <br>[{2023-04-07 retrieved} https://en.wikipedia.org/wiki/Neuron#Etymology_and_spelling]
+    <a class="clsHide" href="#idCellOgm009etmg"></a></p>
 
   <section id="idCellOgm009att001">
-  <h2 id="idCellOgm009att001H2">01_disease of cellNeuronOgm
+  <h2 id="idCellOgm009att001H2">01_disease of neuronOgm
     <a class="clsHide" href="#idCellOgm009att001H2"></a></h2>
   <p id="idCellOgm009att001nam">name::
-    <br>* McsEngl.cellNeuronOgm'01_disease,
-    <br>* McsEngl.cellNeuronOgm'att001-disease,
-    <br>* McsEngl.cellNeuronOgm'disease-att001,
-    <br>* McsEngl.dssOgm.005-cellNeuronOgm,
-    <br>* McsEngl.dssOgm.cellNeuronOgm-005,
+    <br>* McsEngl.neuronOgm'01_disease,
+    <br>* McsEngl.neuronOgm'att001-disease,
+    <br>* McsEngl.neuronOgm'disease-att001,
+    <br>* McsEngl.dssOgm.005-neuronOgm,
+    <br>* McsEngl.dssOgm.neuronOgm-005,
     <a class="clsHide" href="#idCellOgm009att001nam"></a></p>
   <p id="idCellOgm009att001dsn">description::
     <br>·
@@ -1848,25 +1866,27 @@
   </section>
 
   <section id="idCellOgm009att002">
-  <h2 id="idCellOgm009att002H2">02_soma of cellNeuronOgm
+  <h2 id="idCellOgm009att002H2">02_soma of neuronOgm
     <a class="clsHide" href="#idCellOgm009att002H2"></a></h2>
-  <p id="idCellOgm009att002nam">name::
-    <br>* McsEngl.cellNeuronOgm'02_soma,
-    <br>* McsEngl.cellNeuronOgm'att002-soma,
-    <br>* McsEngl.cellNeuronOgm'soma-att002,
-    <a class="clsHide" href="#idCellOgm009att002nam"></a></p>
   <p id="idCellOgm009att002dsn">description::
-    <br>·
+    <br>"In cellular neuroscience, the soma (pl. somata or somas; from Greek σῶμα (sôma) 'body'), perikaryon (pl. perikarya), neurocyton, or cell body is the bulbous, non-process portion of a neuron or other brain cell type, containing the cell nucleus. Although it is often used to refer to neurons, it can also refer to other cell types as well, including astrocytes,[1] oligodendrocytes,[2] and microglia.[3] There are many different specialized types of neurons, and their sizes vary from as small as about 5 micrometres to over 10 millimetres for some of the smallest and largest neurons of invertebrates, respectively."
+    <br>[{2023-04-07 retrieved} https://en.wikipedia.org/wiki/Soma_(biology)]
     <a class="clsHide" href="#idCellOgm009att002dsn"></a></p>
+  <p id="idCellOgm009att002nam">name::
+    <br>* McsEngl.neuronOgm'02_soma,
+    <br>* McsEngl.neuronOgm'att002-soma,
+    <br>* McsEngl.neuronOgm'soma-att002,
+    <br>* McsEngl.soma//neuronOgm,
+    <a class="clsHide" href="#idCellOgm009att002nam"></a></p>
   </section>
 
   <section id="idCellOgm009att003">
-  <h2 id="idCellOgm009att003H2">03_neurite of cellNeuronOgm
+  <h2 id="idCellOgm009att003H2">03_neurite of neuronOgm
     <a class="clsHide" href="#idCellOgm009att003H2"></a></h2>
   <p id="idCellOgm009att003nam">name::
-    <br>* McsEngl.cellNeuronOgm'03_neurite,
-    <br>* McsEngl.cellNeuronOgm'att003-neurite,
-    <br>* McsEngl.cellNeuronOgm'neurite-att003,
+    <br>* McsEngl.neuronOgm'03_neurite,
+    <br>* McsEngl.neuronOgm'att003-neurite,
+    <br>* McsEngl.neuronOgm'neurite-att003,
     <a class="clsHide" href="#idCellOgm009att003nam"></a></p>
   <p id="idCellOgm009att003dsn">description::
     <br>·
@@ -1874,12 +1894,12 @@
   </section>
 
   <section id="idCellOgm009att004">
-  <h2 id="idCellOgm009att004H2">04_axon of cellNeuronOgm
+  <h2 id="idCellOgm009att004H2">04_axon of neuronOgm
     <a class="clsHide" href="#idCellOgm009att004H2"></a></h2>
   <p id="idCellOgm009att004nam">name::
-    <br>* McsEngl.cellNeuronOgm'04_axon,
-    <br>* McsEngl.cellNeuronOgm'att004-axon,
-    <br>* McsEngl.cellNeuronOgm'axon-att004,
+    <br>* McsEngl.neuronOgm'04_axon,
+    <br>* McsEngl.neuronOgm'att004-axon,
+    <br>* McsEngl.neuronOgm'axon-att004,
     <a class="clsHide" href="#idCellOgm009att004nam"></a></p>
   <p id="idCellOgm009att004dsn">description::
     <br>·
@@ -1887,29 +1907,33 @@
   </section>
 
   <section id="idCellOgm009att005">
-  <h2 id="idCellOgm009att005H2">05_dendrite of cellNeuronOgm
+  <h2 id="idCellOgm009att005H2">05_dendrite of neuronOgm
     <a class="clsHide" href="#idCellOgm009att005H2"></a></h2>
-  <p id="idCellOgm009att005nam">name::
-    <br>* McsEngl.cellNeuronOgm'05_dendrite,
-    <br>* McsEngl.cellNeuronOgm'att005-dendrite,
-    <br>* McsEngl.cellNeuronOgm'dendrite-att005,
-    <a class="clsHide" href="#idCellOgm009att005nam"></a></p>
   <p id="idCellOgm009att005dsn">description::
     <br>·
     <a class="clsHide" href="#idCellOgm009att005dsn"></a></p>
+  <p id="idCellOgm009att005nam">name::
+    <br>* McsEngl.dendriteOgm,
+    <br>* McsEngl.neuronOgm'05_dendrite,
+    <br>* McsEngl.neuronOgm'att005-dendrite,
+    <br>* McsEngl.neuronOgm'dendrite-att005,
+    <a class="clsHide" href="#idCellOgm009att005nam"></a></p>
   </section>
 
   <section id="idCellOgm009att006">
-  <h2 id="idCellOgm009att006H2">06_synapse of cellNeuronOgm
+  <h2 id="idCellOgm009att006H2">06_synapse of neuronOgm
     <a class="clsHide" href="#idCellOgm009att006H2"></a></h2>
-  <p id="idCellOgm009att006nam">name::
-    <br>* McsEngl.cellNeuronOgm'06_synapse,
-    <br>* McsEngl.cellNeuronOgm'att006-synapse,
-    <br>* McsEngl.cellNeuronOgm'synapse-att006,
-    <a class="clsHide" href="#idCellOgm009att006nam"></a></p>
   <p id="idCellOgm009att006dsn">description::
-    <br>·
+    <br>"In the nervous system, a synapse[1] is a structure that permits a neuron (or nerve cell) to pass an electrical or chemical signal to another neuron or to the target effector cell.
+    Synapses are essential to the transmission of nervous impulses from one neuron to another. Neurons are specialized to pass signals to individual target cells, and synapses are the means by which they do so. At a synapse, the plasma membrane of the signal-passing neuron (the presynaptic neuron) comes into close apposition with the membrane of the target (postsynaptic) cell. Both the presynaptic and postsynaptic sites contain extensive arrays of molecular machinery that link the two membranes together and carry out the signaling process. In many synapses, the presynaptic part is located on an axon and the postsynaptic part is located on a dendrite or soma. Astrocytes also exchange information with the synaptic neurons, responding to synaptic activity and, in turn, regulating neurotransmission.[2] Synapses (at least chemical synapses) are stabilized in position by synaptic adhesion molecules (SAMs) projecting from both the pre- and post-synaptic neuron and sticking together where they overlap; SAMs may also assist in the generation and functioning of synapses.[3]"
+    <br>[{2023-04-07 retrieved} https://en.wikipedia.org/wiki/Synapse]
     <a class="clsHide" href="#idCellOgm009att006dsn"></a></p>
+  <p id="idCellOgm009att006nam">name::
+    <br>* McsEngl.neuronOgm'06_synapse!⇒synapseOgm,
+    <br>* McsEngl.neuronOgm'att006-synapse!⇒synapseOgm,
+    <br>* McsEngl.neuronOgm'synapse-att006!⇒synapseOgm,
+    <br>* McsEngl.synapseOgm,
+    <a class="clsHide" href="#idCellOgm009att006nam"></a></p>
 
   <section id="idCellOgm009att006elrc">
   <h3 id="idCellOgm009att006elrcH3">synapseOgm.electric
@@ -1941,12 +1965,12 @@
   </section>
 
   <section id="idCellOgm009att008">
-  <h2 id="idCellOgm009att008H2">07_membrane of cellNeuronOgm
+  <h2 id="idCellOgm009att008H2">07_membrane of neuronOgm
     <a class="clsHide" href="#idCellOgm009att008H2"></a></h2>
   <p id="idCellOgm009att008nam">name::
-    <br>* McsEngl.cellNeuronOgm'07_membrane,
-    <br>* McsEngl.cellNeuronOgm'membrane,
-    <br>* McsEngl.cellNeuronOgm'att008-membrane,
+    <br>* McsEngl.neuronOgm'07_membrane,
+    <br>* McsEngl.neuronOgm'membrane,
+    <br>* McsEngl.neuronOgm'att008-membrane,
     <a class="clsHide" href="#idCellOgm009att008nam"></a></p>
   <p id="idCellOgm009att008dsn">description::
     <br>"Like all animal cells, the cell body of every neuron is enclosed by a plasma membrane, a bilayer of lipid molecules with many types of protein structures embedded in it. A lipid bilayer is a powerful electrical insulator, but in neurons, many of the protein structures embedded in the membrane are electrically active. These include ion channels that permit electrically charged ions to flow across the membrane and ion pumps that chemically transport ions from one side of the membrane to the other. Most ion channels are permeable only to specific types of ions. Some ion channels are voltage gated, meaning that they can be switched between open and closed states by altering the voltage difference across the membrane. Others are chemically gated, meaning that they can be switched between open and closed states by interactions with chemicals that diffuse through the extracellular fluid. The ion materials include sodium, potassium, chloride, and calcium. The interactions between ion channels and ion pumps produce a voltage difference across the membrane, typically a bit less than 1/10 of a volt at baseline. This voltage has two functions: first, it provides a power source for an assortment of voltage-dependent protein machinery that is embedded in the membrane; second, it provides a basis for electrical signal transmission between different parts of the membrane."
@@ -1954,11 +1978,23 @@
     <a class="clsHide" href="#idCellOgm009att008dsn"></a></p>
   </section>
 
+  <section id="idCellOgm009nbr">
+  <h2 id="idCellOgm009nbrH2">number of neuronOgm
+    <a class="clsHide" href="#idCellOgm009nbrH2"></a></h2>
+  <p id="idCellOgm009nbrdsn">description::
+    <br>"The number of neurons in the brain varies dramatically from species to species.[55] In a human, there are an estimated 10–20 billion neurons in the cerebral cortex and 55–70 billion neurons in the cerebellum.[56] By contrast, the nematode worm Caenorhabditis elegans has just 302 neurons, making it an ideal model organism as scientists have been able to map all of its neurons. The fruit fly Drosophila melanogaster, a common subject in biological experiments, has around 100,000 neurons and exhibits many complex behaviors. Many properties of neurons, from the type of neurotransmitters used to ion channel composition, are maintained across species, allowing scientists to study processes occurring in more complex organisms in much simpler experimental systems."
+    <br>[{2023-04-07 retrieved} https://en.wikipedia.org/wiki/Neuron#Neurons_in_the_brain]
+    <a class="clsHide" href="#idCellOgm009nbrdsn"></a></p>
+  <p id="idCellOgm009nbrnam">name::
+    <br>* McsEngl.neuronOgm'number,
+    <a class="clsHide" href="#idCellOgm009nbrnam"></a></p>
+  </section>
+
   <section id="idCellOgm009rscF">
-  <h2 id="idCellOgm009rscFH2">info-resource of cellNeuronOgm
+  <h2 id="idCellOgm009rscFH2">info-resource of neuronOgm
     <a class="clsHide" href="#idCellOgm009rscFH2"></a></h2>
   <p id="idCellOgm009rscFnam">name::
-    <br>* McsEngl.cellNeuronOgm'Infrsc,
+    <br>* McsEngl.neuronOgm'Infrsc,
     <a class="clsHide" href="#idCellOgm009rscFnam"></a></p>
   <p id="idCellOgm009rscFdsn">description::
     <br>·
@@ -1966,10 +2002,10 @@
   </section>
 
   <section id="idCellOgm009srtrF">
-  <h2 id="idCellOgm009srtrFH2">structure of cellNeuronOgm
+  <h2 id="idCellOgm009srtrFH2">structure of neuronOgm
     <a class="clsHide" href="#idCellOgm009srtrFH2"></a></h2>
   <p id="idCellOgm009srtrFnam">name::
-    <br>* McsEngl.cellNeuronOgm'structure,
+    <br>* McsEngl.neuronOgm'structure,
     <a class="clsHide" href="#idCellOgm009srtrFnam"></a></p>
   <p id="idCellOgm009srtrFdsn">description::
     <br>·
@@ -1977,22 +2013,22 @@
   </section>
 
   <section id="idCellOgm009dngF">
-  <h2 id="idCellOgm009dngFH2">DOING of cellNeuronOgm
+  <h2 id="idCellOgm009dngFH2">DOING of neuronOgm
     <a class="clsHide" href="#idCellOgm009dngFH2"></a></h2>
   <p id="idCellOgm009dngFnam">name::
-    <br>* McsEngl.cellNeuronOgm'doing,
+    <br>* McsEngl.neuronOgm'doing,
     <a class="clsHide" href="#idCellOgm009dngFnam"></a></p>
   <p id="idCellOgm009dngFdsn">description::
     <br>·
     <a class="clsHide" href="#idCellOgm009dngFdsn"></a></p>
 
   <section id="idCellOgm009att007">
-  <h3 id="idCellOgm009att007H3">nerve-impulse of cellNeuronOgm
+  <h3 id="idCellOgm009att007H3">nerve-impulse of neuronOgm
     <a class="clsHide" href="#idCellOgm009att007H3"></a></h3>
   <p id="idCellOgm009att007nam">name::
-    <br>* McsEngl.cellNeuronOgm'nerve-impulse,
-    <br>* McsEngl.cellNeuronOgm'att007-nerve-impulse,
-    <br>* McsEngl.cellNeuronOgm'nerve-impulse-att007,
+    <br>* McsEngl.neuronOgm'nerve-impulse,
+    <br>* McsEngl.neuronOgm'att007-nerve-impulse,
+    <br>* McsEngl.neuronOgm'nerve-impulse-att007,
     <a class="clsHide" href="#idCellOgm009att007nam"></a></p>
   <p id="idCellOgm009att007dsn">description::
     <br>"The signaling process is partly electrical and partly chemical. Neurons are electrically excitable, due to maintenance of voltage gradients across their membranes. If the voltage changes by a large enough amount over a short interval, the neuron generates an all-or-nothing electrochemical pulse called an action potential. This potential travels rapidly along the axon, and activates synaptic connections as it reaches them. Synaptic signals may be excitatory or inhibitory, increasing or reducing the net voltage that reaches the soma."
@@ -2002,10 +2038,10 @@
   </section>
 
   <section id="idCellOgm009evgF">
-  <h2 id="idCellOgm009evgFH2">evoluting of cellNeuronOgm
+  <h2 id="idCellOgm009evgFH2">evoluting of neuronOgm
     <a class="clsHide" href="#idCellOgm009evgFH2"></a></h2>
   <p id="idCellOgm009evgFnam">name::
-    <br>* McsEngl.cellNeuronOgm'evoluting,
+    <br>* McsEngl.neuronOgm'evoluting,
     <a class="clsHide" href="#idCellOgm009evgFnam"></a></p>
   <p id="idCellOgm009evgFdsn">description::
     <br>·
@@ -2013,13 +2049,14 @@
   </section>
 
   <section id="idCellOgm009001">
-  <h2 id="idCellOgm009001H2">cellNeuronOgm.sensory-001
+  <h2 id="idCellOgm009001H2">neuronOgm.sensory-001
     <a class="clsHide" href="#idCellOgm009001H2"></a></h2>
   <p id="idCellOgm009001nam">name::
-    <br>* McsEngl.cellNeuronOgm.001sensory!⇒neuronSensoryOgm,
-    <br>* McsEngl.cellNeuronOgm.sensory-001!⇒neuronSensoryOgm,
-    <br>* McsEngl.afferent-neuron-of-ogm!⇒neuronSensoryOgm,
-    <br>* McsEngl.neuronSensoryOgm,
+    <br>* McsEngl.neuronOgm.001-sensory!⇒neuronSenseOgm,
+    <br>* McsEngl.neuronOgm.sensory-001!⇒neuronSenseOgm,
+    <br>* McsEngl.afferent-neuron-of-ogm!⇒neuronSenseOgm,
+    <br>* McsEngl.neuronSenseOgm,
+    <br>* McsEngl.neuronSensory!⇒neuronSenseOgm,
     <a class="clsHide" href="#idCellOgm009001nam"></a></p>
   <p id="idCellOgm009001dsn">description::
     <br>"Sensory neurons, also known as afferent neurons, are neurons in the central nervous system, that convert a specific type of stimulus, via their receptors, into action potentials or graded potentials.[1] This process is called sensory transduction. The cell bodies of the sensory neurons are located in the dorsal ganglia of the spinal cord.[2]
@@ -2027,14 +2064,29 @@
     <br>Different types of sensory neurons have different sensory receptors that respond to different kinds of stimuli."
     <br>[{2020-04-24} https://en.wikipedia.org/wiki/Sensory_neuron]
     <a class="clsHide" href="#idCellOgm009001dsn"></a></p>
+
+  <section id="idCellOgm009001Pain">
+  <h3 id="idCellOgm009001PainH3">neuronSenseOgm.nociceptor
+    <a class="clsHide" href="#idCellOgm009001PainH3"></a></h3>
+  <p id="idCellOgm009001Paindsn">description::
+    <br>"A nociceptor ("pain receptor" from Latin nocere 'to harm or hurt') is a sensory neuron that responds to damaging or potentially damaging stimuli by sending "possible threat" signals[1][2][3] to the spinal cord and the brain. The brain creates the sensation of pain to direct attention to the body part, so the threat can be mitigated; this process is called nociception."
+    <br>[{2023-04-08 retrieved} https://en.wikipedia.org/wiki/Nociceptor]
+    <a class="clsHide" href="#idCellOgm009001Paindsn"></a></p>
+  <p id="idCellOgm009001Painnam">name::
+    <br>* McsEngl.neuronSenseOgm.nociceptor!⇒nociceptorOgm,
+    <br>* McsEngl.neuronSenseOgm.nociceptor!⇒nociceptorOgm,
+    <br>* McsEngl.nociceptorOgm,
+    <br>* McsEngl.pain-receptor!⇒nociceptorOgm,
+    <a class="clsHide" href="#idCellOgm009001Painnam"></a></p>
+  </section>
   </section>
 
   <section id="idCellOgm009002">
-  <h2 id="idCellOgm009002H2">cellNeuronOgm.motor-002
+  <h2 id="idCellOgm009002H2">neuronOgm.motor-002
     <a class="clsHide" href="#idCellOgm009002H2"></a></h2>
   <p id="idCellOgm009002nam">name::
-    <br>* McsEngl.cellNeuronOgm.002-motor!⇒neuronMotorOgm,
-    <br>* McsEngl.cellNeuronOgm.motor-002!⇒neuronMotorOgm,
+    <br>* McsEngl.neuronOgm.002-motor!⇒neuronMotorOgm,
+    <br>* McsEngl.neuronOgm.motor-002!⇒neuronMotorOgm,
     <br>* McsEngl.neuronMotorOgm,
     <a class="clsHide" href="#idCellOgm009002nam"></a></p>
   <p id="idCellOgm009002dsn">description::
@@ -2045,11 +2097,11 @@
   </section>
 
   <section id="idCellOgm009003">
-  <h2 id="idCellOgm009003H2">cellNeuronOgm.interneuron-003
+  <h2 id="idCellOgm009003H2">neuronOgm.interneuron-003
     <a class="clsHide" href="#idCellOgm009003H2"></a></h2>
   <p id="idCellOgm009003nam">name::
-    <br>* McsEngl.cellNeuronOgm.003-interneuron!⇒neuronInterOgm,
-    <br>* McsEngl.cellNeuronOgm.interneuron-003!⇒neuronInterOgm,
+    <br>* McsEngl.neuronOgm.003-interneuron!⇒neuronInterOgm,
+    <br>* McsEngl.neuronOgm.interneuron-003!⇒neuronInterOgm,
     <br>* McsEngl.interneuron-of-ogm-003!⇒neuronInterOgm,
     <br>* McsEngl.neuronInterOgm,
     <a class="clsHide" href="#idCellOgm009003nam"></a></p>
@@ -2061,10 +2113,10 @@
   </section>
 
   <section id="idCellOgm009004">
-  <h2 id="idCellOgm009004H2">cellNeuronOgm.unipolar-004
+  <h2 id="idCellOgm009004H2">neuronOgm.unipolar-004
     <a class="clsHide" href="#idCellOgm009004H2"></a></h2>
   <p id="idCellOgm009004nam">name::
-    <br>* McsEngl.cellNeuronOgm.004-unipolar,
+    <br>* McsEngl.neuronOgm.004-unipolar,
     <a class="clsHide" href="#idCellOgm009004nam"></a></p>
   <p id="idCellOgm009004dsn">description::
     <br>"A unipolar neuron is a type of neuron in which only one process called a neurite extends from the cell body.[2] Most neurons are multipolar, generating several dendrites and an axon and there are also many bipolar neurons. Unipolar neurons that begin as bipolar neurons during development are known as pseudounipolar neurons.[citation needed]
@@ -2076,11 +2128,11 @@
   </section>
 
   <section id="idCellOgm009005">
-  <h2 id="idCellOgm009005H2">cellNeuronOgm.bipolar-005
+  <h2 id="idCellOgm009005H2">neuronOgm.bipolar-005
     <a class="clsHide" href="#idCellOgm009005H2"></a></h2>
   <p id="idCellOgm009005nam">name::
-    <br>* McsEngl.cellNeuronOgm.005-bipolar,
-    <br>* McsEngl.cellNeuronOgm.bipolar-005,
+    <br>* McsEngl.neuronOgm.005-bipolar,
+    <br>* McsEngl.neuronOgm.bipolar-005,
     <a class="clsHide" href="#idCellOgm009005nam"></a></p>
   <p id="idCellOgm009005dsn">description::
     <br>"A bipolar neuron, or bipolar cell, is a type of neuron that has two extensions (one axon and one dendrite). Many bipolar cells are specialized sensory neurons for the transmission of sense. As such, they are part of the sensory pathways for smell, sight, taste, hearing, touch, balance and proprioception. The other shape classifications of neurons include unipolar, pseudounipolar and multipolar. During embryonic development, pseudounipolar neurons begin as bipolar in shape but become pseudounipolar as they mature.[1]
@@ -2090,11 +2142,11 @@
   </section>
 
   <section id="idCellOgm009006">
-  <h2 id="idCellOgm009006H2">cellNeuronOgm.multipolar-006
+  <h2 id="idCellOgm009006H2">neuronOgm.multipolar-006
     <a class="clsHide" href="#idCellOgm009006H2"></a></h2>
   <p id="idCellOgm009006nam">name::
-    <br>* McsEngl.cellNeuronOgm.006-multipolar,
-    <br>* McsEngl.cellNeuronOgm.multipolar-006,
+    <br>* McsEngl.neuronOgm.006-multipolar,
+    <br>* McsEngl.neuronOgm.multipolar-006,
     <a class="clsHide" href="#idCellOgm009006nam"></a></p>
   <p id="idCellOgm009006dsn">description::
     <br>"A multipolar neuron is a type of neuron that possesses a single axon and many dendrites (and dendritic branches), allowing for the integration of a great deal of information from other neurons. These processes are projections from the neuron cell body. Multipolar neurons constitute the majority of neurons in the central nervous system. They include motor neurons and interneurons/relaying neurons are most commonly found in the cortex of the brain and the spinal cord. Peripherally, multipolar neurons are found in autonomic ganglia."
@@ -2103,11 +2155,11 @@
   </section>
 
   <section id="idCellOgm009007">
-  <h2 id="idCellOgm009007H2">cellNeuronOgm.head-directed-007
+  <h2 id="idCellOgm009007H2">neuronOgm.head-directed-007
     <a class="clsHide" href="#idCellOgm009007H2"></a></h2>
   <p id="idCellOgm009007nam">name::
-    <br>* McsEngl.cellNeuronOgm.007-head-directed,
-    <br>* McsEngl.cellNeuronOgm.head-directed,
+    <br>* McsEngl.neuronOgm.007-head-directed,
+    <br>* McsEngl.neuronOgm.head-directed,
     <a class="clsHide" href="#idCellOgm009007nam"></a></p>
   <p id="idCellOgm009007dsn">description::
     <br>"Head direction (HD) cells are neurons found in a number of brain regions that increase their firing rates above baseline levels only when the animal's head points in a specific direction. They have been reported in rats,[1] monkeys,[2] mice,[3] chinchillas[4] and bats,[5] but are thought to be common to all mammals, perhaps all vertebrates and perhaps even some invertebrates,[6] and to underlie the "sense of direction". When the animal's head is facing in the cell's "preferred firing direction" these neurons fire at a steady rate (i.e., they do not show adaptation), but firing decreases back to baseline rates as the animal's head turns away from the preferred direction (usually about 45° away from this direction).[7]"
@@ -2116,12 +2168,12 @@
   </section>
 
   <section id="idCellOgm009008">
-  <h2 id="idCellOgm009008H2">cellNeuronOgm.pyramidal-008
+  <h2 id="idCellOgm009008H2">neuronOgm.pyramidal-008
     <a class="clsHide" href="#idCellOgm009008H2"></a></h2>
   <p id="idCellOgm009008nam">name::
-    <br>* McsEngl.cellNeuronOgm.pyramidal, /pirámidal/,
-    <br>* McsEngl.cellNeuronOgm.008-pyramidal,
-    <br>* McsEngl.pyramidal-cellNeuronOgm,
+    <br>* McsEngl.neuronOgm.pyramidal, /pirámidal/,
+    <br>* McsEngl.neuronOgm.008-pyramidal,
+    <br>* McsEngl.pyramidal-neuronOgm,
     <a class="clsHide" href="#idCellOgm009008nam"></a></p>
   <p id="idCellOgm009008dsn">description::
     <br>"Pyramidal cells, or pyramidal neurons, are a type of multipolar neuron found in areas of the brain including the cerebral cortex, the hippocampus, and the amygdala. Pyramidal neurons are the primary excitation units of the mammalian prefrontal cortex and the corticospinal tract. Pyramidal neurons are also one of two cell types where the characteristic sign, Negri bodies, are found in post-mortem rabies infection.[1] Pyramidal neurons were first discovered and studied by Santiago Ramón y Cajal.[2][3] Since then, studies on pyramidal neurons have focused on topics ranging from neuroplasticity to cognition."
@@ -2130,12 +2182,12 @@
   </section>
 
   <section id="idCellOgm009009">
-  <h2 id="idCellOgm009009H2">cellNeuronOgm.place-009
+  <h2 id="idCellOgm009009H2">neuronOgm.place-009
     <a class="clsHide" href="#idCellOgm009009H2"></a></h2>
   <p id="idCellOgm009009nam">name::
-    <br>* McsEngl.cellNeuronOgm.place,
-    <br>* McsEngl.cellNeuronOgm.009-place,
-    <br>* McsEngl.place-cellNeuronOgm,
+    <br>* McsEngl.neuronOgm.place,
+    <br>* McsEngl.neuronOgm.009-place,
+    <br>* McsEngl.place-neuronOgm,
     <a class="clsHide" href="#idCellOgm009009nam"></a></p>
   <p id="idCellOgm009009dsn">description::
     <br>"A place cell is a kind of pyramidal neuron within the hippocampus that becomes active when an animal enters a particular place in its environment, which is known as the place field. Place cells are thought, collectively, to act as a cognitive representation of a specific location in space, known as a cognitive map.[1] Place cells work with other types of neurons in the hippocampus and surrounding regions to perform this kind of spatial processing.[2] They have been found in a variety of animals, including rodents, bats, monkeys and humans."
@@ -2144,12 +2196,12 @@
   </section>
 
   <section id="idCellOgm009010">
-  <h2 id="idCellOgm009010H2">cellNeuronOgm.grid-010
+  <h2 id="idCellOgm009010H2">neuronOgm.grid-010
     <a class="clsHide" href="#idCellOgm009010H2"></a></h2>
   <p id="idCellOgm009010nam">name::
-    <br>* McsEngl.cellNeuronOgm.grid,
-    <br>* McsEngl.cellNeuronOgm.010-grid,
-    <br>* McsEngl.grid-cellNeuronOgm,
+    <br>* McsEngl.neuronOgm.grid,
+    <br>* McsEngl.neuronOgm.010-grid,
+    <br>* McsEngl.grid-neuronOgm,
     <a class="clsHide" href="#idCellOgm009010nam"></a></p>
   <p id="idCellOgm009010dsn">description::
     <br>"A grid cell is a type of neuron within the entorhinal cortex that fires at regular intervals as an animal navigates an open area, allowing it to understand its position in space by storing and integrating information about location, distance, and direction.[1] Grid cells have been found in many animals, including rats,[1] mice,[2] bats,[3] monkeys,[4] and humans."
