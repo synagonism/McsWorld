@@ -33,7 +33,8 @@
  * OUTPUT: McsDir000000.last.html
  * RUN: node Mcsmgr/mMcsNew.mjs pwd
  *
- * ISSUE: IF you want to recreate the-file, you have to delete IT from aPages.json
+ * ISSUE: IF you want to recreate the-file,
+ * you have to delete IT from aPages.json
  */
 
 import moFs from 'fs'
@@ -84,18 +85,18 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirLag',
+  sDir = 'dirHlth',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Turkish-language',
+  sName = 'nervous-system',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'lagTurk',
+  sNameShort = 'sysNervous',
 
   //5. FILE-name:
   sNameFile = '',
   sNameFileNaked = '',
   //6. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'LTurk',
+  sNameId = 'SysNrvs',
   //
   aPages,
   nFile = 0,
