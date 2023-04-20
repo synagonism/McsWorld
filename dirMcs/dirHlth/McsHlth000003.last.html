@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.ognBrain-(1-8-0.2023-04-13) human-brain</title>
+  <title>Mcs.ognBrain-(1-12-0.2023-04-19) human-brain</title>
   <meta name="keywords" content="human-brain, ognBrain, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -46,6 +46,7 @@
     <br>* McsEngl.dirMcs/dirHlth/McsHlth000003.last.html!⇒ognBrain,
     <br>* McsEngl.sysNervous'07_ognBrain!⇒ognBrain,
     <br>* McsEngl.sysNervous'ognBrain!⇒ognBrain,
+    <br>* McsEngl.sysNervous/central/ognBrain!⇒ognBrain,
     <br>* McsEngl.organ.002-brain!⇒ognBrain,
     <br>* McsEngl.organ.brain-002!⇒ognBrain,
     <br>* McsEngl.brain!⇒ognBrain,
@@ -78,7 +79,9 @@
     <br>* McsEngl.ognBrain'01_cerebrum,
     <br>* McsEngl.ognBrain'att004-cerebrum,
     <br>* McsEngl.ognBrain'cerebrum-att004,
+    <br>* McsEngl.ognBrain/cerebrum,
     <br>* McsEngl.cerebrum, /seríbram/,
+    <br>* McsEngl.cerebrum//ognBrain,
     <br>* McsEngl.forebrain'cerebrum,
     <br>* McsEngl.telencephalon,
     <br>====== langoGreek:
@@ -546,7 +549,9 @@
     <br>* McsEngl.ognBrain'02_brainstem,
     <br>* McsEngl.ognBrain'att039-brainstem,
     <br>* McsEngl.ognBrain'brainstem-att039,
+    <br>* McsEngl.ognBrain/brainstem,
     <br>* McsEngl.brainstem,
+    <br>* McsEngl.brainstem//ognBrain,
     <br>====== langoGreek:
     <br>* McsElln.στέλεχος-εγκεφάλου!=brainstem,
     <a class="clsHide" href="#idBrnHmnatt039nam"></a></p>
@@ -915,6 +920,10 @@
   <section id="idBrnHmnatt042">
   <h2 id="idBrnHmnatt042H2">04_medulla-oblongata of brainstem
     <a class="clsHide" href="#idBrnHmnatt042H2"></a></h2>
+  <p id="idBrnHmnatt042dsnL">descriptionLong::
+    <br>"The medulla oblongata or simply medulla is a long stem-like structure which makes up the lower part of the brainstem.[1] It is anterior and partially inferior to the cerebellum. It is a cone-shaped neuronal mass responsible for autonomic (involuntary) functions, ranging from vomiting to sneezing.[2] The medulla contains the cardiac, respiratory, vomiting and vasomotor centers, and therefore deals with the autonomic functions of breathing, heart rate and blood pressure as well as the sleep–wake cycle.[2]"
+    <br>[{2023-04-16 retrieved} https://en.wikipedia.org/wiki/Medulla_oblongata]
+    <a class="clsHide" href="#idBrnHmnatt042dsnL"></a></p>
   <p id="idBrnHmnatt042nam">name::
     <br>* McsEngl.brainstem'04_medulla-oblongata,
     <br>* McsEngl.brainstem'medulla-oblongata,
@@ -983,8 +992,10 @@
     <br>* McsEngl.ognBrain'03_cerebellum,
     <br>* McsEngl.ognBrain'att005-cerebellum,
     <br>* McsEngl.ognBrain'cerebellum-att005,
+    <br>* McsEngl.ognBrain/cerebellum,
     <br>* McsEngl.cerebellum,
-    <br>* McsEngl.hindBrain'cerebellum,
+    <br>* McsEngl.cerebellum//ognBrain,
+    <br>* McsEngl.hindbrain;cerebellum,
     <br>====== langoGreek:
     <br>* McsElln.παρεγκεφαλίδα!=cerebellum,
     <a class="clsHide" href="#idBrnHmnatt005nam"></a></p>
@@ -1059,19 +1070,34 @@
   <h1 id="idBrnHmnatt036H1">04_large-scale-net of ognBrain
     <a class="clsHide" href="#idBrnHmnatt036H1"></a></h1>
   <p id="idBrnHmnatt036nam">name::
-    <br>* McsEngl.ognBrain'04_large-scale-net,
-    <br>* McsEngl.ognBrain'att036-large-scale-net,
-    <br>* McsEngl.ognBrain'large-scale-net-att036,
-    <br>* McsEngl.large-scale-brain-net,
+    <br>* McsEngl.brain-network!⇒netBrain,
+    <br>* McsEngl.ognBrain'04_large-scale-net!⇒netBrain,
+    <br>* McsEngl.ognBrain'att036-large-scale-net!⇒netBrain,
+    <br>* McsEngl.ognBrain'large-scale-net-att036!⇒netBrain,
+    <br>* McsEngl.large-scale-brain-net!⇒netBrain,
+    <br>* McsEngl.netBrain,
     <a class="clsHide" href="#idBrnHmnatt036nam"></a></p>
   <p id="idBrnHmnatt036dsn">description::
     <br>"Large-scale brain networks are collections of widespread brain regions showing functional connectivity by statistical analysis of the fMRI BOLD signal,[1] or other recording methods such as EEG,[2] PET[3] and MEG.[4] An emerging paradigm in neuroscience is that cognitive tasks are performed not by individual brain regions working in isolation, but by networks consisting of several discrete brain regions that are said to be "functionally connected" due to tightly coupled activity. Functional connectivity may be measured as long-range synchronization of the EEG, MEG, or other dynamic brain signals.[5] Synchronized brain regions may also be identified using spatial independent component analysis (ICA). The set of identified brain areas that are linked together in a large-scale network varies with cognitive function.[6] When the cognitive state is not explicit (i.e., the subject is at "rest"), the large-scale brain network is a resting state network (RSN). As a physical system with graph-like properties,[5] a large-scale brain network has both nodes and edges, and cannot be identified simply by the co-activation of brain areas. In recent decades, the analysis of brain networks was made feasible by advances in imaging techniques as well as new tools from graph theory and dynamical systems. Large-scale brain networks are identified by their function, and provide a coherent framework for understanding cognition by offering a neural model of how different cognitive functions emerge when different sets of brain regions join together as self-organized coalitions. The identification of the coalitions will vary with different parameters used to run the ICA algorithm,[7] which can results in a different number of networks. In one model, there is only the Default Mode Network and the task-positive network, but most current analyses show several networks, which are enumerated below. The property called functional network flexibility a brain region with strong functional connections within a brain network suddenly establish many connections to a different network.[8] The ICA algorithm Disruptions in activity in various networks have been implicated in neuropsychiatric disorders such as depression, Alzheimer's, autism spectrum disorder, schizophrenia and bipolar disorder.[9]"
     <br>[{2020-04-29} https://en.wikipedia.org/wiki/Large-scale_brain_networks]
     <a class="clsHide" href="#idBrnHmnatt036dsn"></a></p>
+
+  <section id="idBrnHmnatt036Spc">
+  <h2 id="idBrnHmnatt036SpcH2">netBrain.SPECIFIC
+    <a class="clsHide" href="#idBrnHmnatt036SpcH2"></a></h2>
+  <p id="idBrnHmnatt036Spcdsn">description::
+    <br>"There are several brain networks identified by scientists, including the default mode network (DMN), the central executive network (CEN), and the salience network (SN). The DMN is active when a person is not focused on the outside world and is instead engaged in introspection, daydreaming, or mind-wandering. The CEN, on the other hand, is activated when a person is focused on a particular task that requires cognitive control and attention. The SN is activated when a person is experiencing a strong emotional response or detecting salient stimuli in the environment.
+    <br>These networks are not isolated from each other but instead work together to facilitate various cognitive processes, such as memory, attention, emotion regulation, and decision-making. The study of brain networks has led to a better understanding of brain function and the underlying mechanisms of various neurological and psychiatric disorders."
+    <br>[{2023-04-16 retrieved} https://chat.openai.com/]
+    <a class="clsHide" href="#idBrnHmnatt036Spcdsn"></a></p>
+  <p id="idBrnHmnatt036Spcnam">name::
+    <br>* McsEngl.netBrain.specific,
+    <a class="clsHide" href="#idBrnHmnatt036Spcnam"></a></p>
+  </section>
 </section>
 
 <section id="idBrnHmnatt010">
-  <h1 id="idBrnHmnatt010H1">05_cell (<a class="clsPreview" href="McsHlth000004.last.html#idCellHmn001">link</a>) of ognBrain
+  <h1 id="idBrnHmnatt010H1">05_cell (<a class="clsPreview" href="McsHlth000019.last.html#idSysNrvsatt078">link</a>) of ognBrain
     <a class="clsHide" href="#idBrnHmnatt010H1"></a></h1>
 </section>
 
@@ -1571,15 +1597,12 @@
   <p id="idBrnHmnwptnam">name::
     <br>* McsEngl.ognBrain'whole-part-tree,
     <a class="clsHide" href="#idBrnHmnwptnam"></a></p>
-  <p id="idBrnHmnwtr">whole-tree-of-::
-    <br>* <a class="clsPreview" href="#idSysNrvsatt002wtr">sysNervousCentral</a>,
+  <p id="idBrnHmnwtr">whole-tree-of-ognBrain::
+    <br>* <a class="clsPreview" href="#idSysNrvsatt002wtr">sysNervous/central</a>,
     <a class="clsHide" href="#idBrnHmnwtr"></a></p>
-  <p id="idBrnHmnptr">part-tree-of-::
+  <p id="idBrnHmnptr">part-tree-of-ognBrain::
     <br>* ,
     <a class="clsHide" href="#idBrnHmnptr"></a></p>
-  <p id="idBrnHmnwNtr">wholeNo-tree-of-::
-    <br>* ,
-    <a class="clsHide" href="#idBrnHmnwNtr"></a></p>
 </section>
 
 <section id="idBrnHmngst">
