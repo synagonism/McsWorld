@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.time-(1-33-0.2023-05-18)</title>
+  <title>Mcs.time-(1-36-0.2023-05-26)</title>
   <meta name="keywords" content="time, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -351,6 +351,7 @@ Tā gāngcái lái zhǎoguò nǐ. != [He] [just now] {has come} [to look for you
   <p id="idTimePntnam">name::
     <br>* McsEngl.point-in-time!⇒timePoint,
     <br>* McsEngl.time-point!⇒timePoint,
+    <br>* McsEngl.time-when!⇒timePoint,
     <br>* McsEngl.time.intervalNo!⇒timePoint,
     <br>* McsEngl.time.point!⇒timePoint,
     <br>* McsEngl.timePoint,
@@ -409,8 +410,10 @@ Tā gāngcái lái zhǎoguò nǐ. != [He] [just now] {has come} [to look for you
     <a class="clsHide" href="#idTimePntNdsn"></a></p>
   <p id="idTimePntNnam">name::
     <br>* McsEngl.{i...}'(timeInterval)!⇒timeInterval,
+    <br>* McsEngl.time-duration!⇒timeInterval,
     <br>* McsEngl.time-interval!⇒timeInterval,
     <br>* McsEngl.time-period!⇒timeInterval,
+    <br>* McsEngl.time-quantity!⇒timeInterval,
     <br>* McsEngl.time.interval!⇒timeInterval,
     <br>* McsEngl.time.pointNo!⇒timeInterval,
     <br>* McsEngl.timeInterval,
@@ -427,6 +430,7 @@ Tā gāngcái lái zhǎoguò nǐ. != [He] [just now] {has come} [to look for you
     <br>· stxEngl: _stxVrb:{don't look} _stxSpace:[back] _stxTime:[<span class="clsColorRed">(while)</span> you walk]. [WordNet 2.0]
     <a class="clsHide" href="#idTimePntNstxdsn"></a></p>
   <p id="idTimePntNstxnam">name::
+    <br>* McsEngl._stxTimeInterval,
     <br>* McsEngl.rlnTimeInterval'syntax,
     <br>* McsEngl.during!~conjEngl:rlnTimeInterval,
     <br>* McsEngl.syntax.during!~conjEngl:rlnTimeInterval,
@@ -1043,7 +1047,7 @@ Tā gāngcái lái zhǎoguò nǐ. != [He] [just now] {has come} [to look for you
   </section>
 
   <section id="idTimeRltvBfrc">
-  <h2 id="idTimeRltvBfrcH2">time.relative.before-current-time
+  <h2 id="idTimeRltvBfrcH2">time.relative.current.before
     <a class="clsHide" href="#idTimeRltvBfrcH2"></a></h2>
   <p id="idTimeRltvBfrcdsn">description::
     <br>· time, relative, before current-time.
@@ -1082,7 +1086,7 @@ Tā gāngcái lái zhǎoguò nǐ. != [He] [just now] {has come} [to look for you
   </section>
 
   <section id="idTimeRltvSamec">
-  <h2 id="idTimeRltvSamecH2">time.relative.same-current-time
+  <h2 id="idTimeRltvSamecH2">time.relative.current.same
     <a class="clsHide" href="#idTimeRltvSamecH2"></a></h2>
   <p id="idTimeRltvSamecdsn">description::
     <br>· time, relative, same current-time.
@@ -1110,7 +1114,7 @@ Tā gāngcái lái zhǎoguò nǐ. != [He] [just now] {has come} [to look for you
   </section>
 
   <section id="idTimeRltvAfrc">
-  <h2 id="idTimeRltvAfrcH2">time.relative.after-current-time
+  <h2 id="idTimeRltvAfrcH2">time.relative.current.after
     <a class="clsHide" href="#idTimeRltvAfrcH2"></a></h2>
   <p id="idTimeRltvAfrcdsn">description::
     <br>· time, relative, after current-time.
@@ -1132,9 +1136,52 @@ Tā gāngcái lái zhǎoguò nǐ. != [He] [just now] {has come} [to look for you
     <br>·
     <a class="clsHide" href="#idTimeRltvAfrcstxdsn"></a></p>
   <p id="idTimeRltvAfrcstxnam">name::
-    <br>* McsEngl.syntax.rlnTimeAfterCurrent,
+    <br>* McsEngl.syntax.rlnTimeCurrentAfter,
     <a class="clsHide" href="#idTimeRltvAfrcstxnam"></a></p>
   </section>
+  </section>
+
+  <section id="idTimeRltvExpdBefr">
+  <h2 id="idTimeRltvExpdBefrH2">time.relative.expected.before
+    <a class="clsHide" href="#idTimeRltvExpdBefrH2"></a></h2>
+  <p id="idTimeRltvExpdBefrdsn">description::
+    <br>" “才” indicates that the speaker feels that something happened later than expected with a tone of anxiety, impatience, tiredness or other related emotions, while “就” indicates something occurred earlier than expected with a feeling of surprise or amazement sometimes.
+    <br>· stxZhon: 就要亮了，我们再等一会儿。 Jiù yào liàngle, wǒmen zài děng yīhuǐ'er. != It's about to light up, let's wait a little longer."
+    <br>[{2023-05-23 retrieved} https://www.digmandarin.com/top-20-common-mistakes-chinese-learners-make.html]
+    <a class="clsHide" href="#idTimeRltvExpdBefrdsn"></a></p>
+  <p id="idTimeRltvExpdBefrnam">name::
+    <br>* McsEngl.time.relative.expected.before,
+    <br>====== langoChinese:
+    <br>* McsZhon.jiù-就-time.relative.expected.before,
+    <br>* McsZhon.就-jiù-time.relative.expected.before,
+    <a class="clsHide" href="#idTimeRltvExpdBefrnam"></a></p>
+  </section>
+
+  <section id="idTimeRltvExpdSame">
+  <h2 id="idTimeRltvExpdSameH2">time.relative.expected.same
+    <a class="clsHide" href="#idTimeRltvExpdSameH2"></a></h2>
+  <p id="idTimeRltvExpdSamedsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeRltvExpdSamedsn"></a></p>
+  <p id="idTimeRltvExpdSamenam">name::
+    <br>* McsEngl.time.relative.expected.same,
+    <a class="clsHide" href="#idTimeRltvExpdSamenam"></a></p>
+  </section>
+
+  <section id="idTimeRltvExpdAftr">
+  <h2 id="idTimeRltvExpdAftrH2">time.relative.expected.after
+    <a class="clsHide" href="#idTimeRltvExpdAftrH2"></a></h2>
+  <p id="idTimeRltvExpdAftrdsn">description::
+    <br>" “才” indicates that the speaker feels that something happened later than expected with a tone of anxiety, impatience, tiredness or other related emotions, while “就” indicates something occurred earlier than expected with a feeling of surprise or amazement sometimes.
+    <br>· stxZhon: 才7点，你不吃早饭了吗？Cái 7 diǎn, nǐ bù chī zǎofànle ma? It's only 7 o'clock, don't you have breakfast?"
+    <br>[{2023-05-23 retrieved} https://www.digmandarin.com/top-20-common-mistakes-chinese-learners-make.html]
+    <a class="clsHide" href="#idTimeRltvExpdAftrdsn"></a></p>
+  <p id="idTimeRltvExpdAftrnam">name::
+    <br>* McsEngl.time.relative.expected.after,
+    <br>====== langoChinese:
+    <br>* McsZhon.cái-才-time.relative.expected.after,
+    <br>* McsZhon.才-cái-time.relative.expected.after,
+    <a class="clsHide" href="#idTimeRltvExpdAftrnam"></a></p>
   </section>
 
   <section id="idTimeRltvStart">
@@ -1747,7 +1794,7 @@ Tā gāngcái lái zhǎoguò nǐ. != [He] [just now] {has come} [to look for you
   <h3 id="idTimeUomYearK4H3">year.1000^4
     <a class="clsHide" href="#idTimeUomYearK4H3"></a></h3>
   <p id="idTimeUomYearK4dsn">description::
-    <br>·
+    <br>· 1.000.000.000.000 years.
     <a class="clsHide" href="#idTimeUomYearK4dsn"></a></p>
   <p id="idTimeUomYearK4nam">name::
     <br>* McsEngl.{iK4}'(timeIvlYear1000^4),
@@ -1762,7 +1809,7 @@ Tā gāngcái lái zhǎoguò nǐ. != [He] [just now] {has come} [to look for you
   <h3 id="idTimeUomYearK5H3">year.1000^5
     <a class="clsHide" href="#idTimeUomYearK5H3"></a></h3>
   <p id="idTimeUomYearK5dsn">description::
-    <br>·
+    <br>· 1.000.000.000.000.000 years.
     <a class="clsHide" href="#idTimeUomYearK5dsn"></a></p>
   <p id="idTimeUomYearK5nam">name::
     <br>* McsEngl.{iK5}'(timeIvlYear1000^5),
