@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.time-(McsCor000006.1-41-0.2023-06-14)</title>
+  <title>Mcs.time-(McsCor000006.1-43-0.2023-06-16)</title>
   <meta name="keywords" content="time, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -198,22 +198,23 @@
     <br>· <a class="clsPreview" href="../dirLag/McsLag000018.last.html#idLZhonsntcAskTime">stxZhon</a>:
     <a class="clsHide" href="#idTimeSmsIrgvdsn"></a></p>
   <p id="idTimeSmsIrgvnam">name::
-    <br>* McsEngl.pronEngl.when:interrogative,
-    <br>* McsEngl.pronIrgvEngl.when,
-    <br>* McsEngl.pronIrgvTime,
+    <br>* McsEngl.pronEngl.when:timeAsk,
+    <br>* McsEngl.pronAskEngl.when:timeAsk,
+    <br>* McsEngl.pronAskTime,
+    <br>* McsEngl.timeAsk,
     <br>* McsEngl.time.interrogative,
     <br>* McsEngl.time.reference.interrogative,
     <br>* McsEngl.timeSms.interrogative,
-    <br>* McsEngl.when!~pronIrgvEngl,
+    <br>* McsEngl.when!~pronAskEngl:timeAsk,
     <br>====== langoSinago:
-    <br>* McsSngo.to-cio!=when,
+    <br>* McsSngo.to-cio!=timeAsk,
     <br>====== langoChinese:
-    <br>* McsZhon.héshí-何时-(何時)!=when,
-    <br>* McsZhon.shénmeshíhòu-什么时候-(什麼時候)!=when,
-    <br>* McsZhon.何时-(何時)-héshí!=when,
-    <br>* McsZhon.什么时候-(什麼時候)-shénmeshíhòu!=when,
+    <br>* McsZhon.héshí-何时-(何時)!=timeAsk,
+    <br>* McsZhon.shénmeshíhòu-什么时候-(什麼時候)!=timeAsk,
+    <br>* McsZhon.何时-(何時)-héshí!=timeAsk,
+    <br>* McsZhon.什么时候-(什麼時候)-shénmeshíhòu!=timeAsk,
     <br>====== langoGreek:
-    <br>* McsElln.πότε!~pronElln!=when,
+    <br>* McsElln.πότε!~pronElln!=timeAsk,
     <a class="clsHide" href="#idTimeSmsIrgvnam"></a></p>
   </section>
 
@@ -238,7 +239,8 @@
     <br>· time, point|interval, definite, deictic, past.
     <a class="clsHide" href="#idTimeSmsDftDtcPastdsn"></a></p>
   <p id="idTimeSmsDftDtcPastnam">name::
-    <br>* McsEngl.time.definite.deictic.past,
+    <br>* McsEngl.time.deictic.past,
+    <br>* McsEngl.timeDeicticPast,
     <a class="clsHide" href="#idTimeSmsDftDtcPastnam"></a></p>
 
   <section id="idTimeSmsDftDtcPastRecent">
@@ -250,7 +252,8 @@
     <a class="clsHide" href="#idTimeSmsDftDtcPastRecentdsn"></a></p>
   <p id="idTimeSmsDftDtcPastRecentnam">name::
     <br>* McsEngl.adveEngl.recently!=timeRecent,
-    <br>* McsEngl.timeRecent,
+    <br>* McsEngl.timeDeicticPastRecent!⇒timeRecent,
+    <br>* McsEngl.timeRecent:timeDeicticPastRecent,
     <br>* McsEngl.recently!~adveEngl:timeRecent,
     <br>====== langoChinese:
     <br>* McsZhon.zuìjìn-最近!=timeRecent,
@@ -279,11 +282,12 @@
     <br>* McsEngl.now!~adveEngl:timeNow,
     <br>* McsEngl.now!~pronEngl!⇒timeNow,
     <br>* McsEngl.present!⇒timeNow,
-    <br>* McsEngl.timeNow,
+    <br>* McsEngl.timeNow:timeDeicticCurrent,
     <br>* McsEngl.time.current.deictic!⇒timeNow,
     <br>* McsEngl.time.deictic.current!⇒timeNow,
     <br>* McsEngl.time.definite.deictic.current!⇒timeNow,
     <br>* McsEngl.time.definite.deictic.present!⇒timeNow,
+    <br>* McsEngl.timeDeicticCurrent!⇒timeNow,
     <br>====== langoSinago:
     <br>* McsSngo.to-dhio!=timeNow,
     <br>====== langoChinese:
@@ -297,16 +301,20 @@
   <h4 id="idTimeSmsDftDtcCrtJstH4">time.deictic.current.just
     <a class="clsHide" href="#idTimeSmsDftDtcCrtJstH4"></a></h4>
   <p id="idTimeSmsDftDtcCrtJstdsn">description::
-    <br>· stxZhon: _stxSbj:[他] _stxTime:[刚才] _stxVrb:{来} _stxObj:[找过[你]]。
-Tā gāngcái lái zhǎoguò nǐ. != [He] [just now] {has come} [to look for you].
+    <br>· stxZhon: 他 刚才 来 找过 你。 _stxSbj:[Tā] _stxTime:[gāngcái] _stxVrb:{lái} _stxObj:[{zhǎoguò}[nǐ]]。 != [He] [just now] {has come} [to look for you].
+    <br>· stxZhon: 我们 刚 知道。 _stxSbj:[Wǒmen] _stxTime:[gāng] _stxVrb:{zhīdào}. != We just found out.
     <a class="clsHide" href="#idTimeSmsDftDtcCrtJstdsn"></a></p>
   <p id="idTimeSmsDftDtcCrtJstnam">name::
+    <br>* McsEngl.just!~adveEngl:timeNowJust,
     <br>* McsEngl.just-now,
     <br>* McsEngl.time.deictic.current.just,
-    <br>* McsEngl.timeNowJust,
+    <br>* McsEngl.timeDeicticCurrentJust!⇒timeNowJust,
+    <br>* McsEngl.timeNowJust:timeDeicticCurrentJust,
     <br>====== langoChinese:
-    <br>* McsZhon.gāngcái-刚才!=timeNowJust,
-    <br>* McsZhon.刚才-gāngcái!=timeNowJust,
+    <br>* McsZhon.gāng-刚!~adveZhon:timeNowJust,
+    <br>* McsZhon.刚-gāng!~adveZhon:timeNowJust,
+    <br>* McsZhon.gāngcái-刚才!~adveZhon:timeNowJust,
+    <br>* McsZhon.刚才-gāngcái!~adveZhon:timeNowJust,
     <br>====== langoGreek:
     <br>* McsElln.μόλις-τώρα!=timeNowJust,
     <a class="clsHide" href="#idTimeSmsDftDtcCrtJstnam"></a></p>
@@ -320,11 +328,12 @@ Tā gāngcái lái zhǎoguò nǐ. != [He] [just now] {has come} [to look for you
     <br>· time, point|interval, definite, deictic, currentNo.
     <a class="clsHide" href="#idTimeSmsDftDtcCrtNdsn"></a></p>
   <p id="idTimeSmsDftDtcCrtNnam">name::
-    <br>* McsEngl.then!~pronEngl,
-    <br>* McsEngl.timeThen,
+    <br>* McsEngl.then!~pronEngl:timeThen,
+    <br>* McsEngl.timeThen:timeDeicticCurrentNo,
     <br>* McsEngl.time.definite.deictic.currentNo,
+    <br>* McsEngl.timeDeicticCurrentNo!⇒timeThen,
     <br>====== langoGreek:
-    <br>* McsElln.τότε!~pronElln,
+    <br>* McsElln.τότε!~pronElln:timeThen,
     <a class="clsHide" href="#idTimeSmsDftDtcCrtNnam"></a></p>
   </section>
 
@@ -430,6 +439,8 @@ Tā gāngcái lái zhǎoguò nǐ. != [He] [just now] {has come} [to look for you
     <br>· stxEngl: _stxSbj:[we] _stxVrb:{had} _stxSbjc:[a discussion] _stxTime:[<span class="clsColorRed">(over)</span> lunch].
     <br>· stxEngl: _stxSbj:[About 40% of all students entering as freshmen] _stxVrb:{graduate} _stxTime:[<span class="clsColorRed">(within)</span> 4 years]. [HarperCollins]
     <br>· stxEngl: _stxVrb:{don't look} _stxSpace:[back] _stxTime:[<span class="clsColorRed">(while)</span> you walk]. [WordNet 2.0]
+    <br>
+    <br>· stxZhon: 不要 一边 吃 东西，一边 说话 。 _stxVrb:{Bùyào} [_stxTime:[yībiān] _stxVrb:{chī dōngxi}, _stxTime:[yībiān] _stxVrb:{shuōhuà}]. != Don't speak while eating.
     <a class="clsHide" href="#idTimePntNstxdsn"></a></p>
   <p id="idTimePntNstxnam">name::
     <br>* McsEngl._stxTimeInterval,
@@ -448,6 +459,9 @@ Tā gāngcái lái zhǎoguò nǐ. != [He] [just now] {has come} [to look for you
     <br>* McsEngl.syntax.conjEngl.while:rlnTimeInterval,
     <br>* McsEngl.syntax.rlnTimeInterval,
     <br>* McsEngl.syntax.time.interval,
+    <br>====== langoChinese:
+    <br>* McsZhon.yībiān-一边!~adveZhon:rlnTimeInterval,
+    <br>* McsZhon.一边-yībiān!~adveZhon:rlnTimeInterval,
     <a class="clsHide" href="#idTimePntNstxnam"></a></p>
   </section>
 

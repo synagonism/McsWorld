@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.entity-(McsCor000003.1-59-0.2023-06-14)</title>
+  <title>Mcs.entity-(McsCor000003.1-60-0.2023-06-16)</title>
   <meta name="keywords" content="entity, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -85,10 +85,10 @@
     <br>· <span class="clsColorRed">attribute of entity[a]</span> is any other entity related with it[a].
     <a class="clsHide" href="#idEntattdsn"></a></p>
   <p id="idEntattnam">name::
+    <br>* McsEngl.attribute,
+    <br>* McsEngl.attribute-of-entity,
     <br>* McsEngl.entity'01_attribute,
     <br>* McsEngl.entity'attribute,
-    <br>* McsEngl.attribute-of-entity,
-    <br>* McsEngl.attribute-of-entity,
     <br>* McsEngl.characteristic-of-entity,
     <br>* McsEngl.feature-of-entity,
     <br>====== langoChinese:
@@ -167,15 +167,18 @@
     <br>* McsEngl.attribute-entity--sequencedNo-relation!⇒rlnEntityAttributeU,
     <br>* McsEngl.entity-attribute--sequencedNo-relation!⇒rlnEntityAttributeU,
     <br>* McsEngl.relation.entity-attribute-sequencedNo!⇒rlnEntityAttributeU,
+    <br>* McsEngl.rlnAttributeEntityU!⇒rlnEntityAttributeU,
     <br>* McsEngl.rlnEntityAttributeU,
     <br>====== langoSinago:
     <br>* McsSngo.ro-o-atro!=rlnEntityAttributeU,
     <a class="clsHide" href="#idEntatrrlnnam"></a></p>
 
   <section id="idEntattnamg">
-  <h2 id="idEntattnamgH2">namingA of attribute
+  <h2 id="idEntattnamgH2">naming-acting of attribute
     <a class="clsHide" href="#idEntattnamgH2"></a></h2>
   <p id="idEntattnamgdsn">description::
+    <br>· method to name an-attribute:
+    <br>
     <br>* lagSngo:
     <br>· entosΑtro/éntosátro/,
     <br>· entity'attribute,
@@ -190,8 +193,8 @@
     <br>· χρόνοι ρήματος,
     <a class="clsHide" href="#idEntattnamgdsn"></a></p>
   <p id="idEntattnamgnam">name::
-    <br>* McsEngl.namingA.attribute-entity,
-    <br>* McsEngl.namingA.entity-attribute,
+    <br>* McsEngl.actNaming.attribute-entity,
+    <br>* McsEngl.actNaming.entity-attribute,
     <a class="clsHide" href="#idEntattnamgnam"></a></p>
   </section>
 
@@ -2408,14 +2411,15 @@
     <br>· stxEngl: Which hand do you write with? ✓
     <a class="clsHide" href="#idEntIrgvdsn"></a></p>
   <p id="idEntIrgvnam">name::
-    <br>* McsEngl.entity.interrogative,
-    <br>* McsEngl.pronEngl.which:interrogative,
-    <br>* McsEngl.pronIrgvEngl.which,
-    <br>* McsEngl.pronIrgvEntity,
-    <br>* McsEngl.what!~pronIrgvEngl,
-    <br>* McsEngl.which!~pronIrgvEngl,
+    <br>* McsEngl.entityAsk,
+    <br>* McsEngl.entity.interrogative!⇒entityAsk,
+    <br>* McsEngl.pronEngl.which:entityAsk,
+    <br>* McsEngl.pronAskEngl.which:entityAsk,
+    <br>* McsEngl.pronAskEntity,
+    <br>* McsEngl.what!~pronAskEngl:entityAsk,
+    <br>* McsEngl.which!~pronAskEngl:entityAsk,
     <br>====== langoSngo:
-    <br>* McsSngo.o-cio!=entity.interrogative,
+    <br>* McsSngo.o-cio!=entityAsk,
     <a class="clsHide" href="#idEntIrgvnam"></a></p>
   </section>
 
@@ -2852,8 +2856,11 @@
   <p id="idEntGnrcNdsn">description::
     <br>· <span class="clsColorRed">individual-entity</span>[a] is <a class="clsPreview" href="McsCor000003.last.html#idOverview">an-entity</a> WITHOUT <a class="clsPreview" href="McsCor000002.last.html#idMcsattWhlNSpc">specific-attributes</a> (concepts which have at least the-attributes of it[a]).
     <br>· the-number of its[a] <a class="clsPreview" href="McsCor000002.last.html#idMcsrft">referents</a> is one.
+    <br>
+    <br>· stxZhon: 我 只 有 一 个 哥哥。 _stxSbj:[Wǒ] _stxIndividuality:[zhǐ] _stxVrb:{yǒu} _stxSbjc:[yī gè gēge]. != I only have one older brother.
     <a class="clsHide" href="#idEntGnrcNdsn"></a></p>
   <p id="idEntGnrcNnam">name::
+    <br>* McsEngl._stxIndividuality,
     <br>* McsEngl.atomic-entity!⇒individual,
     <br>* McsEngl.concrete-entity!⇒individual,
     <br>* McsEngl.entity.genericNo!⇒individual,
@@ -2863,7 +2870,9 @@
     <br>* McsEngl.individual,
     <br>* McsEngl.individual-concept!⇒individual,
     <br>* McsEngl.individual-entity!⇒individual,
+    <br>* McsEngl.individuality-attribute,
     <br>* McsEngl.instance-entity!⇒individual,
+    <br>* McsEngl.only!~adjeEngl:individual,
     <br>* McsEngl.single-entity!⇒individual,
     <br>* McsEngl.unique-entity!⇒individual,
     <br>====== langoSinago:
@@ -2872,12 +2881,15 @@
     <br>====== langoChinese:
     <br>* McsZhon.gè-个!=individual,
     <br>* McsZhon.个-gè!=individual,
+    <br>* McsZhon.zhǐ-只!~adveZhon:individual,
+    <br>* McsZhon.只-zhǐ!~adveZhon:individual,
     <br>====== langoEsperanto:
     <br>* McsEspo.individuo!=individual,
     <br>====== langoGreek:
     <br>* McsElln.ατομική-οντότητα!=individual,
     <br>* McsElln.ατομικό-το!=individual,
     <br>* McsElln.μοναδικό-το!=individual,
+    <br>* McsElln.μοναδικός!~adjeElln:-ός-ή-ό:individual,
     <br>* McsElln.συγκεκριμένη-έννοια!=individual,
     <br>====== langoTurkish:
     <br>* McsTurk.bireysel!=individual,
@@ -2967,8 +2979,8 @@
   <p id="idEntHmnNRfrcIrgvnam">name::
     <br>* McsEngl.humanNo.interrogative,
     <br>* McsEngl.pronEngl.what:interrogative,
-    <br>* McsEngl.pronIrgvEngl.what,
-    <br>* McsEngl.what!~pronIrgvEngl,
+    <br>* McsEngl.pronAskEngl.what,
+    <br>* McsEngl.what!~pronAskEngl,
     <br>====== langoChinese:
     <br>* McsZhon.shénme-什么!=what,
     <br>* McsZhon.什么-shénme!=what,
