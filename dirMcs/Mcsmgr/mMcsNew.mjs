@@ -85,19 +85,19 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirHlth',
+  sDir = 'dirCor',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'nervous-system',
+  sName = 'energy',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'sysNervous',
+  sNameShort = 'enrg',
 
-  //5. FILE-name:
+  //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
+  sNameId = 'Enrg',
+
+
   sNameFile = '',
   sNameFileNaked = '',
-  //6. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'SysNrvs',
-  //
   aPages,
   nFile = 0,
   sDirShort = sDir.substring(3)
