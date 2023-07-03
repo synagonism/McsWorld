@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagMcsh-(McsTchInf000009.1-11-0.2023-05-23) McsHitp-language</title>
+  <title>Mcs.lagMcsh-(McsTchInf000009.1-12-0.2023-07-02) McsHitp-language</title>
   <meta name="keywords" content="Mcsh-language, lagMcsh, ModelConceptSensorial, McsHitp-language, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -762,8 +762,8 @@
   <h3 id="idLagMcshmngrfileNitxtH3">Mcshmfile.namidx.txt
     <a class="clsHide" href="#idLagMcshmngrfileNitxtH3"></a></h3>
   <p id="idLagMcshmngrfileNitxtdsn">description::
-    <br>· <span class="clsColorRed">namidx.txt</span> is a-text-file that contains the-concept-files to be indexed and the-language on which to work.
-    <br>· in the-future this must-be automated: on any change in a-McsHitp, these files must-be-reidexed.
+    <br>· <span class="clsColorRed">dirMcs/namidx.txt</span> is a-text-file that contains the-concept-files to be indexed and the-language on which to work.
+    <br>· with <a class="clsPreview" href="#idLagMcshmngrmwcjs">mWatch.mjs</a>, this process is-automated: on any change in an-McsHitp-file, it is-reidexed and uploaded.
     <pre>
     // COMMENT the-lines with '//'
     //lagAGGR;all-languages
@@ -786,8 +786,9 @@
   <h3 id="idLagMcshmngrnijsH3">Mcshmfile.mNamidx.mjs
     <a class="clsHide" href="#idLagMcshmngrnijsH3"></a></h3>
   <p id="idLagMcshmngrnijsdsn">description::
-    <br>· <span class="clsColorRed">mNamidx.mjs</span> is <a class="clsPreview" href="../dirTchInf/McsTchInf000012.last.html#idJsndpgm">a-Node.js-program</a> that creates <a class="clsPreview" href="../dirTchInf/McsTchInf000009.last.html#idLagMcshmngrfileNilagjn">the-name-index-files</a> of an-McsHitp-worldview and uploads the-files.
-    <br>× RUN: node Mcsmgr/mNamidx.mjs pwd ALONE,
+    <br>· <span class="clsColorRed">mNamidx.mjs</span> is <a class="clsPreview" href="../dirTchInf/McsTchInf000012.last.html#idJsndpgm">a-Node.js-program</a> that creates <a class="clsPreview" href="../dirTchInf/McsTchInf000009.last.html#idLagMcshmngrfileNilagjn">the-name-index-files</a> of McsHitp-files in <a class="clsPreview" href="#idLagMcshmngrfileNitxt">dirMcs/namidx.txt</a> and uploads the-changed files.
+    <br>
+    <br>× RUN: dirMcs> node Mcsmgr/mNamidx.mjs pwd ALONE,
     <a class="clsHide" href="#idLagMcshmngrnijsdsn"></a></p>
   <p id="idLagMcshmngrnijsnam">name::
     <br>* McsEngl.Mcshmfile.mNamidx.mjs,
@@ -892,7 +893,7 @@
   <p id="idLagMcshmngrmwcjsdsn">description::
     <br>· mWatch.mjs watches for file changes, creates name-indices, and uploads the-files.
     <br>· to change the-languages on index-creation, we change the-variable aLagALL in <a class="clsPreview" href="#idLagMcshmngrnijs">mNamidx.mjs</a>.
-    <br>× RUN: node Mcsmgr/mWatch.mjs pwd
+    <br>× RUN: dirMcs> node Mcsmgr/mWatch.mjs pwd
     <a class="clsHide" href="#idLagMcshmngrmwcjsdsn"></a></p>
   <p id="idLagMcshmngrmwcjsnam">name::
     <br>* McsEngl.Mcshmfile.mWatch.mjs,
