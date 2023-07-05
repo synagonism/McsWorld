@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-8-1.2023-07-01: navigation-animation',
     'mMcsh.js.19-8-0.2022-12-11: TriUl',
     'mMcsh.js.19-7-0.2022-12-10: fTriUlExpandLevel1',
     'mMcsh.js.19-6-0.2022-10-24: Turk-Alt+F3',
@@ -587,6 +588,7 @@ let fContainersInsert = function () {
   oEltTabCntTocDiv.appendChild(oEltTabCntTocPrfDiv)
   // TabCntToc: end-note
   oEltTabCntTocNotP.innerHTML = '<span class="clsColorGreen clsB">notes</span>:<br>' +
+    '🥺 SEE <a href="' + sPathSite + 'index.html#idNvgtn">site-navigation-animation</a>.<br>' +
     'a) clicking on CONTENT, shows its Toc position, the-links, the-address-link-icon <i class="clsFa clsFaLink clsImgLnkIcn"></i>, and removes ontop windows and highlights.<br>' +
     'b) clicking on TITLE or SEARCH-icon, shows SEARCH-tab.<br>' +
     'c) clicking on ADDRESS-LINK-ICON or on Toc, you see the-address of that text on address-bar.<br>' +
@@ -1965,7 +1967,7 @@ let oTriUl = (function () {
     while (oTriLi) {
       oTriLiUl = oTriLi.getElementsByTagName('ul')[0]
       if (oTriLiUl && oTriLiUl.style.display === 'none') oTriUl.fTriUlToggleLi(oTriLi)
-      oTriLi = oTriLi.nextElementSibling 
+      oTriLi = oTriLi.nextElementSibling
     }
   }
 
@@ -1993,7 +1995,7 @@ let oTriUl = (function () {
       oTriLiUl2 = oTriLi2.getElementsByTagName('ul')[0]
       aTriLiUl2.push(oTriLiUl2)
       if (oTriLiUl2 && oTriLiUl2.style.display === 'none') {oTriUl.fTriUlToggleLi(oTriLi2)}
-      oTriLi2 = oTriLi2.nextElementSibling 
+      oTriLi2 = oTriLi2.nextElementSibling
     }
 
     for (n = 0; n < aTriLiUl2.length; n += 1) {
@@ -2002,7 +2004,7 @@ let oTriUl = (function () {
       while (oTriLi3) {
         oTriLiUl3 = oTriLi3.getElementsByTagName('ul')[0]
         if (oTriLiUl3 && oTriLiUl3.style.display === 'none') oTriUl.fTriUlToggleLi(oTriLi3)
-        oTriLi3 = oTriLi3.nextElementSibling 
+        oTriLi3 = oTriLi3.nextElementSibling
       }
     }
   }
