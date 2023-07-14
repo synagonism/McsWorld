@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.satisfier-(McsStn000010.1-30-0.2023-06-30)</title>
+  <title>Mcs.satisfier-(McsStn000010.1-32-0.2023-07-13)</title>
   <meta name="keywords" content="satisfier, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -154,8 +154,8 @@
     <br>* McsEngl.satisfier'att010-owner!⇒Sfrowner,
     <br>* McsEngl.satisfier'owner!⇒Sfrowner,
     <br>====== langoGreek:
-    <br>* McsElln.ιδιοκτήτης-ο!=Sfrowner,
-    <br>* McsElln.ιδιοκτήτρια-η!=Sfrowner,
+    <br>* McsElln.ιδιοκτήτης!-ο!=Sfrowner,
+    <br>* McsElln.ιδιοκτήτρια!-η!=Sfrowner,
     <br>* McsElln.κάτοχος-ο|η!=Sfrowner,
     <a class="clsHide" href="#idSfrHmnatt010nam"></a></p>
 
@@ -486,7 +486,7 @@
     <br>* McsZhon.lǐwù-礼物!=gift,
     <br>* McsZhon.礼物-lǐwù!=gift,
     <br>====== langoGreek:
-    <br>* McsElln.δώρο-το!=gift,
+    <br>* McsElln.δώρο!-το!=gift,
     <a class="clsHide" href="#idSfrHmntrsgargGftnam"></a></p>
   </section>
   </section>
@@ -600,23 +600,27 @@
     <br>* acton: receiver.
     <br>* satisfier.
     <br>
-    <br>* verb:
+    <br>=== give!~verbEnglC!=actSfrgiving:
     <br>· stxEngl: _stxSbj=giver:[He] _stxVrb:<span class="clsColorRed">{gave}</span> _stxObj=receiver:[me] _stxObj=satisfier:[a-book]. He gave me a-book.
     <br>
-    <br>· stxElln: Στο Γιώργο έδωσα ένα βιβλίο. != I gave George a book.
+    <br>=== δίν-ω-ομαι!=actSfrgiving:
+    <br>· stxElln: Στο Γιώργο έδωσα ένα βιβλίο. :: έδωσα στο Γιώργο ένα βιβλίο. :: έδωσα ένα βιβλίο στο Γιώργο. :: _stxArg=receiver:[Στο Γιώργο] _stxVrb:{έδωσα} _stxObj=satisfier:[ένα βιβλίο].  :: _stxVrb:{έδωσα} _stxObj=satisfier:[ένα βιβλίο]. != I gave George a book.
+    <br>
+    <br>=== sònggěi-送给!=actSfrgiving:
+    <br>· stxZhon: 我 想 送给 你 一 本 书。 :: _stxSbj:[Wǒ] _stxVrb:{xiǎng} _stxObj:[_stxVrb:{sòng gěi} _stxObj:[nǐ] _stxObj2:[yī běn shū]]. != I want to give you a book.
     <a class="clsHide" href="#idSfrHmntrsgGivgdsn"></a></p>
   <p id="idSfrHmntrsgGivgnam">name::
     <br>* McsEngl.Sfrgiving!⇒actSfrgiving,
     <br>* McsEngl.actSfrgiving,
     <br>* McsEngl.actSfrtransacting.giving!⇒actSfrgiving,
-    <br>* McsEngl.give!~verbEnglC:give-gives-gave-giving-given!=actSfrgiving,
+    <br>* McsEngl.to-give!~verbEnglC:give-gives-gave-giving-given!=actSfrgiving,
     <br>* McsEngl.giving-satisfier!⇒actSfrgiving,
-    <br>* McsEngl.syntax.dngActGiving,
     <br>* McsEngl.syntax.dngActSfrgiving,
-    <br>* McsEngl.syntax.verbEngl.give,
     <br>====== langoChinese:
     <br>* McsZhon.gěi-给!=actSfrgiving,
     <br>* McsZhon.给-gěi!=actSfrgiving,
+    <br>* McsZhon.sònggěi-送给!=actSfrgiving,
+    <br>* McsZhon.送给-sònggěi!=actSfrgiving,
     <br>====== langoGreek:
     <br>* McsElln.δίν-ω-ομαι!=actSfrgiving,
     <a class="clsHide" href="#idSfrHmntrsgGivgnam"></a></p>
@@ -639,17 +643,15 @@
     <br>* McsEngl.actSfrtransacting.receiving!⇒actSfrreceiving,
     <br>* McsEngl.Sfrreceiving!⇒actSfrreceiving,
     <br>* McsEngl.actSfrreceiving,
-    <br>* McsEngl.receive!~verbEnglB1:receiv-e-es-ed-ing-ed!=actSfrreceiving,
+    <br>* McsEngl.to-receive!~verbEnglB1:receiv-e-es-ed-ing-ed!=actSfrreceiving,
     <br>* McsEngl.receiving-satisfier!⇒actSfrreceiving,
-    <br>* McsEngl.syntax.dngActReceiving!⇒actSfrreceiving,
-    <br>* McsEngl.syntax.dngActSfrreceiving!⇒actSfrreceiving,
-    <br>* McsEngl.syntax.verbEngl.receive,
+    <br>* McsEngl.syntax.dngActSfrreceiving,
     <br>====== langoChinese:
     <br>* McsZhon.shōudào-收到!=actSfrreceiving,
     <br>* McsZhon.收到-shōudào!=actSfrreceiving,
     <br>====== langoGreek:
-    <br>* McsElln.λαμβάν-ω-ομαι!~verbElln:actSfrreceiving,
-    <br>* McsElln.παίρν-ω-ομαι!~verbElln:actSfrreceiving,
+    <br>* McsElln.λαμβάνω:-ω-ομαι!~verbElln:actSfrreceiving,
+    <br>* McsElln.παίρνω:-ω-ομαι!~verbElln:actSfrreceiving,
     <a class="clsHide" href="#idSfrHmntrsgRcvgnam"></a></p>
   </section>
 
@@ -707,14 +709,14 @@
     <br>* McsEngl.actSfrexchanging,
     <br>* McsEngl.actSfrtransacting.exchanging!⇒actSfrexchanging,
     <br>* McsEngl.TRADING!⇒actSfrexchanging,
-    <br>* McsEngl.exchange!~verbEnglB1:exchang-e-es-ed-ing-ed!=actSfrexchanging,
+    <br>* McsEngl.to-exchange!~verbEnglB1:exchang-e-es-ed-ing-ed!=actSfrexchanging,
     <br>* McsEngl.exchanging!⇒actSfrexchanging,
     <br>====== langoChinese:
     <br>* McsZhon.jiāohuàn-交换!=actSfrexchanging,
     <br>* McsZhon.交换-jiāohuàn!=actSfrexchanging,
     <br>====== langoGreek:
-    <br>* McsElln.ανταλλαγή-η!=actSfrexchanging,
-    <br>* McsElln.ανταλλάσσ-ω-ομαι!~verbElln:actSfrexchanging,
+    <br>* McsElln.ανταλλαγή!-η!=actSfrexchanging,
+    <br>* McsElln.ανταλλάσσω:-ω-ομαι!~verbElln:actSfrexchanging,
     <a class="clsHide" href="#idSfrHmnexcgnam"></a></p>
 
   <section id="idSfrHmnexcgcmdt">
@@ -790,14 +792,15 @@
     <br>* McsEngl.Sfrbuying!⇒actSfrbuying,
     <br>* McsEngl.actSfrbuying,
     <br>* McsEngl.actSfrexchanging.buying-commodity!⇒actSfrbuying,
-    <br>* McsEngl.buy!~verbEnglC:buy-buys-bought-buying-bought!=actSfrbuying,
+    <br>* McsEngl.to-buy!~verbEnglC:buy-buys-bought-buying-bought!=actSfrbuying,
     <br>* McsEngl.buying-commodity!⇒actSfrbuying,
-    <br>* McsEngl.purchase!~verbEnglB1:purchas-e-es-ed-ing-ed!=actSfrbuying,
+    <br>* McsEngl.purchasing-actSfrbuying,
+    <br>* McsEngl.to-purchase!~verbEnglB1:purchas-e-es-ed-ing-ed!=actSfrbuying,
     <br>====== langoChinese:
     <br>* McsZhon.mǎi-买-(買)!=actSfrbuying,
     <br>* McsZhon.买-(買)-mǎi!=actSfrbuying,
     <br>====== langoGreek:
-    <br>* McsElln.αγορά-η!=Sfrbuyin,
+    <br>* McsElln.αγορά!-η!=Sfrbuyin,
     <br>* McsElln.αγοράζ-ω-ομαι!~VerbEll!=Sfrbuyin,
     <a class="clsHide" href="#idSfrHmnexcgBuygnam"></a></p>
   <p id="idSfrHmnexcgBuygstr">specific-tree-of-actSfrbuying::
@@ -813,11 +816,13 @@
     <br>[{2021-08-20 retrieved} http://wordnetweb.princeton.edu/perl/webwn?s=bid]
     <a class="clsHide" href="#idSfrHmnexcgBuygbidgdsn"></a></p>
   <p id="idSfrHmnexcgBuygbidgnam">name::
+    <br>* McsEngl.actBidding,
     <br>* McsEngl.actSfrbuying'bidding,
-    <br>* McsEngl.bid!~verbEnglC:bid-bids-bid|bade-bidding-bid|bidden,
+    <br>* McsEngl.bidding-acting,
+    <br>* McsEngl.to-bid!~verbEnglC:bid-bids-bid|bade-bidding-bid|bidden!=actBidding,
     <br>====== langoChinese:
-    <br>* McsZhon.chūjià-出价!=bidding,
-    <br>* McsZhon.出价-chūjià!=bidding,
+    <br>* McsZhon.chūjià-出价!=actBidding,
+    <br>* McsZhon.出价-chūjià!=actBidding,
     <a class="clsHide" href="#idSfrHmnexcgBuygbidgnam"></a></p>
   </section>
 
@@ -837,8 +842,10 @@
     <br>* McsEngl.actSfrbuying'paying!⇒actSfrpaying,
     <br>* McsEngl.Sfrpaying!⇒actSfrpaying,
     <br>* McsEngl.actSfrpaying,
-    <br>* McsEngl.make-a-payment!~verbEnglCM:make-makes-made-making-made!=actSfrpaying,
-    <br>* McsEngl.pay!~verbEnglC:pay-pays-paid-paying-paid!=actSfrpaying,
+    <br>* McsEngl.making-a-payment!~verbEnglCM:make-makes-made-making-made!=actSfrpaying,
+    <br>* McsEngl.to-make-a-payment!~verbEnglCM:make-makes-made-making-made!=actSfrpaying,
+    <br>* McsEngl.to-pay!~verbEnglC:pay-pays-paid-paying-paid!=actSfrpaying,
+    <br>* McsEngl.paying-actSfrpaying,
     <br>* McsEngl.payment!⇒actSfrpaying,
     <br>====== langoChinese:
     <br>* McsZhon.jiāo-交!=actSfrpaying,
@@ -868,16 +875,16 @@
   <p id="idSfrHmnexcgSelgnam">name::
     <br>* McsEngl.actSfrexchanging.selling-satisfier!⇒actSfrselling,
     <br>* McsEngl.actSfrselling,
-    <br>* McsEngl.sell!~verbEnglC:sell-sells-sold-selling-sold!=actSfrselling,
+    <br>* McsEngl.to-sell!~verbEnglC:sell-sells-sold-selling-sold!=actSfrselling,
     <br>* McsEngl.selling-commodity!⇒actSfrselling,
     <br>====== langoChinese:
     <br>* McsZhon.mài-卖!=actSfrselling,
     <br>* McsZhon.卖-mài!=actSfrselling,
     <br>====== langoGreek:
     <br>* McsElln.πουλ-άω-ώ-ιέμαι!~verbElln:actSfrselling,
-    <br>* McsElln.πούλημα-το!=actSfrselling,
+    <br>* McsElln.πούλημα!-το!=actSfrselling,
     <br>* McsElln.πωλ-ώ-ούμαι!~verbElln:actSfrselling,
-    <br>* McsElln.πώληση-εμπορεύματος-η!=actSfrselling,
+    <br>* McsElln.πώληση-εμπορεύματος!-η!=actSfrselling,
     <a class="clsHide" href="#idSfrHmnexcgSelgnam"></a></p>
   <p id="idSfrHmnexcgSelgstr">specific-tree-of-::
     <br>* barter-selling,
@@ -943,8 +950,8 @@
     <br>* McsEngl.buyselling!⇒actSfrbuyselling,
     <br>* McsEngl.satisfier-for-satisfier!⇒actSfrbuyselling,
     <br>====== langoGreek:
-    <br>* McsElln.αγοραπωλησία-η!=actSfrbuyselling,
-    <br>* McsElln.αγοροπωλησία-η!=actSfrbuyselling,
+    <br>* McsElln.αγοραπωλησία!-η!=actSfrbuyselling,
+    <br>* McsElln.αγοροπωλησία!-η!=actSfrbuyselling,
     <a class="clsHide" href="#idSfrHmnexgfenam"></a></p>
   </section>
 
@@ -960,7 +967,7 @@
     <br>* McsEngl.lendoborrowing!⇒actSfrlendoborrowing,
     <br>* McsEngl.sfrtrading.for-time-interval!⇒actSfrlendoborrowing,
     <br>====== langoGreek:
-    <br>* McsElln.δανεισμός-ο!=actSfrlendoborrowing,
+    <br>* McsElln.δανεισμός!-ο!=actSfrlendoborrowing,
     <a class="clsHide" href="#idSfrHmnexgftinam"></a></p>
 
   <section id="idSfrHmnexgftiLndg">
@@ -973,7 +980,7 @@
     <a class="clsHide" href="#idSfrHmnexgftiLndgdsn"></a></p>
   <p id="idSfrHmnexgftiLndgnam">name::
     <br>* McsEngl.Sfrlendoborrowing.lending!⇒actLending,
-    <br>* McsEngl.lend!~verbEnglC:lend-lends-lent-lending-lent:actLending,
+    <br>* McsEngl.to-lend!~verbEnglC:lend-lends-lent-lending-lent:actLending,
     <br>* McsEngl.actLending,
     <br>* McsEngl.lending-commodity!⇒actLending,
     <br>====== langoChinese:
@@ -994,7 +1001,8 @@
   <p id="idSfrHmnexgftiRntgnam">name::
     <br>* McsEngl.Sfrlendoborrowing.renting!⇒actRenting,
     <br>* McsEngl.actRenting,
-    <br>* McsEngl.rent!~verbEnglA1:rent--s-ed-ing-ed!=actRenting,
+    <br>* McsEngl.to-rent!~verbEnglA1:rent--s-ed-ing-ed!=actRenting,
+    <br>* McsEngl.renting-acting,
     <br>====== langoChinese:
     <br>* McsZhon.zū-租!=actRenting,
     <br>* McsZhon.租-zū!=actRenting,
@@ -1442,7 +1450,7 @@
     <br>* McsZhon.guì-贵!=priceBig,
     <br>* McsZhon.贵-guì!=priceBig,
     <br>====== langoGreek:
-    <br>* McsElln.ακριβός!~adjeElln!=-ός-ή-ό!=priceBig,
+    <br>* McsElln.ακριβός!-ός-ή-ό!~adjeElln!=priceBig,
     <a class="clsHide" href="#idSfrHmn001prcBignam"></a></p>
   </section>
 
@@ -1460,7 +1468,7 @@
     <br>* McsZhon.piányíde-便宜的!=priceSmall,
     <br>* McsZhon.便宜的-piányíde!=priceSmall,
     <br>====== langoGreek:
-    <br>* McsElln.φθηνός!~adjeElln!=-ός-ή-ό!=priceSmall,
+    <br>* McsElln.φθηνός!-ός-ή-ό!~adjeElln!=priceSmall,
     <a class="clsHide" href="#idSfrHmn001prcSmlnam"></a></p>
   </section>
   </section>
@@ -1552,7 +1560,7 @@
     <br>* McsEngl.satisfier.property!⇒sfrProperty,
     <br>* McsEngl.sfrProperty,
     <br>====== langoGreek:
-    <br>* McsElln.ιδιοκτησία-η!=sfrProperty,
+    <br>* McsElln.ιδιοκτησία!-η!=sfrProperty,
     <a class="clsHide" href="#idSfrHmn005nam"></a></p>
   <p id="idSfrHmn005dsnL">descriptionLong::
     <br>"In a dispute over how to divide a cookie, the easiest way to resolve it is to clone the cookie. Property only becomes an issue when cloning is not possible."
@@ -2191,7 +2199,7 @@
     <br>====== langoEsperanto:
     <br>* McsEspo.meblo!=furniture,
     <br>====== langoGreek:
-    <br>* McsElln.έπιπλο-το!=furniture,
+    <br>* McsElln.έπιπλο!-το!=furniture,
     <a class="clsHide" href="#idSfrHmn047nam"></a></p>
 
   <section id="idSfrHmn048">
@@ -2237,6 +2245,9 @@
     <br>"Paper is a thin sheet material produced by mechanically or chemically processing cellulose fibres derived from wood, rags, grasses or other vegetable sources in water, draining the water through fine mesh leaving the fibre evenly distributed on the surface, followed by pressing and drying. Although paper was originally made in single sheets by hand, almost all is now made on large machines—some making reels 10 metres wide, running at 2,000 metres per minute and up to 600,000 tonnes a year. It is a versatile material with many uses, including printing, packaging, decorating, writing, cleaning, filter paper, wallpaper, book endpaper, conservation paper, laminated worktops, toilet tissue, currency and security paper and a number of industrial and construction processes.
     <br>The papermaking process developed in east Asia, probably China, at least as early as 105 CE,[1] by the Han court eunuch Cai Lun, although the earliest archaeological fragments of paper derive from the 2nd century BCE in China.[2] The modern pulp and paper industry is global, with China leading its production and the United States following."
     <br>[{2021-12-11 retrieved} https://en.wikipedia.org/wiki/Paper]
+    <br>
+    <br>=== zhǐ-纸!=paper:
+    <br>· stxZhon: 这些 纸 够 用 吗 ？ :: Zhèxiē zhǐ gòu yòng ma? != Is this paper enough for us to use?
     <a class="clsHide" href="#idSfrHmn050dsn"></a></p>
   <p id="idSfrHmn050nam">name::
     <br>* McsEngl.paper,
@@ -2246,7 +2257,7 @@
     <br>* McsZhon.zhǐ-纸!=paper,
     <br>* McsZhon.纸-zhǐ!=paper,
     <br>====== langoGreek:
-    <br>* McsElln.χαρτί-το!=paper,
+    <br>* McsElln.χαρτί!-το!=paper,
     <a class="clsHide" href="#idSfrHmn050nam"></a></p>
 </section>
 
@@ -2263,7 +2274,7 @@
     <br>* McsEngl.sfrVessel,
     <br>* McsEngl.vessel!⇒sfrVessel,
     <br>====== langoGreek:
-    <br>* McsElln.δοχείο-το!=vessel,
+    <br>* McsElln.δοχείο!-το!=vessel,
     <a class="clsHide" href="#idSfrHmn052nam"></a></p>
 
   <section id="idSfrHmn053">
@@ -2284,7 +2295,7 @@
     <br>* McsZhon.píngzi-瓶子!=sfrBottle,
     <br>* McsZhon.瓶子-píngzi!=sfrBottle,
     <br>====== langoGreek:
-    <br>* McsElln.μπουκάλι-το!=sfrBottle,
+    <br>* McsElln.μπουκάλι!-το!=sfrBottle,
     <a class="clsHide" href="#idSfrHmn053nam"></a></p>
   </section>
 </section>

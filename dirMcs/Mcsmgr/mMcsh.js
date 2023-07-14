@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-9-0.2023-07-14: sugest on space',
     'mMcsh.js.19-8-1.2023-07-01: navigation-animation',
     'mMcsh.js.19-8-0.2022-12-11: TriUl',
     'mMcsh.js.19-7-0.2022-12-10: fTriUlExpandLevel1',
@@ -1125,7 +1126,10 @@ let fContainersInsert = function () {
           for (i = 1; i < aSuggestions.length; i++) {
             // name
             // name'xxx
-            // name.xxx
+            // name.xxx = with specific
+            // name:xxx = specific of
+            // name/xxx = with part
+            // name//xxx = part of
             // name!...
             let
               sSgn = aSuggestions[i][0],
@@ -1133,6 +1137,9 @@ let fContainersInsert = function () {
             if (sInput === sSgn ||
                 new RegExp("^"+sInput+"'.*").test(sSgn) ||
                 new RegExp("^"+sInput+"\\..*").test(sSgn) ||
+                new RegExp("^"+sInput+":.*").test(sSgn) ||
+                new RegExp("^"+sInput+"/.*").test(sSgn) ||
+                new RegExp("^"+sInput+"//.*").test(sSgn) ||
                 new RegExp("^"+sInput+"!.*").test(sSgn) ) {
               n = n + 1
               sSuggestions = sSuggestions +
