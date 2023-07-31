@@ -45,6 +45,7 @@ import {fSftp} from './mSftp.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mMcsNew.mjs.1-1-2.2022-07-30: filename on title',
     'mMcsNew.mjs.1-1-1.2022-06-22: renamed to mMcsNew',
     'mMcs.mjs.1-1-0.2022-01-09: filMcs to McsCor000002',
     'mMcs.mjs.1-0-0.2021-12-12: ',
@@ -85,15 +86,15 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirCor',
+  sDir = 'dirTchInf',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'energy',
+  sName = 'artificial-intelligence',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'enrg',
+  sNameShort = 'techAi',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'Enrg',
+  sNameId = 'TechAi',
 
 
   sNameFile = '',
@@ -122,7 +123,7 @@ s =
   '<head>\n' +
   '  <meta charset="utf-8">\n' +
   '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-  '  <title>Mcs.' + sNameShort + '-(0-1-0.' + moUtil.fDateYMD() + ' draft) ' + sName + '</title>\n' +
+  '  <title>Mcs.' + sNameShort + '-(' + sNameFile + '.0-1-0.' + moUtil.fDateYMD() + ' draft) ' + sName + '</title>\n' +
   '  <meta name="keywords" content="' + sName + ', ' + sNameShort + ', ModelConceptSensorial, McsHitp, Synagonism">\n' +
   '  <link rel="stylesheet" href="../Mcsmgr/mHitp.css">\n' +
   '</head>\n' +
