@@ -1,8 +1,9 @@
 /*
+ * go line 134 (aLagALL) to change indexed languages.
  * mNamidx.mjs - module that creates name-indecies and uploads the-files
  * The MIT License (MIT)
  *
- * Copyright (c) 2017 - 2022 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2017 - 2023 Kaseluris.Nikos.1959 (hmnSngo)
  * kaseluris.nikos@gmail.com
  * https://synagonism.net/
  *
@@ -129,7 +130,7 @@ function fNamidx(fileIn, fSftpIn) {
     aFileMcsIn,
     // array with names of dirCor/McsCor000010.last.html to remove|add its names
     aLag,
-    // array of languages ['lagALLL'] or ['lagElln','lagEngl',...]
+    // array of languages ['lagALLL'] or ['lagElln','lagEngl','lagZhon','lagTurk']
     aLagALL = ['lagEngl','lagElln','lagZhon'],
     //aLagALL = ['lagEngl','lagSngo','lagZhon','lagEspo','lagElln','lagElla','lagTurk'],
     // 'lagAlb','lagBel','lagBos','lagBul','lagCes','lagDan','lagDeu','lagEst',

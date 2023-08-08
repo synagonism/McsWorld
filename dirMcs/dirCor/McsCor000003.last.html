@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.entity-(McsCor000003.1-82-0.2023-07-23)</title>
+  <title>Mcs.entity-(McsCor000003.1-84-0.2023-08-07)</title>
   <meta name="keywords" content="entity, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -154,6 +154,7 @@
     <br>* McsEngl.beauty,
     <br>* McsEngl.entity'att002-beauty,
     <br>* McsEngl.entity'beauty,
+    <br>* McsEngl.adjeEngl.beautiful!=beauty,
     <br>* McsEngl.beautiful!~adjeEngl!=beauty,
     <br>====== langoChinese:
     <br>* McsZhon.měi-美!=beautiful,
@@ -162,6 +163,7 @@
     <br>* McsZhon.漂亮-piàoliàng!=beautiful,
     <br>====== langoGreek:
     <br>* McsElln.ομορφιά!η!=beauty,
+    <br>* McsEngl.adjeElln.ωραίος!-ος-α-ο!=beautiful,
     <br>* McsElln.ωραίος!-ος-α-ο!~adjeElln!=beautiful,
     <br>* McsElln.ωραιότητα!η!=beauty,
     <a class="clsHide" href="#idEntatt002nam"></a></p>
@@ -184,9 +186,11 @@
     <br>* McsEngl.convenient!~adjeEngl,
     <br>* McsEngl.entity'att003-convenient,
     <br>====== langoChinese:
+    <br>* McsEngl.adjeZhon.fāngbiàn-方便!=convenient,
     <br>* McsZhon.fāngbiàn-方便!~adjeZhon!=convenient,
     <br>* McsZhon.方便-fāngbiàn!~adjeZhon!=convenient,
     <br>====== langoGreek:
+    <br>* McsEngl.adjeElln.βολικός!-ός-ή-ό!=convenient,
     <br>* McsElln.βολικός!-ός-ή-ό!~adjeElln!=convenient,
     <a class="clsHide" href="#idEntatt003nam"></a></p>
   </section>
@@ -287,6 +291,7 @@
     <br>* McsEngl.rlnAttribute!⇒rlnEntityAttribute,
     <br>* McsEngl.rlnEntityAttribute,
     <br>====== langoChinese:
+    <br>* McsEngl.verbZhon.shì-是!=rlnEntityAttribute,
     <br>* McsZhon.shì-是!~verbZhon!=rlnEntityAttribute,
     <br>* McsZhon.是-shì!~verbZhon!=rlnEntityAttribute,
     <br>====== langoSinago:
@@ -324,12 +329,8 @@
     <br>* McsEngl.of!~conjEngl!=rlnAttributeEntity,
     <br>* McsEngl.of!~conjEngl!=rlnAttributeEntity,
     <br>* McsEngl.syntax.adjective!=rlnAttributeEntity,
-    <br>* McsEngl.syntax.of!~conjEngl!=rlnAttributeEntity,
     <br>* McsEngl.conjEngl.of!=rlnAttributeEntity,
-    <br>* McsEngl.syntax.with!~conjEngl!=rlnAttributeEntity,
     <br>* McsEngl.conjEngl.with!=rlnAttributeEntity,
-    <br>* McsEngl.syntax.rlnAttributeEntity,
-    <br>* McsEngl.with!~conjEngl!=rlnAttributeEntity,
     <br>====== langoSinago:
     <br>* McsSngo.ro-atro-o!=rlnAttributeEntity,
     <br>* McsSngo.a!~conjSngo!=of,
@@ -516,25 +517,32 @@
     <br>"(v) create (bring into existence) "The company was created 25 years ago"; "He created a new movement in painting""
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=create]
     <br>· the-first staging in the-evolution-of-entity.
+    <br>* main-noun:
+    <br>· stxEngl: _stxTime:[(from) its <span class="clsColorRed">[creation]</span>] _stxSbj:[the plan] _stxVrb:{was doomed} to failure.
+    <br>
+    <br>* verb:
+    <br>· stxEngl: _stxSbj:[The company] _stxVrb:{was created} _stxTime:[25 years ago]. [WordNet]
     <a class="clsHide" href="#idEntevgcrtgdsn"></a></p>
   <p id="idEntevgcrtgnam">name::
-    <br>* McsEngl.to-begin!~verbEnglC:begin-begins-began-begining-begun!=creating,
-    <br>* McsEngl.birth!⇒creating,
-    <br>* McsEngl.building!⇒creating,
-    <br>* McsEngl.constructing!⇒creating,
-    <br>* McsEngl.to-create!~verbEnglB1:creat-e-es-ed-ing-ed!=creating,
-    <br>* McsEngl.creating,
-    <br>* McsEngl.creation!⇒creating,
-    <br>* McsEngl.entity'creating!⇒creating,
-    <br>* McsEngl.establishing!⇒creating,
-    <br>* McsEngl.founding!⇒creating,
-    <br>* McsEngl.staging.creating!⇒creating,
-    <br>* McsEngl.staging.starting!⇒creating,
-    <br>* McsEngl.starting!⇒creating,
+    <br>* McsEngl.birth!⇒dngCreating,
+    <br>* McsEngl.building!⇒dngCreating,
+    <br>* McsEngl.constructing!⇒dngCreating,
+    <br>* McsEngl.to-create!~verbEnglB1:creat-e-es-ed-ing-ed!=dngCreating,
+    <br>* McsEngl.creating-doing,
+    <br>* McsEngl.creation!⇒dngCreating,
+    <br>* McsEngl.dngCreating,
+    <br>* McsEngl.entity'creating!⇒dngCreating,
+    <br>* McsEngl.establishing!⇒dngCreating,
+    <br>* McsEngl.founding!⇒dngCreating,
+    <br>* McsEngl.to-begin!~verbEnglC:begin-begins-began-begining-begun!=dngCreating,
+    <br>* McsEngl.staging.creating!⇒dngCreating,
+    <br>* McsEngl.staging.starting!⇒dngCreating,
+    <br>* McsEngl.starting!⇒dngCreating,
     <br>====== langoGreek:
-    <br>* McsElln.γέννηση!=creating,
-    <br>* McsElln.δημιουργία!~verbElln:creating,
-    <br>* McsElln.δημιουργ-ώ-ούμαι!~verbElln:creating,
+    <br>* McsElln.γέννηση!η!=dngCreating,
+    <br>* McsElln.δημιουργία!η!=dngCreating,
+    <br>* McsEngl.verbElln.δημιουργώ!-ώ-ούμαι!=dngCreating,
+    <br>* McsElln.δημιουργώ!-ώ-ούμαι!~verbElln!=dngCreating,
     <a class="clsHide" href="#idEntevgcrtgnam"></a></p>
 
   <section id="idEntevgcrtgarg">
@@ -561,24 +569,8 @@
     <br>* McsEngl.creation,
     <br>* McsEngl.output-of-creating,
     <br>====== langoGreek:
-    <br>* McsElln.δημιούργημα!το!=creating'output,
+    <br>* McsElln.δημιούργημα!το!=dngCreating'output,
     <a class="clsHide" href="#idEntevgcrtgotptnam"></a></p>
-  </section>
-
-  <section id="idEntevgcrtgstx">
-  <h4 id="idEntevgcrtgstxH4">syntax of creating
-    <a class="clsHide" href="#idEntevgcrtgstxH4"></a></h4>
-  <p id="idEntevgcrtgstxdsn">description::
-    <br>* main-noun:
-    <br>· stxEngl: _stxTime:[(from) its <span class="clsColorRed">[creation]</span>] _stxSbj:[the plan] _stxVrb:{was doomed} to failure.
-    <br>
-    <br>* verb:
-    <br>· stxEngl: _stxSbj:[The company] _stxVrb:{was created} _stxTime:[25 years ago]. [WordNet]
-    <a class="clsHide" href="#idEntevgcrtgstxdsn"></a></p>
-  <p id="idEntevgcrtgstxnam">name::
-    <br>* McsEngl.creating.syntax,
-    <br>* McsEngl.syntax.creating,
-    <a class="clsHide" href="#idEntevgcrtgstxnam"></a></p>
   </section>
 
   <section id="idEntevgstrt">
@@ -588,17 +580,18 @@
     <br>"(v) get down, begin, get, start out, start, set about, set out, commence (take the first step or steps in carrying out an action) "We began working at dawn"; "Who will start?"; "Get working as soon as the sun rises!"; "The first tourists began to arrive in Cambodia"; "He began early in the day"; "Let's get down to work now""
     <br>[{2022-01-13 retrieved} http://wordnetweb.princeton.edu/perl/webwn?s=start]
     <br>
-    <br>· stxZhon: _stxSbj:[电影] _stxVrb:{开始了}。Diànyǐng kāishǐle. != [the-movie] {has started}.
+    <br>· stxZhon: 电影 开始了。 :: _stxSbj:[Diànyǐng] _stxVrb:{kāishǐ le}。 != [the-movie] {has started}.
     <a class="clsHide" href="#idEntevgstrtdsn"></a></p>
   <p id="idEntevgstrtnam">name::
+    <br>* McsEngl.dngStarting,
     <br>* McsEngl.staging.starting!⇒dngStarting,
     <br>* McsEngl.starting-doing,
     <br>* McsEngl.to-start!~verbEnglA1:start--s-ed-ing-ed!=dngStarting,
-    <br>* McsEngl.dngStarting,
     <br>====== langoChinese:
     <br>* McsZhon.kāishǐ-开始!=dngStarting,
     <br>* McsZhon.开始-kāishǐ!=dngStarting,
     <br>====== langoGreek:
+    <br>* McsEngl.verbElln.ξεκινώ:-άω-ώ!=dngStarting,
     <br>* McsElln.ξεκινώ!~verbElln:-άω-ώ!=dngStarting,
     <a class="clsHide" href="#idEntevgstrtnam"></a></p>
   </section>
@@ -628,7 +621,6 @@
     <br>* McsEngl.ending!⇒dngDissolving,
     <br>* McsEngl.entity'dngDissolving!⇒dngDissolving,
     <br>* McsEngl.staging.dngDissolving!⇒dngDissolving,
-    <br>* McsEngl.syntax.dngDissolving,
     <br>====== langoGreek:
     <br>* McsElln.διάλυση!η!=dngDissolving,
     <a class="clsHide" href="#idEntevgdsvgnam"></a></p>
@@ -644,10 +636,11 @@
     <a class="clsHide" href="#idEntevgdsvgFnshdsn"></a></p>
   <p id="idEntevgdsvgFnshnam">name::
     <br>* McsEngl.dngFinishing,
-    <br>* McsEngl.to-finish!~verbEnglA4!=dngFinishing,
     <br>* McsEngl.finishing-doing,
+    <br>* McsEngl.to-finish!~verbEnglA4!=dngFinishing,
     <br>* McsEngl.staging.finishing!⇒dngFinishing,
     <br>====== langoChinese:
+    <br>* McsEngl.verbZhon.wán-完!=dngFinishing,
     <br>* McsZhon.wán-完!~verbZhon!=dngFinishing,
     <br>* McsZhon.完-wán!~verbZhon!=dngFinishing,
     <a class="clsHide" href="#idEntevgdsvgFnshnam"></a></p>
@@ -680,19 +673,20 @@
     <br>· stxEngl: _stxSbj=functor:[She] _stxVrb:{stopped} _stxSpace:[(in front of) a store window].
     <a class="clsHide" href="#idEntevgstpgdsn"></a></p>
   <p id="idEntevgstpgnam">name::
-    <br>* McsEngl.to-halt!~verbEnglB1:halt--s-ed-ing-ed!=doingStopping,
-    <br>* McsEngl.to-pause!~verbEnglB1:paus-e-es-ed-ing-ed!=doingStopping,
-    <br>* McsEngl.to-quit!~verbEnglC:quit-quits-quit-quiting-quit!=doingStopping,
-    <br>* McsEngl.staging.stopping!⇒stopping,
-    <br>* McsEngl.to-stop!~verbEnglA2:stop--s-ped-ping-ped!=doingStopping,
+    <br>* McsEngl.dngStopping,
+    <br>* McsEngl.staging.stopping!⇒dngStopping,
+    <br>* McsEngl.to-halt!~verbEnglB1:halt--s-ed-ing-ed!=dngStopping,
+    <br>* McsEngl.to-pause!~verbEnglB1:paus-e-es-ed-ing-ed!=dngStopping,
+    <br>* McsEngl.to-quit!~verbEnglC:quit-quits-quit-quiting-quit!=dngStopping,
+    <br>* McsEngl.to-stop!~verbEnglA2:stop--s-ped-ping-ped!=dngStopping,
     <br>* McsEngl.stopping-doing,
-    <br>* McsEngl.syntax.stopping,
     <br>====== langoChinese:
-    <br>* McsZhon.tíng-停!=doingStopping,
-    <br>* McsZhon.停-tíng!=doingStopping,
+    <br>* McsZhon.tíng-停!=dngStopping,
+    <br>* McsZhon.停-tíng!=dngStopping,
     <br>====== langoGreek:
-    <br>* McsElln.διακόπτω:-ω-ομαι!~verbElln:doingStopping,
-    <br>* McsElln.σταματώ:-ώ-άω-ιέμαι!~verbElln:doingStopping,
+    <br>* McsElln.διακόπτω!-ω-ομαι!~verbElln!=dngStopping,
+    <br>* McsEngl.verbElln.σταματώ:-ώ-άω-ιέμαι!=dngStopping,
+    <br>* McsElln.σταματώ:-ώ-άω-ιέμαι!~verbElln!=dngStopping,
     <a class="clsHide" href="#idEntevgstpgnam"></a></p>
   </section>
 
@@ -709,11 +703,12 @@
     <br>· stxEngl: _stxSbj=actor:[We] _stxVrb:{continued} _stxObj=acton:[our research] _stxArg:[into the cause of the illness].
     <a class="clsHide" href="#idEntevgcntgdsn"></a></p>
   <p id="idEntevgcntgnam">name::
+    <br>* McsEngl.continuing!⇒dngContinuing,
+    <br>* McsEngl.dngContinuing,
     <br>* McsEngl.to-continue!~verbEnglB1:continu-e-es-ed-ing-ed,
-    <br>* McsEngl.continuing,
     <br>* McsEngl.staging.continuing!⇒continuing,
     <br>====== langoGreek:
-    <br>* McsElln.συνεχίζω:-ω-ομαι!~verbElln:continuing,
+    <br>* McsElln.συνεχίζω!-ω-ομαι!~verbElln!=dngContinuing,
     <a class="clsHide" href="#idEntevgcntgnam"></a></p>
   </section>
 
@@ -728,13 +723,14 @@
     <a class="clsHide" href="#idEntevgwtngdsn"></a></p>
   <p id="idEntevgwtngnam">name::
     <br>* McsEngl.staging.waiting!⇒fctWaiting,
-    <br>* McsEngl.to-wait!~verbEnglA1:fctWaiting,
+    <br>* McsEngl.to-wait!~verbEnglA1!=fctWaiting,
     <br>* McsEngl.fctWaiting,
     <br>====== langoChinese:
     <br>* McsZhon.děng-等!=fctWaiting,
     <br>* McsZhon.等-děng!=fctWaiting,
     <br>====== langoGreek:
-    <br>* McsElln.περιμένω!~verbElln:fctWaiting,
+    <br>* McsEngl.verbElln.περιμένω!=fctWaiting,
+    <br>* McsElln.περιμένω!~verbElln!=fctWaiting,
     <a class="clsHide" href="#idEntevgwtngnam"></a></p>
   </section>
 
@@ -754,13 +750,14 @@
     <br>· stxEngl: _stxSbj=actor:[E-mail] _stxVrb:{revolutionized} _stxObj=acton:[communication] _stxSpace:[in academe]. [WordNet]
     <a class="clsHide" href="#idEntevgrvtgdsn"></a></p>
   <p id="idEntevgrvtgnam">name::
-    <br>* McsEngl.staging.revolutionizing!⇒revolutionizing,
-    <br>* McsEngl.revolution!⇒revolutionizing,
+    <br>* McsEngl.staging.revolutionizing!⇒dngRevolutionizing,
+    <br>* McsEngl.revolution!⇒dngRevolutionizing,
     <br>* McsEngl.to-revolutionize!~verbEnglB1:revolutioniz-e-es-ed-ing-ed,
-    <br>* McsEngl.revolutionizing,
+    <br>* McsEngl.revolutionizing-doing,
     <br>====== langoGreek:
-    <br>* McsElln.επανάσταση!=revolutionizing,
-    <br>* McsElln.φέρνω-επανάσταση!~verbElln:revolutionizing,
+    <br>* McsElln.επανάσταση!=dngRevolutionizing,
+    <br>* McsEngl.verbElln.φέρνω-επανάσταση!=dngRevolutionizing,
+    <br>* McsElln.φέρνω-επανάσταση!~verbElln!=dngRevolutionizing,
     <a class="clsHide" href="#idEntevgrvtgnam"></a></p>
   </section>
 
@@ -778,11 +775,11 @@
     <br>· stxEngl: _stxSbj=functor:[Modern ecology] _stxVrb:{transformed} _stxObj:[into a more rigorous science] _stxTime:[in the late 19th century].
     <a class="clsHide" href="#idEntevgtrfgdsn"></a></p>
   <p id="idEntevgtrfgnam">name::
-    <br>* McsEngl.staging.transforming!⇒transforming,
+    <br>* McsEngl.staging.transforming!⇒dngTransforming,
     <br>* McsEngl.to-transform!~verbEnglA1:transform--s-ed-ing-ed,
-    <br>* McsEngl.transforming,
+    <br>* McsEngl.transforming-doing,
     <br>====== langoGreek:
-    <br>* McsElln.μετασχηματίζ-ω-ομαι!=transforming,
+    <br>* McsElln.μετασχηματίζω!-ω-ομαι!=dngTransforming,
     <a class="clsHide" href="#idEntevgtrfgnam"></a></p>
   </section>
 
@@ -2356,6 +2353,8 @@
     <br>* McsEngl.entity.aggregate!⇒entityAgg,
     <br>* McsEngl.everything/évrithìn2/!⇒entityAgg,
     <br>====== langoChinese:
+    <br>* McsZhon.shìjiè-世界!=entityAgg,
+    <br>* McsZhon.世界-shìjiè!=entityAgg,
     <br>* McsZhon.yǔzhòu-宇宙!=entityAgg,
     <br>* McsZhon.宇宙-yǔzhòu!=entityAgg,
     <br>====== langoEsperanto:
@@ -2508,7 +2507,7 @@
     <br>* McsEngl.pronEngl.which:entityAsk,
     <br>* McsEngl.pronAskEngl.which:entityAsk,
     <br>* McsEngl.pronAskEntity,
-    <br>* McsEngl.what!~adjeEngl!=entityAsk,
+    <br>* McsEngl.adjeEngl.which!=entityAsk,
     <br>* McsEngl.which!~adjeEngl!=entityAsk,
     <br>====== langoSngo:
     <br>* McsSngo.o-cio!=entityAsk,
@@ -2553,6 +2552,7 @@
     <br>* McsZhon.zhè-这!=entityDeicticNearA,
     <br>* McsZhon.这-zhè!=entityDeicticNearA,
     <br>====== langoGreek:
+    <br>* McsEngl.adjeElln.αυτός!-ός-ή-ό!=entityDeicticNearA,
     <br>* McsElln.αυτός!-ός-ή-ό!~adjeElln!=entityDeicticNearA,
     <a class="clsHide" href="#idEntDctcNranam"></a></p>
 
@@ -2606,6 +2606,7 @@
     <br>* McsZhon.nà-那!=entityDeicticFarA,
     <br>* McsZhon.那-nà!=entityDeicticFarA,
     <br>====== langoGreek:
+    <br>* McsEngl.adjeElln.εκείνος!-ος-η-ο!=entityDeicticFarA,
     <br>* McsElln.εκείνος!-ος-η-ο!~adjeElln!=entityDeicticFarA,
     <a class="clsHide" href="#idEntDctcFranam"></a></p>
   </section>
@@ -2637,7 +2638,7 @@
     <br>· entity definite, quantity none.
     <a class="clsHide" href="#idEntSmsNonedsn"></a></p>
   <p id="idEntSmsNonenam">name::
-    <br>* McsEngl.adveEngl.none:entityQuantityNone,
+    <br>* McsEngl.adveEngl.none!=entityQuantityNone,
     <br>* McsEngl.entity.definite.quantity.none,
     <br>* McsEngl.none!~adveEngl!=entityQuantityNone,
     <br>====== langoSinago:
@@ -2827,18 +2828,29 @@
     <br>
     <br>=== jiù-就!=just:
     <br>· stxZhon: 我 就 要 去！ :: Wǒ jiù yào qù! != I just want to go!
+    <br>
+    <br>=== zhènghǎo-正好!~adveZhon!=exactly:
+    <br>· stxZhon: 我 正好 要 出去，垃圾 我 来 扔 吧。 :: Wǒ zhènghǎo yào chūqù, lājī wǒ lái rēng ba. != I'm just about to leave. I'll take out the trash.
     <a class="clsHide" href="#idEntBodyNargExctdsn"></a></p>
   <p id="idEntBodyNargExctnam">name::
     <br>* McsEngl.argReldo.exactly,
-    <br>* McsEngl.exactly,
-    <br>* McsEngl.just,
-    <br>* McsEngl.precicely,
-    <br>* McsEngl.properly,
+    <br>* McsEngl.adveEngl.exactly,
+    <br>* McsEngl.adveEngl.just!=exactly,
+    <br>* McsEngl.adveEngl.precicely!=exactly,
+    <br>* McsEngl.adveEngl.properly!=exactly,
+    <br>* McsEngl.exactly!~adveEngl,
+    <br>* McsEngl.just!~adveEngl!=exactly,
+    <br>* McsEngl.precicely!~adveEngl!=exactly,
+    <br>* McsEngl.properly!~adveEngl!=exactly,
     <br>====== langoChinese:
-    <br>* McsZhon.jiù-就!=just,
-    <br>* McsZhon.就-jiù!=just,
+    <br>* McsZhon.adveZhon.zhènghǎo-正好!=exactly,
+    <br>* McsZhon.jiù-就!=exactly,
+    <br>* McsZhon.就-jiù!=exactly,
+    <br>* McsZhon.zhènghǎo-正好!~adveZhon!=exactly,
+    <br>* McsZhon.正好-zhènghǎo!~adveZhon!=exactly,
     <br>====== langoGreek:
-    <br>* McsElln.ακριβώς!~adveElln!=just,
+    <br>* McsEngl.adveElln.ακριβώς!=exactly,
+    <br>* McsElln.ακριβώς!~adveElln!=exactly,
     <a class="clsHide" href="#idEntBodyNargExctnam"></a></p>
   </section>
   </section>
@@ -2957,12 +2969,15 @@
     <a class="clsHide" href="#idEntBodyNSqcdtgtrndsn"></a></p>
   <p id="idEntBodyNSqcdtgtrnnam">name::
     <br>* McsEngl.reldoSequenced'togetherness,
+    <br>* McsEngl.adveEngl.together,
     <br>* McsEngl.together!~adveEngl,
     <br>* McsEngl.togetherness-of-reldoSequenced,
     <br>====== langoChinese:
+    <br>* McsEngl.adveZhon.yīqǐ-一起!=together,
     <br>* McsZhon.yīqǐ-一起!~adveZhon!=together,
     <br>* McsZhon.一起-yīqǐ!~adveZhon!=together,
     <br>====== langoGreek:
+    <br>* McsEngl.adveElln.μαζί!=together,
     <br>* McsElln.μαζί!~adveElln!=together,
     <a class="clsHide" href="#idEntBodyNSqcdtgtrnnam"></a></p>
   </section>
@@ -3034,6 +3049,7 @@
     <br>* McsEngl.individual-entity!⇒individual,
     <br>* McsEngl.individuality-attribute,
     <br>* McsEngl.instance-entity!⇒individual,
+    <br>* McsEngl.adjeEngl.only!=individual,
     <br>* McsEngl.only!~adjeEngl!=individual,
     <br>* McsEngl.single-entity!⇒individual,
     <br>* McsEngl.unique-entity!⇒individual,
@@ -3043,8 +3059,10 @@
     <br>====== langoChinese:
     <br>* McsZhon.gè-个!=individual,
     <br>* McsZhon.个-gè!=individual,
+    <br>* McsEngl.adveZhon.jiù-就!=individual,
     <br>* McsZhon.jiù-就!~adveZhon!=individual,
     <br>* McsZhon.就-jiù!~adveZhon!=individual,
+    <br>* McsEngl.adveZhon.zhǐ-只!=individual,
     <br>* McsZhon.zhǐ-只!~adveZhon!=individual,
     <br>* McsZhon.只-zhǐ!~adveZhon!=individual,
     <br>====== langoEsperanto:
@@ -3053,6 +3071,7 @@
     <br>* McsElln.ατομική-οντότητα!=individual,
     <br>* McsElln.ατομικό!το!=individual,
     <br>* McsElln.μοναδικό!το!=individual,
+    <br>* McsEngl.adjeElln.μοναδικός!-ός-ή-ό:individual,
     <br>* McsElln.μοναδικός!-ός-ή-ό!~adjeElln:individual,
     <br>* McsElln.συγκεκριμένη-έννοια!=individual,
     <br>====== langoTurkish:
@@ -3145,6 +3164,7 @@
     <br>* McsEngl.humanNo.interrogative,
     <br>* McsEngl.humanNoAsk,
     <br>* McsEngl.pronAskEngl.what,
+    <br>* McsEngl.adveEngl.what!=humanNoAsk,
     <br>* McsEngl.what!~adveEngl!=humanNoAsk,
     <br>====== langoChinese:
     <br>* McsZhon.shénme-什么!=humanNoAsk,
@@ -3160,8 +3180,10 @@
     <a class="clsHide" href="#idEntHmnNRfrcDctcdsn"></a></p>
   <p id="idEntHmnNRfrcDctcnam">name::
     <br>* McsEngl.humanNo.deictic,
+    <br>* McsEngl.adveEngl.that!=humanNoDeictic,
     <br>* McsEngl.that!~adveEngl!=humanNoDeictic,
     <br>====== langoGreek:
+    <br>* McsEngl.adjeElln.αυτός-ή-ό!=humanNoDeictic,
     <br>* McsElln.αυτός-ή-ό!~adjeElln!=humanNoDeictic,
     <br>====== langoTurkish:
     <br>* McsTurk.o!=humanNoDeictic,
@@ -3223,7 +3245,9 @@
     <br>* McsEngl.attribute.new,
     <br>* McsEngl.entity'att006-new,
     <br>* McsEngl.entity'new-attribute,
+    <br>* McsEngl.adjeEngl.new!=animalNo,
     <br>* McsEngl.new!~adjeEngl:animalNo,
+    <br>* McsEngl.adjeEngl.young!=animal,
     <br>* McsEngl.young!~adjeEngl:animal,
     <br>====== langoChinese:
     <br>* McsZhon.niánqīng-年轻!=young,
@@ -3231,6 +3255,7 @@
     <br>* McsZhon.xīn-新!=new,
     <br>* McsZhon.新-xīn!=new,
     <br>====== langoGreek:
+    <br>* McsEngl.adjeElln.νέος!-ος-α-ο!=young,
     <br>* McsElln.νέος!-ος-α-ο!~adjeElln!=young,
     <a class="clsHide" href="#idEntYangattnewnam"></a></p>
   </section>
@@ -3265,12 +3290,14 @@
     <br>* McsEngl.old!~adjeEngl,
     <br>* McsEngl.oldness,
     <br>====== langoChinese:
+    <br>* McsEngl.adjeZhon.jiù-旧!=old,
     <br>* McsZhon.jiù-旧!~adjeZhon!=old,
     <br>* McsZhon.旧-jiù!~adjeZhon!=old,
     <br>* McsZhon.lǎo-老!=old,
     <br>* McsZhon.老-lǎo!=old,
     <br>====== langoGreek:
-    <br>* McsElln.παλιός:-ός-ά-ό!~adjeElln!=old,
+    <br>* McsEngl.adjeElln.παλιός!-ός-ά-ό!=old,
+    <br>* McsElln.παλιός!-ός-ά-ό!~adjeElln!=old,
     <a class="clsHide" href="#idEntYangNattoldnam"></a></p>
   </section>
 </section>
@@ -3292,6 +3319,7 @@
     <br>* McsZhon.fāngbiàn-方便!=conviniet,
     <br>* McsZhon.方便-fāngbiàn!=conviniet,
     <br>====== langoGreek:
+    <br>* McsEngl.adjeElln.βολικός!-ός-ή-ό!=convenient,
     <br>* McsElln.βολικός!-ός-ή-ό!~adjeElln!=convenient,
     <a class="clsHide" href="#idEntCvntnam"></a></p>
 </section>
@@ -3398,5 +3426,6 @@
   gtag('js', new Date());
   gtag('config', 'UA-19285371-5');
 </script>
+<!--  -->
 </body>
 </html>

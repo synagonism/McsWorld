@@ -89,12 +89,12 @@ let
   sDir = 'dirTchInf',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'artificial-intelligence',
+  sName = 'application-programming-interface',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'techAi',
+  sNameShort = 'Softapi',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'TechAi',
+  sNameId = 'Softapi',
 
 
   sNameFile = '',
@@ -123,7 +123,7 @@ s =
   '<head>\n' +
   '  <meta charset="utf-8">\n' +
   '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-  '  <title>Mcs.' + sNameShort + '-(' + sNameFile + '.0-1-0.' + moUtil.fDateYMD() + ' draft) ' + sName + '</title>\n' +
+  '  <title>Mcs.' + sNameShort + '-(' + sNameFileNaked + '.0-1-0.' + moUtil.fDateYMD() + ' draft) ' + sName + '</title>\n' +
   '  <meta name="keywords" content="' + sName + ', ' + sNameShort + ', ModelConceptSensorial, McsHitp, Synagonism">\n' +
   '  <link rel="stylesheet" href="../Mcsmgr/mHitp.css">\n' +
   '</head>\n' +
@@ -312,6 +312,7 @@ s = s +
   '  gtag(\'js\', new Date());\n' +
   '  gtag(\'config\', \'UA-19285371-5\');\n' +
   '</script>\n' +
+  '<!--   -->\n' +
   '</body>\n' +
   '</html>'
 

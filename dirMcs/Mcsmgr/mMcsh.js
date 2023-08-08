@@ -2,7 +2,7 @@
  * mMcsh.js - module McsHitp webpage-format code.
  * The MIT License (MIT)
  *
- * Copyright (c) 2010-2022 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2010-2023 Kaseluris.Nikos.1959 (hmnSngo)
  * kaseluris.nikos@gmail.com
  * https:// synagonism.net/
  *
