@@ -1,6 +1,6 @@
 /*
- * go line 134 (aLagALL) to change indexed languages.
- * mNamidx.mjs - module that creates name-indecies and uploads the-files
+ * go to line 134 (aLagALL) to change indexed languages.
+ * mNamidx.mjs - module that creates name-indexes and uploads the-files
  * The MIT License (MIT)
  *
  * Copyright (c) 2017 - 2023 Kaseluris.Nikos.1959 (hmnSngo)

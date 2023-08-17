@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.pgmAtom-(3-2-0.2021-04-03) Atom--code-editor</title>
+  <title>Mcs.pgmAtom-(McsTchCpgm000003.3-2-0.2021-04-03) Atom--code-editor</title>
   <meta name="keywords" content="Atom-editor, ModelConceptStructured, Mcs, ModelInfoWorld, Worldview, Mws, Hitp, Kaseluris.Nikos.1959, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -37,8 +37,8 @@
     <br>* McsEngl.Jsel'Atom-editor!⇒pgmAtom,
     <br>* McsEngl.Jselpgm.Atom-editor!⇒pgmAtom,
     <br>* McsEngl.pgmAtom,
-    <br>* McsEngl.pgmAtom'(McsTchCpgm000003)!⇒pgmAtom,
-    <br>* McsEngl.pgmAtom'(Atom-editor)!⇒pgmAtom,
+    <br>* McsEngl.pgmAtom!=McsTchCpgm000003,
+    <br>* McsEngl.pgmAtom!=Atom-editor,
     <br>* McsEngl.program.Atom-editor!⇒pgmAtom,
     <a class="clsHide" href="#idName"></a></p>
 </section>
@@ -295,7 +295,7 @@
     <br>CommandRegistry ESSENTIAL
     <br>Associates listener functions with commands in a context-sensitive way using CSS selectors. You can access a global instance of this class via atom.commands, and commands registered there will be presented in the command palette.
     <br>The global command registry facilitates a style of event handling known as event delegation that was popularized by jQuery. Atom commands are expressed as custom DOM events that can be invoked on the currently focused element via a key binding or manually via the command palette. Rather than binding listeners for command events directly to DOM nodes, you instead register command event listeners globally on atom.commands and constrain them to specific kinds of elements with CSS selectors.
-    <br>Command names must follow the namespace:action pattern, where namespace will typically be the name of your package, and action describes the behavior of your command. If either part consists of multiple words, these must be separated by hyphens. E.g. awesome-package:turn-it-up-to-eleven. All words should be lowercased.
+    <br>Command names must follow the namespace!=action pattern, where namespace will typically be the name of your package, and action describes the behavior of your command. If either part consists of multiple words, these must be separated by hyphens. E.g. awesome-package:turn-it-up-to-eleven. All words should be lowercased.
     <br>As the event bubbles upward through the DOM, all registered event listeners with matching selectors are invoked in order of specificity. In the event of a specificity tie, the most recently registered listener is invoked first. This mirrors the "cascade" semantics of CSS. Event listeners are invoked in the context of the current DOM node, meaning this always points at event.currentTarget. As is normally the case with DOM events, stopPropagation and stopImmediatePropagation can be used to terminate the bubbling process and prevent invocation of additional listeners.
     <br>[https://atom.io/docs/api/v1.22.0/CommandRegistry]
     <br>===

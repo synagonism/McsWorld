@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagHitp-(McsTchInf000008.18-4-0.2022-12-14) lagHitp--web-page-dialect</title>
+  <title>Mcs.lagHitp-(McsTchInf000008.18-7-0.2022-08-16) lagHitp--web-page-dialect</title>
   <meta name="keywords" content="McsHitp-language, lagHitp, ebook, title-content-tree-document, lagHitp-web-page-dialect, html5.id.toc.preview, synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -50,8 +50,8 @@
     <br>* McsEngl.Lhitp!⇒lagHitp, {2020-05-06}, /el-hitp/,
     <br>* McsEngl.generic-specific-pair--web-page!⇒lagHitp, {2013.09.01}
     <br>* McsEngl.lagHitp, {2019-07-05},
-    <br>* McsEngl.lagHitp'(McsTchInf000008)!⇒lagHitp,
-    <br>* McsEngl.lagHitp'(Html5.Id.Toc.Preview--web-page-language)!⇒lagHitp,
+    <br>* McsEngl.lagHitp!=McsTchInf000008,
+    <br>* McsEngl.lagHitp!=Html5.Id.Toc.Preview--web-page-language,
     <br>* McsEngl.lagHitp-(Html5.Id.Toc.Preview)!⇒lagHitp,
     <br>* McsEngl.lagHitp-dialect!⇒lagHitp,
     <br>* McsEngl.lagHitp-language!⇒lagHitp,
@@ -543,7 +543,7 @@
   <p id="idLagHitpwbpgHmlnam">name::
     <br>* McsEngl.lagHitp'Html!⇒Hitphml, {2019-02-21},
     <br>* McsEngl.Hitphml, {2020-05-08},
-    <br>* McsEngl.Hitphml'(lagHitp-Html-doc)!⇒Hitphml,
+    <br>* McsEngl.Hitphml!=lagHitp-Html-doc,
     <br>* McsEngl.Hitphml-code!⇒Hitphml,
     <br>* McsEngl.Hitphml-doc!⇒Hitphml,
     <br>* McsEngl.Hitppage'Html-doc!⇒Hitphml,
@@ -933,14 +933,9 @@
   <section id="idLagHitpmth">
   <h3 id="idLagHitpmthH3">Hitphml'math-formulas
     <a class="clsHide" href="#idLagHitpmthH3"></a></h3>
-  <p id="idLagHitpmthnam">name::
-    <br>* McsEngl.lagHitp'math,
-    <br>* McsEngl.Hitphml'math,
-    <br>* McsEngl.lagHitp-math,
-    <br>* McsEngl.math-in-lagHitp,
-    <a class="clsHide" href="#idLagHitpmthnam"></a></p>
   <p id="idLagHitpmthdrn">description::
-    <br>Using <a href="http://www.mathjax.org/">MathJax</a> we can-have "beautiful math in all browsers". For example:
+    <br>Using <a href="http://www.mathjax.org/">MathJax</a> we can-have "beautiful math in all browsers".
+    <br>For example (MathML code):
     <span class="clsColorRed">
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <mrow>
@@ -986,13 +981,34 @@
     </math>,
     <math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathsize="16px"><mmultiscripts><mi mathvariant="normal">C</mi><mprescripts/><mn>6</mn><mn>12</mn></mmultiscripts></mstyle></math>
     </span>
+    <br>
     <br>HOW:
+    <br>
     <br>1. we need to add the following code:
+    <br>· using MathJax version 3:
+    <br><code>&lt;script src="https://polyfill.io/v3/polyfill.min.js?features=es6">&lt;/script>
+    <br>&lt;script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">&lt;/script></code>
+    <br>- no need for MathJax versions, works on both TeX and MathML input.
+    <br>- example TeX: <code>When &#92;(a &#92;ne 0&#92;), there are two solutions to &#92;(ax^2 + bx + c = 0&#92;) and they are &#92;[x = {-b &#92;pm &#92;sqrt{b^2-4ac} &#92;over 2a}.&#92;]</code>
+    <br>When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+    <br>another inline expression \(\sum_{n=1}^{\infty} 2^{-n} = 1\)
+    <br>· old version:
     <br><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async>&lt;/script></code> and
+    <br>
     <br>2. create the-mathML-code[a]. An easy method is to copy it[a] from online sites like:
     <br>* http://www.wiris.com/editor/demo/en/developers#mathml-latex,
     <br>* http://www.wiris.com/editor/demo/en/chemtype,
     <a class="clsHide" href="#idLagHitpmthDs"></a></p>
+  <p id="idLagHitpmthnam">name::
+    <br>* McsEngl.Hitpmath,
+    <br>* McsEngl.Hitpmath!=Hitp-math,
+    <br>* McsEngl.Mathnotation.synagonism.net,
+    <br>* McsEngl.Mcshmath,
+    <br>* McsEngl.Mcshmath!=Mcsh-math,
+    <br>* McsEngl.lagHitp'math,
+    <br>* McsEngl.lagHitp-math,
+    <br>* McsEngl.math-in-lagHitp,
+    <a class="clsHide" href="#idLagHitpmthnam"></a></p>
   </section>
   </section>
 
@@ -1009,7 +1025,7 @@
     <a class="clsHide" href="#idLagHitpcssdrn"></a></p>
   <p id="idLagHitpcssnam">name::
     <br>* McsEngl.Hitpcss,
-    <br>* McsEngl.Hitpcss'(lagHitp-Css-doc)!⇒Hitpcss,
+    <br>* McsEngl.Hitpcss!=lagHitp-Css-doc,
     <br>* McsEngl.Hitpcss-doc!⇒Hitpcss,
     <br>* McsEngl.lagHitp'Css!⇒Hitpcss, {2019-02-21},
     <br>* McsEngl.Hitppage'Css-doc!⇒Hitpcss,
@@ -1699,7 +1715,7 @@
     <br><img src="McsTchInf000008.files/Hitp-top-cnr.png">
     <a class="clsHide" href="#idLagHitptopcnrdsn"></a></p>
   <p id="idLagHitptopcnrnam">name::
-    <br>* McsEngl.container.top//oEltBody//lagHitp,
+    <br>* McsEngl.containerHitp.top//oEltBody//lagHitp,
     <br>* McsEngl.lagHitp'body-container'top-container,
     <br>* McsEngl.lagHitp'container.top,
     <br>* McsEngl.lagHitp'container.oEltCnrTopDiv,
@@ -1725,7 +1741,7 @@
     <br><img src="McsTchInf000008.files/Hitp-main-cnr.png">
     <a class="clsHide" href="#idLagHitpmaincnrdsn"></a></p>
   <p id="idLagHitpmaincnrnam">name::
-    <br>* McsEngl.container.main//oEltBody//lagHitp,
+    <br>* McsEngl.containerHitp.main//oEltBody//lagHitp,
     <br>* McsEngl.lagHitp'body-container'main-container,
     <br>* McsEngl.lagHitp'container.main,
     <br>* McsEngl.lagHitp'container.oEltCnrMainDiv,
@@ -1752,7 +1768,7 @@
     <br><img src="McsTchInf000008.files/Hitp-content-cnr.png">
     <a class="clsHide" href="#idLagHitpfCnrsIsrtoECnrMPcntDdsn"></a></p>
   <p id="idLagHitpfCnrsIsrtoECnrMPcntDnam">name::
-    <br>* McsEngl.container.content//oEltCnrMainDiv//lagHitp,
+    <br>* McsEngl.containerHitp.content//oEltCnrMainDiv//lagHitp,
     <br>* McsEngl.content-container//oEltCnrMainDiv//lagHitp,
     <br>* McsEngl.lagHitp'container.content,
     <br>* McsEngl.lagHitp'container.oEltCnrMainContentDiv,
@@ -1775,7 +1791,7 @@
     <br><img src="McsTchInf000008.files/Hitp-pageinfo-cnr.png">
     <a class="clsHide" href="#idLagHitpinfcnrdsn"></a></p>
   <p id="idLagHitpinfcnrnam">name::
-    <br>* McsEngl.container.info//oEltCnrMainDiv//lagHitp,
+    <br>* McsEngl.containerHitp.info//oEltCnrMainDiv//lagHitp,
     <br>* McsEngl.info-container//oEltCnrMainDiv//lagHitp,
     <br>* McsEngl.lagHitp'container.page-info,
     <br>* McsEngl.lagHitp'container.oEltCnrMainInfoDiv,
@@ -2119,7 +2135,7 @@
     <br><img src="McsTchInf000008.files/Hitp-width-cnr.png">
     <a class="clsHide" href="#idLagHitpfCnrsIsrtoECnrWdthDdsn"></a></p>
   <p id="idLagHitpfCnrsIsrtoECnrWdthDnam">name::
-    <br>* McsEngl.container.width//oEltBody//lagHitp,
+    <br>* McsEngl.containerHitp.width//oEltBody//lagHitp,
     <br>* McsEngl.lagHitp'container.page-info-width,
     <br>* McsEngl.lagHitp'container.width,
     <br>* McsEngl.lagHitp'container.oEltCnrWidthDiv,
@@ -2143,7 +2159,7 @@
     <br><img src="McsTchInf000008.files/Hitp-site-cnr.png">
     <a class="clsHide" href="#idLagHitpfCnrsIsrtoECnrSitDdsn"></a></p>
   <p id="idLagHitpfCnrsIsrtoECnrSitDnam">name::
-    <br>* McsEngl.container.site//oEltBody//lagHitp,
+    <br>* McsEngl.containerHitp.site//oEltBody//lagHitp,
     <br>* McsEngl.lagHitp'container.site-structure,
     <br>* McsEngl.lagHitp'container.oEltCnrSiteDiv,
     <br>* McsEngl.lagHitp'fContainersInsert'oEltCnrSiteDiv,
@@ -2480,7 +2496,7 @@
     <a class="clsHide" href="#idTreeH3"></a></h3>
   <div id="idTreedsn">
     <p>description::
-    <br>Our information is full of generic-specific and whole-part trees.
+    <br>Our information is full of generic-specific, whole-part, and parent-child trees.
     <br>Now lagHitp support collapsible trees, easily readable.
     <br>
     <br>HOW:
@@ -2531,6 +2547,8 @@
     <br>* McsEngl.collapsible-tree-data.lagHitp,
     <br>* McsEngl.lagHitp'info-tree,
     <br>* McsEngl.lagHitp'tree-info,
+    <br>* McsEngl.lagMcsh'tree-info,
+    <br>* McsEngl.tree.lagHitp,
     <br>* McsEngl.tree-data.lagHitp,
     <a class="clsHide" href="#idTreenam"></a></p>
   </section>
@@ -3304,6 +3322,7 @@
 <script type="module">
   import * as oMcsh from '../Mcsmgr/mMcsh.js'
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

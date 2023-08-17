@@ -45,6 +45,8 @@ import {fSftp} from './mSftp.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mMcsNew.mjs.1-2-0.2023-08-16: parent-child-tree',
+    'mMcsNew.mjs.1-1-3.2023-08-15: shorname!=name',
     'mMcsNew.mjs.1-1-2.2022-07-30: filename on title',
     'mMcsNew.mjs.1-1-1.2022-06-22: renamed to mMcsNew',
     'mMcs.mjs.1-1-0.2022-01-09: filMcs to McsCor000002',
@@ -86,15 +88,15 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirTchInf',
+  sDir = 'dirEdu',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'application-programming-interface',
+  sName = 'science.philosophy',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'Softapi',
+  sNameShort = 'sciSophy',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'Softapi',
+  sNameId = 'Sophy',
 
 
   sNameFile = '',
@@ -149,7 +151,8 @@ s =
   '    <br>* McsEngl.' + sDir +'/' + sNameFile + '!⇒' + sNameShort + ',\n' +
   '    <br>* McsEngl.' + sName + '!⇒' + sNameShort + ',\n' +
   '    <br>* McsEngl.' + sNameShort + ',\n' +
-  '    <br>* McsEngl.' + sNameShort + '\'(' + sName + ')' + '!⇒' + sNameShort + ',\n' +
+  '    <br>* McsEngl.' + sNameShort + '!=' + sNameFileNaked + ',\n' +
+  '    <br>* McsEngl.' + sNameShort + '!=' + sName + ',\n' +
   '    <a class="clsHide" href="#idName"></a></p>\n' +
   '</section>\n' +
   '\n' +
@@ -196,13 +199,28 @@ s =
   '    <br>=== McsHitp-creation:\n';
 if (sDir === 'dirTchInf') {
   s = s +
-  '    <br>· creation of current <a class="clsPreview" href="McsTchInf000009.last.html#idMcsHitp">concept</a>.\n'
+  '    <br>· creation of current <a class="clsPreview" href="McsTchInf000009.last.html#idMcsHitpFil">webpage-concept</a>.\n'
 } else {
   s = s +
   '    <br>· creation of current <a class="clsPreview" href="../dirTchInf/McsTchInf000009.last.html#idMcsHitp">concept</a>.\n'
 }
 s = s +
   '    <a class="clsHide" href="#id' + sNameId + 'evg' + moUtil.fDateYMD2() + '"></a></p>\n' +
+  '</section>\n' +
+  '\n' +
+  '<section id="id' + sNameId + 'pctF">\n' +
+  '  <h1 id="id' + sNameId + 'wptFH1">PARENT-CHILD-TREE of ' + sNameShort + '\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'pctFH1"></a></h1>\n' +
+  '  <p id="id' + sNameId + 'pctnam">name::\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'parent-child-tree,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'child-parent-tree,\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'pctnam"></a></p>\n' +
+  '  <p id="id' + sNameId + 'ptr">parent-tree-of-' + sNameShort + '::\n' +
+  '    <br>* \n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'ptr"></a></p>\n' +
+  '  <p id="id' + sNameId + 'ctr">child-tree-of-' + sNameShort + '::\n' +
+  '    <br>*\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'ctr"></a></p>\n' +
   '</section>\n' +
   '\n' +
   '<section id="id' + sNameId + 'wptF">\n' +
