@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-9-1.2023-08-17: sugest on space ;',
     'mMcsh.js.19-9-0.2023-07-14: sugest on space',
     'mMcsh.js.19-8-1.2023-07-01: navigation-animation',
     'mMcsh.js.19-8-0.2022-12-11: TriUl',
@@ -1121,16 +1122,18 @@ let fContainersInsert = function () {
             oEltClicked = sLi.children[0]
           }
         } else if (sSearchInput.endsWith(' ')) {
-          // display exactly sSearchInput
+          // display exactly sSearchInput if ends in space
           n = 0
           for (i = 1; i < aSuggestions.length; i++) {
             // name
-            // name'xxx
-            // name.xxx = with specific
-            // name:xxx = specific of
-            // name/xxx = with part
-            // name//xxx = part of
-            // name!...
+            // name'xxx = attribute of name
+            // name.xxx = specific of name
+            // name:xxx = generic of name
+            // name/xxx = part of name
+            // name//xxx = whole of name
+            // name;xxx = child of name
+            // name;;xxx = parent of name
+            // name!... = info on name
             let
               sSgn = aSuggestions[i][0],
               sInput = sSearchInput.substring(0, sSearchInput.length-1)
@@ -1140,6 +1143,8 @@ let fContainersInsert = function () {
                 new RegExp("^"+sInput+":.*").test(sSgn) ||
                 new RegExp("^"+sInput+"/.*").test(sSgn) ||
                 new RegExp("^"+sInput+"//.*").test(sSgn) ||
+                new RegExp("^"+sInput+";.*").test(sSgn) ||
+                new RegExp("^"+sInput+";;.*").test(sSgn) ||
                 new RegExp("^"+sInput+"!.*").test(sSgn) ) {
               n = n + 1
               sSuggestions = sSuggestions +
