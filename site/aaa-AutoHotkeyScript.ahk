@@ -1,7 +1,8 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+﻿; version {2023-08-23}
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
-; SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory.
 #Hotstring c  ; makes scripts case-sensitive
 
 ; Breve      ğ html=breve
@@ -58,21 +59,27 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 ::ssr::ŝ
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; NUMBERS
-::nn183::·
-::nnsentence::·
+;;; ii = integer
+;;; : = custom
 
-::nn215::×
-::nnformal::×
+::ii183::·
+:::sentence::·
 
-::nn8364::€
-::nn128::€
-::nneuro::€
+::ii215::×
 
-::nn12290::。
-::nnZhonFullstop::。
+::ii8364::€
+::ii128::€
+:::euro::€
 
-::nn120143::𝕏
-::nnxdouble::𝕏
+::ii12290::。
+:::ZhonFullstop::。
+
+::ii120143::𝕏
+:::Xdouble::𝕏
+
+::ii120169::𝕩
+:::xdouble::𝕩
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;; TeX-names with their unicodes equivalents
 

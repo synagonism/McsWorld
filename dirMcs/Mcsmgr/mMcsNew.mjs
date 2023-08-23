@@ -91,12 +91,12 @@ let
   sDir = 'dirEdu',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'science.philosophy',
+  sName = 'science.information',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'sciSophy',
+  sNameShort = 'sciInfo',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'Sophy',
+  sNameId = 'SInfo',
 
 
   sNameFile = '',

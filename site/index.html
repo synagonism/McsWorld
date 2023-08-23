@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>synagonism.net-website (index.10-2-0.2023-08-13)</title>
+  <title>synagonism.net-website (index.10-3-0.2023-08-22)</title>
   <meta name="keywords" content="senso-concept-Mcs, free book, title-value-pair, lagHitp-webpage, html5.id.toc.preview, synagonism">
   <link rel="stylesheet" href="dirMcs/Mcsmgr/mHitp.css">
   <link rel="icon" href="favicon.ico">
@@ -454,7 +454,9 @@
     times since {2013-05-30}
     <a class="clsHide" href="#idMetaCounter"></a></p>
   <p id="idStcntrP" class="clsCenter">this WEBSITE contains more than <span id="idStcntrWp" class="clsColorRed">...</span> webpages
-    <br>and it was-visited
+    <br><span id="idMcsqnt" class="clsColorBlue">...</span>
+    <br><span id="idNameqnt" class="clsColorGreen">...</span>
+    <br>it was-visited
     <span id="idStcntrSpn" class="clsColorRed">...</span>
     times since {2013-05-30}
     <br>(and around <span class="clsColorRed">125,000</span> times until {2013}, TOTAL = <span id="idStcntrSpnAll" class="clsColorRed">...</span>) &nbsp;&nbsp;
@@ -541,6 +543,7 @@
 <script type="module">
   import * as oMcsh from './dirMcs/Mcsmgr/mMcsh.js'
 
+  //pages quantity
   let
     nSum = 0,
     aPages
@@ -570,8 +573,35 @@
       }
     }
   })
+
+  //names quantity
+  let sNq = ''
+  for (var n = 0; n < oMcsh.aaNamidxfileRoot.length; n++) {
+    if (oMcsh.aaNamidxfileRoot[n][0] === ';AGGR') {
+      sNq = oMcsh.aaNamidxfileRoot[n][2].toLocaleString()
+           + ' names of Mcs on {'
+           + oMcsh.aaNamidxfileRoot[n][3]
+           + '}'
+    }
+  }
+  document.getElementById('idNameqnt').innerHTML = sNq
+
+  //Mcs quantity
+  var
+    aCpts,
+    oXHR = new XMLHttpRequest()
+  oXHR.open('GET', 'dirMcs/Mcsqnt.root.json', true)
+  oXHR.send(null)
+  oXHR.onreadystatechange = function () {
+    if (oXHR.readyState === 4 && oXHR.status === 200) {
+      aCpts = JSON.parse(oXHR.responseText)
+      document.getElementById('idMcsqnt').innerHTML =
+        aCpts[0][1].toLocaleString() + ' Mcs-senso-concepts on {' +
+        aCpts[0][2] + '}'
+    }
+  }
 </script>
-    <!--                                                    -->
+<!--                                                    -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
