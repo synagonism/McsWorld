@@ -45,6 +45,7 @@ import {fSftp} from './mSftp.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mMcsNew.mjs.1-3-0.2023-08-29: classification-trees',
     'mMcsNew.mjs.1-2-0.2023-08-16: parent-child-tree',
     'mMcsNew.mjs.1-1-3.2023-08-15: shorname!=name',
     'mMcsNew.mjs.1-1-2.2022-07-30: filename on title',
@@ -91,12 +92,12 @@ let
   sDir = 'dirEdu',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'science.information',
+  sName = 'science.language',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'sciInfo',
+  sNameShort = 'sciLang',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'SInfo',
+  sNameId = 'SLang',
 
 
   sNameFile = '',
@@ -211,27 +212,21 @@ s = s +
   '<section id="id' + sNameId + 'pctF">\n' +
   '  <h1 id="id' + sNameId + 'wptFH1">PARENT-CHILD-TREE of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'pctFH1"></a></h1>\n' +
-  '  <p id="id' + sNameId + 'pctnam">name::\n' +
-  '    <br>* McsEngl.' + sNameShort + '\'parent-child-tree,\n' +
-  '    <br>* McsEngl.' + sNameShort + '\'child-parent-tree,\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'pctnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'ptr">parent-tree-of-' + sNameShort + '::\n' +
-  '    <br>* \n' +
+  '    <br>* ,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'parent-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'ptr"></a></p>\n' +
   '  <p id="id' + sNameId + 'ctr">child-tree-of-' + sNameShort + '::\n' +
-  '    <br>*\n' +
+  '    <br>* ,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'child-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'ctr"></a></p>\n' +
   '</section>\n' +
   '\n' +
   '<section id="id' + sNameId + 'wptF">\n' +
   '  <h1 id="id' + sNameId + 'wptFH1">WHOLE-PART-TREE of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'wptFH1"></a></h1>\n' +
-  '  <p id="id' + sNameId + 'wptnam">name::\n' +
-  '    <br>* McsEngl.' + sNameShort + '\'part-whole-tree,\n' +
-  '    <br>* McsEngl.' + sNameShort + '\'whole-part-tree,\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'wptnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'wtr">whole-tree-of-' + sNameShort + '::\n' +
-  '    <br>* \n' +
+  '    <br>* ,\n' +
   '    <br>* ... ';
 if (sDir === 'dirCor') {
   s = s +
@@ -241,19 +236,17 @@ if (sDir === 'dirCor') {
   '<a class="clsPreview" href="../dirCor/McsCor000003.last.html#idEntwtr">Sympan</a>.\n'
 }
 s = s +
+  '    <br>* McsEngl.' + sNameShort + '\'whole-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'wtr"></a></p>\n' +
   '  <p id="id' + sNameId + 'ptr">part-tree-of-' + sNameShort + '::\n' +
-  '    <br>*\n' +
+  '    <br>* ,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'part-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'ptr"></a></p>\n' +
   '</section>\n' +
   '\n' +
   '<section id="id' + sNameId + 'gstF">\n' +
   '  <h1 id="id' + sNameId + 'gstFH1">GENERIC-SPECIFIC-TREE of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'gstFH1"></a></h1>\n' +
-  '  <p id="id' + sNameId + 'gstnam">name::\n' +
-  '    <br>* McsEngl.' + sNameShort + '\'generic-specific-tree,\n' +
-  '    <br>* McsEngl.' + sNameShort + '\'specific-generic-tree,\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'gstnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'gtr">generic-tree-of-' + sNameShort + '::\n' +
   '    <br>* ,\n' +
   '    <br>* ... ';
@@ -265,9 +258,11 @@ if (sDir === 'dirCor') {
   '<a class="clsPreview" href="../dirCor/McsCor000003.last.html#idOverview">entity</a>.\n'
 }
 s = s +
+  '    <br>* McsEngl.' + sNameShort + '\'generic-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'gtr"></a></p>\n' +
   '  <p id="id' + sNameId + 'str">specific-tree-of-' + sNameShort + '::\n' +
   '    <br>* ,\n' +
+  '    <br>* McsEngl.' + sNameShort + '.specific-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'str"></a></p>\n' +
   '</section>\n' +
   '\n' +

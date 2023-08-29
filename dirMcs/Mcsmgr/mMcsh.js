@@ -28,8 +28,9 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
-    'mMcsh.js.19-9-1.2023-08-17: sugest on space ;',
-    'mMcsh.js.19-9-0.2023-07-14: sugest on space',
+    'mMcsh.js.19-9-2.2023-08-28: suggest on space @',
+    'mMcsh.js.19-9-1.2023-08-17: suggest on space ;',
+    'mMcsh.js.19-9-0.2023-07-14: suggest on space',
     'mMcsh.js.19-8-1.2023-07-01: navigation-animation',
     'mMcsh.js.19-8-0.2022-12-11: TriUl',
     'mMcsh.js.19-7-0.2022-12-10: fTriUlExpandLevel1',
@@ -1134,6 +1135,7 @@ let fContainersInsert = function () {
             // name;xxx = child of name
             // name;;xxx = parent of name
             // name!... = info on name
+            // name@... = part of another worldview
             let
               sSgn = aSuggestions[i][0],
               sInput = sSearchInput.substring(0, sSearchInput.length-1)
@@ -1145,7 +1147,8 @@ let fContainersInsert = function () {
                 new RegExp("^"+sInput+"//.*").test(sSgn) ||
                 new RegExp("^"+sInput+";.*").test(sSgn) ||
                 new RegExp("^"+sInput+";;.*").test(sSgn) ||
-                new RegExp("^"+sInput+"!.*").test(sSgn) ) {
+                new RegExp("^"+sInput+"!.*").test(sSgn) ||
+                new RegExp("^"+sInput+"@.*").test(sSgn) ) {
               n = n + 1
               sSuggestions = sSuggestions +
                 '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/' +
@@ -1243,7 +1246,7 @@ let fContainersInsert = function () {
     }
 
     /**
-     * DOING: adds preview-event on links in search-sugestions and
+     * DOING: adds preview-event on links in search-suggestions and
      *   adds its text on search-input
      */
     function fSSEvtPreview() {
