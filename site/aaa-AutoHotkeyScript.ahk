@@ -5,58 +5,22 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory.
 #Hotstring c  ; makes scripts case-sensitive
 
-; Breve      ğ html=breve
-; Caron      ǎ html=caron
-; ciRcumflex ŝ html=circ
-; Accute     á html=acute
-; Grave      à html=grave
-; Macron     ā html=macr
-; ceDilla    ş html=cedil
-; dotLess    ı
-; diaereSis  ö html=uml
+; acute        html = ;Aacute::Á
+; breve        html = ;Abreve::Ă
+; caron        html = ;Acaron::Ǎ
+; cedil-la     html = ;Ccedil::Ç
+; circ-umflex  html = ;Acirc::Â
+; diaeresis    html = ;Auml::Ä
+; DotLess      ı
+; fr-actur     html = ;Afr::𝔄
+; grave        html = ;Agrave::À
+; macr-on      html = ;Amacr::Ā
+; ring         html = ;Aring::Å
+; scr-ipt      html = ;Ascr::𝒜
+; tilde        html = ;Atilde::Ã
 
-::aam::ā
-::aaa::á
-::aac::ǎ
-::aag::à
 
-::eem::ē
-::eea::é
-::eec::ě
-::eeg::è
-
-::iim::ī
-::iia::í
-::iic::ǐ
-::iig::ì
-::iil::ı
-::iis::ï
-
-::oom::ō
-::ooa::ó
-::ooc::ǒ
-::oog::ò
-::oos::ö
-
-::uum::ū
-::uua::ú
-::uuc::ǔ
-::uug::ù
-::uus::ü
-
-::ccd::ç
-::ccr::ĉ
-
-::ggb::ğ
-::ggc::ǧ
-::ggr::ĝ
-
-::hhr::ĥ
-
-::jjr::ĵ
-
-::ssd::ş
-::ssr::ŝ
+::iidl::ı
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; NUMBERS
 ;;; ii = integer
@@ -396,6 +360,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ::;AElig::Æ
 ::;Aacute::Á
 ::;Abreve::Ă
+::;Acaron::Ǎ
 ::;Acirc::Â
 ::;Acy::А
 ::;Afr::𝔄
@@ -723,6 +688,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ::;aacute::á
 ::;abreve::ă
 ::;ac::∾
+::;acaron::ǎ
 ::;acd::∿
 ::;acirc::â
 ::;acute::´
