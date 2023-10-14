@@ -89,12 +89,12 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirStnlaw',
+  sDir = 'dirLag',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Greece-law',
+  sName = 'formal--human-language',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'lawGrc',
+  sNameShort = 'lagFrml',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
   sNameId = 'LawGrc',
