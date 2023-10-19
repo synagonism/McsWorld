@@ -355,7 +355,9 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Html-names with its Unicode counterparts
-
+;;Aopf::𝔸 = open-face, double-struck
+;;Afr::𝔄 = franktur
+;;Ascr::𝒜 = script
 
 ::;AElig::Æ
 ::;Aacute::Á
