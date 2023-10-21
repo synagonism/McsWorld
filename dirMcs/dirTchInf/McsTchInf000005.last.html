@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCmpr-(McsTchInf000005.1-8-0.2023-08-27) computer-language</title>
+  <title>Mcs.lagCmpr-(McsTchInf000005.1-10-0.2023-10-21) computer-language</title>
   <meta name="keywords" content="computer-language, lagCmpr, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -68,6 +68,7 @@
     <a class="clsHide" href="#idLagCmpriptH1"></a></h1>
   <p id="idLagCmpriptdsn">description::
     <br>· input of lagCmpr is information (human or computer) we want to map in a-format <a class="clsPreview" href="McsTchInf000003.last.html#idOverview">a-computer</a> understands.
+    <br>· the-input could-be: mind-view, text, speech, computer-output.
     <a class="clsHide" href="#idLagCmpriptdsn"></a></p>
   <p id="idLagCmpriptnam">name::
     <br>* McsEngl.lagCmpr'02_input,
@@ -83,38 +84,41 @@
     <br>· output of lagCmpr is a-document <a class="clsPreview" href="McsTchInf000003.last.html#idOverview">a-computer</a> understands.
     <a class="clsHide" href="#idLagCmproptdsn"></a></p>
   <p id="idLagCmproptnam">name::
-    <br>* McsEngl.computer-info!⇒lagCmpr'output,
-    <br>* McsEngl.infoComputer!⇒lagCmpr'output,
-    <br>* McsEngl.lagCmpr'03_output!⇒lagCmpr'output,
-    <br>* McsEngl.lagCmpr'output,
-    <br>* McsEngl.output-of-lagCmpr!⇒lagCmpr'output,
+    <br>* McsEngl.Cmprloutput!=output-of-lagCmpr,
+    <br>* McsEngl.computer-info!⇒Cmprloutput,
+    <br>* McsEngl.infoComputer!⇒Cmprloutput,
+    <br>* McsEngl.lagCmpr'03_output!⇒Cmprloutput,
+    <br>* McsEngl.lagCmpr'output!⇒Cmprloutput,
+    <br>* McsEngl.output-of-lagCmpr!⇒Cmprloutput,
     <a class="clsHide" href="#idLagCmproptnam"></a></p>
 
   <section id="idLagCmprnode">
-  <h2 id="idLagCmprnodeH2">output'node of lagCmpr
+  <h2 id="idLagCmprnodeH2">node of Cmprloutput
     <a class="clsHide" href="#idLagCmprnodeH2"></a></h2>
   <p id="idLagCmprnodedsn">description::
     <br>· output-node of lagCmpr is any identifiable part of its[a] output.
     <a class="clsHide" href="#idLagCmprnodedsn"></a></p>
   <p id="idLagCmprnodenam">name::
-    <br>* McsEngl.lagCmpr'node!⇒lagCmpr-node,
-    <br>* McsEngl.lagCmpr'output-node!⇒lagCmpr-node,
-    <br>* McsEngl.lagCmpr-node,
-    <br>* McsEngl.lagCmpr'output'node!⇒lagCmpr-node,
+    <br>* McsEngl.Cmprloutput'node!⇒Cmprlnode,
+    <br>* McsEngl.lagCmpr'node!⇒Cmprlnode,
+    <br>* McsEngl.lagCmpr'output-node!⇒Cmprlnode,
+    <br>* McsEngl.Cmprlnode,
+    <br>* McsEngl.Cmprlnode!=node-of-lagCmpr'output,
+    <br>* McsEngl.lagCmpr'output'node!⇒Cmprlnode,
     <a class="clsHide" href="#idLagCmprnodenam"></a></p>
   <p id="idLagCmprnodeSpc">specific::
-    <br>* unit--lagCmpr-node,
-    <br>* word--lagCmpr-node,
-    <br>* semantic-unit--lagCmpr-node,
-    <br>* phrase--lagCmpr-node,
-    <br>* sentence--lagCmpr-node,
-    <br>* section--lagCmpr-node,
-    <br>* root--lagCmpr-node,
+    <br>* unit--Cmprlnode,
+    <br>* word--Cmprlnode,
+    <br>* semantic-unit--Cmprlnode,
+    <br>* phrase--Cmprlnode,
+    <br>* sentence--Cmprlnode,
+    <br>* section--Cmprlnode,
+    <br>* root--Cmprlnode,
     <a class="clsHide" href="#idLagCmprnodeSpc"></a></p>
   </section>
 
   <section id="idLagCmproptcode">
-  <h2 id="idLagCmproptcodeH2">code of output of lagCmpr
+  <h2 id="idLagCmproptcodeH2">code of Cmprloutput
     <a class="clsHide" href="#idLagCmproptcodeH2"></a></h2>
   <p id="idLagCmproptcodedsn">description::
     <br>· output-code of <a class="clsPreview" href="#idOverview">lagCmpr[a]</a> is any part of its[a] <a class="clsPreview" href="#idLagCmpropt">output</a>.
@@ -127,7 +131,7 @@
   </section>
 
   <section id="idLagCmproptsxtr">
-  <h2 id="idLagCmproptsxtrH2">syntax-tree of output of lagCmpr
+  <h2 id="idLagCmproptsxtrH2">syntax-tree of Cmprloutput
     <a class="clsHide" href="#idLagCmproptsxtrH2"></a></h2>
   <p id="idLagCmproptsxtrdsn">description::
     <br>· output-syntax-tree of <a class="clsPreview" href="#idOverview">lagCmpr[a]</a> is the-whole-part-tree of nodes of its[a] <a class="clsPreview" href="#idLagCmpropt">output</a>.
@@ -136,6 +140,41 @@
     <br>* McsEngl.lagCmpr'output-syntax-tree,
     <br>* McsEngl.lagCmpr'output'syntax-tree,
     <a class="clsHide" href="#idLagCmproptsxtrnam"></a></p>
+  </section>
+
+  <section id="idLagCmproptunit">
+  <h2 id="idLagCmproptunitH2">unit of Cmprloutput
+    <a class="clsHide" href="#idLagCmproptunitH2"></a></h2>
+  <p id="idLagCmproptunitdsn">description::
+    <br>· to create the-output, we need building-blocks.
+    <br>· the-units-(symbols) of these building-blocks are the-unit-of-the-output.
+    <a class="clsHide" href="#idLagCmproptunitdsn"></a></p>
+  <p id="idLagCmproptunitnam">name::
+    <br>* McsEngl.Cmprloutput'unit,
+    <a class="clsHide" href="#idLagCmproptunitnam"></a></p>
+  </section>
+
+  <section id="idLagCmproptsunt">
+  <h2 id="idLagCmproptsuntH2">semantic-unit of Cmprloutput
+    <a class="clsHide" href="#idLagCmproptsuntH2"></a></h2>
+  <p id="idLagCmproptsuntdsn">description::
+    <br>· a-structure of units that DENOTE a-node in input.
+    <a class="clsHide" href="#idLagCmproptsuntdsn"></a></p>
+  <p id="idLagCmproptsuntnam">name::
+    <br>* McsEngl.Cmprloutput'semantic-unit,
+    <a class="clsHide" href="#idLagCmproptsuntnam"></a></p>
+  </section>
+
+  <section id="idLagCmproptsuntDtsr">
+  <h2 id="idLagCmproptsuntDtsrH2">data-structure of Cmprloutput
+    <a class="clsHide" href="#idLagCmproptsuntDtsrH2"></a></h2>
+  <p id="idLagCmproptsuntDtsrdsn">description::
+    <br>· data-structure is a-semantic-unit that denotes data.
+    <a class="clsHide" href="#idLagCmproptsuntDtsrdsn"></a></p>
+  <p id="idLagCmproptsuntDtsrnam">name::
+    <br>* McsEngl.Cmprloutput'data-structure,
+    <br>* McsEngl.data-structure//lagCmpr,
+    <a class="clsHide" href="#idLagCmproptsuntDtsrnam"></a></p>
   </section>
 </section>
 
@@ -223,16 +262,15 @@
     <a class="clsHide" href="#idLagCmprcodgH2"></a></h2>
   <p id="idLagCmprcodgdsn">description::
     <br>· the-writting of lagCmpr-output.
-    <br>* datating (lagData),
-    <br>* programing (lagPrgm),
+    <br>* datating (lagCdat),
+    <br>* <a class="clsPreview" href="McsTchInf000006.last.html#idLagCpgmpgmg">programing (lagCpgm)</a>,
     <a class="clsHide" href="#idLagCmprcodgdsn"></a></p>
   <p id="idLagCmprcodgnam">name::
     <br>* McsEngl.coding//lagCmpr,
-    <br>* McsEngl.datating//lagData,
+    <br>* McsEngl.datating//lagCdat,
     <br>* McsEngl.dngCoding//lagCmpr,
     <br>* McsEngl.dngCodingCmpr,
     <br>* McsEngl.lagCmpr'coding,
-    <br>* McsEngl.programing//lagPrgm,
     <br>* McsEngl.to-code!~verbEngl!=dngCodingCmpr,
     <a class="clsHide" href="#idLagCmprcodgnam"></a></p>
   </section>
@@ -295,27 +333,27 @@
 </section>
 
 <section id="idLagCmpr002">
-  <h1 id="idLagCmpr002H1">lagCmpr.programingNo (lagPrgmNo)
+  <h1 id="idLagCmpr002H1">lagCmpr.programingNo (lagCpgmNo)
     <a class="clsHide" href="#idLagCmpr002H1"></a></h1>
   <p id="idLagCmpr002dsn">description::
     <br>· representation--computer-language is <a class="clsPreview" href="#idOverview">a-computer-language</a> that maps information to <a class="clsPreview" href="McsTchInf000003.last.html#idCmrsftwrData">computer-data</a>.
     <a class="clsHide" href="#idLagCmpr002dsn"></a></p>
   <p id="idLagCmpr002nam">name::
-    <br>* McsEngl.info-representation--computer-language!⇒lagPrgmNo,
-    <br>* McsEngl.info-representation-language!⇒lagPrgmNo,
-    <br>* McsEngl.lagCmpr.002-programingNo!⇒lagPrgmNo,
-    <br>* McsEngl.lagCmpr.info!⇒lagPrgmNo,
-    <br>* McsEngl.lagCmpr.programingNo!⇒lagPrgmNo,
-    <br>* McsEngl.lagProgramingNo!⇒lagPrgmNo,
-    <br>* McsEngl.lagRepresentation!⇒lagPrgmNo,
-    <br>* McsEngl.lagRptn!⇒lagPrgmNo,
-    <br>* McsEngl.lagPrgmNo,
-    <br>* McsEngl.programingNo--computer-language!⇒lagPrgmNo,
-    <br>* McsEngl.representation--computer-language!⇒lagPrgmNo,
+    <br>* McsEngl.info-representation--computer-language!⇒lagCpgmNo,
+    <br>* McsEngl.info-representation-language!⇒lagCpgmNo,
+    <br>* McsEngl.lagCmpr.002-programingNo!⇒lagCpgmNo,
+    <br>* McsEngl.lagCmpr.info!⇒lagCpgmNo,
+    <br>* McsEngl.lagCmpr.programingNo!⇒lagCpgmNo,
+    <br>* McsEngl.lagProgramingNo!⇒lagCpgmNo,
+    <br>* McsEngl.lagRepresentation!⇒lagCpgmNo,
+    <br>* McsEngl.lagRptn!⇒lagCpgmNo,
+    <br>* McsEngl.lagCpgmNo,
+    <br>* McsEngl.programingNo--computer-language!⇒lagCpgmNo,
+    <br>* McsEngl.representation--computer-language!⇒lagCpgmNo,
     <a class="clsHide" href="#idLagCmpr002nam"></a></p>
 
   <section id="idLagCmpr002Spc">
-  <h2 id="idLagCmpr002SpcH2">lagPrgmNo.SPECIFIC
+  <h2 id="idLagCmpr002SpcH2">lagCpgmNo.SPECIFIC
     <a class="clsHide" href="#idLagCmpr002SpcH2"></a></h2>
   <p id="idLagCmpr002Spcdsn">description::
     <br>* data-representation-language,
@@ -324,50 +362,50 @@
     <br>* <a class="clsPreview" href="McsTchInf000010on.last.html#idOverview">lagJson</a>,
     <a class="clsHide" href="#idLagCmpr002Spcdsn"></a></p>
   <p id="idLagCmpr002Spcnam">name::
-    <br>* McsEngl.lagPrgmNo.specific,
+    <br>* McsEngl.lagCpgmNo.specific,
     <a class="clsHide" href="#idLagCmpr002Spcnam"></a></p>
   </section>
 </section>
 
 <section id="idLagCmpr003">
-  <h1 id="idLagCmpr003H1">lagCmpr.programingBoth (lagPrgmBo)
+  <h1 id="idLagCmpr003H1">lagCmpr.programingBoth (lagCpgmBo)
     <a class="clsHide" href="#idLagCmpr003H1"></a></h1>
   <p id="idLagCmpr003dsn">description::
     <br>· representation-and-processing--computer-language is <a class="clsPreview" href="#idOverview">a-lagCmpr</a> that maps both processing-info and processingNo.
     <a class="clsHide" href="#idLagCmpr003dsn"></a></p>
   <p id="idLagCmpr003nam">name::
-    <br>* McsEngl.representation-and-processing--computer-language!⇒lagPrgmBo,
-    <br>* McsEngl.lagCmpr.003-representation-and-processing!⇒lagPrgmBo,
-    <br>* McsEngl.lagCmpr.representation-and-processing!⇒lagPrgmBo,
-    <br>* McsEngl.lagPrgmData!⇒lagPrgmBo,
-    <br>* McsEngl.lagPrgmBo,
-    <br>* McsEngl.processingBoth--computer-language!⇒lagPrgmBo, {2019-07-18},
+    <br>* McsEngl.representation-and-processing--computer-language!⇒lagCpgmBo,
+    <br>* McsEngl.lagCmpr.003-representation-and-processing!⇒lagCpgmBo,
+    <br>* McsEngl.lagCmpr.representation-and-processing!⇒lagCpgmBo,
+    <br>* McsEngl.lagCpgmData!⇒lagCpgmBo,
+    <br>* McsEngl.lagCpgmBo,
+    <br>* McsEngl.processingBoth--computer-language!⇒lagCpgmBo, {2019-07-18},
     <a class="clsHide" href="#idLagCmpr003nam"></a></p>
 </section>
 
-<section id="idLdata">
-  <h1 id="idLdataH1">lagCmpr.data (representation and processing)
-    <a class="clsHide" href="#idLdataH1"></a></h1>
-  <p id="idLdatadsn">description::
+<section id="idLCdat">
+  <h1 id="idLCdatH1">lagCmpr.data (representation and processing)
+    <a class="clsHide" href="#idLCdatH1"></a></h1>
+  <p id="idLCdatdsn">description::
     <br>· data-language is a-computer-language that manages data (strings, numbers, dates, arrays, ...), NOT concepts.
-    <a class="clsHide" href="#idLdatadsn"></a></p>
-  <p id="idLdatanam">name::
-    <br>* McsEngl.data-language!⇒lagData,
-    <br>* McsEngl.lagCmpr.013-data!⇒lagData,
-    <br>* McsEngl.lagCmpr.data!⇒lagData,
-    <br>* McsEngl.lagData,
-    <a class="clsHide" href="#idLdatanam"></a></p>
+    <a class="clsHide" href="#idLCdatdsn"></a></p>
+  <p id="idLCdatnam">name::
+    <br>* McsEngl.data-language!⇒lagCdat,
+    <br>* McsEngl.lagCmpr.013-data!⇒lagCdat,
+    <br>* McsEngl.lagCmpr.data!⇒lagCdat,
+    <br>* McsEngl.lagCdat,
+    <a class="clsHide" href="#idLCdatnam"></a></p>
 
-  <section id="idLdataSpc">
-  <h2 id="idLdataSpcH2">lagData.SPECIFIC
-    <a class="clsHide" href="#idLdataSpcH2"></a></h2>
-  <p id="idLdataSpcdsn">description::
+  <section id="idLCdatSpc">
+  <h2 id="idLCdatSpcH2">lagCdat.SPECIFIC
+    <a class="clsHide" href="#idLCdatSpcH2"></a></h2>
+  <p id="idLCdatSpcdsn">description::
     <br>* <a class="clsPreview" href="#idLagCmpr006">data-representation-language</a>,
     <br>* <a class="clsPreview" href="McsTchInf000006.last.html#idLagCpgmData">data-processing-language</a>,
-    <a class="clsHide" href="#idLdataSpcdsn"></a></p>
-  <p id="idLdataSpcnam">name::
-    <br>* McsEngl.lagData.specific,
-    <a class="clsHide" href="#idLdataSpcnam"></a></p>
+    <a class="clsHide" href="#idLCdatSpcdsn"></a></p>
+  <p id="idLCdatSpcnam">name::
+    <br>* McsEngl.lagCdat.specific,
+    <a class="clsHide" href="#idLCdatSpcnam"></a></p>
   </section>
 </section>
 
@@ -375,13 +413,15 @@
   <h1 id="idLagCmpr014H1">lagCmpr.meaning
     <a class="clsHide" href="#idLagCmpr014H1"></a></h1>
   <p id="idLagCmpr014dsn">description::
-    <br>· meaning-language is a-computer-language that represents <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLHmnmipt1">human-meaning</a>.
+    <br>· meaning-language is a-computer-language that represents <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLHmnmipt1">human-meaning</a> FROM human-logo-(text, speech).
+    <br>· <a class="clsPreview" href="McsTchInf000007.last.html#idOverview">concept-language</a> maps mind-concepts to "meaning".
     <a class="clsHide" href="#idLagCmpr014dsn"></a></p>
   <p id="idLagCmpr014nam">name::
     <br>* McsEngl.formal-meaning-representation-language!⇒lagMeng,
     <br>* McsEngl.lagCmpr.014-meaning!⇒lagMeng,
     <br>* McsEngl.lagCmpr.meaning!⇒lagMeng,
     <br>* McsEngl.lagMeng,
+    <br>* McsEngl.lagMeng!=meaning-lagCmpr,
     <br>* McsEngl.meaning-language!⇒lagMeng,
     <br>* McsEngl.meaning-representation-language!⇒lagMeng,
     <a class="clsHide" href="#idLagCmpr014nam"></a></p>
@@ -602,7 +642,7 @@
   <h1 id="idLtdocH1">lagCmpr.text-document-representation-007
     <a class="clsHide" href="#idLtdocH1"></a></h1>
   <p id="idLtdocdsn">description::
-    <br>· document-representation-language is a-info-representation-language that represents TEXT <a class="clsPreview" href="../dirLag/McsLag000003.last.html#idInfHmnSrl001">documents</a>.
+    <br>· text-document-representation-language is a-info-representation-language that represents TEXT <a class="clsPreview" href="../dirLag/McsLag000003.last.html#idInfHmnSrl001">documents</a>.
     <a class="clsHide" href="#idLtdocdsn"></a></p>
   <p id="idLtdocnam">name::
     <br>* McsEngl.document-file-format!⇒lagTdoc,
@@ -642,10 +682,121 @@
     <br>· a-text-document written in a-human-language.
     <a class="clsHide" href="#idLtdocinptdsn"></a></p>
   <p id="idLtdocinptnam">name::
-    <br>* McsEngl.lagTdoc'human-doc,
-    <br>* McsEngl.lagTdoc'input-doc,
-    <br>* McsEngl.lagTdoc'text-doc,
+    <br>* McsEngl.docText,
+    <br>* McsEngl.document.text!⇒docText,
+    <br>* McsEngl.lagTdoc'human-doc!⇒docText,
+    <br>* McsEngl.lagTdoc'input-doc!⇒docText,
+    <br>* McsEngl.lagTdoc'text-doc!⇒docText,
+    <br>* McsEngl.text-document!⇒docText,
+    <br>====== langoGreek:
+    <br>* McsElln.έγγραφο-κειμένου!το!=docText,
     <a class="clsHide" href="#idLtdocinptnam"></a></p>
+
+  <section id="idLtdocinptunit">
+  <h3 id="idLtdocinptunitH3">unit of docText
+    <a class="clsHide" href="#idLtdocinptunitH3"></a></h3>
+  <p id="idLtdocinptunitdsn">description::
+    <br>* letter,
+    <br>* number,
+    <br>* symbol,
+    <br>* image,
+    <a class="clsHide" href="#idLtdocinptunitdsn"></a></p>
+  <p id="idLtdocinptunitnam">name::
+    <br>* McsEngl.docText'unit,
+    <br>* McsEngl.unit-of-docText,
+    <a class="clsHide" href="#idLtdocinptunitnam"></a></p>
+  </section>
+
+  <section id="idLtdocinpttitl">
+  <h3 id="idLtdocinpttitlH3">title of docText
+    <a class="clsHide" href="#idLtdocinpttitlH3"></a></h3>
+  <p id="idLtdocinpttitldsn">description::
+    <br>· a-phrase.
+    <a class="clsHide" href="#idLtdocinpttitldsn"></a></p>
+  <p id="idLtdocinpttitlnam">name::
+    <br>* McsEngl.docText'title,
+    <br>* McsEngl.title-of-docText,
+    <a class="clsHide" href="#idLtdocinpttitlnam"></a></p>
+  </section>
+
+  <section id="idLtdocinptpara">
+  <h3 id="idLtdocinptparaH3">paragraph of docText
+    <a class="clsHide" href="#idLtdocinptparaH3"></a></h3>
+  <p id="idLtdocinptparadsn">description::
+    <br>· sequence of sentences.
+    <a class="clsHide" href="#idLtdocinptparadsn"></a></p>
+  <p id="idLtdocinptparanam">name::
+    <br>* McsEngl.docText'paragraph,
+    <br>* McsEngl.paragraph-of-docText,
+    <a class="clsHide" href="#idLtdocinptparanam"></a></p>
+  </section>
+
+  <section id="idLtdocinptlist">
+  <h3 id="idLtdocinptlistH3">list of docText
+    <a class="clsHide" href="#idLtdocinptlistH3"></a></h3>
+  <p id="idLtdocinptlistdsn">description::
+    <br>· a-sequence of info, ordered or not.
+    <a class="clsHide" href="#idLtdocinptlistdsn"></a></p>
+  <p id="idLtdocinptlistnam">name::
+    <br>* McsEngl.docText'list,
+    <br>* McsEngl.list-of-docText,
+    <a class="clsHide" href="#idLtdocinptlistnam"></a></p>
+  </section>
+
+  <section id="idLtdocinpttabl">
+  <h3 id="idLtdocinpttablH3">table of docText
+    <a class="clsHide" href="#idLtdocinpttablH3"></a></h3>
+  <p id="idLtdocinpttabldsn">description::
+    <br>· a-rectagular structure of info.
+    <a class="clsHide" href="#idLtdocinpttabldsn"></a></p>
+  <p id="idLtdocinpttablnam">name::
+    <br>* McsEngl.docText'table,
+    <br>* McsEngl.table-of-docText,
+    <a class="clsHide" href="#idLtdocinpttablnam"></a></p>
+  </section>
+
+  <section id="idLtdocinpttree">
+  <h3 id="idLtdocinpttreeH3">tree of docText
+    <a class="clsHide" href="#idLtdocinpttreeH3"></a></h3>
+  <p id="idLtdocinpttreedsn">description::
+    <br>· a-hierarchical structure of terms.
+    <a class="clsHide" href="#idLtdocinpttreedsn"></a></p>
+  <p id="idLtdocinpttreenam">name::
+    <br>* McsEngl.docText'tree,
+    <br>* McsEngl.tree-of-docText,
+    <a class="clsHide" href="#idLtdocinpttreenam"></a></p>
+  </section>
+
+  <section id="idLtdocinptsctn">
+  <h3 id="idLtdocinptsctnH3">section of docText
+    <a class="clsHide" href="#idLtdocinptsctnH3"></a></h3>
+  <p id="idLtdocinptsctndsn">description::
+    <br>· a-title, some paragraphs, sections.
+    <a class="clsHide" href="#idLtdocinptsctndsn"></a></p>
+  <p id="idLtdocinptsctnnam">name::
+    <br>* McsEngl.docText'section,
+    <br>* McsEngl.section-of-docText,
+    <a class="clsHide" href="#idLtdocinptsctnnam"></a></p>
+  </section>
+
+  <section id="idLtdocinptgst">
+  <h3 id="idLtdocinptgstH3">GENERIC-SPECIFIC-TREE of docText
+    <a class="clsHide" href="#idLtdocinptgstH3"></a></h3>
+  <p id="idLtdocinptgstgtr">generic-tree-of-docText::
+    <br>* <a class="clsPreview" href="../dirLag/McsLag000003.last.html#idInfHmnSrl001">document</a>,
+    <br>* ... entity,
+    <br>* McsEngl.docText'generic-tree,
+    <a class="clsHide" href="#idLtdocinptgstgtr"></a></p>
+  <p id="idLtdocinptgststr">specific-tree-of-docText::
+    <br>* article,
+    <br>* book,
+    <br>* encyclopedia,
+    <br>* periodical,
+    <br>* <a class="clsPreview" href="McsTchInf000008.last.html#idLagHitparctre">title-content-tree--document</a>,
+    <br>
+    <br>* McsEngl.docText.specific-tree,
+    <a class="clsHide" href="#idLtdocinptgststr"></a></p>
+  </section>
   </section>
 
   <section id="idLtdocotpt">
@@ -870,8 +1021,9 @@
     <a class="clsHide" href="#idLfileotptdsn"></a></p>
   <p id="idLfileotptnam">name::
     <br>* McsEngl.Cmprfile,
+    <br>* McsEngl.computer-document!⇒Cmprfile,
     <br>* McsEngl.computer-file!⇒Cmprfile,
-    <br>* McsEngl.file!⇒Cmprfile,
+    <br>* McsEngl.docComputer!⇒Cmprfile,
     <br>* McsEngl.lagFile'output!⇒Cmprfile,
     <a class="clsHide" href="#idLfileotptnam"></a></p>
 
@@ -905,6 +1057,59 @@
   <p id="idLfileotptrnmgnam">name::
     <br>* McsEngl.Cmprfile'renaming,
     <a class="clsHide" href="#idLfileotptrnmgnam"></a></p>
+  </section>
+
+  <section id="idLfileotptChar">
+  <h3 id="idLfileotptCharH3">Cmprfile.character
+    <a class="clsHide" href="#idLfileotptCharH3"></a></h3>
+  <p id="idLfileotptChardsn">description::
+    <br>"character vs binary computer-file:
+    <br>"Character" and "binary" computer files are two distinct types of computer data representations, and they serve different purposes:
+    <br>
+    <br>1. **Character Files**:
+    <br>   - **Character files**, also known as text files, store data in a human-readable format. Each character in the file is typically represented using a character encoding, such as ASCII or UTF-8, which assigns numerical values to characters. These files contain textual information and often include line breaks and special characters (e.g., letters, numbers, punctuation, and control characters).
+    <br>
+    <br>   - **Use Case**: Character files are commonly used for storing documents, source code, configuration files, and other text-based data. They are easily human-readable and editable with text editors.
+    <br>
+    <br>   - **Examples**: .txt, .html, .xml, .csv, .json files.
+    <br>
+    <br>2. **Binary Files**:
+    <br>   - **Binary files** contain data in a format that is not intended for direct human interpretation. Instead of representing characters, they store raw binary data, which can include numbers, images, audio, video, executables, and more. These files do not use character encoding and may contain non-textual information.
+    <br>
+    <br>   - **Use Case**: Binary files are used for a wide range of applications, including multimedia, software, databases, and any situation where data is not naturally expressed in plain text.
+    <br>
+    <br>   - **Examples**: .jpg, .mp3, .exe, .dat files.
+    <br>
+    <br>**Key Differences**:
+    <br>- **Content Representation**: Character files represent data as characters and text, while binary files store data in a raw binary format.
+    <br>
+    <br>- **Human Readability**: Character files are human-readable, making them suitable for viewing and editing with text editors. Binary files are not designed for direct human consumption.
+    <br>
+    <br>- **Character Encoding**: Character files rely on character encoding to represent characters, while binary files do not use character encoding.
+    <br>
+    <br>- **Use Cases**: Character files are commonly used for documents, source code, and configuration, while binary files are used for multimedia, software, and non-textual data.
+    <br>
+    <br>- **Editing**: Character files are easily edited using text editors, while binary files require specialized tools and knowledge to manipulate.
+    <br>
+    <br>In summary, the choice between character and binary files depends on the type of data being stored. Character files are ideal for textual data, and binary files are used when data needs to be represented in its raw, non-textual form, as in multimedia, executables, and various data structures."
+    <br>[{2023-10-21 retrieved} https://chat.openai.com/c/1ab09bbc-0afb-443c-addc-45a932bc3825]
+    <a class="clsHide" href="#idLfileotptChardsn"></a></p>
+  <p id="idLfileotptCharnam">name::
+    <br>* McsEngl.Cmprfile.character,
+    <br>* McsEngl.character-computer-file,
+    <a class="clsHide" href="#idLfileotptCharnam"></a></p>
+  </section>
+
+  <section id="idLfileotptBnry">
+  <h3 id="idLfileotptBnryH3">Cmprfile.binary
+    <a class="clsHide" href="#idLfileotptBnryH3"></a></h3>
+  <p id="idLfileotptBnrydsn">description::
+    <br>·
+    <a class="clsHide" href="#idLfileotptBnrydsn"></a></p>
+  <p id="idLfileotptBnrynam">name::
+    <br>* McsEngl.Cmprfile.binary,
+    <br>* McsEngl.binary-computer-file,
+    <a class="clsHide" href="#idLfileotptBnrynam"></a></p>
   </section>
   </section>
 
