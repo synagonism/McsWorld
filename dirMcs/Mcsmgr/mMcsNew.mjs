@@ -45,6 +45,7 @@ import {fSftp} from './mSftp.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mMcsNew.mjs.1-3-1.2023-10-23: absolute-links',
     'mMcsNew.mjs.1-3-0.2023-08-29: classification-trees',
     'mMcsNew.mjs.1-2-0.2023-08-16: parent-child-tree',
     'mMcsNew.mjs.1-1-3.2023-08-15: shorname!=name',
@@ -89,15 +90,15 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirLag',
+  sDir = 'dirTchInf',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'formal--human-language',
+  sName = 'knowledge-language',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'lagFrml',
+  sNameShort = 'lagKnlg',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'LawGrc',
+  sNameId = 'LKnlg',
 
 
   sNameFile = '',
@@ -196,16 +197,8 @@ s =
   '  <p id="id' + sNameId + 'evgnam">name::\n' +
   '    <br>* McsEngl.' + sNameShort + '\'evoluting,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'evgnam"></a></p>\n' +
-  '  <p id="id' + sNameId + 'evg' + moUtil.fDateYMD2() + '">{' + moUtil.fDateYMD() + '}::\n' +
-  '    <br>=== McsHitp-creation:\n';
-if (sDir === 'dirTchInf') {
-  s = s +
-  '    <br>· creation of current <a class="clsPreview" href="McsTchInf000009.last.html#idMcsHitpFil">webpage-concept</a>.\n'
-} else {
-  s = s +
-  '    <br>· creation of current <a class="clsPreview" href="../dirTchInf/McsTchInf000009.last.html#idMcsHitp">concept</a>.\n'
-}
-s = s +
+  '  <p id="id' + sNameId + 'evg' + moUtil.fDateYMD2() + '">{' + moUtil.fDateYMD() + '}-McsHitp-creation::\n' +
+  '    <br>· creation of current <a class="clsPreview" href="../dirTchInf/McsTchInf000009.last.html#idMcsHitp">concept</a>.\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'evg' + moUtil.fDateYMD2() + '"></a></p>\n' +
   '</section>\n' +
   '\n' +
@@ -227,15 +220,7 @@ s = s +
   '    <a class="clsHide" href="#id' + sNameId + 'wptFH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'wtr">whole-tree-of-' + sNameShort + '::\n' +
   '    <br>* ,\n' +
-  '    <br>* ... ';
-if (sDir === 'dirCor') {
-  s = s +
-  '<a class="clsPreview" href="McsCor000003.last.html#idEntwtr">Sympan</a>.\n'
-} else {
-  s = s +
-  '<a class="clsPreview" href="../dirCor/McsCor000003.last.html#idEntwtr">Sympan</a>.\n'
-}
-s = s +
+  '    <br>* ... <a class="clsPreview" href="../dirCor/McsCor000003.last.html#idEntwtr">Sympan</a>.\n' +
   '    <br>* McsEngl.' + sNameShort + '\'whole-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'wtr"></a></p>\n' +
   '  <p id="id' + sNameId + 'ptr">part-tree-of-' + sNameShort + '::\n' +
@@ -249,15 +234,7 @@ s = s +
   '    <a class="clsHide" href="#id' + sNameId + 'gstFH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'gtr">generic-tree-of-' + sNameShort + '::\n' +
   '    <br>* ,\n' +
-  '    <br>* ... ';
-if (sDir === 'dirCor') {
-  s = s +
-  '<a class="clsPreview" href="McsCor000003.last.html#idOverview">entity</a>.\n'
-} else {
-  s = s +
-  '<a class="clsPreview" href="../dirCor/McsCor000003.last.html#idOverview">entity</a>.\n'
-}
-s = s +
+  '    <br>* ... <a class="clsPreview" href="../dirCor/McsCor000003.last.html#idOverview">entity</a>.\n' +
   '    <br>* McsEngl.' + sNameShort + '\'generic-tree,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'gtr"></a></p>\n' +
   '  <p id="id' + sNameId + 'str">specific-tree-of-' + sNameShort + '::\n' +
@@ -281,9 +258,9 @@ if (bCounter) {
 s = s +
   '  <!-- the content of page-path paragraph is displayed as it is on top of toc -->\n' +
   '  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-wholepath</span>:\n' +
-  '    <a class="clsPreview" href="../../#idOverview">synagonism.net</a> /\n' +
+  '    <a class="clsPreview" href="../../index.html#idOverview">synagonism.net</a> /\n' +
   '    <a class="clsPreview" href="../Mcs000000.last.html#idOverview">worldviewSngo</a> /\n' +
-  '    <a class="clsPreview" href="Mcs' + sDirShort + '000000.last.html#idOverview">' + sDir + '</a> /\n' +
+  '    <a class="clsPreview" href="../' + sDir + '/Mcs' + sDirShort + '000000.last.html#idOverview">' + sDir + '</a> /\n' +
   '    ' + sNameShort + '\n' +
   '    </p>\n' +
   '  <p id="idMetaP1">SEARCH::\n' +
@@ -300,17 +277,17 @@ s = s +
   '    <br>• email:\n' +
   '    <br> &nbsp;<img src="../../dirRsc/dirImg/mail.png">\n' +
   '    <br>• edit on github: https://github.com/synagonism/McsWorld/blob/master/dirMcs/' + sDir +'/' + sNameFile + ',\n' +
-  '    <br>• comments on <a class="clsPreview" href="Mcs' + sDirShort + '000000.last.html#idComment">Disqus</a>,\n' +
+  '    <br>• comments on <a class="clsPreview" href="../' + sDir + '/Mcs' + sDirShort + '000000.last.html#idComment">Disqus</a>,\n' +
   '    <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>,\n' +
   '    <a class="clsHide" href="#idFooterP1"></a></p>\n' +
   '  <p id="idMetaVersion">webpage-versions::\n' +
-  '    <br>• version.last.dynamic: <a lass="clsPreview" href="' + sNameFile + '">' + sNameFile + '</a>,\n' +
+  '    <br>• version.last.dynamic: <a lass="clsPreview" href="../' + sDir + '/' + sNameFile + '">' + sNameFile + '</a>,\n' +
   '    <br>• version.draft.creation: ' + sNameFileNaked + '.0-1-0.' + moUtil.fDateYMD() + '.last.html,\n' +
   '    <a class="clsHide" href="#idMetaVersion"></a></p>\n' +
   '</section>\n' +
   '\n' +
   '<section id="idSupport">\n' +
-  '  <h1 id="idSupportH1">support (<a class="clsPreview" href="../../#idSupport">link</a>)</h1>\n' +
+  '  <h1 id="idSupportH1">support (<a class="clsPreview" href="../../index.html#idSupport">link</a>)</h1>\n' +
   '  <p></p>\n' +
   '</section>\n' +
   '\n' +
