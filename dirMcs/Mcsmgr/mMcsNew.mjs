@@ -90,15 +90,15 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirTchInf',
+  sDir = 'dirTch',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'knowledge-language',
+  sName = 'tech.robotics',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'lagKnlg',
+  sNameShort = 'techRbtc',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'LKnlg',
+  sNameId = 'TRbtc',
 
 
   sNameFile = '',
@@ -295,12 +295,12 @@ s = s +
   '  import * as omMcsh from \'../Mcsmgr/mMcsh.js\'\n' +
   '</script>\n' +
   '<!-- Global site tag (gtag.js) - Google Analytics -->\n' +
-  '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-19285371-5"></script>\n' +
+  '<script async src="https://www.googletagmanager.com/gtag/js?id=G-N8T0MHWLS1"></script>\n' +
   '<script>\n' +
   '  window.dataLayer = window.dataLayer || [];\n' +
   '  function gtag(){dataLayer.push(arguments);}\n' +
   '  gtag(\'js\', new Date());\n' +
-  '  gtag(\'config\', \'UA-19285371-5\');\n' +
+  '  gtag(\'config\', \'G-N8T0MHWLS1\');\n' +
   '</script>\n' +
   '<!--   -->\n' +
   '</body>\n' +

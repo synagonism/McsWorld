@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.lagCpgm-(McsTchInf000006.1-6-0.2023-10-20) programing-language</title>
+  <title>Mcs.lagCpgm-(McsTchInf000006.1-7-0.2023-10-24) programing-language</title>
   <meta name="keywords" content="programing-language, lagCpgm, Lpgm, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -1161,9 +1161,13 @@
     <br>* McsEngl.lagCpgm.specific,
     <a class="clsHide" href="#idLagCpgmSpcnam"></a></p>
   <p id="idLagCpgmSpcP1">specific::
-    <br>* functional-lagCpgm,
     <br>* high-level--lagCpgm,
     <br>* low-level--lagCpgm,
+    <br>===
+    <br>* declarative-lagCpgm,
+    <br>* imperative-lagCpgm,
+    <br>===
+    <br>* functional-lagCpgm,
     <br>* object-oriented--lagCpgm,
     <br>* procedural-lagCpgm,
     <br>===
@@ -2631,6 +2635,82 @@
   </section>
 </section>
 
+<section id="idLagCpgm004">
+  <h1 id="idLagCpgm004H1">lagCpgm.declarative
+    <a class="clsHide" href="#idLagCpgm004H1"></a></h1>
+  <p id="idLagCpgm004dsn">description::
+    <br>"overview of declarative-languages:
+    <br>Declarative languages are a type of programming language that focuses on describing what should be done, rather than explicitly specifying how to do it. In declarative languages, you define the desired outcome or result, and the language's runtime system or interpreter figures out the steps to achieve that outcome. This is in contrast to imperative languages, where you specify each step of the program's execution.
+    <br>
+    <br>Here is an overview of declarative languages:
+    <br>1. **Declarative vs. Imperative:** Declarative languages are often contrasted with imperative languages. In imperative programming, you provide explicit instructions on how to achieve a task, using statements like loops, conditionals, and assignments. In declarative programming, you declare the desired outcome and let the system determine how to achieve it.
+    <br>
+    <br>2. **Types of Declarative Languages:**
+    <br>   a. **Functional Languages:** Functional programming languages, such as Haskell, Lisp, and Erlang, are declarative in nature. They focus on the evaluation of mathematical functions and expressions.
+    <br>   b. **Logic Programming Languages:** Logic programming languages, like Prolog, are based on formal logic. You specify facts and rules, and the system infers conclusions from these declarations.
+    <br>   c. **Database Query Languages:** SQL (Structured Query Language) is a common example of a declarative language used for querying and manipulating relational databases.
+    <br>   d. **Markup Languages:** Markup languages like HTML and XML are declarative languages used for structuring and presenting data on the web.
+    <br>
+    <br>3. **Advantages of Declarative Languages:**
+    <br>   a. **Simplicity:** Declarative languages often result in more concise and readable code because they abstract away low-level details.
+    <br>   b. **Ease of Parallelism:** Declarative code can be easier to parallelize since the system can optimize execution based on the desired outcome.
+    <br>   c. **Abstraction:** Declarative languages allow developers to focus on the "what" rather than the "how," promoting a higher level of abstraction.
+    <br>
+    <br>4. **Limitations of Declarative Languages:**
+    <br>   a. **Limited Control:** Declarative languages may not be suitable for tasks that require fine-grained control over the execution process.
+    <br>   b. **Performance:** In some cases, declarative languages can be less efficient than imperative languages because they leave optimization decisions to the system.
+    <br>   c. **Learning Curve:** Learning to think and program in a declarative manner can be challenging for developers accustomed to imperative paradigms.
+    <br>
+    <br>5. **Examples of Declarative Usage:**
+    <br>   - SQL for querying databases.
+    <br>   - HTML for defining the structure of web pages.
+    <br>   - Regular expressions for pattern matching in strings.
+    <br>   - CSS for styling web pages.
+    <br>   - Prolog for expert systems and artificial intelligence.
+    <br>
+    <br>6. **Hybrid Languages:** Some languages, like Python and Ruby, incorporate both imperative and declarative elements. Developers can choose to write code in a more declarative or imperative style, depending on the situation.
+    <br>
+    <br>In summary, declarative languages are designed to make programming more about specifying the desired results and less about the step-by-step instructions to achieve those results. They are often used in specific domains where abstraction and high-level descriptions of tasks are beneficial."
+    <br>[{2023-10-24 retrieved} https://chat.openai.com/c/5cd8acf9-8bc6-4af2-b683-5280ac522c0d]
+    <a class="clsHide" href="#idLagCpgm004dsn"></a></p>
+  <p id="idLagCpgm004nam">name::
+    <br>* McsEngl.declarative-lagCpgm,
+    <br>* McsEngl.lagCpgm.declarative,
+    <a class="clsHide" href="#idLagCpgm004nam"></a></p>
+</section>
+
+<section id="idLagCpgm005">
+  <h1 id="idLagCpgm005H1">lagCpgm.imperative
+    <a class="clsHide" href="#idLagCpgm005H1"></a></h1>
+  <p id="idLagCpgm005dsn">description::
+    <br>"imperative-languages vs procedural-languages:
+    <br>Imperative languages and procedural languages are both programming paradigms that describe how a program is structured and how tasks are performed, but they are not the same thing. Let's distinguish between the two:
+    <br>
+    <br>1. **Imperative Languages:**
+    <br>   - **Definition:** Imperative programming is a paradigm that focuses on describing a sequence of steps or actions that the computer must take to accomplish a task. It's characterized by statements that change a program's state through assignment, loops, and control flow structures.
+    <br>   - **Features:**
+    <br>     - It is based on the concept of "how to do" something.
+    <br>     - Programs are written as a sequence of statements that modify the program's state.
+    <br>     - It uses variables, loops, and conditionals to control the flow of execution.
+    <br>     - Common examples include languages like C, C++, and Pascal.
+    <br>
+    <br>2. **Procedural Languages:**
+    <br>   - **Definition:** Procedural programming is a subset of imperative programming that focuses on organizing code into reusable procedures or functions. A procedure is a self-contained block of code that performs a specific task.
+    <br>   - **Features:**
+    <br>     - It emphasizes breaking down a program into smaller, manageable procedures or functions.
+    <br>     - Functions are used to encapsulate and structure code, promoting modularity and reusability.
+    <br>     - It still relies on variables, loops, and conditionals.
+    <br>     - Common examples include C, Pascal, and Fortran (though it can be applied in other languages as well).
+    <br>
+    <br>In summary, procedural programming is a subset of imperative programming. While both paradigms involve modifying a program's state through statements and actions, procedural programming places a stronger emphasis on organizing code into procedures or functions to promote modularity and maintainability. The choice between imperative and procedural programming depends on the specific requirements of a project and the preferences of the programmer."
+    <br>[{2023-10-24 retrieved} https://chat.openai.com/c/ecbea33d-bb69-4041-b0fb-efbd6e4a7c36]
+    <a class="clsHide" href="#idLagCpgm005dsn"></a></p>
+  <p id="idLagCpgm005nam">name::
+    <br>* McsEngl.imperative-lagCpgm,
+    <br>* McsEngl.lagCpgm.imperative,
+    <a class="clsHide" href="#idLagCpgm005nam"></a></p>
+</section>
+
 <section id="idLagLean">
   <h1 id="idLagLeanH1">lagCpgm.Lean
     <a class="clsHide" href="#idLagLeanH1"></a></h1>
@@ -2701,13 +2781,13 @@
   <p></p>
 </section>
 
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N8T0MHWLS1"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-19285371-5', 'synagonism.net');
-  ga('send', 'pageview');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N8T0MHWLS1');
 </script>
 
 <script type="module">
