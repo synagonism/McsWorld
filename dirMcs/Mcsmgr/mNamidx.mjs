@@ -52,6 +52,7 @@ import {fWriteJsonArray} from './mUtil.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mNamidx.mjs.0-5-1.2022-11-27: >[name:: on EXTRA names',
     'mNamidx.mjs.0-5-0.2022-09-13: meta-info::',
     'mNamidx.mjs.0-4-0.2022-02-09: p-Mcs',
     'mNamidx.mjs.0-2-0.2021-12-31: lagEspo',
@@ -259,6 +260,7 @@ function fNamidx(fileIn, fSftpIn) {
           sUrlP = sLn.substring(sLn.indexOf('"')+1,sLn.indexOf('>')-1)
           sUrlP = sFileMcs + '#' + sUrlP
           if (sLn.indexOf('>name::') >= 0 ||
+              sLn.indexOf('>[name::') >= 0 ||
               sLn.indexOf('>meta-info::') >= 0) {
             if (aLag[nL] === 'lagEngl') {
               nMcsqnt = nMcsqnt + 1
