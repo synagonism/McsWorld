@@ -45,6 +45,7 @@ import {fSftp} from './mSftp.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mMcsNew.mjs.1-3-2.2023-11-29: evoluting-of',
     'mMcsNew.mjs.1-3-1.2023-10-23: absolute-links',
     'mMcsNew.mjs.1-3-0.2023-08-29: classification-trees',
     'mMcsNew.mjs.1-2-0.2023-08-16: parent-child-tree',
@@ -195,6 +196,7 @@ s =
   '  <h1 id="id' + sNameId + 'evgFH1">evoluting of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'evgFH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'evgnam">name::\n' +
+  '    <br>* McsEngl.evoluting-of-' + sNameShort + ',\n' +
   '    <br>* McsEngl.' + sNameShort + '\'evoluting,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'evgnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'evg' + moUtil.fDateYMD2() + '">{' + moUtil.fDateYMD() + '}-McsHitp-creation::\n' +
