@@ -91,15 +91,15 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirTchInf',
+  sDir = 'dirEdu',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Internet',
+  sName = 'Physics',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'Internet',
+  sNameShort = 'sciPhys',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'Intnt',
+  sNameId = 'SPhys',
 
 
   sNameFile = '',
