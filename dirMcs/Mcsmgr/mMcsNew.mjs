@@ -153,7 +153,6 @@ s =
   '    <br>* McsEngl.' + sNameFile + '//' + sDir + '//dirMcs!⇒' + sNameShort + ',\n' +
   '    <br>* McsEngl.' + sDir +'/' + sNameFile + '!⇒' + sNameShort + ',\n' +
   '    <br>* McsEngl.' + sName + '!⇒' + sNameShort + ',\n' +
-  '    <br>* McsEngl.' + sNameShort + ',\n' +
   '    <br>* McsEngl.' + sNameShort + '!=' + sNameFileNaked + ',\n' +
   '    <br>* McsEngl.' + sNameShort + '!=' + sName + ',\n' +
   '    <a class="clsHide" href="#idName"></a></p>\n' +
