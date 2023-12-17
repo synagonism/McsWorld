@@ -45,6 +45,7 @@ import {fSftp} from './mSftp.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mMcsNew.mjs.1-3-4.2023-12-12: title !=',
     'mMcsNew.mjs.1-3-3.2023-12-12: title',
     'mMcsNew.mjs.1-3-2.2023-11-29: evoluting-of',
     'mMcsNew.mjs.1-3-1.2023-10-23: absolute-links',
@@ -129,7 +130,7 @@ s =
   '<head>\n' +
   '  <meta charset="utf-8">\n' +
   '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-  '  <title>Mcs.' + sNameShort + ' - ' + sName + ' (' + sNameFileNaked + '.0-1-0.' + moUtil.fDateYMD() + ' draft) </title>\n' +
+  '  <title>Mcs.' + sNameShort + '!=' + sName + ' (' + sNameFileNaked + '.0-1-0.' + moUtil.fDateYMD() + ' draft) </title>\n' +
   '  <meta name="keywords" content="' + sName + ', ' + sNameShort + ', ModelConceptSensorial, McsHitp, Synagonism">\n' +
   '  <link rel="stylesheet" href="../Mcsmgr/mHitp.css">\n' +
   '</head>\n' +
