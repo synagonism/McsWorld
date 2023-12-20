@@ -93,15 +93,15 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirEdu',
+  sDir = 'dirNtr',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Economics',
+  sName = 'sky',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'sciEcon',
+  sNameShort = 'sky',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'SEcon',
+  sNameId = 'Sky',
 
 
   sNameFile = '',
@@ -130,7 +130,7 @@ s =
   '<head>\n' +
   '  <meta charset="utf-8">\n' +
   '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-  '  <title>Mcs.' + sNameShort + '!=' + sName + ' (' + sNameFileNaked + '.0-1-0.' + moUtil.fDateYMD() + ' draft) </title>\n' +
+  '  <title>Mcs.' + sNameShort + '!=' + sName + ' (' + sNameFileNaked + '.0-1-0.' + moUtil.fDateYMD() + ' draft)</title>\n' +
   '  <meta name="keywords" content="' + sName + ', ' + sNameShort + ', ModelConceptSensorial, McsHitp, Synagonism">\n' +
   '  <link rel="stylesheet" href="../Mcsmgr/mHitp.css">\n' +
   '</head>\n' +
