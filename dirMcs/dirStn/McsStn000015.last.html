@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.ogznProduction - organization.human.production (McsStn000015.1-34-0.2023-12-13)</title>
+  <title>Mcs.ogznProduction!=company (McsStn000015.1-35-0.2024-01-01)</title>
   <meta name="keywords" content="organization.economic, ogznProduction, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -1118,7 +1118,6 @@
     <br>* McsEngl.industry!⇒sectorPdn,
     <br>* McsEngl.ogznProduction.004-sector!⇒sectorPdn,
     <br>* McsEngl.ogznProduction.sector!⇒sectorPdn,
-    <br>* McsEngl.sectorPdn,
     <br>* McsEngl.production-sector!⇒sectorPdn,
     <br>* McsEngl.sector!⇒sectorPdn,
     <br>* McsEngl.sector-of-ogznProduction!⇒sectorPdn,
@@ -1246,48 +1245,67 @@
 </section>
 
 <section id="idOznPdn019">
-  <h1 id="idOznPdn019H1">ogznProduction.sectorGvc-019
+  <h1 id="idOznPdn019H1">ogznProduction.sectorAdmn-019
     <a class="clsHide" href="#idOznPdn019H1"></a></h1>
   <p id="idOznPdn019dsn">description::
-    <br>· the-set of <a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt017">oznGovernance</a>.
+    <br>· sectorAdmn is <a class="clsPreview" href="../dirCor/McsCor000008.last.html#idWhl001Set">the-set</a> of <a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt017">oznGovernance</a>.
+    <br>· Socgvc is <a class="clsPreview" href="../dirCor/McsCor000011.last.html#idOverview">THE-SYSTEM</a> of ogznAdmn.
+    <br>
+    <br>">narrow public sector:
+    <br>The term "narrow public sector" is less commonly used and has a somewhat ambiguous definition. It can be interpreted in two ways:
+    <br>**1. A more restricted definition of the public sector:** In this context, the narrow public sector would encompass only the core government institutions, such as ministries, departments, and agencies. These organizations are directly accountable to the government and play a central role in formulating and implementing public policies.
+    <br>**2. A smaller subset of the broader public sector:** This interpretation views the narrow public sector as a subset of the broader public sector, excluding organizations that operate with more autonomy and flexibility. This could include certain non-profit organizations, Crown corporations, or quasi-governmental agencies that receive public funding but enjoy greater independence in their operations.
+    <br>The distinction between the narrow and broader public sectors is not always clear-cut, as the boundaries between these categories can vary depending on the specific context and the country's institutional arrangements. However, both perspectives highlight the diversity of organizations that contribute to the public sector's role in providing essential services, promoting social welfare, and supporting economic development."
+    <br>[{2024-01-02 retrieved} https://bard.google.com/chat/653e9304008c22a0]
     <a class="clsHide" href="#idOznPdn019dsn"></a></p>
   <p id="idOznPdn019nam">name::
-    <br>* McsEngl.broadNo-public-sector!⇒sectorGvc,
-    <br>* McsEngl.governance-sector!⇒sectorGvc,
-    <br>* McsEngl.ogznProduction.019-sectorGvc!⇒sectorGvc,
-    <br>* McsEngl.ogznProduction.sectorGvc!⇒sectorGvc,
-    <br>* McsEngl.public-sector.broadNo!⇒sectorGvc,
-    <br>* McsEngl.sectorGvc,
+    <br>* McsEngl.administrative-sector!⇒sectorAdmn,
+    <br>* McsEngl.broadNo-public-sector!⇒sectorAdmn,
+    <br>* McsEngl.governance-sector!⇒sectorAdmn,
+    <br>* McsEngl.narrow-public-sector!⇒sectorAdmn,
+    <br>* McsEngl.ogznProduction.019-sectorAdmn!⇒sectorAdmn,
+    <br>* McsEngl.ogznProduction.sectorAdmn!⇒sectorAdmn,
+    <br>* McsEngl.public-sector.broadNo!⇒sectorAdmn,
+    <br>* McsEngl.sectorAdmn!=administrative-sector,
     <br>====== langoGreek:
-    <br>* McsElln.δημόσιος-τομέας.στενός!=sectorGvc,
-    <br>* McsElln.στενός-δημόσιος-τομέας!=sectorGvc,
+    <br>* McsElln.δημόσιος-τομέας.στενός!=sectorAdmn,
+    <br>* McsElln.διοίκησης-τομέας!=sectorAdmn,
+    <br>* McsElln.στενός-δημόσιος-τομέας!=sectorAdmn,
+    <br>* McsElln.τομέας-διοίκησης!=sectorAdmn,
     <a class="clsHide" href="#idOznPdn019nam"></a></p>
 </section>
 
 <section id="idOznPdn020">
-  <h1 id="idOznPdn020H1">ogznProduction.sectorGvcNo-018
+  <h1 id="idOznPdn020H1">ogznProduction.sectorAdmnNo-018
     <a class="clsHide" href="#idOznPdn020H1"></a></h1>
   <p id="idOznPdn020dsn">description::
-    <br>·
+    <br>* public-sector minus administrative-sector,
+    <br>* private-sector for-profit and not-for-profit,
     <a class="clsHide" href="#idOznPdn020dsn"></a></p>
   <p id="idOznPdn020nam">name::
-    <br>* McsEngl.ogznProduction.020-sectorGvcNo,
-    <br>* McsEngl.ogznProduction.sectorGvcNo,
-    <br>* McsEngl.sectorGvcNo,
+    <br>* McsEngl.ogznProduction.020-sectorAdmnNo,
+    <br>* McsEngl.ogznProduction.sectorAdmnNo,
+    <br>* McsEngl.sectorAdmnNo,
     <a class="clsHide" href="#idOznPdn020nam"></a></p>
 
   <section id="idOznPdn020idvl">
   <h2 id="idOznPdn020idvlH2">ogznProduction.governanceNo
     <a class="clsHide" href="#idOznPdn020idvlH2"></a></h2>
+  <p id="idOznPdn020idvldsn">description::
+    <br>· non-governance production-organization.
+    <a class="clsHide" href="#idOznPdn020idvldsn"></a></p>
+  <p id="idOznPdn020idvlnam">name::
+    <br>* McsEngl.ogznPdnGvcNo,
+    <br>* McsEngl.ogznProduction.governanceNo,
+    <a class="clsHide" href="#idOznPdn020idvlnam"></a></p>
   </section>
 </section>
 
 <section id="idOznPdn009">
-  <h1 id="idOznPdn009H1">ogznProduction.sectorGvcOwned-009
+  <h1 id="idOznPdn009H1">ogznProduction.sectorAdmnOwned-009
     <a class="clsHide" href="#idOznPdn009H1"></a></h1>
   <p id="idOznPdn009dsn">description::
-    <br>· sectorGvcOwned is <a class="clsPreview" href="../dirCor/McsCor000008.last.html#idWhl001Set">THE-SET</a> of oznGvcOwned.
-    <br>· Socgvc is <a class="clsPreview" href="../dirCor/McsCor000011.last.html#idOverview">THE-SYSTEM</a> of oznGvc.
+    <br>· sectorAdmnOwned is <a class="clsPreview" href="../dirCor/McsCor000008.last.html#idWhl001Set">THE-SET</a> of ogznAdmnOwned.
     <br>===
     <br>"The public sector (also called the state sector) is the part of the economy composed of both public services and public enterprises.
     <br>Public sectors include public goods and governmental services such as the military, law enforcement, infrastructure (public roads, bridges, tunnels, water supply, sewers, electrical grids, telecommunications, etc.), public transit, public education, along with health care and those working for the government itself, such as elected officials. The public sector might provide services that a non-payer cannot be excluded from (such as street lighting), services which benefit all of society rather than just the individual who uses the service.[1] Public enterprises, or state-owned enterprises, are self-financing commercial enterprises that are under public ownership which provide various private goods and services for sale and usually operate on a commercial basis.
@@ -1295,26 +1313,30 @@
     <br>[{2020-12-13} https://en.wikipedia.org/wiki/Public_sector]
     <a class="clsHide" href="#idOznPdn009dsn"></a></p>
   <p id="idOznPdn009nam">name::
-    <br>* McsEngl.Socgvc'sector!⇒sectorGvcOwned,
-    <br>* McsEngl.Socgvcsctr!⇒sectorGvcOwned,
-    <br>* McsEngl.SocsectorGvcOwned!⇒sectorGvcOwned,
-    <br>* McsEngl.oznGvc.aggregate!⇒sectorGvcOwned,
-    <br>* McsEngl.ogznProduction.009-sectorGvcOwned!⇒sectorGvcOwned,
-    <br>* McsEngl.ogznProduction.sectorGvcOwned!⇒sectorGvcOwned,
-    <br>* McsEngl.public-sector!⇒sectorGvcOwned,
-    <br>* McsEngl.sectorGvcOwned,
-    <br>* McsEngl.state-sector!⇒sectorGvcOwned,
+    <br>* McsEngl.Socgvc'sector!⇒sectorAdmnOwned,
+    <br>* McsEngl.Socgvcsctr!⇒sectorAdmnOwned,
+    <br>* McsEngl.SocsectorAdmnOwned!⇒sectorAdmnOwned,
+    <br>* McsEngl.ogznAdmn.aggregate!⇒sectorAdmnOwned,
+    <br>* McsEngl.ogznProduction.009-sectorAdmnOwned!⇒sectorAdmnOwned,
+    <br>* McsEngl.ogznProduction.sectorAdmnOwned!⇒sectorAdmnOwned,
+    <br>* McsEngl.public-sector!⇒sectorAdmnOwned,
+    <br>* McsEngl.sectorAdmnOwned!⇒sectorAdmnOwned,
+    <br>* McsEngl.sectorGvcOwned!⇒sectorAdmnOwned,
+    <br>* McsEngl.sectorPublic!⇒sectorAdmnOwned,
+    <br>* McsEngl.sectorAdmnOwned,
+    <br>* McsEngl.state-sector!⇒sectorAdmnOwned,
     <br>====== langoGreek:
-    <br>* McsElln.δημόσιος-τομέας.ευρύς!=sectorGvcOwned,
+    <br>* McsElln.δημόσιος-τομέας!=sectorAdmnOwned,
+    <br>* McsElln.ευρύς-δημόσιος-τομέας!=sectorAdmnOwned,
     <a class="clsHide" href="#idOznPdn009nam"></a></p>
 
   <section id="idOznPdn009sfr">
-  <h2 id="idOznPdn009sfrH2">satisfier (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt034">link</a>) of sectorGvcOwned
+  <h2 id="idOznPdn009sfrH2">satisfier (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt034">link</a>) of sectorAdmnOwned
     <a class="clsHide" href="#idOznPdn009sfrH2"></a></h2>
   </section>
 
   <section id="idOznPdn009mil">
-  <h2 id="idOznPdn009milH2">armed-forces of sectorGvcOwned
+  <h2 id="idOznPdn009milH2">armed-forces of sectorAdmnOwned
     <a class="clsHide" href="#idOznPdn009milH2"></a></h2>
   <p id="idOznPdn009mildsn">description::
     <br>"A military, also known collectively as armed forces, is a heavily armed, highly organized force primarily intended for warfare. It is typically officially authorized and maintained by a sovereign state, with its members identifiable by their distinct military uniform. It may consist of one or more military branches such as an army, navy, air force, space force, marines, or coast guard. The main task of the military is usually defined as defence of the state and its interests against external armed threats.
@@ -1322,17 +1344,17 @@
     <br>[{2020-12-20} https://en.wikipedia.org/wiki/Military]
     <a class="clsHide" href="#idOznPdn009mildsn"></a></p>
   <p id="idOznPdn009milnam">name::
-    <br>* McsEngl.armed-forces!⇒sectorGvcMili,
-    <br>* McsEngl.military!⇒sectorGvcMili,
-    <br>* McsEngl.sectorGvcOwned'armed-forces!⇒sectorGvcMili,
-    <br>* McsEngl.sectorGvcMili,
-    <br>* McsEngl.society'military!⇒sectorGvcMili,
+    <br>* McsEngl.armed-forces!⇒sectorAdmnMili,
+    <br>* McsEngl.military!⇒sectorAdmnMili,
+    <br>* McsEngl.sectorAdmnOwned'armed-forces!⇒sectorAdmnMili,
+    <br>* McsEngl.sectorAdmnMili,
+    <br>* McsEngl.society'military!⇒sectorAdmnMili,
     <br>====== langoGreek:
-    <br>* McsElln.ένοπλες-δυνάμεις!οι!=sectorGvcMili,
+    <br>* McsElln.ένοπλες-δυνάμεις!οι!=sectorAdmnMili,
     <a class="clsHide" href="#idOznPdn009milnam"></a></p>
 
   <section id="idOznPdn009milspdg">
-  <h3 id="idOznPdn009milspdgH3">spending of sectorGvcMili
+  <h3 id="idOznPdn009milspdgH3">spending of sectorAdmnMili
     <a class="clsHide" href="#idOznPdn009milspdgH3"></a></h3>
   <p id="idOznPdn009milspdgdsn">description::
     <br>· Military spending, 2022:
@@ -1376,12 +1398,12 @@
     <a class="clsHide" href="#idOznPdn009milspdgdsn"></a></p>
   <p id="idOznPdn009milspdgnam">name::
     <br>* McsEngl.military-spending,
-    <br>* McsEngl.sectorGvcMili-spending,
+    <br>* McsEngl.sectorAdmnMili-spending,
     <a class="clsHide" href="#idOznPdn009milspdgnam"></a></p>
   </section>
 
   <section id="idOznPdn009milfghtr">
-  <h3 id="idOznPdn009milfghtrH3">fighter of sectorGvcMili
+  <h3 id="idOznPdn009milfghtrH3">fighter of sectorAdmnMili
     <a class="clsHide" href="#idOznPdn009milfghtrH3"></a></h3>
   <p id="idOznPdn009milfghtrdsn">description::
     <br>"Percentage of people who would fight for their country:
@@ -1418,14 +1440,14 @@
     <br>[{2023-08-24 retrieved} https://twitter.com/stats_feed/status/1694398003111440648]
     <a class="clsHide" href="#idOznPdn009milfghtrdsn"></a></p>
   <p id="idOznPdn009milfghtrnam">name::
-    <br>* McsEngl.sectorGvcMili'fighter,
+    <br>* McsEngl.sectorAdmnMili'fighter,
     <br>* McsEngl.society'fighter,
     <a class="clsHide" href="#idOznPdn009milfghtrnam"></a></p>
   </section>
   </section>
 
   <section id="idOznPdn009plc">
-  <h2 id="idOznPdn009plcH2">police-forces of sectorGvcOwned
+  <h2 id="idOznPdn009plcH2">police-forces of sectorAdmnOwned
     <a class="clsHide" href="#idOznPdn009plcH2"></a></h2>
   <p id="idOznPdn009plcdsn">description::
     <br>"The police are a constituted body of persons empowered by a state, with the aim to enforce the law, to ensure the safety, health and possessions of citizens, and to prevent crime and civil disorder.[1][2] Their lawful powers include arrest and the use of force legitimized by the state via the monopoly on violence. The term is most commonly associated with the police forces of a sovereign state that are authorized to exercise the police power of that state within a defined legal or territorial area of responsibility. Police forces are often defined as being separate from the military and other organizations involved in the defense of the state against foreign aggressors; however, gendarmerie are military units charged with civil policing.[3] Police forces are usually public sector services, funded through taxes."
@@ -1435,7 +1457,7 @@
     <br>* McsEngl.oznPolice,
     <br>* McsEngl.police!⇒oznPolice,
     <br>* McsEngl.police-forces!⇒oznPolice,
-    <br>* McsEngl.sectorGvcOwned'police-forces!⇒oznPolice,
+    <br>* McsEngl.sectorAdmnOwned'police-forces!⇒oznPolice,
     <br>====== langoChinese:
     <br>* McsZhon.jǐngchá-警察!=oznPolice,
     <br>* McsZhon.警察-jǐngchá!=oznPolice,
@@ -1466,7 +1488,7 @@
   </section>
 
   <section id="idOznPdn009fire">
-  <h2 id="idOznPdn009fireH2">fire-forces of sectorGvcOwned
+  <h2 id="idOznPdn009fireH2">fire-forces of sectorAdmnOwned
     <a class="clsHide" href="#idOznPdn009fireH2"></a></h2>
   <p id="idOznPdn009firedsn">description::
     <br>"A fire department (American English) or fire brigade (British English),[note 1] also known as a fire authority or fire service, is an organization that provides firefighting services. In some areas, they may also provide technical rescue, fire protection, fire investigation, and emergency medical services.
@@ -1481,40 +1503,40 @@
     <br>* McsEngl.fire-forces!⇒oznFire,
     <br>* McsEngl.fire-service!⇒oznFire,
     <br>* McsEngl.oznFireGvc,
-    <br>* McsEngl.sectorGvcOwned'fire-forces!⇒oznFire,
+    <br>* McsEngl.sectorAdmnOwned'fire-forces!⇒oznFire,
     <br>====== langoGreek:
     <br>* McsElln.πυροσβεστική-υπηρεσία!=oznFire,
     <a class="clsHide" href="#idOznPdn009firenam"></a></p>
   </section>
 
   <section id="idOznPdn009hlth">
-  <h2 id="idOznPdn009hlthH2">health-sys of sectorGvcOwned
+  <h2 id="idOznPdn009hlthH2">health-sys of sectorAdmnOwned
     <a class="clsHide" href="#idOznPdn009hlthH2"></a></h2>
   <p id="idOznPdn009hlthdsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn009hlthdsn"></a></p>
   <p id="idOznPdn009hlthnam">name::
     <br>* McsEngl.oznHlthGvc,
-    <br>* McsEngl.sectorGvcOwned'health-sys!⇒oznHlthGvc,
+    <br>* McsEngl.sectorAdmnOwned'health-sys!⇒oznHlthGvc,
     <br>====== langoGreek:
     <br>* McsElln.δημόσιο-σύστημα-υγείας!oznHlthGvc,
     <a class="clsHide" href="#idOznPdn009hlthnam"></a></p>
   </section>
 
   <section id="idOznPdn009edu">
-  <h2 id="idOznPdn009eduH2">education-sys of sectorGvcOwned
+  <h2 id="idOznPdn009eduH2">education-sys of sectorAdmnOwned
     <a class="clsHide" href="#idOznPdn009eduH2"></a></h2>
   <p id="idOznPdn009edudsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn009edudsn"></a></p>
   <p id="idOznPdn009edunam">name::
     <br>* McsEngl.oznEduGvc,
-    <br>* McsEngl.sectorGvcOwned'education-sys!⇒oznEduGvc,
+    <br>* McsEngl.sectorAdmnOwned'education-sys!⇒oznEduGvc,
     <a class="clsHide" href="#idOznPdn009edunam"></a></p>
   </section>
 
   <section id="idOznPdn009wkr">
-  <h2 id="idOznPdn009wkrH2">worker (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmngvcwkr">link</a>) of sectorGvcOwned
+  <h2 id="idOznPdn009wkrH2">worker (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmngvcwkr">link</a>) of sectorAdmnOwned
     <a class="clsHide" href="#idOznPdn009wkrH2"></a></h2>
   </section>
 
@@ -1530,25 +1552,27 @@
     <br>·
     <a class="clsHide" href="#idOznPdn009idvldsn"></a></p>
   <p id="idOznPdn009idvlnam">name::
-    <br>* McsEngl.governance-owned-ogznProduction!⇒oznGvcOwned,
-    <br>* McsEngl.oznGvcOwned,
-    <br>* McsEngl.ogznProduction.governanceOwned!⇒oznGvcOwned,
+    <br>* McsEngl.governance-owned-ogznProduction!⇒ogznAdmnOwned,
+    <br>* McsEngl.ogznAdmnOwned,
+    <br>* McsEngl.ogznProduction.governanceOwned!⇒ogznAdmnOwned,
     <a class="clsHide" href="#idOznPdn009idvlnam"></a></p>
   </section>
 </section>
 
 <section id="idOznPdn010">
-  <h1 id="idOznPdn010H1">ogznProduction.sectorGvcOwnedNo-010
+  <h1 id="idOznPdn010H1">ogznProduction.sectorAdmnOwnedNo-010
     <a class="clsHide" href="#idOznPdn010H1"></a></h1>
   <p id="idOznPdn010dsn">description::
     <br>· the NON <a class="clsPreview" href="#idOznPdn009">governance-owned-sector</a>.
     <a class="clsHide" href="#idOznPdn010dsn"></a></p>
   <p id="idOznPdn010nam">name::
-    <br>* McsEngl.ogznProduction.010-sectorGvcOwnedNo!⇒sectorGvcOwnedNo,
-    <br>* McsEngl.ogznProduction.sectorGvcOwnedNo!⇒sectorGvcOwnedNo,
-    <br>* McsEngl.private-sector!⇒sectorGvcOwnedNo,
-    <br>* McsEngl.sectorGvcOwnedNo,
-    <br>* McsEngl.sectorPrivate!⇒sectorGvcOwnedNo,
+    <br>* McsEngl.ogznProduction.010-sectorAdmnOwnedNo!⇒sectorAdmnOwnedNo,
+    <br>* McsEngl.ogznProduction.sectorAdmnOwnedNo!⇒sectorAdmnOwnedNo,
+    <br>* McsEngl.private-sector!⇒sectorAdmnOwnedNo,
+    <br>* McsEngl.sectorAdmnOwnedNo!⇒sectorAdmnOwnedNo,
+    <br>* McsEngl.sectorGvcOwnedNo!⇒sectorAdmnOwnedNo,
+    <br>* McsEngl.sectorPrivate!⇒sectorAdmnOwnedNo,
+    <br>* McsEngl.sectorAdmnOwnedNo,
     <a class="clsHide" href="#idOznPdn010nam"></a></p>
 
   <section id="idOznPdn006">
@@ -1558,15 +1582,15 @@
     <br>· oznPrivate is <a class="clsPreview" href="#idOverview">an-ogznProduction</a> OWNED by state|regional|local governance-systems.
     <a class="clsHide" href="#idOznPdn006dsn"></a></p>
   <p id="idOznPdn006nam">name::
-    <br>* McsEngl.oznGovernanceOwnedNo!⇒oznGvcOwnedNo,
-    <br>* McsEngl.oznGvcOwnedNo,
-    <br>* McsEngl.oznPrivate!⇒oznGvcOwnedNo,
-    <br>* McsEngl.ogznProduction.006-private!⇒oznGvcOwnedNo,
-    <br>* McsEngl.ogznProduction.private!⇒oznGvcOwnedNo,
-    <br>* McsEngl.private-ogznProduction!⇒oznGvcOwnedNo,
-    <br>* McsEngl.publicNo-ogznProduction!⇒oznGvcOwnedNo,
+    <br>* McsEngl.oznGovernanceOwnedNo!⇒ogznAdmnOwnedNo,
+    <br>* McsEngl.ogznAdmnOwnedNo,
+    <br>* McsEngl.oznPrivate!⇒ogznAdmnOwnedNo,
+    <br>* McsEngl.ogznProduction.006-private!⇒ogznAdmnOwnedNo,
+    <br>* McsEngl.ogznProduction.private!⇒ogznAdmnOwnedNo,
+    <br>* McsEngl.private-ogznProduction!⇒ogznAdmnOwnedNo,
+    <br>* McsEngl.publicNo-ogznProduction!⇒ogznAdmnOwnedNo,
     <br>====== langoGreek:
-    <br>* McsElln.ιδιωτικός-τομέας!=oznGvcOwnedNo,
+    <br>* McsElln.ιδιωτικός-τομέας!=ogznAdmnOwnedNo,
     <a class="clsHide" href="#idOznPdn006nam"></a></p>
   </section>
 </section>
@@ -2429,8 +2453,8 @@
   <h1 id="idOznPdn011H1">ogznProduction.social-011
     <a class="clsHide" href="#idOznPdn011H1"></a></h1>
   <p id="idOznPdn011dsn">description::
-    <br>· social-production-organization is oznGvcNo that solves <a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt012">social-problems</a>.
-    <br>· an-oznGvc by definition solves <a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt012">social-problems</a>.
+    <br>· social-production-organization is ogznAdmnNo that solves <a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt012">social-problems</a>.
+    <br>· an-ogznAdmn by definition solves <a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt012">social-problems</a>.
     <br>· no transparency, no social-company.
     <a class="clsHide" href="#idOznPdn011dsn"></a></p>
   <p id="idOznPdn011nam">name::
@@ -2951,7 +2975,32 @@
   <h2 id="idOznPdn027AggH2">oznMili.aggregate
     <a class="clsHide" href="#idOznPdn027AggH2"></a></h2>
   <p id="idOznPdn027Aggdsn">description::
-    <br>·
+    <br>"military indesutry:
+    <br>The military industry, also known as the defense industry, is a global industry that manufactures and sells weapons and military technology. Public sector and private sector firms conduct research and development, engineering, production, and servicing of military material, equipment, and facilities. Customers are the armed forces of states, and civilians.
+    <br>**Industry overview**
+    <br>The military industry is a complex and multifaceted sector. It includes a wide range of activities, from the development of new weapons systems to the provision of training and support services. The industry is also highly regulated, with governments playing a significant role in setting standards and controlling exports.
+    <br>**Products and services**
+    <br>The military industry produces a wide range of goods and services, including:
+    <br>* **Weapons:** This includes everything from small arms to fighter jets and missiles.
+    <br>* **Munitions:** This includes ammunition for all types of weapons, as well as explosives and other military supplies.
+    <br>* **Weapons platforms:** This includes ships, tanks, helicopters, and other vehicles that are used for military purposes.
+    <br>* **Military communications and electronics:** This includes radar, communications equipment, and other electronic systems that are used by the military.
+    <br>* **Logistical and operational support:** This includes everything from food and water to training and maintenance.
+    <br>**Economic impact**
+    <br>The military industry is a major economic force. In 2023, global military spending was estimated to be $2.1 trillion. The United States is the world's largest military spender, followed by China, Russia, India, and Saudi Arabia.
+    <br>The military industry also has a significant impact on employment. In 2023, the industry employed an estimated 20 million people worldwide.
+    <br>**Social and political implications**
+    <br>The military industry has a number of social and political implications. It can contribute to the arms race and instability in the world. It can also lead to corruption and human rights abuses.
+    <br>**Criticisms of the military industry**
+    <br>The military industry has been criticized for its role in promoting war and violence. It has also been criticized for its environmental impact and its contribution to inequality.
+    <br>**Alternatives to the military industry**
+    <br>Some people believe that there are alternatives to the military industry. They argue that diplomacy, peacekeeping, and economic development are more effective ways to promote peace and security.
+    <br>**The future of the military industry**
+    <br>The future of the military industry is uncertain. The industry is likely to face a number of challenges in the coming years, including the rise of new technologies, the changing nature of warfare, and the growing demand for transparency and accountability.
+    <br>Despite these challenges, the military industry is likely to remain a major player in the global economy for many years to come.
+    <br>Sources
+    <br>en.wikipedia.org/wiki/Arms_industry#:~:text=The%20arms%20ind"
+    <br>[{2024-01-01 retrieved} https://bard.google.com/chat/a668f4b1cc9da3c4]
     <a class="clsHide" href="#idOznPdn027Aggdsn"></a></p>
   <p id="idOznPdn027Aggnam">name::
     <br>* McsEngl.defence-industry!⇒sectorPdnMili,
@@ -2962,11 +3011,35 @@
     <br>* McsElln.αμυντική-βιομηχανία!⇒sectorPdnMili,
     <br>* McsElln.στρατιωτική-βιομηχανία!⇒sectorPdnMili,
     <a class="clsHide" href="#idOznPdn027Aggnam"></a></p>
-  </section>
 
   <section id="idOznPdn027AggGvc">
-  <h2 id="idOznPdn027AggGvcH2">oznMili.aggregate.governance (<a class="clsPreview" href="#idOznPdn009mil">link</a>)
-    <a class="clsHide" href="#idOznPdn027AggGvcH2"></a></h2>
+  <h3 id="idOznPdn027AggGvcH3">oznMili.aggregate.governance (<a class="clsPreview" href="#idOznPdn009mil">link</a>)
+    <a class="clsHide" href="#idOznPdn027AggGvcH3"></a></h3>
+  </section>
+
+  <section id="idOznPdn027AggGvcsipri">
+  <h3 id="idOznPdn027AggGvcsipriH3">Stockholm-International-Peace-Research-Institute of sectorPdnMili
+    <a class="clsHide" href="#idOznPdn027AggGvcsipriH3"></a></h3>
+  <p id="idOznPdn027AggGvcsipridsn">description::
+    <br>"Stockholm-International-Peace-Research-Institute:
+    <br>The Stockholm International Peace Research Institute (SIPRI) is an independent international institute devoted to research into conflict, armaments, arms control, and disarmament. Established in 1966, SIPRI is based in Stockholm, Sweden, and is widely respected for its objective and impartial analysis.
+    <br>**SIPRI's mission** is to provide open and transparent information about armed conflict, armaments, arms control, and disarmament in the interest of peace, security and development.
+    <br>**SIPRI's activities** include:
+    <br>* **Producing and disseminating data and analysis:** SIPRI produces and disseminates a wide range of data and analysis on armed conflict, armaments, arms control, and disarmament. This information is available to policymakers, researchers, journalists, and the general public.
+    <br>* **Organizing seminars and conferences:** SIPRI organizes seminars, conferences, and workshops on a wide range of arms control and disarmament issues. These events provide a forum for experts from around the world to discuss and debate the most pressing issues of the day.
+    <br>* **Providing advice to policymakers:** SIPRI provides advice to policymakers at the national, regional, and international levels. This advice is based on SIPRI's research and analysis, and it is designed to help policymakers make informed decisions about arms control and disarmament.
+    <br>**SIPRI's publications** include:
+    <br>* **The SIPRI Yearbook:** The SIPRI Yearbook is SIPRI's flagship publication. It provides comprehensive information on armed conflict, armaments, arms control, and disarmament.
+    <br>* **SIPRI Factsheets:** SIPRI Factsheets provide concise and up-to-date information on a wide range of arms control and disarmament issues.
+    <br>* **SIPRI Studies:** SIPRI Studies are in-depth reports on specific arms control and disarmament issues.
+    <br>**SIPRI is a trusted source of information for policymakers, researchers, journalists, and the general public.** Its work is essential for promoting international peace and security."
+    <br>[{2024-01-01 retrieved} https://bard.google.com/chat/a668f4b1cc9da3c4]
+    <a class="clsHide" href="#idOznPdn027AggGvcsipridsn"></a></p>
+  <p id="idOznPdn027AggGvcsiprinam">name::
+    <br>* McsEngl.SIPRI!=Stockholm-International-Peace-Research-Institute,
+    <br>* McsEngl.Stockholm-International-Peace-Research-Institute,
+    <a class="clsHide" href="#idOznPdn027AggGvcsiprinam"></a></p>
+  </section>
   </section>
 </section>
 
