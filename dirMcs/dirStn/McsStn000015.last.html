@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.ogznProduction!=company (McsStn000015.1-35-0.2024-01-01)</title>
+  <title>Mcs.ogznProduction!=company (McsStn000015.1-37-0.2024-01-06)</title>
   <meta name="keywords" content="organization.economic, ogznProduction, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -40,19 +40,18 @@
     <br>* McsEngl.Socecon'production-ozn!⇒ogznProduction,
     <br>* McsEngl.enterprise!⇒ogznProduction,
     <br>* McsEngl.human-economic-organization!⇒ogznProduction,
-    <br>* McsEngl.oznConsumptionNo!⇒ogznProduction,
-    <br>* McsEngl.oznEcon!⇒ogznProduction,
-    <br>* McsEngl.oznPdcn!⇒ogznProduction, {2020-11-07},
-    <br>* McsEngl.ogznPdcn!⇒ogznProduction,
+    <br>* McsEngl.ogznConsumptionNo!⇒ogznProduction,
+    <br>* McsEngl.ogznEcon!⇒ogznProduction,
+    <br>* McsEngl.ogznPdcn!⇒ogznProduction, {2020-11-07},
     <br>* McsEngl.oznPrdn!⇒ogznProduction, {2023-10-18},
     <br>* McsEngl.ogznProduction, {2020-11-07},
     <br>* McsEngl.ogznProduction!=McsStn000015,
     <br>* McsEngl.ogznProduction//economy!⇒ogznProduction,
-    <br>* McsEngl.oznSatisfier!⇒ogznProduction, {2020-09-02},
-    <br>* McsEngl.oznSfr!⇒ogznProduction,
-    <br>* McsEngl.ozn.economic!⇒ogznProduction,
+    <br>* McsEngl.ogznSatisfier!⇒ogznProduction, {2020-09-02},
+    <br>* McsEngl.ogznSfr!⇒ogznProduction,
+    <br>* McsEngl.ogzn.economic!⇒ogznProduction,
     <br>* McsEngl.organization.human.economic!⇒ogznProduction,
-    <br>* McsEngl.oznHouseholdNo!⇒ogznProduction, {2020-10-25},
+    <br>* McsEngl.ogznHouseholdNo!⇒ogznProduction, {2020-10-25},
     <br>* McsEngl.ogznProduction!=organization.economic,
     <br>* McsEngl.producer-organization!⇒ogznProduction,
     <br>* McsEngl.production-organization!⇒ogznProduction,
@@ -1113,62 +1112,134 @@
     <br>· economic-sector is <a class="clsPreview" href="../dirCor/McsCor000008.last.html#idWhl001Set">a-set</a> of related ogznProductions on an-attribute.
     <a class="clsHide" href="#idOznPdn004dsn"></a></p>
   <p id="idOznPdn004nam">name::
-    <br>* McsEngl.SocPdnSector!⇒sectorPdn,
-    <br>* McsEngl.economic-sector!⇒sectorPdn,
-    <br>* McsEngl.industry!⇒sectorPdn,
-    <br>* McsEngl.ogznProduction.004-sector!⇒sectorPdn,
-    <br>* McsEngl.ogznProduction.sector!⇒sectorPdn,
-    <br>* McsEngl.production-sector!⇒sectorPdn,
-    <br>* McsEngl.sector!⇒sectorPdn,
-    <br>* McsEngl.sector-of-ogznProduction!⇒sectorPdn,
-    <br>* McsEngl.sectorPdn!=production-sector,
-    <br>* McsEngl.sectorProduction!⇒sectorPdn,
+    <br>* McsEngl.SocPdnSector!⇒sctrPdn,
+    <br>* McsEngl.economic-sector!⇒sctrPdn,
+    <br>* McsEngl.industry!⇒sctrPdn,
+    <br>* McsEngl.ogznProduction.004-sector!⇒sctrPdn,
+    <br>* McsEngl.ogznProduction.sector!⇒sctrPdn,
+    <br>* McsEngl.production-sector!⇒sctrPdn,
+    <br>* McsEngl.sctrPdn!=production-sector,
+    <br>* McsEngl.sector!⇒sctrPdn,
+    <br>* McsEngl.sector-of-ogznProduction!⇒sctrPdn,
+    <br>* McsEngl.sectorPdn!⇒sctrPdn,
+    <br>* McsEngl.sectorProduction!⇒sctrPdn,
     <br>====== langoGreek:
-    <br>* McsElln.βιομηχανία!η/viomihanía-i/!=sectorPdn,
-    <br>* McsElln.τομέας-οικονομίας!ο/toméas-ikonomías-o/!=sectorPdn,
+    <br>* McsElln.τομέας-οικονομίας!ο/toméas-ikonomías-o/!=sctrPdn,
     <a class="clsHide" href="#idOznPdn004nam"></a></p>
   <p id="idOznPdn004dsnL">descriptionLong::
     <br>"2.39 Establishments that have the same principal activity are grouped into industries according to the International Standard Industrial Classification of All Economic Activities Revision 4 (ISIC, Rev.4) (United Nations, 2008a)."
     <br>[{2021-01-20} https://synagonism.net/dirMcs/dirStn/dirHitp/HitpStnStd000.last.html#idPara2-39]
     <a class="clsHide" href="#idOznPdn004dsnL"></a></p>
 
+  <section id="idOznPdn004gdpp">
+  <h2 id="idOznPdn004gdppH2">Gdp-percent of sctrPdn
+    <a class="clsHide" href="#idOznPdn004gdppH2"></a></h2>
+  <p id="idOznPdn004gdppdsn">description::
+    <br>· sector's output percent to country or global Gdp.
+    <a class="clsHide" href="#idOznPdn004gdppdsn"></a></p>
+  <p id="idOznPdn004gdppnam">name::
+    <br>* McsEngl.sctrPdn'Gdp-percent,
+    <a class="clsHide" href="#idOznPdn004gdppnam"></a></p>
+  </section>
+
+  <section id="idOznPdn004mtvl">
+  <h2 id="idOznPdn004mtvlH2">market-value of sctrPdn
+    <a class="clsHide" href="#idOznPdn004mtvlH2"></a></h2>
+  <p id="idOznPdn004mtvldsn">description::
+    <br>">market value of sector:
+    <br>The market value of a sector is the total market capitalization of all companies in that sector. Market capitalization is calculated by multiplying the number of outstanding shares of a company by its current share price. The market value of a sector is a measure of the overall size and importance of that sector in the economy.
+    <br>Here are the market values of the 11 major market sectors as of October 4, 2023:
+    <br>1. Technology: $7.42 trillion
+    <br>2. Consumer discretionary: $5.79 trillion
+    <br>3. Financials: $5.43 trillion
+    <br>4. Communication services: $4.80 trillion
+    <br>5. Health care: $4.37 trillion
+    <br>6. Industrials: $3.90 trillion
+    <br>7. Materials: $3.37 trillion
+    <br>8. Consumer staples: $3.17 trillion
+    <br>9. Utilities: $2.49 trillion
+    <br>10. Real estate: $2.23 trillion
+    <br>11. Energy: $1.94 trillion
+    <br>As you can see, the technology sector is the largest by market value, followed by consumer discretionary, financials, communication services, and healthcare. These five sectors make up over half of the total market value of all stocks.
+    <br>The market value of a sector can change over time as new companies enter the sector, existing companies grow or shrink, and economic conditions change. For example, the technology sector has seen its market value grow rapidly in recent years, while the energy sector has seen its market value decline.
+    <br>The market value of a sector can be a useful indicator of the overall health of the economy. A growing sector is often a sign of economic growth, while a declining sector can be a sign of economic weakness. However, it is important to note that the market value of a sector is just one piece of information, and investors should also consider other factors such as company-specific fundamentals and economic trends when making investment decisions."
+    <br>[{2024-01-03 retrieved} https://bard.google.com/chat/54b69e653fcf75df]
+    <a class="clsHide" href="#idOznPdn004mtvldsn"></a></p>
+  <p id="idOznPdn004mtvlnam">name::
+    <br>* McsEngl.sctrPdn'market-value,
+    <a class="clsHide" href="#idOznPdn004mtvlnam"></a></p>
+  </section>
+
   <section id="idOznPdn004law">
-  <h2 id="idOznPdn004lawH2">law of sectorPdn
+  <h2 id="idOznPdn004lawH2">law of sctrPdn
     <a class="clsHide" href="#idOznPdn004lawH2"></a></h2>
   <p id="idOznPdn004lawdsn">description::
     <br>· <a class="clsPreview" href="../dirStn/McsStn000012.last.html#idLaw045">economic-law</a> about a-sector.
     <a class="clsHide" href="#idOznPdn004lawdsn"></a></p>
   <p id="idOznPdn004lawnam">name::
-    <br>* McsEngl.lawEconomy.013-sectorPdn,
-    <br>* McsEngl.lawEconomy.sectorPdn,
-    <br>* McsEngl.sectorPdn'law,
+    <br>* McsEngl.lawEconomy.013-sctrPdn,
+    <br>* McsEngl.lawEconomy.sctrPdn,
+    <br>* McsEngl.sctrPdn'law,
     <a class="clsHide" href="#idOznPdn004lawnam"></a></p>
   </section>
 
   <section id="idOznPdn004plcy">
-  <h2 id="idOznPdn004plcyH2">policy of sectorPdn
+  <h2 id="idOznPdn004plcyH2">policy of sctrPdn
     <a class="clsHide" href="#idOznPdn004plcyH2"></a></h2>
   <p id="idOznPdn004plcydsn">description::
-    <br>·
+    <br>">economic-policies per sector:
+    <br>Economic policies are government actions or interventions intended to influence the economy. These policies can affect a wide range of economic activities, including production, consumption, investment, and international trade. Different economic sectors have different policy needs, and governments often tailor their policies to the specific needs of each sector.
+    <br>**Agriculture**
+    <br>The agricultural sector is a key economic driver in many countries, and governments often use policies to support the sector. These policies may include:
+    <br>* **Subsidies:** Governments may provide subsidies to farmers to help them cover the costs of production, such as fertilizers, seeds, and equipment.
+    <br>* **Infrastructure development:** Governments may invest in infrastructure development, such as roads, irrigation systems, and storage facilities, to improve the productivity of the agricultural sector.
+    <br>* **Market access:** Governments may work to improve market access for agricultural products, both domestically and internationally. This may involve negotiating trade agreements or providing technical assistance to farmers to help them meet export standards.
+    <br>**Manufacturing**
+    <br>The manufacturing sector is another important economic sector, and governments often use policies to support it. These policies may include:
+    <br>* **Tax breaks:** Governments may provide tax breaks to manufacturing companies to encourage them to invest and create jobs.
+    <br>* **Government procurement:** Governments may give preference to domestic manufacturing companies when they are awarding contracts.
+    <br>* **Research and development (R&D) subsidies:** Governments may provide subsidies to manufacturing companies to fund R&D activities, which can help them develop new products and processes.
+    <br>**Financial Services**
+    <br>The financial services sector is crucial for the functioning of the economy, and governments often use policies to regulate it. These policies may include:
+    <br>* **Bank regulation:** Governments may regulate banks to ensure that they are safe and sound, and to prevent them from engaging in risky activities that could harm the economy.
+    <br>* **Financial market regulation:** Governments may regulate financial markets to prevent fraud and manipulation, and to ensure that investors are protected.
+    <br>* **Monetary policy:** Governments may use monetary policy to manage inflation and interest rates, which can affect the overall health of the economy.
+    <br>**Tourism**
+    <br>The tourism sector is a major source of income for many countries, and governments often use policies to encourage tourism. These policies may include:
+    <br>* **Tax breaks for hotels and other tourism businesses:** Governments may provide tax breaks to hotels and other tourism businesses to make them more competitive.
+    <br>* **Investment in tourism infrastructure:** Governments may invest in tourism infrastructure, such as airports, roads, and tourist attractions, to make it easier for tourists to visit the country.
+    <br>* **Marketing and promotion:** Governments may invest in marketing and promotion to attract tourists to the country.
+    <br>**Education**
+    <br>Education is a key investment in the future of an economy, and governments often use policies to improve education. These policies may include:
+    <br>* **Investment in public schools:** Governments may invest in public schools to improve the quality of education. This may involve hiring more teachers, providing better facilities, and developing new curriculums.
+    <br>* **Funding for higher education:** Governments may provide funding for higher education to make it more affordable for students.
+    <br>* **Tuition subsidies:** Governments may provide tuition subsidies to students from low-income families.
+    <br>**Other Sectors**
+    <br>In addition to the sectors discussed above, there are many other sectors that governments use policies to support. These sectors may include:
+    <br>* **Healthcare:** Governments may provide healthcare services directly or by providing subsidies to private healthcare providers.
+    <br>* **Transportation:** Governments may invest in transportation infrastructure, such as roads, railways, and airports.
+    <br>* **Energy:** Governments may regulate the energy sector to ensure that it is reliable, affordable, and environmentally sustainable."
+    <br>[{2024-01-03 retrieved} https://bard.google.com/chat/950165d78bf3734a]
     <a class="clsHide" href="#idOznPdn004plcydsn"></a></p>
   <p id="idOznPdn004plcynam">name::
-    <br>* McsEngl.sectorPdn'policy,
+    <br>* McsEngl.Socpolicy.sctrPdn,
+    <br>* McsEngl.sctrPdn'policy,
     <a class="clsHide" href="#idOznPdn004plcynam"></a></p>
   </section>
 
   <section id="idOznPdn004wrkr">
-  <h2 id="idOznPdn004wrkrH2">worker of sectorPdn
+  <h2 id="idOznPdn004wrkrH2">worker of sctrPdn
     <a class="clsHide" href="#idOznPdn004wrkrH2"></a></h2>
   <p id="idOznPdn004wrkrdsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn004wrkrdsn"></a></p>
   <p id="idOznPdn004wrkrnam">name::
-    <br>* McsEngl.sectorPdn'worker,
+    <br>* McsEngl.sctrPdn'worker,
     <a class="clsHide" href="#idOznPdn004wrkrnam"></a></p>
   </section>
 
   <section id="idOznPdn004Spc">
-  <h2 id="idOznPdn004SpcH2">sectorPdn.SPECIFIC
+  <h2 id="idOznPdn004SpcH2">sctrPdn.SPECIFIC
     <a class="clsHide" href="#idOznPdn004SpcH2"></a></h2>
   <p id="idOznPdn004Spcdsn">description::
     <br>* public-sector,
@@ -1210,12 +1281,12 @@
     <br>[{2023-12-12 retrieved} https://chat.openai.com/c/48e06881-d826-4e64-9ebf-fe2e444a7fbe]
     <a class="clsHide" href="#idOznPdn004Spcdsn"></a></p>
   <p id="idOznPdn004Spcnam">name::
-    <br>* McsEngl.sectorPdn.specific,
+    <br>* McsEngl.sctrPdn.specific,
     <a class="clsHide" href="#idOznPdn004Spcnam"></a></p>
   </section>
 
   <section id="idOznPdn004Idry">
-  <h2 id="idOznPdn004IdryH2">sectorPdn.industry
+  <h2 id="idOznPdn004IdryH2">sctrPdn.industry
     <a class="clsHide" href="#idOznPdn004IdryH2"></a></h2>
   <p id="idOznPdn004Idrydsn">description::
     <br>">industry vs sector:
@@ -1240,16 +1311,42 @@
   <p id="idOznPdn004Idrynam">name::
     <br>* McsEngl.industry-vs-sector,
     <br>* McsEngl.sector-vs-industry,
+    <br>====== langoGreek:
+    <br>* McsElln.βιομηχανία!η/viomihanía-i/!=sctrPdn,
     <a class="clsHide" href="#idOznPdn004Idrynam"></a></p>
   </section>
 </section>
 
-<section id="idOznPdn019">
-  <h1 id="idOznPdn019H1">ogznProduction.sectorAdmn-019
-    <a class="clsHide" href="#idOznPdn019H1"></a></h1>
-  <p id="idOznPdn019dsn">description::
-    <br>· sectorAdmn is <a class="clsPreview" href="../dirCor/McsCor000008.last.html#idWhl001Set">the-set</a> of <a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt017">oznGovernance</a>.
+<section id="idOznPdn038">
+  <h1 id="idOznPdn038H1">ogznProduction.sectorAdmn
+    <a class="clsHide" href="#idOznPdn038H1"></a></h1>
+  <p id="idOznPdn038dsn">description::
+    <br>· sectorAdmn = sectorAdmn0 + sectorAdmn1 + sectorAdmn2
+    <br>
+    <br>· sctrPdnAdmn is <a class="clsPreview" href="../dirCor/McsCor000008.last.html#idWhl001Set">the-set</a> of <a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt017">ogznAdmn</a>.
     <br>· Socgvc is <a class="clsPreview" href="../dirCor/McsCor000011.last.html#idOverview">THE-SYSTEM</a> of ogznAdmn.
+    <a class="clsHide" href="#idOznPdn038dsn"></a></p>
+  <p id="idOznPdn038nam">name::
+    <br>* McsEngl.administrative-sector!⇒sctrPdnAdmn,
+    <br>* McsEngl.ogznProduction.sectorAdmn!⇒sctrPdnAdmn,
+    <br>* McsEngl.ogznProduction.sectorAdmn!⇒sctrPdnAdmn,
+    <br>* McsEngl.public-sector!⇒sctrPdnAdmn,
+    <br>* McsEngl.sctrPdnAdmn!=administrative-sector,
+    <br>* McsEngl.sectorAdmn!⇒sctrPdnAdmn,
+    <br>* McsEngl.sectorAdmnOwned!⇒sctrPdnAdmn,
+    <br>* McsEngl.sectorGvcOwned!⇒sctrPdnAdmn,
+    <br>* McsEngl.sectorPublic!⇒sctrPdnAdmn,
+    <br>* McsEngl.state-sector!⇒sctrPdnAdmn,
+    <br>====== langoGreek:
+    <br>* McsElln.διοίκησης-τομέας!=sctrPdnAdmn,
+    <br>* McsElln.τομέας-διοίκησης!=sctrPdnAdmn,
+    <a class="clsHide" href="#idOznPdn038nam"></a></p>
+
+  <section id="idOznPdn019">
+  <h2 id="idOznPdn019H2">ogznProduction.sectorAdmn0
+    <a class="clsHide" href="#idOznPdn019H2"></a></h2>
+  <p id="idOznPdn019dsn">description::
+    <br>· sectorAdmn = sectorAdmn0 + sectorAdmn1 + sectorAdmn2
     <br>
     <br>">narrow public sector:
     <br>The term "narrow public sector" is less commonly used and has a somewhat ambiguous definition. It can be interpreted in two ways:
@@ -1259,103 +1356,55 @@
     <br>[{2024-01-02 retrieved} https://bard.google.com/chat/653e9304008c22a0]
     <a class="clsHide" href="#idOznPdn019dsn"></a></p>
   <p id="idOznPdn019nam">name::
-    <br>* McsEngl.administrative-sector!⇒sectorAdmn,
-    <br>* McsEngl.broadNo-public-sector!⇒sectorAdmn,
-    <br>* McsEngl.governance-sector!⇒sectorAdmn,
-    <br>* McsEngl.narrow-public-sector!⇒sectorAdmn,
-    <br>* McsEngl.ogznProduction.019-sectorAdmn!⇒sectorAdmn,
-    <br>* McsEngl.ogznProduction.sectorAdmn!⇒sectorAdmn,
-    <br>* McsEngl.public-sector.broadNo!⇒sectorAdmn,
-    <br>* McsEngl.sectorAdmn!=administrative-sector,
+    <br>* McsEngl.core-administrative-sector!⇒sctrPdnAdmn0,
+    <br>* McsEngl.governance-sector!⇒sctrPdnAdmn0,
+    <br>* McsEngl.ogznProduction.019-sctrPdnAdmn0!⇒sctrPdnAdmn0,
+    <br>* McsEngl.ogznProduction.sctrPdnAdmn0!⇒sctrPdnAdmn0,
+    <br>* McsEngl.public-sector.core!⇒sctrPdnAdmn0,
+    <br>* McsEngl.sctrPdnAdmn0!=administrative-sector,
     <br>====== langoGreek:
-    <br>* McsElln.δημόσιος-τομέας.στενός!=sectorAdmn,
-    <br>* McsElln.διοίκησης-τομέας!=sectorAdmn,
-    <br>* McsElln.στενός-δημόσιος-τομέας!=sectorAdmn,
-    <br>* McsElln.τομέας-διοίκησης!=sectorAdmn,
+    <br>* McsElln.πυρηνικός-τομέας-διοίκησης!=sctrPdnAdmn0,
+    <br>* McsElln.τομέας-διοίκησης-πυρηνικός!=sctrPdnAdmn0,
     <a class="clsHide" href="#idOznPdn019nam"></a></p>
-</section>
-
-<section id="idOznPdn020">
-  <h1 id="idOznPdn020H1">ogznProduction.sectorAdmnNo-018
-    <a class="clsHide" href="#idOznPdn020H1"></a></h1>
-  <p id="idOznPdn020dsn">description::
-    <br>* public-sector minus administrative-sector,
-    <br>* private-sector for-profit and not-for-profit,
-    <a class="clsHide" href="#idOznPdn020dsn"></a></p>
-  <p id="idOznPdn020nam">name::
-    <br>* McsEngl.ogznProduction.020-sectorAdmnNo,
-    <br>* McsEngl.ogznProduction.sectorAdmnNo,
-    <br>* McsEngl.sectorAdmnNo,
-    <a class="clsHide" href="#idOznPdn020nam"></a></p>
-
-  <section id="idOznPdn020idvl">
-  <h2 id="idOznPdn020idvlH2">ogznProduction.governanceNo
-    <a class="clsHide" href="#idOznPdn020idvlH2"></a></h2>
-  <p id="idOznPdn020idvldsn">description::
-    <br>· non-governance production-organization.
-    <a class="clsHide" href="#idOznPdn020idvldsn"></a></p>
-  <p id="idOznPdn020idvlnam">name::
-    <br>* McsEngl.ogznPdnGvcNo,
-    <br>* McsEngl.ogznProduction.governanceNo,
-    <a class="clsHide" href="#idOznPdn020idvlnam"></a></p>
   </section>
-</section>
 
-<section id="idOznPdn009">
-  <h1 id="idOznPdn009H1">ogznProduction.sectorAdmnOwned-009
-    <a class="clsHide" href="#idOznPdn009H1"></a></h1>
-  <p id="idOznPdn009dsn">description::
-    <br>· sectorAdmnOwned is <a class="clsPreview" href="../dirCor/McsCor000008.last.html#idWhl001Set">THE-SET</a> of ogznAdmnOwned.
-    <br>===
-    <br>"The public sector (also called the state sector) is the part of the economy composed of both public services and public enterprises.
-    <br>Public sectors include public goods and governmental services such as the military, law enforcement, infrastructure (public roads, bridges, tunnels, water supply, sewers, electrical grids, telecommunications, etc.), public transit, public education, along with health care and those working for the government itself, such as elected officials. The public sector might provide services that a non-payer cannot be excluded from (such as street lighting), services which benefit all of society rather than just the individual who uses the service.[1] Public enterprises, or state-owned enterprises, are self-financing commercial enterprises that are under public ownership which provide various private goods and services for sale and usually operate on a commercial basis.
-    <br>Organizations that are not part of the public sector are either a part of the private sector or voluntary sector. The private sector is composed of the economic sectors that are intended to earn a profit for the owners of the enterprise. The voluntary, civic or social sector concerns a diverse array of non-profit organizations emphasizing civil society."
-    <br>[{2020-12-13} https://en.wikipedia.org/wiki/Public_sector]
-    <a class="clsHide" href="#idOznPdn009dsn"></a></p>
-  <p id="idOznPdn009nam">name::
-    <br>* McsEngl.Socgvc'sector!⇒sectorAdmnOwned,
-    <br>* McsEngl.Socgvcsctr!⇒sectorAdmnOwned,
-    <br>* McsEngl.SocsectorAdmnOwned!⇒sectorAdmnOwned,
-    <br>* McsEngl.ogznAdmn.aggregate!⇒sectorAdmnOwned,
-    <br>* McsEngl.ogznProduction.009-sectorAdmnOwned!⇒sectorAdmnOwned,
-    <br>* McsEngl.ogznProduction.sectorAdmnOwned!⇒sectorAdmnOwned,
-    <br>* McsEngl.public-sector!⇒sectorAdmnOwned,
-    <br>* McsEngl.sectorAdmnOwned!⇒sectorAdmnOwned,
-    <br>* McsEngl.sectorGvcOwned!⇒sectorAdmnOwned,
-    <br>* McsEngl.sectorPublic!⇒sectorAdmnOwned,
-    <br>* McsEngl.sectorAdmnOwned,
-    <br>* McsEngl.state-sector!⇒sectorAdmnOwned,
+  <section id="idOznPdn039">
+  <h2 id="idOznPdn039H2">ogznProduction.sectorAdmn1
+    <a class="clsHide" href="#idOznPdn039H2"></a></h2>
+  <p id="idOznPdn039dsn">description::
+    <br>· sectorAdmn = sectorAdmn0 + sectorAdmn1 + sectorAdmn2
+    <a class="clsHide" href="#idOznPdn039dsn"></a></p>
+  <p id="idOznPdn039nam">name::
+    <br>* McsEngl.narrow-public-sector!⇒sctrPdnAdmn1,
+    <br>* McsEngl.ogznProduction.039-sectorAdmn1!⇒sctrPdnAdmn1,
+    <br>* McsEngl.ogznProduction.sectorAdmn1!⇒sctrPdnAdmn1,
+    <br>* McsEngl.sctrPdnAdmn1!=narrow-public-sector,
     <br>====== langoGreek:
-    <br>* McsElln.δημόσιος-τομέας!=sectorAdmnOwned,
-    <br>* McsElln.ευρύς-δημόσιος-τομέας!=sectorAdmnOwned,
-    <a class="clsHide" href="#idOznPdn009nam"></a></p>
-
-  <section id="idOznPdn009sfr">
-  <h2 id="idOznPdn009sfrH2">satisfier (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt034">link</a>) of sectorAdmnOwned
-    <a class="clsHide" href="#idOznPdn009sfrH2"></a></h2>
-  </section>
+    <br>* McsElln.δημόσιος-τομέας.στενός!=sctrPdnAdmn1,
+    <br>* McsElln.στενός-δημόσιος-τομέας!=sctrPdnAdmn1,
+    <a class="clsHide" href="#idOznPdn039nam"></a></p>
 
   <section id="idOznPdn009mil">
-  <h2 id="idOznPdn009milH2">armed-forces of sectorAdmnOwned
-    <a class="clsHide" href="#idOznPdn009milH2"></a></h2>
+  <h3 id="idOznPdn009milH3">armed-forces of sctrPdnAdmn1
+    <a class="clsHide" href="#idOznPdn009milH3"></a></h3>
   <p id="idOznPdn009mildsn">description::
     <br>"A military, also known collectively as armed forces, is a heavily armed, highly organized force primarily intended for warfare. It is typically officially authorized and maintained by a sovereign state, with its members identifiable by their distinct military uniform. It may consist of one or more military branches such as an army, navy, air force, space force, marines, or coast guard. The main task of the military is usually defined as defence of the state and its interests against external armed threats.
     <br>In broad usage, the terms "armed forces" and "military" are often treated as synonymous, although in technical usage a distinction is sometimes made in which a country's armed forces may include both its military and other paramilitary forces. There are various forms of irregular military forces, not belonging to a recognized state; though they share many attributes with regular military forces, they are less often referred to as simply "military"."
     <br>[{2020-12-20} https://en.wikipedia.org/wiki/Military]
     <a class="clsHide" href="#idOznPdn009mildsn"></a></p>
   <p id="idOznPdn009milnam">name::
-    <br>* McsEngl.armed-forces!⇒sectorAdmnMili,
-    <br>* McsEngl.military!⇒sectorAdmnMili,
-    <br>* McsEngl.sectorAdmnOwned'armed-forces!⇒sectorAdmnMili,
-    <br>* McsEngl.sectorAdmnMili,
-    <br>* McsEngl.society'military!⇒sectorAdmnMili,
+    <br>* McsEngl.armed-forces!⇒sctrPdnAdmnMili,
+    <br>* McsEngl.military!⇒sctrPdnAdmnMili,
+    <br>* McsEngl.sctrPdnAdmn1'armed-forces!⇒sctrPdnAdmnMili,
+    <br>* McsEngl.sctrPdnAdmnMili,
+    <br>* McsEngl.society'military!⇒sctrPdnAdmnMili,
     <br>====== langoGreek:
-    <br>* McsElln.ένοπλες-δυνάμεις!οι!=sectorAdmnMili,
+    <br>* McsElln.ένοπλες-δυνάμεις!οι!=sctrPdnAdmnMili,
     <a class="clsHide" href="#idOznPdn009milnam"></a></p>
 
   <section id="idOznPdn009milspdg">
-  <h3 id="idOznPdn009milspdgH3">spending of sectorAdmnMili
-    <a class="clsHide" href="#idOznPdn009milspdgH3"></a></h3>
+  <h4 id="idOznPdn009milspdgH4">spending of sctrPdnAdmnMili
+    <a class="clsHide" href="#idOznPdn009milspdgH4"></a></h4>
   <p id="idOznPdn009milspdgdsn">description::
     <br>· Military spending, 2022:
     <br>* USA: $877 billion,
@@ -1398,13 +1447,13 @@
     <a class="clsHide" href="#idOznPdn009milspdgdsn"></a></p>
   <p id="idOznPdn009milspdgnam">name::
     <br>* McsEngl.military-spending,
-    <br>* McsEngl.sectorAdmnMili-spending,
+    <br>* McsEngl.sctrPdnAdmnMili-spending,
     <a class="clsHide" href="#idOznPdn009milspdgnam"></a></p>
   </section>
 
   <section id="idOznPdn009milfghtr">
-  <h3 id="idOznPdn009milfghtrH3">fighter of sectorAdmnMili
-    <a class="clsHide" href="#idOznPdn009milfghtrH3"></a></h3>
+  <h4 id="idOznPdn009milfghtrH4">fighter of sctrPdnAdmnMili
+    <a class="clsHide" href="#idOznPdn009milfghtrH4"></a></h4>
   <p id="idOznPdn009milfghtrdsn">description::
     <br>"Percentage of people who would fight for their country:
     <br>* Pakistan → 89%,
@@ -1440,41 +1489,41 @@
     <br>[{2023-08-24 retrieved} https://twitter.com/stats_feed/status/1694398003111440648]
     <a class="clsHide" href="#idOznPdn009milfghtrdsn"></a></p>
   <p id="idOznPdn009milfghtrnam">name::
-    <br>* McsEngl.sectorAdmnMili'fighter,
+    <br>* McsEngl.sctrPdnAdmnMili'fighter,
     <br>* McsEngl.society'fighter,
     <a class="clsHide" href="#idOznPdn009milfghtrnam"></a></p>
   </section>
   </section>
 
   <section id="idOznPdn009plc">
-  <h2 id="idOznPdn009plcH2">police-forces of sectorAdmnOwned
-    <a class="clsHide" href="#idOznPdn009plcH2"></a></h2>
+  <h3 id="idOznPdn009plcH3">police-forces of sctrPdnAdmn1
+    <a class="clsHide" href="#idOznPdn009plcH3"></a></h3>
   <p id="idOznPdn009plcdsn">description::
     <br>"The police are a constituted body of persons empowered by a state, with the aim to enforce the law, to ensure the safety, health and possessions of citizens, and to prevent crime and civil disorder.[1][2] Their lawful powers include arrest and the use of force legitimized by the state via the monopoly on violence. The term is most commonly associated with the police forces of a sovereign state that are authorized to exercise the police power of that state within a defined legal or territorial area of responsibility. Police forces are often defined as being separate from the military and other organizations involved in the defense of the state against foreign aggressors; however, gendarmerie are military units charged with civil policing.[3] Police forces are usually public sector services, funded through taxes."
     <br>[{2020-12-20} https://en.wikipedia.org/wiki/Police]
     <a class="clsHide" href="#idOznPdn009plcdsn"></a></p>
   <p id="idOznPdn009plcnam">name::
-    <br>* McsEngl.oznPolice,
-    <br>* McsEngl.police!⇒oznPolice,
-    <br>* McsEngl.police-forces!⇒oznPolice,
-    <br>* McsEngl.sectorAdmnOwned'police-forces!⇒oznPolice,
+    <br>* McsEngl.sctrPdnAdmnPolice!=police-forces,
+    <br>* McsEngl.police!⇒sctrPdnAdmnPolice,
+    <br>* McsEngl.police-forces!⇒sctrPdnAdmnPolice,
+    <br>* McsEngl.sctrPdnAdmn1'police-forces!⇒sctrPdnAdmnPolice,
     <br>====== langoChinese:
-    <br>* McsZhon.jǐngchá-警察!=oznPolice,
-    <br>* McsZhon.警察-jǐngchá!=oznPolice,
+    <br>* McsZhon.jǐngchá-警察!=sctrPdnAdmnPolice,
+    <br>* McsZhon.警察-jǐngchá!=sctrPdnAdmnPolice,
     <br>====== langoGreek:
-    <br>* McsElln.αστυνομία!η!=oznPolice,
+    <br>* McsElln.αστυνομία!η!=sctrPdnAdmnPolice,
     <a class="clsHide" href="#idOznPdn009plcnam"></a></p>
 
   <section id="idOznPdn009plcwkr">
-  <h3 id="idOznPdn009plcwkrH3">policeman of oznPolice
-    <a class="clsHide" href="#idOznPdn009plcwkrH3"></a></h3>
+  <h4 id="idOznPdn009plcwkrH4">policeman of sctrPdnAdmnPolice
+    <a class="clsHide" href="#idOznPdn009plcwkrH4"></a></h4>
   <p id="idOznPdn009plcwkrdsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn009plcwkrdsn"></a></p>
   <p id="idOznPdn009plcwkrnam">name::
     <br>* McsEngl.hmnWorker.027-police!⇒wkrPoli,
     <br>* McsEngl.hmnWorker.police!⇒wkrPoli,
-    <br>* McsEngl.oznPolice'worker!⇒wkrPoli,
+    <br>* McsEngl.sctrPdnAdmnPolice'worker!⇒wkrPoli,
     <br>* McsEngl.policeman!⇒wkrPoli,
     <br>* McsEngl.wkrPoli,
     <br>====== langoChinese:
@@ -1488,8 +1537,8 @@
   </section>
 
   <section id="idOznPdn009fire">
-  <h2 id="idOznPdn009fireH2">fire-forces of sectorAdmnOwned
-    <a class="clsHide" href="#idOznPdn009fireH2"></a></h2>
+  <h3 id="idOznPdn009fireH3">fire-forces of sctrPdnAdmn1
+    <a class="clsHide" href="#idOznPdn009fireH3"></a></h3>
   <p id="idOznPdn009firedsn">description::
     <br>"A fire department (American English) or fire brigade (British English),[note 1] also known as a fire authority or fire service, is an organization that provides firefighting services. In some areas, they may also provide technical rescue, fire protection, fire investigation, and emergency medical services.
     <br>Fire departments are most commonly a public sector organization that operate within a municipality, county, state, nation, or special district. Private and specialist firefighting organizations also exist, such as those for aircraft rescue and firefighting.[1]
@@ -1497,57 +1546,85 @@
     <br>[{2020-12-20} https://en.wikipedia.org/wiki/Fire_department]
     <a class="clsHide" href="#idOznPdn009firedsn"></a></p>
   <p id="idOznPdn009firenam">name::
-    <br>* McsEngl.fire-authority!⇒oznFire,
-    <br>* McsEngl.fire-brigate!⇒oznFire,
-    <br>* McsEngl.fire-department!⇒oznFire,
-    <br>* McsEngl.fire-forces!⇒oznFire,
-    <br>* McsEngl.fire-service!⇒oznFire,
-    <br>* McsEngl.oznFireGvc,
-    <br>* McsEngl.sectorAdmnOwned'fire-forces!⇒oznFire,
+    <br>* McsEngl.fire-authority!⇒sctrPdnAdmnFire,
+    <br>* McsEngl.fire-brigate!⇒sctrPdnAdmnFire,
+    <br>* McsEngl.fire-department!⇒sctrPdnAdmnFire,
+    <br>* McsEngl.fire-forces!⇒sctrPdnAdmnFire,
+    <br>* McsEngl.fire-service!⇒sctrPdnAdmnFire,
+    <br>* McsEngl.sctrPdnAdmnFire!=fire-forces,
+    <br>* McsEngl.sctrPdnAdmn1'fire-forces!⇒sctrPdnAdmnFire,
     <br>====== langoGreek:
-    <br>* McsElln.πυροσβεστική-υπηρεσία!=oznFire,
+    <br>* McsElln.πυροσβεστική-υπηρεσία!η!=sctrPdnAdmnFire,
     <a class="clsHide" href="#idOznPdn009firenam"></a></p>
+  </section>
+  </section>
+
+  <section id="idOznPdn009">
+  <h2 id="idOznPdn009H2">ogznProduction.sectorAdmn2
+    <a class="clsHide" href="#idOznPdn009H2"></a></h2>
+  <p id="idOznPdn009dsn">description::
+    <br>· sectorAdmn = sectorAdmn0 + sectorAdmn1 + sectorAdmn2
+    <br>· sectorAdmnOwned is <a class="clsPreview" href="../dirCor/McsCor000008.last.html#idWhl001Set">THE-SET</a> of ogznAdmnOwned.
+    <br>===
+    <br>"The public sector (also called the state sector) is the part of the economy composed of both public services and public enterprises.
+    <br>Public sectors include public goods and governmental services such as the military, law enforcement, infrastructure (public roads, bridges, tunnels, water supply, sewers, electrical grids, telecommunications, etc.), public transit, public education, along with health care and those working for the government itself, such as elected officials. The public sector might provide services that a non-payer cannot be excluded from (such as street lighting), services which benefit all of society rather than just the individual who uses the service.[1] Public enterprises, or state-owned enterprises, are self-financing commercial enterprises that are under public ownership which provide various private goods and services for sale and usually operate on a commercial basis.
+    <br>Organizations that are not part of the public sector are either a part of the private sector or voluntary sector. The private sector is composed of the economic sectors that are intended to earn a profit for the owners of the enterprise. The voluntary, civic or social sector concerns a diverse array of non-profit organizations emphasizing civil society."
+    <br>[{2020-12-13} https://en.wikipedia.org/wiki/Public_sector]
+    <a class="clsHide" href="#idOznPdn009dsn"></a></p>
+  <p id="idOznPdn009nam">name::
+    <br>* McsEngl.broad-public-sector!⇒sctrPdnAdmn2,
+    <br>* McsEngl.ogznPdnAdmn2.aggregate!⇒sctrPdnAdmn2,
+    <br>* McsEngl.ogznProduction.009-sectorAdmnOwned!⇒sctrPdnAdmn2,
+    <br>* McsEngl.ogznProduction.sectorAdmnOwned!⇒sctrPdnAdmn2,
+    <br>====== langoGreek:
+    <br>* McsElln.δημόσιος-τομέας.ευρύς!=sctrPdnAdmn2,
+    <br>* McsElln.ευρύς-δημόσιος-τομέας!=sctrPdnAdmn2,
+    <a class="clsHide" href="#idOznPdn009nam"></a></p>
+
+  <section id="idOznPdn009sfr">
+  <h3 id="idOznPdn009sfrH3">satisfier (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt034">link</a>) of sctrPdnAdmn2
+    <a class="clsHide" href="#idOznPdn009sfrH3"></a></h3>
   </section>
 
   <section id="idOznPdn009hlth">
-  <h2 id="idOznPdn009hlthH2">health-sys of sectorAdmnOwned
-    <a class="clsHide" href="#idOznPdn009hlthH2"></a></h2>
+  <h3 id="idOznPdn009hlthH3">health-sys of sctrPdnAdmn2
+    <a class="clsHide" href="#idOznPdn009hlthH3"></a></h3>
   <p id="idOznPdn009hlthdsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn009hlthdsn"></a></p>
   <p id="idOznPdn009hlthnam">name::
-    <br>* McsEngl.oznHlthGvc,
-    <br>* McsEngl.sectorAdmnOwned'health-sys!⇒oznHlthGvc,
+    <br>* McsEngl.ogznHlthGvc,
+    <br>* McsEngl.sctrPdnAdmn2'health-sys!⇒ogznHlthGvc,
     <br>====== langoGreek:
-    <br>* McsElln.δημόσιο-σύστημα-υγείας!oznHlthGvc,
+    <br>* McsElln.δημόσιο-σύστημα-υγείας!ogznHlthGvc,
     <a class="clsHide" href="#idOznPdn009hlthnam"></a></p>
   </section>
 
   <section id="idOznPdn009edu">
-  <h2 id="idOznPdn009eduH2">education-sys of sectorAdmnOwned
-    <a class="clsHide" href="#idOznPdn009eduH2"></a></h2>
+  <h3 id="idOznPdn009eduH3">education-sys of sctrPdnAdmn2
+    <a class="clsHide" href="#idOznPdn009eduH3"></a></h3>
   <p id="idOznPdn009edudsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn009edudsn"></a></p>
   <p id="idOznPdn009edunam">name::
-    <br>* McsEngl.oznEduGvc,
-    <br>* McsEngl.sectorAdmnOwned'education-sys!⇒oznEduGvc,
+    <br>* McsEngl.ogznEduGvc,
+    <br>* McsEngl.sctrPdnAdmn2'education-sys!⇒ogznEduGvc,
     <a class="clsHide" href="#idOznPdn009edunam"></a></p>
   </section>
 
   <section id="idOznPdn009wkr">
-  <h2 id="idOznPdn009wkrH2">worker (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmngvcwkr">link</a>) of sectorAdmnOwned
-    <a class="clsHide" href="#idOznPdn009wkrH2"></a></h2>
+  <h3 id="idOznPdn009wkrH3">worker (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmngvcwkr">link</a>) of sctrPdnAdmn2
+    <a class="clsHide" href="#idOznPdn009wkrH3"></a></h3>
   </section>
 
   <section id="idOznPdn005">
-  <h2 id="idOznPdn005H2">ogznProduction.governance-005 (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt017">link</a>)
-    <a class="clsHide" href="#idOznPdn005H2"></a></h2>
+  <h3 id="idOznPdn005H3">ogznProduction.governance-005 (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt017">link</a>)
+    <a class="clsHide" href="#idOznPdn005H3"></a></h3>
   </section>
 
   <section id="idOznPdn009idvl">
-  <h2 id="idOznPdn009idvlH2">ogznProduction.governanceOwned
-    <a class="clsHide" href="#idOznPdn009idvlH2"></a></h2>
+  <h3 id="idOznPdn009idvlH3">ogznProduction.governanceOwned
+    <a class="clsHide" href="#idOznPdn009idvlH3"></a></h3>
   <p id="idOznPdn009idvldsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn009idvldsn"></a></p>
@@ -1557,34 +1634,65 @@
     <br>* McsEngl.ogznProduction.governanceOwned!⇒ogznAdmnOwned,
     <a class="clsHide" href="#idOznPdn009idvlnam"></a></p>
   </section>
+  </section>
+</section>
+
+<section id="idOznPdn020">
+  <h1 id="idOznPdn020H1">ogznProduction.sectorAdmn0No
+    <a class="clsHide" href="#idOznPdn020H1"></a></h1>
+  <p id="idOznPdn020dsn">description::
+    <br>* public-sector minus core-administrative-sector,
+    <br>* private-sector for-profit and not-for-profit,
+    <a class="clsHide" href="#idOznPdn020dsn"></a></p>
+  <p id="idOznPdn020nam">name::
+    <br>* McsEngl.non--core-administrative-sector!⇒sctrPdnAdmn0No,
+    <br>* McsEngl.ogznProduction.020-sctrPdnAdmn0No!⇒sctrPdnAdmn0No,
+    <br>* McsEngl.ogznProduction.sctrPdnAdmn0No!⇒sctrPdnAdmn0No,
+    <br>* McsEngl.sctrPdnAdmn0No!=non--core-administrative-sector,
+    <a class="clsHide" href="#idOznPdn020nam"></a></p>
+
+  <section id="idOznPdn020idvl">
+  <h2 id="idOznPdn020idvlH2">ogznProduction.ogznPdnAdmn0No
+    <a class="clsHide" href="#idOznPdn020idvlH2"></a></h2>
+  <p id="idOznPdn020idvldsn">description::
+    <br>· non-core-administrative production-organization.
+    <a class="clsHide" href="#idOznPdn020idvldsn"></a></p>
+  <p id="idOznPdn020idvlnam">name::
+    <br>* McsEngl.ogznPdnAdmn0No!⇒non-core-administrative-production-organization,
+    <br>* McsEngl.ogznProduction.ogznPdnAdmn0No,
+    <a class="clsHide" href="#idOznPdn020idvlnam"></a></p>
+  </section>
 </section>
 
 <section id="idOznPdn010">
-  <h1 id="idOznPdn010H1">ogznProduction.sectorAdmnOwnedNo-010
+  <h1 id="idOznPdn010H1">ogznProduction.sectorAdmnNo-010
     <a class="clsHide" href="#idOznPdn010H1"></a></h1>
   <p id="idOznPdn010dsn">description::
     <br>· the NON <a class="clsPreview" href="#idOznPdn009">governance-owned-sector</a>.
     <a class="clsHide" href="#idOznPdn010dsn"></a></p>
   <p id="idOznPdn010nam">name::
-    <br>* McsEngl.ogznProduction.010-sectorAdmnOwnedNo!⇒sectorAdmnOwnedNo,
-    <br>* McsEngl.ogznProduction.sectorAdmnOwnedNo!⇒sectorAdmnOwnedNo,
-    <br>* McsEngl.private-sector!⇒sectorAdmnOwnedNo,
-    <br>* McsEngl.sectorAdmnOwnedNo!⇒sectorAdmnOwnedNo,
-    <br>* McsEngl.sectorGvcOwnedNo!⇒sectorAdmnOwnedNo,
-    <br>* McsEngl.sectorPrivate!⇒sectorAdmnOwnedNo,
-    <br>* McsEngl.sectorAdmnOwnedNo,
+    <br>* McsEngl.ogznProduction.010-sctrPdnAdmnNo!⇒sctrPdnAdmnNo,
+    <br>* McsEngl.ogznProduction.sctrPdnAdmnNo!⇒sctrPdnAdmnNo,
+    <br>* McsEngl.private-sector!⇒sctrPdnAdmnNo,
+    <br>* McsEngl.sctrPdnAdmnNo!⇒sctrPdnAdmnNo,
+    <br>* McsEngl.sectorGvcOwnedNo!⇒sctrPdnAdmnNo,
+    <br>* McsEngl.sectorPrivate!⇒sctrPdnAdmnNo,
+    <br>* McsEngl.sctrPdnAdmnNo,
+    <br>====== langoGreek:
+    <br>* McsElln.ιδιωτικός-τομέας!=sctrPdnAdmnNo,
     <a class="clsHide" href="#idOznPdn010nam"></a></p>
 
   <section id="idOznPdn006">
-  <h2 id="idOznPdn006H2">ogznProduction.gvcOwnedNo-006
+  <h2 id="idOznPdn006H2">ogznPdnAdmnOwnedNo
     <a class="clsHide" href="#idOznPdn006H2"></a></h2>
   <p id="idOznPdn006dsn">description::
     <br>· oznPrivate is <a class="clsPreview" href="#idOverview">an-ogznProduction</a> OWNED by state|regional|local governance-systems.
     <a class="clsHide" href="#idOznPdn006dsn"></a></p>
   <p id="idOznPdn006nam">name::
-    <br>* McsEngl.oznGovernanceOwnedNo!⇒ogznAdmnOwnedNo,
+    <br>* McsEngl.ogznGovernanceOwnedNo!⇒ogznAdmnOwnedNo,
     <br>* McsEngl.ogznAdmnOwnedNo,
-    <br>* McsEngl.oznPrivate!⇒ogznAdmnOwnedNo,
+    <br>* McsEngl.ogznPdnAdmnOwnedNo!⇒ogznAdmnOwnedNo,
+    <br>* McsEngl.ogznPrivate!⇒ogznAdmnOwnedNo,
     <br>* McsEngl.ogznProduction.006-private!⇒ogznAdmnOwnedNo,
     <br>* McsEngl.ogznProduction.private!⇒ogznAdmnOwnedNo,
     <br>* McsEngl.private-ogznProduction!⇒ogznAdmnOwnedNo,
@@ -1606,7 +1714,7 @@
     <br>* McsEngl.legal-entity-economic-organization!⇒oznSfrIncorporated,
     <br>* McsEngl.ogznProduction.007-incorporated!⇒oznSfrIncorporated,
     <br>* McsEngl.ogznProduction.incorporated!⇒oznSfrIncorporated,
-    <br>* McsEngl.oznSfrIncorporated,
+    <br>* McsEngl.ogznSfrIncorporated,
     <a class="clsHide" href="#idOznPdn007nam"></a></p>
 </section>
 
@@ -1854,28 +1962,134 @@
     <br>[{2023-12-13 retrieved} https://chat.openai.com/c/84eeaf28-3657-471f-81cf-b56df48c2a0a]
     <a class="clsHide" href="#idOznPdn025Sctrdsn"></a></p>
   <p id="idOznPdn025Sctrnam">name::
-    <br>* McsEngl.non-service-production-section!⇒sectorPdnServiceNo,
-    <br>* McsEngl.ogznServiceNo.sector!⇒sectorPdnServiceNo,
-    <br>* McsEngl.sectorPdnServiceNo!=non-service-production-section,
+    <br>* McsEngl.non-service-production-section!⇒sctrPdnServiceNo,
+    <br>* McsEngl.ogznServiceNo.sector!⇒sctrPdnServiceNo,
+    <br>* McsEngl.sctrPdnServiceNo!=non-service-production-section,
     <a class="clsHide" href="#idOznPdn025Sctrnam"></a></p>
   </section>
 
+  <section id="idOznPdn037">
+  <h2 id="idOznPdn037H2">sctrPdnServiceNo.primary
+    <a class="clsHide" href="#idOznPdn037H2"></a></h2>
+  <p id="idOznPdn037dsn">description::
+    <br>">primary-sector vs agricultural-sector:
+    <br>The primary sector and the agricultural sector are often used interchangeably, but there is a subtle difference between the two terms.
+    <br>**The primary sector** is the broadest category of economic activity, encompassing all industries that involve the extraction or production of raw materials from nature. This includes agriculture, forestry, fishing, mining, and quarrying.
+    <br>**The agricultural sector** is a narrower subcategory of the primary sector, specifically focused on the production of food from plants and animals. This includes crop farming, livestock production, horticulture, and aquaculture.
+    <br>In other words, all agriculture is part of the primary sector, but not all primary sector activities are agriculture. For example, mining and forestry are primary sector activities that are not agriculture.
+    <br>Here is a table summarizing the key differences between the primary sector and the agricultural sector:
+    <br>| Feature | Primary Sector | Agricultural Sector |
+    <br>| Definition | The broadest category of economic activity, encompassing the extraction or production of raw materials from nature. | A subcategory of the primary sector focused on the production of food from plants and animals. |
+    <br>| Key activities | Agriculture, forestry, fishing, mining, quarrying. | Crop farming, livestock production, horticulture, aquaculture. |
+    <br>| Products | Raw materials, such as timber, minerals, and agricultural produce. | Food, such as fruits, vegetables, meat, and dairy products. |
+    <br>| Importance | Provides the basic materials that are essential for all other economic activities. | Provides food for human consumption and is a major source of employment and income in many countries. |
+    <br>While the primary sector and the agricultural sector are distinct categories, they are closely linked. Agriculture is a major component of the primary sector, and the raw materials produced by other primary sector activities are often used in agricultural production. For example, fertilizers are made from mined minerals, and irrigation systems are often built using construction materials from quarries.
+    <br>The primary sector and the agricultural sector play a vital role in the global economy. They provide the essential materials that are needed for all other economic activities, and they are a major source of employment and income in many countries. As the world's population continues to grow, the need for sustainable primary sector and agricultural practices will become even more important."
+    <br>[{2024-01-06 retrieved} https://bard.google.com/chat/7d96adcadf04bcaf]
+    <a class="clsHide" href="#idOznPdn037dsn"></a></p>
+  <p id="idOznPdn037nam">name::
+    <br>* McsEngl.ogznProduction.037-primary-sector!⇒sctrPdn1,
+    <br>* McsEngl.primary-sector!⇒sctrPdn1,
+    <br>* McsEngl.sctrPdn1!=primary-sector,
+    <br>* McsEngl.sctrPdnServiceNo.primary!⇒sctrPdn1,
+    <a class="clsHide" href="#idOznPdn037nam"></a></p>
+  </section>
+
+  <section id="idOznPdn035">
+  <h2 id="idOznPdn035H2">sctrPdnServiceNo.secondary
+    <a class="clsHide" href="#idOznPdn035H2"></a></h2>
+  <p id="idOznPdn035dsn">description::
+    <br>">industrial sector:
+    <br>The industrial sector is a broad term that encompasses all industries that produce goods from raw materials. It is a vital part of the economy, providing jobs and products that we rely on every day.
+    <br>There are many different types of industries within the industrial sector. Some of the major ones include:
+    <br>* **Manufacturing:** This is the process of converting raw materials into finished goods. Manufacturing industries include everything from cars and appliances to food and clothing.
+    <br>* **Construction:** This is the industry that builds roads, bridges, buildings, and other structures.
+    <br>* **Extractive industries:** These industries extract raw materials from the earth, such as coal, oil, and minerals.
+    <br>* **Utilities:** These industries provide essential services to businesses and households, such as electricity, gas, and water.
+    <br>The industrial sector is a major contributor to the economy. In the United States, it accounts for about 20% of GDP. It also provides jobs for millions of people. In 2021, the manufacturing sector alone employed over 15 million workers.
+    <br>The industrial sector is facing a number of challenges in the 21st century. These include:
+    <br>* **Globalization:** The increasing globalization of the economy has put pressure on domestic industries to compete with lower-cost producers overseas.
+    <br>* **Technology:** Technological change is transforming the industrial sector, with new technologies automating many jobs and changing the way products are made.
+    <br>* **Environmental concerns:** The industrial sector is a major source of pollution and greenhouse gas emissions.
+    <br>Despite these challenges, the industrial sector remains an important part of the economy. It is essential for providing jobs, products, and services that we rely on.
+    <br>Here are some of the key trends in the industrial sector:
+    <br>* **Increased automation:** Automation is replacing many manual jobs in the industrial sector. This is leading to higher productivity but also job losses.
+    <br>* **Focus on sustainability:** Businesses in the industrial sector are increasingly focusing on sustainability, using less energy and water and producing less waste.
+    <br>* **Digitalization:** The industrial sector is embracing digital technologies, such as artificial intelligence and the Internet of Things, to improve efficiency and productivity.
+    <br>These trends are likely to continue to shape the industrial sector in the years to come."
+    <br>[{2024-01-03 retrieved} https://bard.google.com/chat/76703f022d0926f9]
+    <br>
+    <br>">secondary sector:
+    	<br>The secondary sector of the economy, also known as the industrial sector, involves the processing of raw materials extracted by the primary sector into finished goods. This sector includes industries that produce a finished, usable product or are involved in construction. Examples of industries in the secondary sector include:
+    <br>1. **Manufacturing:** This includes the production of goods, ranging from consumer electronics and automobiles to household items and clothing. Manufacturing industries convert raw materials or components into new products, often using extensive machinery and advanced technology.
+    <br>2. **Construction:** This involves the construction of buildings, roads, bridges, and other infrastructure. It's a key sector for economic growth, as construction projects lead to the development of new facilities and infrastructure.
+    <br>3. **Utilities:** These are essential services such as electricity, gas, water, and waste management. Though often controlled by public entities, they also include private companies that produce and distribute these resources.
+    <br>The secondary sector is vital for any economy as it helps in value addition to raw materials, creates employment opportunities, and contributes significantly to the gross domestic product (GDP). Moreover, it is closely linked with the primary sector (which provides the raw materials) and the tertiary sector (which handles the distribution and sale of manufactured goods)."
+    <br>[{2024-01-06 retrieved} https://chat.openai.com/c/ce4c5083-e74f-47d3-ad50-2adc2c7a27bf]
+    <a class="clsHide" href="#idOznPdn035dsn"></a></p>
+  <p id="idOznPdn035nam">name::
+    <br>* McsEngl.ogznProduction.035-sector.industrial!⇒sctrPdn2,
+    <br>* McsEngl.ogznProduction.sector.industrial!⇒sctrPdn2,
+    <br>* McsEngl.sctrPdn.industrial!⇒sctrPdn2,
+    <br>* McsEngl.sctrPdn2!=secondary-sector,
+    <br>* McsEngl.sctrPdnServiceNo.industrial!⇒sctrPdn2,
+    <br>* McsEngl.sctrPdnIndustrial!⇒sctrPdn2,
+    <br>* McsEngl.secondary-sector!⇒sctrPdn2,
+    <a class="clsHide" href="#idOznPdn035nam"></a></p>
+  </section>
+
   <section id="idOznPdn025SctrAgri">
-  <h2 id="idOznPdn025SctrAgriH2">sectorPdnServiceNo.agriculture
+  <h2 id="idOznPdn025SctrAgriH2">sctrPdnServiceNo.agriculture
     <a class="clsHide" href="#idOznPdn025SctrAgriH2"></a></h2>
   <p id="idOznPdn025SctrAgridsn">description::
-    <br>"As of 2023, agriculture accounts for about 4% of the global gross domestic product (GDP). However, in some of the least developed countries, the contribution of agriculture to GDP can be more than 25% [https://www.worldbank.org/en/topic/agriculture/overview].
-    <br>[{2023-12-13 retrieved} ]
+    <br>"As of 2023, agriculture accounts for about 4% of the global gross domestic product (GDP). However, in some of the least developed countries, the contribution of agriculture to GDP can be more than 25%.
+    <br>[{2023-12-13 retrieved} https://www.worldbank.org/en/topic/agriculture/overview]
+    <br>
+    <br>">statistics of agricultural-sector:
+    <br>The agricultural sector is a vital part of the global economy, providing food for a growing population and generating billions of dollars in revenue. Here are some key statistics about the agricultural sector:
+    <br>**Global agricultural output**
+    <br>* The global agricultural sector produced an estimated 4.1 trillion tonnes of food and feed in 2021, an increase of 1.2% from 2020.
+    <br>* Crops accounted for 81% of global agricultural output, while livestock accounted for the remaining 19%.
+    <br>* The top three crops in terms of production were wheat, maize (corn), and rice.
+    <br>* The top three livestock products in terms of production were meat, milk, and eggs.
+    <br>**Global agricultural trade**
+    <br>* Agricultural trade reached an estimated $2.12 trillion in 2021, an increase of 4.9% from 2020.
+    <br>* The top five agricultural exporters in 2021 were the United States, China, Brazil, Germany, and the Netherlands.
+    <br>* The top five agricultural importers in 2021 were China, the United States, India, Japan, and Germany.
+    <br>**Global agricultural employment**
+    <br>* The agricultural sector employed an estimated 2.5 billion people in 2021, accounting for 35% of the global labor force.
+    <br>* The majority of agricultural workers are in developing countries, where agriculture is often the main source of employment.
+    <br>**Economic impact of agriculture**
+    <br>* Agriculture contributed an estimated $12.3 trillion to global GDP in 2021.
+    <br>* Agriculture is a key driver of economic growth in many developing countries.
+    <br>* The agricultural sector is also a major source of employment and income for rural populations.
+    <br>**Challenges facing the agricultural sector**
+    <br>* Climate change is a major threat to agriculture, as it is causing more extreme weather events, such as droughts and floods.
+    <br>* Population growth is putting increasing pressure on the agricultural sector to produce more food.
+    <br>* Food insecurity is a growing problem, especially in developing countries.
+    <br>**Sustainability in agriculture**
+    <br>* Sustainable agriculture practices are essential to ensuring the long-term productivity of the agricultural sector.
+    <br>* These practices include reducing greenhouse gas emissions, conserving water resources, and protecting biodiversity.
+    <br>**Role of technology in agriculture**
+    <br>* Technology is playing an increasingly important role in the agricultural sector, with innovations such as drones, precision agriculture, and gene editing.
+    <br>* These technologies can help to improve crop yields, reduce environmental impact, and improve food safety."
+    <br>[{2024-01-03 retrieved} https://bard.google.com/chat/611e9f86d2f9bffd]
     <a class="clsHide" href="#idOznPdn025SctrAgridsn"></a></p>
   <p id="idOznPdn025SctrAgrinam">name::
-    <br>* McsEngl.agriculture-sectorPdnServiceNo,
-    <br>* McsEngl.sectorPdnServiceNo.agriculture,
+    <br>* McsEngl.agricultural-sector!⇒sctrPdnAgro,
+    <br>* McsEngl.agriculture-sctrPdnServiceNo,
+    <br>* McsEngl.ogznAgro.sector!⇒sctrPdnAgro,
+    <br>* McsEngl.sctrPdn.agriculture!⇒sctrPdnAgro,
+    <br>* McsEngl.sctrPdnServiceNo.agriculture,
     <br>* McsEngl.sectorAgriculture,
+    <br>* McsEngl.sctrPdnAgro,
+    <br>====== langoGreek:
+    <br>* McsElln.τομέας-αγροτικός!ο!=sctrPdnAgro,
     <a class="clsHide" href="#idOznPdn025SctrAgrinam"></a></p>
   </section>
 
   <section id="idOznPdn025SctrCnstr">
-  <h2 id="idOznPdn025SctrCnstrH2">sectorPdnServiceNo.construction
+  <h2 id="idOznPdn025SctrCnstrH2">sctrPdnServiceNo.construction
     <a class="clsHide" href="#idOznPdn025SctrCnstrH2"></a></h2>
   <p id="idOznPdn025SctrCnstrdsn">description::
     <br>">global construction percentage in economy:
@@ -1894,14 +2108,14 @@
     <br>[{2023-12-13 retrieved} https://chat.openai.com/c/6f85d288-c310-4500-b9ba-54086d4e426f]
     <a class="clsHide" href="#idOznPdn025SctrCnstrdsn"></a></p>
   <p id="idOznPdn025SctrCnstrnam">name::
-    <br>* McsEngl.construction-sectorPdnServiceNo,
-    <br>* McsEngl.sectorPdnServiceNo.construction,
+    <br>* McsEngl.construction-sctrPdnServiceNo,
+    <br>* McsEngl.sctrPdnServiceNo.construction,
     <br>* McsEngl.sectorConstruction,
     <a class="clsHide" href="#idOznPdn025SctrCnstrnam"></a></p>
   </section>
 
   <section id="idOznPdn025SctrFrst">
-  <h2 id="idOznPdn025SctrFrstH2">sectorPdnServiceNo.forestry
+  <h2 id="idOznPdn025SctrFrstH2">sctrPdnServiceNo.forestry
     <a class="clsHide" href="#idOznPdn025SctrFrstH2"></a></h2>
   <p id="idOznPdn025SctrFrstdsn">description::
     <br>">global forestry percentage in economy:
@@ -1921,14 +2135,14 @@
     <br>[{2023-12-13 retrieved} https://chat.openai.com/c/6b7e66c4-b1f4-49bc-a758-03c651e80023]
     <a class="clsHide" href="#idOznPdn025SctrFrstdsn"></a></p>
   <p id="idOznPdn025SctrFrstnam">name::
-    <br>* McsEngl.forestry-sectorPdnServiceNo,
-    <br>* McsEngl.sectorPdnServiceNo.forestry,
+    <br>* McsEngl.forestry-sctrPdnServiceNo,
+    <br>* McsEngl.sctrPdnServiceNo.forestry,
     <br>* McsEngl.sectorForestry,
     <a class="clsHide" href="#idOznPdn025SctrFrstnam"></a></p>
   </section>
 
   <section id="idOznPdn025SctrMnfr">
-  <h2 id="idOznPdn025SctrMnfrH2">sectorPdnServiceNo.manufacturing
+  <h2 id="idOznPdn025SctrMnfrH2">sctrPdnServiceNo.manufacturing
     <a class="clsHide" href="#idOznPdn025SctrMnfrH2"></a></h2>
   <p id="idOznPdn025SctrMnfrdsn">description::
     <br>">global manufacturing percentage in economy:
@@ -1944,14 +2158,14 @@
     <br>[{2023-12-13 retrieved} https://chat.openai.com/c/6b7e66c4-b1f4-49bc-a758-03c651e80023]
     <a class="clsHide" href="#idOznPdn025SctrMnfrdsn"></a></p>
   <p id="idOznPdn025SctrMnfrnam">name::
-    <br>* McsEngl.manufacturing-sectorPdnServiceNo,
-    <br>* McsEngl.sectorPdnServiceNo.manufacturing,
+    <br>* McsEngl.manufacturing-sctrPdnServiceNo,
+    <br>* McsEngl.sctrPdnServiceNo.manufacturing,
     <br>* McsEngl.sectorManufacturing,
     <a class="clsHide" href="#idOznPdn025SctrMnfrnam"></a></p>
   </section>
 
   <section id="idOznPdn025SctrMing">
-  <h2 id="idOznPdn025SctrMingH2">sectorPdnServiceNo.mining
+  <h2 id="idOznPdn025SctrMingH2">sctrPdnServiceNo.mining
     <a class="clsHide" href="#idOznPdn025SctrMingH2"></a></h2>
   <p id="idOznPdn025SctrMingdsn">description::
     <br>">global mining percentage in economy:
@@ -1965,31 +2179,10 @@
     <br>[{2023-12-13 retrieved} https://chat.openai.com/c/6b7e66c4-b1f4-49bc-a758-03c651e80023]
     <a class="clsHide" href="#idOznPdn025SctrMingdsn"></a></p>
   <p id="idOznPdn025SctrMingnam">name::
-    <br>* McsEngl.mining-sectorPdnServiceNo,
-    <br>* McsEngl.sectorPdnServiceNo.mining,
+    <br>* McsEngl.mining-sctrPdnServiceNo,
+    <br>* McsEngl.sctrPdnServiceNo.mining,
     <br>* McsEngl.sectorMining,
     <a class="clsHide" href="#idOznPdn025SctrMingnam"></a></p>
-  </section>
-
-  <section id="idOznPdn025SctrUtlt">
-  <h2 id="idOznPdn025SctrUtltH2">sectorPdnServiceNo.utilities
-    <a class="clsHide" href="#idOznPdn025SctrUtltH2"></a></h2>
-  <p id="idOznPdn025SctrUtltdsn">description::
-    <br>">global utilities percentage in economy:
-    <br>The global utilities industry, which includes essential services such as electricity, water, natural gas, and sewage treatment, had a significant market valuation in recent years. In 2022, the worldwide utilities market achieved a valuation of approximately $6037.3 billion, contributing about 6% to the overall global GDP. The market is expected to continue growing, with a compound annual growth rate (CAGR) of 6.6% projected from 2022 to 2032.
-    <br>
-    <br>In terms of market segments, the electric power generation, transmission, and distribution segment held the largest share, accounting for about 74.2% of the total utility industry market in 2022. Geographically, China was a leading market in the utilities industry, representing around 19.5% of the global market.
-    <br>
-    <br>The utilities market is expected to grow further, reaching a valuation of approximately $6,416.54 billion in 2023 and potentially $8,105.48 billion by 2026. This growth is driven by factors such as investments in renewable power generation capacities and advancements in digital technologies like smart grids, sensors, and smart meters that enhance productivity, efficiency, and safety in power generation and distribution.
-    <br>
-    <br>These findings indicate a robust and expanding utilities industry, playing a crucial role in the global economy and advancing towards more sustainable and technologically integrated operations [https://finance.yahoo.com/news/utilities-industry-overview-estimated-growth-154500446.html] [https://www.researchandmarkets.com/report/utilities] [https://www.businesswire.com/news/home/20220218005281/en/Global-Utilities-Market-Report-2022-Compound-Annual-Growth-of-7.9-Forecast-with-Market-Set-to-Reach-8105.48-Billion-in-2026---ResearchAndMarkets.com].
-    <br>[{2023-12-13 retrieved} https://chat.openai.com/c/6f85d288-c310-4500-b9ba-54086d4e426f]
-    <a class="clsHide" href="#idOznPdn025SctrUtltdsn"></a></p>
-  <p id="idOznPdn025SctrUtltnam">name::
-    <br>* McsEngl.sectorPdnServiceNo.utilities,
-    <br>* McsEngl.utilities-sectorPdnServiceNo,
-    <br>* McsEngl.sectorUtilities,
-    <a class="clsHide" href="#idOznPdn025SctrUtltnam"></a></p>
   </section>
 </section>
 
@@ -2000,9 +2193,46 @@
     <br>· service and non-service production-organization.
     <a class="clsHide" href="#idOznPdn034dsn"></a></p>
   <p id="idOznPdn034nam">name::
-    <br>* McsEngl.ogznProduction.serviceBoth!⇒ogznServiceBoth,
+    <br>* McsEngl.ogznProduction.034-serviceBoth!⇒ogznServiceBoth,
     <br>* McsEngl.ogznServiceBoth!=production-organization-service-and-serviceNo,
     <a class="clsHide" href="#idOznPdn034nam"></a></p>
+
+  <section id="idOznPdn036">
+  <h2 id="idOznPdn036H2">sctrPdnServiceBoth.utilities
+    <a class="clsHide" href="#idOznPdn036H2"></a></h2>
+  <p id="idOznPdn036dsn">description::
+    <br>">global utilities percentage in economy:
+    <br>The global utilities industry, which includes essential services such as electricity, water, natural gas, and sewage treatment, had a significant market valuation in recent years. In 2022, the worldwide utilities market achieved a valuation of approximately $6037.3 billion, contributing about 6% to the overall global GDP. The market is expected to continue growing, with a compound annual growth rate (CAGR) of 6.6% projected from 2022 to 2032.
+    <br>In terms of market segments, the electric power generation, transmission, and distribution segment held the largest share, accounting for about 74.2% of the total utility industry market in 2022. Geographically, China was a leading market in the utilities industry, representing around 19.5% of the global market.
+    <br>The utilities market is expected to grow further, reaching a valuation of approximately $6,416.54 billion in 2023 and potentially $8,105.48 billion by 2026. This growth is driven by factors such as investments in renewable power generation capacities and advancements in digital technologies like smart grids, sensors, and smart meters that enhance productivity, efficiency, and safety in power generation and distribution.
+    <br>These findings indicate a robust and expanding utilities industry, playing a crucial role in the global economy and advancing towards more sustainable and technologically integrated operations [https://finance.yahoo.com/news/utilities-industry-overview-estimated-growth-154500446.html] [https://www.researchandmarkets.com/report/utilities] [https://www.businesswire.com/news/home/20220218005281/en/Global-Utilities-Market-Report-2022-Compound-Annual-Growth-of-7.9-Forecast-with-Market-Set-to-Reach-8105.48-Billion-in-2026---ResearchAndMarkets.com].
+    <br>[{2023-12-13 retrieved} https://chat.openai.com/c/6f85d288-c310-4500-b9ba-54086d4e426f]
+    <br>
+    <br>">is utilities a non-service-sector?:
+    <br>Utilities are often classified as a non-service sector, but this is not entirely accurate. While utilities do not traditionally fit into the traditional definition of a service sector, they do provide essential services to the public. This makes them a unique sector that straddles the line between services and industries.
+    <br>In some countries, utilities are classified as a part of the secondary sector of the economy, which includes manufacturing and construction. This is because utilities companies often operate large-scale infrastructure projects, such as power plants and pipelines. However, utilities also provide services, such as electricity distribution and customer support.
+    <br>For this reason, it is more accurate to consider utilities as a cross-sectoral industry. They have aspects of both the secondary and tertiary sectors, and they play a vital role in the economy as a whole.
+    <br>Here is a table summarizing the classification of utilities:
+    <br>| Classification | Description |
+    <br>| Secondary sector (manufacturing, construction) | Utilities companies often operate large-scale infrastructure projects, such as power plants and pipelines. |
+    <br>| Tertiary sector (services) | Utilities companies provide essential services to the public, such as electricity distribution and customer support. |
+    <br>| Cross-sectoral industry | Utilities have aspects of both the secondary and tertiary sectors. |
+    <br>Ultimately, the classification of utilities is a matter of debate. However, there is no doubt that they are a vital industry that plays a crucial role in the economy."
+    <br>[{2024-01-03 retrieved} https://bard.google.com/chat/37e88418f1ee378a]
+    <br>">is utilities a non-service-sector?
+    <br>Utilities are not part of the non-service sector. They are, in fact, a core component of the service sector. The non-service sector typically refers to parts of the economy that are involved in the production of goods rather than services. This includes:
+    <br>1. **Primary Sector**: This includes industries like agriculture, mining, forestry, and fishing, which are involved in the extraction and production of raw materials.
+    <br>2. **Secondary Sector**: This encompasses manufacturing and industrial activities, where raw materials are transformed into finished goods.
+    <br>Utilities, on the other hand, fall under the **Tertiary Sector**, also known as the service sector. This sector is focused on providing services rather than goods. Utilities provide essential services such as water, electricity, natural gas, waste management, and telecommunication services. These are integral to the functioning of both the everyday lives of individuals and the operation of other sectors of the economy. Thus, utilities are firmly within the service sector."
+    <br>[{2024-01-03 retrieved} https://chat.openai.com/c/fab3a281-6bb9-4696-b56e-9329382d84ae]
+    <a class="clsHide" href="#idOznPdn036dsn"></a></p>
+  <p id="idOznPdn036nam">name::
+    <br>* McsEngl.ogznProduction.036-sector.utilities!⇒sctrPdnUtil,
+    <br>* McsEngl.sctrPdnServiceNo.utilities!⇒sctrPdnUtil,
+    <br>* McsEngl.sctrPdnUtil,
+    <br>* McsEngl.utilities-sctrPdnServiceBoth!⇒sctrPdnUtil,
+    <a class="clsHide" href="#idOznPdn036nam"></a></p>
+  </section>
 </section>
 
 <section id="idOznPdn001">
@@ -2013,10 +2243,10 @@
     <br>[{2020-09-06} http://www.onthecommons.org/work/legal-structures-protecting-commons]
     <a class="clsHide" href="#idOznPdn001dsn"></a></p>
   <p id="idOznPdn001nam">name::
-    <br>* McsEngl.ogznProduction.001-trust!⇒oznTrust,
-    <br>* McsEngl.ogznProduction.trust!⇒oznTrust,
-    <br>* McsEngl.oznTrust,
-    <br>* McsEngl.trust!⇒oznTrust,
+    <br>* McsEngl.ogznProduction.001-trust!⇒ogznTrust,
+    <br>* McsEngl.ogznProduction.trust!⇒ogznTrust,
+    <br>* McsEngl.ogznTrust,
+    <br>* McsEngl.trust!⇒ogznTrust,
     <a class="clsHide" href="#idOznPdn001nam"></a></p>
   <p id="idOznPdn001dsnL">descriptionLong::
     <br>"A trust is a three-party fiduciary relationship in which the first party, the trustor or settlor, transfers ("settles") a property (often but not necessarily a sum of money) upon the second party (the trustee) for the benefit of the third party, the beneficiary.[1]
@@ -2032,24 +2262,24 @@
     <a class="clsHide" href="#idOznPdn001dsnL"></a></p>
 
   <section id="idOznPdn001att001">
-  <h2 id="idOznPdn001att001H2">01_trustor of oznTrust
+  <h2 id="idOznPdn001att001H2">01_trustor of ogznTrust
     <a class="clsHide" href="#idOznPdn001att001H2"></a></h2>
   <p id="idOznPdn001att001dsn">description::
     <br>"In law a settlor is a person who settles property on trust law for the benefit of beneficiaries. In some legal systems, a settlor is also referred to as a trustor, or occasionally, a grantor or donor.[a] Where the trust is a testamentary trust, the settlor is usually referred to as the testator. The settlor may also be the trustee of the trust (where he declares that he holds his own property on trusts) or a third party may be the trustee (where he transfers the property to the trustee on trusts). In the common law of England and Wales, it has been held, controversially, that where a trustee declares an intention to transfer trust property to a trust of which he is one of several trustees, that is a valid settlement notwithstanding the property is not vested in the other trustees.[1]"
     <br>[{2020-09-06} ]
     <a class="clsHide" href="#idOznPdn001att001dsn"></a></p>
   <p id="idOznPdn001att001nam">name::
-    <br>* McsEngl.oznTrust'01_trustor,
-    <br>* McsEngl.oznTrust'att001-trustor,
-    <br>* McsEngl.oznTrust'donor,
-    <br>* McsEngl.oznTrust'grantor,
-    <br>* McsEngl.oznTrust'trustor,
-    <br>* McsEngl.oznTrust'settlor,
+    <br>* McsEngl.ogznTrust'01_trustor,
+    <br>* McsEngl.ogznTrust'att001-trustor,
+    <br>* McsEngl.ogznTrust'donor,
+    <br>* McsEngl.ogznTrust'grantor,
+    <br>* McsEngl.ogznTrust'trustor,
+    <br>* McsEngl.ogznTrust'settlor,
     <a class="clsHide" href="#idOznPdn001att001nam"></a></p>
   </section>
 
   <section id="idOznPdn001att002">
-  <h2 id="idOznPdn001att002H2">02_trustee of oznTrust
+  <h2 id="idOznPdn001att002H2">02_trustee of ogznTrust
     <a class="clsHide" href="#idOznPdn001att002H2"></a></h2>
   <p id="idOznPdn001att002dsn">description::
     <br>"The trustee is the legal owner of the property in trust, as fiduciary for the beneficiary or beneficiaries who is/are the equitable owner(s) of the trust property. Trustees thus have a fiduciary duty to manage the trust to the benefit of the equitable owners. They must provide a regular accounting of trust income and expenditures. Trustees may be compensated and be reimbursed their expenses. A court of competent jurisdiction can remove a trustee who breaches his/her fiduciary duty. Some breaches of fiduciary duty can be charged and tried as criminal offences in a court of law.
@@ -2057,38 +2287,38 @@
     <br>[{2020-09-06} https://en.wikipedia.org/wiki/Trust_law]
     <a class="clsHide" href="#idOznPdn001att002dsn"></a></p>
   <p id="idOznPdn001att002nam">name::
-    <br>* McsEngl.oznTrust'02_trustee,
-    <br>* McsEngl.oznTrust'att002-trustee,
-    <br>* McsEngl.oznTrust'trustee,
+    <br>* McsEngl.ogznTrust'02_trustee,
+    <br>* McsEngl.ogznTrust'att002-trustee,
+    <br>* McsEngl.ogznTrust'trustee,
     <a class="clsHide" href="#idOznPdn001att002nam"></a></p>
   </section>
 
   <section id="idOznPdn001att003">
-  <h2 id="idOznPdn001att003H2">03_beneficiary of oznTrust
+  <h2 id="idOznPdn001att003H2">03_beneficiary of ogznTrust
     <a class="clsHide" href="#idOznPdn001att003H2"></a></h2>
   <p id="idOznPdn001att003dsn">description::
     <br>"Trust: A legal entity created to manage assets on behalf of beneficiaries."
     <br>[{2020-09-06} http://www.onthecommons.org/work/legal-structures-protecting-commons]
     <a class="clsHide" href="#idOznPdn001att003dsn"></a></p>
   <p id="idOznPdn001att003nam">name::
-    <br>* McsEngl.oznTrust'03_beneficiary,
-    <br>* McsEngl.oznTrust'att003-beneficiary,
-    <br>* McsEngl.oznTrust'beneficiary,
+    <br>* McsEngl.ogznTrust'03_beneficiary,
+    <br>* McsEngl.ogznTrust'att003-beneficiary,
+    <br>* McsEngl.ogznTrust'beneficiary,
     <a class="clsHide" href="#idOznPdn001att003nam"></a></p>
   </section>
 
   <section id="idOznPdn001att004">
-  <h2 id="idOznPdn001att004H2">04_property of oznTrust
+  <h2 id="idOznPdn001att004H2">04_property of ogznTrust
     <a class="clsHide" href="#idOznPdn001att004H2"></a></h2>
   <p id="idOznPdn001att004dsn">description::
     <br>· <a class="clsPreview" href="../dirStn/McsStn000010.last.html#idOverview">the-satisfiers</a> <a class="clsPreview" href="#idOznPdn001att002">the-trustee</a> manages.
     <a class="clsHide" href="#idOznPdn001att004dsn"></a></p>
   <p id="idOznPdn001att004nam">name::
-    <br>* McsEngl.oznTrust'04_satisfier,
-    <br>* McsEngl.oznTrust'asset,
-    <br>* McsEngl.oznTrust'att004-satisfier,
-    <br>* McsEngl.oznTrust'property,
-    <br>* McsEngl.oznTrust'satisfier,
+    <br>* McsEngl.ogznTrust'04_satisfier,
+    <br>* McsEngl.ogznTrust'asset,
+    <br>* McsEngl.ogznTrust'att004-satisfier,
+    <br>* McsEngl.ogznTrust'property,
+    <br>* McsEngl.ogznTrust'satisfier,
     <a class="clsHide" href="#idOznPdn001att004nam"></a></p>
   </section>
 </section>
@@ -2101,92 +2331,92 @@
     <br>[{2020-09-06} https://www.ica.coop/en/cooperatives/cooperative-identity]
     <a class="clsHide" href="#idOznPdn002dsn"></a></p>
   <p id="idOznPdn002nam">name::
-    <br>* McsEngl.co-op!⇒oznCoop,
-    <br>* McsEngl.co-operative!⇒oznCoop,
-    <br>* McsEngl.coop!⇒oznCoop,
-    <br>* McsEngl.cooperative!⇒oznCoop,
-    <br>* McsEngl.ogznProduction.002-coop!⇒oznCoop,
-    <br>* McsEngl.ogznProduction.coop!⇒oznCoop,
-    <br>* McsEngl.oznCoop,
+    <br>* McsEngl.co-op!⇒ogznCoop,
+    <br>* McsEngl.co-operative!⇒ogznCoop,
+    <br>* McsEngl.coop!⇒ogznCoop,
+    <br>* McsEngl.cooperative!⇒ogznCoop,
+    <br>* McsEngl.ogznProduction.002-coop!⇒ogznCoop,
+    <br>* McsEngl.ogznProduction.coop!⇒ogznCoop,
+    <br>* McsEngl.ogznCoop,
     <br>====== langoGreek:
-    <br>* McsElln.συνεταιρισμός!=oznCoop,
+    <br>* McsElln.συνεταιρισμός!=ogznCoop,
     <a class="clsHide" href="#idOznPdn002nam"></a></p>
 
   <section id="idOznPdn002att004">
-  <h2 id="idOznPdn002att004H2">satisfier of oznCoop
+  <h2 id="idOznPdn002att004H2">satisfier of ogznCoop
     <a class="clsHide" href="#idOznPdn002att004H2"></a></h2>
   <p id="idOznPdn002att004dsn">description::
     <br>· <a class="clsPreview" href="../dirStn/McsStn000010.last.html#idOverview">the-satisfier</a> the-coop manages.
     <a class="clsHide" href="#idOznPdn002att004dsn"></a></p>
   <p id="idOznPdn002att004nam">name::
-    <br>* McsEngl.oznCoop'att004-satisfier,
-    <br>* McsEngl.oznCoop'satisfier,
+    <br>* McsEngl.ogznCoop'att004-satisfier,
+    <br>* McsEngl.ogznCoop'satisfier,
     <a class="clsHide" href="#idOznPdn002att004nam"></a></p>
   </section>
 
   <section id="idOznPdn002att001">
-  <h2 id="idOznPdn002att001H2">member of oznCoop
+  <h2 id="idOznPdn002att001H2">member of ogznCoop
     <a class="clsHide" href="#idOznPdn002att001H2"></a></h2>
   <p id="idOznPdn002att001dsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn002att001dsn"></a></p>
   <p id="idOznPdn002att001nam">name::
-    <br>* McsEngl.oznCoop'att001-member,
-    <br>* McsEngl.oznCoop'member,
+    <br>* McsEngl.ogznCoop'att001-member,
+    <br>* McsEngl.ogznCoop'member,
     <a class="clsHide" href="#idOznPdn002att001nam"></a></p>
 
   <section id="idOznPdn002att002">
-  <h3 id="idOznPdn002att002H3">cooperator of oznCoop
+  <h3 id="idOznPdn002att002H3">cooperator of ogznCoop
     <a class="clsHide" href="#idOznPdn002att002H3"></a></h3>
   <p id="idOznPdn002att002dsn">description::
     <br>· the-owners of the-coop.
     <a class="clsHide" href="#idOznPdn002att002dsn"></a></p>
   <p id="idOznPdn002att002nam">name::
     <br>* McsEngl.cooperator,
-    <br>* McsEngl.oznCoop'att002-cooperator,
-    <br>* McsEngl.oznCoop'cooperator,
-    <br>* McsEngl.oznCoop'owner,
+    <br>* McsEngl.ogznCoop'att002-cooperator,
+    <br>* McsEngl.ogznCoop'cooperator,
+    <br>* McsEngl.ogznCoop'owner,
     <a class="clsHide" href="#idOznPdn002att002nam"></a></p>
   </section>
 
   <section id="idOznPdn002att003">
-  <h3 id="idOznPdn002att003H3">worker of oznCoop
+  <h3 id="idOznPdn002att003H3">worker of ogznCoop
     <a class="clsHide" href="#idOznPdn002att003H3"></a></h3>
   <p id="idOznPdn002att003dsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn002att003dsn"></a></p>
   <p id="idOznPdn002att003nam">name::
-    <br>* McsEngl.oznCoop'att003-worker,
-    <br>* McsEngl.oznCoop'worker,
+    <br>* McsEngl.ogznCoop'att003-worker,
+    <br>* McsEngl.ogznCoop'worker,
     <a class="clsHide" href="#idOznPdn002att003nam"></a></p>
   </section>
   </section>
 
   <section id="idOznPdn002att005">
-  <h2 id="idOznPdn002att005H2">stakeholder of oznCoop
+  <h2 id="idOznPdn002att005H2">stakeholder of ogznCoop
     <a class="clsHide" href="#idOznPdn002att005H2"></a></h2>
   <p id="idOznPdn002att005dsn">description::
     <br>· any human or ozn related to a-coop.
     <a class="clsHide" href="#idOznPdn002att005dsn"></a></p>
   <p id="idOznPdn002att005nam">name::
-    <br>* McsEngl.oznCoop'att005-stakeholder,
-    <br>* McsEngl.oznCoop'stakeholder,
+    <br>* McsEngl.ogznCoop'att005-stakeholder,
+    <br>* McsEngl.ogznCoop'stakeholder,
     <a class="clsHide" href="#idOznPdn002att005nam"></a></p>
   </section>
 
   <section id="idOznPdn002att006">
-  <h2 id="idOznPdn002att006H2">organization of oznCoop
+  <h2 id="idOznPdn002att006H2">organization of ogznCoop
     <a class="clsHide" href="#idOznPdn002att006H2"></a></h2>
   <p id="idOznPdn002att006dsn">description::
-    <br>· any organization related to oznCoop.
+    <br>· any organization related to ogznCoop.
     <a class="clsHide" href="#idOznPdn002att006dsn"></a></p>
   <p id="idOznPdn002att006nam">name::
-    <br>* McsEngl.oznCoop'att006-organization,
-    <br>* McsEngl.oznCoop'organization,
+    <br>* McsEngl.ogznCoop'att006-organization,
+    <br>* McsEngl.ogznCoop'organization,
     <a class="clsHide" href="#idOznPdn002att006nam"></a></p>
 
   <section id="idOznPdn002att006Ica">
-  <h3 id="idOznPdn002att006IcaH3">International-Cooperative-Alliance of oznCoop
+  <h3 id="idOznPdn002att006IcaH3">International-Cooperative-Alliance of ogznCoop
     <a class="clsHide" href="#idOznPdn002att006IcaH3"></a></h3>
   <p id="idOznPdn002att006Icadsn">description::
     <br>"The International Cooperative Alliance unites, represents and serves cooperatives worldwide.
@@ -2198,31 +2428,31 @@
   <p id="idOznPdn002att006Icanam">name::
     <br>* McsEngl.ICA-International-Cooperative-Alliance,
     <br>* McsEngl.International-Cooperative-Alliance,
-    <br>* McsEngl.oznCoop'International-Cooperative-Alliance,
+    <br>* McsEngl.ogznCoop'International-Cooperative-Alliance,
     <a class="clsHide" href="#idOznPdn002att006Icanam"></a></p>
   </section>
   </section>
 
   <section id="idOznPdn002att007">
-  <h2 id="idOznPdn002att007H2">governance-sys of oznCoop
+  <h2 id="idOznPdn002att007H2">governance-sys of ogznCoop
     <a class="clsHide" href="#idOznPdn002att007H2"></a></h2>
   <p id="idOznPdn002att007dsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn002att007dsn"></a></p>
   <p id="idOznPdn002att007nam">name::
-    <br>* McsEngl.oznCoop'att007-governance-sys,
-    <br>* McsEngl.oznCoop'governance-sys,
+    <br>* McsEngl.ogznCoop'att007-governance-sys,
+    <br>* McsEngl.ogznCoop'governance-sys,
     <a class="clsHide" href="#idOznPdn002att007nam"></a></p>
 
   <section id="idOznPdn002att008">
-  <h3 id="idOznPdn002att008H3">statement-on-cooperative-identity of oznCoop
+  <h3 id="idOznPdn002att008H3">statement-on-cooperative-identity of ogznCoop
     <a class="clsHide" href="#idOznPdn002att008H3"></a></h3>
   <p id="idOznPdn002att008dsn">description::
     <br>"In 1995, the ICA adopted the revised Statement on the Cooperative Identity which contains the definition of a cooperative, the values of cooperatives, and the seven cooperative principles as described below."
     <br>[{2020-09-13} https://www.ica.coop/en/cooperatives/cooperative-identity]
     <a class="clsHide" href="#idOznPdn002att008dsn"></a></p>
   <p id="idOznPdn002att008nam">name::
-    <br>* McsEngl.oznCoop'statement-on-cooperative-identity,
+    <br>* McsEngl.ogznCoop'statement-on-cooperative-identity,
     <br>* McsEngl.statement-on-cooperative-identity,
     <a class="clsHide" href="#idOznPdn002att008nam"></a></p>
 
@@ -2271,34 +2501,34 @@
   </section>
 
   <section id="idOznPdn002rscF">
-  <h2 id="idOznPdn002rscFH2">info-resource of oznCoop
+  <h2 id="idOznPdn002rscFH2">info-resource of ogznCoop
     <a class="clsHide" href="#idOznPdn002rscFH2"></a></h2>
   <p id="idOznPdn002rscFdsn">description::
     <br>* https://ica.coop/,
     <br>* https://identity.coop/,
     <a class="clsHide" href="#idOznPdn002rscFdsn"></a></p>
   <p id="idOznPdn002rscFnam">name::
-    <br>* McsEngl.oznCoop'Infrsc,
+    <br>* McsEngl.ogznCoop'Infrsc,
     <a class="clsHide" href="#idOznPdn002rscFnam"></a></p>
   </section>
 
   <section id="idOznPdn002dngF">
-  <h2 id="idOznPdn002dngFH2">DOING of oznCoop
+  <h2 id="idOznPdn002dngFH2">DOING of ogznCoop
     <a class="clsHide" href="#idOznPdn002dngFH2"></a></h2>
   <p id="idOznPdn002dngFdsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn002dngFdsn"></a></p>
   <p id="idOznPdn002dngFnam">name::
-    <br>* McsEngl.oznCoop'doing,
+    <br>* McsEngl.ogznCoop'doing,
     <a class="clsHide" href="#idOznPdn002dngFnam"></a></p>
   </section>
 
   <section id="idOznPdn002evgF">
-  <h2 id="idOznPdn002evgFH2">evoluting of oznCoop
+  <h2 id="idOznPdn002evgFH2">evoluting of ogznCoop
     <a class="clsHide" href="#idOznPdn002evgFH2"></a></h2>
   <p id="idOznPdn002evgFnam">name::
-    <br>* McsEngl.evoluting-of-oznCoop,
-    <br>* McsEngl.oznCoop'evoluting,
+    <br>* McsEngl.evoluting-of-ogznCoop,
+    <br>* McsEngl.ogznCoop'evoluting,
     <a class="clsHide" href="#idOznPdn002evgFnam"></a></p>
   <p id="idOznPdn002evg1895">{1895}::
     <br>* McsEngl.{1895}-International-Cooperative-Alliance-creation,
@@ -2310,136 +2540,136 @@
   </section>
 
   <section id="idOznPdn002001">
-  <h2 id="idOznPdn002001H2">oznCoop.housing-001
+  <h2 id="idOznPdn002001H2">ogznCoop.housing-001
     <a class="clsHide" href="#idOznPdn002001H2"></a></h2>
   <p id="idOznPdn002001dsn">description::
     <br>"Housing coops come in many forms. Some coops are townhouses and small buildings with just a handful of units. Others are large apartment-style buildings with hundreds of units. Coops are different from private rental housing because the residents decide how the coop is operated. Every member gets a vote in approving annual budgets, electing directors and setting policies on the coop’s overall direction."
     <br>[{2020-09-09} https://www.housinginternational.coop/about/]
     <a class="clsHide" href="#idOznPdn002001dsn"></a></p>
   <p id="idOznPdn002001nam">name::
-    <br>* McsEngl.housing-cooperative!⇒oznCoopHouse,
-    <br>* McsEngl.oznCoop.001-house!⇒oznCoopHouse,
-    <br>* McsEngl.oznCoop.house!⇒oznCoopHouse,
-    <br>* McsEngl.oznCoopHouse,
+    <br>* McsEngl.housing-cooperative!⇒ogznCoopHouse,
+    <br>* McsEngl.ogznCoop.001-house!⇒ogznCoopHouse,
+    <br>* McsEngl.ogznCoop.house!⇒ogznCoopHouse,
+    <br>* McsEngl.ogznCoopHouse,
     <a class="clsHide" href="#idOznPdn002001nam"></a></p>
   </section>
 
   <section id="idOznPdn002002">
-  <h2 id="idOznPdn002002H2">oznCoop.health-002
+  <h2 id="idOznPdn002002H2">ogznCoop.health-002
     <a class="clsHide" href="#idOznPdn002002H2"></a></h2>
   <p id="idOznPdn002002dsn">description::
     <br>"consumer (user), producer (provider) and multistakeholders health co‐operatives which seek to provide high‐quality, cost‐effective community health care based on freedom of choice, integration of services, and ethical working conditions."
     <br>[{2020-09-09} https://ihco.coop/about/]
     <a class="clsHide" href="#idOznPdn002002dsn"></a></p>
   <p id="idOznPdn002002nam">name::
-    <br>* McsEngl.health-cooperative!⇒oznCoopHelth,
-    <br>* McsEngl.oznCoop.002-helth!⇒oznCoopHelth,
-    <br>* McsEngl.oznCoop.helth!⇒oznCoopHelth,
-    <br>* McsEngl.oznCoopHelth,
+    <br>* McsEngl.health-cooperative!⇒ogznCoopHelth,
+    <br>* McsEngl.ogznCoop.002-helth!⇒ogznCoopHelth,
+    <br>* McsEngl.ogznCoop.helth!⇒ogznCoopHelth,
+    <br>* McsEngl.ogznCoopHelth,
     <a class="clsHide" href="#idOznPdn002002nam"></a></p>
   </section>
 
   <section id="idOznPdn002003">
-  <h2 id="idOznPdn002003H2">oznCoop.retail-003
+  <h2 id="idOznPdn002003H2">ogznCoop.retail-003
     <a class="clsHide" href="#idOznPdn002003H2"></a></h2>
   <p id="idOznPdn002003dsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn002003dsn"></a></p>
   <p id="idOznPdn002003nam">name::
-    <br>* McsEngl.oznCoop.003-retail!⇒oznCoopRetail,
-    <br>* McsEngl.oznCoop.retail!⇒oznCoopRetail,
-    <br>* McsEngl.oznCoopRetail,
+    <br>* McsEngl.ogznCoop.003-retail!⇒ogznCoopRetail,
+    <br>* McsEngl.ogznCoop.retail!⇒ogznCoopRetail,
+    <br>* McsEngl.ogznCoopRetail,
     <a class="clsHide" href="#idOznPdn002003nam"></a></p>
   </section>
 
   <section id="idOznPdn002004">
-  <h2 id="idOznPdn002004H2">oznCoop.agricultural-004
+  <h2 id="idOznPdn002004H2">ogznCoop.agricultural-004
     <a class="clsHide" href="#idOznPdn002004H2"></a></h2>
   <p id="idOznPdn002004dsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn002004dsn"></a></p>
   <p id="idOznPdn002004nam">name::
-    <br>* McsEngl.oznCoop.004-agricultural!⇒oznCoopAgricultural,
-    <br>* McsEngl.oznCoop.agricultural!⇒oznCoopAgricultural,
-    <br>* McsEngl.oznCoopAgricultural,
+    <br>* McsEngl.ogznCoop.004-agricultural!⇒ogznCoopAgricultural,
+    <br>* McsEngl.ogznCoop.agricultural!⇒ogznCoopAgricultural,
+    <br>* McsEngl.ogznCoopAgricultural,
     <a class="clsHide" href="#idOznPdn002004nam"></a></p>
   </section>
 
   <section id="idOznPdn002005">
-  <h2 id="idOznPdn002005H2">oznCoop.fisheries-005
+  <h2 id="idOznPdn002005H2">ogznCoop.fisheries-005
     <a class="clsHide" href="#idOznPdn002005H2"></a></h2>
   <p id="idOznPdn002005dsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn002005dsn"></a></p>
   <p id="idOznPdn002005nam">name::
-    <br>* McsEngl.oznCoop.005-fisheries!⇒oznCoopFisheries,
-    <br>* McsEngl.oznCoop.fisheries!⇒oznCoopFisheries,
-    <br>* McsEngl.oznCoopFisheries,
+    <br>* McsEngl.ogznCoop.005-fisheries!⇒ogznCoopFisheries,
+    <br>* McsEngl.ogznCoop.fisheries!⇒ogznCoopFisheries,
+    <br>* McsEngl.ogznCoopFisheries,
     <a class="clsHide" href="#idOznPdn002005nam"></a></p>
   </section>
 
   <section id="idOznPdn002006">
-  <h2 id="idOznPdn002006H2">oznCoop.banking-006
+  <h2 id="idOznPdn002006H2">ogznCoop.banking-006
     <a class="clsHide" href="#idOznPdn002006H2"></a></h2>
   <p id="idOznPdn002006dsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn002006dsn"></a></p>
   <p id="idOznPdn002006nam">name::
-    <br>* McsEngl.oznCoop.006-banking!⇒oznCoopBanking,
-    <br>* McsEngl.oznCoop.banking!⇒oznCoopBanking,
-    <br>* McsEngl.oznCoopBanking,
+    <br>* McsEngl.ogznCoop.006-banking!⇒ogznCoopBanking,
+    <br>* McsEngl.ogznCoop.banking!⇒ogznCoopBanking,
+    <br>* McsEngl.ogznCoopBanking,
     <a class="clsHide" href="#idOznPdn002006nam"></a></p>
   </section>
 
   <section id="idOznPdn002007">
-  <h2 id="idOznPdn002007H2">oznCoop.insurance-007
+  <h2 id="idOznPdn002007H2">ogznCoop.insurance-007
     <a class="clsHide" href="#idOznPdn002007H2"></a></h2>
   <p id="idOznPdn002007dsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn002007dsn"></a></p>
   <p id="idOznPdn002007nam">name::
-    <br>* McsEngl.oznCoop.007-insurance!⇒oznCoopInsurance,
-    <br>* McsEngl.oznCoop.insurance!⇒oznCoopInsurance,
-    <br>* McsEngl.oznCoopInsurance,
+    <br>* McsEngl.ogznCoop.007-insurance!⇒ogznCoopInsurance,
+    <br>* McsEngl.ogznCoop.insurance!⇒ogznCoopInsurance,
+    <br>* McsEngl.ogznCoopInsurance,
     <a class="clsHide" href="#idOznPdn002007nam"></a></p>
   </section>
 
   <section id="idOznPdn002008">
-  <h2 id="idOznPdn002008H2">oznCoop.worker-008
+  <h2 id="idOznPdn002008H2">ogznCoop.worker-008
     <a class="clsHide" href="#idOznPdn002008H2"></a></h2>
   <p id="idOznPdn002008dsn">description::
     <br>"A worker cooperative is a cooperative that is owned and self-managed by its workers. This control may mean a firm where every worker-owner participates in decision-making in a democratic fashion, or it may refer to one in which management is elected by every worker-owner who each have one vote."
     <br>[{2020-09-10} https://en.wikipedia.org/wiki/Worker_cooperative]
     <a class="clsHide" href="#idOznPdn002008dsn"></a></p>
   <p id="idOznPdn002008nam">name::
-    <br>* McsEngl.oznCoop.008-worker!⇒oznCoopWorker,
-    <br>* McsEngl.oznCoop.worker!⇒oznCoopWorker,
-    <br>* McsEngl.oznCoopWorker,
-    <br>* McsEngl.worker-cooperative!⇒oznCoopWorker,
+    <br>* McsEngl.ogznCoop.008-worker!⇒ogznCoopWorker,
+    <br>* McsEngl.ogznCoop.worker!⇒ogznCoopWorker,
+    <br>* McsEngl.ogznCoopWorker,
+    <br>* McsEngl.worker-cooperative!⇒ogznCoopWorker,
     <a class="clsHide" href="#idOznPdn002008nam"></a></p>
 
   <section id="idOznPdn002008rscF">
-  <h3 id="idOznPdn002008rscFH3">info-resource of oznCoopWorker
+  <h3 id="idOznPdn002008rscFH3">info-resource of ogznCoopWorker
     <a class="clsHide" href="#idOznPdn002008rscFH3"></a></h3>
   <p id="idOznPdn002008rscFdsn">description::
     <br>* WORLD DECLARATION ON WORKER COOPERATIVES, Approved by the ICA General Assembly in Cartagena, Colombia, on 23 September 2005: https://www.cicopa.coop/wp-content/uploads/2017/12/World-declaration-on-Worker-coops_EN.pdf,
     <a class="clsHide" href="#idOznPdn002008rscFdsn"></a></p>
   <p id="idOznPdn002008rscFnam">name::
-    <br>* McsEngl.oznCoopWorker,
+    <br>* McsEngl.ogznCoopWorker,
     <a class="clsHide" href="#idOznPdn002008rscFnam"></a></p>
   </section>
   </section>
 
   <section id="idOznPdn002009">
-  <h2 id="idOznPdn002009H2">oznCoop.customer-009
+  <h2 id="idOznPdn002009H2">ogznCoop.customer-009
     <a class="clsHide" href="#idOznPdn002009H2"></a></h2>
   <p id="idOznPdn002009dsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn002009dsn"></a></p>
   <p id="idOznPdn002009nam">name::
-    <br>* McsEngl.oznCoop.009-customer!⇒oznCoopCustomer,
-    <br>* McsEngl.oznCoop.customer!⇒oznCoopCustomer,
-    <br>* McsEngl.oznCoopCustomer,
+    <br>* McsEngl.ogznCoop.009-customer!⇒ogznCoopCustomer,
+    <br>* McsEngl.ogznCoop.customer!⇒ogznCoopCustomer,
+    <br>* McsEngl.ogznCoopCustomer,
     <a class="clsHide" href="#idOznPdn002009nam"></a></p>
   </section>
 </section>
@@ -2458,63 +2688,69 @@
     <br>· no transparency, no social-company.
     <a class="clsHide" href="#idOznPdn011dsn"></a></p>
   <p id="idOznPdn011nam">name::
-    <br>* McsEngl.ogznProduction.011-social!⇒oznSocial,
-    <br>* McsEngl.ogznProduction.social!⇒oznSocial,
-    <br>* McsEngl.oznSocial,
-    <br>* McsEngl.social-company!⇒oznSocial,
-    <br>* McsEngl.social-oriented-company!⇒oznSocial,
-    <br>* McsEngl.social-production-organization!⇒oznSocial,
+    <br>* McsEngl.ogznProduction.011-social!⇒ogznSocial,
+    <br>* McsEngl.ogznProduction.social!⇒ogznSocial,
+    <br>* McsEngl.ogznSocial,
+    <br>* McsEngl.social-company!⇒ogznSocial,
+    <br>* McsEngl.social-oriented-company!⇒ogznSocial,
+    <br>* McsEngl.social-production-organization!⇒ogznSocial,
     <a class="clsHide" href="#idOznPdn011nam"></a></p>
 
   <section id="idOznPdn011rscF">
-  <h2 id="idOznPdn011rscFH2">info-resource of oznSocial
+  <h2 id="idOznPdn011rscFH2">info-resource of ogznSocial
     <a class="clsHide" href="#idOznPdn011rscFH2"></a></h2>
   <p id="idOznPdn011rscFdsn">description::
     <br>* https://www.weforum.org/agenda/2021/01/social-enterprises-can-have-a-big-impact,
     <br>* https://pacecircular.org/about,
     <a class="clsHide" href="#idOznPdn011rscFdsn"></a></p>
   <p id="idOznPdn011rscFnam">name::
-    <br>* McsEngl.oznSocial'Infrsc,
+    <br>* McsEngl.ogznSocial'Infrsc,
     <a class="clsHide" href="#idOznPdn011rscFnam"></a></p>
   </section>
 </section>
 
 <section id="idOznPdn012">
-  <h1 id="idOznPdn012H1">ogznProduction.aggricultural-012
+  <h1 id="idOznPdn012H1">ogznProduction.agricultural-012
     <a class="clsHide" href="#idOznPdn012H1"></a></h1>
   <p id="idOznPdn012dsn">description::
     <br>· plant and animal production ogznProduction.
     <a class="clsHide" href="#idOznPdn012dsn"></a></p>
   <p id="idOznPdn012nam">name::
-    <br>* McsEngl.ogznProduction.012-aggricultural!⇒oznAgro,
-    <br>* McsEngl.ogznProduction.aggricultural!⇒oznAgro,
+    <br>* McsEngl.ogznAgro!=agricultural-organization,
+    <br>* McsEngl.ogznProduction.012-agricultural!⇒ogznAgro,
+    <br>* McsEngl.ogznProduction.agricultural!⇒ogznAgro,
     <br>====== langoGreek:
-    <br>* McsElln.αγροτικός-οργανισμός!=oznAgro,
+    <br>* McsElln.αγροτικός-οργανισμός!=ogznAgro,
     <a class="clsHide" href="#idOznPdn012nam"></a></p>
 
   <section id="idOznPdn012rscF">
-  <h2 id="idOznPdn012rscFH2">info-resource of oznAgro
+  <h2 id="idOznPdn012rscFH2">info-resource of ogznAgro
     <a class="clsHide" href="#idOznPdn012rscFH2"></a></h2>
   <p id="idOznPdn012rscFdsn">description::
     <br>* https://www.weforum.org/agenda/2021/01/china-digital-agriculture-global-food-security,
     <a class="clsHide" href="#idOznPdn012rscFdsn"></a></p>
   <p id="idOznPdn012rscFnam">name::
-    <br>* McsEngl.oznAgro'Infrsc,
+    <br>* McsEngl.ogznAgro'Infrsc,
     <a class="clsHide" href="#idOznPdn012rscFnam"></a></p>
   </section>
 
   <section id="idOznPdn012Spc">
-  <h2 id="idOznPdn012SpcH2">oznAgro.SPECIFIC
+  <h2 id="idOznPdn012SpcH2">ogznAgro.SPECIFIC
     <a class="clsHide" href="#idOznPdn012SpcH2"></a></h2>
   <p id="idOznPdn012Spcdsn">description::
-    <br>* animal-oznAgro,
-    <br>* plant-oznAgro,
+    <br>* animal-ogznAgro,
+    <br>* plant-ogznAgro,
     <br>===
-    <br>* digital-oznAgro,
+    <br>* digital-ogznAgro,
     <a class="clsHide" href="#idOznPdn012Spcdsn"></a></p>
   <p id="idOznPdn012Spcnam">name::
-    <br>* McsEngl.oznAgro.specific,
+    <br>* McsEngl.ogznAgro.specific,
     <a class="clsHide" href="#idOznPdn012Spcnam"></a></p>
+  </section>
+
+  <section id="idOznPdn012Sctr">
+  <h2 id="idOznPdn012SctrH2">ogznAgro.sector (<a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn025SctrAgri">link</a>)
+    <a class="clsHide" href="#idOznPdn012SctrH2"></a></h2>
   </section>
 </section>
 
@@ -2539,39 +2775,39 @@
     <br>·
     <a class="clsHide" href="#idOznPdn022dsn"></a></p>
   <p id="idOznPdn022nam">name::
-    <br>* McsEngl.education-organization!⇒oznEdu,
-    <br>* McsEngl.oznEdu,
-    <br>* McsEngl.ogznProduction.022-education!⇒oznEdu,
-    <br>* McsEngl.ogznProduction.education!⇒oznEdu,
+    <br>* McsEngl.education-organization!⇒ogznEdu,
+    <br>* McsEngl.ogznEdu,
+    <br>* McsEngl.ogznProduction.022-education!⇒ogznEdu,
+    <br>* McsEngl.ogznProduction.education!⇒ogznEdu,
     <a class="clsHide" href="#idOznPdn022nam"></a></p>
 
   <section id="idOznPdn022sfr">
-  <h2 id="idOznPdn022sfrH2">satisfierEdu of oznEdu
+  <h2 id="idOznPdn022sfrH2">satisfierEdu of ogznEdu
     <a class="clsHide" href="#idOznPdn022sfrH2"></a></h2>
   <p id="idOznPdn022sfrdsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn022sfrdsn"></a></p>
   <p id="idOznPdn022sfrnam">name::
-    <br>* McsEngl.oznEdu'satisfierEdu!⇒sfrEdu,
+    <br>* McsEngl.ogznEdu'satisfierEdu!⇒sfrEdu,
     <br>* McsEngl.satisfier.education!⇒sfrEdu,
     <br>* McsEngl.sfrEdu,
     <a class="clsHide" href="#idOznPdn022sfrnam"></a></p>
   </section>
 
   <section id="idOznPdn022pcsd">
-  <h2 id="idOznPdn022pcsdH2">public-spending of oznEdu
+  <h2 id="idOznPdn022pcsdH2">public-spending of ogznEdu
     <a class="clsHide" href="#idOznPdn022pcsdH2"></a></h2>
   <p id="idOznPdn022pcsddsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn022pcsddsn"></a></p>
   <p id="idOznPdn022pcsdnam">name::
-    <br>* McsEngl.oznEdu'public-spending,
+    <br>* McsEngl.ogznEdu'public-spending,
     <br>* McsEngl.public-spending-on-education,
     <a class="clsHide" href="#idOznPdn022pcsdnam"></a></p>
   </section>
 
   <section id="idOznPdn022stdt">
-  <h2 id="idOznPdn022stdtH2">student of oznEdu
+  <h2 id="idOznPdn022stdtH2">student of ogznEdu
     <a class="clsHide" href="#idOznPdn022stdtH2"></a></h2>
   <p id="idOznPdn022stdtdsn">description::
     <br>·
@@ -2579,7 +2815,7 @@
     <br>· stxZhon: 他们都是学生。 :: Tāmen dōu shì xuésheng. != They are all students.
     <a class="clsHide" href="#idOznPdn022stdtdsn"></a></p>
   <p id="idOznPdn022stdtnam">name::
-    <br>* McsEngl.oznEdu'student,
+    <br>* McsEngl.ogznEdu'student,
     <br>* McsEngl.student,
     <br>====== langoChinese:
     <br>* McsZhon.xuéshēng-学生!=student,
@@ -2633,7 +2869,7 @@
   </section>
 
   <section id="idOznPdn022tchr">
-  <h2 id="idOznPdn022tchrH2">teacher of oznEdu
+  <h2 id="idOznPdn022tchrH2">teacher of ogznEdu
     <a class="clsHide" href="#idOznPdn022tchrH2"></a></h2>
   <p id="idOznPdn022tchrdsn">description::
     <br>·
@@ -2642,7 +2878,7 @@
     <br>· "教师" is a general term for educators, "老师" is an informal and respectful term for teachers, and "教授" is a term reserved for university or college professors.
     <a class="clsHide" href="#idOznPdn022tchrdsn"></a></p>
   <p id="idOznPdn022tchrnam">name::
-    <br>* McsEngl.oznEdu'teacher!⇒wkrTeacher,
+    <br>* McsEngl.ogznEdu'teacher!⇒wkrTeacher,
     <br>* McsEngl.teacher!⇒wkrTeacher,
     <br>* McsEngl.wkrTeacher,
     <br>* McsEngl.worker.teacher!⇒wkrTeacher,
@@ -2707,19 +2943,19 @@
   </section>
 
   <section id="idOznPdn022Spc">
-  <h2 id="idOznPdn022SpcH2">oznEdu.SPECIFIC
+  <h2 id="idOznPdn022SpcH2">ogznEdu.SPECIFIC
     <a class="clsHide" href="#idOznPdn022SpcH2"></a></h2>
   <p id="idOznPdn022Spcdsn">description::
     <br>* researching,
     <br>* teaching,
     <a class="clsHide" href="#idOznPdn022Spcdsn"></a></p>
   <p id="idOznPdn022Spcnam">name::
-    <br>* McsEngl.oznEdu.specific,
+    <br>* McsEngl.ogznEdu.specific,
     <a class="clsHide" href="#idOznPdn022Spcnam"></a></p>
   </section>
 
   <section id="idOznPdn022Agg">
-  <h2 id="idOznPdn022AggH2">oznEdu.AGGREGATE
+  <h2 id="idOznPdn022AggH2">ogznEdu.AGGREGATE
     <a class="clsHide" href="#idOznPdn022AggH2"></a></h2>
   <p id="idOznPdn022Aggdsn">description::
     <br>">education system:
@@ -2752,63 +2988,63 @@
     <br>[{2023-11-24 retrieved} https://bard.google.com/chat/5854a95c8a0a95dc?hl=en&pli=1]
     <a class="clsHide" href="#idOznPdn022Aggdsn"></a></p>
   <p id="idOznPdn022Aggnam">name::
-    <br>* McsEngl.education-sector!⇒sectorPdnEdu,
-    <br>* McsEngl.education-system!⇒sectorPdnEdu,
-    <br>* McsEngl.sectorPdu.education!⇒sectorPdnEdu,
-    <br>* McsEngl.sectorPdnEdu!=education-sector,
-    <br>* McsEngl.society'education-system!⇒sectorPdnEdu,
-    <br>* McsEngl.oznEdu.aggregate!⇒sectorPdnEdu,
+    <br>* McsEngl.education-sector!⇒sctrPdnEdu,
+    <br>* McsEngl.education-system!⇒sctrPdnEdu,
+    <br>* McsEngl.sectorPdu.education!⇒sctrPdnEdu,
+    <br>* McsEngl.sctrPdnEdu!=education-sector,
+    <br>* McsEngl.society'education-system!⇒sctrPdnEdu,
+    <br>* McsEngl.ogznEdu.aggregate!⇒sctrPdnEdu,
     <a class="clsHide" href="#idOznPdn022Aggnam"></a></p>
   </section>
 
   <section id="idOznPdn022Tchg">
-  <h2 id="idOznPdn022TchgH2">oznEdu.teaching
+  <h2 id="idOznPdn022TchgH2">ogznEdu.teaching
     <a class="clsHide" href="#idOznPdn022TchgH2"></a></h2>
   <p id="idOznPdn022Tchgdsn">description::
     <br>(n) school (an educational institution) "the school was founded in 1900" [WordNet]
     <br>
-    <br>=== xuéxiào-学校!=oznSchool:
+    <br>=== xuéxiào-学校!=ogznSchool:
     <br>· stxZhon: 这个 学校 很小。 :: _stxSbj:[Zhège xuéxiào] _stxSbjc:[hěn xiǎo]。 != [this school] [small].
     <br>· stxZhon: 我 早早地 去 学校 了。 :: _stxSbj:[Wǒ] _stxTime:[zǎozǎo (de)] _stxVrb:{qù} _stxObj:[xuéxiào] (le). != I went to school early.
     <a class="clsHide" href="#idOznPdn022Tchgdsn"></a></p>
   <p id="idOznPdn022Tchgnam">name::
-    <br>* McsEngl.oznEdu.teaching!⇒oznSchool,
-    <br>* McsEngl.oznSchool,
-    <br>* McsEngl.school!⇒oznSchool,
+    <br>* McsEngl.ogznEdu.teaching!⇒ogznSchool,
+    <br>* McsEngl.ogznSchool,
+    <br>* McsEngl.school!⇒ogznSchool,
     <br>====== langoChinese:
-    <br>* McsZhon.xuéxiào-学校!=oznSchool,
-    <br>* McsZhon.学校-xuéxiào!=oznSchool,
+    <br>* McsZhon.xuéxiào-学校!=ogznSchool,
+    <br>* McsZhon.学校-xuéxiào!=ogznSchool,
     <br>====== langoGreek:
-    <br>* McsElln.σχολείο!το!=oznSchool,
+    <br>* McsElln.σχολείο!το!=ogznSchool,
     <a class="clsHide" href="#idOznPdn022Tchgnam"></a></p>
   </section>
 
   <section id="idOznPdn0221">
-  <h2 id="idOznPdn0221H2">oznEdu.primary
+  <h2 id="idOznPdn0221H2">ogznEdu.primary
     <a class="clsHide" href="#idOznPdn0221H2"></a></h2>
   <p id="idOznPdn0221dsn">description::
     <br>""
     <a class="clsHide" href="#idOznPdn0221dsn"></a></p>
   <p id="idOznPdn0221nam">name::
-    <br>* McsEngl.oznEdu.primary,
+    <br>* McsEngl.ogznEdu.primary,
     <br>* McsEngl.primary-education,
     <a class="clsHide" href="#idOznPdn0221nam"></a></p>
   </section>
 
   <section id="idOznPdn0222">
-  <h2 id="idOznPdn0222H2">oznEdu.secondary
+  <h2 id="idOznPdn0222H2">ogznEdu.secondary
     <a class="clsHide" href="#idOznPdn0222H2"></a></h2>
   <p id="idOznPdn0222dsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn0222dsn"></a></p>
   <p id="idOznPdn0222nam">name::
-    <br>* McsEngl.oznEdu.secondary,
+    <br>* McsEngl.ogznEdu.secondary,
     <br>* McsEngl.secondary-education,
     <a class="clsHide" href="#idOznPdn0222nam"></a></p>
   </section>
 
   <section id="idOznPdn0223">
-  <h2 id="idOznPdn0223H2">oznEdu.tertiary
+  <h2 id="idOznPdn0223H2">ogznEdu.tertiary
     <a class="clsHide" href="#idOznPdn0223H2"></a></h2>
   <p id="idOznPdn0223dsn">description::
     <br>"Tertiary education, also known as post-secondary education, is the educational level following the completion of secondary education. It encompasses a wide range of institutions and programs, including universities, colleges, technical training institutes, and vocational schools.
@@ -2825,13 +3061,13 @@
     <br>[{2023-10-01 retrieved} https://bard.google.com/chat/8c8574c5c9355150]
     <a class="clsHide" href="#idOznPdn0223dsn"></a></p>
   <p id="idOznPdn0223nam">name::
-    <br>* McsEngl.oznEdu.tertiary,
-    <br>* McsEngl.oznEduTertiary,
+    <br>* McsEngl.ogznEdu.tertiary,
+    <br>* McsEngl.ogznEduTertiary,
     <br>* McsEngl.tertiary-education,
     <a class="clsHide" href="#idOznPdn0223nam"></a></p>
 
   <section id="idOznPdn0223stdt">
-  <h3 id="idOznPdn0223stdtH3">student of oznEduTertiary
+  <h3 id="idOznPdn0223stdtH3">student of ogznEduTertiary
     <a class="clsHide" href="#idOznPdn0223stdtH3"></a></h3>
   <p id="idOznPdn0223stdtdsn">description::
     <br>"Most educated countries:
@@ -2885,14 +3121,14 @@
     <br>[{2023-10-01 retrieved} https://twitter.com/stats_feed/status/1708351283676271041]
     <a class="clsHide" href="#idOznPdn0223stdtdsn"></a></p>
   <p id="idOznPdn0223stdtnam">name::
-    <br>* McsEngl.oznEduTertiary'student,
-    <br>* McsEngl.student.oznEduTertiary,
+    <br>* McsEngl.ogznEduTertiary'student,
+    <br>* McsEngl.student.ogznEduTertiary,
     <a class="clsHide" href="#idOznPdn0223stdtnam"></a></p>
   </section>
   </section>
 
   <section id="idOznPdn022Unvt">
-  <h2 id="idOznPdn022UnvtH2">oznEdu.university
+  <h2 id="idOznPdn022UnvtH2">ogznEdu.university
     <a class="clsHide" href="#idOznPdn022UnvtH2"></a></h2>
   <p id="idOznPdn022Unvtdsn">description::
     <br>"(n) university (establishment where a seat of higher learning is housed, including administrative and living quarters as well as facilities for research and teaching)
@@ -2900,7 +3136,7 @@
     <br>[{2023-09-21 retrieved} http://wordnetweb.princeton.edu/perl/webwn?s=university]
     <a class="clsHide" href="#idOznPdn022Unvtdsn"></a></p>
   <p id="idOznPdn022Unvtnam">name::
-    <br>* McsEngl.oznEdu.university,
+    <br>* McsEngl.ogznEdu.university,
     <br>* McsEngl.university,
     <br>====== langoChinese:
     <br>* McsZhon.dàxué-大學!=university,
@@ -2965,14 +3201,14 @@
     <br>· any ogznProduction involved in military.
     <a class="clsHide" href="#idOznPdn027dsn"></a></p>
   <p id="idOznPdn027nam">name::
-    <br>* McsEngl.military-ogznProduction!⇒oznMili,
-    <br>* McsEngl.oznMili,
-    <br>* McsEngl.ogznProduction.027-military!⇒oznMili,
-    <br>* McsEngl.ogznProduction.military!⇒oznMili,
+    <br>* McsEngl.military-ogznProduction!⇒ogznMili,
+    <br>* McsEngl.ogznMili,
+    <br>* McsEngl.ogznProduction.027-military!⇒ogznMili,
+    <br>* McsEngl.ogznProduction.military!⇒ogznMili,
     <a class="clsHide" href="#idOznPdn027nam"></a></p>
 
   <section id="idOznPdn027Agg">
-  <h2 id="idOznPdn027AggH2">oznMili.aggregate
+  <h2 id="idOznPdn027AggH2">ogznMili.aggregate
     <a class="clsHide" href="#idOznPdn027AggH2"></a></h2>
   <p id="idOznPdn027Aggdsn">description::
     <br>"military indesutry:
@@ -3003,22 +3239,22 @@
     <br>[{2024-01-01 retrieved} https://bard.google.com/chat/a668f4b1cc9da3c4]
     <a class="clsHide" href="#idOznPdn027Aggdsn"></a></p>
   <p id="idOznPdn027Aggnam">name::
-    <br>* McsEngl.defence-industry!⇒sectorPdnMili,
-    <br>* McsEngl.military-industry!⇒sectorPdnMili,
-    <br>* McsEngl.military-sector!⇒sectorPdnMili,
-    <br>* McsEngl.sectorPdnMili,
+    <br>* McsEngl.defence-industry!⇒sctrPdnMili,
+    <br>* McsEngl.military-industry!⇒sctrPdnMili,
+    <br>* McsEngl.military-sector!⇒sctrPdnMili,
+    <br>* McsEngl.sctrPdnMili,
     <br>====== langoGreek:
-    <br>* McsElln.αμυντική-βιομηχανία!⇒sectorPdnMili,
-    <br>* McsElln.στρατιωτική-βιομηχανία!⇒sectorPdnMili,
+    <br>* McsElln.αμυντική-βιομηχανία!⇒sctrPdnMili,
+    <br>* McsElln.στρατιωτική-βιομηχανία!⇒sctrPdnMili,
     <a class="clsHide" href="#idOznPdn027Aggnam"></a></p>
 
   <section id="idOznPdn027AggGvc">
-  <h3 id="idOznPdn027AggGvcH3">oznMili.aggregate.governance (<a class="clsPreview" href="#idOznPdn009mil">link</a>)
+  <h3 id="idOznPdn027AggGvcH3">ogznMili.aggregate.governance (<a class="clsPreview" href="#idOznPdn009mil">link</a>)
     <a class="clsHide" href="#idOznPdn027AggGvcH3"></a></h3>
   </section>
 
   <section id="idOznPdn027AggGvcsipri">
-  <h3 id="idOznPdn027AggGvcsipriH3">Stockholm-International-Peace-Research-Institute of sectorPdnMili
+  <h3 id="idOznPdn027AggGvcsipriH3">Stockholm-International-Peace-Research-Institute of sctrPdnMili
     <a class="clsHide" href="#idOznPdn027AggGvcsipriH3"></a></h3>
   <p id="idOznPdn027AggGvcsipridsn">description::
     <br>"Stockholm-International-Peace-Research-Institute:
@@ -3051,12 +3287,12 @@
     <br>[{2023-07-21 retrieved} https://en.wikipedia.org/wiki/Startup_company]
     <a class="clsHide" href="#idOznPdn031dsn"></a></p>
   <p id="idOznPdn031nam">name::
-    <br>* McsEngl.ogznProduction.031-startup!⇒oznStartup,
-    <br>* McsEngl.ogznProduction.startup!⇒oznStartup,
-    <br>* McsEngl.oznStartup,
-    <br>* McsEngl.startup!⇒oznStartup,
+    <br>* McsEngl.ogznProduction.031-startup!⇒ogznStartup,
+    <br>* McsEngl.ogznProduction.startup!⇒ogznStartup,
+    <br>* McsEngl.ogznStartup,
+    <br>* McsEngl.startup!⇒ogznStartup,
     <br>====== langoGreek:
-    <br>* McsElln.νεοφυής-εταιρία!=oznStartup,
+    <br>* McsElln.νεοφυής-εταιρία!=ogznStartup,
     <a class="clsHide" href="#idOznPdn031nam"></a></p>
 
   <section id="idOznPdn032">
@@ -3070,7 +3306,7 @@
   <p id="idOznPdn032nam">name::
     <br>* McsEngl.ogznProduction.032-unicorn!=oznUnicorn,
     <br>* McsEngl.ogznProduction.unicorn!=oznUnicorn,
-    <br>* McsEngl.oznStartup.unicorn!=oznUnicorn,
+    <br>* McsEngl.ogznStartup.unicorn!=oznUnicorn,
     <br>* McsEngl.oznUnicorn,
     <br>====== langoGreek:
     <br>* McsElln.εταιρία-μονόκερος!η!=oznUnicorn,
@@ -3089,17 +3325,17 @@
     <br>· "(n) museum (a depository for collecting and displaying objects having scientific or historical or artistic value)"
     <br>[{2023-07-17 retrieved} http://wordnetweb.princeton.edu/perl/webwn?s=museum]
     <br>
-    <br>=== bówùguǎn-博物馆!=oznMuseum:
+    <br>=== bówùguǎn-博物馆!=ogznMuseum:
     <br>· stxZhon: 我 参观 了 博物馆。 :: _stxSbj:[Wǒ] _stxVrb:{cānguān le} _stxObj:[bówùguǎn]。 != [I] {visited} [museum].
     <a class="clsHide" href="#idOznPdn030dsn"></a></p>
   <p id="idOznPdn030nam">name::
-    <br>* McsEngl.oznMuseum,
-    <br>* McsEngl.ogznProduction.030-museum!⇒oznMuseum,
-    <br>* McsEngl.ogznProduction.museum!⇒oznMuseum,
+    <br>* McsEngl.ogznMuseum,
+    <br>* McsEngl.ogznProduction.030-museum!⇒ogznMuseum,
+    <br>* McsEngl.ogznProduction.museum!⇒ogznMuseum,
     <br>====== langoChinese:
-    <br>* McsZhon.bówùguǎn-博物馆!=oznMuseum,
+    <br>* McsZhon.bówùguǎn-博物馆!=ogznMuseum,
     <br>====== langoGreek:
-    <br>* McsElln.μουσείο!το!=oznMuseum,
+    <br>* McsElln.μουσείο!το!=ogznMuseum,
     <a class="clsHide" href="#idOznPdn030nam"></a></p>
   </section>
 
@@ -3118,12 +3354,12 @@
     <br>* McsEngl.store,
     <br>* McsEngl.ogznProduction.029-shop,
     <br>* McsEngl.ogznProduction.shop,
-    <br>* McsEngl.oznShop,
+    <br>* McsEngl.ogznShop,
     <br>====== langoChinese:
-    <br>* McsZhon.jiā-shāngdiàn-家商店!=oznShop,
-    <br>* McsZhon.家商店-jiā-shāngdiàn!=oznShop,
+    <br>* McsZhon.jiā-shāngdiàn-家商店!=ogznShop,
+    <br>* McsZhon.家商店-jiā-shāngdiàn!=ogznShop,
     <br>====== langoGreek:
-    <br>* McsElln.κατάστημα!το!=oznShop,
+    <br>* McsElln.κατάστημα!το!=ogznShop,
     <a class="clsHide" href="#idOznPdn029nam"></a></p>
 
   <section id="idOznPdn033">
@@ -3131,19 +3367,19 @@
     <a class="clsHide" href="#idOznPdn033H3"></a></h3>
   <p id="idOznPdn033dsn">description::
     <br>·
-    <br>=== shāngchǎng-商场!=oznShopping_mall:
+    <br>=== shāngchǎng-商场!=ogznShopping_mall:
     <br>· stxZhon: 我周末去商场买东西。 :: Wǒ zhōumò qù shāngchǎng mǎi dōngxi. != On the weekend I go to the shopping mall to buy things.
     <a class="clsHide" href="#idOznPdn033dsn"></a></p>
   <p id="idOznPdn033nam">name::
     <br>* McsEngl.ogznProduction.033-shopping-mall,
     <br>* McsEngl.ogznProduction.shopping-mall,
-    <br>* McsEngl.oznShopping_mall,
+    <br>* McsEngl.ogznShopping_mall,
     <br>* McsEngl.shopping-mall,
     <br>====== langoChinese:
-    <br>* McsZhon.shāngchǎng-商场!=oznShopping_mall,
-    <br>* McsZhon.商场-shāngchǎng!=oznShopping_mall,
+    <br>* McsZhon.shāngchǎng-商场!=ogznShopping_mall,
+    <br>* McsZhon.商场-shāngchǎng!=ogznShopping_mall,
     <br>====== langoGreek:
-    <br>* McsElln.εμπορικό-κέντρο!το!=oznShopping_mall,
+    <br>* McsElln.εμπορικό-κέντρο!το!=ogznShopping_mall,
     <a class="clsHide" href="#idOznPdn033nam"></a></p>
   </section>
   </section>
