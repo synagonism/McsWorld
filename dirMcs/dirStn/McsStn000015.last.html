@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.ogznProduction!=producer (McsStn000015.1-47-0.2024-02-13)</title>
+  <title>Mcs.ogznProduction!=company (McsStn000015.1-49-0.2024-02-27)</title>
   <meta name="keywords" content="organization.economic, ogznProduction, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -43,6 +43,7 @@
     <br>* human-economic-organization!⇒ogznProduction,
     <br>* McsEngl.householdNo-organization!⇒ogznProduction,
     <br>* McsEngl.non-household-organization!⇒ogznProduction,
+    <br>* McsEngl.ogzn.001-production!⇒ogznProduction,
     <br>* McsEngl.ogznConsumptionNo!⇒ogznProduction,
     <br>* McsEngl.ogznEcon!⇒ogznProduction,
     <br>* McsEngl.ogznPdcn!⇒ogznProduction, {2020-11-07},
@@ -763,19 +764,19 @@
   </section>
 </section>
 
-<section id="idOznPdnatt023">
-  <h1 id="idOznPdnatt023H1">09_size of ogznProduction
-    <a class="clsHide" href="#idOznPdnatt023H1"></a></h1>
-  <p id="idOznPdnatt023dsn">description::
+<section id="idOznPdnatt036">
+  <h1 id="idOznPdnatt036H1">09_size of ogznProduction
+    <a class="clsHide" href="#idOznPdnatt036H1"></a></h1>
+  <p id="idOznPdnatt036dsn">description::
     <br>· on misc attributes:
     <br>* quantity of workers,
     <br>* quantity of output,
-    <a class="clsHide" href="#idOznPdnatt023dsn"></a></p>
-  <p id="idOznPdnatt023nam">name::
+    <a class="clsHide" href="#idOznPdnatt036dsn"></a></p>
+  <p id="idOznPdnatt036nam">name::
     <br>* McsEngl.ogznProduction'09_size,
-    <br>* McsEngl.ogznProduction'att023-size,
+    <br>* McsEngl.ogznProduction'att036-size,
     <br>* McsEngl.ogznProduction'size,
-    <a class="clsHide" href="#idOznPdnatt023nam"></a></p>
+    <a class="clsHide" href="#idOznPdnatt036nam"></a></p>
 </section>
 
 <section id="idOznPdnatt017">
@@ -1055,7 +1056,7 @@
     <br>* McsEngl.ogznProduction'generic-specific-tree,
     <a class="clsHide" href="#idOznPdngstnam"></a></p>
   <p id="idOznPdngtr">generic-tree-of-ogznProduction::
-    <br>* <a class="clsPreview" href="../dirStn/McsStn000006.last.html#idOzn">ozn</a>,
+    <br>* <a class="clsPreview" href="../dirStn/McsStn000008.last.html#idOgznScdnSrpn">economic-ogzn</a>,
     <br>* ... <a class="clsPreview" href="../dirCor/McsCor000003.last.html#idOverview">entity</a>.
     <a class="clsHide" href="#idOznPdngtr"></a></p>
   <p id="idOznPdngstFwpa">addressWpg::
@@ -1238,11 +1239,83 @@
     <br>[{2021-01-20} https://synagonism.net/dirMcs/dirStn/dirHitp/HitpStnStd000.last.html#idPara2-39]
     <a class="clsHide" href="#idOznPdn004dsnL"></a></p>
 
+  <section id="idOznPdn004inpt">
+  <h2 id="idOznPdn004inptH2">input-product of sector
+    <a class="clsHide" href="#idOznPdn004inptH2"></a></h2>
+  <p id="idOznPdn004inptdsn">description::
+    <br>· every sector to create its output has as input other products from other sectors.
+    <br>· input-product is the-aggregate product inputed from all input-sectors.
+    <a class="clsHide" href="#idOznPdn004inptdsn"></a></p>
+  <p id="idOznPdn004inptnam">name::
+    <br>* McsEngl.sector'input-product,
+    <a class="clsHide" href="#idOznPdn004inptnam"></a></p>
+
+  <section id="idOznPdn004ispt">
+  <h3 id="idOznPdn004isptH3">input-sector-product of sector
+    <a class="clsHide" href="#idOznPdn004isptH3"></a></h3>
+  <p id="idOznPdn004isptdsn">description::
+    <br>· input-sector-product-of-sector\a\ is the-product an input-sector contributes to sector\a\.
+    <a class="clsHide" href="#idOznPdn004isptdsn"></a></p>
+  <p id="idOznPdn004isptnam">name::
+    <br>* McsEngl.input-sector-product-of-sector,
+    <br>* McsEngl.sector'input-sector-product,
+    <a class="clsHide" href="#idOznPdn004isptnam"></a></p>
+  </section>
+
+  <section id="idOznPdn004insr">
+  <h3 id="idOznPdn004insrH3">input-sector of sector
+    <a class="clsHide" href="#idOznPdn004insrH3"></a></h3>
+  <p id="idOznPdn004insrdsn">description::
+    <br>· input-sector--of-sector\a\ is a-specific-sector which contributes with its product to sector\a\.
+    <a class="clsHide" href="#idOznPdn004insrdsn"></a></p>
+  <p id="idOznPdn004insrnam">name::
+    <br>* McsEngl.input-sector--of-sector,
+    <br>* McsEngl.sector'input-sector,
+    <a class="clsHide" href="#idOznPdn004insrnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idOznPdn004otpt">
+  <h2 id="idOznPdn004otptH2">output-product of sector
+    <a class="clsHide" href="#idOznPdn004otptH2"></a></h2>
+  <p id="idOznPdn004otptdsn">description::
+    <br>· the-aggregate output-product of a-sector.
+    <a class="clsHide" href="#idOznPdn004otptdsn"></a></p>
+  <p id="idOznPdn004otptnam">name::
+    <br>* McsEngl.output-product--of-sector,
+    <br>* McsEngl.sector'output-product,
+    <a class="clsHide" href="#idOznPdn004otptnam"></a></p>
+
+  <section id="idOznPdn004ospt">
+  <h3 id="idOznPdn004osptH3">output-sector-product of sector
+    <a class="clsHide" href="#idOznPdn004osptH3"></a></h3>
+  <p id="idOznPdn004osptdsn">description::
+    <br>· the-part of output-product contributed to a-specific-sector.
+    <a class="clsHide" href="#idOznPdn004osptdsn"></a></p>
+  <p id="idOznPdn004osptnam">name::
+    <br>* McsEngl.output-sector-product--of-sector,
+    <br>* McsEngl.sector'output-sector-product,
+    <a class="clsHide" href="#idOznPdn004osptnam"></a></p>
+  </section>
+
+  <section id="idOznPdn004otsr">
+  <h3 id="idOznPdn004otsrH3">output-sector of sector
+    <a class="clsHide" href="#idOznPdn004otsrH3"></a></h3>
+  <p id="idOznPdn004otsrdsn">description::
+    <br>· the-sector to which part of output-product contributed to.
+    <a class="clsHide" href="#idOznPdn004otsrdsn"></a></p>
+  <p id="idOznPdn004otsrnam">name::
+    <br>* McsEngl.output-sector--of-sector,
+    <br>* McsEngl.sector'output-sector,
+    <a class="clsHide" href="#idOznPdn004otsrnam"></a></p>
+  </section>
+  </section>
+
   <section id="idOznPdn004gdpp">
   <h2 id="idOznPdn004gdppH2">Gdp-percent of sector
     <a class="clsHide" href="#idOznPdn004gdppH2"></a></h2>
   <p id="idOznPdn004gdppdsn">description::
-    <br>· sector's output percent to country or global Gdp.
+    <br>· sector's output percent to country or global <a class="clsPreview" href="../dirStn/McsStn000012.last.html#idEconHmnatt010">Gdp</a>.
     <a class="clsHide" href="#idOznPdn004gdppdsn"></a></p>
   <p id="idOznPdn004gdppnam">name::
     <br>* McsEngl.sector'Gdp-percent,

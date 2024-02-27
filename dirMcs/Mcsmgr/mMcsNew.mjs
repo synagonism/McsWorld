@@ -45,6 +45,7 @@ import {fSftp} from './mSftp.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mMcsNew.mjs.1-3-5.2024-02-27: parent-child-tree',
     'mMcsNew.mjs.1-3-4.2023-12-12: title !=',
     'mMcsNew.mjs.1-3-3.2023-12-12: title',
     'mMcsNew.mjs.1-3-2.2023-11-29: evoluting-of',
@@ -93,15 +94,15 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirNtr',
+  sDir = 'dirStn',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'sky',
+  sName = 'People\'s-Republic-of-China',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'sky',
+  sNameShort = 'socChn',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'Sky',
+  sNameId = 'SocChn',
 
 
   sNameFile = '',
@@ -206,7 +207,7 @@ s =
   '</section>\n' +
   '\n' +
   '<section id="id' + sNameId + 'pctF">\n' +
-  '  <h1 id="id' + sNameId + 'wptFH1">PARENT-CHILD-TREE of ' + sNameShort + '\n' +
+  '  <h1 id="id' + sNameId + 'pctFH1">PARENT-CHILD-TREE of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'pctFH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'ptr">parent-tree-of-' + sNameShort + '::\n' +
   '    <br>* ,\n' +
