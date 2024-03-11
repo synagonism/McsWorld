@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-9-3.2024-03-10: suggest on space -',
     'mMcsh.js.19-9-2.2023-08-28: suggest on space @',
     'mMcsh.js.19-9-1.2023-08-17: suggest on space ;',
     'mMcsh.js.19-9-0.2023-07-14: suggest on space',
@@ -1126,7 +1127,7 @@ let fContainersInsert = function () {
           // display exactly sSearchInput if ends in space
           n = 0
           for (i = 1; i < aSuggestions.length; i++) {
-            // name
+            // suggest name
             // name'xxx = attribute of name
             // name.xxx = specific of name
             // name:xxx = generic of name
@@ -1136,6 +1137,7 @@ let fContainersInsert = function () {
             // name;;xxx = parent of name
             // name!... = info on name
             // name@... = part of another worldview
+            // name-... = many words name
             let
               sSgn = aSuggestions[i][0],
               sInput = sSearchInput.substring(0, sSearchInput.length-1)
@@ -1148,6 +1150,7 @@ let fContainersInsert = function () {
                 new RegExp("^"+sInput+";.*").test(sSgn) ||
                 new RegExp("^"+sInput+";;.*").test(sSgn) ||
                 new RegExp("^"+sInput+"!.*").test(sSgn) ||
+                new RegExp("^"+sInput+"-.*").test(sSgn) ||
                 new RegExp("^"+sInput+"@.*").test(sSgn) ) {
               n = n + 1
               sSuggestions = sSuggestions +
