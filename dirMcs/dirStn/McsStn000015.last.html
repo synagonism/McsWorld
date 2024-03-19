@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.ogznPrdg!=company (McsStn000015.1-55-0.2024-03-12)</title>
+  <title>Mcs.ogznPrdg!=company (McsStn000015.1-57-0.2024-03-18)</title>
   <meta name="keywords" content="organization.economic, ogznPrdg, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -1243,6 +1243,7 @@
     <br>* McsEngl.sctrPdcn!⇒sector,
     <br>* McsEngl.sector!=production-sector,
     <br>* McsEngl.sector-of-ogznPrdg!⇒sector,
+    <br>* McsEngl.sectorPdcn!⇒sector,
     <br>* McsEngl.sectorPdn!⇒sector,
     <br>* McsEngl.sectorProduction!⇒sector,
     <br>====== langoGreek:
@@ -1364,6 +1365,27 @@
     <a class="clsHide" href="#idOznPdn004mtvlnam"></a></p>
   </section>
 
+  <section id="idOznPdn004expd">
+  <h2 id="idOznPdn004expdH2">expenditure of sector
+    <a class="clsHide" href="#idOznPdn004expdH2"></a></h2>
+  <p id="idOznPdn004expddsn">description::
+    <br>">expenditure of sector:
+    <br>The term "expenditure of sector" can be interpreted in two ways:
+    <br>1. **Government Spending by Sector:** This refers to how governments allocate their budget across different areas. Common sectors for government expenditure include healthcare, education, infrastructure, defense, and social security. You can find data on government spending by sector from various sources like the International Monetary Fund (IMF) [IMF Public Expenditure Measurement] or Eurostat (for European countries) [Eurostat Government expenditure on economic affairs].
+    <br>2. **Private Sector Expenditure:** This refers to spending by businesses and households. Here, sectors could be industries like manufacturing, retail, or healthcare. Data on private sector expenditure is often harder to find in a disaggregated form, but some economic reports might provide this information.
+    <br>To get a better understanding of expenditure by sector, it would be helpful to know:
+    <br>* **What sector are you interested in?** (e.g., healthcare, education, manufacturing)
+    <br>* **Is it public or private sector expenditure you're looking for?**
+    <br>* **What geographical area are you interested in?** (e.g., national, regional)
+    <br>Once you have a clearer idea, you can search for specific data sources or reports that might be relevant."
+    <br>[{2024-03-16 retrieved} https://gemini.google.com/app/b6dd7ddb9c244c08]
+    <a class="clsHide" href="#idOznPdn004expddsn"></a></p>
+  <p id="idOznPdn004expdnam">name::
+    <br>* McsEngl.sector'expenditure,
+    <br>* McsEngl.sector'spending,
+    <a class="clsHide" href="#idOznPdn004expdnam"></a></p>
+  </section>
+
   <section id="idOznPdn004law">
   <h2 id="idOznPdn004lawH2">law of sector
     <a class="clsHide" href="#idOznPdn004lawH2"></a></h2>
@@ -1371,9 +1393,10 @@
     <br>· <a class="clsPreview" href="../dirStn/McsStn000012.last.html#idLaw045">economic-law</a> about a-sector.
     <a class="clsHide" href="#idOznPdn004lawdsn"></a></p>
   <p id="idOznPdn004lawnam">name::
-    <br>* McsEngl.lawEconomy.013-sector,
-    <br>* McsEngl.lawEconomy.sector,
-    <br>* McsEngl.sector'law,
+    <br>* McsEngl.lawEconomy.013-sector!⇒lawSector,
+    <br>* McsEngl.lawEconomy.sector!⇒lawSector,
+    <br>* McsEngl.lawSector!=law-on-sector,
+    <br>* McsEngl.sector'law!⇒lawSector,
     <a class="clsHide" href="#idOznPdn004lawnam"></a></p>
   </section>
 
@@ -1594,47 +1617,49 @@
 </section>
 
 <section id="idOznPdn038">
-  <h1 id="idOznPdn038H1">ogznPrdg.sectorSocadmn
+  <h1 id="idOznPdn038H1">ogznPrdg.sectorPublic
     <a class="clsHide" href="#idOznPdn038H1"></a></h1>
   <p id="idOznPdn038dsn">description::
-    <br>· sectorSocadmn = <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn019">sectorSocadmn0|core</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn039">sectorSocadmn1|narrow</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn009">sectorSocadmn2|broad</a>
+    <br>· sectorPublic = <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn019">sectorPublic0|core</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn039">sectorPublic1|narrow</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn009">sectorPblcBroad|broad</a>
     <br>
-    <br>· sectorSocadmn is <a class="clsPreview" href="../dirCor/McsCor000008.last.html#idWhl001Set">the-set</a> of <a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt017">ogznAdmn</a>.
+    <br>· sectorPublic is <a class="clsPreview" href="../dirCor/McsCor000008.last.html#idWhl001Set">the-set</a> of <a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt017">ogznAdmn</a>.
     <br>· Socadmn is <a class="clsPreview" href="../dirCor/McsCor000011.last.html#idOverview">THE-SYSTEM</a> of ogznAdmn.
     <a class="clsHide" href="#idOznPdn038dsn"></a></p>
   <p id="idOznPdn038nam">name::
-    <br>* McsEngl.admin-sector!⇒sectorSocadmn,
-    <br>* McsEngl.administrative-sector!⇒sectorSocadmn,
-    <br>* McsEngl.ogznPrdg.sectorSocadmn!⇒sectorSocadmn,
-    <br>* McsEngl.ogznPrdg.sectorSocadmn!⇒sectorSocadmn,
-    <br>* McsEngl.public-sector!⇒sectorSocadmn,
-    <br>* McsEngl.sectorAdmn!⇒sectorSocadmn,
-    <br>* McsEngl.sectorSocadmn!=admnSoc-sector,
-    <br>* McsEngl.sectorSocadmnOwned!⇒sectorSocadmn,
-    <br>* McsEngl.sectorGvcOwned!⇒sectorSocadmn,
-    <br>* McsEngl.sectorPublic!⇒sectorSocadmn,
-    <br>* McsEngl.state-sector!⇒sectorSocadmn,
+    <br>* McsEngl.admin-sector!⇒sectorPblc,
+    <br>* McsEngl.administrative-sector!⇒sectorPblc,
+    <br>* McsEngl.ogznPrdg.sectorPublic!⇒sectorPblc,
+    <br>* McsEngl.ogznPrdg.sectorPublic!⇒sectorPblc,
+    <br>* McsEngl.public-sector!⇒sectorPblc,
+    <br>* McsEngl.sector.public!⇒sectorPblc,
+    <br>* McsEngl.sectorAdmn!⇒sectorPblc,
+    <br>* McsEngl.sectorPblc!=public-sector,
+    <br>* McsEngl.sectorPublic!⇒sectorPblc,
+    <br>* McsEngl.sectorPublicOwned!⇒sectorPblc,
+    <br>* McsEngl.sectorGvcOwned!⇒sectorPblc,
+    <br>* McsEngl.sectorSocadmn!⇒sectorPblc,
+    <br>* McsEngl.state-sector!⇒sectorPblc,
     <br>====== langoGreek:
-    <br>* McsElln.διοίκησης-κοινωνίας-τομέας!ο!=sectorSocadmn,
-    <br>* McsElln.τομέας-διοίκησης-κοινωνίας!ο!=sectorSocadmn,
+    <br>* McsElln.διοίκησης-κοινωνίας-τομέας!ο!=sectorPublic,
+    <br>* McsElln.τομέας-διοίκησης-κοινωνίας!ο!=sectorPublic,
     <a class="clsHide" href="#idOznPdn038nam"></a></p>
 
   <section id="idOznPdn038sys">
-  <h2 id="idOznPdn038sysH2">admin-system (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmngvc">link</a>) of sectorSocadmn
+  <h2 id="idOznPdn038sysH2">admin-system (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmngvc">link</a>) of sectorPublic
     <a class="clsHide" href="#idOznPdn038sysH2"></a></h2>
   </section>
 
   <section id="idOznPdn038ogzn">
-  <h2 id="idOznPdn038ogznH2">admin-organization (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt017">link</a>) of sectorSocadmn
+  <h2 id="idOznPdn038ogznH2">admin-organization (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt017">link</a>) of sectorPublic
     <a class="clsHide" href="#idOznPdn038ogznH2"></a></h2>
   </section>
 
   <section id="idOznPdn019">
-  <h2 id="idOznPdn019H2">ogznPrdg.sectorSocadmnCore
+  <h2 id="idOznPdn019H2">sectorPublicCore of sectorPublic
     <a class="clsHide" href="#idOznPdn019H2"></a></h2>
   <p id="idOznPdn019dsn">description::
     <br>· core-public-sector.
-    <br>· sectorSocadmn = <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn019">sectorSocadmn0|core</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn039">sectorSocadmn1|narrow</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn009">sectorSocadmn2|broad</a>
+    <br>· sectorPublic = <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn019">sectorPublic0|core</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn039">sectorPublic1|narrow</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn009">sectorPblcBroad|broad</a>
     <br>
     <br>">narrow public sector:
     <br>The term "narrow public sector" is less commonly used and has a somewhat ambiguous definition. It can be interpreted in two ways:
@@ -1644,18 +1669,20 @@
     <br>[{2024-01-02 retrieved} https://bard.google.com/chat/653e9304008c22a0]
     <a class="clsHide" href="#idOznPdn019dsn"></a></p>
   <p id="idOznPdn019nam">name::
-    <br>* McsEngl.core-admin-sector!⇒sectorSocadmn0,
-    <br>* McsEngl.ogznPrdg.019-sectorSocadmnCore!⇒sectorSocadmn0,
-    <br>* McsEngl.ogznPrdg.sectorSocadmnCore!⇒sectorSocadmn0,
-    <br>* McsEngl.public-sector.core!⇒sectorSocadmn0,
-    <br>* McsEngl.sectorSocadmn0!=administrative-sector,
+    <br>* McsEngl.core-admin-sector!⇒sectorPblcCore,
+    <br>* McsEngl.ogznPrdg.019-sectorPublicCore!⇒sectorPblcCore,
+    <br>* McsEngl.ogznPrdg.sectorPublicCore!⇒sectorPblcCore,
+    <br>* McsEngl.public-sector.core!⇒sectorPblcCore,
+    <br>* McsEngl.sectorPblc0!⇒sectorPblcCore,
+    <br>* McsEngl.sectorPblcCore!=core-public-sector,
+    <br>* McsEngl.sectorPublic0!⇒sectorPblcCore,
     <br>====== langoGreek:
-    <br>* McsElln.πυρηνικός-τομέας-διοίκησης!=sectorSocadmn0,
-    <br>* McsElln.τομέας-διοίκησης-πυρηνικός!=sectorSocadmn0,
+    <br>* McsElln.πυρηνικός-τομέας-διοίκησης!=sectorPblcCore,
+    <br>* McsElln.τομέας-διοίκησης-πυρηνικός!=sectorPblcCore,
     <a class="clsHide" href="#idOznPdn019nam"></a></p>
 
   <section id="idOznPdn047">
-  <h3 id="idOznPdn047H3">ogznPrdg.AdminCore
+  <h3 id="idOznPdn047H3">ogznPrdg.publicCore
     <a class="clsHide" href="#idOznPdn047H3"></a></h3>
   <p id="idOznPdn047dsn">description::
     <br>· core-admin-organization is any organization of <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn019">the-core-admin-sector</a> (executive, legislature, judicial).
@@ -1671,11 +1698,11 @@
   </section>
 
   <section id="idOznPdn039">
-  <h2 id="idOznPdn039H2">ogznPrdg.sectorSocadmnNarrow
+  <h2 id="idOznPdn039H2">sectorPublicNarrow of sectorPublic
     <a class="clsHide" href="#idOznPdn039H2"></a></h2>
   <p id="idOznPdn039dsn">description::
     <br>· narrow-public-sector.
-    <br>· sectorSocadmn = <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn019">sectorSocadmn0|core</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn039">sectorSocadmn1|narrow</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn009">sectorSocadmn2|broad</a>
+    <br>· sectorPublic = <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn019">sectorPublic0|core</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn039">sectorPublic1|narrow</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn009">sectorPblcBroad|broad</a>
     <br>
     <br>* core-public-sector,
     <br>* armed-forces,
@@ -1683,14 +1710,16 @@
     <br>* fire-forces,
     <a class="clsHide" href="#idOznPdn039dsn"></a></p>
   <p id="idOznPdn039nam">name::
-    <br>* McsEngl.narrow-admin-sector!⇒sectorSocadmn1,
-    <br>* McsEngl.narrow-public-sector!⇒sectorSocadmn1,
-    <br>* McsEngl.ogznPrdg.039-sectorSocadmnNarrow!⇒sectorSocadmn1,
-    <br>* McsEngl.ogznPrdg.sectorSocadmnNarrow!⇒sectorSocadmn1,
-    <br>* McsEngl.sectorSocadmn1!=narrow-public-sector,
+    <br>* McsEngl.narrow-admin-sector!⇒sectorPblcNarrow,
+    <br>* McsEngl.narrow-public-sector!⇒sectorPblcNarrow,
+    <br>* McsEngl.ogznPrdg.039-sectorPublicNarrow!⇒sectorPblcNarrow,
+    <br>* McsEngl.ogznPrdg.sectorPublicNarrow!⇒sectorPblcNarrow,
+    <br>* McsEngl.sectorPblc1!⇒sectorPblcNarrow,
+    <br>* McsEngl.sectorPblcNarrow!=narrow-public-sector,
+    <br>* McsEngl.sectorPublic1!⇒sectorPblcNarrow,
     <br>====== langoGreek:
-    <br>* McsElln.δημόσιος-τομέας.στενός!=sectorSocadmn1,
-    <br>* McsElln.στενός-δημόσιος-τομέας!=sectorSocadmn1,
+    <br>* McsElln.δημόσιος-τομέας.στενός!=sectorPblcNarrow,
+    <br>* McsElln.στενός-δημόσιος-τομέας!=sectorPblcNarrow,
     <a class="clsHide" href="#idOznPdn039nam"></a></p>
 
   <section id="idOznPdn045">
@@ -1709,7 +1738,7 @@
   </section>
 
   <section id="idOznPdn009mil">
-  <h3 id="idOznPdn009milH3">armed-forces of sectorSocadmn1
+  <h3 id="idOznPdn009milH3">armed-forces of sectorPblcNarrow
     <a class="clsHide" href="#idOznPdn009milH3"></a></h3>
   <p id="idOznPdn009mildsn">description::
     <br>"A military, also known collectively as armed forces, is a heavily armed, highly organized force primarily intended for warfare. It is typically officially authorized and maintained by a sovereign state, with its members identifiable by their distinct military uniform. It may consist of one or more military branches such as an army, navy, air force, space force, marines, or coast guard. The main task of the military is usually defined as defence of the state and its interests against external armed threats.
@@ -1717,17 +1746,20 @@
     <br>[{2020-12-20} https://en.wikipedia.org/wiki/Military]
     <a class="clsHide" href="#idOznPdn009mildsn"></a></p>
   <p id="idOznPdn009milnam">name::
-    <br>* McsEngl.armed-forces!⇒sectorSocadmnMili,
-    <br>* McsEngl.military!⇒sectorSocadmnMili,
-    <br>* McsEngl.sectorSocadmn1'armed-forces!⇒sectorSocadmnMili,
-    <br>* McsEngl.sectorSocadmnMili,
-    <br>* McsEngl.society'military!⇒sectorSocadmnMili,
+    <br>* McsEngl.armed-forces!⇒sectorArmed,
+    <br>* McsEngl.military!⇒sectorArmed,
+    <br>* McsEngl.sectorArmed!=armed-forces,
+    <br>* McsEngl.sectorPublic'armed-forces!⇒sectorArmed,
+    <br>* McsEngl.sectorPblcNarrow'armed-forces!⇒sectorArmed,
+    <br>* McsEngl.sectorPublicMili!⇒sectorArmed,
+    <br>* McsEngl.society'military!⇒sectorArmed,
     <br>====== langoGreek:
-    <br>* McsElln.ένοπλες-δυνάμεις!οι!=sectorSocadmnMili,
+    <br>* McsElln.ένοπλες-δυνάμεις!οι!=sectorArmed,
+    <br>* McsElln.στρατός!ο!=sectorArmed,
     <a class="clsHide" href="#idOznPdn009milnam"></a></p>
 
   <section id="idOznPdn009milspdg">
-  <h4 id="idOznPdn009milspdgH4">spending of sectorSocadmnMili
+  <h4 id="idOznPdn009milspdgH4">spending of sectorArmed
     <a class="clsHide" href="#idOznPdn009milspdgH4"></a></h4>
   <p id="idOznPdn009milspdgdsn">description::
     <br>· Military spending, 2022:
@@ -1771,12 +1803,12 @@
     <a class="clsHide" href="#idOznPdn009milspdgdsn"></a></p>
   <p id="idOznPdn009milspdgnam">name::
     <br>* McsEngl.military-spending,
-    <br>* McsEngl.sectorSocadmnMili-spending,
+    <br>* McsEngl.sectorArmed-spending,
     <a class="clsHide" href="#idOznPdn009milspdgnam"></a></p>
   </section>
 
   <section id="idOznPdn009milfghtr">
-  <h4 id="idOznPdn009milfghtrH4">fighter of sectorSocadmnMili
+  <h4 id="idOznPdn009milfghtrH4">fighter of sectorArmed
     <a class="clsHide" href="#idOznPdn009milfghtrH4"></a></h4>
   <p id="idOznPdn009milfghtrdsn">description::
     <br>"Percentage of people who would fight for their country:
@@ -1813,13 +1845,13 @@
     <br>[{2023-08-24 retrieved} https://twitter.com/stats_feed/status/1694398003111440648]
     <a class="clsHide" href="#idOznPdn009milfghtrdsn"></a></p>
   <p id="idOznPdn009milfghtrnam">name::
-    <br>* McsEngl.sectorSocadmnMili'fighter,
+    <br>* McsEngl.sectorArmed'fighter,
     <br>* McsEngl.society'fighter,
     <a class="clsHide" href="#idOznPdn009milfghtrnam"></a></p>
   </section>
 
   <section id="idOznPdn009milUsa">
-  <h4 id="idOznPdn009milUsaH4">sectorSocadmnMili.Usa
+  <h4 id="idOznPdn009milUsaH4">sectorArmed.Usa
     <a class="clsHide" href="#idOznPdn009milUsaH4"></a></h4>
   <p id="idOznPdn009milUsadsn">description::
     <br>"US military and clandestine operations in foreign countries since WWII:
@@ -1895,32 +1927,34 @@
     <a class="clsHide" href="#idOznPdn009milUsadsn"></a></p>
   <p id="idOznPdn009milUsanam">name::
     <br>* McsEngl.Usamili,
-    <br>* McsEngl.sectorSocadmnMili.Usa,
+    <br>* McsEngl.sectorArmed.Usa,
     <a class="clsHide" href="#idOznPdn009milUsanam"></a></p>
   </section>
   </section>
 
   <section id="idOznPdn009plc">
-  <h3 id="idOznPdn009plcH3">police-forces of sectorSocadmn1
+  <h3 id="idOznPdn009plcH3">police-forces of sectorPblcNarrow
     <a class="clsHide" href="#idOznPdn009plcH3"></a></h3>
   <p id="idOznPdn009plcdsn">description::
     <br>"The police are a constituted body of persons empowered by a state, with the aim to enforce the law, to ensure the safety, health and possessions of citizens, and to prevent crime and civil disorder.[1][2] Their lawful powers include arrest and the use of force legitimized by the state via the monopoly on violence. The term is most commonly associated with the police forces of a sovereign state that are authorized to exercise the police power of that state within a defined legal or territorial area of responsibility. Police forces are often defined as being separate from the military and other organizations involved in the defense of the state against foreign aggressors; however, gendarmerie are military units charged with civil policing.[3] Police forces are usually public sector services, funded through taxes."
     <br>[{2020-12-20} https://en.wikipedia.org/wiki/Police]
     <a class="clsHide" href="#idOznPdn009plcdsn"></a></p>
   <p id="idOznPdn009plcnam">name::
-    <br>* McsEngl.sectorSocadmnPolice!=police-forces,
-    <br>* McsEngl.police!⇒sectorSocadmnPolice,
-    <br>* McsEngl.police-forces!⇒sectorSocadmnPolice,
-    <br>* McsEngl.sectorSocadmn1'police-forces!⇒sectorSocadmnPolice,
+    <br>* McsEngl.sectorPolice!=police-forces,
+    <br>* McsEngl.police!⇒sectorPolice,
+    <br>* McsEngl.police-forces!⇒sectorPolice,
+    <br>* McsEngl.sectorPublic'police-forces!⇒sectorPolice,
+    <br>* McsEngl.sectorPblcNarrow'police-forces!⇒sectorPolice,
+    <br>* McsEngl.sectorPolice!=police-forces,
     <br>====== langoChinese:
-    <br>* McsZhon.jǐngchá-警察!=sectorSocadmnPolice,
-    <br>* McsZhon.警察-jǐngchá!=sectorSocadmnPolice,
+    <br>* McsZhon.jǐngchá-警察!=sectorPolice,
+    <br>* McsZhon.警察-jǐngchá!=sectorPolice,
     <br>====== langoGreek:
-    <br>* McsElln.αστυνομία!η!=sectorSocadmnPolice,
+    <br>* McsElln.αστυνομία!η!=sectorPolice,
     <a class="clsHide" href="#idOznPdn009plcnam"></a></p>
 
   <section id="idOznPdn009plcwkr">
-  <h4 id="idOznPdn009plcwkrH4">policeman of sectorSocadmnPolice
+  <h4 id="idOznPdn009plcwkrH4">policeman of sectorPublicPolice
     <a class="clsHide" href="#idOznPdn009plcwkrH4"></a></h4>
   <p id="idOznPdn009plcwkrdsn">description::
     <br>·
@@ -1928,7 +1962,7 @@
   <p id="idOznPdn009plcwkrnam">name::
     <br>* McsEngl.hmnWorker.027-police!⇒wkrPoli,
     <br>* McsEngl.hmnWorker.police!⇒wkrPoli,
-    <br>* McsEngl.sectorSocadmnPolice'worker!⇒wkrPoli,
+    <br>* McsEngl.sectorPublicPolice'worker!⇒wkrPoli,
     <br>* McsEngl.policeman!⇒wkrPoli,
     <br>* McsEngl.wkrPoli,
     <br>====== langoChinese:
@@ -1939,10 +1973,33 @@
     <br>* McsElln.αστυνομικός!ο!=wkrPoli,
     <a class="clsHide" href="#idOznPdn009plcwkrnam"></a></p>
   </section>
+
+  <section id="idOznPdn009plcrtle">
+  <h4 id="idOznPdn009plcrtleH4">relation-to-law-enforcement of sectorPolice
+    <a class="clsHide" href="#idOznPdn009plcrtleH4"></a></h4>
+  <p id="idOznPdn009plcrtledsn">description::
+    <br>">law enforcement vs police:
+    <br>The terms "law enforcement" and "police" are closely related and often used interchangeably, but they have distinct meanings that cover different scopes within the realm of maintaining public order and safety. Here's a comparison to clarify the differences:
+    <br>### Law Enforcement
+    <br>- **Definition**: Law enforcement refers to the broader system or network of agencies that are authorized by the government to enforce laws, maintain public order, and ensure public safety. It includes a range of organizations at various levels: local, state, and federal.
+    <br>- **Scope**: Beyond the police, law enforcement encompasses a variety of agencies with specific jurisdictions and functions. This can include sheriffs' departments, state troopers/highway patrol, federal agencies (e.g., FBI in the United States, RCMP in Canada), border enforcement, customs agencies, and specialized units (drug enforcement, cybercrime units, etc.).
+    <br>- **Role**: The collective role of law enforcement agencies is to investigate crimes, apprehend suspects, ensure the enforcement of laws, provide security, and protect the rights and property of citizens. Their duties and powers vary according to the specific jurisdiction and the nature of the agency.
+    <br>### Police
+    <br>- **Definition**: The police are a specific component of the broader law enforcement system. They are typically responsible for general law enforcement duties at the local or municipal level, although there are also state and national police forces in some countries.
+    <br>- **Scope**: The primary focus of police forces is on maintaining public order, preventing crimes, investigating crimes, and protecting the lives and property of citizens within their specific geographical area of responsibility.
+    <br>- **Role**: Police officers perform routine patrols, respond to emergency calls, investigate crimes and accidents, enforce traffic laws, and engage in community policing efforts. They are often the most visible and accessible form of law enforcement to the general public.
+    <br>In essence, while "police" refer specifically to the agency or officers engaged in the prevention, detection, and investigation of crime within a local or specific jurisdiction, "law enforcement" is a broader term that encompasses all governmental agencies—including the police—tasked with law enforcement and public safety responsibilities."
+    <br>[{2024-03-16 retrieved} https://chat.openai.com/c/235c8e4e-c3e0-459b-aa84-34a801802494]
+    <a class="clsHide" href="#idOznPdn009plcrtledsn"></a></p>
+  <p id="idOznPdn009plcrtlenam">name::
+    <br>* McsEngl.sectorPolice'relation-to-law-enforcement,
+    <br>* McsEngl.sectorLaw-enforcement'relation-to-sectorPolice,
+    <a class="clsHide" href="#idOznPdn009plcrtlenam"></a></p>
+  </section>
   </section>
 
   <section id="idOznPdn009fire">
-  <h3 id="idOznPdn009fireH3">fire-forces of sectorSocadmn1
+  <h3 id="idOznPdn009fireH3">fire-forces of sectorPblcNarrow
     <a class="clsHide" href="#idOznPdn009fireH3"></a></h3>
   <p id="idOznPdn009firedsn">description::
     <br>"A fire department (American English) or fire brigade (British English),[note 1] also known as a fire authority or fire service, is an organization that provides firefighting services. In some areas, they may also provide technical rescue, fire protection, fire investigation, and emergency medical services.
@@ -1951,27 +2008,29 @@
     <br>[{2020-12-20} https://en.wikipedia.org/wiki/Fire_department]
     <a class="clsHide" href="#idOznPdn009firedsn"></a></p>
   <p id="idOznPdn009firenam">name::
-    <br>* McsEngl.fire-authority!⇒sectorSocadmnFire,
-    <br>* McsEngl.fire-brigate!⇒sectorSocadmnFire,
-    <br>* McsEngl.fire-department!⇒sectorSocadmnFire,
-    <br>* McsEngl.fire-forces!⇒sectorSocadmnFire,
-    <br>* McsEngl.fire-service!⇒sectorSocadmnFire,
-    <br>* McsEngl.sectorSocadmnFire!=fire-forces,
-    <br>* McsEngl.sectorSocadmn1'fire-forces!⇒sectorSocadmnFire,
+    <br>* McsEngl.fire-authority!⇒sectorFire,
+    <br>* McsEngl.fire-brigate!⇒sectorFire,
+    <br>* McsEngl.fire-department!⇒sectorFire,
+    <br>* McsEngl.fire-forces!⇒sectorFire,
+    <br>* McsEngl.fire-service!⇒sectorFire,
+    <br>* McsEngl.sectorFire!=fire-forces,
+    <br>* McsEngl.sectorPublicFire!⇒sectorFire,
+    <br>* McsEngl.sectorPublic'fire-forces!⇒sectorFire,
+    <br>* McsEngl.sectorPblcNarrow'fire-forces!⇒sectorFire,
     <br>====== langoGreek:
-    <br>* McsElln.πυροσβεστική-υπηρεσία!η!=sectorSocadmnFire,
+    <br>* McsElln.πυροσβεστική-υπηρεσία!η!=sectorFire,
     <a class="clsHide" href="#idOznPdn009firenam"></a></p>
   </section>
   </section>
 
   <section id="idOznPdn009">
-  <h2 id="idOznPdn009H2">ogznPrdg.sectorSocadmnBroad
+  <h2 id="idOznPdn009H2">sectorPublicBroad of sectorPublic
     <a class="clsHide" href="#idOznPdn009H2"></a></h2>
   <p id="idOznPdn009dsn">description::
     <br>· broad-public-sector.
-    <br>· sectorSocadmn = <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn019">sectorSocadmn0|core</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn039">sectorSocadmn1|narrow</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn009">sectorSocadmn2|broad</a>
-    <br>· sectorSocadmn = sectorSocadmn0 + sectorSocadmn1 + sectorSocadmn2
-    <br>· sectorSocadmnOwned is <a class="clsPreview" href="../dirCor/McsCor000008.last.html#idWhl001Set">THE-SET</a> of ogznAdmnOwned.
+    <br>· sectorPublic = <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn019">sectorPublic0|core</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn039">sectorPblcNarrow|narrow</a> + <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn009">sectorPblcBroad|broad</a>
+    <br>· sectorPublic = sectorPublic0 + sectorPblcNarrow + sectorPblcBroad
+    <br>· sectorPublicOwned is <a class="clsPreview" href="../dirCor/McsCor000008.last.html#idWhl001Set">THE-SET</a> of ogznAdmnOwned.
     <br>
     <br>* core-public-sector,
     <br>* narrow-public-sector,
@@ -1985,82 +2044,86 @@
     <br>[{2020-12-13} https://en.wikipedia.org/wiki/Public_sector]
     <a class="clsHide" href="#idOznPdn009dsn"></a></p>
   <p id="idOznPdn009nam">name::
-    <br>* McsEngl.broad-public-sector!⇒sectorSocadmn2,
-    <br>* McsEngl.ogznPdnAdmn2.aggregate!⇒sectorSocadmn2,
-    <br>* McsEngl.ogznPrdg.009-sectorAdminBroad!⇒sectorSocadmn2,
-    <br>* McsEngl.ogznPrdg.sectorAdminBroad!⇒sectorSocadmn2,
-    <br>* McsEngl.sectorAdminBroad!⇒sectorSocadmn2,
-    <br>* McsEngl.sectorSocadmn2!=broad-public-sector,
+    <br>* McsEngl.broad-public-sector!⇒sectorPblcBroad,
+    <br>* McsEngl.ogznPdnAdmn2.aggregate!⇒sectorPblcBroad,
+    <br>* McsEngl.ogznPrdg.009-sectorAdminBroad!⇒sectorPblcBroad,
+    <br>* McsEngl.ogznPrdg.sectorAdminBroad!⇒sectorPblcBroad,
+    <br>* McsEngl.sectorAdminBroad!⇒sectorPblcBroad,
+    <br>* McsEngl.sectorPblc2!⇒sectorPblcBroad,
+    <br>* McsEngl.sectorPblcBroad!=broad-public-sector,
+    <br>* McsEngl.sectorPublic2!=sectorPblcBroad,
     <br>====== langoGreek:
-    <br>* McsElln.δημόσιος-τομέας.ευρύς!=sectorSocadmn2,
-    <br>* McsElln.ευρύς-δημόσιος-τομέας!=sectorSocadmn2,
+    <br>* McsElln.δημόσιος-τομέας.ευρύς!=sectorPblcBroad,
+    <br>* McsElln.ευρύς-δημόσιος-τομέας!=sectorPblcBroad,
     <a class="clsHide" href="#idOznPdn009nam"></a></p>
 
   <section id="idOznPdn009sfr">
-  <h3 id="idOznPdn009sfrH3">satisfier (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt034">link</a>) of sectorSocadmn2
+  <h3 id="idOznPdn009sfrH3">satisfier (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt034">link</a>) of sectorPblcBroad
     <a class="clsHide" href="#idOznPdn009sfrH3"></a></h3>
   </section>
 
   <section id="idOznPdn009hlth">
-  <h3 id="idOznPdn009hlthH3">health-sys of sectorSocadmn2
+  <h3 id="idOznPdn009hlthH3">health-sys of sectorPblcBroad
     <a class="clsHide" href="#idOznPdn009hlthH3"></a></h3>
   <p id="idOznPdn009hlthdsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn009hlthdsn"></a></p>
   <p id="idOznPdn009hlthnam">name::
     <br>* McsEngl.ogznHlthGvc,
-    <br>* McsEngl.sectorSocadmn2'health-sys!⇒ogznHlthGvc,
+    <br>* McsEngl.sectorPblcBroad'health-sys!⇒ogznHlthGvc,
     <br>====== langoGreek:
     <br>* McsElln.δημόσιο-σύστημα-υγείας!ogznHlthGvc,
     <a class="clsHide" href="#idOznPdn009hlthnam"></a></p>
   </section>
 
   <section id="idOznPdn009edu">
-  <h3 id="idOznPdn009eduH3">education-sys of sectorSocadmn2
+  <h3 id="idOznPdn009eduH3">education-sys of sectorPblcBroad
     <a class="clsHide" href="#idOznPdn009eduH3"></a></h3>
   <p id="idOznPdn009edudsn">description::
     <br>·
     <a class="clsHide" href="#idOznPdn009edudsn"></a></p>
   <p id="idOznPdn009edunam">name::
     <br>* McsEngl.ogznEduGvc,
-    <br>* McsEngl.sectorSocadmn2'education-sys!⇒ogznEduGvc,
+    <br>* McsEngl.sectorPblcBroad'education-sys!⇒ogznEduGvc,
     <a class="clsHide" href="#idOznPdn009edunam"></a></p>
   </section>
 
   <section id="idOznPdn009wkr">
-  <h3 id="idOznPdn009wkrH3">worker (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmngvcwkr">link</a>) of sectorSocadmn2
+  <h3 id="idOznPdn009wkrH3">worker (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmngvcwkr">link</a>) of sectorPblcBroad
     <a class="clsHide" href="#idOznPdn009wkrH3"></a></h3>
   </section>
 
   <section id="idOznPdn046">
-  <h3 id="idOznPdn046H3">ogznPrdg.adminBroad
+  <h3 id="idOznPdn046H3">ogznPrdg.publicBroad
     <a class="clsHide" href="#idOznPdn046H3"></a></h3>
   <p id="idOznPdn046dsn">description::
-    <br>· broad-admin-organization is any organization of <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn009">the-broad-admin-sector</a> (health, education, utilities, transportation, social services).
+    <br>· broad-public-organization is any organization of <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn009">the-broad-admin-sector</a> (health, education, utilities, transportation, social services).
     <a class="clsHide" href="#idOznPdn046dsn"></a></p>
   <p id="idOznPdn046nam">name::
-    <br>* McsEngl.broad-admin-organization!⇒ogznAdmn2,
-    <br>* McsEngl.broad-public-sector-organization!⇒ogznAdmn2,
-    <br>* McsEngl.ogznAdmn2!=broad-public-sector-organization,
-    <br>* McsEngl.ogznPrdg.046-adminBroad!⇒ogznAdmn2,
-    <br>* McsEngl.ogznPrdg.adminBroad!⇒ogznAdmn2,
+    <br>* McsEngl.broad-admin-organization!⇒ogznPblcBroad,
+    <br>* McsEngl.broad-public-organization!⇒ogznPblcBroad,
+    <br>* McsEngl.ogznAdmn2!⇒ogznPblcBroad,
+    <br>* McsEngl.ogznPblcBroad!=broad-public-organization,
+    <br>* McsEngl.ogznPrdg.046-publicBroad!⇒ogznPblcBroad,
+    <br>* McsEngl.ogznPrdg.publicBroad!⇒ogznPblcBroad,
     <a class="clsHide" href="#idOznPdn046nam"></a></p>
   </section>
   </section>
 </section>
 
 <section id="idOznPdn020">
-  <h1 id="idOznPdn020H1">ogznPrdg.sectorSocadmn0No
+  <h1 id="idOznPdn020H1">ogznPrdg.sectorPublicCoreNo
     <a class="clsHide" href="#idOznPdn020H1"></a></h1>
   <p id="idOznPdn020dsn">description::
     <br>* public-sector minus core-administrative-sector,
     <br>* private-sector for-profit and not-for-profit,
     <a class="clsHide" href="#idOznPdn020dsn"></a></p>
   <p id="idOznPdn020nam">name::
-    <br>* McsEngl.non--core-administrative-sector!⇒sectorSocadmn0No,
-    <br>* McsEngl.ogznPrdg.020-sectorSocadmn0No!⇒sectorSocadmn0No,
-    <br>* McsEngl.ogznPrdg.sectorSocadmn0No!⇒sectorSocadmn0No,
-    <br>* McsEngl.sectorSocadmn0No!=non--core-administrative-sector,
+    <br>* McsEngl.non--core-public-sector!⇒sectorPblcCoreNo,
+    <br>* McsEngl.ogznPrdg.020-sectorPublic0No!⇒sectorPblcCoreNo,
+    <br>* McsEngl.ogznPrdg.sectorPublic0No!⇒sectorPblcCoreNo,
+    <br>* McsEngl.sectorPblcCoreNo!=non--core-public-sector,
+    <br>* McsEngl.sectorPublicCoreNo!⇒sectorPblcCoreNo,
     <a class="clsHide" href="#idOznPdn020nam"></a></p>
 
   <section id="idOznPdn020idvl">
@@ -2078,45 +2141,50 @@
 </section>
 
 <section id="idOznPdn010">
-  <h1 id="idOznPdn010H1">ogznPrdg.sectorSocadmnNo-010
+  <h1 id="idOznPdn010H1">ogznPrdg.sectorPrivate-010
     <a class="clsHide" href="#idOznPdn010H1"></a></h1>
   <p id="idOznPdn010dsn">description::
     <br>· the NON <a class="clsPreview" href="#idOznPdn009">governance-owned-sector</a>.
     <a class="clsHide" href="#idOznPdn010dsn"></a></p>
   <p id="idOznPdn010nam">name::
-    <br>* McsEngl.non-public-sector!⇒sectorSocadmnNo,
-    <br>* McsEngl.ogznPrdg.010-sectorSocadmnNo!⇒sectorSocadmnNo,
-    <br>* McsEngl.ogznPrdg.sectorSocadmnNo!⇒sectorSocadmnNo,
-    <br>* McsEngl.publicNo-sector!⇒sectorSocadmnNo,
-    <br>* McsEngl.sectorSocadmnNo!⇒sectorSocadmnNo,
-    <br>* McsEngl.sectorGvcOwnedNo!⇒sectorSocadmnNo,
-    <br>* McsEngl.sectorPrivate!⇒sectorSocadmnNo,
-    <br>* McsEngl.sectorSocadmnNo,
+    <br>* McsEngl.non-public-sector!⇒sectorPrivate,
+    <br>* McsEngl.ogznPrdg.010-sectorPrivate!⇒sectorPrivate,
+    <br>* McsEngl.ogznPrdg.sectorPrivate!⇒sectorPrivate,
+    <br>* McsEngl.publicNo-sector!⇒sectorPrivate,
+    <br>* McsEngl.sectorPrivate,
+    <br>* McsEngl.sectorPrvt!⇒sectorPrivate,
+    <br>* McsEngl.sectorPublicNo!⇒sectorPrivate,
+    <br>* McsEngl.sectorGvcOwnedNo!⇒sectorPrivate,
+    <br>* McsEngl.sectorPrivate,
+    <br>* McsEngl.sectorPublicNo!⇒sectorPrivate,
     <br>====== langoGreek:
-    <br>* McsElln.μη-δημόσιος-τομέας!ο!=sectorSocadmnNo,
+    <br>* McsElln.ιδιωτικός-τομέας!ο!=sectorPrivate,
+    <br>* McsElln.μη-δημόσιος-τομέας!ο!=sectorPrivate,
     <a class="clsHide" href="#idOznPdn010nam"></a></p>
 
   <section id="idOznPdn006">
-  <h2 id="idOznPdn006H2">ogznAdmnNo of sectorSocadmnNo
+  <h2 id="idOznPdn006H2">ogznPublicNo of sectorPrivate
     <a class="clsHide" href="#idOznPdn006H2"></a></h2>
   <p id="idOznPdn006dsn">description::
     <br>· ogznPrivate is <a class="clsPreview" href="#idOverview">an-ogznPrdg</a> NOT OWNED by state|regional|local governance-systems.
     <a class="clsHide" href="#idOznPdn006dsn"></a></p>
   <p id="idOznPdn006nam">name::
-    <br>* McsEngl.ogznGovernanceOwnedNo!⇒ogznPdcnAdmnNo,
-    <br>* McsEngl.ogznPdcnAdmnNo!=non-admin--production-organization,
-    <br>* McsEngl.ogznPrivate!⇒ogznPdcnAdmnNo,
-    <br>* McsEngl.ogznPrdg.006-private!⇒ogznPdcnAdmnNo,
-    <br>* McsEngl.ogznPrdg.private!⇒ogznPdcnAdmnNo,
-    <br>* McsEngl.private-ogznPrdg!⇒ogznPdcnAdmnNo,
-    <br>* McsEngl.publicNo-ogznPrdg!⇒ogznPdcnAdmnNo,
+    <br>* McsEngl.ogznAdmnNo!⇒ogznPrivate,
+    <br>* McsEngl.ogznGovernanceOwnedNo!⇒ogznPrivate,
+    <br>* McsEngl.ogznPdcnAdmnNo!⇒ogznPrivate,
+    <br>* McsEngl.ogznPrivate!=private--production-organization,
+    <br>* McsEngl.ogznPrdg.006-private!⇒ogznPrivate,
+    <br>* McsEngl.ogznPrdg.private!⇒ogznPrivate,
+    <br>* McsEngl.ogznPublicNo!⇒ogznPrivate,
+    <br>* McsEngl.private-ogznPrdg!⇒ogznPrivate,
+    <br>* McsEngl.publicNo-ogznPrdg!⇒ogznPrivate,
     <br>====== langoGreek:
-    <br>* McsElln.οργανισμός-ιδιωτικού-τομέα!ο!=ogznPdcnAdmnNo,
+    <br>* McsElln.οργανισμός-ιδιωτικού-τομέα!ο!=ogznPrivate,
     <a class="clsHide" href="#idOznPdn006nam"></a></p>
   </section>
 
   <section id="idOznPdn040">
-  <h2 id="idOznPdn040H2">sectorSocadmnNo.profit
+  <h2 id="idOznPdn040H2">sectorPrivate.profit
     <a class="clsHide" href="#idOznPdn040H2"></a></h2>
   <p id="idOznPdn040dsn">description::
     <br>"In economics, the business sector or corporate sector - sometimes popularly called simply "business" - is "the part of the economy made up by companies".[1][need quotation to verify][2] It is a subset of the domestic economy,[3] excluding the economic activities of general government, private households, and non-profit organizations serving individuals.[4] The business sector is part of the private sector, but it differs in that the private sector includes all non-government activity, including non-profit organizations, while the business sector only includes business that operate for profit.
@@ -2131,15 +2199,15 @@
     <br>* McsEngl.ogznPrdg.040-profit-sector!⇒sectorProfit,
     <br>* McsEngl.private-sector!⇒sectorProfit,
     <br>* McsEngl.profit-sector!⇒sectorProfit,
-    <br>* McsEngl.sectorSocadmnNo.profit!⇒sectorProfit,
-    <br>* McsEngl.sectorProfit!=sectorSocadmnNo.profit,
+    <br>* McsEngl.sectorPrivate.profit!⇒sectorProfit,
+    <br>* McsEngl.sectorProfit!=sectorPrivate.profit,
     <br>====== langoGreek:
     <br>* McsElln.ιδιωτικός-τομέας!ο!=sectorProfit,
     <a class="clsHide" href="#idOznPdn040nam"></a></p>
   </section>
 
   <section id="idOznPdn041">
-  <h2 id="idOznPdn041H2">sectorSocadmnNo.profitNo
+  <h2 id="idOznPdn041H2">sectorPrivate.profitNo
     <a class="clsHide" href="#idOznPdn041H2"></a></h2>
   <p id="idOznPdn041dsn">description::
     <br>"The voluntary sector, independent sector, or civic sector is the realm of social activity undertaken by organizations that are non-governmental nonprofit organizations.[1] This sector is also called the third sector, community sector, and nonprofit sector,[2] in contrast to the public sector and the private sector. Civic sector or social sector are other terms for the sector, emphasizing its relationship to civil society. Richard Cornuelle coined the term "independent sector" and was one of the first scholars to point out the vast impact and unique mechanisms of this sector.[3] Given the diversity of organizations that comprise the sector, Peter Frumkin prefers "non-profit and voluntary sector".[4]"
@@ -2165,8 +2233,8 @@
     <br>* McsEngl.independent-sector!⇒sectorProfitNo,
     <br>* McsEngl.nonprofit-sector!⇒sectorProfitNo,
     <br>* McsEngl.ogznPrdg.040-profitNo-sector!⇒sectorProfit,
-    <br>* McsEngl.sectorSocadmnNo.profitNo!⇒sectorProfitNo,
-    <br>* McsEngl.sectorProfitNo!=sectorSocadmnNo.profitNo,
+    <br>* McsEngl.sectorPrivate.profitNo!⇒sectorProfitNo,
+    <br>* McsEngl.sectorProfitNo!=sectorPrivate.profitNo,
     <br>* McsEngl.social-sector!⇒sectorProfitNo,
     <br>* McsEngl.third-sector!⇒sectorProfitNo,
     <br>* McsEngl.voluntary-sector!⇒sectorProfitNo,
@@ -3198,9 +3266,20 @@
   <h1 id="idOznPdn011H1">ogznPrdg.social-011
     <a class="clsHide" href="#idOznPdn011H1"></a></h1>
   <p id="idOznPdn011dsn">description::
-    <br>· social-production-organization is ogznPdcnAdmnNo that solves <a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt012">social-problems</a>.
+    <br>· social-production-organization is ogznPrivate that solves <a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt012">social-problems</a>.
     <br>· an-ogznAdmn by definition solves <a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt012">social-problems</a>.
     <br>· no transparency, no social-company.
+    <br>
+    <br>">social enterprise:
+    <br>A social enterprise is a type of business model that is primarily focused on achieving a social, cultural, or environmental goal, rather than maximizing profit for shareholders. These enterprises seek to apply commercial strategies to maximize improvements in human and environmental well-being, rather than maximizing profits for external shareholders. Social enterprises can operate in various sectors, including healthcare, education, environmental protection, and job training, among others. They may take different legal forms, including non-profit organizations with a business arm, cooperatives, and for-profit corporations that are committed to social objectives.
+    <br>Key characteristics of social enterprises include:
+    <br>1. **Mission-driven**: The primary aim is to address social problems or needs, which is central to the mission of the organization.
+    <br>2. **Revenue-generating**: While they aim to achieve social goals, social enterprises also generate revenue through business activities. However, profits are mainly reinvested to further their social or environmental goals.
+    <br>3. **Social impact**: They measure their success by the impact they have on society or the environment, in addition to financial performance.
+    <br>4. **Innovative**: Social enterprises often employ innovative approaches to address social needs, including new products, services, or business models.
+    <br>5. **Financial sustainability**: Unlike traditional charities that rely on donations and grants, social enterprises aim to be financially sustainable through their business activities.
+    <br>Social enterprises play a vital role in addressing societal challenges by combining the efficiency and innovation of the business world with the social and environmental focus of the nonprofit sector. They represent a diverse and dynamic sector that is growing globally, driven by an increasing recognition of the role that business can play in tackling social issues."
+    <br>[{2024-03-16 retrieved} https://chat.openai.com/c/930591ba-a9d5-4811-834a-23ae3db44a4a]
     <a class="clsHide" href="#idOznPdn011dsn"></a></p>
   <p id="idOznPdn011nam">name::
     <br>* McsEngl.ogznPrdg.011-social!⇒ogznSocial,
@@ -3221,6 +3300,17 @@
   <p id="idOznPdn011rscFnam">name::
     <br>* McsEngl.ogznSocial'Infrsc,
     <a class="clsHide" href="#idOznPdn011rscFnam"></a></p>
+  </section>
+
+  <section id="idOznPdn011Spfc">
+  <h2 id="idOznPdn011SpfcH2">ogznSocial.SPECIFIC
+    <a class="clsHide" href="#idOznPdn011SpfcH2"></a></h2>
+  <p id="idOznPdn011Spfcdsn">description::
+    <br>* <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn048">transparent-socially-oriented-company</a>,
+    <a class="clsHide" href="#idOznPdn011Spfcdsn"></a></p>
+  <p id="idOznPdn011Spfcnam">name::
+    <br>* McsEngl.ogznSocial.specific,
+    <a class="clsHide" href="#idOznPdn011Spfcnam"></a></p>
   </section>
 </section>
 
@@ -3504,8 +3594,7 @@
     <a class="clsHide" href="#idOznPdn022Aggdsn"></a></p>
   <p id="idOznPdn022Aggnam">name::
     <br>* McsEngl.education-sector!⇒sectorEdu,
-    <br>* McsEngl.education-system!⇒sectorEdu,
-    <br>* McsEngl.sectorPdu.education!⇒sectorEdu,
+    <br>* McsEngl.sector.education!⇒sectorEdu,
     <br>* McsEngl.sectorEdu!=education-sector,
     <br>* McsEngl.society'education-system!⇒sectorEdu,
     <br>* McsEngl.ogznEdu.aggregate!⇒sectorEdu,
@@ -3513,6 +3602,25 @@
     <br>* McsZhon.jiàoyù-bùmén-教育部门!=sectorEdu,
     <br>* McsZhon.教育部门-jiàoyù-bùmén!=sectorEdu,
     <a class="clsHide" href="#idOznPdn022Aggnam"></a></p>
+
+  <section id="idOznPdn022Aggsstm">
+  <h3 id="idOznPdn022AggsstmH3">education-system of sectorEdu
+    <a class="clsHide" href="#idOznPdn022AggsstmH3"></a></h3>
+  <p id="idOznPdn022Aggsstmdsn">description::
+    <br>">education system vs education sector:
+    <br>The terms "education system" and "education sector" are related, but they have slightly different meanings:
+    <br>* **Education system:** This refers to the **organized structure** for providing education within a country. It encompasses all the institutions involved, from preschools and kindergartens to universities and vocational schools. The education system also includes the curriculum, standardized tests, teacher training, and regulations that govern how education is delivered.
+    <br>Think of it like the framework or the blueprint. It defines the stages of education (elementary, secondary, etc.), the flow between them, and the overall approach to delivering knowledge and skills.
+    <br>* **Education sector:** This refers to the **broader industry** that surrounds education. It includes not just the schools and universities themselves, but also the businesses that provide products and services to the education system. This could include educational technology companies, publishers of textbooks and learning materials, tutoring and test prep services, educational consultants, and so on.
+    <br>The education sector is more like the ecosystem that supports the education system. It includes the for-profit companies and non-profit organizations that contribute to the overall educational experience.
+    <br>Here's an analogy: Imagine a school building as the education system. The classrooms, hallways, and teachers are all part of the system. But the janitorial service that cleans the building, the company that sells the cafeteria food, and the bus company that transports students are all part of the broader education sector that supports the school."
+    <br>[{2024-03-16 retrieved} https://gemini.google.com/app/b95acc01310474f6]
+    <a class="clsHide" href="#idOznPdn022Aggsstmdsn"></a></p>
+  <p id="idOznPdn022Aggsstmnam">name::
+    <br>* McsEngl.education-system,
+    <br>* McsEngl.sectorEdu'education-system,
+    <a class="clsHide" href="#idOznPdn022Aggsstmnam"></a></p>
+  </section>
   </section>
 
   <section id="idOznPdn022Tchg">
@@ -3760,14 +3868,62 @@
     <br>* McsEngl.defence-industry!⇒sectorMili,
     <br>* McsEngl.military-industry!⇒sectorMili,
     <br>* McsEngl.military-sector!⇒sectorMili,
-    <br>* McsEngl.sectorMili,
+    <br>* McsEngl.sector.military!⇒sectorMili,
+    <br>* McsEngl.sectorMili!=military-sector,
     <br>====== langoGreek:
     <br>* McsElln.αμυντική-βιομηχανία!⇒sectorMili,
     <br>* McsElln.στρατιωτική-βιομηχανία!⇒sectorMili,
     <a class="clsHide" href="#idOznPdn027Aggnam"></a></p>
 
+  <section id="idOznPdn027Aggarmc">
+  <h3 id="idOznPdn027AggarmcH3">arms-control of sectorMili
+    <a class="clsHide" href="#idOznPdn027AggarmcH3"></a></h3>
+  <p id="idOznPdn027Aggarmcdsn">description::
+    <br>"Arms control refers to international restrictions upon the development, production, stockpiling, proliferation and usage of small arms, conventional weapons, and weapons of mass destruction.[27] It is typically exercised through the use of diplomacy, which seeks to persuade governments to accept such limitations through agreements and treaties, although it may also be forced upon non-consenting governments."
+    <br>[{2024-03-16 retrieved} https://en.wikipedia.org/wiki/Arms_industry#Arms_control]
+    <a class="clsHide" href="#idOznPdn027Aggarmcdsn"></a></p>
+  <p id="idOznPdn027Aggarmcnam">name::
+    <br>* McsEngl.arms-control,
+    <br>* McsEngl.sectorMili'arms-control,
+    <a class="clsHide" href="#idOznPdn027Aggarmcnam"></a></p>
+
+  <section id="idOznPdn027Aggarmclaw">
+  <h4 id="idOznPdn027AggarmclawH4">law of arms-control
+    <a class="clsHide" href="#idOznPdn027AggarmclawH4"></a></h4>
+  <p id="idOznPdn027Aggarmclawdsn">description::
+    <br>"Notable international arms control treaties
+    <br>* Geneva Protocol on chemical and biological weapons, 1925
+    <br>* Outer Space Treaty, signed and entered into force 1967
+    <br>* Biological Weapons Convention, signed 1972, entered into force 1975
+    <br>* Missile Technology Control Regime (MTCR), 1987
+    <br>* Chemical Weapons Convention, signed 1993, entered into force 1997
+    <br>* Ottawa Treaty on anti-personnel land mines, signed 1997, entered into force 1999
+    <br>* New START Treaty, signed by Russia and the United States in April 2010, entered into force in February 2011
+    <br>* Arms Trade Treaty, concluded in 2013, entered into force on 24 December 2014.[28]"
+    <br>[{2024-03-16 retrieved} https://en.wikipedia.org/wiki/Arms_industry#Arms_control]
+    <a class="clsHide" href="#idOznPdn027Aggarmclawdsn"></a></p>
+  <p id="idOznPdn027Aggarmclawnam">name::
+    <br>* McsEngl.arms-control'law!⇒lawArmscontrol,
+    <br>* McsEngl.arms-control'treaty!⇒lawArmscontrol,
+    <br>* McsEngl.lawArmscontrol!=arms-control-treaty,
+    <a class="clsHide" href="#idOznPdn027Aggarmclawnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idOznPdn027Aggexpd">
+  <h3 id="idOznPdn027AggexpdH3">expenditure of sectorMili
+    <a class="clsHide" href="#idOznPdn027AggexpdH3"></a></h3>
+  <p id="idOznPdn027Aggexpddsn">description::
+    <br>* {2022} "In 2022, Stockholm International Peace Research Institute (SIPRI) estimated global military expenditure at $2240 billion, the highest level ever recorded by SIPRI. Global spending grew by 19 per cent over the decade 2013–22 and has risen every year since 2015.[1] The combined arms-sales of the top 100 largest arms-producing companies and military services companies totaled $597 billion in 2022, according to SIPRI.[2] According to the institute, the five largest arms exporters in 2018–22 were the United States, Russia, France, China and Germany. Together, they supplied 76% of the world's arms exports in 2018–22.[3]"
+    <br>[{2024-03-16 retrieved} https://en.wikipedia.org/wiki/Arms_industry]
+    <a class="clsHide" href="#idOznPdn027Aggexpddsn"></a></p>
+  <p id="idOznPdn027Aggexpdnam">name::
+    <br>* McsEngl.sectorMili'expenditure,
+    <a class="clsHide" href="#idOznPdn027Aggexpdnam"></a></p>
+  </section>
+
   <section id="idOznPdn027AggGvc">
-  <h3 id="idOznPdn027AggGvcH3">sectorPdnMiliAdmn (<a class="clsPreview" href="#idOznPdn009mil">link</a>)
+  <h3 id="idOznPdn027AggGvcH3">sectorArmed (<a class="clsPreview" href="#idOznPdn009mil">link</a>)
     <a class="clsHide" href="#idOznPdn027AggGvcH3"></a></h3>
   </section>
 
