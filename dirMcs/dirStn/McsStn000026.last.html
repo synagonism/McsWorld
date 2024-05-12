@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.ogznService!=service-company (McsStn000026.0-14-0.2024-04-04 draft)</title>
+  <title>Mcs.ogznService!=service-company (McsStn000026.0-15-0.2024-05-08 draft)</title>
   <meta name="keywords" content="service-oznProduction, ogznService, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -304,13 +304,14 @@
   <h2 id="idOznSvcSctrAdmnH2">sectorService.admin
     <a class="clsHide" href="#idOznSvcSctrAdmnH2"></a></h2>
   <p id="idOznSvcSctrAdmndsn">description::
-    <br>·
+    <br>· service admin-sector.
     <a class="clsHide" href="#idOznSvcSctrAdmndsn"></a></p>
   <p id="idOznSvcSctrAdmnnam">name::
-    <br>* McsEngl.admin-service--sector,
-    <br>* McsEngl.governance-service--sector,
-    <br>* McsEngl.sector.governance-service,
-    <br>* McsEngl.sectorService.governance,
+    <br>* McsEngl.admin-service--sector!⇒sectorPblcSrvc,
+    <br>* McsEngl.governance-service--sector!⇒sectorPblcSrvc,
+    <br>* McsEngl.sector.governance-service!⇒sectorPblcSrvc,
+    <br>* McsEngl.sectorPblcSrvc!=admin-service-sector,
+    <br>* McsEngl.sectorService.governance!⇒sectorPblcSrvc,
     <a class="clsHide" href="#idOznSvcSctrAdmnnam"></a></p>
   </section>
 
@@ -462,12 +463,25 @@
   <h2 id="idOznSvcSctrTrtnH2">sectorService.transportation
     <a class="clsHide" href="#idOznSvcSctrTrtnH2"></a></h2>
   <p id="idOznSvcSctrTrtndsn">description::
-    <br>·
+    <br>"The transportation sector is an essential part of the global economy, playing a critical role in moving people and goods. It encompasses a wide range of sub-sectors, including:
+    <br>* **Air transportation:** Airlines, air freight companies, and airport operators.
+    <br>* **Road transportation:** Trucking companies, bus companies, and companies that build and maintain roads and bridges.
+    <br>* **Rail transportation:** Train companies, freight rail companies, and passenger rail companies.
+    <br>* **Maritime transportation:** Shipping companies, port operators, and companies that build and maintain ships and other vessels.
+    <br>* **Logistics:** Companies that provide services such as warehousing, distribution, and freight forwarding.
+    <br>* **Transportation infrastructure:** Companies that build and maintain roads, bridges, airports, ports, railways, and other transportation infrastructure.
+    <br>The transportation sector is a major employer and contributes significantly to global GDP. It is also a vital part of international trade, as it allows goods to be moved from producers to consumers around the world.
+    <br>In recent years, the transportation sector has been facing a number of challenges, such as:
+    <br>* **Climate change:** Transportation is a major source of greenhouse gas emissions.
+    <br>* **Congestion:** Traffic congestion is a growing problem in many cities around the world.
+    <br>* **Safety:** Road accidents are a leading cause of death and injury.
+    <br>In response to these challenges, there is a growing trend towards more sustainable and efficient transportation systems. This includes the development of new technologies, such as electric vehicles and autonomous vehicles. There is also a focus on improving public transportation and making it more accessible to everyone."
     <a class="clsHide" href="#idOznSvcSctrTrtndsn"></a></p>
   <p id="idOznSvcSctrTrtnnam">name::
-    <br>* McsEngl.transportation-service--sector,
-    <br>* McsEngl.sector.transportation-service,
-    <br>* McsEngl.sectorService.transportation,
+    <br>* McsEngl.transportation-service--sector!⇒sectorTrnsp,
+    <br>* McsEngl.sector.transportation-service!⇒sectorTrnsp,
+    <br>* McsEngl.sectorService.transportation!⇒sectorTrnsp,
+    <br>* McsEngl.sectorTrnsp!=transportation-service-sector,
     <a class="clsHide" href="#idOznSvcSctrTrtnnam"></a></p>
   </section>
 
@@ -562,26 +576,26 @@
   </section>
 
   <section id="idOznSvcRtrtwetr">
-  <h2 id="idOznSvcRtrtwetrH2">wkrWaiter of oznRestaurant
+  <h2 id="idOznSvcRtrtwetrH2">wrkrWaiter of oznRestaurant
     <a class="clsHide" href="#idOznSvcRtrtwetrH2"></a></h2>
   <p id="idOznSvcRtrtwetrdsn">description::
-    <br>=== fúwùshēng-服務生!=wkrWaiter:
+    <br>=== fúwùshēng-服務生!=wrkrWaiter:
     <br>· stxZhon: 服务员 ，再 来 两 瓶 啤酒 。 :: Fúwùyuán, zài lái liǎng píng píjiǔ. != Waiter, two more bottles of beer, please.
     <a class="clsHide" href="#idOznSvcRtrtwetrdsn"></a></p>
   <p id="idOznSvcRtrtwetrnam">name::
-    <br>* McsEngl.hmnWorker.028-waiter!⇒wkrWaiter,
-    <br>* McsEngl.hmnWorker.waiter!⇒wkrWaiter,
-    <br>* McsEngl.oznRestaurant'waiter!⇒wkrWaiter,
-    <br>* McsEngl.waiter!⇒wkrWaiter,
-    <br>* McsEngl.waitress!⇒wkrWaitress,
-    <br>* McsEngl.wkrWaiter,
-    <br>* McsEngl.wkrWaitress,
+    <br>* McsEngl.hmnWorker.028-waiter!⇒wrkrWaiter,
+    <br>* McsEngl.hmnWorker.waiter!⇒wrkrWaiter,
+    <br>* McsEngl.oznRestaurant'waiter!⇒wrkrWaiter,
+    <br>* McsEngl.waiter!⇒wrkrWaiter,
+    <br>* McsEngl.waitress!⇒wrkrWaitress,
+    <br>* McsEngl.wrkrWaiter,
+    <br>* McsEngl.wrkrWaitress,
     <br>====== langoChinese:
-    <br>* McsZhon.fúwùshēng-服務生!=wkrWaiter,
-    <br>* McsZhon.服務生-fúwùshēng!=wkrWaiter,
+    <br>* McsZhon.fúwùshēng-服務生!=wrkrWaiter,
+    <br>* McsZhon.服務生-fúwùshēng!=wrkrWaiter,
     <br>====== langoGreek:
-    <br>* McsElln.σερβιτόρα!η!=wkrWaitress,
-    <br>* McsElln.σερβιτόρος!ο!=wkrWaiter,
+    <br>* McsElln.σερβιτόρα!η!=wrkrWaitress,
+    <br>* McsElln.σερβιτόρος!ο!=wrkrWaiter,
     <a class="clsHide" href="#idOznSvcRtrtwetrnam"></a></p>
   </section>
 </section>
