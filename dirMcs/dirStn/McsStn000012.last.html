@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Socecon!=human-economy (McsStn000012.1-41-0.2024-05-07)</title>
+  <title>Mcs.Socecon!=human-economy (McsStn000012.1-47-0.2024-06-22)</title>
   <meta name="keywords" content="human-economy, economy, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -42,6 +42,7 @@
     <br>* McsEngl.SocndSfrs!⇒Socecon,
     <br>* McsEngl.Socecon!=McsStn000012,
     <br>* McsEngl.Socecon!=economic-view-of-human-society,
+    <br>* McsEngl.Socecon!=society,
     <br>* McsEngl.Soceconview!⇒Socecon,
     <br>* McsEngl.economic-system-of-society!⇒Socecon,
     <br>* McsEngl.economic-view-of-human-society!⇒Socecon, {2024-04-30}
@@ -54,10 +55,7 @@
     <br>* McsEngl.satisfiers-system!⇒Socecon,
     <br>* McsEngl.society'03_satisfiers-node!⇒Socecon,
     <br>* McsEngl.society'att007-satisfiers-system!⇒Socecon,
-    <br>* McsEngl.society!=economy!⇒Socecon,
-    <br>* McsEngl.society!=economic-system!⇒Socecon,
-    <br>* McsEngl.society!=satisfiers-node!⇒Socecon,
-    <br>* McsEngl.society!=satisfiers-system!⇒Socecon,
+    <br>* McsEngl.society!=Socecon,
     <br>* McsEngl.sysSatisfiers!⇒Socecon,
     <br>* McsEngl.sysSfrs!⇒Socecon,
     <br>* nodeSatisfier!⇒Socecon, {2020-10-23},
@@ -92,8 +90,13 @@
     <br>* McsEngl.Socecon'node,
     <a class="clsHide" href="#idEconHmnatt005nam"></a></p>
 
+  <section id="idEconHmnhuman">
+  <h2 id="idEconHmnhumanH2">human (<a class="clsPreview" href="../dirStn/McsStn000009.last.html#idSocHmnatt064">link</a>) of Socecon
+    <a class="clsHide" href="#idEconHmnhumanH2"></a></h2>
+  </section>
+
   <section id="idEconHmnatt003">
-  <h2 id="idEconHmnatt003H2">03_organization (<a class="clsPreview" href="../dirStn/McsStn000008.last.html#idOgzn006">link</a>) of Socecon
+  <h2 id="idEconHmnatt003H2">organization (<a class="clsPreview" href="../dirStn/McsStn000008.last.html#idOgzn006">link</a>) of Socecon
     <a class="clsHide" href="#idEconHmnatt003H2"></a></h2>
   </section>
 </section>
@@ -163,16 +166,18 @@
   <h2 id="idEconHmnatt026H2">producing-sector of Econprdgsys
     <a class="clsHide" href="#idEconHmnatt026H2"></a></h2>
   <p id="idEconHmnatt026dsn">description::
-    <br>· the-set of all producing-organizations.
     <a class="clsHide" href="#idEconHmnatt026dsn"></a></p>
   <p id="idEconHmnatt026nam">name::
     <br>* McsEngl.Socecon'att026-producing-sector!⇒sectorProducing,
     <br>* McsEngl.Socecon'producing-sector!⇒sectorProducing,
     <br>* McsEngl.ogznPrdg.aggregate!⇒sectorProducing,
     <br>* McsEngl.producing-sector!⇒sectorProducing,
+    <br>* McsEngl.sectorPrdg!⇒sectorProducing,
     <br>* McsEngl.sectorProducing,
+    <br>* McsEngl.sectorProducing:sectorEcon,
     <a class="clsHide" href="#idEconHmnatt026nam"></a></p>
   <p id="idEconHmnatt026ptr">part-tree-of-sectorProducing::
+    <br>* <a class="clsPreview" href="../dirStn/McsStn000015.last.html#idOznPdn004">sector-(any specific)</a>,
     <br>* public-sector,
     <br>* private-sector,
     <a class="clsHide" href="#idEconHmnatt026ptr"></a></p>
@@ -443,7 +448,7 @@
     <a class="clsHide" href="#idEconHmnatt040dsn"></a></p>
   <p id="idEconHmnatt040nam">name::
     <br>* McsEngl.Econproducer'asset!⇒Pdcrasset,
-    <br>* McsEngl.Socecon'att40-producer-asset!⇒Pdcrasset,
+    <br>* McsEngl.Socecon'att040-producer-asset!⇒Pdcrasset,
     <br>* McsEngl.Socecon'producer-asset!⇒Pdcrasset,
     <br>* McsEngl.Pdcrasset!=human-producer-asset,
     <br>* McsEngl.Hmnsfr.own!⇒Pdcrasset,
@@ -461,7 +466,7 @@
     <a class="clsHide" href="#idEconHmnatt041dsn"></a></p>
   <p id="idEconHmnatt041nam">name::
     <br>* McsEngl.Econproducer'liability!⇒Pdcrliability,
-    <br>* McsEngl.Socecon'att41-producer-liability!⇒Pdcrliability,
+    <br>* McsEngl.Socecon'att041-producer-liability!⇒Pdcrliability,
     <br>* McsEngl.Socecon'producer-liability!⇒Pdcrliability,
     <br>* McsEngl.Pdcrliability!=human-producer-liability,
     <br>* McsEngl.Hmnsfr.owe!⇒Pdcrliability,
@@ -745,18 +750,8 @@
   </section>
 
   <section id="idEconHmnatt027">
-  <h2 id="idEconHmnatt027H2">consuming-sector of Econcsmgsys
+  <h2 id="idEconHmnatt027H2">consuming-sector (<a class="clsPreview" href="../dirStn/McsStn000014.last.html#idOznCsn006">link</a>) of Econcsmgsys
     <a class="clsHide" href="#idEconHmnatt027H2"></a></h2>
-  <p id="idEconHmnatt027dsn">description::
-    <br>· the-set of all consuming-organizations.
-    <a class="clsHide" href="#idEconHmnatt027dsn"></a></p>
-  <p id="idEconHmnatt027nam">name::
-    <br>* McsEngl.Socecon'att027-consuming-sector!⇒sectorConsuming,
-    <br>* McsEngl.Socecon'consuming-sector!⇒sectorConsuming,
-    <br>* McsEngl.consuming-sector!⇒sectorConsuming,
-    <br>* McsEngl.sectorConsuming,
-    <br>* McsEngl.ogznCsmg.aggregate!⇒sectorConsuming,
-    <a class="clsHide" href="#idEconHmnatt027nam"></a></p>
   </section>
 
   <section id="idEconHmnatt006att002">
@@ -821,15 +816,63 @@
     <br>[{2023-12-07 retrieved} https://chat.openai.com/c/b1f40568-27e8-446a-82d8-bc0238ebee84]
     <a class="clsHide" href="#idEconHmnatt019dsn"></a></p>
   <p id="idEconHmnatt019nam">name::
-    <br>* McsEngl.Socecon'06_financial-system!⇒sysFin,
-    <br>* McsEngl.Socecon'att019-financial-system!⇒sysFin,
-    <br>* McsEngl.Socecon'financial-system!⇒sysFin,
-    <br>* McsEngl.financial-system!⇒sysFin,
-    <br>* McsEngl.sysFin!=financial-system,
+    <br>* McsEngl.Econfin!=financial-system,
+    <br>* McsEngl.Socecon'06_financial-system!⇒Econfin,
+    <br>* McsEngl.Socecon'att019-financial-system!⇒Econfin,
+    <br>* McsEngl.Socecon'financial-system!⇒Econfin,
+    <br>* McsEngl.financial-system!⇒Econfin,
+    <br>* McsEngl.sysFin!⇒Econfin,
     <a class="clsHide" href="#idEconHmnatt019nam"></a></p>
 
+  <section id="idEconHmnatt043">
+  <h2 id="idEconHmnatt043H2">foreign-exchange-reserve of Econfin
+    <a class="clsHide" href="#idEconHmnatt043H2"></a></h2>
+  <p id="idEconHmnatt043dsn">description::
+    <br>"Foreign exchange reserves, also known as forex reserves or FX reserves, are assets held by central banks and monetary authorities in different currencies. These reserves are used to back liabilities and influence monetary policy. They typically consist of foreign currencies, government securities, gold, and Special Drawing Rights (SDRs) from the International Monetary Fund (IMF).
+    <br>Here are some key points about foreign exchange reserves:
+    <br>1. **Purpose**:
+    <br>   - **Stabilizing the Currency**: Central banks use forex reserves to stabilize their currency by intervening in the foreign exchange market.
+    <br>   - **Confidence in the Economy**: High reserves can instill confidence among foreign investors and trading partners.
+    <br>   - **Liquidity**: Provides liquidity to the government and economy in times of crisis.
+    <br>   - **Trade Facilitation**: Ensures the country can meet its international payment obligations.
+    <br>2. **Components**:
+    <br>   - **Foreign Currencies**: Major currencies like the US Dollar (USD), Euro (EUR), Japanese Yen (JPY), British Pound (GBP), and others.
+    <br>   - **Gold Reserves**: Held as a hedge against inflation and currency devaluation.
+    <br>   - **Special Drawing Rights (SDRs)**: International reserve asset created by the IMF.
+    <br>   - **Other Reserve Assets**: Includes various foreign securities and other liquid assets.
+    <br>3. **Management**:
+    <br>   - Managed by a country’s central bank or monetary authority.
+    <br>   - Decisions on the composition and use of reserves are influenced by economic conditions, policy objectives, and international trade dynamics.
+    <br>4. **Global Trends**:
+    <br>   - Countries like China, Japan, and Switzerland have some of the largest forex reserves.
+    <br>   - The US, despite having significant foreign exchange activities, has relatively lower reserves compared to its economy size due to the US Dollar's status as a global reserve currency.
+    <br>5. **Challenges**:
+    <br>   - **Opportunity Cost**: Holding large reserves can lead to an opportunity cost, as these funds could potentially be used for domestic investments.
+    <br>   - **Currency Risk**: Value of reserves can fluctuate with changes in exchange rates.
+    <br>   - **Inflation**: Excessive accumulation of reserves can sometimes lead to inflationary pressures.
+    <br>
+    <br>### Importance of Foreign Exchange Reserves
+    <br>- **Economic Stability**: Provides a cushion against external shocks, such as sudden capital flight or balance of payments crises.
+    <br>- **Currency Management**: Helps in managing the country’s exchange rate and implementing monetary policy.
+    <br>- **Creditworthiness**: Enhances the country’s creditworthiness and ability to borrow from international markets.
+    <br>Foreign exchange reserves are a crucial aspect of a nation’s economic stability and financial health, playing a vital role in maintaining stability, supporting monetary policy, and fostering investor confidence."
+    <br>[{2024-06-18 retrieved} https://chatgpt.com/c/4422e1d3-5a1c-4ff4-aadc-da5bdfefd92c]
+    <a class="clsHide" href="#idEconHmnatt043dsn"></a></p>
+  <p id="idEconHmnatt043nam">name::
+    <br>* McsEngl.Econfxreserve!=foreign-exchange-reserve,
+    <br>* McsEngl.Socecon'att043-foreign-exchange-reserve!⇒Econfxreserve,
+    <br>* McsEngl.Socecon'foreign-exchange-reserve!⇒Econfxreserve,
+    <br>* McsEngl.foreign-exchange-reserve!⇒Econfxreserve,
+    <br>====== langoChinese:
+    <br>* McsZhon.wàihuì-chúbèi-外汇储备!=Econfxreserve,
+    <br>* McsZhon.外汇储备-wàihuì-chúbèi!=Econfxreserve,
+    <br>====== langoGreek:
+    <br>* McsElln.συναλλαγματικό-αποθεματικό!=Econfxreserve,
+    <a class="clsHide" href="#idEconHmnatt043nam"></a></p>
+  </section>
+
   <section id="idLaw045006">
-  <h2 id="idLaw045006H2">law of sysFin
+  <h2 id="idLaw045006H2">law of Econfin
     <a class="clsHide" href="#idLaw045006H2"></a></h2>
   <p id="idLaw045006dsn">description::
     <br>">financial law:
@@ -1241,6 +1284,236 @@
     <a class="clsHide" href="#idEconHmnatt020H1"></a></h1>
 </section>
 
+<section id="idEconHmnatt028">
+  <h1 id="idEconHmnatt028H1">economic-sector of Socecon
+    <a class="clsHide" href="#idEconHmnatt028H1"></a></h1>
+  <p id="idEconHmnatt028dsn">description::
+    <br>· economic-sector is the-set of all producing and consuming organizations.
+    <a class="clsHide" href="#idEconHmnatt028dsn"></a></p>
+  <p id="idEconHmnatt028nam">name::
+    <br>* McsEngl.Socecon'att028-economic-sector!⇒sectorEcon,
+    <br>* McsEngl.Socecon'economic-sector!⇒sectorEcon,
+    <br>* McsEngl.economic-sector!⇒sectorEcon,
+    <br>* McsEngl.sectorEcon!=economic-sector,
+    <br>* McsEngl.sectorEcon!=sectorSoc,
+    <br>* McsEngl.sectorEcon//Socecon,
+    <br>* McsEngl.sectorSoc!=sectorEcon,
+    <br>* McsEngl.sectorSoc!=society's-sector,
+    <a class="clsHide" href="#idEconHmnatt028nam"></a></p>
+  <p id="idEconHmnatt028ptr">part-tree-of-sectorEcon::
+    <br>* sectorCsmg,
+    <br>* sectorPrdg,
+    <a class="clsHide" href="#idEconHmnatt028ptr"></a></p>
+
+  <section id="idEconHmnatt029">
+  <h2 id="idEconHmnatt029H2">wealth of sectorEcon
+    <a class="clsHide" href="#idEconHmnatt029H2"></a></h2>
+  <p id="idEconHmnatt029dsn">description::
+    <br>· the-wealth of an-economy.
+    <br>
+    <br>">the wealth of an economy:
+    <br>The wealth of an economy refers to the total value of all assets owned by individuals, businesses, and the government within a country. It includes both tangible assets (such as real estate, machinery, and infrastructure) and intangible assets (such as intellectual property and financial assets). Understanding the wealth of an economy is essential for assessing its overall economic health, stability, and growth potential.
+    <br>
+    <br>### Key Components of Economic Wealth
+    <br>1. **Physical Capital**:
+    <br>   - **Infrastructure**: Roads, bridges, ports, and other public works.
+    <br>   - **Buildings**: Residential and commercial real estate.
+    <br>   - **Machinery and Equipment**: Industrial and agricultural tools and machines.
+    <br>2. **Human Capital**:
+    <br>   - **Education**: The knowledge and skills of the workforce.
+    <br>   - **Health**: The physical and mental well-being of the population.
+    <br>3. **Natural Resources**:
+    <br>   - **Land**: Agricultural and non-agricultural land.
+    <br>   - **Minerals**: Oil, gas, coal, and other mineral resources.
+    <br>   - **Water**: Access to freshwater sources.
+    <br>4. **Financial Assets**:
+    <br>   - **Stocks and Bonds**: Ownership in companies and government debt.
+    <br>   - **Savings**: Deposits in banks and other financial institutions.
+    <br>5. **Intellectual Property**:
+    <br>   - **Patents**: Legal rights to inventions.
+    <br>   - **Trademarks**: Brand identities and logos.
+    <br>   - **Copyrights**: Legal rights to creative works.
+    <br>
+    <br>### Measuring Economic Wealth
+    <br>Economic wealth is often measured using indicators such as:
+    <br>- **Gross Domestic Product (GDP)**: The total value of goods and services produced within a country.
+    <br>- **Net National Wealth**: The total value of assets minus liabilities.
+    <br>- **Human Development Index (HDI)**: A composite measure of life expectancy, education, and per capita income.
+    <br>
+    <br>### Distribution of Wealth
+    <br>Understanding the distribution of wealth is crucial for addressing economic inequality. Wealth distribution can be analyzed through:
+    <br>- **Gini Coefficient**: A measure of income or wealth inequality.
+    <br>- **Wealth Quintiles**: Dividing the population into five groups based on wealth levels.
+    <br>
+    <br>### Factors Influencing Economic Wealth
+    <br>Several factors can influence the accumulation and distribution of wealth in an economy, including:
+    <br>- **Economic Policies**: Taxation, spending, and regulatory policies.
+    <br>- **Political Stability**: The degree of stability and predictability in governance.
+    <br>- **Technological Advancements**: Innovations that drive productivity and growth.
+    <br>- **Global Trade**: Access to international markets and resources.
+    <br>
+    <br>### Challenges and Considerations
+    <br>- **Sustainability**: Ensuring that economic growth does not deplete natural resources.
+    <br>- **Equity**: Addressing disparities in wealth distribution to promote social stability.
+    <br>- **Economic Diversification**: Reducing reliance on a single sector or resource.
+    <br>Understanding and managing the wealth of an economy involves a comprehensive approach that considers various assets, their distribution, and the factors that influence their growth and sustainability."
+    <br>[{2024-06-17 retrieved} https://chatgpt.com/c/5391bd7f-fce3-40f6-a71c-af6fc1dc9122]
+    <br>
+    <br>">the wealth of an economy:
+    <br>The wealth of an economy is not simply the amount of gold and silver it possesses, as was the prevailing view in the past. Instead, it is the total value of goods and services produced by a country, often measured by its Gross Domestic Product (GDP).
+    <br>This concept was revolutionized by Adam Smith in his seminal work, "The Wealth of Nations," published in 1776. He argued that the true wealth of a nation lies in its productive capacity, driven by factors like:
+    <br>* **Division of Labor:** Specialization of tasks, leading to increased efficiency and productivity.
+    <br>* **Free Markets:** Allowing supply and demand to determine prices and allocation of resources.
+    <br>* **Limited Government Intervention:**  Believing that markets generally regulate themselves, with the government's role primarily focused on protecting property rights, enforcing contracts, and providing public goods like infrastructure and education.
+    <br>However, GDP is not a perfect measure of wealth, as it doesn't account for factors like income inequality, environmental sustainability, or the value of leisure time.
+    <br>Economists continue to debate and refine measures of economic well-being to provide a more comprehensive picture of a nation's wealth.
+    <br>Would you like me to elaborate on any of these aspects or explore other measures of economic well-being? "
+    <br>[{2024-06-17 retrieved} https://gemini.google.com/app/dd80e7fa762541f6]
+    <a class="clsHide" href="#idEconHmnatt029dsn"></a></p>
+  <p id="idEconHmnatt029nam">name::
+    <br>* McsEngl.Econwealth!=wealth-of-economy,
+    <br>* McsEngl.Socecon'att029-wealth!⇒Econwealth,
+    <br>* McsEngl.Socecon'wealth!⇒Econwealth,
+    <br>* McsEngl.sectorEcon'wealth!⇒Econwealth,
+    <br>* McsEngl.wealth-of-economy!⇒Econwealth,
+    <br>* McsEngl.wealth-of-sectorEcon!⇒Econwealth,
+    <a class="clsHide" href="#idEconHmnatt029nam"></a></p>
+
+  <section id="idEconHmnatt042">
+  <h3 id="idEconHmnatt042H3">wealth-quintiles of Econwealth
+    <a class="clsHide" href="#idEconHmnatt042H3"></a></h3>
+  <p id="idEconHmnatt042dsn">description::
+    <br>"### Wealth Quintiles: Understanding Wealth Distribution
+    <br>Wealth quintiles are a statistical method used to divide a population into five equal groups (or quintiles) based on the distribution of wealth. This method helps in analyzing and understanding the economic disparities within a population by highlighting how wealth is distributed among different segments of society. Each quintile represents 20% of the population.
+    <br>
+    <br>### Quintiles Explained
+    <br>1. **First Quintile (Lowest 20%)**:
+    <br>   - Represents the bottom 20% of the population in terms of wealth.
+    <br>   - This group typically has the least amount of wealth and may include individuals or households with significant economic challenges.
+    <br>2. **Second Quintile (Lower Middle 20%)**:
+    <br>   - Represents the next 20% of the population.
+    <br>   - This group has more wealth than the first quintile but still faces financial limitations.
+    <br>3. **Third Quintile (Middle 20%)**:
+    <br>   - Represents the middle 20% of the population.
+    <br>   - This group is often considered the "middle class" and has a moderate level of wealth.
+    <br>4. **Fourth Quintile (Upper Middle 20%)**:
+    <br>   - Represents the next 20% of the population.
+    <br>   - This group is wealthier than the middle quintile and is approaching the top tier in terms of wealth.
+    <br>5. **Fifth Quintile (Highest 20%)**:
+    <br>   - Represents the top 20% of the population.
+    <br>   - This group holds the most significant portion of wealth within the population and includes the wealthiest individuals or households.
+    <br>
+    <br>### Analyzing Wealth Quintiles
+    <br>Analyzing wealth quintiles helps in understanding economic inequality and the distribution of wealth in a society. Here are some key points to consider:
+    <br>1. **Wealth Concentration**:
+    <br>   - Typically, wealth is not evenly distributed. The top quintile often holds a disproportionately large share of the total wealth, while the bottom quintile holds a much smaller share.
+    <br>2. **Economic Policy Implications**:
+    <br>   - Understanding the distribution of wealth can inform policies aimed at reducing inequality, such as progressive taxation, social welfare programs, and educational opportunities.
+    <br>3. **Socioeconomic Mobility**:
+    <br>   - Wealth quintiles can indicate the level of socioeconomic mobility within a society. Higher mobility suggests that individuals can move between quintiles more easily, while lower mobility indicates that wealth distribution is more rigid.
+    <br>4. **Impact on Quality of Life**:
+    <br>   - Wealth distribution affects access to education, healthcare, housing, and other essential services. Disparities in wealth can lead to significant differences in quality of life and opportunities.
+    <br>
+    <br>### Visual Representation
+    <br>Wealth quintiles can be visualized using various graphical methods such as:
+    <br>- **Lorenz Curve**: A graphical representation of wealth distribution, showing the cumulative percentage of total wealth held by the cumulative percentage of the population.
+    <br>- **Bar Charts**: Comparing the average wealth or the share of total wealth held by each quintile.
+    <br>- **Gini Coefficient**: A single number that summarizes the level of inequality based on the Lorenz Curve.
+    <br>
+    <br>### Conclusion
+    <br>Wealth quintiles provide a useful framework for understanding economic inequality and the distribution of wealth within a population. By analyzing wealth quintiles, policymakers, economists, and researchers can better understand the dynamics of wealth distribution and develop strategies to address economic disparities and promote more equitable growth."
+    <br>[{2024-06-17 retrieved} https://chatgpt.com/c/5391bd7f-fce3-40f6-a71c-af6fc1dc9122]
+    <a class="clsHide" href="#idEconHmnatt042dsn"></a></p>
+  <p id="idEconHmnatt042nam">name::
+    <br>* McsEngl.Socecon'att042-wealth-quintiles,
+    <br>* McsEngl.Socecon'wealth-quintiles,
+    <br>* McsEngl.wealth-quintiles,
+    <a class="clsHide" href="#idEconHmnatt042nam"></a></p>
+  </section>
+  </section>
+</section>
+
+<section id="idEconHmnatt045">
+  <h1 id="idEconHmnatt045H1">infrastructure of Socecon
+    <a class="clsHide" href="#idEconHmnatt045H1"></a></h1>
+  <p id="idEconHmnatt045dsn">description::
+    <br>"infrastructure of society:
+    <br>The infrastructure of society encompasses the fundamental systems and structures necessary for the functioning and development of a community or nation. These elements are essential for economic activity, public health, safety, and overall quality of life. Here's a breakdown of the key components:
+    <br>### 1. **Transportation Infrastructure**
+    <br>   - **Roads and Highways:** Facilitate the movement of people and goods.
+    <br>   - **Railways:** Support mass transit and freight transport.
+    <br>   - **Airports:** Enable air travel and cargo transport.
+    <br>   - **Ports and Harbors:** Critical for international trade and maritime activities.
+    <br>   - **Public Transit Systems:** Buses, trams, and subways for urban mobility.
+    <br>### 2. **Utility Infrastructure**
+    <br>   - **Electricity:** Power generation and distribution networks.
+    <br>   - **Water Supply:** Treatment plants, reservoirs, and distribution pipelines.
+    <br>   - **Sewage and Waste Management:** Systems for waste collection, treatment, and disposal.
+    <br>   - **Natural Gas:** Distribution networks for heating and cooking.
+    <br>### 3. **Communication Infrastructure**
+    <br>   - **Telecommunications Networks:** Landline, mobile networks, and internet services.
+    <br>   - **Broadcast Systems:** Television and radio broadcasting facilities.
+    <br>   - **Postal Services:** National and international mail delivery systems.
+    <br>### 4. **Healthcare Infrastructure**
+    <br>   - **Hospitals and Clinics:** Facilities providing medical care.
+    <br>   - **Public Health Services:** Programs for disease prevention and health promotion.
+    <br>   - **Emergency Services:** Ambulance services and emergency response units.
+    <br>### 5. **Educational Infrastructure**
+    <br>   - **Schools:** Primary, secondary, and tertiary educational institutions.
+    <br>   - **Libraries:** Public and academic libraries for information access.
+    <br>   - **Research Institutions:** Universities and research centers for innovation and development.
+    <br>### 6. **Public Safety Infrastructure**
+    <br>   - **Police Stations:** Law enforcement facilities.
+    <br>   - **Fire Stations:** Facilities for fire and rescue services.
+    <br>   - **Prisons and Correctional Facilities:** Institutions for incarceration and rehabilitation.
+    <br>### 7. **Economic and Financial Infrastructure**
+    <br>   - **Banks and Financial Institutions:** Support for financial transactions and economic growth.
+    <br>   - **Markets and Trade Centers:** Facilitate commerce and trade.
+    <br>   - **Regulatory Bodies:** Institutions that govern and regulate economic activities.
+    <br>### 8. **Housing and Community Facilities**
+    <br>   - **Residential Buildings:** Housing for the population.
+    <br>   - **Community Centers:** Spaces for social activities and community engagement.
+    <br>   - **Parks and Recreational Areas:** Public spaces for leisure and recreation.
+    <br>### 9. **Energy Infrastructure**
+    <br>   - **Power Plants:** Facilities for generating electricity (e.g., coal, nuclear, renewable energy sources).
+    <br>   - **Distribution Networks:** Infrastructure for delivering energy to homes and businesses.
+    <br>### 10. **Environmental Infrastructure**
+    <br>   - **Green Spaces:** Urban parks, forests, and nature reserves.
+    <br>   - **Waste Management Systems:** Recycling and waste disposal facilities.
+    <br>   - **Water Treatment Plants:** Facilities for purifying and recycling water.
+    <br>### 11. **Government and Administrative Infrastructure**
+    <br>   - **Government Buildings:** Offices for local, regional, and national government operations.
+    <br>   - **Courthouses:** Facilities for the judicial system.
+    <br>   - **Public Administration Services:** Support for various governmental functions and public services.
+    <br>### Key Considerations for Infrastructure Development
+    <br>- **Sustainability:** Ensuring infrastructure development meets present needs without compromising future generations.
+    <br>- **Resilience:** Building infrastructure that can withstand natural disasters and other crises.
+    <br>- **Accessibility:** Making sure infrastructure is accessible to all segments of society.
+    <br>- **Innovation:** Integrating new technologies to improve efficiency and service delivery.
+    <br>- **Funding and Investment:** Securing necessary financial resources for infrastructure projects.
+    <br>These components work together to support the smooth operation of society, promoting economic growth, enhancing the quality of life, and ensuring the well-being of the population."
+    <br>[{2024-06-20 retrieved} https://chatgpt.com/c/783ee675-d15f-4fb7-86a6-f4fbd218e470]
+    <br>
+    <br>"infrastructure of society:
+    <br>The infrastructure of a society is the basic physical and organizational structures and facilities (e.g., buildings, roads, and power supplies) needed for the operation of a society or enterprise. These systems tend to be high-cost investments and are vital to a country's economic development and prosperity.
+    <br>Infrastructure is composed of public and private physical structures such as roads, railways, bridges, tunnels, water supply, sewers, electrical grids, and telecommunications (including Internet connectivity and broadband access).
+    <br>It can be generally divided into hard infrastructure and soft infrastructure.
+    <br>*   **Hard infrastructure** refers to the physical systems required for the functioning of a modern industrialized nation. Hard infrastructure projects are often very expensive and require large amounts of materials and engineering expertise to complete. Examples include roads, highways, bridges, tunnels, railways, airports, seaports, power plants, and telecommunication networks.
+    <br>*   **Soft infrastructure** refers to all the institutions that maintain the economic, health, educational, cultural, and social standards of a country. The soft infrastructure is comprised of a skilled workforce, high-quality educational institutions, and effective legal and financial systems. Examples include schools, hospitals, libraries, and parks.
+    <br>Social infrastructure can be broadly defined as the construction and maintenance of facilities that support social services. These include schools, parks and playgrounds, structures for public safety, waste disposal plants, hospitals, and sports areas.
+    <br>Without infrastructure, it would be difficult or impossible to transport goods, provide essential services, or communicate effectively. Infrastructure is essential for the functioning of modern society.
+    <br>Sources
+    <br>highlandscurrent.org/2021/09/17/operation-infrastructure/
+    <br>en.wikipedia.org/wiki/Infrastructure"
+    <br>[{2024-06-20 retrieved} https://gemini.google.com/app/f3fed753c6c22c46]
+    <a class="clsHide" href="#idEconHmnatt045dsn"></a></p>
+  <p id="idEconHmnatt045nam">name::
+    <br>* McsEngl.Socecon'att045-infrastructure,
+    <br>* McsEngl.Socecon'infrastructure,
+    <br>* McsEngl.infrastructure-of-Socecon,
+    <a class="clsHide" href="#idEconHmnatt045nam"></a></p>
+</section>
+
 <section id="idEconHmneval">
   <h1 id="idEconHmnevalH1">evaluation of Socecon
     <a class="clsHide" href="#idEconHmnevalH1"></a></h1>
@@ -1276,11 +1549,358 @@
     <br>[{2023-12-11 retrieved} https://chat.openai.com/c/0080d078-740a-445a-98b9-00966079ffd0]
     <a class="clsHide" href="#idEconHmnevaldsn"></a></p>
   <p id="idEconHmnevalnam">name::
-    <br>* McsEngl.Socecon'evaluation,
+    <br>* McsEngl.Econeval!=evaluation-of-economy,
+    <br>* McsEngl.Socecon'evaluation!⇒Econeval,
+    <br>* McsEngl.Soceval.economy!⇒Econeval,
+    <br>* McsEngl.evaluation-of-Socecon!⇒Econeval,
     <a class="clsHide" href="#idEconHmnevalnam"></a></p>
   <p id="idEconHmnevalwpa">addressWpg::
     <br>* https://www.weforum.org/agenda/2021/05/gdp-new-measure-economic-growth,
     <a class="clsHide" href="#idEconHmnevalwpa"></a></p>
+
+  <section id="idEconHmnatt010">
+  <h2 id="idEconHmnatt010H2">Econeval.GDP
+    <a class="clsHide" href="#idEconHmnatt010H2"></a></h2>
+  <p id="idEconHmnatt010dsn">description::
+    <br>">GDP definition:
+    <br>Gross Domestic Product (GDP) is the total monetary or market value of all the finished goods and services produced within a country's borders in a specific time period. As a broad measure of overall domestic production, it functions as a comprehensive scorecard of a country’s economic health. GDP can be calculated using three approaches:
+    <br>1. **Production (or output) approach**: Summing up the outputs of every class of enterprise to arrive at the total. This method calculates the value added at each stage of production.
+    <br>2. **Income approach**: Summing the total compensations to employees, gross profits for incorporated and non incorporated firms, and taxes less any subsidies.
+    <br>3. **Expenditure approach**: Summing the total expenditures made for final goods and services at any given time period. This method is the most common and is calculated by adding consumption, investment, government spending, and net exports (exports minus imports).
+    <br>GDP can be measured in nominal terms, which represent current market prices, or in real terms, which are adjusted for inflation. Real GDP provides a more accurate reflection of an economy's size and how it's growing over time."
+    <br>[{2024-02-24 retrieved} https://chat.openai.com/c/7fb3a57d-bee2-46ea-9773-43ff7184bcb9]
+    <br>
+    <br>"GDP: The sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Data is in current U.S. dollars. Dollar figures for GDP are converted from domestic currencies using single year official exchange rates. For a few countries where the official exchange rate does not reflect the rate effectively applied to actual foreign exchange transactions, an alternative conversion factor is used."
+    <br>[{2021-02-24} https://wolframalpha.com]
+    <a class="clsHide" href="#idEconHmnatt010dsn"></a></p>
+  <p id="idEconHmnatt010nam">name::
+    <br>* McsEngl.Econeval.GDP,
+    <br>* McsEngl.GDP!=Gross-Domestic-Product,
+    <br>* McsEngl.GDP//Socecon,
+    <br>* McsEngl.Socecon'att010-GDP,
+    <br>* McsEngl.Socecon/GDP,
+    <br>* McsEngl.society'GDP,
+    <a class="clsHide" href="#idEconHmnatt010nam"></a></p>
+
+  <section id="idEconHmnatt010eval">
+  <h3 id="idEconHmnatt010evalH3">evaluation of GDP
+    <a class="clsHide" href="#idEconHmnatt010evalH3"></a></h3>
+  <p id="idEconHmnatt010evaldsn">description::
+    <br>"Limitations of GDP
+    <br>While GDP is a useful measure of economic activity, it has several limitations:
+    <br>* It does not measure all economic activity: GDP does not include the value of non-market goods and services, such as household labor and volunteer work.
+    <br>* It can be affected by inflation: Nominal GDP can be misleading because it can be inflated by rising prices.
+    <br>* It can be volatile: GDP can fluctuate from quarter to quarter, making it difficult to track long-term trends."
+    <br>[{2023-12-14 retrieved} https://bard.google.com/chat/a339146ece739154]
+    <a class="clsHide" href="#idEconHmnatt010evaldsn"></a></p>
+  <p id="idEconHmnatt010evalnam">name::
+    <br>* McsEngl.GDP'evaluation,
+    <a class="clsHide" href="#idEconHmnatt010evalnam"></a></p>
+  </section>
+
+  <section id="idEconHmnatt031">
+  <h3 id="idEconHmnatt031H3">GDP.nominal of Socecon
+    <a class="clsHide" href="#idEconHmnatt031H3"></a></h3>
+  <p id="idEconHmnatt031dsn">description::
+    <br>">nominal GDP:
+    <br>Nominal GDP, or Gross Domestic Product at current prices, measures the value of all finished goods and services produced within a country's borders in a specific time period, using current market prices. Unlike real GDP, nominal GDP does not adjust for inflation or price changes over time. This means that nominal GDP can increase simply because of inflation, even if the actual volume of goods and services produced does not change.
+    <br>Nominal GDP is important for several reasons:
+    <br>1. **Economic Size**: It provides a snapshot of the economic size and output of a country at current market prices, offering a straightforward way to compare the economic performance of different countries or the same country over different years.
+    <br>2. **Year-to-Year Comparisons**: It is useful for year-to-year comparisons in environments with low inflation or for short-term analysis.
+    <br>3. **Government Policy and Budgeting**: Governments often use nominal GDP for budgeting and policy planning, as tax revenues and spending are in current prices.
+    <br>4. **Debt-to-GDP Ratios**: Nominal GDP figures are used to calculate debt-to-GDP ratios, an important indicator of a country's financial health.
+    <br>To calculate nominal GDP, you can use one of three approaches:
+    <br>1. **Production (Output) Approach**: Adding up the value of all goods and services produced.
+    <br>2. **Income Approach**: Summing all incomes generated by production, including wages, profits, and taxes minus subsidies.
+    <br>3. **Expenditure Approach**: Adding up all expenditures or spending that occurred within the economy, including consumption, investment, government spending, and net exports (exports minus imports).
+    <br>Nominal GDP is reported by national statistical agencies and international organizations such as the World Bank and the International Monetary Fund (IMF). It's a critical economic indicator that provides insights into the economic health and performance of a country, although it's often considered alongside real GDP to get a fuller picture of economic conditions, particularly over longer periods or in environments with significant inflation."
+    <br>[{2024-03-02 retrieved} https://chat.openai.com/c/4605a332-7a93-4f28-a32d-205761795acb]
+    <a class="clsHide" href="#idEconHmnatt031dsn"></a></p>
+  <p id="idEconHmnatt031nam">name::
+    <br>* McsEngl.GDP.nominal!⇒GdpNominal,
+    <br>* McsEngl.GdpNominal!=nominal-GDP,
+    <br>* McsEngl.Socecon'att032-nominal-GDP!⇒GdpNominal,
+    <br>* McsEngl.Socecon'nominal-GDP!⇒GdpNominal,
+    <br>* McsEngl.nominal-GDP!⇒GdpNominal,
+    <a class="clsHide" href="#idEconHmnatt031nam"></a></p>
+  </section>
+
+  <section id="idEconHmnatt012">
+  <h3 id="idEconHmnatt012H3">GDP.real of Socecon
+    <a class="clsHide" href="#idEconHmnatt012H3"></a></h3>
+  <p id="idEconHmnatt012dsn">description::
+    <br>"real GDP: The sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Data is in constant 2000 U.S. dollars. Dollar figures for GDP are converted from domestic currencies using 2000 official exchange rates. For a few countries where the official exchange rate does not reflect the rate effectively applied to actual foreign exchange transactions, an alternative conversion factor is used."
+    <br>[{2021-02-24} https://wolframalpha.com]
+    <a class="clsHide" href="#idEconHmnatt012dsn"></a></p>
+  <p id="idEconHmnatt012nam">name::
+    <br>* McsEngl.GDP.real!⇒GdpReal,
+    <br>* McsEngl.GdpReal!=real-GDP,
+    <br>* McsEngl.Socecon'att012-real-GDP!⇒GdpReal,
+    <br>* McsEngl.Socecon'real-GDP!⇒GdpReal,
+    <br>* McsEngl.real-GDP!⇒GdpReal,
+    <br>* McsEngl.society'real-GDP!⇒GdpReal,
+    <a class="clsHide" href="#idEconHmnatt012nam"></a></p>
+
+  <section id="idEconHmnatt012rtppp">
+  <h4 id="idEconHmnatt012rtpppH4">relation-to-GdpPpp of GdpReal
+    <a class="clsHide" href="#idEconHmnatt012rtpppH4"></a></h4>
+  <p id="idEconHmnatt012rtpppdsn">description::
+    <br>">gdp at parity vs real gdp:
+    <br>GDP at parity, also known as GDP at Purchasing Power Parity (PPP), and real GDP are both ways to measure a country's economic output, but they differ in how they account for prices:
+    <br>* **Real GDP:** This refers to the total value of goods and services produced in a country, adjusted for inflation. It uses the same currency throughout the analysis (usually the country's own currency) for a year, eliminating the effect of inflation on the final number. This allows you to see the actual growth or decline in production over time within that country.
+    <br>* **GDP at Parity (PPP):** This takes real GDP a step further and adjusts it for differences in the cost of living between countries.  Imagine a basket of essential goods (food, clothing, housing) - PPP calculates how much it would cost to buy that same basket in different countries. This allows for a more accurate comparison of living standards and economic output between nations with very different currencies and price structures.
+    <br>Here's an analogy:
+    <br>* Think of real GDP as comparing the physical size (weight) of apples produced by two countries.
+    <br>* GDP at Parity (PPP) would be like comparing how many apples you can buy with a set amount of money in each country.
+    <br>**In short:**
+    <br>* **Real GDP:** Growth within a country over time (adjusted for inflation)
+    <br>* **GDP at Parity (PPP):** Compares economic output and living standards between countries
+    <br>**Use cases:**
+    <br>* **Real GDP:** Useful for tracking a country's own economic growth or decline.
+    <br>* **GDP at Parity (PPP):** More helpful for comparing the economic well-being and purchasing power of citizens in different countries."
+    <br>[{2024-03-02 retrieved} https://gemini.google.com/app/5a32b5afd23c294d]
+    <a class="clsHide" href="#idEconHmnatt012rtpppdsn"></a></p>
+  <p id="idEconHmnatt012rtpppnam">name::
+    <br>* McsEngl.GdpPpp'relation-to-GdpReal,
+    <br>* McsEngl.GdpReal'relation-to-GdpPpp,
+    <a class="clsHide" href="#idEconHmnatt012rtpppnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idEconHmnatt011">
+  <h3 id="idEconHmnatt011H3">GDP.at-parity of Socecon
+    <a class="clsHide" href="#idEconHmnatt011H3"></a></h3>
+  <p id="idEconHmnatt011dsn">description::
+    <br>"GDP at parity: PPP GDP is gross domestic product converted to international dollars using purchasing power parity rates. An international dollar has the same purchasing power over GDP as the U.S. dollar has in the United States. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Data are in current international dollars."
+    <br>[{2021-02-24} https://wolframalpha.com]
+    <br>
+    <br>">GDP at parity:
+    <br>GDP at parity, also known as purchasing power parity (PPP) GDP, is a measure of a country's economic output that adjusts for differences in the price levels of goods and services between countries. This means that PPP GDP can be used to compare the economic prosperity of countries that have different currencies and exchange rates.
+    <br>
+    <br>PPP GDP is calculated by comparing the prices of a basket of goods and services in different countries. This basket of goods and services usually includes a representative sample of consumer goods and services that are commonly purchased by households. The prices of these goods and services are then converted into a common currency, such as the United States dollar, using exchange rates that reflect the purchasing power of each currency.
+    <br>
+    <br>The resulting PPP GDP figure is a measure of the amount of goods and services that a country can purchase with its currency. This is a more accurate measure of a country's economic prosperity than nominal GDP, which is not adjusted for differences in price levels.
+    <br>
+    <br>**Advantages of PPP GDP**
+    <br>There are several advantages to using PPP GDP instead of nominal GDP:
+    <br>* It is more comparable across countries. PPP GDP takes into account differences in the price levels of goods and services between countries, which means that it can be used to compare the economic prosperity of countries that have different currencies and exchange rates.
+    <br>* It is a better measure of a country's standard of living. PPP GDP reflects the amount of goods and services that a country's currency can purchase, which is a more direct measure of a country's standard of living than nominal GDP.
+    <br>* It is less sensitive to exchange rate fluctuations. Nominal GDP can be volatile due to changes in exchange rates, but PPP GDP is less sensitive to these fluctuations.
+    <br>
+    <br>**Disadvantages of PPP GDP**
+    <br>There are also some disadvantages to using PPP GDP:
+    <br>* It can be difficult to calculate. The calculation of PPP GDP is more complex than the calculation of nominal GDP, and it requires more data.
+    <br>* It is not always accurate. The accuracy of PPP GDP data can be affected by factors such as the quality of the data, the selection of the basket of goods and services, and the method used to adjust for price differences.
+    <br>* It is not a perfect measure of economic prosperity. PPP GDP is a useful measure of economic prosperity, but it is not a perfect measure. It does not take into account factors such as inequality, environmental quality, and human development.
+    <br>
+    <br>Despite these disadvantages, PPP GDP is a valuable tool for economists and policymakers. It can be used to compare the economic prosperity of different countries, to track trends in economic growth, and to make policy decisions.
+    <br>
+    <br>Here is a table summarizing the key advantages and disadvantages of PPP GDP:
+    <br>| Feature | Advantages | Disadvantages |
+    <br>| Comparability | More comparable across countries | More complex to calculate |
+    <br>| Standard of living | Better measure of standard of living | Less sensitive to exchange rate fluctuations |
+    <br>| Accuracy | Not always accurate | Does not take into account factors such as inequality, environmental quality, and human development |
+    <br>| Usefulness | Valuable tool for economists and policymakers | |"
+    <br>[{2023-12-14 retrieved} https://bard.google.com/chat/a339146ece739154]
+    <a class="clsHide" href="#idEconHmnatt011dsn"></a></p>
+  <p id="idEconHmnatt011nam">name::
+    <br>* McsEngl.GDP.PPP!⇒GdpPpp,
+    <br>* McsEngl.GDP.at-parity!⇒GdpPpp,
+    <br>* McsEngl.GdpPpp!=GDP-at-parity,
+    <br>* McsEngl.PPP-GDP!⇒GdpPpp,
+    <br>* McsEngl.Socecon'att011-GDP-at-parity!⇒GdpPpp,
+    <br>* McsEngl.Socecon'GDP-at-parity!⇒GdpPpp,
+    <br>* McsEngl.purchasing-power-parity-GDP!⇒GdpPpp,
+    <br>* McsEngl.society'GDP-at-parity!⇒GdpPpp,
+    <a class="clsHide" href="#idEconHmnatt011nam"></a></p>
+
+  <section id="idEconHmnatt011Soc">
+  <h4 id="idEconHmnatt011SocH4">GdpPpp.per-society
+    <a class="clsHide" href="#idEconHmnatt011SocH4"></a></h4>
+  <p id="idEconHmnatt011Socdsn">description::
+    <br>"GDP based on PPP, share of world:
+    <br>* 🇨🇳 China: 19.05%
+    <br>* 🇺🇸 USA: 15.2%
+    <br>* 🇮🇳 India: 7.75%
+    <br>* 🇯🇵 Japan: 3.65%
+    <br>* 🇩🇪 Germany: 3.11%
+    <br>* 🇷🇺 Russia: 2.84%
+    <br>* 🇮🇩 Indonesia: 2.56%
+    <br>* 🇧🇷 Brazil: 2.31%
+    <br>* 🇫🇷 France: 2.18%
+    <br>* 🇬🇧 UK: 2.17%
+    <br>* 🇹🇷 Turkey: 2.07%
+    <br>* 🇲🇽 Mexico: 1.86%
+    <br>* 🇮🇹 Italy: 1.79%
+    <br>* 🇰🇷 South Korea: 1.66%
+    <br>* 🇪🇸 Spain: 1.36%
+    <br>* 🇨🇦 Canada: 1.34%
+    <br>* 🇸🇦 Saudi Arabia: 1.30%
+    <br>* 🇪🇬 Egypt: 1.04%
+    <br>* 🇮🇷 Iran: 0.98%
+    <br>* 🇵🇱 Poland: 0.97%
+    <br>* 🇦🇺 Australia: 0.97%
+    <br>* 🇵🇰 Pakistan: 0.89%
+    <br>* 🇳🇬 Nigeria: 0.78%
+    <br>* 🇦🇷 Argentina: 0.71%
+    <br>* 🇦🇪 UAE: 0.52%
+    <br>* 🇦🇹 Austria: 0.35%
+    <br>* 🇺🇦 Ukraine: 0.27%
+    <br>* 🇳🇴 Norway: 0.26%
+    <br>* 🇻🇪 Venezuela: 0.12%
+    <br>* 🇸🇮 Slovenia: 0.06%
+    <br>* 🇪🇪 Estonia: 0.04%
+    <br>* 🇳🇪 Niger: 0.03%
+    <br>* 🇮🇸 Iceland: 0.02%
+    <br>* 🇲🇪 Montenegro: 0.01%
+    <br>According to IMF"
+    <br>[{2024-01-08 retrieved} https://twitter.com/stats_feed/status/1744352644091765227]
+    <a class="clsHide" href="#idEconHmnatt011Socdsn"></a></p>
+  <p id="idEconHmnatt011Socnam">name::
+    <br>* McsEngl.GdpPpp.per-society,
+    <a class="clsHide" href="#idEconHmnatt011Socnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idEconHmnatt033">
+  <h3 id="idEconHmnatt033H3">GDP.by-component of Socecon
+    <a class="clsHide" href="#idEconHmnatt033H3"></a></h3>
+  <p id="idEconHmnatt033dsn">description::
+    <br>* 	Private consumption,
+    <br>* Government consumption,
+    <br>* Gross capital formation,
+    <br>* Net exports,
+    <a class="clsHide" href="#idEconHmnatt033dsn"></a></p>
+  <p id="idEconHmnatt033nam">name::
+    <br>* McsEngl.Socecon'att033-GDP.by-component,
+    <br>* McsEngl.Socecon'GDP.by-component,
+    <br>* McsEngl.GDP.by-component,
+    <a class="clsHide" href="#idEconHmnatt033nam"></a></p>
+  </section>
+
+  <section id="idEconHmnatt034">
+  <h3 id="idEconHmnatt034H3">GDP.by-sector of Socecon
+    <a class="clsHide" href="#idEconHmnatt034H3"></a></h3>
+  <p id="idEconHmnatt034dsn">description::
+    <br>* 	primary-Agriculture,
+    <br>* 	secondary-Industry,
+    <br>* 	tertriary-Services,
+    <a class="clsHide" href="#idEconHmnatt034dsn"></a></p>
+  <p id="idEconHmnatt034nam">name::
+    <br>* McsEngl.Socecon'att034-GDP.by-sector,
+    <br>* McsEngl.Socecon'GDP.by-sector,
+    <br>* McsEngl.GDP.by-industry,
+    <a class="clsHide" href="#idEconHmnatt034nam"></a></p>
+  </section>
+
+  <section id="idEconHmnatt013">
+  <h3 id="idEconHmnatt013H3">GDP.per-capita of Socecon
+    <a class="clsHide" href="#idEconHmnatt013H3"></a></h3>
+  <p id="idEconHmnatt013dsn">description::
+    <br>"GDP per capita: Gross domestic product divided by midyear population. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Data is in current U.S. dollars."
+    <br>[{2021-02-24} https://wolframalpha.com]
+    <a class="clsHide" href="#idEconHmnatt013dsn"></a></p>
+  <p id="idEconHmnatt013nam">name::
+    <br>* McsEngl.GDP.per-capita,
+    <br>* McsEngl.Socecon'att013-GDP-per-capita,
+    <br>* McsEngl.Socecon'GDP-per-capita,
+    <br>* McsEngl.society'GDP-per-capita,
+    <a class="clsHide" href="#idEconHmnatt013nam"></a></p>
+  </section>
+
+  <section id="idEconHmnatt014">
+  <h3 id="idEconHmnatt014H3">GDP.real-growth of Socecon
+    <a class="clsHide" href="#idEconHmnatt014H3"></a></h3>
+  <p id="idEconHmnatt014dsn">description::
+    <br>"GDP real growth: The sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Aggregates are based on constant 2000 U.S. dollars."
+    <br>[{2021-02-24} https://wolframalpha.com]
+    <a class="clsHide" href="#idEconHmnatt014dsn"></a></p>
+  <p id="idEconHmnatt014nam">name::
+    <br>* McsEngl.GDP.real-growth,
+    <br>* McsEngl.Socecon'att014-GDP-real-growth,
+    <br>* McsEngl.Socecon'GDP-real-growth,
+    <br>* McsEngl.society'GDP-real-growth,
+    <a class="clsHide" href="#idEconHmnatt014nam"></a></p>
+  </section>
+  </section>
+
+  <section id="idEconHmnatt017">
+  <h2 id="idEconHmnatt017H2">Econeval.human-development-index
+    <a class="clsHide" href="#idEconHmnatt017H2"></a></h2>
+  <p id="idEconHmnatt017dsn">description::
+    <br>"The Human Development Index (HDI) is a statistic composite index of life expectancy, education (literacy rate, gross enrollment ratio at different levels and net attendance ratio), and per capita income indicators, which are used to rank countries into four tiers of human development. A country scores a higher HDI when the lifespan is higher, the education level is higher, and the gross national income GNI (PPP) per capita is higher. It was developed by Pakistani economist Mahbub ul Haq and was further used to measure a country's development by the United Nations Development Programme (UNDP)'s Human Development Report Office.[1][2][3]"
+    <br>[{2021-02-25} https://en.wikipedia.org/wiki/Human_Development_Index]
+    <a class="clsHide" href="#idEconHmnatt017dsn"></a></p>
+  <p id="idEconHmnatt017nam">name::
+    <br>* McsEngl.Econeval.Human-Development-Index!⇒Sochdi,
+    <br>* McsEngl.HDI!=Human-Development-Index!⇒Sochdi,
+    <br>* McsEngl.HDI//Socecon!⇒Sochdi,
+    <br>* McsEngl.Socecon'att017-HDI!⇒Sochdi,
+    <br>* McsEngl.Socecon/HDI!⇒Sochdi,
+    <br>* McsEngl.Sochdi!=human-development-index-of-society,
+    <a class="clsHide" href="#idEconHmnatt017nam"></a></p>
+  </section>
+
+  <section id="idEconHmnatt015">
+  <h2 id="idEconHmnatt015H2">Econeval.Gini-index
+    <a class="clsHide" href="#idEconHmnatt015H2"></a></h2>
+  <p id="idEconHmnatt015dsn">description::
+    <br>"Gini index: The extent to which the distribution of income (or, in some cases, consumption expenditure) among individuals or households within an economy deviates from a perfectly equal distribution. A Lorenz curve plots the cumulative percentages of total income received against the cumulative number of recipients, starting with the poorest individual or household. The Gini index measures the area between the Lorenz curve and a hypothetical line of absolute equality, expressed as a fraction of the maximum area under the line. Thus a Gini index of 0 represents perfect equality, while an index of 1 implies perfect inequality."
+    <br>[{2021-02-24} https://wolframalpha.com]
+    <br>
+    <br>"In economics, the Gini coefficient (/ˈdʒiːni/ JEE-nee), also known as the Gini index or Gini ratio, is a measure of statistical dispersion intended to represent the income inequality, the wealth inequality, or the consumption inequality[3] within a nation or a social group. It was developed by Italian statistician and sociologist Corrado Gini.
+    <br>The Gini coefficient measures the inequality among the values of a frequency distribution, such as levels of income. A Gini coefficient of 0 reflects perfect equality, where all income or wealth values are the same, while a Gini coefficient of 1 (or 100%) reflects maximal inequality among values, a situation where a single individual has all the income while all others have none.[4][5]
+    <br>The Gini coefficient was proposed by Corrado Gini as a measure of inequality of income or wealth.[6] For OECD countries in the late 20th century, considering the effect of taxes and transfer payments, the income Gini coefficient ranged between 0.24 and 0.49, with Slovakia being the lowest and Mexico the highest.[7] African countries had the highest pre-tax Gini coefficients in 2008–2009, with South Africa having the world's highest, estimated to be 0.63 to 0.7.[8][9] However, this figure drops to 0.52 after social assistance is taken into account, and drops again to 0.47 after taxation.[10] The country with the lowest Gini coefficient is Slovakia, with a Gini coefficient of 0.232.[11] The Gini coefficient of the global income in 2005 has been estimated to be between 0.61 and 0.68 by various sources.[12][13]
+    <br>There are some issues in interpreting a Gini coefficient, as the same value may result from many different distribution curves. To mitigate this, the demographic structure should be taken into account. Countries with an aging population, or those with an increased birth rate, experience an increasing pre-tax Gini coefficient even if real income distribution for working adults remains constant. Many scholars have devised over a dozen variants of the Gini coefficient.[14][15][16]"
+    <br>[{2024-05-15 retrieved} https://en.wikipedia.org/wiki/Gini_coefficient]
+    <a class="clsHide" href="#idEconHmnatt015dsn"></a></p>
+  <p id="idEconHmnatt015nam">name::
+    <br>* McsEngl.Econeval.Gini-coefficient!⇒Socgini,
+    <br>* McsEngl.Gini-coefficient!⇒Socgini,
+    <br>* McsEngl.Gini-index!⇒Socgini,
+    <br>* McsEngl.Gini-ratio!⇒Socgini,
+    <br>* McsEngl.Socecon'att015-Gini-index!⇒Socgini,
+    <br>* McsEngl.Socecon'Gini-index!⇒Socgini,
+    <br>* McsEngl.Socgini!=Gini-index-of-economy,
+    <br>* McsEngl.society'Gini-index!⇒Socgini,
+    <a class="clsHide" href="#idEconHmnatt015nam"></a></p>
+  </section>
+
+  <section id="idEconHmnatt044">
+  <h2 id="idEconHmnatt044H2">Econeval.economic-complexity-index
+    <a class="clsHide" href="#idEconHmnatt044H2"></a></h2>
+  <p id="idEconHmnatt044dsn">description::
+    <br>"The Economic Complexity Index (ECI) is a measure that captures the knowledge intensity of an economy by considering the diversity and ubiquity of the products it exports. Here are key points to understand about the ECI:
+    <br>1. **Conceptual Basis**: The ECI is based on the idea that the complexity of an economy is a reflection of the knowledge and capabilities embedded in its productive structure. This means that more complex economies produce a diverse range of sophisticated products.
+    <br>2. **Diversity and Ubiquity**:
+    <br>   - **Diversity** refers to the range of different products a country exports. A higher diversity indicates a more complex economy.
+    <br>   - **Ubiquity** refers to the number of countries that can produce a given product. Products that are less ubiquitous (i.e., produced by fewer countries) tend to be more complex.
+    <br>3. **Calculation**: The ECI is calculated using a network analysis approach where countries and products form a bipartite network. The index takes into account:
+    <br>   - The number of products a country exports.
+    <br>   - The number of countries that export each product.
+    <br>   The method involves iterating these relationships to reflect the interdependencies and capabilities required for production.
+    <br>4. **Implications**:
+    <br>   - **Economic Development**: Higher economic complexity is associated with higher levels of income and economic growth. Countries with high ECI scores typically have more advanced industries and higher levels of innovation.
+    <br>   - **Policy Insights**: Policymakers can use the ECI to identify sectors with high potential for development, helping to craft strategies for economic diversification and growth.
+    <br>5. **Global Rankings**: Countries are ranked based on their ECI scores. Developed economies like Japan, Germany, and the United States often score highly due to their diverse and sophisticated industrial bases. Developing economies with less diversified exports typically have lower ECI scores.
+    <br>6. **Applications**:
+    <br>   - **Economic Forecasting**: The ECI can be used to predict future economic growth by analyzing the complexity of a country's exports.
+    <br>   - **Strategic Planning**: Governments and businesses can use the ECI to identify comparative advantages and target industries for investment and development.
+    <br>Overall, the Economic Complexity Index provides valuable insights into the productive capabilities and potential of economies, guiding decisions in economic policy and business strategy."
+    <br>[{2024-06-20 retrieved} https://chatgpt.com/c/0c6f6040-6ed8-4ac7-a443-d559cf1ffd9b]
+    <a class="clsHide" href="#idEconHmnatt044dsn"></a></p>
+  <p id="idEconHmnatt044nam">name::
+    <br>* McsEngl.ECI-economic-complexity-index,
+    <br>* McsEngl.Econeval.economic-complexity-index,
+    <br>* McsEngl.Socecon'att044-economic-complexity-index,
+    <br>* McsEngl.Socecon'economic-complexity-index,
+    <br>* McsEngl.economic-complexity-index,
+    <br>* McsEngl.economic-complexity-index//evaluation-of-Socecon,
+    <br>====== langoChinese:
+    <br>* McsZhon.jīngjì-fùzá-xìng-zhǐshù-经济复杂性指数!=economic-complexity-index,
+    <br>* McsZhon.经济复杂性指数-jīngjì-fùzá-xìng-zhǐshù!=economic-complexity-index,
+    <a class="clsHide" href="#idEconHmnatt044nam"></a></p>
+  </section>
 </section>
 
 <section id="idEconHmndigi">
@@ -1701,301 +2321,6 @@
     <br>* McsEngl.Socecon'misc-attribute,
     <a class="clsHide" href="#idEconHmnmiscnam"></a></p>
 
-  <section id="idEconHmnatt010">
-  <h2 id="idEconHmnatt010H2">GDP of Socecon
-    <a class="clsHide" href="#idEconHmnatt010H2"></a></h2>
-  <p id="idEconHmnatt010dsn">description::
-    <br>">GDP definition:
-    <br>Gross Domestic Product (GDP) is the total monetary or market value of all the finished goods and services produced within a country's borders in a specific time period. As a broad measure of overall domestic production, it functions as a comprehensive scorecard of a country’s economic health. GDP can be calculated using three approaches:
-    <br>1. **Production (or output) approach**: Summing up the outputs of every class of enterprise to arrive at the total. This method calculates the value added at each stage of production.
-    <br>2. **Income approach**: Summing the total compensations to employees, gross profits for incorporated and non incorporated firms, and taxes less any subsidies.
-    <br>3. **Expenditure approach**: Summing the total expenditures made for final goods and services at any given time period. This method is the most common and is calculated by adding consumption, investment, government spending, and net exports (exports minus imports).
-    <br>GDP can be measured in nominal terms, which represent current market prices, or in real terms, which are adjusted for inflation. Real GDP provides a more accurate reflection of an economy's size and how it's growing over time."
-    <br>[{2024-02-24 retrieved} https://chat.openai.com/c/7fb3a57d-bee2-46ea-9773-43ff7184bcb9]
-    <br>
-    <br>"GDP: The sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Data is in current U.S. dollars. Dollar figures for GDP are converted from domestic currencies using single year official exchange rates. For a few countries where the official exchange rate does not reflect the rate effectively applied to actual foreign exchange transactions, an alternative conversion factor is used."
-    <br>[{2021-02-24} https://wolframalpha.com]
-    <a class="clsHide" href="#idEconHmnatt010dsn"></a></p>
-  <p id="idEconHmnatt010nam">name::
-    <br>* McsEngl.GDP!=Gross-Domestic-Product,
-    <br>* McsEngl.GDP//Socecon,
-    <br>* McsEngl.Socecon'att010-GDP,
-    <br>* McsEngl.Socecon/GDP,
-    <br>* McsEngl.society'GDP,
-    <a class="clsHide" href="#idEconHmnatt010nam"></a></p>
-
-  <section id="idEconHmnatt010eval">
-  <h3 id="idEconHmnatt010evalH3">evaluation of GDP
-    <a class="clsHide" href="#idEconHmnatt010evalH3"></a></h3>
-  <p id="idEconHmnatt010evaldsn">description::
-    <br>"Limitations of GDP
-    <br>While GDP is a useful measure of economic activity, it has several limitations:
-    <br>* It does not measure all economic activity: GDP does not include the value of non-market goods and services, such as household labor and volunteer work.
-    <br>* It can be affected by inflation: Nominal GDP can be misleading because it can be inflated by rising prices.
-    <br>* It can be volatile: GDP can fluctuate from quarter to quarter, making it difficult to track long-term trends."
-    <br>[{2023-12-14 retrieved} https://bard.google.com/chat/a339146ece739154]
-    <a class="clsHide" href="#idEconHmnatt010evaldsn"></a></p>
-  <p id="idEconHmnatt010evalnam">name::
-    <br>* McsEngl.GDP'evaluation,
-    <a class="clsHide" href="#idEconHmnatt010evalnam"></a></p>
-  </section>
-
-  <section id="idEconHmnatt031">
-  <h3 id="idEconHmnatt031H3">GDP.nominal of Socecon
-    <a class="clsHide" href="#idEconHmnatt031H3"></a></h3>
-  <p id="idEconHmnatt031dsn">description::
-    <br>">nominal GDP:
-    <br>Nominal GDP, or Gross Domestic Product at current prices, measures the value of all finished goods and services produced within a country's borders in a specific time period, using current market prices. Unlike real GDP, nominal GDP does not adjust for inflation or price changes over time. This means that nominal GDP can increase simply because of inflation, even if the actual volume of goods and services produced does not change.
-    <br>Nominal GDP is important for several reasons:
-    <br>1. **Economic Size**: It provides a snapshot of the economic size and output of a country at current market prices, offering a straightforward way to compare the economic performance of different countries or the same country over different years.
-    <br>2. **Year-to-Year Comparisons**: It is useful for year-to-year comparisons in environments with low inflation or for short-term analysis.
-    <br>3. **Government Policy and Budgeting**: Governments often use nominal GDP for budgeting and policy planning, as tax revenues and spending are in current prices.
-    <br>4. **Debt-to-GDP Ratios**: Nominal GDP figures are used to calculate debt-to-GDP ratios, an important indicator of a country's financial health.
-    <br>To calculate nominal GDP, you can use one of three approaches:
-    <br>1. **Production (Output) Approach**: Adding up the value of all goods and services produced.
-    <br>2. **Income Approach**: Summing all incomes generated by production, including wages, profits, and taxes minus subsidies.
-    <br>3. **Expenditure Approach**: Adding up all expenditures or spending that occurred within the economy, including consumption, investment, government spending, and net exports (exports minus imports).
-    <br>Nominal GDP is reported by national statistical agencies and international organizations such as the World Bank and the International Monetary Fund (IMF). It's a critical economic indicator that provides insights into the economic health and performance of a country, although it's often considered alongside real GDP to get a fuller picture of economic conditions, particularly over longer periods or in environments with significant inflation."
-    <br>[{2024-03-02 retrieved} https://chat.openai.com/c/4605a332-7a93-4f28-a32d-205761795acb]
-    <a class="clsHide" href="#idEconHmnatt031dsn"></a></p>
-  <p id="idEconHmnatt031nam">name::
-    <br>* McsEngl.GDP.nominal!⇒GdpNominal,
-    <br>* McsEngl.GdpNominal!=nominal-GDP,
-    <br>* McsEngl.Socecon'att032-nominal-GDP!⇒GdpNominal,
-    <br>* McsEngl.Socecon'nominal-GDP!⇒GdpNominal,
-    <br>* McsEngl.nominal-GDP!⇒GdpNominal,
-    <a class="clsHide" href="#idEconHmnatt031nam"></a></p>
-  </section>
-
-  <section id="idEconHmnatt012">
-  <h3 id="idEconHmnatt012H3">GDP.real of Socecon
-    <a class="clsHide" href="#idEconHmnatt012H3"></a></h3>
-  <p id="idEconHmnatt012dsn">description::
-    <br>"real GDP: The sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Data is in constant 2000 U.S. dollars. Dollar figures for GDP are converted from domestic currencies using 2000 official exchange rates. For a few countries where the official exchange rate does not reflect the rate effectively applied to actual foreign exchange transactions, an alternative conversion factor is used."
-    <br>[{2021-02-24} https://wolframalpha.com]
-    <a class="clsHide" href="#idEconHmnatt012dsn"></a></p>
-  <p id="idEconHmnatt012nam">name::
-    <br>* McsEngl.GDP.real!⇒GdpReal,
-    <br>* McsEngl.GdpReal!=real-GDP,
-    <br>* McsEngl.Socecon'att012-real-GDP!⇒GdpReal,
-    <br>* McsEngl.Socecon'real-GDP!⇒GdpReal,
-    <br>* McsEngl.real-GDP!⇒GdpReal,
-    <br>* McsEngl.society'real-GDP!⇒GdpReal,
-    <a class="clsHide" href="#idEconHmnatt012nam"></a></p>
-
-  <section id="idEconHmnatt012rtppp">
-  <h4 id="idEconHmnatt012rtpppH4">relation-to-GdpPpp of GdpReal
-    <a class="clsHide" href="#idEconHmnatt012rtpppH4"></a></h4>
-  <p id="idEconHmnatt012rtpppdsn">description::
-    <br>">gdp at parity vs real gdp:
-    <br>GDP at parity, also known as GDP at Purchasing Power Parity (PPP), and real GDP are both ways to measure a country's economic output, but they differ in how they account for prices:
-    <br>* **Real GDP:** This refers to the total value of goods and services produced in a country, adjusted for inflation. It uses the same currency throughout the analysis (usually the country's own currency) for a year, eliminating the effect of inflation on the final number. This allows you to see the actual growth or decline in production over time within that country.
-    <br>* **GDP at Parity (PPP):** This takes real GDP a step further and adjusts it for differences in the cost of living between countries.  Imagine a basket of essential goods (food, clothing, housing) - PPP calculates how much it would cost to buy that same basket in different countries. This allows for a more accurate comparison of living standards and economic output between nations with very different currencies and price structures.
-    <br>Here's an analogy:
-    <br>* Think of real GDP as comparing the physical size (weight) of apples produced by two countries.
-    <br>* GDP at Parity (PPP) would be like comparing how many apples you can buy with a set amount of money in each country.
-    <br>**In short:**
-    <br>* **Real GDP:** Growth within a country over time (adjusted for inflation)
-    <br>* **GDP at Parity (PPP):** Compares economic output and living standards between countries
-    <br>**Use cases:**
-    <br>* **Real GDP:** Useful for tracking a country's own economic growth or decline.
-    <br>* **GDP at Parity (PPP):** More helpful for comparing the economic well-being and purchasing power of citizens in different countries."
-    <br>[{2024-03-02 retrieved} https://gemini.google.com/app/5a32b5afd23c294d]
-    <a class="clsHide" href="#idEconHmnatt012rtpppdsn"></a></p>
-  <p id="idEconHmnatt012rtpppnam">name::
-    <br>* McsEngl.GdpPpp'relation-to-GdpReal,
-    <br>* McsEngl.GdpReal'relation-to-GdpPpp,
-    <a class="clsHide" href="#idEconHmnatt012rtpppnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idEconHmnatt011">
-  <h3 id="idEconHmnatt011H3">GDP.at-parity of Socecon
-    <a class="clsHide" href="#idEconHmnatt011H3"></a></h3>
-  <p id="idEconHmnatt011dsn">description::
-    <br>"GDP at parity: PPP GDP is gross domestic product converted to international dollars using purchasing power parity rates. An international dollar has the same purchasing power over GDP as the U.S. dollar has in the United States. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Data are in current international dollars."
-    <br>[{2021-02-24} https://wolframalpha.com]
-    <br>
-    <br>">GDP at parity:
-    <br>GDP at parity, also known as purchasing power parity (PPP) GDP, is a measure of a country's economic output that adjusts for differences in the price levels of goods and services between countries. This means that PPP GDP can be used to compare the economic prosperity of countries that have different currencies and exchange rates.
-    <br>
-    <br>PPP GDP is calculated by comparing the prices of a basket of goods and services in different countries. This basket of goods and services usually includes a representative sample of consumer goods and services that are commonly purchased by households. The prices of these goods and services are then converted into a common currency, such as the United States dollar, using exchange rates that reflect the purchasing power of each currency.
-    <br>
-    <br>The resulting PPP GDP figure is a measure of the amount of goods and services that a country can purchase with its currency. This is a more accurate measure of a country's economic prosperity than nominal GDP, which is not adjusted for differences in price levels.
-    <br>
-    <br>**Advantages of PPP GDP**
-    <br>There are several advantages to using PPP GDP instead of nominal GDP:
-    <br>* It is more comparable across countries. PPP GDP takes into account differences in the price levels of goods and services between countries, which means that it can be used to compare the economic prosperity of countries that have different currencies and exchange rates.
-    <br>* It is a better measure of a country's standard of living. PPP GDP reflects the amount of goods and services that a country's currency can purchase, which is a more direct measure of a country's standard of living than nominal GDP.
-    <br>* It is less sensitive to exchange rate fluctuations. Nominal GDP can be volatile due to changes in exchange rates, but PPP GDP is less sensitive to these fluctuations.
-    <br>
-    <br>**Disadvantages of PPP GDP**
-    <br>There are also some disadvantages to using PPP GDP:
-    <br>* It can be difficult to calculate. The calculation of PPP GDP is more complex than the calculation of nominal GDP, and it requires more data.
-    <br>* It is not always accurate. The accuracy of PPP GDP data can be affected by factors such as the quality of the data, the selection of the basket of goods and services, and the method used to adjust for price differences.
-    <br>* It is not a perfect measure of economic prosperity. PPP GDP is a useful measure of economic prosperity, but it is not a perfect measure. It does not take into account factors such as inequality, environmental quality, and human development.
-    <br>
-    <br>Despite these disadvantages, PPP GDP is a valuable tool for economists and policymakers. It can be used to compare the economic prosperity of different countries, to track trends in economic growth, and to make policy decisions.
-    <br>
-    <br>Here is a table summarizing the key advantages and disadvantages of PPP GDP:
-    <br>| Feature | Advantages | Disadvantages |
-    <br>| Comparability | More comparable across countries | More complex to calculate |
-    <br>| Standard of living | Better measure of standard of living | Less sensitive to exchange rate fluctuations |
-    <br>| Accuracy | Not always accurate | Does not take into account factors such as inequality, environmental quality, and human development |
-    <br>| Usefulness | Valuable tool for economists and policymakers | |"
-    <br>[{2023-12-14 retrieved} https://bard.google.com/chat/a339146ece739154]
-    <a class="clsHide" href="#idEconHmnatt011dsn"></a></p>
-  <p id="idEconHmnatt011nam">name::
-    <br>* McsEngl.GDP.PPP!⇒GdpPpp,
-    <br>* McsEngl.GDP.at-parity!⇒GdpPpp,
-    <br>* McsEngl.GdpPpp!=GDP-at-parity,
-    <br>* McsEngl.PPP-GDP!⇒GdpPpp,
-    <br>* McsEngl.Socecon'att011-GDP-at-parity!⇒GdpPpp,
-    <br>* McsEngl.Socecon'GDP-at-parity!⇒GdpPpp,
-    <br>* McsEngl.purchasing-power-parity-GDP!⇒GdpPpp,
-    <br>* McsEngl.society'GDP-at-parity!⇒GdpPpp,
-    <a class="clsHide" href="#idEconHmnatt011nam"></a></p>
-
-  <section id="idEconHmnatt011Soc">
-  <h4 id="idEconHmnatt011SocH4">GdpPpp.per-society
-    <a class="clsHide" href="#idEconHmnatt011SocH4"></a></h4>
-  <p id="idEconHmnatt011Socdsn">description::
-    <br>"GDP based on PPP, share of world:
-    <br>* 🇨🇳 China: 19.05%
-    <br>* 🇺🇸 USA: 15.2%
-    <br>* 🇮🇳 India: 7.75%
-    <br>* 🇯🇵 Japan: 3.65%
-    <br>* 🇩🇪 Germany: 3.11%
-    <br>* 🇷🇺 Russia: 2.84%
-    <br>* 🇮🇩 Indonesia: 2.56%
-    <br>* 🇧🇷 Brazil: 2.31%
-    <br>* 🇫🇷 France: 2.18%
-    <br>* 🇬🇧 UK: 2.17%
-    <br>* 🇹🇷 Turkey: 2.07%
-    <br>* 🇲🇽 Mexico: 1.86%
-    <br>* 🇮🇹 Italy: 1.79%
-    <br>* 🇰🇷 South Korea: 1.66%
-    <br>* 🇪🇸 Spain: 1.36%
-    <br>* 🇨🇦 Canada: 1.34%
-    <br>* 🇸🇦 Saudi Arabia: 1.30%
-    <br>* 🇪🇬 Egypt: 1.04%
-    <br>* 🇮🇷 Iran: 0.98%
-    <br>* 🇵🇱 Poland: 0.97%
-    <br>* 🇦🇺 Australia: 0.97%
-    <br>* 🇵🇰 Pakistan: 0.89%
-    <br>* 🇳🇬 Nigeria: 0.78%
-    <br>* 🇦🇷 Argentina: 0.71%
-    <br>* 🇦🇪 UAE: 0.52%
-    <br>* 🇦🇹 Austria: 0.35%
-    <br>* 🇺🇦 Ukraine: 0.27%
-    <br>* 🇳🇴 Norway: 0.26%
-    <br>* 🇻🇪 Venezuela: 0.12%
-    <br>* 🇸🇮 Slovenia: 0.06%
-    <br>* 🇪🇪 Estonia: 0.04%
-    <br>* 🇳🇪 Niger: 0.03%
-    <br>* 🇮🇸 Iceland: 0.02%
-    <br>* 🇲🇪 Montenegro: 0.01%
-    <br>According to IMF"
-    <br>[{2024-01-08 retrieved} https://twitter.com/stats_feed/status/1744352644091765227]
-    <a class="clsHide" href="#idEconHmnatt011Socdsn"></a></p>
-  <p id="idEconHmnatt011Socnam">name::
-    <br>* McsEngl.GdpPpp.per-society,
-    <a class="clsHide" href="#idEconHmnatt011Socnam"></a></p>
-  </section>
-  </section>
-
-  <section id="idEconHmnatt033">
-  <h3 id="idEconHmnatt033H3">GDP.by-component of Socecon
-    <a class="clsHide" href="#idEconHmnatt033H3"></a></h3>
-  <p id="idEconHmnatt033dsn">description::
-    <br>* 	Private consumption,
-    <br>* Government consumption,
-    <br>* Gross capital formation,
-    <br>* Net exports,
-    <a class="clsHide" href="#idEconHmnatt033dsn"></a></p>
-  <p id="idEconHmnatt033nam">name::
-    <br>* McsEngl.Socecon'att033-GDP.by-component,
-    <br>* McsEngl.Socecon'GDP.by-component,
-    <br>* McsEngl.GDP.by-component,
-    <a class="clsHide" href="#idEconHmnatt033nam"></a></p>
-  </section>
-
-  <section id="idEconHmnatt034">
-  <h3 id="idEconHmnatt034H3">GDP.by-sector of Socecon
-    <a class="clsHide" href="#idEconHmnatt034H3"></a></h3>
-  <p id="idEconHmnatt034dsn">description::
-    <br>* 	primary-Agriculture,
-    <br>* 	secondary-Industry,
-    <br>* 	tertriary-Services,
-    <a class="clsHide" href="#idEconHmnatt034dsn"></a></p>
-  <p id="idEconHmnatt034nam">name::
-    <br>* McsEngl.Socecon'att034-GDP.by-sector,
-    <br>* McsEngl.Socecon'GDP.by-sector,
-    <br>* McsEngl.GDP.by-industry,
-    <a class="clsHide" href="#idEconHmnatt034nam"></a></p>
-  </section>
-
-  <section id="idEconHmnatt013">
-  <h3 id="idEconHmnatt013H3">GDP.per-capita of Socecon
-    <a class="clsHide" href="#idEconHmnatt013H3"></a></h3>
-  <p id="idEconHmnatt013dsn">description::
-    <br>"GDP per capita: Gross domestic product divided by midyear population. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Data is in current U.S. dollars."
-    <br>[{2021-02-24} https://wolframalpha.com]
-    <a class="clsHide" href="#idEconHmnatt013dsn"></a></p>
-  <p id="idEconHmnatt013nam">name::
-    <br>* McsEngl.GDP.per-capita,
-    <br>* McsEngl.Socecon'att013-GDP-per-capita,
-    <br>* McsEngl.Socecon'GDP-per-capita,
-    <br>* McsEngl.society'GDP-per-capita,
-    <a class="clsHide" href="#idEconHmnatt013nam"></a></p>
-  </section>
-
-  <section id="idEconHmnatt014">
-  <h3 id="idEconHmnatt014H3">GDP.real-growth of Socecon
-    <a class="clsHide" href="#idEconHmnatt014H3"></a></h3>
-  <p id="idEconHmnatt014dsn">description::
-    <br>"GDP real growth: The sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Aggregates are based on constant 2000 U.S. dollars."
-    <br>[{2021-02-24} https://wolframalpha.com]
-    <a class="clsHide" href="#idEconHmnatt014dsn"></a></p>
-  <p id="idEconHmnatt014nam">name::
-    <br>* McsEngl.GDP.real-growth,
-    <br>* McsEngl.Socecon'att014-GDP-real-growth,
-    <br>* McsEngl.Socecon'GDP-real-growth,
-    <br>* McsEngl.society'GDP-real-growth,
-    <a class="clsHide" href="#idEconHmnatt014nam"></a></p>
-  </section>
-  </section>
-
-  <section id="idEconHmnatt017">
-  <h2 id="idEconHmnatt017H2">HDI of Socecon
-    <a class="clsHide" href="#idEconHmnatt017H2"></a></h2>
-  <p id="idEconHmnatt017dsn">description::
-    <br>"The Human Development Index (HDI) is a statistic composite index of life expectancy, education (literacy rate, gross enrollment ratio at different levels and net attendance ratio), and per capita income indicators, which are used to rank countries into four tiers of human development. A country scores a higher HDI when the lifespan is higher, the education level is higher, and the gross national income GNI (PPP) per capita is higher. It was developed by Pakistani economist Mahbub ul Haq and was further used to measure a country's development by the United Nations Development Programme (UNDP)'s Human Development Report Office.[1][2][3]"
-    <br>[{2021-02-25} https://en.wikipedia.org/wiki/Human_Development_Index]
-    <a class="clsHide" href="#idEconHmnatt017dsn"></a></p>
-  <p id="idEconHmnatt017nam">name::
-    <br>* McsEngl.HDI!=Human-Development-Index,
-    <br>* McsEngl.HDI//Socecon,
-    <br>* McsEngl.Socecon'att017-HDI,
-    <br>* McsEngl.Socecon/HDI,
-    <a class="clsHide" href="#idEconHmnatt017nam"></a></p>
-  </section>
-
-  <section id="idEconHmnatt015">
-  <h2 id="idEconHmnatt015H2">Gini-index of Socecon
-    <a class="clsHide" href="#idEconHmnatt015H2"></a></h2>
-  <p id="idEconHmnatt015dsn">description::
-    <br>"Gini index: The extent to which the distribution of income (or, in some cases, consumption expenditure) among individuals or households within an economy deviates from a perfectly equal distribution. A Lorenz curve plots the cumulative percentages of total income received against the cumulative number of recipients, starting with the poorest individual or household. The Gini index measures the area between the Lorenz curve and a hypothetical line of absolute equality, expressed as a fraction of the maximum area under the line. Thus a Gini index of 0 represents perfect equality, while an index of 1 implies perfect inequality."
-    <br>[{2021-02-24} https://wolframalpha.com]
-    <a class="clsHide" href="#idEconHmnatt015dsn"></a></p>
-  <p id="idEconHmnatt015nam">name::
-    <br>* McsEngl.Gini-index,
-    <br>* McsEngl.Socecon'att015-Gini-index,
-    <br>* McsEngl.Socecon'Gini-index,
-    <br>* McsEngl.society'Gini-index,
-    <a class="clsHide" href="#idEconHmnatt015nam"></a></p>
-  </section>
-
   <section id="idEconHmnatt016">
   <h2 id="idEconHmnatt016H2">consumer-price-inflation of Socecon
     <a class="clsHide" href="#idEconHmnatt016H2"></a></h2>
@@ -2039,12 +2364,12 @@
 <section id="idEconHmnrscF">
   <h1 id="idEconHmnrscFH1">info-resource of Socecon
     <a class="clsHide" href="#idEconHmnrscFH1"></a></h1>
-  <p id="idEconHmnrscnam">name::
-    <br>* McsEngl.Socecon'Infrsc,
-    <a class="clsHide" href="#idEconHmnrscnam"></a></p>
   <p id="idEconHmnrscwpa">addressWpg::
     <br>*
     <a class="clsHide" href="#idEconHmnrscwpa"></a></p>
+  <p id="idEconHmnrscnam">name::
+    <br>* McsEngl.Socecon'Infrsc,
+    <a class="clsHide" href="#idEconHmnrscnam"></a></p>
 </section>
 
 <section id="idEconHmnsrtrF">
@@ -3172,19 +3497,19 @@
     <br>* McsEngl.Socecon.eco!⇒econEco,
     <a class="clsHide" href="#idEconHmn001nam"></a></p>
 
-  <section id="idEconHmnrscF">
-  <h2 id="idEconHmnrscFH2">info-resource of econEco
-    <a class="clsHide" href="#idEconHmnrscFH2"></a></h2>
-  <p id="idEconHmnrscFdsn">description::
+  <section id="idEconHmn001rscF">
+  <h2 id="idEconHmn001rscFH2">info-resource of econEco
+    <a class="clsHide" href="#idEconHmn001rscFH2"></a></h2>
+  <p id="idEconHmn001rscFdsn">description::
     <br>* https://en.wikipedia.org/wiki/Ecology,
     <br>* https://en.wikipedia.org/wiki/Eco-industrial_development,
     <br>* https://www.theblueeconomy.org/,
     <br>* https://en.wikipedia.org/wiki/Green_economy,
     <br>* https://en.wikipedia.org/wiki/Environmental_economics,
-    <a class="clsHide" href="#idEconHmnrscFdsn"></a></p>
-  <p id="idEconHmnrscFnam">name::
+    <a class="clsHide" href="#idEconHmn001rscFdsn"></a></p>
+  <p id="idEconHmn001rscFnam">name::
     <br>* McsEngl.econEco'Infrsc,
-    <a class="clsHide" href="#idEconHmnrscFnam"></a></p>
+    <a class="clsHide" href="#idEconHmn001rscFnam"></a></p>
   </section>
 
   <section id="idEconHmn003">
