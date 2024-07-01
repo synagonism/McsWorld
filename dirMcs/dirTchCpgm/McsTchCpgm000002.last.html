@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Cmrpgm!=computer-program (McsTchCpgm000002.1-17-0.2024-05-18)</title>
+  <title>Mcs.Cmrpgm!=computer-program (McsTchCpgm000002.1-19-0.2024-06-27)</title>
   <meta name="keywords" content="computer-program, Cmrpgm, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -435,14 +435,16 @@
     <br>Writing about science often involves using symbols. Unfortunately, few of the symbols we need can be found on the keyboard, which presents a problem. It is not difficult to copy and paste symbols needed, but it is tedious and annoying. Here I present a solution that lets you input any symbol by simply typing its name (prepended with a slash)."
     <br>[{2022-12-04 retrieved} https://brushingupscience.com/2015/12/28/add-any-symbol-without-leaving-the-keyboard/]
     <br>
-    <br>· my <span class="clsColorRed">AutoHotKey.ahk</span> file:
+    <br>· usage: a) write the-code of the-char (eg '&Uuml') b) press space c) you see 'Ü'.
+    <br>
+    <br>· my <span class="clsColorRed">AutoHotKey.ahk</span> file.
     <br>· my AutoHotkeyScript.ahk contains the-unicode-characters of the-HTML and TeX|LaTeX notations.
     <br>· so, if you know the-name of a-unicode-character in Html|Tex, you can write it from the-keyborad in any app.
-    <br>· HTML-char: <span class="clsColorRed">;and</span> denotes ∧.
-    <br>· HTML-char: <span class="clsColorRed">;And</span> denotes ⩓.
+    <br>· HTML-char: <span class="clsColorRed">&amp;and</span> denotes ∧.
+    <br>· HTML-char: <span class="clsColorRed">&amp;And</span> denotes ⩓.
     <br>· TeX-char: <span class="clsColorRed">\N</span> denotes ℕ.
     <br>· TeX-char: <span class="clsColorRed">\to</span> denotes →.
-    <br>· in this site to find an-Html-Tex code search for (F2):
+    <br>· in this SITE to find an-Html-Tex code search for (F2):
     <br>* <span class="clsColorRed">charHtmlCode.name</span>: to-find a-unicode-Html-char, per Html-name,
     <br>* <span class="clsColorRed">charHtmlInt.integer</span>: to-find a-unicode-Html-char per unicode-codepoint,
     <br>* <span class="clsColorRed">charHtmlUcnm.NAME</span>: to-find a-unicode-Html-char per unicode-name,
@@ -452,15 +454,19 @@
     <br><code>#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
     <br>SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
     <br>
-    <br>::aam::ā
-    <br>::aaa::á
+    <br>;;;; CUSTOM-codes (:)
+    <br>:::am::ā
+    <br>:::aa::á
     <br>
-    <br>;;;; HTML-codes
-    <br>::;;And::⩓
-    <br>::;and::∧
+    <br>;;;; NUMBER-codes (ii)
+    <br>::ii128::€
     <br>
-    <br>;;;; TeX-codes
-    <br>::\\N::ℕ
+    <br>;;;; HTML-codes (&amp;)
+    <br>::&amp;And::⩓
+    <br>::&amp;and::∧
+    <br>
+    <br>;;;; TeX-codes (\)
+    <br>::\N::ℕ
     <br>::\forall::∀</code>
     <br>
     <br>· in my windows-system I put this file on startup-folder (%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\AutoHotkeyScript.ahk).
@@ -472,13 +478,18 @@
     <br>3) double click on script .ahk, to use it.
     <a class="clsHide" href="#idCpgm001Inssdsn"></a></p>
   <p id="idCpgm001Inssnam">name::
-    <br>* McsEngl.AutoHotKey-app,
-    <br>* McsEngl.AutoKey-app,
-    <br>* McsEngl.insert-any-character,
-    <br>* McsEngl.app.AutoHotKey,
-    <br>* McsEngl.app.AutoKey,
-    <br>* McsEngl.app.insert-symbol,
-    <br>* McsEngl.write-any-character--app,
+    <br>* McsEngl.AutoHotKey-app!⇒ahk,
+    <br>* McsEngl.AutoKey-app!⇒ahk,
+    <br>* McsEngl.ahk!=AutoHotKey,
+    <br>* McsEngl.ahk.custom!=AutoHotKey-custom-notation-with-:,
+    <br>* McsEngl.ahk.Html!=AutoHotKey-Html-notation-with-;,
+    <br>* McsEngl.ahk.number!=AutoHotKey-number-notation-with-ii,
+    <br>* McsEngl.ahk.Tex!=AutoHotKey-TeX-notation-with-&#92;,
+    <br>* McsEngl.app.AutoHotKey!⇒ahk,
+    <br>* McsEngl.app.AutoKey!⇒ahk,
+    <br>* McsEngl.app.insert-symbol!⇒ahk,
+    <br>* McsEngl.insert-any-character!⇒ahk,
+    <br>* McsEngl.write-any-character--app!⇒ahk,
     <a class="clsHide" href="#idCpgm001Inssnam"></a></p>
   </section>
 
