@@ -1,5 +1,5 @@
 ﻿; comments
-; version {2024-06-27}
+; version {2024-07-05}
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -16,9 +16,9 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ; Acute        :aa = á      &aacute
 ; Breve        :ab = ă      &abreve
 ; Caron        :ac = ǎ      &acaron
-; ceDilla      :cd = ç      &ccedil
-; circumFlex   ;cf = â      &acirc
-; dotLess      :il = ı
+; cediLla      :cl = ç      &ccedil
+; circumFlex   :cf = â      &acirc
+; Dotless      :id = ı      &imath
 ; Grave        :ag = à      &agrave
 ; Macron       :am = ā      &amacr
 ; Ring         :ar = å      &aring
@@ -47,7 +47,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 :::ia::í
 :::ic::ǐ
 :::ig::ì
-:::il::ı
+:::id::ı
 :::iu::ï
 
 :::om::ō
@@ -62,7 +62,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 :::ug::ù
 :::uu::ü
 
-:::cd::ç
+:::cl::ç
 :::cf::ĉ
 
 :::gb::ğ
@@ -73,7 +73,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 
 :::jf::ĵ
 
-:::sd::ş
+:::sl::ş
 :::sf::ŝ
 
 ::ii128::€
@@ -86,7 +86,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ::ii215::×
 
 ::ii305::ı
-:::idl::ı
+:::id::ı
 
 ::ii12290::。
 :::ZhonFullstop::。

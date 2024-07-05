@@ -45,6 +45,7 @@ import {fSftp} from './mSftp.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mMcsNew.mjs.1-3-6.2024-07-04: parent-child-tree',
     'mMcsNew.mjs.1-3-5.2024-02-27: parent-child-tree',
     'mMcsNew.mjs.1-3-4.2023-12-12: title !=',
     'mMcsNew.mjs.1-3-3.2023-12-12: title',
@@ -97,12 +98,12 @@ let
   sDir = 'dirStn',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'United-States-of-America',
+  sName = 'Turkey',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'socUsaa',
+  sNameShort = 'socTurk',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'SocUsaa',
+  sNameId = 'SocTurk',
 
 
   sNameFile = '',
@@ -209,10 +210,10 @@ s =
   '<section id="id' + sNameId + 'pctF">\n' +
   '  <h1 id="id' + sNameId + 'pctFH1">PARENT-CHILD-TREE of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'pctFH1"></a></h1>\n' +
-  '  <p id="id' + sNameId + 'ptr">parent-tree-of-' + sNameShort + '::\n' +
+  '  <p id="id' + sNameId + 'pntr">parent-tree-of-' + sNameShort + '::\n' +
   '    <br>* ,\n' +
   '    <br>* McsEngl.' + sNameShort + '\'parent-tree,\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'ptr"></a></p>\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'pntr"></a></p>\n' +
   '  <p id="id' + sNameId + 'ctr">child-tree-of-' + sNameShort + '::\n' +
   '    <br>* ,\n' +
   '    <br>* McsEngl.' + sNameShort + '\'child-tree,\n' +
