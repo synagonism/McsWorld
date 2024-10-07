@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.quantο-(McsCor000010.1-68-0.2024-06-29) abstract-quantity</title>
+  <title>Mcs.quantο!=abstract-quantity (McsCor000010.1-69-0.2024-09-21)</title>
   <meta name="keywords" content="abstract-quantity, quantity, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -336,7 +336,7 @@
   <h3 id="idQntNbrnmrlsysdthcH3">converter.numeral-systems
     <a class="clsHide" href="#idQntNbrnmrlsysdthcH3"></a></h3>
   <p id="idQntNbrnmrlsysdthcdsn">description::
-    <br>· type a-number in any numeral-system and hit <code>Enter</code>:
+    <br>· type a-number in any numeral-system:
     <br><span id="idSpnErr" class="clsSizeLarge clsColorRed"></span>
     <br><strong>· decimal-number&nbsp; &nbsp; </strong>: <input type="text" id="idIptDcml" value="10" class="clsSizeLarge">
     <br> &nbsp; digits: 0123456789
@@ -407,7 +407,7 @@
   <p id="idQntNbrnmrlsys16dsn">description::
     <br>· base: 16
     <br>· digits: 0 1 2 3 4 5 6 7 8 9 A B C D E F
-    <br>· 6A3F<sub>dec</sub> = (6x16<sup>3</sup>)+(10x16<sup>2</sup>)+(3x16<sup>1</sup>)+(15x16<sup>0</sup>) = 27,199<sub>dec</sub>
+    <br>· 6A3F<sub>hex</sub> = (6x16<sup>3</sup>)+(10x16<sup>2</sup>)+(3x16<sup>1</sup>)+(15x16<sup>0</sup>) = 27,199<sub>dec</sub>
     <a class="clsHide" href="#idQntNbrnmrlsys16dsn"></a></p>
   <p id="idQntNbrnmrlsys16nam">name::
     <br>* McsEngl.hexadecimal-numeral-system,
@@ -2865,58 +2865,50 @@
     oSpnErr = document.getElementById('idSpnErr')
 
   // converts from decimals
-  oIptDcml.addEventListener('keyup', function(oEvtIn) {
-    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
-      if (!/^[0-9]+$/.test(oIptDcml.value)) {
-        oSpnErr.innerHTML = ' &nbsp; &nbsp; ERROR: "' +oIptDcml.value +'" is NOT a decimal-number'
-      } else {
-        oSpnErr.innerHTML = ''
-        oIptHxdl.value = Number(oIptDcml.value).toString(16)
-        oIptOctl.value = Number(oIptDcml.value).toString(8)
-        oIptBnry.value = Number(oIptDcml.value).toString(2)
-      }
+  oIptDcml.addEventListener('input', function(oEvtIn) {
+    if (!/^[0-9]+$/.test(oIptDcml.value)) {
+      oSpnErr.innerHTML = ' &nbsp; &nbsp; ERROR: "' +oIptDcml.value +'" is NOT a decimal-number'
+    } else {
+      oSpnErr.innerHTML = ''
+      oIptHxdl.value = Number(oIptDcml.value).toString(16)
+      oIptOctl.value = Number(oIptDcml.value).toString(8)
+      oIptBnry.value = Number(oIptDcml.value).toString(2)
     }
   })
 
   // converts from hexadecimals
-  oIptHxdl.addEventListener('keyup', function(oEvtIn) {
-    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
-      if (!/^[0-9A-Fa-f]+$/.test(oIptHxdl.value)) {
-        oSpnErr.innerHTML = ' &nbsp; &nbsp; ERROR: "' +oIptHxdl.value +'" is NOT a hex-number'
-      } else {
-        oSpnErr.innerHTML = ''
-        oIptDcml.value = parseInt(oIptHxdl.value, 16).toLocaleString()
-        oIptOctl.value = parseInt(oIptHxdl.value, 16).toString(8)
-        oIptBnry.value = parseInt(oIptHxdl.value, 16).toString(2)
-      }
+  oIptHxdl.addEventListener('input', function(oEvtIn) {
+    if (!/^[0-9A-Fa-f]+$/.test(oIptHxdl.value)) {
+      oSpnErr.innerHTML = ' &nbsp; &nbsp; ERROR: "' +oIptHxdl.value +'" is NOT a hex-number'
+    } else {
+      oSpnErr.innerHTML = ''
+      oIptDcml.value = parseInt(oIptHxdl.value, 16).toLocaleString()
+      oIptOctl.value = parseInt(oIptHxdl.value, 16).toString(8)
+      oIptBnry.value = parseInt(oIptHxdl.value, 16).toString(2)
     }
   })
 
   // converts from octals
-  oIptOctl.addEventListener('keyup', function(oEvtIn) {
-    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
-      if (!/^[0-7]+$/.test(oIptOctl.value)) {
-        oSpnErr.innerHTML = ' &nbsp; &nbsp; ERROR: "' +oIptOctl.value +'" is NOT a octal-number'
-      } else {
-        oSpnErr.innerHTML = ''
-        oIptDcml.value = parseInt(oIptOctl.value, 8).toLocaleString()
-        oIptHxdl.value = parseInt(oIptOctl.value, 8).toString(16)
-        oIptBnry.value = parseInt(oIptOctl.value, 8).toString(2)
-      }
+  oIptOctl.addEventListener('input', function(oEvtIn) {
+    if (!/^[0-7]+$/.test(oIptOctl.value)) {
+      oSpnErr.innerHTML = ' &nbsp; &nbsp; ERROR: "' +oIptOctl.value +'" is NOT a octal-number'
+    } else {
+      oSpnErr.innerHTML = ''
+      oIptDcml.value = parseInt(oIptOctl.value, 8).toLocaleString()
+      oIptHxdl.value = parseInt(oIptOctl.value, 8).toString(16)
+      oIptBnry.value = parseInt(oIptOctl.value, 8).toString(2)
     }
   })
 
   // converts from binaries
-  oIptBnry.addEventListener('keyup', function(oEvtIn) {
-    if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
-      if (!/^[0-1]+$/.test(oIptBnry.value)) {
-        oSpnErr.innerHTML = ' &nbsp; &nbsp; ERROR: "' +oIptBnry.value +'" is NOT a binary-number'
-      } else {
-        oSpnErr.innerHTML = ''
-        oIptDcml.value = parseInt(oIptBnry.value, 2).toLocaleString()
-        oIptHxdl.value = parseInt(oIptBnry.value, 2).toString(16)
-        oIptOctl.value = parseInt(oIptBnry.value, 2).toString(8)
-      }
+  oIptBnry.addEventListener('input', function(oEvtIn) {
+    if (!/^[0-1]+$/.test(oIptBnry.value)) {
+      oSpnErr.innerHTML = ' &nbsp; &nbsp; ERROR: "' +oIptBnry.value +'" is NOT a binary-number'
+    } else {
+      oSpnErr.innerHTML = ''
+      oIptDcml.value = parseInt(oIptBnry.value, 2).toLocaleString()
+      oIptHxdl.value = parseInt(oIptBnry.value, 2).toString(16)
+      oIptOctl.value = parseInt(oIptBnry.value, 2).toString(8)
     }
   })
 </script>
@@ -2928,5 +2920,6 @@
   gtag('js', new Date());
   gtag('config', 'G-N8T0MHWLS1');
 </script>
+<!--  -->
 </body>
 </html>
