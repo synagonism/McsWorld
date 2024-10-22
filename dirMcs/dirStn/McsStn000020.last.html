@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.socEusa!=European-Union (McsStn000020.1-31-0.2024-08-30)</title>
+  <title>Mcs.socEusa!=European-Union (McsStn000020.1-32-0.2024-10-22)</title>
   <meta name="keywords" content="European-Union, socEusa, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -17084,7 +17084,7 @@
 
   // finds drachmas, given euros
   document.getElementById('idIptEuro').addEventListener('input', function(oEvtIn) {
-    document.getElementById('idIptDrhm').value = (document.getElementById('idIptEuro').value * 340.75).toFixed(2)
+    document.getElementById('idIptDrhm').value = (oEvtIn.target.value * 340.75).toFixed(2)
   })
 
   // finds euros, given drachmas
