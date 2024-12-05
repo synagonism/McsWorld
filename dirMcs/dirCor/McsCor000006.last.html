@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.time (McsCor000006.1-68-0.2024-08-20)</title>
+  <title>Mcs.time (McsCor000006.1-73-0.2024-12-01)</title>
   <meta name="keywords" content="time, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -1140,14 +1140,15 @@
     <br>* McsEngl.conjEngl.then!=rlnTimeSequence,
     <br>* McsEngl.finally!~conjEngl!=rlnTimeSequence,
     <br>* McsEngl.first!~conjEngl!=rlnTimeSequence,
+    <br>* McsEngl.first..then!~conjEngl!=rlnTimeSequence,
     <br>* McsEngl.rlnTimeSequence,
     <br>* McsEngl.then!~conjEngl!=rlnTimeSequence,
-    <br>* McsEngl.time-line,
-    <br>* McsEngl.time.relative.sequence,
-    <br>* McsEngl.conjZhon.xiān..zài-先..再!=rlnTimeSequence:first..then,
+    <br>* McsEngl.time-line!=rlnTimeSequence,
+    <br>* McsEngl.time.relative.sequence!=rlnTimeSequence,
     <br>====== langoChinese:
     <br>* McsZhon.xiān..zài-先..再!~conjZhon!=rlnTimeSequence:first..then,
     <br>* McsZhon.先..再-xiān..zài !~conjZhon!=rlnTimeSequence:first..then,
+    <br>* McsEngl.conjZhon.xiān..zài-先..再!=rlnTimeSequence:first..then,
     <a class="clsHide" href="#idTimeRltvSqcnam"></a></p>
 
   <section id="idTimeRltvRptg">
@@ -1749,15 +1750,17 @@
     <br>* McsEngl.year-time-Uom,
     <br>* McsEngl.UomTime.year,
     <br>* McsEngl.time.year,
+    <br>* McsEngl.timeYear,
     <br>====== langoSinago:
-    <br>* McsSngo.to-yiaro!=year,
+    <br>* McsSngo.to-yiro!=timeYear, {2024-10-27}
+    <br>* McsSngo.to-yiaro!=timeYear,
     <br>====== langoChinese:
-    <br>* McsZhon.nián-年!=year,
-    <br>* McsZhon.年-nián!=year,
+    <br>* McsZhon.nián-年!=timeYear,
+    <br>* McsZhon.年-nián!=timeYear,
     <br>====== langoEsperanto:
-    <br>* McsEspo.jaro!=year,
+    <br>* McsEspo.jaro!=timeYear,
     <br>====== langoGreek:
-    <br>* McsElln.έτος!το!=year,
+    <br>* McsElln.έτος!το!=timeYear,
     <a class="clsHide" href="#idTimeUomYearnam"></a></p>
 
   <section id="idTimeUomYearCldr">
@@ -2122,15 +2125,16 @@
     <br>* McsEngl.month-time-Uom,
     <br>* McsEngl.UomTime.month,
     <br>* McsEngl.time.month,
+    <br>* McsEngl.timeMonth,
     <br>====== langoSinago:
-    <br>* McsSngo.to-mino!=month, from Greek 'μήνας',
+    <br>* McsSngo.to-mino!=timeMonth, from Greek 'μήνας',
     <br>====== langoEsperanto:
-    <br>* McsEspo.monato!=month,
+    <br>* McsEspo.monato!=timeMonth,
     <br>====== langoChinese:
-    <br>* McsZhon.yuèfèn-月份!=month,
-    <br>* McsZhon.月份-yuèfèn!=month,
+    <br>* McsZhon.yuèfèn-月份!=timeMonth,
+    <br>* McsZhon.月份-yuèfèn!=timeMonth,
     <br>====== langoGreek:
-    <br>* McsElln.μήνας!=month,
+    <br>* McsElln.μήνας!=timeMonth,
     <a class="clsHide" href="#idTimeUomMnthnam"></a></p>
 
   <section id="idTimeUomMnthJan">
@@ -2396,19 +2400,21 @@
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=week]
     <a class="clsHide" href="#idTimeUomWeekdsn"></a></p>
   <p id="idTimeUomWeeknam">name::
+    <br>* McsEngl.week,
     <br>* McsEngl.week-time-Uom,
     <br>* McsEngl.UomTime.week,
     <br>* McsEngl.time.week,
     <br>* McsEngl.timeWeek,
     <br>====== langoSinago:
-    <br>* McsSngo.to-nedelo!=week, from Russian 'неделю',
+    <br>* McsSngo.to-nedo!=timeWeek, {2024-10-27}
+    <br>* McsSngo.to-nedelo!=timeWeek, from Russian 'неделю',
     <br>====== langoChinese:
-    <br>* McsZhon.xīngqī-星期!=week,
-    <br>* McsZhon.星期-xīngqī!=week,
+    <br>* McsZhon.xīngqī-星期!=timeWeek,
+    <br>* McsZhon.星期-xīngqī!=timeWeek,
     <br>====== langoEsperanto:
-    <br>* McsEspo.semajno!=week,
+    <br>* McsEspo.semajno!=timeWeek,
     <br>====== langoGreek:
-    <br>* McsElln.εβδομάδα!η!=week,
+    <br>* McsElln.εβδομάδα!η!=timeWeek,
     <a class="clsHide" href="#idTimeUomWeeknam"></a></p>
 
   <section id="idTimeUomWeekLast">
@@ -2440,18 +2446,20 @@
     <br>* McsEngl.day-time-Uom,
     <br>* McsEngl.UomTime.day,
     <br>* McsEngl.time.day,
+    <br>* McsEngl.timeDay,
     <br>====== langoSinago:
-    <br>* McsSngo.tieno:to!=day,
-    <br>* McsSngo.tieno-ka-to!=day,
-    <br>* McsSngo.to-tieno!=day,
+    <br>* McsSngo.to-rio!=timeDay, {2024-10-27} from Chinese,
+    <br>* McsSngo.tieno:to!=timeDay,
+    <br>* McsSngo.tieno-ka-to!=timeDay,
+    <br>* McsSngo.to-tieno!=timeDay,
     <br>====== langoChinese:
-    <br>* McsZhon.rì-日!=day,
-    <br>* McsZhon.tiān-天!=day,
-    <br>* McsZhon.日-rì!=day,
-    <br>* McsZhon.天-tiān!=day,
+    <br>* McsZhon.rì-日!=timeDay,
+    <br>* McsZhon.tiān-天!=timeDay,
+    <br>* McsZhon.日-rì!=timeDay,
+    <br>* McsZhon.天-tiān!=datimeDayy,
     <br>====== langoGreek:
-    <br>* McsElln.εικοσιτετράωρο!το!=day,
-    <br>* McsElln.μέρα!η!=day,
+    <br>* McsElln.εικοσιτετράωρο!το!=timeDay,
+    <br>* McsElln.μέρα!η!=timeDay,
     <a class="clsHide" href="#idTimeUomDaynam"></a></p>
 
   <section id="idTimeUomDayam">
@@ -2492,9 +2500,23 @@
     <a class="clsHide" href="#idTimeUomDaypmnam"></a></p>
   </section>
 
+  <section id="idTimeUomDaymng">
+  <h3 id="idTimeUomDaymngH3">morning of day
+    <a class="clsHide" href="#idTimeUomDaymngH3"></a></h3>
+  <p id="idTimeUomDaymngdsn">description::
+    <br>"(n) morning, morn, morning time, forenoon (the time period between dawn and noon) "I spent the morning running errands""
+    <br>[{2021-12-19 retrieved} http://wordnetweb.princeton.edu/perl/webwn?s=morning]
+    <a class="clsHide" href="#idTimeUomDaymngdsn"></a></p>
+  <p id="idTimeUomDaymngnam">name::
+    <br>* McsEngl.day'morning,
+    <br>* McsEngl.morning//day,
+    <br>====== langoGreek:
+    <br>* McsElln.πρωί!το!=morning//day,
+    <a class="clsHide" href="#idTimeUomDaymngnam"></a></p>
+
   <section id="idTimeUomDaydwn">
-  <h3 id="idTimeUomDaydwnH3">dawn of day
-    <a class="clsHide" href="#idTimeUomDaydwnH3"></a></h3>
+  <h4 id="idTimeUomDaydwnH4">dawn of day
+    <a class="clsHide" href="#idTimeUomDaydwnH4"></a></h4>
   <p id="idTimeUomDaydwndsn">description::
     <br>"(n) dawn, dawning, morning, aurora, first light, daybreak, break of day, break of the day, dayspring, sunrise, sunup, cockcrow (the first light of day) "we got up before dawn"; "they talked until morning""
     <br>[{2021-12-19 retrieved} http://wordnetweb.princeton.edu/perl/webwn?s=dawn]
@@ -2507,22 +2529,34 @@
     <a class="clsHide" href="#idTimeUomDaydwnnam"></a></p>
   </section>
 
-  <section id="idTimeUomDaymng">
-  <h3 id="idTimeUomDaymngH3">morning of day
-    <a class="clsHide" href="#idTimeUomDaymngH3"></a></h3>
-  <p id="idTimeUomDaymngdsn">description::
-    <br>"(n) morning, morn, morning time, forenoon (the time period between dawn and noon) "I spent the morning running errands""
-    <br>[{2021-12-19 retrieved} http://wordnetweb.princeton.edu/perl/webwn?s=morning]
-    <a class="clsHide" href="#idTimeUomDaymngdsn"></a></p>
-  <p id="idTimeUomDaymngnam">name::
-    <br>* McsEngl.day'morning,
-    <br>* McsEngl.morning//day,
+  <section id="idTimeUomDayelmn">
+  <h4 id="idTimeUomDayelmnH4">early-morning of day
+    <a class="clsHide" href="#idTimeUomDayelmnH4"></a></h4>
+  <p id="idTimeUomDayelmndsn">description::
+    <br>* 6am.
+    <a class="clsHide" href="#idTimeUomDayelmndsn"></a></p>
+  <p id="idTimeUomDayelmnnam">name::
+    <br>* McsEngl.early-morning,
     <br>====== langoChinese:
-    <br>* McsZhon.zǎoshang-早上!=morning//day,
-    <br>* McsZhon.早上-zǎoshang!=morning//day,
-    <br>====== langoGreek:
-    <br>* McsElln.πρωί!το!=morning//day,
-    <a class="clsHide" href="#idTimeUomDaymngnam"></a></p>
+    <br>* McsZhon.zǎoshang-早上!=early-morning,
+    <br>* McsZhon.早上-zǎoshang!=early-morning,
+    <a class="clsHide" href="#idTimeUomDayelmnnam"></a></p>
+  </section>
+
+  <section id="idTimeUomDayltmn">
+  <h4 id="idTimeUomDayltmnH4">late-morning of day
+    <a class="clsHide" href="#idTimeUomDayltmnH4"></a></h4>
+  <p id="idTimeUomDayltmndsn">description::
+    <br>·
+    <a class="clsHide" href="#idTimeUomDayltmndsn"></a></p>
+  <p id="idTimeUomDayltmnnam">name::
+    <br>* McsEngl.before-afternoon,
+    <br>* McsEngl.late-morning,
+    <br>====== langoChinese:
+    <br>* McsZhon.shàngwǔ-上午!=before-afternoon,
+    <br>* McsZhon.上午-shàngwǔ!=before-afternoon,
+    <a class="clsHide" href="#idTimeUomDayltmnnam"></a></p>
+  </section>
   </section>
 
   <section id="idTimeUomDaynn">
@@ -2782,7 +2816,7 @@
   </section>
 
   <section id="idTimeUomDayDate">
-  <h3 id="idTimeUomDayDateH3">day.date
+  <h3 id="idTimeUomDayDateH3">day.of-year
     <a class="clsHide" href="#idTimeUomDayDateH3"></a></h3>
   <p id="idTimeUomDayDatedsn">description::
     <br>· date is an-individual day.
@@ -2805,14 +2839,36 @@
     <a class="clsHide" href="#idTimeUomDayDatenam"></a></p>
   </section>
 
+  <section id="idTimeUomDayMnth">
+  <h3 id="idTimeUomDayMnthH3">day.of-month
+    <a class="clsHide" href="#idTimeUomDayMnthH3"></a></h3>
+  <p id="idTimeUomDayMnthdsn">description::
+    <br>· a-day of a-month.
+    <a class="clsHide" href="#idTimeUomDayMnthdsn"></a></p>
+  <p id="idTimeUomDayMnthnam">name::
+    <br>* McsEngl.day.of-month,
+    <a class="clsHide" href="#idTimeUomDayMnthnam"></a></p>
+  </section>
+
+  <section id="idTimeUomDayWeak">
+  <h3 id="idTimeUomDayWeakH3">day.of-weak
+    <a class="clsHide" href="#idTimeUomDayWeakH3"></a></h3>
+  <p id="idTimeUomDayWeakdsn">description::
+    <br>· a-day of a-weak.
+    <a class="clsHide" href="#idTimeUomDayWeakdsn"></a></p>
+  <p id="idTimeUomDayWeaknam">name::
+    <br>* McsEngl.day.of-weak,
+    <br>* McsEngl.weak-day,
+    <a class="clsHide" href="#idTimeUomDayWeaknam"></a></p>
+
   <section id="idTimeUomDayMnd">
-  <h3 id="idTimeUomDayMndH3">day.Monday
-    <a class="clsHide" href="#idTimeUomDayMndH3"></a></h3>
+  <h4 id="idTimeUomDayMndH4">day.Monday
+    <a class="clsHide" href="#idTimeUomDayMndH4"></a></h4>
   <p id="idTimeUomDayMnddsn">description::
     <br>· the-first working day.
     <a class="clsHide" href="#idTimeUomDayMnddsn"></a></p>
   <p id="idTimeUomDayMndnam">name::
-    <br>* McsEngl.day.Monday,
+    <br>* McsEngl.day.week.Monday,
     <br>* McsEngl.Monday,
     <br>====== langoSinago:
     <br>* McsSngo.tieno-1-fo!=Monday,
@@ -2827,13 +2883,13 @@
   </section>
 
   <section id="idTimeUomDayTsd">
-  <h3 id="idTimeUomDayTsdH3">day.Tuesday
-    <a class="clsHide" href="#idTimeUomDayTsdH3"></a></h3>
+  <h4 id="idTimeUomDayTsdH4">day.Tuesday
+    <a class="clsHide" href="#idTimeUomDayTsdH4"></a></h4>
   <p id="idTimeUomDayTsddsn">description::
     <br>· the-second working day.
     <a class="clsHide" href="#idTimeUomDayTsddsn"></a></p>
   <p id="idTimeUomDayTsdnam">name::
-    <br>* McsEngl.day.Tuesday,
+    <br>* McsEngl.day.week.Tuesday,
     <br>* McsEngl.Tuesday,
     <br>====== langoSinago:
     <br>* McsSngo.tieno-2-tho!=Tuesday,
@@ -2847,13 +2903,13 @@
   </section>
 
   <section id="idTimeUomDayWdd">
-  <h3 id="idTimeUomDayWddH3">day.Wednesday
-    <a class="clsHide" href="#idTimeUomDayWddH3"></a></h3>
+  <h4 id="idTimeUomDayWddH4">day.Wednesday
+    <a class="clsHide" href="#idTimeUomDayWddH4"></a></h4>
   <p id="idTimeUomDayWdddsn">description::
     <br>· the-third working day.
     <a class="clsHide" href="#idTimeUomDayWdddsn"></a></p>
   <p id="idTimeUomDayWddnam">name::
-    <br>* McsEngl.day.Wednesday,
+    <br>* McsEngl.day.week.Wednesday,
     <br>* McsEngl.Wednesday,
     <br>====== langoSinago:
     <br>* McsSngo.tieno-3-to!=Wednesday,
@@ -2868,13 +2924,13 @@
   </section>
 
   <section id="idTimeUomDayThd">
-  <h3 id="idTimeUomDayThdH3">day.Thursday
-    <a class="clsHide" href="#idTimeUomDayThdH3"></a></h3>
+  <h4 id="idTimeUomDayThdH4">day.Thursday
+    <a class="clsHide" href="#idTimeUomDayThdH4"></a></h4>
   <p id="idTimeUomDayThddsn">description::
     <br>· the-forth working day.
     <a class="clsHide" href="#idTimeUomDayThddsn"></a></p>
   <p id="idTimeUomDayThdnam">name::
-    <br>* McsEngl.day.Thursday,
+    <br>* McsEngl.day.week.Thursday,
     <br>* McsEngl.Thursday,
     <br>====== langoSinago:
     <br>* McsSngo.tieno-4-so!=Thursday,
@@ -2889,13 +2945,13 @@
   </section>
 
   <section id="idTimeUomDayFrd">
-  <h3 id="idTimeUomDayFrdH3">day.Friday
-    <a class="clsHide" href="#idTimeUomDayFrdH3"></a></h3>
+  <h4 id="idTimeUomDayFrdH4">day.Friday
+    <a class="clsHide" href="#idTimeUomDayFrdH4"></a></h4>
   <p id="idTimeUomDayFrddsn">description::
     <br>· the-fifth working day.
     <a class="clsHide" href="#idTimeUomDayFrddsn"></a></p>
   <p id="idTimeUomDayFrdnam">name::
-    <br>* McsEngl.day.Friday,
+    <br>* McsEngl.day.week.Friday,
     <br>* McsEngl.Friday,
     <br>====== langoSinago:
     <br>* McsSngo.tieno-5-co!=Friday,
@@ -2910,13 +2966,13 @@
   </section>
 
   <section id="idTimeUomDayStd">
-  <h3 id="idTimeUomDayStdH3">day.Saturday
-    <a class="clsHide" href="#idTimeUomDayStdH3"></a></h3>
+  <h4 id="idTimeUomDayStdH4">day.Saturday
+    <a class="clsHide" href="#idTimeUomDayStdH4"></a></h4>
   <p id="idTimeUomDayStddsn">description::
     <br>· the-first weekend day.
     <a class="clsHide" href="#idTimeUomDayStddsn"></a></p>
   <p id="idTimeUomDayStdnam">name::
-    <br>* McsEngl.day.Saturday,
+    <br>* McsEngl.day.week.Saturday,
     <br>* McsEngl.Saturday,
     <br>====== langoSinago:
     <br>* McsSngo.tieno-6-ko!=Saturday,
@@ -2931,13 +2987,13 @@
   </section>
 
   <section id="idTimeUomDaySnd">
-  <h3 id="idTimeUomDaySndH3">day.Sunday
-    <a class="clsHide" href="#idTimeUomDaySndH3"></a></h3>
+  <h4 id="idTimeUomDaySndH4">day.Sunday
+    <a class="clsHide" href="#idTimeUomDaySndH4"></a></h4>
   <p id="idTimeUomDaySnddsn">description::
     <br>· the-second weekend day.
     <a class="clsHide" href="#idTimeUomDaySnddsn"></a></p>
   <p id="idTimeUomDaySndnam">name::
-    <br>* McsEngl.day.Sunday,
+    <br>* McsEngl.day.week.Sunday,
     <br>* McsEngl.Sunday,
     <br>====== langoSinago:
     <br>* McsSngo.tieno-7-ho!=Sunday,
@@ -2951,6 +3007,7 @@
     <br>====== langoTurkish:
     <br>* McsTurk.Pazar!=Sunday,
     <a class="clsHide" href="#idTimeUomDaySndnam"></a></p>
+  </section>
   </section>
 
   <section id="idTimeUomDayPst2">
@@ -3077,23 +3134,27 @@
     <br>"(n) hour, hr, 60 minutes (a period of time equal to 1/24th of a day) "the job will take more than an hour""
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=hour]
     <br>
+    <br>· stxZhon: 现在十点五分 :: Xiànzài shí diǎn wǔ fēn != It's five past ten now.
+    <br>· stxZhon: 现在几点 :: Xiànzài jǐ diǎn != now what time?
     <br>· stxZhon: _stxTime:[[三][小时][后]] _stxSbj:[她] _stxVrb:{来}。 Sān xiǎoshí hòu tā lái. [[3][hours][after]] [she] [come].
     <a class="clsHide" href="#idTimeUomHourdsn"></a></p>
   <p id="idTimeUomHournam">name::
-    <br>* McsEngl.hour,
-    <br>* McsEngl.hour-time-Uom,
-    <br>* McsEngl.hr!⇒hour,
-    <br>* McsEngl.UomTime.hour,
-    <br>* McsEngl.time.hour,
+    <br>* McsEngl.hour!⇒timeHour,
+    <br>* McsEngl.hour-time-Uom!⇒timeHour,
+    <br>* McsEngl.hr!⇒timeHour!⇒timeHour,
+    <br>* McsEngl.lagHmnm'hour!⇒timeHour,
+    <br>* McsEngl.UomTime.hour!⇒timeHour,
+    <br>* McsEngl.time.hour!⇒timeHour,
+    <br>* McsEngl.timeHour,
     <br>====== langoSinago:
-    <br>* McsSngo.to-oro!=hour, from Greek 'ώρα',
+    <br>* McsSngo.to-oro!=timeHour, from Greek 'ώρα',
     <br>====== langoChinese:
-    <br>* McsZhon.xiǎoshí-小时!=hour,
-    <br>* McsZhon.小时-xiǎoshí!=hour,
+    <br>* McsZhon.xiǎoshí-小时!=timeHour,
+    <br>* McsZhon.小时-xiǎoshí!=timeHour,
     <br>====== langoEsperanto:
-    <br>* McsEspo.horo!=hour,
+    <br>* McsEspo.horo!=timeHour,
     <br>====== langoGreek:
-    <br>* McsElln.ώρα!η!=hour,
+    <br>* McsElln.ώρα!η!=timeHour,
     <a class="clsHide" href="#idTimeUomHournam"></a></p>
 
   <section id="idTimeUomHourrsc">
@@ -3179,6 +3240,7 @@
     <br>* McsEngl.minute-time-Uom,
     <br>* McsEngl.UomTime.minute,
     <br>* McsEngl.time.minute,
+    <br>* McsEngl.timeMinute,
     <br>====== langoSinago:
     <br>* McsSngo.to-minuto!=minute,
     <br>====== langoChinese:

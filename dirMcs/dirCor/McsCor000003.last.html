@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.entity (McsCor000003.1-114-0.2024-08-20)</title>
+  <title>Mcs.entity (McsCor000003.1-120-0.2024-12-04)</title>
   <meta name="keywords" content="entity, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -61,8 +61,8 @@
     <br>====== langoChinese:
     <br>* McsZhon.shì-事!=thing,
     <br>* McsZhon.事-shì!=thing,
-    <br>* McsZhon.shítǐ-东西!=entity,
-    <br>* McsZhon.东西-shítǐ!=entity,
+    <br>* McsZhon.dōngxī-东西!=east-west!=thing,
+    <br>* McsZhon.东西-dōngxī!=east-west!=thing,
     <br>====== langoEsperanto:
     <br>* McsEspo.ento!=entity,
     <br>====== langoGreek:
@@ -233,9 +233,10 @@
     <br>* McsEngl.entity'attribute--sequencedNo-relation!⇒rlnEntityAttributeU,
     <br>* McsEngl.attribute-entity--sequencedNo-relation!⇒rlnEntityAttributeU,
     <br>* McsEngl.entity-attribute--sequencedNo-relation!⇒rlnEntityAttributeU,
+    <br>* McsEngl.lagoHmnm'entity-attribute-sequencedNo!⇒rlnEntityAttributeU,
     <br>* McsEngl.relation.entity-attribute-sequencedNo!⇒rlnEntityAttributeU,
     <br>* McsEngl.rlnAttributeEntityU!⇒rlnEntityAttributeU,
-    <br>* McsEngl.rlnEntityAttributeU,
+    <br>* McsEngl.rlnEntityAttributeU!=sequencedNo-entity-attribute-relation,
     <br>====== langoSinago:
     <br>* McsSngo.ro-o-atro!=rlnEntityAttributeU,
     <a class="clsHide" href="#idEntatrrlnnam"></a></p>
@@ -283,6 +284,11 @@
     <br>=== with verb:
     <br>· stxZhon: 他们 是 有钱 人。 :: _stxSbj:[Tāmen] _stxVrb:{shì} _stxSbjc:[yǒuqián rén]. != They are rich people.
     <br>· stxZhon: 这个书店 是 新 的。 :: _stxSbj:[Zhège shūdiàn] _stxVrb:{shì} _stxSbjc:[xīn] de。 != [this bookstore] {is} [new].
+    <br>
+    <br>=== with position:
+    <br>· stxZhon: 她 二十岁 :: _stxSbj:[Tā] _stxSbjc:[èrshí suì] != [she] [20 years old].
+    <br>· stxZhon: 伦敦 很大 :: Lúndūn hěn dà != London is big.
+    <br>· stxZhon: 伦敦 不冷 :: Lúndūn bù lěng != London is not cold.
     <a class="clsHide" href="#idEntatrrln1dsn"></a></p>
   <p id="idEntatrrln1nam">name::
     <br>* McsEngl.entity-attribute--sequenced-relation!⇒rlnEntityAttribute,
@@ -307,6 +313,7 @@
     <br>
     <br>=== with conjunction:
     <br>· stxEngl: [attribute] [<span class="clsColorRed">(of)</span> entity]
+    <br>· stxZhon: 黑色的头发 :: hēisè de tóufǎ != black hair.
     <br>
     <br>=== with adjective:
     <br>· stxEngl: [the <span class="clsColorRed">[red]</span> car]
@@ -785,7 +792,7 @@
     <br>====== langoGreek:
     <br>* McsElln.γέννηση!η!=dngCreating,
     <br>* McsElln.δημιουργία!η!=dngCreating,
-    <br>* McsEngl.verbElln.δημιουργώ!-ώ-ούμαι!=dngCreating,
+    <br>* McsElln.ρήμα.δημιουργώ!-ώ-ούμαι!=dngCreating,
     <br>* McsElln.δημιουργώ!-ώ-ούμαι!~verbElln!=dngCreating,
     <a class="clsHide" href="#idEntevgcrtgnam"></a></p>
 
@@ -835,7 +842,7 @@
     <br>* McsZhon.kāishǐ-开始!=dngStarting,
     <br>* McsZhon.开始-kāishǐ!=dngStarting,
     <br>====== langoGreek:
-    <br>* McsEngl.verbElln.ξεκινώ:-άω-ώ!=dngStarting,
+    <br>* McsElln.ρήμα.ξεκινώ:-άω-ώ!=dngStarting,
     <br>* McsElln.ξεκινώ!~verbElln:-άω-ώ!=dngStarting,
     <a class="clsHide" href="#idEntevgstrtnam"></a></p>
   </section>
@@ -929,7 +936,7 @@
     <br>* McsZhon.停-tíng!=dngStopping,
     <br>====== langoGreek:
     <br>* McsElln.διακόπτω!-ω-ομαι!~verbElln!=dngStopping,
-    <br>* McsEngl.verbElln.σταματώ:-ώ-άω-ιέμαι!=dngStopping,
+    <br>* McsElln.ρήμα.σταματώ:-ώ-άω-ιέμαι!=dngStopping,
     <br>* McsElln.σταματώ:-ώ-άω-ιέμαι!~verbElln!=dngStopping,
     <a class="clsHide" href="#idEntevgstpgnam"></a></p>
   </section>
@@ -973,7 +980,7 @@
     <br>* McsZhon.děng-等!=fctWaiting,
     <br>* McsZhon.等-děng!=fctWaiting,
     <br>====== langoGreek:
-    <br>* McsEngl.verbElln.περιμένω!=fctWaiting,
+    <br>* McsElln.ρήμα.περιμένω!=fctWaiting,
     <br>* McsElln.περιμένω!~verbElln!=fctWaiting,
     <a class="clsHide" href="#idEntevgwtngnam"></a></p>
   </section>
@@ -1001,7 +1008,7 @@
     <br>* McsEngl.revolutionizing-doing,
     <br>====== langoGreek:
     <br>* McsElln.επανάσταση!=dngRevolutionizing,
-    <br>* McsEngl.verbElln.φέρνω-επανάσταση!=dngRevolutionizing,
+    <br>* McsElln.ρήμα.φέρνω-επανάσταση!=dngRevolutionizing,
     <br>* McsElln.φέρνω-επανάσταση!~verbElln!=dngRevolutionizing,
     <a class="clsHide" href="#idEntevgrvtgnam"></a></p>
   <p id="idEntevgrvtgstr">specific-tree-of-dngRevolutionizing::
@@ -4900,12 +4907,13 @@
   <p id="idEntBodyNSqcdnam">name::
     <br>* McsEngl.bodyNo.sequenced,
     <br>* McsEngl.directed-bodyNo,
+    <br>* McsEngl.directed--doing-or-relation,
     <br>* McsEngl.sequenced-bodyNo,
     <br>* McsEngl.reldoSequenced,
     <a class="clsHide" href="#idEntBodyNSqcdnam"></a></p>
   <p id="idEntBodyNSqcdstr">specific-tree-of-directed-bodyNo::
-    <br>* directed-doing,
-    <br>* directed-relation,
+    <br>* <a class="clsPreview" href="../dirCor/McsCor000004.last.html#idDngSqcd">directed-doing</a>,
+    <br>* <a class="clsPreview" href="../dirCor/McsCor000005.last.html#idRlnSqcd">directed-relation</a>,
     <a class="clsHide" href="#idEntBodyNSqcdstr"></a></p>
 
   <section id="idEntBodyNSqcdsbjct">

@@ -1,38 +1,49 @@
 ﻿; comments
-; version {2024-07-05}
+; version {2024-11-13}
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory.
 #Hotstring c  ; makes scripts case-sensitive
 
+;; 4 NOTATIONS:
+; CUSTOM notation begin with :
+; NUMBER notation begin with ii
 ; TeX notation begin with    \
 ; HTML notation begin with   &
-; NUMBER notation begin with ii
-; CUSTOM notation begin with :
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; CUSTOM and NUMBER NOTATION
+;; EXAMPLES:
 ;              CUSTOM       HTML
-; Acute        :aa = á      &aacute
-; Breve        :ab = ă      &abreve
-; Caron        :ac = ǎ      &acaron
-; cediLla      :cl = ç      &ccedil
-; circumFlex   :cf = â      &acirc
-; Dotless      :id = ı      &imath
-; Grave        :ag = à      &agrave
-; Macron       :am = ā      &amacr
-; Ring         :ar = å      &aring
-; Tilde        :at = ã      &atilde
-; Umlaut       :au = ä      &auml
+; Acute        :aa  = á      &aacute
+; Breve        :ab  = ă      &abreve
+; CircumFlex   :cf  = â      &acirc
+; CediLla      :cl  = ç      &ccedil
+; CaRon        :ac  = ǎ      &acaron
+; DotBelow     :adb = ạ
+; Dotless      :id  = ı      &imath
+; Grave        :ag  = à      &agrave
+; HooK         :ahk = ả
+; HorN         :ohn = ơ
+; Macron       :am  = ā      &amacr
+; Ring         :ar  = å      &aring
+; Stroke       :ds  = đ      &dstrok
+; Tilde        :at  = ã      &atilde
+; Umlaut       :au  = ä      &auml
 
 ; fr-actur     html = &Afr::𝔄
 ; scr-ipt      html = &Ascr::𝒜
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; CUSTOM and NUMBER NOTATION
 
 :::aa::á
 :::ab::ă
 :::ac::ǎ
 :::af::â
 :::ag::à
+:::adb::ạ
+:::Adb::Ạ
+:::ah::ả
+:::Ah::Ả
 :::am::ā
 :::ar::å
 :::at::ã
@@ -64,6 +75,9 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 
 :::cl::ç
 :::cf::ĉ
+
+:::Ds::Đ
+:::ds::đ
 
 :::gb::ğ
 :::gc::ǧ
