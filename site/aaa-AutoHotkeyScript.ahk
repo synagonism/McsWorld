@@ -1,5 +1,5 @@
 ﻿; comments
-; version {2024-11-13}
+; version {2024-12-17}
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -14,81 +14,88 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 
 ;; EXAMPLES:
 ;              CUSTOM       HTML
-; Acute        :aa  = á      &aacute
-; Breve        :ab  = ă      &abreve
-; CircumFlex   :cf  = â      &acirc
-; CediLla      :cl  = ç      &ccedil
-; CaRon        :ac  = ǎ      &acaron
+; ACute        :aac = á      &aacute
+; BReve        :abr = ă      &abreve
+; CircumFlex   :acf = â      &acirc
+; CediLla      :acl = ç      &ccedil
+; CaRon        :acr = ǎ      &acaron
 ; DotBelow     :adb = ạ
-; Dotless      :id  = ı      &imath
-; Grave        :ag  = à      &agrave
+; DotLess      :idl = ı      &imath
+; GRave        :agr = à      &agrave
 ; HooK         :ahk = ả
-; HorN         :ohn = ơ
-; Macron       :am  = ā      &amacr
-; Ring         :ar  = å      &aring
-; Stroke       :ds  = đ      &dstrok
-; Tilde        :at  = ã      &atilde
-; Umlaut       :au  = ä      &auml
+; HoRn         :ohr = ơ
+; MaCron       :amc = ā      &amacr
+; RinG         :arg = å      &aring
+; STroke       :dst = đ      &dstrok
+; TiLde        :atl = ã      &atilde
+; UMlaut       :aum = ä      &auml
 
 ; fr-actur     html = &Afr::𝔄
 ; scr-ipt      html = &Ascr::𝒜
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; CUSTOM and NUMBER NOTATION
 
-:::aa::á
-:::ab::ă
-:::ac::ǎ
-:::af::â
-:::ag::à
+:::aac::á
+:::abr::ă
+:::acr::ǎ
+:::acf::â
+:::agr::à
 :::adb::ạ
 :::Adb::Ạ
-:::ah::ả
-:::Ah::Ả
-:::am::ā
-:::ar::å
-:::at::ã
-:::au::ä
+:::ahk::ả
+:::Ahk::Ả
+:::amc::ā
+:::arg::å
+:::atl::ã
+:::aum::ä
 
-:::em::ē
-:::ea::é
-:::ec::ě
-:::eg::è
+:::emc::ē
+:::eac::é
+:::ecr::ě
+:::egr::è
 
-:::im::ī
-:::ia::í
-:::ic::ǐ
-:::ig::ì
-:::id::ı
-:::iu::ï
+:::imc::ī
+:::iac::í
+:::icr::ǐ
+:::igr::ì
+:::idl::ı
+:::ium::ï
 
-:::om::ō
-:::oa::ó
-:::oc::ǒ
-:::og::ò
-:::ou::ö
+:::oac::ó
+:::obr::ŏ
+:::ocf::ô
+:::ocr::ǒ
+:::odb::ọ
+:::ohk::ỏ
+:::ohr::ơ
+:::omc::ō
+:::ogr::ò
+:::ost::ø
+:::otl::õ
+:::oum::ö
 
-:::um::ū
-:::ua::ú
-:::uc::ǔ
-:::ug::ù
-:::uu::ü
+:::umc::ū
+:::uac::ú
+:::ucr::ǔ
+:::ugr::ù
+:::uum::ü
 
-:::cl::ç
-:::cf::ĉ
+:::ccl::ç
+:::ccf::ĉ
 
-:::Ds::Đ
-:::ds::đ
+:::Dst::Đ
+:::dst::đ
 
-:::gb::ğ
-:::gc::ǧ
-:::gf::ĝ
+:::gbr::ğ
+:::gcr::ǧ
+:::gcf::ĝ
 
-:::hf::ĥ
+:::hcf::ĥ
 
-:::jf::ĵ
+:::jcf::ĵ
 
-:::sl::ş
-:::sf::ŝ
+:::scl::ş
+:::scf::ŝ
 
 ::ii128::€
 ::ii8364::€
