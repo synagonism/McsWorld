@@ -132,8 +132,9 @@ function fNamidx(fileIn, fSftpIn) {
     aFileMcsIn,
     // array with names of dirCor/McsCor000010.last.html to remove|add its names
     aLag,
-    // array of languages ['lagALLL'] or ['lagElln','lagEngl','lagZhon','lagTurk']
-    aLagALL = ['lagEngl','lagElln','lagZhon'],
+    // array of languages ['lagALLL']
+    // or ['lagElln','lagEngl','lagZhon','lagTurk','lagVnma']
+    aLagALL = ['lagEngl','lagElln','lagZhon','lagVnma'],
     //aLagALL = ['lagEngl','lagSngo','lagZhon','lagEspo','lagElln','lagElla','lagTurk'],
     // 'lagAlb','lagBel','lagBos','lagBul','lagCes','lagDan','lagDeu','lagEst',
     // 'lagFin','lagFra','lagHrv','lagHun','lagIta','lagLav','lagLit','lagMlt',

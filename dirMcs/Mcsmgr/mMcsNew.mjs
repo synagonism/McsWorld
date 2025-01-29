@@ -2,7 +2,7 @@
  * mMcsNew.mjs - it creates a-new file McsHitp-senso-concept
  * The MIT License (MIT)
  *
- * Copyright (c) 2017-2022 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2017-2025 Kaseluris.Nikos.1959 (hmnSngo)
  * kaseluris.nikos@gmail.com
  * https://synagonism.net/
  *
@@ -98,12 +98,12 @@ let
   sDir = 'dirStn',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Turkey',
+  sName = 'Vietnam',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'socTurk',
+  sNameShort = 'socVnma',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'SocTurk',
+  sNameId = 'SocVnma',
 
 
   sNameFile = '',
