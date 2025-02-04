@@ -28,6 +28,8 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-11-1.2025-02-04: lang shortcuts',
+    'mMcsh.js.19-11-0.2025-02-02: Italian',
     'mMcsh.js.19-10-0.2025-01-29: lagVnma',
     'mMcsh.js.19-9-3.2024-03-10: suggest on space -',
     'mMcsh.js.19-9-2.2023-08-28: suggest on space @',
@@ -284,30 +286,30 @@ let fContainersInsert = function () {
     }
   })
 
-  addEventListener('keyup', function (oEvtIn) {
-    if (oEvtIn.altKey && oEvtIn.key === 'F2') {
-      fCnrOntopRemove()
-      fCnrSearchShow()
-      //select Greek-Ancient
-      oEltTabCntSrchSlt.options[5].selected = true
-    }
-  })
-
-  addEventListener('keyup', function (oEvtIn) {
-    if (oEvtIn.altKey && oEvtIn.key === 'F3') {
-      fCnrOntopRemove()
-      fCnrSearchShow()
-      //select Turkish
-      oEltTabCntSrchSlt.options[6].selected = true
-    }
-  })
+//  addEventListener('keyup', function (oEvtIn) {
+//    if (oEvtIn.altKey && oEvtIn.key === 'F2') {
+//      fCnrOntopRemove()
+//      fCnrSearchShow()
+//      //select Greek-Ancient
+//      oEltTabCntSrchSlt.options[5].selected = true
+//    }
+//  })
+//
+//  addEventListener('keyup', function (oEvtIn) {
+//    if (oEvtIn.altKey && oEvtIn.key === 'F3') {
+//      fCnrOntopRemove()
+//      fCnrSearchShow()
+//      //select Turkish
+//      oEltTabCntSrchSlt.options[6].selected = true
+//    }
+//  })
 
   addEventListener('keyup', function (oEvtIn) {
     if (oEvtIn.ctrlKey && oEvtIn.key === 'F2') {
       fCnrOntopRemove()
       fCnrSearchShow()
       //select Greek-lag, BUT needs to clear the-input-field to show stats
-      oEltTabCntSrchSlt.options[4].selected = true
+      oEltTabCntSrchSlt.options[2].selected = true
     }
   })
 
@@ -316,7 +318,7 @@ let fContainersInsert = function () {
       fCnrOntopRemove()
       fCnrSearchShow()
       //select Chinese
-      oEltTabCntSrchSlt.options[2].selected = true
+      oEltTabCntSrchSlt.options[3].selected = true
     }
   })
 
@@ -338,14 +340,14 @@ let fContainersInsert = function () {
     }
   })
 
-  addEventListener('keydown', function (oEvtIn) {
-    if (oEvtIn.shiftKey && oEvtIn.key === 'F3') {
-      fCnrOntopRemove()
-      fCnrSearchShow()
-      // Esperanto
-      oEltTabCntSrchSlt.options[3].selected = true
-    }
-  })
+//  addEventListener('keydown', function (oEvtIn) {
+//    if (oEvtIn.shiftKey && oEvtIn.key === 'F3') {
+//      fCnrOntopRemove()
+//      fCnrSearchShow()
+//      // Esperanto
+//      oEltTabCntSrchSlt.options[3].selected = true
+//    }
+//  })
 
   oEltCnrTopDiv.id = 'idCnrTopDiv'
   oEltCnrMainDiv.id = 'idCnrMainDiv'
@@ -657,20 +659,24 @@ let fContainersInsert = function () {
 
   let oEltTabCntSrchOpn7 = document.createElement('option')
   oEltTabCntSrchOpn7.value = 'lagEspo'
-  oEltTabCntSrchOpn7.text = 'Esperanto (Espo - Shift+F3)'
+  oEltTabCntSrchOpn7.text = 'Esperanto'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn7)
   let oEltTabCntSrchOpn8 = document.createElement('option')
   oEltTabCntSrchOpn8.value = 'lagElla'
-  oEltTabCntSrchOpn8.text = 'GreekAncient (Ella - Alt+F2)'
+  oEltTabCntSrchOpn8.text = 'GreekAncient'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn8)
   let oEltTabCntSrchOpn9 = document.createElement('option')
-  oEltTabCntSrchOpn9.value = 'lagTurk'
-  oEltTabCntSrchOpn9.text = 'Turkish (Turk - Alt+F3)'
+  oEltTabCntSrchOpn9.value = 'lagItln'
+  oEltTabCntSrchOpn9.text = 'Italian'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn9)
   let oEltTabCntSrchOpn10 = document.createElement('option')
-  oEltTabCntSrchOpn10.value = 'lagVnma'
-  oEltTabCntSrchOpn10.text = 'Vietnamese'
+  oEltTabCntSrchOpn10.value = 'lagTurk'
+  oEltTabCntSrchOpn10.text = 'Turkish'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn10)
+  let oEltTabCntSrchOpn11 = document.createElement('option')
+  oEltTabCntSrchOpn11.value = 'lagVnma'
+  oEltTabCntSrchOpn11.text = 'Vietnamese'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn11)
   oEltTabCntSrchSlt.options[0].selected = true
   oEltTabCntSrchP.id = 'idTabCntSrchP'
   oEltTabCntSrchP.setAttribute('class', 'clsCenter')

@@ -1,5 +1,5 @@
 ﻿; comments
-; version {2024-12-17}
+; version {2025-01-31}
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -37,8 +37,18 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 
 :::aac::á
 :::abr::ă
+:::abrac::ắ
+:::abrgr::ằ
+:::abrhk::ẳ
+:::abrtl::ẵ
+:::abrdb::ặ
 :::acr::ǎ
 :::acf::â
+:::acfac::ấ
+:::acfgr::ầ
+:::acfhk::ẩ
+:::acftl::ẫ
+:::acfdb::ậ
 :::agr::à
 :::adb::ạ
 :::Adb::Ạ
@@ -49,25 +59,47 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 :::atl::ã
 :::aum::ä
 
-:::emc::ē
 :::eac::é
 :::ecr::ě
+:::ecf::ê
+:::ecfac::ế
+:::ecfgr::ề
+:::ecfhk::ể
+:::ecftl::ễ
+:::ecfdb::ệ
+:::edb::ẹ
 :::egr::è
+:::ehk::ẻ
+:::emc::ē
+:::etl::ẽ
 
 :::imc::ī
 :::iac::í
 :::icr::ǐ
 :::igr::ì
+:::idb::ị
 :::idl::ı
+:::ihk::ỉ
+:::itl::ĩ
 :::ium::ï
 
 :::oac::ó
 :::obr::ŏ
 :::ocf::ô
+:::ocfac::ố
+:::ocfgr::ồ
+:::ocfhk::ổ
+:::ocftl::ỗ
+:::ocfdb::ộ
 :::ocr::ǒ
 :::odb::ọ
 :::ohk::ỏ
-:::ohr::ơ
+:::ohn::ơ
+:::ohngr::ờ
+:::ohnac::ớ
+:::ohnhk::ở
+:::ohntl::ỡ
+:::ohndb::ợ
 :::omc::ō
 :::ogr::ò
 :::ost::ø
@@ -77,8 +109,25 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 :::umc::ū
 :::uac::ú
 :::ucr::ǔ
+:::udb::ụ
 :::ugr::ù
+:::uhn::ư
+:::uhngr::ừ
+:::uhnac::ứ
+:::uhnhk::ử
+:::uhntd::ữ
+:::uhndb::ự
+:::uhk::ủ
+:::utl::ũ
 :::uum::ü
+
+
+:::yac::ý
+:::ygr::ỳ
+:::ydb::ỵ
+:::yhk::ỷ
+:::ytl::ỹ
+
 
 :::ccl::ç
 :::ccf::ĉ
