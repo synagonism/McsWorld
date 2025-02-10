@@ -28,6 +28,8 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-11-3.2025-02-10: Chinese Alt+F2',
+    'mMcsh.js.19-11-2.2025-02-06: lang shortcuts',
     'mMcsh.js.19-11-1.2025-02-04: lang shortcuts',
     'mMcsh.js.19-11-0.2025-02-02: Italian',
     'mMcsh.js.19-10-0.2025-01-29: lagVnma',
@@ -314,7 +316,7 @@ let fContainersInsert = function () {
   })
 
   addEventListener('keyup', function (oEvtIn) {
-    if (oEvtIn.ctrlKey && oEvtIn.key === 'F3') {
+    if (oEvtIn.altKey && oEvtIn.key === 'F2') {
       fCnrOntopRemove()
       fCnrSearchShow()
       //select Chinese
@@ -650,7 +652,7 @@ let fContainersInsert = function () {
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn4)
   let oEltTabCntSrchOpn5 = document.createElement('option')
   oEltTabCntSrchOpn5.value = 'lagZhon'
-  oEltTabCntSrchOpn5.text = 'Chinese (Zhon - Ctrl+F3)'
+  oEltTabCntSrchOpn5.text = 'Chinese (Zhon - Alt+F2)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn5)
   let oEltTabCntSrchOpn6 = document.createElement('option')
   oEltTabCntSrchOpn6.value = ''
@@ -659,23 +661,23 @@ let fContainersInsert = function () {
 
   let oEltTabCntSrchOpn7 = document.createElement('option')
   oEltTabCntSrchOpn7.value = 'lagEspo'
-  oEltTabCntSrchOpn7.text = 'Esperanto'
+  oEltTabCntSrchOpn7.text = 'Esperanto (Espo)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn7)
   let oEltTabCntSrchOpn8 = document.createElement('option')
   oEltTabCntSrchOpn8.value = 'lagElla'
-  oEltTabCntSrchOpn8.text = 'GreekAncient'
+  oEltTabCntSrchOpn8.text = 'GreekAncient (Ella)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn8)
   let oEltTabCntSrchOpn9 = document.createElement('option')
   oEltTabCntSrchOpn9.value = 'lagItln'
-  oEltTabCntSrchOpn9.text = 'Italian'
+  oEltTabCntSrchOpn9.text = 'Italian (Itln)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn9)
   let oEltTabCntSrchOpn10 = document.createElement('option')
   oEltTabCntSrchOpn10.value = 'lagTurk'
-  oEltTabCntSrchOpn10.text = 'Turkish'
+  oEltTabCntSrchOpn10.text = 'Turkish (Turk)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn10)
   let oEltTabCntSrchOpn11 = document.createElement('option')
   oEltTabCntSrchOpn11.value = 'lagVnma'
-  oEltTabCntSrchOpn11.text = 'Vietnamese'
+  oEltTabCntSrchOpn11.text = 'Vietnamese (Vnma)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn11)
   oEltTabCntSrchSlt.options[0].selected = true
   oEltTabCntSrchP.id = 'idTabCntSrchP'
