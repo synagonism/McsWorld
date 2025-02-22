@@ -52,6 +52,7 @@ import {fWriteJsonArray} from './mUtil.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mNamidx.mjs.0-6-0.2025-02-22: sFileIdxRest===sLagIn+00',
     'mNamidx.mjs.0-5-2.2023-12-04: <p>[name:: on EXTRA names',
     'mNamidx.mjs.0-5-1.2023-11-27: >[name:: on EXTRA names',
     'mNamidx.mjs.0-5-0.2022-09-13: meta-info::',
@@ -133,13 +134,13 @@ function fNamidx(fileIn, fSftpIn) {
     // array with names of dirCor/McsCor000010.last.html to remove|add its names
     aLag,
     // array of languages ['lagALLL']
-    // or ['lagElln','lagEngl','lagZhon','lagTurk','lagVnma','lagItln']
-    aLagALL = ['lagEngl','lagElln','lagZhon','lagVnma','lagItln'],
-    //aLagALL = ['lagEngl','lagSngo','lagZhon','lagEspo','lagElln','lagElla','lagTurk'],
+    aLagALL = ['lagEngl','lagElln','lagZhon','lagItln'],
+    //aLagALL = ['lagEngl','lagSngo','lagElln','lagZhon',
+    //'lagElla','lagEspo','lagItln','lagVnma','lagTurk'],
     // 'lagAlb','lagBel','lagBos','lagBul','lagCes','lagDan','lagDeu','lagEst',
     // 'lagFin','lagFra','lagHrv','lagHun','lagIta','lagLav','lagLit','lagMlt',
     // 'lagMol','lagNld','lagNor','lagPol','lagPor','lagRom','lagRus','lagSlk',
-    // 'lagSlv','lagSrp','lagSpa','lagSwe','lagTur','lagUkr',
+    // 'lagSlv','lagSrp','lagSpa','lagSwe','lagUkr',
     // 'lagArb','lagHin','lagJpn'
     aRootFileIdx_Idx_Qntnam = JSON.parse(moFs.readFileSync('dirNamidx/namidx.lagRoot.json')),
     // [['lagEngl01ei','A',1111]} with quantity of names
@@ -470,7 +471,7 @@ function fNamidx(fileIn, fSftpIn) {
     // choose root-char or rest
     sCharName = aNUIn[0].substring(0,1)
     for (sFileIdx in oRootFileIdx_Idx) {
-      if (sFileIdx.startsWith(sLagIn + '00'))
+      if (sFileIdx === sLagIn + '00')
         sFileIdxRest = sFileIdx
       if (sFileIdx.startsWith(sLagIn)) {
         sIndex = oRootFileIdx_Idx[sFileIdx]
