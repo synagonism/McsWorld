@@ -52,6 +52,7 @@ import {fWriteJsonArray} from './mUtil.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mNamidx.mjs.0-6-1.2025-02-23: sFileIdxRest===sLagIn+00_0',
     'mNamidx.mjs.0-6-0.2025-02-22: sFileIdxRest===sLagIn+00',
     'mNamidx.mjs.0-5-2.2023-12-04: <p>[name:: on EXTRA names',
     'mNamidx.mjs.0-5-1.2023-11-27: >[name:: on EXTRA names',
@@ -471,8 +472,9 @@ function fNamidx(fileIn, fSftpIn) {
     // choose root-char or rest
     sCharName = aNUIn[0].substring(0,1)
     for (sFileIdx in oRootFileIdx_Idx) {
-      if (sFileIdx === sLagIn + '00')
+      if (sFileIdx === sLagIn + '00' || sFileIdx === sLagIn + '00_0'){
         sFileIdxRest = sFileIdx
+      }
       if (sFileIdx.startsWith(sLagIn)) {
         sIndex = oRootFileIdx_Idx[sFileIdx]
 
