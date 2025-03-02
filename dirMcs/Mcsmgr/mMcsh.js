@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-12-0.2025-02-24: German',
     'mMcsh.js.19-11-3.2025-02-10: Chinese Alt+F2',
     'mMcsh.js.19-11-2.2025-02-06: lang shortcuts',
     'mMcsh.js.19-11-1.2025-02-04: lang shortcuts',
@@ -664,21 +665,29 @@ let fContainersInsert = function () {
   oEltTabCntSrchOpn7.text = 'Esperanto (Espo)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn7)
   let oEltTabCntSrchOpn8 = document.createElement('option')
-  oEltTabCntSrchOpn8.value = 'lagElla'
-  oEltTabCntSrchOpn8.text = 'GreekAncient (Ella)'
+  oEltTabCntSrchOpn8.value = 'lagFrac'
+  oEltTabCntSrchOpn8.text = 'French (Frac)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn8)
-  let oEltTabCntSrchOpn9 = document.createElement('option')
-  oEltTabCntSrchOpn9.value = 'lagItln'
-  oEltTabCntSrchOpn9.text = 'Italian (Itln)'
-  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn9)
   let oEltTabCntSrchOpn10 = document.createElement('option')
-  oEltTabCntSrchOpn10.value = 'lagTurk'
-  oEltTabCntSrchOpn10.text = 'Turkish (Turk)'
+  oEltTabCntSrchOpn10.value = 'lagDeut'
+  oEltTabCntSrchOpn10.text = 'German (Deut)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn10)
   let oEltTabCntSrchOpn11 = document.createElement('option')
-  oEltTabCntSrchOpn11.value = 'lagVnma'
-  oEltTabCntSrchOpn11.text = 'Vietnamese (Vnma)'
+  oEltTabCntSrchOpn11.value = 'lagElla'
+  oEltTabCntSrchOpn11.text = 'GreekAncient (Ella)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn11)
+  let oEltTabCntSrchOpn12 = document.createElement('option')
+  oEltTabCntSrchOpn12.value = 'lagItln'
+  oEltTabCntSrchOpn12.text = 'Italian (Itln)'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn12)
+  let oEltTabCntSrchOpn13 = document.createElement('option')
+  oEltTabCntSrchOpn13.value = 'lagTurk'
+  oEltTabCntSrchOpn13.text = 'Turkish (Turk)'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn13)
+  let oEltTabCntSrchOpn14 = document.createElement('option')
+  oEltTabCntSrchOpn14.value = 'lagVnma'
+  oEltTabCntSrchOpn14.text = 'Vietnamese (Vnma)'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn14)
   oEltTabCntSrchSlt.options[0].selected = true
   oEltTabCntSrchP.id = 'idTabCntSrchP'
   oEltTabCntSrchP.setAttribute('class', 'clsCenter')

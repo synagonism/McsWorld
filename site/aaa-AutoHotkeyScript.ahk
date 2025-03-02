@@ -1,5 +1,5 @@
 ﻿; comments
-; version {2025-01-31}
+; version {2025-02-26}
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -34,6 +34,8 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ; scr-ipt      html = &Ascr::𝒜
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; CUSTOM and NUMBER NOTATION
+
+:::->::⭢
 
 :::aac::á
 :::abr::ă
@@ -145,6 +147,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 
 :::scl::ş
 :::scf::ŝ
+:::ss::ß
 
 ::ii128::€
 ::ii8364::€
