@@ -28,6 +28,7 @@
 const
   // contains the-versions of mLagElla.js
   aVersion = [
+    'mLagElla.js.0-2-3.2025-03-11: /i3/⭢/i8/',
     'mLagElla.js.0-2-2.2022-08-25: αύ',
     'mLagElla.js.0-2-1.2022-08-21: sOut',
     'mLagElla.js.0-2-0.2022-05-18: u-/i3/',
@@ -264,31 +265,31 @@ function fEllawordFindPhonema (sWordIn) {
   sOut = sOut.replaceAll('ο', 'o') //
   sOut = sOut.replaceAll('Ο', 'o') //
   //Ύ|Υ|υ|ύ|ὐ|ὑ|ὒ|ὓ|ὔ|ὕ|ὖ|ὗ|Ὑ|Ὓ|Ὕ|Ὗ|ὺ|ύ|ῠ|ῡ|ῢ|ΰ|ῦ|ῧ|Ῠ|Ῡ|Ὺ|Ύ
-  sOut = sOut.replaceAll('ὖ', 'í3ì3') //
-  sOut = sOut.replaceAll('ὗ', 'hí3ì3') //
-  sOut = sOut.replaceAll('Ὗ', 'hí3ì3') //
-  sOut = sOut.replaceAll('ῧ', 'í3ì3') //
-  sOut = sOut.replaceAll('ῦ', 'í3ì3') //
-  sOut = sOut.replaceAll('ὔ', 'í3') //
-  sOut = sOut.replaceAll('ὕ', 'hí3') //
-  sOut = sOut.replaceAll('Ὕ', 'hí3') //
-  sOut = sOut.replaceAll('ὒ', 'ì3') //
-  sOut = sOut.replaceAll('ὓ', 'hì3') //
-  sOut = sOut.replaceAll('Ὓ', 'hì3') //
-  sOut = sOut.replaceAll('ύ', 'í3') //
-  sOut = sOut.replaceAll('Ύ', 'í3') //
-  sOut = sOut.replaceAll('ὺ', 'ì3') //
-  sOut = sOut.replaceAll('Ὺ', 'ì3') //
-  sOut = sOut.replaceAll('ΰ', 'í3') //
-  sOut = sOut.replaceAll('ῢ', 'ì3') //
-  sOut = sOut.replaceAll('ὐ', 'i3') //
-  sOut = sOut.replaceAll('ὑ', 'hi3') //
-  sOut = sOut.replaceAll('Ὑ', 'hi3') //
-  sOut = sOut.replaceAll('ῠ', 'i3') //
-  sOut = sOut.replaceAll('Ῠ', 'i3') //
-  sOut = sOut.replaceAll('ῡ', 'i3i3') //
-  sOut = sOut.replaceAll('Ῡ', 'i3') //
-  sOut = sOut.replaceAll('υ', 'i3') //
+  sOut = sOut.replaceAll('ὖ', 'í8ì8') //
+  sOut = sOut.replaceAll('ὗ', 'hí8ì8') //
+  sOut = sOut.replaceAll('Ὗ', 'hí8ì8') //
+  sOut = sOut.replaceAll('ῧ', 'í8ì8') //
+  sOut = sOut.replaceAll('ῦ', 'í8ì8') //
+  sOut = sOut.replaceAll('ὔ', 'í8') //
+  sOut = sOut.replaceAll('ὕ', 'hí8') //
+  sOut = sOut.replaceAll('Ὕ', 'hí8') //
+  sOut = sOut.replaceAll('ὒ', 'ì8') //
+  sOut = sOut.replaceAll('ὓ', 'hì8') //
+  sOut = sOut.replaceAll('Ὓ', 'hì8') //
+  sOut = sOut.replaceAll('ύ', 'í8') //
+  sOut = sOut.replaceAll('Ύ', 'í8') //
+  sOut = sOut.replaceAll('ὺ', 'ì8') //
+  sOut = sOut.replaceAll('Ὺ', 'ì8') //
+  sOut = sOut.replaceAll('ΰ', 'í8') //
+  sOut = sOut.replaceAll('ῢ', 'ì8') //
+  sOut = sOut.replaceAll('ὐ', 'i8') //
+  sOut = sOut.replaceAll('ὑ', 'hi8') //
+  sOut = sOut.replaceAll('Ὑ', 'hi8') //
+  sOut = sOut.replaceAll('ῠ', 'i8') //
+  sOut = sOut.replaceAll('Ῠ', 'i8') //
+  sOut = sOut.replaceAll('ῡ', 'i8i8') //
+  sOut = sOut.replaceAll('Ῡ', 'i8') //
+  sOut = sOut.replaceAll('υ', 'i8') //
   // Ώ|Ω|ω|ώ|ὠ|ὡ|ὢ|ὣ|ὤ|ὥ|ὦ|ὧ|Ὠ|Ὡ|Ὢ|Ὣ|Ὤ|Ὥ|Ὦ|Ὧ|ὼ|ώ|ᾠ|ᾡ|ᾢ|ᾣ|ᾤ|ᾥ|ᾦ|ᾧ|
   // ᾨ|ᾩ|ᾪ|ᾫ|ᾬ|ᾭ|ᾮ|ᾯ|ῲ|ῳ|ῴ|ῶ|ῷ|Ὼ|Ώ|ῼ
   sOut = sOut.replaceAll('ῷ', 'óì') //
@@ -779,7 +780,7 @@ function fEllawordFindPhonemaNew (sWordIn) {
   sOut = sOut.replaceAll('Θ', 'th') //
   sOut = sOut.replaceAll('κ', 'k') //
   sOut = sOut.replaceAll('Κ', 'k') //
-  sOut = sOut.replaceAll('λλ', 'l') // 
+  sOut = sOut.replaceAll('λλ', 'l') //
   sOut = sOut.replaceAll('λ', 'l') //
   sOut = sOut.replaceAll('Λ', 'l') //
   sOut = sOut.replaceAll('μ', 'm') //
@@ -817,7 +818,7 @@ function fEllawordFindPhonemaNew (sWordIn) {
 }
 
 /*
- * DOING: it finds the-phonemic-notation of a-GreekAncient-text-word 
+ * DOING: it finds the-phonemic-notation of a-GreekAncient-text-word
  *   with both GreekAncicent and GreekNew pronunciation.
  * INPUT: βῆ
  * OUTPUT: /béè|vi/

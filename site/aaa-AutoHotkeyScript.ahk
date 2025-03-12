@@ -1,5 +1,5 @@
 ﻿; comments
-; version {2025-02-26}
+; version {2025-03-11}
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -11,6 +11,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ; NUMBER notation begin with ii
 ; TeX notation begin with    \
 ; HTML notation begin with   &
+; ALPHABET ''
 
 ;; EXAMPLES:
 ;              CUSTOM       HTML
@@ -69,6 +70,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 :::ecfhk::ể
 :::ecftl::ễ
 :::ecfdb::ệ
+:::eum::ë
 :::edb::ẹ
 :::egr::è
 :::ehk::ẻ
@@ -169,6 +171,97 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 
 ::ii120169::𝕩
 :::xdouble::𝕩
+
+;;;;;;;;;;;;;;;;;;;;;;;; SLAVIC ALPHABET
+;;Russian: Аа,Бб,Вв,Гг,Дд,Ее,Ёё,Жж,Зз,Ии,Йй,Кк,Лл,Мм,Нн,Оо,Пп,Рр,Сс,Тт,
+;;Уу,Фф,Хх,Цц,Чч,Шш,Щщ,Ъъ,Ыы,Ьь,Ээ,Юю,Яя.
+;;Bulgarian:  Аа,Бб,Вв,Гг,Дд,Ее,Жж,Зз,Ии,Йй,Кк,Лл,Мм,Нн,Оо,Пп,Рр,Сс,Тт,
+;;Уу,Фф,Хх,Цц,Чч,Шш,Щщ,Ъъ,Ьь,Юю,Яя.
+;;Serbian: Аа,Бб,Вв,Гг,Дд,Ђђ,Ее,Жж,Зз,Ии,Јј,Кк,Лл,Љљ,Мм,Нн,Њњ,Оо,Пп,Рр,Сс,
+;;Тт,Ћћ,Уу,Фф,Хх,Цц,Чч,Џџ,Шш.
+
+::''lrr::⟨
+::''lrl::⟩
+
+::''A::А
+::''a::а
+::''B::Б
+::''b::б
+::''V::В
+::''v::в
+::''G::Г
+::''g::г
+::''D::Д
+::''d::д
+::''Dj::Ђ   ;;serbian
+::''dj::ђ
+::''Ye::Е  ;;/e/ bulgarian
+::''ye::е
+::''Yo::Ё
+::''yo::ё
+::''Zh::Ж
+::''zh::ж
+::''Z::З
+::''z::з
+::''I::И
+::''i::и
+::''Ibr::Й
+::''ibr::й
+::''Y::Ј   ;; /y/ serbian (yes)
+::''y::ј
+::''K::К
+::''K::к
+::''L::Л
+::''l::л
+::''Lj::Љ  ;; palatized serbian
+::''lj::љ
+::''M::М
+::''m::м
+::''N::Н
+::''n::н
+::''Nj::Њ   ;; palatized Serbian
+::''nj::њ
+::''O::О
+::''o::о
+::''P::П
+::''p::п
+::''R::Р
+::''r::р
+::''S::С
+::''s::с
+::''T::Т
+::''Th::Ћ ;;Soft "t" sound, unique to Serbian
+::''th::ћ
+::''t::т
+::''U::У
+::''u::у
+::''F::Ф
+::''f::ф
+::''H::Х
+::''h::х
+::''C::Ц
+::''c::ц
+::''Ch::Ч
+::''ch::ч
+::''Sh::Ш
+::''sh::ш
+::''Shj::Щ
+::''sjh::щ
+::''Dz::Џ   ;;Serbian
+::''dz::џ
+::''Hd::Ъ
+::''hd::ъ
+::''Ib::Ы
+::''ib::ы
+::''Sf::Ь
+::''sf::ь
+::''E::Э
+::''e::э
+::''Yu::Ю
+::''yu::ю
+::''Ya::Я
+::''ya::я
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;; TeX-NOTATION with their unicodes equivalents
 
