@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.socBgra!=Bulgaria (McsStn000038.0-2-0.2025-03-11 draft)</title>
+  <title>Mcs.socBgra!=Bulgaria (McsStn000038.0-3-0.2025-03-16 draft)</title>
   <meta name="keywords" content="Bulgaria, socBgra, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -87,6 +87,8 @@
     <br>* McsEngl.socBgra!=Bulgaria,
     <br>====== langoBulgarian:
     <br>* McsElln.Република-България!=socBgra,
+    <br>====== langoGreek:
+    <br>* McsElln.Βουλγαρία!η!=socBgra,
     <a class="clsHide" href="#idName"></a></p>
 </section>
 
@@ -95,13 +97,25 @@
     <a class="clsHide" href="#idSocBgraatt001H1"></a></h1>
   <p id="idSocBgraatt001dsn">description::
     <br>× McsHitp-creation: {2025-03-10},
-    <br>
     <br>· any system of humans.
     <a class="clsHide" href="#idSocBgraatt001dsn"></a></p>
   <p id="idSocBgraatt001nam">name::
     <br>* McsEngl.socBgra'att001-human-view,
     <br>* McsEngl.socBgra'human-view,
     <a class="clsHide" href="#idSocBgraatt001nam"></a></p>
+
+  <section id="idSocBgraatt005">
+  <h2 id="idSocBgraatt005H2">time-zone of socBgra
+    <a class="clsHide" href="#idSocBgraatt005H2"></a></h2>
+  <p id="idSocBgraatt005dsn">description::
+    <br>× McsHitp-creation: {2025-03-16},
+    <br>· Bulgaria follows Eastern European Time (EET), which is UTC+2 during standard time. During daylight saving time, it switches to Eastern European Summer Time (EEST), which is UTC+3.
+    <a class="clsHide" href="#idSocBgraatt005dsn"></a></p>
+  <p id="idSocBgraatt005nam">name::
+    <br>* McsEngl.socBgra'att005-time-zone,
+    <br>* McsEngl.socBgra'time-zone,
+    <a class="clsHide" href="#idSocBgraatt005nam"></a></p>
+  </section>
 
   <section id="idSocBgraatt002">
   <h2 id="idSocBgraatt002H2">tourist-attraction of socBgra
@@ -1009,7 +1023,29 @@
     <br>* McsEngl.BgraEcon!=economy-of-Bulgaria,
     <br>* McsEngl.economy-of-Bulgaria!⇒BgraEcon,
     <br>* McsEngl.socBgra'att004-economy!⇒BgraEcon,
+    <br>* McsEngl.socBgra'economy!⇒BgraEcon,
     <a class="clsHide" href="#idBgraeconnam"></a></p>
+
+  <section id="idBgraeconevu">
+  <h2 id="idBgraeconevuH2">currency of BgraEcon
+    <a class="clsHide" href="#idBgraeconevuH2"></a></h2>
+  <p id="idBgraeconevudsn">description::
+    <br>× McsHitp-creation: {2025-03-16},
+    <br>· BGN = currency of Bulgaria, Lev.
+    <br>
+    <br>· <strong>exchange-rate EUR to BGN</strong>:
+    <br>· 1 EUR (€) = <input type="text" id="idInpt3" size="10"> BGN
+    <br>· <a href="https://www.exchangerate-api.com">Rates By Exchange Rate API</a>
+    <br>· EUR: <input type="text" id="idInpt1" size="40">
+    <br>· BGN: <input type="text" id="idInpt2" size="40">
+    <a class="clsHide" href="#idBgraeconevudsn"></a></p>
+  <p id="idBgraeconevunam">name::
+    <br>* McsEngl.BGN!=currency-of-Bulgaria-Lev,
+    <br>* McsEngl.BgraEcon'currency-BGN-Lev,
+    <br>* McsEngl.currency.Bulgaria-BGN-Lev,
+    <br>* McsEngl.socBgra'currency-BGN-Lev,
+    <a class="clsHide" href="#idBgraeconevunam"></a></p>
+  </section>
 </section>
 
 <section id="idSocBgrarscF">
@@ -1137,6 +1173,39 @@
 
 <script type="module">
   import * as omMcsh from '../Mcsmgr/mMcsh.js'
+
+  // EXCHANGE RATE EUR to BGN:
+  async function getEurToAllExchangeRate() {
+    try {
+      const apiUrl = `https://open.er-api.com/v6/latest/EUR`;
+      // Make the API request
+      const response = await fetch(apiUrl);
+      // Check if the request was successful
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      // Parse the JSON response
+      const data = await response.json();
+      // Extract the exchange rate for BGN
+      const exchangeRate = data.rates.BGN;
+      if (exchangeRate) {
+        document.getElementById('idInpt3').value =  exchangeRate;
+      } else {
+        console.log("BGN is not available in the exchange rate data.");
+      }
+    } catch (error) {
+      console.error("Could not fetch or process the exchange rate:", error);
+    }
+  }
+  getEurToAllExchangeRate()
+  // finds currency, given euros
+  document.getElementById('idInpt1').addEventListener('input', function(oEvtIn) {
+    document.getElementById('idInpt2').value = (oEvtIn.target.value * document.getElementById('idInpt3').value).toFixed(4)
+  })
+  // finds euros, given currency
+  document.getElementById('idInpt2').addEventListener('input', function(oEvtIn) {
+    document.getElementById('idInpt1').value = (document.getElementById('idInpt2').value / document.getElementById('idInpt3').value).toFixed(4)
+  })
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8T0MHWLS1"></script>

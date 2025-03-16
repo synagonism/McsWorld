@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-13-0.2025-03-16: Albanian, Bulgarian',
     'mMcsh.js.19-12-0.2025-02-24: German',
     'mMcsh.js.19-11-3.2025-02-10: Chinese Alt+F2',
     'mMcsh.js.19-11-2.2025-02-06: lang shortcuts',
@@ -661,33 +662,41 @@ let fContainersInsert = function () {
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn6)
 
   let oEltTabCntSrchOpn7 = document.createElement('option')
-  oEltTabCntSrchOpn7.value = 'lagEspo'
-  oEltTabCntSrchOpn7.text = 'Esperanto (Espo)'
+  oEltTabCntSrchOpn7.value = 'lagSqip'
+  oEltTabCntSrchOpn7.text = 'Albanian (Sqip)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn7)
   let oEltTabCntSrchOpn8 = document.createElement('option')
-  oEltTabCntSrchOpn8.value = 'lagFrac'
-  oEltTabCntSrchOpn8.text = 'French (Frac)'
+  oEltTabCntSrchOpn8.value = 'lagBulg'
+  oEltTabCntSrchOpn8.text = 'Bulgarian (Bulg)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn8)
+  let oEltTabCntSrchOpn9 = document.createElement('option')
+  oEltTabCntSrchOpn9.value = 'lagEspo'
+  oEltTabCntSrchOpn9.text = 'Esperanto (Espo)'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn9)
   let oEltTabCntSrchOpn10 = document.createElement('option')
-  oEltTabCntSrchOpn10.value = 'lagDeut'
-  oEltTabCntSrchOpn10.text = 'German (Deut)'
+  oEltTabCntSrchOpn10.value = 'lagFrac'
+  oEltTabCntSrchOpn10.text = 'French (Frac)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn10)
   let oEltTabCntSrchOpn11 = document.createElement('option')
-  oEltTabCntSrchOpn11.value = 'lagElla'
-  oEltTabCntSrchOpn11.text = 'GreekAncient (Ella)'
+  oEltTabCntSrchOpn11.value = 'lagDeut'
+  oEltTabCntSrchOpn11.text = 'German (Deut)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn11)
   let oEltTabCntSrchOpn12 = document.createElement('option')
-  oEltTabCntSrchOpn12.value = 'lagItln'
-  oEltTabCntSrchOpn12.text = 'Italian (Itln)'
+  oEltTabCntSrchOpn12.value = 'lagElla'
+  oEltTabCntSrchOpn12.text = 'GreekAncient (Ella)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn12)
   let oEltTabCntSrchOpn13 = document.createElement('option')
-  oEltTabCntSrchOpn13.value = 'lagTurk'
-  oEltTabCntSrchOpn13.text = 'Turkish (Turk)'
+  oEltTabCntSrchOpn13.value = 'lagItln'
+  oEltTabCntSrchOpn13.text = 'Italian (Itln)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn13)
   let oEltTabCntSrchOpn14 = document.createElement('option')
-  oEltTabCntSrchOpn14.value = 'lagVnma'
-  oEltTabCntSrchOpn14.text = 'Vietnamese (Vnma)'
+  oEltTabCntSrchOpn14.value = 'lagTurk'
+  oEltTabCntSrchOpn14.text = 'Turkish (Turk)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn14)
+  let oEltTabCntSrchOpn15 = document.createElement('option')
+  oEltTabCntSrchOpn15.value = 'lagVnma'
+  oEltTabCntSrchOpn15.text = 'Vietnamese (Vnma)'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn15)
   oEltTabCntSrchSlt.options[0].selected = true
   oEltTabCntSrchP.id = 'idTabCntSrchP'
   oEltTabCntSrchP.setAttribute('class', 'clsCenter')

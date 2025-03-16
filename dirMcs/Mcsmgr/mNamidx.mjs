@@ -135,11 +135,13 @@ function fNamidx(fileIn, fSftpIn) {
     // array with names of dirCor/McsCor000010.last.html to remove|add its names
     aLag,
     // array of languages ['lagALLL']
-    aLagALL = ['lagEngl','lagElln','lagZhon','lagDeut','lagFrac'],
-    //aLagALL = ['lagEngl','lagSngo','lagElln','lagZhon',
-    //'lagDeut','lagElla','lagEspo','lagFrac','lagItln','lagVnma','lagTurk'],
-    // 'lagAlb','lagBel','lagBos','lagBul','lagCes','lagDan','lagDeu','lagEst',
-    // 'lagFin','lagFra','lagHrv','lagHun','lagIta','lagLav','lagLit','lagMlt',
+    //aLagALL = ['lagEngl','lagElln','lagZhon','lagDeut','lagFrac'],
+    aLagALL = ['lagEngl','lagSngo','lagElln','lagZhon',
+    'lagBulg','lagDeut','lagElla','lagEspo','lagFrac','lagItln',
+    'lagSqip','lagTurk','lagVnma'],
+    //
+    // 'lagBel','lagBos','lagCes','lagDan','lagEst',
+    // 'lagFin','lagHrv','lagHun','lagLav','lagLit','lagMlt',
     // 'lagMol','lagNld','lagNor','lagPol','lagPor','lagRom','lagRus','lagSlk',
     // 'lagSlv','lagSrp','lagSpa','lagSwe','lagUkr',
     // 'lagArb','lagHin','lagJpn'

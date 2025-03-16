@@ -98,12 +98,12 @@ let
   sDir = 'dirStn',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Bulgaria',
+  sName = 'Albania',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'socBgra',
+  sNameShort = 'socAlba',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'SocBgra',
+  sNameId = 'SocAlba',
 
 
   sNameFile = '',
