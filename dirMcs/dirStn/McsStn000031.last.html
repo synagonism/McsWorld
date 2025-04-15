@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.socChna!=PR-of-China (McsStn000031.0-86-0.2025-03-06 draft)</title>
+  <title>Mcs.socChna!=PR-of-China (McsStn000031.0-87-0.2025-03-17 draft)</title>
   <meta name="keywords" content="People's-Republic-of-China, socChna, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -78,6 +78,20 @@
     <br>* McsEngl.socChna'att003-human-view!⇒Chnahumnview,
     <br>* McsEngl.socChna'human-view!⇒Chnahumnview,
     <a class="clsHide" href="#idSocChnaatt003nam"></a></p>
+
+  <section id="idSocChnaatt013">
+  <h2 id="idSocChnaatt013H2">time-zone of socChna
+    <a class="clsHide" href="#idSocChnaatt013H2"></a></h2>
+  <p id="idSocChnaatt013dsn">description::
+    <br>"China uses a single time zone for the entire country, known as China Standard Time (CST), which is 8 hours ahead of Coordinated Universal Time (UTC+8). This applies across all of China, despite its wide geographical spread."
+    <br>[{2024-04-06 retrieved} https://chat.openai.com/c/9ba935a8-55de-4894-a55e-dc755a88874e]
+    <a class="clsHide" href="#idSocChnaatt013dsn"></a></p>
+  <p id="idSocChnaatt013nam">name::
+    <br>* McsEngl.ChnaTimeZone!=time-zone-of-PRC,
+    <br>* McsEngl.socChna'att013-time-zone!⇒ChnaTimeZone,
+    <br>* McsEngl.socChna'time-zone!⇒ChnaTimeZone,
+    <a class="clsHide" href="#idSocChnaatt013nam"></a></p>
+  </section>
 
   <section id="idSocChnaatt004">
   <h2 id="idSocChnaatt004H2">human of socChna
@@ -983,20 +997,6 @@
     <a class="clsHide" href="#idSocChnaatt018nam"></a></p>
   </section>
   </section>
-
-  <section id="idSocChnaatt013">
-  <h2 id="idSocChnaatt013H2">time-zone of socChna
-    <a class="clsHide" href="#idSocChnaatt013H2"></a></h2>
-  <p id="idSocChnaatt013dsn">description::
-    <br>"China uses a single time zone for the entire country, known as China Standard Time (CST), which is 8 hours ahead of Coordinated Universal Time (UTC+8). This applies across all of China, despite its wide geographical spread."
-    <br>[{2024-04-06 retrieved} https://chat.openai.com/c/9ba935a8-55de-4894-a55e-dc755a88874e]
-    <a class="clsHide" href="#idSocChnaatt013dsn"></a></p>
-  <p id="idSocChnaatt013nam">name::
-    <br>* McsEngl.Chnatimezone,
-    <br>* McsEngl.socChna'att013-time-zone!⇒Chnatimezone,
-    <br>* McsEngl.socChna'time-zone!⇒Chnatimezone,
-    <a class="clsHide" href="#idSocChnaatt013nam"></a></p>
-  </section>
 </section>
 
 <section id="idChnaecon">
@@ -1045,6 +1045,27 @@
     <br>* McsZhon.shèhuìzhǔyì-shìchǎng-jīngjì-社会主义市场经济!=Chnaecon,
     <br>* McsZhon.社会主义市场经济-shèhuìzhǔyì-shìchǎng-jīngjì!=Chnaecon,
     <a class="clsHide" href="#idChnaeconnam"></a></p>
+
+  <section id="idChnaeconevu">
+  <h2 id="idChnaeconevuH2">currency of ChnaEcon
+    <a class="clsHide" href="#idChnaeconevuH2"></a></h2>
+  <p id="idChnaeconevudsn">description::
+    <br>× McsHitp-creation: {2025-03-16},
+    <br>· CNY = China Yuan-RenMinBi currency.
+    <br>
+    <br>· <strong>exchange-rate EUR to CNY</strong>:
+    <br>· 1 EUR (€) = <input type="text" id="idInpt3" size="10"> CNY
+    <br>· <a href="https://www.exchangerate-api.com">Rates By Exchange Rate API</a>
+    <br>· EUR: <input type="text" id="idInpt1" size="40">
+    <br>· CNY: <input type="text" id="idInpt2" size="40">
+    <a class="clsHide" href="#idChnaeconevudsn"></a></p>
+  <p id="idChnaeconevunam">name::
+    <br>* McsEngl.CNY!=currency-of-China-Yuan-RenMinBi,
+    <br>* McsEngl.ChnaEcon'currency-CNY-Yuan-RenMinBi,
+    <br>* McsEngl.currency.China-CNY-Yuan-RenMinBi,
+    <br>* McsEngl.socChna'currency-CNY-Yuan-RenMinBi,
+    <a class="clsHide" href="#idChnaeconevunam"></a></p>
+  </section>
 
   <section id="idChnaeconatt061">
   <h2 id="idChnaeconatt061H2">worldview of Chnaecon
@@ -9760,6 +9781,39 @@
 
 <script type="module">
   import * as omMcsh from '../Mcsmgr/mMcsh.js'
+
+  // EXCHANGE RATE EUR to CNY:
+  async function getEurToAllExchangeRate() {
+    try {
+      const apiUrl = `https://open.er-api.com/v6/latest/EUR`;
+      // Make the API request
+      const response = await fetch(apiUrl);
+      // Check if the request was successful
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      // Parse the JSON response
+      const data = await response.json();
+      // Extract the exchange rate for CNY
+      const exchangeRate = data.rates.CNY;
+      if (exchangeRate) {
+        document.getElementById('idInpt3').value =  exchangeRate;
+      } else {
+        console.log("CNY is not available in the exchange rate data.");
+      }
+    } catch (error) {
+      console.error("Could not fetch or process the exchange rate:", error);
+    }
+  }
+  getEurToAllExchangeRate()
+  // finds currency, given euros
+  document.getElementById('idInpt1').addEventListener('input', function(oEvtIn) {
+    document.getElementById('idInpt2').value = (oEvtIn.target.value * document.getElementById('idInpt3').value).toFixed(4)
+  })
+  // finds euros, given currency
+  document.getElementById('idInpt2').addEventListener('input', function(oEvtIn) {
+    document.getElementById('idInpt1').value = (document.getElementById('idInpt2').value / document.getElementById('idInpt3').value).toFixed(4)
+  })
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8T0MHWLS1"></script>
