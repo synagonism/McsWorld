@@ -2,7 +2,7 @@
  * mMcsh.js - module McsHitp webpage-format code.
  * The MIT License (MIT)
  *
- * Copyright (c) 2010-2023 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2010-2025 Kaseluris.Nikos.1959 (hmnSngo)
  * kaseluris.nikos@gmail.com
  * https:// synagonism.net/
  *
@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-14-0.2025-04-17: Toc on CLICK content: remove line 1575 fEvtMouseoverContent',
     'mMcsh.js.19-13-0.2025-03-16: Albanian, Bulgarian',
     'mMcsh.js.19-12-0.2025-02-24: German',
     'mMcsh.js.19-11-3.2025-02-10: Chinese Alt+F2',
@@ -1572,7 +1573,7 @@ let fContainersInsert = function () {
   // events click, mouseover on elements in page-content-container
   Array.prototype.slice.call(document.querySelectorAll('#idCnrMainPgcntDiv *[id]')).forEach(function (oEltIn) {
     oEltIn.addEventListener('click', fEvtClickContent)
-    oEltIn.addEventListener('mouseover', fEvtMouseoverContent)
+    //oEltIn.addEventListener('mouseover', fEvtMouseoverContent)
   })
   Array.prototype.slice.call(document.querySelectorAll('#idCnrMainPginfDiv *[id]')).forEach(function (oEltIn) {
     oEltIn.addEventListener('click', function () {
