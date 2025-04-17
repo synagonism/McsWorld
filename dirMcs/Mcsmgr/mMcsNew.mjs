@@ -98,12 +98,12 @@ let
   sDir = 'dirLag',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Spanish-language',
+  sName = 'Bosnian-Croatian-Montenegrin-Serbian--language',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagSngo,
-  sNameShort = 'lagoEspn',
+  sNameShort = 'lagoBcms',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk,
-  sNameId = 'LEspn',
+  sNameId = 'LBcms',
 
 
   sNameFile = '',
