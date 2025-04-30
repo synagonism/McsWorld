@@ -1,17 +1,18 @@
 ﻿; comments
-; version {2025-03-11}
+; version {2025-04-30}
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory.
 #Hotstring c  ; makes scripts case-sensitive
 
-;; 4 NOTATIONS:
+;; NOTATIONS:
 ; CUSTOM notation begin with :
 ; NUMBER notation begin with ii
 ; TeX notation begin with    \
 ; HTML notation begin with   &
-; ALPHABET ''
+; SLAVIC ''
+; ARABIC '"
 
 ;; EXAMPLES:
 ;              CUSTOM       HTML
@@ -37,6 +38,8 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; CUSTOM and NUMBER NOTATION
 
 :::->::⭢
+:::lrr::⟨
+:::lrl::⟩
 
 :::aac::á
 :::abr::ă
@@ -138,18 +141,38 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 
 :::Dst::Đ
 :::dst::đ
+:::dlb::ḏ
+:::ddb::ḍ
 
+:::gmc::ḡ
 :::gbr::ğ
 :::gcr::ǧ
 :::gcf::ĝ
 
 :::hcf::ĥ
+:::hdb::ḥ
 
 :::jcf::ĵ
+
+:::klb::ḵ
+
+:::Ntl::Ñ
+:::ntl::ñ
 
 :::scl::ş
 :::scf::ŝ
 :::ss::ß
+:::scr::š
+:::sdb::ṣ
+
+:::tlb::ṯ
+:::tdb::ṭ
+
+:::zdb::ẓ
+
+:::fg1::ʻ
+:::fg2::ʕ
+:::fg3::ˤ
 
 ::ii128::€
 ::ii8364::€
@@ -180,8 +203,6 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ;;Serbian: Аа,Бб,Вв,Гг,Дд,Ђђ,Ее,Жж,Зз,Ии,Јј,Кк,Лл,Љљ,Мм,Нн,Њњ,Оо,Пп,Рр,Сс,
 ;;Тт,Ћћ,Уу,Фф,Хх,Цц,Чч,Џџ,Шш.
 
-::''lrr::⟨
-::''lrl::⟩
 
 ::''A::А
 ::''a::а
@@ -210,7 +231,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ::''Y::Ј   ;; /y/ serbian (yes)
 ::''y::ј
 ::''K::К
-::''K::к
+::''k::к
 ::''L::Л
 ::''l::л
 ::''Lj::Љ  ;; palatized serbian
@@ -262,6 +283,41 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ::''Ya::Я
 ::''ya::я
 
+;;;;;;;;;;;;;;;;;;;;;; ARABIC
+
+::'"aa::ا
+::'"b::ب
+::'"t::ت
+::'"th::ث
+::'"J::ج
+::'"hf::ح
+::'"H::خ
+::'"d::د
+::'"dh::ذ
+::'"r::ر
+::'"z::ز
+::'"s::س
+::'"S::ش
+::'"so::ص
+::'"do::ض
+::'"to::ط
+::'"dho::ظ
+::'"af::ع
+::'"yr::غ
+::'"f::ف
+::'"kf::ق
+::'"k::ك
+::'"l::ل
+::'"m::م
+::'"n::ن
+::'"h::ه
+::'"uu::و
+::'"ii::ي
+
+::'"dmm::ُ
+::'"fth::َ
+::'"ksr::ِ
+::'"skn::ْ
 
 ;;;;;;;;;;;;;;;;;;;;;;;; TeX-NOTATION with their unicodes equivalents
 
