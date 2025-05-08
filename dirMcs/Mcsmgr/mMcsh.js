@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-17-0.2025-05-07: Hindi',
     'mMcsh.js.19-16-0.2025-04-30: Arabic',
     'mMcsh.js.19-15-0.2025-04-20: Spanish',
     'mMcsh.js.19-14-0.2025-04-17: Toc on CLICK content: remove line 1575 fEvtMouseoverContent',
@@ -693,21 +694,25 @@ let fContainersInsert = function () {
   oEltTabCntSrchOpn13.text = 'GreekAncient (Ella)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn13)
   let oEltTabCntSrchOpn14 = document.createElement('option')
-  oEltTabCntSrchOpn14.value = 'lagItln'
-  oEltTabCntSrchOpn14.text = 'Italian (Itln)'
+  oEltTabCntSrchOpn14.value = 'lagHind'
+  oEltTabCntSrchOpn14.text = 'Hindi (Hind)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn14)
   let oEltTabCntSrchOpn15 = document.createElement('option')
-  oEltTabCntSrchOpn15.value = 'lagSpan'
-  oEltTabCntSrchOpn15.text = 'Spanish (Span)'
+  oEltTabCntSrchOpn15.value = 'lagItln'
+  oEltTabCntSrchOpn15.text = 'Italian (Itln)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn15)
   let oEltTabCntSrchOpn16 = document.createElement('option')
-  oEltTabCntSrchOpn16.value = 'lagTurk'
-  oEltTabCntSrchOpn16.text = 'Turkish (Turk)'
+  oEltTabCntSrchOpn16.value = 'lagSpan'
+  oEltTabCntSrchOpn16.text = 'Spanish (Span)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn16)
   let oEltTabCntSrchOpn17 = document.createElement('option')
-  oEltTabCntSrchOpn17.value = 'lagVnma'
-  oEltTabCntSrchOpn17.text = 'Vietnamese (Vnma)'
+  oEltTabCntSrchOpn17.value = 'lagTurk'
+  oEltTabCntSrchOpn17.text = 'Turkish (Turk)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn17)
+  let oEltTabCntSrchOpn18 = document.createElement('option')
+  oEltTabCntSrchOpn18.value = 'lagVnma'
+  oEltTabCntSrchOpn18.text = 'Vietnamese (Vnma)'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn18)
   oEltTabCntSrchSlt.options[0].selected = true
   oEltTabCntSrchP.id = 'idTabCntSrchP'
   oEltTabCntSrchP.setAttribute('class', 'clsCenter')
