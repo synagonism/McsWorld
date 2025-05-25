@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-18-0.2025-05-10: [ escaped for search',
     'mMcsh.js.19-17-0.2025-05-07: Hindi',
     'mMcsh.js.19-16-0.2025-04-30: Arabic',
     'mMcsh.js.19-15-0.2025-04-20: Spanish',
@@ -1339,6 +1340,9 @@ let fContainersInsert = function () {
       }
       if (sIn.indexOf('|') !== -1) {
         sIn = sIn.split('|').join('\\|')
+      }
+      if (sIn.indexOf('[') !== -1) {
+        sIn = sIn.split('[').join('\\[')
       }
       if (sIn.indexOf('(') !== -1) {
         sIn = sIn.split('(').join('\\(')

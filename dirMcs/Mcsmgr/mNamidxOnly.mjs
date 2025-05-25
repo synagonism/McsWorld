@@ -1,5 +1,5 @@
 /*
- * mNamidxOnly.mjs - module that creates name-indecies 
+ * mNamidxOnly.mjs - module that creates name-indecies
  * The MIT License (MIT)
  *
  * Copyright (c) 2017 - 2022 Kaseluris.Nikos.1959 (hmnSngo)
@@ -36,7 +36,7 @@
  * RUN: node Mcsmgr/mNamidxOnly.mjs alone
  *
  * PROBLEM:
- * - to compute the-number of concepts, we must set new DIRS at cptqnt.root.json. 
+ * - to compute the-number of concepts, we must set new DIRS at cptqnt.root.json.
  *
  */
 
@@ -44,7 +44,7 @@ import moFs from 'fs'
 import {fWriteJsonArray} from './mUtil.mjs'
 
 const
-  // contains the-versions of mHitp.js 
+  // contains the-versions of mHitp.js
   aVersion = [
     'mNamidxOnly.mjs.0-5-0.2022-03-17: only index',
     'mNamidx.mjs.0-4-0.2022-02-09: p-Mcs',
@@ -118,7 +118,7 @@ function fNamidx(fileIn) {
   let
     bExtra = false, // extra names, added manually on namidx.lagLagoExtra.json to-be removed!
     oNextln,
-    oSetFileUp = new Set, 
+    oSetFileUp = new Set,
     // files to upload, index, Mcs, Mcsqnt
     // we use a-set, because we add same files and want unique.
     aFileMcsIn,
@@ -132,7 +132,7 @@ function fNamidx(fileIn) {
     // 'lagSlv','lagSrp','lagSpa','lagSwe','lagTur','lagUkr',
     // 'lagArb','lagHin','lagJpn'
     aRootFileIdx_Idx_Qntnam = JSON.parse(moFs.readFileSync('dirNamidx/namidx.lagRoot.json')),
-    // [['lagEngl01ei','A',1111]} with quantity of names
+    // [['lagEngl01ei','A',1111]] with quantity of names
     aFileMcs_QntMcs = [],
     // array with the-file-Mcs and the-quantity of Mcs they include
     // [ 'dirTchInf/McsTchInf999999.last.html', 51 ]
@@ -226,7 +226,7 @@ function fNamidx(fileIn) {
         //console.log(aExtra_files)
         for (n = 0; n <aExtra_files.length; n++) {
           fRemoveNamUrl(oRootFileIdx_Idx, aExtra_files[n], aLag[nL])
-        }  
+        }
       }
 
       // READ Mcs-file and ADD its name-Urls on oFileIdx_ANamUrl{lagEngl01ei:[[name,Url]]}
@@ -345,7 +345,7 @@ function fNamidx(fileIn) {
     // update Mcsqnt.json
     // only on Mcs-files measure Mcs
     if (sFileMcs.indexOf('filMcs') >= 0
-       || sFileMcs.indexOf('Mcs') >= 0 
+       || sFileMcs.indexOf('Mcs') >= 0
        || sFileMcs.indexOf('Hitp') >= 0 )  {
       aFileMcs_QntMcs.push([sFileMcs, nMcsqnt])
     }
@@ -386,7 +386,7 @@ function fNamidx(fileIn) {
           } catch(e) {
             console.log('>> json problem:' + sFileIdxFull)
           }
-            
+
           // IF fileIdx is reference (endsWith('_0.json'))
           // read it, make oFileIdx_IdxIn, and remove names
           if (sFileIdxFull.endsWith('_0.json')) {
@@ -459,7 +459,7 @@ function fNamidx(fileIn) {
           // index is a-set of chars 'B|b|'
           if (sIndex.indexOf(sCharName) >= 0) {
             // found index-file
-            bRest = false 
+            bRest = false
             fStoreNamUrlNamidx(sFileIdx, aNUIn, sLagIn)
             break
           }
@@ -491,7 +491,7 @@ function fNamidx(fileIn) {
           //console.log(nIdxCrnt+', '+nIdxNext)
           if (nCharName >= nIdxCrnt && nCharName < nIdxNext) {
             // found index-file
-            bRest = false 
+            bRest = false
             fStoreNamUrlNamidx(sFileIdx, aNUIn, sLagIn)
             break
           }
@@ -549,7 +549,7 @@ function fNamidx(fileIn) {
         sIdxCrnt = aFileIdxRefIn[n][1].split('..')[0],
         sIdxNext = aFileIdxRefIn[n][1].split('..')[1]
 
-      // PROBLEM with supplementary-chars on reference-index-files 
+      // PROBLEM with supplementary-chars on reference-index-files
       if (aNUIn[0] >= sIdxCrnt && aNUIn[0] < sIdxNext) {
         //console.log(aNUIn[0]+', '+aFileIdxRefIn[n][1])
         // if index-file is NOT a-reference, store name-Url
@@ -871,10 +871,10 @@ function fNamidx(fileIn) {
   console.log(aSftp)
 
   /**
-   * DOING: updates the-quantity of Mcs of ONE Mcs-file[a] in Mcsqnt.json-files 
+   * DOING: updates the-quantity of Mcs of ONE Mcs-file[a] in Mcsqnt.json-files
    *    AND all wholes of it[a]
    * INPUT: the-name of an-Mcs-file[a] and the-new quantity of Mcs in this[a] file.
-   * OUTPUT: the-Mcsqnt-files affected 
+   * OUTPUT: the-Mcsqnt-files affected
    */
   function fUpdateQntMcs(sFileMcsIn, nMcsqntIn) {
     let
@@ -968,7 +968,7 @@ function fNamidx(fileIn) {
 
 // IF run alone
 if (bAlone) {
-  // create name-indices 
+  // create name-indices
   fNamidx(aFileMcsTxt)
 }
 
