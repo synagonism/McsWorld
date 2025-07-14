@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-19-0.2025-06-04: Russian',
     'mMcsh.js.19-18-0.2025-05-10: [ escaped for search',
     'mMcsh.js.19-17-0.2025-05-07: Hindi',
     'mMcsh.js.19-16-0.2025-04-30: Arabic',
@@ -703,17 +704,21 @@ let fContainersInsert = function () {
   oEltTabCntSrchOpn15.text = 'Italian (Itln)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn15)
   let oEltTabCntSrchOpn16 = document.createElement('option')
-  oEltTabCntSrchOpn16.value = 'lagSpan'
-  oEltTabCntSrchOpn16.text = 'Spanish (Span)'
+  oEltTabCntSrchOpn16.value = 'lagRusn'
+  oEltTabCntSrchOpn16.text = 'Russian (Rusn)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn16)
   let oEltTabCntSrchOpn17 = document.createElement('option')
-  oEltTabCntSrchOpn17.value = 'lagTurk'
-  oEltTabCntSrchOpn17.text = 'Turkish (Turk)'
+  oEltTabCntSrchOpn17.value = 'lagSpan'
+  oEltTabCntSrchOpn17.text = 'Spanish (Span)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn17)
   let oEltTabCntSrchOpn18 = document.createElement('option')
-  oEltTabCntSrchOpn18.value = 'lagVnma'
-  oEltTabCntSrchOpn18.text = 'Vietnamese (Vnma)'
+  oEltTabCntSrchOpn18.value = 'lagTurk'
+  oEltTabCntSrchOpn18.text = 'Turkish (Turk)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn18)
+  let oEltTabCntSrchOpn19 = document.createElement('option')
+  oEltTabCntSrchOpn19.value = 'lagVnma'
+  oEltTabCntSrchOpn19.text = 'Vietnamese (Vnma)'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn19)
   oEltTabCntSrchSlt.options[0].selected = true
   oEltTabCntSrchP.id = 'idTabCntSrchP'
   oEltTabCntSrchP.setAttribute('class', 'clsCenter')
