@@ -138,14 +138,14 @@ function fNamidx(fileIn, fSftpIn) {
     //aLagALL = ['lagEngl','lagElln','lagZhon','lagDeut','lagFrac'],
     aLagALL = ['lagEngl','lagSngo','lagElln','lagZhon',
     'lagArab','lagBulg','lagDeut','lagElla','lagEspo','lagFrac',
-    'lagHind','lagItln','lagRusn',
-    'lagSpan','lagSqip','lagTurk','lagVnma'],
+    'lagHind','lagItln','lagRomn','lagRusn',
+    'lagSlvn','lagSpan','lagSqip','lagTurk','lagVnma'],
     //
     // 'lagBel','lagBos','lagCes','lagDan','lagEst',
     // 'lagFin','lagHrv','lagHun','lagLav','lagLit','lagMlt',
-    // 'lagMol','lagNld','lagNor','lagPol','lagPor','lagRom','lagRus','lagSlk',
-    // 'lagSlv','lagSrp','lagSpa','lagSwe','lagUkr',
-    // 'lagArb','lagHin','lagJpn'
+    // 'lagMol','lagNld','lagNor','lagPol','lagPor','lagSlk',
+    // 'lagSlv','lagSrp','lagSwe','lagUkr',
+    // 'lagJpn'
     aRootFileIdx_Idx_Qntnam = JSON.parse(moFs.readFileSync('dirNamidx/namidx.lagRoot.json')),
     // [['lagEngl01ei','A',1111]} with quantity of names
     aFileMcs_QntMcs = [],

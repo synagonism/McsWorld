@@ -1,5 +1,5 @@
 ﻿; comments
-; version {2025-04-30}
+; version {2025-07-27}
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -35,6 +35,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ; fr-actur     html = &Afr::𝔄
 ; scr-ipt      html = &Ascr::𝒜
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; CUSTOM and NUMBER NOTATION
 
 :::->::⭢
@@ -42,6 +43,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 :::lrl::⟩
 
 :::aac::á
+:::aaa::á
 :::abr::ă
 :::abrac::ắ
 :::abrgr::ằ
@@ -66,6 +68,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 :::aum::ä
 
 :::eac::é
+:::eee::é
 :::ecr::ě
 :::ecf::ê
 :::ecfac::ế
@@ -81,8 +84,9 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 :::etl::ẽ
 
 :::imc::ī
+:::iii::í
 :::iac::í
-:::icr::ǐ
+:::icf::ǐ
 :::igr::ì
 :::idb::ị
 :::idl::ı
@@ -91,6 +95,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 :::ium::ï
 
 :::oac::ó
+:::ooo::ó
 :::obr::ŏ
 :::ocf::ô
 :::ocfac::ố
@@ -115,6 +120,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 
 :::umc::ū
 :::uac::ú
+:::uuu::ú
 :::ucr::ǔ
 :::udb::ụ
 :::ugr::ù
@@ -138,6 +144,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 
 :::ccl::ç
 :::ccf::ĉ
+:::ccr::č
 
 :::Dst::Đ
 :::dst::đ
@@ -162,15 +169,20 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 :::scl::ş
 :::scf::ŝ
 :::ss::ß
+:::Scb::Ș
+:::scb::ș
 :::scr::š
 :::sdb::ṣ
 
+:::Tcb::Ț
+:::tcb::ț
 :::tlb::ṯ
 :::tdb::ṭ
 
 :::zdb::ẓ
+:::zcr::ž
 
-:::fg1::ʻ
+:::fg1::ʻ  ;; pharyngeal
 :::fg2::ʕ
 :::fg3::ˤ
 
@@ -184,7 +196,6 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ::ii215::×
 
 ::ii305::ı
-:::id::ı
 
 ::ii12290::。
 :::ZhonFullstop::。
@@ -251,7 +262,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ::''S::С
 ::''s::с
 ::''T::Т
-::''Th::Ћ ;;Soft "t" sound, unique to Serbian
+::''Th::Ћ		;;Soft "t" sound, unique to Serbian
 ::''th::ћ
 ::''t::т
 ::''U::У
@@ -268,13 +279,13 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ::''sh::ш
 ::''Shj::Щ
 ::''sjh::щ
-::''Dz::Џ   ;;Serbian
+::''Dz::Џ		;;Serbian
 ::''dz::џ
-::''Hd::Ъ
+::''Hd::Ъ		;; hard modifier
 ::''hd::ъ
-::''Ib::Ы
+::''Ib::Ы		;; i back
 ::''ib::ы
-::''Sf::Ь
+::''Sf::Ь		;; soft modifier
 ::''sf::ь
 ::''E::Э
 ::''e::э

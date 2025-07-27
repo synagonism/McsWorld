@@ -28,6 +28,8 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-21-0.2025-07-27: Slovenian',
+    'mMcsh.js.19-20-0.2025-07-26: Romanian',
     'mMcsh.js.19-19-0.2025-06-04: Russian',
     'mMcsh.js.19-18-0.2025-05-10: [ escaped for search',
     'mMcsh.js.19-17-0.2025-05-07: Hindi',
@@ -704,21 +706,29 @@ let fContainersInsert = function () {
   oEltTabCntSrchOpn15.text = 'Italian (Itln)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn15)
   let oEltTabCntSrchOpn16 = document.createElement('option')
-  oEltTabCntSrchOpn16.value = 'lagRusn'
-  oEltTabCntSrchOpn16.text = 'Russian (Rusn)'
+  oEltTabCntSrchOpn16.value = 'lagRomn'
+  oEltTabCntSrchOpn16.text = 'Romanian (Romn)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn16)
   let oEltTabCntSrchOpn17 = document.createElement('option')
-  oEltTabCntSrchOpn17.value = 'lagSpan'
-  oEltTabCntSrchOpn17.text = 'Spanish (Span)'
+  oEltTabCntSrchOpn17.value = 'lagRusn'
+  oEltTabCntSrchOpn17.text = 'Russian (Rusn)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn17)
   let oEltTabCntSrchOpn18 = document.createElement('option')
-  oEltTabCntSrchOpn18.value = 'lagTurk'
-  oEltTabCntSrchOpn18.text = 'Turkish (Turk)'
+  oEltTabCntSrchOpn18.value = 'lagSlvn'
+  oEltTabCntSrchOpn18.text = 'Slovenian (Slvn)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn18)
   let oEltTabCntSrchOpn19 = document.createElement('option')
-  oEltTabCntSrchOpn19.value = 'lagVnma'
-  oEltTabCntSrchOpn19.text = 'Vietnamese (Vnma)'
+  oEltTabCntSrchOpn19.value = 'lagSpan'
+  oEltTabCntSrchOpn19.text = 'Spanish (Span)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn19)
+  let oEltTabCntSrchOpn20 = document.createElement('option')
+  oEltTabCntSrchOpn20.value = 'lagTurk'
+  oEltTabCntSrchOpn20.text = 'Turkish (Turk)'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn20)
+  let oEltTabCntSrchOpn21 = document.createElement('option')
+  oEltTabCntSrchOpn21.value = 'lagVnma'
+  oEltTabCntSrchOpn21.text = 'Vietnamese (Vnma)'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn21)
   oEltTabCntSrchSlt.options[0].selected = true
   oEltTabCntSrchP.id = 'idTabCntSrchP'
   oEltTabCntSrchP.setAttribute('class', 'clsCenter')
