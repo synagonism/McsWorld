@@ -137,9 +137,11 @@ function fNamidx(fileIn, fSftpIn) {
     // array of languages ['lagALLL']
     //aLagALL = ['lagEngl','lagElln','lagZhon','lagDeut','lagFrac'],
     aLagALL = ['lagEngl','lagSngo','lagElln','lagZhon',
-    'lagArab','lagBulg','lagDeut','lagElla','lagEspo','lagFrac',
-    'lagHind','lagItln','lagRomn','lagRusn',
-    'lagSlvn','lagSpan','lagSqip','lagTurk','lagVnma'],
+    'lagArab','lagDeut','lagElla','lagEspo','lagFrac',
+    'lagHind','lagItln','lagRomn',
+    'lagSbul','lagSmkd','lagSrus','lagSslv',
+    'lagSpan','lagSqip',
+    'lagTurk','lagVnma'],
     //
     // 'lagBel','lagBos','lagCes','lagDan','lagEst',
     // 'lagFin','lagHrv','lagHun','lagLav','lagLit','lagMlt',

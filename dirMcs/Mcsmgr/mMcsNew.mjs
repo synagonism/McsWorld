@@ -95,15 +95,15 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirStn',
+  sDir = 'dirLag',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Romania',
+  sName = 'AustroAsiatic-LanguageFamily',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagoSngo,
-  sNameShort = 'socRoua',
+  sNameShort = 'Asa0Lago',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk, SocGrca,
-  sNameId = 'SocRoua',
+  sNameId = 'LAsa0',
 
 
   sNameFile = '',

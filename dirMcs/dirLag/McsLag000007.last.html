@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.HmnmLago!=human-mind--language
-    (McsLag000007.1-38-0.2025-07-23)</title>
+    (McsLag000007.1-41-0.2025-07-31)</title>
   <meta name="keywords" content="human-language, HmnmLago, ModelConceptSenso, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mHitp.css">
 </head>
@@ -14441,14 +14441,15 @@
     <br>· the-unit of <a class="clsPreview" href="../dirLag/McsLag000007.last.html#idLText">TextLago</a>.
     <a class="clsHide" href="#idLHmnmuntTextdsn"></a></p>
   <p id="idLHmnmuntTextnam">name::
-    <br>* McsEngl.HmnmTextUnit,
-    <br>* McsEngl.HmnmUnit.text,
-    <br>* McsEngl.unitHmnmText,
-    <br>* McsEngl.unitText,
+    <br>* McsEngl.HmnmTextUnit!⇒TextUnit,
+    <br>* McsEngl.HmnmUnit.text!⇒TextUnit,
+    <br>* McsEngl.TextUnit,
+    <br>* McsEngl.unitHmnmText!⇒TextUnit,
+    <br>* McsEngl.unitText!⇒TextUnit,
     <a class="clsHide" href="#idLHmnmuntTextnam"></a></p>
 
   <section id="idLHmnmuntTextSpfc">
-  <h4 id="idLHmnmuntTextSpfcH4">unitText.SPECIFIC
+  <h4 id="idLHmnmuntTextSpfcH4">TextUnit.SPECIFIC
     <a class="clsHide" href="#idLHmnmuntTextSpfcH4"></a></h4>
   <p id="idLHmnmuntTextSpfcdsn">description::
     <br>× McsHitp-creation: {2025-05-02},
@@ -14462,12 +14463,12 @@
     <br>
     <a class="clsHide" href="#idLHmnmuntTextSpfcdsn"></a></p>
   <p id="idLHmnmuntTextSpfcnam">name::
-    <br>* McsEngl.unitText.specific,
+    <br>* McsEngl.TextUnit.specific,
     <a class="clsHide" href="#idLHmnmuntTextSpfcnam"></a></p>
   </section>
 
   <section id="idLHmnmuntTextAggr">
-  <h4 id="idLHmnmuntTextAggrH4">unitText.aggregate
+  <h4 id="idLHmnmuntTextAggrH4">TextUnit.aggregate
     <a class="clsHide" href="#idLHmnmuntTextAggrH4"></a></h4>
   <p id="idLHmnmuntTextAggrdsn">description::
     <br>× McsHitp-creation: {2025-05-09},
@@ -14696,7 +14697,7 @@
     <br>[{2025-05-09 retrieved} https://x.com/i/grok?conversation=1920859430406471750]
     <a class="clsHide" href="#idLHmnmuntTextAggrdsn"></a></p>
   <p id="idLHmnmuntTextAggrnam">name::
-    <br>* McsEngl.unitText.aggregate,
+    <br>* McsEngl.TextUnit.aggregate,
     <br>* McsEngl.writting-system,
     <a class="clsHide" href="#idLHmnmuntTextAggrnam"></a></p>
   </section>
@@ -23609,9 +23610,12 @@ Yes, sort of. In Chinese, the most common way to answer a yes/no question is to 
     <br>· <span class="clsColorRed">HmnmLago-family-tree</span> is a-set of languages with a-common ancestor-language.
     <a class="clsHide" href="#idLHmnmpctrdsn"></a></p>
   <p id="idLHmnmpctrnam">name::
-    <br>* McsEngl.family-tree-of-HmnmLago,
-    <br>* McsEngl.HmnmLago'family-tree,
-    <br>* McsEngl.HmnmLago'parent-child-tree,
+    <br>* McsEngl.HmnmLago'family-tree!⇒FamlLago,
+    <br>* McsEngl.HmnmLago'parent-child-tree!⇒FamlLago,
+    <br>* McsEngl.FamlLago!=family,
+    <br>* McsEngl.family-tree-of-HmnmLago!⇒FamlLago,
+    <br>* McsEngl.lagoFamily!⇒FamlLago,
+    <br>* McsEngl.language-family-of-HmnmLago!⇒FamlLago,
     <a class="clsHide" href="#idLHmnmpctrnam"></a></p>
   <p id="idLHmnmpctrdsnL">descriptionLong::
     <br>"A language family is a group of languages related through descent from a common ancestral language or parental language, called the proto-language of that family. The term "family" reflects the tree model of language origination in historical linguistics, which makes use of a metaphor comparing languages to people in a biological family tree, or in a subsequent modification, to species in a phylogenetic tree of evolutionary taxonomy. Linguists therefore describe the daughter languages within a language family as being genetically related.[1]
@@ -23670,24 +23674,152 @@ Yes, sort of. In Chinese, the most common way to answer a yes/no question is to 
     <br>[{2024-07-04 retrieved} https://gemini.google.com/app/d37bc14396d442a8]
     <a class="clsHide" href="#idLHmnmpctrdsnL"></a></p>
 
-  <p id="idLHmnmpttr">parent-tree::
+  <p id="idLHmnmpttr">parent-tree of HmnmLago
+    <br>* ProtoLanguage,
+    <br>
     <br>* McsEngl.HmnmLago'parent-tree,
     <a class="clsHide" href="#idLHmnmpttr"></a></p>
+</section>
 
-  <p id="idLHmnmcdtr">child-tree::
-    <br>1.  Indo-European:
-    <br>2.  Sino-Tibetan:
-    <br>3.  Niger-Congo:
-    <br>4.  Afro-Asiatic:
-    <br>5.  Austronesian:
-    <br>6.  Dravidian:
-    <br>7.  Turkic:
-    <br>8.  Japonic:
-    <br>9.  Austroasiatic:
-    <br>10. Kra-Dai (Tai-Kadai),
+<section id="idLHmnmptlg">
+  <h1 id="idLHmnmptlgH1">ProtoLanguage of HmnmLago
+    <a class="clsHide" href="#idLHmnmptlgH1"></a></h1>
+  <p id="idLHmnmptlgdsn">description::
+    <br>× Mcsh-creation: {2025-07-28},
+    <br>"Here’s a concise overview of the concept of a **protolanguage**—the hypothesized intermediate stage between animal communication and fully-fledged human language:
+    <br>---
+    <br>## 1. Definition & Scope
+    <br>A **protolanguage** is a reconstructed or theoretical system of communication posited as the evolutionary precursor to modern human language. It typically:
+    <br>* Lacks fully developed syntax (no hierarchical phrase structure)
+    <br>* Relies on single “words” or holistic vocalizations
+    <br>* Uses prosody or gesture to signal meaning and pragmatic relations
+    <br>---
+    <br>## 2. Key Characteristics
+    <br>1. **Isolated Lexical Units**
+    <br>   * Utterances consist of single meaningful elements (e.g., “food,” “danger”).
+    <br>   * No embedding or multiple arguments.
+    <br>2. **Minimal or No Morphology**
+    <br>   * Words are uninflected; no tense, case, or agreement markers.
+    <br>3. **Prosodic & Gestural Coding**
+    <br>   * Pitch, stress, and gestures carry pragmatic and semantic nuance (e.g., yes/no, emphasis).
+    <br>4. **Fixed Word Order (Optional)**
+    <br>   * Some models propose a single canonical order (e.g., Agent‑Action) to convey basic roles.
+    <br>---
+    <br>## 3. Theoretical Models
+    <br>| Model / Researcher                 | Core Proposal                                                                                         |
+    <br>| **Derek Bickerton (1981)**         | Protolanguage as “lexical primitive” stage—single words + intonation for meaning.                     |
+    <br>| **Terrence Deacon (1997)**         | Emphasizes symbolic cognition; language emerges from a pressure for social coordination.              |
+    <br>| **Michael Tomasello**              | Language arises from joint attention and intentional sharing; protolanguage as gesture‐plus‐vocab.    |
+    <br>| **Hauser, Chomsky & Fitch (2002)** | “Faculty of language in the broad sense” (FLB) vs. “narrow” (FLN); protolanguage lacks FLN recursion. |
+    <br>---
+    <br>## 4. Evidence & Analogues
+    <br>* **Child Language Acquisition**
+    <br>  – Early babbling → one‐word “holophrases” (“mama,” “up”) → two‐word stage (“want milk”) → grammar.
+    <br>* **Emerging Sign Languages**
+    <br>  – E.g., Nicaraguan Sign Language arose from homesigners—initially isolated signs, later complex grammar.
+    <br>* **Pidgins & Creoles**
+    <br>  – Pidgins: reduced vocabulary and structure for intergroup trade; Creoles: children expand these into full languages.
+    <br>---
+    <br>## 5. Evolutionary Implications
+    <br>* **Cognitive Prerequisites**
+    <br>  – Symbolic memory, joint attention, theory of mind—needed before syntax.
+    <br>* **Social Drivers**
+    <br>  – Coordination in hunting/gathering, social bonding, mother‑infant interaction.
+    <br>* **Neurobiological Substrate**
+    <br>  – Gradual expansion of Broca’s and Wernicke’s area connectivity; vocal tract changes.
+    <br>---
+    <br>## 6. From Protolanguage to Full Language
+    <br>1. **Lexicon Growth**: Rapid invention and borrowing of new symbols.
+    <br>2. **Emergence of Syntax**: First via fixed word order, then via recursive embedding.
+    <br>3. **Morphological Complexity**: Affixation and inflection evolve to mark relations.
+    <br>4. **Displacement & Abstraction**: Ability to talk about past/future and abstract concepts.
+    <br>---
+    <br>## 7. Open Questions
+    <br>* Did protolanguage emerge in a single population or multiple times?
+    <br>* Which came first—gestural or vocal protolanguage?
+    <br>* How rapidly did full grammar crystallize?
+    <br>---
+    <br>### Further Reading
+    <br>* Bickerton, D. (1981). *Roots of Language*.
+    <br>* Deacon, T. W. (1997). *The Symbolic Species*.
+    <br>* Hurford, J. R. (2007). *The Origins of Meaning*.
+    <br>Feel free to ask if you’d like more detail on any of these points!"
+    <br>[{2025-07-28 retrieved} https://chatgpt.com/c/68874c26-c4c8-8320-b969-4cb0fc824870]
+    <a class="clsHide" href="#idLHmnmptlgdsn"></a></p>
+  <p id="idLHmnmptlgnam">name::
+    <br>* McsEngl.ProtoLago,
+    <br>* McsEngl.ProtoLanguage!⇒ProtoLago,
+    <a class="clsHide" href="#idLHmnmptlgnam"></a></p>
+
+  <section id="idLHmnmcdtr">
+  <h2 id="idLHmnmcdtrH2">CHILD-TREE of ProtoLago
+    <a class="clsHide" href="#idLHmnmcdtrH2"></a></h2>
+  <p id="idLHmnmcdtrdsn">description::
+    <br>× Mcsh-creation: {2025-07-28},
+    <br>* ProtoLago:
+    <br>01.  <a class="clsPreview" href="../dirLag/McsLag000039.last.html#idOverview">Indo-European</a>,
+    <br>02.  <a class="clsPreview" href="../dirLag/McsLag000018.last.html#idLSitf">Sino-Tibetan</a>,
+    <br>03.  Niger-Congo,
+    <br>04.  <a class="clsPreview" href="../dirLag/McsLag000040.last.html#idOverview">Afro-Asiatic</a>,
+    <br>05.  Austronesian,
+    <br>06.  Dravidian,
+    <br>07.  <a class="clsPreview" href="../dirLag/McsLag000041.last.html#idOverview">Turkic</a>,
+    <br>08.  Japonic,
+    <br>09.  Austroasiatic,
+    <br>10.  Kra-Dai (Tai-Kadai),
     <br>
-    <br>* McsEngl.HmnmLago'child-tree,
-    <a class="clsHide" href="#idLHmnmcdtr"></a></p>
+    <br>">oldest language family:
+    <br>The **oldest language family** is a complex and debated topic because it depends on how we define "oldest"—and because the further back in time we go, the less linguistic data we have. However, some language families are **among the oldest still spoken or reconstructed**, based on available evidence.
+    <br>---
+    <br>## 🏆 Candidates for the *Oldest Language Family*
+    <br>### 🔹 1. **Afroasiatic**
+    <br>* **Age**: Estimated to be **10,000–12,000 years old**
+    <br>* **Evidence**:
+    <br>  * Egyptian (extinct, written by \~3200 BCE)
+    <br>  * Akkadian (Semitic, written \~2500 BCE)
+    <br>  * Coptic (late Egyptian, still used liturgically)
+    <br>* **Significance**: Includes the **oldest known written languages** (Egyptian hieroglyphs, Akkadian cuneiform).
+    <br>✅ **Most widely considered the oldest reconstructable language family.**
+    <br>---
+    <br>### 🔹 2. **Dravidian**
+    <br>* **Age**: Estimated **6,000–8,000 years**
+    <br>* **Languages**: Tamil, Telugu, Kannada, Malayalam, Brahui
+    <br>* **Notes**:
+    <br>  * **Tamil** has **continuous literary tradition** for over 2,000 years.
+    <br>  * **Brahui**, spoken in Pakistan, is an outlier and clue to ancient dispersal.
+    <br>---
+    <br>### 🔹 3. **Indo-European**
+    <br>* **Age**: \~6,000–7,000 years (Proto-Indo-European possibly spoken \~4500–2500 BCE)
+    <br>* **Earliest written forms**: Hittite, Mycenaean Greek, Sanskrit
+    <br>* **Significance**: Largest language family by number of speakers and geographic spread.
+    <br>---
+    <br>### 🔹 4. **Sino-Tibetan**
+    <br>* **Age**: Estimated \~6,000–8,000 years
+    <br>* **Languages**: Mandarin, Cantonese, Tibetan, Burmese
+    <br>* **Challenges**: Reconstructing Proto-Sino-Tibetan is very difficult due to poor early written records outside of Chinese.
+    <br>---
+    <br>### 🔹 5. **Australian Aboriginal Languages** (like Pama–Nyungan)
+    <br>* Possibly **very ancient**, but poorly documented before European contact.
+    <br>* Oral tradition goes back **tens of thousands of years**, but no written records.
+    <br>---
+    <br>## 🧭 Summary Table
+    <br>| Language Family               | Estimated Age                 | Oldest Written Evidence  | Notable Languages       |
+    <br>| **Afroasiatic**               | 10,000–12,000 years           | Egyptian (\~3200 BCE)    | Arabic, Hebrew, Amharic |
+    <br>| **Dravidian**                 | 6,000–8,000 years             | Tamil (\~500 BCE)        | Tamil, Telugu           |
+    <br>| **Indo-European**             | 6,000–7,000 years             | Hittite (\~1600 BCE)     | Sanskrit, Greek, Latin  |
+    <br>| **Sino-Tibetan**              | \~6,000–8,000 years           | Old Chinese (\~1200 BCE) | Chinese, Tibetan        |
+    <br>| **Australian (Pama–Nyungan)** | Possibly 40,000+ years (oral) | None                     | Pitjantjatjara, Yolngu  |
+    <br>---
+    <br>## ✅ Conclusion
+    <br>**Afroasiatic** is the **oldest known language family with written records** and strong linguistic reconstruction.
+    <br>Other families (like Dravidian or Australian Aboriginal languages) may be equally or even **more ancient**, but **lack early written evidence**.
+    <br>Would you like to dive into the **Proto-Afroasiatic reconstruction**, **timeline of early written languages**, or **comparison of linguistic ages**?"
+    <br>[{2025-07-28 retrieved} https://chatgpt.com/c/68878825-035c-8331-8a45-7d9f43c8d574]
+    <a class="clsHide" href="#idLHmnmcdtrdsn"></a></p>
+  <p id="idLHmnmcdtrnam">name::
+    <br>* McsEngl.ProtoLago'child-tree,
+    <a class="clsHide" href="#idLHmnmcdtrnam"></a></p>
+  </section>
 </section>
 
 <section id="idLHmnmwptr">
@@ -23885,11 +24017,12 @@ Yes, sort of. In Chinese, the most common way to answer a yes/no question is to 
     <br>· haptic-HmnmLago is a-HmnmLago that uses touchable units to create its <a class="clsPreview" href="#idLHmnmopt">logo-view</a>.
     <a class="clsHide" href="#idLhptcdsn"></a></p>
   <p id="idLhptcnam">name::
-    <br>* McsEngl.haptic-HmnmLago!⇒lagHptc,
-    <br>* McsEngl.HmnmLago.0002-haptic!⇒lagHptc,
-    <br>* McsEngl.HmnmLago.haptic!⇒lagHptc,
-    <br>* McsEngl.lagHptc,
-    <br>* McsEngl.tactile-HmnmLago!⇒lagHptc,
+    <br>* McsEngl.HmnmLago.0002-haptic!⇒HptcLago,
+    <br>* McsEngl.HmnmLago.haptic!⇒HptcLago,
+    <br>* McsEngl.HptcLago!=haptic-HumanMindLago,
+    <br>* McsEngl.haptic-HmnmLago!⇒HptcLago,
+    <br>* McsEngl.lagoHptc!⇒HptcLago!=haptic-HumanMindLago,
+    <br>* McsEngl.tactile-HmnmLago!⇒HptcLago,
     <a class="clsHide" href="#idLhptcnam"></a></p>
 </section>
 
@@ -24605,98 +24738,8 @@ Yes, sort of. In Chinese, the most common way to answer a yes/no question is to 
 </section>
 
 <section id="idLHmnm0028">
-  <h1 id="idLHmnm0028H1">HmnmLago.Indo-European
+  <h1 id="idLHmnm0028H1">HmnmLago.Indo-European (<a class="clsPreview" href="../dirLag/McsLag000039.last.html#idOverview">link</a>)
     <a class="clsHide" href="#idLHmnm0028H1"></a></h1>
-  <p id="idLHmnm0028dsn">description::
-    <br>"The Indo-European language family is one of the world's major language families, encompassing a large number of languages spoken by billions of people across Europe, Asia, and the Americas. Here are some key aspects and examples of the Indo-European languages:
-    <br>
-    <br>### Key Features
-    <br>1. **Historical Linguistics**: The Indo-European languages are significant in the study of historical linguistics. They trace back to a common ancestral language known as Proto-Indo-European (PIE), spoken thousands of years ago.
-    <br>2. **Branching**: The family is divided into several branches, each with its own unique characteristics and further subdivisions.
-    <br>
-    <br>### Major Branches and Examples
-    <br>1. **Germanic**:
-    <br>   - **West Germanic**: English, German, Dutch
-    <br>   - **North Germanic**: Danish, Swedish, Norwegian
-    <br>   - **East Germanic**: Gothic (extinct)
-    <br>2. **Romance**:
-    <br>   - **Western Romance**: Spanish, Portuguese, French
-    <br>   - **Eastern Romance**: Italian, Romanian
-    <br>3. **Slavic**:
-    <br>   - **West Slavic**: Polish, Czech, Slovak
-    <br>   - **East Slavic**: Russian, Ukrainian, Belarusian
-    <br>   - **South Slavic**: Serbian, Croatian, Bulgarian
-    <br>4. **Indo-Iranian**:
-    <br>   - **Indic**: Hindi, Bengali, Punjabi
-    <br>   - **Iranian**: Persian (Farsi), Pashto, Kurdish
-    <br>5. **Celtic**:
-    <br>   - **Goidelic**: Irish, Scottish Gaelic
-    <br>   - **Brythonic**: Welsh, Breton
-    <br>6. **Hellenic**:
-    <br>   - Greek
-    <br>7. **Baltic**:
-    <br>   - **Eastern Baltic**: Lithuanian, Latvian
-    <br>8. **Albanian**:
-    <br>   - Albanian
-    <br>9. **Armenian**:
-    <br>   - Armenian
-    <br>
-    <br>### Characteristics of Indo-European Languages
-    <br>- **Inflection**: Many Indo-European languages are highly inflected, meaning they use endings or changes in the form of words to express grammatical relationships.
-    <br>- **Vocabulary**: There are significant shared vocabulary roots across the family, reflecting common ancestral origins.
-    <br>- **Sound Changes**: Historical sound changes, such as Grimm's Law in the Germanic branch, help trace the evolution of these languages.
-    <br>
-    <br>### Historical Significance
-    <br>- **Ancient Texts**: Languages like Sanskrit, Ancient Greek, and Latin are crucial for understanding ancient texts and the cultural histories of the regions where these languages were spoken.
-    <br>- **Migration and Expansion**: The spread of Indo-European languages is closely linked to historical migrations and expansions of populations.
-    <br>
-    <br>### Modern Relevance
-    <br>- **Global Influence**: Many Indo-European languages, particularly English, Spanish, and French, have significant global influence in terms of politics, economics, and culture.
-    <br>- **Linguistic Studies**: The study of Indo-European languages continues to be a vibrant field within linguistics, providing insights into language development, historical connections, and cultural exchanges.
-    <br>
-    <br>Understanding the Indo-European language family provides a window into the linguistic and cultural evolution of a large part of the world, highlighting the interconnectedness of human societies."
-    <br>[{2024-07-04 retrieved} https://chatgpt.com/c/eb4db37f-1f12-4dd1-950b-0f72d8eda401]
-    <a class="clsHide" href="#idLHmnm0028dsn"></a></p>
-  <p id="idLHmnm0028nam">name::
-    <br>* McsEngl.Indo-European-HmnmLago,
-    <br>* McsEngl.HmnmLago.0028-Indo-European,
-    <br>* McsEngl.HmnmLago.Indo-European,
-    <a class="clsHide" href="#idLHmnm0028nam"></a></p>
-
-  <section id="idLHmnm0021">
-  <h2 id="idLHmnm0021H2">HmnmLago.proto-Indo-European
-    <a class="clsHide" href="#idLHmnm0021H2"></a></h2>
-  <p id="idLHmnm0021dsn">description::
-    <br>"Proto-Indo-European (PIE) is the theorized common ancestor of the Indo-European language family. Its proposed features have been derived by linguistic reconstruction from documented Indo-European languages. No direct record of Proto-Indo-European exists.[1]
-    <br>Far more work has gone into reconstructing PIE than any other proto-language, and it is the best understood of all proto-languages of its age. The majority of linguistic work during the 19th century was devoted to the reconstruction of PIE or its daughter proto-languages (such as Proto-Germanic and Proto-Indo-Iranian), and many of the modern techniques of linguistic reconstruction (such as the comparative method) were developed as a result.
-    <br>PIE is hypothesized to have been spoken as a single language from 4500 BC to 2500 BC[2] during the Late Neolithic to Early Bronze Age, though estimates vary by more than a thousand years. According to the prevailing Kurgan hypothesis, the original homeland of the Proto-Indo-Europeans may have been in the Pontic–Caspian steppe of eastern Europe. The linguistic reconstruction of PIE has provided insight into the pastoral culture and patriarchal religion of its speakers.[3]
-    <br>As speakers of Proto-Indo-European became isolated from each other through the Indo-European migrations, the regional dialects of Proto-Indo-European spoken by the various groups diverged, as each dialect underwent shifts in pronunciation (the Indo-European sound laws), morphology, and vocabulary. Over many centuries, these dialects transformed into the known ancient Indo-European languages. From there, further linguistic divergence led to the evolution of their current descendants, the modern Indo-European languages. Today, the descendant languages of PIE with the most native speakers are Spanish, English, Portuguese, Hindustani (Hindi and Urdu), Bengali, Russian, Punjabi, German, Persian, French, Marathi, Italian, and Gujarati.
-    <br>PIE is believed to have had an elaborate system of morphology that included inflectional suffixes (analogous to English life, lives, life's, lives') as well as ablaut (vowel alterations, as preserved in English sing, sang, sung, song) and accent. PIE nominals and pronouns had a complex system of declension, and verbs similarly had a complex system of conjugation. The PIE phonology, particles, numerals, and copula are also well-reconstructed.
-    <br>Asterisks are used as a conventional mark of reconstructed words, such as *wσdr̥, *ḱwṓ, or *tréyes; these forms are the reconstructed ancestors of the modern English words water, hound, and three, respectively."
-    <br>[{2021-02-06} https://en.wikipedia.org/wiki/Proto-Indo-European_language]
-    <a class="clsHide" href="#idLHmnm0021dsn"></a></p>
-  <p id="idLHmnm0021nam">name::
-    <br>* McsEngl.PIE!=proto-Indo-European-language,
-    <br>* McsEngl.HmnmLago.0021-proto-Indo-European!⇒lagPtie,
-    <br>* McsEngl.HmnmLago.proto-Indo-European!⇒lagPtie,
-    <br>* McsEngl.lagPtie,
-    <br>* McsEngl.lagPtie!=proto-Indo-European,
-    <a class="clsHide" href="#idLHmnm0021nam"></a></p>
-  </section>
-
-  <section id="idLHmnm0029">
-  <h2 id="idLHmnm0029H2">HmnmLago.Hittite
-    <a class="clsHide" href="#idLHmnm0029H2"></a></h2>
-  <p id="idLHmnm0029dsn">description::
-    <br>"Hittite is the oldest attested Indo-European language,[21] yet it lacks several grammatical features that are exhibited by other early-attested Indo-European languages such as Vedic, Classical Latin, Ancient Greek, Old Persian and Old Avestan. Notably, Hittite did not have a masculine-feminine gender system. Instead, it had a rudimentary noun-class system that was based on an older animate–inanimate opposition."
-    <br>[{2024-07-04 retrieved} https://en.wikipedia.org/wiki/Hittite_language#Morphology]
-    <a class="clsHide" href="#idLHmnm0029dsn"></a></p>
-  <p id="idLHmnm0029nam">name::
-    <br>* McsEngl.Hittite-HmnmLago,
-    <br>* McsEngl.HmnmLago.0029-Hittite,
-    <br>* McsEngl.HmnmLago.Hittite,
-    <a class="clsHide" href="#idLHmnm0029nam"></a></p>
-  </section>
 </section>
 
 <section id="idLHmnm0024">
@@ -24895,6 +24938,67 @@ Yes, sort of. In Chinese, the most common way to answer a yes/no question is to 
     <br>* McsEngl.GlblLago.specific,
     <a class="clsHide" href="#idLHmnm0030Spfcnam"></a></p>
   </section>
+</section>
+
+<section id="idLHmnm0032">
+  <h1 id="idLHmnm0032H1">HmnmLago.SOV
+    <a class="clsHide" href="#idLHmnm0032H1"></a></h1>
+  <p id="idLHmnm0032dsn">description::
+    <br>× Mcsh-creation: {2025-07-31},
+    <br>"**1. Definition and Typological Prevalence**
+    <br>Subject-Object-Verb (SOV) order places the verb at the end of the clause (e.g. “She – apples – eats”). It is the **most common basic word order** worldwide, appearing in roughly 40–45 % of languages (versus \~35 % SVO, \~15 % VSO, and the rest rare orders).
+    <br>---
+    <br>**2. Proto-Language Defaults**
+    <br>Many proto-languages are reconstructed as SOV. This likely reflects a universal cognitive preference for “actor → undergoer → action,” simplifying parsing and memory:
+    <br>* **Proto-Indo-European** is generally reconstructed as SOV (e.g. early Vedic Sanskrit).
+    <br>* **Proto-Altaic** candidates (Turkic, Mongolic, Tungusic) are SOV.
+    <br>* **Proto-Dravidian**, **Proto-Uralic**, **Proto-Niger-Congo**, and **Proto-Sino-Tibetan** all appear to have had SOV order.
+    <br>---
+    <br>**3. Functional & Cognitive Drivers**
+    <br>* **Visibility of participants**: Placing participants before the verb makes role assignment clear before the action is processed.
+    <br>* **Modifier-Head harmony**: Heads-last structures (adjectives before nouns, subordinate clauses before main verbs) often cluster in SOV systems, reinforcing an overall right-branching syntax.
+    <br>* **Incremental parsing**: Listeners can tentatively attach arguments as they arrive, without backtracking when the verb finally appears.
+    <br>---
+    <br>**4. Common Evolutionary Paths**
+    <br>While SOV is the default “starting point,” languages often shift due to internal or contact-induced pressures:
+    <br>1. **SOV → SVO**
+    <br>   * **Latin → French/Spanish/English** (via Vulgar Latin creoles and Romance innovations).
+    <br>   * **Proto-Germanic (SOV) → Old English → Modern English (SVO)**.
+    <br>   * **Japanese creole influences** (e.g. Japanese-English Pidgin shifting clauses toward SVO).
+    <br>2. **SOV → VSO/VOS**
+    <br>   * Rare, typically through intense contact (e.g. VSO in Biblical Hebrew under surrounding Afro-Asiatic influence).
+    <br>3. **SOV → OVS/OSV**
+    <br>   * Extremely rare “marked” orders, generally as discourse-driven topicalization rather than stable basic order.
+    <br>4. **Reversions and Cycles**
+    <br>   * Some languages cycle back: Old Japanese exhibited more rigid SOV, Classical Japanese allowed freer order, Modern Japanese remains SOV but with greater flexibility under SVO-dominant media influence.
+    <br>---
+    <br>**5. Areal & Contact Effects**
+    <br>Regions with mixed word orders often show convergence:
+    <br>* **The “Meso-America Sprachbund”** features SVO and VSO alongside SOV relics, with mutual borrowing of postpositions and clause-final conjunctions.
+    <br>* **South Asia**: Indo-Aryan (historically SOV) languages influencing Dravidian neighbors to retain SOV despite heavy contact with SVO Indo-European languages.
+    <br>* **The “Altaic” area**: Turkic, Mongolic, and Tungusic share SOV, postpositions, and modifier-head order—debated as genetic vs. areal diffusion.
+    <br>---
+    <br>**6. Grammaticalization and Word-Order Change**
+    <br>* **Loss of case-marking** often drives SOV → SVO shift. When case suffixes erode, word order becomes the primary means of signaling grammatical relations, favoring more rigid SVO alignment.
+    <br>* **Clitic reanalysis** (e.g. object-clitics shifting toward verb), as in Romance, can pull objects closer to verbs, reordering constituents.
+    <br>* **Heavy-NP shift**: Very long objects may move rightward in SOV languages, giving an impression of SVO or even VOS order in informal speech.
+    <br>---
+    <br>**7. Contemporary Stability vs. Change**
+    <br>* **Stable SOV families**: Japanese, Korean, Turkic, Dravidian, Iranian (e.g. Persian retains SOV in subordinate clauses).
+    <br>* **Shifting zones**: Many Indo-European branches have fully transitioned to SVO; some Uralic (Finnic) dialects show creeping SVO under Germanic and Slavic influence.
+    <br>* **Globalization effects**: Media-driven exposure to SVO (especially English) can introduce alternative word-order patterns in younger speakers of SOV languages, though core grammar often remains conservative.
+    <br>---
+    <br>**8. Summary**
+    <br>SOV is the most widespread default order in human language, favored for cognitive parsing and modifier-head consistency. Over time, languages may shift toward SVO (especially with loss of case morphology) or other orders under contact pressures, but many major language families today retain stable SOV structures inherited from their proto-languages. Understanding these dynamics illuminates both universal tendencies and the impact of historical change."
+    <br>[{2025-07-31 retrieved} https://chatgpt.com/c/688b27c7-aa80-8323-ae83-8d89d6f9b6d4]
+    <a class="clsHide" href="#idLHmnm0032dsn"></a></p>
+  <p id="idLHmnm0032nam">name::
+    <br>* McsEngl.HmnmLago.SOV!⇒SovbLago,
+    <br>* McsEngl.HmnmLago.0032-SOV!⇒SovbLago,
+    <br>* McsEngl.SOV-language!⇒SovbLago,
+    <br>* McsEngl.SovbLago!=SOV-language,
+    <br>* McsEngl.lagoSovb!⇒SovbLago!=SOV-language,
+    <a class="clsHide" href="#idLHmnm0032nam"></a></p>
 </section>
 
 <section id="idMeta">
