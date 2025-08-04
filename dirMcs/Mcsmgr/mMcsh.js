@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh.js.19-24-0.2025-08-03: SlavoBcms',
     'mMcsh.js.19-23-0.2025-08-02: SlavoMacedonian',
     'mMcsh.js.19-22-0.2025-08-01: SlavoSlovenian',
     'mMcsh.js.19-21-0.2025-07-27: Slovenian',
@@ -708,33 +709,49 @@ let fContainersInsert = function () {
   oEltTabCntSrchOpn15.text = 'Romanian (Romn)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn15)
   let oEltTabCntSrchOpn16 = document.createElement('option')
-  oEltTabCntSrchOpn16.value = 'lagSbul'
-  oEltTabCntSrchOpn16.text = 'SlavoBulgarian (Sbul)'
+  oEltTabCntSrchOpn16.value = 'lagSbos'
+  oEltTabCntSrchOpn16.text = 'SlavoBosnian (Sbos)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn16)
   let oEltTabCntSrchOpn17 = document.createElement('option')
-  oEltTabCntSrchOpn17.value = 'lagSmkd'
-  oEltTabCntSrchOpn17.text = 'SlavoMacedonian (Smkd)'
+  oEltTabCntSrchOpn17.value = 'lagShrv'
+  oEltTabCntSrchOpn17.text = 'SlavoCroatian (Shrv)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn17)
   let oEltTabCntSrchOpn18 = document.createElement('option')
-  oEltTabCntSrchOpn18.value = 'lagSrus'
-  oEltTabCntSrchOpn18.text = 'SlavoRussian (Srus)'
+  oEltTabCntSrchOpn18.value = 'lagScnr'
+  oEltTabCntSrchOpn18.text = 'SlavoMondenegrin (Scnr)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn18)
   let oEltTabCntSrchOpn19 = document.createElement('option')
-  oEltTabCntSrchOpn19.value = 'lagSslv'
-  oEltTabCntSrchOpn19.text = 'SlavoSlovenian (Sslv)'
+  oEltTabCntSrchOpn19.value = 'lagSsrp'
+  oEltTabCntSrchOpn19.text = 'SlavoSerbian (Ssrp)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn19)
   let oEltTabCntSrchOpn20 = document.createElement('option')
-  oEltTabCntSrchOpn20.value = 'lagSpan'
-  oEltTabCntSrchOpn20.text = 'Spanish (Span)'
+  oEltTabCntSrchOpn20.value = 'lagSbul'
+  oEltTabCntSrchOpn20.text = 'SlavoBulgarian (Sbul)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn20)
   let oEltTabCntSrchOpn21 = document.createElement('option')
-  oEltTabCntSrchOpn21.value = 'lagTurk'
-  oEltTabCntSrchOpn21.text = 'Turkish (Turk)'
+  oEltTabCntSrchOpn21.value = 'lagSmkd'
+  oEltTabCntSrchOpn21.text = 'SlavoMacedonian (Smkd)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn21)
   let oEltTabCntSrchOpn22 = document.createElement('option')
-  oEltTabCntSrchOpn22.value = 'lagVnma'
-  oEltTabCntSrchOpn22.text = 'Vietnamese (Vnma)'
+  oEltTabCntSrchOpn22.value = 'lagSrus'
+  oEltTabCntSrchOpn22.text = 'SlavoRussian (Srus)'
   oEltTabCntSrchSlt.add(oEltTabCntSrchOpn22)
+  let oEltTabCntSrchOpn23 = document.createElement('option')
+  oEltTabCntSrchOpn23.value = 'lagSslv'
+  oEltTabCntSrchOpn23.text = 'SlavoSlovenian (Sslv)'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn23)
+  let oEltTabCntSrchOpn24 = document.createElement('option')
+  oEltTabCntSrchOpn24.value = 'lagSpan'
+  oEltTabCntSrchOpn24.text = 'Spanish (Span)'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn24)
+  let oEltTabCntSrchOpn25 = document.createElement('option')
+  oEltTabCntSrchOpn25.value = 'lagTurk'
+  oEltTabCntSrchOpn25.text = 'Turkish (Turk)'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn25)
+  let oEltTabCntSrchOpn26 = document.createElement('option')
+  oEltTabCntSrchOpn26.value = 'lagVnma'
+  oEltTabCntSrchOpn26.text = 'Vietnamese (Vnma)'
+  oEltTabCntSrchSlt.add(oEltTabCntSrchOpn26)
   oEltTabCntSrchSlt.options[0].selected = true
   oEltTabCntSrchP.id = 'idTabCntSrchP'
   oEltTabCntSrchP.setAttribute('class', 'clsCenter')

@@ -139,7 +139,7 @@ function fNamidx(fileIn, fSftpIn) {
     aLagALL = ['lagEngl','lagSngo','lagElln','lagZhon',
     'lagArab','lagDeut','lagElla','lagEspo','lagFrac',
     'lagHind','lagItln','lagRomn',
-    'lagSbul','lagSmkd','lagSrus','lagSslv',
+    'lagSbos','lagShrv','lagScnr','lagSsrp','lagSbul','lagSmkd','lagSrus','lagSslv',
     'lagSpan','lagSqip',
     'lagTurk','lagVnma'],
     //
