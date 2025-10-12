@@ -2,7 +2,7 @@
  * mLagElln.js - module of Greek-language for the-browser.
  * The MIT License (MIT)
  *
- * Copyright (c) 2022 Kaseluris.Nikos.1959 (synagonism)
+ * Copyright (c) 2022-2025 Kaseluris.Nikos.1959 (synagonism)
  * kaseluris.nikos@gmail.com
  * https:// synagonism.net/
  *
@@ -26,12 +26,13 @@
  */
 
 import * as omLagUtil from './mLagUtil.js'
-import * as omMcsh from './mMcsh.js'
+import * as omMcsh from './mMcsh2.js'
 //import fetch from 'node-fetch'
 
 const
   // contains the-versions of mLagElln.js
   aVersion = [
+    'mLagElln.js.0-4-1.2025-10-08: import mMcsh2.js',
     'mLagElln.js.0-4-0.2022-04-24: αθρίτιδα',
     'mLagElln.js.0-3-0.2022-04-18: το-παρόν',
     'mLagElln.js.0-2-0.2022-04-09: fFindVerbEllnRegularNo',
@@ -165,7 +166,7 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
       "nounEllnMnG2XaT3SeNcF1Ba-θηλυκό-α-προ-θάλασσ-α-ας-ες-ών",
       "nounEllnMnG2XaT3SeNc2F1Ba-θηλυκό-α-προ-σάλπιγγ-α-ας-ες-'ων",
       "nounEllnMnG3XaT3SuNcF1Ba-ουδέτερο-α-προ-όνομ-α-'ατος-'ατα-άτων"]
-  
+
 
   // endsWith /e/
   else if (sWord.endsWith('ές') && sGender==='masc' )
@@ -234,7 +235,7 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
     aOut = [
       "nounEllnMaG1XisT3SuNcF2Ba-αρσενικό-ις-προ-ρίψασπ-ις-'ιδος-ι|ιν-'ιδες-ίδων|'ιδων",
       "nounEllnManG2XisT2SuNucF1Ba-θηλυκό-ις-παρ-συνεργάτ-ις-ιδος|ιδας-ιδα-ι-ιδες-ίδων|ιδων"]
-  
+
   else if (sWord.endsWith('ί'))
     aOut = [
       "nounEllnMnG3XiT1SeNuF1Ba-ουδέτερο-ι-οξυ-παιδ-ί-ιού-ιά-ιών"]
@@ -367,7 +368,7 @@ function fFindMethodNounElln (sWordIn, bSinizisiIn) {
   else if (sWord.endsWith('ού') )
     aOut = [
       "nounEllnMnG2XuT1SuNcF1Ba-θηλυκό-ου-οξυ-αλεπ-ού-ούς-ούδες-ούδων"]
-  
+
   return aOut
 }
 
@@ -406,7 +407,7 @@ async function fFindNounmbrElln (sWordIn, sMethodIn, bSinizisiIn) {
     sWordVP, //vocativePlural
     sWordX,
     bSinizisi = bSinizisiIn
-    
+
   const response = await fetch(sFileElln)
   const sHtml = await response.text()
   aMcs = sHtml.toString().split('\n')
@@ -474,9 +475,9 @@ async function fFindNounmbrElln (sWordIn, sMethodIn, bSinizisiIn) {
   if (aMethod[2].indexOf('|') != -1) {
     //we have many forms
     const aExl = aMethod[2].split('|')
-    sWordGS = fFindWordX(aExl[0]) 
+    sWordGS = fFindWordX(aExl[0])
     for (n=1; n<aExl.length; n++) {
-      sWordGS = sWordGS +'|' +fFindWordX(aExl[n]) 
+      sWordGS = sWordGS +'|' +fFindWordX(aExl[n])
     }
   } else {
     sWordGS = fFindWordX(aMethod[2])
@@ -515,7 +516,7 @@ async function fFindNounmbrElln (sWordIn, sMethodIn, bSinizisiIn) {
       sWordX = '∅'
     return sWordX
   }
-  
+
   if (!sMethodIn.endsWith('Bns')) {
     aCase[1] = aCase[1] + sWord + omLagUtil.fGreekwordFindPhonema(sWord, bSinizisi)
   } else {
@@ -527,9 +528,9 @@ async function fFindNounmbrElln (sWordIn, sMethodIn, bSinizisiIn) {
   if (aMethod[3].indexOf('|') != -1) {
     //we have many forms
     const aExl = aMethod[3].split('|')
-    sWordAS = fFindWordX(aExl[0]) 
+    sWordAS = fFindWordX(aExl[0])
     for (n=1; n<aExl.length; n++) {
-      sWordAS = sWordAS +'|' +fFindWordX(aExl[n]) 
+      sWordAS = sWordAS +'|' +fFindWordX(aExl[n])
     }
   } else {
     sWordAS = fFindWordX(aMethod[3])
@@ -540,9 +541,9 @@ async function fFindNounmbrElln (sWordIn, sMethodIn, bSinizisiIn) {
   if (aMethod[4].indexOf('|') != -1) {
     //we have many forms
     const aExl = aMethod[4].split('|')
-    sWordVS = fFindWordX(aExl[0]) 
+    sWordVS = fFindWordX(aExl[0])
     for (n=1; n<aExl.length; n++) {
-      sWordVS = sWordVS +'|' +fFindWordX(aExl[n]) 
+      sWordVS = sWordVS +'|' +fFindWordX(aExl[n])
     }
   } else {
     sWordVS = fFindWordX(aMethod[4])
@@ -553,9 +554,9 @@ async function fFindNounmbrElln (sWordIn, sMethodIn, bSinizisiIn) {
   if (aMethod[5].indexOf('|') != -1) {
     //we have many forms
     const aExl = aMethod[5].split('|')
-    sWordNP = fFindWordX(aExl[0]) 
+    sWordNP = fFindWordX(aExl[0])
     for (n=1; n<aExl.length; n++) {
-      sWordNP = sWordNP +'|' +fFindWordX(aExl[n]) 
+      sWordNP = sWordNP +'|' +fFindWordX(aExl[n])
     }
   } else {
     sWordNP = fFindWordX(aMethod[5])
@@ -566,9 +567,9 @@ async function fFindNounmbrElln (sWordIn, sMethodIn, bSinizisiIn) {
   if (aMethod[6].indexOf('|') != -1) {
     //we have many forms
     const aExl = aMethod[6].split('|')
-    sWordGP = fFindWordX(aExl[0]) 
+    sWordGP = fFindWordX(aExl[0])
     for (n=1; n<aExl.length; n++) {
-      sWordGP = sWordGP +'|' +fFindWordX(aExl[n]) 
+      sWordGP = sWordGP +'|' +fFindWordX(aExl[n])
     }
   } else {
     sWordGP = fFindWordX(aMethod[6])
@@ -579,9 +580,9 @@ async function fFindNounmbrElln (sWordIn, sMethodIn, bSinizisiIn) {
   if (aMethod[7].indexOf('|') != -1) {
     //we have many forms
     const aExl = aMethod[7].split('|')
-    sWordAP = fFindWordX(aExl[0]) 
+    sWordAP = fFindWordX(aExl[0])
     for (n=1; n<aExl.length; n++) {
-      sWordAP = sWordAP +'|' +fFindWordX(aExl[n]) 
+      sWordAP = sWordAP +'|' +fFindWordX(aExl[n])
     }
   } else {
     sWordAP = fFindWordX(aMethod[7])
@@ -592,9 +593,9 @@ async function fFindNounmbrElln (sWordIn, sMethodIn, bSinizisiIn) {
   if (aMethod[8].indexOf('|') != -1) {
     //we have many forms
     const aExl = aMethod[8].split('|')
-    sWordVP = fFindWordX(aExl[0]) 
+    sWordVP = fFindWordX(aExl[0])
     for (n=1; n<aExl.length; n++) {
-      sWordVP = sWordVP +'|' +fFindWordX(aExl[n]) 
+      sWordVP = sWordVP +'|' +fFindWordX(aExl[n])
     }
   } else {
     sWordVP = fFindWordX(aMethod[8])

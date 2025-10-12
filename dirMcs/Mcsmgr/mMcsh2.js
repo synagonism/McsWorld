@@ -28,6 +28,8 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.20-2-0.2025-10-12: one-click on non-preview links',
+    'mMcsh2.js.20-1-0.2025-10-08: enter on search',
     'mMcsh2.js.20-0-0.2025-10-06: menu, query-selection, one-click',
     'mMcsh.js.19-24-0.2025-08-03: SlavoBcms',
     'mMcsh.js.19-23-0.2025-08-02: SlavoMacedonian',
@@ -444,7 +446,7 @@ let fContainersInsert = function () {
   }
   // command CodePoints
   const oEltCmdCodepoints = document.createElement('li');
-  oEltCmdCodepoints.innerHTML = '<button id="idCmdBtn">Selection-Codepoints (Ctrl+1)</button>';
+  oEltCmdCodepoints.innerHTML = '<button id="idCmdBtn">Selection-Codepoints (Ctrl+0)</button>';
   function fCmdCodePoint(){
     let
       s = getSelection().toString(),
@@ -472,7 +474,7 @@ let fContainersInsert = function () {
     oEltClicked = oEltCmdCodepoints
   })
   addEventListener('keyup', function (oEvtIn) {
-    if (oEvtIn.ctrlKey && oEvtIn.key.toLowerCase() === '1') {
+    if (oEvtIn.ctrlKey && oEvtIn.key.toLowerCase() === '0') {
       oEvtIn.preventDefault()
       fCmdCodePoint()
     }
@@ -513,14 +515,13 @@ let fContainersInsert = function () {
   const oEltCmdSrchSngo = document.createElement('li');
   oEltCmdSrchSngo.innerHTML = '<button id="idCmdBtn2">Sinago-name (Shift+F2)</button>';
   oEltCmdSrchSngo.addEventListener('pointerdown', function (oEvtIn) {
-    fCmdQuerySelection()
     oEltTabSearchSlct.options[1].selected = true
+    fCmdQuerySelection()
     oEltClicked = oEltCmdSrchSngo
   })
   addEventListener('keydown', function (oEvtIn) {
     if (oEvtIn.shiftKey && oEvtIn.key === 'F2') {
       oEltTabSearchSlct.options[1].selected = true
-      //fCmdQuerySelection()
     }
   })
   oEltCmdSrchUl.appendChild(oEltCmdSrchSngo)
@@ -528,15 +529,14 @@ let fContainersInsert = function () {
   const oEltCmdSrchElln = document.createElement('li');
   oEltCmdSrchElln.innerHTML = '<button id="idCmdBtn2">Greek-name (Ctrl+F2)</button>';
   oEltCmdSrchElln.addEventListener('pointerdown', function (oEvtIn) {
-    fCmdQuerySelection()
     oEltTabSearchSlct.options[2].selected = true
+    fCmdQuerySelection()
     oEltClicked = oEltCmdSrchElln
   })
   addEventListener('keydown', function (oEvtIn) {
     if (oEvtIn.ctrlKey && oEvtIn.key === 'F2') {
       oEvtIn.preventDefault()
       oEltTabSearchSlct.options[2].selected = true
-      //fCmdQuerySelection()
     }
   })
   oEltCmdSrchUl.appendChild(oEltCmdSrchElln)
@@ -544,14 +544,13 @@ let fContainersInsert = function () {
   const oEltCmdSrchZhon = document.createElement('li');
   oEltCmdSrchZhon.innerHTML = '<button id="idCmdBtn2">Chinese-name (Alt+F2)</button>';
   oEltCmdSrchZhon.addEventListener('pointerdown', function (oEvtIn) {
-    fCmdQuerySelection()
     oEltTabSearchSlct.options[3].selected = true
+    fCmdQuerySelection()
     oEltClicked = oEltCmdSrchZhon
   })
   addEventListener('keydown', function (oEvtIn) {
     if (oEvtIn.altKey && oEvtIn.key === 'F2') {
       oEltTabSearchSlct.options[3].selected = true
-      //fCmdQuerySelection()
     }
   })
   oEltCmdSrchUl.appendChild(oEltCmdSrchZhon)
@@ -811,7 +810,8 @@ let fContainersInsert = function () {
     let
       n,
       aLi, // list of elements of suggestion,
-      sLoc = ''
+      sLoc = '',
+      sTxt = ''
     if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
       // go to highlighted item
       aLi = oEltTabSearchOl.getElementsByClassName('clsClicked')
@@ -829,7 +829,7 @@ let fContainersInsert = function () {
           oEltTabSearchIpt.value = a[0]
           fSearchSuggest(sNif)
         } else if (sLoc !== '') {
-          let sTxt = aLi[0].text
+          sTxt = aLi[0].text
           if (sTxt.indexOf('!⇒') > 0) {
             // found main-name, search for this
             oEltTabSearchIpt.value = sTxt.substring(sTxt.indexOf('!⇒') + 2)
@@ -837,6 +837,26 @@ let fContainersInsert = function () {
           } else {
             // go to name's address
             location.href = sLoc
+          }
+        }
+      } else {
+        // no clicked elements, go to first
+        let
+          oLi = oEltTabSearchOl.getElementsByTagName('li')[0]
+        if (oLi.innerHTML.indexOf(' (lag') === -1) {
+          let 
+            oLiA = oLi.children[0],
+            sLoc = oLiA.href
+          if (sLoc !== '') {
+            sTxt = oLiA.text
+            if (sTxt.indexOf('!⇒') > 0) {
+              // found main-name, search for this
+              oEltTabSearchIpt.value = sTxt.substring(sTxt.indexOf('!⇒') + 2)
+              fSearchSuggest()
+            } else {
+              // go to name's address
+              location.href = sLoc
+            }
           }
         }
       }
@@ -1440,12 +1460,6 @@ let fContainersInsert = function () {
       aLi = oEltTabSearchOl.getElementsByTagName('li')
       for (n = 0; n < aLi.length; n++) {
         oLi = aLi[n]
-        /*if (oLi.children[0].className.indexOf('clsClicked') === -1 && n === 0) {
-          // highlight first
-          oEltClicked = oLi.children[0]
-          oLi.children[0].classList.add('clsClicked')
-          break
-        } else*/
         if (oLi.children[0].className.indexOf('clsClicked') > -1 &&
             n + 1 < aLi.length) {
           oLi.children[0].classList.remove('clsClicked')
@@ -1539,6 +1553,8 @@ let fContainersInsert = function () {
         if (oEltIn.className.indexOf('clsPreview') > -1) {
           fEvtContentClick(oEvtIn)
           fEvtPreview(oEvtIn, 'sContent')
+        } else {
+          location.href = oEltIn.href
         }
       }
 
