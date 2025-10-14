@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.20-3-0.2025-10-14: expand selection',
     'mMcsh2.js.20-2-0.2025-10-12: one-click on non-preview links',
     'mMcsh2.js.20-1-0.2025-10-08: enter on search',
     'mMcsh2.js.20-0-0.2025-10-06: menu, query-selection, one-click',
@@ -576,11 +577,60 @@ let fContainersInsert = function () {
   const oEltCmdDblclck = document.createElement('li');
   oEltCmdDblclck.innerHTML = '(DoubleClick) Query-Selected';
   oEltMenuUl.appendChild(oEltCmdDblclck)
+  // on content expand selection of dblclick and query it
   oEltCnrMainContentDiv.addEventListener('dblclick', function (oEvtIn) {
-    oEltTabSearchIpt.value = getSelection().toString().trim()
+    // Skip inputs/textareas 
+    const sTag = (oEvtIn.target.closest('input, textarea, [contenteditable="true"]') || {}).tagName;
+    if (sTag === 'INPUT' || sTag === 'TEXTAREA') return;
+
+    // Define what counts as “word” letters, numbers, symbols.
+    const rWORD = /[\p{L}\p{N}]/u; // letters & numbers
+    // :. generic-specific, // / whoel-part, - _ polyword, @ view, ' attribute,
+    const oSetSymbols = new Set(['-', '_', '.', '\'', '@', '/', ':', '+']); 
+
+    // sChIn: is a word char or expandable-symbol
+    function fIsWord(sChIn) {
+      if (!sChIn) return false;
+      return rWORD.test(sChIn) || oSetSymbols.has(sChIn);
+    }
+
+    // Expand selection inside a Text node 
+    function fExpandSelectionRight() {
+      const oSel = window.getSelection();
+      if (!oSel || oSel.rangeCount === 0) return;
+      const oRange = oSel.getRangeAt(0);
+      const oNode = oRange.startContainer;
+      // Only handle simple cases in a single text node (typical double-click behavior).
+      if (oNode !== oRange.endContainer || oNode.nodeType !== Node.TEXT_NODE) return;
+      const sText = oNode.textContent;
+      let nStart = oRange.startOffset;
+      let nEnd   = oRange.endOffset;
+      if (oSel.toString().endsWith(' ')) nEnd--
+      // Expand right
+      while (nEnd < sText.length && fIsWord(sText[nEnd])) nEnd++;
+      // If nothing changed, do nothing
+      if (nEnd === oRange.endOffset) return oSel;
+      const newRange = document.createRange();
+      newRange.setStart(oNode, nStart);
+      newRange.setEnd(oNode, nEnd);
+      oSel.removeAllRanges();
+      oSel.addRange(newRange);
+      return oSel;
+    }
+    let sSelection = fExpandSelectionRight().toString().trim()
+    if (sSelection.endsWith('-')
+      || sSelection.endsWith('.')
+      || sSelection.endsWith('\'')
+      || sSelection.endsWith('@')
+      || sSelection.endsWith('/')
+      || sSelection.endsWith(':')
+      || sSelection.endsWith('+'))
+      sSelection = sSelection.substring(0, sSelection.length-1)
+    if (sSelection.startsWith('cpt'))  sSelection = 'concept' + sSelection.slice(3)
+    if (sSelection !== '')  oEltTabSearchIpt.value = sSelection
     fSearchSuggest()
     fCnrSearchShow()
-  })
+  }, true)
   Array.prototype.slice.call(oEltMenuUl.querySelectorAll('#idCmdBtn')).forEach(function (oEltIn) {
     oEltIn.style.cursor = 'pointer'
     oEltIn.style.width = "222px";
