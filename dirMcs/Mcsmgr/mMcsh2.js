@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.21-0-0.2025-10-15: open http',
     'mMcsh2.js.20-3-0.2025-10-14: expand selection',
     'mMcsh2.js.20-2-0.2025-10-12: one-click on non-preview links',
     'mMcsh2.js.20-1-0.2025-10-08: enter on search',
@@ -628,9 +629,35 @@ let fContainersInsert = function () {
       sSelection = sSelection.substring(0, sSelection.length-1)
     if (sSelection.startsWith('cpt'))  sSelection = 'concept' + sSelection.slice(3)
     if (sSelection !== '')  oEltTabSearchIpt.value = sSelection
-    fSearchSuggest()
-    fCnrSearchShow()
+    if (sSelection.startsWith('http')) {
+      window.open(sSelection, '_blank')
+    } else {
+      fSearchSuggest()
+      fCnrSearchShow()
+    }
   }, true)
+  // command WebAddress
+  const oEltCmdOpenWebAdr = document.createElement('li');
+  oEltCmdOpenWebAdr.innerHTML = '<button id="idCmdBtn">Open-Selected-Http (Shift+Q)</button>';
+  oEltCmdOpenWebAdr.addEventListener('pointerdown', function (oEvtIn) {
+    let sSelection = getSelection().toString().trim()
+    if (sSelection.startsWith('http')) {
+      window.open(sSelection, '_blank')
+    }
+    fCnrOntopRemove()
+  })
+  addEventListener('keyup', function (oEvtIn) {
+    if (oEvtIn.shiftKey && oEvtIn.key.toLowerCase() === 'q') {
+      oEvtIn.preventDefault()
+      let sSelection = getSelection().toString().trim()
+      if (sSelection.startsWith('http')) {
+        window.open(sSelection, '_blank')
+      }
+      fCnrOntopRemove()
+    }
+  })
+  oEltMenuUl.appendChild(oEltCmdOpenWebAdr)
+  // style commands
   Array.prototype.slice.call(oEltMenuUl.querySelectorAll('#idCmdBtn')).forEach(function (oEltIn) {
     oEltIn.style.cursor = 'pointer'
     oEltIn.style.width = "222px";
@@ -838,11 +865,11 @@ let fContainersInsert = function () {
     '<input type="checkbox" id="idTabCntSrchChk">show All, not 999 (slow)'
   oEltTabSearchPPnm.id = 'idTabCntSrchPPnm'
   oEltTabSearchPPnm.innerHTML =
-    '<span id="idSrchpnm"> á </span><span id="idSrchpnm">à </span><span id="idSrchpnm">ā </span><span id="idSrchpnm">ǎ </span>' +
-    '<span id="idSrchpnm">é </span><span id="idSrchpnm">è </span><span id="idSrchpnm">ē </span><span id="idSrchpnm">ě </span>' +
-    '<span id="idSrchpnm">í </span><span id="idSrchpnm">ì </span><span id="idSrchpnm">ī </span><span id="idSrchpnm">ǐ </span>' +
-    '<span id="idSrchpnm">ó </span><span id="idSrchpnm">ò </span><span id="idSrchpnm">ō </span><span id="idSrchpnm">ǒ </span>' +
-    '<span id="idSrchpnm">ú </span><span id="idSrchpnm">ù </span><span id="idSrchpnm">ū </span><span id="idSrchpnm">ǔ </span>' +
+    '</span><span id="idSrchpnm"> ā <span id="idSrchpnm">á </span><span id="idSrchpnm">ǎ </span><span id="idSrchpnm">à </span>' +
+    '</span><span id="idSrchpnm">ē <span id="idSrchpnm">é </span><span id="idSrchpnm">ě </span><span id="idSrchpnm">è </span>' +
+    '</span><span id="idSrchpnm">ī <span id="idSrchpnm">í </span><span id="idSrchpnm">ǐ </span><span id="idSrchpnm">ì </span>' +
+    '</span><span id="idSrchpnm">ō <span id="idSrchpnm">ó </span><span id="idSrchpnm">ǒ </span><span id="idSrchpnm">ò </span>' +
+    '</span><span id="idSrchpnm">ū <span id="idSrchpnm">ú </span><span id="idSrchpnm">ǔ </span><span id="idSrchpnm">ù </span>' +
     '<span id="idSrchpnm">ç </span><span id="idSrchpnm">ğ </span><span id="idSrchpnm">ı </span><span id="idSrchpnm">ö </span><span id="idSrchpnm">ş </span><span id="idSrchpnm">ü </span>' +
     '<span id="idSrchpnm">ĉ </span><span id="idSrchpnm">ĝ </span><span id="idSrchpnm">ĥ </span><span id="idSrchpnm">ĵ </span><span id="idSrchpnm">ŝ </span><span id="idSrchpnm">ŭ </span>'
   oEltTabSearchLblChk.id = 'idTabCntSrchLblChk'
