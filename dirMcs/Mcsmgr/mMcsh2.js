@@ -28,6 +28,8 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.21-2-0.2025-10-17: DoubleClick query name and preview first, esc remove',
+    'mMcsh2.js.21-1-0.2025-10-16: parent-child names',
     'mMcsh2.js.21-0-0.2025-10-15: open http',
     'mMcsh2.js.20-3-0.2025-10-14: expand selection',
     'mMcsh2.js.20-2-0.2025-10-12: one-click on non-preview links',
@@ -587,7 +589,7 @@ let fContainersInsert = function () {
     // Define what counts as “word” letters, numbers, symbols.
     const rWORD = /[\p{L}\p{N}]/u; // letters & numbers
     // :. generic-specific, // / whoel-part, - _ polyword, @ view, ' attribute,
-    const oSetSymbols = new Set(['-', '_', '.', '\'', '@', '/', ':', '+']); 
+    const oSetSymbols = new Set(['-', '_', '\'', '.', ':', '/', ';', '@', '+']); 
 
     // sChIn: is a word char or expandable-symbol
     function fIsWord(sChIn) {
@@ -619,21 +621,34 @@ let fContainersInsert = function () {
       return oSel;
     }
     let sSelection = fExpandSelectionRight().toString().trim()
-    if (sSelection.endsWith('-')
-      || sSelection.endsWith('.')
-      || sSelection.endsWith('\'')
-      || sSelection.endsWith('@')
-      || sSelection.endsWith('/')
-      || sSelection.endsWith(':')
-      || sSelection.endsWith('+'))
-      sSelection = sSelection.substring(0, sSelection.length-1)
-    if (sSelection.startsWith('cpt'))  sSelection = 'concept' + sSelection.slice(3)
-    if (sSelection !== '')  oEltTabSearchIpt.value = sSelection
+    if (sSelection !== '') {
+      sSelection = sSelection.replace(/[-_'.:/;@+]*$/, '');
+      if (sSelection.startsWith('cpt'))  sSelection = 'concept' + sSelection.slice(3)
+      oEltTabSearchIpt.value = sSelection
+    }
+    // if Greek
+    if (/[\u0370-\u03FF]/.test(sSelection[0]))
+      oEltTabSearchSlct.options[2].selected = true
+    // if Chinese    
+    else if (/[\u4E00-\u9FFF]/.test(sSelection[0]))
+      oEltTabSearchSlct.options[3].selected = true
+      // English
+    else
+      oEltTabSearchSlct.options[0].selected = true
     if (sSelection.startsWith('http')) {
       window.open(sSelection, '_blank')
     } else {
       fSearchSuggest()
       fCnrSearchShow()
+      // preview the-first suggestion
+      setTimeout(() => {
+        const oLi = oEltTabSearchOl.getElementsByTagName('li')[0]
+        if (oLi && oLi.children[0]) {
+          fPreviewUrl(oLi.children[0].href)
+        } else {
+          console.warn('No first suggestion found')
+        }
+      }, 300)
     }
   }, true)
   // command WebAddress
@@ -657,6 +672,13 @@ let fContainersInsert = function () {
     }
   })
   oEltMenuUl.appendChild(oEltCmdOpenWebAdr)
+  // command Esc
+  addEventListener('keyup', function (oEvtIn) {
+    if (event.key === 'Escape') {
+      oEvtIn.preventDefault()
+      fCnrOntopRemove()
+    }
+  })
   // style commands
   Array.prototype.slice.call(oEltMenuUl.querySelectorAll('#idCmdBtn')).forEach(function (oEltIn) {
     oEltIn.style.cursor = 'pointer'
@@ -1946,6 +1968,47 @@ let fEvtPreview = function (oEvtIn, sContent) {
     oEltCnrPreviewDiv.style.left = (nWw / 3) + 'px'
     oEltCnrPreviewDiv.style.width = 'auto'
   }
+  oEltCnrPreviewDiv.style.display = 'block'
+}
+
+/**
+ * created: {2025-10-16}
+ * preview the-text of sUrlIn.
+ */
+let fPreviewUrl = function (sUrlIn) {
+  let
+    sLoc = location.href,
+    sId1 = sUrlIn, sId2,
+    oDoc
+  if (sId1.indexOf('#') > 0) {
+    sId2 = sId1.substring(sId1.indexOf('#') + 1)
+    sId1 = sId1.substring(0, sId1.indexOf('#'))
+  }
+  if (sLoc.indexOf('#') > 0) {
+    sLoc = sLoc.substring(0, sLoc.indexOf('#'))
+  }
+  // internal-link
+  if (sLoc === sId1) {
+    oEltCnrPreviewDiv.innerHTML = '<section>' + document.getElementById(sId2).innerHTML + '</section>'
+  } else {
+    oEltCnrPreviewDiv.innerHTML = ''
+    fetch(sId1)
+    .then(response => response.text())
+    .then(data => {
+      if (sId2) {
+        // IF #fragment url, display only this element.
+        oDoc = (new DOMParser()).parseFromString(data, 'text/html')
+        oEltCnrPreviewDiv.innerHTML = '<section>' + oDoc.getElementById(sId2).innerHTML + '</section>'
+      } else {
+        document.getElementById('idCnrPreviewDiv').innerHTML = data
+      }
+    })
+  }
+
+  oEltCnrPreviewDiv.style.top = '33px' 
+  oEltCnrPreviewDiv.style.left = '25%'
+  oEltCnrPreviewDiv.style.width = '70%'
+  oEltCnrPreviewDiv.style.heith = '40%'
   oEltCnrPreviewDiv.style.display = 'block'
 }
 
