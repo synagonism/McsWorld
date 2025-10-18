@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.21-3-0.2025-10-18: wait first suggestion',
     'mMcsh2.js.21-2-0.2025-10-17: DoubleClick query name and preview first, esc remove',
     'mMcsh2.js.21-1-0.2025-10-16: parent-child names',
     'mMcsh2.js.21-0-0.2025-10-15: open http',
@@ -491,12 +492,15 @@ let fContainersInsert = function () {
   oEltMenuUl.appendChild(oEltCmdSrch)
   const oEltCmdSrchUl = document.createElement('ul');
   oEltCmdSrch.appendChild(oEltCmdSrchUl)
-  function fCmdQuerySelection(){
+  async function fCmdQuerySelection(){
     let sSelection = getSelection().toString().trim()
     fCnrOntopRemove()
-    if (sSelection !== '')  oEltTabSearchIpt.value = sSelection
-    fSearchSuggest()
+    if (sSelection !== '')  oEltTabSearchIpt.value = sSelection + ' '
+    //clear suggestions
+    oEltTabSearchOl.innerHTML = ''
+    await fSearchSuggest()
     fCnrSearchShow()
+    await fPreviewFirstSuggestion()
   }
   // English
   const oEltCmdSrchEngl = document.createElement('li');
@@ -581,7 +585,7 @@ let fContainersInsert = function () {
   oEltCmdDblclck.innerHTML = '(DoubleClick) Query-Selected';
   oEltMenuUl.appendChild(oEltCmdDblclck)
   // on content expand selection of dblclick and query it
-  oEltCnrMainContentDiv.addEventListener('dblclick', function (oEvtIn) {
+  oEltCnrMainContentDiv.addEventListener('dblclick', async function (oEvtIn) {
     // Skip inputs/textareas 
     const sTag = (oEvtIn.target.closest('input, textarea, [contenteditable="true"]') || {}).tagName;
     if (sTag === 'INPUT' || sTag === 'TEXTAREA') return;
@@ -624,7 +628,7 @@ let fContainersInsert = function () {
     if (sSelection !== '') {
       sSelection = sSelection.replace(/[-_'.:/;@+]*$/, '');
       if (sSelection.startsWith('cpt'))  sSelection = 'concept' + sSelection.slice(3)
-      oEltTabSearchIpt.value = sSelection
+      oEltTabSearchIpt.value = sSelection + ' '
     }
     // if Greek
     if (/[\u0370-\u03FF]/.test(sSelection[0]))
@@ -638,17 +642,11 @@ let fContainersInsert = function () {
     if (sSelection.startsWith('http')) {
       window.open(sSelection, '_blank')
     } else {
-      fSearchSuggest()
+      //clear suggestions
+      oEltTabSearchOl.innerHTML = ''
+      await fSearchSuggest()
       fCnrSearchShow()
-      // preview the-first suggestion
-      setTimeout(() => {
-        const oLi = oEltTabSearchOl.getElementsByTagName('li')[0]
-        if (oLi && oLi.children[0]) {
-          fPreviewUrl(oLi.children[0].href)
-        } else {
-          console.warn('No first suggestion found')
-        }
-      }, 300)
+      await fPreviewFirstSuggestion()
     }
   }, true)
   // command WebAddress
@@ -1035,7 +1033,7 @@ let fContainersInsert = function () {
    *   that BEGIN with input-search-string.
    * INPUT: nothing or string of index-file to search: lagEngl03si_2_0, lagRoot, ...
    */
-  function fSearchSuggest(sIdxfileIn) {
+  async function fSearchSuggest(sIdxfileIn) {
     let
       nLag, // number of lag name in lagRoot-index-file,
       sLi,  // text of first suggestion,
@@ -1553,6 +1551,60 @@ let fContainersInsert = function () {
     document.getElementById('idCnrMainInfoDiv').scrollTop = 0 //nnn
   }
 
+  /**
+   * created: {2025-10-16}
+   * preview first suggestion
+   */
+  async function fPreviewFirstSuggestion() {
+    const nStart = Date.now()
+    const nMaxWait = 5000 // 5 seconds max
+    let
+      oLi,
+      sLoc = location.href,
+      sId1, sId2,
+      oDoc
+    while (!oLi && (Date.now() - nStart < nMaxWait)) {
+      oLi = oEltTabSearchOl.getElementsByTagName('li')[0];
+      if (!oLi) {
+        await new Promise(resolve => setTimeout(resolve, 70)); // Poll every 70ms
+      }
+    }
+    if (oLi && oLi.children[0]) {
+      sId1 = oLi.children[0].href
+      if (sId1.indexOf('#') > 0) {
+        sId2 = sId1.substring(sId1.indexOf('#') + 1)
+        sId1 = sId1.substring(0, sId1.indexOf('#'))
+      }
+      if (sLoc.indexOf('#') > 0) {
+        sLoc = sLoc.substring(0, sLoc.indexOf('#'))
+      }
+      // internal-link
+      if (sLoc === sId1) {
+        oEltCnrPreviewDiv.innerHTML = '<section>' + document.getElementById(sId2).innerHTML + '</section>'
+      } else {
+        oEltCnrPreviewDiv.innerHTML = ''
+        fetch(sId1)
+        .then(response => response.text())
+        .then(data => {
+          if (sId2) {
+            // IF #fragment url, display only this element.
+            oDoc = (new DOMParser()).parseFromString(data, 'text/html')
+            oEltCnrPreviewDiv.innerHTML = '<section>' + oDoc.getElementById(sId2).innerHTML + '</section>'
+          } else {
+            document.getElementById('idCnrPreviewDiv').innerHTML = data
+          }
+        })
+      }
+      oEltCnrPreviewDiv.style.top = '33px' 
+      oEltCnrPreviewDiv.style.left = '25%'
+      oEltCnrPreviewDiv.style.width = '70%'
+      oEltCnrPreviewDiv.style.heith = '40%'
+      oEltCnrPreviewDiv.style.display = 'block'
+    } else {
+      console.warn('No first suggestion found')
+    }
+  }
+
   oEltTabSearchOl.addEventListener('keyup', function (oEvtIn) {
     let aLi, n, oLi
     if (oEvtIn.code === 'ArrowDown' || oEvtIn.keyCode === 40) {
@@ -1968,47 +2020,6 @@ let fEvtPreview = function (oEvtIn, sContent) {
     oEltCnrPreviewDiv.style.left = (nWw / 3) + 'px'
     oEltCnrPreviewDiv.style.width = 'auto'
   }
-  oEltCnrPreviewDiv.style.display = 'block'
-}
-
-/**
- * created: {2025-10-16}
- * preview the-text of sUrlIn.
- */
-let fPreviewUrl = function (sUrlIn) {
-  let
-    sLoc = location.href,
-    sId1 = sUrlIn, sId2,
-    oDoc
-  if (sId1.indexOf('#') > 0) {
-    sId2 = sId1.substring(sId1.indexOf('#') + 1)
-    sId1 = sId1.substring(0, sId1.indexOf('#'))
-  }
-  if (sLoc.indexOf('#') > 0) {
-    sLoc = sLoc.substring(0, sLoc.indexOf('#'))
-  }
-  // internal-link
-  if (sLoc === sId1) {
-    oEltCnrPreviewDiv.innerHTML = '<section>' + document.getElementById(sId2).innerHTML + '</section>'
-  } else {
-    oEltCnrPreviewDiv.innerHTML = ''
-    fetch(sId1)
-    .then(response => response.text())
-    .then(data => {
-      if (sId2) {
-        // IF #fragment url, display only this element.
-        oDoc = (new DOMParser()).parseFromString(data, 'text/html')
-        oEltCnrPreviewDiv.innerHTML = '<section>' + oDoc.getElementById(sId2).innerHTML + '</section>'
-      } else {
-        document.getElementById('idCnrPreviewDiv').innerHTML = data
-      }
-    })
-  }
-
-  oEltCnrPreviewDiv.style.top = '33px' 
-  oEltCnrPreviewDiv.style.left = '25%'
-  oEltCnrPreviewDiv.style.width = '70%'
-  oEltCnrPreviewDiv.style.heith = '40%'
   oEltCnrPreviewDiv.style.display = 'block'
 }
 
