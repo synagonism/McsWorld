@@ -28,7 +28,8 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
-    'mMcsh2.js.21-3-0.2025-10-18: wait first suggestion',
+    'mMcsh2.js.21-4-0.2025-10-19: fChooseInputLanguage not working',
+    'mMcsh2.js.21-3-1.2025-10-18: wait first suggestion',
     'mMcsh2.js.21-2-0.2025-10-17: DoubleClick query name and preview first, esc remove',
     'mMcsh2.js.21-1-0.2025-10-16: parent-child names',
     'mMcsh2.js.21-0-0.2025-10-15: open http',
@@ -298,7 +299,7 @@ let fContainersInsert = function () {
   })
   // width-content
   oEltCnrWidthDiv.id = 'idCnrWidthDiv'
-  oEltCnrWidthDiv.innerHTML = 
+  oEltCnrWidthDiv.innerHTML =
     '<fieldset><legend>Page-Info-width:</legend>' +
     '<input type="radio" id="idRdbWidth0" name="nameRdbWidth">0 %<br>' +
     '<input type="radio" id="idRdbWidth10" name="nameRdbWidth">10 %<br>' +
@@ -334,7 +335,7 @@ let fContainersInsert = function () {
       .childNodes[0].classList.add('clsTabActive')
     // Hide tab-search-content
     document.getElementById('idTabCntSrchDiv').style.display = 'none'
-    // Show tab-toc-content 
+    // Show tab-toc-content
     document.getElementById('idTabCntTocDiv').style.display = 'block'
   }
 
@@ -437,7 +438,7 @@ let fContainersInsert = function () {
   oEltCnrTopHomeIcnI.addEventListener('click', function () {
     oEltClicked.classList.remove('clsClicked', 'clsTtpShow', 'clsTriClicked')
     oEltClicked = oEltCnrTopHomeIcnI
-    location.href = sPathSite
+    location.href = sPathSite //nnnFv
   })
   oEltCnrTopDiv.insertBefore(oEltCnrTopMenuIcnI, oEltCnrTopDiv.firstChild)
 
@@ -492,73 +493,125 @@ let fContainersInsert = function () {
   oEltMenuUl.appendChild(oEltCmdSrch)
   const oEltCmdSrchUl = document.createElement('ul');
   oEltCmdSrch.appendChild(oEltCmdSrchUl)
+  // query selection and preview
   async function fCmdQuerySelection(){
     let sSelection = getSelection().toString().trim()
     fCnrOntopRemove()
-    if (sSelection !== '')  oEltTabSearchIpt.value = sSelection + ' '
+    if (sSelection.startsWith('cpt'))  sSelection = 'concept' + sSelection.slice(3)
+    if (sSelection !== '')  {
+      oEltTabSearchIpt.value = sSelection + ' '
+      oEltTabSearchP.innerHTML = sTabSearchPSetText()
+      //clear suggestions
+      oEltTabSearchOl.innerHTML = ''
+      sIdxfile = 'lagRoot'
+      await fSearchSuggest()
+      await fPreviewFirstSuggestion()
+      fCnrSearchShow()
+    } else {
+      fCnrSearchShow()
+    }
+  }
+  // query input and preview
+  async function fCmdQueryInput(){
+    fCnrOntopRemove()
     //clear suggestions
     oEltTabSearchOl.innerHTML = ''
     await fSearchSuggest()
-    fCnrSearchShow()
     await fPreviewFirstSuggestion()
+    fCnrSearchShow()
   }
   // English
   const oEltCmdSrchEngl = document.createElement('li');
   oEltCmdSrchEngl.innerHTML = '<button id="idCmdBtn2">English-name (F2)</button>';
-  oEltCmdSrchEngl.addEventListener('pointerdown', function (oEvtIn) {
+  oEltCmdSrchEngl.addEventListener('pointerdown', async function (oEvtIn) {
     oEvtIn.preventDefault()
     oEltTabSearchSlct.options[0].selected = true
-    fCmdQuerySelection()
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
     oEltClicked = oEltCmdSrchEngl
   })
-  addEventListener('keydown', function (oEvtIn) {
+  addEventListener('keydown', async function (oEvtIn) {
     if (oEvtIn.key === 'F2'  || event.keyCode === 113) {
       oEvtIn.preventDefault()
       oEltTabSearchSlct.options[0].selected = true
-      fCmdQuerySelection()
+      if (getSelection().toString().trim() !== '') {
+        await fCmdQuerySelection()
+      } else {
+        await fCmdQueryInput()
+      }
     }
   })
   oEltCmdSrchUl.appendChild(oEltCmdSrchEngl)
   // Sinago
   const oEltCmdSrchSngo = document.createElement('li');
   oEltCmdSrchSngo.innerHTML = '<button id="idCmdBtn2">Sinago-name (Shift+F2)</button>';
-  oEltCmdSrchSngo.addEventListener('pointerdown', function (oEvtIn) {
+  oEltCmdSrchSngo.addEventListener('pointerdown', async function (oEvtIn) {
     oEltTabSearchSlct.options[1].selected = true
-    fCmdQuerySelection()
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
     oEltClicked = oEltCmdSrchSngo
   })
-  addEventListener('keydown', function (oEvtIn) {
+  addEventListener('keydown', async function (oEvtIn) {
     if (oEvtIn.shiftKey && oEvtIn.key === 'F2') {
       oEltTabSearchSlct.options[1].selected = true
+      if (getSelection().toString().trim() !== '') {
+        await fCmdQuerySelection()
+      } else {
+        await fCmdQueryInput()
+      }
     }
   })
   oEltCmdSrchUl.appendChild(oEltCmdSrchSngo)
   // Greek
   const oEltCmdSrchElln = document.createElement('li');
   oEltCmdSrchElln.innerHTML = '<button id="idCmdBtn2">Greek-name (Ctrl+F2)</button>';
-  oEltCmdSrchElln.addEventListener('pointerdown', function (oEvtIn) {
+  oEltCmdSrchElln.addEventListener('pointerdown', async function (oEvtIn) {
     oEltTabSearchSlct.options[2].selected = true
-    fCmdQuerySelection()
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
     oEltClicked = oEltCmdSrchElln
   })
-  addEventListener('keydown', function (oEvtIn) {
+  addEventListener('keydown', async function (oEvtIn) {
     if (oEvtIn.ctrlKey && oEvtIn.key === 'F2') {
       oEvtIn.preventDefault()
       oEltTabSearchSlct.options[2].selected = true
+      if (getSelection().toString().trim() !== '') {
+        await fCmdQuerySelection()
+      } else {
+        await fCmdQueryInput()
+      }
     }
   })
   oEltCmdSrchUl.appendChild(oEltCmdSrchElln)
-  //Chinese
+  //Chinese nnnFv:Esperanto
   const oEltCmdSrchZhon = document.createElement('li');
   oEltCmdSrchZhon.innerHTML = '<button id="idCmdBtn2">Chinese-name (Alt+F2)</button>';
-  oEltCmdSrchZhon.addEventListener('pointerdown', function (oEvtIn) {
+  oEltCmdSrchZhon.addEventListener('pointerdown', async function (oEvtIn) {
     oEltTabSearchSlct.options[3].selected = true
-    fCmdQuerySelection()
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
     oEltClicked = oEltCmdSrchZhon
   })
-  addEventListener('keydown', function (oEvtIn) {
+  addEventListener('keydown', async function (oEvtIn) {
     if (oEvtIn.altKey && oEvtIn.key === 'F2') {
       oEltTabSearchSlct.options[3].selected = true
+      if (getSelection().toString().trim() !== '') {
+        await fCmdQuerySelection()
+      } else {
+        await fCmdQueryInput()
+      }
     }
   })
   oEltCmdSrchUl.appendChild(oEltCmdSrchZhon)
@@ -568,15 +621,15 @@ let fContainersInsert = function () {
   // command SearchSelection
   const oEltCmdQurySlct = document.createElement('li');
   oEltCmdQurySlct.innerHTML = '<button id="idCmdBtn">Query-Selection (Ctrl+Q)</button>';
-  oEltCmdQurySlct.addEventListener('pointerdown', function (oEvtIn) {
-    fCmdQuerySelection()
+  oEltCmdQurySlct.addEventListener('pointerdown', async function (oEvtIn) {
+    await fCmdQuerySelection()
     oEltClicked = oEltCmdQurySlct
   })
-  addEventListener('keyup', function (oEvtIn) {
+  addEventListener('keyup', async function (oEvtIn) {
     if (oEvtIn.ctrlKey && oEvtIn.key.toLowerCase() === 'q') {
-      fCnrOntopRemove()
       oEvtIn.preventDefault()
-      fCmdQuerySelection()
+      fCnrOntopRemove()
+      await fCmdQuerySelection()
     }
   })
   oEltMenuUl.appendChild(oEltCmdQurySlct)
@@ -584,16 +637,16 @@ let fContainersInsert = function () {
   const oEltCmdDblclck = document.createElement('li');
   oEltCmdDblclck.innerHTML = '(DoubleClick) Query-Selected';
   oEltMenuUl.appendChild(oEltCmdDblclck)
-  // on content expand selection of dblclick and query it
+  // on content expand selection of dblclick, query it, and preview first suggestion
   oEltCnrMainContentDiv.addEventListener('dblclick', async function (oEvtIn) {
-    // Skip inputs/textareas 
+    // Skip inputs/textareas
     const sTag = (oEvtIn.target.closest('input, textarea, [contenteditable="true"]') || {}).tagName;
     if (sTag === 'INPUT' || sTag === 'TEXTAREA') return;
 
     // Define what counts as “word” letters, numbers, symbols.
     const rWORD = /[\p{L}\p{N}]/u; // letters & numbers
     // :. generic-specific, // / whoel-part, - _ polyword, @ view, ' attribute,
-    const oSetSymbols = new Set(['-', '_', '\'', '.', ':', '/', ';', '@', '+']); 
+    const oSetSymbols = new Set(['-', '_', '\'', '.', ':', '/', ';', '@', '+']);
 
     // sChIn: is a word char or expandable-symbol
     function fIsWord(sChIn) {
@@ -601,7 +654,7 @@ let fContainersInsert = function () {
       return rWORD.test(sChIn) || oSetSymbols.has(sChIn);
     }
 
-    // Expand selection inside a Text node 
+    // Expand selection inside a Text node
     function fExpandSelectionRight() {
       const oSel = window.getSelection();
       if (!oSel || oSel.rangeCount === 0) return;
@@ -627,26 +680,14 @@ let fContainersInsert = function () {
     let sSelection = fExpandSelectionRight().toString().trim()
     if (sSelection !== '') {
       sSelection = sSelection.replace(/[-_'.:/;@+]*$/, '');
+      if (sSelection.startsWith('_'))  sSelection = sSelection.slice(1) //_DESCRIPTION
       if (sSelection.startsWith('cpt'))  sSelection = 'concept' + sSelection.slice(3)
       oEltTabSearchIpt.value = sSelection + ' '
     }
-    // if Greek
-    if (/[\u0370-\u03FF]/.test(sSelection[0]))
-      oEltTabSearchSlct.options[2].selected = true
-    // if Chinese    
-    else if (/[\u4E00-\u9FFF]/.test(sSelection[0]))
-      oEltTabSearchSlct.options[3].selected = true
-      // English
-    else
-      oEltTabSearchSlct.options[0].selected = true
     if (sSelection.startsWith('http')) {
       window.open(sSelection, '_blank')
     } else {
-      //clear suggestions
-      oEltTabSearchOl.innerHTML = ''
-      await fSearchSuggest()
-      fCnrSearchShow()
-      await fPreviewFirstSuggestion()
+      fCmdQueryInput()
     }
   }, true)
   // command WebAddress
@@ -895,11 +936,8 @@ let fContainersInsert = function () {
   oEltTabSearchLblChk.id = 'idTabCntSrchLblChk'
   oEltTabSearchIpt.id = 'idTabCntSrchIpt'
 
-  oEltTabSearchSlct.addEventListener('change', function () {
-    oEltTabSearchP.innerHTML = sTabSearchPSetText()
-    oEltTabSearchOl.innerHTML = sTabSearchOl
-    sIdxfile = 'lagRoot'
-    fSearchSuggest()
+  oEltTabSearchSlct.addEventListener('change', async function () {
+    fCmdQueryInput()
   })
   // on enter, go to concept
   // on typing, suggest
@@ -941,7 +979,7 @@ let fContainersInsert = function () {
         let
           oLi = oEltTabSearchOl.getElementsByTagName('li')[0]
         if (oLi.innerHTML.indexOf(' (lag') === -1) {
-          let 
+          let
             oLiA = oLi.children[0],
             sLoc = oLiA.href
           if (sLoc !== '') {
@@ -1029,6 +1067,24 @@ let fContainersInsert = function () {
   })
 
   /**
+   * This DOES-NOT WORK, because same characters belong to MANY languages
+   * eg 'α' is Greek and GreekAncient, 'a' is English, German, Spanish ...
+   * created: {2025-10-18}
+   * choose search language on sCharIn
+   */
+  function  fChooseInputLanguage(sCharIn) {
+    // if Greek
+    if (/[\u0370-\u03FF]/.test(sCharIn))
+      oEltTabSearchSlct.options[2].selected = true
+    // if Chinese
+    else if (/[\u4E00-\u9FFF]/.test(sCharIn))
+      oEltTabSearchSlct.options[3].selected = true
+      // English
+    else
+      oEltTabSearchSlct.options[0].selected = true
+  }
+
+  /**
    * DOING: suggests names of senso-concepts,
    *   that BEGIN with input-search-string.
    * INPUT: nothing or string of index-file to search: lagEngl03si_2_0, lagRoot, ...
@@ -1037,12 +1093,14 @@ let fContainersInsert = function () {
     let
       nLag, // number of lag name in lagRoot-index-file,
       sLi,  // text of first suggestion,
-      sLag = oEltTabSearchSlct.options[oEltTabSearchSlct.selectedIndex].value, // lagElln
+      sLag, // lagElln
       sIdxfileFull,
       sSearchInput = oEltTabSearchIpt.value,
       sSearchChar = sSearchInput.charAt(0),
       sSuggestions = ''
 
+    // fChooseInputLanguage(sSearchChar)
+    sLag = oEltTabSearchSlct.options[oEltTabSearchSlct.selectedIndex].value, // lagElln
     sIdxfile = ''
     sIdxFrom = ''
     sIdxTo = ''
@@ -1343,7 +1401,7 @@ let fContainersInsert = function () {
           for (i = 1; i < aaSuggestions.length; i++) {
             n = n + 1
             sSuggestions = sSuggestions +
-              '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/' +
+              '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/' + // nnnFv
               aaSuggestions[i][1] + '">' +
               aaSuggestions[i][0]
             if (!document.getElementById('idTabCntSrchChk').checked) {
@@ -1403,7 +1461,7 @@ let fContainersInsert = function () {
                 new RegExp("^"+sInput+"@.*").test(sSgn) ) {
               n = n + 1
               sSuggestions = sSuggestions +
-                '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/' +
+                '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/' + // nnnFv
                 aaSuggestions[i][1] + '">' +
                 aaSuggestions[i][0]
             }
@@ -1436,7 +1494,7 @@ let fContainersInsert = function () {
               // IF n > 999 stop ?
               n = n + 1
               sSuggestions = sSuggestions +
-                '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/' +
+                '<li><a class="clsPreview" href="' + sPathSite + 'dirMcs/' + // nnnFv
                 aaSuggestions[i][1] + '">' +
                 aaSuggestions[i][0]
               if (!document.getElementById('idTabCntSrchChk').checked) {
@@ -1557,7 +1615,7 @@ let fContainersInsert = function () {
    */
   async function fPreviewFirstSuggestion() {
     const nStart = Date.now()
-    const nMaxWait = 5000 // 5 seconds max
+    const nMaxWait = 700 // miliseconds max
     let
       oLi,
       sLoc = location.href,
@@ -1595,7 +1653,7 @@ let fContainersInsert = function () {
           }
         })
       }
-      oEltCnrPreviewDiv.style.top = '33px' 
+      oEltCnrPreviewDiv.style.top = '33px'
       oEltCnrPreviewDiv.style.left = '25%'
       oEltCnrPreviewDiv.style.width = '70%'
       oEltCnrPreviewDiv.style.heith = '40%'
@@ -2444,7 +2502,7 @@ if (sPathSite) {
   })*/
 
   // read lagRoot
-  await fetch(sPathSite + 'dirMcs/dirNamidx/namidx.lagRoot.json')
+  await fetch(sPathSite + 'dirMcs/dirNamidx/namidx.lagRoot.json') // nnnFv
   .then(response => response.json())
   .then(data => aaNamidxfileRoot=data)
 }
@@ -2486,7 +2544,7 @@ function fCreateOFile_Index(aIn) {
  * OUTPUT: site/dirMcs/dirNamidx/dirLagEngl/namidx.lagEngl01ei.json
  */
 function fFindNamidxfileFull(sIdxfileIn) {
-  return sPathSite + 'dirMcs/dirNamidx/dirL' + sIdxfileIn.substring(1, 7) +
+  return sPathSite + 'dirMcs/dirNamidx/dirL' + sIdxfileIn.substring(1, 7) + // nnFv and dirNamIdx
          '/namidx.' + sIdxfileIn + '.json'
 }
 
