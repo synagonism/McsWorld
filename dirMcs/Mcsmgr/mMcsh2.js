@@ -28,6 +28,8 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.22-1-0.2025-10-20: fixes, more menu languages',
+    'mMcsh2.js.22-0-0.2025-10-20: fCmdQueryInput, fExpandSelectionRight',
     'mMcsh2.js.21-4-0.2025-10-19: fChooseInputLanguage not working',
     'mMcsh2.js.21-3-1.2025-10-18: wait first suggestion',
     'mMcsh2.js.21-2-0.2025-10-17: DoubleClick query name and preview first, esc remove',
@@ -444,15 +446,503 @@ let fContainersInsert = function () {
 
   // menu-content
   oEltCnrMenuDiv.id = 'idCnrMenuDiv'
+  oEltCnrMenuDiv.addEventListener('pointerdown', e => e.preventDefault())
   oEltMenuUl.setAttribute('id', 'idMenuUl')
   oEltMenuUl.classList.add('clsTreeUl')
   // site-structure menu
   if (sEltSitemenuUl) {
     oEltMenuUl.innerHTML = sEltSitemenuUl
   }
+
+  // command Search
+  const oEltCmdSrch = document.createElement('li')
+  oEltCmdSrch.innerHTML = 'Name-Search:'
+  oEltMenuUl.appendChild(oEltCmdSrch)
+  const oEltCmdSrchUl = document.createElement('ul')
+  oEltCmdSrch.appendChild(oEltCmdSrchUl)
+  // query selection and preview
+  async function fCmdQuerySelection(){
+    let sSelection = getSelection().toString().trim()
+    fCnrOntopRemove()
+    if (sSelection !== '')  {
+      sSelection = fSelectionModify(sSelection)
+      if (sSelection.startsWith('http')) {
+        window.open(sSelection, '_blank')
+      } else {
+        oEltTabSearchIpt.value = sSelection
+        oEltTabSearchP.innerHTML = sTabSearchPSetText()
+        //clear suggestions
+        oEltTabSearchOl.innerHTML = ''
+        sIdxfile = 'lagRoot'
+        await fSearchSuggest()
+        await fPreviewFirstSuggestion()
+        fCnrSearchShow()
+      }
+    } else {
+      fCnrSearchShow()
+    }
+  }
+  // query input and preview
+  async function fCmdQueryInput(){
+    fCnrOntopRemove()
+    if (oEltTabSearchIpt.value !== '')  {
+      //clear suggestions
+      oEltTabSearchOl.innerHTML = ''
+      await fSearchSuggest()
+      await fPreviewFirstSuggestion()
+      fCnrSearchShow()
+    } else {
+     oEltTabSearchP.innerHTML = sTabSearchPSetText()
+     fCnrSearchShow()
+    }
+  }
+  // English
+  const oEltCmdSrchEngl = document.createElement('li')
+  oEltCmdSrchEngl.innerHTML = '<button id="idCmdBtn2">English-name (F2, Engl)</button>'
+  oEltCmdSrchEngl.addEventListener('pointerdown', async function (oEvtIn) {
+    oEvtIn.preventDefault()
+    oEltTabSearchSlct.options[0].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchEngl
+  })
+  addEventListener('keydown', async function (oEvtIn) {
+    if (oEvtIn.key === 'F2'  || event.keyCode === 113) {
+      oEvtIn.preventDefault()
+      oEltTabSearchSlct.options[0].selected = true
+      if (getSelection().toString().trim() !== '') {
+        await fCmdQuerySelection()
+      } else {
+        await fCmdQueryInput()
+      }
+    }
+  })
+  oEltCmdSrchUl.appendChild(oEltCmdSrchEngl)
+  // Sinago
+  const oEltCmdSrchSngo = document.createElement('li')
+  oEltCmdSrchSngo.innerHTML = '<button id="idCmdBtn2">Sinago-name (Shift+F2, Sngo)</button>'
+  oEltCmdSrchSngo.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[1].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchSngo
+  })
+  addEventListener('keydown', async function (oEvtIn) {
+    if (oEvtIn.shiftKey && oEvtIn.key === 'F2') {
+      oEltTabSearchSlct.options[1].selected = true
+      if (getSelection().toString().trim() !== '') {
+        await fCmdQuerySelection()
+      } else {
+        await fCmdQueryInput()
+      }
+    }
+  })
+  oEltCmdSrchUl.appendChild(oEltCmdSrchSngo)
+  // Greek
+  const oEltCmdSrchElln = document.createElement('li')
+  oEltCmdSrchElln.innerHTML = '<button id="idCmdBtn2">Greek-name (Ctrl+F2, Elln)</button>'
+  oEltCmdSrchElln.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[2].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchElln
+  })
+  addEventListener('keydown', async function (oEvtIn) {
+    if (oEvtIn.ctrlKey && oEvtIn.key === 'F2') {
+      oEvtIn.preventDefault()
+      oEltTabSearchSlct.options[2].selected = true
+      if (getSelection().toString().trim() !== '') {
+        await fCmdQuerySelection()
+      } else {
+        await fCmdQueryInput()
+      }
+    }
+  })
+  oEltCmdSrchUl.appendChild(oEltCmdSrchElln)
+  //Chinese nnnFv:Esperanto
+  const oEltCmdSrchZhon = document.createElement('li')
+  oEltCmdSrchZhon.innerHTML = '<button id="idCmdBtn2">Chinese-name (Alt+F2, Zhon)</button>'
+  oEltCmdSrchZhon.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[3].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchZhon
+  })
+  addEventListener('keydown', async function (oEvtIn) {
+    if (oEvtIn.altKey && oEvtIn.key === 'F2') {
+      oEltTabSearchSlct.options[3].selected = true
+      if (getSelection().toString().trim() !== '') {
+        await fCmdQuerySelection()
+      } else {
+        await fCmdQueryInput()
+      }
+    }
+  })
+  oEltCmdSrchUl.appendChild(oEltCmdSrchZhon)
+
+  const oEltCmdSrchMisc = document.createElement('li')
+  oEltCmdSrchMisc.innerHTML = 'More Names'
+  oEltCmdSrchUl.appendChild(oEltCmdSrchMisc)
+  const oEltCmdSrchUl2 = document.createElement('ul')
+  oEltCmdSrchMisc.appendChild(oEltCmdSrchUl2)
+  // Albanian
+  const oEltCmdSrchSqip = document.createElement('li')
+  oEltCmdSrchSqip.innerHTML = '<button id="idCmdBtn3">Albanian (Sqip)</button>'
+  oEltCmdSrchSqip.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[5].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchSqip
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchSqip)
+  // Arabic
+  const oEltCmdSrchArab = document.createElement('li')
+  oEltCmdSrchArab.innerHTML = '<button id="idCmdBtn3">Arabic (Arab)</button>'
+  oEltCmdSrchArab.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[6].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchArab
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchArab)
+  // Esperanto
+  const oEltCmdSrchEspo = document.createElement('li')
+  oEltCmdSrchEspo.innerHTML = '<button id="idCmdBtn3">Esperanto (Espo)</button>'
+  oEltCmdSrchEspo.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[7].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchEspo
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchEspo)
+  // French
+  const oEltCmdSrchFrac = document.createElement('li')
+  oEltCmdSrchFrac.innerHTML = '<button id="idCmdBtn3">French (Frac)</button>'
+  oEltCmdSrchFrac.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[8].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchFrac
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchFrac)
+  // German
+  const oEltCmdSrchDeut = document.createElement('li')
+  oEltCmdSrchDeut.innerHTML = '<button id="idCmdBtn3">German (Deut)</button>'
+  oEltCmdSrchDeut.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[9].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchDeut
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchDeut)
+  // GreekAncient
+  const oEltCmdSrchElla = document.createElement('li')
+  oEltCmdSrchElla.innerHTML = '<button id="idCmdBtn3">GreekAncient (Ella)</button>'
+  oEltCmdSrchElla.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[10].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchElla
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchElla)
+  // Hindi
+  const oEltCmdSrchHind = document.createElement('li')
+  oEltCmdSrchHind.innerHTML = '<button id="idCmdBtn3">Hindi (Hind)</button>'
+  oEltCmdSrchHind.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[11].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchHind
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchHind)
+  // Italian
+  const oEltCmdSrchItln = document.createElement('li')
+  oEltCmdSrchItln.innerHTML = '<button id="idCmdBtn3">Italian (Itln)</button>'
+  oEltCmdSrchItln.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[12].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchItln
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchItln)
+  // Romanian
+  const oEltCmdSrchRomn = document.createElement('li')
+  oEltCmdSrchRomn.innerHTML = '<button id="idCmdBtn3">Romanian (Romn)</button>'
+  oEltCmdSrchRomn.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[13].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchRomn
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchRomn)
+  // SlavoBosnian
+  const oEltCmdSrchSbos = document.createElement('li')
+  oEltCmdSrchSbos.innerHTML = '<button id="idCmdBtn3">SlavoBosnian (Sbos)</button>'
+  oEltCmdSrchSbos.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[14].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchSbos
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchSbos)
+  // SlavoCroatian
+  const oEltCmdSrchShrv = document.createElement('li')
+  oEltCmdSrchShrv.innerHTML = '<button id="idCmdBtn3">SlavoCroatian (Shrv)</button>'
+  oEltCmdSrchShrv.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[15].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchShrv
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchShrv)
+  // SlavoMondenegrin
+  const oEltCmdSrchScnr = document.createElement('li')
+  oEltCmdSrchScnr.innerHTML = '<button id="idCmdBtn3">SlavoMondenegrin (Scnr)</button>'
+  oEltCmdSrchScnr.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[16].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchScnr
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchScnr)
+  // SlavoSerbian
+  const oEltCmdSrchSsrp = document.createElement('li')
+  oEltCmdSrchSsrp.innerHTML = '<button id="idCmdBtn3">SlavoSerbian (Ssrp)</button>'
+  oEltCmdSrchSsrp.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[17].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchSsrp
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchSsrp)
+  // SlavoBulgarian
+  const oEltCmdSrchSbul = document.createElement('li')
+  oEltCmdSrchSbul.innerHTML = '<button id="idCmdBtn3">SlavoBulgarian (Sbul)</button>'
+  oEltCmdSrchSbul.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[18].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchSbul
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchSbul)
+  // SlavoMacedonian
+  const oEltCmdSrchSmkd = document.createElement('li')
+  oEltCmdSrchSmkd.innerHTML = '<button id="idCmdBtn3">SlavoMacedonian (Smkd)</button>'
+  oEltCmdSrchSmkd.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[19].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchSmkd
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchSmkd)
+  // SlavoRussian
+  const oEltCmdSrchSrus = document.createElement('li')
+  oEltCmdSrchSrus.innerHTML = '<button id="idCmdBtn3">SlavoRussian (Srus)</button>'
+  oEltCmdSrchSrus.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[20].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchSrus
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchSrus)
+  // SlavoSlovenian
+  const oEltCmdSrchSslv = document.createElement('li')
+  oEltCmdSrchSslv.innerHTML = '<button id="idCmdBtn3">SlavoSlovenian (Sslv)</button>'
+  oEltCmdSrchSslv.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[21].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchSslv
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchSslv)
+  // Spanish
+  const oEltCmdSrchSpan = document.createElement('li')
+  oEltCmdSrchSpan.innerHTML = '<button id="idCmdBtn3">Spanish (Span)</button>'
+  oEltCmdSrchSpan.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[22].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchSpan
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchSpan)
+  // Turkish
+  const oEltCmdSrchTurk = document.createElement('li')
+  oEltCmdSrchTurk.innerHTML = '<button id="idCmdBtn3">Turkish (Turk)</button>'
+  oEltCmdSrchTurk.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[23].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchTurk
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchTurk)
+  // Vietnamese
+  const oEltCmdSrchVnma = document.createElement('li')
+  oEltCmdSrchVnma.innerHTML = '<button id="idCmdBtn3">Vietnamese (Vnma)</button>'
+  oEltCmdSrchVnma.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[24].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchVnma
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchVnma)
+
+  // command SearchSelection
+  const oEltCmdQurySlct = document.createElement('li')
+  oEltCmdQurySlct.innerHTML = '<button id="idCmdBtn">Query-Selection (Ctrl+Q)</button>'
+  oEltCmdQurySlct.addEventListener('pointerdown', async function (oEvtIn) {
+    await fCmdQuerySelection()
+    oEltClicked = oEltCmdQurySlct
+  })
+  addEventListener('keyup', async function (oEvtIn) {
+    if (oEvtIn.ctrlKey && oEvtIn.key.toLowerCase() === 'q') {
+      oEvtIn.preventDefault()
+      fCnrOntopRemove()
+      await fCmdQuerySelection()
+    }
+  })
+  oEltMenuUl.appendChild(oEltCmdQurySlct)
+
+  // command dblclick
+  const oEltCmdDblclck = document.createElement('li')
+  oEltCmdDblclck.innerHTML = '(DoubleClick) Query-Selected'
+  oEltMenuUl.appendChild(oEltCmdDblclck)
+  // on content expand selection of dblclick, query it, and preview first suggestion
+  oEltCnrMainContentDiv.addEventListener('dblclick', async function (oEvtIn) {
+    // Skip inputs/textareas
+    const sTag = (oEvtIn.target.closest('input, textarea, [contenteditable="true"]') || {}).tagName
+    if (sTag === 'INPUT' || sTag === 'TEXTAREA') return
+
+    // Define what counts as “word” letters, numbers, symbols.
+    const rWORD = /[\p{L}\p{N}]/u // letters & numbers
+    // :. generic-specific, // / whoel-part, - _ polyword, @ view, ' attribute,
+    const oSetSymbols = new Set(['-', '_', '\'', '.', ':', '/', ';', '@', '+'])
+
+    // sChIn: is a word char or expandable-symbol
+    function fIsWord(sChIn) {
+      if (!sChIn) return false
+      return rWORD.test(sChIn) || oSetSymbols.has(sChIn)
+    }
+
+    // Expand selection inside a Text node
+    function fExpandSelectionRight() {
+      const oSel = window.getSelection()
+      if (!oSel || oSel.rangeCount === 0) {
+        return ''
+      } else {
+        const oRange = oSel.getRangeAt(0)
+        const oNode = oRange.startContainer
+        // Only handle simple cases in a single text node (typical double-click behavior).
+        if (oNode !== oRange.endContainer || oNode.nodeType !== Node.TEXT_NODE) {
+          return ''
+        } else {
+          const sText = oNode.textContent
+          let nStart = oRange.startOffset
+          let nEnd   = oRange.endOffset
+          if (oSel.toString().endsWith(' ')) nEnd--
+          // Expand right
+          while (nEnd < sText.length && fIsWord(sText[nEnd])) nEnd++
+          // If nothing changed, do nothing
+          if (nEnd === oRange.endOffset) {
+            return oSel.toString().trim()
+          } else {
+            const newRange = document.createRange()
+            newRange.setStart(oNode, nStart)
+            newRange.setEnd(oNode, nEnd)
+            oSel.removeAllRanges()
+            oSel.addRange(newRange)
+            return oSel.toString().trim()
+          }
+        }
+      }
+    }
+    let sSelection = fExpandSelectionRight()
+    if (sSelection !== '') {
+      sSelection = sSelection.replace(/[-_'.:/;@+]*$/, '')
+      if (sSelection.startsWith('_'))  sSelection = sSelection.slice(1) //_DESCRIPTION
+      if (sSelection.startsWith('cpt'))  sSelection = 'concept' + sSelection.slice(3)
+      oEltTabSearchIpt.value = sSelection + ' '
+      if (sSelection.startsWith('http')) {
+        window.open(sSelection, '_blank')
+      } else {
+        fCmdQueryInput()
+      }
+    }
+  }, true)
   // command CodePoints
-  const oEltCmdCodepoints = document.createElement('li');
-  oEltCmdCodepoints.innerHTML = '<button id="idCmdBtn">Selection-Codepoints (Ctrl+0)</button>';
+  const oEltCmdCodepoints = document.createElement('li')
+  oEltCmdCodepoints.innerHTML = '<button id="idCmdBtn">Selection-Codepoints (Ctrl+0)</button>'
   function fCmdCodePoint(){
     let
       s = getSelection().toString(),
@@ -486,231 +976,6 @@ let fContainersInsert = function () {
     }
   })
   oEltMenuUl.appendChild(oEltCmdCodepoints)
-
-  // command Search
-  const oEltCmdSrch = document.createElement('li');
-  oEltCmdSrch.innerHTML = 'Search:';
-  oEltMenuUl.appendChild(oEltCmdSrch)
-  const oEltCmdSrchUl = document.createElement('ul');
-  oEltCmdSrch.appendChild(oEltCmdSrchUl)
-  // query selection and preview
-  async function fCmdQuerySelection(){
-    let sSelection = getSelection().toString().trim()
-    fCnrOntopRemove()
-    if (sSelection.startsWith('cpt'))  sSelection = 'concept' + sSelection.slice(3)
-    if (sSelection !== '')  {
-      oEltTabSearchIpt.value = sSelection + ' '
-      oEltTabSearchP.innerHTML = sTabSearchPSetText()
-      //clear suggestions
-      oEltTabSearchOl.innerHTML = ''
-      sIdxfile = 'lagRoot'
-      await fSearchSuggest()
-      await fPreviewFirstSuggestion()
-      fCnrSearchShow()
-    } else {
-      fCnrSearchShow()
-    }
-  }
-  // query input and preview
-  async function fCmdQueryInput(){
-    fCnrOntopRemove()
-    //clear suggestions
-    oEltTabSearchOl.innerHTML = ''
-    await fSearchSuggest()
-    await fPreviewFirstSuggestion()
-    fCnrSearchShow()
-  }
-  // English
-  const oEltCmdSrchEngl = document.createElement('li');
-  oEltCmdSrchEngl.innerHTML = '<button id="idCmdBtn2">English-name (F2)</button>';
-  oEltCmdSrchEngl.addEventListener('pointerdown', async function (oEvtIn) {
-    oEvtIn.preventDefault()
-    oEltTabSearchSlct.options[0].selected = true
-    if (getSelection().toString().trim() !== '') {
-      await fCmdQuerySelection()
-    } else {
-      await fCmdQueryInput()
-    }
-    oEltClicked = oEltCmdSrchEngl
-  })
-  addEventListener('keydown', async function (oEvtIn) {
-    if (oEvtIn.key === 'F2'  || event.keyCode === 113) {
-      oEvtIn.preventDefault()
-      oEltTabSearchSlct.options[0].selected = true
-      if (getSelection().toString().trim() !== '') {
-        await fCmdQuerySelection()
-      } else {
-        await fCmdQueryInput()
-      }
-    }
-  })
-  oEltCmdSrchUl.appendChild(oEltCmdSrchEngl)
-  // Sinago
-  const oEltCmdSrchSngo = document.createElement('li');
-  oEltCmdSrchSngo.innerHTML = '<button id="idCmdBtn2">Sinago-name (Shift+F2)</button>';
-  oEltCmdSrchSngo.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[1].selected = true
-    if (getSelection().toString().trim() !== '') {
-      await fCmdQuerySelection()
-    } else {
-      await fCmdQueryInput()
-    }
-    oEltClicked = oEltCmdSrchSngo
-  })
-  addEventListener('keydown', async function (oEvtIn) {
-    if (oEvtIn.shiftKey && oEvtIn.key === 'F2') {
-      oEltTabSearchSlct.options[1].selected = true
-      if (getSelection().toString().trim() !== '') {
-        await fCmdQuerySelection()
-      } else {
-        await fCmdQueryInput()
-      }
-    }
-  })
-  oEltCmdSrchUl.appendChild(oEltCmdSrchSngo)
-  // Greek
-  const oEltCmdSrchElln = document.createElement('li');
-  oEltCmdSrchElln.innerHTML = '<button id="idCmdBtn2">Greek-name (Ctrl+F2)</button>';
-  oEltCmdSrchElln.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[2].selected = true
-    if (getSelection().toString().trim() !== '') {
-      await fCmdQuerySelection()
-    } else {
-      await fCmdQueryInput()
-    }
-    oEltClicked = oEltCmdSrchElln
-  })
-  addEventListener('keydown', async function (oEvtIn) {
-    if (oEvtIn.ctrlKey && oEvtIn.key === 'F2') {
-      oEvtIn.preventDefault()
-      oEltTabSearchSlct.options[2].selected = true
-      if (getSelection().toString().trim() !== '') {
-        await fCmdQuerySelection()
-      } else {
-        await fCmdQueryInput()
-      }
-    }
-  })
-  oEltCmdSrchUl.appendChild(oEltCmdSrchElln)
-  //Chinese nnnFv:Esperanto
-  const oEltCmdSrchZhon = document.createElement('li');
-  oEltCmdSrchZhon.innerHTML = '<button id="idCmdBtn2">Chinese-name (Alt+F2)</button>';
-  oEltCmdSrchZhon.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[3].selected = true
-    if (getSelection().toString().trim() !== '') {
-      await fCmdQuerySelection()
-    } else {
-      await fCmdQueryInput()
-    }
-    oEltClicked = oEltCmdSrchZhon
-  })
-  addEventListener('keydown', async function (oEvtIn) {
-    if (oEvtIn.altKey && oEvtIn.key === 'F2') {
-      oEltTabSearchSlct.options[3].selected = true
-      if (getSelection().toString().trim() !== '') {
-        await fCmdQuerySelection()
-      } else {
-        await fCmdQueryInput()
-      }
-    }
-  })
-  oEltCmdSrchUl.appendChild(oEltCmdSrchZhon)
-  const oEltCmdSrchMisc = document.createElement('li');
-  oEltCmdSrchMisc.innerHTML = '...';
-  oEltCmdSrchUl.appendChild(oEltCmdSrchMisc)
-  // command SearchSelection
-  const oEltCmdQurySlct = document.createElement('li');
-  oEltCmdQurySlct.innerHTML = '<button id="idCmdBtn">Query-Selection (Ctrl+Q)</button>';
-  oEltCmdQurySlct.addEventListener('pointerdown', async function (oEvtIn) {
-    await fCmdQuerySelection()
-    oEltClicked = oEltCmdQurySlct
-  })
-  addEventListener('keyup', async function (oEvtIn) {
-    if (oEvtIn.ctrlKey && oEvtIn.key.toLowerCase() === 'q') {
-      oEvtIn.preventDefault()
-      fCnrOntopRemove()
-      await fCmdQuerySelection()
-    }
-  })
-  oEltMenuUl.appendChild(oEltCmdQurySlct)
-  // command dblclick
-  const oEltCmdDblclck = document.createElement('li');
-  oEltCmdDblclck.innerHTML = '(DoubleClick) Query-Selected';
-  oEltMenuUl.appendChild(oEltCmdDblclck)
-  // on content expand selection of dblclick, query it, and preview first suggestion
-  oEltCnrMainContentDiv.addEventListener('dblclick', async function (oEvtIn) {
-    // Skip inputs/textareas
-    const sTag = (oEvtIn.target.closest('input, textarea, [contenteditable="true"]') || {}).tagName;
-    if (sTag === 'INPUT' || sTag === 'TEXTAREA') return;
-
-    // Define what counts as “word” letters, numbers, symbols.
-    const rWORD = /[\p{L}\p{N}]/u; // letters & numbers
-    // :. generic-specific, // / whoel-part, - _ polyword, @ view, ' attribute,
-    const oSetSymbols = new Set(['-', '_', '\'', '.', ':', '/', ';', '@', '+']);
-
-    // sChIn: is a word char or expandable-symbol
-    function fIsWord(sChIn) {
-      if (!sChIn) return false;
-      return rWORD.test(sChIn) || oSetSymbols.has(sChIn);
-    }
-
-    // Expand selection inside a Text node
-    function fExpandSelectionRight() {
-      const oSel = window.getSelection();
-      if (!oSel || oSel.rangeCount === 0) return;
-      const oRange = oSel.getRangeAt(0);
-      const oNode = oRange.startContainer;
-      // Only handle simple cases in a single text node (typical double-click behavior).
-      if (oNode !== oRange.endContainer || oNode.nodeType !== Node.TEXT_NODE) return;
-      const sText = oNode.textContent;
-      let nStart = oRange.startOffset;
-      let nEnd   = oRange.endOffset;
-      if (oSel.toString().endsWith(' ')) nEnd--
-      // Expand right
-      while (nEnd < sText.length && fIsWord(sText[nEnd])) nEnd++;
-      // If nothing changed, do nothing
-      if (nEnd === oRange.endOffset) return oSel;
-      const newRange = document.createRange();
-      newRange.setStart(oNode, nStart);
-      newRange.setEnd(oNode, nEnd);
-      oSel.removeAllRanges();
-      oSel.addRange(newRange);
-      return oSel;
-    }
-    let sSelection = fExpandSelectionRight().toString().trim()
-    if (sSelection !== '') {
-      sSelection = sSelection.replace(/[-_'.:/;@+]*$/, '');
-      if (sSelection.startsWith('_'))  sSelection = sSelection.slice(1) //_DESCRIPTION
-      if (sSelection.startsWith('cpt'))  sSelection = 'concept' + sSelection.slice(3)
-      oEltTabSearchIpt.value = sSelection + ' '
-    }
-    if (sSelection.startsWith('http')) {
-      window.open(sSelection, '_blank')
-    } else {
-      fCmdQueryInput()
-    }
-  }, true)
-  // command WebAddress
-  const oEltCmdOpenWebAdr = document.createElement('li');
-  oEltCmdOpenWebAdr.innerHTML = '<button id="idCmdBtn">Open-Selected-Http (Shift+Q)</button>';
-  oEltCmdOpenWebAdr.addEventListener('pointerdown', function (oEvtIn) {
-    let sSelection = getSelection().toString().trim()
-    if (sSelection.startsWith('http')) {
-      window.open(sSelection, '_blank')
-    }
-    fCnrOntopRemove()
-  })
-  addEventListener('keyup', function (oEvtIn) {
-    if (oEvtIn.shiftKey && oEvtIn.key.toLowerCase() === 'q') {
-      oEvtIn.preventDefault()
-      let sSelection = getSelection().toString().trim()
-      if (sSelection.startsWith('http')) {
-        window.open(sSelection, '_blank')
-      }
-      fCnrOntopRemove()
-    }
-  })
-  oEltMenuUl.appendChild(oEltCmdOpenWebAdr)
   // command Esc
   addEventListener('keyup', function (oEvtIn) {
     if (event.key === 'Escape') {
@@ -721,13 +986,18 @@ let fContainersInsert = function () {
   // style commands
   Array.prototype.slice.call(oEltMenuUl.querySelectorAll('#idCmdBtn')).forEach(function (oEltIn) {
     oEltIn.style.cursor = 'pointer'
-    oEltIn.style.width = "222px";
-    oEltIn.style.fontSize = '14px';
+    oEltIn.style.width = "222px"
+    oEltIn.style.fontSize = '14px'
   })
   Array.prototype.slice.call(oEltMenuUl.querySelectorAll('#idCmdBtn2')).forEach(function (oEltIn) {
     oEltIn.style.cursor = 'pointer'
-    oEltIn.style.width = "196px";
-    oEltIn.style.fontSize = '12px';
+    oEltIn.style.width = "197px"
+    oEltIn.style.fontSize = '12px'
+  })
+  Array.prototype.slice.call(oEltMenuUl.querySelectorAll('#idCmdBtn3')).forEach(function (oEltIn) {
+    oEltIn.style.cursor = 'pointer'
+    oEltIn.style.width = "172px"
+    oEltIn.style.fontSize = '12px'
   })
   oEltCnrMenuDiv.appendChild(oEltMenuUl)
   oEltBody.appendChild(oEltCnrMenuDiv)
@@ -735,6 +1005,17 @@ let fContainersInsert = function () {
   Array.prototype.slice.call(document.querySelectorAll('#idMenuUl a')).forEach(function (oEltIn) {
     fEvtLink(oEltIn)
   })
+
+  /**
+   * 'purifies' selection 
+   */
+  function fSelectionModify(sSelectionIn) {
+    sSelectionIn = sSelectionIn.replace(/[-_'.:/;@+]*$/, '') // clears end
+    if (sSelectionIn.startsWith('_'))  sSelectionIn = sSelectionIn.slice(1) //_DESCRIPTION
+    if (sSelectionIn.startsWith('cpt'))  sSelectionIn = 'concept' + sSelectionIn.slice(3)
+    sSelectionIn = sSelectionIn + ' ' // for exact searching
+    return sSelectionIn
+  }
 
   // set on page-content-cnr the original-body content
   oEltCnrMainContentDiv.id = 'idCnrMainContentDiv'
@@ -1615,16 +1896,16 @@ let fContainersInsert = function () {
    */
   async function fPreviewFirstSuggestion() {
     const nStart = Date.now()
-    const nMaxWait = 700 // miliseconds max
+    const nMaxWait = 1200 // miliseconds max
     let
       oLi,
       sLoc = location.href,
       sId1, sId2,
       oDoc
     while (!oLi && (Date.now() - nStart < nMaxWait)) {
-      oLi = oEltTabSearchOl.getElementsByTagName('li')[0];
+      oLi = oEltTabSearchOl.getElementsByTagName('li')[0]
       if (!oLi) {
-        await new Promise(resolve => setTimeout(resolve, 70)); // Poll every 70ms
+        await new Promise(resolve => setTimeout(resolve, 70)) // Poll every 70ms
       }
     }
     if (oLi && oLi.children[0]) {
@@ -1930,7 +2211,7 @@ let fContainersInsert = function () {
         // on TabCntSrch focus input-element
         oEltTabSearchIpt.focus()
       }
-      // return false;
+      // return false
     })
   })
   document.getElementById('idTabCntSrchDiv').style.display = 'none'
@@ -2123,7 +2404,7 @@ let fTocTriCreate = function () {
 
   for (n = 1; n < aHdng.length; n += 1) {
     oElt = aHdng[n]
-    // special footer case;
+    // special footer case
     if (oElt.nodeName.match(/footer/i)) {
       nLvlThis = 1
       nLvlToc = 1
