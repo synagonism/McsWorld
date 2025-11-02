@@ -28,6 +28,11 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.22-4-0.2025-11-02: oEltTabSearchIpt with arrow down|up, EnglNounFormFinder',
+    'mMcsh2.js.22-3-3.2025-10-30: fSearchName',
+    'mMcsh2.js.22-3-2.2025-10-29: clean-name-search',
+    'mMcsh2.js.22-3-1.2025-10-26: TitleP, SearchIcn, fFetchSiteMenu',
+    'mMcsh2.js.22-2-1.2025-10-25: fFetchSiteMenu',
     'mMcsh2.js.22-2-0.2025-10-23: WebApps',
     'mMcsh2.js.22-1-0.2025-10-20: fixes, more menu languages',
     'mMcsh2.js.22-0-0.2025-10-20: fCmdQueryInput, fExpandSelectionRight',
@@ -165,7 +170,7 @@ let
   // next search-index
   sIdxTo,
   sPathSite,
-  sPathStmenu,
+  sPathSitemenu,
   // selector for elements with clsClickCnt
   sQrslrAClk,
   sQrslrAClkLast
@@ -268,11 +273,15 @@ let fContainersInsert = function () {
   sIdxFrom = '' // current search-index
   sIdxTo = '' // next search-index
   oEltCnrTopTitleP.setAttribute('title', 'clicking GREEN-BAR shows search-tab, clicking CONTENT shows Toc-tab')
-  oEltCnrTopSearchIcnI.setAttribute('title', 'name-search')
+  oEltCnrTopSearchIcnI.setAttribute('title', 'clean-name-search')
   oEltCnrTopSearchIcnI.setAttribute('class', 'clsFa clsFaSearch clsTopIcn clsColorWhite clsFloatRight clsPosRight')
   oEltCnrTopSearchIcnI.addEventListener('pointerdown', function (oEvtIn) {
     oEvtIn.preventDefault()
-    fCmdQuerySelection()
+    oEltTabSearchIpt.value = ''
+    oEltTabSearchOl.innerHTML = sTabSearchOl
+    oEltTabSearchP.innerHTML = sTabSearchPSetText()
+    sIdxfile = 'lagRoot'
+    fCnrSearchShow()
   })
   oEltCnrTopDiv.id = 'idCnrTopDiv'
   oEltCnrMainDiv.id = 'idCnrMainDiv'
@@ -888,7 +897,7 @@ let fContainersInsert = function () {
     // Define what counts as “word” letters, numbers, symbols.
     const rWORD = /[\p{L}\p{N}]/u // letters & numbers
     // :. generic-specific, // / whoel-part, - _ polyword, @ view, ' attribute,
-    const oSetSymbols = new Set(['-', '_', '\'', '.', ':', '/', ';', '@', '+'])
+    const oSetSymbols = new Set(['-', '_', '\'', '.', ':', '/', ';', '@', '#', '+'])
 
     // sChIn: is a word char or expandable-symbol
     function fIsWord(sChIn) {
@@ -978,12 +987,16 @@ let fContainersInsert = function () {
   })
   oEltMenuUl.appendChild(oEltCmdCodepoints)
 
-  // command WebApps
+  // command WebApps  // nnn
   const oEltCmdWebApp = document.createElement('li')
   oEltCmdWebApp.innerHTML = 'Site WebApps:'
   oEltMenuUl.appendChild(oEltCmdWebApp)
   const oEltCmdWebAppUl = document.createElement('ul')
   oEltCmdWebApp.appendChild(oEltCmdWebAppUl)
+  const oEltCmdWebAppEnff = document.createElement('li')
+  oEltCmdWebAppEnff.innerHTML = '<a class="clsPreview" href="' + sPathSite +
+    'dirMcs/dirLag/McsLag000011.last.html#idLEnglnouformfndr">EnglishNoun FormFinder</a>'
+  oEltCmdWebAppUl.appendChild(oEltCmdWebAppEnff)
   const oEltCmdWebAppGnmf = document.createElement('li')
   oEltCmdWebAppGnmf.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirLag/McsLag000020.last.html#idLEllnnounmbrfdr">GreekNoun MemberFinder</a>'
@@ -1376,9 +1389,11 @@ let fContainersInsert = function () {
           oEltClicked = aLi[n + 1].children[0]
           aLi[n + 1].children[0].classList.add('clsClicked')
           bClicked = true
+          oEltTabSearchIpt.value = aLi[n + 1].children[0].innerHTML 
           break
         } else if (oLi.children[0].className.indexOf('clsClicked') >= 0 && n + 1 === aLi.length) {
           bClicked = true
+          oEltTabSearchIpt.value = aLi[n + 1].children[0].innerHTML 
         }
       }
       if (!bClicked) {
@@ -1389,6 +1404,7 @@ let fContainersInsert = function () {
         } else {
           oEltClicked = aLi[0].children[0]
           aLi[0].children[0].classList.add('clsClicked')
+          oEltTabSearchIpt.value = aLi[0].children[0].innerHTML 
         }
       }
     } else if (oEvtIn.code === 'ArrowUp' || oEvtIn.keyCode === 38) {
@@ -1409,6 +1425,7 @@ let fContainersInsert = function () {
           oEltCnrPreviewDiv.style.display = 'none'
           oEltClicked = aLi[n - 1].children[0]
           aLi[n - 1].children[0].classList.add('clsClicked')
+          oEltTabSearchIpt.value = aLi[n - 1].children[0].innerHTML 
           break
         }
       }
@@ -2822,7 +2839,7 @@ if (location.hostname !== '') {
 
 if (sPathSite) {
   // read configMcs
-  await fetch(sPathSite + 'configMcs.json')
+  await fetch(sPathSite + 'configMcs.json') // HitpConfig
   .then(response => response.json())
   .then(oConfig => {
     if (oConfig.nCfgPageinfoWidth) {
@@ -2832,23 +2849,25 @@ if (sPathSite) {
       sCfgHomeLocal = oConfig.sCfgHomeLocal
       if (location.hostname === 'localhost') {
         sPathSite = location.origin + sCfgHomeLocal
-        sPathStmenu = sPathSite + 'fileSitestructureLocal.html'
+        sPathSitemenu = sPathSite + 'fileSitestructureLocal.html' // nnn
       } else if (location.hostname.length > 1) {
         sPathSite = location.origin + '/'
-        sPathStmenu = sPathSite + 'fileSitestructure.html'
+        sPathSitemenu = sPathSite + 'fileSitestructure.html' // nnn
       }
     }
   })
   .catch(sPathSite="error")
 
   // read site-structure
-  await fetch(sPathStmenu)
-  .then(response => response.text())
-  .then(data => sEltSitemenuUl=data)
-    /*sHtml => {
-    sEltSitemenuUl = (new DOMParser()).parseFromString(sHtml, 'text/html')
-    //sEltSitemenuUl = sEltSitemenuUl.querySelector('ul')
-  })*/
+  async function fFetchSiteMenu() {
+    try {
+      const response = await fetch(sPathSitemenu)
+      if (response.status !== 404) sEltSitemenuUl = await response.text()
+    } catch (error) {
+      sEltSitemenuUl = ''
+    }
+  }
+  fFetchSiteMenu()
 
   // read lagRoot
   await fetch(sPathSite + 'dirMcs/dirNamidx/namidx.lagRoot.json') // nnnFv
@@ -2893,7 +2912,7 @@ function fCreateOFile_Index(aIn) {
  * OUTPUT: site/dirMcs/dirNamidx/dirLagEngl/namidx.lagEngl01ei.json
  */
 function fFindNamidxfileFull(sIdxfileIn) {
-  return sPathSite + 'dirMcs/dirNamidx/dirL' + sIdxfileIn.substring(1, 7) + // nnFv and dirNamIdx
+  return sPathSite + 'dirMcs/dirNamidx/dirL' + sIdxfileIn.substring(1, 7) + // nnnFv and dirNamIdx
          '/namidx.' + sIdxfileIn + '.json'
 }
 
@@ -3015,7 +3034,7 @@ async function fFindNamidxfile(sNameIn, sLagIn, aaNamidxIdxIn) {
  * INPUT: sNameIn, sLagIn=lagElln, aaNamidxIdxIn
  * OUTPUT: promise of array of name-link-array [[name, link]]
  */
-async function fSearchname(sNameIn, sLagIn) {
+async function fSearchName(sNameIn, sLagIn) {
   let
     sFile,
     aaOut = [],
@@ -3038,7 +3057,7 @@ export {
   aaNamidxfileRoot, aaSuggestions, aVersion,
   bEdge, bFirefox,
   nCfgPageinfoWidth,
-  fContainersInsert, fEvtPreview, fTocTriCreate, fTocTriHighlightNode, fSearchname,
+  fContainersInsert, fEvtPreview, fTocTriCreate, fTocTriHighlightNode, fSearchName,
   oEltCnrPreviewDiv, sEltSitemenuUl, oTriUl,
-  sCfgHomeLocal, sPathSite, sPathStmenu
+  sCfgHomeLocal, sPathSite, sPathSitemenu
 }

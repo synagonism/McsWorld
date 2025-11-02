@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.McsTest-(McsCor000016.0-6-0.2021-12-31 draft) test-Mcs</title>
+  <title>Mcs.McsTest-(McsCor000016.0-7-0.2025-10-30 draft) test-Mcs</title>
   <meta name="keywords" content="example-Mcs, McsTest, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -35,8 +35,8 @@
   <p id="idName">name::
     <br>* McsEngl.McsTest,
     <br>* McsEngl.testMcs,
-    <br>* <span>McsEngl.dress!~verbEnglA4:dress--es-ed-ing-ed, <button type="button" id="idBtnTerm">FIND terms</button></span>
-    <br>* <span>McsEngl.react!~verbEnglA1, <button type="button" id="idBtnTerm">FIND terms</button></span>
+    <br>* <span>McsEngl.dress!~englverbA4:dress--es-ed-ing-ed, <button type="button" id="idBtnTerm">FIND terms</button></span>
+    <br>* <span>McsEngl.react!~englverbA1, <button type="button" id="idBtnTerm">FIND terms</button></span>
     <br>====== langoSinago:
     <br>* McsSngo.AAAtest!=McsTest,
     <br>====== langoChinese:
@@ -46,7 +46,7 @@
     <br>====== langoEsperanto:
     <br>* McsEspo.testo!=test,
     <br>====== langoGreek:
-    <br>* <span>McsElln.γράφω!~ρήμα, <button type="button" id="idBtnTerm">FIND terms</button></span>
+    <br>* <span>McsElln.γράφω!~verbElln, <button type="button" id="idBtnTerm">FIND terms</button></span>
     <a class="clsHide" href="#idName"></a></p>
   <p id="idOverviewdsnL">descriptionLong::
     <br>· a-long-description of Mcs.
@@ -175,7 +175,7 @@
 
     if (oEvtIn.code === 'Enter' || oEvtIn.keyCode === 13) {
       sIn = document.getElementById('idNounIpt').value
-      oMcsh.fSearchname(sIn, 'lagElln').then(json =>{
+      oMcsh.fSearchName(sIn, 'lagElln').then(json =>{
         document.getElementById('idNounDiv').innerHTML = json
       })
     }
