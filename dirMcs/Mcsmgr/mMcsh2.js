@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.22-5-0.2025-11-05: insert no keyboard chars',
     'mMcsh2.js.22-4-0.2025-11-02: oEltTabSearchIpt with arrow down|up, EnglNounFormFinder',
     'mMcsh2.js.22-3-3.2025-10-30: fSearchName',
     'mMcsh2.js.22-3-2.2025-10-29: clean-name-search',
@@ -1288,11 +1289,11 @@ let fContainersInsert = function () {
     '<input type="checkbox" id="idTabCntSrchChk">show All, not 999 (slow)'
   oEltTabSearchPPnm.id = 'idTabCntSrchPPnm'
   oEltTabSearchPPnm.innerHTML =
-    '</span><span id="idSrchpnm"> ā <span id="idSrchpnm">á </span><span id="idSrchpnm">ǎ </span><span id="idSrchpnm">à </span>' +
-    '</span><span id="idSrchpnm">ē <span id="idSrchpnm">é </span><span id="idSrchpnm">ě </span><span id="idSrchpnm">è </span>' +
-    '</span><span id="idSrchpnm">ī <span id="idSrchpnm">í </span><span id="idSrchpnm">ǐ </span><span id="idSrchpnm">ì </span>' +
-    '</span><span id="idSrchpnm">ō <span id="idSrchpnm">ó </span><span id="idSrchpnm">ǒ </span><span id="idSrchpnm">ò </span>' +
-    '</span><span id="idSrchpnm">ū <span id="idSrchpnm">ú </span><span id="idSrchpnm">ǔ </span><span id="idSrchpnm">ù </span>' +
+    '<span id="idSrchpnm"> ā </span><span id="idSrchpnm">á </span><span id="idSrchpnm">ǎ </span><span id="idSrchpnm">à </span>' +
+    '<span id="idSrchpnm">ē </span><span id="idSrchpnm">é </span><span id="idSrchpnm">ě </span><span id="idSrchpnm">è </span>' +
+    '<span id="idSrchpnm">ī </span><span id="idSrchpnm">í </span><span id="idSrchpnm">ǐ </span><span id="idSrchpnm">ì </span>' +
+    '<span id="idSrchpnm">ō </span><span id="idSrchpnm">ó </span><span id="idSrchpnm">ǒ </span><span id="idSrchpnm">ò </span>' +
+    '<span id="idSrchpnm">ū </span><span id="idSrchpnm">ú </span><span id="idSrchpnm">ǔ </span><span id="idSrchpnm">ù </span>' +
     '<span id="idSrchpnm">ç </span><span id="idSrchpnm">ğ </span><span id="idSrchpnm">ı </span><span id="idSrchpnm">ö </span><span id="idSrchpnm">ş </span><span id="idSrchpnm">ü </span>' +
     '<span id="idSrchpnm">ĉ </span><span id="idSrchpnm">ĝ </span><span id="idSrchpnm">ĥ </span><span id="idSrchpnm">ĵ </span><span id="idSrchpnm">ŝ </span><span id="idSrchpnm">ŭ </span>'
   oEltTabSearchLblChk.id = 'idTabCntSrchLblChk'
@@ -2351,6 +2352,17 @@ let fContainersInsert = function () {
       oEltTabSearchIpt.value = sSearch
       fSearchSuggest()
       fCnrSearchShow()
+    })
+  })
+  // insert no keyboard chars
+  Array.prototype.slice.call(document.querySelectorAll('#idSrchpnm')).forEach(function (oEltIn) {
+    let sSearch = oEltIn.innerHTML.trim()
+    oEltIn.style.cursor = 'pointer'
+    oEltIn.addEventListener('click', function (oEvtIn) {
+      oEvtIn.preventDefault()
+      oEltTabSearchIpt.value = oEltTabSearchIpt.value +sSearch
+      fSearchSuggest()
+      oEltTabSearchIpt.focus()
     })
   })
 
