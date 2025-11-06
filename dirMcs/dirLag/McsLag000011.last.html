@@ -23507,6 +23507,7 @@
     <br>* McsEngl.modeled!~englverbC-3:model;models;modeled|modelled;modeling|modelling;modeled|modelled,
     <br>* McsEngl.modelled!~englverbC-3:model;models;modeled|modelled;modeling|modelling;modeled|modelled,
     <br>* McsEngl.modeling!~englverbC-4:model;models;modeled|modelled;modeling|modelling;modeled|modelled,
+    <br>* McsEngl.modelling!~englverbC-4:model;models;modeled|modelled;modeling|modelling;modeled|modelled,
     <br>* McsEngl.modeled!~englverbC-5:model;models;modeled|modelled;modeling|modelling;modeled|modelled,
     <br>* McsEngl.modelled!~englverbC-5:model;models;modeled|modelled;modeling|modelling;modeled|modelled,
     <a class="clsHide" href="#idLEnglverbCA2-3"></a></p>
@@ -23518,6 +23519,7 @@
     <br>* McsEngl.signaled!~englverbC-3:signal;signals;signaled|signalled;signaling|signalling;signaled|signalled,
     <br>* McsEngl.signalled!~englverbC-3:signal;signals;signaled|signalled;signaling|signalling;signaled|signalled,
     <br>* McsEngl.signaling!~englverbC-4:signal;signals;signaled|signalled;signaling|signalling;signaled|signalled,
+    <br>* McsEngl.signalling!~englverbC-4:signal;signals;signaled|signalled;signaling|signalling;signaled|signalled,
     <br>* McsEngl.signaled!~englverbC-5:signal;signals;signaled|signalled;signaling|signalling;signaled|signalled,
     <br>* McsEngl.signalled!~englverbC-5:signal;signals;signaled|signalled;signaling|signalling;signaled|signalled,
     <a class="clsHide" href="#idLEnglverbCA2-4"></a></p>
@@ -23529,6 +23531,7 @@
     <br>* McsEngl.traveled!~englverbC-3:travel;travels;traveled|travelled;traveling|travelling;traveled|travelled,
     <br>* McsEngl.travelled!~englverbC-3:travel;travels;traveled|travelled;traveling|travelling;traveled|travelled,
     <br>* McsEngl.traveling!~englverbC-4:travel;travels;traveled|travelled;traveling|travelling;traveled|travelled,
+    <br>* McsEngl.travelling!~englverbC-4:travel;travels;traveled|travelled;traveling|travelling;traveled|travelled,
     <br>* McsEngl.traveled!~englverbC-5:travel;travels;traveled|travelled;traveling|travelling;traveled|travelled,
     <br>* McsEngl.travelled!~englverbC-5:travel;travels;traveled|travelled;traveling|travelling;traveled|travelled,
     <a class="clsHide" href="#idLEnglverbCA2-5"></a></p>
@@ -23540,7 +23543,6 @@
     <br>* McsEngl.transferping!~englverbA2-4:transfer;transfers;transferred;transferring;transferred,
     <br>* McsEngl.transferped!~englverbA2-5:transfer;transfers;transferred;transferring;transferred,
     <a class="clsHide" href="#idLEnglverbCA2-6"></a></p>
-    <br>* transfer → transferring, transferred
   </section>
   </section>
 
@@ -28446,6 +28448,22 @@
           '<br>* ' + aMethods[n]
       }
       document.getElementById('idNounP').innerHTML = sMethods
+    })
+  })
+
+  // find verb forms
+  document.getElementById('idVerbIpt').addEventListener('input', function(oEvtIn) {
+    let
+      sIn,
+      sMethods = 'forms and methods:',
+      n
+    sIn = document.getElementById('idVerbIpt').value
+    omLagEngl.fFindVerbForms(sIn).then(aMethods => {
+      for (n = 0; n < aMethods.length; n++) {
+        sMethods = sMethods +
+          '<br>* ' + aMethods[n]
+      }
+      document.getElementById('idVerbP').innerHTML = sMethods
     })
   })
 

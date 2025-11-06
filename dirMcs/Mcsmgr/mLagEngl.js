@@ -31,6 +31,7 @@ import * as omMcsh from './mMcsh2.js'
 const
   // contains the-versions of mLagEngl.js
   aVersion = [
+    'mLagEngl.js.2-0-0.2025-11-06: fFindVerbForms',
     'mLagEngl.js.1-0-0.2025-11-02: fFindNounForms',
     'mLagEngl.js.0-1-0.2021-11-22: creation'
   ],
@@ -139,6 +140,7 @@ async function fFindNounForms (sFormIn) {
     n,
     sMethod = ''
 
+  sFormIn = sFormIn.toLowerCase()
   // search for existing
   const aOut = await fFindKnownNounForms(sFormIn)
 
@@ -220,6 +222,7 @@ async function fFindVerbForms (sFormIn) {
     sForm = '',
     sMethod = ''
 
+  sFormIn = sFormIn.toLowerCase()
   // search for existing
   const aOut = await fFindKnownVerbForms(sFormIn)
 
@@ -317,19 +320,22 @@ async function fFindVerbForms (sFormIn) {
              sFormIn.endsWith('zzing') 
             ) {
       sForm = sFormIn.slice(0, -5)
-      sChar = sFormIn(sFormIn.length - 5)
+      sChar = sFormIn[sFormIn.length - 5]
       // if first part is one syllable 
       if (/^[bcdfghjklmnpqrstvwxyz]+[aeiou]$/i.test(sForm)) {
-      // englverbA2.stop;stops;stopped;stopping;stopped,
-      aFormsOut.push('englverbA2.' +sForm+sChar+';' +sForm+sChar+'s;' +sForm+sChar+sChar+'ed;'
-        +sForm+sChar+sChar+'ing;' +sForm+sChar+sChar+'ed')
-      return aFormsOut
+        // englverbA2.stop;stops;stopped;stopping;stopped,
+        aFormsOut.push('englverbA2.' +sForm+sChar+';' +sForm+sChar+'s;' +sForm+sChar+sChar+'ed;'
+          +sForm+sChar+sChar+'ing;' +sForm+sChar+sChar+'ed')
+        return aFormsOut
       }
       else if (/[bcdfghjklmnpqrstvwxyz]+[aeiou]$/i.test(sForm)) {
-      // englverbA2.forbid;forbids;forbidded;forbidding;forbidded,
-      aFormsOut.push('englverbA2.' +sForm+sChar+';' +sForm+sChar+'s;' +sForm+sChar+sChar+'ed;'
-        +sForm+sChar+sChar+'ing;' +sForm+sChar+sChar+'ed: IF stress on last syllable')
-      return aFormsOut
+        // englverbA2.forbid;forbids;forbidded;forbidding;forbidded,
+        aFormsOut.push('englverbA2.' +sForm+sChar+';' +sForm+sChar+'s;' +sForm+sChar+sChar+'ed;'
+          +sForm+sChar+sChar+'ing;' +sForm+sChar+sChar+'ed: IF stress on last syllable')
+        // englverbA1.open;opens;opened;opening;opened,
+        aFormsOut.push('englverbA1.' +sForm+sChar+';' +sForm+sChar+'s;' +sForm+sChar+'ed;'
+          +sForm+sChar+'ing;' +sForm+sChar+'ed: IF stress NOT on last syllable')
+        return aFormsOut
       }
     }
 
@@ -421,8 +427,8 @@ async function fFindVerbForms (sFormIn) {
       return aFormsOut
     }
     else if (sFormIn.endsWith('ied')) {
-      // englverbB2.y;ies;ied;ying;ied: study;studies;stud-ied;studying;studied,
       sForm = sFormIn.slice(0, -3)
+      // englverbB2.y;ies;ied;ying;ied: study;studies;stud-ied;studying;studied,
       aFormsOut.push('englverbB2.' +sForm+'y;' +sForm+'ies;' +sForm+'ied;' +sForm+'ying;' +sForm+'ied')
       return aFormsOut
     }
@@ -447,7 +453,35 @@ async function fFindVerbForms (sFormIn) {
     else if (/[bcdfghjklmnpqrstvyz]{2}$/i.test(sFormIn)) {
       // ends in two conconants no wxy
       // englverbA1.∅;s;ed;ing;ed: climb;climbs;climbed;climb-ing;climbed,
-      aFormsOut.push('englverbA1.' +sFormIn+';' +sFormIn+'s;' +sFormIn+'ed;' +sFormIn+'ing;' +sFormIn+'ed:  ends in 2 consonants')
+      aFormsOut.push('englverbA1.' +sFormIn+';' +sFormIn+'s;' +sFormIn+'ed;'
+        +sFormIn+'ing;' +sFormIn+'ed:  ends in 2 consonants')
+      return aFormsOut
+    }
+    else if (/[aeiou][bcdfghjklmnpqrstvyz]$/i.test(sFormIn)) {
+      // ends in VC
+      const sForm2 = sFormIn.slice(0, -2)
+      sForm = sFormIn.slice(0, -1)
+      sChar = sFormIn[sFormIn.length-1]
+      // if it is one syllable 
+      if (/^[bcdfghjklmnpqrstvwxyz]+$/i.test(sForm2)) {
+        // englverbA2.stop;stops;stopped;stopping;stopped,
+        aFormsOut.push('englverbA2.' +sForm+sChar+';' +sForm+sChar+'s;' +sForm+sChar+sChar+'ed;'
+          +sForm+sChar+sChar+'ing;' +sForm+sChar+sChar+'ed')
+      }
+      else if (/^[bcdfghjklmnpqrstvwxyz]+[aeiou]$/i.test(sForm2)) {
+        // englverbA1.keep;keeps;keeped;keeping;keeped,
+        aFormsOut.push('englverbA1.' +sFormIn+';' +sFormIn+'s;' +sFormIn+'ed;'
+          +sFormIn+'ing;' +sFormIn+'ed:  long vowel')
+      }
+      else {
+        // englverbA2.forbid;forbids;forbidded;forbidding;forbidded,
+        aFormsOut.push('englverbA2.' +sForm+sChar+';' +sForm+sChar+'s;' +sForm+sChar+sChar+'ed;'
+          +sForm+sChar+sChar+'ing;' +sForm+sChar+sChar+'ed: IF stress on last syllable')
+        // englverbA1.open;opens;opened;opening;opened,
+        aFormsOut.push('englverbA1.' +sForm+sChar+';' +sForm+sChar+'s;' +sForm+sChar+'ed;'
+          +sForm+sChar+'ing;' +sForm+sChar+'ed: IF stress NOT on last syllable')
+      }
+      return aFormsOut
     }
     else if (sFormIn.endsWith('ed')) {
       sForm = sFormIn.slice(0, -2)
@@ -469,25 +503,44 @@ async function fFindVerbForms (sFormIn) {
     }
 
     // 1 last char
+    // -w|x|y: A1,
+    // -e,
+    // -s,
     else if (sFormIn.endsWith('w')) {
-      // englverbA1.sho-w;shows;showd;liking;showd,
+      // englverbA1.sho-w;shows;showed;showing;showed,
       aFormsOut.push('englverbA1.' +sFormIn+';' +sFormIn+'s;' +sFormIn+'ed;' +sFormIn+'ing;' +sFormIn+'ed')
+      return aFormsOut
+    }
+    else if (sFormIn.endsWith('x')) {
+      // englverbA3.box;boxes;boxed;boxing;boxed,
+      aFormsOut.push('englverbA3.' +sFormIn+';' +sFormIn+'es;' +sFormIn+'ed;' +sFormIn+'ing;' +sFormIn+'ed')
+      return aFormsOut
+    }
+    else if (sFormIn.endsWith('y')) {
+      sForm = sFormIn.slice(0, -1)
+      // if vowel+y => englverbA1
+      if (/[aeiou]$/i.test(sForm)) {
+        // englverbA1.play;plays;played;playing;played,
+        aFormsOut.push('englverbA1.' +sFormIn+';' +sFormIn+'s;' +sFormIn+'ed;' +sFormIn+'ing;' +sFormIn+'ed')
+      } else {
+        // englverbB2.study;studies;studied;studying;studied,
+        aFormsOut.push('englverbB2.' +sForm+'y;' +sForm+'ies;' +sForm+'ied;' +sForm+'ying;' +sForm+'ied')
+     }
       return aFormsOut
     }
     else if (sFormIn.endsWith('e')) {
       sForm = sFormIn.slice(0, -1)
-      // englverbB1.e;es;ed;ing;ed: lik-e;likes;liked;liking;liked,
+      // englverbB1.lik-e;likes;liked;liking;liked,
       aFormsOut.push('englverbA1.' +sForm+'e;' +sForm+'es;' +sForm+'ed;' +sForm+'ing;' +sForm+'ed')
       return aFormsOut
     }
-
-    // englverbA1-∅;s              car/cars
     else if (sFormIn.endsWith('s')) {
-      aFormsOut.push('englverbA1.' + sFormIn.slice(0, -1) + ';' + sFormIn)
-      aFormsOut.push('englverbA2.' + sFormIn + ';' + sFormIn + 'es')
+      sForm = sFormIn.slice(0, -1)
+      aFormsOut.push('englverbA1.' +sForm+';' +sForm+'s;' +sForm+'ed;' +sForm+'ing;' +sForm+'ed')
       return aFormsOut
-    } else if (/[a-zA-Z]$/.test(sFormIn)) {
-      aFormsOut.push('englverbA1.' + sFormIn + ';' + sFormIn + 's')
+    }
+    else if (/[a-zA-Z]$/.test(sFormIn)) {
+      aFormsOut.push('englverbA1.' +sFormIn+';' +sFormIn+'s;' +sFormIn+'ed;' +sFormIn+'ing;' +sFormIn+'ed')
       return aFormsOut
     }
   }
@@ -512,7 +565,9 @@ function fIsConsonantExceptY(sCharIn) {
 
 export {
   fFindKnownNounForms,
+  fFindKnownVerbForms,
   fFindNounForms,
+  fFindVerbForms,
   fIsConsonantExceptY,
   fIsIrregularNoun,
   fIsIrregularVerb

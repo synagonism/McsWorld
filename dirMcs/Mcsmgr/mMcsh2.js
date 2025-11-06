@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.22-6-0.2025-11-06: EnglVerbFormFinder',
     'mMcsh2.js.22-5-0.2025-11-05: insert no keyboard chars',
     'mMcsh2.js.22-4-0.2025-11-02: oEltTabSearchIpt with arrow down|up, EnglNounFormFinder',
     'mMcsh2.js.22-3-3.2025-10-30: fSearchName',
@@ -998,6 +999,10 @@ let fContainersInsert = function () {
   oEltCmdWebAppEnff.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirLag/McsLag000011.last.html#idLEnglnouformfndr">EnglishNoun FormFinder</a>'
   oEltCmdWebAppUl.appendChild(oEltCmdWebAppEnff)
+  const oEltCmdWebAppEvff = document.createElement('li')
+  oEltCmdWebAppEvff.innerHTML = '<a class="clsPreview" href="' + sPathSite +
+    'dirMcs/dirLag/McsLag000011.last.html#idLEnglverbfmfd">EnglishVerb FormFinder</a>'
+  oEltCmdWebAppUl.appendChild(oEltCmdWebAppEvff)
   const oEltCmdWebAppGnmf = document.createElement('li')
   oEltCmdWebAppGnmf.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirLag/McsLag000020.last.html#idLEllnnounmbrfdr">GreekNoun MemberFinder</a>'
