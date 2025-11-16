@@ -68,12 +68,12 @@ function fZhonwordFindPhonema (sWordIn) {
   sOut = sOut.replaceAll('ē', 'éé')
   sOut = sOut.replaceAll('é', 'eé')
   sOut = sOut.replaceAll('ě', 'èé')
-  sOut = sOut.replaceAll('è', 'èe')
+  sOut = sOut.replaceAll('è', 'eè')
   
   sOut = sOut.replaceAll('ī', 'íí')
   sOut = sOut.replaceAll('í', 'ií')
   sOut = sOut.replaceAll('ǐ', 'ìí')
-  sOut = sOut.replaceAll('ì', 'ìi')
+  sOut = sOut.replaceAll('ì', 'iì')
 
   sOut = sOut.replaceAll('ō', 'óó')
   

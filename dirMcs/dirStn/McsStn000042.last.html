@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.sectorEdu!=education-sector
-    (McsStn000042.0-11-0.2025-10-24 draft)</title>
+    (McsStn000042.0-12-0.2025-11-06 draft)</title>
   <meta name="keywords" content="education-sector, sectorEdu, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -293,14 +293,33 @@
   <p id="idSctrEduogznstdtnam">name::
     <br>* McsEngl.ogznEdu'student,
     <br>* McsEngl.student,
+    <br>* McsEngl.student!~englnounA1-1:student;students,
+    <br>* McsEngl.students!~englnounA1-2:student;students,
     <br>====== langoChinese:
     <br>* McsEngl.xuéshēng-学生!=student,
     <br>* McsZhon.xuéshēng-学生!=student,
     <br>* McsZhon.学生-xuéshēng!=student,
+    <br>* McsZhon.学生-xuésheng!~zhonnoun-1:学生-xuésheng;学生们-xuéshengmen!=student,
+    <br>* McsZhon.学生们-xuéshengmen!~zhonnoun-2:学生-xuésheng;学生们-xuéshengmen!=student,
     <br>====== langoGreek:
     <br>* McsElln.μαθητής!ο!=student,
     <br>* McsElln.μαθήτρια!η!=student,
     <a class="clsHide" href="#idSctrEduogznstdtnam"></a></p>
+
+  <section id="idSctrEduogznstdtcsmt">
+  <h3 id="idSctrEduogznstdtcsmtH3">classmate of student
+    <a class="clsHide" href="#idSctrEduogznstdtcsmtH2"></a></h3>
+  <p id="idSctrEduogznstdtcsmtdsn">description::
+    <br>× Mcsh-creation: {2025-11-06},
+    <br>"an acquaintance that you go to school with."
+    <a class="clsHide" href="#idSctrEduogznstdtcsmtdsn"></a></p>
+  <p id="idSctrEduogznstdtcsmtnam">name::
+    <br>* McsEngl.classmate,
+    <br>* McsEngl.classmate!~englnounA1-1:classmate;classmates,
+    <br>* McsEngl.classmates!~englnounA1-2:classmate;classmates,
+    <br>* McsEngl.student'classmate,
+    <a class="clsHide" href="#idSctrEduogznstdtcsmtnam"></a></p>
+  </section>
 
   <section id="idSctrEduogznstdtIntl">
   <h3 id="idSctrEduogznstdtIntlH3">student.international
@@ -357,6 +376,8 @@
   <p id="idSctrEduogzntchrnam">name::
     <br>* McsEngl.ogznEdu'teacher!⇒wrkrTeacher,
     <br>* McsEngl.teacher!⇒wrkrTeacher,
+    <br>* McsEngl.teacher!~englnounA1-1:teacher;teachers,
+    <br>* McsEngl.teachers!~englnounA1-2:teacher;teachers,
     <br>* McsEngl.wrkrTeacher,
     <br>* McsEngl.wrkr.016-teacher!⇒wrkrTeacher,
     <br>* McsEngl.wrkr.teacher!⇒wrkrTeacher,
@@ -370,6 +391,8 @@
     <br>* McsEngl.lǎoshī-老师!=wrkrTeacher,
     <br>* McsZhon.lǎoshī-老师!=wrkrTeacher,
     <br>* McsZhon.老师-lǎoshī!=wrkrTeacher,
+    <br>* McsZhon.老师-lǎoshī!~zhonnoun-1:老师-lǎoshī;老师们-lǎoshīmen!=wrkrTeacher,
+    <br>* McsZhon.老师们-lǎoshīmen!~zhonnoun-2:老师-lǎoshī;老师们-lǎoshīmen!=wrkrTeacher,
     <br>====== langoGreek:
     <br>* McsElln.δάσκαλος!ο!=wrkrTeacher,
     <br>* McsElln.δασκάλα!η!=wrkrTeacher,

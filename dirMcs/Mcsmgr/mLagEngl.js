@@ -31,6 +31,7 @@ import * as omMcsh from './mMcsh2.js'
 const
   // contains the-versions of mLagEngl.js
   aVersion = [
+    'mLagEngl.js.2-1-0.2025-11-07: fFindVerbForms-ing',
     'mLagEngl.js.2-0-0.2025-11-06: fFindVerbForms',
     'mLagEngl.js.1-0-0.2025-11-02: fFindNounForms',
     'mLagEngl.js.0-1-0.2021-11-22: creation'
@@ -149,7 +150,9 @@ async function fFindNounForms (sFormIn) {
     // englnounB
     // englnounC
     aFormsOut.push('SITE EXISTING FORMS:')
-    aFormsOut.push(aOut)
+    for (n = 0; n < aOut.length; n++) {
+      aFormsOut.push(aOut[n])
+    }
     return aFormsOut
   } else {
 
@@ -216,6 +219,7 @@ async function fFindNounForms (sFormIn) {
  */
 async function fFindVerbForms (sFormIn) {
   let
+    aForms = [],
     aFormsOut = [],
     n,
     sChar,
@@ -231,7 +235,9 @@ async function fFindVerbForms (sFormIn) {
     // englverbB
     // englverbC
     aFormsOut.push('SITE EXISTING FORMS:')
-    aFormsOut.push(aOut)
+    for (n = 0; n < aOut.length; n++) {
+      aFormsOut.push(aOut[n])
+    }
     return aFormsOut
   } else {
 
@@ -440,21 +446,27 @@ async function fFindVerbForms (sFormIn) {
     }
     else if (sFormIn.endsWith('ing')) {
       sForm = sFormIn.slice(0, -3)
-      // englverbA1.∅;s;ed;ing;ed: climb;climbs;climbed;climb-ing;climbed,
-      aFormsOut.push('englverbA1.' +sForm+';' +sForm+'s;' +sForm+'ed;' +sForm+'ing;' +sForm+'ed')
-      // englverbA3.∅;es;ed;ing;ed: miss;misses;missed;miss-ing;missed,
-      aFormsOut.push('englverbA3.' +sForm+';' +sForm+'es;' +sForm+'ed;' +sForm+'ing;' +sForm+'ed')
+      aForms = await fFindVerbForms(sForm)
+      aForms.shift() // POSSIBLE FORMS remove
       // englverbB1.e;es;ed;ing;ed: like;likes;liked;lik-ing;liked,
       aFormsOut.push('englverbB2.' +sForm+'e;' +sForm+'es;' +sForm+'ed;' +sForm+'ing;' +sForm+'ed')
+      for (n = 0; n < aForms.length; n++) {
+        aFormsOut.push(aForms[n])
+      }
       return aFormsOut
     }
 
     // 2 last chars
-    else if (/[bcdfghjklmnpqrstvyz]{2}$/i.test(sFormIn)) {
+    else if (/[bcdfghjklmnpqrtvz]{2}$/i.test(sFormIn)) {
       // ends in two conconants no wxy
       // englverbA1.∅;s;ed;ing;ed: climb;climbs;climbed;climb-ing;climbed,
       aFormsOut.push('englverbA1.' +sFormIn+';' +sFormIn+'s;' +sFormIn+'ed;'
         +sFormIn+'ing;' +sFormIn+'ed:  ends in 2 consonants')
+      return aFormsOut
+    }
+    else if (sFormIn.endsWith('ss')) {
+      // englverbA3.∅;es;ed;ing;ed: miss;misses;miss-ed;missing;missed,
+      aFormsOut.push('englverbA3.' +sFormIn+';' +sFormIn+'es;' +sFormIn+'ed;' +sFormIn+'ing;' +sFormIn+'ed')
       return aFormsOut
     }
     else if (/[aeiou][bcdfghjklmnpqrstvyz]$/i.test(sFormIn)) {
@@ -468,7 +480,7 @@ async function fFindVerbForms (sFormIn) {
         aFormsOut.push('englverbA2.' +sForm+sChar+';' +sForm+sChar+'s;' +sForm+sChar+sChar+'ed;'
           +sForm+sChar+sChar+'ing;' +sForm+sChar+sChar+'ed')
       }
-      else if (/^[bcdfghjklmnpqrstvwxyz]+[aeiou]$/i.test(sForm2)) {
+      else if (/[bcdfghjklmnpqrstvwxyz]+[aeiou]$/i.test(sForm2)) {
         // englverbA1.keep;keeps;keeped;keeping;keeped,
         aFormsOut.push('englverbA1.' +sFormIn+';' +sFormIn+'s;' +sFormIn+'ed;'
           +sFormIn+'ing;' +sFormIn+'ed:  long vowel')

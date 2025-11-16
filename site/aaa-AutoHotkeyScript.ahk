@@ -39,6 +39,8 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; CUSTOM and NUMBER NOTATION
 
 :::->::⭢
+:::dh::δ
+:::th::θ
 :::lrr::⟨
 :::lrl::⟩
 

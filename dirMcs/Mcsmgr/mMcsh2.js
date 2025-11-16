@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.22-6-1.2025-11-08: δ,θ',
     'mMcsh2.js.22-6-0.2025-11-06: EnglVerbFormFinder',
     'mMcsh2.js.22-5-0.2025-11-05: insert no keyboard chars',
     'mMcsh2.js.22-4-0.2025-11-02: oEltTabSearchIpt with arrow down|up, EnglNounFormFinder',
@@ -1300,7 +1301,8 @@ let fContainersInsert = function () {
     '<span id="idSrchpnm">ō </span><span id="idSrchpnm">ó </span><span id="idSrchpnm">ǒ </span><span id="idSrchpnm">ò </span>' +
     '<span id="idSrchpnm">ū </span><span id="idSrchpnm">ú </span><span id="idSrchpnm">ǔ </span><span id="idSrchpnm">ù </span>' +
     '<span id="idSrchpnm">ç </span><span id="idSrchpnm">ğ </span><span id="idSrchpnm">ı </span><span id="idSrchpnm">ö </span><span id="idSrchpnm">ş </span><span id="idSrchpnm">ü </span>' +
-    '<span id="idSrchpnm">ĉ </span><span id="idSrchpnm">ĝ </span><span id="idSrchpnm">ĥ </span><span id="idSrchpnm">ĵ </span><span id="idSrchpnm">ŝ </span><span id="idSrchpnm">ŭ </span>'
+    '<span id="idSrchpnm">ĉ </span><span id="idSrchpnm">ĝ </span><span id="idSrchpnm">ĥ </span><span id="idSrchpnm">ĵ </span><span id="idSrchpnm">ŝ </span><span id="idSrchpnm">ŭ </span>' +
+    '<span id="idSrchpnm">δ </span><span id="idSrchpnm">θ </span>'
   oEltTabSearchLblChk.id = 'idTabCntSrchLblChk'
   oEltTabSearchIpt.id = 'idTabCntSrchIpt'
 
