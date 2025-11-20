@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.techAI!=artificial-intelligence
-    (McsTchInf000036.0-38-0.2025-11-15 draft)</title>
+    (McsTchInf000036.0-39-0.2025-11-19 draft)</title>
   <meta name="keywords" content="artificial-intelligence, techAI, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -2196,8 +2196,73 @@
     <br>* McsEngl.speech-synthesis!⇒techSpsn,
     <a class="clsHide" href="#idTchNlp004nam"></a></p>
 
+  <section id="idTchNlp004Espkng">
+  <h3 id="idTchNlp004EspkngH3">techSpsn.eSpeak-NG
+    <a class="clsHide" href="#idTchNlp004EspkngH2"></a></h3>
+  <p id="idTchNlp004Espkngdsn">description::
+    <br>× Mcsh-creation: {2025-11-19},
+    <br>"The eSpeak NG is a compact open source software text-to-speech synthesizer for Linux, Windows, Android and other operating systems. It supports more than 100 languages and accents. It is based on the eSpeak engine created by Jonathan Duddington.
+    <br>eSpeak NG uses a "formant synthesis" method. This allows many languages to be provided in a small size. The speech is clear, and can be used at high speeds, but is not as natural or smooth as larger synthesizers which are based on human speech recordings. It also supports Klatt formant synthesis, and the ability to use MBROLA as backend speech synthesizer."
+    <br>[{2025-11-19 retrieved} https://github.com/espeak-ng/espeak-ng/tree/master]
+    <a class="clsHide" href="#idTchNlp004Espkngdsn"></a></p>
+  <p id="idTchNlp004Espkngnam">name::
+    <br>* McsEngl.eSpeak-NG!⇒espkng,
+    <br>* McsEngl.espeak-ng!⇒espkng,
+    <br>* McsEngl.espkng!=eSpeak-NG,
+    <br>* McsEngl.techSpsn.eSpeak-NG!⇒espkng,
+    <a class="clsHide" href="#idTchNlp004Espkngnam"></a></p>
+
+  <section id="idTchNlp004Espkngbild">
+  <h4 id="idTchNlp004EspkngbildH4">build of espkng
+    <a class="clsHide" href="#idTchNlp004EspkngbildH2"></a></h4>
+  <p id="idTchNlp004Espkngbilddsn">description::
+    <br>× Mcsh-creation: {2025-11-19},
+    <br>
+    <br>* {2025-11-19} on wsl:
+    <br>sudo apt update
+    <br>
+    <br>sudo apt install build-essential autoconf automake libtool \
+    <br>     pkg-config libpcaudio-dev libsonic-dev
+    <br>
+    <br># Clone the repository
+    <br>git clone https://github.com/espeak-ng/espeak-ng.git
+    <br>cd espeak-ng
+    <br>
+    <br># Generate configure script (if needed)
+    <br>./autogen.sh
+    <br>
+    <br># Configure the build
+    <br>./configure --prefix=/usr/local
+    <br>
+    <br># Compile
+    <br>make -j$(nproc)
+    <br>
+    <br># Optional: Run tests
+    <br>make check
+    <br>
+    <br># Install (may need sudo)
+    <br>sudo make install
+    <br>
+    <br># Update library cache
+    <br>sudo ldconfig
+    <br>
+    <br># Check version
+    <br>espeak-ng --version
+    <br>
+    <br># Test speech synthesis
+    <br>espeak-ng "Hello, eSpeak NG is successfully built"
+    <br>
+    <br># Test another language
+    <br>espeak-ng -v sngo "Sinago lago"
+    <a class="clsHide" href="#idTchNlp004Espkngbilddsn"></a></p>
+  <p id="idTchNlp004Espkngbildnam">name::
+    <br>* McsEngl.espkng'build,
+    <a class="clsHide" href="#idTchNlp004Espkngbildnam"></a></p>
+  </section>
+  </section>
+
   <section id="idTchNlp004Espk">
-  <h3 id="idTchNlp004EspkH3">eSpeak of techSpsn
+  <h3 id="idTchNlp004EspkH3">techSpsn.eSpeak
     <a class="clsHide" href="#idTchNlp004EspkH2"></a></h3>
   <p id="idTchNlp004Espkdsn">description::
     <br>× Mcsh-creation: {2025-11-13},
@@ -2320,7 +2385,7 @@
   </section>
 
   <section id="idTchNlp004Skjs">
-  <h3 id="idTchNlp004SkjsH3">speak.js of techSpsn
+  <h3 id="idTchNlp004SkjsH3">techSpsn.speak.js
     <a class="clsHide" href="#idTchNlp004SkjsH2"></a></h3>
   <p id="idTchNlp004Skjsdsn">description::
     <br>× Mcsh-creation: {2025-11-13},
@@ -2335,7 +2400,7 @@
   </section>
 
   <section id="idTchNlp004Mskjs">
-  <h3 id="idTchNlp004MskjsH3">meSpeak.js of techSpsn
+  <h3 id="idTchNlp004MskjsH3">techSpsn.meSpeak.js
     <a class="clsHide" href="#idTchNlp004MskjsH2"></a></h3>
   <p id="idTchNlp004Mskjsdsn">description::
     <br>× Mcsh-creation: {2025-11-13},
@@ -2346,13 +2411,13 @@
     <br>[{2025-11-13 retrieved} https://www.masswerk.at/mespeak/]
     <a class="clsHide" href="#idTchNlp004Mskjsdsn"></a></p>
   <p id="idTchNlp004Mskjsnam">name::
-    <br>* McsEngl.meSpeak.js,
-    <br>* McsEngl.meSpeakjs,
-    <br>* McsEngl.techSpsn.meSpeak.js,
+    <br>* McsEngl.meSpeak.js!⇒mespkjs,
+    <br>* McsEngl.mespkjs!=meSpeak.js,
+    <br>* McsEngl.techSpsn.meSpeak.js!⇒mespkjs,
     <a class="clsHide" href="#idTchNlp004Mskjsnam"></a></p>
 
   <section id="idTchNlp004Mskjsadlg">
-  <h4 id="idTchNlp004MskjsadlgH4">add-language of meSpeakjs
+  <h4 id="idTchNlp004MskjsadlgH4">add-language of mespkjs
     <a class="clsHide" href="#idTchNlp004MskjsadlgH2"></a></h4>
   <p id="idTchNlp004Mskjsadlgdsn">description::
     <br>× Mcsh-creation: {2025-11-13},
@@ -2425,7 +2490,7 @@
     <br>[{2025-11-13 retrieved} https://x.com/i/grok?conversation=1988860311424713162]
     <a class="clsHide" href="#idTchNlp004Mskjsadlgdsn"></a></p>
   <p id="idTchNlp004Mskjsadlgnam">name::
-    <br>* McsEngl.meSpeakjs'add-language,
+    <br>* McsEngl.mespkjs'add-language,
     <a class="clsHide" href="#idTchNlp004Mskjsadlgnam"></a></p>
   </section>
   </section>

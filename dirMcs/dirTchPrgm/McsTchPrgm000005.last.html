@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.osWin!=Microsoft-Windows--os
-    (McsTchPrgm000005.0-6-0.2025-06-11 draft)</title>
+    (McsTchPrgm000005.0-8-0.2025-11-19 draft)</title>
   <meta name="keywords" content="Microsoft-Windows--operating-system, osWin, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -92,6 +92,128 @@
   <p id="idWinoskbdnam">name::
     <br>* McsEngl.osWin'keyboard,
     <a class="clsHide" href="#idWinoskbdnam"></a></p>
+  </section>
+</section>
+
+<section id="idWinoswsl">
+  <h1 id="idWinoswslH1">wsl of osWin
+    <a class="clsHide" href="#idWinoswslH1"></a></h1>
+  <p id="idWinoswsldsn">description::
+    <br>× Mcsh-creation: {2025-11-18},
+    <br>">wsl overview:
+    <br>"Here’s a clear **overview of Windows Subsystem for Linux (WSL)**:
+    <br>---
+    <br>## ⭐ What is WSL?
+    <br>**WSL (Windows Subsystem for Linux)** is a compatibility layer in Windows that lets you run a **real Linux environment** directly on Windows—*without* needing a virtual machine or dual-boot setup.
+    <br>It provides:
+    <br>* A full Linux user space (Ubuntu, Debian, Fedora, etc.)
+    <br>* The ability to run Linux command-line tools, applications, and development workflows natively on Windows.
+    <br>---
+    <br>## 🧱 WSL vs WSL2 (Key Differences)
+    <br>### **WSL 1**
+    <br>* Translates Linux system calls to Windows kernel calls.
+    <br>* Faster file performance on the Windows filesystem.
+    <br>* Limited compatibility with some Linux applications.
+    <br>### **WSL 2**
+    <br>* Uses a lightweight **real Linux kernel** via a managed virtual machine.
+    <br>* Much higher compatibility (can run Docker, systemd, etc.)
+    <br>* Better performance for Linux-native workloads.
+    <br>* Supports GUI apps (WSLg) on Windows 11.
+    <br>➡️ **WSL2 is the recommended version for development.**
+    <br>---
+    <br>## 🔧 What You Can Do with WSL
+    <br>* Run Linux CLI tools (bash, ssh, grep, sed, awk, etc.)
+    <br>* Use package managers (apt, yum, pacman)
+    <br>* Run Docker Linux containers (using Docker Desktop WSL backend)
+    <br>* Develop with Linux-native languages and tools:
+    <br>  * Node.js, Go, Python, Rust, Java
+    <br>  * Git workflows
+    <br>  * Build scripts, CI tools, etc.
+    <br>* Run Linux GUI apps (e.g., VSCode, gedit) on Windows 11.
+    <br>---
+    <br>## 📦 Installing and Managing WSL
+    <br>### **Install WSL (Windows 10+):**
+    <br>```sh
+    <br>wsl --install
+    <br>```
+    <br>### **Choose a distribution:**
+    <br>```sh
+    <br>wsl --list --online
+    <br>wsl --install -d Ubuntu
+    <br>```
+    <br>### **Check version:**
+    <br>```sh
+    <br>wsl -l -v
+    <br>```
+    <br>### **Set WSL 2 as default:**
+    <br>```sh
+    <br>wsl --set-default-version 2
+    <br>```
+    <br>---
+    <br>## 🗂 Filesystem Layout
+    <br>* Windows files visible to Linux at:
+    <br>  ```
+    <br>  /mnt/c
+    <br>  /mnt/d
+    <br>  ```
+    <br>* Linux files stored inside a virtual disk:
+    <br>  ```
+    <br>  \\wsl$\Ubuntu
+    <br>  ```
+    <br>---
+    <br>## ⚡ Performance Tips
+    <br>* Use Linux filesystem (`/home/...`) for heavy dev work
+    <br>* Avoid doing large builds on `/mnt/c` for best speed in WSL2
+    <br>* Enable systemd (in Windows 11) if needed for services:
+    <br>  * Docker
+    <br>  * NetworkManager
+    <br>  * PostgreSQL, MySQL, etc.
+    <br>---
+    <br>## 🧩 WSL for Dev Environments
+    <br>### **Using VSCode with WSL**
+    <br>The **Remote - WSL** extension lets VSCode run entirely inside WSL for smoother Linux development.
+    <br>### **Using Docker with WSL2**
+    <br>Docker Desktop integrates directly with WSL2 and uses the Linux kernel for performance.
+    <br>---
+    <br>## 🎯 Summary
+    <br>WSL gives you the best of both Windows and Linux:
+    <br>* Linux tools →  run natively
+    <br>* Windows apps → still fully usable
+    <br>* No heavy VM setup required
+    <br>* Ideal for web dev, systems programming, DevOps, cloud tooling, containers, etc.
+    <br>---
+    <br>If you'd like, I can also explain:
+    <br>* WSL vs Virtual Machines
+    <br>* How WSL works internally
+    <br>* Step-by-step setup for a development environment (Java, Node, Python, Docker, Git, etc.)
+    <br>* WSL troubleshooting
+    <br>Just let me know!"
+    <br>[{2025-11-18 retrieved} https://chatgpt.com/c/691c2a20-6838-832a-9a89-f24e5a80664a]
+    <a class="clsHide" href="#idWinoswsldsn"></a></p>
+  <p id="idWinoswslnam">name::
+    <br>* McsEngl.osWin'wsl!⇒wsl,
+    <br>* McsEngl.windows-linux-subsystem!⇒wsl,
+    <br>* McsEngl.windows-subsystem-for-linux!⇒wsl,
+    <br>* McsEngl.wls!⇒wsl,
+    <br>* McsEngl.wsl!=windows-subsystem-for-linux,
+    <a class="clsHide" href="#idWinoswslnam"></a></p>
+
+  <section id="idWinoswslcmnd">
+  <h2 id="idWinoswslcmndH2">command of wsl
+    <a class="clsHide" href="#idWinoswslcmndH1"></a></h2>
+  <p id="idWinoswslcmnddsn">description::
+    <br>× Mcsh-creation: {2025-11-19},
+    <br>·
+    <a class="clsHide" href="#idWinoswslcmnddsn"></a></p>
+  <p id="idWinoswslcmnd-1">window-explorer::
+    <br>· view wsl-files in window-explorer
+    <br>1) in explorer bar: <code>\\wsl$</code>
+    <br>2) <code>explorer.exe .</code> ⭢ opens current dir
+    <a class="clsHide" href="#idWinoswslcmnd-1"></a></p>
+  <p id="idWinoswslcmndnam">name::
+    <br>* McsEngl.WslCmnd!=command-in-wsl,
+    <br>* McsEngl.wsl'command!=WslCmnd,
+    <a class="clsHide" href="#idWinoswslcmndnam"></a></p>
   </section>
 </section>
 

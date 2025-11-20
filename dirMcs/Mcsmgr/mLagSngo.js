@@ -32,8 +32,8 @@ const
     'mLagSngo.js.0-2-0.2025-11-09: fCreateNewWord',
     'mLagSngo.js.0-1-0.2025-11-08: creation'
   ],
-  aVowl = ['a','e','i','o','u'],
-  aCons = ['p','f','Θ','t','s','c','k','h','m','r','b','v','δ','d','z','j','g','y','n','l'],
+  aVowl = ['a','e','o','i','u'],
+  aCons = ['b','v','d','δ','j','z','g','y','n','l','p','f','t','Θ','c','s','k','h','m','r'],
   aSylb = [
     // english: C: 65%, Ø: 22%, CC: 12%, CCC: 1%
     // english: /s, t, p, k, b, d, f, m, n, r, l, w, h, g, j/
@@ -316,14 +316,14 @@ function fPickVerbSylb() {
  * DOING: returns a-random e,i,o,u
  */
 function fPickConjVowel() {
-  return fPickRandomElement(['e','i','o','u'])
+  return fPickRandomElement(['e','o','i','u'])
 }
 function fPickConjSylb() {
   let sSylb = fPickWeightedRandomElement(aSylb)
   if (sSylb.length === 1 && 'aeiou'.includes(sSylb))
-    return fPickRandomElement(['e','i','o','u'])
+    return fPickRandomElement(['e','o','i','u'])
   else
-    return sSylb + fPickRandomElement(['e','i','o','u'])
+    return sSylb + fPickRandomElement(['e','o','i','u'])
 }
 
 /**

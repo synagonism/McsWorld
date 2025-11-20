@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.SngoLago!=Sinago-language
-    (McsLag000010.1-62-0.2025-11-16)</title>
+    (McsLag000010.1-63-0.2025-11-20)</title>
   <meta name="keywords" content="Sinago--human-language, SngoLago, ModelConceptStructured, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -1190,10 +1190,10 @@
   </section>
 
   <section id="idL0014ltr04">
-  <h4 id="idL0014ltr04H4">SngoLetr.04-δ|dh-[ð]
+  <h4 id="idL0014ltr04H4">SngoLetr.04-δ|w-[ð]
     <a class="clsHide" href="#idL0014ltr04H4"></a></h4>
   <p id="idL0014ltr04dsn">description::
-    <br>· DH|dh
+    <br>· Δ|δ or W|w
     <br>· IPA: [ð]
     <span class="clsAudio">
       <button class="clsAudioBtn">🗣</button>
@@ -1380,10 +1380,11 @@
   </section>
 
   <section id="idL0014ltr14">
-  <h4 id="idL0014ltr14H4">SngoLetr.14-θ|th-[θ]
+  <h4 id="idL0014ltr14H4">SngoLetr.14-θ|q-[θ]
     <a class="clsHide" href="#idL0014ltr14H4"></a></h4>
   <p id="idL0014ltr14dsn">description::
     <br>· voiceless dental fricative.
+    <br>· Θ|θ or Q|q
     <br>· IPA: Θ|θ 920|952.
     <span class="clsAudio">
       <button class="clsAudioBtn">🗣</button>
@@ -1514,28 +1515,28 @@
     <a class="clsHide" href="#idL0014ltr20H4"></a></h4>
   <p id="idL0014ltr20dsn">description::
     <br>· R|r-82|114.
-    <br>· IPA: [ r ]
+    <br>· IPA: [r]
     <span class="clsAudio">
-      <button class="clsAudioBtn">🗣</button>
+      <button class="clsAudioBtn">📣</button>
       <audio src="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/ce/Alveolar_trill.ogg/Alveolar_trill.ogg.mp3"></audio>
     </span>
     <br>· allophone:
-    [ ɹ ]
+    [ɹ]
     <span class="clsAudio">
       <button class="clsAudioBtn">🗣</button>
       <audio src="https://upload.wikimedia.org/wikipedia/commons/transcoded/1/1f/Alveolar_approximant.ogg/Alveolar_approximant.ogg.mp3"></audio>
     </span>
-    [ ɹ̠  ]
+    [ɹ̠ ]
     <span class="clsAudio">
       <button class="clsAudioBtn">🗣</button>
       <audio src="https://upload.wikimedia.org/wikipedia/commons/transcoded/3/33/Postalveolar_approximant.ogg/Postalveolar_approximant.ogg.mp3"></audio>
     </span>
-    [ ɾ ]
+    [ɾ]
     <span class="clsAudio">
       <button class="clsAudioBtn">🗣</button>
       <audio src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a0/Alveolar_tap.ogg/Alveolar_tap.ogg.mp3"></audio>
     </span>
-    [ r̠  ]
+    [r̠ ]
     <span class="clsAudio">
       <button class="clsAudioBtn">🗣</button>
       <audio src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ae/Voiced_postalveolar_trill.ogg/Voiced_postalveolar_trill.ogg.mp3" type="audio/mpeg"></audio>
@@ -1757,7 +1758,12 @@
     <br>· start: &nbsp; &nbsp; <input id="idWCStart" type="text" size="18">
     <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<button id="idWCBtn" type="button">Create Word</button>
     <br>
-    <br>· <input id="idWCOut" type="text" class="clsSizeLarge" size="20">
+    <br>· &nbsp; &nbsp; &nbsp;<input id="idWCOut" type="text" class="clsSizeLarge" size="20">
+    <br>· IPA: <span id="idWCSpan"></span>
+    <br>
+    <br>· notes:
+    <br>- I used https://github.com/espeak-ng/espeak-ng to create the sinago voice.
+    <br>- I used https://emscripten.org/ to compile it in WebAssembly with the-help of chatgpt.
     <a class="clsHide" href="#idL0014wrdcrtrdsn"></a></p>
   <p id="idL0014wrdcrtrnam">name::
     <br>* McsEngl.SinagoWordCreator,
@@ -4547,13 +4553,170 @@
   <h1 id="idSupportH1">support (<a class="clsPreview" href="../../#idSupport">link</a>)</h1>
 </section>
 
-<script src="mespeak/mespeak.js"></script>
+<script src="espeakng/espeakng.js"></script>
 <script type="module">
   import * as oMcsh from '../Mcsmgr/mMcsh2.js'
   import * as omLagSngo from '../Mcsmgr/mLagSngo.js'
 
   const oEltOut = document.getElementById('idWCOut')
-  meSpeak.loadVoice("voices/it.json")
+  // espeakng
+  /* An audio node that can have audio chunks pushed to it */
+
+  function PushAudioNode(context, start_callback, end_callback, buffer_size) {
+    this.context = context;
+    this.start_callback = start_callback;
+    this.end_callback = end_callback;
+    this.buffer_size = buffer_size || 4096;
+    this.samples_queue = [];
+    this.scriptNode = context.createScriptProcessor(this.buffer_size, 1, 1);
+    this.connected = false;
+    this.sinks = [];
+    this.startTime = 0;
+    this.closed = false;
+    this.track_callbacks = new Map();
+  }
+
+  PushAudioNode.prototype.push = function(chunk) {
+    if (this.closed) {
+      throw 'Cannot push more chunks after node was closed';
+    }
+    this.samples_queue.push(chunk);
+    if (!this.connected) {
+      if (!this.sinks.length) {
+        throw 'No destination set for PushAudioNode';
+      }
+      this._do_connect();
+    }
+  }
+
+  PushAudioNode.prototype.close = function() {
+    this.closed = true;
+  }
+
+  PushAudioNode.prototype.connect = function(dest) {
+    this.sinks.push(dest);
+    if (this.samples_queue.length) {
+      this._do_connect();
+    }
+  }
+
+  PushAudioNode.prototype._do_connect = function() {
+    if (this.connected) return;
+    this.connected = true;
+    for (var dest of this.sinks) {
+      this.scriptNode.connect(dest);
+    }
+    this.scriptNode.onaudioprocess = this.handleEvent.bind(this);
+  }
+
+  PushAudioNode.prototype.disconnect = function() {
+    this.scriptNode.onaudioprocess = null;
+    this.scriptNode.disconnect();
+    this.connected = false;
+  }
+
+  PushAudioNode.prototype.addTrackCallback = function(aTimestamp, aCallback) {
+    var callbacks = this.track_callbacks.get(aTimestamp) || [];
+    callbacks.push(aCallback);
+    this.track_callbacks.set(aTimestamp, callbacks);
+  }
+
+  PushAudioNode.prototype.handleEvent = function(evt) {
+    if (!this.startTime) {
+      this.startTime = evt.playbackTime;
+      if (this.start_callback) {
+        this.start_callback();
+      }
+    }
+
+    var currentTime = evt.playbackTime - this.startTime;
+    var playbackDuration = this.scriptNode.bufferSize / this.context.sampleRate;
+    for (var entry of this.track_callbacks) {
+      var timestamp = entry[0];
+      var callbacks = entry[1];
+      if (timestamp < currentTime) {
+        this.track_callbacks.delete(timestamp);
+      } else if (timestamp < currentTime + playbackDuration) {
+        for (var cb of callbacks) {
+          cb();
+        }
+        this.track_callbacks.delete(timestamp);
+      }
+    }
+
+    var offset = 0;
+    while (this.samples_queue.length && offset < evt.target.bufferSize) {
+      var chunk = this.samples_queue[0];
+      var to_copy = chunk.subarray(0, evt.target.bufferSize - offset);
+      if (evt.outputBuffer.copyToChannel) {
+        evt.outputBuffer.copyToChannel(to_copy, 0, offset);
+      } else {
+        evt.outputBuffer.getChannelData(0).set(to_copy, offset);
+      }
+      offset += to_copy.length;
+      chunk = chunk.subarray(to_copy.length);
+      if (chunk.length)
+        this.samples_queue[0] = chunk;
+      else
+        this.samples_queue.shift();
+    }
+
+    if (!this.samples_queue.length && this.closed) {
+      if (this.end_callback) {
+        this.end_callback(evt.playbackTime - this.startTime);
+      }
+      this.disconnect();
+    }
+  }
+
+  let
+    ctx = new (window.AudioContext || window.webkitAudioContext)(),
+    tts,
+    pusher,
+    pusher_buffer_size = 4096,
+    chunkID = 0
+  // This comes from espeakng.js
+  tts = new eSpeakNG('espeakng/espeakng.worker.js')
+  function speak() {
+    if (ctx.state === 'suspended') {
+      ctx.resume();
+    }
+    stop();
+    tts.set_rate(133)
+    tts.set_pitch(12)
+    tts.set_voice('sinago');
+    var now = Date.now();
+    chunkID = 0;
+    pusher = new PushAudioNode(
+      ctx,
+      function() {
+        //console.log('PushAudioNode started!', ctx.currentTime, pusher.startTime);
+      },
+      function() {
+        //console.log('PushAudioNode ended!', ctx.currentTime - pusher.startTime);
+      },
+      pusher_buffer_size
+    );
+    pusher.connect(ctx.destination);
+    tts.synthesize(
+      oEltOut.value,
+      function cb(samples, events) {
+        if (!samples) {
+          if (pusher) {
+            pusher.close();
+          }
+          return;
+        }
+        if (pusher) {
+          pusher.push(new Float32Array(samples));
+          ++chunkID;
+        }
+        if (now) {
+          now = 0;
+        }
+      }
+    )
+  }
 
   // create new words
   document.getElementById('idWCBtn').addEventListener('click', function(oEvtIn) {
@@ -4563,32 +4726,37 @@
   		let
       nSylb = oSlctSylb.options[oSlctSylb.selectedIndex].value,
       sType = oSlctType.options[oSlctType.selectedIndex].value,
-      sStart = document.getElementById('idWCStart').value
+      sStart = document.getElementById('idWCStart').value,
+      sWord = omLagSngo.fCreateNewWord(sType, nSylb, sStart)
 
-    oEltOut.value = omLagSngo.fCreateNewWord(sType, nSylb, sStart)
-    meSpeak.speak(oEltOut.value)
+    oEltOut.value = sWord + ',  ' + sWord
+    speak()
+    tts.synthesize_ipa(sWord, function(result) {
+      document.getElementById('idWCSpan').innerHTML = result.ipa
+    })
   })
 
-    const oAudioPlayers = document.querySelectorAll('.clsAudio')
-    oAudioPlayers.forEach(player => {
-      const oAudio = player.querySelector('audio')
-      const oAudioBtn = player.querySelector('.clsAudioBtn')
-      oAudioBtn.addEventListener('click', () => {
-        if (oAudio.paused) {
-          oAudio.play()
-          oAudioBtn.textContent = '⏸' // Pause icon
-        } else {
-          oAudio.pause()
-          oAudioBtn.textContent = '🗣' // Play icon
-        }
-      })
-      oAudio.addEventListener('ended', () => {
-         oAudioBtn.textContent = '🗣'
-      })
-      oAudio.addEventListener('pause', () => {
-          oAudioBtn.textContent = '🗣'
-      })
+  const oAudioPlayers = document.querySelectorAll('.clsAudio')
+  oAudioPlayers.forEach(player => {
+    const oAudio = player.querySelector('audio')
+    const oAudioBtn = player.querySelector('.clsAudioBtn')
+    const sAudioIcon = oAudioBtn.textContent
+    oAudioBtn.addEventListener('click', () => {
+      if (oAudio.paused) {
+        oAudio.play()
+        oAudioBtn.textContent = '⏸' // Pause icon
+      } else {
+        oAudio.pause()
+        oAudioBtn.textContent = sAudioIcon
+      }
     })
+    oAudio.addEventListener('ended', () => {
+       oAudioBtn.textContent = sAudioIcon
+    })
+    oAudio.addEventListener('pause', () => {
+        oAudioBtn.textContent = sAudioIcon
+    })
+  })
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8T0MHWLS1"></script>
