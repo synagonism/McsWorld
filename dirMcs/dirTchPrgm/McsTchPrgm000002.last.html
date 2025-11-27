@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.CmprPrgm!=computer-program
-    (McsTchPrgm000002.1-24-0.2025-11-20)</title>
+    (McsTchPrgm000002.1-25-0.2025-11-22)</title>
   <meta name="keywords" content="computer-program, CmprPrgm, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -1047,7 +1047,8 @@
     <a class="clsHide" href="#idCpgm009cmndH1"></a></h2>
   <p id="idCpgm009cmnddsn">description::
     <br>× Mcsh-creation: {2025-11-19},
-  <!-- last 248 -->
+    <a class="clsHide" href="#idCpgm009cmnddsn"></a></p>
+  <!-- last at end -->
   <p id="idCpgm009cmnd-1">alias::
     <br>Create an alias
     <br>* McsEngl.LinxCmnd.alias,
@@ -1385,6 +1386,54 @@
     <a class="clsHide" href="#idCpgm009cmnd-80"></a></p>
   <p id="idCpgm009cmnd-81">grep::
     <br>Search file(s) for lines that match a given pattern
+    <br>"Here are many practical examples of the grep command in Linux, from basic to advanced:Basic usagebash
+    <br>grep "error" logfile.txt                  # Search for "error" in a file
+    <br>grep -i "error" logfile.txt               # Case-insensitive search (-i)
+    <br>grep -i -n "error" logfile.txt            # Show line numbers (-n)
+    <br>grep -i -n -C 3 "error" logfile.txt       # Show 3 lines of context before/after (-C)
+    <br>Common useful optionsbash
+    <br>grep -r "search_term" /path/to/dir/       # Recursive search in directory (-r or --recursive)
+    <br>grep -l "search_term" *.log               # Only show filenames that contain match (-l)
+    <br>grep -L "search_term" *.log               # Show filenames that DO NOT contain match
+    <br>grep -v "search_term" file.txt            # Invert match – show lines that do NOT contain the term (-v)
+    <br>grep -w "exactword" file.txt              # Match whole word only (-w)
+    <br>grep -c "error" *.log                     # Count occurrences per file (-c)
+    <br>Search in running processesbash
+    <br>ps aux | grep firefox                     # Find processes containing "firefox"
+    <br>ps aux | grep -v grep | grep firefox      # Exclude grep itself from results
+    <br>
+    <br>Search with regular expressionsbash
+    <br>grep "^root" /etc/passwd                  # Lines that start with "root" (^ = beginning of line)
+    <br>grep "bash$" /etc/passwd                  # Lines that end with "bash" ($ = end of line)
+    <br>grep "error\|warning" logfile.txt         # Search for "error" OR "warning" (use \| in basic grep)
+    <br>grep -E "error|warning" logfile.txt       # Same as above but with extended regex (-E)
+    <br>grep "[0-9]\{3\}-[0-9]\{3\}-[0-9]\{4\}" file.txt   # Find US phone pattern (e.g., 123-456-7890)
+    <br>Color output (default on most modern systems)bash
+    <br>grep --color=auto "error" logfile.txt     # Highlight matches in color
+    <br>grep -i --color=always "error" file.txt | less -R   # Keep color when piping to less
+    <br>
+    <br>Real-world practical examplesbash
+    <br># Find all Python files containing "TODO"
+    <br>find . -name "*.py" -exec grep -l "TODO" {} \;
+    <br># Show only the matched part (not whole line)
+    <br>grep -o "http[^[:space:]]*" webpage.html   # Extract all URLs
+    <br># Check if a user exists in /etc/passwd
+    <br>grep "^john:" /etc/passwd
+    <br># Monitor logs in real-time (like tail -f but with filtering)
+    <br>tail -f /var/log/syslog | grep -i "failed|error"
+    <br># Find large files in current directory (combine with ls)
+    <br>ls -la | grep -E "[0-9]{3}M|[0-9]G"       # Files 100MB or larger
+    <br># Search compressed files without extracting
+    <br>zgrep "pattern" file.log.gz               # Works with .gz files
+    <br>zgrep -r "pattern" /var/log/              # Recursive on .gz files
+    <br>Bonus: Modern alternatives (often faster)bash
+    <br># ripgrep (rg) – much faster than grep
+    <br>rg "search_term"                          # Simple and fast
+    <br>rg -i -n --type py "def main"             # Case-insensitive, show line numbers, only Python files
+    <br># The Silver Searcher (ag)
+    <br>ag "TODO" --python                        # Search only Python files
+    <br>These examples cover 95% of daily grep usage. Let me know what you're trying to search for and I can give you the exact command!"
+    <br>[{2025-11-24 retrieved} https://x.com/i/grok?conversation=1992836493077774435]
     <br>* McsEngl.LinxCmnd.grep,
     <a class="clsHide" href="#idCpgm009cmnd-81"></a></p>
   <p id="idCpgm009cmnd-82">groupadd::
@@ -1464,7 +1513,20 @@
     <a class="clsHide" href="#idCpgm009cmnd-247"></a></p>
   <p id="idCpgm009cmnd-99">install::
     <br>Copy files and set attributes
+    <br>=============================
+    <br># List installed packages
+    <br>apt list --installed
+    <br>
+    <br># Uninstall a package
+    <br>sudo apt remove package-name
+    <br>
+    <br># Uninstall + remove config files
+    <br>sudo apt purge package-name
+    <br>
+    <br># Clean unused dependencies
+    <br>sudo apt autoremove
     <br>* McsEngl.LinxCmnd.install,
+    <br>* McsEngl.LinxCmnd.uninstall,
     <a class="clsHide" href="#idCpgm009cmnd-99"></a></p>
   <p id="idCpgm009cmnd-100">jobs::
     <br>List active jobs
@@ -1586,7 +1648,7 @@
     <br>mkdir [options] &lt;directory> [directory ...]
     <br>Only one option is worth noting: the option -p. If this option is set, mkdir will create parent directories if these did not exist before. If this option is not specified and the parent directories do not exist, mkdir will display an error. <strong>Examples</strong>:
     <br>mkdir foo: creates a directory foo in the current directory;
-    <br>mkdir -p images/misc docs: creates a directory misc in directory images by first creating the latter if it does not exist, together with a directory docs.
+    <br>mkdir -p : --parents "no error if existing, make parent directories as needed".
     <br>* McsEngl.LinxCmnd.mkdir,
     <a class="clsHide" href="#idCpgm009cmnd-122"></a></p>
   <p id="idCpgm009cmnd-123">mkfifo::
@@ -1754,7 +1816,11 @@
     <br>* McsEngl.LinxCmnd.reboot,
     <a class="clsHide" href="#idCpgm009cmnd-161"></a></p>
   <p id="idCpgm009cmnd-162">rename::
-    <br>Rename files
+    <br>Rename files.
+    <br>· if not present:
+    <br><code>sudo apt update && sudo apt install rename -y</code>
+    <br>- mv: Move or rename files or directories
+    <br>- mmv: Mass Move and rename (files)
     <br>* McsEngl.LinxCmnd.rename,
     <a class="clsHide" href="#idCpgm009cmnd-162"></a></p>
   <p id="idCpgm009cmnd-163">renice::
@@ -1781,6 +1847,8 @@
     <br>Options include:
     <br>-r, or -R: Delete recursively. This option is mandatory for deleting a directory, empty or not. However, there is also the command rmdir for deleting empty directories.  -i: Request confirmation before each deletion. It is recommended to alias the bare rm word to rm -i in your shell, and the same goes for cp and mv commands.  -f: The opposite of -i, forces deletion of the files or directories, even if the user has no write authorisation on the files[4].
     <br>* McsEngl.LinxCmnd.rm,
+    <br>* McsEngl.LinxCmnd.remove,
+    <br>* McsEngl.LinxCmnd.delete,
     <a class="clsHide" href="#idCpgm009cmnd-167"></a></p>
   <p id="idCpgm009cmnd-168">rmdir::
     <br>Remove folder(s)
@@ -2075,7 +2143,7 @@
     <br>Text Editor
     <br>* McsEngl.LinxCmnd.vi,
     <a class="clsHide" href="#idCpgm009cmnd-229"></a></p>
-  <p id="idCpgm009cmnd-230">vmstat::
+  <p id="idCpgm009cmnd-249">vmstat::
     <br>Report virtual memory statistics
     <br>* McsEngl.LinxCmnd.vmstat,
     <a class="clsHide" href="#idCpgm009cmnd-230"></a></p>
@@ -2143,7 +2211,15 @@
     <br>Comment / Remark
     <br>* McsEngl.LinxCmnd.###,
     <a class="clsHide" href="#idCpgm009cmnd-246"></a></p>
-    <a class="clsHide" href="#idCpgm009cmnddsn"></a></p>
+  <p id="idCpgm009cmnd-249">view-file::
+    <br>Here are the most common and useful ways to view the contents of a file in Linux, from simplest to most powerful:
+    <br>| `cat filename`           | Small to medium files             | Displays the entire file at once |
+    <br>| `less filename`          | Large files, scrolling            | View file with scrolling (press `q` to quit) |
+    <br>| `more filename`          | Large files (older systems)       | Similar to less, but more limited |
+    <br>| `head filename`          | First few lines                   | Shows first 10 lines by default |
+    <br>| `tail filename`          | Last few lines, logs              | Shows last 10 lines by default |
+    <br>* McsEngl.LinxCmnd.view-file,
+    <a class="clsHide" href="#idCpgm009cmnd-230"></a></p>
   <p id="idCpgm009cmndnam">name::
     <br>* McsEngl.LinxCmnd!=command-of-Linux,
     <br>* McsEngl.LinxOs'command!⇒LinxCmnd,

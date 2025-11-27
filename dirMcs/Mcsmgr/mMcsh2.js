@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.22-7-0.2025-11-21: language apps',
     'mMcsh2.js.22-6-1.2025-11-08: δ,θ',
     'mMcsh2.js.22-6-0.2025-11-06: EnglVerbFormFinder',
     'mMcsh2.js.22-5-0.2025-11-05: insert no keyboard chars',
@@ -996,74 +997,95 @@ let fContainersInsert = function () {
   oEltMenuUl.appendChild(oEltCmdWebApp)
   const oEltCmdWebAppUl = document.createElement('ul')
   oEltCmdWebApp.appendChild(oEltCmdWebAppUl)
+
+  const oEltCmdLagApp = document.createElement('li')
+  oEltCmdLagApp.innerHTML = 'Language WebApps:'
+  oEltCmdWebAppUl.appendChild(oEltCmdLagApp)
+  const oEltCmdLagAppUl2 = document.createElement('ul')
+  oEltCmdLagApp.appendChild(oEltCmdLagAppUl2)
+  const oEltCmdLagAppSwcr = document.createElement('li')
+  oEltCmdLagAppSwcr.innerHTML = '<a class="clsPreview" href="' + sPathSite +
+    'dirMcs/dirLag/McsLag000010.last.html#idL0014wrdcrtr">SinagoWordCreator</a>'
+  oEltCmdLagAppUl2.appendChild(oEltCmdLagAppSwcr)
   const oEltCmdWebAppEnff = document.createElement('li')
   oEltCmdWebAppEnff.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirLag/McsLag000011.last.html#idLEnglnouformfndr">EnglishNoun FormFinder</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppEnff)
+  oEltCmdLagAppUl2.appendChild(oEltCmdWebAppEnff)
   const oEltCmdWebAppEvff = document.createElement('li')
   oEltCmdWebAppEvff.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirLag/McsLag000011.last.html#idLEnglverbfmfd">EnglishVerb FormFinder</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppEvff)
+  oEltCmdLagAppUl2.appendChild(oEltCmdWebAppEvff)
   const oEltCmdWebAppGnmf = document.createElement('li')
   oEltCmdWebAppGnmf.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirLag/McsLag000020.last.html#idLEllnnounmbrfdr">GreekNoun MemberFinder</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppGnmf)
+  oEltCmdLagAppUl2.appendChild(oEltCmdWebAppGnmf)
   const oEltCmdWebAppGwpn = document.createElement('li')
   oEltCmdWebAppGwpn.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirLag/McsLag000020.last.html#idLEllnwrdspch">Greek WordPronunciation</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppGwpn)
+  oEltCmdLagAppUl2.appendChild(oEltCmdWebAppGwpn)
   const oEltCmdWebAppGawp = document.createElement('li')
   oEltCmdWebAppGawp.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirLag/McsLag000027.last.html#idLEllawordspch">GreekAncient WordPronunciation</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppGawp)
+  oEltCmdLagAppUl2.appendChild(oEltCmdWebAppGawp)
   const oEltCmdWebAppGwca = document.createElement('li')
   oEltCmdWebAppGwca.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'otenet/gr/gwcreator.html">GreekWordCreator Applet</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppGwca)
+  oEltCmdLagAppUl2.appendChild(oEltCmdWebAppGwca)
   const oEltCmdWebAppWfja = document.createElement('li')
   oEltCmdWebAppWfja.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'otenet/grammar/wordforms.html">WordForms Applet</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppWfja)
+  oEltCmdLagAppUl2.appendChild(oEltCmdWebAppWfja)
+
   const oEltCmdWebAppCrNs = document.createElement('li')
   oEltCmdWebAppCrNs.innerHTML = '<a class="clsPreview" href="' + sPathSite +
-    'dirMcs/dirCor/McsCor000010.last.html#idQntNbrnmrlsysdthc">Converter.Numeral-Systems</a>'
+    'dirMcs/dirCor/McsCor000010.last.html#idQntNbrnmrlsysdthc">Numerral Converter</a>'
   oEltCmdWebAppUl.appendChild(oEltCmdWebAppCrNs)
+
   const oEltCmdWebAppCCtC = document.createElement('li')
   oEltCmdWebAppCCtC.innerHTML = '<a class="clsPreview" href="' + sPathSite +
-    'dirMcs/dirLag/McsLag000006.last.html#idCharUcdstdcpfdr">Converter.Char⇔Codepoint</a>'
+    'dirMcs/dirLag/McsLag000006.last.html#idCharUcdstdcpfdr">Char⇔Codepoint Converter</a>'
   oEltCmdWebAppUl.appendChild(oEltCmdWebAppCCtC)
+  
+
+  const oEltCmdWebAppCrcy = document.createElement('li')
+  oEltCmdWebAppCrcy.innerHTML = 'Currency Converters:'
+  oEltCmdWebAppUl.appendChild(oEltCmdWebAppCrcy)
+  const oEltCmdWebAppCrcyUl2 = document.createElement('ul')
+  oEltCmdWebAppCrcy.appendChild(oEltCmdWebAppCrcyUl2)
   const oEltCmdWebAppBbgn = document.createElement('li')
   oEltCmdWebAppBbgn.innerHTML = '<a class="clsPreview" href="' + sPathSite +
-    'dirMcs/dirStn/McsStn000038.last.html#idBgraeconevu">Converter.Euro⇔BulgariaLev-BGN</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppBbgn)
+    'dirMcs/dirStn/McsStn000038.last.html#idBgraeconevu">Euro⇔BulgariaLev-BGN</a>'
+  oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppBbgn)
   const oEltCmdWebAppCcny = document.createElement('li')
   oEltCmdWebAppCcny.innerHTML = '<a class="clsPreview" href="' + sPathSite +
-    'dirMcs/dirStn/McsStn000031.last.html#idChnaEconevu">Converter.Euro⇔ChinaRenMinBi-CNY</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppCcny)
+    'dirMcs/dirStn/McsStn000031.last.html#idChnaEconevu">Euro⇔ChinaRenMinBi-CNY</a>'
+  oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppCcny)
   const oEltCmdWebAppEtGd = document.createElement('li')
   oEltCmdWebAppEtGd.innerHTML = '<a class="clsPreview" href="' + sPathSite +
-    'dirMcs/dirStn/McsStn000020.last.html#idEusaEconEurevuapp">Converter.Euro⇔GreeceDrachmas</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppEtGd)
+    'dirMcs/dirStn/McsStn000020.last.html#idEusaEconEurevuapp">Euro⇔GreeceDrachmas</a>'
+  oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppEtGd)
   const oEltCmdWebAppSmkd = document.createElement('li')
   oEltCmdWebAppSmkd.innerHTML = '<a class="clsPreview" href="' + sPathSite +
-    'dirMcs/dirStn/McsStn000040.last.html#idNmkdeconevu">Converter.Euro⇔NorthMacedonia-MKD</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppSmkd)
+    'dirMcs/dirStn/McsStn000040.last.html#idNmkdeconevu">Euro⇔NorthMacedonia-MKD</a>'
+  oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppSmkd)
   const oEltCmdWebAppRrub = document.createElement('li')
   oEltCmdWebAppRrub.innerHTML = '<a class="clsPreview" href="' + sPathSite +
-    'dirMcs/dirStn/McsStn000043.last.html#idRusaeconevu">Converter.Euro⇔Russia-RUB</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppRrub)
+    'dirMcs/dirStn/McsStn000043.last.html#idRusaeconevu">Euro⇔Russia-RUB</a>'
+  oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppRrub)
   const oEltCmdWebAppTtry = document.createElement('li')
   oEltCmdWebAppTtry.innerHTML = '<a class="clsPreview" href="' + sPathSite +
-    'dirMcs/dirStn/McsStn000033.last.html#idTurkeconevu">Converter.Euro⇔Turkey-TRY</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppTtry)
+    'dirMcs/dirStn/McsStn000033.last.html#idTurkeconevu">Euro⇔Turkey-TRY</a>'
+  oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppTtry)
   const oEltCmdWebAppVvnd = document.createElement('li')
   oEltCmdWebAppVvnd.innerHTML = '<a class="clsPreview" href="' + sPathSite +
-    'dirMcs/dirStn/McsStn000034.last.html#idVtnmeconevu">Converter.Euro⇔Vietnam-VND</a>'
-  oEltCmdWebAppUl.appendChild(oEltCmdWebAppVvnd)
+    'dirMcs/dirStn/McsStn000034.last.html#idVtnmeconevu">Euro⇔Vietnam-VND</a>'
+  oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppVvnd)
   const oEltCmdWebAppTock = document.createElement('li')
+
   oEltCmdWebAppTock.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirCor/McsCor000002.last.html#idMcsmToc">TableOfContents ChromeExtension</a>'
   oEltCmdWebAppUl.appendChild(oEltCmdWebAppTock)
+
   // command Esc
   addEventListener('keyup', function (oEvtIn) {
     if (event.key === 'Escape') {

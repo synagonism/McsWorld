@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.techAI!=artificial-intelligence
-    (McsTchInf000036.0-39-0.2025-11-19 draft)</title>
+    (McsTchInf000036.0-43-0.2025-11-26 draft)</title>
   <meta name="keywords" content="artificial-intelligence, techAI, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -2204,20 +2204,535 @@
     <br>"The eSpeak NG is a compact open source software text-to-speech synthesizer for Linux, Windows, Android and other operating systems. It supports more than 100 languages and accents. It is based on the eSpeak engine created by Jonathan Duddington.
     <br>eSpeak NG uses a "formant synthesis" method. This allows many languages to be provided in a small size. The speech is clear, and can be used at high speeds, but is not as natural or smooth as larger synthesizers which are based on human speech recordings. It also supports Klatt formant synthesis, and the ability to use MBROLA as backend speech synthesizer."
     <br>[{2025-11-19 retrieved} https://github.com/espeak-ng/espeak-ng/tree/master]
+    <br>
+    <br>· <a href="../dirLag/espeakng/demo.html">my WebAssebly compiled demo</a>.
     <a class="clsHide" href="#idTchNlp004Espkngdsn"></a></p>
   <p id="idTchNlp004Espkngnam">name::
-    <br>* McsEngl.eSpeak-NG!⇒espkng,
-    <br>* McsEngl.espeak-ng!⇒espkng,
-    <br>* McsEngl.espkng!=eSpeak-NG,
-    <br>* McsEngl.techSpsn.eSpeak-NG!⇒espkng,
+    <br>* McsEngl.eSpeak-NG!⇒espeakng,
+    <br>* McsEngl.espeak-ng!⇒espeakng,
+    <br>* McsEngl.espeakng!=eSpeak-NG,
+    <br>* McsEngl.techSpsn.eSpeak-NG!⇒espeakng,
     <a class="clsHide" href="#idTchNlp004Espkngnam"></a></p>
 
+  <section id="idTchNlp004Espkngcmnd">
+  <h4 id="idTchNlp004EspkngcmndH4">command espeakng
+    <a class="clsHide" href="#idTchNlp004EspkngcmndH2"></a></h4>
+  <p id="idTchNlp004Espkngcmnddsn">description::
+    <br>× Mcsh-creation: {2025-11-22},
+    <br><code>espeak-ng -h</code>
+    <br>eSpeak NG text-to-speech: 1.52.0.1  Data at: /usr/local/share/espeak-ng-data
+    <br>
+    <br><code>espeak-ng [options] ["&lt;words>"]</code>
+    <br>
+    <br><code>espeak-ng -v it --ipa "[[l^]]alo lalo"</code>
+    <br>[[..]] denote phoneme.
+    <br><code>-f &lt;text file></code>
+    <br>Text file to speak
+    <br><code>--stdin</code>
+    <br>Read text input from stdin at once till to the end of a stream.
+    <br>If neither -f nor --stdin are provided, then &lt;words> from arguments are spoken,
+    <br>or text is spoken from stdin, read separately one line by line at a time.
+    <br><code>-a &lt;integer></code>
+    <br>Amplitude, 0 to 200, default is 100
+    <br><code>-d &lt;device></code>
+    <br>Use the specified device to speak the audio on. If not specified, the
+    <br>default audio device is used.
+    <br><code>-g &lt;integer></code>
+    <br>Word gap. Pause between words, units of 10mS at the default speed
+    <br><code>-k &lt;integer></code>
+    <br>Indicate capital letters with: 1=sound, 2=the word "capitals",
+    <br>higher values indicate a pitch increase (try -k20).
+    <br><code>-l &lt;integer></code>
+    <br>Line length. If not zero (which is the default), consider
+    <br>lines less than this length as end-of-clause
+    <br><code>-p &lt;integer></code>
+    <br>Pitch adjustment, 0 to 99, default is 50
+    <br><code>-P &lt;integer></code>
+    <br>Pitch range adjustment, 0 to 99, default is 50
+    <br><code>-s &lt;integer></code>
+    <br>Speed in approximate words per minute. The default is 175
+    <br><code>-v &lt;voice name></code>
+    <br>Use voice file of this name from espeak-ng-data/voices
+    <br><code>-w &lt;wave file name></code>
+    <br>Write speech to this WAV file, rather than speaking it directly
+    <br><code>-b</code>
+    <br>Input text encoding, 1=UTF8, 2=8 bit, 4=16 bit
+    <br><code>-m</code>
+    <br>Interpret SSML markup, and ignore other &lt; > tags
+    <br><code>--ssml-break=&lt;percentage></code>
+    <br>Set SSML break time multiplier, default is 100
+    <br><code>-q</code>
+    <br>Quiet, don't produce any speech (may be useful with -x)
+    <br><code>-x</code>
+    <br>Write phoneme mnemonics to stdout
+    <br><code>-X</code>
+    <br>Write phonemes mnemonics and translation trace to stdout
+    <br><code>-z</code>
+    <br>No final sentence pause at the end of the text
+    <br><code>-D</code>
+    <br>Enable deterministic random mode
+    <br><code>--compile=&lt;voice name></code>
+    <br>Compile pronunciation rules and dictionary from the current
+    <br>directory. &lt;voice name> specifies the language
+    <br><code>--compile-debug=&lt;voice name></code>
+    <br>Compile pronunciation rules and dictionary from the current
+    <br>directory, including line numbers for use with -X.
+    <br>&lt;voice name> specifies the language
+    <br><code>--compile-intonations</code>
+    <br>Compile the intonation data
+    <br><code>--compile-phonemes=&lt;phsource-dir></code>
+    <br>Compile the phoneme data using &lt;phsource-dir> or the default phsource directory
+    <br><code>--ipa</code>
+    <br>Write phonemes to stdout using International Phonetic Alphabet
+    <br><code>--path="&lt;path>"</code>
+    <br>Specifies the directory containing the espeak-ng-data directory
+    <br><code>--pho</code>
+    <br>Write mbrola phoneme data (.pho) to stdout or to the file in --phonout
+    <br><code>--phonout="&lt;filename>"</code>
+    <br>Write phoneme output from -x -X --ipa and --pho to this file
+    <br><code>--punct="&lt;characters>"</code>
+    <br>Speak the names of punctuation characters during speaking.  If
+    <br>=&lt;characters> is omitted, all punctuation is spoken.
+    <br><code>--sep=&lt;character></code>
+    <br>Separate phonemes (from -x --ipa) with &lt;character>.
+    <br>Default is space, z means ZWJN character.
+    <br><code>--split=&lt;minutes></code>
+    <br>Starts a new WAV file every &lt;minutes>.  Used with -w
+    <br><code>--stdout</code>
+    <br>Write speech output to stdout
+    <br><code>--tie=&lt;character></code>
+    <br>Use a tie character within multi-letter phoneme names.
+    <br>Default is U+361, z means ZWJ character.
+    <br><code>--version</code>
+    <br>Shows version number and date, and location of espeak-ng-data
+    <br><code>--voices=&lt;language></code>
+    <br>List the available voices for the specified language.
+    <br>If &lt;language> is omitted, then list all voices.
+    <br><code>--load</code>
+    <br>Load voice from a file in current directory by name.
+    <br><code>-h, --help</code>
+    <br>Show this help.
+    <a class="clsHide" href="#idTchNlp004Espkngcmnddsn"></a></p>
+  <p id="idTchNlp004Espkngcmndnam">name::
+    <br>* McsEngl.espeakng'command!⇒espkcmnd,
+    <br>* McsEngl.espkcmnd!=eSpeak-ng'command,
+    <a class="clsHide" href="#idTchNlp004Espkngcmndnam"></a></p>
+  <p id="idTchNlp004Espkngcmnd-1">ipa::
+    <br>· shows ipa phonemes.
+    <br><code>espeak-ng -v lg --ipa "your test word"</code>
+    <br>* McsEngl.espkcmnd.ipa,
+    <a class="clsHide" href="#idTchNlp004Espkngcmnd-1"></a></p>
+  <p id="idTchNlp004Espkngcmnd-2">v::
+    <br>· sets the-language.
+    <br><code>espeak-ng -v lg "your test word"</code>
+    <br>* McsEngl.espkcmnd.v,
+    <a class="clsHide" href="#idTchNlp004Espkngcmnd-2"></a></p>
+  <p id="idTchNlp004Espkngcmnd-3">x::
+    <br>· shows the-phonemes of the-language.
+    <br><code>espeak-ng -v lg -x "your test word"</code>
+    <br>* McsEngl.espkcmnd.x,
+    <a class="clsHide" href="#idTchNlp004Espkngcmnd-3"></a></p>
+  <p id="idTchNlp004Espkngcmnd-4">voices::
+    <br>· list the-languages.
+    <br><code>espeak-ng --voices </code>
+    <br>* McsEngl.espkcmnd.voices,
+    <a class="clsHide" href="#idTchNlp004Espkngcmnd-4"></a></p>
+  <p id="idTchNlp004Espkngcmnd-5">compile-phonemes::
+    <br>· Rebuild ALL phonemes cleanly from the source tree
+    <br><code>cd ~/espeak-ng
+    <br>sudo espeak-ng --path=./espeak-ng-data --compile-phonemes
+    <br>
+    <br>#Install phoneme data into /usr/local
+    <br>sudo install -m 644 espeak-ng-data/phontab   /usr/local/share/espeak-ng-data/phontab
+    <br>sudo install -m 644 espeak-ng-data/phondata  /usr/local/share/espeak-ng-data/phondata
+    <br>sudo install -m 644 espeak-ng-data/phonindex /usr/local/share/espeak-ng-data/phonindex</code>
+    <br>* McsEngl.espkcmnd.compile-phonemes,
+    <a class="clsHide" href="#idTchNlp004Espkngcmnd-5"></a></p>
+  <p id="idTchNlp004Espkngcmnd-6">compile=lng::
+    <br>· Compile custom dictionary with rules/list
+    <br><code>cd ~/espeak-ng/dictsource
+    <br>
+    <br>sudo /usr/local/bin/espeak-ng \
+    <br>  --path=/usr/local/share/espeak-ng-data \
+    <br>  --compile=lng</code>
+    <br>* McsEngl.espkcmnd.compile=lng,
+    <a class="clsHide" href="#idTchNlp004Espkngcmnd-6"></a></p>
+  </section>
+
+  <section id="idTchNlp004Espknglago">
+  <h4 id="idTchNlp004EspknglagoH4">language of espeakng
+    <a class="clsHide" href="#idTchNlp004EspknglagoH2"></a></h4>
+  <div id="idTchNlp004Espknglagodsn">
+    <p>description::
+    <br>× Mcsh-creation: {2025-11-24},
+    <br>· in git repo
+    </p>
+    <ol>
+      <li>Afrikaans (af)
+      <li>Albanian (sq)
+      <li>Amharic (am)
+      <li>Arabic (ar)
+      <li>Aragonese (an)
+      <li>Armenian: East Armenia (hy, hy-arevela)
+      <li>Armenian: West Armenia (hyw, hy-arevmda, hy)
+      <li>Aromanian (rup)
+      <li>Assamese (as)
+      <li>Azerbaijani (az)
+      <li>Bashkir (ba)
+      <li>Basque (eu)
+      <li>Belarusian (be)
+      <li>Bengali (bn)
+      <li>Bishnupriya Manipuri (bpy)
+      <li>Bosnian (bs)
+      <li>Bulgarian (bg)
+      <li>Catalan: Balearic (ca-ba)
+      <li>Catalan: North-western (ca-nw)
+      <li>Catalan: Valencian (ca-va)
+      <li>Catalan (ca)
+      <li>Cherokee (chr-US-Qaaa-x-west)
+      <li>Chinese: Cantonese (yue, zh-yue, zh)
+      <li>Chinese: Cantonese, latin as Jyutping (yue, zh-yue, zh)
+      <li>Chinese: Mandarin, latin as English (cmn, zh-cmn, zh)
+      <li>Chinese: Mandarin, latin as Pinyin (cmn-latn-pinyin, zh-cmn, zh)
+      <li>Chuvash (cv)
+      <li>Crimean Tatar (crh)
+      <li>Croatian (hr, hbs)
+      <li>Czech (cs)
+      <li>Danish (da)
+      <li>Dutch (nl)
+      <li>English: America (en-us, en)
+      <li>English: America, New York City (en-us-nyc)
+      <li>English: Caribbean (en-029, en)
+      <li>English: Great Britain (en-gb, en)
+      <li>English: Lancaster (en-gb-x-gbclan, en-gb, en)
+      <li>English: Received Pronunciation (en-gb-x-rp, en-gb, en)
+      <li>English: Scotland (en-gb-scotland, en)
+      <li>English: Shavian alphabet (en-shaw)
+      <li>English: West Midlands (en-gb-x-gbcwmd, en-gb, en)
+      <li>Esperanto (eo)
+      <li>Estonian (et)
+      <li>Faroese (fo)
+      <li>Finnish (fi)
+      <li>French: Belgium (fr-be, fr)
+      <li>French: France (fr-fr, fr)
+      <li>French: Switzerland (fr-ch, fr)
+      <li>Gaelic: Irish (ga)
+      <li>Gaelic: Scottish (gd)
+      <li>Georgian (ka)
+      <li>German (de)
+      <li>Greek: Ancient (grc)
+      <li>Greek (el)
+      <li>Greenlandic (kl)
+      <li>Guarani (gn)
+      <li>Gujarati (gu)
+      <li>Haitian Creole (ht)
+      <li>Hakka Chinese (hak)
+      <li>Hawaiian (haw)
+      <li>Hebrew (he)
+      <li>Hindi (hi)
+      <li>Hungarian (hu)
+      <li>Icelandic (is)
+      <li>Ido (io)
+      <li>Indonesian (id)
+      <li>Interlingua (ia)
+      <li>Italian (it)
+      <li>Japanese (ja)
+      <li>K'iche' (quc)
+      <li>Kannada (kn)
+      <li>Karakalpak (kaa)
+      <li>Kazakh (kk)
+      <li>Klingon (piqd)
+      <li>Konkani (kok)
+      <li>Korean (ko)
+      <li>Kurdish (ku)
+      <li>Kyrgyz (ky)
+      <li>Lang Belta (qdb)
+      <li>Latgalian (ltg)
+      <li>Latin (la)
+      <li>Latvian (lv)
+      <li>Lingua Franca Nova (lfn)
+      <li>Lithuanian (lt)
+      <li>Lojban (jbo)
+      <li>Lule Saami (smj)
+      <li>Luxembourgish (lb)
+      <li>Macedonian (mk)
+      <li>Malay (ms)
+      <li>Malayalam (ml)
+      <li>Maltese (mt)
+      <li>Marathi (mr)
+      <li>Mongolian (mn)
+      <li>Myanmar: Burmese (my)
+      <li>Māori (mi)
+      <li>Nahuatl: Classical (nci)
+      <li>Nepali (ne)
+      <li>Nogai (nog)
+      <li>Norwegian Bokmål (nb, no)
+      <li>Oriya (or)
+      <li>Oromo (om)
+      <li>Papiamento (pap)
+      <li>Pashto: Afghanistan (ps)
+      <li>Pashto (ps)
+      <li>Persian: Pinglish (fa-latn)
+      <li>Persian (fa)
+      <li>Polish (pl)
+      <li>Portuguese: Brazil (pt-br, pt)
+      <li>Portuguese: Portugal (pt, pt-pt)
+      <li>Punjabi (pa)
+      <li>Pyash (py)
+      <li>Quechua (qu)
+      <li>Quenya (qya)
+      <li>Romanian (ro)
+      <li>Russian: Classic (ru-cl)
+      <li>Russian: Latvia (ru-lv)
+      <li>Russian (ru)
+      <li>Serbian (sr)
+      <li>Setswana (tn)
+      <li>Shan: Tai Yai (shn)
+      <li>sinago (sngo) ⭢ local implementation
+      <li>Sindarin (sjn)
+      <li>Sindhi (sd)
+      <li>Sinhala (si)
+      <li>Slovak (sk)
+      <li>Slovenian (sl)
+      <li>Spanish: Latin America (es-419, es-mx)
+      <li>Spanish: Spain (es)
+      <li>Swahili (sw)
+      <li>Swedish (sv)
+      <li>Tamil (ta)
+      <li>Tatar (tt)
+      <li>Telugu (te)
+      <li>Thai (th)
+      <li>Tigrinya (ti)
+      <li>Totontepec Mixe (mto)
+      <li>Turkish (tr)
+      <li>Turkmen (tk)
+      <li>Ukrainian (uk)
+      <li>Urdu (ur)
+      <li>Uyghur (ug)
+      <li>Uzbek (uz)
+      <li>Vietnamese: Central (vi-vn-x-central)
+      <li>Vietnamese: Northern (vi)
+      <li>Vietnamese: Southern (vi-vn-x-south)
+      <li>Welsh (cy)
+      <li>xextan-test (xex)
+    </ol>
+    <ol>
+      <li>af (Afrikaans)
+      <li>am (Amharic)
+      <li>an (Aragonese)
+      <li>ar (Arabic)
+      <li>as (Assamese)
+      <li>az (Azerbaijani)
+      <li>ba (Bashkir)
+      <li>be (Belarusian)
+      <li>bg (Bulgarian)
+      <li>bn (Bengali)
+      <li>bpy (Bishnupriya Manipuri)
+      <li>bs (Bosnian)
+      <li>ca (Catalan)
+      <li>ca-ba (Catalan: Balearic)
+      <li>ca-nw (Catalan: North-western)
+      <li>ca-va (Catalan: Valencian)
+      <li>chr-US-Qaaa-x-west (Cherokee)
+      <li>cmn, zh-cmn, zh (Chinese: Mandarin, latin as English)
+      <li>cmn-latn-pinyin, zh-cmn, zh (Chinese: Mandarin, latin as Pinyin)
+      <li>crh (Crimean Tatar)
+      <li>cs (Czech)
+      <li>cv (Chuvash)
+      <li>cy (Welsh)
+      <li>da (Danish)
+      <li>de (German)
+      <li>el (Greek)
+      <li>en-029, en (English: Caribbean)
+      <li>en-gb, en (English: Great Britain)
+      <li>en-gb-scotland, en (English: Scotland)
+      <li>en-gb-x-gbclan, en-gb, en (English: Lancaster)
+      <li>en-gb-x-gbcwmd, en-gb, en (English: West Midlands)
+      <li>en-gb-x-rp, en-gb, en (English: Received Pronunciation)
+      <li>en-shaw (English: Shavian alphabet)
+      <li>en-us, en (English: America)
+      <li>en-us-nyc (English: America, New York City)
+      <li>eo (Esperanto)
+      <li>es (Spanish: Spain)
+      <li>es-419, es-mx (Spanish: Latin America)
+      <li>et (Estonian)
+      <li>eu (Basque)
+      <li>fa (Persian)
+      <li>fa-latn (Persian: Pinglish)
+      <li>fi (Finnish)
+      <li>fo (Faroese)
+      <li>fr-be, fr (French: Belgium)
+      <li>fr-ch, fr (French: Switzerland)
+      <li>fr-fr, fr (French: France)
+      <li>ga (Gaelic: Irish)
+      <li>gd (Gaelic: Scottish)
+      <li>gn (Guarani)
+      <li>grc (Greek: Ancient)
+      <li>gu (Gujarati)
+      <li>hak (Hakka Chinese)
+      <li>haw (Hawaiian)
+      <li>he (Hebrew)
+      <li>hi (Hindi)
+      <li>hr, hbs (Croatian)
+      <li>ht (Haitian Creole)
+      <li>hu (Hungarian)
+      <li>hy, hy-arevela (Armenian: East Armenia)
+      <li>hyw, hy-arevmda, hy (Armenian: West Armenia)
+      <li>ia (Interlingua)
+      <li>id (Indonesian)
+      <li>io (Ido)
+      <li>is (Icelandic)
+      <li>it (Italian)
+      <li>ja (Japanese)
+      <li>jbo (Lojban)
+      <li>ka (Georgian)
+      <li>kaa (Karakalpak)
+      <li>kk (Kazakh)
+      <li>kl (Greenlandic)
+      <li>kn (Kannada)
+      <li>ko (Korean)
+      <li>kok (Konkani)
+      <li>ku (Kurdish)
+      <li>ky (Kyrgyz)
+      <li>la (Latin)
+      <li>lb (Luxembourgish)
+      <li>lfn (Lingua Franca Nova)
+      <li>lt (Lithuanian)
+      <li>ltg (Latgalian)
+      <li>lv (Latvian)
+      <li>mi (Māori)
+      <li>mk (Macedonian)
+      <li>ml (Malayalam)
+      <li>mn (Mongolian)
+      <li>mr (Marathi)
+      <li>ms (Malay)
+      <li>mt (Maltese)
+      <li>mto (Totontepec Mixe)
+      <li>my (Myanmar: Burmese)
+      <li>nb, no (Norwegian Bokmål)
+      <li>nci (Nahuatl: Classical)
+      <li>ne (Nepali)
+      <li>nl (Dutch)
+      <li>nog (Nogai)
+      <li>om (Oromo)
+      <li>or (Oriya)
+      <li>pa (Punjabi)
+      <li>pap (Papiamento)
+      <li>piqd (Klingon)
+      <li>pl (Polish)
+      <li>ps (Pashto)
+      <li>ps (Pashto: Afghanistan)
+      <li>pt, pt-pt (Portuguese: Portugal)
+      <li>pt-br, pt (Portuguese: Brazil)
+      <li>py (Pyash)
+      <li>qdb (Lang Belta)
+      <li>qu (Quechua)
+      <li>quc (K'iche')
+      <li>qya (Quenya)
+      <li>ro (Romanian)
+      <li>ru (Russian)
+      <li>ru-cl (Russian: Classic)
+      <li>ru-lv (Russian: Latvia)
+      <li>rup (Aromanian)
+      <li>sd (Sindhi)
+      <li>shn (Shan: Tai Yai)
+      <li>si (Sinhala)
+      <li>sjn (Sindarin)
+      <li>sk (Slovak)
+      <li>sl (Slovenian)
+      <li>smj (Lule Saami)
+      <li>sngo (sinago) ⭢ local implementation
+      <li>sq (Albanian)
+      <li>sr (Serbian)
+      <li>sv (Swedish)
+      <li>sw (Swahili)
+      <li>ta (Tamil)
+      <li>te (Telugu)
+      <li>th (Thai)
+      <li>ti (Tigrinya)
+      <li>tk (Turkmen)
+      <li>tn (Setswana)
+      <li>tr (Turkish)
+      <li>tt (Tatar)
+      <li>ug (Uyghur)
+      <li>uk (Ukrainian)
+      <li>ur (Urdu)
+      <li>uz (Uzbek)
+      <li>vi (Vietnamese: Northern)
+      <li>vi-vn-x-central (Vietnamese: Central)
+      <li>vi-vn-x-south (Vietnamese: Southern)
+      <li>xex (xextan-test)
+      <li>yue, zh-yue, zh (Chinese: Cantonese)
+      <li>yue, zh-yue, zh (Chinese: Cantonese, latin as Jyutping)
+    </ol>
+    <a class="clsHide" href="#idTchNlp004Espknglagodsn"></a></div>
+  <p id="idTchNlp004Espknglagonam">name::
+    <br>* McsEngl.espeakng'language,
+    <a class="clsHide" href="#idTchNlp004Espknglagonam"></a></p>
+  </section>
+
   <section id="idTchNlp004Espkngbild">
-  <h4 id="idTchNlp004EspkngbildH4">build of espkng
+  <h4 id="idTchNlp004EspkngbildH4">building espeakng
     <a class="clsHide" href="#idTchNlp004EspkngbildH2"></a></h4>
   <p id="idTchNlp004Espkngbilddsn">description::
     <br>× Mcsh-creation: {2025-11-19},
     <br>
+  <p id="idTchNlp004Espkngbildnam">name::
+    <br>* McsEngl.espeakng'build,
+    <a class="clsHide" href="#idTchNlp004Espkngbildnam"></a></p>
+
+  <section id="idTchNlp004Espkngbildunis">
+  <h5 id="idTchNlp004EspkngbildunisH5">uninstalling espeakng
+    <a class="clsHide" href="#idTchNlp004EspkngbildunisH2"></a></h5>
+  <p id="idTchNlp004Espkngbildunisdsn">description::
+    <br>× Mcsh-creation: {2025-11-24},
+    <br>Remove the installed espeak-ng from /usr/local
+    <br>sudo rm -rf /usr/local/share/espeak-ng-data
+    <br>sudo rm -f /usr/local/bin/espeak-ng /usr/local/bin/espeak /usr/local/bin/speak-ng
+    <br>sudo rm -f /usr/local/lib/libespeak-ng.*
+    <br>sudo rm -f /usr/local/lib/pkgconfig/espeak-ng.pc
+    <br>sudo ldconfig
+    <br>
+    <br>Remove the old source tree
+    <br>cd ~
+    <br>rm -rf espeak-ng
+    <a class="clsHide" href="#idTchNlp004Espkngbildunisdsn"></a></p>
+  <p id="idTchNlp004Espkngbildunisnam">name::
+    <br>* McsEngl.espeakng'uninstalling,
+    <a class="clsHide" href="#idTchNlp004Espkngbildunisnam"></a></p>
+  </section>
+
+  <section id="idTchNlp004Espkngbildcmk">
+  <h5 id="idTchNlp004EspkngbildcmkH5">cmake-build espeakng
+    <a class="clsHide" href="#idTchNlp004EspkngbildcmkH2"></a></h5>
+  <p id="idTchNlp004Espkngbildcmkdsn">description::
+    <br>× Mcsh-creation: {2025-11-24},
+    <br>## Clone the repo
+    <br>cd ~
+    <br>git clone https://github.com/espeak-ng/espeak-ng.git
+    <br>cd espeak-ng
+    <br>
+    <br>## Configure & build with CMake
+    <br>mkdir build
+    <br>cd build
+    <br>cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
+    <br>make -j"$(nproc)"
+    <br>
+    <br>## Install
+    <br>sudo make install
+    <br>
+    <br>## Test the clean install
+    <br>espeak-ng --version
+    <br>espeak-ng -v en "Clean espeak en build works"
+    <a class="clsHide" href="#idTchNlp004Espkngbildcmkdsn"></a></p>
+  <p id="idTchNlp004Espkngbildcmknam">name::
+    <br>* McsEngl.espeakng'build-with-cmake,
+    <a class="clsHide" href="#idTchNlp004Espkngbildcmknam"></a></p>
+  </section>
+
+  <section id="idTchNlp004Espkngbildmk">
+  <h5 id="idTchNlp004EspkngbildmkH5">make-build espeakng
+    <a class="clsHide" href="#idTchNlp004EspkngbildmkH2"></a></h5>
     <br>* {2025-11-19} on wsl:
     <br>sudo apt update
     <br>
@@ -2255,9 +2770,267 @@
     <br># Test another language
     <br>espeak-ng -v sngo "Sinago lago"
     <a class="clsHide" href="#idTchNlp004Espkngbilddsn"></a></p>
-  <p id="idTchNlp004Espkngbildnam">name::
-    <br>* McsEngl.espkng'build,
-    <a class="clsHide" href="#idTchNlp004Espkngbildnam"></a></p>
+  <p id="idTchNlp004Espkngbildmknam">name::
+    <br>* McsEngl.espeakng'build-with-make,
+    <a class="clsHide" href="#idTchNlp004Espkngbildmknam"></a></p>
+  </section>
+  </section>
+
+  <section id="idTchNlp004Espkngadnl">
+  <h4 id="idTchNlp004EspkngadnlH4">language-adding espeakng
+    <a class="clsHide" href="#idTchNlp004EspkngadnlH2"></a></h4>
+  <p id="idTchNlp004Espkngadnldsn">description::
+    <br>× Mcsh-creation: {2025-11-22},
+    <br>· eg language: sinago, code: sngo.
+    <a class="clsHide" href="#idTchNlp004Espkngadnldsn"></a></p>
+  <p id="idTchNlp004Espkngadnlnam">name::
+    <br>* McsEngl.espkngadlg!=espeakng'adding-language,
+    <br>* McsEngl.espeakng'adding-language!⇒espkngadlg,
+    <br>* McsEngl.espeakng'language-adding!⇒espkngadlg,
+    <a class="clsHide" href="#idTchNlp004Espkngadnlnam"></a></p>
+
+  <section id="idTchNlp004Espkngadnldl">
+  <h5 id="idTchNlp004EspkngadnldlH5">1) define-language espeakng
+    <a class="clsHide" href="#idTchNlp004EspkngadnldlH2"></a></h5>
+  <p id="idTchNlp004Espkngadnldldsn">description::
+    <br>× Mcsh-creation: {2025-11-24},
+    <br>· create file: ~/espeak-ng/espeak-ng-data/lang/sngo
+    <br>name sinago
+    <br>phonemes sngo
+    <br>
+    <br>· create file: ~/espeak-ng/espeak-ng-data/voices/sngo
+    <br>name sinago
+    <br>language sngo
+    <br>phonemes sngo
+    <br>dictionary sngo
+    <a class="clsHide" href="#idTchNlp004Espkngadnldldsn"></a></p>
+  <p id="idTchNlp004Espkngadnldlnam">name::
+    <br>* McsEngl.espkngadlg'1-define-language,
+    <a class="clsHide" href="#idTchNlp004Espkngadnldlnam"></a></p>
+  </section>
+
+  <section id="idTchNlp004Espkngadnldf">
+  <h5 id="idTchNlp004EspkngadnldfH5">2) define-phonemes espeakng
+    <a class="clsHide" href="#idTchNlp004EspkngadnldfH2"></a></h5>
+  <p id="idTchNlp004Espkngadnldfdsn">description::
+    <br>× Mcsh-creation: {2025-11-24},
+    <br>· create file: ~/espeak-ng/phsource/ph_sinago
+    <br>· with definitions, look other
+    <br>
+    <br>· edit file: ~/espeak-ng/phsource/phonemes
+    <br>// add
+    <br>phonemetable sngo base1
+    <br>include ph_sinago
+    <a class="clsHide" href="#idTchNlp004Espkngadnldfdsn"></a></p>
+  <p id="idTchNlp004Espkngadnldfnam">name::
+    <br>* McsEngl.espkngadlg'2-define-phonemes,
+    <a class="clsHide" href="#idTchNlp004Espkngadnldfnam"></a></p>
+  </section>
+
+  <section id="idTchNlp004Espkngadnldd">
+  <h5 id="idTchNlp004EspkngadnlddH5">3) define-dictionary espeakng
+    <a class="clsHide" href="#idTchNlp004EspkngadnlddH2"></a></h5>
+  <p id="idTchNlp004Espkngadnldddsn">description::
+    <br>× Mcsh-creation: {2025-11-24},
+    <br>· create file: ~/espeak-ng/dictsource/sngo_rules
+    <br>· with spelling-to-phoneme translation
+    <br>· create file: ~/espeak-ng/dictsource/sngo_list
+    <br>· with special pronunciations.
+    <br>· create file: ~/espeak-ng/dictsource/sngo_extra
+    <br>· optional.
+    <a class="clsHide" href="#idTchNlp004Espkngadnldddsn"></a></p>
+  <p id="idTchNlp004Espkngadnlddnam">name::
+    <br>* McsEngl.espkngadlg'3-define-dictionary,
+    <a class="clsHide" href="#idTchNlp004Espkngadnlddnam"></a></p>
+  </section>
+
+  <section id="idTchNlp004Espkngadnlcp">
+  <h5 id="idTchNlp004EspkngadnlcpH5">4) compile espeakng
+    <a class="clsHide" href="#idTchNlp004EspkngadnlcpH2"></a></h5>
+  <p id="idTchNlp004Espkngadnlcpdsn">description::
+    <br>× Mcsh-creation: {2025-11-24},
+    <br>
+    <br>## Rebuild all phonemes cleanly from the source tree
+    <br><code>cd ~/espeak-ng
+    <br>sudo espeak-ng --path=./espeak-ng-data --compile-phonemes</code>
+    <br>
+    <br>## Install phoneme data into /usr/local
+    <br><code>sudo install -m 644 espeak-ng-data/phontab   /usr/local/share/espeak-ng-data/phontab
+    <br>sudo install -m 644 espeak-ng-data/phondata  /usr/local/share/espeak-ng-data/phondata
+    <br>sudo install -m 644 espeak-ng-data/phonindex /usr/local/share/espeak-ng-data/phonindex</code>
+    <br>## if language files not in /usr/local/...
+    <br><code>sudo install -D -m 644   ~/espeak-ng/espeak-ng-data/lang/art/sngo   /usr/local/share/espeak-ng-data/lang/art/sngo
+    <br>sudo install -D -m 644   ~/espeak-ng/espeak-ng-data/voices/sngo   /usr/local/share/espeak-ng-data/voices/sngo</code>
+    <br>
+    <br>## Compile your custom dictionary with your rules/list
+    <br><code>cd ~/espeak-ng/dictsource
+    <br>
+    <br>sudo /usr/local/bin/espeak-ng \
+    <br>  --path=/usr/local/share/espeak-ng-data \
+    <br>  --compile=sngo</code>
+    <br>
+    <br>## test new language
+    <br><code>espeak-ng -v sngo --ipa "sinago-lago"</code>
+    <a class="clsHide" href="#idTchNlp004Espkngadnlcpdsn"></a></p>
+  <p id="idTchNlp004Espkngadnlcpnam">name::
+    <br>* McsEngl.espkngadlg'4-compile,
+    <a class="clsHide" href="#idTchNlp004Espkngadnlcpnam"></a></p>
+  </section>
+  </section>
+
+  <section id="idTchNlp004Espkngrmlg">
+  <h4 id="idTchNlp004EspkngrmlgH4">language-removing espeakng
+    <a class="clsHide" href="#idTchNlp004EspkngrmlgH2"></a></h4>
+  <p id="idTchNlp004Espkngrmlgdsn">description::
+    <br>× Mcsh-creation: {2025-11-24},
+    <br>
+    <br>## in /usr/local/share/espeak-ng-data/
+    <br>sudo rm -f /usr/local/share/espeak-ng-data/af_dict
+    <br>sudo rm -f /usr/local/share/espeak-ng-data/lang/af
+    <br>sudo rm -f /usr/local/share/espeak-ng-data/voices/af
+    <br>
+    <br>cd ~/espeak-ng/dictsource
+    <br>rm -f af_rules af_list af_emoji 2>/dev/null
+    <br>
+    <br>rm -f ~/espeak-ng/espeak-ng-data/lang/af
+    <br>rm -f ~/espeak-ng/espeak-ng-data/voices/af
+    <br>
+    <br>## remove from ~/espeak-ng/phsource/phonemes
+    <br>phonemetable af base1
+    <br>include ph_afrikaans
+    <br>
+    <br>## rebuild phonemes
+    <br>cd ~/espeak-ng
+    <br>sudo espeak-ng --path=./espeak-ng-data --compile-phonemes
+    <br>
+    <br>## install the clean phontab:
+    <br>sudo install -m 644 espeak-ng-data/phontab   /usr/local/share/espeak-ng-data/
+    <br>sudo install -m 644 espeak-ng-data/phondata  /usr/local/share/espeak-ng-data/
+    <br>sudo install -m 644 espeak-ng-data/phonindex /usr/local/share/espeak-ng-data/
+    <br>
+    <a class="clsHide" href="#idTchNlp004Espkngrmlgdsn"></a></p>
+  <p id="idTchNlp004Espkngrmlgnam">name::
+    <br>* McsEngl.espeakng'language-removing,
+    <a class="clsHide" href="#idTchNlp004Espkngrmlgnam"></a></p>
+  </section>
+
+  <section id="idTchNlp004Espkngctwa">
+  <h4 id="idTchNlp004EspkngctwaH4">compiling-to-WebAssembly espeakng
+    <a class="clsHide" href="#idTchNlp004EspkngctwaH2"></a></h4>
+  <p id="idTchNlp004Espkngctwadsn">description::
+    <br>× Mcsh-creation: {2025-11-27},
+    <br>
+    <br>· assumption: a) linux|wsl, b) dowloaded|built espeak-ng, c) existing|new languages working.
+    <br>· your goal is to produce these files from the eSpeak-NG source (with your language included):
+    <br>* espeakng.js – main glue
+    <br>* espeakng.worker.js – Web Worker
+    <br>* espeakng.worker.data – binary voice+language data (this is where your new language lives)
+    <br>* espeakng.worker.wasm - in newer builds
+    <br>
+    <br>## 1) install tools, espeak-ng, emscripten:
+    <br><code># instal tools
+    <br>sudo apt install autoconf automake libtool pkg-config build-essential git
+    <br>
+    <br># instal new espeak-ng in espeak-ng-wasm:
+    <br>cd ~
+    <br>git clone https://github.com/espeak-ng/espeak-ng.git espeak-ng-wasm
+    <br>cd espeak-ng-wasm
+    <br>./autogen.sh
+    <br>
+    <br># install emscripten:
+    <br>cd ~
+    <br>git clone https://github.com/emscripten-core/emsdk.git
+    <br>cd emsdk
+    <br>./emsdk install latest
+    <br>./emsdk activate latest
+    <br>source ./emsdk_env.sh</code>
+    <br>
+    <br>## 2) Bring your compiled installed data in wasm, so compile only the-languages you want:
+    <br><code>cd ~/espeak-ng-wasm
+    <br>rm -rf espeak-ng-data
+    <br>cp -a /usr/local/share/espeak-ng-data ./espeak-ng-data</code>
+    <br>
+    <br>## 3) Configure espeak-ng for Emscripten:
+    <br><code>cd ~/espeak-ng-wasm
+    <br>emconfigure ./configure --prefix=/usr --without-async --without-mbrola --without-sonic</code>
+    <br>
+    <br>## 4) Build the core library as WASM objects
+    <br># Patch ~/espeak-ng-wasm/src/include/compat/wctype.h for Emscripten
+    <br># replace at end
+    <br><code>#include &lt;ucd/ucd.h>
+    <br>#define iswalnum  ucd_isalnum
+    <br>#define iswalpha  ucd_isalpha
+    <br>#define iswblank  ucd_isblank
+    <br>#define iswcntrl  ucd_iscntrl
+    <br>#define iswdigit  ucd_isdigit
+    <br>#define iswgraph  ucd_isgraph
+    <br>#define iswlower  ucd_islower
+    <br>#define iswprint  ucd_isprint
+    <br>#define iswpunct  ucd_ispunct
+    <br>#define iswspace  ucd_isspace
+    <br>#define iswupper  ucd_isupper
+    <br>#define iswxdigit ucd_isxdigit
+    <br>#endif</code>
+    <br># with
+    <br><code>#include &lt;ucd/ucd.h>
+    <br>#ifndef __EMSCRIPTEN__
+    <br>#define iswalnum  ucd_isalnum
+    <br>#define iswalpha  ucd_isalpha
+    <br>#define iswblank  ucd_isblank
+    <br>#define iswcntrl  ucd_iscntrl
+    <br>#define iswgraph  ucd_isgraph
+    <br>#define iswlower  ucd_islower
+    <br>#define iswprint  ucd_isprint
+    <br>#define iswpunct  ucd_ispunct
+    <br>#define iswspace  ucd_isspace
+    <br>#define iswupper  ucd_isupper
+    <br>#define iswxdigit ucd_isxdigit
+    <br>#endif
+    <br>#endif</code>
+    <br>#then
+    <br><code>emmake make src/libespeak-ng.la</code>
+    <br>
+    <br>## 5) Patch `emscripten/Makefile` for modern Emscripten + data path
+    <br># on ~/espeak-ng-wasm/emscripten/Makefile
+    <br># 5.1) replace: =python ⭢ =python3
+    <br># 5.2) replace:
+    <br><code>CXXFLAGS+=-DESPEAK_DATA_PATH=\"$(EM_VIRTUAL_PATH_ESPEAKNG_DATA)\"</code>
+    <br># with
+    <br><code>CFLAGS   += -DESPEAK_DATA_PATH=\"/usr/share/espeak-ng-data\"
+    <br>CXXFLAGS += -DESPEAK_DATA_PATH=\"/usr/share/espeak-ng-data\"</code>
+    <br># 5.3) replace:
+    <br><code>EM_CXXFLAGS=-s RESERVED_FUNCTION_POINTERS=2 --memory-init-file 0 -s FORCE_FILESYSTEM=1 -s WASM=0 -s ERROR_ON_UNDEFINED_SYMBOLS=0</code>
+    <br># with
+    <br><code>EM_CXXFLAGS= \
+    <br>  -s RESERVED_FUNCTION_POINTERS=2 \
+    <br>  -s EXPORTED_RUNTIME_METHODS='["addFunction","removeFunction"]' \
+    <br>  -s FORCE_FILESYSTEM=1 \
+    <br>  -s ERROR_ON_UNDEFINED_SYMBOLS=0</code>
+    <br>
+    <br>## 6) Patch `~/espeak-ng-wasm/emscripten/post.js` for the correct callback signature
+    <br># replace:
+    <br><code>  var fp = addFunction(cb);
+    <br>  this.synth_(aText, fp);
+    <br>  removeFunction(fp);</code>
+    <br># with:
+    <br><code>  var fp = addFunction(cb, 'iiii');
+    <br>  this.synth_(aText, fp);
+    <br>  removeFunction(fp);</code>
+    <br>
+    <br>## 7) Build the JS + data bundle
+    <br><code>cd ~/espeak-ng-wasm/emscripten
+    <br>emmake make clean
+    <br>emmake make</code>
+    <br>
+    <br>## if all goes well, in ~/espeak-ng-wasm/emscripten/js/ you find your files.
+    <br>## copy them in your folder.
+    <br>## copy and ~/espeak-ng-wasm/emscripten/demo.html in same folder.
+    <br>## remove from demo.html and demo.html from path "js/" because all files are in the-same folder.
+    <br>## open from a-SERVER demo.html.
+    <a class="clsHide" href="#idTchNlp004Espkngctwadsn"></a></p>
+  <p id="idTchNlp004Espkngctwanam">name::
+    <br>* McsEngl.espeakng'compiling-to-WebAssembly,
+    <a class="clsHide" href="#idTchNlp004Espkngctwanam"></a></p>
   </section>
   </section>
 
