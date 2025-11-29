@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.techAI!=artificial-intelligence
-    (McsTchInf000036.0-43-0.2025-11-26 draft)</title>
+    (McsTchInf000036.0-45-0.2025-11-28 draft)</title>
   <meta name="keywords" content="artificial-intelligence, techAI, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -2686,16 +2686,16 @@
     <a class="clsHide" href="#idTchNlp004EspkngbildunisH2"></a></h5>
   <p id="idTchNlp004Espkngbildunisdsn">description::
     <br>× Mcsh-creation: {2025-11-24},
-    <br>Remove the installed espeak-ng from /usr/local
-    <br>sudo rm -rf /usr/local/share/espeak-ng-data
+    <br># Remove the installed espeak-ng from /usr/local
+    <br><code>sudo rm -rf /usr/local/share/espeak-ng-data
     <br>sudo rm -f /usr/local/bin/espeak-ng /usr/local/bin/espeak /usr/local/bin/speak-ng
     <br>sudo rm -f /usr/local/lib/libespeak-ng.*
     <br>sudo rm -f /usr/local/lib/pkgconfig/espeak-ng.pc
-    <br>sudo ldconfig
+    <br>sudo ldconfig</code>
     <br>
-    <br>Remove the old source tree
-    <br>cd ~
-    <br>rm -rf espeak-ng
+    <br># Remove the old source tree
+    <br><code>cd ~
+    <br>rm -rf espeak-ng</code>
     <a class="clsHide" href="#idTchNlp004Espkngbildunisdsn"></a></p>
   <p id="idTchNlp004Espkngbildunisnam">name::
     <br>* McsEngl.espeakng'uninstalling,
@@ -2708,22 +2708,22 @@
   <p id="idTchNlp004Espkngbildcmkdsn">description::
     <br>× Mcsh-creation: {2025-11-24},
     <br>## Clone the repo
-    <br>cd ~
+    <br><code>cd ~
     <br>git clone https://github.com/espeak-ng/espeak-ng.git
-    <br>cd espeak-ng
+    <br>cd espeak-ng</code>
     <br>
     <br>## Configure & build with CMake
-    <br>mkdir build
+    <br><code>mkdir build
     <br>cd build
     <br>cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
-    <br>make -j"$(nproc)"
+    <br>make -j"$(nproc)"</code>
     <br>
     <br>## Install
-    <br>sudo make install
+    <br><code>sudo make install</code>
     <br>
     <br>## Test the clean install
-    <br>espeak-ng --version
-    <br>espeak-ng -v en "Clean espeak en build works"
+    <br><code>espeak-ng --version
+    <br>espeak-ng -v en "Clean espeak en build works"</code>
     <a class="clsHide" href="#idTchNlp004Espkngbildcmkdsn"></a></p>
   <p id="idTchNlp004Espkngbildcmknam">name::
     <br>* McsEngl.espeakng'build-with-cmake,
@@ -2794,15 +2794,14 @@
     <a class="clsHide" href="#idTchNlp004EspkngadnldlH2"></a></h5>
   <p id="idTchNlp004Espkngadnldldsn">description::
     <br>× Mcsh-creation: {2025-11-24},
-    <br>· create file: ~/espeak-ng/espeak-ng-data/lang/sngo
-    <br>name sinago
-    <br>phonemes sngo
-    <br>
-    <br>· create file: ~/espeak-ng/espeak-ng-data/voices/sngo
-    <br>name sinago
+    <br>· create file: ~/espeak-ng/espeak-ng-data/lang/art/sngo
+    <br><code>name sinago
     <br>language sngo
     <br>phonemes sngo
     <br>dictionary sngo
+    <br>
+    <br>maintainer Kaseluris.Nikos.1959 <kaseluris.nikos@gmail.com>
+    <br>status experimental</code>
     <a class="clsHide" href="#idTchNlp004Espkngadnldldsn"></a></p>
   <p id="idTchNlp004Espkngadnldlnam">name::
     <br>* McsEngl.espkngadlg'1-define-language,
@@ -2819,8 +2818,8 @@
     <br>
     <br>· edit file: ~/espeak-ng/phsource/phonemes
     <br>// add
-    <br>phonemetable sngo base1
-    <br>include ph_sinago
+    <br><code>phonemetable sngo base1
+    <br>include ph_sinago</code>
     <a class="clsHide" href="#idTchNlp004Espkngadnldfdsn"></a></p>
   <p id="idTchNlp004Espkngadnldfnam">name::
     <br>* McsEngl.espkngadlg'2-define-phonemes,
@@ -2859,8 +2858,7 @@
     <br>sudo install -m 644 espeak-ng-data/phondata  /usr/local/share/espeak-ng-data/phondata
     <br>sudo install -m 644 espeak-ng-data/phonindex /usr/local/share/espeak-ng-data/phonindex</code>
     <br>## if language files not in /usr/local/...
-    <br><code>sudo install -D -m 644   ~/espeak-ng/espeak-ng-data/lang/art/sngo   /usr/local/share/espeak-ng-data/lang/art/sngo
-    <br>sudo install -D -m 644   ~/espeak-ng/espeak-ng-data/voices/sngo   /usr/local/share/espeak-ng-data/voices/sngo</code>
+    <br><code>sudo install -D -m 644   ~/espeak-ng/espeak-ng-data/lang/art/sngo   /usr/local/share/espeak-ng-data/lang/art/sngo</code>
     <br>
     <br>## Compile your custom dictionary with your rules/list
     <br><code>cd ~/espeak-ng/dictsource
@@ -2870,7 +2868,7 @@
     <br>  --compile=sngo</code>
     <br>
     <br>## test new language
-    <br><code>espeak-ng -v sngo --ipa "sinago-lago"</code>
+    <br><code>espeak-ng -v sngo --ipa "lago-sinago"</code>
     <a class="clsHide" href="#idTchNlp004Espkngadnlcpdsn"></a></p>
   <p id="idTchNlp004Espkngadnlcpnam">name::
     <br>* McsEngl.espkngadlg'4-compile,
@@ -3031,6 +3029,21 @@
   <p id="idTchNlp004Espkngctwanam">name::
     <br>* McsEngl.espeakng'compiling-to-WebAssembly,
     <a class="clsHide" href="#idTchNlp004Espkngctwanam"></a></p>
+  </section>
+
+  <section id="idTchNlp004Espkngirsc">
+  <h4 id="idTchNlp004EspkngirscH4">info-resource of espeakng
+    <a class="clsHide" href="#idTchNlp004EspkngirscH2"></a></h4>
+  <p id="idTchNlp004Espkngirscdsn">description::
+    <br>× Mcsh-creation: {2025-11-28},
+    <br>* GitHub repo: https://github.com/espeak-ng/espeak-ng/,
+    <br>* SinagoWordCreator: https://synagonism.net/dirMcs/dirLag/McsLag000010.last.html#idL0014wrdcrtr,
+    <br>* my wasm-demo with all languages: https://synagonism.net/dirMcs/dirLag/espeakng/demo.html,
+    <br>* my wasm-demo with 7 languages: https://synagonism.net/dirMcs/dirLag/wasm/demo.html,
+    <a class="clsHide" href="#idTchNlp004Espkngirscdsn"></a></p>
+  <p id="idTchNlp004Espkngirscnam">name::
+    <br>* McsEngl.espeakng'info-resource,
+    <a class="clsHide" href="#idTchNlp004Espkngirscnam"></a></p>
   </section>
   </section>
 

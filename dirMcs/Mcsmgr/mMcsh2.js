@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.23-0-0.2025-11-29: audio players',
     'mMcsh2.js.22-7-0.2025-11-21: language apps',
     'mMcsh2.js.22-6-1.2025-11-08: δ,θ',
     'mMcsh2.js.22-6-0.2025-11-06: EnglVerbFormFinder',
@@ -1045,7 +1046,6 @@ let fContainersInsert = function () {
   oEltCmdWebAppCCtC.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirLag/McsLag000006.last.html#idCharUcdstdcpfdr">Char⇔Codepoint Converter</a>'
   oEltCmdWebAppUl.appendChild(oEltCmdWebAppCCtC)
-  
 
   const oEltCmdWebAppCrcy = document.createElement('li')
   oEltCmdWebAppCrcy.innerHTML = 'Currency Converters:'
@@ -2398,6 +2398,33 @@ let fContainersInsert = function () {
   // clicking on PginfPathP-links and TabCntSrchOl-links, first highlight
   Array.prototype.slice.call(document.querySelectorAll('#idPginfPathP a, #idTabCntSrchOl a')).forEach(function (oEltIn) {
     fEvtLink(oEltIn)
+  })
+
+  // set audio-players
+  //  <span class="clsAudio">
+  //    <button class="clsAudioBtn">🗣</button>
+  //    <audio src="file.mp3"></audio>
+  //  </span>
+  const oAudioPlayers = document.querySelectorAll('.clsAudio')
+  oAudioPlayers.forEach(oEltAudio => {
+    const oAudio = oEltAudio.querySelector('audio')
+    const oAudioBtn = oEltAudio.querySelector('.clsAudioBtn')
+    const sAudioIcon = oAudioBtn.textContent
+    oAudioBtn.addEventListener('click', () => {
+      if (oAudio.paused) {
+        oAudio.play()
+        oAudioBtn.textContent = '⏸' // Pause icon
+      } else {
+        oAudio.pause()
+        oAudioBtn.textContent = sAudioIcon
+      }
+    })
+    oAudio.addEventListener('ended', () => {
+       oAudioBtn.textContent = sAudioIcon
+    })
+    oAudio.addEventListener('pause', () => {
+        oAudioBtn.textContent = sAudioIcon
+    })
   })
 
   window.onhashchange = function () {
