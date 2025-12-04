@@ -3,7 +3,7 @@
  *   and uploads the-files
  * The MIT License (MIT)
  *
- * Copyright (c) 2021-2022 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2021-2025 Kaseluris.Nikos.1959 (hmnSngo)
  * kaseluris.nikos@gmail.com
  * https:// synagonism.net/
  *

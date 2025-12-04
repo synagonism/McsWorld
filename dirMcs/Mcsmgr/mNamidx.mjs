@@ -1,9 +1,9 @@
 /*
- * go to line 138 (aLagALL) to change indexed languages.
+ * go to line 104 (aLagALL) to change indexed languages.
  * mNamidx.mjs - module that creates name-indexes and uploads the-files
  * The MIT License (MIT)
  *
- * Copyright (c) 2017 - 2023 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2017 - 2025 Kaseluris.Nikos.1959 (hmnSngu)
  * kaseluris.nikos@gmail.com
  * https://synagonism.net/
  *
@@ -26,16 +26,15 @@
  * SOFTWARE.
  *
  * DOING:
- *   it works as a-module AND stand-alone.
- *   1) it updates the-names of Mcs-files in namidx.txt, in index-files.
- *   2) it creates the-file 'sftp.json' that contains the-changed files we have to upload.
+ *   it works as a-module 
+ *   1) it updates the-names of Mcs-files in Mcsmgr/namidx.txt, in index-files.
+ *   2) it creates the-file 'Mcsmgr/sftp.json' that contains the-changed files we have to upload.
  *   3) it computes the-number of names.
  *   4) it computes the-number of concepts.
  *   5) it uploads the-files
- * INPUT: namidx.txt
- * OUTPUT: dirLang/namidx.lagLangX.json, namidx.lagRoot.json, Mcsqnt.json, sftp.json,
+ * INPUT: Mcsmgr/namidx.txt
+ * OUTPUT: dirLang/namidx.lagLangX.json, namidx.lagRoot.json, Mcsqnt.json, Mcsmgr/sftp.json,
  *
- * RUN: node Mcsmgr/mNamidx.mjs pwd ALONE|ANYTHING
  *
  * PROBLEM:
  * - to compute the-number of concepts, we must set new DIRS at cptqnt.root.json.
@@ -52,6 +51,7 @@ import {fWriteJsonArray} from './mUtil.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mNamidx.mjs.0-7-0.2025-11-30: only module',
     'mNamidx.mjs.0-6-1.2025-02-23: sFileIdxRest===sLagIn+00_0',
     'mNamidx.mjs.0-6-0.2025-02-22: sFileIdxRest===sLagIn+00',
     'mNamidx.mjs.0-5-2.2023-12-04: <p>[name:: on EXTRA names',
@@ -80,10 +80,7 @@ const
   ]
 
 let
-  aFileMcsInComments,
-  aFileMcsTxt = [],
-  aLagAlone = undefined,
-  bAlone = false
+  aFileMcsTxt = []
 
 if (process.argv[2]) {
   oSftp.password = process.argv[2]
@@ -92,37 +89,6 @@ if (process.argv[2]) {
   process.exit()
 }
 
-if (process.argv[3]) {
-  bAlone = true
-}
-
-if (bAlone) {
-  aFileMcsInComments = moFs.readFileSync('namidx.txt').toString().split('\n')
-
-  /**
-   * a) find Mcs-files to remove|add its names and put paths in aFileMcsIn.
-   * b) find languages to work-with.
-   */
-  for (let n = 0; n < aFileMcsInComments.length; n++) {
-    let sLn = aFileMcsInComments[n]
-
-    // remove comments and empty-lines
-    if (!sLn.startsWith('//') && sLn.length !== 0) {
-      if (sLn.startsWith('lag')) {
-        if (!aLagAlone) aLagAlone = []
-        aLagAlone.push(sLn.substring(0,7))
-        // aLag = ['lagALLL'] or ['lagElln','lagEngl',...]
-      } else {
-        // remove comments after ;
-        if (sLn.indexOf(';') > 0) {
-          aFileMcsTxt.push(sLn.substring(0,sLn.lastIndexOf(';')))
-        } else {
-          aFileMcsTxt.push(sLn)
-        }
-      }
-    }
-  }
-}
 
 function fNamidx(fileIn, fSftpIn) {
   let
@@ -136,7 +102,7 @@ function fNamidx(fileIn, fSftpIn) {
     aLag,
     // array of languages ['lagALLL']
     //aLagALL = ['lagEngl','lagElln','lagZhon','lagDeut','lagFrac'],
-    aLagALL = ['lagEngl','lagSngo','lagElln','lagZhon',
+    aLagALL = ['lagEngl','lagSngu','lagElln','lagZhon',
     'lagArab','lagDeut','lagElla','lagEspo','lagFrac',
     'lagHind','lagItln','lagRomn',
     'lagSbos','lagShrv','lagScnr','lagSsrp','lagSbul','lagSmkd','lagSrus','lagSslv',
@@ -184,8 +150,7 @@ function fNamidx(fileIn, fSftpIn) {
   }
   oRootFileIdx_Idx = fCreateOFileIdx_Index(aRootFileIdx_Idx_Qntnam)
 
-  if (aLagAlone) aLag = aLagAlone
-  else aLag = aLagALL
+  aLag = aLagALL
 
   if (aFileMcsIn.length > 0) {
     // first file we want to upload
@@ -330,7 +295,7 @@ function fNamidx(fileIn, fSftpIn) {
       // WRITE arrays in oFileIdx_ANamUrl ({lagEngl01ei:[[name,Url]]})
       // in index-files
       for (let sFilIdx in oFileIdx_ANamUrl) {
-        //console.log(aLag[nL]+", "+sFilIdx)
+        console.log(aLag[nL]+", "+sFilIdx)
         let
           aNew = oFileIdx_ANamUrl[sFilIdx], // the-array with name-Urls
           // the-name of the existing file with names-urls
@@ -386,7 +351,7 @@ function fNamidx(fileIn, fSftpIn) {
    *   - sLagIn: the-lag whose names will-be-removed
    */
   function fRemoveNamUrl(oFileIdx_IdxIn, sFileMcsRmvIn, sLagIn) {
-    // oFileIdx_IdxIn = { lagElln00: 'charREST', lagElln01alfa: 'Α', ... lagSngo25u: 'U' }
+    // oFileIdx_IdxIn = { lagElln00: 'charREST', lagElln01alfa: 'Α', ... lagSngu25u: 'U' }
     // sFileMcsRmvIn = dirCor/McsCor999999.last.html
     // sLagIn = lagElln
     // for ALL index-files remove names with Url sFileMcsRmvIn
@@ -457,7 +422,7 @@ function fNamidx(fileIn, fSftpIn) {
    *  using first character of name, for a-language
    * INPUT:
    *  - aNUIn: ["name","dirNtr/McsNtr000007.last.html#idChmElrBoron"]
-   *  - sLagIn: 'lagSngo','lagEngl','lagElln'
+   *  - sLagIn: 'lagSngu','lagEngl','lagElln'
    */
   function fStoreNamUrlLag(aNUIn, sLagIn) {
     let
@@ -534,7 +499,7 @@ function fNamidx(fileIn, fSftpIn) {
 
   /**
    * DOING: it stores a-name-Url in oFileIdx_ANamUrl in a-index-file
-   * INPUT: sFileIdxIn: lagSngo24i, lagZhon05, lagEngl19es_0
+   * INPUT: sFileIdxIn: lagSngu24i, lagZhon05, lagEngl19es_0
    */
   function fStoreNamUrlNamidx(sFileIdxIn, aNUIn, sLagIn) {
     //console.log(sFileIdxIn+', '+aNUIn[0])
@@ -887,7 +852,7 @@ function fNamidx(fileIn, fSftpIn) {
   let aSftp = Array.from(oSetFileUp)
   aSftp.sort()
   console.log(aSftp)
-  fWriteJsonArray('sftp.json', aSftp)
+  fWriteJsonArray('Mcsmgr/sftp.json', aSftp)
 
   console.log('>>> Mcs-file indexed:')
   console.log(aFileMcs_QntMcs)
@@ -989,14 +954,6 @@ function fNamidx(fileIn, fSftpIn) {
 
   //call
   if (fSftpIn) fSftpIn()
-}
-
-// IF run alone
-if (bAlone) {
-  // create name-indices
-  fNamidx(aFileMcsTxt)
-  //upload files
-  fSftp()
 }
 
 export {fNamidx}

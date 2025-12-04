@@ -1,9 +1,10 @@
 /**
- * DOING: sftp the-files in SftpAgg.json
+ * DOING: sftp the-files in Mcsmgr/SftpOnly.json
  * INPUT:
  * OUTPUT:
- * RUN: node mSftpOnly password
+ * RUN: node Mcsmgr/mSftpOnly.mjs password
  *
+ * modified: {2025-11-30} Mcsmgr/SftpOnly.json
  * modified: {2022-03-17} mSftpOnly.mjs
  * modified: {2021-04-29}
  * created: {2018-09-27}
@@ -27,7 +28,7 @@ if (process.argv[2]) {
 }
 
 function fSftp () {
-  var aFil = JSON.parse(moFs.readFileSync('SftpAgg.json'))
+  var aFil = JSON.parse(moFs.readFileSync('Mcsmgr/SftpOnly.json'))
   console.log(aFil)
 
   const fSend_file = (oConfigIn, sFileIn) => {
@@ -37,7 +38,7 @@ function fSftp () {
       sftp.on('keyboard-interactive', (name, instructions, instructionsLang, prompts, finish) => { finish([oConfigIn.password]); });
       sftp.connect(oConfigIn).then(() => {
         // SPECIFIC INFO
-        return sftp.put("D:/xampp/htdocs/dWstSgm/dirMcs/" + sFileIn,
+        return sftp.put("c:/xampp/htdocs/dWstSgm/dirMcs/" + sFileIn,
           "/var/www/vhosts/synagonism.net/httpdocs/dirMcs/" + sFileIn);
       }).then(() => {
         console.log('finish '+sFileIn);
@@ -69,9 +70,6 @@ function fSftp () {
   oPool.start().then(function () {
     console.log({"message":"OK"}); // res.send('{"message":"OK"}');
   });
-
-  //empty files to upload
-  moFs.writeFileSync('SftpAgg.json', '[]')
 }
 fSftp()
 

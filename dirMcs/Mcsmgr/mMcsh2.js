@@ -2,7 +2,7 @@
  * mMcsh2.js - module McsHitp webpage-format code.
  * The MIT License (MIT)
  *
- * Copyright (c) 2010-2025 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2010-2025 Kaseluris.Nikos.1959 (hmnSngu)
  * kaseluris.nikos@gmail.com
  * https:// synagonism.net/
  *
@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.23-1-0.2025-12-03: title search',
     'mMcsh2.js.23-0-0.2025-11-29: audio players',
     'mMcsh2.js.22-7-0.2025-11-21: language apps',
     'mMcsh2.js.22-6-1.2025-11-08: δ,θ',
@@ -282,11 +283,7 @@ let fContainersInsert = function () {
   oEltCnrTopSearchIcnI.setAttribute('class', 'clsFa clsFaSearch clsTopIcn clsColorWhite clsFloatRight clsPosRight')
   oEltCnrTopSearchIcnI.addEventListener('pointerdown', function (oEvtIn) {
     oEvtIn.preventDefault()
-    oEltTabSearchIpt.value = ''
-    oEltTabSearchOl.innerHTML = sTabSearchOl
-    oEltTabSearchP.innerHTML = sTabSearchPSetText()
-    sIdxfile = 'lagRoot'
-    fCnrSearchShow()
+    fCmdQuerySelection()
   })
   oEltCnrTopDiv.id = 'idCnrTopDiv'
   oEltCnrMainDiv.id = 'idCnrMainDiv'
@@ -332,7 +329,13 @@ let fContainersInsert = function () {
   oEltCnrTopDiv.appendChild(oEltCnrTopSearchIcnI)
   oEltCnrTopTitleP.addEventListener('pointerdown', function (oEvtIn) {
     oEvtIn.preventDefault()
-    fCmdQuerySelection()
+    oEltTabSearchIpt.value = ''
+    oEltTabSearchOl.innerHTML = sTabSearchOl
+    oEltTabSearchP.innerHTML = sTabSearchPSetText()
+    sIdxfile = 'lagRoot'
+    fCnrSearchShow()
+    //oEvtIn.preventDefault()
+    //fCmdQuerySelection()
   })
 
   function fCnrOntopRemove() {
@@ -536,17 +539,17 @@ let fContainersInsert = function () {
     }
   })
   oEltCmdSrchUl.appendChild(oEltCmdSrchEngl)
-  // Sinago
-  const oEltCmdSrchSngo = document.createElement('li')
-  oEltCmdSrchSngo.innerHTML = '<button id="idCmdBtn2">Sinago-name (Shift+F2, Sngo)</button>'
-  oEltCmdSrchSngo.addEventListener('pointerdown', async function (oEvtIn) {
+  // Sinagu
+  const oEltCmdSrchSngu = document.createElement('li')
+  oEltCmdSrchSngu.innerHTML = '<button id="idCmdBtn2">Sinagu-name (Shift+F2, Sngu)</button>'
+  oEltCmdSrchSngu.addEventListener('pointerdown', async function (oEvtIn) {
     oEltTabSearchSlct.options[1].selected = true
     if (getSelection().toString().trim() !== '') {
       await fCmdQuerySelection()
     } else {
       await fCmdQueryInput()
     }
-    oEltClicked = oEltCmdSrchSngo
+    oEltClicked = oEltCmdSrchSngu
   })
   addEventListener('keydown', async function (oEvtIn) {
     if (oEvtIn.shiftKey && oEvtIn.key === 'F2') {
@@ -558,7 +561,7 @@ let fContainersInsert = function () {
       }
     }
   })
-  oEltCmdSrchUl.appendChild(oEltCmdSrchSngo)
+  oEltCmdSrchUl.appendChild(oEltCmdSrchSngu)
   // Greek
   const oEltCmdSrchElln = document.createElement('li')
   oEltCmdSrchElln.innerHTML = '<button id="idCmdBtn2">Greek-name (Ctrl+F2, Elln)</button>'
@@ -1006,7 +1009,7 @@ let fContainersInsert = function () {
   oEltCmdLagApp.appendChild(oEltCmdLagAppUl2)
   const oEltCmdLagAppSwcr = document.createElement('li')
   oEltCmdLagAppSwcr.innerHTML = '<a class="clsPreview" href="' + sPathSite +
-    'dirMcs/dirLag/McsLag000010.last.html#idL0014wrdcrtr">SinagoWordCreator</a>'
+    'dirMcs/dirLag/McsLag000010.last.html#idL0014wrdcrtr">SinaguWordCreator</a>'
   oEltCmdLagAppUl2.appendChild(oEltCmdLagAppSwcr)
   const oEltCmdWebAppEnff = document.createElement('li')
   oEltCmdWebAppEnff.innerHTML = '<a class="clsPreview" href="' + sPathSite +
@@ -1213,8 +1216,8 @@ let fContainersInsert = function () {
   oEltTabSearchOpn2.text = 'English (Engl - F2)'
   oEltTabSearchSlct.add(oEltTabSearchOpn2)
   let oEltTabSearchOpn3 = document.createElement('option')
-  oEltTabSearchOpn3.value = 'lagSngo'
-  oEltTabSearchOpn3.text = 'Sinago (Sngo - Shift+F2)'
+  oEltTabSearchOpn3.value = 'lagSngu'
+  oEltTabSearchOpn3.text = 'Sinagu (Sngu - Shift+F2)'
   oEltTabSearchSlct.add(oEltTabSearchOpn3)
   let oEltTabSearchOpn4 = document.createElement('option')
   oEltTabSearchOpn4.value = 'lagElln'

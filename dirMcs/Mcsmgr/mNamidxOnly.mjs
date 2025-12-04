@@ -1,8 +1,8 @@
 /*
- * mNamidxOnly.mjs - module that creates name-indecies
+ * mNamidxOnly.mjs - module that creates name-indexes
  * The MIT License (MIT)
  *
- * Copyright (c) 2017 - 2022 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2017 - 2025 Kaseluris.Nikos.1959 (hmnSngu)
  * kaseluris.nikos@gmail.com
  * https://synagonism.net/
  *
@@ -30,10 +30,10 @@
  *   2) it appends the-file 'SftpAgg.json' that contains the-changed files we have to upload.
  *   3) it computes the-number of names.
  *   4) it computes the-number of concepts.
- * INPUT: NamidxAgg.txt
- * OUTPUT: dirLang/namidx.lagLangX.json, namidx.lagRoot.json, Mcsqnt.json, SftpAgg.json,
- *
- * RUN: node Mcsmgr/mNamidxOnly.mjs alone
+ * INPUT: Mcsmgr/NamidxOnly.txt
+ * OUTPUT: dirLang/namidx.lagLangX.json, namidx.lagRoot.json, Mcsqnt.json,
+           Mcsmgr/SftpOnly.json,
+ * RUN: node Mcsmgr/mNamidxOnly.mjs
  *
  * PROBLEM:
  * - to compute the-number of concepts, we must set new DIRS at cptqnt.root.json.
@@ -46,6 +46,7 @@ import {fWriteJsonArray} from './mUtil.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mNamidxOnly.mjs.0-6-0.2025-11-30: clear only index',
     'mNamidxOnly.mjs.0-5-0.2022-03-17: only index',
     'mNamidx.mjs.0-4-0.2022-02-09: p-Mcs',
     'mNamidx.mjs.0-2-0.2021-12-31: lagEspo',
@@ -72,43 +73,30 @@ const
 let
   aFileMcsInComments,
   aFileMcsTxt = [],
-  aLagAlone = undefined,
-  bAlone = false
+  aLagAlone = undefined
 
-if (process.argv[2]) {
-  let sAlone = process.argv[2]
-  if (sAlone === 'alone')
-    bAlone = true
-  else {
-    console.log('mNamidxOnly.mjs as module: type "alone" as app')
-  }
-} else {
-  console.log('mNamidxOnly.mjs as module: type "alone" as app')
-}
 
-if (bAlone) {
-  aFileMcsInComments = moFs.readFileSync('NamidxAgg.txt').toString().split('\n')
+aFileMcsInComments = moFs.readFileSync('Mcsmgr/NamidxOnly.txt').toString().split('\n')
 
-  /**
-   * a) find Mcs-files to remove|add its names and put paths in aFileMcsIn.
-   * b) find languages to work-with.
-   */
-  for (let n = 0; n < aFileMcsInComments.length; n++) {
-    let sLn = aFileMcsInComments[n]
+/**
+ * a) find Mcs-files to remove|add its names and put paths in aFileMcsIn.
+ * b) find languages to work-with.
+ */
+for (let n = 0; n < aFileMcsInComments.length; n++) {
+  let sLn = aFileMcsInComments[n]
 
-    // remove comments and empty-lines
-    if (!sLn.startsWith('//') && sLn.length !== 0) {
-      if (sLn.startsWith('lag')) {
-        if (!aLagAlone) aLagAlone = []
-        aLagAlone.push(sLn.substring(0,7))
-        // aLag = ['lagALLL'] or ['lagElln','lagEngl',...]
+  // remove comments and empty-lines
+  if (!sLn.startsWith('//') && sLn.length !== 0) {
+    if (sLn.startsWith('lag')) {
+      if (!aLagAlone) aLagAlone = []
+      aLagAlone.push(sLn.substring(0,7))
+      // aLag = ['lagALLL'] or ['lagElln','lagEngl',...]
+    } else {
+      // remove comments after ;
+      if (sLn.indexOf(';') > 0) {
+        aFileMcsTxt.push(sLn.substring(0,sLn.lastIndexOf(';')))
       } else {
-        // remove comments after ;
-        if (sLn.indexOf(';') > 0) {
-          aFileMcsTxt.push(sLn.substring(0,sLn.lastIndexOf(';')))
-        } else {
-          aFileMcsTxt.push(sLn)
-        }
+        aFileMcsTxt.push(sLn)
       }
     }
   }
@@ -125,7 +113,12 @@ function fNamidx(fileIn) {
     // array with names of dirCor/McsCor000010.last.html to remove|add its names
     aLag,
     // array of languages ['lagALLL'] or ['lagElln','lagEngl',...]
-    aLagALL = ['lagEngl','lagSngo','lagZhon','lagEspo','lagElln','lagElla'],
+    aLagALL = ['lagEngl','lagSngu','lagElln','lagZhon',
+    'lagArab','lagDeut','lagElla','lagEspo','lagFrac',
+    'lagHind','lagItln','lagRomn',
+    'lagSbos','lagShrv','lagScnr','lagSsrp','lagSbul','lagSmkd','lagSrus','lagSslv',
+    'lagSpan','lagSqip',
+    'lagTurk','lagVnma'],
     // 'lagAlb','lagBel','lagBos','lagBul','lagCes','lagDan','lagDeu','lagEst',
     // 'lagFin','lagFra','lagHrv','lagHun','lagIta','lagLav','lagLit','lagMlt',
     // 'lagMol','lagNld','lagNor','lagPol','lagPor','lagRom','lagRus','lagSlk',
@@ -303,7 +296,7 @@ function fNamidx(fileIn) {
       // WRITE arrays in oFileIdx_ANamUrl ({lagEngl01ei:[[name,Url]]})
       // in index-files
       for (let sFilIdx in oFileIdx_ANamUrl) {
-        //console.log(aLag[nL]+", "+sFilIdx)
+        console.log(aLag[nL]+", "+sFilIdx)
         let
           aNew = oFileIdx_ANamUrl[sFilIdx], // the-array with name-Urls
           // the-name of the existing file with names-urls
@@ -359,7 +352,7 @@ function fNamidx(fileIn) {
    *   - sLagIn: the-lag whose names will-be-removed
    */
   function fRemoveNamUrl(oFileIdx_IdxIn, sFileMcsRmvIn, sLagIn) {
-    // oFileIdx_IdxIn = { lagElln00: 'charREST', lagElln01alfa: 'Α', ... lagSngo25u: 'U' }
+    // oFileIdx_IdxIn = { lagElln00: 'charREST', lagElln01alfa: 'Α', ... lagSngu25u: 'U' }
     // sFileMcsRmvIn = dirCor/McsCor999999.last.html
     // sLagIn = lagElln
     // for ALL index-files remove names with Url sFileMcsRmvIn
@@ -430,7 +423,7 @@ function fNamidx(fileIn) {
    *  using first character of name, for a-language
    * INPUT:
    *  - aNUIn: ["name","dirNtr/McsNtr000007.last.html#idChmElrBoron"]
-   *  - sLagIn: 'lagSngo','lagEngl','lagElln'
+   *  - sLagIn: 'lagSngu','lagEngl','lagElln'
    */
   function fStoreNamUrlLag(aNUIn, sLagIn) {
     let
@@ -506,7 +499,7 @@ function fNamidx(fileIn) {
 
   /**
    * DOING: it stores a-name-Url in oFileIdx_ANamUrl in a-index-file
-   * INPUT: sFileIdxIn: lagSngo24i, lagZhon05, lagEngl19es_0
+   * INPUT: sFileIdxIn: lagSngu24i, lagZhon05, lagEngl19es_0
    */
   function fStoreNamUrlNamidx(sFileIdxIn, aNUIn, sLagIn) {
     //console.log(sFileIdxIn+', '+aNUIn[0])
@@ -862,7 +855,7 @@ function fNamidx(fileIn) {
   aSftp = Array.from(oSetFileUp)
   aSftp.sort()
   if (aSftp.length > 0) {
-    fWriteJsonArray('SftpAgg.json', aSftp)
+    fWriteJsonArray('Mcsmgr/SftpOnly.json', aSftp)
   }
 
   console.log('>>> Mcs-file indexed:')
@@ -966,10 +959,7 @@ function fNamidx(fileIn) {
   fUpdateALLQntMcs(aFileMcs_QntMcs)
 }
 
-// IF run alone
-if (bAlone) {
-  // create name-indices
-  fNamidx(aFileMcsTxt)
-}
+// create name-indices
+fNamidx(aFileMcsTxt)
 
 export {fNamidx}

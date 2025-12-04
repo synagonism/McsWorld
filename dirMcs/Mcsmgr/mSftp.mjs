@@ -1,8 +1,8 @@
 /**
- * DOING: sftp the-files in sftp.json
+ * DOING: sftp the-files in Mcsmgr/Mcsmgr/sftp.json
  * INPUT:
  * OUTPUT:
- * RUN: node sftp password
+ * RUN: node mSftp.mjs password
  *
  * modified: {2021-04-29}
  * created: {2018-09-27}
@@ -26,7 +26,7 @@ if (process.argv[2]) {
 }
 
 function fSftp () {
-  var aFil = JSON.parse(moFs.readFileSync('sftp.json'))
+  var aFil = JSON.parse(moFs.readFileSync('Mcsmgr/sftp.json'))
   console.log(aFil)
 
   const fSend_file = (oConfigIn, sFileIn) => {
