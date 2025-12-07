@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.24-0-0.2025-12-06: dark mode',
     'mMcsh2.js.23-1-0.2025-12-03: title search',
     'mMcsh2.js.23-0-0.2025-11-29: audio players',
     'mMcsh2.js.22-7-0.2025-11-21: language apps',
@@ -245,6 +246,7 @@ let fContainersInsert = function () {
     document.getElementById('idTabCntSrchDiv').style.display = 'block'
     // on TabCntSrch focus input-element
     oEltTabSearchIpt.focus()
+    oEltCnrMainInfoDiv.scrollTo(0, 0)
   }
 
   // localhost or online,
@@ -360,6 +362,7 @@ let fContainersInsert = function () {
   }
 
   oEltBody.innerHTML = ''
+  oEltBody.setAttribute('class', 'clsDark')
   oEltBody.appendChild(oEltCnrTopDiv)
   oEltBody.appendChild(oEltCnrMainDiv)
   oEltBody.appendChild(oEltCnrWidthDiv)
@@ -1166,6 +1169,10 @@ let fContainersInsert = function () {
     '<input type="radio" id="idRdbFontMono" name="nameRdbFont" checked/>Mono (default)<br>' +
     '<input type="radio" id="idRdbFontSerif" name="nameRdbFont"/>Serif<br>' +
     '<input type="radio" id="idRdbFontSSerif" name="nameRdbFont"/>Sans-serif' +
+    '</fieldset>' +
+    '<fieldset><legend><span class="clsColorGreen">mode</span>:</legend>' +
+    '<input type="radio" id="idRdbModeDark" name="nameRdbMode" checked/>Dark (default)<br>' +
+    '<input type="radio" id="idRdbModeLight" name="nameRdbMode"/>Light<br>' +
     '</fieldset>'
   oEltTabTocDiv.appendChild(oEltTabTocPrfDiv)
   // TabCntToc: end-note
@@ -2347,6 +2354,14 @@ let fContainersInsert = function () {
   })
   document.getElementById('idRdbFontSSerif').addEventListener('click', function () {
     oEltBody.style.fontFamily = 'Arial, Verdana'
+  })
+
+  // change mode
+  document.getElementById('idRdbModeDark').addEventListener('click', function () {
+    oEltBody.setAttribute('class', 'clsDark')
+  })
+  document.getElementById('idRdbModeLight').addEventListener('click', function () {
+    oEltBody.classList.remove('clsDark')
   })
 
   // event on clicking a link in toc
