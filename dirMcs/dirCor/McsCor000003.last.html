@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.entity
-    (McsCor000003.1-132-0.2025-12-07)</title>
+    (McsCor000003.1-138-0.2025-12-14)</title>
   <meta name="keywords" content="entity, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -58,6 +58,7 @@
     <br>* McsEngl.ent!⇒entity,
     <br>* McsEngl.entt!⇒entity,
     <br>* McsEngl.enything!⇒entity,
+    <br>* McsEngl.most-generic!⇒entity,
     <br>* McsEngl.thing!⇒entity,
     <br>====== lagoSinagu:
     <br>* McsSngu.leu!=entity, {2025-12-02}
@@ -74,8 +75,71 @@
     <br>====== lagoGreek:
     <br>* McsElln.οντότητα!η!=entity,
     <br>* McsElln.πράγμα!το!=thing,
+    <br>====== lagoGreekAncient:
+    <br>* McsElla.ὄν!~τὸ!=entity,
     <br>====== lagoTurkish:
     <br>* McsTurk.tüzellik/ti3zélik/!=entity,
+    <br>======
+    <br>"Below is a structured overview of how the concept **“entity”** is expressed across major **language families**, including the **native script** and a **standard romanization** where applicable. Meanings cluster around *being, existence, thing, or substance*, depending on linguistic tradition.
+    <br>---
+    <br>## Indo-European Languages
+    <br>| Language       | Native Term     | Romanization   | Notes                           |
+    <br>| English        | entity          | —              | From Latin *entitas*            |
+    <br>| Latin          | entitas         | —              | Philosophical origin            |
+    <br>| Greek (Modern) | οντότητα        | ontótita       | From Ancient Greek *ὄν* (being) |
+    <br>| German         | Entität / Wesen | —              | *Wesen* = essence/being         |
+    <br>| French         | entité          | —              | Direct Latin borrowing          |
+    <br>| Spanish        | entidad         | —              | Common in legal/admin use       |
+    <br>| Italian        | entità          | —              | Philosophical and technical     |
+    <br>| Russian        | сущность        | suščnostʹ      | Essence, core being             |
+    <br>| Sanskrit       | सत्ता / तत्त्व  | sattā / tattva | Existence / principle           |
+    <br>---
+    <br>## Semitic Languages
+    <br>| -------- | ----------- | ------------ | ------------------------------- |
+    <br>| Arabic   | كيان        | kayān        | Used in law, politics, ontology |
+    <br>| Hebrew   | ישות        | yeshút       | Philosophical/technical         |
+    <br>| Aramaic  | ܐܝܬܘܬܐ      | īthūthā      | Being/existence                 |
+    <br>---
+    <br>## Sino-Tibetan Languages
+    <br>| Mandarin Chinese  | 实体          | shítǐ        | Physical or conceptual entity |
+    <br>| Classical Chinese | 体 / 实       | tǐ / shí     | Body / reality                |
+    <br>| Tibetan           | དངོས་པོ     | ngöpo        | Concrete thing/entity         |
+    <br>---
+    <br>## Japonic & Koreanic
+    <br>| Japanese        | 実体          | jittai       | Concrete or abstract entity |
+    <br>| Japanese (alt.) | 存在          | sonzai       | Existence                   |
+    <br>| Korean          | 실체          | silche       | Actual substance/entity     |
+    <br>| Korean (alt.)   | 존재          | jonjae       | Existence                   |
+    <br>---
+    <br>## Uralic Languages
+    <br>| Finnish   | entiteetti / olio | —            | *olio* common in computing |
+    <br>| Hungarian | entitás / létező  | —            | *létező* = existing being  |
+    <br>---
+    <br>## Turkic Languages
+    <br>| Turkish  | varlık      | —            | Being, existence            |
+    <br>| Kazakh   | мән         | män          | Essence/entity (contextual) |
+    <br>---
+    <br>## Afro-Asiatic (non-Semitic)
+    <br>| Amharic  | አካል / ህልውና  | akāl / hillunā | Body / existence |
+    <br>---
+    <br>## Constructed / Technical Usage
+    <br>| Context          | Term         | Notes                            |
+    <br>| Philosophy       | entity       | Ontology, metaphysics            |
+    <br>| Law              | legal entity | Personhood abstraction           |
+    <br>| Computer Science | entity       | Data modeling (ER diagrams, DDD) |
+    <br>| UML / DDD        | Entity       | Object with identity over time   |
+    <br>---
+    <br>## Observed Patterns
+    <br>* **Latin-based languages** largely borrow directly from *entitas*.
+    <br>* **Semitic languages** prefer roots meaning *existence* or *being*.
+    <br>* **East Asian languages** often compound characters meaning *real + body* or *existence*.
+    <br>* **Technical fields** (law, software engineering, ontology) standardize on a narrow, identity-based meaning.
+    <br>If you would like, I can:
+    <br>* Narrow this to **philosophy vs law vs software engineering** usage
+    <br>* Expand with **etymological roots** per language
+    <br>* Provide **comparative semantic nuances** (e.g., *entity vs essence vs being*)
+    <br>* Focus on a **specific language family** in more depth"
+    <br>[{2025-12-12 retrieved} https://chatgpt.com/c/693c41f0-1ab4-8326-8405-7b06bd9550ca]
     <a class="clsHide" href="#idName"></a></p>
   <p id="idDescription">description::
     <br>· entity is the-MOST <a class="clsPreview" href="../dirCor/McsCor000002.last.html#idMcsattGnc">generic</a> <a class="clsPreview" href="../dirCor/McsCor000002.last.html#idOverview">concept</a>.
@@ -88,10 +152,11 @@
   <h1 id="idEntattH1">01_attribute of entity
     <a class="clsHide" href="#idEntattH1"></a></h1>
   <p id="idEntattdsn">description::
-    <br>· <span class="clsColorRed">attribute of entity[a]</span> is any other entity related with it[a].
+    <br>· <span class="clsColorRed">attribute of entity\a\</span> is any other ENTITY related with it\a\.
     <a class="clsHide" href="#idEntattdsn"></a></p>
   <p id="idEntattnam">name::
     <br>* McsEngl.attribute,
+    <br>* McsEngl.attributes!~plural,
     <br>* McsEngl.attribute.Sngu!=eu,
     <br>* McsEngl.attribute.Elln!=χαρακτηριστικό!το,
     <br>* McsEngl.attribute-of-entity!⇒attribute,
@@ -99,6 +164,8 @@
     <br>* McsEngl.entity'attribute!⇒attribute,
     <br>* McsEngl.characteristic-of-entity!⇒attribute,
     <br>* McsEngl.feature-of-entity!⇒attribute,
+    <br>* McsEngl.quality-of-entity!⇒attribute,
+    <br>* McsEngl.property-of-entity!⇒attribute,
     <br>====== lagoSinagu:
     <br>* McsSngu.eu!=attribute, {2025-12-02} a=attr-relation,
     <br>====== lagoChinese:
@@ -106,7 +173,172 @@
     <br>* McsZhon.shítǐshǔxìng-实体属性!=attribute,
     <br>* McsZhon.实体属性-shítǐshǔxìng!=attribute,
     <br>====== lagoGreek:
+    <br>* McsElln.γνώρισμα-οντότητας!το!=attribute,
     <br>* McsElln.χαρακτηριστικό-οντότητας!το!=attribute,
+    <br>======
+    <br>"Below is a structured overview of how the concept **“attribute”** is expressed across major **language families**, including **native script** and **standard romanization** where applicable. Semantically, terms cluster around *quality, property, characteristic, feature, or predicate*, with domain-specific nuance (philosophy, law, linguistics, software engineering).
+    <br>---
+    <br>## Indo-European Languages
+    <br>| Language       | Native Term                | Romanization               | Notes                      |
+    <br>| English        | attribute                  | —                          | Quality or property        |
+    <br>| Latin          | attributum                 | —                          | “That which is assigned”   |
+    <br>| Greek (Modern) | ιδιότητα / χαρακτηριστικό  | idiotíta / charaktiristikó | Property / characteristic  |
+    <br>| Ancient Greek  | γνώρισμα / κατηγόρημα      | gnṓrisma / katēgórēma      | Mark / predicate           |
+    <br>| German         | Attribut / Eigenschaft     | —                          | Grammar / property         |
+    <br>| French         | attribut / caractéristique | —                          | Grammar / general use      |
+    <br>| Spanish        | atributo                   | —                          | Broad usage                |
+    <br>| Italian        | attributo                  | —                          | Technical & general        |
+    <br>| Russian        | атрибут / свойство         | atribut / svoystvo         | Feature / property         |
+    <br>| Sanskrit       | गुण                        | guṇa                       | Quality, inherent property |
+    <br>---
+    <br>## Semitic Languages
+    <br>| Arabic   | سمة / خاصية / صفة | sima / khāṣṣiyya / ṣifa | Trait / property / adjective      |
+    <br>| Hebrew   | תכונה / מאפיין    | tkhuná / me’afyen       | Property / distinguishing feature |
+    <br>| Aramaic  | ܨܘܪܬܐ             | ṣurtā                   | Form, characteristic              |
+    <br>---
+    <br>## Sino-Tibetan Languages
+    <br>| Mandarin Chinese  | 属性          | shǔxìng      | Attribute/property (formal) |
+    <br>| Classical Chinese | 性 / 德       | xìng / dé    | Nature / quality            |
+    <br>| Tibetan           | ཁྱད་ཆོས     | khyé-chö     | Distinguishing property     |
+    <br>---
+    <br>## Japonic & Koreanic
+    <br>| Japanese        | 属性          | zokusei      | Attribute/property (technical) |
+    <br>| Japanese (alt.) | 特性          | tokusei      | Characteristic                 |
+    <br>| Korean          | 속성          | sokseong     | Attribute (formal/technical)   |
+    <br>| Korean (alt.)   | 특성          | teukseong    | Characteristic                 |
+    <br>---
+    <br>## Uralic Languages
+    <br>| Finnish   | attribuutti / ominaisuus | —            | Grammar / property  |
+    <br>| Hungarian | attribútum / tulajdonság | —            | Technical / general |
+    <br>---
+    <br>## Turkic Languages
+    <br>| Turkish     | nitelik / öznitelik  | —            | Quality / CS usage |
+    <br>| Azerbaijani | atribut / xüsusiyyət | —            | Borrowed / native  |
+    <br>---
+    <br>## Afro-Asiatic (non-Semitic)
+    <br>| Amharic  | ባህሪ / መገለጫ  | bahri / megəleṭṭa | Character / descriptor |
+    <br>---
+    <br>## Austronesian Languages
+    <br>| Indonesian | atribut / sifat | —            | Borrowed / quality |
+    <br>| Tagalog    | katangian       | —            | Characteristic     |
+    <br>---
+    <br>## Technical and Domain-Specific Usage
+    <br>| Domain      | Term              | Notes                                              |
+    <br>| Philosophy  | attribute         | Essential vs accidental properties (e.g., Spinoza) |
+    <br>| Logic       | predicate         | Attribute asserted of a subject                    |
+    <br>| Linguistics | attribute         | Modifier (esp. adjectives)                         |
+    <br>| Databases   | attribute         | Column/property of an entity                       |
+    <br>| DDD / OOP   | attribute / field | Value without identity                             |
+    <br>| UML         | attribute         | Structural feature                                 |
+    <br>---
+    <br>## Observed Cross-Linguistic Patterns
+    <br>* **Latin-derived forms** dominate European and technical vocabularies.
+    <br>* **Semitic languages** distinguish between *descriptive traits* and *essential properties*.
+    <br>* **East Asian languages** standardize compound terms meaning *belonging + nature/property*.
+    <br>* In **software engineering**, most languages converge on a narrow meaning: *a named property of an entity*.
+    <br>If useful, I can:
+    <br>* Contrast **attribute vs property vs quality** across traditions
+    <br>* Focus specifically on **software engineering / DDD terminology**
+    <br>* Provide **etymological breakdowns** by language
+    <br>* Map these terms to **UML, ER modeling, or ontology concepts**
+    <br>===
+    <br>Below is a concise but rigorous **etymological analysis of the word “attribute”**, tracing its development from Proto-Indo-European roots to modern technical usage.
+    <br>---
+    <br>## 1. Latin Origin (Primary Source)
+    <br>**Latin:** *attribūtum* (noun), from *attribuere* (verb)
+    <br>### Morphological Breakdown
+    <br>* **ad-** → “to, toward”
+    <br>* **tribuere** → “to give, assign, allot, distribute”
+    <br>**attribuere** literally meant:
+    <br>⭢ “to assign to,” “to ascribe,” “to credit”
+    <br>**attribūtum** =
+    <br>⭢ “that which has been assigned or ascribed to something”
+    <br>This *assignment* sense is central and remains intact today.
+    <br>---
+    <br>## 2. Proto-Indo-European (Deeper Root)
+    <br>***trebʰ- / *trei-**
+    <br>Meaning:
+    <br>* to give
+    <br>* to distribute
+    <br>* to apportion
+    <br>This root also produced:
+    <br>* **tribute**
+    <br>* **contribute**
+    <br>* **distribute**
+    <br>* **retribution**
+    <br>All retain the core notion of *allocation or assignment*.
+    <br>---
+    <br>## 3. Classical & Medieval Usage
+    <br>### Classical Latin
+    <br>* *attribuere* was used in:
+    <br>  * rhetoric (ascribing causes or qualities)
+    <br>  * law (assigning responsibility or ownership)
+    <br>  * philosophy (ascribing properties)
+    <br>### Scholastic Philosophy (Medieval Latin)
+    <br>* *attributa* referred to:
+    <br>  * **essential qualities of a substance**
+    <br>  * especially divine attributes (e.g., omnipotence)
+    <br>This use strongly influenced later philosophical terminology.
+    <br>---
+    <br>## 4. Entry into English
+    <br>### Old French
+    <br>* *attribut*
+    <br>  Retained the philosophical and grammatical sense.
+    <br>### Middle English (14th century)
+    <br>* *attribute* (noun and verb)
+    <br>Early English meanings:
+    <br>* “a quality ascribed to a person or thing”
+    <br>* “to ascribe, to credit”
+    <br>---
+    <br>## 5. Semantic Evolution
+    <br>| Period                | Dominant Meaning                   |
+    <br>| Classical Latin       | Assigned responsibility or quality |
+    <br>| Scholastic philosophy | Essential property of a being      |
+    <br>| Early English         | Characteristic or quality          |
+    <br>| Modern English        | Property, feature, or descriptor   |
+    <br>| Technical usage       | Named property of an object/entity |
+    <br>Despite domain shifts, the **core idea never changed**:
+    <br>⭢ An attribute is something **assigned to** or **ascribed to** an entity.
+    <br>---
+    <br>## 6. Technical and Modern Extensions
+    <br>### Philosophy
+    <br>* Attribute = a fundamental way a substance is understood
+    <br>  (e.g., Spinoza: thought and extension)
+    <br>### Linguistics
+    <br>* Attribute = modifier describing a noun
+    <br>### Law
+    <br>* Attribute = legally assigned quality or capacity
+    <br>### Software Engineering / Data Modeling
+    <br>* Attribute = a **defined property assigned to an entity**
+    <br>* Emphasis on:
+    <br>  * name
+    <br>  * type
+    <br>  * value
+    <br>  * lack of independent identity
+    <br>This is a **direct conceptual inheritance** from Latin *attribuere*.
+    <br>---
+    <br>## 7. Key Conceptual Insight
+    <br>**Attribute ≠ inherent fact**
+    <br>Etymologically, an attribute is not merely something that *exists* —
+    <br>it is something that is **ascribed, recognized, or defined** relative to a subject.
+    <br>This distinction explains why:
+    <br>* attributes can change
+    <br>* attributes can be contextual
+    <br>* attributes depend on a framework (legal, logical, technical)
+    <br>---
+    <br>## 8. Related Cognates (Same Root)
+    <br>| Word       | Relationship        |
+    <br>| tribute    | that which is given |
+    <br>| contribute | give together       |
+    <br>| distribute | give out            |
+    <br>| retribute  | give back           |
+    <br>| attribute  | give to             |
+    <br>---
+    <br>If you want, I can:
+    <br>* Contrast **attribute vs property vs essence** philosophically
+    <br>* Trace the term’s usage in **Spinoza, Aristotle, and scholastic logic**
+    <br>* Map the etymology directly to **DDD / OOP modeling principles**"
+    <br>[{2025-12-12 retrieved} https://chatgpt.com/c/693c41f0-1ab4-8326-8405-7b06bd9550ca]
     <a class="clsHide" href="#idEntattnam"></a></p>
 
   <section id="idEntattSpc">
@@ -238,7 +470,7 @@
   <h1 id="idEntatrrlnH1">02_entity-attribute-relation
     <a class="clsHide" href="#idEntatrrlnH1"></a></h1>
   <p id="idEntatrrlndsn">description::
-    <br>· entity-attribute--sequencedNo-relation is <a class="clsPreview" href="../dirCor/McsCor000005.last.html#idRlnSqcdN">a-sequencedNo-relation</a> between <a class="clsPreview" href="#idOverview">an-entity[a]</a> and <a class="clsPreview" href="#idEntatt">an-attribute</a> of it[a].
+    <br>· entity-attribute--sequencedNo-relation is <a class="clsPreview" href="../dirCor/McsCor000005.last.html#idRlnSqcdN">a-sequencedNo-relation</a> between <a class="clsPreview" href="#idOverview">an-entity\a\</a> and <a class="clsPreview" href="#idEntatt">an-attribute</a> of it\a\.
     <a class="clsHide" href="#idEntatrrlndsn"></a></p>
   <p id="idEntatrrlnnam">name::
     <br>* McsEngl.entity'02_attribute--sequencedNo-relation!⇒rlnEntityOfAttributeU,
@@ -282,7 +514,7 @@
   <h2 id="idEntatrrln1H2">entity-of-attribute relation
     <a class="clsHide" href="#idEntatrrln1H2"></a></h2>
   <p id="idEntatrrln1dsn">description::
-    <br>· <span class="clsColorRed">entity-attribute--sequenced-relation</span> is <a class="clsPreview" href="../dirCor/McsCor000005.last.html#idRlnSqcd">a-sequenced-relation</a> between <a class="clsPreview" href="#idOverview">an-entity[a]</a> and <a class="clsPreview" href="#idEntatt">an-attribute</a> of it[a].
+    <br>· <span class="clsColorRed">entity-attribute--sequenced-relation</span> is <a class="clsPreview" href="../dirCor/McsCor000005.last.html#idRlnSqcd">a-sequenced-relation</a> between <a class="clsPreview" href="#idOverview">an-entity\a\</a> and <a class="clsPreview" href="#idEntatt">an-attribute</a> of it\a\.
     <br>
     <br>=== with conjunction:
     <br>· _stxEngl: [<span class="clsColorRed">[entity]</span> [(of) attribute]]
@@ -309,8 +541,9 @@
     <br>* McsEngl.rlnAttribute!⇒rlnEntityOfAttribute,
     <br>* McsEngl.rlnEntityOfAttribute,
     <br>====== lagoSinagu:
-    <br>* McsSngu.lau!=rlnEntityOfAttribute,
     <br>* McsSngu.la!~conjSngu!=rlnEntityOfAttribute,
+    <br>* McsSngu.lai!~verbSngu!=rlnEntityOfAttribute,
+    <br>* McsSngu.lau!=rlnEntityOfAttribute,
     <br>====== lagoChinese:
     <br>* McsEngl.dòngcí.shì-是!=rlnEntityOfAttribute,
     <br>* McsEngl.shì-是!~verbZhon!=rlnEntityOfAttribute,
@@ -322,7 +555,7 @@
   <h2 id="idEntatrrln2H2">attribute-of-entity relation
     <a class="clsHide" href="#idEntatrrln2H2"></a></h2>
   <p id="idEntatrrln2dsn">description::
-    <br>· <span class="clsColorRed">attribute-entity--sequenced-relation</span> is <a class="clsPreview" href="../dirCor/McsCor000005.last.html#idRlnSqcdN">a-sequenced-relation</a> between <a class="clsPreview" href="#idEntatt">an-attribute[a]</a> and <a class="clsPreview" href="#idOverview">the-entity</a> of it[a].
+    <br>· <span class="clsColorRed">attribute-entity--sequenced-relation</span> is <a class="clsPreview" href="../dirCor/McsCor000005.last.html#idRlnSqcdN">a-sequenced-relation</a> between <a class="clsPreview" href="#idEntatt">an-attribute\a\</a> and <a class="clsPreview" href="#idOverview">the-entity</a> of it\a\.
     <br>
     <br>=== with conjunction:
     <br>· _stxEngl: [attribute] [<span class="clsColorRed">(of)</span> entity]
@@ -352,9 +585,10 @@
     <br>* McsEngl.conjEngl.of!=rlnAttributeOfEntity,
     <br>* McsEngl.conjEngl.with!=rlnAttributeOfEntity,
     <br>====== lagoSinagu:
+    <br>* McsSngu.a!~conjSngu!=rlnAttributeOfEntity,
+    <br>* McsSngu.ai!~verbSngu!=rlnAttributeOfEntity,
     <br>* McsSngu.au!=rlnAttributeOfEntity,
-    <br>* McsEngl.SnguConj.a!=of,
-    <br>* McsSngu.a!~conjSngu!=of,
+    <br>* McsEngl.SnguConj.a!=rlnAttributeOfEntity,
     <br>====== lagoGreek:
     <br>* McsElln.γενική-πτώση!=rlnAttributeOfEntity,
     <br>* McsElln.σχέση-χαρακτηριστικού-οντότητας!=rlnAttributeOfEntity,
@@ -402,6 +636,9 @@
     <br>* McsEngl.entity'structure!⇒structure,
     <br>* McsEngl.srtr!⇒structure,
     <br>* McsEngl.structure,
+    <br>* McsEngl.structure.Elln!=δομή!η,
+    <br>* McsEngl.structure.Turk!=yapı,
+    <br>* McsEngl.structure.Zhon!=jiégòu-结构,
     <br>* McsEngl.structure-of-entity!⇒structure,
     <br>====== lagoSinagu:
     <br>* McsSngu.os-rioUatro!=structure,
@@ -416,6 +653,124 @@
     <br>====== lagoGreek:
     <br>* McsElln.δομή-οντότητας!=structure,
     <br>* McsElln.το-είναι-οντότητας!=structure,
+    <br>======
+    <br>"Here is how **“structure”** is expressed across major **language families**, shown with **native script + romanization** (and meaning). I’ve focused on commonly cited or standard forms in linguistics and everyday usage.
+    <br>---
+    <br>## Indo-European
+    <br>| Language       | Script    | Romanization | Meaning   |
+    <br>| English        | structure | structure    | structure |
+    <br>| French         | structure | structure    | structure |
+    <br>| German         | Struktur  | Struktur     | structure |
+    <br>| Greek (Modern) | δομή      | domí         | structure |
+    <br>| Latin          | structūra | structura    | structure |
+    <br>---
+    <br>## Afro-Asiatic
+    <br>| Arabic   | بنية   | binyah       | structure |
+    <br>| Hebrew   | מבנה   | mevné        | structure |
+    <br>| Amharic  | መዋቅር   | mewaqir      | structure |
+    <br>---
+    <br>## Sino-Tibetan
+    <br>| Mandarin Chinese  | 结构     | jiégòu       | structure             |
+    <br>| Classical Chinese | 結構     | jiégòu       | structure             |
+    <br>| Tibetan           | གྲུབ་ཆ | drup-cha     | structure / formation |
+    <br>---
+    <br>## Japonic
+    <br>| Japanese | 構造     | kōzō         | structure |
+    <br>---
+    <br>## Koreanic
+    <br>| Korean   | 구조     | gujo         | structure |
+    <br>---
+    <br>## Uralic
+    <br>| Finnish   | rakenne   | rakenne      | structure |
+    <br>| Hungarian | szerkezet | szerkezet    | structure |
+    <br>---
+    <br>## Turkic
+    <br>| Turkish  | yapı    | yapı         | structure |
+    <br>| Kazakh   | құрылым | qūrylym      | structure |
+    <br>---
+    <br>## Dravidian
+    <br>| Tamil    | அமைப்பு  | amaippu      | structure |
+    <br>| Telugu   | నిర్మాణం | nirmāṇaṁ     | structure |
+    <br>---
+    <br>## Austronesian
+    <br>| Indonesian | struktur   | struktur     | structure |
+    <br>| Tagalog    | estruktura | estruktura   | structure |
+    <br>---
+    <br>## Niger-Congo
+    <br>| Swahili  | muundo       | muundo       | structure               |
+    <br>| Yoruba   | ìtòlẹ́sẹẹsẹ̀ | itòlẹ́sẹ̀sẹ̀ | structure / arrangement |
+    <br>---
+    <br>## Linguistics note (important)
+    <br>In **linguistics**, *structure* often maps to:
+    <br>* **form**
+    <br>* **arrangement**
+    <br>* **organization**
+    <br>* **construction**
+    <br>So some languages use **native-root words** (e.g., Greek *δομή*, Turkish *yapı*), while others borrow from **Latin/French** (*structure / struktur / estruktura*).
+    <br>---
+    <br>If you want, I can:
+    <br>* Narrow this to **syntactic structure** (grammar-specific terms)
+    <br>* Compare **loanwords vs native roots**
+    <br>* Focus on **languages you care about** (e.g., Greek, Chinese, Japanese)
+    <br>* Show **IPA pronunciations** alongside romanization
+    <br>---
+    <br>### Etymology of **structure**
+    <br>**Structure** ultimately comes from Latin and is built step-by-step from a concrete, physical meaning to an abstract one.
+    <br>---
+    <br>## 1. Latin origin (core)
+    <br>**Latin:** *structūra*
+    <br>**Meaning:** “a fitting together, building, arrangement”
+    <br>This noun comes from the verb:
+    <br>**Latin verb:** *struere*
+    <br>**Meaning:** “to pile up, assemble, build, arrange”
+    <br>So at its core, *structure* literally meant **“something built by stacking or assembling parts.”**
+    <br>---
+    <br>## 2. Proto-Indo-European (deep root)
+    <br>**Proto-Indo-European root:** **ster-*
+    <br>**Meaning:** “to spread, extend, lay out”
+    <br>This root is associated with ideas of:
+    <br>* laying things out
+    <br>* spreading materials
+    <br>* orderly placement
+    <br>Related English words from the same PIE root:
+    <br>* **stratum**
+    <br>* **stratify**
+    <br>* **street** (originally “paved way”)
+    <br>* **strategy** (via Greek *stratos*, army laid out)
+    <br>---
+    <br>## 3. Transmission into English
+    <br>The word entered English through French:
+    <br>* **Latin:** *structūra*
+    <br>  → **Old French:** *structure*
+    <br>  → **Middle English:** *structure* (14th century)
+    <br>Early English usage still meant **physical building or construction**.
+    <br>---
+    <br>## 4. Semantic expansion (key shift)
+    <br>Over time, the meaning broadened:
+    <br>1. **Physical sense**
+    <br>   * a building, framework, construction
+    <br>2. **Organizational sense**
+    <br>   * arrangement of parts (e.g., social structure)
+    <br>3. **Abstract / scientific sense**
+    <br>   * linguistic structure
+    <br>   * data structure
+    <br>   * molecular structure
+    <br>This shift mirrors a common linguistic pattern:
+    <br>⭢ **concrete → abstract**
+    <br>---
+    <br>##5. Modern definition (compressed)
+    <br>
+    <br>Today, *structure* means:
+    <br>⭢ **“The organized arrangement of parts that form a whole.”**
+    <br>Which is still perfectly faithful to *struere* = **to build by assembling**.
+    <br>---
+    <br>### One-line summary
+    <br>⭢ **Structure** comes from Latin *struere* “to build, pile up,” originally meaning a physical construction, later extended to any organized arrangement—physical, social, or abstract.
+    <br>If you want, I can:
+    <br>* Compare **structure vs form vs system** etymologically
+    <br>* Trace how **structuralism** got its name
+    <br>* Show how this root behaves in **Greek or scientific terminology**"
+    <br>[{2025-12-14 retrieved} https://chatgpt.com/c/693e6264-c8ec-832a-8f81-6929e4962640]
     <a class="clsHide" href="#idEntstrrnam"></a></p>
   <p id="idEntstrrSpc">specific::
     <br>* sequence-structure,
@@ -444,7 +799,7 @@
   <h1 id="idEntevgFH1">evoluting of entity
     <a class="clsHide" href="#idEntevgFH1"></a></h1>
   <p id="idEntevgFdsn">description::
-    <br>· evoluting of entity[a] is <a class="clsPreview" href="../dirCor/McsCor000004.last.html#idDngSqcd">the-sequenced-doing</a> in which the-entity[a] is-changing over time.
+    <br>· evoluting of entity\a\ is <a class="clsPreview" href="../dirCor/McsCor000004.last.html#idDngSqcd">the-sequenced-doing</a> in which the-entity\a\ is-changing over time.
     <br>===
     <br>"(n) development, evolution (a process in which something passes by degrees to a different stage (especially a more advanced or mature stage)) "the development of his ideas took many years"; "the evolution of Greek civilization"; "the slow development of her skill as a writer""
     <br>[http://wordnetweb.princeton.edu/perl/webwn?s=evolution]
@@ -457,29 +812,135 @@
     <br>* McsEngl.development-of-entity!⇒EntEvg,
     <br>* McsEngl.dngEvoluting!⇒EntEvg,
     <br>* McsEngl.entity'evoluting!⇒EntEvg,
+    <br>* McsEngl.evoluting!⇒EntEvg,
     <br>* McsEngl.evoluting-of-entity!⇒EntEvg,
     <br>* McsEngl.evolution-of-entity!⇒EntEvg,
     <br>* McsEngl.verb.develop!=EntEvg!~englverbA1,
     <br>* McsEngl.develop!=EntEvg!~englverbA1,
     <br>====== lagoSinagu:
-    <br>* McsSngu.rio-evolo-a-o!=EntEvg,
+    <br>* rio-evolo-a-o!=EntEvg,
     <br>====== lagoChinese:
     <br>* McsEngl.fāzhǎn-发展!=EntEvg,
     <br>* McsZhon.fāzhǎn-发展!=EntEvg,
     <br>* McsZhon.发展-fāzhǎn!=EntEvg,
     <br>====== lagoGreek:
-    <br>* McsElln.εξέλιξη-οντότητας!=EntEvg,
+    <br>* McsElln.εξέλιξη-οντότητας!η!=EntEvg,
+    <br>======
+    <br>">'evolution' noun and verb in world languages:
+    <br>Below is a consolidated, **business-style linguistic reference** showing how the concept of **“evolution”** is expressed as a **noun** and **verb** across major world languages. For languages where there is *no inherent verb* meaning “to evolve,” I provide the standard verbal constructions.
+    <br>If you want additional languages, dialects, or etymological details, I can extend the table.
+    <br>---
+    <br>## 1. Indo-European Languages
+    <br>### English
+    <br>* **Noun:** evolution
+    <br>* **Verb:** evolve
+    <br>### French
+    <br>* **Noun:** évolution
+    <br>* **Verb:** évoluer
+    <br>### Spanish
+    <br>* **Noun:** evolución
+    <br>* **Verb:** evolucionar
+    <br>### Portuguese
+    <br>* **Noun:** evolução
+    <br>* **Verb:** evoluir
+    <br>### Italian
+    <br>* **Noun:** evoluzione
+    <br>* **Verb:** evolvere
+    <br>### German
+    <br>* **Noun:** Evolution
+    <br>* **Verb (scientific/rare):** evolvieren
+    <br>  * Common paraphrase: sich entwickeln (to develop)
+    <br>### Dutch
+    <br>* **Noun:** evolutie
+    <br>* **Verb:** evolueren
+    <br>### Russian
+    <br>* **Noun:** эволюция (evolyútsiya)
+    <br>* **Verb:** эволюционировать (evolyutsionírovatʹ)
+    <br>### Polish
+    <br>* **Noun:** ewolucja
+    <br>* **Verb:** ewoluować
+    <br>### Greek
+    <br>* **Noun:** εξέλιξη (exélixi)
+    <br>* **Verb:** εξελίσσομαι (exelíssomai) – “to evolve / to progress”
+    <br>### Hindi (Indo-Aryan)
+    <br>* **Noun:** विकास (vikās) – can mean development/evolution
+    <br>* **Verb:** विकसित होना (vikasit honā) – to evolve, to develop
+    <br>### Persian (Farsi)
+    <br>* **Noun:** تکامل (takāmol)
+    <br>* **Verb:** تکامل یافتن / تکامل پیدا کردن (takāmol yāftan / peydā kardan)
+    <br>---
+    <br>## 2. Sino-Tibetan Languages
+    <br>### Mandarin Chinese
+    <br>* **Noun:** 演化 (yǎnhuà), 进化 (jìnhuà)
+    <br>* **Verb:** 演化 / 进化 (yǎnhuà / jìnhuà) – same forms used verbally
+    <br>### Cantonese
+    <br>* **Noun:** 演化 (jin2 faa3), 進化 (zeon3 faa3)
+    <br>* **Verb:** same terms used verbally
+    <br>---
+    <br>## 3. Afro-Asiatic Languages
+    <br>### Arabic
+    <br>* **Noun:** تطوّر (taṭawwur)
+    <br>* **Verb:** يتطوّر (yataṭawwar) – to evolve, to develop
+    <br>### Hebrew
+    <br>* **Noun:** אבולוציה (evolutsia)
+    <br>* **Verb:** להתפתח (lehitpateach) – to develop/evolve (no native verb for “to evolve” specifically)
+    <br>---
+    <br>## 4. Turkic Languages
+    <br>### Turkish
+    <br>* **Noun:** evrim
+    <br>* **Verb:** evrimleşmek – to evolve
+    <br>---
+    <br>## 5. Uralic Languages
+    <br>### Finnish
+    <br>* **Noun:** evoluutio
+    <br>* **Verb:** kehittyä – to develop/evolve (no direct verb meaning “to evolve”)
+    <br>### Hungarian
+    <br>* **Noun:** evolúció
+    <br>* **Verb:** evolválódni (rare); commonly: fejlődni (to develop)
+    <br>---
+    <br>## 6. East Asian Languages (Non-Sinitic)
+    <br>### Japanese
+    <br>* **Noun:** 進化 (shinka)
+    <br>* **Verb:** 進化する (shinka suru) – to evolve
+    <br>### Korean
+    <br>* **Noun:** 진화 (jinhwa)
+    <br>* **Verb:** 진화하다 (jinhwa-hada) – to evolve
+    <br>---
+    <br>## 7. Austronesian Languages
+    <br>### Indonesian / Malay
+    <br>* **Noun:** evolusi
+    <br>* **Verb:** berevolusi – to evolve
+    <br>### Filipino (Tagalog)
+    <br>* **Noun:** ebolusyon
+    <br>* **Verb:** mag-ebolusyon – to evolve
+    <br>---
+    <br>## 8. Bantu Languages
+    <br>### Swahili
+    <br>* **Noun:** mageuzi (also “reform/changes”)
+    <br>* **Verb:** kubadilika – to change, to evolve (no dedicated verb for evolution)
+    <br>---
+    <br>## 9. Additional Notes
+    <br>* Many languages **borrow the noun** directly from European scientific vocabulary and then form the verb by adding their typical verb-forming morphology (“-er”, “-ar”, “-ieren”, “-ować”, “-する”, etc.).
+    <br>* In several languages, the **concept of evolution is merged with “development”**, so the common verb corresponds to “develop” rather than a dedicated “evolve”.
+    <br>---
+    <br>If you want, I can also provide:
+    <br>* IPA pronunciations for each language,
+    <br>* etymological origins,
+    <br>* a larger table covering 100+ languages,
+    <br>* usage examples in sentences,
+    <br>* or domain-specific usage (biology vs. social evolution vs. technological evolution)."
+    <br>[{2025-12-10 retrieved} https://chatgpt.com/c/693915e3-6884-8328-9551-013c32905698]
     <a class="clsHide" href="#idEntevgnam"></a></p>
 
   <section id="idEntevgsmrd">
   <h2 id="idEntevgsmrdH2">summarized-global-history
     <a class="clsHide" href="#idEntevgsmrdH2"></a></h2>
   <p id="idEntevgsmrdnam">name::
-    <br>* McsEngl.evoluting,
-    <br>* McsEngl.evolution,
+    <br>* McsEngl.evoluting.summarized,
+    <br>* McsEngl.evolution.summarized,
     <br>* McsEngl.general-history,
     <br>* McsEngl.generic-history,
-    <br>* McsEngl.global-history,
+    <br>* McsEngl.global-history.summarized,
     <br>* McsEngl.summarized-global-history,
     <br>* McsEngl.synoptic-global-history,
     <a class="clsHide" href="#idEntevgsmrdnam"></a></p>
@@ -753,7 +1214,7 @@
   <h2 id="idEntevgtmptH2">timepoint|state of evoluting
     <a class="clsHide" href="#idEntevgtmptH2"></a></h2>
   <p id="idEntevgtmptdsn">description::
-    <br>· state-of-entity[a] is its[a] <a class="clsPreview" href="#idEntstrr">structure</a> AND doings in a-timepoint.
+    <br>· state-of-entity\a\ is its\a\ <a class="clsPreview" href="#idEntstrr">structure</a> AND doings in a-timepoint.
     <a class="clsHide" href="#idEntevgtmptdsn"></a></p>
   <p id="idEntevgtmptnam">name::
     <br>* McsEngl.EntEvg'timepoint,
@@ -870,6 +1331,8 @@
     <br>* McsZhon.kāishǐ-开始!=dngStarting,
     <br>* McsZhon.开始-kāishǐ!=dngStarting,
     <br>====== lagoGreek:
+    <br>* McsElln.αρχίζω!~verbElln!=dngStarting,
+    <br>* McsElln.ρήμα.αρχίζω!=dngStarting,
     <br>* McsElln.ρήμα.ξεκινώ:-άω-ώ!=dngStarting,
     <br>* McsElln.ξεκινώ!~verbElln:-άω-ώ!=dngStarting,
     <a class="clsHide" href="#idEntevgstrtnam"></a></p>
@@ -1174,7 +1637,7 @@
   <h2 id="idEntevgRftH2">evoluting.referent
     <a class="clsHide" href="#idEntevgRftH2"></a></h2>
   <p id="idEntevgRftdsn">description::
-    <br>· referent-evoluting is the-evoluting of <a class="clsPreview" href="../dirCor/McsCor000002.last.html#idMcsrft">the-referent</a> of a-concept[a], NOT the-evoluting of itself[a].
+    <br>· referent-evoluting is the-evoluting of <a class="clsPreview" href="../dirCor/McsCor000002.last.html#idMcsrft">the-referent</a> of a-concept\a\, NOT the-evoluting of itself\a\.
     <br>· for example, the-evolution of linguistics and language obviously are different.
     <a class="clsHide" href="#idEntevgRftdsn"></a></p>
   <p id="idEntevgRftnam">name::
@@ -4297,163 +4760,8 @@
 </section>
 
 <section id="idEnt001">
-  <h1 id="idEnt001H1">entity.aggregate-001
+  <h1 id="idEnt001H1">entity.aggregate-001 ≡ Sympan
     <a class="clsHide" href="#idEnt001H1"></a></h1>
-  <p id="idEnt001dsn">description::
-    <br>· entityAgg ≡ Sympan ≡ the-outermost-parent.
-    <br>· entity is a-generic-concept.
-    <br>· it contains any individual-enity, <span class="clsColorRed">all-entities</span>, any specific-entity.
-    <br>· more accurately, this concept (entity.aggregate) is the-same with Sympan. {2020-04-09},
-    <a class="clsHide" href="#idEnt001dsn"></a></p>
-  <p id="idEnt001nam">name::
-    <br>* McsEngl.Cosmos!⇒Sympan,
-    <br>* McsEngl.Sympan,
-    <br>* McsEngl.Sympan/síban/!⇒Sympan,
-    <br>* McsEngl.Smpn!=Sympan!⇒Sympan,
-    <br>* McsEngl.Spn!=Sympan,
-    <br>* McsEngl.Universe!⇒Sympan,
-    <br>* McsEngl.all-entities!⇒entityAgg,
-    <br>* McsEngl.entityAgg,
-    <br>* McsEngl.entity.001-aggregate!⇒entityAgg,
-    <br>* McsEngl.entity.aggregate!⇒entityAgg,
-    <br>* McsEngl.everything/évrithìn2/!⇒entityAgg,
-    <br>* McsEngl.the-most-generic!⇒entityAgg,
-    <br>* McsEngl.the-most-parent,
-    <br>* McsEngl.the-most-whole!⇒Sympan,
-    <br>* McsEngl.the-outermost-generic!⇒entityAgg,
-    <br>* McsEngl.the-outermost-parent,
-    <br>* McsEngl.the-outermost-whole!⇒Sympan,
-    <br>====== lagoChinese:
-    <br>* McsEngl.shìjiè-世界!=entityAgg,
-    <br>* McsZhon.shìjiè-世界!=entityAgg,
-    <br>* McsZhon.世界-shìjiè!=entityAgg,
-    <br>* McsEngl.yǔzhòu-宇宙!=entityAgg,
-    <br>* McsZhon.yǔzhòu-宇宙!=entityAgg,
-    <br>* McsZhon.宇宙-yǔzhòu!=entityAgg,
-    <br>====== lagoEsperanto:
-    <br>* McsEspo.universo!=enittyAgg,
-    <br>====== lagoGreek:
-    <br>* McsElln.Κόσμος!ο!=entityAgg,
-    <br>* McsElln.Σύμπαν!το!=entityAgg,
-    <br>* McsElln.όντα!τα!=entityAgg,
-    <a class="clsHide" href="#idEnt001nam"></a></p>
-  <p id="idEnt001dsnL">descriptionLong::
-    <br>"The universe is bigger than your view of the universe."
-    <br>[{2021-08-13 retrieved} https://twitter.com/ProfFeynman/status/1426055857154912262]
-    <a class="clsHide" href="#idEnt001dsnL"></a></p>
-
-  <section id="idEnt001ptdv">
-  <h2 id="idEnt001ptdvH2">part-division of Sympan
-    <a class="clsHide" href="#idEnt001ptdvH2"></a></h2>
-  <p id="idEnt001ptdvdsn">description::
-    <br>* human-society,
-    <br>* nature,
-    <br>===
-    <br>* earth,
-    <br>* heaven,
-    <a class="clsHide" href="#idEnt001ptdvdsn"></a></p>
-  <p id="idEnt001ptdvnam">name::
-    <br>* McsEngl.Sympan'part-division,
-    <a class="clsHide" href="#idEnt001ptdvnam"></a></p>
-
-  <section id="idEnt001earth">
-  <h3 id="idEnt001earthH3">earth (<a class="clsPreview" href="../dirNtr/McsNtr000015.last.html#idOverview">link</a>) of Sympan
-    <a class="clsHide" href="#idEnt001earthH3"></a></h3>
-  </section>
-
-  <section id="idEnt001sky">
-  <h3 id="idEnt001skyH3">sky (<a class="clsPreview" href="../dirNtr/McsNtr000017.last.html#idOverview">link</a>) of Sympan
-    <a class="clsHide" href="#idEnt001skyH3"></a></h3>
-  </section>
-  </section>
-
-  <section id="idEnt003">
-  <h2 id="idEnt003H2">galaxy of Sympan
-    <br>"A galaxy is a system of stars, stellar remnants, interstellar gas, dust, and dark matter bound together by gravity.[1][2] The word is derived from the Greek galaxias (γαλαξίας), literally 'milky', a reference to the Milky Way galaxy that contains the Solar System. Galaxies, averaging an estimated 100 million stars,[3] range in size from dwarfs with less than a thousand stars,[4] to the largest galaxies known – supergiants with one hundred trillion stars, each orbiting its galaxy's center of mass. Most of the mass in a typical galaxy is in the form of dark matter, with only a few percent of that mass visible in the form of stars and nebulae. Supermassive black holes are a common feature at the centres of galaxies.
-    <br>Galaxies are categorized according to their visual morphology as elliptical,[5] spiral, or irregular.[6] The Milky Way is an example of a spiral galaxy. It is estimated that there are between 200 billion[7] (2×1011) to 2 trillion[8] galaxies in the observable universe. Most galaxies are 1,000 to 100,000 parsecs in diameter (approximately 3,000 to 300,000 light years) and are separated by distances on the order of millions of parsecs (or megaparsecs). For comparison, the Milky Way has a diameter of at least 26,800 parsecs (87,400 ly)[9][a] and is separated from the Andromeda Galaxy, its nearest large neighbor, by just over 750,000 parsecs (2.5 million ly.)[12]
-    <br>The space between galaxies is filled with a tenuous gas (the intergalactic medium) with an average density of less than one atom per cubic meter. Most galaxies are gravitationally organized into groups, clusters and superclusters. The Milky Way is part of the Local Group, which it dominates along with the Andromeda Galaxy. The group is part of the Virgo Supercluster. At the largest scale, these associations are generally arranged into sheets and filaments surrounded by immense voids.[13] Both the Local Group and the Virgo Supercluster are contained in a much larger cosmic structure named Laniakea.[14]"
-    <br>[{2024-05-14 retrieved} https://en.wikipedia.org/wiki/Galaxy]
-    <a class="clsHide" href="#idEnt003H2"></a></h2>
-  <p id="idEnt003dsn">description::
-    <a class="clsHide" href="#idEnt003dsn"></a></p>
-  <p id="idEnt003nam">name::
-    <br>* McsEngl.entity.003-galaxy,
-    <br>* McsEngl.entity.galaxy,
-    <br>* McsEngl.entityAgg'galaxy,
-    <br>* McsEngl.galaxy,
-    <br>====== lagoChinese:
-    <br>* McsEngl.xīngxì-星系!=galaxy,
-    <br>* McsZhon.xīngxì-星系!=galaxy,
-    <br>* McsZhon.星系-xīngxì!=galaxy,
-    <br>====== lagoGreek:
-    <br>* McsElln.γαλαξίας/yalaksías/!ο!=galaxy,
-    <a class="clsHide" href="#idEnt003nam"></a></p>
-
-  <section id="idEnt003Spfc">
-  <h3 id="idEnt003SpfcH3">galaxy.SPECIFIC
-    <a class="clsHide" href="#idEnt003SpfcH3"></a></h3>
-  <p id="idEnt003Spfcdsn">description::
-    <br>"Our Galaxy, the Milky Way, has over 100 thousand million stars. And based on data from NASA's New Horizons space probe, we now estimate that our Universe contains roughly 200 billion galaxies."
-    <br>[{2022-02-14 retrieved} Peter Diamandis peter@diamandis.com]
-    <br>
-    <br>">types of galaxies:
-    <br>Galaxies are vast systems composed of stars, stellar remnants, interstellar gas, dust, and dark matter, bound together by gravity. There are several types of galaxies, primarily classified based on their shape and structure. Here are the main types:
-    <br>1. **Spiral Galaxies**:
-    <br>   - **Characteristics**: They have a flat, rotating disk with spiral arms, a central bulge, and often a surrounding halo.
-    <br>   - **Examples**: The Milky Way and the Andromeda Galaxy.
-    <br>   - **Subtypes**:
-    <br>     - **Normal Spirals (S)**: Prominent spiral arms originating from the center.
-    <br>     - **Barred Spirals (SB)**: A central bar-shaped structure with spiral arms extending from the ends of the bar.
-    <br>2. **Elliptical Galaxies**:
-    <br>   - **Characteristics**: They range from nearly spherical (E0) to highly elongated shapes (E7). They have little to no structure and contain older, red stars with minimal interstellar gas and dust.
-    <br>   - **Examples**: M87 in the Virgo Cluster.
-    <br>   - **Subtypes**: Classified from E0 (almost spherical) to E7 (highly elongated).
-    <br>3. **Lenticular Galaxies**:
-    <br>   - **Characteristics**: They have a central bulge and a disk but lack significant spiral arms. They are an intermediate type between elliptical and spiral galaxies.
-    <br>   - **Examples**: NGC 2787.
-    <br>   - **Subtypes**: S0 (normal lenticular) and SB0 (barred lenticular).
-    <br>4. **Irregular Galaxies**:
-    <br>   - **Characteristics**: They lack a distinct shape or structure. Often chaotic in appearance, they can be rich in gas and dust, and have active star formation.
-    <br>   - **Examples**: The Large Magellanic Cloud (LMC) and the Small Magellanic Cloud (SMC).
-    <br>5. **Peculiar Galaxies**:
-    <br>   - **Characteristics**: They exhibit unusual shapes or properties often resulting from gravitational interactions or collisions with other galaxies.
-    <br>   - **Examples**: The Antennae Galaxies.
-    <br>6. **Dwarf Galaxies**:
-    <br>   - **Characteristics**: These are smaller galaxies containing a few billion stars, compared to the hundreds of billions in larger galaxies. They can be elliptical, spiral, or irregular.
-    <br>   - **Examples**: The Fornax Dwarf and the Sagittarius Dwarf Spheroidal Galaxy.
-    <br>Each galaxy type contributes to our understanding of the universe's structure, formation, and evolution."
-    <br>[{2024-05-14 retrieved} https://chatgpt.com/c/619236c0-fe83-45b2-ab3b-07eaabf39289]
-    <a class="clsHide" href="#idEnt003Spfcdsn"></a></p>
-  <p id="idEnt003Spfcnam">name::
-    <br>* McsEngl.galaxy.specific,
-    <a class="clsHide" href="#idEnt003Spfcnam"></a></p>
-  </section>
-
-  <section id="idEnt003Mkwy">
-  <h3 id="idEnt003MkwyH3">galaxy.Milky-Way (<a class="clsPreview" href="../dirNtr/McsNtr000014.last.html#idNtratt002">link</a>) of Sympan
-    <a class="clsHide" href="#idEnt003MkwyH3"></a></h3>
-  </section>
-  </section>
-
-  <section id="idEntNtr">
-  <h2 id="idEntNtrH2">Nature (<a class="clsPreview" href="../dirNtr/McsNtr000014.last.html#idOverview">link</a>) of Sympan
-    <a class="clsHide" href="#idEntNtrH2"></a></h2>
-  </section>
-
-  <section id="idEntIlst">
-  <h2 id="idEntIlstH2">International-society (<a class="clsPreview" href="../dirStn/McsStn000021.last.html#idOverview">link</a>) of Sympan
-    <a class="clsHide" href="#idEntIlstH2"></a></h2>
-  </section>
-
-  <section id="idEntspace">
-  <h2 id="idEntspaceH2">space (<a class="clsPreview" href="../dirCor/McsCor000007.last.html#idOverview">link</a>) of Sympan
-    <a class="clsHide" href="#idEntspaceH2"></a></h2>
-  </section>
-
-  <section id="idEnttime">
-  <h2 id="idEnttimeH2">time (<a class="clsPreview" href="../dirCor/McsCor000006.last.html#idOverview">link</a>) of Sympan
-    <a class="clsHide" href="#idEnttimeH2"></a></h2>
-  </section>
 </section>
 
 <section id="idEnt002">
@@ -5037,7 +5345,7 @@
   <h2 id="idEntBodyNargH2">01_argument of bodyNo
     <a class="clsHide" href="#idEntBodyNargH2"></a></h2>
   <p id="idEntBodyNargdsn">description::
-    <br>· argument of <a class="clsPreview" href="#idEntBodyN">bodyNo[a]</a> is its entities.
+    <br>· argument of bodyNo is its attributes. {2025-12-11}
     <a class="clsHide" href="#idEntBodyNargdsn"></a></p>
   <p id="idEntBodyNargnam">name::
     <br>* McsEngl.argument!⇒argReldo,
@@ -5173,8 +5481,8 @@
     <a class="clsHide" href="#idEntBodyNSqcdH2"></a></h2>
   <p id="idEntBodyNSqcddsn">description::
     <br>· sequenced-bodyNo is <a class="clsPreview" href="#idEntBodyN">a-bodyNo</a> WITH <a class="clsPreview" href="#idEntBodyNdrn">direction</a>.
-    <br>· a-sequenced-bodyNo is always a-sequenced-bodyNo OF AN-ENTITY[a].
-    <br>· this[a] entity is the-SUBJECT of the-sequenced-bodyNo.
+    <br>· a-sequenced-bodyNo is always a-sequenced-bodyNo OF AN-ENTITY\a\.
+    <br>· this\a\ entity is the-SUBJECT of the-sequenced-bodyNo.
     <a class="clsHide" href="#idEntBodyNSqcddsn"></a></p>
   <p id="idEntBodyNSqcdnam">name::
     <br>* McsEngl.bodyNo.sequenced,

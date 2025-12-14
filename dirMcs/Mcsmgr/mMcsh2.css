@@ -1,5 +1,7 @@
 /*
- * version.24-1-0.2025-12-07: misc'.
+ * version.24-3-1.2025-12-13: h3 color'.
+ * version.24-3-0.2025-12-12: input text'.
+ * version.24-2-0.2025-12-08: misc'.
  * version.24-0-0.2025-12-06: dark mode'.
  * version.18-0-0.2025-10-06: with mMcsh2.js.
  * version.17-7-0.2022-09-15: clsPbLine|Indent.
@@ -1294,7 +1296,7 @@ ul#idPginfTabHeadersUl li.clsTabActive a:hover  {
   background: linear-gradient(to bottom, #1e1e1e, #2a2a2a);
   border-radius: 3px;
   padding: 3px 0 0 15px;
-  color: #00bfff;
+  color: #87dfff;
   font-family: fntUbuntuMonoRgr, "Times New Roman", Times, serif;
   font-size: 18px;
   font-weight: bold;
@@ -1622,11 +1624,16 @@ ul#idPginfTabHeadersUl li.clsTabActive a:hover  {
   padding-left: 3px;
 }
 .clsDark #idTabCntSrchIpt {
-  border: 1px solid #4b5563;
-  background: #121212;
-  color: var(--text);
+  background-color: #2d2d2d;
+  color: white;
+  border: 1px solid #808080;
+  border-radius: 3px;
   width: 99%;
   margin-left: 1px;
+}
+.clsDark #idTabCntSrchIpt:hover {
+  background-color: #1a1a1a;
+  color: white;
 }
 .clsDark #idTabCntSrchOl {
   margin: 8px 0px 4px 6px;
@@ -1972,7 +1979,7 @@ ul#idPginfTabHeadersUl li.clsTabActive a:hover  {
 }
 .clsDark .clsTreeUl > li > ul > li > ul > li > ul > li,
 .clsDark .clsTreeUl > li > ul > li > ul > li > ul > li > a {
-  color: #00bfff !important; /* h3 */
+  color: #87dfff !important; /* h3 */
 }
 .clsDark .clsTreeUl > li > ul > li > ul > li > ul > li > ul > li,
 .clsDark .clsTreeUl > li > ul > li > ul > li > ul > li > ul > li > a {
@@ -2045,5 +2052,8 @@ ul#idPginfTabHeadersUl li.clsTabActive a:hover  {
   color: white;
   border: 1px solid #808080;
   border-radius: 3px;
-  cursor: pointer;
+}
+.clsDark input[type="text"]:hover {
+  background-color: #1a1a1a;
+  color: white;
 }

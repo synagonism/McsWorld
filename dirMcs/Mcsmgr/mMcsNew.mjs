@@ -45,6 +45,7 @@ import {fSftp} from './mSftp.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mMcsNew.mjs.1-3-7.2025-12-10: mMcsh2',
     'mMcsNew.mjs.1-3-6.2024-07-04: parent-child-tree',
     'mMcsNew.mjs.1-3-5.2024-02-27: parent-child-tree',
     'mMcsNew.mjs.1-3-4.2023-12-12: title !=',
@@ -95,15 +96,15 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirStn',
+  sDir = 'dirEdu',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Croatia',
+  sName = 'music',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagoSngo,
-  sNameShort = 'Hrva',
+  sNameShort = '',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk, SocGrca,
-  sNameId = 'SocHrva',
+  sNameId = 'Musc',
 
 
   sNameFile = '',
@@ -132,9 +133,10 @@ s =
   '<head>\n' +
   '  <meta charset="utf-8">\n' +
   '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-  '  <title>Mcs.' + sNameShort + '!=' + sName + ' (' + sNameFileNaked + '.0-1-0.' + moUtil.fDateYMD() + ' draft)</title>\n' +
+  '  <title>Mcs.' + sNameShort + '!=' + sName + '\n' +
+  '    (' + sNameFileNaked + '.0-1-0.' + moUtil.fDateYMD() + ' draft)</title>\n' +
   '  <meta name="keywords" content="' + sName + ', ' + sNameShort + ', ModelConceptSensorial, McsHitp, Synagonism">\n' +
-  '  <link rel="stylesheet" href="../Mcsmgr/mHitp.css">\n' +
+  '  <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">\n' +
   '</head>\n' +
   '\n' +
   '<body>\n' +
@@ -262,7 +264,7 @@ if (bCounter) {
 }
 s = s +
   '  <!-- the content of page-path paragraph is displayed as it is on top of toc -->\n' +
-  '  <p id="idMetaWebpage_path"><span class="clsB clsColorGreen">page-wholepath</span>:\n' +
+  '  <p id="idMetaWebpage_path"><span class="clsColorGreen">page-wholepath</span>:\n' +
   '    <a class="clsPreview" href="../../index.html#idOverview">synagonism.net</a> /\n' +
   '    <a class="clsPreview" href="../Mcs000000.last.html#idOverview">worldviewSngo</a> /\n' +
   '    <a class="clsPreview" href="../' + sDir + '/Mcs' + sDirShort + '000000.last.html#idOverview">' + sDir + '</a> /\n' +
@@ -297,7 +299,7 @@ s = s +
   '</section>\n' +
   '\n' +
   '<script type="module">\n' +
-  '  import * as omMcsh from \'../Mcsmgr/mMcsh.js\'\n' +
+  '  import * as omMcsh from \'../Mcsmgr/mMcsh2.js\'\n' +
   '</script>\n' +
   '<!-- Global site tag (gtag.js) - Google Analytics -->\n' +
   '<script async src="https://www.googletagmanager.com/gtag/js?id=G-N8T0MHWLS1"></script>\n' +

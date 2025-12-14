@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.24-1-0.2025-12-13: cyan-link',
     'mMcsh2.js.24-0-0.2025-12-06: dark mode',
     'mMcsh2.js.23-1-0.2025-12-03: title search',
     'mMcsh2.js.23-0-0.2025-11-29: audio players',
@@ -1181,7 +1182,7 @@ let fContainersInsert = function () {
     'a) clicking on CONTENT, shows its Toc position, the-links, the-address-link-icon <i class="clsFa clsFaLink clsImgLnkIcn"></i>, and removes ontop windows and highlights.<br>' +
     'b) clicking on TITLE or SEARCH-icon, shows SEARCH-tab.<br>' +
     'c) clicking on ADDRESS-LINK-ICON or on Toc, you see the-address of that text on address-bar.<br>' +
-    'd) clicking <span class="clsColorBlue">a-BLUE-LINK</span> shows a-preview.<br>' +
+    'd) clicking <span style="color:#00ffff">a-CYAN-LINK</span> shows a-preview.<br>' +
     'e) SECOND-CLICK, usually, does the-events attached to components in-order-to work well on touch-screens.'
   oEltTabTocDiv.appendChild(oEltTabTocNotP)
   // insert TabCntToc in TabCnt
