@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.24-2-0.2025-12-15: oEltCnrTopTitleP listener',
     'mMcsh2.js.24-1-0.2025-12-13: cyan-link',
     'mMcsh2.js.24-0-0.2025-12-06: dark mode',
     'mMcsh2.js.23-1-0.2025-12-03: title search',
@@ -337,6 +338,7 @@ let fContainersInsert = function () {
     oEltTabSearchP.innerHTML = sTabSearchPSetText()
     sIdxfile = 'lagRoot'
     fCnrSearchShow()
+    fCnrOntopRemove()
     //oEvtIn.preventDefault()
     //fCmdQuerySelection()
   })
