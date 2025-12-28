@@ -115,7 +115,7 @@ function fNamidx(fileIn) {
     // array of languages ['lagALLL'] or ['lagElln','lagEngl',...]
     aLagALL = ['lagEngl','lagSngu','lagElln','lagZhon',
     'lagArab','lagDeut','lagElla','lagEspo','lagFrac',
-    'lagHind','lagItln','lagRomn',
+    'lagHind','lagItln','lagJpns','lagRomn',
     'lagSbos','lagShrv','lagScnr','lagSsrp','lagSbul','lagSmkd','lagSrus','lagSslv',
     'lagSpan','lagSqip',
     'lagTurk','lagVnma'],
