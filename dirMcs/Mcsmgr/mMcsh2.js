@@ -28,6 +28,7 @@
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.24-4-0.2026-01-15: Korean-language',
     'mMcsh2.js.24-3-0.2025-12-28: Japanese-language',
     'mMcsh2.js.24-2-0.2025-12-15: oEltCnrTopTitleP listener',
     'mMcsh2.js.24-1-0.2025-12-13: cyan-link',
@@ -1280,53 +1281,57 @@ let fContainersInsert = function () {
   oEltTabSearchOpn15.text = 'Japanese (Jpns)'
   oEltTabSearchSlct.add(oEltTabSearchOpn15)
   let oEltTabSearchOpn16 = document.createElement('option')
-  oEltTabSearchOpn16.value = 'lagRomn'
-  oEltTabSearchOpn16.text = 'Romanian (Romn)'
+  oEltTabSearchOpn16.value = 'lagKorn'
+  oEltTabSearchOpn16.text = 'Korean (Korn)'
   oEltTabSearchSlct.add(oEltTabSearchOpn16)
   let oEltTabSearchOpn17 = document.createElement('option')
-  oEltTabSearchOpn17.value = 'lagSbos'
-  oEltTabSearchOpn17.text = 'SlavoBosnian (Sbos)'
+  oEltTabSearchOpn17.value = 'lagRomn'
+  oEltTabSearchOpn17.text = 'Romanian (Romn)'
   oEltTabSearchSlct.add(oEltTabSearchOpn17)
   let oEltTabSearchOpn18 = document.createElement('option')
-  oEltTabSearchOpn18.value = 'lagShrv'
-  oEltTabSearchOpn18.text = 'SlavoCroatian (Shrv)'
+  oEltTabSearchOpn18.value = 'lagSbos'
+  oEltTabSearchOpn18.text = 'SlavoBosnian (Sbos)'
   oEltTabSearchSlct.add(oEltTabSearchOpn18)
   let oEltTabSearchOpn19 = document.createElement('option')
-  oEltTabSearchOpn19.value = 'lagScnr'
-  oEltTabSearchOpn19.text = 'SlavoMondenegrin (Scnr)'
+  oEltTabSearchOpn19.value = 'lagShrv'
+  oEltTabSearchOpn19.text = 'SlavoCroatian (Shrv)'
   oEltTabSearchSlct.add(oEltTabSearchOpn19)
   let oEltTabSearchOpn20 = document.createElement('option')
-  oEltTabSearchOpn20.value = 'lagSsrp'
-  oEltTabSearchOpn20.text = 'SlavoSerbian (Ssrp)'
+  oEltTabSearchOpn20.value = 'lagScnr'
+  oEltTabSearchOpn20.text = 'SlavoMondenegrin (Scnr)'
   oEltTabSearchSlct.add(oEltTabSearchOpn20)
   let oEltTabSearchOpn21 = document.createElement('option')
-  oEltTabSearchOpn21.value = 'lagSbul'
-  oEltTabSearchOpn21.text = 'SlavoBulgarian (Sbul)'
+  oEltTabSearchOpn21.value = 'lagSsrp'
+  oEltTabSearchOpn21.text = 'SlavoSerbian (Ssrp)'
   oEltTabSearchSlct.add(oEltTabSearchOpn21)
   let oEltTabSearchOpn22 = document.createElement('option')
-  oEltTabSearchOpn22.value = 'lagSmkd'
-  oEltTabSearchOpn22.text = 'SlavoMacedonian (Smkd)'
+  oEltTabSearchOpn22.value = 'lagSbul'
+  oEltTabSearchOpn22.text = 'SlavoBulgarian (Sbul)'
   oEltTabSearchSlct.add(oEltTabSearchOpn22)
   let oEltTabSearchOpn23 = document.createElement('option')
-  oEltTabSearchOpn23.value = 'lagSrus'
-  oEltTabSearchOpn23.text = 'SlavoRussian (Srus)'
+  oEltTabSearchOpn23.value = 'lagSmkd'
+  oEltTabSearchOpn23.text = 'SlavoMacedonian (Smkd)'
   oEltTabSearchSlct.add(oEltTabSearchOpn23)
   let oEltTabSearchOpn24 = document.createElement('option')
-  oEltTabSearchOpn24.value = 'lagSslv'
-  oEltTabSearchOpn24.text = 'SlavoSlovenian (Sslv)'
+  oEltTabSearchOpn24.value = 'lagSrus'
+  oEltTabSearchOpn24.text = 'SlavoRussian (Srus)'
   oEltTabSearchSlct.add(oEltTabSearchOpn24)
   let oEltTabSearchOpn25 = document.createElement('option')
-  oEltTabSearchOpn25.value = 'lagSpan'
-  oEltTabSearchOpn25.text = 'Spanish (Span)'
+  oEltTabSearchOpn25.value = 'lagSslv'
+  oEltTabSearchOpn25.text = 'SlavoSlovenian (Sslv)'
   oEltTabSearchSlct.add(oEltTabSearchOpn25)
   let oEltTabSearchOpn26 = document.createElement('option')
-  oEltTabSearchOpn26.value = 'lagTurk'
-  oEltTabSearchOpn26.text = 'Turkish (Turk)'
+  oEltTabSearchOpn26.value = 'lagSpan'
+  oEltTabSearchOpn26.text = 'Spanish (Span)'
   oEltTabSearchSlct.add(oEltTabSearchOpn26)
   let oEltTabSearchOpn27 = document.createElement('option')
-  oEltTabSearchOpn27.value = 'lagVnma'
-  oEltTabSearchOpn27.text = 'Vietnamese (Vnma)'
+  oEltTabSearchOpn27.value = 'lagTurk'
+  oEltTabSearchOpn27.text = 'Turkish (Turk)'
   oEltTabSearchSlct.add(oEltTabSearchOpn27)
+  let oEltTabSearchOpn28 = document.createElement('option')
+  oEltTabSearchOpn28.value = 'lagVnma'
+  oEltTabSearchOpn28.text = 'Vietnamese (Vnma)'
+  oEltTabSearchSlct.add(oEltTabSearchOpn28)
   oEltTabSearchSlct.options[0].selected = true
   oEltTabSearchP.id = 'idTabCntSrchP'
   oEltTabSearchP.setAttribute('class', 'clsCenter')

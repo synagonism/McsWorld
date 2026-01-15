@@ -26,7 +26,7 @@
  * SOFTWARE.
  *
  * DOING:
- *   it works as a-module 
+ *   it works as a-module
  *   1) it updates the-names of Mcs-files in Mcsmgr/namidx.txt, in index-files.
  *   2) it creates the-file 'Mcsmgr/sftp.json' that contains the-changed files we have to upload.
  *   3) it computes the-number of names.
@@ -104,7 +104,7 @@ function fNamidx(fileIn, fSftpIn) {
     //aLagALL = ['lagEngl','lagElln','lagZhon','lagDeut','lagFrac'],
     aLagALL = ['lagEngl','lagSngu','lagElln','lagZhon',
     'lagArab','lagDeut','lagElla','lagEspo','lagFrac',
-    'lagHind','lagItln','lagJpns','lagRomn',
+    'lagHind','lagItln','lagJpns','lagKorn','lagRomn',
     'lagSbos','lagShrv','lagScnr','lagSsrp','lagSbul','lagSmkd','lagSrus','lagSslv',
     'lagSpan','lagSqip',
     'lagTurk','lagVnma'],
