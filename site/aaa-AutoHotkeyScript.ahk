@@ -1,16 +1,17 @@
 ﻿; comments
-; version {2025-07-27}
+; version {2026-02-03}
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory.
 #Hotstring c  ; makes scripts case-sensitive
 
-;; NOTATIONS:
+;;;;;;;;; NOTATIONS ;;;;;;;;;;;;;
 ; CUSTOM notation begin with :
 ; NUMBER notation begin with ii
 ; TeX notation begin with    \
 ; HTML notation begin with   &
+; GREEK-ANCIENT ''greek-keyboard
 ; SLAVIC ''
 ; ARABIC '"
 
@@ -188,25 +189,307 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 :::fg2::ʕ
 :::fg3::ˤ
 
-::ii128::€
-::ii8364::€
 :::euro::€
 
-::ii183::·
 :::sentence::·
 
-::ii215::×
-
-::ii305::ı
-
-::ii12290::。
 :::ZhonFullstop::。
 
-::ii120143::𝕏
 :::Xdouble::𝕏
 
-::ii120169::𝕩
 :::xdouble::𝕩
+
+
+;;;;;;;;;;;;;;;;;;;; GREEK-ANCIENT
+;; [ Ψιλή
+;; ] Δασεία
+;; { Οξεία
+;; } Περισπωμένη
+;; \ Βαρεία
+;; | Υπογεγραμμένη
+;; ( βΡαχύ
+;; ) Μακρό
+;; : Διαλυτικά
+::''ΑΒ::Ὰ   ;; char.8122
+::''ΑΔ::Ἁ   ;; char.7945
+::''ΑΔΒ::Ἃ   ;; char.7947
+::''ΑΔΒΥ::ᾋ   ;; char.8075
+::''ΑΔΟ::Ἅ   ;; char.7949
+::''ΑΔΟΥ::ᾍ   ;; char.8077
+::''ΑΔΠ::Ἇ   ;; char.7951
+::''ΑΔΠΥ::ᾏ   ;; char.8079
+::''ΑΔΥ::ᾉ   ;; char.8073
+::''ΑΜ::Ᾱ   ;; char.8121
+::''ΑΟ::Ά   ;; char.8123
+::''ΑΡ::Ᾰ   ;; char.8120
+::''ΑΥ::ᾼ   ;; char.8124
+::''ΑΨ::Ἀ   ;; char.7944
+::''ΑΨΒ::Ἂ   ;; char.7946
+::''ΑΨΒΥ::ᾊ   ;; char.8074
+::''ΑΨΟ::Ἄ   ;; char.7948
+::''ΑΨΟΥ::ᾌ   ;; char.8076
+::''ΑΨΠ::Ἆ   ;; char.7950
+::''ΑΨΠΥ::ᾎ   ;; char.8078
+::''ΑΨΥ::ᾈ   ;; char.8072
+::''ΕΒ::Ὲ   ;; char.8136
+::''ΕΔ::Ἑ   ;; char.7961
+::''ΕΔΒ::Ἓ   ;; char.7963
+::''ΕΔΟ::Ἕ   ;; char.7965
+::''ΕΟ::Έ   ;; char.8137
+::''ΕΨ::Ἐ   ;; char.7960
+::''ΕΨ::Ἒ   ;; char.7962
+::''ΕΨΟ::Ἔ   ;; char.7964
+::''ΗΒ::Ὴ   ;; char.8138
+::''ΗΔ::Ἡ   ;; char.7977
+::''ΗΔΒ::Ἣ   ;; char.7979
+::''ΗΔΒΥ::ᾛ   ;; char.8091
+::''ΗΔΟ::Ἥ   ;; char.7981
+::''ΗΔΟΥ::ᾝ   ;; char.8093
+::''ΗΔΠ::Ἧ   ;; char.7983
+::''ΗΔΠΥ::ᾟ   ;; char.8095
+::''ΗΔΥ::ᾙ   ;; char.8089
+::''ΗΟ::Ή   ;; char.8139
+::''ΗΥ::ῌ   ;; char.8140
+::''ΗΨ::Ἠ   ;; char.7976
+::''ΗΨ::Ἢ   ;; char.7978
+::''ΗΨΒΥ::ᾚ   ;; char.8090
+::''ΗΨΟ::Ἤ   ;; char.7980
+::''ΗΨΟΥ::ᾜ   ;; char.8092
+::''ΗΨΠ::Ἦ   ;; char.7982
+::''ΗΨΠΥ::ᾞ   ;; char.8094
+::''ΗΨΥ::ᾘ   ;; char.8088
+::''ΙΒ::Ὶ   ;; char.8154
+::''ΙΔ::Ἱ   ;; char.7993
+::''ΙΔΒ::Ἳ   ;; char.7995
+::''ΙΔΟ::Ἵ   ;; char.7997
+::''ΙΔΠ::Ἷ   ;; char.7999
+::''ΙΜ::Ῑ   ;; char.8153
+::''ΙΟ::Ί   ;; char.8155 with oksia
+::''ΙΡ::Ῐ   ;; char.8152
+::''ΙΨ::Ἰ   ;; char.7992
+::''ΙΨΒ::Ἲ   ;; char.7994
+::''ΙΨΟ::Ἴ   ;; char.7996
+::''ΙΨΠ::Ἶ   ;; char.7998
+::''ΟΒ::Ὸ   ;; char.8184
+::''ΟΔ::Ὁ   ;; char.8009
+::''ΟΔΒ::Ὃ   ;; char.8011
+::''ΟΔΟ::Ὅ   ;; char.8013
+::''ΟΟ::Ό   ;; char.8185
+::''ΟΨ::Ὀ   ;; char.8008
+::''ΟΨΒ::Ὂ   ;; char.8010
+::''ΟΨΟ::Ὄ   ;; char.8012
+::''ΡΔ::Ῥ   ;; char.8172
+::''ΥΒ::Ὺ   ;; char.8170
+::''ΥΔ::Ὑ   ;; char.8025
+::''ΥΔΒ::Ὓ   ;; char.8027
+::''ΥΔΟ::Ὕ   ;; char.8029
+::''ΥΔΠ::Ὗ   ;; char.8031
+::''ΥΜ::Ῡ   ;; char.8169
+::''ΥΟ::Ύ   ;; char.8171
+::''ΥΡ::Ῠ   ;; char.8168
+::''ΩΒ::Ὼ   ;; char.8186
+::''ΩΔ::Ὡ   ;; char.8041
+::''ΩΔΒ::Ὣ   ;; char.8043
+::''ΩΔΒΥ::ᾫ   ;; char.8107
+::''ΩΔΟ::Ὥ   ;; char.8045
+::''ΩΔΟΥ::ᾭ   ;; char.8109
+::''ΩΔΠ::Ὧ   ;; char.8047
+::''ΩΔΠΥ::ᾯ   ;; char.8111
+::''ΩΔΥ::ᾩ   ;; char.8105
+::''ΩΟ::Ώ   ;; char.8187
+::''ΩΥ::ῼ   ;; char.8188
+::''ΩΨ::Ὠ   ;; char.8040
+::''ΩΨΒ::Ὢ   ;; char.8042
+::''ΩΨΒΥ::ᾪ   ;; char.8106
+::''ΩΨΟ::Ὤ   ;; char.8044
+::''ΩΨΟΥ::ᾬ   ;; char.8108
+::''ΩΨΠ::Ὦ   ;; char.8046
+::''ΩΨΠΥ::ᾮ   ;; char.8110
+::''ΩΨΥ::ᾨ   ;; char.8104
+::''αΒ::ὰ   ;; char.8048
+::''αΒΥ::ᾲ   ;; char.8114
+::''αΔ::ἁ   ;; char.7937
+::''αΔΒ::ἃ   ;; char.7939
+::''αΔΒΥ::ᾃ   ;; char.8067
+::''αΔΟ::ἅ   ;; char.7941
+::''αΔΟΥ::ᾅ   ;; char.8069
+::''αΔΠ::ἇ   ;; char.7943
+::''αΔΠΥ::ᾇ   ;; char.8071
+::''αΔΥ::ᾁ   ;; char.8065
+::''αΜ::ᾱ   ;; char.8113
+::''αΟ::ά   ;; char.8049
+::''αΟΥ::ᾴ   ;; char.8116
+::''αΠ::ᾶ   ;; char.8118
+::''αΠΥ::ᾷ   ;; char.8119
+::''αΡ::ᾰ   ;; char.8112
+::''αΥ::ᾳ   ;; char.8115
+::''αΨ::ἀ   ;; char.7936
+::''αΨΒ::ἂ   ;; char.7938
+::''αΨΒΥ::ᾂ   ;; char.8066
+::''αΨΟ::ἄ   ;; char.7940
+::''αΨΟΥ::ᾄ   ;; char.8068
+::''αΨΠ::ἆ   ;; char.7942
+::''αΨΠΥ::ᾆ   ;; char.8070
+::''αΨΥ::ᾀ   ;; char.8064
+::''εΒ::ὲ   ;; char.8050
+::''εΔ::ἑ   ;; char.7953
+::''εΔΒ::ἓ   ;; char.7955
+::''εΔΟ::ἕ   ;; char.7957
+::''εΟ::έ   ;; char.8051
+::''εΟΒ::ἒ   ;; char.7954
+::''εΨ::ἐ   ;; char.7952
+::''εΨΟ::ἔ   ;; char.7956
+::''ηΒ::ὴ   ;; char.8052
+::''ηΒΥ::ῂ   ;; char.8130
+::''ηΔ::ἡ   ;; char.7969
+::''ηΔΒ::ἣ   ;; char.7971
+::''ηΔΒΥ::ᾓ   ;; char.8083
+::''ηΔΟ::ἥ   ;; char.7973
+::''ηΔΟΥ::ᾕ   ;; char.8085
+::''ηΔΠ::ἧ   ;; char.7975
+::''ηΔΠΥ::ᾗ   ;; char.8087
+::''ηΔΥ::ᾑ   ;; char.8081
+::''ηΟ::ή   ;; char.8053
+::''ηΟΥ::ῄ   ;; char.8132
+::''ηΠ::ῆ   ;; char.8134
+::''ηΠΥ::ῇ   ;; char.8135
+::''ηΥ::ῃ   ;; char.8131
+::''ηΨ::ἠ   ;; char.7968
+::''ηΨΒΥ::ᾒ   ;; char.8082
+::''ηΨΟ::ἢ   ;; char.7970
+::''ηΨΟ::ἤ   ;; char.7972
+::''ηΨΟΥ::ᾔ   ;; char.8084
+::''ηΨΠ::ἦ   ;; char.7974
+::''ηΨΠΥ::ᾖ   ;; char.8086
+::''ηΨΥ::ᾐ   ;; char.8080
+::''ιΒ:::ῒ   ;; char.8146
+::''ιΒ::ὶ   ;; char.8054
+::''ιΔ::ἱ   ;; char.7985
+::''ιΔΒ::ἳ   ;; char.7987
+::''ιΔΟ::ἵ   ;; char.7989
+::''ιΔΠ::ἷ   ;; char.7991
+::''ιΜ::ῑ   ;; char.8145
+::''ιΟ:::ΐ   ;; char.8147
+::''ιΟ::ί   ;; char.8055
+::''ιΠ:::ῗ   ;; char.8151
+::''ιΠ::ῖ   ;; char.8150
+::''ιΡ::ῐ   ;; char.8144
+::''ιΨ::ἰ   ;; char.7984
+::''ιΨΒ::ἲ   ;; char.7986
+::''ιΨΟ::ἴ   ;; char.7988
+::''ιΨΠ::ἶ   ;; char.7990
+::''οΒ::ὸ   ;; char.8056
+::''οΔ::ὁ   ;; char.8001
+::''οΔΒ::ὃ   ;; char.8003
+::''οΔΟ::ὅ   ;; char.8005
+::''οΟ::ό   ;; char.8057
+::''οΨ::ὀ   ;; char.8000
+::''οΨΒ::ὂ   ;; char.8002
+::''οΨΟ::ὄ   ;; char.8004
+::''ρΔ::ῥ   ;; char.8165
+::''ρΨ::ῤ   ;; char.8164
+::''υΒ:::ῢ   ;; char.8162
+::''υΒ::ὺ   ;; char.8058
+::''υΔ::ὑ   ;; char.8017
+::''υΔΒ::ὓ   ;; char.8019
+::''υΔΟ::ὕ   ;; char.8021
+::''υΔΠ::ὗ   ;; char.8023
+::''υΜ::ῡ   ;; char.8161
+::''υΟ:::ΰ   ;; char.8163
+::''υΟ::ύ   ;; char.8059
+::''υΠ:::ῧ   ;; char.8167
+::''υΠ::ῦ   ;; char.8166
+::''υΡ::ῠ   ;; char.8160
+::''υΨ::ὐ   ;; char.8016
+::''υΨΒ::ὒ   ;; char.8018
+::''υΨΟ::ὔ   ;; char.8020
+::''υΨΠ::ὖ   ;; char.8022
+::''ωΒ::ὼ   ;; char.8060
+::''ωΒΥ::ῲ   ;; char.8178
+::''ωΔ::ὡ   ;; char.8033
+::''ωΔΒ::ὣ   ;; char.8035
+::''ωΔΒΠ::ᾣ   ;; char.8099
+::''ωΔΟ::ὥ   ;; char.8037
+::''ωΔΟΥ::ᾥ   ;; char.8101
+::''ωΔΠ::ὧ   ;; char.8039
+::''ωΔΠΥ::ᾧ   ;; char.8103
+::''ωΔΥ::ᾡ   ;; char.8097
+::''ωΠ::ῶ   ;; char.8182
+::''ωΠΥ::ῷ   ;; char.8183
+::''ωΥ::ῳ   ;; char.8179
+::''ωΨ::ὠ   ;; char.8032
+::''ωΨ::ώ   ;; char.8061
+::''ωΨΒ::ὢ   ;; char.8034
+::''ωΨΒΥ::ᾢ   ;; char.8098
+::''ωΨΟ::ὤ   ;; char.8036
+::''ωΨΟΥ::ᾤ   ;; char.8100
+::''ωΨΠ::ὦ   ;; char.8038
+::''ωΨΠΥ::ᾦ   ;; char.8102
+::''ωΨΥ::ᾠ   ;; char.8096
+::''ωΨΥ::ῴ   ;; char.8180
+;;Ά  ;; char.902
+;;Έ   ;; char.904
+;;Ή   ;; char.905
+;;Ί   ;; char.906 with tonos
+;;Ό   ;; char.908
+;;Ύ   ;; char.910
+;;Ώ   ;; char.911
+;;Α   ;; char.913
+;;Β   ;; char.914
+;;Γ   ;; char.915
+;;Δ   ;; char.916
+;;Ε   ;; char.917
+;;Ζ   ;; char.918
+;;Η   ;; char.919
+;;Θ   ;; char.920
+;;Ι   ;; char.921
+;;Κ   ;; char.922
+;;Λ   ;; char.923
+;;Μ   ;; char.924
+;;Ν   ;; char.925
+;;Ξ   ;; char.926
+;;Ο   ;; char.927
+;;Π   ;; char.928
+;;Ρ   ;; char.929
+;;Σ   ;; char.931
+;;Τ   ;; char.932
+;;Υ   ;; char.933
+;;Φ   ;; char.934
+;;Χ   ;; char.935
+;;Ψ   ;; char.936
+;;Ω   ;; char.937
+;;ά   ;; char.940
+;;έ   ;; char.941
+;;ή   ;; char.942
+;;ί   ;; char.943
+;;α   ;; char.945
+;;β   ;; char.946
+;;γ   ;; char.947
+;;δ   ;; char.948
+;;ε   ;; char.949
+;;ζ   ;; char.950
+;;η   ;; char.951
+;;θ   ;; char.952
+;;ι   ;; char.953
+;;κ   ;; char.954
+;;λ   ;; char.955
+;;μ   ;; char.956
+;;ν   ;; char.957
+;;ξ   ;; char.958
+;;ο   ;; char.959
+;;π   ;; char.960
+;;ρ   ;; char.961
+;;σ   ;; char.963
+;;τ   ;; char.964
+;;υ   ;; char.965
+;;φ   ;; char.966
+;;χ   ;; char.967
+;;ψ   ;; char.968
+;;ω   ;; char.969
+;;ό   ;; char.972
+;;ύ   ;; char.973
+;;ώ   ;; char.974
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;; SLAVIC ALPHABET
 ;;Russian: Аа,Бб,Вв,Гг,Дд,Ее,Ёё,Жж,Зз,Ии,Йй,Кк,Лл,Мм,Нн,Оо,Пп,Рр,Сс,Тт,
@@ -641,7 +924,7 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ::\|::‖
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; HTML-NOTATION with its Unicode counterparts
+;;;;;;;;;;; HTML-NOTATION with its Unicode counterparts
 ; Aopf::𝔸  = A with open-face, double-struck
 ; Afr::𝔄   = A with franktur
 ; Ascr::𝒜  = A with script
@@ -2112,3 +2395,411 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ::&zscr::𝓏
 ::&zwj::‍
 ::&zwnj::‌
+
+;;;;;;;;;;;;;;;;;;;;;; INTEGER CODEPOINT ;;;;;;;;;;;;;;;;;;;;;
+
+;; 0..127|U+0000..U+007F-Basic-Latin
+::ii97::a
+::ii100::d
+::ii122::z
+::ii123::{
+::ii124::|
+::ii125::}
+::ii126::~
+::ii127::   ;; control.DELETE
+
+::ii128::.   ;; 128..255 ...-Latin-1-Supplement
+::ii183::·
+::ii200::È
+::ii215::×
+::ii255::ÿ
+
+::ii256::Ā   ;; 256..383 Ā..ſ-Latin-Extended-A
+::ii300::Ĭ
+::ii305::ı
+::ii383::ſ
+
+::ii384::ƀ   ;; 384..591 ƀ..ɏ-Latin-Extended-B
+::ii591::ɏ
+
+::ii592::ɐ   ;; 592..687 ɐ..ʯ-IPA-Extensions
+::ii687::ʯ
+
+;; 688..767-Spacing-Modifier-Letters
+
+::ii768::̀   ;; 768..879 ̀..ͯ-Combining-Diacritical-Marks
+::ii879::ͯ
+
+::ii880::Ͱ   ;; 880..1023 Ͱ..Ͽ-Greek-and-Coptic
+::ii1000::Ϩ
+::ii1023::Ͽ
+
+::ii1024::Ѐ   ;; 1024..1279 Ѐ..ӿ-Cyrillic
+::ii1280::Ԁ   ;; 1280..1327 Ԁ..ԯ-Cyrillic-Supplement
+::ii1328::԰   ;; 1328..1423 ԰..֏-Armenian
+::ii1424::֐   ;; 1424..1535 ֐..׿-Hebrew
+::ii1536::؀   ;; 1536..1791 ؀..ۿ-Arabic
+::ii1792::܀   ;; 1792..1871 ܀..ݏ-Syriac
+::ii1872::ݐ   ;; 1872..1919 ݐ..ݿ-Arabic-Supplement
+::ii1920::ހ   ;; 1920..1983 ހ..޿-Thaana
+::ii1984::߀   ;; 1984..2047 ߀..߿-NKo
+
+::ii2000::ߐ ; NKO-LETTER-O,
+::ii2048::ࠀ   ;; 2048..2111 ࠀ..࠿-Samaritan
+::ii2112::ࡀ   ;; 2112..2143 ࡀ..࡟-Mandaic
+::ii2144::ࡠ   ;; 2144..2159 ࡠ..࡯-Syriac-Supplement
+::ii2208::ࢠ   ;; 2208..2303 ࢠ..ࣿ-Arabic-Extended-A
+::ii2304::ऀ   ;; 2304..2431 ऀ..ॿ-Devanagari
+::ii2432::ঀ   ;; 2432..2559 ঀ..৿-Bengali
+::ii2560::਀   ;; 2560..2687 ਀..੿-Gurmukhi
+::ii2688::઀   ;; 2688..2815 ઀..૿-Gujarati
+::ii2816::଀   ;; 2816..2943 ଀..୿-Oriya
+::ii2944::஀   ;; 2944..3071 ஀..௿-Tamil
+
+::ii3000::ஸ
+::ii3072::ఀ   ;; 3072..3199 ఀ..౿-Telugu
+::ii3200::ಀ   ;; 3200..3327 ಀ..೿-Kannada
+::ii3328::ഀ   ;; 3328..3455 ഀ..ൿ-Malayalam
+::ii3456::඀   ;; 3456..3583 ඀..෿-Sinhala
+::ii3584::฀   ;; 3584..3711 ฀..๿-Thai
+::ii3712::຀   ;; 3712..3839 ຀..໿-Lao
+::ii3840::ༀ   ;; 3840..4095 ༀ..࿿-Tibetan
+
+::ii4000::ྠ
+::ii4096::က   ;; 4096..4255 က..႟-Myanmar
+::ii4256::Ⴀ   ;; 4256..4351 Ⴀ..ჿ-Georgian
+::ii4352::ᄀ   ;; 4352..4607 ᄀ..ᇿ-Hangul-Jamo
+::ii4608::ሀ   ;; 4608..4991 ሀ..፿-Ethiopic
+::ii4992::ᎀ   ;; 4992..5023 ᎀ..᎟-Ethiopic-Supplement
+
+::ii5000::ᎈ
+::ii5024::Ꭰ   ;; 5024..5119 Ꭰ..᏿-Cherokee
+::ii5120::᐀   ;; 5120..5759 ᐀..ᙿ-Unified-Canadian-Aboriginal-Syllabics
+::ii5760::    ;; 5760..5791  ..᚟-Ogham
+::ii5792::ᚠ   ;; 5792..5887 ᚠ..᛿-Runic
+::ii5888::ᜀ   ;; 5888..5919 ᜀ..ᜟ-Tagalog
+::ii5920::ᜠ   ;; 5920..5951 ᜠ..᜿-Hanunoo
+::ii5952::ᝀ   ;; 5952..5983 ᝀ..᝟-Buhid
+::ii5984::ᝠ   ;; 5984..6015 ᝠ..᝿-Tagbanwa
+
+::ii6000::ᝰ ; TAGBANWA-LETTER-SA
+;;;;;;;;;;; KHMER ;;;;;;;;;;;;;;;;;;;
+::ii6016::ក   ;; 6016..6143 ក..៿-Khmer
+::ii6017::ខ
+::ii6018::គ
+::ii6019::ឃ
+::ii6020::ង
+::ii6021::ច
+::ii6022::ឆ
+::ii6023::ជ
+::ii6024::ឈ
+::ii6025::ញ
+::ii6026::ដ
+::ii6027::ឋ
+::ii6028::ឌ
+::ii6029::ឍ
+::ii6030::ណ
+::ii6031::ត
+::ii6032::ថ
+::ii6033::ទ
+::ii6034::ធ
+::ii6035::ន
+::ii6036::ប
+::ii6037::ផ
+::ii6038::ព
+::ii6039::ភ
+::ii6040::ម
+::ii6041::យ
+::ii6042::រ
+::ii6043::ល
+::ii6044::វ
+::ii6045::ឝ
+::ii6046::ឞ
+::ii6047::ស
+::ii6048::ហ
+::ii6049::ឡ
+::ii6050::អ
+::ii6053::ឥ   ;; QI
+::ii6055::ឧ   ;; QU
+::ii6058::ឪ   ;; QUUV
+::ii6059::ឫ   ;; RY
+::ii6060::ឬ   ;; RYY
+::ii6063::ឯ   ;; QE
+::ii6064::ឰ   ;; QAI
+::ii6065::ឱ   ;; QOO
+::ii6067::ឳ   ;; QAU
+::ii6070::ា   ;; [aː-iə]-vowel
+::ii6071::ិ   ;; [e-ə]-vowel
+::ii6072::ី   ;; [əj-ɨj]-vowel
+::ii6075::ុ   ;; [o-u]-vowel
+::ii6076::ូ   ;; [ou-uu]-vowel
+::ii6077::ួ   ;; vowel
+::ii6078::ើ  ;; [aə-əə]-vowel
+::ii6079::ឿ  ;; [ɨə]-vowel
+::ii6080::ៀ  ;; [iə]-vowel
+::ii6081::េ   ;; [ei-ii]-vowel
+::ii6082::ែ   ;; [ae-ɛɛ]-vowel
+::ii6083::ៃ   ;; [aj-əj]-vowel
+::ii6084::ោ  ;; [ao-ɔɔ]-vowel
+::ii6085::ៅ  ;; [aw-ɨw]-vowel
+::ii6086:: ំ   ;;  (Nikâhît): Usually Shift+M
+::ii6088:: ៈ  ;;  (Visarga): Usually Shift+:
+::ii6089:: ៉   ;;  (Mŭsĕkâtôndâ): Usually ]
+::ii6090:: ៊   ;;  (Triisâp): Usually Shift+]
+::ii6091:: ់   ;;  (Bântâk): Usually Shift+[
+
+::ii6144::᠀   ;; 6144..6319 ᠀..᢯-Mongolian
+::ii6320::ᢰ   ;; 6320..6399 ᢰ..᣿-Unified-Canadian-Aboriginal-Syllabics-Extended
+::ii6400::ᤀ   ;; 6400..6479 ᤀ..᥏-Limbu
+::ii6480::ᥐ   ;; 6480..6527 ᥐ..᥿-Tai-Le
+::ii6528::ᦀ   ;; 6528..6623 ᦀ..᧟-New-Tai-Lue
+::ii6624::᧠   ;; 6624..6655 ᧠..᧿-Khmer-Symbols
+::ii6656::ᨀ   ;; 6656..6687 ᨀ..᨟-Buginese
+::ii6688::ᨠ   ;; 6688..6831 ᨠ..᪯-Tai-Tham
+::ii6832::᪰   ;; 6832..6911 ᪰..᫿-Combining-Diacritical-Marks-Extended
+::ii6912::ᬀ   ;; 6912..7039 ᬀ..᭿-Balinese
+
+::ii7000::᭘
+::ii7040::ᮀ   ;; 7040..7103 ᮀ..ᮿ-Sundanese
+::ii7104::ᯀ   ;; 7104..7167 ᯀ..᯿-Batak
+::ii7168::ᰀ   ;; 7168..7247 ᰀ..ᱏ-Lepcha
+::ii7248::᱐   ;; 7248..7295 ᱐..᱿-Ol-Chiki
+::ii7296::ᲀ   ;; 7296..7311 ᲀ..᲏-Cyrillic-Extended-C
+::ii7312::Ა   ;; 7312..7359 Ა..Ჿ-Georgian-Extended
+::ii7360::᳀   ;; 7360..7375 ᳀..᳏-Sundanese-Supplement
+::ii7376::᳐   ;; 7376..7423 ᳐..᳿-Vedic-Extensions
+::ii7424::ᴀ   ;; 7424..7551 ᴀ..ᵿ-Phonetic-Extensions
+::ii7552::ᶀ   ;; 7552..7615 ᶀ..ᶿ-Phonetic-Extensions-Supplement
+::ii7616::᷀   ;; 7616..7679 ᷀..᷿-Combining-Diacritical-Marks-Supplement
+::ii7680::Ḁ   ;; 7680..7935 Ḁ..ỿ-Latin-Extended-Additional
+::ii7936::ἀ   ;; 7936..8191 ἀ..῿-Greek-Extended
+
+::ii8000::ὀ
+::ii8192::    ;; 8192..8303  ..⁯-General-Punctuation
+::ii8304::⁰   ;; 8304..8351 ⁰..₟-Superscripts-and-Subscripts
+::ii8352::₠   ;; 8352..8399 ₠..⃏-Currency-Symbols
+::ii8364::€
+::ii8400::⃐   ;; 8400..8447 ⃐..⃿-Combining-Diacritical-Marks-for-Symbols
+::ii8448::℀   ;; 8448..8527 ℀..⅏-Letterlike-Symbols
+::ii8528::⅐   ;; 8528..8591 ⅐..↏-Number-Forms
+::ii8592::←   ;; 8592..8703 ←..⇿-Arrows
+::ii8704::∀   ;; 8704..8959 ∀..⋿-Mathematical-Operators
+::ii8960::⌀   ;; 8960..9215 ⌀..⏿-Miscellaneous-Technical
+
+::ii9000::⌨
+::ii9216::␀   ;; 9216..9279 ␀..␿-Control-Pictures
+::ii9280::⑀   ;; 9280..9311 ⑀..⑟-Optical-Character-Recognition
+::ii9312::①   ;; 9312..9471 ①..⓿-Enclosed-Alphanumerics
+::ii9472::─   ;; 9472..9599 ─..╿-Box-Drawing
+::ii9600::▀   ;; 9600..9631 ▀..▟-Block-Elements
+::ii9632::■   ;; 9632..9727 ■..◿-Geometric-Shapes
+::ii9728::☀   ;; 9728..9983 ☀..⛿-Miscellaneous-Symbols
+::ii9984::✀   ;; 9984..10175 ✀..➿-Dingbats
+
+::ii10000::✐
+::ii11000::⫸
+::ii10176::⟀   ;; 10176..10223 ⟀..⟯-Miscellaneous-Mathematical-Symbols-A
+::ii10224::⟰   ;; 10224..10239 ⟰..⟿-Supplemental-Arrows-A
+::ii10240::⠀   ;; 10240..10495 ⠀..⣿-Braille-Patterns
+::ii10496::⤀   ;; 10496..10623 ⤀..⥿-Supplemental-Arrows-B
+::ii10624::⦀   ;; 10624..10751 ⦀..⧿-Miscellaneous-Mathematical-Symbols-B
+::ii10752::⨀   ;; 10752..11007 ⨀..⫿-Supplemental-Mathematical-Operators
+::ii11008::⬀   ;; 11008..11263 ⬀..⯿-Miscellaneous-Symbols-and-Arrows
+::ii11264::Ⰰ   ;; 11264..11359 Ⰰ..ⱟ-Glagolitic
+::ii11360::Ⱡ   ;; 11360..11391 Ⱡ..Ɀ-Latin-Extended-C
+::ii11392::Ⲁ   ;; 11392..11519 Ⲁ..⳿-Coptic
+::ii11520::ⴀ   ;; 11520..11567 ⴀ..⴯-Georgian-Supplement
+::ii11568::ⴰ   ;; 11568..11647 ⴰ..⵿-Tifinagh
+::ii11648::ⶀ   ;; 11648..11743 ⶀ..⷟-Ethiopic-Extended
+::ii11744::ⷠ   ;; 11744..11775 ⷠ..ⷿ-Cyrillic-Extended-A
+::ii11776::⸀   ;; 11776..11903 ⸀..⹿-Supplemental-Punctuation
+::ii11904::⺀   ;; 11904..12031 ⺀..⻿-CJK-Radicals-Supplement
+
+::ii12000::⻠
+::ii12290::。
+::ii12032::⼀   ;; 12032..12255 ⼀..⿟-Kangxi-Radicals
+::ii12272::⿰   ;; 12272..12287 ⿰..⿿-Ideographic-Description-Characters
+::ii12288::　   ;; 12288..12351 　..〿-CJK-Symbols-and-Punctuation
+::ii12352::぀   ;; 12352..12447 ぀..ゟ-Hiragana
+::ii12448::゠   ;; 12448..12543 ゠..ヿ-Katakana
+::ii12544::㄀   ;; 12544..12591 ㄀..ㄯ-Bopomofo
+::ii12592::㄰   ;; 12592..12687 ㄰..㆏-Hangul-Compatibility-Jamo
+::ii12688::㆐   ;; 12688..12703 ㆐..㆟-Kanbun
+::ii12704::ㆠ   ;; 12704..12735 ㆠ..ㆿ-Bopomofo-Extended
+::ii12736::㇀   ;; 12736..12783 ㇀..㇯-CJK-Strokes
+::ii12784::ㇰ   ;; 12784..12799 ㇰ..ㇿ-Katakana-Phonetic-Extensions
+::ii12800::㈀   ;; 12800..13055 ㈀..㋿-Enclosed-CJK-Letters-and-Months
+::ii13056::㌀   ;; 13056..13311 ㌀..㏿-CJK-Compatibility
+::ii13312::㐀   ;; 13312..19903 㐀..䶿-CJK-Unified-Ideographs-Extension-A
+::ii19904::䷀   ;; 19904..19967 ䷀..䷿-Yijing-Hexagram-Symbols
+::ii19968::一   ;; 19968..40959 一..鿿-CJK-Unified-Ideographs
+::ii40960::ꀀ   ;; 40960..42127 ꀀ..꒏-Yi-Syllables
+::ii42128::꒐   ;; 42128..42191 ꒐..꓏-Yi-Radicals
+::ii42192::ꓐ   ;; 42192..42239 ꓐ..꓿-Lisu
+::ii42240::ꔀ   ;; 42240..42559 ꔀ..꘿-Vai
+::ii42560::Ꙁ   ;; 42560..42655 Ꙁ..ꚟ-Cyrillic-Extended-B
+::ii42656::ꚠ   ;; 42656..42751 ꚠ..꛿-Bamum
+::ii42752::꜀   ;; 42752..42783 ꜀..ꜟ-Modifier-Tone-Letters
+::ii42784::꜠   ;; 42784..43007 ꜠..ꟿ-Latin-Extended-D
+::ii43008::ꠀ   ;; 43008..43055 ꠀ..꠯-Syloti-Nagri
+::ii43056::꠰   ;; 43056..43071 ꠰..꠿-Common-Indic-Number-Forms
+::ii43072::ꡀ   ;; 43072..43135 ꡀ..꡿-Phags-pa
+::ii43136::ꢀ   ;; 43136..43231 ꢀ..꣟-Saurashtra
+::ii43232::꣠   ;; 43232..43263 ꣠..ꣿ-Devanagari-Extended
+::ii43264::꤀   ;; 43264..43311 ꤀..꤯-Kayah-Li
+::ii43312::ꤰ   ;; 43312..43359 ꤰ..꥟-Rejang
+::ii43360::ꥠ   ;; 43360..43391 ꥠ..꥿-Hangul-Jamo-Extended-A
+::ii43392::ꦀ   ;; 43392..43487 ꦀ..꧟-Javanese
+::ii43488::ꧠ   ;; 43488..43519 ꧠ..꧿-Myanmar-Extended-B
+::ii43520::ꨀ   ;; 43520..43615 ꨀ..꩟-Cham
+::ii43616::ꩠ   ;; 43616..43647 ꩠ..ꩿ-Myanmar-Extended-A
+::ii43648::ꪀ   ;; 43648..43743 ꪀ..꫟-Tai-Viet
+::ii43744::ꫠ   ;; 43744..43775 ꫠ..꫿-Meetei-Mayek-Extensions
+::ii43776::꬀   ;; 43776..43823 ꬀..꬯-Ethiopic-Extended-A
+::ii43824::ꬰ   ;; 43824..43887 ꬰ..꭯-Latin-Extended-E
+::ii43888::ꭰ   ;; 43888..43967 ꭰ..ꮿ-Cherokee-Supplement
+::ii43968::ꯀ   ;; 43968..44031 ꯀ..꯿-Meetei-Mayek
+::ii44032::가   ;; 44032..55215 가..힯-Hangul-Syllables
+::ii55216::ힰ   ;; 55216..55295 ힰ..퟿-Hangul-Jamo-Extended-B
+::ii63744::豈   ;; 63744..64255 豈..﫿-CJK-Compatibility-Ideographs
+::ii64256::ﬀ   ;; 64256..64335 ﬀ..ﭏ-Alphabetic-Presentation-Forms
+::ii64336::ﭐ   ;; 64336..65023 ﭐ..﷿-Arabic-Presentation-Forms-A
+::ii65024::︀   ;; 65024..65039 ︀..️-Variation-Selectors
+::ii65040::︐   ;; 65040..65055 ︐..︟-Vertical-Forms
+::ii65056::︠   ;; 65056..65071 ︠..︯-Combining-Half-Marks
+::ii65072::︰   ;; 65072..65103 ︰..﹏-CJK-Compatibility-Forms
+::ii65104::﹐   ;; 65104..65135 ﹐..﹯-Small-Form-Variants
+::ii65136::ﹰ   ;; 65136..65279 ﹰ..﻿-Arabic-Presentation-Forms-B
+::ii65280::＀   ;; 65280..65519 ＀..￯-Halfwidth-and-Fullwidth-Forms
+::ii65520::￰   ;; 65520..65535 ￰..￿-Specials
+::ii65536::𐀀   ;; 65536..65663 𐀀..𐁿-Linear-B-Syllabary
+::ii65664::𐂀   ;; 65664..65791 𐂀..𐃿-Linear-B-Ideograms
+::ii65792::𐄀   ;; 65792..65855 𐄀..𐄿-Aegean-Numbers
+::ii65856::𐅀   ;; 65856..65935 𐅀..𐆏-Ancient-Greek-Numbers
+::ii65936::𐆐   ;; 65936..65999 𐆐..𐇏-Ancient-Symbols
+::ii66000::𐇐   ;; 66000..66047 𐇐..𐇿-Phaistos-Disc
+::ii66176::𐊀   ;; 66176..66207 𐊀..𐊟-Lycian
+::ii66208::𐊠   ;; 66208..66271 𐊠..𐋟-Carian
+::ii66272::𐋠   ;; 66272..66303 𐋠..𐋿-Coptic-Epact-Numbers
+::ii66304::𐌀   ;; 66304..66351 𐌀..𐌯-Old-Italic
+::ii66352::𐌰   ;; 66352..66383 𐌰..𐍏-Gothic
+::ii66384::𐍐   ;; 66384..66431 𐍐..𐍿-Old-Permic
+::ii66432::𐎀   ;; 66432..66463 𐎀..𐎟-Ugaritic
+::ii66464::𐎠   ;; 66464..66527 𐎠..𐏟-Old-Persian
+::ii66560::𐐀   ;; 66560..66639 𐐀..𐑏-Deseret
+::ii66640::𐑐   ;; 66640..66687 𐑐..𐑿-Shavian
+::ii66688::𐒀   ;; 66688..66735 𐒀..𐒯-Osmanya
+::ii66736::𐒰   ;; 66736..66815 𐒰..𐓿-Osage
+::ii66816::𐔀   ;; 66816..66863 𐔀..𐔯-Elbasan
+::ii66864::𐔰   ;; 66864..66927 𐔰..𐕯-Caucasian-Albanian
+::ii67072::𐘀   ;; 67072..67455 𐘀..𐝿-Linear-A
+::ii67584::𐠀   ;; 67584..67647 𐠀..𐠿-Cypriot-Syllabary
+::ii67648::𐡀   ;; 67648..67679 𐡀..𐡟-Imperial-Aramaic
+::ii67680::𐡠   ;; 67680..67711 𐡠..𐡿-Palmyrene
+::ii67712::𐢀   ;; 67712..67759 𐢀..𐢯-Nabataean
+::ii67808::𐣠   ;; 67808..67839 𐣠..𐣿-Hatran
+::ii67840::𐤀   ;; 67840..67871 𐤀..𐤟-Phoenician
+::ii67872::𐤠   ;; 67872..67903 𐤠..𐤿-Lydian
+::ii67968::𐦀   ;; 67968..67999 𐦀..𐦟-Meroitic-Hieroglyphs
+::ii68000::𐦠   ;; 68000..68095 𐦠..𐧿-Meroitic-Cursive
+::ii68096::𐨀   ;; 68096..68191 𐨀..𐩟-Kharoshthi
+::ii68192::𐩠   ;; 68192..68223 𐩠..𐩿-Old-South-Arabian
+::ii68224::𐪀   ;; 68224..68255 𐪀..𐪟-Old-North-Arabian
+::ii68288::𐫀   ;; 68288..68351 𐫀..𐫿-Manichaean
+::ii68352::𐬀   ;; 68352..68415 𐬀..𐬿-Avestan
+::ii68416::𐭀   ;; 68416..68447 𐭀..𐭟-Inscriptional-Parthian
+::ii68448::𐭠   ;; 68448..68479 𐭠..𐭿-Inscriptional-Pahlavi
+::ii68480::𐮀   ;; 68480..68527 𐮀..𐮯-Psalter-Pahlavi
+::ii68608::𐰀   ;; 68608..68687 𐰀..𐱏-Old-Turkic
+::ii68736::𐲀   ;; 68736..68863 𐲀..𐳿-Old-Hungarian
+::ii68864::𐴀   ;; 68864..68927 𐴀..𐴿-Hanifi-Rohingya
+::ii69216::𐹠   ;; 69216..69247 𐹠..𐹿-Rumi-Numeral-Symbols
+::ii69376::𐼀   ;; 69376..69423 𐼀..𐼯-Old-Sogdian
+::ii69424::𐼰   ;; 69424..69487 𐼰..𐽯-Sogdian
+::ii69632::𑀀   ;; 69632..69759 𑀀..𑁿-Brahmi
+::ii69760::𑂀   ;; 69760..69839 𑂀..𑃏-Kaithi
+::ii69840::𑃐   ;; 69840..69887 𑃐..𑃿-Sora-Sompeng
+::ii69888::𑄀   ;; 69888..69967 𑄀..𑅏-Chakma
+::ii69968::𑅐   ;; 69968..70015 𑅐..𑅿-Mahajani
+::ii70016::𑆀   ;; 70016..70111 𑆀..𑇟-Sharada
+::ii70112::𑇠   ;; 70112..70143 𑇠..𑇿-Sinhala-Archaic-Numbers
+::ii70144::𑈀   ;; 70144..70223 𑈀..𑉏-Khojki
+::ii70272::𑊀   ;; 70272..70319 𑊀..𑊯-Multani
+::ii70320::𑊰   ;; 70320..70399 𑊰..𑋿-Khudawadi
+::ii70400::𑌀   ;; 70400..70527 𑌀..𑍿-Grantha
+::ii70656::𑐀   ;; 70656..70783 𑐀..𑑿-Newa
+::ii70784::𑒀   ;; 70784..70879 𑒀..𑓟-Tirhuta
+::ii71040::𑖀   ;; 71040..71167 𑖀..𑗿-Siddham
+::ii71168::𑘀   ;; 71168..71263 𑘀..𑙟-Modi
+::ii71264::𑙠   ;; 71264..71295 𑙠..𑙿-Mongolian-Supplement
+::ii71296::𑚀   ;; 71296..71375 𑚀..𑛏-Takri
+::ii71424::𑜀   ;; 71424..71487 𑜀..𑜿-Ahom
+::ii71680::𑠀   ;; 71680..71759 𑠀..𑡏-Dogra
+::ii71840::𑢠   ;; 71840..71935 𑢠..𑣿-Warang-Citi
+::ii72192::𑨀   ;; 72192..72271 𑨀..𑩏-Zanabazar-Square
+::ii72272::𑩐   ;; 72272..72367 𑩐..𑪯-Soyombo
+::ii72384::𑫀   ;; 72384..72447 𑫀..𑫿-Pau-Cin-Hau
+::ii72704::𑰀   ;; 72704..72815 𑰀..𑱯-Bhaiksuki
+::ii72816::𑱰   ;; 72816..72895 𑱰..𑲿-Marchen
+::ii72960::𑴀   ;; 72960..73055 𑴀..𑵟-Masaram-Gondi
+::ii73056::𑵠   ;; 73056..73135 𑵠..𑶯-Gunjala-Gondi
+::ii73440::𑻠   ;; 73440..73471 𑻠..𑻿-Makasar
+::ii73728::𒀀   ;; 73728..74751 𒀀..𒏿-Cuneiform
+::ii74752::𒐀   ;; 74752..74879 𒐀..𒑿-Cuneiform-Numbers-and-Punctuation
+::ii74880::𒒀   ;; 74880..75087 𒒀..𒕏-Early-Dynastic-Cuneiform
+::ii77824::𓀀   ;; 77824..78895 𓀀..𓐯-Egyptian-Hieroglyphs
+::ii82944::𔐀   ;; 82944..83583 𔐀..𔙿-Anatolian-Hieroglyphs
+::ii92160::𖠀   ;; 92160..92735 𖠀..𖨿-Bamum-Supplement
+::ii92736::𖩀   ;; 92736..92783 𖩀..𖩯-Mro
+::ii92880::𖫐   ;; 92880..92927 𖫐..𖫿-Bassa-Vah
+::ii92928::𖬀   ;; 92928..93071 𖬀..𖮏-Pahawh-Hmong
+::ii93760::𖹀   ;; 93760..93855 𖹀..𖺟-Medefaidrin
+::ii93952::𖼀   ;; 93952..94111 𖼀..𖾟-Miao
+::ii94176::𖿠   ;; 94176..94207 𖿠..𖿿-Ideographic-Symbols-and-Punctuation
+::ii94208::𗀀   ;; 94208..100351 𗀀..𘟿-Tangut
+
+::ii100000::𘚠
+::ii110000::𚶰
+;; 100352..101119|U+18800..U+18AFF|𘠀..𘫿-Tangut-Components
+;; 110592..110847|U+1B000..U+1B0FF|𛀀..𛃿-Kana-Supplement
+;; 110848..110895|U+1B100..U+1B12F|𛄀..𛄯-Kana-Extended-A
+;; 110960..111359|U+1B170..U+1B2FF|𛅰..𛋿-Nushu
+;; 113664..113823|U+1BC00..U+1BC9F|𛰀..𛲟-Duployan
+;; 113824..113839|U+1BCA0..U+1BCAF|𛲠..𛲯-Shorthand-Format-Controls
+;; 118784..119039|U+1D000..U+1D0FF|𝀀..𝃿-Byzantine-Musical-Symbols
+;; 119040..119295|U+1D100..U+1D1FF|𝄀..𝇿-Musical-Symbols
+;; 119296..119375|U+1D200..U+1D24F|𝈀..𝉏-Ancient-Greek-Musical-Notation
+;; 119520..119551|U+1D2E0..U+1D2FF|𝋠..𝋿-Mayan-Numerals
+;; 119552..119647|U+1D300..U+1D35F|𝌀..𝍟-Tai-Xuan-Jing-Symbols
+;; 119648..119679|U+1D360..U+1D37F|𝍠..𝍿-Counting-Rod-Numerals
+;; 119808..120831|U+1D400..U+1D7FF|𝐀..𝟿-Mathematical-Alphanumeric-Symbols
+
+::ii120000::𝓀
+::ii120143::𝕏
+::ii120169::𝕩
+;; 120832..121519|U+1D800..U+1DAAF|𝠀..𝪯-Sutton-SignWriting
+;; 122880..122927|U+1E000..U+1E02F|𞀀..𞀯-Glagolitic-Supplement
+;; 124928..125151|U+1E800..U+1E8DF|𞠀..𞣟-Mende-Kikakui
+;; 125184..125279|U+1E900..U+1E95F|𞤀..𞥟-Adlam
+;; 126064..126143|U+1EC70..U+1ECBF|𞱰..𞲿-Indic-Siyaq-Numbers
+;; 126464..126719|U+1EE00..U+1EEFF|𞸀..𞻿-Arabic-Mathematical-Alphabetic-Symbols
+;; 126976..127023|U+1F000..U+1F02F|🀀..🀯-Mahjong-Tiles
+;; 127024..127135|U+1F030..U+1F09F|🀰..🂟-Domino-Tiles
+;; 127136..127231|U+1F0A0..U+1F0FF|🂠..🃿-Playing-Cards
+;; 127232..127487|U+1F100..U+1F1FF|🄀..🇿-Enclosed-Alphanumeric-Supplement
+;; 127488..127743|U+1F200..U+1F2FF|🈀..🋿-Enclosed-Ideographic-Supplement
+;; 127744..128511|U+1F300..U+1F5FF|🌀..🗿-Miscellaneous-Symbols-and-Pictographs
+;; 128512..128591|U+1F600..U+1F64F|😀..🙏-Emoticons
+;; 128592..128639|U+1F650..U+1F67F|🙐..🙿-Ornamental-Dingbats
+;; 128640..128767|U+1F680..U+1F6FF|🚀..🛿-Transport-and-Map-Symbols
+;; 128768..128895|U+1F700..U+1F77F|🜀..🝿-Alchemical-Symbols
+;; 128896..129023|U+1F780..U+1F7FF|🞀..🟿-Geometric-Shapes-Extended
+;; 129024..129279|U+1F800..U+1F8FF|🠀..🣿-Supplemental-Arrows-C
+;; 129280..129535|U+1F900..U+1F9FF|🤀..🧿-Supplemental-Symbols-and-Pictographs
+;; 129536..129647|U+1FA00..U+1FA6F|🨀..🩯-Chess-Symbols
+;; 131072..173791|U+20000..U+2A6DF|𠀀..𪛟-CJK-Unified-Ideographs-Extension-B
+;; 173824..177983|U+2A700..U+2B73F|𪜀..𫜿-CJK-Unified-Ideographs-Extension-C
+;; 177984..178207|U+2B740..U+2B81F|𫝀..𫠟-CJK-Unified-Ideographs-Extension-D
+;; 178208..183983|U+2B820..U+2CEAF|𫠠..𬺯-CJK-Unified-Ideographs-Extension-E
+;; 183984..191471|U+2CEB0..U+2EBEF|𬺰..𮯯-CJK-Unified-Ideographs-Extension-F
+;; 194560..195103|U+2F800..U+2FA1F|丽..𯨟-CJK-Compatibility-Ideographs-Supplement

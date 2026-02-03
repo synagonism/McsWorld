@@ -96,15 +96,15 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirLag',
+  sDir = 'dirStn',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Korean-language',
+  sName = 'Singapore',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagoSngo,
-  sNameShort = 'lagoKorn',
+  sNameShort = 'socSgpr',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk, SocGrca,
-  sNameId = 'LKorn',
+  sNameId = 'SocSgpr',
 
 
   sNameFile = '',

@@ -1,8 +1,8 @@
 /*
- * mNamidxOnly.mjs - module that creates name-indexes
+ * mNamidxOnly.mjs - go 115 for lag, module that creates name-indexes
  * The MIT License (MIT)
  *
- * Copyright (c) 2017 - 2025 Kaseluris.Nikos.1959 (hmnSngu)
+ * Copyright (c) 2017 - 2026 Kaseluris.Nikos.1959 (hmnSngu)
  * kaseluris.nikos@gmail.com
  * https://synagonism.net/
  *
@@ -115,7 +115,7 @@ function fNamidx(fileIn) {
     // array of languages ['lagALLL'] or ['lagElln','lagEngl',...]
     aLagALL = ['lagEngl','lagSngu','lagElln','lagZhon',
     'lagArab','lagDeut','lagElla','lagEspo','lagFrac',
-    'lagHind','lagItln','lagJpns','lagKorn','lagRomn',
+    'lagHind','lagItln','lagJpns','lagKhmr','lagKora','lagRomn',
     'lagSbos','lagShrv','lagScnr','lagSsrp','lagSbul','lagSmkd','lagSrus','lagSslv',
     'lagSpan','lagSqip',
     'lagTurk','lagVnma'],

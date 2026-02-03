@@ -2,7 +2,7 @@
  * mMcsh2.js - module McsHitp webpage-format code.
  * The MIT License (MIT)
  *
- * Copyright (c) 2010-2025 Kaseluris.Nikos.1959 (hmnSngu)
+ * Copyright (c) 2010-2026 Kaseluris.Nikos.1959 (hmnSngu)
  * kaseluris.nikos@gmail.com
  * https:// synagonism.net/
  *
@@ -23,11 +23,45 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
+
+ * name-languages:
+ * 0 English (Engl, F2)
+ * 1 Sinagu (Sngu, Shift+F2)
+ * 2 Greek (Elln, Ctrl+F2)
+ * 3 Chinese (Zhon, Alt+F2)
+ * 4 ---
+ * 5 Albanian (Sqip)
+ * 6 Arabic (Arab)
+ * 7 Esperanto (Espo)
+ * 8 French (Frac)
+ * 9 German (Deut)
+ * 10 GreekAncient (Ella)
+ * 11 Hindi (Hind)
+ * 12 Italian (Itln)
+ * 13 Japanese (Jpns)
+ * 14 Khmer (Khmr)
+ * 15 Korean (Kora)
+ * 16 Romanian (Romn)
+ * 17 SlavoBosnian (Sbos)
+ * 18 SlavoCroatian (Shrv)
+ * 19 SlavoMondenegrin (Scnr)
+ * 20 SlavoSerbian (Ssrp)
+ * 21 SlavoBulgarian (Sbul)
+ * 22 SlavoMacedonian (Smkd)
+ * 23 SlavoRussian (Srus)
+ * 24 SlavoSlovenian (Sslv)
+ * 25 Spanish (Span)
+ * 26 Turkish (Turk)
+ * 27 Vietnamese (Vnma)
  */
 
 const
   // contains the-versions of mMcsh.js
   aVersion = [
+    'mMcsh2.js.24-7-0.2026-02-03: Khmer-language',
+    'mMcsh2.js.24-6-1.2026-01-31: currencies',
+    'mMcsh2.js.24-6-0.2026-01-21: Kora fron Korn',
+    'mMcsh2.js.24-5-0.2026-01-19: menu Japanese-Korean',
     'mMcsh2.js.24-4-0.2026-01-15: Korean-language',
     'mMcsh2.js.24-3-0.2025-12-28: Japanese-language',
     'mMcsh2.js.24-2-0.2025-12-15: oEltCnrTopTitleP listener',
@@ -727,11 +761,50 @@ let fContainersInsert = function () {
     oEltClicked = oEltCmdSrchItln
   })
   oEltCmdSrchUl2.appendChild(oEltCmdSrchItln)
+  // Japanese
+  const oEltCmdSrchJpns = document.createElement('li')
+  oEltCmdSrchJpns.innerHTML = '<button id="idCmdBtn3">Japanese (Jpns)</button>'
+  oEltCmdSrchJpns.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[13].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchJpns
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchJpns)
+  // Khmer
+  const oEltCmdSrchKhmr = document.createElement('li')
+  oEltCmdSrchKhmr.innerHTML = '<button id="idCmdBtn3">Khmer (Khmr)</button>'
+  oEltCmdSrchKhmr.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[14].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchKhmr
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchKhmr)
+  // Korean
+  const oEltCmdSrchKora = document.createElement('li')
+  oEltCmdSrchKora.innerHTML = '<button id="idCmdBtn3">Korean (Kora)</button>'
+  oEltCmdSrchKora.addEventListener('pointerdown', async function (oEvtIn) {
+    oEltTabSearchSlct.options[15].selected = true
+    if (getSelection().toString().trim() !== '') {
+      await fCmdQuerySelection()
+    } else {
+      await fCmdQueryInput()
+    }
+    oEltClicked = oEltCmdSrchKora
+  })
+  oEltCmdSrchUl2.appendChild(oEltCmdSrchKora)
   // Romanian
   const oEltCmdSrchRomn = document.createElement('li')
   oEltCmdSrchRomn.innerHTML = '<button id="idCmdBtn3">Romanian (Romn)</button>'
   oEltCmdSrchRomn.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[13].selected = true
+    oEltTabSearchSlct.options[16].selected = true
     if (getSelection().toString().trim() !== '') {
       await fCmdQuerySelection()
     } else {
@@ -744,7 +817,7 @@ let fContainersInsert = function () {
   const oEltCmdSrchSbos = document.createElement('li')
   oEltCmdSrchSbos.innerHTML = '<button id="idCmdBtn3">SlavoBosnian (Sbos)</button>'
   oEltCmdSrchSbos.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[14].selected = true
+    oEltTabSearchSlct.options[17].selected = true
     if (getSelection().toString().trim() !== '') {
       await fCmdQuerySelection()
     } else {
@@ -757,7 +830,7 @@ let fContainersInsert = function () {
   const oEltCmdSrchShrv = document.createElement('li')
   oEltCmdSrchShrv.innerHTML = '<button id="idCmdBtn3">SlavoCroatian (Shrv)</button>'
   oEltCmdSrchShrv.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[15].selected = true
+    oEltTabSearchSlct.options[18].selected = true
     if (getSelection().toString().trim() !== '') {
       await fCmdQuerySelection()
     } else {
@@ -770,7 +843,7 @@ let fContainersInsert = function () {
   const oEltCmdSrchScnr = document.createElement('li')
   oEltCmdSrchScnr.innerHTML = '<button id="idCmdBtn3">SlavoMondenegrin (Scnr)</button>'
   oEltCmdSrchScnr.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[16].selected = true
+    oEltTabSearchSlct.options[19].selected = true
     if (getSelection().toString().trim() !== '') {
       await fCmdQuerySelection()
     } else {
@@ -783,7 +856,7 @@ let fContainersInsert = function () {
   const oEltCmdSrchSsrp = document.createElement('li')
   oEltCmdSrchSsrp.innerHTML = '<button id="idCmdBtn3">SlavoSerbian (Ssrp)</button>'
   oEltCmdSrchSsrp.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[17].selected = true
+    oEltTabSearchSlct.options[20].selected = true
     if (getSelection().toString().trim() !== '') {
       await fCmdQuerySelection()
     } else {
@@ -796,7 +869,7 @@ let fContainersInsert = function () {
   const oEltCmdSrchSbul = document.createElement('li')
   oEltCmdSrchSbul.innerHTML = '<button id="idCmdBtn3">SlavoBulgarian (Sbul)</button>'
   oEltCmdSrchSbul.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[18].selected = true
+    oEltTabSearchSlct.options[21].selected = true
     if (getSelection().toString().trim() !== '') {
       await fCmdQuerySelection()
     } else {
@@ -809,7 +882,7 @@ let fContainersInsert = function () {
   const oEltCmdSrchSmkd = document.createElement('li')
   oEltCmdSrchSmkd.innerHTML = '<button id="idCmdBtn3">SlavoMacedonian (Smkd)</button>'
   oEltCmdSrchSmkd.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[19].selected = true
+    oEltTabSearchSlct.options[22].selected = true
     if (getSelection().toString().trim() !== '') {
       await fCmdQuerySelection()
     } else {
@@ -822,7 +895,7 @@ let fContainersInsert = function () {
   const oEltCmdSrchSrus = document.createElement('li')
   oEltCmdSrchSrus.innerHTML = '<button id="idCmdBtn3">SlavoRussian (Srus)</button>'
   oEltCmdSrchSrus.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[20].selected = true
+    oEltTabSearchSlct.options[23].selected = true
     if (getSelection().toString().trim() !== '') {
       await fCmdQuerySelection()
     } else {
@@ -835,7 +908,7 @@ let fContainersInsert = function () {
   const oEltCmdSrchSslv = document.createElement('li')
   oEltCmdSrchSslv.innerHTML = '<button id="idCmdBtn3">SlavoSlovenian (Sslv)</button>'
   oEltCmdSrchSslv.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[21].selected = true
+    oEltTabSearchSlct.options[24].selected = true
     if (getSelection().toString().trim() !== '') {
       await fCmdQuerySelection()
     } else {
@@ -848,7 +921,7 @@ let fContainersInsert = function () {
   const oEltCmdSrchSpan = document.createElement('li')
   oEltCmdSrchSpan.innerHTML = '<button id="idCmdBtn3">Spanish (Span)</button>'
   oEltCmdSrchSpan.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[22].selected = true
+    oEltTabSearchSlct.options[25].selected = true
     if (getSelection().toString().trim() !== '') {
       await fCmdQuerySelection()
     } else {
@@ -861,7 +934,7 @@ let fContainersInsert = function () {
   const oEltCmdSrchTurk = document.createElement('li')
   oEltCmdSrchTurk.innerHTML = '<button id="idCmdBtn3">Turkish (Turk)</button>'
   oEltCmdSrchTurk.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[23].selected = true
+    oEltTabSearchSlct.options[26].selected = true
     if (getSelection().toString().trim() !== '') {
       await fCmdQuerySelection()
     } else {
@@ -874,7 +947,7 @@ let fContainersInsert = function () {
   const oEltCmdSrchVnma = document.createElement('li')
   oEltCmdSrchVnma.innerHTML = '<button id="idCmdBtn3">Vietnamese (Vnma)</button>'
   oEltCmdSrchVnma.addEventListener('pointerdown', async function (oEvtIn) {
-    oEltTabSearchSlct.options[24].selected = true
+    oEltTabSearchSlct.options[27].selected = true
     if (getSelection().toString().trim() !== '') {
       await fCmdQuerySelection()
     } else {
@@ -1067,6 +1140,10 @@ let fContainersInsert = function () {
   oEltCmdWebAppBbgn.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirStn/McsStn000038.last.html#idBgraeconevu">Euro⇔BulgariaLev-BGN</a>'
   oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppBbgn)
+  const oEltCmdWebAppKhma = document.createElement('li')
+  oEltCmdWebAppKhma.innerHTML = '<a class="clsPreview" href="' + sPathSite +
+    'dirMcs/dirStn/McsStn000050.last.html#idKhmaeconevu">Euro⇔Cambodia-KHR</a>'
+  oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppKhma)
   const oEltCmdWebAppCcny = document.createElement('li')
   oEltCmdWebAppCcny.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirStn/McsStn000031.last.html#idChnaEconevu">Euro⇔ChinaRenMinBi-CNY</a>'
@@ -1075,6 +1152,10 @@ let fContainersInsert = function () {
   oEltCmdWebAppEtGd.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirStn/McsStn000020.last.html#idEusaEconEurevuapp">Euro⇔GreeceDrachmas</a>'
   oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppEtGd)
+  const oEltCmdWebAppJpna = document.createElement('li')
+  oEltCmdWebAppJpna.innerHTML = '<a class="clsPreview" href="' + sPathSite +
+    'dirMcs/dirStn/McsStn000048.last.html#idJpnaeconevu">Euro⇔Japan-JPY</a>'
+  oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppJpna)
   const oEltCmdWebAppSmkd = document.createElement('li')
   oEltCmdWebAppSmkd.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirStn/McsStn000040.last.html#idNmkdeconevu">Euro⇔NorthMacedonia-MKD</a>'
@@ -1083,6 +1164,14 @@ let fContainersInsert = function () {
   oEltCmdWebAppRrub.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirStn/McsStn000043.last.html#idRusaeconevu">Euro⇔Russia-RUB</a>'
   oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppRrub)
+  const oEltCmdWebAppSgpr = document.createElement('li')
+  oEltCmdWebAppSgpr.innerHTML = '<a class="clsPreview" href="' + sPathSite +
+    'dirMcs/dirStn/McsStn000051.last.html#idSgpreconevu">Euro⇔Singapore-SGD</a>'
+  oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppSgpr)
+  const oEltCmdWebAppKors = document.createElement('li')
+  oEltCmdWebAppKors.innerHTML = '<a class="clsPreview" href="' + sPathSite +
+    'dirMcs/dirStn/McsStn000049.last.html#idKorseconevu">Euro⇔SouthKorea-KRW</a>'
+  oEltCmdWebAppCrcyUl2.appendChild(oEltCmdWebAppKors)
   const oEltCmdWebAppTtry = document.createElement('li')
   oEltCmdWebAppTtry.innerHTML = '<a class="clsPreview" href="' + sPathSite +
     'dirMcs/dirStn/McsStn000033.last.html#idTurkeconevu">Euro⇔Turkey-TRY</a>'
@@ -1281,57 +1370,61 @@ let fContainersInsert = function () {
   oEltTabSearchOpn15.text = 'Japanese (Jpns)'
   oEltTabSearchSlct.add(oEltTabSearchOpn15)
   let oEltTabSearchOpn16 = document.createElement('option')
-  oEltTabSearchOpn16.value = 'lagKorn'
-  oEltTabSearchOpn16.text = 'Korean (Korn)'
+  oEltTabSearchOpn16.value = 'lagKhmr'
+  oEltTabSearchOpn16.text = 'Khmer (Khmr)'
   oEltTabSearchSlct.add(oEltTabSearchOpn16)
   let oEltTabSearchOpn17 = document.createElement('option')
-  oEltTabSearchOpn17.value = 'lagRomn'
-  oEltTabSearchOpn17.text = 'Romanian (Romn)'
+  oEltTabSearchOpn17.value = 'lagKora'
+  oEltTabSearchOpn17.text = 'Korean (Kora)'
   oEltTabSearchSlct.add(oEltTabSearchOpn17)
   let oEltTabSearchOpn18 = document.createElement('option')
-  oEltTabSearchOpn18.value = 'lagSbos'
-  oEltTabSearchOpn18.text = 'SlavoBosnian (Sbos)'
+  oEltTabSearchOpn18.value = 'lagRomn'
+  oEltTabSearchOpn18.text = 'Romanian (Romn)'
   oEltTabSearchSlct.add(oEltTabSearchOpn18)
   let oEltTabSearchOpn19 = document.createElement('option')
-  oEltTabSearchOpn19.value = 'lagShrv'
-  oEltTabSearchOpn19.text = 'SlavoCroatian (Shrv)'
+  oEltTabSearchOpn19.value = 'lagSbos'
+  oEltTabSearchOpn19.text = 'SlavoBosnian (Sbos)'
   oEltTabSearchSlct.add(oEltTabSearchOpn19)
   let oEltTabSearchOpn20 = document.createElement('option')
-  oEltTabSearchOpn20.value = 'lagScnr'
-  oEltTabSearchOpn20.text = 'SlavoMondenegrin (Scnr)'
+  oEltTabSearchOpn20.value = 'lagShrv'
+  oEltTabSearchOpn20.text = 'SlavoCroatian (Shrv)'
   oEltTabSearchSlct.add(oEltTabSearchOpn20)
   let oEltTabSearchOpn21 = document.createElement('option')
-  oEltTabSearchOpn21.value = 'lagSsrp'
-  oEltTabSearchOpn21.text = 'SlavoSerbian (Ssrp)'
+  oEltTabSearchOpn21.value = 'lagScnr'
+  oEltTabSearchOpn21.text = 'SlavoMondenegrin (Scnr)'
   oEltTabSearchSlct.add(oEltTabSearchOpn21)
   let oEltTabSearchOpn22 = document.createElement('option')
-  oEltTabSearchOpn22.value = 'lagSbul'
-  oEltTabSearchOpn22.text = 'SlavoBulgarian (Sbul)'
+  oEltTabSearchOpn22.value = 'lagSsrp'
+  oEltTabSearchOpn22.text = 'SlavoSerbian (Ssrp)'
   oEltTabSearchSlct.add(oEltTabSearchOpn22)
   let oEltTabSearchOpn23 = document.createElement('option')
-  oEltTabSearchOpn23.value = 'lagSmkd'
-  oEltTabSearchOpn23.text = 'SlavoMacedonian (Smkd)'
+  oEltTabSearchOpn23.value = 'lagSbul'
+  oEltTabSearchOpn23.text = 'SlavoBulgarian (Sbul)'
   oEltTabSearchSlct.add(oEltTabSearchOpn23)
   let oEltTabSearchOpn24 = document.createElement('option')
-  oEltTabSearchOpn24.value = 'lagSrus'
-  oEltTabSearchOpn24.text = 'SlavoRussian (Srus)'
+  oEltTabSearchOpn24.value = 'lagSmkd'
+  oEltTabSearchOpn24.text = 'SlavoMacedonian (Smkd)'
   oEltTabSearchSlct.add(oEltTabSearchOpn24)
   let oEltTabSearchOpn25 = document.createElement('option')
-  oEltTabSearchOpn25.value = 'lagSslv'
-  oEltTabSearchOpn25.text = 'SlavoSlovenian (Sslv)'
+  oEltTabSearchOpn25.value = 'lagSrus'
+  oEltTabSearchOpn25.text = 'SlavoRussian (Srus)'
   oEltTabSearchSlct.add(oEltTabSearchOpn25)
   let oEltTabSearchOpn26 = document.createElement('option')
-  oEltTabSearchOpn26.value = 'lagSpan'
-  oEltTabSearchOpn26.text = 'Spanish (Span)'
+  oEltTabSearchOpn26.value = 'lagSslv'
+  oEltTabSearchOpn26.text = 'SlavoSlovenian (Sslv)'
   oEltTabSearchSlct.add(oEltTabSearchOpn26)
   let oEltTabSearchOpn27 = document.createElement('option')
-  oEltTabSearchOpn27.value = 'lagTurk'
-  oEltTabSearchOpn27.text = 'Turkish (Turk)'
+  oEltTabSearchOpn27.value = 'lagSpan'
+  oEltTabSearchOpn27.text = 'Spanish (Span)'
   oEltTabSearchSlct.add(oEltTabSearchOpn27)
   let oEltTabSearchOpn28 = document.createElement('option')
-  oEltTabSearchOpn28.value = 'lagVnma'
-  oEltTabSearchOpn28.text = 'Vietnamese (Vnma)'
+  oEltTabSearchOpn28.value = 'lagTurk'
+  oEltTabSearchOpn28.text = 'Turkish (Turk)'
   oEltTabSearchSlct.add(oEltTabSearchOpn28)
+  let oEltTabSearchOpn29 = document.createElement('option')
+  oEltTabSearchOpn29.value = 'lagVnma'
+  oEltTabSearchOpn29.text = 'Vietnamese (Vnma)'
+  oEltTabSearchSlct.add(oEltTabSearchOpn29)
   oEltTabSearchSlct.options[0].selected = true
   oEltTabSearchP.id = 'idTabCntSrchP'
   oEltTabSearchP.setAttribute('class', 'clsCenter')
