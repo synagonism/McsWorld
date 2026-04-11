@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.sciMath!=science.mathematics
-    (McsEdu000005.0-32-0.2026-01-24 draft)</title>
+    (McsEdu000005.0-34-0.2026-03-22 draft)</title>
   <meta name="keywords" content="science.mathematics, sciMath, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
   <!--
@@ -6461,16 +6461,86 @@ In general, the term "collection" is a non-technical term that can be used to re
     <br>* McsEngl.cryptography'evoluting,
     <a class="clsHide" href="#idSMath026evlgnam"></a></p>
   </section>
+
+  <section id="idSMath026Qntm">
+  <h2 id="idSMath026QntmH2">cryptography.quantum
+    <a class="clsHide" href="#idSMath026QntmH2"></a></h2>
+  <p id="idSMath026Qntmdsn">description::
+    <br>× Mcsh-creation: {2026-03-18},
+    <br>"Quantum cryptography represents a fundamental shift in how we think about security—moving from mathematical complexity to the laws of physics. Here's a comprehensive overview of what it is, how it works, and where it stands today.
+    <br>| **Concept** | **Description** | **Key Applications / Examples** |
+    <br>| **Core Principle** | Uses quantum mechanics (e.g., photon polarization) for secure communication, not just math . | Detects eavesdropping via quantum state disturbance . |
+    <br>| **Key Technology** | **Quantum Key Distribution (QKD)**: Securely distributes encryption keys with eavesdropping evidence . | BB84 (polarization), E91 (entanglement), CV-QKD (amplitude/phase) . |
+    <br>| **Real-World Use** | Applied in finance, healthcare, and critical infrastructure for data security . | Satellite QKD (ESA/Honeywell), medical record encryption, financial data protection . |
+    <br>| **Current Challenges** | High costs, distance limits, device imperfections, and lack of standardization . | Requires specialized hardware; not a full replacement for existing systems . |
+    <br>### 🔬 The Core Idea: Security Through Physics
+    <br>Unlike traditional methods that rely on the difficulty of solving complex math problems, quantum cryptography leverages the fundamental principles of quantum mechanics.
+    <br>- **Qubits and Superposition**: Instead of classical bits (0 or 1), quantum cryptography uses quantum bits or **qubits**. A qubit can exist in a **superposition**, meaning it can be 0, 1, or both at the same time. This property is used to encode information, often in the polarization state of a single photon .
+    <br>- **The Heisenberg Uncertainty Principle and the No-Cloning Theorem**: These are the bedrock of quantum security.
+    <br>    - **Uncertainty Principle**: The very act of measuring a quantum system inevitably disturbs it .
+    <br>    - **No-Cloning Theorem**: It's impossible to create an exact copy of an unknown quantum state .
+    <br>- **How Eavesdropping is Detected**: If an eavesdropper ("Eve") tries to intercept and measure the quantum particles (photons) carrying the key, her actions will inevitably introduce errors. The legitimate parties ("Alice" and "Bob") can compare a small portion of their key, and if the error rate is too high, they'll know the key was compromised and discard it .
+    <br>### 🗝️ Quantum Key Distribution: The Main Application
+    <br>The most prominent and mature application of quantum cryptography is **Quantum Key Distribution (QKD)** . QKD doesn't encrypt the message itself but allows two parties to securely share a secret encryption key. This key can then be used with conventional encryption algorithms to encode the actual data .
+    <br>Several protocols have been developed to implement QKD :
+    <br>- **BB84 Protocol**: The first and most famous QKD protocol, developed in 1984. It uses single photons encoded in two different bases (e.g., rectilinear and diagonal polarization) to create the key .
+    <br>- **E91 Protocol**: Proposed by Ekert in 1991, this protocol uses entangled pairs of photons. The correlation between the entangled particles is used to generate the key and detect eavesdropping .
+    <br>- **Continuous-Variable QKD (CV-QKD)**: Instead of using single-photon detectors, this method encodes information in the continuous properties of light, like its amplitude and phase. This approach can potentially achieve higher key rates and integrate better with existing telecom infrastructure .
+    <br>### 💼 Real-World Applications and Progress
+    <br>Quantum cryptography is moving out of the lab and into practical applications across various sectors .
+    <br>- **Critical Infrastructure Protection**: Projects like the European Space Agency's **QKDSat** aim to use satellites to distribute quantum keys to protect power plants, water management systems, and hospitals from cyberattacks. Satellites help overcome the distance limitations of ground-based fiber networks .
+    <br>- **Financial and Medical Data Security**: QKD is being deployed to secure highly sensitive data, such as financial transactions between data centers and the transmission of medical records or genomic data between hospitals .
+    <br>- **Government and Defense**: Quantum cryptography is used to secure communications for governmental institutions and military applications where the highest level of security is required .
+    <br>- **Integration with Existing Networks**: Companies are actively demonstrating how QKD can be integrated with current high-speed optical networks. For instance, recent trials have shown successful quantum-safe encryption on multi-100G optical links, proving that this technology can be layered onto existing infrastructure to protect data in transit .
+    <br>### ⚠️ Challenges and Current Limitations
+    <br>Despite its promise, quantum cryptography faces several hurdles before widespread adoption .
+    <br>- **Technological Complexity**: QKD requires highly specialized and sensitive hardware, such as single-photon detectors and precise light sources. Imperfections in these devices can create security loopholes .
+    <br>- **Distance Limitations**: Photons are easily lost in optical fibers over long distances. Unlike classical signals, quantum signals cannot be simply amplified due to the no-cloning theorem, limiting the range of QKD to a few hundred kilometers without trusted relays or satellites .
+    <br>- **Cost and Standardization**: Quantum cryptography systems are currently significantly more expensive than traditional security solutions. Furthermore, the lack of universal standards makes it difficult to integrate QKD seamlessly into existing networking systems .
+    <br>- **Authentication Requirement**: QKD itself does not verify the identity of the parties communicating. It must be combined with classical authentication methods (like digital certificates) to ensure you are sharing a key with the intended recipient, not an impostor .
+    <br>### 🔮 The Future: Hybrid Approaches
+    <br>The future of secure communication likely lies in a hybrid approach. Quantum cryptography is seen as a powerful tool to complement, rather than entirely replace, existing security measures. For example, integrating QKD with **post-quantum cryptography (PQC)** —classical algorithms believed to be secure against quantum computers—can create a layered, defense-in-depth strategy that protects data both today and in the future .
+    <br>I hope this gives you a clear and comprehensive picture of quantum cryptography. Are you interested in a more detailed explanation of a specific protocol like BB84, or perhaps the practical challenges of building a quantum network?"
+    <br>[{2026-03-18 retrieved} https://chat.deepseek.com/a/chat/s/3a0153a1-c7b4-4614-81ce-6746201a752a]
+    <a class="clsHide" href="#idSMath026Qntmdsn"></a></p>
+  <p id="idSMath026Qntmnam">name::
+    <br>* McsEngl.QuantumCryptography,
+    <br>* McsEngl.cryptography.quantum,
+    <br>* McsEngl.quantum-cryptography,
+    <a class="clsHide" href="#idSMath026Qntmnam"></a></p>
+  </section>
 </section>
 
 <section id="idSMath034">
   <h1 id="idSMath034H1">sciMath.game-theory
     <a class="clsHide" href="#idSMath034H1"></a></h1>
   <p id="idSMath034dsn">description::
+    <br>"You’re an economics professor. Teach me the concept of game theory in simple terms. What are some real-world examples of how this would be applied? At the very end, include a glossary of concepts/vocabulary that I should know related to this subject.
+    <br>Game theory is the study of how rational decision-makers interact with each other in strategic situations. It is used to analyze a wide range of real-world problems, from business competition to international relations.
+    <br>In simple terms, game theory is about making the best decision possible, given what you think other people will do.
+    <br>A game is a situation in which two or more players make decisions that affect each other's outcomes. The players can be individuals, firms, countries, or any other group of decision-makers.
+    <br>Each player has a set of strategies to choose from. A strategy is a complete plan of action that a player will follow, no matter what other players do.
+    <br>The outcome of the game depends on the strategies that all of the players choose. The outcome can be measured in terms of payoffs, which can be anything from money to political power to social status.
+    <br>One of the most important concepts in game theory is the Nash equilibrium. A Nash equilibrium is a situation in which no player can improve their payoff by changing their strategy, given the strategies of the other players.
+    <br>Real-world examples of game theory in action:
+    <br>* Pricing decisions: Firms compete with each other by setting prices for their products. Game theory can be used to analyze how these pricing decisions interact with each other. For example, if two firms are selling the same product, they may both lower their prices to attract more customers. However, this can lead to a price war, which can hurt both firms' profits.
+    <br>* Collective bargaining: Workers often negotiate with their employers over wages and benefits. Game theory can be used to analyze the strategies that both sides use in these negotiations. For example, workers may threaten to strike if they don't get what they want. Employers may threaten to lay off workers if they can't reach an agreement.
+    <br>* New product development: Firms often compete with each other to develop new products. Game theory can be used to analyze the strategies that firms use in this process. For example, a firm may decide to delay launching a new product until after a competitor has launched theirs, so that they can learn from the competitor's mistakes.
+    <br>* Auctions: Auctions are another situation where game theory can be applied. Bidders in an auction are trying to win the item being auctioned for the lowest possible price. Game theory can be used to analyze the strategies that bidders use to win auctions. For example, a bidder may try to avoid bidding against each other by coordinating their strategies.
+    <br>Glossary of concepts/vocabulary related to game theory:
+    <br>* Player: A decision-maker in a game.
+    <br>* Strategy: A complete plan of action that a player will follow, no matter what other players do.
+    <br>* Payoff: The outcome of a game for a player.
+    <br>* Nash equilibrium: A situation in which no player can improve their payoff by changing their strategy, given the strategies of the other players.
+    <br>* Zero-sum game: A game in which the total payoffs to all players are constant. In other words, one player's gain must be another player's loss.
+    <br>* Non-zero-sum game: A game in which the total payoffs to all players can increase or decrease. In other words, it is possible for both players to win or both players to lose.
+    <br>* Cooperative game: A game in which players can communicate and make agreements with each other.
+    <br>* Non-cooperative game: A game in which players cannot communicate with each other or make agreements.
+    <br>I hope this helps!"
+    <br>[{2023-09-20 retrieved} https://bard.google.com/chat/c839f079c8d37c65]
+    <br>======
     <br>"Game theory is the study of mathematical models of strategic interactions among rational agents.[1] It has applications in all fields of social science, as well as in logic, systems science and computer science. The concepts of game theory are used extensively in economics as well.[2] The traditional methods of game theory addressed two-person zero-sum games, in which each participant's gains or losses are exactly balanced by the losses and gains of other participants. In the 21st century, the advanced game theories apply to a wider range of behavioral relations; it is now an umbrella term for the science of logical decision making in humans, animals, as well as computers.
-    <br>
     <br>Modern game theory began with the idea of mixed-strategy equilibria in two-person zero-sum game and its proof by John von Neumann. Von Neumann's original proof used the Brouwer fixed-point theorem on continuous mappings into compact convex sets, which became a standard method in game theory and mathematical economics. His paper was followed by the 1944 book Theory of Games and Economic Behavior, co-written with Oskar Morgenstern, which considered cooperative games of several players.[3] The second edition of this book provided an axiomatic theory of expected utility, which allowed mathematical statisticians and economists to treat decision-making under uncertainty. Therefore, it is evident that game theory has evolved over time with consistent efforts of mathematicians, economists and other academicians.[citation needed]
-    <br>
     <br>Game theory was developed extensively in the 1950s by many scholars. It was explicitly applied to evolution in the 1970s, although similar developments go back at least as far as the 1930s. Game theory has been widely recognized as an important tool in many fields. As of 2020, with the Nobel Memorial Prize in Economic Sciences going to game theorists Paul Milgrom and Robert B. Wilson, fifteen game theorists have won the economics Nobel Prize. John Maynard Smith was awarded the Crafoord Prize for his application of evolutionary game theory."
     <br>[{2023-10-06 retrieved} https://en.wikipedia.org/wiki/Game_theory]
     <a class="clsHide" href="#idSMath034dsn"></a></p>
@@ -7653,13 +7723,13 @@ In general, the term "collection" is a non-technical term that can be used to re
   <p id="idFooterP1">footer::
     <br>• author: <a class="clsPreview" href="../dirHmn/McsHmn000003.last.html#idOverview">Kaseluris.Nikos.1959</a>
     <br>• email:
-    <br> &nbsp;<img src="../../dirRsc/dirImg/mail.png">
+    <br> &nbsp;<img src="../../dirRsc/dirImg/mail.png" alt="mail">
     <br>• edit on github: https://github.com/synagonism/McsWorld/blob/master/dirMcs/dirEdu/McsEdu000005.last.html,
     <br>• comments on <a class="clsPreview" href="../dirEdu/McsEdu000000.last.html#idComment">Disqus</a>,
     <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>,
     <a class="clsHide" href="#idFooterP1"></a></p>
   <p id="idMetaVersion">webpage-versions::
-    <br>• version.last.dynamic: <a lass="clsPreview" href="McsEdu000005.last.html">McsEdu000005.last.html</a>,
+    <br>• version.last.dynamic: <a class="clsPreview" href="McsEdu000005.last.html">McsEdu000005.last.html</a>,
     <br>• version.draft.creation: McsEdu000005.0-1-0.2023-08-15.last.html,
     <a class="clsHide" href="#idMetaVersion"></a></p>
 </section>

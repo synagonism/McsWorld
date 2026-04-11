@@ -2,7 +2,7 @@
  * mMcsNew.mjs - it creates a-new file McsHitp-senso-concept
  * The MIT License (MIT)
  *
- * Copyright (c) 2017-2025 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2017-2026 Kaseluris.Nikos.1959 (hmnSngo)
  * kaseluris.nikos@gmail.com
  * https://synagonism.net/
  *
@@ -45,6 +45,7 @@ import {fSftp} from './mSftp.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mMcsNew.mjs.1-3-8.2026-04-11: script async',
     'mMcsNew.mjs.1-3-7.2025-12-10: mMcsh2',
     'mMcsNew.mjs.1-3-6.2024-07-04: parent-child-tree',
     'mMcsNew.mjs.1-3-5.2024-02-27: parent-child-tree',
@@ -96,15 +97,15 @@ let
 
   //2. Directory of the-concept dirCor|dirEdu|dirHlth|dirHmn|dirLag|dirNtr|
   //   dirOgm|dirStn|dirStnlaw|dirTch|dirTchCpgm|dirTchInf
-  sDir = 'dirStn',
+  sDir = 'dirTchInf',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Singapore',
+  sName = 'Visual-Studio-Code',
   //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagoSngo,
-  sNameShort = 'socSgpr',
+  sNameShort = 'Vscode',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk, SocGrca,
-  sNameId = 'SocSgpr',
+  sNameId = 'Vscode',
 
 
   sNameFile = '',
@@ -257,7 +258,7 @@ if (bCounter) {
   s = s +
   '  <p id="idMetaCounter" class="clsCenter">this page was-visited\n' +
   '    <span class="clsColorRed">\n' +
-  '    <script src="../../dirPgm/dirCntr/counter.php?page='
+  '    <script async src="../../dirPgm/dirCntr/counter.php?page='
          + sNameFileNaked + '"></script>\n' +
   '    </span>\n' +
   '    times since {' + moUtil.fDateYMD() + '}</p>\n';
@@ -282,13 +283,13 @@ s = s +
   '  <p id="idFooterP1">footer::\n' +
   '    <br>• author: <a class="clsPreview" href="../dirHmn/McsHmn000003.last.html#idOverview">Kaseluris.Nikos.1959</a>\n' +
   '    <br>• email:\n' +
-  '    <br> &nbsp;<img src="../../dirRsc/dirImg/mail.png">\n' +
+  '    <br> &nbsp;<img src="../../dirRsc/dirImg/mail.png" alt="mail">\n' +
   '    <br>• edit on github: https://github.com/synagonism/McsWorld/blob/master/dirMcs/' + sDir +'/' + sNameFile + ',\n' +
   '    <br>• comments on <a class="clsPreview" href="../' + sDir + '/Mcs' + sDirShort + '000000.last.html#idComment">Disqus</a>,\n' +
   '    <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>,\n' +
   '    <a class="clsHide" href="#idFooterP1"></a></p>\n' +
   '  <p id="idMetaVersion">webpage-versions::\n' +
-  '    <br>• version.last.dynamic: <a lass="clsPreview" href="../' + sDir + '/' + sNameFile + '">' + sNameFile + '</a>,\n' +
+  '    <br>• version.last.dynamic: <a class="clsPreview" href="../' + sDir + '/' + sNameFile + '">' + sNameFile + '</a>,\n' +
   '    <br>• version.draft.creation: ' + sNameFileNaked + '.0-1-0.' + moUtil.fDateYMD() + '.last.html,\n' +
   '    <a class="clsHide" href="#idMetaVersion"></a></p>\n' +
   '</section>\n' +

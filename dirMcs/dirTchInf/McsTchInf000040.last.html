@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mcs.Internet (McsTchInf000040.0-16-0.2025-06-19 draft)</title>
+  <title>Mcs.Internet
+    (McsTchInf000040.0-18-0.2026-03-23 draft)</title>
   <meta name="keywords" content="Internet, Internet, ModelConceptSensorial, McsHitp, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -111,6 +112,71 @@
     <br>* McsEngl.Internet'att002-IPv6,
     <br>* McsEngl.Internet'IPv6,
     <a class="clsHide" href="#idIntntatt002nam"></a></p>
+  </section>
+
+  <section id="idIntntcurl">
+  <h2 id="idIntntcurlH2">cURL of Internet
+    <a class="clsHide" href="#idIntntcurlH2"></a></h2>
+  <p id="idIntntcurldsn">description::
+    <br>× Mcsh-creation: {2026-03-23},
+    <br>"Based on your query "cl tool," I'm going to assume you're asking about **cURL** (often pronounced "curl"), the powerful command-line tool used for transferring data over networks.
+    <br>It's a free, open-source tool that has become the standard for working with APIs and URLs directly from the terminal. Here's a detailed overview.
+    <br>---
+    <br>### What Exactly is cURL?
+    <br>cURL (Client URL) is a command-line tool and library (`libcurl`) for transferring data using URLs . It supports a huge range of protocols, including **HTTP, HTTPS, FTP, SFTP, SCP, IMAP, POP3, SMTP, LDAP, and many more** . It's designed to work without user interaction, making it ideal for automation and scripts, and is used in countless systems—from cars and TVs to routers and mobile phones .
+    <br>### Key Features
+    <br>- **Protocol Support**: Handles an extensive list of protocols for transferring data .
+    <br>- **Versatility**: Supports all standard HTTP methods (GET, POST, PUT, DELETE), custom headers, cookies, authentication, form uploads, file transfers, and more .
+    <br>- **Security**: Supports TLS versions 1.0-1.3, mutual authentication, and works with various authentication methods like Basic, Digest, NTLM, and Bearer tokens .
+    <br>- **Portability**: Runs on over 100 operating systems, including Linux, macOS, Windows, and countless embedded systems . It's often pre-installed on macOS and most Linux distributions .
+    <br>- **Script-Friendly**: Can be easily integrated into shell scripts, CI/CD pipelines, and other automation workflows .
+    <br>### Basic Usage Examples
+    <br>The fundamental syntax is <code>curl [options] &lt;URL></code> . Here are some common examples:
+    <br>**1. Simple GET Request**
+    <br><code>://api.example.com/users</code>
+    <br>This fetches the resource from the URL and prints the response body to the terminal (stdout) .
+    <br>**2. Download a File**
+    <br><code>O https://example.com/file.zip</code>
+    <br>The `-O` option saves the file with its remote name. To save with a different name, use `-o custom-name.zip` .
+    <br>**3. Send a POST Request with JSON Data**
+    <br><code>X POST https://api.example.com/data \
+    <br>  -H "Content-Type: application/json" \
+    <br>  -d '{"name": "John", "city": "New York"}'</code>
+    <br>*   `-X POST`: Specifies the HTTP method.
+    <br>*   `-H`: Sets a custom header.
+    <br>*   `-d`: Sends the data in the request body .
+    <br>**4. Include Authentication**
+    <br><code>u username:password https://api.example.com/secure</code>
+    <br>This sends a Basic Authentication request .
+    <br>**5. Follow Redirects**
+    <br><code>L https://example.com</code>
+    <br>The `-L` option tells cURL to follow any HTTP redirects (3xx responses) .
+    <br>**6. Show Full Request and Response Headers for Debugging**
+    <br><code>v https://api.example.com/users</code>
+    <br>The `-v` (verbose) flag is invaluable for debugging, showing exactly what is being sent and received .
+    <br>### cURL vs. Postman
+    <br>This is a very common comparison. They serve the same purpose but are used in different contexts .
+    <br>| Feature | cURL (Command-Line Tool) | Postman (GUI Application) |
+    <br>| **Interface** | Text-based, run from a terminal . | Visual, with buttons, forms, and a user-friendly interface . |
+    <br>| **Ease of Use** | Steeper learning curve; requires knowledge of command-line syntax and flags . | Very easy to get started, even for beginners . |
+    <br>| **Saving & Organization** | Requests are saved as shell scripts or copied commands. No built-in library . | Uses "Collections" to save, organize, and group requests into folders . |
+    <br>| **Automation** | Excellent for automation in scripts, CI/CD pipelines, and server tasks . | Can be automated via its CLI tool (Newman), but is heavier and designed more for GUI use . |
+    <br>| **Best For** | Quick one-off requests, debugging on remote servers, scripting, and automation . | Exploring new APIs, saving and documenting workflows, team collaboration, and visual testing . |
+    <br>| **Footprint** | Extremely lightweight and fast. Often built into operating systems . | A heavier desktop application with more resource consumption . |
+    <br>| **Pricing** | Completely free and open-source . | Freemium model. Free tier available; paid plans for team features . |
+    <br>### When Should You Use cURL?
+    <br>- **On a remote server**: You're SSH'd into a server and need to test an API or download a file. cURL is likely already there .
+    <br>- **In a script**: You need to automate an API call as part of a build, deployment, or data-processing pipeline .
+    <br>- **For quick debugging**: You want to quickly check an endpoint's headers or response without opening a heavier application .
+    <br>- **When you need raw speed and control**: cURL gives you fine-grained control over every aspect of the request with minimal overhead .
+    <br>In short, cURL is an essential tool for any developer or system administrator. While Postman is excellent for exploration and team-based API work, cURL is the go-to tool for automation, scripting, and quick tasks directly in the terminal."
+    <br>[{2026-03-23 retrieved} https://chat.deepseek.com/a/chat/s/7339a6aa-38b6-414e-bcbb-1fca56a00763]
+    <a class="clsHide" href="#idIntntcurldsn"></a></p>
+  <p id="idIntntcurlnam">name::
+    <br>* McsEngl.cURL-tool!⇒curl,
+    <br>* McsEngl.client-URL!⇒curl,
+    <br>* McsEngl.curl,
+    <a class="clsHide" href="#idIntntcurlnam"></a></p>
   </section>
 </section>
 
@@ -233,14 +299,14 @@
     <br>· Internet-service is any communication-doing of an-Internet-user.
     <a class="clsHide" href="#idIntntdngSrvcdsn"></a></p>
   <p id="idIntntdngSrvcnam">name::
-    <br>* McsEngl.InService!=Internet-service,
-    <br>* McsEngl.Internet'service!⇒InService,
-    <br>* McsEngl.Internet-service!⇒InService,
+    <br>* McsEngl.InetService!=Internet-service,
+    <br>* McsEngl.Internet'service!⇒InetService,
+    <br>* McsEngl.Internet-service!⇒InetService,
     <a class="clsHide" href="#idIntntdngSrvcnam"></a></p>
 </section>
 
 <section id="idIntntdngEmel">
-  <h1 id="idIntntdngEmelH1">InService.email of Internet
+  <h1 id="idIntntdngEmelH1">InetService.email of Internet
     <a class="clsHide" href="#idIntntdngEmelH1"></a></h1>
   <p id="idIntntdngEmeldsn">description::
     <br>× McsHitp-creation: {2024-12-05},
@@ -249,7 +315,7 @@
     <br>· the-exchange of written messages offline.
     <a class="clsHide" href="#idIntntdngEmeldsn"></a></p>
   <p id="idIntntdngEmelnam">name::
-    <br>* McsEngl.InService.email!⇒e-mail,
+    <br>* McsEngl.InetService.email!⇒e-mail,
     <br>* McsEngl.e-mail,
     <br>* McsEngl.email!⇒e-mail,
     <br>====== lagoChinese:
@@ -283,7 +349,7 @@
 </section>
 
 <section id="idIntntdngSlnt">
-  <h1 id="idIntntdngSlntH1">InService.social-network of Internet
+  <h1 id="idIntntdngSlntH1">InetService.social-network of Internet
     <a class="clsHide" href="#idIntntdngSlntH1"></a></h1>
   <p id="idIntntdngSlntdsn">description::
     <br>"Most Popular Social Media Networks Platforms Comparison By Monthly Active User:
@@ -305,7 +371,7 @@
     <br>[{2023-10-29 retrieved} https://twitter.com/SonuMandel1/status/1718597759807418711]
     <a class="clsHide" href="#idIntntdngSlntdsn"></a></p>
   <p id="idIntntdngSlntnam">name::
-    <br>* McsEngl.InService.social-network,
+    <br>* McsEngl.InetService.social-network,
     <br>* McsEngl.social-network,
     <br>====== lagoGreek:
     <br>* McsElln.κοινωνική-δικτύωση!η!=social-network,
@@ -390,7 +456,7 @@
 </section>
 
 <section id="idIntntdngPmnt">
-  <h1 id="idIntntdngPmntH1">InService.payment of Internet
+  <h1 id="idIntntdngPmntH1">InetService.payment of Internet
     <a class="clsHide" href="#idIntntdngPmntH1"></a></h1>
   <p id="idIntntdngPmntdsn">description::
     <br>× McsHitp-creation: {2024-12-22},
@@ -399,7 +465,7 @@
     <a class="clsHide" href="#idIntntdngPmntdsn"></a></p>
   <p id="idIntntdngPmntnam">name::
     <br>* McsEngl.InPay!=Internet-payment-service,
-    <br>* McsEngl.InService.payment!⇒InPay,
+    <br>* McsEngl.InetService.payment!⇒InPay,
     <a class="clsHide" href="#idIntntdngPmntnam"></a></p>
 
   <section id="idIntntdngPmntAli">
@@ -514,14 +580,14 @@
 </section>
 
 <section id="idWww">
-  <h1 id="idWwwH1">InService.www of Internet
+  <h1 id="idWwwH1">InetService.www of Internet
     <a class="clsHide" href="#idWwwH1"></a></h1>
   <p id="idWwwdsn">description::
     <br>· www is the-Internet-service, today the-most important, that uses the-http-protocol.
     <br>[<a class="clsPreview" href="../dirHmn/McsHmn000003.last.html#idOverview">hmnSngo</a>.{2023-10-29}]
     <a class="clsHide" href="#idWwwdsn"></a></p>
   <p id="idWwwnam">name::
-    <br>* McsEngl.InService.www!⇒WWW,
+    <br>* McsEngl.InetService.www!⇒WWW,
     <br>* McsEngl.WWW!=world-wide-web,
     <br>* McsEngl.World-Wide-Web!⇒WWW,
     <br>* McsEngl.web!⇒WWW,
@@ -849,10 +915,63 @@
     <br>[{2023-10-29 retrieved} https://bard.google.com/chat/2265a8de8f039a25]
     <a class="clsHide" href="#idWwwsrvrdsn"></a></p>
   <p id="idWwwsrvrnam">name::
-    <br>* McsEngl.Webserver,
-    <br>* McsEngl.Www'server!⇒Webserver,
-    <br>* McsEngl.web-server!⇒Webserver,
+    <br>* McsEngl.WebServer,
+    <br>* McsEngl.Www'server!⇒WebServer,
+    <br>* McsEngl.http-server!⇒WebServer,
+    <br>* McsEngl.web-server!⇒WebServer,
     <a class="clsHide" href="#idWwwsrvrnam"></a></p>
+
+  <section id="idWwwsrvrAdrd">
+  <h3 id="idWwwsrvrAdrdH3">WebServer.Android
+    <a class="clsHide" href="#idWwwsrvrAdrdH3"></a></h3>
+  <p id="idWwwsrvrAdrddsn">description::
+    <br>× Mcsh-creation: {2026-02-05},
+    <br>"Running an HTTP server on Android essentially turns your smartphone into a pocket-sized web server. This is surprisingly useful for local file sharing, remote device management, or developing decentralized apps without needing a cloud backend.
+    <br>Depending on your technical comfort level, there are three main ways to pull this off:
+    <br>## 1. The "No-Code" Way (Ready-to-use Apps)
+    <br>If you just want to host files or a simple site without writing code, the Google Play Store has several robust options. These handle the networking and security headers for you.
+    <br>* **HTTP Server (by various devs):** Simple, UI-driven apps that let you pick a folder on your phone and serve it over your local Wi-Fi.
+    <br>* **Servers Ultimate:** A powerhouse app that supports dozens of protocols (HTTP, FTP, WebDAV).
+    <br>* **KSWEB:** Designed specifically for web developers, it includes a full stack: PHP, MySQL, and Nginx/Apache.
+    <br>---
+    <br>## 2. The Developer Way (Using Termux)
+    <br>If you want a Linux-like environment, **Termux** is the gold standard. It’s a terminal emulator that lets you run real server environments.
+    <br>1. **Install Termux** (Preferably from F-Droid for the latest updates).
+    <br>2. **Install a language:** * For Python: `pkg install python`
+    <br>* For Node.js: `pkg install nodejs`
+    <br>3. **Spin up a server instantly:**
+    <br>* **Python:** `python -m http.server 8080`
+    <br>* **Node.js (using http-server):** `npx http-server`
+    <br>---
+    <br>## 3. The Programmatic Way (In-App Server)
+    <br>If you are building an Android app and want it to host its own API or web interface, you'll need to embed a library.
+    <br>### Popular Libraries
+    <br>* **NanoHTTPD:** A tiny, single-class HTTP server. It's old but very lightweight and easy to integrate.
+    <br>* **Ktor (Kotlin):** The modern choice. It’s asynchronous, built by JetBrains, and highly "pluggable."
+    <br>* **AndServer:** An Android library that mimics Spring MVC, making it very intuitive if you're coming from Java web development.
+    <br>### A Quick Code Example (Ktor)
+    <br>Using Kotlin, a basic server inside your app would look something like this:
+    <br>```kotlin
+    <br>embeddedServer(Netty, port = 8080) {
+    <br>    routing {
+    <br>        get("/") {
+    <br>            call.respondText("Hello from your Android device!")
+    <br>        }
+    <br>    }
+    <br>}.start(wait = true)
+    <br>```
+    <br>---
+    <br>## Key Challenges to Keep in Mind
+    <br>* **Battery Optimization:** Android’s "Doze Mode" will kill your server process to save juice. You’ll need to run the server in a **Foreground Service** with a persistent notification.
+    <br>* **Network Visibility:** By default, your server is only visible to devices on the same Wi-Fi. To access it over the internet, you'd need port forwarding (rarely possible on mobile data) or a tunnel like **Ngrok** or **Tailscale**.
+    <br>* **Ports:** You cannot use Port 80 unless your device is rooted. Stick to ports above 1024 (like 8080 or 8888).
+    <br>**Which approach are you leaning toward?** If you're building an app, I can help you set up a basic Ktor or NanoHTTPD implementation."
+    <br>[{2026-02-05 retrieved} https://gemini.google.com/app/42ad3178aee7af37]
+    <a class="clsHide" href="#idWwwsrvrAdrddsn"></a></p>
+  <p id="idWwwsrvrAdrdnam">name::
+    <br>* McsEngl.WebServer.Android,
+    <a class="clsHide" href="#idWwwsrvrAdrdnam"></a></p>
+  </section>
   </section>
 
   <section id="idWwwsrvc">
@@ -1059,7 +1178,7 @@
 </section>
 
 <section id="idIntntdngCdcp">
-  <h1 id="idIntntdngCdcpH1">InService.cloud-computing of Internet
+  <h1 id="idIntntdngCdcpH1">InetService.cloud-computing of Internet
     <a class="clsHide" href="#idIntntdngCdcpH1"></a></h1>
   <p id="idIntntdngCdcpdsn">description::
     <br>"overview of cloud-computing:
@@ -1098,7 +1217,7 @@
     <br>[{2023-10-31 retrieved} https://chat.openai.com/c/a5e3f11d-e0ca-4a3e-bd79-53b4e24a3566]
     <a class="clsHide" href="#idIntntdngCdcpdsn"></a></p>
   <p id="idIntntdngCdcpnam">name::
-    <br>* McsEngl.InService.cloud-computing,
+    <br>* McsEngl.InetService.cloud-computing,
     <br>* McsEngl.cloud-computing,
     <a class="clsHide" href="#idIntntdngCdcpnam"></a></p>
 </section>
@@ -1215,13 +1334,13 @@
   <p id="idFooterP1">footer::
     <br>• author: <a class="clsPreview" href="../dirHmn/McsHmn000003.last.html#idOverview">Kaseluris.Nikos.1959</a>
     <br>• email:
-    <br> &nbsp;<img src="../../dirRsc/dirImg/mail.png">
+    <br> &nbsp;<img src="../../dirRsc/dirImg/mail.png" alt="mail">
     <br>• edit on github: https://github.com/synagonism/McsWorld/blob/master/dirMcs/dirTchInf/McsTchInf000040.last.html,
     <br>• comments on <a class="clsPreview" href="../dirTchInf/McsTchInf000000.last.html#idComment">Disqus</a>,
     <br>• twitter: <a href="https://twitter.com/synagonism">@synagonism</a>,
     <a class="clsHide" href="#idFooterP1"></a></p>
   <p id="idMetaVersion">webpage-versions::
-    <br>• version.last.dynamic: <a lass="clsPreview" href="../dirTchInf/McsTchInf000040.last.html">McsTchInf000040.last.html</a>,
+    <br>• version.last.dynamic: <a class="clsPreview" href="../dirTchInf/McsTchInf000040.last.html">McsTchInf000040.last.html</a>,
     <br>• version.draft.creation: McsTchInf000040.0-1-0.2023-10-29.last.html,
     <a class="clsHide" href="#idMetaVersion"></a></p>
 </section>
