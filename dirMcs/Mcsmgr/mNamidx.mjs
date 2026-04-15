@@ -3,7 +3,7 @@
  * mNamidx.mjs - module that creates name-indexes and uploads the-files
  * The MIT License (MIT)
  *
- * Copyright (c) 2017 - 2025 Kaseluris.Nikos.1959 (hmnSngu)
+ * Copyright (c) 2017 - 2026 Kaseluris.Nikos.1959 (hmnSngu)
  * kaseluris.nikos@gmail.com
  * https://synagonism.net/
  *

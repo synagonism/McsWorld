@@ -1,5 +1,5 @@
 /**
- * DOING: sftp the-files in Mcsmgr/Mcsmgr/sftp.json
+ * DOING: sftp the-files in Mcsmgr/sftp.json
  * INPUT:
  * OUTPUT:
  * RUN: node mSftp.mjs password

@@ -1,8 +1,8 @@
 /*
- * mMcsNew.mjs - it creates a-new file McsHitp-senso-concept
+ * mMcsNew.mjs - it creates a-new file HitpMcs-senso-concept
  * The MIT License (MIT)
  *
- * Copyright (c) 2017-2026 Kaseluris.Nikos.1959 (hmnSngo)
+ * Copyright (c) 2017-2026 Kaseluris.Nikos.1959 (hmnSngu)
  * kaseluris.nikos@gmail.com
  * https://synagonism.net/
  *
@@ -45,6 +45,7 @@ import {fSftp} from './mSftp.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mMcsNew.mjs.1-3-9.2026-04-12: Mcsmgr/sftp.json',
     'mMcsNew.mjs.1-3-8.2026-04-11: script async',
     'mMcsNew.mjs.1-3-7.2025-12-10: mMcsh2',
     'mMcsNew.mjs.1-3-6.2024-07-04: parent-child-tree',
@@ -100,12 +101,12 @@ let
   sDir = 'dirTchInf',
 
   //3. Name of the-title: Ethereum--blockchain-net
-  sName = 'Visual-Studio-Code',
-  //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagoSngo,
-  sNameShort = 'Vscode',
+  sName = 'VSCode-command-ID',
+  //4. SHORT-name: sysNet, ogn, DnChain, DnEth, Dchain-net, lagoSngu,
+  sNameShort = 'VscCmdi',
 
   //5. Name for IDs, unique in this file: Net, Dtc, LTurk, SocGrca,
-  sNameId = 'Vscode',
+  sNameId = 'Vscodecmdid',
 
 
   sNameFile = '',
@@ -136,7 +137,7 @@ s =
   '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
   '  <title>Mcs.' + sNameShort + '!=' + sName + '\n' +
   '    (' + sNameFileNaked + '.0-1-0.' + moUtil.fDateYMD() + ' draft)</title>\n' +
-  '  <meta name="keywords" content="' + sName + ', ' + sNameShort + ', ModelConceptSensorial, McsHitp, Synagonism">\n' +
+  '  <meta name="keywords" content="' + sName + ', ' + sNameShort + ', modelConceptSenso, HitpMcs, Synagonism">\n' +
   '  <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">\n' +
   '</head>\n' +
   '\n' +
@@ -146,7 +147,7 @@ s =
   '  <h1 id="idHeaderH1">' + sName + '\n' +
   '    <br>senso-concept-Mcs (' + sNameShort + ')\n' +
   '    </h1>\n' +
-  '  <p id="idHeadercrd">McsHitp-creation:: {' + moUtil.fDateYMD() + '}\n' +
+  '  <p id="idHeadercrd">HitpMcs-creation:: {' + moUtil.fDateYMD() + '}\n' +
   '    <a class="clsHide" href="#idHeadercrd"></a></p>\n' +
   '</header>\n' +
   '\n' +
@@ -205,7 +206,7 @@ s =
   '    <br>* McsEngl.evoluting-of-' + sNameShort + ',\n' +
   '    <br>* McsEngl.' + sNameShort + '\'evoluting,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'evgnam"></a></p>\n' +
-  '  <p id="id' + sNameId + 'evg' + moUtil.fDateYMD2() + '">{' + moUtil.fDateYMD() + '}-McsHitp-creation::\n' +
+  '  <p id="id' + sNameId + 'evg' + moUtil.fDateYMD2() + '">{' + moUtil.fDateYMD() + '}-HitpMcs-creation::\n' +
   '    <br>· creation of current <a class="clsPreview" href="../dirTchInf/McsTchInf000009.last.html#idMcsHitp">concept</a>.\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'evg' + moUtil.fDateYMD2() + '"></a></p>\n' +
   '</section>\n' +
@@ -331,9 +332,9 @@ moUtil.fWriteJsonArray('../aPages.json', aPages)
 fNamidx(sDir + '/' + sNameFile)
 
 //add extra files to upload
-let aSftp = JSON.parse(moFs.readFileSync('./sftp.json'))
+let aSftp = JSON.parse(moFs.readFileSync('Mcsmgr/sftp.json'))
 aSftp.push('../aPages.json')
 aSftp.push('../dirPgm/dirCntr/dirCntrfiles/' + sNameFileNaked + '.txt')
-moUtil.fWriteJsonArray('./sftp.json', aSftp)
+moUtil.fWriteJsonArray('Mcsmgr/sftp.json', aSftp)
 //upload files
 fSftp()
