@@ -1,5 +1,5 @@
 /*
- * go to line 104 (aLagALL) to change indexed languages.
+ * go to line 96 (aLagALL) to change indexed languages.
  * mNamidx.mjs - module that creates name-indexes and uploads the-files
  * The MIT License (MIT)
  *
@@ -41,6 +41,7 @@
  *
  */
 
+
 import moFs from 'fs'
 import mfReadlines from 'n-readlines' // npm install n-readlines
 import mfClient from 'ssh2-sftp-client'
@@ -79,17 +80,6 @@ const
     'namidx: {2018-09-22}',
     'namidx: {2017-06-01} created'
   ]
-
-let
-  aFileMcsTxt = []
-
-if (process.argv[2]) {
-  oSftp.password = process.argv[2]
-} else {
-  console.log('type password after mNamidx.mjs')
-  process.exit()
-}
-
 
 function fNamidx(fileIn, fSftpIn) {
   let

@@ -1,4 +1,5 @@
 // Place your key bindings in this file to override the defaults
+// ctrl+k ctrl+2 folds them and shows shortcuts
 [
 
 // SYMBOLS
@@ -55,21 +56,21 @@
     ]
   }
 },
-// Char hitP name Equal: !=
+// c p e:: Char hitP name Equal: !=
 {
   "key": "ctrl+alt+c p e",  
   "command": "type",
   "args": {"text": "!="},
   "when": "editorTextFocus"
 },
-// Char hitP name Main: !⇒
+// c p m:: Char hitP name Main: !⇒
 {
   "key": "ctrl+alt+c p m",  
   "command": "type",
   "args": {"text": "!⇒"},
   "when": "editorTextFocus"
 },
-// Char hitP Sentence: <br>·
+// c p s:: Char hitP Sentence: <br>·
 {
   "key": "ctrl+alt+c p s", 
   "command": "runCommands",
@@ -82,7 +83,7 @@
     ]
   }
 },
-// Char hitP sTructured-info: <br>×
+// c p t:: Char hitP sTructured-info: <br>×
 {
   "key": "ctrl+alt+c p t", 
   "command": "runCommands",
@@ -97,7 +98,7 @@
 },
 
 // D::
-// insert Date: {2026-03-30} 
+// d:: insert Date: {2026-03-30} 
 {
   "key": "ctrl+alt+d", 
   "command": "editor.action.insertSnippet",
@@ -106,21 +107,21 @@
 },
 
 // H:: HTML
-// Html Bold
+// h b:: Html Bold
 {
   "key": "ctrl+alt+h b", 
   "command": "editor.action.insertSnippet",
   "args": {"snippet": "<strong>${TM_SELECTED_TEXT}</strong>"},
   "when": "editorTextFocus && editorHasSelection"
 },
-// Html CoDe
+// h c d:: Html CoDe
 {
   "key": "ctrl+alt+h c d", 
   "command": "editor.action.insertSnippet",
   "args": {"snippet": "<code>${TM_SELECTED_TEXT}</code>"},
   "when": "editorTextFocus && editorHasSelection"
 },
-// Html CoMment
+// h c m:: Html CoMment
 {
   "key": "ctrl+alt+h c m", 
   "command": "runCommands",
@@ -136,7 +137,7 @@
   "when": "editorTextFocus"
 },
 // HTML LINK
-// Html Link Insert
+// h l i:: Html Link Insert
 {
   "key": "ctrl+alt+h l i", 
   "command": "runCommands",
@@ -160,47 +161,82 @@
   },
   "when": "editorTextFocus && editorHasSelection"
 },
-// Html Link Selection
+// h l s:: Html Link Selection
 {
   "key": "ctrl+alt+h l s", 
   "command": "editor.action.insertSnippet",
   "args": {"snippet": "a href=\"#${TM_SELECTED_TEXT}\">${TM_SELECTED_TEXT}</a>"},
   "when": "editorTextFocus && editorHasSelection"
 },
+// h t:: Html Tag
+{
+  "key": "ctrl+alt+h t", 
+  "command": "runCommands",
+  "args": {
+    "commands": [
+      { "command": "editor.action.insertSnippet",
+        "args": {"snippet": "<>${TM_SELECTED_TEXT}</>"}
+      },
+      { "command": "editor.actions.findWithArgs",
+        "args": { 
+          "searchString": "<>", "isRegex": false,
+          "matchWholeWord": false, "isCaseSensitive": false, "findInSelection": false
+         }
+      },
+      "editor.action.previousMatchFindAction",
+      "closeFindWidget",
+      "cursorLeft",
+      "cursorRight",
+      "extension.userInput",
+      { "command": "editor.action.clipboardCopyAction", "await": "clipboard" },
+      { "command": "editor.actions.findWithArgs",
+        "args": { 
+          "searchString": "</", "isRegex": false,
+          "matchWholeWord": false, "isCaseSensitive": false, "findInSelection": false
+         }
+      },
+      "editor.action.nextMatchFindAction",
+      "closeFindWidget",
+      "cursorRight",
+      { "command": "editor.action.clipboardPasteAction", "await": "document selection" }
+    ]
+  },
+  "when": "editorTextFocus && editorHasSelection"
+},
 
 
 // MACRO 
-// Macro Copy recording
+// m c:: Macro Copy recording
 {
   "key": "ctrl+alt+m c", 
   "command": "kb-macro.copyMacroAsKeybinding",
   "when": "editorTextFocus"
 },
-// Macro recording
+// m r:: Macro Recording
 {
   "key": "ctrl+alt+m r", 
   "command": "kb-macro.startRecording",
   "when": "!kb-macro.recording"
 },
-// Macro stop recording
+// m r:: Macro stop Recording
 {
   "key": "ctrl+alt+m r", 
   "command": "kb-macro.finishRecording",
   "when": "kb-macro.recording"
 },
-// Macro Cancel recording
+// m p:: Macro Cancel recording
 {
   "key": "ctrl+alt+m p", 
   "command": "kb-macro.cancelRecording",
   "when": "kb-macro.recording"
 },
-// Macro Playback
+// m p:: Macro Playback
 {
   "key": "ctrl+alt+m p", 
   "command": "kb-macro.playback",
   "when": "!kb-macro.recording"
 },
-// Macro stop playback
+// m escape:: Macro stop playback
 {
   "key": "ctrl+alt+m escape", 
   "command": "kb-macro.abortPlayback",
@@ -209,21 +245,21 @@
 
 // HITP
 // HITP COLOR
-// hitP Color Blue
+// p c b:: hitP Color Blue
 {
   "key": "ctrl+alt+p c b", 
   "command": "editor.action.insertSnippet",
   "args": {"snippet": "<span class=\"clsColorBlue\">${TM_SELECTED_TEXT}</span>"},
   "when": "editorTextFocus && editorHasSelection"
 },
-// hitP Color Green
+// p c g:: hitP Color Green
 {
   "key": "ctrl+alt+p c g", 
   "command": "editor.action.insertSnippet",
   "args": {"snippet": "<span class=\"clsColorGreen\">${TM_SELECTED_TEXT}</span>"},
   "when": "editorTextFocus && editorHasSelection"
 },
-// hitP Color Red
+// p c r:: hitP Color Red
 {
   "key": "ctrl+alt+p c r", 
   "command": "editor.action.insertSnippet",
@@ -231,7 +267,7 @@
   "when": "editorTextFocus && editorHasSelection"
 },
 // HITP ELEMENT
-// hitP Element Audio
+// p e a:: hitP Element Audio
 {
   "key": "ctrl+alt+p e a", 
   "command": "runCommands",
@@ -259,7 +295,7 @@
   "when": "editorTextFocus"
 },
 // HITP FORMAT
-// hitP Format Underline
+// p f u:: hitP Format Underline
 {
   "key": "ctrl+alt+p f u", 
   "command": "editor.action.insertSnippet",
@@ -267,46 +303,7 @@
   "when": "editorTextFocus && editorHasSelection"
 },
 // HITP HEADING
-// hitP Heading Increase
-{
-  "key": "ctrl+alt+p h i", 
-  "command": "runCommands",
-  "args": {
-    "commands": [
-      { "command": "editor.actions.findWithArgs",
-        "args": { 
-          "searchString": "<h", "isRegex": false,
-          "matchWholeWord": false, "isCaseSensitive": false, "findInSelection": false
-         }
-      },
-      "editor.action.nextMatchFindAction",
-      "closeFindWidget",
-      "cursorRight",
-      "cursorRightSelect",
-      "editor.emmet.action.incrementNumberByOne",
-      { "command": "editor.action.clipboardCopyAction", "await": "clipboard" },
-      "cursorWordEndRight",
-      "cursorWordEndRight",
-      "cursorWordEndRight",
-      "deleteLeft",
-      { "command": "editor.action.clipboardPasteAction", "await": "document selection" },
-      "cursorDown",
-      "cursorEnd",
-      "cursorLeft",
-      "deleteLeft",
-      { "command": "editor.action.clipboardPasteAction", "await": "document selection" },
-      "cursorWordLeft",
-      "cursorWordLeft",
-      "cursorWordLeft",
-      "cursorWordLeft",
-      "deleteLeft",
-      { "command": "editor.action.clipboardPasteAction", "await": "document selection" },
-      "cursorEnd",
-    ]
-  },
-  "when": "editorTextFocus"
-},
-// hitP Heading Decrease
+// p h d:: hitP Heading Decrease
 {
   "key": "ctrl+alt+p h d", 
   "command": "runCommands",
@@ -345,8 +342,47 @@
   },
   "when": "editorTextFocus"
 },
+// p h i:: hitP Heading Increase
+{
+  "key": "ctrl+alt+p h i", 
+  "command": "runCommands",
+  "args": {
+    "commands": [
+      { "command": "editor.actions.findWithArgs",
+        "args": { 
+          "searchString": "<h", "isRegex": false,
+          "matchWholeWord": false, "isCaseSensitive": false, "findInSelection": false
+         }
+      },
+      "editor.action.nextMatchFindAction",
+      "closeFindWidget",
+      "cursorRight",
+      "cursorRightSelect",
+      "editor.emmet.action.incrementNumberByOne",
+      { "command": "editor.action.clipboardCopyAction", "await": "clipboard" },
+      "cursorWordEndRight",
+      "cursorWordEndRight",
+      "cursorWordEndRight",
+      "deleteLeft",
+      { "command": "editor.action.clipboardPasteAction", "await": "document selection" },
+      "cursorDown",
+      "cursorEnd",
+      "cursorLeft",
+      "deleteLeft",
+      { "command": "editor.action.clipboardPasteAction", "await": "document selection" },
+      "cursorWordLeft",
+      "cursorWordLeft",
+      "cursorWordLeft",
+      "cursorWordLeft",
+      "deleteLeft",
+      { "command": "editor.action.clipboardPasteAction", "await": "document selection" },
+      "cursorEnd",
+    ]
+  },
+  "when": "editorTextFocus"
+},
 // HITP LINK
-// hitP Linkpreview Insert
+// p l i:: hitP Linkpreview Insert
 {
   "key": "ctrl+alt+p l i", 
   "command": "runCommands",
@@ -370,7 +406,7 @@
   },
   "when": "editorTextFocus && editorHasSelection"
 },
-// hitP Linkpreview Selection
+// p l s:: hitP Linkpreview Selection
 {
   "key": "ctrl+alt+p l s", 
   "command": "editor.action.insertSnippet",
@@ -378,7 +414,7 @@
   "when": "editorTextFocus && editorHasSelection"
 },
 // HITP NAME
-// hitP Name ALbanian
+// p n a l:: hitP Name ALbanian
 {
   "key": "ctrl+alt+p n a l", 
   "command": "runCommands",
@@ -395,7 +431,7 @@
   },
   "when": "editorTextFocus"
 },
-// hitP Name ARabic
+// p n a r:: hitP Name ARabic
 {
   "key": "ctrl+alt+p n a r", 
   "command": "runCommands",
@@ -412,7 +448,7 @@
   },
   "when": "editorTextFocus"
 },
-// hitP Name Chinese
+// p n c:: hitP Name Chinese
 {
   "key": "ctrl+alt+p n c", 
   "command": "runCommands",
@@ -1200,36 +1236,8 @@
   "command": "runCommands",
   "args": {
     "commands": [
-      { "command": "editor.actions.findWithArgs",
-        "args": { 
-          "searchString": "<h", "isRegex": false,
-          "matchWholeWord": false, "isCaseSensitive": false, "findInSelection": false
-         }
-      },
-      "editor.action.nextMatchFindAction",
-      "closeFindWidget",
-      "cursorRight",
-      "cursorRightSelect",
-      "editor.emmet.action.decrementNumberByOne",
-      { "command": "editor.action.clipboardCopyAction", "await": "clipboard" },
-      "cursorWordEndRight",
-      "cursorWordEndRight",
-      "cursorWordEndRight",
-      "deleteLeft",
-      { "command": "editor.action.clipboardPasteAction", "await": "document selection" },
-      "cursorDown",
-      "cursorEnd",
-      "cursorLeft",
-      "deleteLeft",
-      { "command": "editor.action.clipboardPasteAction", "await": "document selection" },
-      "cursorWordLeft",
-      "cursorWordLeft",
-      "cursorWordLeft",
-      "cursorWordLeft",
-      "deleteLeft",
-      { "command": "editor.action.clipboardPasteAction", "await": "document selection" },
-      "cursorEnd",
       /*
+
       // set break in line
       "cursorHome",
       "cursorHome",

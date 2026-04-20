@@ -26,7 +26,7 @@
  *
  * DOING:
  *   it works as a-module AND stand-alone.
- *   1) it updates the-names of Mcs-files in NamidxAgg.txt, in index-files.
+ *   1) it updates the-names of Mcs-files in NamidxOnly.txt, in index-files.
  *   2) it appends the-file 'SftpAgg.json' that contains the-changed files we have to upload.
  *   3) it computes the-number of names.
  *   4) it computes the-number of concepts.

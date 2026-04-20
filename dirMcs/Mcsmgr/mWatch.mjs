@@ -1,5 +1,5 @@
 /*
- * mWatch.mjs - module that watches for file changes, creates name-indices,
+ * mWatch.mjs - module that watches for file changes, creates name-indexes,
  *   and uploads the-files
  * The MIT License (MIT)
  *

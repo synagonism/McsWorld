@@ -1,5 +1,5 @@
 /*
- * mNamidxSftp.mjs - module that creates name-indexes
+ * mNamidxSftp.mjs - creates name-indexes and uploads the-files
  * The MIT License (MIT)
  *
  * Copyright (c) 2017 - 2025 Kaseluris.Nikos.1959 (hmnSngu)
@@ -30,7 +30,7 @@
  *   2) it appends the-file 'SftpAgg.json' that contains the-changed files we have to upload.
  *   3) it computes the-number of names.
  *   4) it computes the-number of concepts.
- *   5) upload the-files
+ *   5) it UPLOADS the-files
  *
  * INPUT: Mcsmgr/NamidxOnly.txt
  * OUTPUT: dirLang/namidx.lagLangX.json, namidx.lagRoot.json, Mcsqnt.json,
