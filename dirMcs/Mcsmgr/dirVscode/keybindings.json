@@ -107,6 +107,46 @@
 },
 
 // H:: HTML
+// h ,:: Hitp replace next "<" with "&lt;"
+{
+  "key": "ctrl+alt+h ,", // Hitp replace next "<" with "&lt;"
+  "command": "runCommands",
+  "args": {
+    "commands": [
+      { "command": "editor.actions.findWithArgs",
+        "args": { 
+          "searchString": "<",
+          "replaceString": "&lt;",
+          "isRegex": false, "matchWholeWord": false,
+          "isCaseSensitive": false, "findInSelection": false
+         }
+      },
+      "editor.action.nextMatchFindAction",
+      "editor.action.replaceOne",
+      "closeFindWidget",
+    ]
+  }
+},
+// h .:: Hitp replace next ">" with "&gt;"
+{
+  "key": "ctrl+alt+h .", // Hitp replace next ">" with "&gt;"
+  "command": "runCommands",
+  "args": {
+    "commands": [
+      { "command": "editor.actions.findWithArgs",
+        "args": { 
+          "searchString": ">",
+          "replaceString": "&gt;",
+          "isRegex": false, "matchWholeWord": false,
+          "isCaseSensitive": false, "findInSelection": false
+         }
+      },
+      "editor.action.nextMatchFindAction",
+      "editor.action.replaceOne",
+      "closeFindWidget",
+    ]
+  }
+},
 // h b:: Html Bold
 {
   "key": "ctrl+alt+h b", 
@@ -1242,14 +1282,15 @@
     "commands": [
       { "command": "editor.actions.findWithArgs",
         "args": { 
-          "searchString": "C:\\xampp\\htdocs\\dWstSgm",
+          "searchString": ">",
+          "replaceString": "&gt;",
           "isRegex": false, "matchWholeWord": false,
           "isCaseSensitive": false, "findInSelection": false
          }
       },
       "editor.action.nextMatchFindAction",
+      "editor.action.replaceOne",
       "closeFindWidget",
-      "editor.action.deleteLines"
 
       /*
 
@@ -1271,12 +1312,14 @@
       { "command": "editor.actions.findWithArgs",
         "args": { 
           "searchString": "<h",
+          "replaceString": '...',
           "isRegex": false, "matchWholeWord": false,
           "isCaseSensitive": false, "findInSelection": false
          }
       },
       "editor.action.nextMatchFindAction",
       "editor.action.previousMatchFindAction",
+      "editor.action.replaceOne",
       "closeFindWidget",
       { "command": "editor.action.startFindReplaceAction" },
       { "command": "editor.action.replaceOne" },

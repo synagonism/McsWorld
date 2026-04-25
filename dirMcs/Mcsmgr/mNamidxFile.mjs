@@ -40,23 +40,42 @@ import mfClient from 'ssh2-sftp-client'
 import mfEs6_promise_pool from 'es6-promise-pool'
 import {oSftp, fSftp} from './mSftp.mjs'
 import {fWriteJsonObject} from './mUtil.mjs'
+import readline from 'node:readline/promises';
+import { stdin as input, stdout as output } from 'node:process';
 
 const
   // contains the-versions of mNamidxFile.mjs
   aVersion = [
+    'mNamidxFile.mjs.0-2-0.2026-04-21: password',
     'mNamidxFile.mjs.0-1-0.2026-04-20: creation'
   ]
 
-if (process.argv.length !== 4) {
-  console.log('run: node Mcsmgr/mNamidxFile.mjs file pwd')
+if (process.argv.length !== 3) {
+  console.log('run: node Mcsmgr/mNamidxFile.mjs file')
   process.exit()
 }
 
-let sFilename = process.argv[2]
+async function askHidden(promptText) {
+  const rl = readline.createInterface({ input, output, terminal: true });
+
+  // Fallback simple prompt. This does not fully mask on all terminals.
+  // Best option is to use a proper hidden-input package if you want masking.
+  const answer = await rl.question(promptText);
+  rl.close();
+  return answer;
+}
+
+
+let
+  sFilename = process.argv[2],
+  pwd = process.argv[3];
+
+if (!pwd) {
+  pwd = await askHidden('Enter password: ');
+}
 
 // namidx-files not accept '\'
 sFilename = sFilename.replace(/\\/g, '/')
-
 if (!sFilename.endsWith('.last.html')) {
   console.log('this is NOT an-Mcs-file, exit')
   process.exit()
@@ -68,6 +87,6 @@ if (sFilename.startsWith('C:/xampp/htdocs/dWstSgm/dirMcs/')) {
   sFilename = sFilename.substring('C:/xampp/htdocs/dWstSgm/dirMcs/'.length)
 }  
 
-oSftp.password = process.argv[3]
+oSftp.password = pwd
 
 fNamidx(sFilename, fSftp)

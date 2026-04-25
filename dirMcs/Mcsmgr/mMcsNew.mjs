@@ -169,11 +169,11 @@ s =
   '<section id="id' + sNameId + 'rscF">\n' +
   '  <h1 id="id' + sNameId + 'rscFH1">info-resource of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'rscFH1"></a></h1>\n' +
-  '  <p id="id' + sNameId + 'rscwpa">addressWpg::\n' +
+  '  <p id="id' + sNameId + 'rscdsn">description::\n' +
   '    <br>* \n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'rscwpa"></a></p>\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'rscdsn"></a></p>\n' +
   '  <p id="id' + sNameId + 'rscnam">name::\n' +
-  '    <br>* McsEngl.' + sNameShort + '\'Infrsc,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'InfRsc,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'rscnam"></a></p>\n' +
   '</section>\n' +
   //'\n' +
@@ -202,6 +202,9 @@ s =
   '<section id="id' + sNameId + 'evgF">\n' +
   '  <h1 id="id' + sNameId + 'evgFH1">evoluting of ' + sNameShort + '\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'evgFH1"></a></h1>\n' +
+  '  <p id="id' + sNameId + 'evgdsn">description::\n' +
+  '    <br>· ' + sNameShort + ' events:\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'evgdsn"></a></p>\n' +
   '  <p id="id' + sNameId + 'evgnam">name::\n' +
   '    <br>* McsEngl.evoluting-of-' + sNameShort + ',\n' +
   '    <br>* McsEngl.' + sNameShort + '\'evoluting,\n' +

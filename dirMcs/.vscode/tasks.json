@@ -1,7 +1,6 @@
 {
   "version": "2.0.0",
   "tasks": [
-    // Backup Vscode user-settings
     {
       "label": "Backup Vscode user settings",
       "type": "shell",
@@ -19,15 +18,13 @@
         "panel": "shared"
       }
     },
-    // NameIndex current-file and upload
     {
       "label": "NameIndex current-file and upload",
       "type": "shell",
       "command": "node",
       "args": [
         "Mcsmgr/mNamidxFile.mjs",
-        "${file}",
-        "${input:pwd}"
+        "${file}"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
@@ -38,14 +35,5 @@
       },
       "problemMatcher": []
     }
-  ],
-  "inputs": [
-    {
-      "id": "pwd",
-      "type": "promptString",
-      "description": "Enter pwd",
-      "password": true
-    }
   ]
-
 }

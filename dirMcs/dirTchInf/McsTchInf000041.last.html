@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.Vscode!=Visual-Studio-Code
-    (McsTchInf000041.0-9-0.2026-04-19 draft)</title>
+    (McsTchInf000041.0-10-0.2026-04-23 draft)</title>
   <meta name="keywords" content="Visual-Studio-Code, Vscode, modelConceptSenso, HitpMcs, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -1245,11 +1245,29 @@
     <a class="clsHide" href="#idVscodeextnSpfcH2"></a></h2>
   <p id="idVscodeextnSpfcdsn">description::
     <br>× HitpMcs-creation: {2026-04-16},
-    <br>· 
+    <br>· misc extensions.
     <a class="clsHide" href="#idVscodeextnSpfcdsn"></a></p>
   <p id="idVscodeextnSpfcnam">name::
     <br>* McsEngl.VscExtn.specific,
     <a class="clsHide" href="#idVscodeextnSpfcnam"></a></p>
+  </section>
+
+  <section id="idVscodeextnHhnt">
+  <h2 id="idVscodeextnHhntH2">VscExtn.HTMLHint
+    <a class="clsHide" href="#idVscodeextnHhntH2"></a></h2>
+  <p id="idVscodeextnHhntdsn">description::
+    <br>× HitpMcs-creation: {2026-04-25},
+    <br>× https://marketplace.visualstudio.com/items?itemName=HTMLHint.vscode-htmlhint,
+    <br>× https://github.com/htmlhint/HTMLHint,
+    <br>× https://htmlhint.com/,
+    <br>· Integrates the HTMLHint static analysis tool into Visual Studio Code.
+    <br>
+    <br>· <!--htmlhint-disable tag-pair,id-class-value:underline -->
+    <br>· <!--htmlhint-enable tag-pair -->
+    <a class="clsHide" href="#idVscodeextnHhntdsn"></a></p>
+  <p id="idVscodeextnHhntnam">name::
+    <br>* McsEngl.VscExtn.HTMLHint,
+    <a class="clsHide" href="#idVscodeextnHhntnam"></a></p>
   </section>
 
   <section id="idVscodeextnKbmb">
@@ -1308,6 +1326,7 @@
     <a class="clsHide" href="#idVscodecmndscH2"></a></h2>
   <p id="idVscodecmndscdsn">description::
     <br>× HitpMcs-creation: {2026-03-25},
+    <br>× https://code.visualstudio.com/docs/configure/keybindings,
     <br>"General
     <br>Ctrl+Shift+P, F1 Show Command Palette
     <br>Ctrl+P Quick Open, Go to File…
@@ -1463,10 +1482,12 @@
     <br>[{2026-03-25 retrieved} https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf]
     <a class="clsHide" href="#idVscodecmndscdsn"></a></p>
   <p id="idVscodecmndscnam">name::
-    <br>* McsEngl.VscCmds!=Vscode'shortcut,
+    <br>* McsEngl.VscCmd'shortcut!⇒VscCmds,
+    <br>* McsEngl.Vscode'shortcut!⇒VscCmds,
     <br>* McsEngl.Vscode'keybinding!⇒VscCmds,
     <br>* McsEngl.Vscode'keyboard-shortcut!⇒VscCmds,
     <br>* McsEngl.Vscode'shortcut!⇒VscCmds,
+    <br>* McsEngl.VscCmds!=VscCmd'shortcut,
     <a class="clsHide" href="#idVscodecmndscnam"></a></p>
 
   <section id="idVscodecmndsccrtg">
@@ -1481,6 +1502,90 @@
   <p id="idVscodecmndsccrtgnam">name::
     <br>* McsEngl.VscCmds'creating,
     <a class="clsHide" href="#idVscodecmndsccrtgnam"></a></p>
+  </section>
+
+  <section id="idVscodecmndShctrule">
+  <h3 id="idVscodecmndShctruleH3">keyboard-rule of VscCmds
+    <a class="clsHide" href="#idVscodecmndShctruleH3"></a></h3>
+  <p id="idVscodecmndShctruledsn">description::
+    <br>× HitpMcs-creation: {2026-04-15},
+    <br>× https://code.visualstudio.com/docs/configure/keybindings#_keyboard-rules,
+    <br>× https://code.visualstudio.com/api/references/when-clause-contexts,
+    <br>"A keyboard shortcut configuration in VS Code is also known as a keyboard rule. Each rule consists of the following attributes:
+    <br>* <code>key</code>: describes the pressed key(s), for example Ctrl+F.
+    <br>* <code>command</code>: the identifier of the VS Code command to execute, for example workbench.view.explorer to open the Explorer view.
+    <br>* <code>when</code>: (optional) clause containing a boolean expression that is evaluated depending on the current context."
+    <br>[{2026-04-15 retrieved} https://code.visualstudio.com/docs/configure/keybindings#_keyboard-rules]
+    <a class="clsHide" href="#idVscodecmndShctruledsn"></a></p>
+  <p id="idVscodecmndShctrulenam">name::
+    <br>* McsEngl.VscCmds'keyboard-rule,
+    <br>* McsEngl.Vscode'keyboard-rule,
+    <a class="clsHide" href="#idVscodecmndShctrulenam"></a></p>
+  </section>
+
+  <section id="idVscodecmndShctedtr">
+  <h3 id="idVscodecmndShctedtrH3">keyboard-shortcut-editor of VscCmds
+    <a class="clsHide" href="#idVscodecmndShctedtrH3"></a></h3>
+  <p id="idVscodecmndShctedtrdsn">description::
+    <br>× HitpMcs-creation: {2026-04-15},
+    <br>· In the Keyboard Shortcuts editor, you can filter on specific keystrokes to see which commands are bound to which keys.
+    <br>[{2026-04-15 retrieved} https://code.visualstudio.com/docs/configure/keybindings#_how-can-i-find-out-what-command-is-bound-to-a-specific-key]
+    <br>× %APPDATA%\Code\User\keybindings.json
+    <br>× Keyboard Shortcuts editor,
+    <br>· You can customize these default shortcuts or add new ones for your favorite commands and actions by using the Keyboard Shortcuts editor (Ctrl+K Ctrl+S).
+    <br>
+    <a class="clsHide" href="#idVscodecmndShctedtrdsn"></a></p>
+  <p id="idVscodecmndShctedtrnam">name::
+    <br>* McsEngl.VscCmd.File/Preferences/Keyboard Shortcuts: Ctrl+K Ctrl+S,
+    <br>* McsEngl.VscCmd.Keyboard Shortcuts: Ctrl+K Ctrl+S//Preferences//File,
+    <br>* McsEngl.VscCmd.Preferences: Open Keyboard Shortcuts (palette),
+    <br>* McsEngl.VscCmds'keyboard-shortcuts-editor,
+    <br>* McsEngl.Vscode'keyboard-shortcuts-editor,
+    <a class="clsHide" href="#idVscodecmndShctedtrnam"></a></p>
+  </section>
+
+  <section id="idVscodecmndShctkbjs">
+  <h3 id="idVscodecmndShctkbjsH3">keybindings.json of VscCmds
+    <a class="clsHide" href="#idVscodecmndShctkbjsH3"></a></h3>
+  <p id="idVscodecmndShctkbjsdsn">description::
+    <br>× HitpMcs-creation: {2026-04-15},
+    <br>
+    <br>How to add a keyboard shortcut to an action, for example, add Ctrl+D to Delete Lines
+    <br>Find a rule that triggers the action in the <code>Default Keyboard Shortcuts</code> and write a modified version of it in your <code>keybindings.json</code> file:
+    <br><code>// Original, in Default Keyboard Shortcuts
+    <br>{ "key": "ctrl+shift+k", "command": "editor.action.deleteLines", "when": "editorTextFocus" },
+    <br>// Modified, in User/keybindings.json, Ctrl+D now will also trigger this action
+    <br>{ "key": "ctrl+d", "command": "editor.action.deleteLines", "when": "editorTextFocus" },</code>
+    <a class="clsHide" href="#idVscodecmndShctkbjsdsn"></a></p>
+  <p id="idVscodecmndShctkbjsnam">name::
+    <br>* McsEngl.VscCmd.Preferences: Open Keyboard Shortcuts (JSON),
+    <br>* McsEngl.VscCmds'keybindings.json,
+    <br>* McsEngl.Vscode'keybindings.json,
+    <a class="clsHide" href="#idVscodecmndShctkbjsnam"></a></p>
+  </section>
+
+  <section id="idVscodecmndShct">
+  <h3 id="idVscodecmndShctH3">VscCmds.SPECIFIC
+    <a class="clsHide" href="#idVscodecmndShctH3"></a></h3>
+  <p id="idVscodecmndShctdsn">description::
+    <br>× HitpMcs-creation: {2026-04-23},
+    <br>· specific shortcuts.
+    <a class="clsHide" href="#idVscodecmndShctdsn"></a></p>
+  <p id="idVscodecmndShctnam">name::
+    <br>* McsEngl.VscCmds.specific,
+    <a class="clsHide" href="#idVscodecmndShctnam"></a></p>
+  <p id="idVscodecmndShct-1">Previous-Match: shift+enter::
+    <br>* McsEngl.VscCmd.Find-Previous: shift+enter,
+    <br>* McsEngl.VscCmd.Previous-Match: shift+enter,
+    <br>* McsEngl.VscCmd.shift+enter: Previous-Match,
+    <br>* McsEngl.VscCmds.shift+enter: Previous-Match,
+    <a class="clsHide" href="#idVscodecmndShct-1"></a></p>
+  <p id="idVscodecmndShct-2">Next-Match: enter::
+    <br>* McsEngl.VscCmd.Find-Next: enter,
+    <br>* McsEngl.VscCmd.Next-Match: enter,
+    <br>* McsEngl.VscCmd.enter: Next-Match,
+    <br>* McsEngl.VscCmds.enter: Next-Match,
+    <a class="clsHide" href="#idVscodecmndShct-2"></a></p>
   </section>
 
   <section id="idVscodecmndscDflt">
@@ -5410,94 +5515,6 @@
     <a class="clsHide" href="#idVscodecmndJedtnam"></a></p>
   </section>
 
-  <section id="idVscodecmndShct">
-  <h2 id="idVscodecmndShctH2">VscCmd.shortcut
-    <a class="clsHide" href="#idVscodecmndShctH2"></a></h2>
-  <p id="idVscodecmndShctdsn">description::
-    <br>× HitpMcs-creation: {2026-04-04},
-    <br>× https://code.visualstudio.com/docs/configure/keybindings,
-    <br>· command in shortcut format.
-    <a class="clsHide" href="#idVscodecmndShctdsn"></a></p>
-  <p id="idVscodecmndShctnam">name::
-    <br>* McsEngl.VscCmd.shortcut!⇒VscCmds,
-    <br>* McsEngl.VscCmds!=VscCmd.shortcut,
-    <br>* McsEngl.Vscode'keyboard-shortcut,
-    <br>* McsEngl.Vscode'shortcut,
-    <a class="clsHide" href="#idVscodecmndShctnam"></a></p>
-  <p id="idVscodecmndShct-1">Previous-Match: shift+enter::
-    <br>* McsEngl.VscCmd.Find-Previous: shift+enter,
-    <br>* McsEngl.VscCmd.Previous-Match: shift+enter,
-    <br>* McsEngl.VscCmd.shift+enter: Previous-Match,
-    <br>* McsEngl.VscCmds.shift+enter: Previous-Match,
-    <a class="clsHide" href="#idVscodecmndShct-1"></a></p>
-  <p id="idVscodecmndShct-2">Next-Match: enter::
-    <br>* McsEngl.VscCmd.Find-Next: enter,
-    <br>* McsEngl.VscCmd.Next-Match: enter,
-    <br>* McsEngl.VscCmd.enter: Next-Match,
-    <br>* McsEngl.VscCmds.enter: Next-Match,
-    <a class="clsHide" href="#idVscodecmndShct-2"></a></p>
-
-  <section id="idVscodecmndShctrule">
-  <h3 id="idVscodecmndShctruleH3">keyboard-rule of VscCmds
-    <a class="clsHide" href="#idVscodecmndShctruleH3"></a></h3>
-  <p id="idVscodecmndShctruledsn">description::
-    <br>× HitpMcs-creation: {2026-04-15},
-    <br>× https://code.visualstudio.com/docs/configure/keybindings#_keyboard-rules,
-    <br>× https://code.visualstudio.com/api/references/when-clause-contexts,
-    <br>"A keyboard shortcut configuration in VS Code is also known as a keyboard rule. Each rule consists of the following attributes:
-    <br>* <code>key</code>: describes the pressed key(s), for example Ctrl+F.
-    <br>* <code>command</code>: the identifier of the VS Code command to execute, for example workbench.view.explorer to open the Explorer view.
-    <br>* <code>when</code>: (optional) clause containing a boolean expression that is evaluated depending on the current context."
-    <br>[{2026-04-15 retrieved} https://code.visualstudio.com/docs/configure/keybindings#_keyboard-rules]
-    <a class="clsHide" href="#idVscodecmndShctruledsn"></a></p>
-  <p id="idVscodecmndShctrulenam">name::
-    <br>* McsEngl.VscCmds'keyboard-rule,
-    <br>* McsEngl.Vscode'keyboard-rule,
-    <a class="clsHide" href="#idVscodecmndShctrulenam"></a></p>
-  </section>
-
-  <section id="idVscodecmndShctedtr">
-  <h3 id="idVscodecmndShctedtrH3">keyboard-shortcut-editor of VscCmds
-    <a class="clsHide" href="#idVscodecmndShctedtrH3"></a></h3>
-  <p id="idVscodecmndShctedtrdsn">description::
-    <br>× HitpMcs-creation: {2026-04-15},
-    <br>· In the Keyboard Shortcuts editor, you can filter on specific keystrokes to see which commands are bound to which keys.
-    <br>[{2026-04-15 retrieved} https://code.visualstudio.com/docs/configure/keybindings#_how-can-i-find-out-what-command-is-bound-to-a-specific-key]
-    <br>× %APPDATA%\Code\User\keybindings.json
-    <br>× Keyboard Shortcuts editor,
-    <br>· You can customize these default shortcuts or add new ones for your favorite commands and actions by using the Keyboard Shortcuts editor (Ctrl+K Ctrl+S).
-    <br>
-    <a class="clsHide" href="#idVscodecmndShctedtrdsn"></a></p>
-  <p id="idVscodecmndShctedtrnam">name::
-    <br>* McsEngl.VscCmd.File/Preferences/Keyboard Shortcuts: Ctrl+K Ctrl+S,
-    <br>* McsEngl.VscCmd.Keyboard Shortcuts: Ctrl+K Ctrl+S//Preferences//File,
-    <br>* McsEngl.VscCmd.Preferences: Open Keyboard Shortcuts (palette),
-    <br>* McsEngl.VscCmds'keyboard-shortcuts-editor,
-    <br>* McsEngl.Vscode'keyboard-shortcuts-editor,
-    <a class="clsHide" href="#idVscodecmndShctedtrnam"></a></p>
-  </section>
-
-  <section id="idVscodecmndShctkbjs">
-  <h3 id="idVscodecmndShctkbjsH3">keybindings.json of VscCmds
-    <a class="clsHide" href="#idVscodecmndShctkbjsH3"></a></h3>
-  <p id="idVscodecmndShctkbjsdsn">description::
-    <br>× HitpMcs-creation: {2026-04-15},
-    <br>
-    <br>How to add a keyboard shortcut to an action, for example, add Ctrl+D to Delete Lines
-    <br>Find a rule that triggers the action in the <code>Default Keyboard Shortcuts</code> and write a modified version of it in your <code>keybindings.json</code> file:
-    <br><code>// Original, in Default Keyboard Shortcuts
-    <br>{ "key": "ctrl+shift+k", "command": "editor.action.deleteLines", "when": "editorTextFocus" },
-    <br>// Modified, in User/keybindings.json, Ctrl+D now will also trigger this action
-    <br>{ "key": "ctrl+d", "command": "editor.action.deleteLines", "when": "editorTextFocus" },</code>
-    <a class="clsHide" href="#idVscodecmndShctkbjsdsn"></a></p>
-  <p id="idVscodecmndShctkbjsnam">name::
-    <br>* McsEngl.VscCmd.Preferences: Open Keyboard Shortcuts (JSON),
-    <br>* McsEngl.VscCmds'keybindings.json,
-    <br>* McsEngl.Vscode'keybindings.json,
-    <a class="clsHide" href="#idVscodecmndShctkbjsnam"></a></p>
-  </section>
-  </section>
-
   <section id="idVscodecmndCstm">
   <h2 id="idVscodecmndCstmH2">VscCmd.custom
     <a class="clsHide" href="#idVscodecmndCstmH2"></a></h2>
@@ -5514,8 +5531,8 @@
     <br>* ctrl+alt+=, // selected-number increase
     <br>
     <br>=== CHAR:
-    <br>* ctrl+alt+c h l, // char Html LeshThan: & lt;
-    <br>* ctrl+alt+c h s, // char Html space: & nbsp;
+    <br>* ctrl+alt+c h l, // char Html "&lt;" to "&amp;lt;"
+    <br>* ctrl+alt+c h s, // char Html Space to "&amp;nbsp;"
     <br>* ctrl+alt+c i,   // char isert from Integer EXTENSION
     <br>* ctrl+alt+c p b, // char hitP insert line Break: "    &lt;br&gt; "
     <br>* ctrl+alt+c p e, // char hitP name Equal: !=
@@ -5523,7 +5540,8 @@
     <br>* ctrl+alt+c p s, // char hitP sentence: "    &lt;br&gt;· "
     <br>
     <br>=== HTML
-    <br>* ctrl+alt+h , // Html next leshthan replace EXTENSION 
+    <br>* ctrl+alt+h , // Html next "&lt;" replace with "&amp;lt;"
+    <br>* ctrl+alt+h . // Html next "&gt;" replace with "&amp;gt;"
     <br>* ctrl+alt+h b // Html Bold
     <br>* ctrl+alt+h c d // Html CoDe: &lt;code&gt;
     <br>* ctrl+alt+h c m // Html CoMment: &lt;!-- --&gt;
@@ -5533,7 +5551,6 @@
     <br>
     <br>=== MACRO
     <br>* ctrl+alt+m c, // macro Copy recording
-    <br>* ctrl+alt+m d, // macro insert date: {2026-03-30}
     <br>* ctrl+alt+m escape, // macro stop playback
     <br>* ctrl+alt+m p, // macro Cancel recording
     <br>* ctrl+alt+m p, // macro Playback
@@ -5545,6 +5562,8 @@
     <br>* ctrl+alt+p c b, // hitP Color Blue
     <br>* ctrl+alt+p c g, // hitP Color Green
     <br>* ctrl+alt+p c r, // hitP Color Red
+    <br>=== HITP DATE:
+    <br>* ctrl+alt+p d, // hitP insert Date: {2026-03-30}
     <br>=== HITP FORMAT:
     <br>* ctrl+alt+p f u, // hitP Format Underline
     <br>=== HITP ELEMENT:
@@ -5798,6 +5817,27 @@
 <section id="idVscodeevgF">
   <h1 id="idVscodeevgFH1">evoluting of Vscode
     <a class="clsHide" href="#idVscodeevgFH1"></a></h1>
+  <p id="idVscodeevgFdsn">description::
+    <br>"VS Code evolved in **three big jumps**:
+    <br>1. **Editor (2015–2016)**
+    <br>   Microsoft announced Visual Studio Code at Build 2015 as a **cross-platform** code editor, then shipped **VS Code 1.0** in April 2016. Its roots were the browser-based **Monaco** editor, wrapped in **Electron** with Node.js so it could feel native while staying highly portable. ([Microsoft for Developers][1])
+    <br>2. **Platform (2016–2018)**
+    <br>   It quickly became more than “just an editor” because the **extension model** was central to the product. VS Code’s API let authors add languages, debuggers, UI pieces, and workflows, and even many core capabilities were built as extensions using the same API. ([Visual Studio Code][2])
+    <br>3. **Workspace anywhere (2019–2022)**
+    <br>   A major shift came with **Remote Development** in 2019: Containers, SSH, and WSL let developers keep the UI local while code and tooling lived elsewhere. Then VS Code expanded to **Notebooks** in 2020 and to the browser with **vscode.dev** in 2021. By 2022 it had matured with features like **Profiles**, the **merge editor**, and **extension signing** for marketplace security. ([Visual Studio Code][3])
+    <br>Then came the current phase:
+    <br>4. **AI-native IDE (2023–2026)**
+    <br>   In 2023 VS Code began deeply integrating **GitHub Copilot** into the editor experience, including chat and inline editing. In 2024 it exposed **Chat and Language Model APIs** so extension authors could build AI features into VS Code itself. In 2025 Microsoft said it would open source the Copilot Chat extension as part of making VS Code an **“open source AI editor.”** By 2026, the product message had shifted further to **agentic / multi-agent development**, with local, background, and cloud agents built into the workflow. ([Visual Studio Code][4])
+    <br>So the simplest way to describe the evolution is:
+    <br>**text editor → extensible developer platform → remote/cloud workspace → AI and agent development hub**. The current official release line already shows this shift clearly: as of **April 22, 2026**, VS Code is at **version 1.118**, and its homepage/docs emphasize AI agents and multi-agent development. ([Visual Studio Code][5])
+    <br>I can turn this into a **year-by-year timeline** next if you want.
+    <br>[1]: https://devblogs.microsoft.com/visualstudio/build-2015-news-visual-studio-code-visual-studio-2015-rc-team-foundation-server-2015-rc-visual-studio-2013-update-5/?utm_source=chatgpt.com "BUILD 2015 News: Visual Studio Code ..."
+    <br>[2]: https://code.visualstudio.com/api?utm_source=chatgpt.com "Visual Studio Code Extension API"
+    <br>[3]: https://code.visualstudio.com/blogs/2019/05/02/remote-development?utm_source=chatgpt.com "Remote Development with VS Code"
+    <br>[4]: https://code.visualstudio.com/blogs/2023/03/30/vscode-copilot?utm_source=chatgpt.com "Visual Studio Code and GitHub Copilot"
+    <br>[5]: https://code.visualstudio.com/updates/v1_118?utm_source=chatgpt.com "Visual Studio Code 1.118""
+    <br>[{2026-04-23 retrieved} https://chatgpt.com/c/69e9ff80-e1c0-83eb-9b53-38bd3339fa90]
+    <a class="clsHide" href="#idVscodeevgFdsn"></a></p>
   <p id="idVscodeevgnam">name::
     <br>* McsEngl.evoluting-of-Vscode,
     <br>* McsEngl.Vscode'evoluting,
@@ -5902,6 +5942,6 @@
   gtag('js', new Date());
   gtag('config', 'G-N8T0MHWLS1');
 </script>
-<!--    -->
+<!-- -->
 </body>
 </html>
