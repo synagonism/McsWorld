@@ -12,13 +12,13 @@
  *  2) SectionMcs   (the main type)
  *     Every <section id="idXxx"> that contains a <p> whose text starts with "name::"
  *     and has at least one Mcs* entry is a SectionMcs. Structure:
- *     - id                  the section's id= attribute
- *     - sSectTitle          text of the first <h1|h2|h3|h4> in the section
- *     - nHeadingLevel        1–4
- *     - depth               nesting depth (0 = top-level <section>)
- *     - parentId            id of the enclosing <section>, or null
- *     - aParaObj          all <p> elements directly in this section
- *     - oParaByTitle        paragraphs indexed by their keyword (e.g. "description", "name")
+ *     - id                 the section's id= attribute
+ *     - sSectTitle         text of the first <h1|h2|h3|h4> in the section
+ *     - nHeadingLevel      1–9
+ *     - depth              nesting depth (0 = top-level <section>)
+ *     - parentId           id of the enclosing <section>, or null
+ *     - aParaObj           all <p> elements directly in this section
+ *     - oParaByTitle       paragraphs indexed by their keyword (e.g. "description", "name")
  *     - aNames             parsed Mcs* entries from the name:: paragraph
  *     - aLinks             all hrefs found in this section
  *
@@ -316,7 +316,7 @@ function parseSection({ id, rawHtml, depth, parentId }) {
 
   // Name entries — from the name:: paragraph(s) only
   const aNames = (oParaByTitle['name'] ?? []).flatMap(p => p.aNames);
-  const aNameObj = oParaByTitle['name'].aNameObj ?? [];
+  const aNameObj = (oParaByTitle['name'] ?? []).flatMap(p => p.aNameObj);
 
   // All content hrefs across the entire section (including nested children)
   const aLinks = extractContentHrefs(rawHtml);
@@ -396,7 +396,7 @@ export function parseFile(filePath) {
   for (const oRawSec of aRawSections) {
     // Skip infrastructure sections
     if (oRawSec.id === 'idMeta' || oRawSec.id === 'idHeader'
-       || oRawSec.id === 'idSupport') continue;
+       || oRawSec.id === 'idSupport' || oRawSec.id === 'idComment') continue;
 
     // Parse as a SectionMcs candidate
     const sec = parseSection(oRawSec);

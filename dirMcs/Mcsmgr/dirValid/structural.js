@@ -65,10 +65,12 @@ function buildNameMap(files) {
     }
     // paragraph-Mcs names
     for (const p of f.aParaObj) {
-      for (const n of p.aNameObj) {
-        if (n.lang !== 'engl') continue;
-        if (!oMap.has(n.bareName)) oMap.set(n.bareName, []);
-        oMap.get(n.bareName).push({ fileName: f.fileName, id: p.id, title: p.sParaTitle });
+      if (p.sParaTitle !== 'name') {
+        for (const n of p.aNameObj) {
+          if (n.lang !== 'engl') continue;
+          if (!oMap.has(n.bareName)) oMap.set(n.bareName, []);
+          oMap.get(n.bareName).push({ fileName: f.fileName, id: p.id, title: p.sParaTitle });
+        }
       }
     }
   }

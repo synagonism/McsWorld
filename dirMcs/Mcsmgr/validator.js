@@ -19,16 +19,17 @@ import fs from 'fs';
 
 const
   aVersion = [
-    'validator.js.1-0-0.2026-04-27: creation'
+    'validator.js.0-2-0.2026-04-27: working structural',
+    'validator.js.0-1-0.2026-04-24: creation'
   ],
   args = process.argv.slice(2);
 
 if (args.length === 0) {
-  console.error('Usage from dirMcs: node Mcsmgr/validator [--ai] [--file <filename>] [--report]');
+  console.error('Usage dirMcs: node Mcsmgr/validator.js <dirMcs-path> [--ai] [--file <filename>] [--report]');
   process.exit(1);
 }
 
-const dirMcsPath  = process.cwd();
+const dirMcsPath  = args[0];
 const useAi       = args.includes('--ai');
 const saveReport  = args.includes('--report');
 const nFileIndex  = args.indexOf('--file');
