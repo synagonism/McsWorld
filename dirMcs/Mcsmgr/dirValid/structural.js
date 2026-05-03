@@ -27,6 +27,12 @@ import path from 'path';
 import fs from 'fs';
 import { title } from 'process';
 
+const
+  aVersion = [
+    'structural.js.0-2-0.2026-05-02: DATE not TeX',
+    'structural.js.0-1-0.2026-04-27: creation'
+  ]
+
 // ─── helpers ──────────────────────────────────────────────────────────────────
 
 function issue(level, code, fileName, sectionOrNull, message) {
@@ -108,6 +114,7 @@ function checkSectionMcsDescription(files) {
   const issues = [];
   for (const f of files) {
     for (const sec of f.aSectMcsObj) {
+      if (sec.sSectTitle.indexOf('( link )') > 1) continue;
       const descParas = sec.oParaByTitle['description'] ?? [];
       if (descParas.length === 0) {
         issues.push(issue('WARN', 'S02', f.fileName, sec,
@@ -136,6 +143,7 @@ function checkSectionMcsName(files) {
   const issues = [];
   for (const f of files) {
     for (const sec of f.aSectMcsObj) {
+      if (sec.sSectTitle.indexOf('( link )') > 1) continue;
       if (!sec.oParaByTitle['name']) {
         // This shouldn't happen (SectionMcs requires names), but guard anyway
         issues.push(issue('WARN', 'S04', f.fileName, sec,
@@ -253,7 +261,8 @@ function checkDates(files) {
     for (const sec of f.aSectMcsObj) {
       for (const p of sec.aParaObj) {
         for (const line of p.text.split('\n')) {
-          if (/\{[\d-]*\}/.test(line) &&
+          // contains {d-} not Tex not goodDates
+          if (/\{[\d-]+\}/.test(line) && !/\\\(\s*(.*?)\s*\\\)/.test(line) &&
              !goodDate1.test(line) && !goodDate2.test(line) && !goodDate3.test(line)) {
             issues.push(issue('WARN', 'S10', f.fileName, sec,
               `DATE has NO {YYYY-MM-DD} format in line: "${line.trim()}" in file: "${f.fileName}"`));

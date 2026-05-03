@@ -50,6 +50,7 @@ import { type } from 'os';
 
 const
   aVersion = [
+    'parser.js.0-2-0.2026-05-0: div-paragraph',
     'parser.js.0-1-0.2026-04-24: creation'
   ]
 
@@ -139,7 +140,7 @@ function parseNameEntries(text) {
  *   aLinks,        // content hrefs
  * }
  */
-function parseParagraph(pHtml) {
+function parsePParagraph(pHtml) {
   // id= attribute
   const idM = pHtml.match(/<p\b[^>]*\bid="([^"]+)"/);
   const id = idM ? idM[1] : null;
@@ -176,6 +177,58 @@ function parseParagraph(pHtml) {
     return { type: 'Paragraph', id, sParaTitle, text, aNameObj, aNames, aLinks: aLinks };
   }
 }
+
+
+/**
+ * Parse a single <div ...>...</div> HTML string.
+ * Returns one object para:
+ * {
+ *   type: 'Paragraph | ParagraphMcs',
+ *   id,            // value of id= attribute, or null
+ *   sParaTitle,    // keyword before "::" in the first text line, lowercased, or null
+ *   text,          // full plain text content
+ *   aNames,         // array of object-names
+ *   aLinks,        // content hrefs
+ * }
+ */
+function parseDivParagraph(divHtml) {
+  // id= attribute
+  const idM = divHtml.match(/<div\b[^>]*\bid="([^"]+)"/);
+  const id = idM ? idM[1] : null;
+  // console.log(`Parsing paragraph id=${id}`);
+
+  // Remove the clsHide self-anchor at the end (always the last <a> in a <p>)
+  const inner = divHtml
+    .replace(/^<div[^>]*>/, '')
+    .replace(/<\/div>\s*$/, '')
+    .replace(/<a\s+class="clsHide"[^>]*>[\s\S]*?<\/a>/g, '');
+
+  const text = stripTags(inner);
+
+  // sParaTitle: first "text::" pattern
+  const keyM = text.match(/^([^:\n]+)::/);
+  const sParaTitle = keyM ? keyM[1].trim() : null;
+
+  // hrefs (content only)
+  const aLinks = extractContentHrefs(inner);
+
+  // Name entries — parse regardless of sParaTitle, so paragraph-Mcs can be detected
+  const aNameObj = parseNameEntries(text);
+  const aNames = aNameObj.map(o => o.bareName);
+
+  // A paragraph-Mcs: has an id AND has Mcs* names AND is NOT a name:: paragraph
+  // (name:: paragraphs belong to the SectionMcs, not a separate concept)
+  const bIsParaMcs = id !== null
+    && aNameObj.length > 0
+    && sParaTitle !== 'name';
+
+  if (bIsParaMcs) {
+    return { type: 'ParagraphMcs', id, sParaTitle, text, aNameObj, aNames, aLinks };
+  } else {
+    return { type: 'Paragraph', id, sParaTitle, text, aNameObj, aNames, aLinks };
+  }
+}
+
 
 // ─── section splitter ─────────────────────────────────────────────────────────
 
@@ -298,12 +351,19 @@ function parseSection({ id, rawHtml, depth, parentId }) {
 
   // All direct-child paragraphs
   const aSectPara = [];
-  const rPara = /<p\b[^>]*>[\s\S]*?<\/p>/gi;
+  const rP = /<p\b[^>]*>[\s\S]*?<\/p>/gi;
+    // paragraphs could-be and div with p|table|ol|ul members
+  const rDiv = /<div\b[^>]*>[\s\S]*?<\/div>/gi;
   let pm;
-  while ((pm = rPara.exec(sOuterSect)) !== null) {
-    const p = parseParagraph(pm[0]);
+  while ((pm = rP.exec(sOuterSect)) !== null) {
+    const p = parsePParagraph(pm[0]);
     aSectPara.push(p);
   }
+  while ((pm = rDiv.exec(sOuterSect)) !== null) {
+    const p = parseDivParagraph(pm[0]);
+    aSectPara.push(p);
+  }
+
 
   // Index paragraphs by title for quick lookup
   const oParaByTitle = {};
@@ -406,10 +466,15 @@ export function parseFile(filePath) {
 
     // Collect paragraph-Mcs from this section's direct paragraphs
     const outer2 = outerHtmlOf(oRawSec.rawHtml);
-    const pRe2 = /<p\b[^>]*>[\s\S]*?<\/p>/gi;
+    const rP2 = /<p\b[^>]*>[\s\S]*?<\/p>/gi;
+    // paragraphs could-be and div with p|table|ol|ul members
+    const rDiv2 = /<div\b[^>]*>[\s\S]*?<\/div>/gi;
     let pm;
-    while ((pm = pRe2.exec(outer2)) !== null) {
-      aParaObj.push(parseParagraph(pm[0]));
+    while ((pm = rP2.exec(outer2)) !== null) {
+      aParaObj.push(parsePParagraph(pm[0]));
+    }
+    while ((pm = rDiv2.exec(outer2)) !== null) {
+      aParaObj.push(parseDivParagraph(pm[0]));
     }
   }
 

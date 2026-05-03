@@ -1,9 +1,9 @@
 /**
  * ai-checks.js
- * Semantic consistency checks powered by DeepSeek Cloud API.
+ * Semantic consistency checks powered by Ollama (local LLM).
  *
- * Requires DeepSeek API key: https://platform.deepseek.com/api_keys
- * Model: deepseek-chat (or deepseek-coder as needed)
+ * Requires Ollama running locally: https://ollama.com
+ * Model: llama3.2 (or whatever you have — configurable below)
  *
  * AI checks performed:
  *  A01  Description doesn't match the concept's heading/names (semantic drift)
@@ -11,26 +11,18 @@
  *  A03  Suggest missing name aliases the AI notices from the description
  *  A04  Detect concepts whose description is copy-pasted / suspiciously similar
  *        to another concept (potential duplicates)
- * 
- * Set environment variable:
- * 
- * bash
- * set|export DEEPSEEK_API_KEY="your-api-key-here"
- * 
- * Optional: Choose different model:
- * bash
- * export MCS_MODEL="deepseek-coder"  # or keep as "deepseek-chat"
  */
+
+import { Ollama } from 'ollama';
 
 const
   aVersion = [
-    'ai-checks-deepseek.js.0-1-0.2026-04-28: creation'
-  ];
+    'ai-checks.js.0-1-0.2026-04-28: creation'
+  ]
 
-// DeepSeek API configuration
-const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
-const DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions';
-const MODEL = process.env.MCS_MODEL ?? 'deepseek-chat';
+
+const ollama = new Ollama({ host: 'http://localhost:11434' });
+const MODEL = process.env.MCS_MODEL ?? 'llama3.2';
 
 // How many concepts to AI-check per run (keep low for speed, raise as needed)
 const MAX_AI_CONCEPTS = 50;
@@ -38,34 +30,15 @@ const MAX_AI_CONCEPTS = 50;
 // ─── helpers ──────────────────────────────────────────────────────────────────
 
 async function ask(prompt, maxTokens = 300) {
-  if (!DEEPSEEK_API_KEY) {
-    throw new Error('DEEPSEEK_API_KEY environment variable is not set. Please set it to your DeepSeek API key.');
-  }
-
   try {
-    const response = await fetch(DEEPSEEK_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${DEEPSEEK_API_KEY}`
-      },
-      body: JSON.stringify({
-        model: MODEL,
-        messages: [{ role: 'user', content: prompt }],
-        max_tokens: maxTokens,
-        temperature: 0.1
-      })
+    const res = await ollama.chat({
+      model: MODEL,
+      options: { num_predict: maxTokens, temperature: 0.1 },
+      messages: [{ role: 'user', content: prompt }],
     });
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(`DeepSeek API error: ${response.status} ${response.statusText} - ${JSON.stringify(errorData)}`);
-    }
-
-    const data = await response.json();
-    return data.choices[0].message.content.trim();
+    return res.message.content.trim();
   } catch (e) {
-    throw new Error(`DeepSeek API error (check API key and network): ${e.message}`);
+    throw new Error(`Ollama error (is it running?): ${e.message}`);
   }
 }
 
@@ -220,14 +193,6 @@ Answer:`;
 export async function runAiChecks(files) {
   const issues = [];
 
-  // Validate API key early
-  if (!DEEPSEEK_API_KEY) {
-    console.error('\n   ❌ ERROR: DEEPSEEK_API_KEY environment variable is not set.');
-    console.error('   Please set it with: export DEEPSEEK_API_KEY="your-api-key-here"');
-    console.error('   Get your API key from: https://platform.deepseek.com/api_keys\n');
-    return issues;
-  }
-
   // Flatten all SectionMcs with file reference; filter to those with descriptions
   const allSections = [];
   for (const f of files) {
@@ -245,8 +210,7 @@ export async function runAiChecks(files) {
 
   const total = sample.length;
   console.log(`   Checking ${total} SectionMcs (of ${allSections.length} total)`);
-  console.log(`   Model: ${MODEL}  (DeepSeek Cloud API)`);
-  console.log(`   API Key: ${DEEPSEEK_API_KEY ? '✓ Set' : '✗ Missing'}\n`);
+  console.log(`   Model: ${MODEL}  (set MCS_MODEL env var to change)\n`);
 
   for (let i = 0; i < sample.length; i++) {
     const [sec, fileName] = sample[i];
@@ -262,8 +226,8 @@ export async function runAiChecks(files) {
       console.log(found.length > 0 ? `⚠  ${found.length} issue(s)` : '✓');
     } catch (e) {
       console.log(`✗ error: ${e.message}`);
-      if (e.message.includes('DeepSeek API error')) {
-        console.error('\n   ⚠  Could not reach DeepSeek API. Check your API key and network connection.');
+      if (e.message.includes('Ollama error')) {
+        console.error('\n   ⚠  Could not reach Ollama. Make sure it is running: ollama serve');
         break;
       }
     }

@@ -45,6 +45,8 @@ import {fSftp} from './mSftp.mjs'
 const
   // contains the-versions of mHitp.js
   aVersion = [
+    'mMcsNew.mjs.1-3-11.2026-05-02: .specific',
+    'mMcsNew.mjs.1-3-10.2026-04-28: validator pass',
     'mMcsNew.mjs.1-3-9.2026-04-12: Mcsmgr/sftp.json',
     'mMcsNew.mjs.1-3-8.2026-04-11: script async',
     'mMcsNew.mjs.1-3-7.2025-12-10: mMcsh2',
@@ -166,9 +168,9 @@ s =
   '    <a class="clsHide" href="#idName"></a></p>\n' +
   '</section>\n' +
   '\n' +
-  '<section id="id' + sNameId + 'rscF">\n' +
-  '  <h1 id="id' + sNameId + 'rscFH1">info-resource of ' + sNameShort + '\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'rscFH1"></a></h1>\n' +
+  '<section id="id' + sNameId + 'irsc">\n' +
+  '  <h1 id="id' + sNameId + 'irscH1">info-resource of ' + sNameShort + '\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'irscH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'rscdsn">description::\n' +
   '    <br>* \n' +
   '    <a class="clsHide" href="#id' + sNameId + 'rscdsn"></a></p>\n' +
@@ -187,11 +189,12 @@ s =
   //'    <br>* \n' +
   //'    <a class="clsHide" href="#id' + sNameId + 'srtrdsn"></a></p>\n' +
   //'</section>\n' +
-  '\n' +
-  '<section id="id' + sNameId + 'dngF">\n' +
-  '  <h1 id="id' + sNameId + 'dngFH1">DOING of ' + sNameShort + '\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'dngFH1"></a></h1>\n' +
+  '\n' +irsc
+  '<section id="id' + sNameId + 'dng">\n' +
+  '  <h1 id="id' + sNameId + 'dngH1">DOING of ' + sNameShort + '\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'dngH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'dngdsn">description::\n' +
+  '    <br>× HitpMcs-creation: {' + moUtil.fDateYMD() + '}\n' +
   '    <br>* \n' +
   '    <a class="clsHide" href="#id' + sNameId + 'dngdsn"></a></p>\n' +
   '  <p id="id' + sNameId + 'dngnam">name::\n' +
@@ -199,24 +202,30 @@ s =
   '    <a class="clsHide" href="#id' + sNameId + 'dngnam"></a></p>\n' +
   '</section>\n' +
   '\n' +
-  '<section id="id' + sNameId + 'evgF">\n' +
-  '  <h1 id="id' + sNameId + 'evgFH1">evoluting of ' + sNameShort + '\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'evgFH1"></a></h1>\n' +
+  '<section id="id' + sNameId + 'evg">\n' +
+  '  <h1 id="id' + sNameId + 'evgH1">evoluting of ' + sNameShort + '\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'evgH1"></a></h1>\n' +
   '  <p id="id' + sNameId + 'evgdsn">description::\n' +
-  '    <br>· ' + sNameShort + ' events:\n' +
+  '    <br>× HitpMcs-creation: {' + moUtil.fDateYMD() + '}\n' +
+  '    <br>· creation of current <a class="clsPreview" href="../dirTchInf/McsTchInf000009.last.html#idMcsHitp">concept</a>.\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'evgdsn"></a></p>\n' +
   '  <p id="id' + sNameId + 'evgnam">name::\n' +
   '    <br>* McsEngl.evoluting-of-' + sNameShort + ',\n' +
   '    <br>* McsEngl.' + sNameShort + '\'evoluting,\n' +
   '    <a class="clsHide" href="#id' + sNameId + 'evgnam"></a></p>\n' +
-  '  <p id="id' + sNameId + 'evg' + moUtil.fDateYMD2() + '">{' + moUtil.fDateYMD() + '}-HitpMcs-creation::\n' +
-  '    <br>· creation of current <a class="clsPreview" href="../dirTchInf/McsTchInf000009.last.html#idMcsHitp">concept</a>.\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'evg' + moUtil.fDateYMD2() + '"></a></p>\n' +
   '</section>\n' +
   '\n' +
-  '<section id="id' + sNameId + 'pctF">\n' +
-  '  <h1 id="id' + sNameId + 'pctFH1">PARENT-CHILD-TREE of ' + sNameShort + '\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'pctFH1"></a></h1>\n' +
+  '<section id="id' + sNameId + 'pct">\n' +
+  '  <h1 id="id' + sNameId + 'pctH1">PARENT-CHILD-TREE of ' + sNameShort + '\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'pctH1"></a></h1>\n' +
+  '  <p id="id' + sNameId + 'pctdsn">description::\n' +
+  '    <br>× HitpMcs-creation: {' + moUtil.fDateYMD() + '}\n' +
+  '    <br>* \n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'pctdsn"></a></p>\n' +
+  '  <p id="id' + sNameId + 'pctnam">name::\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'parent-child-tree,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'child-parent-tree,\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'pctnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'pntr">parent-tree-of-' + sNameShort + '::\n' +
   '    <br>* ,\n' +
   '    <br>* McsEngl.' + sNameShort + '\'parent-tree,\n' +
@@ -227,9 +236,17 @@ s =
   '    <a class="clsHide" href="#id' + sNameId + 'ctr"></a></p>\n' +
   '</section>\n' +
   '\n' +
-  '<section id="id' + sNameId + 'wptF">\n' +
-  '  <h1 id="id' + sNameId + 'wptFH1">WHOLE-PART-TREE of ' + sNameShort + '\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'wptFH1"></a></h1>\n' +
+  '<section id="id' + sNameId + 'wpt">\n' +
+  '  <h1 id="id' + sNameId + 'wptH1">WHOLE-PART-TREE of ' + sNameShort + '\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'wptH1"></a></h1>\n' +
+  '  <p id="id' + sNameId + 'wptdsn">description::\n' +
+  '    <br>× HitpMcs-creation: {' + moUtil.fDateYMD() + '}\n' +
+  '    <br>* \n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'wptdsn"></a></p>\n' +
+  '  <p id="id' + sNameId + 'wptnam">name::\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'whole-part-tree,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'part-whole-tree,\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'wptnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'wtr">whole-tree-of-' + sNameShort + '::\n' +
   '    <br>* ,\n' +
   '    <br>* ... <a class="clsPreview" href="../dirCor/McsCor000003.last.html#idEntwtr">Sympan</a>.\n' +
@@ -241,9 +258,17 @@ s =
   '    <a class="clsHide" href="#id' + sNameId + 'ptr"></a></p>\n' +
   '</section>\n' +
   '\n' +
-  '<section id="id' + sNameId + 'gstF">\n' +
-  '  <h1 id="id' + sNameId + 'gstFH1">GENERIC-SPECIFIC-TREE of ' + sNameShort + '\n' +
-  '    <a class="clsHide" href="#id' + sNameId + 'gstFH1"></a></h1>\n' +
+  '<section id="id' + sNameId + 'gst">\n' +
+  '  <h1 id="id' + sNameId + 'gstH1">GENERIC-SPECIFIC-TREE of ' + sNameShort + '\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'gstH1"></a></h1>\n' +
+  '  <p id="id' + sNameId + 'gstdsn">description::\n' +
+  '    <br>× HitpMcs-creation: {' + moUtil.fDateYMD() + '}\n' +
+  '    <br>* \n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'gstdsn"></a></p>\n' +
+  '  <p id="id' + sNameId + 'gstnam">name::\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'generic-specific-tree,\n' +
+  '    <br>* McsEngl.' + sNameShort + '\'specific-specific-tree,\n' +
+  '    <a class="clsHide" href="#id' + sNameId + 'gstnam"></a></p>\n' +
   '  <p id="id' + sNameId + 'gtr">generic-tree-of-' + sNameShort + '::\n' +
   '    <br>* ,\n' +
   '    <br>* ... <a class="clsPreview" href="../dirCor/McsCor000003.last.html#idOverview">entity</a>.\n' +

@@ -34,6 +34,25 @@
         "panel": "shared"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "validate current-file",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "Mcsmgr/validator",
+        "${fileDirname}",
+        "--file",
+        "${fileBasename}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
     }
   ]
 }

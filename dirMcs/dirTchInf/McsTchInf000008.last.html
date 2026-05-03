@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.HitpLago!=Html5.Id.Toc.Preview-WebAppDoc-language
-    (McsTchInf000008.20-8-0.2026-02-10)</title>
+    (McsTchInf000008.20-9-0.2026-05-02)</title>
   <meta name="keywords" content="McsHitp-language, HitpLago, ebook, title-content-tree-document, HitpLago-web-page-dialect, html5.id.toc.preview, synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -90,16 +90,18 @@
     <br>· archetype is the-entity we want to model with a-language.
     <br>· a-HitpLago-archetype is a-text-document with a-title-content-tree recursive structure.
     </p>
+    <!--htmlhint-disable tag-pair -->
     <table>
       <tr><td><strong>TctDoc</strong> = <td>(Title, Content)
       <tr><td><a class="clsPreview" href="../dirTchInf/McsTchInf000008.last.html#idLagHitparcttl">Title</a> = <td>a-phrase describing Content
       <tr><td><a class="clsPreview" href="../dirTchInf/McsTchInf000008.last.html#idLagHitparccnt">Content</a> = <td>(one|more ContentUnit, one|more <strong>TctDoc</strong>)
-                            <br>or
-                            <br>(one|more ContentUnit)
+        <br>or
+        <br>(one|more ContentUnit)
       <tr><td><a class="clsPreview" href="../dirTchInf/McsTchInf000008.last.html#idLagHitparcdut">ContentUnit</a> = <td>paragraph-with-sentences
-                                <br>or paragraph-with-subparagraphs
-                                <br>or non-sentences(lists, tables, code)
+        <br>or paragraph-with-subparagraphs
+        <br>or non-sentences(lists, tables, code)
     </table>
+    <!--htmlhint-enable tag-pair -->
     <a class="clsHide" href="#idLagHitparcdrn"></a></div>
   <p id="idLagHitparcnam">name::
     <br>* McsEngl.HitpArcho!=archetype-of-HitpLago,
@@ -498,22 +500,22 @@
     <br>· a-HitpLago-root-tree (a-HitpDoc) maps|represents <a class="clsPreview" href="#idLagHitparc">an-archo-root-tree (a-title-content-tree-doc)</a>.
     <br>· we use a-header and an-h1 elements to create <a class="clsPreview" href="#idLagHitparcttl">the-title</a>, and an-ordered-set of <a class="clsPreview" href="#idLagHitptctdScnSpc">h1-trees</a> with last <a class="clsPreview" href="#idLagHitptctdFtr">a-footer-tree</a> to create <a class="clsPreview" href="#idLagHitparccnt">the-content</a> of the-root-tree.
     <br>· the-header-element is the first child of the-body-element.
-    <br><code>&lt;header id="idHeader">
-    <br>&nbsp; &lt;h1 id="idHeaderH1">Title
-    <br>&nbsp; &lt;/h1>
-    <br>&lt;/header>
+    <br><code>&lt;header id="idHeader"&gt;
+    <br>&nbsp; &lt;h1 id="idHeaderH1"&gt;Title
+    <br>&nbsp; &lt;/h1&gt;
+    <br>&lt;/header&gt;
     <br>
-    <br>&lt;section id="idName">
-    <br>&nbsp; &lt;h1 id="idNameH1">Title
-    <br>&nbsp; &nbsp; &lt;/h1>
+    <br>&lt;section id="idName"&gt;
+    <br>&nbsp; &lt;h1 id="idNameH1"&gt;Title
+    <br>&nbsp; &nbsp; &lt;/h1&gt;
     <br>&nbsp; content
-    <br>&lt;/section>
+    <br>&lt;/section&gt;
     <br>
-    <br>&lt;footer id="idFooter">
-    <br>&nbsp; &lt;p id="idFooterP1">Title:
+    <br>&lt;footer id="idFooter"&gt;
+    <br>&nbsp; &lt;p id="idFooterP1"&gt;Title:
     <br>&nbsp; &nbsp; doc-units
-    <br>&nbsp; &nbsp; &lt;/p>
-    <br>&lt;/footer></code>
+    <br>&nbsp; &nbsp; &lt;/p&gt;
+    <br>&lt;/footer&gt;</code>
     <a class="clsHide" href="#idLagHitptctdRotdsn"></a></p>
   <p id="idLagHitptctdRotnam">name::
     <br>* McsEngl.HitpTcdDoc.header,
@@ -538,21 +540,21 @@
   <p id="idLagHitptctdScndrn">description::
     <br>· a-section-tree is <a class="clsPreview" href="#idLagHitptctd">a-tree</a> in which we use the-section-element as a-container, a-heading-element for its title and for its content, doc-units or other section-trees.
     <br>· the-subtrees of a-section-tree have ordered titles in the form h1, h2, h3, h4, h5, and h6.
-    <br><code>&lt;section id="idName2">
-    <br>&lt;h2 id="idName2H2">Title2
-    <br>&nbsp; &lt;/h2>
-    <br>&lt;p>Sentence1.
+    <br><code>&lt;section id="idName2"&gt;
+    <br>&lt;h2 id="idName2H2"&gt;Title2
+    <br>&nbsp; &lt;/h2&gt;
+    <br>&lt;p&gt;Sentence1.
     <br>&nbsp; Sentence2.
-    <br>&nbsp; &lt;/p>
+    <br>&nbsp; &lt;/p&gt;
     <br>&nbsp;
-    <br>&lt;section id="idName3">
-    <br>&lt;h3 id="idName3H3">Title3
-    <br>&nbsp; &lt;/h3>
-    <br>&lt;p>Sentence1.
+    <br>&lt;section id="idName3"&gt;
+    <br>&lt;h3 id="idName3H3"&gt;Title3
+    <br>&nbsp; &lt;/h3&gt;
+    <br>&lt;p&gt;Sentence1.
     <br>&nbsp; Sentence2.
-    <br>&nbsp; &lt;/p>
-    <br>&lt;/section>
-    <br>&lt;/section></code>
+    <br>&nbsp; &lt;/p&gt;
+    <br>&lt;/section&gt;
+    <br>&lt;/section&gt;</code>
     <a class="clsHide" href="#idLagHitptctdScndrn"></a></p>
   <p id="idLagHitptctdScnnam">name::
     <br>* McsEngl.HitpTcdDoc.section,
@@ -574,11 +576,11 @@
   <p id="idLagHitptctdFtrdrn">description::
     <br>· a-HitpLago-footer-tree is an optional special tree, last child of <a class="clsPreview" href="#idLagHitptctdRot">the-root-tree</a>.
     <br>· it is-created with the-footer-element, with no title, and content document-units with text that ends the-text of <a class="clsPreview" href="#idLagHitparc">the-doc</a>.
-    <br><code>&lt;footer id="idFooter">
-    <br>&nbsp; &lt;p id="idFooterP1">Title:
+    <br><code>&lt;footer id="idFooter"&gt;
+    <br>&nbsp; &lt;p id="idFooterP1"&gt;Title:
     <br>&nbsp; &nbsp; doc-units
-    <br>&nbsp; &nbsp; &lt;/p>
-    <br>&lt;/footer></code>
+    <br>&nbsp; &nbsp; &lt;/p&gt;
+    <br>&lt;/footer&gt;</code>
     <a class="clsHide" href="#idLagHitptctdFtrdrn"></a></p>
   <p id="idLagHitptctdFtrnam">name::
     <br>* McsEngl.HitpTcdDoc.footer,
@@ -593,19 +595,19 @@
     <br>· a-HitpLago-p-tree is always <a class="clsPreview" href="#idLagHitparctreLef">a-leaf-tree</a> we create with the-p-element.
     <br><a class="clsPreview" href="#idLagHitpttl">Its-title</a> is the first line which ends with ':'.
     <br><a class="clsPreview" href="#idLagHitpcnt">Its-content</a> contains only <a class="clsPreview" href="#idLagHitpdut">doc-units</a>.
-    <br><code>&lt;p id="idName">Title:
+    <br><code>&lt;p id="idName"&gt;Title:
     <br>&nbsp; sentences or subparagraphs
-    <br>&nbsp; &lt;/p>
+    <br>&nbsp; &lt;/p&gt;
     <br>//or
-    <br>&lt;div id="idName">
-    <br>&nbsp; &lt;p>Title:
+    <br>&lt;div id="idName"&gt;
+    <br>&nbsp; &lt;p&gt;Title:
     <br>&nbsp; &nbsp; Sentence1.
     <br>&nbsp; &nbsp; Sentence2.
-    <br>&nbsp; &lt;/p>
-    <br>&nbsp; &lt;table>
+    <br>&nbsp; &lt;/p&gt;
+    <br>&nbsp; &lt;table&gt;
     <br>&nbsp; &nbsp; ...
-    <br>&nbsp; &lt;/table>
-    <br>&nbsp; &lt;/div></code>
+    <br>&nbsp; &lt;/table&gt;
+    <br>&nbsp; &lt;/div&gt;</code>
     <a class="clsHide" href="#idLagHitptctdPdrn"></a></p>
   <p id="idLagHitptctdPnam">name::
     <br>* McsEngl.HitpTcdDoc.p,
@@ -619,15 +621,15 @@
   <p id="idLagHitptctdMetdrn">description::
     <br>· a-WebApp-meta-tree is a special section-tree, which is NOT PART of <a class="clsPreview" href="#idLagHitptctdRot">the-root-tree</a>.
     <br>· it contains meta-info about <a class="clsPreview" href="#idLagHitparc">the-doc</a> such as versions, comments, support etc.
-    <br><code>&lt;section id="idMeta">
-    <br>&lt;h1 id="idMetaH1">Meta-Info
-    <br>&nbsp; &lt;/h1>
+    <br><code>&lt;section id="idMeta"&gt;
+    <br>&lt;h1 id="idMetaH1"&gt;Meta-Info
+    <br>&nbsp; &lt;/h1&gt;
     <br>&nbsp; content.meta
-    <br>&nbsp; &lt;p id="idMetaWebpage_path">&lt;span class="clsB clsColorGreen">page-wholepath&lt;/span>:
+    <br>&nbsp; &lt;p id="idMetaWebpage_path"&gt;&lt;span class="clsB clsColorGreen"&gt;page-wholepath&lt;/span&gt;:
     <br>&nbsp; &nbsp; HitpLago-WebApp
     <br>&nbsp; &nbsp; ∈ synagonism.net
-    <br>&nbsp; &lt;/p>
-    <br>&lt;/section></code>
+    <br>&nbsp; &lt;/p&gt;
+    <br>&lt;/section&gt;</code>
     <a class="clsHide" href="#idLagHitptctdMetdrn"></a></p>
   <p id="idLagHitptctdMetnam">name::
     <br>* McsEngl.HitpTcdDoc.meta,
@@ -642,11 +644,11 @@
   <p id="idLagHitpttldrn">description::
     <br>· a-HitpLago-title maps <a class="clsPreview" href="#idLagHitparcttl">an-archo-title</a>\1\.
     <br>· we use the-heading-elements (h1, h2, ... h6) to implement it\1\:
-    <br><code>&lt;h1 id="idName">title&lt;/h1></code>
+    <br><code>&lt;h1 id="idName"&gt;title&lt;/h1&gt;</code>
     <br>or the first line of a-p-element ending with '::'
-    <br><code>&lt;p id="idName">title::
+    <br><code>&lt;p id="idName"&gt;title::
     <br>&nbsp; <a class="clsPreview" href="#idLagHitpdut">doc-unit</a>
-    <br>&nbsp; &lt;/p></code>
+    <br>&nbsp; &lt;/p&gt;</code>
     <a class="clsHide" href="#idLagHitpttldrn"></a></p>
   <p id="idLagHitpttlnam">name::
     <br>* McsEngl.HitpLago'title,
@@ -693,7 +695,7 @@
   <h4 id="idLagHitpstlTxtLine2H4">line-through in HitpHtmlCunit
     <a class="clsHide" href="#idLagHitpstlTxtLine2H4"></a></h4>
   <p id="idLagHitpstlTxtLine2dsn">description::
-    <br>· with the-Html-element &lt;del>.
+    <br>· with the-Html-element &lt;del&gt;.
     <a class="clsHide" href="#idLagHitpstlTxtLine2dsn"></a></p>
   <p id="idLagHitpstlTxtLine2nam">name::
     <br>* McsEngl.HitpHtmlCunit'line-through,
@@ -706,10 +708,10 @@
     <a class="clsHide" href="#idLagHitpdutStcH4"></a></h4>
   <p id="idLagHitpdutStcdrn">description::
     <br>· for readability, we put every sentence in a new line.
-    <br><code>&lt;p id="idName">Sentence1.
+    <br><code>&lt;p id="idName"&gt;Sentence1.
     <br>&nbsp; Sentence2.
     <br>&nbsp; SentenceLast.
-    <br>&nbsp; &lt;/p></code>
+    <br>&nbsp; &lt;/p&gt;</code>
     <a class="clsHide" href="#idLagHitpdutStcdrn"></a></p>
   <p id="idLagHitpdutStcnam">name::
     <br>* McsEngl.HitpHtmlCunit.paragraph-with-sentences,
@@ -722,12 +724,12 @@
   <h4 id="idLagHitpdutSphH4">HitpHtmlCunit.Paragraph-with-subparagraphs
     <a class="clsHide" href="#idLagHitpdutSphH4"></a></h4>
   <p id="idLagHitpdutSphdrn">description::
-    <br><code>&lt;p id="idName">Sentence1.
+    <br><code>&lt;p id="idName"&gt;Sentence1.
     <br>&nbsp; Sentence2.
     <br>&nbsp;
     <br>&nbsp; Sentence3.
     <br>&nbsp; SentenceLast.
-    <br>&nbsp; &lt;/p></code>
+    <br>&nbsp; &lt;/p&gt;</code>
     <a class="clsHide" href="#idLagHitpdutSphdrn"></a></p>
   <p id="idLagHitpdutSphnam">name::
     <br>* McsEngl.HitpHtmlCunit.paragraph-with-subparagraphs,
@@ -738,14 +740,14 @@
   <h4 id="idLagHitpdutNscH4">HitpHtmlCunit.non-sentences
     <a class="clsHide" href="#idLagHitpdutNscH4"></a></h4>
   <p id="idLagHitpdutNscdrn">description::
-    <br><code>&lt;div id="idName">
-    <br>&nbsp; &lt;p>Sentence1.
+    <br><code>&lt;div id="idName"&gt;
+    <br>&nbsp; &lt;p&gt;Sentence1.
     <br>&nbsp; &nbsp; Sentence2.
-    <br>&nbsp; &lt;/p>
-    <br>&nbsp; &lt;table>
+    <br>&nbsp; &lt;/p&gt;
+    <br>&nbsp; &lt;table&gt;
     <br>&nbsp; &nbsp; ...
-    <br>&nbsp; &lt;/table>
-    <br>&nbsp; &lt;a class="clsHide" href="#idName">&lt;/a>&lt;/div></code>
+    <br>&nbsp; &lt;/table&gt;
+    <br>&nbsp; &lt;a class="clsHide" href="#idName"&gt;&lt;/a&gt;&lt;/div&gt;</code>
     <a class="clsHide" href="#idLagHitpdutNscdrn"></a></p>
   <p id="idLagHitpdutNscnam">name::
     <br>* McsEngl.HitpHtmlCunit.non-sentences,
@@ -781,8 +783,8 @@
   <p id="idLagHitpiddrn">description::
     <br>· the core concept (and first motive) of our-proposal is the-addition of ID-attributes on all HtmlElements of <a class="clsPreview" href="#idLagHitpwbpg">a-HitpDoc</a>.
     <br>· for example:
-    <br><code>&lt;h1 id="idXxxx">...
-    <br>&lt;p id="idYyyy">...</code>
+    <br><code>&lt;h1 id="idXxxx"&gt;...
+    <br>&lt;p id="idYyyy"&gt;...</code>
     <br>· now we can-refer to any part of the-document!!!
     <a class="clsHide" href="#idLagHitpiddrn"></a></p>
   <p id="idLagHitpidnam">name::
@@ -819,8 +821,8 @@
     <br>· this can-be-done by adding a hidden element in this part of the-file that will-be-visible when we want to see it and not disturbing our text.
     <br>· but if this hidden-element is and a-link-element, then the-reader could-copy the-address of this part of the-file from the-address-bar of his browser.
     <br>· here is an-example of the simple code we have to add to reach our goal.
-    <br><code>&lt;p id="idYyyy">...
-    <br>&nbsp; &lt;a class="clsHide" href="#idYyyy">&lt;/a>&lt;/p></code>
+    <br><code>&lt;p id="idYyyy"&gt;...
+    <br>&nbsp; &lt;a class="clsHide" href="#idYyyy"&gt;&lt;/a&gt;&lt;/p&gt;</code>
     <br>· with this code, when the-reader clicks|taps on content, at the-end of the clicked doc-unit appears the-ADDRESS-LINK-ICON. &nbsp; <i class="clsFa clsFaLink clsImgLnkIcn"></i>
     <br>· clicking on this icon, s|he can-see the-ID of this text and s|he can-copy from the-address-bar the-address of this particular part of the-text.
     <br>· the-paragraph you are-reading now has the-feature we are-talking about and you can-experiment with it.
@@ -906,13 +908,13 @@
     <br>
     <br>1. we need to add the following code:
     <br>· using MathJax version 3:
-    <br>&lt;script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">&lt;/script></code>
+    <br>&lt;script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"&gt;&lt;/script&gt;
     <br>- no need for MathJax versions, works on both TeX and MathML input.
     <br>- example TeX: <code>When &#92;(a &#92;ne 0&#92;), there are two solutions to &#92;(ax^2 + bx + c = 0&#92;) and they are &#92;[x = {-b &#92;pm &#92;sqrt{b^2-4ac} &#92;over 2a}.&#92;]</code>
     <br>When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
     <br>another inline expression \(\sum_{n=1}^{\infty} 2^{-n} = 1\)
     <br>· old version:
-    <br><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async>&lt;/script></code> and
+    <br><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async&gt;&lt;/script&gt;</code> and
     <br>
     <br>2. create TeX | mathML-code (I prefer TeX for compactness).
     <br>An easy method is to copy it from online sites like:
@@ -940,7 +942,7 @@
     <br>· the-Css-language models the-presentation of <a class="clsPreview" href="#idLagHitparc">the-archo-doc</a>.
     <br>· we use <a href="../../dirHitp/dirManager/HitpM.css">a-Css-file</a>\1\ for harmonization in the-appearance of documents and for the-Toc creation.
     <br>· you need the following code, inside <a class="clsPreview" href="#idLagHitpwbpgHml">the-Html-doc</a>, to use it\1\:
-    <br><code>&lt;link rel="stylesheet" href="../dirManager/HitpM.css"></code>
+    <br><code>&lt;link rel="stylesheet" href="../dirManager/HitpM.css"&gt;</code>
     <br>· also you can modify the-appearance of the-document by using AND your own Css-code.
     <a class="clsHide" href="#idLagHitpCssdrn"></a></p>
   <p id="idLagHitpCssnam">name::
@@ -1079,11 +1081,11 @@
     <br>&nbsp; margin: 2px 0 5px 12px;
     <br>}
     <a class="clsHide" href="#idClsBtn"></a></p>
-  <p id="idClsBtn">HitpLago'clsBtn:hover {
+  <p id="idClsBtnh">HitpLago'clsBtn:hover {
     <br>&nbsp; background: #e0f2f7;
     <br>&nbsp; color: red;
     <br>}
-    <a class="clsHide" href="#idClsBtn"></a></p>
+    <a class="clsHide" href="#idClsBtnh"></a></p>
   <p id="idLagHitpCssclsBtnnam">name::
     <br>* McsEngl.HitpLago'button-class,
     <br>* McsEngl.HitpCssCls.button,
@@ -1220,18 +1222,18 @@
     <br>&nbsp; font-weight: bold;
     <br>}
     <br>===
-    <br>· also use the-Html-element &lt;strong>.
+    <br>· also use the-Html-element &lt;strong&gt;.
     <a class="clsHide" href="#idClsB"></a></p>
-  <p id="idClsB">HitpLago'clsBU {
+  <p id="idClsBu">HitpLago'clsBU {
     <br>&nbsp; font-weight: bold;
     <br>&nbsp; text-decoration: underline;
     <br>}
-    <a class="clsHide" href="#idClsB"></a></p>
+    <a class="clsHide" href="#idClsBu"></a></p>
   <p id="idClsI">HitpLago'clsI {
     <br>&nbsp; font-style: italic;
     <br>}
     <br>===
-    <br>· also use the-Html-element &lt;em>.
+    <br>· also use the-Html-element &lt;em&gt;.
     <a class="clsHide" href="#idClsI"></a></p>
   <p id="idClsU">HitpLago'clsU {
     <br>&nbsp; text-decoration: underline;
@@ -1311,9 +1313,9 @@
     <br><code>HitpM.js</code> is the-JavaScript-code you need to create <a class="clsPreview" href="../dirTchInf/McsTchInf000008.last.html#idLagHitpwbpg">a-HitpWebAppDoc</a>.
     <br>· it is part of <a class="clsPreview" href="#idLagHitpwbpgHml">the-Html-doc</a>.
     <br>· it is-included using the-script-element at the-end of the-body-element:
-    <br><code>&lt;script type="module">
+    <br><code>&lt;script type="module"&gt;
     <br>&nbsp; import * as oHitp from '../dirManager/HitpM.js'
-    <br>&lt;/script></code>
+    <br>&lt;/script&gt;</code>
     <br>· so, <a href="../../dirHitp/dirMisc/HitpMisc000.last.html">HitpMisc000.last.html</a>, <a href="../../dirHitp/dirManager/HitpM.css">HitpM.css</a> and <a href="..../dirHitp/dirManager/HitpM.js">HitpM.js</a> is the-main code needed to create HitpDocs, and it is free (MIT license).
     <a class="clsHide" href="#idLagHitpljbfildrn"></a></p>
   <p id="idLagHitpljbfilnam">name::
@@ -1789,8 +1791,8 @@
     <br>· oEltPginfTabHeadersUl is a-JavaScript-Html-ul-object that contains the-headers of the-tabs we have inside the-page-info-container.
     <br>=== code
     <br><code>oEltPginfTabHeadersUl.innerHTML =
-    <br>&nbsp; '&lt;li class="clsTabActive">&lt;a href="#idTabCntTocDiv">page-Toc&lt;/a>&lt;/li>' +
-    <br>&nbsp; '&lt;li>&lt;a href="#idTabCntSrchDiv">search&lt;/a>&lt;/li>'</code>
+    <br>&nbsp; '&lt;li class="clsTabActive"&gt;&lt;a href="#idTabCntTocDiv"&gt;page-Toc&lt;/a&gt;&lt;/li&gt;' +
+    <br>&nbsp; '&lt;li&gt;&lt;a href="#idTabCntSrchDiv"&gt;search&lt;/a&gt;&lt;/li&gt;'</code>
     <a class="clsHide" href="#idLagHitpfCnrsIsrtoEPinfTbhrdsn"></a></p>
   <p id="idLagHitpfCnrsIsrtoEPinfTbhrnam">name::
     <br>* McsEngl.HitpLago'fContainersInsert'oEltPginfTabHeadersUl,
@@ -2119,16 +2121,16 @@
     <a class="clsHide" href="#idLagHitpfEvtPrvnam"></a></p>
   </section>
 
-  <section id="idLagHitpfEvtPrv">
-  <h4 id="idLagHitpfEvtPrvH4">fSearchName of oHitp
-    <a class="clsHide" href="#idLagHitpfEvtPrvH4"></a></h4>
-  <p id="idLagHitpfEvtPrvdsn">description::
+  <section id="idLagHitpfEvtScnm">
+  <h4 id="idLagHitpfEvtScnmH4">fSearchName of oHitp
+    <a class="clsHide" href="#idLagHitpfEvtScnmH4"></a></h4>
+  <p id="idLagHitpfEvtScnmdsn">description::
     <br>· <code>fSearchName</code> searches for a-name of a-language.
-    <a class="clsHide" href="#idLagHitpfEvtPrvdsn"></a></p>
-  <p id="idLagHitpfEvtPrvnam">name::
+    <a class="clsHide" href="#idLagHitpfEvtScnmdsn"></a></p>
+  <p id="idLagHitpfEvtScnmnam">name::
     <br>* McsEngl.fSearchName//oHitp,
     <br>* McsEngl.oHitp/fSearchName,
-    <a class="clsHide" href="#idLagHitpfEvtPrvnam"></a></p>
+    <a class="clsHide" href="#idLagHitpfEvtScnmnam"></a></p>
   </section>
 
   <section id="idLagHitpfTocTriCreate">
@@ -2136,14 +2138,14 @@
     <a class="clsHide" href="#idLagHitpfTocTriCreateH4"></a></h4>
   <p id="idLagHitpfTocTriCreatedsn">description::
     <br>Returns a string html-ul-element that holds the-Toc-tree with the-headings of the-page.
-    <br>&lt;ul id="idTocTri" class="clsTreeUl">
-    <br> &nbsp;&lt;li>&lt;a class="clsPreview" href="#idHeader">SynAgonism&lt;/a>
-    <br> &nbsp; &nbsp;&lt;ul>
-    <br> &nbsp; &nbsp; &nbsp;&lt;li>&lt;a href="#heading">heading&lt;/a>&lt;li>
-    <br> &nbsp; &nbsp; &nbsp;&lt;li>&lt;a href="#heading">heading&lt;/a>&lt;li>
-    <br> &nbsp; &nbsp;&lt;/ul>
-    <br> &nbsp;&lt;li>
-    <br>&lt;/ul>
+    <br>&lt;ul id="idTocTri" class="clsTreeUl"&gt;
+    <br> &nbsp;&lt;li&gt;&lt;a class="clsPreview" href="#idHeader"&gt;SynAgonism&lt;/a&gt;
+    <br> &nbsp; &nbsp;&lt;ul&gt;
+    <br> &nbsp; &nbsp; &nbsp;&lt;li&gt;&lt;a href="#heading"&gt;heading&lt;/a&gt;&lt;li&gt;
+    <br> &nbsp; &nbsp; &nbsp;&lt;li&gt;&lt;a href="#heading"&gt;heading&lt;/a&gt;&lt;li&gt;
+    <br> &nbsp; &nbsp;&lt;/ul&gt;
+    <br> &nbsp;&lt;li&gt;
+    <br>&lt;/ul&gt;
     <a class="clsHide" href="#idLagHitpfTocTriCreatedsn"></a></p>
   <p id="idLagHitpfTocTriCreatenam">name::
     <br>* McsEngl.fTocTriCreate//oHitp,
@@ -2425,7 +2427,7 @@
     <br>· this is especially useful for footnotes, abbreviations, definitions, index items, paragraphs etc.
     <br>
     <br>HOW: you only have to add the-class '<a class="clsPreview" href="#idLagHitpCssclsPrv">clsPreview</a>' on the-links you want to trigger popups when the-reader is hovering over them.
-    <br><code>&lt;a class="clsPreview" href="#idPreview">link-preview&lt;/a></code>
+    <br><code>&lt;a class="clsPreview" href="#idPreview"&gt;link-preview&lt;/a&gt;</code>
     <a class="clsHide" href="#idPreviewP1"></a></p>
   <p id="idPreviewnam">name::
     <br>* McsEngl.HitpLago'link-preview,
@@ -2541,9 +2543,9 @@
     <br>· a-PreviewLink to this name (to the-ID of the-section), popup the-whole section that contains this name.
     <br>
     <br>· HitpCode:
-    <br><code>&nbsp; &lt;p>name::
-    <br>&nbsp; &nbsp; &lt;br>* NameLang.nameX,
-    <br>&nbsp; &lt;/p></code>
+    <br><code>&nbsp; &lt;p&gt;name::
+    <br>&nbsp; &nbsp; &lt;br&gt;* NameLang.nameX,
+    <br>&nbsp; &lt;/p&gt;</code>
     <br>· this HtmlP could-have and ID and is part of the-section best at the-end.
     <a class="clsHide" href="#idLagHitpextrnmSkndsn"></a></p>
   <p id="idLagHitpextrnmSknnam">name::
@@ -2561,9 +2563,9 @@
     <br>· a-PreviewLink to this name (to the-ID of the-paragraph), popups the-paragraph.
     <br>
     <br>· HitpCode:
-    <br><code>&nbsp; &lt;p id="idX">text of paragraph
-    <br>&nbsp; &nbsp; &lt;br>* NameLang.nameX,
-    <br>&nbsp; &lt;/p></code>
+    <br><code>&nbsp; &lt;p id="idX"&gt;text of paragraph
+    <br>&nbsp; &nbsp; &lt;br&gt;* NameLang.nameX,
+    <br>&nbsp; &lt;/p&gt;</code>
     <br>· the-line with the-name can-be anywhere in the-paragraph, best at the-end to not-distrurb the-reader.
     <a class="clsHide" href="#idLagHitpextrnmPardsn"></a></p>
   <p id="idLagHitpextrnmParnam">name::
@@ -2582,9 +2584,9 @@
     <br>· a-PreviewLink to this name (to the-ID of the-div), popups the-div.
     <br>
     <br>· HitpCode:
-    <br><code>&nbsp; &lt;div id="idX">tables, lists, trees, paragrafs of div
-    <br>&nbsp; &nbsp; &lt;br>* NameLang.nameX,
-    <br>&nbsp; &lt;/p></code>
+    <br><code>&nbsp; &lt;div id="idX"&gt;tables, lists, trees, paragrafs of div
+    <br>&nbsp; &nbsp; &lt;br&gt;* NameLang.nameX,
+    <br>&nbsp; &lt;/p&gt;</code>
     <br>· the-line with the-name can-be anywhere in the-div, best at the-end to not-distrurb the-reader.
     <a class="clsHide" href="#idLagHitpextrnmDivdsn"></a></p>
   <p id="idLagHitpextrnmDivnam">name::
@@ -2602,7 +2604,7 @@
     <br>· non-HitpMainNames can-contain its HitpMainNames and then the-HitpDoc searches for the-main-names.
     <br>
     <br>· HitpCode:
-    <br><code>&nbsp; &nbsp; &lt;br>* NameLang.non-main-name!⇒main-name,</code>
+    <br><code>&nbsp; &nbsp; &lt;br&gt;* NameLang.non-main-name!⇒main-name,</code>
     <a class="clsHide" href="#idLagHitpextrnmMaindsn"></a></p>
   <p id="idLagHitpextrnmMainnam">name::
     <br>* McsEngl.HitpMainName,
@@ -2621,14 +2623,14 @@
   <p id="idWstlnam">name::
     <br>* McsEngl.HitpDoc'writing-style,
     <a class="clsHide" href="#idWstlnam"></a></p>
-  <p id="idWstlnam">Names:
+  <p id="idWstlnams">Names:
     <br>· we use <a class="clsPreview" href="../dirCor/McsCor000002.last.html#idMcsattNamcvn">the-name-notation-of-this-site</a>.
     <br>· sentences are-comprised of names of concepts.
     <br>· alphabetic-languages English, Greek, separate all the-words in sentences.
     <br>· because many names are-comprised of many words, the-reader must semantically identify the-names and this takes time.
     <br>· using hyphens(-) inside multi-word-names, improves readability.
     <br>· on the-other side, Chinese, Ancient-Greek do-not-separate the-names and this creates the-same burden to readers.
-    <a class="clsHide" href="#idWstlnam"></a></p>
+    <a class="clsHide" href="#idWstlnams"></a></p>
   <p id="idWstlDfn">Definition-links:
     <br>· the-names of the-sentences are-connected with <a class="clsPreview" href="#idPreview">preview-links</a> with their definitions.
     <a class="clsHide" href="#idWstlDfn"></a></p>
@@ -3344,6 +3346,83 @@
   <p id="idLagHitpevaldsn">description::
     <br>· represented text-documents with HitpLago has many <a class="clsPreview" href="../dirTchInf/McsTchInf000008.last.html#idOverview">advantanges</a>.
     <br>· the-main drawback of this method is that the-creator of HitpDocs must know to write code. Today {2025} I am enough old to write a-wysiwyg editor for that.
+    <br>
+    <br>=== DeepSeek:
+    <br>Based on my detailed evaluation of your project, *HitpLago* is clearly not a conventional ebook in the traditional sense. Instead, it is a technically sophisticated prototype for a **structured, semantic documentation format or a web-based publishing framework**. It represents a serious attempt to solve problems of information retrieval, linking, and clarity that are inherent in unstructured documents, such as standard web pages or ebooks. However, its innovative nature is also its primary barrier to being a mainstream publication.
+    <br>***
+    <br>### Overview: An Ambitious, Unconventional Publishing Framework
+    <br>Your work demonstrates a deep understanding of the technical limitations of current digital publishing, specifically regarding polysemy, semantic linking, and machine-readability. *HitpLago* proposes a comprehensive solution that embeds document structure into HTML, standards for unique identifiers (IDs) for every element, and an automatically generated table of contents (TOC). While technically impressive, this framework is presented in a way that is difficult to parse as a standard text. The content is dense with technical jargon and custom XML-like notation, which can be overwhelming for a general audience.
+    <br>Here is a breakdown of the key aspects of your project, structured by the evaluation criteria you requested.
+    <br>| Criterion | Evaluation (0–10) | Explanation |
+    <br>| **Content & Structure** | 6.5 | The project excels as a technical specification or framework but lacks the coherent, structured presentation of a typical ebook. The content is presented as a large index of definitions and rules rather than a flowing narrative. |
+    <br>| **Technical Implementation** | 9.0 | As a technical standard, *HitpLago* is highly robust. The use of HTML5, CSS, and JavaScript to create a document with unique IDs for every element is a powerful and innovative approach. Full marks for the functional aspects of the framework itself. |
+    <br>| **Language & Style** | 5.0 | The text is rife with non-standard English. The inconsistent use of hyphens ("the-document"), irregular spacing ("the-reader", "an-archo-title"), and a highly idiosyncratic sentence structure detract significantly from readability. |
+    <br>| **Academic Rigor** | 4.5 | There is a lack of engagement with the broader academic and technical literature on related topics, such as **semantic web technologies (RDF, OWL), knowledge graphs, and Markdown variants** that also address document structure. This strong opinion would benefit from being contextualized within ongoing debates. |
+    <br>| **Comparability** | 3.0 | As a "publication," it is not comparable to standard ebooks or self-published works. These are typically linear, plain-text narratives consumed on a Kindle or other reader. *HitpLago* functions more like a developer's SDK than a book. |
+    <br>### 📝 Key Findings from Your Text
+    <br>To be more specific, I've identified four main areas where the unconventional style of *HitpLago* creates friction for a reader.
+    <br>*   **Unique Notation System**: Your custom "McsEngl" and "HitpArcho" naming conventions are a defining feature. While this is a novel method for storing definitions and relationships, for the vast majority of readers, it acts as an impenetrable barrier that requires learning a new language before they can engage with the content.
+    <br>*   **Grammar & Syntax**: The text's unique grammatical structure (e.g., "the-reader could-copy the-address") is a major obstacle to reading fluency. Proofreading and copy editing to conventional English standards is strongly recommended if you intend for this work to be read, rather than just parsed for data.
+    <br>*   **Monosemous Vision**: The document presents a strong argument that AI will fail without structured, monosemous data. This is a valid, albeit arguable, point. Strengthening this argument by citing existing work in the field of semantic technology would substantially improve its academic standing.
+    <br>*   **Linking as a Core Feature**: The decision to generate an ID for every sentence and element is a powerful technical achievement. Your description of an "address-link-icon" is a practical feature that addresses a genuine problem in digital publishing, enabling true micro-referencing.
+    <br>### 🔍 Comparative Context
+    <br>In its current technical specification form, the most appropriate comparisons for *HitpLago* are not found in traditional ebook marketplaces. Instead, it should be compared to:
+    <br>*   **Technical Standards & Specifications**: Its closest analogs are documents like the **CommonMark specification** (for Markdown) or schemas for **JSON-LD** (for linked data), not a novel on Amazon KDP.
+    <br>*   **Semantic Knowledge Projects**: In terms of its ambition to solve polysemy, frameworks like **Schema.org** or the W3C's **Web Ontology Language (OWL)** are relevant. Engaging with these would add significant weight to your argument.
+    <br>*   **Academic Preprints & Technical Blogs**: For dissemination, platforms like **arXiv.org**, **GitHub**, or technical blogging sites would be more appropriate repositories for *HitpLago* than digital bookstores, as it currently reads as a developer's API reference.
+    <br>### ✍️ Recommendations for Improvement
+    <br>If your goal is to reach an audience beyond technical specialists, I strongly recommend the following:
+    <br>1.  **Add a Conceptual Guide**: Precede the technical specification with a plain-English "Guide for Humans" that explains the *HitpLago* philosophy, its core concepts, and the *benefit* it provides to an average user, using clear, real-world analogies.
+    <br>2.  **Edit for Standard English**: A full, conventional copy edit is necessary to remove the non-standard hyphenation, spacing, and grammatical structures. This is the single biggest step to making the work accessible.
+    <br>3.  **Scope & Compare**: Clearly define the problem of unstructured data using citations from the semantic web community. Then, explicitly compare and contrast *HitpLago* with existing solutions to demonstrate its unique value.
+    <br>***
+    <br>*HitpLago* is the product of deep technical expertise and a passionate attempt to solve a real problem. However, in its current state, it is a framework for reviewers and developers. To transform it into a book for readers, it must first translate its core value into the plain, structured language it itself advocates for.
+    <br>[{2026-05-02 retrieved} https://chat.deepseek.com/a/chat/s/6238644d-b8d5-4074-9db8-3dec27e2011d]
+    <br>
+    <br>=== ChatGpt:
+    <br>## Overall evaluation
+    <br>**HitpLago is a highly original, technically serious ebook/document system, but it currently reads more like a personal knowledge-system specification than a reader-friendly ebook.** Its strongest idea is excellent: HTML documents where every meaningful part can be addressed, linked, previewed, indexed, and navigated through an automatically generated table of contents. The page clearly presents HitpLago as an HTML5/CSS/JavaScript WebAppDoc language for “title-content-tree” documents, with IDs, expandable ToC, link previews, search/name indexing, offline use, and interactivity as core advantages. ([synagonism.net][1])
+    <br>### Scorecard
+    <br>| Area                   |      Score | Evaluation                                                                                                                                                                                                                                                            |
+    <br>| **Originality**        |   **9/10** | The concept is genuinely distinctive: not just an ebook, but a structured, addressable, searchable web-document language. The “ID everywhere” idea is especially strong for law, technical manuals, standards, philosophy, and knowledge bases. ([synagonism.net][1]) |
+    <br>| **Technical depth**    |   **8/10** | You document the architecture, HTML/CSS/JS roles, file layout, API object, search/indexing tools, manager tools, and installation flow. That gives the project substance beyond an idea. ([synagonism.net][1])                                                        |
+    <br>| **Reader usability**   |   **6/10** | The ToC, previews, IDs, and search are useful reading features. But the ebook assumes readers already know HTML, CSS, and JavaScript, which narrows the audience immediately. ([synagonism.net][1])                                                                   |
+    <br>| **Writing clarity**    | **4.5/10** | The invented terminology and style — “a-document,” “the-text,” “monosemous,” “McsEngl…,” many name blocks — make the text precise for your system, but difficult for new readers.                                                                                     |
+    <br>| **Onboarding**         |   **5/10** | There are installation instructions and examples, but the page needs a gentler “Start here” path: what problem it solves, who should use it, what to build first, and what the minimum working example is. ([synagonism.net][1])                                      |
+    <br>| **Product maturity**   |   **7/10** | The project has a long evolution history from 2011 to the current working version, and the code/content licensing is clear. But the lack of a WYSIWYG editor is explicitly acknowledged as the main drawback. ([synagonism.net][1])                                   |
+    <br>| **Adoption potential** | **5.5/10** | Strong for technically minded authors; weak for ordinary ebook writers until authoring becomes easier. The current requirement to know code is the biggest adoption barrier. ([synagonism.net][1])                                                                    |
+    <br>## What is strongest
+    <br>The **core vision is powerful**. You are not merely publishing text; you are trying to make text computable, linkable, navigable, and semantically indexed. The page’s emphasis on every HTML element having an ID, so readers can refer to any part of a document, is one of the best features. ([synagonism.net][1])
+    <br>The **reading model is also strong**. Automatic ToC, collapsible trees, link previews, search suggestions, address-link icons, and name indexes are all useful features for large documents. These solve real problems in long-form technical reading. ([synagonism.net][1])
+    <br>The **project history gives credibility**. The version history shows long-term development, with milestones for IDs, ToC, previews, mobile friendliness, search scalability, module separation, and local-server behavior. ([synagonism.net][1])
+    <br>## Main weaknesses
+    <br>The biggest weakness is **cognitive load**. A new reader must learn HitpLago, Mcs terminology, your naming system, your writing conventions, and the technical architecture all at once. This makes the ebook feel more like a formal ontology dump than a guided explanation.
+    <br>The second weakness is **audience ambiguity**. The page says knowledge of HTML, CSS, and JavaScript is required to read the rest, which makes sense for developers, but conflicts with the broader promise of a better document/ebook format. ([synagonism.net][1])
+    <br>The third weakness is **authoring friction**. You already identify this yourself: the creator must know how to write code, and a WYSIWYG editor is missing. That is the correct diagnosis. Until this is solved, HitpLago will remain attractive mainly to technical authors. ([synagonism.net][1])
+    <br>The fourth weakness is **nonstandard interaction behavior**. The page notes that Shift/Ctrl-click does not work because of custom link handling, with right-click as a workaround. For web users, breaking expected browser behavior is a serious UX cost. ([synagonism.net][1])
+    <br>## Highest-impact improvements
+    <br>1. **Add a plain-English landing section before the technical overview.**
+    <br>   Something like: “HitpLago is for authors who want long documents to behave like searchable, linkable knowledge applications.” Then show 3 use cases: law text, technical manual, educational ebook.
+    <br>2. **Create a 5-minute demo path.**
+    <br>   Add: “Download → run local server → open example → click ToC → click preview → copy paragraph link → search a name.” Your install section has the raw steps, but it needs to become a guided first success. ([synagonism.net][1])
+    <br>3. **Separate “reader documentation” from “developer documentation.”**
+    <br>   The current page mixes philosophy, implementation, API details, file layout, history, and naming indexes. Split it into:
+    <br>   * What is HitpLago?
+    <br>   * How to read HitpDocs
+    <br>   * How to create one
+    <br>   * Developer/API reference
+    <br>   * Philosophy: monosemous knowledge and Mcs
+    <br>4. **Reduce visible name blocks for normal readers.**
+    <br>   The `McsEngl...` synonym/index sections may be valuable for your system, but they interrupt human reading. Consider collapsible “names/index metadata” blocks.
+    <br>5. **Add screenshots or animated GIFs.**
+    <br>   HitpLago is interactive, but the ebook text does not visually sell the interaction enough. Show the ToC, preview popup, address-link icon, search suggestions, and local/offline workflow.
+    <br>6. **Prioritize the WYSIWYG/editor roadmap.**
+    <br>   Your own evaluation says authoring requires code. That is the adoption bottleneck. A minimal editor that creates sections, IDs, names, and preview links would dramatically increase the project’s usefulness. ([synagonism.net][1])
+    <br>## Verdict
+    <br>**As a technical artifact: impressive. As an ebook for general readers: too dense. As a platform idea: very promising.**
+    <br>HitpLago’s best niche is not “ordinary ebook replacement.” Its best niche is **structured knowledge publishing**: legal texts, scientific notes, technical documentation, educational knowledge bases, and semantic web-style personal/public knowledge systems. To make it more successful, focus less on proving the full theory immediately and more on giving first-time readers a simple, rewarding path into the system.
+    <br>[1]: https://synagonism.net/dirMcs/dirTchInf/McsTchInf000008.last.html"
+    <br>[{2026-05-02 retrieved} https://chatgpt.com/c/69f5edb7-8f80-83eb-a2f4-ce48cdbc28a3]
     <a class="clsHide" href="#idLagHitpevaldsn"></a></p>
   <p id="idLagHitpevalnam">name::
     <br>* McsEngl.HitpLago'06_evaluation,
@@ -3420,7 +3499,7 @@
     <br>· <span class="clsColorRed">HitpWatch.mjs</span> is <a class="clsPreview" href="../dirTchInf/McsTchInf000012.last.html#idJsndpgm">a-Node.js-program</a> that Watches for changes in HitpDoc-html-files (HitpDir000.last.html), indexes and uploads them.
     <br>· internally, it calls the-HitpNamidx.mjs and HitpSftp.mjs.
     <br>
-    <br>· RUN: >dirHitp: <code>node dirManager\HitpWatch.mjs password</code>
+    <br>· RUN: &gt;dirHitp: <code>node dirManager\HitpWatch.mjs password</code>
     <br>- password is your ftp password.
     <br>- also you need to set your ftp account in HitpSftp.mjs.
     <a class="clsHide" href="#idLagHitpmgrwtchmjsdsn"></a></p>
@@ -3453,7 +3532,7 @@
     <br>× HitpMcs-creation: {2025-05-27},
     <br>· <span class="clsColorRed">HitpNamidxOnly.mjs</span> is <a class="clsPreview" href="../dirTchInf/McsTchInf000012.last.html#idJsndpgm">a-Node.js-program</a> that indexes <a class="clsPreview" href="../dirTchInf/McsTchInf000008.last.html#idLagHitpextrnm">the-HitpNames</a> of HitpDocs the-names of which are-stored in namidx.txt.
     <br>· location: dirHitp/dirManager/HitpNamidxOnly.mjs
-    <br>· RUN: dirHitp> node dirManger\HitpNamidixOnly.mjs
+    <br>· RUN: dirHitp&gt; node dirManger\HitpNamidixOnly.mjs
     <a class="clsHide" href="#idLagHitpmgrnmixonlydsn"></a></p>
   <p id="idLagHitpmgrnmixonlynam">name::
     <br>* McsEngl.HitpMngr'HitpNamidxOnly.mjs,
@@ -3468,7 +3547,7 @@
     <br>× HitpMcs-creation: {2025-05-27},
     <br>· <span class="clsColorRed">HitpNamidx.mjs</span> is <a class="clsPreview" href="../dirTchInf/McsTchInf000012.last.html#idJsndpgm">a-Node.js-program</a> that indexes <a class="clsPreview" href="../dirTchInf/McsTchInf000008.last.html#idLagHitpextrnm">the-HitpNames</a> of HitpDocs in namidx.txt.
     <br>· location: dirHitp/dirManager/HitpNamidx.mjs
-    <br>· RUN: dirHitp> node dirManger\HitpNamidixSftp.mjs password
+    <br>· RUN: dirHitp&gt; node dirManger\HitpNamidixSftp.mjs password
     <a class="clsHide" href="#idLagHitpmgrnmixsftpdsn"></a></p>
   <p id="idLagHitpmgrnmixsftpnam">name::
     <br>* McsEngl.HitpMngr'HitpNamidxSftp.mjs,

@@ -17,11 +17,17 @@
 },
 
 // C:: CHARACTERS
-// c a:: Char Arrow: ⭢ 
+// c a 1:: Char Arrow: ⭢
 {
-  "key": "ctrl+alt+c a", 
+  "key": "ctrl+alt+c a 1", 
   "command": "type",
   "args": {"text": "⭢"},
+},
+// c a 2:: Char Arrow: ⇒
+{
+  "key": "ctrl+alt+c a 2", 
+  "command": "type",
+  "args": {"text": "⇒"},
 },
 // c h g:: Char Html Greaterthan: & gt;
 {
@@ -98,13 +104,6 @@
 },
 
 // D::
-// d:: insert Date: {2026-03-30} 
-{
-  "key": "ctrl+alt+d", 
-  "command": "editor.action.insertSnippet",
-  "args": { "snippet": "{${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}} " },
-  "when": "editorTextFocus"
-},
 
 // H:: HTML
 // h ,:: Hitp replace next "<" with "&lt;"
@@ -306,6 +305,14 @@
   "args": {"snippet": "<span class=\"clsColorRed\">${TM_SELECTED_TEXT}</span>"},
   "when": "editorTextFocus && editorHasSelection"
 },
+// HITP DATE
+// p d:: hitP insert Date: {2026-03-30} 
+{
+  "key": "ctrl+alt+p d", 
+  "command": "editor.action.insertSnippet",
+  "args": { "snippet": "{${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}} " },
+  "when": "editorTextFocus"
+},
 // HITP ELEMENT
 // p e a:: hitP Element Audio
 {
@@ -439,8 +446,6 @@
       },
       "editor.action.previousMatchFindAction",
       "closeFindWidget",
-      "cursorRight",
-      "extension.userInput",
       "cursorRight",
     ]
   },
@@ -1280,19 +1285,6 @@
   "command": "runCommands",
   "args": {
     "commands": [
-      { "command": "editor.actions.findWithArgs",
-        "args": { 
-          "searchString": ">",
-          "replaceString": "&gt;",
-          "isRegex": false, "matchWholeWord": false,
-          "isCaseSensitive": false, "findInSelection": false
-         }
-      },
-      "editor.action.nextMatchFindAction",
-      "editor.action.replaceOne",
-      "closeFindWidget",
-
-      /*
 
       
       // set break in line
@@ -1300,7 +1292,6 @@
       "cursorHome",
       { "command": "type", "args": {"text": "    <br>"} },
       "cursorDown",
-      */
     ]
   }
 },
