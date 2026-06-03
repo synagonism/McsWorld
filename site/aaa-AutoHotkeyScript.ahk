@@ -1,5 +1,5 @@
 ﻿; comments
-; version {2026-04-04}
+; version {2026-06-02}
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -2423,6 +2423,100 @@ SetWorkingDir C:\xampp\htdocs\dWstSgm  ; Ensures a consistent starting directory
 ::ii591::ɏ
 
 ::ii592::ɐ   ;; 592..687 ɐ..ʯ-IPA-Extensions
+::ii593::ɑ
+::ii594::ɒ
+::ii595::ɓ
+::ii596::ɔ
+::ii597::ɕ
+::ii598::ɖ
+::ii599::ɗ
+::ii600::ɘ
+::ii601::ə
+::ii602::ɚ
+::ii603::ɛ
+::ii604::ɜ
+::ii605::ɝ
+::ii606::ɞ
+::ii607::ɟ
+::ii608::ɠ
+::ii609::ɡ
+::ii610::ɢ
+::ii611::ɣ
+::ii612::ɤ
+::ii613::ɥ
+::ii614::ɦ
+::ii615::ɧ
+::ii616::ɨ
+::ii617::ɩ
+::ii618::ɪ
+::ii619::ɫ
+::ii620::ɬ
+::ii621::ɭ
+::ii622::ɮ
+::ii623::ɯ
+::ii624::ɰ
+::ii625::ɱ
+::ii626::ɲ
+::ii627::ɳ
+::ii628::ɴ
+::ii629::ɵ
+::ii630::ɶ
+::ii631::ɷ
+::ii632::ɸ
+::ii633::ɹ
+::ii634::ɺ
+::ii635::ɻ
+::ii636::ɼ
+::ii637::ɽ
+::ii638::ɾ
+::ii639::ɿ
+::ii640::ʀ
+::ii641::ʁ
+::ii642::ʂ
+::ii643::ʃ
+::ii644::ʄ
+::ii645::ʅ
+::ii646::ʆ
+::ii647::ʇ
+::ii648::ʈ
+::ii649::ʉ
+::ii650::ʊ
+::ii651::ʋ
+::ii652::ʌ
+::ii653::ʍ
+::ii654::ʎ
+::ii655::ʏ
+::ii656::ʐ
+::ii657::ʑ
+::ii658::ʒ
+::ii659::ʓ
+::ii660::ʔ
+::ii661::ʕ
+::ii662::ʖ
+::ii663::ʗ
+::ii664::ʘ
+::ii665::ʙ
+::ii666::ʚ
+::ii667::ʛ
+::ii668::ʜ
+::ii669::ʝ
+::ii670::ʞ
+::ii671::ʟ
+::ii672::ʠ
+::ii673::ʡ
+::ii674::ʢ
+::ii675::ʣ
+::ii676::ʤ
+::ii677::ʥ
+::ii678::ʦ
+::ii679::ʧ
+::ii680::ʨ
+::ii681::ʩ
+::ii682::ʪ
+::ii683::ʫ
+::ii684::ʬ
+::ii685::ʭ
+::ii686::ʮ
 ::ii687::ʯ
 
 ;; 688..767-Spacing-Modifier-Letters

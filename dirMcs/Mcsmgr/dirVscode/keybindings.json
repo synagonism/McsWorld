@@ -324,11 +324,11 @@
       "cursorLineEnd",
       "editor.action.insertLineAfter",
       "cursorHomeSelect",
-      {"command": "type", "args": {"text": "  <span class=\"clsAudio\">"}},
+      {"command": "type", "args": {"text": "    <span class=\"clsAudio\">"}},
       "editor.action.insertLineAfter",
       {"command": "type", "args": {"text": "  <button class=\"clsAudioBtn\">🗣</button>"}},
       "editor.action.insertLineAfter",
-      {"command": "type", "args": {"text": "<audio src=\".mp3\"></audio>"}},
+      {"command": "type", "args": {"text": "<audio src=\"dirLagFile/dirPhoneme/.mp3\"></audio>"}},
       "editor.action.insertLineAfter",
       "deleteLeft",
       {"command": "type", "args": {"text": "</span>"}},
@@ -336,7 +336,8 @@
       "cursorLineEnd",
       "cursorWordLeft",
       "cursorWordLeft",
-      "cursorWordLeft"
+      "cursorWordLeft",
+      "cursorLeft",
     ]
   },
   "when": "editorTextFocus"
@@ -986,7 +987,7 @@
       { "command": "editor.action.nextMatchFindAction" },
       { "command": "closeFindWidget" },
       { "command": "editor.action.clipboardPasteAction", "await": "document selection" },
-      { "command": "type", "args": { "text": "nam\">name::\n  <br>* McsEngl.,\n<a class=\"clsHide\" href=\"#" } },
+      { "command": "type", "args": { "text": "nam\">name::\n<br>* McsEngl.,\n<a class=\"clsHide\" href=\"#" } },
       { "command": "editor.action.clipboardPasteAction", "await": "document selection" },
       { "command": "type", "args": { "text": "nam\"></a></p>" } },
       { "command": "cursorUp" },
@@ -1131,7 +1132,7 @@
   "args": {"snippet": "_stxSbj:[${TM_SELECTED_TEXT}]"},
   "when": "editorTextFocus && editorHasSelection"
 },
-// hitP Syntax subject-complement
+// hitP Syntax K-subject-complement
 {
   "key": "ctrl+alt+p s k", 
   "command": "editor.action.insertSnippet",
@@ -1193,6 +1194,22 @@
       {"command": "type", "args": {"text": "<br>"}},
       "editor.action.insertLineAfter",
       {"command": "type", "args": {"text": "<br>· _stxElln: "}},
+    ]
+  },
+  "when": "editorTextFocus"
+},
+// p s l z:: hitP syntax language Zhon-Chinese
+{
+  "key": "ctrl+alt+p s l z", 
+  "command": "runCommands",
+  "args": {
+    "commands": [
+      "cursorUp",
+      "cursorLineEnd",
+      "editor.action.insertLineAfter",
+      {"command": "type", "args": {"text": "<br>"}},
+      "editor.action.insertLineAfter",
+      {"command": "type", "args": {"text": "<br>· _stxZhon: "}},
     ]
   },
   "when": "editorTextFocus"
@@ -1286,12 +1303,18 @@
   "args": {
     "commands": [
 
-      
+            { "command": "cursorEnd", "args": { "sticky": false } },
+            { "command": "type", "args": { "text": " " } },
+            { "command": "deleteRight" },
+            { "command": "cursorHome" }
+  
+      /*      
       // set break in line
       "cursorHome",
       "cursorHome",
       { "command": "type", "args": {"text": "    <br>"} },
       "cursorDown",
+      */
     ]
   }
 },
@@ -1331,6 +1354,7 @@
       { "command": "editor.action.clipboardPasteAction", "await": "document selection" },
 
       // 
+      "editor.action.transformToLowercase",
       "extension.charInsertInt",
       "extension.userInput",
       "editor.emmet.action.incrementNumberByOne"

@@ -5,9 +5,9 @@
  * Uses Ollama (local AI) for deep semantic checks when --ai flag is used.
  *
  * Usage:
- *   node check.js <dirMcs-path>          # fast structural checks only
- *   node check.js <dirMcs-path> --ai     # + Ollama AI semantic checks
- *   node check.js <dirMcs-path> --file McsXxx000001.last.html  # single file
+ *   node validator.js <dirMcs-path>          # fast structural checks only
+ *   node validator.js <dirMcs-path> --ai     # + Ollama AI semantic checks
+ *   node validator.js <dirMcs-path> --file McsXxx000001.last.html  # single file
  */
 
 import { parseFile, parseAllFiles } from './dirValid/parser.js';

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.McshLago!=HitpMcs-language
-    (McsTchInf000009.1-47-0.2026-04-30)</title>
+    (McsTchInf000009.1-49-0.2026-05-23)</title>
   <meta name="keywords" content="Mcsh-language, McshLago, ModelConceptSensorial, HitpMcs-language, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -23,9 +23,10 @@
   <h1 id="idOverviewH1">overview of McshLago
     <a class="clsHide" href="#idOverviewH1"></a></h1>
   <p id="idDescription">description::
-    <br>· <span class="clsColorRed">HitpMcs-lag</span> is <a class="clsPreview" href="../dirTchInf/McsTchInf000007.last.html#idOverview">a-concept-language</a> that maps <a class="clsPreview" href="../dirLag/McsLag000003.last.html#idInfHmnBrn001Mcpt">mind-concepts</a> to <a class="clsPreview" href="../dirTchInf/McsTchInf000009.last.html#idMcsHitp">HitpMcs</a>.
-    <br>· the-first application of HitpMcs-lag is <a class="clsPreview" href="../Mcs000000.last.html#idOverview">my-HitpMcs-WorldView</a> published in the-current site.
+    <br>· <span class="clsColorRed">HitpMcs-language</span> is <a class="clsPreview" href="../dirTchInf/McsTchInf000007.last.html#idOverview">a-concept-language</a> that maps <a class="clsPreview" href="../dirLag/McsLag000003.last.html#idInfHmnBrn001Mcpt">mind-concepts</a> to <a class="clsPreview" href="../dirTchInf/McsTchInf000009.last.html#idMcsHitp">HitpMcs</a>.
+    <br>· the-first application of HitpMcs-lago is <a class="clsPreview" href="../Mcs000000.last.html#idOverview">my-HitpMcs-WorldView</a> published in the-current site.
     <br>· IF this project\a\ will work, THEN it\a\ will-prove that we must-move from TEXTS to CONCEPTS in-order-to manage our knowledge. {2021-11-19}
+    <br>· the biggest problem of current {2026} AI (LLM) is <span class="clsColorRed">garbage-in garbage-out\b\</span>: writing structured validated knowledge with McshLago will-help to solve it\b\. {2026-05-03}
     <a class="clsHide" href="#idDescription"></a></p>
   <p id="idName">name::
     <br>* McsEngl.McsTchInf000009.last.html//dirTchInf//dirMcs!⇒McshLago,
@@ -1460,6 +1461,40 @@
     <a class="clsHide" href="#idLMcshlmgrmwcjswpa"></a></p>
   </section>
 
+  <section id="idLMcshlmgrvldtr">
+  <h3 id="idLMcshlmgrvldtrH3">McshMngrFile.validator.js
+    <a class="clsHide" href="#idLMcshlmgrvldtrH3"></a></h3>
+  <p id="idLMcshlmgrvldtrdsn">description::
+    <br>× HitpMcs-creation: {2026-05-23},
+    <br>· Checks dirMcs-knowledge-base for structural and content issues.
+    <br>· Uses Ollama (local AI) for deep semantic checks when --ai flag is used.
+    <br>
+    <br>· Usage:
+    <br>* node validator.js &lt;dirMcs-path&gt;          # fast structural checks only
+    <br>* node validator.js &lt;dirMcs-path&gt; --ai     # + Ollama AI semantic checks
+    <br>* node validator.js &lt;dirMcs-path&gt; --file McsXxx000001.last.html  # single file
+    <br>
+    <br>· Checks:
+    <br>*  S01  FileMcs missing idOverview section
+    <br>*  S02  SectionMcs missing description:: paragraph
+    <br>*  S03  SectionMcs has description:: but it is empty (only placeholder "·")
+    <br>*  S04  SectionMcs missing name:: paragraph
+    <br>*  S05  SectionMcs name:: has zero valid Mcs* entries
+    <br>*  S06  Duplicate McsEngl bareName across entire knowledge base
+    <br>*  S07  Internal link: target file does not exist
+    <br>*  S08  Internal anchor link (#id) not found in target file's oSetIdAll
+    <br>*  S09  File missing &lt;title&gt; version string
+    <br>*  S10  evoluting:: dates not in YYYY-MM-DD format
+    <br>*  S11  paragraph-Mcs has no id attribute (cannot be linked to)
+    <br>*  S12  SectionMcs has no heading
+    <a class="clsHide" href="#idLMcshlmgrvldtrdsn"></a></p>
+  <p id="idLMcshlmgrvldtrnam">name::
+    <br>* McsEngl.McshMngr'validator.js,
+    <br>* McsEngl.McshMngrFile.validator.js,
+    <br>* McsEngl.validator.js-McshMngrFile,
+    <a class="clsHide" href="#idLMcshlmgrvldtrnam"></a></p>
+  </section>
+
   <section id="idLMcshlmgrmcsnjs">
   <h3 id="idLMcshlmgrmcsnjsH3">McshMngrFile.mMcsNew.mjs
     <a class="clsHide" href="#idLMcshlmgrmcsnjsH3"></a></h3>
@@ -1567,6 +1602,22 @@
   <p id="idLMcshlmgrdngFgtr">generic-tree-of-McshMngr'doing::
     <br>* <a class="clsPreview" href="../dirCor/McsCor000002.last.html#idMcsmdng">Mcsmgr'doing</a>,
     <a class="clsHide" href="#idLMcshlmgrdngFgtr"></a></p>
+
+  <section id="idLMcshlmgrvldg">
+  <h3 id="idLMcshlmgrvldgH3">doing.validating of McshMngr
+    <a class="clsHide" href="#idLMcshlmgrvldgH3"></a></h3>
+  <p id="idLMcshlmgrvldgdsn">description::
+    <br>× HitpMcs-creation: {2026-05-23},
+    <br>· <a class="clsPreview" href="../dirTchInf/McsTchInf000009.last.html#idLMcshlmgrvldtr">validator.js</a> checks for many structural errors.
+    <br>· Vscode-extensions (HTMLHint and others) find:
+    <br>* non unique IDs.
+    <br>* non paired section-elements.
+    <a class="clsHide" href="#idLMcshlmgrvldgdsn"></a></p>
+  <p id="idLMcshlmgrvldgnam">name::
+    <br>* McsEngl.McshMngrDoing.validating,
+    <br>* McsEngl.McshMngr'validating,
+    <a class="clsHide" href="#idLMcshlmgrvldgnam"></a></p>
+  </section>
 
   <section id="idLMcshlmgrtodo">
   <h3 id="idLMcshlmgrtodoH3">doing.TODO of McshMngr
