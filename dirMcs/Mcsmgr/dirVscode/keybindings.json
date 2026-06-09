@@ -1,3 +1,4 @@
+// {2026-06-06}
 // Place your key bindings in this file to override the defaults
 // ctrl+k ctrl+2 folds them and shows shortcuts
 [
@@ -49,6 +50,13 @@
   "when": "editorTextFocus"
 },
 // c i:: Char Integer: extension
+// c l:: Char Letter-notation
+{
+  "key": "ctrl+alt+c l", 
+  "command": "editor.action.insertSnippet",
+  "args": {"snippet": "⟨${TM_SELECTED_TEXT}⟩"},
+  "when": "editorTextFocus && editorHasSelection"
+},
 // c p b:: Char hitP insert line Break
 {
   "key": "ctrl+alt+c p b", 
@@ -460,26 +468,9 @@
   "when": "editorTextFocus && editorHasSelection"
 },
 // HITP NAME
-// p n a l:: hitP Name ALbanian
+// p n a:: hitP Name Arab-arabic
 {
-  "key": "ctrl+alt+p n a l", 
-  "command": "runCommands",
-  "args": {
-    "commands": [
-      "cursorUp",
-      "cursorLineEnd",
-      "editor.action.insertLineAfter",
-      {"command": "type", "args": {"text": "<br>====== lagoAlbanian:"}},
-      "editor.action.insertLineAfter",
-      {"command": "type", "args": {"text": "<br>* McsSqip.,"}},
-      "cursorLeft"
-    ]
-  },
-  "when": "editorTextFocus"
-},
-// p n a r:: hitP Name ARabic
-{
-  "key": "ctrl+alt+p n a r", 
+  "key": "ctrl+alt+p n a", 
   "command": "runCommands",
   "args": {
     "commands": [
@@ -494,26 +485,43 @@
   },
   "when": "editorTextFocus"
 },
-// p n c:: hitP Name Chinese
+// hitP Name EllA-greekancient
 {
-  "key": "ctrl+alt+p n c", 
+  "key": "ctrl+alt+p n e a", 
   "command": "runCommands",
   "args": {
     "commands": [
       "cursorUp",
       "cursorLineEnd",
       "editor.action.insertLineAfter",
-      {"command": "type", "args": {"text": "<br>====== lagoChinese:"}},
+      {"command": "type", "args": {"text": "<br>====== lagoGreekAncient:"}},
       "editor.action.insertLineAfter",
-      {"command": "type", "args": {"text": "<br>* McsZhon.,"}},
+      {"command": "type", "args": {"text": "<br>* McsElla.,"}},
       "cursorLeft"
     ]
   },
   "when": "editorTextFocus"
 },
-// hitP Name Esperanto
+// hitP Name Elln-greek
 {
-  "key": "ctrl+alt+p n e", 
+  "key": "ctrl+alt+p n e l", 
+  "command": "runCommands",
+  "args": {
+    "commands": [
+      "cursorUp",
+      "cursorLineEnd",
+      "editor.action.insertLineAfter",
+      {"command": "type", "args": {"text": "<br>====== lagoGreek:"}},
+      "editor.action.insertLineAfter",
+      {"command": "type", "args": {"text": "<br>* McsElln.,"}},
+      "cursorLeft"
+    ]
+  },
+  "when": "editorTextFocus"
+},
+// hitP Name ESpo-esperanto
+{
+  "key": "ctrl+alt+p n e s", 
   "command": "runCommands",
   "args": {
     "commands": [
@@ -557,40 +565,6 @@
       {"command": "type", "args": {"text": "<br>====== lagoGerman:"}},
       "editor.action.insertLineAfter",
       {"command": "type", "args": {"text": "<br>* McsDeut.,"}},
-      "cursorLeft"
-    ]
-  },
-  "when": "editorTextFocus"
-},
-// hitP Name GreekAncient
-{
-  "key": "ctrl+alt+p n g a", 
-  "command": "runCommands",
-  "args": {
-    "commands": [
-      "cursorUp",
-      "cursorLineEnd",
-      "editor.action.insertLineAfter",
-      {"command": "type", "args": {"text": "<br>====== lagoGreekAncient:"}},
-      "editor.action.insertLineAfter",
-      {"command": "type", "args": {"text": "<br>* McsElla.,"}},
-      "cursorLeft"
-    ]
-  },
-  "when": "editorTextFocus"
-},
-// hitP Name GreeK
-{
-  "key": "ctrl+alt+p n g k", 
-  "command": "runCommands",
-  "args": {
-    "commands": [
-      "cursorUp",
-      "cursorLineEnd",
-      "editor.action.insertLineAfter",
-      {"command": "type", "args": {"text": "<br>====== lagoGreek:"}},
-      "editor.action.insertLineAfter",
-      {"command": "type", "args": {"text": "<br>* McsElln.,"}},
       "cursorLeft"
     ]
   },
@@ -772,6 +746,23 @@
   },
   "when": "editorTextFocus"
 },
+// hitP Name SQip-albanian
+{
+  "key": "ctrl+alt+p n s q", 
+  "command": "runCommands",
+  "args": {
+    "commands": [
+      "cursorUp",
+      "cursorLineEnd",
+      "editor.action.insertLineAfter",
+      {"command": "type", "args": {"text": "<br>====== lagoAlbanian:"}},
+      "editor.action.insertLineAfter",
+      {"command": "type", "args": {"text": "<br>* McsSqip.,"}},
+      "cursorLeft"
+    ]
+  },
+  "when": "editorTextFocus"
+},
 // hitP Name SlavoRussian
 {
   "key": "ctrl+alt+p n s r", 
@@ -806,7 +797,7 @@
   },
   "when": "editorTextFocus"
 },
-// hitP Name SPanish
+// hitP Name SPan-spanish
 {
   "key": "ctrl+alt+p n s p", 
   "command": "runCommands",
@@ -852,6 +843,23 @@
       {"command": "type", "args": {"text": "<br>====== lagoVietnamese:"}},
       "editor.action.insertLineAfter",
       {"command": "type", "args": {"text": "<br>* McsVnma.,"}},
+      "cursorLeft"
+    ]
+  },
+  "when": "editorTextFocus"
+},
+// hitP Name Zhon-chinese
+{
+  "key": "ctrl+alt+p n z", 
+  "command": "runCommands",
+  "args": {
+    "commands": [
+      "cursorUp",
+      "cursorLineEnd",
+      "editor.action.insertLineAfter",
+      {"command": "type", "args": {"text": "<br>====== lagoChinese:"}},
+      "editor.action.insertLineAfter",
+      {"command": "type", "args": {"text": "<br>* McsZhon.,"}},
       "cursorLeft"
     ]
   },
@@ -1303,12 +1311,8 @@
   "args": {
     "commands": [
 
-            { "command": "cursorEnd", "args": { "sticky": false } },
-            { "command": "type", "args": { "text": " " } },
-            { "command": "deleteRight" },
-            { "command": "cursorHome" }
-  
-      /*      
+
+  /*      
       // set break in line
       "cursorHome",
       "cursorHome",

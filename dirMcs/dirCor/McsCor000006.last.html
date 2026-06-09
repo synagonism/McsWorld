@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mcs.time
-    (McsCor000006.1-92-0.2026-04-28)</title>
+    (McsCor000006.1-94-0.2026-06-08)</title>
   <meta name="keywords" content="time, modelConceptSenso, HitpMcs, Synagonism">
   <link rel="stylesheet" href="../Mcsmgr/mMcsh2.css">
 </head>
@@ -1996,6 +1996,8 @@
     <br>* McsEngl.decade!=10-years!⇒{i10},
     <br>* McsEngl.UomTime.decade!⇒{i10},
     <br>* McsEngl.time.decade!⇒{i10},
+    <br>* McsEngl.time.decade.lagoElln!=δεκαετία,
+    <br>* McsEngl.time.decade.lagoZhon!=十年-shínián,
     <br>* McsEngl.timeIvlYear10!⇒{i10},
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-yiaro-foPo!={i10},
@@ -2027,6 +2029,8 @@
     <br>* McsEngl.century!=100-years!⇒{i100},
     <br>* McsEngl.UomTime.century!⇒{i100},
     <br>* McsEngl.time.century!⇒{i100},
+    <br>* McsEngl.time.century.lagoElln!=αιώνας,
+    <br>* McsEngl.time.century.lagoZhon!=世纪-shìjì,
     <br>* McsEngl.timeIvlYear100!⇒{i100},
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-yiaro-foPoPo!={i100},
@@ -2059,6 +2063,8 @@
     <br>* McsEngl.time.Ka!⇒{iK1},
     <br>* McsEngl.time.kyr!⇒{iK1},
     <br>* McsEngl.time.millennium!⇒{iK1},
+    <br>* McsEngl.time.millennium.lagoElln!=χιλιετία,
+    <br>* McsEngl.time.millennium.lagoZhon!=千年-qiānnián,
     <br>* McsEngl.timeIvlYear1000!⇒{iK1},
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-yiaro-kilo!={iK1},
@@ -2148,6 +2154,9 @@
   <p id="idTimeUomSizonnam">name::
     <br>* McsEngl.UomTime.season,
     <br>* McsEngl.year'season,
+    <br>* McsEngl.time.season,
+    <br>* McsEngl.time.season.lagoElln!=εποχή,
+    <br>* McsEngl.time.season.lagoZhon!=岁时-suìshí,
     <br>====== lagoChinese:
     <br>* McsEngl.suìshí-岁时-(歲時)!=year'season,
     <br>* McsZhon.suìshí-岁时-(歲時)!=year'season,
@@ -2168,6 +2177,9 @@
   <p id="idTimeUomSizonSprgnam">name::
     <br>* McsEngl.season.spring,
     <br>* McsEngl.spring-season,
+    <br>* McsEngl.time.spring,
+    <br>* McsEngl.time.spring.lagoElln!=άνοιξη,
+    <br>* McsEngl.time.spring.lagoZhon!=春天-chūntiān,
     <br>====== lagoChinese:
     <br>* McsEngl.chūntiān-春天!=spring-season,
     <br>* McsZhon.chūntiān-春天!=spring-season,
@@ -2186,6 +2198,9 @@
   <p id="idTimeUomSizonSmmrnam">name::
     <br>* McsEngl.season.summer,
     <br>* McsEngl.summer-season,
+    <br>* McsEngl.time.summer,
+    <br>* McsEngl.time.summer.lagoElln!=καλοκαίρι,
+    <br>* McsEngl.time.summer.lagoZhon!=夏天-xiàtiān,
     <br>====== lagoChinese:
     <br>* McsEngl.xiàtiān-夏天!=summer,
     <br>* McsZhon.xiàtiān-夏天!=summer,
@@ -2204,6 +2219,9 @@
   <p id="idTimeUomSizonAtmnnam">name::
     <br>* McsEngl.autumn-season,
     <br>* McsEngl.season.autumn,
+    <br>* McsEngl.time.autumn,
+    <br>* McsEngl.time.autumn.lagoElln!=φθινόπωρο,
+    <br>* McsEngl.time.autumn.lagoZhon!=秋天-qiūtiān,
     <br>====== lagoChinese:
     <br>* McsEngl.qiūtiān-秋天!=autumn,
     <br>* McsZhon.qiūtiān-秋天!=autumn,
@@ -2222,6 +2240,9 @@
   <p id="idTimeUomSizonWntrnam">name::
     <br>* McsEngl.season.winter,
     <br>* McsEngl.winter-season,
+    <br>* McsEngl.time.winter,
+    <br>* McsEngl.time.winter.lagoElln!=χειμώνας,
+    <br>* McsEngl.time.winter.lagoZhon!=冬天-dōngtiān,
     <br>====== lagoChinese:
     <br>* McsEngl.dōngtiān-冬天!=winter,
     <br>* McsZhon.dōngtiān-冬天!=winter,
@@ -2242,11 +2263,13 @@
   <p id="idTimeUomMnthnam">name::
     <br>* McsEngl.month,
     <br>* McsEngl.month.lagoElln!=μήνας!ο,
-    <br>* McsEngl.month.lagoEspo!=monato,
+    <br>* McsEngl.month.Espo!=monato,
     <br>* McsEngl.month.lagoZhon!=yuèfèn-月份,
     <br>* McsEngl.month-time-Uom,
     <br>* McsEngl.UomTime.month,
     <br>* McsEngl.time.month,
+    <br>* McsEngl.time.month.lagoElln!=μήνας,
+    <br>* McsEngl.time.month.lagoZhon!=月份-yuèfèn,
     <br>* McsEngl.timeMonth,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mino!=timeMonth, from Greek 'μήνας',
@@ -2311,6 +2334,9 @@
   <p id="idTimeUomMnthJannam">name::
     <br>* McsEngl.January,
     <br>* McsEngl.month.January,
+    <br>* McsEngl.time.January,
+    <br>* McsEngl.time.January.lagoElln!=Ιανουάριος,
+    <br>* McsEngl.time.January.lagoZhon!=一月-yīyuè,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mino-1-fo!=January,
     <br>====== lagoChinese:
@@ -2333,6 +2359,9 @@
   <p id="idTimeUomMnthFebnam">name::
     <br>* McsEngl.February,
     <br>* McsEngl.month.February,
+    <br>* McsEngl.time.February,
+    <br>* McsEngl.time.February.lagoElln!=Φεβρουάριος,
+    <br>* McsEngl.time.February.lagoZhon!=二月-èryuè,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mino-2-qo!=February,
     <br>====== lagoChinese:
@@ -2355,6 +2384,9 @@
   <p id="idTimeUomMnthMarnam">name::
     <br>* McsEngl.March,
     <br>* McsEngl.month.March,
+    <br>* McsEngl.time.March,
+    <br>* McsEngl.time.March.lagoElln!=Μάρτιος,
+    <br>* McsEngl.time.March.lagoZhon!=三月-sānyuè,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mino-3-to!=March,
     <br>====== lagoChinese:
@@ -2377,6 +2409,9 @@
   <p id="idTimeUomMnthAprnam">name::
     <br>* McsEngl.April,
     <br>* McsEngl.month.April,
+    <br>* McsEngl.time.April,
+    <br>* McsEngl.time.April.lagoElln!=Απρίλιος,
+    <br>* McsEngl.time.April.lagoZhon!=四月-sìyuè,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mino-4-so!=April,
     <br>====== lagoChinese:
@@ -2399,6 +2434,9 @@
   <p id="idTimeUomMnthMaynam">name::
     <br>* McsEngl.May,
     <br>* McsEngl.month.May,
+    <br>* McsEngl.time.May,
+    <br>* McsEngl.time.May.lagoElln!=Μάιος,
+    <br>* McsEngl.time.May.lagoZhon!=五月-wǔyuè,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mino-5-co!=May,
     <br>====== lagoChinese:
@@ -2421,6 +2459,9 @@
   <p id="idTimeUomMnthJunnam">name::
     <br>* McsEngl.June,
     <br>* McsEngl.month.June,
+    <br>* McsEngl.time.June,
+    <br>* McsEngl.time.June.lagoElln!=Ιούνιος,
+    <br>* McsEngl.time.June.lagoZhon!=六月-liùyuè,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mino-6-ko!=June,
     <br>====== lagoChinese:
@@ -2443,6 +2484,9 @@
   <p id="idTimeUomMnthJulnam">name::
     <br>* McsEngl.July,
     <br>* McsEngl.month.July,
+    <br>* McsEngl.time.July,
+    <br>* McsEngl.time.July.lagoElln!=Ιούλιος,
+    <br>* McsEngl.time.July.lagoZhon!=七月-qīyuè,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mino-7-ho!=July,
     <br>====== lagoChinese:
@@ -2465,6 +2509,9 @@
   <p id="idTimeUomMnthAugnam">name::
     <br>* McsEngl.August,
     <br>* McsEngl.month.August,
+    <br>* McsEngl.time.August,
+    <br>* McsEngl.time.August.lagoElln!=Αύγουστος,
+    <br>* McsEngl.time.August.lagoZhon!=八月-bāyuè,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mino-8-mo!=August,
     <br>====== lagoChinese:
@@ -2487,6 +2534,9 @@
   <p id="idTimeUomMnthSepnam">name::
     <br>* McsEngl.Septermber,
     <br>* McsEngl.month.Septermber,
+    <br>* McsEngl.time.Septermber,
+    <br>* McsEngl.time.Septermber.lagoElln!=Σεπτέμβριος,
+    <br>* McsEngl.time.Septermber.lagoZhon!=九月-jiǔyuè,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mino-9-ro!=September,
     <br>====== lagoChinese:
@@ -2509,6 +2559,9 @@
   <p id="idTimeUomMnthOctnam">name::
     <br>* McsEngl.October,
     <br>* McsEngl.month.October,
+    <br>* McsEngl.time.October,
+    <br>* McsEngl.time.October.lagoElln!=Οκτώβριος,
+    <br>* McsEngl.time.October.lagoZhon!=十月-shíyuè,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mino-10-foPo!=October,
     <br>====== lagoChinese:
@@ -2531,6 +2584,9 @@
   <p id="idTimeUomMnthNovnam">name::
     <br>* McsEngl.November,
     <br>* McsEngl.month.November,
+    <br>* McsEngl.time.November,
+    <br>* McsEngl.time.November.lagoElln!=Νοέμβριος,
+    <br>* McsEngl.time.November.lagoZhon!=十一月-shíyīyuè,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mino-11-foFo!=November,
     <br>====== lagoChinese:
@@ -2554,6 +2610,9 @@
   <p id="idTimeUomMnthDecnam">name::
     <br>* McsEngl.December,
     <br>* McsEngl.month.December,
+    <br>* McsEngl.time.December,
+    <br>* McsEngl.time.December.lagoElln!=Δεκέμβριος,
+    <br>* McsEngl.time.December.lagoZhon!=十二月-shíèryuè,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mino-12-foTho!=December,
     <br>====== lagoChinese:
@@ -2580,6 +2639,8 @@
     <br>* McsEngl.week-time-Uom,
     <br>* McsEngl.UomTime.week,
     <br>* McsEngl.time.week,
+    <br>* McsEngl.time.week.lagoElln!=εβδομάδα,
+    <br>* McsEngl.time.week.lagoZhon!=星期-xīngqī,
     <br>* McsEngl.timeWeek,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-nedo!=timeWeek, {2024-10-27}
@@ -2860,6 +2921,8 @@
     <br>* McsEngl.day-time-Uom,
     <br>* McsEngl.UomTime.day,
     <br>* McsEngl.time.day,
+    <br>* McsEngl.time.day.lagoElln!=ημέρα,
+    <br>* McsEngl.time.day.lagoZhon!=日-rì,
     <br>* McsEngl.timeDay,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-rio!=timeDay, {2024-10-27} from Chinese,
@@ -2975,6 +3038,9 @@
     <br>* McsEngl.AM!=Ante-Meridies!=before-midday,
     <br>* McsEngl.ante-meridies=before-midday-(am),
     <br>* McsEngl.day'am,
+    <br>* McsEngl.time.am,
+    <br>* McsEngl.time.am.lagoElln!=πμ,
+    <br>* McsEngl.time.am.lagoZhon!=上午-shàngwǔ,
     <br>====== lagoChinese:
     <br>* McsEngl.shàngwŭ-上午!=am//day,
     <br>* McsZhon.shàngwŭ-上午!=am//day,
@@ -2995,6 +3061,9 @@
     <br>* McsEngl.PM!=Post-Meridies!=after-midday,
     <br>* McsEngl.PM//day,
     <br>* McsEngl.post-meridies=after-midday-(pm),
+    <br>* McsEngl.time.pm,
+    <br>* McsEngl.time.pm.lagoElln!=μμ,
+    <br>* McsEngl.time.pm.lagoZhon!=下午-xiàwǔ,
     <br>====== lagoChinese:
     <br>* McsEngl.xiàwŭ-下午!=pm//day,
     <br>* McsZhon.xiàwŭ-下午!=pm//day,
@@ -3014,6 +3083,9 @@
   <p id="idTimeUomDaymngnam">name::
     <br>* McsEngl.day'morning,
     <br>* McsEngl.morning//day,
+    <br>* McsEngl.time.morning,
+    <br>* McsEngl.time.morning.lagoElln!=πρωί,
+    <br>* McsEngl.time.morning.lagoZhon!=早上-Zǎoshang,
     <br>====== lagoGreek:
     <br>* McsElln.πρωί!το!=morning//day,
     <a class="clsHide" href="#idTimeUomDaymngnam"></a></p>
@@ -3028,6 +3100,9 @@
   <p id="idTimeUomDaydwnnam">name::
     <br>* McsEngl.day'dawn,
     <br>* McsEngl.dawn//day,
+    <br>* McsEngl.time.dawn,
+    <br>* McsEngl.time.dawn.lagoElln!=αυγή,
+    <br>* McsEngl.time.dawn.lagoZhon!=黎明-límíng,
     <br>====== lagoGreek:
     <br>* McsElln.αυγή!η!=dawn//day,
     <a class="clsHide" href="#idTimeUomDaydwnnam"></a></p>
@@ -3041,6 +3116,9 @@
     <a class="clsHide" href="#idTimeUomDayelmndsn"></a></p>
   <p id="idTimeUomDayelmnnam">name::
     <br>* McsEngl.early-morning,
+    <br>* McsEngl.time.early-morning,
+    <br>* McsEngl.time.early-morning.lagoElln!=νωρίς-το-πρωί,
+    <br>* McsEngl.time.early-morning.lagoZhon!=早上-zǎoshang,
     <br>====== lagoChinese:
     <br>* McsEngl.zǎoshang-早上!=early-morning,
     <br>* McsZhon.zǎoshang-早上!=early-morning,
@@ -3057,6 +3135,9 @@
   <p id="idTimeUomDayltmnnam">name::
     <br>* McsEngl.before-afternoon,
     <br>* McsEngl.late-morning,
+    <br>* McsEngl.time.late-morning,
+    <br>* McsEngl.time.late-morning.lagoElln!=aργά-το-πρωί,
+    <br>* McsEngl.time.late-morning.lagoZhon!=上午-shàngwǔ,
     <br>====== lagoChinese:
     <br>* McsEngl.shàngwǔ-上午!=before-afternoon,
     <br>* McsZhon.shàngwǔ-上午!=before-afternoon,
@@ -3078,6 +3159,9 @@
   <p id="idTimeUomDaynnnam">name::
     <br>* McsEngl.day'noon,
     <br>* McsEngl.noon//day,
+    <br>* McsEngl.time.noon,
+    <br>* McsEngl.time.noon.lagoElln!=μεσημέρι,
+    <br>* McsEngl.time.noon.lagoZhon!=中午-zhōngwǔ,
     <br>====== lagoChinese:
     <br>* McsEngl.zhōngwǔ-中午!=noon//day,
     <br>* McsZhon.zhōngwǔ-中午!=noon//day,
@@ -3096,6 +3180,9 @@
   <p id="idTimeUomDayarnnnam">name::
     <br>* McsEngl.afternoon//day,
     <br>* McsEngl.day'afternoon,
+    <br>* McsEngl.time.afternoon,
+    <br>* McsEngl.time.afternoon.lagoElln!=απόγευμα,
+    <br>* McsEngl.time.afternoon.lagoZhon!=下午-xiàwǔ,
     <br>====== lagoChinese:
     <br>* McsEngl.xiàwǔ-下午!=afternoon//day,
     <br>* McsZhon.xiàwǔ-下午!=afternoon//day,
@@ -3115,6 +3202,9 @@
   <p id="idTimeUomDayevgnam">name::
     <br>* McsEngl.day'evening,
     <br>* McsEngl.evening//day,
+    <br>* McsEngl.time.evening,
+    <br>* McsEngl.time.evening.lagoElln!=βράδυ,
+    <br>* McsEngl.time.evening.lagoZhon!=晚上-wǎnshàng,
     <br>====== lagoChinese:
     <br>* McsEngl.wǎnshàng-晚上!=evening//day,
     <br>* McsZhon.wǎnshàng-晚上!=evening//day,
@@ -3136,6 +3226,9 @@
     <br>* McsEngl.night,
     <br>* McsEngl.night//day,
     <br>* McsEngl.nighttime,
+    <br>* McsEngl.time.night,
+    <br>* McsEngl.time.night.lagoElln!=νύχτα,
+    <br>* McsEngl.time.night.lagoZhon!=夜晚-yèwǎn,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-nihto!=night//day,
     <br>====== lagoChinese:
@@ -3159,6 +3252,9 @@
   <p id="idTimeUomDayntrlvcrtnam">name::
     <br>* McsEngl.night.relative.current,
     <br>* McsEngl.tonight,
+    <br>* McsEngl.time.tonight,
+    <br>* McsEngl.time.tonight.lagoElln!=απόψε,
+    <br>* McsEngl.time.tonight.lagoZhon!=今晚-jīnwǎn,
     <br>====== lagoGreek:
     <br>* McsElln.απόψε!=tonight,
     <br>====== lagoChinese:
@@ -3183,6 +3279,9 @@
     <br>* McsEngl.daylight,
     <br>* McsEngl.daylight//day,
     <br>* McsEngl.daytime,
+    <br>* McsEngl.time.daytime,
+    <br>* McsEngl.time.daytime.lagoElln!=ημέρα,
+    <br>* McsEngl.time.daytime.lagoZhon!=白天-báiti,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-mero!=daylight//day,
     <br>====== lagoGreek:
@@ -3300,6 +3399,9 @@
   <p id="idTimeUomDayChnwyrnam">name::
     <br>* McsEngl.New-Year,
     <br>* McsEngl.dayWorkNo.New-Year,
+    <br>* McsEngl.time.New-Year,
+    <br>* McsEngl.time.New-Year.lagoElln!=νέος-χρόνος,
+    <br>* McsEngl.time.New-Year.lagoZhon!=新年-xīnnian,
     <br>====== lagoChinese:
     <br>* McsEngl.guònián-过年!=New-Year,
     <br>* McsZhon.guònián-过年!=New-Year,
@@ -3319,6 +3421,9 @@
   <p id="idTimeUomDayChrmnam">name::
     <br>* McsEngl.Christmas,
     <br>* McsEngl.dayWorkNo.Christmas,
+    <br>* McsEngl.time.Christmas,
+    <br>* McsEngl.time.Christmas.lagoElln!=Χριστούγεννα,
+    <br>* McsEngl.time.Christmas.lagoZhon!=圣诞节-shèngdànjié,
     <br>====== lagoChinese:
     <br>* McsEngl.shèngdànjié-圣诞节!=Christmas,
     <br>* McsZhon.shèngdànjié-圣诞节!=Christmas,
@@ -3380,6 +3485,8 @@
   <p id="idTimeUomDayWeaknam">name::
     <br>* McsEngl.day.of-weak,
     <br>* McsEngl.day.weak,
+    <br>* McsEngl.time.weak-day.lagoElln!=μέρα-εβδομάδας,
+    <br>* McsEngl.time.weak-day.Ζhon.星期-xīngqī,
     <br>* McsEngl.weak-day,
     <a class="clsHide" href="#idTimeUomDayWeaknam"></a></p>
 
@@ -3392,8 +3499,9 @@
   <p id="idTimeUomDayMndnam">name::
     <br>* McsEngl.day.week.Monday,
     <br>* McsEngl.Monday,
-    <br>* McsEngl.Monday.lagoElln!=Δευτέρα!η,
-    <br>* McsEngl.Monday.lagoZhon!=xīngqīyī-星期一,
+    <br>* McsEngl.time.Monday,
+    <br>* McsEngl.time.Monday.lagoElln!=Δευτέρα!η,
+    <br>* McsEngl.time.Monday.lagoZhon!=xīngqīyī-星期一,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.tieno-1-fo!=Monday,
     <br>====== lagoChinese:
@@ -3416,6 +3524,9 @@
   <p id="idTimeUomDayTsdnam">name::
     <br>* McsEngl.day.week.Tuesday,
     <br>* McsEngl.Tuesday,
+    <br>* McsEngl.time.Tuesday,
+    <br>* McsEngl.time.Tuesday.lagoElln!=Τρίτη,
+    <br>* McsEngl.time.Tuesday.lagoZhon!=星期二-xīngqī-èr,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.tieno-2-tho!=Tuesday,
     <br>====== lagoChinese:
@@ -3437,6 +3548,9 @@
   <p id="idTimeUomDayWddnam">name::
     <br>* McsEngl.day.week.Wednesday,
     <br>* McsEngl.Wednesday,
+    <br>* McsEngl.time.Wednesday,
+    <br>* McsEngl.time.Wednesday.lagoElln!=Τετάρτη,
+    <br>* McsEngl.time.Wednesday.lagoZhon!=星期三-xīngqīsān,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.tieno-3-to!=Wednesday,
     <br>====== lagoChinese:
@@ -3459,6 +3573,9 @@
   <p id="idTimeUomDayThdnam">name::
     <br>* McsEngl.day.week.Thursday,
     <br>* McsEngl.Thursday,
+    <br>* McsEngl.time.Thursday,
+    <br>* McsEngl.time.Thursday.lagoElln!=Πέμπτη,
+    <br>* McsEngl.time.Thursday.lagoZhon!=星期四-xīngqīsì,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.tieno-4-so!=Thursday,
     <br>====== lagoChinese:
@@ -3481,6 +3598,9 @@
   <p id="idTimeUomDayFrdnam">name::
     <br>* McsEngl.day.week.Friday,
     <br>* McsEngl.Friday,
+    <br>* McsEngl.time.Friday,
+    <br>* McsEngl.time.Friday.lagoElln!=Παρασκευή,
+    <br>* McsEngl.time.Friday.lagoZhon!=星期五-xīngqīwǔ,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.tieno-5-co!=Friday,
     <br>====== lagoChinese:
@@ -3503,6 +3623,9 @@
   <p id="idTimeUomDayStdnam">name::
     <br>* McsEngl.day.week.Saturday,
     <br>* McsEngl.Saturday,
+    <br>* McsEngl.time.Saturday,
+    <br>* McsEngl.time.Saturday.lagoElln!=Σάββατο,
+    <br>* McsEngl.time.Saturday.lagoZhon!=星期六-xīngqīliù,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.tieno-6-ko!=Saturday,
     <br>====== lagoChinese:
@@ -3525,6 +3648,9 @@
   <p id="idTimeUomDaySndnam">name::
     <br>* McsEngl.day.week.Sunday,
     <br>* McsEngl.Sunday,
+    <br>* McsEngl.time.Sunday,
+    <br>* McsEngl.time.Sunday.lagoElln!=Κυριακή,
+    <br>* McsEngl.time.Sunday.lagoZhon!=星期日-xīngqīrì,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.tieno-7-ho!=Sunday,
     <br>====== lagoChinese:
@@ -3554,6 +3680,9 @@
     <br>* McsEngl.birthday.lagoElln!=γενέθλια!τα,
     <br>* McsEngl.birthday.lagoZhon!=shēngrì-生日,
     <br>* McsEngl.day.birth,
+    <br>* McsEngl.time.birthday,
+    <br>* McsEngl.time.birthday.lagoElln!=γενέθλια!τα,
+    <br>* McsEngl.time.birthday.lagoZhon!=生日-shēngrì,
     <br>====== lagoChinese:
     <br>* McsEngl.shēngrì-生日!=birthday,
     <br>* McsZhon.shēngrì-生日!=birthday,
@@ -3572,6 +3701,9 @@
   <p id="idTimeUomDayPst2nam">name::
     <br>* McsEngl.day-before-yesterday,
     <br>* McsEngl.day.relative.before-yesterday,
+    <br>* McsEngl.time.before-yesterday,
+    <br>* McsEngl.time.before-yesterday.lagoElln!=προχθές,
+    <br>* McsEngl.time.before-yesterday.lagoZhon!=前天-qiántiān,
     <br>====== lagoChinese:
     <br>* McsEngl.qiántiān-前天!=day-before-yesterday,
     <br>* McsZhon.qiántiān-前天!=day-before-yesterday,
@@ -3592,6 +3724,9 @@
     <br>* McsEngl.adveEngl.yesterday!=timeDayPrevious,
     <br>* McsEngl.day.relative.previous,
     <br>* McsEngl.yesterday!~adveEngl!=timeDayPrevious,
+    <br>* McsEngl.time.yesterday,
+    <br>* McsEngl.time.yesterday.lagoElln!=χθες,
+    <br>* McsEngl.time.yesterday.lagoZhon!=昨天-zuótiān,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.tieno-ano!=yersterday,
     <br>====== lagoChinese:
@@ -3616,6 +3751,9 @@
     <br>* McsEngl.adveEngl.today!=timeDayCurrent,
     <br>* McsEngl.day.relative.current,
     <br>* McsEngl.today!~adveEngl!=timeDayCurrent,
+    <br>* McsEngl.time.today,
+    <br>* McsEngl.time.today.lagoElln!=σήμερα,
+    <br>* McsEngl.time.today.lagoZhon!=今天-jīn-tiān,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.tieno-eno!=today,
     <br>====== lagoChinese:
@@ -3638,6 +3776,9 @@
     <br>* McsEngl.adveEngl.tomorrow!=timeDayNext,
     <br>* McsEngl.day.relative.next,
     <br>* McsEngl.tomorrow!~adveEngl!=timeDayNext,
+    <br>* McsEngl.time.tomorrow,
+    <br>* McsEngl.time.tomorrow.lagoElln!=αύριο,
+    <br>* McsEngl.time.tomorrow.lagoZhon!=明天-míngtiān,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.tieno-ino!=tomorrow,
     <br>====== lagoChinese:
@@ -3661,6 +3802,9 @@
   <p id="idTimeUomDayFtr2nam">name::
     <br>* McsEngl.day-after-tomorrow,
     <br>* McsEngl.day.relative.after-tomorrow,
+    <br>* McsEngl.time.after-tomorrow,
+    <br>* McsEngl.time.after-tomorrow.lagoElln!=μεθαύριο,
+    <br>* McsEngl.time.after-tomorrow.lagoZhon!=后天-hòutiān,
     <br>====== lagoChinese:
     <br>* McsEngl.hòutiān-后天!=day-after-tomorrow,
     <br>* McsZhon.hòutiān-后天!=day-after-tomorrow,
@@ -3679,6 +3823,8 @@
   <p id="idTimeUomDayFtr3nam">name::
     <br>* McsEngl.day-after-after-tomorrow,
     <br>* McsEngl.day.relative.after-after-tomorrow,
+    <br>* McsEngl.time.after-after-tomorrow,
+    <br>* McsEngl.time.after-after-tomorrow.lagoElln!=παραμεθαύριο,
     <br>====== lagoGreek:
     <br>* McsElln.παραμεθαύριο!=day-after-after-tomorrow,
     <a class="clsHide" href="#idTimeUomDayFtr3nam"></a></p>
@@ -3703,6 +3849,8 @@
     <br>* McsEngl.lagHmnm'hour!⇒timeHour,
     <br>* McsEngl.UomTime.hour!⇒timeHour,
     <br>* McsEngl.time.hour!⇒timeHour,
+    <br>* McsEngl.time.hour.lagoElln!=ώρα,
+    <br>* McsEngl.time.hour.lagoZhon!=小时-xiǎoshí,
     <br>* McsEngl.timeHour,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-oro!=timeHour, from Greek 'ώρα',
@@ -3800,6 +3948,8 @@
     <br>* McsEngl.minute-time-Uom,
     <br>* McsEngl.UomTime.minute,
     <br>* McsEngl.time.minute,
+    <br>* McsEngl.time.minute.lagoElln!=λεπτό,
+    <br>* McsEngl.time.minute.lagoZhon!=分钟-fēnzhōng,
     <br>* McsEngl.timeMinute,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-minuto!=minute,
@@ -3823,6 +3973,8 @@
     <br>* McsEngl.second-time-Uom,
     <br>* McsEngl.UomTime.second,
     <br>* McsEngl.time.second,
+    <br>* McsEngl.time.second.lagoElln!=δευτερόλεπτο,
+    <br>* McsEngl.time.second.lagoZhon!=秒钟-miǎozhōng,
     <br>* McsEngl.timeSecond,
     <br>====== lagoSinagu:
     <br>* McsSngu.old.ceu-sekudo!=timeSecond,
@@ -3867,6 +4019,8 @@
     <br>* McsEngl.age-of-entity,
     <br>* McsEngl.entity'age,
     <br>* McsEngl.time.age,
+    <br>* McsEngl.time.age.lagoElln!=ηλικία,
+    <br>* McsEngl.time.age.lagoZhon!=岁-suì,
     <br>====== lagoChinese:
     <br>* McsEngl.suì-岁!=age,
     <br>* McsZhon.suì-岁!=age,
